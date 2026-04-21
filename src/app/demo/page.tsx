@@ -327,12 +327,13 @@ export default function DemoPage() {
       setLearningProfile(EMPTY_PROFILE);
       return;
     }
+    const userId = user.uid;
 
     let isMounted = true;
 
     async function loadLearningProfile() {
       try {
-        const userRef = doc(getFirebaseDb(), "users", user.uid);
+        const userRef = doc(getFirebaseDb(), "users", userId);
         const snapshot = await getDoc(userRef);
         if (!isMounted) {
           return;
