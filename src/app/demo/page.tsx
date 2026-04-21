@@ -1,11 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import {
+  AttemptHistory,
   FinalResultsScreen,
   QuestionCard,
   type QuestionOption,
 } from "@/components/demo";
+import { useAuthGuard } from "@/hooks/use-auth-guard";
+import { logoutUser } from "@/lib/auth";
+import { saveDemoResult } from "@/lib/results";
 
 type DemoQuestion = {
   id: string;
@@ -110,6 +115,7 @@ const demoQuestions: DemoQuestion[] = [
 ];
 
 export default function DemoPage() {
+  const { user, isCheckingAuth } = useAuthGuard("/login");
   const [hasStarted, setHasStarted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answersByQuestionId, setAnswersByQuestionId] = useState<
@@ -117,6 +123,8 @@ export default function DemoPage() {
   >({});
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [wrongAnswers, setWrongAnswers] = useState(0);
+  const [hasSavedCurrentAttempt, setHasSavedCurrentAttempt] = useState(false);
+  const [historyRefreshKey, setHistoryRefreshKey] = useState(0);
 
   const totalQuestions = demoQuestions.length;
   const isResultsStep = currentQuestionIndex === totalQuestions;
@@ -134,6 +142,29 @@ export default function DemoPage() {
     ((currentQuestionIndex + (hasAnsweredCurrentQuestion ? 1 : 0)) / totalQuestions) *
       100,
   );
+
+  useEffect(() => {
+    if (!isResultsStep || !user || hasSavedCurrentAttempt) {
+      return;
+    }
+
+    void saveDemoResult({
+      userId: user.uid,
+      scorePercentage,
+      correctAnswers,
+      wrongAnswers,
+    }).then(() => {
+      setHasSavedCurrentAttempt(true);
+      setHistoryRefreshKey((prev) => prev + 1);
+    });
+  }, [
+    correctAnswers,
+    hasSavedCurrentAttempt,
+    isResultsStep,
+    scorePercentage,
+    user,
+    wrongAnswers,
+  ]);
 
   const handleAnswerSelect = (optionId: string, isCorrect: boolean) => {
     if (!currentQuestion) {
@@ -160,14 +191,36 @@ export default function DemoPage() {
   return (
     <main className="flex flex-1 flex-col bg-[#0A1F44]">
       <section className="mx-auto w-full max-w-4xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-        <header className="max-w-2xl">
-          <h1 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Demo Metodo Q
-          </h1>
-          <p className="mt-4 text-base leading-relaxed text-mq-muted sm:text-lg">
-            Responde algunas preguntas y mide tu nivel
-          </p>
-        </header>
+        {isCheckingAuth ? (
+          <div className="flex min-h-[45vh] items-center justify-center">
+            <p className="text-sm text-mq-muted sm:text-base">
+              Verificando sesion...
+            </p>
+          </div>
+        ) : (
+          <>
+            <header className="max-w-2xl">
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+                <p className="text-xs text-mq-muted sm:text-sm">
+                  Sesion activa: {user?.email}
+                </p>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    await logoutUser();
+                  }}
+                  className="touch-manipulation inline-flex min-h-10 items-center justify-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-foreground transition hover:border-white/30 hover:bg-white/[0.07] sm:text-sm"
+                >
+                  Cerrar sesion
+                </button>
+              </div>
+              <h1 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                Demo Metodo Q
+              </h1>
+              <p className="mt-4 text-base leading-relaxed text-mq-muted sm:text-lg">
+                Responde algunas preguntas y mide tu nivel
+              </p>
+            </header>
 
         {!hasStarted ? (
           <div className="mt-10">
@@ -189,6 +242,7 @@ export default function DemoPage() {
               setAnswersByQuestionId({});
               setCorrectAnswers(0);
               setWrongAnswers(0);
+              setHasSavedCurrentAttempt(false);
             }}
           />
         ) : (
@@ -249,6 +303,11 @@ export default function DemoPage() {
               </div>
             )}
           </div>
+        )}
+            {user ? (
+              <AttemptHistory userId={user.uid} refreshKey={historyRefreshKey} />
+            ) : null}
+          </>
         )}
       </section>
     </main>
