@@ -108,7 +108,14 @@ export function ProgressChart({ userId }: ProgressChartProps) {
                   borderRadius: 12,
                   color: "#E8EEF7",
                 }}
-                formatter={(value: number) => [`${value}%`, "Puntaje"]}
+                formatter={(value) => {
+                  const normalizedValue =
+                    typeof value === "number"
+                      ? value
+                      : Number(Array.isArray(value) ? value[0] : value ?? 0);
+
+                  return [`${normalizedValue}%`, "Puntaje"];
+                }}
               />
               <Line
                 type="monotone"
