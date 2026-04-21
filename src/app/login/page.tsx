@@ -39,7 +39,7 @@ export default function LoginPage() {
 
     try {
       await loginWithEmail(email.trim(), password);
-      router.push("/demo");
+      router.push("/dashboard");
     } catch (error) {
       const code = (error as { code?: string }).code ?? "";
       setErrorMessage(getLoginErrorMessage(code));
