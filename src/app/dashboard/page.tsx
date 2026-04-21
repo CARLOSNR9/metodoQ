@@ -1,11 +1,25 @@
 "use client";
 
-import { ProgressChart, SummaryCards } from "@/components/dashboard";
+import {
+  DailyPlanCard,
+  DailyRecommendationCard,
+  DynamicInsightCard,
+  ProgressChart,
+  StreakCard,
+  SummaryCards,
+  TrainingReminderCard,
+  WeakTopicsCard,
+} from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
+import { useUserPlan } from "@/hooks/use-user-plan";
 import Link from "next/link";
 
 export default function DashboardPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
+  const { plan, loading: isLoadingPlan } = useUserPlan();
+
+  const effectivePlan = plan ?? "FREE";
+  const planLabel = effectivePlan === "PRO_PLUS" ? "PRO+" : effectivePlan;
 
   if (isCheckingAuth || !user) {
     return (
@@ -26,6 +40,32 @@ export default function DashboardPage() {
   return (
     <section className="space-y-6">
       <header>
+        <div className="mb-4 rounded-2xl border border-mq-border-strong bg-mq-surface p-4 sm:p-5">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-mq-border bg-white/[0.03] px-3 py-1.5">
+              <span className="h-2 w-2 rounded-full bg-mq-accent" aria-hidden />
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-accent">
+                Plan actual: {isLoadingPlan ? "Cargando..." : planLabel}
+              </p>
+            </div>
+            {!isLoadingPlan && effectivePlan === "FREE" ? (
+              <Link
+                href="/dashboard/perfil"
+                className="inline-flex min-h-11 items-center justify-center rounded-xl bg-mq-accent px-4 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110"
+              >
+                Mejorar a Pro
+              </Link>
+            ) : null}
+          </div>
+          <div className="mt-3 grid gap-2 sm:grid-cols-2">
+            <p className="rounded-lg border border-indigo-300/30 bg-indigo-500/10 px-3 py-2 text-xs font-semibold text-indigo-100 sm:text-sm">
+              Te estamos ayudando a mejorar en tiempo real
+            </p>
+            <p className="rounded-lg border border-cyan-300/30 bg-cyan-500/10 px-3 py-2 text-xs font-semibold text-cyan-100 sm:text-sm">
+              Tu progreso es personalizado
+            </p>
+          </div>
+        </div>
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
         <h1 className="text-3xl font-semibold tracking-tight text-white">
@@ -46,6 +86,12 @@ export default function DashboardPage() {
       </header>
 
       <SummaryCards userId={user.uid} />
+      <DailyRecommendationCard userId={user.uid} />
+      <TrainingReminderCard userId={user.uid} />
+      <StreakCard userId={user.uid} />
+      <DynamicInsightCard userId={user.uid} />
+      <WeakTopicsCard userId={user.uid} />
+      <DailyPlanCard userId={user.uid} />
       <ProgressChart userId={user.uid} />
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -57,7 +103,7 @@ export default function DashboardPage() {
             Practicar preguntas
           </h2>
           <p className="mt-2 text-sm text-mq-muted">
-            Inicia una nueva sesion de entrenamiento para mejorar tu rendimiento.
+            Inicia una nueva sesion con foco en tus temas de mayor impacto.
           </p>
         </article>
 
@@ -69,7 +115,7 @@ export default function DashboardPage() {
             Resultados recientes
           </h2>
           <p className="mt-2 text-sm text-mq-muted">
-            Visualiza tus intentos anteriores y detecta areas de mejora.
+            Visualiza tus intentos anteriores y detecta areas de mejora en segundos.
           </p>
         </article>
 

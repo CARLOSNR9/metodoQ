@@ -14,6 +14,7 @@ export type QuestionCardProps = {
   correctOptionId?: string;
   explanation?: string;
   keyPoints?: string[];
+  dynamicFeedback?: string | null;
   onAnswerSelect?: (optionId: string, isCorrect: boolean) => void;
   className?: string;
 };
@@ -42,6 +43,7 @@ export function QuestionCard({
   correctOptionId = "B",
   explanation = defaultExplanation,
   keyPoints = defaultKeyPoints,
+  dynamicFeedback = null,
   onAnswerSelect,
   className,
 }: QuestionCardProps) {
@@ -82,11 +84,11 @@ export function QuestionCard({
               disabled={hasAnswered}
               className={`touch-manipulation flex min-h-14 w-full items-center gap-3 rounded-xl border px-4 py-3 text-left transition duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:min-h-16 sm:px-5 ${
                 showCorrectStyle
-                  ? "border-emerald-400/80 bg-emerald-500/15 text-white shadow-[0_0_0_1px_rgb(16_185_129/0.3)_inset]"
+                  ? "scale-[1.01] border-emerald-400/80 bg-emerald-500/15 text-white shadow-[0_0_0_1px_rgb(16_185_129/0.3)_inset]"
                   : showIncorrectStyle
-                    ? "border-rose-400/80 bg-rose-500/15 text-white shadow-[0_0_0_1px_rgb(244_63_94/0.28)_inset]"
+                    ? "scale-[1.01] border-rose-400/80 bg-rose-500/15 text-white shadow-[0_0_0_1px_rgb(244_63_94/0.28)_inset]"
                     : isSelected
-                      ? "border-mq-accent/70 bg-mq-accent/15 text-white shadow-[0_0_0_1px_rgb(0_209_255/0.24)_inset]"
+                      ? "scale-[1.01] border-mq-accent/70 bg-mq-accent/15 text-white shadow-[0_0_0_1px_rgb(0_209_255/0.24)_inset]"
                       : "border-mq-border bg-white/[0.03] text-foreground hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.06] disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:border-mq-border disabled:hover:bg-white/[0.03]"
               }`}
               aria-pressed={isSelected}
@@ -111,7 +113,7 @@ export function QuestionCard({
       </div>
 
       {hasAnswered ? (
-        <section className="mt-6 rounded-xl border border-mq-border-strong bg-background/60 p-4 sm:p-5">
+        <section className="mq-fade-up mt-6 rounded-xl border border-mq-border-strong bg-background/60 p-4 sm:p-5">
           <p
             className={`inline-flex items-center gap-2 text-sm font-semibold ${
               isCorrect ? "text-emerald-300" : "text-rose-300"
@@ -123,6 +125,11 @@ export function QuestionCard({
           <p className="mt-3 text-sm leading-relaxed text-foreground/90 sm:text-base">
             {explanation}
           </p>
+          {dynamicFeedback ? (
+            <div className="mt-4 rounded-lg border border-indigo-300/35 bg-indigo-500/10 p-3">
+              <p className="text-sm font-semibold text-indigo-100">{dynamicFeedback}</p>
+            </div>
+          ) : null}
 
           <div className="mt-5 rounded-lg border border-mq-border bg-white/[0.02] p-4">
             <p className="text-sm font-semibold text-mq-accent">

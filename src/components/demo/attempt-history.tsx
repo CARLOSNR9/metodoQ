@@ -8,6 +8,8 @@ import { getUserDemoResults, type DemoResultItem } from "@/lib/results";
 type AttemptHistoryProps = {
   userId: string;
   refreshKey?: number;
+  maxItems?: number;
+  limitedMessage?: string;
 };
 
 function getScoreCardClasses(score: number) {
@@ -22,7 +24,12 @@ function getScoreCardClasses(score: number) {
   return "border-emerald-400/35 bg-emerald-500/10";
 }
 
-export function AttemptHistory({ userId, refreshKey = 0 }: AttemptHistoryProps) {
+export function AttemptHistory({
+  userId,
+  refreshKey = 0,
+  maxItems = 10,
+  limitedMessage,
+}: AttemptHistoryProps) {
   const [results, setResults] = useState<DemoResultItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
@@ -63,7 +70,8 @@ export function AttemptHistory({ userId, refreshKey = 0 }: AttemptHistoryProps) 
             results.length,
         )
       : 0;
-  const recentResults = results.slice(0, 10);
+  const safeMaxItems = Math.max(1, maxItems);
+  const recentResults = results.slice(0, safeMaxItems);
 
   return (
     <section className="mt-8 rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
@@ -115,9 +123,12 @@ export function AttemptHistory({ userId, refreshKey = 0 }: AttemptHistoryProps) 
               </li>
             ))}
           </ul>
-          {results.length > 10 ? (
+          {limitedMessage ? (
+            <p className="mt-3 text-xs text-mq-muted">{limitedMessage}</p>
+          ) : null}
+          {results.length > safeMaxItems ? (
             <p className="mt-3 text-xs text-mq-muted">
-              Mostrando los 10 intentos mas recientes.
+              Mostrando los {safeMaxItems} intentos mas recientes.
             </p>
           ) : null}
         </>

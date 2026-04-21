@@ -9,3 +9,4 @@ export {
 } from "./final-results-screen";
 export { AttemptHistory } from "./attempt-history";
 export { ProgressSummary } from "./progress-summary";
+export { FreePlanPaywall } from "./free-plan-paywall";
