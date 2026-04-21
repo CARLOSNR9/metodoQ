@@ -73,9 +73,13 @@ export function QuestionCard({
               key={option.id}
               type="button"
               onClick={() => {
+                if (hasAnswered) {
+                  return;
+                }
                 setSelectedOptionId(option.id);
                 onAnswerSelect?.(option.id, option.id === correctOptionId);
               }}
+              disabled={hasAnswered}
               className={`touch-manipulation flex min-h-14 w-full items-center gap-3 rounded-xl border px-4 py-3 text-left transition duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:min-h-16 sm:px-5 ${
                 showCorrectStyle
                   ? "border-emerald-400/80 bg-emerald-500/15 text-white shadow-[0_0_0_1px_rgb(16_185_129/0.3)_inset]"
@@ -83,7 +87,7 @@ export function QuestionCard({
                     ? "border-rose-400/80 bg-rose-500/15 text-white shadow-[0_0_0_1px_rgb(244_63_94/0.28)_inset]"
                     : isSelected
                       ? "border-mq-accent/70 bg-mq-accent/15 text-white shadow-[0_0_0_1px_rgb(0_209_255/0.24)_inset]"
-                      : "border-mq-border bg-white/[0.03] text-foreground hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.06]"
+                      : "border-mq-border bg-white/[0.03] text-foreground hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.06] disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:border-mq-border disabled:hover:bg-white/[0.03]"
               }`}
               aria-pressed={isSelected}
             >

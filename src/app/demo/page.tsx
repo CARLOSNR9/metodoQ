@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { QuestionCard, type QuestionOption } from "@/components/demo";
+import {
+  FinalResultsScreen,
+  QuestionCard,
+  type QuestionOption,
+} from "@/components/demo";
 
 type DemoQuestion = {
   id: string;
@@ -111,47 +115,46 @@ export default function DemoPage() {
   const [answersByQuestionId, setAnswersByQuestionId] = useState<
     Record<string, string>
   >({});
-  const [correctAnswersCount, setCorrectAnswersCount] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [wrongAnswers, setWrongAnswers] = useState(0);
 
-  const currentQuestion = demoQuestions[currentQuestionIndex];
+  const totalQuestions = demoQuestions.length;
+  const isResultsStep = currentQuestionIndex === totalQuestions;
+  const currentQuestion = isResultsStep
+    ? null
+    : demoQuestions[currentQuestionIndex];
   const selectedOptionId = currentQuestion
     ? answersByQuestionId[currentQuestion.id]
-    : undefined;
+    : null;
   const hasAnsweredCurrentQuestion = Boolean(selectedOptionId);
-  const hasNextQuestion = currentQuestionIndex < demoQuestions.length - 1;
-  const isDemoCompleted = !hasNextQuestion && hasAnsweredCurrentQuestion;
-  const totalQuestions = demoQuestions.length;
-  const incorrectAnswersCount = totalQuestions - correctAnswersCount;
-  const levelPercentage = Math.round((correctAnswersCount / totalQuestions) * 100);
+  const hasNextQuestion =
+    !isResultsStep && currentQuestionIndex < totalQuestions - 1;
+  const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
   const progressPercent = Math.round(
     ((currentQuestionIndex + (hasAnsweredCurrentQuestion ? 1 : 0)) / totalQuestions) *
       100,
   );
 
   const handleAnswerSelect = (optionId: string, isCorrect: boolean) => {
+    if (!currentQuestion) {
+      return;
+    }
+
     const previousOptionId = answersByQuestionId[currentQuestion.id];
-    const wasCorrect = previousOptionId === currentQuestion.correctOptionId;
+    if (previousOptionId) {
+      return;
+    }
 
     setAnswersByQuestionId((prev) => ({
       ...prev,
       [currentQuestion.id]: optionId,
     }));
 
-    setCorrectAnswersCount((prev) => {
-      if (!previousOptionId) {
-        return isCorrect ? prev + 1 : prev;
-      }
-
-      if (wasCorrect && !isCorrect) {
-        return prev - 1;
-      }
-
-      if (!wasCorrect && isCorrect) {
-        return prev + 1;
-      }
-
-      return prev;
-    });
+    if (isCorrect) {
+      setCorrectAnswers((prev) => prev + 1);
+    } else {
+      setWrongAnswers((prev) => prev + 1);
+    }
   };
 
   return (
@@ -176,53 +179,18 @@ export default function DemoPage() {
               Comenzar demo
             </button>
           </div>
-        ) : isDemoCompleted ? (
-          <div className="mq-fade-up mt-10 flex justify-center">
-            <article className="w-full max-w-2xl rounded-2xl border border-mq-border-strong bg-mq-surface-raised p-6 text-center shadow-[0_24px_60px_-34px_rgb(0_209_255/0.45)] sm:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mq-accent">
-                Resultado final
-              </p>
-              <h2 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">
-                Tu nivel actual: {levelPercentage}%
-              </h2>
-              <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-xl border border-emerald-400/40 bg-emerald-500/10 p-4">
-                  <p className="text-sm text-emerald-200">Aciertos</p>
-                  <p className="mt-1 text-2xl font-semibold text-emerald-300">
-                    {correctAnswersCount}
-                  </p>
-                </div>
-                <div className="rounded-xl border border-rose-400/40 bg-rose-500/10 p-4">
-                  <p className="text-sm text-rose-200">Errores</p>
-                  <p className="mt-1 text-2xl font-semibold text-rose-300">
-                    {incorrectAnswersCount}
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-6 rounded-xl border border-mq-border bg-background/50 p-5 text-left">
-                <p className="text-sm font-semibold text-mq-accent">
-                  🎯 Recomendacion
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-mq-muted sm:text-base">
-                  Debes reforzar temas de shock y antibioticos para mejorar tu
-                  precision en escenarios de urgencias.
-                </p>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setCurrentQuestionIndex(0);
-                  setAnswersByQuestionId({});
-                  setCorrectAnswersCount(0);
-                }}
-                className="touch-manipulation mt-7 inline-flex min-h-14 items-center justify-center rounded-xl bg-mq-accent px-7 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:text-base"
-              >
-                Seguir entrenando
-              </button>
-            </article>
-          </div>
+        ) : isResultsStep ? (
+          <FinalResultsScreen
+            scorePercentage={scorePercentage}
+            correctAnswers={correctAnswers}
+            wrongAnswers={wrongAnswers}
+            onRepeatDemo={() => {
+              setCurrentQuestionIndex(0);
+              setAnswersByQuestionId({});
+              setCorrectAnswers(0);
+              setWrongAnswers(0);
+            }}
+          />
         ) : (
           <div className="mt-10">
             <div className="mb-5 space-y-2">
@@ -260,9 +228,7 @@ export default function DemoPage() {
                 <button
                   type="button"
                   onClick={() =>
-                    setCurrentQuestionIndex((prev) =>
-                      Math.min(prev + 1, demoQuestions.length - 1),
-                    )
+                    setCurrentQuestionIndex((prev) => prev + 1)
                   }
                   disabled={!hasAnsweredCurrentQuestion}
                   className="touch-manipulation inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:w-auto sm:text-base"
@@ -270,7 +236,18 @@ export default function DemoPage() {
                   Siguiente pregunta
                 </button>
               </div>
-            ) : null}
+            ) : (
+              <div className="mt-6 flex justify-end">
+                <button
+                  type="button"
+                  onClick={() => setCurrentQuestionIndex(totalQuestions)}
+                  disabled={!hasAnsweredCurrentQuestion}
+                  className="touch-manipulation inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:w-auto sm:text-base"
+                >
+                  Ver resultados
+                </button>
+              </div>
+            )}
           </div>
         )}
       </section>
