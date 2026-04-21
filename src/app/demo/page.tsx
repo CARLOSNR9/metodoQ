@@ -213,12 +213,12 @@ export default function DemoPage() {
 
             <div className="mq-fade-up">
               <QuestionCard
-                key={currentQuestion.id}
-                question={currentQuestion.statement}
-                options={currentQuestion.options}
-                correctOptionId={currentQuestion.correctOptionId}
-                explanation={currentQuestion.explanation}
-                keyPoints={currentQuestion.keyPoints}
+                key={currentQuestion!.id}
+                question={currentQuestion!.statement}
+                options={currentQuestion!.options}
+                correctOptionId={currentQuestion!.correctOptionId}
+                explanation={currentQuestion!.explanation}
+                keyPoints={currentQuestion!.keyPoints}
                 onAnswerSelect={handleAnswerSelect}
               />
             </div>
