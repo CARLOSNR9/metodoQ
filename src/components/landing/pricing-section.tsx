@@ -32,7 +32,7 @@ const defaultPlans: PricingPlan[] = [
       "Resumen de errores por tema",
       "1 objetivo de estudio priorizado",
     ],
-    cta: { label: "Crear cuenta gratis", href: "/signup" },
+    cta: { label: "Haz 5 preguntas gratis", href: "/demo" },
     badge: "Empieza aquí",
   },
   {
@@ -45,11 +45,12 @@ const defaultPlans: PricingPlan[] = [
       "Banco ampliado y sesiones guiadas",
       "Detección y refuerzo de lagunas",
       "Plan sugerido según tus fallos",
+      "Sesiones en vivo con medico que ya paso el MIR",
       "Soporte por email",
     ],
     cta: { label: "Hablar por Pro", href: "/signup" },
     highlighted: true,
-    badge: "Más elegido",
+    badge: "Mas elegido · cupos limitados",
   },
 ];
 

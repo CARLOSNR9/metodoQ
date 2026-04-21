@@ -4,6 +4,7 @@ import {
   FAQSection,
   HeroSection,
   HowItWorksSection,
+  ProductPreviewSection,
   PricingSection,
   ProblemSection,
   SolutionSection,
@@ -15,6 +16,7 @@ export default function HomePage() {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
+      <ProductPreviewSection />
       <HowItWorksSection id="como-funciona" />
       <DifferentiatorSection />
       <CtaBand />

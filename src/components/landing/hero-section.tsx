@@ -20,10 +20,10 @@ const defaultDescription =
   "Entrena con items tipo MIR, mide lo que fallas en serio y prioriza: menos ruido, más decisiones clínicas acertadas el día del examen.";
 
 export function HeroSection({
-  title = "Método Q",
+  title = "Entrena como se evalúa. Entra a residencia.",
   subtitle = "Menos teoría infinita. Más aciertos donde te juegas la plaza.",
   description = defaultDescription,
-  primaryCta = { label: "Empezar gratis", href: "#precios" },
+  primaryCta = { label: "Haz 5 preguntas gratis", href: "/demo" },
   secondaryCta = { label: "Ver el método", href: "#como-funciona" },
   footer,
   className,
@@ -41,6 +41,9 @@ export function HeroSection({
       <div className="mx-auto flex w-full max-w-5xl flex-col px-4 pb-20 pt-14 sm:px-6 sm:pb-24 sm:pt-16 lg:px-8 lg:pb-28 lg:pt-20">
         <div className="max-w-2xl">
           <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-mq-accent sm:text-xs">
+            Método Q
+          </p>
+          <p className="mt-2 text-[0.6875rem] font-semibold uppercase tracking-[0.22em] text-white/70 sm:text-xs">
             MIR · preparación activa
           </p>
           <h1

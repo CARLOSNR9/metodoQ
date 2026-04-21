@@ -10,8 +10,8 @@ export type CtaBandProps = {
 
 export function CtaBand({
   title = "Deja de acumular horas. Empieza a acumular aciertos.",
-  subtitle = "Prueba gratis y mira qué temas te están frenando antes de que sea tarde.",
-  cta = { label: "Empezar gratis", href: "#precios" },
+  subtitle = "Haz 5 preguntas gratis, recibe tu prioridad de estudio y entra hoy mismo al flujo real de Metodo Q.",
+  cta = { label: "Haz 5 preguntas gratis", href: "/demo" },
   secondaryCta = { label: "Cómo funciona", href: "#como-funciona" },
   className,
 }: CtaBandProps) {
@@ -23,9 +23,12 @@ export function CtaBand({
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
         <div className="flex flex-col gap-8 rounded-2xl border border-mq-border-strong bg-background/50 p-6 shadow-[0_24px_80px_-32px_rgb(0_209_255/0.35)] backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between sm:gap-10 sm:p-8 lg:p-10">
           <div className="max-w-xl">
+            <p className="inline-flex rounded-full border border-mq-accent/35 bg-mq-accent/15 px-3 py-1 text-[0.6875rem] font-semibold uppercase tracking-wide text-mq-accent">
+              Cupos limitados en sesiones en vivo · acceso inmediato
+            </p>
             <h2
               id="cta-band-heading"
-              className="text-balance text-xl font-semibold leading-snug tracking-tight sm:text-2xl lg:text-[1.65rem] lg:leading-snug"
+              className="mt-4 text-balance text-xl font-semibold leading-snug tracking-tight sm:text-2xl lg:text-[1.65rem] lg:leading-snug"
             >
               {title}
             </h2>

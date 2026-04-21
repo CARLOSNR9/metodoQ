@@ -19,5 +19,9 @@ export {
   type PricingSectionProps,
   type PricingPlan,
 } from "./pricing-section";
+export {
+  ProductPreviewSection,
+  type ProductPreviewSectionProps,
+} from "./product-preview-section";
 export { FAQSection, type FAQSectionProps, type FAQItem } from "./faq-section";
 export { CtaBand, type CtaBandProps } from "./cta-band";
