@@ -82,7 +82,7 @@ export function ProductPreviewSection({
               </p>
             </div>
             <Link
-              href="/signup"
+              href="/register"
               className="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-mq-accent px-4 text-sm font-semibold text-mq-accent-foreground transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent"
             >
               Probar este flujo gratis

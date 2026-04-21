@@ -48,7 +48,7 @@ const defaultPlans: PricingPlan[] = [
       "Sesiones en vivo con medico que ya paso el MIR",
       "Soporte por email",
     ],
-    cta: { label: "Hablar por Pro", href: "/signup" },
+    cta: { label: "Hablar por Pro", href: "/register" },
     highlighted: true,
     badge: "Mas elegido · cupos limitados",
   },

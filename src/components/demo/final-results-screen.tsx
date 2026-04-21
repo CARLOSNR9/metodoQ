@@ -55,7 +55,7 @@ export function FinalResultsScreen({
             Repetir demo
           </button>
           <Link
-            href="/signup"
+            href="/register"
             className="touch-manipulation inline-flex min-h-14 items-center justify-center rounded-xl border border-mq-border-strong bg-white/[0.03] px-7 text-sm font-semibold text-foreground transition duration-150 hover:border-white/30 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:text-base"
           >
             Entrenar completo (Pro)
