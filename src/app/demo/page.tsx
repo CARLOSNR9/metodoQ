@@ -1,5 +1,6 @@
 "use client";
 
+import { onAuthStateChanged, type User } from "firebase/auth";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
@@ -8,8 +9,8 @@ import {
   QuestionCard,
   type QuestionOption,
 } from "@/components/demo";
-import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { logoutUser } from "@/lib/auth";
+import { getFirebaseAuth } from "@/lib/firebase";
 import { saveDemoResult } from "@/lib/results";
 
 type DemoQuestion = {
@@ -115,7 +116,8 @@ const demoQuestions: DemoQuestion[] = [
 ];
 
 export default function DemoPage() {
-  const { user, isCheckingAuth } = useAuthGuard("/login");
+  const [user, setUser] = useState<User | null>(null);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
   const [hasStarted, setHasStarted] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answersByQuestionId, setAnswersByQuestionId] = useState<
@@ -142,6 +144,25 @@ export default function DemoPage() {
     ((currentQuestionIndex + (hasAnsweredCurrentQuestion ? 1 : 0)) / totalQuestions) *
       100,
   );
+
+  useEffect(() => {
+    let unsubscribe: (() => void) | undefined;
+
+    try {
+      unsubscribe = onAuthStateChanged(getFirebaseAuth(), (currentUser) => {
+        setUser(currentUser);
+        setIsCheckingAuth(false);
+      });
+    } catch (error) {
+      console.error("No se pudo inicializar Firebase Auth en demo.", error);
+      setUser(null);
+      setIsCheckingAuth(false);
+    }
+
+    return () => {
+      unsubscribe?.();
+    };
+  }, []);
 
   useEffect(() => {
     if (!isResultsStep || !user || hasSavedCurrentAttempt) {
@@ -193,26 +214,32 @@ export default function DemoPage() {
       <section className="mx-auto w-full max-w-4xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
         {isCheckingAuth ? (
           <div className="flex min-h-[45vh] items-center justify-center">
-            <p className="text-sm text-mq-muted sm:text-base">
-              Verificando sesion...
-            </p>
+            <p className="text-sm text-mq-muted sm:text-base">Cargando demo...</p>
           </div>
         ) : (
           <>
             <header className="max-w-2xl">
               <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-                <p className="text-xs text-mq-muted sm:text-sm">
-                  Sesion activa: {user?.email}
-                </p>
-                <button
-                  type="button"
-                  onClick={async () => {
-                    await logoutUser();
-                  }}
-                  className="touch-manipulation inline-flex min-h-10 items-center justify-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-foreground transition hover:border-white/30 hover:bg-white/[0.07] sm:text-sm"
-                >
-                  Cerrar sesion
-                </button>
+                {user ? (
+                  <>
+                    <p className="text-xs text-mq-muted sm:text-sm">
+                      Sesion activa: {user.email}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={async () => {
+                        await logoutUser();
+                      }}
+                      className="touch-manipulation inline-flex min-h-10 items-center justify-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-foreground transition hover:border-white/30 hover:bg-white/[0.07] sm:text-sm"
+                    >
+                      Cerrar sesion
+                    </button>
+                  </>
+                ) : (
+                  <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">
+                    Modo invitado
+                  </p>
+                )}
               </div>
               <h1 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 Demo Metodo Q
@@ -233,18 +260,45 @@ export default function DemoPage() {
             </button>
           </div>
         ) : isResultsStep ? (
-          <FinalResultsScreen
-            scorePercentage={scorePercentage}
-            correctAnswers={correctAnswers}
-            wrongAnswers={wrongAnswers}
-            onRepeatDemo={() => {
-              setCurrentQuestionIndex(0);
-              setAnswersByQuestionId({});
-              setCorrectAnswers(0);
-              setWrongAnswers(0);
-              setHasSavedCurrentAttempt(false);
-            }}
-          />
+          <>
+            <FinalResultsScreen
+              scorePercentage={scorePercentage}
+              correctAnswers={correctAnswers}
+              wrongAnswers={wrongAnswers}
+              onRepeatDemo={() => {
+                setCurrentQuestionIndex(0);
+                setAnswersByQuestionId({});
+                setCorrectAnswers(0);
+                setWrongAnswers(0);
+                setHasSavedCurrentAttempt(false);
+              }}
+            />
+            {!user ? (
+              <section className="mt-6 rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
+                <p className="text-sm font-semibold text-white sm:text-base">
+                  Guarda tu progreso y mejora con Metodo Q
+                </p>
+                <p className="mt-2 text-sm text-mq-muted">
+                  Crea una cuenta para guardar tus intentos, ver tu evolucion y
+                  recibir recomendaciones personalizadas.
+                </p>
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/register"
+                    className="inline-flex min-h-12 items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110"
+                  >
+                    Crear cuenta
+                  </Link>
+                  <Link
+                    href="/login"
+                    className="inline-flex min-h-12 items-center justify-center rounded-xl border border-mq-border-strong bg-white/[0.03] px-6 text-sm font-semibold text-foreground transition duration-150 hover:border-white/30 hover:bg-white/[0.07]"
+                  >
+                    Iniciar sesion
+                  </Link>
+                </div>
+              </section>
+            ) : null}
+          </>
         ) : (
           <div className="mt-10">
             <div className="mb-5 space-y-2">

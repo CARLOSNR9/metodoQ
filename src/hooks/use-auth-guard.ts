@@ -11,19 +11,31 @@ export function useAuthGuard(redirectTo = "/login") {
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(getFirebaseAuth(), (currentUser) => {
-      if (!currentUser) {
-        setUser(null);
+    let unsubscribe: (() => void) | undefined;
+
+    try {
+      unsubscribe = onAuthStateChanged(getFirebaseAuth(), (currentUser) => {
+        if (!currentUser) {
+          setUser(null);
+          setIsCheckingAuth(false);
+          router.replace(redirectTo);
+          return;
+        }
+
+        setUser(currentUser);
         setIsCheckingAuth(false);
-        router.replace(redirectTo);
-        return;
-      }
-
-      setUser(currentUser);
+      });
+    } catch (error) {
+      // Evita crash total de la ruta cuando Firebase no inicializa en runtime.
+      console.error("No se pudo inicializar Firebase Auth.", error);
+      setUser(null);
       setIsCheckingAuth(false);
-    });
+      router.replace(redirectTo);
+    }
 
-    return unsubscribe;
+    return () => {
+      unsubscribe?.();
+    };
   }, [redirectTo, router]);
 
   return { user, isCheckingAuth };
