@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import { getFirebaseAuth } from "@/lib/firebase";
 
 const defaultBenefits = [
@@ -16,7 +16,7 @@ const planBenefits: Record<string, string[]> = {
   "PRO+": [...defaultBenefits, "placeholder para mentoria futura"],
 };
 
-export default function CheckoutPage() {
+function CheckoutPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [isPaying, setIsPaying] = useState(false);
@@ -121,5 +121,23 @@ export default function CheckoutPage() {
         </article>
       </section>
     </main>
+  );
+}
+
+export default function CheckoutPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="flex min-h-[calc(100vh-4rem)] flex-1 bg-[#0A1F44]">
+          <section className="mx-auto w-full max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
+            <article className="rounded-2xl border border-mq-border-strong bg-mq-surface-raised p-6 sm:p-8">
+              <p className="text-sm text-mq-muted sm:text-base">Cargando checkout...</p>
+            </article>
+          </section>
+        </main>
+      }
+    >
+      <CheckoutPageContent />
+    </Suspense>
   );
 }
