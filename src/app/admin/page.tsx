@@ -1,5 +1,7 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 
+export const dynamic = "force-dynamic";
+
 type AdminMetrics = {
   usersCount: number;
   demosCompletedCount: number;
