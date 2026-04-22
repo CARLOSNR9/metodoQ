@@ -1,4 +1,4 @@
-export { HeroSection, type HeroSectionProps, type HeroCta } from "./hero-section";
+export { HeroSection } from "./hero-section";
 export { ProblemSection, type ProblemSectionProps } from "./problem-section";
 export {
   SolutionSection,
