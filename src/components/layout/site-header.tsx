@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { Logo } from "@/components/ui/logo";
+import { AuthDrawer } from "./auth-drawer";
 
 const nav = [
   { label: "Método", href: "#como-funciona" },
@@ -8,6 +12,8 @@ const nav = [
 ] as const;
 
 export function SiteHeader() {
+  const [isAuthOpen, setIsAuthOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-mq-border bg-background/85 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 transition-all duration-300">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:h-[4.5rem] sm:px-6 lg:px-8">
@@ -34,12 +40,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link
-            href="/login"
+          <button
+            onClick={() => setIsAuthOpen(true)}
             className="hidden text-sm font-medium text-mq-muted transition hover:text-white lg:block"
           >
-            Iniciar sesión
-          </Link>
+            Acceder
+          </button>
           <Link
             href="#precios"
             className="inline-flex min-h-11 items-center justify-center rounded-full bg-mq-accent px-6 text-[13px] font-bold text-mq-accent-foreground shadow-[0_0_20px_rgba(0,209,255,0.3)] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:text-sm"
@@ -48,6 +54,8 @@ export function SiteHeader() {
           </Link>
         </div>
       </div>
+      
+      <AuthDrawer isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
       
       {/* Mobile Nav */}
       <nav
