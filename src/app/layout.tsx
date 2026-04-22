@@ -17,11 +17,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Método Q",
+    default: "Método Q — Aprende cualquier tema en minutos",
     template: "%s · Método Q",
   },
   description:
-    "Plataforma SaaS Método Q — landing y producto en construcción.",
+    "La forma inteligente de aprender. Método Q utiliza IA para explicarte lo complejo de forma simple, clara y rápida. Empieza gratis hoy mismo.",
+  keywords: ["aprendizaje", "inteligencia artificial", "estudio", "método q", "educación"],
+  openGraph: {
+    title: "Método Q — Aprende cualquier tema en minutos",
+    description: "De la confusión a la claridad en segundos. Prueba Método Q gratis.",
+    type: "website",
+    locale: "es_ES",
+  },
 };
 
 export default function RootLayout({

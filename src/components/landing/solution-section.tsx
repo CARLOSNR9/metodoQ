@@ -13,20 +13,20 @@ export type SolutionSectionProps = {
 };
 
 const defaultBullets = [
-  "Entrenamiento con preguntas reales (como el día del examen).",
-  "Detección automática de lagunas: menos intuición, más evidencia.",
-  "Refuerzo dirigido a lo que te cuesta, no a lo que ya sabes.",
-  "Una guía clara de qué estudiar después de cada sesión.",
+  "Entender temas complejos rápidamente",
+  "Ahorrar horas de estudio",
+  "Aprender a tu ritmo",
+  "Explicaciones claras y sin relleno",
 ];
 
 export function SolutionSection({
-  eyebrow = "La solución",
-  title = "Método Q te dice qué te está costando la plaza —y qué hacer mañana.",
-  lead = "Es una plataforma de práctica guiada: respondes, el sistema mapea fallos y prioriza tu estudio. Menos dispersión, más decisiones correctas por minuto.",
-  notTraditional = "No es un curso clásico de vídeos eternos. Es entrenamiento activo con feedback accionable: para médicos que necesitan eficiencia, no más carga cognitiva.",
+  eyebrow = "La Solución",
+  title = "Aquí es donde entra Método Q",
+  lead = "Método Q transforma cualquier tema en explicaciones simples, directas y fáciles de entender usando inteligencia artificial.",
+  notTraditional = "No es otro curso largo y aburrido. Es una herramienta inteligente diseñada para darte claridad inmediata sobre lo que realmente importa.",
   bullets = defaultBullets,
   showCta = true,
-  cta = { label: "Ver planes", href: "#precios" },
+  cta = { label: "Empieza gratis", href: "#precios" },
   className,
 }: SolutionSectionProps) {
   return (

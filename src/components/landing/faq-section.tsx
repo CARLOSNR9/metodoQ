@@ -13,31 +13,23 @@ export type FAQSectionProps = {
 
 const defaultItems: FAQItem[] = [
   {
-    question: "¿Esto reemplaza a un curso o a mis apuntes?",
-    answer:
-      "No sustituye tu criterio ni tu bibliografía: te ayuda a entrenar el examen con preguntas y a priorizar qué estudiar cuando el tiempo es el cuello de botella.",
+    question: "¿Es gratis?",
+    answer: "Sí, puedes probar Método Q sin costo alguno. Queremos que experimentes la claridad antes de decidirte por un plan avanzado.",
   },
   {
-    question: "¿Voy a tener tiempo entre guardias y rotaciones?",
-    answer:
-      "Está pensado para sesiones cortas y de alta señal: practicas, recibes feedback y sabes el siguiente paso sin rearmar un plan desde cero cada semana.",
+    question: "¿Funciona para cualquier tema?",
+    answer: "Sí, nuestra IA está entrenada para procesar desde temas académicos básicos hasta conceptos profesionales avanzados.",
   },
   {
-    question: "¿Cómo sé qué estoy fallando de verdad?",
-    answer:
-      "Al responder, el sistema agrupa patrones (temas y tipos de error). La idea es simple: menos repetición inútil, más repetición sobre lo que te puede costar la pregunta.",
-  },
-  {
-    question: "¿Puedo cancelar un plan de pago?",
-    answer:
-      "Sí. Si activas un plan Pro, podrás cancelarlo según las condiciones vigentes en el momento de la compra; conservas acceso hasta el fin del periodo pagado.",
+    question: "¿Necesito experiencia previa?",
+    answer: "No, Método Q está diseñado para ser intuitivo. Solo escribe lo que quieres aprender y deja que el método haga el resto.",
   },
 ];
 
 export function FAQSection({
   id = "faq",
-  eyebrow = "Objeciones frecuentes",
-  title = "Respuestas claras. Sin marketing vacío.",
+  eyebrow = "FAQ",
+  title = "Preguntas frecuentes",
   items = defaultItems,
   className,
 }: FAQSectionProps) {

@@ -25,3 +25,9 @@ export {
 } from "./product-preview-section";
 export { FAQSection, type FAQSectionProps, type FAQItem } from "./faq-section";
 export { CtaBand, type CtaBandProps } from "./cta-band";
+export { UrgencyBanner } from "./urgency-banner";
+export { DemoVideo } from "./demo-video";
+export { ObjectionSection } from "./objection-section";
+export { ScenarioSection } from "./scenario-section";
+export { AuthoritySection } from "./authority-section";
+export { SocialProofSection } from "./social-proof-section";

@@ -7,17 +7,16 @@ export type ProblemSectionProps = {
 };
 
 const defaultPains = [
-  "Ves clase tras clase… y en el test te falla lo mismo: no es falta de esfuerzo, es falta de diagnóstico.",
-  "Tu tiempo es oro (guardias, rotaciones, vida): si no priorizas, estudias “mucho” y mejoras poco.",
-  "Sin datos, repites temas que ya dominas y dejas huecos donde te pueden tumbar la plaza.",
-  "La ansiedad no es flojera: es incertidumbre. Y sin un plan claro, se dispara.",
+  "Pasas horas leyendo y no entiendes",
+  "Buscas información y terminas más confundido",
+  "Los cursos son largos, aburridos y poco prácticos",
 ];
 
 export function ProblemSection({
-  eyebrow = "Si te suena esto",
-  title = "No es que no estudies lo suficiente. Es que no estás entrenando lo correcto.",
+  eyebrow = "El Problema",
+  title = "Estudiar no debería ser tan difícil",
   pains = defaultPains,
-  closingLine = "No necesitas estudiar más. Necesitas estudiar mejor.",
+  closingLine = "No es falta de capacidad. Es falta de método.",
   className,
 }: ProblemSectionProps) {
   return (
