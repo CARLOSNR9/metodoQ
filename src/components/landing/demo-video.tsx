@@ -4,7 +4,7 @@ import { Play, Sparkles } from "lucide-react";
 
 export function DemoVideo() {
   return (
-    <div className="relative mt-12 w-full max-w-5xl overflow-hidden rounded-2xl border border-mq-border bg-mq-surface p-2 shadow-2xl lg:mt-16">
+    <div className="relative w-full max-w-5xl overflow-hidden rounded-2xl border border-mq-border bg-mq-surface p-2 shadow-2xl">
       <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-background/50 backdrop-blur-xl">
         {/* Placeholder for Video/GIF */}
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">

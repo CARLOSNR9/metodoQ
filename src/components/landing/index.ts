@@ -31,3 +31,4 @@ export { ObjectionSection } from "./objection-section";
 export { ScenarioSection } from "./scenario-section";
 export { AuthoritySection } from "./authority-section";
 export { SocialProofSection } from "./social-proof-section";
+export { BenefitsSection } from "./benefits-section";
