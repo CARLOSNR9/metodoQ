@@ -3,7 +3,7 @@
 import { onAuthStateChanged, type User } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   AttemptHistory,
   FinalResultsScreen,
@@ -14,6 +14,13 @@ import {
 import { logoutUser } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { useUserPlan } from "@/hooks/use-user-plan";
+import {
+  trackClickUpgrade,
+  trackDemoQuestionAnswered,
+  trackFinishDemo,
+  trackStartDemo,
+  trackViewPaywall,
+} from "@/lib/analytics/events";
 import { registerTrainingDay, saveDemoResult } from "@/lib/results";
 
 type DemoQuestion = {
@@ -270,13 +277,12 @@ export default function DemoPage() {
   const [learningProfile, setLearningProfile] = useState<UserLearningProfile>(EMPTY_PROFILE);
   const [sessionQuestions, setSessionQuestions] = useState<DemoQuestion[]>([]);
   const [liveFeedbackMessage, setLiveFeedbackMessage] = useState<string | null>(null);
+  const hasTrackedFinishDemoRef = useRef(false);
 
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
   const hasUnlimitedAccess = effectivePlan === "PRO" || effectivePlan === "PRO_PLUS";
-  const plannedQuestionCount = isFreePlan
-    ? Math.min(5, demoQuestions.length)
-    : demoQuestions.length;
+  const plannedQuestionCount = Math.min(5, demoQuestions.length);
   const totalQuestions = hasStarted ? sessionQuestions.length : plannedQuestionCount;
   const availableQuestions = hasStarted ? sessionQuestions : [];
   const isResultsStep = hasStarted && currentQuestionIndex === totalQuestions;
@@ -429,6 +435,10 @@ export default function DemoPage() {
     }
 
     setHasTriggeredFreePaywall(true);
+    trackViewPaywall({
+      userId: user?.uid,
+      score: scorePercentage,
+    });
     setShowFreePaywallTeaser(true);
 
     const timeoutId = window.setTimeout(() => {
@@ -446,8 +456,22 @@ export default function DemoPage() {
     hasTriggeredFreePaywall,
     isFreePlan,
     isResultsStep,
+    scorePercentage,
     totalQuestions,
+    user?.uid,
   ]);
+
+  useEffect(() => {
+    if (!isResultsStep || hasTrackedFinishDemoRef.current || !hasStarted) {
+      return;
+    }
+
+    trackFinishDemo({
+      userId: user?.uid,
+      score: scorePercentage,
+    });
+    hasTrackedFinishDemoRef.current = true;
+  }, [hasStarted, isResultsStep, scorePercentage, user?.uid]);
 
   useEffect(() => {
     if (!showProgressFeedback) {
@@ -481,6 +505,21 @@ export default function DemoPage() {
     const elapsedSeconds = questionStartAt
       ? Number(((Date.now() - questionStartAt) / 1000).toFixed(2))
       : 0;
+    const answeredCount = Object.keys(answersByQuestionId).length + 1;
+    const nextCorrectAnswersCount = isCorrect ? correctAnswers + 1 : correctAnswers;
+    const currentScore = Math.round((nextCorrectAnswersCount / answeredCount) * 100);
+
+    // Evento liviano por respuesta para analisis de uso sin bloquear UI.
+    trackDemoQuestionAnswered({
+      userId: user?.uid,
+      questionId: currentQuestion.id,
+      questionIndex: currentQuestionIndex + 1,
+      isCorrect,
+      responseTimeSeconds: elapsedSeconds,
+      answeredCount,
+      score: currentScore,
+    });
+
     setResponseTimes((prev) => [...prev, elapsedSeconds]);
 
     if (user && !hasRegisteredTrainingDay) {
@@ -520,15 +559,22 @@ export default function DemoPage() {
       setWrongAnswers((prev) => prev + 1);
       setWrongTopicsByName(nextWrongTopics);
     }
+
+    // Auto‑avance después de responder (800 ms) para mantener flujo continuo
+    const isLastQuestion = currentQuestionIndex === totalQuestions - 1;
+    setTimeout(() => {
+      if (isLastQuestion) {
+        // Pasamos al último paso (resultados)
+        setCurrentQuestionIndex(totalQuestions);
+      } else {
+        setCurrentQuestionIndex((prev) => prev + 1);
+      }
+    }, 800);
   };
 
   const startAdaptiveSession = () => {
-    const selectedQuestions = selectAdaptiveQuestions(
-      demoQuestions,
-      plannedQuestionCount,
-      learningProfile,
-    );
-
+    // Seleccionamos las primeras 5 preguntas (máximo) para una demo ultra‑rápida
+    const selectedQuestions = demoQuestions.slice(0, plannedQuestionCount);
     setSessionQuestions(selectedQuestions);
     setHasStarted(true);
     setCurrentQuestionIndex(0);
@@ -545,6 +591,8 @@ export default function DemoPage() {
     setShowFreePaywallTeaser(false);
     setHasTriggeredFreePaywall(false);
     setHasRegisteredTrainingDay(false);
+    hasTrackedFinishDemoRef.current = false;
+    trackStartDemo({ userId: user?.uid });
   };
 
   return (
@@ -700,52 +748,27 @@ export default function DemoPage() {
                 onAnswerSelect={handleAnswerSelect}
               />
             </div>
-            {isFreePlan && showFreePaywallTeaser ? (
-              <p className="mt-4 inline-flex rounded-lg border border-mq-border-strong bg-white/[0.04] px-3 py-2 text-sm font-semibold text-mq-accent">
-                Buen inicio 👀
-              </p>
-            ) : null}
-
-            {hasNextQuestion ? (
-              <div className="mt-6 flex justify-end">
+            <div className="mt-6 flex justify-end">
+              {hasNextQuestion ? (
                 <button
                   type="button"
-                  onClick={() =>
-                    setCurrentQuestionIndex((prev) => prev + 1)
-                  }
+                  onClick={() => setCurrentQuestionIndex((prev) => prev + 1)}
                   disabled={!hasAnsweredCurrentQuestion}
                   className="touch-manipulation inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:w-auto sm:text-base"
                 >
                   Continuar
                 </button>
-              </div>
-            ) : hasReachedFreePlanLimit ? (
-              <div className="mt-6 rounded-2xl border border-mq-border-strong bg-mq-surface p-4 sm:p-5">
-                <p className="text-sm font-semibold text-white sm:text-base">
-                  Has alcanzado el limite del plan gratuito
-                </p>
-                <p className="mt-2 text-sm text-mq-muted">
-                  Para continuar entrenando sin limites, actualiza tu plan.
-                </p>
-                <Link
-                  href="/dashboard"
-                  className="mt-4 inline-flex min-h-12 items-center justify-center rounded-xl border border-mq-border-strong bg-white/[0.03] px-5 text-sm font-semibold text-foreground transition duration-150 hover:border-white/30 hover:bg-white/[0.07]"
-                >
-                  Ir al dashboard
-                </Link>
-              </div>
-            ) : (
-              <div className="mt-6 flex justify-end">
+              ) : (
                 <button
                   type="button"
                   onClick={() => setCurrentQuestionIndex(totalQuestions)}
                   disabled={!hasAnsweredCurrentQuestion}
                   className="touch-manipulation inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:w-auto sm:text-base"
                 >
-                  Ver analisis personalizado
+                  Ver análisis personalizado
                 </button>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         )}
             {user ? (
@@ -767,6 +790,12 @@ export default function DemoPage() {
         <FreePlanPaywall
           open={isFreeLimitModalOpen}
           onClose={() => setIsFreeLimitModalOpen(false)}
+          onUpgradeClick={() => {
+            trackClickUpgrade({
+              userId: user?.uid,
+              score: scorePercentage,
+            });
+          }}
           scorePercentage={scorePercentage}
         />
       ) : null}

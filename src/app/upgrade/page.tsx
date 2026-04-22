@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { trackClickUpgrade } from "@/lib/analytics/events";
+import { getFirebaseAuth } from "@/lib/firebase";
 
 const plans = [
   {
@@ -6,9 +10,11 @@ const plans = [
     name: "PRO",
     isRecommended: true,
     benefits: [
-      "acceso completo",
-      "preguntas ilimitadas",
-      "dashboard completo",
+      "Clases en vivo con médico aprobado",
+      "Estrategias reales, cero teoría",
+      "Resolución de dudas en vivo",
+      "Acceso ilimitado a simulacros",
+      "Análisis de rendimiento PRO",
     ],
   },
   {
@@ -23,6 +29,14 @@ const plans = [
 ];
 
 export default function UpgradePage() {
+  const getCurrentUserId = () => {
+    try {
+      return getFirebaseAuth().currentUser?.uid;
+    } catch {
+      return undefined;
+    }
+  };
+
   return (
     <main className="flex min-h-[calc(100vh-4rem)] flex-1 bg-[#0A1F44]">
       <section className="mx-auto w-full max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
@@ -63,6 +77,9 @@ export default function UpgradePage() {
 
                 <Link
                   href={`/checkout?plan=${encodeURIComponent(plan.name)}`}
+                  onClick={() => {
+                    trackClickUpgrade({ userId: getCurrentUserId() });
+                  }}
                   className={`mt-7 inline-flex min-h-12 w-full items-center justify-center rounded-xl px-5 text-sm font-semibold transition duration-150 ${
                     plan.isRecommended
                       ? "bg-mq-accent text-mq-accent-foreground hover:brightness-110"

@@ -1,5 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { trackClickDemo, trackHeroVariantA, trackHeroVariantB } from "@/lib/analytics/events";
 
 export type HeroCta = {
   label: string;
@@ -20,7 +24,7 @@ const defaultDescription =
   "Entrena con items tipo MIR, mide lo que fallas en serio y prioriza: menos ruido, más decisiones clínicas acertadas el día del examen.";
 
 export function HeroSection({
-  title = "Entrena como se evalúa. Entra a residencia.",
+  title: propTitle,
   subtitle = "Menos teoría infinita. Más aciertos donde te juegas la plaza.",
   description = defaultDescription,
   primaryCta = { label: "Haz 5 preguntas gratis", href: "/demo" },
@@ -28,6 +32,29 @@ export function HeroSection({
   footer,
   className,
 }: HeroSectionProps) {
+  const defaultVariantA = "Entrena como se evalúa. Entra a residencia.";
+  const variantB = "Haz preguntas reales. Mejora tu puntaje.";
+
+  const [title, setTitle] = useState(propTitle ?? defaultVariantA);
+
+  useEffect(() => {
+    if (propTitle && propTitle !== defaultVariantA) return;
+
+    let variant = localStorage.getItem("ab_hero_variant");
+    if (!variant) {
+      variant = Math.random() < 0.5 ? "A" : "B";
+      localStorage.setItem("ab_hero_variant", variant);
+    }
+
+    if (variant === "B") {
+      setTitle(variantB);
+      trackHeroVariantB();
+    } else {
+      setTitle(defaultVariantA);
+      trackHeroVariantA();
+    }
+  }, [propTitle]);
+
   return (
     <section
       className={`relative isolate overflow-hidden border-b border-mq-border/80 ${className ?? ""}`}
@@ -63,6 +90,11 @@ export function HeroSection({
         <div className="mt-11 flex w-full max-w-md flex-col gap-3 sm:max-w-none sm:flex-row sm:items-center sm:gap-4">
           <Link
             href={primaryCta.href}
+            onClick={() => {
+              if (primaryCta.href === "/demo") {
+                trackClickDemo();
+              }
+            }}
             className="inline-flex min-h-[3.5rem] w-full items-center justify-center rounded-xl bg-mq-accent px-7 text-[0.9375rem] font-semibold text-mq-accent-foreground shadow-[0_1px_0_rgb(255_255_255/0.14)_inset,0_14px_44px_-18px_rgb(0_209_255/0.55)] transition duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent active:translate-y-0 sm:w-auto sm:min-w-[13rem]"
           >
             {primaryCta.label}

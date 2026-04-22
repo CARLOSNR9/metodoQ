@@ -9,14 +9,23 @@ import {
   SummaryCards,
   TrainingReminderCard,
   WeakTopicsCard,
+  ReferralCard,
+  LiveClasses,
+  PastClasses,
+  ActivityReminder,
+  MotivationalReminder,
+  SubscriptionExpirationAlert,
+  AccumulatedStats,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserPlan } from "@/hooks/use-user-plan";
+import { useReferralStats } from "@/hooks/use-referral-stats";
 import Link from "next/link";
 
 export default function DashboardPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
-  const { plan, loading: isLoadingPlan } = useUserPlan();
+  const { plan, loading: isLoadingPlan, expiresAt } = useUserPlan();
+  const { referralCode, referralCount, loading: isLoadingReferrals } = useReferralStats(user?.uid);
 
   const effectivePlan = plan ?? "FREE";
   const planLabel = effectivePlan === "PRO_PLUS" ? "PRO+" : effectivePlan;
@@ -39,14 +48,28 @@ export default function DashboardPage() {
 
   return (
     <section className="space-y-6">
+      <ActivityReminder />
+      <MotivationalReminder />
+      <SubscriptionExpirationAlert />
       <header>
         <div className="mb-4 rounded-2xl border border-mq-border-strong bg-mq-surface p-4 sm:p-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-mq-border bg-white/[0.03] px-3 py-1.5">
-              <span className="h-2 w-2 rounded-full bg-mq-accent" aria-hidden />
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-accent">
-                Plan actual: {isLoadingPlan ? "Cargando..." : planLabel}
-              </p>
+            <div className="flex flex-wrap gap-2">
+              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-mq-border bg-white/[0.03] px-3 py-1.5">
+                <span className="h-2 w-2 rounded-full bg-mq-accent" aria-hidden />
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-accent">
+                  Plan actual: {isLoadingPlan ? "Cargando..." : planLabel}
+                </p>
+              </div>
+              
+              {!isLoadingReferrals && (
+                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1.5">
+                  <span className="h-2 w-2 rounded-full bg-indigo-400" aria-hidden />
+                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-indigo-100">
+                    Has invitado a {referralCount} personas
+                  </p>
+                </div>
+              )}
             </div>
             {!isLoadingPlan && effectivePlan === "FREE" ? (
               <Link
@@ -55,6 +78,11 @@ export default function DashboardPage() {
               >
                 Mejorar a Pro
               </Link>
+            ) : null}
+            {!isLoadingPlan && expiresAt && effectivePlan === "PRO" ? (
+              <div className="rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-3 py-1.5 text-xs font-semibold text-yellow-200">
+                🚀 Recompensa activa: PRO hasta el {new Date(expiresAt).toLocaleDateString()}
+              </div>
             ) : null}
           </div>
           <div className="mt-3 grid gap-2 sm:grid-cols-2">
@@ -86,6 +114,17 @@ export default function DashboardPage() {
       </header>
 
       <SummaryCards userId={user.uid} />
+      <AccumulatedStats userId={user.uid} />
+      
+      <ReferralCard 
+        referralCode={referralCode} 
+        referralCount={referralCount} 
+        loading={isLoadingReferrals} 
+      />
+
+      <LiveClasses />
+      <PastClasses />
+
       <DailyRecommendationCard userId={user.uid} />
       <TrainingReminderCard userId={user.uid} />
       <StreakCard userId={user.uid} />

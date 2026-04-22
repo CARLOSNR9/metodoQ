@@ -33,7 +33,7 @@ export function FinalResultsScreen({
     <div className={`mq-fade-up mt-10 flex justify-center ${className ?? ""}`}>
       <article className="w-full max-w-2xl rounded-2xl border border-mq-border-strong bg-mq-surface-raised p-6 text-center shadow-[0_24px_60px_-34px_rgb(0_209_255/0.45)] sm:p-8">
         <h2 className="text-balance text-2xl font-semibold text-white sm:text-3xl">
-          Tu nivel actual: {scorePercentage}%
+          Tu nivel actual es {scorePercentage}%… pero necesitas mínimo 80% para competir
         </h2>
         <p className="mt-4 text-sm text-mq-muted sm:text-base">
           Has respondido {correctAnswers} correctas y {wrongAnswers} incorrectas
@@ -45,6 +45,12 @@ export function FinalResultsScreen({
             {performanceMessage}
           </p>
         </div>
+
+        {scorePercentage < 80 && (
+          <p className="mt-4 text-sm text-mq-accent">
+            Estás a {80 - scorePercentage} puntos de una plaza
+          </p>
+        )}
 
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <button
@@ -58,7 +64,7 @@ export function FinalResultsScreen({
             href="/register"
             className="touch-manipulation inline-flex min-h-14 items-center justify-center rounded-xl border border-mq-border-strong bg-white/[0.03] px-7 text-sm font-semibold text-foreground transition duration-150 hover:border-white/30 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:text-base"
           >
-            Entrenar completo (Pro)
+            Mejorar mi puntaje
           </Link>
         </div>
       </article>

@@ -16,6 +16,7 @@ Esta base deja el flujo listo para pagos reales sin exponer secretos en frontend
 Copiar `.env.example` a `.env.local` y completar:
 
 - `NEXT_PUBLIC_APP_URL`
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`
 - `STRIPE_SECRET_KEY`
 - `STRIPE_WEBHOOK_SECRET`
 - `STRIPE_PRICE_ID_PRO`

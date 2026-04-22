@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useState, Suspense } from "react";
 import { registerWithEmail } from "@/lib/auth";
+import { trackReferralSignup } from "@/lib/analytics/events";
 
 function getRegisterErrorMessage(errorCode: string) {
   if (errorCode === "auth/email-already-in-use") {
@@ -21,8 +22,10 @@ function getRegisterErrorMessage(errorCode: string) {
   return "No se pudo crear la cuenta. Intentalo de nuevo.";
 }
 
-export default function RegisterPage() {
+function RegisterContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const referralFromUrl = searchParams.get("ref");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -34,7 +37,14 @@ export default function RegisterPage() {
     setIsSubmitting(true);
 
     try {
-      await registerWithEmail(email.trim(), password);
+      const finalReferral = referralFromUrl || localStorage.getItem("referredBy");
+      const credential = await registerWithEmail(email.trim(), password, finalReferral);
+      
+      if (finalReferral) {
+        trackReferralSignup({ userId: credential.user.uid, referralCode: finalReferral });
+        localStorage.removeItem("referredBy");
+      }
+      
       router.push("/demo");
     } catch (error) {
       const code = (error as { code?: string }).code ?? "";
@@ -108,5 +118,13 @@ export default function RegisterPage() {
         </article>
       </section>
     </main>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={null}>
+      <RegisterContent />
+    </Suspense>
   );
 }

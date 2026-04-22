@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { trackClickDemo } from "@/lib/analytics/events";
 
 export type CtaBandProps = {
   title?: string;
@@ -39,6 +42,11 @@ export function CtaBand({
           <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:min-w-[12rem]">
             <Link
               href={cta.href}
+              onClick={() => {
+                if (cta.href === "/demo") {
+                  trackClickDemo();
+                }
+              }}
               className="inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-center text-[0.9375rem] font-semibold text-mq-accent-foreground shadow-[0_1px_0_rgb(255_255_255/0.14)_inset,0_12px_40px_-16px_rgb(0_209_255/0.55)] transition duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:brightness-110 hover:shadow-[0_1px_0_rgb(255_255_255/0.18)_inset,0_18px_50px_-14px_rgb(0_209_255/0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent active:translate-y-0"
             >
               {cta.label}

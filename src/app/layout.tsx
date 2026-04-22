@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { SiteFooter, SiteHeader } from "@/components/layout";
+import { ReferralTracker } from "@/components/referrals/referral-tracker";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,6 +35,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full bg-background antialiased text-foreground`}
     >
       <body className="flex min-h-full flex-col font-sans">
+        <GoogleAnalytics />
+        <ReferralTracker />
         <SiteHeader />
         <div className="flex flex-1 flex-col">{children}</div>
         <SiteFooter />

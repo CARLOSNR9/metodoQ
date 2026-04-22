@@ -5,6 +5,7 @@ import Link from "next/link";
 type FreePlanPaywallProps = {
   open: boolean;
   onClose: () => void;
+  onUpgradeClick?: () => void;
   scorePercentage: number;
 };
 
@@ -23,6 +24,7 @@ function getPerformancePaywallMessage(scorePercentage: number) {
 export function FreePlanPaywall({
   open,
   onClose,
+  onUpgradeClick,
   scorePercentage,
 }: FreePlanPaywallProps) {
   if (!open) {
@@ -52,24 +54,29 @@ export function FreePlanPaywall({
           {performanceMessage}
         </p>
         <p className="mt-2 text-sm font-semibold text-mq-accent sm:text-base">
-          Desbloquea acceso completo y entrena sin limites
+          No más estudio perdido, solo lo que necesitas
         </p>
         <p className="mt-3 text-sm text-[#DCE7FA]">
-          Miles de medicos ya estan entrenando con este metodo
+          Acceso limitado a sesiones en vivo
+        </p>
+        <p className="mt-3 text-sm text-[#DCE7FA]">
+          +500 médicos ya están entrenando
         </p>
         <p className="mt-1 text-sm font-medium text-[#BFD0EC]">
           Tu progreso depende de lo que hagas hoy
         </p>
 
         <ul className="mt-5 space-y-2 rounded-2xl border border-[#27406B] bg-[#0A1F44]/70 p-4">
-          <li className="text-sm text-[#DCE7FA]">- preguntas ilimitadas</li>
-          <li className="text-sm text-[#DCE7FA]">- analisis de rendimiento</li>
-          <li className="text-sm text-[#DCE7FA]">- mejora real en tu puntaje</li>
+          <li className="text-sm text-[#DCE7FA]">- Clases en vivo con médicos aprobados</li>
+          <li className="text-sm text-[#DCE7FA]">- Estrategias reales para tu examen</li>
+          <li className="text-sm text-[#DCE7FA]">- Preguntas y simulacros ilimitados</li>
+          <li className="text-sm text-[#DCE7FA]">- Análisis de rendimiento avanzado</li>
         </ul>
 
         <div className="mt-7 grid gap-3">
           <Link
             href="/upgrade"
+            onClick={onUpgradeClick}
             className="inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-[#00D1FF] px-5 text-base font-semibold text-[#04203C] transition duration-150 hover:brightness-110"
           >
             Desbloquear acceso completo

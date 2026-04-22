@@ -3,8 +3,19 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { doc, serverTimestamp, setDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getCountFromServer,
+  getDocs,
+  query,
+  serverTimestamp,
+  setDoc,
+  updateDoc,
+  where,
+} from "firebase/firestore";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
+import { trackRewardUnlocked } from "@/lib/analytics/events";
 
 export type UserPlan = "FREE" | "PRO" | "PRO_PLUS";
 
@@ -21,13 +32,32 @@ export interface UserDocument {
   lastScore: number | null;
   attemptsCount: number;
   topicStats: Record<string, { correct: number; wrong: number }>;
+  referralCode: string;
+  referredBy: string | null;
+  planStartedAt: string | null;
+  planExpiresAt: string | null;
+  lastActiveAt: ReturnType<typeof serverTimestamp> | null;
+  achievements: string[];
+}
+
+export function generateReferralCode() {
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  let result = "";
+  for (let i = 0; i < 6; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
 }
 
 export async function loginWithEmail(email: string, password: string) {
   return signInWithEmailAndPassword(getFirebaseAuth(), email, password);
 }
 
-export async function registerWithEmail(email: string, password: string) {
+export async function registerWithEmail(
+  email: string,
+  password: string,
+  referredByCode?: string | null,
+) {
   const credential = await createUserWithEmailAndPassword(
     getFirebaseAuth(),
     email,
@@ -48,9 +78,49 @@ export async function registerWithEmail(email: string, password: string) {
     lastScore: null,
     attemptsCount: 0,
     topicStats: {},
+    referralCode: generateReferralCode(),
+    referredBy: referredByCode || null,
+    planStartedAt: null,
+    planExpiresAt: null,
+    lastActiveAt: serverTimestamp(),
+    achievements: [],
   };
 
   await setDoc(userDocRef, userDoc, { merge: true });
+
+  // Lógica de recompensa para el referente
+  if (referredByCode) {
+    try {
+      const usersRef = collection(getFirebaseDb(), "users");
+      
+      // Contar cuántos referidos tiene ahora el referente
+      const referralQuery = query(usersRef, where("referredBy", "==", referredByCode));
+      const referrerSnap = await getCountFromServer(referralQuery);
+      const count = referrerSnap.data().count;
+
+      // Si llegó exactamente a 3, darle 7 días de PRO
+      if (count === 3) {
+        const q = query(usersRef, where("referralCode", "==", referredByCode));
+        const querySnapshot = await getDocs(q);
+        
+        if (!querySnapshot.empty) {
+          const referrerDoc = querySnapshot.docs[0];
+          const expirationDate = new Date();
+          expirationDate.setDate(expirationDate.getDate() + 7);
+
+          await updateDoc(referrerDoc.ref, {
+            plan: "PRO",
+            planExpiresAt: expirationDate.toISOString(),
+          });
+
+          trackRewardUnlocked({ userId: referrerDoc.id, rewardType: "PRO_7_DAYS" });
+        }
+      }
+    } catch (e) {
+      console.error("Error al procesar recompensa:", e);
+    }
+  }
+
   return credential;
 }
 
@@ -72,7 +142,62 @@ export async function activateProPlanForCurrentUser() {
     {
       plan: "PRO",
       planActivatedAt: serverTimestamp(),
+      planStartedAt: new Date().toISOString(),
+      planExpiresAt: null, // O definir una fecha si es necesario
     },
     { merge: true },
   );
+}
+
+export async function updateUserSubscription(
+  userId: string,
+  plan: UserPlan,
+  durationDays: number | null = null,
+) {
+  const userRef = doc(getFirebaseDb(), "users", userId);
+  const now = new Date();
+  const startDate = now.toISOString();
+  let endDate: string | null = null;
+
+  if (durationDays) {
+    const end = new Date(now);
+    end.setDate(end.getDate() + durationDays);
+    endDate = end.toISOString();
+  }
+
+  await updateDoc(userRef, {
+    plan,
+    planStartedAt: startDate,
+    planExpiresAt: endDate,
+  });
+}
+
+export async function getReferralCount(referralCode: string) {
+  const usersRef = collection(getFirebaseDb(), "users");
+  const q = query(usersRef, where("referredBy", "==", referralCode));
+  const snapshot = await getCountFromServer(q);
+  return snapshot.data().count;
+}
+
+export async function updateLastActiveDate(userId: string) {
+  const userDocRef = doc(getFirebaseDb(), "users", userId);
+  await updateDoc(userDocRef, {
+    lastActiveAt: serverTimestamp(),
+  });
+}
+
+export type ActivityStatus = "activo" | "riesgo" | "inactivo";
+
+export function getUserActivityStatus(lastActiveAt: any): ActivityStatus {
+  if (!lastActiveAt) return "inactivo";
+
+  const lastActiveDate =
+    typeof lastActiveAt.toDate === "function" ? lastActiveAt.toDate() : new Date(lastActiveAt);
+  const now = new Date();
+  const diffInMs = now.getTime() - lastActiveDate.getTime();
+  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+
+  if (diffInDays >= 5) return "inactivo";
+  if (diffInDays >= 2) return "riesgo";
+  return "activo";
 }

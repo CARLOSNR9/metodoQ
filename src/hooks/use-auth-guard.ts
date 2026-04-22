@@ -4,6 +4,7 @@ import { onAuthStateChanged, type User } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { getFirebaseAuth } from "@/lib/firebase";
+import { updateLastActiveDate } from "@/lib/auth";
 
 export function useAuthGuard(redirectTo = "/login") {
   const router = useRouter();
@@ -21,6 +22,9 @@ export function useAuthGuard(redirectTo = "/login") {
           router.replace(redirectTo);
           return;
         }
+
+        // Actualizar actividad al entrar
+        updateLastActiveDate(currentUser.uid).catch(console.error);
 
         setUser(currentUser);
         setIsCheckingAuth(false);

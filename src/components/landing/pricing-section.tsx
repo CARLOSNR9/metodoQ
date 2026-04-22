@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { trackClickDemo } from "@/lib/analytics/events";
 
 export type PricingPlan = {
   name: string;
@@ -58,7 +61,7 @@ export function PricingSection({
   id = "precios",
   eyebrow = "Inversión",
   title = "Empieza sin fricción. Escala cuando el método te demuestre valor.",
-  lead = "Prueba el flujo gratis. Si encaja con tu ritmo (guardias, rotaciones, vida), subes de plan cuando quieras.",
+  lead = "Haz 5 preguntas gratis. Si encaja con tu ritmo (guardias, rotaciones, vida), subes de plan cuando quieras.",
   plans = defaultPlans,
   guarantee = "Si el plan gratuito no te aporta claridad sobre qué estudiar, no tiene sentido pasar a Pro: por eso el entry es real, no una demo vacía.",
   className,
@@ -139,6 +142,11 @@ export function PricingSection({
               </ul>
               <Link
                 href={plan.cta.href}
+                onClick={() => {
+                  if (plan.cta.href === "/demo") {
+                    trackClickDemo();
+                  }
+                }}
                 className={`mt-9 inline-flex min-h-14 w-full items-center justify-center rounded-xl px-5 text-[0.9375rem] font-semibold transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent active:scale-[0.99] ${
                   plan.highlighted
                     ? "bg-mq-accent text-mq-accent-foreground shadow-[0_1px_0_rgb(255_255_255/0.12)_inset] hover:-translate-y-0.5 hover:brightness-110"

@@ -1,8 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect } from "react";
+import { trackPayment } from "@/lib/analytics/events";
+import { getFirebaseAuth } from "@/lib/firebase";
 
 export default function SuccessPage() {
+  useEffect(() => {
+    let userId: string | undefined;
+
+    try {
+      userId = getFirebaseAuth().currentUser?.uid;
+    } catch {
+      userId = undefined;
+    }
+
+    trackPayment({ userId });
+  }, []);
+
   return (
     <main className="flex min-h-[calc(100vh-4rem)] flex-1 bg-[#0A1F44]">
       <section className="mx-auto w-full max-w-2xl px-4 py-12 sm:px-6 sm:py-16">

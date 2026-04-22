@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { logoutUser } from "@/lib/auth";
+import { AchievementNotification } from "./achievement-notification";
 
 type DashboardShellProps = {
   children: React.ReactNode;
@@ -81,6 +82,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
 
         <div className="flex-1 px-4 py-6 sm:px-6 sm:py-8">{children}</div>
       </section>
+      <AchievementNotification userId={user?.uid ?? ""} />
     </main>
   );
 }

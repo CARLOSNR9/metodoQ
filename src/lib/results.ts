@@ -12,6 +12,7 @@ import {
   where,
 } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
+import { checkAchievements } from "@/lib/achievements";
 
 type SaveDemoResultInput = {
   userId: string;
@@ -113,6 +114,7 @@ async function updateUserPerformanceProfile({
         avgResponseTime: Number(nextAvgResponseTime.toFixed(2)),
         lastScore: scorePercentage,
         performanceProfileUpdatedAt: serverTimestamp(),
+        lastActiveAt: serverTimestamp(),
       },
       { merge: true },
     );
@@ -148,6 +150,9 @@ export async function saveDemoResult({
     correctTopics,
     avgResponseTime,
   });
+
+  // Verificar logros
+  checkAchievements(userId).catch(console.error);
 
   return docRef;
 }
@@ -244,9 +249,58 @@ export async function registerTrainingDay(userId: string) {
       streakCount: nextStreak,
       streakLastTrainingDate: todayKey,
       streakUpdatedAt: serverTimestamp(),
+      lastActiveAt: serverTimestamp(),
     },
     { merge: true },
   );
 
+  // Verificar logros
+  checkAchievements(userId).catch(console.error);
+
   return nextStreak;
+}
+
+export async function getUserAccumulatedStats(userId: string) {
+  const results = await getUserDemoResults(userId);
+  if (results.length === 0) {
+    return {
+      totalQuestions: 0,
+      activeDays: 0,
+      improvement: 0,
+    };
+  }
+
+  const totalQuestions = results.reduce(
+    (acc, item) => acc + item.correctAnswers + item.wrongAnswers,
+    0,
+  );
+
+  const activeDaysSet = new Set<string>();
+  results.forEach((item) => {
+    if (item.fechaIso) {
+      activeDaysSet.add(item.fechaIso.split("T")[0]);
+    }
+  });
+  const activeDays = activeDaysSet.size;
+
+  // Mejora: Comparamos el promedio de los últimos 3 vs los primeros 3 (o los que haya)
+  const sortedByDate = [...results].sort(
+    (a, b) => new Date(a.fechaIso!).getTime() - new Date(b.fechaIso!).getTime(),
+  );
+
+  const firstResults = sortedByDate.slice(0, Math.min(3, sortedByDate.length));
+  const lastResults = sortedByDate.slice(Math.max(0, sortedByDate.length - 3));
+
+  const initialAvg =
+    firstResults.reduce((acc, item) => acc + item.scorePercentage, 0) / firstResults.length;
+  const currentAvg =
+    lastResults.reduce((acc, item) => acc + item.scorePercentage, 0) / lastResults.length;
+
+  const improvement = Math.round(currentAvg - initialAvg);
+
+  return {
+    totalQuestions,
+    activeDays,
+    improvement,
+  };
 }
