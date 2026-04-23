@@ -1,11 +1,13 @@
-import {
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
   signInWithEmailAndPassword,
+  signInWithPopup,
   signOut,
 } from "firebase/auth";
 import {
   collection,
   doc,
+  getDoc,
   getCountFromServer,
   getDocs,
   query,
@@ -51,6 +53,48 @@ export function generateReferralCode() {
 
 export async function loginWithEmail(email: string, password: string) {
   return signInWithEmailAndPassword(getFirebaseAuth(), email, password);
+}
+
+export async function loginWithGoogle() {
+  const provider = new GoogleAuthProvider();
+  const credential = await signInWithPopup(getFirebaseAuth(), provider);
+  const user = credential.user;
+
+  // Verificar si el documento del usuario ya existe en Firestore
+  const userDocRef = doc(getFirebaseDb(), "users", user.uid);
+  const userDocSnap = await getDoc(userDocRef);
+
+  if (!userDocSnap.exists()) {
+    // Si no existe, crear perfil inicial similar al de email
+    const newUserDoc: UserDocument = {
+      uid: user.uid,
+      email: user.email ?? "",
+      plan: "FREE",
+      createdAt: serverTimestamp(),
+      streakCount: 0,
+      streakLastTrainingDate: null,
+      strengths: [],
+      weaknesses: [],
+      avgResponseTime: 0,
+      lastScore: null,
+      attemptsCount: 0,
+      topicStats: {},
+      referralCode: generateReferralCode(),
+      referredBy: null, // Podría extenderse para detectar referral en Google login también
+      planStartedAt: null,
+      planExpiresAt: null,
+      lastActiveAt: serverTimestamp(),
+      achievements: [],
+    };
+    await setDoc(userDocRef, newUserDoc);
+  } else {
+    // Si existe, actualizar última actividad
+    await updateDoc(userDocRef, {
+      lastActiveAt: serverTimestamp(),
+    });
+  }
+
+  return credential;
 }
 
 export async function registerWithEmail(

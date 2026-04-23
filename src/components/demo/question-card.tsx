@@ -48,8 +48,16 @@ export function QuestionCard({
   className,
 }: QuestionCardProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
-  const hasAnswered = selectedOptionId !== null;
+  const [isConfirmed, setIsConfirmed] = useState(false);
+  const hasAnswered = isConfirmed;
   const isCorrect = selectedOptionId === correctOptionId;
+
+  const handleConfirm = () => {
+    if (selectedOptionId && !isConfirmed) {
+      setIsConfirmed(true);
+      onAnswerSelect?.(selectedOptionId, selectedOptionId === correctOptionId);
+    }
+  };
 
   return (
     <article
@@ -79,7 +87,6 @@ export function QuestionCard({
                   return;
                 }
                 setSelectedOptionId(option.id);
-                onAnswerSelect?.(option.id, option.id === correctOptionId);
               }}
               disabled={hasAnswered}
               className={`touch-manipulation flex min-h-14 w-full items-center gap-3 rounded-xl border px-4 py-3 text-left transition duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:min-h-16 sm:px-5 ${
@@ -111,6 +118,18 @@ export function QuestionCard({
           );
         })}
       </div>
+
+      {!isConfirmed && selectedOptionId && (
+        <div className="mq-fade-up mt-6">
+          <button
+            type="button"
+            onClick={handleConfirm}
+            className="touch-manipulation flex min-h-12 w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground shadow-[0_8px_24px_-12px_rgb(0_209_255/0.5)] transition duration-200 hover:brightness-110 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:min-h-14 sm:text-base"
+          >
+            Confirmar Respuesta
+          </button>
+        </div>
+      )}
 
       {hasAnswered ? (
         <section className="mq-fade-up mt-6 rounded-xl border border-mq-border-strong bg-background/60 p-4 sm:p-5">

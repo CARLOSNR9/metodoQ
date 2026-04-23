@@ -560,16 +560,7 @@ export default function DemoPage() {
       setWrongTopicsByName(nextWrongTopics);
     }
 
-    // Auto‑avance después de responder (800 ms) para mantener flujo continuo
-    const isLastQuestion = currentQuestionIndex === totalQuestions - 1;
-    setTimeout(() => {
-      if (isLastQuestion) {
-        // Pasamos al último paso (resultados)
-        setCurrentQuestionIndex(totalQuestions);
-      } else {
-        setCurrentQuestionIndex((prev) => prev + 1);
-      }
-    }, 800);
+
   };
 
   const startAdaptiveSession = () => {
