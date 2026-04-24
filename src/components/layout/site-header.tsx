@@ -48,12 +48,28 @@ export function SiteHeader() {
           </button>
           <Link
             href="#precios"
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-mq-accent px-6 text-[13px] font-bold text-mq-accent-foreground shadow-[0_0_20px_rgba(0,209,255,0.3)] transition duration-300 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:text-sm"
+            className="group relative inline-flex min-h-11 items-center justify-center rounded-full bg-mq-accent px-6 text-[13px] font-bold text-mq-accent-foreground transition duration-300 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:text-sm"
           >
-            Empezar gratis
+            {/* Pulsing Glow Background */}
+            <div className="absolute inset-0 animate-[pulse-glow_3s_infinite] rounded-full bg-mq-accent/40 blur-md transition-all group-hover:bg-mq-accent/60" />
+            
+            <span className="relative">Empezar gratis</span>
           </Link>
         </div>
       </div>
+
+      <style jsx global>{`
+        @keyframes pulse-glow {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.5;
+          }
+          50% {
+            transform: scale(1.1);
+            opacity: 0.8;
+          }
+        }
+      `}</style>
       
       <AuthDrawer isOpen={isAuthOpen} onClose={() => setIsAuthOpen(false)} />
       
