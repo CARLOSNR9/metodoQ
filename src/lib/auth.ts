@@ -42,6 +42,10 @@ export interface UserDocument {
   planExpiresAt: string | null;
   lastActiveAt: ReturnType<typeof serverTimestamp> | null;
   achievements: string[];
+  onboardingCompleted?: boolean;
+  goalUniversity?: string;
+  attemptedExam?: boolean;
+  usedCourses?: boolean;
 }
 
 export function generateReferralCode() {
@@ -87,6 +91,7 @@ export async function loginWithGoogle() {
       planExpiresAt: null,
       lastActiveAt: serverTimestamp(),
       achievements: [],
+      onboardingCompleted: false,
     };
     await setDoc(userDocRef, newUserDoc);
   } else {
@@ -127,6 +132,7 @@ export async function loginWithFacebook() {
       planExpiresAt: null,
       lastActiveAt: serverTimestamp(),
       achievements: [],
+      onboardingCompleted: false,
     };
     await setDoc(userDocRef, newUserDoc);
   } else {
@@ -169,6 +175,7 @@ export async function registerWithEmail(
     planExpiresAt: null,
     lastActiveAt: serverTimestamp(),
     achievements: [],
+    onboardingCompleted: false,
   };
 
   await setDoc(userDocRef, userDoc, { merge: true });

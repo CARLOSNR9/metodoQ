@@ -16,6 +16,7 @@ import {
   MotivationalReminder,
   SubscriptionExpirationAlert,
   AccumulatedStats,
+  OnboardingModal,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserPlan } from "@/hooks/use-user-plan";
@@ -48,6 +49,7 @@ export default function DashboardPage() {
 
   return (
     <section className="space-y-6">
+      <OnboardingModal userId={user.uid} />
       <ActivityReminder />
       <MotivationalReminder />
       <SubscriptionExpirationAlert />

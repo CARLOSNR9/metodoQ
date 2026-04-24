@@ -15,3 +15,4 @@ export { AccumulatedStats } from "./accumulated-stats";
 export { AchievementNotification } from "./achievement-notification";
 export { MotivationalReminder } from "./motivational-reminder";
 export { SubscriptionExpirationAlert } from "./subscription-expiration-alert";
+export { OnboardingModal } from "./onboarding-modal";
