@@ -12,12 +12,16 @@ interface OnboardingModalProps {
 type Step = "welcome" | "university" | "experience" | "courses" | "transition";
 
 const universities = [
-  "UNAM",
-  "IPN",
-  "UAM",
-  "UANL",
-  "UdeG",
-  "BUAP",
+  "Nacional",
+  "Antioquia",
+  "Valle",
+  "Cartagena",
+  "UIS",
+  "Javeriana",
+  "Rosario",
+  "El Bosque",
+  "Caldas",
+  "Cauca",
   "Otra",
 ];
 
@@ -26,12 +30,23 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
   const [step, setStep] = useState<Step>("welcome");
   const [data, setData] = useState<OnboardingData>({});
   const [isSaving, setIsSaving] = useState(false);
+  const [selectionFeedback, setSelectionFeedback] = useState<string | null>(null);
 
   if (loading || !needsOnboarding) return null;
 
   const handleNext = (nextStep: Step, newData?: Partial<OnboardingData>) => {
     if (newData) {
       setData((prev) => ({ ...prev, ...newData }));
+      
+      // Si seleccionó universidad, mostrar feedback antes de pasar al siguiente
+      if (newData.goalUniversity) {
+        setSelectionFeedback(`Perfecto. Entrenarás con formato tipo ${newData.goalUniversity}`);
+        setTimeout(() => {
+          setSelectionFeedback(null);
+          setStep(nextStep);
+        }, 1500);
+        return;
+      }
     }
     setStep(nextStep);
   };
@@ -111,19 +126,37 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                   ¿A qué universidad quieres aplicar?
                 </h3>
                 <p className="mb-6 text-sm text-mq-muted">
-                  Adaptaremos las simulaciones a su formato.
+                  Selecciona tu objetivo. Adaptamos el entrenamiento a ese examen.
                 </p>
 
-                <div className="grid max-h-[300px] grid-cols-2 gap-3 pr-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-white/10">
-                  {universities.map((uni) => (
-                    <button
-                      key={uni}
-                      onClick={() => handleNext("experience", { goalUniversity: uni })}
-                      className="p-4 text-sm font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
-                    >
-                      {uni}
-                    </button>
-                  ))}
+                <div className="relative">
+                  <AnimatePresence>
+                    {selectionFeedback && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-mq-surface/90 backdrop-blur-sm border border-mq-accent/30"
+                      >
+                        <p className="px-6 text-center text-sm font-bold text-mq-accent">
+                          {selectionFeedback}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  <div className="grid max-h-[340px] grid-cols-2 gap-3 pr-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-white/10">
+                    {universities.map((uni) => (
+                      <button
+                        key={uni}
+                        disabled={!!selectionFeedback}
+                        onClick={() => handleNext("experience", { goalUniversity: uni })}
+                        className="p-4 text-sm font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95 disabled:opacity-50"
+                      >
+                        {uni}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             )}
