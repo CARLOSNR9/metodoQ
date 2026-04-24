@@ -66,7 +66,7 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
     <>
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`fixed inset-0 z-[60] bg-black/85 backdrop-blur-md transition-opacity duration-500 ${
           isOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={onClose}
@@ -74,10 +74,12 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
 
       {/* Drawer Panel */}
       <div
-        className={`fixed inset-y-0 right-0 z-[70] w-full max-w-md border-l border-mq-border bg-mq-surface shadow-2xl transition-transform duration-300 ease-out sm:max-w-[440px] ${
+        className={`fixed inset-y-0 right-0 z-[70] w-full max-w-md border-l border-mq-accent/20 bg-mq-surface shadow-[0_0_50px_rgba(0,0,0,0.5)] transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) sm:max-w-[440px] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
+        {/* Accent Glow Line */}
+        <div className="absolute left-0 top-0 h-full w-[2px] bg-gradient-to-b from-transparent via-mq-accent to-transparent opacity-50" />
         <div className="flex h-full flex-col p-6 sm:p-8">
           {/* Header */}
           <div className="flex items-center justify-between">
