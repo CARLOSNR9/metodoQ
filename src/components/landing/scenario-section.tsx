@@ -5,32 +5,32 @@ import { Clock, Search, Zap, Trophy, ArrowRight } from "lucide-react";
 export function ScenarioSection() {
   const steps = [
     {
-      title: "La Guardia Interminable",
-      description: "Son las 3 AM. Intentas repasar un tema crucial para tu examen, pero el cansancio y el texto denso de los tratados de medicina no te dejan avanzar.",
+      title: "Estudias, pero no avanzas",
+      description: "Lees horas… pero en el examen fallas lo mismo.",
       icon: Clock,
       color: "text-red-400",
       glow: "group-hover:shadow-[0_0_20px_rgba(248,113,113,0.3)]",
       border: "group-hover:border-red-400/30"
     },
     {
-      title: "El Laberinto de Guías",
-      description: "Buscas en GPC y artículos médicos, pero cada texto te lleva a otro más confuso. Sientes que pierdes el tiempo en datos irrelevantes.",
+      title: "Te pierdes en información",
+      description: "Guías, PDFs, cursos… todo menos lo que importa.",
       icon: Search,
       color: "text-orange-400",
       glow: "group-hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]",
       border: "group-hover:border-orange-400/30"
     },
     {
-      title: "Claridad al Instante",
-      description: "Abres Método Q. Escribes ese concepto complejo y recibes una síntesis perfecta que finalmente 'hace clic' en segundos.",
+      title: "Empiezas a entender por fin",
+      description: "Detectas tus errores y corriges lo que sí te baja puntos.",
       icon: Zap,
       color: "text-mq-accent",
       glow: "group-hover:shadow-[0_0_20px_rgba(0,209,255,0.3)]",
       border: "group-hover:border-mq-accent/30"
     },
     {
-      title: "Residente de Élite",
-      description: "Llegas al examen o al pase de visita con total seguridad. No solo memorizaste, ahora comprendes la lógica médica y vas a destacar.",
+      title: "Llegas listo al examen",
+      description: "Sin adivinar. Sin ansiedad. Con seguridad real.",
       icon: Trophy,
       color: "text-green-400",
       glow: "group-hover:shadow-[0_0_20px_rgba(74,222,128,0.3)]",
@@ -52,10 +52,10 @@ export function ScenarioSection() {
             Tu nueva realidad
           </h2>
           <p className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            De la confusión a la <span className="text-mq-accent">maestría</span>
+            De fallar el examen… a <span className="text-mq-accent">dominarlo.</span>
           </p>
-          <p className="mt-6 text-lg leading-relaxed text-mq-muted">
-            El camino tradicional es frustrante. Con Método Q, rediseñamos tu forma de aprender para que el éxito sea inevitable.
+          <p className="mt-6 text-lg leading-relaxed text-mq-muted font-medium">
+            No es que no estudies. Es que estás estudiando mal.
           </p>
         </div>
 
@@ -99,11 +99,85 @@ export function ScenarioSection() {
           </div>
         </div>
 
+        {/* Dashboard Preview Mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20 relative"
+        >
+          <div className="absolute inset-0 bg-mq-accent/5 blur-[100px] rounded-full -z-10" />
+          
+          <div className="relative mx-auto max-w-4xl rounded-3xl border border-mq-border-strong bg-mq-surface/50 backdrop-blur-sm p-4 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.7)]">
+            {/* Fake Dashboard UI */}
+            <div className="rounded-2xl bg-[#0B1221] overflow-hidden border border-mq-border/30">
+              <div className="flex items-center justify-between px-6 py-4 border-b border-mq-border/20 bg-mq-surface/20">
+                <div className="flex items-center gap-4">
+                  <div className="w-8 h-8 rounded-lg bg-mq-accent/20 flex items-center justify-center">
+                    <Zap className="h-4 w-4 text-mq-accent" />
+                  </div>
+                  <div className="h-2 w-24 bg-mq-border/40 rounded-full" />
+                </div>
+                <div className="flex gap-2">
+                  <div className="h-2 w-12 bg-mq-border/20 rounded-full" />
+                  <div className="h-2 w-12 bg-mq-border/20 rounded-full" />
+                </div>
+              </div>
+              
+              <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="md:col-span-2 space-y-6">
+                  <div className="h-40 rounded-xl bg-mq-surface/30 border border-mq-border/10 p-6">
+                    <div className="flex justify-between items-end h-full gap-2">
+                      {[40, 70, 45, 90, 65, 80, 95].map((h, i) => (
+                        <motion.div 
+                          key={i}
+                          initial={{ height: 0 }}
+                          whileInView={{ height: `${h}%` }}
+                          transition={{ delay: i * 0.1, duration: 1 }}
+                          className="w-full bg-gradient-to-t from-mq-accent/40 to-mq-accent rounded-t-md relative group"
+                        >
+                          <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-mq-accent text-[10px] font-bold px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                            {h}%
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="h-20 rounded-xl bg-mq-surface/20 border border-mq-border/10" />
+                    <div className="h-20 rounded-xl bg-mq-surface/20 border border-mq-border/10" />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="p-4 rounded-xl border border-mq-accent/20 bg-mq-accent/5">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Trophy className="h-5 w-5 text-yellow-500" />
+                      <span className="text-xs font-bold text-white uppercase tracking-wider">Logros</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="h-1.5 w-full bg-mq-border/20 rounded-full overflow-hidden">
+                        <div className="h-full w-[85%] bg-yellow-500" />
+                      </div>
+                      <div className="h-1.5 w-full bg-mq-border/20 rounded-full overflow-hidden">
+                        <div className="h-full w-[40%] bg-mq-accent" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-4 rounded-xl border border-mq-border/20 bg-mq-surface/20">
+                    <div className="h-2 w-full bg-mq-border/20 rounded-full mb-3" />
+                    <div className="h-2 w-[60%] bg-mq-border/20 rounded-full" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Closing CTA */}
         <div className="mt-24 flex justify-center">
           <button className="group relative px-8 py-4 bg-mq-accent/10 border border-mq-accent/20 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-mq-accent hover:border-mq-accent shadow-lg hover:shadow-mq-accent/20">
             <span className="relative z-10 font-bold text-mq-accent group-hover:text-mq-accent-foreground transition-colors duration-300">
-              ¿Listo para cambiar tu historia? Empieza gratis
+              Empieza tu entrenamiento ahora
             </span>
           </button>
         </div>
