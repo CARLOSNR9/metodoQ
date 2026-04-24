@@ -7,9 +7,9 @@ export type ProblemSectionProps = {
 };
 
 const defaultPains = [
-  "Pasas horas leyendo y no entiendes",
-  "Buscas información y terminas más confundido",
-  "Los cursos son largos, aburridos y poco prácticos",
+  "Libros de 1,500 páginas que no logras terminar antes del examen",
+  "Información dispersa en guías clínicas interminables y confusas",
+  "Cursos largos que no se adaptan a tus turnos de guardia y falta de sueño",
 ];
 
 export function ProblemSection({

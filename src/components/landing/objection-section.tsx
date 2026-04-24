@@ -5,19 +5,19 @@ import { CheckCircle2, XCircle } from "lucide-react";
 export function ObjectionSection() {
   const comparisons = [
     {
-      title: "Vs. ChatGPT",
-      bad: "Escupe paredes de texto genéricas, requiere prompts complejos y a veces alucina información.",
-      good: "IA pre-configurada que aplica la Técnica de Feynman. Te obliga a practicar y razonar, no solo a leer pasivamente.",
+      title: "Vs. ChatGPT Genérico",
+      bad: "Escupe paredes de texto genéricas y a veces alucina datos médicos que podrían confundirte en tu estudio.",
+      good: "IA entrenada para medicina. Te obliga a razonar la lógica clínica detrás de cada patología, no solo a leer teoría.",
     },
     {
-      title: "Vs. YouTube y Google",
-      bad: "Pierdes 40 minutos buscando un buen video, te frustras y terminas distrayéndote con el algoritmo.",
-      good: "Ve directo a la práctica. Simula exámenes en segundos y descubre exactamente qué parte no entiendes.",
+      title: "Vs. Resúmenes de Academia",
+      bad: "Pagas por PDFs estáticos que no se adaptan a tus dudas específicas ni te permiten evaluar tu comprensión real.",
+      good: "Tutor interactivo 24/7. Si no entiendes un mecanismo fisiopatológico, la IA te lo explica de 3 formas distintas hasta que lo domines.",
     },
     {
-      title: "Vs. Cursos Tradicionales",
-      bad: "Te obligan a seguir un temario lineal, pagando por horas de contenido que ya dominas o no necesitas.",
-      good: "Ruta hiper-personalizada. Si te equivocas, la IA asume el rol de un tutor experto. Pagas por resultados, no por horas.",
+      title: "Vs. Tratados Masivos",
+      bad: "Libros de 2,000 páginas excelentes para consulta, pero imposibles de digerir cuando tienes poco tiempo de estudio.",
+      good: "Filtro de ruido. Método Q va directo al 'high-yield': lo que es más probable que te pregunten y lo que salvará tu guardia.",
     },
   ];
 

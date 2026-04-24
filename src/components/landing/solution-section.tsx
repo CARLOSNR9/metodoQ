@@ -13,10 +13,10 @@ export type SolutionSectionProps = {
 };
 
 const defaultBullets = [
-  "Entender temas complejos rápidamente",
-  "Ahorrar horas de estudio",
-  "Aprender a tu ritmo",
-  "Explicaciones claras y sin relleno",
+  "Domina fisiopatología y farmacología en minutos",
+  "Sintetiza guías de práctica clínica largas en segundos",
+  "Estudia entre guardias con micro-aprendizaje",
+  "Enfoque 100% en lo que viene en el examen",
 ];
 
 export function SolutionSection({

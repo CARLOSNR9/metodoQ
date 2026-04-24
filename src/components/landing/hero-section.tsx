@@ -19,15 +19,15 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/30 bg-mq-accent/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-mq-accent sm:text-xs">
             <span className="flex h-1.5 w-1.5 rounded-full bg-mq-accent animate-pulse" />
-            La forma más rápida de aprobar 🚀
+            Optimizado para Exámenes de Residencia 🏥
           </div>
 
           <h1 className="mt-8 text-balance text-[2.5rem] font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-            Aprende cualquier tema en <span className="text-mq-accent">minutos</span>, no en horas
+            Domina temas <span className="text-mq-accent">médicos</span> complejos en minutos
           </h1>
           
           <p className="mt-6 max-w-2xl text-balance text-lg font-medium leading-relaxed text-mq-muted sm:text-xl">
-            Método Q combina Inteligencia Artificial y micro-aprendizaje para que domines cualquier concepto complejo de forma <span className="text-white">simple, sin relleno y a tu propio ritmo</span>.
+            La solución para residentes ocupados. Método Q utiliza IA para sintetizar miles de páginas en explicaciones claras, <span className="text-white">eliminando el relleno y enfocándote en lo que realmente viene en tu examen</span>.
           </p>
 
           <div className="mt-10 flex w-full flex-col items-center gap-6 lg:items-start">
@@ -50,8 +50,7 @@ export function HeroSection() {
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="inline-block h-8 w-8 rounded-full ring-2 ring-mq-surface bg-mq-surface border border-mq-border overflow-hidden">
-                    {/* Placeholder avatars until real user photos are available */}
-                    <img src={`https://i.pravatar.cc/100?img=${i + 40}`} alt="Estudiante" className="h-full w-full object-cover" />
+                    <img src={`https://i.pravatar.cc/100?img=${i + 45}`} alt="Médico" className="h-full w-full object-cover" />
                   </div>
                 ))}
                 <div className="inline-flex h-8 w-8 items-center justify-center rounded-full ring-2 ring-mq-surface bg-mq-border-strong text-[10px] font-bold text-white">
@@ -59,10 +58,10 @@ export function HeroSection() {
                 </div>
               </div>
               <div className="flex flex-col text-sm font-medium text-mq-muted text-center sm:text-left">
-                <span className="text-white font-semibold">Únete a cientos de estudiantes activos</span>
+                <span className="text-white font-semibold">Únete a cientos de médicos y residentes activos</span>
                 <span className="flex items-center justify-center sm:justify-start gap-1.5 text-xs mt-0.5 opacity-80">
                   <Sparkles className="h-3 w-3 text-mq-accent" />
-                  Sin tarjeta requerida. Acceso inmediato.
+                  Acceso inmediato. Sin tarjetas.
                 </span>
               </div>
             </div>

@@ -5,32 +5,32 @@ import { Clock, Search, Zap, Trophy, ArrowRight } from "lucide-react";
 export function ScenarioSection() {
   const steps = [
     {
-      title: "La Noche en Vela",
-      description: "Son las 11 PM. Miras tus apuntes y todo parece estar en otro idioma. El café ya no hace efecto y el pánico empieza a ganarte.",
+      title: "La Guardia Interminable",
+      description: "Son las 3 AM. Intentas repasar un tema crucial para tu examen, pero el cansancio y el texto denso de los tratados de medicina no te dejan avanzar.",
       icon: Clock,
       color: "text-red-400",
       glow: "group-hover:shadow-[0_0_20px_rgba(248,113,113,0.3)]",
       border: "group-hover:border-red-400/30"
     },
     {
-      title: "El Laberinto Digital",
-      description: "Saltas de video en video en YouTube, pero cada explicación te deja con más dudas. Estás perdiendo el tiempo más valioso de tu estudio.",
+      title: "El Laberinto de Guías",
+      description: "Buscas en GPC y artículos médicos, pero cada texto te lleva a otro más confuso. Sientes que pierdes el tiempo en datos irrelevantes.",
       icon: Search,
       color: "text-orange-400",
       glow: "group-hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]",
       border: "group-hover:border-orange-400/30"
     },
     {
-      title: "El 'Clic' Instantáneo",
-      description: "Pruebas Método Q. Escribes tu duda más compleja y recibes una explicación que finalmente tiene sentido. Todo encaja en segundos.",
+      title: "Claridad al Instante",
+      description: "Abres Método Q. Escribes ese concepto complejo y recibes una síntesis perfecta que finalmente 'hace clic' en segundos.",
       icon: Zap,
       color: "text-mq-accent",
       glow: "group-hover:shadow-[0_0_20px_rgba(0,209,255,0.3)]",
       border: "group-hover:border-mq-accent/30"
     },
     {
-      title: "Dominio Absoluto",
-      description: "Cierras la laptop con una sonrisa. No solo lo entiendes, puedes enseñarlo. Mañana no solo aprobarás, vas a destacar.",
+      title: "Residente de Élite",
+      description: "Llegas al examen o al pase de visita con total seguridad. No solo memorizaste, ahora comprendes la lógica médica y vas a destacar.",
       icon: Trophy,
       color: "text-green-400",
       glow: "group-hover:shadow-[0_0_20px_rgba(74,222,128,0.3)]",
