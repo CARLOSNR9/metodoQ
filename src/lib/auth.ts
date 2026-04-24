@@ -1,6 +1,7 @@
 import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
+  FacebookAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -90,6 +91,45 @@ export async function loginWithGoogle() {
     await setDoc(userDocRef, newUserDoc);
   } else {
     // Si existe, actualizar última actividad
+    await updateDoc(userDocRef, {
+      lastActiveAt: serverTimestamp(),
+    });
+  }
+
+  return credential;
+}
+
+export async function loginWithFacebook() {
+  const provider = new FacebookAuthProvider();
+  const credential = await signInWithPopup(getFirebaseAuth(), provider);
+  const user = credential.user;
+
+  const userDocRef = doc(getFirebaseDb(), "users", user.uid);
+  const userDocSnap = await getDoc(userDocRef);
+
+  if (!userDocSnap.exists()) {
+    const newUserDoc: UserDocument = {
+      uid: user.uid,
+      email: user.email ?? "",
+      plan: "FREE",
+      createdAt: serverTimestamp(),
+      streakCount: 0,
+      streakLastTrainingDate: null,
+      strengths: [],
+      weaknesses: [],
+      avgResponseTime: 0,
+      lastScore: null,
+      attemptsCount: 0,
+      topicStats: {},
+      referralCode: generateReferralCode(),
+      referredBy: null,
+      planStartedAt: null,
+      planExpiresAt: null,
+      lastActiveAt: serverTimestamp(),
+      achievements: [],
+    };
+    await setDoc(userDocRef, newUserDoc);
+  } else {
     await updateDoc(userDocRef, {
       lastActiveAt: serverTimestamp(),
     });

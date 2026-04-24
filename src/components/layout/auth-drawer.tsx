@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { X, Mail, Facebook, Chrome } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { loginWithEmail } from "@/lib/auth";
+import { loginWithEmail, loginWithGoogle, loginWithFacebook } from "@/lib/auth";
 import { Logo } from "@/components/ui/logo";
 
 interface AuthDrawerProps {
@@ -45,6 +45,24 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
+
+  const handleSocialLogin = async (provider: "google" | "facebook") => {
+    setError("");
+    setIsLoading(true);
+    try {
+      if (provider === "google") {
+        await loginWithGoogle();
+      } else {
+        await loginWithFacebook();
+      }
+      router.push("/dashboard");
+      onClose();
+    } catch (err: any) {
+      setError(err.message || "Error al iniciar sesión con redes sociales.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -111,11 +129,19 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
 
           {/* Social Logins */}
           <div className="mt-10 grid grid-cols-2 gap-4">
-            <button className="flex h-12 items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08]">
+            <button
+              onClick={() => handleSocialLogin("google")}
+              disabled={isLoading}
+              className="flex h-12 items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08] disabled:opacity-50"
+            >
               <Chrome className="h-5 w-5" />
               Google
             </button>
-            <button className="flex h-12 items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08]">
+            <button
+              onClick={() => handleSocialLogin("facebook")}
+              disabled={isLoading}
+              className="flex h-12 items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08] disabled:opacity-50"
+            >
               <Facebook className="h-5 w-5 fill-current" />
               Facebook
             </button>
