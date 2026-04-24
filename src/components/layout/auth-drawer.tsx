@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { X, Mail, Github, Chrome } from "lucide-react";
+import { X, Mail, Facebook, Chrome } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { loginWithEmail } from "@/lib/auth";
 import { Logo } from "@/components/ui/logo";
@@ -116,8 +116,8 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
               Google
             </button>
             <button className="flex h-12 items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08]">
-              <Github className="h-5 w-5" />
-              GitHub
+              <Facebook className="h-5 w-5 fill-current" />
+              Facebook
             </button>
           </div>
 
