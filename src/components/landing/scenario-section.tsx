@@ -1,6 +1,7 @@
 "use client";
 
 import { Clock, Search, Zap, Trophy, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function ScenarioSection() {
   const steps = [
