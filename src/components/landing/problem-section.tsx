@@ -17,7 +17,7 @@ const defaultPains = [
 import { motion } from "framer-motion";
 
 export function ProblemSection({
-  eyebrow = "El Problema",
+  eyebrow = "LA REALIDAD",
   title = "El problema no es que no estudies. Es que estás estudiando mal.",
   pains = defaultPains,
   closingLine = "No te falta inteligencia. Te falta el sistema correcto.",

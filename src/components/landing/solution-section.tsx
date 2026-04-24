@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { motion } from "framer-motion";
 
 export type SolutionSectionProps = {
   eyebrow?: string;
@@ -13,20 +13,20 @@ export type SolutionSectionProps = {
 };
 
 const defaultBullets = [
-  "Domina fisiopatología y farmacología en minutos",
-  "Sintetiza guías de práctica clínica largas en segundos",
-  "Estudia entre guardias con micro-aprendizaje",
-  "Enfoque 100% en lo que viene en el examen",
+  "🎯 Practicas como el día del examen",
+  "🧠 Detectamos exactamente en qué fallas",
+  "⚡ Estudias solo lo que necesitas",
+  "📈 Mejoras medibles en cada sesión",
 ];
 
 export function SolutionSection({
   eyebrow = "La Solución",
-  title = "Aquí es donde entra Método Q",
-  lead = "Método Q transforma cualquier tema en explicaciones simples, directas y fáciles de entender usando inteligencia artificial.",
-  notTraditional = "No es otro curso largo y aburrido. Es una herramienta inteligente diseñada para darte claridad inmediata sobre lo que realmente importa.",
+  title = "Así es como empiezas a mejorar de verdad.",
+  lead = "Te entrenamos con preguntas reales y te mostramos exactamente en qué estás fallando.",
+  notTraditional = "No es otro curso. Es entrenamiento real para el examen.",
   bullets = defaultBullets,
   showCta = true,
-  cta = { label: "Empieza gratis", href: "#precios" },
+  cta = { label: "Haz tu diagnóstico gratis", href: "/login" },
   className,
 }: SolutionSectionProps) {
   return (
@@ -83,14 +83,76 @@ export function SolutionSection({
           ))}
         </ul>
 
+        {/* Visual Demo / Mockup */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20"
+        >
+          <div className="relative rounded-3xl border border-mq-border-strong bg-[#0B1221] p-1 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.6)] overflow-hidden">
+             {/* Mockup Header */}
+             <div className="flex items-center gap-2 px-4 py-3 border-b border-mq-border/30 bg-mq-surface/30">
+                <div className="flex gap-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/30" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/30" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-500/30" />
+                </div>
+                <span className="ml-2 text-[10px] font-medium tracking-widest uppercase text-mq-muted">Simulador Método Q — Beta</span>
+             </div>
+             
+             {/* Mockup Content */}
+             <div className="p-6 sm:p-10">
+                <div className="mb-8">
+                  <div className="inline-flex items-center px-2.5 py-1 mb-4 text-[10px] font-bold tracking-widest uppercase rounded-md bg-mq-accent/10 text-mq-accent border border-mq-accent/20">
+                    🩺 Cardiología / Urgencias
+                  </div>
+                  <h4 className="text-lg font-bold text-white leading-snug sm:text-xl">
+                    Paciente de 45 años con dolor torácico opresivo de 30 min de evolución... ¿Cuál es la conducta inicial más adecuada?
+                  </h4>
+                </div>
+                
+                <div className="grid gap-3 mb-10">
+                  <div className="p-4 rounded-xl border border-mq-border bg-mq-surface/40 text-sm text-white/60">
+                    A) Realizar ecocardiograma transtorácico
+                  </div>
+                  <div className="p-4 rounded-xl border border-mq-accent/50 bg-mq-accent/10 text-sm font-bold text-white flex items-center justify-between ring-1 ring-mq-accent/30 shadow-[0_0_20px_-10px_rgba(0,209,255,0.3)]">
+                    B) Toma de ECG de 12 derivaciones
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-mq-accent text-mq-accent-foreground text-[10px]">✓</span>
+                  </div>
+                </div>
+
+                {/* AI Feedback Mockup */}
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="relative rounded-2xl bg-mq-surface border border-mq-border-strong p-6 shadow-xl"
+                >
+                  <div className="absolute -left-1 top-6 w-1 h-12 bg-mq-accent rounded-full" />
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-mq-accent to-blue-600 flex items-center justify-center text-xs font-black text-white shadow-lg">Q</div>
+                    <span className="text-[11px] font-black text-mq-accent uppercase tracking-[0.2em]">Feedback Inteligente</span>
+                  </div>
+                  <p className="text-sm text-mq-muted leading-relaxed">
+                    <span className="text-white font-bold">¡Correcto!</span> En sospecha de síndrome coronario agudo, el ECG debe realizarse e interpretarse en los primeros <span className="text-mq-accent font-bold">10 minutos</span>. Priorizar otros estudios es el error #1 en el examen Nacional.
+                  </p>
+                </motion.div>
+             </div>
+          </div>
+        </motion.div>
+
         {showCta ? (
           <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link
+            <motion.a
               href={cta.href}
-              className="inline-flex min-h-[3.25rem] w-full items-center justify-center rounded-xl bg-mq-accent px-7 text-[0.9375rem] font-semibold text-mq-accent-foreground shadow-[0_1px_0_rgb(255_255_255/0.12)_inset] transition duration-200 hover:-translate-y-0.5 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:w-auto sm:min-w-[12.5rem]"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex min-h-[3.25rem] w-full items-center justify-center rounded-xl bg-mq-accent px-7 text-[0.9375rem] font-bold text-mq-accent-foreground shadow-[0_0_40px_-10px_rgb(0_209_255/0.5)] transition duration-200 hover:brightness-110 sm:w-auto sm:min-w-[15rem]"
             >
               {cta.label}
-            </Link>
+            </motion.a>
             <p className="text-center text-xs text-mq-muted sm:text-left sm:text-sm">
               Sin tarjeta para empezar en el plan gratuito.
             </p>
