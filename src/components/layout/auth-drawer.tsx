@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { X, Mail, Github, Chrome } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { loginWithEmail } from "@/lib/auth";
@@ -12,12 +13,17 @@ interface AuthDrawerProps {
 }
 
 export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const [mode, setMode] = useState<"login" | "register">("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close on ESC
   useEffect(() => {
@@ -50,8 +56,6 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
         await loginWithEmail(email.trim(), password);
         router.push("/dashboard");
       } else {
-        // Here we would call registerWithEmail, but for now we follow the existing login logic
-        // or redirect to the register page if needed.
         router.push("/register");
       }
       onClose();
@@ -62,7 +66,9 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
     }
   };
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <>
       {/* Backdrop */}
       <div
@@ -198,6 +204,7 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
           </div>
         </div>
       </div>
-    </>
+    </>,
+    document.body
   );
 }
