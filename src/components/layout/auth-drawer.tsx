@@ -106,8 +106,7 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
         <div className="absolute left-0 top-0 h-full w-[2px] bg-gradient-to-b from-transparent via-mq-accent to-transparent opacity-50" />
         <div className="flex h-full flex-col p-6 sm:p-8">
           {/* Header */}
-          <div className="flex items-center justify-between">
-            <Logo />
+          <div className="flex justify-end">
             <button
               onClick={onClose}
               className="rounded-full p-2 text-mq-muted transition hover:bg-white/5 hover:text-white"
@@ -116,34 +115,27 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
             </button>
           </div>
 
-          <div className="mt-12 flex flex-col items-center text-center">
+          <div className="mt-4 flex flex-col items-center text-center">
+            <div className="mb-6 transform transition hover:scale-105">
+              <Logo />
+            </div>
             <h2 className="text-2xl font-bold text-white">
-              {mode === "login" ? "Inicia sesión" : "Crea tu cuenta"}
+              Comienza tu entrenamiento
             </h2>
             <p className="mt-2 text-mq-muted">
-              {mode === "login"
-                ? "Accede para continuar tu entrenamiento."
-                : "Únete a la comunidad de Método Q."}
+              Inicia sesión o crea una cuenta con:
             </p>
           </div>
 
           {/* Social Logins */}
-          <div className="mt-10 grid grid-cols-2 gap-4">
+          <div className="mt-10">
             <button
               onClick={() => handleSocialLogin("google")}
               disabled={isLoading}
-              className="flex h-12 items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08] disabled:opacity-50"
+              className="flex h-12 w-full items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08] hover:border-mq-accent/50 disabled:opacity-50"
             >
               <Chrome className="h-5 w-5" />
-              Google
-            </button>
-            <button
-              onClick={() => handleSocialLogin("facebook")}
-              disabled={isLoading}
-              className="flex h-12 items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08] disabled:opacity-50"
-            >
-              <Facebook className="h-5 w-5 fill-current" />
-              Facebook
+              Continuar con Google
             </button>
           </div>
 
