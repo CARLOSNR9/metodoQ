@@ -2,6 +2,7 @@
 
 import { Clock, Search, Zap, Trophy, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function ScenarioSection() {
   const steps = [
@@ -176,11 +177,14 @@ export function ScenarioSection() {
 
         {/* Closing CTA */}
         <div className="mt-24 flex justify-center">
-          <button className="group relative px-8 py-4 bg-mq-accent/10 border border-mq-accent/20 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-mq-accent hover:border-mq-accent shadow-lg hover:shadow-mq-accent/20">
+          <Link 
+            href="/login"
+            className="group relative px-8 py-4 bg-mq-accent/10 border border-mq-accent/20 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-mq-accent hover:border-mq-accent shadow-lg hover:shadow-mq-accent/20"
+          >
             <span className="relative z-10 font-bold text-mq-accent group-hover:text-mq-accent-foreground transition-colors duration-300">
               Empieza tu entrenamiento ahora
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>
