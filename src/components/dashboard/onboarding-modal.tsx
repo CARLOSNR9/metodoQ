@@ -69,13 +69,19 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                 exit={{ opacity: 0, x: -20 }}
                 className="flex flex-col items-center text-center"
               >
-                <div className="relative flex items-center justify-center w-24 h-24 mb-8 border border-white/10 rounded-full shadow-lg bg-white/5 backdrop-blur-sm shadow-cyan-500/20">
-                  {/* Q Assistant Icon Concept */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-blue-500/20 rounded-full animate-pulse" />
-                  <span className="text-4xl font-black tracking-tighter text-transparent bg-gradient-to-br from-white to-white/60 bg-clip-text">
-                    Q.
-                  </span>
-                  <div className="absolute w-3 h-3 rounded-full bottom-2 right-4 shadow-[0_0_12px_rgba(250,204,21,0.8)] bg-[var(--mq-yellow)]" />
+                <div className="relative w-40 h-40 mb-6 group">
+                  {/* Efecto de aura/brillo detrás del personaje */}
+                  <div className="absolute inset-0 bg-mq-accent/20 rounded-full blur-3xl animate-pulse group-hover:bg-mq-accent/30 transition-colors duration-500" />
+                  
+                  <div className="relative w-full h-full transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">
+                    <Image
+                      src="/drq.png"
+                      alt="Dr. Q Asistente Inteligente"
+                      fill
+                      priority
+                      className="object-contain drop-shadow-[0_10px_30px_rgba(0,209,255,0.4)]"
+                    />
+                  </div>
                 </div>
                 
                 <h2 className="mb-3 text-2xl font-bold tracking-tight text-white">
@@ -191,10 +197,18 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                 animate={{ opacity: 1, scale: 1 }}
                 className="flex flex-col items-center text-center py-6"
               >
-                <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
+                <div className="relative w-32 h-32 mb-6">
+                  <Image
+                    src="/drq.png"
+                    alt="Dr. Q"
+                    fill
+                    className="object-contain"
+                  />
+                  <div className="absolute bottom-1 right-1 w-9 h-9 flex items-center justify-center rounded-full bg-mq-accent text-mq-accent-foreground border-4 border-[#0F172A] shadow-lg">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
                 </div>
                 
                 <h3 className="mb-2 text-2xl font-bold text-white">

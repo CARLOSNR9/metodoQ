@@ -66,9 +66,23 @@ export async function loginWithGoogle() {
   const credential = await signInWithPopup(getFirebaseAuth(), provider);
   const user = credential.user;
 
+  // Validar configuración básica antes de proceder
+  const db = getFirebaseDb();
+  if (!db) {
+    throw new Error("Firestore no está inicializado. Verifica tus variables de entorno.");
+  }
+
   // Verificar si el documento del usuario ya existe en Firestore
-  const userDocRef = doc(getFirebaseDb(), "users", user.uid);
-  const userDocSnap = await getDoc(userDocRef);
+  const userDocRef = doc(db, "users", user.uid);
+  let userDocSnap;
+  
+  try {
+    userDocSnap = await getDoc(userDocRef);
+  } catch (error: any) {
+    console.error("Error al obtener documento de usuario en Firestore:", error);
+    // Si falla por red, el mensaje suele contener 'offline'
+    throw error;
+  }
 
   if (!userDocSnap.exists()) {
     // Si no existe, crear perfil inicial similar al de email
@@ -93,12 +107,22 @@ export async function loginWithGoogle() {
       achievements: [],
       onboardingCompleted: false,
     };
-    await setDoc(userDocRef, newUserDoc);
+    try {
+      await setDoc(userDocRef, newUserDoc);
+    } catch (error: any) {
+      console.error("Error al crear nuevo documento de usuario en Firestore:", error);
+      throw error;
+    }
   } else {
     // Si existe, actualizar última actividad
-    await updateDoc(userDocRef, {
-      lastActiveAt: serverTimestamp(),
-    });
+    try {
+      await updateDoc(userDocRef, {
+        lastActiveAt: serverTimestamp(),
+      });
+    } catch (error: any) {
+      console.warn("No se pudo actualizar lastActiveAt, pero el login fue exitoso:", error);
+      // No bloqueamos el login si solo falla el update de actividad
+    }
   }
 
   return credential;

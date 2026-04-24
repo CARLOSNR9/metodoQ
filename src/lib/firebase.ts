@@ -17,6 +17,11 @@ export function getFirebaseAuth(): Auth {
   }
 
   const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+  
+  if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
+    console.error("⚠️ Configuración de Firebase incompleta. Revisa tus variables de entorno (.env.local)");
+  }
+  
   return getAuth(app);
 }
 
@@ -26,5 +31,10 @@ export function getFirebaseDb(): Firestore {
   }
 
   const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+  
+  if (!firebaseConfig.projectId) {
+    console.error("⚠️ Project ID de Firebase ausente. Firestore no funcionará.");
+  }
+  
   return getFirestore(app);
 }

@@ -58,7 +58,9 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
       router.push("/dashboard");
       onClose();
     } catch (err: any) {
-      setError(err.message || "Error al iniciar sesión con redes sociales.");
+      console.error("Error completo de login social:", err);
+      const errorMessage = err.message || "Error al iniciar sesión con redes sociales.";
+      setError(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -185,6 +187,8 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
               <p className="mt-2 rounded-lg bg-red-500/10 p-4 text-center text-xs font-medium text-red-400 border border-red-500/20 animate-shake">
                 {error.includes("offline") 
                   ? "Error de conexión. Por favor, intenta de nuevo en unos segundos." 
+                  : error.includes("popup-blocked")
+                  ? "El navegador bloqueó la ventana emergente de Google. Por favor, actívala."
                   : error}
               </p>
             )}
