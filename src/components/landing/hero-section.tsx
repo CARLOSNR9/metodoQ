@@ -34,13 +34,13 @@ export function HeroSection() {
             <div className="flex w-full flex-col gap-4 sm:flex-row">
               <Link
                 href="#precios"
-                className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl bg-mq-accent px-8 text-lg font-bold text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.4)] transition duration-300 hover:-translate-y-1 hover:brightness-110 active:translate-y-0 w-full sm:w-auto"
+                className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl bg-mq-accent px-6 text-[15px] font-bold text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.4)] transition duration-300 hover:-translate-y-1 hover:brightness-110 active:translate-y-0 w-full sm:w-auto whitespace-nowrap sm:px-8 sm:text-lg"
               >
                 🚀 Comienza a estudiar gratis
               </Link>
               <Link
                 href="#como-funciona"
-                className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl border border-mq-border-strong bg-white/[0.04] px-8 text-lg font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white/[0.08] active:scale-[0.98] w-full sm:w-auto"
+                className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl border border-mq-border-strong bg-white/[0.04] px-6 text-[15px] font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white/[0.08] active:scale-[0.98] w-full sm:w-auto whitespace-nowrap sm:px-8 sm:text-lg"
               >
                 👀 Ver el método en acción
               </Link>
