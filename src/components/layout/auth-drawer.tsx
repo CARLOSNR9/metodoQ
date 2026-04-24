@@ -116,10 +116,10 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
           </div>
 
           <div className="mt-4 flex flex-col items-center text-center">
-            <div className="mb-6 transform transition hover:scale-105">
-              <Logo />
+            <div className="mb-8 transform transition duration-500 hover:scale-110">
+              <Logo className="h-16 w-auto sm:h-20" />
             </div>
-            <h2 className="text-2xl font-bold text-white">
+            <h2 className="text-2xl font-bold text-white lg:text-3xl">
               Comienza tu entrenamiento
             </h2>
             <p className="mt-2 text-mq-muted">
@@ -132,35 +132,35 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
             <button
               onClick={() => handleSocialLogin("google")}
               disabled={isLoading}
-              className="flex h-12 w-full items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-semibold text-white transition hover:bg-white/[0.08] hover:border-mq-accent/50 disabled:opacity-50"
+              className="group relative flex h-14 w-full items-center justify-center gap-3 overflow-hidden rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm font-bold text-white transition-all hover:border-mq-accent/50 hover:bg-white/[0.08] active:scale-[0.98] disabled:opacity-50"
             >
-              <Chrome className="h-5 w-5" />
+              <Chrome className="h-5 w-5 transition-transform group-hover:scale-110" />
               Continuar con Google
             </button>
           </div>
 
-          <div className="relative my-8">
+          <div className="relative my-10">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-mq-border/50"></div>
             </div>
-            <div className="relative flex justify-center text-xs uppercase">
-              <span className="bg-mq-surface px-4 text-mq-muted">o con tu email</span>
+            <div className="relative flex justify-center text-[10px] uppercase tracking-[0.2em]">
+              <span className="bg-mq-surface px-4 text-mq-muted/60">o usa tu email</span>
             </div>
           </div>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div>
-              <label className="mb-2 block text-sm font-medium text-mq-muted">
+              <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-mq-muted/80">
                 Email
               </label>
               <div className="relative">
-                <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-mq-muted/50" />
+                <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-mq-muted/30" />
                 <input
                   type="email"
                   required
                   placeholder="nombre@ejemplo.com"
-                  className="h-12 w-full rounded-xl border border-mq-border bg-white/[0.04] pl-12 pr-4 text-white outline-none transition focus:border-mq-accent focus:ring-1 focus:ring-mq-accent/30"
+                  className="h-12 w-full rounded-xl border border-mq-border bg-white/[0.02] pl-12 pr-4 text-white outline-none transition focus:border-mq-accent/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-mq-accent/10"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -168,58 +168,35 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium text-mq-muted">
+              <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-mq-muted/80">
                 Contraseña
               </label>
               <input
                 type="password"
                 required
                 placeholder="••••••••"
-                className="h-12 w-full rounded-xl border border-mq-border bg-white/[0.04] px-4 text-white outline-none transition focus:border-mq-accent focus:ring-1 focus:ring-mq-accent/30"
+                className="h-12 w-full rounded-xl border border-mq-border bg-white/[0.02] px-4 text-white outline-none transition focus:border-mq-accent/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-mq-accent/10"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
 
             {error && (
-              <p className="rounded-lg bg-red-500/10 p-3 text-xs font-medium text-red-400 border border-red-500/20">
-                {error}
+              <p className="mt-2 rounded-lg bg-red-500/10 p-4 text-center text-xs font-medium text-red-400 border border-red-500/20 animate-shake">
+                {error.includes("offline") 
+                  ? "Error de conexión. Por favor, intenta de nuevo en unos segundos." 
+                  : error}
               </p>
             )}
 
             <button
               type="submit"
               disabled={isLoading}
-              className="mt-4 flex h-12 w-full items-center justify-center rounded-xl bg-mq-accent text-sm font-bold text-mq-accent-foreground shadow-[0_0_20px_rgba(0,209,255,0.3)] transition hover:brightness-110 active:scale-[0.98] disabled:opacity-50"
+              className="mt-6 flex h-14 w-full items-center justify-center rounded-xl bg-mq-accent text-sm font-black uppercase tracking-widest text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.2)] transition-all hover:brightness-110 hover:shadow-[0_0_40px_rgba(0,209,255,0.4)] active:scale-[0.98] disabled:opacity-50"
             >
-              {isLoading ? "Cargando..." : mode === "login" ? "Entrar ahora" : "Registrarme"}
+              {isLoading ? "Cargando..." : "Entrar ahora"}
             </button>
           </form>
-
-          {/* Footer Toggle */}
-          <div className="mt-auto pt-8 text-center text-sm text-mq-muted">
-            {mode === "login" ? (
-              <>
-                ¿No tienes una cuenta?{" "}
-                <button
-                  onClick={() => setMode("register")}
-                  className="font-bold text-mq-accent hover:underline"
-                >
-                  Regístrate gratis
-                </button>
-              </>
-            ) : (
-              <>
-                ¿Ya tienes una cuenta?{" "}
-                <button
-                  onClick={() => setMode("login")}
-                  className="font-bold text-mq-accent hover:underline"
-                >
-                  Inicia sesión
-                </button>
-              </>
-            )}
-          </div>
         </div>
       </div>
     </>,
