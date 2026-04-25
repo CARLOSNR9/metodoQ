@@ -78,39 +78,28 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
           router.push("/dashboard");
           onClose();
         } catch (err: any) {
-          // Si es un error de credenciales, investigamos si el usuario es realmente nuevo
-          if (err.code === "auth/invalid-credential" || err.code === "auth/user-not-found") {
-            setIsLoading(true);
-            try {
-              // Verificación proactiva en Firestore
-              const { getFirebaseDb } = await import("@/lib/firebase");
-              const { collection, query, where, getDocs } = await import("firebase/firestore");
-              const db = getFirebaseDb();
-              const q = query(collection(db, "users"), where("email", "==", email.trim()));
-              const querySnapshot = await getDocs(q);
-
-              if (querySnapshot.empty) {
-                // Confirmado: El usuario no existe
-                setMode("register");
-                setError("¡Hola! No encontramos una cuenta con este correo. ¿Deseas crear una nueva ahora?");
-              } else {
-                // El usuario sí existe, entonces la contraseña está mal
-                setError("Contraseña incorrecta. Por favor, verifica tus datos.");
-              }
-            } catch (checkErr) {
-              // Si falla la verificación, mostramos un error neutral
-              setError("No pudimos verificar tus datos. Revisa tu contraseña o intenta con Google.");
-            }
-          } else {
-            throw err;
-          }
+          // Si hay cualquier error de credenciales, invitamos al registro
+          // Esto evita errores de permisos en Firestore y es más fluido
+          setMode("register");
+          setError("No pudimos validar tus datos. Si eres nuevo, ¡crea tu cuenta aquí mismo!");
         }
       } else {
         // Ejecutar registro directamente
-        const { registerWithEmail: registerFn } = await import("@/lib/auth");
-        await registerFn(email.trim(), password);
-        router.push("/dashboard");
-        onClose();
+        try {
+          const { registerWithEmail: registerFn } = await import("@/lib/auth");
+          await registerFn(email.trim(), password);
+          router.push("/dashboard");
+          onClose();
+        } catch (err: any) {
+          if (err.code === "auth/email-already-in-use") {
+            setMode("login");
+            setError("Este correo ya tiene una cuenta activa. Por favor, verifica tu contraseña.");
+          } else if (err.code === "auth/weak-password") {
+            setError("La contraseña es muy corta. Usa al menos 6 caracteres.");
+          } else {
+            setError(err.message || "Error al crear la cuenta.");
+          }
+        }
       }
     } catch (err: any) {
       setError(err.message || "Ocurrió un error al intentar ingresar.");
@@ -220,7 +209,7 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
 
             {error && (
               <div className={`mt-2 rounded-lg p-4 text-center text-xs font-medium border animate-shake ${
-                mode === "register" && error.includes("No encontramos")
+                mode === "register" && error.includes("No pudimos validar")
                   ? "bg-mq-accent/10 text-mq-accent border-mq-accent/20"
                   : "bg-red-500/10 text-red-400 border-red-500/20"
               }`}>
