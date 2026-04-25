@@ -78,12 +78,29 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
           router.push("/dashboard");
           onClose();
         } catch (err: any) {
-          // Si el usuario no existe, cambiamos a modo sugerencia de registro
-          if (err.code === "auth/user-not-found" || err.message?.includes("user-not-found")) {
-            setMode("register");
-            setError("No encontramos una cuenta con este correo. ¿Deseas crear una nueva?");
-          } else if (err.code === "auth/wrong-password" || err.code === "auth/invalid-credential") {
-            setError("Contraseña incorrecta. Por favor, verifica tus datos.");
+          // Si es un error de credenciales, investigamos si el usuario es realmente nuevo
+          if (err.code === "auth/invalid-credential" || err.code === "auth/user-not-found") {
+            setIsLoading(true);
+            try {
+              // Verificación proactiva en Firestore
+              const { getFirebaseDb } = await import("@/lib/firebase");
+              const { collection, query, where, getDocs } = await import("firebase/firestore");
+              const db = getFirebaseDb();
+              const q = query(collection(db, "users"), where("email", "==", email.trim()));
+              const querySnapshot = await getDocs(q);
+
+              if (querySnapshot.empty) {
+                // Confirmado: El usuario no existe
+                setMode("register");
+                setError("¡Hola! No encontramos una cuenta con este correo. ¿Deseas crear una nueva ahora?");
+              } else {
+                // El usuario sí existe, entonces la contraseña está mal
+                setError("Contraseña incorrecta. Por favor, verifica tus datos.");
+              }
+            } catch (checkErr) {
+              // Si falla la verificación, mostramos un error neutral
+              setError("No pudimos verificar tus datos. Revisa tu contraseña o intenta con Google.");
+            }
           } else {
             throw err;
           }
