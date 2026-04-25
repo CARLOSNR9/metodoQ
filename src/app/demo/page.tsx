@@ -159,192 +159,362 @@ function selectAdaptiveQuestions(
 const demoQuestions: DemoQuestion[] = [
   {
     id: "q1",
-    topic: "Infectologia",
+    topic: "Medicina Interna",
     statement:
-      "Paciente con fiebre, hipotension y lactato elevado. Diagnostico mas probable?",
+      "Un paciente masculino de doce años es ingresado a la sala de reanimación por un cuadro clínico de veinticuatro horas de evolución consistente en poliuria masiva, polidipsia, episodios eméticos repetidos y deterioro progresivo del estado de alerta. Al examen físico, el paciente se encuentra somnoliento, presenta signos de deshidratación grado tres, respiración profunda y laboriosa, una frecuencia cardíaca de ciento treinta y cinco latidos por minuto y una presión arterial de noventa sobre cincuenta y cinco milímetros de mercurio. Los paraclínicos de ingreso reportan una glicemia de cuatrocientos cincuenta miligramos por decilitro, un pH venoso de siete punto cero cinco, bicarbonato sérico de ocho miliequivalentes por litro, cetonemia fuertemente positiva, sodio de ciento treinta y dos miliequivalentes por litro y potasio de tres punto cuatro miliequivalentes por litro. De acuerdo con las guías de práctica clínica consensuadas y actualizadas, ¿cuál es la intervención terapéutica primaria y prioritaria a instaurar durante la primera hora de atención hospitalaria?",
     options: [
-      { id: "A", label: "A", text: "Shock hipovolemico" },
-      { id: "B", label: "B", text: "Shock septico" },
-      { id: "C", label: "C", text: "Shock cardiogenico" },
-      { id: "D", label: "D", text: "Shock obstructivo" },
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar una infusión intravenosa de insulina regular a cero punto un unidades por kilogramo por hora de forma inmediata y administrar un bolo compensatorio de bicarbonato de sodio.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Administrar un bolo rápido de cristaloides isotónicos, preferiblemente solución salina al cero punto nueve por ciento, durante veinte a treinta minutos para restituir el volumen circulante.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar simultáneamente la infusión de insulina regular a cero punto cero cinco unidades por kilogramo por hora y reponer potasio a veinte miliequivalentes por litro.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar de manera urgente cristaloides hipotónicos, como solución salina al cero punto cuarenta y cinco por ciento, en bolo rápido para prevenir la hipernatremia.",
+      },
     ],
     correctOptionId: "B",
     explanation:
-      "Shock septico se caracteriza por infeccion + disfuncion organica + lactato elevado.",
+      "En el manejo de la cetoacidosis diabética (CAD), especialmente en pediatría, las guías establecen que la rehidratación inicial es la prioridad absoluta y debe instaurarse antes que la insulina. Se indica un bolo de expansión para restaurar la perfusión tisular y normalizar la filtración glomerular. Iniciar insulina simultáneamente con la expansión incrementa drásticamente el gradiente osmótico, principal factor del edema cerebral secundario, una complicación altamente letal.",
     keyPoints: [
-      "La sepsis debe sospecharse en paciente con foco infeccioso e hipoperfusion.",
-      "El tratamiento inicial incluye fluidos y antibiotico temprano.",
+      "Priorizar la rehidratación inicial con cristaloides isotónicos antes de la insulinoterapia.",
+      "Evitar el uso rutinario de bicarbonato y el inicio simultáneo de insulina para prevenir el edema cerebral.",
+      "Tema: Protocolos de manejo hídrico y electrolítico en CAD y prevención de edema cerebral.",
     ],
   },
   {
     id: "q2",
-    topic: "Cardiologia",
+    topic: "Salud Pública",
     statement:
-      "Varon de 68 anos con dolor toracico opresivo y elevacion del ST en cara inferior. Cual es la conducta inicial mas adecuada?",
+      "Una paciente femenina de veinticinco años, residente en un área urbana endémica en Colombia, acude a urgencias en su quinto día de enfermedad febril. La fiebre cedió hace doce horas, pero hoy inició con dolor abdominal generalizado, intenso y continuo. Al examen físico presenta FC 110 lpm, TA 100/70 mmHg, hepatomegalia a 3 cm del reborde costal y petequias en extremidades inferiores. ¿Cuál es la clasificación clínica exacta y el grupo de intervención institucional según los lineamientos del Ministerio de Salud?",
     options: [
-      { id: "A", label: "A", text: "Alta con analgesia y control ambulatorio" },
-      { id: "B", label: "B", text: "Fibrinolisis o angioplastia urgente" },
-      { id: "C", label: "C", text: "Solo antiinflamatorios no esteroideos" },
-      { id: "D", label: "D", text: "Esperar troponina de 24 horas" },
+      {
+        id: "A",
+        label: "A",
+        text: "Dengue grave (Grupo C), requiere remisión inmediata a UCI para soporte inotrópico.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Dengue sin signos de alarma (Grupo A), manejo ambulatorio con hidratación oral estricta.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Dengue con signos de alarma (Grupo B2), requiere hospitalización inmediata para hidratación endovenosa y monitoreo.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Dengue sin signos de alarma con factores de riesgo (Grupo B1), requiere hospitalización preventiva por riesgo de sangrado.",
+      },
     ],
-    correctOptionId: "B",
+    correctOptionId: "C",
     explanation:
-      "Un IAM con elevacion del ST requiere reperfusion inmediata para reducir dano miocardico.",
+      "El caso describe la fase crítica del dengue tras la caída de la fiebre (defervescencia). El dolor abdominal intenso y la hepatomegalia >2cm son signos de alarma que indican extravasación de plasma inminente. Según el Ministerio de Salud y la OPS, la presencia de un solo signo de alarma clasifica el caso en el Grupo B2, obligando a hospitalización y reanimación con cristaloides IV para evitar la progresión al choque.",
     keyPoints: [
-      "El tiempo puerta-balón es determinante en el pronostico.",
-      "No se debe retrasar la reperfusion esperando marcadores tardios.",
+      "Identificar signos de alarma (dolor abdominal, hepatomegalia) en la fase crítica tras la caída de la fiebre.",
+      "El Grupo B2 requiere hospitalización inmediata y reanimación con cristaloides IV.",
+      "Tema: Clasificación de severidad del Dengue y fisiopatología de la extravasación plasmática.",
     ],
   },
   {
     id: "q3",
-    topic: "Antibioticos",
+    topic: "Cirugía General",
     statement:
-      "Mujer de 24 anos con disuria, polaquiuria y fiebre de 39 C con dolor lumbar. Diagnostico mas probable?",
+      "Paciente masculino de treinta y cuatro años ingresa por colisión en motocicleta. Se encuentra pálido, confuso, FC 130 lpm, TA 80/40 mmHg y FR 28 rpm. Se detecta inestabilidad mecánica del anillo pélvico (maniobra de compresión medial). El FAST es negativo para líquido libre abdominal. Siguiendo los principios de reanimación de control de daños y ATLS 11ª edición, ¿cuál es la intervención inmediata de mayor impacto en la sobrevida?",
     options: [
-      { id: "A", label: "A", text: "Cistitis no complicada" },
-      { id: "B", label: "B", text: "Pielonefritis aguda" },
-      { id: "C", label: "C", text: "Vaginitis candidiasica" },
-      { id: "D", label: "D", text: "Colico nefritico" },
+      {
+        id: "A",
+        label: "A",
+        text: "Administrar una infusión rápida de 2000 ml de Lactato de Ringer calentado para normalizar la TA sistólica >110 mmHg.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Trasladar inmediatamente a tomografía (TAC) con contraste para identificar el origen arterial del sangrado.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Colocar faja pélvica a nivel de trocánteres mayores, activar protocolo de transfusión masiva y administrar ácido tranexámico.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Preparar quirófano para laparotomía exploratoria de urgencia por sospecha de lesión vascular inadvertida.",
+      },
     ],
-    correctOptionId: "B",
+    correctOptionId: "C",
     explanation:
-      "La fiebre alta con dolor lumbar y sintomas urinarios orienta a pielonefritis.",
+      "El paciente presenta choque hemorrágico grado III-IV por fractura pélvica inestable. Las directrices actuales (ATLS 11ª) priorizan el control mecánico con faja pélvica para reducir el volumen pélvico y facilitar el taponamiento del plexo venoso presacro. Se debe activar el protocolo de transfusión masiva y administrar ácido tranexámico temprano, evitando grandes volúmenes de cristaloides (hipotensión permisiva) para prevenir la coagulopatía.",
     keyPoints: [
-      "La afectacion sistemica sugiere infeccion urinaria alta.",
-      "Requiere antibiotico sistemico y vigilancia de complicaciones.",
+      "El control mecánico con faja pélvica es prioritario en fracturas inestables de pelvis.",
+      "Aplicar principios de reanimación de control de daños: ácido tranexámico y transfusión balanceada temprana.",
+      "Tema: Hipotensión permisiva y abordaje mecánico de inestabilidad pélvica en ATLS 11ª.",
     ],
   },
   {
     id: "q4",
-    topic: "Neumologia",
+    topic: "Ginecología",
     statement:
-      "Paciente con EPOC agudizado: pH 7.28, PaCO2 62 mmHg, FR 32. Cual es la mejor estrategia inicial?",
+      "Paciente de veintiocho años tras parto vaginal instrumentado. Inicia sangrado masivo, rojo rutilante. Presenta palidez severa, diaforesis, frialdad y estado mental confuso (FC 140 lpm, TA 75/40 mmHg). El útero se palpa por encima de la cicatriz umbilical, reblandecido y atónico. Según la estrategia 'Código Rojo', ¿cuál es el grado de choque y la conducta obligatoria en los primeros 20 minutos?",
     options: [
-      { id: "A", label: "A", text: "Oxigeno alto flujo sin monitorizacion" },
-      { id: "B", label: "B", text: "Ventilacion mecanica no invasiva" },
-      { id: "C", label: "C", text: "Sedacion y observacion" },
-      { id: "D", label: "D", text: "Alta con broncodilatador inhalado" },
+      {
+        id: "A",
+        label: "A",
+        text: "Choque moderado. Administrar 500 ml de cristaloides e iniciar goteo de oxitocina profiláctica.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Choque severo. Garantizar dos accesos venosos, bolos de cristaloides calentados y transfusión inmediata de sangre O negativo o específica.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Choque leve. Realizar masaje uterino bimanual, administrar misoprostol intrarrectal y observar diuresis.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Choque severo. Traslado inmediato a quirófano para histerectomía de control de daños sin estabilización previa.",
+      },
     ],
     correctOptionId: "B",
     explanation:
-      "La acidosis respiratoria en agudizacion de EPOC se beneficia de ventilacion no invasiva temprana.",
+      "La paciente presenta choque hipovolémico grado severo (>30-40% de volemia) por atonía uterina, evidenciado por compromiso de conciencia, taquicardia extrema e hipotensión. El protocolo Código Rojo exige en los primeros 20 minutos: acceso venoso múltiple, cristaloides calentados y transfusión urgente (sin esperar pruebas cruzadas si es necesario) para restaurar la capacidad de transporte de oxígeno.",
     keyPoints: [
-      "La VNI reduce necesidad de intubacion en pacientes seleccionados.",
-      "Debe acompanarse de broncodilatadores y tratamiento etiologico.",
+      "El estado mental (confusión/agitación) es definitorio de choque severo en obstetricia.",
+      "La transfusión inmediata es mandatoria en el choque severo dentro del protocolo Código Rojo.",
+      "Tema: Clasificación de pérdida sanguínea y lineamientos de transfusión en Código Rojo.",
     ],
   },
   {
     id: "q5",
-    topic: "Neurologia",
+    topic: "Pediatría",
     statement:
-      "Adulto mayor con inicio brusco de hemiparesia derecha y afasia de 50 minutos de evolucion. Paso prioritario?",
+      "Recién nacido a término (39 sem) con antecedente de RPM de 22 horas sin profilaxis antibiótica. A las 12 horas de vida presenta rechazo a la succión, temperatura de 37.8°C y letargia sutil. ¿Cuál es el enfoque diagnóstico y terapéutico más adecuado según la Guía de Práctica Clínica de Colombia?",
     options: [
-      { id: "A", label: "A", text: "Iniciar anticoagulacion sin imagen" },
-      { id: "B", label: "B", text: "Solicitar TAC craneal urgente" },
-      { id: "C", label: "C", text: "Esperar mejoria espontanea 24 horas" },
-      { id: "D", label: "D", text: "Administrar corticoides de rutina" },
+      {
+        id: "A",
+        label: "A",
+        text: "Observación clínica estricta y diferir antibióticos por ser una alteración térmica leve sin dificultad respiratoria.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Solicitar urocultivo, punción lumbar y hemograma, e iniciar monoterapia con cefotaxima.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Toma inmediata de hemocultivos y comenzar antibioticoterapia empírica con ampicilina y gentamicina.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar antipiréticos y dar egreso hospitalario con signos de alarma estrictos para la madre.",
+      },
     ],
-    correctOptionId: "B",
+    correctOptionId: "C",
     explanation:
-      "Ante ictus agudo, la neuroimagen urgente define si hay hemorragia y guia reperfusion.",
+      "Se trata de una sepsis neonatal temprana (antes de 72h) con factores de riesgo (RPM >18h) y síntomas clínicos (rechazo succión, letargia). La guía nacional ordena toma de hemocultivos e inicio inmediato de esquema empírico (Ampicilina + Aminoglucósido) para cubrir S. agalactiae y Gram negativos. La observación expectante solo aplica si el neonato está totalmente asintomático.",
     keyPoints: [
-      "La ventana terapeutica obliga a actuar en minutos, no en horas.",
-      "La TAC sin contraste es la prueba inicial en fase aguda.",
+      "RPM >18h es un factor de riesgo mayor que obliga a intervención ante cualquier signo clínico.",
+      "El esquema de primera línea en sepsis temprana es Ampicilina + Gentamicina.",
+      "Tema: Estratificación de riesgo y antibioticoterapia en sepsis neonatal temprana.",
     ],
   },
   {
     id: "q6",
-    topic: "Pediatria",
+    topic: "Cirugía General",
     statement:
-      "Lactante de 8 meses con fiebre de 39.5 C, irritabilidad y rigidez de nuca. Cual es el diagnostico mas probable?",
+      "Paciente de setenta y ocho años con demencia vascular presenta dolor abdominal cólico, ausencia de flatos/heces y distensión masiva de 3 días. Abdomen timpánico sin irritación peritoneal; ampolla rectal vacía. La radiografía muestra el signo del 'grano de café' que emerge de la pelvis. ¿Cuál es el diagnóstico y la intervención primaria de elección?",
     options: [
-      { id: "A", label: "A", text: "Meningitis bacteriana" },
-      { id: "B", label: "B", text: "Resfriado comun" },
-      { id: "C", label: "C", text: "Roseola" },
-      { id: "D", label: "D", text: "Otitis media" },
+      {
+        id: "A",
+        label: "A",
+        text: "Cáncer colorrectal oclusivo; requiere colostomía tipo Hartmann urgente.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Vólvulo de sigmoides; requiere descompresión y devolvulación por colonoscopia o rectosigmoidoscopia.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Vólvulo de ciego; requiere hemicolectomía derecha de extrema urgencia.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Íleo paralítico severo; requiere sonda nasogástrica y procinéticos.",
+      },
     ],
-    correctOptionId: "A",
+    correctOptionId: "B",
     explanation:
-      "La triada de fiebre, irritabilidad y signos meningeos en lactantes es altamente sugestiva de meningitis.",
+      "El signo del 'grano de café' es patognomónico del vólvulo de sigmoides. Dado que no hay signos de peritonitis o isquemia, el estándar de cuidado inicial es la devolvulación endoscópica, que permite resolver la obstrucción de forma no operatoria. El vólvulo cecal suele proyectarse al cuadrante superior izquierdo y siempre requiere cirugía.",
     keyPoints: [
-      "Requiere puncion lumbar y tratamiento antibiotico empirico urgente.",
-      "La vacunacion ha reducido la incidencia de ciertos patogenos.",
+      "El signo del grano de café (asa en omega) identifica el vólvulo de sigmoides.",
+      "La devolvulación endoscópica es el tratamiento de elección inicial si no hay compromiso isquémico.",
+      "Tema: Diagnóstico diferencial radiológico y manejo de obstrucción intestinal colónica.",
     ],
   },
   {
     id: "q7",
-    topic: "Ginecologia",
+    topic: "Toxicología",
     statement:
-      "Gestante de 34 semanas con TA 155/95 mmHg y proteinuria de 400mg en 24h. Cual es el diagnostico?",
+      "Hombre de cuarenta y cinco años con mordedura de serpiente Mapaná. Presenta edema masivo de toda la extremidad, sangrado activo por colmillos, hematuria y gingivorragia. Tiempos de coagulación incoagulables. ¿Cuál es el manejo específico indicado según el protocolo del INS?",
     options: [
-      { id: "A", label: "A", text: "Hipertension gestacional" },
-      { id: "B", label: "B", text: "Preeclampsia" },
-      { id: "C", label: "C", text: "Eclampsia" },
-      { id: "D", label: "D", text: "Hipertension cronica" },
+      {
+        id: "A",
+        label: "A",
+        text: "Accidente micrúrico grave; aplicar dosis repetidas de suero antielapídico.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Accidente botrópico grave; administrar dosis completa de suero antiofídico polivalente IV, sin ajuste por peso.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Accidente botrópico leve; aplicar dos viales de suero antiofídico por vía intramuscular perilesional.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Corregir coagulopatía con plasma fresco congelado y vitamina K antes de administrar el antiveneno.",
+      },
     ],
     correctOptionId: "B",
     explanation:
-      "La preeclampsia se define por hipertension de nueva aparicion (>20 sem) mas proteinuria.",
+      "El accidente botrópico grave (vipéridos como Bothrops) causa edema proteolítico y coagulopatía de consumo sistémica. El tratamiento es la infusión IV urgente de suero antiofídico polivalente. La dosis se dicta por la gravedad clínica y NO se ajusta por peso (el veneno inoculado es independiente del tamaño del paciente). La vía IM es ineficaz y el plasma es inútil sin neutralizar primero las toxinas.",
     keyPoints: [
-      "El manejo definitivo es la finalizacion de la gestacion.",
-      "Se debe vigilar la aparicion de signos de gravedad (HELLP).",
+      "La dosis de suero antiofídico depende de la gravedad del envenenamiento, no del peso corporal.",
+      "La vía intramuscular está proscrita; el antiveneno requiere distribución sistémica intravenosa.",
+      "Tema: Fisiopatología del veneno botrópico y protocolos de dosificación del INS.",
     ],
   },
   {
     id: "q8",
-    topic: "Endocrinologia",
+    topic: "Ginecología",
     statement:
-      "Paciente con diabetes tipo 1 presenta glicemia 450 mg/dL, cetonuria y pH 7.15. Cual es la medida inicial mas importante?",
+      "Gestante de 34 semanas con cefalea persistente, fosfenos e hiperreflexia rotuliana (+++/++++). TA 170/115 mmHg y proteinuria positiva. ¿Cuál es la estrategia de intervención dual inicial más apropiada según las guías para reducir la morbimortalidad?",
     options: [
-      { id: "A", label: "A", text: "Insulina en bolo de 20 unidades" },
-      { id: "B", label: "B", text: "Hidratacion agresiva con solución salina" },
-      { id: "C", label: "C", text: "Bicarbonato de sodio de rutina" },
-      { id: "D", label: "D", text: "Dieta hipocalorica inmediata" },
+      {
+        id: "A",
+        label: "A",
+        text: "Manejo expectante con reposo y líquidos endovenosos, difiriendo fármacos hasta tener laboratorios séricos.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Infusión de sulfato de magnesio para neuroprotección y terapia antihipertensiva rápida (nifedipino o labetalol).",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Cesárea de emergencia inmediata sin estabilización previa para interrumpir la gestación.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar diazepam IV para prevenir convulsiones y enalapril oral para descenso tensional sostenido.",
+      },
     ],
     correctOptionId: "B",
     explanation:
-      "La prioridad en cetoacidosis diabetica es la reposicion de volumen para mejorar la perfusion.",
+      "El cuadro es una preeclampsia con criterios de severidad (hipertensión severa y síntomas de vasoespasmo). La prioridad es prevenir la eclampsia con sulfato de magnesio (estabilizador de membrana neuronal superior a benzodiacepinas) y controlar la crisis hipertensiva con fármacos seguros (nifedipino/labetalol). Los IECA están contraindicados por teratogenicidad y toxicidad renal fetal.",
     keyPoints: [
-      "La insulina debe iniciarse tras asegurar niveles adecuados de potasio.",
-      "El objetivo es cerrar la brecha anionica (anion gap).",
+      "El sulfato de magnesio es el estándar de oro para prevenir convulsiones en preeclampsia severa.",
+      "Se debe estabilizar la TA antes de cualquier intervención quirúrgica para evitar ACV.",
+      "Tema: Diagnóstico y manejo farmacológico de trastornos hipertensivos del embarazo.",
     ],
   },
   {
     id: "q9",
-    topic: "Cirugia",
+    topic: "Pediatría",
     statement:
-      "Varon de 20 anos con dolor que inicio en epigastrio y migro a fosa iliaca derecha con anorexia. Cual es el signo mas probable?",
+      "Niño de cinco años (Chocó) con fiebre de 40°C, ictericia y palidez profunda. Hemoglobina 6 g/dL y gota gruesa positiva para P. falciparum (parasitemia 8%). El paciente está letárgico y rechaza la vía oral. ¿Qué esquema debe instaurarse perentoriamente según el protocolo nacional?",
     options: [
-      { id: "A", label: "A", text: "Signo de Murphy" },
-      { id: "B", label: "B", text: "Signo de McBurney positivo" },
-      { id: "C", label: "C", text: "Signo de Cullen" },
-      { id: "D", label: "D", text: "Signo de Courvoisier" },
+      {
+        id: "A",
+        label: "A",
+        text: "Cloroquina oral por tres días más primaquina por catorce días.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Artemeter y lumefantrina oral (terapia combinada) con manejo ambulatorio.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Manejo intrahospitalario con terapia parenteral de primera línea (Artesunato IV).",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Monoterapia con sulfadoxina y pirimetamina para frenar la replicación parasitaria.",
+      },
     ],
-    correctOptionId: "B",
+    correctOptionId: "C",
     explanation:
-      "La cronologia de Murphy y el dolor en el punto de McBurney son clasicos de apendicitis aguda.",
+      "La malaria por P. falciparum con hiperparasitemia (>5%), anemia severa y postración se clasifica como grave/complicada. El protocolo del Ministerio de Salud prioriza el uso de derivados de artemisinina parenterales (Artesunato IV) para depurar rápidamente el parásito. La cloroquina no se usa en falciparum por alta resistencia genética documentada en Colombia.",
     keyPoints: [
-      "Es la urgencia quirurgica no traumatica mas frecuente.",
-      "El diagnostico es eminentemente clinico.",
+      "La malaria grave requiere hospitalización y tratamiento parenteral inmediato.",
+      "El artesunato IV es el tratamiento de elección para malaria complicada en Colombia y por la OMS.",
+      "Tema: Diferenciación de malaria grave y perfiles de resistencia de Plasmodium.",
     ],
   },
   {
     id: "q10",
-    topic: "Hematologia",
+    topic: "Cardiología",
     statement:
-      "Paciente con anemia microcitica, hipocromica y ferritina muy baja. Cual es la causa mas frecuente?",
+      "Hombre de 65 años con dolor torácico opresivo e irradiado de 45 min. EKG muestra elevación del ST de 3mm en V2-V4. Está en un centro de primer nivel sin hemodinamia y el traslado tardará >3 horas. ¿Cuál es la estrategia de reperfusión de elección?",
     options: [
-      { id: "A", label: "A", text: "Deficiencia de vitamina B12" },
-      { id: "B", label: "B", text: "Deficiencia de hierro (ferropenia)" },
-      { id: "C", label: "C", text: "Defecto en la sintesis de ADN" },
-      { id: "D", label: "D", text: "Hemolisis intravascular" },
+      {
+        id: "A",
+        label: "A",
+        text: "Manejo médico conservador (AAS, clopidogrel, estatinas) y remisión no urgente a medicina interna.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Omitir terapia agresiva y trasladar para angioplastia primaria pese a que el tiempo puerta-balón será >180 min.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Administrar terapia fibrinolítica sistémica IV (alteplasa/estreptoquinasa) en los primeros 30 min y luego trasladar.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Esperar confirmación de troponinas de alta sensibilidad antes de decidir sobre la trombólisis.",
+      },
     ],
-    correctOptionId: "B",
+    correctOptionId: "C",
     explanation:
-      "La anemia ferropenica es la causa mas comun de microcitosis a nivel mundial.",
+      "Ante un IAMCEST, si el tiempo puerta-balón estimado para angioplastia supera los 120 minutos, la guía clínica ordena fibrinólisis (puerta-aguja <30 min). El diagnóstico es clínico y eléctrico; esperar biomarcadores o retrasar la reperfusión por un traslado prolongado condena al miocardio a necrosis irreversible.",
     keyPoints: [
-      "En adultos varones o mujeres postmenopausicas, descartar sangrado digestivo.",
-      "El tratamiento requiere suplementacion oral prolongada.",
+      "Fibrinólisis es la elección si la angioplastia no es posible en menos de 120 minutos.",
+      "El tiempo es músculo: no se deben esperar troponinas para iniciar la reperfusión en IAMCEST.",
+      "Tema: Algoritmos de reperfusión miocárdica y métricas de tiempo en urgencias.",
     ],
   },
 ];
