@@ -73,12 +73,28 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
 
     try {
       if (mode === "login") {
-        await loginWithEmail(email.trim(), password);
-        router.push("/dashboard");
+        try {
+          await loginWithEmail(email.trim(), password);
+          router.push("/dashboard");
+          onClose();
+        } catch (err: any) {
+          // Si el usuario no existe, cambiamos a modo sugerencia de registro
+          if (err.code === "auth/user-not-found" || err.message?.includes("user-not-found")) {
+            setMode("register");
+            setError("No encontramos una cuenta con este correo. ¿Deseas crear una nueva?");
+          } else if (err.code === "auth/wrong-password" || err.code === "auth/invalid-credential") {
+            setError("Contraseña incorrecta. Por favor, verifica tus datos.");
+          } else {
+            throw err;
+          }
+        }
       } else {
-        router.push("/register");
+        // Ejecutar registro directamente
+        const { registerWithEmail: registerFn } = await import("@/lib/auth");
+        await registerFn(email.trim(), password);
+        router.push("/dashboard");
+        onClose();
       }
-      onClose();
     } catch (err: any) {
       setError(err.message || "Ocurrió un error al intentar ingresar.");
     } finally {
@@ -122,10 +138,12 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
               <Logo className="h-16 w-auto sm:h-20" />
             </div>
             <h2 className="text-2xl font-bold text-white lg:text-3xl">
-              Comienza tu entrenamiento
+              {mode === "login" ? "Comienza tu entrenamiento" : "Crea tu cuenta"}
             </h2>
             <p className="mt-2 text-mq-muted">
-              Inicia sesión o crea una cuenta con:
+              {mode === "login" 
+                ? "Inicia sesión o crea una cuenta con:" 
+                : "Únete a Método Q para comenzar."}
             </p>
           </div>
 
@@ -171,7 +189,7 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
 
             <div>
               <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-mq-muted/80">
-                Contraseña
+                {mode === "login" ? "Contraseña" : "Crea tu contraseña"}
               </label>
               <input
                 type="password"
@@ -184,13 +202,17 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
             </div>
 
             {error && (
-              <p className="mt-2 rounded-lg bg-red-500/10 p-4 text-center text-xs font-medium text-red-400 border border-red-500/20 animate-shake">
+              <div className={`mt-2 rounded-lg p-4 text-center text-xs font-medium border animate-shake ${
+                mode === "register" && error.includes("No encontramos")
+                  ? "bg-mq-accent/10 text-mq-accent border-mq-accent/20"
+                  : "bg-red-500/10 text-red-400 border-red-500/20"
+              }`}>
                 {error.includes("offline") 
                   ? "Error de conexión. Por favor, intenta de nuevo en unos segundos." 
                   : error.includes("popup-blocked")
                   ? "El navegador bloqueó la ventana emergente de Google. Por favor, actívala."
                   : error}
-              </p>
+              </div>
             )}
 
             <button
@@ -198,8 +220,21 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
               disabled={isLoading}
               className="mt-6 flex h-14 w-full items-center justify-center rounded-xl bg-mq-accent text-sm font-black uppercase tracking-widest text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.2)] transition-all hover:brightness-110 hover:shadow-[0_0_40px_rgba(0,209,255,0.4)] active:scale-[0.98] disabled:opacity-50"
             >
-              {isLoading ? "Cargando..." : "Entrar ahora"}
+              {isLoading ? "Procesando..." : mode === "login" ? "Continuar" : "Crear cuenta ahora"}
             </button>
+
+            {mode === "register" && (
+              <button
+                type="button"
+                onClick={() => {
+                  setMode("login");
+                  setError("");
+                }}
+                className="text-center text-xs font-semibold text-mq-muted hover:text-white transition mt-2"
+              >
+                ¿Ya tienes cuenta? Ingresar
+              </button>
+            )}
           </form>
         </div>
       </div>
