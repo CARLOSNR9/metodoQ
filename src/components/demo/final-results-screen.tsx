@@ -4,6 +4,8 @@ export type FinalResultsScreenProps = {
   scorePercentage: number;
   correctAnswers: number;
   wrongAnswers: number;
+  totalSeconds: number;
+  avgResponseTime: number;
   onRepeatDemo: () => void;
   className?: string;
 };
@@ -20,14 +22,45 @@ function getPerformanceMessage(scorePercentage: number) {
   return "Buen nivel. Estas cerca de competir por una plaza.";
 }
 
+function getVelocityMessage(avgResponseTime: number) {
+  if (avgResponseTime <= 45) {
+    return {
+      label: "Excelente",
+      color: "text-emerald-400",
+      description: "Tu velocidad de respuesta es óptima para el examen.",
+    };
+  }
+  if (avgResponseTime <= 75) {
+    return {
+      label: "Buen ritmo",
+      color: "text-mq-accent",
+      description: "Estás dentro del tiempo promedio, pero podrías agilizar.",
+    };
+  }
+  return {
+    label: "Lento",
+    color: "text-rose-400",
+    description: "Estás tardando demasiado. En el examen real el tiempo es crítico.",
+  };
+}
+
 export function FinalResultsScreen({
   scorePercentage,
   correctAnswers,
   wrongAnswers,
+  totalSeconds,
+  avgResponseTime,
   onRepeatDemo,
   className,
 }: FinalResultsScreenProps) {
   const performanceMessage = getPerformanceMessage(scorePercentage);
+  const velocity = getVelocityMessage(avgResponseTime);
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.round(seconds % 60);
+    return `${mins}m ${secs}s`;
+  };
 
   return (
     <div className={`mq-fade-up mt-10 flex justify-center ${className ?? ""}`}>
@@ -39,10 +72,34 @@ export function FinalResultsScreen({
           Has respondido {correctAnswers} correctas y {wrongAnswers} incorrectas
         </p>
 
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="rounded-xl border border-mq-border bg-background/50 p-4 text-left">
+            <p className="text-xs font-bold uppercase tracking-wider text-mq-accent/70">
+              Tiempo Total
+            </p>
+            <p className="mt-1 text-2xl font-bold text-white">
+              {formatTime(totalSeconds)}
+            </p>
+          </div>
+          <div className="rounded-xl border border-mq-border bg-background/50 p-4 text-left">
+            <p className="text-xs font-bold uppercase tracking-wider text-mq-accent/70">
+              Promedio por pregunta
+            </p>
+            <p className="mt-1 text-2xl font-bold text-white">
+              {avgResponseTime}s
+            </p>
+          </div>
+        </div>
+
         <div className="mt-6 rounded-xl border border-mq-border bg-background/50 p-5 text-left">
-          <p className="text-sm font-semibold text-mq-accent">Mensaje</p>
-          <p className="mt-2 text-sm leading-relaxed text-mq-muted sm:text-base">
-            {performanceMessage}
+          <div className="flex items-center justify-between">
+            <p className="text-sm font-semibold text-mq-accent">Análisis de Resultados</p>
+            <span className={`text-xs font-bold uppercase px-2 py-0.5 rounded border border-current ${velocity.color}`}>
+              Velocidad: {velocity.label}
+            </span>
+          </div>
+          <p className="mt-3 text-sm leading-relaxed text-mq-muted sm:text-base">
+            {performanceMessage} {velocity.description}
           </p>
         </div>
 
@@ -56,6 +113,7 @@ export function FinalResultsScreen({
             </p>
           </div>
         )}
+
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
           <Link

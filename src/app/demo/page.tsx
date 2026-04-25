@@ -374,6 +374,7 @@ export default function DemoPage() {
   const [learningProfile, setLearningProfile] = useState<UserLearningProfile>(EMPTY_PROFILE);
   const [sessionQuestions, setSessionQuestions] = useState<DemoQuestion[]>([]);
   const [liveFeedbackMessage, setLiveFeedbackMessage] = useState<string | null>(null);
+  const [totalSeconds, setTotalSeconds] = useState(0);
   const hasTrackedFinishDemoRef = useRef(false);
 
   const effectivePlan = plan ?? "FREE";
@@ -489,6 +490,18 @@ export default function DemoPage() {
       setQuestionStartAt(Date.now());
     }
   }, [answersByQuestionId, currentQuestion, hasStarted, isResultsStep]);
+
+  useEffect(() => {
+    if (!hasStarted || isResultsStep) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setTotalSeconds((prev) => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [hasStarted, isResultsStep]);
 
   useEffect(() => {
     if (!isResultsStep || !user || hasSavedCurrentAttempt) {
@@ -680,7 +693,14 @@ export default function DemoPage() {
     setHasTriggeredFreePaywall(false);
     setHasRegisteredTrainingDay(false);
     hasTrackedFinishDemoRef.current = false;
+    setTotalSeconds(0);
     trackStartDemo({ userId: user?.uid });
+  };
+
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
   return (
@@ -710,9 +730,17 @@ export default function DemoPage() {
                     </button>
                   </>
                 ) : (
-                  <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">
-                    Modo invitado
-                  </p>
+                  <div className="flex items-center gap-4">
+                    <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">
+                      Modo invitado
+                    </p>
+                    {hasStarted && !isResultsStep && (
+                      <div className="flex items-center gap-2 rounded-lg border border-mq-accent/20 bg-mq-accent/5 px-3 py-1.5 text-sm font-bold text-mq-accent">
+                        <span className="h-2 w-2 rounded-full bg-mq-accent animate-pulse" />
+                        {formatTime(totalSeconds)}
+                      </div>
+                    )}
+                  </div>
                 )}
               </div>
             </header>
@@ -791,6 +819,8 @@ export default function DemoPage() {
               scorePercentage={scorePercentage}
               correctAnswers={correctAnswers}
               wrongAnswers={wrongAnswers}
+              totalSeconds={totalSeconds}
+              avgResponseTime={avgResponseTime}
               onRepeatDemo={() => {
                 startAdaptiveSession();
               }}
