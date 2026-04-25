@@ -47,7 +47,7 @@ export function HeroSection() {
                 </Link>
               </div>
               <p className="text-center lg:text-left text-xs font-semibold uppercase tracking-widest text-mq-accent/80 animate-pulse">
-                ⚡ 5 preguntas. 2 minutos. Sin registro.
+                ⚡ 10 preguntas. 4 minutos. Sin registro.
               </p>
             </div>
             

@@ -252,6 +252,101 @@ const demoQuestions: DemoQuestion[] = [
       "La TAC sin contraste es la prueba inicial en fase aguda.",
     ],
   },
+  {
+    id: "q6",
+    topic: "Pediatria",
+    statement:
+      "Lactante de 8 meses con fiebre de 39.5 C, irritabilidad y rigidez de nuca. Cual es el diagnostico mas probable?",
+    options: [
+      { id: "A", label: "A", text: "Meningitis bacteriana" },
+      { id: "B", label: "B", text: "Resfriado comun" },
+      { id: "C", label: "C", text: "Roseola" },
+      { id: "D", label: "D", text: "Otitis media" },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "La triada de fiebre, irritabilidad y signos meningeos en lactantes es altamente sugestiva de meningitis.",
+    keyPoints: [
+      "Requiere puncion lumbar y tratamiento antibiotico empirico urgente.",
+      "La vacunacion ha reducido la incidencia de ciertos patogenos.",
+    ],
+  },
+  {
+    id: "q7",
+    topic: "Ginecologia",
+    statement:
+      "Gestante de 34 semanas con TA 155/95 mmHg y proteinuria de 400mg en 24h. Cual es el diagnostico?",
+    options: [
+      { id: "A", label: "A", text: "Hipertension gestacional" },
+      { id: "B", label: "B", text: "Preeclampsia" },
+      { id: "C", label: "C", text: "Eclampsia" },
+      { id: "D", label: "D", text: "Hipertension cronica" },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "La preeclampsia se define por hipertension de nueva aparicion (>20 sem) mas proteinuria.",
+    keyPoints: [
+      "El manejo definitivo es la finalizacion de la gestacion.",
+      "Se debe vigilar la aparicion de signos de gravedad (HELLP).",
+    ],
+  },
+  {
+    id: "q8",
+    topic: "Endocrinologia",
+    statement:
+      "Paciente con diabetes tipo 1 presenta glicemia 450 mg/dL, cetonuria y pH 7.15. Cual es la medida inicial mas importante?",
+    options: [
+      { id: "A", label: "A", text: "Insulina en bolo de 20 unidades" },
+      { id: "B", label: "B", text: "Hidratacion agresiva con solución salina" },
+      { id: "C", label: "C", text: "Bicarbonato de sodio de rutina" },
+      { id: "D", label: "D", text: "Dieta hipocalorica inmediata" },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "La prioridad en cetoacidosis diabetica es la reposicion de volumen para mejorar la perfusion.",
+    keyPoints: [
+      "La insulina debe iniciarse tras asegurar niveles adecuados de potasio.",
+      "El objetivo es cerrar la brecha anionica (anion gap).",
+    ],
+  },
+  {
+    id: "q9",
+    topic: "Cirugia",
+    statement:
+      "Varon de 20 anos con dolor que inicio en epigastrio y migro a fosa iliaca derecha con anorexia. Cual es el signo mas probable?",
+    options: [
+      { id: "A", label: "A", text: "Signo de Murphy" },
+      { id: "B", label: "B", text: "Signo de McBurney positivo" },
+      { id: "C", label: "C", text: "Signo de Cullen" },
+      { id: "D", label: "D", text: "Signo de Courvoisier" },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "La cronologia de Murphy y el dolor en el punto de McBurney son clasicos de apendicitis aguda.",
+    keyPoints: [
+      "Es la urgencia quirurgica no traumatica mas frecuente.",
+      "El diagnostico es eminentemente clinico.",
+    ],
+  },
+  {
+    id: "q10",
+    topic: "Hematologia",
+    statement:
+      "Paciente con anemia microcitica, hipocromica y ferritina muy baja. Cual es la causa mas frecuente?",
+    options: [
+      { id: "A", label: "A", text: "Deficiencia de vitamina B12" },
+      { id: "B", label: "B", text: "Deficiencia de hierro (ferropenia)" },
+      { id: "C", label: "C", text: "Defecto en la sintesis de ADN" },
+      { id: "D", label: "D", text: "Hemolisis intravascular" },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "La anemia ferropenica es la causa mas comun de microcitosis a nivel mundial.",
+    keyPoints: [
+      "En adultos varones o mujeres postmenopausicas, descartar sangrado digestivo.",
+      "El tratamiento requiere suplementacion oral prolongada.",
+    ],
+  },
 ];
 
 export default function DemoPage() {
@@ -284,7 +379,7 @@ export default function DemoPage() {
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
   const hasUnlimitedAccess = effectivePlan === "PRO" || effectivePlan === "PRO_PLUS";
-  const plannedQuestionCount = Math.min(5, demoQuestions.length);
+  const plannedQuestionCount = Math.min(10, demoQuestions.length);
   const totalQuestions = hasStarted ? sessionQuestions.length : plannedQuestionCount;
   const availableQuestions = hasStarted ? sessionQuestions : [];
   const isResultsStep = hasStarted && currentQuestionIndex === totalQuestions;
@@ -644,7 +739,7 @@ export default function DemoPage() {
                 </h1>
                 
                 <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-mq-muted sm:text-lg">
-                  Descubre tus fortalezas y debilidades reales frente al examen de residencia en solo <span className="text-white font-semibold">2 minutos</span>.
+                  Descubre tus fortalezas y debilidades reales frente al examen de residencia en solo <span className="text-white font-semibold">4 minutos</span>.
                 </p>
               </header>
 
@@ -680,7 +775,7 @@ export default function DemoPage() {
                   Comenzar Evaluación Ahora
                 </button>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-mq-muted/60">
-                  5 preguntas • Sin registro • 100% gratuito
+                  10 preguntas • Sin registro • 100% gratuito
                 </p>
               </div>
             </div>
