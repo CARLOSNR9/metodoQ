@@ -21,6 +21,8 @@ import {
   trackStartDemo,
   trackViewPaywall,
 } from "@/lib/analytics/events";
+import { motion } from "framer-motion";
+import { Zap, Target } from "lucide-react";
 import { registerTrainingDay, saveDemoResult } from "@/lib/results";
 
 type DemoQuestion = {
@@ -618,52 +620,76 @@ export default function DemoPage() {
                   </p>
                 )}
               </div>
-              <h1 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                Demo Metodo Q
-              </h1>
-              <p className="mt-4 text-base leading-relaxed text-mq-muted sm:text-lg">
-                Responde algunas preguntas y mide tu nivel
-              </p>
-              <div className="mt-4 grid gap-2 sm:grid-cols-2">
-                <p className="rounded-lg border border-indigo-300/30 bg-indigo-500/10 px-3 py-2 text-xs font-semibold text-indigo-100 sm:text-sm">
-                  Te estamos ayudando a mejorar en tiempo real
-                </p>
-                <p className="rounded-lg border border-cyan-300/30 bg-cyan-500/10 px-3 py-2 text-xs font-semibold text-cyan-100 sm:text-sm">
-                  Tu progreso es personalizado
-                </p>
-              </div>
-              <div className="mt-4 rounded-xl border border-mq-border-strong bg-white/[0.03] px-4 py-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
-                  Plan actual: {effectivePlan}
-                </p>
-                {isFreePlan ? (
-                  <p className="mt-1 text-sm text-mq-muted">
-                    Tu plan FREE permite hasta 5 preguntas por demo y acceso limitado al
-                    historial.
-                  </p>
-                ) : effectivePlan === "PRO_PLUS" ? (
-                  <p className="mt-1 text-sm text-mq-muted">
-                    Tienes acceso completo. PRO_PLUS incluye beneficios adicionales
-                    proximamente.
-                  </p>
-                ) : (
-                  <p className="mt-1 text-sm text-mq-muted">
-                    Tienes acceso completo a preguntas e historial.
-                  </p>
-                )}
-              </div>
             </header>
 
         {!hasStarted ? (
-          <div className="mt-10">
-            <button
-              type="button"
-              onClick={startAdaptiveSession}
-              className="inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-base font-semibold text-mq-accent-foreground shadow-[0_12px_36px_-16px_rgb(0_209_255/0.6)] transition duration-200 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:w-auto sm:min-w-56"
-            >
-              Comenzar entrenamiento inteligente
-            </button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="mt-12 flex flex-col items-center"
+          >
+            <div className="relative w-full max-w-2xl rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 backdrop-blur-xl shadow-[0_32px_120px_-20px_rgba(0,209,255,0.15)] sm:p-12 text-center overflow-hidden">
+              {/* Decorative background glow */}
+              <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-mq-accent/10 blur-[80px]" />
+              <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-mq-accent/5 blur-[80px]" />
+
+              <header className="relative z-10 flex flex-col items-center">
+                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-mq-accent/30 bg-mq-accent/10 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-mq-accent sm:text-xs">
+                  <span className="flex h-2 w-2 rounded-full bg-mq-accent animate-ping" />
+                  Evaluación de Nivel Médico
+                </div>
+                
+                <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                  Simulacro <span className="text-mq-accent">Diagnóstico</span>
+                </h1>
+                
+                <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-mq-muted sm:text-lg">
+                  Descubre tus fortalezas y debilidades reales frente al examen de residencia en solo <span className="text-white font-semibold">2 minutos</span>.
+                </p>
+              </header>
+
+              <div className="relative z-10 mt-12 grid gap-4 sm:grid-cols-2 text-left">
+                <div className="group flex items-start gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4 transition-all hover:bg-white/[0.06] hover:border-white/10">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent group-hover:scale-110 transition-transform">
+                    <Zap className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-white">Análisis en tiempo real</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-mq-muted">Retroalimentación inmediata basada en el método activo.</p>
+                  </div>
+                </div>
+                
+                <div className="group flex items-start gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4 transition-all hover:bg-white/[0.06] hover:border-white/10">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 group-hover:scale-110 transition-transform">
+                    <Target className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-white">Preguntas tipo examen</h3>
+                    <p className="mt-1 text-xs leading-relaxed text-mq-muted">Contenido curado para medir tu capacidad de respuesta real.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative z-10 mt-10 flex flex-col items-center gap-4">
+                <button
+                  type="button"
+                  onClick={startAdaptiveSession}
+                  className="group relative inline-flex h-16 w-full items-center justify-center overflow-hidden rounded-2xl bg-mq-accent px-8 text-lg font-bold text-mq-accent-foreground shadow-[0_0_40px_-10px_rgba(0,209,255,0.6)] transition-all hover:scale-[1.02] active:scale-[0.98] sm:w-auto sm:min-w-[300px]"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
+                  Comenzar Evaluación Ahora
+                </button>
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-mq-muted/60">
+                  5 preguntas • Sin registro • 100% gratuito
+                </p>
+              </div>
+            </div>
+
+            {/* Trust badge */}
+            <p className="mt-8 text-center text-xs font-medium text-mq-muted/50">
+              Únete a más de <span className="text-mq-accent/60">500 médicos</span> que han medido su nivel esta semana.
+            </p>
+          </motion.div>
         ) : isResultsStep ? (
           <>
             <FinalResultsScreen
