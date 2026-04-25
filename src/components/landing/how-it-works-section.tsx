@@ -13,31 +13,31 @@ export type HowItWorksSectionProps = {
 
 const defaultSteps: HowItWorksStep[] = [
   {
-    title: "Respondes preguntas tipo MIR",
+    title: "Respondes preguntas tipo tu examen",
     description:
-      "Simulas el examen con el ritmo real: lectura, descarte y decisión bajo presión.",
+      "Simulador 100% personalizado. Entrena con el nivel y estilo exacto de tu examen nacional, sin perder tiempo en temas que no te preguntarán.",
   },
   {
-    title: "Aislamos el patrón del fallo",
+    title: "Aislamos el patrón de tu fallo",
     description:
-      "No solo “mal”: agrupamos temas y tipos de error para que veas el mapa, no el ruido.",
+      "No solo te decimos qué fallaste. Nuestra IA detecta si es falta de memoria, técnica de examen o descarte, para atacar el problema de raíz.",
   },
   {
-    title: "Te decimos qué estudiar después",
+    title: "Te decimos qué estudiar exactamente",
     description:
-      "Prioridad clara: lo que más te resta probabilidad de acierto, primero.",
+      "Olvídate de leer libros de 500 páginas. Te damos la dosis exacta de teoría que necesitas para no volver a fallar esa pregunta.",
   },
   {
-    title: "Repites el ciclo hasta fijar",
+    title: "Repites hasta asegurar tu plaza",
     description:
-      "Microciclos de práctica + refuerzo hasta que el concepto quede estable.",
+      "Convertimos tus debilidades en fortalezas mediante microciclos de práctica intensiva hasta que el concepto sea inolvidable.",
   },
 ];
 
 export function HowItWorksSection({
   id = "como-funciona",
   eyebrow = "El método",
-  title = "Cuatro pasos. Un objetivo: que entrenes como se examina.",
+  title = "Cuatro pasos. Un objetivo: Que asegures tu plaza.",
   steps = defaultSteps,
   className,
 }: HowItWorksSectionProps) {

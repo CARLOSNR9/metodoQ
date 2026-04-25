@@ -23,11 +23,11 @@ export function HeroSection() {
           </div>
 
           <h1 className="mt-8 text-balance text-[2.5rem] font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-            Domina temas <span className="text-mq-accent">médicos</span> complejos en minutos
+            Asegura tu plaza en la <span className="text-mq-accent">residencia médica</span>
           </h1>
           
           <p className="mt-6 max-w-2xl text-balance text-lg font-medium leading-relaxed text-mq-muted sm:text-xl">
-            La solución para residentes ocupados. Método Q utiliza IA para sintetizar miles de páginas en explicaciones claras, <span className="text-white">eliminando el relleno y enfocándote en lo que realmente viene en tu examen</span>.
+            Olvida los videos largos y aburridos. Método Q es el sistema de <span className="text-white">aprendizaje fácil y divertido</span> diseñado para que domines el arte de contestar preguntas y apruebes tu examen de una vez por todas.
           </p>
 
           <div className="mt-10 flex w-full flex-col items-center gap-6 lg:items-start">

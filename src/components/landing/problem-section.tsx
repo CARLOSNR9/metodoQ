@@ -9,9 +9,9 @@ export type ProblemSectionProps = {
 };
 
 const defaultPains = [
-  "📚 Lees miles de páginas… y aún fallas en el examen",
-  "🧠 Estudias teoría… pero no sabes responder preguntas",
-  "⏱️ No tienes tiempo… y no sabes qué priorizar",
+  "😫 Te sientes frustrado porque has intentado pasar a la residencia y no lo has logrado",
+  "📹 Los cursos tradicionales son videos interminables y aburridos que no retienes",
+  "📚 Lees y lees... pero al llegar al examen no sabes cómo contestar las preguntas",
 ];
 
 import { motion } from "framer-motion";

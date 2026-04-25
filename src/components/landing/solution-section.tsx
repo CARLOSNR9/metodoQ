@@ -23,9 +23,9 @@ const defaultBullets = [
 
 export function SolutionSection({
   eyebrow = "La Solución",
-  title = "Así es como empiezas a mejorar de verdad.",
-  lead = "Te entrenamos con preguntas reales y te mostramos exactamente en qué estás fallando.",
-  notTraditional = "No es otro curso. Es entrenamiento real para el examen.",
+  title = "Método Q: El poder del 'Question Method'.",
+  lead = "La evidencia científica actual respalda que resolver preguntas es la forma más efectiva de aprobar. Entre más preguntas resuelvas, más probabilidades tienes de asegurar tu plaza.",
+  notTraditional = "No es otro curso aburrido. Es entrenamiento basado en ciencia para vencer tu examen.",
   bullets = defaultBullets,
   showCta = true,
   cta = { label: "Haz tu diagnóstico gratis", href: "/login" },
@@ -138,7 +138,7 @@ export function SolutionSection({
                     <span className="text-[11px] font-black text-mq-accent uppercase tracking-[0.2em]">Feedback Inteligente</span>
                   </div>
                   <p className="text-sm text-mq-muted leading-relaxed">
-                    <span className="text-white font-bold">¡Correcto!</span> En sospecha de síndrome coronario agudo, el ECG debe realizarse e interpretarse en los primeros <span className="text-mq-accent font-bold">10 minutos</span>. Priorizar otros estudios es el error #1 en el examen Nacional.
+                    <span className="text-white font-bold">¡Correcto!</span> La evidencia muestra que quienes practican con preguntas de este tipo tienen un <span className="text-mq-accent font-bold">40% más</span> de éxito. El Método Q te enseña no solo medicina, sino la técnica exacta para no caer en las trampas del examen.
                   </p>
                 </motion.div>
              </div>
