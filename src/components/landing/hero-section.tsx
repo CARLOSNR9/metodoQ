@@ -31,19 +31,24 @@ export function HeroSection() {
           </p>
 
           <div className="mt-10 flex w-full flex-col items-center gap-6 lg:items-start">
-            <div className="flex w-full flex-col gap-4 sm:flex-row">
-              <Link
-                href="#precios"
-                className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl bg-mq-accent px-6 text-[15px] font-bold text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.4)] transition duration-300 hover:-translate-y-1 hover:brightness-110 active:translate-y-0 w-full sm:w-auto whitespace-nowrap sm:px-8 sm:text-lg"
-              >
-                🚀 Comienza a estudiar gratis
-              </Link>
-              <Link
-                href="#como-funciona"
-                className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl border border-mq-border-strong bg-white/[0.04] px-6 text-[15px] font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white/[0.08] active:scale-[0.98] w-full sm:w-auto whitespace-nowrap sm:px-8 sm:text-lg"
-              >
-                👀 Ver el método en acción
-              </Link>
+            <div className="flex w-full flex-col gap-4">
+              <div className="flex w-full flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/demo"
+                  className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl bg-mq-accent px-6 text-[15px] font-bold text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.4)] transition duration-300 hover:-translate-y-1 hover:brightness-110 active:translate-y-0 w-full sm:w-auto whitespace-nowrap sm:px-8 sm:text-lg"
+                >
+                  🚀 Haz tu diagnóstico gratis
+                </Link>
+                <Link
+                  href="#como-funciona"
+                  className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl border border-mq-border-strong bg-white/[0.04] px-6 text-[15px] font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white/[0.08] active:scale-[0.98] w-full sm:w-auto whitespace-nowrap sm:px-8 sm:text-lg"
+                >
+                  👀 Ver el método en acción
+                </Link>
+              </div>
+              <p className="text-center lg:text-left text-xs font-semibold uppercase tracking-widest text-mq-accent/80 animate-pulse">
+                ⚡ 5 preguntas. 2 minutos. Sin registro.
+              </p>
             </div>
             
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-2">

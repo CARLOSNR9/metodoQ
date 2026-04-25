@@ -47,25 +47,30 @@ export function FinalResultsScreen({
         </div>
 
         {scorePercentage < 80 && (
-          <p className="mt-4 text-sm text-mq-accent">
-            Estás a {80 - scorePercentage} puntos de una plaza
-          </p>
+          <div className="mt-4 p-4 rounded-xl bg-mq-accent/5 border border-mq-accent/20">
+            <p className="text-sm font-bold text-mq-accent">
+              🚀 Con Método Q puedes subir esto en semanas
+            </p>
+            <p className="mt-1 text-xs text-mq-muted">
+              Estás a {80 - scorePercentage} puntos de una plaza de especialidad.
+            </p>
+          </div>
         )}
 
-        <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+          <Link
+            href="/#precios"
+            className="touch-manipulation inline-flex min-h-14 items-center justify-center rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.4)] transition duration-200 hover:-translate-y-1 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:text-base"
+          >
+            Ver cómo mejorar mi puntaje
+          </Link>
           <button
             type="button"
             onClick={onRepeatDemo}
-            className="touch-manipulation inline-flex min-h-14 items-center justify-center rounded-xl bg-mq-accent px-7 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:text-base"
-          >
-            Repetir demo
-          </button>
-          <Link
-            href="/register"
             className="touch-manipulation inline-flex min-h-14 items-center justify-center rounded-xl border border-mq-border-strong bg-white/[0.03] px-7 text-sm font-semibold text-foreground transition duration-150 hover:border-white/30 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:text-base"
           >
-            Mejorar mi puntaje
-          </Link>
+            Repetir diagnóstico
+          </button>
         </div>
       </article>
     </div>

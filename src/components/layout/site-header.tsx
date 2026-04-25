@@ -47,13 +47,13 @@ export function SiteHeader() {
             Acceder
           </button>
           <Link
-            href="#precios"
+            href="/demo"
             className="group relative inline-flex min-h-11 items-center justify-center rounded-full bg-mq-accent px-6 text-[13px] font-bold text-mq-accent-foreground transition duration-300 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:text-sm"
           >
             {/* Pulsing Glow Background */}
             <div className="absolute inset-0 animate-[pulse-glow_3s_infinite] rounded-full bg-mq-accent/40 blur-md transition-all group-hover:bg-mq-accent/60" />
             
-            <span className="relative">Empezar gratis</span>
+            <span className="relative">Haz tu diagnóstico gratis</span>
           </Link>
         </div>
       </div>

@@ -13,7 +13,7 @@ export type CtaBandProps = {
 export function CtaBand({
   title = "Empieza a aprender diferente desde hoy",
   subtitle = "No necesitas más horas de estudio. Necesitas un mejor método.",
-  cta = { label: "👉 Empieza gratis ahora", href: "#precios" },
+  cta = { label: "👉 Haz tu diagnóstico gratis", href: "/demo" },
   className,
 }: CtaBandProps) {
   return (
