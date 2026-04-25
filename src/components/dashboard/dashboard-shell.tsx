@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { logoutUser } from "@/lib/auth";

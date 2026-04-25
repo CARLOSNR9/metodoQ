@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { trackReferralLinkShared } from "@/lib/analytics/events";
-import { Sparkles, Users } from "lucide-react";
+import { Sparkles, Users, Gift, Check, Copy } from "lucide-react";
 
 interface ReferralCardProps {
   referralCode: string | null;

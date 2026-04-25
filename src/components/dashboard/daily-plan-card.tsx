@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
+import { Calendar, CheckCircle2, Circle, ArrowRight } from "lucide-react";
 
 type DailyPlanCardProps = {
   userId: string;
@@ -98,8 +99,6 @@ function buildAutomaticStudyPlan({
     includeMockExam,
   };
 }
-
-import { Calendar, CheckCircle2, Circle, ArrowRight } from "lucide-react";
 
 export function DailyPlanCard({ userId }: DailyPlanCardProps) {
   const [isLoading, setIsLoading] = useState(true);
