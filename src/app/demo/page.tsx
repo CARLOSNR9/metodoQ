@@ -937,7 +937,7 @@ export default function DemoPage() {
                 </h1>
                 
                 <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-mq-muted sm:text-lg">
-                  Descubre tus fortalezas y debilidades reales frente al examen de residencia en solo <span className="text-white font-semibold">4 minutos</span>.
+                  Mide tu capacidad real frente al examen de residencia con <span className="text-white font-semibold">10 casos clínicos de alta complejidad</span> en solo <span className="text-white font-semibold">5 minutos</span>.
                 </p>
               </header>
 

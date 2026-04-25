@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sparkles, Info } from "lucide-react";
 
 export type QuestionOption = {
   id: string;
@@ -64,15 +66,18 @@ export function QuestionCard({
       </h2>
 
       <div className="mt-6 grid gap-3">
-        {options.map((option) => {
+        {options.map((option, index) => {
           const isSelected = selectedOptionId === option.id;
           const isCorrectOption = option.id === correctOptionId;
           const showCorrectStyle = hasAnswered && isCorrectOption;
           const showIncorrectStyle = hasAnswered && isSelected && !isCorrect;
 
           return (
-            <button
+            <motion.button
               key={option.id}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
               type="button"
               onClick={() => {
                 if (hasAnswered) {
@@ -82,73 +87,112 @@ export function QuestionCard({
                 onAnswerSelect?.(option.id, option.id === correctOptionId);
               }}
               disabled={hasAnswered}
-              className={`touch-manipulation flex min-h-14 w-full items-center gap-3 rounded-xl border px-4 py-3 text-left transition duration-150 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:min-h-16 sm:px-5 ${
+              className={`touch-manipulation relative flex min-h-14 w-full items-center gap-3 overflow-hidden rounded-xl border px-4 py-3 text-left transition-all duration-300 sm:min-h-16 sm:px-5 ${
                 showCorrectStyle
-                  ? "scale-[1.01] border-emerald-400/80 bg-emerald-500/15 text-white shadow-[0_0_0_1px_rgb(16_185_129/0.3)_inset]"
+                  ? "border-emerald-500/50 bg-emerald-500/10 text-white shadow-[0_0_20px_-5px_rgba(16,185_129,0.3)]"
                   : showIncorrectStyle
-                    ? "scale-[1.01] border-rose-400/80 bg-rose-500/15 text-white shadow-[0_0_0_1px_rgb(244_63_94/0.28)_inset]"
+                    ? "border-rose-500/50 bg-rose-500/10 text-white shadow-[0_0_20px_-5px_rgba(244,63,94,0.3)]"
                     : isSelected
-                      ? "scale-[1.01] border-mq-accent/70 bg-mq-accent/15 text-white shadow-[0_0_0_1px_rgb(0_209_255/0.24)_inset]"
-                      : "border-mq-border bg-white/[0.03] text-foreground hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.06] disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:border-mq-border disabled:hover:bg-white/[0.03]"
+                      ? "border-mq-accent/50 bg-mq-accent/10 text-white shadow-[0_0_20px_-5px_rgba(0,209,255,0.3)]"
+                      : "border-white/10 bg-white/[0.02] text-foreground backdrop-blur-sm hover:border-white/20 hover:bg-white/[0.05]"
               }`}
               aria-pressed={isSelected}
             >
+              {showCorrectStyle && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-transparent"
+                />
+              )}
+              
               <span
-                className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-sm font-semibold ${
+                className={`relative z-10 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border text-sm font-bold transition-colors duration-300 ${
                   showCorrectStyle
-                    ? "border-emerald-300 bg-emerald-300 text-[#052e26]"
+                    ? "border-emerald-400 bg-emerald-400 text-[#052e26]"
                     : showIncorrectStyle
-                      ? "border-rose-300 bg-rose-300 text-[#3f0d1a]"
+                      ? "border-rose-400 bg-rose-400 text-[#3f0d1a]"
                       : isSelected
                         ? "border-mq-accent bg-mq-accent text-mq-accent-foreground"
-                        : "border-mq-border-strong bg-white/[0.04] text-mq-muted"
+                        : "border-white/20 bg-white/5 text-mq-muted"
                 }`}
               >
                 {option.label}
               </span>
-              <span className="text-sm leading-snug sm:text-base">{option.text}</span>
-            </button>
+              <span className="relative z-10 text-sm leading-snug sm:text-base">{option.text}</span>
+            </motion.button>
           );
         })}
       </div>
 
 
-      {hasAnswered ? (
-        <section className="mq-fade-up mt-6 rounded-xl border border-mq-border-strong bg-background/60 p-4 sm:p-5">
-          <p
-            className={`inline-flex items-center gap-2 text-sm font-semibold ${
-              isCorrect ? "text-emerald-300" : "text-rose-300"
-            }`}
+      <AnimatePresence>
+        {hasAnswered && (
+          <motion.section
+            initial={{ opacity: 0, height: 0, y: 20 }}
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            transition={{ type: "spring", damping: 20, stiffness: 100 }}
+            className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md sm:p-6"
           >
-            <span aria-hidden>{isCorrect ? "✅" : "❌"}</span>
-            {isCorrect ? "Correcto" : "Incorrecto"}
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-foreground/90 sm:text-base">
-            {explanation}
-          </p>
-          {dynamicFeedback ? (
-            <div className="mt-4 rounded-lg border border-indigo-300/35 bg-indigo-500/10 p-3">
-              <p className="text-sm font-semibold text-indigo-100">{dynamicFeedback}</p>
+            <div className="flex items-center justify-between">
+              <p
+                className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider ${
+                  isCorrect ? "text-emerald-400" : "text-rose-400"
+                }`}
+              >
+                {isCorrect ? (
+                  <>
+                    <Sparkles className="h-4 w-4" />
+                    ¡Excelente! Respuesta Correcta
+                  </>
+                ) : (
+                  <>
+                    <Info className="h-4 w-4" />
+                    Sigue aprendiendo
+                  </>
+                )}
+              </p>
             </div>
-          ) : null}
-
-          <div className="mt-5 rounded-lg border border-mq-border bg-white/[0.02] p-4">
-            <p className="text-sm font-semibold text-mq-accent">
-              🧠 Lo que debes saber
+            
+            <p className="mt-4 text-base leading-relaxed text-slate-200">
+              {explanation}
             </p>
-            <ul className="mt-3 space-y-2 text-sm leading-relaxed text-mq-muted">
-              {keyPoints.map((point) => (
-                <li key={point} className="flex gap-2">
-                  <span className="mt-1 text-mq-accent" aria-hidden>
-                    •
-                  </span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      ) : null}
+            
+            {dynamicFeedback && (
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="mt-5 rounded-xl border border-mq-accent/20 bg-mq-accent/5 p-4"
+              >
+                <p className="text-sm font-medium text-mq-accent">{dynamicFeedback}</p>
+              </motion.div>
+            )}
+
+            <div className="mt-6 rounded-xl border border-white/10 bg-white/[0.02] p-5">
+              <h4 className="flex items-center gap-2 text-sm font-bold text-white/90">
+                <span className="flex h-5 w-5 items-center justify-center rounded-lg bg-mq-accent/20 text-mq-accent">
+                  🧠
+                </span>
+                Lo que debes saber para el examen
+              </h4>
+              <ul className="mt-4 space-y-3">
+                {keyPoints.map((point, i) => (
+                  <motion.li
+                    key={point}
+                    initial={{ opacity: 0, x: -5 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1 + i * 0.05 }}
+                    className="flex gap-3 text-sm leading-relaxed text-mq-muted"
+                  >
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mq-accent/60" />
+                    {point}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.section>
+        )}
+      </AnimatePresence>
     </article>
   );
 }
