@@ -20,9 +20,35 @@
   --color-mq-border: rgb(255 255 255 / 0.08);
   --color-mq-border-strong: rgb(255 255 255 / 0.12);
   --color-mq-muted: rgb(232 238 247 / 0.58);
+  
+  /* New Premium Tokens */
+  --color-mq-glass: rgba(255, 255, 255, 0.03);
+  --color-mq-glass-border: rgba(255, 255, 255, 0.1);
+  --color-mq-premium-gold: #facc15;
+  --color-mq-premium-purple: #a855f7;
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --ease-mq-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mq-glass {
+  background: var(--color-mq-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-mq-glass-border);
+}
+
+.mq-glass-raised {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.mq-premium-glow {
+  box-shadow: 0 0 20px rgba(0, 209, 255, 0.15);
 }
 
 html {

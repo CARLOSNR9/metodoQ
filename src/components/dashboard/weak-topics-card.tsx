@@ -8,6 +8,8 @@ type WeakTopicsCardProps = {
   userId: string;
 };
 
+import { AlertTriangle, Microscope } from "lucide-react";
+
 export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [topics, setTopics] = useState<WeakTopicItem[]>([]);
@@ -40,31 +42,48 @@ export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
   }, [userId]);
 
   return (
-    <section className="rounded-2xl border border-rose-400/35 bg-rose-500/10 p-5 sm:p-6">
-      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-rose-200">
-        Tus puntos debiles:
-      </p>
+    <section className="mq-glass overflow-hidden rounded-3xl p-6 transition-all hover:border-rose-500/50">
+      <div className="flex items-center gap-3">
+        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-500/10 text-rose-400">
+          <AlertTriangle size={20} />
+        </div>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Áreas de Mejora</p>
+      </div>
+
       {isLoading ? (
-        <p className="mt-2 text-sm text-rose-100/90">Analizando respuestas...</p>
+        <div className="mt-8 flex items-center gap-3">
+          <div className="h-4 w-4 animate-spin rounded-full border-2 border-rose-400 border-t-transparent" />
+          <p className="text-sm text-rose-200">Sincronizando análisis...</p>
+        </div>
       ) : topics.length === 0 ? (
-        <p className="mt-2 text-sm text-rose-100/90">
-          Aun no hay datos suficientes. Responde mas preguntas para detectar temas a reforzar.
-        </p>
+        <div className="mt-8 flex flex-col items-center gap-4 text-center">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-rose-500/5">
+            <Microscope size={32} className="text-rose-500/20" />
+          </div>
+          <p className="max-w-xs text-sm text-mq-muted">
+            Aún no tenemos datos de tus fallos. Sigue entrenando para detectar tus debilidades.
+          </p>
+        </div>
       ) : (
-        <ul className="mt-4 space-y-3">
+        <ul className="mt-6 space-y-3">
           {topics.map((item) => (
             <li
               key={item.topic}
-              className="flex flex-col gap-3 rounded-xl border border-rose-300/25 bg-black/10 p-3 sm:flex-row sm:items-center sm:justify-between"
+              className="group flex flex-col gap-4 rounded-2xl bg-white/[0.03] p-4 transition-all hover:bg-white/[0.06] sm:flex-row sm:items-center sm:justify-between"
             >
-              <p className="text-sm font-semibold text-white">
-                {item.topic} <span className="text-rose-200">({item.wrongCount})</span>
-              </p>
+              <div className="space-y-1">
+                <p className="text-sm font-bold text-white">
+                  {item.topic}
+                </p>
+                <p className="text-[10px] text-rose-400 font-medium">
+                  {item.wrongCount} errores detectados
+                </p>
+              </div>
               <Link
                 href={`/demo?topic=${encodeURIComponent(item.topic)}`}
-                className="inline-flex min-h-10 items-center justify-center rounded-lg bg-mq-accent px-4 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110"
+                className="inline-flex h-9 items-center justify-center rounded-lg bg-white/10 px-4 text-xs font-bold text-white transition-all hover:bg-mq-accent hover:text-mq-accent-foreground"
               >
-                Practicar este tema
+                Reforzar
               </Link>
             </li>
           ))}

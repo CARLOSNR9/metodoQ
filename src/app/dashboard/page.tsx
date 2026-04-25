@@ -22,6 +22,7 @@ import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserPlan } from "@/hooks/use-user-plan";
 import { useReferralStats } from "@/hooks/use-referral-stats";
 import Link from "next/link";
+import { Sparkles, ArrowRight, Zap } from "lucide-react";
 
 export default function DashboardPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
@@ -33,13 +34,13 @@ export default function DashboardPage() {
 
   if (isCheckingAuth || !user) {
     return (
-      <section className="space-y-4">
-        <div className="h-24 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
-        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <section className="space-y-6">
+        <div className="h-32 animate-pulse rounded-3xl border border-mq-border-strong bg-white/[0.04]" />
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {[1, 2, 3].map((item) => (
             <div
               key={item}
-              className="h-28 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]"
+              className="h-40 animate-pulse rounded-3xl border border-mq-border-strong bg-white/[0.04]"
             />
           ))}
         </div>
@@ -48,71 +49,89 @@ export default function DashboardPage() {
   }
 
   return (
-    <section className="space-y-6">
+    <section className="space-y-10 pb-12">
       <OnboardingModal userId={user.uid} />
       <ActivityReminder />
       <MotivationalReminder />
       <SubscriptionExpirationAlert />
-      <header>
-        <div className="mb-4 rounded-2xl border border-mq-border-strong bg-mq-surface p-4 sm:p-5">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-wrap gap-2">
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-mq-border bg-white/[0.03] px-3 py-1.5">
-                <span className="h-2 w-2 rounded-full bg-mq-accent" aria-hidden />
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-accent">
-                  Plan actual: {isLoadingPlan ? "Cargando..." : planLabel}
+
+      <header className="relative overflow-hidden rounded-[2.5rem] border border-mq-border-strong bg-gradient-to-br from-white/[0.05] to-transparent p-8 sm:p-10">
+        <div className="relative z-10">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-3">
+                <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/20 bg-mq-accent/10 px-4 py-1.5 backdrop-blur-md">
+                  <div className="h-2 w-2 animate-pulse rounded-full bg-mq-accent" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-mq-accent">
+                    {isLoadingPlan ? "Validando..." : `Plan ${planLabel}`}
+                  </span>
+                </div>
+                
+                {!isLoadingReferrals && referralCount > 0 && (
+                  <div className="inline-flex items-center gap-2 rounded-full border border-purple-500/20 bg-purple-500/10 px-4 py-1.5 backdrop-blur-md">
+                    <Sparkles size={12} className="text-purple-400" />
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-purple-300">
+                      {referralCount} Referidos
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                  Bienvenido, <span className="text-mq-accent">Doc.</span>
+                </h1>
+                <p className="mt-3 max-w-xl text-sm leading-relaxed text-mq-muted sm:text-lg">
+                  Tu camino hacia la residencia médica está en marcha. Tienes metas pendientes para hoy.
                 </p>
               </div>
-              
-              {!isLoadingReferrals && (
-                <div className="inline-flex w-fit items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1.5">
-                  <span className="h-2 w-2 rounded-full bg-indigo-400" aria-hidden />
-                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-indigo-100">
-                    Has invitado a {referralCount} personas
-                  </p>
-                </div>
-              )}
             </div>
-            {!isLoadingPlan && effectivePlan === "FREE" ? (
+
+            <div className="flex flex-col gap-4 sm:flex-row">
+              {effectivePlan === "FREE" && (
+                <Link
+                  href="/dashboard/perfil"
+                  className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl bg-white/10 px-8 text-sm font-bold text-white transition-all hover:bg-white/20"
+                >
+                  Mejorar Plan
+                </Link>
+              )}
               <Link
-                href="/dashboard/perfil"
-                className="inline-flex min-h-11 items-center justify-center rounded-xl bg-mq-accent px-4 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110"
+                href="/demo"
+                className="mq-premium-glow group inline-flex h-14 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-sm font-bold text-mq-accent-foreground transition-all hover:-translate-y-1 hover:brightness-110 active:scale-95"
               >
-                Mejorar a Pro
+                <Zap size={18} fill="currentColor" />
+                <span>Entrenar ahora</span>
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
-            ) : null}
-            {!isLoadingPlan && expiresAt && effectivePlan === "PRO" ? (
-              <div className="rounded-lg border border-yellow-500/30 bg-yellow-500/10 px-3 py-1.5 text-xs font-semibold text-yellow-200">
-                🚀 Recompensa activa: PRO hasta el {new Date(expiresAt).toLocaleDateString()}
+            </div>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="flex items-center gap-4 rounded-2xl bg-white/[0.03] p-4 backdrop-blur-sm transition-colors hover:bg-white/[0.06]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mq-accent/20 text-mq-accent">
+                <Zap size={20} />
               </div>
-            ) : null}
-          </div>
-          <div className="mt-3 grid gap-2 sm:grid-cols-2">
-            <p className="rounded-lg border border-indigo-300/30 bg-indigo-500/10 px-3 py-2 text-xs font-semibold text-indigo-100 sm:text-sm">
-              Te estamos ayudando a mejorar en tiempo real
-            </p>
-            <p className="rounded-lg border border-cyan-300/30 bg-cyan-500/10 px-3 py-2 text-xs font-semibold text-cyan-100 sm:text-sm">
-              Tu progreso es personalizado
-            </p>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Estado IA</p>
+                <p className="text-sm font-semibold text-white">Analizando rendimiento...</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 rounded-2xl bg-white/[0.03] p-4 backdrop-blur-sm transition-colors hover:bg-white/[0.06]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/20 text-purple-400">
+                <Sparkles size={20} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Sugerencia</p>
+                <p className="text-sm font-semibold text-white">Repasar Cardiología</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-        <h1 className="text-3xl font-semibold tracking-tight text-white">
-          Dashboard
-        </h1>
-        <p className="mt-2 max-w-2xl text-sm text-mq-muted sm:text-base">
-          Bienvenido a tu panel principal. Desde aqui puedes entrenar, revisar tu
-          historial y gestionar tu perfil.
-        </p>
-          </div>
-          <Link
-            href="/demo"
-            className="inline-flex min-h-13 items-center justify-center rounded-xl bg-mq-accent px-6 text-base font-semibold text-mq-accent-foreground shadow-[0_14px_34px_-16px_rgb(0_209_255/0.9)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110"
-          >
-            Entrenar ahora
-          </Link>
-        </div>
+        
+        {/* Background Decorative elements */}
+        <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mq-accent/10 blur-[100px]" />
+        <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-purple-500/10 blur-[100px]" />
       </header>
 
       <SummaryCards userId={user.uid} />
@@ -135,43 +154,8 @@ export default function DashboardPage() {
       <DailyPlanCard userId={user.uid} />
       <ProgressChart userId={user.uid} />
 
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        <article className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-mq-border-strong hover:bg-mq-surface-raised">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
-            Demo / Entrenar
-          </p>
-          <h2 className="mt-2 text-lg font-semibold text-white">
-            Practicar preguntas
-          </h2>
-          <p className="mt-2 text-sm text-mq-muted">
-            Inicia una nueva sesion con foco en tus temas de mayor impacto.
-          </p>
-        </article>
-
-        <article className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-mq-border-strong hover:bg-mq-surface-raised">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
-            Historial
-          </p>
-          <h2 className="mt-2 text-lg font-semibold text-white">
-            Resultados recientes
-          </h2>
-          <p className="mt-2 text-sm text-mq-muted">
-            Visualiza tus intentos anteriores y detecta areas de mejora en segundos.
-          </p>
-        </article>
-
-        <article className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-mq-border-strong hover:bg-mq-surface-raised sm:col-span-2 xl:col-span-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
-            Perfil
-          </p>
-          <h2 className="mt-2 text-lg font-semibold text-white">
-            Configuracion de cuenta
-          </h2>
-          <p className="mt-2 text-sm text-mq-muted">
-            Actualiza tus datos personales y preferencias de uso.
-          </p>
-        </article>
-      </div>
+      <DailyPlanCard userId={user.uid} />
+      <ProgressChart userId={user.uid} />
     </section>
   );
 }

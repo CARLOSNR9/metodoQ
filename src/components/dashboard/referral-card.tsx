@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Check, Copy, Gift } from "lucide-react";
 import { trackReferralLinkShared } from "@/lib/analytics/events";
+import { Sparkles, Users } from "lucide-react";
 
 interface ReferralCardProps {
   referralCode: string | null;
@@ -15,7 +14,7 @@ export function ReferralCard({ referralCode, referralCount, loading }: ReferralC
 
   if (loading || !referralCode) {
     return (
-      <div className="h-48 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
+      <div className="h-56 animate-pulse rounded-[2rem] border border-mq-border-strong bg-white/[0.04]" />
     );
   }
 
@@ -37,61 +36,71 @@ export function ReferralCard({ referralCode, referralCount, loading }: ReferralC
   const currentCount = Math.min(referralCount, 3);
   const remaining = 3 - currentCount;
   
-  let message = `Invita ${remaining} más y desbloqueas acceso PRO`;
-  if (remaining === 0) {
-    message = "¡Felicidades! Has desbloqueado tu acceso PRO.";
-  }
-
   const progressPercentage = (currentCount / 3) * 100;
 
   return (
-    <article className="relative overflow-hidden rounded-2xl border border-indigo-500/30 bg-gradient-to-br from-indigo-950/40 to-[#0A1F44] p-5 shadow-lg">
-      <div className="absolute -right-6 -top-6 text-indigo-500/10">
-        <Gift className="h-32 w-32" />
+    <article className="relative overflow-hidden rounded-[2rem] border border-mq-premium-purple/30 bg-gradient-to-br from-mq-premium-purple/20 via-transparent to-transparent p-8 sm:p-10 shadow-2xl">
+      <div className="absolute -right-10 -top-10 text-mq-premium-purple/10">
+        <Gift className="h-48 w-48 rotate-12" />
       </div>
       
-      <div className="relative z-10">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-indigo-300">
-          Recompensa
-        </p>
-        <h2 className="mt-2 text-xl font-semibold text-white">
-          Invita y gana acceso
-        </h2>
-        <p className="mt-2 text-sm text-[#BFD0EC]">
-          {message}
-        </p>
-
-        <div className="mt-5">
-          <div className="flex items-center justify-between text-sm">
-            <span className="font-medium text-white">Progreso</span>
-            <span className="font-semibold text-indigo-300">{currentCount}/3 referidos</span>
+      <div className="relative z-10 grid gap-8 lg:grid-cols-2 lg:items-center">
+        <div className="space-y-4">
+          <div className="inline-flex items-center gap-2 rounded-full bg-mq-premium-purple/20 px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-mq-premium-purple">
+            <Sparkles size={12} />
+            Misión: Desbloquear PRO
           </div>
-          <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-white/10">
+          <h2 className="text-3xl font-bold text-white">
+            Invita a 3 colegas y obtén acceso <span className="text-mq-premium-purple">PRO Gratis</span>
+          </h2>
+          <p className="max-w-md text-sm leading-relaxed text-mq-muted sm:text-base">
+            Comparte tu link personal. Cuando 3 amigos se registren y hagan su primer diagnóstico, tu cuenta se activará automáticamente como PRO.
+          </p>
+        </div>
+
+        <div className="rounded-3xl bg-white/[0.03] p-6 backdrop-blur-md">
+          <div className="mb-6 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-mq-premium-purple/20 text-mq-premium-purple">
+                <Users size={20} />
+              </div>
+              <span className="text-sm font-bold text-white">{currentCount} de 3 referidos</span>
+            </div>
+            {remaining > 0 ? (
+              <span className="text-xs font-medium text-mq-muted">Faltan {remaining} colegas</span>
+            ) : (
+              <span className="text-xs font-bold text-mq-premium-purple">¡Misión cumplida!</span>
+            )}
+          </div>
+          
+          <div className="relative mb-8 h-3 w-full overflow-hidden rounded-full bg-white/10">
             <div 
-              className="h-full bg-indigo-400 transition-all duration-500 ease-in-out" 
+              className="h-full bg-mq-premium-purple transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(168,85,247,0.5)]" 
               style={{ width: `${progressPercentage}%` }}
             />
           </div>
-        </div>
 
-        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <div className="flex-1 truncate rounded-xl border border-mq-border-strong bg-white/5 px-4 py-3 text-sm font-mono text-indigo-100">
-            {referralLink}
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <div className="flex-1 truncate rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-xs font-mono text-mq-muted">
+              {referralLink}
+            </div>
+            <button
+              onClick={handleCopy}
+              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-white px-6 text-sm font-bold text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 sm:w-auto"
+            >
+              {copied ? (
+                <>
+                  <Check size={16} className="text-emerald-500" /> 
+                  <span className="text-emerald-600">Copiado</span>
+                </>
+              ) : (
+                <>
+                  <Copy size={16} /> 
+                  <span>Copiar link</span>
+                </>
+              )}
+            </button>
           </div>
-          <button
-            onClick={handleCopy}
-            className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-xl bg-indigo-500 px-5 text-sm font-semibold text-white transition-all hover:bg-indigo-600 active:scale-95 sm:w-auto"
-          >
-            {copied ? (
-              <>
-                <Check className="h-4 w-4" /> Copiado
-              </>
-            ) : (
-              <>
-                <Copy className="h-4 w-4" /> Copiar link
-              </>
-            )}
-          </button>
         </div>
       </div>
     </article>

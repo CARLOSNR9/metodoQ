@@ -99,6 +99,8 @@ function buildAutomaticStudyPlan({
   };
 }
 
+import { Calendar, CheckCircle2, Circle, ArrowRight } from "lucide-react";
+
 export function DailyPlanCard({ userId }: DailyPlanCardProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasTrainingToday, setHasTrainingToday] = useState(false);
@@ -156,47 +158,72 @@ export function DailyPlanCard({ userId }: DailyPlanCardProps) {
     };
   }, [userId]);
 
-  const statusMessage = useMemo(() => {
-    if (isLoading) {
-      return "Cargando tu progreso de hoy...";
-    }
-
-    return hasTrainingToday
-      ? "Vas bien, continua"
-      : "Empieza tu entrenamiento diario";
-  }, [hasTrainingToday, isLoading]);
-
   return (
-    <section className="rounded-2xl border border-mq-accent/45 bg-mq-surface-raised p-5 shadow-[0_20px_48px_-28px_rgb(0_209_255/0.7)] sm:p-6">
-      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
-        Tu plan de hoy
-      </p>
-      <h2 className="mt-2 text-xl font-semibold text-white sm:text-2xl">Hoy debes hacer:</h2>
-      <ul className="mt-3 space-y-2">
-        {isLoading ? (
-          <li className="text-sm text-foreground sm:text-base">- calculando plan personalizado...</li>
-        ) : (
-          <>
-            {plan.topicTasks.map((task) => (
-              <li key={task.topic} className="text-sm text-foreground sm:text-base">
-                - {task.questions} preguntas de {task.topic}
-              </li>
-            ))}
-            {plan.includeMockExam ? (
-              <li className="text-sm text-foreground sm:text-base">- 1 simulacro corto</li>
-            ) : null}
-            <li className="text-sm text-foreground sm:text-base">- repasar errores</li>
-          </>
-        )}
-      </ul>
-      <p className="mt-4 text-sm font-medium text-mq-muted sm:text-base">{statusMessage}</p>
+    <section className="mq-glass relative overflow-hidden rounded-[2rem] p-8 sm:p-10">
+      <div className="flex items-center gap-3">
+        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent">
+          <Calendar size={20} />
+        </div>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Plan de Entrenamiento</p>
+      </div>
 
-      <Link
-        href="/demo"
-        className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110 sm:w-auto"
-      >
-        Entrenar ahora
-      </Link>
+      <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:items-end">
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-white">Objetivos para hoy:</h2>
+          
+          <ul className="space-y-4">
+            {isLoading ? (
+              <li className="flex items-center gap-3 text-mq-muted animate-pulse">
+                <Circle size={18} className="text-white/20" />
+                <span>Calculando tu ruta óptima...</span>
+              </li>
+            ) : (
+              <>
+                {plan.topicTasks.map((task) => (
+                  <li key={task.topic} className="flex items-center gap-3 text-white">
+                    {hasTrainingToday ? (
+                      <CheckCircle2 size={18} className="text-emerald-500" />
+                    ) : (
+                      <Circle size={18} className="text-mq-accent" />
+                    )}
+                    <span className="font-medium">{task.questions} preguntas de <span className="text-mq-accent capitalize">{task.topic}</span></span>
+                  </li>
+                ))}
+                {plan.includeMockExam && (
+                  <li className="flex items-center gap-3 text-white">
+                    {hasTrainingToday ? (
+                      <CheckCircle2 size={18} className="text-emerald-500" />
+                    ) : (
+                      <Circle size={18} className="text-mq-accent" />
+                    )}
+                    <span className="font-medium">1 simulacro corto de refuerzo</span>
+                  </li>
+                )}
+                <li className="flex items-center gap-3 text-mq-muted">
+                  <Circle size={18} className="text-white/10" />
+                  <span className="text-sm">Revisión de errores y explicaciones</span>
+                </li>
+              </>
+            )}
+          </ul>
+        </div>
+
+        <div className="space-y-4">
+          <div className={`rounded-2xl p-4 text-sm font-medium ${hasTrainingToday ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20" : "bg-mq-accent/10 text-mq-accent border border-mq-accent/20"}`}>
+            {hasTrainingToday ? "¡Excelente! Has cumplido con los objetivos de hoy." : "Aún no has empezado tu entrenamiento diario."}
+          </div>
+          
+          <Link
+            href="/demo"
+            className="group flex h-14 w-full items-center justify-center gap-3 rounded-2xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground transition-all hover:scale-[1.02] active:scale-95"
+          >
+            <span>{hasTrainingToday ? "Seguir entrenando" : "Comenzar ahora"}</span>
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </div>
+      
+      <div className="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-mq-accent/5 blur-3xl" />
     </section>
   );
 }

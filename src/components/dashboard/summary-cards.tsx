@@ -3,16 +3,11 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { getUserDemoResults, type DemoResultItem } from "@/lib/results";
+import { Trophy, Target, History, Sparkles, TrendingUp } from "lucide-react";
 
 type SummaryCardsProps = {
   userId: string;
 };
-
-function getPerformanceColor(score: number) {
-  return score >= 80
-    ? "border-emerald-400/35 bg-emerald-500/10 text-emerald-200"
-    : "border-sky-400/35 bg-sky-500/10 text-sky-200";
-}
 
 export function SummaryCards({ userId }: SummaryCardsProps) {
   const [results, setResults] = useState<DemoResultItem[]>([]);
@@ -32,7 +27,7 @@ export function SummaryCards({ userId }: SummaryCardsProps) {
         setResults(items);
       } catch {
         if (!isMounted) return;
-        setErrorMessage("No se pudo cargar el resumen del usuario.");
+        setErrorMessage("Sincronizando datos...");
       } finally {
         if (!isMounted) return;
         setIsLoading(false);
@@ -64,71 +59,82 @@ export function SummaryCards({ userId }: SummaryCardsProps) {
 
   if (isLoading) {
     return (
-      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <section className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {[1, 2, 3].map((item) => (
           <div
             key={item}
-            className="h-32 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]"
+            className="h-32 animate-pulse rounded-3xl border border-mq-border-strong bg-white/[0.04]"
           />
         ))}
       </section>
     );
   }
 
-  if (errorMessage) {
+  if (!metrics.hasData) {
     return (
-      <p className="rounded-lg border border-rose-400/30 bg-rose-500/10 px-3 py-2 text-sm text-rose-200">
-        {errorMessage}
-      </p>
+      <article className="mq-glass overflow-hidden rounded-[2rem] p-8 sm:p-10">
+        <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
+          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/10 text-mq-accent">
+            <TrendingUp size={32} />
+          </div>
+          <div className="flex-1 space-y-2">
+            <h3 className="text-xl font-bold text-white">Tu análisis de rendimiento está esperando</h3>
+            <p className="max-w-xl text-sm text-mq-muted">
+              Nuestra IA necesita al menos un entrenamiento para empezar a calcular tu probabilidad de éxito y detectar tus puntos débiles.
+            </p>
+          </div>
+          <Link
+            href="/demo"
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-bold text-mq-accent-foreground transition-all hover:scale-105 active:scale-95"
+          >
+            Realizar primer diagnóstico
+          </Link>
+        </div>
+      </article>
     );
   }
 
   return (
-    <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-      <article className="rounded-2xl border border-sky-400/35 bg-sky-500/10 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-200">
-          Tu mejor puntaje
-        </p>
-        <p className="mt-3 text-3xl font-semibold text-white">
-          {metrics.hasData ? `${metrics.bestScore}%` : "--"}
-        </p>
-      </article>
-
-      <article
-        className={`rounded-2xl border p-5 transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 ${getPerformanceColor(metrics.averageScore)}`}
-      >
-        <p className="text-xs font-semibold uppercase tracking-[0.14em]">
-          Promedio de rendimiento
-        </p>
-        <p className="mt-3 text-3xl font-semibold text-white">
-          {metrics.hasData ? `${metrics.averageScore}%` : "--"}
-        </p>
-      </article>
-
-      <article className="rounded-2xl border border-sky-400/35 bg-sky-500/10 p-5 transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-200">
-          Ultimo intento
-        </p>
-        <p className="mt-3 text-2xl font-semibold text-white">
-          {metrics.latestAttempt ? `${metrics.latestAttempt.scorePercentage}%` : "--"}
-        </p>
-        <p className="mt-1 text-xs text-sky-100/80">
-          {metrics.latestAttempt?.fechaLabel ?? "Sin intentos todavia"}
-        </p>
-      </article>
-      {!metrics.hasData ? (
-        <article className="sm:col-span-2 xl:col-span-3">
-          <div className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5">
-            <p className="text-sm text-mq-muted">Aun no tienes intentos. Empieza ahora</p>
-            <Link
-              href="/demo"
-              className="mt-4 inline-flex min-h-12 items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground shadow-[0_14px_34px_-16px_rgb(0_209_255/0.9)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110"
-            >
-              Entrenar ahora
-            </Link>
+    <section className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <article className="mq-glass group relative overflow-hidden rounded-3xl p-6 transition-all hover:-translate-y-1 hover:border-mq-accent/50">
+        <div className="flex items-center justify-between">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400">
+            <Trophy size={20} />
           </div>
-        </article>
-      ) : null}
+          <Sparkles size={14} className="opacity-0 transition-opacity group-hover:opacity-100 text-mq-accent" />
+        </div>
+        <div className="mt-4">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Mejor Puntaje</p>
+          <p className="mt-1 text-3xl font-bold text-white">{metrics.bestScore}%</p>
+        </div>
+        <div className="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-emerald-500/5 blur-2xl" />
+      </article>
+
+      <article className="mq-glass group relative overflow-hidden rounded-3xl p-6 transition-all hover:-translate-y-1 hover:border-mq-accent/50">
+        <div className="flex items-center justify-between">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent">
+            <Target size={20} />
+          </div>
+        </div>
+        <div className="mt-4">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Promedio Total</p>
+          <p className="mt-1 text-3xl font-bold text-white">{metrics.averageScore}%</p>
+        </div>
+        <div className="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-mq-accent/5 blur-2xl" />
+      </article>
+
+      <article className="mq-glass group relative overflow-hidden rounded-3xl p-6 transition-all hover:-translate-y-1 hover:border-mq-accent/50">
+        <div className="flex items-center justify-between">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white">
+            <History size={20} />
+          </div>
+        </div>
+        <div className="mt-4">
+          <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Último Intento</p>
+          <p className="mt-1 text-3xl font-bold text-white">{metrics.latestAttempt?.scorePercentage}%</p>
+          <p className="mt-1 text-[10px] text-mq-muted">{metrics.latestAttempt?.fechaLabel}</p>
+        </div>
+      </article>
     </section>
   );
 }
