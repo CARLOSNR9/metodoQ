@@ -176,7 +176,7 @@ export function FinalResultsScreen({
             href="/#precios"
             className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
           >
-            Ver Plan de Mejora Personalizado
+            Activar mis 30 días GRATIS
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
           <button

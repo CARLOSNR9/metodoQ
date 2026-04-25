@@ -27,6 +27,23 @@ interface Plan {
 
 const PLANS: Plan[] = [
   {
+    id: "free",
+    name: "Gratis",
+    description: "Para quienes quieren probar el método antes de comprometerse.",
+    prices: {
+      1: { monthly: 0, total: 0 },
+      3: { monthly: 0, total: 0 },
+      6: { monthly: 0, total: 0 },
+    },
+    features: [
+      "100 preguntas tipo examen real",
+      "Perfil de rendimiento básico",
+      "Acceso limitado por 30 días",
+      "Sin simulacros completos",
+    ],
+    cta: "Empezar Gratis",
+  },
+  {
     id: "basico",
     name: "Básico",
     description: "Para quienes buscan validar su conocimiento con práctica real.",
@@ -41,7 +58,7 @@ const PLANS: Plan[] = [
       "Simulaciones de examen (limitadas)",
       "Acceso a la plataforma 24/7",
     ],
-    cta: "Empezar entrenamiento Básico",
+    cta: "Elegir Básico",
   },
   {
     id: "pro",
@@ -158,7 +175,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
         </div>
 
         {/* Plans Grid */}
-        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
           {PLANS.map((plan, index) => {
             const currentPrice = plan.prices[cycle];
             return (
@@ -168,9 +185,9 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`relative flex flex-col rounded-3xl p-8 transition-all duration-300 ${
+                className={`relative flex flex-col rounded-3xl p-6 transition-all duration-300 lg:p-8 ${
                   plan.highlighted
-                    ? "bg-gradient-to-b from-white/10 to-white/5 ring-2 ring-mq-accent shadow-[0_0_40px_-10px_rgba(0,209,255,0.3)] scale-105 z-10"
+                    ? "bg-gradient-to-b from-white/10 to-white/5 ring-2 ring-mq-accent shadow-[0_0_40px_-10px_rgba(0,209,255,0.3)] lg:scale-105 z-10"
                     : "bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/[0.05]"
                 }`}
               >
@@ -220,9 +237,9 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                 </ul>
 
                 <Link
-                  href={plan.id === "pro" ? "/register" : plan.id === "basico" ? "/demo" : "/contact"}
+                  href={plan.id === "free" ? "/register" : plan.id === "pro" ? "/register" : plan.id === "basico" ? "/demo" : "/contact"}
                   onClick={() => plan.id === "basico" && trackClickDemo()}
-                  className={`flex h-14 w-full items-center justify-center rounded-2xl text-base font-bold transition-all active:scale-[0.98] ${
+                  className={`flex h-12 w-full items-center justify-center rounded-xl text-sm font-bold transition-all active:scale-[0.98] lg:h-14 lg:text-base ${
                     plan.highlighted
                       ? "bg-mq-accent text-mq-accent-foreground hover:brightness-110 hover:shadow-[0_0_20px_rgba(0,209,255,0.4)]"
                       : "bg-white/10 text-white hover:bg-white/15 border border-white/5"
