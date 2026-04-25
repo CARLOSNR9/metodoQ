@@ -14,11 +14,7 @@ export {
   type DifferentiatorSectionProps,
   type DifferentiatorRow,
 } from "./differentiator-section";
-export {
-  PricingSection,
-  type PricingSectionProps,
-  type PricingPlan,
-} from "./pricing-section";
+export { PricingSection } from "./pricing-section";
 export {
   ProductPreviewSection,
   type ProductPreviewSectionProps,
