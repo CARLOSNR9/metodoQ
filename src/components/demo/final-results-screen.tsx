@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { TrendingUp, Zap, Clock, Target, ArrowRight } from "lucide-react";
 
 export type FinalResultsScreenProps = {
   scorePercentage: number;
@@ -10,37 +12,28 @@ export type FinalResultsScreenProps = {
   className?: string;
 };
 
-function getPerformanceMessage(scorePercentage: number) {
+function getPerformanceProfile(scorePercentage: number) {
   if (scorePercentage < 50) {
-    return "Tienes bases debiles. Necesitas reforzar temas clave.";
-  }
-
-  if (scorePercentage <= 75) {
-    return "Vas bien, pero aun tienes lagunas importantes.";
-  }
-
-  return "Buen nivel. Estas cerca de competir por una plaza.";
-}
-
-function getVelocityMessage(avgResponseTime: number) {
-  if (avgResponseTime <= 45) {
     return {
-      label: "Excelente",
-      color: "text-emerald-400",
-      description: "Tu velocidad de respuesta es óptima para el examen.",
+      title: "Bases por Fortalecer",
+      message: "Tu nivel actual muestra vacíos importantes que el examen de residencia no perdona.",
+      color: "#f43f5e", // rose-500
+      badge: "Necesita Refuerzo",
     };
   }
-  if (avgResponseTime <= 75) {
+  if (scorePercentage <= 75) {
     return {
-      label: "Buen ritmo",
-      color: "text-mq-accent",
-      description: "Estás dentro del tiempo promedio, pero podrías agilizar.",
+      title: "Nivel Intermedio",
+      message: "Tienes buen conocimiento, pero te falta la precisión clínica para asegurar tu plaza.",
+      color: "#00d1ff", // mq-accent
+      badge: "Cerca de la Meta",
     };
   }
   return {
-    label: "Lento",
-    color: "text-rose-400",
-    description: "Estás tardando demasiado. En el examen real el tiempo es crítico.",
+    title: "Nivel Competitivo",
+    message: "Excelente dominio. Estás en el rango de los médicos que obtienen plaza.",
+    color: "#10b981", // emerald-500
+    badge: "Alta Probabilidad",
   };
 }
 
@@ -53,8 +46,10 @@ export function FinalResultsScreen({
   onRepeatDemo,
   className,
 }: FinalResultsScreenProps) {
-  const performanceMessage = getPerformanceMessage(scorePercentage);
-  const velocity = getVelocityMessage(avgResponseTime);
+  const profile = getPerformanceProfile(scorePercentage);
+  const radius = 40;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference - (scorePercentage / 100) * circumference;
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -63,74 +58,137 @@ export function FinalResultsScreen({
   };
 
   return (
-    <div className={`mq-fade-up mt-10 flex justify-center ${className ?? ""}`}>
-      <article className="w-full max-w-2xl rounded-2xl border border-mq-border-strong bg-mq-surface-raised p-6 text-center shadow-[0_24px_60px_-34px_rgb(0_209_255/0.45)] sm:p-8">
-        <h2 className="text-balance text-2xl font-semibold text-white sm:text-3xl">
-          Tu nivel actual es {scorePercentage}%… pero necesitas mínimo 80% para competir
-        </h2>
-        <p className="mt-4 text-sm text-mq-muted sm:text-base">
-          Has respondido {correctAnswers} correctas y {wrongAnswers} incorrectas
-        </p>
+    <div className={`mt-10 flex justify-center px-4 ${className ?? ""}`}>
+      <motion.article 
+        initial={{ opacity: 0, y: 30, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        className="relative w-full max-w-2xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#0C1425]/80 p-6 backdrop-blur-2xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] sm:p-10"
+      >
+        {/* Decorative background effects */}
+        <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-mq-accent/10 blur-[80px]" />
+        <div className="absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-indigo-500/10 blur-[80px]" />
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-xl border border-mq-border bg-background/50 p-4 text-left">
-            <p className="text-xs font-bold uppercase tracking-wider text-mq-accent/70">
-              Tiempo Total
-            </p>
-            <p className="mt-1 text-2xl font-bold text-white">
-              {formatTime(totalSeconds)}
-            </p>
+        <header className="relative z-10 flex flex-col items-center text-center">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-mq-accent">
+            <TrendingUp className="h-3 w-3" />
+            Análisis de Desempeño
           </div>
-          <div className="rounded-xl border border-mq-border bg-background/50 p-4 text-left">
-            <p className="text-xs font-bold uppercase tracking-wider text-mq-accent/70">
-              Promedio por pregunta
-            </p>
-            <p className="mt-1 text-2xl font-bold text-white">
-              {avgResponseTime}s
-            </p>
-          </div>
-        </div>
 
-        <div className="mt-6 rounded-xl border border-mq-border bg-background/50 p-5 text-left">
-          <div className="flex items-center justify-between">
-            <p className="text-sm font-semibold text-mq-accent">Análisis de Resultados</p>
-            <span className={`text-xs font-bold uppercase px-2 py-0.5 rounded border border-current ${velocity.color}`}>
-              Velocidad: {velocity.label}
-            </span>
+          <div className="relative mb-8 flex h-40 w-40 items-center justify-center">
+            {/* SVG Radial Progress */}
+            <svg className="h-full w-full -rotate-90">
+              <circle
+                cx="80"
+                cy="80"
+                r={radius}
+                className="stroke-white/5"
+                strokeWidth="8"
+                fill="transparent"
+              />
+              <motion.circle
+                cx="80"
+                cy="80"
+                r={radius}
+                stroke={profile.color}
+                strokeWidth="8"
+                fill="transparent"
+                strokeDasharray={circumference}
+                initial={{ strokeDashoffset: circumference }}
+                animate={{ strokeDashoffset }}
+                transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                strokeLinecap="round"
+              />
+            </svg>
+            <div className="absolute flex flex-col items-center">
+              <motion.span 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                className="text-4xl font-black text-white"
+              >
+                {scorePercentage}%
+              </motion.span>
+              <span className="text-[10px] font-bold uppercase tracking-tighter text-mq-muted">Puntaje</span>
+            </div>
           </div>
-          <p className="mt-3 text-sm leading-relaxed text-mq-muted sm:text-base">
-            {performanceMessage} {velocity.description}
+
+          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+            {profile.title}
+          </h2>
+          <p className="mt-3 max-w-md text-base leading-relaxed text-mq-muted sm:text-lg">
+            {profile.message}
           </p>
+        </header>
+
+        <div className="relative z-10 mt-10 grid gap-4 sm:grid-cols-2">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent">
+              <Clock className="h-5 w-5" />
+            </div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Tiempo Total</p>
+              <p className="text-lg font-bold text-white">{formatTime(totalSeconds)}</p>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400">
+              <Zap className="h-5 w-5" />
+            </div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Velocidad</p>
+              <p className="text-lg font-bold text-white">{avgResponseTime}s <span className="text-xs font-normal text-mq-muted">/ preg</span></p>
+            </div>
+          </motion.div>
         </div>
 
-        {scorePercentage < 80 && (
-          <div className="mt-4 p-4 rounded-xl bg-mq-accent/5 border border-mq-accent/20">
-            <p className="text-sm font-bold text-mq-accent">
-              🚀 Con Método Q puedes subir esto en semanas
-            </p>
-            <p className="mt-1 text-xs text-mq-muted">
-              Estás a {80 - scorePercentage} puntos de una plaza de especialidad.
-            </p>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="relative z-10 mt-6 rounded-2xl border border-white/5 bg-gradient-to-br from-mq-accent/10 to-indigo-500/5 p-6"
+        >
+          <div className="flex items-start gap-4">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
+              <Target className="h-4 w-4" />
+            </div>
+            <div>
+              <h4 className="text-sm font-bold text-white">Tu brecha para la plaza</h4>
+              <p className="mt-1 text-sm leading-relaxed text-mq-muted">
+                Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="text-white font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.
+              </p>
+            </div>
           </div>
-        )}
+        </motion.div>
 
-
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+        <footer className="relative z-10 mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
             href="/#precios"
-            className="touch-manipulation inline-flex min-h-14 items-center justify-center rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.4)] transition duration-200 hover:-translate-y-1 hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:text-base"
+            className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
           >
-            Ver cómo mejorar mi puntaje
+            Ver Plan de Mejora Personalizado
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
           <button
             type="button"
             onClick={onRepeatDemo}
-            className="touch-manipulation inline-flex min-h-14 items-center justify-center rounded-xl border border-mq-border-strong bg-white/[0.03] px-7 text-sm font-semibold text-foreground transition duration-150 hover:border-white/30 hover:bg-white/[0.07] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mq-accent sm:text-base"
+            className="flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
           >
-            Repetir diagnóstico
+            Repetir Diagnóstico
           </button>
-        </div>
-      </article>
+        </footer>
+      </motion.article>
     </div>
   );
 }
+
