@@ -33,7 +33,7 @@ const PLANS: Plan[] = [
     prices: {
       1: { monthly: 300000, total: 300000 },
       3: { monthly: 166667, total: 500000, savings: "44%" },
-      6: { monthly: 166667, total: 1000000, savings: "44%" },
+      6: { monthly: 141667, total: 850000, savings: "53%" },
     },
     features: [
       "Entrena con preguntas tipo examen real",
@@ -50,7 +50,7 @@ const PLANS: Plan[] = [
     prices: {
       1: { monthly: 500000, total: 500000 },
       3: { monthly: 333333, total: 1000000, savings: "33%" },
-      6: { monthly: 333333, total: 2000000, savings: "33%" },
+      6: { monthly: 266667, total: 1600000, savings: "46%" },
     },
     features: [
       "Todo lo del plan Básico",
@@ -70,7 +70,7 @@ const PLANS: Plan[] = [
     prices: {
       1: { monthly: 1000000, total: 1000000 },
       3: { monthly: 666667, total: 2000000, savings: "33%" },
-      6: { monthly: 833333, total: 5000000, savings: "16%" }, // Nota: El CEO puso 6m 5M, lo cual es más caro mensual que 3m (2M). Podría ser un typo, pero seguiré su orden.
+      6: { monthly: 583333, total: 3500000, savings: "41%" },
     },
     features: [
       "Todo lo del plan PRO",
