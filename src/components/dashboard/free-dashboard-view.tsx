@@ -85,7 +85,7 @@ export function FreeDashboardView({
             
             <p className="text-lg leading-relaxed text-mq-muted sm:text-xl max-w-xl">
               {user?.goalUniversity && user.goalUniversity !== "Otra"
-                ? `Haz tu diagnóstico y descubre qué te separa de tu plaza en la Universidad ${user.goalUniversity}. No dejes tu futuro al azar.`
+                ? `Haz tu diagnóstico y descubre qué te separa de tu plaza en la ${user.goalUniversity}. No dejes tu futuro al azar.`
                 : "Haz tu diagnóstico y descubre qué te está costando la plaza en la residencia médica. No dejes tu futuro al azar."
               }
             </p>
@@ -125,7 +125,7 @@ export function FreeDashboardView({
                 <div className="flex-1 space-y-4">
                   <h2 className="text-3xl font-black text-white">Diagnóstico Inicial</h2>
                   <p className="text-mq-muted leading-relaxed">
-                    Simulacro real de <span className="text-white font-bold">10 preguntas</span> basado en los estándares de {user?.goalUniversity && user.goalUniversity !== "Otra" ? `la Universidad ${user.goalUniversity}` : "tu universidad"}. Descubre tus puntos débiles en minutos.
+                    Simulacro real de <span className="text-white font-bold">10 preguntas</span> basado en los estándares de {user?.goalUniversity && user.goalUniversity !== "Otra" ? `la ${user.goalUniversity}` : "tu universidad"}. Descubre tus puntos débiles en minutos.
                   </p>
                   <div className="flex items-center gap-4 text-xs font-bold text-mq-muted uppercase tracking-widest pt-2">
                     <span className="flex items-center gap-1.5"><Clock size={14} className="text-mq-accent" /> Duración: 2 min</span>
@@ -192,7 +192,7 @@ export function FreeDashboardView({
                    </div>
                    <div className="space-y-1">
                       <h3 className="text-xl font-bold text-white">
-                        Simulacro Universidad {user?.goalUniversity && user.goalUniversity !== "Otra" ? user.goalUniversity : "Nacional"}
+                        Simulacro {user?.goalUniversity && user.goalUniversity !== "Otra" ? user.goalUniversity : "Universidad Nacional de Colombia"}
                       </h3>
                       <p className="text-sm text-mq-muted">
                         {user?.goalUniversity && user.goalUniversity !== "Otra" 
