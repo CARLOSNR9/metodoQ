@@ -43,7 +43,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-4">
           <button
             onClick={() => setIsAuthOpen(true)}
-            className="hidden text-sm font-medium text-mq-muted transition hover:text-white lg:block"
+            className="hidden text-sm font-medium text-mq-muted transition hover:text-white sm:block"
           >
             Acceder
           </button>
@@ -90,6 +90,12 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <button
+            onClick={() => setIsAuthOpen(true)}
+            className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-white/[0.04] hover:text-mq-accent flex items-center justify-center font-bold"
+          >
+            Acceder
+          </button>
         </div>
       </nav>
     </header>
