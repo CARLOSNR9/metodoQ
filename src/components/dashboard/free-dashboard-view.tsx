@@ -28,10 +28,23 @@ export function FreeDashboardView({
   expiresAt 
 }: FreeDashboardViewProps) {
   
-  // Calcular días restantes (Simulado si no hay fecha real para el demo)
-  const daysRemaining = expiresAt 
-    ? Math.max(0, Math.ceil((new Date(expiresAt).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)))
-    : 27; // Default 27 days for free trial effect
+  // Calcular días restantes (25 días desde el registro para plan FREE)
+  let daysRemaining = 25;
+  
+  if (expiresAt) {
+    daysRemaining = Math.max(0, Math.ceil((new Date(expiresAt).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)));
+  } else if (user?.createdAt) {
+    // Convertir Timestamp de Firestore o fecha ISO a objeto Date
+    const createdDate = typeof user.createdAt.toDate === 'function' 
+      ? user.createdAt.toDate() 
+      : new Date(user.createdAt);
+      
+    const trialExpiration = new Date(createdDate.getTime());
+    trialExpiration.setDate(trialExpiration.getDate() + 25);
+    
+    const diff = trialExpiration.getTime() - new Date().getTime();
+    daysRemaining = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+  }
 
   return (
     <div className="space-y-10 pb-12">
