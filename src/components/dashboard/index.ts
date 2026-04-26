@@ -16,3 +16,4 @@ export { AchievementNotification } from "./achievement-notification";
 export { MotivationalReminder } from "./motivational-reminder";
 export { SubscriptionExpirationAlert } from "./subscription-expiration-alert";
 export { OnboardingModal } from "./onboarding-modal";
+export { FreeDashboardView } from "./free-dashboard-view";

@@ -17,6 +17,7 @@ import {
   SubscriptionExpirationAlert,
   AccumulatedStats,
   OnboardingModal,
+  FreeDashboardView,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserPlan } from "@/hooks/use-user-plan";
@@ -45,6 +46,18 @@ export default function DashboardPage() {
           ))}
         </div>
       </section>
+    );
+  }
+
+  if (effectivePlan === "FREE") {
+    return (
+      <FreeDashboardView 
+        user={user}
+        referralCode={referralCode}
+        referralCount={referralCount}
+        isLoadingReferrals={isLoadingReferrals}
+        expiresAt={expiresAt}
+      />
     );
   }
 
@@ -88,14 +101,6 @@ export default function DashboardPage() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              {effectivePlan === "FREE" && (
-                <Link
-                  href="/dashboard/perfil"
-                  className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl bg-white/10 px-8 text-sm font-bold text-white transition-all hover:bg-white/20"
-                >
-                  Mejorar Plan
-                </Link>
-              )}
               <Link
                 href="/demo"
                 className="mq-premium-glow group inline-flex h-14 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-sm font-bold text-mq-accent-foreground transition-all hover:-translate-y-1 hover:brightness-110 active:scale-95"
@@ -114,7 +119,7 @@ export default function DashboardPage() {
               </div>
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Estado IA</p>
-                <p className="text-sm font-semibold text-white">Analizando rendimiento...</p>
+                <p className="text-sm font-semibold text-white">Rendimiento Óptimo</p>
               </div>
             </div>
             <div className="flex items-center gap-4 rounded-2xl bg-white/[0.03] p-4 backdrop-blur-sm transition-colors hover:bg-white/[0.06]">
@@ -151,9 +156,6 @@ export default function DashboardPage() {
       <StreakCard userId={user.uid} />
       <DynamicInsightCard userId={user.uid} />
       <WeakTopicsCard userId={user.uid} />
-      <DailyPlanCard userId={user.uid} />
-      <ProgressChart userId={user.uid} />
-
       <DailyPlanCard userId={user.uid} />
       <ProgressChart userId={user.uid} />
     </section>

@@ -58,7 +58,7 @@ export function LiveClasses() {
         </div>
         {!isPro && (
           <span className="text-[10px] font-bold uppercase tracking-widest text-mq-accent bg-mq-accent/10 px-2 py-1 rounded">
-            Exclusivo PRO
+            Arsenal PRO
           </span>
         )}
       </div>
@@ -71,7 +71,7 @@ export function LiveClasses() {
           <div className="bg-mq-accent/10 p-3 rounded-full mb-4">
             <Lock className="w-6 h-6 text-mq-accent" />
           </div>
-          <p className="text-lg font-semibold text-white">Disponible en plan PRO</p>
+          <p className="text-lg font-black text-white italic">"Esto es lo que te falta para competir de verdad"</p>
           <div className="space-y-1 mt-2 mb-4 px-6">
             <p className="text-sm text-mq-muted font-medium">Aprende estrategias reales, no teoría.</p>
             <p className="text-xs text-mq-muted">Desbloquea el acceso a sesiones en vivo con expertos que ya superaron el reto.</p>

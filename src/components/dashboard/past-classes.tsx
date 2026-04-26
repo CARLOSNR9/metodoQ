@@ -43,14 +43,28 @@ export function PastClasses() {
     }
   }, [isPro, isLoadingPlan]);
 
-  // Si no es PRO o no hay grabaciones, no mostramos la sección para no ensuciar el dashboard
-  if (isLoadingPlan || !isPro || (classes.length === 0 && !loading)) {
+  // Si no hay grabaciones y es PRO, no mostramos la sección
+  if (isLoadingPlan || (isPro && classes.length === 0 && !loading)) {
     return null;
   }
 
-  if (loading) {
+  if (loading && isPro) {
     return (
       <div className="animate-pulse rounded-2xl border border-mq-border-strong bg-mq-surface p-6 h-32" />
+    );
+  }
+
+  if (!isPro) {
+    return (
+      <section className="space-y-4 opacity-75">
+        <div className="flex items-center gap-2 px-1">
+          <History className="w-5 h-5 text-mq-muted" />
+          <h2 className="text-xl font-bold text-white">Clases pasadas (80+ horas)</h2>
+        </div>
+        <div className="rounded-xl border border-dashed border-mq-border bg-white/[0.02] p-8 text-center">
+          <p className="text-sm text-mq-muted">Accede a la biblioteca completa de clases estratégicas.</p>
+        </div>
+      </section>
     );
   }
 
