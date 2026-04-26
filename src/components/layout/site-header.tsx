@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Logo } from "@/components/ui/logo";
 import { AuthDrawer } from "./auth-drawer";
+import { trackClickDemo } from "@/lib/analytics/events";
 
 const nav = [
   { label: "Método", href: "#como-funciona" },
@@ -48,6 +49,7 @@ export function SiteHeader() {
           </button>
           <Link
             href="/demo"
+            onClick={() => trackClickDemo()}
             className="group relative inline-flex min-h-11 items-center justify-center rounded-full bg-mq-accent px-6 text-[13px] font-bold text-mq-accent-foreground transition duration-300 hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 sm:text-sm"
           >
             {/* Pulsing Glow Background */}
