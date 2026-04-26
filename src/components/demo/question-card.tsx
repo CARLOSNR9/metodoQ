@@ -131,6 +131,10 @@ export function QuestionCard({
 
       <AnimatePresence>
         {hasAnswered && (
+          <motion.section
+            initial={{ opacity: 0, height: 0, y: 20 }}
+            animate={{ opacity: 1, height: "auto", y: 0 }}
+            transition={{ type: "spring", damping: 20, stiffness: 100 }}
             className={`mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md sm:p-6 relative ${isLocked ? "min-h-[300px]" : ""}`}
           >
             <div className={`transition-all duration-700 ${isLocked ? "blur-xl select-none pointer-events-none grayscale" : ""}`}>
