@@ -38,7 +38,7 @@ const PLANS: Plan[] = [
     features: [
       "100 preguntas tipo examen real",
       "Perfil de rendimiento básico",
-      "Acceso limitado por 30 días",
+      "Ideal para probar el método",
       "Sin simulacros completos",
     ],
     cta: "Empezar Gratis",
@@ -207,21 +207,27 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                 <div className="mb-8 flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-bold text-white">
-                      {formatCOP(currentPrice.monthly)}
+                      {plan.id === "free" ? "$0" : formatCOP(currentPrice.monthly)}
                     </span>
-                    <span className="text-mq-muted text-sm">/mes</span>
+                    {plan.id !== "free" && <span className="text-mq-muted text-sm">/mes</span>}
                   </div>
-                  {cycle > 1 && (
-                    <div className="flex items-center gap-2">
-                      <p className="text-sm text-mq-accent font-medium">
-                        Pago total: {formatCOP(currentPrice.total)}
-                      </p>
-                      {currentPrice.savings && (
-                        <span className="rounded-md bg-green-500/20 px-2 py-0.5 text-[10px] font-bold text-green-400 uppercase">
-                          Ahorra {currentPrice.savings}
-                        </span>
-                      )}
-                    </div>
+                  {plan.id === "free" ? (
+                    <p className="text-sm text-mq-accent font-medium">
+                      Pruébalo por 30 días
+                    </p>
+                  ) : (
+                    cycle > 1 && (
+                      <div className="flex items-center gap-2">
+                        <p className="text-sm text-mq-accent font-medium">
+                          Pago total: {formatCOP(currentPrice.total)}
+                        </p>
+                        {currentPrice.savings && (
+                          <span className="rounded-md bg-green-500/20 px-2 py-0.5 text-[10px] font-bold text-green-400 uppercase">
+                            Ahorra {currentPrice.savings}
+                          </span>
+                        )}
+                      </div>
+                    )
                   )}
                 </div>
 
