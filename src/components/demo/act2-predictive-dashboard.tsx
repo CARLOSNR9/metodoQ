@@ -124,7 +124,7 @@ export function Act2PredictiveDashboard({
         <div className="flex items-start gap-4 p-4 rounded-2xl bg-red-500/10 border border-red-500/20">
             <AlertTriangle size={20} className="text-red-400 shrink-0 mt-0.5" />
             <p className="text-xs text-red-200 leading-relaxed italic">
-                "El 85% de los aspirantes fracasa en la {university} debido a la desproporción entre cupos y demanda. Tu puntaje actual te sitúa en el percentil inferior de las vacantes de {specialty}."
+                {`"El 85% de los aspirantes fracasa en la ${university} debido a la desproporción entre cupos y demanda. Tu puntaje actual te sitúa en el percentil inferior de las vacantes de ${specialty}."`}
             </p>
         </div>
       </div>

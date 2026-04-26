@@ -1143,8 +1143,8 @@ function DemoContent() {
 export default function DemoPage() {
   return (
     <Suspense fallback={
-      <div className=\"flex min-h-screen items-center justify-center bg-[#0A1F44]\">
-        <p className=\"text-mq-accent animate-pulse font-bold tracking-widest uppercase\">Cargando Diagnóstico...</p>
+      <div className="flex min-h-screen items-center justify-center bg-[#0A1F44]">
+        <p className="text-mq-accent animate-pulse font-bold tracking-widest uppercase">Cargando Diagnóstico...</p>
       </div>
     }>
       <DemoContent />
