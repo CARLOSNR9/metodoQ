@@ -20,20 +20,21 @@ import {
   FreeDashboardView,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
-import { useUserPlan } from "@/hooks/use-user-plan";
+import { useUserProfile } from "@/hooks/use-user-profile";
 import { useReferralStats } from "@/hooks/use-referral-stats";
 import Link from "next/link";
 import { Sparkles, ArrowRight, Zap } from "lucide-react";
 
 export default function DashboardPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
-  const { plan, loading: isLoadingPlan, expiresAt } = useUserPlan();
+  const { profile, loading: isLoadingProfile } = useUserProfile();
   const { referralCode, referralCount, loading: isLoadingReferrals } = useReferralStats(user?.uid);
 
-  const effectivePlan = plan ?? "FREE";
+  const effectivePlan = profile?.plan ?? "FREE";
+  const expiresAt = profile?.planExpiresAt ?? null;
   const planLabel = effectivePlan === "PRO_PLUS" ? "PRO+" : effectivePlan;
 
-  if (isCheckingAuth || !user) {
+  if (isCheckingAuth || isLoadingProfile || !user) {
     return (
       <section className="space-y-6">
         <div className="h-32 animate-pulse rounded-3xl border border-mq-border-strong bg-white/[0.04]" />
@@ -54,7 +55,7 @@ export default function DashboardPage() {
       <>
         <OnboardingModal userId={user.uid} />
         <FreeDashboardView 
-          user={user}
+          user={profile || user}
           referralCode={referralCode}
           referralCount={referralCount}
           isLoadingReferrals={isLoadingReferrals}
@@ -79,7 +80,7 @@ export default function DashboardPage() {
                 <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/20 bg-mq-accent/10 px-4 py-1.5 backdrop-blur-md">
                   <div className="h-2 w-2 animate-pulse rounded-full bg-mq-accent" />
                   <span className="text-[10px] font-bold uppercase tracking-wider text-mq-accent">
-                    {isLoadingPlan ? "Validando..." : `Plan ${planLabel}`}
+                    {isLoadingProfile ? "Validando..." : `Plan ${planLabel}`}
                   </span>
                 </div>
                 
@@ -98,7 +99,10 @@ export default function DashboardPage() {
                   Bienvenido, <span className="text-mq-accent">Doc.</span>
                 </h1>
                 <p className="mt-3 max-w-xl text-sm leading-relaxed text-mq-muted sm:text-lg">
-                  Tu camino hacia la residencia médica está en marcha. Tienes metas pendientes para hoy.
+                  {profile?.goalUniversity && profile.goalUniversity !== "Otra"
+                    ? `Tu camino hacia la residencia en la ${profile.goalUniversity} está en marcha. Tienes metas pendientes.`
+                    : "Tu camino hacia la residencia médica está en marcha. Tienes metas pendientes para hoy."
+                  }
                 </p>
               </div>
             </div>

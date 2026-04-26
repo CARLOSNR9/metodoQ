@@ -64,12 +64,17 @@ export function FreeDashboardView({
             </div>
             
             <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl leading-[1.1]">
-              Tu nivel actual <span className="text-red-500 italic">NO es suficiente</span> <br className="hidden sm:block" />
-              para pasar.
+              {user?.attemptedExam 
+                ? <>Tu estrategia actual <span className="text-red-500 italic">necesita un ajuste</span> <br className="hidden sm:block" /> para pasar.</>
+                : <>Tu nivel actual <span className="text-red-500 italic">NO es suficiente</span> <br className="hidden sm:block" /> para pasar.</>
+              }
             </h1>
             
             <p className="text-lg leading-relaxed text-mq-muted sm:text-xl max-w-xl">
-              Haz tu diagnóstico y descubre qué te está costando la plaza en la residencia médica. No dejes tu futuro al azar.
+              {user?.goalUniversity && user.goalUniversity !== "Otra"
+                ? `Haz tu diagnóstico y descubre qué te separa de tu plaza en la Universidad ${user.goalUniversity}. No dejes tu futuro al azar.`
+                : "Haz tu diagnóstico y descubre qué te está costando la plaza en la residencia médica. No dejes tu futuro al azar."
+              }
             </p>
 
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
@@ -107,7 +112,7 @@ export function FreeDashboardView({
                 <div className="flex-1 space-y-4">
                   <h2 className="text-3xl font-black text-white">Diagnóstico Inicial</h2>
                   <p className="text-mq-muted leading-relaxed">
-                    Simulacro real de <span className="text-white font-bold">10 preguntas</span> basado en los estándares de tu universidad. Descubre tus puntos débiles en minutos.
+                    Simulacro real de <span className="text-white font-bold">10 preguntas</span> basado en los estándares de {user?.goalUniversity && user.goalUniversity !== "Otra" ? `la Universidad ${user.goalUniversity}` : "tu universidad"}. Descubre tus puntos débiles en minutos.
                   </p>
                   <div className="flex items-center gap-4 text-xs font-bold text-mq-muted uppercase tracking-widest pt-2">
                     <span className="flex items-center gap-1.5"><Clock size={14} className="text-mq-accent" /> Duración: 2 min</span>
@@ -173,8 +178,15 @@ export function FreeDashboardView({
                       <ShieldAlert size={32} />
                    </div>
                    <div className="space-y-1">
-                      <h3 className="text-xl font-bold text-white">Simulacro Universidad Nacional</h3>
-                      <p className="text-sm text-mq-muted">80 preguntas reales actualizadas al 2024</p>
+                      <h3 className="text-xl font-bold text-white">
+                        Simulacro Universidad {user?.goalUniversity && user.goalUniversity !== "Otra" ? user.goalUniversity : "Nacional"}
+                      </h3>
+                      <p className="text-sm text-mq-muted">
+                        {user?.goalUniversity && user.goalUniversity !== "Otra" 
+                          ? `Banco de preguntas oficial para el examen de la ${user.goalUniversity}`
+                          : "80 preguntas reales actualizadas al 2024"
+                        }
+                      </p>
                    </div>
                 </div>
                 <Link
@@ -231,7 +243,12 @@ export function FreeDashboardView({
              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
                 <Sparkles size={24} />
              </div>
-             <p className="text-sm font-bold text-white italic">"La diferencia entre un médico y un residente es la estrategia."</p>
+             <p className="text-sm font-bold text-white italic">
+               {user?.goalUniversity && user.goalUniversity !== "Otra"
+                 ? `"La ${user.goalUniversity} te espera, Doc. La diferencia entre un médico y un residente es la estrategia."`
+                 : `"La diferencia entre un médico y un residente es la estrategia."`
+               }
+             </p>
              <p className="text-[10px] uppercase tracking-widest text-mq-muted">- Dr. Q</p>
           </div>
         </aside>
