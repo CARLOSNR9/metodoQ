@@ -51,13 +51,16 @@ export default function DashboardPage() {
 
   if (effectivePlan === "FREE") {
     return (
-      <FreeDashboardView 
-        user={user}
-        referralCode={referralCode}
-        referralCount={referralCount}
-        isLoadingReferrals={isLoadingReferrals}
-        expiresAt={expiresAt}
-      />
+      <>
+        <OnboardingModal userId={user.uid} />
+        <FreeDashboardView 
+          user={user}
+          referralCode={referralCode}
+          referralCount={referralCount}
+          isLoadingReferrals={isLoadingReferrals}
+          expiresAt={expiresAt}
+        />
+      </>
     );
   }
 
