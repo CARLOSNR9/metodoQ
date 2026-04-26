@@ -11,6 +11,8 @@ import {
   AccumulatedStats
 } from "@/components/dashboard";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 
 interface FreeDashboardViewProps {
   user: any;
@@ -27,6 +29,7 @@ export function FreeDashboardView({
   isLoadingReferrals,
   expiresAt 
 }: FreeDashboardViewProps) {
+  const [isAct1Open, setIsAct1Open] = useState(false);
   
   // Calcular días restantes (25 días desde el registro para plan FREE)
   let daysRemaining = 25;
@@ -91,14 +94,14 @@ export function FreeDashboardView({
             </p>
 
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-              <Link
-                href="/demo"
+              <button
+                onClick={() => setIsAct1Open(true)}
                 className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:brightness-110 active:scale-95"
               >
                 <Target size={20} fill="currentColor" />
                 <span>Empezar diagnóstico ahora</span>
                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-              </Link>
+              </button>
               
               <Link
                 href="/dashboard/perfil"
@@ -132,12 +135,12 @@ export function FreeDashboardView({
                     <span className="flex items-center gap-1.5"><Target size={14} className="text-mq-accent" /> IA Adaptativa</span>
                   </div>
                 </div>
-                <Link
-                  href="/demo"
+                <button
+                  onClick={() => setIsAct1Open(true)}
                   className="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-mq-accent px-8 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105"
                 >
                   Empezar ahora
-                </Link>
+                </button>
              </div>
              <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-mq-accent/5 to-transparent pointer-events-none" />
           </section>
@@ -157,9 +160,12 @@ export function FreeDashboardView({
                     <span className="text-lg font-bold text-white">10 Preguntas rápidas</span>
                   </div>
                   <p className="text-sm text-mq-muted mb-6">Mantén tu racha y entrena tu agilidad mental con el simulacro diario.</p>
-                  <Link href="/demo" className="text-xs font-bold text-mq-accent flex items-center gap-2 group-hover:gap-3 transition-all">
+                  <button 
+                    onClick={() => setIsAct1Open(true)}
+                    className="text-xs font-bold text-mq-accent flex items-center gap-2 group-hover:gap-3 transition-all"
+                  >
                     IR A ENTRENAR <ArrowRight size={14} />
-                  </Link>
+                  </button>
                </div>
                <div className="group rounded-2xl border border-mq-border-strong bg-white/[0.03] p-6 transition-all hover:bg-white/[0.05]">
                   <div className="flex items-center gap-4 mb-4">
@@ -290,6 +296,12 @@ export function FreeDashboardView({
       </section>
       
       {/* 8. ELIMINAR RUIDO (Ocultar estados vacíos que no aportan valor) */}
+      {/* Act 1 Diagnostic Modal */}
+      <Act1DiagnosticModal 
+        isOpen={isAct1Open} 
+        onClose={() => setIsAct1Open(false)} 
+        user={user}
+      />
     </div>
   );
 }

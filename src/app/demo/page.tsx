@@ -3,13 +3,15 @@
 import { onAuthStateChanged, type User } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   AttemptHistory,
   FinalResultsScreen,
   FreePlanPaywall,
   QuestionCard,
   type QuestionOption,
+  Act2PredictiveDashboard
 } from "@/components/demo";
 import { logoutUser } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
@@ -519,7 +521,13 @@ const demoQuestions: DemoQuestion[] = [
   },
 ];
 
-export default function DemoPage() {
+function DemoContent() {
+  const searchParams = useSearchParams();
+  const source = searchParams.get("source");
+  const urlUniversity = searchParams.get("university");
+  const urlSpecialty = searchParams.get("specialty");
+  const isAct1 = source === "act1";
+
   const { plan, loading: isLoadingPlan } = useUserPlan();
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
@@ -576,6 +584,13 @@ export default function DemoPage() {
       100,
   );
   const avgResponseTime = calculateAverageResponseTime(responseTimes);
+
+  // Auto-start si viene de Act 1
+  useEffect(() => {
+    if (isAct1 && !hasStarted && !isLoadingPlan && !isCheckingAuth) {
+      startAdaptiveSession();
+    }
+  }, [isAct1, hasStarted, isLoadingPlan, isCheckingAuth]);
 
   useEffect(() => {
     let unsubscribe: (() => void) | undefined;
@@ -933,11 +948,17 @@ export default function DemoPage() {
                 </div>
                 
                 <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  Simulacro <span className="text-mq-accent">Diagnóstico</span>
+                  {isAct1 
+                    ? <>Diagnóstico <span className="text-red-500">Alta Presión</span></>
+                    : <>Simulacro <span className="text-mq-accent">Diagnóstico</span></>
+                  }
                 </h1>
                 
                 <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-mq-muted sm:text-lg">
-                  Mide tu capacidad real frente al examen de residencia con <span className="text-white font-semibold">10 casos clínicos de alta complejidad</span> en solo <span className="text-white font-semibold">5 minutos</span>.
+                  {isAct1
+                    ? `Escenario real para ${urlSpecialty} en la ${urlUniversity}. 15 minutos que definirán tu futuro.`
+                    : <>Mide tu capacidad real frente al examen de residencia con <span className="text-white font-semibold">10 casos clínicos de alta complejidad</span> en solo <span className="text-white font-semibold">5 minutos</span>.</>
+                  }
                 </p>
               </header>
 
@@ -994,6 +1015,9 @@ export default function DemoPage() {
               onRepeatDemo={() => {
                 startAdaptiveSession();
               }}
+              source={source}
+              university={urlUniversity}
+              specialty={urlSpecialty}
             />
             {!user ? (
               <section className="mt-6 rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
@@ -1026,7 +1050,7 @@ export default function DemoPage() {
             <div className="mb-5 space-y-2">
               <div className="flex items-center justify-between">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-mq-accent">
-                  Pregunta {currentQuestionIndex + 1} de {totalQuestions}
+                  {isAct1 ? "EVALUACIÓN DE SUPERVIVENCIA" : "Pregunta"} {currentQuestionIndex + 1} de {totalQuestions}
                 </p>
                 <p className="text-xs font-medium text-mq-muted">
                   {currentQuestionIndex + 1}/{totalQuestions} preguntas
@@ -1058,6 +1082,7 @@ export default function DemoPage() {
                 keyPoints={currentQuestion!.keyPoints}
                 dynamicFeedback={liveFeedbackMessage}
                 onAnswerSelect={handleAnswerSelect}
+                isLocked={isAct1 && currentQuestionIndex > 0}
               />
             </div>
             <div className="mt-6 flex justify-end">
@@ -1112,5 +1137,17 @@ export default function DemoPage() {
         />
       ) : null}
     </main>
+  );
+}
+
+export default function DemoPage() {
+  return (
+    <Suspense fallback={
+      <div className=\"flex min-h-screen items-center justify-center bg-[#0A1F44]\">
+        <p className=\"text-mq-accent animate-pulse font-bold tracking-widest uppercase\">Cargando Diagnóstico...</p>
+      </div>
+    }>
+      <DemoContent />
+    </Suspense>
   );
 }

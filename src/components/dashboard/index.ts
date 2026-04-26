@@ -17,3 +17,4 @@ export { MotivationalReminder } from "./motivational-reminder";
 export { SubscriptionExpirationAlert } from "./subscription-expiration-alert";
 export { OnboardingModal } from "./onboarding-modal";
 export { FreeDashboardView } from "./free-dashboard-view";
+export { Act1DiagnosticModal } from "./act1-diagnostic-modal";

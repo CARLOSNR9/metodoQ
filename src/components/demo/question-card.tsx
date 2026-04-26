@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Info } from "lucide-react";
+import { Sparkles, Info, Lock, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export type QuestionOption = {
   id: string;
@@ -19,6 +20,7 @@ export type QuestionCardProps = {
   dynamicFeedback?: string | null;
   onAnswerSelect?: (optionId: string, isCorrect: boolean) => void;
   className?: string;
+  isLocked?: boolean;
 };
 
 const defaultQuestion =
@@ -48,6 +50,7 @@ export function QuestionCard({
   dynamicFeedback = null,
   onAnswerSelect,
   className,
+  isLocked = false,
 }: QuestionCardProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const hasAnswered = Boolean(selectedOptionId);
@@ -128,68 +131,94 @@ export function QuestionCard({
 
       <AnimatePresence>
         {hasAnswered && (
-          <motion.section
-            initial={{ opacity: 0, height: 0, y: 20 }}
-            animate={{ opacity: 1, height: "auto", y: 0 }}
-            transition={{ type: "spring", damping: 20, stiffness: 100 }}
-            className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md sm:p-6"
+            className={`mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md sm:p-6 relative ${isLocked ? "min-h-[300px]" : ""}`}
           >
-            <div className="flex items-center justify-between">
-              <p
-                className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider ${
-                  isCorrect ? "text-emerald-400" : "text-rose-400"
-                }`}
-              >
-                {isCorrect ? (
-                  <>
-                    <Sparkles className="h-4 w-4" />
-                    ¡Excelente! Respuesta Correcta
-                  </>
-                ) : (
-                  <>
-                    <Info className="h-4 w-4" />
-                    Sigue aprendiendo
-                  </>
-                )}
+            <div className={`transition-all duration-700 ${isLocked ? "blur-xl select-none pointer-events-none grayscale" : ""}`}>
+              <div className="flex items-center justify-between">
+                <p
+                  className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider ${
+                    isCorrect ? "text-emerald-400" : "text-rose-400"
+                  }`}
+                >
+                  {isCorrect ? (
+                    <>
+                      <Sparkles className="h-4 w-4" />
+                      ¡Excelente! Respuesta Correcta
+                    </>
+                  ) : (
+                    <>
+                      <Info className="h-4 w-4" />
+                      Sigue aprendiendo
+                    </>
+                  )}
+                </p>
+              </div>
+              
+              <p className="mt-4 text-base leading-relaxed text-slate-200">
+                {explanation}
               </p>
-            </div>
-            
-            <p className="mt-4 text-base leading-relaxed text-slate-200">
-              {explanation}
-            </p>
-            
-            {dynamicFeedback && (
-              <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="mt-5 rounded-xl border border-mq-accent/20 bg-mq-accent/5 p-4"
-              >
-                <p className="text-sm font-medium text-mq-accent">{dynamicFeedback}</p>
-              </motion.div>
-            )}
+              
+              {dynamicFeedback && (
+                <motion.div
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="mt-5 rounded-xl border border-mq-accent/20 bg-mq-accent/5 p-4"
+                >
+                  <p className="text-sm font-medium text-mq-accent">{dynamicFeedback}</p>
+                </motion.div>
+              )}
 
-            <div className="mt-6 rounded-xl border border-white/10 bg-white/[0.02] p-5">
-              <h4 className="flex items-center gap-2 text-sm font-bold text-white/90">
-                <span className="flex h-5 w-5 items-center justify-center rounded-lg bg-mq-accent/20 text-mq-accent">
-                  🧠
-                </span>
-                Lo que debes saber para el examen
-              </h4>
-              <ul className="mt-4 space-y-3">
-                {keyPoints.map((point, i) => (
-                  <motion.li
-                    key={point}
-                    initial={{ opacity: 0, x: -5 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 + i * 0.05 }}
-                    className="flex gap-3 text-sm leading-relaxed text-mq-muted"
-                  >
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mq-accent/60" />
-                    {point}
-                  </motion.li>
-                ))}
-              </ul>
+              <div className="mt-6 rounded-xl border border-white/10 bg-white/[0.02] p-5">
+                <h4 className="flex items-center gap-2 text-sm font-bold text-white/90">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-lg bg-mq-accent/20 text-mq-accent">
+                    🧠
+                  </span>
+                  Lo que debes saber para el examen
+                </h4>
+                <ul className="mt-4 space-y-3">
+                  {keyPoints.map((point, i) => (
+                    <motion.li
+                      key={point}
+                      initial={{ opacity: 0, x: -5 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 + i * 0.05 }}
+                      className="flex gap-3 text-sm leading-relaxed text-mq-muted"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mq-accent/60" />
+                      {point}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
             </div>
+
+            {/* Zeigarnik Paywall Overlay */}
+            {isLocked && (
+              <div className="absolute inset-0 z-20 flex flex-col items-center justify-center p-6 text-center bg-black/40 backdrop-blur-sm">
+                <motion.div
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent shadow-[0_0_30px_rgba(0,209,255,0.3)]"
+                >
+                  <Lock size={32} />
+                </motion.div>
+                
+                <h4 className="text-lg font-black text-white uppercase tracking-tighter">Explicación Bloqueada</h4>
+                <p className="mt-2 text-sm text-mq-muted max-w-[280px]">
+                  El 85% de los errores en este tema se deben a falta de bases moleculares. No te quedes con la duda.
+                </p>
+                
+                <Link
+                  href="/dashboard/perfil"
+                  className="mt-6 flex h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-xs font-black text-mq-accent-foreground transition-all hover:scale-105"
+                >
+                  DESBLOQUEAR ANÁLISIS PRO <ArrowRight size={14} />
+                </Link>
+                <p className="mt-4 text-[10px] font-bold text-mq-accent uppercase tracking-widest animate-pulse">
+                  Efecto Zeigarnik Activado
+                </p>
+              </div>
+            )}
           </motion.section>
         )}
       </AnimatePresence>
