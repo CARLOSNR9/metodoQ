@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
+import { trackClickDemo } from "@/lib/analytics/events";
 import { DemoVideo } from "./demo-video";
 
 export function HeroSection() {
@@ -35,6 +36,7 @@ export function HeroSection() {
               <div className="flex w-full flex-col gap-4 sm:flex-row">
                 <Link
                   href="/demo"
+                  onClick={() => trackClickDemo()}
                   className="inline-flex min-h-[3.75rem] items-center justify-center rounded-2xl bg-mq-accent px-6 text-[15px] font-bold text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.4)] transition duration-300 hover:-translate-y-1 hover:brightness-110 active:translate-y-0 w-full sm:w-auto whitespace-nowrap sm:px-8 sm:text-lg"
                 >
                   🚀 Haz tu diagnóstico gratis

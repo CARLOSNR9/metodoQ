@@ -176,7 +176,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                     <ShieldAlert size={32} className="text-red-500 animate-pulse" />
                   </div>
                   <h2 className="text-2xl font-black text-white">Choque de Realidad Estandarizado</h2>
-                  <p className="text-mq-muted text-sm">Escenario proyectado para 2025 en la <span className="text-white font-bold">{selectedUniversity}</span></p>
+                  <p className="text-mq-muted text-sm">Escenario proyectado para 2027 en la <span className="text-white font-bold">{selectedUniversity}</span></p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
+import { trackClickDemo } from "@/lib/analytics/events";
 
 export type CtaBandProps = {
   title?: string;
@@ -34,6 +35,7 @@ export function CtaBand({
           <div className="flex flex-col items-center gap-6">
             <Link
               href={cta.href}
+              onClick={() => trackClickDemo()}
               className="inline-flex min-h-[4rem] items-center justify-center rounded-2xl bg-mq-accent px-10 text-xl font-bold text-mq-accent-foreground shadow-[0_0_30px_rgba(0,209,255,0.4)] transition duration-300 hover:-translate-y-1 hover:brightness-110 active:translate-y-0 min-w-[18rem]"
             >
               {cta.label}

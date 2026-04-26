@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { trackClickDemo } from "@/lib/analytics/events";
 
 export type SolutionSectionProps = {
   eyebrow?: string;
@@ -28,7 +30,7 @@ export function SolutionSection({
   notTraditional = "No es otro curso aburrido. Es entrenamiento basado en ciencia para vencer tu examen.",
   bullets = defaultBullets,
   showCta = true,
-  cta = { label: "Haz tu diagnóstico gratis", href: "/login" },
+  cta = { label: "Haz tu diagnóstico gratis", href: "/demo" },
   className,
 }: SolutionSectionProps) {
   return (
@@ -147,14 +149,13 @@ export function SolutionSection({
 
         {showCta ? (
           <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <motion.a
+            <Link
               href={cta.href}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              onClick={() => trackClickDemo()}
               className="inline-flex min-h-[3.25rem] w-full items-center justify-center rounded-xl bg-mq-accent px-7 text-[0.9375rem] font-bold text-mq-accent-foreground shadow-[0_0_40px_-10px_rgb(0_209_255/0.5)] transition duration-200 hover:brightness-110 sm:w-auto sm:min-w-[15rem]"
             >
               {cta.label}
-            </motion.a>
+            </Link>
             <p className="text-center text-xs text-mq-muted sm:text-left sm:text-sm">
               Sin tarjeta para empezar en el plan gratuito.
             </p>
