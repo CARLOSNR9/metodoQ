@@ -138,8 +138,8 @@ export function FinalResultsScreen({
           <div className="mt-12">
             <Act2PredictiveDashboard 
               scorePercentage={scorePercentage}
-              university={university}
-              specialty={specialty}
+              university={university ?? null}
+              specialty={specialty ?? null}
             />
           </div>
         )}
