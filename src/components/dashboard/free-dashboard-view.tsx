@@ -104,7 +104,7 @@ export function FreeDashboardView({
               </button>
               
               <Link
-                href="/dashboard/perfil"
+                href="/dashboard/planes"
                 className="inline-flex h-16 items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-8 text-base font-bold text-white transition-all hover:bg-white/10"
               >
                 Ver planes PRO
@@ -209,7 +209,7 @@ export function FreeDashboardView({
                    </div>
                 </div>
                 <Link
-                  href="/dashboard/perfil"
+                  href="/dashboard/planes"
                   className="w-full sm:w-auto inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-white/10 px-6 text-xs font-black text-white transition-all hover:bg-white/20"
                 >
                   <Lock size={14} /> DESBLOQUEAR COMPLETO
@@ -251,7 +251,7 @@ export function FreeDashboardView({
             </ul>
 
             <Link
-              href="/dashboard/perfil"
+              href="/dashboard/planes"
               className="w-full inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-white/10 text-xs font-bold text-white transition-all hover:bg-white/20"
             >
               Ver demo de reportes
@@ -287,7 +287,7 @@ export function FreeDashboardView({
         
         <div className="flex justify-center pt-4">
           <Link
-            href="/dashboard/perfil"
+            href="/dashboard/planes"
             className="group inline-flex items-center gap-2 rounded-full border border-mq-accent bg-mq-accent/10 px-8 py-3 text-sm font-bold text-mq-accent transition-all hover:bg-mq-accent hover:text-mq-accent-foreground"
           >
             DESBLOQUEAR TODO EL ARSENAL <ArrowRight size={16} />

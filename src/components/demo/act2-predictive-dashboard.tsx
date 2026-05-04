@@ -178,7 +178,7 @@ export function Act2PredictiveDashboard({
             <h4 className="text-sm font-black uppercase tracking-widest text-white self-start">Anatomía de tus Fallos</h4>
             <div className="h-64 w-full">
                 <ResponsiveContainer width="100%" height="100%">
-                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>
+                    <RadarChart cx="50%" cy="50%" outerRadius="60%" data={radarData}>
                         <PolarGrid stroke="#ffffff10" />
                         <PolarAngleAxis dataKey="subject" tick={{ fill: '#8A99B8', fontSize: 10 }} />
                         <Radar

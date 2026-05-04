@@ -901,11 +901,7 @@ function DemoContent() {
               <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                 <div className="flex flex-1 items-center justify-between">
                   <div>
-                    {user ? (
-                      <p className="text-xs text-mq-muted sm:text-sm">
-                        Sesion activa: {user.email}
-                      </p>
-                    ) : (
+                    {!user && (
                       <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">
                         Modo invitado
                       </p>

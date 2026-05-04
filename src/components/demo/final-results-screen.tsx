@@ -138,8 +138,40 @@ export function FinalResultsScreen({
           </p>
         </header>
 
+        <div className="relative z-10 mt-10 grid gap-4 sm:grid-cols-2">
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent">
+              <Clock className="h-5 w-5" />
+            </div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Tiempo Total</p>
+              <p className="text-lg font-bold text-white">{formatTime(totalSeconds)}</p>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5 }}
+            className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400">
+              <Zap className="h-5 w-5" />
+            </div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Velocidad</p>
+              <p className="text-lg font-bold text-white">{avgResponseTime}s <span className="text-xs font-normal text-mq-muted">/ preg</span></p>
+            </div>
+          </motion.div>
+        </div>
+
         {isAct1 && (
-          <div className="mt-12">
+          <div className="mt-8">
             <Act2PredictiveDashboard 
               scorePercentage={scorePercentage}
               university={university ?? null}
@@ -152,37 +184,6 @@ export function FinalResultsScreen({
 
         {!isAct1 && (
           <>
-            <div className="relative z-10 mt-10 grid gap-4 sm:grid-cols-2">
-              <motion.div 
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
-                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent">
-                  <Clock className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Tiempo Total</p>
-                  <p className="text-lg font-bold text-white">{formatTime(totalSeconds)}</p>
-                </div>
-              </motion.div>
-
-              <motion.div 
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.5 }}
-                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-white/[0.03] p-4"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400">
-                  <Zap className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Velocidad</p>
-                  <p className="text-lg font-bold text-white">{avgResponseTime}s <span className="text-xs font-normal text-mq-muted">/ preg</span></p>
-                </div>
-              </motion.div>
-            </div>
 
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
