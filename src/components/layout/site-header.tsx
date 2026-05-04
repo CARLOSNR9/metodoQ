@@ -1,19 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/ui/logo";
 import { AuthDrawer } from "./auth-drawer";
 import { trackClickDemo } from "@/lib/analytics/events";
 
 const nav = [
-  { label: "Método", href: "#como-funciona" },
-  { label: "Precios", href: "#precios" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Método", href: "/#como-funciona" },
+  { label: "Precios", href: "/#precios" },
+  { label: "FAQ", href: "/#faq" },
 ] as const;
 
 export function SiteHeader() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
+  const pathname = usePathname();
+
+  if (pathname?.startsWith("/dashboard")) {
+    return null;
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-mq-border bg-background/85 backdrop-blur-md supports-[backdrop-filter]:bg-background/70 transition-all duration-300">
