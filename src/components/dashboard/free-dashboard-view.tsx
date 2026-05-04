@@ -9,7 +9,8 @@ import {
   DailyPlanCard,
   SummaryCards,
   AccumulatedStats,
-  WeakTopicsCard
+  WeakTopicsCard,
+  DailyPillCard
 } from "@/components/dashboard";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -175,6 +176,8 @@ export function FreeDashboardView({
       <div className="grid gap-10 lg:grid-cols-3">
         {/* 2. BLOQUE PRINCIPAL - DIAGNÓSTICO O RESULTADOS */}
         <div className="lg:col-span-2 space-y-10">
+          <DailyPillCard topic="Semiología" />
+          
           {user?.attemptsCount > 0 ? (
             <div className="space-y-10">
               <SummaryCards userId={user.uid} />

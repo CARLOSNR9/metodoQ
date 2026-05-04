@@ -527,6 +527,7 @@ function DemoContent() {
   const urlUniversity = searchParams.get("university");
   const urlSpecialty = searchParams.get("specialty");
   const isAct1 = source === "act1";
+  const isDailyPill = searchParams.get("mode") === "daily-pill";
 
   const { plan, loading: isLoadingPlan } = useUserPlan();
   const [user, setUser] = useState<User | null>(null);
@@ -558,7 +559,7 @@ function DemoContent() {
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
   const hasUnlimitedAccess = effectivePlan === "PRO" || effectivePlan === "PRO_PLUS";
-  const plannedQuestionCount = Math.min(10, demoQuestions.length);
+  const plannedQuestionCount = isDailyPill ? 1 : Math.min(10, demoQuestions.length);
   const totalQuestions = hasStarted ? sessionQuestions.length : plannedQuestionCount;
   const availableQuestions = hasStarted ? sessionQuestions : [];
   const isResultsStep = hasStarted && currentQuestionIndex === totalQuestions;
@@ -948,16 +949,20 @@ function DemoContent() {
                 </div>
                 
                 <h1 className="text-balance text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  {isAct1 
-                    ? <>Diagnóstico <span className="text-red-500">Alta Presión</span></>
-                    : <>Simulacro <span className="text-mq-accent">Diagnóstico</span></>
+                  {isDailyPill
+                    ? <>La Píldora del <span className="text-mq-accent italic">Dr. Q</span></>
+                    : isAct1 
+                      ? <>Diagnóstico <span className="text-red-500">Alta Presión</span></>
+                      : <>Simulacro <span className="text-mq-accent">Diagnóstico</span></>
                   }
                 </h1>
                 
                 <p className="mt-6 max-w-lg text-pretty text-base leading-relaxed text-mq-muted sm:text-lg">
-                  {isAct1
-                    ? `Escenario real para ${urlSpecialty} en la ${urlUniversity}. 15 minutos que definirán tu futuro.`
-                    : <>Mide tu capacidad real frente al examen de residencia con <span className="text-white font-semibold">10 casos clínicos de alta complejidad</span> en solo <span className="text-white font-semibold">5 minutos</span>.</>
+                  {isDailyPill
+                    ? <>Doc, demuestra tu agilidad mental con el <span className="text-white font-semibold">Reto de Hoy</span>. Una sola pregunta, una sola oportunidad.</>
+                    : isAct1
+                      ? `Escenario real para ${urlSpecialty} en la ${urlUniversity}. 15 minutos que definirán tu futuro.`
+                      : <>Mide tu capacidad real frente al examen de residencia con <span className="text-white font-semibold">10 casos clínicos de alta complejidad</span> en solo <span className="text-white font-semibold">5 minutos</span>.</>
                   }
                 </p>
               </header>
@@ -991,10 +996,10 @@ function DemoContent() {
                   className="group relative inline-flex h-16 w-full items-center justify-center overflow-hidden rounded-2xl bg-mq-accent px-8 text-lg font-bold text-mq-accent-foreground shadow-[0_0_40px_-10px_rgba(0,209,255,0.6)] transition-all hover:scale-[1.02] active:scale-[0.98] sm:w-auto sm:min-w-[300px]"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                  Comenzar Evaluación Ahora
+                  {isDailyPill ? "Aceptar Reto del Día" : "Comenzar Evaluación Ahora"}
                 </button>
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-mq-muted/60">
-                  10 preguntas • Sin registro • 100% gratuito
+                  {isDailyPill ? "1 Pregunta • Gratuito • Sin Registro" : "10 preguntas • Sin registro • 100% gratuito"}
                 </p>
               </div>
             </div>
