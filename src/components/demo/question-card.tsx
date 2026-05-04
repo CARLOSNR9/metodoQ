@@ -213,7 +213,7 @@ export function QuestionCard({
                 </p>
                 
                 <Link
-                  href="/dashboard/perfil"
+                  href="/dashboard/planes"
                   className="mt-6 flex h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-xs font-black text-mq-accent-foreground transition-all hover:scale-105"
                 >
                   DESBLOQUEAR ANÁLISIS PRO <ArrowRight size={14} />
