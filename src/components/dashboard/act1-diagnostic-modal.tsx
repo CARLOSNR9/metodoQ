@@ -73,7 +73,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
     setIsTransitioning(true);
     // Redirigir al diagnóstico real con parámetros
     setTimeout(() => {
-      router.push(`/demo?source=act1&university=${encodeURIComponent(selectedUniversity)}&specialty=${encodeURIComponent(selectedSpecialty.name)}`);
+      router.push(`/dashboard/diagnostico?source=act1&university=${encodeURIComponent(selectedUniversity)}&specialty=${encodeURIComponent(selectedSpecialty.name)}`);
     }, 800);
   };
 
