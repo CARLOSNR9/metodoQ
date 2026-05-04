@@ -1099,16 +1099,11 @@ function DemoContent() {
             </div>
           </div>
         )}
-            {user ? (
+            {user && hasUnlimitedAccess ? (
               <AttemptHistory
                 userId={user.uid}
                 refreshKey={historyRefreshKey}
-                maxItems={hasUnlimitedAccess ? 10 : 3}
-                limitedMessage={
-                  isFreePlan
-                    ? "Plan FREE: historial limitado a tus 3 intentos mas recientes."
-                    : undefined
-                }
+                maxItems={10}
               />
             ) : null}
           </>

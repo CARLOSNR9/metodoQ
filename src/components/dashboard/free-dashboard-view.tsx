@@ -11,7 +11,7 @@ import {
   AccumulatedStats
 } from "@/components/dashboard";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 
 interface FreeDashboardViewProps {
@@ -30,24 +30,50 @@ export function FreeDashboardView({
   expiresAt 
 }: FreeDashboardViewProps) {
   const [isAct1Open, setIsAct1Open] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
   
-  // Calcular días restantes (7 días desde el registro para plan FREE)
-  let daysRemaining = 7;
-  
-  if (expiresAt) {
-    daysRemaining = Math.max(0, Math.ceil((new Date(expiresAt).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)));
-  } else if (user?.createdAt) {
-    // Convertir Timestamp de Firestore o fecha ISO a objeto Date
-    const createdDate = typeof user.createdAt.toDate === 'function' 
-      ? user.createdAt.toDate() 
-      : new Date(user.createdAt);
-      
-    const trialExpiration = new Date(createdDate.getTime());
-    trialExpiration.setDate(trialExpiration.getDate() + 7);
+  useEffect(() => {
+    setMounted(true);
     
-    const diff = trialExpiration.getTime() - new Date().getTime();
-    daysRemaining = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-  }
+    let targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 7); // Fallback
+    
+    if (expiresAt) {
+      targetDate = new Date(expiresAt);
+    } else if (user?.createdAt) {
+      const createdDate = typeof user.createdAt.toDate === 'function' 
+        ? user.createdAt.toDate() 
+        : new Date(user.createdAt);
+      targetDate = new Date(createdDate.getTime());
+      targetDate.setDate(targetDate.getDate() + 7);
+    }
+
+    const calculateTimeLeft = () => {
+      const difference = targetDate.getTime() - new Date().getTime();
+      
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, [expiresAt, user?.createdAt]);
 
   return (
     <div className="space-y-10 pb-12">
@@ -55,15 +81,30 @@ export function FreeDashboardView({
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex items-center justify-between rounded-2xl bg-red-500/10 border border-red-500/20 p-4 px-6 backdrop-blur-md"
+        className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-red-500/10 border border-red-500/20 p-4 sm:px-6 backdrop-blur-md"
       >
-        <div className="flex items-center gap-3">
-          <Clock className="text-red-400 w-5 h-5 animate-pulse" />
-          <p className="text-sm font-bold text-red-100">
-            Tu acceso gratis expira en: <span className="text-red-400">{daysRemaining} días</span>
+        <div className="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
+          <Clock className="text-red-400 w-5 h-5 animate-pulse shrink-0" />
+          <p className="text-sm font-bold text-red-100 text-center sm:text-left">
+            Tu acceso gratis expira en:
           </p>
         </div>
-        <p className="hidden sm:block text-xs font-medium text-red-200/60 uppercase tracking-wider">
+
+        {mounted ? (
+          <div className="flex items-center gap-2 text-red-400 font-mono font-black text-xl tracking-wider bg-black/30 px-6 py-2.5 rounded-xl border border-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.15)]">
+            <span>{String(timeLeft.days).padStart(2, '0')}d</span>
+            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50">:</span>
+            <span>{String(timeLeft.hours).padStart(2, '0')}h</span>
+            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50">:</span>
+            <span>{String(timeLeft.minutes).padStart(2, '0')}m</span>
+            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50">:</span>
+            <span>{String(timeLeft.seconds).padStart(2, '0')}s</span>
+          </div>
+        ) : (
+          <div className="h-11 w-48 bg-black/20 rounded-xl animate-pulse" />
+        )}
+
+        <p className="hidden lg:block text-xs font-medium text-red-200/60 uppercase tracking-wider text-right">
           Después de esto pierdes tu progreso
         </p>
       </motion.div>
