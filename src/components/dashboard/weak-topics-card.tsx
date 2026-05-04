@@ -8,7 +8,34 @@ type WeakTopicsCardProps = {
   userId: string;
 };
 
-import { AlertTriangle, Microscope } from "lucide-react";
+import { AlertTriangle, Microscope, Lightbulb, Lock } from "lucide-react";
+
+const TOPIC_HACKS: Record<string, { title: string; content: string }> = {
+  "Semiología": {
+    title: "Hack de Oro: Soplos",
+    content: "Para diferenciar soplos de insuficiencia mitral vs estenosis aórtica: la irradiación a la axila siempre apunta a la mitral."
+  },
+  "Medicina Interna": {
+    title: "Tip de Supervivencia: CAD",
+    content: "En Cetoacidosis Diabética, nunca inicies insulina si el potasio es < 3.3 mEq/L. Es una pregunta trampa frecuente."
+  },
+  "Cirugía General": {
+    title: "Hack: Escala de Alvarado",
+    content: "El síntoma de mayor peso en Alvarado es el dolor que migra a FID (2 puntos). Si no migra, sospecha otro diagnóstico."
+  },
+  "Ginecología": {
+    title: "Tip: Código Rojo",
+    content: "El primer paso ante hemorragia posparto con útero atónico es el masaje uterino bimanual, incluso antes de los fármacos."
+  },
+  "Pediatría": {
+    title: "Hack: Líquidos",
+    content: "Para deshidratación grado III, el bolo inicial es de 20ml/kg de cristaloides isotónicos. No uses dextrosa para expandir."
+  },
+  "Salud Pública": {
+    title: "Tip: Dengue",
+    content: "La caída de la fiebre marca el inicio de la fase crítica. Es el momento de mayor riesgo de extravasación de plasma."
+  }
+};
 
 export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,6 +68,9 @@ export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
     };
   }, [userId]);
 
+  const mainWeakness = topics[0];
+  const hack = mainWeakness ? TOPIC_HACKS[mainWeakness.topic] || TOPIC_HACKS["Medicina Interna"] : null;
+
   return (
     <section className="mq-glass overflow-hidden rounded-3xl p-6 transition-all hover:border-rose-500/50">
       <div className="flex items-center gap-3">
@@ -65,29 +95,74 @@ export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
           </p>
         </div>
       ) : (
-        <ul className="mt-6 space-y-3">
-          {topics.map((item) => (
-            <li
-              key={item.topic}
-              className="group flex flex-col gap-4 rounded-2xl bg-white/[0.03] p-4 transition-all hover:bg-white/[0.06] sm:flex-row sm:items-center sm:justify-between"
-            >
-              <div className="space-y-1">
-                <p className="text-sm font-bold text-white">
-                  {item.topic}
-                </p>
-                <p className="text-[10px] text-rose-400 font-medium">
-                  {item.wrongCount} errores detectados
-                </p>
+        <div className="mt-6 space-y-6">
+          {/* TEASER DE SUPERVIVENCIA */}
+          {hack && (
+            <div className="relative overflow-hidden rounded-2xl border border-mq-accent/30 bg-mq-accent/5 p-5">
+              <div className="relative z-10 flex flex-col gap-3">
+                <div className="flex items-center gap-2">
+                  <Lightbulb size={16} className="text-mq-accent" />
+                  <span className="text-[10px] font-black uppercase tracking-widest text-mq-accent">Perla de Supervivencia</span>
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white mb-1">{hack.title}</h4>
+                  <p className="text-xs text-mq-muted leading-relaxed">
+                    {hack.content}
+                  </p>
+                </div>
               </div>
-              <Link
-                href={`/demo?topic=${encodeURIComponent(item.topic)}`}
-                className="inline-flex h-9 items-center justify-center rounded-lg bg-white/10 px-4 text-xs font-bold text-white transition-all hover:bg-mq-accent hover:text-mq-accent-foreground"
+              <div className="absolute -right-4 -top-4 opacity-5">
+                <Lightbulb size={80} />
+              </div>
+            </div>
+          )}
+
+          <ul className="space-y-3">
+            {topics.map((item, i) => (
+              <li
+                key={item.topic}
+                className="group flex flex-col gap-4 rounded-2xl bg-white/[0.03] p-4 transition-all hover:bg-white/[0.06] sm:flex-row sm:items-center sm:justify-between"
               >
-                Reforzar
-              </Link>
-            </li>
-          ))}
-        </ul>
+                <div className="flex items-center gap-4">
+                  <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${i === 0 ? "bg-rose-500/20 text-rose-400" : "bg-white/5 text-mq-muted"}`}>
+                    <span className="text-xs font-bold">{i + 1}</span>
+                  </div>
+                  <div className="space-y-0.5">
+                    <p className="text-sm font-bold text-white">
+                      {item.topic}
+                    </p>
+                    <p className="text-[10px] text-rose-400 font-medium">
+                      {item.wrongCount} errores críticos
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  {i > 0 && (
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-mq-muted/30">
+                       <Lock size={14} />
+                    </div>
+                  )}
+                  <Link
+                    href={`/demo?topic=${encodeURIComponent(item.topic)}`}
+                    className={`inline-flex h-9 items-center justify-center rounded-lg px-4 text-xs font-bold transition-all ${i === 0 ? "bg-mq-accent text-mq-accent-foreground hover:scale-105" : "bg-white/10 text-white hover:bg-white/20"}`}
+                  >
+                    {i === 0 ? "Reforzar ahora" : "Ver más"}
+                  </Link>
+                </div>
+              </li>
+            ))}
+          </ul>
+          
+          <div className="pt-2">
+            <Link 
+              href="/dashboard/planes"
+              className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mq-muted hover:text-mq-accent transition-colors"
+            >
+              <Lock size={12} /> Desbloquear arsenal completo de perlas
+            </Link>
+          </div>
+        </div>
       )}
     </section>
   );
