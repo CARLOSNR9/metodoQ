@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { TrendingUp, Zap, Clock, Target, ArrowRight } from "lucide-react";
+import { TrendingUp, Zap, Clock, Target, ArrowRight, Lock } from "lucide-react";
 
 export type FinalResultsScreenProps = {
   scorePercentage: number;
@@ -214,13 +214,13 @@ export function FinalResultsScreen({
             {isAct1 ? "Desbloquear mi Plan de Supervivencia PRO" : "Activar mis 7 días GRATIS"}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
-          <button
-            type="button"
-            onClick={onRepeatDemo}
-            className="flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+          <Link
+            href="/dashboard/planes"
+            className="group flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
           >
-            Repetir Diagnóstico
-          </button>
+            <Lock className="mr-2 h-4 w-4" />
+            Repetir Diagnóstico (PRO)
+          </Link>
         </footer>
       </motion.article>
     </div>
