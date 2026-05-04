@@ -141,7 +141,8 @@ export function Act2PredictiveDashboard({
 
         <div className="h-48 w-full">
             <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={gaussData}>
+                <AreaChart data={gaussData} margin={{ top: 20, right: 10, left: 10, bottom: 0 }}>
+                    <XAxis dataKey="x" type="number" domain={['dataMin', 'dataMax']} hide />
                     <defs>
                         <linearGradient id="colorY" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="5%" stopColor="#00d1ff" stopOpacity={0.3}/>
@@ -178,7 +179,7 @@ export function Act2PredictiveDashboard({
             <h4 className="text-sm font-black uppercase tracking-widest text-white self-start">Anatomía de tus Fallos</h4>
             <div className="h-64 w-full">
                 <ResponsiveContainer width="100%" height="100%">
-                    <RadarChart cx="50%" cy="50%" outerRadius="60%" data={radarData}>
+                    <RadarChart cx="50%" cy="50%" outerRadius="45%" data={radarData}>
                         <PolarGrid stroke="#ffffff10" />
                         <PolarAngleAxis dataKey="subject" tick={{ fill: '#8A99B8', fontSize: 10 }} />
                         <Radar
