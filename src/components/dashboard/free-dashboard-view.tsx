@@ -31,8 +31,8 @@ export function FreeDashboardView({
 }: FreeDashboardViewProps) {
   const [isAct1Open, setIsAct1Open] = useState(false);
   
-  // Calcular días restantes (25 días desde el registro para plan FREE)
-  let daysRemaining = 25;
+  // Calcular días restantes (7 días desde el registro para plan FREE)
+  let daysRemaining = 7;
   
   if (expiresAt) {
     daysRemaining = Math.max(0, Math.ceil((new Date(expiresAt).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)));
@@ -43,7 +43,7 @@ export function FreeDashboardView({
       : new Date(user.createdAt);
       
     const trialExpiration = new Date(createdDate.getTime());
-    trialExpiration.setDate(trialExpiration.getDate() + 25);
+    trialExpiration.setDate(trialExpiration.getDate() + 7);
     
     const diff = trialExpiration.getTime() - new Date().getTime();
     daysRemaining = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));

@@ -213,7 +213,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                   </div>
                   {plan.id === "free" ? (
                     <p className="text-sm text-mq-accent font-medium">
-                      Pruébalo por 30 días
+                      Pruébalo por 7 días
                     </p>
                   ) : (
                     cycle > 1 && (
