@@ -899,26 +899,19 @@ function DemoContent() {
           <>
             <header className="max-w-2xl">
               <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-                {user ? (
-                  <>
-                    <p className="text-xs text-mq-muted sm:text-sm">
-                      Sesion activa: {user.email}
-                    </p>
-                    <button
-                      type="button"
-                      onClick={async () => {
-                        await logoutUser();
-                      }}
-                      className="touch-manipulation inline-flex min-h-10 items-center justify-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-foreground transition hover:border-white/30 hover:bg-white/[0.07] sm:text-sm"
-                    >
-                      Cerrar sesion
-                    </button>
-                  </>
-                ) : (
-                  <div className="flex items-center gap-4">
-                    <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">
-                      Modo invitado
-                    </p>
+                <div className="flex flex-1 items-center justify-between">
+                  <div>
+                    {user ? (
+                      <p className="text-xs text-mq-muted sm:text-sm">
+                        Sesion activa: {user.email}
+                      </p>
+                    ) : (
+                      <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">
+                        Modo invitado
+                      </p>
+                    )}
+                  </div>
+                  <div>
                     {hasStarted && !isResultsStep && (
                       <div className="flex items-center gap-2 rounded-lg border border-mq-accent/20 bg-mq-accent/5 px-3 py-1.5 text-sm font-bold text-mq-accent">
                         <span className="h-2 w-2 rounded-full bg-mq-accent animate-pulse" />
@@ -926,7 +919,7 @@ function DemoContent() {
                       </div>
                     )}
                   </div>
-                )}
+                </div>
               </div>
             </header>
 
@@ -1012,6 +1005,8 @@ function DemoContent() {
               wrongAnswers={wrongAnswers}
               totalSeconds={totalSeconds}
               avgResponseTime={avgResponseTime}
+              correctTopics={correctTopicsByName}
+              wrongTopics={wrongTopicsByName}
               onRepeatDemo={() => {
                 startAdaptiveSession();
               }}

@@ -8,6 +8,8 @@ export type FinalResultsScreenProps = {
   wrongAnswers: number;
   totalSeconds: number;
   avgResponseTime: number;
+  correctTopics?: Record<string, number>;
+  wrongTopics?: Record<string, number>;
   onRepeatDemo: () => void;
   className?: string;
   source?: string | null;
@@ -48,6 +50,8 @@ export function FinalResultsScreen({
   wrongAnswers,
   totalSeconds,
   avgResponseTime,
+  correctTopics = {},
+  wrongTopics = {},
   onRepeatDemo,
   className,
   source,
@@ -140,6 +144,8 @@ export function FinalResultsScreen({
               scorePercentage={scorePercentage}
               university={university ?? null}
               specialty={specialty ?? null}
+              correctTopics={correctTopics}
+              wrongTopics={wrongTopics}
             />
           </div>
         )}

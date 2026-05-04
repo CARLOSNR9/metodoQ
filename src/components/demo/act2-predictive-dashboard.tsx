@@ -20,6 +20,8 @@ interface Act2PredictiveDashboardProps {
   scorePercentage: number;
   university: string | null;
   specialty: string | null;
+  correctTopics?: Record<string, number>;
+  wrongTopics?: Record<string, number>;
 }
 
 // Generar puntos para una campana de Gauss
@@ -35,18 +37,12 @@ const generateNormalDistribution = (mean: number, stdDev: number) => {
 
 const gaussData = generateNormalDistribution(550, 150);
 
-const radarData = [
-  { subject: "C. Básicas", A: 35, fullMark: 100 },
-  { subject: "Casos Clínicos", A: 78, fullMark: 100 },
-  { subject: "Listening", A: 22, fullMark: 100 },
-  { subject: "S. Pública", A: 50, fullMark: 100 },
-  { subject: "C. General", A: 40, fullMark: 100 },
-];
-
 export function Act2PredictiveDashboard({ 
   scorePercentage, 
   university = "Universidad Nacional", 
-  specialty = "Especialidad" 
+  specialty = "Especialidad",
+  correctTopics = {},
+  wrongTopics = {}
 }: Act2PredictiveDashboardProps) {
   // Escalar el puntaje a formato UNAL (0-1000)
   // Simulamos que el puntaje de corte para la especialidad es alto
@@ -54,6 +50,53 @@ export function Act2PredictiveDashboard({
   const cutoffScore = 685; // Puntaje de corte ficticio pero realista para UNAL
   const isAdmitted = standardizedScore >= cutoffScore;
   const gap = cutoffScore - standardizedScore;
+
+  // Construir radarData dinámico
+  const allTopicsSet = new Set([...Object.keys(correctTopics), ...Object.keys(wrongTopics)]);
+  let allTopics = Array.from(allTopicsSet);
+  
+  // Si no hay temas (ej. el usuario saltó todo o hay un error), ponemos temas genéricos
+  if (allTopics.length === 0) {
+    allTopics = ["C. Básicas", "Casos Clínicos", "Listening", "S. Pública", "C. General"];
+  }
+
+  // Agrupar los nombres largos de los temas en nombres más cortos para el Radar
+  const shortTopicNames: Record<string, string> = {
+    "Medicina Interna - Cardiología / Guías de Práctica Clínica y Farmacología Cardiovascular.": "Cardiología",
+    "Medicina Interna - Endocrinología y Metabolismo / Farmacoterapéutica Avanzada.": "Endocrinología",
+    "Medicina Interna - Neumología / Terapia Respiratoria Inhalada.": "Neumología",
+    "Infectología / Epidemiología, Legislación y Salud Pública Colombiana.": "S. Pública",
+    "Infectología / Farmacología Clínica y Políticas Ministeriales.": "Infectología",
+    "Medicina Interna - Neurología Clínica / Terapia Neurocrítica.": "Neurología",
+    "Ciencias Básicas Aplicadas / Fisiología Gastrointestinal y Bioquímica.": "C. Básicas",
+    "Medicina Interna - Cardiología / Semiología Integrada y Fisiopatología Mecánica.": "Semiología",
+    "Salud Pública / Epidemiología, Administración Médica y Políticas de Estado.": "Administración",
+    "Razonamiento Abstracto y Lógico / Epidemiología, Análisis de Pruebas Diagnósticas y Bioestadística.": "Bioestadística"
+  };
+
+  const radarData = allTopics.map(topic => {
+    const correct = correctTopics[topic] || 0;
+    const wrong = wrongTopics[topic] || 0;
+    const total = correct + wrong;
+    const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+    const subjectName = shortTopicNames[topic] || topic.split(" ")[0]; // Fallback al primer nombre
+    return {
+      subject: subjectName,
+      A: percentage,
+      fullMark: 100
+    };
+  });
+
+  // Construir fugas críticas (los peores temas)
+  const topicLosses = allTopics.map(topic => {
+    const wrong = wrongTopics[topic] || 0;
+    const loss = wrong * 35; // Asumimos una "pérdida de puntos" ficticia por cada error
+    const subjectName = shortTopicNames[topic] || topic.split(" ")[0];
+    return { name: subjectName, loss, wrong };
+  }).filter(t => t.loss > 0).sort((a, b) => b.loss - a.loss).slice(0, 3); // Top 3 peores
+
+  const bestTopics = radarData.filter(d => d.A >= 70).map(d => d.subject);
+  const worstTopics = topicLosses.map(t => t.name);
 
   return (
     <div className="space-y-10 animate-in fade-in duration-1000">
@@ -158,20 +201,18 @@ export function Act2PredictiveDashboard({
                     </div>
                     <h5 className="text-sm font-bold text-white uppercase tracking-wider">Fuga Crítica de Puntos</h5>
                 </div>
-                <ul className="space-y-3">
-                    <li className="flex justify-between items-center text-xs">
-                        <span className="text-mq-muted">Ciencias Básicas</span>
-                        <span className="text-red-400 font-bold">-185 pts</span>
-                    </li>
-                    <li className="flex justify-between items-center text-xs">
-                        <span className="text-mq-muted">Listening (Inglés)</span>
-                        <span className="text-red-400 font-bold">-120 pts</span>
-                    </li>
-                    <li className="flex justify-between items-center text-xs">
-                        <span className="text-mq-muted">Cultura General</span>
-                        <span className="text-red-400 font-bold">-45 pts</span>
-                    </li>
-                </ul>
+                {topicLosses.length > 0 ? (
+                    <ul className="space-y-3">
+                        {topicLosses.map(t => (
+                            <li key={t.name} className="flex justify-between items-center text-xs">
+                                <span className="text-mq-muted">{t.name}</span>
+                                <span className="text-red-400 font-bold">-{t.loss} pts</span>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p className="text-xs text-mq-muted">¡Excelente! No tuviste fugas críticas de puntos en esta sesión.</p>
+                )}
             </div>
 
             <div className="rounded-3xl border border-mq-accent/20 bg-mq-accent/5 p-6 space-y-3">
@@ -180,7 +221,12 @@ export function Act2PredictiveDashboard({
                     <h5 className="text-sm font-black uppercase tracking-wider">Plan de Supervivencia</h5>
                 </div>
                 <p className="text-xs text-mq-muted leading-relaxed">
-                    Tu dominio clínico es alto (78%), pero las <span className="text-white font-bold">Ciencias Básicas</span> y el <span className="text-white font-bold">Listening</span> están hundiendo tu promedio estandarizado. Necesitas un entrenamiento focalizado en estas áreas para asegurar la plaza.
+                    {bestTopics.length > 0 ? `Tu dominio clínico en áreas como ${bestTopics.join(", ")} te mantiene competitivo, pero ` : `Es imperativo reevaluar tus bases, ya que `}
+                    {worstTopics.length > 0 ? (
+                        <>las áreas de <span className="text-white font-bold">{worstTopics.join(" y ")}</span> están hundiendo tu promedio estandarizado. Necesitas un entrenamiento focalizado en estas áreas para asegurar la plaza.</>
+                    ) : (
+                        <>estás en un nivel excelente de retención de conceptos. Sigue entrenando para mantener este ritmo competitivo de cara al examen.</>
+                    )}
                 </p>
             </div>
         </div>
