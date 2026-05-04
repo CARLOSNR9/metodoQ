@@ -8,11 +8,13 @@ import {
   PastClasses, 
   DailyPlanCard,
   SummaryCards,
-  AccumulatedStats
+  AccumulatedStats,
+  WeakTopicsCard
 } from "@/components/dashboard";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Act1DiagnosticModal } from "./act1-diagnostic-modal";
+import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashboard";
 
 interface FreeDashboardViewProps {
   user: any;
@@ -121,9 +123,11 @@ export function FreeDashboardView({
             </div>
             
             <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl leading-[1.1]">
-              {user?.attemptedExam 
-                ? <>Tu estrategia actual <span className="text-red-500 italic">necesita un ajuste</span> <br className="hidden sm:block" /> para pasar.</>
-                : <>Tu nivel actual <span className="text-red-500 italic">NO es suficiente</span> <br className="hidden sm:block" /> para pasar.</>
+              {user?.attemptsCount > 0
+                ? <>Análisis de <span className="text-red-500 italic">Supervivencia</span> <br className="hidden sm:block" /> Completado.</>
+                : user?.attemptedExam 
+                  ? <>Tu estrategia actual <span className="text-red-500 italic">necesita un ajuste</span> <br className="hidden sm:block" /> para pasar.</>
+                  : <>Tu nivel actual <span className="text-red-500 italic">NO es suficiente</span> <br className="hidden sm:block" /> para pasar.</>
               }
             </h1>
             
@@ -135,14 +139,21 @@ export function FreeDashboardView({
             </p>
 
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-              <button
-                onClick={() => setIsAct1Open(true)}
-                className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:brightness-110 active:scale-95"
-              >
-                <Target size={20} fill="currentColor" />
-                <span>Empezar diagnóstico ahora</span>
-                <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-              </button>
+              {user?.attemptsCount > 0 ? (
+                <div className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-surface/50 border border-white/10 px-10 text-base font-black text-white/50 cursor-not-allowed">
+                  <Lock size={20} />
+                  <span>Diagnóstico Completado</span>
+                </div>
+              ) : (
+                <button
+                  onClick={() => setIsAct1Open(true)}
+                  className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:brightness-110 active:scale-95"
+                >
+                  <Target size={20} fill="currentColor" />
+                  <span>Empezar diagnóstico ahora</span>
+                  <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                </button>
+              )}
               
               <Link
                 href="/dashboard/planes"
@@ -162,29 +173,81 @@ export function FreeDashboardView({
       </header>
 
       <div className="grid gap-10 lg:grid-cols-3">
-        {/* 2. BLOQUE PRINCIPAL - DIAGNÓSTICO */}
+        {/* 2. BLOQUE PRINCIPAL - DIAGNÓSTICO O RESULTADOS */}
         <div className="lg:col-span-2 space-y-10">
-          <section className="relative overflow-hidden rounded-[2rem] border-2 border-mq-accent/30 bg-mq-surface p-8 sm:p-10 shadow-2xl">
-             <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
-                <div className="flex-1 space-y-4">
-                  <h2 className="text-3xl font-black text-white">Diagnóstico Inicial</h2>
-                  <p className="text-mq-muted leading-relaxed">
-                    Simulacro real de <span className="text-white font-bold">10 preguntas</span> basado en los estándares de {user?.goalUniversity && user.goalUniversity !== "Otra" ? `la ${user.goalUniversity}` : "tu universidad"}. Descubre tus puntos débiles en minutos.
-                  </p>
-                  <div className="flex items-center gap-4 text-xs font-bold text-mq-muted uppercase tracking-widest pt-2">
-                    <span className="flex items-center gap-1.5"><Clock size={14} className="text-mq-accent" /> Duración: 2 min</span>
-                    <span className="flex items-center gap-1.5"><Target size={14} className="text-mq-accent" /> IA Adaptativa</span>
+          {user?.attemptsCount > 0 ? (
+            <div className="space-y-10">
+              <SummaryCards userId={user.uid} />
+              
+              <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
+                <div className="mb-8 space-y-2">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/20 bg-mq-accent/10 px-4 py-1">
+                    <Sparkles size={14} className="text-mq-accent" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-mq-accent">Análisis de Desempeño IA</span>
                   </div>
+                  <h2 className="text-3xl font-black text-white">Tu Realidad Académica</h2>
+                  <p className="text-mq-muted text-sm">Este es el estado actual de tu preparación comparado con el estándar de admisión.</p>
                 </div>
-                <button
-                  onClick={() => setIsAct1Open(true)}
-                  className="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-mq-accent px-8 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105"
-                >
-                  Empezar ahora
-                </button>
-             </div>
-             <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-mq-accent/5 to-transparent pointer-events-none" />
-          </section>
+                
+                <Act2PredictiveDashboard 
+                    scorePercentage={user?.lastScore || 0}
+                    university={user?.goalUniversity || "Universidad Nacional"}
+                    specialty={user?.goalSpecialty || "Tu Especialidad"}
+                    correctTopics={user?.topicStats ? Object.fromEntries(Object.entries(user.topicStats).map(([k, v]: [string, any]) => [k, v.correct])) : {}}
+                    wrongTopics={user?.topicStats ? Object.fromEntries(Object.entries(user.topicStats).map(([k, v]: [string, any]) => [k, v.wrong])) : {}}
+                />
+              </section>
+
+              <WeakTopicsCard userId={user.uid} />
+
+              <div className="rounded-[2.5rem] border border-mq-accent/20 bg-mq-accent/5 p-8 text-center space-y-6">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
+                    <Sparkles size={32} />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-white italic">"Doc, los números no mienten, pero no definen tu final."</h3>
+                  <p className="text-sm text-mq-muted max-w-lg mx-auto leading-relaxed">
+                    {user?.lastScore < 60 
+                      ? "Tu base actual tiene fugas críticas que te dejarían fuera en la primera ronda. Necesitas dejar de 'estudiar' y empezar a 'entrenar' bajo presión."
+                      : "Tienes un potencial real, pero en la UNAL la diferencia entre un residente y un médico general es de apenas 1.5 puntos. No te confíes."
+                    }
+                  </p>
+                </div>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-mq-accent font-black">- DR. Q</p>
+                
+                <div className="pt-4">
+                  <Link
+                    href="/dashboard/planes"
+                    className="mq-premium-glow inline-flex h-14 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105"
+                  >
+                    ACCEDER AL ARSENAL COMPLETO <ArrowRight size={18} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <section className="relative overflow-hidden rounded-[2rem] border-2 border-mq-accent/30 bg-mq-surface p-8 sm:p-10 shadow-2xl">
+               <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
+                  <div className="flex-1 space-y-4">
+                    <h2 className="text-3xl font-black text-white">Diagnóstico Inicial</h2>
+                    <p className="text-mq-muted leading-relaxed">
+                      Simulacro real de <span className="text-white font-bold">10 preguntas</span> basado en los estándares de {user?.goalUniversity && user.goalUniversity !== "Otra" ? `la ${user.goalUniversity}` : "tu universidad"}. Descubre tus puntos débiles en minutos.
+                    </p>
+                    <div className="flex items-center gap-4 text-xs font-bold text-mq-muted uppercase tracking-widest pt-2">
+                      <span className="flex items-center gap-1.5"><Clock size={14} className="text-mq-accent" /> Duración: 2 min</span>
+                      <span className="flex items-center gap-1.5"><Target size={14} className="text-mq-accent" /> IA Adaptativa</span>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setIsAct1Open(true)}
+                    className="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-mq-accent px-8 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105"
+                  >
+                    Empezar ahora
+                  </button>
+               </div>
+               <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-mq-accent/5 to-transparent pointer-events-none" />
+            </section>
+          )}
 
           {/* 6. PLAN DIARIO (TU MISIÓN DE HOY) */}
           <div className="space-y-4">
@@ -202,10 +265,17 @@ export function FreeDashboardView({
                   </div>
                   <p className="text-sm text-mq-muted mb-6">Mantén tu racha y entrena tu agilidad mental con el simulacro diario.</p>
                   <button 
-                    onClick={() => setIsAct1Open(true)}
-                    className="text-xs font-bold text-mq-accent flex items-center gap-2 group-hover:gap-3 transition-all"
+                    onClick={() => {
+                      if (user?.attemptsCount > 0) {
+                        // Si ya lo hizo, redirigir a planes o mostrar que está bloqueado
+                        window.location.href = "/dashboard/planes";
+                      } else {
+                        setIsAct1Open(true);
+                      }
+                    }}
+                    className={`text-xs font-bold flex items-center gap-2 group-hover:gap-3 transition-all ${user?.attemptsCount > 0 ? "text-mq-muted" : "text-mq-accent"}`}
                   >
-                    IR A ENTRENAR <ArrowRight size={14} />
+                    {user?.attemptsCount > 0 ? <><Lock size={14} /> DESBLOQUEAR EN PRO</> : <>IR A ENTRENAR <ArrowRight size={14} /></>}
                   </button>
                </div>
                <div className="group rounded-2xl border border-mq-border-strong bg-white/[0.03] p-6 transition-all hover:bg-white/[0.05]">
