@@ -177,7 +177,7 @@ export function FreeDashboardView({
       <div className="grid gap-10 lg:grid-cols-3">
         {/* 2. BLOQUE PRINCIPAL - DIAGNÓSTICO O RESULTADOS */}
         <div className="lg:col-span-2 space-y-10">
-          {/* Lógica para el Reto de Hoy Personalizado */}
+          {/* 2. EL HÁBITO: Daily Pill (Lo primero debajo del Hero) */}
           {(() => {
             const isLocked = !user?.attemptsCount || user.attemptsCount === 0;
             let dynamicTopic = "Semiología"; // Default
@@ -210,9 +210,37 @@ export function FreeDashboardView({
 
             return <DailyPillCard topic={cleanTopic} isLocked={isLocked} />;
           })()}
-          
+
+          {/* 3. LA REVELACIÓN: Resultados del Diagnóstico o Invitación */}
           {user?.attemptsCount > 0 ? (
             <div className="space-y-10">
+              {/* LA REVELACIÓN (Modo Evolutivo) */}
+              <motion.article 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="relative overflow-hidden rounded-[2rem] border border-mq-accent/30 bg-mq-accent/5 p-8"
+              >
+                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mq-accent/10 blur-[100px]" />
+                <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/20 text-mq-accent shadow-[0_0_30px_rgba(0,209,255,0.3)]">
+                    <Sparkles size={32} />
+                  </div>
+                  <div className="flex-1 space-y-2 text-center md:text-left">
+                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">IA: Análisis de Debilidades Listo</h3>
+                    <p className="text-mq-muted leading-relaxed max-w-xl">
+                      Tu probabilidad de pasar es del <span className="text-white font-bold">{user?.lastScore || 0}%</span> en modo Demo. 
+                      Hemos detectado <span className="text-mq-accent font-bold">brechas críticas</span> en tu razonamiento clínico.
+                    </p>
+                  </div>
+                  <Link
+                    href="/dashboard/planes"
+                    className="w-full md:w-auto mq-premium-glow inline-flex h-14 items-center justify-center gap-3 rounded-xl bg-mq-accent px-8 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105"
+                  >
+                    VER ANATOMÍA DE MIS FALLOS (PRO)
+                  </Link>
+                </div>
+              </motion.article>
+
               <SummaryCards userId={user.uid} />
               
               <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
@@ -267,9 +295,9 @@ export function FreeDashboardView({
             <section className="relative overflow-hidden rounded-[2rem] border-2 border-mq-accent/30 bg-mq-surface p-8 sm:p-10 shadow-2xl">
                <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
                   <div className="flex-1 space-y-4">
-                    <h2 className="text-3xl font-black text-white">Diagnóstico Inicial</h2>
+                    <h2 className="text-3xl font-black text-white">Tu Análisis de Rendimiento está esperando</h2>
                     <p className="text-mq-muted leading-relaxed">
-                      Simulacro real de <span className="text-white font-bold">10 preguntas</span> basado en los estándares de {user?.goalUniversity && user.goalUniversity !== "Otra" ? `la ${user.goalUniversity}` : "tu universidad"}. Descubre tus puntos débiles en minutos.
+                      Nuestra IA necesita al menos un entrenamiento para calcular tu probabilidad de éxito y detectar tus puntos débiles.
                     </p>
                     <div className="flex items-center gap-4 text-xs font-bold text-mq-muted uppercase tracking-widest pt-2">
                       <span className="flex items-center gap-1.5"><Clock size={14} className="text-mq-accent" /> Duración: 2 min</span>
@@ -280,7 +308,7 @@ export function FreeDashboardView({
                     onClick={() => setIsAct1Open(true)}
                     className="w-full sm:w-auto inline-flex h-14 items-center justify-center gap-2 rounded-xl bg-mq-accent px-8 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105"
                   >
-                    Empezar ahora
+                    Realizar primer diagnóstico
                   </button>
                </div>
                <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-mq-accent/5 to-transparent pointer-events-none" />
@@ -376,8 +404,12 @@ export function FreeDashboardView({
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-xl font-black text-white">Lo que vas a desbloquear</h3>
-              <p className="text-sm text-mq-muted">Al completar tu diagnóstico Pro:</p>
+              <h3 className="text-xl font-black text-white">
+                {user?.attemptsCount > 0 ? "Lleva tu análisis al siguiente nivel" : "Lo que vas a desbloquear"}
+              </h3>
+              <p className="text-sm text-mq-muted">
+                {user?.attemptsCount > 0 ? "Tu perfil PRO incluye:" : "Al completar tu diagnóstico Pro:"}
+              </p>
             </div>
 
             <ul className="space-y-6">
