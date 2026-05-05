@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { TrendingUp, Zap, Clock, Target, ArrowRight, Lock } from "lucide-react";
+import { TrendingUp, Zap, Clock, Target, ArrowRight, Lock, Sparkles } from "lucide-react";
 
 export type FinalResultsScreenProps = {
   scorePercentage: number;
