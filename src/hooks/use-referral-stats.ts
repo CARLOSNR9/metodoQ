@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
-import { getReferralCount } from "@/lib/auth";
+import { getReferralCount, generateReferralCode } from "@/lib/auth";
 
 export function useReferralStats(userId: string | undefined) {
   const [referralCode, setReferralCode] = useState<string | null>(null);
@@ -16,12 +16,21 @@ export function useReferralStats(userId: string | undefined) {
     async function fetchStats() {
       setLoading(true);
       try {
-        const userRef = doc(getFirebaseDb(), "users", userId!);
+        const db = getFirebaseDb();
+        const userRef = doc(db, "users", userId!);
         const userSnap = await getDoc(userRef);
         
         if (userSnap.exists()) {
           const data = userSnap.data();
-          const code = data.referralCode;
+          let code = data.referralCode;
+          
+          // AUTO-REPARACIÓN: Si el usuario no tiene código, lo generamos ahora
+          if (!code) {
+            code = generateReferralCode();
+            await updateDoc(userRef, { referralCode: code });
+            console.log("Referral code generated and saved for user:", userId);
+          }
+
           setReferralCode(code);
           
           if (code) {
@@ -41,3 +50,4 @@ export function useReferralStats(userId: string | undefined) {
 
   return { referralCode, referralCount, loading };
 }
+
