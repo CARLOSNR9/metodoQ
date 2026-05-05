@@ -848,6 +848,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 hasTrackedFinishDemoRef.current = false;
                 setTotalSeconds(0);
               }}
+              source={isDailyPill ? "daily-pill" : source}
             />
             {user && (
               <div className="mt-12 space-y-12">

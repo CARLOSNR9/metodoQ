@@ -59,6 +59,7 @@ export function FinalResultsScreen({
   specialty,
 }: FinalResultsScreenProps) {
   const isAct1 = source === "act1";
+  const isDailyPill = source === "daily-pill";
   const profile = getPerformanceProfile(scorePercentage);
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
@@ -128,10 +129,12 @@ export function FinalResultsScreen({
           )}
 
           <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-            {isAct1 ? "Diagnóstico Predictivo de Plaza" : profile.title}
+            {isDailyPill ? "¡Reto Completado!" : isAct1 ? "Diagnóstico Predictivo de Plaza" : profile.title}
           </h2>
           <p className="mt-3 max-w-md text-base leading-relaxed text-mq-muted sm:text-lg">
-            {isAct1 
+            {isDailyPill
+              ? "Has cumplido con tu dosis de conocimiento de hoy. La constancia es lo que separa a los residentes de los aspirantes."
+              : isAct1 
               ? `Hemos calibrado tus resultados contra el histórico de la ${university} para la especialidad de ${specialty}.`
               : profile.message
             }
@@ -196,9 +199,17 @@ export function FinalResultsScreen({
                   <Target className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white">Tu brecha para la plaza</h4>
+                  <h4 className="text-sm font-bold text-white">
+                    {scorePercentage >= 80 ? "Nivel de Residente" : "Tu brecha para la plaza"}
+                  </h4>
                   <p className="mt-1 text-sm leading-relaxed text-mq-muted">
-                    Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="text-white font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.
+                    {scorePercentage >= 90 ? (
+                      <>Estás en el <span className="text-white font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
+                    ) : scorePercentage >= 80 ? (
+                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
+                    ) : (
+                      <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="text-white font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
+                    )}
                   </p>
                 </div>
               </div>
