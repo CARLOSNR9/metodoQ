@@ -71,33 +71,7 @@ export function SummaryCards({ userId }: SummaryCardsProps) {
   }
 
   if (!metrics.hasData) {
-    return (
-      <article className="mq-glass overflow-hidden rounded-[2rem] p-8 sm:p-10">
-        <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/10 text-mq-accent">
-            <TrendingUp size={32} />
-          </div>
-          <div className="flex-1 space-y-2">
-            <h3 className="text-xl font-bold text-white">
-              {isLoading ? "Sincronizando tu progreso..." : "Tu análisis de rendimiento está esperando"}
-            </h3>
-            <p className="max-w-xl text-sm text-mq-muted">
-              {isLoading 
-                ? "Estamos procesando tus últimos resultados para actualizar tu perfil de sobrevivencia."
-                : "Nuestra IA necesita al menos un entrenamiento para empezar a calcular tu probabilidad de éxito y detectar tus puntos débiles."}
-            </p>
-          </div>
-          {!isLoading && (
-            <Link
-              href="/demo"
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-bold text-mq-accent-foreground transition-all hover:scale-105 active:scale-95"
-            >
-              Realizar primer diagnóstico
-            </Link>
-          )}
-        </div>
-      </article>
-    );
+    return null;
   }
 
   return (
