@@ -160,6 +160,42 @@ function selectAdaptiveQuestions(
 
 const demoQuestions: DemoQuestion[] = [
   {
+    id: "q0-semio",
+    topic: "Semiología",
+    statement:
+      "Durante la auscultación cardíaca de un paciente de 72 años con antecedente de hipertensión arterial mal controlada, se detecta un ruido de baja frecuencia al final de la diástole, justo antes del primer ruido cardíaco (S1). Este hallazgo es más prominente en el ápex con la campana del estetoscopio. ¿Cuál es la fisiopatología más probable de este ruido supernumerario?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Vibración de las paredes ventriculares durante el llenado rápido pasivo inicial (S3).",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Contracción auricular contra un ventrículo con distensibilidad disminuida (S4).",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Apertura de una válvula mitral estenosada con cuerdas tendinosas calcificadas.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Cierre retardado de la válvula pulmonar por un bloqueo de rama derecha.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "El cuarto ruido cardíaco (S4) es un ruido presistólico causado por la contracción auricular activa que empuja sangre hacia un ventrículo rígido o con distensibilidad disminuida. Es un signo clásico de hipertrofia ventricular izquierda o isquemia miocárdica, muy común en pacientes con cardiopatía hipertensiva de larga data.",
+    keyPoints: [
+      "El S4 ocurre al final de la diástole (presístole) y coincide con la sístole auricular.",
+      "Indica una disminución en la distensibilidad (compliance) del ventrículo.",
+      "Tema: Fisiopatología de los ruidos cardíacos supernumerarios y semiología cardiovascular.",
+    ],
+  },
+  {
     id: "q1",
     topic: "Medicina Interna",
     statement:
@@ -586,12 +622,12 @@ function DemoContent() {
   );
   const avgResponseTime = calculateAverageResponseTime(responseTimes);
 
-  // Auto-start si viene de Act 1
+  // Auto-start si viene de Act 1 o es el Reto del Día (Daily Pill)
   useEffect(() => {
-    if (isAct1 && !hasStarted && !isLoadingPlan && !isCheckingAuth) {
+    if ((isAct1 || isDailyPill) && !hasStarted && !isLoadingPlan && !isCheckingAuth) {
       startAdaptiveSession();
     }
-  }, [isAct1, hasStarted, isLoadingPlan, isCheckingAuth]);
+  }, [isAct1, isDailyPill, hasStarted, isLoadingPlan, isCheckingAuth]);
 
   useEffect(() => {
     let unsubscribe: (() => void) | undefined;
@@ -898,38 +934,40 @@ function DemoContent() {
           </div>
         ) : (
           <>
-            <header className="max-w-2xl">
-              <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-                {user ? (
-                  <>
-                    <p className="text-xs text-mq-muted sm:text-sm">
-                      Sesion activa: {user.email}
-                    </p>
-                    <button
-                      type="button"
-                      onClick={async () => {
-                        await logoutUser();
-                      }}
-                      className="touch-manipulation inline-flex min-h-10 items-center justify-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-foreground transition hover:border-white/30 hover:bg-white/[0.07] sm:text-sm"
-                    >
-                      Cerrar sesion
-                    </button>
-                  </>
-                ) : (
-                  <div className="flex items-center gap-4">
-                    <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">
-                      Modo invitado
-                    </p>
-                    {hasStarted && !isResultsStep && (
-                      <div className="flex items-center gap-2 rounded-lg border border-mq-accent/20 bg-mq-accent/5 px-3 py-1.5 text-sm font-bold text-mq-accent">
-                        <span className="h-2 w-2 rounded-full bg-mq-accent animate-pulse" />
-                        {formatTime(totalSeconds)}
-                      </div>
-                    )}
-                  </div>
-                )}
-              </div>
-            </header>
+            {!isDailyPill && (
+              <header className="max-w-2xl">
+                <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+                  {user ? (
+                    <>
+                      <p className="text-xs text-mq-muted sm:text-sm">
+                        Sesion activa: {user.email}
+                      </p>
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          await logoutUser();
+                        }}
+                        className="touch-manipulation inline-flex min-h-10 items-center justify-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-foreground transition hover:border-white/30 hover:bg-white/[0.07] sm:text-sm"
+                      >
+                        Cerrar sesion
+                      </button>
+                    </>
+                  ) : (
+                    <div className="flex items-center gap-4">
+                      <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">
+                        Modo invitado
+                      </p>
+                      {hasStarted && !isResultsStep && (
+                        <div className="flex items-center gap-2 rounded-lg border border-mq-accent/20 bg-mq-accent/5 px-3 py-1.5 text-sm font-bold text-mq-accent">
+                          <span className="h-2 w-2 rounded-full bg-mq-accent animate-pulse" />
+                          {formatTime(totalSeconds)}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </header>
+            )}
 
         {!hasStarted ? (
           <motion.div
