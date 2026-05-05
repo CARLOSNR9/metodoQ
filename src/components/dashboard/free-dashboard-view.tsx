@@ -45,32 +45,44 @@ export function FreeDashboardView({
   useEffect(() => {
     setMounted(true);
     
-    let targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 7); // Fallback por defecto (7 días desde ahora)
-    
-    if (expiresAt) {
-      targetDate = new Date(expiresAt);
-    } else {
-      // Intentamos obtener la fecha de creación del perfil (Firestore)
-      const firestoreCreatedAt = user?.createdAt;
-      // O de los metadatos de Auth (Firebase Auth)
-      const authCreationTime = user?.metadata?.creationTime;
+    const calculateTargetDate = () => {
+      // 1. Prioridad: Fecha de expiración explícita (del plan)
+      if (expiresAt) {
+        return new Date(expiresAt);
+      }
 
+      // 2. Intentamos obtener la fecha de creación del perfil (Firestore)
+      const firestoreCreatedAt = user?.createdAt;
       if (firestoreCreatedAt) {
         const createdDate = typeof firestoreCreatedAt.toDate === 'function' 
           ? firestoreCreatedAt.toDate() 
           : new Date(firestoreCreatedAt);
-        targetDate = new Date(createdDate.getTime());
-        targetDate.setDate(targetDate.getDate() + 7);
-      } else if (authCreationTime) {
-        const createdDate = new Date(authCreationTime);
-        targetDate = new Date(createdDate.getTime());
-        targetDate.setDate(targetDate.getDate() + 7);
+        const target = new Date(createdDate.getTime());
+        target.setDate(target.getDate() + 7);
+        return target;
       }
-    }
+
+      // 3. Intentamos obtener de los metadatos de Auth (Firebase Auth)
+      // Nota: user.metadata.creationTime es un string
+      const authCreationTime = user?.metadata?.creationTime;
+      if (authCreationTime) {
+        const createdDate = new Date(authCreationTime);
+        const target = new Date(createdDate.getTime());
+        target.setDate(target.getDate() + 7);
+        return target;
+      }
+
+      // 4. Fallback: 7 días desde ahora (esto es lo que causa el reset si falla lo anterior)
+      const fallbackTarget = new Date();
+      fallbackTarget.setDate(fallbackTarget.getDate() + 7);
+      return fallbackTarget;
+    };
+
+    const targetDate = calculateTargetDate();
 
     const calculateTimeLeft = () => {
-      const difference = targetDate.getTime() - new Date().getTime();
+      const now = new Date().getTime();
+      const difference = targetDate.getTime() - now;
       
       if (difference > 0) {
         setTimeLeft({
@@ -88,7 +100,7 @@ export function FreeDashboardView({
     const timer = setInterval(calculateTimeLeft, 1000);
 
     return () => clearInterval(timer);
-  }, [expiresAt, user?.createdAt]);
+  }, [expiresAt, user?.createdAt, user?.metadata?.creationTime]);
 
   return (
     <div className="space-y-10 pb-12">

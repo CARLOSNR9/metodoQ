@@ -55,7 +55,7 @@ export default function DashboardPage() {
       <>
         <OnboardingModal userId={user.uid} />
         <FreeDashboardView 
-          user={profile || user}
+          user={profile ? { ...user, ...profile } : user}
           referralCode={referralCode}
           referralCount={referralCount}
           isLoadingReferrals={isLoadingReferrals}
