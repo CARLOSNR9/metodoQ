@@ -58,7 +58,7 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
             <div className="space-y-0.5">
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-accent/80">LA PÍLDORA DEL DR. Q</p>
               <h3 className="text-xl font-black text-white flex items-center gap-2">
-                {isCompletedToday ? `Reto ${streak} Completado` : 'Reto de Hoy'}
+                {isCompletedToday ? `Reto Día ${streak} Completado` : `Reto del Día ${streak + 1}`}
                 <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold border ${isCompletedToday ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-white/5 text-mq-muted border-white/10'}`}>
                   {isCompletedToday ? '¡CONSEGUIDO!' : 'GRATIS'}
                 </span>

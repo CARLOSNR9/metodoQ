@@ -192,7 +192,23 @@ export function FreeDashboardView({
               });
             }
 
-            return <DailyPillCard topic={dynamicTopic} isLocked={isLocked} />;
+            // Mapeo de nombres cortos para que el reto se vea enfocado en un solo tema específico
+            const shortTopicNames: Record<string, string> = {
+              "Medicina Interna - Cardiología / Guías de Práctica Clínica y Farmacología Cardiovascular.": "Cardiología",
+              "Medicina Interna - Endocrinología y Metabolismo / Farmacoterapéutica Avanzada.": "Endocrinología",
+              "Medicina Interna - Neumología / Terapia Respiratoria Inhalada.": "Neumología",
+              "Infectología / Epidemiología, Legislación y Salud Pública Colombiana.": "Salud Pública",
+              "Infectología / Farmacología Clínica y Políticas Ministeriales.": "Infectología",
+              "Medicina Interna - Neurología Clínica / Terapia Neurocrítica.": "Neurología",
+              "Ciencias Básicas Aplicadas / Fisiología Gastrointestinal y Bioquímica.": "Ciencias Básicas",
+              "Medicina Interna - Cardiología / Semiología Integrada y Fisiopatología Mecánica.": "Semiología",
+              "Salud Pública / Epidemiología, Administración Médica y Políticas de Estado.": "Administración",
+              "Razonamiento Abstracto y Lógico / Epidemiología, Análisis de Pruebas Diagnósticas y Bioestadística.": "Bioestadística"
+            };
+
+            const cleanTopic = shortTopicNames[dynamicTopic] || dynamicTopic.split(" / ")[0] || dynamicTopic;
+
+            return <DailyPillCard topic={cleanTopic} isLocked={isLocked} />;
           })()}
           
           {user?.attemptsCount > 0 ? (

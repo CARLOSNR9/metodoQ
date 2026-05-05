@@ -30,6 +30,7 @@ import {
   registerTrainingDay,
   completeDailyPill,
 } from "@/lib/results";
+import { DAILY_CHALLENGES } from "@/data/daily-challenges";
 
 export type DemoQuestion = {
   id: string;
@@ -670,9 +671,13 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const startAdaptiveSession = () => {
     let pool = [...demoQuestions];
 
-    // Si es el Reto de Hoy (Daily Pill), filtramos solo por el tema anunciado: Semiología
+    // Si es el Reto de Hoy (Daily Pill), usamos la lista curada de 7 días
     if (isDailyPill) {
-      pool = pool.filter((q) => q.topic === "Semiología");
+      // Determinamos el día basado en la racha (streak) o defecto a Día 1
+      // Buscamos en el profile si existe el streak
+      const streak = (learningProfile as any)?.streak ?? 0;
+      const dayIndex = streak % DAILY_CHALLENGES.length;
+      pool = [DAILY_CHALLENGES[dayIndex]];
     }
 
     const selected = selectAdaptiveQuestions(
