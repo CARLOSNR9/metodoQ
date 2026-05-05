@@ -551,8 +551,44 @@ const demoQuestions: DemoQuestion[] = [
       "Ante un IAMCEST, si el tiempo puerta-balón estimado para angioplastia supera los 120 minutos, la guía clínica ordena fibrinólisis (puerta-aguja <30 min). El diagnóstico es clínico y eléctrico; esperar biomarcadores o retrasar la reperfusión por un traslado prolongado condena al miocardio a necrosis irreversible.",
     keyPoints: [
       "Fibrinólisis es la elección si la angioplastia no es posible en menos de 120 minutos.",
-      "El tiempo es músculo: no se deben esperar troponinas para iniciar la reperfusión en IAMCEST.",
+      "El tiempo es músculo: no se deben esperar troponinas para iniciar la reperfusión in IAMCEST.",
       "Tema: Algoritmos de reperfusión miocárdica y métricas de tiempo en urgencias.",
+    ],
+  },
+  {
+    id: "q11-semio",
+    topic: "Semiología",
+    statement:
+      "En el marco del examen oral de residencia, el profesor titular le interroga exhaustivamente acerca de la semiología florida de un paciente geriátrico hospitalizado por una cardiomiopatía dilatada terminal de origen isquémico-necrótico, cuya fracción de eyección del ventrículo izquierdo se encuentra gravemente deprimida (25%). El paciente experimenta síntomas clásicos que incluyen ortopnea severa, ingurgitación venosa yugular evidente a 45 grados de inclinación y un reflejo hepatoyugular positivo. Aplicando el principio fundamental de 'economía del conocimiento' de la Universidad Nacional, ¿cuál es la explicación fisiopatológica mecánica que justifica de manera unívoca la aparición de este conjunto de signos clínicos congestivos?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Disminución absoluta del gasto cardíaco anterógrado celular, induciendo isquemia microvascular aguda.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Activación primaria y sostenida del sistema nervioso simpático que produce vasoconstricción arterial generalizada.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Falla mecánica intrínseca de la bomba que imposibilita el vaciamiento sistólico, generando un aumento de las presiones telediastólicas que se transmiten de forma pasiva y retrógrada a los lechos venosos.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Destrucción anatómica valvular intrínseca y permanente originada de forma secundaria a la remodelación concéntrica severa.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "La respuesta correcta es la C. Los síntomas congestivos en la insuficiencia cardíaca con FEVI reducida derivan de un principio hidrostático: si la bomba no puede vaciarse adecuadamente, las presiones telediastólicas dentro del ventrículo aumentan y se transmiten pasiva y retrógradamente hacia el circuito pulmonar y sistémico.",
+    keyPoints: [
+      "La fisiopatología congestiva se explica por la transmisión de presiones retrógradas.",
+      "La falla de vaciamiento sistólico eleva la presión telediastólica, motor de la congestión.",
+      "Tema: Fisiopatología cardiovascular y semiología clínica avanzada.",
     ],
   },
 ];
@@ -628,8 +664,15 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   };
 
   const startAdaptiveSession = () => {
+    let pool = [...demoQuestions];
+
+    // Si es el Reto de Hoy (Daily Pill), filtramos solo por el tema anunciado: Semiología
+    if (isDailyPill) {
+      pool = pool.filter((q) => q.topic === "Semiología");
+    }
+
     const selected = selectAdaptiveQuestions(
-      demoQuestions,
+      pool,
       plannedQuestionCount,
       learningProfile,
     );
