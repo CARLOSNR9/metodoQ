@@ -3,12 +3,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getUserWeakTopics, type WeakTopicItem } from "@/lib/results";
+import { AlertTriangle, Microscope, Lightbulb, Lock } from "lucide-react";
 
 type WeakTopicsCardProps = {
   userId: string;
 };
-
-import { AlertTriangle, Microscope, Lightbulb, Lock } from "lucide-react";
 
 const TOPIC_HACKS: Record<string, { title: string; content: string }> = {
   "Semiología": {
@@ -68,6 +67,11 @@ export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
     };
   }, [userId]);
 
+  // Si no estamos cargando y no hay temas, ocultamos el componente completamente
+  if (!isLoading && topics.length === 0) {
+    return null;
+  }
+
   const mainWeakness = topics[0];
   const hack = mainWeakness ? TOPIC_HACKS[mainWeakness.topic] || TOPIC_HACKS["Medicina Interna"] : null;
 
@@ -84,15 +88,6 @@ export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
         <div className="mt-8 flex items-center gap-3">
           <div className="h-4 w-4 animate-spin rounded-full border-2 border-rose-400 border-t-transparent" />
           <p className="text-sm text-rose-200">Sincronizando análisis...</p>
-        </div>
-      ) : topics.length === 0 ? (
-        <div className="mt-8 flex flex-col items-center gap-4 text-center">
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-rose-500/5">
-            <Microscope size={32} className="text-rose-500/20" />
-          </div>
-          <p className="max-w-xs text-sm text-mq-muted">
-            Aún no tenemos datos de tus fallos. Sigue entrenando para detectar tus debilidades.
-          </p>
         </div>
       ) : (
         <div className="mt-6 space-y-6">
