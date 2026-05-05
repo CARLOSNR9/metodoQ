@@ -849,9 +849,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
     setTimeout(() => {
       setShowProgressFeedback(false);
-      // Eliminamos el avance automático para que el usuario pueda leer la explicación
-      // y presionar el botón de 'Ver resultados' manualmente.
-    }, 2000);
+      // Si es Daily Pill, pasamos automáticamente a resultados después de un breve delay
+      // para que el usuario pueda ver la explicación inicial.
+      if (isDailyPill) {
+        handleNext();
+      }
+    }, isDailyPill ? 5000 : 2000);
   };
 
   const handleNext = () => {
@@ -993,11 +996,16 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                              <span className="text-xs font-bold text-mq-accent uppercase tracking-widest">{liveFeedbackMessage}</span>
                           </div>
                        )}
-                       {!showProgressFeedback && (
+                       {!showProgressFeedback && !isDailyPill && (
                           <button onClick={handleNext} className="mq-premium-glow flex h-14 items-center justify-center gap-3 rounded-xl bg-mq-accent px-10 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105">
                              {hasNextQuestion ? "SIGUIENTE PREGUNTA" : "VER RESULTADOS FINALES"}
                              <ArrowRight size={18} />
                           </button>
+                       )}
+                       {!showProgressFeedback && isDailyPill && (
+                          <p className="text-xs font-bold text-mq-accent/50 animate-pulse uppercase tracking-[0.2em]">
+                             Generando resultados finales...
+                          </p>
                        )}
                     </motion.div>
                  )}

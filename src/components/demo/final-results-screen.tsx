@@ -109,7 +109,7 @@ export function FinalResultsScreen({
                   className="mt-4"
                 >
                   <p className={`text-2xl font-black uppercase tracking-tighter ${scorePercentage === 100 ? 'text-mq-accent' : 'text-rose-500'}`}>
-                    {scorePercentage === 100 ? "¡RETOS COMPLETADO!" : "RETO FALLIDO"}
+                    {scorePercentage === 100 ? "RETO CONSEGUIDO" : "RETO FALLIDO"}
                   </p>
                   {scorePercentage === 100 && (
                     <p className="text-[10px] font-bold text-mq-accent/60 uppercase tracking-[0.2em]">Trofeo Ganado - Día 1</p>
@@ -205,48 +205,58 @@ export function FinalResultsScreen({
           </motion.div>
         </div>
 
-        {isAct1 && (
-          <div className="mt-8">
-            <Act2PredictiveDashboard 
-              scorePercentage={scorePercentage}
-              university={university ?? null}
-              specialty={specialty ?? null}
-              correctTopics={correctTopics}
-              wrongTopics={wrongTopics}
-            />
-          </div>
+        {isDailyPill && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="relative z-10 mt-8 overflow-hidden rounded-2xl border border-mq-accent/20 bg-mq-accent/5 p-6"
+          >
+            <div className="absolute -right-4 -top-4 h-16 w-16 bg-mq-accent/10 blur-2xl" />
+            <div className="flex items-start gap-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-mq-accent/20 text-mq-accent shadow-[0_0_15px_rgba(0,210,255,0.2)]">
+                <Sparkles size={20} />
+              </div>
+              <div className="space-y-2">
+                <h4 className="text-sm font-black uppercase tracking-wider text-white">¿Quieres más que una píldora?</h4>
+                <p className="text-xs leading-relaxed text-mq-muted">
+                  Los usuarios <span className="text-mq-accent font-bold">PRO</span> resuelven <span className="text-white font-bold">5 retos diarios</span> especializados en sus debilidades. No dejes tu plaza al azar.
+                </p>
+                <Link href="/dashboard/planes" className="inline-flex items-center text-[10px] font-black uppercase tracking-widest text-mq-accent hover:underline">
+                  Ver beneficios PRO <ArrowRight size={10} className="ml-1" />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         )}
 
-        {!isAct1 && (
-          <>
-
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="relative z-10 mt-6 rounded-2xl border border-white/5 bg-gradient-to-br from-mq-accent/10 to-indigo-500/5 p-6"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
-                  <Target className="h-4 w-4" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-white">
-                    {scorePercentage >= 80 ? "Nivel de Residente" : "Tu brecha para la plaza"}
-                  </h4>
-                  <p className="mt-1 text-sm leading-relaxed text-mq-muted">
-                    {scorePercentage >= 90 ? (
-                      <>Estás en el <span className="text-white font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
-                    ) : scorePercentage >= 80 ? (
-                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
-                    ) : (
-                      <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="text-white font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
-                    )}
-                  </p>
-                </div>
+        {!isDailyPill && !isAct1 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="relative z-10 mt-6 rounded-2xl border border-white/5 bg-gradient-to-br from-mq-accent/10 to-indigo-500/5 p-6"
+          >
+            <div className="flex items-start gap-4">
+              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
+                <Target className="h-4 w-4" />
               </div>
-            </motion.div>
-          </>
+              <div>
+                <h4 className="text-sm font-bold text-white">
+                  {scorePercentage >= 80 ? "Nivel de Residente" : "Tu brecha para la plaza"}
+                </h4>
+                <p className="mt-1 text-sm leading-relaxed text-mq-muted">
+                  {scorePercentage >= 90 ? (
+                    <>Estás en el <span className="text-white font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
+                  ) : scorePercentage >= 80 ? (
+                    <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
+                  ) : (
+                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="text-white font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
+                  )}
+                </p>
+              </div>
+            </div>
+          </motion.div>
         )}
 
         <footer className="relative z-10 mt-10 flex flex-col gap-4 sm:flex-row">
@@ -254,15 +264,19 @@ export function FinalResultsScreen({
             href="/dashboard/planes"
             className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
           >
-            {isAct1 ? "Desbloquear mi Plan de Supervivencia PRO" : "Activar mis 7 días GRATIS"}
+            {isDailyPill ? "Pasar a Método Q PRO" : isAct1 ? "Desbloquear mi Plan de Supervivencia PRO" : "Activar mis 7 días GRATIS"}
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
           <Link
-            href="/dashboard/planes"
+            href={isDailyPill ? "/dashboard" : "/dashboard/planes"}
             className="group flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
           >
-            <Lock className="mr-2 h-4 w-4" />
-            Repetir Diagnóstico (PRO)
+            {isDailyPill ? "Volver al Dashboard" : (
+              <>
+                <Lock className="mr-2 h-4 w-4" />
+                Repetir Diagnóstico (PRO)
+              </>
+            )}
           </Link>
         </footer>
       </motion.article>
