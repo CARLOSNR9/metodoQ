@@ -148,9 +148,3 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
     </motion.section>
   );
 }
-  </div>
-        </div>
-      )}
-    </motion.section>
-  );
-}
