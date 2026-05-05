@@ -1,7 +1,7 @@
 import re
 
-# Read original demo page
-with open(r"d:\ProyectosDeveloper\Metodoq\src\app\demo\page.tsx", "r", encoding="utf-8") as f:
+# Read original diagnostic page
+with open(r"d:\ProyectosDeveloper\Metodoq\src\app\dashboard\diagnostico\page.tsx", "r", encoding="utf-8") as f:
     content = f.read()
 
 # Generate new questions array string
