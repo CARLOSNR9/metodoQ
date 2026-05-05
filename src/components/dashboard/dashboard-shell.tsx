@@ -13,7 +13,7 @@ type DashboardShellProps = {
 
 const navigationItems = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { label: "Entrenar", href: "/demo", icon: GraduationCap },
+  { label: "Entrenar", href: "/dashboard/entrenar", icon: GraduationCap },
   { label: "Historial", href: "/dashboard/historial", icon: History },
   { label: "Perfil", href: "/dashboard/perfil", icon: User },
 ];

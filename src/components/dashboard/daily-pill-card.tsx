@@ -59,7 +59,7 @@ export function DailyPillCard({ topic = "Medicina Interna" }: DailyPillCardProps
           </div>
           
           <Link
-            href="/demo?mode=daily-pill"
+            href="/dashboard/entrenar?mode=daily-pill"
             className="w-full md:w-auto mq-premium-glow group/btn inline-flex h-14 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-8 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95"
           >
             <span>ACEPTAR RETO</span>
