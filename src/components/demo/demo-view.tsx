@@ -844,9 +844,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
     setTimeout(() => {
       setShowProgressFeedback(false);
-      if (isDailyPill && !isResultsStep) {
-         setCurrentQuestionIndex((prev) => prev + 1);
-      }
+      // Eliminamos el avance automático para que el usuario pueda leer la explicación
+      // y presionar el botón de 'Ver resultados' manualmente.
     }, 2000);
   };
 
