@@ -13,6 +13,10 @@ type DemoQuestionAnsweredPayload = EventPayload & {
   isCorrect: boolean;
   topic?: string;
   responseTime?: number;
+  // Legacy fields for backward compatibility
+  questionIndex?: number;
+  responseTimeSeconds?: number;
+  answeredCount?: number;
 };
 
 function trackInternalEvent(eventName: string, payload?: Record<string, unknown>) {
