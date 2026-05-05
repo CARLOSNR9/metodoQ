@@ -959,7 +959,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         )}
       </div>
 
-      <FreePlanPaywall isOpen={isFreeLimitModalOpen} onClose={() => setIsFreeLimitModalOpen(false)} score={scorePercentage} />
+      <FreePlanPaywall 
+        open={isFreeLimitModalOpen} 
+        onClose={() => setIsFreeLimitModalOpen(false)} 
+        scorePercentage={scorePercentage} 
+      />
     </main>
   );
 }
