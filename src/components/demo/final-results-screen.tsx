@@ -85,55 +85,87 @@ export function FinalResultsScreen({
         <header className="relative z-10 flex flex-col items-center text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-mq-accent">
             <TrendingUp className="h-3 w-3" />
-            Análisis de Desempeño
+            {isDailyPill ? "ESTADO DEL RETO" : "Análisis de Desempeño"}
           </div>
 
-          {!isAct1 && (
-            <div className="relative mb-8 flex h-40 w-40 items-center justify-center">
-              {/* SVG Radial Progress */}
-              <svg className="h-full w-full -rotate-90">
-                <circle
-                  cx="80"
-                  cy="80"
-                  r={radius}
-                  className="stroke-white/5"
-                  strokeWidth="8"
-                  fill="transparent"
-                />
-                <motion.circle
-                  cx="80"
-                  cy="80"
-                  r={radius}
-                  stroke={profile.color}
-                  strokeWidth="8"
-                  fill="transparent"
-                  strokeDasharray={circumference}
-                  initial={{ strokeDashoffset: circumference }}
-                  animate={{ strokeDashoffset }}
-                  transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                  strokeLinecap="round"
-                />
-              </svg>
-              <div className="absolute flex flex-col items-center">
-                <motion.span 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8 }}
-                  className="text-4xl font-black text-white"
+          {isDailyPill ? (
+             <div className="relative mb-8 flex flex-col items-center">
+                <motion.div
+                  initial={{ scale: 0.5, rotate: -20, opacity: 0 }}
+                  animate={{ scale: 1, rotate: 0, opacity: 1 }}
+                  transition={{ type: "spring", damping: 12, stiffness: 100 }}
+                  className={`flex h-32 w-32 items-center justify-center rounded-full ${scorePercentage === 100 ? 'bg-mq-accent/20 text-mq-accent shadow-[0_0_50px_rgba(0,209,255,0.3)]' : 'bg-rose-500/20 text-rose-500'}`}
                 >
-                  {scorePercentage}%
-                </motion.span>
-                <span className="text-[10px] font-bold uppercase tracking-tighter text-mq-muted">Puntaje</span>
+                  {scorePercentage === 100 ? (
+                    <span className="text-6xl">🏆</span>
+                  ) : (
+                    <span className="text-6xl">❌</span>
+                  )}
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="mt-4"
+                >
+                  <p className={`text-2xl font-black uppercase tracking-tighter ${scorePercentage === 100 ? 'text-mq-accent' : 'text-rose-500'}`}>
+                    {scorePercentage === 100 ? "¡RETOS COMPLETADO!" : "RETO FALLIDO"}
+                  </p>
+                  {scorePercentage === 100 && (
+                    <p className="text-[10px] font-bold text-mq-accent/60 uppercase tracking-[0.2em]">Trofeo Ganado - Día 1</p>
+                  )}
+                </motion.div>
+             </div>
+          ) : (
+            !isAct1 && (
+              <div className="relative mb-8 flex h-40 w-40 items-center justify-center">
+                {/* SVG Radial Progress */}
+                <svg className="h-full w-full -rotate-90">
+                  <circle
+                    cx="80"
+                    cy="80"
+                    r={radius}
+                    className="stroke-white/5"
+                    strokeWidth="8"
+                    fill="transparent"
+                  />
+                  <motion.circle
+                    cx="80"
+                    cy="80"
+                    r={radius}
+                    stroke={profile.color}
+                    strokeWidth="8"
+                    fill="transparent"
+                    strokeDasharray={circumference}
+                    initial={{ strokeDashoffset: circumference }}
+                    animate={{ strokeDashoffset }}
+                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <div className="absolute flex flex-col items-center">
+                  <motion.span 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.8 }}
+                    className="text-4xl font-black text-white"
+                  >
+                    {scorePercentage}%
+                  </motion.span>
+                  <span className="text-[10px] font-bold uppercase tracking-tighter text-mq-muted">Puntaje</span>
+                </div>
               </div>
-            </div>
+            )
           )}
 
           <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-            {isDailyPill ? "¡Reto Completado!" : isAct1 ? "Diagnóstico Predictivo de Plaza" : profile.title}
+            {isDailyPill ? (scorePercentage === 100 ? "¡Dosis Inyectada!" : "Casi lo logras, Doc") : isAct1 ? "Diagnóstico Predictivo de Plaza" : profile.title}
           </h2>
           <p className="mt-3 max-w-md text-base leading-relaxed text-mq-muted sm:text-lg">
             {isDailyPill
-              ? "Has cumplido con tu dosis de conocimiento de hoy. La constancia es lo que separa a los residentes de los aspirantes."
+              ? (scorePercentage === 100 
+                  ? "Tu agilidad clínica hoy ha sido impecable. Has ganado el trofeo del día y tu racha se mantiene activa."
+                  : "La medicina no es lineal, pero la constancia sí. Mañana tendrás una nueva oportunidad para redimirte.")
               : isAct1 
               ? `Hemos calibrado tus resultados contra el histórico de la ${university} para la especialidad de ${specialty}.`
               : profile.message

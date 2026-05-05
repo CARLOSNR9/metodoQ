@@ -212,7 +212,7 @@ export async function getUserWeakTopics(userId: string): Promise<WeakTopicItem[]
     .slice(0, 3);
 }
 
-function getLocalDateKey(date: Date) {
+export function getLocalDateKey(date: Date) {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const day = String(date.getDate()).padStart(2, "0");
@@ -303,4 +303,43 @@ export async function getUserAccumulatedStats(userId: string) {
     activeDays,
     improvement,
   };
+}
+
+export async function completeDailyPill(userId: string, wasCorrect: boolean) {
+  const db = getFirebaseDb();
+  const userRef = doc(db, "users", userId);
+  const now = new Date();
+  const todayKey = getLocalDateKey(now);
+
+  // Intentamos obtener el perfil actual para manejar rachas del reto
+  const snapshot = await getDoc(userRef);
+  const currentData = snapshot.data();
+  const currentDailyPill = currentData?.dailyPillStatus;
+  
+  let nextStreak = 1;
+  if (currentDailyPill?.lastCompletedDate) {
+    const yesterday = new Date(now);
+    yesterday.setDate(yesterday.getDate() - 1);
+    const yesterdayKey = getLocalDateKey(yesterday);
+    
+    if (currentDailyPill.lastCompletedDate === yesterdayKey) {
+      nextStreak = (currentDailyPill.streak ?? 0) + 1;
+    } else if (currentDailyPill.lastCompletedDate === todayKey) {
+      nextStreak = currentDailyPill.streak ?? 1;
+    }
+  }
+
+  await setDoc(
+    userRef,
+    {
+      dailyPillStatus: {
+        lastCompletedDate: todayKey,
+        wasCorrect,
+        streak: nextStreak,
+      }
+    },
+    { merge: true },
+  );
+  
+  return nextStreak;
 }

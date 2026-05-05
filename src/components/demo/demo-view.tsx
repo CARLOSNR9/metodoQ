@@ -25,7 +25,11 @@ import {
 } from "@/lib/analytics/events";
 import { motion } from "framer-motion";
 import { Zap, Target, ArrowRight, Sparkles } from "lucide-react";
-import { registerTrainingDay, saveDemoResult } from "@/lib/results";
+import {
+  saveDemoResult,
+  registerTrainingDay,
+  completeDailyPill,
+} from "@/lib/results";
 
 export type DemoQuestion = {
   id: string;
@@ -802,7 +806,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       total: totalQuestions,
     });
     if (user && isDailyPill && !hasRegisteredTrainingDay) {
-       registerTrainingDay(user.uid).then(() => setHasRegisteredTrainingDay(true));
+       setHasRegisteredTrainingDay(true);
+       completeDailyPill(user.uid, scorePercentage === 100).catch(console.error);
     }
   }, [isResultsStep, user, scorePercentage, correctAnswers, totalQuestions, hasStarted, isDailyPill, hasRegisteredTrainingDay]);
 
