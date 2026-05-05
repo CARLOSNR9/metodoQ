@@ -832,11 +832,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
             <FinalResultsScreen
               correctAnswers={correctAnswers}
               wrongAnswers={wrongAnswers}
-              totalQuestions={totalQuestions}
               scorePercentage={scorePercentage}
               avgResponseTime={calculateAverageResponseTime(responseTimes)}
-              totalTimeSeconds={totalSeconds}
-              onRetry={() => {
+              totalSeconds={totalSeconds}
+              onRepeatDemo={() => {
                 setHasStarted(false);
                 setCurrentQuestionIndex(0);
                 setAnswersByQuestionId({});
