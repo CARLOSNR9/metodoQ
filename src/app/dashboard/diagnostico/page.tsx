@@ -527,6 +527,7 @@ function DemoContent() {
   const urlUniversity = searchParams.get("university");
   const urlSpecialty = searchParams.get("specialty");
   const isAct1 = source === "act1";
+  const isDailyPill = source === "daily-pill";
 
   const { plan, loading: isLoadingPlan } = useUserPlan();
   const [user, setUser] = useState<User | null>(null);
@@ -1099,7 +1100,7 @@ function DemoContent() {
             </div>
           </div>
         )}
-            {user && hasUnlimitedAccess ? (
+            {user && hasUnlimitedAccess && !isDailyPill ? (
               <AttemptHistory
                 userId={user.uid}
                 refreshKey={historyRefreshKey}

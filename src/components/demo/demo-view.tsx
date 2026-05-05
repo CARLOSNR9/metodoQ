@@ -905,17 +905,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               }}
               source={isDailyPill ? "daily-pill" : source}
             />
-            {user && (
+            {user && !isDailyPill && (
               <div className="mt-12 space-y-12">
-                <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
-                   <Act2PredictiveDashboard 
-                      scorePercentage={scorePercentage}
-                      university={urlUniversity || "Universidad Nacional"}
-                      specialty={urlSpecialty || "Tu Especialidad"}
-                      correctTopics={correctTopicsByName}
-                      wrongTopics={wrongTopicsByName}
-                   />
-                </section>
                 <AttemptHistory userId={user.uid} refreshKey={historyRefreshKey} />
               </div>
             )}

@@ -203,9 +203,9 @@ export function FinalResultsScreen({
           </motion.div>
         </div>
 
-        {/* 2. BLOQUE DE ANÁLISIS PREDICTIVO (GRAFICAS) - SOLO PARA ACT 1 */}
-        {isAct1 && (
-          <div className="mt-12 space-y-10 border-t border-white/5 pt-10">
+        {/* 2. BLOQUE DE ANÁLISIS PREDICTIVO (GRAFICAS) - SOLO PARA DIAGNÓSTICO (NO DAILY PILL) */}
+        {!isDailyPill && (
+          <section className="relative mt-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
             <Act2PredictiveDashboard 
                scorePercentage={scorePercentage}
                university={university ?? null}
@@ -213,7 +213,7 @@ export function FinalResultsScreen({
                correctTopics={correctTopics}
                wrongTopics={wrongTopics}
             />
-          </div>
+          </section>
         )}
 
         {isDailyPill && (
