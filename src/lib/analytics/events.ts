@@ -3,14 +3,16 @@ import { trackEvent } from "@/lib/analytics/gtag";
 type EventPayload = {
   userId?: string;
   score?: number;
+  source?: string;
+  correct?: number;
+  total?: number;
 };
 
 type DemoQuestionAnsweredPayload = EventPayload & {
   questionId: string;
-  questionIndex: number;
   isCorrect: boolean;
-  responseTimeSeconds: number;
-  answeredCount: number;
+  topic?: string;
+  responseTime?: number;
 };
 
 function trackInternalEvent(eventName: string, payload?: Record<string, unknown>) {
