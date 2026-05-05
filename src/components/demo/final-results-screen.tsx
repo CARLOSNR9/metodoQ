@@ -117,45 +117,43 @@ export function FinalResultsScreen({
                 </motion.div>
              </div>
           ) : (
-            !isAct1 && (
-              <div className="relative mb-8 flex h-40 w-40 items-center justify-center">
-                {/* SVG Radial Progress */}
-                <svg className="h-full w-full -rotate-90">
-                  <circle
-                    cx="80"
-                    cy="80"
-                    r={radius}
-                    className="stroke-white/5"
-                    strokeWidth="8"
-                    fill="transparent"
-                  />
-                  <motion.circle
-                    cx="80"
-                    cy="80"
-                    r={radius}
-                    stroke={profile.color}
-                    strokeWidth="8"
-                    fill="transparent"
-                    strokeDasharray={circumference}
-                    initial={{ strokeDashoffset: circumference }}
-                    animate={{ strokeDashoffset }}
-                    transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                    strokeLinecap="round"
-                  />
-                </svg>
-                <div className="absolute flex flex-col items-center">
-                  <motion.span 
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8 }}
-                    className="text-4xl font-black text-white"
-                  >
-                    {scorePercentage}%
-                  </motion.span>
-                  <span className="text-[10px] font-bold uppercase tracking-tighter text-mq-muted">Puntaje</span>
-                </div>
+            <div className="relative mb-8 flex h-40 w-40 items-center justify-center">
+              {/* SVG Radial Progress */}
+              <svg className="h-full w-full -rotate-90">
+                <circle
+                  cx="80"
+                  cy="80"
+                  r={radius}
+                  className="stroke-white/5"
+                  strokeWidth="8"
+                  fill="transparent"
+                />
+                <motion.circle
+                  cx="80"
+                  cy="80"
+                  r={radius}
+                  stroke={profile.color}
+                  strokeWidth="8"
+                  fill="transparent"
+                  strokeDasharray={circumference}
+                  initial={{ strokeDashoffset: circumference }}
+                  animate={{ strokeDashoffset }}
+                  transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                  strokeLinecap="round"
+                />
+              </svg>
+              <div className="absolute flex flex-col items-center">
+                <motion.span 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.8 }}
+                  className="text-4xl font-black text-white"
+                >
+                  {scorePercentage}%
+                </motion.span>
+                <span className="text-[10px] font-bold uppercase tracking-tighter text-mq-muted">Puntaje</span>
               </div>
-            )
+            </div>
           )}
 
           <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
@@ -205,6 +203,19 @@ export function FinalResultsScreen({
           </motion.div>
         </div>
 
+        {/* 2. BLOQUE DE ANÁLISIS PREDICTIVO (GRAFICAS) - SOLO PARA ACT 1 */}
+        {isAct1 && (
+          <div className="mt-12 space-y-10 border-t border-white/5 pt-10">
+            <Act2PredictiveDashboard 
+               scorePercentage={scorePercentage}
+               university={university}
+               specialty={specialty}
+               correctTopics={correctTopics}
+               wrongTopics={wrongTopics}
+            />
+          </div>
+        )}
+
         {isDailyPill && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -230,7 +241,7 @@ export function FinalResultsScreen({
           </motion.div>
         )}
 
-        {!isDailyPill && !isAct1 && (
+        {!isDailyPill && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
