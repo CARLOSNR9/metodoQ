@@ -46,16 +46,27 @@ export function FreeDashboardView({
     setMounted(true);
     
     let targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 7); // Fallback
+    targetDate.setDate(targetDate.getDate() + 7); // Fallback por defecto (7 días desde ahora)
     
     if (expiresAt) {
       targetDate = new Date(expiresAt);
-    } else if (user?.createdAt) {
-      const createdDate = typeof user.createdAt.toDate === 'function' 
-        ? user.createdAt.toDate() 
-        : new Date(user.createdAt);
-      targetDate = new Date(createdDate.getTime());
-      targetDate.setDate(targetDate.getDate() + 7);
+    } else {
+      // Intentamos obtener la fecha de creación del perfil (Firestore)
+      const firestoreCreatedAt = user?.createdAt;
+      // O de los metadatos de Auth (Firebase Auth)
+      const authCreationTime = user?.metadata?.creationTime;
+
+      if (firestoreCreatedAt) {
+        const createdDate = typeof firestoreCreatedAt.toDate === 'function' 
+          ? firestoreCreatedAt.toDate() 
+          : new Date(firestoreCreatedAt);
+        targetDate = new Date(createdDate.getTime());
+        targetDate.setDate(targetDate.getDate() + 7);
+      } else if (authCreationTime) {
+        const createdDate = new Date(authCreationTime);
+        targetDate = new Date(createdDate.getTime());
+        targetDate.setDate(targetDate.getDate() + 7);
+      }
     }
 
     const calculateTimeLeft = () => {
