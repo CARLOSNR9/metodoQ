@@ -13,10 +13,14 @@ interface ReferralCardProps {
 export function ReferralCard({ referralCode, referralCount, loading }: ReferralCardProps) {
   const [copied, setCopied] = useState(false);
 
-  if (loading || !referralCode) {
+  if (loading) {
     return (
       <div className="h-56 animate-pulse rounded-[2rem] border border-mq-border-strong bg-white/[0.04]" />
     );
+  }
+
+  if (!referralCode) {
+    return null;
   }
 
   const referralLink = typeof window !== "undefined" 
