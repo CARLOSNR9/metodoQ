@@ -763,10 +763,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     }
   }, [isResultsStep, user, scorePercentage, correctAnswers, totalQuestions, hasStarted, isDailyPill, hasRegisteredTrainingDay]);
 
-  const handleAnswer = (optionId: string) => {
+  const handleAnswer = (optionId: string, isCorrectFromCard?: boolean) => {
     if (!currentQuestion || hasAnsweredCurrentQuestion) return;
 
-    const isCorrect = optionId === currentQuestion.correctOptionId;
+    const isCorrect = isCorrectFromCard ?? (optionId === currentQuestion.correctOptionId);
     const now = Date.now();
     const timeTaken = questionStartAt ? (now - questionStartAt) / 1000 : 0;
 
@@ -925,10 +925,15 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
                  {currentQuestion && (
                     <QuestionCard 
-                       question={currentQuestion}
-                       selectedOptionId={selectedOptionId}
-                       onSelectOption={handleAnswer}
-                       showFeedback={hasAnsweredCurrentQuestion}
+                       key={currentQuestion.id}
+                       question={currentQuestion.statement}
+                       options={currentQuestion.options}
+                       correctOptionId={currentQuestion.correctOptionId}
+                       explanation={currentQuestion.explanation}
+                       keyPoints={currentQuestion.keyPoints}
+                       dynamicFeedback={liveFeedbackMessage}
+                       onAnswerSelect={handleAnswer}
+                       isLocked={isDailyPill ? false : (isAct1 && currentQuestionIndex > 0)}
                     />
                  )}
 
