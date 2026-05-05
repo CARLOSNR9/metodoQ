@@ -177,7 +177,23 @@ export function FreeDashboardView({
       <div className="grid gap-10 lg:grid-cols-3">
         {/* 2. BLOQUE PRINCIPAL - DIAGNÓSTICO O RESULTADOS */}
         <div className="lg:col-span-2 space-y-10">
-          <DailyPillCard topic="Semiología" />
+          {/* Lógica para el Reto de Hoy Personalizado */}
+          {(() => {
+            const isLocked = !user?.attemptsCount || user.attemptsCount === 0;
+            let dynamicTopic = "Semiología"; // Default
+            
+            if (user?.topicStats) {
+              let maxWrong = -1;
+              Object.entries(user.topicStats).forEach(([topic, stats]: [string, any]) => {
+                if (stats.wrong > maxWrong) {
+                  maxWrong = stats.wrong;
+                  dynamicTopic = topic;
+                }
+              });
+            }
+
+            return <DailyPillCard topic={dynamicTopic} isLocked={isLocked} />;
+          })()}
           
           {user?.attemptsCount > 0 ? (
             <div className="space-y-10">
