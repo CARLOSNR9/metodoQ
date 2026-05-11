@@ -21,3 +21,4 @@ export { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 export { DashboardPricingView } from "./dashboard-pricing-view";
 export { DailyPillCard } from "./daily-pill-card";
 export { ProgressSimulator } from "./progress-simulator";
+export { ProDashboardView } from "./pro-dashboard-view";

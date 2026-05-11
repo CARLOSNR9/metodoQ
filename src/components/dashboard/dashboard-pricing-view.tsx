@@ -62,7 +62,7 @@ const PLANS: Plan[] = [
     },
     features: [
       "Todo lo del plan Básico",
-      "Clases en vivo con el Dr. Juan José",
+      "Clases en vivo con el Doctor Q",
       "Análisis avanzado de tus errores por tema",
       "Tu plan de estudio personalizado",
       "Comunidad privada de estudio",
