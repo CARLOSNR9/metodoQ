@@ -43,8 +43,12 @@ export default function LoginPage() {
     setIsSubmitting(true);
 
     try {
-      await loginWithEmail(email.trim(), password);
-      router.push("/dashboard");
+      const credential = await loginWithEmail(email.trim(), password);
+      if (credential.user.email === "admin@gmail.com") {
+        router.push("/admin");
+      } else {
+        router.push("/dashboard");
+      }
     } catch (error) {
       const code = (error as { code?: string }).code ?? "";
       setErrorMessage(getLoginErrorMessage(code));
@@ -58,8 +62,12 @@ export default function LoginPage() {
     setIsGoogleSubmitting(true);
 
     try {
-      await loginWithGoogle();
-      router.push("/dashboard");
+      const credential = await loginWithGoogle();
+      if (credential.user.email === "admin@gmail.com") {
+        router.push("/admin");
+      } else {
+        router.push("/dashboard");
+      }
     } catch (error) {
       const code = (error as { code?: string }).code ?? "";
       setErrorMessage(getLoginErrorMessage(code));

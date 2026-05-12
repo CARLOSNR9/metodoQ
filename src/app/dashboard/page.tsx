@@ -9,12 +9,21 @@ import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { useReferralStats } from "@/hooks/use-referral-stats";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Settings, Shield, User as UserIcon } from "lucide-react";
 
 export default function DashboardPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile, loading: isLoadingProfile } = useUserProfile();
   const { referralCode, referralCount, loading: isLoadingReferrals } = useReferralStats(user?.uid);
+  const router = useRouter();
+  
+  // Redirigir admin al panel de admin
+  useEffect(() => {
+    if (user?.email === "admin@gmail.com") {
+      router.replace("/admin");
+    }
+  }, [user, router]);
   
   // Dev simulation state
   const [simulatedPlan, setSimulatedPlan] = useState<string | null>(null);
