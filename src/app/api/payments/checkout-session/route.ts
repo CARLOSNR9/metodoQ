@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getSafeCheckoutErrorMessage } from "@/lib/server/checkout-errors";
 import { getFirebaseAdminAuth } from "@/lib/server/firebase-admin";
 import { getStripeServerClient } from "@/lib/server/stripe";
 import {
@@ -94,9 +95,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ checkoutUrl: session.url });
   } catch (error) {
     console.error("Error creando checkout session.", error);
-    return NextResponse.json(
-      { error: "No se pudo iniciar el proceso de pago." },
-      { status: 500 },
-    );
+    const message = getSafeCheckoutErrorMessage(error);
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }
