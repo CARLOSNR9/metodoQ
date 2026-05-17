@@ -6,6 +6,7 @@ import { AdminClassForm } from "@/components/admin/admin-class-form";
 import { AdminClassesPanel } from "@/components/admin/admin-classes-panel";
 import { AdminGuard } from "@/components/admin/admin-guard";
 import { ManualSalesPanel } from "@/components/admin/manual-sales-panel";
+import { UsersDirectoryPanel } from "@/components/admin/users-directory-panel";
 
 export const dynamic = "force-dynamic";
 
@@ -248,7 +249,8 @@ export default async function AdminPage() {
             </section>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 space-y-8">
+            <UsersDirectoryPanel />
             <ManualSalesPanel />
           </div>
         </section>
