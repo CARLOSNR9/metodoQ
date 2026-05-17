@@ -1,4 +1,5 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import { ResidenteApplicationRow } from "./residente-application-row";
 
 type Application = {
   id: string;
@@ -44,14 +45,14 @@ export async function ResidenteApplicationsPanel() {
     <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
       <h2 className="text-xl font-semibold text-white">Postulaciones Plan Residente</h2>
       <p className="mt-1 text-sm text-mq-muted">
-        Flujo manual: contacta por WhatsApp y activa el plan desde creación de usuario.
+        Actualiza el estado tras contactar al candidato. Para activar el plan, usa creación de usuario en admin.
       </p>
 
       {applications.length === 0 ? (
         <p className="mt-6 text-sm text-mq-muted">No hay postulaciones recientes.</p>
       ) : (
         <div className="mt-6 overflow-x-auto">
-          <table className="w-full min-w-[640px] text-left text-sm">
+          <table className="w-full min-w-[720px] text-left text-sm">
             <thead>
               <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
                 <th className="pb-3 pr-4">Nombre</th>
@@ -63,24 +64,7 @@ export async function ResidenteApplicationsPanel() {
             </thead>
             <tbody>
               {applications.map((app) => (
-                <tr key={app.id} className="border-b border-white/5">
-                  <td className="py-3 pr-4 font-medium text-white">{app.name}</td>
-                  <td className="py-3 pr-4 text-mq-muted">
-                    <div>{app.email}</div>
-                    <div className="text-xs">{app.phone}</div>
-                  </td>
-                  <td className="py-3 pr-4 text-mq-muted">{app.university || "—"}</td>
-                  <td className="py-3 pr-4">
-                    <span className="rounded-full bg-amber-500/15 px-2 py-0.5 text-xs font-semibold text-amber-200">
-                      {app.status}
-                    </span>
-                  </td>
-                  <td className="py-3 text-xs text-mq-muted">
-                    {app.createdAt
-                      ? new Date(app.createdAt).toLocaleDateString("es-CO")
-                      : "—"}
-                  </td>
-                </tr>
+                <ResidenteApplicationRow key={app.id} {...app} />
               ))}
             </tbody>
           </table>

@@ -39,6 +39,20 @@ service cloud.firestore {
       allow read, update, delete: if false;
     }
 
+    // Clases en vivo: lectura para usuarios autenticados; escritura solo Admin SDK
+    match /classes/{classId} {
+      allow read: if isSignedIn();
+      allow write: if false;
+    }
+
+    // Notificaciones de logros del usuario
+    match /notifications/{notificationId} {
+      allow read: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow delete: if isSignedIn() && resource.data.userId == request.auth.uid;
+      allow update: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

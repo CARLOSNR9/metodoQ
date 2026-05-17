@@ -3,13 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ProgressSummary } from "@/components/demo/progress-summary";
-import { getUserDemoResults, type DemoResultItem } from "@/lib/results";
+import { getSessionTypeLabel, getUserDemoResults, type DemoResultItem } from "@/lib/results";
 
 type AttemptHistoryProps = {
   userId: string;
   refreshKey?: number;
   maxItems?: number;
   limitedMessage?: string;
+  showSessionType?: boolean;
 };
 
 function getScoreCardClasses(score: number) {
@@ -29,6 +30,7 @@ export function AttemptHistory({
   refreshKey = 0,
   maxItems = 10,
   limitedMessage,
+  showSessionType = false,
 }: AttemptHistoryProps) {
   const [results, setResults] = useState<DemoResultItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -111,9 +113,16 @@ export function AttemptHistory({
                 className={`rounded-2xl border p-4 transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 ${getScoreCardClasses(result.scorePercentage)}`}
               >
                 <div className="space-y-2">
-                  <p className="text-xs font-medium uppercase tracking-[0.1em] text-mq-muted">
-                    {result.fechaLabel}
-                  </p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="text-xs font-medium uppercase tracking-[0.1em] text-mq-muted">
+                      {result.fechaLabel}
+                    </p>
+                    {showSessionType ? (
+                      <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mq-accent">
+                        {getSessionTypeLabel(result.sessionType)}
+                      </span>
+                    ) : null}
+                  </div>
                   <p className="text-2xl font-semibold text-white">
                     {result.scorePercentage}%
                   </p>

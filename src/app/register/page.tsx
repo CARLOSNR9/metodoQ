@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState, Suspense } from "react";
 import { registerWithEmail, loginWithGoogle } from "@/lib/auth";
+import { sendWelcomeEmailIfPossible } from "@/lib/client/send-welcome-email";
 import { trackReferralSignup } from "@/lib/analytics/events";
 
 function getRegisterErrorMessage(errorCode: string) {
@@ -59,20 +60,7 @@ function RegisterContent() {
         localStorage.removeItem("referredBy");
       }
 
-      try {
-        const token = await credential.user.getIdToken();
-        await fetch("/api/emails/welcome", {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ displayName: credential.user.displayName }),
-        });
-      } catch {
-        // Email de bienvenida no bloquea el registro
-      }
-
+      await sendWelcomeEmailIfPossible(credential.user.displayName);
       handleSuccess();
     } catch (error) {
       const code = (error as { code?: string }).code ?? "";
@@ -88,8 +76,12 @@ function RegisterContent() {
 
     try {
       const finalReferral = referralFromUrl || localStorage.getItem("referredBy");
-      const credential = await loginWithGoogle();
-      
+      const { credential, isNewUser } = await loginWithGoogle();
+
+      if (isNewUser) {
+        await sendWelcomeEmailIfPossible(credential.user.displayName);
+      }
+
       if (finalReferral && credential.user) {
         trackReferralSignup({ userId: credential.user.uid, referralCode: finalReferral });
         localStorage.removeItem("referredBy");

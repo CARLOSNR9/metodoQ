@@ -2,6 +2,8 @@ import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import { AdminUserForm } from "@/components/admin/user-creation-form";
 import { QuestionCreationForm } from "@/components/admin/question-creation-form";
 import { ResidenteApplicationsPanel } from "@/components/admin/residente-applications-panel";
+import { AdminClassForm } from "@/components/admin/admin-class-form";
+import { AdminClassesPanel } from "@/components/admin/admin-classes-panel";
 import { AdminGuard } from "@/components/admin/admin-guard";
 
 export const dynamic = "force-dynamic";
@@ -155,6 +157,8 @@ export default async function AdminPage() {
 
           <div className="mt-8 space-y-8">
             <QuestionCreationForm />
+            <AdminClassForm />
+            <AdminClassesPanel />
             <ResidenteApplicationsPanel />
           </div>
 

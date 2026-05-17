@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { loginWithEmail, loginWithGoogle } from "@/lib/auth";
+import { sendWelcomeEmailIfPossible } from "@/lib/client/send-welcome-email";
 
 function getLoginErrorMessage(errorCode: string) {
   if (
@@ -62,7 +63,10 @@ export default function LoginPage() {
     setIsGoogleSubmitting(true);
 
     try {
-      const credential = await loginWithGoogle();
+      const { credential, isNewUser } = await loginWithGoogle();
+      if (isNewUser) {
+        await sendWelcomeEmailIfPossible(credential.user.displayName);
+      }
       if (credential.user.email === (process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com")) {
         router.push("/admin");
       } else {

@@ -25,6 +25,8 @@ type SaveDemoResultInput = {
   sessionType?: "training" | "diagnostico" | "simulacro" | "daily-pill";
 };
 
+export type SessionTypeLabel = "training" | "diagnostico" | "simulacro" | "daily-pill";
+
 export type DemoResultItem = {
   id: string;
   scorePercentage: number;
@@ -33,6 +35,7 @@ export type DemoResultItem = {
   fechaLabel: string;
   fechaIso: string | null;
   wrongTopics: Record<string, number>;
+  sessionType: SessionTypeLabel;
 };
 
 export type WeakTopicItem = {
@@ -176,6 +179,7 @@ export async function getUserDemoResults(userId: string): Promise<DemoResultItem
       correctAnswers?: number;
       wrongAnswers?: number;
       wrongTopics?: Record<string, number>;
+      sessionType?: SessionTypeLabel;
       fecha?: { toDate?: () => Date };
     };
 
@@ -194,8 +198,19 @@ export async function getUserDemoResults(userId: string): Promise<DemoResultItem
             timeStyle: "short",
           }).format(date)
         : "Fecha no disponible",
+      sessionType: data.sessionType ?? "training",
     };
   });
+}
+
+export function getSessionTypeLabel(type: SessionTypeLabel): string {
+  const labels: Record<SessionTypeLabel, string> = {
+    training: "Entrenamiento",
+    diagnostico: "Diagnóstico",
+    simulacro: "Simulacro",
+    "daily-pill": "Píldora diaria",
+  };
+  return labels[type] ?? "Entrenamiento";
 }
 
 export async function getUserWeakTopics(userId: string): Promise<WeakTopicItem[]> {

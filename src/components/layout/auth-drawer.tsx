@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { X, Mail, Facebook, Chrome } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { loginWithEmail, loginWithGoogle, loginWithFacebook } from "@/lib/auth";
+import { sendWelcomeEmailIfPossible } from "@/lib/client/send-welcome-email";
 import { Logo } from "@/components/ui/logo";
 
 interface AuthDrawerProps {
@@ -50,10 +51,10 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
     setError("");
     setIsLoading(true);
     try {
-      if (provider === "google") {
-        await loginWithGoogle();
-      } else {
-        await loginWithFacebook();
+      const { isNewUser } =
+        provider === "google" ? await loginWithGoogle() : await loginWithFacebook();
+      if (isNewUser) {
+        await sendWelcomeEmailIfPossible();
       }
       router.push("/dashboard");
       onClose();

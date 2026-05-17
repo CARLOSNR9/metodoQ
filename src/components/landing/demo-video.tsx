@@ -20,7 +20,7 @@ export function DemoVideo() {
               Mira cómo funciona en 20 segundos
             </p>
             <p className="text-sm text-mq-muted max-w-md">
-              Escribe cualquier tema complejo y observa cómo la IA de Método Q lo simplifica al instante.
+              Preguntas tipo examen de residencia con retroalimentación inmediata y perfil de debilidades por tema.
             </p>
           </div>
         </div>

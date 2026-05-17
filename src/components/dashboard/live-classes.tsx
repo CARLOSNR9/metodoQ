@@ -77,12 +77,12 @@ export function LiveClasses() {
             <p className="text-sm text-mq-muted font-medium">Aprende estrategias reales, no teoría.</p>
             <p className="text-xs text-mq-muted">Desbloquea el acceso a sesiones en vivo con expertos que ya superaron el reto.</p>
           </div>
-          <button 
-            onClick={() => window.location.href = '/dashboard/perfil'}
+          <a
+            href="/dashboard/planes"
             className="inline-flex items-center justify-center rounded-xl bg-mq-accent px-6 py-2.5 text-sm font-bold text-mq-accent-foreground transition duration-150 hover:brightness-110"
           >
-            Mejorar ahora
-          </button>
+            Ver planes Pro
+          </a>
         </div>
       ) : (
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

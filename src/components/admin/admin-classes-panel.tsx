@@ -1,0 +1,59 @@
+import { adminListClasses } from "@/lib/server/classes-admin";
+import { AdminClassRow } from "./admin-class-row";
+
+export async function AdminClassesPanel() {
+  let classes: Awaited<ReturnType<typeof adminListClasses>> = [];
+  try {
+    classes = await adminListClasses();
+  } catch (e) {
+    console.error("admin classes", e);
+  }
+
+  const now = Date.now();
+
+  return (
+    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
+      <h2 className="text-xl font-semibold text-white">Clases en vivo</h2>
+      <p className="mt-1 text-sm text-mq-muted">
+        {classes.length} clase{classes.length === 1 ? "" : "s"} en el sistema.
+      </p>
+
+      {classes.length === 0 ? (
+        <p className="mt-6 text-sm text-mq-muted">No hay clases programadas. Crea la primera arriba.</p>
+      ) : (
+        <div className="mt-6 overflow-x-auto">
+          <table className="w-full min-w-[640px] text-left text-sm">
+            <thead>
+              <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+                <th className="pb-3 pr-4">Clase</th>
+                <th className="pb-3 pr-4">Fecha</th>
+                <th className="pb-3 pr-4">Estado</th>
+                <th className="pb-3 pr-4">Enlace</th>
+                <th className="pb-3 text-right">Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              {classes.map((cls) => {
+                const endMs = cls.dateIso
+                  ? new Date(cls.dateIso).getTime() + cls.duration * 60_000
+                  : 0;
+                const isPast = endMs > 0 && endMs < now;
+                return (
+                  <AdminClassRow
+                    key={cls.id}
+                    id={cls.id}
+                    title={cls.title}
+                    dateIso={cls.dateIso}
+                    duration={cls.duration}
+                    meetingLink={cls.meetingLink}
+                    isPast={isPast}
+                  />
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </section>
+  );
+}

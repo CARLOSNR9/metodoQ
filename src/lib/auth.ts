@@ -62,7 +62,10 @@ export async function loginWithEmail(email: string, password: string) {
   return signInWithEmailAndPassword(getFirebaseAuth(), email, password);
 }
 
-export async function loginWithGoogle() {
+export async function loginWithGoogle(): Promise<{
+  credential: Awaited<ReturnType<typeof signInWithPopup>>;
+  isNewUser: boolean;
+}> {
   const provider = new GoogleAuthProvider();
   const credential = await signInWithPopup(getFirebaseAuth(), provider);
   const user = credential.user;
@@ -85,8 +88,9 @@ export async function loginWithGoogle() {
     throw error;
   }
 
-  if (!userDocSnap.exists()) {
-    // Si no existe, crear perfil inicial similar al de email
+  const isNewUser = !userDocSnap.exists();
+
+  if (isNewUser) {
     const newUserDoc: UserDocument = {
       uid: user.uid,
       email: user.email ?? "",
@@ -127,18 +131,22 @@ export async function loginWithGoogle() {
     }
   }
 
-  return credential;
+  return { credential, isNewUser };
 }
 
-export async function loginWithFacebook() {
+export async function loginWithFacebook(): Promise<{
+  credential: Awaited<ReturnType<typeof signInWithPopup>>;
+  isNewUser: boolean;
+}> {
   const provider = new FacebookAuthProvider();
   const credential = await signInWithPopup(getFirebaseAuth(), provider);
   const user = credential.user;
 
   const userDocRef = doc(getFirebaseDb(), "users", user.uid);
   const userDocSnap = await getDoc(userDocRef);
+  const isNewUser = !userDocSnap.exists();
 
-  if (!userDocSnap.exists()) {
+  if (isNewUser) {
     const newUserDoc: UserDocument = {
       uid: user.uid,
       email: user.email ?? "",
@@ -168,7 +176,7 @@ export async function loginWithFacebook() {
     });
   }
 
-  return credential;
+  return { credential, isNewUser };
 }
 
 export async function registerWithEmail(

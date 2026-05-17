@@ -7,7 +7,7 @@ import {
   where,
 } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
-import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
+import { getLocalQuestionBank } from "@/lib/questions/local-bank";
 import type { TrainingQuestion } from "./types";
 
 const COLLECTION = "questions";
@@ -35,13 +35,13 @@ export async function getActiveQuestions(): Promise<TrainingQuestion[]> {
     const snapshot = await getDocs(q);
 
     if (snapshot.empty) {
-      return [...FALLBACK_QUESTIONS];
+      return getLocalQuestionBank();
     }
 
     return snapshot.docs.map((docItem) => mapDocToQuestion(docItem.id, docItem.data()));
   } catch (error) {
-    console.warn("Firestore questions unavailable, using fallback.", error);
-    return [...FALLBACK_QUESTIONS];
+    console.warn("Firestore questions unavailable, using local bank.", error);
+    return getLocalQuestionBank();
   }
 }
 
@@ -64,7 +64,7 @@ export async function seedFallbackQuestionsToFirestore(): Promise<number> {
   }
 
   let count = 0;
-  for (const question of FALLBACK_QUESTIONS) {
+  for (const question of getLocalQuestionBank()) {
     await createQuestion({ ...question, active: true });
     count += 1;
   }
