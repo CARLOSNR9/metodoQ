@@ -58,7 +58,21 @@ function RegisterContent() {
         trackReferralSignup({ userId: credential.user.uid, referralCode: finalReferral });
         localStorage.removeItem("referredBy");
       }
-      
+
+      try {
+        const token = await credential.user.getIdToken();
+        await fetch("/api/emails/welcome", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ displayName: credential.user.displayName }),
+        });
+      } catch {
+        // Email de bienvenida no bloquea el registro
+      }
+
       handleSuccess();
     } catch (error) {
       const code = (error as { code?: string }).code ?? "";

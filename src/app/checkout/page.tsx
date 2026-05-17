@@ -103,7 +103,7 @@ function CheckoutPageContent() {
             Confirmar tu plan
           </h1>
           <p className="mt-3 text-sm text-mq-muted sm:text-base">
-            Revisa el resumen y continúa al pago seguro con Stripe.
+            Revisa el resumen y continúa al pago seguro con Stripe. Si tienes un cupón, podrás aplicarlo en la pantalla de pago.
           </p>
 
           <section className="mt-6 rounded-2xl border border-mq-border-strong bg-white/[0.03] p-5">

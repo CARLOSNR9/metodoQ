@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { logoutUser } from "@/lib/auth";
 import { AchievementNotification } from "./achievement-notification";
-import { LayoutDashboard, GraduationCap, History, User, LogOut } from "lucide-react";
+import { LayoutDashboard, GraduationCap, History, User, LogOut, Timer, CreditCard } from "lucide-react";
 
 type DashboardShellProps = {
   children: React.ReactNode;
@@ -14,6 +14,8 @@ type DashboardShellProps = {
 const navigationItems = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { label: "Entrenar", href: "/dashboard/entrenar", icon: GraduationCap },
+  { label: "Simulacro", href: "/dashboard/simulacro", icon: Timer },
+  { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
   { label: "Historial", href: "/dashboard/historial", icon: History },
   { label: "Perfil", href: "/dashboard/perfil", icon: User },
 ];

@@ -40,6 +40,7 @@ export interface UserDocument {
   referredBy: string | null;
   planStartedAt: string | null;
   planExpiresAt: string | null;
+  emailOptIn: boolean;
   lastActiveAt: ReturnType<typeof serverTimestamp> | null;
   achievements: string[];
   onboardingCompleted?: boolean;
@@ -103,6 +104,7 @@ export async function loginWithGoogle() {
       referredBy: null, // Podría extenderse para detectar referral en Google login también
       planStartedAt: null,
       planExpiresAt: null,
+      emailOptIn: true,
       lastActiveAt: serverTimestamp(),
       achievements: [],
       onboardingCompleted: false,
@@ -154,6 +156,7 @@ export async function loginWithFacebook() {
       referredBy: null,
       planStartedAt: null,
       planExpiresAt: null,
+      emailOptIn: true,
       lastActiveAt: serverTimestamp(),
       achievements: [],
       onboardingCompleted: false,
@@ -197,6 +200,7 @@ export async function registerWithEmail(
     referredBy: referredByCode || null,
     planStartedAt: null,
     planExpiresAt: null,
+    emailOptIn: true,
     lastActiveAt: serverTimestamp(),
     achievements: [],
     onboardingCompleted: false,

@@ -9,6 +9,7 @@ import {
   parsePaidPlanId,
   type PaidPlanId,
 } from "@/lib/plans/config";
+import { sendPaymentConfirmationEmail } from "@/lib/server/email/send";
 
 export const runtime = "nodejs";
 
@@ -38,6 +39,23 @@ async function activateUserPlan(
       },
       { merge: true },
     );
+
+  return endDate;
+}
+
+async function notifyPaymentEmail(
+  uid: string,
+  planId: PaidPlanId,
+  cycleMonths: number,
+  endDate: string,
+  fallbackEmail?: string | null,
+) {
+  const userSnap = await getFirebaseAdminDb().collection("users").doc(uid).get();
+  const email =
+    (userSnap.data()?.email as string | undefined) ?? fallbackEmail ?? undefined;
+  if (email) {
+    await sendPaymentConfirmationEmail(email, planId, cycleMonths, endDate);
+  }
 }
 
 export async function POST(request: Request) {
@@ -63,10 +81,11 @@ export async function POST(request: Request) {
       const cycle = parseBillingCycle(session.metadata?.cycle) ?? 1;
 
       if (uid && planId) {
-        await activateUserPlan(uid, planId, cycle, {
+        const endDate = await activateUserPlan(uid, planId, cycle, {
           stripeCheckoutSessionId: session.id,
           stripeCustomerId: session.customer ?? null,
         });
+        await notifyPaymentEmail(uid, planId, cycle, endDate, session.customer_email);
       }
     }
 
@@ -84,9 +103,10 @@ export async function POST(request: Request) {
         const cycle = parseBillingCycle(subscription.metadata?.cycle) ?? 1;
 
         if (uid && planId) {
-          await activateUserPlan(uid, planId, cycle, {
+          const endDate = await activateUserPlan(uid, planId, cycle, {
             stripeSubscriptionId: subscription.id,
           });
+          await notifyPaymentEmail(uid, planId, cycle, endDate);
         }
       }
     }

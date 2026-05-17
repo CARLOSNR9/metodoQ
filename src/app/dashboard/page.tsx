@@ -4,6 +4,8 @@ import {
   OnboardingModal,
   FreeDashboardView,
   ProDashboardView,
+  SubscriptionExpirationAlert,
+  StreakReminderBanner,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
@@ -49,6 +51,14 @@ export default function DashboardPage() {
   return (
     <>
       <OnboardingModal userId={user.uid} />
+
+      <div className="mb-6 space-y-3">
+        <SubscriptionExpirationAlert />
+        <StreakReminderBanner
+          streakCount={profile?.streakCount ?? 0}
+          lastTrainingDate={profile?.streakLastTrainingDate ?? null}
+        />
+      </div>
 
       {showPaidDashboard ? (
         <ProDashboardView

@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
+import { getFirebaseAuth } from "@/lib/firebase";
 import { PLANS } from "@/lib/plans/config";
+import { getWhatsAppSupportUrl } from "@/lib/contact/whatsapp";
+import { submitResidenteApplicationAction } from "@/app/residente/actions";
 import { Check } from "lucide-react";
 
 const residentePlan = PLANS.find((p) => p.id === "RESIDENTE")!;
@@ -18,6 +19,9 @@ export default function ResidentePage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const whatsappUrl = getWhatsAppSupportUrl(
+    `Hola, quiero postular al Plan Residente de Método Q. Mi nombre es ${name || "[nombre]"}.`,
+  );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,16 +30,20 @@ export default function ResidentePage() {
 
     try {
       const user = getFirebaseAuth().currentUser;
-      await addDoc(collection(getFirebaseDb(), "residente_applications"), {
-        name: name.trim(),
-        email: email.trim(),
-        phone: phone.trim(),
-        university: university.trim(),
-        message: message.trim(),
+      const result = await submitResidenteApplicationAction({
+        name,
+        email,
+        phone,
+        university,
+        message,
         userId: user?.uid ?? null,
-        status: "pending",
-        createdAt: serverTimestamp(),
       });
+
+      if (result.error) {
+        setError(result.error);
+        return;
+      }
+
       setSubmitted(true);
     } catch (err) {
       console.error(err);
@@ -133,7 +141,21 @@ export default function ResidentePage() {
                     className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white outline-none focus:border-mq-accent resize-none"
                   />
                 </div>
-                {error && <p className="text-sm text-rose-400">{error}</p>}
+                {error && (
+                  <div className="space-y-2">
+                    <p className="text-sm text-rose-400">{error}</p>
+                    {whatsappUrl ? (
+                      <a
+                        href={whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-semibold text-mq-accent hover:underline"
+                      >
+                        Escribir por WhatsApp
+                      </a>
+                    ) : null}
+                  </div>
+                )}
                 <button
                   type="submit"
                   disabled={isSubmitting}

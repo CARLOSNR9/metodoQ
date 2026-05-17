@@ -1,5 +1,7 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import { AdminUserForm } from "@/components/admin/user-creation-form";
+import { QuestionCreationForm } from "@/components/admin/question-creation-form";
+import { ResidenteApplicationsPanel } from "@/components/admin/residente-applications-panel";
 import { AdminGuard } from "@/components/admin/admin-guard";
 
 export const dynamic = "force-dynamic";
@@ -151,9 +153,14 @@ export default async function AdminPage() {
             <MetricCard label="Tasa Click (%)" value={paywallClickRate} />
           </div>
 
-          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+          <div className="mt-8 space-y-8">
+            <QuestionCreationForm />
+            <ResidenteApplicationsPanel />
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
             <AdminUserForm />
-            
+
             <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
               <h2 className="text-xl font-semibold text-white">Alertas de Embudo</h2>
               {alerts.length > 0 ? (

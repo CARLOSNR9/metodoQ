@@ -1,6 +1,6 @@
-import { DemoQuestion } from "@/components/demo/demo-view";
+import type { TrainingQuestion } from "@/lib/questions/types";
 
-export const DAILY_CHALLENGES: DemoQuestion[] = [
+export const DAILY_CHALLENGES: TrainingQuestion[] = [
   {
     id: "pill-day-1",
     topic: "Semiología",

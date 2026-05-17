@@ -17,6 +17,7 @@ import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashb
 import { motion } from "framer-motion";
 import { getPlanDisplayName } from "@/lib/plans/config";
 import { hasProFeatures } from "@/lib/plans/access";
+import { useUserPerformanceStats } from "@/hooks/use-user-performance-stats";
 
 interface ProDashboardViewProps {
   user: any;
@@ -35,6 +36,7 @@ export function ProDashboardView({
 }: ProDashboardViewProps) {
   const planLabel = getPlanDisplayName(profile?.plan);
   const showLiveClasses = hasProFeatures(profile?.plan);
+  const { improvement, percentileLabel, loading: statsLoading } = useUserPerformanceStats(user?.uid);
 
   return (
     <div className="space-y-10 pb-12">
@@ -98,7 +100,13 @@ export function ProDashboardView({
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-mq-muted">Tendencia</p>
-                  <p className="text-sm font-bold text-white">+12% vs ayer</p>
+                  <p className="text-sm font-bold text-white">
+                    {statsLoading
+                      ? "..."
+                      : improvement !== null && improvement !== 0
+                        ? `${improvement > 0 ? "+" : ""}${improvement}% vs inicio`
+                        : "Sin datos aún"}
+                  </p>
                 </div>
               </motion.div>
               <motion.div 
@@ -109,8 +117,10 @@ export function ProDashboardView({
                   <Trophy size={24} />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-mq-muted">Ranking</p>
-                  <p className="text-sm font-bold text-white">Top 5% Médicos</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-mq-muted">Nivel</p>
+                  <p className="text-sm font-bold text-white">
+                    {statsLoading ? "..." : percentileLabel ?? "Entrena hoy"}
+                  </p>
                 </div>
               </motion.div>
             </div>

@@ -22,6 +22,7 @@ type SaveDemoResultInput = {
   wrongTopics?: Record<string, number>;
   correctTopics?: Record<string, number>;
   avgResponseTime?: number;
+  sessionType?: "training" | "diagnostico" | "simulacro" | "daily-pill";
 };
 
 export type DemoResultItem = {
@@ -129,6 +130,7 @@ export async function saveDemoResult({
   wrongTopics = {},
   correctTopics = {},
   avgResponseTime = 0,
+  sessionType = "training",
 }: SaveDemoResultInput) {
   const db = getFirebaseDb();
 
@@ -140,6 +142,7 @@ export async function saveDemoResult({
     wrongTopics,
     correctTopics,
     avgResponseTime,
+    sessionType,
     fecha: serverTimestamp(),
   });
 

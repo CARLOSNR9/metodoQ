@@ -16,6 +16,9 @@ export interface UserProfile {
   onboardingCompleted?: boolean;
   plan?: string;
   planExpiresAt?: string | null;
+  streakCount?: number;
+  streakLastTrainingDate?: string | null;
+  emailOptIn?: boolean;
   createdAt?: any;
 }
 
