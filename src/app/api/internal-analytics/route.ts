@@ -19,7 +19,20 @@ const ALLOWED_EVENTS = new Set([
   "demo_question_answered",
 ]);
 
+function hasFirebaseAdminConfig(): boolean {
+  return Boolean(
+    process.env.FIREBASE_ADMIN_PROJECT_ID &&
+      process.env.FIREBASE_ADMIN_CLIENT_EMAIL &&
+      process.env.FIREBASE_ADMIN_PRIVATE_KEY,
+  );
+}
+
 export async function POST(request: Request) {
+  if (!hasFirebaseAdminConfig()) {
+    console.error("internal-analytics: faltan variables FIREBASE_ADMIN_*.");
+    return NextResponse.json({ error: "Servicio no configurado." }, { status: 503 });
+  }
+
   try {
     const payload = (await request.json()) as InternalAnalyticsPayload;
     const eventName = payload.eventName;

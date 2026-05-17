@@ -17,7 +17,7 @@ export function SiteHeader() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const pathname = usePathname();
 
-  if (pathname?.startsWith("/dashboard")) {
+  if (pathname?.startsWith("/dashboard") || pathname?.startsWith("/admin")) {
     return null;
   }
 

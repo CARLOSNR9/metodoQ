@@ -23,14 +23,21 @@ export function AchievementNotification({ userId }: AchievementNotificationProps
       limit(1)
     );
 
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      if (!snapshot.empty) {
-        const docItem = snapshot.docs[0];
-        setNotification({ id: docItem.id, message: docItem.data().message });
-      } else {
+    const unsubscribe = onSnapshot(
+      q,
+      (snapshot) => {
+        if (!snapshot.empty) {
+          const docItem = snapshot.docs[0];
+          setNotification({ id: docItem.id, message: docItem.data().message });
+        } else {
+          setNotification(null);
+        }
+      },
+      (error) => {
+        console.error("AchievementNotification snapshot:", error);
         setNotification(null);
-      }
-    });
+      },
+    );
 
     return () => unsubscribe();
   }, [userId]);

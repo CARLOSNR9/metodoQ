@@ -17,43 +17,64 @@ type AdminMetrics = {
   paywallClickedCount: number;
 };
 
-async function getAdminMetrics(): Promise<AdminMetrics> {
-  const db = getFirebaseAdminDb();
+const EMPTY_METRICS: AdminMetrics = {
+  usersCount: 0,
+  demosCompletedCount: 0,
+  proConversionsCount: 0,
+  demoStartedCount: 0,
+  paywallViewedCount: 0,
+  paywallClickedCount: 0,
+};
 
-  const [
-    usersSnapshot,
-    demosSnapshot,
-    proSnapshot,
-    basicoSnapshot,
-    residenteSnapshot,
-    legacyProPlusSnapshot,
-    demoStartedSnapshot,
-    paywallViewedSnapshot,
-    paywallClickedSnapshot,
-  ] = await Promise.all([
-    db.collection("users").get(),
-    db.collection("results").get(),
-    db.collection("users").where("plan", "==", "PRO").get(),
-    db.collection("users").where("plan", "==", "BASICO").get(),
-    db.collection("users").where("plan", "==", "RESIDENTE").get(),
-    db.collection("users").where("plan", "==", "PRO_PLUS").get(),
-    db.collection("analytics_events").where("eventName", "==", "start_demo").get(),
-    db.collection("analytics_events").where("eventName", "==", "view_paywall").get(),
-    db.collection("analytics_events").where("eventName", "==", "click_upgrade").get(),
-  ]);
+async function getAdminMetrics(): Promise<{ metrics: AdminMetrics; loadError: string | null }> {
+  try {
+    const db = getFirebaseAdminDb();
 
-  return {
-    usersCount: usersSnapshot.size,
-    demosCompletedCount: demosSnapshot.size,
-    proConversionsCount:
-      proSnapshot.size +
-      basicoSnapshot.size +
-      residenteSnapshot.size +
-      legacyProPlusSnapshot.size,
-    demoStartedCount: demoStartedSnapshot.size,
-    paywallViewedCount: paywallViewedSnapshot.size,
-    paywallClickedCount: paywallClickedSnapshot.size,
-  };
+    const [
+      usersSnapshot,
+      demosSnapshot,
+      proSnapshot,
+      basicoSnapshot,
+      residenteSnapshot,
+      legacyProPlusSnapshot,
+      demoStartedSnapshot,
+      paywallViewedSnapshot,
+      paywallClickedSnapshot,
+    ] = await Promise.all([
+      db.collection("users").get(),
+      db.collection("results").get(),
+      db.collection("users").where("plan", "==", "PRO").get(),
+      db.collection("users").where("plan", "==", "BASICO").get(),
+      db.collection("users").where("plan", "==", "RESIDENTE").get(),
+      db.collection("users").where("plan", "==", "PRO_PLUS").get(),
+      db.collection("analytics_events").where("eventName", "==", "start_demo").get(),
+      db.collection("analytics_events").where("eventName", "==", "view_paywall").get(),
+      db.collection("analytics_events").where("eventName", "==", "click_upgrade").get(),
+    ]);
+
+    return {
+      metrics: {
+        usersCount: usersSnapshot.size,
+        demosCompletedCount: demosSnapshot.size,
+        proConversionsCount:
+          proSnapshot.size +
+          basicoSnapshot.size +
+          residenteSnapshot.size +
+          legacyProPlusSnapshot.size,
+        demoStartedCount: demoStartedSnapshot.size,
+        paywallViewedCount: paywallViewedSnapshot.size,
+        paywallClickedCount: paywallClickedSnapshot.size,
+      },
+      loadError: null,
+    };
+  } catch (error) {
+    console.error("[admin] No se pudieron cargar las métricas.", error);
+    const message =
+      error instanceof Error && error.message.includes("FIREBASE_ADMIN")
+        ? "Configura FIREBASE_ADMIN_PROJECT_ID, FIREBASE_ADMIN_CLIENT_EMAIL y FIREBASE_ADMIN_PRIVATE_KEY en Vercel."
+        : "No se pudieron cargar las métricas. Revisa la consola de Firebase y las variables de entorno.";
+    return { metrics: EMPTY_METRICS, loadError: message };
+  }
 }
 
 type AlertItem = {
@@ -112,7 +133,7 @@ function MetricCard({ label, value }: { label: string; value: number }) {
 }
 
 export default async function AdminPage() {
-  const metrics = await getAdminMetrics();
+  const { metrics, loadError } = await getAdminMetrics();
   const alerts = buildAlerts(metrics);
   const demoFinishRate =
     metrics.demoStartedCount > 0
@@ -140,6 +161,15 @@ export default async function AdminPage() {
               </p>
             </div>
           </header>
+
+          {loadError ? (
+            <div
+              role="alert"
+              className="mt-6 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-100"
+            >
+              {loadError}
+            </div>
+          ) : null}
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <MetricCard label="Usuarios Totales" value={metrics.usersCount} />
