@@ -47,6 +47,7 @@ export interface UserDocument {
   goalUniversity?: string;
   attemptedExam?: boolean;
   usedCourses?: boolean;
+  role?: "student" | "professor" | "moderator" | "admin";
 }
 
 export function generateReferralCode() {
@@ -112,6 +113,7 @@ export async function loginWithGoogle(): Promise<{
       lastActiveAt: serverTimestamp(),
       achievements: [],
       onboardingCompleted: false,
+      role: "student",
     };
     try {
       await setDoc(userDocRef, newUserDoc);
@@ -168,6 +170,7 @@ export async function loginWithFacebook(): Promise<{
       lastActiveAt: serverTimestamp(),
       achievements: [],
       onboardingCompleted: false,
+      role: "student",
     };
     await setDoc(userDocRef, newUserDoc);
   } else {
@@ -212,6 +215,7 @@ export async function registerWithEmail(
     lastActiveAt: serverTimestamp(),
     achievements: [],
     onboardingCompleted: false,
+    role: "student",
   };
 
   await setDoc(userDocRef, userDoc, { merge: true });

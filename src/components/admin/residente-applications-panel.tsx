@@ -33,7 +33,13 @@ async function getResidenteApplications(): Promise<Application[]> {
   });
 }
 
-export async function ResidenteApplicationsPanel() {
+type PanelVariant = "admin" | "moderator";
+
+export async function ResidenteApplicationsPanel({
+  variant = "admin",
+}: {
+  variant?: PanelVariant;
+}) {
   let applications: Application[] = [];
   try {
     applications = await getResidenteApplications();
@@ -41,11 +47,16 @@ export async function ResidenteApplicationsPanel() {
     console.error("residente_applications", e);
   }
 
+  const activationHint =
+    variant === "moderator"
+      ? "Si apruebas una postulación, solicita a un administrador que active el plan en la plataforma."
+      : "Para activar el plan, usa creación de usuario en admin.";
+
   return (
     <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
       <h2 className="text-xl font-semibold text-white">Postulaciones Plan Residente</h2>
       <p className="mt-1 text-sm text-mq-muted">
-        Actualiza el estado tras contactar al candidato. Para activar el plan, usa creación de usuario en admin.
+        Actualiza el estado tras contactar al candidato. {activationHint}
       </p>
 
       {applications.length === 0 ? (

@@ -33,6 +33,7 @@ export async function createQuestionAction(formData: FormData) {
       keyPoints: [explanation.slice(0, 120)],
     });
     revalidatePath("/admin");
+    revalidatePath("/profesor");
     return { success: true };
   } catch (e) {
     console.error(e);
@@ -44,6 +45,7 @@ export async function seedQuestionsAction() {
   try {
     const count = await adminSeedFallbackQuestions();
     revalidatePath("/admin");
+    revalidatePath("/profesor");
     return { success: true, count };
   } catch (e) {
     console.error(e);
@@ -55,6 +57,7 @@ export async function seedExtendedQuestionsAction() {
   try {
     const count = await adminSeedExtendedQuestions();
     revalidatePath("/admin");
+    revalidatePath("/profesor");
     return { success: true, count };
   } catch (e) {
     console.error(e);

@@ -159,6 +159,20 @@ export default async function AdminPage() {
               <p className="mt-3 text-sm text-mq-muted sm:text-base">
                 Métricas de conversión y gestión de usuarios en tiempo real.
               </p>
+              <div className="mt-4 flex flex-wrap gap-4">
+                <a
+                  href="/profesor"
+                  className="text-sm font-medium text-mq-accent hover:underline"
+                >
+                  Panel profesor →
+                </a>
+                <a
+                  href="/moderador"
+                  className="text-sm font-medium text-mq-accent hover:underline"
+                >
+                  Panel moderador →
+                </a>
+              </div>
             </div>
           </header>
 

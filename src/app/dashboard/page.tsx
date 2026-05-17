@@ -13,20 +13,25 @@ import { useReferralStats } from "@/hooks/use-referral-stats";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { hasPaidPlan } from "@/lib/plans/access";
-
-const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com";
+import { getPostLoginPath } from "@/lib/roles";
+import { useUserRole } from "@/hooks/use-user-role";
 
 export default function DashboardPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile, loading: isLoadingProfile } = useUserProfile();
   const { referralCode, referralCount, loading: isLoadingReferrals } = useReferralStats(user?.uid);
+  const { role, email, loading: isLoadingRole } = useUserRole();
   const router = useRouter();
 
   useEffect(() => {
-    if (user?.email === ADMIN_EMAIL) {
-      router.replace("/admin");
+    if (!user || isLoadingRole) {
+      return;
     }
-  }, [user, router]);
+    const staffPath = getPostLoginPath(role, email);
+    if (staffPath !== "/dashboard") {
+      router.replace(staffPath);
+    }
+  }, [user, role, email, isLoadingRole, router]);
 
   const effectivePlan = profile?.plan ?? "FREE";
   const expiresAt = profile?.planExpiresAt ?? null;

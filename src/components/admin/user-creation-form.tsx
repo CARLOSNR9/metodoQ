@@ -2,6 +2,22 @@
 
 import { useState } from "react";
 import { createUserAction } from "@/app/admin/actions";
+import { getFirebaseAuth } from "@/lib/firebase";
+import { SelectField } from "@/components/ui/select-field";
+import { getRoleLabel, USER_ROLES, type UserRole } from "@/lib/roles";
+import type { UserPlan } from "@/lib/auth";
+
+const PLAN_OPTIONS: { value: UserPlan; label: string }[] = [
+  { value: "FREE", label: "Gratis (FREE)" },
+  { value: "BASICO", label: "Básico" },
+  { value: "PRO", label: "Pro" },
+  { value: "RESIDENTE", label: "Residente" },
+];
+
+const ROLE_OPTIONS: { value: UserRole; label: string }[] = USER_ROLES.map((role) => ({
+  value: role,
+  label: getRoleLabel(role),
+}));
 
 export function AdminUserForm() {
   const [isPending, setIsPending] = useState(false);
@@ -12,7 +28,15 @@ export function AdminUserForm() {
     setIsPending(true);
     setMessage(null);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const currentUser = getFirebaseAuth().currentUser;
+    if (currentUser) {
+      const idToken = await currentUser.getIdToken();
+      formData.set("idToken", idToken);
+    }
+
     const result = await createUserAction(formData);
 
     setIsPending(false);
@@ -20,7 +44,7 @@ export function AdminUserForm() {
       setMessage({ type: "error", text: result.error });
     } else {
       setMessage({ type: "success", text: "Usuario creado exitosamente." });
-      (e.target as HTMLFormElement).reset();
+      form.reset();
     }
   }
 
@@ -29,7 +53,7 @@ export function AdminUserForm() {
       <div className="mb-6">
         <h2 className="text-xl font-semibold text-white">Gestión Manual de Usuarios</h2>
         <p className="mt-1 text-sm text-mq-muted">
-          Crea usuarios directamente sin pasar por el flujo de registro público.
+          Crea usuarios con plan de estudio y rol de acceso (estudiante, profesor o administrador).
         </p>
       </div>
 
@@ -37,26 +61,26 @@ export function AdminUserForm() {
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="space-y-1.5">
             <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
-              Nombre Completo
+              Nombre completo
             </label>
             <input
               name="displayName"
               type="text"
               required
               placeholder="Ej: Juan Pérez"
-              className="w-full rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white placeholder-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+              className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
             />
           </div>
           <div className="space-y-1.5">
             <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
-              Correo Electrónico
+              Correo electrónico
             </label>
             <input
               name="email"
               type="email"
               required
               placeholder="juan@ejemplo.com"
-              className="w-full rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white placeholder-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+              className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
             />
           </div>
         </div>
@@ -64,29 +88,39 @@ export function AdminUserForm() {
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="space-y-1.5">
             <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
-              Contraseña Temporal
+              Contraseña temporal
             </label>
             <input
               name="password"
               type="text"
               required
-              placeholder="Min. 6 caracteres"
-              className="w-full rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white placeholder-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+              minLength={6}
+              placeholder="Mín. 6 caracteres"
+              className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
             />
           </div>
-          <div className="space-y-1.5">
-            <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
-              Plan Asignado
-            </label>
-            <select
-              name="plan"
-              className="w-full appearance-none rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
-            >
-              <option value="FREE">FREE</option>
-              <option value="BASICO">BASICO</option>
-              <option value="PRO">PRO</option>
-              <option value="RESIDENTE">RESIDENTE</option>
-            </select>
+          <SelectField
+            label="Plan asignado"
+            name="plan"
+            defaultValue="FREE"
+            options={PLAN_OPTIONS}
+          />
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <SelectField
+            label="Rol de acceso"
+            name="role"
+            defaultValue="student"
+            options={ROLE_OPTIONS}
+          />
+          <div className="flex items-end">
+            <p className="rounded-lg border border-mq-border/60 bg-white/[0.03] px-4 py-3 text-xs leading-relaxed text-mq-muted">
+              <strong className="text-white">Admin:</strong> panel completo.{" "}
+              <strong className="text-white">Moderador:</strong> postulaciones Residente.{" "}
+              <strong className="text-white">Profesor:</strong> preguntas y clases.{" "}
+              <strong className="text-white">Estudiante:</strong> dashboard de aprendizaje.
+            </p>
           </div>
         </div>
 
@@ -94,35 +128,13 @@ export function AdminUserForm() {
           <button
             type="submit"
             disabled={isPending}
-            className="flex w-full items-center justify-center rounded-lg bg-mq-accent px-6 py-3 font-semibold text-[#0A1F44] transition-all hover:bg-mq-accent-hover disabled:opacity-50 sm:w-auto"
+            className="flex w-full items-center justify-center rounded-lg bg-mq-accent px-6 py-3 font-semibold text-[#0A1F44] transition-all hover:brightness-110 disabled:opacity-50 sm:w-auto"
           >
-            {isPending ? (
-              <span className="flex items-center gap-2">
-                <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24">
-                  <circle
-                    className="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="4"
-                    fill="none"
-                  />
-                  <path
-                    className="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  />
-                </svg>
-                Procesando...
-              </span>
-            ) : (
-              "Crear Usuario"
-            )}
+            {isPending ? "Procesando..." : "Crear usuario"}
           </button>
         </div>
 
-        {message && (
+        {message ? (
           <div
             className={`mt-4 rounded-lg border p-4 ${
               message.type === "success"
@@ -132,7 +144,7 @@ export function AdminUserForm() {
           >
             <p className="text-sm">{message.text}</p>
           </div>
-        )}
+        ) : null}
       </form>
     </section>
   );

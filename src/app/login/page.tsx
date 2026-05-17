@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { loginWithEmail, loginWithGoogle } from "@/lib/auth";
+import { resolvePostLoginPath } from "@/lib/client/post-login";
 import { sendWelcomeEmailIfPossible } from "@/lib/client/send-welcome-email";
 
 function getLoginErrorMessage(errorCode: string) {
@@ -45,11 +46,8 @@ export default function LoginPage() {
 
     try {
       const credential = await loginWithEmail(email.trim(), password);
-      if (credential.user.email === (process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com")) {
-        router.push("/admin");
-      } else {
-        router.push("/dashboard");
-      }
+      const path = await resolvePostLoginPath(credential.user.uid, credential.user.email);
+      router.push(path);
     } catch (error) {
       const code = (error as { code?: string }).code ?? "";
       setErrorMessage(getLoginErrorMessage(code));
@@ -67,11 +65,8 @@ export default function LoginPage() {
       if (isNewUser) {
         await sendWelcomeEmailIfPossible(credential.user.displayName);
       }
-      if (credential.user.email === (process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com")) {
-        router.push("/admin");
-      } else {
-        router.push("/dashboard");
-      }
+      const path = await resolvePostLoginPath(credential.user.uid, credential.user.email);
+      router.push(path);
     } catch (error) {
       const code = (error as { code?: string }).code ?? "";
       setErrorMessage(getLoginErrorMessage(code));

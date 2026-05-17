@@ -1,6 +1,8 @@
 "use client";
 
 import { useTransition } from "react";
+import { getFirebaseAuth } from "@/lib/firebase";
+import { selectInputClassName } from "@/components/ui/select-field";
 import {
   updateResidenteApplicationStatusAction,
   type ResidenteApplicationStatus,
@@ -36,7 +38,11 @@ export function ResidenteApplicationRow({
 
   const handleStatusChange = (next: ResidenteApplicationStatus) => {
     startTransition(async () => {
-      await updateResidenteApplicationStatusAction(id, next);
+      const token = await getFirebaseAuth().currentUser?.getIdToken();
+      const result = await updateResidenteApplicationStatusAction(id, next, token);
+      if (result.error) {
+        console.error(result.error);
+      }
     });
   };
 
@@ -55,10 +61,10 @@ export function ResidenteApplicationRow({
           onChange={(e) =>
             handleStatusChange(e.target.value as ResidenteApplicationStatus)
           }
-          className="rounded-lg border border-mq-border bg-mq-surface px-2 py-1 text-xs text-white disabled:opacity-50"
+          className={`${selectInputClassName} px-2 py-1 text-xs`}
         >
           {STATUS_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value}>
+            <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
               {opt.label}
             </option>
           ))}

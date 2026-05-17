@@ -1,0 +1,57 @@
+import { cn } from "@/lib/utils";
+
+export type SelectOption = {
+  value: string;
+  label: string;
+};
+
+type SelectFieldProps = {
+  label: string;
+  name: string;
+  options: SelectOption[];
+  defaultValue?: string;
+  required?: boolean;
+  className?: string;
+};
+
+export const selectInputClassName = cn(
+  "w-full cursor-pointer appearance-none rounded-lg border border-mq-border",
+  "bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-white",
+  "outline-none transition-all",
+  "focus:border-mq-accent focus:ring-1 focus:ring-mq-accent",
+  "[color-scheme:dark]",
+);
+
+export function SelectField({
+  label,
+  name,
+  options,
+  defaultValue,
+  required,
+  className,
+}: SelectFieldProps) {
+  return (
+    <div className={cn("space-y-1.5", className)}>
+      <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+        {label}
+      </label>
+      <select
+        name={name}
+        defaultValue={defaultValue}
+        required={required}
+        className={selectInputClassName}
+      >
+        {options.map((option) => (
+          <option
+            key={option.value}
+            value={option.value}
+            className="bg-[#0f2744] text-white"
+          >
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+}
+

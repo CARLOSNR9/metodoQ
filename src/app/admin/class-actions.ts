@@ -33,6 +33,7 @@ export async function createClassAction(formData: FormData) {
       recordingLink: recordingLink || undefined,
     });
     revalidatePath("/admin");
+    revalidatePath("/profesor");
     return { success: true };
   } catch (e) {
     console.error(e);
@@ -46,6 +47,7 @@ export async function deleteClassAction(classId: string) {
   try {
     await adminDeleteClass(classId);
     revalidatePath("/admin");
+    revalidatePath("/profesor");
     return { success: true };
   } catch (e) {
     console.error(e);
