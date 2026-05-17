@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getClasses } from "@/lib/classes/service";
 import { Class } from "@/lib/classes/types";
 import { useUserPlan } from "@/hooks/use-user-plan";
+import { hasProFeatures } from "@/lib/plans/access";
 import { History, PlayCircle } from "lucide-react";
 
 export function PastClasses() {
@@ -11,7 +12,7 @@ export function PastClasses() {
   const [classes, setClasses] = useState<Class[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const isPro = plan === "PRO" || plan === "PRO_PLUS";
+  const isPro = hasProFeatures(plan);
 
   useEffect(() => {
     async function fetchPastClasses() {

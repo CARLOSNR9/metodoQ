@@ -1,112 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Check, Info, Ticket, Users } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { trackClickDemo } from "@/lib/analytics/events";
+import { motion } from "framer-motion";
+import {
+  BILLING_CYCLES,
+  formatCOP,
+  PLANS,
+  type BillingCycle,
+} from "@/lib/plans/config";
+import { PlanCtaButton } from "@/components/pricing/plan-cta-button";
 
-type BillingCycle = 1 | 3 | 6;
-
-interface PlanPrice {
-  monthly: number;
-  total: number;
-  savings?: string;
-}
-
-interface Plan {
-  id: string;
-  name: string;
-  description: string;
-  prices: Record<BillingCycle, PlanPrice>;
-  features: string[];
-  cta: string;
-  highlighted?: boolean;
-  popular?: boolean;
-}
-
-const PLANS: Plan[] = [
-  {
-    id: "free",
-    name: "Gratis",
-    description: "Para quienes quieren probar el método antes de comprometerse.",
-    prices: {
-      1: { monthly: 0, total: 0 },
-      3: { monthly: 0, total: 0 },
-      6: { monthly: 0, total: 0 },
-    },
-    features: [
-      "100 preguntas tipo examen real",
-      "Perfil de rendimiento básico",
-      "Ideal para probar el método",
-      "Sin simulacros completos",
-    ],
-    cta: "Empezar Gratis",
-  },
-  {
-    id: "basico",
-    name: "Básico",
-    description: "Para quienes buscan validar su conocimiento con práctica real.",
-    prices: {
-      1: { monthly: 300000, total: 300000 },
-      3: { monthly: 166667, total: 500000, savings: "44%" },
-      6: { monthly: 141667, total: 850000, savings: "53%" },
-    },
-    features: [
-      "Entrena con preguntas tipo examen real",
-      "Tu perfil de rendimiento (debilidades y fortalezas)",
-      "Simulaciones de examen (limitadas)",
-      "Acceso a la plataforma 24/7",
-    ],
-    cta: "Elegir Básico",
-  },
-  {
-    id: "pro",
-    name: "Pro",
-    description: "El camino directo para dominar el examen con mentoría experta.",
-    prices: {
-      1: { monthly: 500000, total: 500000 },
-      3: { monthly: 333333, total: 1000000, savings: "33%" },
-      6: { monthly: 266667, total: 1600000, savings: "46%" },
-    },
-    features: [
-      "Todo lo del plan Básico",
-      "Clases en vivo con el Doctor Q",
-      "Análisis avanzado de tus errores por tema",
-      "Tu plan de estudio personalizado",
-      "Comunidad privada de estudio",
-    ],
-    cta: "Elegir plan PRO",
-    highlighted: true,
-    popular: true,
-  },
-  {
-    id: "residente",
-    name: "Residente",
-    description: "Acompañamiento élite para asegurar tu plaza de especialidad.",
-    prices: {
-      1: { monthly: 1000000, total: 1000000 },
-      3: { monthly: 666667, total: 2000000, savings: "33%" },
-      6: { monthly: 583333, total: 3500000, savings: "41%" },
-    },
-    features: [
-      "Todo lo del plan PRO",
-      "Seguimiento 1 a 1 con el equipo médico",
-      "Preparación intensiva para entrevistas",
-      "Acompañamiento personalizado en trámites",
-      "Soporte prioritario 24/7",
-    ],
-    cta: "Postular a Residente",
-  },
-];
-
-const formatCOP = (amount: number) => {
-  return new Intl.NumberFormat("es-CO", {
-    style: "currency",
-    currency: "COP",
-    maximumFractionDigits: 0,
-  }).format(amount);
-};
+const ctaClass = (highlighted?: boolean) =>
+  `flex h-12 w-full items-center justify-center rounded-xl text-sm font-bold transition-all active:scale-[0.98] lg:h-14 lg:text-base ${
+    highlighted
+      ? "bg-mq-accent text-mq-accent-foreground hover:brightness-110 hover:shadow-[0_0_20px_rgba(0,209,255,0.4)]"
+      : "bg-white/10 text-white hover:bg-white/15 border border-white/5"
+  }`;
 
 export function PricingSection({ id = "precios" }: { id?: string }) {
   const [cycle, setCycle] = useState<BillingCycle>(3);
@@ -153,7 +63,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
         {/* Cycle Toggle */}
         <div className="mt-12 flex justify-center">
           <div className="relative flex rounded-full bg-white/5 p-1 backdrop-blur-sm border border-white/10">
-            {( [1, 3, 6] as BillingCycle[]).map((c) => (
+            {BILLING_CYCLES.map((c) => (
               <button
                 key={c}
                 onClick={() => setCycle(c)}
@@ -207,11 +117,11 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                 <div className="mb-8 flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-bold text-white">
-                      {plan.id === "free" ? "$0" : formatCOP(currentPrice.monthly)}
+                      {plan.id === "FREE" ? "$0" : formatCOP(currentPrice.monthly)}
                     </span>
-                    {plan.id !== "free" && <span className="text-mq-muted text-sm">/mes</span>}
+                    {plan.id !== "FREE" && <span className="text-mq-muted text-sm">/mes</span>}
                   </div>
-                  {plan.id === "free" ? (
+                  {plan.id === "FREE" ? (
                     <p className="text-sm text-mq-accent font-medium">
                       Pruébalo por 7 días
                     </p>
@@ -242,19 +152,9 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                   ))}
                 </ul>
 
-                <Link
-                  href={plan.id === "free" ? "/register" : plan.id === "pro" ? "/register" : plan.id === "basico" ? "/demo" : "/contact"}
-                  onClick={() => plan.id === "basico" && trackClickDemo()}
-                  className={`flex h-12 w-full items-center justify-center rounded-xl text-sm font-bold transition-all active:scale-[0.98] lg:h-14 lg:text-base ${
-                    plan.highlighted
-                      ? "bg-mq-accent text-mq-accent-foreground hover:brightness-110 hover:shadow-[0_0_20px_rgba(0,209,255,0.4)]"
-                      : "bg-white/10 text-white hover:bg-white/15 border border-white/5"
-                  }`}
-                >
-                  {plan.cta}
-                </Link>
+                <PlanCtaButton plan={plan} cycle={cycle} className={ctaClass(plan.highlighted)} />
                 <p className="mt-4 text-center text-[10px] text-mq-muted uppercase tracking-widest font-semibold">
-                  Sin tarjeta de crédito
+                  {plan.id === "FREE" ? "Sin tarjeta de crédito" : "Pago seguro con Stripe"}
                 </p>
               </motion.div>
             );

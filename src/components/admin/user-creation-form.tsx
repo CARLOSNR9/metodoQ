@@ -83,8 +83,9 @@ export function AdminUserForm() {
               className="w-full appearance-none rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
             >
               <option value="FREE">FREE</option>
+              <option value="BASICO">BASICO</option>
               <option value="PRO">PRO</option>
-              <option value="PRO_PLUS">PRO_PLUS</option>
+              <option value="RESIDENTE">RESIDENTE</option>
             </select>
           </div>
         </div>

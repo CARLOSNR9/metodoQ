@@ -15,6 +15,8 @@ import {
 } from "@/components/dashboard";
 import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashboard";
 import { motion } from "framer-motion";
+import { getPlanDisplayName } from "@/lib/plans/config";
+import { hasProFeatures } from "@/lib/plans/access";
 
 interface ProDashboardViewProps {
   user: any;
@@ -31,7 +33,8 @@ export function ProDashboardView({
   referralCount, 
   isLoadingReferrals 
 }: ProDashboardViewProps) {
-  const planLabel = profile?.plan === "PRO_PLUS" ? "PRO+" : "PRO";
+  const planLabel = getPlanDisplayName(profile?.plan);
+  const showLiveClasses = hasProFeatures(profile?.plan);
 
   return (
     <div className="space-y-10 pb-12">
@@ -151,9 +154,12 @@ export function ProDashboardView({
           <ProgressChart userId={user.uid} />
           <AccumulatedStats userId={user.uid} />
 
-          {/* CLASSES SECTION */}
-          <LiveClasses />
-          <PastClasses />
+          {showLiveClasses && (
+            <>
+              <LiveClasses />
+              <PastClasses />
+            </>
+          )}
         </div>
 
         <aside className="space-y-8">

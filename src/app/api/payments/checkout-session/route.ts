@@ -1,26 +1,22 @@
 import { NextResponse } from "next/server";
 import { getFirebaseAdminAuth } from "@/lib/server/firebase-admin";
 import { getStripeServerClient } from "@/lib/server/stripe";
+import {
+  getCheckoutMode,
+  getStripePriceEnvKey,
+  getStripePriceId,
+  parseBillingCycle,
+  parsePaidPlanId,
+} from "@/lib/plans/config";
 
 export const runtime = "nodejs";
-
-type CheckoutPlan = "PRO" | "PRO+";
 
 function getBearerToken(request: Request) {
   const header = request.headers.get("authorization");
   if (!header?.startsWith("Bearer ")) {
     return null;
   }
-
   return header.slice(7);
-}
-
-function getPriceIdForPlan(plan: CheckoutPlan) {
-  if (plan === "PRO+") {
-    return process.env.STRIPE_PRICE_ID_PRO_PLUS;
-  }
-
-  return process.env.STRIPE_PRICE_ID_PRO;
 }
 
 export async function POST(request: Request) {
@@ -31,33 +27,65 @@ export async function POST(request: Request) {
     }
 
     const decodedToken = await getFirebaseAdminAuth().verifyIdToken(token);
-    const body = (await request.json()) as { plan?: CheckoutPlan };
-    const plan = body.plan === "PRO+" ? "PRO+" : "PRO";
-    const priceId = getPriceIdForPlan(plan);
+    const body = (await request.json()) as { plan?: string; cycle?: number };
+    const planId = parsePaidPlanId(body.plan);
+    const cycle = parseBillingCycle(String(body.cycle ?? ""));
 
+    if (!planId) {
+      return NextResponse.json(
+        { error: "Plan no válido. Usa BASICO o PRO." },
+        { status: 400 },
+      );
+    }
+
+    if (!cycle) {
+      return NextResponse.json(
+        { error: "Ciclo de facturación no válido. Usa 1, 3 o 6." },
+        { status: 400 },
+      );
+    }
+
+    const priceId = getStripePriceId(planId, cycle);
     if (!priceId) {
       return NextResponse.json(
-        { error: "Falta configurar el priceId del plan seleccionado." },
+        {
+          error: `Falta configurar ${getStripePriceEnvKey(planId, cycle)} en variables de entorno.`,
+        },
         { status: 500 },
       );
     }
 
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
     const stripe = getStripeServerClient();
+    const mode = getCheckoutMode(cycle);
+
     const session = await stripe.checkout.sessions.create({
-      mode: "payment",
+      mode,
       line_items: [{ price: priceId, quantity: 1 }],
-      success_url: `${baseUrl}/success?plan=${encodeURIComponent(plan)}`,
-      cancel_url: `${baseUrl}/checkout?plan=${encodeURIComponent(plan)}`,
+      success_url: `${baseUrl}/success?plan=${planId}&cycle=${cycle}`,
+      cancel_url: `${baseUrl}/checkout?plan=${planId.toLowerCase()}&cycle=${cycle}`,
+      customer_email: decodedToken.email ?? undefined,
       metadata: {
         uid: decodedToken.uid,
-        plan,
+        plan: planId,
+        cycle: String(cycle),
       },
+      ...(mode === "subscription"
+        ? {
+            subscription_data: {
+              metadata: {
+                uid: decodedToken.uid,
+                plan: planId,
+                cycle: String(cycle),
+              },
+            },
+          }
+        : {}),
     });
 
     if (!session.url) {
       return NextResponse.json(
-        { error: "No se pudo crear la sesion de checkout." },
+        { error: "No se pudo crear la sesión de checkout." },
         { status: 500 },
       );
     }

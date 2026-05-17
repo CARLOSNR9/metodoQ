@@ -21,7 +21,7 @@ import {
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { trackRewardUnlocked } from "@/lib/analytics/events";
 
-export type UserPlan = "FREE" | "PRO" | "PRO_PLUS";
+export type UserPlan = "FREE" | "BASICO" | "PRO" | "RESIDENTE";
 
 export interface UserDocument {
   uid: string;

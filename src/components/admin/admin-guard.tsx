@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, signInWithEmailAndPassword, type User } from "firebase/auth";
 import { getFirebaseAuth } from "@/lib/firebase";
 
-const ADMIN_EMAIL = "admin@gmail.com";
+const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com";
 
 export function AdminGuard({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);

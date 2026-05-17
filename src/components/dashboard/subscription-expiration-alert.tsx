@@ -1,6 +1,7 @@
 "use client";
 
 import { useUserPlan } from "@/hooks/use-user-plan";
+import { hasPaidPlan } from "@/lib/plans/access";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -20,8 +21,14 @@ export function SubscriptionExpirationAlert() {
     }
   }, [expiresAt]);
 
-  // Mostrar solo si el plan es PRO/PRO_PLUS y faltan 2 días o menos (pero no ha expirado aún)
-  if (loading || plan === "FREE" || !expiresAt || daysRemaining === null || daysRemaining > 2 || daysRemaining < 0) {
+  if (
+    loading ||
+    !hasPaidPlan(plan) ||
+    !expiresAt ||
+    daysRemaining === null ||
+    daysRemaining > 2 ||
+    daysRemaining < 0
+  ) {
     return null;
   }
 
@@ -48,7 +55,7 @@ export function SubscriptionExpirationAlert() {
             </svg>
           </div>
           <div>
-            <h3 className="text-lg font-bold text-white">Tu acceso PRO vence pronto</h3>
+            <h3 className="text-lg font-bold text-white">Tu membresía vence pronto</h3>
             <p className="text-sm text-rose-200/80">
               {daysRemaining === 0 ? "Vence hoy mismo." : `Tu suscripción termina en ${daysRemaining} ${daysRemaining === 1 ? 'día' : 'días'}.`} No pierdas tus beneficios.
             </p>
@@ -56,7 +63,7 @@ export function SubscriptionExpirationAlert() {
         </div>
         
         <Link
-          href="/dashboard/perfil"
+          href="/dashboard/planes"
           className="inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-rose-500 px-8 text-sm font-bold text-white transition-all duration-200 hover:bg-rose-600 hover:shadow-[0_0_20px_rgba(244,63,94,0.4)] active:scale-95 sm:w-auto"
         >
           Renovar ahora

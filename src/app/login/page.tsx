@@ -44,7 +44,7 @@ export default function LoginPage() {
 
     try {
       const credential = await loginWithEmail(email.trim(), password);
-      if (credential.user.email === "admin@gmail.com") {
+      if (credential.user.email === (process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com")) {
         router.push("/admin");
       } else {
         router.push("/dashboard");
@@ -63,7 +63,7 @@ export default function LoginPage() {
 
     try {
       const credential = await loginWithGoogle();
-      if (credential.user.email === "admin@gmail.com") {
+      if (credential.user.email === (process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com")) {
         router.push("/admin");
       } else {
         router.push("/dashboard");

@@ -20,7 +20,9 @@ async function getAdminMetrics(): Promise<AdminMetrics> {
     usersSnapshot,
     demosSnapshot,
     proSnapshot,
-    proPlusSnapshot,
+    basicoSnapshot,
+    residenteSnapshot,
+    legacyProPlusSnapshot,
     demoStartedSnapshot,
     paywallViewedSnapshot,
     paywallClickedSnapshot,
@@ -28,6 +30,8 @@ async function getAdminMetrics(): Promise<AdminMetrics> {
     db.collection("users").get(),
     db.collection("results").get(),
     db.collection("users").where("plan", "==", "PRO").get(),
+    db.collection("users").where("plan", "==", "BASICO").get(),
+    db.collection("users").where("plan", "==", "RESIDENTE").get(),
     db.collection("users").where("plan", "==", "PRO_PLUS").get(),
     db.collection("analytics_events").where("eventName", "==", "start_demo").get(),
     db.collection("analytics_events").where("eventName", "==", "view_paywall").get(),
@@ -37,7 +41,11 @@ async function getAdminMetrics(): Promise<AdminMetrics> {
   return {
     usersCount: usersSnapshot.size,
     demosCompletedCount: demosSnapshot.size,
-    proConversionsCount: proSnapshot.size + proPlusSnapshot.size,
+    proConversionsCount:
+      proSnapshot.size +
+      basicoSnapshot.size +
+      residenteSnapshot.size +
+      legacyProPlusSnapshot.size,
     demoStartedCount: demoStartedSnapshot.size,
     paywallViewedCount: paywallViewedSnapshot.size,
     paywallClickedCount: paywallClickedSnapshot.size,

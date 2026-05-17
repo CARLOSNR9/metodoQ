@@ -1,44 +1,44 @@
-# Integracion base de pagos (Stripe)
+# Pagos y planes (Fase A — Método Q)
 
-Esta base deja el flujo listo para pagos reales sin exponer secretos en frontend.
+## Modelo unificado de planes
 
-## Flujo implementado
+| Plan Firestore | Slug URL | Checkout Stripe |
+|----------------|----------|-----------------|
+| `FREE` | `free` | No |
+| `BASICO` | `basico` | Sí |
+| `PRO` | `pro` | Sí |
+| `RESIDENTE` | `residente` | Postulación en `/residente` |
 
-1. Usuario elige plan en `/upgrade`.
-2. Frontend llama `POST /api/payments/checkout-session` con Firebase ID token.
-3. Backend verifica usuario, crea sesion de Stripe Checkout y devuelve `checkoutUrl`.
-4. Frontend redirige a Stripe Checkout.
-5. Stripe llama `POST /api/payments/webhook` al confirmar pago.
-6. Webhook actualiza `users/{uid}` en Firestore (`plan` y `planActivatedAt`).
+Configuración central: `src/lib/plans/config.ts`
+
+## Flujo de compra
+
+1. Usuario elige plan en landing (`#precios`) o `/dashboard/planes`.
+2. CTA redirige a `/checkout?plan=pro&cycle=3` (requiere sesión; si no, va a registro).
+3. `POST /api/payments/checkout-session` con `{ plan: "PRO", cycle: 3 }` y Firebase ID token.
+4. Stripe Checkout (suscripción si `cycle=1`, pago único si `cycle=3|6`).
+5. Webhook `checkout.session.completed` / `invoice.paid` activa plan en `users/{uid}` con `planExpiresAt`.
 
 ## Variables de entorno
 
-Copiar `.env.example` a `.env.local` y completar:
+Copiar `.env.example` a `.env.local` y crear en Stripe Dashboard:
 
-- `NEXT_PUBLIC_APP_URL`
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID`
-- `STRIPE_SECRET_KEY`
-- `STRIPE_WEBHOOK_SECRET`
-- `STRIPE_PRICE_ID_PRO`
-- `STRIPE_PRICE_ID_PRO_PLUS`
-- `FIREBASE_ADMIN_PROJECT_ID`
-- `FIREBASE_ADMIN_CLIENT_EMAIL`
-- `FIREBASE_ADMIN_PRIVATE_KEY`
+- Productos: **Básico** y **Pro**
+- Por cada producto, 3 precios:
+  - **1 mes**: recurring monthly → `STRIPE_PRICE_*_1M`
+  - **3 meses**: one-time → `STRIPE_PRICE_*_3M`
+  - **6 meses**: one-time → `STRIPE_PRICE_*_6M`
 
-## Endpoints creados
+## Pruebas locales
 
-- `POST /api/payments/checkout-session`
-  - Seguridad: valida Firebase ID token en backend.
-  - Crea sesion de pago en Stripe.
+```bash
+npm run dev
+stripe listen --forward-to localhost:3000/api/payments/webhook
+# Copiar whsec_... a STRIPE_WEBHOOK_SECRET
+```
 
-- `POST /api/payments/webhook`
-  - Seguridad: valida firma `stripe-signature`.
-  - Confirma pago y actualiza plan en Firestore.
+Probar: registro → `/dashboard/planes` → Pro 3 meses → pagar con tarjeta test → verificar Firestore `plan`, `planExpiresAt`.
 
-## Pruebas locales sugeridas
+## Plan Residente
 
-1. Ejecutar app: `npm run dev`
-2. Exponer webhook local con Stripe CLI:
-   - `stripe listen --forward-to localhost:3000/api/payments/webhook`
-3. Actualizar `STRIPE_WEBHOOK_SECRET` con el valor de Stripe CLI.
-4. Probar flujo desde `/upgrade` y confirmar que se actualiza `users/{uid}`.
+Formulario en `/residente` guarda en colección `residente_applications`. El equipo activa manualmente el plan en admin o Firestore.

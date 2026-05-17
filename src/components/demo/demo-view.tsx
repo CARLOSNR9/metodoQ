@@ -16,6 +16,7 @@ import {
 import { logoutUser } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { useUserPlan } from "@/hooks/use-user-plan";
+import { hasUnlimitedTraining } from "@/lib/plans/access";
 import {
   trackClickUpgrade,
   trackDemoQuestionAnswered,
@@ -635,7 +636,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
-  const hasUnlimitedAccess = effectivePlan === "PRO" || effectivePlan === "PRO_PLUS";
+  const hasUnlimitedAccess = hasUnlimitedTraining(effectivePlan);
   const plannedQuestionCount = isDailyPill ? 1 : Math.min(10, demoQuestions.length);
   const totalQuestions = hasStarted ? sessionQuestions.length : plannedQuestionCount;
   const availableQuestions = hasStarted ? sessionQuestions : [];
