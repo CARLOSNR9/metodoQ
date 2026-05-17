@@ -4,8 +4,10 @@ import { useState } from "react";
 import { createUserAction } from "@/app/admin/actions";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { SelectField } from "@/components/ui/select-field";
+import { ManualSaleFields } from "@/components/admin/manual-sale-fields";
 import { getRoleLabel, USER_ROLES, type UserRole } from "@/lib/roles";
 import type { UserPlan } from "@/lib/auth";
+import type { PlanId } from "@/lib/plans/config";
 
 const PLAN_OPTIONS: { value: UserPlan; label: string }[] = [
   { value: "FREE", label: "Gratis (FREE)" },
@@ -19,9 +21,14 @@ const ROLE_OPTIONS: { value: UserRole; label: string }[] = USER_ROLES.map((role)
   label: getRoleLabel(role),
 }));
 
+const PAID_PLANS: PlanId[] = ["BASICO", "PRO", "RESIDENTE"];
+
 export function AdminUserForm() {
   const [isPending, setIsPending] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<UserPlan>("FREE");
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+
+  const showManualSale = PAID_PLANS.includes(selectedPlan as PlanId);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -43,8 +50,21 @@ export function AdminUserForm() {
     if (result.error) {
       setMessage({ type: "error", text: result.error });
     } else {
-      setMessage({ type: "success", text: "Usuario creado exitosamente." });
+      const expiry =
+        result.planExpiresAt &&
+        new Date(result.planExpiresAt).toLocaleDateString("es-CO", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
+      setMessage({
+        type: "success",
+        text: expiry
+          ? `Usuario creado. Plan activo hasta el ${expiry}.`
+          : "Usuario creado exitosamente.",
+      });
       form.reset();
+      setSelectedPlan("FREE");
     }
   }
 
@@ -53,7 +73,8 @@ export function AdminUserForm() {
       <div className="mb-6">
         <h2 className="text-xl font-semibold text-white">Gestión Manual de Usuarios</h2>
         <p className="mt-1 text-sm text-mq-muted">
-          Crea usuarios con plan de estudio y rol de acceso (estudiante, profesor o administrador).
+          Crea usuarios con plan, rol y —si es venta por negociador— precio acordado, inicio y fin
+          del período.
         </p>
       </div>
 
@@ -99,13 +120,26 @@ export function AdminUserForm() {
               className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
             />
           </div>
-          <SelectField
-            label="Plan asignado"
-            name="plan"
-            defaultValue="FREE"
-            options={PLAN_OPTIONS}
-          />
+          <div className="space-y-1.5">
+            <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+              Plan asignado
+            </label>
+            <select
+              name="plan"
+              value={selectedPlan}
+              onChange={(e) => setSelectedPlan(e.target.value as UserPlan)}
+              className="w-full cursor-pointer appearance-none rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-white outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
+            >
+              {PLAN_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
+                  {opt.label}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
+
+        {showManualSale ? <ManualSaleFields planId={selectedPlan as PlanId} /> : null}
 
         <div className="grid gap-4 sm:grid-cols-2">
           <SelectField

@@ -2,10 +2,15 @@
 
 import { revalidatePath } from "next/cache";
 import { UserPlan } from "@/lib/auth";
-import { calculatePlanExpiration } from "@/lib/plans/config";
+import {
+  discountPercent,
+  parseManualSaleFromForm,
+  type ManualSaleRecord,
+} from "@/lib/plans/manual-sale";
 import { canAssignRole, verifyStaffCaller } from "@/lib/server/verify-staff";
 import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import { normalizeUserRole } from "@/lib/roles";
+import type { BillingCycle } from "@/lib/plans/config";
 
 export async function createUserAction(formData: FormData) {
   const idToken = formData.get("idToken") as string | null;
@@ -38,6 +43,30 @@ export async function createUserAction(formData: FormData) {
     return { error: "Plan no válido." };
   }
 
+  const hasPaidPlan = plan !== "FREE";
+  let planBillingCycle: BillingCycle | null = null;
+  let planStartedAt: string | null = null;
+  let planExpiresAt: string | null = null;
+  let manualSale: ManualSaleRecord | null = null;
+
+  if (hasPaidPlan) {
+    const sale = parseManualSaleFromForm(formData, plan);
+    if (!sale.ok) {
+      return { error: sale.error };
+    }
+    planBillingCycle = sale.cycle;
+    planStartedAt = sale.planStartedAt;
+    planExpiresAt = sale.planExpiresAt;
+    manualSale = {
+      negotiatedPriceCOP: sale.negotiatedPriceCOP,
+      listPriceCOP: sale.listPriceCOP,
+      negotiatorName: sale.negotiatorName,
+      notes: sale.notes,
+      recordedAt: new Date().toISOString(),
+      recordedByUid: caller.uid,
+    };
+  }
+
   try {
     const auth = getFirebaseAdminAuth();
     const db = getFirebaseAdminDb();
@@ -48,11 +77,7 @@ export async function createUserAction(formData: FormData) {
       displayName,
     });
 
-    const now = new Date();
-    const hasPaidPlan = plan !== "FREE";
-    const defaultCycle = 3 as const;
-    const planExpiresAt =
-      hasPaidPlan ? calculatePlanExpiration(now, defaultCycle) : null;
+    const now = new Date().toISOString();
 
     const userDoc = {
       uid: userRecord.uid,
@@ -60,7 +85,8 @@ export async function createUserAction(formData: FormData) {
       displayName,
       plan,
       role,
-      createdAt: now.toISOString(),
+      planBillingCycle,
+      createdAt: now,
       streakCount: 0,
       streakLastTrainingDate: null,
       strengths: [],
@@ -71,9 +97,10 @@ export async function createUserAction(formData: FormData) {
       topicStats: {},
       referralCode: Math.random().toString(36).substring(2, 8).toUpperCase(),
       referredBy: null,
-      planStartedAt: hasPaidPlan ? now.toISOString() : null,
+      planStartedAt,
       planExpiresAt,
-      lastActiveAt: now.toISOString(),
+      manualSale,
+      lastActiveAt: now,
       achievements: [],
       onboardingCompleted: true,
       emailOptIn: true,
@@ -81,9 +108,35 @@ export async function createUserAction(formData: FormData) {
 
     await db.collection("users").doc(userRecord.uid).set(userDoc);
 
+    if (hasPaidPlan && manualSale && planBillingCycle && planStartedAt && planExpiresAt) {
+      await db.collection("manual_sales").add({
+        userId: userRecord.uid,
+        email: userRecord.email,
+        displayName,
+        plan,
+        billingCycle: planBillingCycle,
+        listPriceCOP: manualSale.listPriceCOP,
+        negotiatedPriceCOP: manualSale.negotiatedPriceCOP,
+        discountPercent: discountPercent(
+          manualSale.listPriceCOP,
+          manualSale.negotiatedPriceCOP,
+        ),
+        planStartedAt,
+        planExpiresAt,
+        negotiatorName: manualSale.negotiatorName,
+        notes: manualSale.notes,
+        createdByUid: caller.uid,
+        createdAt: now,
+      });
+    }
+
     revalidatePath("/admin");
     revalidatePath("/profesor");
-    return { success: true, uid: userRecord.uid };
+    return {
+      success: true,
+      uid: userRecord.uid,
+      planExpiresAt,
+    };
   } catch (error: unknown) {
     console.error("Error creating user:", error);
     const message = error instanceof Error ? error.message : "Error al crear el usuario.";

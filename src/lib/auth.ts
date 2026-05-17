@@ -40,6 +40,15 @@ export interface UserDocument {
   referredBy: string | null;
   planStartedAt: string | null;
   planExpiresAt: string | null;
+  planBillingCycle?: number | null;
+  manualSale?: {
+    negotiatedPriceCOP: number;
+    listPriceCOP: number;
+    negotiatorName: string | null;
+    notes: string | null;
+    recordedAt: string;
+    recordedByUid: string;
+  } | null;
   emailOptIn: boolean;
   lastActiveAt: ReturnType<typeof serverTimestamp> | null;
   achievements: string[];
