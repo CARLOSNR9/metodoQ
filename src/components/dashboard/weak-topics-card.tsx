@@ -161,14 +161,14 @@ export function WeakTopicsCard({ userId, isProUser = false }: WeakTopicsCardProp
               </Link>
             </div>
           ) : (
-            <motion.div className="pt-2">
+            <div className="pt-2">
               <Link
                 href="/dashboard/planes#residente"
                 className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mq-muted transition-colors hover:text-mq-accent"
               >
                 Conoce el plan Residente — acompañamiento 1 a 1
               </Link>
-            </motion.div>
+            </div>
           )}
         </div>
       )}
