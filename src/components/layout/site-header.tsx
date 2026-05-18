@@ -1,17 +1,92 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import { LogOut } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { AuthDrawer } from "./auth-drawer";
 import { trackClickDemo } from "@/lib/analytics/events";
+import { useUserRole } from "@/hooks/use-user-role";
+import { logoutUser } from "@/lib/auth";
+import { getPostLoginPath } from "@/lib/roles";
 
 const nav = [
   { label: "Método", href: "/#como-funciona" },
   { label: "Precios", href: "/#precios" },
   { label: "FAQ", href: "/#faq" },
 ] as const;
+
+function AuthNavActions({
+  onOpenAuth,
+  compact = false,
+}: {
+  onOpenAuth: () => void;
+  compact?: boolean;
+}) {
+  const router = useRouter();
+  const { role, email, loading } = useUserRole();
+  const isLoggedIn = Boolean(email);
+
+  if (loading) {
+    return (
+      <span
+        className={`inline-block animate-pulse rounded-lg bg-white/10 ${
+          compact ? "h-11 min-w-[4.5rem] flex-1" : "hidden h-9 w-24 sm:block"
+        }`}
+        aria-hidden
+      />
+    );
+  }
+
+  if (isLoggedIn) {
+    const panelPath = getPostLoginPath(role, email);
+
+    return (
+      <>
+        <Link
+          href={panelPath}
+          className={
+            compact
+              ? "min-h-11 flex-1 rounded-lg px-1 py-2 text-center text-[0.75rem] font-bold uppercase tracking-wider transition duration-200 hover:bg-white/[0.04] hover:text-mq-accent flex items-center justify-center"
+              : "hidden text-sm font-medium text-mq-muted transition hover:text-white sm:block"
+          }
+        >
+          Mi panel
+        </Link>
+        <button
+          type="button"
+          onClick={async () => {
+            await logoutUser();
+            router.refresh();
+          }}
+          className={
+            compact
+              ? "min-h-11 flex-1 rounded-lg px-1 py-2 text-center text-[0.75rem] font-bold uppercase tracking-wider transition duration-200 hover:bg-red-500/10 hover:text-red-400 flex items-center justify-center gap-1"
+              : "hidden items-center gap-1.5 text-sm font-medium text-mq-muted transition hover:text-red-400 sm:inline-flex"
+          }
+        >
+          {!compact ? <LogOut size={14} /> : null}
+          <span>{compact ? "Salir" : "Cerrar sesión"}</span>
+        </button>
+      </>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={onOpenAuth}
+      className={
+        compact
+          ? "min-h-11 flex-1 rounded-lg px-1 py-2 text-center text-[0.75rem] font-bold uppercase tracking-wider transition duration-200 hover:bg-white/[0.04] hover:text-mq-accent flex items-center justify-center"
+          : "hidden text-sm font-medium text-mq-muted transition hover:text-white sm:block"
+      }
+    >
+      Acceder
+    </button>
+  );
+}
 
 export function SiteHeader() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
@@ -51,13 +126,8 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <button
-            onClick={() => setIsAuthOpen(true)}
-            className="hidden text-sm font-medium text-mq-muted transition hover:text-white sm:block"
-          >
-            Acceder
-          </button>
+        <div className="flex items-center gap-3 sm:gap-4">
+          <AuthNavActions onOpenAuth={() => setIsAuthOpen(true)} />
           <Link
             href="/demo"
             onClick={() => trackClickDemo()}
@@ -101,12 +171,7 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
-          <button
-            onClick={() => setIsAuthOpen(true)}
-            className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-white/[0.04] hover:text-mq-accent flex items-center justify-center font-bold"
-          >
-            Acceder
-          </button>
+          <AuthNavActions onOpenAuth={() => setIsAuthOpen(true)} compact />
         </div>
       </nav>
     </header>

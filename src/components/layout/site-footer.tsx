@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/logo";
 import { BRAND_TAGLINE } from "@/lib/brand";
 import { getWhatsAppSupportUrl, DEFAULT_WHATSAPP_MESSAGE } from "@/lib/contact/whatsapp";
+import { SiteFooterAuthLink } from "./site-footer-auth-link";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -42,9 +43,7 @@ export function SiteFooter() {
                   WhatsApp
                 </a>
               ) : null}
-              <Link href="/login" className="transition hover:text-white">
-                Entrar
-              </Link>
+              <SiteFooterAuthLink />
             </nav>
 
             <p className="text-xs text-mq-muted/60">© {year} Método Q. Todos los derechos reservados.</p>
