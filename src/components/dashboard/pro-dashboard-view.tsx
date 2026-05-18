@@ -38,6 +38,18 @@ interface ProDashboardViewProps {
   isLoadingReferrals: boolean;
 }
 
+type TopicStat = { correct: number; wrong: number };
+
+function mapTopicStats(
+  topicStats: Record<string, TopicStat> | undefined,
+  field: keyof TopicStat,
+): Record<string, number> {
+  if (!topicStats) return {};
+  return Object.fromEntries(
+    Object.entries(topicStats).map(([topic, stat]) => [topic, stat[field]]),
+  );
+}
+
 export function ProDashboardView({ 
   user, 
   profile,
@@ -275,26 +287,8 @@ export function ProDashboardView({
               totalQuestionsAnswered={totalQuestions}
               university={profile?.goalUniversity || "Universidad Nacional"}
               specialty={effectiveSpecialty}
-              correctTopics={
-                profile?.topicStats
-                  ? Object.fromEntries(
-                      Object.entries(profile.topicStats).map(([k, v]: [string, { correct: number; wrong: number }]) => [
-                        k,
-                        v.correct,
-                      ]),
-                    )
-                  : {}
-              }
-              wrongTopics={
-                profile?.topicStats
-                  ? Object.fromEntries(
-                      Object.entries(profile.topicStats).map(([k, v]: [string, { correct: number; wrong: number }]) => [
-                        k,
-                        v.wrong,
-                      ]),
-                    )
-                  : {}
-              }
+              correctTopics={mapTopicStats(profile?.topicStats, "correct")}
+              wrongTopics={mapTopicStats(profile?.topicStats, "wrong")}
             />
           </section>
         </div>
