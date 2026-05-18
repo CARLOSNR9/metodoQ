@@ -1,7 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Zap, Sparkles, Target, ArrowRight, MessageSquare, ShieldCheck, TrendingUp, Trophy, Brain } from "lucide-react";
+import {
+  Zap,
+  Sparkles,
+  Target,
+  ArrowRight,
+  MessageSquare,
+  ShieldCheck,
+  TrendingUp,
+  Trophy,
+  Brain,
+  CheckCircle2,
+} from "lucide-react";
 import Link from "next/link";
 import { 
   ReferralCard, 
@@ -87,6 +98,16 @@ export function ProDashboardView({
   );
   const dailyPillTopic =
     profile?.weaknesses?.[0] ?? (isUccMiPro ? "Epidemiología" : "Semiología");
+  const goalUniversityLabel =
+    profile?.goalUniversity && profile.goalUniversity !== "Otra"
+      ? profile.goalUniversity
+      : null;
+
+  const calibratedSubtitle = isUccMiPro
+    ? "Ya completaste tu diagnóstico de 10 preguntas. Con esos resultados calibramos Método Q para UCC Pasto · Medicina Interna (50% clínica, 30% epidemiología y Res. 3280). Sigue entrenando para cerrar tus brechas."
+    : goalUniversityLabel
+      ? `Ya completaste tu diagnóstico inicial. Con tus respuestas calibramos Método Q hacia la ${goalUniversityLabel}: entrenamiento adaptativo, retos diarios y radar de debilidades.`
+      : "Ya completaste tu diagnóstico inicial. Con esos resultados calibramos tu entrenamiento y el radar de debilidades. Sigue practicando para subir tu puntaje.";
 
   return (
     <div className="space-y-10 pb-12">
@@ -115,12 +136,20 @@ export function ProDashboardView({
                     </span>
                   </div>
                 ) : (
-                <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-1.5 backdrop-blur-md">
-                  <ShieldCheck size={12} className="text-emerald-400" />
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-300">
-                    IA: Rendimiento Óptimo
-                  </span>
-                </div>
+                  <>
+                    <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/15 px-4 py-1.5 backdrop-blur-md">
+                      <CheckCircle2 size={12} className="text-emerald-400" />
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-200">
+                        Diagnóstico completado
+                      </span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/20 bg-mq-accent/10 px-4 py-1.5 backdrop-blur-md">
+                      <ShieldCheck size={12} className="text-mq-accent" />
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-mq-accent">
+                        Método Q calibrado
+                      </span>
+                    </div>
+                  </>
                 )}
               </div>
 
@@ -130,15 +159,10 @@ export function ProDashboardView({
                 </h1>
                 <p className="mt-4 max-w-xl text-lg leading-relaxed text-mq-muted sm:text-xl">
                   {needsDiagnostic
-                    ? profile?.goalUniversity && profile.goalUniversity !== "Otra"
-                      ? `Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para calibrar la IA hacia la ${profile.goalUniversity}.`
+                    ? goalUniversityLabel
+                      ? `Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para calibrar la IA hacia la ${goalUniversityLabel}.`
                       : "Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para activar tu hoja de ruta personalizada."
-                    : isUccMiPro
-                      ? "Tu plan Pro está calibrado para el examen UCC Pasto · Medicina Interna: 50% clínica, 30% epidemiología y Res. 3280. La IA ya identificó tus brechas."
-                      : profile?.goalUniversity && profile.goalUniversity !== "Otra"
-                        ? `Tu camino hacia la residencia en la ${profile.goalUniversity} está siendo optimizado por nuestra IA.`
-                        : "Tu camino hacia la residencia médica está siendo optimizado por nuestra IA. Tienes nuevas metas para hoy."
-                  }
+                    : calibratedSubtitle}
                 </p>
               </div>
 
@@ -154,14 +178,26 @@ export function ProDashboardView({
                     <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                   </button>
                 ) : (
-                  <Link
-                    href="/demo"
-                    className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:scale-105 active:scale-95"
-                  >
-                    <Zap size={20} fill="currentColor" />
-                    <span>ENTRENAR AHORA</span>
-                    <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                    <Link
+                      href="/dashboard/entrenar"
+                      className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:scale-105 active:scale-95"
+                    >
+                      <Zap size={20} fill="currentColor" />
+                      <span>ENTRENAR AHORA</span>
+                      <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                    </Link>
+                    <Link
+                      href={
+                        goalUniversityLabel && effectiveSpecialty
+                          ? `/dashboard/diagnostico?source=act1&university=${encodeURIComponent(goalUniversityLabel)}&specialty=${encodeURIComponent(effectiveSpecialty)}`
+                          : "/dashboard/diagnostico?source=act1"
+                      }
+                      className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 text-sm font-bold text-white/80 transition-all hover:bg-white/10 hover:text-white"
+                    >
+                      Repetir diagnóstico
+                    </Link>
+                  </div>
                 )}
               </div>
             </div>
@@ -209,6 +245,31 @@ export function ProDashboardView({
         <div className="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-purple-500/10 blur-[120px]" />
       </motion.header>
 
+      {hasDiagnosticData && (
+        <motion.div
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex flex-col gap-3 rounded-2xl border border-emerald-500/25 bg-emerald-500/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:px-6 backdrop-blur-md"
+        >
+          <div className="flex items-start gap-3 sm:items-center">
+            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 sm:mt-0" />
+            <p className="text-sm leading-relaxed text-emerald-50">
+              <span className="font-bold text-white">Tu diagnóstico ya está hecho.</span> Con esa batería
+              inicial calibramos Método Q
+              {goalUniversityLabel ? ` para ${goalUniversityLabel}` : ""}
+              {totalQuestions > 0 ? (
+                <>
+                  {" "}
+                  (promedio actual <span className="font-bold text-emerald-200">{displayScore}%</span> en{" "}
+                  {totalQuestions} preguntas)
+                </>
+              ) : null}
+              . Cada entrenamiento nuevo afina tu radar.
+            </p>
+          </div>
+        </motion.div>
+      )}
+
       {needsDiagnostic && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -250,7 +311,7 @@ export function ProDashboardView({
                       Última sesión: <span className="font-bold text-amber-200">{lastSessionScore}%</span>.
                     </>
                   )}{" "}
-                  Tu radar y anatomía de fallos están actualizados con tu plan Pro.
+                  Método Q quedó calibrado con tu diagnóstico; el radar y la anatomía de fallos se actualizan con cada entrenamiento.
                 </p>
               </div>
               <Link
