@@ -18,6 +18,8 @@ export type QuestionCardProps = {
   explanation?: string;
   keyPoints?: string[];
   dynamicFeedback?: string | null;
+  incorrectAnswerDetail?: string;
+  examAreaLabel?: string;
   onAnswerSelect?: (optionId: string, isCorrect: boolean) => void;
   className?: string;
   isLocked?: boolean;
@@ -48,6 +50,8 @@ export function QuestionCard({
   explanation = defaultExplanation,
   keyPoints = defaultKeyPoints,
   dynamicFeedback = null,
+  incorrectAnswerDetail,
+  examAreaLabel,
   onAnswerSelect,
   className,
   isLocked = false,
@@ -62,7 +66,7 @@ export function QuestionCard({
       aria-label="Tarjeta de pregunta"
     >
       <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-accent">
-        Pregunta
+        {examAreaLabel ?? "Pregunta"}
       </p>
       <h2 className="mt-3 text-pretty text-base font-medium leading-relaxed text-foreground sm:text-lg">
         {question}
@@ -158,6 +162,11 @@ export function QuestionCard({
                 </p>
               </div>
               
+              {!isCorrect && incorrectAnswerDetail && (
+                <p className="mt-4 rounded-xl border border-rose-500/20 bg-rose-500/5 p-4 text-base leading-relaxed text-rose-100">
+                  {incorrectAnswerDetail}
+                </p>
+              )}
               <p className="mt-4 text-base leading-relaxed text-slate-200">
                 {explanation}
               </p>

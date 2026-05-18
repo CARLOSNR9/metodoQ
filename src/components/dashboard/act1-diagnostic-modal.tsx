@@ -14,6 +14,7 @@ import {
   Loader2
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { isUdeaUniversity, isUnalUniversity } from "@/lib/diagnostic/university-match";
 
 interface Act1DiagnosticModalProps {
   isOpen: boolean;
@@ -54,9 +55,25 @@ const universities = [
 export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticModalProps) {
   const router = useRouter();
   const [step, setStep] = useState<Step>("config");
-  const [selectedUniversity, setSelectedUniversity] = useState(universities[0]);
+  const [selectedUniversity, setSelectedUniversity] = useState(universities[1]);
   const [selectedSpecialty, setSelectedSpecialty] = useState(specialties[1]); // Medicina Interna default
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const universityShortLabel = isUdeaUniversity(selectedUniversity)
+    ? "UdeA"
+    : isUnalUniversity(selectedUniversity)
+      ? "UNAL"
+      : "tu universidad";
+  const loadingSteps = [
+    `Cargando casos clínicos ${universityShortLabel}`,
+    "Calibrando batería Medicina Interna",
+    "Ajustando retroalimentación por distractores",
+  ];
+  const readyQuote = isUdeaUniversity(selectedUniversity)
+    ? "Doc, en la UdeA el examen unificado exige integración clínica y dominio de guías MSPS/INS. Estas 10 preguntas definirán tu hoja de ruta."
+    : isUnalUniversity(selectedUniversity)
+      ? "Doc, en la UNAL no gana quien más sabe, sino quien mejor aplica bajo presión. Este diagnóstico de 10 preguntas definirá tu hoja de ruta."
+      : "Doc, este diagnóstico de 10 preguntas calibrará tu preparación para la especialidad elegida.";
 
   if (!isOpen) return null;
 
@@ -247,11 +264,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                   </p>
                 </div>
                 <div className="grid grid-cols-1 w-full gap-2">
-                  {[
-                    "Cargando Casos Clínicos UNAL",
-                    "Sincronizando Módulo de Listening",
-                    "Ajustando Curva de Estandarización",
-                  ].map((text, i) => (
+                  {loadingSteps.map((text, i) => (
                     <motion.div 
                       key={i}
                       initial={{ opacity: 0, x: -10 }}
@@ -286,7 +299,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
 
                 <div className="bg-mq-accent/10 border border-mq-accent/20 rounded-3xl p-8 text-center space-y-4">
                   <p className="text-sm leading-relaxed text-white font-medium">
-                    "Doc, recuerda: En la UNAL no gana quien más sabe, sino quien mejor aplica bajo presión. Este diagnóstico de 15 minutos definirá tu hoja de ruta."
+                    {`"${readyQuote}"`}
                   </p>
                   <p className="text-[10px] uppercase tracking-[0.3em] text-mq-accent font-black">- DR. Q</p>
                 </div>

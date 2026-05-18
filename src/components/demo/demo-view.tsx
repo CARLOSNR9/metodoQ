@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { onAuthStateChanged, type User } from "firebase/auth";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -40,6 +40,7 @@ import {
   buildDynamicFeedbackMessage,
   selectAdaptiveQuestions,
 } from "@/lib/training/adaptive";
+import { getAct1DiagnosticSession } from "@/lib/diagnostic/get-diagnostic-session";
 import {
   checkCanStartSession,
   recordSessionStart,
@@ -173,7 +174,20 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     }
 
     const count = isDailyPill ? 1 : plannedQuestionCount;
-    const selected = selectAdaptiveQuestions(pool, count, learningProfile);
+    const dedicatedBattery = isAct1
+      ? getAct1DiagnosticSession(urlUniversity, urlSpecialty)
+      : null;
+    const selected = dedicatedBattery
+      ? dedicatedBattery
+      : selectAdaptiveQuestions(pool, count, learningProfile);
+
+    if (user && isAct1 && urlUniversity && urlSpecialty) {
+      void setDoc(
+        doc(getFirebaseDb(), "users", user.uid),
+        { goalUniversity: urlUniversity, goalSpecialty: urlSpecialty },
+        { merge: true },
+      );
+    }
     setSessionQuestions(selected);
     setHasStarted(true);
     setTotalSeconds(0);
@@ -357,13 +371,20 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       setWrongTopicsByName((prev) => ({ ...prev, [currentQuestion.topic]: (prev[currentQuestion.topic] || 0) + 1 }));
     }
 
-    const feedback = buildDynamicFeedbackMessage({
-      topic: currentQuestion.topic,
-      isCorrect,
-      profile: learningProfile,
-      currentCorrectTopics: correctTopicsByName,
-      currentWrongTopics: wrongTopicsByName,
-    });
+    const selectedOption = currentQuestion.options.find((o) => o.id === optionId);
+    const distractorMessage =
+      !isCorrect && selectedOption?.incorrectFeedback
+        ? selectedOption.incorrectFeedback
+        : null;
+    const feedback =
+      distractorMessage ??
+      buildDynamicFeedbackMessage({
+        topic: currentQuestion.topic,
+        isCorrect,
+        profile: learningProfile,
+        currentCorrectTopics: correctTopicsByName,
+        currentWrongTopics: wrongTopicsByName,
+      });
     setLiveFeedbackMessage(feedback);
     setShowProgressFeedback(true);
 
@@ -427,6 +448,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 setTotalSeconds(0);
               }}
               source={isDailyPill ? "daily-pill" : source}
+              university={urlUniversity}
+              specialty={urlSpecialty}
             />
             {user && !isDailyPill && (
               <div className="mt-12 space-y-12">
@@ -536,6 +559,14 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        explanation={currentQuestion.explanation}
                        keyPoints={currentQuestion.keyPoints}
                        dynamicFeedback={liveFeedbackMessage}
+                       incorrectAnswerDetail={
+                         hasAnsweredCurrentQuestion &&
+                         selectedOptionId !== currentQuestion.correctOptionId
+                           ? currentQuestion.options.find((o) => o.id === selectedOptionId)
+                               ?.incorrectFeedback
+                           : undefined
+                       }
+                       examAreaLabel={currentQuestion.examArea}
                        onAnswerSelect={handleAnswer}
                        isLocked={isDailyPill || isSimulacro ? false : isAct1 && currentQuestionIndex > 0}
                     />

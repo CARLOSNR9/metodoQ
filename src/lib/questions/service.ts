@@ -24,6 +24,8 @@ function mapDocToQuestion(id: string, data: Record<string, unknown>): TrainingQu
     difficulty: (data.difficulty as TrainingQuestion["difficulty"]) ?? "medium",
     tags: (data.tags as string[]) ?? [],
     active: data.active !== false,
+    examArea: data.examArea ? String(data.examArea) : undefined,
+    university: data.university ? String(data.university) : undefined,
   };
 }
 

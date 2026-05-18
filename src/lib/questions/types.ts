@@ -2,6 +2,10 @@ export type QuestionOption = {
   id: string;
   label: string;
   text: string;
+  /** Etiqueta psicométrica del distractor (solo opciones incorrectas). */
+  distractorProfile?: string;
+  /** Retroalimentación si el usuario elige esta opción incorrecta. */
+  incorrectFeedback?: string;
 };
 
 export type TrainingQuestion = {
@@ -15,6 +19,9 @@ export type TrainingQuestion = {
   difficulty?: "easy" | "medium" | "hard";
   tags?: string[];
   active?: boolean;
+  /** Área del examen UdeA (blueprint). */
+  examArea?: string;
+  university?: string;
 };
 
 export type TrainingMode = "training" | "diagnostico" | "simulacro" | "daily-pill";
