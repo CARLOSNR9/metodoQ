@@ -13,11 +13,11 @@ function getLoginErrorMessage(errorCode: string) {
     errorCode === "auth/user-not-found" ||
     errorCode === "auth/wrong-password"
   ) {
-    return "Email o contraseña incorrectos.";
+    return "Correo/usuario o contraseña incorrectos.";
   }
 
   if (errorCode === "auth/invalid-email") {
-    return "El formato del email no es válido.";
+    return "Usa un correo válido (ej. nombre@ejemplo.com) o el usuario admin.";
   }
 
   if (errorCode === "auth/too-many-requests") {
@@ -122,20 +122,20 @@ export default function LoginPage() {
                 <div className="w-full border-t border-mq-border/50"></div>
               </div>
               <div className="relative flex justify-center text-xs uppercase tracking-widest">
-                <span className="bg-mq-surface px-3 text-mq-muted">o usa tu email</span>
+                <span className="bg-mq-surface px-3 text-mq-muted">o usa tu correo</span>
               </div>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <input
-                  type="email"
-                  autoComplete="email"
+                  type="text"
+                  autoComplete="username"
                   required
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   className="min-h-12 w-full rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm text-foreground outline-none transition focus:border-mq-accent focus:ring-2 focus:ring-mq-accent/20"
-                  placeholder="Email"
+                  placeholder="admin o nombre@ejemplo.com"
                 />
               </div>
 

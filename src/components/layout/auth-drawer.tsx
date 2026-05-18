@@ -171,7 +171,9 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
               <div className="w-full border-t border-mq-border/50"></div>
             </div>
             <div className="relative flex justify-center text-[10px] uppercase tracking-[0.2em]">
-              <span className="bg-mq-surface px-4 text-mq-muted/60">o usa tu email</span>
+              <span className="bg-mq-surface px-4 text-mq-muted/60">
+                {mode === "login" ? "o usa tu correo" : "o usa tu email"}
+              </span>
             </div>
           </div>
 
@@ -179,14 +181,17 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div>
               <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-mq-muted/80">
-                Email
+                {mode === "login" ? "Correo o usuario" : "Email"}
               </label>
               <div className="relative">
                 <Mail className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-mq-muted/30" />
                 <input
-                  type="email"
+                  type={mode === "login" ? "text" : "email"}
+                  autoComplete={mode === "login" ? "username" : "email"}
                   required
-                  placeholder="nombre@ejemplo.com"
+                  placeholder={
+                    mode === "login" ? "admin o nombre@ejemplo.com" : "nombre@ejemplo.com"
+                  }
                   className="h-12 w-full rounded-xl border border-mq-border bg-white/[0.02] pl-12 pr-4 text-white outline-none transition focus:border-mq-accent/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-mq-accent/10"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}

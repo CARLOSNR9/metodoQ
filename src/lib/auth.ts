@@ -20,6 +20,7 @@ import {
 } from "firebase/firestore";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { trackRewardUnlocked } from "@/lib/analytics/events";
+import { resolveLoginIdentifier } from "@/lib/resolve-login-identifier";
 
 export type UserPlan = "FREE" | "BASICO" | "PRO" | "RESIDENTE";
 
@@ -69,7 +70,12 @@ export function generateReferralCode() {
 }
 
 export async function loginWithEmail(email: string, password: string) {
-  return signInWithEmailAndPassword(getFirebaseAuth(), email, password);
+  const resolvedEmail = resolveLoginIdentifier(email);
+  return signInWithEmailAndPassword(
+    getFirebaseAuth(),
+    resolvedEmail,
+    password,
+  );
 }
 
 export async function loginWithGoogle(): Promise<{

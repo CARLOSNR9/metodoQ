@@ -7,6 +7,7 @@ import {
   type User,
 } from "firebase/auth";
 import { getFirebaseAuth } from "@/lib/firebase";
+import { resolveLoginIdentifier } from "@/lib/resolve-login-identifier";
 import { useUserRole } from "@/hooks/use-user-role";
 import {
   getRoleLabel,
@@ -82,7 +83,11 @@ export function StaffGuard({
 
     try {
       const auth = getFirebaseAuth();
-      await signInWithEmailAndPassword(auth, loginEmail, password);
+      await signInWithEmailAndPassword(
+        auth,
+        resolveLoginIdentifier(loginEmail),
+        password,
+      );
     } catch {
       setError("Credenciales inválidas o error de conexión.");
     } finally {
@@ -133,10 +138,12 @@ export function StaffGuard({
             <div className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold uppercase tracking-wider text-mq-muted">
-                  Correo
+                  Correo o usuario
                 </label>
                 <input
-                  type="email"
+                  type="text"
+                  autoComplete="username"
+                  placeholder="admin o nombre@ejemplo.com"
                   value={loginEmail}
                   onChange={(e) => setLoginEmail(e.target.value)}
                   className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white outline-none focus:border-mq-accent"
