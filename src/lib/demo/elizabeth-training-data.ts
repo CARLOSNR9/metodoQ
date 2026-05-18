@@ -136,7 +136,8 @@ export function buildElizabethTrainingResults(): DemoResultItem[] {
 
 export const ELIZABETH_EMAIL = "elizabethdbh@gmail.com";
 
-const ELIZABETH_DEMO_EMAILS = new Set([ELIZABETH_EMAIL]);
+/** Cuentas de demo / ventas UCC Pasto (Elizabeth). */
+const ELIZABETH_DEMO_EMAILS = new Set([ELIZABETH_EMAIL, "eliza@gmail.com"]);
 
 export function isElizabethDemoEmail(email: string | null | undefined): boolean {
   return ELIZABETH_DEMO_EMAILS.has(email?.trim().toLowerCase() ?? "");

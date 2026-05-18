@@ -29,6 +29,13 @@ const DEMO_STUDENT_PATCHES: Record<string, Partial<UserProfile>> = {
       recordedByUid: "demo",
     },
   },
+  "eliza@gmail.com": {
+    displayName: "Elizabeth",
+    plan: "PRO",
+    planBillingCycle: 6,
+    goalUniversity: "Universidad Cooperativa (Pasto)",
+    goalSpecialty: "Medicina Interna",
+  },
   [ELIZABETH_EMAIL]: {
     displayName: "Elizabeth",
     plan: "PRO",
