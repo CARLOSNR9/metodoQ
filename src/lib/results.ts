@@ -4,7 +4,6 @@ import {
   doc,
   getDoc,
   getDocs,
-  orderBy,
   query,
   runTransaction,
   serverTimestamp,
@@ -175,54 +174,74 @@ export async function saveDemoResult({
   return docRef;
 }
 
-export async function getUserDemoResults(userId: string): Promise<DemoResultItem[]> {
-  const db = getFirebaseDb();
-  const resultsQuery = query(
-    collection(db, "results"),
-    where("userId", "==", userId),
-    orderBy("fecha", "desc"),
-  );
+function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown> }): DemoResultItem {
+  const data = docItem.data() as {
+    scorePercentage?: number;
+    correctAnswers?: number;
+    wrongAnswers?: number;
+    wrongTopics?: Record<string, number>;
+    sessionType?: SessionTypeLabel;
+    fecha?: { toDate?: () => Date };
+  };
 
-  const snapshot = await getDocs(resultsQuery);
+  const date = data.fecha?.toDate ? data.fecha.toDate() : null;
 
-  if (snapshot.empty) {
-    const userSnap = await getDoc(doc(db, "users", userId));
+  return {
+    id: docItem.id,
+    scorePercentage: data.scorePercentage ?? 0,
+    correctAnswers: data.correctAnswers ?? 0,
+    wrongAnswers: data.wrongAnswers ?? 0,
+    wrongTopics: data.wrongTopics ?? {},
+    fechaIso: date ? date.toISOString() : null,
+    fechaLabel: date
+      ? new Intl.DateTimeFormat("es-ES", {
+          dateStyle: "short",
+          timeStyle: "short",
+        }).format(date)
+      : "Fecha no disponible",
+    sessionType: data.sessionType ?? "training",
+  };
+}
+
+async function getDemoResultsFallback(userId: string): Promise<DemoResultItem[] | null> {
+  try {
+    const userSnap = await getDoc(doc(getFirebaseDb(), "users", userId));
     const email = userSnap.data()?.email as string | undefined;
     if (isElizabethDemoEmail(email)) {
       return buildElizabethTrainingResults();
     }
     const demoResults = getDemoTrainingResultsIfEligible(email);
     if (demoResults.length > 0) return demoResults;
+  } catch (error) {
+    console.error("No se pudo resolver historial demo.", error);
   }
+  return null;
+}
 
-  return snapshot.docs.map((docItem) => {
-    const data = docItem.data() as {
-      scorePercentage?: number;
-      correctAnswers?: number;
-      wrongAnswers?: number;
-      wrongTopics?: Record<string, number>;
-      sessionType?: SessionTypeLabel;
-      fecha?: { toDate?: () => Date };
-    };
+export async function getUserDemoResults(userId: string): Promise<DemoResultItem[]> {
+  const db = getFirebaseDb();
 
-    const date = data.fecha?.toDate ? data.fecha.toDate() : null;
+  try {
+    const resultsQuery = query(collection(db, "results"), where("userId", "==", userId));
+    const snapshot = await getDocs(resultsQuery);
 
-    return {
-      id: docItem.id,
-      scorePercentage: data.scorePercentage ?? 0,
-      correctAnswers: data.correctAnswers ?? 0,
-      wrongAnswers: data.wrongAnswers ?? 0,
-      wrongTopics: data.wrongTopics ?? {},
-      fechaIso: date ? date.toISOString() : null,
-      fechaLabel: date
-        ? new Intl.DateTimeFormat("es-ES", {
-            dateStyle: "short",
-            timeStyle: "short",
-          }).format(date)
-        : "Fecha no disponible",
-      sessionType: data.sessionType ?? "training",
-    };
-  });
+    if (snapshot.empty) {
+      const fallback = await getDemoResultsFallback(userId);
+      return fallback ?? [];
+    }
+
+    return snapshot.docs
+      .map((docItem) => mapResultDoc(docItem))
+      .sort(
+        (a, b) =>
+          new Date(b.fechaIso ?? 0).getTime() - new Date(a.fechaIso ?? 0).getTime(),
+      );
+  } catch (error) {
+    console.error("Error al consultar historial en Firestore:", error);
+    const fallback = await getDemoResultsFallback(userId);
+    if (fallback) return fallback;
+    throw error;
+  }
 }
 
 export function getSessionTypeLabel(type: SessionTypeLabel): string {

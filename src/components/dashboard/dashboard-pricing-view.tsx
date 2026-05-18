@@ -100,6 +100,7 @@ export function DashboardPricingView() {
           return (
             <motion.div
               key={plan.id}
+              id={plan.id === "RESIDENTE" ? "residente" : undefined}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}

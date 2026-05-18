@@ -136,12 +136,12 @@ export function Act2PredictiveDashboard({
       >
         <div className="flex items-center justify-between">
           <h4 className="text-sm font-black uppercase tracking-widest text-white">
-            DistribuciÃ³n de aspirantes
+            Distribución de aspirantes
           </h4>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1.5">
               <div className="h-2 w-2 rounded-full bg-red-500" />
-              <span className="text-[10px] font-bold text-mq-muted">TÃº</span>
+              <span className="text-[10px] font-bold text-mq-muted">Tú</span>
             </div>
             <div className="flex items-center gap-1.5">
               <motion.div
@@ -182,7 +182,7 @@ export function Act2PredictiveDashboard({
                 stroke="#ef4444"
                 strokeWidth={3}
                 label={{
-                  value: "TÃº",
+                  value: "Tú",
                   position: "top",
                   fill: "#ef4444",
                   fontSize: 10,
@@ -230,11 +230,11 @@ export function Act2PredictiveDashboard({
         >
           <motion.div className="space-y-1">
             <h4 className="text-sm font-black uppercase tracking-widest text-white">
-              AnatomÃ­a de tus fallos
+              Anatomía de tus fallos
             </h4>
             {dedicatedDiagnostic && (
               <p className="text-[10px] text-mq-muted">
-                Ãreas del examen unificado â€” Medicina Interna
+                Áreas del examen unificado — Medicina Interna
               </p>
             )}
           </motion.div>
@@ -242,7 +242,7 @@ export function Act2PredictiveDashboard({
           <motion.div className="h-64 w-full" layout>
             {radarData.length === 0 ? (
               <div className="flex h-full items-center justify-center text-center text-xs text-mq-muted">
-                Completa el diagnÃ³stico para ver tu perfil por Ã¡reas del examen.
+                Completa el diagnóstico para ver tu perfil por áreas del examen.
               </div>
             ) : (
               <ResponsiveContainer width="100%" height="100%">
@@ -253,7 +253,7 @@ export function Act2PredictiveDashboard({
                     tick={{ fill: "#8A99B8", fontSize: 9, fontWeight: 600 }}
                   />
                   <Radar
-                    name="DesempeÃ±o"
+                    name="Desempeño"
                     dataKey="A"
                     stroke="#00d1ff"
                     fill="#00d1ff"

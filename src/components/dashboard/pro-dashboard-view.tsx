@@ -262,7 +262,7 @@ export function ProDashboardView({
           <DailyPillCard topic={dailyPillTopic} isLocked={needsDiagnostic} />
 
           {/* WEAK TOPICS / IA ANALYTICS */}
-          <WeakTopicsCard userId={user.uid} />
+          <WeakTopicsCard userId={user.uid} isProUser={showLiveClasses} />
 
           {/* PRIVATE COMMUNITY CARD */}
           <motion.div 
@@ -294,10 +294,11 @@ export function ProDashboardView({
           </motion.div>
 
           {/* REFERRAL CARD */}
-          <ReferralCard 
-            referralCode={referralCode} 
-            referralCount={referralCount} 
-            loading={isLoadingReferrals} 
+          <ReferralCard
+            referralCode={referralCode}
+            referralCount={referralCount}
+            loading={isLoadingReferrals}
+            userPlan={profile?.plan}
           />
 
           {/* MOTIVATIONAL QUOTE */}

@@ -469,10 +469,15 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               specialty={urlSpecialty}
               sessionQuestions={sessionQuestions}
               answersByQuestionId={answersByQuestionId}
+              userPlan={effectivePlan}
             />
             {user && !isDailyPill && (
               <div className="mt-12 space-y-12">
-                <AttemptHistory userId={user.uid} refreshKey={historyRefreshKey} />
+                <AttemptHistory
+                  userId={user.uid}
+                  refreshKey={historyRefreshKey}
+                  showSessionType={hasUnlimitedAccess}
+                />
               </div>
             )}
           </div>

@@ -2,6 +2,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { TrendingUp, Zap, Clock, Target, ArrowRight, Lock, Sparkles } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
+import {
+  hasPaidPlan,
+  hasProFeatures,
+  normalizeUserPlan,
+  type StoredUserPlan,
+} from "@/lib/plans/access";
 import { Act2PredictiveDashboard } from "./act2-predictive-dashboard";
 import { ScoreComparisonCards } from "./score-comparison-cards";
 
@@ -24,6 +30,7 @@ export type FinalResultsScreenProps = {
   source?: string | null;
   university?: string | null;
   specialty?: string | null;
+  userPlan?: StoredUserPlan | null;
 };
 
 function getPerformanceProfile(scorePercentage: number) {
@@ -68,9 +75,19 @@ export function FinalResultsScreen({
   answersByQuestionId,
   cumulativeScorePercentage,
   totalQuestionsAnswered = 0,
+  userPlan,
 }: FinalResultsScreenProps) {
   const isAct1 = source === "act1";
   const isDailyPill = source === "daily-pill";
+  const normalizedPlan = normalizeUserPlan(userPlan ?? undefined);
+  const isFreePlan = normalizedPlan === "FREE";
+  const isProUser = hasProFeatures(userPlan);
+  const isResidenteUser = normalizedPlan === "RESIDENTE";
+  const isPaidUser = hasPaidPlan(userPlan);
+  const repeatDiagnosticHref =
+    university && specialty
+      ? `/dashboard/diagnostico?source=act1&university=${encodeURIComponent(university)}&specialty=${encodeURIComponent(specialty)}`
+      : "/dashboard/diagnostico?source=act1";
   const sessionScore = scorePercentage;
   const globalScore = cumulativeScorePercentage ?? sessionScore;
   const profile = getPerformanceProfile(sessionScore);
@@ -288,9 +305,17 @@ export function FinalResultsScreen({
                   {scorePercentage >= 90 ? (
                     <>Estás en el <span className="text-white font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
                   ) : scorePercentage >= 80 ? (
-                    <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
+                    isProUser ? (
+                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Usa simulacros y la píldora diaria para blindar este resultado.</>
+                    ) : (
+                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
+                    )
+                  ) : isResidenteUser ? (
+                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> del rango competitivo. Tu plan Residente incluye seguimiento 1 a 1 para cerrar esa brecha.</>
+                  ) : isProUser ? (
+                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> del promedio competitivo. Con tu plan Pro, enfoca las próximas <span className="font-bold text-mq-accent">4 semanas</span> en tus áreas rojas del radar.</>
                   ) : (
-                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="text-white font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
+                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
                   )}
                 </p>
               </div>
@@ -299,24 +324,105 @@ export function FinalResultsScreen({
         )}
 
         <footer className="relative z-10 mt-10 flex flex-col gap-4 sm:flex-row">
-          <Link
-            href="/dashboard/planes"
-            className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
-          >
-            {isDailyPill ? "Pasar a Método Q PRO" : isAct1 ? "Desbloquear mi Plan de Supervivencia PRO" : "Activar mis 7 días GRATIS"}
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-          <Link
-            href={isDailyPill ? "/dashboard" : "/dashboard/planes"}
-            className="group flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
-          >
-            {isDailyPill ? "Volver al Dashboard" : (
-              <>
+          {isDailyPill ? (
+            <>
+              <Link
+                href={isProUser ? "/dashboard" : "/dashboard/planes"}
+                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                {isProUser ? "Volver al dashboard" : "Pasar a Método Q PRO"}
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href="/dashboard"
+                className="group flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
+              >
+                Volver al Dashboard
+              </Link>
+            </>
+          ) : isAct1 && isResidenteUser ? (
+            <>
+              <Link
+                href="/dashboard/entrenar"
+                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                Continuar entrenamiento
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href={repeatDiagnosticHref}
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+              >
+                Repetir diagnóstico
+              </Link>
+            </>
+          ) : isAct1 && isProUser ? (
+            <>
+              <Link
+                href="/dashboard/planes#residente"
+                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                Subir al plan Residente
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href={repeatDiagnosticHref}
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+              >
+                Repetir diagnóstico
+              </Link>
+            </>
+          ) : isAct1 && isPaidUser && !isProUser ? (
+            <>
+              <Link
+                href="/dashboard/planes"
+                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                Pasar a Método Q PRO
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href={repeatDiagnosticHref}
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+              >
+                Repetir diagnóstico
+              </Link>
+            </>
+          ) : isAct1 && isFreePlan ? (
+            <>
+              <Link
+                href="/dashboard/planes"
+                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                Desbloquear mi Plan de Supervivencia PRO
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href="/dashboard/planes"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
+              >
                 <Lock className="mr-2 h-4 w-4" />
                 Repetir Diagnóstico (PRO)
-              </>
-            )}
-          </Link>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/dashboard/planes"
+                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                Activar mis 7 días GRATIS
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <button
+                type="button"
+                onClick={onRepeatDemo}
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+              >
+                Repetir entrenamiento
+              </button>
+            </>
+          )}
         </footer>
       </motion.article>
     </div>

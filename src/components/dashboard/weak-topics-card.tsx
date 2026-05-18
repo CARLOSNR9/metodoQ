@@ -7,6 +7,8 @@ import { AlertTriangle, Microscope, Lightbulb, Lock } from "lucide-react";
 
 type WeakTopicsCardProps = {
   userId: string;
+  /** Usuario con plan PRO o Residente: sin candados ni CTA de upgrade. */
+  isProUser?: boolean;
 };
 
 const TOPIC_HACKS: Record<string, { title: string; content: string }> = {
@@ -36,7 +38,7 @@ const TOPIC_HACKS: Record<string, { title: string; content: string }> = {
   }
 };
 
-export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
+export function WeakTopicsCard({ userId, isProUser = false }: WeakTopicsCardProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [topics, setTopics] = useState<WeakTopicItem[]>([]);
 
@@ -133,30 +135,41 @@ export function WeakTopicsCard({ userId }: WeakTopicsCardProps) {
                 </div>
                 
                 <div className="flex items-center gap-2">
-                  {i > 0 && (
+                  {i > 0 && !isProUser && (
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-mq-muted/30">
                        <Lock size={14} />
                     </div>
                   )}
                   <Link
-                    href={`/demo?topic=${encodeURIComponent(item.topic)}`}
-                    className={`inline-flex h-9 items-center justify-center rounded-lg px-4 text-xs font-bold transition-all ${i === 0 ? "bg-mq-accent text-mq-accent-foreground hover:scale-105" : "bg-white/10 text-white hover:bg-white/20"}`}
+                    href={`/dashboard/entrenar?topic=${encodeURIComponent(item.topic)}`}
+                    className={`inline-flex h-9 items-center justify-center rounded-lg px-4 text-xs font-bold transition-all ${i === 0 || isProUser ? "bg-mq-accent text-mq-accent-foreground hover:scale-105" : "bg-white/10 text-white hover:bg-white/20"}`}
                   >
-                    {i === 0 ? "Reforzar ahora" : "Ver más"}
+                    {i === 0 || isProUser ? "Reforzar ahora" : "Ver más"}
                   </Link>
                 </div>
               </li>
             ))}
           </ul>
           
-          <div className="pt-2">
-            <Link 
-              href="/dashboard/planes"
-              className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mq-muted hover:text-mq-accent transition-colors"
-            >
-              <Lock size={12} /> Desbloquear arsenal completo de perlas
-            </Link>
-          </div>
+          {!isProUser ? (
+            <div className="pt-2">
+              <Link
+                href="/dashboard/planes"
+                className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mq-muted transition-colors hover:text-mq-accent"
+              >
+                <Lock size={12} /> Desbloquear arsenal completo de perlas
+              </Link>
+            </div>
+          ) : (
+            <motion.div className="pt-2">
+              <Link
+                href="/dashboard/planes#residente"
+                className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mq-muted transition-colors hover:text-mq-accent"
+              >
+                Conoce el plan Residente — acompañamiento 1 a 1
+              </Link>
+            </motion.div>
+          )}
         </div>
       )}
     </section>
