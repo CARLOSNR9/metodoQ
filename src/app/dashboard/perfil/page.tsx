@@ -1,9 +1,12 @@
 "use client";
 
+import { SubscriptionStatusCard } from "@/components/dashboard";
 import { EmailPreferencesCard } from "@/components/dashboard/email-preferences-card";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { getPlanDisplayName } from "@/lib/plans/config";
+import { getUserGreetingName } from "@/lib/plans/subscription-display";
+import { hasPaidPlan } from "@/lib/plans/access";
 
 export default function PerfilPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
@@ -16,11 +19,15 @@ export default function PerfilPage() {
   }
 
   const emailOptIn = profile?.emailOptIn !== false;
+  const greetingName = getUserGreetingName(profile);
+  const showSubscription = hasPaidPlan(profile?.plan);
 
   return (
     <div className="space-y-6">
       <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
-        <h1 className="text-2xl font-semibold text-white">Perfil</h1>
+        <h1 className="text-2xl font-semibold text-white">
+          Perfil{greetingName !== "Doc" ? ` · ${greetingName}` : ""}
+        </h1>
         <dl className="mt-4 space-y-3 text-sm">
           <div>
             <dt className="text-mq-muted">Email</dt>
@@ -38,6 +45,8 @@ export default function PerfilPage() {
           ) : null}
         </dl>
       </section>
+
+      {showSubscription ? <SubscriptionStatusCard profile={profile} /> : null}
 
       <EmailPreferencesCard userId={user.uid} emailOptIn={emailOptIn} />
     </div>

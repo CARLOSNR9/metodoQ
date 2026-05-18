@@ -23,3 +23,4 @@ export { DashboardPricingView } from "./dashboard-pricing-view";
 export { DailyPillCard } from "./daily-pill-card";
 export { ProgressSimulator } from "./progress-simulator";
 export { ProDashboardView } from "./pro-dashboard-view";
+export { SubscriptionStatusCard } from "./subscription-status-card";

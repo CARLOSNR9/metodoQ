@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
+import { useUserProfile } from "@/hooks/use-user-profile";
 import { logoutUser } from "@/lib/auth";
+import { getUserGreetingName } from "@/lib/plans/subscription-display";
 import { AchievementNotification } from "./achievement-notification";
 import { LayoutDashboard, GraduationCap, History, User, LogOut, Timer, CreditCard } from "lucide-react";
 
@@ -24,6 +26,8 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const router = useRouter();
   const pathname = usePathname();
   const { user, isCheckingAuth } = useAuthGuard("/login");
+  const { profile } = useUserProfile();
+  const greetingName = getUserGreetingName(profile);
 
   if (isCheckingAuth) {
     return (
@@ -87,7 +91,12 @@ export function DashboardShell({ children }: DashboardShellProps) {
             </div>
             <p className="text-xs font-medium text-mq-muted sm:text-sm">
               <span className="hidden sm:inline">Sesión de </span>
-              <span className="text-white">{user?.email}</span>
+              <span className="text-white">
+                {greetingName !== "Doc" ? greetingName : user?.email}
+              </span>
+              {greetingName !== "Doc" && user?.email ? (
+                <span className="hidden text-mq-muted lg:inline"> · {user.email}</span>
+              ) : null}
             </p>
           </div>
           

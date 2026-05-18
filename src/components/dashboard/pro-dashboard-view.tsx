@@ -17,6 +17,8 @@ import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashb
 import { motion } from "framer-motion";
 import { getPlanDisplayName } from "@/lib/plans/config";
 import { hasProFeatures } from "@/lib/plans/access";
+import { getUserGreetingName } from "@/lib/plans/subscription-display";
+import { SubscriptionStatusCard } from "./subscription-status-card";
 import { useUserPerformanceStats } from "@/hooks/use-user-performance-stats";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 
@@ -36,6 +38,7 @@ export function ProDashboardView({
   isLoadingReferrals 
 }: ProDashboardViewProps) {
   const planLabel = getPlanDisplayName(profile?.plan);
+  const greetingName = getUserGreetingName(profile);
   const showLiveClasses = hasProFeatures(profile?.plan);
   const { improvement, percentileLabel, loading: statsLoading } = useUserPerformanceStats(user?.uid);
 
@@ -68,7 +71,7 @@ export function ProDashboardView({
 
               <div>
                 <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl">
-                  Bienvenido, <span className="text-mq-accent">Doc.</span>
+                  Hola, <span className="text-mq-accent">{greetingName}.</span>
                 </h1>
                 <p className="mt-4 max-w-xl text-lg leading-relaxed text-mq-muted sm:text-xl">
                   {profile?.goalUniversity && profile.goalUniversity !== "Otra"
@@ -132,6 +135,8 @@ export function ProDashboardView({
         <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-mq-accent/10 blur-[120px] animate-pulse" />
         <div className="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-purple-500/10 blur-[120px]" />
       </motion.header>
+
+      <SubscriptionStatusCard profile={profile} />
 
       <div className="grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-10">

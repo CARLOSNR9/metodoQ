@@ -1,9 +1,11 @@
 "use client";
 
-import { doc, getDoc, onSnapshot } from "firebase/firestore";
+import { doc, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { applyDemoStudentProfileEnhancements } from "@/lib/demo/demo-student-profiles";
+import type { ManualSaleInfo } from "@/lib/plans/subscription-display";
 
 export interface UserProfile {
   uid: string;
@@ -11,15 +13,29 @@ export interface UserProfile {
   displayName?: string;
   photoURL?: string;
   goalUniversity?: string;
+  goalSpecialty?: string;
   attemptedExam?: boolean;
   usedCourses?: boolean;
   onboardingCompleted?: boolean;
   plan?: string;
+  planStartedAt?: string | null;
   planExpiresAt?: string | null;
+  planBillingCycle?: number | null;
+  manualSale?: ManualSaleInfo | null;
   streakCount?: number;
   streakLastTrainingDate?: string | null;
   emailOptIn?: boolean;
-  createdAt?: any;
+  createdAt?: unknown;
+  attemptsCount?: number;
+  cumulativeScore?: number | null;
+  lastScore?: number | null;
+  lastSessionScore?: number | null;
+  totalQuestionsAnswered?: number;
+  topicStats?: Record<string, { correct: number; wrong: number }>;
+  strengths?: string[];
+  weaknesses?: string[];
+  avgResponseTime?: number;
+  totalCorrectAnswers?: number;
 }
 
 export function useUserProfile() {
@@ -41,19 +57,23 @@ export function useUserProfile() {
       
       // Usamos onSnapshot para que los cambios (como completar onboarding) se reflejen en tiempo real
       unsubscribeSnapshot = onSnapshot(userRef, (docSnap) => {
-        if (docSnap.exists()) {
-          setProfile({
-            uid: user.uid,
-            email: user.email,
-            ...docSnap.data()
-          } as UserProfile);
-        } else {
-          // Si el documento no existe todavía (nuevo registro), ponemos data básica
-          setProfile({
-            uid: user.uid,
-            email: user.email,
-          } as UserProfile);
-        }
+        const base: UserProfile = docSnap.exists()
+          ? ({
+              uid: user.uid,
+              email: user.email,
+              ...docSnap.data(),
+            } as UserProfile)
+          : ({
+              uid: user.uid,
+              email: user.email,
+            } as UserProfile);
+
+        setProfile(
+          applyDemoStudentProfileEnhancements(
+            base,
+            user.email ?? base.email,
+          ),
+        );
         setLoading(false);
       }, (error) => {
         console.error("Error al escuchar perfil de usuario:", error);
