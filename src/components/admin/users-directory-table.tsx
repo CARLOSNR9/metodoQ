@@ -122,7 +122,9 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
 
     const confirmed = window.confirm(
       `¿Eliminar a ${user.displayName || user.email}?\n\n` +
-        "Se borrará de Firebase Auth y Firestore. No se puede deshacer.",
+        "Se eliminará la cuenta en Authentication, el perfil en Firestore y todos sus datos " +
+        "(resultados, notificaciones, ventas manuales, postulaciones Residente, etc.). " +
+        "No se puede deshacer.",
     );
     if (!confirmed) return;
 
@@ -133,7 +135,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
       if (result.error) {
         setError(result.error);
       } else {
-        setMessage("Usuario eliminado.");
+        setMessage("Usuario y todos sus registros eliminados de Firebase.");
         router.refresh();
       }
     });

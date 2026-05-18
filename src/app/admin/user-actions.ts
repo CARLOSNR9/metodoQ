@@ -12,6 +12,10 @@ import {
 import { parseBillingCycle } from "@/lib/plans/config";
 import { canAssignRole, verifyStaffCaller } from "@/lib/server/verify-staff";
 import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import {
+  deleteFirebaseAuthUser,
+  deleteUserFirestoreData,
+} from "@/lib/server/delete-user-cascade";
 import { normalizeUserRole } from "@/lib/roles";
 
 const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com";
@@ -23,16 +27,6 @@ async function requireAdmin(idToken: string | null | undefined) {
     return { ok: false as const, error: "Solo administradores pueden gestionar usuarios." };
   }
   return { ok: true as const, caller };
-}
-
-async function deleteManualSalesForUser(userId: string) {
-  const db = getFirebaseAdminDb();
-  const snap = await db.collection("manual_sales").where("userId", "==", userId).get();
-  const batch = db.batch();
-  snap.docs.forEach((doc) => batch.delete(doc.ref));
-  if (!snap.empty) {
-    await batch.commit();
-  }
 }
 
 export async function deleteUserAction(
@@ -60,21 +54,25 @@ export async function deleteUserAction(
       };
     }
 
-    await deleteManualSalesForUser(userId);
-
-    try {
-      await authAdmin.deleteUser(userId);
-    } catch (e) {
-      console.warn("Auth user may already be deleted", e);
-    }
-
+    const cascade = await deleteUserFirestoreData(db, userId, email);
+    await deleteFirebaseAuthUser(authAdmin, userId, email);
     await db.collection("users").doc(userId).delete();
 
     revalidatePath("/admin");
-    return { success: true };
+    return {
+      success: true,
+      deleted: cascade,
+    };
   } catch (e) {
-    console.error(e);
-    return { error: "No se pudo eliminar el usuario." };
+    console.error("[deleteUserAction]", e);
+    const code = (e as { code?: string }).code;
+    if (code === "auth/user-not-found") {
+      return {
+        error:
+          "Se borraron los datos en Firestore, pero no había cuenta en Authentication con ese UID.",
+      };
+    }
+    return { error: "No se pudo eliminar el usuario por completo. Revisa la consola del servidor." };
   }
 }
 

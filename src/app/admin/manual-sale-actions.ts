@@ -10,6 +10,10 @@ import {
 } from "@/lib/plans/manual-sale";
 import { parseBillingCycle, parsePaidPlanId } from "@/lib/plans/config";
 import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import {
+  deleteFirebaseAuthUser,
+  deleteUserFirestoreData,
+} from "@/lib/server/delete-user-cascade";
 import { verifyStaffCaller } from "@/lib/server/verify-staff";
 
 async function requireAdmin(idToken: string | null | undefined) {
@@ -136,15 +140,15 @@ export async function deleteManualSaleAction(
     }
 
     const userId = String(saleSnap.data()?.userId ?? "");
+    const saleEmail = String(saleSnap.data()?.email ?? "");
 
     await saleRef.delete();
 
     if (deleteUser && userId) {
-      try {
-        await authAdmin.deleteUser(userId);
-      } catch (e) {
-        console.warn("Auth user may already be deleted", e);
-      }
+      const userSnap = await db.collection("users").doc(userId).get();
+      const email = String(userSnap.data()?.email ?? saleEmail);
+      await deleteUserFirestoreData(db, userId, email);
+      await deleteFirebaseAuthUser(authAdmin, userId, email);
       await db.collection("users").doc(userId).delete();
     } else if (userId) {
       await db.collection("users").doc(userId).set(
