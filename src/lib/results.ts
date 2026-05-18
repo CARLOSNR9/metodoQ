@@ -13,6 +13,7 @@ import {
 } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { checkAchievements } from "@/lib/achievements";
+import { buildElizabethTrainingResults, isElizabethDemoEmail } from "@/lib/demo/elizabeth-training-data";
 import { getDemoTrainingResultsIfEligible } from "@/lib/demo/demo-training-data";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 
@@ -187,6 +188,9 @@ export async function getUserDemoResults(userId: string): Promise<DemoResultItem
   if (snapshot.empty) {
     const userSnap = await getDoc(doc(db, "users", userId));
     const email = userSnap.data()?.email as string | undefined;
+    if (isElizabethDemoEmail(email)) {
+      return buildElizabethTrainingResults();
+    }
     const demoResults = getDemoTrainingResultsIfEligible(email);
     if (demoResults.length > 0) return demoResults;
   }

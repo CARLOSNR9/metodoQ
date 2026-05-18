@@ -1,5 +1,12 @@
 import type { TrainingQuestion } from "@/lib/questions/types";
-import { supportsDedicatedDiagnosticBattery } from "@/lib/diagnostic/university-match";
+import {
+  isUccPastoUniversity,
+  supportsDedicatedDiagnosticBattery,
+} from "@/lib/diagnostic/university-match";
+import {
+  buildUccRadarFromSession,
+  buildUccRadarFromStats,
+} from "@/lib/diagnostic/ucc-exam-blueprint";
 
 /** Ejes del examen unificado (Medicina Interna — UNAL / UdeA). */
 export const MI_EXAM_RADAR_AXES = [
@@ -148,6 +155,8 @@ export function buildRadarChartData({
   answersByQuestionId?: Record<string, string>;
 }): RadarChartPoint[] {
   const useBlueprint = supportsDedicatedDiagnosticBattery(university, specialty);
+  const useUccBlueprint =
+    useBlueprint && isUccPastoUniversity(university);
 
   if (
     sessionQuestions &&
@@ -155,10 +164,16 @@ export function buildRadarChartData({
     answersByQuestionId &&
     Object.keys(answersByQuestionId).length > 0
   ) {
+    if (useUccBlueprint) {
+      return buildUccRadarFromSession(sessionQuestions, answersByQuestionId);
+    }
     return buildRadarFromSession(sessionQuestions, answersByQuestionId);
   }
 
   if (useBlueprint) {
+    if (useUccBlueprint) {
+      return buildUccRadarFromStats(correctTopics, wrongTopics);
+    }
     return buildRadarFromStats(correctTopics, wrongTopics);
   }
 

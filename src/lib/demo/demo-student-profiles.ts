@@ -1,5 +1,10 @@
 import type { UserProfile } from "@/hooks/use-user-profile";
 import {
+  ELIZABETH_EMAIL,
+  getElizabethTrainingProfilePatch,
+  isElizabethDemoEmail,
+} from "@/lib/demo/elizabeth-training-data";
+import {
   getDemoTrainingProfilePatch,
   isDemoTrainingEmail,
 } from "@/lib/demo/demo-training-data";
@@ -20,6 +25,20 @@ const DEMO_STUDENT_PATCHES: Record<string, Partial<UserProfile>> = {
       listPriceCOP: 1_600_000,
       negotiatorName: null,
       notes: "Venta manual de prueba — Pro 6 meses",
+      recordedAt: new Date().toISOString(),
+      recordedByUid: "demo",
+    },
+  },
+  [ELIZABETH_EMAIL]: {
+    displayName: "Elizabeth",
+    plan: "PRO",
+    planBillingCycle: 6,
+    goalUniversity: "Universidad Cooperativa (Pasto)",
+    manualSale: {
+      negotiatedPriceCOP: 1_000_000,
+      listPriceCOP: 1_600_000,
+      negotiatorName: "Juan José",
+      notes: "Primera venta — Pro 6 meses · Medicina Interna UCC Pasto",
       recordedAt: new Date().toISOString(),
       recordedByUid: "demo",
     },
@@ -48,7 +67,24 @@ export function applyDemoStudentProfileEnhancements(
     }
   }
 
-  if (isDemoTrainingEmail(email)) {
+  if (isElizabethDemoEmail(email)) {
+    const trainingPatch = getElizabethTrainingProfilePatch();
+    for (const [key, value] of Object.entries(trainingPatch) as [keyof UserProfile, unknown][]) {
+      if (key === "topicStats") {
+        if (!hasTopicStats(merged.topicStats)) {
+          merged.topicStats = value as UserProfile["topicStats"];
+        }
+        continue;
+      }
+      if (key === "attemptsCount") {
+        if (!merged.attemptsCount) merged.attemptsCount = value as number;
+        continue;
+      }
+      if (isEmpty(merged[key])) {
+        merged[key] = value as never;
+      }
+    }
+  } else if (isDemoTrainingEmail(email)) {
     const trainingPatch = getDemoTrainingProfilePatch();
     for (const [key, value] of Object.entries(trainingPatch) as [keyof UserProfile, unknown][]) {
       if (key === "topicStats") {

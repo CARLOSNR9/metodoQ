@@ -14,7 +14,11 @@ import {
   Loader2
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { isUdeaUniversity, isUnalUniversity } from "@/lib/diagnostic/university-match";
+import {
+  isUccPastoUniversity,
+  isUdeaUniversity,
+  isUnalUniversity,
+} from "@/lib/diagnostic/university-match";
 
 interface Act1DiagnosticModalProps {
   isOpen: boolean;
@@ -46,6 +50,7 @@ const specialties = [
 const universities = [
   "Universidad Nacional de Colombia (UNAL)",
   "Universidad de Antioquia (UdeA)",
+  "Universidad Cooperativa (Pasto)",
   "Pontificia Universidad Javeriana",
   "Universidad del Rosario",
   "Universidad de los Andes",
@@ -63,17 +68,27 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
     ? "UdeA"
     : isUnalUniversity(selectedUniversity)
       ? "UNAL"
-      : "tu universidad";
-  const loadingSteps = [
-    `Cargando casos clínicos ${universityShortLabel}`,
-    "Calibrando batería Medicina Interna",
-    "Ajustando retroalimentación por distractores",
-  ];
+      : isUccPastoUniversity(selectedUniversity)
+        ? "UCC Pasto"
+        : "tu universidad";
+  const loadingSteps = isUccPastoUniversity(selectedUniversity)
+    ? [
+        "Cargando viñetas estilo MIR — UCC Pasto",
+        "Ponderando epidemiología (30%) y Res. 3280",
+        "Calibrando tu hoja de ruta Medicina Interna",
+      ]
+    : [
+        `Cargando casos clínicos ${universityShortLabel}`,
+        "Calibrando batería Medicina Interna",
+        "Ajustando retroalimentación por distractores",
+      ];
   const readyQuote = isUdeaUniversity(selectedUniversity)
     ? "Doc, en la UdeA el examen unificado exige integración clínica y dominio de guías MSPS/INS. Estas 10 preguntas definirán tu hoja de ruta."
     : isUnalUniversity(selectedUniversity)
       ? "Doc, en la UNAL no gana quien más sabe, sino quien mejor aplica bajo presión. Este diagnóstico de 10 preguntas definirá tu hoja de ruta."
-      : "Doc, este diagnóstico de 10 preguntas calibrará tu preparación para la especialidad elegida.";
+      : isUccPastoUniversity(selectedUniversity)
+        ? "Doc, en la UCC Pasto el 30% del examen es epidemiología y otro 10% es Res. 3280. Estas 10 preguntas calibran exactamente esa estructura — estilo MIR, saber y descartar."
+        : "Doc, este diagnóstico de 10 preguntas calibrará tu preparación para la especialidad elegida.";
 
   if (!isOpen) return null;
 

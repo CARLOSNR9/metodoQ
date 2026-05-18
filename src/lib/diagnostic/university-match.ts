@@ -15,6 +15,15 @@ export function isUnalUniversity(university: string | null | undefined): boolean
   return n.includes("nacional") || n.includes("unal");
 }
 
+export function isUccPastoUniversity(university: string | null | undefined): boolean {
+  const n = normalize(university);
+  return (
+    (n.includes("cooperativa") && n.includes("pasto")) ||
+    n.includes("ucc pasto") ||
+    (n.includes("ucc") && n.includes("pasto"))
+  );
+}
+
 export function isMedicinaInternaSpecialty(specialty: string | null | undefined): boolean {
   const n = normalize(specialty);
   return n.includes("medicina interna");
@@ -26,6 +35,8 @@ export function supportsDedicatedDiagnosticBattery(
 ): boolean {
   return (
     isMedicinaInternaSpecialty(specialty) &&
-    (isUdeaUniversity(university) || isUnalUniversity(university))
+    (isUdeaUniversity(university) ||
+      isUnalUniversity(university) ||
+      isUccPastoUniversity(university))
   );
 }

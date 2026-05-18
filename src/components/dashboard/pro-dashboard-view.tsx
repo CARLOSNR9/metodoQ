@@ -20,6 +20,8 @@ import { motion } from "framer-motion";
 import { getPlanDisplayName } from "@/lib/plans/config";
 import { hasProFeatures } from "@/lib/plans/access";
 import { getUserGreetingName } from "@/lib/plans/subscription-display";
+import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
+import { UccPastoInsightCard } from "./ucc-pasto-insight-card";
 import { SubscriptionStatusCard } from "./subscription-status-card";
 import { useUserPerformanceStats } from "@/hooks/use-user-performance-stats";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
@@ -46,6 +48,9 @@ export function ProDashboardView({
   const { improvement, percentileLabel, loading: statsLoading } = useUserPerformanceStats(user?.uid);
   const needsDiagnostic = !profile?.attemptsCount || profile.attemptsCount === 0;
   const diagnosticUser = { ...user, ...profile };
+  const isUccPasto = isUccPastoUniversity(profile?.goalUniversity);
+  const dailyPillTopic =
+    profile?.weaknesses?.[0] ?? (isUccPasto ? "Epidemiología" : "Semiología");
 
   return (
     <div className="space-y-10 pb-12">
@@ -92,9 +97,11 @@ export function ProDashboardView({
                     ? profile?.goalUniversity && profile.goalUniversity !== "Otra"
                       ? `Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para calibrar la IA hacia la ${profile.goalUniversity}.`
                       : "Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para activar tu hoja de ruta personalizada."
-                    : profile?.goalUniversity && profile.goalUniversity !== "Otra"
-                      ? `Tu camino hacia la residencia en la ${profile.goalUniversity} está siendo optimizado por nuestra IA.`
-                      : "Tu camino hacia la residencia médica está siendo optimizado por nuestra IA. Tienes nuevas metas para hoy."
+                    : isUccPasto
+                      ? "Tu plan Pro está calibrado para el examen UCC Pasto: 50% clínica, 30% epidemiología y Res. 3280. La IA ya identificó tus brechas."
+                      : profile?.goalUniversity && profile.goalUniversity !== "Otra"
+                        ? `Tu camino hacia la residencia en la ${profile.goalUniversity} está siendo optimizado por nuestra IA.`
+                        : "Tu camino hacia la residencia médica está siendo optimizado por nuestra IA. Tienes nuevas metas para hoy."
                   }
                 </p>
               </div>
@@ -191,6 +198,8 @@ export function ProDashboardView({
 
       <SubscriptionStatusCard profile={profile} />
 
+      {isUccPasto && !needsDiagnostic && <UccPastoInsightCard />}
+
       <div className="grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-10">
           {/* DAILY MISSION */}
@@ -274,7 +283,7 @@ export function ProDashboardView({
 
         <aside className="space-y-8">
           {/* DAILY PILL (SITUATION AWARE) */}
-          <DailyPillCard topic="Semiología" isLocked={needsDiagnostic} />
+          <DailyPillCard topic={dailyPillTopic} isLocked={needsDiagnostic} />
 
           {/* WEAK TOPICS / IA ANALYTICS */}
           <WeakTopicsCard userId={user.uid} />
@@ -318,7 +327,9 @@ export function ProDashboardView({
           {/* MOTIVATIONAL QUOTE */}
           <div className="rounded-[2rem] border border-white/5 bg-white/[0.02] p-8 text-center border-dashed">
             <p className="text-lg font-bold text-white italic leading-relaxed">
-              "El éxito en la residencia no es cuestión de suerte, es cuestión de datos y disciplina."
+              {isUccPasto
+                ? '"En la UCC Pasto no gana quien más leyó, sino quien más simuló con el formato correcto."'
+                : '"El éxito en la residencia no es cuestión de suerte, es cuestión de datos y disciplina."'}
             </p>
             <p className="mt-4 text-[10px] font-black uppercase tracking-[0.3em] text-mq-accent">- DR. Q</p>
           </div>

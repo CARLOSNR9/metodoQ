@@ -18,7 +18,10 @@ import {
   buildRadarChartData,
   getTopicLossesFromRadar,
 } from "@/lib/diagnostic/exam-blueprint";
-import { supportsDedicatedDiagnosticBattery } from "@/lib/diagnostic/university-match";
+import {
+  isUccPastoUniversity,
+  supportsDedicatedDiagnosticBattery,
+} from "@/lib/diagnostic/university-match";
 import { ScoreComparisonCards } from "@/components/demo/score-comparison-cards";
 
 interface Act2PredictiveDashboardProps {
@@ -50,6 +53,7 @@ const gaussData = (() => {
 function getCutoffScore(university: string | null): number {
   const n = (university ?? "").toLowerCase();
   if (n.includes("antioquia") || n.includes("udea")) return 700;
+  if (n.includes("cooperativa") && n.includes("pasto")) return 640;
   return 685;
 }
 
