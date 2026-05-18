@@ -17,7 +17,7 @@ function getLoginErrorMessage(errorCode: string) {
   }
 
   if (errorCode === "auth/invalid-email") {
-    return "Usa un correo válido (ej. nombre@ejemplo.com) o el usuario admin.";
+    return "Usa un correo válido (ej. nombre@ejemplo.com)";
   }
 
   if (errorCode === "auth/too-many-requests") {
@@ -135,7 +135,7 @@ export default function LoginPage() {
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   className="min-h-12 w-full rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm text-foreground outline-none transition focus:border-mq-accent focus:ring-2 focus:ring-mq-accent/20"
-                  placeholder="admin o nombre@ejemplo.com"
+                  placeholder="nombre@ejemplo.com"
                 />
               </div>
 

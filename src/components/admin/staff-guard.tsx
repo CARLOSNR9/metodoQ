@@ -143,7 +143,7 @@ export function StaffGuard({
                 <input
                   type="text"
                   autoComplete="username"
-                  placeholder="admin o nombre@ejemplo.com"
+                  placeholder="nombre@ejemplo.com"
                   value={loginEmail}
                   onChange={(e) => setLoginEmail(e.target.value)}
                   className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white outline-none focus:border-mq-accent"

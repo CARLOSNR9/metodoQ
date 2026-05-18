@@ -190,7 +190,7 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
                   autoComplete={mode === "login" ? "username" : "email"}
                   required
                   placeholder={
-                    mode === "login" ? "admin o nombre@ejemplo.com" : "nombre@ejemplo.com"
+                    mode === "login" ? "nombre@ejemplo.com" : "nombre@ejemplo.com"
                   }
                   className="h-12 w-full rounded-xl border border-mq-border bg-white/[0.02] pl-12 pr-4 text-white outline-none transition focus:border-mq-accent/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-mq-accent/10"
                   value={email}
