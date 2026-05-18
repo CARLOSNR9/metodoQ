@@ -7,6 +7,7 @@ import { AdminClassesPanel } from "@/components/admin/admin-classes-panel";
 import { AdminGuard } from "@/components/admin/admin-guard";
 import { ManualSalesPanel } from "@/components/admin/manual-sales-panel";
 import { UsersDirectoryPanel } from "@/components/admin/users-directory-panel";
+import { PanelSection } from "@/components/admin/panel-section";
 
 export const dynamic = "force-dynamic";
 
@@ -118,10 +119,6 @@ function buildAlerts(metrics: AdminMetrics): AlertItem[] {
     });
   }
 
-  for (const alert of alerts) {
-    console.warn(`[admin-alert] ${alert.title} ${alert.description}`);
-  }
-
   return alerts;
 }
 
@@ -131,6 +128,31 @@ function MetricCard({ label, value }: { label: string; value: number }) {
       <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">{label}</p>
       <p className="mt-3 text-3xl font-semibold text-white sm:text-4xl">{value}</p>
     </article>
+  );
+}
+
+function FunnelAlerts({ alerts }: { alerts: AlertItem[] }) {
+  return (
+    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
+      <h3 className="text-lg font-semibold text-white">Alertas de embudo</h3>
+      {alerts.length > 0 ? (
+        <ul className="mt-6 space-y-4">
+          {alerts.map((alert) => (
+            <li
+              key={alert.id}
+              className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-4"
+            >
+              <p className="text-sm font-semibold text-amber-100">{alert.title}</p>
+              <p className="mt-1 text-sm text-amber-200/80">{alert.description}</p>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-6 text-sm text-mq-muted">
+          Embudo saludable. No hay alertas críticas de fricción.
+        </p>
+      )}
+    </section>
   );
 }
 
@@ -150,31 +172,24 @@ export default async function AdminPage() {
     <AdminGuard>
       <main className="flex min-h-[calc(100vh-4rem)] flex-1 bg-[#0A1F44]">
         <section className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
-          <header className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
-                Admin Panel
-              </p>
-              <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                Dashboard Estratégico
-              </h1>
-              <p className="mt-3 text-sm text-mq-muted sm:text-base">
-                Métricas de conversión y gestión de usuarios en tiempo real.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-4">
-                <a
-                  href="/profesor"
-                  className="text-sm font-medium text-mq-accent hover:underline"
-                >
-                  Panel profesor →
-                </a>
-                <a
-                  href="/moderador"
-                  className="text-sm font-medium text-mq-accent hover:underline"
-                >
-                  Panel moderador →
-                </a>
-              </div>
+          <header>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
+              Panel de administración
+            </p>
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Control total de Método Q
+            </h1>
+            <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
+              Gestión de usuarios, ventas internas y operación del negocio. El contenido docente
+              (preguntas y clases) queda al final; los profesores usan su panel dedicado.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-4 text-sm">
+              <a href="/profesor" className="font-medium text-mq-accent hover:underline">
+                Panel profesor →
+              </a>
+              <a href="/moderador" className="font-medium text-mq-accent hover:underline">
+                Panel moderador →
+              </a>
             </div>
           </header>
 
@@ -187,72 +202,49 @@ export default async function AdminPage() {
             </div>
           ) : null}
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <MetricCard label="Usuarios Totales" value={metrics.usersCount} />
-            <MetricCard label="Demos Completados" value={metrics.demosCompletedCount} />
-            <MetricCard label="Conversiones PRO" value={metrics.proConversionsCount} />
-          </div>
+          {/* 1. Administración — prioridad máxima */}
+          <PanelSection
+            title="Administración"
+            description="Usuarios, planes, ventas por negociador y postulaciones al Plan Residente. Esto es lo primero que debe hacer un administrador."
+            className="mt-10"
+          >
+            <AdminUserForm />
+            <UsersDirectoryPanel />
+            <ManualSalesPanel />
+            <ResidenteApplicationsPanel />
+          </PanelSection>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            <MetricCard label="Inicios Demo" value={metrics.demoStartedCount} />
-            <MetricCard label="Vistas Paywall" value={metrics.paywallViewedCount} />
-            <MetricCard label="Clicks Upgrade" value={metrics.paywallClickedCount} />
-            <MetricCard label="Tasa Fin (%)" value={demoFinishRate} />
-            <MetricCard label="Tasa Click (%)" value={paywallClickRate} />
-          </div>
+          {/* 2. Métricas del negocio */}
+          <PanelSection
+            title="Métricas y embudo"
+            description="Vista rápida de conversión, demos y señales de fricción en el paywall."
+            className="mt-14"
+          >
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <MetricCard label="Usuarios totales" value={metrics.usersCount} />
+              <MetricCard label="Demos completados" value={metrics.demosCompletedCount} />
+              <MetricCard label="Conversiones de pago" value={metrics.proConversionsCount} />
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              <MetricCard label="Inicios demo" value={metrics.demoStartedCount} />
+              <MetricCard label="Vistas paywall" value={metrics.paywallViewedCount} />
+              <MetricCard label="Clicks upgrade" value={metrics.paywallClickedCount} />
+              <MetricCard label="Tasa fin (%)" value={demoFinishRate} />
+              <MetricCard label="Tasa click (%)" value={paywallClickRate} />
+            </div>
+            <FunnelAlerts alerts={alerts} />
+          </PanelSection>
 
-          <div className="mt-8 space-y-8">
+          {/* 3. Contenido — mismo que profesor, abajo en admin */}
+          <PanelSection
+            title="Contenido educativo"
+            description="Banco de preguntas y clases en vivo. Los profesores gestionan esto desde /profesor; aquí queda como respaldo para administradores."
+            className="mt-14"
+          >
             <QuestionCreationForm />
             <AdminClassForm />
             <AdminClassesPanel />
-            <ResidenteApplicationsPanel />
-          </div>
-
-          <div className="grid gap-8 lg:grid-cols-2">
-            <AdminUserForm />
-
-            <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-              <h2 className="text-xl font-semibold text-white">Alertas de Embudo</h2>
-              {alerts.length > 0 ? (
-                <ul className="mt-6 space-y-4">
-                  {alerts.map((alert) => (
-                    <li
-                      key={alert.id}
-                      className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-4"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="mt-0.5 rounded-full bg-amber-500/20 p-1.5 text-amber-500">
-                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                          </svg>
-                        </div>
-                        <div>
-                          <p className="text-sm font-semibold text-amber-100">{alert.title}</p>
-                          <p className="mt-1 text-sm text-amber-200/80">{alert.description}</p>
-                        </div>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <div className="mt-12 flex flex-col items-center text-center">
-                  <div className="rounded-full bg-mq-surface p-4 text-mq-muted">
-                    <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <p className="mt-4 text-sm text-mq-muted">
-                    Embudo saludable. No hay alertas críticas de fricción.
-                  </p>
-                </div>
-              )}
-            </section>
-          </div>
-
-          <div className="mt-8 space-y-8">
-            <UsersDirectoryPanel />
-            <ManualSalesPanel />
-          </div>
+          </PanelSection>
         </section>
       </main>
     </AdminGuard>

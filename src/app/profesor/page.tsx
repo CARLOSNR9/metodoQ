@@ -2,6 +2,7 @@ import { ProfessorGuard } from "@/components/professor/professor-guard";
 import { QuestionCreationForm } from "@/components/admin/question-creation-form";
 import { AdminClassForm } from "@/components/admin/admin-class-form";
 import { AdminClassesPanel } from "@/components/admin/admin-classes-panel";
+import { PanelSection } from "@/components/admin/panel-section";
 
 export const dynamic = "force-dynamic";
 
@@ -30,21 +31,32 @@ export default function ProfessorPage() {
               Panel docente
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Gestión de contenido
+              Tu espacio de enseñanza
             </h1>
             <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
-              Crea preguntas para el banco y programa tus clases en vivo. No incluye métricas de
-              negocio ni gestión de usuarios (solo administradores).
+              Aquí gestionas lo esencial: preguntas para el banco y clases en vivo. No incluye
+              usuarios, ventas ni métricas de negocio (solo administración).
             </p>
           </header>
 
-          <div className="mt-8 space-y-8">
+          <PanelSection
+            title="Banco de preguntas"
+            description="Crea preguntas nuevas o carga los bancos inicial y extendido."
+            className="mt-10"
+          >
             <QuestionCreationForm />
+          </PanelSection>
+
+          <PanelSection
+            title="Clases en vivo"
+            description="Programa sesiones, enlaces de reunión y grabaciones para estudiantes Pro y Residente."
+            className="mt-14"
+          >
             <AdminClassForm />
             <AdminClassesPanel />
-          </div>
+          </PanelSection>
 
-          <section className="mt-10 rounded-xl border border-dashed border-mq-border-strong bg-white/[0.02] p-6">
+          <section className="mt-14 rounded-xl border border-dashed border-mq-border-strong bg-white/[0.02] p-6">
             <h2 className="text-lg font-semibold text-white">Próximas funciones sugeridas</h2>
             <p className="mt-1 text-sm text-mq-muted">
               Ideas para ampliar el panel del profesor en siguientes iteraciones.

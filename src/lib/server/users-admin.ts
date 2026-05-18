@@ -13,6 +13,7 @@ export type AdminUserRow = {
   planStartedAt: string | null;
   createdAt: string | null;
   negotiatedPriceCOP: number | null;
+  planBillingCycle: number | null;
 };
 
 function resolveSource(data: Record<string, unknown>): UserAcquisitionSource {
@@ -61,6 +62,8 @@ export async function getAdminUserDirectory(limit = 150): Promise<AdminUserRow[]
         typeof manualSale?.negotiatedPriceCOP === "number"
           ? manualSale.negotiatedPriceCOP
           : null,
+      planBillingCycle:
+        typeof data.planBillingCycle === "number" ? data.planBillingCycle : null,
     };
   });
 }

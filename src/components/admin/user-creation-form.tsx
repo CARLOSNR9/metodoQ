@@ -69,7 +69,7 @@ export function AdminUserForm() {
   }
 
   return (
-    <section className="mt-8 rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
+    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
       <div className="mb-6">
         <h2 className="text-xl font-semibold text-white">Gestión Manual de Usuarios</h2>
         <p className="mt-1 text-sm text-mq-muted">
