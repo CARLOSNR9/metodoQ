@@ -33,8 +33,14 @@ export function supportsDedicatedDiagnosticBattery(
   university: string | null | undefined,
   specialty: string | null | undefined,
 ): boolean {
+  const effectiveSpecialty =
+    specialty && isMedicinaInternaSpecialty(specialty)
+      ? specialty
+      : isUccPastoUniversity(university)
+        ? "Medicina Interna"
+        : specialty;
   return (
-    isMedicinaInternaSpecialty(specialty) &&
+    isMedicinaInternaSpecialty(effectiveSpecialty) &&
     (isUdeaUniversity(university) ||
       isUnalUniversity(university) ||
       isUccPastoUniversity(university))

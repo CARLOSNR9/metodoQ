@@ -9,6 +9,7 @@ import {
 } from "@/lib/plans/manual-sale";
 import { canAssignRole, verifyStaffCaller } from "@/lib/server/verify-staff";
 import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
 import { normalizeUserRole } from "@/lib/roles";
 import type { BillingCycle } from "@/lib/plans/config";
 
@@ -29,6 +30,11 @@ export async function createUserAction(formData: FormData) {
   const displayName = formData.get("displayName") as string;
   const plan = (formData.get("plan") as UserPlan) || "FREE";
   const role = normalizeUserRole(formData.get("role") as string);
+  const goalUniversity = (formData.get("goalUniversity") as string)?.trim() || "";
+  const goalSpecialty = (formData.get("goalSpecialty") as string)?.trim() || "";
+  const resolvedSpecialty =
+    goalSpecialty ||
+    (goalUniversity && isUccPastoUniversity(goalUniversity) ? "Medicina Interna" : "");
 
   if (!email || !password || !displayName) {
     return { error: "Faltan campos obligatorios." };
@@ -102,8 +108,10 @@ export async function createUserAction(formData: FormData) {
       manualSale,
       lastActiveAt: now,
       achievements: [],
-      onboardingCompleted: false,
+      onboardingCompleted: Boolean(goalUniversity),
       emailOptIn: true,
+      ...(goalUniversity ? { goalUniversity } : {}),
+      ...(resolvedSpecialty ? { goalSpecialty: resolvedSpecialty } : {}),
     };
 
     await db.collection("users").doc(userRecord.uid).set(userDoc);

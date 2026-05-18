@@ -6,6 +6,7 @@ import { getFirebaseDb } from "@/lib/firebase";
 
 export interface OnboardingData {
   goalUniversity?: string;
+  goalSpecialty?: string;
   attemptedExam?: boolean;
   usedCourses?: boolean;
   onboardingCompleted?: boolean;

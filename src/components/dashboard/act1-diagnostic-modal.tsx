@@ -15,6 +15,14 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import {
+  resolveSpecialtyFromProfile,
+  resolveUniversityFromProfile,
+} from "@/lib/diagnostic/resolve-profile-target";
+import {
+  getEffectiveGoalSpecialty,
+  hasCalibratedLearningTrack,
+} from "@/lib/diagnostic/ucc-pasto-track";
+import {
   isUccPastoUniversity,
   isUdeaUniversity,
   isUnalUniversity,
@@ -57,12 +65,38 @@ const universities = [
   "Otra",
 ];
 
+function findSpecialtyByName(name: string) {
+  return specialties.find((s) => s.name === name) ?? specialties[1];
+}
+
 export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticModalProps) {
   const router = useRouter();
-  const [step, setStep] = useState<Step>("config");
-  const [selectedUniversity, setSelectedUniversity] = useState(universities[1]);
-  const [selectedSpecialty, setSelectedSpecialty] = useState(specialties[1]); // Medicina Interna default
+  const profileUniversity = user?.goalUniversity as string | undefined;
+  const profileSpecialty = user?.goalSpecialty as string | undefined;
+  const effectiveSpecialty = getEffectiveGoalSpecialty(profileUniversity, profileSpecialty);
+  const skipConfigStep = hasCalibratedLearningTrack(profileUniversity, profileSpecialty);
+
+  const [step, setStep] = useState<Step>(skipConfigStep ? "anxiety" : "config");
+  const [selectedUniversity, setSelectedUniversity] = useState(() =>
+    resolveUniversityFromProfile(profileUniversity),
+  );
+  const [selectedSpecialty, setSelectedSpecialty] = useState(() =>
+    findSpecialtyByName(effectiveSpecialty),
+  );
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    if (!isOpen) {
+      setIsTransitioning(false);
+      return;
+    }
+
+    const university = resolveUniversityFromProfile(profileUniversity);
+    const specialtyName = getEffectiveGoalSpecialty(profileUniversity, profileSpecialty);
+    setSelectedUniversity(university);
+    setSelectedSpecialty(findSpecialtyByName(specialtyName));
+    setStep(hasCalibratedLearningTrack(profileUniversity, profileSpecialty) ? "anxiety" : "config");
+  }, [isOpen, profileUniversity, profileSpecialty]);
 
   const universityShortLabel = isUdeaUniversity(selectedUniversity)
     ? "UdeA"
@@ -140,7 +174,9 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                     Calibra tu <span className="text-mq-accent italic">Escenario de Realidad</span>
                   </h2>
                   <p className="text-mq-muted text-sm leading-relaxed">
-                    Para calcular tus probabilidades reales de ingreso, necesitamos saber contra qué estándar vas a competir.
+                    {skipConfigStep
+                      ? "Usaremos la universidad y especialidad de tu registro. Revisa que sean correctas antes de continuar."
+                      : "Para calcular tus probabilidades reales de ingreso, necesitamos saber contra qué estándar vas a competir."}
                   </p>
                 </div>
 
@@ -148,7 +184,12 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                   <div className="space-y-3">
                     <label className="text-xs font-bold uppercase tracking-widest text-mq-muted/60 px-2">Institución Objetivo</label>
                     <div className="grid grid-cols-1 gap-2">
-                      {universities.slice(0, 3).map((uni) => (
+                      {(universities.includes(selectedUniversity as (typeof universities)[number])
+                        ? universities
+                        : [selectedUniversity, ...universities]
+                      )
+                        .slice(0, 4)
+                        .map((uni) => (
                         <button
                           key={uni}
                           onClick={() => setSelectedUniversity(uni)}
@@ -208,7 +249,21 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                     <ShieldAlert size={32} className="text-red-500 animate-pulse" />
                   </div>
                   <h2 className="text-2xl font-black text-white">Choque de Realidad Estandarizado</h2>
-                  <p className="text-mq-muted text-sm">Escenario proyectado para 2027 en la <span className="text-white font-bold">{selectedUniversity}</span></p>
+                  <p className="text-mq-muted text-sm">
+                    Escenario proyectado para 2027 en la{" "}
+                    <span className="text-white font-bold">{selectedUniversity}</span>
+                    {skipConfigStep ? (
+                      <>
+                        {" "}
+                        · <span className="text-mq-accent font-bold">{selectedSpecialty.name}</span>
+                      </>
+                    ) : null}
+                  </p>
+                  {skipConfigStep ? (
+                    <p className="text-[11px] text-mq-muted/80">
+                      Tomado de tu perfil. Si necesitas cambiar universidad, actualízala en Perfil.
+                    </p>
+                  ) : null}
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">

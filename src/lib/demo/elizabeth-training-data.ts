@@ -136,6 +136,8 @@ export function buildElizabethTrainingResults(): DemoResultItem[] {
 
 export const ELIZABETH_EMAIL = "elizabethdbh@gmail.com";
 
+const ELIZABETH_DEMO_EMAILS = new Set([ELIZABETH_EMAIL]);
+
 export function isElizabethDemoEmail(email: string | null | undefined): boolean {
-  return email?.trim().toLowerCase() === ELIZABETH_EMAIL;
+  return ELIZABETH_DEMO_EMAILS.has(email?.trim().toLowerCase() ?? "");
 }

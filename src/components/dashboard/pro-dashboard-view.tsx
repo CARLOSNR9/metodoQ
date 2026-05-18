@@ -20,7 +20,10 @@ import { motion } from "framer-motion";
 import { getPlanDisplayName } from "@/lib/plans/config";
 import { hasProFeatures } from "@/lib/plans/access";
 import { getUserGreetingName } from "@/lib/plans/subscription-display";
-import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
+import {
+  getEffectiveGoalSpecialty,
+  isUccPastoMedicinaInternaProUser,
+} from "@/lib/diagnostic/ucc-pasto-track";
 import { UccPastoInsightCard } from "./ucc-pasto-insight-card";
 import { SubscriptionStatusCard } from "./subscription-status-card";
 import { useUserPerformanceStats } from "@/hooks/use-user-performance-stats";
@@ -47,10 +50,19 @@ export function ProDashboardView({
   const [isAct1Open, setIsAct1Open] = useState(false);
   const { improvement, percentileLabel, loading: statsLoading } = useUserPerformanceStats(user?.uid);
   const needsDiagnostic = !profile?.attemptsCount || profile.attemptsCount === 0;
-  const diagnosticUser = { ...user, ...profile };
-  const isUccPasto = isUccPastoUniversity(profile?.goalUniversity);
+  const diagnosticUser = {
+    ...user,
+    ...profile,
+    goalUniversity: profile?.goalUniversity,
+    goalSpecialty: profile?.goalSpecialty,
+  };
+  const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
+  const effectiveSpecialty = getEffectiveGoalSpecialty(
+    profile?.goalUniversity,
+    profile?.goalSpecialty,
+  );
   const dailyPillTopic =
-    profile?.weaknesses?.[0] ?? (isUccPasto ? "Epidemiología" : "Semiología");
+    profile?.weaknesses?.[0] ?? (isUccMiPro ? "Epidemiología" : "Semiología");
 
   return (
     <div className="space-y-10 pb-12">
@@ -97,8 +109,8 @@ export function ProDashboardView({
                     ? profile?.goalUniversity && profile.goalUniversity !== "Otra"
                       ? `Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para calibrar la IA hacia la ${profile.goalUniversity}.`
                       : "Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para activar tu hoja de ruta personalizada."
-                    : isUccPasto
-                      ? "Tu plan Pro está calibrado para el examen UCC Pasto: 50% clínica, 30% epidemiología y Res. 3280. La IA ya identificó tus brechas."
+                    : isUccMiPro
+                      ? "Tu plan Pro está calibrado para el examen UCC Pasto · Medicina Interna: 50% clínica, 30% epidemiología y Res. 3280. La IA ya identificó tus brechas."
                       : profile?.goalUniversity && profile.goalUniversity !== "Otra"
                         ? `Tu camino hacia la residencia en la ${profile.goalUniversity} está siendo optimizado por nuestra IA.`
                         : "Tu camino hacia la residencia médica está siendo optimizado por nuestra IA. Tienes nuevas metas para hoy."
@@ -177,28 +189,21 @@ export function ProDashboardView({
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col gap-4 rounded-2xl border border-amber-500/20 bg-amber-500/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:px-6 backdrop-blur-md"
+          className="flex items-center gap-3 rounded-2xl border border-amber-500/20 bg-amber-500/10 p-5 sm:px-6 backdrop-blur-md"
         >
-          <div className="flex items-center gap-3">
-            <Brain className="h-5 w-5 shrink-0 text-amber-400" />
-            <p className="text-sm font-medium text-amber-100">
-              Activa tu plan Pro: el diagnóstico inicial calibra radar, retos diarios y entrenamiento adaptativo.
-            </p>
-          </div>
-          <button
-            type="button"
-            onClick={() => setIsAct1Open(true)}
-            className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-xl bg-amber-500 px-6 text-sm font-black text-amber-950 transition-all hover:brightness-110 active:scale-95"
-          >
-            Calibrar ahora
-            <ArrowRight size={16} />
-          </button>
+          <Brain className="h-5 w-5 shrink-0 text-amber-400" />
+          <p className="text-sm font-medium text-amber-100">
+            El diagnóstico inicial calibra tu radar, retos diarios y entrenamiento adaptativo.
+            {profile?.goalUniversity && profile.goalUniversity !== "Otra"
+              ? ` Ya tenemos registrada tu meta: ${profile.goalUniversity}.`
+              : ""}
+          </p>
         </motion.div>
       )}
 
       <SubscriptionStatusCard profile={profile} />
 
-      {isUccPasto && !needsDiagnostic && <UccPastoInsightCard />}
+      {isUccMiPro && !needsDiagnostic && <UccPastoInsightCard />}
 
       <div className="grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-10">
@@ -232,40 +237,11 @@ export function ProDashboardView({
                       : 0)
                   }
                   university={profile?.goalUniversity || "Universidad Nacional"}
-                  specialty={profile?.goalSpecialty || "Tu Especialidad"}
+                  specialty={effectiveSpecialty}
                   correctTopics={profile?.topicStats ? Object.fromEntries(Object.entries(profile.topicStats).map(([k, v]: [string, any]) => [k, v.correct])) : {}}
                   wrongTopics={profile?.topicStats ? Object.fromEntries(Object.entries(profile.topicStats).map(([k, v]: [string, any]) => [k, v.wrong])) : {}}
               />
             </section>
-          )}
-
-          {needsDiagnostic && (
-            <motion.section
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="relative overflow-hidden rounded-[2rem] border border-mq-accent/30 bg-mq-accent/5 p-8"
-            >
-              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mq-accent/10 blur-[100px]" />
-              <div className="relative z-10 flex flex-col gap-6 sm:flex-row sm:items-center">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/20 text-mq-accent">
-                  <Target size={32} />
-                </div>
-                <div className="flex-1 space-y-2">
-                  <h2 className="text-2xl font-black text-white">Diagnóstico inicial</h2>
-                  <p className="text-sm text-mq-muted leading-relaxed">
-                    10 preguntas calibradas para tu universidad y especialidad. Sin esto, la IA no puede personalizar tu entrenamiento.
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setIsAct1Open(true)}
-                  className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground transition-all hover:brightness-110 active:scale-95"
-                >
-                  Iniciar
-                  <ArrowRight size={16} />
-                </button>
-              </div>
-            </motion.section>
           )}
 
           {/* CORE ANALYTICS */}
@@ -327,7 +303,7 @@ export function ProDashboardView({
           {/* MOTIVATIONAL QUOTE */}
           <div className="rounded-[2rem] border border-white/5 bg-white/[0.02] p-8 text-center border-dashed">
             <p className="text-lg font-bold text-white italic leading-relaxed">
-              {isUccPasto
+              {isUccMiPro
                 ? '"En la UCC Pasto no gana quien más leyó, sino quien más simuló con el formato correcto."'
                 : '"El éxito en la residencia no es cuestión de suerte, es cuestión de datos y disciplina."'}
             </p>

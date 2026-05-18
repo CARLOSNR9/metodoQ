@@ -2,6 +2,7 @@ import { getUccPastoDiagnosticSession } from "@/data/ucc-pasto-diagnostico-quest
 import { getUdeaDiagnosticSession } from "@/data/udea-diagnostico-questions";
 import { getUnalDiagnosticSession } from "@/data/unal-diagnostico-questions";
 import type { TrainingQuestion } from "@/lib/questions/types";
+import { getEffectiveGoalSpecialty } from "@/lib/diagnostic/ucc-pasto-track";
 import {
   isMedicinaInternaSpecialty,
   isUccPastoUniversity,
@@ -17,7 +18,8 @@ export function getAct1DiagnosticSession(
   university: string | null | undefined,
   specialty: string | null | undefined,
 ): TrainingQuestion[] | null {
-  if (!isMedicinaInternaSpecialty(specialty)) {
+  const effectiveSpecialty = getEffectiveGoalSpecialty(university, specialty);
+  if (!isMedicinaInternaSpecialty(effectiveSpecialty)) {
     return null;
   }
   if (isUdeaUniversity(university)) {

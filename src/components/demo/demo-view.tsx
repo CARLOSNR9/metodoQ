@@ -41,6 +41,7 @@ import {
   selectAdaptiveQuestions,
 } from "@/lib/training/adaptive";
 import { getAct1DiagnosticSession } from "@/lib/diagnostic/get-diagnostic-session";
+import { getEffectiveGoalSpecialty } from "@/lib/diagnostic/ucc-pasto-track";
 import { getPerformanceStatsKey } from "@/lib/diagnostic/exam-blueprint";
 import {
   computeCumulativePerformance,
@@ -192,10 +193,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       ? dedicatedBattery
       : selectAdaptiveQuestions(pool, count, learningProfile);
 
-    if (user && isAct1 && urlUniversity && urlSpecialty) {
+    if (user && isAct1 && urlUniversity) {
+      const goalSpecialty = getEffectiveGoalSpecialty(urlUniversity, urlSpecialty);
       void setDoc(
         doc(getFirebaseDb(), "users", user.uid),
-        { goalUniversity: urlUniversity, goalSpecialty: urlSpecialty },
+        { goalUniversity: urlUniversity, goalSpecialty },
         { merge: true },
       );
     }

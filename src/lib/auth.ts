@@ -59,6 +59,7 @@ export interface UserDocument {
   achievements: string[];
   onboardingCompleted?: boolean;
   goalUniversity?: string;
+  goalSpecialty?: string;
   attemptedExam?: boolean;
   usedCourses?: boolean;
   role?: "student" | "professor" | "moderator" | "admin";

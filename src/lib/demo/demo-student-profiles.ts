@@ -34,6 +34,7 @@ const DEMO_STUDENT_PATCHES: Record<string, Partial<UserProfile>> = {
     plan: "PRO",
     planBillingCycle: 6,
     goalUniversity: "Universidad Cooperativa (Pasto)",
+    goalSpecialty: "Medicina Interna",
     manualSale: {
       negotiatedPriceCOP: 1_000_000,
       listPriceCOP: 1_600_000,

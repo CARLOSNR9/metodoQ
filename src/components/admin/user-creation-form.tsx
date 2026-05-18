@@ -23,6 +23,25 @@ const ROLE_OPTIONS: { value: UserRole; label: string }[] = USER_ROLES.map((role)
 
 const PAID_PLANS: PlanId[] = ["BASICO", "PRO", "RESIDENTE"];
 
+const GOAL_UNIVERSITY_OPTIONS = [
+  { value: "", label: "Sin definir (completa en onboarding)" },
+  { value: "Universidad Cooperativa (Pasto)", label: "Universidad Cooperativa (Pasto)" },
+  { value: "Universidad de Antioquia (UdeA)", label: "Universidad de Antioquia (UdeA)" },
+  { value: "Universidad Nacional de Colombia (UNAL)", label: "Universidad Nacional (UNAL)" },
+  { value: "Pontificia Universidad Javeriana", label: "Pontificia Universidad Javeriana" },
+  { value: "Universidad del Rosario", label: "Universidad del Rosario" },
+  { value: "Otra", label: "Otra" },
+];
+
+const GOAL_SPECIALTY_OPTIONS = [
+  { value: "", label: "Sin definir" },
+  { value: "Medicina Interna", label: "Medicina Interna" },
+  { value: "Pediatría", label: "Pediatría" },
+  { value: "Anestesiología y Reanimación", label: "Anestesiología y Reanimación" },
+  { value: "Obstetricia y Ginecología", label: "Obstetricia y Ginecología" },
+  { value: "Cirugía General", label: "Cirugía General" },
+];
+
 export function AdminUserForm() {
   const [isPending, setIsPending] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<UserPlan>("FREE");
@@ -140,6 +159,21 @@ export function AdminUserForm() {
         </div>
 
         {showManualSale ? <ManualSaleFields planId={selectedPlan as PlanId} /> : null}
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <SelectField
+            label="Universidad objetivo"
+            name="goalUniversity"
+            defaultValue="Universidad Cooperativa (Pasto)"
+            options={GOAL_UNIVERSITY_OPTIONS}
+          />
+          <SelectField
+            label="Especialidad"
+            name="goalSpecialty"
+            defaultValue="Medicina Interna"
+            options={GOAL_SPECIALTY_OPTIONS}
+          />
+        </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
           <SelectField
