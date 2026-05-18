@@ -587,7 +587,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        }
                        examAreaLabel={currentQuestion.examArea}
                        onAnswerSelect={handleAnswer}
-                       isLocked={isDailyPill || isSimulacro ? false : isAct1 && currentQuestionIndex > 0}
+                       isLocked={
+                         isDailyPill || isSimulacro
+                           ? false
+                           : isAct1 && currentQuestionIndex > 0 && isFreePlan
+                       }
                     />
                  )}
 
