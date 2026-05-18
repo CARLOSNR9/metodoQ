@@ -15,6 +15,7 @@ import {
   isProfessorUser,
   type UserRole,
 } from "@/lib/roles";
+import { StaffPanelHeader } from "@/components/admin/staff-panel-header";
 
 type StaffGuardProps = {
   children: React.ReactNode;
@@ -171,5 +172,10 @@ export function StaffGuard({
     );
   }
 
-  return <>{children}</>;
+  return (
+    <>
+      <StaffPanelHeader user={authUser} />
+      {children}
+    </>
+  );
 }

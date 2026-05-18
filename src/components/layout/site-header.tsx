@@ -17,7 +17,12 @@ export function SiteHeader() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const pathname = usePathname();
 
-  if (pathname?.startsWith("/dashboard") || pathname?.startsWith("/admin")) {
+  const isStaffPanel =
+    pathname?.startsWith("/admin") ||
+    pathname?.startsWith("/profesor") ||
+    pathname?.startsWith("/moderador");
+
+  if (pathname?.startsWith("/dashboard") || isStaffPanel) {
     return null;
   }
 
