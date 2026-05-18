@@ -13,6 +13,7 @@ import {
 } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { checkAchievements } from "@/lib/achievements";
+import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 
 type SaveDemoResultInput = {
   userId: string;
@@ -55,6 +56,10 @@ type UserPerformanceProfile = {
   attemptsCount?: number;
   avgResponseTime?: number;
   lastScore?: number;
+  lastSessionScore?: number;
+  cumulativeScore?: number;
+  totalCorrectAnswers?: number;
+  totalQuestionsAnswered?: number;
 };
 
 function getTopTopicsByMetric(
@@ -107,6 +112,7 @@ async function updateUserPerformanceProfile({
 
     const strengths = getTopTopicsByMetric(nextTopicStats, "correct");
     const weaknesses = getTopTopicsByMetric(nextTopicStats, "wrong");
+    const cumulative = computeCumulativePerformance(nextTopicStats);
 
     transaction.set(
       userRef,
@@ -116,7 +122,11 @@ async function updateUserPerformanceProfile({
         weaknesses,
         attemptsCount: nextAttempts,
         avgResponseTime: Number(nextAvgResponseTime.toFixed(2)),
-        lastScore: scorePercentage,
+        lastSessionScore: scorePercentage,
+        cumulativeScore: cumulative.scorePercentage,
+        totalCorrectAnswers: cumulative.totalCorrect,
+        totalQuestionsAnswered: cumulative.totalQuestions,
+        lastScore: cumulative.scorePercentage,
         performanceProfileUpdatedAt: serverTimestamp(),
         lastActiveAt: serverTimestamp(),
       },

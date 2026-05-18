@@ -18,6 +18,7 @@ import { motion } from "framer-motion";
 import { getPlanDisplayName } from "@/lib/plans/config";
 import { hasProFeatures } from "@/lib/plans/access";
 import { useUserPerformanceStats } from "@/hooks/use-user-performance-stats";
+import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 
 interface ProDashboardViewProps {
   user: any;
@@ -150,7 +151,19 @@ export function ProDashboardView({
               </div>
               
               <Act2PredictiveDashboard 
-                  scorePercentage={profile?.lastScore || 0}
+                  scorePercentage={
+                    profile?.cumulativeScore ??
+                    (profile?.topicStats
+                      ? computeCumulativePerformance(profile.topicStats).scorePercentage
+                      : profile?.lastScore ?? 0)
+                  }
+                  lastSessionScore={profile?.lastSessionScore ?? null}
+                  totalQuestionsAnswered={
+                    profile?.totalQuestionsAnswered ??
+                    (profile?.topicStats
+                      ? computeCumulativePerformance(profile.topicStats).totalQuestions
+                      : 0)
+                  }
                   university={profile?.goalUniversity || "Universidad Nacional"}
                   specialty={profile?.goalSpecialty || "Tu Especialidad"}
                   correctTopics={profile?.topicStats ? Object.fromEntries(Object.entries(profile.topicStats).map(([k, v]: [string, any]) => [k, v.correct])) : {}}

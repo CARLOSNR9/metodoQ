@@ -35,6 +35,10 @@ export interface UserDocument {
   weaknesses: string[];
   avgResponseTime: number;
   lastScore: number | null;
+  lastSessionScore?: number | null;
+  cumulativeScore?: number | null;
+  totalCorrectAnswers?: number;
+  totalQuestionsAnswered?: number;
   attemptsCount: number;
   topicStats: Record<string, { correct: number; wrong: number }>;
   referralCode: string;

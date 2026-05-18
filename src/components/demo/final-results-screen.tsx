@@ -1,23 +1,30 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { TrendingUp, Zap, Clock, Target, ArrowRight, Lock, Sparkles } from "lucide-react";
+import type { TrainingQuestion } from "@/lib/questions/types";
+import { Act2PredictiveDashboard } from "./act2-predictive-dashboard";
+import { ScoreComparisonCards } from "./score-comparison-cards";
 
 export type FinalResultsScreenProps = {
+  /** Puntaje de esta sesión (%). */
   scorePercentage: number;
+  /** Promedio global tras incluir esta sesión (%). */
+  cumulativeScorePercentage?: number;
+  totalQuestionsAnswered?: number;
   correctAnswers: number;
   wrongAnswers: number;
   totalSeconds: number;
   avgResponseTime: number;
   correctTopics?: Record<string, number>;
   wrongTopics?: Record<string, number>;
+  sessionQuestions?: TrainingQuestion[];
+  answersByQuestionId?: Record<string, string>;
   onRepeatDemo: () => void;
   className?: string;
   source?: string | null;
   university?: string | null;
   specialty?: string | null;
 };
-
-import { Act2PredictiveDashboard } from "./act2-predictive-dashboard";
 
 function getPerformanceProfile(scorePercentage: number) {
   if (scorePercentage < 50) {
@@ -57,13 +64,19 @@ export function FinalResultsScreen({
   source,
   university,
   specialty,
+  sessionQuestions,
+  answersByQuestionId,
+  cumulativeScorePercentage,
+  totalQuestionsAnswered = 0,
 }: FinalResultsScreenProps) {
   const isAct1 = source === "act1";
   const isDailyPill = source === "daily-pill";
-  const profile = getPerformanceProfile(scorePercentage);
+  const sessionScore = scorePercentage;
+  const globalScore = cumulativeScorePercentage ?? sessionScore;
+  const profile = getPerformanceProfile(sessionScore);
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
-  const strokeDashoffset = circumference - (scorePercentage / 100) * circumference;
+  const strokeDashoffset = circumference - (sessionScore / 100) * circumference;
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -149,19 +162,21 @@ export function FinalResultsScreen({
                   transition={{ delay: 0.8 }}
                   className="text-4xl font-black text-white"
                 >
-                  {scorePercentage}%
+                  {sessionScore}%
                 </motion.span>
-                <span className="text-[10px] font-bold uppercase tracking-tighter text-mq-muted">Puntaje</span>
+                <span className="text-[10px] font-bold uppercase tracking-tighter text-mq-muted">
+                  Esta sesión
+                </span>
               </div>
             </div>
           )}
 
           <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-            {isDailyPill ? (scorePercentage === 100 ? "¡Dosis Inyectada!" : "Casi lo logras, Doc") : isAct1 ? "Diagnóstico Predictivo de Plaza" : profile.title}
+            {isDailyPill ? (sessionScore === 100 ? "¡Dosis Inyectada!" : "Casi lo logras, Doc") : isAct1 ? "Diagnóstico Predictivo de Plaza" : profile.title}
           </h2>
           <p className="mt-3 max-w-md text-base leading-relaxed text-mq-muted sm:text-lg">
             {isDailyPill
-              ? (scorePercentage === 100 
+              ? (sessionScore === 100 
                   ? "Tu agilidad clínica hoy ha sido impecable. Has ganado el trofeo del día y tu racha se mantiene activa."
                   : "La medicina no es lineal, pero la constancia sí. Mañana tendrás una nueva oportunidad para redimirte.")
               : isAct1 
@@ -169,6 +184,15 @@ export function FinalResultsScreen({
               : profile.message
             }
           </p>
+
+          {(isDailyPill || isAct1) && cumulativeScorePercentage !== undefined && (
+            <ScoreComparisonCards
+              globalScorePercentage={globalScore}
+              lastSessionScore={sessionScore}
+              totalQuestionsAnswered={totalQuestionsAnswered}
+              className="mt-8 max-w-lg"
+            />
+          )}
         </header>
 
         <div className="relative z-10 mt-10 grid gap-4 sm:grid-cols-2">
@@ -207,11 +231,15 @@ export function FinalResultsScreen({
         {!isDailyPill && (
           <section className="relative mt-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
             <Act2PredictiveDashboard 
-               scorePercentage={scorePercentage}
+               scorePercentage={globalScore}
+               lastSessionScore={sessionScore}
                university={university ?? null}
                specialty={specialty ?? null}
+               totalQuestionsAnswered={totalQuestionsAnswered}
                correctTopics={correctTopics}
                wrongTopics={wrongTopics}
+               sessionQuestions={sessionQuestions}
+               answersByQuestionId={answersByQuestionId}
             />
           </section>
         )}

@@ -17,6 +17,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashboard";
+import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 
 interface FreeDashboardViewProps {
   user: any;
@@ -102,8 +103,19 @@ export function FreeDashboardView({
     return () => clearInterval(timer);
   }, [expiresAt, user?.createdAt, user?.metadata?.creationTime]);
 
+  const cumulative = computeCumulativePerformance(user?.topicStats);
+  const displayScore =
+    user?.cumulativeScore ??
+    (cumulative.totalQuestions > 0
+      ? cumulative.scorePercentage
+      : user?.lastScore ?? 0);
+  const lastSessionScore =
+    typeof user?.lastSessionScore === "number" ? user.lastSessionScore : null;
+  const totalQuestions =
+    user?.totalQuestionsAnswered ?? cumulative.totalQuestions;
+
   return (
-    <div className="space-y-10 pb-12">
+    <motion.div className="space-y-10 pb-12">
       {/* 5. SISTEMA DE TIEMPO (URGENTE) */}
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
@@ -251,7 +263,14 @@ export function FreeDashboardView({
                   <div className="flex-1 space-y-2 text-center md:text-left">
                     <h3 className="text-2xl font-black text-white uppercase tracking-tight">IA: Análisis de Debilidades Listo</h3>
                     <p className="text-mq-muted leading-relaxed max-w-xl">
-                      Tu probabilidad de pasar es del <span className="text-white font-bold">{user?.lastScore || 0}%</span> en modo Demo. 
+                      Promedio global: <span className="text-white font-bold">{displayScore}%</span> en{" "}
+                      <span className="text-white font-bold">{totalQuestions}</span> preguntas.
+                      {lastSessionScore !== null && (
+                        <>
+                          {" "}
+                          Última sesión: <span className="text-amber-200 font-bold">{lastSessionScore}%</span>.
+                        </>
+                      )}{" "}
                       Hemos detectado <span className="text-mq-accent font-bold">brechas críticas</span> en tu razonamiento clínico.
                     </p>
                   </div>
@@ -273,13 +292,18 @@ export function FreeDashboardView({
                     <span className="text-[10px] font-bold uppercase tracking-widest text-mq-accent">Análisis de Desempeño IA</span>
                   </div>
                   <h2 className="text-3xl font-black text-white">Tu Realidad Académica</h2>
-                  <p className="text-mq-muted text-sm">Este es el estado actual de tu preparación comparado con el estándar de admisión.</p>
+                  <p className="text-mq-muted text-sm">
+                    Promedio acumulado de todas tus respuestas (diagnóstico, retos diarios y entrenamiento).
+                    {totalQuestions > 0 ? ` Basado en ${totalQuestions} preguntas.` : ""}
+                  </p>
                 </div>
                 
                 <Act2PredictiveDashboard 
-                    scorePercentage={user?.lastScore || 0}
+                    scorePercentage={displayScore}
+                    lastSessionScore={lastSessionScore}
                     university={user?.goalUniversity || "Universidad Nacional"}
                     specialty={user?.goalSpecialty || "Tu Especialidad"}
+                    totalQuestionsAnswered={totalQuestions}
                     correctTopics={user?.topicStats ? Object.fromEntries(Object.entries(user.topicStats).map(([k, v]: [string, any]) => [k, v.correct])) : {}}
                     wrongTopics={user?.topicStats ? Object.fromEntries(Object.entries(user.topicStats).map(([k, v]: [string, any]) => [k, v.wrong])) : {}}
                 />
@@ -287,7 +311,7 @@ export function FreeDashboardView({
 
               <WeakTopicsCard userId={user.uid} />
               
-              <ProgressSimulator currentScore={user?.lastScore || 468} />
+              <ProgressSimulator currentScore={cumulative.standardizedScore || 468} />
 
               <div className="rounded-[2.5rem] border border-mq-accent/20 bg-mq-accent/5 p-8 text-center space-y-6">
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
@@ -296,7 +320,7 @@ export function FreeDashboardView({
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold text-white italic">"Doc, los números no mienten, pero no definen tu final."</h3>
                   <p className="text-sm text-mq-muted max-w-lg mx-auto leading-relaxed">
-                    {user?.lastScore < 60 
+                    {displayScore < 60 
                       ? "Tu base actual tiene fugas críticas que te dejarían fuera en la primera ronda. Necesitas dejar de 'estudiar' y empezar a 'entrenar' bajo presión."
                       : "Tienes un potencial real, pero en la UNAL la diferencia entre un residente y un médico general es de apenas 1.5 puntos. No te confíes."
                     }
@@ -506,6 +530,6 @@ export function FreeDashboardView({
         onClose={() => setIsAct1Open(false)} 
         user={user}
       />
-    </div>
+    </motion.div>
   );
 }

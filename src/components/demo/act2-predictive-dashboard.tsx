@@ -1,236 +1,345 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  ResponsiveContainer, 
-  AreaChart, 
-  Area, 
-  XAxis, 
-  YAxis, 
-  Tooltip, 
-  RadarChart, 
-  PolarGrid, 
-  PolarAngleAxis, 
+import {
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  XAxis,
+  ReferenceLine,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
   Radar,
-  ReferenceLine
 } from "recharts";
-import { ShieldAlert, TrendingDown, Info, AlertTriangle } from "lucide-react";
+import { TrendingDown, Info, AlertTriangle } from "lucide-react";
+import type { TrainingQuestion } from "@/lib/questions/types";
+import {
+  buildRadarChartData,
+  getTopicLossesFromRadar,
+} from "@/lib/diagnostic/exam-blueprint";
+import { supportsDedicatedDiagnosticBattery } from "@/lib/diagnostic/university-match";
+import { ScoreComparisonCards } from "@/components/demo/score-comparison-cards";
 
 interface Act2PredictiveDashboardProps {
+  /** Promedio global acumulado (%). */
   scorePercentage: number;
+  /** Puntaje de la última sesión completada (%). */
+  lastSessionScore?: number | null;
   university: string | null;
   specialty: string | null;
+  totalQuestionsAnswered?: number;
   correctTopics?: Record<string, number>;
   wrongTopics?: Record<string, number>;
+  sessionQuestions?: TrainingQuestion[];
+  answersByQuestionId?: Record<string, string>;
 }
 
-// Generar puntos para una campana de Gauss
-const generateNormalDistribution = (mean: number, stdDev: number) => {
+const gaussData = (() => {
   const points = [];
+  const mean = 550;
+  const stdDev = 150;
   for (let i = 0; i <= 1000; i += 20) {
     const exponent = -Math.pow(i - mean, 2) / (2 * Math.pow(stdDev, 2));
     const y = (1 / (stdDev * Math.sqrt(2 * Math.PI))) * Math.exp(exponent);
     points.push({ x: i, y });
   }
   return points;
-};
+})();
 
-const gaussData = generateNormalDistribution(550, 150);
+function getCutoffScore(university: string | null): number {
+  const n = (university ?? "").toLowerCase();
+  if (n.includes("antioquia") || n.includes("udea")) return 700;
+  return 685;
+}
 
-export function Act2PredictiveDashboard({ 
-  scorePercentage, 
-  university = "Universidad Nacional", 
-  specialty = "Especialidad",
+export function Act2PredictiveDashboard({
+  scorePercentage,
+  university = "Universidad Nacional",
+  specialty = "Medicina Interna",
+  lastSessionScore = null,
+  totalQuestionsAnswered = 0,
   correctTopics = {},
-  wrongTopics = {}
+  wrongTopics = {},
+  sessionQuestions,
+  answersByQuestionId,
 }: Act2PredictiveDashboardProps) {
-  // Escalar el puntaje a formato UNAL (0-1000)
-  // Simulamos que el puntaje de corte para la especialidad es alto
   const standardizedScore = Math.round(scorePercentage * 7.2 + 180);
-  const cutoffScore = 685; // Puntaje de corte ficticio pero realista para UNAL
+  const cutoffScore = getCutoffScore(university);
   const isAdmitted = standardizedScore >= cutoffScore;
   const gap = cutoffScore - standardizedScore;
+  const dedicatedDiagnostic = supportsDedicatedDiagnosticBattery(university, specialty);
 
-  // Construir radarData dinámico
-  const allTopicsSet = new Set([...Object.keys(correctTopics), ...Object.keys(wrongTopics)]);
-  let allTopics = Array.from(allTopicsSet);
-  
-  // Si no hay temas (ej. el usuario saltó todo o hay un error), ponemos temas genéricos
-  if (allTopics.length === 0) {
-    allTopics = ["C. Básicas", "Casos Clínicos", "Listening", "S. Pública", "C. General"];
-  }
-
-  // Agrupar los nombres largos de los temas en nombres más cortos para el Radar
-  const shortTopicNames: Record<string, string> = {
-    "Medicina Interna - Cardiología / Guías de Práctica Clínica y Farmacología Cardiovascular.": "Cardiología",
-    "Medicina Interna - Endocrinología y Metabolismo / Farmacoterapéutica Avanzada.": "Endocrinología",
-    "Medicina Interna - Neumología / Terapia Respiratoria Inhalada.": "Neumología",
-    "Infectología / Epidemiología, Legislación y Salud Pública Colombiana.": "S. Pública",
-    "Infectología / Farmacología Clínica y Políticas Ministeriales.": "Infectología",
-    "Medicina Interna - Neurología Clínica / Terapia Neurocrítica.": "Neurología",
-    "Ciencias Básicas Aplicadas / Fisiología Gastrointestinal y Bioquímica.": "C. Básicas",
-    "Medicina Interna - Cardiología / Semiología Integrada y Fisiopatología Mecánica.": "Semiología",
-    "Salud Pública / Epidemiología, Administración Médica y Políticas de Estado.": "Administración",
-    "Razonamiento Abstracto y Lógico / Epidemiología, Análisis de Pruebas Diagnósticas y Bioestadística.": "Bioestadística"
-  };
-
-  const radarData = allTopics.map(topic => {
-    const correct = correctTopics[topic] || 0;
-    const wrong = wrongTopics[topic] || 0;
-    const total = correct + wrong;
-    const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
-    const subjectName = shortTopicNames[topic] || topic.split(" ")[0]; // Fallback al primer nombre
-    return {
-      subject: subjectName,
-      A: percentage,
-      fullMark: 100
-    };
+  const radarData = buildRadarChartData({
+    university,
+    specialty,
+    correctTopics,
+    wrongTopics,
+    sessionQuestions,
+    answersByQuestionId,
   });
 
-  // Construir fugas críticas (los peores temas)
-  const topicLosses = allTopics.map(topic => {
-    const wrong = wrongTopics[topic] || 0;
-    const loss = wrong * 35; // Asumimos una "pérdida de puntos" ficticia por cada error
-    const subjectName = shortTopicNames[topic] || topic.split(" ")[0];
-    return { name: subjectName, loss, wrong };
-  }).filter(t => t.loss > 0).sort((a, b) => b.loss - a.loss).slice(0, 3); // Top 3 peores
-
-  const bestTopics = radarData.filter(d => d.A >= 70).map(d => d.subject);
-  const worstTopics = topicLosses.map(t => t.name);
+  const topicLosses = getTopicLossesFromRadar(radarData, wrongTopics);
+  const hasRadarValues = radarData.some((d) => d.A > 0);
+  const bestTopics = radarData.filter((d) => d.A >= 70).map((d) => d.subject);
+  const worstTopics = topicLosses.map((t) => t.name);
 
   return (
     <div className="space-y-10 animate-in fade-in duration-1000">
-      {/* 1. EL PUNTAJE ESTANDARIZADO */}
-      <div className="text-center space-y-2">
-        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-mq-muted">Puntaje Estandarizado Calibrado</p>
-        <div className="relative inline-block">
-            <motion.h3 
-                initial={{ scale: 0.5, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                className={`text-7xl font-black italic ${isAdmitted ? "text-emerald-400" : "text-red-500"}`}
-            >
-                {standardizedScore}
-            </motion.h3>
-            <div className="absolute -right-12 top-0 rotate-12 border-2 border-red-500 px-2 py-1 text-[10px] font-black text-red-500 uppercase tracking-tighter">
-                {isAdmitted ? "ADMITIDO" : "NO ADMITIDO"}
-            </div>
-        </div>
-        <p className="text-sm text-mq-muted max-w-sm mx-auto">
-            {isAdmitted 
-                ? "Felicidades. Estadísticamente estás dentro de los cupos ofertados." 
-                : `Te faltan ${gap} puntos para alcanzar el umbral de corte del último admitido.`
-            }
+      <motion.div
+        className="space-y-2 text-center"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-mq-muted">
+          Puntaje estandarizado · promedio global
         </p>
-      </div>
+        <motion.div className="relative inline-block">
+          <motion.h3
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            className={`text-7xl font-black italic ${isAdmitted ? "text-emerald-400" : "text-red-500"}`}
+          >
+            {standardizedScore}
+          </motion.h3>
+          <motion.div
+            initial={{ rotate: -8, opacity: 0 }}
+            animate={{ rotate: 12, opacity: 1 }}
+            className="absolute -right-12 top-0 border-2 border-red-500 px-2 py-1 text-[10px] font-black uppercase tracking-tighter text-red-500"
+          >
+            {isAdmitted ? "ADMITIDO" : "NO ADMITIDO"}
+          </motion.div>
+        </motion.div>
+        <p className="mx-auto max-w-sm text-sm text-mq-muted">
+          {isAdmitted
+            ? "Felicidades. Estadísticamente estás dentro del rango competitivo de cupos."
+            : `Te faltan ${gap} puntos para alcanzar el umbral de corte estimado (${cutoffScore}).`}
+        </p>
 
-      {/* 2. LA BRECHA DE ADMISIÓN (GAUSS) */}
-      <div className="rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8 space-y-6">
+        <ScoreComparisonCards
+          globalScorePercentage={scorePercentage}
+          lastSessionScore={lastSessionScore}
+          totalQuestionsAnswered={totalQuestionsAnswered}
+          className="mx-auto max-w-lg pt-2 text-left"
+        />
+      </motion.div>
+
+      <motion.div
+        className="space-y-6 rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
         <div className="flex items-center justify-between">
-            <h4 className="text-sm font-black uppercase tracking-widest text-white">Distribución de Aspirantes</h4>
-            <div className="flex items-center gap-4">
-                <div className="flex items-center gap-1.5">
-                    <div className="h-2 w-2 rounded-full bg-red-500" />
-                    <span className="text-[10px] text-mq-muted font-bold">Tú</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                    <div className="h-2 w-2 rounded-full bg-emerald-500" />
-                    <span className="text-[10px] text-mq-muted font-bold">Corte</span>
-                </div>
+          <h4 className="text-sm font-black uppercase tracking-widest text-white">
+            DistribuciÃ³n de aspirantes
+          </h4>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1.5">
+              <div className="h-2 w-2 rounded-full bg-red-500" />
+              <span className="text-[10px] font-bold text-mq-muted">TÃº</span>
             </div>
+            <div className="flex items-center gap-1.5">
+              <motion.div
+                className="h-2 w-2 rounded-full bg-emerald-500"
+                animate={{ opacity: [1, 0.5, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+              <span className="text-[10px] font-bold text-mq-muted">Corte</span>
+            </div>
+          </div>
         </div>
 
-        <div className="h-48 w-full">
-            <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={gaussData} margin={{ top: 20, right: 10, left: 10, bottom: 0 }}>
-                    <XAxis dataKey="x" type="number" domain={['dataMin', 'dataMax']} hide />
-                    <defs>
-                        <linearGradient id="colorY" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="5%" stopColor="#00d1ff" stopOpacity={0.3}/>
-                            <stop offset="95%" stopColor="#00d1ff" stopOpacity={0}/>
-                        </linearGradient>
-                    </defs>
-                    <Area 
-                        type="monotone" 
-                        dataKey="y" 
-                        stroke="#00d1ff" 
-                        fillOpacity={1} 
-                        fill="url(#colorY)" 
-                        strokeWidth={2}
-                    />
-                    {/* Línea del Usuario */}
-                    <ReferenceLine x={standardizedScore} stroke="#ef4444" strokeWidth={3} label={{ value: 'Tú', position: 'top', fill: '#ef4444', fontSize: 10, fontWeight: 'bold' }} />
-                    {/* Línea de Corte */}
-                    <ReferenceLine x={cutoffScore} stroke="#10b981" strokeWidth={3} strokeDasharray="3 3" label={{ value: 'Corte', position: 'top', fill: '#10b981', fontSize: 10, fontWeight: 'bold' }} />
-                </AreaChart>
-            </ResponsiveContainer>
-        </div>
+        <motion.div
+          className="h-48 w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart data={gaussData} margin={{ top: 20, right: 10, left: 10, bottom: 0 }}>
+              <XAxis dataKey="x" type="number" domain={["dataMin", "dataMax"]} hide />
+              <defs>
+                <linearGradient id="colorY" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="5%" stopColor="#00d1ff" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#00d1ff" stopOpacity={0} />
+                </linearGradient>
+              </defs>
+              <Area
+                type="monotone"
+                dataKey="y"
+                stroke="#00d1ff"
+                fillOpacity={1}
+                fill="url(#colorY)"
+                strokeWidth={2}
+              />
+              <ReferenceLine
+                x={standardizedScore}
+                stroke="#ef4444"
+                strokeWidth={3}
+                label={{
+                  value: "TÃº",
+                  position: "top",
+                  fill: "#ef4444",
+                  fontSize: 10,
+                  fontWeight: "bold",
+                }}
+              />
+              <ReferenceLine
+                x={cutoffScore}
+                stroke="#10b981"
+                strokeWidth={3}
+                strokeDasharray="3 3"
+                label={{
+                  value: "Corte",
+                  position: "top",
+                  fill: "#10b981",
+                  fontSize: 10,
+                  fontWeight: "bold",
+                }}
+              />
+            </AreaChart>
+          </ResponsiveContainer>
+        </motion.div>
 
-        <div className="flex items-start gap-4 p-4 rounded-2xl bg-red-500/10 border border-red-500/20">
-            <AlertTriangle size={20} className="text-red-400 shrink-0 mt-0.5" />
-            <p className="text-xs text-red-200 leading-relaxed italic">
-                {`"El 85% de los aspirantes fracasa en la ${university} debido a la desproporción entre cupos y demanda. Tu puntaje actual te sitúa en el percentil inferior de las vacantes de ${specialty}."`}
-            </p>
-        </div>
-      </div>
+        <motion.div
+          className="flex items-start gap-4 rounded-2xl border border-red-500/20 bg-red-500/10 p-4"
+          initial={{ opacity: 0, x: -12 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          <AlertTriangle size={20} className="mt-0.5 shrink-0 text-red-400" />
+          <p className="text-xs italic leading-relaxed text-red-200">
+            {isAdmitted
+              ? `"En ${university ?? "tu universidad"}, tu promedio acumulado te ubica en rango competitivo para ${specialty ?? "tu especialidad"}, pero el examen exige constancia diaria."`
+              : `"En ${university ?? "tu universidad"}, la competencia por cupos de ${specialty ?? "tu especialidad"} es alta. Tu promedio acumulado (${scorePercentage}% en ${totalQuestionsAnswered || "varias"} preguntas) aún tiene margen de mejora."`}
+          </p>
+        </motion.div>
+      </motion.div>
 
-      {/* 3. RADAR DE FALLOS (DISMORFIA ACADÉMICA) */}
       <div className="grid gap-6 sm:grid-cols-2">
-        <div className="rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8 flex flex-col items-center justify-center space-y-4">
-            <h4 className="text-sm font-black uppercase tracking-widest text-white self-start">Anatomía de tus Fallos</h4>
-            <div className="h-64 w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                    <RadarChart cx="50%" cy="50%" outerRadius="45%" data={radarData}>
-                        <PolarGrid stroke="#ffffff10" />
-                        <PolarAngleAxis dataKey="subject" tick={{ fill: '#8A99B8', fontSize: 10 }} />
-                        <Radar
-                            name="Desempeño"
-                            dataKey="A"
-                            stroke="#00d1ff"
-                            fill="#00d1ff"
-                            fillOpacity={0.4}
-                        />
-                    </RadarChart>
-                </ResponsiveContainer>
-            </div>
-        </div>
+        <motion.div
+          className="flex flex-col space-y-4 rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8"
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.35 }}
+        >
+          <motion.div className="space-y-1">
+            <h4 className="text-sm font-black uppercase tracking-widest text-white">
+              AnatomÃ­a de tus fallos
+            </h4>
+            {dedicatedDiagnostic && (
+              <p className="text-[10px] text-mq-muted">
+                Ãreas del examen unificado â€” Medicina Interna
+              </p>
+            )}
+          </motion.div>
 
-        <div className="space-y-4">
-            <div className="rounded-3xl border border-white/5 bg-white/[0.03] p-6 space-y-4">
-                <div className="flex items-center gap-3">
-                    <div className="h-8 w-8 rounded-full bg-red-500/20 flex items-center justify-center text-red-500">
-                        <TrendingDown size={18} />
-                    </div>
-                    <h5 className="text-sm font-bold text-white uppercase tracking-wider">Fuga Crítica de Puntos</h5>
-                </div>
-                {topicLosses.length > 0 ? (
-                    <ul className="space-y-3">
-                        {topicLosses.map(t => (
-                            <li key={t.name} className="flex justify-between items-center text-xs">
-                                <span className="text-mq-muted">{t.name}</span>
-                                <span className="text-red-400 font-bold">-{t.loss} pts</span>
-                            </li>
-                        ))}
-                    </ul>
-                ) : (
-                    <p className="text-xs text-mq-muted">¡Excelente! No tuviste fugas críticas de puntos en esta sesión.</p>
-                )}
-            </div>
+          <motion.div className="h-64 w-full" layout>
+            {radarData.length === 0 ? (
+              <div className="flex h-full items-center justify-center text-center text-xs text-mq-muted">
+                Completa el diagnÃ³stico para ver tu perfil por Ã¡reas del examen.
+              </div>
+            ) : (
+              <ResponsiveContainer width="100%" height="100%">
+                <RadarChart cx="50%" cy="50%" outerRadius="55%" data={radarData}>
+                  <PolarGrid stroke="#ffffff18" />
+                  <PolarAngleAxis
+                    dataKey="subject"
+                    tick={{ fill: "#8A99B8", fontSize: 9, fontWeight: 600 }}
+                  />
+                  <Radar
+                    name="DesempeÃ±o"
+                    dataKey="A"
+                    stroke="#00d1ff"
+                    fill="#00d1ff"
+                    fillOpacity={hasRadarValues ? 0.45 : 0.1}
+                    strokeWidth={2}
+                    isAnimationActive
+                    animationDuration={800}
+                  />
+                </RadarChart>
+              </ResponsiveContainer>
+            )}
+          </motion.div>
 
-            <div className="rounded-3xl border border-mq-accent/20 bg-mq-accent/5 p-6 space-y-3">
-                <div className="flex items-center gap-3 text-mq-accent">
-                    <Info size={18} />
-                    <h5 className="text-sm font-black uppercase tracking-wider">Plan de Supervivencia</h5>
-                </div>
-                <p className="text-xs text-mq-muted leading-relaxed">
-                    {bestTopics.length > 0 ? `Tu dominio clínico en áreas como ${bestTopics.join(", ")} te mantiene competitivo, pero ` : `Es imperativo reevaluar tus bases, ya que `}
-                    {worstTopics.length > 0 ? (
-                        <>las áreas de <span className="text-white font-bold">{worstTopics.join(" y ")}</span> están hundiendo tu promedio estandarizado. Necesitas un entrenamiento focalizado en estas áreas para asegurar la plaza.</>
-                    ) : (
-                        <>estás en un nivel excelente de retención de conceptos. Sigue entrenando para mantener este ritmo competitivo de cara al examen.</>
-                    )}
-                </p>
+          {dedicatedDiagnostic && !hasRadarValues && (
+            <p className="text-center text-[10px] text-mq-muted">
+              Responde las 10 preguntas para trazar tu mapa de debilidades.
+            </p>
+          )}
+        </motion.div>
+
+        <motion.div
+          className="space-y-4"
+          initial={{ opacity: 0, x: 16 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <div className="space-y-4 rounded-3xl border border-white/5 bg-white/[0.03] p-6">
+            <div className="flex items-center gap-3">
+              <motion.div
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-red-500/20 text-red-500"
+                animate={topicLosses.length > 0 ? { scale: [1, 1.08, 1] } : undefined}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <TrendingDown size={18} />
+              </motion.div>
+              <h5 className="text-sm font-bold uppercase tracking-wider text-white">
+                Fuga crítica de puntos
+              </h5>
             </div>
-        </div>
+            {topicLosses.length > 0 ? (
+              <ul className="space-y-3">
+                {topicLosses.map((t) => (
+                  <motion.li
+                    key={t.name}
+                    className="flex items-center justify-between text-xs"
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                  >
+                    <span className="text-mq-muted">{t.name}</span>
+                    <span className="font-bold text-red-400">-{t.loss} pts</span>
+                  </motion.li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-xs text-mq-muted">
+                Sin fugas críticas en esta sesión. Mantén el ritmo de estudio.
+              </p>
+            )}
+          </div>
+
+          <motion.div
+            className="space-y-3 rounded-3xl border border-mq-accent/20 bg-mq-accent/5 p-6"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+          >
+            <motion.div
+              className="flex items-center gap-3 text-mq-accent"
+              animate={{ opacity: [0.85, 1, 0.85] }}
+              transition={{ duration: 2.5, repeat: Infinity }}
+            >
+              <Info size={18} />
+              <h5 className="text-sm font-black uppercase tracking-wider">Plan de supervivencia</h5>
+            </motion.div>
+            <p className="text-xs leading-relaxed text-mq-muted">
+              {bestTopics.length > 0
+                ? `Tu dominio en ${bestTopics.join(", ")} te mantiene competitivo, pero `
+                : "Es prioritario reforzar "}
+              {worstTopics.length > 0 ? (
+                <>
+                  las áreas de{" "}
+                  <span className="font-bold text-white">{worstTopics.join(" y ")}</span> están
+                  limitando tu puntaje. Enfoca módulos clínicos y guías MSPS/INS en esas áreas.
+                </>
+              ) : (
+                <>tu nivel en esta sesión es sólido. Sigue con simulacros cronometrados.</>
+              )}
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

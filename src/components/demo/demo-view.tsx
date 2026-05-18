@@ -41,6 +41,11 @@ import {
   selectAdaptiveQuestions,
 } from "@/lib/training/adaptive";
 import { getAct1DiagnosticSession } from "@/lib/diagnostic/get-diagnostic-session";
+import { getPerformanceStatsKey } from "@/lib/diagnostic/exam-blueprint";
+import {
+  computeCumulativePerformance,
+  mergeTopicStatsWithSession,
+} from "@/lib/scoring/cumulative-score";
 import {
   checkCanStartSession,
   recordSessionStart,
@@ -143,6 +148,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     currentQuestionIndex === totalQuestions - 1 &&
     hasAnsweredCurrentQuestion;
   const scorePercentage = Math.round((correctAnswers / totalQuestions) * 100);
+  const projectedTopicStats = mergeTopicStatsWithSession(
+    learningProfile.topicStats,
+    correctTopicsByName,
+    wrongTopicsByName,
+  );
+  const cumulativePerformance = computeCumulativePerformance(projectedTopicStats);
   const progressBase = Math.max(totalQuestions, 1);
   const progressPercent = Math.round(
     ((currentQuestionIndex + (hasAnsweredCurrentQuestion ? 1 : 0)) / progressBase) *
@@ -363,12 +374,14 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     setResponseTimes((prev) => [...prev, timeTaken]);
     setAnswersByQuestionId((prev) => ({ ...prev, [currentQuestion.id]: optionId }));
 
+    const statsKey = getPerformanceStatsKey(currentQuestion);
+
     if (isCorrect) {
       setCorrectAnswers((prev) => prev + 1);
-      setCorrectTopicsByName((prev) => ({ ...prev, [currentQuestion.topic]: (prev[currentQuestion.topic] || 0) + 1 }));
+      setCorrectTopicsByName((prev) => ({ ...prev, [statsKey]: (prev[statsKey] || 0) + 1 }));
     } else {
       setWrongAnswers((prev) => prev + 1);
-      setWrongTopicsByName((prev) => ({ ...prev, [currentQuestion.topic]: (prev[currentQuestion.topic] || 0) + 1 }));
+      setWrongTopicsByName((prev) => ({ ...prev, [statsKey]: (prev[statsKey] || 0) + 1 }));
     }
 
     const selectedOption = currentQuestion.options.find((o) => o.id === optionId);
@@ -432,6 +445,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               correctAnswers={correctAnswers}
               wrongAnswers={wrongAnswers}
               scorePercentage={scorePercentage}
+              cumulativeScorePercentage={cumulativePerformance.scorePercentage}
+              totalQuestionsAnswered={cumulativePerformance.totalQuestions}
               avgResponseTime={calculateAverageResponseTime(responseTimes)}
               totalSeconds={totalSeconds}
               onRepeatDemo={() => {
@@ -450,6 +465,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               source={isDailyPill ? "daily-pill" : source}
               university={urlUniversity}
               specialty={urlSpecialty}
+              sessionQuestions={sessionQuestions}
+              answersByQuestionId={answersByQuestionId}
             />
             {user && !isDailyPill && (
               <div className="mt-12 space-y-12">
