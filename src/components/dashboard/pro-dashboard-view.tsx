@@ -1,6 +1,7 @@
 "use client";
 
-import { Zap, Sparkles, Target, ArrowRight, MessageSquare, ShieldCheck, TrendingUp, Trophy } from "lucide-react";
+import { useState } from "react";
+import { Zap, Sparkles, Target, ArrowRight, MessageSquare, ShieldCheck, TrendingUp, Trophy, Brain } from "lucide-react";
 import Link from "next/link";
 import { 
   ReferralCard, 
@@ -13,6 +14,7 @@ import {
   ProgressChart,
   DailyPillCard,
 } from "@/components/dashboard";
+import { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashboard";
 import { motion } from "framer-motion";
 import { getPlanDisplayName } from "@/lib/plans/config";
@@ -40,7 +42,10 @@ export function ProDashboardView({
   const planLabel = getPlanDisplayName(profile?.plan);
   const greetingName = getUserGreetingName(profile);
   const showLiveClasses = hasProFeatures(profile?.plan);
+  const [isAct1Open, setIsAct1Open] = useState(false);
   const { improvement, percentileLabel, loading: statsLoading } = useUserPerformanceStats(user?.uid);
+  const needsDiagnostic = !profile?.attemptsCount || profile.attemptsCount === 0;
+  const diagnosticUser = { ...user, ...profile };
 
   return (
     <div className="space-y-10 pb-12">
@@ -61,12 +66,21 @@ export function ProDashboardView({
                   </span>
                 </div>
                 
+                {needsDiagnostic ? (
+                  <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/20 bg-amber-500/10 px-4 py-1.5 backdrop-blur-md">
+                    <Brain size={12} className="text-amber-400" />
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
+                      IA: Pendiente de calibración
+                    </span>
+                  </div>
+                ) : (
                 <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-1.5 backdrop-blur-md">
                   <ShieldCheck size={12} className="text-emerald-400" />
                   <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-300">
                     IA: Rendimiento Óptimo
                   </span>
                 </div>
+                )}
               </div>
 
               <div>
@@ -74,22 +88,38 @@ export function ProDashboardView({
                   Hola, <span className="text-mq-accent">{greetingName}.</span>
                 </h1>
                 <p className="mt-4 max-w-xl text-lg leading-relaxed text-mq-muted sm:text-xl">
-                  {profile?.goalUniversity && profile.goalUniversity !== "Otra"
-                    ? `Tu camino hacia la residencia en la ${profile.goalUniversity} está siendo optimizado por nuestra IA.`
-                    : "Tu camino hacia la residencia médica está siendo optimizado por nuestra IA. Tienes nuevas metas para hoy."
+                  {needsDiagnostic
+                    ? profile?.goalUniversity && profile.goalUniversity !== "Otra"
+                      ? `Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para calibrar la IA hacia la ${profile.goalUniversity}.`
+                      : "Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para activar tu hoja de ruta personalizada."
+                    : profile?.goalUniversity && profile.goalUniversity !== "Otra"
+                      ? `Tu camino hacia la residencia en la ${profile.goalUniversity} está siendo optimizado por nuestra IA.`
+                      : "Tu camino hacia la residencia médica está siendo optimizado por nuestra IA. Tienes nuevas metas para hoy."
                   }
                 </p>
               </div>
 
               <div className="flex flex-col gap-4 pt-2 sm:flex-row">
-                <Link
-                  href="/demo"
-                  className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:scale-105 active:scale-95"
-                >
-                  <Zap size={20} fill="currentColor" />
-                  <span>ENTRENAR AHORA</span>
-                  <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
-                </Link>
+                {needsDiagnostic ? (
+                  <button
+                    type="button"
+                    onClick={() => setIsAct1Open(true)}
+                    className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:brightness-110 active:scale-95"
+                  >
+                    <Target size={20} fill="currentColor" />
+                    <span>Empezar diagnóstico</span>
+                    <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                  </button>
+                ) : (
+                  <Link
+                    href="/demo"
+                    className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:scale-105 active:scale-95"
+                  >
+                    <Zap size={20} fill="currentColor" />
+                    <span>ENTRENAR AHORA</span>
+                    <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                  </Link>
+                )}
               </div>
             </div>
 
@@ -109,7 +139,7 @@ export function ProDashboardView({
                       ? "..."
                       : improvement !== null && improvement !== 0
                         ? `${improvement > 0 ? "+" : ""}${improvement}% vs inicio`
-                        : "Sin datos aún"}
+                        : needsDiagnostic ? "Pendiente de diagnóstico" : "Sin datos aún"}
                   </p>
                 </div>
               </motion.div>
@@ -123,7 +153,7 @@ export function ProDashboardView({
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-mq-muted">Nivel</p>
                   <p className="text-sm font-bold text-white">
-                    {statsLoading ? "..." : percentileLabel ?? "Entrena hoy"}
+                    {statsLoading ? "..." : needsDiagnostic ? "Calibra tu IA" : percentileLabel ?? "Entrena hoy"}
                   </p>
                 </div>
               </motion.div>
@@ -135,6 +165,29 @@ export function ProDashboardView({
         <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-mq-accent/10 blur-[120px] animate-pulse" />
         <div className="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-purple-500/10 blur-[120px]" />
       </motion.header>
+
+      {needsDiagnostic && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex flex-col gap-4 rounded-2xl border border-amber-500/20 bg-amber-500/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:px-6 backdrop-blur-md"
+        >
+          <div className="flex items-center gap-3">
+            <Brain className="h-5 w-5 shrink-0 text-amber-400" />
+            <p className="text-sm font-medium text-amber-100">
+              Activa tu plan Pro: el diagnóstico inicial calibra radar, retos diarios y entrenamiento adaptativo.
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setIsAct1Open(true)}
+            className="inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-xl bg-amber-500 px-6 text-sm font-black text-amber-950 transition-all hover:brightness-110 active:scale-95"
+          >
+            Calibrar ahora
+            <ArrowRight size={16} />
+          </button>
+        </motion.div>
+      )}
 
       <SubscriptionStatusCard profile={profile} />
 
@@ -177,6 +230,35 @@ export function ProDashboardView({
             </section>
           )}
 
+          {needsDiagnostic && (
+            <motion.section
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="relative overflow-hidden rounded-[2rem] border border-mq-accent/30 bg-mq-accent/5 p-8"
+            >
+              <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mq-accent/10 blur-[100px]" />
+              <div className="relative z-10 flex flex-col gap-6 sm:flex-row sm:items-center">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/20 text-mq-accent">
+                  <Target size={32} />
+                </div>
+                <div className="flex-1 space-y-2">
+                  <h2 className="text-2xl font-black text-white">Diagnóstico inicial</h2>
+                  <p className="text-sm text-mq-muted leading-relaxed">
+                    10 preguntas calibradas para tu universidad y especialidad. Sin esto, la IA no puede personalizar tu entrenamiento.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setIsAct1Open(true)}
+                  className="inline-flex h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground transition-all hover:brightness-110 active:scale-95"
+                >
+                  Iniciar
+                  <ArrowRight size={16} />
+                </button>
+              </div>
+            </motion.section>
+          )}
+
           {/* CORE ANALYTICS */}
           <SummaryCards userId={user.uid} />
           <ProgressChart userId={user.uid} />
@@ -192,7 +274,7 @@ export function ProDashboardView({
 
         <aside className="space-y-8">
           {/* DAILY PILL (SITUATION AWARE) */}
-          <DailyPillCard topic="Semiología" />
+          <DailyPillCard topic="Semiología" isLocked={needsDiagnostic} />
 
           {/* WEAK TOPICS / IA ANALYTICS */}
           <WeakTopicsCard userId={user.uid} />
@@ -242,6 +324,12 @@ export function ProDashboardView({
           </div>
         </aside>
       </div>
+
+      <Act1DiagnosticModal
+        isOpen={isAct1Open}
+        onClose={() => setIsAct1Open(false)}
+        user={diagnosticUser}
+      />
     </div>
   );
 }
