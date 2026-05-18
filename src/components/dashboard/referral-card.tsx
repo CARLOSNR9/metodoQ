@@ -23,9 +23,10 @@ export function ReferralCard({ referralCode, referralCount, loading }: ReferralC
     return null;
   }
 
-  const referralLink = typeof window !== "undefined" 
-    ? `${window.location.origin}/?ref=${referralCode}`
-    : `metodoq.pro/?ref=${referralCode}`;
+  const referralLink =
+    typeof window !== "undefined"
+      ? `${window.location.origin}/?ref=${referralCode}`
+      : `metodoq.pro/?ref=${referralCode}`;
 
   const handleCopy = async () => {
     try {
@@ -40,67 +41,73 @@ export function ReferralCard({ referralCode, referralCount, loading }: ReferralC
 
   const currentCount = Math.min(referralCount, 3);
   const remaining = 3 - currentCount;
-  
   const progressPercentage = (currentCount / 3) * 100;
 
   return (
-    <article className="relative overflow-hidden rounded-[2rem] border border-mq-premium-purple/30 bg-gradient-to-br from-mq-premium-purple/20 via-transparent to-transparent p-8 sm:p-10 shadow-2xl">
-      <div className="absolute -right-10 -top-10 text-mq-premium-purple/10">
-        <Gift className="h-48 w-48 rotate-12" />
+    <article className="relative overflow-hidden rounded-[2rem] border border-mq-premium-purple/30 bg-gradient-to-br from-mq-premium-purple/20 via-transparent to-transparent p-5 shadow-2xl sm:p-6">
+      <div className="pointer-events-none absolute -right-10 -top-10 text-mq-premium-purple/10">
+        <Gift className="h-40 w-40 rotate-12 sm:h-48 sm:w-48" />
       </div>
-      
-      <div className="relative z-10 grid gap-8 lg:grid-cols-2 lg:items-center">
-        <div className="space-y-4">
+
+      <div className="relative z-10 flex min-w-0 flex-col gap-6">
+        <div className="min-w-0 space-y-3">
           <div className="inline-flex items-center gap-2 rounded-full bg-mq-premium-purple/20 px-4 py-1 text-[10px] font-bold uppercase tracking-widest text-mq-premium-purple">
             <Sparkles size={12} />
             Misión: Desbloquear PRO
           </div>
-          <h2 className="text-3xl font-bold text-white">
-            Invita a 3 colegas y obtén acceso <span className="text-mq-premium-purple">PRO Gratis</span>
+          <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
+            Invita a 3 colegas y obtén acceso{" "}
+            <span className="text-mq-premium-purple">PRO Gratis</span>
           </h2>
-          <p className="max-w-md text-sm leading-relaxed text-mq-muted sm:text-base">
-            Comparte tu link personal. Cuando 3 amigos se registren y hagan su primer diagnóstico, tu cuenta se activará automáticamente como PRO.
+          <p className="text-sm leading-relaxed text-mq-muted sm:text-base">
+            Comparte tu link personal. Cuando 3 amigos se registren y hagan su primer diagnóstico,
+            tu cuenta se activará automáticamente como PRO.
           </p>
         </div>
 
-        <div className="rounded-3xl bg-white/[0.03] p-6 backdrop-blur-md">
-          <div className="mb-6 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-mq-premium-purple/20 text-mq-premium-purple">
+        <div className="min-w-0 rounded-3xl bg-white/[0.03] p-4 backdrop-blur-md sm:p-5">
+          <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex min-w-0 items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mq-premium-purple/20 text-mq-premium-purple">
                 <Users size={20} />
               </div>
               <span className="text-sm font-bold text-white">{currentCount} de 3 referidos</span>
             </div>
             {remaining > 0 ? (
-              <span className="text-xs font-medium text-mq-muted">Faltan {remaining} colegas</span>
+              <span className="shrink-0 text-xs font-medium text-mq-muted">
+                Faltan {remaining} colegas
+              </span>
             ) : (
-              <span className="text-xs font-bold text-mq-premium-purple">¡Misión cumplida!</span>
+              <span className="shrink-0 text-xs font-bold text-mq-premium-purple">
+                ¡Misión cumplida!
+              </span>
             )}
           </div>
-          
-          <div className="relative mb-8 h-3 w-full overflow-hidden rounded-full bg-white/10">
-            <div 
-              className="h-full bg-mq-premium-purple transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(168,85,247,0.5)]" 
+
+          <div className="mb-5 h-3 w-full overflow-hidden rounded-full bg-white/10">
+            <div
+              className="h-full bg-mq-premium-purple transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(168,85,247,0.5)]"
               style={{ width: `${progressPercentage}%` }}
             />
           </div>
 
-          <div className="flex flex-col gap-3 sm:flex-row">
-            <div className="flex-1 truncate rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-xs font-mono text-mq-muted">
-              {referralLink}
+          <div className="flex min-w-0 flex-col gap-3">
+            <div className="min-w-0 overflow-hidden rounded-xl border border-white/10 bg-black/20 px-4 py-3">
+              <p className="truncate font-mono text-xs text-mq-muted">{referralLink}</p>
             </div>
             <button
+              type="button"
               onClick={handleCopy}
-              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-white px-6 text-sm font-bold text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 sm:w-auto"
+              className="inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 text-sm font-bold text-mq-accent-foreground transition-all hover:brightness-110 active:scale-95"
             >
               {copied ? (
                 <>
-                  <Check size={16} className="text-emerald-500" /> 
+                  <Check size={16} className="text-emerald-500" />
                   <span className="text-emerald-600">Copiado</span>
                 </>
               ) : (
                 <>
-                  <Copy size={16} /> 
+                  <Copy size={16} />
                   <span>Copiar link</span>
                 </>
               )}
