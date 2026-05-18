@@ -102,7 +102,7 @@ export async function createUserAction(formData: FormData) {
       manualSale,
       lastActiveAt: now,
       achievements: [],
-      onboardingCompleted: true,
+      onboardingCompleted: false,
       emailOptIn: true,
     };
 
