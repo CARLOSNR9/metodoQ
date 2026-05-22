@@ -7,10 +7,14 @@ import {
   setQuestionActiveAction,
   updateQuestionAction,
 } from "@/app/admin/question-actions";
+import { selectInputClassName } from "@/components/ui/select-field";
 import { REVIEW_STATUS_LABELS } from "@/lib/questions/review-labels";
 import type { QuestionAdminRecord, QuestionReviewStatus } from "@/lib/questions/types";
 import { getFirebaseAuth } from "@/lib/firebase";
+import { cn } from "@/lib/utils";
 import { X } from "lucide-react";
+
+const selectOptionClassName = "bg-[#0f2744] text-white";
 
 type Props = {
   question: QuestionAdminRecord;
@@ -226,10 +230,10 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
                 value={correctOptionId}
                 onChange={(e) => setCorrectOptionId(e.target.value)}
                 disabled={!inFirestore}
-                className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white disabled:opacity-60"
+                className={cn(selectInputClassName, "mt-1 disabled:opacity-60")}
               >
                 {["A", "B", "C", "D"].map((id) => (
-                  <option key={id} value={id}>
+                  <option key={id} value={id} className={selectOptionClassName}>
                     {id}
                   </option>
                 ))}
@@ -243,10 +247,10 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
                 value={reviewStatus}
                 onChange={(e) => setReviewStatus(e.target.value as QuestionReviewStatus)}
                 disabled={!inFirestore}
-                className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white disabled:opacity-60"
+                className={cn(selectInputClassName, "mt-1 disabled:opacity-60")}
               >
                 {(Object.keys(REVIEW_STATUS_LABELS) as QuestionReviewStatus[]).map((status) => (
-                  <option key={status} value={status}>
+                  <option key={status} value={status} className={selectOptionClassName}>
                     {REVIEW_STATUS_LABELS[status]}
                   </option>
                 ))}

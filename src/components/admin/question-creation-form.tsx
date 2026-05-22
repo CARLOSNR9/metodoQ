@@ -6,7 +6,9 @@ import {
   seedExtendedQuestionsAction,
   seedQuestionsAction,
 } from "@/app/admin/question-actions";
+import { selectInputClassName } from "@/components/ui/select-field";
 import { getFirebaseAuth } from "@/lib/firebase";
+import { cn } from "@/lib/utils";
 
 async function withIdToken(formData?: FormData) {
   const fd = formData ?? new FormData();
@@ -108,11 +110,11 @@ export function QuestionCreationForm() {
         </div>
         <div>
           <label className="text-xs font-semibold uppercase text-mq-muted">Respuesta correcta</label>
-          <select name="correctOptionId" required className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white">
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-            <option value="D">D</option>
+          <select name="correctOptionId" required className={cn(selectInputClassName, "mt-1")}>
+            <option value="A" className="bg-[#0f2744] text-white">A</option>
+            <option value="B" className="bg-[#0f2744] text-white">B</option>
+            <option value="C" className="bg-[#0f2744] text-white">C</option>
+            <option value="D" className="bg-[#0f2744] text-white">D</option>
           </select>
         </div>
         <div>
