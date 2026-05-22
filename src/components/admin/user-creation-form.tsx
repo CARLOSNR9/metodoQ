@@ -5,7 +5,12 @@ import { createUserAction } from "@/app/admin/actions";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { SelectField } from "@/components/ui/select-field";
 import { ManualSaleFields } from "@/components/admin/manual-sale-fields";
-import { getRoleLabel, USER_ROLES, type UserRole } from "@/lib/roles";
+import {
+  getRoleLabel,
+  roleUsesStudentSubscription,
+  USER_ROLES,
+  type UserRole,
+} from "@/lib/roles";
 import type { UserPlan } from "@/lib/auth";
 import type { PlanId } from "@/lib/plans/config";
 
@@ -44,10 +49,20 @@ const GOAL_SPECIALTY_OPTIONS = [
 
 export function AdminUserForm() {
   const [isPending, setIsPending] = useState(false);
+  const [selectedRole, setSelectedRole] = useState<UserRole>("student");
   const [selectedPlan, setSelectedPlan] = useState<UserPlan>("FREE");
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
-  const showManualSale = PAID_PLANS.includes(selectedPlan as PlanId);
+  const isStudent = roleUsesStudentSubscription(selectedRole);
+  const showManualSale =
+    isStudent && PAID_PLANS.includes(selectedPlan as PlanId);
+
+  function handleRoleChange(role: UserRole) {
+    setSelectedRole(role);
+    if (!roleUsesStudentSubscription(role)) {
+      setSelectedPlan("FREE");
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -83,6 +98,7 @@ export function AdminUserForm() {
           : "Usuario creado exitosamente.",
       });
       form.reset();
+      setSelectedRole("student");
       setSelectedPlan("FREE");
     }
   }
@@ -92,8 +108,9 @@ export function AdminUserForm() {
       <div className="mb-6">
         <h2 className="text-xl font-semibold text-white">Gestión Manual de Usuarios</h2>
         <p className="mt-1 text-sm text-mq-muted">
-          Crea usuarios con plan, rol y —si es venta por negociador— precio acordado, inicio y fin
-          del período.
+          {isStudent
+            ? "Crea estudiantes con plan y —si es venta por negociador— precio acordado, inicio y fin del período."
+            : "Crea cuentas de equipo (profesor, moderador o admin). El acceso depende del rol, no de un plan de estudiante."}
         </p>
       </div>
 
@@ -125,53 +142,17 @@ export function AdminUserForm() {
           </div>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="space-y-1.5">
-            <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
-              Contraseña temporal
-            </label>
-            <input
-              name="password"
-              type="text"
-              required
-              minLength={6}
-              placeholder="Mín. 6 caracteres"
-              className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
-            />
-          </div>
-          <div className="space-y-1.5">
-            <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
-              Plan asignado
-            </label>
-            <select
-              name="plan"
-              value={selectedPlan}
-              onChange={(e) => setSelectedPlan(e.target.value as UserPlan)}
-              className="w-full cursor-pointer appearance-none rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-white outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
-            >
-              {PLAN_OPTIONS.map((opt) => (
-                <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
-                  {opt.label}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        {showManualSale ? <ManualSaleFields planId={selectedPlan as PlanId} /> : null}
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <SelectField
-            label="Universidad objetivo"
-            name="goalUniversity"
-            defaultValue="Universidad Cooperativa (Pasto)"
-            options={GOAL_UNIVERSITY_OPTIONS}
-          />
-          <SelectField
-            label="Especialidad"
-            name="goalSpecialty"
-            defaultValue="Medicina Interna"
-            options={GOAL_SPECIALTY_OPTIONS}
+        <div className="space-y-1.5">
+          <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+            Contraseña temporal
+          </label>
+          <input
+            name="password"
+            type="text"
+            required
+            minLength={6}
+            placeholder="Mín. 6 caracteres"
+            className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
         </div>
 
@@ -179,7 +160,8 @@ export function AdminUserForm() {
           <SelectField
             label="Rol de acceso"
             name="role"
-            defaultValue="student"
+            value={selectedRole}
+            onChange={(e) => handleRoleChange(e.target.value as UserRole)}
             options={ROLE_OPTIONS}
           />
           <div className="flex items-end">
@@ -191,6 +173,45 @@ export function AdminUserForm() {
             </p>
           </div>
         </div>
+
+        {isStudent ? (
+          <>
+            <div className="space-y-1.5">
+              <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+                Plan asignado
+              </label>
+              <select
+                name="plan"
+                value={selectedPlan}
+                onChange={(e) => setSelectedPlan(e.target.value as UserPlan)}
+                className="w-full cursor-pointer appearance-none rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-white outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
+              >
+                {PLAN_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {showManualSale ? <ManualSaleFields planId={selectedPlan as PlanId} /> : null}
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <SelectField
+                label="Universidad objetivo"
+                name="goalUniversity"
+                defaultValue="Universidad Cooperativa (Pasto)"
+                options={GOAL_UNIVERSITY_OPTIONS}
+              />
+              <SelectField
+                label="Especialidad"
+                name="goalSpecialty"
+                defaultValue="Medicina Interna"
+                options={GOAL_SPECIALTY_OPTIONS}
+              />
+            </div>
+          </>
+        ) : null}
 
         <div className="pt-2">
           <button

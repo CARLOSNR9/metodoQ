@@ -1,3 +1,4 @@
+import type { ChangeEventHandler } from "react";
 import { cn } from "@/lib/utils";
 
 export type SelectOption = {
@@ -10,6 +11,8 @@ type SelectFieldProps = {
   name: string;
   options: SelectOption[];
   defaultValue?: string;
+  value?: string;
+  onChange?: ChangeEventHandler<HTMLSelectElement>;
   required?: boolean;
   className?: string;
 };
@@ -27,9 +30,13 @@ export function SelectField({
   name,
   options,
   defaultValue,
+  value,
+  onChange,
   required,
   className,
 }: SelectFieldProps) {
+  const isControlled = value !== undefined;
+
   return (
     <div className={cn("space-y-1.5", className)}>
       <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
@@ -37,7 +44,9 @@ export function SelectField({
       </label>
       <select
         name={name}
-        defaultValue={defaultValue}
+        {...(isControlled
+          ? { value, onChange }
+          : { defaultValue })}
         required={required}
         className={selectInputClassName}
       >

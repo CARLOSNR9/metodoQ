@@ -10,7 +10,7 @@ import {
 import { canAssignRole, verifyStaffCaller } from "@/lib/server/verify-staff";
 import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
-import { normalizeUserRole } from "@/lib/roles";
+import { normalizeUserRole, roleUsesStudentSubscription } from "@/lib/roles";
 import type { BillingCycle } from "@/lib/plans/config";
 
 export async function createUserAction(formData: FormData) {
@@ -28,10 +28,17 @@ export async function createUserAction(formData: FormData) {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
   const displayName = formData.get("displayName") as string;
-  const plan = (formData.get("plan") as UserPlan) || "FREE";
   const role = normalizeUserRole(formData.get("role") as string);
-  const goalUniversity = (formData.get("goalUniversity") as string)?.trim() || "";
-  const goalSpecialty = (formData.get("goalSpecialty") as string)?.trim() || "";
+  const isStudent = roleUsesStudentSubscription(role);
+  const plan: UserPlan = isStudent
+    ? ((formData.get("plan") as UserPlan) || "FREE")
+    : "FREE";
+  const goalUniversity = isStudent
+    ? ((formData.get("goalUniversity") as string)?.trim() || "")
+    : "";
+  const goalSpecialty = isStudent
+    ? ((formData.get("goalSpecialty") as string)?.trim() || "")
+    : "";
   const resolvedSpecialty =
     goalSpecialty ||
     (goalUniversity && isUccPastoUniversity(goalUniversity) ? "Medicina Interna" : "");
@@ -49,7 +56,7 @@ export async function createUserAction(formData: FormData) {
     return { error: "Plan no válido." };
   }
 
-  const hasPaidPlan = plan !== "FREE";
+  const hasPaidPlan = isStudent && plan !== "FREE";
   let planBillingCycle: BillingCycle | null = null;
   let planStartedAt: string | null = null;
   let planExpiresAt: string | null = null;

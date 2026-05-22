@@ -32,6 +32,13 @@ export function isProfessorUser(role: string | null | undefined): boolean {
   return normalizeUserRole(role) === "professor";
 }
 
+/** Solo estudiantes usan planes de suscripción (FREE, Básico, Pro, Residente). */
+export function roleUsesStudentSubscription(
+  role: string | null | undefined,
+): boolean {
+  return normalizeUserRole(role) === "student";
+}
+
 export function isModeratorUser(role: string | null | undefined): boolean {
   return normalizeUserRole(role) === "moderator";
 }
