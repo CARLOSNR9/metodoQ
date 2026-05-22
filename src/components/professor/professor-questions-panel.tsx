@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useEffect, useMemo, useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -13,6 +13,7 @@ import {
   REVIEW_STATUS_LABELS,
   REVIEW_STATUS_STYLES,
 } from "@/lib/questions/review-labels";
+import { normalizeReviewStatus } from "@/lib/questions/review-status";
 import type { QuestionAdminRecord, QuestionReviewStatus } from "@/lib/questions/types";
 import { ArrowLeft, Search } from "lucide-react";
 
@@ -30,7 +31,7 @@ function countByStatus(questions: QuestionAdminRecord[]) {
   let localOnly = 0;
 
   for (const q of questions) {
-    const status = q.reviewStatus ?? "pending";
+    const status = normalizeReviewStatus(q.reviewStatus);
     if (!q.inFirestore) localOnly += 1;
     if (q.active === false) inactive += 1;
     if (status === "pending") pending += 1;
@@ -42,7 +43,7 @@ function countByStatus(questions: QuestionAdminRecord[]) {
 }
 
 function matchesFilter(q: QuestionAdminRecord, filter: FilterKey): boolean {
-  const status = q.reviewStatus ?? "pending";
+  const status = normalizeReviewStatus(q.reviewStatus);
   switch (filter) {
     case "pending":
       return status === "pending";
@@ -63,12 +64,20 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
   const router = useRouter();
   const [questions, setQuestions] = useState(initialQuestions);
   const [filter, setFilter] = useState<FilterKey>("pending");
+
+  useEffect(() => {
+    setQuestions(initialQuestions);
+  }, [initialQuestions]);
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<QuestionAdminRecord | null>(null);
   const [isPending, startTransition] = useTransition();
   const [syncMessage, setSyncMessage] = useState("");
 
   const stats = useMemo(() => countByStatus(questions), [questions]);
+
+  useEffect(() => {
+    setSelected(null);
+  }, [filter]);
 
   const filtered = useMemo(() => {
     const term = search.trim().toLowerCase();
@@ -213,7 +222,7 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
         ) : (
           <ul className="divide-y divide-white/5">
             {filtered.map((q) => (
-              <li key={`${q.inFirestore ? "fs" : "loc"}-${q.id}`}>
+              <li key={q.firestoreId}>
                 <button
                   type="button"
                   onClick={() => setSelected(q)}
@@ -222,7 +231,7 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="font-medium text-white">{q.topic}</span>
-                      <StatusBadge status={q.reviewStatus ?? "pending"} />
+                      <StatusBadge status={normalizeReviewStatus(q.reviewStatus)} />
                       {!q.inFirestore && (
                         <span className="rounded-full bg-violet-500/15 px-2 py-0.5 text-[10px] font-bold uppercase text-violet-300">
                           Solo código

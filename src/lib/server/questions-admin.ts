@@ -1,5 +1,9 @@
 import { FieldValue, Timestamp } from "firebase-admin/firestore";
 import { getAllRepositoryQuestions } from "@/lib/questions/local-bank";
+import {
+  normalizeReviewStatus,
+  reviewStatusPriority,
+} from "@/lib/questions/review-status";
 import type {
   QuestionAdminRecord,
   QuestionReviewStatus,
@@ -29,11 +33,38 @@ type QuestionWriteInput = {
   source?: QuestionSource;
 };
 
+function buildStatementIndex(): Map<string, string> {
+  const byStatement = new Map<string, string>();
+  for (const q of getAllRepositoryQuestions()) {
+    const key = q.statement.trim().slice(0, 240);
+    if (!byStatement.has(key)) {
+      byStatement.set(key, q.id);
+    }
+  }
+  return byStatement;
+}
+
+function resolveLogicalId(
+  docId: string,
+  data: Record<string, unknown>,
+  statementIndex: Map<string, string>,
+): string {
+  const explicitId = String(data.id ?? "").trim();
+  if (explicitId) return explicitId;
+
+  const statementKey = String(data.statement ?? "").trim().slice(0, 240);
+  const fromStatement = statementIndex.get(statementKey);
+  if (fromStatement) return fromStatement;
+
+  return docId;
+}
+
 function mapDocToAdminRecord(
   docId: string,
   data: Record<string, unknown>,
+  logicalIdOverride?: string,
 ): QuestionAdminRecord {
-  const logicalId = String(data.id ?? docId);
+  const logicalId = logicalIdOverride ?? String(data.id ?? docId);
   const reviewedAt = data.reviewedAt;
   let reviewedAtIso: string | undefined;
   if (reviewedAt instanceof Timestamp) {
@@ -63,7 +94,7 @@ function mapDocToAdminRecord(
     active: data.active !== false,
     examArea: data.examArea ? String(data.examArea) : undefined,
     university: data.university ? String(data.university) : undefined,
-    reviewStatus: (data.reviewStatus as QuestionReviewStatus) ?? "pending",
+    reviewStatus: normalizeReviewStatus(data.reviewStatus),
     reviewNotes: data.reviewNotes ? String(data.reviewNotes) : undefined,
     reviewedAt: reviewedAtIso,
     reviewedBy: data.reviewedBy ? String(data.reviewedBy) : undefined,
@@ -91,20 +122,71 @@ function firestoreMatchesLocal(
   return docId === localId || String(data.id ?? "") === localId;
 }
 
+function isStableFirestoreDoc(record: QuestionAdminRecord): boolean {
+  return record.inFirestore && record.firestoreId === record.id;
+}
+
+/** Conserva un solo registro por id lógico (evita duplicados por seeds repetidos). */
+function pickPreferredRecord(
+  existing: QuestionAdminRecord,
+  candidate: QuestionAdminRecord,
+): QuestionAdminRecord {
+  const existingStatus = normalizeReviewStatus(existing.reviewStatus);
+  const candidateStatus = normalizeReviewStatus(candidate.reviewStatus);
+  const statusDiff =
+    reviewStatusPriority(candidateStatus) - reviewStatusPriority(existingStatus);
+  if (statusDiff !== 0) {
+    return statusDiff > 0 ? candidate : existing;
+  }
+
+  if (candidate.inFirestore !== existing.inFirestore) {
+    return candidate.inFirestore ? candidate : existing;
+  }
+
+  if (isStableFirestoreDoc(candidate) && !isStableFirestoreDoc(existing)) {
+    return candidate;
+  }
+  if (isStableFirestoreDoc(existing) && !isStableFirestoreDoc(candidate)) {
+    return existing;
+  }
+
+  const existingReviewed = existing.reviewedAt ? Date.parse(existing.reviewedAt) : 0;
+  const candidateReviewed = candidate.reviewedAt ? Date.parse(candidate.reviewedAt) : 0;
+  if (candidateReviewed !== existingReviewed) {
+    return candidateReviewed > existingReviewed ? candidate : existing;
+  }
+
+  return existing;
+}
+
+function dedupeQuestionRecords(records: QuestionAdminRecord[]): QuestionAdminRecord[] {
+  const byLogicalId = new Map<string, QuestionAdminRecord>();
+
+  for (const record of records) {
+    const normalized: QuestionAdminRecord = {
+      ...record,
+      reviewStatus: normalizeReviewStatus(record.reviewStatus),
+    };
+    const existing = byLogicalId.get(normalized.id);
+    byLogicalId.set(
+      normalized.id,
+      existing ? pickPreferredRecord(existing, normalized) : normalized,
+    );
+  }
+
+  return Array.from(byLogicalId.values());
+}
+
 /** Lista unificada: Firestore + preguntas solo en código aún no subidas. */
 export async function adminListQuestionsForReview(): Promise<QuestionAdminRecord[]> {
   const db = getFirebaseAdminDb();
   const snap = await db.collection(COLLECTION).get();
-  const records: QuestionAdminRecord[] = snap.docs.map((doc) =>
-    mapDocToAdminRecord(doc.id, doc.data()),
-  );
-
-  const coveredLocalIds = new Set<string>();
-  for (const doc of snap.docs) {
+  const statementIndex = buildStatementIndex();
+  const records: QuestionAdminRecord[] = snap.docs.map((doc) => {
     const data = doc.data();
-    coveredLocalIds.add(String(data.id ?? doc.id));
-    coveredLocalIds.add(doc.id);
-  }
+    const logicalId = resolveLogicalId(doc.id, data, statementIndex);
+    return mapDocToAdminRecord(doc.id, data, logicalId);
+  });
 
   for (const local of getAllRepositoryQuestions()) {
     const inFirestore = [...snap.docs].some((doc) =>
@@ -115,20 +197,22 @@ export async function adminListQuestionsForReview(): Promise<QuestionAdminRecord
     }
   }
 
-  records.sort((a, b) => {
+  const deduped = dedupeQuestionRecords(records);
+
+  deduped.sort((a, b) => {
     const statusOrder: Record<QuestionReviewStatus, number> = {
       pending: 0,
       needs_changes: 1,
       rejected: 2,
       approved: 3,
     };
-    const sa = statusOrder[a.reviewStatus ?? "pending"];
-    const sb = statusOrder[b.reviewStatus ?? "pending"];
+    const sa = statusOrder[normalizeReviewStatus(a.reviewStatus)];
+    const sb = statusOrder[normalizeReviewStatus(b.reviewStatus)];
     if (sa !== sb) return sa - sb;
     return a.topic.localeCompare(b.topic, "es");
   });
 
-  return records;
+  return deduped;
 }
 
 export async function adminCreateQuestion(input: QuestionWriteInput) {
