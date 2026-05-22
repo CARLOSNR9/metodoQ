@@ -1,8 +1,11 @@
+import Link from "next/link";
 import { ProfessorGuard } from "@/components/professor/professor-guard";
 import { QuestionCreationForm } from "@/components/admin/question-creation-form";
 import { AdminClassForm } from "@/components/admin/admin-class-form";
 import { AdminClassesPanel } from "@/components/admin/admin-classes-panel";
 import { PanelSection } from "@/components/admin/panel-section";
+import { adminListQuestionsForReview } from "@/lib/server/questions-admin";
+import { ChevronRight } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -21,7 +24,17 @@ const upcomingIdeas = [
   },
 ] as const;
 
-export default function ProfessorPage() {
+export default async function ProfessorPage() {
+  let pendingCount = 0;
+  let totalCount = 0;
+  try {
+    const questions = await adminListQuestionsForReview();
+    totalCount = questions.length;
+    pendingCount = questions.filter((q) => (q.reviewStatus ?? "pending") === "pending").length;
+  } catch {
+    /* panel sigue usable sin contadores */
+  }
+
   return (
     <ProfessorGuard>
       <main className="flex min-h-[calc(100vh-4rem)] flex-1 bg-[#0A1F44]">
@@ -40,9 +53,30 @@ export default function ProfessorPage() {
           </header>
 
           <PanelSection
-            title="Banco de preguntas"
-            description="Crea preguntas nuevas o carga los bancos inicial y extendido."
+            title="Preguntas"
+            description="Revisa y valida todo el banco clínico: edición, aprobación y seguimiento de pendientes."
             className="mt-10"
+          >
+            <Link
+              href="/profesor/preguntas"
+              className="flex items-center justify-between rounded-xl border border-mq-accent/35 bg-mq-accent/10 px-5 py-4 transition hover:bg-mq-accent/15"
+            >
+              <div>
+                <p className="text-lg font-semibold text-white">Revisar preguntas</p>
+                <p className="mt-1 text-sm text-mq-muted">
+                  {totalCount > 0
+                    ? `${pendingCount} pendiente${pendingCount === 1 ? "" : "s"} de ${totalCount} en el banco`
+                    : "Abre el listado completo para revisión editorial"}
+                </p>
+              </div>
+              <ChevronRight className="h-5 w-5 shrink-0 text-mq-accent" />
+            </Link>
+          </PanelSection>
+
+          <PanelSection
+            title="Agregar preguntas"
+            description="Crea preguntas nuevas o carga los bancos inicial y extendido."
+            className="mt-14"
           >
             <QuestionCreationForm />
           </PanelSection>

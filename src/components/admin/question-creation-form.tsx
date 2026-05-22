@@ -6,6 +6,16 @@ import {
   seedExtendedQuestionsAction,
   seedQuestionsAction,
 } from "@/app/admin/question-actions";
+import { getFirebaseAuth } from "@/lib/firebase";
+
+async function withIdToken(formData?: FormData) {
+  const fd = formData ?? new FormData();
+  const user = getFirebaseAuth().currentUser;
+  if (user) {
+    fd.set("idToken", await user.getIdToken());
+  }
+  return fd;
+}
 
 export function QuestionCreationForm() {
   const [isPending, startTransition] = useTransition();
@@ -16,6 +26,7 @@ export function QuestionCreationForm() {
     setMessage("");
     setError("");
     startTransition(async () => {
+      await withIdToken(formData);
       const result = await createQuestionAction(formData);
       if (result.error) {
         setError(result.error);
@@ -29,7 +40,7 @@ export function QuestionCreationForm() {
     setMessage("");
     setError("");
     startTransition(async () => {
-      const result = await seedQuestionsAction();
+      const result = await seedQuestionsAction(await withIdToken());
       if (result.error) {
         setError(result.error);
       } else {
@@ -42,7 +53,7 @@ export function QuestionCreationForm() {
     setMessage("");
     setError("");
     startTransition(async () => {
-      const result = await seedExtendedQuestionsAction();
+      const result = await seedExtendedQuestionsAction(await withIdToken());
       if (result.error) {
         setError(result.error);
       } else {

@@ -8,6 +8,15 @@ export type QuestionOption = {
   incorrectFeedback?: string;
 };
 
+/** Estado de revisión editorial por el profesor. */
+export type QuestionReviewStatus =
+  | "pending"
+  | "approved"
+  | "needs_changes"
+  | "rejected";
+
+export type QuestionSource = "seed" | "manual" | "ai" | "import";
+
 export type TrainingQuestion = {
   id: string;
   topic: string;
@@ -22,6 +31,18 @@ export type TrainingQuestion = {
   /** Área del examen UdeA (blueprint). */
   examArea?: string;
   university?: string;
+  reviewStatus?: QuestionReviewStatus;
+  reviewNotes?: string;
+  reviewedAt?: string;
+  reviewedBy?: string;
+  source?: QuestionSource;
+};
+
+/** Pregunta en el panel de revisión (Firestore y/o banco en código). */
+export type QuestionAdminRecord = TrainingQuestion & {
+  firestoreId: string;
+  inFirestore: boolean;
+  createdAt?: string;
 };
 
 export type TrainingMode = "training" | "diagnostico" | "simulacro" | "daily-pill";

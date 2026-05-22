@@ -54,6 +54,14 @@ export function isStaffUser(
   );
 }
 
+/** Profesor o admin: gestión del banco de preguntas. */
+export function canManageQuestions(
+  role: string | null | undefined,
+  email: string | null | undefined,
+): boolean {
+  return isAdminUser(role, email) || isProfessorUser(role);
+}
+
 export function getRoleLabel(role: UserRole): string {
   switch (role) {
     case "admin":
