@@ -45,12 +45,38 @@ export function formatSubscriptionDate(iso: string | null | undefined): string {
   });
 }
 
+export const RENEWAL_WINDOW_DAYS = 30;
+export const RENEWAL_DISCOUNT_PERCENT = 10;
+
 export function getDaysUntilExpiration(expiresAt: string | null | undefined): number | null {
   if (!expiresAt) return null;
   const expirationDate = new Date(expiresAt);
   if (Number.isNaN(expirationDate.getTime())) return null;
   const diffMs = expirationDate.getTime() - Date.now();
   return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+}
+
+export function isRenewalEligible(
+  expiresAt: string | null | undefined,
+  windowDays = RENEWAL_WINDOW_DAYS,
+): boolean {
+  const days = getDaysUntilExpiration(expiresAt);
+  if (days === null) return false;
+  return days <= windowDays;
+}
+
+export function applyRenewalDiscount(
+  amount: number,
+  percent = RENEWAL_DISCOUNT_PERCENT,
+): number {
+  return Math.round(amount * (1 - percent / 100));
+}
+
+export function formatDaysRemainingLabel(days: number | null): string | null {
+  if (days === null) return null;
+  if (days <= 0) return "Vence hoy";
+  if (days === 1) return "1 día restante";
+  return `${days} días restantes`;
 }
 
 export function getNegotiatedPrice(profile: SubscriptionProfile | null | undefined): number | null {

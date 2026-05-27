@@ -11,10 +11,17 @@ type PlanCtaButtonProps = {
   plan: PlanDefinition;
   cycle: BillingCycle;
   className?: string;
+  label?: string;
   onDemoClick?: () => void;
 };
 
-export function PlanCtaButton({ plan, cycle, className = "", onDemoClick }: PlanCtaButtonProps) {
+export function PlanCtaButton({
+  plan,
+  cycle,
+  className = "",
+  label,
+  onDemoClick,
+}: PlanCtaButtonProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -57,7 +64,7 @@ export function PlanCtaButton({ plan, cycle, className = "", onDemoClick }: Plan
       disabled={isLoading}
       className={`${className} disabled:cursor-not-allowed disabled:opacity-60`}
     >
-      {isLoading ? "Cargando..." : plan.cta}
+      {isLoading ? "Cargando..." : (label ?? plan.cta)}
     </button>
   );
 }
