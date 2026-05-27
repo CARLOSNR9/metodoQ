@@ -1,6 +1,6 @@
 "use client";
 
-import { SubscriptionStatusCard } from "@/components/dashboard";
+import { SubscriptionStatusCard, StudyHabitCalendar } from "@/components/dashboard";
 import { EmailPreferencesCard } from "@/components/dashboard/email-preferences-card";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
@@ -47,6 +47,14 @@ export default function PerfilPage() {
       </section>
 
       {showSubscription ? <SubscriptionStatusCard profile={profile} /> : null}
+
+      {showSubscription ? (
+        <StudyHabitCalendar
+          userId={user.uid}
+          planStartedAt={profile?.planStartedAt}
+          streakCount={profile?.streakCount ?? 0}
+        />
+      ) : null}
 
       <EmailPreferencesCard userId={user.uid} emailOptIn={emailOptIn} />
     </div>

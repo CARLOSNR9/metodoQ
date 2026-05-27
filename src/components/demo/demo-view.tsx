@@ -336,6 +336,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     }).then(() => {
       setHasSavedCurrentAttempt(true);
       setHistoryRefreshKey((prev) => prev + 1);
+      registerTrainingDay(user.uid).catch(console.error);
     });
   }, [correctAnswers, hasSavedCurrentAttempt, isResultsStep, scorePercentage, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
 

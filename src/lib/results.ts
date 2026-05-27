@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { checkAchievements } from "@/lib/achievements";
+import { PRO_DAILY_MIN_QUESTIONS } from "@/lib/plans/limits";
 import { buildElizabethTrainingResults, isElizabethDemoEmail } from "@/lib/demo/elizabeth-training-data";
 import { getDemoTrainingResultsIfEligible } from "@/lib/demo/demo-training-data";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
@@ -278,7 +279,25 @@ export function getLocalDateKey(date: Date) {
   return `${year}-${month}-${day}`;
 }
 
+function countTodayQuestions(results: DemoResultItem[]): number {
+  const todayKey = getLocalDateKey(new Date());
+  let total = 0;
+  for (const result of results) {
+    if (!result.fechaIso) continue;
+    if (getLocalDateKey(new Date(result.fechaIso)) !== todayKey) continue;
+    total += result.correctAnswers + result.wrongAnswers;
+  }
+  return total;
+}
+
 export async function registerTrainingDay(userId: string) {
+  const results = await getUserDemoResults(userId);
+  if (countTodayQuestions(results) < PRO_DAILY_MIN_QUESTIONS) {
+    const userRef = doc(getFirebaseDb(), "users", userId);
+    const snapshot = await getDoc(userRef);
+    return (snapshot.data() as { streakCount?: number } | undefined)?.streakCount ?? 0;
+  }
+
   const db = getFirebaseDb();
   const userRef = doc(db, "users", userId);
   const snapshot = await getDoc(userRef);

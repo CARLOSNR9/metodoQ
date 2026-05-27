@@ -2,14 +2,22 @@
 
 import Link from "next/link";
 import { Flame } from "lucide-react";
+import { getLocalDateKey } from "@/lib/results";
+import { PRO_DAILY_MIN_QUESTIONS } from "@/lib/plans/limits";
 
 type StreakReminderBannerProps = {
   streakCount: number;
   lastTrainingDate: string | null;
 };
 
-function todayKey(): string {
-  return new Date().toISOString().slice(0, 10);
+function daysSinceLastTraining(lastTrainingDate: string | null): number | null {
+  if (!lastTrainingDate) return null;
+  const [year, month, day] = lastTrainingDate.split("-").map(Number);
+  const last = new Date(year, month - 1, day);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  last.setHours(0, 0, 0, 0);
+  return Math.round((today.getTime() - last.getTime()) / (1000 * 60 * 60 * 24));
 }
 
 export function StreakReminderBanner({
@@ -17,7 +25,10 @@ export function StreakReminderBanner({
   lastTrainingDate,
 }: StreakReminderBannerProps) {
   if (streakCount <= 0) return null;
-  if (lastTrainingDate === todayKey()) return null;
+  if (lastTrainingDate === getLocalDateKey(new Date())) return null;
+
+  const daysSince = daysSinceLastTraining(lastTrainingDate);
+  if (daysSince === null || daysSince >= 2) return null;
 
   return (
     <div className="flex flex-col gap-3 rounded-2xl border border-orange-500/30 bg-orange-500/10 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
@@ -28,7 +39,7 @@ export function StreakReminderBanner({
             No pierdas tu racha de {streakCount} día{streakCount === 1 ? "" : "s"}
           </p>
           <p className="mt-0.5 text-xs text-mq-muted">
-            Entrena hoy con al menos una sesión para mantener tu constancia.
+            Completa hoy tu meta de {PRO_DAILY_MIN_QUESTIONS} preguntas para mantener la racha.
           </p>
         </div>
       </div>

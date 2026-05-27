@@ -25,3 +25,6 @@ export { ProgressSimulator } from "./progress-simulator";
 export { ProDashboardView } from "./pro-dashboard-view";
 export { UccPastoInsightCard } from "./ucc-pasto-insight-card";
 export { SubscriptionStatusCard } from "./subscription-status-card";
+export { StudyStreakSummary } from "./study-streak-summary";
+export { StudyHabitCalendar } from "./study-habit-calendar";
+export { ProStudyGapBanner } from "./pro-study-gap-banner";

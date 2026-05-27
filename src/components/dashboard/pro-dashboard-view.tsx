@@ -37,6 +37,7 @@ import {
 } from "@/lib/diagnostic/ucc-pasto-track";
 import { UccPastoInsightCard } from "./ucc-pasto-insight-card";
 import { SubscriptionStatusCard } from "./subscription-status-card";
+import { StudyStreakSummary } from "./study-streak-summary";
 import { useUserPerformanceStats } from "@/hooks/use-user-performance-stats";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 import { hasPerformanceData } from "@/lib/profile/has-performance-data";
@@ -244,6 +245,12 @@ export function ProDashboardView({
         <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-mq-accent/10 blur-[120px] animate-pulse" />
         <div className="absolute -bottom-20 -left-20 h-96 w-96 rounded-full bg-purple-500/10 blur-[120px]" />
       </motion.header>
+
+      <StudyStreakSummary
+        userId={user.uid}
+        planStartedAt={profile?.planStartedAt}
+        streakCount={profile?.streakCount ?? 0}
+      />
 
       {hasDiagnosticData && (
         <motion.div

@@ -6,6 +6,7 @@ import {
   ProDashboardView,
   SubscriptionExpirationAlert,
   StreakReminderBanner,
+  ProStudyGapBanner,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
@@ -59,6 +60,12 @@ export default function DashboardPage() {
 
       <div className="mb-6 space-y-3">
         <SubscriptionExpirationAlert />
+        {showPaidDashboard ? (
+          <ProStudyGapBanner
+            userId={user.uid}
+            planStartedAt={profile?.planStartedAt}
+          />
+        ) : null}
         <StreakReminderBanner
           streakCount={profile?.streakCount ?? 0}
           lastTrainingDate={profile?.streakLastTrainingDate ?? null}

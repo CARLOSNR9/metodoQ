@@ -64,7 +64,7 @@ export function planExpiryReminderEmail(planName: string, daysRemaining: number)
 export function streakReminderEmail(streakCount: number) {
   const html = layout(
     "No pierdas tu racha",
-    `<p style="color:#cbd5e1;line-height:1.6">Llevas <strong style="color:#fff">${streakCount} días</strong> de racha. Entrena hoy con al menos una sesión para mantenerla.</p>
+    `<p style="color:#cbd5e1;line-height:1.6">Llevas <strong style="color:#fff">${streakCount} días</strong> de racha. Completa hoy tu meta de 10 preguntas para mantenerla.</p>
      <p style="margin-top:16px"><a href="${getAppUrl()}/dashboard/entrenar" style="display:inline-block;background:#00D1FF;color:#0A1F44;font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none">Entrenar ahora</a></p>`,
   );
   return {
