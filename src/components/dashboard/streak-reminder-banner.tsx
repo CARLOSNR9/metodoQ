@@ -8,6 +8,8 @@ import { PRO_DAILY_MIN_QUESTIONS } from "@/lib/plans/limits";
 type StreakReminderBannerProps = {
   streakCount: number;
   lastTrainingDate: string | null;
+  dailyTarget?: number;
+  streakMinimum?: number;
 };
 
 function daysSinceLastTraining(lastTrainingDate: string | null): number | null {
@@ -23,12 +25,19 @@ function daysSinceLastTraining(lastTrainingDate: string | null): number | null {
 export function StreakReminderBanner({
   streakCount,
   lastTrainingDate,
+  dailyTarget = PRO_DAILY_MIN_QUESTIONS,
+  streakMinimum = PRO_DAILY_MIN_QUESTIONS,
 }: StreakReminderBannerProps) {
   if (streakCount <= 0) return null;
   if (lastTrainingDate === getLocalDateKey(new Date())) return null;
 
   const daysSince = daysSinceLastTraining(lastTrainingDate);
   if (daysSince === null || daysSince >= 2) return null;
+
+  const targetLabel =
+    streakMinimum < dailyTarget
+      ? `${streakMinimum} preg (racha) · meta ${dailyTarget}`
+      : `${dailyTarget} preguntas`;
 
   return (
     <div className="flex flex-col gap-3 rounded-2xl border border-orange-500/30 bg-orange-500/10 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
@@ -39,7 +48,7 @@ export function StreakReminderBanner({
             No pierdas tu racha de {streakCount} día{streakCount === 1 ? "" : "s"}
           </p>
           <p className="mt-0.5 text-xs text-mq-muted">
-            Completa hoy tu meta de {PRO_DAILY_MIN_QUESTIONS} preguntas para mantener la racha.
+            Completa hoy tu meta de {targetLabel} para mantener la racha.
           </p>
         </div>
       </div>

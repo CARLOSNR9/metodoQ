@@ -1,12 +1,17 @@
 "use client";
 
-import { SubscriptionStatusCard, StudyHabitCalendar } from "@/components/dashboard";
-import { EmailPreferencesCard } from "@/components/dashboard/email-preferences-card";
+import {
+  SubscriptionStatusCard,
+  StudyHabitCalendar,
+  EmailPreferencesCard,
+} from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { getPlanDisplayName } from "@/lib/plans/config";
 import { getUserGreetingName } from "@/lib/plans/subscription-display";
 import { hasPaidPlan } from "@/lib/plans/access";
+import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
+import { isUccPastoMedicinaInternaProUser } from "@/lib/diagnostic/ucc-pasto-track";
 
 export default function PerfilPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
@@ -19,8 +24,11 @@ export default function PerfilPage() {
   }
 
   const emailOptIn = profile?.emailOptIn !== false;
+  const browserNudgeOptIn = profile?.browserNudgeOptIn === true;
+  const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
   const greetingName = getUserGreetingName(profile);
   const showSubscription = hasPaidPlan(profile?.plan);
+  const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
 
   return (
     <div className="space-y-6">
@@ -53,10 +61,17 @@ export default function PerfilPage() {
           userId={user.uid}
           planStartedAt={profile?.planStartedAt}
           streakCount={profile?.streakCount ?? 0}
+          dailyTarget={dailyGoal.dailyTarget}
+          streakMinimum={dailyGoal.streakMinimum}
         />
       ) : null}
 
-      <EmailPreferencesCard userId={user.uid} emailOptIn={emailOptIn} />
+      <EmailPreferencesCard
+        userId={user.uid}
+        emailOptIn={emailOptIn}
+        browserNudgeOptIn={browserNudgeOptIn}
+        isUccMiPro={isUccMiPro}
+      />
     </div>
   );
 }

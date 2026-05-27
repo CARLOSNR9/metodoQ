@@ -9,7 +9,7 @@ export type TrainingLimits = {
   simulacroMinutes: number;
 };
 
-/** Mínimo de preguntas por día para cumplir el hábito diario del plan Pro / Residente. */
+/** Mínimo de preguntas por día para cumplir el hábito diario del plan Pro genérico. */
 export const PRO_DAILY_MIN_QUESTIONS = 10;
 
 export const PLAN_TRAINING_LIMITS: Record<PlanId, TrainingLimits> = {
@@ -29,14 +29,14 @@ export const PLAN_TRAINING_LIMITS: Record<PlanId, TrainingLimits> = {
   },
   PRO: {
     questionsPerSession: 50,
-    sessionsPerDay: 999,
+    sessionsPerDay: 3,
     simulacrosPerMonth: 999,
     simulacroQuestionCount: 80,
     simulacroMinutes: 120,
   },
   RESIDENTE: {
     questionsPerSession: 50,
-    sessionsPerDay: 999,
+    sessionsPerDay: 3,
     simulacrosPerMonth: 999,
     simulacroQuestionCount: 80,
     simulacroMinutes: 120,

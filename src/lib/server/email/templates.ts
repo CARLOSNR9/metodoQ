@@ -61,16 +61,59 @@ export function planExpiryReminderEmail(planName: string, daysRemaining: number)
   };
 }
 
-export function streakReminderEmail(streakCount: number) {
+export function streakReminderEmail(streakCount: number, dailyTarget = 10) {
   const html = layout(
     "No pierdas tu racha",
-    `<p style="color:#cbd5e1;line-height:1.6">Llevas <strong style="color:#fff">${streakCount} días</strong> de racha. Completa hoy tu meta de 10 preguntas para mantenerla.</p>
+    `<p style="color:#cbd5e1;line-height:1.6">Llevas <strong style="color:#fff">${streakCount} días</strong> de racha. Completa hoy tu meta de <strong style="color:#fff">${dailyTarget} preguntas</strong> para mantenerla.</p>
      <p style="margin-top:16px"><a href="${getAppUrl()}/dashboard/entrenar" style="display:inline-block;background:#00D1FF;color:#0A1F44;font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none">Entrenar ahora</a></p>`,
   );
   return {
     subject: "Método Q — Tu racha de estudio te espera",
     html,
-    text: `Mantén tu racha de ${streakCount} días: ${getAppUrl()}/dashboard/entrenar`,
+    text: `Mantén tu racha de ${streakCount} días: completa ${dailyTarget} preguntas en ${getAppUrl()}/dashboard/entrenar`,
+  };
+}
+
+export function uccDailyMissionReminderEmail(input: {
+  displayName: string;
+  todayQuestions: number;
+  dailyTarget: number;
+  remaining: number;
+}) {
+  const { displayName, todayQuestions, dailyTarget, remaining } = input;
+  const html = layout(
+    "Tu misión UCC de hoy",
+    `<p style="color:#cbd5e1;line-height:1.6">Hola ${displayName}, llevas <strong style="color:#fff">${todayQuestions}/${dailyTarget}</strong> preguntas hoy en tu plan UCC Pasto · Medicina Interna.</p>
+     <p style="color:#cbd5e1">Te faltan <strong style="color:#fff">${remaining} preguntas</strong> (~${remaining * 2} min) para cerrar el día y mantener tu ritmo hacia el percentil 75.</p>
+     <p style="margin-top:16px"><a href="${getAppUrl()}/dashboard" style="display:inline-block;background:#00D1FF;color:#0A1F44;font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none">Ver misión del día</a></p>`,
+  );
+  return {
+    subject: `Método Q — Te faltan ${remaining} preguntas para cerrar hoy`,
+    html,
+    text: `Hola ${displayName}, te faltan ${remaining} preguntas (${todayQuestions}/${dailyTarget}). Entra a ${getAppUrl()}/dashboard`,
+  };
+}
+
+export function uccSimulacroReminderEmail(input: {
+  displayName: string;
+  questionCount: number;
+  minutes: number;
+  overdue?: boolean;
+}) {
+  const { displayName, questionCount, minutes, overdue } = input;
+  const title = overdue ? "Simulacro UCC pendiente" : "Hoy toca simulacro UCC";
+  const html = layout(
+    title,
+    `<p style="color:#cbd5e1;line-height:1.6">Hola ${displayName}, ${overdue ? "tienes un simulacro pendiente de esta semana." : "es día de simulacro cronometrado en tu plan UCC Pasto MI."}</p>
+     <p style="color:#cbd5e1"><strong style="color:#fff">${questionCount} preguntas</strong> · <strong style="color:#fff">${minutes} min</strong> · distribución Res. 108 (20/50/20/10).</p>
+     <p style="margin-top:16px"><a href="${getAppUrl()}/dashboard" style="display:inline-block;background:#00D1FF;color:#0A1F44;font-weight:700;padding:12px 20px;border-radius:10px;text-decoration:none">Iniciar simulacro</a></p>`,
+  );
+  return {
+    subject: overdue
+      ? "Método Q — Simulacro UCC pendiente esta semana"
+      : "Método Q — Simulacro UCC programado para hoy",
+    html,
+    text: `${title}: ${questionCount} preg en ${minutes} min. ${getAppUrl()}/dashboard`,
   };
 }
 

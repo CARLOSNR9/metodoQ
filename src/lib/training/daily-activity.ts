@@ -16,6 +16,7 @@ export type DailyHabitDay = {
   weekdayShort: string;
   questionsCount: number;
   minQuestions: number;
+  streakMinimum: number;
   status: DayHabitStatus;
   isToday: boolean;
 };
@@ -30,6 +31,13 @@ export function meetsDailyStudyGoal(
   minQuestions = PRO_DAILY_MIN_QUESTIONS,
 ): boolean {
   return questionsCount >= minQuestions;
+}
+
+export function meetsStreakGoal(
+  questionsCount: number,
+  streakMinimum = PRO_DAILY_MIN_QUESTIONS,
+): boolean {
+  return questionsCount >= streakMinimum;
 }
 
 export function aggregateQuestionsByDateKey(
@@ -90,8 +98,10 @@ export function buildHabitDaysRange(options: {
   fromDateKey: string;
   toDateKey: string;
   minQuestions?: number;
+  streakMinimum?: number;
 }): DailyHabitDay[] {
   const minQuestions = options.minQuestions ?? PRO_DAILY_MIN_QUESTIONS;
+  const streakMinimum = options.streakMinimum ?? minQuestions;
   const questionsByDay = aggregateQuestionsByDateKey(options.results);
   const planStartKey = getPlanStartDateKey(options.planStartedAt);
   const todayKey = getLocalDateKey(new Date());
@@ -113,6 +123,7 @@ export function buildHabitDaysRange(options: {
         .replace(/\./g, ""),
       questionsCount,
       minQuestions,
+      streakMinimum,
       status: resolveDayStatus({
         dateKey,
         questionsCount,
@@ -134,6 +145,7 @@ export function buildLastNDays(options: {
   planStartedAt: string | null | undefined;
   n: number;
   minQuestions?: number;
+  streakMinimum?: number;
 }): DailyHabitDay[] {
   const today = new Date();
   const from = new Date(today);
@@ -145,6 +157,7 @@ export function buildLastNDays(options: {
     fromDateKey: getLocalDateKey(from),
     toDateKey: getLocalDateKey(today),
     minQuestions: options.minQuestions,
+    streakMinimum: options.streakMinimum,
   });
 }
 
@@ -152,6 +165,7 @@ export function buildPlanPeriodDays(options: {
   results: DemoResultItem[];
   planStartedAt: string | null | undefined;
   minQuestions?: number;
+  streakMinimum?: number;
 }): DailyHabitDay[] {
   const planStartKey = getPlanStartDateKey(options.planStartedAt);
   if (!planStartKey) {
@@ -164,7 +178,12 @@ export function buildPlanPeriodDays(options: {
     fromDateKey: planStartKey,
     toDateKey: getLocalDateKey(new Date()),
     minQuestions: options.minQuestions,
+    streakMinimum: options.streakMinimum,
   });
+}
+
+function dayMaintainsStreak(day: DailyHabitDay): boolean {
+  return meetsStreakGoal(day.questionsCount, day.streakMinimum);
 }
 
 export function countStudiedStreak(days: DailyHabitDay[]): number {
@@ -176,7 +195,7 @@ export function countStudiedStreak(days: DailyHabitDay[]): number {
   let cursor = new Date();
 
   const today = byKey.get(todayKey);
-  if (today?.status !== "studied") {
+  if (!today || !dayMaintainsStreak(today)) {
     cursor.setDate(cursor.getDate() - 1);
   }
 
@@ -190,7 +209,7 @@ export function countStudiedStreak(days: DailyHabitDay[]): number {
     const day = byKey.get(key);
     if (!day) break;
 
-    if (day.status === "studied") {
+    if (dayMaintainsStreak(day)) {
       streak += 1;
       cursor.setDate(cursor.getDate() - 1);
       continue;
@@ -221,14 +240,14 @@ export function countIncompletePlanDays(days: DailyHabitDay[]): number {
   ).length;
 }
 
-/** Días seguidos sin cumplir la meta diaria, desde hoy hacia atrás. */
+/** Días seguidos sin cumplir el mínimo de racha, desde hoy hacia atrás. */
 export function countConsecutiveInactiveDays(days: DailyHabitDay[]): number {
   const planDays = days.filter((day) => day.status !== "before_plan");
   let count = 0;
 
   for (let index = planDays.length - 1; index >= 0; index -= 1) {
     const day = planDays[index];
-    if (day.status === "studied") break;
+    if (dayMaintainsStreak(day)) break;
     if (
       day.status === "missed" ||
       day.status === "partial" ||

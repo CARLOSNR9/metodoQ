@@ -4,9 +4,9 @@ import {
   supportsDedicatedDiagnosticBattery,
 } from "@/lib/diagnostic/university-match";
 import {
-  buildUccRadarFromSession,
-  buildUccRadarFromStats,
-} from "@/lib/diagnostic/ucc-exam-blueprint";
+  buildRes108RadarFromSession,
+  buildRes108RadarFromStats,
+} from "@/lib/diagnostic/ucc-res108-blueprint";
 
 /** Ejes del examen unificado (Medicina Interna — UNAL / UdeA). */
 export const MI_EXAM_RADAR_AXES = [
@@ -165,14 +165,14 @@ export function buildRadarChartData({
     Object.keys(answersByQuestionId).length > 0
   ) {
     if (useUccBlueprint) {
-      return buildUccRadarFromSession(sessionQuestions, answersByQuestionId);
+      return buildRes108RadarFromSession(sessionQuestions, answersByQuestionId);
     }
     return buildRadarFromSession(sessionQuestions, answersByQuestionId);
   }
 
   if (useBlueprint) {
     if (useUccBlueprint) {
-      return buildUccRadarFromStats(correctTopics, wrongTopics);
+      return buildRes108RadarFromStats(correctTopics, wrongTopics);
     }
     return buildRadarFromStats(correctTopics, wrongTopics);
   }

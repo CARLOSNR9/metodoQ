@@ -36,11 +36,19 @@ import {
   isUccPastoMedicinaInternaProUser,
 } from "@/lib/diagnostic/ucc-pasto-track";
 import { UccPastoInsightCard } from "./ucc-pasto-insight-card";
+import { UccDailyMissionCard } from "./ucc-daily-mission-card";
+import { UccPercentileTrackerCard } from "./ucc-percentile-tracker-card";
+import { UccCvSimulatorCard } from "./ucc-cv-simulator-card";
+import { UccWeeklySimulacroCard } from "./ucc-weekly-simulacro-card";
+import { UccPhase2SimulatorCard } from "./ucc-phase2-simulator-card";
 import { SubscriptionStatusCard } from "./subscription-status-card";
 import { StudyStreakSummary } from "./study-streak-summary";
 import { useUserPerformanceStats } from "@/hooks/use-user-performance-stats";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 import { hasPerformanceData } from "@/lib/profile/has-performance-data";
+import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
+import { buildUccPercentileEstimate } from "@/lib/diagnostic/ucc-percentile";
+import { getPlanWeekNumber } from "@/lib/training/ucc-mi-daily-plan";
 
 interface ProDashboardViewProps {
   user: any;
@@ -93,6 +101,14 @@ export function ProDashboardView({
     goalSpecialty: profile?.goalSpecialty,
   };
   const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
+  const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
+  const uccPercentileEstimate =
+    isUccMiPro && hasDiagnosticData
+      ? buildUccPercentileEstimate({
+          cumulativeScore: displayScore,
+          planWeekNumber: getPlanWeekNumber(profile?.planStartedAt),
+        })
+      : null;
   const effectiveSpecialty = getEffectiveGoalSpecialty(
     profile?.goalUniversity,
     profile?.goalSpecialty,
@@ -233,7 +249,13 @@ export function ProDashboardView({
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest text-mq-muted">Nivel</p>
                   <p className="text-sm font-bold text-white">
-                    {statsLoading ? "..." : needsDiagnostic ? "Calibra tu IA" : percentileLabel ?? "Entrena hoy"}
+                    {statsLoading
+                      ? "..."
+                      : needsDiagnostic
+                        ? "Calibra tu IA"
+                        : uccPercentileEstimate
+                          ? `P${uccPercentileEstimate.estimatedPercentile}${uccPercentileEstimate.passesP75 ? " ✓" : ""}`
+                          : percentileLabel ?? "Entrena hoy"}
                   </p>
                 </div>
               </motion.div>
@@ -250,6 +272,9 @@ export function ProDashboardView({
         userId={user.uid}
         planStartedAt={profile?.planStartedAt}
         streakCount={profile?.streakCount ?? 0}
+        dailyTarget={dailyGoal.dailyTarget}
+        streakMinimum={dailyGoal.streakMinimum}
+        isUccMiTrack={dailyGoal.isUccMiTrack}
       />
 
       {hasDiagnosticData && (
@@ -364,11 +389,44 @@ export function ProDashboardView({
 
       <SubscriptionStatusCard profile={profile} />
 
+      {isUccMiPro && hasDiagnosticData && (
+        <>
+          <UccPercentileTrackerCard
+            cumulativeScore={displayScore}
+            totalQuestions={totalQuestions}
+            planStartedAt={profile?.planStartedAt}
+            correctTopics={mapTopicStats(profile?.topicStats, "correct")}
+            wrongTopics={mapTopicStats(profile?.topicStats, "wrong")}
+          />
+          <UccCvSimulatorCard
+            userId={user.uid}
+            uccCvProfile={profile?.uccCvProfile}
+          />
+          <UccWeeklySimulacroCard
+            userId={user.uid}
+            planStartedAt={profile?.planStartedAt}
+          />
+          <UccPhase2SimulatorCard
+            userId={user.uid}
+            cumulativeScore={displayScore}
+            uccPhase2Progress={profile?.uccPhase2Progress}
+          />
+        </>
+      )}
+
       {isUccMiPro && hasDiagnosticData && <UccPastoInsightCard />}
 
       <div className="grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-10">
-          <DailyPlanCard userId={user.uid} />
+          {isUccMiPro && hasDiagnosticData ? (
+            <UccDailyMissionCard
+              userId={user.uid}
+              planStartedAt={profile?.planStartedAt}
+              weakTopic={dailyPillTopic}
+            />
+          ) : (
+            <DailyPlanCard userId={user.uid} />
+          )}
 
           {/* CORE ANALYTICS */}
           <SummaryCards userId={user.uid} />

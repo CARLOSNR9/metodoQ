@@ -1,8 +1,15 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
-import { getLocalDateKey } from "@/lib/results";
+import { getLocalDateKey, getUserDemoResults } from "@/lib/results";
 import { getTrainingLimits } from "@/lib/plans/limits";
 import { normalizeUserPlan } from "@/lib/plans/access";
+import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
+import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
+import { getTodayQuestionsCount } from "@/lib/training/daily-activity";
+import {
+  canStartUccMiBonus,
+  UCC_MI_DAILY_BONUS_MAX,
+} from "@/lib/training/ucc-mi-daily-plan";
 
 type DailyUsage = {
   date: string;
@@ -39,17 +46,36 @@ export async function getUserUsage(userId: string) {
   return { daily, monthly };
 }
 
+export type UsageBlockMeta = {
+  dayClosed?: boolean;
+  bonusAvailable?: boolean;
+};
+
 export type UsageCheckResult =
   | { allowed: true }
-  | { allowed: false; reason: string; upgradeHref?: string };
+  | ({
+      allowed: false;
+      reason: string;
+      upgradeHref?: string;
+      dayClosed?: boolean;
+      bonusAvailable?: boolean;
+    });
+
+export type SessionCheckOptions = {
+  isBonusMode?: boolean;
+  profile?: LearningTrackProfile | null;
+  planStartedAt?: string | null;
+};
 
 export async function checkCanStartSession(
   userId: string,
   plan: string | null | undefined,
   sessionType: "training" | "diagnostico" | "simulacro",
+  options?: SessionCheckOptions,
 ): Promise<UsageCheckResult> {
   const normalized = normalizeUserPlan(plan ?? undefined);
   const limits = getTrainingLimits(normalized);
+  const goal = getDailyGoalForProfile(options?.profile, options?.planStartedAt);
   const { daily, monthly } = await getUserUsage(userId);
 
   if (sessionType === "simulacro") {
@@ -70,11 +96,53 @@ export async function checkCanStartSession(
     return { allowed: true };
   }
 
-  if (daily.sessions >= limits.sessionsPerDay) {
+  if (sessionType === "diagnostico") {
+    return { allowed: true };
+  }
+
+  const sessionsLimit = goal.isUccMiTrack ? goal.sessionsPerDay : limits.sessionsPerDay;
+
+  if (goal.isUccMiTrack) {
+    const results = await getUserDemoResults(userId);
+    const todayQuestions = getTodayQuestionsCount(results);
+    const bonusAnswered = Math.max(0, todayQuestions - goal.dailyTarget);
+
+    if (options?.isBonusMode) {
+      if (todayQuestions < goal.dailyTarget) {
+        return {
+          allowed: false,
+          reason: "Primero completa tu misión del día antes de usar preguntas bonus.",
+        };
+      }
+      if (bonusAnswered >= goal.bonusMax) {
+        return {
+          allowed: false,
+          reason: `Ya usaste tus ${UCC_MI_DAILY_BONUS_MAX} preguntas bonus de hoy. Descansa hasta mañana.`,
+          dayClosed: true,
+        };
+      }
+    } else if (todayQuestions >= goal.dailyTarget) {
+      const bonusAvailable = canStartUccMiBonus(
+        todayQuestions,
+        goal.dailyTarget,
+        bonusAnswered,
+      );
+      return {
+        allowed: false,
+        reason: `Completaste tu misión de ${goal.dailyTarget} preguntas. Descansa; mañana te espera repaso espaciado.`,
+        dayClosed: true,
+        bonusAvailable,
+      };
+    }
+  }
+
+  if (daily.sessions >= sessionsLimit) {
     return {
       allowed: false,
-      reason: `Alcanzaste el límite de ${limits.sessionsPerDay} entrenamiento(s) por hoy en tu plan.`,
-      upgradeHref: "/dashboard/planes",
+      reason: goal.isUccMiTrack
+        ? `Completaste tus ${sessionsLimit} bloques de hoy. Cierra el día o retoma mañana.`
+        : `Alcanzaste el límite de ${sessionsLimit} entrenamiento(s) por hoy en tu plan.`,
+      upgradeHref: goal.isUccMiTrack ? undefined : "/dashboard/planes",
     };
   }
 
@@ -104,4 +172,28 @@ export async function recordSessionStart(
     },
     { merge: true },
   );
+}
+
+export async function getTodayTrainingStatus(
+  userId: string,
+  profile: LearningTrackProfile | null | undefined,
+  planStartedAt?: string | null,
+) {
+  const goal = getDailyGoalForProfile(profile, planStartedAt);
+  const results = await getUserDemoResults(userId);
+  const todayQuestions = getTodayQuestionsCount(results);
+  const bonusAnswered = Math.max(0, todayQuestions - goal.dailyTarget);
+  const dayClosed = goal.isUccMiTrack && todayQuestions >= goal.dailyTarget;
+  const bonusAvailable =
+    goal.isUccMiTrack &&
+    canStartUccMiBonus(todayQuestions, goal.dailyTarget, bonusAnswered);
+
+  return {
+    goal,
+    todayQuestions,
+    bonusAnswered,
+    dayClosed,
+    bonusAvailable,
+    missionComplete: todayQuestions >= goal.dailyTarget,
+  };
 }

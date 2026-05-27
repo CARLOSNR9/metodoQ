@@ -17,6 +17,9 @@ type StudyStreakSummaryProps = {
   userId: string;
   planStartedAt?: string | null;
   streakCount?: number;
+  dailyTarget?: number;
+  streakMinimum?: number;
+  isUccMiTrack?: boolean;
 };
 
 function DayPill({ day }: { day: DailyHabitDay }) {
@@ -80,6 +83,9 @@ export function StudyStreakSummary({
   userId,
   planStartedAt,
   streakCount = 0,
+  dailyTarget = PRO_DAILY_MIN_QUESTIONS,
+  streakMinimum = PRO_DAILY_MIN_QUESTIONS,
+  isUccMiTrack = false,
 }: StudyStreakSummaryProps) {
   const [days, setDays] = useState<DailyHabitDay[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -97,6 +103,8 @@ export function StudyStreakSummary({
             results,
             planStartedAt: planStartedAt ?? null,
             n: 5,
+            minQuestions: dailyTarget,
+            streakMinimum,
           }),
         );
       } catch (error) {
@@ -111,7 +119,7 @@ export function StudyStreakSummary({
     return () => {
       mounted = false;
     };
-  }, [userId, planStartedAt]);
+  }, [userId, planStartedAt, dailyTarget, streakMinimum]);
 
   const computedStreak = useMemo(() => countStudiedStreak(days), [days]);
   const displayStreak = Math.max(streakCount, computedStreak);
@@ -121,6 +129,9 @@ export function StudyStreakSummary({
     [days],
   );
   const planStartLabel = formatSubscriptionDate(planStartedAt ?? null);
+  const habitLabel = isUccMiTrack
+    ? `UCC MI · ${dailyTarget} preg/día`
+    : `Hábito Pro · ${dailyTarget} preg/día`;
 
   return (
     <section className="rounded-[2rem] border border-orange-500/20 bg-gradient-to-br from-orange-500/[0.08] via-mq-surface to-transparent p-6 sm:p-8">
@@ -141,7 +152,7 @@ export function StudyStreakSummary({
           </div>
           <div>
             <p className="text-[10px] font-bold uppercase tracking-widest text-orange-300/90">
-              Hábito Pro · {PRO_DAILY_MIN_QUESTIONS} preg/día · últimos 5 días
+              {habitLabel} · últimos 5 días
             </p>
             <p className="text-2xl font-black text-white">
               {isLoading ? "..." : `${displayStreak} ${displayStreak === 1 ? "día" : "días"} de racha`}
@@ -160,8 +171,10 @@ export function StudyStreakSummary({
                     </>
                   ) : null}
                 </>
+              ) : isUccMiTrack ? (
+                `Meta diaria ${dailyTarget} preg · racha desde ${streakMinimum} preg.`
               ) : (
-                `Responde al menos ${PRO_DAILY_MIN_QUESTIONS} preguntas cada día para mantener tu racha.`
+                `Responde al menos ${dailyTarget} preguntas cada día para mantener tu racha.`
               )}
             </p>
           </div>
@@ -183,11 +196,11 @@ export function StudyStreakSummary({
         <p className="mt-4 rounded-xl border border-mq-accent/25 bg-mq-accent/10 px-4 py-3 text-sm text-mq-accent">
           Hoy llevas{" "}
           <span className="font-bold text-white">
-            {todayProgress.questionsCount}/{PRO_DAILY_MIN_QUESTIONS}
+            {todayProgress.questionsCount}/{dailyTarget}
           </span>{" "}
           preguntas. Te faltan{" "}
           <span className="font-bold text-white">
-            {PRO_DAILY_MIN_QUESTIONS - todayProgress.questionsCount}
+            {dailyTarget - todayProgress.questionsCount}
           </span>{" "}
           para cerrar el día.
         </p>
@@ -195,14 +208,16 @@ export function StudyStreakSummary({
 
       {!isLoading && incompleteDays >= 2 && (
         <p className="mt-4 rounded-xl border border-amber-500/25 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
-          Llevas varios días sin cumplir la meta de {PRO_DAILY_MIN_QUESTIONS} preguntas. Retoma hoy para
+          Llevas varios días sin cumplir la meta de {dailyTarget} preguntas. Retoma hoy para
           no acumular más huecos.
         </p>
       )}
 
       {!isLoading && displayStreak === 0 && incompleteDays < 2 && !todayProgress?.questionsCount && (
         <p className="mt-4 text-sm text-mq-muted">
-          Tu plan Pro exige {PRO_DAILY_MIN_QUESTIONS} preguntas diarias. Entrena hoy para encender la llama.
+          {isUccMiTrack
+            ? `Tu misión UCC exige ${dailyTarget} preguntas diarias (~90 min). Entrena hoy para encender la llama.`
+            : `Tu plan Pro exige ${dailyTarget} preguntas diarias. Entrena hoy para encender la llama.`}
         </p>
       )}
 

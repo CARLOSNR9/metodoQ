@@ -7,15 +7,19 @@ import {
   SubscriptionExpirationAlert,
   StreakReminderBanner,
   ProStudyGapBanner,
+  UccCoachingReminderBanner,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
+import { useUccBrowserReminder } from "@/hooks/use-ucc-browser-reminder";
+import { isUccPastoMedicinaInternaProUser } from "@/lib/diagnostic/ucc-pasto-track";
 import { useReferralStats } from "@/hooks/use-referral-stats";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { hasPaidPlan } from "@/lib/plans/access";
 import { getPostLoginPath } from "@/lib/roles";
 import { useUserRole } from "@/hooks/use-user-role";
+import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 
 export default function DashboardPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
@@ -37,6 +41,15 @@ export default function DashboardPage() {
   const effectivePlan = profile?.plan ?? "FREE";
   const expiresAt = profile?.planExpiresAt ?? null;
   const showPaidDashboard = hasPaidPlan(effectivePlan);
+  const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
+  const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
+
+  useUccBrowserReminder({
+    userId: user?.uid,
+    profile,
+    planStartedAt: profile?.planStartedAt,
+    browserNudgeOptIn: profile?.browserNudgeOptIn === true,
+  });
 
   if (isCheckingAuth || isLoadingProfile || !user) {
     return (
@@ -69,7 +82,16 @@ export default function DashboardPage() {
         <StreakReminderBanner
           streakCount={profile?.streakCount ?? 0}
           lastTrainingDate={profile?.streakLastTrainingDate ?? null}
+          dailyTarget={dailyGoal.dailyTarget}
+          streakMinimum={dailyGoal.streakMinimum}
         />
+        {isUccMiPro ? (
+          <UccCoachingReminderBanner
+            userId={user.uid}
+            profile={profile}
+            planStartedAt={profile?.planStartedAt}
+          />
+        ) : null}
       </div>
 
       {showPaidDashboard ? (

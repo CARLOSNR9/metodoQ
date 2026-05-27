@@ -1,0 +1,257 @@
+"use client";
+
+import { useMemo } from "react";
+import { motion } from "framer-motion";
+import { AlertTriangle, CheckCircle2, Target, TrendingUp } from "lucide-react";
+import {
+  buildUccPercentileEstimate,
+  getPercentileLabel,
+  getScoreForP75,
+  UCC_P75_CUTOFF,
+} from "@/lib/diagnostic/ucc-percentile";
+import {
+  buildRes108NucleusStatus,
+  type Res108NucleusStatus,
+} from "@/lib/diagnostic/ucc-res108-blueprint";
+import { getPlanWeekNumber } from "@/lib/training/ucc-mi-daily-plan";
+import { useUccCohortPercentile } from "@/hooks/use-ucc-cohort-percentile";
+import { Users } from "lucide-react";
+
+type UccPercentileTrackerCardProps = {
+  cumulativeScore: number;
+  totalQuestions: number;
+  planStartedAt?: string | null;
+  correctTopics?: Record<string, number>;
+  wrongTopics?: Record<string, number>;
+};
+
+function NucleusRow({ nucleus }: { nucleus: Res108NucleusStatus }) {
+  const barColor =
+    nucleus.status === "strong"
+      ? "bg-emerald-500"
+      : nucleus.status === "weak"
+        ? "bg-rose-500"
+        : nucleus.status === "ok"
+          ? "bg-amber-400"
+          : "bg-white/20";
+
+  return (
+    <div className="space-y-1.5">
+      <div className="flex items-center justify-between text-xs">
+        <span className="font-bold text-white">
+          {nucleus.label}{" "}
+          <span className="font-normal text-mq-muted">({nucleus.weight}%)</span>
+        </span>
+        <span className="text-mq-muted">
+          {nucleus.questions > 0 ? `${nucleus.score}%` : "—"}
+        </span>
+      </div>
+      <div className="h-1.5 overflow-hidden rounded-full bg-white/5">
+        <div
+          className={`h-full rounded-full transition-all ${barColor}`}
+          style={{ width: `${nucleus.questions > 0 ? nucleus.score : 0}%` }}
+        />
+      </div>
+    </div>
+  );
+}
+
+export function UccPercentileTrackerCard({
+  cumulativeScore,
+  totalQuestions,
+  planStartedAt,
+  correctTopics = {},
+  wrongTopics = {},
+}: UccPercentileTrackerCardProps) {
+  const weekNumber = getPlanWeekNumber(planStartedAt);
+  const estimate = useMemo(
+    () =>
+      buildUccPercentileEstimate({
+        cumulativeScore,
+        planWeekNumber: weekNumber,
+        questionsPerWeek: 315,
+      }),
+    [cumulativeScore, weekNumber],
+  );
+
+  const nuclei = useMemo(
+    () => buildRes108NucleusStatus(correctTopics, wrongTopics),
+    [correctTopics, wrongTopics],
+  );
+
+  const { stats: cohortStats, loading: cohortLoading } = useUccCohortPercentile(
+    cumulativeScore,
+    cumulativeScore > 0,
+  );
+
+  const displayPercentile =
+    cohortStats?.source === "cohort" && cohortStats.percentile !== null
+      ? cohortStats.percentile
+      : estimate.estimatedPercentile;
+
+  const passesP75 = displayPercentile >= UCC_P75_CUTOFF;
+  const p75Score = getScoreForP75();
+  const gaugePercent = Math.min(100, displayPercentile);
+
+  return (
+    <motion.section
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 sm:p-8"
+    >
+      <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-mq-accent/25 bg-mq-accent/10 px-3 py-1">
+            <Target size={14} className="text-mq-accent" />
+            <span className="text-[10px] font-bold uppercase tracking-widest text-mq-accent">
+              Percentil competitivo · Fase I
+            </span>
+          </div>
+          <h2 className="text-2xl font-black text-white">Tu posición vs cohorte</h2>
+          <p className="mt-1 text-sm text-mq-muted">
+            Meta UCC: percentil {UCC_P75_CUTOFF}+ para que evalúen tu hoja de vida.
+          </p>
+        </div>
+        <div
+          className={`rounded-2xl border px-5 py-3 text-right ${
+            passesP75
+              ? "border-emerald-500/30 bg-emerald-500/10"
+              : "border-rose-500/25 bg-rose-500/10"
+          }`}
+        >
+          <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+            {cohortStats?.source === "cohort" ? "Percentil cohorte" : "Percentil est."}
+          </p>
+          <p className="text-3xl font-black text-white">
+            {cohortLoading ? "…" : `P${displayPercentile}`}
+          </p>
+          <p className="text-xs font-medium text-mq-muted">
+            {getPercentileLabel(displayPercentile)}
+          </p>
+        </div>
+      </div>
+
+      <div className="grid gap-8 lg:grid-cols-2">
+        <div className="space-y-4">
+          <div className="relative pt-2">
+            <div className="relative h-4 overflow-hidden rounded-full bg-white/5">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${gaugePercent}%` }}
+                className={`absolute inset-y-0 left-0 rounded-full ${
+                  passesP75 ? "bg-emerald-500" : "bg-mq-accent"
+                }`}
+              />
+              <div
+                className="absolute inset-y-0 w-0.5 bg-rose-400"
+                style={{ left: `${UCC_P75_CUTOFF}%` }}
+                title={`Corte P${UCC_P75_CUTOFF}`}
+              />
+            </div>
+            <div className="mt-2 flex justify-between text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+              <span>P0</span>
+              <span className="text-rose-300">P{UCC_P75_CUTOFF} corte</span>
+              <span>P100</span>
+            </div>
+          </div>
+
+          <dl className="grid grid-cols-2 gap-3 text-sm">
+            <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+                Promedio acumulado
+              </dt>
+              <dd className="mt-1 text-xl font-black text-white">{estimate.score}%</dd>
+            </div>
+            <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+                Puntaje ~P75
+              </dt>
+              <dd className="mt-1 text-xl font-black text-rose-300">{p75Score}%</dd>
+            </div>
+            <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+                Preguntas base
+              </dt>
+              <dd className="mt-1 text-xl font-black text-white">{totalQuestions}</dd>
+            </div>
+            <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+                Semana plan
+              </dt>
+              <dd className="mt-1 text-xl font-black text-white">{weekNumber}/24</dd>
+            </div>
+          </dl>
+
+          {cohortStats?.source === "cohort" && cohortStats.cohortSize >= 3 && (
+            <div className="flex items-start gap-3 rounded-xl border border-mq-accent/25 bg-mq-accent/10 p-4">
+              <Users className="mt-0.5 h-5 w-5 shrink-0 text-mq-accent" />
+              <p className="text-sm text-mq-accent">
+                Cohort MetodoQ UCC:{" "}
+                <span className="font-bold text-white">
+                  #{cohortStats.rank} de {cohortStats.cohortSize}
+                </span>
+                {cohortStats.p75 !== null ? (
+                  <>
+                    {" "}
+                    · P75 cohorte ≈{" "}
+                    <span className="font-bold text-white">{cohortStats.p75}%</span>
+                  </>
+                ) : null}
+              </p>
+            </div>
+          )}
+
+          {!passesP75 && estimate.projectionWeeksToP75 !== null && (
+            <div className="flex items-start gap-3 rounded-xl border border-amber-500/25 bg-amber-500/10 p-4">
+              <TrendingUp className="mt-0.5 h-5 w-5 shrink-0 text-amber-400" />
+              <p className="text-sm text-amber-100">
+                A este ritmo (~45 preg/día), podrías alcanzar P75 en aproximadamente{" "}
+                <span className="font-bold text-white">
+                  {estimate.projectionWeeksToP75} semana
+                  {estimate.projectionWeeksToP75 === 1 ? "" : "s"}
+                </span>
+                . Te faltan{" "}
+                <span className="font-bold text-white">
+                  {Math.max(0, UCC_P75_CUTOFF - displayPercentile)} pts
+                </span>{" "}
+                de percentil.
+              </p>
+            </div>
+          )}
+
+          {passesP75 && (
+            <div className="flex items-start gap-3 rounded-xl border border-emerald-500/25 bg-emerald-500/10 p-4">
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" />
+              <p className="text-sm text-emerald-100">
+                Estás en zona segura (P{displayPercentile}). Mantén el ritmo diario y
+                refuerza núcleos débiles antes del examen.
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-black uppercase tracking-wider text-white">
+              Desglose Res. 108
+            </h3>
+            <span className="text-[10px] text-mq-muted">20/50/20/10</span>
+          </div>
+          <div className="space-y-4">
+            {nuclei.map((nucleus) => (
+              <NucleusRow key={nucleus.axis} nucleus={nucleus} />
+            ))}
+          </div>
+          {nuclei.some((n) => n.status === "weak") && (
+            <div className="flex items-start gap-2 rounded-xl border border-rose-500/20 bg-rose-500/5 p-3">
+              <AlertTriangle size={16} className="mt-0.5 shrink-0 text-rose-400" />
+              <p className="text-xs text-rose-100">
+                Núcleos en rojo: prioriza en bloques 1 y 3 de tu misión diaria.
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    </motion.section>
+  );
+}

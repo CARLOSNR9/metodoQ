@@ -18,6 +18,8 @@ type StudyHabitCalendarProps = {
   userId: string;
   planStartedAt?: string | null;
   streakCount?: number;
+  dailyTarget?: number;
+  streakMinimum?: number;
 };
 
 function CalendarCell({ day }: { day: DailyHabitDay }) {
@@ -83,6 +85,8 @@ export function StudyHabitCalendar({
   userId,
   planStartedAt,
   streakCount = 0,
+  dailyTarget = PRO_DAILY_MIN_QUESTIONS,
+  streakMinimum = PRO_DAILY_MIN_QUESTIONS,
 }: StudyHabitCalendarProps) {
   const [days, setDays] = useState<DailyHabitDay[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -99,6 +103,8 @@ export function StudyHabitCalendar({
           buildPlanPeriodDays({
             results,
             planStartedAt: planStartedAt ?? null,
+            minQuestions: dailyTarget,
+            streakMinimum,
           }),
         );
       } catch (error) {
@@ -113,7 +119,7 @@ export function StudyHabitCalendar({
     return () => {
       mounted = false;
     };
-  }, [userId, planStartedAt]);
+  }, [userId, planStartedAt, dailyTarget, streakMinimum]);
 
   const computedStreak = useMemo(() => countStudiedStreak(days), [days]);
   const displayStreak = Math.max(streakCount, computedStreak);
@@ -134,12 +140,20 @@ export function StudyHabitCalendar({
             {planStartedAt ? (
               <>
                 Desde el <span className="font-medium text-white">{planStartLabel}</span> · meta diaria:{" "}
-                <span className="font-medium text-white">{PRO_DAILY_MIN_QUESTIONS} preguntas</span>.
+                <span className="font-medium text-white">{dailyTarget} preguntas</span>
+                {streakMinimum < dailyTarget ? (
+                  <>
+                    {" "}
+                    · racha desde{" "}
+                    <span className="font-medium text-white">{streakMinimum}</span>
+                  </>
+                ) : null}
+                .
               </>
             ) : (
               <>
                 Meta diaria del plan Pro:{" "}
-                <span className="font-medium text-white">{PRO_DAILY_MIN_QUESTIONS} preguntas</span>.
+                <span className="font-medium text-white">{dailyTarget} preguntas</span>.
               </>
             )}
           </p>
@@ -194,7 +208,7 @@ export function StudyHabitCalendar({
         </div>
       ) : days.length === 0 ? (
         <p className="mt-6 text-sm text-mq-muted">
-          Aún no hay historial. Tu primer día con {PRO_DAILY_MIN_QUESTIONS} preguntas aparecerá aquí en
+          Aún no hay historial. Tu primer día con {dailyTarget} preguntas aparecerá aquí en
           verde.
         </p>
       ) : (
@@ -207,7 +221,7 @@ export function StudyHabitCalendar({
 
       <div className="mt-5 flex flex-wrap items-center gap-4 text-[10px] font-bold uppercase tracking-wider text-mq-muted">
         <span className="inline-flex items-center gap-1.5">
-          <Check size={12} className="text-emerald-400" /> {PRO_DAILY_MIN_QUESTIONS}+ preguntas
+          <Check size={12} className="text-emerald-400" /> {dailyTarget}+ preguntas
         </span>
         <span className="inline-flex items-center gap-1.5">
           <Minus size={12} className="text-amber-400" /> Meta incompleta

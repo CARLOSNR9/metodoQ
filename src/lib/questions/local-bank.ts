@@ -23,6 +23,7 @@ export function getLocalQuestionBank(): TrainingQuestion[] {
     EXTENDED_QUESTIONS,
     UDEA_DIAGNOSTIC_QUESTIONS,
     UNAL_DIAGNOSTIC_QUESTIONS,
+    UCC_PASTO_DIAGNOSTIC_QUESTIONS,
   ]);
 }
 

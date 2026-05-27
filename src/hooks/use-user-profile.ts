@@ -6,6 +6,7 @@ import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { applyDemoStudentProfileEnhancements } from "@/lib/demo/demo-student-profiles";
 import type { ManualSaleInfo } from "@/lib/plans/subscription-display";
+import type { UccCvInput } from "@/lib/diagnostic/ucc-cv-scorer";
 
 export interface UserProfile {
   uid: string;
@@ -25,6 +26,7 @@ export interface UserProfile {
   streakCount?: number;
   streakLastTrainingDate?: string | null;
   emailOptIn?: boolean;
+  browserNudgeOptIn?: boolean;
   createdAt?: unknown;
   attemptsCount?: number;
   cumulativeScore?: number | null;
@@ -36,6 +38,14 @@ export interface UserProfile {
   weaknesses?: string[];
   avgResponseTime?: number;
   totalCorrectAnswers?: number;
+  uccCvProfile?: Partial<UccCvInput>;
+  uccPhase2Progress?: {
+    interviewScores?: number[];
+    psychometricScores?: number[];
+    scenariosCompleted?: string[];
+    lastInterviewScore?: number;
+    lastPsychometricScore?: number;
+  };
 }
 
 export function useUserProfile() {

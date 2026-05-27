@@ -13,6 +13,8 @@ import {
 import { getFirebaseDb } from "@/lib/firebase";
 import { checkAchievements } from "@/lib/achievements";
 import { PRO_DAILY_MIN_QUESTIONS } from "@/lib/plans/limits";
+import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
+import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
 import { buildElizabethTrainingResults, isElizabethDemoEmail } from "@/lib/demo/elizabeth-training-data";
 import { getDemoTrainingResultsIfEligible } from "@/lib/demo/demo-training-data";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
@@ -292,18 +294,22 @@ function countTodayQuestions(results: DemoResultItem[]): number {
 
 export async function registerTrainingDay(userId: string) {
   const results = await getUserDemoResults(userId);
-  if (countTodayQuestions(results) < PRO_DAILY_MIN_QUESTIONS) {
-    const userRef = doc(getFirebaseDb(), "users", userId);
-    const snapshot = await getDoc(userRef);
-    return (snapshot.data() as { streakCount?: number } | undefined)?.streakCount ?? 0;
-  }
-
-  const db = getFirebaseDb();
-  const userRef = doc(db, "users", userId);
+  const userRef = doc(getFirebaseDb(), "users", userId);
   const snapshot = await getDoc(userRef);
   const userData = snapshot.data() as
-    | { streakCount?: number; streakLastTrainingDate?: string | null }
+    | (LearningTrackProfile & {
+        streakCount?: number;
+        streakLastTrainingDate?: string | null;
+        planStartedAt?: string | null;
+      })
     | undefined;
+
+  const goal = getDailyGoalForProfile(userData, userData?.planStartedAt);
+  const todayCount = countTodayQuestions(results);
+
+  if (todayCount < goal.streakMinimum) {
+    return userData?.streakCount ?? 0;
+  }
 
   const currentStreak = userData?.streakCount ?? 0;
   const lastTrainingDate = userData?.streakLastTrainingDate ?? null;

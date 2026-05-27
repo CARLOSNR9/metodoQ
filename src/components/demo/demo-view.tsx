@@ -41,7 +41,11 @@ import {
   selectAdaptiveQuestions,
 } from "@/lib/training/adaptive";
 import { getAct1DiagnosticSession } from "@/lib/diagnostic/get-diagnostic-session";
-import { getEffectiveGoalSpecialty } from "@/lib/diagnostic/ucc-pasto-track";
+import { getEffectiveGoalSpecialty, isUccPastoMedicinaInternaProUser } from "@/lib/diagnostic/ucc-pasto-track";
+import { selectUccTrainingQuestions } from "@/lib/training/ucc-module-selection";
+import { selectUccSimulacroQuestions } from "@/lib/training/ucc-simulacro-selection";
+import type { UccMiBlockKind } from "@/lib/training/ucc-mi-daily-plan";
+import { getUccMiWeekModule } from "@/lib/training/ucc-mi-daily-plan";
 import { getPerformanceStatsKey } from "@/lib/diagnostic/exam-blueprint";
 import {
   computeCumulativePerformance,
@@ -50,7 +54,10 @@ import {
 import {
   checkCanStartSession,
   recordSessionStart,
+  type UsageBlockMeta,
 } from "@/lib/training/usage";
+import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
+import { UCC_MI_DAILY_BONUS_MAX } from "@/lib/training/ucc-mi-daily-plan";
 
 export type DemoQuestion = TrainingQuestion;
 
@@ -82,7 +89,16 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const urlSpecialty = searchParams.get("specialty");
   const isAct1 = source === "act1";
   const isDailyPill = searchParams.get("mode") === "daily-pill";
+  const isBonusMode = searchParams.get("mode") === "bonus";
   const isSimulacro = searchParams.get("mode") === "simulacro";
+  const isUccSimulacro = searchParams.get("ucc") === "1";
+  const blockParam = searchParams.get("block") as UccMiBlockKind | null;
+  const countParam = searchParams.get("count");
+  const minutesParam = searchParams.get("minutes");
+  const sessionCountOverride = countParam ? Math.max(1, parseInt(countParam, 10) || 0) : null;
+  const simulacroMinutesOverride = minutesParam
+    ? Math.max(30, parseInt(minutesParam, 10) || 0)
+    : null;
 
   const { plan, loading: isLoadingPlan } = useUserPlan();
   const normalizedPlan = normalizeUserPlan(plan ?? undefined);
@@ -112,10 +128,18 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [questionBank, setQuestionBank] = useState<DemoQuestion[]>([]);
   const [isLoadingQuestions, setIsLoadingQuestions] = useState(true);
   const [usageBlockReason, setUsageBlockReason] = useState<string | null>(null);
+  const [usageBlockMeta, setUsageBlockMeta] = useState<UsageBlockMeta>({});
+  const [userTrackProfile, setUserTrackProfile] = useState<
+    (LearningTrackProfile & { planStartedAt?: string | null }) | null
+  >(null);
   const [liveFeedbackMessage, setLiveFeedbackMessage] = useState<string | null>(null);
   const [totalSeconds, setTotalSeconds] = useState(0);
   const hasTrackedFinishDemoRef = useRef(false);
-  const simulacroMaxSeconds = isSimulacro ? limits.simulacroMinutes * 60 : 0;
+  const effectiveSimulacroMinutes =
+    isUccSimulacro && simulacroMinutesOverride
+      ? simulacroMinutesOverride
+      : limits.simulacroMinutes;
+  const simulacroMaxSeconds = isSimulacro ? effectiveSimulacroMinutes * 60 : 0;
 
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
@@ -127,6 +151,14 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       : "training";
   const plannedQuestionCount = isDailyPill
     ? 1
+    : isBonusMode
+      ? Math.min(
+          sessionCountOverride ?? UCC_MI_DAILY_BONUS_MAX,
+          UCC_MI_DAILY_BONUS_MAX,
+          questionBank.length || UCC_MI_DAILY_BONUS_MAX,
+        )
+    : sessionCountOverride
+      ? Math.min(sessionCountOverride, questionBank.length || sessionCountOverride)
     : isSimulacro
       ? Math.min(limits.simulacroQuestionCount, questionBank.length || limits.simulacroQuestionCount)
       : Math.min(limits.questionsPerSession, questionBank.length || limits.questionsPerSession);
@@ -167,11 +199,24 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
+  const uccWeekModule =
+    userTrackProfile && isUccPastoMedicinaInternaProUser(userTrackProfile)
+      ? getUccMiWeekModule(userTrackProfile.planStartedAt)
+      : null;
+
   const startAdaptiveSession = async () => {
     if (user) {
-      const check = await checkCanStartSession(user.uid, effectivePlan, sessionType);
+      const check = await checkCanStartSession(user.uid, effectivePlan, sessionType, {
+        isBonusMode,
+        profile: userTrackProfile,
+        planStartedAt: userTrackProfile?.planStartedAt,
+      });
       if (!check.allowed) {
         setUsageBlockReason(check.reason);
+        setUsageBlockMeta({
+          dayClosed: "dayClosed" in check ? check.dayClosed : undefined,
+          bonusAvailable: "bonusAvailable" in check ? check.bonusAvailable : undefined,
+        });
         return;
       }
       await recordSessionStart(user.uid, sessionType);
@@ -189,9 +234,33 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     const dedicatedBattery = isAct1
       ? getAct1DiagnosticSession(urlUniversity, urlSpecialty)
       : null;
+
+    const isUccMiTraining =
+      !isAct1 &&
+      !isDailyPill &&
+      !isSimulacro &&
+      isUccPastoMedicinaInternaProUser(userTrackProfile);
+
+    const isUccMiSimulacro =
+      isSimulacro && isUccPastoMedicinaInternaProUser(userTrackProfile);
+
     const selected = dedicatedBattery
       ? dedicatedBattery
-      : selectAdaptiveQuestions(pool, count, learningProfile);
+      : isUccMiSimulacro
+        ? selectUccSimulacroQuestions({
+            questions: pool,
+            count,
+            profile: learningProfile,
+          })
+        : isUccMiTraining
+          ? selectUccTrainingQuestions({
+              questions: pool,
+              count,
+              profile: learningProfile,
+              blockKind: blockParam,
+              planStartedAt: userTrackProfile?.planStartedAt,
+            })
+          : selectAdaptiveQuestions(pool, count, learningProfile);
 
     if (user && isAct1 && urlUniversity) {
       const goalSpecialty = getEffectiveGoalSpecialty(urlUniversity, urlSpecialty);
@@ -205,6 +274,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     setHasStarted(true);
     setTotalSeconds(0);
     setUsageBlockReason(null);
+    setUsageBlockMeta({});
     trackStartDemo({
       userId: user?.uid,
       source: isDailyPill ? "daily-pill" : isSimulacro ? "simulacro" : (source ?? "direct"),
@@ -286,6 +356,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
           strengths: data?.strengths ?? [],
           topicStats,
         });
+        setUserTrackProfile({
+          plan: data?.plan,
+          goalUniversity: data?.goalUniversity,
+          goalSpecialty: data?.goalSpecialty,
+          planStartedAt: data?.planStartedAt ?? null,
+        });
       } catch (error) {
         console.error("No se pudo cargar el perfil adaptativo.", error);
         if (isMounted) setLearningProfile(EMPTY_PROFILE);
@@ -294,6 +370,44 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     void loadLearningProfile();
     return () => { isMounted = false; };
   }, [user]);
+
+  useEffect(() => {
+    if (!user || isAct1 || isDailyPill || isSimulacro || hasStarted) return;
+
+    let mounted = true;
+
+    async function preloadUsageGate() {
+      if (!user) return;
+      const check = await checkCanStartSession(user.uid, effectivePlan, sessionType, {
+        isBonusMode,
+        profile: userTrackProfile,
+        planStartedAt: userTrackProfile?.planStartedAt,
+      });
+      if (!mounted) return;
+      if (!check.allowed) {
+        setUsageBlockReason(check.reason);
+        setUsageBlockMeta({
+          dayClosed: "dayClosed" in check ? check.dayClosed : undefined,
+          bonusAvailable: "bonusAvailable" in check ? check.bonusAvailable : undefined,
+        });
+      }
+    }
+
+    void preloadUsageGate();
+    return () => {
+      mounted = false;
+    };
+  }, [
+    user,
+    isAct1,
+    isDailyPill,
+    isSimulacro,
+    hasStarted,
+    effectivePlan,
+    sessionType,
+    isBonusMode,
+    userTrackProfile,
+  ]);
 
   useEffect(() => {
     if (!hasStarted || isResultsStep || !currentQuestion) return;
@@ -516,22 +630,48 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 </div>
                 <h1 className="mb-4 text-4xl font-black tracking-tight text-white sm:text-6xl">
                   {isSimulacro ? (
-                    <>Simulacro <span className="text-mq-accent">tipo examen</span></>
+                    <>Simulacro <span className="text-mq-accent">{isUccSimulacro ? "UCC Pasto" : "tipo examen"}</span></>
+                  ) : isBonusMode ? (
+                    <>Modo <span className="text-mq-accent">bonus</span></>
+                  ) : blockParam ? (
+                    <>Bloque <span className="text-mq-accent">del día</span></>
                   ) : (
                     <>Prepárate para <span className="text-mq-accent">Ganar</span></>
                   )}
                 </h1>
                 <p className="mb-6 max-w-lg text-lg text-mq-muted">
                   {isSimulacro
-                    ? `${plannedQuestionCount} preguntas · ${limits.simulacroMinutes} min máximo.`
-                    : `Entrenamiento adaptativo de ${plannedQuestionCount} preguntas.`}
+                    ? `${plannedQuestionCount} preguntas · ${effectiveSimulacroMinutes} min máximo${isUccSimulacro ? " · Res. 108" : ""}.`
+                    : isBonusMode
+                      ? `Hasta ${plannedQuestionCount} preguntas extra sin presión.`
+                      : blockParam
+                        ? `${plannedQuestionCount} preguntas · ${blockParam === "new" ? "material nuevo" : blockParam === "review" ? "repaso espaciado" : "debilidades"}${uccWeekModule ? ` · ${uccWeekModule.label}` : ""}.`
+                        : `Entrenamiento adaptativo de ${plannedQuestionCount} preguntas.`}
                 </p>
                 {usageBlockReason ? (
                   <div className="mb-6 max-w-md rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
                     {usageBlockReason}
-                    <Link href="/dashboard/planes" className="mt-2 block font-bold text-mq-accent hover:underline">
-                      Ver planes
-                    </Link>
+                    {usageBlockMeta.bonusAvailable ? (
+                      <Link
+                        href={`/dashboard/entrenar?mode=bonus&count=${UCC_MI_DAILY_BONUS_MAX}&block=weak`}
+                        className="mt-2 block font-bold text-mq-accent hover:underline"
+                      >
+                        Modo bonus opcional ({UCC_MI_DAILY_BONUS_MAX} preg)
+                      </Link>
+                    ) : null}
+                    {usageBlockMeta.dayClosed && !usageBlockMeta.bonusAvailable ? (
+                      <Link
+                        href="/dashboard"
+                        className="mt-2 block font-bold text-mq-accent hover:underline"
+                      >
+                        Volver al panel
+                      </Link>
+                    ) : null}
+                    {!usageBlockMeta.dayClosed ? (
+                      <Link href="/dashboard/planes" className="mt-2 block font-bold text-mq-accent hover:underline">
+                        Ver planes
+                      </Link>
+                    ) : null}
                   </div>
                 ) : null}
                 <button

@@ -9,6 +9,10 @@ import {
   streakReminderEmail,
   welcomeEmail,
 } from "./templates";
+import { runUccCoachingEmailBatch } from "@/lib/server/ucc-coaching-emails";
+import { hasProFeatures } from "@/lib/plans/access";
+import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
+import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 
 export async function sendWelcomeEmail(to: string, displayName?: string) {
   if (!isEmailConfigured()) return { ok: false, skipped: true };
@@ -33,9 +37,13 @@ export async function sendPlanExpiryReminder(to: string, planId: string, daysRem
   return sendEmail({ to, subject: tpl.subject, html: tpl.html, text: tpl.text });
 }
 
-export async function sendStreakReminder(to: string, streakCount: number) {
+export async function sendStreakReminder(
+  to: string,
+  streakCount: number,
+  dailyTarget = 10,
+) {
   if (!isEmailConfigured()) return { ok: false, skipped: true };
-  const tpl = streakReminderEmail(streakCount);
+  const tpl = streakReminderEmail(streakCount, dailyTarget);
   return sendEmail({ to, subject: tpl.subject, html: tpl.html, text: tpl.text });
 }
 
@@ -117,7 +125,19 @@ export async function runEngagementEmailBatch() {
       lastTraining !== today &&
       lastStreakEmail !== today
     ) {
-      const result = await sendStreakReminder(email, streakCount);
+      const isUccMi =
+        hasProFeatures(plan) && isUccPastoUniversity(data.goalUniversity as string);
+      const dailyTarget = isUccMi
+        ? getDailyGoalForProfile(
+            {
+              plan: data.plan as string,
+              goalUniversity: data.goalUniversity as string,
+              goalSpecialty: data.goalSpecialty as string,
+            },
+            data.planStartedAt as string | null,
+          ).streakMinimum
+        : 10;
+      const result = await sendStreakReminder(email, streakCount, dailyTarget);
       if (result.ok) {
         await doc.ref.set({ lastStreakEmailAt: today }, { merge: true });
         sent += 1;
@@ -125,5 +145,8 @@ export async function runEngagementEmailBatch() {
     }
   }
 
-  return { sent, skipped: false };
+  const uccResult = await runUccCoachingEmailBatch();
+  sent += uccResult.sent ?? 0;
+
+  return { sent, skipped: false, uccCoaching: uccResult };
 }

@@ -3,12 +3,16 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { AlertTriangle } from "lucide-react";
+import { doc, getDoc } from "firebase/firestore";
+import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
 import {
   buildLastNDays,
   countConsecutiveInactiveDays,
   PRO_DAILY_MIN_QUESTIONS,
 } from "@/lib/training/daily-activity";
+import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
+import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
 
 const INACTIVITY_ALERT_DAYS = 2;
 const LOOKBACK_DAYS = 14;
@@ -20,6 +24,7 @@ type ProStudyGapBannerProps = {
 
 export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerProps) {
   const [inactiveDays, setInactiveDays] = useState(0);
+  const [dailyTarget, setDailyTarget] = useState(PRO_DAILY_MIN_QUESTIONS);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -28,12 +33,22 @@ export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerPr
     async function load() {
       setIsLoading(true);
       try {
-        const results = await getUserDemoResults(userId);
+        const [results, userSnap] = await Promise.all([
+          getUserDemoResults(userId),
+          getDoc(doc(getFirebaseDb(), "users", userId)),
+        ]);
         if (!mounted) return;
+
+        const profile = (userSnap.data() as LearningTrackProfile | undefined) ?? {};
+        const goal = getDailyGoalForProfile(profile, planStartedAt);
+        setDailyTarget(goal.dailyTarget);
+
         const days = buildLastNDays({
           results,
           planStartedAt: planStartedAt ?? null,
           n: LOOKBACK_DAYS,
+          minQuestions: goal.dailyTarget,
+          streakMinimum: goal.streakMinimum,
         });
         setInactiveDays(countConsecutiveInactiveDays(days));
       } catch (error) {
@@ -75,11 +90,11 @@ export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerPr
         <div>
           <p className="text-sm font-semibold text-white">
             {inactiveDays === 2
-              ? `Llevas 2 días sin cumplir tu meta de ${PRO_DAILY_MIN_QUESTIONS} preguntas`
+              ? `Llevas 2 días sin cumplir tu meta de ${dailyTarget} preguntas`
               : `Llevas ${inactiveDays} días sin cumplir tu meta diaria`}
           </p>
           <p className="mt-0.5 text-xs text-mq-muted">
-            Tu plan Pro exige {PRO_DAILY_MIN_QUESTIONS} preguntas al día. Cierra hoy tu cuota para
+            Tu plan Pro exige {dailyTarget} preguntas al día. Cierra hoy tu cuota para
             retomar el ritmo.
           </p>
         </div>
