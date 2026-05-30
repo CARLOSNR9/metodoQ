@@ -33,6 +33,8 @@ export type FinalResultsScreenProps = {
   specialty?: string | null;
   userPlan?: StoredUserPlan | null;
   uccBlockCompletion?: UccBlockCompletionCTA | null;
+  /** En /dashboard/entrenar, evita enlazar a la misma ruta (no navega). */
+  preferDashboardReturn?: boolean;
 };
 
 function getPerformanceProfile(scorePercentage: number) {
@@ -79,6 +81,7 @@ export function FinalResultsScreen({
   totalQuestionsAnswered = 0,
   userPlan,
   uccBlockCompletion = null,
+  preferDashboardReturn = false,
 }: FinalResultsScreenProps) {
   const isAct1 = source === "act1";
   const isDailyPill = source === "daily-pill";
@@ -112,6 +115,11 @@ export function FinalResultsScreen({
 
   const uccPrimaryHref =
     uccBlockCompletion?.nextHref ?? uccBlockCompletion?.dashboardHref ?? "/dashboard";
+
+  const trainingContinueHref = preferDashboardReturn ? "/dashboard" : "/dashboard/entrenar";
+  const trainingContinueLabel = preferDashboardReturn
+    ? "Volver al dashboard"
+    : "Continuar entrenamiento";
 
   return (
     <div className={`mt-10 flex justify-center px-4 ${className ?? ""}`}>
@@ -471,10 +479,10 @@ export function FinalResultsScreen({
           ) : isResidenteUser ? (
             <>
               <Link
-                href="/dashboard/entrenar"
+                href={trainingContinueHref}
                 className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
               >
-                Continuar entrenamiento
+                {trainingContinueLabel}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <button
@@ -488,10 +496,10 @@ export function FinalResultsScreen({
           ) : isProUser ? (
             <>
               <Link
-                href="/dashboard/entrenar"
+                href={trainingContinueHref}
                 className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
               >
-                Continuar entrenamiento
+                {trainingContinueLabel}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <button

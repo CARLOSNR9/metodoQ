@@ -4,7 +4,7 @@ import { onAuthStateChanged, type User } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import {
   AttemptHistory,
   FinalResultsScreen,
@@ -96,7 +96,9 @@ const EMPTY_PROFILE: UserLearningProfile = {
 };
 
 export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
+  const pathname = usePathname();
   const searchParams = useSearchParams();
+  const preferDashboardReturn = pathname.startsWith("/dashboard/entrenar");
   const source = searchParams.get("source");
   const urlUniversity = searchParams.get("university");
   const urlSpecialty = searchParams.get("specialty");
@@ -718,6 +720,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               answersByQuestionId={answersByQuestionId}
               userPlan={effectivePlan}
               uccBlockCompletion={uccBlockCompletion}
+              preferDashboardReturn={preferDashboardReturn}
             />
             {user && !isDailyPill && (
               <div className="mt-12 space-y-12">
