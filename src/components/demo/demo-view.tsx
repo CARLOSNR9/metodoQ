@@ -3,8 +3,8 @@
 import { onAuthStateChanged, type User } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import Link from "next/link";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
   AttemptHistory,
   FinalResultsScreen,
@@ -97,6 +97,7 @@ const EMPTY_PROFILE: UserLearningProfile = {
 
 export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const pathname = usePathname();
+  const router = useRouter();
   const searchParams = useSearchParams();
   const preferDashboardReturn = pathname.startsWith("/dashboard/entrenar");
   const source = searchParams.get("source");
@@ -154,6 +155,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [totalSeconds, setTotalSeconds] = useState(0);
   const hasTrackedFinishDemoRef = useRef(false);
   const hasRecordedSessionRef = useRef(false);
+  const pendingUccAutoStartRef = useRef<{ block: UccMiBlockKind; count: number } | null>(null);
+  const [sessionCompletedBlockId, setSessionCompletedBlockId] =
+    useState<UccMiBlockKind | null>(null);
   const effectiveSimulacroMinutes =
     isUccSimulacro && simulacroMinutesOverride
       ? simulacroMinutesOverride
@@ -239,15 +243,45 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       : null;
 
   const uccBlockCompletion = useMemo(() => {
-    if (!blockParam || !["new", "review", "weak"].includes(blockParam)) {
-      return null;
-    }
+    if (!sessionCompletedBlockId) return null;
     return getUccBlockCompletionCTA(
-      blockParam,
+      sessionCompletedBlockId,
       userTrackProfile?.planStartedAt,
       learningProfile.weaknesses[0] ?? null,
     );
-  }, [blockParam, userTrackProfile?.planStartedAt, learningProfile.weaknesses]);
+  }, [sessionCompletedBlockId, userTrackProfile?.planStartedAt, learningProfile.weaknesses]);
+
+  const resetSessionState = useCallback(() => {
+    setHasStarted(false);
+    setCurrentQuestionIndex(0);
+    setAnswersByQuestionId({});
+    setCorrectAnswers(0);
+    setWrongAnswers(0);
+    setResponseTimes([]);
+    setHasSavedCurrentAttempt(false);
+    setWrongTopicsByName({});
+    setCorrectTopicsByName({});
+    hasTrackedFinishDemoRef.current = false;
+    hasRecordedSessionRef.current = false;
+    setTotalSeconds(0);
+    setSessionCompletedBlockId(null);
+    setUsageBlockReason(null);
+    setUsageBlockMeta({});
+  }, []);
+
+  const handleContinueNextUccBlock = useCallback(() => {
+    const nextBlock = uccBlockCompletion?.nextBlock;
+    if (!nextBlock) return;
+
+    resetSessionState();
+    pendingUccAutoStartRef.current = {
+      block: nextBlock.id,
+      count: nextBlock.questions,
+    };
+    router.replace(
+      `/dashboard/entrenar?block=${nextBlock.id}&count=${nextBlock.questions}`,
+    );
+  }, [uccBlockCompletion, resetSessionState, router]);
 
   const startAdaptiveSession = async () => {
     if (user) {
@@ -383,6 +417,46 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       void startAdaptiveSession();
     }
   }, [isAct1, isDailyPill, hasStarted, isLoadingPlan, isCheckingAuth, isLoadingQuestions, questionBank.length]);
+
+  useEffect(() => {
+    if (
+      !isResultsStep ||
+      !blockParam ||
+      !["new", "review", "weak"].includes(blockParam) ||
+      isBonusMode ||
+      isDailyPill ||
+      isAct1 ||
+      isSimulacro ||
+      isRepasoMode
+    ) {
+      return;
+    }
+    setSessionCompletedBlockId((prev) => prev ?? blockParam);
+  }, [
+    isResultsStep,
+    blockParam,
+    isBonusMode,
+    isDailyPill,
+    isAct1,
+    isSimulacro,
+    isRepasoMode,
+  ]);
+
+  useEffect(() => {
+    const pending = pendingUccAutoStartRef.current;
+    if (!pending || hasStarted || isLoadingQuestions || isCheckingAuth) return;
+    if (blockParam !== pending.block || countParam !== String(pending.count)) return;
+
+    pendingUccAutoStartRef.current = null;
+    void startAdaptiveSession();
+  }, [
+    blockParam,
+    countParam,
+    hasStarted,
+    isLoadingQuestions,
+    isCheckingAuth,
+    questionBank.length,
+  ]);
 
   useEffect(() => {
     let unsubscribe: (() => void) | undefined;
@@ -709,19 +783,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               totalQuestionsAnswered={cumulativePerformance.totalQuestions}
               avgResponseTime={calculateAverageResponseTime(responseTimes)}
               totalSeconds={totalSeconds}
-              onRepeatDemo={() => {
-                setHasStarted(false);
-                setCurrentQuestionIndex(0);
-                setAnswersByQuestionId({});
-                setCorrectAnswers(0);
-                setWrongAnswers(0);
-                setResponseTimes([]);
-                setHasSavedCurrentAttempt(false);
-                setWrongTopicsByName({});
-                setCorrectTopicsByName({});
-                hasTrackedFinishDemoRef.current = false;
-                setTotalSeconds(0);
-              }}
+              onRepeatDemo={resetSessionState}
               source={isDailyPill ? "daily-pill" : source}
               university={urlUniversity}
               specialty={urlSpecialty}
@@ -729,6 +791,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               answersByQuestionId={answersByQuestionId}
               userPlan={effectivePlan}
               uccBlockCompletion={uccBlockCompletion}
+              onContinueNextUccBlock={
+                uccBlockCompletion?.nextBlock ? handleContinueNextUccBlock : undefined
+              }
               preferDashboardReturn={preferDashboardReturn}
             />
             {user && !isDailyPill && (
