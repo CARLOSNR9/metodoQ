@@ -63,6 +63,14 @@ import {
 } from "@/lib/training/usage";
 import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
 import { UCC_MI_DAILY_BONUS_MAX } from "@/lib/training/ucc-mi-daily-plan";
+import {
+  getTodayFailedQuestions,
+  pickQuestionsFromBankByIds,
+  recordFailedQuestion,
+  resolveFailedQuestion,
+} from "@/lib/training/failed-questions";
+import { markRepasoCierreCompleted } from "@/lib/training/repaso-cierre";
+import type { SessionTypeLabel } from "@/lib/results";
 
 export type DemoQuestion = TrainingQuestion;
 
@@ -95,6 +103,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const isAct1 = source === "act1";
   const isDailyPill = searchParams.get("mode") === "daily-pill";
   const isBonusMode = searchParams.get("mode") === "bonus";
+  const isRepasoPractice = searchParams.get("mode") === "repaso";
+  const isRepasoCierre = searchParams.get("mode") === "repaso-cierre";
+  const isRepasoMode = isRepasoPractice || isRepasoCierre;
   const isSimulacro = searchParams.get("mode") === "simulacro";
   const isUccSimulacro = searchParams.get("ucc") === "1";
   const blockParam = searchParams.get("block") as UccMiBlockKind | null;
@@ -155,8 +166,20 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     : isAct1
       ? "diagnostico"
       : "training";
+  const resultSessionType: SessionTypeLabel = isDailyPill
+    ? "daily-pill"
+    : isRepasoCierre
+      ? "repaso-cierre"
+      : isRepasoPractice
+        ? "repaso"
+        : sessionType;
+  const [repasoPendingCount, setRepasoPendingCount] = useState<number | null>(null);
   const plannedQuestionCount = isDailyPill
     ? 1
+    : isRepasoMode
+      ? sessionCountOverride && repasoPendingCount != null
+        ? Math.min(sessionCountOverride, repasoPendingCount)
+        : (repasoPendingCount ?? 0)
     : isBonusMode
       ? Math.min(
           sessionCountOverride ?? UCC_MI_DAILY_BONUS_MAX,
@@ -229,6 +252,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       const check = await checkCanStartSession(user.uid, effectivePlan, sessionType, {
         isBonusMode,
         isDailyPill,
+        isRepasoPractice,
+        isRepasoCierre,
         profile: userTrackProfile,
         planStartedAt: userTrackProfile?.planStartedAt,
       });
@@ -255,7 +280,25 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       pool = [DAILY_CHALLENGES[dayIndex]];
     }
 
-    const count = isDailyPill ? 1 : plannedQuestionCount;
+    if (isRepasoMode && user) {
+      const failed = await getTodayFailedQuestions(user.uid, { unresolvedOnly: true });
+      const ids = failed.map((item) => item.questionId);
+      pool = pickQuestionsFromBankByIds(questionBank, ids);
+      if (pool.length === 0) {
+        setUsageBlockReason(
+          isRepasoCierre
+            ? "No tienes preguntas fallidas pendientes para el examen de cierre."
+            : "No tienes preguntas fallidas pendientes para repasar hoy.",
+        );
+        return;
+      }
+    }
+
+    const count = isDailyPill
+      ? 1
+      : isRepasoMode
+        ? Math.min(plannedQuestionCount || pool.length, pool.length)
+        : plannedQuestionCount;
     const dedicatedBattery = isAct1
       ? getAct1DiagnosticSession(urlUniversity, urlSpecialty)
       : null;
@@ -264,12 +307,15 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       !isAct1 &&
       !isDailyPill &&
       !isSimulacro &&
+      !isRepasoMode &&
       isUccPastoMedicinaInternaProUser(userTrackProfile);
 
     const isUccMiSimulacro =
       isSimulacro && isUccPastoMedicinaInternaProUser(userTrackProfile);
 
-    const selected = dedicatedBattery
+    const selected = isRepasoMode
+      ? pool.slice(0, count)
+      : dedicatedBattery
       ? dedicatedBattery
       : isUccMiSimulacro
         ? selectUccSimulacroQuestions({
@@ -397,6 +443,20 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   }, [user]);
 
   useEffect(() => {
+    if (!user || !isRepasoMode) {
+      setRepasoPendingCount(null);
+      return;
+    }
+    let mounted = true;
+    void getTodayFailedQuestions(user.uid, { unresolvedOnly: true }).then((failed) => {
+      if (mounted) setRepasoPendingCount(failed.length);
+    });
+    return () => {
+      mounted = false;
+    };
+  }, [user, isRepasoMode]);
+
+  useEffect(() => {
     if (!user || isAct1 || isDailyPill || isSimulacro || hasStarted) return;
 
     let mounted = true;
@@ -405,6 +465,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       if (!user) return;
       const check = await checkCanStartSession(user.uid, effectivePlan, sessionType, {
         isBonusMode,
+        isDailyPill,
+        isRepasoPractice,
+        isRepasoCierre,
         profile: userTrackProfile,
         planStartedAt: userTrackProfile?.planStartedAt,
       });
@@ -415,6 +478,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
           dayClosed: "dayClosed" in check ? check.dayClosed : undefined,
           bonusAvailable: "bonusAvailable" in check ? check.bonusAvailable : undefined,
         });
+      } else if (isRepasoMode) {
+        setUsageBlockReason(null);
       }
     }
 
@@ -431,6 +496,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     effectivePlan,
     sessionType,
     isBonusMode,
+    isRepasoMode,
+    isRepasoPractice,
+    isRepasoCierre,
     userTrackProfile,
   ]);
 
@@ -471,9 +539,14 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       wrongTopics: wrongTopicsByName,
       correctTopics: correctTopicsByName,
       avgResponseTime: calculateAverageResponseTime(responseTimes),
-      sessionType: isDailyPill ? "daily-pill" : sessionType,
+      sessionType: resultSessionType,
       uccBlockKind:
-        blockParam && ["new", "review", "weak"].includes(blockParam) && !isDailyPill && !isAct1 && !isSimulacro
+        blockParam &&
+        ["new", "review", "weak"].includes(blockParam) &&
+        !isDailyPill &&
+        !isAct1 &&
+        !isSimulacro &&
+        !isRepasoMode
           ? blockParam
           : undefined,
     }).then(() => {
@@ -481,7 +554,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       setHistoryRefreshKey((prev) => prev + 1);
       registerTrainingDay(user.uid).catch(console.error);
     });
-  }, [blockParam, correctAnswers, hasSavedCurrentAttempt, isAct1, isDailyPill, isResultsStep, isSimulacro, scorePercentage, sessionType, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
+  }, [blockParam, correctAnswers, hasSavedCurrentAttempt, isAct1, isDailyPill, isResultsStep, isSimulacro, resultSessionType, scorePercentage, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
+
+  useEffect(() => {
+    if (!isResultsStep || !user || !isRepasoCierre || hasSavedCurrentAttempt === false) return;
+    void markRepasoCierreCompleted(user.uid);
+  }, [isResultsStep, user, isRepasoCierre, hasSavedCurrentAttempt]);
 
   useEffect(() => {
     if (!isFreePlan || !hasStarted || hasTriggeredFreePaywall || isResultsStep || currentQuestionIndex !== totalQuestions - 1 || !hasAnsweredCurrentQuestion) return;
@@ -528,6 +606,26 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     } else {
       setWrongAnswers((prev) => prev + 1);
       setWrongTopicsByName((prev) => ({ ...prev, [statsKey]: (prev[statsKey] || 0) + 1 }));
+    }
+
+    if (user) {
+      if (!isCorrect) {
+        void recordFailedQuestion({
+          userId: user.uid,
+          questionId: currentQuestion.id,
+          topic: currentQuestion.topic,
+          statement: currentQuestion.statement,
+          selectedOptionId: optionId,
+          context: {
+            sessionType: resultSessionType,
+            uccBlockKind: blockParam,
+            mode: searchParams.get("mode"),
+            source,
+          },
+        });
+      } else if (isRepasoMode) {
+        void resolveFailedQuestion(user.uid, currentQuestion.id);
+      }
     }
 
     const selectedOption = currentQuestion.options.find((o) => o.id === optionId);
@@ -666,6 +764,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 <h1 className="mb-4 text-4xl font-black tracking-tight text-white sm:text-6xl">
                   {isSimulacro ? (
                     <>Simulacro <span className="text-mq-accent">{isUccSimulacro ? "UCC Pasto" : "tipo examen"}</span></>
+                  ) : isRepasoCierre ? (
+                    <>Examen de <span className="text-mq-accent">cierre</span></>
+                  ) : isRepasoPractice ? (
+                    <>Refuerzo de <span className="text-mq-accent">fallas</span></>
                   ) : isBonusMode ? (
                     <>Modo <span className="text-mq-accent">bonus</span></>
                   ) : blockParam ? (
@@ -677,7 +779,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 <p className="mb-6 max-w-lg text-lg text-mq-muted">
                   {isSimulacro
                     ? `${plannedQuestionCount} preguntas · ${effectiveSimulacroMinutes} min máximo${isUccSimulacro ? " · Res. 108" : ""}.`
-                    : isBonusMode
+                    : isRepasoCierre
+                      ? `${plannedQuestionCount} preguntas fallidas pendientes · examen final del día.`
+                      : isRepasoPractice
+                        ? `${plannedQuestionCount} preguntas que fallaste hoy · sin presión de misión.`
+                        : isBonusMode
                       ? `Hasta ${plannedQuestionCount} preguntas extra sin presión.`
                       : blockParam
                         ? `${plannedQuestionCount} preguntas · ${blockParam === "new" ? "material nuevo" : blockParam === "review" ? "repaso espaciado" : "debilidades"}${uccWeekModule ? ` · ${uccWeekModule.label}` : ""}.`
@@ -712,10 +818,20 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 <button
                   type="button"
                   onClick={() => void startAdaptiveSession()}
-                  disabled={Boolean(usageBlockReason) || questionBank.length === 0}
+                  disabled={
+                    Boolean(usageBlockReason) ||
+                    questionBank.length === 0 ||
+                    (isRepasoMode && repasoPendingCount === null)
+                  }
                   className="mq-premium-glow group flex h-16 items-center justify-center gap-4 rounded-2xl bg-mq-accent px-12 text-lg font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  {isSimulacro ? "INICIAR SIMULACRO" : "COMENZAR ENTRENAMIENTO"}
+                  {isSimulacro
+                    ? "INICIAR SIMULACRO"
+                    : isRepasoCierre
+                      ? "INICIAR EXAMEN DE CIERRE"
+                      : isRepasoPractice
+                        ? "REPASAR FALLAS"
+                        : "COMENZAR ENTRENAMIENTO"}
                   <ArrowRight className="transition-transform group-hover:translate-x-1" />
                 </button>
               </motion.div>
@@ -724,7 +840,15 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                  <div className="flex items-center justify-between">
                     <div className="space-y-1">
                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-accent">
-                          {isDailyPill ? "La Pildora del Dr. Q" : isSimulacro ? "Simulacro en curso" : "Entrenamiento adaptativo"}
+                          {isDailyPill
+                            ? "La Pildora del Dr. Q"
+                            : isRepasoCierre
+                              ? "Examen de cierre"
+                              : isRepasoPractice
+                                ? "Refuerzo de fallas"
+                                : isSimulacro
+                                  ? "Simulacro en curso"
+                                  : "Entrenamiento adaptativo"}
                        </p>
                        <h2 className="text-xl font-bold text-white">Pregunta {currentQuestionIndex + 1} de {totalQuestions}</h2>
                     </div>

@@ -31,6 +31,7 @@ import {
   type UccBlockProgressItem,
 } from "@/lib/training/ucc-mi-daily-plan";
 import { getTodayTrainingStatus } from "@/lib/training/usage";
+import { getRepasoCierreStatus } from "@/lib/training/repaso-cierre";
 
 type UccDailyMissionCardProps = {
   userId: string;
@@ -163,6 +164,8 @@ export function UccDailyMissionCard({
   const [resolvedWeakTopic, setResolvedWeakTopic] = useState(weakTopic ?? null);
   const [dayClosed, setDayClosed] = useState(false);
   const [bonusAvailable, setBonusAvailable] = useState(false);
+  const [cierreAvailable, setCierreAvailable] = useState(false);
+  const [cierrePendingCount, setCierrePendingCount] = useState(0);
   const [profile, setProfile] = useState<UserMissionProfile | null>(null);
 
   useEffect(() => {
@@ -186,9 +189,12 @@ export function UccDailyMissionCard({
         setTodayResults(results);
 
         const status = await getTodayTrainingStatus(userId, userData, planStartedAt);
+        const repaso = await getRepasoCierreStatus(userId, userData, planStartedAt);
         if (!mounted) return;
         setDayClosed(status.dayClosed);
         setBonusAvailable(status.bonusAvailable);
+        setCierreAvailable(repaso.cierreAvailable);
+        setCierrePendingCount(repaso.unresolvedCount);
       } catch (error) {
         console.error("No se pudo cargar la misión diaria UCC.", error);
       } finally {
@@ -332,6 +338,15 @@ export function UccDailyMissionCard({
                     Descansa. Mañana el algoritmo te programará repaso espaciado de lo que
                     practicaste hoy. El descanso consolida la memoria.
                   </p>
+                  {cierreAvailable && (
+                    <Link
+                      href={`/dashboard/entrenar?mode=repaso-cierre&count=${cierrePendingCount}`}
+                      className="inline-flex items-center gap-2 text-xs font-bold text-amber-200 underline-offset-2 hover:underline"
+                    >
+                      Examen de cierre: {cierrePendingCount} fallas pendientes
+                      <ArrowRight size={14} />
+                    </Link>
+                  )}
                   {bonusAvailable && (
                     <Link
                       href={buildBlockHref("weak", goal.bonusMax, true)}
@@ -341,6 +356,17 @@ export function UccDailyMissionCard({
                       <ArrowRight size={14} />
                     </Link>
                   )}
+                  {!cierreAvailable && cierrePendingCount > 0 ? (
+                    <Link
+                      href="/dashboard/refuerzo"
+                      className="inline-flex items-center gap-2 text-xs font-bold text-mq-accent underline-offset-2 hover:underline"
+                    >
+                      {missionComplete
+                        ? "Revisa tus fallas en Refuerzo"
+                        : `Tienes ${cierrePendingCount} fallas · repasa en Refuerzo`}
+                      <ArrowRight size={14} />
+                    </Link>
+                  ) : null}
                 </div>
               </div>
             </div>

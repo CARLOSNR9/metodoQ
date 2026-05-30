@@ -29,11 +29,23 @@ type SaveDemoResultInput = {
   wrongTopics?: Record<string, number>;
   correctTopics?: Record<string, number>;
   avgResponseTime?: number;
-  sessionType?: "training" | "diagnostico" | "simulacro" | "daily-pill";
+  sessionType?:
+    | "training"
+    | "diagnostico"
+    | "simulacro"
+    | "daily-pill"
+    | "repaso"
+    | "repaso-cierre";
   uccBlockKind?: UccMiBlockKind | null;
 };
 
-export type SessionTypeLabel = "training" | "diagnostico" | "simulacro" | "daily-pill";
+export type SessionTypeLabel =
+  | "training"
+  | "diagnostico"
+  | "simulacro"
+  | "daily-pill"
+  | "repaso"
+  | "repaso-cierre";
 
 export type DemoResultItem = {
   id: string;
@@ -261,6 +273,8 @@ export function getSessionTypeLabel(type: SessionTypeLabel): string {
     diagnostico: "Diagnóstico",
     simulacro: "Simulacro",
     "daily-pill": "Píldora diaria",
+    repaso: "Refuerzo",
+    "repaso-cierre": "Examen de cierre",
   };
   return labels[type] ?? "Entrenamiento";
 }

@@ -362,21 +362,31 @@ export function FinalResultsScreen({
 
         <footer className="relative z-10 mt-10 flex flex-col gap-4 sm:flex-row">
           {isDailyPill ? (
-            <>
-              <Link
-                href={isProUser ? "/dashboard" : "/dashboard/planes"}
-                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
-              >
-                {isProUser ? "Volver al dashboard" : "Pasar a Método Q PRO"}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+            isProUser ? (
               <Link
                 href="/dashboard"
-                className="group flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
+                className="group relative flex h-14 w-full items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
               >
-                Volver al Dashboard
+                Volver al dashboard
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-            </>
+            ) : (
+              <>
+                <Link
+                  href="/dashboard/planes"
+                  className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+                >
+                  Pasar a Método Q PRO
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="group flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
+                >
+                  Volver al dashboard
+                </Link>
+              </>
+            )
           ) : isAct1 && isResidenteUser ? (
             <>
               <Link

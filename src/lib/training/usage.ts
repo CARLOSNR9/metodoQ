@@ -10,6 +10,7 @@ import {
   canStartUccMiBonus,
   UCC_MI_DAILY_BONUS_MAX,
 } from "@/lib/training/ucc-mi-daily-plan";
+import { getRepasoCierreStatus } from "@/lib/training/repaso-cierre";
 
 type DailyUsage = {
   date: string;
@@ -81,6 +82,10 @@ export type SessionCheckOptions = {
   isBonusMode?: boolean;
   /** La píldora diaria (1 pregunta) no cuenta contra la misión ni el cierre del día. */
   isDailyPill?: boolean;
+  /** Repaso libre de fallas del día; no cuenta para la misión ni respeta cierre del día. */
+  isRepasoPractice?: boolean;
+  /** Examen final del día solo con preguntas fallidas pendientes. */
+  isRepasoCierre?: boolean;
   profile?: LearningTrackProfile | null;
   planStartedAt?: string | null;
 };
@@ -115,6 +120,28 @@ export async function checkCanStartSession(
   }
 
   if (sessionType === "diagnostico" || options?.isDailyPill) {
+    return { allowed: true };
+  }
+
+  if (options?.isRepasoPractice) {
+    return { allowed: true };
+  }
+
+  if (options?.isRepasoCierre) {
+    const status = await getRepasoCierreStatus(
+      userId,
+      options.profile,
+      options.planStartedAt,
+    );
+    if (!status.cierreAvailable) {
+      return {
+        allowed: false,
+        reason:
+          status.cierreLockedReason ??
+          "El examen de cierre no está disponible en este momento.",
+        dayClosed: status.missionComplete,
+      };
+    }
     return { allowed: true };
   }
 

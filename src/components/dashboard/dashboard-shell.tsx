@@ -10,7 +10,18 @@ import { getUserGreetingName } from "@/lib/plans/subscription-display";
 import { PomodoroProvider } from "@/contexts/pomodoro-context";
 import { AchievementNotification } from "./achievement-notification";
 import { PomodoroHeaderChip } from "./pomodoro-header-chip";
-import { LayoutDashboard, GraduationCap, History, User, LogOut, Timer, CreditCard, StickyNote } from "lucide-react";
+import {
+  LayoutDashboard,
+  GraduationCap,
+  History,
+  User,
+  LogOut,
+  Timer,
+  CreditCard,
+  StickyNote,
+  RotateCcw,
+} from "lucide-react";
+import { useFailedQuestionsCount } from "@/hooks/use-failed-questions-count";
 
 type DashboardShellProps = {
   children: React.ReactNode;
@@ -19,6 +30,7 @@ type DashboardShellProps = {
 const navigationItems = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { label: "Entrenar", href: "/dashboard/entrenar", icon: GraduationCap },
+  { label: "Refuerzo", href: "/dashboard/refuerzo", icon: RotateCcw },
   { label: "Estudio", href: "/dashboard/estudio", icon: StickyNote },
   { label: "Simulacro", href: "/dashboard/simulacro", icon: Timer },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
@@ -32,6 +44,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile } = useUserProfile();
   const studyNotesCount = useStudyNotesCount(user?.uid);
+  const failedQuestionsCount = useFailedQuestionsCount(user?.uid);
   const greetingName = getUserGreetingName(profile);
 
   if (isCheckingAuth) {
@@ -86,6 +99,11 @@ export function DashboardShell({ children }: DashboardShellProps) {
                 {item.href === "/dashboard/estudio" && studyNotesCount > 0 ? (
                   <span className="ml-auto hidden rounded-full bg-mq-accent/20 px-2 py-0.5 text-[10px] font-black text-mq-accent md:inline">
                     {studyNotesCount}
+                  </span>
+                ) : null}
+                {item.href === "/dashboard/refuerzo" && failedQuestionsCount > 0 ? (
+                  <span className="ml-auto hidden rounded-full bg-amber-500/20 px-2 py-0.5 text-[10px] font-black text-amber-300 md:inline">
+                    {failedQuestionsCount}
                   </span>
                 ) : null}
               </Link>
