@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { hasProFeatures } from "@/lib/plans/access";
+import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
 import { getLocalDateKey } from "@/lib/results";
 
 interface DailyPillCardProps {
@@ -15,6 +16,7 @@ interface DailyPillCardProps {
 export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: DailyPillCardProps) {
   const { profile } = useUserProfile();
   const isProUser = hasProFeatures(profile?.plan);
+  const upgradeCta = getPlanUpgradeCta(profile?.plan);
   const todayKey = getLocalDateKey(new Date());
   const dailyPill = (profile as any)?.dailyPillStatus;
   const isCompletedToday = dailyPill?.lastCompletedDate === todayKey;
@@ -126,9 +128,9 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
               isLocked
                 ? "#"
                 : isCompletedToday
-                  ? isProUser
+                  ? isProUser || !upgradeCta
                     ? "/dashboard/entrenar"
-                    : "/dashboard/planes"
+                    : upgradeCta.href
                   : "/dashboard/entrenar?mode=daily-pill"
             }
             onClick={(e) => {
@@ -145,9 +147,11 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
             {isLocked && <Lock size={16} />}
             <span className="truncate">
               {isCompletedToday
-                ? isProUser
+                ? isProUser || !upgradeCta
                   ? "CONTINUAR ENTRENANDO"
-                  : "REPETIR EN PRO"
+                  : upgradeCta.planId === "RESIDENTE"
+                    ? "SUBIR A RESIDENTE"
+                    : "REPETIR EN PRO"
                 : "ACEPTAR RETO"}
             </span>
             {!isLocked && <ArrowRight size={18} className="shrink-0 transition-transform group-hover/btn:translate-x-1" />}

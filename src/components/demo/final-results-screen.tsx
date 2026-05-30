@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { TrendingUp, Zap, Clock, Target, ArrowRight, Lock, Sparkles } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import {
+  getRecommendedUpgradePlanId,
   hasPaidPlan,
   hasProFeatures,
   normalizeUserPlan,
@@ -92,6 +93,7 @@ export function FinalResultsScreen({
   const isProUser = hasProFeatures(userPlan);
   const isResidenteUser = normalizedPlan === "RESIDENTE";
   const isPaidUser = hasPaidPlan(userPlan);
+  const upgradePlanId = getRecommendedUpgradePlanId(userPlan);
   const repeatDiagnosticHref =
     university && specialty
       ? `/dashboard/diagnostico?source=act1&university=${encodeURIComponent(university)}&specialty=${encodeURIComponent(specialty)}`
@@ -288,21 +290,89 @@ export function FinalResultsScreen({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="relative z-10 mt-8 overflow-hidden rounded-2xl border border-mq-accent/20 bg-mq-accent/5 p-6"
+            className={`relative z-10 mt-8 overflow-hidden rounded-2xl border p-6 ${
+              upgradePlanId === "RESIDENTE"
+                ? "border-amber-400/25 bg-amber-400/5"
+                : isResidenteUser
+                  ? "border-emerald-500/25 bg-emerald-500/5"
+                  : "border-mq-accent/20 bg-mq-accent/5"
+            }`}
           >
-            <div className="absolute -right-4 -top-4 h-16 w-16 bg-mq-accent/10 blur-2xl" />
+            <div
+              className={`absolute -right-4 -top-4 h-16 w-16 blur-2xl ${
+                upgradePlanId === "RESIDENTE"
+                  ? "bg-amber-400/10"
+                  : isResidenteUser
+                    ? "bg-emerald-500/10"
+                    : "bg-mq-accent/10"
+              }`}
+            />
             <div className="flex items-start gap-4">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-mq-accent/20 text-mq-accent shadow-[0_0_15px_rgba(0,210,255,0.2)]">
+              <div
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl ${
+                  upgradePlanId === "RESIDENTE"
+                    ? "bg-amber-400/20 text-amber-300 shadow-[0_0_15px_rgba(251,191,36,0.2)]"
+                    : isResidenteUser
+                      ? "bg-emerald-500/20 text-emerald-300 shadow-[0_0_15px_rgba(16,185,129,0.2)]"
+                      : "bg-mq-accent/20 text-mq-accent shadow-[0_0_15px_rgba(0,210,255,0.2)]"
+                }`}
+              >
                 <Sparkles size={20} />
               </div>
               <div className="space-y-2">
-                <h4 className="text-sm font-black uppercase tracking-wider text-white">¿Quieres más que una píldora?</h4>
-                <p className="text-xs leading-relaxed text-mq-muted">
-                  Los usuarios <span className="text-mq-accent font-bold">PRO</span> resuelven <span className="text-white font-bold">5 retos diarios</span> especializados en sus debilidades. No dejes tu plaza al azar.
-                </p>
-                <Link href="/dashboard/planes" className="inline-flex items-center text-[10px] font-black uppercase tracking-widest text-mq-accent hover:underline">
-                  Ver beneficios PRO <ArrowRight size={10} className="ml-1" />
-                </Link>
+                {upgradePlanId === "PRO" ? (
+                  <>
+                    <h4 className="text-sm font-black uppercase tracking-wider text-white">
+                      ¿Quieres más que una píldora?
+                    </h4>
+                    <p className="text-xs leading-relaxed text-mq-muted">
+                      Los usuarios <span className="text-mq-accent font-bold">PRO</span> resuelven{" "}
+                      <span className="text-white font-bold">5 retos diarios</span> especializados en
+                      sus debilidades. No dejes tu plaza al azar.
+                    </p>
+                    <Link
+                      href="/dashboard/planes"
+                      className="inline-flex items-center text-[10px] font-black uppercase tracking-widest text-mq-accent hover:underline"
+                    >
+                      Ver beneficios PRO <ArrowRight size={10} className="ml-1" />
+                    </Link>
+                  </>
+                ) : upgradePlanId === "RESIDENTE" ? (
+                  <>
+                    <h4 className="text-sm font-black uppercase tracking-wider text-white">
+                      ¿Quieres asegurar tu plaza?
+                    </h4>
+                    <p className="text-xs leading-relaxed text-mq-muted">
+                      Ya tienes acceso <span className="text-mq-accent font-bold">PRO</span>. El plan{" "}
+                      <span className="text-amber-200 font-bold">Residente</span> suma seguimiento 1
+                      a 1, preparación para entrevistas y acompañamiento personalizado hasta el día del
+                      examen.
+                    </p>
+                    <Link
+                      href="/residente"
+                      className="inline-flex items-center text-[10px] font-black uppercase tracking-widest text-amber-200 hover:underline"
+                    >
+                      Postular a Residente <ArrowRight size={10} className="ml-1" />
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <h4 className="text-sm font-black uppercase tracking-wider text-white">
+                      Sigues en el camino correcto
+                    </h4>
+                    <p className="text-xs leading-relaxed text-mq-muted">
+                      Tu plan <span className="text-emerald-300 font-bold">Residente</span> incluye
+                      seguimiento personalizado. Mantén la racha y revisa tu radar de debilidades en el
+                      panel.
+                    </p>
+                    <Link
+                      href="/dashboard"
+                      className="inline-flex items-center text-[10px] font-black uppercase tracking-widest text-emerald-300 hover:underline"
+                    >
+                      Volver al panel <ArrowRight size={10} className="ml-1" />
+                    </Link>
+                  </>
+                )}
               </div>
             </div>
           </motion.div>
@@ -372,15 +442,7 @@ export function FinalResultsScreen({
 
         <footer className="relative z-10 mt-10 flex flex-col gap-4 sm:flex-row">
           {isDailyPill ? (
-            isProUser ? (
-              <Link
-                href="/dashboard"
-                className="group relative flex h-14 w-full items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
-              >
-                Volver al dashboard
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            ) : (
+            upgradePlanId === "PRO" ? (
               <>
                 <Link
                   href="/dashboard/planes"
@@ -396,6 +458,14 @@ export function FinalResultsScreen({
                   Volver al dashboard
                 </Link>
               </>
+            ) : (
+              <Link
+                href="/dashboard"
+                className="group relative flex h-14 w-full items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                Volver al dashboard
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
             )
           ) : isAct1 && isResidenteUser ? (
             <>
@@ -416,10 +486,10 @@ export function FinalResultsScreen({
           ) : isAct1 && isProUser ? (
             <>
               <Link
-                href="/dashboard/planes#residente"
+                href="/residente"
                 className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
               >
-                Subir al plan Residente
+                Postular a Residente
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link

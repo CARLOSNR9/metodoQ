@@ -19,6 +19,7 @@ import { logoutUser } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { useUserPlan } from "@/hooks/use-user-plan";
 import { hasUnlimitedTraining } from "@/lib/plans/access";
+import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
 import {
   trackClickUpgrade,
   trackDemoQuestionAnswered,
@@ -167,6 +168,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
   const hasUnlimitedAccess = hasUnlimitedTraining(effectivePlan);
+  const upgradeCta = getPlanUpgradeCta(effectivePlan);
   const sessionType = isSimulacro
     ? "simulacro"
     : isAct1
@@ -407,16 +409,29 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
   useEffect(() => {
     if (
-      (isAct1 || isDailyPill) &&
+      (isAct1 || isDailyPill || isBonusMode) &&
       !hasStarted &&
       !isLoadingPlan &&
       !isCheckingAuth &&
       !isLoadingQuestions &&
-      questionBank.length > 0
+      questionBank.length > 0 &&
+      user &&
+      userTrackProfile
     ) {
       void startAdaptiveSession();
     }
-  }, [isAct1, isDailyPill, hasStarted, isLoadingPlan, isCheckingAuth, isLoadingQuestions, questionBank.length]);
+  }, [
+    isAct1,
+    isDailyPill,
+    isBonusMode,
+    hasStarted,
+    isLoadingPlan,
+    isCheckingAuth,
+    isLoadingQuestions,
+    questionBank.length,
+    user,
+    userTrackProfile,
+  ]);
 
   useEffect(() => {
     if (
@@ -538,6 +553,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
   useEffect(() => {
     if (!user || isAct1 || isDailyPill || isSimulacro || hasStarted) return;
+    if (!userTrackProfile) return;
 
     let mounted = true;
 
@@ -562,8 +578,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
           dayClosed: "dayClosed" in check ? check.dayClosed : undefined,
           bonusAvailable: "bonusAvailable" in check ? check.bonusAvailable : undefined,
         });
-      } else if (isRepasoMode) {
+      } else {
         setUsageBlockReason(null);
+        setUsageBlockMeta({});
       }
     }
 
@@ -584,6 +601,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     isRepasoPractice,
     isRepasoCierre,
     userTrackProfile,
+    blockParam,
   ]);
 
   useEffect(() => {
@@ -885,9 +903,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                         Volver al panel
                       </Link>
                     ) : null}
-                    {!usageBlockMeta.dayClosed ? (
-                      <Link href="/dashboard/planes" className="mt-2 block font-bold text-mq-accent hover:underline">
-                        Ver planes
+                    {!usageBlockMeta.dayClosed && upgradeCta ? (
+                      <Link
+                        href={upgradeCta.href}
+                        className="mt-2 block font-bold text-mq-accent hover:underline"
+                      >
+                        {upgradeCta.label}
                       </Link>
                     ) : null}
                   </div>
@@ -908,7 +929,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                       ? "INICIAR EXAMEN DE CIERRE"
                       : isRepasoPractice
                         ? "REPASAR FALLAS"
-                        : "COMENZAR ENTRENAMIENTO"}
+                        : isBonusMode
+                          ? "INICIAR BONUS"
+                          : "COMENZAR ENTRENAMIENTO"}
                   <ArrowRight className="transition-transform group-hover:translate-x-1" />
                 </button>
               </motion.div>

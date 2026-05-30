@@ -3,12 +3,15 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getUserWeakTopics, type WeakTopicItem } from "@/lib/results";
-import { AlertTriangle, Microscope, Lightbulb, Lock } from "lucide-react";
+import { hasProFeatures, type StoredUserPlan } from "@/lib/plans/access";
+import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
+import { AlertTriangle, Lightbulb, Lock } from "lucide-react";
 
 type WeakTopicsCardProps = {
   userId: string;
-  /** Usuario con plan PRO o Residente: sin candados ni CTA de upgrade. */
+  /** Usuario con plan PRO o Residente: sin candados en temas secundarios. */
   isProUser?: boolean;
+  userPlan?: StoredUserPlan | null;
 };
 
 const TOPIC_HACKS: Record<string, { title: string; content: string }> = {
@@ -38,9 +41,15 @@ const TOPIC_HACKS: Record<string, { title: string; content: string }> = {
   }
 };
 
-export function WeakTopicsCard({ userId, isProUser = false }: WeakTopicsCardProps) {
+export function WeakTopicsCard({
+  userId,
+  isProUser: isProUserProp = false,
+  userPlan,
+}: WeakTopicsCardProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [topics, setTopics] = useState<WeakTopicItem[]>([]);
+  const isProUser = isProUserProp || hasProFeatures(userPlan);
+  const upgradeCta = getPlanUpgradeCta(userPlan);
 
   useEffect(() => {
     let isMounted = true;
@@ -151,25 +160,22 @@ export function WeakTopicsCard({ userId, isProUser = false }: WeakTopicsCardProp
             ))}
           </ul>
           
-          {!isProUser ? (
+          {upgradeCta ? (
             <div className="pt-2">
               <Link
-                href="/dashboard/planes"
+                href={upgradeCta.href}
                 className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mq-muted transition-colors hover:text-mq-accent"
               >
-                <Lock size={12} /> Desbloquear arsenal completo de perlas
+                {upgradeCta.planId === "PRO" ? (
+                  <>
+                    <Lock size={12} /> Desbloquear arsenal completo de perlas
+                  </>
+                ) : (
+                  <>Conoce el plan Residente — acompañamiento 1 a 1</>
+                )}
               </Link>
             </div>
-          ) : (
-            <div className="pt-2">
-              <Link
-                href="/dashboard/planes#residente"
-                className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mq-muted transition-colors hover:text-mq-accent"
-              >
-                Conoce el plan Residente — acompañamiento 1 a 1
-              </Link>
-            </div>
-          )}
+          ) : null}
         </div>
       )}
     </section>

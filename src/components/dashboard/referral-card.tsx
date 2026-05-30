@@ -183,10 +183,10 @@ export function ReferralCard({
 
           {copy.showResidenteLink && remaining === 0 ? (
             <Link
-              href="/dashboard/planes#residente"
+              href="/residente"
               className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-mq-premium-purple/30 bg-mq-premium-purple/10 text-xs font-bold text-white transition-all hover:bg-mq-premium-purple/20"
             >
-              Ver plan Residente
+              Postular a Residente
               <ArrowRight size={14} />
             </Link>
           ) : null}

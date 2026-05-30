@@ -444,7 +444,11 @@ export function ProDashboardView({
           <StudyBoardPreviewCard userId={user.uid} />
 
           {/* WEAK TOPICS / IA ANALYTICS */}
-          <WeakTopicsCard userId={user.uid} isProUser={showLiveClasses} />
+          <WeakTopicsCard
+            userId={user.uid}
+            isProUser={showLiveClasses}
+            userPlan={profile?.plan}
+          />
 
           {/* PRIVATE COMMUNITY CARD */}
           <motion.div 

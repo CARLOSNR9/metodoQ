@@ -3,6 +3,7 @@ import { getFirebaseDb } from "@/lib/firebase";
 import { getLocalDateKey, getUserDemoResults } from "@/lib/results";
 import { getTrainingLimits } from "@/lib/plans/limits";
 import { normalizeUserPlan } from "@/lib/plans/access";
+import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
 import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import {
@@ -111,17 +112,19 @@ export async function checkCanStartSession(
 
   if (sessionType === "simulacro") {
     if (limits.simulacrosPerMonth === 0) {
+      const upgradeCta = getPlanUpgradeCta(normalized);
       return {
         allowed: false,
         reason: "Los simulacros completos están disponibles en los planes Básico y Pro.",
-        upgradeHref: "/dashboard/planes",
+        ...(upgradeCta ? { upgradeHref: upgradeCta.href } : {}),
       };
     }
     if (monthly.simulacros >= limits.simulacrosPerMonth) {
+      const upgradeCta = getPlanUpgradeCta(normalized);
       return {
         allowed: false,
         reason: `Ya usaste tus ${limits.simulacrosPerMonth} simulacro(s) de este mes.`,
-        upgradeHref: "/dashboard/planes",
+        ...(upgradeCta ? { upgradeHref: upgradeCta.href } : {}),
       };
     }
     return { allowed: true };
@@ -223,7 +226,6 @@ export async function checkCanStartSession(
     return {
       allowed: false,
       reason: `Alcanzaste el límite de ${sessionsLimit} entrenamiento(s) por hoy en tu plan.`,
-      upgradeHref: "/dashboard/planes",
     };
   }
 
