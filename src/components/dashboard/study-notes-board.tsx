@@ -86,61 +86,36 @@ export function StudyNotesBoard({ userId }: StudyNotesBoardProps) {
   return (
     <>
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {notes.map((note, index) => {
-          const isRemoving = removingId === note.questionId;
-
-          return (
-            <motion.div
-              key={note.questionId}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.04 }}
-              className="group relative rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-mq-accent/30 hover:bg-white/[0.05]"
-            >
-              <button
-                type="button"
-                aria-label="Eliminar nota"
-                disabled={isRemoving}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  void handleRemove(note.questionId);
-                }}
-                className="absolute right-3 top-3 z-10 inline-flex h-8 w-8 items-center justify-center rounded-lg border border-transparent text-mq-muted/60 transition hover:border-rose-500/30 hover:bg-rose-500/10 hover:text-rose-300 focus-visible:border-rose-500/30 focus-visible:bg-rose-500/10 focus-visible:text-rose-300 disabled:cursor-not-allowed disabled:opacity-50 sm:opacity-0 sm:group-hover:opacity-100 sm:group-focus-within:opacity-100"
-              >
-                {isRemoving ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                  <X className="h-4 w-4" />
-                )}
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setSelectedNote(note)}
-                className="w-full p-5 pr-12 text-left"
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
-                    {note.examArea ?? "Tema clave"}
-                  </p>
-                  <span className="text-[10px] font-semibold text-mq-muted">
-                    {formatSavedDate(note.savedAt)}
-                  </span>
-                </div>
-                <h3 className="mt-3 line-clamp-2 text-base font-bold text-white">
-                  {note.topic}
-                </h3>
-                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-mq-muted">
-                  {note.statement}
-                </p>
-                <p className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-mq-accent">
-                  <BookOpen className="h-3.5 w-3.5" />
-                  Leer nota
-                </p>
-              </button>
-            </motion.div>
-          );
-        })}
+        {notes.map((note, index) => (
+          <motion.button
+            key={note.questionId}
+            type="button"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.04 }}
+            onClick={() => setSelectedNote(note)}
+            className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-mq-accent/30 hover:bg-white/[0.05]"
+          >
+            <div className="flex items-start justify-between gap-3">
+              <p className="text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
+                {note.examArea ?? "Tema clave"}
+              </p>
+              <span className="text-[10px] font-semibold text-mq-muted">
+                {formatSavedDate(note.savedAt)}
+              </span>
+            </div>
+            <h3 className="mt-3 line-clamp-2 text-base font-bold text-white">
+              {note.topic}
+            </h3>
+            <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-mq-muted">
+              {note.statement}
+            </p>
+            <p className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-mq-accent">
+              <BookOpen className="h-3.5 w-3.5" />
+              Leer nota
+            </p>
+          </motion.button>
+        ))}
       </div>
 
       <AnimatePresence>

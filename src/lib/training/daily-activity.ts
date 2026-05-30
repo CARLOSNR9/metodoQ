@@ -62,6 +62,21 @@ export function getTodayQuestionsCount(results: DemoResultItem[]): number {
   return aggregateQuestionsByDateKey(results).get(todayKey) ?? 0;
 }
 
+/** Preguntas de hoy que cuentan para la misión diaria (excluye píldora y diagnóstico). */
+export function getTodayMissionQuestionsCount(results: DemoResultItem[]): number {
+  const todayKey = getLocalDateKey(new Date());
+  let total = 0;
+
+  for (const result of results) {
+    if (!result.fechaIso) continue;
+    if (result.sessionType === "daily-pill" || result.sessionType === "diagnostico") continue;
+    if (getLocalDateKey(new Date(result.fechaIso)) !== todayKey) continue;
+    total += result.correctAnswers + result.wrongAnswers;
+  }
+
+  return total;
+}
+
 export function aggregateTodayUccBlockQuestions(
   results: DemoResultItem[],
 ): Record<UccMiBlockKind, number> {

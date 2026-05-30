@@ -2,7 +2,7 @@ import type { DemoResultItem } from "@/lib/results";
 import { hasProFeatures } from "@/lib/plans/access";
 import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
-import { getTodayQuestionsCount } from "@/lib/training/daily-activity";
+import { getTodayMissionQuestionsCount } from "@/lib/training/daily-activity";
 import {
   buildUccSimulacroHref,
   buildWeeklySimulacroStatus,
@@ -42,7 +42,7 @@ export function buildUccCoachingStatus(options: {
   if (!isUccMiProProfile(profile)) return null;
 
   const goal = getDailyGoalForProfile(profile, profile?.planStartedAt);
-  const todayQuestions = getTodayQuestionsCount(results);
+  const todayQuestions = getTodayMissionQuestionsCount(results);
   const simulacroStatus = buildWeeklySimulacroStatus({
     results,
     planStartedAt: profile?.planStartedAt ?? null,

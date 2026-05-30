@@ -228,6 +228,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     if (user) {
       const check = await checkCanStartSession(user.uid, effectivePlan, sessionType, {
         isBonusMode,
+        isDailyPill,
         profile: userTrackProfile,
         planStartedAt: userTrackProfile?.planStartedAt,
       });

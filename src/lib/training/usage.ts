@@ -5,7 +5,7 @@ import { getTrainingLimits } from "@/lib/plans/limits";
 import { normalizeUserPlan } from "@/lib/plans/access";
 import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
-import { getTodayQuestionsCount } from "@/lib/training/daily-activity";
+import { getTodayMissionQuestionsCount } from "@/lib/training/daily-activity";
 import {
   canStartUccMiBonus,
   UCC_MI_DAILY_BONUS_MAX,
@@ -79,6 +79,8 @@ export type UsageCheckResult =
 
 export type SessionCheckOptions = {
   isBonusMode?: boolean;
+  /** La píldora diaria (1 pregunta) no cuenta contra la misión ni el cierre del día. */
+  isDailyPill?: boolean;
   profile?: LearningTrackProfile | null;
   planStartedAt?: string | null;
 };
@@ -112,7 +114,7 @@ export async function checkCanStartSession(
     return { allowed: true };
   }
 
-  if (sessionType === "diagnostico") {
+  if (sessionType === "diagnostico" || options?.isDailyPill) {
     return { allowed: true };
   }
 
@@ -122,7 +124,7 @@ export async function checkCanStartSession(
 
   if (needsQuestionCount) {
     const results = await getUserDemoResults(userId);
-    todayQuestions = getTodayQuestionsCount(results);
+    todayQuestions = getTodayMissionQuestionsCount(results);
     if (daily.sessions > 0 && todayQuestions === 0) {
       daily = await reconcileOrphanedDailySessions(userId, todayQuestions, daily);
     }
@@ -216,7 +218,7 @@ export async function getTodayTrainingStatus(
 ) {
   const goal = getDailyGoalForProfile(profile, planStartedAt);
   const results = await getUserDemoResults(userId);
-  const todayQuestions = getTodayQuestionsCount(results);
+  const todayQuestions = getTodayMissionQuestionsCount(results);
   const { daily } = await getUserUsage(userId);
 
   if (daily.sessions > 0 && todayQuestions === 0) {

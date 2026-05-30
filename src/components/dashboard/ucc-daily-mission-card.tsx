@@ -17,7 +17,7 @@ import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults, type DemoResultItem } from "@/lib/results";
 import {
   aggregateTodayUccBlockQuestions,
-  getTodayQuestionsCount,
+  getTodayMissionQuestionsCount,
 } from "@/lib/training/daily-activity";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import {
@@ -181,7 +181,7 @@ export function UccDailyMissionCard({
         setProfile(userData);
         setResolvedWeakTopic(weakTopic ?? userData.weaknesses?.[0] ?? null);
 
-        const count = getTodayQuestionsCount(results);
+        const count = getTodayMissionQuestionsCount(results);
         setTodayQuestions(count);
         setTodayResults(results);
 
