@@ -20,6 +20,7 @@ import { hasPaidPlan } from "@/lib/plans/access";
 import { getPostLoginPath } from "@/lib/roles";
 import { useUserRole } from "@/hooks/use-user-role";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
+import { buildUccMiDailyBlocks } from "@/lib/training/ucc-mi-daily-plan";
 
 export default function DashboardPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
@@ -43,6 +44,9 @@ export default function DashboardPage() {
   const showPaidDashboard = hasPaidPlan(effectivePlan);
   const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
   const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
+  const uccTrainHref = isUccMiPro
+    ? `/dashboard/entrenar?block=new&count=${buildUccMiDailyBlocks(profile?.planStartedAt)[0]?.questions ?? 15}`
+    : "/dashboard/entrenar";
 
   useUccBrowserReminder({
     userId: user?.uid,
@@ -84,6 +88,7 @@ export default function DashboardPage() {
           lastTrainingDate={profile?.streakLastTrainingDate ?? null}
           dailyTarget={dailyGoal.dailyTarget}
           streakMinimum={dailyGoal.streakMinimum}
+          trainHref={uccTrainHref}
         />
         {isUccMiPro ? (
           <UccCoachingReminderBanner

@@ -10,6 +10,7 @@ type StreakReminderBannerProps = {
   lastTrainingDate: string | null;
   dailyTarget?: number;
   streakMinimum?: number;
+  trainHref?: string;
 };
 
 function daysSinceLastTraining(lastTrainingDate: string | null): number | null {
@@ -27,6 +28,7 @@ export function StreakReminderBanner({
   lastTrainingDate,
   dailyTarget = PRO_DAILY_MIN_QUESTIONS,
   streakMinimum = PRO_DAILY_MIN_QUESTIONS,
+  trainHref = "/dashboard/entrenar",
 }: StreakReminderBannerProps) {
   if (streakCount <= 0) return null;
   if (lastTrainingDate === getLocalDateKey(new Date())) return null;
@@ -53,7 +55,7 @@ export function StreakReminderBanner({
         </div>
       </div>
       <Link
-        href="/dashboard/entrenar"
+        href={trainHref}
         className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl border border-orange-400/40 bg-orange-500/20 px-4 text-xs font-bold text-orange-100 transition hover:bg-orange-500/30"
       >
         Entrenar ahora

@@ -54,6 +54,8 @@ export type DemoResultItem = {
   wrongAnswers: number;
   fechaLabel: string;
   fechaIso: string | null;
+  /** Fecha local (YYYY-MM-DD) al guardar la sesión; evita ambigüedad con fechaIso UTC. */
+  fechaDateKey?: string | null;
   wrongTopics: Record<string, number>;
   sessionType: SessionTypeLabel;
   uccBlockKind?: UccMiBlockKind | null;
@@ -204,6 +206,7 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
     sessionType?: SessionTypeLabel;
     uccBlockKind?: UccMiBlockKind;
     fecha?: { toDate?: () => Date };
+    fechaDateKey?: string;
   };
 
   const date = data.fecha?.toDate ? data.fecha.toDate() : null;
@@ -214,6 +217,7 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
     correctAnswers: data.correctAnswers ?? 0,
     wrongAnswers: data.wrongAnswers ?? 0,
     wrongTopics: data.wrongTopics ?? {},
+    fechaDateKey: data.fechaDateKey ?? null,
     fechaIso: date ? date.toISOString() : null,
     fechaLabel: date
       ? new Intl.DateTimeFormat("es-ES", {
@@ -303,12 +307,24 @@ export function getLocalDateKey(date: Date) {
   return `${year}-${month}-${day}`;
 }
 
+export function getResultLocalDateKey(result: DemoResultItem): string | null {
+  if (result.fechaDateKey) return result.fechaDateKey;
+  if (!result.fechaIso) return null;
+  return getLocalDateKey(new Date(result.fechaIso));
+}
+
+export function isResultFromLocalDateKey(
+  result: DemoResultItem,
+  dateKey: string,
+): boolean {
+  return getResultLocalDateKey(result) === dateKey;
+}
+
 function countTodayQuestions(results: DemoResultItem[]): number {
   const todayKey = getLocalDateKey(new Date());
   let total = 0;
   for (const result of results) {
-    if (!result.fechaIso) continue;
-    if (getLocalDateKey(new Date(result.fechaIso)) !== todayKey) continue;
+    if (!isResultFromLocalDateKey(result, todayKey)) continue;
     total += result.correctAnswers + result.wrongAnswers;
   }
   return total;

@@ -1,4 +1,9 @@
-import { getLocalDateKey, type DemoResultItem } from "@/lib/results";
+import {
+  getLocalDateKey,
+  getResultLocalDateKey,
+  isResultFromLocalDateKey,
+  type DemoResultItem,
+} from "@/lib/results";
 import { PRO_DAILY_MIN_QUESTIONS } from "@/lib/plans/limits";
 import type { UccMiBlockKind } from "@/lib/training/ucc-mi-daily-plan";
 
@@ -47,9 +52,8 @@ export function aggregateQuestionsByDateKey(
   const map = new Map<string, number>();
 
   for (const result of results) {
-    if (!result.fechaIso) continue;
-    const date = new Date(result.fechaIso);
-    const key = getLocalDateKey(date);
+    const key = getResultLocalDateKey(result);
+    if (!key) continue;
     const questions = result.correctAnswers + result.wrongAnswers;
     map.set(key, (map.get(key) ?? 0) + questions);
   }
@@ -91,8 +95,8 @@ export function aggregateTodayUccBlockQuestions(
   const todayKey = getLocalDateKey(new Date());
 
   for (const result of results) {
-    if (!result.fechaIso || !result.uccBlockKind) continue;
-    if (getLocalDateKey(new Date(result.fechaIso)) !== todayKey) continue;
+    if (!result.uccBlockKind) continue;
+    if (!isResultFromLocalDateKey(result, todayKey)) continue;
     counts[result.uccBlockKind] += result.correctAnswers + result.wrongAnswers;
   }
 

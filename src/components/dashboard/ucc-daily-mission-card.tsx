@@ -202,9 +202,19 @@ export function UccDailyMissionCard({
       }
     }
 
+    const refreshIfVisible = () => {
+      if (document.visibilityState === "visible") {
+        void load();
+      }
+    };
+
     void load();
+    window.addEventListener("focus", refreshIfVisible);
+    document.addEventListener("visibilitychange", refreshIfVisible);
     return () => {
       mounted = false;
+      window.removeEventListener("focus", refreshIfVisible);
+      document.removeEventListener("visibilitychange", refreshIfVisible);
     };
   }, [userId, planStartedAt, weakTopic]);
 

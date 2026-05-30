@@ -179,7 +179,12 @@ export function resolveUccBlockProgress(
     return getBlockProgressFromTaggedSessions(blocks, blockQuestionCounts!);
   }
 
-  return getBlockProgress(blocks, todayQuestions);
+  // El entrenamiento libre suma en todayQuestions, pero no completa bloques estructurados.
+  return blocks.map((block, index) => ({
+    ...block,
+    status: index === 0 ? ("active" as const) : ("pending" as const),
+    questionsDone: 0,
+  }));
 }
 
 export function countCompletedUccBlocks(progress: UccBlockProgressItem[]): number {
