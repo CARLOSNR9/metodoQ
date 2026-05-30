@@ -6,6 +6,7 @@ import { useState } from "react";
 import { loginWithEmail, loginWithGoogle } from "@/lib/auth";
 import { resolvePostLoginPath } from "@/lib/client/post-login";
 import { sendWelcomeEmailIfPossible } from "@/lib/client/send-welcome-email";
+import { markPomodoroAutostartOnLogin } from "@/lib/study/pomodoro-session";
 
 function getLoginErrorMessage(errorCode: string) {
   if (
@@ -46,6 +47,7 @@ export default function LoginPage() {
 
     try {
       const credential = await loginWithEmail(email.trim(), password);
+      markPomodoroAutostartOnLogin();
       const path = await resolvePostLoginPath(credential.user.uid, credential.user.email);
       router.push(path);
     } catch (error) {
@@ -65,6 +67,7 @@ export default function LoginPage() {
       if (isNewUser) {
         await sendWelcomeEmailIfPossible(credential.user.displayName);
       }
+      markPomodoroAutostartOnLogin();
       const path = await resolvePostLoginPath(credential.user.uid, credential.user.email);
       router.push(path);
     } catch (error) {

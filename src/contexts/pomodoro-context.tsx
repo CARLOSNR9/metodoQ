@@ -14,6 +14,11 @@ import {
   POMODORO_CYCLES,
   POMODORO_STUDY_SECONDS,
 } from "@/lib/study/pomodoro-config";
+import {
+  consumePomodoroAutostart,
+  clearPomodoroPersisted,
+  POMODORO_STORAGE_KEY,
+} from "@/lib/study/pomodoro-session";
 
 export type PomodoroPhase = "idle" | "study" | "break" | "resume-prompt" | "complete";
 
@@ -26,8 +31,6 @@ type TimerState = {
   overlay: PomodoroOverlay;
 };
 
-const STORAGE_KEY = "mq-pomodoro-v1";
-
 const DEFAULT_STATE: TimerState = {
   phase: "idle",
   secondsLeft: POMODORO_STUDY_SECONDS,
@@ -38,7 +41,7 @@ const DEFAULT_STATE: TimerState = {
 function loadPersisted(): TimerState | null {
   if (typeof window === "undefined") return null;
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(POMODORO_STORAGE_KEY);
     if (!raw) return null;
     const parsed = JSON.parse(raw) as TimerState;
     if (
@@ -59,22 +62,18 @@ function loadPersisted(): TimerState | null {
 function getInitialTimerState(): TimerState {
   const saved = loadPersisted();
   if (saved && saved.phase !== "idle") return saved;
+
+  if (typeof window !== "undefined" && consumePomodoroAutostart()) {
+    return ACTIVE_STUDY_STATE;
+  }
+
   return DEFAULT_STATE;
 }
 
 function savePersisted(state: TimerState) {
   if (typeof window === "undefined") return;
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  } catch {
-    /* ignore */
-  }
-}
-
-function clearPersisted() {
-  if (typeof window === "undefined") return;
-  try {
-    localStorage.removeItem(STORAGE_KEY);
+    localStorage.setItem(POMODORO_STORAGE_KEY, JSON.stringify(state));
   } catch {
     /* ignore */
   }
@@ -92,7 +91,7 @@ function advanceAfterPhaseEnd(prev: TimerState): TimerState {
 
   if (prev.phase === "break") {
     if (prev.cycle >= POMODORO_CYCLES) {
-      clearPersisted();
+      clearPomodoroPersisted();
       return {
         ...prev,
         phase: "complete",
@@ -111,6 +110,13 @@ function advanceAfterPhaseEnd(prev: TimerState): TimerState {
   return prev;
 }
 
+const ACTIVE_STUDY_STATE: TimerState = {
+  phase: "study",
+  secondsLeft: POMODORO_STUDY_SECONDS,
+  cycle: 1,
+  overlay: "none",
+};
+
 type PomodoroContextValue = {
   phase: PomodoroPhase;
   secondsLeft: number;
@@ -118,7 +124,7 @@ type PomodoroContextValue = {
   overlay: PomodoroOverlay;
   startSession: () => void;
   continueToNextStudy: () => void;
-  pauseAndReset: () => void;
+  stopSession: () => void;
   dismissComplete: () => void;
   totalCycles: number;
   isRunning: boolean;
@@ -152,12 +158,7 @@ export function PomodoroProvider({ children }: { children: ReactNode }) {
   }, [timer.phase]);
 
   const startSession = useCallback(() => {
-    setTimer({
-      phase: "study",
-      secondsLeft: POMODORO_STUDY_SECONDS,
-      cycle: 1,
-      overlay: "none",
-    });
+    setTimer(ACTIVE_STUDY_STATE);
   }, []);
 
   const continueToNextStudy = useCallback(() => {
@@ -169,13 +170,13 @@ export function PomodoroProvider({ children }: { children: ReactNode }) {
     }));
   }, []);
 
-  const pauseAndReset = useCallback(() => {
-    clearPersisted();
+  const stopSession = useCallback(() => {
+    clearPomodoroPersisted();
     setTimer(DEFAULT_STATE);
   }, []);
 
   const dismissComplete = useCallback(() => {
-    clearPersisted();
+    clearPomodoroPersisted();
     setTimer(DEFAULT_STATE);
   }, []);
 
@@ -187,13 +188,13 @@ export function PomodoroProvider({ children }: { children: ReactNode }) {
       overlay: timer.overlay,
       startSession,
       continueToNextStudy,
-      pauseAndReset,
+      stopSession,
       dismissComplete,
       totalCycles: POMODORO_CYCLES,
       isRunning: timer.phase === "study" || timer.phase === "break",
       isActive: timer.phase !== "idle",
     }),
-    [timer, startSession, continueToNextStudy, pauseAndReset, dismissComplete],
+    [timer, startSession, continueToNextStudy, stopSession, dismissComplete],
   );
 
   return (

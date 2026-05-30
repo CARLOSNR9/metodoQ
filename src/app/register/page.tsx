@@ -6,6 +6,7 @@ import { useState, Suspense } from "react";
 import { registerWithEmail, loginWithGoogle } from "@/lib/auth";
 import { sendWelcomeEmailIfPossible } from "@/lib/client/send-welcome-email";
 import { trackReferralSignup } from "@/lib/analytics/events";
+import { markPomodoroAutostartOnLogin } from "@/lib/study/pomodoro-session";
 
 function getRegisterErrorMessage(errorCode: string) {
   if (errorCode === "auth/email-already-in-use") {
@@ -40,6 +41,7 @@ function RegisterContent() {
   const [isRegistered, setIsRegistered] = useState(false);
 
   const handleSuccess = () => {
+    markPomodoroAutostartOnLogin();
     setIsRegistered(true);
     setTimeout(() => {
       router.push("/dashboard");

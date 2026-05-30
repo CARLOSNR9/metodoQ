@@ -277,6 +277,11 @@ export async function registerWithEmail(
 }
 
 export async function logoutUser() {
+  const { clearPomodoroAutostart, clearPomodoroPersisted } = await import(
+    "@/lib/study/pomodoro-session"
+  );
+  clearPomodoroAutostart();
+  clearPomodoroPersisted();
   return signOut(getFirebaseAuth());
 }
 

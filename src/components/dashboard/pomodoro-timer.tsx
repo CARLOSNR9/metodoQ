@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Coffee, Pause, Play, RotateCcw, Timer } from "lucide-react";
+import { Coffee, Pause, Play, Square, Timer } from "lucide-react";
 import { usePomodoro } from "@/contexts/pomodoro-context";
 import {
   POMODORO_BREAK_MINUTES,
@@ -30,7 +30,7 @@ export function PomodoroTimer() {
     overlay,
     startSession,
     continueToNextStudy,
-    pauseAndReset,
+    stopSession,
     dismissComplete,
     totalCycles,
     isRunning,
@@ -80,9 +80,9 @@ export function PomodoroTimer() {
             <p className="mt-1 max-w-xl text-sm text-mq-muted">
               {phase === "idle" ? (
                 <>
-                  {POMODORO_CYCLES} ciclos de {POMODORO_STUDY_MINUTES} min estudio +{" "}
-                  {POMODORO_BREAK_MINUTES} min descanso ({POMODORO_TOTAL_MINUTES} min en
-                  total). Te avisamos con cariño cuando toque pausa.
+                  Al iniciar sesión arranca solo. Son {POMODORO_CYCLES} ciclos de{" "}
+                  {POMODORO_STUDY_MINUTES} min estudio + {POMODORO_BREAK_MINUTES} min descanso (
+                  {POMODORO_TOTAL_MINUTES} min). Puedes detenerlo cuando quieras.
                 </>
               ) : phase === "break" ? (
                 <>Descansa estos {POMODORO_BREAK_MINUTES} minutos — lo mereces.</>
@@ -94,16 +94,6 @@ export function PomodoroTimer() {
             </p>
           </div>
 
-          {phase !== "idle" && phase !== "complete" && (
-            <button
-              type="button"
-              onClick={pauseAndReset}
-              className="inline-flex min-h-10 items-center gap-2 rounded-xl border border-white/10 px-4 text-xs font-bold uppercase tracking-wider text-mq-muted transition hover:bg-white/5 hover:text-white"
-            >
-              <RotateCcw className="h-3.5 w-3.5" />
-              Reiniciar
-            </button>
-          )}
         </div>
 
         <div className="mt-6 flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-between">
@@ -143,7 +133,7 @@ export function PomodoroTimer() {
             </div>
           </div>
 
-          <div className="flex w-full flex-col gap-3 sm:w-auto sm:min-w-[200px]">
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:min-w-[220px]">
             {phase === "idle" && (
               <button
                 type="button"
@@ -151,19 +141,40 @@ export function PomodoroTimer() {
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-black uppercase tracking-wider text-[#0A1F44] transition hover:brightness-110"
               >
                 <Play className="h-4 w-4 fill-current" />
-                Empezar sesión
+                Iniciar Pomodoro
+              </button>
+            )}
+
+            {isRunning && (
+              <button
+                type="button"
+                onClick={stopSession}
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-rose-500/35 bg-rose-500/10 px-6 text-sm font-black uppercase tracking-wider text-rose-100 transition hover:bg-rose-500/20"
+              >
+                <Square className="h-4 w-4 fill-current" />
+                Detener Pomodoro
               </button>
             )}
 
             {phase === "resume-prompt" && (
-              <button
-                type="button"
-                onClick={continueToNextStudy}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-black uppercase tracking-wider text-[#0A1F44] transition hover:brightness-110"
-              >
-                <Play className="h-4 w-4 fill-current" />
-                Siguiente bloque
-              </button>
+              <>
+                <button
+                  type="button"
+                  onClick={continueToNextStudy}
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-black uppercase tracking-wider text-[#0A1F44] transition hover:brightness-110"
+                >
+                  <Play className="h-4 w-4 fill-current" />
+                  Siguiente bloque
+                </button>
+                <button
+                  type="button"
+                  onClick={stopSession}
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-rose-500/30 px-5 text-xs font-bold uppercase tracking-wider text-rose-200/90 transition hover:bg-rose-500/10"
+                >
+                  <Square className="h-3.5 w-3.5 fill-current" />
+                  Detener
+                </button>
+              </>
             )}
 
             {phase === "complete" && (
@@ -235,17 +246,26 @@ export function PomodoroTimer() {
               </p>
 
               {overlay === "break" && (
-                <div className="mt-6 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-5 py-4 text-center">
-                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-200/90">
-                    Descanso · {POMODORO_BREAK_MINUTES} minutos
-                  </p>
-                  <p className="mt-2 text-4xl font-black tabular-nums text-amber-100">
-                    {formatClock(secondsLeft)}
-                  </p>
-                  <p className="mt-2 text-xs text-amber-200/70">
-                    Tómate un café, pasea, mira el cielo — lo que quieras.
-                  </p>
-                </div>
+                <>
+                  <div className="mt-6 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-5 py-4 text-center">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-200/90">
+                      Descanso · {POMODORO_BREAK_MINUTES} minutos
+                    </p>
+                    <p className="mt-2 text-4xl font-black tabular-nums text-amber-100">
+                      {formatClock(secondsLeft)}
+                    </p>
+                    <p className="mt-2 text-xs text-amber-200/70">
+                      Tómate un café, pasea, mira el cielo — lo que quieras.
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={stopSession}
+                    className="mt-4 w-full text-center text-xs font-semibold text-rose-300/80 transition hover:text-rose-200"
+                  >
+                    Detener Pomodoro
+                  </button>
+                </>
               )}
 
               {overlay === "resume" && (
