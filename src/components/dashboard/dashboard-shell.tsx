@@ -7,7 +7,9 @@ import { useStudyNotesCount } from "@/hooks/use-study-notes-count";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { logoutUser } from "@/lib/auth";
 import { getUserGreetingName } from "@/lib/plans/subscription-display";
+import { PomodoroProvider } from "@/contexts/pomodoro-context";
 import { AchievementNotification } from "./achievement-notification";
+import { PomodoroHeaderChip } from "./pomodoro-header-chip";
 import { LayoutDashboard, GraduationCap, History, User, LogOut, Timer, CreditCard, StickyNote } from "lucide-react";
 
 type DashboardShellProps = {
@@ -44,6 +46,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   }
 
   return (
+    <PomodoroProvider>
     <main className="flex min-h-screen flex-1 flex-col bg-[#0A1F44] md:flex-row">
       <aside className="relative z-20 w-full border-b border-mq-border-strong bg-white/[0.02] p-4 md:min-h-full md:w-64 md:border-b-0 md:border-r md:p-6">
         <div className="mb-8 hidden md:block">
@@ -107,18 +110,21 @@ export function DashboardShell({ children }: DashboardShellProps) {
               ) : null}
             </p>
           </div>
-          
-          <button
-            type="button"
-            onClick={async () => {
-              await logoutUser();
-              router.replace("/login");
-            }}
-            className="group flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-semibold text-mq-muted transition-colors hover:bg-red-500/10 hover:text-red-400"
-          >
-            <LogOut size={14} className="transition-transform group-hover:translate-x-0.5" />
-            <span>Salir</span>
-          </button>
+
+          <div className="flex items-center gap-2 sm:gap-3">
+            <PomodoroHeaderChip />
+            <button
+              type="button"
+              onClick={async () => {
+                await logoutUser();
+                router.replace("/login");
+              }}
+              className="group flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-semibold text-mq-muted transition-colors hover:bg-red-500/10 hover:text-red-400"
+            >
+              <LogOut size={14} className="transition-transform group-hover:translate-x-0.5" />
+              <span>Salir</span>
+            </button>
+          </div>
         </header>
 
         <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-8 sm:py-10">
@@ -129,5 +135,6 @@ export function DashboardShell({ children }: DashboardShellProps) {
       </section>
       <AchievementNotification userId={user?.uid ?? ""} />
     </main>
+    </PomodoroProvider>
   );
 }

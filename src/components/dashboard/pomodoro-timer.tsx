@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Coffee, Pause, Play, RotateCcw, Timer } from "lucide-react";
-import { usePomodoroTimer } from "@/hooks/use-pomodoro-timer";
+import { usePomodoro } from "@/contexts/pomodoro-context";
 import {
   POMODORO_BREAK_MINUTES,
   POMODORO_CYCLES,
@@ -34,7 +34,7 @@ export function PomodoroTimer() {
     dismissComplete,
     totalCycles,
     isRunning,
-  } = usePomodoroTimer();
+  } = usePomodoro();
 
   const overlayContent = useMemo(() => {
     if (overlay === "break") return getBreakMessage();
