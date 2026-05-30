@@ -112,17 +112,25 @@ function UccBlockStepper({ blockProgress }: { blockProgress: UccBlockProgressIte
   );
 }
 
-function UccBlockListItem({ block }: { block: UccBlockProgressItem }) {
-  return (
-    <li
-      className={`flex items-start gap-3 rounded-xl border p-4 ${
-        block.status === "done"
-          ? "border-emerald-500/25 bg-emerald-500/5"
-          : block.status === "active"
-            ? "border-mq-accent/30 bg-mq-accent/5"
-            : "border-white/10 bg-white/[0.02]"
-      }`}
-    >
+function UccBlockListItem({
+  block,
+  href,
+}: {
+  block: UccBlockProgressItem;
+  href?: string;
+}) {
+  const cardClassName = `flex items-start gap-3 rounded-xl border p-4 transition-all ${
+    block.status === "done"
+      ? "border-emerald-500/25 bg-emerald-500/5"
+      : block.status === "active"
+        ? href
+          ? "border-mq-accent/30 bg-mq-accent/5 hover:border-mq-accent/50 hover:bg-mq-accent/10"
+          : "border-mq-accent/30 bg-mq-accent/5"
+        : "border-white/10 bg-white/[0.02]"
+  }`;
+
+  const content = (
+    <>
       {block.status === "done" ? (
         <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-emerald-400" />
       ) : block.status === "active" ? (
@@ -148,8 +156,36 @@ function UccBlockListItem({ block }: { block: UccBlockProgressItem }) {
           {block.questionsDone}/{block.questions} preg · ~{block.minutesEstimate} min
         </p>
       </div>
-    </li>
+      {href ? (
+        <ArrowRight
+          size={18}
+          className="mt-0.5 shrink-0 text-mq-accent/60 transition-transform group-hover:translate-x-0.5 group-hover:text-mq-accent"
+        />
+      ) : null}
+    </>
   );
+
+  if (href) {
+    return (
+      <li>
+        <Link href={href} className={`group block ${cardClassName}`}>
+          {content}
+        </Link>
+      </li>
+    );
+  }
+
+  return <li className={cardClassName}>{content}</li>;
+}
+
+function getActiveBlockHref(
+  block: UccBlockProgressItem,
+  nextSession: { block: { id: string }; count: number } | null,
+  missionComplete: boolean,
+): string | undefined {
+  if (missionComplete || block.status !== "active" || !nextSession) return undefined;
+  if (nextSession.block.id !== block.id) return undefined;
+  return buildBlockHref(nextSession.block.id, nextSession.count);
 }
 
 export function UccDailyMissionCard({
@@ -381,7 +417,11 @@ export function UccDailyMissionCard({
 
             <ul className="space-y-3">
               {blockProgress.map((block) => (
-                <UccBlockListItem key={block.id} block={block} />
+                <UccBlockListItem
+                  key={block.id}
+                  block={block}
+                  href={getActiveBlockHref(block, nextSession, missionComplete)}
+                />
               ))}
             </ul>
           </motion.div>
@@ -391,7 +431,11 @@ export function UccDailyMissionCard({
               <li className="animate-pulse text-sm text-mq-muted">Calculando bloques…</li>
             ) : (
               blockProgress.map((block) => (
-                <UccBlockListItem key={block.id} block={block} />
+                <UccBlockListItem
+                  key={block.id}
+                  block={block}
+                  href={getActiveBlockHref(block, nextSession, missionComplete)}
+                />
               ))
             )}
           </ul>
