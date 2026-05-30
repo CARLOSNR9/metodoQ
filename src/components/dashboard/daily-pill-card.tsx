@@ -4,6 +4,7 @@ import { ArrowRight, Brain, CheckCircle2, Lock, Trophy } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useUserProfile } from "@/hooks/use-user-profile";
+import { hasProFeatures } from "@/lib/plans/access";
 import { getLocalDateKey } from "@/lib/results";
 
 interface DailyPillCardProps {
@@ -13,6 +14,7 @@ interface DailyPillCardProps {
 
 export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: DailyPillCardProps) {
   const { profile } = useUserProfile();
+  const isProUser = hasProFeatures(profile?.plan);
   const todayKey = getLocalDateKey(new Date());
   const dailyPill = (profile as any)?.dailyPillStatus;
   const isCompletedToday = dailyPill?.lastCompletedDate === todayKey;
@@ -120,7 +122,15 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
           ) : null}
           
           <Link
-            href={isLocked ? "#" : isCompletedToday ? "/dashboard/planes" : "/dashboard/entrenar?mode=daily-pill"}
+            href={
+              isLocked
+                ? "#"
+                : isCompletedToday
+                  ? isProUser
+                    ? "/dashboard/entrenar"
+                    : "/dashboard/planes"
+                  : "/dashboard/entrenar?mode=daily-pill"
+            }
             onClick={(e) => {
               if (isLocked) e.preventDefault();
             }}
@@ -133,7 +143,13 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
             } px-8 text-sm font-black transition-all active:scale-95`}
           >
             {isLocked && <Lock size={16} />}
-            <span className="truncate">{isCompletedToday ? "REPETIR EN PRO" : "ACEPTAR RETO"}</span>
+            <span className="truncate">
+              {isCompletedToday
+                ? isProUser
+                  ? "CONTINUAR ENTRENANDO"
+                  : "REPETIR EN PRO"
+                : "ACEPTAR RETO"}
+            </span>
             {!isLocked && <ArrowRight size={18} className="shrink-0 transition-transform group-hover/btn:translate-x-1" />}
           </Link>
         </div>
