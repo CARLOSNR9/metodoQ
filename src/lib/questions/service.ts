@@ -13,9 +13,11 @@ import type { TrainingQuestion } from "./types";
 
 const COLLECTION = "questions";
 
-function mapDocToQuestion(id: string, data: Record<string, unknown>): TrainingQuestion {
+function mapDocToQuestion(docId: string, data: Record<string, unknown>): TrainingQuestion {
+  const logicalId = String(data.id ?? docId);
+
   return {
-    id,
+    id: logicalId,
     topic: String(data.topic ?? "General"),
     statement: String(data.statement ?? ""),
     options: (data.options as TrainingQuestion["options"]) ?? [],

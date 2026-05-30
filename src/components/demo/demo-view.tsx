@@ -14,6 +14,7 @@ import {
   Act2PredictiveDashboard
 } from "@/components/demo";
 import { getTheoryLink } from "@/lib/questions/theory-link";
+import { enrichQuestionWithTheoryPill } from "@/lib/questions/enrich-theory-pills";
 import { logoutUser } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { useUserPlan } from "@/hooks/use-user-plan";
@@ -170,6 +171,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const currentQuestion = isResultsStep
     ? null
     : availableQuestions[currentQuestionIndex];
+  const enrichedCurrentQuestion = currentQuestion
+    ? enrichQuestionWithTheoryPill(currentQuestion)
+    : null;
   const selectedOptionId = currentQuestion
     ? answersByQuestionId[currentQuestion.id]
     : null;
@@ -726,28 +730,28 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     <motion.div initial={{ width: 0 }} animate={{ width: `${progressPercent}%` }} className="absolute inset-y-0 left-0 bg-mq-accent shadow-[0_0_15px_rgba(0,209,255,0.5)]" />
                  </div>
 
-                 {currentQuestion && (
+                 {enrichedCurrentQuestion && (
                     <QuestionCard 
-                       key={currentQuestion.id}
-                       questionId={currentQuestion.id}
-                       topic={currentQuestion.topic}
-                       question={currentQuestion.statement}
-                       options={currentQuestion.options}
-                       correctOptionId={currentQuestion.correctOptionId}
-                       explanation={currentQuestion.explanation}
-                       keyPoints={currentQuestion.keyPoints}
-                       theoryContent={currentQuestion.theoryContent}
-                       theoryHref={getTheoryLink(currentQuestion)}
+                       key={enrichedCurrentQuestion.id}
+                       questionId={enrichedCurrentQuestion.id}
+                       topic={enrichedCurrentQuestion.topic}
+                       question={enrichedCurrentQuestion.statement}
+                       options={enrichedCurrentQuestion.options}
+                       correctOptionId={enrichedCurrentQuestion.correctOptionId}
+                       explanation={enrichedCurrentQuestion.explanation}
+                       keyPoints={enrichedCurrentQuestion.keyPoints}
+                       theoryContent={enrichedCurrentQuestion.theoryContent}
+                       theoryHref={getTheoryLink(enrichedCurrentQuestion)}
                        userId={user?.uid ?? null}
                        dynamicFeedback={liveFeedbackMessage}
                        incorrectAnswerDetail={
                          hasAnsweredCurrentQuestion &&
-                         selectedOptionId !== currentQuestion.correctOptionId
-                           ? currentQuestion.options.find((o) => o.id === selectedOptionId)
+                         selectedOptionId !== enrichedCurrentQuestion.correctOptionId
+                           ? enrichedCurrentQuestion.options.find((o) => o.id === selectedOptionId)
                                ?.incorrectFeedback
                            : undefined
                        }
-                       examAreaLabel={currentQuestion.examArea}
+                       examAreaLabel={enrichedCurrentQuestion.examArea}
                        onAnswerSelect={handleAnswer}
                        isLocked={
                          isDailyPill || isSimulacro
