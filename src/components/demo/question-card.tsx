@@ -196,27 +196,23 @@ export function QuestionCard({
                       <button
                         type="button"
                         onClick={() => setIsTheoryPanelOpen(true)}
-                        className="group flex w-full items-center gap-3 rounded-2xl border border-mq-accent/40 bg-mq-accent/15 px-4 py-4 text-left shadow-[0_0_24px_-8px_rgb(0_209_255/0.45)] transition hover:border-mq-accent/60 hover:bg-mq-accent/20"
+                        className="group flex w-full items-center gap-4 rounded-2xl border border-white/10 bg-gradient-to-r from-white/[0.06] to-mq-accent/10 p-4 text-left transition hover:border-mq-accent/35 hover:from-white/[0.08] hover:to-mq-accent/15"
                       >
-                        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mq-accent text-mq-accent-foreground">
-                          <BookOpen className="h-4 w-4" />
+                        <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/15 text-mq-accent ring-1 ring-mq-accent/20">
+                          <BookOpen className="h-5 w-5" />
                         </span>
                         <span className="min-w-0 flex-1">
                           <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
-                            {isCorrect ? "Repasar" : "Profundizar"}
+                            {isCorrect ? "Repasar tema" : "Profundizar"}
                           </span>
-                          <span className="mt-0.5 block text-sm font-semibold text-white">
-                            {topic
-                              ? `${isCorrect ? "Repasar" : "Profundizar en"}: ${topic}`
-                              : "Leer explicación completa del tema"}
+                          <span className="mt-1 block text-sm font-bold text-white">
+                            {topic ?? "Leer explicación completa"}
                           </span>
-                          {!isCorrect ? (
-                            <span className="mt-1 block text-xs text-mq-muted">
-                              Píldora de teoría · Toca para leer y guardar en Mi Estudio
-                            </span>
-                          ) : null}
+                          <span className="mt-1 block text-xs text-mq-muted">
+                            Abre la píldora de teoría y guárdala en Mi Estudio
+                          </span>
                         </span>
-                        <ChevronRight className="h-5 w-5 shrink-0 text-mq-accent transition group-hover:translate-x-0.5" />
+                        <ChevronRight className="h-5 w-5 shrink-0 text-mq-accent/80 transition group-hover:translate-x-0.5 group-hover:text-mq-accent" />
                       </button>
                       <TheoryDeepDivePanel
                         open={isTheoryPanelOpen}
