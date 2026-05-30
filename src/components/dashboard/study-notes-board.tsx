@@ -87,22 +87,47 @@ export function StudyNotesBoard({ userId }: StudyNotesBoardProps) {
     <>
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {notes.map((note, index) => (
-          <motion.button
+          <motion.div
             key={note.questionId}
-            type="button"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.04 }}
+            role="button"
+            tabIndex={0}
             onClick={() => setSelectedNote(note)}
-            className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-mq-accent/30 hover:bg-white/[0.05]"
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                setSelectedNote(note);
+              }
+            }}
+            className="group cursor-pointer rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-left transition hover:border-mq-accent/30 hover:bg-white/[0.05]"
           >
             <div className="flex items-start justify-between gap-3">
               <p className="text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
                 {note.examArea ?? "Tema clave"}
               </p>
-              <span className="text-[10px] font-semibold text-mq-muted">
-                {formatSavedDate(note.savedAt)}
-              </span>
+              <div className="flex shrink-0 items-center gap-2">
+                <span className="text-[10px] font-semibold text-mq-muted">
+                  {formatSavedDate(note.savedAt)}
+                </span>
+                <button
+                  type="button"
+                  aria-label="Eliminar nota"
+                  disabled={removingId === note.questionId}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    void handleRemove(note.questionId);
+                  }}
+                  className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-transparent text-mq-muted opacity-70 transition hover:border-rose-500/30 hover:bg-rose-500/10 hover:text-rose-200 hover:opacity-100 disabled:opacity-50 group-hover:opacity-100"
+                >
+                  {removingId === note.questionId ? (
+                    <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                  ) : (
+                    <Trash2 className="h-3.5 w-3.5" />
+                  )}
+                </button>
+              </div>
             </div>
             <h3 className="mt-3 line-clamp-2 text-base font-bold text-white">
               {note.topic}
@@ -114,7 +139,7 @@ export function StudyNotesBoard({ userId }: StudyNotesBoardProps) {
               <BookOpen className="h-3.5 w-3.5" />
               Leer nota
             </p>
-          </motion.button>
+          </motion.div>
         ))}
       </div>
 
