@@ -46,6 +46,22 @@ export async function getUserUsage(userId: string) {
   return { daily, monthly };
 }
 
+/** Resetea sesiones fantasma: clics en "Comenzar" sin preguntas guardadas hoy. */
+async function reconcileOrphanedDailySessions(
+  userId: string,
+  todayQuestions: number,
+  daily: DailyUsage,
+): Promise<DailyUsage> {
+  if (todayQuestions > 0 || daily.sessions === 0) {
+    return daily;
+  }
+
+  const resetDaily: DailyUsage = { date: daily.date, sessions: 0 };
+  const ref = doc(getFirebaseDb(), "users", userId);
+  await setDoc(ref, { usage: { daily: resetDaily } }, { merge: true });
+  return resetDaily;
+}
+
 export type UsageBlockMeta = {
   dayClosed?: boolean;
   bonusAvailable?: boolean;
@@ -76,7 +92,7 @@ export async function checkCanStartSession(
   const normalized = normalizeUserPlan(plan ?? undefined);
   const limits = getTrainingLimits(normalized);
   const goal = getDailyGoalForProfile(options?.profile, options?.planStartedAt);
-  const { daily, monthly } = await getUserUsage(userId);
+  let { daily, monthly } = await getUserUsage(userId);
 
   if (sessionType === "simulacro") {
     if (limits.simulacrosPerMonth === 0) {
@@ -101,10 +117,18 @@ export async function checkCanStartSession(
   }
 
   const sessionsLimit = goal.isUccMiTrack ? goal.sessionsPerDay : limits.sessionsPerDay;
+  const needsQuestionCount = goal.isUccMiTrack || daily.sessions > 0;
+  let todayQuestions = 0;
+
+  if (needsQuestionCount) {
+    const results = await getUserDemoResults(userId);
+    todayQuestions = getTodayQuestionsCount(results);
+    if (daily.sessions > 0 && todayQuestions === 0) {
+      daily = await reconcileOrphanedDailySessions(userId, todayQuestions, daily);
+    }
+  }
 
   if (goal.isUccMiTrack) {
-    const results = await getUserDemoResults(userId);
-    const todayQuestions = getTodayQuestionsCount(results);
     const bonusAnswered = Math.max(0, todayQuestions - goal.dailyTarget);
 
     if (options?.isBonusMode) {
@@ -121,7 +145,10 @@ export async function checkCanStartSession(
           dayClosed: true,
         };
       }
-    } else if (todayQuestions >= goal.dailyTarget) {
+      return { allowed: true };
+    }
+
+    if (todayQuestions >= goal.dailyTarget) {
       const bonusAvailable = canStartUccMiBonus(
         todayQuestions,
         goal.dailyTarget,
@@ -134,15 +161,16 @@ export async function checkCanStartSession(
         bonusAvailable,
       };
     }
+
+    // Misión pendiente: el progreso real en preguntas manda, no sesiones iniciadas.
+    return { allowed: true };
   }
 
   if (daily.sessions >= sessionsLimit) {
     return {
       allowed: false,
-      reason: goal.isUccMiTrack
-        ? `Completaste tus ${sessionsLimit} bloques de hoy. Cierra el día o retoma mañana.`
-        : `Alcanzaste el límite de ${sessionsLimit} entrenamiento(s) por hoy en tu plan.`,
-      upgradeHref: goal.isUccMiTrack ? undefined : "/dashboard/planes",
+      reason: `Alcanzaste el límite de ${sessionsLimit} entrenamiento(s) por hoy en tu plan.`,
+      upgradeHref: "/dashboard/planes",
     };
   }
 
@@ -153,10 +181,17 @@ export async function recordSessionStart(
   userId: string,
   sessionType: "training" | "diagnostico" | "simulacro",
 ) {
+  if (sessionType === "diagnostico") {
+    return;
+  }
+
   const ref = doc(getFirebaseDb(), "users", userId);
   const { daily, monthly } = await getUserUsage(userId);
 
-  const nextDaily = { ...daily, sessions: daily.sessions + 1 };
+  const nextDaily =
+    sessionType === "training"
+      ? { ...daily, sessions: daily.sessions + 1 }
+      : daily;
   const nextMonthly =
     sessionType === "simulacro"
       ? { ...monthly, simulacros: monthly.simulacros + 1 }
@@ -182,6 +217,12 @@ export async function getTodayTrainingStatus(
   const goal = getDailyGoalForProfile(profile, planStartedAt);
   const results = await getUserDemoResults(userId);
   const todayQuestions = getTodayQuestionsCount(results);
+  const { daily } = await getUserUsage(userId);
+
+  if (daily.sessions > 0 && todayQuestions === 0) {
+    await reconcileOrphanedDailySessions(userId, todayQuestions, daily);
+  }
+
   const bonusAnswered = Math.max(0, todayQuestions - goal.dailyTarget);
   const dayClosed = goal.isUccMiTrack && todayQuestions >= goal.dailyTarget;
   const bonusAvailable =

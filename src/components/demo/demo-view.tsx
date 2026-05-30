@@ -136,6 +136,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [liveFeedbackMessage, setLiveFeedbackMessage] = useState<string | null>(null);
   const [totalSeconds, setTotalSeconds] = useState(0);
   const hasTrackedFinishDemoRef = useRef(false);
+  const hasRecordedSessionRef = useRef(false);
   const effectiveSimulacroMinutes =
     isUccSimulacro && simulacroMinutesOverride
       ? simulacroMinutesOverride
@@ -220,8 +221,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         });
         return;
       }
-      await recordSessionStart(user.uid, sessionType);
+      if (sessionType === "simulacro") {
+        await recordSessionStart(user.uid, sessionType);
+      }
     }
+
+    hasRecordedSessionRef.current = false;
 
     let pool = [...questionBank];
 
@@ -526,6 +531,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       isCorrect,
       responseTime: timeTaken,
     });
+
+    if (user && sessionType === "training" && !hasRecordedSessionRef.current) {
+      hasRecordedSessionRef.current = true;
+      void recordSessionStart(user.uid, sessionType);
+    }
 
     setTimeout(() => {
       setShowProgressFeedback(false);

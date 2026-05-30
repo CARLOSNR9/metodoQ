@@ -100,7 +100,7 @@ export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerPr
         </div>
       </div>
       <Link
-        href="/dashboard/entrenar"
+        href="/dashboard#ucc-mission"
         className={`inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl border px-4 text-xs font-bold transition ${
           isUrgent
             ? "border-rose-400/40 bg-rose-500/25 text-rose-50 hover:bg-rose-500/35"
