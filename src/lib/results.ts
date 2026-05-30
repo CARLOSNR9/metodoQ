@@ -19,6 +19,8 @@ import { buildElizabethTrainingResults, isElizabethDemoEmail } from "@/lib/demo/
 import { getDemoTrainingResultsIfEligible } from "@/lib/demo/demo-training-data";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 
+import type { UccMiBlockKind } from "@/lib/training/ucc-mi-daily-plan";
+
 type SaveDemoResultInput = {
   userId: string;
   scorePercentage: number;
@@ -28,6 +30,7 @@ type SaveDemoResultInput = {
   correctTopics?: Record<string, number>;
   avgResponseTime?: number;
   sessionType?: "training" | "diagnostico" | "simulacro" | "daily-pill";
+  uccBlockKind?: UccMiBlockKind | null;
 };
 
 export type SessionTypeLabel = "training" | "diagnostico" | "simulacro" | "daily-pill";
@@ -41,6 +44,7 @@ export type DemoResultItem = {
   fechaIso: string | null;
   wrongTopics: Record<string, number>;
   sessionType: SessionTypeLabel;
+  uccBlockKind?: UccMiBlockKind | null;
 };
 
 export type WeakTopicItem = {
@@ -148,6 +152,7 @@ export async function saveDemoResult({
   correctTopics = {},
   avgResponseTime = 0,
   sessionType = "training",
+  uccBlockKind,
 }: SaveDemoResultInput) {
   const db = getFirebaseDb();
 
@@ -160,6 +165,7 @@ export async function saveDemoResult({
     correctTopics,
     avgResponseTime,
     sessionType,
+    ...(uccBlockKind ? { uccBlockKind } : {}),
     fecha: serverTimestamp(),
   });
 
@@ -184,6 +190,7 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
     wrongAnswers?: number;
     wrongTopics?: Record<string, number>;
     sessionType?: SessionTypeLabel;
+    uccBlockKind?: UccMiBlockKind;
     fecha?: { toDate?: () => Date };
   };
 
@@ -203,6 +210,7 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
         }).format(date)
       : "Fecha no disponible",
     sessionType: data.sessionType ?? "training",
+    uccBlockKind: data.uccBlockKind ?? null,
   };
 }
 

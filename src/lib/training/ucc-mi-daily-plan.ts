@@ -9,6 +9,8 @@ export const UCC_MI_MINUTES_PER_QUESTION = 2;
 
 export type UccMiBlockKind = "new" | "review" | "weak";
 
+const UCC_BLOCK_ORDER: UccMiBlockKind[] = ["new", "review", "weak"];
+
 export type UccMiDailyBlock = {
   id: UccMiBlockKind;
   label: string;
@@ -136,11 +138,60 @@ export function getBlockProgress(
   });
 }
 
+export type UccBlockProgressItem = UccMiDailyBlock & {
+  status: "done" | "active" | "pending";
+  questionsDone: number;
+};
+
+function getBlockProgressFromTaggedSessions(
+  blocks: UccMiDailyBlock[],
+  blockQuestionCounts: Partial<Record<UccMiBlockKind, number>>,
+): UccBlockProgressItem[] {
+  const base = blocks.map((block) => {
+    const rawDone = blockQuestionCounts[block.id] ?? 0;
+    const questionsDone = Math.min(rawDone, block.questions);
+    const status: UccBlockProgressItem["status"] =
+      questionsDone >= block.questions ? "done" : "pending";
+    return { ...block, questionsDone, status };
+  });
+
+  let activeAssigned = false;
+  return base.map((block) => {
+    if (block.status === "done") return block;
+    if (!activeAssigned) {
+      activeAssigned = true;
+      return { ...block, status: "active" as const };
+    }
+    return block;
+  });
+}
+
+export function resolveUccBlockProgress(
+  blocks: UccMiDailyBlock[],
+  todayQuestions: number,
+  blockQuestionCounts?: Partial<Record<UccMiBlockKind, number>>,
+): UccBlockProgressItem[] {
+  const hasTagged =
+    blockQuestionCounts &&
+    UCC_BLOCK_ORDER.some((id) => (blockQuestionCounts[id] ?? 0) > 0);
+
+  if (hasTagged) {
+    return getBlockProgressFromTaggedSessions(blocks, blockQuestionCounts!);
+  }
+
+  return getBlockProgress(blocks, todayQuestions);
+}
+
+export function countCompletedUccBlocks(progress: UccBlockProgressItem[]): number {
+  return progress.filter((block) => block.status === "done").length;
+}
+
 export function getNextBlockSessionCount(
   blocks: UccMiDailyBlock[],
   todayQuestions: number,
+  blockQuestionCounts?: Partial<Record<UccMiBlockKind, number>>,
 ): { block: UccMiDailyBlock; count: number } | null {
-  const progress = getBlockProgress(blocks, todayQuestions);
+  const progress = resolveUccBlockProgress(blocks, todayQuestions, blockQuestionCounts);
   const active = progress.find((b) => b.status === "active" || b.status === "pending");
   if (!active) return null;
   const remaining = active.questions - active.questionsDone;
@@ -169,4 +220,39 @@ export function canStartUccMiBonus(
 export function estimateRemainingMinutes(todayQuestions: number, dailyTarget: number): number {
   const remaining = Math.max(0, dailyTarget - todayQuestions);
   return remaining * UCC_MI_MINUTES_PER_QUESTION;
+}
+
+export type UccBlockCompletionCTA = {
+  completedBlock: UccMiDailyBlock;
+  nextBlock: UccMiDailyBlock | null;
+  nextHref: string | null;
+  dashboardHref: string;
+};
+
+export function getUccBlockCompletionCTA(
+  completedBlockId: UccMiBlockKind,
+  planStartedAt: string | null | undefined,
+  weakTopic?: string | null,
+): UccBlockCompletionCTA | null {
+  const blocks = buildUccMiDailyBlocks(planStartedAt, weakTopic);
+  const completedBlock = blocks.find((block) => block.id === completedBlockId);
+  if (!completedBlock) return null;
+
+  const completedIndex = UCC_BLOCK_ORDER.indexOf(completedBlockId);
+  const nextBlockId =
+    completedIndex >= 0 && completedIndex < UCC_BLOCK_ORDER.length - 1
+      ? UCC_BLOCK_ORDER[completedIndex + 1]
+      : null;
+  const nextBlock = nextBlockId
+    ? blocks.find((block) => block.id === nextBlockId) ?? null
+    : null;
+
+  return {
+    completedBlock,
+    nextBlock,
+    nextHref: nextBlock
+      ? `/dashboard/entrenar?block=${nextBlock.id}&count=${nextBlock.questions}`
+      : null,
+    dashboardHref: "/dashboard#ucc-mission",
+  };
 }

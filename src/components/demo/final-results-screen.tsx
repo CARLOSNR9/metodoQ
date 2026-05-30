@@ -10,6 +10,7 @@ import {
 } from "@/lib/plans/access";
 import { Act2PredictiveDashboard } from "./act2-predictive-dashboard";
 import { ScoreComparisonCards } from "./score-comparison-cards";
+import type { UccBlockCompletionCTA } from "@/lib/training/ucc-mi-daily-plan";
 
 export type FinalResultsScreenProps = {
   /** Puntaje de esta sesión (%). */
@@ -31,6 +32,7 @@ export type FinalResultsScreenProps = {
   university?: string | null;
   specialty?: string | null;
   userPlan?: StoredUserPlan | null;
+  uccBlockCompletion?: UccBlockCompletionCTA | null;
 };
 
 function getPerformanceProfile(scorePercentage: number) {
@@ -76,6 +78,7 @@ export function FinalResultsScreen({
   cumulativeScorePercentage,
   totalQuestionsAnswered = 0,
   userPlan,
+  uccBlockCompletion = null,
 }: FinalResultsScreenProps) {
   const isAct1 = source === "act1";
   const isDailyPill = source === "daily-pill";
@@ -100,6 +103,15 @@ export function FinalResultsScreen({
     const secs = Math.round(seconds % 60);
     return `${mins}m ${secs}s`;
   };
+
+  const hasUccBlockFlow = Boolean(uccBlockCompletion);
+
+  const uccPrimaryLabel = uccBlockCompletion?.nextBlock
+    ? `Siguiente: ${uccBlockCompletion.nextBlock.label}`
+    : "Ver misión del día";
+
+  const uccPrimaryHref =
+    uccBlockCompletion?.nextHref ?? uccBlockCompletion?.dashboardHref ?? "/dashboard";
 
   return (
     <div className={`mt-10 flex justify-center px-4 ${className ?? ""}`}>
@@ -286,6 +298,31 @@ export function FinalResultsScreen({
           </motion.div>
         )}
 
+        {!isDailyPill && hasUccBlockFlow && uccBlockCompletion ? (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55 }}
+            className="relative z-10 mt-6 rounded-2xl border border-emerald-500/25 bg-emerald-500/10 p-5"
+          >
+            <div className="flex items-start gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-300">
+                <Target className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="text-sm font-black text-white">
+                  {uccBlockCompletion.completedBlock.label} completado
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-emerald-100/90">
+                  {uccBlockCompletion.nextBlock
+                    ? `Tu misión de hoy continúa con ${uccBlockCompletion.nextBlock.label.toLowerCase()}.`
+                    : "Completaste los tres bloques de hoy. Revisa tu misión en el panel para cerrar el día o hacer bonus."}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        ) : null}
+
         {!isDailyPill && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -403,6 +440,22 @@ export function FinalResultsScreen({
               >
                 <Lock className="mr-2 h-4 w-4" />
                 Repetir Diagnóstico (PRO)
+              </Link>
+            </>
+          ) : hasUccBlockFlow ? (
+            <>
+              <Link
+                href={uccPrimaryHref}
+                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                {uccPrimaryLabel}
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href={uccBlockCompletion?.dashboardHref ?? "/dashboard"}
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+              >
+                Volver al panel
               </Link>
             </>
           ) : isResidenteUser ? (

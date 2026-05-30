@@ -3,7 +3,7 @@
 import { onAuthStateChanged, type User } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import {
   AttemptHistory,
@@ -47,7 +47,10 @@ import { getEffectiveGoalSpecialty, isUccPastoMedicinaInternaProUser } from "@/l
 import { selectUccTrainingQuestions } from "@/lib/training/ucc-module-selection";
 import { selectUccSimulacroQuestions } from "@/lib/training/ucc-simulacro-selection";
 import type { UccMiBlockKind } from "@/lib/training/ucc-mi-daily-plan";
-import { getUccMiWeekModule } from "@/lib/training/ucc-mi-daily-plan";
+import {
+  getUccBlockCompletionCTA,
+  getUccMiWeekModule,
+} from "@/lib/training/ucc-mi-daily-plan";
 import { getPerformanceStatsKey } from "@/lib/diagnostic/exam-blueprint";
 import {
   computeCumulativePerformance,
@@ -209,6 +212,17 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     userTrackProfile && isUccPastoMedicinaInternaProUser(userTrackProfile)
       ? getUccMiWeekModule(userTrackProfile.planStartedAt)
       : null;
+
+  const uccBlockCompletion = useMemo(() => {
+    if (!blockParam || !["new", "review", "weak"].includes(blockParam)) {
+      return null;
+    }
+    return getUccBlockCompletionCTA(
+      blockParam,
+      userTrackProfile?.planStartedAt,
+      learningProfile.weaknesses[0] ?? null,
+    );
+  }, [blockParam, userTrackProfile?.planStartedAt, learningProfile.weaknesses]);
 
   const startAdaptiveSession = async () => {
     if (user) {
@@ -457,12 +471,16 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       correctTopics: correctTopicsByName,
       avgResponseTime: calculateAverageResponseTime(responseTimes),
       sessionType: isDailyPill ? "daily-pill" : sessionType,
+      uccBlockKind:
+        blockParam && ["new", "review", "weak"].includes(blockParam) && !isDailyPill && !isAct1 && !isSimulacro
+          ? blockParam
+          : undefined,
     }).then(() => {
       setHasSavedCurrentAttempt(true);
       setHistoryRefreshKey((prev) => prev + 1);
       registerTrainingDay(user.uid).catch(console.error);
     });
-  }, [correctAnswers, hasSavedCurrentAttempt, isResultsStep, scorePercentage, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
+  }, [blockParam, correctAnswers, hasSavedCurrentAttempt, isAct1, isDailyPill, isResultsStep, isSimulacro, scorePercentage, sessionType, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
 
   useEffect(() => {
     if (!isFreePlan || !hasStarted || hasTriggeredFreePaywall || isResultsStep || currentQuestionIndex !== totalQuestions - 1 || !hasAnsweredCurrentQuestion) return;
@@ -600,6 +618,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               sessionQuestions={sessionQuestions}
               answersByQuestionId={answersByQuestionId}
               userPlan={effectivePlan}
+              uccBlockCompletion={uccBlockCompletion}
             />
             {user && !isDailyPill && (
               <div className="mt-12 space-y-12">

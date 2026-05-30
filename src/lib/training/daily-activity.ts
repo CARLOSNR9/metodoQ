@@ -1,5 +1,6 @@
 import { getLocalDateKey, type DemoResultItem } from "@/lib/results";
 import { PRO_DAILY_MIN_QUESTIONS } from "@/lib/plans/limits";
+import type { UccMiBlockKind } from "@/lib/training/ucc-mi-daily-plan";
 
 export { PRO_DAILY_MIN_QUESTIONS };
 
@@ -59,6 +60,21 @@ export function aggregateQuestionsByDateKey(
 export function getTodayQuestionsCount(results: DemoResultItem[]): number {
   const todayKey = getLocalDateKey(new Date());
   return aggregateQuestionsByDateKey(results).get(todayKey) ?? 0;
+}
+
+export function aggregateTodayUccBlockQuestions(
+  results: DemoResultItem[],
+): Record<UccMiBlockKind, number> {
+  const counts: Record<UccMiBlockKind, number> = { new: 0, review: 0, weak: 0 };
+  const todayKey = getLocalDateKey(new Date());
+
+  for (const result of results) {
+    if (!result.fechaIso || !result.uccBlockKind) continue;
+    if (getLocalDateKey(new Date(result.fechaIso)) !== todayKey) continue;
+    counts[result.uccBlockKind] += result.correctAnswers + result.wrongAnswers;
+  }
+
+  return counts;
 }
 
 export function getPlanStartDateKey(planStartedAt: string | null | undefined): string | null {

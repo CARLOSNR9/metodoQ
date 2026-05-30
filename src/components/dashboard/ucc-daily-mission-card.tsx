@@ -14,16 +14,21 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { getFirebaseDb } from "@/lib/firebase";
-import { getUserDemoResults } from "@/lib/results";
-import { getTodayQuestionsCount } from "@/lib/training/daily-activity";
+import { getUserDemoResults, type DemoResultItem } from "@/lib/results";
+import {
+  aggregateTodayUccBlockQuestions,
+  getTodayQuestionsCount,
+} from "@/lib/training/daily-activity";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import {
   buildUccMiDailyBlocks,
+  countCompletedUccBlocks,
   estimateRemainingMinutes,
-  getBlockProgress,
   getNextBlockSessionCount,
   getPlanWeekNumber,
   getUccMiWeekModule,
+  resolveUccBlockProgress,
+  type UccBlockProgressItem,
 } from "@/lib/training/ucc-mi-daily-plan";
 import { getTodayTrainingStatus } from "@/lib/training/usage";
 
@@ -48,6 +53,105 @@ function buildBlockHref(blockId: string, count: number, bonus = false): string {
   return `/dashboard/entrenar?${params.toString()}`;
 }
 
+function UccBlockStepper({ blockProgress }: { blockProgress: UccBlockProgressItem[] }) {
+  const completedCount = countCompletedUccBlocks(blockProgress);
+
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center justify-between">
+        <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">
+          Bloques de hoy
+        </p>
+        <p className="text-xs font-bold text-white">
+          {completedCount}/{blockProgress.length} completados
+        </p>
+      </div>
+
+      <ol className="flex items-start">
+        {blockProgress.map((block, index) => (
+          <li key={block.id} className="flex flex-1 items-center">
+            <div className="flex min-w-0 flex-1 flex-col items-center gap-2">
+              <div
+                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 transition-all ${
+                  block.status === "done"
+                    ? "border-emerald-400 bg-emerald-500/20 text-emerald-300"
+                    : block.status === "active"
+                      ? "border-mq-accent bg-mq-accent/15 text-mq-accent shadow-[0_0_14px_rgba(0,209,255,0.35)]"
+                      : "border-white/15 bg-white/[0.03] text-white/25"
+                }`}
+              >
+                {block.status === "done" ? (
+                  <CheckCircle2 size={18} />
+                ) : (
+                  <span className="text-xs font-black">{index + 1}</span>
+                )}
+              </div>
+              <p
+                className={`max-w-[88px] text-center text-[9px] font-bold uppercase leading-tight tracking-wide ${
+                  block.status === "done"
+                    ? "text-emerald-300"
+                    : block.status === "active"
+                      ? "text-mq-accent"
+                      : "text-white/30"
+                }`}
+              >
+                {block.label.split("·")[0]?.trim()}
+              </p>
+            </div>
+            {index < blockProgress.length - 1 ? (
+              <div
+                className={`mb-6 h-0.5 min-w-[12px] flex-1 ${
+                  block.status === "done" ? "bg-emerald-500/40" : "bg-white/10"
+                }`}
+              />
+            ) : null}
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+function UccBlockListItem({ block }: { block: UccBlockProgressItem }) {
+  return (
+    <li
+      className={`flex items-start gap-3 rounded-xl border p-4 ${
+        block.status === "done"
+          ? "border-emerald-500/25 bg-emerald-500/5"
+          : block.status === "active"
+            ? "border-mq-accent/30 bg-mq-accent/5"
+            : "border-white/10 bg-white/[0.02]"
+      }`}
+    >
+      {block.status === "done" ? (
+        <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-emerald-400" />
+      ) : block.status === "active" ? (
+        <Zap size={20} className="mt-0.5 shrink-0 text-mq-accent" />
+      ) : (
+        <Circle size={20} className="mt-0.5 shrink-0 text-white/30" />
+      )}
+      <div className="min-w-0 flex-1">
+        <div className="flex flex-wrap items-center gap-2">
+          <p className="font-bold text-white">{block.label}</p>
+          {block.status === "done" ? (
+            <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
+              Completado
+            </span>
+          ) : block.status === "active" ? (
+            <span className="rounded-full bg-mq-accent/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mq-accent">
+              Siguiente
+            </span>
+          ) : null}
+        </div>
+        <p className="mt-0.5 text-sm text-mq-muted">{block.description}</p>
+        <p className="mt-1 text-xs font-medium text-mq-accent">
+          {block.questionsDone}/{block.questions} preg · ~{block.minutesEstimate} min
+        </p>
+      </div>
+    </li>
+  );
+}
+
 export function UccDailyMissionCard({
   userId,
   planStartedAt,
@@ -55,6 +159,7 @@ export function UccDailyMissionCard({
 }: UccDailyMissionCardProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [todayQuestions, setTodayQuestions] = useState(0);
+  const [todayResults, setTodayResults] = useState<DemoResultItem[]>([]);
   const [resolvedWeakTopic, setResolvedWeakTopic] = useState(weakTopic ?? null);
   const [dayClosed, setDayClosed] = useState(false);
   const [bonusAvailable, setBonusAvailable] = useState(false);
@@ -78,6 +183,7 @@ export function UccDailyMissionCard({
 
         const count = getTodayQuestionsCount(results);
         setTodayQuestions(count);
+        setTodayResults(results);
 
         const status = await getTodayTrainingStatus(userId, userData, planStartedAt);
         if (!mounted) return;
@@ -106,14 +212,24 @@ export function UccDailyMissionCard({
     [planStartedAt, resolvedWeakTopic],
   );
 
+  const blockQuestionCounts = useMemo(
+    () => aggregateTodayUccBlockQuestions(todayResults),
+    [todayResults],
+  );
+
   const blockProgress = useMemo(
-    () => getBlockProgress(blocks, todayQuestions),
-    [blocks, todayQuestions],
+    () => resolveUccBlockProgress(blocks, todayQuestions, blockQuestionCounts),
+    [blocks, todayQuestions, blockQuestionCounts],
   );
 
   const nextSession = useMemo(
-    () => getNextBlockSessionCount(blocks, todayQuestions),
-    [blocks, todayQuestions],
+    () => getNextBlockSessionCount(blocks, todayQuestions, blockQuestionCounts),
+    [blocks, todayQuestions, blockQuestionCounts],
+  );
+
+  const completedBlocksCount = useMemo(
+    () => countCompletedUccBlocks(blockProgress),
+    [blockProgress],
   );
 
   const weekModule = useMemo(() => getUccMiWeekModule(planStartedAt), [planStartedAt]);
@@ -146,6 +262,12 @@ export function UccDailyMissionCard({
             </h2>
             <p className="max-w-xl text-sm text-mq-muted">
               Semana {weekNumber} · {weekModule.label}: {weekModule.focus}
+              {!isLoading && completedBlocksCount > 0 ? (
+                <span className="text-emerald-300">
+                  {" "}
+                  · {completedBlocksCount}/3 bloques listos
+                </span>
+              ) : null}
             </p>
           </div>
 
@@ -163,6 +285,12 @@ export function UccDailyMissionCard({
             </p>
           </div>
         </div>
+
+        {!isLoading ? (
+          <UccBlockStepper blockProgress={blockProgress} />
+        ) : (
+          <div className="animate-pulse text-sm text-mq-muted">Calculando bloques…</div>
+        )}
 
         <div className="space-y-2">
           <div className="flex justify-between text-[10px] font-bold uppercase tracking-wider text-mq-muted">
@@ -189,31 +317,39 @@ export function UccDailyMissionCard({
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-6"
+            className="space-y-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-300">
-                <Moon size={24} />
-              </div>
-              <div className="space-y-2">
-                <p className="text-lg font-black text-white">
-                  Completaste tu misión de {goal.dailyTarget} preguntas
-                </p>
-                <p className="text-sm leading-relaxed text-emerald-100/90">
-                  Descansa. Mañana el algoritmo te programará repaso espaciado de lo que
-                  practicaste hoy. El descanso consolida la memoria.
-                </p>
-                {bonusAvailable && (
-                  <Link
-                    href={buildBlockHref("weak", goal.bonusMax, true)}
-                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-200 underline-offset-2 hover:underline"
-                  >
-                    Opcional: {goal.bonusMax} preguntas bonus sin presión
-                    <ArrowRight size={14} />
-                  </Link>
-                )}
+            <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-6">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-300">
+                  <Moon size={24} />
+                </div>
+                <div className="space-y-2">
+                  <p className="text-lg font-black text-white">
+                    Completaste tu misión de {goal.dailyTarget} preguntas
+                  </p>
+                  <p className="text-sm leading-relaxed text-emerald-100/90">
+                    Descansa. Mañana el algoritmo te programará repaso espaciado de lo que
+                    practicaste hoy. El descanso consolida la memoria.
+                  </p>
+                  {bonusAvailable && (
+                    <Link
+                      href={buildBlockHref("weak", goal.bonusMax, true)}
+                      className="inline-flex items-center gap-2 text-xs font-bold text-emerald-200 underline-offset-2 hover:underline"
+                    >
+                      Opcional: {goal.bonusMax} preguntas bonus sin presión
+                      <ArrowRight size={14} />
+                    </Link>
+                  )}
+                </div>
               </div>
             </div>
+
+            <ul className="space-y-3">
+              {blockProgress.map((block) => (
+                <UccBlockListItem key={block.id} block={block} />
+              ))}
+            </ul>
           </motion.div>
         ) : (
           <ul className="space-y-3">
@@ -221,31 +357,7 @@ export function UccDailyMissionCard({
               <li className="animate-pulse text-sm text-mq-muted">Calculando bloques…</li>
             ) : (
               blockProgress.map((block) => (
-                <li
-                  key={block.id}
-                  className={`flex items-start gap-3 rounded-xl border p-4 ${
-                    block.status === "done"
-                      ? "border-emerald-500/25 bg-emerald-500/5"
-                      : block.status === "active"
-                        ? "border-mq-accent/30 bg-mq-accent/5"
-                        : "border-white/10 bg-white/[0.02]"
-                  }`}
-                >
-                  {block.status === "done" ? (
-                    <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-emerald-400" />
-                  ) : block.status === "active" ? (
-                    <Zap size={20} className="mt-0.5 shrink-0 text-mq-accent" />
-                  ) : (
-                    <Circle size={20} className="mt-0.5 shrink-0 text-white/30" />
-                  )}
-                  <div className="min-w-0 flex-1">
-                    <p className="font-bold text-white">{block.label}</p>
-                    <p className="mt-0.5 text-sm text-mq-muted">{block.description}</p>
-                    <p className="mt-1 text-xs font-medium text-mq-accent">
-                      {block.questionsDone}/{block.questions} preg · ~{block.minutesEstimate} min
-                    </p>
-                  </div>
-                </li>
+                <UccBlockListItem key={block.id} block={block} />
               ))
             )}
           </ul>
