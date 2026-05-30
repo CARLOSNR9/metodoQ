@@ -39,7 +39,6 @@ import {
 import { UccPastoInsightCard } from "./ucc-pasto-insight-card";
 import { UccDailyMissionCard } from "./ucc-daily-mission-card";
 import { UccPercentileTrackerCard } from "./ucc-percentile-tracker-card";
-import { UccCvSimulatorCard } from "./ucc-cv-simulator-card";
 import { UccWeeklySimulacroCard } from "./ucc-weekly-simulacro-card";
 import { UccPhase2SimulatorCard } from "./ucc-phase2-simulator-card";
 import { SubscriptionStatusCard } from "./subscription-status-card";
@@ -398,10 +397,6 @@ export function ProDashboardView({
             planStartedAt={profile?.planStartedAt}
             correctTopics={mapTopicStats(profile?.topicStats, "correct")}
             wrongTopics={mapTopicStats(profile?.topicStats, "wrong")}
-          />
-          <UccCvSimulatorCard
-            userId={user.uid}
-            uccCvProfile={profile?.uccCvProfile}
           />
           <UccWeeklySimulacroCard
             userId={user.uid}

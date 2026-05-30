@@ -2,6 +2,7 @@
 
 import { StickyNote } from "lucide-react";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
+import { PomodoroTimer } from "@/components/dashboard/pomodoro-timer";
 import { StudyNotesBoard } from "@/components/dashboard/study-notes-board";
 
 export default function EstudioPage() {
@@ -28,10 +29,12 @@ export default function EstudioPage() {
           Tablero de notas
         </h1>
         <p className="max-w-2xl text-sm leading-relaxed text-mq-muted">
-          Aquí quedan las píldoras de teoría que guardaste al entrenar. Repásalas
-          cuando tengas tiempo para profundizar en los temas donde fallaste.
+          Usa el Pomodoro para sesiones de foco y repasa las píldoras de teoría que
+          guardaste al entrenar en los temas donde fallaste.
         </p>
       </header>
+
+      <PomodoroTimer />
 
       <StudyNotesBoard userId={user.uid} />
     </div>
