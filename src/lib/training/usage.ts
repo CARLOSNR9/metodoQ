@@ -156,9 +156,9 @@ export async function checkCanStartSession(
   const sessionsLimit = goal.isUccMiTrack ? goal.sessionsPerDay : limits.sessionsPerDay;
   const needsQuestionCount = goal.isUccMiTrack || daily.sessions > 0;
   let todayQuestions = 0;
+  const results = needsQuestionCount ? await getUserDemoResults(userId) : [];
 
   if (needsQuestionCount) {
-    const results = await getUserDemoResults(userId);
     todayQuestions = getTodayMissionQuestionsCount(results);
     if (daily.sessions > 0 && todayQuestions === 0) {
       daily = await reconcileOrphanedDailySessions(userId, todayQuestions, daily);
