@@ -2,6 +2,7 @@ import { getUccPastoDiagnosticSession } from "@/data/ucc-pasto-diagnostico-quest
 import { getUdeaDiagnosticSession } from "@/data/udea-diagnostico-questions";
 import { getUnalDiagnosticSession } from "@/data/unal-diagnostico-questions";
 import type { TrainingQuestion } from "@/lib/questions/types";
+import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
 import { getEffectiveGoalSpecialty } from "@/lib/diagnostic/ucc-pasto-track";
 import {
   isMedicinaInternaSpecialty,
@@ -23,13 +24,13 @@ export function getAct1DiagnosticSession(
     return null;
   }
   if (isUdeaUniversity(university)) {
-    return getUdeaDiagnosticSession();
+    return enrichQuestionsWithTheoryPills(getUdeaDiagnosticSession());
   }
   if (isUnalUniversity(university)) {
-    return getUnalDiagnosticSession();
+    return enrichQuestionsWithTheoryPills(getUnalDiagnosticSession());
   }
   if (isUccPastoUniversity(university)) {
-    return getUccPastoDiagnosticSession();
+    return enrichQuestionsWithTheoryPills(getUccPastoDiagnosticSession());
   }
   return null;
 }

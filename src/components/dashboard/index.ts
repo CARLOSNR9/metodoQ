@@ -32,6 +32,7 @@ export { UccPhase2SimulatorCard } from "./ucc-phase2-simulator-card";
 export { SubscriptionStatusCard } from "./subscription-status-card";
 export { StudyStreakSummary } from "./study-streak-summary";
 export { StudyHabitCalendar } from "./study-habit-calendar";
+export { StudyBoardPreviewCard } from "./study-board-preview-card";
 export { ProStudyGapBanner } from "./pro-study-gap-banner";
 export { UccCoachingReminderBanner } from "./ucc-coaching-reminder-banner";
 export { EmailPreferencesCard } from "./email-preferences-card";

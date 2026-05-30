@@ -8,6 +8,7 @@ import {
 } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getLocalQuestionBank } from "@/lib/questions/local-bank";
+import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
 import type { TrainingQuestion } from "./types";
 
 const COLLECTION = "questions";
@@ -42,7 +43,9 @@ export async function getActiveQuestions(): Promise<TrainingQuestion[]> {
       return getLocalQuestionBank();
     }
 
-    return snapshot.docs.map((docItem) => mapDocToQuestion(docItem.id, docItem.data()));
+    return enrichQuestionsWithTheoryPills(
+      snapshot.docs.map((docItem) => mapDocToQuestion(docItem.id, docItem.data())),
+    );
   } catch (error) {
     console.warn("Firestore questions unavailable, using local bank.", error);
     return getLocalQuestionBank();

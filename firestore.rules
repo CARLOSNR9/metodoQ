@@ -13,6 +13,11 @@ service cloud.firestore {
     // Perfil del usuario: solo el dueño puede leer/escribir su documento
     match /users/{userId} {
       allow read, write: if isOwner(userId);
+
+      // Notas guardadas desde píldoras de teoría en entrenamiento
+      match /studyNotes/{noteId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
     }
 
     // Resultados de entrenamiento del usuario

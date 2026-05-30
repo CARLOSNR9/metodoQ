@@ -719,12 +719,16 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                  {currentQuestion && (
                     <QuestionCard 
                        key={currentQuestion.id}
+                       questionId={currentQuestion.id}
+                       topic={currentQuestion.topic}
                        question={currentQuestion.statement}
                        options={currentQuestion.options}
                        correctOptionId={currentQuestion.correctOptionId}
                        explanation={currentQuestion.explanation}
                        keyPoints={currentQuestion.keyPoints}
+                       theoryContent={currentQuestion.theoryContent}
                        theoryHref={getTheoryLink(currentQuestion)}
+                       userId={user?.uid ?? null}
                        dynamicFeedback={liveFeedbackMessage}
                        incorrectAnswerDetail={
                          hasAnsweredCurrentQuestion &&

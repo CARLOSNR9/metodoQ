@@ -24,6 +24,7 @@ import {
   WeakTopicsCard,
   ProgressChart,
   DailyPillCard,
+  StudyBoardPreviewCard,
 } from "@/components/dashboard";
 import { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashboard";
@@ -444,6 +445,8 @@ export function ProDashboardView({
         <aside className="space-y-8">
           {/* DAILY PILL (SITUATION AWARE) */}
           <DailyPillCard topic={dailyPillTopic} isLocked={needsDiagnostic} />
+
+          <StudyBoardPreviewCard userId={user.uid} />
 
           {/* WEAK TOPICS / IA ANALYTICS */}
           <WeakTopicsCard userId={user.uid} isProUser={showLiveClasses} />

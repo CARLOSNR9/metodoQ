@@ -18,6 +18,19 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
       "Fiebre alta + postura antálgica + limitación de movimiento en lactante sugieren artritis séptica hasta demostrar lo contrario. Requiere punción articular urgente.",
     keyPoints: ["Artritis séptica es emergencia en pediatría", "Postura en flexión-rotación externa"],
     difficulty: "medium",
+    theoryContent: `Artritis séptica de cadera en lactantes: diagnóstico y urgencia
+
+La tríada clásica es fiebre + dolor articular + limitación funcional. En cadera, la postura antálgica típica es flexión, abducción y rotación externa (relaja la cápsula).
+
+Diferencial:
+- Sinovitis transitoria: puede tener fiebre baja, pero generalmente menor irritación sistémica.
+- Legg-Calvé-Perthes: claudicación crónica, no fiebre alta aguda.
+- Displasia: hallazgo en lactante pequeño, no cuadro séptico.
+
+Conducta:
+Punción articular urgente (hombro o cadera según articulación) antes o junto con antibióticos. Retrasar aumenta destrucción cartilaginosa.
+
+Regla: "Fiebre + cadera dolorosa = séptica hasta demostrar lo contrario".`,
   },
   {
     id: "ext-gin-01",
@@ -35,6 +48,19 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
       "Embarazo ectópico: β-hCG positiva sin saco intrauterino y hallazgos anexiales. Riesgo de ruptura; estabilizar y definir manejo médico o quirúrgico.",
     keyPoints: ["Ausencia de saco intrauterino + masa anexial", "Emergencia ginecológica"],
     difficulty: "medium",
+    theoryContent: `Embarazo ectópico: criterios ecográficos y manejo
+
+β-hCG positiva sin saco intrauterino visible (con niveles discriminativos) + masa anexial = ectópico hasta probar lo contrario.
+
+Hallazgos de inestabilidad:
+- Dolor intenso, signos peritoneales, hipotensión → cirugía urgente.
+- Estable con β-hCG baja y masa pequeña → metotrexato posible si candidata.
+
+No confundir con:
+- Aborto incompleto (restos intrauterinos).
+- Embarazo muy temprano (saco aún no visible): correlacionar β-hCG y control serial.
+
+Emergencia porque la ruptura tubárica causa hemorragia intraabdominal masiva.`,
   },
   {
     id: "ext-urg-01",
@@ -52,6 +78,16 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
       "En trauma con compromiso neurológico severo, priorizar ABC: asegurar vía aérea y oxigenación antes de estudios de imagen o fármacos específicos.",
     keyPoints: ["ABCDE en trauma", "Glasgow ≤8 indica intubación"],
     difficulty: "easy",
+    theoryContent: `Trauma craneoencefálico severo: prioridades ATLS
+
+El enfoque ABCDE aplica siempre. En TCE con Glasgow ≤8:
+- A: vía aérea definitiva (intubación) por riesgo de aspiración y ventilación inadecuada.
+- B: ventilación controlada, evitar hipoxia e hipercapnia (ambas empeoran lesión cerebral).
+- C: control de hemorragia y presión arterial (mantener PPC adecuada).
+- D: evaluación neurológica y TAC cuando estabilizado.
+
+Manitol no es primera línea antes de asegurar ABC.
+TAC urgente es importante, pero no antes de estabilizar vía aérea si hay compromiso.`,
   },
   {
     id: "ext-farm-01",
@@ -68,6 +104,20 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
     explanation: "La warfarina inhibe la síntesis de factores vitamina K-dependientes; el INR es el estándar de monitorización (meta habitual 2-3).",
     keyPoints: ["Warfarina → INR", "Evitar interacciones y alimentos ricos en vitamina K"],
     difficulty: "easy",
+    theoryContent: `Anticoagulación con warfarina: monitorización y metas
+
+La warfarina inhibe la síntesis hepática de factores II, VII, IX y X (dependientes de vitamina K).
+
+Monitorización:
+- INR (International Normalized Ratio), meta habitual 2-3 en FA y trombosis venosa.
+- TTPa evalúa vía intrínseca (heparina), no warfarina.
+- Anti-Xa monitoriza heparinas de bajo peso molecular y DOACs específicos.
+
+Factores que alteran INR:
+- Antibióticos, amiodarona, alcohol.
+- Dietas ricas en vitamina K (verduras verdes) ↓ efecto.
+
+Inicio: puente con heparina hasta INR terapéutico por latencia de warfarina (días).`,
   },
   {
     id: "ext-epi-01",
@@ -84,6 +134,20 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
     explanation: "El riesgo relativo (RR) en cohortes compara la incidencia en expuestos vs no expuestos: RR = Ie / Ine.",
     keyPoints: ["Cohorte → riesgo relativo", "Caso-control → razón de momios"],
     difficulty: "easy",
+    theoryContent: `Medidas de asociación en estudios epidemiológicos
+
+Estudio de cohorte (parte de expuestos/no expuestos, sigue incidencia):
+- Riesgo Relativo (RR) = Incidencia en expuestos / Incidencia en no expuestos.
+- Mide cuántas veces más probable es el desenlace en expuestos.
+
+Estudio de caso-control (parte de enfermos/sanos, mira exposición pasada):
+- Razón de momios (OR) aproxima RR cuando la enfermedad es rara.
+
+Otras medidas:
+- Riesgo atribuible: cuánto exceso de riesgo se debe a la exposición.
+- NNT: cuántos hay que tratar para prevenir un evento.
+
+Trampa clásica: usar OR en cohorte o RR en caso-control.`,
   },
   {
     id: "ext-neu-01",
@@ -101,6 +165,18 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
       "Ictus isquémico agudo sin hemorragia: valorar trombólisis según tiempo, contraindicaciones y criterios clínicos. La TA elevada no contraindica sola la evaluación.",
     keyPoints: ["Código ictus", "Trombólisis según ventana y criterios"],
     difficulty: "medium",
+    theoryContent: `Ictus isquémico agudo: ventana de reperfusión
+
+Con TAC sin hemorragia y cuadro compatible, evaluar trombólisis IV (alteplase/tenecteplase) si:
+- Tiempo ≤4.5 h desde inicio (según guía y criterios).
+- Sin contraindicaciones mayores.
+- Déficit medible (NIHSS).
+
+TA elevada no contraindica automáticamente la evaluación; se corrige según protocolo antes de trombolizar.
+
+No iniciar anticoagulación plena ni doble antiagregación aguda sin descartar hemorragia y definir etiología.
+
+Trombectomía mecánica: considerar en oclusiones de gran vaso dentro de ventana extendida con imagen compatible.`,
   },
   {
     id: "ext-nef-01",
@@ -118,6 +194,20 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
       "Hiperkalemia con cambios ECG: estabilizar membrana con gluconato de calcio IV; luego medidas para reducir potasio (insulina-dextrosa, resinas, diálisis si indicada).",
     keyPoints: ["Cambios ECG → calcio IV primero", "Emergencia metabólica"],
     difficulty: "medium",
+    theoryContent: `Hiperkalemia grave con cambios ECG: manejo escalonado
+
+Cambios ECG (ondas T picudas, ensanchamiento QRS, pérdida onda P) = emergencia cardíaca.
+
+Paso 1 — Estabilizar membrana:
+Gluconato de calcio IV (efecto en minutos, no baja potasio pero protege el miocardio).
+
+Paso 2 — Redistribuir potasio al interior celular:
+Insulina + dextrosa, β2 agonistas, bicarbonato si acidosis.
+
+Paso 3 — Eliminar potasio:
+Diuréticos si hay función renal, resinas (poliestireno), diálisis si refractaria o insuficiencia renal.
+
+Furosemida sola no es suficiente en hiperkalemia sintomática con ECG alterado.`,
   },
   {
     id: "ext-inf-01",
@@ -135,6 +225,18 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
       "Mononucleosis infecciosa por EBV: faringitis, adenopatías y prueba de Paul-Bunnell (Monospot) positiva. Evitar ampicilina por riesgo de rash.",
     keyPoints: ["Monospot positivo → EBV", "No usar ampicilina"],
     difficulty: "easy",
+    theoryContent: `Mononucleosis infecciosa por EBV
+
+Cuadro típico: fiebre, faringitis exudativa, adenopatías cervicales, astenia. Linfocitosis atípica en hemograma.
+
+Diagnóstico:
+Prueba heterófila (Monospot/Paul-Bunnell) positiva en adolescentes/adultos jóvenes. PCR de EBV si duda.
+
+Complicaciones a recordar:
+- Esplenomegalia → evitar contacto deportivo 3-4 semanas (riesgo de ruptura esplénica).
+- Rash maculopapular si se administra ampicilina/amoxicilina (reacción inespecífica, no alergia verdadera).
+
+Strep vs EBV: ambos pueden cursar con exudado; Monospot discrimina en el contexto clínico compatible.`,
   },
   {
     id: "ext-end-01",
@@ -152,6 +254,19 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
       "Cetoacidosis diabética: hiperglucemia, acidosis y cetosis. Manejo con líquidos IV, insulina y corrección electrolítica (potasio).",
     keyPoints: ["CAD = líquidos + insulina", "Vigilar potasio"],
     difficulty: "medium",
+    theoryContent: `Cetoacidosis diabética (CAD): criterios y manejo inicial
+
+Criterios: hiperglucemia (>250 mg/dL), pH <7.3 o bicarbonato bajo, cetonemia/cetonuria.
+
+Pilares del tratamiento:
+1. Cristaloides IV (expansión inicial, luego mantenimiento según estado volémico).
+2. Insulina IV en infusión continua (después de hidratación inicial si K+ adecuado).
+3. Reparación de potasio (el insulin mueve K+ intracelular → riesgo de hipokalemia).
+4. Buscar desencadenantes (infección, omisión de insulina, IAM).
+
+Estado hiperosmolar: glucosa >600, osmolaridad alta, cetonas mínimas, pH casi normal.
+
+No confundir CAD con hipoglucemia ni síndrome metabólico sin cetoacidosis.`,
   },
   {
     id: "ext-derm-01",
@@ -169,5 +284,19 @@ export const EXTENDED_QUESTIONS: TrainingQuestion[] = [
       "Criterios ABCDE y cambios recientes sugieren melanoma hasta probar lo contrario. Requiere biopsia o excisión con estudio histológico.",
     keyPoints: ["ABCDE del melanoma", "Biopsia ante sospecha"],
     difficulty: "easy",
+    theoryContent: `Melanoma: criterios ABCDE y conducta diagnóstica
+
+ABCDE:
+- Asimetría
+- Bordes irregulares
+- Color heterogéneo
+- Diámetro >6 mm (no exclusivo)
+- Evolución (crecimiento, cambio reciente)
+
+Lesión sospechosa → biopsia excisional con márgenes estrechos (no shave) para estadificación Breslow y planear ampliación.
+
+No observar ni tratar empíricamente con corticoides/cryotherapy sin histología.
+
+Factores de mal pronóstico: Breslow grueso, ulceración, metástasis al diagnóstico.`,
   },
 ];

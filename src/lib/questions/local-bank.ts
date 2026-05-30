@@ -4,6 +4,7 @@ import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
 import { UCC_PASTO_DIAGNOSTIC_QUESTIONS } from "@/data/ucc-pasto-diagnostico-questions";
 import { UDEA_DIAGNOSTIC_QUESTIONS } from "@/data/udea-diagnostico-questions";
 import { UNAL_DIAGNOSTIC_QUESTIONS } from "@/data/unal-diagnostico-questions";
+import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
 import type { TrainingQuestion } from "./types";
 
 function mergeQuestionsById(sources: TrainingQuestion[][]): TrainingQuestion[] {
@@ -13,7 +14,7 @@ function mergeQuestionsById(sources: TrainingQuestion[][]): TrainingQuestion[] {
       byId.set(q.id, q);
     }
   }
-  return Array.from(byId.values());
+  return enrichQuestionsWithTheoryPills(Array.from(byId.values()));
 }
 
 /** Banco local para entrenamiento cuando Firestore no está disponible o está vacío. */

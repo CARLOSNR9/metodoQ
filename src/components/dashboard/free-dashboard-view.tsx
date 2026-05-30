@@ -11,7 +11,8 @@ import {
   AccumulatedStats,
   WeakTopicsCard,
   DailyPillCard,
-  ProgressSimulator
+  ProgressSimulator,
+  StudyBoardPreviewCard,
 } from "@/components/dashboard";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -310,6 +311,8 @@ export function FreeDashboardView({
               </section>
 
               <WeakTopicsCard userId={user.uid} />
+
+              <StudyBoardPreviewCard userId={user.uid} />
               
               <ProgressSimulator currentScore={cumulative.standardizedScore || 468} />
 

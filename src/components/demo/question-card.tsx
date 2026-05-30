@@ -2,9 +2,10 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BookOpen, Sparkles, Info, Lock, ArrowRight, ExternalLink } from "lucide-react";
+import { BookOpen, Sparkles, Info, Lock, ArrowRight, ExternalLink, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { isExternalTheoryLink } from "@/lib/questions/theory-link";
+import { TheoryDeepDivePanel } from "@/components/demo/theory-deep-dive-panel";
 
 export type QuestionOption = {
   id: string;
@@ -18,8 +19,13 @@ export type QuestionCardProps = {
   correctOptionId?: string;
   explanation?: string;
   keyPoints?: string[];
+  questionId?: string;
+  topic?: string;
+  /** Texto largo para la píldora de profundización. */
+  theoryContent?: string;
   /** Enlace a teoría completa (externa o `/teoria/...`). */
   theoryHref?: string | null;
+  userId?: string | null;
   dynamicFeedback?: string | null;
   incorrectAnswerDetail?: string;
   examAreaLabel?: string;
@@ -52,7 +58,11 @@ export function QuestionCard({
   correctOptionId = "B",
   explanation = defaultExplanation,
   keyPoints = defaultKeyPoints,
+  questionId,
+  topic,
+  theoryContent,
   theoryHref = null,
+  userId = null,
   dynamicFeedback = null,
   incorrectAnswerDetail,
   examAreaLabel,
@@ -61,8 +71,12 @@ export function QuestionCard({
   isLocked = false,
 }: QuestionCardProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [isTheoryPanelOpen, setIsTheoryPanelOpen] = useState(false);
   const hasAnswered = Boolean(selectedOptionId);
   const isCorrect = selectedOptionId === correctOptionId;
+  const trimmedTheoryContent = theoryContent?.trim();
+  const showTheoryPill =
+    hasAnswered && Boolean(trimmedTheoryContent || theoryHref);
 
   return (
     <article
@@ -208,35 +222,80 @@ export function QuestionCard({
                 </ul>
               </div>
 
-              {theoryHref && (
-                <div className="mt-4 rounded-xl border border-mq-accent/25 bg-mq-accent/5 p-4">
-                  <p className="text-xs font-bold uppercase tracking-wider text-mq-accent">
-                    Teoría necesaria
-                  </p>
-                  <p className="mt-1 text-sm text-mq-muted">
-                    Profundiza sin alargar la pregunta: abre la teoría completa de este ítem.
-                  </p>
-                  {isExternalTheoryLink(theoryHref) ? (
+              {showTheoryPill && (
+                <div className="mt-5">
+                  {trimmedTheoryContent && questionId ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => setIsTheoryPanelOpen(true)}
+                        className="group flex w-full items-center gap-3 rounded-full border border-mq-accent/30 bg-mq-accent/10 px-4 py-3 text-left transition hover:border-mq-accent/50 hover:bg-mq-accent/15"
+                      >
+                        <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
+                          <BookOpen className="h-4 w-4" />
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
+                            {isCorrect ? "Repasar" : "Profundizar"}
+                          </span>
+                          <span className="mt-0.5 block truncate text-sm font-semibold text-white">
+                            {topic
+                              ? `${isCorrect ? "Repasar" : "Profundizar"}: ${topic}`
+                              : "Leer explicación completa del tema"}
+                          </span>
+                        </span>
+                        <ChevronRight className="h-4 w-4 shrink-0 text-mq-accent transition group-hover:translate-x-0.5" />
+                      </button>
+                      <TheoryDeepDivePanel
+                        open={isTheoryPanelOpen}
+                        onClose={() => setIsTheoryPanelOpen(false)}
+                        questionId={questionId}
+                        topic={topic ?? "Tema"}
+                        statement={question}
+                        theoryContent={trimmedTheoryContent}
+                        examArea={examAreaLabel}
+                        userId={userId}
+                      />
+                    </>
+                  ) : theoryHref && isExternalTheoryLink(theoryHref) ? (
                     <a
                       href={theoryHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-3 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-mq-accent px-5 text-sm font-bold text-mq-accent-foreground transition hover:opacity-90"
+                      className="group flex w-full items-center gap-3 rounded-full border border-mq-accent/30 bg-mq-accent/10 px-4 py-3 transition hover:border-mq-accent/50 hover:bg-mq-accent/15"
                     >
-                      <BookOpen className="h-4 w-4" />
-                      Ver teoría completa
-                      <ExternalLink className="h-3.5 w-3.5 opacity-80" />
+                      <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
+                        <BookOpen className="h-4 w-4" />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
+                          Profundizar
+                        </span>
+                        <span className="mt-0.5 block truncate text-sm font-semibold text-white">
+                          {topic ? `Teoría externa: ${topic}` : "Abrir teoría completa"}
+                        </span>
+                      </span>
+                      <ExternalLink className="h-4 w-4 shrink-0 text-mq-accent" />
                     </a>
-                  ) : (
+                  ) : theoryHref ? (
                     <Link
                       href={theoryHref}
-                      className="mt-3 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-mq-accent px-5 text-sm font-bold text-mq-accent-foreground transition hover:opacity-90"
+                      className="group flex w-full items-center gap-3 rounded-full border border-mq-accent/30 bg-mq-accent/10 px-4 py-3 transition hover:border-mq-accent/50 hover:bg-mq-accent/15"
                     >
-                      <BookOpen className="h-4 w-4" />
-                      Ver teoría completa
-                      <ArrowRight className="h-4 w-4" />
+                      <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
+                        <BookOpen className="h-4 w-4" />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
+                          Profundizar
+                        </span>
+                        <span className="mt-0.5 block truncate text-sm font-semibold text-white">
+                          {topic ? `Píldora de teoría: ${topic}` : "Leer explicación completa del tema"}
+                        </span>
+                      </span>
+                      <ArrowRight className="h-4 w-4 shrink-0 text-mq-accent" />
                     </Link>
-                  )}
+                  ) : null}
                 </div>
               )}
             </div>

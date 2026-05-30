@@ -303,11 +303,11 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
           <div className="rounded-xl border border-mq-accent/20 bg-mq-accent/5 p-4 space-y-4">
             <div>
               <label className="text-xs font-semibold uppercase text-mq-accent">
-                Teoría de la pregunta
+                Píldora de estudio — enlace externo (opcional)
               </label>
               <p className="mt-1 text-xs text-mq-muted leading-relaxed">
-                Enlace a la teoría completa (Notion, Drive, etc.). La pregunta sigue minimalista; el
-                estudiante abre la teoría aparte.
+                Notion, Drive u otra URL. Si no hay contenido abajo, el estudiante abre este enlace al
+                fallar la pregunta.
               </p>
               <input
                 type="text"
@@ -319,19 +319,20 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
               />
             </div>
             <div>
-              <label className="text-xs font-semibold uppercase text-mq-muted">
-                Contenido en Metodo Q (opcional)
+              <label className="text-xs font-semibold uppercase text-mq-accent">
+                Píldora de estudio — texto largo
               </label>
               <p className="mt-1 text-xs text-mq-muted">
-                Si escribes aquí sin URL externa, se genera el enlace{" "}
-                <span className="font-mono text-white/80">/teoria/{question.id}</span>
+                Explicación profunda que el estudiante ve al fallar (o repasar) y puede guardar en{" "}
+                <span className="font-semibold text-white">Mi Estudio</span>. Sin URL externa, también
+                queda en <span className="font-mono text-white/80">/teoria/{question.id}</span>
               </p>
               <textarea
                 value={theoryContent}
                 onChange={(e) => setTheoryContent(e.target.value)}
                 disabled={!inFirestore}
-                rows={6}
-                placeholder="Teoría extendida, píldoras, cómo leer la pregunta…"
+                rows={8}
+                placeholder="Cómo resolver esta pregunta, trampas de examen, fisiopatología extendida…"
                 className="mt-2 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white resize-none disabled:opacity-60"
               />
             </div>

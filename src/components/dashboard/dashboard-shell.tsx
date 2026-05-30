@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
+import { useStudyNotesCount } from "@/hooks/use-study-notes-count";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { logoutUser } from "@/lib/auth";
 import { getUserGreetingName } from "@/lib/plans/subscription-display";
 import { AchievementNotification } from "./achievement-notification";
-import { LayoutDashboard, GraduationCap, History, User, LogOut, Timer, CreditCard } from "lucide-react";
+import { LayoutDashboard, GraduationCap, History, User, LogOut, Timer, CreditCard, StickyNote } from "lucide-react";
 
 type DashboardShellProps = {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ type DashboardShellProps = {
 const navigationItems = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
   { label: "Entrenar", href: "/dashboard/entrenar", icon: GraduationCap },
+  { label: "Estudio", href: "/dashboard/estudio", icon: StickyNote },
   { label: "Simulacro", href: "/dashboard/simulacro", icon: Timer },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
   { label: "Historial", href: "/dashboard/historial", icon: History },
@@ -27,6 +29,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const pathname = usePathname();
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile } = useUserProfile();
+  const studyNotesCount = useStudyNotesCount(user?.uid);
   const greetingName = getUserGreetingName(profile);
 
   if (isCheckingAuth) {
@@ -77,6 +80,11 @@ export function DashboardShell({ children }: DashboardShellProps) {
               >
                 <Icon size={18} strokeWidth={isActive ? 2.5 : 2} />
                 <span className="md:inline">{item.label}</span>
+                {item.href === "/dashboard/estudio" && studyNotesCount > 0 ? (
+                  <span className="ml-auto hidden rounded-full bg-mq-accent/20 px-2 py-0.5 text-[10px] font-black text-mq-accent md:inline">
+                    {studyNotesCount}
+                  </span>
+                ) : null}
               </Link>
             );
           })}
