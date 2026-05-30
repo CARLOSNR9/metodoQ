@@ -2,7 +2,13 @@ import type { DemoResultItem } from "@/lib/results";
 import { hasProFeatures } from "@/lib/plans/access";
 import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
-import { getTodayMissionQuestionsCount } from "@/lib/training/daily-activity";
+import {
+  aggregateTodayUccBlockQuestions,
+} from "@/lib/training/daily-activity";
+import {
+  buildUccMiDailyBlocks,
+  computeUccDailyMissionState,
+} from "@/lib/training/ucc-mi-daily-plan";
 import {
   buildUccSimulacroHref,
   buildWeeklySimulacroStatus,
@@ -42,14 +48,17 @@ export function buildUccCoachingStatus(options: {
   if (!isUccMiProProfile(profile)) return null;
 
   const goal = getDailyGoalForProfile(profile, profile?.planStartedAt);
-  const todayQuestions = getTodayMissionQuestionsCount(results);
+  const blocks = buildUccMiDailyBlocks(profile?.planStartedAt);
+  const blockCounts = aggregateTodayUccBlockQuestions(results);
+  const mission = computeUccDailyMissionState(blocks, blockCounts);
+  const todayQuestions = mission.structuredQuestionsDone;
   const simulacroStatus = buildWeeklySimulacroStatus({
     results,
     planStartedAt: profile?.planStartedAt ?? null,
     today: options.today,
   });
 
-  const dailyMissionComplete = todayQuestions >= goal.dailyTarget;
+  const dailyMissionComplete = mission.missionComplete;
   const simulacroHref = simulacroStatus
     ? buildUccSimulacroHref(simulacroStatus.config)
     : null;

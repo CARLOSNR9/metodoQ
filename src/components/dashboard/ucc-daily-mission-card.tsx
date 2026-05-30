@@ -17,7 +17,6 @@ import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults, type DemoResultItem } from "@/lib/results";
 import {
   aggregateTodayUccBlockQuestions,
-  getTodayMissionQuestionsCount,
 } from "@/lib/training/daily-activity";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import {
@@ -164,6 +163,7 @@ export function UccDailyMissionCard({
   const [resolvedWeakTopic, setResolvedWeakTopic] = useState(weakTopic ?? null);
   const [dayClosed, setDayClosed] = useState(false);
   const [bonusAvailable, setBonusAvailable] = useState(false);
+  const [missionComplete, setMissionComplete] = useState(false);
   const [cierreAvailable, setCierreAvailable] = useState(false);
   const [cierrePendingCount, setCierrePendingCount] = useState(0);
   const [profile, setProfile] = useState<UserMissionProfile | null>(null);
@@ -183,16 +183,15 @@ export function UccDailyMissionCard({
         const userData = (userSnap.data() as UserMissionProfile | undefined) ?? {};
         setProfile(userData);
         setResolvedWeakTopic(weakTopic ?? userData.weaknesses?.[0] ?? null);
-
-        const count = getTodayMissionQuestionsCount(results);
-        setTodayQuestions(count);
         setTodayResults(results);
 
         const status = await getTodayTrainingStatus(userId, userData, planStartedAt);
         const repaso = await getRepasoCierreStatus(userId, userData, planStartedAt);
         if (!mounted) return;
+        setTodayQuestions(status.todayQuestions);
         setDayClosed(status.dayClosed);
         setBonusAvailable(status.bonusAvailable);
+        setMissionComplete(status.missionComplete);
         setCierreAvailable(repaso.cierreAvailable);
         setCierrePendingCount(repaso.unresolvedCount);
       } catch (error) {
@@ -255,7 +254,6 @@ export function UccDailyMissionCard({
     Math.round((todayQuestions / goal.dailyTarget) * 100),
   );
   const remainingMinutes = estimateRemainingMinutes(todayQuestions, goal.dailyTarget);
-  const missionComplete = todayQuestions >= goal.dailyTarget;
 
   return (
     <section

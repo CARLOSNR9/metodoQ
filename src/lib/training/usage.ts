@@ -5,10 +5,17 @@ import { getTrainingLimits } from "@/lib/plans/limits";
 import { normalizeUserPlan } from "@/lib/plans/access";
 import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
-import { getTodayMissionQuestionsCount } from "@/lib/training/daily-activity";
 import {
+  aggregateTodayUccBlockQuestions,
+  getTodayMissionQuestionsCount,
+} from "@/lib/training/daily-activity";
+import {
+  buildUccMiDailyBlocks,
+  canStartUccBlock,
   canStartUccMiBonus,
+  computeUccDailyMissionState,
   UCC_MI_DAILY_BONUS_MAX,
+  type UccMiBlockKind,
 } from "@/lib/training/ucc-mi-daily-plan";
 import { getRepasoCierreStatus } from "@/lib/training/repaso-cierre";
 
@@ -88,6 +95,7 @@ export type SessionCheckOptions = {
   isRepasoCierre?: boolean;
   profile?: LearningTrackProfile | null;
   planStartedAt?: string | null;
+  uccBlockKind?: UccMiBlockKind | null;
 };
 
 export async function checkCanStartSession(
@@ -158,13 +166,30 @@ export async function checkCanStartSession(
   }
 
   if (goal.isUccMiTrack) {
-    const bonusAnswered = Math.max(0, todayQuestions - goal.dailyTarget);
+    const blocks = buildUccMiDailyBlocks(options?.planStartedAt);
+    const blockCounts = aggregateTodayUccBlockQuestions(results);
+    const mission = computeUccDailyMissionState(blocks, blockCounts);
+    const bonusAnswered = mission.missionComplete
+      ? Math.max(0, todayQuestions - goal.dailyTarget)
+      : 0;
+
+    if (
+      options?.uccBlockKind &&
+      !options.isBonusMode &&
+      !options.isRepasoPractice &&
+      !options.isRepasoCierre
+    ) {
+      const blockGate = canStartUccBlock(blocks, blockCounts, options.uccBlockKind);
+      if (!blockGate.allowed) {
+        return blockGate;
+      }
+    }
 
     if (options?.isBonusMode) {
-      if (todayQuestions < goal.dailyTarget) {
+      if (!mission.missionComplete) {
         return {
           allowed: false,
-          reason: "Primero completa tu misión del día antes de usar preguntas bonus.",
+          reason: "Primero completa los 3 bloques de hoy antes de usar preguntas bonus.",
         };
       }
       if (bonusAnswered >= goal.bonusMax) {
@@ -177,7 +202,7 @@ export async function checkCanStartSession(
       return { allowed: true };
     }
 
-    if (todayQuestions >= goal.dailyTarget) {
+    if (mission.missionComplete) {
       const bonusAvailable = canStartUccMiBonus(
         todayQuestions,
         goal.dailyTarget,
@@ -191,7 +216,6 @@ export async function checkCanStartSession(
       };
     }
 
-    // Misión pendiente: el progreso real en preguntas manda, no sesiones iniciadas.
     return { allowed: true };
   }
 
@@ -252,18 +276,34 @@ export async function getTodayTrainingStatus(
     await reconcileOrphanedDailySessions(userId, todayQuestions, daily);
   }
 
-  const bonusAnswered = Math.max(0, todayQuestions - goal.dailyTarget);
-  const dayClosed = goal.isUccMiTrack && todayQuestions >= goal.dailyTarget;
+  let structuredQuestions = todayQuestions;
+  let missionComplete = todayQuestions >= goal.dailyTarget;
+  let bonusAnswered = Math.max(0, todayQuestions - goal.dailyTarget);
+  let dayClosed = goal.isUccMiTrack && missionComplete;
+
+  if (goal.isUccMiTrack) {
+    const blocks = buildUccMiDailyBlocks(planStartedAt);
+    const blockCounts = aggregateTodayUccBlockQuestions(results);
+    const mission = computeUccDailyMissionState(blocks, blockCounts);
+    structuredQuestions = mission.structuredQuestionsDone;
+    missionComplete = mission.missionComplete;
+    bonusAnswered = missionComplete
+      ? Math.max(0, todayQuestions - goal.dailyTarget)
+      : 0;
+    dayClosed = missionComplete;
+  }
+
   const bonusAvailable =
     goal.isUccMiTrack &&
     canStartUccMiBonus(todayQuestions, goal.dailyTarget, bonusAnswered);
 
   return {
     goal,
-    todayQuestions,
+    todayQuestions: structuredQuestions,
+    totalQuestionsToday: todayQuestions,
     bonusAnswered,
     dayClosed,
     bonusAvailable,
-    missionComplete: todayQuestions >= goal.dailyTarget,
+    missionComplete,
   };
 }

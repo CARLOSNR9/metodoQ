@@ -72,7 +72,6 @@ export function getTodayMissionQuestionsCount(results: DemoResultItem[]): number
   let total = 0;
 
   for (const result of results) {
-    if (!result.fechaIso) continue;
     if (
       result.sessionType === "daily-pill" ||
       result.sessionType === "diagnostico" ||
@@ -81,7 +80,7 @@ export function getTodayMissionQuestionsCount(results: DemoResultItem[]): number
     ) {
       continue;
     }
-    if (getLocalDateKey(new Date(result.fechaIso)) !== todayKey) continue;
+    if (!isResultFromLocalDateKey(result, todayKey)) continue;
     total += result.correctAnswers + result.wrongAnswers;
   }
 

@@ -258,6 +258,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         isRepasoCierre,
         profile: userTrackProfile,
         planStartedAt: userTrackProfile?.planStartedAt,
+        uccBlockKind:
+          blockParam && ["new", "review", "weak"].includes(blockParam)
+            ? blockParam
+            : null,
       });
       if (!check.allowed) {
         setUsageBlockReason(check.reason);
@@ -472,6 +476,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         isRepasoCierre,
         profile: userTrackProfile,
         planStartedAt: userTrackProfile?.planStartedAt,
+        uccBlockKind:
+          blockParam && ["new", "review", "weak"].includes(blockParam)
+            ? blockParam
+            : null,
       });
       if (!mounted) return;
       if (!check.allowed) {
@@ -545,6 +553,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       uccBlockKind:
         blockParam &&
         ["new", "review", "weak"].includes(blockParam) &&
+        !isBonusMode &&
         !isDailyPill &&
         !isAct1 &&
         !isSimulacro &&
