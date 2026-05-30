@@ -6,7 +6,7 @@ import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useStudyNotesCount } from "@/hooks/use-study-notes-count";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { logoutUser } from "@/lib/auth";
-import { getUserGreetingName } from "@/lib/plans/subscription-display";
+import { getDoctorGreetingName, getUserGreetingName } from "@/lib/plans/subscription-display";
 import { hasProFeatures } from "@/lib/plans/access";
 import { PomodoroProvider } from "@/contexts/pomodoro-context";
 import { AchievementNotification } from "./achievement-notification";
@@ -48,6 +48,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const studyNotesCount = useStudyNotesCount(user?.uid);
   const failedQuestionsCount = useFailedQuestionsCount(user?.uid);
   const greetingName = getUserGreetingName(profile);
+  const doctorGreetingName = getDoctorGreetingName(profile);
   const isProUser = hasProFeatures(profile?.plan);
 
   if (isCheckingAuth) {
@@ -155,7 +156,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
         </div>
       </section>
       <AchievementNotification userId={user?.uid ?? ""} />
-      {isProUser ? <PomodoroGlobalOverlay greetingName={greetingName} /> : null}
+      {isProUser ? <PomodoroGlobalOverlay greetingName={doctorGreetingName} /> : null}
     </main>
     </PomodoroProvider>
   );

@@ -5,13 +5,14 @@ import { useEffect, useState } from "react";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { applyDemoStudentProfileEnhancements } from "@/lib/demo/demo-student-profiles";
-import type { ManualSaleInfo } from "@/lib/plans/subscription-display";
+import type { ManualSaleInfo, UserGender } from "@/lib/plans/subscription-display";
 import type { UccCvInput } from "@/lib/diagnostic/ucc-cv-scorer";
 
 export interface UserProfile {
   uid: string;
   email: string | null;
   displayName?: string;
+  gender?: UserGender;
   photoURL?: string;
   goalUniversity?: string;
   goalSpecialty?: string;

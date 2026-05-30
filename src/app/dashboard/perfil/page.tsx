@@ -1,5 +1,7 @@
 "use client";
 
+import { doc, updateDoc } from "firebase/firestore";
+import { useState } from "react";
 import {
   SubscriptionStatusCard,
   StudyHabitCalendar,
@@ -7,8 +9,10 @@ import {
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
+import { getFirebaseDb } from "@/lib/firebase";
 import { getPlanDisplayName } from "@/lib/plans/config";
-import { getUserGreetingName } from "@/lib/plans/subscription-display";
+import { getDoctorGreetingName, getUserGreetingName } from "@/lib/plans/subscription-display";
+import type { UserGender } from "@/lib/plans/subscription-display";
 import { hasPaidPlan } from "@/lib/plans/access";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import { isUccPastoMedicinaInternaProUser } from "@/lib/diagnostic/ucc-pasto-track";
@@ -16,6 +20,8 @@ import { isUccPastoMedicinaInternaProUser } from "@/lib/diagnostic/ucc-pasto-tra
 export default function PerfilPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile, loading } = useUserProfile();
+  const [gender, setGender] = useState<UserGender | undefined>(undefined);
+  const [savingGender, setSavingGender] = useState(false);
 
   if (isCheckingAuth || loading || !user) {
     return (
@@ -23,12 +29,27 @@ export default function PerfilPage() {
     );
   }
 
+  const currentGender = gender ?? profile?.gender;
   const emailOptIn = profile?.emailOptIn !== false;
   const browserNudgeOptIn = profile?.browserNudgeOptIn === true;
   const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
   const greetingName = getUserGreetingName(profile);
+  const doctorGreetingName = getDoctorGreetingName({ ...profile, gender: currentGender });
   const showSubscription = hasPaidPlan(profile?.plan);
   const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
+
+  const handleGenderChange = async (next: UserGender) => {
+    if (next === currentGender || savingGender) return;
+    setSavingGender(true);
+    try {
+      await updateDoc(doc(getFirebaseDb(), "users", user.uid), { gender: next });
+      setGender(next);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setSavingGender(false);
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -51,6 +72,41 @@ export default function PerfilPage() {
               <dd className="font-medium text-white">{profile.goalUniversity}</dd>
             </div>
           ) : null}
+          <div>
+            <dt className="text-mq-muted">Tratamiento en Pomodoro</dt>
+            <dd className="mt-2 space-y-2">
+              <div className="flex flex-wrap gap-2">
+                {(
+                  [
+                    { value: "male" as const, label: "Dr." },
+                    { value: "female" as const, label: "Dra." },
+                  ] as const
+                ).map((option) => {
+                  const isActive = currentGender === option.value;
+                  return (
+                    <button
+                      key={option.value}
+                      type="button"
+                      disabled={savingGender}
+                      onClick={() => handleGenderChange(option.value)}
+                      className={`rounded-xl border px-4 py-2 text-sm font-semibold transition disabled:opacity-50 ${
+                        isActive
+                          ? "border-mq-accent/40 bg-mq-accent/15 text-mq-accent"
+                          : "border-white/10 bg-white/[0.03] text-mq-muted hover:border-white/20 hover:text-white"
+                      }`}
+                    >
+                      {option.label}
+                    </button>
+                  );
+                })}
+              </div>
+              <p className="text-xs text-mq-muted">
+                {doctorGreetingName !== "Doc"
+                  ? `Te saludaremos como «${doctorGreetingName}» en los descansos del Pomodoro.`
+                  : "Agrega tu nombre para personalizar los mensajes del Pomodoro."}
+              </p>
+            </dd>
+          </div>
         </dl>
       </section>
 

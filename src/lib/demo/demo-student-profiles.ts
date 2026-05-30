@@ -31,6 +31,7 @@ const DEMO_STUDENT_PATCHES: Record<string, Partial<UserProfile>> = {
   },
   "eliza@gmail.com": {
     displayName: "Elizabeth",
+    gender: "female",
     plan: "PRO",
     planBillingCycle: 6,
     goalUniversity: "Universidad Cooperativa (Pasto)",
@@ -38,6 +39,7 @@ const DEMO_STUDENT_PATCHES: Record<string, Partial<UserProfile>> = {
   },
   [ELIZABETH_EMAIL]: {
     displayName: "Elizabeth",
+    gender: "female",
     plan: "PRO",
     planBillingCycle: 6,
     goalUniversity: "Universidad Cooperativa (Pasto)",

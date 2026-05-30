@@ -12,6 +12,8 @@ export type ManualSaleInfo = {
   recordedByUid?: string;
 };
 
+export type UserGender = "male" | "female";
+
 export type SubscriptionProfile = {
   plan?: string | null;
   planStartedAt?: string | null;
@@ -20,6 +22,7 @@ export type SubscriptionProfile = {
   manualSale?: ManualSaleInfo | null;
   displayName?: string | null;
   email?: string | null;
+  gender?: UserGender | null;
 };
 
 export function getUserGreetingName(profile: SubscriptionProfile | null | undefined): string {
@@ -32,6 +35,13 @@ export function getUserGreetingName(profile: SubscriptionProfile | null | undefi
     return local.charAt(0).toUpperCase() + local.slice(1);
   }
   return "Doc";
+}
+
+export function getDoctorGreetingName(profile: SubscriptionProfile | null | undefined): string {
+  const name = getUserGreetingName(profile);
+  if (name === "Doc") return "Doc";
+  const honorific = profile?.gender === "female" ? "Dra." : "Dr.";
+  return `${honorific} ${name}`;
 }
 
 export function formatSubscriptionDate(iso: string | null | undefined): string {
