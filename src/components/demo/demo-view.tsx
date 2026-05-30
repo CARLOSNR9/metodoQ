@@ -13,6 +13,7 @@ import {
   type QuestionOption,
   Act2PredictiveDashboard
 } from "@/components/demo";
+import { getTheoryLink } from "@/lib/questions/theory-link";
 import { logoutUser } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { useUserPlan } from "@/hooks/use-user-plan";
@@ -723,6 +724,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        correctOptionId={currentQuestion.correctOptionId}
                        explanation={currentQuestion.explanation}
                        keyPoints={currentQuestion.keyPoints}
+                       theoryHref={getTheoryLink(currentQuestion)}
                        dynamicFeedback={liveFeedbackMessage}
                        incorrectAnswerDetail={
                          hasAnsweredCurrentQuestion &&

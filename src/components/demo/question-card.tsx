@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Info, Lock, ArrowRight } from "lucide-react";
+import { BookOpen, Sparkles, Info, Lock, ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { isExternalTheoryLink } from "@/lib/questions/theory-link";
 
 export type QuestionOption = {
   id: string;
@@ -17,6 +18,8 @@ export type QuestionCardProps = {
   correctOptionId?: string;
   explanation?: string;
   keyPoints?: string[];
+  /** Enlace a teoría completa (externa o `/teoria/...`). */
+  theoryHref?: string | null;
   dynamicFeedback?: string | null;
   incorrectAnswerDetail?: string;
   examAreaLabel?: string;
@@ -49,6 +52,7 @@ export function QuestionCard({
   correctOptionId = "B",
   explanation = defaultExplanation,
   keyPoints = defaultKeyPoints,
+  theoryHref = null,
   dynamicFeedback = null,
   incorrectAnswerDetail,
   examAreaLabel,
@@ -203,6 +207,38 @@ export function QuestionCard({
                   ))}
                 </ul>
               </div>
+
+              {theoryHref && (
+                <div className="mt-4 rounded-xl border border-mq-accent/25 bg-mq-accent/5 p-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-mq-accent">
+                    Teoría necesaria
+                  </p>
+                  <p className="mt-1 text-sm text-mq-muted">
+                    Profundiza sin alargar la pregunta: abre la teoría completa de este ítem.
+                  </p>
+                  {isExternalTheoryLink(theoryHref) ? (
+                    <a
+                      href={theoryHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-mq-accent px-5 text-sm font-bold text-mq-accent-foreground transition hover:opacity-90"
+                    >
+                      <BookOpen className="h-4 w-4" />
+                      Ver teoría completa
+                      <ExternalLink className="h-3.5 w-3.5 opacity-80" />
+                    </a>
+                  ) : (
+                    <Link
+                      href={theoryHref}
+                      className="mt-3 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-mq-accent px-5 text-sm font-bold text-mq-accent-foreground transition hover:opacity-90"
+                    >
+                      <BookOpen className="h-4 w-4" />
+                      Ver teoría completa
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Zeigarnik Paywall Overlay */}

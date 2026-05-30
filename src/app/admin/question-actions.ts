@@ -16,7 +16,7 @@ import {
 } from "@/lib/server/questions-admin";
 import { verifyStaffCaller } from "@/lib/server/verify-staff";
 
-const REVIEW_PATHS = ["/admin", "/profesor", "/profesor/preguntas"] as const;
+const REVIEW_PATHS = ["/admin", "/profesor", "/profesor/preguntas", "/teoria"] as const;
 
 function revalidateQuestionPaths() {
   for (const path of REVIEW_PATHS) {
@@ -112,6 +112,8 @@ export async function updateQuestionAction(formData: FormData) {
   const university = String(formData.get("university") ?? "").trim();
   const examArea = String(formData.get("examArea") ?? "").trim();
   const keyPointsRaw = String(formData.get("keyPoints") ?? "").trim();
+  const theoryUrl = String(formData.get("theoryUrl") ?? "").trim();
+  const theoryContent = String(formData.get("theoryContent") ?? "").trim();
   const options = parseOptionsFromForm(formData);
 
   if (!firestoreId || !topic || !statement || options.some((o) => !o.text) || !explanation) {
@@ -135,6 +137,8 @@ export async function updateQuestionAction(formData: FormData) {
         active,
         reviewStatus,
         reviewNotes,
+        theoryUrl: theoryUrl || undefined,
+        theoryContent: theoryContent || undefined,
       },
       auth.uid,
     );

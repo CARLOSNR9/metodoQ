@@ -26,6 +26,8 @@ function mapDocToQuestion(id: string, data: Record<string, unknown>): TrainingQu
     active: data.active !== false,
     examArea: data.examArea ? String(data.examArea) : undefined,
     university: data.university ? String(data.university) : undefined,
+    theoryUrl: data.theoryUrl ? String(data.theoryUrl) : undefined,
+    theoryContent: data.theoryContent ? String(data.theoryContent) : undefined,
   };
 }
 

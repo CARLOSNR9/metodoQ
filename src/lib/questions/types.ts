@@ -36,6 +36,10 @@ export type TrainingQuestion = {
   reviewedAt?: string;
   reviewedBy?: string;
   source?: QuestionSource;
+  /** Enlace a teoría completa (Notion, Drive, etc.) o ruta interna `/teoria/...`. */
+  theoryUrl?: string;
+  /** Contenido largo de teoría; si no hay `theoryUrl`, se expone en `/teoria/[id]`. */
+  theoryContent?: string;
 };
 
 /** Pregunta en el panel de revisión (Firestore y/o banco en código). */

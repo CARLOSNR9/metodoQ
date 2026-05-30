@@ -51,6 +51,8 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
     question.reviewStatus ?? "pending",
   );
   const [reviewNotes, setReviewNotes] = useState(question.reviewNotes ?? "");
+  const [theoryUrl, setTheoryUrl] = useState(question.theoryUrl ?? "");
+  const [theoryContent, setTheoryContent] = useState(question.theoryContent ?? "");
   const [active, setActive] = useState(question.active !== false);
   const [firestoreId, setFirestoreId] = useState(question.firestoreId);
   const [inFirestore, setInFirestore] = useState(question.inFirestore);
@@ -90,6 +92,8 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
       formData.set("correctOptionId", correctOptionId);
       formData.set("reviewStatus", reviewStatus);
       formData.set("reviewNotes", reviewNotes);
+      formData.set("theoryUrl", theoryUrl);
+      formData.set("theoryContent", theoryContent);
       formData.set("keyPoints", keyPoints);
       formData.set("university", university);
       formData.set("examArea", examArea);
@@ -294,6 +298,43 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
               placeholder="Ej.: distractor B demasiado obvio; ajustar semiología..."
               className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white resize-none disabled:opacity-60"
             />
+          </div>
+
+          <div className="rounded-xl border border-mq-accent/20 bg-mq-accent/5 p-4 space-y-4">
+            <div>
+              <label className="text-xs font-semibold uppercase text-mq-accent">
+                Teoría de la pregunta
+              </label>
+              <p className="mt-1 text-xs text-mq-muted leading-relaxed">
+                Enlace a la teoría completa (Notion, Drive, etc.). La pregunta sigue minimalista; el
+                estudiante abre la teoría aparte.
+              </p>
+              <input
+                type="text"
+                value={theoryUrl}
+                onChange={(e) => setTheoryUrl(e.target.value)}
+                disabled={!inFirestore}
+                placeholder="https://… o /teoria/ext-end-01"
+                className="mt-2 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white disabled:opacity-60"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-semibold uppercase text-mq-muted">
+                Contenido en Metodo Q (opcional)
+              </label>
+              <p className="mt-1 text-xs text-mq-muted">
+                Si escribes aquí sin URL externa, se genera el enlace{" "}
+                <span className="font-mono text-white/80">/teoria/{question.id}</span>
+              </p>
+              <textarea
+                value={theoryContent}
+                onChange={(e) => setTheoryContent(e.target.value)}
+                disabled={!inFirestore}
+                rows={6}
+                placeholder="Teoría extendida, píldoras, cómo leer la pregunta…"
+                className="mt-2 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white resize-none disabled:opacity-60"
+              />
+            </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">

@@ -31,6 +31,8 @@ type QuestionWriteInput = {
   reviewStatus?: QuestionReviewStatus;
   reviewNotes?: string;
   source?: QuestionSource;
+  theoryUrl?: string;
+  theoryContent?: string;
 };
 
 function buildStatementIndex(): Map<string, string> {
@@ -100,6 +102,8 @@ function mapDocToAdminRecord(
     reviewedBy: data.reviewedBy ? String(data.reviewedBy) : undefined,
     source: (data.source as QuestionSource) ?? "manual",
     createdAt: createdAtIso,
+    theoryUrl: data.theoryUrl ? String(data.theoryUrl) : undefined,
+    theoryContent: data.theoryContent ? String(data.theoryContent) : undefined,
   };
 }
 
@@ -256,10 +260,63 @@ export async function adminUpdateQuestion(
     active: input.active !== false,
     reviewStatus,
     reviewNotes: input.reviewNotes?.trim() || null,
+    theoryUrl: input.theoryUrl?.trim() || null,
+    theoryContent: input.theoryContent?.trim() || null,
     reviewedAt: isReviewed ? FieldValue.serverTimestamp() : null,
     reviewedBy: isReviewed ? reviewerUid : null,
     updatedAt: FieldValue.serverTimestamp(),
   });
+}
+
+export type QuestionTheoryPageData = {
+  id: string;
+  topic: string;
+  examArea?: string;
+  theoryContent: string;
+  theoryUrl?: string;
+};
+
+function mapTheoryFromDoc(
+  logicalId: string,
+  data: Record<string, unknown>,
+): QuestionTheoryPageData | null {
+  const theoryContent = String(data.theoryContent ?? "").trim();
+  const theoryUrl = data.theoryUrl ? String(data.theoryUrl).trim() : undefined;
+  if (!theoryContent && !theoryUrl) return null;
+
+  return {
+    id: logicalId,
+    topic: String(data.topic ?? "General"),
+    examArea: data.examArea ? String(data.examArea) : undefined,
+    theoryContent,
+    theoryUrl,
+  };
+}
+
+/** Datos para la página `/teoria/[id]` (Firestore o banco local). */
+export async function getQuestionTheoryPageData(
+  questionId: string,
+): Promise<QuestionTheoryPageData | null> {
+  const id = questionId.trim();
+  if (!id) return null;
+
+  const db = getFirebaseAdminDb();
+  const direct = await db.collection(COLLECTION).doc(id).get();
+  if (direct.exists) {
+    const mapped = mapTheoryFromDoc(id, direct.data() as Record<string, unknown>);
+    if (mapped) return mapped;
+  }
+
+  const byField = await db.collection(COLLECTION).where("id", "==", id).limit(1).get();
+  if (!byField.empty) {
+    const doc = byField.docs[0];
+    const mapped = mapTheoryFromDoc(id, doc.data() as Record<string, unknown>);
+    if (mapped) return mapped;
+  }
+
+  const local = getAllRepositoryQuestions().find((q) => q.id === id);
+  if (!local) return null;
+  return mapTheoryFromDoc(local.id, local as unknown as Record<string, unknown>);
 }
 
 export async function adminImportLocalQuestion(questionId: string): Promise<string> {
