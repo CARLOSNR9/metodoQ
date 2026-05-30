@@ -7,9 +7,11 @@ import { useStudyNotesCount } from "@/hooks/use-study-notes-count";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { logoutUser } from "@/lib/auth";
 import { getUserGreetingName } from "@/lib/plans/subscription-display";
+import { hasProFeatures } from "@/lib/plans/access";
 import { PomodoroProvider } from "@/contexts/pomodoro-context";
 import { AchievementNotification } from "./achievement-notification";
 import { PomodoroHeaderChip } from "./pomodoro-header-chip";
+import { PomodoroGlobalOverlay } from "./pomodoro-global-overlay";
 import {
   LayoutDashboard,
   GraduationCap,
@@ -46,6 +48,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const studyNotesCount = useStudyNotesCount(user?.uid);
   const failedQuestionsCount = useFailedQuestionsCount(user?.uid);
   const greetingName = getUserGreetingName(profile);
+  const isProUser = hasProFeatures(profile?.plan);
 
   if (isCheckingAuth) {
     return (
@@ -59,7 +62,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   }
 
   return (
-    <PomodoroProvider>
+    <PomodoroProvider userId={user?.uid} isProUser={isProUser}>
     <main className="flex min-h-screen flex-1 flex-col bg-[#0A1F44] md:flex-row">
       <aside className="relative z-20 w-full border-b border-mq-border-strong bg-white/[0.02] p-4 md:min-h-full md:w-64 md:border-b-0 md:border-r md:p-6">
         <div className="mb-8 hidden md:block">
@@ -152,6 +155,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
         </div>
       </section>
       <AchievementNotification userId={user?.uid ?? ""} />
+      {isProUser ? <PomodoroGlobalOverlay greetingName={greetingName} /> : null}
     </main>
     </PomodoroProvider>
   );

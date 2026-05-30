@@ -280,7 +280,9 @@ export async function logoutUser() {
   const { clearPomodoroAutostart, clearPomodoroPersisted } = await import(
     "@/lib/study/pomodoro-session"
   );
+  const uid = getFirebaseAuth().currentUser?.uid;
   clearPomodoroAutostart();
+  clearPomodoroPersisted(uid);
   clearPomodoroPersisted();
   return signOut(getFirebaseAuth());
 }
