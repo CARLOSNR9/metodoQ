@@ -8,12 +8,9 @@ import {
   Bookmark,
   BookmarkCheck,
   Loader2,
-  StickyNote,
   X,
-  ArrowRight,
   Sparkles,
 } from "lucide-react";
-import Link from "next/link";
 import {
   isStudyNoteSaved,
   removeStudyNote,
@@ -165,7 +162,7 @@ export function TheoryDeepDivePanel({
           examArea,
         });
         setIsSaved(true);
-        setSaveMessage("Guardada en Mi Estudio. Puedes leerla cuando quieras.");
+        setSaveMessage("Guardada en Mi Estudio. Sigue entrenando — la encuentras en Estudio al terminar.");
       }
     } catch {
       setSaveMessage("No se pudo guardar. Revisa tu conexión e intenta de nuevo.");
@@ -284,24 +281,13 @@ export function TheoryDeepDivePanel({
                       {isSaved ? "Guardada en Mi Estudio" : "Agregar a Mi Estudio"}
                     </button>
 
-                    {isSaved ? (
-                      <Link
-                        href="/dashboard/estudio"
-                        className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-white/10 px-5 text-sm font-bold text-white transition hover:border-mq-accent/30 hover:bg-white/5"
-                      >
-                        <StickyNote className="h-4 w-4 text-mq-accent" />
-                        Ver tablero
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    ) : (
-                      <button
-                        type="button"
-                        onClick={onClose}
-                        className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-white/10 px-5 text-sm font-semibold text-mq-muted transition hover:bg-white/5 hover:text-white sm:min-w-[140px]"
-                      >
-                        Cerrar
-                      </button>
-                    )}
+                    <button
+                      type="button"
+                      onClick={onClose}
+                      className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-white/10 px-5 text-sm font-semibold text-mq-muted transition hover:bg-white/5 hover:text-white sm:min-w-[140px]"
+                    >
+                      Cerrar
+                    </button>
                   </>
                 ) : (
                   <div className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-center text-sm text-mq-muted">
