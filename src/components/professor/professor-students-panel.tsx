@@ -74,7 +74,7 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
 
   function handleEnroll(studentId: string) {
     if (!selectedCourse) {
-      setError("Selecciona un curso primero.");
+      setError("Selecciona un grupo primero.");
       return;
     }
 
@@ -130,7 +130,7 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
           onChange={(e) => setSelectedCourse(e.target.value)}
           className="rounded-lg border border-mq-border bg-mq-surface px-3 py-2.5 text-sm text-white"
         >
-          <option value="">Curso para matricular</option>
+          <option value="">Grupo para matricular</option>
           {courses.map((course) => (
             <option key={course.id} value={course.id}>
               {course.name}
@@ -141,7 +141,7 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
 
       {courses.length === 0 ? (
         <p className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-200">
-          Crea un curso en &quot;Mis cursos&quot; antes de matricular alumnos desde aquí.
+          Crea un grupo en &quot;Mis grupos&quot; antes de matricular alumnos desde aquí.
         </p>
       ) : null}
 

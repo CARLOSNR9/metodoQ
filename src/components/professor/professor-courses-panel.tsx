@@ -57,7 +57,7 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
       if (result.error) {
         setError(result.error);
       } else {
-        setMessage("Curso creado correctamente.");
+        setMessage("Grupo creado correctamente.");
         await reloadCourses();
         router.refresh();
       }
@@ -91,7 +91,7 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
   }
 
   function handleDelete(courseId: string, courseName: string) {
-    if (!window.confirm(`¿Eliminar el curso "${courseName}"?`)) return;
+    if (!window.confirm(`¿Eliminar el grupo "${courseName}"?`)) return;
 
     setError("");
     startTransition(async () => {
@@ -111,10 +111,10 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
         <div className="animate-pulse rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 h-32" />
       ) : null}
       <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-        <h2 className="text-xl font-semibold text-white">Crear curso</h2>
+        <h2 className="text-xl font-semibold text-white">Crear grupo</h2>
         <p className="mt-1 text-sm text-mq-muted">
-          Un curso es tu grupo de enseñanza. Matricula alumnos y luego programa clases solo para
-          ese grupo.
+          Un grupo reúne a tus alumnos. Matrícalos y luego programa clases solo para ese
+          grupo.
         </p>
 
         <form action={handleCreate} className="mt-6 grid gap-4">
@@ -142,7 +142,7 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
               disabled={isPending}
               className="rounded-lg bg-mq-accent px-5 py-2.5 text-sm font-bold text-mq-accent-foreground disabled:opacity-50"
             >
-              {isPending ? "Creando..." : "Crear curso"}
+              {isPending ? "Creando..." : "Crear grupo"}
             </button>
           </div>
         </form>
@@ -152,15 +152,15 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
       </section>
 
       <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-        <h2 className="text-xl font-semibold text-white">Mis cursos</h2>
+        <h2 className="text-xl font-semibold text-white">Mis grupos</h2>
         <p className="mt-1 text-sm text-mq-muted">
-          {courses.length} curso{courses.length === 1 ? "" : "s"} activo
+          {courses.length} grupo{courses.length === 1 ? "" : "s"} activo
           {courses.length === 1 ? "" : "s"}.
         </p>
 
         {courses.length === 0 ? (
           <p className="mt-6 text-sm text-mq-muted">
-            Aún no tienes cursos. Crea el primero arriba para empezar a matricular alumnos.
+            Aún no tienes grupos. Crea el primero arriba para empezar a matricular alumnos.
           </p>
         ) : (
           <ul className="mt-6 space-y-4">

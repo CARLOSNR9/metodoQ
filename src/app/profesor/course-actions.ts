@@ -30,7 +30,7 @@ async function requireCourseManager(idToken: string | null) {
     return { ok: false as const, error: caller.error };
   }
   if (!canManageCourses(caller.role, caller.email)) {
-    return { ok: false as const, error: "No tienes permiso para gestionar cursos." };
+    return { ok: false as const, error: "No tienes permiso para gestionar grupos." };
   }
   return { ok: true as const, uid: caller.uid };
 }
@@ -44,7 +44,7 @@ export async function listProfessorCoursesAction(idToken: string | null) {
     return { courses };
   } catch (e) {
     console.error(e);
-    return { error: "No se pudieron cargar los cursos.", courses: [] };
+    return { error: "No se pudieron cargar los grupos.", courses: [] };
   }
 }
 
@@ -56,7 +56,7 @@ export async function createCourseAction(idToken: string | null, formData: FormD
   const description = String(formData.get("description") ?? "").trim();
 
   if (!name) {
-    return { error: "El nombre del curso es obligatorio." };
+    return { error: "El nombre del grupo es obligatorio." };
   }
 
   try {
@@ -65,7 +65,7 @@ export async function createCourseAction(idToken: string | null, formData: FormD
     return { success: true };
   } catch (e) {
     console.error(e);
-    return { error: "No se pudo crear el curso." };
+    return { error: "No se pudo crear el grupo." };
   }
 }
 
@@ -109,7 +109,7 @@ export async function unenrollStudentAction(
     return { success: true };
   } catch (e) {
     console.error(e);
-    return { error: "No se pudo quitar al alumno del curso." };
+    return { error: "No se pudo quitar al alumno del grupo." };
   }
 }
 
@@ -127,6 +127,6 @@ export async function deleteCourseAction(idToken: string | null, courseId: strin
     return { success: true };
   } catch (e) {
     console.error(e);
-    return { error: "No se pudo eliminar el curso." };
+    return { error: "No se pudo eliminar el grupo." };
   }
 }

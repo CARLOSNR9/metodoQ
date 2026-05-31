@@ -22,7 +22,7 @@ export default async function ProfessorStudentsPage() {
           Alumnos
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
-          Consulta estudiantes por plan y matrícalos en tus cursos. Solo Pro y Residente ven
+          Consulta estudiantes por plan y matrícalos en tus grupos. Solo Pro y Residente ven
           clases en vivo en su dashboard.
         </p>
       </header>

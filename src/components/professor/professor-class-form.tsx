@@ -27,7 +27,7 @@ export function ProfessorClassForm({ courses }: ProfessorClassFormProps) {
       if (target === "course") {
         const courseId = String(formData.get("courseId") ?? "").trim();
         if (!courseId) {
-          setError("Selecciona un curso o elige la opción para todos los Pro.");
+          setError("Selecciona un grupo o elige la opción para todos los Pro.");
           return;
         }
       } else {
@@ -48,7 +48,7 @@ export function ProfessorClassForm({ courses }: ProfessorClassFormProps) {
     <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
       <h2 className="text-xl font-semibold text-white">Programar clase en vivo</h2>
       <p className="mt-1 text-sm text-mq-muted">
-        Elige un curso para que solo sus alumnos matriculados la vean, o publícala para
+        Elige un grupo para que solo sus alumnos matriculados la vean, o publícala para
         todos los usuarios Pro y Residente.
       </p>
 
@@ -64,7 +64,7 @@ export function ProfessorClassForm({ courses }: ProfessorClassFormProps) {
                 onChange={() => setTarget("course")}
                 className="accent-mq-accent"
               />
-              Curso específico
+              Grupo específico
             </label>
             <label className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-sm text-white">
               <input
@@ -81,10 +81,10 @@ export function ProfessorClassForm({ courses }: ProfessorClassFormProps) {
 
         {target === "course" ? (
           <div className="sm:col-span-2">
-            <label className="text-xs font-semibold uppercase text-mq-muted">Curso</label>
+            <label className="text-xs font-semibold uppercase text-mq-muted">Grupo</label>
             {courses.length === 0 ? (
               <p className="mt-2 text-sm text-amber-300">
-                Crea un curso primero en &quot;Mis cursos&quot; para programar clases por grupo.
+                Crea un grupo primero en &quot;Mis grupos&quot; para programar clases por grupo.
               </p>
             ) : (
               <select
@@ -92,7 +92,7 @@ export function ProfessorClassForm({ courses }: ProfessorClassFormProps) {
                 required
                 className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2.5 text-white"
               >
-                <option value="">Selecciona un curso</option>
+                <option value="">Selecciona un grupo</option>
                 {courses.map((course) => (
                   <option key={course.id} value={course.id}>
                     {course.name} ({course.studentIds.length} alumno

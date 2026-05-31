@@ -19,11 +19,11 @@ export default async function ProfessorCoursesPage() {
           Organización
         </p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Mis cursos
+          Mis grupos
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
           Crea grupos de enseñanza, matricula alumnos y luego programa clases exclusivas para
-          cada curso.
+          cada grupo.
         </p>
       </header>
 

@@ -56,8 +56,8 @@ export default async function ProfessorHomePage() {
     {
       href: "/profesor/cursos",
       icon: GraduationCap,
-      title: "Mis cursos",
-      detail: "Crea grupos y matricula alumnos",
+      title: "Mis grupos",
+      detail: "Organiza alumnos y matrícula",
     },
     {
       href: "/profesor/clases",
@@ -89,7 +89,7 @@ export default async function ProfessorHomePage() {
           Tu espacio de enseñanza
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
-          Gestiona el banco de preguntas, organiza cursos, matricula alumnos y programa clases
+          Gestiona el banco de preguntas, organiza grupos de alumnos y programa clases
           que aparecerán en el panel de los estudiantes.
         </p>
       </header>

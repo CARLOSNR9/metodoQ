@@ -14,7 +14,7 @@ export default function ProfessorClassesPage() {
           Programar clases
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
-          Publica sesiones para un curso específico o para todos los usuarios Pro y Residente.
+          Publica sesiones para un grupo específico o para todos los usuarios Pro y Residente.
           Los alumnos matriculados las verán en su panel de clases.
         </p>
       </header>

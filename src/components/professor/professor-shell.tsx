@@ -23,7 +23,7 @@ const navigationItems = [
   { label: "Inicio", href: "/profesor", icon: LayoutDashboard, exact: true },
   { label: "Banco de preguntas", href: "/profesor/preguntas", icon: BookOpen, exact: true },
   { label: "Agregar preguntas", href: "/profesor/preguntas/nueva", icon: PlusCircle, exact: true },
-  { label: "Mis cursos", href: "/profesor/cursos", icon: GraduationCap },
+  { label: "Mis grupos", href: "/profesor/cursos", icon: GraduationCap },
   { label: "Alumnos", href: "/profesor/alumnos", icon: Users },
   { label: "Programar clases", href: "/profesor/clases", icon: Calendar },
 ] as const;

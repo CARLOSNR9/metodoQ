@@ -44,17 +44,17 @@ export async function createClassAction(formData: FormData) {
 
   if (courseId) {
     if (!idToken) {
-      return { error: "Sesión requerida para vincular la clase a un curso." };
+      return { error: "Sesión requerida para vincular la clase a un grupo." };
     }
 
     const caller = await verifyStaffCaller(idToken);
     if (!caller.ok || !canManageCourses(caller.role, caller.email)) {
-      return { error: "No tienes permiso para programar clases por curso." };
+      return { error: "No tienes permiso para programar clases por grupo." };
     }
 
     const course = await professorGetCourse(courseId, caller.uid);
     if (!course) {
-      return { error: "Curso no encontrado o no te pertenece." };
+      return { error: "Grupo no encontrado o no te pertenece." };
     }
 
     professorId = caller.uid;
