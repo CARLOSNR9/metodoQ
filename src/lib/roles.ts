@@ -69,6 +69,14 @@ export function canManageQuestions(
   return isAdminUser(role, email) || isProfessorUser(role);
 }
 
+/** Profesor o admin: cursos, matrícula y clases por grupo. */
+export function canManageCourses(
+  role: string | null | undefined,
+  email: string | null | undefined,
+): boolean {
+  return isAdminUser(role, email) || isProfessorUser(role);
+}
+
 export function getRoleLabel(role: UserRole): string {
   switch (role) {
     case "admin":

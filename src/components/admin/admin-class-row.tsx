@@ -7,13 +7,22 @@ import { Trash2 } from "lucide-react";
 type Props = {
   id: string;
   title: string;
+  destination: string;
   dateIso: string | null;
   duration: number;
   meetingLink: string;
   isPast: boolean;
 };
 
-export function AdminClassRow({ id, title, dateIso, duration, meetingLink, isPast }: Props) {
+export function AdminClassRow({
+  id,
+  title,
+  destination,
+  dateIso,
+  duration,
+  meetingLink,
+  isPast,
+}: Props) {
   const [isPending, startTransition] = useTransition();
 
   const formatted =
@@ -29,6 +38,7 @@ export function AdminClassRow({ id, title, dateIso, duration, meetingLink, isPas
         <p className="font-medium text-white">{title}</p>
         <p className="text-xs text-mq-muted">{duration} min</p>
       </td>
+      <td className="py-3 pr-4 text-xs text-mq-muted">{destination}</td>
       <td className="py-3 pr-4 text-sm text-mq-muted">{formatted ?? "—"}</td>
       <td className="py-3 pr-4">
         <span

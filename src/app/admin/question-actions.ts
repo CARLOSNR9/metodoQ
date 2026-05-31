@@ -16,7 +16,13 @@ import {
 } from "@/lib/server/questions-admin";
 import { verifyStaffCaller } from "@/lib/server/verify-staff";
 
-const REVIEW_PATHS = ["/admin", "/profesor", "/profesor/preguntas", "/teoria"] as const;
+const REVIEW_PATHS = [
+  "/admin",
+  "/profesor",
+  "/profesor/preguntas",
+  "/profesor/preguntas/nueva",
+  "/teoria",
+] as const;
 
 function revalidateQuestionPaths() {
   for (const path of REVIEW_PATHS) {

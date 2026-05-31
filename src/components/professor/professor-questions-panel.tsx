@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState, useTransition } from "react";
 import Link from "next/link";
+import { useEffect, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import {
   listQuestionsForReviewAction,
@@ -15,7 +15,7 @@ import {
 } from "@/lib/questions/review-labels";
 import { normalizeReviewStatus } from "@/lib/questions/review-status";
 import type { QuestionAdminRecord, QuestionReviewStatus } from "@/lib/questions/types";
-import { ArrowLeft, Search } from "lucide-react";
+import { Search } from "lucide-react";
 
 type FilterKey = "all" | "pending" | "approved" | "flagged" | "inactive" | "local";
 
@@ -140,14 +140,7 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
   return (
     <>
       <header className="mb-8">
-        <Link
-          href="/profesor"
-          className="inline-flex items-center gap-1 text-sm text-mq-accent hover:underline"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Volver al panel
-        </Link>
-        <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Revisión editorial
         </p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">

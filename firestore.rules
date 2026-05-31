@@ -50,6 +50,15 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // Cursos del profesor: lectura para matriculados o el docente; escritura solo Admin SDK
+    match /courses/{courseId} {
+      allow read: if isSignedIn() && (
+        request.auth.uid == resource.data.professorId ||
+        request.auth.uid in resource.data.studentIds
+      );
+      allow write: if false;
+    }
+
     // Notificaciones de logros del usuario
     match /notifications/{notificationId} {
       allow read: if isSignedIn() && resource.data.userId == request.auth.uid;

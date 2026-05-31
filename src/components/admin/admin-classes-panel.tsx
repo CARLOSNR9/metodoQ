@@ -26,6 +26,7 @@ export async function AdminClassesPanel() {
             <thead>
               <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
                 <th className="pb-3 pr-4">Clase</th>
+                <th className="pb-3 pr-4">Destino</th>
                 <th className="pb-3 pr-4">Fecha</th>
                 <th className="pb-3 pr-4">Estado</th>
                 <th className="pb-3 pr-4">Enlace</th>
@@ -38,11 +39,16 @@ export async function AdminClassesPanel() {
                   ? new Date(cls.dateIso).getTime() + cls.duration * 60_000
                   : 0;
                 const isPast = endMs > 0 && endMs < now;
+                const destination =
+                  cls.visibility === "course" && cls.courseName
+                    ? cls.courseName
+                    : "Todos Pro / Residente";
                 return (
                   <AdminClassRow
                     key={cls.id}
                     id={cls.id}
                     title={cls.title}
+                    destination={destination}
                     dateIso={cls.dateIso}
                     duration={cls.duration}
                     meetingLink={cls.meetingLink}

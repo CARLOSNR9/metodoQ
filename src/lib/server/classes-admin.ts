@@ -10,6 +10,10 @@ export type AdminClassInput = {
   durationMinutes: number;
   meetingLink: string;
   recordingLink?: string;
+  professorId?: string;
+  courseId?: string | null;
+  courseName?: string;
+  visibility?: "all_pro" | "course";
 };
 
 export async function adminCreateClass(input: AdminClassInput) {
@@ -25,6 +29,10 @@ export async function adminCreateClass(input: AdminClassInput) {
     duration: input.durationMinutes,
     meetingLink: input.meetingLink.trim(),
     recordingLink: input.recordingLink?.trim() || null,
+    professorId: input.professorId ?? null,
+    courseId: input.courseId ?? null,
+    courseName: input.courseName?.trim() || null,
+    visibility: input.visibility ?? (input.courseId ? "course" : "all_pro"),
     createdAt: FieldValue.serverTimestamp(),
   });
 
@@ -53,6 +61,9 @@ export async function adminListClasses() {
       duration: Number(data.duration ?? 60),
       meetingLink: String(data.meetingLink ?? ""),
       recordingLink: data.recordingLink ? String(data.recordingLink) : null,
+      courseId: data.courseId ? String(data.courseId) : null,
+      courseName: data.courseName ? String(data.courseName) : null,
+      visibility: data.visibility === "course" ? "course" : "all_pro",
     };
   });
 }

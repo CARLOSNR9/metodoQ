@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { getClasses } from "@/lib/classes/service";
-import { Class } from "@/lib/classes/types";
+import { isClassVisibleToStudent, Class } from "@/lib/classes/types";
+import { getEnrolledCourseIds } from "@/lib/courses/service";
 import { useUserPlan } from "@/hooks/use-user-plan";
 import { hasProFeatures } from "@/lib/plans/access";
+import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { History, PlayCircle } from "lucide-react";
 
 export function PastClasses() {
   const { plan, loading: isLoadingPlan } = useUserPlan();
+  const { user } = useAuthGuard("/login");
   const [classes, setClasses] = useState<Class[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,21 +19,26 @@ export function PastClasses() {
 
   useEffect(() => {
     async function fetchPastClasses() {
-      if (!isPro) {
+      if (!isPro || !user?.uid) {
         setLoading(false);
         return;
       }
       try {
-        const data = await getClasses(false); // Ordenadas por fecha descendente (más recientes primero)
+        const [data, enrolledCourseIds] = await Promise.all([
+          getClasses(false),
+          getEnrolledCourseIds(user.uid),
+        ]);
         const now = new Date();
-        
-        // Filtrar solo las que YA han terminado
-        const past = data.filter(cls => {
+
+        const past = data.filter((cls) => {
+          if (!isClassVisibleToStudent(cls, enrolledCourseIds)) {
+            return false;
+          }
           const classDate = cls.date.toDate();
-          const endTime = new Date(classDate.getTime() + (cls.duration * 60000));
+          const endTime = new Date(classDate.getTime() + cls.duration * 60000);
           return endTime < now;
         });
-        
+
         setClasses(past);
       } catch (err) {
         console.error("Error al cargar clases pasadas:", err);
@@ -42,7 +50,7 @@ export function PastClasses() {
     if (!isLoadingPlan) {
       fetchPastClasses();
     }
-  }, [isPro, isLoadingPlan]);
+  }, [isPro, isLoadingPlan, user?.uid]);
 
   // Si no hay grabaciones y es PRO, no mostramos la sección
   if (isLoadingPlan || (isPro && classes.length === 0 && !loading)) {

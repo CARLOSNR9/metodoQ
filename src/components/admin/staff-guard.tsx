@@ -24,6 +24,8 @@ type StaffGuardProps = {
   allowedRoles: UserRole[];
   title: string;
   subtitle: string;
+  /** Oculta el header superior cuando el panel usa su propio shell (sidebar) */
+  showHeader?: boolean;
 };
 
 function hasAccess(
@@ -55,6 +57,7 @@ export function StaffGuard({
   allowedRoles,
   title,
   subtitle,
+  showHeader = true,
 }: StaffGuardProps) {
   const [authUser, setAuthUser] = useState<User | null>(null);
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
@@ -181,7 +184,7 @@ export function StaffGuard({
 
   return (
     <>
-      <StaffPanelHeader user={authUser} />
+      {showHeader ? <StaffPanelHeader user={authUser} /> : null}
       {children}
     </>
   );

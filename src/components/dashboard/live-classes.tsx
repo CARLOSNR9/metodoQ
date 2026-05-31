@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { getClasses } from "@/lib/classes/service";
-import { Class } from "@/lib/classes/types";
+import { isClassVisibleToStudent, Class } from "@/lib/classes/types";
+import { getEnrolledCourseIds } from "@/lib/courses/service";
 import { useUserPlan } from "@/hooks/use-user-plan";
 import { hasProFeatures } from "@/lib/plans/access";
+import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { Calendar, ExternalLink, Lock } from "lucide-react";
 
 export function LiveClasses() {
   const { plan, loading: isLoadingPlan } = useUserPlan();
+  const { user } = useAuthGuard("/login");
   const [classes, setClasses] = useState<Class[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,21 +19,26 @@ export function LiveClasses() {
 
   useEffect(() => {
     async function fetchClasses() {
-      if (!isPro) {
+      if (!isPro || !user?.uid) {
         setLoading(false);
         return;
       }
       try {
-        const data = await getClasses(true); // Ordenadas por fecha ascendente
+        const [data, enrolledCourseIds] = await Promise.all([
+          getClasses(true),
+          getEnrolledCourseIds(user.uid),
+        ]);
         const now = new Date();
-        
-        // Filtrar solo las que NO han terminado (Clase actual o futura)
-        const upcoming = data.filter(cls => {
+
+        const upcoming = data.filter((cls) => {
+          if (!isClassVisibleToStudent(cls, enrolledCourseIds)) {
+            return false;
+          }
           const classDate = cls.date.toDate();
-          const endTime = new Date(classDate.getTime() + (cls.duration * 60000));
+          const endTime = new Date(classDate.getTime() + cls.duration * 60000);
           return endTime > now;
         });
-        
+
         setClasses(upcoming);
       } catch (err) {
         console.error("Error al cargar clases próximas:", err);
@@ -42,7 +50,7 @@ export function LiveClasses() {
     if (!isLoadingPlan) {
       fetchClasses();
     }
-  }, [isPro, isLoadingPlan]);
+  }, [isPro, isLoadingPlan, user?.uid]);
 
   if (isLoadingPlan || (loading && isPro)) {
     return (
