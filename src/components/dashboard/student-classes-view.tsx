@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ExternalLink, Lock, PlayCircle } from "lucide-react";
+import { Lock, PlayCircle } from "lucide-react";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { useStudentClasses } from "@/hooks/use-student-classes";
 import { hasProFeatures } from "@/lib/plans/access";
 import { ClassesCalendar } from "./classes-calendar";
+import { ClassSessionDetails } from "./class-session-details";
 import { formatClassDate, formatClassTime } from "@/lib/classes/student-classes";
 
 export function StudentClassesView() {
@@ -93,15 +94,10 @@ export function StudentClassesView() {
                   {formatClassDate(cls.classDate)} · {formatClassTime(cls.classDate)}
                 </p>
                 <p className="mt-1 text-xs text-mq-muted">{cls.duration} minutos</p>
-                <a
-                  href={cls.meetingLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 rounded-lg bg-mq-accent px-4 py-2 text-sm font-bold text-mq-accent-foreground hover:brightness-110"
-                >
-                  {cls.isLiveNow ? "Entrar ahora" : "Abrir enlace"}
-                  <ExternalLink size={15} />
-                </a>
+                {cls.courseName ? (
+                  <p className="mt-1 text-xs text-mq-accent/80">Grupo: {cls.courseName}</p>
+                ) : null}
+                <ClassSessionDetails cls={cls} />
               </article>
             ))}
           </div>
@@ -125,6 +121,9 @@ export function StudentClassesView() {
                   <p className="text-xs capitalize text-mq-muted">
                     {formatClassDate(cls.classDate)}
                   </p>
+                  {cls.description?.trim() ? (
+                    <p className="mt-1 text-xs text-mq-muted line-clamp-2">{cls.description}</p>
+                  ) : null}
                 </div>
                 {cls.recordingLink ? (
                   <a

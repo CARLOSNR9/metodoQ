@@ -8,6 +8,7 @@ import {
   formatClassTime,
   type StudentClassView,
 } from "@/lib/classes/student-classes";
+import { ClassSessionDetails } from "@/components/dashboard/class-session-details";
 
 type ClassesCalendarProps = {
   classes: StudentClassView[];
@@ -168,7 +169,7 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
                 className="rounded-xl border border-mq-border bg-mq-surface-raised/70 p-4"
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <p className="font-semibold text-white">{cls.title}</p>
                     <p className="mt-1 text-sm capitalize text-mq-muted">
                       {formatClassDate(cls.classDate)} · {formatClassTime(cls.classDate)}
@@ -176,26 +177,8 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
                     {cls.courseName ? (
                       <p className="mt-1 text-xs text-mq-accent/80">Grupo: {cls.courseName}</p>
                     ) : null}
+                    <ClassSessionDetails cls={cls} layout="row" />
                   </div>
-                  {!cls.isPast || cls.isLiveNow ? (
-                    <a
-                      href={cls.meetingLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-lg bg-mq-accent px-4 py-2 text-xs font-bold text-mq-accent-foreground hover:brightness-110"
-                    >
-                      {cls.isLiveNow ? "Entrar" : "Unirse"}
-                    </a>
-                  ) : cls.recordingLink ? (
-                    <a
-                      href={cls.recordingLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-lg bg-white/10 px-4 py-2 text-xs font-semibold text-white hover:bg-white/15"
-                    >
-                      Ver grabación
-                    </a>
-                  ) : null}
                 </div>
               </li>
             ))}
