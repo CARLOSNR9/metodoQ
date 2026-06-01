@@ -169,6 +169,19 @@ export async function saveClassAttendanceRecords(
   const allowedStudentIds = new Set(course.studentIds);
   const db = getFirebaseAdminDb();
   const batch = db.batch();
+  const entryStudentIds = new Set(entries.map((entry) => entry.studentId));
+
+  const existingSnap = await db
+    .collection(ATTENDANCE_COLLECTION)
+    .where("classId", "==", classId)
+    .get();
+
+  for (const doc of existingSnap.docs) {
+    const studentId = doc.data().studentId as string;
+    if (!entryStudentIds.has(studentId) && allowedStudentIds.has(studentId)) {
+      batch.delete(doc.ref);
+    }
+  }
 
   for (const entry of entries) {
     if (!allowedStudentIds.has(entry.studentId)) continue;

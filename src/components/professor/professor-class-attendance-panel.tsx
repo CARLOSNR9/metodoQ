@@ -71,7 +71,14 @@ export function ProfessorClassAttendancePanel({ classId }: ProfessorClassAttenda
   }, [students, records]);
 
   function setStatus(studentId: string, status: AttendanceStatus) {
-    setRecords((prev) => ({ ...prev, [studentId]: status }));
+    setRecords((prev) => {
+      if (prev[studentId] === status) {
+        const next = { ...prev };
+        delete next[studentId];
+        return next;
+      }
+      return { ...prev, [studentId]: status };
+    });
   }
 
   function markAll(status: AttendanceStatus) {
