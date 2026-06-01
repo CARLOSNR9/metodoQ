@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { enrollStudentAction, listProfessorCoursesAction } from "@/app/profesor/course-actions";
 import { getStaffIdToken } from "@/lib/client/staff-id-token";
 import { getPlanDisplayName } from "@/lib/plans/config";
+import { ThemeSelect } from "@/components/ui/theme-select";
 import type { CourseRecord } from "@/lib/courses/types";
 import type { ProfessorStudentRow } from "@/lib/server/professor-users";
 import type { UserPlan } from "@/lib/auth";
@@ -52,6 +53,11 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
     }
     load();
   }, []);
+
+  const groupOptions = useMemo(
+    () => courses.map((course) => ({ value: course.id, label: course.name })),
+    [courses],
+  );
 
   const enrolledInSelectedGroup = useMemo(() => {
     const course = courses.find((item) => item.id === selectedCourse);
@@ -133,18 +139,13 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
           placeholder="Buscar por nombre o correo"
           className="rounded-lg border border-mq-border bg-mq-surface px-3 py-2.5 text-sm text-white"
         />
-        <select
+        <ThemeSelect
           value={selectedCourse}
-          onChange={(e) => setSelectedCourse(e.target.value)}
-          className="rounded-lg border border-mq-border bg-mq-surface px-3 py-2.5 text-sm text-white"
-        >
-          <option value="">Grupo para matricular</option>
-          {courses.map((course) => (
-            <option key={course.id} value={course.id}>
-              {course.name}
-            </option>
-          ))}
-        </select>
+          onChange={setSelectedCourse}
+          options={groupOptions}
+          placeholder="Grupo para matricular"
+          disabled={courses.length === 0}
+        />
       </div>
 
       {loadError ? <p className="text-sm text-rose-400">{loadError}</p> : null}

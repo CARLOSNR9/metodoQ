@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { createClassAction } from "@/app/admin/class-actions";
 import { getStaffIdToken } from "@/lib/client/staff-id-token";
+import { ThemeSelect } from "@/components/ui/theme-select";
 import type { CourseRecord } from "@/lib/courses/types";
 
 type ProfessorClassFormProps = {
@@ -16,6 +17,17 @@ export function ProfessorClassForm({ courses }: ProfessorClassFormProps) {
   const [target, setTarget] = useState<"all_pro" | "course">(
     courses.length > 0 ? "course" : "all_pro",
   );
+  const [selectedCourseId, setSelectedCourseId] = useState(courses[0]?.id ?? "");
+
+  useEffect(() => {
+    if (courses.length === 0) {
+      setSelectedCourseId("");
+      return;
+    }
+    setSelectedCourseId((current) =>
+      current && courses.some((course) => course.id === current) ? current : courses[0].id,
+    );
+  }, [courses]);
 
   const handleSubmit = (formData: FormData) => {
     setMessage("");
@@ -87,19 +99,20 @@ export function ProfessorClassForm({ courses }: ProfessorClassFormProps) {
                 Crea un grupo primero en &quot;Mis grupos&quot; para programar clases por grupo.
               </p>
             ) : (
-              <select
+              <ThemeSelect
                 name="courseId"
                 required
-                className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2.5 text-white"
-              >
-                <option value="">Selecciona un grupo</option>
-                {courses.map((course) => (
-                  <option key={course.id} value={course.id}>
-                    {course.name} ({course.studentIds.length} alumno
-                    {course.studentIds.length === 1 ? "" : "s"})
-                  </option>
-                ))}
-              </select>
+                value={selectedCourseId}
+                onChange={setSelectedCourseId}
+                placeholder="Selecciona un grupo"
+                className="mt-1"
+                options={courses.map((course) => ({
+                  value: course.id,
+                  label: `${course.name} (${course.studentIds.length} alumno${
+                    course.studentIds.length === 1 ? "" : "s"
+                  })`,
+                }))}
+              />
             )}
           </div>
         ) : null}
