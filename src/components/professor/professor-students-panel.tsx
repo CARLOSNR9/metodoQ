@@ -53,6 +53,11 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
     load();
   }, []);
 
+  const enrolledInSelectedGroup = useMemo(() => {
+    const course = courses.find((item) => item.id === selectedCourse);
+    return new Set(course?.studentIds ?? []);
+  }, [courses, selectedCourse]);
+
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     return students.filter((student) => {
@@ -170,7 +175,10 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
                 </td>
               </tr>
             ) : (
-              filtered.map((student) => (
+              filtered.map((student) => {
+                const isEnrolled = enrolledInSelectedGroup.has(student.uid);
+
+                return (
                 <tr key={student.uid} className="border-b border-white/5">
                   <td className="px-4 py-3">
                     <p className="font-medium text-white">{student.displayName}</p>
@@ -187,17 +195,24 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
                     ) : null}
                   </td>
                   <td className="px-4 py-3 text-right">
-                    <button
-                      type="button"
-                      disabled={isPending || !selectedCourse}
-                      onClick={() => handleEnroll(student.uid)}
-                      className="rounded-lg bg-mq-accent/15 px-3 py-1.5 text-xs font-semibold text-mq-accent hover:bg-mq-accent/25 disabled:opacity-50"
-                    >
-                      Matricular
-                    </button>
+                    {isEnrolled ? (
+                      <span className="inline-flex rounded-lg bg-emerald-500/15 px-3 py-1.5 text-xs font-semibold text-emerald-300">
+                        Matriculado
+                      </span>
+                    ) : (
+                      <button
+                        type="button"
+                        disabled={isPending || !selectedCourse}
+                        onClick={() => handleEnroll(student.uid)}
+                        className="rounded-lg bg-mq-accent/15 px-3 py-1.5 text-xs font-semibold text-mq-accent hover:bg-mq-accent/25 disabled:opacity-50"
+                      >
+                        Matricular
+                      </button>
+                    )}
                   </td>
                 </tr>
-              ))
+              );
+              })
             )}
           </tbody>
         </table>
