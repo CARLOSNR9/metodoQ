@@ -22,6 +22,7 @@ import {
   CreditCard,
   StickyNote,
   RotateCcw,
+  CalendarDays,
 } from "lucide-react";
 import { useFailedQuestionsCount } from "@/hooks/use-failed-questions-count";
 
@@ -35,10 +36,11 @@ const navigationItems = [
   { label: "Refuerzo", href: "/dashboard/refuerzo", icon: RotateCcw },
   { label: "Estudio", href: "/dashboard/estudio", icon: StickyNote },
   { label: "Simulacro", href: "/dashboard/simulacro", icon: Timer },
+  { label: "Mis clases", href: "/dashboard/clases", icon: CalendarDays, proOnly: true },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
   { label: "Historial", href: "/dashboard/historial", icon: History },
   { label: "Perfil", href: "/dashboard/perfil", icon: User },
-];
+] as const;
 
 export function DashboardShell({ children }: DashboardShellProps) {
   const router = useRouter();
@@ -81,7 +83,9 @@ export function DashboardShell({ children }: DashboardShellProps) {
         </div>
 
         <nav className="flex gap-2 overflow-x-auto pb-2 md:flex-col md:overflow-visible">
-          {navigationItems.map((item) => {
+          {navigationItems
+            .filter((item) => !("proOnly" in item && item.proOnly) || isProUser)
+            .map((item) => {
             const isActive =
               pathname === item.href ||
               (item.href !== "/dashboard" && pathname.startsWith(item.href));

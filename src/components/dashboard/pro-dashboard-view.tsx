@@ -25,6 +25,7 @@ import {
   ProgressChart,
   DailyPillCard,
   StudyBoardPreviewCard,
+  NextClassBanner,
 } from "@/components/dashboard";
 import { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashboard";
@@ -128,6 +129,8 @@ export function ProDashboardView({
 
   return (
     <div className="space-y-10 pb-12">
+      {showLiveClasses && user?.uid ? <NextClassBanner userId={user.uid} /> : null}
+
       {/* 1. PREMIUM HEADER */}
       <motion.header 
         initial={{ opacity: 0, y: 20 }}
