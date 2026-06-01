@@ -9,7 +9,7 @@ import {
   listProfessorCoursesAction,
   unenrollStudentAction,
 } from "@/app/profesor/course-actions";
-import { getFirebaseAuth } from "@/lib/firebase";
+import { getStaffIdToken } from "@/lib/client/staff-id-token";
 import type { CourseRecord } from "@/lib/courses/types";
 import type { ProfessorStudentRow } from "@/lib/server/professor-users";
 import { Trash2, UserMinus, UserPlus } from "lucide-react";
@@ -25,16 +25,26 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
   const [isPending, startTransition] = useTransition();
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
-  const [expandedId, setExpandedId] = useState<string | null>(courses[0]?.id ?? null);
+  const [listError, setListError] = useState("");
+  const [expandedId, setExpandedId] = useState<string | null>(null);
   const [enrollQuery, setEnrollQuery] = useState<Record<string, string>>({});
 
   async function getToken() {
-    return (await getFirebaseAuth().currentUser?.getIdToken()) ?? "";
+    return getStaffIdToken();
   }
 
   async function reloadCourses() {
     const result = await listProfessorCoursesAction(await getToken());
-    setCourses(result.courses ?? []);
+    if (result.error) {
+      setListError(result.error);
+    } else {
+      setListError("");
+    }
+    const nextCourses = result.courses ?? [];
+    setCourses(nextCourses);
+    if (nextCourses.length > 0) {
+      setExpandedId((current) => current ?? nextCourses[0].id);
+    }
   }
 
   useEffect(() => {
@@ -58,6 +68,10 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
         setError(result.error);
       } else {
         setMessage("Grupo creado correctamente.");
+        if (result.course) {
+          setCourses((prev) => [result.course!, ...prev.filter((c) => c.id !== result.course!.id)]);
+          setExpandedId(result.course.id);
+        }
         await reloadCourses();
         router.refresh();
       }
@@ -157,6 +171,8 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
           {courses.length} grupo{courses.length === 1 ? "" : "s"} activo
           {courses.length === 1 ? "" : "s"}.
         </p>
+
+        {listError ? <p className="mt-4 text-sm text-rose-400">{listError}</p> : null}
 
         {courses.length === 0 ? (
           <p className="mt-6 text-sm text-mq-muted">

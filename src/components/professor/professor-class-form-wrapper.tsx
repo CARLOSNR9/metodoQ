@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { listProfessorCoursesAction } from "@/app/profesor/course-actions";
 import { ProfessorClassForm } from "@/components/professor/professor-class-form";
-import { getFirebaseAuth } from "@/lib/firebase";
+import { getStaffIdToken } from "@/lib/client/staff-id-token";
 import type { CourseRecord } from "@/lib/courses/types";
 
 export function ProfessorClassFormWrapper() {
@@ -13,7 +13,7 @@ export function ProfessorClassFormWrapper() {
   useEffect(() => {
     async function load() {
       try {
-        const token = (await getFirebaseAuth().currentUser?.getIdToken()) ?? "";
+        const token = await getStaffIdToken();
         const result = await listProfessorCoursesAction(token);
         setCourses(result.courses ?? []);
       } finally {

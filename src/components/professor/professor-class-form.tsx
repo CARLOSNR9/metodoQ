@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { createClassAction } from "@/app/admin/class-actions";
-import { getFirebaseAuth } from "@/lib/firebase";
+import { getStaffIdToken } from "@/lib/client/staff-id-token";
 import type { CourseRecord } from "@/lib/courses/types";
 
 type ProfessorClassFormProps = {
@@ -21,7 +21,7 @@ export function ProfessorClassForm({ courses }: ProfessorClassFormProps) {
     setMessage("");
     setError("");
     startTransition(async () => {
-      const token = (await getFirebaseAuth().currentUser?.getIdToken()) ?? "";
+      const token = await getStaffIdToken();
       formData.set("idToken", token);
 
       if (target === "course") {

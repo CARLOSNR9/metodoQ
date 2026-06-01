@@ -30,11 +30,16 @@ export async function professorListCourses(professorId: string): Promise<CourseR
   const snap = await getFirebaseAdminDb()
     .collection(COLLECTION)
     .where("professorId", "==", professorId)
-    .orderBy("createdAt", "desc")
-    .limit(50)
     .get();
 
-  return snap.docs.map((doc) => mapCourseDoc(doc.id, doc.data()));
+  return snap.docs
+    .map((doc) => mapCourseDoc(doc.id, doc.data()))
+    .sort((a, b) => {
+      const aTime = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const bTime = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+      return bTime - aTime;
+    })
+    .slice(0, 50);
 }
 
 export async function professorGetCourse(

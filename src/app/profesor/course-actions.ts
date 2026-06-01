@@ -6,6 +6,7 @@ import {
   professorCreateCourse,
   professorDeleteCourse,
   professorEnrollStudent,
+  professorGetCourse,
   professorListCourses,
   professorUnenrollStudent,
 } from "@/lib/server/courses-admin";
@@ -60,9 +61,10 @@ export async function createCourseAction(idToken: string | null, formData: FormD
   }
 
   try {
-    await professorCreateCourse(auth.uid, { name, description });
+    const courseId = await professorCreateCourse(auth.uid, { name, description });
+    const course = await professorGetCourse(courseId, auth.uid);
     revalidateProfessorPaths();
-    return { success: true };
+    return { success: true, course };
   } catch (e) {
     console.error(e);
     return { error: "No se pudo crear el grupo." };

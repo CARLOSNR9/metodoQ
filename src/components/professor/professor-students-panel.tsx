@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { enrollStudentAction, listProfessorCoursesAction } from "@/app/profesor/course-actions";
-import { getFirebaseAuth } from "@/lib/firebase";
+import { getStaffIdToken } from "@/lib/client/staff-id-token";
 import { getPlanDisplayName } from "@/lib/plans/config";
 import type { CourseRecord } from "@/lib/courses/types";
 import type { ProfessorStudentRow } from "@/lib/server/professor-users";
@@ -32,13 +32,17 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
   const [search, setSearch] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [loadError, setLoadError] = useState("");
   const [selectedCourse, setSelectedCourse] = useState("");
 
   useEffect(() => {
     async function load() {
       try {
-        const token = (await getFirebaseAuth().currentUser?.getIdToken()) ?? "";
+        const token = await getStaffIdToken();
         const result = await listProfessorCoursesAction(token);
+        if (result.error) {
+          setLoadError(result.error);
+        }
         const nextCourses = result.courses ?? [];
         setCourses(nextCourses);
         setSelectedCourse(nextCourses[0]?.id ?? "");
@@ -81,13 +85,12 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
     setError("");
     setMessage("");
     startTransition(async () => {
-      const token = (await getFirebaseAuth().currentUser?.getIdToken()) ?? "";
+      const token = await getStaffIdToken();
       const result = await enrollStudentAction(token, selectedCourse, studentId);
       if (result.error) {
         setError(result.error);
       } else {
         setMessage("Alumno matriculado correctamente.");
-        const token = (await getFirebaseAuth().currentUser?.getIdToken()) ?? "";
         const refreshed = await listProfessorCoursesAction(token);
         setCourses(refreshed.courses ?? []);
         router.refresh();
@@ -138,6 +141,8 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
           ))}
         </select>
       </div>
+
+      {loadError ? <p className="text-sm text-rose-400">{loadError}</p> : null}
 
       {courses.length === 0 ? (
         <p className="rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-200">
