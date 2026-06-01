@@ -12,6 +12,7 @@ import {
   GraduationCap,
   Users,
   Calendar,
+  ClipboardList,
   LogOut,
 } from "lucide-react";
 
@@ -26,6 +27,7 @@ const navigationItems = [
   { label: "Mis grupos", href: "/profesor/cursos", icon: GraduationCap },
   { label: "Alumnos", href: "/profesor/alumnos", icon: Users },
   { label: "Programar clases", href: "/profesor/clases", icon: Calendar },
+  { label: "Asistencia", href: "/profesor/asistencia", icon: ClipboardList },
 ] as const;
 
 function isNavActive(pathname: string, href: string, exact?: boolean) {

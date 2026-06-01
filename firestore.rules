@@ -59,6 +59,11 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // Asistencia a clases: solo servidor (Admin SDK)
+    match /class_attendance/{recordId} {
+      allow read, write: if false;
+    }
+
     // Notificaciones de logros del usuario
     match /notifications/{notificationId} {
       allow read: if isSignedIn() && resource.data.userId == request.auth.uid;

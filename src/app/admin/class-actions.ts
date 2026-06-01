@@ -9,7 +9,7 @@ import { professorGetCourse } from "@/lib/server/courses-admin";
 import { canManageCourses } from "@/lib/roles";
 import { verifyStaffCaller } from "@/lib/server/verify-staff";
 
-const CLASS_PATHS = ["/admin", "/profesor", "/profesor/clases", "/dashboard"] as const;
+const CLASS_PATHS = ["/admin", "/profesor", "/profesor/clases", "/profesor/asistencia", "/dashboard"] as const;
 
 function revalidateClassPaths() {
   for (const path of CLASS_PATHS) {

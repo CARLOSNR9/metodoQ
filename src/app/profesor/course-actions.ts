@@ -17,6 +17,7 @@ const PROFESSOR_PATHS = [
   "/profesor/cursos",
   "/profesor/alumnos",
   "/profesor/clases",
+  "/profesor/asistencia",
 ] as const;
 
 function revalidateProfessorPaths() {

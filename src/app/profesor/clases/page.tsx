@@ -1,4 +1,4 @@
-import { AdminClassesPanel } from "@/components/admin/admin-classes-panel";
+import { ProfessorClassesPanel } from "@/components/professor/professor-classes-panel";
 import { ProfessorClassFormWrapper } from "@/components/professor/professor-class-form-wrapper";
 
 export const dynamic = "force-dynamic";
@@ -21,7 +21,7 @@ export default function ProfessorClassesPage() {
 
       <div className="mt-10 space-y-8">
         <ProfessorClassFormWrapper />
-        <AdminClassesPanel />
+        <ProfessorClassesPanel />
       </div>
     </>
   );

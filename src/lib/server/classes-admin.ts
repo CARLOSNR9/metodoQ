@@ -1,4 +1,5 @@
 import { FieldValue, Timestamp } from "firebase-admin/firestore";
+import { deleteAttendanceForClass } from "@/lib/server/attendance-admin";
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 
 const COLLECTION = "classes";
@@ -40,6 +41,7 @@ export async function adminCreateClass(input: AdminClassInput) {
 }
 
 export async function adminDeleteClass(classId: string) {
+  await deleteAttendanceForClass(classId);
   await getFirebaseAdminDb().collection(COLLECTION).doc(classId).delete();
 }
 
@@ -64,6 +66,7 @@ export async function adminListClasses() {
       courseId: data.courseId ? String(data.courseId) : null,
       courseName: data.courseName ? String(data.courseName) : null,
       visibility: data.visibility === "course" ? "course" : "all_pro",
+      professorId: data.professorId ? String(data.professorId) : null,
     };
   });
 }
