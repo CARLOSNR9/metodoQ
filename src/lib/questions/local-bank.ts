@@ -2,6 +2,7 @@ import { DAILY_CHALLENGES } from "@/data/daily-challenges";
 import { EXTENDED_QUESTIONS } from "@/data/extended-questions";
 import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
 import { UCC_PASTO_DIAGNOSTIC_QUESTIONS } from "@/data/ucc-pasto-diagnostico-questions";
+import { UCC_PASTO_PRO_QUESTIONS } from "@/data/ucc-pasto-pro-questions";
 import { UDEA_DIAGNOSTIC_QUESTIONS } from "@/data/udea-diagnostico-questions";
 import { UNAL_DIAGNOSTIC_QUESTIONS } from "@/data/unal-diagnostico-questions";
 import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
@@ -25,6 +26,7 @@ export function getLocalQuestionBank(): TrainingQuestion[] {
     UDEA_DIAGNOSTIC_QUESTIONS,
     UNAL_DIAGNOSTIC_QUESTIONS,
     UCC_PASTO_DIAGNOSTIC_QUESTIONS,
+    UCC_PASTO_PRO_QUESTIONS,
   ]);
 }
 
@@ -36,6 +38,7 @@ export function getAllRepositoryQuestions(): TrainingQuestion[] {
     UDEA_DIAGNOSTIC_QUESTIONS,
     UNAL_DIAGNOSTIC_QUESTIONS,
     UCC_PASTO_DIAGNOSTIC_QUESTIONS,
+    UCC_PASTO_PRO_QUESTIONS,
     DAILY_CHALLENGES,
   ]);
 }

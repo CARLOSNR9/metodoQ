@@ -4,6 +4,7 @@ import { EXTENDED_QUESTIONS } from "@/data/extended-questions";
 import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
 import { QUESTION_THEORY_PILLS } from "@/data/question-theory-pills";
 import { UCC_PASTO_DIAGNOSTIC_QUESTIONS } from "@/data/ucc-pasto-diagnostico-questions";
+import { UCC_PASTO_PRO_QUESTIONS } from "@/data/ucc-pasto-pro-questions";
 import { UDEA_DIAGNOSTIC_QUESTIONS } from "@/data/udea-diagnostico-questions";
 import { UNAL_DIAGNOSTIC_QUESTIONS } from "@/data/unal-diagnostico-questions";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -15,6 +16,7 @@ const REPOSITORY_QUESTIONS: TrainingQuestion[] = [
   ...UDEA_DIAGNOSTIC_QUESTIONS,
   ...UNAL_DIAGNOSTIC_QUESTIONS,
   ...UCC_PASTO_DIAGNOSTIC_QUESTIONS,
+  ...UCC_PASTO_PRO_QUESTIONS,
 ];
 
 function buildTheoryIndex(): Record<string, string> {
