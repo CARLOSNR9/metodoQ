@@ -5,6 +5,7 @@ import {
   getUccMiWeekModule,
 } from "@/lib/training/ucc-mi-daily-plan";
 import { selectAdaptiveQuestions } from "@/lib/training/adaptive";
+import { selectAdaptiveQuestionsWithCycle } from "@/lib/training/question-cycle";
 
 type UserLearningProfile = {
   weaknesses: string[];
@@ -87,8 +88,12 @@ export function selectUccTrainingQuestions(options: {
   profile: UserLearningProfile;
   blockKind?: UccMiBlockKind | null;
   planStartedAt?: string | null;
+  fullBank?: TrainingQuestion[];
+  seenIds?: Set<string>;
+  cycleReset?: boolean;
 }): TrainingQuestion[] {
-  const { questions, count, profile, blockKind, planStartedAt } = options;
+  const { questions, count, profile, blockKind, planStartedAt, fullBank, seenIds, cycleReset } =
+    options;
   const module = getUccMiWeekModule(planStartedAt);
   let pool = [...questions];
 
@@ -102,6 +107,17 @@ export function selectUccTrainingQuestions(options: {
     pool = questions;
   } else {
     pool = filterPoolByModule(pool, module.label);
+  }
+
+  if (fullBank && seenIds) {
+    return selectAdaptiveQuestionsWithCycle(
+      pool,
+      fullBank,
+      count,
+      profile,
+      seenIds,
+      cycleReset ?? false,
+    );
   }
 
   return selectAdaptiveQuestions(pool, count, profile);

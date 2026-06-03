@@ -6,6 +6,7 @@ import {
   type UccRes108Axis,
 } from "@/lib/diagnostic/ucc-res108-blueprint";
 import { selectAdaptiveQuestions } from "@/lib/training/adaptive";
+import { resolveEligibleQuestions } from "@/lib/training/question-cycle";
 
 type UserLearningProfile = {
   weaknesses: string[];
@@ -44,9 +45,16 @@ export function selectUccSimulacroQuestions(options: {
   questions: TrainingQuestion[];
   count: number;
   profile: UserLearningProfile;
+  fullBank?: TrainingQuestion[];
+  seenIds?: Set<string>;
+  cycleReset?: boolean;
 }): TrainingQuestion[] {
-  const { questions, count, profile } = options;
-  const groups = groupByAxis(questions);
+  const { questions, count, profile, fullBank, seenIds, cycleReset } = options;
+  const eligible =
+    fullBank && seenIds
+      ? resolveEligibleQuestions(questions, fullBank, seenIds, cycleReset ?? false)
+      : questions;
+  const groups = groupByAxis(eligible);
   const selected: TrainingQuestion[] = [];
   const usedIds = new Set<string>();
 
@@ -64,7 +72,7 @@ export function selectUccSimulacroQuestions(options: {
     return selected.slice(0, count);
   }
 
-  const remaining = questions.filter((q) => !usedIds.has(q.id));
+  const remaining = eligible.filter((q) => !usedIds.has(q.id));
   const filler = selectAdaptiveQuestions(remaining, count - selected.length, profile);
   return [...selected, ...filler].slice(0, count);
 }

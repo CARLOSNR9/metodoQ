@@ -47,6 +47,8 @@ export interface UserProfile {
     lastInterviewScore?: number;
     lastPsychometricScore?: number;
   };
+  seenQuestionIds?: string[];
+  questionCycleCount?: number;
 }
 
 export function useUserProfile() {

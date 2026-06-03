@@ -43,6 +43,14 @@ import {
   buildDynamicFeedbackMessage,
   selectAdaptiveQuestions,
 } from "@/lib/training/adaptive";
+import {
+  prepareQuestionCycle,
+  markQuestionSeen,
+} from "@/lib/training/seen-questions";
+import {
+  selectAdaptiveQuestionsWithCycle,
+  shouldTrackQuestionCycle,
+} from "@/lib/training/question-cycle";
 import { getAct1DiagnosticSession } from "@/lib/diagnostic/get-diagnostic-session";
 import { getEffectiveGoalSpecialty, isUccPastoMedicinaInternaProUser } from "@/lib/diagnostic/ucc-pasto-track";
 import { selectUccTrainingQuestions } from "@/lib/training/ucc-module-selection";
@@ -345,6 +353,24 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       ? getAct1DiagnosticSession(urlUniversity, urlSpecialty)
       : null;
 
+    const trackCycle = shouldTrackQuestionCycle({
+      isAct1: Boolean(isAct1),
+      isDailyPill,
+      isRepasoMode,
+    });
+    let seenIds: Set<string> | undefined;
+    let cycleReset = false;
+    if (user && trackCycle) {
+      const cycle = await prepareQuestionCycle(user.uid, questionBank);
+      seenIds = cycle.seenIds;
+      cycleReset = cycle.cycleReset;
+    }
+
+    const cycleOptions =
+      seenIds !== undefined
+        ? { fullBank: questionBank, seenIds, cycleReset }
+        : {};
+
     const isUccMiTraining =
       !isAct1 &&
       !isDailyPill &&
@@ -364,6 +390,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
             questions: pool,
             count,
             profile: learningProfile,
+            ...cycleOptions,
           })
         : isUccMiTraining
           ? selectUccTrainingQuestions({
@@ -372,8 +399,18 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               profile: learningProfile,
               blockKind: blockParam,
               planStartedAt: userTrackProfile?.planStartedAt,
+              ...cycleOptions,
             })
-          : selectAdaptiveQuestions(pool, count, learningProfile);
+          : seenIds
+            ? selectAdaptiveQuestionsWithCycle(
+                pool,
+                questionBank,
+                count,
+                learningProfile,
+                seenIds,
+                cycleReset,
+              )
+            : selectAdaptiveQuestions(pool, count, learningProfile);
 
     if (user && isAct1 && urlUniversity) {
       const goalSpecialty = getEffectiveGoalSpecialty(urlUniversity, urlSpecialty);
@@ -712,6 +749,16 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     }
 
     if (user) {
+      if (
+        shouldTrackQuestionCycle({
+          isAct1: Boolean(isAct1),
+          isDailyPill,
+          isRepasoMode,
+        })
+      ) {
+        void markQuestionSeen(user.uid, currentQuestion.id);
+      }
+
       if (!isCorrect) {
         void recordFailedQuestion({
           userId: user.uid,
