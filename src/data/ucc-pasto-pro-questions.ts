@@ -566,4 +566,551 @@ Pilar: HIE (insulina 1 U/kg/h escalando) + dextrosa + calcio.
 Glucagón: mejor en betabloqueadores.
 Descontaminación solo con vía aérea protegida.`,
   },
+  {
+    id: "ucc-pro-11",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / IAM",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "iam", "infarto_vd", "v4r"],
+    statement:
+      "Hombre de 58 años con dolor torácico opresivo irradiado a mandíbula y síncope. Antecedentes: tabaquismo activo, HTA. Signos vitales: PA 80/50 mmHg, FC 55 lpm, FR 18 rpm, SpO2 96%. Examen: ingurgitación yugular franca a 45°, signo de Kussmaul positivo, pulmones limpios sin crépitos, sin soplos. Troponina I 1.5 ng/mL (<0.04). ECG: supradesnivel ST 3 mm en DII, DIII y aVF con infradesnivel en DI y aVL; derivaciones derechas con elevación ST 2 mm en V4R. POCUS: acinesia pared inferior VI, VD dilatado con disfunción severa (TAPSE 10 mm), sin derrame pericárdico. Ante la inestabilidad hemodinámica profunda en este evento coronario agudo, ¿cuál es la intervención farmacológica o hemodinámica INMEDIATA más apropiada para estabilizar la presión arterial antes del traslado a hemodinamia?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Administrar nitroglicerina intravenosa en infusión para generar vasodilatación coronaria y aliviar el dolor torácico isquémico.",
+        distractorProfile: "nitratos_iam_vd",
+        incorrectFeedback:
+          "Los nitratos reducen precarga en un VD isquémico dependiente de volumen y pueden precipitar paro circulatorio.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Administrar bolos rápidos de cristaloides isotónicos (solución salina al 0.9%) para optimizar la precarga del ventrículo derecho.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar infusión de dosis bajas de metoprolol intravenoso para disminuir la frecuencia cardíaca y reducir el consumo miocárdico de oxígeno.",
+        distractorProfile: "bb_iam_inferior_bradicardia",
+        incorrectFeedback:
+          "Betabloqueadores en IAM inferior con bradicardia e hipotensión empeoran el choque cardiogénico.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar furosemida intravenosa para descongestionar el ventrículo derecho dilatado y disminuir la ingurgitación yugular.",
+        distractorProfile: "diureticos_iam_vd",
+        incorrectFeedback:
+          "Diuréticos disminuyen volumen intravascular en infarto de VD; están contraindicados con hipotensión.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "IAM inferior con infarto de VD (V4R con ST elevado, TAPSE bajo, pulmones limpios, hipotensión): reanimación con cristaloides clase I (AHA/ACC). Nitratos, morfina y diuréticos contraindicados.",
+    keyPoints: [
+      "IAM inferior + hipotensión + pulmones limpios = sospechar VD.",
+      "V4R confirma infarto de VD.",
+      "Volumen antes de hemodinamia; no nitratos ni diuréticos.",
+    ],
+    theoryContent: `IAM con infarto de ventrículo derecho
+
+Clave: ST en II-III-aVF + V4R + hipotensión + yugulares sin edema pulmonar.
+Tratamiento inicial: cristaloides para ↑ precarga del VD.
+Contraindicados: nitratos, morfina, diuréticos.`,
+  },
+  {
+    id: "ucc-pro-12",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / Valvulopatías",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "estenosis_aortica", "fa", "cardioversion"],
+    statement:
+      "Mujer de 78 años con síncope presenciado y alteración aguda del estado de conciencia. Antecedentes: estenosis aórtica severa (lista TAVI), HTA. Signos vitales: PA 65/40 mmHg, FC 160 lpm, FR 26 rpm, SpO2 88%. Estuporosa, extremidades frías, diaforética. Soplo sistólico rudo tardío en foco aórtico, pulso carotídeo parvus et tardus. Lactato 5.5 mmol/L. ECG: taquicardia QRS estrecho, R-R irregular, sin ondas P (FA con RVR). Eco previo: área valvular 0.6 cm², gradiente medio 55 mmHg, FEVI 55%. El evento desencadenante de este choque es la arritmia del ECG. ¿Cuál es la conducta inmediata que salva la vida?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Administrar bolo de amiodarona (150 mg IV en 10 minutos) para control del ritmo, evitando terapias eléctricas en válvulas calcificadas.",
+        distractorProfile: "amiodarona_inestable_ea",
+        incorrectFeedback:
+          "Amiodarona es lenta y su vehículo puede causar hipotensión severa en choque por FA inestable.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Administrar metoprolol intravenoso (5 mg lentos) para control rápido de la frecuencia cardíaca y aumentar el tiempo de diástole.",
+        distractorProfile: "bb_choque_ea",
+        incorrectFeedback:
+          "Betabloqueadores son inotrópicos negativos; en EA severa con choque inducen asístole.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar infusión de dobutamina para superar la resistencia de la válvula aórtica estenótica y mejorar el gasto cardíaco sistémico.",
+        distractorProfile: "dobutamina_ea_fa",
+        incorrectFeedback:
+          "Dobutamina puede aumentar FC y empeorar llenado diastólico en EA + FA rápida.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Realizar sedación rápida (si el estado de conciencia lo permite) y proceder con cardioversión eléctrica sincronizada inmediata.",
+      },
+    ],
+    correctOptionId: "D",
+    explanation:
+      "EA severa + FA con inestabilidad (PA 65/40, síncope): cardioversión eléctrica sincronizada inmediata (ACLS). La pérdida de sístole auricular en VI rígido precipita choque cardiogénico.",
+    keyPoints: [
+      "EA severa depende de la patada auricular.",
+      "FA inestable → cardioversión sincronizada, no amiodarona ni BB.",
+      "Restaurar ritmo sinusal es crítico para supervivencia.",
+    ],
+    theoryContent: `Estenosis aórtica + FA inestable
+
+VI hipertrofiado depende ~40% del llenado auricular.
+FA con RVR en choque → cardioversión sincronizada urgente.
+Evitar amiodarona (hipotensión), betabloqueadores e inotrópicos en fase aguda inestable.`,
+  },
+  {
+    id: "ucc-pro-13",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / Insuficiencia cardíaca",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "steenson", "choque_cardiogenico", "inotropicos"],
+    statement:
+      "Hombre de 65 años con disnea de reposo, oliguria 24 h y confusión. Antecedentes: miocardiopatía isquémica, FEVI 25%. Signos vitales: PA 85/65 mmHg, FC 110 lpm, FR 28 rpm, SpO2 89%. Obnubilado, extremidades frías, llenado capilar 5 s, ingurgitación yugular, crépitos bilaterales hasta campos medios, galope S3. BNP 4500 pg/mL, lactato 4.2 mmol/L. Swan-Ganz: índice cardíaco 1.6 L/min/m², PECP 28 mmHg, RVS 2100 din·s·cm⁻⁵. Según el perfil hemodinámico de Stevenson documentado, ¿cuál es la estrategia de tratamiento inicial más acertada?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Administrar bolos intravenosos de furosemida a dosis altas de forma aislada para disminuir rápidamente la presión de enclavamiento pulmonar y aliviar la congestión.",
+        distractorProfile: "diureticos_perfil_frio",
+        incorrectFeedback:
+          "En perfil frío y húmedo con IC bajo, diuréticos agresivos empeoran hipoperfusión y función renal.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Iniciar inotrópicos (dobutamina o milrinona), considerar soporte vasopresor transitorio para asegurar perfusión, y posponer la diuresis intensiva hasta mejorar el índice cardíaco.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar perfusión de nitroprusiato de sodio para disminuir la resistencia vascular sistémica extrema (2100 dinas), lo cual permitirá al ventrículo aumentar su volumen sistólico.",
+        distractorProfile: "nitroprusiato_choque_frio",
+        incorrectFeedback:
+          "Vasodilatadores en PA 85/65 y choque frío provocan vasoplejía letal; son para perfil caliente hipertenso.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Realizar expansión de volumen guiada por metas con cristaloides para optimizar la precarga, dado que la hipotensión es el principal determinante del compromiso del sensorio.",
+        distractorProfile: "fluidos_pecp_elevada",
+        incorrectFeedback:
+          "Con PECP 28 mmHg e ingurgitación, más volumen empeora edema pulmonar.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Perfil C de Stevenson (frío y húmedo): IC 1.6, PECP 28, hipoperfusión + congestión. Primero inotrópicos ± vasopresores; diuresis y vasodilatadores después de mejorar perfusión (ESC IC aguda).",
+    keyPoints: [
+      "Frío + húmedo = choque cardiogénico con congestión.",
+      "Inotrópicos antes que diuréticos masivos.",
+      "Nitroprusiato solo si perfil caliente hipertenso.",
+    ],
+    theoryContent: `Perfiles de Stevenson en IC aguda
+
+Frío y húmedo: bajo gasto + congestión → inotrópicos, soporte mecánico si refractario.
+Caliente y húmedo hipertenso: vasodilatadores + diuréticos.
+No diuréticos agresivos ni vasodilatadores como primera línea en perfil frío.`,
+  },
+  {
+    id: "ucc-pro-14",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / Arritmias",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "tca", "tv", "disociacion_av"],
+    statement:
+      "Hombre de 62 años con palpitaciones rápidas y sensación de desvanecimiento. Antecedentes: IAM anterior extenso hace 5 años, marcapasos por bradicardia sinusal, FEVI 30%. Signos vitales: PA 100/60 mmHg, FC 180 lpm. ECG: taquicardia regular de complejos anchos (QRS 160 ms), concordancia positiva V1–V6, muescas independientes a ~75 lpm con disociación aurículo-ventricular, eje extremo noroccidental (-120°). Al interpretar la morfología del trazado, ¿cuál es el diagnóstico definitivo y la terapéutica inicial más indicada estando temporalmente estable?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Taquicardia supraventricular con conducción aberrante; el tratamiento de elección es un bolo rápido de adenosina 6 mg IV.",
+        distractorProfile: "adenosina_tca",
+        incorrectFeedback:
+          "Disociación AV, concordancia precordial e infarto previo descartan TSV; adenosina puede inducir FV.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Taquicardia ventricular monomórfica sostenida; el tratamiento inicial de elección es infusión de amiodarona intravenosa o cardioversión eléctrica.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Fibrilación ventricular en fase inicial; requiere desfibrilación eléctrica no sincronizada inmediata con 200 Joules.",
+        distractorProfile: "fv_estable",
+        incorrectFeedback:
+          "FV es ritmo caótico sin pulso; este paciente tiene PA 100/60 y está consciente.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Taquicardia mediada por marcapasos; requiere colocación de un imán sobre el generador para restaurar el modo asincrónico.",
+        distractorProfile: "tmm_tca",
+        incorrectFeedback:
+          "TMM rara vez supera 140 lpm y muestra espigas de estimulación; no explica disociación AV.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "TCA regular en cardiopatía estructural = TV hasta demostrar lo contrario. Criterios Brugada: disociación AV, concordancia positiva, eje extremo. Tratamiento: amiodarona o cardioversión sincronizada (AHA/HRS).",
+    keyPoints: [
+      "TCA + cardiopatía = TV (>80%).",
+      "Disociación AV confirma TV.",
+      "Nunca adenosina en TCA con cardiopatía.",
+    ],
+    theoryContent: `Taquicardia de complejos anchos
+
+Regla: asumir TV si FEVI baja o cardiopatía.
+Disociación AV / captura / fusión = TV.
+Estable: amiodarona o CVE sincronizada.
+Inestable: CVE inmediata.`,
+  },
+  {
+    id: "ucc-pro-15",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / Pericardio",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "taponamiento", "pericardiocentesis"],
+    statement:
+      "Mujer de 45 años con disnea rápidamente progresiva, debilidad y presíncope. Antecedentes: cáncer de mama con metástasis pulmonares. Signos vitales: PA 80/60 mmHg, FC 135 lpm, FR 30 rpm, SpO2 93%. Ingurgitación yugular severa sin colapso inspiratorio, ruidos velados, caída de PAS 25 mmHg en inspiración profunda (pulso paradójico). ECG: taquicardia sinusal, alternancia eléctrica, microvoltaje. POCUS: derrame pericárdico masivo, colapso VD en diástole, VCI plétora sin colapso respiratorio. Ante taponamiento cardíaco, ¿cuál debe ser la conducta INMEDIATA para evitar AESP?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar infusión de diuréticos de asa (furosemida) para resolver la congestión venosa sistémica y disminuir la ingurgitación yugular.",
+        distractorProfile: "diureticos_taponamiento",
+        incorrectFeedback:
+          "Diuréticos reducen presión venosa y cierran cavidades derechas → paro cardíaco instantáneo.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Administrar inotrópicos positivos (dobutamina) para aumentar la fuerza de contracción y superar la restricción pericárdica externa.",
+        distractorProfile: "inotropicos_taponamiento",
+        incorrectFeedback:
+          "La falla es de llenado diastólico, no contractil; más taquicardia no ayuda.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar anticoagulación plena y considerar trombólisis sistémica dado el dímero D elevado y probabilidad de TEP neoplásico.",
+        distractorProfile: "trombolisis_taponamiento",
+        incorrectFeedback:
+          "Trombolisis en derrame masivo puede causar hemopericardio exsanguinante.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar bolos de cristaloides para aumentar la precarga biventricular mientras se prepara pericardiocentesis evacuatoria de urgencia.",
+      },
+    ],
+    correctOptionId: "D",
+    explanation:
+      "Taponamiento: puente con volumen IV para ↑ presión de llenado mientras pericardiocentesis (ESC). Diuréticos e inotrópicos contraindicados; no trombolizar.",
+    keyPoints: [
+      "Beck + alternancia eléctrica + pulso paradójico.",
+      "Puente: volumen; definitivo: drenaje.",
+      "Diuréticos = contraindicados.",
+    ],
+    theoryContent: `Taponamiento cardíaco
+
+Fisiopatología: presión pericárdica > presión diastólica VD → colapso diastólico.
+Puente: cristaloides si hipotensión.
+Definitivo: pericardiocentesis urgente.
+Nunca diuréticos.`,
+  },
+  {
+    id: "ucc-pro-16",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / Miocardiopatía hipertrófica",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "mch", "sam", "obstruccion_dinamica"],
+    statement:
+      "Hombre de 22 años con dolor torácico y presíncope tras partido de fútbol. Hermano falleció súbitamente a los 19 años. Triaje: PA 115/70, FC 95. Soplo sistólico en borde esternal izquierdo que aumenta con Valsalva. Tras nitroglicerina sublingual (asumiendo SCA) presenta síncope: PA 60/40, FC 130. ECG: HVI masiva, ondas Q en daga lateral/inferior. Eco: septo 24 mm, movimiento anterior sistólico (SAM) de valva mitral. ¿Cuál es el mecanismo exacto por el cual la nitroglicerina causó el choque y cuál es la terapia de reversión ideal?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "La nitroglicerina disminuyó la precarga (venodilatación), vaciando el VI y exacerbando la obstrucción dinámica del TSVI; revertir con volumen IV y fenilefrina (agonista alfa puro).",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "La nitroglicerina causó vasodilatación coronaria robando flujo de la circulación subendocárdica hipertrófica; revertir con infusión de dobutamina.",
+        distractorProfile: "dobutamina_mch",
+        incorrectFeedback:
+          "Dobutamina aumenta contractilidad y empeora SAM/obstrucción del TSVI.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "La nitroglicerina aumentó la resistencia vascular sistémica por reflejo simpático; revertir con esmolol.",
+        distractorProfile: "reflejo_svr_mch",
+        incorrectFeedback:
+          "Nitroglicerina reduce precarga y poscarga, no aumenta RVS.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "La nitroglicerina precipitó insuficiencia aórtica masiva; revertir con balón de contrapulsación intraaórtico.",
+        distractorProfile: "ia_mch",
+        incorrectFeedback:
+          "MCH obstructiva asocia IM por SAM, no insuficiencia aórtica aguda.",
+      },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "MCH obstructiva: nitratos ↓ precarga → VI vacío → SAM y obstrucción TSVI letal. Reversión: volumen + fenilefrina (↑ poscarga). Contraindicados nitratos, diuréticos, inotrópicos (AHA/ACC MCH).",
+    keyPoints: [
+      "Soplo ↑ con Valsalva = MCH.",
+      "Nitratos/diuréticos/inotrópicos prohibidos.",
+      "Choque agudo: volumen + fenilefrina.",
+    ],
+    theoryContent: `MCH obstructiva — emergencia
+
+Obstrucción dinámica TSVI depende de volumen y poscarga.
+Venenos: nitratos, diuréticos, dobutamina.
+Reversión choque: cristaloides + fenilefrina.
+Crónico: betabloqueador o verapamil no DHP.`,
+  },
+  {
+    id: "ucc-pro-17",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / Aorta",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "diseccion_aortica", "stanford_a"],
+    statement:
+      "Hombre de 60 años con dolor torácico lacerante 10/10 irradiado a región interescapular. HTA sin adherencia. Signos vitales: PA 220/120 mmHg brazo derecho, PA 140/80 mmHg brazo izquierdo; FC 115 lpm. Sin pulso radial izquierdo. Soplo diastólico aspirativo en foco aórtico. Dímero D 12,500 ng/mL, troponina normal. AngioTAC: falsa luz en aorta ascendente hasta cayado (disección Stanford tipo A). Requiere cirugía emergente; ¿cuál es el orden farmacológico cronológico imperativo en urgencias?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar perfusión de nitroprusiato de sodio de inmediato para reducir la presión sistólica agresivamente a <120 mmHg, seguido de morfina para el dolor.",
+        distractorProfile: "nitroprusiato_sin_bb",
+        incorrectFeedback:
+          "Vasodilatador aislado aumenta dP/dt y taquicardia refleja → propagación del desgarro.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Administrar trombolíticos intravenosos sistémicos dado que la disección tipo A es un equivalente isquémico torácico.",
+        distractorProfile: "trombolisis_daa",
+        incorrectFeedback:
+          "Trombolisis en disección aórtica causa hemorragia mediastínica/pericárdica fatal.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar infusión de labetalol o esmolol para reducir primero la frecuencia cardíaca (<60 lpm) y la fuerza de contracción (dP/dt), y solo después agregar vasodilatadores si la PA sistólica persiste elevada.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Omitir fármacos intravenosos y trasladar a quirófano directamente asumiendo la hipertensión como mecanismo compensatorio.",
+        distractorProfile: "omitir_control_daa",
+        incorrectFeedback:
+          "La hipertensión propaga la disección; control anti-impulso es obligatorio prequirúrgico.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Disección tipo A: control anti-impulso — betabloqueador IV primero (FC <60, ↓ dP/dt), luego vasodilatador si PAS persiste >120 mmHg (ACC/AHA). Nunca nitroprusiato sin BB ni trombolisis.",
+    keyPoints: [
+      "Asimetría de pulsos + dolor desgarrador = sospechar DAA.",
+      "BB antes que vasodilatador.",
+      "Meta PAS <120 mmHg tras bloqueo beta.",
+    ],
+    theoryContent: `Disección aórtica tipo A — puente médico
+
+dP/dt y PAM propagan el flap.
+1. Esmolol/labetalol → FC ~60.
+2. Si PAS alta: nitroprusiato/nicardipino (solo con BB).
+Prohibido: trombolisis, nitroprusiato solo.`,
+  },
+  {
+    id: "ucc-pro-18",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / Bradiarritmias",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "bloqueo_av", "marcapasos", "iam_anterior"],
+    statement:
+      "Hombre de 72 años con síncope y dolor precordial 4 h. Signos vitales: PA 80/40 mmHg, FC 32 lpm, SpO2 93%. Ondas «a» en cañón en yugular, S1 de intensidad variable. Troponina I 8.5 ng/mL. ECG: supradesnivel ST 4 mm V1–V4 (IAMCEST anterior) y ondas P 90 lpm con QRS anchos 160 ms a 32 lpm sin relación P-QRS (bloqueo AV completo). Ante inestabilidad hemodinámica, ¿cuál es la terapia médica de soporte inicial más indicada?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Administrar bolos repetidos de atropina (1 mg IV) hasta 3 mg, dado que la bradicardia parasimpática es fácilmente reversible.",
+        distractorProfile: "atropina_bav_infranodal",
+        incorrectFeedback:
+          "Atropina es ineficaz en bloqueo AV infranodal de QRS ancho por IAM anterior.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Colocación inmediata de marcapasos transcutáneo de urgencia como puente al marcapasos transvenoso temporal, mientras es llevado a ICP primaria.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar perfusión continua de isoproterenol para estimular receptores beta-1 y aumentar cronotropismo.",
+        distractorProfile: "isoproterenol_iam",
+        incorrectFeedback:
+          "Isoproterenol aumenta MVO2 y riesgo de arritmias en IAM activo.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar lidocaína en bolo para suprimir el foco ventricular aberrante que genera los latidos anchos de 32 lpm.",
+        distractorProfile: "lidocaina_escape",
+        incorrectFeedback:
+          "Suprimir el ritmo de escape idioventricular provoca asístole.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "IAM anterior + BAV completo de QRS ancho (infranodal): marcapasos transcutáneo inmediato + ICP (ACLS). Atropina predeciblemente ineficaz; no suprimir escape con lidocaína.",
+    keyPoints: [
+      "IAM anterior + BAV III ancho = infranodal.",
+      "Marcapasos transcutáneo sin demorar atropina.",
+      "IAM inferior + BAV estrecho: atropina sí funciona.",
+    ],
+    theoryContent: `BAV completo en IAM
+
+Anterior + QRS ancho: daño His-Purkinje → marcapasos urgente.
+Inferior + QRS estrecho: vagal/nodal → atropina efectiva.
+No suprimir escape ventricular con antiarrítmicos.`,
+  },
+  {
+    id: "ucc-pro-19",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / Insuficiencia cardíaca aguda",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "scape", "edema_pulmonar", "vni"],
+    statement:
+      "Mujer de 68 años con disnea paroxística extrema de inicio fulminante hace 45 min. Antecedentes: estenosis arterial renal bilateral, IC con FEVI preservada. Signos vitales: PA 250/140 mmHg, FC 125 lpm, FR 42 rpm, SpO2 75%. Angustia vital, cianosis, esputo rosado, crépitos en marea montante, galope. BNP 1800 pg/mL. Rx: infiltrados algodonosos bilaterales (alas de mariposa). Diagnóstico: edema agudo de pulmón por emergencia hipertensiva (SCAPE). ¿Cuál es la terapia dual más efectiva en los primeros 5 minutos?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Administrar dosis supra-terapéuticas de furosemida intravenosa (>100 mg) para forzar diuresis y extraer líquido del pulmón.",
+        distractorProfile: "furosemida_scape",
+        incorrectFeedback:
+          "Furosemida tarda 30–60 min; en SCAPE el problema es redistribución aguda, no hipervolemia global.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Proceder a secuencia de intubación rápida con propofol y rocuronio de forma inmediata.",
+        distractorProfile: "iot_primera_scape",
+        incorrectFeedback:
+          "VNI es primera línea; propofol puede colapsar PA en emergencia hipertensiva.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar infusión intravenosa de nitroglicerina a dosis altas combinada con ventilación mecánica no invasiva (BiPAP o CPAP).",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar morfina intravenosa en bolos repetidos para disminuir drive respiratorio y generar venodilatación.",
+        distractorProfile: "morfina_scape",
+        incorrectFeedback:
+          "Morfina retrasa intubación pero aumenta mortalidad y depresión respiratoria en EAP agudo.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "SCAPE: vasoconstricción aguda desplaza volumen al pulmón; terapia dual nitroglicerina IV (↓ poscarga) + VNI/BiPAP (↓ precarga/poscarga, recluta alvéolos). Diuréticos y morfina no son primera línea (ESC).",
+    keyPoints: [
+      "SCAPE = redistribución, no sobrecarga global.",
+      "Nitro IV alto flujo + BiPAP/CPAP.",
+      "Furosemida puede esperar tras estabilizar.",
+    ],
+    theoryContent: `SCAPE — edema agudo hipertensivo
+
+Mecanismo: ↑ poscarga y retorno venoso espláncnico → falla VI aguda.
+Rescate: nitroglicerina IV + VNI.
+No depender de diuréticos en los primeros minutos.`,
+  },
+  {
+    id: "ucc-pro-20",
+    university: "UCC Pasto",
+    examArea: "Medicina Interna / Cardiología / SCA",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["ucc", "pro", "cardiologia", "iam_posterior", "stemi_oculto", "icp"],
+    statement:
+      "Hombre de 52 años con dolor torácico opresivo intermitente 3 h. Obesidad, tabaco, antecedente familiar IAM. Signos vitales: PA 135/85, FC 90, sin congestión. Troponina T inicial 12 ng/L (<14). ECG: ritmo sinusal sin elevación ST en derivaciones estándar; infradesnivel ST horizontal 2–3 mm en V1–V3 con ondas R altas prominentes (R>S) y ondas T positivas simétricas altas en precordiales derechas. Basado en el ECG y el escenario clínico, ¿cuál es el diagnóstico electrocardiográfico real y la conducta que determina el pronóstico vital?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "IAM sin elevación del ST (IAMSEST); manejo con doble antiagregación y heparina, estratificando angiografía en las próximas 24 horas.",
+        distractorProfile: "nstemi_posterior",
+        incorrectFeedback:
+          "Retrasar cateterismo en infarto posterior transmural permite necrosis masiva y muerte.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Isquemia subendocárdica del ventrículo derecho; observación porque la troponina basal es negativa.",
+        distractorProfile: "troponina_negativa_alto_riesgo",
+        incorrectFeedback:
+          "R altas + T positivas en V1–V3 no son patrón de isquemia subendocárdica anterior típica.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Infarto agudo de miocardio posterior (oclusión transmural activa); equivalente de IAMCEST que requiere activación inmediata de hemodinamia para ICP primaria emergente.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Crecimiento ventricular derecho severo por TEP subyacente; requiere angioTAC urgentes.",
+        distractorProfile: "tep_r_altas",
+        incorrectFeedback:
+          "Cor pulmonale da R altas pero con T negativas por strain y eje derecho, no patrón espejo posterior agudo.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Infarto posterior transmural: imagen en espejo en V1–V3 (infradesnivel ST, R prominente, T positivas altas). Equivalente STEMI/OMI → ICP <90 min; tomar V7–V9 (ST >0.5 mm). Troponina inicial puede ser normal.",
+    keyPoints: [
+      "V1–V3: infradesnivel + R alta + T positiva = posterior.",
+      "STEMI oculto → hemodinamia inmediata.",
+      "Confirmar con V7, V8, V9.",
+    ],
+    theoryContent: `IAM posterior — STEMI oculto
+
+Espejo en precordiales derechas:
+- Infradesnivel ST en V1–V3
+- R prominente
+- T positivas altas
+Derivaciones posteriores V7–V9: buscar elevación ST.
+Conducta: ICP primaria urgente aunque troponina inicial normal.`,
+  },
 ];
