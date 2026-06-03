@@ -1,4 +1,5 @@
 import { DAILY_CHALLENGES } from "@/data/daily-challenges";
+import { DR_Q_UNIVERSAL_QUESTIONS } from "@/data/dr-q-universal-questions";
 import { DIAGNOSTIC_THEORY_PILLS } from "@/data/diagnostic-theory-pills";
 import { EXTENDED_QUESTIONS } from "@/data/extended-questions";
 import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
@@ -12,6 +13,7 @@ import type { TrainingQuestion } from "@/lib/questions/types";
 const REPOSITORY_QUESTIONS: TrainingQuestion[] = [
   ...FALLBACK_QUESTIONS,
   ...EXTENDED_QUESTIONS,
+  ...DR_Q_UNIVERSAL_QUESTIONS,
   ...DAILY_CHALLENGES,
   ...UDEA_DIAGNOSTIC_QUESTIONS,
   ...UNAL_DIAGNOSTIC_QUESTIONS,

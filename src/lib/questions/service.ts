@@ -34,23 +34,32 @@ function mapDocToQuestion(docId: string, data: Record<string, unknown>): Trainin
   };
 }
 
-/** Preguntas activas: Firestore primero; fallback local si la colección está vacía. */
+/** Preguntas activas: Firestore + banco local (código) sin duplicar por id. */
 export async function getActiveQuestions(): Promise<TrainingQuestion[]> {
+  const localBank = getLocalQuestionBank();
+
   try {
     const db = getFirebaseDb();
     const q = query(collection(db, COLLECTION), where("active", "==", true));
     const snapshot = await getDocs(q);
 
     if (snapshot.empty) {
-      return getLocalQuestionBank();
+      return localBank;
     }
 
-    return enrichQuestionsWithTheoryPills(
-      snapshot.docs.map((docItem) => mapDocToQuestion(docItem.id, docItem.data())),
-    );
+    const byId = new Map<string, TrainingQuestion>();
+    for (const question of localBank) {
+      byId.set(question.id, question);
+    }
+    for (const docItem of snapshot.docs) {
+      const question = mapDocToQuestion(docItem.id, docItem.data());
+      byId.set(question.id, question);
+    }
+
+    return enrichQuestionsWithTheoryPills(Array.from(byId.values()));
   } catch (error) {
     console.warn("Firestore questions unavailable, using local bank.", error);
-    return getLocalQuestionBank();
+    return localBank;
   }
 }
 

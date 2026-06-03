@@ -1,4 +1,5 @@
 import { DAILY_CHALLENGES } from "@/data/daily-challenges";
+import { DR_Q_UNIVERSAL_QUESTIONS } from "@/data/dr-q-universal-questions";
 import { EXTENDED_QUESTIONS } from "@/data/extended-questions";
 import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
 import { UCC_PASTO_DIAGNOSTIC_QUESTIONS } from "@/data/ucc-pasto-diagnostico-questions";
@@ -23,6 +24,7 @@ export function getLocalQuestionBank(): TrainingQuestion[] {
   return mergeQuestionsById([
     FALLBACK_QUESTIONS,
     EXTENDED_QUESTIONS,
+    DR_Q_UNIVERSAL_QUESTIONS,
     UDEA_DIAGNOSTIC_QUESTIONS,
     UNAL_DIAGNOSTIC_QUESTIONS,
     UCC_PASTO_DIAGNOSTIC_QUESTIONS,
@@ -35,6 +37,7 @@ export function getAllRepositoryQuestions(): TrainingQuestion[] {
   return mergeQuestionsById([
     FALLBACK_QUESTIONS,
     EXTENDED_QUESTIONS,
+    DR_Q_UNIVERSAL_QUESTIONS,
     UDEA_DIAGNOSTIC_QUESTIONS,
     UNAL_DIAGNOSTIC_QUESTIONS,
     UCC_PASTO_DIAGNOSTIC_QUESTIONS,
