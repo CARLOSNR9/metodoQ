@@ -3252,4 +3252,356 @@ Perla: Hipoxia constriñe pulmón; PEEP excesivo aplasta capilares. VD empuja co
 
 Referencias: West lung zones; ARDS hemodynamics.`,
   },
+  {
+    id: "dr-q-71",
+    examArea: "Medicina Interna / Infectología",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "endocarditis", "duke"],
+    statement:
+      "Hombre de 28 años, consumidor de heroína IV, fiebre 39 °C de 10 días, disnea y tos con expectoración sanguinolenta. FC 115, soplo holosistólico en foco tricuspídeo que aumenta con inspiración. Rx tórax: múltiples infiltrados nodulares cavitados bilaterales periféricos. Hemocultivos pendientes. ¿Conducta inmediata más adecuada?",
+    options: [
+      { id: "A", label: "A", text: "Esperar hemocultivos 48 h antes de antibióticos para no enmascarar el germen." },
+      {
+        id: "B",
+        label: "B",
+        text: "Iniciar vancomicina + gentamicina empírica tras tomar ≥2 pares de hemocultivos; ecocardiograma urgente.",
+      },
+      { id: "C", label: "C", text: "Anticoagulación plena por sospecha de TEP masivo." },
+      { id: "D", label: "D", text: "Ceftriaxona monoterapia ambulatoria por neumonía comunitaria." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Endocarditis tricuspídea por S. aureus en usuario de drogas IV: fiebre + soplo + émbolos sépticos pulmonares (infiltrados cavitados periféricos). Conducta: hemocultivos (≥2 pares) y antibióticos empíricos sin demora (<1 h en shock). Vancomicina cubre MRSA; gentamicina sinergia (según guía). Eco transtorácica/transesofágica urgente.",
+    keyPoints: [
+      "Endocarditis derecha: émbolos pulmonares, no sistémicos.",
+      "Hemocultivos antes de ATB, pero nunca retrasar tratamiento.",
+      "S. aureus = germen #1 en usuarios de drogas IV.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Endocarditis tricuspídea · usuario de drogas IV
+
+• Tríada: fiebre + soplo tricuspídeo + émbolos pulmonares.
+• ATB empírico: vancomicina ± gentamicina tras hemocultivos.
+
+Perla: Infiltrados cavitados periféricos + fiebre + IVDA = endocarditis derecha hasta demostrar lo contrario.
+
+Referencias: ESC Endocarditis Guidelines; IDSA.`,
+  },
+  {
+    id: "dr-q-72",
+    examArea: "Medicina Interna / Infectología / Neumología",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "neumonia", "legionella"],
+    statement:
+      "Hombre de 62 años, fumador, fiebre alta, tos seca, confusión. PA 90/55, FR 28, SatO2 88% ambiente. Na 128, transaminasas 3× LSN, LDH elevada. Rx: consolidación lobar derecha. Antibióticos comunitarios (amoxicilina) 48 h sin mejoría. ¿Ajuste empírico más apropiado?",
+    options: [
+      { id: "A", label: "A", text: "Agregar azitromicina por posible atípica leve ambulatoria." },
+      {
+        id: "B",
+        label: "B",
+        text: "Legionella probable: levofloxacino o azitromicina IV + betalactámico; investigar exposición (agua/aire acondicionado).",
+      },
+      { id: "C", label: "C", text: "Metronidazol por anaerobios; el olor a podrido confirma diagnóstico." },
+      { id: "D", label: "D", text: "Vancomicina + piperacilina-tazobactam solo si hay derrame pleural." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Neumonía grave con hiponatremia, transaminitis, LDH↑ y falla a betalactámico: Legionella pneumophila. Tratamiento: fluoroquinolona respiratoria o macrólido IV. Legionella no cultiva en medios habituales; antigenuria en orina confirma. HipoNa + diarrea + alteración neurológica = pistas clásicas.",
+    keyPoints: [
+      "Legionella: hipoNa, hepatitis, CNS, falla a amoxicilina.",
+      "Antigenuria en orina es diagnóstico rápido.",
+      "Macrólido o fluoroquinolona; no responde a betalactámicos solos.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Neumonía por Legionella
+
+• Pistas: hipoNa, transaminitis, confusión, exposición hídrica.
+• ATB: levofloxacino o azitromicina.
+
+Perla: Amoxicilina no cubre Legionella. Si falla betalactámico + hipoNa, piensa Legionella.
+
+Referencias: ATS/IDSA CAP Guidelines; ESCMID Legionella.`,
+  },
+  {
+    id: "dr-q-73",
+    examArea: "Medicina Interna / Infectología / Urgencias",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "fascitis_necrotizante", "lrinec"],
+    statement:
+      "Mujer de 55 años, diabética, dolor intenso en muslo derecho tras mínimo trauma. FC 125, PA 85/50. Piel eritematosa con equimosis progresiva; dolor desproporcionado al examen. No crepitación palpable. Leucocitos 22.000, creatinina 2.1, Na 130, glucosa 380, CRP muy elevada. ¿Conducta?",
+    options: [
+      { id: "A", label: "A", text: "Cefalexina VO y control ambulatorio en 48 h." },
+      { id: "B", label: "B", text: "Drenaje quirúrgico urgente (desbridamiento) + antibióticos de amplio espectro IV; no esperar estudios de imagen si alta sospecha." },
+      { id: "C", label: "C", text: "Antibióticos solamente; la ausencia de crepitación descarta fascitis necrotizante." },
+      { id: "D", label: "D", text: "Anticoagulación por trombosis venosa profunda complicada." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Fascitis necrotizante: dolor desproporcionado, progresión rápida, shock, LRINEC elevado (leucocitosis, Cr↑, Na↓, glucosa↑). Crepitación ausente no excluye (es signo tardío). Conducta: cirugía URGENTE + piperacilina-tazobactam + vancomicina ± clindamicina (toxina). TC solo si no retrasa cirugía.",
+    keyPoints: [
+      "Dolor >> hallazgos cutáneos = bandera roja.",
+      "Crepitación es tardía; no esperarla.",
+      "Cirugía + ATB; cada hora de demora ↑ mortalidad.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Fascitis necrotizante
+
+• LRINEC ≥6: alta sospecha. Shock + progresión rápida = operar ya.
+• ATB: betalactámico + vancomicina + clindamicina (antitoxina).
+
+Perla: La piel miente; el dolor no. Sin crepitación no estás a salvo.
+
+Referencias: IDSA SSTI Guidelines; LRINEC score validation.`,
+  },
+  {
+    id: "dr-q-74",
+    examArea: "Medicina Interna / Infectología / Neurología",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "meningitis", "dexametasona"],
+    statement:
+      "Hombre de 19 años, fiebre, cefalea intensa, rigidez de nuca, petequias en tronco. TAC cerebral sin contraste: normal. Se confirma punción lumbar: LCR turbio, glucosa 15 mg/dL, proteínas 280 mg/dL, PMN 95%. ¿Secuencia terapéutica correcta?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Dexametasona 0.15 mg/kg IV + ceftriaxona + vancomicina lo antes posible; idealmente dexametasona antes o con la primera dosis de antibiótico.",
+      },
+      { id: "B", label: "B", text: "Esperar resultado de cultivo para elegir antibiótico dirigido." },
+      { id: "C", label: "C", text: "Dexametasona solo si hay Streptococcus pneumoniae confirmado en Gram." },
+      { id: "D", label: "D", text: "Aciclovir exclusivo por sospecha de herpes." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "Meningitis bacteriana aguda: ceftriaxona + vancomicina empíricos (cubrir S. pneumoniae resistente y N. meningitidis). Dexametasona reduce mortalidad/secuelas neurológicas en meningitis neumocócica si se administra ANTES o CON la primera dosis de ATB. Petequias sugieren meningococo; mismo esquema empírico.",
+    keyPoints: [
+      "Ceftriaxona + vancomicina empíricos en adultos.",
+      "Dexametasona: antes/con primer ATB, no después.",
+      "TAC antes de PL si focalidad, inmunosupresión o alteración mental.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Meningitis bacteriana aguda
+
+• ATB empírico: ceftriaxona + vancomicina.
+• Dexametasona 0.15 mg/kg c/6 h × 4 días si sospecha neumocócica.
+
+Perla: Dexametasona después del ATB pierde beneficio. Timing importa.
+
+Referencias: IDSA Bacterial Meningitis Guidelines; van de Beek et al.`,
+  },
+  {
+    id: "dr-q-75",
+    examArea: "Medicina Interna / Infectología / Gastroenterología",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "cdiff", "colitis"],
+    statement:
+      "Mujer de 70 años, hospitalizada por neumonía, recibió ceftriaxona 7 días. Día 10: diarrea acuosa >10/día, dolor abdominal, leucocitos 18.000. PCR toxina C. difficile positiva. PA 90/55, distensión abdominal, timpanismo. Rx abdomen: dilatación colónica >12 cm. ¿Tratamiento?",
+    options: [
+      { id: "A", label: "A", text: "Metronidazol VO 500 mg c/8 h ambulatorio." },
+      {
+        id: "B",
+        label: "B",
+        text: "Colitis fulminante: vancomicina oral 500 mg c/6 h ± vancomicina rectal + metronidazol IV; cirugía si no responde.",
+      },
+      { id: "C", label: "C", text: "Loperamida para controlar diarrea y evitar deshidratación." },
+      { id: "D", label: "D", text: "Fidaxomicina VO como primera línea en colitis fulminante con megacolon." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "C. difficile fulminante: shock, leucocitosis marcada, íleo/megacolon (colón >10-12 cm). Metronidazol VO ya no es primera línea. Fulminante: vancomicina oral alta dosis ± enema de vancomicina + metro IV; colectomía si refractario. Loperamida está contraindicada (retención toxina). Fidaxomicina es 1.ª línea en formas no fulminantes.",
+    keyPoints: [
+      "Fulminante: WBC >15.000, Cr↑, shock, megacolon, íleo.",
+      "Vancomicina oral (no metro) en formas graves.",
+      "Nunca loperamida en colitis infecciosa.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+C. difficile fulminante
+
+• 1.ª línea leve-moderada: fidaxomicina o vancomicina oral.
+• Fulminante: vancomicina oral ± rectal + metro IV; colectomía si falla.
+
+Perla: Megacolon + shock = vancomicina oral, no metro. Loperamida mata.
+
+Referencias: IDSA/SHEA C. difficile Guidelines 2021.`,
+  },
+  {
+    id: "dr-q-76",
+    examArea: "Medicina Interna / Infectología / HIV",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "hiv", "pcp", "sida"],
+    statement:
+      "Hombre de 34 años, VIH no diagnosticado, disnea progresiva, tos seca, fiebre baja. SatO2 88% ambiente, FC 105. Rx: infiltrados intersticiales bilaterales perihiliares en \"mariposa\". LDH 650 U/L. CD4 85 cél/μL. ¿Diagnóstico y manejo inicial?",
+    options: [
+      { id: "A", label: "A", text: "Neumonía bacteriana típica: ceftriaxona + azitromicina." },
+      {
+        id: "B",
+        label: "B",
+        text: "Neumonía por Pneumocystis jirovecii: TMP-SMX IV/VO + corticoides si PaO2 <70 mmHg o gradiente A-a >35; no iniciar TARV en fase aguda grave sin estabilizar.",
+      },
+      { id: "C", label: "C", text: "Tuberculosis pulmonar: RIPE inmediato sin confirmar." },
+      { id: "D", label: "D", text: "Profilaxis primaria con pentamidina inhalada y alta." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "PCP: CD4 <200, disnea subaguda, SatO2 baja, infiltrados intersticiales perihiliares, LDH↑. Tratamiento: TMP-SMX (dosis elevada). Corticoides si PaO2 <70 mmHg o A-a ≥35 mmHg (reduce mortalidad). Pentamidina es alternativa por alergia, no profilaxis en enfermedad activa. TARV se inicia tras mejoría clínica (2-4 semanas en PCP grave).",
+    keyPoints: [
+      "PCP si CD4 <200: disnea + hipoxemia + LDH↑.",
+      "TMP-SMX es tratamiento de elección.",
+      "Esteroide si PaO2 <70 o A-a ≥35.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+PCP en VIH avanzado
+
+• CD4 <200: profilaxis con TMP-SMX.
+• Tratamiento: TMP-SMX + esteroides si hipoxemia moderada-grave.
+
+Perla: LDH alto + disnea + CD4 bajo = PCP hasta demostrar lo contrario.
+
+Referencias: DHHS HIV Guidelines; ATS PCP Guidelines.`,
+  },
+  {
+    id: "dr-q-77",
+    examArea: "Medicina Interna / Infectología / Hepatología",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "sbP", "cirrosis"],
+    statement:
+      "Hombre de 58 años, cirrosis por alcohol, ascitis conocida. Fiebre 38.5 °C, dolor abdominal difuso, encefalopatía grado II. Paracentesis: líquido ascítico turbio, PMN 450 cél/μL, proteínas 0.8 g/dL, cultivo pendiente. Creatinina 1.4 (basal 0.9). ¿Manejo?",
+    options: [
+      { id: "A", label: "A", text: "Observación; PMN <500 descarta peritonitis bacteriana espontánea." },
+      {
+        id: "B",
+        label: "B",
+        text: "Peritonitis bacteriana espontánea: ceftriaxona IV + albúmina 1.5 g/kg día 1 y 1 g/kg día 3 si creatinina elevada; suspender betabloqueador si shock.",
+      },
+      { id: "C", label: "C", text: "Metronidazol solo por posible translocación anaerobia." },
+      { id: "D", label: "D", text: "Paracentesis de alivio masiva sin antibióticos." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "PBE: PMN ascítico ≥250 cél/μL (aquí 450). Tratamiento empírico: ceftriaxona 1-2 g/día (cubrir Enterobacteriaceae). Albúmina reduce síndrome hepatorrenal en pacientes con Creat↑ o BUN↑. Repetir paracentesis a 48 h si no mejora (PMN debe bajar >25%). Profilaxis secundaria con norfloxacino tras episodio.",
+    keyPoints: [
+      "PBE: PMN ≥250 en ascitis.",
+      "Ceftriaxona empírica; albúmina si riesgo SHR.",
+      "Cultivo positivo en solo ~40%; tratar por PMN.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Peritonitis bacteriana espontánea
+
+• Diagnóstico: PMN ≥250. Tratamiento empírico inmediato.
+• Albúmina 1.5/1 g/kg si Creat >1, BUN >30 o bilirrubina >4.
+
+Perla: No esperes cultivo. PMN ≥250 = ceftriaxona + albúmina.
+
+Referencias: EASL Ascites Guidelines; AASLD.`,
+  },
+  {
+    id: "dr-q-78",
+    examArea: "Medicina Interna / Infectología / Nefrología",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "itu", "pielonefritis", "resistencia"],
+    statement:
+      "Mujer de 45 años, pielonefritis complicada. Fiebre 39.5 °C, dolor costovertebral, náuseas. Antecedente: ITU recurrente, uso previo de ciprofloxacino. UC previo: E. coli BLEE (ESBL). Creatinina 1.0, no alergia a betalactámicos. ¿Antibiótico empírico?",
+    options: [
+      { id: "A", label: "A", text: "Ciprofloxacino 500 mg VO c/12 h." },
+      { id: "B", label: "B", text: "Nitrofurantoína 100 mg c/12 h." },
+      { id: "C", label: "C", text: "Ertapenem IV o ceftriaxona según antibiograma local; evitar fluoroquinolonas por resistencia documentada." },
+      { id: "D", label: "D", text: "Amoxicilina-ácido clavulánico VO como monoterapia empírica universal." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Pielonefritis complicada con E. coli ESBL previa: fluoroquinolonas contraindicadas por resistencia. Nitrofurantoína no alcanza concentración renal parenquimatosa. Carbapenem (ertapenem) o betalactámico-β-lactamasa según sensibilidad local. Pielonefritis grave = IV inicialmente. Ajustar por antibiograma.",
+    keyPoints: [
+      "ESBL: evitar quinolonas y amoxicilina-clavulanato empírico.",
+      "Nitrofurantoína solo para cistitis, no pielonefritis.",
+      "Pielonefritis complicada = IV + hospitalización.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Pielonefritis por E. coli BLEE
+
+• ESBL: carbapenem o betalactámico según antibiograma.
+• Nitrofurantoína y fosfomicina no sirven en pielonefritis.
+
+Perla: Historia de ESBL = no repitas ciprofloxacino. Piensa carbapenem.
+
+Referencias: IDSA UTI Guidelines; ESBL treatment reviews.`,
+  },
+  {
+    id: "dr-q-79",
+    examArea: "Medicina Interna / Infectología",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "tuberculosis", "latente"],
+    statement:
+      "Mujer de 30 años, asintomática, PPD 18 mm (lectura a las 48 h). Rx tórax normal. Contacto domiciliario de paciente con TB pulmonar bacilífera confirmada. VIH negativo. ¿Conducta?",
+    options: [
+      { id: "A", label: "A", text: "RIPE (rifampicina, isoniazida, pirazinamida, etambutol) 6 meses por TB activa." },
+      {
+        id: "B",
+        label: "B",
+        text: "Infección latente por TB (ILTB): isoniazida + rifapentina semanal 3 meses (3HP) o isoniazida 9 meses según guía local; descartar activa antes de tratar.",
+      },
+      { id: "C", label: "C", text: "No tratamiento; PPD <20 mm en contacto no requiere profilaxis." },
+      { id: "D", label: "D", text: "Vacuna BCG revacunación." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "PPD ≥5 mm en contacto estrecho = ILTB (independiente del cutoff general de 10-15 mm). Rx normal descarta activa. Tratamiento ILTB: 3HP (isoniazida + rifapentina 12 dosis semanales) preferido por adherencia, o isoniazida 6-9 meses. RIPE es para TB activa. BCG no revacunar en adultos contactos.",
+    keyPoints: [
+      "Contacto estrecho: PPD ≥5 mm = positivo.",
+      "Rx normal + asintomática = ILTB, no activa.",
+      "3HP (12 semanas) preferido sobre 9 meses de H.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Infección latente por tuberculosis
+
+• Contacto + PPD ≥5 mm + Rx normal = ILTB.
+• Tratamiento: 3HP o isoniazida 9 meses.
+
+Perla: RIPE es para TB activa. ILTB en contacto se trata aunque PPD sea solo 6 mm.
+
+Referencias: WHO LTBI Guidelines; CDC TB Treatment.`,
+  },
+  {
+    id: "dr-q-80",
+    examArea: "Medicina Interna / Infectología / Urgencias",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "colangitis", "tokyo", "sepsis"],
+    statement:
+      "Hombre de 67 años, ictericia dolorosa, fiebre 39.8 °C, escalofríos. PA 78/45, FC 130, bilirrubina total 12 mg/dL, directa 10, leucocitos 22.000, lactato 4.2. Eco: dilatación vía biliar + cálculo en colédoco. ¿Manejo inmediato?",
+    options: [
+      { id: "A", label: "A", text: "Antibióticos VO y colecistectomía electiva en 6 semanas." },
+      {
+        id: "B",
+        label: "B",
+        text: "Colangitis grave (Tokyo III): reanimación séptica + piperacilina-tazobactam IV + drenaje biliar urgente (CPRE o drenaje percutáneo) en <24-48 h.",
+      },
+      { id: "C", label: "C", text: "CPRE diferida tras 2 semanas de antibióticos para evitar pancreatitis." },
+      { id: "D", label: "D", text: "Metronidazol monoterapia por anaerobios biliares." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Colangitis aguda grave (criterios Tokyo): disfunción cardiovascular (shock), respiratoria, renal, hepática, hematológica o neurológica. Tríada de Charcot (fiebre, ictericia, dolor) + shock = Tokyo III. ATB IV de amplio espectro (Enterobacteriaceae + anaerobios) + drenaje biliar urgente. CPRE es gold standard si disponible; drenaje percutáneo si CPRE no factible.",
+    keyPoints: [
+      "Colangitis = ATB + drenaje; no uno sin el otro.",
+      "Tokyo III (grave): disfunción orgánica + drenaje <48 h.",
+      "Piperacilina-tazobactam o carbapenem según resistencia local.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Colangitis aguda grave · Tokyo Guidelines
+
+• Tríada Charcot; Pentada si shock + alteración mental.
+• Tokyo III: disfunción orgánica → ATB IV + drenaje urgente.
+
+Perla: Colangitis con shock no espera CPRE \"mañana\". Drena hoy.
+
+Referencias: Tokyo Guidelines 2018; ASGE biliary drainage.`,
+  },
 ];
