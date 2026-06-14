@@ -206,7 +206,7 @@ function StudyNoteModal({
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto px-5 py-5 sm:px-7">
+        <div className="min-h-0 flex-1 overflow-y-auto px-5 py-5 sm:px-7">
           <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
             <div className="flex items-center gap-2">
               <ClipboardList className="h-4 w-4 text-mq-muted" />
@@ -328,9 +328,10 @@ export function StudyNotesBoard({ userId }: StudyNotesBoardProps) {
         ))}
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {mounted && selectedNote ? (
           <StudyNoteModal
+            key={selectedNote.questionId}
             note={selectedNote}
             removingId={removingId}
             onClose={() => setSelectedNote(null)}

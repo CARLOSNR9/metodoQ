@@ -9,7 +9,6 @@ import {
 
 type TheoryContentProps = {
   content: string;
-  animated?: boolean;
 };
 
 type BlockType =
@@ -21,6 +20,94 @@ type BlockType =
   | "header"
   | "paragraph";
 
+function isBlockStarter(line: string): boolean {
+  const trimmed = line.trim();
+  if (!trimmed) return false;
+  if (/^explicaci[oó]n del profe/i.test(trimmed)) return true;
+  if (trimmed.startsWith("¿")) return true;
+  if (/^clave:/i.test(trimmed)) return true;
+  if (/^trampa:/i.test(trimmed)) return true;
+  if (/^contraindic/i.test(trimmed)) return true;
+  if (/^\d+\.\s/.test(trimmed)) return true;
+  if (trimmed.length < 80 && trimmed.endsWith(":") && !trimmed.startsWith("-")) {
+    return true;
+  }
+  if (
+    trimmed.length < 80 &&
+    /^[A-ZÁÉÍÓÚÑ0-9\s\d\-–—]+$/.test(trimmed) &&
+    !trimmed.startsWith("-")
+  ) {
+    return true;
+  }
+  return false;
+}
+
+/** Parte el texto en bloques lógicos aunque use saltos de línea simples. */
+function splitIntoBlocks(content: string): string[] {
+  const trimmed = content.trim();
+  if (!trimmed) return [];
+
+  if (/\n\s*\n/.test(trimmed)) {
+    return trimmed
+      .split(/\n\s*\n+/)
+      .map((block) => block.trim())
+      .filter(Boolean);
+  }
+
+  const lines = trimmed.split("\n").map((line) => line.trim()).filter(Boolean);
+  const blocks: string[] = [];
+  let buffer: string[] = [];
+
+  const flush = () => {
+    if (buffer.length > 0) {
+      blocks.push(buffer.join("\n"));
+      buffer = [];
+    }
+  };
+
+  for (const line of lines) {
+    const isBullet = line.startsWith("-");
+
+    if (isBlockStarter(line)) {
+      flush();
+      buffer.push(line);
+      continue;
+    }
+
+    if (isBullet) {
+      const prev = buffer[buffer.length - 1];
+      if (buffer.length === 0 || prev?.startsWith("-") || prev?.startsWith("¿")) {
+        buffer.push(line);
+      } else {
+        flush();
+        buffer.push(line);
+      }
+      continue;
+    }
+
+    if (buffer.length === 0) {
+      buffer.push(line);
+      continue;
+    }
+
+    const prev = buffer[buffer.length - 1];
+    if (
+      prev?.startsWith("-") ||
+      prev?.startsWith("¿") ||
+      prev?.endsWith(":") ||
+      /^explicaci[oó]n del profe/i.test(prev ?? "")
+    ) {
+      buffer.push(line);
+    } else {
+      flush();
+      buffer.push(line);
+    }
+  }
+
+  flush();
+  return blocks.length > 0 ? blocks : [trimmed];
+}
+
 function classifyBlock(block: string): BlockType {
   const trimmed = block.trim();
   const firstLine = trimmed.split("\n")[0]?.trim() ?? "";
@@ -29,7 +116,6 @@ function classifyBlock(block: string): BlockType {
   if (firstLine.startsWith("¿")) return "question";
   if (/^clave:/i.test(trimmed)) return "key-insight";
   if (/^trampa:|^contraindic/i.test(firstLine)) return "warning";
-  if (/^¿.*trampa/i.test(firstLine)) return "question";
 
   const lines = trimmed.split("\n");
   const isBulletBlock = lines.every(
@@ -45,6 +131,13 @@ function classifyBlock(block: string): BlockType {
   if (isShortHeader) return "header";
 
   return "paragraph";
+}
+
+function splitHeaderBody(block: string): { header: string; body: string } {
+  const lines = block.split("\n");
+  const header = lines[0]?.trim() ?? block;
+  const body = lines.slice(1).join("\n").trim();
+  return { header, body };
 }
 
 function ProfessorHeader({ text }: { text: string }) {
@@ -64,9 +157,10 @@ function ProfessorHeader({ text }: { text: string }) {
 }
 
 function QuestionBlock({ text }: { text: string }) {
-  const lines = text.split("\n");
-  const title = lines[0]?.trim() ?? text;
-  const body = lines.slice(1).join("\n").trim();
+  const { header, body } = splitHeaderBody(text);
+  const bodyLines = body.split("\n").filter(Boolean);
+  const bulletLines = bodyLines.filter((line) => line.trim().startsWith("-"));
+  const proseLines = bodyLines.filter((line) => !line.trim().startsWith("-"));
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-5">
@@ -74,10 +168,20 @@ function QuestionBlock({ text }: { text: string }) {
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-mq-accent/12 text-mq-accent">
           <HelpCircle className="h-4 w-4" />
         </div>
-        <div className="min-w-0 flex-1">
-          <p className="text-[15px] font-bold leading-snug text-white">{title}</p>
-          {body ? (
-            <p className="mt-2 text-[15px] leading-7 text-slate-300">{body}</p>
+        <div className="min-w-0 flex-1 space-y-3">
+          <p className="text-[15px] font-bold leading-snug text-white">{header}</p>
+          {proseLines.length > 0 ? (
+            <p className="text-[15px] leading-7 text-slate-300">{proseLines.join("\n")}</p>
+          ) : null}
+          {bulletLines.length > 0 ? (
+            <ul className="space-y-2">
+              {bulletLines.map((line) => (
+                <li key={line} className="flex gap-3 text-[15px] leading-relaxed text-slate-200">
+                  <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-mq-accent" />
+                  <span>{line.replace(/^\-\s*/, "")}</span>
+                </li>
+              ))}
+            </ul>
           ) : null}
         </div>
       </div>
@@ -106,9 +210,7 @@ function KeyInsightBlock({ text }: { text: string }) {
 }
 
 function WarningBlock({ text }: { text: string }) {
-  const lines = text.split("\n");
-  const title = lines[0]?.trim() ?? text;
-  const body = lines.slice(1).join("\n").trim();
+  const { header, body } = splitHeaderBody(text);
 
   return (
     <div className="rounded-2xl border border-orange-400/20 bg-gradient-to-br from-orange-500/10 to-rose-500/5 p-4">
@@ -117,9 +219,11 @@ function WarningBlock({ text }: { text: string }) {
           <AlertTriangle className="h-4 w-4" />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="text-[15px] font-bold leading-snug text-orange-100">{title}</p>
+          <p className="text-[15px] font-bold leading-snug text-orange-100">{header}</p>
           {body ? (
-            <p className="mt-2 text-[15px] leading-7 text-orange-50/80">{body}</p>
+            <p className="mt-2 whitespace-pre-wrap text-[15px] leading-7 text-orange-50/80">
+              {body}
+            </p>
           ) : null}
         </div>
       </div>
@@ -157,50 +261,59 @@ function SectionHeader({ text }: { text: string }) {
   );
 }
 
+function renderBlock(block: string, index: number) {
+  const type = classifyBlock(block);
+
+  switch (type) {
+    case "professor-header": {
+      const { header, body } = splitHeaderBody(block);
+      return (
+        <div key={index} className="space-y-4">
+          <ProfessorHeader text={header} />
+          {body ? <TheoryContent content={body} /> : null}
+        </div>
+      );
+    }
+    case "question":
+      return <QuestionBlock key={index} text={block} />;
+    case "key-insight":
+      return <KeyInsightBlock key={index} text={block} />;
+    case "warning":
+      return <WarningBlock key={index} text={block} />;
+    case "bullet":
+      return <BulletBlock key={index} lines={block.split("\n")} />;
+    case "header": {
+      const { header, body } = splitHeaderBody(block);
+      if (!body) {
+        return <SectionHeader key={index} text={header} />;
+      }
+      return (
+        <div key={index} className="space-y-3">
+          <SectionHeader text={header} />
+          <p className="text-[15px] leading-7 text-slate-200">{body}</p>
+        </div>
+      );
+    }
+    default:
+      return (
+        <p key={index} className="whitespace-pre-wrap text-[15px] leading-7 text-slate-200">
+          {block}
+        </p>
+      );
+  }
+}
+
 export function TheoryContent({ content }: TheoryContentProps) {
-  const blocks = content.split(/\n\n+/).filter(Boolean);
+  const trimmed = content.trim();
+  if (!trimmed) {
+    return (
+      <p className="text-sm italic text-mq-muted">
+        No hay explicación guardada para esta nota.
+      </p>
+    );
+  }
 
-  return (
-    <div className="space-y-4">
-      {blocks.map((block, index) => {
-        const type = classifyBlock(block);
+  const blocks = splitIntoBlocks(trimmed);
 
-        switch (type) {
-          case "professor-header":
-            return (
-              <ProfessorHeader
-                key={index}
-                text={block.split("\n")[0]?.trim() ?? block}
-              />
-            );
-          case "question":
-            return <QuestionBlock key={index} text={block} />;
-          case "key-insight":
-            return <KeyInsightBlock key={index} text={block} />;
-          case "warning":
-            return <WarningBlock key={index} text={block} />;
-          case "bullet":
-            return (
-              <BulletBlock
-                key={index}
-                lines={block.split("\n")}
-              />
-            );
-          case "header":
-            return (
-              <SectionHeader
-                key={index}
-                text={block.trim()}
-              />
-            );
-          default:
-            return (
-              <p key={index} className="text-[15px] leading-7 text-slate-200">
-                {block}
-              </p>
-            );
-        }
-      })}
-    </div>
-  );
+  return <div className="space-y-4">{blocks.map(renderBlock)}</div>;
 }
