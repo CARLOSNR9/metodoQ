@@ -11,6 +11,7 @@ import {
   X,
   Sparkles,
 } from "lucide-react";
+import { TheoryContent } from "@/components/study/theory-content";
 import {
   isStudyNoteSaved,
   removeStudyNote,
@@ -27,59 +28,6 @@ type TheoryDeepDivePanelProps = {
   examArea?: string;
   userId?: string | null;
 };
-
-function TheoryContent({ content }: { content: string }) {
-  const blocks = content.split(/\n\n+/).filter(Boolean);
-
-  return (
-    <div className="space-y-4">
-      {blocks.map((block, index) => {
-        const lines = block.split("\n");
-        const isBulletBlock = lines.every(
-          (line) => line.trim().startsWith("-") || line.trim() === "",
-        );
-
-        if (isBulletBlock) {
-          return (
-            <ul key={index} className="space-y-2 rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              {lines
-                .filter((line) => line.trim())
-                .map((line) => (
-                  <li
-                    key={line}
-                    className="flex gap-3 text-[15px] leading-relaxed text-slate-200"
-                  >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-mq-accent" />
-                    {line.replace(/^\-\s*/, "")}
-                  </li>
-                ))}
-            </ul>
-          );
-        }
-
-        const isShortHeader =
-          block.length < 90 && !block.includes("\n") && block.endsWith(":");
-
-        if (isShortHeader) {
-          return (
-            <h3
-              key={index}
-              className="pt-1 text-xs font-black uppercase tracking-[0.16em] text-mq-accent"
-            >
-              {block.replace(/:$/, "")}
-            </h3>
-          );
-        }
-
-        return (
-          <p key={index} className="text-[15px] leading-7 text-slate-200">
-            {block}
-          </p>
-        );
-      })}
-    </div>
-  );
-}
 
 export function TheoryDeepDivePanel({
   open,
