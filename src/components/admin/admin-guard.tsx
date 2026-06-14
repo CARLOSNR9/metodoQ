@@ -2,12 +2,18 @@
 
 import { StaffGuard } from "@/components/admin/staff-guard";
 
-export function AdminGuard({ children }: { children: React.ReactNode }) {
+type AdminGuardProps = {
+  children: React.ReactNode;
+  showHeader?: boolean;
+};
+
+export function AdminGuard({ children, showHeader = true }: AdminGuardProps) {
   return (
     <StaffGuard
       allowedRoles={["admin"]}
       title="Panel de Administración"
       subtitle="Ingresa con una cuenta de administrador"
+      showHeader={showHeader}
     >
       {children}
     </StaffGuard>
