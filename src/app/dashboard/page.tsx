@@ -17,7 +17,7 @@ import { useReferralStats } from "@/hooks/use-referral-stats";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { hasPaidPlan } from "@/lib/plans/access";
-import { getPostLoginPath } from "@/lib/roles";
+import { getPostLoginPath, isAdminUser } from "@/lib/roles";
 import { useUserRole } from "@/hooks/use-user-role";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import { buildUccMiDailyBlocks } from "@/lib/training/ucc-mi-daily-plan";
@@ -31,6 +31,9 @@ export default function DashboardPage() {
 
   useEffect(() => {
     if (!user || isLoadingRole) {
+      return;
+    }
+    if (isAdminUser(role, email)) {
       return;
     }
     const staffPath = getPostLoginPath(role, email);

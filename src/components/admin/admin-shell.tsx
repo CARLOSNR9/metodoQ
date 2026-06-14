@@ -30,6 +30,7 @@ const navigationItems = [
 ] as const;
 
 const externalLinks = [
+  { label: "Panel estudiante", href: "/dashboard" },
   { label: "Panel profesor", href: "/profesor" },
   { label: "Panel moderador", href: "/moderador" },
 ] as const;

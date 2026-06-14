@@ -3604,4 +3604,78 @@ Perla: Colangitis con shock no espera CPRE \"mañana\". Drena hoy.
 
 Referencias: Tokyo Guidelines 2018; ASGE biliary drainage.`,
   },
+  {
+    id: "dr-q-81",
+    examArea: "Medicina Interna / Neumología / Urgencias",
+    topic: "Medicina Interna",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "tep", "choque_obstructivo", "pocus", "urgencias"],
+    statement:
+      "Paciente de 68 años con antecedente de hipertensión arterial, quien consulta al servicio de urgencias por disnea súbita y dolor torácico pleurítico. Al examen físico: presión arterial 85/50 mmHg, frecuencia cardíaca 120 lpm, frecuencia respiratoria 28 rpm, saturación de oxígeno 88% al aire ambiente. Ingurgitación yugular presente. Electrocardiograma: taquicardia sinusal con patrón S1Q3T3. Ante la inestabilidad hemodinámica documentada, ¿cuál es la conducta inicial más adecuada?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Inicio inmediato de trombolisis con alteplase.",
+        distractorProfile: "trombolisis_sin_confirmacion_vd",
+        incorrectFeedback:
+          "La trombolisis está indicada en TEP de alto riesgo, pero no debe iniciarse a ciegas sin demostrar disfunción del ventrículo derecho en un paciente inestable.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Infusión de norepinefrina y carga de líquidos 2000 ml.",
+        distractorProfile: "volumen_agresivo_vd",
+        incorrectFeedback:
+          "La norepinefrina es coadyuvante, pero más de 500 mL de volumen puede empeorar el colapso del VI por distensión del VD; no es la prioridad diagnóstica inicial.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Ecocardiograma transtorácico a pie de cama.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Angio-TC de tórax.",
+        distractorProfile: "gold_standard_en_choque",
+        incorrectFeedback:
+          "El Angio-TC confirma TEP, pero en un paciente hemodinámicamente inestable el traslado a tomografía retrasa el manejo; el eco point-of-care precede a la imagen tomográfica.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "TEP de alto riesgo (hipotensión). Aunque el diagnóstico se confirma con Angio-TC, ante inestabilidad hemodinámica la prioridad es demostrar disfunción del ventrículo derecho (signo de McConnell o dilatación) mediante eco point-of-care para justificar la reperfusión inmediata sin retardar el manejo con traslados a tomografía.",
+    keyPoints: [
+      "Disnea súbita + hipotensión + signos de falla derecha → TEP de alto riesgo.",
+      "Patrón S1Q3T3: poco sensible, pero específico.",
+      "Estable: Angio-TC. Inestable: ecocardiografía focalizada (POCUS) + soporte inotrópico.",
+      "Tema: Choque obstructivo — tromboembolismo pulmonar.",
+    ],
+    theoryContent: `LO QUE DEBES SABER PARA EL EXAMEN
+
+Disnea súbita + hipotensión.
+Taquicardia + signos de falla derecha.
+Patrón S1Q3T3 (poco sensible, pero específico).
+Debes pensar en: tromboembolismo pulmonar de alto riesgo.
+Tema: choque obstructivo.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+
+El error común es querer el "gold standard" (Angio-TC) en un paciente que se está muriendo. En Medicina Interna evaluamos el razonamiento bajo presión. Un TEP masivo mata por falla de VD; el eco nos da el diagnóstico funcional en segundos. Si el eco muestra VD dilatado en un paciente con choque, no busques más: el diagnóstico es TEP hasta demostrar lo contrario. La norepinefrina es coadyuvante, pero la clave es la reperfusión (trombolisis o embolectomía).
+
+¿CUÁL ES LA TRAMPA DEL EXAMEN?
+
+Creer que el Angio-TC es el paso inicial en todo paciente inestable. En el examen, si el paciente está inestable, el protocolo de "shocks" (eco a pie de cama) precede a la imagen tomográfica.
+
+¿QUÉ DEBE RECORDARSE?
+
+Estable: Angio-TC.
+Inestable: ecocardiografía focalizada (POCUS) + soporte inotrópico.
+
+PERLAS DE EXAMEN
+
+• Hipotensión + VD dilatado = trombolisis.
+• No sobrecargar de líquidos (volumen > 500 mL puede empeorar el colapso del VI).`,
+  },
 ];
