@@ -10,7 +10,7 @@ export function ActivityReminder() {
 
   const status = getUserActivityStatus(lastActiveAt);
 
-  if (status === "activo") return null;
+  if (status === "activo" || status === "sin_datos") return null;
 
   const config = {
     riesgo: {

@@ -345,18 +345,15 @@ export async function updateLastActiveDate(userId: string) {
   });
 }
 
-export type ActivityStatus = "activo" | "riesgo" | "inactivo";
+import {
+  resolveActivityStatus,
+  type ActivityStatus,
+} from "@/lib/activity-status";
 
-export function getUserActivityStatus(lastActiveAt: any): ActivityStatus {
-  if (!lastActiveAt) return "inactivo";
+export type { ActivityStatus };
 
-  const lastActiveDate =
-    typeof lastActiveAt.toDate === "function" ? lastActiveAt.toDate() : new Date(lastActiveAt);
-  const now = new Date();
-  const diffInMs = now.getTime() - lastActiveDate.getTime();
-  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
-
-  if (diffInDays >= 5) return "inactivo";
-  if (diffInDays >= 2) return "riesgo";
-  return "activo";
+export function getUserActivityStatus(lastActiveAt: unknown): ActivityStatus {
+  return resolveActivityStatus(
+    lastActiveAt as Parameters<typeof resolveActivityStatus>[0],
+  );
 }

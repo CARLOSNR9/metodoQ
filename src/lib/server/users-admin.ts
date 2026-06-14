@@ -1,4 +1,5 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import { resolveActivityStatus, type ActivityStatus } from "@/lib/activity-status";
 
 export type UserAcquisitionSource = "free" | "stripe" | "manual";
 
@@ -14,6 +15,11 @@ export type AdminUserRow = {
   createdAt: string | null;
   negotiatedPriceCOP: number | null;
   planBillingCycle: number | null;
+  lastActiveAt: string | null;
+  streakCount: number;
+  totalQuestionsAnswered: number;
+  cumulativeScore: number | null;
+  activityStatus: ActivityStatus;
 };
 
 function resolveSource(data: Record<string, unknown>): UserAcquisitionSource {
@@ -48,6 +54,14 @@ export async function getAdminUserDirectory(limit = 150): Promise<AdminUserRow[]
       createdAt = created.toDate().toISOString();
     }
 
+    const lastActive = data.lastActiveAt;
+    let lastActiveAt: string | null = null;
+    if (typeof lastActive === "string") {
+      lastActiveAt = lastActive;
+    } else if (lastActive?.toDate) {
+      lastActiveAt = lastActive.toDate().toISOString();
+    }
+
     return {
       uid: doc.id,
       email: String(data.email ?? ""),
@@ -64,6 +78,12 @@ export async function getAdminUserDirectory(limit = 150): Promise<AdminUserRow[]
           : null,
       planBillingCycle:
         typeof data.planBillingCycle === "number" ? data.planBillingCycle : null,
+      lastActiveAt,
+      streakCount: Number(data.streakCount ?? 0),
+      totalQuestionsAnswered: Number(data.totalQuestionsAnswered ?? 0),
+      cumulativeScore:
+        typeof data.cumulativeScore === "number" ? data.cumulativeScore : null,
+      activityStatus: resolveActivityStatus(lastActiveAt),
     };
   });
 }

@@ -18,8 +18,8 @@ export async function UsersDirectoryPanel() {
       <div>
         <h2 className="text-xl font-semibold text-white">Directorio de usuarios</h2>
         <p className="mt-1 text-sm text-mq-muted">
-          Todos los registrados: gratis, compras por Stripe en la web y ventas por negociador.
-          Puedes editar o eliminar cada usuario desde la columna Acciones.
+          Todos los registrados con estado de actividad, racha y preguntas respondidas. Haz clic en
+          Actividad para ver el detalle de estudio de cada alumno.
         </p>
       </div>
 

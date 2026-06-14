@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState, useTransition } from "react";
 import { deleteUserAction, updateUserAction } from "@/app/admin/user-actions";
@@ -7,9 +8,16 @@ import { getFirebaseAuth } from "@/lib/firebase";
 import { formatCOP, getPlanDisplayName } from "@/lib/plans/config";
 import { getRoleLabel, normalizeUserRole, USER_ROLES, type UserRole } from "@/lib/roles";
 import type { UserPlan } from "@/lib/auth";
+import {
+  formatRelativeLastActive,
+  getActivityStatusLabel,
+  type ActivityStatus,
+} from "@/lib/activity-status";
+import { ActivityBadge } from "@/components/admin/student-activity-view";
 import type { AdminUserRow, UserAcquisitionSource } from "@/lib/server/users-admin";
 
 type FilterKey = "all" | UserAcquisitionSource | "paid";
+type ActivityFilterKey = "all" | ActivityStatus;
 
 const FILTERS: { key: FilterKey; label: string }[] = [
   { key: "all", label: "Todos" },
@@ -17,6 +25,14 @@ const FILTERS: { key: FilterKey; label: string }[] = [
   { key: "stripe", label: "Stripe (web)" },
   { key: "manual", label: "Negociador" },
   { key: "paid", label: "Con plan de pago" },
+];
+
+const ACTIVITY_FILTERS: { key: ActivityFilterKey; label: string }[] = [
+  { key: "all", label: "Cualquier estado" },
+  { key: "activo", label: "Activos" },
+  { key: "riesgo", label: "En riesgo" },
+  { key: "inactivo", label: "Inactivos" },
+  { key: "sin_datos", label: "Sin actividad" },
 ];
 
 const PLAN_OPTIONS: { value: UserPlan; label: string }[] = [
@@ -71,6 +87,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [filter, setFilter] = useState<FilterKey>("all");
+  const [activityFilter, setActivityFilter] = useState<ActivityFilterKey>("all");
   const [search, setSearch] = useState("");
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editPlan, setEditPlan] = useState<UserPlan>("FREE");
@@ -84,13 +101,14 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
     return users.filter((user) => {
       if (filter === "paid" && user.plan === "FREE") return false;
       if (filter !== "all" && filter !== "paid" && user.source !== filter) return false;
+      if (activityFilter !== "all" && user.activityStatus !== activityFilter) return false;
       if (!q) return true;
       return (
         user.email.toLowerCase().includes(q) ||
         user.displayName.toLowerCase().includes(q)
       );
     });
-  }, [users, filter, search]);
+  }, [users, filter, activityFilter, search]);
 
   const counts = useMemo(
     () => ({
@@ -99,6 +117,17 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
       stripe: users.filter((u) => u.source === "stripe").length,
       manual: users.filter((u) => u.source === "manual").length,
       paid: users.filter((u) => u.plan !== "FREE").length,
+    }),
+    [users],
+  );
+
+  const activityCounts = useMemo(
+    () => ({
+      all: users.length,
+      activo: users.filter((u) => u.activityStatus === "activo").length,
+      riesgo: users.filter((u) => u.activityStatus === "riesgo").length,
+      inactivo: users.filter((u) => u.activityStatus === "inactivo").length,
+      sin_datos: users.filter((u) => u.activityStatus === "sin_datos").length,
     }),
     [users],
   );
@@ -178,55 +207,77 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
         </p>
       ) : null}
 
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap gap-2">
+            {FILTERS.map((f) => (
+              <button
+                key={f.key}
+                type="button"
+                onClick={() => setFilter(f.key)}
+                className={`rounded-full px-3 py-1 text-xs font-medium transition ${
+                  filter === f.key
+                    ? "bg-mq-accent text-[#0A1F44]"
+                    : "border border-mq-border text-mq-muted hover:text-white"
+                }`}
+              >
+                {f.label} ({counts[f.key]})
+              </button>
+            ))}
+          </div>
+          <input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Buscar por correo o nombre..."
+            className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2 text-sm text-white placeholder:text-mq-muted/50 sm:max-w-xs"
+          />
+        </div>
+
         <div className="flex flex-wrap gap-2">
-          {FILTERS.map((f) => (
+          {ACTIVITY_FILTERS.map((f) => (
             <button
               key={f.key}
               type="button"
-              onClick={() => setFilter(f.key)}
+              onClick={() => setActivityFilter(f.key)}
               className={`rounded-full px-3 py-1 text-xs font-medium transition ${
-                filter === f.key
-                  ? "bg-mq-accent text-[#0A1F44]"
+                activityFilter === f.key
+                  ? "border border-mq-accent/50 bg-mq-accent/10 text-mq-accent"
                   : "border border-mq-border text-mq-muted hover:text-white"
               }`}
             >
-              {f.label} ({counts[f.key]})
+              {f.key === "all" ? f.label : getActivityStatusLabel(f.key)} ({activityCounts[f.key]})
             </button>
           ))}
         </div>
-        <input
-          type="search"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Buscar por correo o nombre..."
-          className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2 text-sm text-white placeholder:text-mq-muted/50 sm:max-w-xs"
-        />
       </div>
 
       <p className="mt-3 text-xs text-mq-muted">
-        {filtered.length} usuario{filtered.length === 1 ? "" : "s"} · Usa Editar o Eliminar en cada
-        fila
+        {filtered.length} usuario{filtered.length === 1 ? "" : "s"} · Usa Actividad para ver el
+        detalle de estudio de cada alumno
       </p>
 
       <div className="mt-4 overflow-x-auto">
-        <table className="w-full min-w-[980px] text-left text-sm">
+        <table className="w-full min-w-[1180px] text-left text-sm">
           <thead>
             <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
               <th className="pb-3 pr-3">Registro</th>
               <th className="pb-3 pr-3">Usuario</th>
+              <th className="pb-3 pr-3">Estado</th>
+              <th className="pb-3 pr-3">Última actividad</th>
+              <th className="pb-3 pr-3">Racha</th>
+              <th className="pb-3 pr-3">Preguntas</th>
               <th className="pb-3 pr-3">Origen</th>
               <th className="pb-3 pr-3">Plan</th>
               <th className="pb-3 pr-3">Rol</th>
               <th className="pb-3 pr-3">Vigencia</th>
-              <th className="pb-3 pr-3">Negociado</th>
               <th className="pb-3">Acciones</th>
             </tr>
           </thead>
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={8} className="py-8 text-center text-mq-muted">
+                <td colSpan={11} className="py-8 text-center text-mq-muted">
                   No hay usuarios con este filtro.
                 </td>
               </tr>
@@ -243,6 +294,31 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                         {user.displayName !== "—" ? user.displayName : user.email.split("@")[0]}
                       </p>
                       <p className="text-xs text-mq-muted">{user.email || "—"}</p>
+                    </td>
+                    <td className="py-3 pr-3">
+                      <ActivityBadge status={user.activityStatus} />
+                    </td>
+                    <td className="py-3 pr-3 text-xs text-mq-muted whitespace-nowrap">
+                      {formatRelativeLastActive(user.lastActiveAt)}
+                    </td>
+                    <td className="py-3 pr-3 text-white whitespace-nowrap">
+                      {user.streakCount > 0 ? (
+                        <span>{user.streakCount} d</span>
+                      ) : (
+                        <span className="text-mq-muted">—</span>
+                      )}
+                    </td>
+                    <td className="py-3 pr-3 text-mq-muted whitespace-nowrap">
+                      {user.totalQuestionsAnswered > 0 ? (
+                        <span>
+                          {user.totalQuestionsAnswered}
+                          {user.cumulativeScore != null ? (
+                            <span className="text-white/40"> · {user.cumulativeScore}%</span>
+                          ) : null}
+                        </span>
+                      ) : (
+                        "—"
+                      )}
                     </td>
                     <td className="py-3 pr-3">
                       <span
@@ -268,13 +344,14 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                         </>
                       )}
                     </td>
-                    <td className="py-3 pr-3 text-mq-muted whitespace-nowrap">
-                      {user.negotiatedPriceCOP != null
-                        ? formatCOP(user.negotiatedPriceCOP)
-                        : "—"}
-                    </td>
                     <td className="py-3 whitespace-nowrap">
                       <div className="flex gap-2">
+                        <Link
+                          href={`/admin/usuarios/${user.uid}`}
+                          className="rounded-lg border border-mq-accent/40 px-2.5 py-1 text-xs font-medium text-mq-accent transition hover:bg-mq-accent/10"
+                        >
+                          Actividad
+                        </Link>
                         <button
                           type="button"
                           disabled={isPending}
