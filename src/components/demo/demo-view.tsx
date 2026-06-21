@@ -17,7 +17,9 @@ import { getTheoryLink } from "@/lib/questions/theory-link";
 import { enrichQuestionWithTheoryPill } from "@/lib/questions/enrich-theory-pills";
 import { logoutUser } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
+import { useExamFocusGuard } from "@/hooks/use-exam-focus-guard";
 import { useUserPlan } from "@/hooks/use-user-plan";
+import { ExamFocusWarningModal } from "@/components/demo/exam-focus-warning-modal";
 import { hasProFeatures, hasUnlimitedTraining } from "@/lib/plans/access";
 import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
 import {
@@ -231,6 +233,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const totalQuestions = hasStarted ? sessionQuestions.length : plannedQuestionCount;
   const availableQuestions = hasStarted ? sessionQuestions : [];
   const isResultsStep = hasStarted && currentQuestionIndex === totalQuestions;
+  const examFocusGuardEnabled = hasStarted && isTimedExam && !isResultsStep;
+  const { isWarningOpen, dismissWarning, leaveCount } = useExamFocusGuard({
+    enabled: examFocusGuardEnabled,
+  });
   const currentQuestion = isResultsStep
     ? null
     : availableQuestions[currentQuestionIndex];
@@ -1073,6 +1079,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     ) : null}
                   </div>
                 ) : null}
+                {isTimedExam && !usageBlockReason ? (
+                  <p className="mb-6 max-w-lg text-sm text-amber-100/80">
+                    Permanece en esta pestaña durante todo el examen. Si cambias de ventana,
+                    verás un aviso para que vuelvas a concentrarte aquí.
+                  </p>
+                ) : null}
                 <button
                   type="button"
                   onClick={() => void startAdaptiveSession()}
@@ -1201,6 +1213,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         open={isFreeLimitModalOpen} 
         onClose={() => setIsFreeLimitModalOpen(false)} 
         scorePercentage={scorePercentage} 
+      />
+
+      <ExamFocusWarningModal
+        open={isWarningOpen}
+        leaveCount={leaveCount}
+        onDismiss={dismissWarning}
       />
     </main>
   );
