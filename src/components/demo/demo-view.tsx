@@ -268,6 +268,13 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
+  const formatRemainingExamTime = (elapsedSeconds: number, maxSeconds: number) => {
+    const remainingSeconds = Math.max(0, maxSeconds - elapsedSeconds);
+    const hours = Math.floor(remainingSeconds / 3600);
+    const minutes = Math.floor((remainingSeconds % 3600) / 60);
+    return `${hours}:${minutes.toString().padStart(2, "0")}`;
+  };
+
   const uccWeekModule =
     userTrackProfile && isUccPastoMedicinaInternaProUser(userTrackProfile)
       ? getUccMiWeekModule(userTrackProfile.planStartedAt)
@@ -1120,7 +1127,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        >
                           <Target size={14} />
                           {isTimedExam && timedExamMaxSeconds > 0
-                            ? `${formatTime(totalSeconds)} / ${formatTime(timedExamMaxSeconds)}`
+                            ? formatRemainingExamTime(totalSeconds, timedExamMaxSeconds)
                             : formatTime(totalSeconds)}
                        </div>
                     )}
