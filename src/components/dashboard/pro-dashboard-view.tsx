@@ -41,6 +41,7 @@ import { UccPastoInsightCard } from "./ucc-pasto-insight-card";
 import { UccDailyMissionCard } from "./ucc-daily-mission-card";
 import { UccPercentileTrackerCard } from "./ucc-percentile-tracker-card";
 import { UccWeeklySimulacroCard } from "./ucc-weekly-simulacro-card";
+import { UccConvocatoriaCard } from "./ucc-convocatoria-card";
 import { UccPhase2SimulatorCard } from "./ucc-phase2-simulator-card";
 import { SubscriptionStatusCard } from "./subscription-status-card";
 import { StudyStreakSummary } from "./study-streak-summary";
@@ -279,6 +280,10 @@ export function ProDashboardView({
         streakMinimum={dailyGoal.streakMinimum}
         isUccMiTrack={dailyGoal.isUccMiTrack}
       />
+
+      {showLiveClasses && user?.uid ? (
+        <UccConvocatoriaCard userId={user.uid} />
+      ) : null}
 
       {hasDiagnosticData && (
         <motion.div

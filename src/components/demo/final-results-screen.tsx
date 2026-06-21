@@ -12,6 +12,7 @@ import {
 import { Act2PredictiveDashboard } from "./act2-predictive-dashboard";
 import { ScoreComparisonCards } from "./score-comparison-cards";
 import type { UccBlockCompletionCTA } from "@/lib/training/ucc-mi-daily-plan";
+import { UccConvocatoriaResultsPanel } from "@/components/dashboard/ucc-convocatoria-results-panel";
 
 export type FinalResultsScreenProps = {
   /** Puntaje de esta sesión (%). */
@@ -37,6 +38,7 @@ export type FinalResultsScreenProps = {
   onContinueNextUccBlock?: () => void;
   /** En /dashboard/entrenar, evita enlazar a la misma ruta (no navega). */
   preferDashboardReturn?: boolean;
+  convocatoriaEdition?: string | null;
 };
 
 function getPerformanceProfile(scorePercentage: number) {
@@ -85,9 +87,11 @@ export function FinalResultsScreen({
   uccBlockCompletion = null,
   onContinueNextUccBlock,
   preferDashboardReturn = false,
+  convocatoriaEdition = null,
 }: FinalResultsScreenProps) {
   const isAct1 = source === "act1";
   const isDailyPill = source === "daily-pill";
+  const isConvocatoria = source === "convocatoria";
   const normalizedPlan = normalizeUserPlan(userPlan ?? undefined);
   const isFreePlan = normalizedPlan === "FREE";
   const isProUser = hasProFeatures(userPlan);
@@ -213,17 +217,26 @@ export function FinalResultsScreen({
           )}
 
           <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-            {isDailyPill ? (sessionScore === 100 ? "¡Dosis Inyectada!" : "Casi lo logras, Doc") : isAct1 ? "Diagnóstico Predictivo de Plaza" : profile.title}
+            {isDailyPill
+              ? sessionScore === 100
+                ? "¡Dosis Inyectada!"
+                : "Casi lo logras, Doc"
+              : isConvocatoria
+                ? `Convocatoria ${convocatoriaEdition ?? "UCC"}`
+                : isAct1
+                  ? "Diagnóstico Predictivo de Plaza"
+                  : profile.title}
           </h2>
           <p className="mt-3 max-w-md text-base leading-relaxed text-mq-muted sm:text-lg">
             {isDailyPill
-              ? (sessionScore === 100 
-                  ? "Tu agilidad clínica hoy ha sido impecable. Has ganado el trofeo del día y tu racha se mantiene activa."
-                  : "La medicina no es lineal, pero la constancia sí. Mañana tendrás una nueva oportunidad para redimirte.")
-              : isAct1 
-              ? `Hemos calibrado tus resultados contra el histórico de la ${university} para la especialidad de ${specialty}.`
-              : profile.message
-            }
+              ? sessionScore === 100
+                ? "Tu agilidad clínica hoy ha sido impecable. Has ganado el trofeo del día y tu racha se mantiene activa."
+                : "La medicina no es lineal, pero la constancia sí. Mañana tendrás una nueva oportunidad para redimirte."
+              : isConvocatoria
+                ? `Obtuviste ${correctAnswers} aciertos de ${sessionQuestions?.length ?? 100}. Revisa tu radar por eje y el detalle en historial.`
+                : isAct1
+                  ? `Hemos calibrado tus resultados contra el histórico de la ${university} para la especialidad de ${specialty}.`
+                  : profile.message}
           </p>
 
           {(isDailyPill || isAct1) && cumulativeScorePercentage !== undefined && (
@@ -269,7 +282,16 @@ export function FinalResultsScreen({
         </div>
 
         {/* 2. BLOQUE DE ANÁLISIS PREDICTIVO (GRAFICAS) - SOLO PARA DIAGNÓSTICO (NO DAILY PILL) */}
-        {!isDailyPill && (
+        {!isDailyPill && isConvocatoria && sessionQuestions && answersByQuestionId ? (
+          <UccConvocatoriaResultsPanel
+            correctAnswers={correctAnswers}
+            totalQuestions={sessionQuestions.length}
+            sessionQuestions={sessionQuestions}
+            answersByQuestionId={answersByQuestionId}
+          />
+        ) : null}
+
+        {!isDailyPill && !isConvocatoria && (
           <section className="relative mt-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
             <Act2PredictiveDashboard 
                scorePercentage={globalScore}
@@ -403,7 +425,7 @@ export function FinalResultsScreen({
           </motion.div>
         ) : null}
 
-        {!isDailyPill && (
+        {!isDailyPill && !isConvocatoria && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -467,6 +489,22 @@ export function FinalResultsScreen({
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             )
+          ) : isConvocatoria ? (
+            <>
+              <Link
+                href="/dashboard/convocatorias"
+                className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
+              >
+                Volver a convocatorias
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+              <Link
+                href="/dashboard/historial"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+              >
+                Ver historial
+              </Link>
+            </>
           ) : isAct1 && isResidenteUser ? (
             <>
               <Link

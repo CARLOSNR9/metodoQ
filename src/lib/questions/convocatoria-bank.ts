@@ -1,0 +1,18 @@
+import { UCC_CONV_2025_06_21_QUESTIONS } from "@/data/ucc-conv-2025-06-21-questions";
+import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
+import type { TrainingQuestion } from "@/lib/questions/types";
+
+const BANK_BY_EDITION: Record<string, TrainingQuestion[]> = {
+  "UCC-2025-06-21": UCC_CONV_2025_06_21_QUESTIONS,
+};
+
+/** Preguntas de una edición de convocatoria (aisladas del entrenamiento libre). */
+export function getConvocatoriaQuestionBank(editionCode: string): TrainingQuestion[] {
+  const bank = BANK_BY_EDITION[editionCode];
+  if (!bank) return [];
+  return enrichQuestionsWithTheoryPills([...bank]);
+}
+
+export function isKnownConvocatoriaEdition(editionCode: string): boolean {
+  return editionCode in BANK_BY_EDITION;
+}

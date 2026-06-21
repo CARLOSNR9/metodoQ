@@ -33,9 +33,11 @@ type SaveDemoResultInput = {
     | "training"
     | "diagnostico"
     | "simulacro"
+    | "convocatoria"
     | "daily-pill"
     | "repaso"
     | "repaso-cierre";
+  convocatoriaEdition?: string | null;
   uccBlockKind?: UccMiBlockKind | null;
 };
 
@@ -43,6 +45,7 @@ export type SessionTypeLabel =
   | "training"
   | "diagnostico"
   | "simulacro"
+  | "convocatoria"
   | "daily-pill"
   | "repaso"
   | "repaso-cierre";
@@ -58,6 +61,7 @@ export type DemoResultItem = {
   fechaDateKey?: string | null;
   wrongTopics: Record<string, number>;
   sessionType: SessionTypeLabel;
+  convocatoriaEdition?: string | null;
   uccBlockKind?: UccMiBlockKind | null;
 };
 
@@ -166,6 +170,7 @@ export async function saveDemoResult({
   correctTopics = {},
   avgResponseTime = 0,
   sessionType = "training",
+  convocatoriaEdition,
   uccBlockKind,
 }: SaveDemoResultInput) {
   const db = getFirebaseDb();
@@ -179,6 +184,7 @@ export async function saveDemoResult({
     correctTopics,
     avgResponseTime,
     sessionType,
+    ...(convocatoriaEdition ? { convocatoriaEdition } : {}),
     ...(uccBlockKind ? { uccBlockKind } : {}),
     fecha: serverTimestamp(),
   });
@@ -204,6 +210,7 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
     wrongAnswers?: number;
     wrongTopics?: Record<string, number>;
     sessionType?: SessionTypeLabel;
+    convocatoriaEdition?: string;
     uccBlockKind?: UccMiBlockKind;
     fecha?: { toDate?: () => Date };
     fechaDateKey?: string;
@@ -226,6 +233,7 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
         }).format(date)
       : "Fecha no disponible",
     sessionType: data.sessionType ?? "training",
+    convocatoriaEdition: data.convocatoriaEdition ?? null,
     uccBlockKind: data.uccBlockKind ?? null,
   };
 }
@@ -276,6 +284,7 @@ export function getSessionTypeLabel(type: SessionTypeLabel): string {
     training: "Entrenamiento",
     diagnostico: "Diagnóstico",
     simulacro: "Simulacro",
+    convocatoria: "Convocatoria UCC",
     "daily-pill": "Píldora diaria",
     repaso: "Refuerzo",
     "repaso-cierre": "Examen de cierre",

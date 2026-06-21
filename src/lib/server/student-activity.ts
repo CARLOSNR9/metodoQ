@@ -55,6 +55,7 @@ const SESSION_LABELS: Record<SessionTypeLabel, string> = {
   training: "Entrenamiento",
   diagnostico: "Diagnóstico",
   simulacro: "Simulacro",
+  convocatoria: "Convocatoria UCC",
   "daily-pill": "Píldora diaria",
   repaso: "Refuerzo",
   "repaso-cierre": "Examen de cierre",

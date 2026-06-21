@@ -3609,73 +3609,2298 @@ Referencias: Tokyo Guidelines 2018; ASGE biliary drainage.`,
     examArea: "Medicina Interna / Neumología / Urgencias",
     topic: "Medicina Interna",
     difficulty: "hard",
-    tags: ["dr-q", "universal", "metodoq", "tep", "choque_obstructivo", "pocus", "urgencias"],
+    tags: ["dr-q", "universal", "metodoq", "tep", "choque_obstructivo", "trombolisis", "urgencias"],
     statement:
-      "Paciente de 68 años con antecedente de hipertensión arterial, quien consulta al servicio de urgencias por disnea súbita y dolor torácico pleurítico. Al examen físico: presión arterial 85/50 mmHg, frecuencia cardíaca 120 lpm, frecuencia respiratoria 28 rpm, saturación de oxígeno 88% al aire ambiente. Ingurgitación yugular presente. Electrocardiograma: taquicardia sinusal con patrón S1Q3T3. Ante la inestabilidad hemodinámica documentada, ¿cuál es la conducta inicial más adecuada?",
+      "Paciente de 68 años con antecedente de hipertensión, quien consulta por disnea súbita y dolor torácico pleurítico. Al examen físico: PA 85/50 mmHg, FC 120 lpm, FR 28 rpm, SatO₂ 88%. Ingurgitación yugular presente. Electrocardiograma: taquicardia sinusal con patrón S1Q3T3. Ante la inestabilidad hemodinámica, ¿cuál es la conducta inicial más adecuada?",
     options: [
       {
         id: "A",
         label: "A",
-        text: "Inicio inmediato de trombolisis con alteplase.",
-        distractorProfile: "trombolisis_sin_confirmacion_vd",
-        incorrectFeedback:
-          "La trombolisis está indicada en TEP de alto riesgo, pero no debe iniciarse a ciegas sin demostrar disfunción del ventrículo derecho en un paciente inestable.",
+        text: "Anticoagulación con heparina de bajo peso molecular y observación.",
       },
       {
         id: "B",
         label: "B",
-        text: "Infusión de norepinefrina y carga de líquidos 2000 ml.",
-        distractorProfile: "volumen_agresivo_vd",
-        incorrectFeedback:
-          "La norepinefrina es coadyuvante, pero más de 500 mL de volumen puede empeorar el colapso del VI por distensión del VD; no es la prioridad diagnóstica inicial.",
+        text: "Solicitar angiotomografía pulmonar antes de iniciar tratamiento.",
       },
       {
         id: "C",
         label: "C",
-        text: "Ecocardiograma transtorácico a pie de cama.",
+        text: "Trombólisis sistémica inmediata.",
       },
       {
         id: "D",
         label: "D",
-        text: "Angio-TC de tórax.",
-        distractorProfile: "gold_standard_en_choque",
-        incorrectFeedback:
-          "El Angio-TC confirma TEP, pero en un paciente hemodinámicamente inestable el traslado a tomografía retrasa el manejo; el eco point-of-care precede a la imagen tomográfica.",
+        text: "Colocación de filtro de vena cava inferior.",
       },
     ],
     correctOptionId: "C",
     explanation:
-      "TEP de alto riesgo (hipotensión). Aunque el diagnóstico se confirma con Angio-TC, ante inestabilidad hemodinámica la prioridad es demostrar disfunción del ventrículo derecho (signo de McConnell o dilatación) mediante eco point-of-care para justificar la reperfusión inmediata sin retardar el manejo con traslados a tomografía.",
+      "Cuadro altamente sugestivo de tromboembolismo pulmonar de alto riesgo (masivo), con hipotensión e inestabilidad hemodinámica. La reperfusión inmediata mediante trombólisis sistémica es el tratamiento de elección.",
     keyPoints: [
-      "Disnea súbita + hipotensión + signos de falla derecha → TEP de alto riesgo.",
-      "Patrón S1Q3T3: poco sensible, pero específico.",
-      "Estable: Angio-TC. Inestable: ecocardiografía focalizada (POCUS) + soporte inotrópico.",
-      "Tema: Choque obstructivo — tromboembolismo pulmonar.",
+      "Disnea súbita + dolor pleurítico + hipotensión + ingurgitación yugular → TEP de alto riesgo.",
+      "Hipotensión en TEP = alto riesgo; choque obstructivo.",
+      "La trombólisis está indicada en pacientes inestables.",
+      "La anticoagulación aislada no es suficiente en TEP de alto riesgo.",
     ],
-    theoryContent: `LO QUE DEBES SABER PARA EL EXAMEN
+    theoryContent: `URGENTES — BY DR Q.
+Tromboembolismo pulmonar de alto riesgo
 
-Disnea súbita + hipotensión.
-Taquicardia + signos de falla derecha.
-Patrón S1Q3T3 (poco sensible, pero específico).
-Debes pensar en: tromboembolismo pulmonar de alto riesgo.
-Tema: choque obstructivo.
+Lo que debes saber para el examen:
+• Disnea súbita, dolor pleurítico, hipotensión, ingurgitación yugular, signos de sobrecarga derecha → TEP de alto riesgo.
 
-EXPLICACIÓN DEL PROFE BY DR Q
+La clave no es el patrón S1Q3T3; la clave es la hipotensión arterial (PA 85/50 mmHg). Un trombo ocluye la circulación pulmonar → ↑ resistencia vascular pulmonar → dilatación del VD → ↓ llenado del VI → ↓ gasto cardíaco = choque obstructivo.
 
-El error común es querer el "gold standard" (Angio-TC) en un paciente que se está muriendo. En Medicina Interna evaluamos el razonamiento bajo presión. Un TEP masivo mata por falla de VD; el eco nos da el diagnóstico funcional en segundos. Si el eco muestra VD dilatado en un paciente con choque, no busques más: el diagnóstico es TEP hasta demostrar lo contrario. La norepinefrina es coadyuvante, pero la clave es la reperfusión (trombolisis o embolectomía).
+¿Por qué trombólisis?
+Hipotensión + hipoxemia + sobrecarga derecha requieren reperfusión rápida para disolver el trombo, reducir presión pulmonar y mejorar gasto cardíaco.
 
-¿CUÁL ES LA TRAMPA DEL EXAMEN?
+Trampas de examen:
+• No esperar angio-TC en paciente inestable.
+• Anticoagulación sola no basta en choque.
+• S1Q3T3 sugiere sobrecarga derecha, pero la decisión se basa en estabilidad hemodinámica.
 
-Creer que el Angio-TC es el paso inicial en todo paciente inestable. En el examen, si el paciente está inestable, el protocolo de "shocks" (eco a pie de cama) precede a la imagen tomográfica.
+Secuencia: sospechar TEP → valorar estabilidad → identificar hipotensión → clasificar alto riesgo → reperfusión urgente.
 
-¿QUÉ DEBE RECORDARSE?
+Referencias: ESC Guidelines on Pulmonary Embolism; Harrison's; UpToDate: High-Risk PE; CHEST VTE Guidelines.`,
+  },
+  {
+    id: "dr-q-82",
+    examArea: "Medicina Interna / Endocrinología / Urgencias",
+    topic: "Medicina Interna",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "endocrinologia", "cad", "cetoacidosis", "urgencias"],
+    statement:
+      "Mujer de 45 años con antecedente de diabetes mellitus tipo 1 consulta por náuseas, vómito y dolor abdominal. Glucometría: 450 mg/dL. Gasometría arterial: pH 7.1, HCO₃⁻ 8 mEq/L, anion gap 22 mEq/L. ¿Cuál es el orden lógico del manejo inicial?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Insulina intravenosa → líquidos intravenosos → corrección de potasio.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Bicarbonato intravenoso → insulina intravenosa → líquidos intravenosos.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Líquidos intravenosos → evaluación/corrección de potasio → insulina intravenosa.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Insulina subcutánea → líquidos intravenosos → bicarbonato intravenoso.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Cetoacidosis diabética. El manejo inicial debe comenzar con expansión de volumen mediante cristaloides, seguido de evaluación del potasio sérico y posteriormente administración de insulina intravenosa.",
+    keyPoints: [
+      "Hiperglucemia + acidosis metabólica + anion gap elevado → cetoacidosis diabética.",
+      "La primera medida es la reposición de líquidos.",
+      "El potasio debe evaluarse antes de iniciar insulina.",
+      "El bicarbonato rara vez está indicado (pH < 6.9).",
+    ],
+    theoryContent: `URGENTES — BY DR Q.
+Cetoacidosis diabética · secuencia de manejo
 
-Estable: Angio-TC.
-Inestable: ecocardiografía focalizada (POCUS) + soporte inotrópico.
+La clave no es la glucosa; la clave es el orden de las intervenciones.
 
-PERLAS DE EXAMEN
+Fisiopatología: deficiencia de insulina → lipólisis → cuerpos cetónicos → acidosis + diuresis osmótica → deshidratación severa.
 
-• Hipotensión + VD dilatado = trombolisis.
-• No sobrecargar de líquidos (volumen > 500 mL puede empeorar el colapso del VI).`,
+Secuencia correcta:
+1. Líquidos intravenosos (crialoides isotónicos).
+2. Evaluar y corregir potasio (la insulina desplaza K+ intracelularmente y puede precipitar hipokalemia grave).
+3. Insulina regular intravenosa.
+4. Identificar y tratar el factor desencadenante.
+
+Trampa: iniciar insulina inmediatamente sin reponer volumen. El bicarbonato solo se considera en acidosis extrema (pH < 6.9).
+
+Referencias: ADA Standards of Care; Endocrine Society Guidelines; Harrison's; UpToDate: DKA in Adults.`,
+  },
+  {
+    id: "dr-q-83",
+    examArea: "Medicina Interna / Infectología / Urgencias",
+    topic: "Medicina Interna",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "sepsis", "choque_septico", "urgencias", "antibioticos"],
+    statement:
+      "Paciente de 72 años, antecedente de DM2 y ERC estadio 3, ingresa por cuadro de 48 horas de fiebre, disuria y alteración del estado de conciencia. Al examen: PA 88/50 mmHg, FC 115 lpm, FR 24 rpm, temperatura 38.5°C. Laboratorios: lactato 4.2 mmol/L, creatinina 2.1 mg/dL (basal 1.2), leucocitosis con desviación a la izquierda. Tras asegurar la vía aérea, ¿cuál es la medida con mayor impacto en la supervivencia del paciente en la primera hora?",
+    options: [
+      { id: "A", label: "A", text: "Administrar bicarbonato intravenoso." },
+      { id: "B", label: "B", text: "Iniciar vasopresores inmediatamente." },
+      {
+        id: "C",
+        label: "C",
+        text: "Administrar antibióticos de amplio espectro dentro de la primera hora.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Solicitar urocultivo y esperar resultados antes de iniciar tratamiento.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Choque séptico de origen urinario. La administración precoz de antibióticos adecuados es una de las intervenciones con mayor impacto demostrado en la reducción de la mortalidad.",
+    keyPoints: [
+      "Sospecha de infección + hipotensión + lactato elevado + disfunción orgánica → choque séptico.",
+      "Los antibióticos tempranos reducen la mortalidad.",
+      "Los cultivos no deben retrasar el tratamiento.",
+      "Vasopresores si persiste hipotensión tras reanimación con líquidos.",
+    ],
+    theoryContent: `URGENTES — BY DR Q.
+Choque séptico · primera hora
+
+La clave: hipotensión + lactato elevado + infección.
+
+Infección urinaria probable + alteración mental + hipotensión + lactato 4.2 + LRA = choque séptico.
+
+Intervención con mayor impacto en supervivencia: antibióticos de amplio espectro en la primera hora. Cada hora de retraso aumenta mortalidad.
+
+Manejo inicial: cultivos (sin retrasar ATB) + cristaloides + antibióticos tempranos + control del foco + vasopresores si persiste hipotensión.
+
+Trampa: responder vasopresores como primera medida. Los vasopresores no sustituyen el tratamiento de la infección.
+
+Referencias: Surviving Sepsis Campaign; SCCM Sepsis Guidelines; Sepsis-3; UpToDate: Sepsis and Septic Shock.`,
+  },
+  {
+    id: "dr-q-84",
+    examArea: "Medicina Interna / Neurología / Urgencias",
+    topic: "Medicina Interna",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "neurologia", "estatus_epileptico", "urgencias"],
+    statement:
+      "Paciente masculino de 25 años sin antecedentes conocidos, traído a urgencias por convulsión tónico-clónica generalizada que persiste por 12 minutos. Al examen físico no recupera el estado de conciencia entre episodios convulsivos. Tras asegurar la vía aérea y permeabilizar acceso venoso, ¿cuál es el siguiente paso farmacológico correcto?",
+    options: [
+      { id: "A", label: "A", text: "Administrar fenitoína intravenosa como primera medida." },
+      { id: "B", label: "B", text: "Administrar lorazepam o diazepam intravenoso." },
+      { id: "C", label: "C", text: "Iniciar infusión de propofol inmediatamente." },
+      { id: "D", label: "D", text: "Administrar levetiracetam oral." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Estatus epiléptico convulsivo. Tras las medidas iniciales de soporte, el tratamiento farmacológico de primera línea son las benzodiacepinas intravenosas.",
+    keyPoints: [
+      "Convulsión ≥ 5 minutos o sin recuperación de conciencia → estatus epiléptico.",
+      "Las benzodiacepinas son el tratamiento inicial (lorazepam, diazepam, midazolam).",
+      "Fenitoína y levetiracetam son segunda línea.",
+      "Propofol se reserva para estatus refractario.",
+    ],
+    theoryContent: `URGENTES — BY DR Q.
+Estatus epiléptico convulsivo
+
+La clave: el paciente no recupera la conciencia entre las crisis.
+
+Convulsión prolongada + persistencia de actividad epiléptica = estatus epiléptico (≥ 5 min debe tratarse como tal).
+
+Secuencia:
+1. ABC + glucemia capilar.
+2. Benzodiacepina IV (lorazepam o diazepam) — potencian GABA.
+3. Segunda línea: levetiracetam, valproato o fosfenitoína.
+4. Refractario: anestésicos (propofol).
+
+Trampa: iniciar fenitoína como primera línea. La fenitoína es segunda línea.
+
+Referencias: Neurocritical Care Society; American Epilepsy Society; UpToDate: Convulsive Status Epilepticus.`,
+  },
+  {
+    id: "dr-q-85",
+    examArea: "Medicina Interna / Nefrología / Urgencias",
+    topic: "Medicina Interna",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "nefrologia", "hiperpotasemia", "electrolitos", "urgencias"],
+    statement:
+      "Paciente de 60 años con enfermedad renal crónica estadio 4, consulta por debilidad muscular progresiva. Al examen físico se encuentra hemodinámicamente estable. ECG: ondas T picudas y simétricas, desaparición de la onda P y ensanchamiento del complejo QRS. Potasio sérico: 7.4 mEq/L. ¿Cuál es la intervención terapéutica inicial para prevenir una arritmia fatal?",
+    options: [
+      { id: "A", label: "A", text: "Administrar insulina regular con dextrosa." },
+      { id: "B", label: "B", text: "Iniciar hemodiálisis urgente." },
+      { id: "C", label: "C", text: "Administrar gluconato de calcio intravenoso." },
+      { id: "D", label: "D", text: "Administrar salbutamol nebulizado." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Hiperpotasemia grave con cambios electrocardiográficos que amenazan la vida. La primera medida es estabilizar la membrana miocárdica mediante calcio intravenoso.",
+    keyPoints: [
+      "Potasio > 6.5 + cambios ECG → hiperpotasemia grave con toxicidad cardíaca.",
+      "El calcio estabiliza la membrana cardíaca; no disminuye el potasio sérico.",
+      "Después del calcio: insulina + dextrosa, salbutamol, diálisis según contexto.",
+      "Ondas T picudas = hallazgo temprano; QRS ancho = mayor gravedad.",
+    ],
+    theoryContent: `URGENTES — BY DR Q.
+Hiperpotasemia grave con cambios ECG
+
+La clave no es el valor del potasio; la clave son los cambios electrocardiográficos.
+
+Prioridad: proteger el corazón antes de disminuir el potasio.
+
+Secuencia:
+1. Gluconato de calcio IV (estabiliza membrana; no baja K+).
+2. Redistribución intracelular: insulina + dextrosa, salbutamol.
+3. Eliminación: diuréticos, resinas, hemodiálisis (definitivo en ERC avanzada).
+
+Trampa: responder insulina + dextrosa primero. La insulina baja K+ pero no protege inmediatamente al corazón.
+
+Referencias: KDIGO; Harrison's; UpToDate: Hyperkalemia; European Resuscitation Council.`,
+  },
+  {
+    id: "dr-q-86",
+    examArea: "Medicina Interna / Cardiología / Urgencias",
+    topic: "Cardiología",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "cardiologia", "stemi", "iamcest", "reperfusion"],
+    statement:
+      "Paciente de 55 años consulta por dolor torácico opresivo de 60 minutos de evolución, irradiado a miembro superior izquierdo y acompañado de diaforesis. ECG: elevación del segmento ST de 3 mm en V1-V4. PA 130/80 mmHg, FC 90 lpm. ¿Cuál es el objetivo principal del manejo inicial?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Disminuir el consumo miocárdico de oxígeno mediante betabloqueadores.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Lograr la reperfusión coronaria lo más rápido posible.",
+      },
+      { id: "C", label: "C", text: "Controlar el dolor con opioides intravenosos." },
+      {
+        id: "D",
+        label: "D",
+        text: "Prevenir arritmias ventriculares mediante amiodarona profiláctica.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "IAM con elevación del ST (IAMCEST) de localización anterior. El objetivo principal del manejo inicial es restaurar el flujo coronario para limitar el tamaño del infarto y preservar miocardio viable.",
+    keyPoints: [
+      "Dolor típico + elevación del ST en derivaciones contiguas → IAMCEST.",
+      "El IAMCEST es una emergencia de reperfusión: tiempo es músculo.",
+      "Angioplastia primaria preferida; fibrinólisis si PCI no disponible oportunamente.",
+      "Aspirina, analgesia y betabloqueadores son coadyuvantes, no el objetivo principal.",
+    ],
+    theoryContent: `CARDIOLOGÍA — BY DR Q.
+IAM con elevación del ST
+
+La clave no es la localización; la clave es el tiempo.
+
+Oclusión coronaria aguda → isquemia transmural → necrosis progresiva. Elevación del ST = oclusión completa.
+
+Objetivo principal: reabrir la arteria culpable (PCI primaria o fibrinólisis).
+
+Trampa: elegir medidas útiles pero secundarias (morfina, betabloqueadores, amiodarona) cuando la pregunta pide el objetivo principal.
+
+Secuencia: reconocer IAMCEST → activar reperfusión → antitrombóticos → restaurar flujo → prevenir complicaciones.
+
+Referencias: ESC STEMI Guidelines; AHA Guidelines; Braunwald's Heart Disease; UpToDate: STEMI.`,
+  },
+  {
+    id: "dr-q-87",
+    examArea: "Medicina Interna / Infectología / Neurología",
+    topic: "Medicina Interna",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "infectologia", "meningitis", "snc", "puncion_lumbar"],
+    statement:
+      "Paciente de 35 años consulta por fiebre, cefalea intensa y rigidez nucal de varios días de evolución. Tiene antecedente de infección por VIH sin tratamiento antirretroviral. Al examen físico se encuentra somnoliento y presenta ptosis palpebral derecha. ¿Cuál es la conducta inicial correcta?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar ceftriaxona y vancomicina inmediatamente sin estudios adicionales.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Realizar punción lumbar de forma inmediata antes de cualquier imagen.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Solicitar tomografía cerebral antes de realizar la punción lumbar.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Iniciar dexametasona y dar de alta con seguimiento ambulatorio.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Síndrome meníngeo con alteración del estado de conciencia, inmunosupresión y focalización neurológica. Debe descartarse lesión ocupante de espacio o hipertensión intracraneal antes de la punción lumbar.",
+    keyPoints: [
+      "Síndrome meníngeo + alteración mental + déficit focal + inmunosupresión → neuroimagen antes de PL.",
+      "La PL en hipertensión intracraneal puede causar herniación cerebral.",
+      "VIH sin tratamiento aumenta riesgo de lesiones focales (toxoplasmosis, linfoma).",
+      "El tratamiento empírico no debe retrasarse, pero la PL requiere seguridad diagnóstica.",
+    ],
+    theoryContent: `INFECTOLOGÍA — BY DR Q.
+Meningitis · cuándo hacer TAC antes de PL
+
+La clave no es la fiebre; la clave es la focalización neurológica.
+
+Ptosis + somnolencia + VIH sin TARV sugieren posible lesión ocupante de espacio. La PL con efecto de masa puede provocar herniación.
+
+Indicaciones de TAC antes de PL:
+• Alteración del estado mental.
+• Déficit neurológico focal.
+• Papiledema.
+• Convulsiones recientes.
+• Inmunosupresión significativa.
+
+Trampa: meningitis = PL inmediata siempre. En presencia de signos de alerta, la neuroimagen precede.
+
+Referencias: IDSA Bacterial Meningitis Guidelines; Mandell; UpToDate: Suspected Meningitis.`,
+  },
+  {
+    id: "dr-q-88",
+    examArea: "Medicina Interna / Cardiología / Nefrología",
+    topic: "Medicina Interna",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "hipertension", "emergencia_hipertensiva", "urgencias"],
+    statement:
+      "Paciente de 60 años consulta por cefalea intensa y visión borrosa. Al examen físico presenta PA 230/130 mmHg. Laboratorios: creatinina 2.5 mg/dL (basal 1.0 mg/dL). Fondo de ojo con retinopatía hipertensiva avanzada. ¿Cuál es la meta de reducción de la presión arterial durante la primera hora de tratamiento?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Reducir la presión arterial hasta valores normales (<120/80 mmHg).",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Disminuir la presión arterial media aproximadamente un 20-25% durante la primera hora.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Reducir la presión arterial sistólica por debajo de 140 mmHg en los primeros 30 minutos.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Reducir la presión arterial diastólica por debajo de 90 mmHg en la primera hora.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Emergencia hipertensiva con lesión aguda de órgano diana (insuficiencia renal aguda e hipertensión severa). La reducción de la presión arterial debe ser controlada y progresiva para evitar hipoperfusión de órganos vitales.",
+    keyPoints: [
+      "Emergencia hipertensiva = hipertensión severa + daño agudo de órgano diana.",
+      "No normalizar la PA de forma brusca; riesgo de isquemia cerebral, miocárdica y renal.",
+      "Meta inicial: reducir PAM ~20-25% en la primera hora.",
+      "Fármacos IV: nicardipino, labetalol, nitroprusiato según escenario.",
+    ],
+    theoryContent: `URGENTES — BY DR Q.
+Emergencia hipertensiva
+
+La clave: daño agudo de órgano diana, no solo el valor de la PA.
+
+Hipertensión severa + cefalea + alteración visual + LRA aguda = emergencia hipertensiva.
+
+Reducción brusca → isquemia por pérdida de autorregulación vascular crónica.
+
+Meta primera hora: ↓ PAM 20-25%. Descenso gradual en horas siguientes.
+
+Trampa: bajar la PA a normal inmediatamente. La velocidad de descenso es tan importante como el objetivo.
+
+Referencias: European Society of Hypertension; AHA; UpToDate: Hypertensive Emergencies.`,
+  },
+  {
+    id: "dr-q-89",
+    examArea: "Medicina Interna / Cardiología / Urgencias",
+    topic: "Cardiología",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "cardiologia", "eap", "insuficiencia_cardiaca", "urgencias"],
+    statement:
+      "Paciente de 68 años con antecedente de hipertensión arterial consulta por disnea severa de inicio súbito. Refiere ortopnea y sensación de ahogo progresiva. Al examen físico: PA 190/110 mmHg, FC 115 lpm, SatO₂ 84% al aire ambiente. Presenta estertores crepitantes bilaterales hasta campos medios y uso de musculatura accesoria. ¿Qué medida terapéutica impacta más rápidamente en la precarga y postcarga?",
+    options: [
+      { id: "A", label: "A", text: "Furosemida intravenosa." },
+      { id: "B", label: "B", text: "Nitroglicerina intravenosa." },
+      { id: "C", label: "C", text: "Dobutamina intravenosa." },
+      { id: "D", label: "D", text: "Digoxina intravenosa." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Edema agudo de pulmón hipertensivo. Los nitratos intravenosos producen una rápida reducción de la precarga y, a dosis mayores, también disminuyen la postcarga, mejorando rápidamente la congestión pulmonar.",
+    keyPoints: [
+      "Disnea súbita + ortopnea + estertores + hipoxemia + hipertensión → EAP cardiogénico.",
+      "Nitroglicerina: venodilatación (↓ precarga) y vasodilatación arterial a dosis altas (↓ postcarga).",
+      "Furosemida es importante pero su efecto hemodinámico tarda más.",
+      "Dobutamina para bajo gasto/choque; digoxina no tiene utilidad aguda en EAP.",
+    ],
+    theoryContent: `CARDIOLOGÍA — BY DR Q.
+Edema agudo de pulmón hipertensivo
+
+La clave: hipertensión severa + congestión pulmonar.
+
+↑ presiones de llenado del VI → ↑ presión hidrostática pulmonar → líquido en alvéolos.
+
+Objetivo inmediato: ↓ precarga y postcarga. Nitroglicerina IV actúa en minutos (venodilatación + vasodilatación arterial).
+
+Trampa: responder furosemida porque se asocia con edema pulmonar. La furosemida elimina volumen pero no modifica tan rápido la hemodinamia.
+
+Secuencia: oxigenación → nitratos IV → diuréticos según situación → corregir causa.
+
+Referencias: ESC Acute Heart Failure Guidelines; Braunwald's; UpToDate: Acute Decompensated HF.`,
+  },
+  {
+    id: "dr-q-90",
+    examArea: "Medicina Interna / Cardiología / Urgencias",
+    topic: "Cardiología",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "cardiologia", "choque_cardiogenico", "iam", "urgencias"],
+    statement:
+      "Paciente de 64 años hospitalizado por infarto agudo de miocardio de cara anterior. Durante su evolución presenta PA 80/50 mmHg, frecuencia cardíaca 115 lpm, llenado capilar de 4 segundos, oliguria y estertores bilaterales en ambos campos pulmonares. ¿Cuál es la conducta más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Administrar bolo rápido de solución salina al 0.9%." },
+      {
+        id: "B",
+        label: "B",
+        text: "Iniciar nitroglicerina intravenosa para disminuir la congestión pulmonar.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar soporte inotrópico urgente y activar estrategia de reperfusión/revascularización.",
+      },
+      { id: "D", label: "D", text: "Administrar furosemida como única medida inicial." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Choque cardiogénico secundario a infarto agudo de miocardio. La prioridad es restaurar la perfusión sistémica y corregir la causa subyacente mediante revascularización precoz.",
+    keyPoints: [
+      "IAM + hipotensión + oliguria + congestión pulmonar = choque cardiogénico.",
+      "Hipoperfusión + congestión pulmonar simultáneas definen el cuadro.",
+      "Revascularización precoz mejora supervivencia.",
+      "Líquidos y nitratos pueden empeorar congestión o hipoperfusión.",
+    ],
+    theoryContent: `CARDIOLOGÍA — BY DR Q.
+Choque cardiogénico post-IAM
+
+La clave: hipoperfusión + congestión pulmonar.
+
+Infarto extenso → ↓ función VI → ↓ gasto cardíaco + edema pulmonar + hipoperfusión sistémica.
+
+Prioridades:
+1. Soporte inotrópico/hemodinámico.
+2. Revascularización urgente (reperfusión = mayor impacto en supervivencia).
+
+Trampas:
+• Líquidos: empeoran congestión pulmonar.
+• Nitratos: agravan hipotensión.
+• Solo diuréticos: no corrigen bajo gasto cardíaco.
+
+Referencias: ESC ACS Guidelines; AHA STEMI and Cardiogenic Shock; UpToDate: Cardiogenic Shock.`,
+  },
+  {
+    id: "dr-q-91",
+    examArea: "Ginecología y Obstetricia / Urgencias",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "ginecologia", "obstetricia", "embarazo_ectopico", "urgencias"],
+    statement:
+      "Mujer de 26 años, G2P1, consulta al servicio de urgencias por dolor abdominal bajo de aparición súbita irradiado a hombro derecho. Refiere amenorrea de 7 semanas. Al examen físico se encuentra pálida y diaforética. Signos vitales: TA 80/50 mmHg, FC 125 lpm, FR 22 rpm. Abdomen con resistencia muscular y signos de irritación peritoneal difusa. Tacto vaginal: dolor intenso a la movilización cervical y abombamiento del fondo de saco de Douglas. Prueba de embarazo positiva. Ecografía FAST a pie de cama: útero vacío y abundante líquido libre ecogénico intraabdominal. ¿Cuál es la conducta inicial más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Solicitar β-hCG cuantitativa seriada y observación hospitalaria." },
+      { id: "B", label: "B", text: "Administrar metotrexato intramuscular." },
+      { id: "C", label: "C", text: "Realizar laparoscopia diagnóstica programada." },
+      {
+        id: "D",
+        label: "D",
+        text: "Reanimación hemodinámica inmediata y laparotomía exploratoria urgente.",
+      },
+    ],
+    correctOptionId: "D",
+    explanation:
+      "Embarazo ectópico roto con choque hemorrágico e irritación peritoneal generalizada. La prioridad es estabilización hemodinámica y control quirúrgico urgente de la hemorragia.",
+    keyPoints: [
+      "Amenorrea + embarazo positivo + útero vacío + líquido libre + inestabilidad → embarazo ectópico roto.",
+      "Hipotensión y taquicardia indican choque hemorrágico.",
+      "Dolor en hombro = irritación diafragmática por hemoperitoneo (signo de Kehr).",
+      "Metotrexato contraindicado en pacientes inestables con hemoperitoneo.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Embarazo ectópico roto
+
+La clave: choque hemorrágico, no la amenorrea.
+
+Útero vacío + embarazo positivo + líquido libre ecogénico + hipotensión = embarazo ectópico roto con hemoperitoneo.
+
+Prioridad: reanimación (accesos venosos, cristaloides, hemoderivados) + cirugía urgente para control del sangrado.
+
+Trampas:
+• Metotrexato solo en pacientes estables sin ruptura.
+• No retrasar por β-hCG seriada.
+• En inestabilidad, laparotomía suele ser más rápida que laparoscopia.
+
+Referencias: Williams Obstetrics; ACOG Tubal Ectopic Pregnancy; UpToDate: Ectopic Pregnancy Management.`,
+  },
+  {
+    id: "dr-q-92",
+    examArea: "Ginecología y Obstetricia / Trastornos hipertensivos",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "ginecologia", "obstetricia", "preeclampsia", "hellp"],
+    statement:
+      "Primigestante de 17 años, con embarazo de 33 semanas confirmado por ecografía de primer trimestre, es llevada a urgencias por cefalea occipital intensa y fosfenos de 6 horas de evolución. Refiere además dolor epigástrico tipo ardor. Al ingreso presenta TA 165/115 mmHg (confirmada 15 minutos después), FC 90 lpm. Al examen físico se documenta hiperreflexia patelar (+++/++++), dolor a la palpación profunda en hipocondrio derecho. RCTG: feto reactivo sin desaceleraciones. Laboratorios: AST 180 U/L, ALT 210 U/L, plaquetas 75.000/μL, creatinina 1.1 mg/dL. ¿Cuál es el siguiente paso más apropiado en el manejo?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Manejo expectante con vigilancia materno-fetal hasta completar 37 semanas.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Administrar sulfato de magnesio, controlar la hipertensión e iniciar finalización del embarazo una vez estabilizada la madre.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Administrar corticoides para maduración pulmonar y dar egreso con seguimiento estrecho.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Solicitar proteinuria de 24 horas antes de establecer conducta definitiva.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Preeclampsia con criterios de gravedad asociada a síndrome HELLP. Estabilizar a la madre con sulfato de magnesio y antihipertensivos, y proceder a la finalización del embarazo independientemente del bienestar fetal.",
+    keyPoints: [
+      "TA ≥160/110 + cefalea + fosfenos + epigastralgia + plaquetas <100.000 + transaminasas elevadas → preeclampsia grave con HELLP.",
+      "Sulfato de magnesio previene eclampsia.",
+      "La única cura definitiva es la finalización del embarazo.",
+      "La proteinuria no es indispensable cuando existe daño orgánico materno evidente.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Preeclampsia grave con HELLP
+
+La clave: daño orgánico materno, no solo la presión arterial.
+
+HELLP: plaquetas <100.000 + transaminasas elevadas + (hemólisis). Riesgo de eclampsia, CID, desprendimiento placentario y muerte materna.
+
+Conducta: sulfato de magnesio + control de PA + finalización del embarazo tras estabilización. No conducta expectante a las 33 semanas con HELLP.
+
+Trampa: prolongar gestación por edad gestacional o bienestar fetal normal. La condición materna tiene prioridad.
+
+Referencias: ACOG Gestational Hypertension and Preeclampsia; Williams Obstetrics; UpToDate: HELLP Syndrome.`,
+  },
+  {
+    id: "dr-q-93",
+    examArea: "Ginecología y Obstetricia / Hemorragias obstétricas",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "ginecologia", "obstetricia", "dppni", "hemorragia"],
+    statement:
+      "Mujer de 35 años, G4P3, con embarazo de 36 semanas y antecedente de tabaquismo pesado, consulta por inicio súbito de dolor abdominal intenso y continuo, acompañado de sangrado vaginal rojo oscuro de moderada cantidad. Al examen físico: TA 150/90 mmHg, FC 110 lpm. Se evidencia útero hipertónico (\"leñoso\"), doloroso a la palpación y que no relaja entre contracciones. La altura uterina actual es de 38 cm, habiendo sido de 34 cm en el control previo. La cardiotocografía muestra frecuencia cardíaca fetal basal de 100 lpm, pérdida de la variabilidad y desaceleraciones tardías repetitivas. ¿Cuál es el diagnóstico más probable y la conducta inmediata?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Placenta previa sangrante; realizar ecografía transvaginal urgente antes de cualquier intervención.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Desprendimiento prematuro de placenta normoinserta (DPPNI) grave; estabilización materna y cesárea urgente.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Rotura uterina; inducción del trabajo de parto para finalizar rápidamente la gestación.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Trabajo de parto pretérmino con sufrimiento fetal; administrar tocolíticos y corticoides antenatales.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Cuadro clásico de DPPNI grave: dolor abdominal intenso, sangrado oscuro, útero leñoso, aumento de altura uterina por hematoma retroplacentario y compromiso fetal agudo. Estabilización materna y cesárea urgente.",
+    keyPoints: [
+      "DPPNI: dolor intenso + útero leñoso + sangrado oscuro + sufrimiento fetal.",
+      "Placenta previa: sangrado rojo brillante, indoloro, útero blando.",
+      "El DPPNI es diagnóstico clínico; la ecografía no debe retrasar la intervención.",
+      "Tabaquismo es factor de riesgo importante para DPPNI.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Desprendimiento prematuro de placenta normoinserta (DPPNI)
+
+La clave: dolor + hipertonía uterina, no solo el sangrado.
+
+Separación prematura de placenta normoinserta → hematoma retroplacentario → ↑ presión intrauterina → hipoxia fetal aguda.
+
+Hallazgos: dolor brusco, útero leñoso, sangrado oscuro (puede subestimar hemorragia), ↑ altura uterina, CTG con bradicardia/desaceleraciones tardías.
+
+Conducta: estabilización materna + cesárea urgente. No esperar ecografía.
+
+Referencias: Williams Obstetrics; ACOG Placental Abruption; UpToDate: Placental Abruption.`,
+  },
+  {
+    id: "dr-q-94",
+    examArea: "Ginecología y Obstetricia / Hemorragia posparto",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ginecologia", "obstetricia", "hpp", "atonia_uterina"],
+    statement:
+      "Mujer de 28 años, con diagnóstico de hipertensión gestacional en seguimiento prenatal, acaba de tener un parto vaginal de un recién nacido macrosómico de 4.200 g tras 14 horas de trabajo de parto y uso de oxitocina. Quince minutos después del alumbramiento presenta sangrado vaginal profuso. Al examen físico: TA 150/95 mmHg, FC 115 lpm. Se palpa un fondo uterino supraumbilical, flácido y de consistencia blanda. Se realiza masaje uterino bimanual y se optimiza la infusión de oxitocina sin lograr control del sangrado. ¿Cuál es el uterotónico de segunda línea más adecuado y seguro como siguiente paso?",
+    options: [
+      { id: "A", label: "A", text: "Metilergonovina." },
+      { id: "B", label: "B", text: "Misoprostol." },
+      { id: "C", label: "C", text: "Carboprost trometamina." },
+      { id: "D", label: "D", text: "Ácido tranexámico." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Hemorragia posparto por atonía uterina. Antecedente de hipertensión gestacional contraindica metilergonovina por riesgo de crisis hipertensiva. El misoprostol es una alternativa segura y eficaz como uterotónico de segunda línea.",
+    keyPoints: [
+      "Atonía uterina: sangrado + útero blando + fondo uterino elevado.",
+      "Secuencia: masaje uterino → oxitocina → segundo uterotónico.",
+      "Metilergonovina contraindicada en hipertensión gestacional/preeclampsia.",
+      "Misoprostol es alternativa segura en pacientes hipertensas.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Hemorragia posparto por atonía uterina
+
+La clave: hipertensión gestacional al elegir el segundo uterotónico.
+
+Factores de riesgo en el caso: trabajo de parto prolongado, oxitocina prolongada, macrosomía → fatiga miometrial.
+
+Metilergonovina: excelente uterotónico pero vasoconstricción intensa → contraindicada en HTA gestacional/preeclampsia.
+
+Misoprostol: ↑ tono uterino sin riesgo significativo de crisis hipertensiva. Ácido tranexámico no es uterotónico.
+
+Trampa: atonía → metilergonovina sin revisar comorbilidades.
+
+Referencias: ACOG Postpartum Hemorrhage; WHO PPH Guidelines; Williams Obstetrics.`,
+  },
+  {
+    id: "dr-q-95",
+    examArea: "Ginecología y Obstetricia / Urgencias ginecológicas",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ginecologia", "torsión_ovarica", "urgencias"],
+    statement:
+      "Mujer de 24 años, sin antecedentes de importancia, consulta por dolor abdominal bajo de aparición súbita, localizado predominantemente en fosa ilíaca derecha, de intensidad severa, tipo punzante, que la despertó durante la noche. Se acompaña de náuseas y dos episodios de vómito. Al examen físico presenta dolor a la palpación profunda en fosa ilíaca derecha con defensa voluntaria, sin signos claros de irritación peritoneal. Ecografía transvaginal: útero normal, ovario derecho aumentado de tamaño (7 x 5 cm) con múltiples folículos periféricos y quiste simple de 5 cm. Doppler: flujo arterial conservado, ausencia de flujo venoso en ovario derecho. Prueba de embarazo negativa. ¿Cuál es la conducta inicial de elección?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Observación hospitalaria y repetición de ecografía Doppler en 24 horas.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Inicio de antibióticos de amplio espectro por sospecha de enfermedad pélvica inflamatoria.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Laparoscopia urgente con detorsión ovárica y preservación del ovario si es viable.",
+      },
+      { id: "D", label: "D", text: "Ooforectomía derecha inmediata." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Cuadro altamente sugestivo de torsión ovárica. La ausencia de flujo venoso es uno de los hallazgos más precoces. El tratamiento es laparoscopia urgente para preservar la función ovárica.",
+    keyPoints: [
+      "Dolor pélvico súbito intenso + náuseas/vómito + ovario aumentado → torsión ovárica.",
+      "Ausencia de flujo venoso en Doppler es hallazgo precoz y sugestivo.",
+      "Flujo arterial conservado no excluye torsión (obstrucción venosa ocurre primero).",
+      "Preservar el ovario siempre que sea posible.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Torsión ovárica
+
+La clave: ausencia de flujo venoso, no el quiste.
+
+Ovario gira sobre su pedículo → obstrucción venosa primero → isquemia → necrosis.
+
+Trampa clásica: flujo arterial conservado descarta torsión. FALSO: la obstrucción venosa precede a la arterial.
+
+Conducta: laparoscopia urgente + detorsión + preservación ovárica. No observar 24 h.
+
+Referencias: ACOG Adnexal Torsion; Williams Gynecology; UpToDate: Ovarian Torsion.`,
+  },
+  {
+    id: "dr-q-96",
+    examArea: "Ginecología y Obstetricia / Infectología ginecológica",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ginecologia", "eip", "infecciones"],
+    statement:
+      "Mujer de 25 años, nulípara, sin métodos anticonceptivos, consulta por dolor pélvico progresivo bilateral de 4 días de evolución, acompañado de fiebre de 38.5°C, malestar general y flujo vaginal amarillento de mal olor. Refiere nueva pareja sexual hace 3 semanas. Al examen físico: abdomen inferior doloroso a la palpación. A la especuloscopia se observa cérvix eritematoso y friable con secreción mucopurulenta. Al tacto vaginal presenta intenso dolor a la movilización cervical y anexos dolorosos bilateralmente. Ecografía pélvica: útero y ovarios normales, sin masas anexiales ni líquido libre. Prueba de embarazo negativa. ¿Cuál es el manejo empírico inicial más apropiado?",
+    options: [
+      { id: "A", label: "A", text: "Azitromicina oral en dosis única y control ambulatorio." },
+      {
+        id: "B",
+        label: "B",
+        text: "Ceftriaxona intramuscular más doxiciclina y metronidazol.",
+      },
+      { id: "C", label: "C", text: "Legrado uterino diagnóstico." },
+      { id: "D", label: "D", text: "Histerectomía subtotal urgente." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Cuadro compatible con enfermedad inflamatoria pélvica (EIP). Tratamiento empírico inmediato cubriendo Neisseria gonorrhoeae, Chlamydia trachomatis y flora anaerobia.",
+    keyPoints: [
+      "Dolor pélvico + fiebre + flujo mucopurulento + dolor a movilización cervical → EIP.",
+      "La ecografía puede ser normal en fases iniciales; EIP es diagnóstico clínico.",
+      "Esquema: ceftriaxona + doxiciclina + metronidazol.",
+      "Retrasar tratamiento aumenta riesgo de infertilidad tubárica y embarazo ectópico.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Enfermedad inflamatoria pélvica (EIP)
+
+La clave: dolor a la movilización cervical, no la ecografía.
+
+Diagnóstico clínico. Ecografía normal no excluye EIP (útil para absceso tuboovárico).
+
+Cobertura empírica: gonococo (ceftriaxona) + clamidia (doxiciclina) + anaerobios (metronidazol).
+
+Trampa: ecografía normal → descartar EIP. FALSO.
+
+Referencias: CDC STI Guidelines; ACOG PID Practice Bulletin; UpToDate: Pelvic Inflammatory Disease.`,
+  },
+  {
+    id: "dr-q-97",
+    examArea: "Ginecología y Obstetricia / Hemorragias del tercer trimestre",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "obstetricia", "placenta_previa", "hemorragia"],
+    statement:
+      "Mujer de 33 años, G3P2, con embarazo de 32 semanas, consulta a urgencias porque despertó en medio de un charco de sangre. Refiere sangrado vaginal rojo rutilante, de moderada cantidad, completamente indoloro. Niega contracciones, pérdida de líquido amniótico o antecedente traumático. Al examen físico: TA 110/70 mmHg, FC 88 lpm. Abdomen blando, no doloroso, útero con tono normal. Registro cardiotocográfico reactivo. Ante la sospecha clínica, ¿cuál es el paso diagnóstico inicial más apropiado?",
+    options: [
+      { id: "A", label: "A", text: "Tacto vaginal para determinar dilatación cervical." },
+      { id: "B", label: "B", text: "Amnioscopia diagnóstica." },
+      {
+        id: "C",
+        label: "C",
+        text: "Ecografía obstétrica con evaluación de la localización placentaria.",
+      },
+      { id: "D", label: "D", text: "Inducción inmediata del trabajo de parto." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Cuadro clínico altamente sugestivo de placenta previa. El estudio inicial de elección es la ecografía para determinar la relación de la placenta con el orificio cervical interno.",
+    keyPoints: [
+      "Placenta previa: sangrado rojo brillante, indoloro, útero blando en tercer trimestre.",
+      "Tacto vaginal contraindicado ante sospecha de placenta previa.",
+      "Ecografía es el estudio diagnóstico inicial de elección.",
+      "DPPNI: sangrado oscuro + dolor + útero leñoso.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Placenta previa
+
+La clave: sangrado indoloro.
+
+Placenta en segmento inferior → distensión uterina → separación parcial → sangrado rojo brillante sin dolor.
+
+Conducta diagnóstica: ecografía obstétrica. NO tacto vaginal (puede desencadenar hemorragia masiva).
+
+Trampa: tacto vaginal en todo sangrado obstétrico. En placenta previa es peligroso.
+
+Referencias: Williams Obstetrics; ACOG Placenta Previa; UpToDate: Placenta Previa.`,
+  },
+  {
+    id: "dr-q-98",
+    examArea: "Ginecología y Obstetricia / Sangrado uterino anormal",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ginecologia", "sua", "cancer_endometrio"],
+    statement:
+      "Mujer de 48 años, con IMC de 36 kg/m² y diagnóstico de diabetes mellitus tipo 2, consulta por sangrado menstrual abundante y prolongado desde hace 6 meses. Refiere uso de 6 a 8 toallas higiénicas al día y ciclos cada vez más irregulares. Nunca ha estado embarazada. Al examen físico: PA 130/80 mmHg, examen pélvico sin alteraciones anatómicas evidentes, útero de tamaño normal. Ecografía transvaginal: útero de morfología normal, ovarios sin alteraciones y línea endometrial heterogénea de 17 mm. Prueba de embarazo negativa. ¿Cuál es el paso diagnóstico más importante a seguir?",
+    options: [
+      { id: "A", label: "A", text: "Solicitar niveles séricos de FSH y estradiol." },
+      {
+        id: "B",
+        label: "B",
+        text: "Iniciar tratamiento hormonal empírico y reevaluar en 6 meses.",
+      },
+      { id: "C", label: "C", text: "Realizar biopsia endometrial." },
+      { id: "D", label: "D", text: "Solicitar resonancia magnética pélvica." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Sangrado uterino anormal con múltiples factores de riesgo para hiperplasia y cáncer de endometrio (obesidad, diabetes, nuliparidad, edad >45 años) y endometrio engrosado heterogéneo. La biopsia endometrial es obligatoria.",
+    keyPoints: [
+      "Mujer ≥45 años con SUA + factores de riesgo → descartar cáncer endometrial.",
+      "Obesidad → aromatización periférica → exposición estrogénica sin oposición.",
+      "Endometrio engrosado (17 mm) debe estudiarse histológicamente.",
+      "No iniciar tratamiento hormonal empírico sin excluir malignidad.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Sangrado uterino anormal · riesgo de cáncer endometrial
+
+La clave: factores de riesgo (obesidad, diabetes, nuliparidad, edad) + endometrio engrosado.
+
+Obesidad → ↑ estrógenos por aromatización → hiperplasia → atipia → carcinoma.
+
+Paso diagnóstico fundamental: biopsia endometrial. FSH no explica endometrio de 17 mm en paciente de alto riesgo.
+
+Trampa: perimenopausia fisiológica sin evaluar endometrio.
+
+Referencias: ACOG Abnormal Uterine Bleeding; Williams Gynecology; NCCN Endometrial Cancer Guidelines.`,
+  },
+  {
+    id: "dr-q-99",
+    examArea: "Ginecología y Obstetricia / Infecciones obstétricas",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "obstetricia", "corioamnionitis", "infecciones"],
+    statement:
+      "Mujer de 21 años, primigestante, con embarazo de 38 semanas, consulta por pérdida de líquido claro y abundante por vagina desde hace 24 horas. Refiere disminución de movimientos fetales. Al examen físico: TA 110/70 mmHg, FC materna 115 lpm, temperatura 38.6°C. Altura uterina 34 cm. Útero doloroso a la palpación profunda e irritable. Tacto vaginal: cérvix borrado 80%, dilatación 3 cm, salida de líquido amniótico de mal olor. Registro cardiotocográfico: frecuencia cardíaca fetal basal de 175 lpm, variabilidad mínima, sin desaceleraciones. ¿Cuál es el diagnóstico más probable y la conducta terapéutica indicada?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Ruptura prematura de membranas sin infección; manejo expectante.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Corioamnionitis clínica; iniciar antibióticos intravenosos de amplio espectro y finalizar el embarazo.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Desprendimiento prematuro de placenta normoinserta; cesárea urgente.",
+      },
+      { id: "D", label: "D", text: "Preeclampsia grave; iniciar sulfato de magnesio." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Criterios clínicos de corioamnionitis: fiebre materna, taquicardia materna y fetal, útero doloroso e irritable y líquido amniótico fétido. Antibioticoterapia IV inmediata y finalización del embarazo.",
+    keyPoints: [
+      "RPM + fiebre + taquicardia materna/fetal + líquido fétido + dolor uterino → corioamnionitis.",
+      "Taquicardia fetal (175 lpm) es hallazgo frecuente de infección intraamniótica.",
+      "Tratamiento: ATB IV (ampicilina + gentamicina) + finalizar embarazo.",
+      "Corioamnionitis no es indicación absoluta de cesárea.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Corioamnionitis clínica
+
+La clave: signos de infección materno-fetal, no solo ruptura de membranas.
+
+RPM prolongada → ascenso bacteriano → infección de membranas, líquido, placenta y feto.
+
+Tratamiento: ATB IV + finalizar gestación (la fuente infecciosa persiste mientras continúe el embarazo).
+
+Trampa: RPM → observación. Si hay corioamnionitis establecida, no manejo expectante.
+
+Referencias: ACOG Intraamniotic Infection; Williams Obstetrics; UpToDate: Clinical Chorioamnionitis.`,
+  },
+  {
+    id: "dr-q-100",
+    examArea: "Ginecología y Obstetricia / Trastornos hipertensivos",
+    topic: "Ginecología y Obstetricia",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "obstetricia", "eclampsia", "puerperio", "sulfato_magnesio"],
+    statement:
+      "Mujer de 19 años, nulípara, cursando la primera semana de puerperio tras un parto institucional sin complicaciones aparentes, es llevada a urgencias por presentar convulsiones en domicilio. Su madre describe un episodio de movimientos tónico-clónicos generalizados de aproximadamente 2 minutos de duración, asociado a relajación de esfínteres y cianosis peribucal. La paciente llega somnolienta y confusa. Signos vitales: TA 160/110 mmHg, FC 105 lpm, SatO₂ 96% con oxígeno suplementario. Durante la valoración médica presenta una nueva convulsión tónico-clónica generalizada. ¿Cuál es la primera intervención farmacológica indicada para controlar y prevenir nuevas crisis?",
+    options: [
+      { id: "A", label: "A", text: "Diazepam intravenoso." },
+      { id: "B", label: "B", text: "Fenitoína intravenosa." },
+      { id: "C", label: "C", text: "Sulfato de magnesio intravenoso." },
+      { id: "D", label: "D", text: "Levetiracetam intravenoso." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Eclampsia posparto. El tratamiento de elección para controlar y prevenir nuevas convulsiones es el sulfato de magnesio, superior a fenitoína y benzodiacepinas en este contexto.",
+    keyPoints: [
+      "Convulsiones + hipertensión + puerperio reciente → eclampsia hasta demostrar lo contrario.",
+      "La eclampsia puede aparecer en el puerperio, incluso días después del parto.",
+      "Sulfato de magnesio es el tratamiento de elección.",
+      "Además: vía aérea, oxigenación y control de hipertensión severa.",
+    ],
+    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+Eclampsia posparto
+
+La clave: puerperio + hipertensión severa, no solo la convulsión.
+
+Eclampsia = convulsiones en contexto de enfermedad hipertensiva del embarazo (puede ocurrir en embarazo, parto o puerperio).
+
+Primera intervención farmacológica: sulfato de magnesio IV (superior a diazepam y fenitoína para prevenir recurrencias).
+
+Trampa: convulsión → benzodiacepina o fenitoína. En eclampsia, sulfato de magnesio.
+
+Referencias: ACOG Gestational Hypertension and Preeclampsia; Williams Obstetrics; UpToDate: Eclampsia.`,
+  },
+  {
+    id: "dr-q-101",
+    examArea: "Psiquiatría / Medicina Interna",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "delirium", "medicina_interna"],
+    statement:
+      "Hombre de 74 años, con antecedentes de hipertensión arterial y diabetes mellitus, cursa su segundo día postoperatorio tras un reemplazo total de cadera. Durante la noche, el personal de enfermería reporta comportamiento agresivo, intento de retiro de la sonda vesical y alucinaciones visuales (\"veía insectos en las sábanas\"). En la evaluación de la mañana se encuentra somnoliento, orientado únicamente en persona, con marcada dificultad para mantener la atención durante la entrevista. Signos vitales: TA 145/90 mmHg, FC 88 lpm, T 37.2°C, SpO₂ 94%. Creatinina 1.4 mg/dL. ¿Cuál es la conducta inicial más apropiada?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Solicitar resonancia magnética cerebral urgente para descartar accidente cerebrovascular.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Iniciar haloperidol intravenoso de forma rutinaria y permanente.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Diagnosticar demencia de inicio reciente e iniciar inhibidores de acetilcolinesterasa.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Identificar y corregir causas precipitantes, implementar medidas no farmacológicas para delirium y reservar antipsicóticos solo si existe riesgo para el paciente o el personal.",
+      },
+    ],
+    correctOptionId: "D",
+    explanation:
+      "Cuadro típico de delirium postoperatorio: inicio agudo, curso fluctuante, alteración de la atención, desorientación y alteraciones perceptivas. El manejo inicial debe centrarse en identificar causas reversibles y aplicar medidas no farmacológicas.",
+    keyPoints: [
+      "Inicio agudo + curso fluctuante + alteración de la atención → delirium.",
+      "La alteración de la atención es el hallazgo cardinal.",
+      "Buscar causas reversibles: hipoxemia, infección, retención urinaria, fármacos.",
+      "Antipsicóticos no son rutina; reservar para agitación severa o riesgo.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Delirium postoperatorio
+
+La clave: alteración de la atención con inicio agudo y curso fluctuante, no las alucinaciones.
+
+Factores predisponentes: edad avanzada, cirugía mayor, dolor, privación del sueño, infección, retención urinaria, fármacos.
+
+Manejo: buscar causas reversibles + medidas no farmacológicas (reorientación, sueño, movilización, hidratación). Antipsicóticos solo si agitación severa o riesgo.
+
+Trampa: alucinaciones → trastorno psiquiátrico primario. Demencia = inicio insidioso y progresivo.
+
+Referencias: Harrison's; DSM-5-TR; AGS Postoperative Delirium Guidelines; UpToDate: Delirium.`,
+  },
+  {
+    id: "dr-q-102",
+    examArea: "Psiquiatría / Urgencias",
+    topic: "Psiquiatría",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "snm", "neuroleptico", "urgencias"],
+    statement:
+      "Mujer de 28 años con diagnóstico conocido de esquizofrenia, es llevada a urgencias por cuadro de 48 horas de evolución caracterizado por estupor, mutismo y rechazo de la vía oral. Al examen físico presenta FC 110 lpm, diaforesis profusa y temperatura de 39.4°C. Se evidencia rigidez muscular generalizada en \"tubo de plomo\". Laboratorios: leucocitos 15.000/mm³ y CPK 12.500 U/L. Recibe actualmente haloperidol 10 mg/día. ¿Cuál es el diagnóstico más probable y la conducta inmediata?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Catatonia maligna; administrar benzodiacepinas y continuar haloperidol.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Síndrome serotoninérgico; suspender haloperidol e iniciar ciproeptadina.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Meningoencefalitis bacteriana; iniciar antibióticos de amplio espectro.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Síndrome neuroléptico maligno; suspender inmediatamente el antipsicótico e iniciar tratamiento de soporte intensivo.",
+      },
+    ],
+    correctOptionId: "D",
+    explanation:
+      "Hipertermia, rigidez en tubo de plomo, alteración del estado mental, disautonomía y CPK muy elevada en paciente con haloperidol = síndrome neuroléptico maligno. Suspender el antipsicótico e iniciar soporte intensivo.",
+    keyPoints: [
+      "Antipsicótico + fiebre + rigidez + CPK elevada → síndrome neuroléptico maligno.",
+      "Tríada: fiebre, rigidez, alteración del estado mental.",
+      "Suspensión inmediata del antipsicótico es obligatoria.",
+      "Rigidez en tubo de plomo orienta a SNM; clonus orienta a síndrome serotoninérgico.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Síndrome neuroléptico maligno
+
+La clave: fiebre + rigidez + antipsicótico.
+
+Bloqueo dopaminérgico intenso → disfunción hipotalámica, rigidez, inestabilidad autonómica, rabdomiólisis (CPK muy elevada).
+
+Conducta: suspender neuroléptico + soporte intensivo (hidratación, control temperatura, función renal). Dantroleno/bromocriptina en casos graves.
+
+Trampa: confundir con síndrome serotoninérgico (clonus, hiperreflexia, mioclonías).
+
+Referencias: Harrison's; UpToDate: Neuroleptic Malignant Syndrome; Kaplan & Sadock's.`,
+  },
+  {
+    id: "dr-q-103",
+    examArea: "Psiquiatría / Trastorno bipolar",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "bipolar", "mania", "valproato"],
+    statement:
+      "Hombre de 32 años con antecedente conocido de Trastorno Bipolar tipo I. Ingresa por cuadro de 5 días de evolución caracterizado por logorrea, fuga de ideas, hiperactividad, compras compulsivas, gastos excesivos y marcada disminución de la necesidad de sueño (duerme aproximadamente 2 horas por noche y refiere sentirse lleno de energía). Durante la entrevista manifiesta ser \"el enviado para salvar la economía del país\". Al examen físico se encuentra hemodinámicamente estable y sin signos de falla orgánica aguda. Laboratorios: creatinina 2.2 mg/dL. ¿Cuál es el estabilizador del ánimo de elección en este paciente?",
+    options: [
+      { id: "A", label: "A", text: "Litio." },
+      { id: "B", label: "B", text: "Valproato." },
+      { id: "C", label: "C", text: "Carbamazepina." },
+      { id: "D", label: "D", text: "Lamotrigina." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Episodio maníaco agudo con síntomas psicóticos. La insuficiencia renal (creatinina 2.2 mg/dL) contraindica o limita severamente el litio; el valproato es el estabilizador de elección en este contexto.",
+    keyPoints: [
+      "Manía: grandiosidad, ↓ necesidad de sueño, logorrea, conductas de riesgo.",
+      "Litio se elimina por vía renal; evitar en insuficiencia renal significativa.",
+      "Valproato: eficaz en manía aguda, no depende de eliminación renal.",
+      "Lamotrigina: prevención de fases depresivas, no manía aguda.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Episodio maníaco · elección de estabilizador
+
+La clave: creatinina 2.2 mg/dL, no solo el diagnóstico bipolar.
+
+Litio = clásico pero contraindicado/limitado con IRC por riesgo de toxicidad. Valproato = primera línea alternativa en manía aguda con disfunción renal.
+
+Trampa: trastorno bipolar → litio automáticamente. Siempre revisar comorbilidades.
+
+Referencias: CANMAT Bipolar Guidelines; DSM-5-TR; UpToDate: Acute Mania.`,
+  },
+  {
+    id: "dr-q-104",
+    examArea: "Psiquiatría / Psicofarmacología",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "serotoninergico", "isrs", "tramadol"],
+    statement:
+      "Mujer de 45 años, con antecedentes de obesidad y dolor crónico, consulta por tristeza profunda, anhedonia, sentimientos de culpa e ideación de muerte de 3 semanas de evolución. Ha perdido 5 kg de peso. Recibe tramadol 50 mg cada 8 horas por lumbalgia crónica. Se inicia sertralina 50 mg/día. Veinticuatro horas después es llevada a urgencias por presentar temblor, inquietud motora intensa, diaforesis, diarrea y clonus inducible en miembros inferiores. ¿Cuál es el mecanismo fisiopatológico más probable del cuadro actual?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Bloqueo masivo de receptores dopaminérgicos D2 en sistema nervioso central.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Hiperestimulación serotoninérgica central y periférica por exceso de serotonina sináptica.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Disminución aguda de la actividad gabaérgica cortical.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Hiperactividad colinérgica secundaria a inhibición de la acetilcolinesterasa.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Síndrome serotoninérgico precipitado por sertralina + tramadol (ambos con actividad serotoninérgica). El exceso de serotonina produce hiperactividad neuromuscular, alteraciones autonómicas y cambios del estado mental.",
+    keyPoints: [
+      "ISRS + tramadol → síndrome serotoninérgico.",
+      "Clonus inducible es hallazgo muy característico.",
+      "Hiperreflexia + clonus + diarrea orientan a serotoninérgico.",
+      "SNM: rigidez en tubo de plomo, hiporreflexia, antipsicóticos.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Síndrome serotoninérgico
+
+La clave: sertralina + tramadol (tramadol también inhibe recaptación de serotonina).
+
+Exceso de serotonina → clonus, hiperreflexia, diaforesis, diarrea, agitación, hipertermia.
+
+Trampa: tramadol = opioide, pero tiene potente actividad serotoninérgica.
+
+Referencias: Stahl's Psychopharmacology; UpToDate: Serotonin Syndrome; Harrison's.`,
+  },
+  {
+    id: "dr-q-105",
+    examArea: "Psiquiatría / Trastornos por consumo",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "delirium_tremens", "alcohol", "urgencias"],
+    statement:
+      "Hombre de 50 años con antecedente de consumo crónico de alcohol equivalente a una botella de aguardiente diaria. Su última ingesta fue hace 48 horas luego de ser hospitalizado por una neumonía adquirida en la comunidad. Presenta agitación intensa, desorientación, diaforesis profusa, midriasis, hipertensión arterial y taquicardia. Refiere además que \"las paredes se están moviendo\". Signos vitales: TA 170/110 mmHg, FC 125 lpm. Laboratorios: AST 120 U/L, ALT 90 U/L. ¿Cuál es el tratamiento de elección para el control de los síntomas?",
+    options: [
+      { id: "A", label: "A", text: "Haloperidol intravenoso." },
+      { id: "B", label: "B", text: "Lorazepam." },
+      { id: "C", label: "C", text: "Fenitoína intravenosa." },
+      { id: "D", label: "D", text: "Carbamazepina." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Delirium tremens: forma más grave del síndrome de abstinencia alcohólica. Las benzodiacepinas son el tratamiento de elección. Lorazepam es especialmente útil con posible compromiso hepático (AST/ALT elevadas).",
+    keyPoints: [
+      "Abstinencia 48-96 h + agitación + alucinaciones + disautonomía → delirium tremens.",
+      "Benzodiacepinas sustituyen efecto GABAérgico perdido y previenen convulsiones.",
+      "Lorazepam preferido con disfunción hepática.",
+      "Haloperidol no es tratamiento principal; no previene convulsiones.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Delirium tremens
+
+La clave: abstinencia alcohólica 48 h + alucinaciones + disautonomía.
+
+Mecanismo: adaptación GABA/glutamato → hiperexcitabilidad al suspender alcohol.
+
+Tratamiento: benzodiacepinas (lorazepam si hepatopatía). También tiamina, corrección electrolítica.
+
+Trampa: agitación + alucinaciones → haloperidol. En abstinencia alcohólica, benzodiacepinas.
+
+Referencias: UpToDate: Alcohol Withdrawal; ASAM Guidelines; Harrison's.`,
+  },
+  {
+    id: "dr-q-106",
+    examArea: "Psiquiatría / Urgencias",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "suicidio", "riesgo", "urgencias"],
+    statement:
+      "Mujer de 19 años, estudiante universitaria, es llevada por sus padres a urgencias luego de que encontraran una carta de despedida en su habitación. Hace dos meses terminó una relación sentimental. Refiere tristeza persistente, anhedonia, insomnio de conciliación y abandono de sus actividades académicas. Durante la entrevista manifiesta: \"Nada va a mejorar, ya tengo las pastillas guardadas para esta noche\". Niega intentos suicidas previos. ¿Cuál es el nivel de riesgo y la conducta más segura?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Riesgo bajo; manejo ambulatorio con cita prioritaria por psiquiatría.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Riesgo moderado; iniciar antidepresivo y control semanal.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Riesgo alto; hospitalización psiquiátrica y medidas de protección inmediata.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Riesgo bajo porque no tiene intentos suicidas previos.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Ideación suicida activa con plan específico, acceso a método potencialmente letal y conducta preparatoria (carta de despedida). Riesgo suicida alto que requiere hospitalización y protección inmediata.",
+    keyPoints: [
+      "Plan suicida + acceso al método + intención = riesgo alto.",
+      "Carta de despedida = conducta preparatoria de alto riesgo.",
+      "Ausencia de intentos previos no excluye riesgo elevado.",
+      "Objetivo: proteger la vida del paciente con supervisión continua.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Riesgo suicida alto
+
+La clave: plan concreto + acceso al método, no solo la depresión.
+
+Elementos de alto riesgo: ideación activa, plan definido, disponibilidad del método, intención, conductas preparatorias (carta de despedida).
+
+Conducta: hospitalización psiquiátrica + retiro de medios letales + supervisión continua.
+
+Trampa: no intentos previos = bajo riesgo. FALSO.
+
+Referencias: APA Suicide Risk Guidelines; DSM-5-TR; UpToDate: Suicide Risk Assessment.`,
+  },
+  {
+    id: "dr-q-107",
+    examArea: "Psiquiatría / Psiquiatría de enlace",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "cotard", "psicosis", "neoplasia"],
+    statement:
+      "Hombre de 65 años, con antecedente de tabaquismo pesado, consulta acompañado por su esposa por cambios progresivos en el comportamiento durante los últimos meses. Refiere pérdida involuntaria de 10 kg en los últimos 3 meses. La esposa lo nota \"muy deprimido\", lento para hablar y cada vez más aislado. Durante la entrevista expresa que sus órganos \"se están pudriendo\" y afirma que ya está muerto. Al examen mental presenta marcado enlentecimiento psicomotor y delirios nihilistas compatibles con síndrome de Cotard. ¿Cuál es la prioridad diagnóstica inicial?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar inmediatamente un ISRS y control ambulatorio en 4 semanas.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Diagnosticar trastorno delirante persistente y solicitar psicoterapia.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Buscar activamente una causa médica u orgánica subyacente, especialmente una neoplasia.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Iniciar benzodiacepinas por posible trastorno de ansiedad.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Síntomas psiquiátricos de inicio tardío (65 años), pérdida de peso inexplicada, tabaquismo y síntomas psicóticos obligan a descartar primero una causa orgánica, particularmente neoplasia o enfermedad neurológica.",
+    keyPoints: [
+      "Psicosis de inicio tardío + pérdida de peso + tabaquismo → descartar causa orgánica.",
+      "Síndrome de Cotard: delirios nihilistas, creencia de estar muerto.",
+      "Puede observarse en depresión psicótica, trastornos neurológicos o neoplasias.",
+      "No asumir etiología psiquiátrica primaria sin evaluar causas médicas.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Síndrome de Cotard · prioridad diagnóstica
+
+La clave: inicio tardío + signos de alarma sistémicos, no el nombre del síndrome.
+
+65 años + 10 kg de pérdida + tabaquismo + psicosis nueva → buscar neoplasia (p. ej. pulmón), metástasis, paraneoplasias, enfermedad neurológica.
+
+Trampa: Cotard → depresión psicótica sin estudios. Primero descartar orgánico.
+
+Referencias: Harrison's; UpToDate: Psychosis in Older Adults; Kaplan & Sadock's.`,
+  },
+  {
+    id: "dr-q-108",
+    examArea: "Psiquiatría / Psicofarmacología",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "clozapina", "agranulocitosis"],
+    statement:
+      "Paciente de 24 años con diagnóstico de esquizofrenia refractaria, en tratamiento con clozapina 300 mg/día desde hace 3 meses. Consulta por fiebre de 38.5°C, odinofagia y malestar general de inicio reciente. Niega tos, disuria, diarrea u otros síntomas infecciosos focales. ¿Cuál es la conducta inmediata más importante?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar antibiótico empírico ambulatorio y continuar la clozapina.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Solicitar hemograma urgente con recuento absoluto de neutrófilos y suspender temporalmente la clozapina hasta aclarar el diagnóstico.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Aumentar la dosis de clozapina por posible recaída psicótica.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Solicitar únicamente proteína C reactiva y dar seguimiento ambulatorio.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Fiebre y odinofagia en paciente con clozapina deben hacer sospechar agranulocitosis o neutropenia grave. Prioridad: hemograma urgente con recuento absoluto de neutrófilos y suspensión temporal de clozapina.",
+    keyPoints: [
+      "Clozapina + fiebre + odinofagia → agranulocitosis hasta demostrar lo contrario.",
+      "Hemograma urgente con RAN es obligatorio.",
+      "Suspender clozapina temporalmente mientras se aclara el diagnóstico.",
+      "La agranulocitosis es el efecto adverso más temido de la clozapina.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Clozapina y agranulocitosis
+
+La clave: clozapina + fiebre + odinofagia.
+
+Clozapina = más eficaz en esquizofrenia refractaria, pero riesgo de neutropenia/agranulocitosis.
+
+Odinofagia en neutropénico = infección faringea temprana. No asumir infección común sin hemograma.
+
+Conducta: hemograma urgente (RAN) + suspender clozapina + tratar según neutrófilos.
+
+Referencias: UpToDate: Clozapine Monitoring; Maudsley Prescribing Guidelines; Stahl's.`,
+  },
+  {
+    id: "dr-q-109",
+    examArea: "Psiquiatría / Urgencias",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "agitacion", "urgencias", "psicosis"],
+    statement:
+      "Mujer de 30 años, sin antecedentes psiquiátricos conocidos, es llevada a urgencias por la policía tras ser encontrada en un parque gritando que \"los extraterrestres están drenando la energía de la ciudad a través de los postes de luz\". Se encuentra extremadamente agitada, agresiva y poco colaboradora. Al examen físico presenta midriasis bilateral, FC 130 lpm, TA 160/100 mmHg y diaforesis leve. ¿Cuál es la conducta inicial más adecuada en urgencias?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar risperidona oral y programar valoración ambulatoria por psiquiatría.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Solicitar resonancia magnética cerebral antes de cualquier intervención.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Controlar primero la agitación mediante sedación farmacológica y garantizar la seguridad del paciente y del personal.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Iniciar inmediatamente tratamiento de mantenimiento para esquizofrenia.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Prioridad inicial en agitación psicomotora severa: garantizar seguridad, controlar la conducta agitada y posteriormente completar la evaluación diagnóstica (psicosis primaria, intoxicación por estimulantes, manía, etc.).",
+    keyPoints: [
+      "Agitación severa con riesgo para paciente y personal = urgencia médica.",
+      "Primero seguridad y sedación; diagnóstico etiológico después.",
+      "Midriasis + taquicardia + hipertensión pueden sugerir estimulantes.",
+      "No diagnosticar esquizofrenia en primer episicio sin descartar causas médicas/tóxicas.",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Agitación psicomotora en urgencias
+
+La clave: agitación grave, no el diagnóstico final.
+
+Secuencia: seguridad → contención verbal si posible → sedación farmacológica → evaluación completa (tóxicos, orgánico, psiquiátrico).
+
+Trampa: intentar diagnóstico completo antes de controlar agitación en paciente agresivo.
+
+Referencias: UpToDate: Agitated Patient; AAEP Guidelines; Tintinalli's.`,
+  },
+  {
+    id: "dr-q-110",
+    examArea: "Psiquiatría / Medicina Interna",
+    topic: "Psiquiatría",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "psiquiatria", "delirium", "haloperidol", "agitacion"],
+    statement:
+      "Hombre de 82 años con antecedentes de insuficiencia cardíaca y fibrilación auricular, es llevado a urgencias por cuadro de desorientación fluctuante de 12 horas de evolución. Durante la valoración presenta marcada alteración de la atención, períodos de somnolencia alternados con agitación y comportamiento agresivo. Intenta golpear al personal de salud y no responde a las medidas de reorientación verbal. Se decide realizar contención farmacológica. ¿Cuál es el fármaco de elección para el control de la agitación en este paciente?",
+    options: [
+      { id: "A", label: "A", text: "Diazepam." },
+      { id: "B", label: "B", text: "Haloperidol." },
+      { id: "C", label: "C", text: "Amitriptilina." },
+      { id: "D", label: "D", text: "Fenitoína." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Delirium hiperactivo con riesgo para el paciente y el personal. Cuando las medidas no farmacológicas fracasan, el haloperidol es el fármaco clásicamente utilizado para control de agitación en delirium (dosis bajas, monitorización).",
+    keyPoints: [
+      "Delirium hiperactivo: inicio agudo, fluctuación, alteración de atención, agitación.",
+      "Base del tratamiento: medidas no farmacológicas + corregir causa.",
+      "Haloperidol: antipsicótico clásico para agitación grave en delirium.",
+      "Benzodiacepinas pueden empeorar delirium (excepto abstinencia alcohólica).",
+    ],
+    theoryContent: `PSIQUIATRÍA — BY DR Q.
+Delirium hiperactivo · contención farmacológica
+
+La clave: delirium con riesgo inmediato tras fracaso de medidas no farmacológicas.
+
+Haloperidol: acción rápida, menor depresión respiratoria que benzodiacepinas, dosis bajas en ancianos con monitorización cardíaca.
+
+Trampa: agitación → benzodiacepinas. En delirium no relacionado con abstinencia, preferir antipsicóticos.
+
+Excepción: abstinencia alcohólica → benzodiacepinas.
+
+Referencias: AGS Delirium Guidelines; Harrison's; UpToDate: Delirium in Older Adults.`,
+  },
+  {
+    id: "dr-q-111",
+    examArea: "Atención Primaria en Salud / Tamización",
+    topic: "Atención Primaria en Salud",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "aps", "tamizacion", "cuello_uterino", "vph", "colombia"],
+    statement:
+      "Paciente femenina de 34 años, G2P2, asintomática. Consulta para chequeo general. Antecedentes: fumadora activa (5 cigarrillos/día). Última citología cervical realizada hace 2 años, con resultado negativo para lesión intraepitelial o malignidad. Según las guías de práctica clínica vigentes en Colombia (Ruta de Promoción y Mantenimiento de la Salud), ¿cuál es la conducta de tamización para cáncer de cuello uterino más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Realizar citología cervical anual por ser fumadora." },
+      {
+        id: "B",
+        label: "B",
+        text: "Realizar prueba de ADN para VPH de alto riesgo y continuar tamización según resultado.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Repetir citología cervical ahora y posteriormente cada 3 años si continúa siendo negativa.",
+      },
+      { id: "D", label: "D", text: "No requiere ninguna prueba hasta cumplir 50 años." },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Entre 30 y 65 años, la estrategia preferida de tamización en Colombia es la prueba de ADN para VPH de alto riesgo, independientemente de tabaquismo o citologías previas negativas.",
+    keyPoints: [
+      "25-29 años: citología cervical. 30-65 años: prueba de ADN para VPH de alto riesgo (Colombia).",
+      "VPH persistente = causa necesaria del cáncer de cuello uterino.",
+      "El tabaquismo aumenta riesgo de progresión pero no modifica la estrategia por edad.",
+      "VPH negativo = riesgo muy bajo; permite ampliar intervalos.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Tamización de cáncer de cuello uterino
+
+La clave: tiene 34 años, no que sea fumadora.
+
+Colombia (Res. 3280): 30-65 años → prueba de ADN VPH de alto riesgo como estrategia preferida. Mayor sensibilidad que citología.
+
+Trampa: citología anual por factor de riesgo. La edad determina la estrategia.
+
+Referencias: Resolución 3280 de 2018; OMS Cervical Cancer Screening; INC Colombia.`,
+  },
+  {
+    id: "dr-q-112",
+    examArea: "Atención Primaria en Salud / Prevención cardiovascular",
+    topic: "Atención Primaria en Salud",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "aps", "prevencion", "cardiovascular", "estilo_vida"],
+    statement:
+      "Hombre de 52 años con diagnóstico reciente de hipertensión arterial. Al examen físico presenta IMC de 31 kg/m². Trae laboratorios que muestran glucemia en ayunas de 108 mg/dL, HbA1c de 5.9%, creatinina de 0.9 mg/dL y colesterol LDL de 155 mg/dL. No refiere síntomas cardiovasculares ni limitación funcional. ¿Cuál es la intervención de prevención primaria más costo-efectiva y prioritaria en este escenario?",
+    options: [
+      { id: "A", label: "A", text: "Iniciar aspirina a dosis baja de forma indefinida." },
+      {
+        id: "B",
+        label: "B",
+        text: "Solicitar prueba de esfuerzo para descartar enfermedad coronaria silente.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Implementar un programa estructurado de modificación del estilo de vida con reducción de peso, actividad física regular y cambios dietarios.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Solicitar ecografía Doppler carotídea como tamización cardiovascular.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Obesidad, hipertensión, prediabetes y dislipidemia coexisten. La modificación intensiva del estilo de vida es la intervención con mayor impacto poblacional, mejor relación costo-beneficio y capacidad de modificar simultáneamente todos los factores de riesgo.",
+    keyPoints: [
+      "Múltiples factores de riesgo modificables → intervención sobre estilo de vida primero.",
+      "Pérdida de 5-10% del peso mejora PA, glucemia y perfil lipídico.",
+      "Aspirina en prevención primaria: beneficio limitado vs riesgo de sangrado.",
+      "No tamización cardiovascular indiscriminada en asintomáticos.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Prevención cardiovascular primaria
+
+La clave: coexistencia de múltiples factores de riesgo modificables, no solo el LDL.
+
+Modificación del estilo de vida: alimentación saludable + ≥150 min/semana ejercicio aeróbico + pérdida ponderal.
+
+Trampa: LDL 155 → estatinas inmediatas. La pregunta pide la intervención más costo-efectiva y prioritaria.
+
+Referencias: AHA Primary Prevention; ADA Standards of Care; Guías ESC Prevención CV.`,
+  },
+  {
+    id: "dr-q-113",
+    examArea: "Atención Primaria en Salud / Inmunizaciones",
+    topic: "Atención Primaria en Salud",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "aps", "vacunacion", "influenza", "neumococo"],
+    statement:
+      "Mujer de 68 años con antecedente de EPOC (GOLD B) y diabetes mellitus tipo 2 compensada. Acude a consulta externa en el mes de abril. Al revisar su carné de vacunación se evidencia que recibió la vacuna contra influenza hace 14 meses y una dosis de vacuna conjugada antineumocócica (PCV13) a los 65 años. ¿Cuál es la recomendación de inmunización inmediata más adecuada?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "No requiere ninguna vacuna en este momento porque ya recibió PCV13.",
+      },
+      { id: "B", label: "B", text: "Aplicar únicamente una nueva dosis anual de vacuna contra influenza." },
+      {
+        id: "C",
+        label: "C",
+        text: "Aplicar vacuna contra influenza y completar el esquema antineumocócico con PPSV23.",
+      },
+      { id: "D", label: "D", text: "Repetir PCV13 y diferir cualquier otra vacunación." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Factores de riesgo importantes (≥65 años, EPOC, diabetes). Debe recibir vacunación anual contra influenza (última dosis hace 14 meses) y completar protección antineumocócica con PPSV23 tras PCV13 previa.",
+    keyPoints: [
+      "Influenza: vacunación anual obligatoria.",
+      "Esquema clásico adultos: PCV13 seguida de PPSV23 para ampliar cobertura.",
+      "EPOC + diabetes + edad = alto riesgo de complicaciones respiratorias.",
+      "No repetir PCV13 rutinariamente; completar con PPSV23.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Vacunación en adultos con EPOC y diabetes
+
+La clave: edad ≥65 + EPOC + esquema antineumocócico incompleto.
+
+Influenza anual (protección disminuye con el tiempo). PCV13 ya recibida → falta PPSV23.
+
+Trampa: ya recibió vacuna neumocócica = esquema completo. FALSO si solo tiene PCV13.
+
+Referencias: CDC Adult Immunization Schedule; PAI Colombia; GOLD Report.`,
+  },
+  {
+    id: "dr-q-114",
+    examArea: "Atención Primaria en Salud / Tamización",
+    topic: "Atención Primaria en Salud",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "aps", "tamizacion", "colorrectal", "cribado"],
+    statement:
+      "Hombre de 45 años que consulta por primera vez para evaluación preventiva. Niega antecedentes médicos de importancia, síntomas gastrointestinales o antecedentes familiares conocidos de cáncer colorrectal. Presión arterial promedio de dos tomas: 138/88 mmHg. Riesgo cardiovascular a 10 años calculado mediante ASCVD Score: 4.5%. ¿Cuál es la conducta de tamización para cáncer colorrectal más indicada?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "No realizar tamización hasta los 50 años porque es un paciente de bajo riesgo.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Solicitar colonoscopia inmediata como única estrategia válida de tamización.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar tamización para cáncer colorrectal desde este momento mediante una estrategia validada de cribado.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Solicitar sangre oculta en materia fecal únicamente si desarrolla síntomas digestivos.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Se recomienda iniciar tamización del cáncer colorrectal en adultos de riesgo promedio a partir de los 45 años, incluso sin síntomas ni factores de riesgo adicionales.",
+    keyPoints: [
+      "Tamización colorrectal inicia a los 45 años en riesgo promedio (USPSTF, ACS).",
+      "Estrategias válidas: SOH, FIT, ADN fecal, colonoscopia.",
+      "Colonoscopia no es la única opción válida.",
+      "Tamización = detectar antes de síntomas.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Tamización de cáncer colorrectal
+
+La clave: tiene 45 años.
+
+Cambio importante: inicio a los 45 años (antes 50) por aumento de CCR en adultos jóvenes. Múltiples estrategias válidas según disponibilidad.
+
+Trampa: esperar hasta los 50 años.
+
+Referencias: USPSTF Colorectal Screening; ACS Guidelines; Res. 3280 Colombia.`,
+  },
+  {
+    id: "dr-q-115",
+    examArea: "Atención Primaria en Salud / Salud Pública",
+    topic: "Atención Primaria en Salud",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "aps", "salud_publica", "brote", "vigilancia"],
+    statement:
+      "En una comunidad rural se reporta un aumento inusual de casos de fiebre, mialgias y exantema durante las últimas dos semanas. Como médico de Atención Primaria en Salud (APS), usted identifica que el 60% de los afectados viven cerca de un depósito de agua estancada. ¿Cuál es la primera acción de Salud Pública que debe liderar?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar tratamiento antibiótico empírico masivo a toda la población expuesta.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Solicitar pruebas diagnósticas individuales a todos los habitantes de la comunidad antes de intervenir.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Notificar inmediatamente el posible brote al sistema de vigilancia epidemiológica e iniciar la investigación de campo y control de la fuente.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Esperar la confirmación etiológica de todos los casos antes de implementar medidas comunitarias.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Aumento inusual de casos con características epidemiológicas comunes = sospecha de brote. Prioridad: activar vigilancia epidemiológica e implementar medidas de control oportunas sin esperar confirmación de todos los casos.",
+    keyPoints: [
+      "Brote = casos superiores al esperado para población, lugar y periodo.",
+      "Notificación inmediata + investigación de campo + control de fuente.",
+      "No esperar confirmación etiológica completa para actuar.",
+      "APS: detección temprana y protección comunitaria.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Sospecha de brote epidémico
+
+La clave: aumento inusual + posible fuente común (agua estancada), no el diagnóstico específico.
+
+Secuencia: detectar → notificar → investigar → controlar transmisión. No pruebas masivas ni ATB empírico indiscriminado antes de caracterizar.
+
+Referencias: INS Colombia Vigilancia; OPS Investigación de Brotes; CDC Epidemiology Principles.`,
+  },
+  {
+    id: "dr-q-116",
+    examArea: "Atención Primaria en Salud / Accesibilidad",
+    topic: "Atención Primaria en Salud",
+    difficulty: "easy",
+    tags: ["dr-q", "universal", "metodoq", "aps", "accesibilidad", "barreras", "cronicos"],
+    statement:
+      "Paciente femenina de 58 años con antecedentes de hipertensión arterial y diabetes mellitus. Durante una consulta de control se evidencia que no ha reclamado sus medicamentos en los últimos 3 meses. Al indagar, refiere que el centro de salud se encuentra a aproximadamente 2 horas de su vivienda, no dispone de recursos económicos para el transporte y vive sola. Desde la perspectiva de Atención Primaria en Salud (APS), este caso representa principalmente una falla en:",
+    options: [
+      { id: "A", label: "A", text: "Calidad técnico-científica de la atención." },
+      { id: "B", label: "B", text: "Seguridad del paciente." },
+      { id: "C", label: "C", text: "Accesibilidad a los servicios de salud." },
+      { id: "D", label: "D", text: "Vigilancia epidemiológica." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "La principal barrera es la dificultad geográfica y económica para acceder a servicios y medicamentos. Corresponde a una falla en el acceso efectivo al sistema de salud.",
+    keyPoints: [
+      "Accesibilidad = posibilidad real de utilizar servicios cuando se necesitan.",
+      "Barreras: geográfica (distancia), económica (transporte), organizacional, cultural.",
+      "No es calidad técnica ni seguridad del paciente.",
+      "Barreras de acceso → inequidades y abandono involuntario del tratamiento.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Barreras de acceso
+
+La clave: la paciente no puede llegar al sistema, no que el tratamiento sea incorrecto.
+
+2 horas de distancia + sin recursos para transporte + vive sola = falla de accesibilidad (geográfica y económica).
+
+Trampa: descontrol metabólico → mala calidad. La causa es acceso, no calidad técnica.
+
+Referencias: OMS APS; OPS Renovación APS; Starfield Primary Care.`,
+  },
+  {
+    id: "dr-q-117",
+    examArea: "Atención Primaria en Salud / Salud mental",
+    topic: "Atención Primaria en Salud",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "aps", "depresion", "adulto_mayor", "yesavage"],
+    statement:
+      "Hombre de 72 años consulta por cansancio y \"olvidos frecuentes\" de 6 meses de evolución. Vive solo desde que enviudó hace un año. Tiene antecedente de hipertensión arterial controlada. Al examen mental presenta afecto hiponímico, lenguaje enlentecido y escasa iniciativa. No se identifican ideas delirantes ni síntomas psicóticos. Se aplica la Escala de Depresión Geriátrica de Yesavage obteniendo 9/15 puntos, resultado sugestivo de depresión. ¿Cuál es la conducta más adecuada en Atención Primaria en Salud (APS)?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Diagnosticar demencia y remitir a neurología para inicio de tratamiento específico.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Solicitar resonancia magnética cerebral urgente para descartar enfermedad neurodegenerativa.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar abordaje integral de depresión en el adulto mayor, evaluar riesgo suicida, apoyo social y seguimiento estrecho.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Considerar los síntomas como cambios normales asociados al envejecimiento.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Síntomas compatibles con depresión en el adulto mayor y Yesavage sugestivo. En APS: confirmar diagnóstico clínico, valorar riesgo suicida, intervenir factores psicosociales y establecer seguimiento.",
+    keyPoints: [
+      "Quejas de memoria + viudez + afecto depresivo + Yesavage positivo → depresión antes que demencia.",
+      "Pseudodemencia depresiva: depresión simula deterioro cognitivo.",
+      "Evaluar riesgo suicida en adultos mayores que viven solos.",
+      "Tristeza persistente no es envejecimiento normal.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Depresión vs demencia en adulto mayor
+
+La clave: contexto afectivo (viudez, aislamiento), no los olvidos.
+
+Yesavage = tamización, no diagnóstico definitivo. Abordaje integral: confirmar, evaluar suicidio, apoyo social, seguimiento. Tratar depresión antes de etiquetar demencia.
+
+Trampa: olvidos → demencia + RM urgente.
+
+Referencias: OMS Salud Mental Adulto Mayor; Yesavage GDS; Guías Salud Mental APS.`,
+  },
+  {
+    id: "dr-q-118",
+    examArea: "Atención Primaria en Salud / Hipertensión",
+    topic: "Atención Primaria en Salud",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "aps", "hipertension", "mapa", "diagnostico"],
+    statement:
+      "Paciente masculino de 48 años, con obesidad (IMC 32 kg/m²), consulta para valoración cardiovascular. En dos consultas diferentes presenta cifras tensionales de 146/94 mmHg y 142/92 mmHg. No presenta evidencia clínica de daño de órgano blanco ni síntomas cardiovasculares. Usted sospecha hipertensión arterial. ¿Cuál es el estándar de oro actual para confirmar el diagnóstico según la evidencia disponible en Atención Primaria en Salud?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Repetir la presión arterial en el consultorio durante tres consultas adicionales.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Realizar monitoreo ambulatorio de presión arterial de 24 horas (MAPA).",
+      },
+      { id: "C", label: "C", text: "Solicitar ecocardiograma transtorácico." },
+      {
+        id: "D",
+        label: "D",
+        text: "Iniciar tratamiento antihipertensivo y reevaluar la respuesta clínica.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "El MAPA es el método de referencia para confirmar hipertensión arterial. Permite detectar hipertensión sostenida, de bata blanca y enmascarada antes de etiquetar al paciente como hipertenso.",
+    keyPoints: [
+      "MAPA = estándar de referencia para confirmar HTA.",
+      "Detecta HTA de bata blanca y enmascarada.",
+      "Ecocardiograma evalúa daño orgánico, no confirma diagnóstico.",
+      "Confirmar diagnóstico antes de terapia crónica (salvo emergencias).",
+    ],
+    theoryContent: `APS — BY DR Q.
+Confirmación diagnóstica de hipertensión
+
+La clave: confirmar con el método más preciso, no solo cifras en consultorio.
+
+MAPA: 24 h en actividades habituales → HTA sostenida, bata blanca, enmascarada. Reduce sobreestimación por ansiedad/efecto bata blanca.
+
+Trampa: repetir PA en consultorio (estrategia histórica, ya no estándar de oro).
+
+Referencias: ESH Hypertension Guidelines; ISH Global Guidelines; Guías HTA APS.`,
+  },
+  {
+    id: "dr-q-119",
+    examArea: "Atención Primaria en Salud / Diabetes",
+    topic: "Atención Primaria en Salud",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "aps", "diabetes", "albuminuria", "nefropatia"],
+    statement:
+      "Durante una jornada de salud enfocada en riesgo cardiovascular, un paciente de 55 años con diabetes mellitus adecuadamente controlada pregunta por qué debe realizarse una prueba anual de albuminuria si no presenta síntomas urinarios ni alteraciones evidentes en su estado de salud. Como médico de Atención Primaria en Salud, ¿cuál es la mejor explicación para justificar esta recomendación?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Porque la albuminuria permite diagnosticar infecciones urinarias asintomáticas antes de que produzcan complicaciones.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Porque la albuminuria es un marcador temprano de daño renal y de riesgo cardiovascular, incluso antes de que aparezcan síntomas o aumente la creatinina sérica.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Porque la albuminuria predice el desarrollo de cáncer renal en pacientes diabéticos.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Porque la albuminuria es necesaria para decidir la dosis de insulina utilizada por el paciente.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "La albuminuria detecta precozmente enfermedad renal diabética y estratifica riesgo cardiovascular, permitiendo intervenciones oportunas antes de manifestaciones clínicas o elevación de creatinina.",
+    keyPoints: [
+      "Albuminuria = primer hallazgo detectable de nefropatía diabética.",
+      "Puede aparecer con creatinina normal.",
+      "También es marcador de disfunción endotelial y riesgo CV.",
+      "Tamización anual en diabetes = prevención secundaria.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Albuminuria en diabetes
+
+La clave: detectar daño antes de que sea clínicamente evidente.
+
+Microalbuminuria → ↑ permeabilidad glomerular → aparece antes de ↑ creatinina. También refleja riesgo CV sistémico (disfunción endotelial).
+
+Trampa: albuminuria solo = enfermedad renal. También estratifica riesgo cardiovascular.
+
+Referencias: ADA Standards of Care; KDIGO CKD Guidelines; Res. 3280 Colombia.`,
+  },
+  {
+    id: "dr-q-120",
+    examArea: "Atención Primaria en Salud / Promoción de la salud",
+    topic: "Atención Primaria en Salud",
+    difficulty: "easy",
+    tags: ["dr-q", "universal", "metodoq", "aps", "promocion", "determinantes_sociales", "obesidad"],
+    statement:
+      "Durante la implementación de una estrategia de promoción de la salud en un barrio con alta prevalencia de obesidad, usted decide trabajar con las tiendas locales para aumentar la disponibilidad de frutas y verduras y disminuir la visibilidad de bebidas azucaradas. ¿Cómo se clasifica este tipo de intervención?",
+    options: [
+      { id: "A", label: "A", text: "Prevención terciaria." },
+      { id: "B", label: "B", text: "Tamización poblacional." },
+      {
+        id: "C",
+        label: "C",
+        text: "Intervención sobre determinantes sociales y ambientales de la salud.",
+      },
+      { id: "D", label: "D", text: "Prevención cuaternaria." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "La estrategia modifica el entorno comunitario para facilitar elecciones saludables, actuando sobre determinantes sociales y ambientales de la salud, no sobre el tratamiento individual.",
+    keyPoints: [
+      "Determinantes sociales: condiciones donde nacen, crecen, trabajan y envejecen.",
+      "Modificar entorno alimentario = promoción de la salud poblacional.",
+      "Prevención terciaria = reducir discapacidad de enfermedad establecida.",
+      "Tamización = buscar enfermedad en aparentemente sanos.",
+    ],
+    theoryContent: `APS — BY DR Q.
+Determinantes sociales y ambientales
+
+La clave: modificación del entorno donde las personas toman decisiones, no intervención clínica individual.
+
+Aumentar frutas/verduras y reducir visibilidad de azúcares en tiendas = intervención comunitaria sobre determinantes ambientales.
+
+Trampa: obesidad → estrategia clínica individual. Aquí es intervención poblacional/ambiental.
+
+Referencias: Carta de Ottawa; OMS Determinantes Sociales; OPS APS; Res. 3280 Colombia.`,
+  },
+  {
+    id: "dr-q-121",
+    examArea: "Ciencias Básicas / Farmacología cardiovascular",
+    topic: "Ciencias Básicas",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "fisiologia", "dobutamina", "inotropicos"],
+    statement:
+      "Paciente masculino de 68 años que ingresa a urgencias por dolor torácico opresivo de 3 horas de evolución. Al examen físico presenta PA 70/40 mmHg, FC 115 lpm, extremidades frías, diaforesis y llenado capilar de 5 segundos. El ECG evidencia supradesnivel del ST en V1-V6. Se diagnostica choque cardiogénico secundario a infarto agudo de miocardio anterior extenso y se inicia infusión de dobutamina. Quince minutos después se observa mejoría de la presión arterial y aumento del gasto cardíaco. A nivel celular, ¿cuál es el mecanismo fisiológico directo mediante el cual este fármaco incrementa la contractilidad miocárdica?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Inhibición de la Na+/K+ ATPasa con aumento secundario del calcio intracelular.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Estimulación de receptores β1 cardíacos con incremento de AMPc y entrada de calcio a la célula.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Bloqueo de receptores muscarínicos cardíacos con aumento de la frecuencia cardíaca.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Inhibición de la fosfodiesterasa con aumento primario de GMPc intracelular.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "La dobutamina es un agonista β1 predominante. Su efecto inotrópico positivo ocurre por aumento del AMPc intracelular, favoreciendo apertura de canales de calcio y mayor disponibilidad de calcio para la contracción miocárdica.",
+    keyPoints: [
+      "Dobutamina → agonismo β1 → ↑ AMPc → ↑ calcio intracelular → ↑ contractilidad.",
+      "Digoxina: inhibe Na+/K+ ATPasa. Milrinona: inhibe fosfodiesterasa 3.",
+      "El calcio regula la interacción actina-miosina.",
+      "Inotrópico de elección en choque cardiogénico con bajo gasto.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+Dobutamina · mecanismo inotrópico
+
+β1 → proteína Gs → adenilato ciclasa → ↑ AMPc → PKA → fosforila canales de calcio tipo L → ↑ Ca²⁺ intracelular → más puentes cruzados.
+
+Trampa: confundir con digoxina (Na/K ATPasa) o milrinona (PDE3).
+
+Referencias: Katzung; Guyton & Hall; Braunwald's Heart Disease.`,
+  },
+  {
+    id: "dr-q-122",
+    examArea: "Ciencias Básicas / Fisiopatología del choque",
+    topic: "Ciencias Básicas",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "fisiopatologia", "sepsis", "vasoplejia", "inos"],
+    statement:
+      "Mujer de 72 años, procedente de un asilo, es llevada a urgencias por fiebre, obnubilación y disuria. Al examen físico presenta PA 75/40 mmHg, FC 125 lpm, temperatura de 39.2°C, extremidades calientes y rubicundas. Los gases arteriales muestran lactato de 5.5 mmol/L. Se diagnostica choque séptico. Tras recibir 3 litros de cristaloides persiste hipotensa y requiere vasopresores a dosis elevadas. ¿Cuál es la alteración fisiopatológica celular principal responsable de la vasoplejía refractaria observada en esta paciente?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Inhibición de la síntesis de AMPc en el músculo liso vascular.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Sobreexpresión de la óxido nítrico sintasa inducible (iNOS) con producción excesiva de óxido nítrico.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Bloqueo de los canales de calcio tipo L del músculo liso vascular.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Disminución de la producción de prostaciclinas por el endotelio vascular.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "En choque séptico, citoquinas inducen iNOS con producción masiva de NO. El NO activa guanilato ciclasa → ↑ GMPc → relajación del músculo liso vascular → vasoplejía refractaria.",
+    keyPoints: [
+      "Choque séptico = choque distributivo con vasoplejía.",
+      "Citoquinas → iNOS → NO → GMPc → vasodilatación.",
+      "Extremidades calientes en fases iniciales (↓ resistencia vascular).",
+      "Hiporreactividad a catecolaminas contribuye a hipotensión refractaria.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+Vasoplejía en choque séptico
+
+Infección → TNF-α/IL-1 → iNOS → NO masivo → guanilato ciclasa → GMPc → vasodilatación sistémica.
+
+Secuencia clásica de examen: sepsis → iNOS → NO → GMPc → vasoplejía.
+
+Referencias: Harrison's; Surviving Sepsis; Marino's ICU Book.`,
+  },
+  {
+    id: "dr-q-123",
+    examArea: "Ciencias Básicas / Trastornos ácido-base",
+    topic: "Ciencias Básicas",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "acidosis", "cad", "hipercloremica"],
+    statement:
+      "Hombre de 25 años con Diabetes Mellitus tipo 1, ingresa por cetoacidosis diabética severa. Gasometría inicial: pH 7.10, HCO₃⁻ 8 mEq/L, pCO₂ 25 mmHg, Na⁺ 140 mEq/L, Cl⁻ 98 mEq/L. Recibe reanimación con 6 litros de solución salina al 0.9% e infusión de insulina. Veinticuatro horas después, las cetonas son negativas, pero la gasometría muestra: pH 7.25, HCO₃⁻ 14 mEq/L, pCO₂ 30 mmHg, Na⁺ 145 mEq/L, Cl⁻ 118 mEq/L. ¿Cuál es el mecanismo fisiopatológico que explica la persistencia de la acidosis?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Producción persistente de cuerpos cetónicos por resistencia a la insulina.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Acumulación de ácido láctico secundaria a hipoperfusión tisular persistente.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Desarrollo de acidosis metabólica hiperclorémica por expansión del compartimento extracelular con solución salina.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Retención renal de fosfatos con aumento del anión gap.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "La cetoacidosis fue corregida (cetonas negativas). La administración masiva de NaCl 0.9% elevó el cloro sérico, produciendo acidosis metabólica hiperclorémica con anión gap normal.",
+    keyPoints: [
+      "CAD resuelta: cetonas negativas + anión gap normalizado.",
+      "NaCl 0.9% aporta 154 mEq/L de Cl⁻ → acidosis hiperclorémica.",
+      "Exceso de Cl⁻ reduce bicarbonato por electroneutralidad.",
+      "Persistencia de acidosis ≠ CAD activa si cetonas negativas.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+Acidosis hiperclorémica post-CAD
+
+Inicial: AG elevado (cetonas). Tratamiento con grandes volúmenes de NaCl 0.9% → ↑ Cl⁻ → ↓ HCO₃⁻ → acidosis hiperclorémica con AG normal.
+
+Trampa: acidosis persistente → CAD activa. Dato clave: cetonas negativas + Cl 118.
+
+Referencias: Harrison's; ADA Standards; UpToDate: DKA and Hyperchloremic Acidosis.`,
+  },
+  {
+    id: "dr-q-124",
+    examArea: "Ciencias Básicas / Fisiología respiratoria",
+    topic: "Ciencias Básicas",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "fisiologia", "epoc", "hipercapnia", "oxigeno"],
+    statement:
+      "Mujer de 65 años, fumadora pesada, con diagnóstico de EPOC severo. Ingresa por exacerbación infecciosa. Presenta disnea, cianosis y somnolencia. Gasometría inicial (FiO₂ 21%): pH 7.31, pCO₂ 58 mmHg, pO₂ 45 mmHg. Se administra oxígeno mediante mascarilla con reservorio a 15 L/min (FiO₂ cercana al 100%). Treinta minutos después la SpO₂ aumenta a 98%, pero la paciente desarrolla deterioro progresivo del estado de conciencia hasta coma hipercápnico. Gasometría de control: pH 7.15, pCO₂ 85 mmHg, pO₂ 120 mmHg. ¿Cuál es el mecanismo fisiopatológico primario que explica el empeoramiento agudo de la hipercapnia tras la oxigenoterapia?",
+    options: [
+      { id: "A", label: "A", text: "Supresión completa del estímulo respiratorio hipóxico." },
+      {
+        id: "B",
+        label: "B",
+        text: "Aumento de la producción metabólica de CO₂ por hiperoxia.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Reversión de la vasoconstricción pulmonar hipóxica con incremento del desajuste ventilación/perfusión (V/Q).",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Disminución aguda de la afinidad de la hemoglobina por el oxígeno.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "La hiperoxia revierte la vasoconstricción pulmonar hipóxica, desviando flujo hacia alveolos mal ventilados y empeorando el desajuste V/Q. Este es el mecanismo principal de hipercapnia inducida por oxígeno en EPOC.",
+    keyPoints: [
+      "Mecanismo principal: empeoramiento V/Q por abolición de vasoconstricción hipóxica.",
+      "Vasoconstricción hipóxica redirige flujo a zonas mejor ventiladas.",
+      "Efecto Haldane y supresión del estímulo hipóxico contribuyen, pero no son principales.",
+      "Meta SpO₂ en EPOC grave: ~88-92%.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+Hipercapnia inducida por oxígeno en EPOC
+
+Hiperoxia → pierde vasoconstricción pulmonar hipóxica → ↑ perfusión de alvéolos mal ventilados → peor eliminación de CO₂ → narcosis hipercápnica.
+
+Trampa clásica: supresión del estímulo hipóxico como causa principal. La evidencia favorece deterioro V/Q.
+
+Referencias: West's Respiratory Physiology; GOLD Report; Harrison's.`,
+  },
+  {
+    id: "dr-q-125",
+    examArea: "Ciencias Básicas / Farmacología cardiovascular",
+    topic: "Ciencias Básicas",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "farmacologia", "digoxina", "hipopotasemia"],
+    statement:
+      "Hombre de 75 años con insuficiencia cardíaca con fracción de eyección reducida, en tratamiento crónico con digoxina, enalapril y furosemida. Consulta por náuseas, visión con halos amarillentos (xantopsia) y palpitaciones. El ECG muestra extrasístoles ventriculares frecuentes. Laboratorios: creatinina 1.1 mg/dL, K⁺ 2.8 mEq/L, Mg²⁺ 1.5 mg/dL. Se sospecha intoxicación digitálica. Desde el punto de vista farmacodinámico, ¿por qué la hipopotasemia facilita la toxicidad por digoxina en este paciente?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Porque aumenta la eliminación renal de digoxina y genera metabolitos tóxicos.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Porque disminuye la unión de digoxina a proteínas plasmáticas aumentando la fracción libre.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Porque el potasio y la digoxina compiten por el mismo sitio de unión en la Na⁺/K⁺ ATPasa, aumentando la fijación de digoxina cuando el potasio disminuye.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Porque favorece la degradación intracelular de la Na⁺/K⁺ ATPasa.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Potasio y digoxina compiten por la Na⁺/K⁺ ATPasa. Con hipopotasemia hay menor competencia, mayor unión de digoxina, mayor inhibición de la bomba y mayor toxicidad (mecanismo farmacodinámico).",
+    keyPoints: [
+      "Digoxina inhibe Na⁺/K⁺ ATPasa → ↑ Na intracelular → ↑ Ca → inotropismo.",
+      "↓ K⁺ = ↑ unión de digoxina a la bomba (competencia).",
+      "Hipomagnesemia también favorece toxicidad y arritmias.",
+      "Xantopsia + arritmias + hipopotasemia = intoxicación digitálica.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+Hipopotasemia y toxicidad digitálica
+
+Más potasio → menos unión de digoxina. Menos potasio → más inhibición de Na/K ATPasa → ↑ Ca intracelular → arritmias.
+
+Es farmacodinámico, no farmacocinético. Corregir K⁺ y Mg²⁺ en sospecha de intoxicación.
+
+Referencias: Katzung; Goodman & Gilman's; Braunwald's Heart Disease.`,
+  },
+  {
+    id: "dr-q-126",
+    examArea: "Ciencias Básicas / Fisiopatología cardiovascular",
+    topic: "Ciencias Básicas",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "fisiopatologia", "reperfusion", "iam"],
+    statement:
+      "Hombre de 55 años consulta por dolor torácico opresivo de 4 horas de evolución. El ECG muestra un infarto agudo de miocardio con elevación del ST en cara anteroseptal. Es llevado a intervención coronaria percutánea primaria, logrando restablecer el flujo en la arteria descendente anterior. Minutos después de la reperfusión desarrolla arritmias ventriculares, aumento brusco de biomarcadores cardíacos y deterioro transitorio de la contractilidad miocárdica regional. ¿Cuál es el mecanismo patológico celular responsable de este daño tisular paradójico?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Activación de la vía extrínseca de coagulación con formación de microtrombos intracoronarios.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Producción masiva de especies reactivas de oxígeno con sobrecarga intracelular de calcio y daño mitocondrial.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Inhibición de la fosforilación oxidativa por disminución aguda del oxígeno intracelular.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Acumulación progresiva de cuerpos cetónicos dentro del miocito isquémico.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "Lesión por reperfusión: restablecimiento súbito del flujo genera explosión de radicales libres (ROS), sobrecarga de calcio intracelular y daño mitocondrial, produciendo lesión adicional a la isquemia inicial.",
+    keyPoints: [
+      "Daño paradójico ocurre DESPUÉS de recuperar el flujo.",
+      "ROS + sobrecarga de Ca²⁺ + poro de transición mitocondrial.",
+      "Manifestaciones: arritmias de reperfusión, miocardio aturdido, ↑ biomarcadores.",
+      "Más oxígeno no siempre significa menos daño celular.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+Lesión por isquemia-reperfusión
+
+Isquemia → reapertura → ROS masivos + entrada de Ca²⁺ → daño mitocondrial → necrosis/apoptosis adicional + arritmias.
+
+Trampa: pensar que reperfusión solo beneficia. Coexisten beneficio hemodinámico y lesión celular.
+
+Referencias: Robbins & Cotran; Braunwald's; ESC ACS Guidelines.`,
+  },
+  {
+    id: "dr-q-127",
+    examArea: "Ciencias Básicas / Endocrinología",
+    topic: "Ciencias Básicas",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "fisiologia", "graves", "propranolol"],
+    statement:
+      "Mujer de 35 años, previamente sana, consulta por palpitaciones, pérdida de peso, temblor fino distal, sudoración y exoftalmos. Laboratorios: TSH <0.01 mUI/L y T4 libre marcadamente elevada. Se diagnostica Enfermedad de Graves con tirotoxicosis severa. El médico residente inicia propranolol a dosis altas. Desde el punto de vista bioquímico, además del bloqueo betaadrenérgico para controlar la taquicardia y el temblor, ¿qué otro mecanismo fisiológico clave justifica la elección de propranolol sobre otros betabloqueadores?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Inhibición de la síntesis tiroidea de T3 y T4 mediante bloqueo de la peroxidasa tiroidea.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Inhibición de la liberación de hormonas tiroideas almacenadas en el coloide.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Disminución de la conversión periférica de T4 a T3 por inhibición de la 5'-desyodasa.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Aumento de la depuración hepática de hormonas tiroideas mediante inducción enzimática.",
+      },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "A dosis altas, el propranolol inhibe parcialmente la 5'-desyodasa, reduciendo la conversión periférica de T4 a T3 (hormona metabólicamente más activa), además de su efecto betabloqueante.",
+    keyPoints: [
+      "T3 es la hormona más activa; gran parte se forma por conversión periférica de T4.",
+      "Propranolol: β-bloqueo + inhibición parcial de 5'-desyodasa.",
+      "Metimazol/PTU inhiben síntesis; propranolol reduce síntomas y conversión.",
+      "Preferido en tirotoxicosis severa y tormenta tiroidea.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+Propranolol en tirotoxicosis
+
+Efecto adicional clave: ↓ conversión T4 → T3 por inhibición parcial de 5'-desyodasa. Todos los β-bloqueadores controlan síntomas adrenérgicos; propranolol tiene plus endocrinológico.
+
+Trampa: responder solo "disminuye FC". La pregunta pide el mecanismo que lo diferencia.
+
+Referencias: Williams Endocrinology; Katzung; ATA Hyperthyroidism Guidelines.`,
+  },
+  {
+    id: "dr-q-128",
+    examArea: "Ciencias Básicas / Hemostasia",
+    topic: "Ciencias Básicas",
+    difficulty: "hard",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "farmacologia", "hit", "heparina"],
+    statement:
+      "Hombre de 60 años hospitalizado por tromboembolismo pulmonar, manejado con heparina no fraccionada (HNF) en infusión continua. Al sexto día de tratamiento presenta dolor súbito, frialdad, palidez y ausencia de pulsos en el miembro inferior derecho. Los laboratorios muestran descenso de plaquetas de 250,000/µL a 35,000/µL. Se sospecha trombocitopenia inducida por heparina (HIT) tipo II. ¿Cuál es el proceso inmunológico y patológico central responsable de esta enfermedad?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Destrucción directa de plaquetas por toxicidad medular inducida por heparina.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Formación de anticuerpos IgG contra complejos heparina-factor plaquetario 4 (PF4), con activación masiva de plaquetas y generación de trombina.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Activación del complemento con hemólisis intravascular y consumo secundario de plaquetas.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Inhibición de la producción hepática de trombopoyetina por efecto directo de la heparina.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation:
+      "HIT tipo II: IgG anti-complejo heparina-PF4 activa plaquetas vía FcγIIa → generación masiva de trombina → trombosis (paradoja protrombótica) y consumo plaquetario.",
+    keyPoints: [
+      "HIT tipo II = trombocitopenia + trombosis (días 5-10 de heparina).",
+      "IgG contra complejo heparina-PF4 → activación plaquetaria → trombina.",
+      "Caída plaquetas >50%. Complicación principal: trombosis, no sangrado.",
+      "Suspender toda heparina (incluida HBPM) e iniciar anticoagulante alternativo.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+HIT tipo II
+
+Paradoja: anticoagulado que trombosis. Heparina + PF4 → IgG → activación plaquetaria → trombina → trombosis + consumo de plaquetas.
+
+Trampa: "heparina destruye plaquetas". Es enfermedad inmunológica protrombótica.
+
+Referencias: Harrison's; Williams Hematology; ASH HIT Guidelines.`,
+  },
+  {
+    id: "dr-q-129",
+    examArea: "Ciencias Básicas / Microbiología",
+    topic: "Ciencias Básicas",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "microbiologia", "endocarditis", "aureus"],
+    statement:
+      "Hombre de 32 años, usuario activo de drogas intravenosas, consulta por fiebre de 39°C, escalofríos y disnea. A la auscultación presenta un soplo holosistólico en foco tricuspídeo. El ecocardiograma transesofágico revela una gran vegetación en la válvula tricúspide. Los hemocultivos reportan cocos Gram positivos en racimos, catalasa positivos y coagulasa positivos. ¿Cuál de los siguientes factores de virulencia de este microorganismo es el principal mediador de la adhesión inicial a las células endoteliales dañadas de la válvula cardíaca?",
+    options: [
+      { id: "A", label: "A", text: "Coagulasa." },
+      { id: "B", label: "B", text: "Proteína A." },
+      {
+        id: "C",
+        label: "C",
+        text: "Adhesinas de superficie tipo MSCRAMMs (proteínas de unión a fibronectina y fibrinógeno).",
+      },
+      { id: "D", label: "D", text: "Alfa-toxina." },
+    ],
+    correctOptionId: "C",
+    explanation:
+      "Staphylococcus aureus. La adhesión inicial al endotelio valvular lesionado depende de MSCRAMMs (unión a fibronectina, fibrinógeno y matriz extracelular expuesta). Coagulasa y proteína A actúan después (protección/evasión).",
+    keyPoints: [
+      "Endocarditis en drogas IV: S. aureus, válvula tricúspide.",
+      "MSCRAMMs = adhesión inicial a fibronectina/fibrinógeno.",
+      "Coagulasa: fibrina alrededor de la bacteria (después de adhesión).",
+      "Proteína A: evasión inmune (une Fc de IgG).",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+S. aureus · adhesión valvular
+
+Secuencia: lesión endotelial → exposición de fibronectina/fibrinógeno → MSCRAMMs → colonización → vegetación.
+
+Trampa: coagulasa (identifica S. aureus, pero no es adhesión inicial).
+
+Referencias: Murray Medical Microbiology; Mandell; Harrison's.`,
+  },
+  {
+    id: "dr-q-130",
+    examArea: "Ciencias Básicas / Fisiología celular",
+    topic: "Ciencias Básicas",
+    difficulty: "medium",
+    tags: ["dr-q", "universal", "metodoq", "ciencias_basicas", "fisiologia", "fibrosis_quistica", "cftr"],
+    statement:
+      "Hombre de 22 años, evaluado por episodios recurrentes de dolor epigástrico irradiado a la espalda. La tomografía evidencia calcificaciones pancreáticas compatibles con pancreatitis crónica. Además refiere tos crónica productiva desde la infancia. Ante la sospecha diagnóstica se realiza prueba de sudor, que reporta cloruros de 85 mmol/L (normal <40 mmol/L). ¿Cuál es la alteración fisiológica directa en las células ductales pancreáticas derivada del defecto genético responsable de esta enfermedad?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Disminución de la secreción de bicarbonato y agua hacia la luz ductal, produciendo secreciones espesas y obstrucción ductal.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Aumento de la secreción de enzimas pancreáticas activadas hacia el conducto pancreático principal.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Incremento de la absorción ductal de bicarbonato con alcalinización excesiva de las secreciones pancreáticas.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Disminución de la síntesis de tripsinógeno con insuficiencia pancreática exocrina primaria.",
+      },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "Fibrosis quística por mutación CFTR. Falla del canal de cloro altera secreción de cloro y bicarbonato en células ductales pancreáticas → secreciones viscosas → obstrucción ductal → pancreatitis crónica e insuficiencia exocrina.",
+    keyPoints: [
+      "CFTR = canal de cloro regulado por ATP (autosómica recesiva).",
+      "Test de sudor: Cl⁻ >60 mmol/L sugestivo de fibrosis quística.",
+      "Páncreas: ↓ bicarbonato y agua → secreciones espesas → obstrucción.",
+      "Tos crónica + pancreatitis joven + sudor positivo = fibrosis quística.",
+    ],
+    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
+Fibrosis quística · páncreas
+
+Mutación CFTR → ↓ secreción de Cl⁻ y HCO₃⁻ en ductos → ↓ agua → secreciones viscosas → obstrucción → fibrosis/calcificaciones.
+
+En sudor: CFTR falla en reabsorción de Cl⁻ → sudor hiperclorémico.
+
+Referencias: Guyton & Hall; Robbins & Cotran; Cystic Fibrosis Foundation Guidelines.`,
   },
 ];

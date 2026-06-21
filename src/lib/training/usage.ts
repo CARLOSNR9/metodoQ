@@ -102,9 +102,13 @@ export type SessionCheckOptions = {
 export async function checkCanStartSession(
   userId: string,
   plan: string | null | undefined,
-  sessionType: "training" | "diagnostico" | "simulacro",
+  sessionType: "training" | "diagnostico" | "simulacro" | "convocatoria",
   options?: SessionCheckOptions,
 ): Promise<UsageCheckResult> {
+  if (sessionType === "convocatoria") {
+    return { allowed: true };
+  }
+
   const normalized = normalizeUserPlan(plan ?? undefined);
   const limits = getTrainingLimits(normalized);
   const goal = getDailyGoalForProfile(options?.profile, options?.planStartedAt);

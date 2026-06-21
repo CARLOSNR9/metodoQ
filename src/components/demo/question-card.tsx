@@ -32,6 +32,8 @@ export type QuestionCardProps = {
   onAnswerSelect?: (optionId: string, isCorrect: boolean) => void;
   className?: string;
   isLocked?: boolean;
+  /** Examen oficial: sin colores de acierto/error ni explicación hasta el final. */
+  examMode?: boolean;
 };
 
 const defaultQuestion =
@@ -69,6 +71,7 @@ export function QuestionCard({
   onAnswerSelect,
   className,
   isLocked = false,
+  examMode = false,
 }: QuestionCardProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [isTheoryPanelOpen, setIsTheoryPanelOpen] = useState(false);
@@ -94,8 +97,8 @@ export function QuestionCard({
         {options.map((option, index) => {
           const isSelected = selectedOptionId === option.id;
           const isCorrectOption = option.id === correctOptionId;
-          const showCorrectStyle = hasAnswered && isCorrectOption;
-          const showIncorrectStyle = hasAnswered && isSelected && !isCorrect;
+          const showCorrectStyle = hasAnswered && isCorrectOption && !examMode;
+          const showIncorrectStyle = hasAnswered && isSelected && !isCorrect && !examMode;
 
           return (
             <motion.button
@@ -152,7 +155,7 @@ export function QuestionCard({
 
 
       <AnimatePresence>
-        {hasAnswered && (
+        {hasAnswered && !examMode && (
           <motion.section
             initial={{ opacity: 0, height: 0, y: 20 }}
             animate={{ opacity: 1, height: "auto", y: 0 }}

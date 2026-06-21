@@ -18,7 +18,7 @@ import { enrichQuestionWithTheoryPill } from "@/lib/questions/enrich-theory-pill
 import { logoutUser } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { useUserPlan } from "@/hooks/use-user-plan";
-import { hasUnlimitedTraining } from "@/lib/plans/access";
+import { hasProFeatures, hasUnlimitedTraining } from "@/lib/plans/access";
 import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
 import {
   trackClickUpgrade,
@@ -80,6 +80,14 @@ import {
 } from "@/lib/training/failed-questions";
 import { markRepasoCierreCompleted } from "@/lib/training/repaso-cierre";
 import type { SessionTypeLabel } from "@/lib/results";
+import { getConvocatoriaQuestionBank } from "@/lib/questions/convocatoria-bank";
+import {
+  buildConvocatoriaEditionStatus,
+  getConvocatoriaAttempt,
+  getConvocatoriaEdition,
+  saveConvocatoriaAttempt,
+  selectConvocatoriaExamQuestions,
+} from "@/lib/training/ucc-convocatoria";
 
 export type DemoQuestion = TrainingQuestion;
 
@@ -119,7 +127,14 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const isRepasoCierre = searchParams.get("mode") === "repaso-cierre";
   const isRepasoMode = isRepasoPractice || isRepasoCierre;
   const isSimulacro = searchParams.get("mode") === "simulacro";
+  const isConvocatoria = searchParams.get("mode") === "convocatoria";
+  const editionParam = searchParams.get("edition");
   const isUccSimulacro = searchParams.get("ucc") === "1";
+  const isTimedExam = isSimulacro || isConvocatoria;
+  const convocatoriaEdition = useMemo(
+    () => (isConvocatoria ? getConvocatoriaEdition(editionParam ?? "") : null),
+    [isConvocatoria, editionParam],
+  );
   const blockParam = searchParams.get("block") as UccMiBlockKind | null;
   const countParam = searchParams.get("count");
   const minutesParam = searchParams.get("minutes");
@@ -167,21 +182,25 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const pendingUccAutoStartRef = useRef<{ block: UccMiBlockKind; count: number } | null>(null);
   const [sessionCompletedBlockId, setSessionCompletedBlockId] =
     useState<UccMiBlockKind | null>(null);
-  const effectiveSimulacroMinutes =
-    isUccSimulacro && simulacroMinutesOverride
-      ? simulacroMinutesOverride
-      : limits.simulacroMinutes;
-  const simulacroMaxSeconds = isSimulacro ? effectiveSimulacroMinutes * 60 : 0;
+  const effectiveTimedExamMinutes =
+    isConvocatoria && convocatoriaEdition
+      ? convocatoriaEdition.minutes
+      : isUccSimulacro && simulacroMinutesOverride
+        ? simulacroMinutesOverride
+        : limits.simulacroMinutes;
+  const timedExamMaxSeconds = isTimedExam ? effectiveTimedExamMinutes * 60 : 0;
 
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
   const hasUnlimitedAccess = hasUnlimitedTraining(effectivePlan);
   const upgradeCta = getPlanUpgradeCta(effectivePlan);
-  const sessionType = isSimulacro
-    ? "simulacro"
-    : isAct1
-      ? "diagnostico"
-      : "training";
+  const sessionType = isConvocatoria
+    ? "convocatoria"
+    : isSimulacro
+      ? "simulacro"
+      : isAct1
+        ? "diagnostico"
+        : "training";
   const resultSessionType: SessionTypeLabel = isDailyPill
     ? "daily-pill"
     : isRepasoCierre
@@ -204,6 +223,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         )
     : sessionCountOverride
       ? Math.min(sessionCountOverride, questionBank.length || sessionCountOverride)
+    : isConvocatoria && convocatoriaEdition
+      ? convocatoriaEdition.questionCount
     : isSimulacro
       ? Math.min(limits.simulacroQuestionCount, questionBank.length || limits.simulacroQuestionCount)
       : Math.min(limits.questionsPerSession, questionBank.length || limits.questionsPerSession);
@@ -294,7 +315,35 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   }, [uccBlockCompletion, resetSessionState, router]);
 
   const startAdaptiveSession = async () => {
-    if (user) {
+    if (isConvocatoria) {
+      if (!convocatoriaEdition) {
+        setUsageBlockReason("Edición de convocatoria no encontrada.");
+        return;
+      }
+      if (!hasProFeatures(effectivePlan)) {
+        setUsageBlockReason("Las convocatorias UCC requieren plan PRO.");
+        return;
+      }
+      if (user) {
+        const attempt = await getConvocatoriaAttempt(user.uid, convocatoriaEdition.code);
+        const status = buildConvocatoriaEditionStatus({
+          edition: convocatoriaEdition,
+          attempt,
+        });
+        if (!status.canStart) {
+          setUsageBlockReason(
+            attempt
+              ? "Ya completaste esta edición. Solo se permite un intento."
+              : status.phase === "upcoming"
+                ? "Esta convocatoria aún no está abierta."
+                : "La ventana de esta convocatoria ya cerró.",
+          );
+          return;
+        }
+      }
+    }
+
+    if (user && !isConvocatoria) {
       const check = await checkCanStartSession(user.uid, effectivePlan, sessionType, {
         isBonusMode,
         isDailyPill,
@@ -375,6 +424,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       !isAct1 &&
       !isDailyPill &&
       !isSimulacro &&
+      !isConvocatoria &&
       !isRepasoMode &&
       isUccPastoMedicinaInternaProUser(userTrackProfile);
 
@@ -385,6 +435,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       ? pool.slice(0, count)
       : dedicatedBattery
       ? dedicatedBattery
+      : isConvocatoria && convocatoriaEdition
+        ? selectConvocatoriaExamQuestions(convocatoriaEdition)
       : isUccMiSimulacro
         ? selectUccSimulacroQuestions({
             questions: pool,
@@ -427,12 +479,35 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     setUsageBlockMeta({});
     trackStartDemo({
       userId: user?.uid,
-      source: isDailyPill ? "daily-pill" : isSimulacro ? "simulacro" : (source ?? "direct"),
+      source: isConvocatoria
+        ? "convocatoria"
+        : isDailyPill
+          ? "daily-pill"
+          : isSimulacro
+            ? "simulacro"
+            : (source ?? "direct"),
     });
   };
 
   useEffect(() => {
     let mounted = true;
+
+    if (isConvocatoria) {
+      if (!convocatoriaEdition) {
+        setQuestionBank([]);
+        setUsageBlockReason("Edición de convocatoria no encontrada.");
+        setIsLoadingQuestions(false);
+        return () => {
+          mounted = false;
+        };
+      }
+      setQuestionBank(getConvocatoriaQuestionBank(convocatoriaEdition.code));
+      setIsLoadingQuestions(false);
+      return () => {
+        mounted = false;
+      };
+    }
+
     getActiveQuestions().then((questions) => {
       if (mounted) {
         setQuestionBank(questions);
@@ -442,7 +517,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [isConvocatoria, convocatoriaEdition]);
 
   useEffect(() => {
     if (
@@ -589,7 +664,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   }, [user, isRepasoMode]);
 
   useEffect(() => {
-    if (!user || isAct1 || isDailyPill || isSimulacro || hasStarted) return;
+    if (!user || isAct1 || isDailyPill || isSimulacro || isConvocatoria || hasStarted) return;
     if (!userTrackProfile) return;
 
     let mounted = true;
@@ -630,6 +705,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     isAct1,
     isDailyPill,
     isSimulacro,
+    isConvocatoria,
     hasStarted,
     effectivePlan,
     sessionType,
@@ -657,16 +733,16 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
   useEffect(() => {
     if (
-      !isSimulacro ||
+      !isTimedExam ||
       !hasStarted ||
       isResultsStep ||
-      simulacroMaxSeconds <= 0 ||
-      totalSeconds < simulacroMaxSeconds
+      timedExamMaxSeconds <= 0 ||
+      totalSeconds < timedExamMaxSeconds
     ) {
       return;
     }
     setCurrentQuestionIndex(totalQuestions);
-  }, [hasStarted, isResultsStep, isSimulacro, simulacroMaxSeconds, totalSeconds, totalQuestions]);
+  }, [hasStarted, isResultsStep, isTimedExam, timedExamMaxSeconds, totalSeconds, totalQuestions]);
 
   useEffect(() => {
     if (!isResultsStep || !user || hasSavedCurrentAttempt) return;
@@ -679,6 +755,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       correctTopics: correctTopicsByName,
       avgResponseTime: calculateAverageResponseTime(responseTimes),
       sessionType: resultSessionType,
+      convocatoriaEdition: isConvocatoria ? convocatoriaEdition?.code ?? null : undefined,
       uccBlockKind:
         blockParam &&
         ["new", "review", "weak"].includes(blockParam) &&
@@ -686,15 +763,26 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         !isDailyPill &&
         !isAct1 &&
         !isSimulacro &&
+        !isConvocatoria &&
         !isRepasoMode
           ? blockParam
           : undefined,
     }).then(() => {
       setHasSavedCurrentAttempt(true);
       setHistoryRefreshKey((prev) => prev + 1);
-      registerTrainingDay(user.uid).catch(console.error);
+      if (isConvocatoria && convocatoriaEdition) {
+        void saveConvocatoriaAttempt(user.uid, {
+          editionCode: convocatoriaEdition.code,
+          scorePercentage,
+          correctAnswers,
+          wrongAnswers,
+          completedAt: new Date().toISOString(),
+        });
+      } else {
+        registerTrainingDay(user.uid).catch(console.error);
+      }
     });
-  }, [blockParam, correctAnswers, hasSavedCurrentAttempt, isAct1, isDailyPill, isResultsStep, isSimulacro, resultSessionType, scorePercentage, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
+  }, [blockParam, convocatoriaEdition, correctAnswers, hasSavedCurrentAttempt, isAct1, isConvocatoria, isDailyPill, isResultsStep, isSimulacro, isRepasoMode, resultSessionType, scorePercentage, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
 
   useEffect(() => {
     if (!isResultsStep || !user || !isRepasoCierre || hasSavedCurrentAttempt === false) return;
@@ -759,7 +847,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         void markQuestionSeen(user.uid, currentQuestion.id);
       }
 
-      if (!isCorrect) {
+      if (!isCorrect && !isConvocatoria) {
         void recordFailedQuestion({
           userId: user.uid,
           questionId: currentQuestion.id,
@@ -793,7 +881,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         currentWrongTopics: wrongTopicsByName,
       });
     setLiveFeedbackMessage(feedback);
-    setShowProgressFeedback(true);
+    setShowProgressFeedback(!isConvocatoria);
 
     trackDemoQuestionAnswered({
       userId: user?.uid,
@@ -810,12 +898,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
     setTimeout(() => {
       setShowProgressFeedback(false);
-      // Si es Daily Pill, pasamos automáticamente a resultados después de un breve delay
-      // para que el usuario pueda ver la explicación inicial.
       if (isDailyPill) {
         handleNext();
       }
-    }, isDailyPill ? 5000 : 2000);
+    }, isDailyPill ? 5000 : isConvocatoria ? 0 : 2000);
   };
 
   const handleNext = () => {
@@ -849,12 +935,19 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               avgResponseTime={calculateAverageResponseTime(responseTimes)}
               totalSeconds={totalSeconds}
               onRepeatDemo={resetSessionState}
-              source={isDailyPill ? "daily-pill" : source}
+              source={
+                isConvocatoria
+                  ? "convocatoria"
+                  : isDailyPill
+                    ? "daily-pill"
+                    : source
+              }
               university={urlUniversity}
               specialty={urlSpecialty}
               sessionQuestions={sessionQuestions}
               answersByQuestionId={answersByQuestionId}
               userPlan={effectivePlan}
+              convocatoriaEdition={convocatoriaEdition?.code ?? null}
               uccBlockCompletion={uccBlockCompletion}
               onContinueNextUccBlock={
                 uccBlockCompletion?.nextBlock ? handleContinueNextUccBlock : undefined
@@ -904,7 +997,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                   <Zap size={48} fill="currentColor" />
                 </div>
                 <h1 className="mb-4 text-4xl font-black tracking-tight text-white sm:text-6xl">
-                  {isSimulacro ? (
+                  {isConvocatoria ? (
+                    <>Convocatoria <span className="text-mq-accent">UCC</span></>
+                  ) : isSimulacro ? (
                     <>Simulacro <span className="text-mq-accent">{isUccSimulacro ? "UCC Pasto" : "tipo examen"}</span></>
                   ) : isRepasoCierre ? (
                     <>Examen de <span className="text-mq-accent">cierre</span></>
@@ -919,8 +1014,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                   )}
                 </h1>
                 <p className="mb-6 max-w-lg text-lg text-mq-muted">
-                  {isSimulacro
-                    ? `${plannedQuestionCount} preguntas · ${effectiveSimulacroMinutes} min máximo${isUccSimulacro ? " · Res. 108" : ""}.`
+                  {isConvocatoria && convocatoriaEdition
+                    ? `${convocatoriaEdition.label} · ${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min · 1 intento · sin feedback durante el examen.`
+                    : isSimulacro
+                    ? `${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min máximo${isUccSimulacro ? " · Res. 108" : ""}.`
                     : isRepasoCierre
                       ? `${plannedQuestionCount} preguntas fallidas pendientes · examen final del día.`
                       : isRepasoPractice
@@ -950,6 +1047,14 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                         Volver al panel
                       </Link>
                     ) : null}
+                    {isConvocatoria && usageBlockReason ? (
+                      <Link
+                        href="/dashboard/convocatorias"
+                        className="mt-2 block font-bold text-mq-accent hover:underline"
+                      >
+                        Volver a convocatorias
+                      </Link>
+                    ) : null}
                     {!usageBlockMeta.dayClosed && upgradeCta ? (
                       <Link
                         href={upgradeCta.href}
@@ -970,7 +1075,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                   }
                   className="mq-premium-glow group flex h-16 items-center justify-center gap-4 rounded-2xl bg-mq-accent px-12 text-lg font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  {isSimulacro
+                  {isConvocatoria
+                    ? "INICIAR CONVOCATORIA"
+                    : isSimulacro
                     ? "INICIAR SIMULACRO"
                     : isRepasoCierre
                       ? "INICIAR EXAMEN DE CIERRE"
@@ -989,6 +1096,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-accent">
                           {isDailyPill
                             ? "La Pildora del Dr. Q"
+                            : isConvocatoria
+                              ? "Convocatoria UCC en curso"
                             : isRepasoCierre
                               ? "Examen de cierre"
                               : isRepasoPractice
@@ -999,19 +1108,19 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        </p>
                        <h2 className="text-xl font-bold text-white">Pregunta {currentQuestionIndex + 1} de {totalQuestions}</h2>
                     </div>
-                    {(isDailyPill || isSimulacro) && (
+                    {(isDailyPill || isTimedExam) && (
                        <div
                          className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-bold ${
-                           isSimulacro &&
-                           simulacroMaxSeconds > 0 &&
-                           totalSeconds >= simulacroMaxSeconds - 300
+                           isTimedExam &&
+                           timedExamMaxSeconds > 0 &&
+                           totalSeconds >= timedExamMaxSeconds - 300
                              ? "border-amber-500/40 bg-amber-500/10 text-amber-200"
                              : "border-mq-accent/20 bg-mq-accent/5 text-mq-accent"
                          }`}
                        >
                           <Target size={14} />
-                          {isSimulacro && simulacroMaxSeconds > 0
-                            ? `${formatTime(totalSeconds)} / ${formatTime(simulacroMaxSeconds)}`
+                          {isTimedExam && timedExamMaxSeconds > 0
+                            ? `${formatTime(totalSeconds)} / ${formatTime(timedExamMaxSeconds)}`
                             : formatTime(totalSeconds)}
                        </div>
                     )}
@@ -1045,10 +1154,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        examAreaLabel={enrichedCurrentQuestion.examArea}
                        onAnswerSelect={handleAnswer}
                        isLocked={
-                         isDailyPill || isSimulacro
+                         isDailyPill || isConvocatoria
                            ? false
                            : isAct1 && currentQuestionIndex > 0 && isFreePlan
                        }
+                       examMode={isConvocatoria}
                     />
                  )}
 
@@ -1062,7 +1172,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        )}
                        {!showProgressFeedback && !isDailyPill && (
                           <button onClick={handleNext} className="mq-premium-glow flex h-14 items-center justify-center gap-3 rounded-xl bg-mq-accent px-10 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105">
-                             {hasNextQuestion ? "SIGUIENTE PREGUNTA" : "VER RESULTADOS FINALES"}
+                             {hasNextQuestion ? "SIGUIENTE PREGUNTA" : isConvocatoria ? "FINALIZAR EXAMEN" : "VER RESULTADOS FINALES"}
                              <ArrowRight size={18} />
                           </button>
                        )}
