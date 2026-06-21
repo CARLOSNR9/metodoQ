@@ -272,7 +272,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     const remainingSeconds = Math.max(0, maxSeconds - elapsedSeconds);
     const hours = Math.floor(remainingSeconds / 3600);
     const minutes = Math.floor((remainingSeconds % 3600) / 60);
-    return `${hours}:${minutes.toString().padStart(2, "0")}`;
+    const seconds = remainingSeconds % 60;
+    return `${hours}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
   };
 
   const uccWeekModule =
