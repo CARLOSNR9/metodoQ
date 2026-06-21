@@ -86,6 +86,60 @@ export function buildUccRadarFromSession(
   return uccCountsToRadarPoints(counts);
 }
 
+export type UccRepasoAxisInsight = {
+  axis: UccExamRadarAxis;
+  label: string;
+  correct: number;
+  wrong: number;
+  percentage: number;
+};
+
+export type UccRepasoTopicInsight = {
+  topic: string;
+  wrongCount: number;
+};
+
+export function getUccRepasoInsights(
+  questions: TrainingQuestion[],
+  answersByQuestionId: Record<string, string>,
+): { axes: UccRepasoAxisInsight[]; topics: UccRepasoTopicInsight[] } {
+  const counts = emptyUccAxisCounts();
+  const topicWrong = new Map<string, number>();
+
+  for (const question of questions) {
+    const selected = answersByQuestionId[question.id];
+    if (!selected) continue;
+
+    const axis = mapUccExamAreaToRadarAxis(question.examArea ?? question.topic);
+    const isCorrect = selected === question.correctOptionId;
+    if (isCorrect) counts[axis].correct += 1;
+    else {
+      counts[axis].wrong += 1;
+      const topic = question.topic || "General";
+      topicWrong.set(topic, (topicWrong.get(topic) ?? 0) + 1);
+    }
+  }
+
+  const axes: UccRepasoAxisInsight[] = UCC_EXAM_RADAR_AXES.map((axis) => {
+    const { correct, wrong } = counts[axis];
+    const total = correct + wrong;
+    const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+    return {
+      axis,
+      label: UCC_RADAR_DISPLAY_LABELS[axis],
+      correct,
+      wrong,
+      percentage,
+    };
+  }).sort((a, b) => a.percentage - b.percentage);
+
+  const topics: UccRepasoTopicInsight[] = Array.from(topicWrong.entries())
+    .map(([topic, wrongCount]) => ({ topic, wrongCount }))
+    .sort((a, b) => b.wrongCount - a.wrongCount);
+
+  return { axes, topics };
+}
+
 export function buildUccRadarFromStats(
   correctTopics: Record<string, number>,
   wrongTopics: Record<string, number>,

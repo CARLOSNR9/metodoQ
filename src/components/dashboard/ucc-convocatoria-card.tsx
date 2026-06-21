@@ -9,12 +9,11 @@ import {
   ClipboardCheck,
   Clock,
   Lock,
-  Trophy,
 } from "lucide-react";
 import {
   buildConvocatoriaEditionStatus,
   buildConvocatoriaExamHref,
-  getConvocatoriaAttempt,
+  resolveConvocatoriaAttempt,
   getFeaturedConvocatoriaEdition,
   type UccConvocatoriaEditionStatus,
 } from "@/lib/training/ucc-convocatoria";
@@ -39,7 +38,7 @@ export function UccConvocatoriaCard({ userId }: UccConvocatoriaCardProps) {
           return;
         }
 
-        const attempt = await getConvocatoriaAttempt(userId, featured.code);
+        const attempt = await resolveConvocatoriaAttempt(userId, featured.code);
         if (!mounted) return;
         setStatus(buildConvocatoriaEditionStatus({ edition: featured, attempt }));
       } catch (error) {
@@ -130,47 +129,65 @@ export function UccConvocatoriaCard({ userId }: UccConvocatoriaCardProps) {
           </div>
 
           {attempt ? (
-            <div className="inline-flex items-center gap-2 rounded-xl border border-mq-accent/20 bg-mq-accent/5 px-4 py-2 text-sm text-white">
-              <Trophy size={16} className="text-mq-accent" />
-              Tu resultado: {attempt.correctAnswers}/{edition.questionCount} aciertos (
-              {attempt.scorePercentage}%)
+            <div className="inline-flex flex-wrap items-center gap-3">
+              <div className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-2 text-sm text-white">
+                <CheckCircle2 size={16} className="text-emerald-300" />
+                {attempt.correctAnswers}/{edition.questionCount} aciertos ({attempt.scorePercentage}%)
+              </div>
+              {attempt.resultId ? (
+                <Link
+                  href={`/dashboard/historial/${attempt.resultId}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-bold text-mq-accent transition hover:brightness-110"
+                >
+                  Ver retroalimentación
+                  <ArrowRight size={14} />
+                </Link>
+              ) : null}
+              <Link
+                href="#convocatoria-repaso-summary"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-200 transition hover:text-amber-100"
+              >
+                Qué repasar ↓
+              </Link>
             </div>
           ) : null}
         </div>
 
-        <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col lg:min-w-[220px]">
-          {canStart ? (
-            <Link
-              href={examHref}
-              className="mq-premium-glow inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground transition hover:brightness-110"
-            >
-              Iniciar convocatoria
-              <ArrowRight size={16} />
-            </Link>
-          ) : completed ? (
-            <Link
-              href="/dashboard/historial"
-              className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-6 text-sm font-bold text-white transition hover:bg-white/[0.08]"
-            >
-              Ver en historial
-            </Link>
-          ) : phase === "upcoming" ? (
-            <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/5 px-6 text-sm font-semibold text-amber-100">
-              Próximamente
-            </div>
-          ) : (
-            <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-sm font-semibold text-mq-muted">
-              Ventana cerrada
-            </div>
-          )}
+        {!completed ? (
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row lg:flex-col lg:min-w-[220px]">
+            {canStart ? (
+              <Link
+                href={examHref}
+                className="mq-premium-glow inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground transition hover:brightness-110"
+              >
+                Iniciar convocatoria
+                <ArrowRight size={16} />
+              </Link>
+            ) : phase === "upcoming" ? (
+              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/5 px-6 text-sm font-semibold text-amber-100">
+                Próximamente
+              </div>
+            ) : (
+              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-sm font-semibold text-mq-muted">
+                Ventana cerrada
+              </div>
+            )}
 
+            <Link
+              href="/dashboard/convocatorias"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-mq-muted transition hover:bg-white/[0.06] hover:text-white"
+            >
+              Ver calendario
+            </Link>
+          </div>
+        ) : (
           <Link
             href="/dashboard/convocatorias"
-            className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-mq-muted transition hover:bg-white/[0.06] hover:text-white"
+            className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-mq-muted transition hover:bg-white/[0.06] hover:text-white lg:min-w-[220px]"
           >
             Ver calendario
           </Link>
-        </div>
+        )}
       </div>
     </motion.section>
   );

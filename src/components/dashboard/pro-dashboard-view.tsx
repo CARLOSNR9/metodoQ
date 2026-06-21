@@ -42,6 +42,7 @@ import { UccDailyMissionCard } from "./ucc-daily-mission-card";
 import { UccPercentileTrackerCard } from "./ucc-percentile-tracker-card";
 import { UccWeeklySimulacroCard } from "./ucc-weekly-simulacro-card";
 import { UccConvocatoriaCard } from "./ucc-convocatoria-card";
+import { ConvocatoriaRepasoSummaryCard } from "./convocatoria-repaso-summary-card";
 import { UccPhase2SimulatorCard } from "./ucc-phase2-simulator-card";
 import { SubscriptionStatusCard } from "./subscription-status-card";
 import { StudyStreakSummary } from "./study-streak-summary";
@@ -282,7 +283,10 @@ export function ProDashboardView({
       />
 
       {showLiveClasses && user?.uid ? (
-        <UccConvocatoriaCard userId={user.uid} />
+        <>
+          <UccConvocatoriaCard userId={user.uid} />
+          <ConvocatoriaRepasoSummaryCard userId={user.uid} />
+        </>
       ) : null}
 
       {hasDiagnosticData && (

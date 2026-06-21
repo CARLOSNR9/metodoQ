@@ -32,6 +32,7 @@ export { UccPercentileTrackerCard } from "./ucc-percentile-tracker-card";
 export { UccCvSimulatorCard } from "./ucc-cv-simulator-card";
 export { UccWeeklySimulacroCard } from "./ucc-weekly-simulacro-card";
 export { UccConvocatoriaCard } from "./ucc-convocatoria-card";
+export { ConvocatoriaRepasoSummaryCard } from "./convocatoria-repaso-summary-card";
 export { UccPhase2SimulatorCard } from "./ucc-phase2-simulator-card";
 export { SubscriptionStatusCard } from "./subscription-status-card";
 export { StudyStreakSummary } from "./study-streak-summary";

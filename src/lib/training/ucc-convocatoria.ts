@@ -1,6 +1,7 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { UCC_CONV_2025_06_21_QUESTIONS } from "@/data/ucc-conv-2025-06-21-questions";
 import { getFirebaseDb } from "@/lib/firebase";
+import { getUserDemoResults } from "@/lib/results";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 export type UccConvocatoriaEdition = {
@@ -116,6 +117,57 @@ export async function getConvocatoriaAttempt(
     return attempts?.[editionCode] ?? null;
   } catch (error) {
     console.error("No se pudo leer el intento de convocatoria.", error);
+    return null;
+  }
+}
+
+function buildAttemptFromResult(
+  editionCode: string,
+  result: {
+    id: string;
+    scorePercentage: number;
+    correctAnswers: number;
+    wrongAnswers: number;
+    fechaIso: string | null;
+    sessionQuestionIds?: string[];
+    answersByQuestionId?: Record<string, string>;
+  },
+): UccConvocatoriaAttempt {
+  return {
+    editionCode,
+    scorePercentage: result.scorePercentage,
+    correctAnswers: result.correctAnswers,
+    wrongAnswers: result.wrongAnswers,
+    completedAt: result.fechaIso ?? new Date().toISOString(),
+    sessionQuestionIds: result.sessionQuestionIds,
+    answersByQuestionId: result.answersByQuestionId,
+    resultId: result.id,
+  };
+}
+
+/** Lee el intento guardado o reconstruye desde historial si falta el registro en perfil. */
+export async function resolveConvocatoriaAttempt(
+  userId: string,
+  editionCode: string,
+): Promise<UccConvocatoriaAttempt | null> {
+  const stored = await getConvocatoriaAttempt(userId, editionCode);
+  if (stored) return stored;
+
+  try {
+    const results = await getUserDemoResults(userId);
+    const match = results.find(
+      (item) =>
+        item.sessionType === "convocatoria" && item.convocatoriaEdition === editionCode,
+    );
+    if (!match) return null;
+
+    const attempt = buildAttemptFromResult(editionCode, match);
+    void saveConvocatoriaAttempt(userId, attempt).catch((error) => {
+      console.error("No se pudo sincronizar el intento de convocatoria.", error);
+    });
+    return attempt;
+  } catch (error) {
+    console.error("No se pudo resolver el intento de convocatoria.", error);
     return null;
   }
 }
