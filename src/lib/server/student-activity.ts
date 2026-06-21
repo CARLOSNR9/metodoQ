@@ -1,5 +1,9 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import {
+  resolveAdminConvocatoriaAttempt,
+  type AdminConvocatoriaAttemptStatus,
+} from "@/lib/server/convocatoria-admin";
+import {
   resolveActivityStatus,
   type ActivityStatus,
 } from "@/lib/activity-status";
@@ -49,6 +53,7 @@ export type AdminStudentActivity = {
   questionsLast7Days: number;
   habitDays: DailyHabitDay[];
   recentSessions: AdminStudentSession[];
+  convocatoria: AdminConvocatoriaAttemptStatus | null;
 };
 
 const SESSION_LABELS: Record<SessionTypeLabel, string> = {
@@ -93,6 +98,7 @@ function mapAdminResult(
       : "Fecha no disponible",
     sessionType: (data.sessionType as SessionTypeLabel) ?? "training",
     uccBlockKind: (data.uccBlockKind as DemoResultItem["uccBlockKind"]) ?? null,
+    convocatoriaEdition: (data.convocatoriaEdition as string) ?? null,
   };
 }
 
@@ -162,6 +168,19 @@ export async function getAdminStudentActivity(
     fechaIso: result.fechaIso,
   }));
 
+  const convocatoria = resolveAdminConvocatoriaAttempt({
+    userData: data,
+    results: results.map((result) => ({
+      id: result.id,
+      sessionType: result.sessionType,
+      convocatoriaEdition: result.convocatoriaEdition,
+      scorePercentage: result.scorePercentage,
+      correctAnswers: result.correctAnswers,
+      wrongAnswers: result.wrongAnswers,
+      fechaIso: result.fechaIso,
+    })),
+  });
+
   return {
     uid,
     email: String(data.email ?? ""),
@@ -191,5 +210,6 @@ export async function getAdminStudentActivity(
     questionsLast7Days: countQuestionsInLastNDays(results, 7),
     habitDays,
     recentSessions,
+    convocatoria,
   };
 }

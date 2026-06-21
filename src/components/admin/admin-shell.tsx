@@ -12,6 +12,7 @@ import {
   GraduationCap,
   BarChart3,
   BookOpen,
+  ClipboardCheck,
   LogOut,
   ExternalLink,
 } from "lucide-react";
@@ -23,6 +24,7 @@ type AdminShellProps = {
 const navigationItems = [
   { label: "Inicio", href: "/admin", icon: LayoutDashboard, exact: true },
   { label: "Usuarios", href: "/admin/usuarios", icon: Users, exact: true },
+  { label: "Convocatorias", href: "/admin/convocatorias", icon: ClipboardCheck, exact: true },
   { label: "Ventas manuales", href: "/admin/ventas", icon: Receipt, exact: true },
   { label: "Plan Residente", href: "/admin/residente", icon: GraduationCap, exact: true },
   { label: "Métricas", href: "/admin/metricas", icon: BarChart3, exact: true },

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Check, Flame, Minus, X } from "lucide-react";
+import { Check, CheckCircle2, ClipboardCheck, Clock, Flame, Minus, X } from "lucide-react";
 import {
   formatRelativeLastActive,
   getActivityStatusLabel,
@@ -102,6 +102,115 @@ function MetricCard({
   );
 }
 
+function formatConvocatoriaDate(iso: string | null) {
+  if (!iso) return "—";
+  return new Date(iso).toLocaleDateString("es-CO", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
+function ConvocatoriaStatusSection({
+  convocatoria,
+}: {
+  convocatoria: NonNullable<AdminStudentActivity["convocatoria"]>;
+}) {
+  const completed = convocatoria.status === "completed";
+
+  return (
+    <section
+      className={`mt-8 rounded-xl border p-6 shadow-xl ${
+        completed
+          ? "border-emerald-500/25 bg-emerald-500/[0.06]"
+          : "border-amber-500/25 bg-amber-500/[0.06]"
+      }`}
+    >
+      <div className="flex flex-wrap items-start justify-between gap-4">
+        <div className="flex items-start gap-3">
+          <div
+            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${
+              completed
+                ? "bg-emerald-500/15 text-emerald-300"
+                : "bg-amber-500/15 text-amber-300"
+            }`}
+          >
+            <ClipboardCheck size={22} />
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
+              Convocatoria UCC
+            </p>
+            <h2 className="mt-1 text-lg font-semibold text-white">
+              {convocatoria.editionLabel} · {convocatoria.editionCode}
+            </h2>
+            <p className="mt-1 text-sm text-mq-muted">
+              Simulacro oficial de {convocatoria.questionCount} preguntas · 1 intento
+            </p>
+          </div>
+        </div>
+
+        {completed ? (
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-xs font-semibold text-emerald-300">
+            <CheckCircle2 size={14} />
+            Completó
+          </span>
+        ) : (
+          <span className="inline-flex items-center gap-1.5 rounded-md border border-amber-500/30 bg-amber-500/10 px-2.5 py-1 text-xs font-semibold text-amber-300">
+            <Clock size={14} />
+            Pendiente
+          </span>
+        )}
+      </div>
+
+      {completed ? (
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+              Puntaje
+            </p>
+            <p className="mt-2 text-3xl font-semibold text-white">
+              {convocatoria.scorePercentage}%
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+              Respuestas
+            </p>
+            <p className="mt-2 text-lg font-semibold text-white">
+              {convocatoria.correctAnswers}✓ / {convocatoria.wrongAnswers}✗
+            </p>
+            <p className="mt-1 text-xs text-mq-muted">
+              de {convocatoria.questionCount} preguntas
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+              Fecha
+            </p>
+            <p className="mt-2 text-sm font-medium text-white">
+              {formatConvocatoriaDate(convocatoria.completedAt)}
+            </p>
+          </div>
+        </div>
+      ) : (
+        <p className="mt-6 text-sm text-mq-muted">
+          Este usuario aún no ha completado el simulacro de la convocatoria activa.
+        </p>
+      )}
+
+      <Link
+        href="/admin/convocatorias"
+        className="mt-5 inline-block text-xs font-semibold text-mq-accent hover:underline"
+      >
+        Ver seguimiento general →
+      </Link>
+    </section>
+  );
+}
+
 type StudentActivityViewProps = {
   student: AdminStudentActivity;
 };
@@ -147,6 +256,10 @@ export function StudentActivityView({ student }: StudentActivityViewProps) {
         </header>
         <ActivityBadge status={student.activityStatus} />
       </div>
+
+      {student.convocatoria ? (
+        <ConvocatoriaStatusSection convocatoria={student.convocatoria} />
+      ) : null}
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <MetricCard
