@@ -20,6 +20,9 @@ export type UccConvocatoriaAttempt = {
   correctAnswers: number;
   wrongAnswers: number;
   completedAt: string;
+  sessionQuestionIds?: string[];
+  answersByQuestionId?: Record<string, string>;
+  resultId?: string;
 };
 
 export type UccConvocatoriaEditionStatus = {

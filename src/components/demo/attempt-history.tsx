@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ProgressSummary } from "@/components/demo/progress-summary";
 import { getSessionTypeLabel, getUserDemoResults, type DemoResultItem } from "@/lib/results";
+import { hasSessionReviewData } from "@/lib/session-review";
 
 type AttemptHistoryProps = {
   userId: string;
@@ -107,11 +108,12 @@ export function AttemptHistory({
         <>
           <ProgressSummary bestScore={bestScore} averageScore={averageScore} />
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-            {recentResults.map((result) => (
-              <li
-                key={result.id}
-                className={`rounded-2xl border p-4 transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 ${getScoreCardClasses(result.scorePercentage)}`}
-              >
+            {recentResults.map((result) => {
+              const canReview = hasSessionReviewData(
+                result.sessionQuestionIds,
+                result.answersByQuestionId,
+              );
+              const cardContent = (
                 <div className="space-y-2">
                   <div className="flex flex-wrap items-center gap-2">
                     <p className="text-xs font-medium uppercase tracking-[0.1em] text-mq-muted">
@@ -129,9 +131,29 @@ export function AttemptHistory({
                   <p className="text-xs text-foreground/80">
                     {result.correctAnswers} correctas · {result.wrongAnswers} incorrectas
                   </p>
+                  {canReview ? (
+                    <p className="text-xs font-semibold text-mq-accent">
+                      Ver retroalimentación →
+                    </p>
+                  ) : null}
                 </div>
-              </li>
-            ))}
+              );
+
+              return (
+                <li
+                  key={result.id}
+                  className={`rounded-2xl border p-4 transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110 ${getScoreCardClasses(result.scorePercentage)}`}
+                >
+                  {canReview ? (
+                    <Link href={`/dashboard/historial/${result.id}`} className="block">
+                      {cardContent}
+                    </Link>
+                  ) : (
+                    cardContent
+                  )}
+                </li>
+              );
+            })}
           </ul>
           {limitedMessage ? (
             <p className="mt-3 text-xs text-mq-muted">{limitedMessage}</p>

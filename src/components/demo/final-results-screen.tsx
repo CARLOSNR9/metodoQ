@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { TrendingUp, Zap, Clock, Target, ArrowRight, Lock, Sparkles } from "lucide-react";
+import { TrendingUp, Zap, Clock, Target, ArrowRight, Lock, Sparkles, BookOpenCheck } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import {
   getRecommendedUpgradePlanId,
@@ -13,6 +13,7 @@ import { Act2PredictiveDashboard } from "./act2-predictive-dashboard";
 import { ScoreComparisonCards } from "./score-comparison-cards";
 import type { UccBlockCompletionCTA } from "@/lib/training/ucc-mi-daily-plan";
 import { UccConvocatoriaResultsPanel } from "@/components/dashboard/ucc-convocatoria-results-panel";
+import { SessionQuestionReview } from "@/components/demo/session-question-review";
 
 export type FinalResultsScreenProps = {
   /** Puntaje de esta sesión (%). */
@@ -39,6 +40,7 @@ export type FinalResultsScreenProps = {
   /** En /dashboard/entrenar, evita enlazar a la misma ruta (no navega). */
   preferDashboardReturn?: boolean;
   convocatoriaEdition?: string | null;
+  savedResultId?: string | null;
 };
 
 function getPerformanceProfile(scorePercentage: number) {
@@ -88,6 +90,7 @@ export function FinalResultsScreen({
   onContinueNextUccBlock,
   preferDashboardReturn = false,
   convocatoriaEdition = null,
+  savedResultId = null,
 }: FinalResultsScreenProps) {
   const isAct1 = source === "act1";
   const isDailyPill = source === "daily-pill";
@@ -130,7 +133,7 @@ export function FinalResultsScreen({
     : "Continuar entrenamiento";
 
   return (
-    <div className={`mt-10 flex justify-center px-4 ${className ?? ""}`}>
+    <div className={`mt-10 flex w-full max-w-4xl flex-col items-center px-4 ${className ?? ""}`}>
       <motion.article 
         initial={{ opacity: 0, y: 30, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -233,7 +236,7 @@ export function FinalResultsScreen({
                 ? "Tu agilidad clínica hoy ha sido impecable. Has ganado el trofeo del día y tu racha se mantiene activa."
                 : "La medicina no es lineal, pero la constancia sí. Mañana tendrás una nueva oportunidad para redimirte."
               : isConvocatoria
-                ? `Obtuviste ${correctAnswers} aciertos de ${sessionQuestions?.length ?? 100}. Revisa tu radar por eje y el detalle en historial.`
+                ? `Obtuviste ${correctAnswers} aciertos de ${sessionQuestions?.length ?? 100}. Revisa el radar por eje y la retroalimentación de cada pregunta abajo.`
                 : isAct1
                   ? `Hemos calibrado tus resultados contra el histórico de la ${university} para la especialidad de ${specialty}.`
                   : profile.message}
@@ -491,12 +494,18 @@ export function FinalResultsScreen({
             )
           ) : isConvocatoria ? (
             <>
-              <Link
-                href="/dashboard/convocatorias"
+              <a
+                href="#session-question-review"
                 className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
               >
+                <BookOpenCheck className="mr-2 h-4 w-4" />
+                Revisar preguntas
+              </a>
+              <Link
+                href="/dashboard/convocatorias"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+              >
                 Volver a convocatorias
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/dashboard/historial"
@@ -668,6 +677,20 @@ export function FinalResultsScreen({
           )}
         </footer>
       </motion.article>
+
+      {!isDailyPill && sessionQuestions && answersByQuestionId && sessionQuestions.length > 0 ? (
+        <SessionQuestionReview
+          sessionQuestions={sessionQuestions}
+          answersByQuestionId={answersByQuestionId}
+          savedResultId={savedResultId}
+          title={
+            isConvocatoria
+              ? `Retroalimentación de tus ${sessionQuestions.length} preguntas`
+              : "Retroalimentación de la sesión"
+          }
+          className="w-full"
+        />
+      ) : null}
     </div>
   );
 }

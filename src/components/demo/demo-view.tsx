@@ -35,6 +35,7 @@ import {
   saveDemoResult,
   registerTrainingDay,
   completeDailyPill,
+  getDemoResultById,
 } from "@/lib/results";
 import { DAILY_CHALLENGES } from "@/data/daily-challenges";
 import { getActiveQuestions } from "@/lib/questions/service";
@@ -90,6 +91,10 @@ import {
   saveConvocatoriaAttempt,
   selectConvocatoriaExamQuestions,
 } from "@/lib/training/ucc-convocatoria";
+import {
+  getWrongQuestionIds,
+  resolveSessionQuestions,
+} from "@/lib/session-review";
 
 export type DemoQuestion = TrainingQuestion;
 
@@ -127,6 +132,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const isBonusMode = searchParams.get("mode") === "bonus";
   const isRepasoPractice = searchParams.get("mode") === "repaso";
   const isRepasoCierre = searchParams.get("mode") === "repaso-cierre";
+  const isSessionErrorsMode = searchParams.get("mode") === "session-errors";
+  const sessionErrorsResultId = searchParams.get("resultId");
+  const sessionErrorsIdsParam = searchParams.get("ids");
+  const topicParam = searchParams.get("topic");
   const isRepasoMode = isRepasoPractice || isRepasoCierre;
   const isSimulacro = searchParams.get("mode") === "simulacro";
   const isConvocatoria = searchParams.get("mode") === "convocatoria";
@@ -162,6 +171,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [responseTimes, setResponseTimes] = useState<number[]>([]);
   const [questionStartAt, setQuestionStartAt] = useState<number | null>(null);
   const [hasSavedCurrentAttempt, setHasSavedCurrentAttempt] = useState(false);
+  const [savedResultId, setSavedResultId] = useState<string | null>(null);
   const [historyRefreshKey, setHistoryRefreshKey] = useState(0);
   const [isFreeLimitModalOpen, setIsFreeLimitModalOpen] = useState(false);
   const [showFreePaywallTeaser, setShowFreePaywallTeaser] = useState(false);
@@ -213,6 +223,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [repasoPendingCount, setRepasoPendingCount] = useState<number | null>(null);
   const plannedQuestionCount = isDailyPill
     ? 1
+    : isSessionErrorsMode
+      ? sessionCountOverride ?? 25
     : isRepasoMode
       ? sessionCountOverride && repasoPendingCount != null
         ? Math.min(sessionCountOverride, repasoPendingCount)
@@ -304,6 +316,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     setWrongAnswers(0);
     setResponseTimes([]);
     setHasSavedCurrentAttempt(false);
+    setSavedResultId(null);
     setWrongTopicsByName({});
     setCorrectTopicsByName({});
     hasTrackedFinishDemoRef.current = false;
@@ -407,9 +420,46 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       }
     }
 
+    if (isSessionErrorsMode && user) {
+      let wrongIds: string[] = [];
+      if (sessionErrorsResultId) {
+        const result = await getDemoResultById(user.uid, sessionErrorsResultId);
+        if (result?.sessionQuestionIds?.length && result.answersByQuestionId) {
+          wrongIds = getWrongQuestionIds(
+            resolveSessionQuestions(result.sessionQuestionIds),
+            result.answersByQuestionId,
+          );
+        }
+      } else if (sessionErrorsIdsParam) {
+        wrongIds = sessionErrorsIdsParam
+          .split(",")
+          .map((id) => id.trim())
+          .filter(Boolean);
+      }
+
+      pool = pickQuestionsFromBankByIds(questionBank, wrongIds);
+      if (pool.length === 0) {
+        setUsageBlockReason(
+          "No encontramos preguntas fallidas de esa sesión para repasar.",
+        );
+        return;
+      }
+    }
+
+    if (topicParam?.trim() && !isSessionErrorsMode && !isRepasoMode) {
+      const topicNeedle = topicParam.trim().toLowerCase();
+      const matched = pool.filter((question) => {
+        const blob = `${question.topic} ${question.examArea ?? ""}`.toLowerCase();
+        return blob.includes(topicNeedle);
+      });
+      if (matched.length > 0) {
+        pool = matched;
+      }
+    }
+
     const count = isDailyPill
       ? 1
-      : isRepasoMode
+      : isSessionErrorsMode || isRepasoMode
         ? Math.min(plannedQuestionCount || pool.length, pool.length)
         : plannedQuestionCount;
     const dedicatedBattery = isAct1
@@ -440,12 +490,13 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       !isSimulacro &&
       !isConvocatoria &&
       !isRepasoMode &&
+      !isSessionErrorsMode &&
       isUccPastoMedicinaInternaProUser(userTrackProfile);
 
     const isUccMiSimulacro =
       isSimulacro && isUccPastoMedicinaInternaProUser(userTrackProfile);
 
-    const selected = isRepasoMode
+    const selected = isSessionErrorsMode || isRepasoMode
       ? pool.slice(0, count)
       : dedicatedBattery
       ? dedicatedBattery
@@ -760,6 +811,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
   useEffect(() => {
     if (!isResultsStep || !user || hasSavedCurrentAttempt) return;
+    const sessionQuestionIds = sessionQuestions.map((question) => question.id);
     void saveDemoResult({
       userId: user.uid,
       scorePercentage,
@@ -770,6 +822,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       avgResponseTime: calculateAverageResponseTime(responseTimes),
       sessionType: resultSessionType,
       convocatoriaEdition: isConvocatoria ? convocatoriaEdition?.code ?? null : undefined,
+      sessionQuestionIds,
+      answersByQuestionId,
       uccBlockKind:
         blockParam &&
         ["new", "review", "weak"].includes(blockParam) &&
@@ -781,8 +835,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         !isRepasoMode
           ? blockParam
           : undefined,
-    }).then(() => {
+    }).then((docRef) => {
       setHasSavedCurrentAttempt(true);
+      setSavedResultId(docRef.id);
       setHistoryRefreshKey((prev) => prev + 1);
       if (isConvocatoria && convocatoriaEdition) {
         void saveConvocatoriaAttempt(user.uid, {
@@ -791,12 +846,15 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
           correctAnswers,
           wrongAnswers,
           completedAt: new Date().toISOString(),
+          sessionQuestionIds,
+          answersByQuestionId,
+          resultId: docRef.id,
         });
       } else {
         registerTrainingDay(user.uid).catch(console.error);
       }
     });
-  }, [blockParam, convocatoriaEdition, correctAnswers, hasSavedCurrentAttempt, isAct1, isConvocatoria, isDailyPill, isResultsStep, isSimulacro, isRepasoMode, resultSessionType, scorePercentage, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
+  }, [answersByQuestionId, blockParam, convocatoriaEdition, correctAnswers, hasSavedCurrentAttempt, isAct1, isConvocatoria, isDailyPill, isResultsStep, isSimulacro, isRepasoMode, resultSessionType, scorePercentage, sessionQuestions, user, wrongAnswers, correctTopicsByName, wrongTopicsByName, responseTimes]);
 
   useEffect(() => {
     if (!isResultsStep || !user || !isRepasoCierre || hasSavedCurrentAttempt === false) return;
@@ -960,6 +1018,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               specialty={urlSpecialty}
               sessionQuestions={sessionQuestions}
               answersByQuestionId={answersByQuestionId}
+              savedResultId={savedResultId}
               userPlan={effectivePlan}
               convocatoriaEdition={convocatoriaEdition?.code ?? null}
               uccBlockCompletion={uccBlockCompletion}
@@ -1036,6 +1095,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                       ? `${plannedQuestionCount} preguntas fallidas pendientes · examen final del día.`
                       : isRepasoPractice
                         ? `${plannedQuestionCount} preguntas que fallaste hoy · sin presión de misión.`
+                        : isSessionErrorsMode
+                          ? `${plannedQuestionCount} preguntas que fallaste en tu última sesión · con retroalimentación inmediata.`
+                        : topicParam
+                          ? `Entrenamiento enfocado en ${topicParam} · ${plannedQuestionCount} preguntas.`
                         : isBonusMode
                       ? `Hasta ${plannedQuestionCount} preguntas extra sin presión.`
                       : blockParam
@@ -1103,6 +1166,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                       ? "INICIAR EXAMEN DE CIERRE"
                       : isRepasoPractice
                         ? "REPASAR FALLAS"
+                        : isSessionErrorsMode
+                          ? "REFORZAR MIS ERRORES"
+                        : topicParam
+                          ? "ENTRENAR TEMA"
                         : isBonusMode
                           ? "INICIAR BONUS"
                           : "COMENZAR ENTRENAMIENTO"}

@@ -39,6 +39,9 @@ type SaveDemoResultInput = {
     | "repaso-cierre";
   convocatoriaEdition?: string | null;
   uccBlockKind?: UccMiBlockKind | null;
+  /** Orden de preguntas respondidas en la sesión (para revisión posterior). */
+  sessionQuestionIds?: string[];
+  answersByQuestionId?: Record<string, string>;
 };
 
 export type SessionTypeLabel =
@@ -63,6 +66,8 @@ export type DemoResultItem = {
   sessionType: SessionTypeLabel;
   convocatoriaEdition?: string | null;
   uccBlockKind?: UccMiBlockKind | null;
+  sessionQuestionIds?: string[];
+  answersByQuestionId?: Record<string, string>;
 };
 
 export type WeakTopicItem = {
@@ -172,6 +177,8 @@ export async function saveDemoResult({
   sessionType = "training",
   convocatoriaEdition,
   uccBlockKind,
+  sessionQuestionIds,
+  answersByQuestionId,
 }: SaveDemoResultInput) {
   const db = getFirebaseDb();
 
@@ -186,6 +193,10 @@ export async function saveDemoResult({
     sessionType,
     ...(convocatoriaEdition ? { convocatoriaEdition } : {}),
     ...(uccBlockKind ? { uccBlockKind } : {}),
+    ...(sessionQuestionIds?.length ? { sessionQuestionIds } : {}),
+    ...(answersByQuestionId && Object.keys(answersByQuestionId).length
+      ? { answersByQuestionId }
+      : {}),
     fecha: serverTimestamp(),
   });
 
@@ -212,6 +223,8 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
     sessionType?: SessionTypeLabel;
     convocatoriaEdition?: string;
     uccBlockKind?: UccMiBlockKind;
+    sessionQuestionIds?: string[];
+    answersByQuestionId?: Record<string, string>;
     fecha?: { toDate?: () => Date };
     fechaDateKey?: string;
   };
@@ -235,7 +248,26 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
     sessionType: data.sessionType ?? "training",
     convocatoriaEdition: data.convocatoriaEdition ?? null,
     uccBlockKind: data.uccBlockKind ?? null,
+    sessionQuestionIds: data.sessionQuestionIds ?? undefined,
+    answersByQuestionId: data.answersByQuestionId ?? undefined,
   };
+}
+
+export async function getDemoResultById(
+  userId: string,
+  resultId: string,
+): Promise<DemoResultItem | null> {
+  const db = getFirebaseDb();
+  const snapshot = await getDoc(doc(db, "results", resultId));
+  if (!snapshot.exists()) return null;
+
+  const data = snapshot.data() as { userId?: string };
+  if (data.userId !== userId) return null;
+
+  return mapResultDoc({
+    id: snapshot.id,
+    data: () => snapshot.data() as Record<string, unknown>,
+  });
 }
 
 async function getDemoResultsFallback(userId: string): Promise<DemoResultItem[] | null> {

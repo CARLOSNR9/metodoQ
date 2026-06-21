@@ -1,0 +1,116 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
+import { ArrowLeft } from "lucide-react";
+import { SessionQuestionReview } from "@/components/demo/session-question-review";
+import { useAuthGuard } from "@/hooks/use-auth-guard";
+import {
+  getDemoResultById,
+  getSessionTypeLabel,
+  type DemoResultItem,
+} from "@/lib/results";
+import { hasSessionReviewData, resolveSessionQuestions } from "@/lib/session-review";
+
+type SessionReviewPageProps = {
+  resultId: string;
+};
+
+export default function SessionReviewPage({ resultId }: SessionReviewPageProps) {
+  const { user, isCheckingAuth } = useAuthGuard("/login");
+  const [result, setResult] = useState<DemoResultItem | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    if (!user) return;
+    const userId = user.uid;
+
+    let mounted = true;
+
+    async function loadResult() {
+      setIsLoading(true);
+      setErrorMessage("");
+
+      try {
+        const item = await getDemoResultById(userId, resultId);
+        if (!mounted) return;
+        setResult(item);
+        if (!item) {
+          setErrorMessage("No encontramos este intento o no tienes permiso para verlo.");
+        } else if (
+          !hasSessionReviewData(item.sessionQuestionIds, item.answersByQuestionId)
+        ) {
+          setErrorMessage(
+            "Este intento no tiene retroalimentación guardada. Solo las sesiones nuevas incluyen revisión detallada.",
+          );
+        }
+      } catch (error) {
+        console.error("Error al cargar la revisión de sesión:", error);
+        if (!mounted) return;
+        setErrorMessage("No se pudo cargar la retroalimentación de esta sesión.");
+      } finally {
+        if (mounted) setIsLoading(false);
+      }
+    }
+
+    void loadResult();
+    return () => {
+      mounted = false;
+    };
+  }, [resultId, user]);
+
+  const sessionQuestions = useMemo(() => {
+    if (!result?.sessionQuestionIds) return [];
+    return resolveSessionQuestions(result.sessionQuestionIds);
+  }, [result?.sessionQuestionIds]);
+
+  if (isCheckingAuth || !user) {
+    return (
+      <section className="h-48 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
+    );
+  }
+
+  return (
+    <div className="mx-auto w-full max-w-4xl space-y-6">
+      <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
+        <Link
+          href="/dashboard/historial"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-mq-accent hover:brightness-110"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Volver al historial
+        </Link>
+        <h1 className="mt-4 text-2xl font-semibold text-white">Retroalimentación del intento</h1>
+        {result ? (
+          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-mq-muted">
+            <span>{result.fechaLabel}</span>
+            <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mq-accent">
+              {getSessionTypeLabel(result.sessionType)}
+            </span>
+            <span className="font-semibold text-white">{result.scorePercentage}%</span>
+            <span>
+              {result.correctAnswers} correctas · {result.wrongAnswers} incorrectas
+            </span>
+          </div>
+        ) : null}
+      </section>
+
+      {isLoading ? (
+        <section className="h-64 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
+      ) : errorMessage ? (
+        <section className="rounded-2xl border border-rose-400/30 bg-rose-500/10 p-5 text-sm text-rose-100">
+          {errorMessage}
+        </section>
+      ) : result && sessionQuestions.length > 0 && result.answersByQuestionId ? (
+        <SessionQuestionReview
+          sessionQuestions={sessionQuestions}
+          answersByQuestionId={result.answersByQuestionId}
+          savedResultId={resultId}
+          title={`Retroalimentación de ${sessionQuestions.length} preguntas`}
+          className="mt-0"
+        />
+      ) : null}
+    </div>
+  );
+}

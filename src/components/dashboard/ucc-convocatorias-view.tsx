@@ -156,10 +156,14 @@ function EditionCard({ status }: { status: UccConvocatoriaEditionStatus }) {
             </Link>
           ) : attempt ? (
             <Link
-              href="/dashboard/historial"
+              href={
+                attempt.resultId
+                  ? `/dashboard/historial/${attempt.resultId}`
+                  : "/dashboard/historial"
+              }
               className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-6 text-sm font-bold text-white transition hover:bg-white/[0.08]"
             >
-              Ver historial
+              {attempt.resultId ? "Ver retroalimentación" : "Ver historial"}
             </Link>
           ) : phase === "upcoming" ? (
             <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/5 px-6 text-sm font-semibold text-amber-100">
