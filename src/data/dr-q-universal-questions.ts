@@ -4516,16 +4516,27 @@ Referencias: ACOG Intraamniotic Infection; Williams Obstetrics; UpToDate: Clinic
       "Sulfato de magnesio es el tratamiento de elección.",
       "Además: vía aérea, oxigenación y control de hipertensión severa.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
-Eclampsia posparto
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: puerperio + hipertensión severa, no solo la convulsión.
+Esta pregunta evalúa una trampa clásica de residencia: ante convulsiones en una puérpera, no pienses primero en epilepsia ni en benzodiacepinas, sino en eclampsia y en el fármaco anticonvulsivante específico de la enfermedad hipertensiva del embarazo.
 
-Eclampsia = convulsiones en contexto de enfermedad hipertensiva del embarazo (puede ocurrir en embarazo, parto o puerperio).
+¿Qué está ocurriendo realmente?
+- Mujer en primera semana de puerperio con convulsiones tónico-clónicas recurrentes.
+- Hipertensión severa (160/110 mmHg) en contexto obstétrico reciente.
+- Parto aparentemente sin complicaciones, pero la eclampsia puede debutar hasta días después del parto.
+- Cuadro compatible con eclampsia posparto, no con crisis epiléptica primaria.
 
-Primera intervención farmacológica: sulfato de magnesio IV (superior a diazepam y fenitoína para prevenir recurrencias).
+¿Qué dato es clave en el examen?
+- La asociación convulsión + puerperio + hipertensión arterial severa.
+- La eclampsia es convulsión en contexto de preeclampsia/eclampsia; puede ocurrir en embarazo, parto o puerperio.
+- El sulfato de magnesio IV es superior a diazepam y fenitoína para controlar y prevenir nuevas crisis en eclampsia.
 
-Trampa: convulsión → benzodiacepina o fenitoína. En eclampsia, sulfato de magnesio.
+¿Por qué fallan las otras opciones?
+- Diazepam: útil en estado epiléptico generalizado, pero no es el anticonvulsivante de elección en eclampsia ni previene recurrencias tan bien como el magnesio.
+- Fenitoína: tratamiento clásico de epilepsia, no de eclampsia; inferior al sulfato de magnesio en este contexto.
+- Levetiracetam: antiepiléptico moderno, pero no sustituye al sulfato de magnesio en eclampsia obstétrica.
+
+Clave: puerperio + convulsión + HTA severa = eclampsia hasta demostrar lo contrario; primera droga = sulfato de magnesio IV.
 
 Referencias: ACOG Gestational Hypertension and Preeclampsia; Williams Obstetrics; UpToDate: Eclampsia.`,
   },
@@ -4568,16 +4579,27 @@ Referencias: ACOG Gestational Hypertension and Preeclampsia; Williams Obstetrics
       "Buscar causas reversibles: hipoxemia, infección, retención urinaria, fármacos.",
       "Antipsicóticos no son rutina; reservar para agitación severa o riesgo.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Delirium postoperatorio
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: alteración de la atención con inicio agudo y curso fluctuante, no las alucinaciones.
+Esta pregunta separa delirium agudo de demencia, trastorno psiquiátrico primario o urgencia neurológica. En el anciano postoperatorio, el delirium es una emergencia médica reversible, no un diagnóstico psiquiátrico de partida.
 
-Factores predisponentes: edad avanzada, cirugía mayor, dolor, privación del sueño, infección, retención urinaria, fármacos.
+¿Qué está ocurriendo realmente?
+- Hombre de 74 años, segundo día postoperatorio de cirugía mayor (reemplazo de cadera).
+- Inicio agudo de agitación, alucinaciones visuales y desorientación fluctuante.
+- Alteración marcada de la atención: somnoliento, orientado solo en persona, difícil de entrevistar.
+- Curso fluctuante típico de delirium, no de demencia ni esquizofrenia.
 
-Manejo: buscar causas reversibles + medidas no farmacológicas (reorientación, sueño, movilización, hidratación). Antipsicóticos solo si agitación severa o riesgo.
+¿Qué dato es clave en el examen?
+- La alteración de la atención es el hallazgo cardinal del delirium.
+- Inicio agudo + curso fluctuante + contexto médico-quirúrgico = delirium hasta demostrar lo contrario.
+- El manejo inicial debe buscar causas reversibles y aplicar medidas no farmacológicas antes de medicar de forma rutinaria.
 
-Trampa: alucinaciones → trastorno psiquiátrico primario. Demencia = inicio insidioso y progresivo.
+¿Por qué fallan las otras opciones?
+- RM cerebral urgente: no es la prioridad si el cuadro es típico de delirium sin focalidad neurológica; primero corregir causas precipitantes.
+- Haloperidol rutinario y permanente: los antipsicóticos no son primera línea; se reservan para agitación severa o riesgo para paciente/personal.
+- Inhibidores de acetilcolinesterasa: indicados en demencia establecida, no en delirium agudo postoperatorio.
+
+Clave: delirium = atención alterada + inicio agudo + fluctuación; tratar causa, no etiquetar como demencia.
 
 Referencias: Harrison's; DSM-5-TR; AGS Postoperative Delirium Guidelines; UpToDate: Delirium.`,
   },
@@ -4620,16 +4642,28 @@ Referencias: Harrison's; DSM-5-TR; AGS Postoperative Delirium Guidelines; UpToDa
       "Suspensión inmediata del antipsicótico es obligatoria.",
       "Rigidez en tubo de plomo orienta a SNM; clonus orienta a síndrome serotoninérgico.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Síndrome neuroléptico maligno
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: fiebre + rigidez + antipsicótico.
+Esta pregunta evalúa el reconocimiento del síndrome neuroléptico maligno (SNM), una emergencia psiquiátrica-médica potencialmente letal que exige suspender de inmediato el antipsicótico causal.
 
-Bloqueo dopaminérgico intenso → disfunción hipotalámica, rigidez, inestabilidad autonómica, rabdomiólisis (CPK muy elevada).
+¿Qué está ocurriendo realmente?
+- Paciente con esquizofrenia en tratamiento con haloperidol.
+- Cuadro de 48 h con estupor, mutismo, fiebre alta (39.4°C) y diaforesis.
+- Rigidez muscular generalizada en "tubo de plomo".
+- CPK muy elevada (12.500 U/L), leucocitosis y taquicardia.
+- Tríada clásica: hipertermia + rigidez + alteración del estado mental + disautonomía.
 
-Conducta: suspender neuroléptico + soporte intensivo (hidratación, control temperatura, función renal). Dantroleno/bromocriptina en casos graves.
+¿Qué dato es clave en el examen?
+- Antipsicótico reciente + fiebre + rigidez extrema + CPK marcada = SNM.
+- La rigidez en tubo de plomo orienta a SNM; el clonus inducible orienta a síndrome serotoninérgico.
+- La conducta inmediata es suspender el neuroléptico e iniciar soporte intensivo.
 
-Trampa: confundir con síndrome serotoninérgico (clonus, hiperreflexia, mioclonías).
+¿Por qué fallan las otras opciones?
+- Catatonia maligna con benzodiacepinas y continuar haloperidol: empeoraría el cuadro; el haloperidol debe suspenderse de inmediato.
+- Síndrome serotoninérgico con ciproheptadina: se asocia a ISRS/serotoninérgicos y cursa con clonus e hiperreflexia, no rigidez en tubo de plomo.
+- Meningoencefalitis: puede dar fiebre y alteración mental, pero no explica rigidez extrema + CPK masiva en paciente con haloperidol.
+
+Clave: antipsicótico + fiebre + rigidez + CPK alta = SNM; suspender la droga ya.
 
 Referencias: Harrison's; UpToDate: Neuroleptic Malignant Syndrome; Kaplan & Sadock's.`,
   },
@@ -4656,14 +4690,27 @@ Referencias: Harrison's; UpToDate: Neuroleptic Malignant Syndrome; Kaplan & Sado
       "Valproato: eficaz en manía aguda, no depende de eliminación renal.",
       "Lamotrigina: prevención de fases depresivas, no manía aguda.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Episodio maníaco · elección de estabilizador
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: creatinina 2.2 mg/dL, no solo el diagnóstico bipolar.
+Esta pregunta no evalúa solo el diagnóstico de manía, sino la psicofarmacología segura: en manía aguda con insuficiencia renal, el litio deja de ser primera opción.
 
-Litio = clásico pero contraindicado/limitado con IRC por riesgo de toxicidad. Valproato = primera línea alternativa en manía aguda con disfunción renal.
+¿Qué está ocurriendo realmente?
+- Hombre con trastorno bipolar tipo I en episodio maníaco agudo de 5 días.
+- Logorrea, fuga de ideas, hiperactividad, gastos compulsivos y disminución marcada del sueño.
+- Síntomas psicóticos de grandiosidad ("enviado para salvar la economía").
+- Creatinina 2.2 mg/dL: insuficiencia renal que cambia la elección del estabilizador.
 
-Trampa: trastorno bipolar → litio automáticamente. Siempre revisar comorbilidades.
+¿Qué dato es clave en el examen?
+- Manía aguda con síntomas psicóticos requiere estabilizador del ánimo, no solo antipsicótico ambulatorio.
+- El litio se elimina casi exclusivamente por vía renal; con IRC significativa aumenta el riesgo de toxicidad.
+- El valproato es eficaz en manía aguda y no depende de la eliminación renal como el litio.
+
+¿Por qué fallan las otras opciones?
+- Litio: clásico en bipolar, pero contraindicado o muy limitado con creatinina elevada por riesgo de intoxicación.
+- Carbamazepina: estabilizador válido, pero el valproato tiene evidencia más sólida como alternativa de primera línea en manía aguda.
+- Lamotrigina: excelente para prevención de fases depresivas, pero no es tratamiento de elección para manía aguda.
+
+Clave: bipolar + manía aguda + IRC = valproato, no litio automático.
 
 Referencias: CANMAT Bipolar Guidelines; DSM-5-TR; UpToDate: Acute Mania.`,
   },
@@ -4706,14 +4753,27 @@ Referencias: CANMAT Bipolar Guidelines; DSM-5-TR; UpToDate: Acute Mania.`,
       "Hiperreflexia + clonus + diarrea orientan a serotoninérgico.",
       "SNM: rigidez en tubo de plomo, hiporreflexia, antipsicóticos.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Síndrome serotoninérgico
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: sertralina + tramadol (tramadol también inhibe recaptación de serotonina).
+Esta pregunta evalúa una interacción farmacológica muy preguntada: ISRS + tramadol puede precipitar síndrome serotoninérgico en horas, no en semanas.
 
-Exceso de serotonina → clonus, hiperreflexia, diaforesis, diarrea, agitación, hipertermia.
+¿Qué está ocurriendo realmente?
+- Mujer con depresión mayor en quien se inicia sertralina 50 mg/día.
+- Recibe tramadol crónico por dolor lumbar (también tiene actividad serotoninérgica).
+- A las 24 horas presenta temblor, inquietud, diaforesis, diarrea y clonus inducible.
+- Cuadro agudo de hiperactividad neuromuscular y disautonomía tras sumar dos fármacos serotoninérgicos.
 
-Trampa: tramadol = opioide, pero tiene potente actividad serotoninérgica.
+¿Qué dato es clave en el examen?
+- El clonus inducible en miembros inferiores es un hallazgo muy característico del síndrome serotoninérgico.
+- Tramadol no es "solo un opioide": inhibe la recaptación de serotonina y aumenta el riesgo con ISRS.
+- El mecanismo es hiperestimulación serotoninérgica central y periférica por exceso de serotonina sináptica.
+
+¿Por qué fallan las otras opciones?
+- Bloqueo dopaminérgico D2: mecanismo del síndrome neuroléptico maligno (rigidez en tubo de plomo, hiporreflexia), no de este cuadro.
+- Disminución gabaérgica: mecanismo del delirium tremens por abstinencia alcohólica, no de interacción ISRS-tramadol.
+- Hiperactividad colinérgica: se ve en intoxicación por inhibidores de colinesterasa, no aquí.
+
+Clave: ISRS + tramadol + clonus = síndrome serotoninérgico; revisar siempre analgésicos con actividad serotonérgica.
 
 Referencias: Stahl's Psychopharmacology; UpToDate: Serotonin Syndrome; Harrison's.`,
   },
@@ -4740,16 +4800,28 @@ Referencias: Stahl's Psychopharmacology; UpToDate: Serotonin Syndrome; Harrison'
       "Lorazepam preferido con disfunción hepática.",
       "Haloperidol no es tratamiento principal; no previene convulsiones.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Delirium tremens
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: abstinencia alcohólica 48 h + alucinaciones + disautonomía.
+Esta pregunta evalúa el delirium tremens, la forma más grave de la abstinencia alcohólica, y por qué las benzodiacepinas —no los antipsicóticos— son el tratamiento de elección.
 
-Mecanismo: adaptación GABA/glutamato → hiperexcitabilidad al suspender alcohol.
+¿Qué está ocurriendo realmente?
+- Hombre con consumo crónico de alcohol hospitalizado por neumonía.
+- Última ingesta hace 48 horas: ventana típica del delirium tremens.
+- Agitación intensa, desorientación, alucinaciones visuales ("paredes que se mueven").
+- Disautonomía marcada: diaforesis, midriasis, hipertensión y taquicardia.
+- Transaminasas elevadas sugieren hepatopatía asociada al alcohol.
 
-Tratamiento: benzodiacepinas (lorazepam si hepatopatía). También tiamina, corrección electrolítica.
+¿Qué dato es clave en el examen?
+- Abstinencia 48-96 h + alucinaciones + inestabilidad autonómica = delirium tremens.
+- El mecanismo es hiperexcitabilidad del SNC por adaptación GABA/glutamato al suspender el alcohol.
+- Las benzodiacepinas sustituyen el efecto GABAérgico perdido y previenen convulsiones.
 
-Trampa: agitación + alucinaciones → haloperidol. En abstinencia alcohólica, benzodiacepinas.
+¿Por qué fallan las otras opciones?
+- Haloperidol: puede controlar agitación superficialmente, pero no trata la abstinencia ni previene convulsiones; no es tratamiento principal.
+- Fenitoína: no es tratamiento de la abstinencia alcohólica ni del delirium tremens.
+- Carbamazepina: puede usarse en abstinencia leve-moderada ambulatoria, pero en delirium tremens grave las benzodiacepinas IV son estándar.
+
+Clave: abstinencia alcohólica grave + alucinaciones + HTA/FC = lorazepam (especialmente si hay hepatopatía).
 
 Referencias: UpToDate: Alcohol Withdrawal; ASAM Guidelines; Harrison's.`,
   },
@@ -4792,16 +4864,28 @@ Referencias: UpToDate: Alcohol Withdrawal; ASAM Guidelines; Harrison's.`,
       "Ausencia de intentos previos no excluye riesgo elevado.",
       "Objetivo: proteger la vida del paciente con supervisión continua.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Riesgo suicida alto
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: plan concreto + acceso al método, no solo la depresión.
+Esta pregunta evalúa la estratificación del riesgo suicida: no basta con diagnosticar depresión; hay que identificar plan, método y conductas preparatorias que obligan a hospitalizar.
 
-Elementos de alto riesgo: ideación activa, plan definido, disponibilidad del método, intención, conductas preparatorias (carta de despedida).
+¿Qué está ocurriendo realmente?
+- Joven universitaria con episodio depresivo tras ruptura sentimental.
+- Tristeza, anhedonia, insomnio y abandono académico.
+- Carta de despedida encontrada por los padres: conducta preparatoria de alto riesgo.
+- Ideación activa con plan concreto: "ya tengo las pastillas guardadas para esta noche".
+- Acceso al método letal y intención expresada en la entrevista.
 
-Conducta: hospitalización psiquiátrica + retiro de medios letales + supervisión continua.
+¿Qué dato es clave en el examen?
+- Plan suicida específico + acceso al método + intención = riesgo alto, independientemente de intentos previos.
+- La carta de despedida es una señal de alarma que eleva el riesgo de manera importante.
+- La conducta más segura es hospitalización psiquiátrica con medidas de protección inmediata.
 
-Trampa: no intentos previos = bajo riesgo. FALSO.
+¿Por qué fallan las otras opciones?
+- Manejo ambulatorio con cita prioritaria: inaceptable con plan activo y acceso a pastillas.
+- Antidepresivo y control semanal: subestima el riesgo inminente; primero proteger la vida.
+- Riesgo bajo por ausencia de intentos previos: error grave; el riesgo actual depende del plan y la intención, no del historial.
+
+Clave: plan + método + intención = hospitalizar; no hay "solo depresión leve" aquí.
 
 Referencias: APA Suicide Risk Guidelines; DSM-5-TR; UpToDate: Suicide Risk Assessment.`,
   },
@@ -4844,14 +4928,27 @@ Referencias: APA Suicide Risk Guidelines; DSM-5-TR; UpToDate: Suicide Risk Asses
       "Puede observarse en depresión psicótica, trastornos neurológicos o neoplasias.",
       "No asumir etiología psiquiátrica primaria sin evaluar causas médicas.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Síndrome de Cotard · prioridad diagnóstica
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: inicio tardío + signos de alarma sistémicos, no el nombre del síndrome.
+Esta pregunta evalúa psicosis de inicio tardío con síndrome de Cotard: antes de etiquetar como depresión psicótica, debes buscar causa orgánica, especialmente neoplasia.
 
-65 años + 10 kg de pérdida + tabaquismo + psicosis nueva → buscar neoplasia (p. ej. pulmón), metástasis, paraneoplasias, enfermedad neurológica.
+¿Qué está ocurriendo realmente?
+- Hombre de 65 años con cambios progresivos de comportamiento en los últimos meses.
+- Pérdida involuntaria de 10 kg en 3 meses y antecedente de tabaquismo pesado.
+- Enlentecimiento psicomotor, aislamiento y delirios nihilistas ("sus órganos se pudren", "ya está muerto").
+- Cuadro compatible con síndrome de Cotard, pero con múltiples banderas rojas sistémicas.
 
-Trampa: Cotard → depresión psicótica sin estudios. Primero descartar orgánico.
+¿Qué dato es clave en el examen?
+- Psicosis de inicio tardío + pérdida de peso inexplicada + tabaquismo = descartar neoplasia (p. ej. pulmón) antes de cerrar diagnóstico psiquiátrico.
+- El síndrome de Cotard puede verse en depresión psicótica, enfermedad neurológica o procesos neoplásicos/paraneoplásicos.
+- La prioridad inicial es la búsqueda activa de causa médica u orgánica subyacente.
+
+¿Por qué fallan las otras opciones?
+- ISRS ambulatorio en 4 semanas: peligroso sin descartar causa orgánica; puede retrasar diagnóstico de cáncer.
+- Trastorno delirante persistente con psicoterapia: ignora inicio tardío y síntomas sistémicos de alarma.
+- Benzodiacepinas por ansiedad: no aborda la gravedad del cuadro ni la necesidad de estudio médico urgente.
+
+Clave: psicosis nueva en anciano + baja de peso + tabaco = buscar cáncer antes de psiquiatría pura.
 
 Referencias: Harrison's; UpToDate: Psychosis in Older Adults; Kaplan & Sadock's.`,
   },
@@ -4894,16 +4991,27 @@ Referencias: Harrison's; UpToDate: Psychosis in Older Adults; Kaplan & Sadock's.
       "Suspender clozapina temporalmente mientras se aclara el diagnóstico.",
       "La agranulocitosis es el efecto adverso más temido de la clozapina.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Clozapina y agranulocitosis
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: clozapina + fiebre + odinofagia.
+Esta pregunta evalúa el efecto adverso más temido de la clozapina: la agranulocitosis. Ante fiebre en un paciente con clozapina, el hemograma urgente va antes que cualquier antibiótico empírico.
 
-Clozapina = más eficaz en esquizofrenia refractaria, pero riesgo de neutropenia/agranulocitosis.
+¿Qué está ocurriendo realmente?
+- Joven con esquizofrenia refractaria en clozapina 300 mg/día desde hace 3 meses.
+- Consulta por fiebre 38.5°C, odinofagia y malestar general sin foco infeccioso claro.
+- Sin tos, disuria ni diarrea que expliquen el cuadro de forma evidente.
+- Sospecha de neutropenia grave o agranulocitosis inducida por clozapina.
 
-Odinofagia en neutropénico = infección faringea temprana. No asumir infección común sin hemograma.
+¿Qué dato es clave en el examen?
+- Clozapina + fiebre + odinofagia = agranulocitosis hasta demostrar lo contrario.
+- La odinofagia en un paciente neutropénico puede ser la primera manifestación de infección faringea grave.
+- Conducta inmediata: hemograma urgente con recuento absoluto de neutrófilos y suspensión temporal de clozapina.
 
-Conducta: hemograma urgente (RAN) + suspender clozapina + tratar según neutrófilos.
+¿Por qué fallan las otras opciones?
+- Antibiótico empírico ambulatorio y continuar clozapina: retrasa el diagnóstico y mantiene la droga causal.
+- Aumentar clozapina por recaída psicótica: absurdo ante fiebre con sospecha de agranulocitosis.
+- Solo PCR y seguimiento ambulatorio: insuficiente; se requiere hemograma urgente con RAN.
+
+Clave: clozapina + fiebre = hemograma ya + suspender hasta aclarar neutrófilos.
 
 Referencias: UpToDate: Clozapine Monitoring; Maudsley Prescribing Guidelines; Stahl's.`,
   },
@@ -4946,14 +5054,27 @@ Referencias: UpToDate: Clozapine Monitoring; Maudsley Prescribing Guidelines; St
       "Midriasis + taquicardia + hipertensión pueden sugerir estimulantes.",
       "No diagnosticar esquizofrenia en primer episicio sin descartar causas médicas/tóxicas.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Agitación psicomotora en urgencias
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: agitación grave, no el diagnóstico final.
+Esta pregunta evalúa la prioridad en urgencias ante agitación psicomotora severa: primero seguridad y sedación, después el diagnóstico etiológico completo.
 
-Secuencia: seguridad → contención verbal si posible → sedación farmacológica → evaluación completa (tóxicos, orgánico, psiquiátrico).
+¿Qué está ocurriendo realmente?
+- Mujer de 30 años sin antecedentes psiquiátricos conocidos, traída por la policía.
+- Agitación extrema, agresividad y poco colaboración.
+- Ideación delirante de contenido bizarro (persecución extraterrestre).
+- Midriasis, taquicardia, hipertensión y diaforesis: pueden sugerir intoxicación por estimulantes además de psicosis primaria.
 
-Trampa: intentar diagnóstico completo antes de controlar agitación en paciente agresivo.
+¿Qué dato es clave en el examen?
+- Agitación severa con riesgo para el paciente y el personal es una urgencia médica, no una consulta ambulatoria.
+- La secuencia correcta es: seguridad → contención verbal si es posible → sedación farmacológica → evaluación diagnóstica completa.
+- No se debe cerrar diagnóstico de esquizofrenia en primer episodio sin descartar causas médicas y tóxicas.
+
+¿Por qué fallan las otras opciones?
+- Risperidona oral y cita ambulatoria: inadecuado con agitación grave y riesgo inmediato.
+- RM cerebral antes de cualquier intervención: retrasa el control de la agitación que pone en riesgo a todos.
+- Tratamiento de mantenimiento para esquizofrenia: prematuro sin evaluación completa ni control de la crisis aguda.
+
+Clave: agitación grave = sedar y proteger primero; diagnosticar después con tóxicos y estudio orgánico.
 
 Referencias: UpToDate: Agitated Patient; AAEP Guidelines; Tintinalli's.`,
   },
