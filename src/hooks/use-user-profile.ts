@@ -4,6 +4,7 @@ import { doc, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { onAuthStateChanged } from "firebase/auth";
+import { applyAdminStudentPreviewProfile } from "@/lib/admin/student-preview";
 import { applyDemoStudentProfileEnhancements } from "@/lib/demo/demo-student-profiles";
 import type { ManualSaleInfo, UserGender } from "@/lib/plans/subscription-display";
 import type { UccCvInput } from "@/lib/diagnostic/ucc-cv-scorer";
@@ -81,10 +82,14 @@ export function useUserProfile() {
               email: user.email,
             } as UserProfile);
 
+        const withDemoProfile = applyDemoStudentProfileEnhancements(
+          base,
+          user.email ?? base.email,
+        );
         setProfile(
-          applyDemoStudentProfileEnhancements(
-            base,
-            user.email ?? base.email,
+          applyAdminStudentPreviewProfile(
+            withDemoProfile,
+            (base as UserProfile & { role?: string }).role,
           ),
         );
         setLoading(false);

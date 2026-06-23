@@ -3,10 +3,15 @@
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
+import {
+  getAdminStudentPreviewExpiresAt,
+  getAdminStudentPreviewPlan,
+} from "@/lib/admin/student-preview";
 import type { UserPlan } from "@/lib/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 
 interface UserPlanDocument {
+  role?: string;
   plan?: UserPlan;
   planExpiresAt?: string | null;
   lastActiveAt?: any;
@@ -38,11 +43,24 @@ export function useUserPlan() {
         const userSnapshot = await getDoc(userRef);
         const userData = userSnapshot.data() as UserPlanDocument | undefined;
         
-        let currentPlan = userData?.plan ?? "FREE";
-        const expiresAt = userData?.planExpiresAt;
+        const role = userData?.role;
+        let currentPlan = getAdminStudentPreviewPlan(
+          role,
+          user.email,
+          userData?.plan ?? "FREE",
+        ) as UserPlan;
+        const expiresAt = getAdminStudentPreviewExpiresAt(
+          role,
+          user.email,
+          userData?.planExpiresAt ?? null,
+        );
 
-        // Verificar si el plan ha expirado
-        if (expiresAt && new Date(expiresAt) < new Date()) {
+        // Verificar si el plan ha expirado (no aplica en vista previa admin)
+        if (
+          expiresAt &&
+          new Date(expiresAt) < new Date() &&
+          currentPlan === (userData?.plan ?? "FREE")
+        ) {
           await updateDoc(userRef, {
             plan: "FREE",
             planStartedAt: null,
@@ -74,10 +92,16 @@ export function useUserPlan() {
   useEffect(() => {
     if (!getFirebaseAuth().currentUser) return;
     const userRef = doc(getFirebaseDb(), "users", getFirebaseAuth().currentUser!.uid);
-    getDoc(userRef).then(snap => {
-      if (snap.exists()) {
-        setExpiresAt(snap.data().planExpiresAt || null);
-      }
+    getDoc(userRef).then((snap) => {
+      if (!snap.exists()) return;
+      const data = snap.data();
+      setExpiresAt(
+        getAdminStudentPreviewExpiresAt(
+          data.role as string | undefined,
+          getFirebaseAuth().currentUser?.email ?? null,
+          data.planExpiresAt || null,
+        ),
+      );
     });
   }, [plan]);
 
