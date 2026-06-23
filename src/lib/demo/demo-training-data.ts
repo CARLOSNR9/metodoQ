@@ -136,6 +136,7 @@ export function buildDemoTrainingResults(): DemoResultItem[] {
       correctAnswers: session.correct,
       wrongAnswers: session.wrong,
       wrongTopics: session.wrongTopics,
+      correctTopics: {},
       fechaIso: date.toISOString(),
       fechaLabel: formatResultLabel(date),
       sessionType: session.sessionType,

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrate:topic-stats": "npx tsx scripts/migrate-topic-stats.ts"
   },
   "dependencies": {
     "firebase": "^12.12.1",

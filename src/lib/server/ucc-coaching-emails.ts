@@ -32,6 +32,7 @@ function mapAdminResult(
     correctAnswers: (data.correctAnswers as number) ?? 0,
     wrongAnswers: (data.wrongAnswers as number) ?? 0,
     wrongTopics: (data.wrongTopics as Record<string, number>) ?? {},
+    correctTopics: (data.correctTopics as Record<string, number>) ?? {},
     fechaIso: date ? date.toISOString() : null,
     fechaLabel: date
       ? date.toLocaleDateString("es-CO", { dateStyle: "medium" })

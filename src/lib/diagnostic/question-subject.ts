@@ -205,3 +205,52 @@ export function getSubjectPerformanceColor(score: number): string {
   if (level === "ok") return "#fbbf24";
   return "#f87171";
 }
+
+export type SubjectStatus = {
+  key: string;
+  label: string;
+  score: number;
+  questions: number;
+  wrong: number;
+  correct: number;
+  status: SubjectPerformanceLevel | "empty";
+};
+
+const STATUS_SORT_ORDER: Record<SubjectStatus["status"], number> = {
+  weak: 0,
+  ok: 1,
+  strong: 2,
+  empty: 3,
+};
+
+function resolveSubjectStatus(score: number, total: number): SubjectStatus["status"] {
+  if (total === 0) return "empty";
+  if (total < 5) return "ok";
+  return getSubjectPerformanceLevel(score);
+}
+
+/** Barras de desempeño por asignatura (debilidades primero). */
+export function buildSubjectStatusFromStats(
+  correctTopics: Record<string, number>,
+  wrongTopics: Record<string, number>,
+  limit = 12,
+): SubjectStatus[] {
+  return buildSubjectRadarFromStats(correctTopics, wrongTopics)
+    .map((point) => ({
+      key: point.key ?? point.subject,
+      label: point.subject,
+      score: point.A,
+      questions: point.total ?? 0,
+      wrong: point.wrong ?? 0,
+      correct: point.correct ?? 0,
+      status: resolveSubjectStatus(point.A, point.total ?? 0),
+    }))
+    .sort((a, b) => {
+      const statusDiff = STATUS_SORT_ORDER[a.status] - STATUS_SORT_ORDER[b.status];
+      if (statusDiff !== 0) return statusDiff;
+      if (a.status === "weak") return a.score - b.score;
+      if (a.status === "strong") return b.score - a.score;
+      return b.wrong - a.wrong;
+    })
+    .slice(0, limit);
+}

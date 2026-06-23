@@ -199,3 +199,42 @@ export async function updateUserAction(formData: FormData) {
     return { error: "No se pudo actualizar el usuario." };
   }
 }
+
+export async function migrateAllTopicStatsAction(idToken: string | null | undefined) {
+  const auth = await requireAdmin(idToken);
+  if (!auth.ok) return { error: auth.error };
+
+  try {
+    const { migrateAllUsersTopicStatsAdmin } = await import(
+      "@/lib/server/migrate-topic-stats-admin"
+    );
+    const result = await migrateAllUsersTopicStatsAdmin();
+    revalidatePath("/admin");
+    return { success: true, ...result };
+  } catch (error) {
+    console.error("[migrateAllTopicStatsAction]", error);
+    return { error: "No se pudo migrar topicStats de los usuarios." };
+  }
+}
+
+export async function migrateUserTopicStatsAction(
+  userId: string,
+  idToken: string | null | undefined,
+) {
+  const auth = await requireAdmin(idToken);
+  if (!auth.ok) return { error: auth.error };
+  if (!userId) return { error: "Usuario no válido." };
+
+  try {
+    const { migrateUserTopicStatsAdmin } = await import(
+      "@/lib/server/migrate-topic-stats-admin"
+    );
+    const result = await migrateUserTopicStatsAdmin(userId);
+    revalidatePath("/admin");
+    revalidatePath(`/admin/usuarios/${userId}`);
+    return { success: true, ...result };
+  } catch (error) {
+    console.error("[migrateUserTopicStatsAction]", error);
+    return { error: "No se pudo migrar topicStats del usuario." };
+  }
+}

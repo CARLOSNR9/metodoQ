@@ -88,6 +88,7 @@ function mapAdminResult(
     correctAnswers: Number(data.correctAnswers ?? 0),
     wrongAnswers: Number(data.wrongAnswers ?? 0),
     wrongTopics: (data.wrongTopics as Record<string, number>) ?? {},
+    correctTopics: (data.correctTopics as Record<string, number>) ?? {},
     fechaDateKey: (data.fechaDateKey as string) ?? null,
     fechaIso: date ? date.toISOString() : null,
     fechaLabel: date

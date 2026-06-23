@@ -18,6 +18,11 @@ import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
 import { buildElizabethTrainingResults, isElizabethDemoEmail } from "@/lib/demo/elizabeth-training-data";
 import { getDemoTrainingResultsIfEligible } from "@/lib/demo/demo-training-data";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
+import {
+  getTopTopicsByMetric,
+  rebuildTopicStatsFromHistory,
+  TOPIC_STATS_VERSION,
+} from "@/lib/diagnostic/migrate-topic-stats";
 
 import type { UccMiBlockKind } from "@/lib/training/ucc-mi-daily-plan";
 
@@ -63,6 +68,7 @@ export type DemoResultItem = {
   /** Fecha local (YYYY-MM-DD) al guardar la sesión; evita ambigüedad con fechaIso UTC. */
   fechaDateKey?: string | null;
   wrongTopics: Record<string, number>;
+  correctTopics: Record<string, number>;
   sessionType: SessionTypeLabel;
   convocatoriaEdition?: string | null;
   uccBlockKind?: UccMiBlockKind | null;
@@ -92,18 +98,6 @@ type UserPerformanceProfile = {
   totalCorrectAnswers?: number;
   totalQuestionsAnswered?: number;
 };
-
-function getTopTopicsByMetric(
-  topicStats: Record<string, TopicStat>,
-  key: "correct" | "wrong",
-  limit = 3,
-) {
-  return Object.entries(topicStats)
-    .filter(([, stat]) => stat[key] > 0)
-    .sort((a, b) => b[1][key] - a[1][key])
-    .slice(0, limit)
-    .map(([topic]) => topic);
-}
 
 async function updateUserPerformanceProfile({
   userId,
@@ -159,6 +153,7 @@ async function updateUserPerformanceProfile({
         totalQuestionsAnswered: cumulative.totalQuestions,
         lastScore: cumulative.scorePercentage,
         performanceProfileUpdatedAt: serverTimestamp(),
+        topicStatsVersion: TOPIC_STATS_VERSION,
         lastActiveAt: serverTimestamp(),
       },
       { merge: true },
@@ -220,6 +215,7 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
     correctAnswers?: number;
     wrongAnswers?: number;
     wrongTopics?: Record<string, number>;
+    correctTopics?: Record<string, number>;
     sessionType?: SessionTypeLabel;
     convocatoriaEdition?: string;
     uccBlockKind?: UccMiBlockKind;
@@ -237,6 +233,7 @@ function mapResultDoc(docItem: { id: string; data: () => Record<string, unknown>
     correctAnswers: data.correctAnswers ?? 0,
     wrongAnswers: data.wrongAnswers ?? 0,
     wrongTopics: data.wrongTopics ?? {},
+    correctTopics: data.correctTopics ?? {},
     fechaDateKey: data.fechaDateKey ?? null,
     fechaIso: date ? date.toISOString() : null,
     fechaLabel: date
@@ -283,6 +280,42 @@ async function getDemoResultsFallback(userId: string): Promise<DemoResultItem[] 
     console.error("No se pudo resolver historial demo.", error);
   }
   return null;
+}
+
+export async function migrateUserTopicStats(userId: string): Promise<{
+  migrated: boolean;
+  subjectCount: number;
+  totalQuestions: number;
+}> {
+  const results = await getUserDemoResults(userId);
+  const nextTopicStats = rebuildTopicStatsFromHistory(results);
+  const cumulative = computeCumulativePerformance(nextTopicStats);
+  const strengths = getTopTopicsByMetric(nextTopicStats, "correct");
+  const weaknesses = getTopTopicsByMetric(nextTopicStats, "wrong");
+
+  const userRef = doc(getFirebaseDb(), "users", userId);
+  await setDoc(
+    userRef,
+    {
+      topicStats: nextTopicStats,
+      strengths,
+      weaknesses,
+      cumulativeScore: cumulative.scorePercentage,
+      totalCorrectAnswers: cumulative.totalCorrect,
+      totalQuestionsAnswered: cumulative.totalQuestions,
+      lastScore: cumulative.scorePercentage,
+      topicStatsVersion: TOPIC_STATS_VERSION,
+      topicStatsMigratedAt: serverTimestamp(),
+      performanceProfileUpdatedAt: serverTimestamp(),
+    },
+    { merge: true },
+  );
+
+  return {
+    migrated: true,
+    subjectCount: Object.keys(nextTopicStats).length,
+    totalQuestions: cumulative.totalQuestions,
+  };
 }
 
 export async function getUserDemoResults(userId: string): Promise<DemoResultItem[]> {

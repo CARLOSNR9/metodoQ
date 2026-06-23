@@ -52,6 +52,7 @@ import { hasPerformanceData } from "@/lib/profile/has-performance-data";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import { buildUccPercentileEstimate } from "@/lib/diagnostic/ucc-percentile";
 import { getPlanWeekNumber } from "@/lib/training/ucc-mi-daily-plan";
+import { useTopicStatsMigration } from "@/hooks/use-topic-stats-migration";
 
 interface ProDashboardViewProps {
   user: any;
@@ -87,6 +88,12 @@ export function ProDashboardView({
   const { improvement, percentileLabel, loading: statsLoading } = useUserPerformanceStats(user?.uid);
   const hasDiagnosticData = hasPerformanceData(profile);
   const needsDiagnostic = !hasDiagnosticData;
+  useTopicStatsMigration({
+    userId: user?.uid,
+    topicStatsVersion: profile?.topicStatsVersion,
+    topicStats: profile?.topicStats,
+    enabled: hasDiagnosticData,
+  });
   const cumulative = computeCumulativePerformance(profile?.topicStats);
   const displayScore =
     profile?.cumulativeScore ??

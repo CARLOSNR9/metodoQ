@@ -10,9 +10,9 @@ import {
   UCC_P75_CUTOFF,
 } from "@/lib/diagnostic/ucc-percentile";
 import {
-  buildRes108NucleusStatus,
-  type Res108NucleusStatus,
-} from "@/lib/diagnostic/ucc-res108-blueprint";
+  buildSubjectStatusFromStats,
+  type SubjectStatus,
+} from "@/lib/diagnostic/question-subject";
 import { getPlanWeekNumber } from "@/lib/training/ucc-mi-daily-plan";
 import { useUccCohortPercentile } from "@/hooks/use-ucc-cohort-percentile";
 import { Users } from "lucide-react";
@@ -25,31 +25,34 @@ type UccPercentileTrackerCardProps = {
   wrongTopics?: Record<string, number>;
 };
 
-function NucleusRow({ nucleus }: { nucleus: Res108NucleusStatus }) {
+function SubjectRow({ subject }: { subject: SubjectStatus }) {
   const barColor =
-    nucleus.status === "strong"
+    subject.status === "strong"
       ? "bg-emerald-500"
-      : nucleus.status === "weak"
+      : subject.status === "weak"
         ? "bg-rose-500"
-        : nucleus.status === "ok"
+        : subject.status === "ok"
           ? "bg-amber-400"
           : "bg-white/20";
 
   return (
     <div className="space-y-1.5">
-      <div className="flex items-center justify-between text-xs">
-        <span className="font-bold text-white">
-          {nucleus.label}{" "}
-          <span className="font-normal text-mq-muted">({nucleus.weight}%)</span>
-        </span>
-        <span className="text-mq-muted">
-          {nucleus.questions > 0 ? `${nucleus.score}%` : "—"}
+      <div className="flex items-center justify-between gap-2 text-xs">
+        <span className="font-bold text-white">{subject.label}</span>
+        <span className="shrink-0 text-mq-muted">
+          {subject.questions > 0 ? (
+            <>
+              {subject.score}% · {subject.questions} preg.
+            </>
+          ) : (
+            "—"
+          )}
         </span>
       </div>
       <div className="h-1.5 overflow-hidden rounded-full bg-white/5">
         <div
           className={`h-full rounded-full transition-all ${barColor}`}
-          style={{ width: `${nucleus.questions > 0 ? nucleus.score : 0}%` }}
+          style={{ width: `${subject.questions > 0 ? subject.score : 0}%` }}
         />
       </div>
     </div>
@@ -74,8 +77,8 @@ export function UccPercentileTrackerCard({
     [cumulativeScore, weekNumber],
   );
 
-  const nuclei = useMemo(
-    () => buildRes108NucleusStatus(correctTopics, wrongTopics),
+  const subjects = useMemo(
+    () => buildSubjectStatusFromStats(correctTopics, wrongTopics),
     [correctTopics, wrongTopics],
   );
 
@@ -224,29 +227,39 @@ export function UccPercentileTrackerCard({
               <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400" />
               <p className="text-sm text-emerald-100">
                 Estás en zona segura (P{displayPercentile}). Mantén el ritmo diario y
-                refuerza núcleos débiles antes del examen.
+                refuerza asignaturas débiles antes del examen.
               </p>
             </div>
           )}
         </div>
 
         <div className="space-y-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             <h3 className="text-sm font-black uppercase tracking-wider text-white">
-              Desglose Res. 108
+              Desglose por asignatura
             </h3>
-            <span className="text-[10px] text-mq-muted">20/50/20/10</span>
+            {subjects.length > 0 && (
+              <span className="text-[10px] text-mq-muted">
+                {subjects.length} asignatura{subjects.length === 1 ? "" : "s"}
+              </span>
+            )}
           </div>
-          <div className="space-y-4">
-            {nuclei.map((nucleus) => (
-              <NucleusRow key={nucleus.axis} nucleus={nucleus} />
-            ))}
-          </div>
-          {nuclei.some((n) => n.status === "weak") && (
+          {subjects.length === 0 ? (
+            <p className="text-xs text-mq-muted">
+              Responde preguntas para ver tu desempeño por asignatura.
+            </p>
+          ) : (
+            <div className="space-y-4">
+              {subjects.map((subject) => (
+                <SubjectRow key={subject.key} subject={subject} />
+              ))}
+            </div>
+          )}
+          {subjects.some((subject) => subject.status === "weak") && (
             <div className="flex items-start gap-2 rounded-xl border border-rose-500/20 bg-rose-500/5 p-3">
               <AlertTriangle size={16} className="mt-0.5 shrink-0 text-rose-400" />
               <p className="text-xs text-rose-100">
-                Núcleos en rojo: prioriza en bloques 1 y 3 de tu misión diaria.
+                Asignaturas en rojo: prioriza en bloques 1 y 3 de tu misión diaria.
               </p>
             </div>
           )}

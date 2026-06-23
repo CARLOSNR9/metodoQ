@@ -19,6 +19,7 @@ import { useState, useEffect } from "react";
 import { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 import { Act2PredictiveDashboard } from "@/components/demo/act2-predictive-dashboard";
 import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
+import { useTopicStatsMigration } from "@/hooks/use-topic-stats-migration";
 
 interface FreeDashboardViewProps {
   user: any;
@@ -105,6 +106,12 @@ export function FreeDashboardView({
   }, [expiresAt, user?.createdAt, user?.metadata?.creationTime]);
 
   const cumulative = computeCumulativePerformance(user?.topicStats);
+  useTopicStatsMigration({
+    userId: user?.uid,
+    topicStatsVersion: user?.topicStatsVersion,
+    topicStats: user?.topicStats,
+    enabled: Boolean(user?.uid && user?.topicStats && Object.keys(user.topicStats).length > 0),
+  });
   const displayScore =
     user?.cumulativeScore ??
     (cumulative.totalQuestions > 0

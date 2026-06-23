@@ -36,6 +36,7 @@ export interface UserProfile {
   lastSessionScore?: number | null;
   totalQuestionsAnswered?: number;
   topicStats?: Record<string, { correct: number; wrong: number }>;
+  topicStatsVersion?: number;
   strengths?: string[];
   weaknesses?: string[];
   avgResponseTime?: number;
