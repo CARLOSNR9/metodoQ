@@ -10,6 +10,7 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
+  PolarRadiusAxis,
   Radar,
 } from "recharts";
 import { TrendingDown, Info, AlertTriangle } from "lucide-react";
@@ -19,7 +20,10 @@ import {
   getTopicLossesFromRadar,
 } from "@/lib/diagnostic/exam-blueprint";
 import {
-  isUccPastoUniversity,
+  getSubjectPerformanceColor,
+  getSubjectPerformanceLevel,
+} from "@/lib/diagnostic/question-subject";
+import {
   supportsDedicatedDiagnosticBattery,
 } from "@/lib/diagnostic/university-match";
 import { ScoreComparisonCards } from "@/components/demo/score-comparison-cards";
@@ -85,8 +89,20 @@ export function Act2PredictiveDashboard({
 
   const topicLosses = getTopicLossesFromRadar(radarData, wrongTopics);
   const hasRadarValues = radarData.some((d) => d.A > 0);
-  const bestTopics = radarData.filter((d) => d.A >= 70).map((d) => d.subject);
+  const bestTopics = radarData.filter((d) => getSubjectPerformanceLevel(d.A) === "strong").map((d) => d.subject);
   const worstTopics = topicLosses.map((t) => t.name);
+  const radarOuterRadius = radarData.length > 6 ? "48%" : "55%";
+
+  const subjectChipClass = (score: number) => {
+    const level = getSubjectPerformanceLevel(score);
+    if (level === "strong") {
+      return "border-emerald-500/30 bg-emerald-500/10 text-emerald-300";
+    }
+    if (level === "ok") {
+      return "border-amber-500/30 bg-amber-500/10 text-amber-200";
+    }
+    return "border-red-500/30 bg-red-500/10 text-red-300";
+  };
 
   return (
     <div className="space-y-10 animate-in fade-in duration-1000">
@@ -232,32 +248,87 @@ export function Act2PredictiveDashboard({
             <h4 className="text-sm font-black uppercase tracking-widest text-white">
               Anatomía de tus fallos
             </h4>
-            {dedicatedDiagnostic && (
-              <p className="text-[10px] text-mq-muted">
-                Áreas del examen unificado — Medicina Interna
-              </p>
-            )}
+            <p className="text-[10px] text-mq-muted">
+              {dedicatedDiagnostic
+                ? "Asignaturas evaluadas en tu diagnóstico"
+                : "Asignaturas de las preguntas que has respondido"}
+            </p>
           </motion.div>
 
-          <motion.div className="h-64 w-full" layout>
+          {radarData.length > 0 && (
+            <div className="space-y-2">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+                Tus asignaturas
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {radarData.map((point) => (
+                  <span
+                    key={point.key ?? point.subject}
+                    className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[10px] font-semibold ${subjectChipClass(point.A)}`}
+                  >
+                    <span>{point.subject}</span>
+                    <span className="opacity-80">{point.A}%</span>
+                  </span>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-3 text-[9px] text-mq-muted">
+                <span className="inline-flex items-center gap-1">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                  Fortaleza (≥70%)
+                </span>
+                <span className="inline-flex items-center gap-1">
+                  <span className="h-2 w-2 rounded-full bg-amber-400" />
+                  En progreso (55–69%)
+                </span>
+                <span className="inline-flex items-center gap-1">
+                  <span className="h-2 w-2 rounded-full bg-red-400" />
+                  Debilidad (&lt;55%)
+                </span>
+              </div>
+            </div>
+          )}
+
+          <motion.div className="h-72 w-full" layout>
             {radarData.length === 0 ? (
               <div className="flex h-full items-center justify-center text-center text-xs text-mq-muted">
-                Completa el diagnóstico para ver tu perfil por áreas del examen.
+                Completa el diagnóstico para ver tu perfil por asignatura.
               </div>
             ) : (
               <ResponsiveContainer width="100%" height="100%">
-                <RadarChart cx="50%" cy="50%" outerRadius="55%" data={radarData}>
+                <RadarChart cx="50%" cy="50%" outerRadius={radarOuterRadius} data={radarData}>
                   <PolarGrid stroke="#ffffff18" />
+                  <PolarRadiusAxis
+                    angle={90}
+                    domain={[0, 100]}
+                    tick={{ fill: "#5c6b8a", fontSize: 8 }}
+                    tickCount={5}
+                    axisLine={false}
+                  />
                   <PolarAngleAxis
                     dataKey="subject"
-                    tick={{ fill: "#8A99B8", fontSize: 9, fontWeight: 600 }}
+                    tick={({ x, y, payload }) => {
+                      const point = radarData.find((item) => item.subject === payload?.value);
+                      const color = point ? getSubjectPerformanceColor(point.A) : "#8A99B8";
+                      return (
+                        <text
+                          x={x}
+                          y={y}
+                          fill={color}
+                          fontSize={9}
+                          fontWeight={600}
+                          textAnchor="middle"
+                        >
+                          {payload?.value}
+                        </text>
+                      );
+                    }}
                   />
                   <Radar
-                    name="Desempeño"
+                    name="Aciertos"
                     dataKey="A"
                     stroke="#00d1ff"
                     fill="#00d1ff"
-                    fillOpacity={hasRadarValues ? 0.45 : 0.1}
+                    fillOpacity={hasRadarValues ? 0.35 : 0.1}
                     strokeWidth={2}
                     isAnimationActive
                     animationDuration={800}
@@ -334,7 +405,7 @@ export function Act2PredictiveDashboard({
                 : "Es prioritario reforzar "}
               {worstTopics.length > 0 ? (
                 <>
-                  las áreas de{" "}
+                  las asignaturas de{" "}
                   <span className="font-bold text-white">{worstTopics.join(" y ")}</span> están
                   limitando tu puntaje. Enfoca módulos clínicos y guías MSPS/INS en esas áreas.
                 </>

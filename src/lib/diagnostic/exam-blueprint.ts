@@ -1,12 +1,10 @@
 import type { TrainingQuestion } from "@/lib/questions/types";
 import {
-  isUccPastoUniversity,
-  supportsDedicatedDiagnosticBattery,
-} from "@/lib/diagnostic/university-match";
-import {
-  buildRes108RadarFromSession,
-  buildRes108RadarFromStats,
-} from "@/lib/diagnostic/ucc-res108-blueprint";
+  buildSubjectRadarFromSession,
+  buildSubjectRadarFromStats,
+  getQuestionSubjectKey,
+} from "@/lib/diagnostic/question-subject";
+import { supportsDedicatedDiagnosticBattery } from "@/lib/diagnostic/university-match";
 
 /** Ejes del examen unificado (Medicina Interna — UNAL / UdeA). */
 export const MI_EXAM_RADAR_AXES = [
@@ -33,9 +31,14 @@ const RADAR_DISPLAY_LABELS: Record<MiExamRadarAxis, string> = {
 
 export type RadarChartPoint = {
   subject: string;
-  axis: MiExamRadarAxis;
+  /** Clave estable de la asignatura (agrupación). */
+  key?: string;
+  axis?: MiExamRadarAxis;
   A: number;
   fullMark: number;
+  correct?: number;
+  wrong?: number;
+  total?: number;
 };
 
 export function mapExamAreaToRadarAxis(examArea: string): MiExamRadarAxis {
@@ -68,10 +71,7 @@ export function mapExamAreaToRadarAxis(examArea: string): MiExamRadarAxis {
 export function getPerformanceStatsKey(
   question: Pick<TrainingQuestion, "examArea" | "topic">,
 ): string {
-  if (question.examArea) {
-    return mapExamAreaToRadarAxis(question.examArea);
-  }
-  return question.topic;
+  return getQuestionSubjectKey(question);
 }
 
 function emptyAxisCounts(): Record<MiExamRadarAxis, { correct: number; wrong: number }> {
@@ -154,26 +154,22 @@ export function buildRadarChartData({
   sessionQuestions?: TrainingQuestion[];
   answersByQuestionId?: Record<string, string>;
 }): RadarChartPoint[] {
-  const useBlueprint = supportsDedicatedDiagnosticBattery(university, specialty);
-  const useUccBlueprint =
-    useBlueprint && isUccPastoUniversity(university);
-
   if (
     sessionQuestions &&
     sessionQuestions.length > 0 &&
     answersByQuestionId &&
     Object.keys(answersByQuestionId).length > 0
   ) {
-    if (useUccBlueprint) {
-      return buildRes108RadarFromSession(sessionQuestions, answersByQuestionId);
-    }
-    return buildRadarFromSession(sessionQuestions, answersByQuestionId);
+    return buildSubjectRadarFromSession(sessionQuestions, answersByQuestionId);
   }
 
+  const subjectRadar = buildSubjectRadarFromStats(correctTopics, wrongTopics);
+  if (subjectRadar.length > 0) {
+    return subjectRadar;
+  }
+
+  const useBlueprint = supportsDedicatedDiagnosticBattery(university, specialty);
   if (useBlueprint) {
-    if (useUccBlueprint) {
-      return buildRes108RadarFromStats(correctTopics, wrongTopics);
-    }
     return buildRadarFromStats(correctTopics, wrongTopics);
   }
 
@@ -208,12 +204,27 @@ function buildRadarFromDynamicTopics(
 
 export function getTopicLossesFromRadar(
   radarData: RadarChartPoint[],
-  wrongTopics: Record<string, number>,
+  wrongTopics: Record<string, number> = {},
 ): { name: string; loss: number; wrong: number }[] {
+  if (radarData.length > 0 && radarData.some((point) => point.wrong !== undefined)) {
+    return radarData
+      .map((point) => {
+        const wrong = point.wrong ?? 0;
+        return {
+          name: point.subject,
+          wrong,
+          loss: wrong * 35,
+        };
+      })
+      .filter((t) => t.wrong > 0)
+      .sort((a, b) => b.loss - a.loss)
+      .slice(0, 3);
+  }
+
   if (radarData.length > 0 && radarData[0].axis) {
     return radarData
       .map((point) => {
-        const wrong = wrongTopics[point.axis] ?? 0;
+        const wrong = wrongTopics[point.axis ?? ""] ?? 0;
         return {
           name: point.subject,
           wrong,

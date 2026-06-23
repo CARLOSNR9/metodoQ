@@ -250,40 +250,6 @@ export function FreeDashboardView({
           {/* 3. LA REVELACIÓN: Resultados del Diagnóstico o Invitación */}
           {user?.attemptsCount > 0 ? (
             <div className="space-y-10">
-              {/* LA REVELACIÓN (Modo Evolutivo) */}
-              <motion.article 
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="relative overflow-hidden rounded-[2rem] border border-mq-accent/30 bg-mq-accent/5 p-8"
-              >
-                <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-mq-accent/10 blur-[100px]" />
-                <div className="relative z-10 flex flex-col md:flex-row items-center gap-8">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/20 text-mq-accent shadow-[0_0_30px_rgba(0,209,255,0.3)]">
-                    <Sparkles size={32} />
-                  </div>
-                  <div className="flex-1 space-y-2 text-center md:text-left">
-                    <h3 className="text-2xl font-black text-white uppercase tracking-tight">IA: Análisis de Debilidades Listo</h3>
-                    <p className="text-mq-muted leading-relaxed max-w-xl">
-                      Promedio global: <span className="text-white font-bold">{displayScore}%</span> en{" "}
-                      <span className="text-white font-bold">{totalQuestions}</span> preguntas.
-                      {lastSessionScore !== null && (
-                        <>
-                          {" "}
-                          Última sesión: <span className="text-amber-200 font-bold">{lastSessionScore}%</span>.
-                        </>
-                      )}{" "}
-                      Hemos detectado <span className="text-mq-accent font-bold">brechas críticas</span> en tu razonamiento clínico.
-                    </p>
-                  </div>
-                  <Link
-                    href="/dashboard/planes"
-                    className="w-full md:w-auto mq-premium-glow inline-flex h-14 items-center justify-center gap-3 rounded-xl bg-mq-accent px-8 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105"
-                  >
-                    VER ANATOMÍA DE MIS FALLOS (PRO)
-                  </Link>
-                </div>
-              </motion.article>
-
               <SummaryCards userId={user.uid} />
               
               <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
