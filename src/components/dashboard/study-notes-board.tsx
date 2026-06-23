@@ -265,6 +265,11 @@ export function StudyNotesBoard({ userId }: StudyNotesBoardProps) {
       userId,
       (items) => {
         setNotes(items);
+        setSelectedNote((current) =>
+          current
+            ? items.find((note) => note.questionId === current.questionId) ?? null
+            : null,
+        );
         setLoading(false);
       },
       () => {

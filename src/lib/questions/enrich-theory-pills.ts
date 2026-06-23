@@ -114,3 +114,18 @@ export function enrichQuestionsWithTheoryPills(
 export function hasTheoryPill(questionId: string): boolean {
   return Boolean(THEORY_BY_QUESTION_ID[questionId]);
 }
+
+/** Teoría vigente en el repositorio para una pregunta (id o enunciado). */
+export function getTheoryContentForQuestion(
+  questionId: string,
+  statement?: string,
+): string | undefined {
+  const byId = THEORY_BY_QUESTION_ID[questionId]?.trim();
+  if (byId) return byId;
+
+  if (statement?.trim()) {
+    return findTheoryByStatement(statement);
+  }
+
+  return undefined;
+}

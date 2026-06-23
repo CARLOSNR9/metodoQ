@@ -12,6 +12,10 @@ import {
   type Unsubscribe,
 } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
+import {
+  enrichStudyNotesLocally,
+  persistStudyNotesReEnrichment,
+} from "@/lib/study/re-enrich-study-notes";
 
 export type StudyNote = {
   questionId: string;
@@ -87,10 +91,34 @@ function mapStudyNoteDoc(docSnap: { id: string; data: () => Record<string, unkno
   };
 }
 
+function deliverEnrichedStudyNotes(
+  userId: string,
+  storedNotes: StudyNote[],
+  onChange: (notes: StudyNote[]) => void,
+) {
+  const enrichedNotes = enrichStudyNotesLocally(storedNotes);
+  onChange(enrichedNotes);
+
+  void persistStudyNotesReEnrichment(userId, storedNotes, enrichedNotes).catch(
+    (error) => {
+      console.warn("[studyNotes] No se pudo re-enriquecer notas guardadas:", error);
+    },
+  );
+}
+
 export async function getStudyNotes(userId: string): Promise<StudyNote[]> {
   const q = query(studyNotesCollection(userId), orderBy("savedAt", "desc"));
   const snap = await getDocs(q);
-  return snap.docs.map(mapStudyNoteDoc);
+  const storedNotes = snap.docs.map(mapStudyNoteDoc);
+  const enrichedNotes = enrichStudyNotesLocally(storedNotes);
+
+  void persistStudyNotesReEnrichment(userId, storedNotes, enrichedNotes).catch(
+    (error) => {
+      console.warn("[studyNotes] No se pudo re-enriquecer notas guardadas:", error);
+    },
+  );
+
+  return enrichedNotes;
 }
 
 export function subscribeStudyNotes(
@@ -102,7 +130,9 @@ export function subscribeStudyNotes(
 
   return onSnapshot(
     q,
-    (snapshot) => onChange(snapshot.docs.map(mapStudyNoteDoc)),
+    (snapshot) => {
+      deliverEnrichedStudyNotes(userId, snapshot.docs.map(mapStudyNoteDoc), onChange);
+    },
     (error) => onError?.(error),
   );
 }
