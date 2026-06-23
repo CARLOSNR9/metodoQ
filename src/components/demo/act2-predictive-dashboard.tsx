@@ -7,11 +7,6 @@ import {
   Area,
   XAxis,
   ReferenceLine,
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  Radar,
 } from "recharts";
 import { TrendingDown, Info, AlertTriangle } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -20,13 +15,13 @@ import {
   getTopicLossesFromRadar,
 } from "@/lib/diagnostic/exam-blueprint";
 import {
-  getSubjectPerformanceColor,
-  getSubjectPerformanceLevel,
+  buildSubjectStatusFromRadar,
 } from "@/lib/diagnostic/question-subject";
 import {
   supportsDedicatedDiagnosticBattery,
 } from "@/lib/diagnostic/university-match";
 import { ScoreComparisonCards } from "@/components/demo/score-comparison-cards";
+import { SubjectPerformancePanel } from "@/components/demo/subject-performance-panel";
 
 interface Act2PredictiveDashboardProps {
   /** Promedio global acumulado (%). */
@@ -88,32 +83,9 @@ export function Act2PredictiveDashboard({
   });
 
   const topicLosses = getTopicLossesFromRadar(radarData, wrongTopics);
-  const hasRadarValues = radarData.some((d) => d.A > 0);
-  const bestTopics = radarData.filter((d) => getSubjectPerformanceLevel(d.A) === "strong").map((d) => d.subject);
+  const subjectStatuses = buildSubjectStatusFromRadar(radarData);
+  const bestTopics = subjectStatuses.filter((s) => s.status === "strong").map((s) => s.label);
   const worstTopics = topicLosses.map((t) => t.name);
-  const subjectCount = radarData.length;
-  const manySubjects = subjectCount > 12;
-  const radarChartHeight =
-    subjectCount > 18 ? "h-[32rem]" : subjectCount > 12 ? "h-[28rem]" : subjectCount > 8 ? "h-96" : "h-80";
-  const radarOuterRadius =
-    subjectCount > 18 ? "42%" : subjectCount > 12 ? "45%" : subjectCount > 6 ? "50%" : "58%";
-  const radarLabelMaxLen = subjectCount > 18 ? 14 : subjectCount > 12 ? 16 : 20;
-  const radarLabelFontSize = subjectCount > 12 ? 8 : 9;
-
-  function truncateRadarLabel(label: string): string {
-    return label.length > radarLabelMaxLen ? `${label.slice(0, radarLabelMaxLen - 1)}…` : label;
-  }
-
-  const subjectChipClass = (score: number) => {
-    const level = getSubjectPerformanceLevel(score);
-    if (level === "strong") {
-      return "border-emerald-500/30 bg-emerald-500/10 text-emerald-300";
-    }
-    if (level === "ok") {
-      return "border-amber-500/30 bg-amber-500/10 text-amber-200";
-    }
-    return "border-red-500/30 bg-red-500/10 text-red-300";
-  };
 
   return (
     <div className="space-y-10 animate-in fade-in duration-1000">
@@ -248,112 +220,22 @@ export function Act2PredictiveDashboard({
         </motion.div>
       </motion.div>
 
-      <div className={`grid gap-6 ${manySubjects ? "grid-cols-1" : "sm:grid-cols-2"}`}>
+      <div className="grid gap-6 sm:grid-cols-2">
         <motion.div
-          className="flex flex-col space-y-4 rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8"
+          className="rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.35 }}
         >
-          <motion.div className="space-y-1">
-            <h4 className="text-sm font-black uppercase tracking-widest text-white">
-              Anatomía de tus fallos
-            </h4>
-            <p className="text-[10px] text-mq-muted">
-              {dedicatedDiagnostic
-                ? "Asignaturas evaluadas en tu diagnóstico"
-                : "Asignaturas de las preguntas que has respondido"}
-            </p>
-          </motion.div>
-
-          {radarData.length > 0 && (
-            <div className="space-y-2">
-              <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
-                Tus asignaturas
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {radarData.map((point) => (
-                  <span
-                    key={point.key ?? point.subject}
-                    className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[10px] font-semibold ${subjectChipClass(point.A)}`}
-                  >
-                    <span>{point.subject}</span>
-                    <span className="opacity-80">{point.A}%</span>
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-wrap gap-3 text-[9px] text-mq-muted">
-                <span className="inline-flex items-center gap-1">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                  Fortaleza (≥70%)
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <span className="h-2 w-2 rounded-full bg-amber-400" />
-                  En progreso (55–69%)
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <span className="h-2 w-2 rounded-full bg-red-400" />
-                  Debilidad (&lt;55%)
-                </span>
-              </div>
-            </div>
-          )}
-
-          <motion.div className={`${radarChartHeight} w-full`} layout>
-            {radarData.length === 0 ? (
-              <div className="flex h-full items-center justify-center text-center text-xs text-mq-muted">
-                Completa el diagnóstico para ver tu perfil por asignatura.
-              </div>
-            ) : (
-              <ResponsiveContainer width="100%" height="100%">
-                <RadarChart cx="50%" cy="50%" outerRadius={radarOuterRadius} data={radarData}>
-                  <PolarGrid stroke="#ffffff18" />
-                  <PolarRadiusAxis
-                    angle={90}
-                    domain={[0, 100]}
-                    tick={{ fill: "#5c6b8a", fontSize: 8 }}
-                    tickCount={5}
-                    axisLine={false}
-                  />
-                  <PolarAngleAxis
-                    dataKey="subject"
-                    tick={({ x, y, payload, textAnchor }) => {
-                      const point = radarData.find((item) => item.subject === payload?.value);
-                      const color = point ? getSubjectPerformanceColor(point.A) : "#8A99B8";
-                      return (
-                        <text
-                          x={x}
-                          y={y}
-                          fill={color}
-                          fontSize={radarLabelFontSize}
-                          fontWeight={600}
-                          textAnchor={textAnchor ?? "middle"}
-                        >
-                          {truncateRadarLabel(String(payload?.value ?? ""))}
-                        </text>
-                      );
-                    }}
-                  />
-                  <Radar
-                    name="Aciertos"
-                    dataKey="A"
-                    stroke="#00d1ff"
-                    fill="#00d1ff"
-                    fillOpacity={hasRadarValues ? 0.35 : 0.1}
-                    strokeWidth={2}
-                    isAnimationActive
-                    animationDuration={800}
-                  />
-                </RadarChart>
-              </ResponsiveContainer>
-            )}
-          </motion.div>
-
-          {dedicatedDiagnostic && !hasRadarValues && (
-            <p className="text-center text-[10px] text-mq-muted">
-              Responde las 10 preguntas para trazar tu mapa de debilidades.
-            </p>
-          )}
+          <SubjectPerformancePanel
+            subjects={subjectStatuses}
+            subtitle={
+              dedicatedDiagnostic
+                ? "Cuánto aciertas en cada asignatura de tu diagnóstico."
+                : "Cuánto aciertas en cada asignatura que has practicado."
+            }
+            emptyMessage="Completa el diagnóstico para ver tu desempeño por asignatura."
+          />
         </motion.div>
 
         <motion.div

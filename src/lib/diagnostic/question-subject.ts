@@ -235,22 +235,35 @@ export function buildSubjectStatusFromStats(
   wrongTopics: Record<string, number>,
   limit = 12,
 ): SubjectStatus[] {
-  return buildSubjectRadarFromStats(correctTopics, wrongTopics)
-    .map((point) => ({
-      key: point.key ?? point.subject,
-      label: point.subject,
-      score: point.A,
-      questions: point.total ?? 0,
-      wrong: point.wrong ?? 0,
-      correct: point.correct ?? 0,
-      status: resolveSubjectStatus(point.A, point.total ?? 0),
-    }))
-    .sort((a, b) => {
-      const statusDiff = STATUS_SORT_ORDER[a.status] - STATUS_SORT_ORDER[b.status];
-      if (statusDiff !== 0) return statusDiff;
-      if (a.status === "weak") return a.score - b.score;
-      if (a.status === "strong") return b.score - a.score;
-      return b.wrong - a.wrong;
-    })
-    .slice(0, limit);
+  return sortSubjectStatuses(
+    buildSubjectRadarFromStats(correctTopics, wrongTopics).map(radarPointToSubjectStatus),
+  ).slice(0, limit);
+}
+
+function radarPointToSubjectStatus(point: RadarChartPoint): SubjectStatus {
+  const total = point.total ?? (point.correct ?? 0) + (point.wrong ?? 0);
+  return {
+    key: point.key ?? point.subject,
+    label: point.subject,
+    score: point.A,
+    questions: total,
+    wrong: point.wrong ?? 0,
+    correct: point.correct ?? 0,
+    status: resolveSubjectStatus(point.A, total),
+  };
+}
+
+function sortSubjectStatuses(subjects: SubjectStatus[]): SubjectStatus[] {
+  return [...subjects].sort((a, b) => {
+    const statusDiff = STATUS_SORT_ORDER[a.status] - STATUS_SORT_ORDER[b.status];
+    if (statusDiff !== 0) return statusDiff;
+    if (a.status === "weak") return a.score - b.score;
+    if (a.status === "strong") return b.score - a.score;
+    return b.wrong - a.wrong;
+  });
+}
+
+/** Lista completa de asignaturas para paneles de desempeño (sin límite). */
+export function buildSubjectStatusFromRadar(points: RadarChartPoint[]): SubjectStatus[] {
+  return sortSubjectStatuses(points.map(radarPointToSubjectStatus));
 }
