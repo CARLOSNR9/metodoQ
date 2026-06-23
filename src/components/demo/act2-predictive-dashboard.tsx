@@ -91,7 +91,18 @@ export function Act2PredictiveDashboard({
   const hasRadarValues = radarData.some((d) => d.A > 0);
   const bestTopics = radarData.filter((d) => getSubjectPerformanceLevel(d.A) === "strong").map((d) => d.subject);
   const worstTopics = topicLosses.map((t) => t.name);
-  const radarOuterRadius = radarData.length > 6 ? "48%" : "55%";
+  const subjectCount = radarData.length;
+  const manySubjects = subjectCount > 12;
+  const radarChartHeight =
+    subjectCount > 18 ? "h-[32rem]" : subjectCount > 12 ? "h-[28rem]" : subjectCount > 8 ? "h-96" : "h-80";
+  const radarOuterRadius =
+    subjectCount > 18 ? "42%" : subjectCount > 12 ? "45%" : subjectCount > 6 ? "50%" : "58%";
+  const radarLabelMaxLen = subjectCount > 18 ? 14 : subjectCount > 12 ? 16 : 20;
+  const radarLabelFontSize = subjectCount > 12 ? 8 : 9;
+
+  function truncateRadarLabel(label: string): string {
+    return label.length > radarLabelMaxLen ? `${label.slice(0, radarLabelMaxLen - 1)}…` : label;
+  }
 
   const subjectChipClass = (score: number) => {
     const level = getSubjectPerformanceLevel(score);
@@ -237,7 +248,7 @@ export function Act2PredictiveDashboard({
         </motion.div>
       </motion.div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className={`grid gap-6 ${manySubjects ? "grid-cols-1" : "sm:grid-cols-2"}`}>
         <motion.div
           className="flex flex-col space-y-4 rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8"
           initial={{ opacity: 0, scale: 0.96 }}
@@ -288,7 +299,7 @@ export function Act2PredictiveDashboard({
             </div>
           )}
 
-          <motion.div className="h-72 w-full" layout>
+          <motion.div className={`${radarChartHeight} w-full`} layout>
             {radarData.length === 0 ? (
               <div className="flex h-full items-center justify-center text-center text-xs text-mq-muted">
                 Completa el diagnóstico para ver tu perfil por asignatura.
@@ -306,7 +317,7 @@ export function Act2PredictiveDashboard({
                   />
                   <PolarAngleAxis
                     dataKey="subject"
-                    tick={({ x, y, payload }) => {
+                    tick={({ x, y, payload, textAnchor }) => {
                       const point = radarData.find((item) => item.subject === payload?.value);
                       const color = point ? getSubjectPerformanceColor(point.A) : "#8A99B8";
                       return (
@@ -314,11 +325,11 @@ export function Act2PredictiveDashboard({
                           x={x}
                           y={y}
                           fill={color}
-                          fontSize={9}
+                          fontSize={radarLabelFontSize}
                           fontWeight={600}
-                          textAnchor="middle"
+                          textAnchor={textAnchor ?? "middle"}
                         >
-                          {payload?.value}
+                          {truncateRadarLabel(String(payload?.value ?? ""))}
                         </text>
                       );
                     }}
