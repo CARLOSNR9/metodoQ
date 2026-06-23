@@ -15,6 +15,7 @@ import {
   ClipboardCheck,
   LogOut,
   ExternalLink,
+  Eye,
 } from "lucide-react";
 
 type AdminShellProps = {
@@ -28,6 +29,7 @@ const navigationItems = [
   { label: "Ventas manuales", href: "/admin/ventas", icon: Receipt, exact: true },
   { label: "Plan Residente", href: "/admin/residente", icon: GraduationCap, exact: true },
   { label: "Métricas", href: "/admin/metricas", icon: BarChart3, exact: true },
+  { label: "Vista previa", href: "/admin/preguntas", icon: Eye, exact: true },
   { label: "Contenido", href: "/admin/contenido", icon: BookOpen, exact: true },
 ] as const;
 

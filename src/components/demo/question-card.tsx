@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, Sparkles, Info, Lock, ArrowRight, ExternalLink, ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -34,6 +34,8 @@ export type QuestionCardProps = {
   isLocked?: boolean;
   /** Examen oficial: sin colores de acierto/error ni explicación hasta el final. */
   examMode?: boolean;
+  /** Vista previa admin: muestra retroalimentación sin responder. */
+  defaultSelectedOptionId?: string | null;
 };
 
 const defaultQuestion =
@@ -72,9 +74,17 @@ export function QuestionCard({
   className,
   isLocked = false,
   examMode = false,
+  defaultSelectedOptionId = null,
 }: QuestionCardProps) {
-  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
+  const [selectedOptionId, setSelectedOptionId] = useState<string | null>(
+    defaultSelectedOptionId,
+  );
   const [isTheoryPanelOpen, setIsTheoryPanelOpen] = useState(false);
+
+  useEffect(() => {
+    setSelectedOptionId(defaultSelectedOptionId);
+    setIsTheoryPanelOpen(false);
+  }, [defaultSelectedOptionId, questionId, question]);
   const hasAnswered = Boolean(selectedOptionId);
   const isCorrect = selectedOptionId === correctOptionId;
   const trimmedTheoryContent = theoryContent?.trim();

@@ -219,6 +219,33 @@ export async function adminListQuestionsForReview(): Promise<QuestionAdminRecord
   return deduped;
 }
 
+/** Prioriza el banco en código para vista previa editorial (retroalimentación recién editada). */
+export function mergeAdminRecordWithLocalRepository(
+  record: QuestionAdminRecord,
+): QuestionAdminRecord {
+  const local = getAllRepositoryQuestions().find((q) => q.id === record.id);
+  if (!local) return record;
+
+  return {
+    ...record,
+    topic: local.topic,
+    statement: local.statement,
+    options: local.options,
+    correctOptionId: local.correctOptionId,
+    explanation: local.explanation,
+    keyPoints: local.keyPoints ?? [],
+    examArea: local.examArea ?? record.examArea,
+    theoryContent: local.theoryContent ?? record.theoryContent,
+    theoryUrl: local.theoryUrl ?? record.theoryUrl,
+  };
+}
+
+export function enrichAdminRecordsForPreview(
+  records: QuestionAdminRecord[],
+): QuestionAdminRecord[] {
+  return records.map(mergeAdminRecordWithLocalRepository);
+}
+
 export async function adminCreateQuestion(input: QuestionWriteInput) {
   const ref = await getFirebaseAdminDb().collection(COLLECTION).add({
     ...input,

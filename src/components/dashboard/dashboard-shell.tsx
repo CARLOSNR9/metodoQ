@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useStudyNotesCount } from "@/hooks/use-study-notes-count";
 import { useUserProfile } from "@/hooks/use-user-profile";
+import { useUserRole } from "@/hooks/use-user-role";
 import { logoutUser } from "@/lib/auth";
 import { getDoctorGreetingName, getUserGreetingName } from "@/lib/plans/subscription-display";
 import { hasProFeatures } from "@/lib/plans/access";
@@ -24,6 +25,7 @@ import {
   RotateCcw,
   CalendarDays,
   ClipboardCheck,
+  Shield,
 } from "lucide-react";
 import { useFailedQuestionsCount } from "@/hooks/use-failed-questions-count";
 
@@ -49,6 +51,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const pathname = usePathname();
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile } = useUserProfile();
+  const { isAdmin, loading: isLoadingRole } = useUserRole();
   const studyNotesCount = useStudyNotesCount(user?.uid);
   const failedQuestionsCount = useFailedQuestionsCount(user?.uid);
   const greetingName = getUserGreetingName(profile);
@@ -141,6 +144,15 @@ export function DashboardShell({ children }: DashboardShellProps) {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <PomodoroHeaderChip />
+            {!isLoadingRole && isAdmin ? (
+              <Link
+                href="/admin"
+                className="group flex items-center gap-2 rounded-lg border border-mq-accent/30 bg-mq-accent/10 px-3 py-1.5 text-xs font-semibold text-mq-accent transition-colors hover:bg-mq-accent/20"
+              >
+                <Shield size={14} className="transition-transform group-hover:-translate-x-0.5" />
+                <span className="hidden sm:inline">Panel admin</span>
+              </Link>
+            ) : null}
             <button
               type="button"
               onClick={async () => {

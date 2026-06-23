@@ -569,16 +569,27 @@ Referencias: ESC ACS Guidelines; AHA/ACC ACS Guideline; Braunwald's Heart Diseas
       "DAWN/DEFUSE-3: trombectomía 6–24 h con mismatch en oclusión de gran vaso.",
       "Alteplasa >4.5 h sin protocolo WAKE-UP con RM ↑ riesgo hemorrágico.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Wake-up stroke · Oclusión M1 · Trombectomía mecánica
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Wake-up stroke: tiempo real desconocido → se asume desde última vez visto normal.
-• >4.5 h: trombólisis IV estándar contraindicada sin RM con mismatch FLAIR/DWI.
-• TAC perfusión: core pequeño + penumbra grande = tejido salvable.
-• DAWN y DEFUSE-3: trombectomía clase I (6–24 h) con discordancia clínico-imagenológica.
-• En oclusión de gran vaso: "el tiempo es cerebro, pero la colateralidad es tiempo".
+Esta pregunta evalúa el wake-up stroke y la reperfusión fuera de ventana IV: en oclusión de gran vaso, la perfusión (core vs penumbra) importa más que el reloj.
 
-Perla: >6 h + oclusión gran vaso → perfusión → si hay penumbra, trombectomía hasta 24 h.
+¿Qué está ocurriendo realmente?
+- Hombre con FA sin anticoagular, wake-up stroke (~10.5 h desde última vez normal).
+- NIHSS 22, oclusión total de M1 ACM izquierda en angioTAC.
+- TAC perfusión: core pequeño (15 cc) y penumbra grande (95 cc) con mismatch volumétrico.
+- Fuera de ventana para trombólisis IV estándar (<4.5 h), pero con tejido salvable.
+
+¿Qué dato es clave en el examen?
+- DAWN y DEFUSE-3: trombectomía mecánica clase I entre 6-24 h con discordancia clínico-imagenológica.
+- Core pequeño + penumbra grande = candidato ideal a trombectomía endovascular.
+- En oclusión de gran vaso: "el tiempo es cerebro, pero la colateralidad y la perfusión son tiempo".
+
+¿Por qué fallan las otras opciones?
+- Trombólisis IV inmediata: >4.5 h sin protocolo WAKE-UP con RM aumenta riesgo hemorrágico sin beneficio claro vs trombectomía directa.
+- Heparina a dosis plenas: no es reperfusión en ACV agudo; anticoagulación diferida.
+- Abstenerse por >4.5 h: ignora evidencia de trombectomía extendida con mismatch.
+
+Clave: wake-up + M1 ocluida + core pequeño/penumbra grande = trombectomía mecánica, no alteplasa IV.
 
 Referencias: AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke; DAWN; DEFUSE-3.`,
   },
@@ -620,15 +631,27 @@ Referencias: AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke; D
       "Refractario = falla BDZ + 2.ª línea → anestésicos + EEG continuo.",
       "EEG es la única forma de confirmar y titular EENC.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Estado epiléptico refractario y EENC
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• >30 min de actividad (incluso subclínica): resistencia GABAérgica y excitotoxicidad por glutamato.
-• Cese de movimientos puede ser fatiga muscular, no resolución eléctrica.
-• Refractario: persiste tras BDZ + anticrisis de 2.ª línea → intubación + propofol/midazolam/ketamina + EEG continuo.
-• Objetivo: supresión de brotes (burst suppression) titulada por EEG.
+Esta pregunta evalúa el estado epiléptico no convulsivo: cesar los movimientos tónico-clónicos no significa que la crisis haya terminado a nivel eléctrico.
 
-Perla: Convulsionó, recibió tratamiento, no despierta o tiene mioclonías periorales → asumir EENC.
+¿Qué está ocurriendo realmente?
+- Paciente con epilepsia estructural tras abandono de medicación y convulsiones persistentes.
+- Recibió midazolam IM, lorazepam IV y levetiracetam 60 mg/kg.
+- Cesa el componente motor pero permanece en coma (GCS 3) con mioclonías faciales y nistagmo rítmico.
+- Desacople electro-mecánico: fatiga muscular vs actividad epileptiforme continua subclínica.
+
+¿Qué dato es clave en el examen?
+- Estado epiléptico refractario: persiste tras benzodiacepina + anticrisis de segunda línea.
+- El EEG continuo es la única forma de confirmar y titular el tratamiento.
+- Conducta: intubación + anestésicos IV continuos (propofol/midazolam/ketamina) hasta supresión de brotes.
+
+¿Por qué fallan las otras opciones?
+- Observación por "estado post-ictal": peligroso; puede ser EENC con riesgo de daño cerebral.
+- Segunda línea adicional en sala general: ya recibió levetiracetam; necesita anestesia y UCI.
+- Punción lumbar y aciclovir: la fiebre y mioclonías focales no sustituyen el manejo del EENC refractario.
+
+Clave: convulsionó, fue tratado, no despierta o tiene mioclonías → asumir EENC → intubar + anestésico + EEG.
 
 Referencias: Neurocritical Care Society Guidelines for Status Epilepticus.`,
   },
@@ -666,15 +689,27 @@ Referencias: Neurocritical Care Society Guidelines for Status Epilepticus.`,
       "Nimodipino oral es neuroprotector, no revierte vasoespasmo agudo.",
       "Vasodilatadores sistémicos (nitroprusiato) empeoran isquemia.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Vasoespasmo y DCI post-HSA
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• DCI: vasoconstricción por sangre degradada en espacio subaracnoideo (días 4–14).
-• Cerebro vasoespástico pierde autorregulación → dependiente de presión sistémica.
-• Tratamiento pilar: euvolemia + vasopresores para ↑ presión de perfusión cerebral.
-• Nimodipino PO 21 días: mejora pronóstico global, no revierte espasmo agudo; IV riesgo hipotensión.
+Esta pregunta evalúa vasoespasmo post-HSA: el deterioro entre días 4-14 sin re-sangrado en TAC suele ser isquemia cerebral retardada (DCI), no hidrocefalia ni nuevo sangrado.
 
-Perla: HSA + deterioro día 7 + TAC limpio = vasoespasmo → subir PA.
+¿Qué está ocurriendo realmente?
+- Mujer día 7 post-HSA por aneurisma de ACoA, ya coilada al día 2.
+- Deterioro súbito con nueva paresia crural derecha y apatía; Glasgow baja de 15 a 12.
+- TAC sin re-sangrado ni hidrocefalia.
+- Cuadro clásico de vasoespasmo en ventana día 4-14 post-HSA.
+
+¿Qué dato es clave en el examen?
+- DCI por vasoespasmo: el cerebro vasoespástico pierde autorregulación y depende de la presión de perfusión sistémica.
+- Tratamiento hemodinámico: euvolemia + vasopresores (norepinefrina) para elevar PAM y forzar flujo cerebral.
+- Nimodipino oral 21 días mejora pronóstico global, pero no revierte vasoespasmo agudo; la vía IV puede causar hipotensión.
+
+¿Por qué fallan las otras opciones?
+- Nimodipino IV a altas dosis: no es tratamiento del espasmo agudo; riesgo de hipotensión.
+- Nitroprusiato: vasodilatador sistémico que puede empeorar isquemia por robar flujo del cerebro vasoespástico.
+- Derivación VP: indicada si hay hidrocefalia; el TAC la descartó.
+
+Clave: HSA + deterioro día 7 + TAC limpio = vasoespasmo → subir presión arterial con vasopresores.
 
 Referencias: AHA/ASA Guidelines for Management of Aneurysmal Subarachnoid Hemorrhage.`,
   },
@@ -716,16 +751,27 @@ Referencias: AHA/ASA Guidelines for Management of Aneurysmal Subarachnoid Hemorr
       "PLEX o IGIV de primera línea; igual eficacia.",
       "No más piridostigmina ni esteroides altos en fase aguda aislada.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Crisis miasténica
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Fluoroquinolonas pueden precipitar crisis (bloqueo canal ACh).
-• Falla bulbar + diafragma → hipercapnia tipo 2 → asfixia inminente.
-• Intubación electiva antes del colapso; luego PLEX o IGIV.
-• Suspender anticolinesterásicos en VM (secreciones, broncoespasmo).
-• Metilprednisolona sola en agudo puede empeorar debilidad 7–10 días.
+Esta pregunta evalúa la crisis miasténica: la regla de los 20 (CVF y NIF) define cuándo intubar antes del colapso respiratorio.
 
-Perla: Miasténico con respiración paradójica y CVF <15 → intuba, suspende mestinón, ordena plasmaféresis.
+¿Qué está ocurriendo realmente?
+- Mujer con miastenia gravis en tratamiento, precipitada por ciprofloxacina (puede bloquear canal ACh).
+- Disnea severa, imposibilidad para deglutir, debilidad generalizada y respiración paradójica.
+- CVF 10 mL/kg (crítico <15), NIF -15 cmH2O, hipercapnia (PaCO2 58, pH 7.28).
+- Crisis miasténica con falla bulbar e insuficiencia ventilatoria inminente.
+
+¿Qué dato es clave en el examen?
+- Regla de los 20: CVF <15 mL/kg o NIF peor que -20 → intubación electiva temprana.
+- Después de intubar: plasmaféresis o IGIV (igual eficacia).
+- Suspender piridostigmina en ventilación mecánica (secreciones, broncoespasmo).
+
+¿Por qué fallan las otras opciones?
+- Aumentar piridostigmina y O2 nasal: insuficiente ante hipercapnia y falla ventilatoria.
+- Metilprednisolona sola: en fase aguda puede empeorar debilidad 7-10 días; no trata la crisis respiratoria.
+- BiPAP y test de edrofonio: no sustituyen intubación con CVF tan baja; edrofonio es diagnóstico, no rescate.
+
+Clave: miastenia + CVF <15 + hipercapnia = intubar ya, suspender mestinón, PLEX o IGIV.
 
 Referencias: AAN / Neurocritical Care Society Guidelines for Myasthenic Crisis.`,
   },
@@ -767,15 +813,27 @@ Referencias: AAN / Neurocritical Care Society Guidelines for Myasthenic Crisis.`
       "Terapia puente: hiperosmolar (manitol o SSH) antes de cirugía.",
       "Corticosteroides no en edema citotóxico/hemorrágico agudo.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Herniación uncal
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• HIC supratentorial → uncus cae por incisura tentorial → comprime III par.
-• Fibras parasimpáticas periféricas del III → midriasis ipsilateral primero.
-• Tríada de Cushing: HTA + bradicardia + respiración irregular = isquemia tronco inminente.
-• Manejo puente: manitol 20% o SSH 3%/7.5%/23% sin esperar estudios.
+Esta pregunta evalúa herniación uncal: la midriasis ipsilateral fija es compresión del III par, y el manejo puente es hiperosmolar de inmediato.
 
-Perla: Hematoma + pupila grande y fija ipsilateral = uncal → salina hipertónica ya.
+¿Qué está ocurriendo realmente?
+- Hombre con HIC hipertensiva y hematoma ganglios basales derechos de 70 cc.
+- Deterioro súbito a Glasgow 5 con decorticación.
+- Pupila derecha 7 mm arrefléctica (midriasis paralítica), ojo derecho desviado abajo y afuera.
+- Tríada de Cushing (HTA, bradicardia, respiración irregular): herniación uncal con isquemia de tronco inminente.
+
+¿Qué dato es clave en el examen?
+- El uncus temporal hernia por la incisura tentorial y comprime el III par ipsilateral.
+- Las fibras parasimpáticas periféricas del III controlan la pupila → midriasis ipsilateral primero.
+- Terapia puente: manitol 20% o solución salina hipertónica sin esperar TAC de control.
+
+¿Por qué fallan las otras opciones?
+- Herniación subfalcina con hiperventilación agresiva: no explica el patrón pupilar del III par.
+- Herniación amigdalina con esteroides: los corticoides no benefician edema citotóxico/hemorrágico agudo.
+- Herniación central con pentobarbital: el cuadro pupilar lateralizado orienta a uncal, no central.
+
+Clave: hematoma + pupila grande fija ipsilateral = uncal → manitol o salina hipertónica ya.
 
 Referencias: Neurocritical Care Society Guidelines on Elevated ICP.`,
   },
@@ -817,15 +875,27 @@ Referencias: Neurocritical Care Society Guidelines on Elevated ICP.`,
       "LCR: linfocitos + eritrocitos + glucosa normal vs bacteriana.",
       "Aciclovir empírico sin esperar PCR.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Encefalitis herpética (HSV-1)
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Ascenso por tracto olfatorio/trigémino; necrosis temporal medial.
-• Clínica: psiquiátrica + memoria + crisis uncinadas + alucinaciones olfatorias.
-• LCR: pleocitosis linfocitaria, eritrocitos por necrosis hemorrágica, glucosa normal.
-• Tratamiento: aciclovir IV empírico en todo AMS agudo inexplicado con datos de SNC.
+Esta pregunta evalúa encefalitis herpética: el tropismo temporal, las alucinaciones olfatorias y el LCR con eritrocitos obligan a aciclovir empírico de inmediato.
 
-Perla: Fiebre + comportamiento bizarro + olores feos + RM temporal = aciclovir ya.
+¿Qué está ocurriendo realmente?
+- Hombre previamente sano con fiebre, confusión y afasia sensitiva (Wernicke).
+- Crisis con automatismos orales, chasquido labial y olor a caucho quemado (alucinación olfatoria).
+- LCR: pleocitosis linfocitaria, eritrocitos, glucosa relativamente normal.
+- RM: hiperintensidad en polos temporales e hipocampo izquierdo.
+
+¿Qué dato es clave en el examen?
+- HSV-1 asciende por tracto olfatorio/trigémino y causa necrosis del lóbulo temporal medial.
+- LCR con linfocitos + eritrocitos + glucosa normal diferencia de meningitis bacteriana.
+- Aciclovir IV empírico en los primeros 30 minutos; el retraso causa daño cognitivo permanente o muerte.
+
+¿Por qué fallan las otras opciones?
+- Meningitis neumocócica: LCR típicamente con glucosa muy baja y neutrófilos predominantes.
+- Encefalitis anti-NMDA: cuadro psiquiátrico/ovario teratoma; RM temporal no es el patrón clásico aquí.
+- Toxoplasmosis: en inmunosuprimidos con lesiones multifocales; no este patrón en sano.
+
+Clave: fiebre + comportamiento bizarro + olores extraños + RM temporal = aciclovir ya, sin esperar PCR.
 
 Referencias: IDSA Guidelines for Encephalitis.`,
   },
@@ -867,17 +937,28 @@ Referencias: IDSA Guidelines for Encephalitis.`,
       "Fuerza intacta → lesión lateral (no piramidal).",
       "AICA afecta VII-VIII; PICA afecta IX-X.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Síndrome de Wallenberg
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Núcleo espinal V → ↓ dolor/temp facial ipsilateral.
-• Espinotalámico → ↓ dolor/temp corporal contralateral.
-• Núcleo ambiguo (IX, X) → disfagia, ronquera.
-• Descending sympathetic → Horner ipsilateral.
-• Pedúnculo cerebeloso inferior → ataxia ipsilateral.
-• Pirámides intactas → fuerza conservada.
+Esta pregunta evalúa localización en tronco encefálico: el síndrome alterno (cara ipsilateral, cuerpo contralateral) con fuerza intacta es Wallenberg por oclusión de PICA o vertebral.
 
-Perla: Sensibilidad cruzada + disfagia + Horner + ataxia sin debilidad = Wallenberg (PICA/vertebral).
+¿Qué está ocurriendo realmente?
+- Hombre con vértigo incapacitante y disfagia súbita de 2 horas.
+- Horner izquierdo, voz ronca, reflejo nauseoso ausente (núcleo ambiguo IX-X).
+- ↓ dolor/temperatura en hemicara izquierda y hemicuerpo derecho (síndrome alterno).
+- Ataxia ipsilateral con fuerza 5/5 en las cuatro extremidades.
+
+¿Qué dato es clave en el examen?
+- Núcleo espinal del V → ↓ dolor/temperatura facial ipsilateral.
+- Espinotalámico → ↓ dolor/temperatura corporal contralateral.
+- Pedúnculo cerebeloso inferior → ataxia ipsilateral; pirámides intactas → fuerza conservada.
+- Lesión bulbar lateral izquierda = síndrome de Wallenberg (PICA o arteria vertebral izquierda).
+
+¿Por qué fallan las otras opciones?
+- Bulbar medial por arteria espinal anterior: afecta pirámides → habría debilidad.
+- Pontino lateral por AICA: afecta VII-VIII (facial/auditivo), no el patrón bulbar clásico.
+- Mesencefálico de Weber: III par + contralateral, no disfagia ni síndrome alterno sensitivo.
+
+Clave: sensibilidad cruzada + disfagia + Horner + ataxia sin debilidad = Wallenberg.
 
 Referencias: AHA/ASA y ESO Guidelines for Acute Ischemic Stroke.`,
   },
@@ -915,15 +996,27 @@ Referencias: AHA/ASA y ESO Guidelines for Acute Ischemic Stroke.`,
       "Dabigatrán = anti-IIa → idarucizumab.",
       "PT/INR no reflejan bien anticoagulación por DOAC.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Reversión de DOAC en HIC
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Apixabán: inhibidor selectivo del factor Xa activado.
-• 1.ª línea: andexanet alfa; alternativa: CCP4.
-• + control agresivo PA (PAS ~140 mmHg).
-• Idarucizumab = solo dabigatrán; vitamina K/PFC = warfarina; protamina = heparina.
+Esta pregunta evalúa reversión de anticoagulación en HIC: cada anticoagulante tiene su antídoto; apixabán requiere andexanet o CCP4, no idarucizumab.
 
-Perla: HIC por "xaban" = andexanet o CCP4; dabigatrán = idarucizumab.
+¿Qué está ocurriendo realmente?
+- Mujer de 75 años en apixabán (anti-Xa) con HIC putaminal izquierda de 40 cc y spot sign.
+- Última dosis hace 3 horas; INR 1.2 (no refleja bien anticoagulación por DOAC).
+- Hemiplejía derecha y desviación de mirada: emergencia neuroquirúrgica y hemostática.
+- Necesidad de reversión específica del inhibidor del factor Xa.
+
+¿Qué dato es clave en el examen?
+- Apixabán/rivaroxabán = inhibidores directos del factor Xa → andexanet alfa (1.ª línea) o CCP4.
+- Control agresivo de PA (objetivo PAS ~140 mmHg) simultáneamente.
+- PT/INR no son fiables para monitorizar DOAC.
+
+¿Por qué fallan las otras opciones?
+- Idarucizumab: antídoto específico solo para dabigatrán (anti-IIa), no para apixabán.
+- Vitamina K y plasma fresco: para warfarina, no para DOAC.
+- Protamina: revierte heparina, no apixabán.
+
+Clave: HIC en paciente con "xaban" = andexanet o CCP4 + control de PA; dabigatrán = idarucizumab.
 
 Referencias: AHA/ASA 2022 ICH Guidelines; Neurocritical Care Society Antithrombotic Reversal Guidelines.`,
   },
@@ -965,16 +1058,27 @@ Referencias: AHA/ASA 2022 ICH Guidelines; Neurocritical Care Society Antithrombo
       "Cáncer + déficit medular agudo = metástasis epidural.",
       "RM define cirugía vs radioterapia; retraso = paraplejía permanente.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Compresión medular maligna
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Choque espinal: arreflexia y flacidez en fase aguda (días-semanas).
-• Nivel sensitivo = marcador topográfico más fiel.
-• Ombligo = T10.
-• RM con contraste de columna (torácica focalizada) es obligatoria antes de tratar.
-• Dexametasona dosis altas empírica mientras se confirma.
+Esta pregunta evalúa compresión medular maligna: el nivel sensitivo al ombligo es T10, y en cáncer prostático la RM torácica urgente no puede esperar.
 
-Perla: Cáncer + nivel umbilical = compresión torácica T10 → RM urgente.
+¿Qué está ocurriendo realmente?
+- Hombre de 65 años con cáncer de próstata metastásico.
+- Paraplejía 0/5 en EEII con arreflexia y tono flácido (choque espinal agudo).
+- Pérdida sensitiva total desde ombligo hacia abajo y retención urinaria.
+- Síndrome medular completo agudo en paciente oncológico.
+
+¿Qué dato es clave en el examen?
+- Niveles dermatómicos: pezones T4, ombligo T10, pliegue inguinal L1.
+- Cáncer + déficit medular agudo = compresión medular maligna hasta demostrar lo contrario.
+- RM con contraste de columna torácica urgente define cirugía vs radioterapia; el retraso causa paraplejía permanente.
+
+¿Por qué fallan las otras opciones?
+- T4 (pezones) con RM lumbosacra: el nivel sensitivo es más bajo (T10), no cauda equina.
+- L1 con RM de cerebro: nivel y localización incorrectos.
+- T12 con angiografía: no es el estudio de primera línea; la compresión epidural se confirma con RM.
+
+Clave: cáncer prostático + nivel umbilical = compresión T10 → RM torácica urgente + dexametasona empírica.
 
 Referencias: AAN Guidelines; guías oncológicas de emergencias neurológicas.`,
   },
@@ -1016,16 +1120,27 @@ Referencias: AAN Guidelines; guías oncológicas de emergencias neurológicas.`,
       "IGIV o plasmaféresis equivalentes; iniciar precoz (<2 semanas).",
       "Corticosteroides no benefician SGB clásico.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Neurología
-Guillain-Barré y disautonomía
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Polirradiculoneuropatía post-infecciosa (mimetismo molecular; Campylobacter clásico).
-• Desmielinización motora + autonómica periférica → barorreflejos destruidos.
-• Oscilaciones simpáticas/parasimpáticas: HTA/taquicardia ↔ bradicardia/asistolia.
-• Tratamiento: IGIV o plasmaféresis (equivalentes); ideal <2 semanas.
-• Esteroide sistémico: ineficaz en ensayos; no indicado.
+Esta pregunta evalúa Guillain-Barré con disautonomía: la inestabilidad hemodinámica severa es por daño autonómico periférico, y el tratamiento es IGIV o plasmaféresis, no esteroides.
 
-Perla: SGB en UCI puede hacer asistolia al intubar por hiperreactividad vagal, no solo hipoxia.
+¿Qué está ocurriendo realmente?
+- Hombre de 30 años con debilidad ascendente 5 días tras diarrea por Campylobacter (3 semanas antes).
+- Paraplejía flácida, arreflexia universal, disociación albúmino-citológica en LCR (proteínas 125, 2 leucocitos).
+- Disautonomía severa: oscilaciones de PA y FC con asistolia transitoria en monitor.
+- SGB clásico (AIDP) con compromiso autonómico letal.
+
+¿Qué dato es clave en el examen?
+- Desmielinización autoinmune de nervios autonómicos periféricos destruye barorreflejos.
+- Oscilaciones simpáticas/parasimpáticas: HTA/taquicardia ↔ hipotensión/bradicardia/asistolia.
+- Tratamiento: IGIV o plasmaféresis en las primeras 2 semanas (equivalentes); esteroides no son eficaces en SGB clásico.
+
+¿Por qué fallan las otras opciones?
+- Extensión bacteriana al bulbo con esteroides intratecales: no es el mecanismo; SGB es autoinmune periférico.
+- Miocarditis viral con marcapasos sin IGIV: el cuadro encaja con neuropatía autonómica del SGB.
+- Metilprednisolona en pulsos: ensayos muestran que esteroides no benefician SGB clásico.
+
+Clave: SGB + disautonomía + asistolia = IGIV o PLEX; esteroides no; vigilar al intubar (hiperreactividad vagal).
 
 Referencias: AAN Guidelines for Treatment of Guillain-Barré Syndrome.`,
   },
@@ -1067,14 +1182,30 @@ Referencias: AAN Guidelines for Treatment of Guillain-Barré Syndrome.`,
       "Rivaroxabán → evitar en FA crónica; preferir apixabán si sangrado/fragilidad.",
       "Glibenclamida: hipoglucemia prolongada letal en anciano.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-Polifarmacia · Beers 2023
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Caída + hipoglucemia + anticoagulación/antiagregación injustificada = iatrogenia en cascada.
-• Beers 2023: aspirina evitar en prevención primaria; rivaroxabán evitar en FA crónica (sangrado GI); sulfonilureas evitar; IBP crónico evitar sin indicación.
-• DOACs preferidos sobre warfarina cuando están indicados.
+Esta pregunta evalúa polifarmacia geriátrica con Criterios de Beers 2023: la caída con hipoglucemia revela una cascada iatrogénica que exige deprescripción selectiva, no más fármacos.
 
-Perla: FA + rivaroxabán + sangrado GI o fragilidad → considerar apixabán. Aspirina primaria >70 años no previene IAM pero sí hemorragias.
+¿Qué está ocurriendo realmente?
+- Mujer de 84 años con caída, TCE y hematoma subdural agudizado.
+- Hipoglucemia severa (45 mg/dL) en domicilio por glibenclamida.
+- FA no valvular anticoagulada con rivaroxabán + aspirina sin indicación (prevención primaria).
+- Omeprazol crónico 5 años sin indicación clara; sangrado digestivo oculto y anemia.
+- Pre-frágil (FRAIL 2, TUG lento): alta vulnerabilidad a eventos adversos.
+
+¿Qué dato es clave en el examen?
+- Beers 2023: aspirina evitar en prevención primaria >65 años (riesgo hemorrágico sin beneficio).
+- Glibenclamida: sulfonilurea de acción prolongada → hipoglucemia letal en anciano con TFG 45.
+- Rivaroxabán: evitar en FA crónica por mayor sangrado GI vs apixabán/dabigatrán.
+- IBP crónico >8 semanas sin indicación: evitar (fracturas, déficit B12, infecciones).
+- DOAC preferido sobre warfarina cuando está indicado, pero apixabán es mejor opción con sangrado/fragilidad.
+
+¿Por qué fallan las otras opciones?
+- Suspender todo y cambiar a warfarina: warfarina no es superior a DOACs; aumenta complejidad y riesgo de caídas por INR.
+- Mantener doble terapia y omeprazol "protector": omeprazol no previene sangrado por DOAC; la aspirina no está indicada.
+- iSGLT2 con TFG 45, digoxina y suspender rivaroxabán: la FA no valvular sí requiere anticoagulación; digoxina no es sustituto.
+
+Clave: caída + hipoglucemia + hematoma = deprescripción Beers: stop glibenclamida, stop aspirina primaria, retirar IBP, cambiar rivaroxabán → apixabán.
 
 Referencias: AGS Beers Criteria 2023; STOPP/START v3.`,
   },
@@ -1116,15 +1247,30 @@ Referencias: AGS Beers Criteria 2023; STOPP/START v3.`,
       "Haloperidol en DCL = contraindicado (sensibilidad neuroléptica).",
       "Delirium: corregir causa (infección, retención) antes que sedar.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-Delirium sobre Demencia por Cuerpos de Lewy
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• DCL: deficiencia colinérgica y dopaminérgica; bloqueo D2 → síndrome neuroléptico-like.
-• Delirium = epifenómeno de espina irritativa (ITU, retención urinaria).
-• Evitar haloperidol y risperidona; si inevitable: quetiapina ultrabaja.
-• Benzodiacepinas contraindicadas en delirium del anciano (Beers).
+Esta pregunta evalúa delirium sobre demencia por cuerpos de Lewy: la sensibilidad neuroléptica severa obliga a tratar la causa (ITU + retención) antes que sedar con antipsicóticos bloqueadores D2.
 
-Perla: Alucinaciones visuales vívidas + parkinsonismo + demencia = Lewy. Antipsicóticos típicos = veneno letal.
+¿Qué está ocurriendo realmente?
+- Hombre de 78 años con DCL (fluctuaciones, alucinaciones visuales estructuradas, parkinsonismo rígido-acinético).
+- Agitación y fluctuación extrema de conciencia en 48 h sobre demencia basal.
+- ITU con piuria masiva, nitritos (+), leucocitosis y PCR elevada.
+- Globo vesical palpable: retención urinaria como desencadenante adicional.
+- Delirium hiperactivo = epifenómeno de espina irritativa, no "psicosis nueva".
+
+¿Qué dato es clave en el examen?
+- DCL: deficiencia colinérgica y dopaminérgica simultánea → sensibilidad neuroléptica (~50% rigidez, coma, muerte).
+- Haloperidol y risperidona (alto bloqueo D2) están contraindicados.
+- Si farmacológico es inevitable: quetiapina o clozapina (rápida disociación D2) en dosis ultrabajas.
+- Benzodiacepinas empeoran delirium en ancianos (Beers).
+- Prioridad: medidas no farmacológicas + tratar infección + drenar vejiga.
+
+¿Por qué fallan las otras opciones?
+- Haloperidol 5 mg IM: típico de alto potencia D2 → síndrome neuroléptico-like letal en DCL.
+- Risperidona + aumentar levodopa: risperidona empeora parkinsonismo; no trata la causa.
+- Midazolam IV: benzodiacepinas contraindicadas en delirium geriátrico; empeoran confusión.
+
+Clave: DCL + delirium = tratar ITU/retención primero; evitar haloperidol/risperidona; quetiapina ultrabaja solo si ineludible.
 
 Referencias: AGS / NICE Delirium and Dementia Guidelines.`,
   },
@@ -1166,15 +1312,30 @@ Referencias: AGS / NICE Delirium and Dementia Guidelines.`,
       "SPPB <4 + demencia + dependencia = futilidad para TAVI/cirugía.",
       "Tratar al paciente, no solo al ecocardiograma.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-Fragilidad y decisión valvular
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Fragilidad = homeostenosis; reserva fisiológica agotada.
-• Fried 5/5 + SPPB 2 + Barthel 35 + MMSE 12 = vulnerabilidad extrema.
-• TAVI no revierte sarcopenia ni demencia.
-• Manejo conservador/paliativo cuando no hay beneficio funcional a 1 año.
+Esta pregunta evalúa fragilidad extrema en decisión valvular: reparar la válvula no revierte el colapso multidominio; la intervención invasiva es fútil.
 
-Perla: Un robusto de 90 puede ir a TAVI; un frágil dependiente no, aunque tenga EA severa.
+¿Qué está ocurriendo realmente?
+- Hombre de 88 años con estenosis aórtica severa sintomática (síncope, NYHA III).
+- Fragilidad terminal: Fried 5/5, SPPB 2/12, pérdida ponderal, sarcopenia (handgrip bajo, pantorrilla <31 cm).
+- Dependencia severa: Barthel 35/100, Lawton 1/8.
+- Demencia avanzada: MMSE 12/30.
+- Caquexia: albúmina 2.8 g/dL.
+
+¿Qué dato es clave en el examen?
+- Fragilidad = homeostenosis: reserva fisiológica agotada; el paciente no tolera estrés quirúrgico.
+- SPPB <4 + demencia + dependencia ABVD = alta mortalidad periprocedimiento sin beneficio funcional a 1 año.
+- TAVI no revierte sarcopenia, demencia ni dependencia.
+- La edad cronológica no contraindica cirugía; la fragilidad severa sí.
+- Manejo conservador/paliativo es ético y basado en evidencia.
+
+¿Por qué fallan las otras opciones?
+- Cirugía abierta: mortalidad y morbilidad inaceptables sin recuperación funcional esperable.
+- TAVI urgente "revertirá fragilidad": procedimiento mínimamente invasivo no restaura reserva fisiológica.
+- Testosterona/hormona de crecimiento: no hay evidencia de revertir caquexia terminal; retrasa cuidados paliativos.
+
+Clave: EA severa + Fried 5/5 + Barthel 35 + MMSE 12 = futilidad para TAVI/cirugía → paliativos.
 
 Referencias: AGS; ACC/AHA Valvular Heart Disease Guidelines in Older Adults.`,
   },
@@ -1216,14 +1377,29 @@ Referencias: AGS; ACC/AHA Valvular Heart Disease Guidelines in Older Adults.`,
       "Amitriptilina: alta carga anticolinérgica; evitar en >65 años.",
       "No cascada de prescripción (fludrocortisona) sin retirar culpables.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-Hipotensión ortostática y STOPP
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Barorreceptores envejecidos + tamsulosina + amlodipino + amitriptilina = síncope.
-• STOPP/Beers: amitriptilina evitar; alfa-bloqueadores revisar en ortostatismo.
-• Deprescripción escalonada > suspender todo de golpe (rebote HTA).
+Esta pregunta evalúa hipotensión ortostática iatrogénica: antes de prescribir fludrocortisona o marcapasos, hay que deprescribir los fármacos culpables según STOPP/Beers.
 
-Perla: Revisa alfa-bloqueadores, tricíclicos y vasodilatadores antes del Holter.
+¿Qué está ocurriendo realmente?
+- Hombre de 76 años con síncope postprandial y mareo ortostático matutino.
+- Caída sistólica ≥40 mmHg en ortostatismo sin taquicardia compensatoria (barorreflejos envejecidos).
+- Polifarmacia causal: amlodipino, enalapril, tamsulosina (alfa-bloqueador), amitriptilina (anticolinérgica + anti-alfa-1).
+- Mucosas secas y retención fecal: toxidrome anticolinérgico parcial por amitriptilina.
+
+¿Qué dato es clave en el examen?
+- Hipotensión ortostática en anciano = iatrogenia hasta demostrar lo contrario.
+- STOPP/Beers: amitriptilina evitar en >65 años (alta carga anticolinérgica).
+- Tamsulosina bloquea alfa-1 → vasodilatación y empeora ortostatismo.
+- Deprescripción escalonada (no suspender todo de golpe): evita rebote hipertensivo.
+- Hidratación y medias compresivas son medidas de soporte, no sustituto de deprescripción.
+
+¿Por qué fallan las otras opciones?
+- Fludrocortisona + midodrina manteniendo culpables: cascada de prescripción sin corregir causa.
+- Suspender todo de golpe: riesgo de crisis hipertensiva por rebote.
+- Marcapasos: no hay bloqueo AV; FC estable en ortostatismo descarta bradicardia como causa.
+
+Clave: ortostatismo + amitriptilina + tamsulosina + amlodipino = STOPP → deprescripción escalonada.
 
 Referencias: STOPP/START v3; Beers 2023.`,
   },
@@ -1265,15 +1441,30 @@ Referencias: STOPP/START v3; Beers 2023.`,
       "Sarcopenia: fuerza + proteína; no reposo ni megestrol.",
       "HAD es potencialmente reversible con rehabilitación agresiva.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-Sarcopenia hospitalaria (HAD)
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Reposo + inflamación + malnutrición = miopatía por inmovilidad.
-• EWGSOP2: ejercicio de resistencia + proteína 1.2–1.5 g/kg/día.
-• Megestrol: grasa, trombosis, mortalidad; Beers evitar.
-• La cama es veneno iatrogénico en el anciano.
+Esta pregunta evalúa discapacidad asociada a hospitalización (HAD) y sarcopenia aguda: la cama es veneno iatrogénico; el tratamiento es ejercicio de fuerza + proteína, no reposo.
 
-Perla: Sarcopenia se trata con pesas y proteína, no con reposo.
+¿Qué está ocurriendo realmente?
+- Hombre de 82 años al alta tras 14 días por NAC resuelta.
+- Previo: Barthel 95, caminaba 1 km/día; actual: Barthel 45, no se levanta solo.
+- Reposo en cama durante hospitalización + ingesta pobre + sonda vesical (retirada).
+- Atrofia cuádriceps, claudicación, SARC-F >4, fuerza 3/5 simétrica.
+- Sarcopenia aguda post-hospitalización, no neuropatía periférica (reflejos conservados).
+
+¿Qué dato es clave en el examen?
+- ~10 días de cama en hospital ≈ envejecimiento muscular acelerado equivalente a años de sarcopenia.
+- EWGSOP2 gold standard: ejercicio de resistencia progresivo + proteína 1.2–1.5 g/kg/día.
+- Corrección de déficit de vitamina D si está presente.
+- HAD es potencialmente reversible con rehabilitación agresiva precoz.
+- Megestrol (Beers: evitar): ganancia de grasa, trombosis, sin beneficio muscular.
+
+¿Por qué fallan las otras opciones?
+- Reposo relativo limitado al baño: perpetúa la miopatía por inmovilidad.
+- Megestrol/esteroides anabólicos: no son tratamiento de sarcopenia; megestrol aumenta mortalidad.
+- Institucionalización definitiva: el deterioro de 50 puntos en Barthel no es irreversible a los 82 con rehab.
+
+Clave: NAC resuelta + Barthel 45 post-cama = HAD/sarcopenia → fuerza + proteína 1.2–1.5 g/kg/día.
 
 Referencias: EWGSOP2; geriatric hospital medicine guidelines.`,
   },
@@ -1315,14 +1506,30 @@ Referencias: EWGSOP2; geriatric hospital medicine guidelines.`,
       "Oxibutinina contraindicada en anciano con deterioro cognitivo.",
       "Mirabegrón: 1.ª línea farmacológica geriátrica para vejiga hiperactiva.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-Carga anticolinérgica · Oxibutinina
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Oxibutinina bloquea M1 central (delirium) y M3 periférico (retención, estreñimiento).
-• Beers 2023: evitar anticolinérgicos potentes en ancianos.
-• 1.ª línea incontinencia: rehabilitación suelo pélvico; luego mirabegrón.
+Esta pregunta evalúa toxidrome anticolinérgico por oxibutinina: un fármaco de 1.ª generación lipofílico cruza la BHE y causa delirium central más retención urinaria periférica.
 
-Mnemotecnia anticolinérgico: loco, seco, rojo, caliente, ciego.
+¿Qué está ocurriendo realmente?
+- Mujer de 80 años con confusión aguda, xerostomía, constipación e intolerancia oral.
+- Inició oxibutinina hace 2 semanas por incontinencia de urgencia recién diagnosticada.
+- MCI previo: cerebro con baja reserva colinérgica.
+- CAM positivo (delirium) + globo vesical masivo + fecaloma impactado.
+- Evento adverso farmacológico predecible, no "desenmascaramiento de Alzheimer".
+
+¿Qué dato es clave en el examen?
+- Oxibutinina: antimuscarínico lipofílico de 1.ª generación.
+- Central (M1): cruza BHE → delirium en cerebro con reserva colinérgica reducida.
+- Periférico (M3): retención urinaria y estreñimiento (paradoja: trató incontinencia y la empeoró).
+- Beers 2023: evitar fuertemente anticolinérgicos potentes en ancianos.
+- Alternativa segura: mirabegrón (agonista beta-3 vesical, sin actividad anticolinérgica).
+
+¿Por qué fallan las otras opciones?
+- Toxicidad colinérgica excesiva + betanecol: es lo opuesto; oxibutinina bloquea colina, no la estimula.
+- IAM silente: no hay datos cardíacos; el cuadro es anticolinérgico clásico.
+- Donepezilo alto + mantener oxibutinina: colinérgico + anticolinérgico se anulan parcialmente; no resuelve retención.
+
+Clave: oxibutinina + MCI + delirium + globo vesical = suspender + derivar orina; a futuro mirabegrón.
 
 Referencias: Beers 2023; NICE Incontinence Guidelines.`,
   },
@@ -1364,15 +1571,30 @@ Referencias: Beers 2023; NICE Incontinence Guidelines.`,
       "La piel también claudica (perfusión centralizada).",
       "PEG en demencia avanzada no prolonga vida ni cicatriza.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-Úlcera terminal de Kennedy
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Skin failure al final de la vida: piel pierde integridad vascular.
-• Lesión sacra fulminante en moribundo ≠ negligencia.
-• Manejo: paliativo (apósitos, olor, analgesia).
-• PEG en FAST 7: contraindicada (AGS Choosing Wisely).
+Esta pregunta evalúa úlcera terminal de Kennedy (skin failure): una lesión sacra fulminante pese a prevención óptima marca mortalidad inminente, no negligencia.
 
-Perla: Úlcera mariposa fulminante en paciente agonizante = Kennedy. Palía, no mutiles.
+¿Qué está ocurriendo realmente?
+- Mujer de 92 años con Alzheimer FAST 7F (postrada, disfagia severa, sin sonda por decisión anticipada).
+- Cuidados de prevención óptimos: cambios c/2 h, colchón alterno.
+- En 48 h: úlcera sacra en mariposa/pera de estadio IV pese a medidas correctas.
+- Hipotensión (PA 85/50), perfusión periférica decaída, caquexia (albúmina 2.1).
+- Falla cutánea terminal al fin de vida: la piel también claudica.
+
+¿Qué dato es clave en el examen?
+- Úlcera de Kennedy: aparición fulminante en sacro con forma de mariposa/pera.
+- Ocurre pese a prevención perfecta → no es negligencia.
+- Marca mortalidad inminente (skin failure = órgano que falla).
+- Manejo paliativo: control de dolor, exudado y olor; no desbridamiento quirúrgico extenso.
+- PEG en FAST 7F: contraindicada (AGS Choosing Wisely); no prolonga vida ni cicatriza.
+
+¿Por qué fallan las otras opciones?
+- Negligencia + desbridamiento quirúrgico/colgajo: la prevención fue óptima; mutilar no ayuda.
+- Fascitis necrotizante + amputación: no hay fiebre, eritema extendido ni crepitación; es falla vascular terminal.
+- PEG urgente para hiperalimentar: no revierte caquexia terminal ni cicatriza úlceras de Kennedy.
+
+Clave: FAST 7F + úlcera sacra fulminante pese a cuidados = Kennedy → paliativos, no cirugía.
 
 Referencias: AGS; NPUAP skin failure guidelines.`,
   },
@@ -1414,15 +1636,30 @@ Referencias: AGS; NPUAP skin failure guidelines.`,
       "AINE + ARA II = riesgo colapso glomerular.",
       "Empagliflozina beneficia HFpEF; no suspender.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-HFpEF y AINEs (STOPP)
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Corazón rígido + AINE = retención hídrica + edema pulmonar + LRA.
-• STOPP v3: stop AINE en IC.
-• Tratar: retirar toxina + diurético de asa.
-• iSGLT2 = tratamiento base HFpEF; digoxina no en diastólica.
+Esta pregunta evalúa descompensación de HFpEF por AINE: el naproxeno inhibe prostaglandinas renales y desencadena retención hídrica; STOPP manda suspender el AINE, no la empagliflozina.
 
-Perla: Naproxeno/ibuprofeno en anciano con IC = ahogarlo en su propio volumen.
+¿Qué está ocurriendo realmente?
+- Mujer de 85 años con HFpEF (FEVI 55%, disfunción diastólica II) en NYHA III.
+- Inició naproxeno hace 10 días por artrosis de cadera.
+- Descompensación aguda: JVP elevada, crépitos, edema foveolar, PA 165/90.
+- LRA sobre ERC: creatinina 1.8 (basal 1.0), NT-proBNP 2500.
+- Corazón rígido diastólico + retención de volumen por AINE.
+
+¿Qué dato es clave en el examen?
+- STOPP v3: AINEs contraindicados en falla cardíaca (sistólica o diastólica).
+- Naproxeno inhibe prostaglandinas renales → vasoconstricción aferente + retención Na/H2O.
+- AINE + ARA II (losartán) = riesgo de colapso glomerular ("triple whammy" si hubiera diurético).
+- Empagliflozina: piedra angular en HFpEF (EMPEROR-Preserved); no suspender.
+- Digoxina no beneficia FEVI preservada; dobutamina no mejora diástole.
+
+¿Por qué fallan las otras opciones?
+- Aumentar losartán + mantener naproxeno + IBP: el AINE es la toxina causal; IBP no protege riñón.
+- Suspender empagliflozina + digoxina: quita el fármaco que sí ayuda y añade uno inútil en diastólica.
+- Dobutamina + mantener analgésicos: inotrópico no indicado en HFpEF descompensada por volumen.
+
+Clave: HFpEF + naproxeno reciente + edema + LRA = stop AINE + furosemida IV + analgesia no nefrotóxica.
 
 Referencias: STOPP/START v3; Beers 2023; HFpEF guidelines.`,
   },
@@ -1464,15 +1701,31 @@ Referencias: STOPP/START v3; Beers 2023; HFpEF guidelines.`,
       "Choosing Wisely: no cultivar/tratar orina sin síntomas locales o sistémicos.",
       "Piuria sola no diagnostica ITU en anciano con pañal.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-Bacteriuria asintomática
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Prevalencia hasta 20–50% en ancianos; biopelículas comensales.
-• Olor fétido en pañal ≠ infección activa.
-• Tratar BA: no beneficio, sí resistencia y C. difficile.
-• ITU requiere síntomas: disuria, urgencia nueva, fiebre o delirium claro.
+Esta pregunta evalúa bacteriuria asintomática en anciana con pañal: cultivo positivo sin síntomas no es ITU; tratar genera resistencia y C. difficile sin beneficio.
 
-Perla: Piuria + cultivo (+) sin síntomas = bacteriuria asintomática. No tratar.
+¿Qué está ocurriendo realmente?
+- Mujer de 89 años con Alzheimer moderado e incontinencia crónica con pañal.
+- Completamente asintomática: come bien, camina, sin fiebre ni delirium.
+- Urocultivo solicitado por olor a amoníaco en pañal (no es indicación válida).
+- E. coli >100,000 UFC/mL con esterasa leucocitaria (+) y 15 leucocitos/campo.
+- Bacteriuria asintomática: colonización comensal en vejiga neurogénica/pañal.
+
+¿Qué dato es clave en el examen?
+- Prevalencia BA hasta 20–50% en ancianos institucionalizados o con pañal.
+- Olor fétido en pañal ≠ infección urinaria activa.
+- AGS Choosing Wisely / IDSA: no tratar BA; no previene urosepsis.
+- Tratar BA sí aumenta resistencia antimicrobiana y colitis por C. difficile.
+- ITU requiere síntomas: disuria, urgencia nueva, fiebre o delirium agudo claro.
+- Piuria sola no diagnostica ITU en anciano con pañal.
+
+¿Por qué fallan las otras opciones?
+- Ciprofloxacino 7 días por UFC y leucocitos: tratar colonización sin síntomas es iatrogenia.
+- Profilaxis con nitrofurantoína 6 meses: no esteriliza vía urinaria; genera resistencia crónica.
+- Hemocultivos + ceftriaxona IV: no hay datos de pielonefritis ni sepsis (afebril, estable).
+
+Clave: asintomática + cultivo (+) + pañal = bacteriuria asintomática → no antibióticos.
 
 Referencias: IDSA Guidelines; AGS Choosing Wisely.`,
   },
@@ -1514,15 +1767,30 @@ Referencias: IDSA Guidelines; AGS Choosing Wisely.`,
       "Scheduled analgesic trial superior a antipsicóticos en BPSD por dolor.",
       "Haloperidol como \"chaleco químico\" = antiético y mortal.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q. · Geriatría
-BPSD y dolor no verbalizado
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-• Demencia severa: afasia/agnosia impiden verbalizar dolor → agresión instintiva.
-• Agitación solo en baño/cambio pañal + artrosis = dolor mecánico.
-• 1.ª línea: analgésico programado + rutinas no traumáticas.
-• Antipsicóticos solo si psicosis/riesgo letal tras fallar medidas no farmacológicas.
+Esta pregunta evalúa BPSD con desencadenante mecánico: la agresividad al baño es lenguaje de dolor no verbalizado; acetaminofén programado antes que antipsicóticos.
 
-Perla: Cambio súbito de comportamiento en demenciado muto = dolor o infección. Acetaminofén antes que risperidona.
+¿Qué está ocurriendo realmente?
+- Hombre de 86 años con Alzheimer severo (GDS 6).
+- Agitación vespertina, agresividad al baño/cambio de pañal, deambulación nocturna (sundowning).
+- Agresividad solo cuando flexionan rodillas o desvisten para ducha: desencadenante mecánico.
+- Contracturas en rodillas, dolor evidente al movilizar caderas/rodillas.
+- BPSD por dolor no tratado, no psicosis primaria.
+
+¿Qué dato es clave en el examen?
+- Demencia severa: afasia y agnosia impiden verbalizar dolor → agresión instintiva de defensa.
+- AGS: 1.ª línea = buscar causa reversible + ensayo analgésico programado (scheduled analgesic trial).
+- Higiene no forzada: adaptar rutinas para minimizar movimientos dolorosos.
+- Antipsicóticos solo si psicosis o riesgo letal tras fallar medidas no farmacológicas.
+- Black box FDA: antipsicóticos en demencia → ACV y muerte aumentados.
+
+¿Por qué fallan las otras opciones?
+- Haloperidol 1 mg antes del baño: sedación química sin tratar dolor; aumenta mortalidad.
+- Memantina + citalopram: no abordan dolor mecánico agudo; citalopram puede empeorar caídas.
+- Unidad psiquiátrica + sujeción + ECT: desproporcionado; la causa es somática tratable.
+
+Clave: agresión solo en flexión articular + artrosis = dolor → acetaminofén horario + higiene adaptada.
 
 Referencias: AGS Guidelines for Management of BPSD.`,
   },
@@ -1564,7 +1832,32 @@ Referencias: AGS Guidelines for Management of BPSD.`,
       "Exposición previa a anti-pseudomónicos → cubrir MDR (Pseudomonas).",
       "Shock séptico: antibiótico IV precoz + fluidos + vasopresores.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa neumonía asociada a atención en salud (NAC-H) con shock séptico por Pseudomonas MDR: la exposición previa a pip-tazo obliga escalar a carbapenémico + amikacina con reanimación séptica inmediata.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 68 años, día 9 de hospitalización por IAMCEST complicado con IC.
+- Intubado días 2–6, extubado hace 48 h (ya no está ventilado activamente).
+- Fiebre 39.2 °C, consolidación lobar derecha nueva, tos purulenta, disnea.
+- Shock séptico: PA 88/52, lactato 3.8, acidosis metabólica (pH 7.28, HCO3 16).
+- Cultivo esputo preliminar: Pseudomonas aeruginosa; antibióticos previos: pip-tazo 5 días.
+
+¿Qué dato es clave en el examen?
+- NAC-H: neumonía ≥48 h de hospitalización o ≤48 h post-alta; consolidación nueva post-extubación encaja.
+- No es VAP activa: el paciente ya no está intubado.
+- Exposición previa a anti-pseudomónicos selecciona resistencia → carbapenémico + aminoglucósido (amikacina).
+- Shock séptico: antibiótico IV en <1 h + cristaloides + vasopresores según Surviving Sepsis.
+- Ajustar dosis a TFG (ERC estadio 3b, creatinina 2.4).
+
+¿Por qué fallan las otras opciones?
+- Amoxicilina-clavulánico oral: NAC comunitaria no explica cronología ni gravedad; ATB oral inadecuado en shock.
+- Meropenem + vancomicina sin ajuste renal: vancomicina sin indicación MRSA clara; VAP activa no aplica.
+- Edema pulmonar cardiogénico: Rx y clínica son infecciosas; retrasar ATB en shock séptico aumenta mortalidad.
+
+Clave: post-UCI + consolidación nueva + pip-tazo previo + shock = NAC-H por Pseudomonas MDR → meropenem + amikacina + reanimación.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 NAC-H / sepsis por Pseudomonas MDR
 
 Fisiopatología:
@@ -1623,7 +1916,32 @@ Referencias: IDSA/ATS HAP/VAP Guidelines; Surviving Sepsis Campaign; SHM.`,
       "Triada AKI en IC: diuréticos + ACEi + espironolactona.",
       "Kayexalato no salva en minutos; no retrasa medidas IV.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa hiperkalemia grave con cambios ECG en paciente hospitalizado con IC: calcio IV primero para estabilizar membrana, luego insulina-dextrosa; kayexalato no salva en minutos.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 72 años, día 4 por descompensación de IC (FEVI 30%).
+- Oliguria 12 h, somnolencia: AKI sobre IC descompensada.
+- Medicamentos: furosemida IV + enalapril + espironolactona 25 mg (triada nefrotóxica en IC).
+- K+ 7.1 mEq/L con cambios ECG: T picudas simétricas, QRS 130 ms, ondas P ausentes.
+- Acidosis metabólica (pH 7.18, HCO3 14), creatinina 3.8 (basal 1.2).
+
+¿Qué dato es clave en el examen?
+- ECG cambiado + K+ >6.5 = emergencia con riesgo de arritmia letal inmediata.
+- Secuencia KDIGO: 1) gluconato de calcio IV (estabiliza membrana); 2) insulina + dextrosa; 3) beta-2 inhalado.
+- Suspender espironolactona y enalapril (bloquean aldosterona / reducen GFR).
+- Kayexalato oral: acción lenta (horas), no es medida de rescate aguda.
+- Diálisis si refractaria o AKI oligúrica severa.
+
+¿Por qué fallan las otras opciones?
+- Diálisis sola sin calcio/insulina: retrasa estabilización de membrana → riesgo de paro.
+- Kayexalato + mantener enalapril: kayexalato lento; ACEi empeora hiperkalemia.
+- Bicarbonato en bolo + amiodarona: bicarbonato solo si acidosis severa con QRS prolongado; amiodarona no trata hiperkalemia.
+
+Clave: IC + espironolactona + oliguria + T picuda = hiperkalemia → calcio IV primero, siempre.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Hiperkalemia grave con ECG en paciente hospitalizado
 
 Fisiopatología:
@@ -1683,7 +2001,32 @@ Referencias: KDIGO AKI; ACP/SHM electrolyte emergencies.`,
       "Sintomática: SSH 3% con meta corrección ≤8 mEq/L/24 h.",
       "No expansión volémica en euvolemia (empeora dilución).",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa SIADH intrahospitalaria euvolémica post-neurocirugía: hiponatremia sintomática requiere restricción hídrica y, si es necesario, suero salino hipertónico 3% con corrección ≤8 mEq/L/24 h.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 58 años, día 6 post-cirugía de meningioma.
+- Na+ cayó de 138 al ingreso a 118 mEq/L con osmolalidad sérica 248 (hipotónica verdadera).
+- Osmolalidad urinaria 520, Na urinario 65: orina inapropiadamente concentrada.
+- Euvolemia al examen; TSH y cortisol normales (descarta hipotiroidismo e insuficiencia adrenal).
+- Desencadenantes: morfina PCA, ondansetrón, sertralina (SSRI) + cirugía SNC.
+- GCS 13: hiponatremia sintomática (somnolencia progresiva).
+
+¿Qué dato es clave en el examen?
+- SIADH: euvolemia + Uosm >100 + Na urinario >30 + hipotónica.
+- Manejo: restricción hídrica + suspender fármacos desencadenantes.
+- Si sintomática: SSH 3% bajo monitorización con meta corrección ≤8 mEq/L/24 h (evitar mielinolisis osmótica).
+- Corrección rápida (>10-12 mEq/L/24 h) → mielinolisis pontina irreversible.
+
+¿Por qué fallan las otras opciones?
+- Furosemida en euvolemia: no es 1.ª línea en SIADH; puede deplecionar sin corregir ADH inapropiada.
+- Pseudohiaponatremia por glucosa: glucosa normal (110 mg/dL); no aplica fórmula de corrección.
+- Expansión con SF 0.9% 2 L: en euvolemia agrava dilución y empeora hiponatremia.
+
+Clave: post-neurocirugía + SSRI + Na+ 118 + GCS 13 = SIADH sintomática → SSH 3% lento si necesario.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Hiponatremia euvolémica intrahospitalaria (SIADH)
 
 Fisiopatología:
@@ -1742,7 +2085,32 @@ Referencias: ACP/SHM hyponatremia guidelines; European hyponatremia guideline.`,
       "Cl bajo + K bajo sugiere alcalosis metabólica por diuréticos/depleción.",
       "Sobreventilación iatrogénica empeora alcalosis respiratoria.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa trastorno ácido-base mixto intrahospitalario: alcalosis metabólica hipoclorémica por diuréticos + alcalosis respiratoria por sobreventilación mecánica iatrogénica.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 55 años, día 3 por exacerbación de EPOC, intubado hace 6 h.
+- Gasometría: pH 7.52, PaCO2 28, HCO3 32 → trastorno mixto alcalótico.
+- Cl- 88, K+ 2.9: alcalosis metabólica hipoclorémica por furosemida (pérdida Cl-/K+).
+- PaCO2 baja: sobreventilación mecánica post-intubación (iatrogénica).
+- Anion gap 18 levemente elevado: puede ser albumina/lactato, no acidosis metabólica dominante.
+
+¿Qué dato es clave en el examen?
+- Mixto: pH ↑ + PaCO2 ↓ + HCO3 ↑ = alcalosis respiratoria + metabólica simultáneas.
+- Cl bajo + K bajo sugiere alcalosis metabólica por diuréticos/depleción de volumen.
+- Sobreventilación iatrogénica empeora alcalosis respiratoria aditiva.
+- pH >7.48: riesgo de arritmias, vasoespasmo cerebral, hipokalemia refractaria.
+- Conducta: ajustar ventilador (↓ FR/Vt), reponer KCl; no bicarbonato.
+
+¿Por qué fallan las otras opciones?
+- Aumentar FR a 22: agrava alcalosis respiratoria (más hiperventilación).
+- Bicarbonato IV 100 mEq: pH ya alcalino; bicarbonato empeoraría alcalosis metabólica.
+- Aumentar PEEP + sedación profunda: PaCO2 está baja, no hay acidosis respiratoria crónica descompensada.
+
+Clave: EPOC intubado + diuréticos + pH 7.52 = revisa ventilador + repón K+/Cl- antes de más gasometrías.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Trastorno ácido-base mixto intrahospitalario
 
 Fisiopatología:
@@ -1802,7 +2170,33 @@ Referencias: ACP acid-base disorders; SHM critical care.`,
       "Benzodiacepinas empeoran y prolongan delirium en ancianos.",
       "Hipernatremia/deshidratación post-op frecuente y delirógena.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa delirium postoperatorio intrahospitalario: benzodiacepinas y antipsicóticos profilácticos empeoran el cuadro; hay que corregir precipitantes (DEDHIPTIS) antes de sedar.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 81 años, día 2 post-fractura de cadera operada.
+- Agitación nocturna, desorientación fluctuante, alucinaciones visuales, inversión sueño-vigilia.
+- CAM positivo: delirium agudo, no demencia pura.
+- Fármacos delirógenos: lorazepam 1 mg noche, quetiapina 25 mg (por insomnio), tramadol PRN.
+- Hipernatremia (Na+ 151) + deshidratación leve: precipitante metabólico frecuente post-op.
+- Demencia leve previa + déficit sensorial (cataratas): factor de riesgo base.
+
+¿Qué dato es clave en el examen?
+- Delirium intrahospitalario = emergencia geriátrica; buscar precipitantes (DEDHIPTIS: Drugs, Electrolytes, Dehydration, Hypoxia, Infection, Pain, Trauma, Immobility, Sleep).
+- Benzodiacepinas empeoran y prolongan delirium en ancianos (Beers/SHM).
+- Medidas no farmacológicas: reorientación, movilización precoz, corregir déficit sensorial (gafas/audífono), analgesia adecuada.
+- Antipsicótico dosis mínima solo si riesgo inminente de daño.
+- TAC/EEG/aciclovir no son 1.ª línea sin datos de SNC infeccioso.
+
+¿Por qué fallan las otras opciones?
+- Aumentar quetiapina + mantener lorazepam + contención: lorazepam empeora delirium; contención es último recurso.
+- TAC urgente + aciclovir empírico: no hay focalidad neurológica ni fiebre alta; delirium es multifactorial.
+- Haloperidol depot mensual: inaceptable en delirium agudo reversible.
+
+Clave: fractura cadera + lorazepam noche + CAM (+) = quita BZD, hidrata, corrige Na+, moviliza.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Delirium postoperatorio intrahospitalario
 
 Fisiopatología:
@@ -1862,7 +2256,32 @@ Referencias: SHM Delirium Guidelines; AGS Clinical Practice Guideline Delirium.`
       "Trombocitopenia moderada: balance riesgo trombosis/sangrado (CHEST).",
       "Filtro de VC no es tratamiento de TEP agudo sin contraindicación absoluta a AC.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa TEP submasivo en paciente oncológico hospitalizado: plaquetopenia moderada (48,000) no contraindica anticoagulación plena; el filtro de vena cava no trata TEP establecido.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 64 años, día 10 por linfoma difuso de células B en quimioterapia (R-CHOP).
+- Disnea súbita, dolor pleurítico, taquicardia; PA 90/55, SpO2 88%.
+- TAC angio: defecto de repleción en arteria lobar derecha + sobrecarga de VD.
+- Troponina I elevada: TEP submasivo (riesgo intermedio-alto).
+- Plaquetas 48,000 (basales 220,000): trombocitopenia por quimioterapia, no contraindicación absoluta.
+
+¿Qué dato es clave en el examen?
+- Cáncer + quimioterapia + inmovilización = estado pro-trombótico; profilaxis con enoxaparina 40 mg pudo fallar.
+- TEP + sobrecarga VD + troponina = submasivo; anticoagular de inmediato.
+- Plaquetas 48,000: balance riesgo trombosis/sangrado según guías CHEST; HNF IV permite control y reversión.
+- Trombólisis si choque hemodinámico o obstrucción masiva.
+- Filtro de VC no disuelve TEP; no es tratamiento de TEP agudo sin contraindicación absoluta a AC.
+
+¿Por qué fallan las otras opciones?
+- Suspender AC + filtro + observar: filtro no trata TEP; observar es mortal en submasivo.
+- Azitromicina + ceftriaxona: TAC confirma TEP, no neumonía.
+- Aspirina + clopidogrel + diferir AC: antiagregación no trata TEP; retrasar AC aumenta mortalidad.
+
+Clave: oncológico hospitalizado + disnea súbita + TAC TEP + plaquetas 48k = anticoagular (HNF IV), no filtrar y observar.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 TEP intrahospitalario en paciente oncológico
 
 Fisiopatología:
@@ -1922,7 +2341,32 @@ Referencias: CHEST Antithrombotic Guidelines; SHM VTE prevention.`,
       "Albúmina + ATB reduce hepatorenal y mortalidad en PBE grave.",
       "AKI en cirrótico febril = PBE hasta paracentesis.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa PBE grave en cirrosis Child-Pugh C: PMN ≥250 confirma PBE; ceftriaxona sola no basta — albúmina en protocolo completo previene síndrome hepatorrenal.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 59 años, cirrosis por alcohol Child-Pugh C (13), ascitis refractaria.
+- Fiebre 38.8 °C, confusión nueva, hipotensión (PA 92/58).
+- Paracentesis: PMN 680 cel/mm³ (≥250 = PBE), proteínas 0.8 g/dL.
+- AKI: creatinina 2.6 (basal 1.4), Na+ 126, bilirrubina 12, INR 2.1.
+- PBE grave: Child C + fiebre + encefalopatía + AKI + hipotensión.
+
+¿Qué dato es clave en el examen?
+- PBE: PMN ≥250/mm³ en líquido ascítico.
+- PBE grave requiere ceftriaxona (o cefalosporina 3.ª gen según guía local) + albúmina 1.5 g/kg día 1 y 1 g/kg día 3.
+- Albúmina reduce síndrome hepatorrenal y mortalidad en PBE grave/AKI.
+- Paracentesis de control si no mejora en 48 h (descartar peritonitis secundaria).
+- Cirrótico confuso + fiebre = paracentesis YA, no esperar.
+
+¿Por qué fallan las otras opciones?
+- Ceftriaxona sola + albúmina solo si Cr >4: subdosis de albúmina; PBE grave requiere protocolo completo desde Cr 1.4.
+- Laparotomía inmediata: PMN 680 sin datos de perforación típica; ATB primero, cirugía si no responde.
+- Terlipresina deferiendo ATB: hepatorenal es consecuencia; tratar infección primero.
+
+Clave: cirrótico confuso + fiebre + PMN >250 + Child C = ceftriaxona + albúmina, no solo ATB.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 PBE grave en cirrosis hospitalizada
 
 Fisiopatología:
@@ -1981,7 +2425,32 @@ Referencias: EASL/AASLD Ascites and PBE Guidelines; SHM.`,
       "K+ inicial alto en CAD por desplazamiento extracellular; cae con insulina.",
       "Esteroides + suspensión insulina = precipitante intrahospitalario clásico.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa CAD intrahospitalaria en DM1: volumen primero, insulina IV cuando K+ ≥3.3; K+ inicial alto en CAD cae con insulina — no contraindica tratamiento.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 45 años con SLE en brote, metilprednisolona 60 mg IV/día.
+- DM1 con bomba de insulina suspendida ayer por extravasación del catéter.
+- CAD severa: glicemia 485, pH 7.05, HCO3 5, cetonas 5.2 mmol/L, Kussmaul.
+- K+ 5.8 (desplazamiento extracellular por acidosis; caerá con insulina).
+- Precipitante clásico intrahospitalario: insulopenia absoluta + glucocorticoides.
+
+¿Qué dato es clave en el examen?
+- ADA protocolo: 1) SF 0.9% 1 L primera hora (volumen primero); 2) insulina 0.1 U/kg/h IV si K+ ≥3.3.
+- Si K+ <3.3: posponer insulina y reponer potasio primero (riesgo arritmia).
+- K+ 5.8 permite insulina con monitorización horaria de K+ (caerá con shift intracelular).
+- Bicarbonato solo si pH <6.9 (no en pH 7.05; riesgo edema cerebral).
+- Buscar precipitante: catéter, infección, adherencia, esteroides.
+
+¿Por qué fallan las otras opciones?
+- Insulina + bicarbonato en bolo + SF después: bicarbonato rutinario no indicado pH 7.05; volumen debe ir primero.
+- Insulina SC basal + alta ambulatoria: CAD severa con vómitos requiere insulina IV y monitorización UCI.
+- Suspender insulina por K+ 5.8: error clásico; K+ alto inicial en CAD cae con tratamiento.
+
+Clave: DM1 hospitalizado + esteroide + bomba detenida = CAD en 24 h → volumen primero, insulina IV, K+ siempre en mente.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 CAD intrahospitalaria en DM1 + esteroides
 
 Fisiopatología:
@@ -2041,7 +2510,32 @@ Referencias: ADA Standards of Care DKA; SHM glycemic management.`,
       "Crecimiento más rápido en catéter vs periférico confirma origen intraluminal.",
       "BLEE → carbapenémico; evitar ceftriaxona/pip-tazo empírico fallido.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa CLABSI con choque séptico por BLEE: retirar catéter de inmediato (no intercambio sobre guía) y meropenem empírico ajustado a TFG; vancomicina innecesaria si solo Gram negativo.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 70 años, UCI día 14, catéter venoso central yugular día 10.
+- Fiebre 39 °C, choque séptico: PA 82/48 tras 30 mL/kg, lactato 4.5.
+- Hemocultivo del catéter positivo 2 h antes que periférico: bacilos GN BLEE.
+- Biofilm intraluminal → bacteriemia continua → sepsis persistente si se mantiene catéter.
+- ERC estadio 4: ajustar meropenem a TFG.
+
+¿Qué dato es clave en el examen?
+- CLABSI confirmada: crecimiento diferencial más rápido en catéter vs periférico.
+- Choque séptico + inestabilidad = retirar catéter urgente (IDSA); intercambio sobre guía contraindicado.
+- BLEE → carbapenémico empírico (meropenem); ceftriaxona/pip-tazo empírico fallido.
+- Vancomicina no necesaria si solo Gram negativo en preliminar.
+- Duración IV en UCI 7–14 días según respuesta; no alta ambulatoria prematura en shock.
+
+¿Por qué fallan las otras opciones?
+- Mantener catéter + vancomicina + esperar antibiograma: perpetúa bacteriemia; vancomicina innecesaria.
+- Intercambio sobre guía + ceftriaxona: contraindicado en CLABSI complicada; ceftriaxona ineficaz vs BLEE.
+- Retirar catéter + pip-tazo ambulatorio 7 días: pip-tazo ineficaz vs BLEE; duración ambulatoria inadecuada en shock.
+
+Clave: UCI + fiebre + catéter + GN BLEE + choque = retira catéter + meropenem; no esperar antibiograma.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 CLABSI y bacteriemia por BLEE
 
 Fisiopatología:
@@ -2101,7 +2595,33 @@ Referencias: IDSA CLABSI Guidelines; Surviving Sepsis; SHM.`,
       "AKI hospitalaria suele ser multifactorial: sepsis + AINE + contraste + RAAS.",
       "Suspender metformina en AKI (KDIGO/ADA).",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa AKI intrínseca multifactorial hospitalaria: FENA >1% + cilindros granulosos marrón = NTA; hay que retirar nefrotóxicos (AINE, metformina, ACEi) antes de pedir nefrología.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 63 años, día 8 por bacteriemia por E. coli sensible (ceftriaxona).
+- Oliguria 18 h, creatinina 4.2 (basal 1.0): AKI aguda severa.
+- Multifactorial: sepsis reciente + contraste yodado día 5 + ibuprofeno PRN (3 dosis/48 h) + enalapril + metformina.
+- Sedimento: cilindros granulosos marrón, eosinófilos ausentes.
+- FENA 1.8% (>1% = intrínseca); ecografía sin obstrucción.
+
+¿Qué dato es clave en el examen?
+- FENA >1% + cilindros marrón = necrosis tubular aguda (NTA), no prerrenal.
+- AKI hospitalaria suele ser multifactorial: sepsis + AINE + contraste + bloqueo RAAS.
+- Suspender metformina en AKI (riesgo acidosis láctica si empeora; KDIGO/ADA).
+- Suspender AINE y enalapril; hidratación cautelosa sin sobrecarga.
+- Diálisis si criterios KDIGO: hiperkalemia refractaria, acidosis, sobrecarga volémica, uremia sintomática.
+- NIA menos probable: sin eosinófilos, sin fiebre/rash típico; esteroides no empíricos.
+
+¿Por qué fallan las otras opciones?
+- NIA por ceftriaxona + esteroides + biopsia: datos insuficientes para NIA; esteroides no empíricos.
+- AKI prerrenal + SF 3 L + reiniciar ibuprofeno: FENA 1.8% descarta prerrenal; AINE empeora.
+- Obstrucción postrenal + cateterismo prioritario: ecografía descarta obstrucción.
+
+Clave: sepsis + contraste + AINE PRN + enalapril + metformina = AKI multifactorial → quita nefrotóxicos.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 AKI intrahospitalaria multifactorial (KDIGO)
 
 Fisiopatología:
@@ -2162,7 +2682,30 @@ Referencias: KDIGO AKI Guidelines; SHM; ACP Hospital Medicine.`,
       "ATB en <1 h en shock séptico; no esperar biomarcadores.",
       "Cristaloides balanceados; coloides almidón no en sepsis.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa choque séptico hospitalario según Surviving Sepsis Campaign 2026: activación inmediata con NEWS2 y ATB IV en la primera hora, no esperar qSOFA ni biomarcadores.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 75 años, día 5 por pancreatitis aguda biliar previamente estable.
+- Letargo, hipotensión (PA 85/50), taquicardia, fiebre 38.5 °C, SpO2 92%.
+- Llenado capilar 4 s, piel moteada, lactato 4.2 mmol/L, leucocitos 18,000.
+- Choque séptico de probable origen biliar/pancreático con disfunción orgánica.
+
+¿Qué dato es clave en el examen?
+- SSC 2026: NEWS2 preferido sobre qSOFA para cribado hospitalario (mayor sensibilidad).
+- Code Sepsis multidisciplinar + reanimación hídrica con cristaloides balanceados.
+- ATB amplio espectro IV en <1 h; desescalamiento condicional permitido aunque cultivo negativo.
+- Coloides almidón contraindicados en sepsis; norepinefrina es 1.ª línea vasopresora, no vasopresina inicial.
+
+¿Por qué fallan las otras opciones?
+- qSOFA + coloides: qSOFA baja sensibilidad; coloides almidón dañan riñón.
+- Retrasar ATB hasta procalcitonina/PCR: cada hora de retraso ↑ mortalidad ~8%.
+- Vasopresina periférica sin cristaloides: norepinefrina es 1.ª línea; omitir volumen en shock es error.
+
+Clave: choque séptico hospitalario = Code Sepsis + NEWS2 + cristaloides + ATB IV inmediato.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Sepsis hospitalaria · SSC 2026
 
 • Choque distributivo: reconocimiento cero-demoras.
@@ -2204,7 +2747,30 @@ Referencias: Surviving Sepsis Campaign 2026; SHM.`,
       "Delta gap revela alcalosis metabólica oculta cuando HCO3 está 'alto'.",
       "Hipokalemia + Cl bajo + furosemida = alcalosis de contracción.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa trastorno ácido-base triple en EPOC hospitalizado: nunca te detengas en pCO2 alto — calcula anion gap y delta gap para detectar alcalosis metabólica oculta por furosemida.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 68 años, día 3 por exacerbación EPOC GOLD D con cor pulmonale.
+- Somnolencia, mioclonías, FR 10 rpm, SpO2 86% con O2 2 L/min (encefalopatía hipercápnica).
+- GSA: pH 7.22, pCO2 90, pO2 55; K+ 2.5, Cl- 82, HCO3 36.
+- Furosemida crónica + hipokalemia + hipocloremia: trastorno triple superpuesto.
+
+¿Qué dato es clave en el examen?
+- pH 7.22 + pCO2 90 = acidosis respiratoria (aguda sobre crónica en EPOC).
+- Anion gap = 142 - (82 + 36) = 24 → acidosis metabólica de gap elevado (láctica/urémica).
+- HCO3 36 es excesivo vs esperado (~12 con pCO2 90) → alcalosis metabólica superpuesta (furosemida, contracción).
+- Delta gap revela alcalosis oculta cuando HCO3 parece "compensado".
+
+¿Por qué fallan las otras opciones?
+- Acidosis respiratoria pura: error novato — ignorar electrolitos y anion gap.
+- Acidosis metabólica hiperclorémica: Cl está bajo (82), no alto; el gap está elevado.
+- Alcalosis metabólica primaria: el pH está ácido (7.22), no alcalino.
+
+Clave: EPOC + furosemida + pH 7.22 + pCO2 90 = calcula SIEMPRE anion gap → trastorno triple.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Trastorno ácido-base triple
 
 1. Acidosis respiratoria (pCO2 90, pH bajo).
@@ -2248,7 +2814,30 @@ Referencias: ACP acid-base; SHM critical care.`,
       "Procalcitonina útil para suspender, no para negar inicio en sepsis respiratoria.",
       "Cultivo no invasivo + ATB empírico rápido.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa neumonía asociada a atención en salud (HAP) no ventilatoria: IDSA manda ATB empírico por criterios clínicos-radiológicos, no esperar sTREM-1 en BAL ni procalcitonina para iniciar.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 72 años, día 6 post-colecistectomía por tumor de colon.
+- Fiebre 39 °C, tos purulenta, desaturación.
+- Rx: infiltrado alveolar basal derecho nuevo (consolidación hospitalaria).
+- HAP no asociada a ventilador mecánico.
+
+¿Qué dato es clave en el examen?
+- IDSA HAP/VAP: usar criterios clínicos + radiológicos para decidir inicio de ATB, no sTREM-1 en BAL.
+- Mortalidad ↑ si se retrasa ATB; empírico antipseudomónico (cefepime/pip-tazo) y desescalar a 72 h.
+- Cultivos no invasivos preferidos: esputo espontáneo/inducido sobre broncoscopia agresiva.
+- Procalcitonina útil para suspender ATB, no para negar inicio en sepsis respiratoria clara.
+
+¿Por qué fallan las otras opciones?
+- BAL con sTREM-1 antes de ATB: sTREM-1 no recomendado vs juicio clínico; retrasa tratamiento.
+- ATB solo si procalcitonina >0.5: no negar inicio en paciente febril con infiltrado nuevo.
+- Profilaxis con fluoroquinolonas en todo post-op: no es profilaxis estándar; genera resistencia.
+
+Clave: HAP = clínica + Rx > biomarcadores → esputo + ATB empírico antipseudomónico → desescalar 72 h.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 HAP · IDSA
 
 • Mortalidad ↑ si ATB retrasa.
@@ -2285,7 +2874,31 @@ Referencias: IDSA/ATS HAP-VAP Guidelines.`,
       "AKD = ventana crítica para prevenir ERC.",
       "No sobrecargar con volumen en daño estructural subagudo.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa la transición AKI → AKD según KDIGO 2026: creatinina estancada en día 18 no es prerrenal ni ERC — es enfermedad renal aguda subaguda que requiere protección nefronas restantes.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 58 años, día 18 post-pielonefritis enfisematosa y choque séptico.
+- AKI KDIGO 3 al ingreso (Cr pico 4.5, oliguria); infección resuelta.
+- Diuresis 1.5 L/día pero Cr estancada 2.1 mg/dL (TFGe 35) durante 1 semana.
+- Cr basal 0.8: riñón no ha normalizado pese a diuresis conservada.
+
+¿Qué dato es clave en el examen?
+- KDIGO 2026 formaliza AKD: alteración renal 7–90 días post-AKI.
+- AKI <7 días; AKD 7–90 días; ERC >90 días.
+- AKD = ventana crítica para prevenir cronicidad (fibrosis/inflamación temprana).
+- No es prerrenal: fluidos empeorarían congestión; es daño estructural subagudo post-isquémico.
+- Seguimiento nefrológico + deprescripción nefrotóxicos al egreso.
+
+¿Por qué fallan las otras opciones?
+- ERC estadio 3b + fístula AV: requiere >90 días; es demasiado pronto.
+- Falla prerrenal + albúmina/critaloides hasta Cr 0.8: diuresis conservada descarta prerrenal; sobrecarga empeora.
+- AKI persistente hasta 6 meses: AKD formalmente es 7–90 días.
+
+Clave: día 18 post-AKI severo + Cr estancada + diuresis OK = AKD → protege nefronas, no sobrecargues volumen.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 AKI → AKD (KDIGO 2026)
 
 • Riñón post-séptico no normaliza de inmediato.
@@ -2322,7 +2935,30 @@ Referencias: KDIGO AKI/AKD 2026 update.`,
       "Subsegmentario + estable + sin TVP = observación seleccionada.",
       "Trombólisis contraindicada en TEP subsegmentario estable.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa TEP subsegmentario incidental según CHEST: no todo defecto en angioTAC obliga anticoagulación — estable + subsegmentario + Doppler negativo puede observarse.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 45 años, día 5 post-colecistectomía complicada con íleo paralítico.
+- Dolor pleurítico leve al deambular; FC 80, SpO2 96%, hemodinámicamente estable.
+- AngioTAC: defecto subsegmentario aislado en LID; sin sobrecarga de VD.
+- Doppler EEII negativo bilateral: sin TVP proximal.
+
+¿Qué dato es clave en el examen?
+- CHEST: margen para observación en TEP subsegmentario aislado, paciente estable, bajo riesgo clínico.
+- Tomógrafos de alta resolución ↑ diagnósticos de microembolia incidental.
+- Anticoagulación post-op reciente: riesgo sangrado puede superar beneficio en TEP pequeño.
+- Filtro VCI solo con TVP proximal + contraindicación absoluta a AC, no como profilaxis.
+
+¿Por qué fallan las otras opciones?
+- HBPM puente a warfarina: anticoagulación automática no indicada en subsegmentario estable sin TVP.
+- Filtro de vena cava: contraindicación relativa post-cirugía no justifica filtro sin TVP proximal.
+- Trombólisis sistémica: contraindicada en TEP subsegmentario hemodinámicamente estable.
+
+Clave: TEP subsegmentario + estable + Doppler (-) + post-op reciente = observación estrecha, no AC a ciegas.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 TEP subsegmentario incidental (CHEST)
 
 • Tomógrafos de alta resolución ↑ diagnósticos de microembolia.
@@ -2359,7 +2995,31 @@ Referencias: CHEST VTE Guidelines.`,
       "WRF permisivo si descongestiona y orina.",
       "↑ Cr hasta ~30–50% tolerable si perfundido y aún congesto.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa empeoramiento renal permisivo (WRF) durante descongestión de IC: si el paciente pierde peso y mejora clínicamente pero la creatinina sube leve, hay que continuar diuréticos — no tratar solo el número.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 78 años, IC descompensada perfil B (FEVI 35%), día 3 de hospitalización.
+- Peso 80 kg (-5 kg), duerme plano, disnea casi resuelta; aún edema maleolar leve.
+- Creatinina 1.9 (basal 1.4), BUN 45; buena perfusión periférica.
+- Descongestión efectiva en curso con empeoramiento renal transitorio (cardiorenal).
+
+¿Qué dato es clave en el examen?
+- WRF durante descongestión exitosa (↓ peso, ↓ disnea, aún edema) es frecuente y se asocia a mejor pronóstico si se completa descongestión.
+- ↓ precarga → ↓ filtración transitoria durante diuresis agresiva.
+- Aún hay edema = aún hay congestión → continuar furosemida.
+- ↑ Cr hasta ~30–50% tolerable si perfundido y clínicamente descongestionando.
+- Suspender diuréticos por Cr +30% con congestión residual empeora outcomes.
+
+¿Por qué fallan las otras opciones?
+- Suspender diuréticos por "AKI prerrenal": no hay depleción; hay descongestión en curso con WRF permisivo.
+- Hemodiálisis ultrafiltrante: no indicada con buena diuresis, Cr 1.9 y perfusión conservada.
+- Nefritis intersticial por furosemida: no hay fiebre, rash ni eosinofilia; es fisiología cardiorenal.
+
+Clave: pierde peso + respira mejor + Cr sube leve + aún edema = continúa diuréticos, no pares por el número.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Empeoramiento renal permisivo en IC
 
 • ↓ precarga → ↓ filtración transitoria durante diuresis.
@@ -2396,7 +3056,31 @@ Referencias: ACC/AHA HF Guidelines; HFA consensus.`,
       "Fulminante: vanco enteral + metro IV.",
       "Antimotilidad proscrita en C. diff.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa C. difficile fulminante con megacolon: cuando la diarrea cesa y el abdomen se distiende, es íleo/megacolon — vancomicina enteral + metronidazol IV, no metronidazol solo.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 65 años, día 14 meropenem por neumonía necrotizante.
+- Diarrea acuosa masiva; día 16: diarrea cesa, abdomen distendido en tabla, doloroso.
+- Shock séptico: PA 80/45, FC 130, Temp 39.5 °C, lactato 4.5, leucocitos 35,000.
+- Toxina C. difficile (+); Rx: megacolon (colon transverso 10 cm).
+
+¿Qué dato es clave en el examen?
+- Diarrea que para + abdomen distendido = íleo/megacolon tóxico por C. diff (no "mejoría").
+- Fulminante: vancomicina enteral alta dosis (PO/NG/enema retención) + metronidazol IV (única indicación dual).
+- Íleo impide tránsito de vanco PO → metro IV aporta excreción biliar/intestinal.
+- Metronidazolo solo es insuficiente en enfermedad grave.
+- Loperamida contraindicada (retención de toxinas → perforación).
+
+¿Por qué fallan las otras opciones?
+- Metronidazol IV en monoterapia: insuficiente en C. diff fulminante/megacolon.
+- Loperamida + fidaxomicina: antimotilidad proscrita en C. diff activo.
+- Trasplante fecal inmediato: indicado en recurrencia, no en choque agudo con megacolon.
+
+Clave: post-ATB + diarrea que para + barriga en tabla = megacolon → vanco enteral + metro IV + cirugía en evaluación.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 C. difficile fulminante · IDSA/SHEA
 
 • Íleo impide tránsito de vanco PO → añadir metro IV (excreción biliar/intestinal).
@@ -2429,7 +3113,31 @@ Referencias: IDSA/SHEA C. difficile Guidelines.`,
       "HRS-AKI: FENa bajo, orina concentrada, sedimento limpio.",
       "Terlipresina + albúmina = estándar.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa síndrome hepatorenal-AKI precipitado por paracentesis sin albúmina: anuria con FENa bajo y Na urinario <10 = riñón hemodinámicamente desconectado, no NTA — terlipresina + albúmina.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 52 años, cirrosis alcohólica Child C.
+- Paracentesis evacuatoria 9 L sin albúmina post-procedimiento (error iatrogénico).
+- Día 3: anuria; PA 110/70 (presión preservada pero perfusión renal colapsada).
+- Cr 3.2 (basal 0.8), Na urinario <10, FENa 0.1%, sedimento limpio, eco renal normal.
+
+¿Qué dato es clave en el examen?
+- Paracentesis >5 L sin albúmina → disfunción circulatoria post-paracentesis → HRS-AKI.
+- HRS-AKI: vasodilatación espláncnica + hipovolemia arterial efectiva; riñón estructuralmente intacto.
+- FENa <1%, Na urinario bajo, sedimento limpio = perfusión, no necrosis tubular.
+- Terlipresina IV continua + albúmina humana revierte perfusión renal (EASL/AASLD).
+- Albúmina 20 g/L si >5 L evacuados previene este cuadro.
+
+¿Por qué fallan las otras opciones?
+- Furosemida en infusión: empeora isquemia renal en HRS.
+- Dopamina a dosis renal: ineficaz; no revierte vasodilatación espláncnica.
+- Diálisis peritoneal urgente: no trata la causa hemodinámica; terlipresina primero.
+
+Clave: cirrosis + anuria + Na urinario bajo post-paracentesis masiva = HRS → terlipresina + albúmina.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 HRS-AKI post-paracentesis
 
 • Extracción masiva sin coloide → hipovolemia arterial efectiva.
@@ -2466,7 +3174,31 @@ Referencias: EASL/AASLD Ascites and HRS Guidelines.`,
       "Meta aguda: +4–6 mEq/L; luego ≤8 mEq/L/24 h.",
       "SF 0.9% en SIADH puede bajar Na aún más.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa hiponatremia severa sintomática por SIADH paraneoplásico: convulsión con Na+ 108 exige bolos de SSH 3% inmediatos (+4–6 mEq/L), no restricción hídrica ni SF 0.9%.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 65 años con carcinoma microcítico de pulmón (SIADH paraneoplásico).
+- Convulsión tónico-clónica en triage; euvolémica al examen.
+- Na+ 108, osmolalidad plasmática 230, osmolalidad urinaria 600, Na urinario 60.
+- TSH y cortisol normales: SIADH euvolémica con hiponatremia severa sintomática.
+
+¿Qué dato es clave en el examen?
+- Na+ 108 + convulsión = emergencia neurológica por edema cerebral.
+- Bolos IV 100–150 mL SSH 3% en 10–20 min (repetir si persiste): meta +4 a 6 mEq/L en primeras horas.
+- Luego corrección ≤8 mEq/L/24 h para evitar mielinolisis osmótica.
+- Restricción hídrica/tolvaptán demasiado lentos en crisis aguda.
+- SF 0.9% en SIADH puede empeorar (desalinización → Na más bajo).
+
+¿Por qué fallan las otras opciones?
+- Restricción + tolvaptán: manejo crónico; no detiene edema cerebral agudo.
+- SF 0.9% 200 mL/h: en SIADH puede bajar Na aún más por desalinización.
+- Corrección rápida a Na 135 en 12 h: riesgo de mielinolisis osmótica (locked-in).
+
+Clave: hiponatremia + convulsión = SSH 3% a chorro (+5 puntos rápido), luego despacio.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Hiponatremia severa sintomática
 
 • Na 108 + convulsión = emergencia neurológica.
@@ -2507,7 +3239,31 @@ Referencias: European/American hyponatremia guidelines; SHM.`,
       "NPH AM + prednisona AM = emparejamiento farmacocinético.",
       "Glargina nocturna riesgo hipoglucemia 3 AM.",
     ],
-    theoryContent: `MEDICINA HOSPITALARIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa hiperglucemia esteroidea intrahospitalaria: prednisona matutina produce pico hiperglucémico vespertino — NPH matutina sincroniza con el pico del esteroide, no glargina nocturna.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 60 años, crisis asmática grave, transferido de UCI a piso.
+- DM2 en metformina (suspendida al ingreso); prednisona 50 mg AM.
+- Glucemias ayunas 110–130 mg/dL (normales); post-almuerzo y 16:00 h 350–400 mg/dL consistentemente.
+- Solo escala móvil insulina regular (inadecuada: persigue, no previene).
+
+¿Qué dato es clave en el examen?
+- Glucocorticoides ↑ gluconeogénesis; pico hiperglucémico 8–12 h post-dosis matutina (tarde).
+- ADA/SHM: NPH matutina junto con prednisona AM empareja pico insulínico con pico esteroide.
+- Glargina nocturna = perfil plano → hipoglucemia nocturna con ayunas normales.
+- Metformina contraindicada/relativa en hospitalizado inestable.
+- Solo sliding scale inadecuado: reactivo, no preventivo.
+
+¿Por qué fallan las otras opciones?
+- Reiniciar metformina máxima: contraindicada/relativa en hospitalizado; no cubre pico vespertino esteroide.
+- Glargina nocturna: perfil plano 24 h no coincide con pico vespertino; riesgo hipoglucemia 3 AM.
+- Solo sliding scale: persigue hiperglucemia, no previene picos vespertinos predecibles.
+
+Clave: prednisona AM + azúcar alta tarde + ayunas OK = NPH a primera hora con el esteroide.
+
+MEDICINA HOSPITALARIA — BY DR Q.
 Hiperglucemia esteroidea intrahospitalaria
 
 • Glucocorticoides ↑ gluconeogénesis; pico tarde.
@@ -2552,7 +3308,30 @@ Referencias: ADA Standards of Care Inpatient; SHM Glycemic Management.`,
       "TRC <3 s + ScvO2 >70% + delta CO2 <6 = reanimada.",
       "ANDROMEDA-SHOCK: TRC guía segura vs lactato solo.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa fin de reanimación guiada por perfusión clínica (ANDROMEDA-SHOCK): lactato persistente con TRC normal, ScvO2 >70% y PAM adecuada no justifica más fluidos — puede ser adrenérgico/hepático.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 68 años, día 1 post-op peritonitis fecal (choque séptico abdominal), cirrosis Child A.
+- PAM 78, norepinefrina 0.1 mcg/kg/min, TRC 2 s, mottling 0.
+- POCUS: VTI normal, VCI 22 mm, variabilidad 5% (euvolemia/no respondedora a volumen).
+- Lactato 6.5 → 5.8 en 6 h (<20% aclaramiento); ScvO2 76%, delta CO2 4 mmHg.
+
+¿Qué dato es clave en el examen?
+- TRC <3 s + ScvO2 >70% + delta CO2 <6 + PAM adecuada = perfusión restaurada (ANDROMEDA-SHOCK).
+- Hiperlactatemia puede ser aeróbica/adrenérgica + ↓ aclaramiento hepático (cirrosis).
+- VCI dilatada sin variabilidad = no respondedora a volumen; más fluidos → edema pulmonar/congestión.
+- Lactato no es único marcador de hipoxia en sepsis post-reanimación.
+
+¿Por qué fallan las otras opciones?
+- Más fluidos + vasopresina: perfusión ya normalizada; VCI no colapsable descarta beneficio de volumen.
+- Dobutamina por ScvO2 76%: ScvO2 >70% no indica shunt masivo; IC ya adecuado.
+- Diuréticos para "excretar lactato": no hay sobrecarga VD; el lactato no se excreta con diuréticos.
+
+Clave: PAM OK + TRC <3 + ScvO2 >70% + delta CO2 <6 = REANIMADA → detén líquidos, desteta vasopresor.
+
+MEDICINA CRÍTICA — BY DR Q.
 Perfusión vs lactato · ANDROMEDA-SHOCK
 
 • Hiperlactatemia puede ser aeróbica/adrenérgica + ↓ aclaramiento hepático.
@@ -2589,7 +3368,31 @@ Referencias: ANDROMEDA-SHOCK; Surviving Sepsis Campaign; ESICM.`,
       "Pplat normal descarta neumotórax (sube Pplat también).",
       "Hipotensión post-intubación EPOC → desconectar tubo primero.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa auto-PEEP severo post-intubación en EPOC: flujo expiratorio que no llega a cero + Pplat normal = atrapamiento aéreo, no neumotórax — desconectar VM y reprogramar espiración.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 65 años, EPOC GOLD D + neumonía, intubado hace 15 min.
+- Post-conexión VM: PA 60/30, FC 140, SpO2 88%.
+- VM: Vt 500 mL, RR 24, flujo 40 L/min → FR alta + flujo bajo = atrapamiento.
+- Curva flujo-tiempo expiratorio no llega a cero antes de la siguiente inspiración.
+- POCUS: VD severamente dilatado comprimiendo VI; VCI ingurgitada fija.
+
+¿Qué dato es clave en el examen?
+- Auto-PEEP: flujo no retorna a cero en EPOC/asma.
+- Pplat normal (20) descarta neumotórax/SDRA; Ppico-Pplat elevado = resistencia + atrapamiento.
+- Auto-PEEP ↑ presión intratorácica → ↓ retorno venoso → VD dilatado → choque obstructivo.
+- Rescate: desconexión VM transitoria, apnea permisiva, ↑ tiempo espiratorio (I:E 1:4-1:5).
+
+¿Por qué fallan las otras opciones?
+- Neumotórax a tensión: Pplat subiría también; aquí Pplat 20 es normal.
+- IAM de VD + cristaloides: empeoraría congestión; el cuadro es ventilatorio, no cardíaco primario.
+- Broncoespasmo + aminofilina: el patrón clave es flujo no a cero, no sibilancias aisladas.
+
+Clave: flujo que no llega a cero + hipotensión post-VM en EPOC = desconecta el tubo y reprograma espiración.
+
+MEDICINA CRÍTICA — BY DR Q.
 Auto-PEEP y choque obstructivo
 
 • FR alta + flujo bajo en EPOC = atrapamiento aéreo.
@@ -2626,7 +3429,31 @@ Referencias: ESICM/ATS obstructive ventilation guidelines.`,
       "PaFi <150 post-optimización → prono ≥16 h.",
       "No reclutamiento rutinario 40×40 (ART negativo).",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa SDRA severo con driving pressure y pronación: ΔP = Pplat - PEEP; si >15 cmH2O con PaFi <150, pronación temprana ≥16 h/día es mandatoria (PROSEVA/ESICM).
+
+¿Qué está ocurriendo realmente?
+- Mujer de 40 años, SDRA severo por neumonía viral.
+- VM: Vt 350 mL (5.5 mL/kg), PEEP 14, FR 28, FiO2 80%.
+- Pplat 32, PEEP 14 → driving pressure = 18 cmH2O (>15 = alto riesgo VILI).
+- GSA: PaO2 60, PaFi 75 (SDRA severo pese a PEEP optimizada).
+
+¿Qué dato es clave en el examen?
+- Driving pressure (ΔP) = Pplat - PEEP; objetivo <15 cmH2O (Amato).
+- ΔP >15 predice mortalidad independiente de Vt y PEEP.
+- PaFi <150 post-optimización → pronación temprana ≥16 h/día (ESICM fuerte, PROSEVA).
+- No reclutamiento rutinario 40×40 s (ART trial negativo ↑ mortalidad).
+- ECMO es rescate tras prono/BNM (EOLIA), no primera línea.
+
+¿Por qué fallan las otras opciones?
+- Reducir PEEP a 5: causa atelectrauma; empeora reclutamiento.
+- Reclutamiento sostenido 40×40: rutina contraindicada por ART trial.
+- VV-ECMO inmediata: omitir medidas convencionales (prono) es error.
+
+Clave: ΔP = Pplat - PEEP; si >15 en SDRA severo → prono ≥16 h, no bajes PEEP ni reclutamiento 40×40.
+
+MEDICINA CRÍTICA — BY DR Q.
 SDRA · Driving pressure y prono
 
 • Baby lung: alta elastancia, VILI por distensión cíclica.
@@ -2663,7 +3490,31 @@ Referencias: Amato et al.; ESICM/ATS ARDS; PROSEVA; EOLIA.`,
       "SF 0.9% en sepsis → acidosis hiperclorémica iatrogénica.",
       "Delta ratio <0.4 = acidosis hiperclorémica concomitante.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa trastorno ácido-base triple en UCI: corregir anion gap por hipoalbuminemia, calcular delta ratio y detectar acidosis hiperclorémica iatrogénica por SF 0.9% en sepsis.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 50 años, sepsis abdominal + ileostomía 3 L/día.
+- Reanimado con 4 L SF 0.9% en 12 h (carga de cloruro masiva).
+- GSA: pH 7.20, pCO2 25, HCO3 9; Na 135, Cl 114, lactato 5.5, albúmina 2.0, Cr 1.8.
+- Trastorno triple: AG elevado + hiperclorémico + componente respiratorio.
+
+¿Qué dato es clave en el examen?
+- AG aparente 12; AG ajustado albúmina +5 = 17 (lactato/urémia ocultos).
+- Corregir AG: +2.5 mEq/L por cada 1 g/dL ↓ de albúmina.
+- HCO3 9 con Cl 114 (diarrea + SF hiperclorémico) = acidosis hiperclorémica superpuesta.
+- Delta ratio 5/15 ≈ 0.33 (<0.4 = AG normal adicional concomitante).
+- SSC 2026: cristaloides balanceados (RL/Plasmalyte) en sepsis.
+
+¿Por qué fallan las otras opciones?
+- AG elevado puro compensado respiratorio: ignora hipercloremia y AG ajustado.
+- Hiperclorémica exclusiva: AG ajustado está elevado (lactato/urémia).
+- Alcalosis metabólica masiva oculta: delta ratio <0.4 indica acidosis hiperclorémica adicional, no alcalosis.
+
+Clave: sepsis + SF 0.9% + albúmina baja = corrige AG + delta ratio → trastorno triple.
+
+MEDICINA CRÍTICA — BY DR Q.
 Trastorno ácido-base triple en UCI
 
 • AG sin corregir engaña con hipoalbuminemia.
@@ -2700,7 +3551,31 @@ Referencias: SCCM/SSC fluid guidelines; Stewart/classic acid-base.`,
       "Urea >100 sin síntomas no es indicación absoluta sola.",
       "TRR cuando K+, acidez, volumen o uremia sintomática refractarios.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa timing de TRR en AKI UCI según STARRT-AKI/AKIKI: diálisis temprana profiláctica no mejora mortalidad — diferir hasta indicaciones absolutas (AEIOU).
+
+¿Qué está ocurriendo realmente?
+- Hombre de 75 años, día 3 post-choque séptico urológico.
+- Extubado, sin vasopresores 12 h; balance +7 L, JVP elevada, crépitos leves.
+- Oliguria 150 mL/24 h; Cr 4.5 (basal 1.0), BUN 110, K 5.3, pH 7.30, HCO3 16.
+- AKI KDIGO 3 pero hemodinámicamente estable sin emergencia dialítica inmediata.
+
+¿Qué dato es clave en el examen?
+- STARRT-AKI y AKIKI: inicio temprano de TRR no mejora mortalidad 90 días; puede ↑ dependencia dialítica.
+- K 5.3, pH 7.30, estable, sin EAP refractario → manejo médico + furosemida primero.
+- TRR cuando falla manejo conservador: K+ >6.5, pH <7.15, EAP refractario, uremia sintomática.
+- Urea >100 sin síntomas no es indicación absoluta sola.
+- CRRT "para citoquinas" no tiene evidencia de beneficio profiláctico.
+
+¿Por qué fallan las otras opciones?
+- HDI preventiva hoy por urea >100: sin beneficio mortalidad (STARRT-AKI negativo).
+- CVVHDF inmediata: inicio temprano no ↓ dependencia dialítica ni mortalidad.
+- Diálisis peritoneal urgente: no es modalidad de elección en UCI post-sepsis con congestión.
+
+Clave: AKI KDIGO 3 estable sin AEIOU = estrategia conservadora + diuréticos; no dialices profilácticamente.
+
+MEDICINA CRÍTICA — BY DR Q.
 AKI en UCI · timing de TRR
 
 • Máquina sustituye, no cura tubulo post-isquémico.
@@ -2737,7 +3612,31 @@ Referencias: STARRT-AKI NEJM; AKIKI; KDIGO AKI.`,
       "PPC = PAM - PAOP; mantener perfusión coronaria.",
       "Perfil frío y húmedo: IC ↓, congestión ↑.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa choque cardiogénico perfil C (Stevenson): IC bajo con congestión (PAOP 26) e hipotensión — norepinefrina para PAM ≥65 + dobutamina para ↑ IC; inotrópico solo colapsa la presión.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 60 años, IAMCEST anterior extenso post-ICP (isquemia 6 h).
+- Anuria, lactato ↑, alteración sensorio; FEVI 20%, IM severa funcional.
+- Swan-Ganz: RAP 18, PAP 55/30, PAOP 26, IC 1.5, RVS 2200, SvO2 45%.
+- PA 75/55, FC 110: choque cardiogénico perfil C (frío y húmedo).
+
+¿Qué dato es clave en el examen?
+- Choque cardiogénico hipotensivo: norepinefrina defiende perfusión coronaria + dobutamina ↑ contractilidad.
+- Inotrópico solo (milrinona/dobutamina sin vasopresor) empeora hipotensión.
+- PAOP 26/RAP 18 = congestión; cristaloides → edema pulmonar.
+- PPC = PAM - PAOP; mantener perfusión coronaria.
+- Candidato a BCIA/Impella/ECMO-VA si refractario (AHA/ESC, SCAI staging).
+
+¿Por qué fallan las otras opciones?
+- Norepinefrina sola a dosis altas: no ↑ IC; SvO2 45% requiere inotrópico.
+- Milrinona + diuréticos tolerando hipotensión: vasodilatador/inotrópico empeora PAM.
+- Cristaloides + nitroprusiato: PAOP ya 26; volumen empeora congestión pulmonar.
+
+Clave: choque cardiogénico hipotenso = norepi + dobu, no inotrópico desnudo; no líquidos con PAOP 26.
+
+MEDICINA CRÍTICA — BY DR Q.
 Choque cardiogénico · perfil C
 
 • Falla bomba + congestión + vasoconstricción perjudicial.
@@ -2774,7 +3673,31 @@ Referencias: AHA/ESC cardiogenic shock guidelines; SCAI staging.`,
       "Monitorizar Ca ionizado en PTM.",
       "Ca++ antes de subir vasopresores si QT prolongado.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa hipocalcemia por citrato en transfusión masiva (PTM): calcio ionizado 0.65 con QTc 550 ms exige calcio IV inmediato — es el cuarto jinete de la tríada letal.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 25 años, trauma abdominal, laparotomía control de daños, sangrado activo.
+- PTM: 6 CH, 6 PFC, 1 plaquetas; PA 65/40, FC 145, Temp 34.5 °C.
+- ECG: QRS ancho, QTc 550 ms, extrasístoles ventriculares.
+- pH 7.15, lactato 8, fibrinógeno 100, calcio ionizado 0.65 mmol/L (<1 = crítico).
+
+¿Qué dato es clave en el examen?
+- Transfusión masiva → acumulación citrato (PFC) → hipocalcemia ionizada severa.
+- Ca++ es factor IV coagulación y contráctilidad miocárdica; QTc largo → riesgo FV.
+- Repetir Ca++ cada 4-6 U hemoderivados (ATLS).
+- Hígado isquémico en shock no metaboliza citrato → acumulación rápida.
+- Bicarbonato empeora Ca ionizado; epinefrina ineficaz con Ca bajo.
+
+¿Por qué fallan las otras opciones?
+- Bicarbonato para acidemia: empeora Ca ionizado y no corrige coagulopatía.
+- Epinefrina en bolo: ineficaz con Ca ionizado 0.65; riesgo arritmia sin calcio.
+- Ácido tranexámico como prioridad: TXA no resuelve paro inminente por hipocalcemia.
+
+Clave: PTM + QT largo + hipotensión = calcio IV ya, no más vasopresores ni bicarbonato primero.
+
+MEDICINA CRÍTICA — BY DR Q.
 Toxicidad por citrato en PTM
 
 • PFC acumula citrato; hígado isquémico no metaboliza.
@@ -2811,7 +3734,30 @@ Referencias: ATLS 10th; trauma coagulopathy guidelines.`,
       "WIPO: HTA + edema pulmonar súbito en SBT.",
       "Reconectar PEEP revierte edema rápidamente.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa edema pulmonar inducido por destete (WIPO): falla SBT con HTA rebote, líneas B y VI pletórico en cardiópata rígido — reconectar VM, diuréticos y próximo intento con VNI profiláctica.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 72 años, día 8 VM post-sepsis respiratoria resuelta; HVI, FEVI preservada.
+- SBT tubo en T 15 min: agitación, diaforesis, musculatura accesoria.
+- PA 180/100 (previa 120/70), FC 135, FR 38, SpO2 84%.
+- POCUS: líneas B difusas nuevas, VI hiperdinámico pletórico; GSA: pO2 55.
+
+¿Qué dato es clave en el examen?
+- Retiro PEEP → ↑ retorno venoso (precarga) + ↑ poscarga transmural VI rígido (HVI) → EAP hiperagudo (WIPO).
+- VM actúa como asistente cardíaco en cardiópata rígido; tubo en T descompensa hemodinámica.
+- HTA rebote + líneas B + VI pletórico confirman WIPO, no debilidad diafragmática.
+- Manejo: reconectar presión positiva, furosemida/nitroglicerina, balance negativo, extubar a BiPAP (CHEST/ATS).
+
+¿Por qué fallan las otras opciones?
+- Debilidad diafragmática + traqueostomía: líneas B y HTA indican falla cardiovascular, no muscular.
+- Broncoespasmo + auto-PEEP: no hay patrón obstructivo; hay congestión pulmonar aguda.
+- Sepsis recurrente + vasopresores: sepsis resuelta; el cuadro es hemodinámico por destete.
+
+Clave: cardiópata rígido + falla SBT + líneas B + HTA = WIPO → reconecta VM + diuresis + VNI post-extubación.
+
+MEDICINA CRÍTICA — BY DR Q.
 WIPO · falla cardiovascular del destete
 
 • PEEP ↓ precarga y poscarga transmural VI.
@@ -2848,7 +3794,31 @@ Referencias: CHEST/ATS weaning guidelines.`,
       "Perfusión clínica > número de lactato tardío.",
       "TRISS: Hb objetivo 7, no 10.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa fin de reanimación hídrica en sepsis: VCI colapsable indica capacidad de responder a volumen, no necesidad — perseguir lactato con fluidos cuando perfusión clínica está normalizada es iatrogénico.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 55 años, choque séptico neumonía bilateral, hora 4 de reanimación.
+- PAM 70, diuresis 0.8 mL/kg/h, TRC 2.5 s, mottling 0, alerta.
+- Lactato 7.0 → 6.2 (<20% aclaramiento); POCUS: VI hiperdinámicos, VCI colapsable.
+- Objetivos de perfusión clínicos cumplidos pero lactato aún alto.
+
+¿Qué dato es clave en el examen?
+- VCI colapsable = respondedor a volumen (Starling), no indicación de administrarlo.
+- Puede recibir fluido ≠ necesita fluido.
+- Perfusión clínica (diuresis, conciencia, TRC) > número de lactato tardío.
+- Lactato persistente puede ser adrenérgico/washout post-reanimación.
+- Fluidos extra → SDRA, congestión, daño glicocálix (ESICM fluid stewardship).
+
+¿Por qué fallan las otras opciones?
+- Hb >10 g/dL antes de volumen: TRISS objetivo Hb 7, no 10; no es la razón de detener fluidos.
+- Lactato por falla hepática + azul de metileno: perfusión clínica normalizada descarta hipoxia persistente.
+- Norepinefrina falsea TRC: TRC 2.5 s con diuresis y alerta = reanimación completa.
+
+Clave: orina + lúcido + piel caliente + TRC OK = reanimación terminada → no trates lactato con más fluidos.
+
+MEDICINA CRÍTICA — BY DR Q.
 Fin de reanimación guiada por lactato
 
 • Macrohemodinamia acoplada + microcirculación OK → stop fluidos.
@@ -2885,7 +3855,30 @@ Referencias: ESICM fluid stewardship; CLASSIC trial context.`,
       "No detener compresiones para ECMO sin trombolisis.",
       "Extender RCP post-alteplasa 15-20 min.",
     ],
-    theoryContent: `MEDICINA CRÍTICA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa TEP masivo en paro AESP: ETE con VD gigante confirma obstrucción pulmonar aguda — trombolisis sistémica intra-RCP (alteplasa) y continuar compresiones ≥15–20 min adicionales.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 48 años, TEP masivo, paro en AESP durante RCP.
+- ETE: VD masivamente dilatado, hipocinesia, VI colapsado (obstrucción AP → falla VD → AESP).
+- Ya 1 mg epinefrina IV; compresiones en curso.
+
+¿Qué dato es clave en el examen?
+- TEP masivo causa AESP por obstrucción pulmonar aguda: VD falla, VI sin precarga.
+- Fibrinólisis intra-paro indicada con sospecha/confirmación alta (AHA ACLS/CHEST).
+- Alteplasa 50 mg (o tenecteplasa equivalente) durante RCP; continuar ≥15–20 min post-dosis.
+- Volumen empeora VD dilatado; ECMO no sustituye trombolisis universal.
+- Toracotomía para trauma/taponamiento, no TEP.
+
+¿Por qué fallan las otras opciones?
+- 2 L cristaloides bajo compresión: empeora sobrecarga VD en TEP masivo.
+- Detener compresiones para VA-ECMO sola: no sustituye trombolisis; compresiones deben continuar.
+- Toracotomía con clampeo aórtico: indicada en trauma/taponamiento, no TEP.
+
+Clave: AESP + VD gigante en paro = alteplasa ya + no pares de comprimir 15–20 min.
+
+MEDICINA CRÍTICA — BY DR Q.
 TEP masivo en paro · trombolisis intra-RCP
 
 • Obstrucción AP → VD agónico → AESP.
@@ -2922,7 +3915,31 @@ Referencias: AHA ACLS; CHEST PE guidelines.`,
       "iNOS >> eNOS; destrucción glicocálix altera Starling.",
       "ScvO2 alta no siempre = hipoperfusión en vasoplejía.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa la fisiopatología molecular del choque séptico: vasoplejía y fuga capilar simultáneas se explican por citoquinas → iNOS → NO tóxico + destrucción del glicocálix endotelial.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 65 años, choque séptico por neumonía multilobar.
+- PA 70/40, extremidades calientes, pulsos saltones (vasoplejía, no frío).
+- Anasarca en 12 h con balance +2 L (fuga capilar masiva).
+- Eco: VI hiperdinámico FEVI 75%, GC 8 L/min; ScvO2 82% (shunt microvascular).
+
+¿Qué dato es clave en el examen?
+- PAMPs → TLR-4 → NF-κB → citoquinas (TNF-α, IL-1) → iNOS → NO masivo → vasorelajación vía GMPc.
+- Peroxinitrito/citoquinas destruyen glicocálix y cadherinas VE → fuga capilar (altera Starling).
+- Choque séptico = enfermedad del endotelio, no solo hipovolemia.
+- ScvO2 alta no siempre = hipoperfusión; puede ser flujo rápido con extracción baja (shunt microvascular).
+- Extremidades calientes = vasoplejía (iNOS >> eNOS).
+
+¿Por qué fallan las otras opciones?
+- Histamina por mastocitos: mecanismo de anafilaxia, no explica vasoplejía + fuga capilar masiva en sepsis.
+- Toxina bloquea Na+/K+ ATPasa: no es el mecanismo principal de sepsis bacteriana.
+- Acidosis láctica bloquea α-1 + hipoalbuminemia: la hipoalbuminemia agrava edema pero no explica vasoplejía caliente.
+
+Clave: sepsis + extremidades calientes + anasarca + GC alto = iNOS + daño glicocálix → vasoplejía + fuga capilar.
+
+FISIOPATOLOGÍA — BY DR Q.
 Sepsis · vasoplejía y fuga capilar
 
 Cadena: PAMPs → TLR-4 → TNF/IL-1 → iNOS → NO + daño glicocálix → vasoplejía + edema.
@@ -2957,7 +3974,30 @@ Referencias: Surviving Sepsis; endothelial dysfunction literature.`,
       "V/Q=0: perfusión sin ventilación.",
       "Espacio muerto → hipercapnia, no hipoxemia refractaria severa.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa shunt intrapulmonar verdadero en SDRA: hipoxemia que no corrige con FiO2 100% indica V/Q=0 (perfusión sin ventilación), no defecto de difusión.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 45 años, SDRA post-pancreatitis severa; Rx pulmón blanco.
+- GSA ambiente: PaO2 45; FiO2 100% 30 min: PaO2 50 mmHg (+5 mmHg apenas).
+- Cianosis, crépitos difusos: alvéolos inundados de exudado.
+
+¿Qué dato es clave en el examen?
+- PaO2 no corrige con FiO2 100% = shunt verdadero (V/Q=0).
+- SDRA: alvéolos llenos de exudado (V=0) con perfusión intacta (Q normal).
+- Sangre venosa no oxigenada se mezcla con arterial → PaO2 final permanece baja.
+- FiO2 100% satura Hb en zonas ventiladas pero no oxigena sangre del shunt.
+- Solución: PEEP recluta alvéolos, no más oxígeno.
+
+¿Por qué fallan las otras opciones?
+- Espacio muerto (V/Q infinito): causa hipercapnia, no hipoxemia refractaria severa.
+- Defecto de difusión puro: mejora parcialmente con FiO2 alta; aquí PaO2 sube solo +5.
+- Efecto Bohr inverso: no explica hipoxemia refractaria en SDRA.
+
+Clave: hipoxemia refractaria a FiO2 100% = shunt verdadero → PEEP, no más oxígeno.
+
+FISIOPATOLOGÍA — BY DR Q.
 Shunt verdadero en SDRA
 
 • Exudado alveolar → V=0, Q mantenida → mezcla venosa-arterial.
@@ -2997,7 +4037,30 @@ Referencias: West V/Q physiology; ARDSNet.`,
       "Triple whammy: AINE + IECA/ARA II + diurético en hipovolemia.",
       "FENa bajo = túbulos intactos, fallo hemodinámico.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa triple whammy y colapso de autorregulación glomerular: AINE cierra aferente (prostaglandinas) y losartán abre eferente (Ang II) → presión intraglomerular ~0 en hipovolemia.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 75 años, diarrea 3 días + ibuprofeno + losartán; deshidratado PA 90/60.
+- Cr 1.1→4.8 en 72 h; Na urinario <10, FENa <1% (AKI prerrenal).
+- Hipovolemia activa mecanismos de rescate renal que ambos fármacos bloquean.
+
+¿Qué dato es clave en el examen?
+- Autorregulación: aferente = prostaglandinas (dilatación); eferente = angiotensina II (constricción).
+- Hipovolemia: riñón dilata aferente (PG) y constriñe eferente (Ang II) para mantener TFG.
+- AINE bloquea PG → aferente constriñida; losartán bloquea Ang II → eferente dilatada.
+- Sin entrada ni salida abierta → presión glomerular ~0 → anuria.
+- Triple whammy: AINE + IECA/ARA II + diurético en hipovolemia.
+
+¿Por qué fallan las otras opciones?
+- AINE vasoconstrictor eferente + ARA II dilata aferente: invierte la fisiología real.
+- Nefritis intersticial: FENa bajo y Na urinario <10 descartan NTA/NIA.
+- Losartán inhibe ADH + ibuprofeno diurético: no es el mecanismo de AKI aguda.
+
+Clave: deshidratación + AINE + losartán = cierra entrada y abre salida → AKI prerrenal con FENa <1%.
+
+FISIOPATOLOGÍA — BY DR Q.
 Autorregulación glomerular · triple whammy
 
 • Hipovolemia activa PG (aferente) y Ang II (eferente).
@@ -3033,7 +4096,30 @@ Referencias: KDIGO; nephrology physiology texts.`,
       "Insulina desplaza K+ intracelular en minutos.",
       "Nunca insulina sin asegurar K+ si <5.2 con acidosis.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa la paradoja del potasio en CAD: K+ sérico 5.2 enmascara déficit corporal masivo — insulina activa Na+/K+ ATPasa y puede causar FV por hipokalemia en 30 min.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 22 años, debut DM1, CAD severa (pH 7.05, HCO3 5, AG 26).
+- K+ 5.2 mEq/L aparentemente normal; insulina 0.1 U/kg/h iniciada.
+- 30 min después: FV por K+ 1.8 mEq/L (caída catastrófica).
+
+¿Qué dato es clave en el examen?
+- CAD: déficit total K+ masivo (diuresis osmótica) enmascarado por acidosis (H+ entra celula, K+ sale) e insulopenia.
+- K+ 5.2 en CAD es espejismo; déficit corporal puede ser 300–600 mEq.
+- Insulina → Na+/K+ ATPasa → K+ plasmático colapsa en minutos.
+- ADA: no insulina si K+ <3.3; reponer K+ antes/durante si ≤5.2 con acidosis.
+- Acidosis corrige parcialmente K+ al subir pH, pero insulina lo desplaza más rápido.
+
+¿Por qué fallan las otras opciones?
+- Pseudohiperkalemia hemolítica: la caída post-insulina confirma déficit real, no artefacto.
+- Insulina activa ROMK y aldosterona en 30 min: el mecanismo principal es Na+/K+ ATPasa, no vía distal.
+- Insulina corrige pH rápido abriendo canales miocárdicos: no es el mecanismo de hipokalemia aguda.
+
+Clave: K+ en CAD miente → si ≤5.2 con acidosis, repón K+ ANTES de insulina.
+
+FISIOPATOLOGÍA — BY DR Q.
 Paradoja del potasio en CAD
 
 Cadena: insulopenia + acidosis → K+ plasmático alto falso → insulina → internalización → hipokalemia letal.
@@ -3068,7 +4154,30 @@ Referencias: ADA DKA guidelines.`,
       "IM funcional = geometría, no valva enferma.",
       "IECA/BB ↓ presión y radio → ↓ MVO2.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa HFrEF terminal con Ley de Laplace: VI dilatado y pared delgada ↑ tensión parietal/MVO2 y estira anillo mitral → IM funcional simultánea.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 72 años, HFrEF terminal; VI dilatado (DDVI 70 mm), pared 8 mm, FEVI 20%.
+- IM funcional severa, soplo holosistólico en ápex.
+- Remodelado excéntrico: radio ↑, grosor ↓ → estrés parietal ↑ + coaptación mitral fallida.
+
+¿Qué dato es clave en el examen?
+- Ley de Laplace: σ = (P×r)/(2×h); ↑ radio y ↓ grosor → tensión parietal y MVO2 ↑.
+- Dilatación esferoidal estira anillo mitral y desplaza papilares → IM funcional (geometría, no valva enferma).
+- IM funcional → sobrecarga volumen → círculo vicioso de remodelado.
+- Frank-Starling en fase descendente: sarcómeras sobre-estiradas, no optimización.
+- IECA/BB ↓ presión y radio → ↓ MVO2 y frenan remodelado.
+
+¿Por qué fallan las otras opciones?
+- Efecto Venturi: no explica ↑ MVO2 ni geometría papilar.
+- Frank-Starling optimiza con estiramiento excesivo: en fase descendente empeora contracción.
+- Poiseuille en coronarias: isquemia papilar contribuye pero Laplace explica ambos fenómenos simultáneos.
+
+Clave: VI esferoidal y delgado = agonía energética (Laplace) + IM funcional por tracción papilar.
+
+FISIOPATOLOGÍA — BY DR Q.
 HFrEF · Laplace y IM funcional
 
 • VI esferoidal → σ gigante → hambre energética + IM por tracción papilar.
@@ -3103,7 +4212,30 @@ Referencias: Braunwald heart failure physiology.`,
       "SF 0.9% SID=0 → acidosis hiperclorémica iatrogénica.",
       "Usar cristaloides balanceados (RL/Plasmalyte).",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa acidosis hiperclorémica iatrogénica según modelo Stewart: SF 0.9% (SID=0) diluye el SID plasmático → disociación de H2O → ↑ H+ libre, con AG aparente normal.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 40 años post-peritonitis, 8 L SF 0.9% en 24 h.
+- Euvolémica; lactato 1.2, Cr 0.9 (no hipoperfusión).
+- Na 154, Cl 126, pH 7.22, HCO3 14, AG aparente 14 (normal).
+
+¿Qué dato es clave en el examen?
+- Stewart: pH depende de SID (strong ion difference), pCO2 y ácidos débiles.
+- SF 0.9% (Na 154, Cl 154) tiene SID=0; infusión masiva diluye SID plasmático (~40).
+- SID ↓ → agua se disocia → ↑ H+ → consume HCO3 → acidosis hiperclorémica con AG normal.
+- Lactato normal descarta acidosis por hipoperfusión.
+- SSC: cristaloides balanceados (RL/Plasmalyte) en reanimación.
+
+¿Por qué fallan las otras opciones?
+- Exceso Cl- obliga riñón a reabsorber H+: simplificación incorrecta del mecanismo Stewart.
+- SF 0.9% aporta H+ libres in vitro: el ácido viene de disociación de agua, no de H+ exógeno.
+- Na+ hiperactiva Na+/H+ expulsa H+: no es el mecanismo de acidosis hiperclorémica.
+
+Clave: 8 L SF 0.9% + AG normal + Cl 126 = ↓ SID → acidosis hiperclorémica iatrogénica.
+
+FISIOPATOLOGÍA — BY DR Q.
 Stewart · acidosis hiperclorémica
 
 Cadena: SF 0.9% → ↑ Cl → ↓ SID → disociación H2O → acidemia.
@@ -3138,7 +4270,30 @@ Referencias: Stewart acid-base; SSC fluid guidelines.`,
       "Isquemia afecta lusitropismo antes que inotropismo.",
       "EAP + FEVI normal = piensa disfunción diastólica isquémica.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa EAP fulminante con FEVI preservada: isquemia subendocárdica agota ATP → falla SERCA2a → rigidez diastólica → ↑ presión telediastólica → EAP sin caída de FEVI.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 55 años, crisis HTA 200/120, EAP fulminante.
+- Infradesnivel ST V3-V6, FEVI 60% preservada.
+- Isquemia subendocárdica interrumpe relajación diastólica activa (ATP-dependiente).
+
+¿Qué dato es clave en el examen?
+- Relajación diastólica consume más ATP que sístole.
+- Isquemia → ↓ ATP → falla SERCA2a (Ca2+ citosólico persistente) + rigor reversible.
+- VI rígido → PTDVI ↑ → transmisión retrógrada → EAP.
+- FEVI puede estar normal: disfunción diastólica aguda antes que inotropismo caiga.
+- Isquemia afecta lusitropismo antes que inotropismo.
+
+¿Por qué fallan las otras opciones?
+- Glicólisis anaerobia bloquea Na+ fase 0: afecta contracción, no explica EAP con FEVI normal primero.
+- Noradrenalina prolonga potencial acción: no es el mecanismo de rigidez diastólica isquémica.
+- Citoquinas destruyen elastina: no es proceso instantáneo en crisis HTA aguda.
+
+Clave: EAP + FEVI preservada + isquemia = falla SERCA2a → VI rígido → EAP por disfunción diastólica.
+
+FISIOPATOLOGÍA — BY DR Q.
 EAP con FEVI preservada · isquemia
 
 Cadena: isquemia → ↓ ATP → SERCA2a falla → VI rígido → EAP.
@@ -3173,7 +4328,30 @@ Referencias: ACC/AHA HFpEF; ischemic diastolic dysfunction.`,
       "Pulso paradójico: caída PA sistólica >10 mmHg en inspiración.",
       "Bezold-Jarisch = bradicardia, no pulso rítmico con taquicardia.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa pulso paradójico en taponamiento cardíaco: inspiración ↑ retorno al VD pero pericardio rígido impide expansión → septum empuja VI → ↓ precarga y gasto sistémico.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 30 años, trauma torácico, taponamiento cardíaco.
+- PA 65/40, FC 145, JVP extrema, pulso desaparece en inspiración.
+- POCUS: derrame colapsa VD en diástole; septum abomba a izquierda en inspiración.
+
+¿Qué dato es clave en el examen?
+- Interdependencia ventricular patológica: pericardio a tensión = coraza inelástica.
+- Inspiración ↑ retorno venoso al VD; pericardio impide dilatación externa.
+- Volumen empuja septum hacia VI → ↓ precarga VI → ↓ volumen sistólico.
+- Caída PA sistólica >10 mmHg en inspiración = pulso paradójico.
+- Bezold-Jarisch = bradicardia por estímulo ventricular, no pulso paradójico con taquicardia.
+
+¿Por qué fallan las otras opciones?
+- Inspiración succiona líquido a pleura: no explica interdependencia ventricular.
+- Presión negativa colapsa aurícula izquierda: el mecanismo es septum shift VD→VI.
+- Reflejo Bezold-Jarisch bloquea AV: causa bradicardia, no pulso paradójico.
+
+Clave: taponamiento + pulso paradójico = batalla de volumen en coraza → septum empuja VI.
+
+FISIOPATOLOGÍA — BY DR Q.
 Taponamiento · pulso paradójico
 
 Cadena: inspiración → ↑ retorno VD → septum → VI colapsado → ↓ GC.
@@ -3208,7 +4386,30 @@ Referencias: ATLS; cardiac tamponade physiology.`,
       "Hipocalcemia hiperexcita nervio periférico.",
       "Tetania es origen neuromuscular, no placa motora.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa tetania por hipocalcemia post-tiroidectomía: Ca2+ extracelular estabiliza canales Na+ voltaje-dependientes — hipocalcemia ↓ umbral → descargas espontáneas (Trousseau, Chvostek).
+
+¿Qué está ocurriendo realmente?
+- Mujer de 35 años, 48 h post-tiroidectomía; Ca total 6.5 mg/dL.
+- Parestesias, Trousseau y Chvostek positivos.
+- Hipoparatiroidismo post-quirúrgico → ↓ PTH → ↓ Ca2+ extracelular.
+
+¿Qué dato es clave en el examen?
+- Ca2+ extracelular blinda canales Na+ en reposo, elevando umbral de disparo.
+- Hipocalcemia desestabiliza membrana → apertura espontánea Na+ → potenciales de acción repetitivos.
+- Tetania, Trousseau, Chvostek = hiperexcitabilidad neuromuscular periférica.
+- Ca2+ excita menos la placa motora sin Ca presináptico (parálisis), no tetania.
+- Tetania es origen nervio periférico, no placa motora ni ACh acumulada.
+
+¿Por qué fallan las otras opciones?
+- Ca2+ activa acetilcolinesterasa: déficit causaría acumulación ACh y parálisis flácida, no tetania.
+- Falla liberación calcio en retículo: afecta contracción muscular, no hiperexcitabilidad de membrana.
+- Ca2+ bloquea K+ en reposo hiperpolarizando: mecanismo incorrecto; Ca2+ estabiliza Na+, no K+.
+
+Clave: hipocalcemia + Trousseau/Chvostek = Ca2+ ya no estabiliza Na+ → tetania por hiperexcitabilidad.
+
+FISIOPATOLOGÍA — BY DR Q.
 Hipocalcemia · estabilización de membrana
 
 Cadena: ↓ PTH → ↓ Ca2+ → desprendimiento de canales Na+ → tetania.
@@ -3243,7 +4444,31 @@ Referencias: Endocrine surgery complications; membrane physiology.`,
       "PEEP excesivo comprime capilares → ↑ RVP.",
       "Cor pulmonale agudo: VD falla, VI muere de sed.",
     ],
-    theoryContent: `FISIOPATOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa cor pulmonale agudo en SDRA con PEEP alto: doble mecanismo de ↑ RVP — vasoconstricción pulmonar hipóxica (VPH) + compresión capilar por PEEP → VD dilatado colapsa precarga del VI.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 50 años, neumonía bilateral Influenza A, VM PEEP 16.
+- PA 60/40; Swan-Ganz: PVC 22, PAP 60/30, PAOP 8, GC 2.0.
+- Eco: VD dilatado, septum hacia VI, VI colapsado.
+- Disociación Swan: presiones derechas altas, izquierdas bajas = bloqueo pulmonar.
+
+¿Qué dato es clave en el examen?
+- Hipoxia alveolar global → VPH (Euler-Liljestrand): cierre arteriolas pre-capilares.
+- PEEP alto sobredistinde alvéolos → aplasta capilares intra-alveolares → ↑ RVP adicional.
+- RVP ↑ → VD choca contra muro → dilatación, estasis (PVC↑), PAOP baja (VI sin precarga).
+- GC colapsa por falta de precarga VI, no por falla de bomba izquierda primaria.
+- Pulmón: hipoxia vasoconstrictora + PEEP excesivo comprime capilares.
+
+¿Por qué fallan las otras opciones?
+- PEEP distiende VI comprimiendo VD: PEEP aumenta presión intratorácica pero aquí PAOP 8 (VI vacío).
+- Fibrinolisis licua sangre hacia pleura: no explica VPH + compresión capilar.
+- Hipercapnia dilata arteria pulmonar: la hipoxia causa vasoconstricción, no vasodilatación.
+
+Clave: hipoxia (VPH) + PEEP 16 + PAOP 8 + GC 2 = cor pulmonale agudo → VD falla, VI sin precarga.
+
+FISIOPATOLOGÍA — BY DR Q.
 Cor pulmonale agudo · VPH + PEEP
 
 Cadena: hipoxia → VPH + PEEP alto → ↑ RVP → VD dilatado → GC ↓.
@@ -3278,7 +4503,30 @@ Referencias: West lung zones; ARDS hemodynamics.`,
       "Hemocultivos antes de ATB, pero nunca retrasar tratamiento.",
       "S. aureus = germen #1 en usuarios de drogas IV.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa endocarditis tricuspídea en usuario de drogas IV: fiebre + soplo tricuspídeo + émbolos pulmonares cavitados exige hemocultivos y ATB empírico sin demora.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 28 años, consumidor de heroína IV, fiebre 39 °C de 10 días.
+- Disnea, tos con expectoración sanguinolenta; soplo holosistólico tricuspídeo que aumenta con inspiración.
+- Rx: múltiples infiltrados nodulares cavitados bilaterales periféricos (émbolos sépticos pulmonares).
+- Endocarditis derecha por S. aureus hasta demostrar lo contrario.
+
+¿Qué dato es clave en el examen?
+- Tríada: fiebre + soplo tricuspídeo + émbolos pulmonares (no sistémicos como en válvula izquierda).
+- Hemocultivos ≥2 pares antes de ATB, pero nunca retrasar tratamiento >1 h si inestable.
+- ATB empírico: vancomicina (MRSA) ± gentamicina sinergia; eco transtorácica/transesofágica urgente.
+- S. aureus = germen #1 en usuarios de drogas IV.
+
+¿Por qué fallan las otras opciones?
+- Esperar hemocultivos 48 h: retrasa tratamiento en endocarditis con émbolos activos.
+- Anticoagulación plena: contraindicada en endocarditis (riesgo émbolos hemorrágicos).
+- Ceftriaxona ambulatoria: neumonía comunitaria no explica soplo + émbolos cavitados periféricos.
+
+Clave: infiltrados cavitados periféricos + fiebre + IVDA = endocarditis derecha → vanco + gentamicina + eco urgente.
+
+INFECTOLOGÍA — BY DR Q.
 Endocarditis tricuspídea · usuario de drogas IV
 
 • Tríada: fiebre + soplo tricuspídeo + émbolos pulmonares.
@@ -3314,7 +4562,29 @@ Referencias: ESC Endocarditis Guidelines; IDSA.`,
       "Antigenuria en orina es diagnóstico rápido.",
       "Macrólido o fluoroquinolona; no responde a betalactámicos solos.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa neumonía por Legionella: hipoNa + transaminitis + confusión + falla a amoxicilina = cambiar a levofloxacino o azitromicina IV.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 62 años, fumador, fiebre alta, tos seca, confusión.
+- PA 90/55, SatO2 88%; Na 128, transaminasas 3× LSN, LDH elevada.
+- Rx: consolidación lobar derecha; amoxicilina 48 h sin mejoría.
+
+¿Qué dato es clave en el examen?
+- Legionella: hipoNa, hepatitis, alteración neurológica, exposición hídrica/aire acondicionado.
+- No responde a betalactámicos solos (amoxicilina); requiere macrólido o fluoroquinolona respiratoria.
+- Antigenuria en orina es diagnóstico rápido; no cultiva en medios habituales.
+- Neumonía grave con hipotensión: tratamiento IV, no ambulatorio.
+
+¿Por qué fallan las otras opciones?
+- Agregar azitromicina ambulatoria: paciente inestable requiere IV; ya falló betalactámico solo.
+- Metronidazol por anaerobios: olor no confirma; Legionella es acuática intracelular.
+- Vanco + pip-tazo solo con derrame: no cubre Legionella como monoterapia empírica adecuada.
+
+Clave: amoxicilina fallida + hipoNa + transaminitis + confusión = Legionella → levofloxacino o azitromicina IV.
+
+INFECTOLOGÍA — BY DR Q.
 Neumonía por Legionella
 
 • Pistas: hipoNa, transaminitis, confusión, exposición hídrica.
@@ -3346,7 +4616,31 @@ Referencias: ATS/IDSA CAP Guidelines; ESCMID Legionella.`,
       "Crepitación es tardía; no esperarla.",
       "Cirugía + ATB; cada hora de demora ↑ mortalidad.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa fascitis necrotizante: dolor desproporcionado al examen + shock + LRINEC elevado = desbridamiento quirúrgico urgente sin esperar crepitación ni TC.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 55 años, diabética, dolor intenso en muslo tras mínimo trauma.
+- PA 85/50, FC 125; piel eritematosa con equimosis progresiva.
+- Dolor desproporcionado al examen; no crepitación palpable (signo tardío).
+- Leucocitos 22,000, Cr 2.1, Na 130, glucosa 380, CRP muy elevada (LRINEC ≥6).
+
+¿Qué dato es clave en el examen?
+- Fascitis necrotizante: dolor >> hallazgos cutáneos = bandera roja.
+- Crepitación ausente no excluye (es signo tardío de gas subcutáneo).
+- LRINEC ≥6: alta sospecha; shock + progresión rápida = operar ya.
+- ATB: betalactámico + vancomicina + clindamicina (antitoxina estreptocócica).
+- TC solo si no retrasa cirugía; cada hora de demora ↑ mortalidad.
+
+¿Por qué fallan las otras opciones?
+- Cefalexina VO ambulatoria: shock + progresión rápida = urgencia quirúrgica.
+- ATB solamente sin crepitación: la ausencia de crepitación no descarta fascitis.
+- Anticoagulación por TVP: el cuadro es infección necrotizante de tejidos blandos.
+
+Clave: dolor desproporcionado + shock + equimosis progresiva = desbridamiento ya + ATB amplio espectro.
+
+INFECTOLOGÍA — BY DR Q.
 Fascitis necrotizante
 
 • LRINEC ≥6: alta sospecha. Shock + progresión rápida = operar ya.
@@ -3382,7 +4676,29 @@ Referencias: IDSA SSTI Guidelines; LRINEC score validation.`,
       "Dexametasona: antes/con primer ATB, no después.",
       "TAC antes de PL si focalidad, inmunosupresión o alteración mental.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa meningitis bacteriana aguda: dexametasona 0.15 mg/kg debe administrarse ANTES o CON la primera dosis de ceftriaxona + vancomicina, no después.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 19 años, fiebre, cefalea intensa, rigidez de nuca, petequias en tronco.
+- TAC normal; PL: LCR turbio, glucosa 15, proteínas 280, PMN 95%.
+- Meningitis bacteriana aguda (petequias sugieren meningococo; mismo esquema empírico).
+
+¿Qué dato es clave en el examen?
+- ATB empírico adultos: ceftriaxona + vancomicina (cubrir S. pneumoniae resistente y N. meningitidis).
+- Dexametasona 0.15 mg/kg IV reduce mortalidad/secuelas en meningitis neumocócica.
+- Timing crítico: dexametasona ANTES o CON primera dosis ATB; después pierde beneficio.
+- TAC antes de PL si focalidad, inmunosupresión o alteración mental (aquí TAC ya normal).
+
+¿Por qué fallan las otras opciones?
+- Esperar cultivo para ATB dirigido: retrasa tratamiento en emergencia neurológica.
+- Dexametasona solo si Gram confirma neumococo: en práctica se administra empíricamente si sospecha neumocócica.
+- Aciclovir exclusivo: LCR bacteriano con PMN 95% y glucosa 15 descarta herpes como causa primaria.
+
+Clave: meningitis bacteriana = ceftriaxona + vanco + dexametasona con/sin primer ATB, nunca después.
+
+INFECTOLOGÍA — BY DR Q.
 Meningitis bacteriana aguda
 
 • ATB empírico: ceftriaxona + vancomicina.
@@ -3418,7 +4734,31 @@ Referencias: IDSA Bacterial Meningitis Guidelines; van de Beek et al.`,
       "Vancomicina oral (no metro) en formas graves.",
       "Nunca loperamida en colitis infecciosa.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa C. difficile fulminante con megacolon: shock + colón >12 cm exige vancomicina oral alta dosis ± rectal + metronidazol IV, no metronidazol VO ni loperamida.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 70 años, ceftriaxona 7 días por neumonía; día 10 diarrea acuosa >10/día.
+- PA 90/55, distensión abdominal, timpanismo; leucocitos 18,000.
+- PCR toxina C. difficile (+); Rx: dilatación colónica >12 cm (megacolon).
+- Colitis fulminante con disfunción orgánica.
+
+¿Qué dato es clave en el examen?
+- Fulminante: WBC >15,000, Cr↑, shock, megacolon (>10-12 cm), íleo.
+- Metronidazol VO ya no es primera línea en formas graves.
+- Fulminante: vancomicina oral 500 mg c/6 h ± enema de retención + metronidazol IV.
+- Colectomía si refractario; loperamida contraindicada (retención toxinas → perforación).
+- Fidaxomicina es 1.ª línea en formas no fulminantes, no en megacolon con shock.
+
+¿Por qué fallan las otras opciones?
+- Metronidazol VO ambulatorio: insuficiente en colitis fulminante con megacolon y shock.
+- Loperamida: contraindicada en colitis infecciosa activa; riesgo megacolon/toxicidad.
+- Fidaxomicina en fulminante: reservada para formas leve-moderada; no megacolon con shock.
+
+Clave: megacolon + shock + C. diff (+) = vanco oral ± rectal + metro IV; nunca loperamida.
+
+INFECTOLOGÍA — BY DR Q.
 C. difficile fulminante
 
 • 1.ª línea leve-moderada: fidaxomicina o vancomicina oral.
@@ -3454,7 +4794,30 @@ Referencias: IDSA/SHEA C. difficile Guidelines 2021.`,
       "TMP-SMX es tratamiento de elección.",
       "Esteroide si PaO2 <70 o A-a ≥35.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa neumonía por Pneumocystis jirovecii en VIH avanzado: CD4 85 + disnea + hipoxemia + LDH↑ + infiltrados en mariposa = TMP-SMX + esteroides si PaO2 <70.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 34 años, VIH no diagnosticado, disnea progresiva, tos seca, fiebre baja.
+- SatO2 88% ambiente, FC 105; CD4 85 cél/μL.
+- Rx: infiltrados intersticiales bilaterales perihiliares en "mariposa"; LDH 650 U/L.
+
+¿Qué dato es clave en el examen?
+- PCP si CD4 <200: disnea subaguda + hipoxemia + infiltrados intersticiales + LDH↑.
+- Tratamiento: TMP-SMX dosis elevada (1ª línea).
+- Corticoides si PaO2 <70 mmHg o gradiente A-a ≥35 mmHg (reduce mortalidad).
+- TARV se inicia tras mejoría clínica (2-4 semanas en PCP grave), no en fase aguda inestable.
+- Pentamidina es alternativa por alergia, no profilaxis en enfermedad activa.
+
+¿Por qué fallan las otras opciones?
+- Ceftriaxona + azitromicina: neumonía bacteriana típica; no cubre PCP.
+- RIPE inmediato: TB requiere confirmación; cuadro clásico de PCP con CD4 bajo.
+- Pentamidina inhalada profiláctica: es profilaxis, no tratamiento de enfermedad activa.
+
+Clave: CD4 <200 + disnea + LDH alto + infiltrados mariposa = PCP → TMP-SMX + esteroides si hipoxemia.
+
+INFECTOLOGÍA — BY DR Q.
 PCP en VIH avanzado
 
 • CD4 <200: profilaxis con TMP-SMX.
@@ -3490,7 +4853,31 @@ Referencias: DHHS HIV Guidelines; ATS PCP Guidelines.`,
       "Ceftriaxona empírica; albúmina si riesgo SHR.",
       "Cultivo positivo en solo ~40%; tratar por PMN.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa peritonitis bacteriana espontánea (PBE): PMN ≥250 en ascitis = ceftriaxona empírica + albúmina si riesgo de síndrome hepatorrenal, sin esperar cultivo.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 58 años, cirrosis por alcohol con ascitis conocida.
+- Fiebre 38.5 °C, dolor abdominal difuso, encefalopatía grado II.
+- Paracentesis: líquido turbio, PMN 450 cél/μL (≥250 = PBE), proteínas 0.8 g/dL.
+- Creatinina 1.4 (basal 0.9): riesgo de síndrome hepatorrenal.
+
+¿Qué dato es clave en el examen?
+- PBE: PMN ascítico ≥250 cél/μL (aquí 450); no esperar cultivo (positivo solo ~40%).
+- Tratamiento empírico: ceftriaxona 1-2 g/día (Enterobacteriaceae).
+- Albúmina 1.5 g/kg día 1 y 1 g/kg día 3 si Creat↑, BUN↑ o bilirrubina >4.
+- Repetir paracentesis a 48 h si no mejora (PMN debe bajar >25%).
+- Profilaxis secundaria con norfloxacino tras episodio.
+
+¿Por qué fallan las otras opciones?
+- Observación con PMN <500: umbral es ≥250, no 500; aquí PMN 450 confirma PBE.
+- Metronidazol solo: PBE es principalmente Gram negativo entérico, no anaerobios solos.
+- Paracentesis de alivio sin ATB: no trata la infección; riesgo de recurrencia y SHR.
+
+Clave: cirrótico febril + PMN ≥250 = ceftriaxona + albúmina; no esperes cultivo.
+
+INFECTOLOGÍA — BY DR Q.
 Peritonitis bacteriana espontánea
 
 • Diagnóstico: PMN ≥250. Tratamiento empírico inmediato.
@@ -3522,7 +4909,29 @@ Referencias: EASL Ascites Guidelines; AASLD.`,
       "Nitrofurantoína solo para cistitis, no pielonefritis.",
       "Pielonefritis complicada = IV + hospitalización.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa pielonefritis complicada por E. coli BLEE: historial de ESBL contraindica fluoroquinolonas — ertapenem IV o betalactámico según antibiograma local.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 45 años, pielonefritis complicada; fiebre 39.5 °C, dolor costovertebral.
+- ITU recurrente con uso previo de ciprofloxacino.
+- UC previo: E. coli BLEE (ESBL); creatinina 1.0, sin alergia a betalactámicos.
+
+¿Qué dato es clave en el examen?
+- ESBL: evitar fluoroquinolonas y amoxicilina-clavulanato empírico.
+- Carbapenem (ertapenem) o betalactámico-β-lactamasa según sensibilidad local.
+- Nitrofurantoína no alcanza concentración en parénquima renal (solo cistitis).
+- Pielonefritis complicada = IV inicialmente + hospitalización.
+
+¿Por qué fallan las otras opciones?
+- Ciprofloxacino VO: resistencia documentada por ESBL previo.
+- Nitrofurantoína: no sirve en pielonefritis (concentración insuficiente en riñón).
+- Amoxicilina-clavulánico universal: ineficaz contra ESBL empíricamente.
+
+Clave: pielonefritis + historial ESBL = no repitas cipro → ertapenem IV según antibiograma.
+
+INFECTOLOGÍA — BY DR Q.
 Pielonefritis por E. coli BLEE
 
 • ESBL: carbapenem o betalactámico según antibiograma.
@@ -3558,7 +4967,30 @@ Referencias: IDSA UTI Guidelines; ESBL treatment reviews.`,
       "Rx normal + asintomática = ILTB, no activa.",
       "3HP (12 semanas) preferido sobre 9 meses de H.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa infección latente por TB (ILTB) en contacto estrecho: PPD 18 mm + Rx normal + asintomática = profilaxis con 3HP o isoniazida, no RIPE.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 30 años, asintomática, PPD 18 mm (lectura 48 h).
+- Rx tórax normal; contacto domiciliario de TB pulmonar bacilífera confirmada.
+- VIH negativo; no hay datos de enfermedad activa.
+
+¿Qué dato es clave en el examen?
+- Contacto estrecho: PPD ≥5 mm = positivo (independiente del cutoff general 10-15 mm).
+- Rx normal + asintomática = ILTB, no TB activa.
+- Tratamiento ILTB: 3HP (isoniazida + rifapentina 12 dosis semanales) preferido por adherencia, o isoniazida 6-9 meses.
+- RIPE es para TB activa, no profilaxis.
+- BCG no revacunar en adultos contactos.
+
+¿Por qué fallan las otras opciones?
+- RIPE 6 meses: esquema de TB activa; aquí no hay enfermedad activa.
+- No tratamiento con PPD <20 mm: en contacto estrecho el umbral es ≥5 mm.
+- Revacunación BCG: no indicada en adultos contactos de TB.
+
+Clave: contacto + PPD positivo + Rx normal = ILTB → 3HP o isoniazida, no RIPE.
+
+INFECTOLOGÍA — BY DR Q.
 Infección latente por tuberculosis
 
 • Contacto + PPD ≥5 mm + Rx normal = ILTB.
@@ -3594,7 +5026,31 @@ Referencias: WHO LTBI Guidelines; CDC TB Treatment.`,
       "Tokyo III (grave): disfunción orgánica + drenaje <48 h.",
       "Piperacilina-tazobactam o carbapenem según resistencia local.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa colangitis aguda grave (Tokyo III): tríada de Charcot + shock = reanimación séptica + ATB IV + drenaje biliar urgente en <24-48 h, no CPRE diferida.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 67 años, ictericia dolorosa, fiebre 39.8 °C, escalofríos.
+- PA 78/45, FC 130, lactato 4.2; bilirrubina total 12, leucocitos 22,000.
+- Eco: dilatación vía biliar + cálculo en colédoco.
+- Colangitis aguda grave con disfunción cardiovascular (Tokyo III).
+
+¿Qué dato es clave en el examen?
+- Tríada de Charcot: fiebre + ictericia + dolor; Pentada si shock + alteración mental.
+- Tokyo III: disfunción orgánica → ATB IV + drenaje biliar urgente <24-48 h.
+- ATB: piperacilina-tazobactam o carbapenem (Enterobacteriaceae + anaerobios biliares).
+- CPRE es gold standard si disponible; drenaje percutáneo si CPRE no factible.
+- Colangitis = ATB + drenaje; no uno sin el otro.
+
+¿Por qué fallan las otras opciones?
+- ATB VO + colecistectomía electiva 6 semanas: shock requiere drenaje urgente, no diferido.
+- CPRE diferida 2 semanas: mortalidad ↑ sin descompresión biliar en Tokyo III.
+- Metronidazol monoterapia: no cubre Gram negativos entéricos causales.
+
+Clave: colangitis + shock + cálculo en colédoco = pip-tazo + drenaje biliar hoy, no mañana.
+
+INFECTOLOGÍA — BY DR Q.
 Colangitis aguda grave · Tokyo Guidelines
 
 • Tríada Charcot; Pentada si shock + alteración mental.
@@ -3643,7 +5099,30 @@ Referencias: Tokyo Guidelines 2018; ASGE biliary drainage.`,
       "La trombólisis está indicada en pacientes inestables.",
       "La anticoagulación aislada no es suficiente en TEP de alto riesgo.",
     ],
-    theoryContent: `URGENTES — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa TEP de alto riesgo (masivo): la hipotensión (PA 85/50) define choque obstructivo y obliga trombolisis sistémica inmediata, no angio-TC ni anticoagulación sola.
+
+¿Qué está ocurriendo realmente?
+- Paciente de 68 años con disnea súbita y dolor pleurítico.
+- PA 85/50, FC 120, SatO2 88%, ingurgitación yugular.
+- ECG: S1Q3T3 (sobrecarga derecha); inestabilidad hemodinámica.
+
+¿Qué dato es clave en el examen?
+- Hipotensión en TEP = alto riesgo; choque obstructivo (trombo → ↑ RVP → VD dilatado → ↓ precarga VI).
+- La clave no es S1Q3T3; la clave es la hipotensión arterial.
+- Trombolisis sistémica inmediata para reperfusión rápida.
+- No esperar angio-TC en paciente inestable.
+- Anticoagulación sola no basta en choque.
+
+¿Por qué fallan las otras opciones?
+- HBPM + observación: insuficiente en TEP masivo con hipotensión.
+- Angio-TC antes de tratar: retrasa reperfusión en paciente inestable.
+- Filtro de vena cava: no trata TEP establecido agudo; no disuelve trombo.
+
+Clave: disnea súbita + hipotensión + ingurgitación yugular = TEP alto riesgo → trombolisis ya.
+
+URGENTES — BY DR Q.
 Tromboembolismo pulmonar de alto riesgo
 
 Lo que debes saber para el examen:
@@ -3702,7 +5181,30 @@ Referencias: ESC Guidelines on Pulmonary Embolism; Harrison's; UpToDate: High-Ri
       "El potasio debe evaluarse antes de iniciar insulina.",
       "El bicarbonato rara vez está indicado (pH < 6.9).",
     ],
-    theoryContent: `URGENTES — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa secuencia de manejo en CAD: volumen primero, evaluar K+ antes de insulina IV — la insulina sin reponer potasio puede causar hipokalemia letal.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 45 años, DM1, náuseas, vómito y dolor abdominal.
+- Glucometría 450 mg/dL; pH 7.1, HCO3 8, anion gap 22.
+- CAD severa con deshidratación osmótica por diuresis.
+
+¿Qué dato es clave en el examen?
+- Secuencia ADA: 1) líquidos IV (crialoides isotónicos); 2) evaluar/corregir K+; 3) insulina regular IV.
+- Insulina desplaza K+ intracelularmente → hipokalemia grave si K+ bajo.
+- Si K+ <3.3: posponer insulina y reponer potasio primero.
+- Bicarbonato solo si pH <6.9 (rara vez indicado en pH 7.1).
+- Insulina SC inadecuada en CAD severa con vómitos.
+
+¿Por qué fallan las otras opciones?
+- Insulina → líquidos → K+: volumen debe ir primero; insulina sin K+ evaluado es peligroso.
+- Bicarbonato → insulina → líquidos: bicarbonato no es primera línea en pH 7.1.
+- Insulina SC + bicarbonato: CAD severa requiere insulina IV y monitorización UCI.
+
+Clave: CAD = líquidos primero → K+ evaluado → insulina IV; no empieces por insulina.
+
+URGENTES — BY DR Q.
 Cetoacidosis diabética · secuencia de manejo
 
 La clave no es la glucosa; la clave es el orden de las intervenciones.
@@ -3750,7 +5252,30 @@ Referencias: ADA Standards of Care; Endocrine Society Guidelines; Harrison's; Up
       "Los cultivos no deben retrasar el tratamiento.",
       "Vasopresores si persiste hipotensión tras reanimación con líquidos.",
     ],
-    theoryContent: `URGENTES — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa choque séptico de origen urinario: la medida con mayor impacto en supervivencia en la primera hora son antibióticos de amplio espectro, no vasopresores ni esperar cultivos.
+
+¿Qué está ocurriendo realmente?
+- Paciente de 72 años, DM2, ERC 3; fiebre, disuria, alteración del estado de conciencia 48 h.
+- PA 88/50, FC 115, Temp 38.5 °C, lactato 4.2, creatinina 2.1 (basal 1.2).
+- Choque séptico de probable origen urinario con disfunción orgánica.
+
+¿Qué dato es clave en el examen?
+- Choque séptico: infección + hipotensión + lactato elevado + disfunción orgánica.
+- Antibióticos de amplio espectro en la primera hora: mayor impacto demostrado en mortalidad.
+- Cada hora de retraso en ATB ↑ mortalidad ~8%.
+- Cultivos antes de ATB, pero nunca retrasar tratamiento esperando resultados.
+- Vasopresores si persiste hipotensión tras reanimación con cristaloides, no como primera medida.
+
+¿Por qué fallan las otras opciones?
+- Bicarbonato IV: no es intervención de mayor impacto en primera hora de sepsis.
+- Vasopresores inmediatamente: no sustituyen tratamiento de la infección; van tras volumen.
+- Esperar urocultivo: retrasa ATB; mortalidad ↑ por cada hora de demora.
+
+Clave: sepsis + shock + lactato 4.2 = ATB amplio espectro en <1 h, no esperes cultivos.
+
+URGENTES — BY DR Q.
 Choque séptico · primera hora
 
 La clave: hipotensión + lactato elevado + infección.
@@ -3788,7 +5313,30 @@ Referencias: Surviving Sepsis Campaign; SCCM Sepsis Guidelines; Sepsis-3; UpToDa
       "Fenitoína y levetiracetam son segunda línea.",
       "Propofol se reserva para estatus refractario.",
     ],
-    theoryContent: `URGENTES — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa estatus epiléptico convulsivo: tras ABC y acceso venoso, la primera línea farmacológica son benzodiacepinas IV (lorazepam o diazepam), no fenitoína ni propofol.
+
+¿Qué está ocurriendo realmente?
+- Hombre de 25 años sin antecedentes, convulsión tónico-clónica generalizada 12 minutos.
+- No recupera conciencia entre episodios convulsivos.
+- Estatus epiléptico convulsivo (≥5 min debe tratarse como tal).
+
+¿Qué dato es clave en el examen?
+- Convulsión ≥5 min o sin recuperación de conciencia = estatus epiléptico.
+- Secuencia: ABC + glucemia capilar → benzodiacepina IV (lorazepam/diazepam) → 2.ª línea → refractario.
+- Benzodiacepinas potencian GABA; son tratamiento de primera línea.
+- Fenitoína, levetiracetam, valproato: segunda línea.
+- Propofol: estatus refractario con anestesia, no primera medida.
+
+¿Por qué fallan las otras opciones?
+- Fenitoína IV como primera medida: es segunda línea, no inicial.
+- Propofol inmediato: reservado para estatus refractario tras fallar BZD + 2.ª línea.
+- Levetiracetam oral: vía oral inadecuada en convulsión activa; no es primera línea.
+
+Clave: convulsión >5 min sin recuperar conciencia = lorazepam/diazepam IV primero, no fenitoína.
+
+URGENTES — BY DR Q.
 Estatus epiléptico convulsivo
 
 La clave: el paciente no recupera la conciencia entre las crisis.
@@ -3828,7 +5376,30 @@ Referencias: Neurocritical Care Society; American Epilepsy Society; UpToDate: Co
       "Después del calcio: insulina + dextrosa, salbutamol, diálisis según contexto.",
       "Ondas T picudas = hallazgo temprano; QRS ancho = mayor gravedad.",
     ],
-    theoryContent: `URGENTES — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa hiperpotasemia grave con cambios ECG: la primera medida es gluconato de calcio IV para estabilizar membrana miocárdica — no baja K+, pero previene arritmia fatal.
+
+¿Qué está ocurriendo realmente?
+- Paciente de 60 años, ERC estadio 4, debilidad muscular progresiva.
+- K+ 7.4 mEq/L; ECG: T picudas simétricas, onda P ausente, QRS ensanchado.
+- Hiperpotasemia grave con toxicidad cardíaca inminente.
+
+¿Qué dato es clave en el examen?
+- K+ >6.5 + cambios ECG = emergencia con riesgo de arritmia letal.
+- Gluconato de calcio IV primero: estabiliza membrana; no disminuye K+ sérico.
+- Después: insulina + dextrosa, salbutamol (redistribución intracelular).
+- Eliminación: diálisis definitiva en ERC avanzada.
+- Insulina baja K+ pero no protege corazón inmediatamente.
+
+¿Por qué fallan las otras opciones?
+- Insulina + dextrosa primero: baja K+ pero no estabiliza membrana de inmediato.
+- Hemodiálisis urgente: indicada pero después de calcio; no es primera medida en paro inminente.
+- Salbutamol nebulizado: redistribución lenta; no protege membrana como calcio.
+
+Clave: K+ 7.4 + QRS ancho = calcio IV primero, siempre; luego insulina/diálisis.
+
+URGENTES — BY DR Q.
 Hiperpotasemia grave con cambios ECG
 
 La clave no es el valor del potasio; la clave son los cambios electrocardiográficos.
@@ -3879,7 +5450,30 @@ Referencias: KDIGO; Harrison's; UpToDate: Hyperkalemia; European Resuscitation C
       "Angioplastia primaria preferida; fibrinólisis si PCI no disponible oportunamente.",
       "Aspirina, analgesia y betabloqueadores son coadyuvantes, no el objetivo principal.",
     ],
-    theoryContent: `CARDIOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa IAMCEST anterior: el objetivo principal del manejo inicial es reperfusión coronaria lo más rápido posible — tiempo es músculo, no betabloqueadores ni analgesia como prioridad.
+
+¿Qué está ocurriendo realmente?
+- Paciente de 55 años, dolor opresivo 60 min, irradiado a MSI, diaforesis.
+- ECG: elevación ST 3 mm en V1-V4 (IAMCEST anterior).
+- PA 130/80, FC 90: hemodinámicamente estable pero con oclusión coronaria aguda.
+
+¿Qué dato es clave en el examen?
+- Dolor típico + elevación ST en derivaciones contiguas = IAMCEST.
+- Oclusión coronaria → isquemia transmural → necrosis progresiva.
+- Objetivo principal: reabrir arteria culpable (PCI primaria o fibrinólisis).
+- Angioplastia primaria preferida; fibrinólisis si PCI no disponible en ≤120 min.
+- Aspirina, morfina, betabloqueadores: coadyuvantes, no el objetivo principal.
+
+¿Por qué fallan las otras opciones?
+- Betabloqueadores para ↓ consumo O2: útil pero secundario; no reperfunde.
+- Control del dolor con opioides: alivia síntomas, no restaura flujo coronario.
+- Amiodarona profiláctica: no es objetivo principal en IAMCEST agudo.
+
+Clave: elevación ST + dolor típico = reperfusión urgente; no elijas medidas secundarias como objetivo principal.
+
+CARDIOLOGÍA — BY DR Q.
 IAM con elevación del ST
 
 La clave no es la localización; la clave es el tiempo.
@@ -3933,7 +5527,30 @@ Referencias: ESC STEMI Guidelines; AHA Guidelines; Braunwald's Heart Disease; Up
       "VIH sin tratamiento aumenta riesgo de lesiones focales (toxoplasmosis, linfoma).",
       "El tratamiento empírico no debe retrasarse, pero la PL requiere seguridad diagnóstica.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa cuándo hacer TAC antes de punción lumbar: ptosis + somnolencia + VIH sin TARV = posible lesión ocupante de espacio — la PL puede causar herniación.
+
+¿Qué está ocurriendo realmente?
+- Paciente de 35 años, fiebre, cefalea intensa, rigidez nucal varios días.
+- VIH sin tratamiento antirretroviral; somnoliento con ptosis palpebral derecha (focalización).
+- Síndrome meníngeo con signos de alerta para TAC antes de PL.
+
+¿Qué dato es clave en el examen?
+- Indicaciones TAC antes de PL: alteración mental, déficit focal, papiledema, convulsiones recientes, inmunosupresión.
+- Ptosis + VIH sin TARV: riesgo toxoplasmosis, linfoma CNS (lesión ocupante).
+- PL con efecto de masa puede provocar herniación cerebral.
+- ATB empírico no debe retrasarse, pero PL requiere seguridad diagnóstica.
+- PL inmediata sin imagen: trampa clásica cuando hay focalización.
+
+¿Por qué fallan las otras opciones?
+- Ceftriaxona + vanco sin estudios: ATB sí, pero PL sin TAC es peligrosa con focalización.
+- PL inmediata antes de imagen: contraindicada con déficit focal + inmunosupresión.
+- Dexametasona + alta ambulatoria: meningitis con focalización requiere hospitalización e imagen.
+
+Clave: meningitis + focalización + VIH = TAC antes de PL; no hernies al paciente.
+
+INFECTOLOGÍA — BY DR Q.
 Meningitis · cuándo hacer TAC antes de PL
 
 La clave no es la fiebre; la clave es la focalización neurológica.
@@ -3990,7 +5607,30 @@ Referencias: IDSA Bacterial Meningitis Guidelines; Mandell; UpToDate: Suspected 
       "Meta inicial: reducir PAM ~20-25% en la primera hora.",
       "Fármacos IV: nicardipino, labetalol, nitroprusiato según escenario.",
     ],
-    theoryContent: `URGENTES — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa emergencia hipertensiva: PA 230/130 con LRA aguda y retinopatía — meta inicial ↓ PAM 20-25% en la primera hora, no normalizar bruscamente.
+
+¿Qué está ocurriendo realmente?
+- Paciente de 60 años, cefalea intensa, visión borrosa.
+- PA 230/130; creatinina 2.5 (basal 1.0), retinopatía hipertensiva avanzada.
+- Emergencia hipertensiva con lesión aguda de órgano diana (renal + ocular).
+
+¿Qué dato es clave en el examen?
+- Emergencia hipertensiva = hipertensión severa + daño agudo de órgano diana.
+- No normalizar PA bruscamente: riesgo isquemia cerebral, miocárdica y renal por pérdida de autorregulación.
+- Meta primera hora: reducir PAM ~20-25%.
+- Descenso gradual en horas siguientes hacia meta ambulatoria.
+- Fármacos IV: nicardipino, labetalol, nitroprusiato según escenario.
+
+¿Por qué fallan las otras opciones?
+- PA <120/80 inmediato: descenso brusco → isquemia de órganos con autorregulación crónica alterada.
+- PAS <140 en 30 min: demasiado rápido y agresivo para primera hora.
+- PAD <90 en primera hora: meta incorrecta; se usa reducción porcentual de PAM.
+
+Clave: emergencia hipertensiva + LRA = ↓ PAM 20-25% en 1 h, no normalices de golpe.
+
+URGENTES — BY DR Q.
 Emergencia hipertensiva
 
 La clave: daño agudo de órgano diana, no solo el valor de la PA.
@@ -4028,7 +5668,30 @@ Referencias: European Society of Hypertension; AHA; UpToDate: Hypertensive Emerg
       "Furosemida es importante pero su efecto hemodinámico tarda más.",
       "Dobutamina para bajo gasto/choque; digoxina no tiene utilidad aguda en EAP.",
     ],
-    theoryContent: `CARDIOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa edema agudo de pulmón hipertensivo: nitroglicerina IV impacta más rápido en precarga y postcarga que furosemida — actúa en minutos por venodilatación.
+
+¿Qué está ocurriendo realmente?
+- Paciente de 68 años, disnea severa súbita, ortopnea, sensación de ahogo.
+- PA 190/110, FC 115, SatO2 84%; estertores bilaterales hasta campos medios.
+- EAP cardiogénico hipertensivo: ↑ presiones de llenado VI → congestión pulmonar.
+
+¿Qué dato es clave en el examen?
+- Disnea súbita + ortopnea + estertores + hipoxemia + hipertensión = EAP cardiogénico.
+- Nitroglicerina IV: venodilatación (↓ precarga) + vasodilatación arterial a dosis altas (↓ postcarga).
+- Actúa en minutos; impacto hemodinámico más rápido que furosemida.
+- Furosemida elimina volumen pero efecto hemodinámico tarda más.
+- Dobutamina para bajo gasto/choque; digoxina sin utilidad aguda en EAP.
+
+¿Por qué fallan las otras opciones?
+- Furosemida IV: importante pero no modifica tan rápido precarga/postcarga como nitratos.
+- Dobutamina: indicada en bajo gasto/choque, no en EAP hipertensivo con PA 190/110.
+- Digoxina: no tiene beneficio agudo en descompensación de EAP.
+
+Clave: EAP hipertensivo = nitroglicerina IV primero (↓ precarga/postcarga en minutos), luego diuréticos.
+
+CARDIOLOGÍA — BY DR Q.
 Edema agudo de pulmón hipertensivo
 
 La clave: hipertensión severa + congestión pulmonar.
@@ -4074,7 +5737,30 @@ Referencias: ESC Acute Heart Failure Guidelines; Braunwald's; UpToDate: Acute De
       "Revascularización precoz mejora supervivencia.",
       "Líquidos y nitratos pueden empeorar congestión o hipoperfusión.",
     ],
-    theoryContent: `CARDIOLOGÍA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa choque cardiogénico post-IAM: hipoperfusión + congestión pulmonar simultáneas — soporte inotrópico urgente y revascularización, no líquidos ni nitratos.
+
+¿Qué está ocurriendo realmente?
+- Paciente de 64 años, IAM cara anterior en evolución.
+- PA 80/50, FC 115, llenado capilar 4 s, oliguria, estertores bilaterales.
+- Choque cardiogénico: hipoperfusión sistémica + edema pulmonar simultáneos.
+
+¿Qué dato es clave en el examen?
+- IAM + hipotensión + oliguria + congestión = choque cardiogénico.
+- Infarto extenso → ↓ función VI → ↓ gasto cardíaco + edema pulmonar.
+- Prioridades: 1) soporte inotrópico/hemodinámico; 2) revascularización urgente.
+- Revascularización precoz = mayor impacto en supervivencia.
+- Líquidos empeoran congestión; nitratos agravan hipotensión; solo diuréticos no corrigen bajo gasto.
+
+¿Por qué fallan las otras opciones?
+- Bolo SF 0.9%: empeora congestión pulmonar con estertores bilaterales.
+- Nitroglicerina IV: agrava hipotensión (PA 80/50) en choque cardiogénico.
+- Furosemida sola: no corrige bajo gasto cardíaco; necesita inotrópico + reperfusión.
+
+Clave: post-IAM + shock + estertores = inotrópico + revascularización urgente, no volumen ni nitratos.
+
+CARDIOLOGÍA — BY DR Q.
 Choque cardiogénico post-IAM
 
 La clave: hipoperfusión + congestión pulmonar.
@@ -4119,7 +5805,31 @@ Referencias: ESC ACS Guidelines; AHA STEMI and Cardiogenic Shock; UpToDate: Card
       "Dolor en hombro = irritación diafragmática por hemoperitoneo (signo de Kehr).",
       "Metotrexato contraindicado en pacientes inestables con hemoperitoneo.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa embarazo ectópico roto con choque hemorrágico: útero vacío + embarazo positivo + líquido libre + hipotensión = reanimación y laparotomía urgente, no metotrexato.
+
+¿Qué está ocurriendo realmente?
+- Mujer de 26 años, amenorrea 7 semanas, embarazo positivo.
+- Dolor abdominal bajo súbito irradiado a hombro derecho (signo de Kehr).
+- TA 80/50, FC 125; irritación peritoneal difusa, Douglas abombado.
+- FAST: útero vacío + abundante líquido libre ecogénico (hemoperitoneo).
+
+¿Qué dato es clave en el examen?
+- Amenorrea + embarazo (+) + útero vacío + líquido libre + inestabilidad = embarazo ectópico roto.
+- Hipotensión y taquicardia = choque hemorrágico; prioridad reanimación + cirugía.
+- Metotrexato solo en pacientes estables sin ruptura ni hemoperitoneo.
+- No retrasar por β-hCG seriada en paciente inestable.
+- En inestabilidad, laparotomía suele ser más rápida que laparoscopia programada.
+
+¿Por qué fallan las otras opciones?
+- β-hCG seriada + observación: retrasa tratamiento en choque hemorrágico.
+- Metotrexato IM: contraindicado con ruptura e inestabilidad hemodinámica.
+- Laparoscopia programada: demora inaceptable en choque; necesita cirugía urgente.
+
+Clave: ectópico roto + shock = reanimación + laparotomía ya; no metotrexato ni observación.
+
+GINECOOBSTETRICIA — BY DR Q.
 Embarazo ectópico roto
 
 La clave: choque hemorrágico, no la amenorrea.
@@ -4174,7 +5884,30 @@ Referencias: Williams Obstetrics; ACOG Tubal Ectopic Pregnancy; UpToDate: Ectopi
       "La única cura definitiva es la finalización del embarazo.",
       "La proteinuria no es indispensable cuando existe daño orgánico materno evidente.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa preeclampsia grave con HELLP a las 33 semanas: sulfato de magnesio + control PA + finalización del embarazo tras estabilizar — no conducta expectante ni proteinuria 24 h.
+
+¿Qué está ocurriendo realmente?
+- Primigestante 17 años, 33 semanas; cefalea occipital, fosfenos, epigastralgia 6 h.
+- TA 165/115 confirmada; hiperreflexia ++++, dolor hipocondrio derecho.
+- AST 180, ALT 210, plaquetas 75,000; RCTG fetal reactivo.
+
+¿Qué dato es clave en el examen?
+- TA ≥160/110 + cefalea + fosfenos + epigastralgia + plaquetas <100,000 + transaminasas ↑ = preeclampsia grave con HELLP.
+- Sulfato de magnesio previene eclampsia.
+- Única cura definitiva: finalización del embarazo.
+- No conducta expectante a 33 semanas con HELLP; condición materna tiene prioridad sobre bienestar fetal.
+- Proteinuria 24 h no es indispensable con daño orgánico evidente.
+
+¿Por qué fallan las otras opciones?
+- Expectante hasta 37 semanas: contraindicado con HELLP y criterios de gravedad.
+- Corticoides + egreso: riesgo eclampsia, CID, desprendimiento placentario, muerte materna.
+- Proteinuria 24 h antes de decidir: retrasa tratamiento con daño orgánico ya documentado.
+
+Clave: HELLP + TA 165/115 + síntomas neurológicos = MgSO4 + finalizar embarazo, no esperes 37 semanas.
+
+GINECOOBSTETRICIA — BY DR Q.
 Preeclampsia grave con HELLP
 
 La clave: daño orgánico materno, no solo la presión arterial.
@@ -4226,7 +5959,30 @@ Referencias: ACOG Gestational Hypertension and Preeclampsia; Williams Obstetrics
       "El DPPNI es diagnóstico clínico; la ecografía no debe retrasar la intervención.",
       "Tabaquismo es factor de riesgo importante para DPPNI.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa DPPNI grave: dolor intenso + útero leñoso + sangrado oscuro + sufrimiento fetal = cesárea urgente sin esperar ecografía.
+
+¿Qué está ocurriendo realmente?
+- Mujer 35 años, 36 semanas, tabaquismo; dolor abdominal intenso continuo + sangrado rojo oscuro.
+- Útero hipertónico ("leñoso"), altura uterina 38 cm (antes 34 cm) = hematoma retroplacentario.
+- CTG: FCF 100 lpm, variabilidad perdida, desaceleraciones tardías repetitivas.
+
+¿Qué dato es clave en el examen?
+- DPPNI: dolor intenso + útero leñoso + sangrado oscuro + sufrimiento fetal agudo.
+- Placenta previa: sangrado rojo brillante, indoloro, útero blando (cuadro opuesto).
+- DPPNI es diagnóstico clínico; ecografía no debe retrasar intervención.
+- Separación placentaria → hematoma → ↑ presión intrauterina → hipoxia fetal.
+- Tabaquismo es factor de riesgo importante.
+
+¿Por qué fallan las otras opciones?
+- Placenta previa + eco transvaginal: cuadro es doloroso con útero leñoso, no previa.
+- Rotura uterina + inducción: inducción empeoraría sufrimiento fetal agudo.
+- TPP + tocolíticos: tocolizar en DPPNI con bradicardia es contraindicado.
+
+Clave: dolor + útero leñoso + sangrado oscuro + CTG malo = DPPNI → cesárea ya, no eco.
+
+GINECOOBSTETRICIA — BY DR Q.
 Desprendimiento prematuro de placenta normoinserta (DPPNI)
 
 La clave: dolor + hipertonía uterina, no solo el sangrado.
@@ -4262,7 +6018,30 @@ Referencias: Williams Obstetrics; ACOG Placental Abruption; UpToDate: Placental 
       "Metilergonovina contraindicada en hipertensión gestacional/preeclampsia.",
       "Misoprostol es alternativa segura en pacientes hipertensas.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa HPP por atonía con HTA gestacional: metilergonovina está contraindicada por vasoconstricción — misoprostol es uterotónico de 2.ª línea seguro en hipertensas.
+
+¿Qué está ocurriendo realmente?
+- Mujer 28 años, HTA gestacional, parto vaginal de RN macrosómico 4.200 g.
+- Trabajo de parto 14 h + oxitocina; sangrado profuso 15 min post-alumbramiento.
+- Fondo uterino supraumbilical, flácido, blando; masaje + oxitocina sin control.
+
+¿Qué dato es clave en el examen?
+- Atonía uterina: sangrado + útero blando + fondo uterino elevado.
+- Secuencia: masaje uterino → oxitocina → segundo uterotónico.
+- Metilergonovina: vasoconstricción intensa → contraindicada en HTA gestacional/preeclampsia.
+- Misoprostol: ↑ tono uterino sin riesgo significativo de crisis hipertensiva.
+- Ácido tranexámico no es uterotónico (es antifibrinolítico complementario).
+
+¿Por qué fallan las otras opciones?
+- Metilergonovina: excelente uterotónico pero contraindicada con HTA gestacional.
+- Carboprost: también puede elevar PA; menos preferido que misoprostol en hipertensas.
+- Ácido tranexámico solo: no corrige atonía; no sustituye uterotónico de 2.ª línea.
+
+Clave: atonía + HTA gestacional = misoprostol como 2.ª línea, no metilergonovina.
+
+GINECOOBSTETRICIA — BY DR Q.
 Hemorragia posparto por atonía uterina
 
 La clave: hipertensión gestacional al elegir el segundo uterotónico.
@@ -4312,7 +6091,30 @@ Referencias: ACOG Postpartum Hemorrhage; WHO PPH Guidelines; Williams Obstetrics
       "Flujo arterial conservado no excluye torsión (obstrucción venosa ocurre primero).",
       "Preservar el ovario siempre que sea posible.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa torsión ovárica: ausencia de flujo venoso en Doppler es hallazgo precoz — laparoscopia urgente con detorsión y preservación ovárica, no observar 24 h.
+
+¿Qué está ocurriendo realmente?
+- Mujer 24 años, dolor FID súbito severo que la despertó, náuseas y vómitos.
+- Ecografía: ovario derecho 7×5 cm con folículos periféricos (signo de "tormenta de nieve").
+- Doppler: flujo arterial conservado, ausencia de flujo venoso en ovario derecho.
+
+¿Qué dato es clave en el examen?
+- Dolor pélvico súbito intenso + náuseas + ovario aumentado → torsión ovárica.
+- Obstrucción venosa ocurre primero → isquemia → necrosis; flujo arterial conservado NO excluye torsión.
+- Ausencia de flujo venoso = hallazgo precoz y sugestivo.
+- Conducta: laparoscopia urgente + detorsión + preservación ovárica si viable.
+- No observar 24 h: cada hora ↑ riesgo de pérdida ovárica.
+
+¿Por qué fallan las otras opciones?
+- Observación + eco en 24 h: demora tratamiento; isquemia progresa.
+- ATB por EIP: cuadro no sugiere infección; embarazo negativo, patrón de torsión.
+- Ooforectomía inmediata: preservar ovario siempre que sea posible tras detorsión.
+
+Clave: dolor súbito + ovario grande + sin flujo venoso = laparoscopia urgente con detorsión.
+
+GINECOOBSTETRICIA — BY DR Q.
 Torsión ovárica
 
 La clave: ausencia de flujo venoso, no el quiste.
@@ -4352,7 +6154,29 @@ Referencias: ACOG Adnexal Torsion; Williams Gynecology; UpToDate: Ovarian Torsio
       "Esquema: ceftriaxona + doxiciclina + metronidazol.",
       "Retrasar tratamiento aumenta riesgo de infertilidad tubárica y embarazo ectópico.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa EIP: dolor a movilización cervical + fiebre + flujo mucopurulento = diagnóstico clínico — ceftriaxona + doxiciclina + metronidazol, aunque la ecografía sea normal.
+
+¿Qué está ocurriendo realmente?
+- Mujer 25 años, dolor pélvico bilateral 4 días + fiebre 38.5°C + flujo amarillento fétido.
+- Cérvix eritematoso y friable; dolor intenso a movilización cervical; anexos dolorosos.
+- Eco: útero y ovarios normales, sin masas ni líquido libre; embarazo negativo.
+
+¿Qué dato es clave en el examen?
+- Dolor pélvico + fiebre + flujo mucopurulento + dolor a movilización cervical = EIP.
+- EIP es diagnóstico clínico; ecografía normal no excluye (útil para absceso tuboovárico).
+- Esquema empírico: ceftriaxona (gonococo) + doxiciclina (clamidia) + metronidazol (anaerobios).
+- Retrasar tratamiento ↑ riesgo de infertilidad tubárica y embarazo ectópico.
+
+¿Por qué fallan las otras opciones?
+- Azitromicina dosis única: insuficiente para EIP; no cubre anaerobios ni gonococo adecuadamente.
+- Legrado uterino: no hay indicación; cuadro es infección ascendente, no retención.
+- Histerectomía: excesiva; EIP se trata con antibióticos de amplio espectro.
+
+Clave: movilización cervical dolorosa + fiebre = EIP → ceftriaxona + doxiciclina + metronidazol ya.
+
+GINECOOBSTETRICIA — BY DR Q.
 Enfermedad inflamatoria pélvica (EIP)
 
 La clave: dolor a la movilización cervical, no la ecografía.
@@ -4392,7 +6216,28 @@ Referencias: CDC STI Guidelines; ACOG PID Practice Bulletin; UpToDate: Pelvic In
       "Ecografía es el estudio diagnóstico inicial de elección.",
       "DPPNI: sangrado oscuro + dolor + útero leñoso.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa placenta previa: sangrado rojo brillante indoloro en tercer trimestre = ecografía obstétrica, nunca tacto vaginal.
+
+¿Qué está ocurriendo realmente?
+- Mujer 33 años, 32 semanas; despertó en charco de sangre rojo rutilante, indoloro.
+- Abdomen blando, útero con tono normal; CTG reactivo; TA estable.
+
+¿Qué dato es clave en el examen?
+- Placenta previa: sangrado rojo brillante, indoloro, útero blando en tercer trimestre.
+- Tacto vaginal contraindicado ante sospecha de placenta previa (puede desencadenar hemorragia masiva).
+- Ecografía obstétrica es el estudio diagnóstico inicial de elección.
+- DPPNI: cuadro opuesto — sangrado oscuro + dolor + útero leñoso.
+
+¿Por qué fallan las otras opciones?
+- Tacto vaginal: peligroso; puede provocar sangrado masivo con placenta sobre OCI.
+- Amnioscopia: no es el estudio inicial para localización placentaria.
+- Inducción inmediata: primero confirmar diagnóstico y estabilidad; previa no siempre requiere parto urgente si estable.
+
+Clave: sangrado indoloro brillante = sospecha previa → eco, no tacto vaginal.
+
+GINECOOBSTETRICIA — BY DR Q.
 Placenta previa
 
 La clave: sangrado indoloro.
@@ -4432,7 +6277,28 @@ Referencias: Williams Obstetrics; ACOG Placenta Previa; UpToDate: Placenta Previ
       "Endometrio engrosado (17 mm) debe estudiarse histológicamente.",
       "No iniciar tratamiento hormonal empírico sin excluir malignidad.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa SUA con alto riesgo de cáncer endometrial: obesidad + diabetes + nuliparidad + endometrio 17 mm = biopsia endometrial obligatoria, no tratamiento empírico.
+
+¿Qué está ocurriendo realmente?
+- Mujer 48 años, IMC 36, DM2; sangrado abundante 6 meses, ciclos irregulares.
+- Nuliparidad; eco: endometrio heterogéneo 17 mm; embarazo negativo.
+
+¿Qué dato es clave en el examen?
+- Mujer ≥45 años con SUA + factores de riesgo → descartar cáncer endometrial.
+- Obesidad → aromatización periférica → exposición estrogénica sin oposición progesterónica.
+- Endometrio engrosado (17 mm) debe estudiarse histológicamente.
+- No iniciar tratamiento hormonal empírico sin excluir malignidad.
+
+¿Por qué fallan las otras opciones?
+- FSH/estradiol: no explican endometrio de 17 mm ni descartan malignidad en alto riesgo.
+- Tratamiento hormonal empírico: peligroso sin biopsia; puede enmascarar carcinoma.
+- RM pélvica: no sustituye biopsia como paso diagnóstico fundamental.
+
+Clave: SUA + obesidad + endometrio 17 mm = biopsia endometrial, no hormonas empíricas.
+
+GINECOOBSTETRICIA — BY DR Q.
 Sangrado uterino anormal · riesgo de cáncer endometrial
 
 La clave: factores de riesgo (obesidad, diabetes, nuliparidad, edad) + endometrio engrosado.
@@ -4480,7 +6346,29 @@ Referencias: ACOG Abnormal Uterine Bleeding; Williams Gynecology; NCCN Endometri
       "Tratamiento: ATB IV (ampicilina + gentamicina) + finalizar embarazo.",
       "Corioamnionitis no es indicación absoluta de cesárea.",
     ],
-    theoryContent: `GINECOOBSTETRICIA — BY DR Q.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa corioamnionitis clínica: RPM + fiebre + taquicardia materna/fetal + líquido fétido + útero doloroso = ATB IV + finalizar embarazo, no manejo expectante.
+
+¿Qué está ocurriendo realmente?
+- Primigestante 21 años, 38 semanas; RPM 24 h + disminución movimientos fetales.
+- Fiebre 38.6°C, FC materna 115, útero doloroso e irritable; líquido amniótico fétido.
+- CTG: FCF basal 175 lpm, variabilidad mínima.
+
+¿Qué dato es clave en el examen?
+- RPM + fiebre + taquicardia materna/fetal + líquido fétido + dolor uterino = corioamnionitis.
+- Taquicardia fetal (175 lpm) es hallazgo frecuente de infección intraamniótica.
+- Tratamiento: ATB IV (ampicilina + gentamicina) + finalizar embarazo.
+- Corioamnionitis no es indicación absoluta de cesárea.
+
+¿Por qué fallan las otras opciones?
+- RPM sin infección + expectante: hay fiebre, taquicardia y líquido fétido = infección establecida.
+- DPPNI + cesárea: cuadro sin dolor intenso ni útero leñoso; sangrado no descrito como oscuro/doloroso.
+- Preeclampsia + MgSO4: no hay HTA ni proteinuria; cuadro es infeccioso.
+
+Clave: fiebre + RPM + líquido fétido + taquicardia fetal = corioamnionitis → ATB + finalizar gestación.
+
+GINECOOBSTETRICIA — BY DR Q.
 Corioamnionitis clínica
 
 La clave: signos de infección materno-fetal, no solo ruptura de membranas.
@@ -5101,16 +6989,27 @@ Referencias: UpToDate: Agitated Patient; AAEP Guidelines; Tintinalli's.`,
       "Haloperidol: antipsicótico clásico para agitación grave en delirium.",
       "Benzodiacepinas pueden empeorar delirium (excepto abstinencia alcohólica).",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Delirium hiperactivo · contención farmacológica
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: delirium con riesgo inmediato tras fracaso de medidas no farmacológicas.
+Esta pregunta evalúa el manejo farmacológico del delirium hiperactivo en el anciano: cuando la reorientación verbal falla y hay riesgo inmediato, ¿qué sedante usar sin empeorar el cuadro?
 
-Haloperidol: acción rápida, menor depresión respiratoria que benzodiacepinas, dosis bajas en ancianos con monitorización cardíaca.
+¿Qué está ocurriendo realmente?
+- Hombre de 82 años con desorientación fluctuante de 12 horas de evolución.
+- Alteración marcada de la atención con períodos de somnolencia y agitación alternados.
+- Comportamiento agresivo que pone en riesgo al personal; no responde a medidas no farmacológicas.
+- Cuadro típico de delirium hiperactivo, no de demencia ni trastorno psiquiátrico primario.
 
-Trampa: agitación → benzodiacepinas. En delirium no relacionado con abstinencia, preferir antipsicóticos.
+¿Qué dato es clave en el examen?
+- Delirium hiperactivo: inicio agudo + fluctuación + alteración de atención + agitación con riesgo.
+- El tratamiento de base siempre incluye buscar causas reversibles y medidas no farmacológicas.
+- Cuando estas fracasan, el haloperidol es el antipsicótico clásico para contención farmacológica en delirium (dosis bajas, monitorización).
 
-Excepción: abstinencia alcohólica → benzodiacepinas.
+¿Por qué fallan las otras opciones?
+- Diazepam: las benzodiacepinas pueden empeorar el delirium y la confusión en ancianos; se reservan para abstinencia alcohólica.
+- Amitriptilina: antidepresivo anticolinérgico que puede agravar delirium en adultos mayores.
+- Fenitoína: no tiene rol en el control de agitación por delirium.
+
+Clave: delirium hiperactivo grave tras medidas no farmacológicas = haloperidol en dosis bajas, no benzodiacepina.
 
 Referencias: AGS Delirium Guidelines; Harrison's; UpToDate: Delirium in Older Adults.`,
   },
@@ -5145,14 +7044,27 @@ Referencias: AGS Delirium Guidelines; Harrison's; UpToDate: Delirium in Older Ad
       "El tabaquismo aumenta riesgo de progresión pero no modifica la estrategia por edad.",
       "VPH negativo = riesgo muy bajo; permite ampliar intervalos.",
     ],
-    theoryContent: `APS — BY DR Q.
-Tamización de cáncer de cuello uterino
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: tiene 34 años, no que sea fumadora.
+Esta pregunta evalúa la ruta de tamización de cáncer de cuello uterino en Colombia: la estrategia depende de la edad, no de factores de riesgo como el tabaquismo.
 
-Colombia (Res. 3280): 30-65 años → prueba de ADN VPH de alto riesgo como estrategia preferida. Mayor sensibilidad que citología.
+¿Qué está ocurriendo realmente?
+- Mujer de 34 años, asintomática, con citología negativa hace 2 años.
+- Fumadora activa, pero sin síntomas ni lesiones previas.
+- Consulta de promoción y mantenimiento de la salud en APS.
+- Debe tamizarse según la edad (30-65 años), no según la citología previa sola.
 
-Trampa: citología anual por factor de riesgo. La edad determina la estrategia.
+¿Qué dato es clave en el examen?
+- En Colombia (Res. 3280), entre 30 y 65 años la estrategia preferida es prueba de ADN para VPH de alto riesgo.
+- El VPH persistente es causa necesaria del cáncer de cuello uterino; la prueba de ADN tiene mayor sensibilidad que la citología.
+- El tabaquismo aumenta riesgo de progresión, pero no cambia la estrategia de tamización por edad.
+
+¿Por qué fallan las otras opciones?
+- Citología anual por ser fumadora: la edad define la estrategia; no se indica citología anual solo por tabaquismo.
+- Repetir citología ahora y cada 3 años: esquema más propio de 25-29 años con citología, no la preferida a los 34.
+- No tamizar hasta los 50 años: incorrecto; la tamización inicia mucho antes.
+
+Clave: 34 años en Colombia = ADN VPH de alto riesgo, independiente del tabaquismo.
 
 Referencias: Resolución 3280 de 2018; OMS Cervical Cancer Screening; INC Colombia.`,
   },
@@ -5191,14 +7103,27 @@ Referencias: Resolución 3280 de 2018; OMS Cervical Cancer Screening; INC Colomb
       "Aspirina en prevención primaria: beneficio limitado vs riesgo de sangrado.",
       "No tamización cardiovascular indiscriminada en asintomáticos.",
     ],
-    theoryContent: `APS — BY DR Q.
-Prevención cardiovascular primaria
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: coexistencia de múltiples factores de riesgo modificables, no solo el LDL.
+Esta pregunta evalúa prevención cardiovascular primaria en APS: cuando coexisten varios factores de riesgo modificables, la intervención más costo-efectiva no es siempre un fármaco ni un estudio invasivo.
 
-Modificación del estilo de vida: alimentación saludable + ≥150 min/semana ejercicio aeróbico + pérdida ponderal.
+¿Qué está ocurriendo realmente?
+- Hombre de 52 años con hipertensión reciente, obesidad (IMC 31) y prediabetes (glucemia 108, HbA1c 5.9%).
+- Dislipidemia (LDL 155) sin síntomas cardiovasculares ni limitación funcional.
+- Múltiples factores de riesgo modificables coexistiendo en un mismo paciente asintomático.
+- Escenario típico de prevención primaria en consulta de APS.
 
-Trampa: LDL 155 → estatinas inmediatas. La pregunta pide la intervención más costo-efectiva y prioritaria.
+¿Qué dato es clave en el examen?
+- La modificación estructurada del estilo de vida impacta simultáneamente peso, presión arterial, glucemia y lípidos.
+- Pérdida del 5-10% del peso corporal mejora de forma significativa todos estos parámetros.
+- Es la intervención con mejor relación costo-beneficio antes de farmacoterapia agresiva o estudios de imagen.
+
+¿Por qué fallan las otras opciones?
+- Aspirina a dosis baja: en prevención primaria el beneficio es limitado frente al riesgo de sangrado; no es la prioridad aquí.
+- Prueba de esfuerzo: no se indica tamización cardiovascular indiscriminada en asintomáticos de bajo riesgo funcional.
+- Doppler carotídeo: tamización no recomendada de forma rutinaria en prevención primaria sin indicación específica.
+
+Clave: múltiples factores de riesgo + asintomático = estilo de vida primero, no aspirina ni estudios.
 
 Referencias: AHA Primary Prevention; ADA Standards of Care; Guías ESC Prevención CV.`,
   },
@@ -5233,14 +7158,27 @@ Referencias: AHA Primary Prevention; ADA Standards of Care; Guías ESC Prevenci�
       "EPOC + diabetes + edad = alto riesgo de complicaciones respiratorias.",
       "No repetir PCV13 rutinariamente; completar con PPSV23.",
     ],
-    theoryContent: `APS — BY DR Q.
-Vacunación en adultos con EPOC y diabetes
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: edad ≥65 + EPOC + esquema antineumocócico incompleto.
+Esta pregunta evalúa el esquema de vacunación en adultos mayores con comorbilidades respiratorias: influenza anual y completar la protección antineumocócica son prioridades inmediatas.
 
-Influenza anual (protección disminuye con el tiempo). PCV13 ya recibida → falta PPSV23.
+¿Qué está ocurriendo realmente?
+- Mujer de 68 años con EPOC GOLD B y diabetes tipo 2 compensada.
+- Última vacuna contra influenza hace 14 meses (caducada para protección óptima).
+- Recibió PCV13 a los 65 años, pero el esquema antineumocócico no está completo.
+- Alto riesgo de complicaciones respiratorias graves por edad y comorbilidades.
 
-Trampa: ya recibió vacuna neumocócica = esquema completo. FALSO si solo tiene PCV13.
+¿Qué dato es clave en el examen?
+- La vacuna contra influenza debe aplicarse anualmente; la protección disminuye con el tiempo.
+- Esquema clásico en adultos: PCV13 seguida de PPSV23 para ampliar cobertura serológica.
+- Tener solo PCV13 no significa esquema antineumocócico completo.
+
+¿Por qué fallan las otras opciones?
+- No requiere vacuna porque ya recibió PCV13: el esquema está incompleto sin PPSV23.
+- Solo influenza: omite completar la protección antineumocócica pendiente.
+- Repetir PCV13: no se indica repetir PCV13 rutinariamente; lo que falta es PPSV23.
+
+Clave: ≥65 años + EPOC + PCV13 previa = influenza anual + PPSV23 ahora.
 
 Referencias: CDC Adult Immunization Schedule; PAI Colombia; GOLD Report.`,
   },
@@ -5283,14 +7221,27 @@ Referencias: CDC Adult Immunization Schedule; PAI Colombia; GOLD Report.`,
       "Colonoscopia no es la única opción válida.",
       "Tamización = detectar antes de síntomas.",
     ],
-    theoryContent: `APS — BY DR Q.
-Tamización de cáncer colorrectal
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: tiene 45 años.
+Esta pregunta evalúa un cambio reciente en las guías de tamización: el cáncer colorrectal ya no se pospone hasta los 50 años en personas de riesgo promedio.
 
-Cambio importante: inicio a los 45 años (antes 50) por aumento de CCR en adultos jóvenes. Múltiples estrategias válidas según disponibilidad.
+¿Qué está ocurriendo realmente?
+- Hombre de 45 años en primera consulta preventiva, sin síntomas digestivos.
+- Sin antecedentes familiares conocidos de cáncer colorrectal.
+- Riesgo cardiovascular bajo (ASCVD 4.5%) pero edad que ya activa tamización colorrectal.
+- Paciente de riesgo promedio que requiere cribado, no esperar síntomas.
 
-Trampa: esperar hasta los 50 años.
+¿Qué dato es clave en el examen?
+- USPSTF y ACS recomiendan iniciar tamización a los 45 años en riesgo promedio.
+- Estrategias válidas: sangre oculta en heces, FIT, ADN fecal o colonoscopia según disponibilidad.
+- La tamización busca detectar lesiones antes de que aparezcan síntomas.
+
+¿Por qué fallan las otras opciones?
+- Esperar hasta los 50 años: desactualizado; el inicio recomendado bajó a los 45 años.
+- Colonoscopia como única estrategia válida: hay múltiples métodos de cribado aceptados.
+- SOH solo si hay síntomas: la tamización es justamente en personas asintomáticas.
+
+Clave: 45 años + riesgo promedio = iniciar cribado colorrectal ya, con cualquier estrategia validada.
 
 Referencias: USPSTF Colorectal Screening; ACS Guidelines; Res. 3280 Colombia.`,
   },
@@ -5333,12 +7284,27 @@ Referencias: USPSTF Colorectal Screening; ACS Guidelines; Res. 3280 Colombia.`,
       "No esperar confirmación etiológica completa para actuar.",
       "APS: detección temprana y protección comunitaria.",
     ],
-    theoryContent: `APS — BY DR Q.
-Sospecha de brote epidémico
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: aumento inusual + posible fuente común (agua estancada), no el diagnóstico específico.
+Esta pregunta evalúa la respuesta de Salud Pública ante un posible brote: la prioridad no es tratar a todos ni esperar confirmación etiológica completa, sino activar vigilancia y control de la fuente.
 
-Secuencia: detectar → notificar → investigar → controlar transmisión. No pruebas masivas ni ATB empírico indiscriminado antes de caracterizar.
+¿Qué está ocurriendo realmente?
+- Aumento inusual de casos de fiebre, mialgias y exantema en una comunidad rural en 2 semanas.
+- El 60% de los afectados vive cerca de un depósito de agua estancada: posible fuente común.
+- El médico de APS detecta un patrón epidemiológico que supera lo esperado para esa población y periodo.
+- Cuadro compatible con brote epidémico (dengue, leptospirosis u otro arbovirus/zoonosis según contexto).
+
+¿Qué dato es clave en el examen?
+- Brote = número de casos superior al esperado para población, lugar y tiempo.
+- La primera acción es notificar al sistema de vigilancia epidemiológica e iniciar investigación de campo.
+- No se debe esperar confirmación etiológica de todos los casos para implementar medidas de control.
+
+¿Por qué fallan las otras opciones?
+- Antibiótico empírico masivo a toda la población: inadecuado sin caracterizar el brote; puede ser inútil o dañino.
+- Pruebas diagnósticas a todos antes de intervenir: retrasa el control de la transmisión.
+- Esperar confirmación etiológica completa: viola el principio de respuesta oportuna en salud pública.
+
+Clave: aumento inusual + fuente común = notificar, investigar y controlar ya.
 
 Referencias: INS Colombia Vigilancia; OPS Investigación de Brotes; CDC Epidemiology Principles.`,
   },
@@ -5365,14 +7331,27 @@ Referencias: INS Colombia Vigilancia; OPS Investigación de Brotes; CDC Epidemio
       "No es calidad técnica ni seguridad del paciente.",
       "Barreras de acceso → inequidades y abandono involuntario del tratamiento.",
     ],
-    theoryContent: `APS — BY DR Q.
-Barreras de acceso
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: la paciente no puede llegar al sistema, no que el tratamiento sea incorrecto.
+Esta pregunta evalúa los determinantes del acceso en APS: cuando el paciente no recoge medicamentos, no siempre es desobediencia; puede ser una barrera estructural del sistema.
 
-2 horas de distancia + sin recursos para transporte + vive sola = falla de accesibilidad (geográfica y económica).
+¿Qué está ocurriendo realmente?
+- Mujer de 58 años con HTA y diabetes que no ha reclamado medicamentos en 3 meses.
+- Vive sola y el centro de salud está a 2 horas de su vivienda.
+- No tiene recursos económicos para transporte.
+- Abandono involuntario del tratamiento por barreras geográficas y económicas, no por mala prescripción.
 
-Trampa: descontrol metabólico → mala calidad. La causa es acceso, no calidad técnica.
+¿Qué dato es clave en el examen?
+- Accesibilidad = posibilidad real de utilizar los servicios de salud cuando se necesitan.
+- Las barreras pueden ser geográficas, económicas, organizacionales o culturales.
+- Este caso es falla de acceso al sistema, no de calidad técnico-científica ni de seguridad del paciente.
+
+¿Por qué fallan las otras opciones?
+- Calidad técnico-científica: el tratamiento puede ser correcto; el problema es que la paciente no puede acceder a él.
+- Seguridad del paciente: no hay error médico ni evento adverso por mala práctica clínica.
+- Vigilancia epidemiológica: no corresponde; es un problema de acceso individual/comunitario.
+
+Clave: distancia + sin dinero para transporte + abandono de medicamentos = accesibilidad, no mala calidad.
 
 Referencias: OMS APS; OPS Renovación APS; Starfield Primary Care.`,
   },
@@ -5415,14 +7394,27 @@ Referencias: OMS APS; OPS Renovación APS; Starfield Primary Care.`,
       "Evaluar riesgo suicida en adultos mayores que viven solos.",
       "Tristeza persistente no es envejecimiento normal.",
     ],
-    theoryContent: `APS — BY DR Q.
-Depresión vs demencia en adulto mayor
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: contexto afectivo (viudez, aislamiento), no los olvidos.
+Esta pregunta evalúa depresión vs demencia en el adulto mayor: los "olvidos" con viudez reciente y Yesavage positivo obligan a tratar depresión antes de etiquetar demencia.
 
-Yesavage = tamización, no diagnóstico definitivo. Abordaje integral: confirmar, evaluar suicidio, apoyo social, seguimiento. Tratar depresión antes de etiquetar demencia.
+¿Qué está ocurriendo realmente?
+- Hombre de 72 años con cansancio y olvidos de 6 meses tras enviudar hace un año.
+- Vive solo, con afecto hiponímico, lenguaje enlentecido y escasa iniciativa.
+- Sin síntomas psicóticos ni ideas delirantes.
+- Escala de Yesavage 9/15, sugestiva de depresión geriátrica (pseudodemencia depresiva posible).
 
-Trampa: olvidos → demencia + RM urgente.
+¿Qué dato es clave en el examen?
+- La depresión en el anciano puede manifestarse con quejas cognitivas que simulan demencia.
+- Yesavage es tamización, no diagnóstico definitivo; requiere abordaje clínico integral.
+- En APS: confirmar depresión, evaluar riesgo suicida, apoyo social y seguimiento estrecho.
+
+¿Por qué fallan las otras opciones?
+- Diagnosticar demencia y remitir a neurología: prematuro sin tratar depresión reversible primero.
+- RM cerebral urgente: no es la prioridad ante cuadro depresivo con contexto afectivo claro.
+- Cambios normales del envejecimiento: la tristeza persistente y el Yesavage positivo no son envejecimiento normal.
+
+Clave: viudez + olvidos + Yesavage positivo = depresión primero, no demencia de entrada.
 
 Referencias: OMS Salud Mental Adulto Mayor; Yesavage GDS; Guías Salud Mental APS.`,
   },
@@ -5461,14 +7453,27 @@ Referencias: OMS Salud Mental Adulto Mayor; Yesavage GDS; Guías Salud Mental AP
       "Ecocardiograma evalúa daño orgánico, no confirma diagnóstico.",
       "Confirmar diagnóstico antes de terapia crónica (salvo emergencias).",
     ],
-    theoryContent: `APS — BY DR Q.
-Confirmación diagnóstica de hipertensión
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: confirmar con el método más preciso, no solo cifras en consultorio.
+Esta pregunta evalúa cómo confirmar hipertensión arterial en APS: las cifras en consultorio no bastan; el MAPA es el estándar de referencia actual.
 
-MAPA: 24 h en actividades habituales → HTA sostenida, bata blanca, enmascarada. Reduce sobreestimación por ansiedad/efecto bata blanca.
+¿Qué está ocurriendo realmente?
+- Hombre de 48 años con obesidad (IMC 32) y dos mediciones elevadas en consultorio (146/94 y 142/92 mmHg).
+- Sin daño de órgano blanco ni síntomas cardiovasculares.
+- Sospecha de hipertensión arterial que requiere confirmación antes de iniciar tratamiento crónico.
+- Posible componente de hipertensión de bata blanca o enmascarada que solo el MAPA detecta.
 
-Trampa: repetir PA en consultorio (estrategia histórica, ya no estándar de oro).
+¿Qué dato es clave en el examen?
+- El monitoreo ambulatorio de presión arterial (MAPA) de 24 horas es el método de referencia para confirmar HTA.
+- Permite distinguir HTA sostenida, de bata blanca y enmascarada.
+- Confirmar el diagnóstico antes de etiquetar al paciente e iniciar terapia indefinida.
+
+¿Por qué fallan las otras opciones?
+- Repetir PA en consultorio tres veces más: estrategia histórica, pero ya no es el estándar de oro.
+- Ecocardiograma: evalúa daño orgánico por HTA, no confirma el diagnóstico hipertensivo.
+- Iniciar tratamiento y reevaluar: se debe confirmar antes de terapia crónica (salvo emergencia hipertensiva).
+
+Clave: PA elevada en consultorio sin daño orgánico = confirmar con MAPA antes de tratar.
 
 Referencias: ESH Hypertension Guidelines; ISH Global Guidelines; Guías HTA APS.`,
   },
@@ -5511,14 +7516,28 @@ Referencias: ESH Hypertension Guidelines; ISH Global Guidelines; Guías HTA APS.
       "También es marcador de disfunción endotelial y riesgo CV.",
       "Tamización anual en diabetes = prevención secundaria.",
     ],
-    theoryContent: `APS — BY DR Q.
-Albuminuria en diabetes
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: detectar daño antes de que sea clínicamente evidente.
+Esta pregunta evalúa por qué tamizamos albuminuria en diabetes asintomática: es el primer signo de daño renal y también un marcador de riesgo cardiovascular sistémico.
 
-Microalbuminuria → ↑ permeabilidad glomerular → aparece antes de ↑ creatinina. También refleja riesgo CV sistémico (disfunción endotelial).
+¿Qué está ocurriendo realmente?
+- Paciente de 55 años con diabetes bien controlada, sin síntomas urinarios.
+- Pregunta por qué necesita albuminuria anual si se siente bien.
+- La nefropatía diabética puede progresar silenciosamente años antes de elevar la creatinina.
+- La albuminuria refleja daño glomerular y disfunción endotelial sistémica.
 
-Trampa: albuminuria solo = enfermedad renal. También estratifica riesgo cardiovascular.
+¿Qué dato es clave en el examen?
+- La microalbuminuria es el primer hallazgo detectable de enfermedad renal diabética.
+- Puede estar presente con creatinina sérica normal.
+- También estratifica riesgo cardiovascular; no es solo un marcador renal.
+- La tamización anual en diabetes es prevención secundaria oportuna.
+
+¿Por qué fallan las otras opciones?
+- Diagnosticar infecciones urinarias asintomáticas: la albuminuria no es prueba de ITU.
+- Predecir cáncer renal: no es el propósito de la tamización de albuminuria en diabetes.
+- Decidir dosis de insulina: la albuminuria no guía ajuste de insulina.
+
+Clave: diabetes asintomática + albuminuria anual = detectar daño renal y riesgo CV antes de síntomas.
 
 Referencias: ADA Standards of Care; KDIGO CKD Guidelines; Res. 3280 Colombia.`,
   },
@@ -5549,14 +7568,27 @@ Referencias: ADA Standards of Care; KDIGO CKD Guidelines; Res. 3280 Colombia.`,
       "Prevención terciaria = reducir discapacidad de enfermedad establecida.",
       "Tamización = buscar enfermedad en aparentemente sanos.",
     ],
-    theoryContent: `APS — BY DR Q.
-Determinantes sociales y ambientales
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave: modificación del entorno donde las personas toman decisiones, no intervención clínica individual.
+Esta pregunta evalúa promoción de la salud vs prevención clínica: modificar el entorno alimentario del barrio es actuar sobre determinantes sociales, no tratar obesidad caso a caso.
 
-Aumentar frutas/verduras y reducir visibilidad de azúcares en tiendas = intervención comunitaria sobre determinantes ambientales.
+¿Qué está ocurriendo realmente?
+- Estrategia de promoción de la salud en un barrio con alta prevalencia de obesidad.
+- Intervención comunitaria: más frutas y verduras en tiendas locales, menos visibilidad de bebidas azucaradas.
+- Se modifica el entorno donde las personas toman decisiones alimentarias diarias.
+- No es consulta individual ni tamización de enfermedad.
 
-Trampa: obesidad → estrategia clínica individual. Aquí es intervención poblacional/ambiental.
+¿Qué dato es clave en el examen?
+- Los determinantes sociales son las condiciones en las que nacen, crecen, trabajan y envejecen.
+- Cambiar disponibilidad y visibilidad de alimentos es intervención sobre determinantes ambientales de la salud.
+- La promoción de la salud actúa sobre factores que facilitan o dificultan elecciones saludables.
+
+¿Por qué fallan las otras opciones?
+- Prevención terciaria: reduce discapacidad de enfermedad ya establecida; aquí se previenen factores de riesgo poblacionales.
+- Tamización poblacional: busca enfermedad en aparentemente sanos; esto no diagnostica, modifica el entorno.
+- Prevención cuaternaria: evita intervenciones médicas innecesarias; no aplica a esta estrategia comunitaria.
+
+Clave: cambiar tiendas del barrio = determinantes sociales/ambientales, no prevención terciaria ni tamización.
 
 Referencias: Carta de Ottawa; OMS Determinantes Sociales; OPS APS; Res. 3280 Colombia.`,
   },
@@ -5599,12 +7631,27 @@ Referencias: Carta de Ottawa; OMS Determinantes Sociales; OPS APS; Res. 3280 Col
       "El calcio regula la interacción actina-miosina.",
       "Inotrópico de elección en choque cardiogénico con bajo gasto.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-Dobutamina · mecanismo inotrópico
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-β1 → proteína Gs → adenilato ciclasa → ↑ AMPc → PKA → fosforila canales de calcio tipo L → ↑ Ca²⁺ intracelular → más puentes cruzados.
+Esta pregunta evalúa el mecanismo celular de la dobutamina en choque cardiogénico: no es digoxina ni milrinona; es agonismo β1 con aumento de AMPc y calcio intracelular.
 
-Trampa: confundir con digoxina (Na/K ATPasa) o milrinona (PDE3).
+¿Qué está ocurriendo realmente?
+- IAM anterior extenso con supradesnivel del ST en V1-V6 y choque cardiogénico (PA 70/40, extremidades frías).
+- Se inicia dobutamina y mejora la presión arterial y el gasto cardíaco.
+- La pregunta pide el mecanismo fisiológico directo del efecto inotrópico positivo a nivel celular.
+- Dobutamina es agonista β1 predominante en el miocardio.
+
+¿Qué dato es clave en el examen?
+- β1 → proteína Gs → adenilato ciclasa → ↑ AMPc intracelular.
+- PKA fosforila canales de calcio tipo L → mayor entrada de Ca²⁺ al miocito.
+- Más calcio disponible para la unión actina-miosina → mayor contractilidad.
+
+¿Por qué fallan las otras opciones?
+- Inhibición Na⁺/K⁺ ATPasa: mecanismo de la digoxina, no de la dobutamina.
+- Bloqueo muscarínico: aumentaría FC por vía parasimpática, no es el mecanismo inotrópico principal de dobutamina.
+- Inhibición fosfodiesterasa (↑ GMPc): mecanismo de milrinona (inotrópico tipo PDE3), no de dobutamina.
+
+Clave: dobutamina = β1 → AMPc → Ca²⁺ → contractilidad; digoxina = Na/K ATPasa; milrinona = PDE3.
 
 Referencias: Katzung; Guyton & Hall; Braunwald's Heart Disease.`,
   },
@@ -5647,12 +7694,27 @@ Referencias: Katzung; Guyton & Hall; Braunwald's Heart Disease.`,
       "Extremidades calientes en fases iniciales (↓ resistencia vascular).",
       "Hiporreactividad a catecolaminas contribuye a hipotensión refractaria.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-Vasoplejía en choque séptico
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Infección → TNF-α/IL-1 → iNOS → NO masivo → guanilato ciclasa → GMPc → vasodilatación sistémica.
+Esta pregunta evalúa la fisiopatología molecular del choque séptico refractario: la vasoplejía no se explica por falla de bomba, sino por producción masiva de óxido nítrico vía iNOS.
 
-Secuencia clásica de examen: sepsis → iNOS → NO → GMPc → vasoplejía.
+¿Qué está ocurriendo realmente?
+- Mujer de 72 años con fiebre, obnubilación, disuria y choque séptico (PA 75/40, lactato 5.5).
+- Extremidades calientes y rubicundas: patrón de choque distributivo con vasodilatación periférica.
+- Persiste hipotensa tras 3 litros de cristaloides y requiere vasopresores a dosis altas.
+- Cuadro de vasoplejía refractaria en sepsis avanzada.
+
+¿Qué dato es clave en el examen?
+- En sepsis, citoquinas (TNF-α, IL-1) inducen sobreexpresión de óxido nítrico sintasa inducible (iNOS).
+- iNOS produce NO masivo → activa guanilato ciclasa → ↑ GMPc → relajación del músculo liso vascular.
+- Secuencia clásica de examen: sepsis → iNOS → NO → GMPc → vasoplejía.
+
+¿Por qué fallan las otras opciones?
+- Inhibición de síntesis de AMPc: el problema es vía GMPc por NO, no falla de AMPc en músculo liso.
+- Bloqueo canales de calcio tipo L: los bloqueadores de calcio empeoran la hipotensión en choque séptico, no explican la vasoplejía.
+- Disminución de prostaciclinas: no es el mecanismo principal de la vasoplejía refractaria en sepsis.
+
+Clave: choque séptico caliente + vasopresores refractarios = iNOS → NO → GMPc → vasoplejía.
 
 Referencias: Harrison's; Surviving Sepsis; Marino's ICU Book.`,
   },
@@ -5695,12 +7757,27 @@ Referencias: Harrison's; Surviving Sepsis; Marino's ICU Book.`,
       "Exceso de Cl⁻ reduce bicarbonato por electroneutralidad.",
       "Persistencia de acidosis ≠ CAD activa si cetonas negativas.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-Acidosis hiperclorémica post-CAD
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Inicial: AG elevado (cetonas). Tratamiento con grandes volúmenes de NaCl 0.9% → ↑ Cl⁻ → ↓ HCO₃⁻ → acidosis hiperclorémica con AG normal.
+Esta pregunta evalúa una trampa post-CAD: la acidosis puede persistir aunque las cetonas ya sean negativas, por acidosis hiperclorémica inducida por solución salina al 0.9%.
 
-Trampa: acidosis persistente → CAD activa. Dato clave: cetonas negativas + Cl 118.
+¿Qué está ocurriendo realmente?
+- Joven con CAD severa (pH 7.10, HCO₃⁻ 8, anión gap elevado por cetonas).
+- Tratamiento con 6 litros de NaCl 0.9% e insulina.
+- A las 24 h las cetonas son negativas (CAD resuelta), pero persiste acidosis (pH 7.25, HCO₃⁻ 14).
+- El cloro subió de 98 a 118 mEq/L: acidosis metabólica hiperclorémica con anión gap normal.
+
+¿Qué dato es clave en el examen?
+- NaCl 0.9% aporta 154 mEq/L de cloro; grandes volúmenes expanden el compartimento extracelular con exceso de Cl⁻.
+- El exceso de cloro reduce bicarbonato por equilibrio de electroneutralidad.
+- Cetonas negativas confirman que la CAD activa ya se resolvió; la acidosis restante es hiperclorémica.
+
+¿Por qué fallan las otras opciones?
+- Cetonas persistentes por resistencia a insulina: las cetonas ya son negativas.
+- Acidosis láctica por hipoperfusión: no explica el cloro de 118 ni el patrón hiperclorémico.
+- Retención de fosfatos con anión gap elevado: el anión gap se normalizó; el problema es el cloro.
+
+Clave: CAD resuelta (cetonas negativas) + Cl⁻ 118 + acidosis = hipercloremia por NaCl 0.9%.
 
 Referencias: Harrison's; ADA Standards; UpToDate: DKA and Hyperchloremic Acidosis.`,
   },
@@ -5739,12 +7816,27 @@ Referencias: Harrison's; ADA Standards; UpToDate: DKA and Hyperchloremic Acidosi
       "Efecto Haldane y supresión del estímulo hipóxico contribuyen, pero no son principales.",
       "Meta SpO₂ en EPOC grave: ~88-92%.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-Hipercapnia inducida por oxígeno en EPOC
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Hiperoxia → pierde vasoconstricción pulmonar hipóxica → ↑ perfusión de alvéolos mal ventilados → peor eliminación de CO₂ → narcosis hipercápnica.
+Esta pregunta evalúa la hipercapnia inducida por oxígeno en EPOC: el mecanismo principal no es solo "apagar el estímulo hipóxico", sino empeorar el desajuste ventilación-perfusión.
 
-Trampa clásica: supresión del estímulo hipóxico como causa principal. La evidencia favorece deterioro V/Q.
+¿Qué está ocurriendo realmente?
+- Mujer con EPOC severo en exacerbación (pH 7.31, pCO₂ 58, pO₂ 45 con aire ambiente).
+- Recibe O₂ a alto flujo (FiO₂ ~100%): SpO₂ sube a 98% pero entra en coma hipercápnico.
+- Gasometría de control: pH 7.15, pCO₂ 85, pO₂ 120.
+- Paradójico: más oxígeno empeoró la hipercapnia y el nivel de conciencia.
+
+¿Qué dato es clave en el examen?
+- La hiperoxia revierte la vasoconstricción pulmonar hipóxica (mecanismo de defensa en EPOC).
+- Se redirige flujo sanguíneo hacia alvéolos mal ventilados → empeora el desajuste V/Q.
+- Menor eliminación de CO₂ → narcosis por CO₂. Meta de SpO₂ en EPOC grave: ~88-92%.
+
+¿Por qué fallan las otras opciones?
+- Supresión completa del estímulo hipóxico: contribuye, pero la evidencia favorece el deterioro V/Q como mecanismo principal.
+- Aumento de producción de CO₂ por hiperoxia: no es el mecanismo central de la hipercapnia inducida por O₂.
+- Disminución de afinidad de Hb por O₂ (efecto Haldane): contribuye secundariamente, no es el mecanismo primario preguntado.
+
+Clave: EPOC + O₂ alto flujo + coma hipercápnico = empeoramiento V/Q por abolir vasoconstricción hipóxica.
 
 Referencias: West's Respiratory Physiology; GOLD Report; Harrison's.`,
   },
@@ -5787,12 +7879,27 @@ Referencias: West's Respiratory Physiology; GOLD Report; Harrison's.`,
       "Hipomagnesemia también favorece toxicidad y arritmias.",
       "Xantopsia + arritmias + hipopotasemia = intoxicación digitálica.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-Hipopotasemia y toxicidad digitálica
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Más potasio → menos unión de digoxina. Menos potasio → más inhibición de Na/K ATPasa → ↑ Ca intracelular → arritmias.
+Esta pregunta evalúa toxicidad digitálica: la hipopotasemia no aumenta niveles séricos de digoxina, sino que facilita su unión a la Na⁺/K⁺ ATPasa por competencia farmacodinámica.
 
-Es farmacodinámico, no farmacocinético. Corregir K⁺ y Mg²⁺ en sospecha de intoxicación.
+¿Qué está ocurriendo realmente?
+- Anciano con IC-FEr en digoxina, enalapril y furosemida (diurético que depleta K⁺).
+- Náuseas, xantopsia (halos amarillentos) y extrasístoles ventriculares.
+- K⁺ 2.8 mEq/L y Mg²⁺ 1.5 mg/dL: electrolitos que favorecen toxicidad.
+- Cuadro clásico de intoxicación digitálica con hipopotasemia e hipomagnesemia.
+
+¿Qué dato es clave en el examen?
+- Digoxina inhibe la Na⁺/K⁺ ATPasa → ↑ Na⁺ intracelular → intercambiador Na/Ca → ↑ Ca²⁺ → inotropismo.
+- Potasio y digoxina compiten por el mismo sitio de unión en la bomba.
+- Con hipopotasemia hay menor competencia → más unión de digoxina → más inhibición → más toxicidad (farmacodinámico, no farmacocinético).
+
+¿Por qué fallan las otras opciones?
+- Aumento de eliminación renal con metabolitos tóxicos: no es el mecanismo; la creatinina está normal.
+- Disminución de unión a proteínas plasmáticas: no explica la competencia en la bomba sodio-potasio.
+- Degradación intracelular de la bomba: no es el mecanismo de potenciación por hipopotasemia.
+
+Clave: xantopsia + arritmias + hipopotasemia en digoxina = más unión a Na/K ATPasa por competencia con K⁺.
 
 Referencias: Katzung; Goodman & Gilman's; Braunwald's Heart Disease.`,
   },
@@ -5835,12 +7942,27 @@ Referencias: Katzung; Goodman & Gilman's; Braunwald's Heart Disease.`,
       "Manifestaciones: arritmias de reperfusión, miocardio aturdido, ↑ biomarcadores.",
       "Más oxígeno no siempre significa menos daño celular.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-Lesión por isquemia-reperfusión
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Isquemia → reapertura → ROS masivos + entrada de Ca²⁺ → daño mitocondrial → necrosis/apoptosis adicional + arritmias.
+Esta pregunta evalúa la lesión por reperfusión en IAM: restablecer el flujo salva al paciente, pero puede dañar miocito adicionalmente por estrés oxidativo y sobrecarga de calcio.
 
-Trampa: pensar que reperfusión solo beneficia. Coexisten beneficio hemodinámico y lesión celular.
+¿Qué está ocurriendo realmente?
+- IAM con elevación del ST en cara anteroseptal tratado con angioplastia primaria exitosa.
+- Minutos después de la reperfusión: arritmias ventriculares, subida brusca de biomarcadores y deterioro transitorio de contractilidad regional.
+- Daño paradójico que ocurre DESPUÉS de recuperar el flujo, no durante la isquemia.
+- Miocardio aturdido (stunning) y arritmias de reperfusión como manifestaciones clínicas.
+
+¿Qué dato es clave en el examen?
+- El restablecimiento súbito del flujo genera explosión de especies reactivas de oxígeno (ROS).
+- Sobrecarga de calcio intracelular y apertura del poro de transición mitocondrial.
+- Necrosis/apoptosis adicional al daño isquémico inicial + arritmias ventriculares.
+
+¿Por qué fallan las otras opciones?
+- Microtrombos por vía extrínseca: no explica el patrón inmediato post-reperfusión con ROS.
+- Inhibición de fosforilación oxidativa por falta de O₂: al reperfundir hay oxígeno; el daño es por exceso de estrés oxidativo, no por hipoxia.
+- Cetonas en miocito isquémico: no es el mecanismo de lesión por reperfusión.
+
+Clave: PCI exitosa + arritmias + ↑ troponina inmediata = lesión por reperfusión (ROS + Ca²⁺ + mitocondria).
 
 Referencias: Robbins & Cotran; Braunwald's; ESC ACS Guidelines.`,
   },
@@ -5883,12 +8005,27 @@ Referencias: Robbins & Cotran; Braunwald's; ESC ACS Guidelines.`,
       "Metimazol/PTU inhiben síntesis; propranolol reduce síntomas y conversión.",
       "Preferido en tirotoxicosis severa y tormenta tiroidea.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-Propranolol en tirotoxicosis
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Efecto adicional clave: ↓ conversión T4 → T3 por inhibición parcial de 5'-desyodasa. Todos los β-bloqueadores controlan síntomas adrenérgicos; propranolol tiene plus endocrinológico.
+Esta pregunta evalúa por qué el propranolol es preferido en tirotoxicosis severa: además del betabloqueo, inhibe la conversión periférica de T4 a T3.
 
-Trampa: responder solo "disminuye FC". La pregunta pide el mecanismo que lo diferencia.
+¿Qué está ocurriendo realmente?
+- Mujer de 35 años con Enfermedad de Graves: TSH suprimida, T4 libre elevado, exoftalmos.
+- Síntomas adrenérgicos: palpitaciones, temblor, sudoración, pérdida de peso.
+- Se inicia propranolol a dosis altas para control sintomático.
+- La pregunta pide el mecanismo bioquímico que diferencia propranolol de otros betabloqueadores.
+
+¿Qué dato es clave en el examen?
+- T3 es la hormona metabólicamente más activa; gran parte se forma por conversión periférica de T4.
+- A dosis altas, el propranolol inhibe parcialmente la 5'-desyodasa.
+- Esto reduce la conversión T4 → T3, además de bloquear receptores β (FC, temblor, ansiedad).
+
+¿Por qué fallan las otras opciones?
+- Inhibición de peroxidasa tiroidea: mecanismo de metimazol/PTU, no de propranolol.
+- Inhibición de liberación hormonal del coloide: mecanismo de yodo/yoduros, no de betabloqueadores.
+- Inducción enzimática hepática de depuración: no es el efecto diferencial del propranolol.
+
+Clave: propranolol en Graves = β-bloqueo + inhibición parcial de 5'-desyodasa (↓ T4→T3).
 
 Referencias: Williams Endocrinology; Katzung; ATA Hyperthyroidism Guidelines.`,
   },
@@ -5931,12 +8068,27 @@ Referencias: Williams Endocrinology; Katzung; ATA Hyperthyroidism Guidelines.`,
       "Caída plaquetas >50%. Complicación principal: trombosis, no sangrado.",
       "Suspender toda heparina (incluida HBPM) e iniciar anticoagulante alternativo.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-HIT tipo II
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Paradoja: anticoagulado que trombosis. Heparina + PF4 → IgG → activación plaquetaria → trombina → trombosis + consumo de plaquetas.
+Esta pregunta evalúa la HIT tipo II: la paradoja del paciente anticoagulado que desarrolla trombosis, por activación inmune de plaquetas mediada por heparina-PF4.
 
-Trampa: "heparina destruye plaquetas". Es enfermedad inmunológica protrombótica.
+¿Qué está ocurriendo realmente?
+- Hombre con TEP en heparina no fraccionada día 6 de tratamiento.
+- Dolor súbito, frialdad y ausencia de pulsos en miembro inferior: trombosis arterial nueva.
+- Plaquetas caen de 250,000 a 35,000/µL (>50% de descenso).
+- Cuadro clásico de trombocitopenia inducida por heparina (HIT) tipo II.
+
+¿Qué dato es clave en el examen?
+- Heparina se une al factor plaquetario 4 (PF4) formando un complejo inmunogénico.
+- Se generan anticuerpos IgG que activan plaquetas vía receptor FcγIIa.
+- Activación masiva → generación de trombina → trombosis (paradoja protrombótica) + consumo plaquetario.
+
+¿Por qué fallan las otras opciones?
+- Toxicidad medular directa: la HIT no es aplasia medular; las plaquetas se consumen por activación, no por falla de producción.
+- Activación del complemento con hemólisis: no es el mecanismo central de HIT.
+- Inhibición de trombopoyetina hepática: no explica trombosis ni el patrón inmunológico.
+
+Clave: heparina día 5-10 + caída plaquetas + trombosis nueva = IgG anti heparina-PF4 → activación plaquetaria.
 
 Referencias: Harrison's; Williams Hematology; ASH HIT Guidelines.`,
   },
@@ -5967,12 +8119,27 @@ Referencias: Harrison's; Williams Hematology; ASH HIT Guidelines.`,
       "Coagulasa: fibrina alrededor de la bacteria (después de adhesión).",
       "Proteína A: evasión inmune (une Fc de IgG).",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-S. aureus · adhesión valvular
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Secuencia: lesión endotelial → exposición de fibronectina/fibrinógeno → MSCRAMMs → colonización → vegetación.
+Esta pregunta evalúa virulencia de Staphylococcus aureus en endocarditis de válvula tricúspide por drogas IV: la adhesión inicial depende de MSCRAMMs, no de coagulasa.
 
-Trampa: coagulasa (identifica S. aureus, pero no es adhesión inicial).
+¿Qué está ocurriendo realmente?
+- Hombre de 32 años, usuario de drogas IV, con fiebre y soplo tricuspídeo.
+- Vegetación grande en válvula tricúspide (patrón clásico en endocarditis por drogas IV).
+- Hemocultivos: cocos Gram positivos en racimos, catalasa positivo, coagulasa positivo = S. aureus.
+- La pregunta pide el factor de virulencia de la adhesión inicial al endotelio valvular dañado.
+
+¿Qué dato es clave en el examen?
+- La lesión endotelial expone fibronectina y fibrinógeno en la superficie valvular.
+- Las adhesinas MSCRAMMs (Microbial Surface Components Recognizing Adhesive Matrix Molecules) median la adhesión inicial.
+- Secuencia: lesión → exposición de matriz → MSCRAMMs → colonización → vegetación.
+
+¿Por qué fallan las otras opciones?
+- Coagulasa: convierte fibrinógeno en fibrina y protege a la bacteria; actúa después de la adhesión, no es el paso inicial.
+- Proteína A: une el dominio Fc de IgG y evade inmunidad; no media adhesión valvular inicial.
+- Alfa-toxina: daña membranas celulares; no es el mediador de adhesión inicial.
+
+Clave: S. aureus + drogas IV + tricúspide = MSCRAMMs para adhesión a fibronectina/fibrinógeno; coagulasa es después.
 
 Referencias: Murray Medical Microbiology; Mandell; Harrison's.`,
   },
@@ -6015,12 +8182,28 @@ Referencias: Murray Medical Microbiology; Mandell; Harrison's.`,
       "Páncreas: ↓ bicarbonato y agua → secreciones espesas → obstrucción.",
       "Tos crónica + pancreatitis joven + sudor positivo = fibrosis quística.",
     ],
-    theoryContent: `CIENCIAS BÁSICAS — BY DR Q.
-Fibrosis quística · páncreas
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Mutación CFTR → ↓ secreción de Cl⁻ y HCO₃⁻ en ductos → ↓ agua → secreciones viscosas → obstrucción → fibrosis/calcificaciones.
+Esta pregunta evalúa fibrosis quística más allá del pulmón: la mutación CFTR altera secreción ductal pancreática de cloro y bicarbonato, causando pancreatitis crónica joven.
 
-En sudor: CFTR falla en reabsorción de Cl⁻ → sudor hiperclorémico.
+¿Qué está ocurriendo realmente?
+- Hombre de 22 años con pancreatitis crónica (calcificaciones en TAC) y dolor epigástrico recurrente.
+- Tos crónica productiva desde la infancia (compromiso respiratorio).
+- Prueba de sudor con cloruros 85 mmol/L (normal <40): diagnóstico de fibrosis quística.
+- Enfermedad autosómica recesiva por defecto del canal CFTR.
+
+¿Qué dato es clave en el examen?
+- CFTR es canal de cloro regulado por ATP en epitelios exocrinos.
+- En ductos pancreáticos: falla la secreción de Cl⁻ y HCO₃⁻ → menos agua luminal → secreciones espesas.
+- Obstrucción ductal → pancreatitis crónica e insuficiencia exocrina.
+- En sudor: CFTR no reabsorbe Cl⁻ → sudor hiperclorémico (test diagnóstico).
+
+¿Por qué fallan las otras opciones?
+- Aumento de secreción de enzimas activadas: el problema es viscosidad/obstrucción por falta de fluido alcalino, no hipersecreción enzimática primaria.
+- Incremento de absorción de bicarbonato: es lo opuesto; hay disminución de secreción de HCO₃⁻.
+- Disminución de síntesis de tripsinógeno: es consecuencia tardía (insuficiencia exocrina), no la alteración fisiológica directa del defecto CFTR.
+
+Clave: tos crónica + pancreatitis joven + sudor Cl⁻ alto = CFTR → ↓ HCO₃⁻/agua ductal → obstrucción.
 
 Referencias: Guyton & Hall; Robbins & Cotran; Cystic Fibrosis Foundation Guidelines.`,
   },

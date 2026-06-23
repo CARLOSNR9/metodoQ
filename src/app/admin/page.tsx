@@ -26,6 +26,11 @@ const quickLinks = [
     href: "/admin/metricas",
   },
   {
+    title: "Vista previa de preguntas",
+    description: "Revisa enunciado, opciones y retroalimentación como la ve el estudiante.",
+    href: "/admin/preguntas",
+  },
+  {
     title: "Contenido",
     description: "Banco de preguntas y clases en vivo.",
     href: "/admin/contenido",
