@@ -393,7 +393,15 @@ export function ProDashboardView({
         </>
       )}
 
-      {isUccMiPro && hasDiagnosticData && <UccPastoInsightCard />}
+      {isUccMiPro && hasDiagnosticData && (
+        <UccPastoInsightCard
+          totalQuestions={totalQuestions}
+          totalCorrect={cumulative.totalCorrect}
+          totalWrong={cumulative.totalWrong}
+          correctTopics={mapTopicStats(profile?.topicStats, "correct")}
+          wrongTopics={mapTopicStats(profile?.topicStats, "wrong")}
+        />
+      )}
 
       <div className="grid gap-10 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-10">
