@@ -1512,33 +1512,79 @@ Referencias
     explanation:
       "Tropismo temporal (RM), crisis focales con alucinaciones olfatorias, LCR linfocitario con eritrocitos y glucosa relativamente normal: encefalitis herpética por HSV-1. Aciclovir IV 10 mg/kg c/8 h empírico de inmediato, antes de PCR en LCR.",
     keyPoints: [
-      "HSV-1: lóbulos temporales + olor/sabor extraño + automatismos orales.",
-      "LCR: linfocitos + eritrocitos + glucosa normal vs bacteriana.",
-      "Aciclovir empírico sin esperar PCR.",
+      "Cuando veas: fiebre + confusión + alucinaciones olfatorias + RM con afectación temporal/hipocampo.",
+      "Debes pensar en: encefalitis herpética por HSV-1 → aciclovir IV empírico de inmediato.",
+      "LCR: linfocitos + eritrocitos + glucosa relativamente normal (vs meningitis bacteriana).",
+      "No esperar PCR en LCR para iniciar aciclovir; el retraso causa daño permanente o muerte.",
+      "Tema: Encefalitis — encefalitis herpética por HSV-1.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa encefalitis herpética: el tropismo temporal, las alucinaciones olfatorias y el LCR con eritrocitos obligan a aciclovir empírico de inmediato.
+Esta es una pregunta clásica de neurología e infectología porque evalúa el reconocimiento de la encefalitis herpética, una emergencia neurológica donde cada hora de retraso en aciclovir aumenta la mortalidad.
+
+La clave no es esperar confirmación microbiológica.
+La clave es:
+Iniciar aciclovir IV empírico en los primeros 30 minutos ante el patrón clínico-radiológico típico.
 
 ¿Qué está ocurriendo realmente?
-- Hombre previamente sano con fiebre, confusión y afasia sensitiva (Wernicke).
-- Crisis con automatismos orales, chasquido labial y olor a caucho quemado (alucinación olfatoria).
-- LCR: pleocitosis linfocitaria, eritrocitos, glucosa relativamente normal.
-- RM: hiperintensidad en polos temporales e hipocampo izquierdo.
+El paciente presenta:
+• Hombre de 42 años previamente sano.
+• Fiebre, confusión, afasia sensitiva (área de Wernicke).
+• Crisis con automatismos orales, chasquido labial y olor a caucho quemado (alucinación olfatoria).
+• Kernig y Brudzinski negativos (no es meningitis pura).
+• LCR: 150 leuc/mm³ (90% linfocitos), 450 eritrocitos, glucosa 55 mg/dL (sérica 90).
+• RM: hiperintensidad FLAIR/DWI en polos temporales, hipocampo y cara orbitaria frontal izquierda.
 
-¿Qué dato es clave en el examen?
-- HSV-1 asciende por tracto olfatorio/trigémino y causa necrosis del lóbulo temporal medial.
-- LCR con linfocitos + eritrocitos + glucosa normal diferencia de meningitis bacteriana.
-- Aciclovir IV empírico en los primeros 30 minutos; el retraso causa daño cognitivo permanente o muerte.
+Recordemos la encefalitis por HSV-1:
+• Ascenso por tracto olfatorio o trigémino.
+• Tropismo por lóbulo temporal medial e hipocampo.
+• Necrosis hemorrágica del parénquima temporal.
+• LCR: pleocitosis linfocitaria + eritrocitos + glucosa relativamente conservada.
+
+Por lo tanto:
+No es meningitis bacteriana (neutrófilos, glucosa muy baja).
+No es encefalitis anti-NMDA (cuadro psiquiátrico, teratoma ovárico).
+Es encefalitis herpética que requiere tratamiento inmediato.
+
+¿Por qué la opción C es la respuesta correcta?
+Agente: HSV-1.
+Tratamiento: aciclovir IV 10 mg/kg c/8 h de inmediato.
+El retraso en iniciar aciclovir se asocia a daño cognitivo permanente o muerte.
+La PCR en LCR confirma, pero no debe retrasar el inicio del tratamiento.
 
 ¿Por qué fallan las otras opciones?
-- Meningitis neumocócica: LCR típicamente con glucosa muy baja y neutrófilos predominantes.
-- Encefalitis anti-NMDA: cuadro psiquiátrico/ovario teratoma; RM temporal no es el patrón clásico aquí.
-- Toxoplasmosis: en inmunosuprimidos con lesiones multifocales; no este patrón en sano.
+Opción A (meningitis neumocócica): LCR con neutrófilos predominantes y glucosa muy baja; ceftriaxona no cubre HSV.
+Opción B (encefalitis anti-NMDA): cuadro psiquiátrico/ovario teratoma; RM temporal no es el patrón clásico aquí.
+Opción D (toxoplasmosis): en inmunosuprimidos con lesiones multifocales; no en paciente previamente sano.
 
-Clave: fiebre + comportamiento bizarro + olores extraños + RM temporal = aciclovir ya, sin esperar PCR.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Fiebre + LCR alterado = meningitis bacteriana" o "esperar PCR para tratar".
+Pero el examen exige reconocer:
+Tropismo temporal + alucinaciones olfatorias + eritrocitos en LCR.
+Aquí los datos decisivos son:
+Olor a caucho quemado + RM en polos temporales e hipocampo.
 
-Referencias: IDSA Guidelines for Encephalitis.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar encefalitis ante fiebre + alteración conductual + crisis focales.
+2. Solicitar RM cerebral y punción lumbar.
+3. Iniciar aciclovir IV empírico sin esperar PCR.
+4. Continuar mínimo 14-21 días según evolución.
+
+Perlas de examen
+✅ HSV-1: lóbulos temporales + olor/sabor extraño + automatismos orales.
+✅ LCR: linfocitos + eritrocitos + glucosa normal vs bacteriana.
+✅ Aciclovir empírico sin esperar PCR.
+✅ Kernig/Brudzinski negativos no excluyen encefalitis.
+✅ El olor a caucho quemado es alucinación olfatoria por afectación temporal.
+
+Referencias
+• IDSA Guidelines for the Management of Encephalitis.
+• AAN Practice Guidelines — Viral Encephalitis.
+• Harrison's Principles of Internal Medicine.
+• Tintinalli Emergency Medicine.
+• UpToDate: Herpes simplex virus type 1 encephalitis.`,
   },
   {
     id: "dr-q-17",
@@ -1574,34 +1620,78 @@ Referencias: IDSA Guidelines for Encephalitis.`,
     explanation:
       "Síndrome alterno (cara ipsilateral + cuerpo contralateral) + disfagia/ronquera (IX-X) + Horner + ataxia ipsilateral + fuerza intacta = bulbo lateral izquierdo (Wallenberg), típicamente por oclusión de PICA o vertebral ipsilateral.",
     keyPoints: [
-      "Alterno cara/cuerpo = tronco encefálico.",
-      "Fuerza intacta → lesión lateral (no piramidal).",
-      "AICA afecta VII-VIII; PICA afecta IX-X.",
+      "Cuando veas: síndrome alterno (cara ipsilateral + cuerpo contralateral) + disfagia + Horner + ataxia sin debilidad.",
+      "Debes pensar en: síndrome de Wallenberg (bulbo lateral) → oclusión de PICA o arteria vertebral.",
+      "Fuerza intacta → lesión lateral del bulbo, no medial (piramides preservadas).",
+      "AICA afecta VII-VIII (pontino); PICA afecta IX-X (bulbar lateral).",
+      "Tema: ACV — localización en tronco encefálico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa localización en tronco encefálico: el síndrome alterno (cara ipsilateral, cuerpo contralateral) con fuerza intacta es Wallenberg por oclusión de PICA o vertebral.
+Esta es una pregunta clásica de neurología porque evalúa la localización topográfica en el tronco encefálico mediante el síndrome alterno de sensitividad.
+
+La clave no es buscar debilidad motora.
+La clave es:
+Identificar el patrón alterno (cara ipsilateral, cuerpo contralateral) con fuerza conservada como Wallenberg.
 
 ¿Qué está ocurriendo realmente?
-- Hombre con vértigo incapacitante y disfagia súbita de 2 horas.
-- Horner izquierdo, voz ronca, reflejo nauseoso ausente (núcleo ambiguo IX-X).
-- ↓ dolor/temperatura en hemicara izquierda y hemicuerpo derecho (síndrome alterno).
-- Ataxia ipsilateral con fuerza 5/5 en las cuatro extremidades.
+El paciente presenta:
+• Hombre de 65 años con HTA y tabaquismo.
+• Vértigo incapacitante y disfagia súbita (2 horas).
+• Horner izquierdo, voz ronca, reflejo nauseoso ausente (IX-X).
+• ↓ dolor/temperatura hemicara izquierda y hemicuerpo derecho (síndrome alterno).
+• Ataxia ipsilateral severa; fuerza 5/5 en cuatro extremidades.
 
-¿Qué dato es clave en el examen?
-- Núcleo espinal del V → ↓ dolor/temperatura facial ipsilateral.
-- Espinotalámico → ↓ dolor/temperatura corporal contralateral.
-- Pedúnculo cerebeloso inferior → ataxia ipsilateral; pirámides intactas → fuerza conservada.
-- Lesión bulbar lateral izquierda = síndrome de Wallenberg (PICA o arteria vertebral izquierda).
+Recordemos la anatomía del bulbo lateral:
+• Núcleo espinal del V → ↓ dolor/temperatura facial ipsilateral.
+• Tracto espinotalámico → ↓ dolor/temperatura corporal contralateral.
+• Núcleo ambiguo (IX-X) → disfagia, ronquera, reflejo nauseoso ausente.
+• Vía simpática descendente → síndrome de Horner ipsilateral.
+• Pedúnculo cerebeloso inferior → ataxia ipsilateral.
+• Pirámides intactas → fuerza conservada.
+
+Por lo tanto:
+Lesión bulbar lateral izquierda = síndrome de Wallenberg.
+Vaso típico: arteria vertebral o PICA izquierda.
+
+¿Por qué la opción C es la respuesta correcta?
+Síndrome bulbar lateral izquierdo (Wallenberg).
+Por oclusión de arteria vertebral o PICA (posterior inferior cerebelosa) izquierda.
+Es el ACV de tronco encefálico más preguntado en residencias.
 
 ¿Por qué fallan las otras opciones?
-- Bulbar medial por arteria espinal anterior: afecta pirámides → habría debilidad.
-- Pontino lateral por AICA: afecta VII-VIII (facial/auditivo), no el patrón bulbar clásico.
-- Mesencefálico de Weber: III par + contralateral, no disfagia ni síndrome alterno sensitivo.
+Opción A (bulbar medial + arteria espinal anterior): afecta pirámides → habría debilidad motora.
+Opción B (pontino lateral + AICA): afecta VII-VIII (facial/auditivo), no el patrón bulbar con IX-X.
+Opción D (mesencefálico de Weber + PCA): III par + hemiplejía contralateral; no disfagia ni síndrome alterno sensitivo.
 
-Clave: sensibilidad cruzada + disfagia + Horner + ataxia sin debilidad = Wallenberg.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Vértigo = vestibular periférico" o "disfagia = ACV bulbar medial".
+Pero el examen exige integrar:
+Síndrome alterno + núcleos craneales bajos + ataxia sin debilidad.
+Aquí el dato decisivo es:
+↓ sensibilidad cara izquierda + cuerpo derecho + fuerza intacta.
 
-Referencias: AHA/ASA y ESO Guidelines for Acute Ischemic Stroke.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar síndrome alterno (localización en tronco).
+2. Evaluar fuerza: intacta → lesión lateral; débil → lesión medial.
+3. Correlacionar núcleos craneales (IX-X = bulbo, VII-VIII = puente).
+4. Asociar vaso: PICA/vertebral = Wallenberg.
+
+Perlas de examen
+✅ Alterno cara/cuerpo = tronco encefálico.
+✅ Fuerza intacta → lesión lateral (no piramidal).
+✅ AICA afecta VII-VIII; PICA afecta IX-X.
+✅ Horner + disfagia + ataxia ipsilateral = tríada de Wallenberg.
+✅ El vértigo en ACV de tronco suele ser incapacitante y con nistagmo central.
+
+Referencias
+• AHA/ASA Guidelines for the Early Management of Acute Ischemic Stroke.
+• European Stroke Organisation (ESO) Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Tintinalli Emergency Medicine.
+• UpToDate: Posterior circulation cerebrovascular syndromes.`,
   },
   {
     id: "dr-q-18",
@@ -1633,33 +1723,76 @@ Referencias: AHA/ASA y ESO Guidelines for Acute Ischemic Stroke.`,
     explanation:
       "HIC en paciente con apixabán (inhibidor directo del factor Xa): andexanet alfa es antídoto específico de primera línea; si no disponible, CCP4. Control PA objetivo PAS 140 mmHg. Idarucizumab solo para dabigatrán; vitamina K/PFC para warfarina; protamina para heparina.",
     keyPoints: [
-      "Apixabán/rivaroxabán = anti-Xa → andexanet o CCP4.",
-      "Dabigatrán = anti-IIa → idarucizumab.",
-      "PT/INR no reflejan bien anticoagulación por DOAC.",
+      "Cuando veas: HIC en paciente anticoagulado con apixabán/rivaroxabán (inhibidor del factor Xa).",
+      "Debes pensar en: andexanet alfa o CCP4 + control de PA (PAS ~140 mmHg).",
+      "Idarucizumab solo para dabigatrán (anti-IIa); protamina para heparina; vitamina K para warfarina.",
+      "PT/INR no reflejan bien la anticoagulación por DOAC.",
+      "Tema: Hemorragia intracraneal — reversión de anticoagulación.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa reversión de anticoagulación en HIC: cada anticoagulante tiene su antídoto; apixabán requiere andexanet o CCP4, no idarucizumab.
+Esta es una pregunta clásica de neurointensivismo porque evalúa la reversión específica de anticoagulantes en HIC: cada fármaco tiene su antídoto y confundirlos es un error grave de examen.
+
+La clave no es usar el antídoto de otro anticoagulante.
+La clave es:
+Identificar el DOAC específico (apixabán = anti-Xa) y reversar con andexanet alfa o CCP4.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 75 años en apixabán (anti-Xa) con HIC putaminal izquierda de 40 cc y spot sign.
-- Última dosis hace 3 horas; INR 1.2 (no refleja bien anticoagulación por DOAC).
-- Hemiplejía derecha y desviación de mirada: emergencia neuroquirúrgica y hemostática.
-- Necesidad de reversión específica del inhibidor del factor Xa.
+La paciente presenta:
+• Mujer de 75 años con FA y TVP previa en apixabán 5 mg c/12 h.
+• Última dosis hace 3 horas.
+• Hemiplejía derecha y desviación de mirada súbitas.
+• TAC: HIC putaminal izquierda 40 cc, volcado intraventricular, spot sign.
+• PT/PTT discretamente prolongados, INR 1.2 (no refleja bien DOAC).
 
-¿Qué dato es clave en el examen?
-- Apixabán/rivaroxabán = inhibidores directos del factor Xa → andexanet alfa (1.ª línea) o CCP4.
-- Control agresivo de PA (objetivo PAS ~140 mmHg) simultáneamente.
-- PT/INR no son fiables para monitorizar DOAC.
+Recordemos los antídotos por anticoagulante:
+• Apixabán/rivaroxabán (anti-Xa) → andexanet alfa (1.ª línea) o CCP4.
+• Dabigatrán (anti-IIa) → idarucizumab.
+• Warfarina → vitamina K + plasma fresco/concentrado de complejo protrombínico.
+• Heparina → protamina sulfato.
+
+Por lo tanto:
+No se usa idarucizumab (es para dabigatrán).
+No se usa vitamina K (es para warfarina).
+Se requiere reversión específica del inhibidor del factor Xa.
+
+¿Por qué la opción B es la respuesta correcta?
+Andexanet alfa (antídoto específico de apixabán/rivaroxabán).
+Si no disponible: complejo protrombínico de 4 factores (CCP4).
+Simultáneamente: control agresivo de PA con labetalol IV (objetivo PAS ~140 mmHg).
 
 ¿Por qué fallan las otras opciones?
-- Idarucizumab: antídoto específico solo para dabigatrán (anti-IIa), no para apixabán.
-- Vitamina K y plasma fresco: para warfarina, no para DOAC.
-- Protamina: revierte heparina, no apixabán.
+Opción A (idarucizumab): antídoto específico solo para dabigatrán (anti-IIa), no para apixabán.
+Opción C (vitamina K + PFC): indicado para warfarina, no para DOAC.
+Opción D (protamina): revierte heparina, no apixabán.
 
-Clave: HIC en paciente con "xaban" = andexanet o CCP4 + control de PA; dabigatrán = idarucizumab.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Anticoagulado con HIC = vitamina K" o "DOAC = idarucizumab para todos".
+Pero el examen exige distinguir:
+Anti-Xa vs anti-IIa vs warfarina vs heparina.
+Aquí el dato decisivo es:
+Apixabán (última dosis hace 3 h) con HIC expansiva.
 
-Referencias: AHA/ASA 2022 ICH Guidelines; Neurocritical Care Society Antithrombotic Reversal Guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar HIC en TAC.
+2. Identificar el anticoagulante específico del paciente.
+3. Administrar antídoto correspondiente + control de PA.
+4. Evaluación neuroquirúrgica urgente si indicada.
+
+Perlas de examen
+✅ Apixabán/rivaroxabán = anti-Xa → andexanet o CCP4.
+✅ Dabigatrán = anti-IIa → idarucizumab.
+✅ PT/INR no reflejan bien anticoagulación por DOAC.
+✅ Control de PA (PAS <140 mmHg) es simultáneo a la reversión.
+✅ Spot sign sugiere expansión hematómica activa.
+
+Referencias
+• AHA/ASA 2022 Guidelines for the Management of Spontaneous ICH.
+• Neurocritical Care Society Antithrombotic Reversal Guidelines.
+• Tintinalli Emergency Medicine.
+• UpToDate: Management of warfarin-associated intracerebral hemorrhage and reversal of DOACs.`,
   },
   {
     id: "dr-q-19",
@@ -1695,33 +1828,78 @@ Referencias: AHA/ASA 2022 ICH Guidelines; Neurocritical Care Society Antithrombo
     explanation:
       "Síndrome medular completo agudo con choque espinal (arreflexia, flacidez). Ombligo = dermatoma T10. Cáncer prostático osteofílico: compresión medular maligna hasta demostrar lo contrario → RM torácica urgente con contraste.",
     keyPoints: [
+      "Cuando veas: cáncer metastásico + paraplejía aguda + nivel sensitivo al ombligo + retención urinaria.",
+      "Debes pensar en: compresión medular maligna T10 → RM torácica urgente con contraste.",
       "Niveles: pezones T4, ombligo T10, pliegue inguinal L1.",
-      "Cáncer + déficit medular agudo = metástasis epidural.",
-      "RM define cirugía vs radioterapia; retraso = paraplejía permanente.",
+      "Choque espinal agudo: arreflexia y flacidez iniciales (no asumir lesión permanente sin RM).",
+      "Tema: Oncología — compresión medular maligna.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa compresión medular maligna: el nivel sensitivo al ombligo es T10, y en cáncer prostático la RM torácica urgente no puede esperar.
+Esta es una pregunta clásica de neurología y oncología porque evalúa la compresión medular maligna, una emergencia oncológica donde el retraso en RM causa paraplejía permanente.
+
+La clave no es confundir con cauda equina ni demorar la neuroimagen.
+La clave es:
+Correlacionar el nivel sensitivo (ombligo = T10) con RM torácica urgente en paciente oncológico.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 65 años con cáncer de próstata metastásico.
-- Paraplejía 0/5 en EEII con arreflexia y tono flácido (choque espinal agudo).
-- Pérdida sensitiva total desde ombligo hacia abajo y retención urinaria.
-- Síndrome medular completo agudo en paciente oncológico.
+El paciente presenta:
+• Hombre de 65 años con cáncer de próstata metastásico (osteofílico).
+• Debilidad progresiva en piernas e imposibilidad para orinar (24 h).
+• Paraplejía 0/5 en EEII con arreflexia y tono flácido (choque espinal agudo).
+• Pérdida sensitiva total desde ombligo hacia abajo.
+• Vejiga distendida (retención urinaria).
+• Fuerza EESS normal.
 
-¿Qué dato es clave en el examen?
-- Niveles dermatómicos: pezones T4, ombligo T10, pliegue inguinal L1.
-- Cáncer + déficit medular agudo = compresión medular maligna hasta demostrar lo contrario.
-- RM con contraste de columna torácica urgente define cirugía vs radioterapia; el retraso causa paraplejía permanente.
+Recordemos los niveles dermatómicos:
+• Pezones = T4.
+• Ombligo = T10.
+• Pliegue inguinal = L1.
+• Cáncer prostático metastásico → metástasis óseas vertebrales torácicas frecuentes.
+
+Por lo tanto:
+Nivel sensitivo al ombligo = lesión medular T10.
+No es cauda equina (sacral, arreflexia tardía).
+Es compresión medular maligna hasta demostrar lo contrario.
+
+¿Por qué la opción B es la respuesta correcta?
+Nivel T10 (ombligo).
+Lesión compresiva/intrínseca de médula torácica baja.
+RM de columna torácica urgente con contraste.
+Define si cirugía descompresiva o radioterapia urgente; iniciar dexametasona empírica.
 
 ¿Por qué fallan las otras opciones?
-- T4 (pezones) con RM lumbosacra: el nivel sensitivo es más bajo (T10), no cauda equina.
-- L1 con RM de cerebro: nivel y localización incorrectos.
-- T12 con angiografía: no es el estudio de primera línea; la compresión epidural se confirma con RM.
+Opción A (T4 + RM lumbosacra): nivel sensitivo más bajo (T10); cauda equina no explica nivel umbilical con choque espinal medular.
+Opción C (L1 + RM cerebro): nivel y localización de imagen incorrectos.
+Opción D (T12 + angiografía): angiografía no es estudio de primera línea; la compresión epidural se confirma con RM.
 
-Clave: cáncer prostático + nivel umbilical = compresión T10 → RM torácica urgente + dexametasona empírica.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Paraplejía + cáncer = cauda equina" o "arreflexia = lesión irreversible, no operar".
+Pero el examen exige:
+Nivel sensitivo preciso + RM urgente antes de que sea irreversible.
+Aquí el dato decisivo es:
+Ombligo como nivel sensitivo en cáncer de próstata.
 
-Referencias: AAN Guidelines; guías oncológicas de emergencias neurológicas.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar compresión medular en cáncer + déficit medular agudo.
+2. Determinar nivel sensitivo (ombligo = T10).
+3. RM torácica urgente con contraste.
+4. Dexametasona empírica + derivación urinaria + tratamiento definitivo.
+
+Perlas de examen
+✅ Niveles: pezones T4, ombligo T10, pliegue inguinal L1.
+✅ Cáncer + déficit medular agudo = metástasis epidural hasta demostrar lo contrario.
+✅ RM define cirugía vs radioterapia; retraso = paraplejía permanente.
+✅ Choque espinal inicial (flacidez) no significa lesión irreversible.
+✅ Cáncer de próstata metastatiza frecuentemente a columna torácica.
+
+Referencias
+• AAN Guidelines — Management of Metastatic Spinal Cord Compression.
+• NCCN Guidelines — Central Nervous System Cancers.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Evaluation and management of cancer of unknown primary site with spinal cord compression.`,
   },
   {
     id: "dr-q-20",
@@ -1757,33 +1935,79 @@ Referencias: AAN Guidelines; guías oncológicas de emergencias neurológicas.`,
     explanation:
       "SGB clásico (AIDP) con disociación albúmino-citológica. Disautonomía periférica (ataque a nervios autonómicos) explica oscilaciones HTA/taquicardia ↔ hipotensión/bradicardia/asistolia. Tratamiento: IGIV o PLEX en primeras 2 semanas; esteroides no eficaces en SGB clásico.",
     keyPoints: [
-      "Disautonomía = causa principal de muerte no respiratoria en SGB.",
-      "IGIV o plasmaféresis equivalentes; iniciar precoz (<2 semanas).",
+      "Cuando veas: debilidad ascendente + arreflexia + disociación albúmino-citológica + antecedente de Campylobacter.",
+      "Debes pensar en: Guillain-Barré (AIDP) → IGIV o plasmaféresis en primeras 2 semanas.",
+      "Disautonomía severa (oscilaciones PA/FC, asistolia) = causa principal de muerte no respiratoria en SGB.",
       "Corticosteroides no benefician SGB clásico.",
+      "Tema: Neuropatía — síndrome de Guillain-Barré.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa Guillain-Barré con disautonomía: la inestabilidad hemodinámica severa es por daño autonómico periférico, y el tratamiento es IGIV o plasmaféresis, no esteroides.
+Esta es una pregunta clásica de neurología porque evalúa el síndrome de Guillain-Barré con disautonomía, donde la inestabilidad hemodinámica es por daño autonómico periférico y el tratamiento es inmunomodulador, no esteroides.
+
+La clave no es asumir miocarditis ni tratar con corticosteroides.
+La clave es:
+Reconocer SGB clásico con disautonomía letal y tratar con IGIV o plasmaféresis precoz.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 30 años con debilidad ascendente 5 días tras diarrea por Campylobacter (3 semanas antes).
-- Paraplejía flácida, arreflexia universal, disociación albúmino-citológica en LCR (proteínas 125, 2 leucocitos).
-- Disautonomía severa: oscilaciones de PA y FC con asistolia transitoria en monitor.
-- SGB clásico (AIDP) con compromiso autonómico letal.
+El paciente presenta:
+• Hombre de 30 años con debilidad ascendente en 5 días.
+• Antecedente de diarrea por Campylobacter hace 3 semanas.
+• Paraplejía flácida 0/5, debilidad proximal EESS 2/5, arreflexia universal.
+• Disautonomía severa: taquicardia 150 y PA 210/110 ↔ FC 40 y PA 70/40.
+• Asistolia transitoria en monitor.
+• LCR: proteínas 125 mg/dL, 2 leucocitos/mm³ (disociación albúmino-citológica).
 
-¿Qué dato es clave en el examen?
-- Desmielinización autoinmune de nervios autonómicos periféricos destruye barorreflejos.
-- Oscilaciones simpáticas/parasimpáticas: HTA/taquicardia ↔ hipotensión/bradicardia/asistolia.
-- Tratamiento: IGIV o plasmaféresis en las primeras 2 semanas (equivalentes); esteroides no son eficaces en SGB clásico.
+Recordemos el SGB (AIDP):
+• Polineuropatía desmielinizante inflamatoria aguda post-infecciosa.
+• Disociación albúmino-citológica: proteínas elevadas con celularidad normal.
+• Disautonomía: daño de ganglios autonómicos periféricos → barorreflejos destruidos.
+• Tratamiento: IGIV o plasmaféresis en primeras 2 semanas (equivalentes).
+• Esteroides: no son eficaces en SGB clásico.
+
+Por lo tanto:
+No es extensión bacteriana al bulbo.
+No es miocarditis viral primaria.
+Es SGB con compromiso autonómico letal.
+
+¿Por qué la opción B es la respuesta correcta?
+Mecanismo: desmielinización autoinmune de ganglios autonómicos periféricos.
+Terapia: IGIV o plasmaféresis en los primeros días/semanas.
+La disautonomía explica las oscilaciones simpáticas/parasimpáticas y la asistolia.
 
 ¿Por qué fallan las otras opciones?
-- Extensión bacteriana al bulbo con esteroides intratecales: no es el mecanismo; SGB es autoinmune periférico.
-- Miocarditis viral con marcapasos sin IGIV: el cuadro encaja con neuropatía autonómica del SGB.
-- Metilprednisolona en pulsos: ensayos muestran que esteroides no benefician SGB clásico.
+Opción A (extensión bacteriana + esteroides intratecales): SGB es autoinmune periférico, no infección bulbar.
+Opción C (miocarditis + marcapasos sin IGIV): el cuadro encaja con neuropatía autonómica del SGB, no miocarditis aislada.
+Opción D (metilprednisolona en pulsos): ensayos demuestran que esteroides no benefician SGB clásico.
 
-Clave: SGB + disautonomía + asistolia = IGIV o PLEX; esteroides no; vigilar al intubar (hiperreactividad vagal).
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Asistolia = marcapasos" o "polineuropatía = esteroides".
+Pero el examen exige reconocer:
+Disociación albúmino-citológica + Campylobacter + disautonomía = SGB.
+Aquí el dato decisivo es:
+Oscilaciones hemodinámicas extremas con arreflexia y LCR característico.
 
-Referencias: AAN Guidelines for Treatment of Guillain-Barré Syndrome.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar SGB ante debilidad ascendente + arreflexia.
+2. Confirmar con LCR (disociación albúmino-citológica) y neuroconducción.
+3. Monitorizar función respiratoria (CVF, NIF) y disautonomía.
+4. Iniciar IGIV o PLEX en primeras 2 semanas; UCI si disautonomía severa.
+
+Perlas de examen
+✅ Disautonomía = causa principal de muerte no respiratoria en SGB.
+✅ IGIV o plasmaféresis equivalentes; iniciar precoz (<2 semanas).
+✅ Corticosteroides no benefician SGB clásico.
+✅ Campylobacter es el antecedente infeccioso más clásico.
+✅ Vigilar hiperreactividad vagal al intubar.
+
+Referencias
+• AAN Guidelines for Treatment of Guillain-Barré Syndrome.
+• European Academy of Neurology Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Tintinalli Emergency Medicine.
+• UpToDate: Guillain-Barré syndrome in adults.`,
   },
   {
     id: "dr-q-21",
@@ -1819,36 +2043,78 @@ Referencias: AAN Guidelines for Treatment of Guillain-Barré Syndrome.`,
     explanation:
       "Iatrogenia en cascada: hipoglucemia por sulfonilurea → caída → hematoma en anticoagulada/antiagregada sin indicación. Beers 2023: evitar aspirina en prevención primaria >65 años; evitar rivaroxabán crónico en FA (mayor sangrado GI vs otros DOAC); evitar glibenclamida; evitar IBP crónico >8 semanas sin indicación.",
     keyPoints: [
-      "Beers 2023: aspirina NO en prevención primaria >65 años.",
-      "Rivaroxabán → evitar en FA crónica; preferir apixabán si sangrado/fragilidad.",
-      "Glibenclamida: hipoglucemia prolongada letal en anciano.",
+      "Cuando veas: anciana con caída + hipoglucemia + polifarmacia (glibenclamida, aspirina primaria, rivaroxabán, IBP crónico).",
+      "Debes pensar en: cascada iatrogénica → deprescripción según Criterios de Beers 2023.",
+      "Beers: aspirina NO en prevención primaria >65 años; evitar glibenclamida y rivaroxabán crónico en FA.",
+      "Suspender glibenclamida, aspirina, IBP; cambiar rivaroxabán por apixabán si anticoagulación indicada.",
+      "Tema: Geriatría — polifarmacia y Criterios de Beers.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa polifarmacia geriátrica con Criterios de Beers 2023: la caída con hipoglucemia revela una cascada iatrogénica que exige deprescripción selectiva, no más fármacos.
+Esta es una pregunta clásica de geriatría porque evalúa la polifarmacia iatrogénica con Criterios de Beers 2023: una caída con hipoglucemia revela una cascada de fármacos inapropiados que exige deprescripción selectiva.
+
+La clave no es cambiar a warfarina ni mantener la doble terapia.
+La clave es:
+Identificar cada fármaco inapropiado según Beers y corregir la cascada iatrogénica.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 84 años con caída, TCE y hematoma subdural agudizado.
-- Hipoglucemia severa (45 mg/dL) en domicilio por glibenclamida.
-- FA no valvular anticoagulada con rivaroxabán + aspirina sin indicación (prevención primaria).
-- Omeprazol crónico 5 años sin indicación clara; sangrado digestivo oculto y anemia.
-- Pre-frágil (FRAIL 2, TUG lento): alta vulnerabilidad a eventos adversos.
+La paciente presenta:
+• Mujer de 84 años con caída, TCE y hematoma subdural agudizado.
+• Hipoglucemia severa (45 mg/dL) en domicilio → causa probable de la caída.
+• FA no valvular anticoagulada con rivaroxabán + aspirina (prevención primaria).
+• Glibenclamida (sulfonilurea de acción prolongada).
+• Omeprazol crónico 5 años sin indicación clara.
+• Sangrado digestivo oculto, Hb 9.2, TFG 45, pre-frágil (FRAIL 2).
 
-¿Qué dato es clave en el examen?
-- Beers 2023: aspirina evitar en prevención primaria >65 años (riesgo hemorrágico sin beneficio).
-- Glibenclamida: sulfonilurea de acción prolongada → hipoglucemia letal en anciano con TFG 45.
-- Rivaroxabán: evitar en FA crónica por mayor sangrado GI vs apixabán/dabigatrán.
-- IBP crónico >8 semanas sin indicación: evitar (fracturas, déficit B12, infecciones).
-- DOAC preferido sobre warfarina cuando está indicado, pero apixabán es mejor opción con sangrado/fragilidad.
+Recordemos Beers 2023:
+• Glibenclamida: evitar (hipoglucemia prolongada letal en anciano).
+• Aspirina: evitar en prevención primaria >65 años (riesgo hemorrágico sin beneficio).
+• Rivaroxabán: evitar en FA crónica (mayor sangrado GI vs apixabán/dabigatrán).
+• IBP crónico >8 semanas sin indicación: evitar (fracturas, déficit B12, infecciones).
+
+Por lo tanto:
+La caída fue precipitada por hipoglucemia (glibenclamida).
+El hematoma se agravó por anticoagulación/antiagregación inapropiada.
+Requiere deprescripción múltiple, no más fármacos.
+
+¿Por qué la opción B es la respuesta correcta?
+Suspender glibenclamida (causa de hipoglucemia).
+Suspender aspirina (sin indicación en prevención primaria).
+Retirar omeprazol gradualmente (sin indicación crónica).
+Cambiar rivaroxabán por apixabán (menor sangrado GI, anticoagulación sí indicada en FA).
 
 ¿Por qué fallan las otras opciones?
-- Suspender todo y cambiar a warfarina: warfarina no es superior a DOACs; aumenta complejidad y riesgo de caídas por INR.
-- Mantener doble terapia y omeprazol "protector": omeprazol no previene sangrado por DOAC; la aspirina no está indicada.
-- iSGLT2 con TFG 45, digoxina y suspender rivaroxabán: la FA no valvular sí requiere anticoagulación; digoxina no es sustituto.
+Opción A (cambiar a warfarina): warfarina no es superior a DOACs; aumenta complejidad y riesgo de caídas por INR.
+Opción C (mantener todo + omeprazol "protector"): perpetúa la cascada iatrogénica; omeprazol no previene sangrado por DOAC.
+Opción D (iSGLT2 con TFG 45, digoxina, suspender rivaroxabán): FA sí requiere anticoagulación; digoxina no es sustituto.
 
-Clave: caída + hipoglucemia + hematoma = deprescripción Beers: stop glibenclamida, stop aspirina primaria, retirar IBP, cambiar rivaroxabán → apixabán.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"FA = siempre anticoagular + antiagregar" o "IBP protege de sangrado".
+Pero el examen exige aplicar:
+Beers 2023 fármaco por fármaco en contexto clínico.
+Aquí la cascada es:
+Hipoglucemia → caída → sangrado en paciente sobre-anticoagulada/antiagregada.
 
-Referencias: AGS Beers Criteria 2023; STOPP/START v3.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el evento desencadenante (hipoglucemia por glibenclamida).
+2. Revisar cada fármaco con Beers/STOPP.
+3. Deprescribir lo inapropiado (glibenclamida, aspirina primaria, IBP).
+4. Optimizar lo que sí está indicado (apixabán en lugar de rivaroxabán).
+
+Perlas de examen
+✅ Beers 2023: aspirina NO en prevención primaria >65 años.
+✅ Rivaroxabán → evitar en FA crónica; preferir apixabán si sangrado/fragilidad.
+✅ Glibenclamida: hipoglucemia prolongada letal en anciano con TFG reducida.
+✅ IBP crónico sin indicación: deprescribir gradualmente.
+✅ La caída en anciano siempre obliga a revisar polifarmacia.
+
+Referencias
+• AGS Beers Criteria 2023.
+• STOPP/START Criteria v3.
+• AHA/ACC Guidelines on Antithrombotic Therapy in AF.
+• UpToDate: Drug prescribing for older adults.`,
   },
   {
     id: "dr-q-22",
@@ -1884,36 +2150,77 @@ Referencias: AGS Beers Criteria 2023; STOPP/START v3.`,
     explanation:
       "DCL: sensibilidad neuroléptica severa (~50%). Haloperidol/risperidona contraindicados (rigidez, coma, muerte). Delirium por ITU + retención urinaria: tratar causa. Si farmacológico inevitable: quetiapina o clozapina (rápida disociación D2). Benzodiacepinas empeoran delirium en ancianos.",
     keyPoints: [
-      "DCL: alucinaciones visuales + parkinsonismo + fluctuaciones.",
-      "Haloperidol en DCL = contraindicado (sensibilidad neuroléptica).",
-      "Delirium: corregir causa (infección, retención) antes que sedar.",
+      "Cuando veas: demencia por cuerpos de Lewy (DCL) + delirium agudo + ITU/retención urinaria.",
+      "Debes pensar en: tratar causa primero; evitar haloperidol/risperidona (sensibilidad neuroléptica).",
+      "DCL: alucinaciones visuales + parkinsonismo + fluctuaciones cognitivas.",
+      "Si farmacológico inevitable: quetiapina en dosis ultrabajas (rápida disociación D2).",
+      "Tema: Geriatría — delirium sobre demencia por cuerpos de Lewy.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa delirium sobre demencia por cuerpos de Lewy: la sensibilidad neuroléptica severa obliga a tratar la causa (ITU + retención) antes que sedar con antipsicóticos bloqueadores D2.
+Esta es una pregunta clásica de geriatría porque evalúa el delirium sobre demencia por cuerpos de Lewy, donde la sensibilidad neuroléptica severa hace que haloperidol pueda ser letal.
+
+La clave no es sedar con antipsicóticos de alto bloqueo D2.
+La clave es:
+Tratar la causa reversible (ITU + retención urinaria) antes que medicar el delirium.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 78 años con DCL (fluctuaciones, alucinaciones visuales estructuradas, parkinsonismo rígido-acinético).
-- Agitación y fluctuación extrema de conciencia en 48 h sobre demencia basal.
-- ITU con piuria masiva, nitritos (+), leucocitosis y PCR elevada.
-- Globo vesical palpable: retención urinaria como desencadenante adicional.
-- Delirium hiperactivo = epifenómeno de espina irritativa, no "psicosis nueva".
+El paciente presenta:
+• Hombre de 78 años con DCL (fluctuaciones, alucinaciones visuales estructuradas, parkinsonismo rígido-acinético).
+• Agitación y fluctuación extrema de conciencia en 48 h sobre demencia basal.
+• ITU: piuria masiva, nitritos (+), leucocitos 13,000, PCR 45.
+• Globo vesical palpable: retención urinaria como desencadenante adicional.
+• Delirium hiperactivo = epifenómeno de espina irritativa, no psicosis nueva.
 
-¿Qué dato es clave en el examen?
-- DCL: deficiencia colinérgica y dopaminérgica simultánea → sensibilidad neuroléptica (~50% rigidez, coma, muerte).
-- Haloperidol y risperidona (alto bloqueo D2) están contraindicados.
-- Si farmacológico es inevitable: quetiapina o clozapina (rápida disociación D2) en dosis ultrabajas.
-- Benzodiacepinas empeoran delirium en ancianos (Beers).
-- Prioridad: medidas no farmacológicas + tratar infección + drenar vejiga.
+Recordemos la DCL:
+• Fluctuaciones cognitivas + alucinaciones visuales + parkinsonismo.
+• Deficiencia colinérgica y dopaminérgica simultánea.
+• Sensibilidad neuroléptica severa (~50%): rigidez, coma, muerte con antipsicóticos típicos/atípicos potentes.
+• Haloperidol y risperidona: contraindicados.
+
+Por lo tanto:
+No es empeoramiento de la demencia que requiere neurolépticos.
+Es delirium por infección y retención urinaria tratable.
+
+¿Por qué la opción C es la respuesta correcta?
+Evitar antipsicóticos típicos/atípicos con alto bloqueo D2.
+Medidas no farmacológicas (entorno, reorientación).
+Tratar infección urinaria con antibióticos.
+Drenar globo vesical.
+Si farmacológico ineludible: quetiapina a dosis ultrabajas (rápida disociación D2).
 
 ¿Por qué fallan las otras opciones?
-- Haloperidol 5 mg IM: típico de alto potencia D2 → síndrome neuroléptico-like letal en DCL.
-- Risperidona + aumentar levodopa: risperidona empeora parkinsonismo; no trata la causa.
-- Midazolam IV: benzodiacepinas contraindicadas en delirium geriátrico; empeoran confusión.
+Opción A (haloperidol 5 mg IM): típico de alto potencia D2 → síndrome neuroléptico-like letal en DCL.
+Opción B (risperidona + aumentar levodopa): risperidona empeora parkinsonismo; no trata la causa.
+Opción D (midazolam IV): benzodiacepinas contraindicadas en delirium geriátrico (Beers); empeoran confusión.
 
-Clave: DCL + delirium = tratar ITU/retención primero; evitar haloperidol/risperidona; quetiapina ultrabaja solo si ineludible.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Agitación = haloperidol" en todo anciano confuso.
+Pero el examen exige reconocer:
+DCL + delirium agudo con causa identificable = tratar causa primero.
+Aquí los datos decisivos son:
+ITU + globo vesical + DCL conocida.
 
-Referencias: AGS / NICE Delirium and Dementia Guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar DCL (no confundir con Alzheimer).
+2. Buscar causa reversible de delirium (infección, retención, dolor, fármacos).
+3. Tratar causa antes de sedar.
+4. Si antipsicótico inevitable en DCL: quetiapina ultrabaja, nunca haloperidol.
+
+Perlas de examen
+✅ DCL: alucinaciones visuales + parkinsonismo + fluctuaciones.
+✅ Haloperidol en DCL = contraindicado (sensibilidad neuroléptica).
+✅ Delirium: corregir causa (infección, retención) antes que sedar.
+✅ Benzodiacepinas empeoran delirium en ancianos (Beers).
+✅ El delirium hiperactivo no es psicosis primaria en anciano con infección.
+
+Referencias
+• AGS Clinical Practice Guideline on Delirium.
+• NICE Guidelines — Dementia with Lewy Bodies.
+• Beers Criteria 2023.
+• UpToDate: Delirium and acute confusional states in adults.`,
   },
   {
     id: "dr-q-23",
@@ -1949,36 +2256,76 @@ Referencias: AGS / NICE Delirium and Dementia Guidelines.`,
     explanation:
       "Fragilidad extrema (Fried 5/5, SPPB 2), dependencia severa (Barthel 35) y demencia avanzada (MMSE 12): reparar válvula no revierte colapso multidominio. TAVI y cirugía contraindicados por futilidad, alta mortalidad periprocedimiento y sin beneficio funcional.",
     keyPoints: [
-      "Edad cronológica no contraindica cirugía; fragilidad severa sí.",
-      "SPPB <4 + demencia + dependencia = futilidad para TAVI/cirugía.",
-      "Tratar al paciente, no solo al ecocardiograma.",
+      "Cuando veas: estenosis aórtica severa + Fried 5/5 + Barthel <40 + MMSE <15 + SPPB <4.",
+      "Debes pensar en: fragilidad terminal → manejo conservador/paliativo, no TAVI ni cirugía.",
+      "La edad cronológica no contraindica cirugía; la fragilidad severa sí.",
+      "TAVI no revierte sarcopenia, demencia ni dependencia funcional.",
+      "Tema: Geriatría — fragilidad y decisiones de fin de vida.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa fragilidad extrema en decisión valvular: reparar la válvula no revierte el colapso multidominio; la intervención invasiva es fútil.
+Esta es una pregunta clásica de geriatría porque evalúa la fragilidad extrema en la decisión valvular: reparar la válvula no revierte el colapso multidominio y la intervención invasiva es fútil.
+
+La clave no es la edad ni la gravedad de la estenosis aórtica aislada.
+La clave es:
+Integrar fragilidad, dependencia y demencia para determinar futilidad terapéutica.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 88 años con estenosis aórtica severa sintomática (síncope, NYHA III).
-- Fragilidad terminal: Fried 5/5, SPPB 2/12, pérdida ponderal, sarcopenia (handgrip bajo, pantorrilla <31 cm).
-- Dependencia severa: Barthel 35/100, Lawton 1/8.
-- Demencia avanzada: MMSE 12/30.
-- Caquexia: albúmina 2.8 g/dL.
+El paciente presenta:
+• Hombre de 88 años con estenosis aórtica severa sintomática (síncope, NYHA III).
+• Fragilidad terminal: Fried 5/5, SPPB 2/12.
+• Dependencia severa: Barthel 35/100, Lawton 1/8.
+• Demencia avanzada: MMSE 12/30.
+• Caquexia: pérdida 8 kg/6 meses, albúmina 2.8, handgrip 14 kg, pantorrilla <31 cm.
 
-¿Qué dato es clave en el examen?
-- Fragilidad = homeostenosis: reserva fisiológica agotada; el paciente no tolera estrés quirúrgico.
-- SPPB <4 + demencia + dependencia ABVD = alta mortalidad periprocedimiento sin beneficio funcional a 1 año.
-- TAVI no revierte sarcopenia, demencia ni dependencia.
-- La edad cronológica no contraindica cirugía; la fragilidad severa sí.
-- Manejo conservador/paliativo es ético y basado en evidencia.
+Recordemos la evaluación geriátrica preoperatoria:
+• Fragilidad = homeostenosis: reserva fisiológica agotada.
+• SPPB <4 + demencia + dependencia ABVD = alta mortalidad periprocedimiento.
+• TAVI no revierte sarcopenia, demencia ni dependencia.
+• La edad cronológica no contraindica cirugía; la fragilidad severa sí.
+
+Por lo tanto:
+Reparar la válvula no restaurará función ni calidad de vida.
+La intervención invasiva es fútil y potencialmente dañina.
+
+¿Por qué la opción B es la respuesta correcta?
+Frágil terminal (demencia severa, dependencia ABVD, SPPB <4).
+Intervenciones invasivas fútiles.
+Manejo conservador de síntomas y cuidados paliativos.
+Decisión ética y basada en evidencia.
 
 ¿Por qué fallan las otras opciones?
-- Cirugía abierta: mortalidad y morbilidad inaceptables sin recuperación funcional esperable.
-- TAVI urgente "revertirá fragilidad": procedimiento mínimamente invasivo no restaura reserva fisiológica.
-- Testosterona/hormona de crecimiento: no hay evidencia de revertir caquexia terminal; retrasa cuidados paliativos.
+Opción A (cirugía abierta): mortalidad y morbilidad inaceptables sin recuperación funcional esperable.
+Opción C (TAVI urgente): procedimiento mínimamente invasivo no revierte fragilidad ni dependencia.
+Opción D (testosterona/hormona de crecimiento): sin evidencia de revertir caquexia terminal; retrasa cuidados paliativos.
 
-Clave: EA severa + Fried 5/5 + Barthel 35 + MMSE 12 = futilidad para TAVI/cirugía → paliativos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Estenosis aórtica severa sintomática = siempre operar/TAVI".
+Pero el examen exige integrar:
+Escalas de fragilidad, funcionalidad y cognición.
+Aquí los datos decisivos son:
+Fried 5/5 + Barthel 35 + MMSE 12 + SPPB 2.
 
-Referencias: AGS; ACC/AHA Valvular Heart Disease Guidelines in Older Adults.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar estenosis aórtica (síntomas, gradiente).
+2. Valoración geriátrica integral (Barthel, MMSE, SPPB, Fried).
+3. Si fragilidad terminal → paliativos, no invasión.
+4. Tratar al paciente, no solo al ecocardiograma.
+
+Perlas de examen
+✅ Edad cronológica no contraindica cirugía; fragilidad severa sí.
+✅ SPPB <4 + demencia + dependencia = futilidad para TAVI/cirugía.
+✅ TAVI no revierte sarcopenia, demencia ni dependencia.
+✅ Fried 5/5 indica fragilidad extrema.
+✅ La decisión debe ser compartida con familia y enfoque en calidad de vida.
+
+Referencias
+• AGS Guidelines — Surgical Treatment in Older Adults.
+• ACC/AHA Guidelines for Valvular Heart Disease in Older Adults.
+• ESC/EACTS Guidelines on Valvular Heart Disease.
+• UpToDate: Management of severe aortic stenosis in older adults.`,
   },
   {
     id: "dr-q-24",
@@ -2014,35 +2361,77 @@ Referencias: AGS; ACC/AHA Valvular Heart Disease Guidelines in Older Adults.`,
     explanation:
       "Hipotensión ortostática iatrogénica: tamsulosina (alfa-bloqueador), amlodipino y amitriptilina (anticolinérgica + anti-alfa-1). STOPP/Beers: evitar amitriptilina >65 años. Deprescripción escalonada superior a cascada con fludrocortisona/midodrina.",
     keyPoints: [
-      "Hipotensión ortostática en anciano = iatrogenia hasta probar lo contrario.",
-      "Amitriptilina: alta carga anticolinérgica; evitar en >65 años.",
-      "No cascada de prescripción (fludrocortisona) sin retirar culpables.",
+      "Cuando veas: anciano con síncope ortostático + amitriptilina + tamsulosina + amlodipino + IECA.",
+      "Debes pensar en: hipotensión ortostática iatrogénica → deprescripción STOPP/Beers escalonada.",
+      "Caída sistólica ≥20 mmHg (o ≥40 en este caso) en ortostatismo = hipotensión ortostática.",
+      "No prescribir fludrocortisona/midodrina sin retirar los fármacos culpables.",
+      "Tema: Geriatría — hipotensión ortostática y polifarmacia.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa hipotensión ortostática iatrogénica: antes de prescribir fludrocortisona o marcapasos, hay que deprescribir los fármacos culpables según STOPP/Beers.
+Esta es una pregunta clásica de geriatría porque evalúa la hipotensión ortostática iatrogénica: antes de prescribir fludrocortisona o marcapasos, hay que deprescribir los fármacos culpables según STOPP/Beers.
+
+La clave no es añadir vasopresores ni suspender todo de golpe.
+La clave es:
+Identificar la polifarmacia causal y deprescribir de forma escalonada.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 76 años con síncope postprandial y mareo ortostático matutino.
-- Caída sistólica ≥40 mmHg en ortostatismo sin taquicardia compensatoria (barorreflejos envejecidos).
-- Polifarmacia causal: amlodipino, enalapril, tamsulosina (alfa-bloqueador), amitriptilina (anticolinérgica + anti-alfa-1).
-- Mucosas secas y retención fecal: toxidrome anticolinérgico parcial por amitriptilina.
+El paciente presenta:
+• Hombre de 76 años con síncope postprandial y mareo ortostático matutino.
+• Decúbito: PA 145/80, FC 70.
+• Ortostatismo: PA 105/60 (↓40 mmHg sistólica), FC 72 (sin taquicardia compensatoria).
+• Polifarmacia: amlodipino, enalapril, tamsulosina (alfa-bloqueador), amitriptilina (anticolinérgica).
+• Mucosas secas, retención fecal: toxidrome anticolinérgico parcial.
 
-¿Qué dato es clave en el examen?
-- Hipotensión ortostática en anciano = iatrogenia hasta demostrar lo contrario.
-- STOPP/Beers: amitriptilina evitar en >65 años (alta carga anticolinérgica).
-- Tamsulosina bloquea alfa-1 → vasodilatación y empeora ortostatismo.
-- Deprescripción escalonada (no suspender todo de golpe): evita rebote hipertensivo.
-- Hidratación y medias compresivas son medidas de soporte, no sustituto de deprescripción.
+Recordemos STOPP/Beers:
+• Amitriptilina: evitar en >65 años (alta carga anticolinérgica + bloqueo alfa-1).
+• Tamsulosina: alfa-bloqueador → vasodilatación, empeora ortostatismo.
+• Amlodipino + enalapril: hipotensores que contribuyen.
+• Barorreflejos envejecidos: sin taquicardia compensatoria.
+
+Por lo tanto:
+Hipotensión ortostática iatrogénica, no bloqueo AV.
+No se trata con fludrocortisona sin corregir causa.
+
+¿Por qué la opción C es la respuesta correcta?
+Deprescripción STOPP escalonada:
+Suspender amitriptilina (mayor culpable anticolinérgico).
+Ajustar/suspender tamsulosina (alfa-bloqueador).
+Reducir amlodipino (no suspender todo de golpe).
+Hidratación y medias compresivas como soporte.
 
 ¿Por qué fallan las otras opciones?
-- Fludrocortisona + midodrina manteniendo culpables: cascada de prescripción sin corregir causa.
-- Suspender todo de golpe: riesgo de crisis hipertensiva por rebote.
-- Marcapasos: no hay bloqueo AV; FC estable en ortostatismo descarta bradicardia como causa.
+Opción A (fludrocortisona + midodrina manteniendo antihipertensivos): cascada de prescripción sin corregir causa.
+Opción B (suspender todo de golpe): riesgo de crisis hipertensiva por rebote.
+Opción D (marcapasos): no hay bloqueo AV; FC estable en ortostatismo.
 
-Clave: ortostatismo + amitriptilina + tamsulosina + amlodipino = STOPP → deprescripción escalonada.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Ortostatismo = fludrocortisona" o "síncope = marcapasos".
+Pero el examen exige:
+Revisar polifarmacia antes de añadir fármacos.
+Aquí los culpables son:
+Amitriptilina + tamsulosina + amlodipino.
 
-Referencias: STOPP/START v3; Beers 2023.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar hipotensión ortostática (medición en decúbito y ortostatismo).
+2. Revisar fármacos con STOPP/Beers.
+3. Deprescribir escalonadamente (no todo de golpe).
+4. Medidas no farmacológicas: hidratación, medias, levantarse lentamente.
+
+Perlas de examen
+✅ Hipotensión ortostática en anciano = iatrogenia hasta probar lo contrario.
+✅ Amitriptilina: alta carga anticolinérgica; evitar en >65 años.
+✅ No cascada de prescripción (fludrocortisona) sin retirar culpables.
+✅ Sin taquicardia compensatoria = barorreflejos envejecidos.
+✅ Síncope postprandial: redistribución esplácnica + fármacos hipotensores.
+
+Referencias
+• STOPP/START Criteria v3.
+• AGS Beers Criteria 2023.
+• AGS Clinical Practice Guideline on Preventing Falls.
+• UpToDate: Treatment of orthostatic and postprandial hypotension.`,
   },
   {
     id: "dr-q-25",
@@ -2078,36 +2467,76 @@ Referencias: STOPP/START v3; Beers 2023.`,
     explanation:
       "Discapacidad asociada a hospitalización (HAD) y sarcopenia aguda: ~10 días de cama ≈ envejecimiento muscular acelerado. Tratamiento gold standard (EWGSOP2): ejercicio de fuerza progresivo + proteína 1.2–1.5 g/kg/día + vitamina D.",
     keyPoints: [
-      "10 días de cama en hospital ≈ sarcopenia aguda severa.",
-      "Sarcopenia: fuerza + proteína; no reposo ni megestrol.",
-      "HAD es potencialmente reversible con rehabilitación agresiva.",
+      "Cuando veas: anciano post-hospitalización con caída marcada de Barthel + atrofia muscular + SARC-F elevado.",
+      "Debes pensar en: discapacidad asociada a hospitalización (HAD) + sarcopenia → rehabilitación + proteína.",
+      "~10 días de cama en hospital ≈ sarcopenia aguda severa.",
+      "Gold standard EWGSOP2: ejercicio de fuerza + proteína 1.2-1.5 g/kg/día + vitamina D.",
+      "Tema: Geriatría — sarcopenia y discapacidad post-hospitalización.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa discapacidad asociada a hospitalización (HAD) y sarcopenia aguda: la cama es veneno iatrogénico; el tratamiento es ejercicio de fuerza + proteína, no reposo.
+Esta es una pregunta clásica de geriatría porque evalúa la discapacidad asociada a hospitalización (HAD) y la sarcopenia aguda: la cama es veneno iatrogénico y el tratamiento es ejercicio de fuerza más proteína.
+
+La clave no es reposo ni institucionalización.
+La clave es:
+Reconocer que la HAD es potencialmente reversible con rehabilitación agresiva precoz.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 82 años al alta tras 14 días por NAC resuelta.
-- Previo: Barthel 95, caminaba 1 km/día; actual: Barthel 45, no se levanta solo.
-- Reposo en cama durante hospitalización + ingesta pobre + sonda vesical (retirada).
-- Atrofia cuádriceps, claudicación, SARC-F >4, fuerza 3/5 simétrica.
-- Sarcopenia aguda post-hospitalización, no neuropatía periférica (reflejos conservados).
+El paciente presenta:
+• Hombre de 82 años al alta tras 14 días por NAC resuelta.
+• Previo: Barthel 95, caminaba 1 km/día.
+• Actual: Barthel 45, no se levanta solo, claudicación.
+• Reposo en cama durante hospitalización + ingesta pobre.
+• Atrofia cuádriceps, SARC-F >4, fuerza 3/5 simétrica, reflejos conservados.
 
-¿Qué dato es clave en el examen?
-- ~10 días de cama en hospital ≈ envejecimiento muscular acelerado equivalente a años de sarcopenia.
-- EWGSOP2 gold standard: ejercicio de resistencia progresivo + proteína 1.2–1.5 g/kg/día.
-- Corrección de déficit de vitamina D si está presente.
-- HAD es potencialmente reversible con rehabilitación agresiva precoz.
-- Megestrol (Beers: evitar): ganancia de grasa, trombosis, sin beneficio muscular.
+Recordemos HAD y sarcopenia:
+• ~10 días de cama ≈ envejecimiento muscular acelerado equivalente a años de sarcopenia.
+• EWGSOP2 gold standard: ejercicio de resistencia progresivo + proteína 1.2-1.5 g/kg/día.
+• Corrección de déficit de vitamina D si presente.
+• Megestrol (Beers: evitar): ganancia de grasa, trombosis, sin beneficio muscular.
+
+Por lo tanto:
+No es neuropatía periférica (reflejos conservados, simétrico).
+Es sarcopenia aguda post-hospitalización reversible.
+
+¿Por qué la opción B es la respuesta correcta?
+Rehabilitación multicomponente (fuerza y resistencia).
+Proteína 1.2-1.5 g/kg/día.
+Corrección de déficit de vitamina D.
+Plan de alta de máxima prioridad para recuperar trayectoria funcional.
 
 ¿Por qué fallan las otras opciones?
-- Reposo relativo limitado al baño: perpetúa la miopatía por inmovilidad.
-- Megestrol/esteroides anabólicos: no son tratamiento de sarcopenia; megestrol aumenta mortalidad.
-- Institucionalización definitiva: el deterioro de 50 puntos en Barthel no es irreversible a los 82 con rehab.
+Opción A (reposo relativo limitado al baño): perpetúa la miopatía por inmovilidad.
+Opción C (megestrol/esteroides anabólicos): no son tratamiento de sarcopenia; megestrol aumenta mortalidad.
+Opción D (institucionalización definitiva): el deterioro de Barthel no es irreversible a los 82 con rehabilitación.
 
-Clave: NAC resuelta + Barthel 45 post-cama = HAD/sarcopenia → fuerza + proteína 1.2–1.5 g/kg/día.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Anciano de 82 con Barthel 45 = irreversible" o "alta = reposo en casa".
+Pero el examen exige conocer:
+La HAD como síndrome iatrogénico tratable.
+Aquí el dato decisivo es:
+Caída de Barthel de 95 a 45 tras hospitalización con reposo en cama.
 
-Referencias: EWGSOP2; geriatric hospital medicine guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar HAD al alta hospitalaria.
+2. Evaluar sarcopenia (SARC-F, fuerza, marcha).
+3. Prescribir rehabilitación de fuerza + nutrición proteica.
+4. Evitar reposo prolongado y fármacos inapropiados (megestrol).
+
+Perlas de examen
+✅ 10 días de cama en hospital ≈ sarcopenia aguda severa.
+✅ Sarcopenia: fuerza + proteína; no reposo ni megestrol.
+✅ HAD es potencialmente reversible con rehabilitación agresiva.
+✅ Proteína 1.2-1.5 g/kg/día en anciano con sarcopenia.
+✅ La prevención de HAD incluye movilización precoz en hospital.
+
+Referencias
+• EWGSOP2 — European Working Group on Sarcopenia in Older People.
+• AGS Guidelines on Mobility and Falls Prevention.
+• Hospital Medicine Guidelines on Functional Decline.
+• UpToDate: Failure to thrive and weight loss in older adults.`,
   },
   {
     id: "dr-q-26",
@@ -2143,36 +2572,78 @@ Referencias: EWGSOP2; geriatric hospital medicine guidelines.`,
     explanation:
       "Oxibutinina: antimuscarínico lipofílico de 1.ª generación. Cruza BHE → delirium en cerebro con baja reserva colinérgica. Periféricamente: retención urinaria y estreñimiento. Beers: evitar fuertemente. Alternativa en anciano: mirabegrón (agonista beta-3, sin actividad anticolinérgica).",
     keyPoints: [
-      "Toxidrome anticolinérgico: delirium, seco, retención urinaria, estreñimiento.",
-      "Oxibutinina contraindicada en anciano con deterioro cognitivo.",
-      "Mirabegrón: 1.ª línea farmacológica geriátrica para vejiga hiperactiva.",
+      "Cuando veas: anciana con MCI + oxibutinina reciente + delirium + globo vesical + estreñimiento.",
+      "Debes pensar en: toxidrome anticolinérgico → suspender oxibutinina; a futuro mirabegrón.",
+      "Oxibutinina cruza BHE (delirium central) y bloquea M3 periférico (retención urinaria).",
+      "Paradoja: trató incontinencia y empeoró con retención urinaria.",
+      "Tema: Geriatría — toxidrome anticolinérgico y vejiga hiperactiva.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa toxidrome anticolinérgico por oxibutinina: un fármaco de 1.ª generación lipofílico cruza la BHE y causa delirium central más retención urinaria periférica.
+Esta es una pregunta clásica de geriatría porque evalúa el toxidrome anticolinérgico por oxibutinina: un fármaco lipofílico de primera generación cruza la BHE y causa delirium central más retención urinaria periférica.
+
+La clave no es confundir con toxicidad colinérgica ni mantener el anticolinérgico.
+La clave es:
+Reconocer la paradoja: trató incontinencia y empeoró con retención y delirium.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 80 años con confusión aguda, xerostomía, constipación e intolerancia oral.
-- Inició oxibutinina hace 2 semanas por incontinencia de urgencia recién diagnosticada.
-- MCI previo: cerebro con baja reserva colinérgica.
-- CAM positivo (delirium) + globo vesical masivo + fecaloma impactado.
-- Evento adverso farmacológico predecible, no "desenmascaramiento de Alzheimer".
+La paciente presenta:
+• Mujer de 80 años con confusión aguda, xerostomía, constipación e intolerancia oral.
+• Inició oxibutinina hace 2 semanas por incontinencia de urgencia.
+• MCI previo: cerebro con baja reserva colinérgica.
+• CAM positivo (delirium) + globo vesical masivo + fecaloma impactado.
+• Evento adverso farmacológico predecible, no desenmascaramiento de Alzheimer.
 
-¿Qué dato es clave en el examen?
-- Oxibutinina: antimuscarínico lipofílico de 1.ª generación.
-- Central (M1): cruza BHE → delirium en cerebro con reserva colinérgica reducida.
-- Periférico (M3): retención urinaria y estreñimiento (paradoja: trató incontinencia y la empeoró).
-- Beers 2023: evitar fuertemente anticolinérgicos potentes en ancianos.
-- Alternativa segura: mirabegrón (agonista beta-3 vesical, sin actividad anticolinérgica).
+Recordemos oxibutinina (Beers):
+• Antimuscarínico lipofílico de 1.ª generación.
+• Central (M1): cruza BHE → delirium en cerebro con reserva colinérgica reducida.
+• Periférico (M3): retención urinaria y estreñimiento.
+• Beers 2023: evitar fuertemente anticolinérgicos potentes en ancianos.
+• Alternativa segura: mirabegrón (agonista beta-3 vesical, sin actividad anticolinérgica).
+
+Por lo tanto:
+No es toxicidad colinérgica excesiva (sería lo opuesto).
+No es IAM silente.
+Es toxidrome anticolinérgico por oxibutinina.
+
+¿Por qué la opción B es la respuesta correcta?
+Fisiopatología: antagonista muscarínico anticolinérgico que cruza BHE.
+Causa delirium central y bloqueo parasimpático periférico (retención urinaria/fecaloma).
+Conducta: suspender oxibutinina, derivar orina (cateterismo).
+A futuro: considerar mirabegrón para vejiga hiperactiva.
 
 ¿Por qué fallan las otras opciones?
-- Toxicidad colinérgica excesiva + betanecol: es lo opuesto; oxibutinina bloquea colina, no la estimula.
-- IAM silente: no hay datos cardíacos; el cuadro es anticolinérgico clásico.
-- Donepezilo alto + mantener oxibutinina: colinérgico + anticolinérgico se anulan parcialmente; no resuelve retención.
+Opción A (toxicidad colinérgica + betanecol): oxibutinina bloquea colina, no la estimula; betanecol empeoraría el cuadro si hubiera obstrucción.
+Opción C (IAM silente + trombólisis): no hay datos cardíacos; cuadro es anticolinérgico clásico.
+Opción D (donepezilo + mantener oxibutinina): colinérgico + anticolinérgico se anulan; no resuelve retención.
 
-Clave: oxibutinina + MCI + delirium + globo vesical = suspender + derivar orina; a futuro mirabegrón.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Incontinencia urinaria = oxibutinina siempre" o "confusión = Alzheimer progresivo".
+Pero el examen exige reconocer:
+Temporalidad (2 semanas desde inicio) + toxidrome anticolinérgico completo.
+Aquí el dato decisivo es:
+Oxibutinina nueva + MCI + globo vesical + delirium.
 
-Referencias: Beers 2023; NICE Incontinence Guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar toxidrome anticolinérgico (seco, retenido, confuso).
+2. Revisar fármacos con carga anticolinérgica (Beers).
+3. Suspender culpable y tratar complicaciones (derivación urinaria).
+4. Elegir alternativa segura (mirabegrón) si se requiere farmacoterapia.
+
+Perlas de examen
+✅ Toxidrome anticolinérgico: delirium, seco, retención urinaria, estreñimiento.
+✅ Oxibutinina contraindicada en anciano con deterioro cognitivo.
+✅ Mirabegrón: 1.ª línea farmacológica geriátrica para vejiga hiperactiva.
+✅ La retención urinaria es paradoja del tratamiento de incontinencia.
+✅ Betanecol estimula colina; no usar si hay obstrucción urinaria.
+
+Referencias
+• AGS Beers Criteria 2023.
+• NICE Guidelines — Urinary Incontinence in Women.
+• AGS Choosing Wisely — Anticholinergic Medications.
+• UpToDate: Treatment of urinary incontinence in women.`,
   },
   {
     id: "dr-q-27",
@@ -2208,36 +2679,77 @@ Referencias: Beers 2023; NICE Incontinence Guidelines.`,
     explanation:
       "Falla cutánea terminal (skin failure): úlcera de Kennedy en sacro, aparición fulminante pese a cuidado óptimo, en caquexia e hipoperfusión periférica. Marca mortalidad inminente. Manejo paliativo; desbridamiento quirúrgico o PEG en FAST 7F son fútiles/contraindicados (AGS/ESPEN).",
     keyPoints: [
-      "Úlcera Kennedy: mariposa sacra fulminante pese a prevención = fin de vida.",
-      "La piel también claudica (perfusión centralizada).",
-      "PEG en demencia avanzada no prolonga vida ni cicatriza.",
+      "Cuando veas: FAST 7F + úlcera sacra fulminante en mariposa/pera pese a prevención óptima.",
+      "Debes pensar en: úlcera terminal de Kennedy (skin failure) → manejo paliativo, no cirugía.",
+      "La piel también claudica al fin de vida (hipoperfusión periférica).",
+      "Aparición en 48 h pese a cuidados correctos = no es negligencia.",
+      "Tema: Geriatría — cuidados paliativos y falla cutánea terminal.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa úlcera terminal de Kennedy (skin failure): una lesión sacra fulminante pese a prevención óptima marca mortalidad inminente, no negligencia.
+Esta es una pregunta clásica de geriatría y cuidados paliativos porque evalúa la úlcera terminal de Kennedy (skin failure): una lesión sacra fulminante pese a prevención óptima marca mortalidad inminente, no negligencia.
+
+La clave no es desbridamiento quirúrgico ni PEG para hiperalimentar.
+La clave es:
+Reconocer falla cutánea terminal y orientar el manejo a confort.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 92 años con Alzheimer FAST 7F (postrada, disfagia severa, sin sonda por decisión anticipada).
-- Cuidados de prevención óptimos: cambios c/2 h, colchón alterno.
-- En 48 h: úlcera sacra en mariposa/pera de estadio IV pese a medidas correctas.
-- Hipotensión (PA 85/50), perfusión periférica decaída, caquexia (albúmina 2.1).
-- Falla cutánea terminal al fin de vida: la piel también claudica.
+La paciente presenta:
+• Mujer de 92 años con Alzheimer FAST 7F (postrada, disfagia severa).
+• Sin sonda por decisión anticipada.
+• Cuidados de prevención óptimos: cambios c/2 h, colchón alterno.
+• En 48 h: úlcera sacra en mariposa/pera, estadio IV pese a medidas correctas.
+• PA 85/50, perfusión periférica decaída, albúmina 2.1, colesterol 105 (caquexia).
 
-¿Qué dato es clave en el examen?
-- Úlcera de Kennedy: aparición fulminante en sacro con forma de mariposa/pera.
-- Ocurre pese a prevención perfecta → no es negligencia.
-- Marca mortalidad inminente (skin failure = órgano que falla).
-- Manejo paliativo: control de dolor, exudado y olor; no desbridamiento quirúrgico extenso.
-- PEG en FAST 7F: contraindicada (AGS Choosing Wisely); no prolonga vida ni cicatriza.
+Recordemos la úlcera de Kennedy:
+• Falla cutánea terminal (skin failure) al fin de vida.
+• Aparición fulminante en sacro con forma de mariposa/pera.
+• Ocurre pese a prevención perfecta → no es negligencia.
+• Marca mortalidad inminente: la piel también claudica (perfusión centralizada).
+• PEG en FAST 7F: contraindicada (AGS Choosing Wisely).
+
+Por lo tanto:
+No es úlcera por presión evitable con más cuidados.
+No es fascitis necrotizante ni déficit nutricional reversible.
+Es marcador de fin de vida.
+
+¿Por qué la opción B es la respuesta correcta?
+Úlcera terminal de Kennedy (falla cutánea al fin de vida).
+Manejo paliativo local: control de dolor, exudado y olor.
+Meta ética: confort, no curación ni mutilación quirúrgica.
 
 ¿Por qué fallan las otras opciones?
-- Negligencia + desbridamiento quirúrgico/colgajo: la prevención fue óptima; mutilar no ayuda.
-- Fascitis necrotizante + amputación: no hay fiebre, eritema extendido ni crepitación; es falla vascular terminal.
-- PEG urgente para hiperalimentar: no revierte caquexia terminal ni cicatriza úlceras de Kennedy.
+Opción A (negligencia + desbridamiento/colgajo): la prevención fue óptima; mutilar no ayuda.
+Opción C (fascitis necrotizante + amputación): no hay fiebre, eritema extendido ni crepitación.
+Opción D (PEG urgente para hiperalimentar): no revierte caquexia terminal ni cicatriza úlceras de Kennedy.
 
-Clave: FAST 7F + úlcera sacra fulminante pese a cuidados = Kennedy → paliativos, no cirugía.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Úlcera por presión = mala práctica" o "albúmina baja = nutrir con PEG".
+Pero el examen exige reconocer:
+FAST 7F + úlcera fulminante pese a cuidados = Kennedy.
+Aquí el dato decisivo es:
+Aparición en 48 h con prevención perfecta e hipoperfusión.
 
-Referencias: AGS; NPUAP skin failure guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar contexto (demencia terminal, decisiones anticipadas).
+2. Diferenciar úlcera por presión evitable vs falla cutánea terminal.
+3. Si Kennedy: paliativos (dolor, exudado, olor).
+4. No intervenciones fútiles (cirugía extensa, PEG).
+
+Perlas de examen
+✅ Úlcera Kennedy: mariposa sacra fulminante pese a prevención = fin de vida.
+✅ La piel también claudica (perfusión centralizada).
+✅ PEG en demencia avanzada no prolonga vida ni cicatriza.
+✅ FAST 7F = demencia terminal; enfoque paliativo.
+✅ Caquexia terminal no se revierte con nutrición artificial.
+
+Referencias
+• AGS Choosing Wisely — Feeding Tubes in Advanced Dementia.
+• NPUAP Guidelines on Skin Failure at End of Life.
+• WHO Palliative Care Guidelines.
+• UpToDate: Palliative care for patients with dementia.`,
   },
   {
     id: "dr-q-28",
@@ -2273,36 +2785,78 @@ Referencias: AGS; NPUAP skin failure guidelines.`,
     explanation:
       "AINE (naproxeno) en HFpEF: inhibe prostaglandinas renales → retención Na/H2O + LRA. STOPP v3: detener AINEs en falla cardíaca. Retirar naproxeno + furosemida IV. Mantener empagliflozina (piedra angular HFpEF). Digoxina inútil en FEVI preservada.",
     keyPoints: [
+      "Cuando veas: HFpEF descompensada + AINE reciente (naproxeno) + edema + LRA.",
+      "Debes pensar en: suspender AINE + furosemida IV; mantener empagliflozina.",
       "STOPP: AINEs contraindicados en falla cardíaca (sistólica o diastólica).",
-      "AINE + ARA II = riesgo colapso glomerular.",
-      "Empagliflozina beneficia HFpEF; no suspender.",
+      "AINE + ARA II = riesgo de colapso glomerular («triple whammy» con diurético).",
+      "Tema: Geriatría — descompensación de HFpEF por AINE.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa descompensación de HFpEF por AINE: el naproxeno inhibe prostaglandinas renales y desencadena retención hídrica; STOPP manda suspender el AINE, no la empagliflozina.
+Esta es una pregunta clásica de geriatría y cardiología porque evalúa la descompensación de HFpEF por AINE: el naproxeno inhibe prostaglandinas renales y desencadena retención hídrica; STOPP manda suspender el AINE, no la empagliflozina.
+
+La clave no es aumentar antihipertensivos ni suspender el iSGLT2.
+La clave es:
+Identificar el AINE como toxina causal y retirarlo con descongestión IV.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 85 años con HFpEF (FEVI 55%, disfunción diastólica II) en NYHA III.
-- Inició naproxeno hace 10 días por artrosis de cadera.
-- Descompensación aguda: JVP elevada, crépitos, edema foveolar, PA 165/90.
-- LRA sobre ERC: creatinina 1.8 (basal 1.0), NT-proBNP 2500.
-- Corazón rígido diastólico + retención de volumen por AINE.
+La paciente presenta:
+• Mujer de 85 años con HFpEF (FEVI 55%, disfunción diastólica II) en NYHA III.
+• Tratamiento: empagliflozina y losartán.
+• Inició naproxeno hace 10 días por artrosis de cadera.
+• Descompensación aguda: JVP elevada, crépitos, edema foveolar II, PA 165/90.
+• LRA: creatinina 1.8 (basal 1.0), NT-proBNP 2500.
+• Corazón rígido diastólico + retención de volumen por AINE.
 
-¿Qué dato es clave en el examen?
-- STOPP v3: AINEs contraindicados en falla cardíaca (sistólica o diastólica).
-- Naproxeno inhibe prostaglandinas renales → vasoconstricción aferente + retención Na/H2O.
-- AINE + ARA II (losartán) = riesgo de colapso glomerular ("triple whammy" si hubiera diurético).
-- Empagliflozina: piedra angular en HFpEF (EMPEROR-Preserved); no suspender.
-- Digoxina no beneficia FEVI preservada; dobutamina no mejora diástole.
+Recordemos STOPP y fisiopatología:
+• STOPP v3: AINEs contraindicados en falla cardíaca (sistólica o diastólica).
+• Naproxeno inhibe prostaglandinas renales → vasoconstricción aferente + retención Na/H2O.
+• AINE + ARA II = riesgo de colapso glomerular.
+• Empagliflozina: piedra angular en HFpEF (EMPEROR-Preserved); no suspender.
+• Digoxina no beneficia FEVI preservada.
+
+Por lo tanto:
+El naproxeno es la causa de la descompensación.
+La empagliflozina debe mantenerse.
+
+¿Por qué la opción B es la respuesta correcta?
+Suspender naproxeno (causa de retención hídrica y LRA).
+Furosemida IV titulable para descongestión.
+Analgesia no nefrotóxica: acetaminofén o parches tópicos.
 
 ¿Por qué fallan las otras opciones?
-- Aumentar losartán + mantener naproxeno + IBP: el AINE es la toxina causal; IBP no protege riñón.
-- Suspender empagliflozina + digoxina: quita el fármaco que sí ayuda y añade uno inútil en diastólica.
-- Dobutamina + mantener analgésicos: inotrópico no indicado en HFpEF descompensada por volumen.
+Opción A (aumentar losartán + mantener naproxeno + IBP): el AINE es la toxina; IBP no protege riñón.
+Opción C (suspender empagliflozina + digoxina): quita el fármaco que sí ayuda en HFpEF.
+Opción D (dobutamina + mantener analgésicos): inotrópico no indicado en HFpEF descompensada por volumen.
 
-Clave: HFpEF + naproxeno reciente + edema + LRA = stop AINE + furosemida IV + analgesia no nefrotóxica.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Artrosis en anciano = AINE seguro" o "descompensación = aumentar diurético oral sin retirar causa".
+Pero el examen exige correlacionar:
+Inicio reciente de AINE + edema + LRA en paciente con HFpEF.
+Aquí el dato decisivo es:
+Naproxeno iniciado hace 10 días con descompensación aguda.
 
-Referencias: STOPP/START v3; Beers 2023; HFpEF guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar HFpEF descompensada.
+2. Revisar fármacos nuevos (AINE es culpable frecuente).
+3. Suspender AINE + descongestionar con diurético IV.
+4. Mantener empagliflozina; analgesia alternativa no nefrotóxica.
+
+Perlas de examen
+✅ STOPP: AINEs contraindicados en falla cardíaca (sistólica o diastólica).
+✅ AINE + ARA II = riesgo colapso glomerular.
+✅ Empagliflozina beneficia HFpEF; no suspender.
+✅ Digoxina inútil en FEVI preservada.
+✅ IBP no protege de nefrotoxicidad por AINE.
+
+Referencias
+• STOPP/START Criteria v3.
+• AGS Beers Criteria 2023.
+• ESC/ACC HFpEF Guidelines.
+• EMPEROR-Preserved Trial.
+• UpToDate: Treatment of heart failure with preserved ejection fraction.`,
   },
   {
     id: "dr-q-29",
@@ -2338,37 +2892,77 @@ Referencias: STOPP/START v3; Beers 2023; HFpEF guidelines.`,
     explanation:
       "Bacteriuria asintomática: cultivo positivo sin síntomas genitourinarios ni sistémicos (fiebre, delirium agudo). Olor a amoníaco en pañal ≠ ITU. AGS Choosing Wisely / IDSA: no tratar BA; no previene urosepsis pero sí resistencia y colitis por C. difficile.",
     keyPoints: [
-      "Cultivo (+) sin síntomas = bacteriuria asintomática; no tratar.",
-      "Choosing Wisely: no cultivar/tratar orina sin síntomas locales o sistémicos.",
-      "Piuria sola no diagnostica ITU en anciano con pañal.",
+      "Cuando veas: anciana asintomática con urocultivo positivo solicitado por olor en pañal.",
+      "Debes pensar en: bacteriuria asintomática → NO tratar con antibióticos.",
+      "Cultivo (+) sin síntomas genitourinarios ni sistémicos = colonización, no ITU.",
+      "Tratar BA aumenta resistencia y C. difficile sin prevenir urosepsis.",
+      "Tema: Geriatría — bacteriuria asintomática (Choosing Wisely).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa bacteriuria asintomática en anciana con pañal: cultivo positivo sin síntomas no es ITU; tratar genera resistencia y C. difficile sin beneficio.
+Esta es una pregunta clásica de geriatría e infectología porque evalúa la bacteriuria asintomática en anciana con pañal: cultivo positivo sin síntomas no es ITU y tratar genera iatrogenia sin beneficio.
+
+La clave no es el recuento de UFC ni la piuria aislada.
+La clave es:
+Diferenciar colonización comensal de infección urinaria sintomática.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 89 años con Alzheimer moderado e incontinencia crónica con pañal.
-- Completamente asintomática: come bien, camina, sin fiebre ni delirium.
-- Urocultivo solicitado por olor a amoníaco en pañal (no es indicación válida).
-- E. coli >100,000 UFC/mL con esterasa leucocitaria (+) y 15 leucocitos/campo.
-- Bacteriuria asintomática: colonización comensal en vejiga neurogénica/pañal.
+La paciente presenta:
+• Mujer de 89 años con Alzheimer moderado e incontinencia crónica con pañal.
+• Completamente asintomática: come bien, camina, sin fiebre ni delirium.
+• Urocultivo solicitado por olor a amoníaco en pañal (no es indicación válida).
+• E. coli >100,000 UFC/mL, esterasa leucocitaria (+), 15 leucocitos/campo.
+• Bacteriuria asintomática: colonización en vejiga neurogénica/pañal.
 
-¿Qué dato es clave en el examen?
-- Prevalencia BA hasta 20–50% en ancianos institucionalizados o con pañal.
-- Olor fétido en pañal ≠ infección urinaria activa.
-- AGS Choosing Wisely / IDSA: no tratar BA; no previene urosepsis.
-- Tratar BA sí aumenta resistencia antimicrobiana y colitis por C. difficile.
-- ITU requiere síntomas: disuria, urgencia nueva, fiebre o delirium agudo claro.
-- Piuria sola no diagnostica ITU en anciano con pañal.
+Recordemos bacteriuria asintomática (BA):
+• Prevalencia 20-50% en ancianos institucionalizados o con pañal.
+• Olor fétido en pañal ≠ infección urinaria activa.
+• AGS Choosing Wisely / IDSA: no tratar BA.
+• No previene urosepsis; sí aumenta resistencia y colitis por C. difficile.
+• ITU requiere síntomas: disuria, urgencia nueva, fiebre o delirium agudo claro.
+
+Por lo tanto:
+No es ITU atípica geriátrica.
+No requiere profilaxis ni hospitalización.
+No tratar.
+
+¿Por qué la opción B es la respuesta correcta?
+Bacteriuria asintomática.
+Olor y leucocitos en pañal no justifican antibióticos.
+Conducta: no tratar; evitar cultivos de rutina sin indicación.
 
 ¿Por qué fallan las otras opciones?
-- Ciprofloxacino 7 días por UFC y leucocitos: tratar colonización sin síntomas es iatrogenia.
-- Profilaxis con nitrofurantoína 6 meses: no esteriliza vía urinaria; genera resistencia crónica.
-- Hemocultivos + ceftriaxona IV: no hay datos de pielonefritis ni sepsis (afebril, estable).
+Opción A (ciprofloxacino 7 días): tratar colonización sin síntomas es iatrogenia; genera resistencia.
+Opción C (nitrofurantoína profiláctica 6 meses): no esteriliza vía urinaria; resistencia crónica.
+Opción D (hemocultivos + ceftriaxona IV): no hay datos de pielonefritis ni sepsis (afebril, estable).
 
-Clave: asintomática + cultivo (+) + pañal = bacteriuria asintomática → no antibióticos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Cultivo positivo = ITU" o "leucocitos en orina = antibiótico".
+Pero el examen exige integrar:
+Síntomas clínicos + contexto (pañal, asintomática).
+Aquí el dato decisivo es:
+Paciente completamente asintomática con cultivo solicitado por olor en pañal.
 
-Referencias: IDSA Guidelines; AGS Choosing Wisely.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar síntomas (fiebre, disuria, delirium agudo).
+2. Si asintomática → no cultivar ni tratar (Choosing Wisely).
+3. Si sintomática → tratar según guías IDSA.
+4. Piuria sola no diagnostica ITU en anciano con pañal.
+
+Perlas de examen
+✅ Cultivo (+) sin síntomas = bacteriuria asintomática; no tratar.
+✅ Choosing Wisely: no cultivar/tratar orina sin síntomas locales o sistémicos.
+✅ Piuria sola no diagnostica ITU en anciano con pañal.
+✅ Olor en pañal no es indicación de urocultivo.
+✅ Tratar BA no previene urosepsis pero sí C. difficile.
+
+Referencias
+• IDSA Guidelines — Asymptomatic Bacteriuria.
+• AGS Choosing Wisely — Urinary Tract Infections.
+• Beers Criteria 2023.
+• UpToDate: Asymptomatic bacteriuria in adults.`,
   },
   {
     id: "dr-q-30",
@@ -2404,36 +2998,77 @@ Referencias: IDSA Guidelines; AGS Choosing Wisely.`,
     explanation:
       "BPSD con desencadenante mecánico (flexión articular dolorosa): agresión = lenguaje de necesidad no cubierta (dolor). AGS: 1.ª línea = buscar causa + ensayo analgésico programado, no antipsicóticos de rutina (black box: ACV y muerte en demencia).",
     keyPoints: [
-      "Agitación en demencia severa = dolor o infección hasta probar lo contrario.",
-      "Scheduled analgesic trial superior a antipsicóticos en BPSD por dolor.",
-      "Haloperidol como \"chaleco químico\" = antiético y mortal.",
+      "Cuando veas: agresividad en demencia severa solo al flexionar rodillas o durante el baño.",
+      "Debes pensar en: dolor no verbalizado → ensayo analgésico programado (acetaminofén horario).",
+      "BPSD con desencadenante mecánico = buscar causa somática antes que antipsicóticos.",
+      "Haloperidol de rutina en demencia = black box FDA (ACV y muerte aumentados).",
+      "Tema: Geriatría — síntomas neuropsiquiátricos de la demencia (BPSD).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa BPSD con desencadenante mecánico: la agresividad al baño es lenguaje de dolor no verbalizado; acetaminofén programado antes que antipsicóticos.
+Esta es una pregunta clásica de geriatría porque evalúa los BPSD con desencadenante mecánico: la agresividad al baño es lenguaje de dolor no verbalizado; acetaminofén programado va antes que antipsicóticos.
+
+La clave no es haloperidol como «chaleco químico».
+La clave es:
+Presumir dolor no tratado o miedo y adaptar los cuidados antes de medicar.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 86 años con Alzheimer severo (GDS 6).
-- Agitación vespertina, agresividad al baño/cambio de pañal, deambulación nocturna (sundowning).
-- Agresividad solo cuando flexionan rodillas o desvisten para ducha: desencadenante mecánico.
-- Contracturas en rodillas, dolor evidente al movilizar caderas/rodillas.
-- BPSD por dolor no tratado, no psicosis primaria.
+El paciente presenta:
+• Hombre de 86 años con Alzheimer severo (GDS 6).
+• Agitación vespertina, deambulación nocturna (sundowning).
+• Agresividad solo cuando flexionan rodillas o desvisten para ducha.
+• Contracturas en rodillas, dolor evidente al movilizar caderas/rodillas.
+• BPSD por dolor no tratado, no psicosis primaria.
 
-¿Qué dato es clave en el examen?
-- Demencia severa: afasia y agnosia impiden verbalizar dolor → agresión instintiva de defensa.
-- AGS: 1.ª línea = buscar causa reversible + ensayo analgésico programado (scheduled analgesic trial).
-- Higiene no forzada: adaptar rutinas para minimizar movimientos dolorosos.
-- Antipsicóticos solo si psicosis o riesgo letal tras fallar medidas no farmacológicas.
-- Black box FDA: antipsicóticos en demencia → ACV y muerte aumentados.
+Recordemos BPSD y manejo AGS:
+• Demencia severa: afasia y agnosia impiden verbalizar dolor → agresión instintiva de defensa.
+• 1.ª línea: buscar causa reversible + ensayo analgésico programado (scheduled analgesic trial).
+• Higiene no forzada: adaptar rutinas para minimizar movimientos dolorosos.
+• Antipsicóticos solo si psicosis o riesgo letal tras fallar medidas no farmacológicas.
+• Black box FDA: antipsicóticos en demencia → ACV y muerte aumentados.
+
+Por lo tanto:
+No es psicosis que requiere haloperidol de rutina.
+Es dolor mecánico desencadenado por cuidados básicos.
+
+¿Por qué la opción C es la respuesta correcta?
+Presumir dolor no tratado o miedo.
+Ensayo analgésico programado: acetaminofén horario antes del baño.
+Higiene no forzada: adaptar técnica y horario.
+Intervención de primera línea según guías AGS.
 
 ¿Por qué fallan las otras opciones?
-- Haloperidol 1 mg antes del baño: sedación química sin tratar dolor; aumenta mortalidad.
-- Memantina + citalopram: no abordan dolor mecánico agudo; citalopram puede empeorar caídas.
-- Unidad psiquiátrica + sujeción + ECT: desproporcionado; la causa es somática tratable.
+Opción A (haloperidol 1 mg antes del baño): sedación química sin tratar dolor; aumenta mortalidad (black box).
+Opción B (memantina + citalopram): no abordan dolor mecánico agudo; citalopram puede empeorar caídas.
+Opción D (unidad psiquiátrica + sujeción + ECT): desproporcionado; causa somática tratable.
 
-Clave: agresión solo en flexión articular + artrosis = dolor → acetaminofén horario + higiene adaptada.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Agitación en demencia = antipsicótico" o "sundowning = haloperidol".
+Pero el examen exige identificar:
+Desencadenante mecánico (flexión articular = dolor).
+Aquí el dato decisivo es:
+Agresión solo durante movimientos que causan dolor en rodillas/caderas.
 
-Referencias: AGS Guidelines for Management of BPSD.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar BPSD y su desencadenante (¿cuándo ocurre?).
+2. Si desencadenante mecánico → buscar dolor, infección, estreñimiento.
+3. Ensayo analgésico programado antes de procedimientos dolorosos.
+4. Antipsicóticos solo como último recurso, con consentimiento informado.
+
+Perlas de examen
+✅ Agitación en demencia severa = dolor o infección hasta probar lo contrario.
+✅ Scheduled analgesic trial superior a antipsicóticos en BPSD por dolor.
+✅ Haloperidol como "chaleco químico" = antiético y mortal.
+✅ La agresión puede ser el único lenguaje del dolor en demencia avanzada.
+✅ Higiene adaptada: no forzar baño completo si causa agitación.
+
+Referencias
+• AGS Guidelines for Management of Behavioral and Psychological Symptoms of Dementia.
+• APA Practice Guideline on Use of Antipsychotics in Dementia.
+• NICE Dementia Guidelines.
+• UpToDate: Management of behavioral symptoms in dementia.`,
   },
   {
     id: "dr-q-31",
