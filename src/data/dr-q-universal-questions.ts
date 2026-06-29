@@ -37,36 +37,86 @@ export const DR_Q_UNIVERSAL_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation:
-      "Dolor precordial típico con elevación transitoria (no persistente) del ST y troponinas negativas: angina inestable de alto riesgo (cambios dinámicos del ST). Conducta: estrategia invasiva temprana con coronariografía en las primeras 24 horas.",
+      "Dolor precordial típico con elevación transitoria (no persistente) del ST y troponinas negativas: angina inestable de alto riesgo por cambios dinámicos del ST. Conducta: SCA sin elevación del ST de alto riesgo con coronariografía en las primeras 24 horas.",
     keyPoints: [
-      "Elevación transitoria del ST ≠ STEMI; requiere persistencia para IAMCEST.",
-      "Cambios dinámicos del ST = angina inestable de alto riesgo.",
-      "Coronariografía en primeras 24 h en SCA sin elevación del ST de alto riesgo.",
+      "Cuando veas: dolor torácico típico + elevación TRANSITORIA del ST + troponinas negativas (rule out).",
+      "Debes pensar en: angina inestable de alto riesgo → estrategia invasiva temprana.",
+      "La elevación transitoria del ST no es STEMI; requiere persistencia para IAMCEST.",
+      "Coronariografía en primeras 24 h en SCA sin elevación del ST de alto riesgo (no trombólisis).",
+      "Tema: Síndrome coronario agudo.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-SCA sin elevación del ST vs IAM con elevación transitoria del ST
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Paciente masculino de 60 años hipertenso con ERC 3B, dolor torácico típico, elevación transitoria del ST y troponinas negativas.
+Esta es una pregunta clásica de cardiología porque evalúa el enfoque inicial del síndrome coronario agudo según la persistencia de la elevación del ST, las troponinas y la estratificación de riesgo.
 
-• El síndrome coronario agudo se divide en SCA con elevación persistente del ST (STEMI) y SCA sin elevación persistente del ST (NSTEMI/angina inestable).
-• La elevación TRANSITORIA del ST es una trampa clásica de examen. Para diagnosticar STEMI, la elevación debe ser persistente y asociarse a oclusión coronaria aguda.
-• Cuando el paciente tiene dolor típico con cambios dinámicos del ST pero troponinas negativas, el diagnóstico más probable es angina inestable de alto riesgo.
-• Los cambios dinámicos del ST son criterios de alto riesgo y obligan a estrategia invasiva temprana.
-• La conducta correcta es coronariografía en primeras 24 horas.
+La clave no es solo el dolor torácico.
+La clave es:
+Identificar que se trata de un SCA sin elevación persistente del ST, con signos de alto riesgo que obligan a estrategia invasiva temprana.
 
-Lo que el estudiante debe dominar para residencia
-1. Diferenciar STEMI vs NSTEMI vs angina inestable.
-2. Interpretar elevaciones transitorias del ST.
-3. Estratificación de riesgo en SCA sin elevación del ST.
-4. Indicaciones de coronariografía temprana.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 60 años, hipertenso, con ERC estadio 3B.
+• Dolor opresivo retroesternal irradiado a mandíbula (35 minutos).
+• Elevación transitoria del ST en pared inferior en monitor, que desaparece.
+• Mejoría del dolor con analgésico oral; asintomático al reevaluar.
+• Troponinas iniciales y delta troponinas: rule out (negativas).
+
+Recordemos la clasificación del SCA:
+• STEMI: elevación persistente del ST con oclusión coronaria aguda → reperfusión inmediata (coronariografía o trombólisis).
+• NSTEMI: troponinas elevadas sin elevación persistente del ST → estratificación de riesgo e invasión según criterios.
+• Angina inestable: dolor isquémico sin elevación de troponinas, con o sin cambios dinámicos del ST.
+
+Por lo tanto:
+El paciente NO tiene STEMI (la elevación del ST no persistió).
+NO tiene NSTEMI (troponinas negativas).
+Tiene angina inestable de alto riesgo (dolor típico + cambios dinámicos del ST).
+
+¿Cuáles son los criterios de alto riesgo en angina inestable?
+Cambios dinámicos del ST (elevación o depresión transitoria).
+Dolor torácico típico con factores de riesgo cardiovascular (HTA, ERC).
+Inestabilidad hemodinámica o arritmias (no presentes aquí, pero siempre buscarlos).
+
+¿Por qué la opción A es la respuesta correcta?
+El diagnóstico es SCA sin elevación del ST (angina inestable de alto riesgo).
+La conducta según guías ESC y AHA:
+Estrategia invasiva temprana con coronariografía en las primeras 24 horas.
+No requiere trombólisis (reservada para STEMI cuando no hay acceso oportuno a PCI).
+No requiere coronariografía inmediata (<2 h), reservada para STEMI o shock cardiogénico.
+
+¿Por qué fallan las otras opciones?
+Opción B (trombólisis): la trombólisis es reperfusión para STEMI, no para angina inestable con troponinas negativas.
+Opción C (STEMI + coronariografía inmediata): la elevación del ST fue transitoria; sin persistencia no se diagnostica IAMCEST.
+Opción D (STEMI + trombólisis): mismo error de clasificación; además la trombólisis no está indicada sin diagnóstico de STEMI.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Elevación del ST" con STEMI automáticamente.
+Pero el examen exige correlacionar:
+Persistencia del ST + troponinas + contexto clínico.
+Aquí el dato decisivo es:
+Elevación TRANSITORIA del ST con troponinas rule out.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el cuadro clínico (dolor típico de SCA).
+2. Clasificar según ST persistente vs transitorio y troponinas.
+3. Estratificar el riesgo (cambios dinámicos del ST = alto riesgo).
+4. Elegir la conducta según la clasificación (invasión temprana vs reperfusión inmediata).
 
 Perlas de examen
-• Las residencias preguntan conductas, no solo diagnósticos.
-• El ECG debe interpretarse SIEMPRE junto al contexto clínico.
-• Los tiempos de reperfusión son extremadamente preguntables.
-• Las guías ESC y AHA modernas priorizan estratificación del riesgo.
+✅ Elevación transitoria del ST ≠ STEMI; requiere persistencia.
+✅ Troponinas negativas + dolor típico + cambios dinámicos del ST = angina inestable de alto riesgo.
+✅ Alto riesgo en SCA sin elevación del ST → coronariografía en primeras 24 h.
+✅ La trombólisis es para STEMI, no para angina inestable.
+✅ El ECG debe interpretarse siempre junto al contexto clínico y la evolución seriada.
+✅ Las residencias preguntan conductas, no solo diagnósticos.
 
-Referencias: ESC Guidelines for ACS; AHA/ACC ACS Guideline; Braunwald's Heart Disease; Tintinalli Emergency Medicine.`,
+Referencias
+• ESC Guidelines for the Management of Acute Coronary Syndromes.
+• AHA/ACC Guideline for the Management of Patients With Acute Coronary Syndromes.
+• Braunwald's Heart Disease.
+• Tintinalli Emergency Medicine.
+• UpToDate: Approach to the Initial Evaluation of Acute Chest Pain in Adults.`,
   },
   {
     id: "dr-q-02",
@@ -100,35 +150,77 @@ Referencias: ESC Guidelines for ACS; AHA/ACC ACS Guideline; Braunwald's Heart Di
     ],
     correctOptionId: "C",
     explanation:
-      "Dolor típico con bloqueo de rama derecha nuevo en contexto de SCA se considera equivalente de elevación del ST. Diagnóstico: IAMCEST equivalente. Conducta: reperfusión urgente (trombólisis si la PCI no está disponible en ≤120 min).",
+      "Dolor torácico típico persistente con bloqueo de rama derecha en contexto de SCA: equivalente de elevación del ST (IAMCEST). Conducta: reperfusión urgente; trombólisis si la PCI no está disponible en ≤120 minutos.",
     keyPoints: [
-      "BRI y BRD con dolor típico = equivalentes de STEMI.",
-      "El diagnóstico de SCA es primordialmente clínico.",
-      "Reperfusión urgente; no estratificar como NSTEMI de bajo riesgo.",
+      "Cuando veas: dolor torácico típico + bloqueo de rama (BRI o BRD) nuevo o no conocido en contexto de SCA.",
+      "Debes pensar en: equivalente de STEMI → reperfusión inmediata (PCI o trombólisis).",
+      "El diagnóstico de SCA es primordialmente clínico; el ECG puede ocultar la elevación del ST.",
+      "No estratificar como NSTEMI de bajo riesgo ni diferir con eco estrés ambulatorio.",
+      "Tema: Síndrome coronario agudo — equivalentes de elevación del ST.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-Equivalentes de elevación del ST
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Paciente con dolor típico y bloqueo de rama derecha en ECG.
+Esta es una pregunta clásica de cardiología porque evalúa el reconocimiento de los equivalentes de elevación del ST cuando el ECG no muestra el patrón típico de STEMI.
 
-• El diagnóstico de síndrome coronario es principalmente clínico.
-• Los bloqueos de rama pueden ocultar signos clásicos del infarto.
-• En contexto de dolor torácico típico, el bloqueo de rama izquierda y el bloqueo de rama derecha deben considerarse equivalentes de elevación del ST.
-• Otros equivalentes importantes: patrón de De Winter, infarto posterior y Wellens.
-• La conducta debe ser reperfusión urgente.
+La clave no es buscar elevación del ST en derivaciones convencionales.
+La clave es:
+Identificar que el bloqueo de rama con dolor típico persistente equivale a un IAMCEST y exige reperfusión urgente.
 
-Lo que el estudiante debe dominar para residencia
-1. Reconocer equivalentes STEMI.
-2. Importancia del contexto clínico.
-3. Indicaciones de reperfusión inmediata.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 80 años con múltiples factores de riesgo cardiovascular (HTA, dislipidemia, obesidad, tabaquismo).
+• Dolor opresivo retroesternal irradiado a mandíbula (1 hora de evolución).
+• ECG con bloqueo de rama derecha (BRD).
+• Dolor que persiste a pesar del manejo analgésico.
+
+Recordemos los equivalentes de elevación del ST:
+• Bloqueo de rama izquierda (BRI) nuevo o presumiblemente nuevo con dolor típico.
+• Bloqueo de rama derecha (BRD) con dolor típico en contexto de SCA.
+• Depresión difusa del ST con elevación en aVR (patrón del tronco).
+• Patrón de De Winter, infarto posterior, signos de Wellens.
+
+Por lo tanto:
+El paciente tiene un IAMCEST equivalente, no un SCA sin elevación del ST de bajo riesgo.
+
+¿Por qué la opción C es la respuesta correcta?
+Diagnóstico: SCA con elevación del ST (equivalente por BRD).
+Conducta: reperfusión urgente.
+Si la angioplastia primaria no puede realizarse en ≤120 minutos desde el primer contacto médico, la trombólisis está indicada.
+El dolor persistente confirma isquemia activa que no puede esperar estudios ambulatorios.
+
+¿Por qué fallan las otras opciones?
+Opción A (tratamiento fármaco invasivo): ambigua y no especifica reperfusión; además "fármaco invasivo" no es el término estándar para trombólisis o PCI urgente.
+Opción B (NSTEMI + eco estrés ambulatorio): error grave de clasificación; un equivalente STEMI nunca se maneja con estratificación ambulatoria.
+Opción D (NSTEMI + coronariografía): subestima la urgencia; equivale a STEMI y requiere reperfusión inmediata, no solo cateterismo programado.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Bloqueo de rama" con un hallazgo benigno o con NSTEMI.
+Pero el examen exige correlacionar:
+Contexto clínico (dolor típico persistente) + patrón ECG atípico.
+Aquí el dato decisivo es:
+Dolor torácico típico + BRD en paciente con alto riesgo cardiovascular.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar el cuadro clínico (¿dolor típico de isquemia?).
+2. Buscar STEMI clásico o sus equivalentes en el ECG.
+3. Clasificar como IAMCEST (directo o equivalente).
+4. Indicar reperfusión urgente (PCI primaria o trombólisis según tiempos).
 
 Perlas de examen
-• Las residencias preguntan conductas, no solo diagnósticos.
-• El ECG debe interpretarse SIEMPRE junto al contexto clínico.
-• Los tiempos de reperfusión son extremadamente preguntables.
-• Las guías ESC y AHA modernas priorizan estratificación del riesgo.
+✅ BRI y BRD con dolor típico = equivalentes de STEMI.
+✅ El diagnóstico de SCA es primordialmente clínico.
+✅ Reperfusión urgente; no diferir con eco estrés ni manejo ambulatorio.
+✅ Trombólisis si PCI no disponible en ≤120 minutos.
+✅ Otros equivalentes: De Winter, infarto posterior, Wellens, patrón del tronco (aVR).
 
-Referencias: ESC Guidelines for ACS; AHA/ACC ACS Guideline; Braunwald's Heart Disease; Tintinalli Emergency Medicine.`,
+Referencias
+• ESC Guidelines for the Management of Acute Coronary Syndromes.
+• AHA/ACC Guideline for the Management of Patients With Acute Coronary Syndromes.
+• Braunwald's Heart Disease.
+• Tintinalli Emergency Medicine.
+• UpToDate: Diagnosis of ST-elevation myocardial infarction.`,
   },
   {
     id: "dr-q-03",
@@ -162,36 +254,79 @@ Referencias: ESC Guidelines for ACS; AHA/ACC ACS Guideline; Braunwald's Heart Di
     ],
     correctOptionId: "A",
     explanation:
-      "STEMI inferior con retraso >120 min para PCI: indicada estrategia farmacoinvasiva (trombólisis + anticoagulación + doble antiagregación). Prasugrel está contraindicado con antecedente de ACV/AIT; usar clopidogrel.",
+      "STEMI inferior con retraso >120 minutos para PCI: indicada estrategia farmacoinvasiva (trombólisis + doble antiagregación + anticoagulación). Prasugrel está contraindicado por antecedente de ACV; usar clopidogrel.",
     keyPoints: [
-      "PCI ideal si ≤120 min; si no, trombólisis si dolor <12 h.",
-      "Prasugrel contraindicado en ACV/AIT previo.",
-      "Todo paciente trombolizado debe remitirse posteriormente a PCI.",
+      "Cuando veas: STEMI confirmado + tiempo de traslado a PCI >120 minutos + dolor <12 horas.",
+      "Debes pensar en: estrategia farmacoinvasiva (trombólisis + remisión posterior a PCI).",
+      "Prasugrel contraindicado en antecedente de ACV o AIT; usar clopidogrel.",
+      "No remitir sin tratamiento previo ni usar prasugrel en este escenario.",
+      "Tema: Síndrome coronario agudo — reperfusión en STEMI.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-Estrategia farmacoinvasiva en STEMI
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Paciente con STEMI inferior y retraso mayor de 120 minutos para PCI.
+Esta es una pregunta clásica de cardiología porque evalúa la decisión de reperfusión en STEMI según los tiempos de acceso a PCI y las contraindicaciones de los antitrombóticos.
 
-• La angioplastia primaria es el tratamiento ideal si puede realizarse en menos de 120 minutos.
-• Si el tiempo excede 120 minutos y el dolor tiene menos de 12 horas de evolución, debe realizarse trombólisis.
-• Todo paciente trombolizado debe remitirse posteriormente a PCI.
-• Prasugrel está contraindicado en pacientes con antecedente de ACV o AIT.
-• La estrategia farmacoinvasiva combina trombólisis temprana seguida de coronariografía.
+La clave no es solo confirmar el STEMI.
+La clave es:
+Calcular el tiempo hasta PCI y elegir la estrategia farmacoinvasiva con el antiagregante correcto.
 
-Lo que el estudiante debe dominar para residencia
-1. Ventanas de reperfusión.
-2. Indicaciones de trombólisis.
-3. Contraindicaciones de prasugrel.
-4. Concepto de estrategia farmacoinvasiva.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Mujer de 67 años con antecedente de ACV isquémico hace 2 años.
+• Dolor torácico típico de 40 minutos.
+• ECG con elevación del ST en DII, DIII y aVF (STEMI inferior).
+• Traslado a hemodinamia estimado en 160 minutos (>120 min).
+• Atención en urgencias de primer nivel (sin PCI disponible).
+
+Recordemos las ventanas de reperfusión:
+• PCI primaria ideal si puede realizarse en ≤120 minutos desde el primer contacto médico.
+• Si el tiempo excede 120 minutos y el dolor tiene <12 horas: indicada trombólisis.
+• Todo paciente trombolizado debe remitirse posteriormente a PCI (estrategia farmacoinvasiva).
+
+Por lo tanto:
+No se puede esperar 160 minutos para PCI sin reperfusión.
+La trombólisis es la conducta inmediata correcta.
+
+¿Por qué la opción A es la respuesta correcta?
+Esquema farmacoinvasivo completo:
+ASA + estatina de alta intensidad (atorvastatina) + clopidogrel + enoxaparina SC + trombólisis.
+Clopidogrel (no prasugrel) porque el antecedente de ACV es contraindicación absoluta para prasugrel.
+Enoxaparina SC es la anticoagulación de elección en la mayoría de protocolos de trombólisis.
+
+¿Por qué fallan las otras opciones?
+Opción B (remitir sin tratamiento): inaceptable; 160 minutos sin reperfusión aumenta mortalidad y tamaño del infarto.
+Opción C (prasugrel + traslado sin trombólisis): prasugrel contraindicado por ACV previo; además no hay reperfusión inmediata.
+Opción D (prasugrel + trombólisis): misma contraindicación de prasugrel; error farmacológico grave.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"STEMI = siempre PCI inmediata" o "potentes antiagregantes = siempre mejor".
+Pero el examen exige correlacionar:
+Tiempo hasta PCI + contraindicaciones del paciente + esquema antitrombótico completo.
+Aquí los datos decisivos son:
+160 minutos de traslado + antecedente de ACV.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar STEMI en el ECG.
+2. Estimar tiempo hasta PCI (≤120 min vs >120 min).
+3. Si >120 min y dolor <12 h → trombólisis + anticoagulación + DAPT.
+4. Verificar contraindicaciones de prasugrel/ticagrelor (ACV, edad, peso).
+5. Remitir a PCI posterior (farmacoinvasiva).
 
 Perlas de examen
-• Las residencias preguntan conductas, no solo diagnósticos.
-• El ECG debe interpretarse SIEMPRE junto al contexto clínico.
-• Los tiempos de reperfusión son extremadamente preguntables.
-• Las guías ESC y AHA modernas priorizan estratificación del riesgo.
+✅ PCI ideal si ≤120 min; si no, trombólisis si dolor <12 h.
+✅ Prasugrel contraindicado en ACV o AIT previo.
+✅ Todo paciente trombolizado debe remitirse posteriormente a PCI.
+✅ No remitir sin tratamiento cuando el tiempo de traslado excede la ventana.
+✅ La estrategia farmacoinvasiva combina trombólisis temprana + coronariografía posterior.
 
-Referencias: ESC Guidelines for ACS; AHA/ACC ACS Guideline; Braunwald's Heart Disease; Tintinalli Emergency Medicine.`,
+Referencias
+• ESC Guidelines for the Management of Acute Coronary Syndromes.
+• AHA/ACC Guideline for the Management of Patients With Acute Coronary Syndromes.
+• Braunwald's Heart Disease.
+• Tintinalli Emergency Medicine.
+• UpToDate: Fibrinolytic (thrombolytic) therapy in acute ST elevation myocardial infarction.`,
   },
   {
     id: "dr-q-04",
@@ -209,34 +344,79 @@ Referencias: ESC Guidelines for ACS; AHA/ACC ACS Guideline; Braunwald's Heart Di
     ],
     correctOptionId: "B",
     explanation:
-      "La trombólisis no finaliza el tratamiento del STEMI. Todo paciente trombolizado debe remitirse para PCI dentro de las primeras 24 horas (estrategia farmacoinvasiva).",
+      "La trombólisis no finaliza el tratamiento del STEMI. Todo paciente trombolizado debe remitirse para PCI dentro de las primeras 24 horas (estrategia farmacoinvasiva), incluso en zonas rurales.",
     keyPoints: [
-      "Trombólisis + PCI en 24 h = estrategia farmacoinvasiva.",
-      "Reduce mortalidad y reinfarto vs trombólisis aislada.",
-      "Persistencia de dolor o ST sin resolución → trombólisis fallida / PCI rescate.",
+      "Cuando veas: paciente con STEMI trombolizado en hospital sin hemodinamia.",
+      "Debes pensar en: remisión obligatoria a PCI (estrategia farmacoinvasiva en 24 h).",
+      "La trombólisis es puente, no tratamiento definitivo.",
+      "Observación aislada sin PCI posterior aumenta reinfarto y mortalidad.",
+      "Tema: Síndrome coronario agudo — conducta post-trombólisis.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-Conducta posterior a trombólisis
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Paciente trombolizado en zona rural alejada.
+Esta es una pregunta clásica de cardiología porque evalúa la conducta posterior a la trombólisis en STEMI, un escenario frecuente en zonas rurales de Colombia.
 
-• La trombólisis NO finaliza el tratamiento del STEMI.
-• Todo paciente trombolizado debe remitirse para PCI dentro de las primeras 24 horas.
-• La estrategia farmacoinvasiva reduce mortalidad y reinfarto.
-• La persistencia del dolor o ausencia de resolución del ST obliga a considerar trombólisis fallida.
+La clave no es confirmar que la trombólisis se administró.
+La clave es:
+Reconocer que la trombólisis es solo el primer paso y que la PCI posterior es obligatoria.
 
-Lo que el estudiante debe dominar para residencia
-1. Conducta posterior a trombólisis.
-2. PCI de rescate.
-3. Importancia del traslado posterior.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 50 años con factores de riesgo cardiovascular (HTA, DM, obesidad).
+• Residente en zona rural a 6 horas del hospital de tercer nivel.
+• ECG con elevación del ST en cara anterolateral (STEMI).
+• Trombólisis ya administrada en hospital local.
+• La pregunta es sobre la conducta posterior, no sobre indicar trombólisis.
+
+Recordemos la estrategia farmacoinvasiva:
+• Trombólisis en centro sin PCI cuando el tiempo de traslado excede 120 minutos.
+• Remisión obligatoria a coronariografía/PCI dentro de las primeras 24 horas.
+• La PCI posterior reduce mortalidad, reinfarto y complicaciones vs trombólisis aislada.
+
+Por lo tanto:
+No basta con observar al paciente en el hospital local.
+Debe trasladarse a PCI.
+
+¿Por qué la opción B es la respuesta correcta?
+Remitir a PCI es la conducta estándar post-trombólisis según guías ESC y AHA.
+La coronariografía permite:
+Evaluar reperfusión (¿trombólisis exitosa?).
+Realizar PCI de rescate si hay trombólisis fallida.
+Tratar lesiones residuales y optimizar el manejo.
+
+¿Por qué fallan las otras opciones?
+Opción A (observación 12 h): insuficiente; no cumple la estrategia farmacoinvasiva.
+Opción C (repetir ECG y egreso si baja ST): el criterio de egreso no es solo resolución electrocardiográfica; se requiere PCI.
+Opción D (observación 24 h con nitratos): retrasa o evita la PCI necesaria; manejo inadecuado.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Trombólisis exitosa = tratamiento completo" o "zona rural = solo observar".
+Pero el examen exige recordar:
+La trombólisis nunca cierra el manejo del STEMI.
+Aquí el dato decisivo es:
+Paciente ya trombolizado que necesita completar la estrategia farmacoinvasiva.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar STEMI y administrar trombólisis si PCI no está a ≤120 min.
+2. Estabilizar y trasladar a centro con hemodinamia.
+3. Realizar PCI dentro de las primeras 24 horas.
+4. Si persistencia de dolor o ST sin resolución → considerar trombólisis fallida / PCI de rescate.
 
 Perlas de examen
-• Las residencias preguntan conductas, no solo diagnósticos.
-• El ECG debe interpretarse SIEMPRE junto al contexto clínico.
-• Los tiempos de reperfusión son extremadamente preguntables.
-• Las guías ESC y AHA modernas priorizan estratificación del riesgo.
+✅ Trombólisis + PCI en 24 h = estrategia farmacoinvasiva.
+✅ Reduce mortalidad y reinfarto vs trombólisis aislada.
+✅ Persistencia de dolor o ST sin resolución → trombólisis fallida / PCI rescate.
+✅ La zona rural no exime de remisión a PCI.
+✅ Observación sin cateterismo posterior es manejo incompleto.
 
-Referencias: ESC Guidelines for ACS; AHA/ACC ACS Guideline; Braunwald's Heart Disease; Tintinalli Emergency Medicine.`,
+Referencias
+• ESC Guidelines for the Management of Acute Coronary Syndromes.
+• AHA/ACC Guideline for the Management of Patients With Acute Coronary Syndromes.
+• Braunwald's Heart Disease.
+• Tintinalli Emergency Medicine.
+• UpToDate: Acute ST-elevation myocardial infarction: Management of fibrinolysis.`,
   },
   {
     id: "dr-q-05",
@@ -262,35 +442,75 @@ Referencias: ESC Guidelines for ACS; AHA/ACC ACS Guideline; Braunwald's Heart Di
     ],
     correctOptionId: "B",
     explanation:
-      "Post-SCA con stent y alto riesgo hemorrágico: las guías ESC/AHA permiten DAPT abreviada (1 mes) seguida de monoterapia con inhibidor P2Y12 hasta completar 12 meses, reduciendo sangrado sin comprometer protección antiisquémica.",
+      "Post-SCA con stent y alto riesgo hemorrágico: las guías permiten DAPT abreviada (1 mes ASA + ticagrelor) seguida de monoterapia con inhibidor P2Y12 hasta completar 12 meses, reduciendo sangrado sin comprometer protección antiisquémica.",
     keyPoints: [
-      "DAPT estándar post-SCA: 12 meses.",
-      "Alto riesgo hemorrágico: estrategia abreviada permitida.",
-      "1 mes DAPT → monoterapia P2Y12 hasta 12 meses totales.",
+      "Cuando veas: paciente post-PCI por SCA + alto riesgo de sangrado.",
+      "Debes pensar en: DAPT abreviada (1 mes) → monoterapia P2Y12 hasta 12 meses totales.",
+      "DAPT estándar post-SCA: 12 meses ASA + inhibidor P2Y12.",
+      "En alto riesgo hemorrágico se puede acortar la fase de doble terapia.",
+      "Tema: Síndrome coronario agudo — terapia antiagregante dual (DAPT).",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-DAPT y alto riesgo de sangrado
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Paciente post angioplastia con alto riesgo hemorrágico.
+Esta es una pregunta clásica de cardiología porque evalúa la duración de la DAPT post-SCA según el balance isquemia-sangrado, un tema muy preguntado en residencias.
 
-• La terapia antiagregante dual (DAPT) es estándar posterior a un síndrome coronario agudo.
-• Tradicionalmente se realizaban 12 meses de ASA + inhibidor P2Y12.
-• Las nuevas guías permiten estrategias abreviadas en pacientes con alto riesgo hemorrágico.
-• Actualmente puede realizarse un mes de DAPT y luego continuar monoterapia con inhibidor P2Y12.
-• Esta estrategia reduce sangrado sin aumentar significativamente eventos isquémicos.
+La clave no es suspender toda la antiagregación pronto.
+La clave es:
+Ajustar la duración de la DAPT sin perder la protección del inhibidor P2Y12 hasta completar 12 meses.
 
-Lo que el estudiante debe dominar para residencia
-1. Duración estándar de DAPT.
-2. Definición de alto riesgo hemorrágico.
-3. Estrategias modernas abreviadas.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Angioplastia con stent posterior a síndrome coronario agudo.
+• Alto riesgo de sangrado (dato explícito en el enunciado).
+• La pregunta es sobre el tratamiento al egreso, no sobre la fase aguda.
+
+Recordemos la DAPT estándar:
+• ASA + inhibidor P2Y12 (clopidogrel, ticagrelor o prasugrel) durante 12 meses post-SCA con stent.
+• En pacientes con alto riesgo hemorrágico, las guías ESC/AHA permiten estrategias abreviadas.
+• Esquema: 1 mes de DAPT → suspender ASA → continuar inhibidor P2Y12 hasta completar 12 meses totales.
+
+Por lo tanto:
+No se suspende todo a 1 mes.
+No se mantiene DAPT completa de 12 meses si el riesgo de sangrado es alto.
+
+¿Por qué la opción B es la respuesta correcta?
+DAPT con ticagrelor + ASA por 1 mes.
+Luego suspender ASA y continuar ticagrelor hasta completar 12 meses.
+Esta estrategia reduce eventos hemorrágicos sin aumentar significativamente eventos isquémicos en pacientes seleccionados con alto riesgo de sangrado.
+
+¿Por qué fallan las otras opciones?
+Opción A (clopidogrel + ASA 1 mes y fin): suspende toda la protección antiagregante potente demasiado pronto; solo 1 mes total es insuficiente.
+Opción C (ticagrelor + ASA 12 meses): DAPT estándar completa, no adaptada al alto riesgo hemorrágico que plantea la pregunta.
+Opción D (clopidogrel + ASA 1 mes, luego solo ASA): invierte la lógica; la monoterapia debe ser con inhibidor P2Y12, no con ASA sola post-stent.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Alto riesgo de sangrado = suspender todo antiagregante" o "siempre 12 meses de DAPT".
+Pero el examen exige correlacionar:
+Riesgo isquémico (SCA reciente + stent) + riesgo hemorrágico.
+Aquí el dato decisivo es:
+Alto riesgo de sangrado en paciente post-SCA con stent.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar que el paciente es post-SCA con stent (DAPT indicada).
+2. Evaluar riesgo hemorrágico.
+3. Si alto riesgo: DAPT abreviada 1 mes → monoterapia P2Y12 hasta 12 meses.
+4. Si bajo riesgo: DAPT estándar 12 meses.
 
 Perlas de examen
-• Las residencias preguntan conductas, no solo diagnósticos.
-• El ECG debe interpretarse SIEMPRE junto al contexto clínico.
-• Los tiempos de reperfusión son extremadamente preguntables.
-• Las guías ESC y AHA modernas priorizan estratificación del riesgo.
+✅ DAPT estándar post-SCA: 12 meses.
+✅ Alto riesgo hemorrágico: estrategia abreviada permitida.
+✅ 1 mes DAPT → monoterapia P2Y12 hasta 12 meses totales.
+✅ No suspender el inhibidor P2Y12 a los 30 días en paciente de alto riesgo isquémico.
+✅ La monoterapia prolongada debe ser con P2Y12, no con ASA sola.
 
-Referencias: ESC/AHA ACS Guidelines; European Heart Journal DAPT Updates; Braunwald's Heart Disease; Tintinalli Emergency Medicine.`,
+Referencias
+• ESC Guidelines for the Management of Acute Coronary Syndromes.
+• AHA/ACC Guideline on DAPT in CAD Patients.
+• European Heart Journal — DAPT Duration Updates.
+• Braunwald's Heart Disease.
+• UpToDate: Long-term antiplatelet therapy after coronary stenting.`,
   },
   {
     id: "dr-q-06",
@@ -312,36 +532,80 @@ Referencias: ESC/AHA ACS Guidelines; European Heart Journal DAPT Updates; Braunw
     ],
     correctOptionId: "D",
     explanation:
-      "FA + SCA post-PCI: triple terapia corta (ASA + clopidogrel + DOAC) con suspensión de ASA a la semana, continuando apixabán + clopidogrel hasta 12 meses. Minimiza sangrado sin perder protección antitrombótica.",
+      "FA + SCA post-PCI con stent: triple terapia corta (ASA + clopidogrel + apixabán) con suspensión de ASA a la semana, continuando apixabán + clopidogrel hasta 12 meses. Minimiza sangrado sin perder protección antitrombótica.",
     keyPoints: [
-      "FA + SCA + stent = escenario antitrombótico complejo.",
-      "Triple terapia mínima: suspender ASA a la semana.",
-      "Clopidogrel + DOAC preferido tras retirar ASA.",
+      "Cuando veas: fibrilación auricular anticoagulada + SCA tratado con angioplastia y stent.",
+      "Debes pensar en: triple terapia mínima → suspender ASA a la semana → doble terapia (DOAC + clopidogrel).",
+      "FA + SCA + stent = uno de los escenarios antitrombóticos más complejos del examen.",
+      "El ASA se suspende pronto (≈1 semana); continúan DOAC + clopidogrel.",
+      "Tema: Síndrome coronario agudo — manejo antitrombótico con FA.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-Triple terapia y fibrilación auricular
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Paciente con FA anticoagulado con apixabán que presenta SCA tratado con angioplastia y stent.
+Esta es una pregunta clásica de cardiología porque evalúa el manejo antitrombótico en la coexistencia de fibrilación auricular y SCA post-PCI, uno de los escenarios más preguntados en residencias.
 
-• La coexistencia de fibrilación auricular y síndrome coronario agudo genera uno de los escenarios antitrombóticos más preguntados en residencia.
-• El objetivo es equilibrar el riesgo trombótico coronario con el riesgo cardioembólico de la FA.
-• Las guías modernas recomiendan minimizar la duración de la triple terapia debido al riesgo hemorrágico.
-• Actualmente se favorece triple terapia corta (ASA + Clopidogrel + DOAC) seguida rápidamente de doble terapia.
-• El esquema más utilizado es suspensión de ASA después de una semana y continuación con Apixabán + Clopidogrel durante 12 meses.
+La clave no es elegir entre anticoagulación o antiagregación.
+La clave es:
+Equilibrar riesgo trombótico coronario, riesgo cardioembólico y riesgo hemorrágico con triple terapia mínima.
 
-Lo que el estudiante debe dominar para residencia
-1. Indicaciones de triple terapia.
-2. Duración recomendada de ASA.
-3. Diferencias entre doble y triple terapia.
-4. Manejo de pacientes con FA sometidos a PCI.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Angioplastia con stent posterior a síndrome coronario agudo.
+• Antecedente de fibrilación auricular en tratamiento con apixabán (DOAC).
+• La pregunta es sobre el esquema al egreso.
+
+Recordemos el algoritmo FA + SCA + stent:
+• Fase aguda: triple terapia (ASA + clopidogrel + DOAC).
+• Objetivo: minimizar duración de triple terapia por riesgo hemorrágico.
+• Suspender ASA a la semana (≈7 días).
+• Continuar apixabán + clopidogrel hasta 12 meses.
+• Luego: anticoagulación a largo plazo según CHA₂DS₂-VASc.
+
+Por lo tanto:
+No se suspende el apixabán (riesgo cardioembólico).
+No se mantiene triple terapia 12 meses (riesgo hemorrágico).
+No se usa solo DAPT sin anticoagulación (riesgo de ACV).
+
+¿Por qué la opción D es la respuesta correcta?
+Triple terapia inicial: ASA + clopidogrel + apixabán.
+Suspensión de ASA a la semana.
+Continuación de apixabán + clopidogrel hasta completar 12 meses.
+Es el esquema recomendado por guías ESC para equilibrar los tres riesgos.
+
+¿Por qué fallan las otras opciones?
+Opción A (solo apixabán): abandona la protección antiagregante post-stent; alto riesgo de trombosis del stent.
+Opción B (triple terapia 12 meses): exposición prolongada a triple terapia aumenta sangrado mayor sin beneficio adicional demostrado.
+Opción C (DAPT 12 meses sin apixabán): ignora la FA y el riesgo cardioembólico; el paciente requiere anticoagulación.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Stent = DAPT 12 meses" o "FA = solo anticoagulante".
+Pero el examen exige integrar:
+Los tres fármacos en fase aguda y la transición rápida a doble terapia.
+Aquí el dato decisivo es:
+FA anticoagulada + SCA reciente con stent.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer FA + SCA + stent como escenario de triple terapia.
+2. Iniciar ASA + clopidogrel + DOAC.
+3. Suspender ASA a la semana.
+4. Mantener DOAC + clopidogrel hasta 12 meses.
+5. Reevaluar anticoagulación a largo plazo según riesgo.
 
 Perlas de examen
-• La mayoría de las residencias preguntan cuánto tiempo debe mantenerse el ASA.
-• Los DOAC son preferidos sobre warfarina cuando no existe contraindicación.
-• Clopidogrel continúa siendo el inhibidor P2Y12 de elección en triple terapia.
-• El objetivo principal es disminuir sangrado sin aumentar eventos isquémicos.
+✅ FA + SCA + stent = escenario antitrombótico complejo.
+✅ Triple terapia mínima: suspender ASA a la semana.
+✅ Clopidogrel + DOAC preferido tras retirar ASA.
+✅ Los DOAC son preferidos sobre warfarina cuando no hay contraindicación.
+✅ La pregunta clásica es cuánto tiempo mantener el ASA (respuesta: ~1 semana).
 
-Referencias: ESC ACS Guidelines; ESC AF Guidelines; AHA/ACC Coronary Revascularization; Braunwald's Heart Disease.`,
+Referencias
+• ESC Guidelines for the Management of Acute Coronary Syndromes.
+• ESC Guidelines for the Management of Atrial Fibrillation.
+• AHA/ACC Guideline on Coronary Revascularization.
+• Braunwald's Heart Disease.
+• UpToDate: Antithrombotic therapy after coronary stenting in patients with AF.`,
   },
   {
     id: "dr-q-07",
@@ -359,36 +623,77 @@ Referencias: ESC ACS Guidelines; ESC AF Guidelines; AHA/ACC Coronary Revasculari
     ],
     correctOptionId: "D",
     explanation:
-      "La PTOG 75 g tiene mayor sensibilidad para detectar diabetes en fases tempranas, porque captura la hiperglucemia posprandial, alteración metabólica más temprana en resistencia a la insulina.",
+      "La PTOG con 75 g es la prueba de tamizaje más sensible para detectar diabetes en fases tempranas, porque captura la hiperglucemia posprandial, alteración metabólica inicial en resistencia a la insulina.",
     keyPoints: [
-      "PTOG: prueba más sensible en fases tempranas.",
-      "HbA1c: más práctica; refleja exposición crónica.",
-      "Acantosis nigricans = marcador de resistencia a la insulina.",
+      "Cuando veas: obesidad + acantosis nigricans + síntomas cardinales de diabetes (poliuria, polidipsia, polifagia).",
+      "Debes pensar en: resistencia a la insulina → PTOG 75 g como prueba más sensible.",
+      "La HbA1c es más práctica pero puede ser normal en fases tempranas.",
+      "La glucemia en ayunas puede pasar por alto alteraciones posprandiales iniciales.",
+      "Tema: Diabetes mellitus — diagnóstico y tamizaje.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-La PTOG de 75 g como prueba más sensible
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Paciente con obesidad, acantosis nigricans y síntomas cardinales compatibles con diabetes mellitus.
+Esta es una pregunta clásica de endocrinología porque evalúa la elección de la prueba diagnóstica más sensible según el mecanismo fisiopatológico de la diabetes tipo 2.
 
-• La resistencia a la insulina suele manifestarse inicialmente con alteraciones posprandiales.
-• Por esta razón la PTOG tiene mayor sensibilidad para detectar diabetes en fases tempranas.
-• La hemoglobina glicada refleja exposición crónica a glucosa, pero puede ser normal en etapas iniciales.
-• La glucemia en ayunas tiene buena utilidad diagnóstica, aunque puede pasar por alto alteraciones tempranas.
-• La PTOG sigue siendo considerada la prueba diagnóstica más sensible para detectar trastornos tempranos del metabolismo de la glucosa.
+La clave no es elegir la prueba más práctica.
+La clave es:
+Identificar que la resistencia a la insulina altera primero la glucemia posprandial y que la PTOG la detecta antes.
 
-Lo que el estudiante debe dominar para residencia
-1. Criterios diagnósticos ADA.
-2. Diferencias entre HbA1c, glucemia en ayunas y PTOG.
-3. Indicaciones de tamizaje.
-4. Factores de riesgo para diabetes tipo 2.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Síntomas cardinales de novo: polidipsia, polifagia, poliuria.
+• Acantosis nigricans (marcador clínico de resistencia a la insulina).
+• Antecedentes de alcoholismo y obesidad.
+• La pregunta pide la prueba de tamizaje más sensible, no la más conveniente.
+
+Recordemos las pruebas diagnósticas según ADA:
+• HbA1c ≥6.5%: refleja exposición crónica a glucosa (práctica, pero puede ser normal al inicio).
+• Glucemia en ayunas ≥126 mg/dL: útil, pero puede ser normal con alteración posprandial aislada.
+• PTOG 75 g: ≥200 mg/dL a las 2 h — mayor sensibilidad en fases tempranas.
+• Glucemia aleatoria ≥200 mg/dL con síntomas: también diagnóstica, pero la pregunta pide tamizaje.
+
+Por lo tanto:
+La alteración metabólica más temprana es la hiperglucemia posprandial.
+La PTOG es la prueba que mejor la captura.
+
+¿Por qué la opción D es la respuesta correcta?
+La prueba de tolerancia oral a la glucosa con 75 g evalúa la respuesta glucémica postcarga.
+En resistencia a la insulina, la glucemia en ayunas puede permanecer normal mientras la posprandial ya está alterada.
+Por eso la PTOG tiene la mayor sensibilidad para detectar diabetes en fases tempranas.
+
+¿Por qué fallan las otras opciones?
+Opción A (HbA1c): excelente para seguimiento y tamizaje poblacional, pero refleja promedio de 2-3 meses; puede ser normal al inicio.
+Opción B (glucosa en ayunas): buena especificidad, pero menor sensibilidad que la PTOG en etapas tempranas.
+Opción C (test de Sullivan): prueba de función hepática, no tiene relación con el diagnóstico de diabetes.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"HbA1c = prueba de elección siempre" o "glucemia en ayunas = suficiente".
+Pero el examen exige distinguir:
+Sensibilidad vs practicidad según el contexto clínico.
+Aquí el dato decisivo es:
+La pregunta pide la prueba MÁS SENSIBLE, no la más usada en consulta.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar factores de riesgo y síntomas (obesidad, acantosis, poliuria).
+2. Diferenciar sensibilidad de practicidad de cada prueba.
+3. Si buscan sensibilidad máxima → PTOG 75 g.
+4. Si buscan tamizaje poblacional práctico → HbA1c o glucemia en ayunas.
 
 Perlas de examen
-• La PTOG es la prueba más sensible.
-• La HbA1c es la prueba más práctica.
-• Los síntomas cardinales permiten diagnóstico con glucemia aleatoria ≥200 mg/dL.
-• La acantosis nigricans es marcador clínico de resistencia a la insulina.
+✅ PTOG: prueba más sensible en fases tempranas.
+✅ HbA1c: prueba más práctica para tamizaje y seguimiento.
+✅ Acantosis nigricans = marcador clínico de resistencia a la insulina.
+✅ La alteración posprandial precede a la elevación de HbA1c y glucemia en ayunas.
+✅ Síntomas cardinales + glucemia aleatoria ≥200 mg/dL también diagnostican.
 
-Referencias: ADA Standards of Care; Endocrine Society Guidelines; Harrison's Principles of Internal Medicine.`,
+Referencias
+• ADA Standards of Care in Diabetes.
+• Endocrine Society Clinical Practice Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Williams Textbook of Endocrinology.
+• UpToDate: Screening for type 2 diabetes mellitus.`,
   },
   {
     id: "dr-q-08",
@@ -406,36 +711,76 @@ Referencias: ADA Standards of Care; Endocrine Society Guidelines; Harrison's Pri
     ],
     correctOptionId: "B",
     explanation:
-      "≥2 exacerbaciones en 6 meses reclasifica al paciente como GOLD E (alto riesgo de exacerbaciones). Tratamiento inicial recomendado: LABA + LAMA (el paciente ya usa tiotropio/LAMA, debe añadirse LABA).",
+      "≥2 exacerbaciones en 6 meses reclasifica al paciente como GOLD E (alto riesgo). Tratamiento inicial recomendado: LABA + LAMA; debe añadirse LABA al tiotropio (LAMA) que ya usa.",
     keyPoints: [
-      "2+ exacerbaciones → GOLD E.",
-      "GOLD E: LABA + LAMA como combinación inicial.",
-      "ICS no de forma indiscriminada; eosinófilos orientan indicación.",
+      "Cuando veas: EPOC con ≥2 exacerbaciones en el último año (o 2 en 6 meses).",
+      "Debes pensar en: GOLD E → escalonar a LABA + LAMA.",
+      "El paciente ya usa tiotropio (LAMA); el paso es añadir LABA, no solo ICS.",
+      "Los corticoides inhalados no se indican de forma indiscriminada; los eosinófilos orientan.",
+      "Tema: EPOC — clasificación GOLD y tratamiento.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-EPOC GOLD E
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Paciente con EPOC tratado con tiotropio que presenta exacerbaciones frecuentes.
+Esta es una pregunta clásica de neumología porque evalúa la escalada terapéutica en EPOC según la clasificación GOLD actual, que prioriza el riesgo de exacerbaciones sobre la disnea aislada.
 
-• La clasificación GOLD actual prioriza el riesgo de exacerbaciones.
-• Los pacientes con exacerbaciones frecuentes pasan a categoría GOLD E.
-• El tratamiento inicial recomendado es LABA + LAMA.
-• La combinación mejora síntomas, función pulmonar y disminuye exacerbaciones.
-• Los corticoides inhalados no deben utilizarse de forma indiscriminada.
+La clave no es agregar corticoides inhalados por defecto.
+La clave es:
+Identificar que las exacerbaciones frecuentes reclasifican al paciente como GOLD E y obligan a LABA + LAMA.
 
-Lo que el estudiante debe dominar para residencia
-1. Clasificación GOLD actual.
-2. Definición de exacerbación.
-3. Indicaciones de LABA + LAMA.
-4. Indicaciones de ICS.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 60 años con EPOC.
+• Tratamiento actual: tiotropio (LAMA — antagonista muscarínico de acción prolongada).
+• Dos exacerbaciones en los últimos 6 meses.
+• La pregunta es sobre el siguiente paso terapéutico.
+
+Recordemos la clasificación GOLD 2023-2025:
+• Se evalúa síntomas (mMRC o CAT) y riesgo de exacerbaciones.
+• ≥2 exacerbaciones en 1 año (o ≥1 con hospitalización) = grupo E (alto riesgo).
+• Tratamiento inicial en GOLD E: LABA + LAMA (doble broncodilatación).
+• ICS se añade selectivamente si eosinófilos ≥300 cél/µL o asma-EPOC overlap.
+
+Por lo tanto:
+El paciente pasó de manejo con monoterapia LAMA a necesidad de doble broncodilatación.
+No debe mantenerse el mismo tratamiento ni añadirse ICS sin criterio.
+
+¿Por qué la opción B es la respuesta correcta?
+Cambiar a LAMA + LABA (o añadir LABA al esquema).
+El paciente ya usa tiotropio (LAMA); el escalonamiento correcto es añadir un LABA.
+Esta combinación mejora función pulmonar, síntomas y reduce exacerbaciones en GOLD E.
+
+¿Por qué fallan las otras opciones?
+Opción A (agregar corticoide inhalado): no es el primer escalonamiento en GOLD E sin eosinofilia elevada; los ICS aumentan riesgo de neumonía.
+Opción C (roflumilast): indicado en EPOC grave con bronquitis crónica y exacerbaciones frecuentes refractarias, no como segundo paso estándar.
+Opción D (mantener tratamiento): inadecuado ante 2 exacerbaciones en 6 meses; el paciente requiere escalada.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Exacerbaciones = corticoides inhalados" o "EPOC = solo un broncodilatador".
+Pero el examen exige conocer:
+La clasificación GOLD actual y el algoritmo de escalada.
+Aquí el dato decisivo es:
+2 exacerbaciones en 6 meses con monoterapia LAMA insuficiente.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Contar exacerbaciones en el último año.
+2. Clasificar según GOLD (grupo E si ≥2 exacerbaciones).
+3. Escalonar a LABA + LAMA como combinación inicial en grupo E.
+4. Considerar ICS solo si eosinófilos elevados o componente asmático.
 
 Perlas de examen
-• GOLD E reemplazó antiguos grupos de alto riesgo.
-• Dos o más exacerbaciones implican alto riesgo.
-• LABA + LAMA es la combinación inicial preferida.
-• Los eosinófilos ayudan a decidir uso de ICS.
+✅ 2+ exacerbaciones → GOLD E.
+✅ GOLD E: LABA + LAMA como combinación inicial.
+✅ ICS no de forma indiscriminada; eosinófilos orientan indicación.
+✅ Roflumilast es tercera línea en subgrupo seleccionado.
+✅ La disnea sola no define el grupo; las exacerbaciones sí cambian el tratamiento.
 
-Referencias: GOLD Report 2025; Global Initiative for COPD; Harrison's Principles of Internal Medicine.`,
+Referencias
+• GOLD Report 2025 — Global Initiative for Chronic Obstructive Lung Disease.
+• Harrison's Principles of Internal Medicine.
+• GINA/GOLD Overlap Document.
+• UpToDate: Stable COPD: Overview of management.`,
   },
   {
     id: "dr-q-09",
@@ -453,36 +798,76 @@ Referencias: GOLD Report 2025; Global Initiative for COPD; Harrison's Principles
     ],
     correctOptionId: "A",
     explanation:
-      "Shock hipovolémico + irritación peritoneal + hemoperitoneo masivo = lesión intraabdominal grave. Según ATLS: laparotomía exploradora inmediata sin retrasar por estudios complementarios.",
+      "Shock hipovolémico + irritación peritoneal + hemoperitoneo masivo = lesión intraabdominal grave con inestabilidad hemodinámica. Según ATLS: laparotomía exploradora inmediata sin retrasar por TAC u observación.",
     keyPoints: [
-      "Shock + peritonitis = quirófano.",
-      "TAC reservado para pacientes hemodinámicamente estables.",
-      "FAST confirma líquido libre; no retrasa cirugía si inestable.",
+      "Cuando veas: trauma abdominal cerrado + shock hipovolémico + peritonitis + hemoperitoneo.",
+      "Debes pensar en: laparotomía exploradora inmediata (no TAC ni observación).",
+      "El TAC está reservado para pacientes hemodinámicamente estables.",
+      "FAST confirma líquido libre pero no debe retrasar cirugía si hay inestabilidad.",
+      "Tema: Trauma abdominal — manejo según ATLS.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-Trauma abdominal e inestabilidad hemodinámica
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Trauma abdominal cerrado con hemoperitoneo masivo e inestabilidad hemodinámica.
+Esta es una pregunta clásica de urgencias y cirugía porque evalúa la decisión quirúrgica inmediata en trauma abdominal según la estabilidad hemodinámica, un principio fundamental del ATLS.
 
-• El principio fundamental del ATLS es tratar primero las amenazas inmediatas para la vida.
-• La presencia simultánea de shock e irritación peritoneal indica lesión intraabdominal grave.
-• Estos pacientes no deben retrasarse para estudios complementarios.
-• La laparotomía exploradora constituye una intervención salvadora.
-• El TAC está reservado para pacientes hemodinámicamente estables.
+La clave no es confirmar la lesión con TAC.
+La clave es:
+Reconocer que la inestabilidad hemodinámica con peritonitis obliga a cirugía sin demora.
 
-Lo que el estudiante debe dominar para residencia
-1. Criterios de estabilidad hemodinámica.
-2. Indicaciones de laparotomía.
-3. Utilidad del FAST.
-4. Secuencia ABCDE del trauma.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Trauma abdominal cerrado por accidente de tránsito.
+• Hemoperitoneo masivo.
+• Signos de irritación peritoneal (peritonitis).
+• Shock hipovolémico (inestabilidad hemodinámica).
+
+Recordemos el algoritmo ATLS para trauma abdominal:
+• Paciente inestable + peritonitis o evidencia de sangrado intraabdominal → laparotomía exploradora inmediata.
+• Paciente estable → TAC abdominal con contraste para caracterizar lesiones.
+• FAST (ecografía focalizada): útil para detectar líquido libre rápidamente, pero no retrasa cirugía si hay inestabilidad.
+
+Por lo tanto:
+Este paciente no es candidato a TAC, observación ni manejo médico.
+Requiere control quirúrgico del sangrado de inmediato.
+
+¿Por qué la opción A es la respuesta correcta?
+Laparotomía exploradora es la conducta salvadora.
+Permite identificar y controlar la fuente de sangrado (bazo, hígado, mesenterio, etc.).
+Cada minuto de retraso aumenta la mortalidad por shock refractario.
+
+¿Por qué fallan las otras opciones?
+Opción B (TAC abdominal): contraindicado en paciente inestable; el traslado al TAC retrasa cirugía y empeora el pronóstico.
+Opción C (tratamiento médico): inaceptable ante shock hemorrágico con peritonitis; requiere intervención quirúrgica.
+Opción D (observación clínica): peligroso; la observación es para pacientes estables sin signos de peritonitis ni inestabilidad.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Trauma abdominal = siempre TAC" o "confirmar antes de operar".
+Pero el examen exige correlacionar:
+Estabilidad hemodinámica + hallazgos peritoneales.
+Aquí los datos decisivos son:
+Shock + peritonitis + hemoperitoneo masivo.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar ABCDE (vía aérea, respiración, circulación).
+2. Determinar estabilidad hemodinámica.
+3. Si inestable + peritonitis/sangrado → quirófano inmediato.
+4. Si estable → TAC para estratificar lesiones y decidir manejo conservador vs quirúrgico.
 
 Perlas de examen
-• Shock + peritonitis = quirófano.
-• Un TAC nunca debe retrasar una cirugía necesaria.
-• El FAST ayuda a detectar líquido libre rápidamente.
-• El examen físico sigue siendo fundamental.
+✅ Shock + peritonitis = quirófano.
+✅ TAC reservado para pacientes hemodinámicamente estables.
+✅ FAST confirma líquido libre; no retrasa cirugía si inestable.
+✅ El examen físico (peritonitis) sigue siendo fundamental.
+✅ Un TAC nunca debe retrasar una cirugía necesaria.
 
-Referencias: ATLS 11th Edition; EAST Trauma Guidelines; Schwartz Principles of Surgery.`,
+Referencias
+• ATLS — Advanced Trauma Life Support, 11th Edition.
+• EAST Trauma Guidelines — Blunt Abdominal Trauma.
+• Schwartz Principles of Surgery.
+• Tintinalli Emergency Medicine.
+• UpToDate: Blunt abdominal trauma in adults: Initial evaluation and management.`,
   },
   {
     id: "dr-q-10",
@@ -502,34 +887,75 @@ Referencias: ATLS 11th Edition; EAST Trauma Guidelines; Schwartz Principles of S
     explanation:
       "Depresión difusa del ST con elevación en aVR (patrón del tronco) sugiere isquemia subendocárdica extensa por lesión crítica del tronco coronario izquierdo o enfermedad multivaso severa. Equivalente de elevación del ST → SCACEST.",
     keyPoints: [
-      "Depresión ST difusa + elevación aVR = patrón del tronco.",
-      "Equivalente STEMI; valoración invasiva urgente.",
-      "aVR es derivación clave frecuentemente olvidada en examen.",
+      "Cuando veas: dolor torácico típico + depresión difusa del ST + elevación en aVR.",
+      "Debes pensar en: patrón del tronco coronario izquierdo → SCACEST (equivalente STEMI).",
+      "aVR es la derivación clave que muchos olvidan en el examen.",
+      "Requiere valoración invasiva urgente, no manejo como NSTEMI de bajo riesgo.",
+      "Tema: Síndrome coronario agudo — patrón electrocardiográfico del tronco.",
     ],
-    theoryContent: `PÍLDORAS DE CONOCIMIENTO — BY DR Q.
-Patrón del tronco coronario izquierdo
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Caso clínico: Dolor torácico típico con depresión extensa del ST y elevación en aVR.
+Esta es una pregunta clásica de cardiología porque evalúa el reconocimiento del patrón electrocardiográfico del tronco coronario izquierdo, uno de los hallazgos de mayor riesgo en urgencias.
 
-• Este patrón sugiere isquemia subendocárdica extensa.
-• Debe hacer sospechar lesión crítica del tronco coronario izquierdo o enfermedad multivaso severa.
-• Constituye uno de los hallazgos electrocardiográficos de mayor riesgo.
-• Requiere valoración invasiva urgente.
-• Es un patrón clásico de examen en residencias.
+La clave no es buscar elevación del ST en derivaciones precordiales.
+La clave es:
+Identificar la depresión difusa del ST con elevación en aVR como equivalente de STEMI.
 
-Lo que el estudiante debe dominar para residencia
-1. Equivalentes de elevación del ST.
-2. Interpretación de aVR.
-3. Lesión del tronco coronario izquierdo.
-4. Estratificación de riesgo en SCA.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 55 años con dolor torácico central opresivo irradiado a brazo izquierdo (50 minutos).
+• ECG con depresión del segmento ST en DI, DII, V4-V6.
+• Elevación del segmento ST en aVR.
+• Cuadro clínico compatible con isquemia miocárdica aguda.
+
+Recordemos el patrón del tronco (left main pattern):
+• Depresión difusa del ST en múltiples derivaciones (isquemia subendocárdica extensa).
+• Elevación del ST en aVR (derivación que mira al tronco coronario izquierdo).
+• Sugiere lesión crítica del tronco coronario izquierdo o enfermedad multivaso severa.
+• Se clasifica como equivalente de elevación del ST (SCACEST).
+
+Por lo tanto:
+No es angina inestable de bajo riesgo.
+No es pericarditis (aunque puede haber depresión difusa, la clínica y aVR orientan diferente).
+No es SCASEST clásico (no hay elevación persistente en derivaciones convencionales).
+
+¿Por qué la opción B es la respuesta correcta?
+SCACEST (síndrome coronario agudo con elevación del ST).
+El patrón del tronco es un equivalente de STEMI que requiere valoración invasiva urgente y reperfusión según protocolo de IAMCEST.
+
+¿Por qué fallan las otras opciones?
+Opción A (SCASEST): aunque no hay elevación clásica del ST, el patrón del tronco se maneja como SCACEST, no como NSTEMI convencional.
+Opción C (angina inestable): subestima la gravedad; este patrón indica isquemia extensa con lesión crítica del tronco.
+Opción D (pericarditis): el dolor es isquémico típico; en pericarditis suele haber dolor pleurítico, roce pericárdico y elevación cóncava difusa del ST (no patrón de aVR).
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"STEMI = solo si hay elevación del ST en precordiales" o "depresión del ST = siempre NSTEMI".
+Pero el examen exige conocer:
+Los equivalentes electrocardiográficos de elevación del ST.
+Aquí el dato decisivo es:
+Elevación en aVR + depresión difusa del ST + dolor típico.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar el cuadro clínico (dolor isquémico típico).
+2. Analizar todas las derivaciones, incluyendo aVR.
+3. Reconocer el patrón del tronco (depresión difusa + elevación aVR).
+4. Clasificar como SCACEST equivalente y activar protocolo de reperfusión urgente.
 
 Perlas de examen
-• aVR es una de las derivaciones más olvidadas y más preguntadas.
-• Elevación en aVR con depresión difusa del ST indica enfermedad coronaria extensa.
-• El diagnóstico siempre debe integrarse con la clínica.
-• Las residencias suelen preguntar la conducta más que el hallazgo aislado.
+✅ Depresión ST difusa + elevación aVR = patrón del tronco.
+✅ Equivalente STEMI; valoración invasiva urgente.
+✅ aVR es derivación clave frecuentemente olvidada en examen.
+✅ El diagnóstico siempre integra clínica + ECG completo.
+✅ Otros equivalentes: BRI/BRD, De Winter, infarto posterior, Wellens.
 
-Referencias: ESC ACS Guidelines; AHA/ACC ACS Guideline; Braunwald's Heart Disease; Tintinalli Emergency Medicine.`,
+Referencias
+• ESC Guidelines for the Management of Acute Coronary Syndromes.
+• AHA/ACC Guideline for the Management of Patients With Acute Coronary Syndromes.
+• Braunwald's Heart Disease.
+• Tintinalli Emergency Medicine.
+• UpToDate: Electrocardiogram in the diagnosis of myocardial ischemia and infarction.`,
   },
   {
     id: "dr-q-11",
@@ -565,33 +991,76 @@ Referencias: ESC ACS Guidelines; AHA/ACC ACS Guideline; Braunwald's Heart Diseas
     explanation:
       "Wake-up stroke con ~10.5 h desde última vez normal: fuera de ventana para trombólisis IV (<4.5 h). Oclusión M1 con core pequeño (15 cc) y mismatch volumétrico grande (95 cc): candidato ideal a trombectomía mecánica según DAWN/DEFUSE-3 (6–24 h con discordancia clínico-imagenológica).",
     keyPoints: [
-      "Tejido, no tiempo: perfusión define candidatos fuera de ventana IV.",
-      "DAWN/DEFUSE-3: trombectomía 6–24 h con mismatch en oclusión de gran vaso.",
-      "Alteplasa >4.5 h sin protocolo WAKE-UP con RM ↑ riesgo hemorrágico.",
+      "Cuando veas: wake-up stroke + oclusión de gran vaso (M1) + core pequeño y penumbra grande en perfusión.",
+      "Debes pensar en: trombectomía mecánica (DAWN/DEFUSE-3), no trombólisis IV fuera de ventana.",
+      "Tejido salvable, no reloj: la perfusión define candidatos fuera de las 4.5 h.",
+      "Alteplasa >4.5 h sin protocolo WAKE-UP con RM aumenta riesgo hemorrágico.",
+      "Tema: ACV isquémico — reperfusión en oclusión de gran vaso.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa el wake-up stroke y la reperfusión fuera de ventana IV: en oclusión de gran vaso, la perfusión (core vs penumbra) importa más que el reloj.
+Esta es una pregunta clásica de neurología porque evalúa la reperfusión en wake-up stroke con oclusión de gran vaso, donde la perfusión importa más que el reloj.
+
+La clave no es calcular solo las horas desde el inicio.
+La clave es:
+Identificar tejido salvable (mismatch volumétrico) y elegir trombectomía mecánica sobre trombólisis IV fuera de ventana.
 
 ¿Qué está ocurriendo realmente?
-- Hombre con FA sin anticoagular, wake-up stroke (~10.5 h desde última vez normal).
-- NIHSS 22, oclusión total de M1 ACM izquierda en angioTAC.
-- TAC perfusión: core pequeño (15 cc) y penumbra grande (95 cc) con mismatch volumétrico.
-- Fuera de ventana para trombólisis IV estándar (<4.5 h), pero con tejido salvable.
+El paciente presenta:
+• Hombre de 68 años con FA sin anticoagular.
+• Wake-up stroke: última vez normal 22:00, déficit al despertar 07:00 (~10.5 h).
+• NIHSS 22, Glasgow 11.
+• AngioTAC: oclusión total M1 ACM izquierda.
+• TAC perfusión: core 15 cc, penumbra 110 cc, mismatch 95 cc.
+• ASPECTS 8; sin hemorragia en TAC simple.
 
-¿Qué dato es clave en el examen?
-- DAWN y DEFUSE-3: trombectomía mecánica clase I entre 6-24 h con discordancia clínico-imagenológica.
-- Core pequeño + penumbra grande = candidato ideal a trombectomía endovascular.
-- En oclusión de gran vaso: "el tiempo es cerebro, pero la colateralidad y la perfusión son tiempo".
+Recordemos las ventanas de reperfusión:
+• Trombólisis IV: ≤4.5 h desde inicio conocido (o protocolo WAKE-UP con RM).
+• Trombectomía mecánica: hasta 6-24 h según DAWN y DEFUSE-3 con discordancia clínico-imagenológica.
+• En oclusión de gran vaso: "el tiempo es cerebro, pero la perfusión es tiempo".
+
+Por lo tanto:
+Fuera de ventana para alteplasa IV estándar.
+Candidato ideal a trombectomía por core pequeño y penumbra grande.
+
+¿Por qué la opción B es la respuesta correcta?
+Trasladar directamente a hemodinamia para trombectomía mecánica endovascular.
+DAWN y DEFUSE-3 demostraron beneficio de trombectomía entre 6-24 h con mismatch en oclusión de gran vaso.
+Core pequeño (15 cc) + penumbra grande (95 cc) = perfil ideal.
 
 ¿Por qué fallan las otras opciones?
-- Trombólisis IV inmediata: >4.5 h sin protocolo WAKE-UP con RM aumenta riesgo hemorrágico sin beneficio claro vs trombectomía directa.
-- Heparina a dosis plenas: no es reperfusión en ACV agudo; anticoagulación diferida.
-- Abstenerse por >4.5 h: ignora evidencia de trombectomía extendida con mismatch.
+Opción A (trombólisis IV): >4.5 h sin protocolo WAKE-UP con RM; mayor riesgo hemorrágico sin beneficio claro vs trombectomía directa.
+Opción C (heparina + amiodarona): no es reperfusión en ACV agudo; anticoagulación se difiere.
+Opción D (abstenerse): ignora evidencia de trombectomía extendida; el core es pequeño, hay tejido salvable.
 
-Clave: wake-up + M1 ocluida + core pequeño/penumbra grande = trombectomía mecánica, no alteplasa IV.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+">4.5 h = no reperfundir" o "wake-up stroke = siempre trombólisis".
+Pero el examen exige integrar:
+Imagen de perfusión + oclusión de gran vaso + ensayos DAWN/DEFUSE-3.
+Aquí el dato decisivo es:
+Mismatch volumétrico grande con core pequeño en M1 ocluida.
 
-Referencias: AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke; DAWN; DEFUSE-3.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar ACV isquémico y descartar hemorragia.
+2. Identificar oclusión de gran vaso (angioTAC).
+3. Evaluar core vs penumbra (perfusión).
+4. Si mismatch favorable fuera de ventana IV → trombectomía mecánica.
+
+Perlas de examen
+✅ Tejido, no tiempo: perfusión define candidatos fuera de ventana IV.
+✅ DAWN/DEFUSE-3: trombectomía 6-24 h con mismatch en gran vaso.
+✅ Alteplasa >4.5 h sin WAKE-UP con RM ↑ riesgo hemorrágico.
+✅ Oclusión M1 con NIHSS alto y mismatch = trombectomía, no esperar.
+✅ La anticoagulación en FA se reinicia después, no en fase aguda de reperfusión.
+
+Referencias
+• AHA/ASA Guidelines for the Early Management of Acute Ischemic Stroke.
+• DAWN Trial; DEFUSE-3 Trial.
+• European Stroke Organisation (ESO) Guidelines.
+• Tintinalli Emergency Medicine.
+• UpToDate: Mechanical thrombectomy for acute ischemic stroke.`,
   },
   {
     id: "dr-q-12",
@@ -627,33 +1096,76 @@ Referencias: AHA/ASA Guidelines for Early Management of Acute Ischemic Stroke; D
     explanation:
       "Tras benzodiacepina + segunda línea (levetiracetam) persiste coma con signos sutiles (mioclonías faciales, nistagmo): sospechar estado epiléptico no convulsivo/refractario. Conducta: vía aérea definitiva, anestésicos IV continuos titulados con EEG hasta supresión de brotes.",
     keyPoints: [
+      "Cuando veas: convulsiones tratadas con BDZ + 2.ª línea, pero persiste coma con mioclonías o nistagmo.",
+      "Debes pensar en: estado epiléptico no convulsivo refractario → intubar + anestésico IV + EEG.",
       "Cese motor ≠ fin de crisis: desacople electro-mecánico.",
-      "Refractario = falla BDZ + 2.ª línea → anestésicos + EEG continuo.",
-      "EEG es la única forma de confirmar y titular EENC.",
+      "El EEG continuo es la única forma de confirmar y titular el tratamiento.",
+      "Tema: Epilepsia — estado epiléptico refractario.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa el estado epiléptico no convulsivo: cesar los movimientos tónico-clónicos no significa que la crisis haya terminado a nivel eléctrico.
+Esta es una pregunta clásica de neurología porque evalúa el estado epiléptico no convulsivo: cesar los movimientos tónico-clónicos no significa que la crisis haya terminado a nivel eléctrico.
+
+La clave no es asumir estado post-ictal prolongado.
+La clave es:
+Reconocer el desacople electro-mecánico y tratar con anestesia y EEG continuo.
 
 ¿Qué está ocurriendo realmente?
-- Paciente con epilepsia estructural tras abandono de medicación y convulsiones persistentes.
-- Recibió midazolam IM, lorazepam IV y levetiracetam 60 mg/kg.
-- Cesa el componente motor pero permanece en coma (GCS 3) con mioclonías faciales y nistagmo rítmico.
-- Desacople electro-mecánico: fatiga muscular vs actividad epileptiforme continua subclínica.
+El paciente presenta:
+• Mujer de 35 años con epilepsia estructural (displasia cortical), abandono de medicación.
+• Convulsiones generalizadas persistentes.
+• Tratamiento recibido: midazolam IM, lorazepam IV, levetiracetam 60 mg/kg.
+• Cesa el componente motor pero permanece en coma (GCS 3).
+• Sacudidas rítmicas en comisura labial y nistagmo horizontal rítmico.
+• Glucosa y sodio normales (descartar causas metabólicas).
 
-¿Qué dato es clave en el examen?
-- Estado epiléptico refractario: persiste tras benzodiacepina + anticrisis de segunda línea.
-- El EEG continuo es la única forma de confirmar y titular el tratamiento.
-- Conducta: intubación + anestésicos IV continuos (propofol/midazolam/ketamina) hasta supresión de brotes.
+Recordemos la clasificación del estado epiléptico:
+• Establecido: crisis >5 min o crisis repetidas sin recuperación.
+• Refractario: persiste tras benzodiacepina + anticrisis de segunda línea.
+• No convulsivo: actividad epileptiforme continua sin manifestaciones motoras típicas.
+• El EEG continuo confirma y guía el tratamiento.
+
+Por lo tanto:
+No es resolución de la crisis.
+Es estado epiléptico no convulsivo refractario que requiere UCI.
+
+¿Por qué la opción C es la respuesta correcta?
+Intubación orotraqueal inmediata (protección de vía aérea).
+Infusión continua de anestésicos (propofol o midazolam) titulados con EEG.
+UCI con EEG continuo urgente hasta supresión de brotes epileptiformes.
 
 ¿Por qué fallan las otras opciones?
-- Observación por "estado post-ictal": peligroso; puede ser EENC con riesgo de daño cerebral.
-- Segunda línea adicional en sala general: ya recibió levetiracetam; necesita anestesia y UCI.
-- Punción lumbar y aciclovir: la fiebre y mioclonías focales no sustituyen el manejo del EENC refractario.
+Opción A (observación post-ictal): peligroso; puede ser EENC con riesgo de daño cerebral irreversible.
+Opción B (segunda línea adicional en sala): ya recibió levetiracetam; necesita anestesia y monitorización en UCI.
+Opción D (BiPAP y test de edrofonio): no sustituye intubación con coma persistente; edrofonio es diagnóstico en miastenia, no manejo de EENC.
 
-Clave: convulsionó, fue tratado, no despierta o tiene mioclonías → asumir EENC → intubar + anestésico + EEG.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Sin convulsiones visibles = crisis terminada".
+Pero el examen exige reconocer:
+Signos sutiles (mioclonías faciales, nistagmo) + coma persistente post-tratamiento.
+Aquí el dato decisivo es:
+Coma GCS 3 con actividad motora sutil tras BDZ + levetiracetam.
 
-Referencias: Neurocritical Care Society Guidelines for Status Epilepticus.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Tratar con benzodiacepina de primera línea.
+2. Si persiste → anticrisis de segunda línea (levetiracetam, valproato, fenitoína).
+3. Si persiste o hay coma con signos sutiles → asumir EENC refractario.
+4. Intubar + anestésico IV + EEG continuo en UCI.
+
+Perlas de examen
+✅ Cese motor ≠ fin de crisis: desacople electro-mecánico.
+✅ Refractario = falla BDZ + 2.ª línea → anestésicos + EEG continuo.
+✅ EEG es la única forma de confirmar y titular EENC.
+✅ Mioclonías faciales y nistagmo en coma post-convulsión = alarma.
+✅ No retrasar intubación esperando "despertar espontáneo".
+
+Referencias
+• Neurocritical Care Society Guidelines for Status Epilepticus.
+• American Epilepsy Society Guidelines.
+• Tintinalli Emergency Medicine.
+• UpToDate: Convulsive status epilepticus in adults.`,
   },
   {
     id: "dr-q-13",
@@ -685,33 +1197,76 @@ Referencias: Neurocritical Care Society Guidelines for Status Epilepticus.`,
     explanation:
       "Deterioro focal días 4–14 post-HSA sin re-sangrado ni hidrocefalia: isquemia cerebral retardada (DCI) por vasoespasmo. Tratamiento sintomático: euvolemia + vasopresores (norepinefrina/fenilefrina) para elevar PAM y perfusión cerebral.",
     keyPoints: [
-      "Día 1 deterioro → re-sangrado; días 4–14 + focal → vasoespasmo (DCI).",
+      "Cuando veas: HSA + deterioro neurológico entre días 4-14 + TAC sin re-sangrado ni hidrocefalia.",
+      "Debes pensar en: vasoespasmo (DCI) → euvolemia + vasopresores para elevar PAM.",
+      "Día 1 deterioro → re-sangrado; días 4-14 + focal → vasoespasmo.",
       "Nimodipino oral es neuroprotector, no revierte vasoespasmo agudo.",
-      "Vasodilatadores sistémicos (nitroprusiato) empeoran isquemia.",
+      "Tema: Hemorragia subaracnoidea — vasoespasmo e isquemia cerebral retardada.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa vasoespasmo post-HSA: el deterioro entre días 4-14 sin re-sangrado en TAC suele ser isquemia cerebral retardada (DCI), no hidrocefalia ni nuevo sangrado.
+Esta es una pregunta clásica de neurointensivismo porque evalúa el vasoespasmo post-HSA: el deterioro entre días 4-14 sin re-sangrado suele ser isquemia cerebral retardada (DCI).
+
+La clave no es buscar nuevo sangrado o hidrocefalia.
+La clave es:
+Reconocer la ventana del vasoespasmo y elevar la presión arterial con vasopresores.
 
 ¿Qué está ocurriendo realmente?
-- Mujer día 7 post-HSA por aneurisma de ACoA, ya coilada al día 2.
-- Deterioro súbito con nueva paresia crural derecha y apatía; Glasgow baja de 15 a 12.
-- TAC sin re-sangrado ni hidrocefalia.
-- Cuadro clásico de vasoespasmo en ventana día 4-14 post-HSA.
+La paciente presenta:
+• Mujer de 48 años, día 7 de hospitalización por HSA por aneurisma de ACoA.
+• Hunt & Hess II, Fisher 3; coilada al día 2.
+• Días 1-6 estables; día 7 deterioro súbito con nueva paresia crural derecha y apatía.
+• Glasgow baja de 15 a 12.
+• TAC control: sin re-sangrado ni hidrocefalia.
 
-¿Qué dato es clave en el examen?
-- DCI por vasoespasmo: el cerebro vasoespástico pierde autorregulación y depende de la presión de perfusión sistémica.
-- Tratamiento hemodinámico: euvolemia + vasopresores (norepinefrina) para elevar PAM y forzar flujo cerebral.
-- Nimodipino oral 21 días mejora pronóstico global, pero no revierte vasoespasmo agudo; la vía IV puede causar hipotensión.
+Recordemos la cronología post-HSA:
+• Días 0-3: riesgo de re-sangrado, hidrocefalia aguda.
+• Días 4-14: ventana clásica de vasoespasmo y DCI.
+• DCI: el cerebro vasoespástico pierde autorregulación y depende de la PAM.
+• Nimodipino oral 60 mg c/4 h × 21 días: neuroprotección, no trata espasmo agudo.
+
+Por lo tanto:
+No es re-sangrado (TAC limpio).
+No es hidrocefalia (TAC la descartó).
+Es vasoespasmo con isquemia cerebral retardada.
+
+¿Por qué la opción B es la respuesta correcta?
+Inducir hipertensión farmacológica con vasopresores (norepinefrina).
+Objetivo: elevar PAM y forzar flujo cerebral a través de vasos espásticos.
+Complementar con euvolemia (no hipovolemia).
 
 ¿Por qué fallan las otras opciones?
-- Nimodipino IV a altas dosis: no es tratamiento del espasmo agudo; riesgo de hipotensión.
-- Nitroprusiato: vasodilatador sistémico que puede empeorar isquemia por robar flujo del cerebro vasoespástico.
-- Derivación VP: indicada si hay hidrocefalia; el TAC la descartó.
+Opción A (nimodipino IV): no revierte vasoespasmo agudo; vía IV puede causar hipotensión peligrosa.
+Opción C (nitroprusiato): vasodilatador sistémico que roba flujo del cerebro vasoespástico y empeora isquemia.
+Opción D (derivación VP): indicada si hay hidrocefalia; el TAC la descartó.
 
-Clave: HSA + deterioro día 7 + TAC limpio = vasoespasmo → subir presión arterial con vasopresores.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"HSA = nimodipino para todo" o "deterioro = nuevo sangrado".
+Pero el examen exige correlacionar:
+Día de evolución + TAC + déficit focal nuevo.
+Aquí el dato decisivo es:
+Día 7 post-HSA con TAC sin re-sangrado ni hidrocefalia.
 
-Referencias: AHA/ASA Guidelines for Management of Aneurysmal Subarachnoid Hemorrhage.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar día de evolución post-HSA.
+2. Si deterioro días 4-14 + TAC limpio → vasoespasmo.
+3. Confirmar con angiografía o Doppler transcraneal si disponible.
+4. Tratamiento hemodinámico: euvolemia + vasopresores (norepinefrina/fenilefrina).
+
+Perlas de examen
+✅ Día 1 deterioro → re-sangrado; días 4-14 + focal → vasoespasmo (DCI).
+✅ Nimodipino oral es neuroprotector, no revierte vasoespasmo agudo.
+✅ Vasodilatadores sistémicos (nitroprusiato) empeoran isquemia.
+✅ El cerebro vasoespástico depende de la presión de perfusión sistémica.
+✅ Angioplastia intraarterial es rescate si falla terapia hemodinámica.
+
+Referencias
+• AHA/ASA Guidelines for the Management of Aneurysmal Subarachnoid Hemorrhage.
+• Neurocritical Care Society Guidelines.
+• Tintinalli Emergency Medicine.
+• UpToDate: Cerebral vasospasm and delayed cerebral ischemia after aneurysmal SAH.`,
   },
   {
     id: "dr-q-14",
@@ -747,33 +1302,76 @@ Referencias: AHA/ASA Guidelines for Management of Aneurysmal Subarachnoid Hemorr
     explanation:
       "Crisis miasténica con falla bulbar e insuficiencia ventilatoria hipercápnica (CVF <15 mL/kg, NIF peor que -20, PaCO2 58): intubación electiva temprana. Luego PLEX o IGIV. Suspender piridostigmina en ventilación mecánica.",
     keyPoints: [
+      "Cuando veas: miastenia gravis + CVF <15 mL/kg o NIF peor que -20 + hipercapnia.",
+      "Debes pensar en: crisis miasténica → intubación electiva temprana + PLEX o IGIV.",
       "Regla de los 20: CVF <15 mL/kg o NIF peor que -20 → intubar.",
-      "PLEX o IGIV de primera línea; igual eficacia.",
-      "No más piridostigmina ni esteroides altos en fase aguda aislada.",
+      "Suspender piridostigmina en ventilación mecánica; no aumentar dosis.",
+      "Tema: Miastenia gravis — crisis miasténica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la crisis miasténica: la regla de los 20 (CVF y NIF) define cuándo intubar antes del colapso respiratorio.
+Esta es una pregunta clásica de neurología porque evalúa la crisis miasténica y la regla de los 20, que define cuándo intubar antes del colapso respiratorio.
+
+La clave no es aumentar la piridostigmina ni usar BiPAP como única medida.
+La clave es:
+Reconocer la insuficiencia ventilatoria inminente e intubar de forma electiva temprana.
 
 ¿Qué está ocurriendo realmente?
-- Mujer con miastenia gravis en tratamiento, precipitada por ciprofloxacina (puede bloquear canal ACh).
-- Disnea severa, imposibilidad para deglutir, debilidad generalizada y respiración paradójica.
-- CVF 10 mL/kg (crítico <15), NIF -15 cmH2O, hipercapnia (PaCO2 58, pH 7.28).
-- Crisis miasténica con falla bulbar e insuficiencia ventilatoria inminente.
+La paciente presenta:
+• Mujer de 28 años con miastenia gravis (piridostigmina, prednisona).
+• Precipitante: ciprofloxacina (antibiótico que puede bloquear canal de acetilcolina).
+• Disnea severa, imposibilidad para deglutir, debilidad generalizada.
+• Respiración paradójica abdominal, reflejo tusígeno inefectivo.
+• CVF 10 mL/kg (crítico <15), NIF -15 cmH2O (crítico < -20).
+• Gases: pH 7.28, PaCO2 58 (hipercapnia = falla ventilatoria).
 
-¿Qué dato es clave en el examen?
-- Regla de los 20: CVF <15 mL/kg o NIF peor que -20 → intubación electiva temprana.
-- Después de intubar: plasmaféresis o IGIV (igual eficacia).
-- Suspender piridostigmina en ventilación mecánica (secreciones, broncoespasmo).
+Recordemos la crisis miasténica:
+• Debilidad bulbar y respiratoria que amenaza la vida.
+• Regla de los 20: CVF <15 mL/kg o NIF peor que -20 → intubación electiva.
+• Tratamiento: PLEX o IGIV (igual eficacia) tras asegurar vía aérea.
+• Suspender piridostigmina en VM (aumenta secreciones y broncoespasmo).
+
+Por lo tanto:
+No es una exacerbación leve manejable con mestinón.
+Es crisis miasténica con falla ventilatoria hipercápnica.
+
+¿Por qué la opción C es la respuesta correcta?
+Intubación orotraqueal expedita (antes del arresto respiratorio).
+Seguida de plasmaféresis o IGIV temprana.
+La intubación electiva es más segura que la emergente tras paro.
 
 ¿Por qué fallan las otras opciones?
-- Aumentar piridostigmina y O2 nasal: insuficiente ante hipercapnia y falla ventilatoria.
-- Metilprednisolona sola: en fase aguda puede empeorar debilidad 7-10 días; no trata la crisis respiratoria.
-- BiPAP y test de edrofonio: no sustituyen intubación con CVF tan baja; edrofonio es diagnóstico, no rescate.
+Opción A (aumentar piridostigmina + O2 nasal): insuficiente ante hipercapnia; la piridostigmina empeora secreciones en VM.
+Opción B (metilprednisolona sola): en fase aguda puede empeorar debilidad 7-10 días; no trata la crisis respiratoria.
+Opción D (BiPAP y test de edrofonio): CVF demasiado baja para BiPAP como única medida; edrofonio es diagnóstico, no rescate.
 
-Clave: miastenia + CVF <15 + hipercapnia = intubar ya, suspender mestinón, PLEX o IGIV.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Miastenia = más piridostigmina" o "BiPAP antes de intubar".
+Pero el examen exige aplicar:
+La regla de los 20 con parámetros ventilatorios objetivos.
+Aquí los datos decisivos son:
+CVF 10 mL/kg + PaCO2 58 + falla bulbar.
 
-Referencias: AAN / Neurocritical Care Society Guidelines for Myasthenic Crisis.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar CVF y NIF en todo paciente miasténico con disnea.
+2. Si CVF <15 o NIF peor que -20 → intubar.
+3. Suspender piridostigmina, iniciar PLEX o IGIV.
+4. Evitar nuevos fármacos que bloqueen ACh (aminoglucósidos, fluoroquinolonas).
+
+Perlas de examen
+✅ Regla de los 20: CVF <15 mL/kg o NIF peor que -20 → intubar.
+✅ PLEX o IGIV de primera línea; igual eficacia.
+✅ No más piridostigmina ni esteroides altos en fase aguda aislada.
+✅ La hipercapnia confirma falla ventilatoria, no solo fatiga muscular.
+✅ Ciprofloxacina y aminoglucósidos pueden precipitar crisis.
+
+Referencias
+• AAN Practice Guidelines — Myasthenic Crisis.
+• Neurocritical Care Society Guidelines.
+• Tintinalli Emergency Medicine.
+• UpToDate: Management of myasthenic crisis.`,
   },
   {
     id: "dr-q-15",
@@ -809,33 +1407,76 @@ Referencias: AAN / Neurocritical Care Society Guidelines for Myasthenic Crisis.`
     explanation:
       "Midriasis paralítica ipsilateral + ojo caído abajo/afuera + hemiplejía contralateral + Tríada de Cushing: herniación uncal que comprime III par (fibras parasimpáticas externas). Emergencia: manitol o salina hipertónica de inmediato, incluso antes de TAC de control.",
     keyPoints: [
-      "Uncus temporal → III par ipsilateral → midriasis paralítica.",
-      "Terapia puente: hiperosmolar (manitol o SSH) antes de cirugía.",
-      "Corticosteroides no en edema citotóxico/hemorrágico agudo.",
+      "Cuando veas: HIC + midriasis paralítica ipsilateral fija + ojo «caído» + Tríada de Cushing.",
+      "Debes pensar en: herniación uncal → manitol o salina hipertónica de inmediato.",
+      "Uncus temporal comprime III par ipsilateral → midriasis paralítica.",
+      "Terapia puente hiperosmolar antes de cirugía; no esperar TAC de control.",
+      "Tema: Hipertensión intracraneal — herniación uncal.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa herniación uncal: la midriasis ipsilateral fija es compresión del III par, y el manejo puente es hiperosmolar de inmediato.
+Esta es una pregunta clásica de neurointensivismo porque evalúa la herniación uncal: la midriasis ipsilateral fija es compresión del III par, y el manejo puente es hiperosmolar de inmediato.
+
+La clave no es hiperventilación agresiva ni corticosteroides.
+La clave es:
+Reconocer herniación uncal y administrar manitol o salina hipertónica sin demora.
 
 ¿Qué está ocurriendo realmente?
-- Hombre con HIC hipertensiva y hematoma ganglios basales derechos de 70 cc.
-- Deterioro súbito a Glasgow 5 con decorticación.
-- Pupila derecha 7 mm arrefléctica (midriasis paralítica), ojo derecho desviado abajo y afuera.
-- Tríada de Cushing (HTA, bradicardia, respiración irregular): herniación uncal con isquemia de tronco inminente.
+El paciente presenta:
+• Hombre de 58 años con HIC por HTA maligna.
+• Hematoma ganglios basales derechos de 70 cc con desviación de línea media.
+• Deterioro súbito a Glasgow 5 con postura de decorticación.
+• Pupila derecha 7 mm arrefléctica (midriasis paralítica).
+• Ojo derecho desviado abajo y afuera (oftalmoplejía del III par).
+• Tríada de Cushing: PA 230/120, FC 45, FR 10.
 
-¿Qué dato es clave en el examen?
-- El uncus temporal hernia por la incisura tentorial y comprime el III par ipsilateral.
-- Las fibras parasimpáticas periféricas del III controlan la pupila → midriasis ipsilateral primero.
-- Terapia puente: manitol 20% o solución salina hipertónica sin esperar TAC de control.
+Recordemos la anatomía de la herniación uncal:
+• El uncus temporal hernia por la incisura tentorial.
+• Comprime el III par craneal ipsilateral.
+• Fibras parasimpáticas periféricas del III → midriasis ipsilateral primero.
+• Progresión → compromiso del tronco encefálico (Tríada de Cushing).
+
+Por lo tanto:
+No es herniación subfalcina ni central.
+Es herniación uncal derecha con isquemia de tronco inminente.
+
+¿Por qué la opción B es la respuesta correcta?
+Herniación uncal derecha comprimiendo III par derecho.
+Manejo hiperosmolar de primer orden: manitol 20% o solución salina hipertónica inmediata.
+Terapia puente para reducir PIC mientras se prepara cirugía evacuadora.
 
 ¿Por qué fallan las otras opciones?
-- Herniación subfalcina con hiperventilación agresiva: no explica el patrón pupilar del III par.
-- Herniación amigdalina con esteroides: los corticoides no benefician edema citotóxico/hemorrágico agudo.
-- Herniación central con pentobarbital: el cuadro pupilar lateralizado orienta a uncal, no central.
+Opción A (herniación subfalcina + hiperventilación): no explica el patrón pupilar del III par; hiperventilación agresiva es segunda línea.
+Opción C (herniación amigdalina + esteroides): los corticoides no benefician edema citotóxico/hemorrágico agudo.
+Opción D (herniación central + pentobarbital): el cuadro pupilar lateralizado orienta a uncal, no central.
 
-Clave: hematoma + pupila grande fija ipsilateral = uncal → manitol o salina hipertónica ya.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"HIC = esteroides" o "herniación = hiperventilar siempre primero".
+Pero el examen exige correlacionar:
+Patrón pupilar + postura + Tríada de Cushing.
+Aquí el dato decisivo es:
+Midriasis paralítica ipsilateral al hematoma.
 
-Referencias: Neurocritical Care Society Guidelines on Elevated ICP.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer signos de herniación (pupila, postura, Cushing).
+2. Administrar hiperosmolar de inmediato (manitol o SSH).
+3. Mantener cabecera 30°, sedación, evitar hipotensión.
+4. Cirugía evacuadora urgente; no retrasar por TAC de control.
+
+Perlas de examen
+✅ Uncus temporal → III par ipsilateral → midriasis paralítica.
+✅ Terapia puente: hiperosmolar (manitol o SSH) antes de cirugía.
+✅ Corticosteroides no en edema citotóxico/hemorrágico agudo.
+✅ La Tríada de Cushing indica compromiso de tronco encefálico.
+✅ Ojo «caído abajo y afuera» = parálisis del III par completo.
+
+Referencias
+• Neurocritical Care Society Guidelines on Elevated ICP.
+• Brain Trauma Foundation Guidelines.
+• Tintinalli Emergency Medicine.
+• UpToDate: Management of acute moderate and severe traumatic brain injury.`,
   },
   {
     id: "dr-q-16",
