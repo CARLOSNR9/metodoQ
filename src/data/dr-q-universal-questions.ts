@@ -4565,44 +4565,69 @@ Referencias
     explanation:
       "Worsening renal function (WRF) durante descongestión exitosa (↓5 kg, ↓disnea, aún edema) es frecuente y se asocia a mejor pronóstico si se completa descongestión. Suspender diuréticos por Cr +30% con congestión residual empeora outcomes. Diálisis no indicada con buena diuresis y Cr 1.9.",
     keyPoints: [
-      "Trata la clínica, no solo la creatinina.",
-      "WRF permisivo si descongestiona y orina.",
-      "↑ Cr hasta ~30–50% tolerable si perfundido y aún congesto.",
+      "Cuando veas: IC descompensada con ↓ peso (-5 kg), ↓ disnea, aún edema + Cr sube ~30% con buena perfusión.",
+      "Debes pensar en: empeoramiento renal permisivo (WRF) durante descongestión efectiva → continuar diuréticos.",
+      "Trata la clínica, no solo la creatinina; ↑ Cr hasta ~30–50% tolerable si perfundido y aún congesto.",
+      "Suspender diuréticos por Cr +30% con congestión residual empeora outcomes.",
+      "Tema: WRF permisivo en IC / síndrome cardiorenal.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa empeoramiento renal permisivo (WRF) durante descongestión de IC: si el paciente pierde peso y mejora clínicamente pero la creatinina sube leve, hay que continuar diuréticos — no tratar solo el número.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el empeoramiento renal permisivo (WRF) durante descongestión de IC: tratar la clínica, no solo el número de creatinina.
+
+La clave no es suspender diuréticos y dar volumen por una creatinina que sube levemente.
+La clave es:
+Reconocer descongestión efectiva en curso con WRF permisivo y continuar diuréticos mientras persista congestión clínica.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 78 años, IC descompensada perfil B (FEVI 35%), día 3 de hospitalización.
-- Peso 80 kg (-5 kg), duerme plano, disnea casi resuelta; aún edema maleolar leve.
-- Creatinina 1.9 (basal 1.4), BUN 45; buena perfusión periférica.
-- Descongestión efectiva en curso con empeoramiento renal transitorio (cardiorenal).
+El paciente presenta:
+• Hombre de 78 años, IC descompensada perfil B (FEVI 35%), día 3 de hospitalización.
+• Peso 80 kg (-5 kg), duerme plano, disnea casi resuelta; aún edema maleolar leve.
+• Creatinina 1.9 (basal 1.4, +36%), BUN 45; buena perfusión periférica.
+• Descongestión efectiva en curso con empeoramiento renal transitorio (fisiología cardiorenal).
 
-¿Qué dato es clave en el examen?
-- WRF durante descongestión exitosa (↓ peso, ↓ disnea, aún edema) es frecuente y se asocia a mejor pronóstico si se completa descongestión.
-- ↓ precarga → ↓ filtración transitoria durante diuresis agresiva.
-- Aún hay edema = aún hay congestión → continuar furosemida.
-- ↑ Cr hasta ~30–50% tolerable si perfundido y clínicamente descongestionando.
-- Suspender diuréticos por Cr +30% con congestión residual empeora outcomes.
+Recordemos el concepto de WRF permisivo:
+• WRF durante descongestión exitosa (↓ peso, ↓ disnea, aún edema) es frecuente y se asocia a mejor pronóstico si se completa descongestión.
+• ↓ precarga → ↓ filtración transitoria durante diuresis agresiva.
+• Aún hay edema = aún hay congestión venosa renal → continuar furosemida.
+• ↑ Cr hasta ~30–50% tolerable si perfundido y clínicamente descongestionando.
+
+Por lo tanto:
+La interpretación correcta es empeoramiento renal permisivo durante descongestión efectiva; continuar diuréticos mientras persista congestión clínica.
+
+¿Por qué la opción C es la respuesta correcta?
+Identifica WRF permisivo con descongestión en curso y prioriza completar descongestión sobre tratar el número de creatinina aisladamente.
 
 ¿Por qué fallan las otras opciones?
-- Suspender diuréticos por "AKI prerrenal": no hay depleción; hay descongestión en curso con WRF permisivo.
-- Hemodiálisis ultrafiltrante: no indicada con buena diuresis, Cr 1.9 y perfusión conservada.
-- Nefritis intersticial por furosemida: no hay fiebre, rash ni eosinofilia; es fisiología cardiorenal.
+Opción A (suspender diuréticos + SF): no hay depleción; hay descongestión en curso con WRF permisivo.
+Opción B (hemodiálisis ultrafiltrante): no indicada con buena diuresis, Cr 1.9 y perfusión conservada.
+Opción D (nefritis intersticial + esteroides): no hay fiebre, rash ni eosinofilia; es fisiología cardiorenal.
 
-Clave: pierde peso + respira mejor + Cr sube leve + aún edema = continúa diuréticos, no pares por el número.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Creatinina sube = AKI prerrenal = suspender diuréticos y dar volumen."
+Pero el examen exige integrar clínica: pierde peso, respira mejor, aún edema = descongestión en curso.
+Aquí el dato decisivo es:
+↓5 kg + disnea casi resuelta + edema residual + Cr +36% con buena perfusión = WRF permisivo, no depleción.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Empeoramiento renal permisivo en IC
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar congestión clínica (peso, edema, disnea, ortopnea).
+2. Interpretar cambio de creatinina en contexto de descongestión.
+3. Si descongestiona efectivamente con WRF leve → continuar diuréticos.
+4. Reevaluar diariamente; diálisis solo si falla manejo médico o uremia refractaria.
 
-• ↓ precarga → ↓ filtración transitoria durante diuresis.
-• Aún edema = aún congesto → continuar furosemida.
-• Suspender diurético por número = perpetuar congestión venosa renal.
+Perlas de examen
+✅ Pierde peso + respira mejor + Cr sube leve + aún edema = continúa diuréticos.
+✅ WRF permisivo se asocia a mejor pronóstico si se completa descongestión.
+✅ Trata la clínica, no solo la creatinina.
+✅ ↑ Cr ~30–50% tolerable si perfundido y aún congesto.
+✅ Suspender diurético por número = perpetuar congestión venosa renal.
 
-Perla: Pierde peso, respira mejor, Cr sube leve → vas bien descongestionando. No pares el diurético.
-
-Referencias: ACC/AHA HF Guidelines; HFA consensus.`,
+Referencias
+• ACC/AHA Heart Failure Guidelines.
+• HFA Consensus on Cardiorenal Syndrome.
+• UpToDate: Worsening renal function during decongestion in heart failure.`,
   },
   {
     id: "dr-q-47",
@@ -4626,44 +4651,70 @@ Referencias: ACC/AHA HF Guidelines; HFA consensus.`,
     explanation:
       "C. difficile fulminante (hipotensión, megacolon, íleo): vancomicina enteral alta dosis (PO/NG/enema retención) + metronidazol IV (única indicación dual). Metronidazol solo es insuficiente. Loperamida contraindicada (retención toxinas). FMT para recurrencia, no choque agudo.",
     keyPoints: [
-      "Diarrea que para + abdomen distendido = íleo/megacolon por C. diff.",
-      "Fulminante: vanco enteral + metro IV.",
-      "Antimotilidad proscrita en C. diff.",
+      "Cuando veas: post-ATB + diarrea que cesa + abdomen distendido en tabla + toxina C. diff (+).",
+      "Debes pensar en: C. difficile fulminante con íleo/megacolon tóxico → vanco enteral + metro IV + cirugía.",
+      "Diarrea que para + abdomen distendido = íleo/megacolon, no mejoría clínica.",
+      "Loperamida contraindicada en C. diff activo (retención de toxinas → perforación).",
+      "Tema: C. difficile fulminante / megacolon tóxico (IDSA/SHEA).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa C. difficile fulminante con megacolon: cuando la diarrea cesa y el abdomen se distiende, es íleo/megacolon — vancomicina enteral + metronidazol IV, no metronidazol solo.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa C. difficile fulminante con megacolon: cuando la diarrea cesa y el abdomen se distiende, es íleo/megacolon tóxico, no mejoría.
+
+La clave no es metronidazol IV en monoterapia ni antimotilidad.
+La clave es:
+Vancomicina enteral alta dosis (PO/NG/enema) + metronidazol IV (única indicación dual) mientras se valora cirugía urgente.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 65 años, día 14 meropenem por neumonía necrotizante.
-- Diarrea acuosa masiva; día 16: diarrea cesa, abdomen distendido en tabla, doloroso.
-- Shock séptico: PA 80/45, FC 130, Temp 39.5 °C, lactato 4.5, leucocitos 35,000.
-- Toxina C. difficile (+); Rx: megacolon (colon transverso 10 cm).
+La paciente presenta:
+• Mujer de 65 años, día 14 meropenem por neumonía necrotizante.
+• Diarrea acuosa masiva; día 16: diarrea cesa, abdomen distendido en tabla, doloroso.
+• Shock séptico: PA 80/45, FC 130, Temp 39.5 °C, lactato 4.5, leucocitos 35,000, Cr 2.5.
+• Toxina C. difficile (+); Rx: megacolon (colon transverso 10 cm).
 
-¿Qué dato es clave en el examen?
-- Diarrea que para + abdomen distendido = íleo/megacolon tóxico por C. diff (no "mejoría").
-- Fulminante: vancomicina enteral alta dosis (PO/NG/enema retención) + metronidazol IV (única indicación dual).
-- Íleo impide tránsito de vanco PO → metro IV aporta excreción biliar/intestinal.
-- Metronidazolo solo es insuficiente en enfermedad grave.
-- Loperamida contraindicada (retención de toxinas → perforación).
+Recordemos C. difficile fulminante (IDSA/SHEA):
+• Diarrea que para + abdomen distendido = íleo/megacolon tóxico (no "mejoría").
+• Fulminante: vancomicina enteral alta dosis + metronidazol IV (única indicación de terapia dual).
+• Íleo impide tránsito de vanco PO → metro IV aporta excreción biliar/intestinal.
+• Megacolon + shock = colectomía en evaluación urgente.
+• Loperamida contraindicada (retención de toxinas → perforación).
+
+Por lo tanto:
+El esquema de rescate empírico es vancomicina oral/NG 500 mg c/6 h + metronidazol IV 500 mg c/8 h + cirugía urgente en evaluación.
+
+¿Por qué la opción B es la respuesta correcta?
+Aplica terapia dual IDSA/SHEA para C. diff fulminante con megacolon e íleo, donde vanco enteral sola no alcanza el colon y metro IV complementa vía biliar.
 
 ¿Por qué fallan las otras opciones?
-- Metronidazol IV en monoterapia: insuficiente en C. diff fulminante/megacolon.
-- Loperamida + fidaxomicina: antimotilidad proscrita en C. diff activo.
-- Trasplante fecal inmediato: indicado en recurrencia, no en choque agudo con megacolon.
+Opción A (metronidazol IV solo): insuficiente en C. diff fulminante/megacolon.
+Opción C (loperamida + fidaxomicina): antimotilidad proscrita en C. diff activo; fidaxomicina no es 1.ª línea en fulminante.
+Opción D (trasplante fecal inmediato): indicado en recurrencia, no en choque agudo con megacolon.
 
-Clave: post-ATB + diarrea que para + barriga en tabla = megacolon → vanco enteral + metro IV + cirugía en evaluación.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Diarrea cesa = mejoría clínica."
+Pero en C. diff post-ATB, cese de diarrea + distensión = íleo/megacolon tóxico.
+Aquí el dato decisivo es:
+Post-ATB + diarrea que para + barriga en tabla + megacolon en Rx = fulminante, no alivio.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-C. difficile fulminante · IDSA/SHEA
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar C. diff en diarrea post-ATB; confirmar toxina.
+2. Si fulminante (shock, megacolon, íleo): vanco enteral + metro IV.
+3. Consulta quirúrgica urgente si megacolon o deterioro.
+4. Nunca antimotilidad; FMT solo en recurrencia, no en choque agudo.
 
-• Íleo impide tránsito de vanco PO → añadir metro IV (excreción biliar/intestinal).
-• Megacolon + shock = colectomía en evaluación.
-• Loperamida = perforación.
+Perlas de examen
+✅ Diarrea post-ATB que se detiene y barriga se infla = megacolon, no mejoría.
+✅ Fulminante: vanco enteral + metro IV (única indicación dual).
+✅ Íleo impide tránsito de vanco PO → añadir metro IV.
+✅ Loperamida = perforación en C. diff activo.
+✅ Megacolon + shock = colectomía en evaluación.
 
-Perla: Diarrea post-ATB que se detiene y barriga se infla = megacolon. Vanco por tubo + Metro IV.
-
-Referencias: IDSA/SHEA C. difficile Guidelines.`,
+Referencias
+• IDSA/SHEA C. difficile Clinical Practice Guidelines.
+• UpToDate: Clostridioides difficile in adults — Treatment.
+• SHEA Infection Prevention Guidelines.`,
   },
   {
     id: "dr-q-48",
@@ -4683,44 +4734,69 @@ Referencias: IDSA/SHEA C. difficile Guidelines.`,
     explanation:
       "HRS-AKI: vasodilatación espláncnica + hipovolemia efectiva; riñón estructuralmente intacto (FENa <1%, Na urinario bajo). Terlipresina + albúmina revierte perfusión renal. Diuréticos empeoran isquemia. Dopamina 'renal' ineficaz.",
     keyPoints: [
-      "Paracentesis >5 L sin albúmina → disfunción circulatoria post-paracentesis → HRS.",
-      "HRS-AKI: FENa bajo, orina concentrada, sedimento limpio.",
-      "Terlipresina + albúmina = estándar.",
+      "Cuando veas: cirrosis Child C + paracentesis >5 L sin albúmina + anuria + Na urinario <10 + FENa <1%.",
+      "Debes pensar en: HRS-AKI precipitado por disfunción circulatoria post-paracentesis → terlipresina + albúmina.",
+      "Riñón estructuralmente intacto: sedimento limpio, eco normal, orina concentrada.",
+      "Albúmina 20 g/L por cada >5 L evacuados previene este cuadro.",
+      "Tema: HRS-AKI post-paracentesis (EASL/AASLD).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa síndrome hepatorenal-AKI precipitado por paracentesis sin albúmina: anuria con FENa bajo y Na urinario <10 = riñón hemodinámicamente desconectado, no NTA — terlipresina + albúmina.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa síndrome hepatorenal-AKI precipitado por paracentesis sin albúmina: anuria con FENa bajo = riñón hemodinámicamente desconectado, no NTA.
+
+La clave no es diuréticos, dopamina renal ni diálisis como primera línea.
+La clave es:
+Terlipresina IV continua + albúmina humana para revertir vasodilatación espláncnica y restaurar perfusión renal.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 52 años, cirrosis alcohólica Child C.
-- Paracentesis evacuatoria 9 L sin albúmina post-procedimiento (error iatrogénico).
-- Día 3: anuria; PA 110/70 (presión preservada pero perfusión renal colapsada).
-- Cr 3.2 (basal 0.8), Na urinario <10, FENa 0.1%, sedimento limpio, eco renal normal.
+El paciente presenta:
+• Hombre de 52 años, cirrosis alcohólica Child C.
+• Paracentesis evacuatoria 9 L sin albúmina post-procedimiento (error iatrogénico).
+• Día 3: anuria; PA 110/70 (presión preservada pero perfusión renal colapsada).
+• Cr 3.2 (basal 0.8), Na 126, Na urinario <10, FENa 0.1%, sedimento limpio, eco renal normal.
 
-¿Qué dato es clave en el examen?
-- Paracentesis >5 L sin albúmina → disfunción circulatoria post-paracentesis → HRS-AKI.
-- HRS-AKI: vasodilatación espláncnica + hipovolemia arterial efectiva; riñón estructuralmente intacto.
-- FENa <1%, Na urinario bajo, sedimento limpio = perfusión, no necrosis tubular.
-- Terlipresina IV continua + albúmina humana revierte perfusión renal (EASL/AASLD).
-- Albúmina 20 g/L si >5 L evacuados previene este cuadro.
+Recordemos HRS-AKI (EASL/AASLD):
+• Paracentesis >5 L sin albúmina → disfunción circulatoria post-paracentesis → HRS-AKI.
+• Vasodilatación espláncnica + hipovolemia arterial efectiva; riñón estructuralmente intacto.
+• FENa <1%, Na urinario bajo, sedimento limpio = fallo hemodinámico, no necrosis tubular.
+• Terlipresina + albúmina revierte perfusión renal; albúmina 20 g/L si >5 L evacuados previene.
+
+Por lo tanto:
+El vasoconstrictor de elección es terlipresina IV continua + albúmina humana.
+
+¿Por qué la opción B es la respuesta correcta?
+Aplica el estándar EASL/AASLD para HRS-AKI: terlipresina esplácnica + reposición con albúmina.
 
 ¿Por qué fallan las otras opciones?
-- Furosemida en infusión: empeora isquemia renal en HRS.
-- Dopamina a dosis renal: ineficaz; no revierte vasodilatación espláncnica.
-- Diálisis peritoneal urgente: no trata la causa hemodinámica; terlipresina primero.
+Opción A (furosemida en infusión): empeora isquemia renal en HRS.
+Opción C (dopamina a dosis renal): ineficaz; no revierte vasodilatación espláncnica.
+Opción D (diálisis peritoneal urgente): no trata la causa hemodinámica; terlipresina primero.
 
-Clave: cirrosis + anuria + Na urinario bajo post-paracentesis masiva = HRS → terlipresina + albúmina.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Anuria + Cr alta en cirrótico = NTA → diuréticos o diálisis."
+Pero FENa <1% + Na urinario <10 + sedimento limpio = HRS hemodinámico.
+Aquí el dato decisivo es:
+Paracentesis 9 L sin albúmina + anuria + orina concentrada = HRS-AKI post-paracentesis.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-HRS-AKI post-paracentesis
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Paracentesis >5 L → albúmina 20 g/L (prevención).
+2. Si HRS-AKI: terlipresina + albúmina.
+3. No diuréticos ni dopamina renal.
+4. Diálisis solo si falla vasoconstrictor o indicaciones absolutas.
 
-• Extracción masiva sin coloide → hipovolemia arterial efectiva.
-• Riñón 'desconectado' hemodinámicamente, no necrosis tubular.
-• Terlipresina esplácnica + albúmina; 20 g/L si >5 L evacuados.
+Perlas de examen
+✅ Cirrosis + anuria + Na urinario bajo = HRS, no NTA.
+✅ Terlipresina esplácnica + albúmina = estándar EASL/AASLD.
+✅ Paracentesis >5 L sin albúmina = error iatrogénico prevenible.
+✅ Furosemida empeora isquemia renal en HRS.
+✅ Riñón "desconectado" hemodinámicamente, no necrosis tubular.
 
-Perla: Cirrosis + anuria + Na urinario bajo = HRS. Aprieta espláncnico (terlipresina) + llena volumen (albúmina).
-
-Referencias: EASL/AASLD Ascites and HRS Guidelines.`,
+Referencias
+• EASL Clinical Practice Guidelines on Ascites and HRS.
+• AASLD Practice Guidance on Ascites and HRS.
+• UpToDate: Hepatorenal syndrome in adults.`,
   },
   {
     id: "dr-q-49",
@@ -4744,48 +4820,70 @@ Referencias: EASL/AASLD Ascites and HRS Guidelines.`,
     explanation:
       "Hiponatremia sintomática grave (convulsiones): bolos SSH 3% 100–150 mL para ↑ Na 4–6 mEq/L rápido y deshinchar cerebro. Restricción/tolvaptán demasiado lentos. SF 0.9% en SIADH puede empeorar (desalinización). Corrección >8 mEq/L/24 h → mielinolisis osmótica.",
     keyPoints: [
-      "Convulsión/coma + Na <120 = SSH 3% en bolos.",
-      "Meta aguda: +4–6 mEq/L; luego ≤8 mEq/L/24 h.",
-      "SF 0.9% en SIADH puede bajar Na aún más.",
+      "Cuando veas: hiponatremia severa (Na <120) + convulsión/coma + SIADH euvolémica confirmada.",
+      "Debes pensar en: emergencia neurológica → bolos SSH 3% 100–150 mL (+4–6 mEq/L en horas), luego ≤8 mEq/L/24 h.",
+      "SF 0.9% en SIADH puede empeorar por desalinización.",
+      "Restricción hídrica/tolvaptán demasiado lentos en crisis aguda.",
+      "Tema: Hiponatremia severa sintomática / SIADH paraneoplásico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa hiponatremia severa sintomática por SIADH paraneoplásico: convulsión con Na+ 108 exige bolos de SSH 3% inmediatos (+4–6 mEq/L), no restricción hídrica ni SF 0.9%.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa hiponatremia severa sintomática por SIADH paraneoplásico: convulsión con Na+ 108 exige bolos de SSH 3% inmediatos.
+
+La clave no es restricción hídrica, tolvaptán ni SF 0.9%.
+La clave es:
+Bolo IV 100–150 mL SSH 3% en 10–20 min (repetir si persiste) para ↑ Na 4–6 mEq/L en primeras horas y deshinchar el cerebro.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 65 años con carcinoma microcítico de pulmón (SIADH paraneoplásico).
-- Convulsión tónico-clónica en triage; euvolémica al examen.
-- Na+ 108, osmolalidad plasmática 230, osmolalidad urinaria 600, Na urinario 60.
-- TSH y cortisol normales: SIADH euvolémica con hiponatremia severa sintomática.
+La paciente presenta:
+• Mujer de 65 años con carcinoma microcítico de pulmón (SIADH paraneoplásico).
+• Convulsión tónico-clónica en triage; euvolémica al examen.
+• Na+ 108, osmolalidad plasmática 230, osmolalidad urinaria 600, Na urinario 60.
+• TSH y cortisol normales: SIADH euvolémica con hiponatremia severa sintomática.
 
-¿Qué dato es clave en el examen?
-- Na+ 108 + convulsión = emergencia neurológica por edema cerebral.
-- Bolos IV 100–150 mL SSH 3% en 10–20 min (repetir si persiste): meta +4 a 6 mEq/L en primeras horas.
-- Luego corrección ≤8 mEq/L/24 h para evitar mielinolisis osmótica.
-- Restricción hídrica/tolvaptán demasiado lentos en crisis aguda.
-- SF 0.9% en SIADH puede empeorar (desalinización → Na más bajo).
+Recordemos manejo de hiponatremia sintomática grave:
+• Na+ <120 + convulsión/coma = emergencia neurológica por edema cerebral.
+• Bolos SSH 3% 100–150 mL en 10–20 min; meta +4 a 6 mEq/L en primeras horas.
+• Luego corrección ≤8 mEq/L/24 h para evitar mielinolisis osmótica.
+• Restricción hídrica/tolvaptán: manejo crónico, no detiene edema cerebral agudo.
+• SF 0.9% en SIADH puede empeorar (desalinización → Na más bajo).
+
+Por lo tanto:
+La intervención inmediata es bolos IV de SSH 3% con meta de corrección controlada (+4–6 mEq/L agudo, ≤8 mEq/L/24 h).
+
+¿Por qué la opción B es la respuesta correcta?
+Aplica el protocolo de hiponatremia sintomática grave: bolos SSH 3% para deshinchar cerebro rápidamente con límite de corrección posterior.
 
 ¿Por qué fallan las otras opciones?
-- Restricción + tolvaptán: manejo crónico; no detiene edema cerebral agudo.
-- SF 0.9% 200 mL/h: en SIADH puede bajar Na aún más por desalinización.
-- Corrección rápida a Na 135 en 12 h: riesgo de mielinolisis osmótica (locked-in).
+Opción A (restricción + tolvaptán): manejo crónico; demasiado lento en crisis aguda.
+Opción C (SF 0.9% 200 mL/h): en SIADH puede bajar Na aún más por desalinización.
+Opción D (corrección rápida a Na 135 en 12 h): riesgo de mielinolisis osmótica (locked-in).
 
-Clave: hiponatremia + convulsión = SSH 3% a chorro (+5 puntos rápido), luego despacio.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"SIADH = restricción hídrica siempre."
+Pero convulsión/coma cambia la prioridad: deshinchar cerebro primero.
+Aquí el dato decisivo es:
+Na+ 108 + convulsión = SSH 3% a chorro (+5 puntos rápido), luego despacio.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Hiponatremia severa sintomática
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar hiponatremia hipotónica verdadera y volumen (euvolémica).
+2. Si sintomática grave: bolos SSH 3% inmediatos.
+3. Monitorizar Na+ cada 2–4 h; meta +4–6 mEq/L en horas.
+4. Luego corrección ≤8 mEq/L/24 h; manejo crónico de causa (SIADH paraneoplásico).
 
-• Na 108 + convulsión = emergencia neurológica.
-• SSH 3% bolo → extrae agua cerebral.
-• Después: corrección lenta (evitar desmielinización).
+Perlas de examen
+✅ Hiponatremia + convulsión = SSH 3% a chorro (+5 puntos rápido), luego despacio.
+✅ Meta aguda: +4–6 mEq/L; luego ≤8 mEq/L/24 h.
+✅ SF 0.9% en SIADH puede bajar Na aún más.
+✅ Restricción/tolvaptán demasiado lentos en crisis aguda.
+✅ Corrección >8 mEq/L/24 h → mielinolisis osmótica.
 
-Distractores:
-• A/C: manejo crónico o peligroso en crisis.
-• D: corrección rápida total → locked-in.
-
-Perla: Hiponatremia + convulsión = sal hipertónica a chorro (+5 puntos rápido), luego despacio.
-
-Referencias: European/American hyponatremia guidelines; SHM.`,
+Referencias
+• European/American Hyponatremia Guidelines.
+• SHM Hyponatremia Management Guidelines.
+• UpToDate: Treatment of hyponatremia in adults.`,
   },
   {
     id: "dr-q-50",
@@ -4809,44 +4907,70 @@ Referencias: European/American hyponatremia guidelines; SHM.`,
     explanation:
       "Prednisona matutina: hiperglucemia pico 8–12 h post-dosis (tarde). NPH AM sincroniza pico insulínico con pico esteroide. Glargina plana → hipoglucemia nocturna con ayunas normales. Metformina contraindicada/relativa hospitalizada inestable. Solo sliding scale inadecuado (persigue, no previene).",
     keyPoints: [
-      "Esteroides AM → hiperglucemia vespertina, ayunas OK.",
-      "NPH AM + prednisona AM = emparejamiento farmacocinético.",
-      "Glargina nocturna riesgo hipoglucemia 3 AM.",
+      "Cuando veas: prednisona AM + glucemias ayunas normales (110–130) + picos vespertinos 350–400 mg/dL.",
+      "Debes pensar en: hiperglucemia esteroidea con pico 8–12 h post-dosis → NPH matutina sincronizada con prednisona.",
+      "Glargina nocturna = perfil plano → riesgo hipoglucemia 3 AM con ayunas OK.",
+      "Solo sliding scale persigue, no previene picos predecibles.",
+      "Tema: Hiperglucemia esteroidea intrahospitalaria (ADA/SHM).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa hiperglucemia esteroidea intrahospitalaria: prednisona matutina produce pico hiperglucémico vespertino — NPH matutina sincroniza con el pico del esteroide, no glargina nocturna.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa hiperglucemia esteroidea intrahospitalaria: prednisona matutina produce pico hiperglucémico vespertino que exige NPH matutina, no glargina nocturna.
+
+La clave no es glargina nocturna, metformina ni solo sliding scale.
+La clave es:
+Insulina NPH matutina junto con prednisona AM para sincronizar pico insulínico con pico hiperglucémico esteroide (8–12 h post-dosis).
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 60 años, crisis asmática grave, transferido de UCI a piso.
-- DM2 en metformina (suspendida al ingreso); prednisona 50 mg AM.
-- Glucemias ayunas 110–130 mg/dL (normales); post-almuerzo y 16:00 h 350–400 mg/dL consistentemente.
-- Solo escala móvil insulina regular (inadecuada: persigue, no previene).
+El paciente presenta:
+• Hombre de 60 años, crisis asmática grave, transferido de UCI a piso.
+• DM2 en metformina (suspendida al ingreso); prednisona 50 mg AM.
+• Glucemias ayunas 110–130 mg/dL (normales); post-almuerzo y 16:00 h 350–400 mg/dL consistentemente.
+• Solo escala móvil insulina regular (inadecuada: persigue, no previene).
 
-¿Qué dato es clave en el examen?
-- Glucocorticoides ↑ gluconeogénesis; pico hiperglucémico 8–12 h post-dosis matutina (tarde).
-- ADA/SHM: NPH matutina junto con prednisona AM empareja pico insulínico con pico esteroide.
-- Glargina nocturna = perfil plano → hipoglucemia nocturna con ayunas normales.
-- Metformina contraindicada/relativa en hospitalizado inestable.
-- Solo sliding scale inadecuado: reactivo, no preventivo.
+Recordemos hiperglucemia esteroidea (ADA/SHM):
+• Glucocorticoides ↑ gluconeogénesis; pico hiperglucémico 8–12 h post-dosis matutina (tarde).
+• NPH matutina junto con prednisona AM empareja pico insulínico con pico esteroide.
+• Glargina nocturna = perfil plano 24 h → hipoglucemia nocturna con ayunas normales.
+• Metformina contraindicada/relativa en hospitalizado inestable.
+• Basal-bolus o NPH + corrección; no solo sliding scale.
+
+Por lo tanto:
+El esquema de mayor impacto fisiológico es insulina NPH matutina junto con prednisona.
+
+¿Por qué la opción C es la respuesta correcta?
+Sincroniza farmacocinéticamente el pico de NPH (~8–12 h) con el pico hiperglucémico vespertino de prednisona matutina.
 
 ¿Por qué fallan las otras opciones?
-- Reiniciar metformina máxima: contraindicada/relativa en hospitalizado; no cubre pico vespertino esteroide.
-- Glargina nocturna: perfil plano 24 h no coincide con pico vespertino; riesgo hipoglucemia 3 AM.
-- Solo sliding scale: persigue hiperglucemia, no previene picos vespertinos predecibles.
+Opción A (metformina máxima): contraindicada/relativa en hospitalizado; no cubre pico vespertino esteroide.
+Opción B (glargina nocturna): perfil plano no coincide con pico vespertino; riesgo hipoglucemia 3 AM.
+Opción D (solo sliding scale): reactivo, no preventivo; no controla picos predecibles.
 
-Clave: prednisona AM + azúcar alta tarde + ayunas OK = NPH a primera hora con el esteroide.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"DM hospitalizado = glargina basal nocturna siempre."
+Pero el patrón temporal importa: ayunas OK + tarde alta = esteroide AM.
+Aquí el dato decisivo es:
+Prednisona AM + azúcar alta tarde + ayunas OK = NPH a primera hora con el esteroide.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Hiperglucemia esteroidea intrahospitalaria
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar patrón temporal de glucemias (ayunas vs tarde).
+2. Si esteroide matutino con pico vespertino → NPH AM.
+3. Añadir corrección con insulina rápida según escala.
+4. Reevaluar al reducir/suspender esteroides.
 
-• Glucocorticoides ↑ gluconeogénesis; pico tarde.
-• ADA/SHM: NPH matutina con dosis esteroide diaria.
-• Basal-bolus o NPH+corrección; no solo sliding scale.
+Perlas de examen
+✅ Prednisona AM + azúcar alta tarde = NPH a primera hora con el esteroide.
+✅ Esteroides AM → hiperglucemia vespertina, ayunas OK.
+✅ Glargina nocturna riesgo hipoglucemia 3 AM en este patrón.
+✅ Solo sliding scale inadecuado: persigue, no previene.
+✅ Metformina contraindicada/relativa en hospitalizado inestable.
 
-Perla: Prednisona AM + azúcar alta tarde = NPH a primera hora con el esteroide.
-
-Referencias: ADA Standards of Care Inpatient; SHM Glycemic Management.`,
+Referencias
+• ADA Standards of Care — Inpatient Glycemic Management.
+• SHM Glycemic Management Guidelines.
+• UpToDate: Management of hyperglycemia in hospitalized patients.`,
   },
   {
     id: "dr-q-51",
@@ -4878,43 +5002,69 @@ Referencias: ADA Standards of Care Inpatient; SHM Glycemic Management.`,
     explanation:
       "TRC normal, ScvO2 >70%, delta CO2 <6, PAM adecuada = perfusión restaurada (ANDROMEDA-SHOCK). Lactato puede persistir por beta-2/adrenérgico y aclaramiento hepático (cirrosis). VCI dilatada sin variabilidad = no respondedora a volumen. Más fluidos → edema pulmonar/congestión.",
     keyPoints: [
-      "Lactato no es único marcador de hipoxia en sepsis post-reanimación.",
-      "TRC <3 s + ScvO2 >70% + delta CO2 <6 = reanimada.",
-      "ANDROMEDA-SHOCK: TRC guía segura vs lactato solo.",
+      "Cuando veas: sepsis post-reanimación con PAM OK, TRC <3 s, ScvO2 >70%, delta CO2 <6 + lactato persistente.",
+      "Debes pensar en: hemodinámicamente resucitada y normoperfundida → prohibir más fluidos, continuar destete vasopresor.",
+      "Lactato no es único marcador de hipoxia en sepsis post-reanimación (puede ser adrenérgico/hepático).",
+      "VCI dilatada sin variabilidad = no respondedora a volumen.",
+      "Tema: Fin de reanimación guiada por perfusión clínica (ANDROMEDA-SHOCK).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa fin de reanimación guiada por perfusión clínica (ANDROMEDA-SHOCK): lactato persistente con TRC normal, ScvO2 >70% y PAM adecuada no justifica más fluidos — puede ser adrenérgico/hepático.
+Esta es una pregunta clásica de medicina crítica porque evalúa el fin de reanimación guiada por perfusión clínica (ANDROMEDA-SHOCK): lactato persistente con TRC normal, ScvO2 >70% y PAM adecuada no justifica más fluidos.
+
+La clave no es perseguir lactato con más cristaloides.
+La clave es:
+Reconocer perfusión restaurada (TRC, ScvO2, delta CO2, PAM) y prohibir más fluidos mientras se continúa destete vasopresor.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 68 años, día 1 post-op peritonitis fecal (choque séptico abdominal), cirrosis Child A.
-- PAM 78, norepinefrina 0.1 mcg/kg/min, TRC 2 s, mottling 0.
-- POCUS: VTI normal, VCI 22 mm, variabilidad 5% (euvolemia/no respondedora a volumen).
-- Lactato 6.5 → 5.8 en 6 h (<20% aclaramiento); ScvO2 76%, delta CO2 4 mmHg.
+La paciente presenta:
+• Mujer de 68 años, día 1 post-op peritonitis fecal (choque séptico abdominal), cirrosis Child A.
+• PAM 78, norepinefrina 0.1 mcg/kg/min, TRC 2 s, mottling 0.
+• POCUS: VTI normal, VCI 22 mm, variabilidad 5% (euvolemia/no respondedora a volumen).
+• Lactato 6.5 → 5.8 en 6 h (<20% aclaramiento); ScvO2 76%, delta CO2 4 mmHg.
 
-¿Qué dato es clave en el examen?
-- TRC <3 s + ScvO2 >70% + delta CO2 <6 + PAM adecuada = perfusión restaurada (ANDROMEDA-SHOCK).
-- Hiperlactatemia puede ser aeróbica/adrenérgica + ↓ aclaramiento hepático (cirrosis).
-- VCI dilatada sin variabilidad = no respondedora a volumen; más fluidos → edema pulmonar/congestión.
-- Lactato no es único marcador de hipoxia en sepsis post-reanimación.
+Recordemos ANDROMEDA-SHOCK y fin de reanimación:
+• TRC <3 s + ScvO2 >70% + delta CO2 <6 + PAM adecuada = perfusión restaurada.
+• Hiperlactatemia puede ser aeróbica/adrenérgica + ↓ aclaramiento hepático (cirrosis).
+• VCI dilatada sin variabilidad = no respondedora a volumen; más fluidos → edema pulmonar/congestión.
+• Lactato no es único marcador de hipoxia en sepsis post-reanimación.
+
+Por lo tanto:
+El diagnóstico es hemodinámicamente resucitada y normoperfundida; prohibir más fluidos y continuar destete vasopresor.
+
+¿Por qué la opción B es la respuesta correcta?
+Integra marcadores de perfusión clínica cumplidos (TRC, ScvO2, delta CO2) y reconoce lactato persistente sin indicación de más volumen.
 
 ¿Por qué fallan las otras opciones?
-- Más fluidos + vasopresina: perfusión ya normalizada; VCI no colapsable descarta beneficio de volumen.
-- Dobutamina por ScvO2 76%: ScvO2 >70% no indica shunt masivo; IC ya adecuado.
-- Diuréticos para "excretar lactato": no hay sobrecarga VD; el lactato no se excreta con diuréticos.
+Opción A (más fluidos + vasopresina): perfusión ya normalizada; VCI no colapsable descarta beneficio de volumen.
+Opción C (dobutamina por ScvO2 76%): ScvO2 >70% no indica shunt masivo; IC ya adecuado.
+Opción D (diuréticos para "excretar lactato"): no hay sobrecarga VD; el lactato no se excreta con diuréticos.
 
-Clave: PAM OK + TRC <3 + ScvO2 >70% + delta CO2 <6 = REANIMADA → detén líquidos, desteta vasopresor.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Lactato alto = más fluidos hasta normalizar."
+Pero perfusión clínica normalizada cambia la prioridad.
+Aquí el dato decisivo es:
+PAM OK + TRC <3 + ScvO2 >70% + delta CO2 <6 = REANIMADA → detén líquidos.
 
-MEDICINA CRÍTICA — BY DR Q.
-Perfusión vs lactato · ANDROMEDA-SHOCK
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar perfusión clínica (TRC, mottling, diuresis, conciencia).
+2. Complementar con ScvO2 y delta CO2.
+3. Si objetivos cumplidos → no más fluidos aunque lactato persista.
+4. Continuar destete vasopresor y tratar causa.
 
-• Hiperlactatemia puede ser aeróbica/adrenérgica + ↓ aclaramiento hepático.
-• Objetivos de perfusión clínica cumplidos → no más fluidos.
-• VCI 22 mm, variabilidad 5% = euvolemia/no respondedora.
+Perlas de examen
+✅ PAM OK + TRC <3 + ScvO2 >70% + delta CO2 <6 = REANIMADA. Detén líquidos.
+✅ Lactato no es único marcador de hipoxia en sepsis post-reanimación.
+✅ Hiperlactatemia puede ser adrenérgica + ↓ aclaramiento hepático.
+✅ VCI 22 mm, variabilidad 5% = euvolemia/no respondedora.
+✅ ANDROMEDA-SHOCK: TRC guía segura vs lactato solo.
 
-Perla UCI: PAM OK + TRC <3 + ScvO2 >70% + delta CO2 <6 = REANIMADA. Detén líquidos.
-
-Referencias: ANDROMEDA-SHOCK; Surviving Sepsis Campaign; ESICM.`,
+Referencias
+• ANDROMEDA-SHOCK Trial (JAMA).
+• Surviving Sepsis Campaign Guidelines.
+• ESICM Fluid Stewardship Recommendations.`,
   },
   {
     id: "dr-q-52",
@@ -4938,44 +5088,70 @@ Referencias: ANDROMEDA-SHOCK; Surviving Sepsis Campaign; ESICM.`,
     explanation:
       "Flujo expiratorio no a cero = auto-PEEP/hiperinsuflación dinámica. Pplat normal (20) descarta neumotórax/SDRA; Ppico-Pplat elevado = resistencia vía aérea + atrapamiento. Auto-PEEP ↑ presión intratorácica → ↓ retorno venoso, VD dilatado, choque obstructivo. Rescate: desconexión VM, apnea permisiva, ↑ tiempo espiratorio (I:E 1:4-1:5).",
     keyPoints: [
-      "Auto-PEEP: flujo no retorna a cero en EPOC/asma.",
-      "Pplat normal descarta neumotórax (sube Pplat también).",
+      "Cuando veas: EPOC intubado reciente + hipotensión post-VM + flujo expiratorio que no llega a cero + Pplat normal.",
+      "Debes pensar en: auto-PEEP severo colapsando retorno venoso → desconectar VM y reprogramar (↑ tiempo espiratorio).",
+      "Pplat normal (20) descarta neumotórax/SDRA; Ppico-Pplat elevado = resistencia + atrapamiento.",
       "Hipotensión post-intubación EPOC → desconectar tubo primero.",
+      "Tema: Auto-PEEP y choque obstructivo post-intubación.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa auto-PEEP severo post-intubación en EPOC: flujo expiratorio que no llega a cero + Pplat normal = atrapamiento aéreo, no neumotórax — desconectar VM y reprogramar espiración.
+Esta es una pregunta clásica de medicina crítica porque evalúa auto-PEEP severo post-intubación en EPOC: flujo expiratorio que no llega a cero + Pplat normal = atrapamiento aéreo, no neumotórax.
+
+La clave no es toracostomía, cristaloides ni broncodilatadores como primera medida.
+La clave es:
+Desconectar VM transitoriamente y reprogramar (↑ tiempo espiratorio: ↓ FR, ↑ flujo) para aliviar auto-PEEP.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 65 años, EPOC GOLD D + neumonía, intubado hace 15 min.
-- Post-conexión VM: PA 60/30, FC 140, SpO2 88%.
-- VM: Vt 500 mL, RR 24, flujo 40 L/min → FR alta + flujo bajo = atrapamiento.
-- Curva flujo-tiempo expiratorio no llega a cero antes de la siguiente inspiración.
-- POCUS: VD severamente dilatado comprimiendo VI; VCI ingurgitada fija.
+El paciente presenta:
+• Hombre de 65 años, EPOC GOLD D + neumonía, intubado hace 15 min.
+• Post-conexión VM: PA 60/30, FC 140, SpO2 88%.
+• VM: Vt 500 mL, RR 24, flujo 40 L/min → FR alta + flujo bajo = atrapamiento.
+• Curva flujo-tiempo expiratorio no llega a cero antes de la siguiente inspiración.
+• POCUS: VD severamente dilatado comprimiendo VI; VCI ingurgitada fija; Pplat 20 (normal).
 
-¿Qué dato es clave en el examen?
-- Auto-PEEP: flujo no retorna a cero en EPOC/asma.
-- Pplat normal (20) descarta neumotórax/SDRA; Ppico-Pplat elevado = resistencia + atrapamiento.
-- Auto-PEEP ↑ presión intratorácica → ↓ retorno venoso → VD dilatado → choque obstructivo.
-- Rescate: desconexión VM transitoria, apnea permisiva, ↑ tiempo espiratorio (I:E 1:4-1:5).
+Recordemos auto-PEEP y choque obstructivo:
+• Auto-PEEP: flujo no retorna a cero en EPOC/asma.
+• Pplat normal descarta neumotórax/SDRA; Ppico-Pplat elevado = resistencia vía aérea + atrapamiento.
+• Auto-PEEP ↑ presión intratorácica → ↓ retorno venoso → VD dilatado → choque obstructivo.
+• Rescate: desconexión VM transitoria, apnea permisiva, ↑ tiempo espiratorio (I:E 1:4-1:5).
+
+Por lo tanto:
+El diagnóstico es auto-PEEP severo colapsando retorno venoso; desconectar VM y reprogramar espiración.
+
+¿Por qué la opción C es la respuesta correcta?
+Identifica el patrón de atrapamiento aéreo y aplica rescate ventilatorio inmediato (desconexión + reprogramación).
 
 ¿Por qué fallan las otras opciones?
-- Neumotórax a tensión: Pplat subiría también; aquí Pplat 20 es normal.
-- IAM de VD + cristaloides: empeoraría congestión; el cuadro es ventilatorio, no cardíaco primario.
-- Broncoespasmo + aminofilina: el patrón clave es flujo no a cero, no sibilancias aisladas.
+Opción A (neumotórax a tensión): Pplat subiría también; aquí Pplat 20 es normal.
+Opción B (IAM de VD + cristaloides): empeoraría congestión; el cuadro es ventilatorio, no cardíaco primario.
+Opción D (broncoespasmo + aminofilina): el patrón clave es flujo no a cero, no sibilancias aisladas.
 
-Clave: flujo que no llega a cero + hipotensión post-VM en EPOC = desconecta el tubo y reprograma espiración.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Hipotensión post-intubación = neumotórax a tensión."
+Pero Pplat normal y flujo no a cero apuntan a auto-PEEP.
+Aquí el dato decisivo es:
+Flujo que no llega a cero + hipotensión post-VM en EPOC = desconecta el tubo y reprograma espiración.
 
-MEDICINA CRÍTICA — BY DR Q.
-Auto-PEEP y choque obstructivo
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Revisar curva flujo-tiempo expiratorio (¿llega a cero?).
+2. Si auto-PEEP: desconectar VM, comprimir tórax suavemente.
+3. Reprogramar: ↓ FR, ↑ flujo, ↑ tiempo espiratorio.
+4. Reconectar y monitorizar hemodinamia.
 
-• FR alta + flujo bajo en EPOC = atrapamiento aéreo.
-• Auto-PEEP transmite presión a VD → interdependencia ventricular → colapso VI.
-• Rescate: desconectar VM, comprimir tórax, reprogramar espiración.
+Perlas de examen
+✅ Flujo que no llega a cero + hipotensión post-VM = desconecta el tubo.
+✅ Auto-PEEP: flujo no retorna a cero en EPOC/asma.
+✅ Pplat normal descarta neumotórax (sube Pplat también).
+✅ FR alta + flujo bajo en EPOC = atrapamiento aéreo.
+✅ Auto-PEEP transmite presión a VD → interdependencia ventricular → colapso VI.
 
-Perla UCI: Flujo que no llega a cero + hipotensión post-VM = desconecta el tubo.
-
-Referencias: ESICM/ATS obstructive ventilation guidelines.`,
+Referencias
+• ESICM/ATS Obstructive Ventilation Guidelines.
+• UpToDate: Intrinsic PEEP in adults.
+• Marini JJ — Dynamic Hyperinflation.`,
   },
   {
     id: "dr-q-53",
@@ -4999,44 +5175,71 @@ Referencias: ESICM/ATS obstructive ventilation guidelines.`,
     explanation:
       "Driving pressure = Pplat - PEEP = 32-14 = 18 cmH2O (>15 = alto riesgo VILI/mortalidad, Amato). SDRA severo PaFi 75 con PEEP optimizada → pronación temprana (ESICM fuerte). ↓ PEEP causa atelectrauma. Reclutamiento 40×40 (ART) ↑ mortalidad. ECMO rescate tras prono/BNM (EOLIA).",
     keyPoints: [
-      "ΔP = Pplat - PEEP; objetivo <15 cmH2O.",
-      "PaFi <150 post-optimización → prono ≥16 h.",
-      "No reclutamiento rutinario 40×40 (ART negativo).",
+      "Cuando veas: SDRA severo con Pplat 32, PEEP 14, PaFi 75 → calcular ΔP = Pplat - PEEP.",
+      "Debes pensar en: driving pressure 18 cmH2O (>15) + PaFi <150 → pronación inmediata ≥16 h/día.",
+      "No reclutamiento rutinario 40×40 s (ART trial negativo ↑ mortalidad).",
+      "ECMO es rescate tras prono/BNM (EOLIA), no primera línea.",
+      "Tema: SDRA severo / driving pressure y pronación (Amato/ESICM).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa SDRA severo con driving pressure y pronación: ΔP = Pplat - PEEP; si >15 cmH2O con PaFi <150, pronación temprana ≥16 h/día es mandatoria (PROSEVA/ESICM).
+Esta es una pregunta clásica de medicina crítica porque evalúa SDRA severo con driving pressure y pronación: ΔP = Pplat - PEEP; si >15 cmH2O con PaFi <150, pronación temprana ≥16 h/día es mandatoria.
+
+La clave no es bajar PEEP, reclutamiento rutinario 40×40 ni ECMO inmediata.
+La clave es:
+Calcular driving pressure (18 cmH2O >15) e iniciar pronación inmediata ≥16 h/día para homogenizar ventilación y ↓ VILI.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 40 años, SDRA severo por neumonía viral.
-- VM: Vt 350 mL (5.5 mL/kg), PEEP 14, FR 28, FiO2 80%.
-- Pplat 32, PEEP 14 → driving pressure = 18 cmH2O (>15 = alto riesgo VILI).
-- GSA: PaO2 60, PaFi 75 (SDRA severo pese a PEEP optimizada).
+La paciente presenta:
+• Mujer de 40 años, SDRA severo por neumonía viral.
+• VM: Vt 350 mL (5.5 mL/kg), PEEP 14, FR 28, FiO2 80%.
+• Pplat 32, PEEP 14 → driving pressure = 18 cmH2O (>15 = alto riesgo VILI).
+• GSA: PaO2 60, PaFi 75 (SDRA severo pese a PEEP optimizada).
+• Sedación profunda + BNM.
 
-¿Qué dato es clave en el examen?
-- Driving pressure (ΔP) = Pplat - PEEP; objetivo <15 cmH2O (Amato).
-- ΔP >15 predice mortalidad independiente de Vt y PEEP.
-- PaFi <150 post-optimización → pronación temprana ≥16 h/día (ESICM fuerte, PROSEVA).
-- No reclutamiento rutinario 40×40 s (ART trial negativo ↑ mortalidad).
-- ECMO es rescate tras prono/BNM (EOLIA), no primera línea.
+Recordemos SDRA y driving pressure (Amato/ESICM):
+• Driving pressure (ΔP) = Pplat - PEEP; objetivo <15 cmH2O.
+• ΔP >15 predice mortalidad independiente de Vt y PEEP.
+• PaFi <150 post-optimización → pronación temprana ≥16 h/día (ESICM fuerte, PROSEVA).
+• No reclutamiento rutinario 40×40 s (ART trial negativo ↑ mortalidad).
+• ECMO es rescate tras prono/BNM (EOLIA), no primera línea.
+
+Por lo tanto:
+El análisis mecánico es driving pressure 18 cmH2O; la conducta mandatoria es pronación inmediata ≥16 h/día.
+
+¿Por qué la opción A es la respuesta correcta?
+Calcula correctamente ΔP = 32-14 = 18 y aplica pronación temprana según PROSEVA/ESICM en SDRA severo refractario.
 
 ¿Por qué fallan las otras opciones?
-- Reducir PEEP a 5: causa atelectrauma; empeora reclutamiento.
-- Reclutamiento sostenido 40×40: rutina contraindicada por ART trial.
-- VV-ECMO inmediata: omitir medidas convencionales (prono) es error.
+Opción B (reducir PEEP a 5): causa atelectrauma; empeora reclutamiento.
+Opción C (reclutamiento 40×40): rutina contraindicada por ART trial.
+Opción D (VV-ECMO inmediata): omitir medidas convencionales (prono) es error.
 
-Clave: ΔP = Pplat - PEEP; si >15 en SDRA severo → prono ≥16 h, no bajes PEEP ni reclutamiento 40×40.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Pplat >30 = bajar PEEP siempre."
+Pero en SDRA severo con PaFi <150, prono es la intervención clave antes de ECMO.
+Aquí el dato decisivo es:
+ΔP = Pplat - PEEP; si >15 en SDRA severo → prono ≥16 h, no bajes PEEP ni reclutamiento 40×40.
 
-MEDICINA CRÍTICA — BY DR Q.
-SDRA · Driving pressure y prono
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Optimizar Vt (6 mL/kg), PEEP y FiO2.
+2. Calcular driving pressure = Pplat - PEEP.
+3. Si PaFi <150 con ΔP >15 → pronación ≥16 h/día.
+4. ECMO solo si falla prono + medidas convencionales.
 
-• Baby lung: alta elastancia, VILI por distensión cíclica.
-• ΔP >15 predice mortalidad independiente.
-• Prono recluta dorsal, ↓ ΔP, mejora oxigenación.
+Perlas de examen
+✅ ΔP = Pplat - PEEP. Si >15: ↓ Vt o prono.
+✅ PaFi <150 post-optimización → prono ≥16 h (PROSEVA).
+✅ No reclutamiento rutinario 40×40 (ART negativo).
+✅ ECMO es rescate, no primera línea (EOLIA).
+✅ Baby lung: alta elastancia, VILI por distensión cíclica.
 
-Perla UCI: ΔP = Pplat - PEEP. Si >15: ↓ Vt o prono.
-
-Referencias: Amato et al.; ESICM/ATS ARDS; PROSEVA; EOLIA.`,
+Referencias
+• Amato et al. — Driving Pressure and Mortality in ARDS (NEJM).
+• ESICM/ATS ARDS Clinical Practice Guidelines.
+• PROSEVA Trial; EOLIA Trial.`,
   },
   {
     id: "dr-q-54",
@@ -5060,44 +5263,69 @@ Referencias: Amato et al.; ESICM/ATS ARDS; PROSEVA; EOLIA.`,
     explanation:
       "AG aparente 12; AG ajustado albúmina +5 = 17 (lactato/urémia). HCO3 9 con Cl 114 (diarrea + SF hiperclorémico) = acidosis hiperclorémica superpuesta. Delta ratio 5/15 ≈ 0.33 (<0.4 = AG normal adicional). pCO2 25 con acidosis metabólica severa = hiperventilación sepsis/compensación mixta.",
     keyPoints: [
-      "Corregir AG por albúmina: +2.5 mEq/L por cada 1 g/dL ↓.",
-      "SF 0.9% en sepsis → acidosis hiperclorémica iatrogénica.",
+      "Cuando veas: sepsis + ileostomía alta + reanimación con SF 0.9% masivo + albúmina baja + HCO3 muy bajo.",
+      "Debes pensar en: trastorno triple → corregir AG por albúmina + delta ratio para detectar hipercloremia superpuesta.",
+      "SF 0.9% en sepsis → acidosis hiperclorémica iatrogénica (SSC 2026: cristaloides balanceados).",
       "Delta ratio <0.4 = acidosis hiperclorémica concomitante.",
+      "Tema: Trastorno ácido-base triple en UCI.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa trastorno ácido-base triple en UCI: corregir anion gap por hipoalbuminemia, calcular delta ratio y detectar acidosis hiperclorémica iatrogénica por SF 0.9% en sepsis.
+Esta es una pregunta clásica de medicina crítica porque evalúa trastorno ácido-base triple en UCI: corregir anion gap por hipoalbuminemia, calcular delta ratio y detectar acidosis hiperclorémica iatrogénica.
+
+La clave no es interpretar el AG aparente ni asumir un solo trastorno.
+La clave es:
+Corregir AG por albúmina (+2.5 mEq/L por cada 1 g/dL ↓), calcular delta ratio y reconocer tres componentes superpuestos.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 50 años, sepsis abdominal + ileostomía 3 L/día.
-- Reanimado con 4 L SF 0.9% en 12 h (carga de cloruro masiva).
-- GSA: pH 7.20, pCO2 25, HCO3 9; Na 135, Cl 114, lactato 5.5, albúmina 2.0, Cr 1.8.
-- Trastorno triple: AG elevado + hiperclorémico + componente respiratorio.
+El paciente presenta:
+• Hombre de 50 años, sepsis abdominal + ileostomía 3 L/día.
+• Reanimado con 4 L SF 0.9% en 12 h (carga de cloruro masiva).
+• GSA: pH 7.20, pCO2 25, HCO3 9; Na 135, Cl 114, lactato 5.5, albúmina 2.0, Cr 1.8.
 
-¿Qué dato es clave en el examen?
-- AG aparente 12; AG ajustado albúmina +5 = 17 (lactato/urémia ocultos).
-- Corregir AG: +2.5 mEq/L por cada 1 g/dL ↓ de albúmina.
-- HCO3 9 con Cl 114 (diarrea + SF hiperclorémico) = acidosis hiperclorémica superpuesta.
-- Delta ratio 5/15 ≈ 0.33 (<0.4 = AG normal adicional concomitante).
-- SSC 2026: cristaloides balanceados (RL/Plasmalyte) en sepsis.
+Recordemos análisis ácido-base avanzado:
+• AG aparente 12; AG ajustado albúmina +5 = 17 (lactato/urémia ocultos).
+• Corregir AG: +2.5 mEq/L por cada 1 g/dL ↓ de albúmina.
+• HCO3 9 con Cl 114 (diarrea + SF hiperclorémico) = acidosis hiperclorémica superpuesta.
+• Delta ratio 5/15 ≈ 0.33 (<0.4 = AG normal adicional concomitante).
+• pCO2 25 con acidosis metabólica severa = componente respiratorio/compensación mixta.
+
+Por lo tanto:
+El ecosistema ácido-base real es trastorno triple: AG elevado + hiperclorémico + componente respiratorio.
+
+¿Por qué la opción C es la respuesta correcta?
+Integra AG ajustado, delta ratio y reconoce los tres componentes superpuestos.
 
 ¿Por qué fallan las otras opciones?
-- AG elevado puro compensado respiratorio: ignora hipercloremia y AG ajustado.
-- Hiperclorémica exclusiva: AG ajustado está elevado (lactato/urémia).
-- Alcalosis metabólica masiva oculta: delta ratio <0.4 indica acidosis hiperclorémica adicional, no alcalosis.
+Opción A (AG elevado puro compensado respiratorio): ignora hipercloremia y AG ajustado.
+Opción B (hiperclorémica exclusiva): AG ajustado está elevado (lactato/urémia).
+Opción D (alcalosis metabólica masiva oculta): delta ratio <0.4 indica acidosis hiperclorémica adicional, no alcalosis.
 
-Clave: sepsis + SF 0.9% + albúmina baja = corrige AG + delta ratio → trastorno triple.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"AG normal = no hay acidosis láctica."
+Pero hipoalbuminemia enmascara AG elevado.
+Aquí el dato decisivo es:
+Sepsis + SF 0.9% + albúmina baja = corrige AG + delta ratio → trastorno triple.
 
-MEDICINA CRÍTICA — BY DR Q.
-Trastorno ácido-base triple en UCI
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Calcular AG y corregir por albúmina.
+2. Calcular delta AG y delta HCO3; obtener delta ratio.
+3. Interpretar pCO2 esperado vs observado.
+4. Usar cristaloides balanceados en sepsis (SSC 2026).
 
-• AG sin corregir engaña con hipoalbuminemia.
-• Diarrea + cloruro → AG normal adicional.
-• SSC 2026: cristaloides balanceados (RL/Plasmalyte).
+Perlas de examen
+✅ Albúmina baja = gap oculto. Sepsis + SF 0.9% = hipercloremia.
+✅ Corregir AG: +2.5 mEq/L por cada 1 g/dL ↓ de albúmina.
+✅ Delta ratio <0.4 = acidosis hiperclorémica concomitante.
+✅ SF 0.9% en sepsis → acidosis hiperclorémica iatrogénica.
+✅ SSC 2026: cristaloides balanceados (RL/Plasmalyte).
 
-Perla UCI: Albúmina baja = gap oculto. Sepsis + SF 0.9% = hipercloremia.
-
-Referencias: SCCM/SSC fluid guidelines; Stewart/classic acid-base.`,
+Referencias
+• SCCM/SSC Fluid Resuscitation Guidelines.
+• Stewart/Classic Acid-Base Physiology.
+• UpToDate: Approach to the adult with metabolic acidosis.`,
   },
   {
     id: "dr-q-55",
@@ -5121,44 +5349,70 @@ Referencias: SCCM/SSC fluid guidelines; Stewart/classic acid-base.`,
     explanation:
       "STARRT-AKI y AKIKI: inicio temprano de TRR no mejora mortalidad 90 días y puede ↑ dependencia dialítica. K 5.3, pH 7.30, estable, sin EAP refractario → manejo médico + furosemida. TRR cuando falla manejo conservador (KDIGO).",
     keyPoints: [
+      "Cuando veas: AKI KDIGO 3 estable sin vasopresores + K 5.3, pH 7.30, sin EAP refractario + residente pide CRRT 'para citoquinas'.",
+      "Debes pensar en: estrategia conservadora según STARRT-AKI/AKIKI → diferir TRR hasta indicaciones absolutas (AEIOU).",
       "Diálisis temprana profiláctica: sin beneficio mortalidad (STARRT-AKI).",
       "Urea >100 sin síntomas no es indicación absoluta sola.",
-      "TRR cuando K+, acidez, volumen o uremia sintomática refractarios.",
+      "Tema: Timing de TRR en AKI UCI (STARRT-AKI/AKIKI).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa timing de TRR en AKI UCI según STARRT-AKI/AKIKI: diálisis temprana profiláctica no mejora mortalidad — diferir hasta indicaciones absolutas (AEIOU).
+Esta es una pregunta clásica de medicina crítica porque evalúa el timing de TRR en AKI UCI según STARRT-AKI/AKIKI: diálisis temprano profiláctico no mejora mortalidad.
+
+La clave no es CRRT inmediata por urea elevada ni "lavar citoquinas".
+La clave es:
+Estrategia conservadora con diuréticos y vigilancia; diferir TRR hasta indicaciones absolutas (K+ >6.5, pH <7.15, EAP refractario, uremia sintomática).
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 75 años, día 3 post-choque séptico urológico.
-- Extubado, sin vasopresores 12 h; balance +7 L, JVP elevada, crépitos leves.
-- Oliguria 150 mL/24 h; Cr 4.5 (basal 1.0), BUN 110, K 5.3, pH 7.30, HCO3 16.
-- AKI KDIGO 3 pero hemodinámicamente estable sin emergencia dialítica inmediata.
+El paciente presenta:
+• Hombre de 75 años, día 3 post-choque séptico urológico.
+• Extubado, sin vasopresores 12 h; balance +7 L, JVP elevada, crépitos leves.
+• Oliguria 150 mL/24 h; Cr 4.5 (basal 1.0), BUN 110, K 5.3, pH 7.30, HCO3 16.
+• AKI KDIGO 3 pero hemodinámicamente estable sin emergencia dialítica inmediata.
 
-¿Qué dato es clave en el examen?
-- STARRT-AKI y AKIKI: inicio temprano de TRR no mejora mortalidad 90 días; puede ↑ dependencia dialítica.
-- K 5.3, pH 7.30, estable, sin EAP refractario → manejo médico + furosemida primero.
-- TRR cuando falla manejo conservador: K+ >6.5, pH <7.15, EAP refractario, uremia sintomática.
-- Urea >100 sin síntomas no es indicación absoluta sola.
-- CRRT "para citoquinas" no tiene evidencia de beneficio profiláctico.
+Recordemos STARRT-AKI y AKIKI:
+• Inicio temprano de TRR no mejora mortalidad 90 días; puede ↑ dependencia dialítica.
+• K 5.3, pH 7.30, estable, sin EAP refractario → manejo médico + furosemida primero.
+• TRR cuando falla manejo conservador: K+ >6.5, pH <7.15, EAP refractario, uremia sintomática.
+• Urea >100 sin síntomas no es indicación absoluta sola.
+• CRRT "para citoquinas" no tiene evidencia de beneficio profiláctico.
+
+Por lo tanto:
+La decisión correcta es estrategia conservadora: diuréticos + vigilancia; diferir TRR hasta indicaciones absolutas.
+
+¿Por qué la opción B es la respuesta correcta?
+Aplica evidencia STARRT-AKI/AKIKI de no iniciar TRR temprana sin indicaciones absolutas.
 
 ¿Por qué fallan las otras opciones?
-- HDI preventiva hoy por urea >100: sin beneficio mortalidad (STARRT-AKI negativo).
-- CVVHDF inmediata: inicio temprano no ↓ dependencia dialítica ni mortalidad.
-- Diálisis peritoneal urgente: no es modalidad de elección en UCI post-sepsis con congestión.
+Opción A (HDI preventiva por urea >100): sin beneficio mortalidad (STARRT-AKI negativo).
+Opción C (CVVHDF inmediata): inicio temprano no ↓ dependencia dialítica ni mortalidad.
+Opción D (diálisis peritoneal urgente): no es modalidad de elección en UCI post-sepsis con congestión.
 
-Clave: AKI KDIGO 3 estable sin AEIOU = estrategia conservadora + diuréticos; no dialices profilácticamente.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"AKI KDIGO 3 = dializar ya."
+Pero estabilidad hemodinámica sin AEIOU cambia la indicación.
+Aquí el dato decisivo es:
+AKI KDIGO 3 estable sin AEIOU = estrategia conservadora + diuréticos; no dialices profilácticamente.
 
-MEDICINA CRÍTICA — BY DR Q.
-AKI en UCI · timing de TRR
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar indicaciones absolutas (AEIOU: Acidosis, Electrolytes, Intoxication, Overload, Uremia).
+2. Intentar manejo médico (diuréticos, corrección electrolitos).
+3. Iniciar TRR solo si falla manejo conservador.
+4. No CRRT profiláctica "para citoquinas".
 
-• Máquina sustituye, no cura tubulo post-isquémico.
-• Inicio temprano = second hit inflamatorio.
-• Intentar diuresis antes de CRRT si estable.
+Perlas de examen
+✅ No dialices profilácticamente. Espera AEIOU graves.
+✅ STARRT-AKI: inicio temprano no mejora mortalidad 90 días.
+✅ Urea >100 sin síntomas no es indicación absoluta sola.
+✅ Máquina sustituye, no cura túbulo post-isquémico.
+✅ Intentar diuresis antes de CRRT si estable.
 
-Perla UCI: No dialices profilácticamente. Espera AEIOU graves.
-
-Referencias: STARRT-AKI NEJM; AKIKI; KDIGO AKI.`,
+Referencias
+• STARRT-AKI Trial (NEJM).
+• AKIKI Trial (NEJM).
+• KDIGO AKI Clinical Practice Guidelines.`,
   },
   {
     id: "dr-q-56",
@@ -5182,44 +5436,70 @@ Referencias: STARRT-AKI NEJM; AKIKI; KDIGO AKI.`,
     explanation:
       "Choque cardiogénico: IC bajo, PAOP/CVP altos (congestión), SvO2 45% (hipoperfusión). Norepinefrina defiende perfusión coronaria; dobutamina ↑ contractilidad. Inotrópico solo empeora hipotensión. Líquidos en PAOP 26/RAP 18 → edema pulmonar. Soporte mecánico si refractario (AHA/ESC).",
     keyPoints: [
-      "Choque cardiogénico hipotensivo: norepi + dobutamina, no inotrópico solo.",
-      "PPC = PAM - PAOP; mantener perfusión coronaria.",
-      "Perfil frío y húmedo: IC ↓, congestión ↑.",
+      "Cuando veas: choque cardiogénico hipotenso con PAOP 26, IC 1.5, SvO2 45%, IM severa funcional.",
+      "Debes pensar en: perfil C (Stevenson) → norepinefrina para PAM ≥65 + dobutamina para ↑ IC.",
+      "Inotrópico solo empeora hipotensión; no líquidos con PAOP 26.",
+      "Candidato a BCIA/Impella/ECMO-VA si refractario (AHA/ESC).",
+      "Tema: Choque cardiogénico perfil C / soporte farmacológico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa choque cardiogénico perfil C (Stevenson): IC bajo con congestión (PAOP 26) e hipotensión — norepinefrina para PAM ≥65 + dobutamina para ↑ IC; inotrópico solo colapsa la presión.
+Esta es una pregunta clásica de medicina crítica porque evalúa choque cardiogénico perfil C (Stevenson): IC bajo con congestión (PAOP 26) e hipotensión — norepinefrina + dobutamina, no inotrópico solo.
+
+La clave no es norepinefrina sola, inotrópico desnudo ni cristaloides con PAOP elevada.
+La clave es:
+Norepinefrina para PAM ≥65 + dobutamina para ↑ IC; candidato a soporte mecánico si refractario.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 60 años, IAMCEST anterior extenso post-ICP (isquemia 6 h).
-- Anuria, lactato ↑, alteración sensorio; FEVI 20%, IM severa funcional.
-- Swan-Ganz: RAP 18, PAP 55/30, PAOP 26, IC 1.5, RVS 2200, SvO2 45%.
-- PA 75/55, FC 110: choque cardiogénico perfil C (frío y húmedo).
+El paciente presenta:
+• Hombre de 60 años, IAMCEST anterior extenso post-ICP (isquemia 6 h).
+• Anuria, lactato ↑, alteración sensorio; FEVI 20%, IM severa funcional.
+• Swan-Ganz: RAP 18, PAP 55/30, PAOP 26, IC 1.5, RVS 2200, SvO2 45%.
+• PA 75/55, FC 110: choque cardiogénico perfil C (frío y húmedo).
 
-¿Qué dato es clave en el examen?
-- Choque cardiogénico hipotensivo: norepinefrina defiende perfusión coronaria + dobutamina ↑ contractilidad.
-- Inotrópico solo (milrinona/dobutamina sin vasopresor) empeora hipotensión.
-- PAOP 26/RAP 18 = congestión; cristaloides → edema pulmonar.
-- PPC = PAM - PAOP; mantener perfusión coronaria.
-- Candidato a BCIA/Impella/ECMO-VA si refractario (AHA/ESC, SCAI staging).
+Recordemos choque cardiogénico (AHA/ESC, SCAI):
+• Choque cardiogénico hipotensivo: norepinefrina defiende perfusión coronaria + dobutamina ↑ contractilidad.
+• Inotrópico solo (milrinona/dobutamina sin vasopresor) empeora hipotensión.
+• PAOP 26/RAP 18 = congestión; cristaloides → edema pulmonar.
+• PPC = PAM - PAOP; mantener perfusión coronaria.
+• BCIA/Impella/ECMO-VA si refractario (SCAI staging).
+
+Por lo tanto:
+El soporte inmediato correcto es norepinefrina para PAM ≥65 + dobutamina para ↑ IC; candidato a soporte mecánico.
+
+¿Por qué la opción C es la respuesta correcta?
+Combina vasopresor para mantener perfusión coronaria con inotrópico para mejorar IC en perfil C hipotenso.
 
 ¿Por qué fallan las otras opciones?
-- Norepinefrina sola a dosis altas: no ↑ IC; SvO2 45% requiere inotrópico.
-- Milrinona + diuréticos tolerando hipotensión: vasodilatador/inotrópico empeora PAM.
-- Cristaloides + nitroprusiato: PAOP ya 26; volumen empeora congestión pulmonar.
+Opción A (norepinefrina sola a dosis altas): no ↑ IC; SvO2 45% requiere inotrópico.
+Opción B (milrinona + diuréticos tolerando hipotensión): vasodilatador/inotrópico empeora PAM.
+Opción D (cristaloides + nitroprusiato): PAOP ya 26; volumen empeora congestión pulmonar.
 
-Clave: choque cardiogénico hipotenso = norepi + dobu, no inotrópico desnudo; no líquidos con PAOP 26.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Choque cardiogénico = dobutamina sola."
+Pero hipotensión exige vasopresor primero para proteger perfusión coronaria.
+Aquí el dato decisivo es:
+Choque cardiogénico hipotenso = norepi + dobu, no inotrópico desnudo; no líquidos con PAOP 26.
 
-MEDICINA CRÍTICA — BY DR Q.
-Choque cardiogénico · perfil C
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar perfil hemodinámico (Swan-Ganz/eco).
+2. Norepinefrina para PAM ≥65 (perfusión coronaria).
+3. Dobutamina para ↑ IC si SvO2 bajo/hipoperfusión.
+4. Soporte mecánico (Impella/ECMO-VA) si refractario.
 
-• Falla bomba + congestión + vasoconstricción perjudicial.
-• Dobutamina sin vasopresor colapsa PAM.
-• BCIA/Impella/ECMO-VA si refractario.
+Perlas de examen
+✅ Inotrópico desnudo mata al cardiópata hipotenso. Norepi + dobu.
+✅ Choque cardiogénico hipotensivo: norepi + dobutamina, no inotrópico solo.
+✅ PAOP 26 = congestión; no líquidos.
+✅ PPC = PAM - PAOP; mantener perfusión coronaria.
+✅ Perfil frío y húmedo: IC ↓, congestión ↑.
 
-Perla UCI: Inotrópico desnudo mata al cardiópata hipotenso. Norepi + dobu.
-
-Referencias: AHA/ESC cardiogenic shock guidelines; SCAI staging.`,
+Referencias
+• AHA/ESC Cardiogenic Shock Guidelines.
+• SCAI Shock Staging Classification.
+• UpToDate: Management of cardiogenic shock.`,
   },
   {
     id: "dr-q-57",
@@ -5243,44 +5523,70 @@ Referencias: AHA/ESC cardiogenic shock guidelines; SCAI staging.`,
     explanation:
       "Transfusión masiva → acumulación citrato → hipocalcemia ionizada severa (0.65). Ca++ es factor IV coagulación y contráctilidad miocárdica; QTc largo → riesgo FV. Repetir Ca++ cada 4-6 U hemoderivados (ATLS). Bicarbonato empeora Ca ionizado; epinefrina ineficaz con Ca bajo; TXA no resuelve paro inminente por Ca.",
     keyPoints: [
+      "Cuando veas: PTM (6 CH + 6 PFC) + calcio ionizado 0.65 + QTc 550 ms + QRS ancho + hipotensión.",
+      "Debes pensar en: hipocalcemia por citrato transfusional → cloruro o gluconato de calcio IV inmediato.",
       "Tríada letal + hipocalcemia por citrato = cuarto jinete.",
-      "Monitorizar Ca ionizado en PTM.",
-      "Ca++ antes de subir vasopresores si QT prolongado.",
+      "Ca++ antes de subir vasopresores si QT prolongado; repetir cada 4–6 U hemoderivados (ATLS).",
+      "Tema: Toxicidad por citrato en transfusión masiva (PTM).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa hipocalcemia por citrato en transfusión masiva (PTM): calcio ionizado 0.65 con QTc 550 ms exige calcio IV inmediato — es el cuarto jinete de la tríada letal.
+Esta es una pregunta clásica de medicina crítica porque evalúa hipocalcemia por citrato en transfusión masiva (PTM): calcio ionizado 0.65 con QTc 550 ms exige calcio IV inmediato.
+
+La clave no es bicarbonato, epinefrina ni TXA como primera prioridad.
+La clave es:
+Cloruro o gluconato de calcio IV inmediato para hipocalcemia por citrato transfusional — el cuarto jinete de la tríada letal.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 25 años, trauma abdominal, laparotomía control de daños, sangrado activo.
-- PTM: 6 CH, 6 PFC, 1 plaquetas; PA 65/40, FC 145, Temp 34.5 °C.
-- ECG: QRS ancho, QTc 550 ms, extrasístoles ventriculares.
-- pH 7.15, lactato 8, fibrinógeno 100, calcio ionizado 0.65 mmol/L (<1 = crítico).
+El paciente presenta:
+• Hombre de 25 años, trauma abdominal, laparotomía control de daños, sangrado activo.
+• PTM: 6 CH, 6 PFC, 1 plaquetas; PA 65/40, FC 145, Temp 34.5 °C.
+• ECG: QRS ancho, QTc 550 ms, extrasístoles ventriculares.
+• pH 7.15, lactato 8, fibrinógeno 100, calcio ionizado 0.65 mmol/L (<1 = crítico).
 
-¿Qué dato es clave en el examen?
-- Transfusión masiva → acumulación citrato (PFC) → hipocalcemia ionizada severa.
-- Ca++ es factor IV coagulación y contráctilidad miocárdica; QTc largo → riesgo FV.
-- Repetir Ca++ cada 4-6 U hemoderivados (ATLS).
-- Hígado isquémico en shock no metaboliza citrato → acumulación rápida.
-- Bicarbonato empeora Ca ionizado; epinefrina ineficaz con Ca bajo.
+Recordemos toxicidad por citrato en PTM (ATLS):
+• Transfusión masiva → acumulación citrato (PFC) → hipocalcemia ionizada severa.
+• Ca++ es factor IV coagulación y contráctilidad miocárdica; QTc largo → riesgo FV.
+• Hígado isquémico en shock no metaboliza citrato → acumulación rápida.
+• Repetir Ca++ cada 4-6 U hemoderivados.
+• Bicarbonato empeora Ca ionizado; epinefrina ineficaz con Ca bajo.
+
+Por lo tanto:
+La terapia inmediata es cloruro o gluconato de calcio IV para corregir hipocalcemia crítica.
+
+¿Por qué la opción B es la respuesta correcta?
+Corrige la causa metabólica inmediata (hipocalcemia por citrato) que explica QT prolongado, coagulopatía y falla miocárdica.
 
 ¿Por qué fallan las otras opciones?
-- Bicarbonato para acidemia: empeora Ca ionizado y no corrige coagulopatía.
-- Epinefrina en bolo: ineficaz con Ca ionizado 0.65; riesgo arritmia sin calcio.
-- Ácido tranexámico como prioridad: TXA no resuelve paro inminente por hipocalcemia.
+Opción A (bicarbonato para acidemia): empeora Ca ionizado y no corrige coagulopatía.
+Opción C (epinefrina en bolo): ineficaz con Ca ionizado 0.65; riesgo arritmia sin calcio.
+Opción D (TXA como prioridad): TXA no resuelve paro inminente por hipocalcemia.
 
-Clave: PTM + QT largo + hipotensión = calcio IV ya, no más vasopresores ni bicarbonato primero.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Choque + acidosis = bicarbonato primero."
+Pero en PTM, hipocalcemia por citrato es la emergencia metabólica inmediata.
+Aquí el dato decisivo es:
+PTM + QT largo + hipotensión = calcio IV ya, no más vasopresores ni bicarbonato primero.
 
-MEDICINA CRÍTICA — BY DR Q.
-Toxicidad por citrato en PTM
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Monitorizar Ca ionizado en todo PTM.
+2. Repetir Ca++ cada 4-6 U hemoderivados.
+3. Corregir Ca antes de escalar vasopresores si QT prolongado.
+4. Continuar protocolo PTM (1:1:1) y control de sangrado.
 
-• PFC acumula citrato; hígado isquémico no metaboliza.
-• Ca ionizado <1 mmol/L → coagulopatía + falla miocárdica.
-• Cloruro calcio 1 g o gluconato según acceso central/periférico.
+Perlas de examen
+✅ Sangre masiva + QT largo + hipotensión = calcio IV ya, no más noradrenalina.
+✅ Tríada letal + hipocalcemia por citrato = cuarto jinete.
+✅ Ca ionizado <1 mmol/L → coagulopatía + falla miocárdica.
+✅ PFC acumula citrato; hígado isquémico no metaboliza.
+✅ Bicarbonato empeora Ca ionizado.
 
-Perla UCI: Sangre masiva + QT largo + hipotensión = calcio IV ya, no más noradrenalina.
-
-Referencias: ATLS 10th; trauma coagulopathy guidelines.`,
+Referencias
+• ATLS 10th Edition — Massive Transfusion Protocol.
+• Trauma Coagulopathy Guidelines.
+• UpToDate: Massive blood transfusion in adults.`,
   },
   {
     id: "dr-q-58",
@@ -5304,43 +5610,69 @@ Referencias: ATLS 10th; trauma coagulopathy guidelines.`,
     explanation:
       "Retiro PEEP → ↑ retorno venoso (precarga) + ↑ poscarga VI rígido (HVI) → EAP hiperagudo (WIPO). HTA rebote + líneas B + VI pletórico confirman. Reconectar presión positiva, furosemida/nitroglicerina, balance negativo, extubar a BiPAP (CHEST/ATS weaning).",
     keyPoints: [
-      "VM = asistente cardíaco en cardiópata rígido.",
-      "WIPO: HTA + edema pulmonar súbito en SBT.",
+      "Cuando veas: cardiópata rígido (HVI) + falla SBT tubo en T + HTA rebote + líneas B nuevas + VI pletórico.",
+      "Debes pensar en: edema pulmonar inducido por destete (WIPO) → reconectar VM + diuréticos + VNI profiláctica.",
+      "VM actúa como asistente cardíaco en cardiópata rígido; retiro PEEP descompensa hemodinámica.",
       "Reconectar PEEP revierte edema rápidamente.",
+      "Tema: WIPO / falla cardiovascular del destete (CHEST/ATS).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa edema pulmonar inducido por destete (WIPO): falla SBT con HTA rebote, líneas B y VI pletórico en cardiópata rígido — reconectar VM, diuréticos y próximo intento con VNI profiláctica.
+Esta es una pregunta clásica de medicina crítica porque evalúa edema pulmonar inducido por destete (WIPO): falla SBT con HTA rebote, líneas B y VI pletórico en cardiópata rígido.
+
+La clave no es traqueostomía por debilidad diafragmática ni broncodilatadores.
+La clave es:
+Reconectar VM, diuréticos/vasodilatadores y próximo intento con VNI profiláctica post-extubación.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 72 años, día 8 VM post-sepsis respiratoria resuelta; HVI, FEVI preservada.
-- SBT tubo en T 15 min: agitación, diaforesis, musculatura accesoria.
-- PA 180/100 (previa 120/70), FC 135, FR 38, SpO2 84%.
-- POCUS: líneas B difusas nuevas, VI hiperdinámico pletórico; GSA: pO2 55.
+La paciente presenta:
+• Mujer de 72 años, día 8 VM post-sepsis respiratoria resuelta; HVI, FEVI preservada.
+• SBT tubo en T 15 min: agitación, diaforesis, musculatura accesoria.
+• PA 180/100 (previa 120/70), FC 135, FR 38, SpO2 84%.
+• POCUS: líneas B difusas nuevas, VI hiperdinámico pletórico; GSA: pO2 55.
 
-¿Qué dato es clave en el examen?
-- Retiro PEEP → ↑ retorno venoso (precarga) + ↑ poscarga transmural VI rígido (HVI) → EAP hiperagudo (WIPO).
-- VM actúa como asistente cardíaco en cardiópata rígido; tubo en T descompensa hemodinámica.
-- HTA rebote + líneas B + VI pletórico confirman WIPO, no debilidad diafragmática.
-- Manejo: reconectar presión positiva, furosemida/nitroglicerina, balance negativo, extubar a BiPAP (CHEST/ATS).
+Recordemos WIPO (weaning-induced pulmonary edema):
+• Retiro PEEP → ↑ retorno venoso (precarga) + ↑ poscarga transmural VI rígido (HVI) → EAP hiperagudo.
+• VM actúa como asistente cardíaco en cardiópata rígido; tubo en T descompensa hemodinámica.
+• HTA rebote + líneas B + VI pletórico confirman WIPO, no debilidad diafragmática.
+• Manejo: reconectar presión positiva, furosemida/nitroglicerina, balance negativo, extubar a BiPAP (CHEST/ATS).
+
+Por lo tanto:
+La etiología es WIPO; la estrategia es reconectar VM, diuréticos/vasodilatadores y VNI profiláctica en próximo intento.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica falla cardiovascular del destete (no muscular) y aplica manejo hemodinámico con presión positiva y diuresis.
 
 ¿Por qué fallan las otras opciones?
-- Debilidad diafragmática + traqueostomía: líneas B y HTA indican falla cardiovascular, no muscular.
-- Broncoespasmo + auto-PEEP: no hay patrón obstructivo; hay congestión pulmonar aguda.
-- Sepsis recurrente + vasopresores: sepsis resuelta; el cuadro es hemodinámico por destete.
+Opción A (debilidad diafragmática + traqueostomía): líneas B y HTA indican falla cardiovascular, no muscular.
+Opción C (broncoespasmo + auto-PEEP): no hay patrón obstructivo; hay congestión pulmonar aguda.
+Opción D (sepsis recurrente + vasopresores): sepsis resuelta; el cuadro es hemodinámico por destete.
 
-Clave: cardiópata rígido + falla SBT + líneas B + HTA = WIPO → reconecta VM + diuresis + VNI post-extubación.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Falla SBT = debilidad diafragmática → traqueostomía."
+Pero HTA rebote + líneas B apuntan a WIPO en cardiópata rígido.
+Aquí el dato decisivo es:
+Cardiópata rígido + falla SBT + líneas B + HTA = WIPO → reconecta VM + diuresis + VNI post-extubación.
 
-MEDICINA CRÍTICA — BY DR Q.
-WIPO · falla cardiovascular del destete
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Antes de SBT: evaluar riesgo WIPO (HVI, HTA, balance positivo).
+2. Si falla SBT con HTA + líneas B: reconectar VM inmediatamente.
+3. Diuréticos/vasodilatadores para balance negativo.
+4. Próximo intento con VNI profiláctica post-extubación.
 
-• PEEP ↓ precarga y poscarga transmural VI.
-• Tubo en T en HVI = inundación pulmonar aguda.
-• Manejo: VM + diuresis/vasodilatador + VNI post-extubación.
+Perlas de examen
+✅ Cardiópata rígido + falla SBT con líneas B = WIPO. Reconecta y diuresis.
+✅ VM = asistente cardíaco en cardiópata rígido.
+✅ WIPO: HTA + edema pulmonar súbito en SBT.
+✅ PEEP ↓ precarga y poscarga transmural VI.
+✅ Tubo en T en HVI = inundación pulmonar aguda.
 
-Perla UCI: Cardiópata rígido + falla SBT con líneas B = WIPO. Reconecta y diuresis.
-
-Referencias: CHEST/ATS weaning guidelines.`,
+Referencias
+• CHEST/ATS Weaning and Discontinuation Guidelines.
+• UpToDate: Weaning from mechanical ventilation.
+• Lemaire F — Weaning-induced pulmonary edema.`,
   },
   {
     id: "dr-q-59",
@@ -5364,44 +5696,70 @@ Referencias: CHEST/ATS weaning guidelines.`,
     explanation:
       "VCI colapsable indica capacidad de responder a volumen (Starling), no indicación de administrarlo. Objetivos de perfusión cumplidos (diuresis, conciencia, TRC). Lactato persistente puede ser adrenérgico/washout. Fluidos extra → SDRA, congestión, daño glicocálix (ESICM).",
     keyPoints: [
-      "Puede recibir fluido ≠ necesita fluido.",
-      "Perfusión clínica > número de lactato tardío.",
-      "TRISS: Hb objetivo 7, no 10.",
+      "Cuando veas: sepsis hora 4 con PAM OK, diuresis 0.8 mL/kg/h, TRC 2.5 s, alerta + VCI colapsable + lactato persistente.",
+      "Debes pensar en: respondedor a volumen ≠ necesita volumen → no más fluidos; perseguir lactato es iatrogénico.",
+      "Perfusión clínica (diuresis, conciencia, TRC) > número de lactato tardío.",
+      "Fluidos extra → SDRA, congestión, daño glicocálix (ESICM fluid stewardship).",
+      "Tema: Fin de reanimación hídrica en sepsis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa fin de reanimación hídrica en sepsis: VCI colapsable indica capacidad de responder a volumen, no necesidad — perseguir lactato con fluidos cuando perfusión clínica está normalizada es iatrogénico.
+Esta es una pregunta clásica de medicina crítica porque evalúa el fin de reanimación hídrica en sepsis: VCI colapsable indica capacidad de responder a volumen, no necesidad de administrarlo.
+
+La clave no es seguir fluidos por VCI colapsable ni perseguir lactato hasta normalizar.
+La clave es:
+Reconocer perfusión clínica normalizada y evitar fluidos iatrogénicos que causan daño pulmonar/renal.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 55 años, choque séptico neumonía bilateral, hora 4 de reanimación.
-- PAM 70, diuresis 0.8 mL/kg/h, TRC 2.5 s, mottling 0, alerta.
-- Lactato 7.0 → 6.2 (<20% aclaramiento); POCUS: VI hiperdinámicos, VCI colapsable.
-- Objetivos de perfusión clínicos cumplidos pero lactato aún alto.
+El paciente presenta:
+• Hombre de 55 años, choque séptico neumonía bilateral, hora 4 de reanimación.
+• PAM 70, diuresis 0.8 mL/kg/h, TRC 2.5 s, mottling 0, alerta.
+• Lactato 7.0 → 6.2 (<20% aclaramiento); POCUS: VI hiperdinámicos, VCI colapsable.
+• Objetivos de perfusión clínicos cumplidos pero lactato aún alto.
 
-¿Qué dato es clave en el examen?
-- VCI colapsable = respondedor a volumen (Starling), no indicación de administrarlo.
-- Puede recibir fluido ≠ necesita fluido.
-- Perfusión clínica (diuresis, conciencia, TRC) > número de lactato tardío.
-- Lactato persistente puede ser adrenérgico/washout post-reanimación.
-- Fluidos extra → SDRA, congestión, daño glicocálix (ESICM fluid stewardship).
+Recordemos fin de reanimación (ESICM fluid stewardship):
+• VCI colapsable = respondedor a volumen (Starling), no indicación de administrarlo.
+• Puede recibir fluido ≠ necesita fluido.
+• Perfusión clínica (diuresis, conciencia, TRC) > número de lactato tardío.
+• Lactato persistente puede ser adrenérgico/washout post-reanimación.
+• Fluidos extra → SDRA, congestión, daño glicocálix.
+
+Por lo tanto:
+Es iatrogénico porque perfusión clínica está normalizada; perseguir lactato con fluidos causa daño pulmonar/renal.
+
+¿Por qué la opción B es la respuesta correcta?
+Explica que respondedor a volumen no implica necesidad de volumen cuando perfusión clínica ya está restaurada.
 
 ¿Por qué fallan las otras opciones?
-- Hb >10 g/dL antes de volumen: TRISS objetivo Hb 7, no 10; no es la razón de detener fluidos.
-- Lactato por falla hepática + azul de metileno: perfusión clínica normalizada descarta hipoxia persistente.
-- Norepinefrina falsea TRC: TRC 2.5 s con diuresis y alerta = reanimación completa.
+Opción A (Hb >10 antes de volumen): TRISS objetivo Hb 7, no 10; no es la razón principal de detener fluidos.
+Opción C (lactato por falla hepática + azul de metileno): perfusión clínica normalizada descarta hipoxia persistente.
+Opción D (norepinefrina falsea TRC): TRC 2.5 s con diuresis y alerta = reanimación completa.
 
-Clave: orina + lúcido + piel caliente + TRC OK = reanimación terminada → no trates lactato con más fluidos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"VCI colapsable = dar más fluidos."
+Pero capacidad de responder no implica beneficio cuando perfusión ya está normalizada.
+Aquí el dato decisivo es:
+Orina + lúcido + piel caliente + TRC OK = reanimación terminada → no trates lactato con más fluidos.
 
-MEDICINA CRÍTICA — BY DR Q.
-Fin de reanimación guiada por lactato
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar perfusión clínica (diuresis, TRC, conciencia, mottling).
+2. Si objetivos cumplidos → detener fluidos aunque lactato persista.
+3. No usar VCI colapsable como indicación automática de volumen.
+4. Monitorizar balance hídrico; evitar sobrecarga (CLASSIC/ESICM).
 
-• Macrohemodinamia acoplada + microcirculación OK → stop fluidos.
-• Lactato lag en sepsis; no empujar con volumen.
-• ESICM: sobrecarga hídrica ↑ mortalidad post-resucitación.
+Perlas de examen
+✅ Orina + lúcido + piel caliente = reanimación terminada. No trates lactato.
+✅ Puede recibir fluido ≠ necesita fluido.
+✅ VCI colapsable = respondedor, no indicación automática.
+✅ Perfusión clínica > número de lactato tardío.
+✅ ESICM: sobrecarga hídrica ↑ mortalidad post-resucitación.
 
-Perla UCI: Orina + lúcido + piel caliente = reanimación terminada. No trates lactato.
-
-Referencias: ESICM fluid stewardship; CLASSIC trial context.`,
+Referencias
+• ESICM Fluid Stewardship Recommendations.
+• CLASSIC Trial (NEJM).
+• Surviving Sepsis Campaign Guidelines.`,
   },
   {
     id: "dr-q-60",
@@ -5425,43 +5783,69 @@ Referencias: ESICM fluid stewardship; CLASSIC trial context.`,
     explanation:
       "TEP masivo causa AESP por obstrucción pulmonar aguda (VD falla, VI sin precarga). Fibrinólisis intra-paro indicada con sospecha/confirmación alta (AHA/CHEST). Continuar RCP 15-20 min para permitir lisis. Volumen empeora VD; ECMO no sustituye trombolisis universal; toracotomía para trauma/taponamiento, no TEP.",
     keyPoints: [
-      "AESP + TEP masivo confirmado = trombolisis durante RCP.",
-      "No detener compresiones para ECMO sin trombolisis.",
-      "Extender RCP post-alteplasa 15-20 min.",
+      "Cuando veas: TEP masivo + paro AESP + ETE con VD masivamente dilatado + VI colapsado durante RCP.",
+      "Debes pensar en: trombolisis sistémica intra-paro (alteplasa 50 mg) + continuar RCP ≥15–20 min adicionales.",
+      "AESP por obstrucción AP: VD falla, VI sin precarga; volumen empeora VD.",
+      "No detener compresiones para ECMO sin trombolisis; toracotomía para trauma/taponamiento, no TEP.",
+      "Tema: TEP masivo en paro / trombolisis intra-RCP (AHA ACLS/CHEST).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa TEP masivo en paro AESP: ETE con VD gigante confirma obstrucción pulmonar aguda — trombolisis sistémica intra-RCP (alteplasa) y continuar compresiones ≥15–20 min adicionales.
+Esta es una pregunta clásica de medicina crítica porque evalúa TEP masivo en paro AESP: ETE con VD gigante confirma obstrucción pulmonar aguda — trombolisis sistémica intra-RCP y continuar compresiones.
+
+La clave no es cristaloides, ECMO sola ni toracotomía de reanimación.
+La clave es:
+Trombolisis sistémica intra-paro (alteplasa 50 mg o equivalente) y continuar RCP ≥15–20 min adicionales.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 48 años, TEP masivo, paro en AESP durante RCP.
-- ETE: VD masivamente dilatado, hipocinesia, VI colapsado (obstrucción AP → falla VD → AESP).
-- Ya 1 mg epinefrina IV; compresiones en curso.
+La paciente presenta:
+• Mujer de 48 años, TEP masivo, paro en AESP durante RCP.
+• ETE: VD masivamente dilatado, hipocinesia, VI colapsado (obstrucción AP → falla VD → AESP).
+• Ya 1 mg epinefrina IV; compresiones en curso.
 
-¿Qué dato es clave en el examen?
-- TEP masivo causa AESP por obstrucción pulmonar aguda: VD falla, VI sin precarga.
-- Fibrinólisis intra-paro indicada con sospecha/confirmación alta (AHA ACLS/CHEST).
-- Alteplasa 50 mg (o tenecteplasa equivalente) durante RCP; continuar ≥15–20 min post-dosis.
-- Volumen empeora VD dilatado; ECMO no sustituye trombolisis universal.
-- Toracotomía para trauma/taponamiento, no TEP.
+Recordemos TEP masivo en paro (AHA ACLS/CHEST):
+• TEP masivo causa AESP por obstrucción pulmonar aguda: VD falla, VI sin precarga.
+• Fibrinólisis intra-paro indicada con sospecha/confirmación alta.
+• Alteplasa 50 mg (o tenecteplasa equivalente) durante RCP; continuar ≥15–20 min post-dosis.
+• Volumen empeora VD dilatado; ECMO no sustituye trombolisis universal.
+• Toracotomía para trauma/taponamiento, no TEP.
+
+Por lo tanto:
+La intervención farmacológica de rescate es trombolisis sistémica intra-paro con RCP prolongada.
+
+¿Por qué la opción C es la respuesta correcta?
+Aplica indicación ACLS/CHEST de fibrinólisis durante RCP con TEP masivo confirmado y extensión de compresiones post-alteplasa.
 
 ¿Por qué fallan las otras opciones?
-- 2 L cristaloides bajo compresión: empeora sobrecarga VD en TEP masivo.
-- Detener compresiones para VA-ECMO sola: no sustituye trombolisis; compresiones deben continuar.
-- Toracotomía con clampeo aórtico: indicada en trauma/taponamiento, no TEP.
+Opción A (2 L cristaloides bajo compresión): empeora sobrecarga VD en TEP masivo.
+Opción B (detener compresiones para VA-ECMO sola): no sustituye trombolisis; compresiones deben continuar.
+Opción D (toracotomía con clampeo aórtico): indicada en trauma/taponamiento, no TEP.
 
-Clave: AESP + VD gigante en paro = alteplasa ya + no pares de comprimir 15–20 min.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Paro = RCP + epinefrina, nunca trombolisis."
+Pero TEP masivo confirmado con VD gigante es indicación específica de alteplasa intra-RCP.
+Aquí el dato decisivo es:
+AESP + VD gigante en paro = alteplasa ya + no pares de comprimir 15–20 min.
 
-MEDICINA CRÍTICA — BY DR Q.
-TEP masivo en paro · trombolisis intra-RCP
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. RCP de alta calidad + epinefrina según ACLS.
+2. Si TEP masivo probable/confirmado (ETE/angioTAC): alteplasa 50 mg IV.
+3. Continuar RCP ≥15–20 min post-dosis.
+4. Considerar ECMO-VA como puente si disponible, no en lugar de trombolisis.
 
-• Obstrucción AP → VD agónico → AESP.
-• Alteplasa/tenecteplasa durante RCP si TEP probable/confirmado.
-• Compresiones continuas mínimo 15-20 min post-dosis.
+Perlas de examen
+✅ AESP + VD gigante en paro = alteplasa ya + no pares de comprimir 15-20 min.
+✅ TEP masivo causa AESP por obstrucción AP → falla VD → VI colapsado.
+✅ No detener compresiones para ECMO sin trombolisis.
+✅ Volumen empeora VD dilatado en TEP masivo.
+✅ Toracotomía para trauma/taponamiento, no TEP.
 
-Perla UCI: AESP + VD gigante en paro = alteplasa ya + no pares de comprimir 15-20 min.
-
-Referencias: AHA ACLS; CHEST PE guidelines.`,
+Referencias
+• AHA ACLS Guidelines — Cardiac Arrest in Special Situations.
+• CHEST Pulmonary Embolism Guidelines.
+• UpToDate: Management of acute pulmonary embolism.`,
   },
   {
     id: "dr-q-61",
