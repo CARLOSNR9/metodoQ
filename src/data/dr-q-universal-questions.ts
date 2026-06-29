@@ -3104,55 +3104,78 @@ Referencias
     explanation:
       "Consolidación nueva >48 h post-extubación en paciente con factores de riesgo hospitalario = NAC-H/VAP tardía. Shock séptico (hipotensión + lactato elevado). Exposición previa a anti-pseudomónicos obliga cobertura MDR: carbapenémico + aminoglucósido/amikacina según IDSA/ATS, ajustados a ERC. Reanimación séptica inmediata (Surviving Sepsis).",
     keyPoints: [
-      "NAC-H: neumonía ≥48 h de hospitalización o ≤48 h post-alta.",
-      "Exposición previa a anti-pseudomónicos → cubrir MDR (Pseudomonas).",
-      "Shock séptico: antibiótico IV precoz + fluidos + vasopresores.",
+      "Cuando veas: consolidación pulmonar nueva >48 h post-extubación + shock séptico + exposición previa a pip-tazo.",
+      "Debes pensar en: NAC-H con Pseudomonas MDR → meropenem + amikacina ajustados a TFG + reanimación séptica.",
+      "No es VAP activa si el paciente ya no está intubado.",
+      "Exposición previa a anti-pseudomónicos obliga escalar cobertura MDR.",
+      "Tema: Medicina hospitalaria — neumonía asociada a atención en salud (NAC-H).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa neumonía asociada a atención en salud (NAC-H) con shock séptico por Pseudomonas MDR: la exposición previa a pip-tazo obliga escalar a carbapenémico + amikacina con reanimación séptica inmediata.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa la neumonía asociada a atención en salud (NAC-H) con shock séptico por Pseudomonas multirresistente, donde la exposición previa a antibióticos define el esquema empírico.
+
+La clave no es tratar como NAC comunitaria ni como VAP activa.
+La clave es:
+Clasificar como NAC-H post-UCI y escalar a carbapenémico + aminoglucósido con reanimación séptica inmediata.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 68 años, día 9 de hospitalización por IAMCEST complicado con IC.
-- Intubado días 2–6, extubado hace 48 h (ya no está ventilado activamente).
-- Fiebre 39.2 °C, consolidación lobar derecha nueva, tos purulenta, disnea.
-- Shock séptico: PA 88/52, lactato 3.8, acidosis metabólica (pH 7.28, HCO3 16).
-- Cultivo esputo preliminar: Pseudomonas aeruginosa; antibióticos previos: pip-tazo 5 días.
+El paciente presenta:
+• Hombre de 68 años, día 9 de hospitalización por IAMCEST complicado con IC.
+• Intubado días 2-6, extubado hace 48 h (ya no ventilado activamente).
+• Fiebre 39.2 °C, consolidación lobar derecha nueva, tos purulenta, disnea.
+• Shock séptico: PA 88/52, lactato 3.8, acidosis metabólica (pH 7.28, HCO3 16).
+• Cultivo esputo preliminar: Pseudomonas aeruginosa; pip-tazo 5 días previos.
+• ERC estadio 3b: ajustar antibióticos a TFG.
 
-¿Qué dato es clave en el examen?
-- NAC-H: neumonía ≥48 h de hospitalización o ≤48 h post-alta; consolidación nueva post-extubación encaja.
-- No es VAP activa: el paciente ya no está intubado.
-- Exposición previa a anti-pseudomónicos selecciona resistencia → carbapenémico + aminoglucósido (amikacina).
-- Shock séptico: antibiótico IV en <1 h + cristaloides + vasopresores según Surviving Sepsis.
-- Ajustar dosis a TFG (ERC estadio 3b, creatinina 2.4).
+Recordemos la clasificación de neumonía hospitalaria:
+• VAP: neumonía ≥48 h de ventilación mecánica (paciente aún intubado).
+• NAC-H: neumonía ≥48 h de hospitalización o ≤48 h post-alta.
+• Post-extubación con consolidación nueva = NAC-H/VAP tardía, no VAP activa.
+• Exposición previa a anti-pseudomónicos selecciona resistencia → carbapenémico + amikacina.
+
+Por lo tanto:
+No es NAC comunitaria (amoxicilina-clavulánico oral inadecuado).
+No es VAP activa (no está intubado).
+Es NAC-H con shock séptico por Pseudomonas MDR.
+
+¿Por qué la opción C es la respuesta correcta?
+Neumonía asociada a atención en salud (NAC-H) con shock séptico.
+Meropenem + amikacina ajustados a TFG (ERC estadio 3b).
+Reanimación con cristaloides + vasopresores según Surviving Sepsis Campaign.
+Antibiótico IV en menos de 1 hora.
 
 ¿Por qué fallan las otras opciones?
-- Amoxicilina-clavulánico oral: NAC comunitaria no explica cronología ni gravedad; ATB oral inadecuado en shock.
-- Meropenem + vancomicina sin ajuste renal: vancomicina sin indicación MRSA clara; VAP activa no aplica.
-- Edema pulmonar cardiogénico: Rx y clínica son infecciosas; retrasar ATB en shock séptico aumenta mortalidad.
+Opción A (amoxicilina-clavulánico oral): NAC comunitaria no explica cronología ni gravedad; ATB oral inadecuado en shock.
+Opción B (meropenem + vancomicina sin ajuste renal): VAP activa no aplica; vancomicina sin indicación MRSA clara.
+Opción D (edema pulmonar + suspender ATB): Rx y clínica son infecciosas; retrasar ATB en shock séptico aumenta mortalidad.
 
-Clave: post-UCI + consolidación nueva + pip-tazo previo + shock = NAC-H por Pseudomonas MDR → meropenem + amikacina + reanimación.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Neumonía post-UCI = siempre VAP" o "Pseudomonas = solo pip-tazo".
+Pero el examen exige correlacionar:
+Estado ventilatorio actual + exposición antibiótica previa + gravedad hemodinámica.
+Aquí los datos decisivos son:
+Extubado hace 48 h + pip-tazo previo + shock + Pseudomonas.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-NAC-H / sepsis por Pseudomonas MDR
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Clasificar neumonía hospitalaria (VAP vs NAC-H).
+2. Evaluar exposición antibiótica previa (MDR).
+3. Iniciar reanimación séptica + ATB IV empírico en <1 h.
+4. Ajustar dosis a función renal.
 
-Fisiopatología:
-• Intubación previa + UCI + antibióticos de amplio espectro seleccionan Pseudomonas y resistencia.
-• Consolidación nueva + inestabilidad hemodinámica + lactato = sepsis, no solo edema pulmonar.
+Perlas de examen
+✅ NAC-H: neumonía ≥48 h de hospitalización o ≤48 h post-alta.
+✅ Exposición previa a anti-pseudomónicos → cubrir MDR (Pseudomonas).
+✅ Shock séptico: antibiótico IV precoz + fluidos + vasopresores.
+✅ Post-UCI + fiebre + consolidación nueva = NAC-H hasta demostrar lo contrario.
+✅ Vancomicina no rutinaria si solo Gram negativo en cultivo preliminar.
 
-Prioridad clínica:
-1. Reanimación (ABC, lactato, perfusión).
-2. Antibiótico empírico IV en <1 h ajustado a TFG y exposición previa.
-3. Cultivos antes de ATB si no retrasa dosis.
-
-Distractores:
-• A: NAC comunitaria no explica cronología ni gravedad; ATB oral inadecuado.
-• B: Ya no está ventilado; VAP activa no aplica; vancomicina sin indicación MRSA clara.
-• D: Retrasar ATB en shock séptico aumenta mortalidad; Rx y clínica son infecciosas.
-
-Perla hospitalaria: Post-UCI + fiebre + consolidación nueva = NAC-H hasta lo contrario. Si recibió pip-tazo, sube a carbapenémico + amikacina.
-
-Referencias: IDSA/ATS HAP/VAP Guidelines; Surviving Sepsis Campaign; SHM.`,
+Referencias
+• IDSA/ATS Guidelines for HAP and VAP.
+• Surviving Sepsis Campaign.
+• Society of Hospital Medicine (SHM) Guidelines.
+• UpToDate: Treatment of hospital-acquired and ventilator-associated pneumonia.`,
   },
   {
     id: "dr-q-32",
@@ -3188,56 +3211,79 @@ Referencias: IDSA/ATS HAP/VAP Guidelines; Surviving Sepsis Campaign; SHM.`,
     explanation:
       "Emergencia hiperkalemica con cambios ECG (T picudas, QRS ancho, ondas P ausentes) + AKI sobre IC. Prioridad: estabilizar membrana (gluconato calcio IV), shift intracelular (insulina-dextrosa, beta-2), eliminar espironolactona/ACEi. Kayexalato no es medida de rescate aguda. Diálisis si refractaria o AKI oligúrica severa (KDIGO).",
     keyPoints: [
-      "ECG cambiado + K+ >6.5 = emergencia; calcio IV primero.",
+      "Cuando veas: K+ >6.5 con cambios ECG (T picudas, QRS ancho, ondas P ausentes) en paciente hospitalizado con IC.",
+      "Debes pensar en: emergencia hiperkalemica → gluconato de calcio IV primero, luego insulina-dextrosa.",
       "Triada AKI en IC: diuréticos + ACEi + espironolactona.",
       "Kayexalato no salva en minutos; no retrasa medidas IV.",
+      "Tema: Medicina hospitalaria — hiperkalemia grave con cambios ECG.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa hiperkalemia grave con cambios ECG en paciente hospitalizado con IC: calcio IV primero para estabilizar membrana, luego insulina-dextrosa; kayexalato no salva en minutos.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa la hiperkalemia grave con cambios electrocardiográficos en paciente con IC descompensada, donde el calcio IV va primero para estabilizar la membrana.
+
+La clave no es esperar diálisis ni usar kayexalato como rescate agudo.
+La clave es:
+Secuencia KDIGO: calcio IV → insulina-dextrosa → suspender ahorradores de potasio.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 72 años, día 4 por descompensación de IC (FEVI 30%).
-- Oliguria 12 h, somnolencia: AKI sobre IC descompensada.
-- Medicamentos: furosemida IV + enalapril + espironolactona 25 mg (triada nefrotóxica en IC).
-- K+ 7.1 mEq/L con cambios ECG: T picudas simétricas, QRS 130 ms, ondas P ausentes.
-- Acidosis metabólica (pH 7.18, HCO3 14), creatinina 3.8 (basal 1.2).
+El paciente presenta:
+• Hombre de 72 años, día 4 por descompensación de IC (FEVI 30%).
+• Oliguria 12 h, somnolencia: AKI sobre IC.
+• Medicamentos: furosemida IV + enalapril + espironolactona 25 mg.
+• K+ 7.1 mEq/L con cambios ECG: T picudas simétricas, QRS 130 ms, ondas P ausentes.
+• Acidosis metabólica (pH 7.18, HCO3 14), creatinina 3.8 (basal 1.2).
 
-¿Qué dato es clave en el examen?
-- ECG cambiado + K+ >6.5 = emergencia con riesgo de arritmia letal inmediata.
-- Secuencia KDIGO: 1) gluconato de calcio IV (estabiliza membrana); 2) insulina + dextrosa; 3) beta-2 inhalado.
-- Suspender espironolactona y enalapril (bloquean aldosterona / reducen GFR).
-- Kayexalato oral: acción lenta (horas), no es medida de rescate aguda.
-- Diálisis si refractaria o AKI oligúrica severa.
+Recordemos el manejo de hiperkalemia con ECG alterado:
+• Emergencia con riesgo de arritmia letal inmediata.
+• 1) Gluconato de calcio IV: estabiliza membrana cardíaca (no baja K+).
+• 2) Insulina + dextrosa: shift intracelular de K+.
+• 3) Beta-2 inhalado (salbutamol): shift adicional.
+• Suspender espironolactona y enalapril (bloquean aldosterona / reducen GFR).
+• Kayexalato oral: acción lenta (horas), no es rescate agudo.
+• Diálisis si refractaria o AKI oligúrica severa.
+
+Por lo tanto:
+No es manejo ambulatorio ni solo diálisis sin estabilización previa.
+Es emergencia electrocardiográfica con AKI multifactorial.
+
+¿Por qué la opción B es la respuesta correcta?
+Gluconato de calcio IV (protección de membrana cardíaca).
+Insulina regular + dextrosa + beta-2 inhalado.
+Suspender espironolactona y enalapril.
+Evaluar diálisis urgente; evitar bicarbonato salvo pH <6.9 con QRS prolongado.
 
 ¿Por qué fallan las otras opciones?
-- Diálisis sola sin calcio/insulina: retrasa estabilización de membrana → riesgo de paro.
-- Kayexalato + mantener enalapril: kayexalato lento; ACEi empeora hiperkalemia.
-- Bicarbonato en bolo + amiodarona: bicarbonato solo si acidosis severa con QRS prolongado; amiodarona no trata hiperkalemia.
+Opción A (solo diálisis sin calcio/insulina): retrasa estabilización de membrana → riesgo de paro.
+Opción C (kayexalato + mantener enalapril): kayexalato lento; ACEi empeora hiperkalemia.
+Opción D (bicarbonato en bolo + amiodarona): bicarbonato solo si acidosis severa; amiodarona no trata hiperkalemia.
 
-Clave: IC + espironolactona + oliguria + T picuda = hiperkalemia → calcio IV primero, siempre.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Hiperkalemia = kayexalato" o "K+ alto = diálisis inmediata sin calcio".
+Pero el examen exige la secuencia:
+Calcio primero si hay cambios ECG, independientemente del valor de K+.
+Aquí el dato decisivo es:
+Ondas T picudas + QRS ancho + ondas P ausentes.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Hiperkalemia grave con ECG en paciente hospitalizado
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar cambios ECG (emergencia).
+2. Gluconato de calcio IV de inmediato.
+3. Insulina + dextrosa + beta-2 inhalado.
+4. Suspender ahorradores de K+; considerar diálisis.
 
-Fisiopatología:
-• AKI + aldosterona bloqueada (espironolactona) + ↓ GFR + hipoperfusión = retención K+.
-• Cambios ECG = riesgo de arritmia letal inmediata.
+Perlas de examen
+✅ ECG cambiado + K+ >6.5 = emergencia; calcio IV primero.
+✅ Triada AKI en IC: diuréticos + ACEi + espironolactona.
+✅ Kayexalato no salva en minutos; no retrasa medidas IV.
+✅ IC descompensada + espironolactona + oliguria + T picuda = hiperkalemia hasta demostrar lo contrario.
+✅ Bicarbonato solo si pH <6.9 con inestabilidad.
 
-Prioridad:
-1. Gluconato calcio IV (protección membrana).
-2. Insulina + dextrosa; salbutamol nebulizado.
-3. Suspender ahorradores de K+.
-4. Diálisis si no responde o oliguria.
-
-Distractores:
-• A: Retrasar calcio/insulina es mortal; diálisis sola no es primera medida sin estabilizar membrana.
-• C: Kayexalato lento; mantener ACEi empeora hiperkalemia.
-• D: Bicarbonato solo si acidosis severa; amiodarona no trata hiperkalemia.
-
-Perla hospitalaria: IC descompensada + espironolactona + oliguria + T picuda = hiperkalemia hasta demostrar lo contrario. Calcio primero, siempre.
-
-Referencias: KDIGO AKI; ACP/SHM electrolyte emergencies.`,
+Referencias
+• KDIGO Clinical Practice Guideline for Acute Kidney Injury.
+• ACP/SHM Electrolyte Emergencies Guidelines.
+• Tintinalli Emergency Medicine.
+• UpToDate: Treatment and prevention of hyperkalemia in adults.`,
   },
   {
     id: "dr-q-33",
@@ -3273,55 +3319,72 @@ Referencias: KDIGO AKI; ACP/SHM electrolyte emergencies.`,
     explanation:
       "Hiponatremia hipotónica euvolémica con orina inapropiadamente concentrada (Uosm >100, Na urinario >30) = SIADH (cirugía SNC, SSRI, morfina). GCS 13 = sintomática. Manejo: restricción hídrica, retirar desencadenantes; si sintomática, SSH 3% con corrección lenta (≤8 mEq/L/24 h) para evitar mielinolisis osmótica.",
     keyPoints: [
-      "SIADH: euvolemia + Uosm alta + Na urinario alto + hipotónica.",
-      "Sintomática: SSH 3% con meta corrección ≤8 mEq/L/24 h.",
-      "No expansión volémica en euvolemia (empeora dilución).",
+      "Cuando veas: hiponatremia hipotónica euvolémica post-neurocirugía + orina inapropiadamente concentrada (Uosm >100, Na urinario >30).",
+      "Debes pensar en: SIADH intrahospitalaria → restricción hídrica + suspender desencadenantes; si sintomática, SSH 3% con corrección lenta.",
+      "GCS 13 = hiponatremia sintomática; meta corrección ≤8 mEq/L/24 h para evitar mielinolisis osmótica.",
+      "No expansión volémica ni furosemida de 1.ª línea en euvolemia (agrava dilución o depleciona sin corregir ADH).",
+      "Tema: Hiponatremia intrahospitalaria / SIADH.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa SIADH intrahospitalaria euvolémica post-neurocirugía: hiponatremia sintomática requiere restricción hídrica y, si es necesario, suero salino hipertónico 3% con corrección ≤8 mEq/L/24 h.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el diagnóstico y manejo de SIADH euvolémica intrahospitalaria con hiponatremia sintomática.
+
+La clave no es corregir rápido el sodio con volumen o diuréticos.
+La clave es:
+Identificar SIADH euvolémica sintomática y corregir de forma controlada (≤8 mEq/L/24 h) tras restricción hídrica y retirada de desencadenantes.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 58 años, día 6 post-cirugía de meningioma.
-- Na+ cayó de 138 al ingreso a 118 mEq/L con osmolalidad sérica 248 (hipotónica verdadera).
-- Osmolalidad urinaria 520, Na urinario 65: orina inapropiadamente concentrada.
-- Euvolemia al examen; TSH y cortisol normales (descarta hipotiroidismo e insuficiencia adrenal).
-- Desencadenantes: morfina PCA, ondansetrón, sertralina (SSRI) + cirugía SNC.
-- GCS 13: hiponatremia sintomática (somnolencia progresiva).
+La paciente presenta:
+• Mujer de 58 años, día 6 post-cirugía de meningioma.
+• Na+ cayó de 138 al ingreso a 118 mEq/L con osmolalidad sérica 248 (hipotónica verdadera).
+• Osmolalidad urinaria 520, Na urinario 65: orina inapropiadamente concentrada.
+• Euvolemia al examen; TSH y cortisol normales (descarta hipotiroidismo e insuficiencia adrenal).
+• Desencadenantes: morfina PCA, ondansetrón, sertralina (SSRI) + cirugía SNC.
+• GCS 13: hiponatremia sintomática (somnolencia progresiva).
 
-¿Qué dato es clave en el examen?
-- SIADH: euvolemia + Uosm >100 + Na urinario >30 + hipotónica.
-- Manejo: restricción hídrica + suspender fármacos desencadenantes.
-- Si sintomática: SSH 3% bajo monitorización con meta corrección ≤8 mEq/L/24 h (evitar mielinolisis osmótica).
-- Corrección rápida (>10-12 mEq/L/24 h) → mielinolisis pontina irreversible.
+Recordemos el diagnóstico de SIADH:
+• Hiponatremia hipotónica con euvolemia clínica.
+• Osmolalidad urinaria >100 mOsm/kg con sodio urinario >30 mEq/L.
+• Función tiroidea y adrenal normales.
+• Desencadenantes frecuentes intrahospitalarios: neurocirugía, SSRI, opioides.
+
+Por lo tanto:
+El diagnóstico es SIADH intrahospitalaria euvolémica sintomática que requiere restricción hídrica, suspensión de fármacos desencadenantes y, dado GCS 13, considerar suero salino hipertónico 3% bajo monitorización estrecha.
+
+¿Por qué la opción C es la respuesta correcta?
+Aborda el diagnóstico correcto (SIADH euvolémica) y el manejo escalonado: restricción hídrica + retirada de desencadenantes; si síntomas neurológicos, SSH 3% con meta de corrección ≤8 mEq/L/24 h para evitar mielinolisis osmótica.
 
 ¿Por qué fallan las otras opciones?
-- Furosemida en euvolemia: no es 1.ª línea en SIADH; puede deplecionar sin corregir ADH inapropiada.
-- Pseudohiaponatremia por glucosa: glucosa normal (110 mg/dL); no aplica fórmula de corrección.
-- Expansión con SF 0.9% 2 L: en euvolemia agrava dilución y empeora hiponatremia.
+Opción A (furosemida + restricción hídrica): clasifica erróneamente como hipervolémica; furosemida no es 1.ª línea en SIADH euvolémica y puede deplecionar sin corregir ADH inapropiada.
+Opción B (pseudohiaponatremia por glucosa): glucosa normal (110 mg/dL); no aplica fórmula de corrección.
+Opción D (expansión agresiva con SF 0.9%): en euvolemia agrava dilución y empeora hiponatremia.
 
-Clave: post-neurocirugía + SSRI + Na+ 118 + GCS 13 = SIADH sintomática → SSH 3% lento si necesario.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Hiponatremia sintomática" con expansión volémica agresiva o corrección rápida del sodio.
+Pero el examen exige distinguir el volumen extracelular y la velocidad segura de corrección.
+Aquí el dato decisivo es:
+Euvolemia + Uosm 520 + Na urinario 65 + GCS 13 = SIADH sintomática, no depleción volémica.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Hiponatremia euvolémica intrahospitalaria (SIADH)
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar hiponatremia hipotónica verdadera (osmolalidad sérica baja).
+2. Clasificar según volumen: euvolémica → SIADH.
+3. Restricción hídrica + suspender desencadenantes (SSRI, opioides).
+4. Si sintomática: SSH 3% con corrección ≤8 mEq/L/24 h.
 
-Fisiopatología:
-• ADH inapropiada post-neurocirugía + SSRI → retención hídrica libre.
-• Na+ 118 + GCS 13 = riesgo de herniación si no se corrige controladamente.
+Perlas de examen
+✅ SIADH = euvolemia + Uosm >100 + Na urinario >30 + hipotónica.
+✅ Post-neurocirugía + SSRI = SIADH intrahospitalaria clásica.
+✅ GCS <15 o convulsiones = hiponatremia sintomática → SSH 3%.
+✅ Corrección >10-12 mEq/L/24 h → mielinolisis pontina irreversible.
+✅ No expandir volumen en euvolemia; empeora la dilución.
+✅ Las residencias preguntan velocidad de corrección, no solo el diagnóstico.
 
-Prioridad:
-1. Confirmar hipotónica verdadera (osmolalidad baja).
-2. Restricción hídrica + suspender desencadenantes.
-3. Si sintomática: SSH 3% con cálculo de déficit y velocidad segura.
-
-Distractores:
-• A: Furosemida no es 1.ª línea en SIADH euvolémica; puede empeorar si depleciona.
-• B: Glucosa normal; no es pseudohiaponatremia.
-• D: Expansión en euvolemia agrava hiponatremia.
-
-Perla hospitalaria: Na+ cae >10 puntos en hospital + post-neurocirugía + SSRI = SIADH. Corrige lento o matas con mielinolisis.
-
-Referencias: ACP/SHM hyponatremia guidelines; European hyponatremia guideline.`,
+Referencias
+• European Clinical Practice Guideline on Hyponatremia.
+• ACP/SHM Hospital Medicine Hyponatremia Guidelines.
+• UpToDate: Treatment of hyponatremia.`,
   },
   {
     id: "dr-q-34",
@@ -3357,56 +3420,71 @@ Referencias: ACP/SHM hyponatremia guidelines; European hyponatremia guideline.`,
     explanation:
       "pH alto + PaCO2 baja + HCO3 elevado = trastorno mixto: alcalosis respiratoria (sobreventilación mecánica/iATROGénica) + alcalosis metabólica hipoclorémica (Cl 88, K 2.9, diuréticos). Anion gap levemente elevado puede ser albumina/lactato. Conducta: ajustar ventilador (↓ FR/Vt), reponer KCl, no bicarbonato.",
     keyPoints: [
-      "Mixto: pH ↑ + PaCO2 ↓ + HCO3 ↑ = alcalosis respiratoria + metabólica.",
-      "Cl bajo + K bajo sugiere alcalosis metabólica por diuréticos/depleción.",
-      "Sobreventilación iatrogénica empeora alcalosis respiratoria.",
+      "Cuando veas: pH elevado + PaCO2 baja + HCO3 elevado en paciente intubado con diuréticos.",
+      "Debes pensar en: trastorno mixto alcalótico (respiratorio iatrogénico + metabólico hipoclorémico) → ajustar ventilador y reponer K+/Cl-.",
+      "Cl- bajo + K+ bajo con furosemida = alcalosis metabólica de contracción por pérdida de Cl-/K+.",
+      "pH >7.48 con hipokalemia: riesgo de arritmias y vasoespasmo cerebral; no administrar bicarbonato.",
+      "Tema: Trastornos ácido-base intrahospitalarios.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa trastorno ácido-base mixto intrahospitalario: alcalosis metabólica hipoclorémica por diuréticos + alcalosis respiratoria por sobreventilación mecánica iatrogénica.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa la interpretación de un trastorno ácido-base mixto alcalótico en un paciente intubado con diuréticos.
+
+La clave no es tratar solo el componente respiratorio o administrar bicarbonato.
+La clave es:
+Reconocer alcalosis respiratoria iatrogénica superpuesta a alcalosis metabólica hipoclorémica y corregir ventilador + electrolitos.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 55 años, día 3 por exacerbación de EPOC, intubado hace 6 h.
-- Gasometría: pH 7.52, PaCO2 28, HCO3 32 → trastorno mixto alcalótico.
-- Cl- 88, K+ 2.9: alcalosis metabólica hipoclorémica por furosemida (pérdida Cl-/K+).
-- PaCO2 baja: sobreventilación mecánica post-intubación (iatrogénica).
-- Anion gap 18 levemente elevado: puede ser albumina/lactato, no acidosis metabólica dominante.
+El paciente presenta:
+• Hombre de 55 años, día 3 por exacerbación de EPOC, intubado hace 6 h.
+• Gasometría: pH 7.52, PaCO2 28, HCO3 32 → trastorno mixto alcalótico.
+• Cl- 88, K+ 2.9: alcalosis metabólica hipoclorémica por furosemida (pérdida Cl-/K+).
+• PaCO2 baja: sobreventilación mecánica post-intubación (iatrogénica).
+• Anion gap 18 levemente elevado: puede ser albumina/lactato, no acidosis metabólica dominante.
 
-¿Qué dato es clave en el examen?
-- Mixto: pH ↑ + PaCO2 ↓ + HCO3 ↑ = alcalosis respiratoria + metabólica simultáneas.
-- Cl bajo + K bajo sugiere alcalosis metabólica por diuréticos/depleción de volumen.
-- Sobreventilación iatrogénica empeora alcalosis respiratoria aditiva.
-- pH >7.48: riesgo de arritmias, vasoespasmo cerebral, hipokalemia refractaria.
-- Conducta: ajustar ventilador (↓ FR/Vt), reponer KCl; no bicarbonato.
+Recordemos la interpretación de trastornos mixtos:
+• pH ↑ + PaCO2 ↓ = alcalosis respiratoria.
+• HCO3 ↑ con Cl- bajo = alcalosis metabólica hipoclorémica (diuréticos, vómitos).
+• Ambos coexisten cuando pH está muy elevado con PaCO2 baja Y bicarbonato alto.
+• pH >7.48: riesgo de arritmias, vasoespasmo cerebral, hipokalemia refractaria.
+
+Por lo tanto:
+El paciente tiene alcalosis metabólica hipoclorémica por diuréticos con alcalosis respiratoria concomitante por hiperventilación iatrogénica; la conducta es reducir ventilación al mínimo tolerado, reponer K+/Cl- y tratar la causa.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica correctamente el trastorno mixto y prioriza ajustar el ventilador (↓ FR/Vt), reponer potasio y cloruro, y evitar bicarbonato que empeoraría la alcalosis metabólica.
 
 ¿Por qué fallan las otras opciones?
-- Aumentar FR a 22: agrava alcalosis respiratoria (más hiperventilación).
-- Bicarbonato IV 100 mEq: pH ya alcalino; bicarbonato empeoraría alcalosis metabólica.
-- Aumentar PEEP + sedación profunda: PaCO2 está baja, no hay acidosis respiratoria crónica descompensada.
+Opción A (aumentar FR a 22): agrava alcalosis respiratoria al aumentar hiperventilación mecánica.
+Opción C (bicarbonato IV 100 mEq): pH ya alcalino; bicarbonato empeoraría alcalosis metabólica.
+Opción D (aumentar PEEP + sedación profunda): PaCO2 está baja, no hay acidosis respiratoria crónica descompensada.
 
-Clave: EPOC intubado + diuréticos + pH 7.52 = revisa ventilador + repón K+/Cl- antes de más gasometrías.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"EPOC intubado" con acidosis respiratoria y buscan aumentar ventilación.
+Pero el examen exige leer la gasometría completa: pH, PaCO2 Y bicarbonato.
+Aquí el dato decisivo es:
+pH 7.52 + PaCO2 28 + HCO3 32 + Cl- 88 + K+ 2.9 = alcalosis mixta, no acidosis.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Trastorno ácido-base mixto intrahospitalario
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el trastorno primario según pH y compensación esperada.
+2. Buscar trastornos mixtos cuando pH y compensación no cuadran.
+3. Correlacionar con contexto clínico (ventilador, diuréticos).
+4. Ajustar VM + reponer electrolitos; evitar bicarbonato en alcalosis.
 
-Fisiopatología:
-• Diuréticos → pérdida Cl-/K+ → alcalosis metabólica de contracción.
-• VM agresiva post-intubación → ↓ PaCO2 → alcalosis respiratoria aditiva.
-• pH 7.52 con riesgo de arritmias, vasoespasmo cerebral, hipokalemia refractaria.
+Perlas de examen
+✅ pH ↑ + PaCO2 ↓ + HCO3 ↑ = alcalosis respiratoria + metabólica simultáneas.
+✅ Furosemida → pérdida Cl-/K+ → alcalosis metabólica de contracción.
+✅ VM agresiva post-intubación → alcalosis respiratoria iatrogénica aditiva.
+✅ EPOC intubado + diuréticos + pH >7.48 = revisa ventilador ANTES de más gasometrías.
+✅ Bicarbonato contraindicado cuando pH ya está alcalino.
+✅ Siempre correlacionar gasometría con medicamentos y ventilador.
 
-Prioridad:
-1. Interpretar gasometría en contexto clínico (ventilador + diuréticos).
-2. Ajustar VM; reponer K+/Cl-.
-3. Evitar bicarbonato (empeoraría alcalosis).
-
-Distractores:
-• A: Aumentar FR agrava alcalosis respiratoria.
-• C: pH ya alcalino; bicarbonato contraindicado.
-• D: PaCO2 está baja, no acidosis respiratoria.
-
-Perla hospitalaria: EPOC intubado + diuréticos + pH >7.48 = revisa ventilador ANTES de pedir más gasometrías.
-
-Referencias: ACP acid-base disorders; SHM critical care.`,
+Referencias
+• ACP Acid-Base Disorders Guidelines.
+• SHM Critical Care Acid-Base Management.
+• UpToDate: Simple and mixed acid-base disorders.`,
   },
   {
     id: "dr-q-35",
@@ -3442,57 +3520,72 @@ Referencias: ACP acid-base disorders; SHM critical care.`,
     explanation:
       "Delirium hipoactivo/hiperactivo postquirúrgico multifactorial: benzodiacepinas (lorazepam), antipsicótico innecesario, opioides, deshidratación/hipernatremia, dolor, entorno. Manejo SHM/AGS: medidas no farmacológicas + corregir precipitantes + suspender fármacos delirógenos. Antipsicótico dosis mínima solo si riesgo de daño.",
     keyPoints: [
-      "Delirium intrahospitalario = emergencia geriátrica; buscar precipitantes (DEDHIPTIS).",
-      "Benzodiacepinas empeoran y prolongan delirium en ancianos.",
-      "Hipernatremia/deshidratación post-op frecuente y delirógena.",
+      "Cuando veas: anciano postoperatorio con agitación fluctuante, alucinaciones visuales y CAM positivo.",
+      "Debes pensar en: delirium intrahospitalario multifactorial → medidas no farmacológicas + corregir precipitantes (DEDHIPTIS).",
+      "Benzodiacepinas (lorazepam) empeoran y prolongan delirium en ancianos; suspender de inmediato.",
+      "Hipernatremia/deshidratación post-op es precipitante metabólico frecuente y delirógeno.",
+      "Tema: Delirium intrahospitalario / geriatría.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa delirium postoperatorio intrahospitalario: benzodiacepinas y antipsicóticos profilácticos empeoran el cuadro; hay que corregir precipitantes (DEDHIPTIS) antes de sedar.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el manejo inicial del delirium postoperatorio intrahospitalario en un paciente geriátrico.
+
+La clave no es sedar con más benzodiacepinas o antipsicóticos profilácticos.
+La clave es:
+Identificar delirium agudo multifactorial, retirar fármacos delirógenos y corregir precipitantes antes de considerar antipsicóticos.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 81 años, día 2 post-fractura de cadera operada.
-- Agitación nocturna, desorientación fluctuante, alucinaciones visuales, inversión sueño-vigilia.
-- CAM positivo: delirium agudo, no demencia pura.
-- Fármacos delirógenos: lorazepam 1 mg noche, quetiapina 25 mg (por insomnio), tramadol PRN.
-- Hipernatremia (Na+ 151) + deshidratación leve: precipitante metabólico frecuente post-op.
-- Demencia leve previa + déficit sensorial (cataratas): factor de riesgo base.
+La paciente presenta:
+• Mujer de 81 años, día 2 post-fractura de cadera operada.
+• Agitación nocturna, desorientación fluctuante, alucinaciones visuales, inversión sueño-vigilia.
+• CAM positivo: delirium agudo, no demencia pura.
+• Fármacos delirógenos: lorazepam 1 mg noche, quetiapina 25 mg (por insomnio), tramadol PRN.
+• Hipernatremia (Na+ 151) + deshidratación leve: precipitante metabólico frecuente post-op.
+• Demencia leve previa + déficit sensorial (cataratas): factor de riesgo base.
 
-¿Qué dato es clave en el examen?
-- Delirium intrahospitalario = emergencia geriátrica; buscar precipitantes (DEDHIPTIS: Drugs, Electrolytes, Dehydration, Hypoxia, Infection, Pain, Trauma, Immobility, Sleep).
-- Benzodiacepinas empeoran y prolongan delirium en ancianos (Beers/SHM).
-- Medidas no farmacológicas: reorientación, movilización precoz, corregir déficit sensorial (gafas/audífono), analgesia adecuada.
-- Antipsicótico dosis mínima solo si riesgo inminente de daño.
-- TAC/EEG/aciclovir no son 1.ª línea sin datos de SNC infeccioso.
+Recordemos el enfoque DEDHIPTIS para precipitantes de delirium:
+• Drugs (fármacos delirógenos: BZD, antipsicóticos innecesarios, opioides).
+• Electrolytes, Dehydration, Hypoxia, Infection, Pain, Trauma, Immobility, Sleep.
+• Medidas no farmacológicas: reorientación, movilización precoz, corregir déficit sensorial.
+• Antipsicótico dosis mínima solo si riesgo inminente de daño.
+
+Por lo tanto:
+El plan prioritario es suspender benzodiacepinas y antipsicóticos no indicados, corregir hipernatremia/deshidratación, aplicar medidas no farmacológicas y buscar infección activamente.
+
+¿Por qué la opción C es la respuesta correcta?
+Aborda el delirium como emergencia geriátrica multifactorial: retira fármacos delirógenos, corrige precipitantes metabólicos, implementa reorientación y movilización, y reserva antipsicóticos solo para riesgo inminente.
 
 ¿Por qué fallan las otras opciones?
-- Aumentar quetiapina + mantener lorazepam + contención: lorazepam empeora delirium; contención es último recurso.
-- TAC urgente + aciclovir empírico: no hay focalidad neurológica ni fiebre alta; delirium es multifactorial.
-- Haloperidol depot mensual: inaceptable en delirium agudo reversible.
+Opción A (aumentar quetiapina + mantener lorazepam + contención): lorazepam empeora delirium; contención física es último recurso.
+Opción B (TAC urgente + aciclovir empírico): no hay focalidad neurológica ni datos de encefalitis; delirium es multifactorial.
+Opción D (haloperidol depot mensual): inaceptable en delirium agudo reversible.
 
-Clave: fractura cadera + lorazepam noche + CAM (+) = quita BZD, hidrata, corrige Na+, moviliza.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Alucinaciones visuales" con encefalitis o patología SNC que requiere TAC urgente.
+Pero el examen exige reconocer delirium postoperatorio con CAM positivo y precipitantes corregibles.
+Aquí el dato decisivo es:
+Fractura de cadera + lorazepam noche + hipernatremia + CAM (+) = delirium multifactorial, no psicosis primaria.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Delirium postoperatorio intrahospitalario
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar delirium (CAM positivo, fluctuación, inicio agudo).
+2. Retirar benzodiacepinas y antipsicóticos profilácticos.
+3. Corregir precipitantes (deshidratación, electrolitos, dolor, infección).
+4. Medidas no farmacológicas; antipsicótico solo si riesgo vital.
 
-Fisiopatología:
-• Insulto quirúrgico + fármacos anticolinérgicos/sedantes + deshidratación → disfunción cerebral aguda.
-• Fluctuación + alucinaciones visuales + CAM (+) = delirium, no demencia pura.
+Perlas de examen
+✅ Delirium intrahospitalario = emergencia geriátrica; buscar precipitantes (DEDHIPTIS).
+✅ Benzodiacepinas empeoran delirium en ancianos (Beers/SHM).
+✅ Fractura de cadera + lorazepam noche = delirium casi garantizado.
+✅ Hipernatremia post-op es precipitante metabólico frecuente y corregible.
+✅ TAC/EEG no son 1.ª línea sin focalidad neurológica o fiebre alta.
+✅ Antipsicótico depot nunca en delirium agudo reversible.
 
-Prioridad:
-1. Retirar benzodiacepinas/antipsicóticos profilácticos.
-2. Hidratar y corregir Na+, Ca++, dolor.
-3. Reorientación, movilización, óptica/auditiva.
-4. Haloperidol/quetiapina baja dosis solo si riesgo vital.
-
-Distractores:
-• A: Lorazepam y más quetiapina empeoran delirium.
-• B: TAC/EEG/aciclovir no son 1.ª línea sin datos de SNC infeccioso.
-• D: Depot antipsicótico inaceptable en delirium agudo.
-
-Perla hospitalaria: Fractura de cadera + lorazepam noche = delirium garantizado. Quita BZD, hidrata y moviliza antes de sedar.
-
-Referencias: SHM Delirium Guidelines; AGS Clinical Practice Guideline Delirium.`,
+Referencias
+• SHM Delirium Guidelines.
+• AGS Clinical Practice Guideline for Postoperative Delirium in Older Adults.
+• UpToDate: Delirium and acute confusional states.`,
   },
   {
     id: "dr-q-36",
@@ -3528,56 +3621,71 @@ Referencias: SHM Delirium Guidelines; AGS Clinical Practice Guideline Delirium.`
     explanation:
       "TEP agudo con sobrecarga VD y taquicardia/hipotensión leve = riesgo intermedio-alto (submasivo). Plaquetas 48,000 no contraindican anticoagulación absoluta en TEP alto riesgo; HNF IV permite control y reversión. Trombólisis si choque. Profilaxis previa falló; reevaluar dosis/ método. Filtro de VC no trata TEP establecido.",
     keyPoints: [
-      "TEP + sobrecarga VD + troponina = submasivo; anticoagular.",
-      "Trombocitopenia moderada: balance riesgo trombosis/sangrado (CHEST).",
-      "Filtro de VC no es tratamiento de TEP agudo sin contraindicación absoluta a AC.",
+      "Cuando veas: disnea súbita + TAC con TEP + sobrecarga de VD + troponina elevada en paciente oncológico hospitalizado.",
+      "Debes pensar en: TEP submasivo (riesgo intermedio-alto) → anticoagulación plena inmediata (HNF IV si plaquetopenia).",
+      "Plaquetas 48,000 no contraindican anticoagulación absoluta en TEP de alto riesgo; balance según guías CHEST.",
+      "Filtro de vena cava no trata TEP establecido; observar sin anticoagular es mortal en submasivo.",
+      "Tema: TEP intrahospitalario / tromboprofilaxis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa TEP submasivo en paciente oncológico hospitalizado: plaquetopenia moderada (48,000) no contraindica anticoagulación plena; el filtro de vena cava no trata TEP establecido.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el manejo inmediato del TEP submasivo en un paciente oncológico con trombocitopenia moderada.
+
+La clave no es suspender anticoagulación por plaquetopenia ni colocar filtro de vena cava.
+La clave es:
+Anticoagular de inmediato el TEP con sobrecarga de VD y troponina elevada, ajustando el esquema según plaquetas (HNF IV permite control).
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 64 años, día 10 por linfoma difuso de células B en quimioterapia (R-CHOP).
-- Disnea súbita, dolor pleurítico, taquicardia; PA 90/55, SpO2 88%.
-- TAC angio: defecto de repleción en arteria lobar derecha + sobrecarga de VD.
-- Troponina I elevada: TEP submasivo (riesgo intermedio-alto).
-- Plaquetas 48,000 (basales 220,000): trombocitopenia por quimioterapia, no contraindicación absoluta.
+La paciente presenta:
+• Mujer de 64 años, día 10 por linfoma difuso de células B en quimioterapia (R-CHOP).
+• Disnea súbita, dolor pleurítico, taquicardia; PA 90/55, SpO2 88%.
+• TAC angio: defecto de repleción en arteria lobar derecha + sobrecarga de VD.
+• Troponina I elevada: TEP submasivo (riesgo intermedio-alto).
+• Plaquetas 48,000 (basales 220,000): trombocitopenia por quimioterapia, no contraindicación absoluta.
 
-¿Qué dato es clave en el examen?
-- Cáncer + quimioterapia + inmovilización = estado pro-trombótico; profilaxis con enoxaparina 40 mg pudo fallar.
-- TEP + sobrecarga VD + troponina = submasivo; anticoagular de inmediato.
-- Plaquetas 48,000: balance riesgo trombosis/sangrado según guías CHEST; HNF IV permite control y reversión.
-- Trombólisis si choque hemodinámico o obstrucción masiva.
-- Filtro de VC no disuelve TEP; no es tratamiento de TEP agudo sin contraindicación absoluta a AC.
+Recordemos la estratificación del TEP:
+• TEP masivo: choque hemodinámico → trombólisis si indicada.
+• TEP submasivo: sobrecarga VD + troponina elevada sin choque → anticoagulación plena urgente.
+• Cáncer + quimioterapia + inmovilización = estado pro-trombótico elevado.
+• Filtro de VC no disuelve TEP; reservado para TVP proximal con contraindicación absoluta a AC.
+
+Por lo tanto:
+El paciente tiene TEP submasivo que requiere anticoagulación plena inmediata con heparina no fraccionada IV (ajustada) o fondaparinux según plaquetas, evaluando trombólisis si inestabilidad hemodinámica.
+
+¿Por qué la opción B es la respuesta correcta?
+Reconoce TEP submasivo/alto riesgo, indica anticoagulación plena con esquema ajustable (HNF IV), contempla trombólisis si inestabilidad, y evita suspender profilaxis sin reevaluar riesgo trombótico vs sangrado según guías CHEST.
 
 ¿Por qué fallan las otras opciones?
-- Suspender AC + filtro + observar: filtro no trata TEP; observar es mortal en submasivo.
-- Azitromicina + ceftriaxona: TAC confirma TEP, no neumonía.
-- Aspirina + clopidogrel + diferir AC: antiagregación no trata TEP; retrasar AC aumenta mortalidad.
+Opción A (suspender AC + filtro + observar): filtro no trata TEP establecido; observar es mortal en submasivo.
+Opción C (neumonía atípica + ATB): TAC confirma TEP, no neumonía.
+Opción D (aspirina + clopidogrel + diferir AC): antiagregación no trata TEP; retrasar anticoagulación aumenta mortalidad.
 
-Clave: oncológico hospitalizado + disnea súbita + TAC TEP + plaquetas 48k = anticoagular (HNF IV), no filtrar y observar.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Plaquetas <50,000" con contraindicación absoluta a anticoagulación.
+Pero el examen exige balancear riesgo trombótico vs sangrado en TEP de alto riesgo.
+Aquí el dato decisivo es:
+TEP lobar + sobrecarga VD + troponina + plaquetas 48k = anticoagular (HNF IV), no filtrar y observar.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-TEP intrahospitalario en paciente oncológico
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar TEP con angioTAC.
+2. Estratificar riesgo (masivo vs submasivo vs bajo riesgo).
+3. Anticoagulación inmediata (HNF si plaquetopenia/balance fino).
+4. Trombólisis si choque; revisar profilaxis fallida.
 
-Fisiopatología:
-• Cáncer + quimioterapia + inmovilización = estado pro-trombótico.
-• TEP agudo → ↑ presión pulmonar → estrés VD → hipotensión/troponina.
+Perlas de examen
+✅ TEP + sobrecarga VD + troponina = submasivo; anticoagular de inmediato.
+✅ Oncológico hospitalizado con disnea súbita = TEP hasta demostrar lo contrario.
+✅ Plaquetas 48k no es excusa automática para no anticoagular en TEP alto riesgo.
+✅ Filtro de VC no trata TEP agudo sin contraindicación absoluta a AC.
+✅ HNF IV permite control y reversión en trombocitopenia moderada.
+✅ Antiagregación (AAS/clopidogrel) no sustituye anticoagulación en TEP.
 
-Prioridad:
-1. Confirmar TEP angioTAC.
-2. Anticoagulación inmediata (HNF si plaquetopenia/balance fino).
-3. Trombólisis si choque/obstrucción masiva.
-4. Revisar profilaxis (dosis, cumplimiento).
-
-Distractores:
-• A: Filtro no disuelve TEP; observar es mortal.
-• C: TAC confirma TEP; no es neumonía.
-• D: Antiagregación no trata TEP; retrasar AC aumenta mortalidad.
-
-Perla hospitalaria: Oncológico hospitalizado con disnea súbita + taquicardia = TEP hasta TAC. Plaquetas 48k no es excusa automática para no anticoagular.
-
-Referencias: CHEST Antithrombotic Guidelines; SHM VTE prevention.`,
+Referencias
+• CHEST Antithrombotic Therapy for VTE Disease Guidelines.
+• SHM VTE Prevention and Management.
+• UpToDate: Treatment, prognosis, and follow-up of acute pulmonary embolism.`,
   },
   {
     id: "dr-q-37",
@@ -3613,55 +3721,71 @@ Referencias: CHEST Antithrombotic Guidelines; SHM VTE prevention.`,
     explanation:
       "PMN ≥250 = PBE. Child C + fiebre + confusión + AKI + hipotensión = PBE grave. Manejo: ceftriaxona (o según guía local) + albúmina para prevenir síndrome hepatorrenal (1.5 g/kg d1, 1 g/kg d3), soporte hemodinámico, evitar nefrotóxicos. Paracentesis control si no responde. Perforación menos probable con PMN moderado sin datos septicos focales extremos.",
     keyPoints: [
-      "PBE: PMN ≥250/mm³ en ascitis.",
-      "Albúmina + ATB reduce hepatorenal y mortalidad en PBE grave.",
-      "AKI en cirrótico febril = PBE hasta paracentesis.",
+      "Cuando veas: cirrótico febril confuso con ascitis y PMN ≥250 en paracentesis.",
+      "Debes pensar en: PBE grave (Child C + fiebre + encefalopatía + AKI) → ceftriaxona + albúmina en protocolo completo.",
+      "PMN ≥250/mm³ en líquido ascítico confirma PBE; paracentesis no debe retrasar antibióticos.",
+      "Albúmina 1.5 g/kg día 1 y 1 g/kg día 3 reduce síndrome hepatorrenal y mortalidad en PBE grave.",
+      "Tema: Peritonitis bacteriana espontánea / cirrosis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa PBE grave en cirrosis Child-Pugh C: PMN ≥250 confirma PBE; ceftriaxona sola no basta — albúmina en protocolo completo previene síndrome hepatorrenal.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el manejo integral de la PBE grave en un cirrótico Child-Pugh C con disfunción orgánica.
+
+La clave no es ceftriaxona sola ni diferir antibióticos para descartar hepatorenal.
+La clave es:
+Reconocer PBE grave y aplicar protocolo completo: antibiótico IV + albúmina + soporte hemodinámico.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 59 años, cirrosis por alcohol Child-Pugh C (13), ascitis refractaria.
-- Fiebre 38.8 °C, confusión nueva, hipotensión (PA 92/58).
-- Paracentesis: PMN 680 cel/mm³ (≥250 = PBE), proteínas 0.8 g/dL.
-- AKI: creatinina 2.6 (basal 1.4), Na+ 126, bilirrubina 12, INR 2.1.
-- PBE grave: Child C + fiebre + encefalopatía + AKI + hipotensión.
+El paciente presenta:
+• Hombre de 59 años, cirrosis por alcohol Child-Pugh C (13), ascitis refractaria.
+• Fiebre 38.8 °C, confusión nueva, hipotensión (PA 92/58).
+• Paracentesis: PMN 680 cel/mm³ (≥250 = PBE), proteínas 0.8 g/dL.
+• AKI: creatinina 2.6 (basal 1.4), Na+ 126, bilirrubina 12, INR 2.1.
+• PBE grave: Child C + fiebre + encefalopatía + AKI + hipotensión.
 
-¿Qué dato es clave en el examen?
-- PBE: PMN ≥250/mm³ en líquido ascítico.
-- PBE grave requiere ceftriaxona (o cefalosporina 3.ª gen según guía local) + albúmina 1.5 g/kg día 1 y 1 g/kg día 3.
-- Albúmina reduce síndrome hepatorrenal y mortalidad en PBE grave/AKI.
-- Paracentesis de control si no mejora en 48 h (descartar peritonitis secundaria).
-- Cirrótico confuso + fiebre = paracentesis YA, no esperar.
+Recordemos el manejo de PBE según guías EASL/AASLD:
+• PMN ≥250/mm³ en ascitis = PBE; iniciar ATB empírico de inmediato.
+• PBE grave: Child C, AKI, encefalopatía, hipotensión → albúmina 1.5 g/kg día 1 y 1 g/kg día 3.
+• Albúmina reduce síndrome hepatorrenal y mortalidad.
+• Paracentesis de control si no mejora en 48 h (descartar peritonitis secundaria).
+
+Por lo tanto:
+El manejo prioritario es ceftriaxona + albúmina en protocolo completo, expansión si hipotensión, evitar nefrotóxicos/AINEs, y evaluar trasplante/UCI según respuesta.
+
+¿Por qué la opción B es la respuesta correcta?
+Aborda PBE grave con el protocolo integral: antibiótico IV, albúmina en dosis completas, soporte hemodinámico, evitar nefrotóxicos, y paracentesis de control si no responde en 48 h.
 
 ¿Por qué fallan las otras opciones?
-- Ceftriaxona sola + albúmina solo si Cr >4: subdosis de albúmina; PBE grave requiere protocolo completo desde Cr 1.4.
-- Laparotomía inmediata: PMN 680 sin datos de perforación típica; ATB primero, cirugía si no responde.
-- Terlipresina deferiendo ATB: hepatorenal es consecuencia; tratar infección primero.
+Opción A (ceftriaxona sola + albúmina solo si Cr >4): subdosis de albúmina; PBE grave requiere protocolo completo desde Cr 1.4.
+Opción C (laparotomía inmediata): PMN 680 sin datos de perforación típica; ATB primero, cirugía si no responde.
+Opción D (terlipresina deferiendo ATB): hepatorenal es consecuencia; tratar infección primero.
 
-Clave: cirrótico confuso + fiebre + PMN >250 + Child C = ceftriaxona + albúmina, no solo ATB.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"PBE" con ceftriaxona sola como manejo suficiente.
+Pero el examen exige identificar PBE grave y el protocolo de albúmina que reduce mortalidad.
+Aquí el dato decisivo es:
+Child C + confusión + AKI + PMN 680 = PBE grave → ceftriaxona + albúmina, no solo ATB.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-PBE grave en cirrosis hospitalizada
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Cirrótico febril confuso = paracentesis diagnóstica YA.
+2. PMN ≥250 → PBE; ATB empírico IV sin demora.
+3. Si PBE grave/AKI → albúmina 1.5 g/kg d1 + 1 g/kg d3.
+4. Paracentesis control si no mejora en 48 h.
 
-Fisiopatología:
-• Bacterias translocan desde intestino → ascitis → inflamación sistémica → vasodilatación espláncnica → hipoperfusión renal.
+Perlas de examen
+✅ PBE: PMN ≥250/mm³ en líquido ascítico.
+✅ Cirrótico confuso + fiebre = paracentesis antes de esperar cultivos.
+✅ Albúmina + ATB reduce hepatorenal y mortalidad en PBE grave.
+✅ AKI en cirrótico febril = PBE hasta demostrar lo contrario.
+✅ Peritonitis secundaria si no responde en 48 h o PMN muy elevado con datos septicos focales.
+✅ No diferir antibióticos para "descartar" hepatorenal primero.
 
-Prioridad:
-1. Paracentesis diagnóstica (no retrasa ATB si sospecha alta).
-2. ATB empírico IV (cefalosporina 3.ª gen).
-3. Albúmina en PBE grave/AKI.
-4. Descartar peritonitis secundaria si no responde.
-
-Distractores:
-• A: Subdosis albúmina; PBE grave requiere protocolo completo.
-• C: PMN 680 sin datos de perforación típica; ATB primero, cirugía si no responde.
-• D: Hepatorenal es consecuencia; tratar infección primero.
-
-Perla hospitalaria: Cirrótico confuso + fiebre = paracentesis YA. PMN >250 + Child C = ceftriaxona + albúmina, no solo ATB.
-
-Referencias: EASL/AASLD Ascites and PBE Guidelines; SHM.`,
+Referencias
+• EASL Clinical Practice Guidelines on Ascites and Spontaneous Bacterial Peritonitis.
+• AASLD Practice Guidance on Ascites and SBP.
+• UpToDate: Spontaneous bacterial peritonitis in adults.`,
   },
   {
     id: "dr-q-38",
@@ -3697,56 +3821,72 @@ Referencias: EASL/AASLD Ascites and PBE Guidelines; SHM.`,
     explanation:
       "CAD severa (pH 7.05, HCO3 5) en DM1 por suspensión de insulina + esteroides. Prioridad ADA: volumen SF 0.9% primero; K+ 5.8 permite insulina con monitorización de K+. Bicarbonato solo si pH <6.9. Insulina IV 0.1 U/kg/h. K+ 5.8 no contraindica insulina pero requiere K+ concurrente cuando baje.",
     keyPoints: [
-      "CAD: fluidos primero; insulina IV cuando K+ ≥3.3 mEq/L.",
-      "K+ inicial alto en CAD por desplazamiento extracellular; cae con insulina.",
-      "Esteroides + suspensión insulina = precipitante intrahospitalario clásico.",
+      "Cuando veas: DM1 hospitalizado con CAD severa (pH 7.05, cetonas elevadas) tras suspensión de insulina + esteroides.",
+      "Debes pensar en: protocolo ADA → volumen SF 0.9% primero; insulina IV 0.1 U/kg/h si K+ ≥3.3.",
+      "K+ inicial alto en CAD (desplazamiento extracellular) cae con insulina; no contraindica tratamiento.",
+      "Bicarbonato solo si pH <6.9; no en pH 7.05 (riesgo edema cerebral).",
+      "Tema: Cetoacidosis diabética intrahospitalaria.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa CAD intrahospitalaria en DM1: volumen primero, insulina IV cuando K+ ≥3.3; K+ inicial alto en CAD cae con insulina — no contraindica tratamiento.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa la secuencia terapéutica correcta de la CAD severa en un paciente DM1 con insulopenia por suspensión de bomba y esteroides.
+
+La clave no es iniciar insulina antes de volumen ni suspender insulina por K+ alto inicial.
+La clave es:
+Seguir protocolo ADA: fluidos primero, insulina IV cuando K+ ≥3.3, y monitorización horaria de potasio.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 45 años con SLE en brote, metilprednisolona 60 mg IV/día.
-- DM1 con bomba de insulina suspendida ayer por extravasación del catéter.
-- CAD severa: glicemia 485, pH 7.05, HCO3 5, cetonas 5.2 mmol/L, Kussmaul.
-- K+ 5.8 (desplazamiento extracellular por acidosis; caerá con insulina).
-- Precipitante clásico intrahospitalario: insulopenia absoluta + glucocorticoides.
+La paciente presenta:
+• Mujer de 45 años con SLE en brote, metilprednisolona 60 mg IV/día.
+• DM1 con bomba de insulina suspendida ayer por extravasación del catéter.
+• CAD severa: glicemia 485, pH 7.05, HCO3 5, cetonas 5.2 mmol/L, Kussmaul.
+• K+ 5.8 (desplazamiento extracellular por acidosis; caerá con insulina).
+• Precipitante clásico intrahospitalario: insulopenia absoluta + glucocorticoides.
 
-¿Qué dato es clave en el examen?
-- ADA protocolo: 1) SF 0.9% 1 L primera hora (volumen primero); 2) insulina 0.1 U/kg/h IV si K+ ≥3.3.
-- Si K+ <3.3: posponer insulina y reponer potasio primero (riesgo arritmia).
-- K+ 5.8 permite insulina con monitorización horaria de K+ (caerá con shift intracelular).
-- Bicarbonato solo si pH <6.9 (no en pH 7.05; riesgo edema cerebral).
-- Buscar precipitante: catéter, infección, adherencia, esteroides.
+Recordemos el protocolo ADA para CAD:
+• Paso 1: SF 0.9% 1 L en la primera hora (volumen antes de insulina).
+• Paso 2: insulina regular 0.1 U/kg/h IV si K+ ≥3.3 mEq/L.
+• Si K+ <3.3: posponer insulina y reponer potasio primero (riesgo arritmia).
+• Bicarbonato solo si pH <6.9 (no rutinario en pH 7.05).
+• Buscar precipitante: catéter, infección, adherencia, esteroides.
+
+Por lo tanto:
+La secuencia correcta es hidratación con SF 0.9%, iniciar insulina IV dado K+ 5.8 con monitorización de K+, y bicarbonato solo si pH <6.9.
+
+¿Por qué la opción B es la respuesta correcta?
+Sigue el protocolo ADA completo: volumen primero, insulina IV si K+ ≥3.3 con reposición según protocolo, bicarbonato solo en acidosis extrema, y búsqueda de precipitante.
 
 ¿Por qué fallan las otras opciones?
-- Insulina + bicarbonato en bolo + SF después: bicarbonato rutinario no indicado pH 7.05; volumen debe ir primero.
-- Insulina SC basal + alta ambulatoria: CAD severa con vómitos requiere insulina IV y monitorización UCI.
-- Suspender insulina por K+ 5.8: error clásico; K+ alto inicial en CAD cae con tratamiento.
+Opción A (insulina + bicarbonato en bolo + SF después): bicarbonato rutinario no indicado en pH 7.05; volumen debe ir primero.
+Opción C (insulina SC basal + alta ambulatoria): CAD severa con vómitos requiere insulina IV y monitorización en UCI.
+Opción D (suspender insulina por K+ 5.8): error clásico; K+ alto inicial en CAD cae con tratamiento.
 
-Clave: DM1 hospitalizado + esteroide + bomba detenida = CAD en 24 h → volumen primero, insulina IV, K+ siempre en mente.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"K+ 5.8" con contraindicación a insulina en CAD.
+Pero el examen exige entender el desplazamiento extracellular de potasio por acidosis que se corrige con insulina.
+Aquí el dato decisivo es:
+K+ 5.8 en CAD severa permite insulina IV con monitorización horaria; caerá con shift intracelular.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-CAD intrahospitalaria en DM1 + esteroides
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. SF 0.9% agresivo (1 L primera hora).
+2. Insulina IV 0.1 U/kg/h si K+ ≥3.3.
+3. Monitorizar K+ cada hora; reponer según protocolo.
+4. Bicarbonato solo si pH <6.9; buscar precipitante.
 
-Fisiopatología:
-• Insulopenia absoluta + glucocorticoides → lipólisis → cetonemia → acidosis.
-• Deshidratación osmótica + vómitos → shock hipovolémico.
+Perlas de examen
+✅ CAD: fluidos primero; insulina IV cuando K+ ≥3.3 mEq/L.
+✅ K+ inicial alto en CAD por desplazamiento extracellular; cae con insulina.
+✅ DM1 hospitalizado + esteroide + bomba detenida = CAD en 24 h.
+✅ Bicarbonato rutinario no indicado en pH 7.05; riesgo edema cerebral.
+✅ Insulina SC inadecuada en CAD severa con vómitos.
+✅ Siempre buscar precipitante intrahospitalario (catéter, infección, esteroides).
 
-Prioridad:
-1. SF 0.9% agresivo.
-2. Insulina IV si K+ ≥3.3 (monitorizar K+ horario).
-3. Buscar precipitante (catéter, infección, adherencia).
-4. Bicarbonato solo pH <6.9.
-
-Distractores:
-• A: Bicarbonato rutinario no indicado pH 7.05; riesgo edema cerebral.
-• C: SC insulina inadecuada en CAD severa con vómitos.
-• D: Suspender insulina por K+ 5.8 es error; caerá con tratamiento.
-
-Perla hospitalaria: DM1 hospitalizado + esteroide + bomba detenida = CAD en 24 h. Volumen primero, insulina IV después, K+ siempre en mente.
-
-Referencias: ADA Standards of Care DKA; SHM glycemic management.`,
+Referencias
+• ADA Standards of Care in Diabetes — DKA Management.
+• SHM Glycemic Management in Hospitalized Patients.
+• UpToDate: Diabetic ketoacidosis and hyperosmolar hyperglycemic state in adults.`,
   },
   {
     id: "dr-q-39",
@@ -3782,56 +3922,72 @@ Referencias: ADA Standards of Care DKA; SHM glycemic management.`,
     explanation:
       "CLABSI con choque séptico y crecimiento diferencial más rápido en catéter = retirar catéter urgente (IDSA). BLEE → carbapenémico empírico ajustado a ERC. Vancomicina no necesaria si solo GN. Intercambio sobre guía no indicado en inestabilidad/BLEE. Duración IV en UCI, no ambulatorio prematuro.",
     keyPoints: [
-      "CLABSI + inestabilidad = retirar catéter, no intercambio sobre guía.",
-      "Crecimiento más rápido en catéter vs periférico confirma origen intraluminal.",
-      "BLEE → carbapenémico; evitar ceftriaxona/pip-tazo empírico fallido.",
+      "Cuando veas: choque séptico en UCI con catéter central y hemocultivo del catéter positivo antes que periférico.",
+      "Debes pensar en: CLABSI con BLEE → retirar catéter de inmediato + meropenem empírico ajustado a TFG.",
+      "Crecimiento diferencial más rápido en catéter vs periférico confirma origen intraluminal.",
+      "Vancomicina no necesaria si preliminar solo muestra Gram negativo; no esperar antibiograma en shock.",
+      "Tema: CLABSI / bacteriemia intrahospitalaria.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa CLABSI con choque séptico por BLEE: retirar catéter de inmediato (no intercambio sobre guía) y meropenem empírico ajustado a TFG; vancomicina innecesaria si solo Gram negativo.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el manejo inmediato de CLABSI con choque séptico por bacilos Gram-negativos BLEE en un paciente de UCI.
+
+La clave no es mantener el catéter ni esperar antibiograma de 72 horas.
+La clave es:
+Retirar el catéter central de inmediato y cubrir con carbapenémico empírico ajustado a función renal.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 70 años, UCI día 14, catéter venoso central yugular día 10.
-- Fiebre 39 °C, choque séptico: PA 82/48 tras 30 mL/kg, lactato 4.5.
-- Hemocultivo del catéter positivo 2 h antes que periférico: bacilos GN BLEE.
-- Biofilm intraluminal → bacteriemia continua → sepsis persistente si se mantiene catéter.
-- ERC estadio 4: ajustar meropenem a TFG.
+El paciente presenta:
+• Hombre de 70 años, UCI día 14, catéter venoso central yugular día 10.
+• Fiebre 39 °C, choque séptico: PA 82/48 tras 30 mL/kg, lactato 4.5.
+• Hemocultivo del catéter positivo 2 h antes que periférico: bacilos GN BLEE.
+• Biofilm intraluminal → bacteriemia continua → sepsis persistente si se mantiene catéter.
+• ERC estadio 4: ajustar meropenem a TFG.
 
-¿Qué dato es clave en el examen?
-- CLABSI confirmada: crecimiento diferencial más rápido en catéter vs periférico.
-- Choque séptico + inestabilidad = retirar catéter urgente (IDSA); intercambio sobre guía contraindicado.
-- BLEE → carbapenémico empírico (meropenem); ceftriaxona/pip-tazo empírico fallido.
-- Vancomicina no necesaria si solo Gram negativo en preliminar.
-- Duración IV en UCI 7–14 días según respuesta; no alta ambulatoria prematura en shock.
+Recordemos el manejo de CLABSI según IDSA:
+• CLABSI confirmada: crecimiento diferencial más rápido en catéter vs periférico.
+• Choque séptico + inestabilidad = retirar catéter urgente; intercambio sobre guía contraindicado.
+• BLEE → carbapenémico empírico (meropenem); ceftriaxona/pip-tazo ineficaces.
+• Vancomicina solo si indicación de Gram positivo; no rutinaria si solo GN.
+• Duración IV en UCI 7–14 días según respuesta; no alta ambulatoria prematura.
+
+Por lo tanto:
+El manejo inmediato es retirar catéter central, hemocultivos de control, meropenem IV empírico ajustado a TFG, y reanimación séptica continua.
+
+¿Por qué la opción B es la respuesta correcta?
+Retira catéter de inmediato (CLABSI), inicia meropenem empírico ajustado a TFG, continúa reanimación séptica, y evita vancomicina rutinaria sin indicación de Gram positivo.
 
 ¿Por qué fallan las otras opciones?
-- Mantener catéter + vancomicina + esperar antibiograma: perpetúa bacteriemia; vancomicina innecesaria.
-- Intercambio sobre guía + ceftriaxona: contraindicado en CLABSI complicada; ceftriaxona ineficaz vs BLEE.
-- Retirar catéter + pip-tazo ambulatorio 7 días: pip-tazo ineficaz vs BLEE; duración ambulatoria inadecuada en shock.
+Opción A (mantener catéter + vancomicina + esperar antibiograma): perpetúa bacteriemia; vancomicina innecesaria si solo GN.
+Opción C (intercambio sobre guía + ceftriaxona): contraindicado en CLABSI complicada; ceftriaxona ineficaz vs BLEE.
+Opción D (retirar catéter + pip-tazo ambulatorio 7 días): pip-tazo ineficaz vs BLEE; duración ambulatoria inadecuada en shock.
 
-Clave: UCI + fiebre + catéter + GN BLEE + choque = retira catéter + meropenem; no esperar antibiograma.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Bacteriemia en UCI" con mantener catéter y ajustar antibiótico según antibiograma.
+Pero el examen exige retirar catéter en CLABSI con choque y cubrir MDR de inmediato.
+Aquí el dato decisivo es:
+Hemocultivo del catéter 2 h antes que periférico + GN BLEE + choque = retira catéter + meropenem YA.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-CLABSI y bacteriemia por BLEE
-
-Fisiopatología:
-• Biofilm intraluminal → bacteriemia continua → sepsis.
-• Diferencial de tiempo de positividad catéter/periferia confirma CLABSI.
-
-Prioridad:
-1. Reanimación séptica.
-2. Retirar catéter (salvo excepciones muy limitadas).
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reanimación séptica (cristaloides, lactato).
+2. Retirar catéter central (salvo excepciones muy limitadas).
 3. ATB empírico MDR según institución (meropenem si BLEE).
-4. Duración según IDSA (usualmente 7–14 días según respuesta).
+4. Hemocultivos de control; duración IV según IDSA.
 
-Distractores:
-• A: Mantener catéter perpetúa bacteriemia; vancomicina innecesaria.
-• C: Intercambio sobre guía contraindicado en CLABSI complicada.
-• D: Pip-tazo ineficaz vs BLEE; duración ambulatoria inadecuada en shock.
+Perlas de examen
+✅ CLABSI + inestabilidad = retirar catéter, no intercambio sobre guía.
+✅ Crecimiento más rápido en catéter vs periférico confirma origen intraluminal.
+✅ BLEE → carbapenémico; evitar ceftriaxona/pip-tazo empírico fallido.
+✅ UCI + fiebre + catéter + GN en cultivo = retira catéter y cubre MDR.
+✅ Esperar antibiograma no es opción en choque séptico.
+✅ Vancomicina no rutinaria si preliminar solo muestra Gram negativo.
 
-Perla hospitalaria: UCI + fiebre + catéter + GN en cultivo = retira catéter y cubre MDR. Esperar antibiograma no es opción en shock.
-
-Referencias: IDSA CLABSI Guidelines; Surviving Sepsis; SHM.`,
+Referencias
+• IDSA Clinical Practice Guidelines for CLABSI.
+• Surviving Sepsis Campaign Guidelines.
+• SHM Hospital-Acquired Infection Management.`,
   },
   {
     id: "dr-q-40",
@@ -3867,58 +4023,71 @@ Referencias: IDSA CLABSI Guidelines; Surviving Sepsis; SHM.`,
     explanation:
       "FENA >1% + cilindros granulosos = NTA intrínseca. Multifactorial hospitalaria: sepsis, AINE, contraste, ACEi. Suspender nefrotóxicos y metformina (riesgo acidosis láctica si empeora). Hidratación prudente sin sobrecarga. Diálisis según criterios KDIGO. NIA menos probable (sin eosinófilos, sin fiebre/rash típico).",
     keyPoints: [
-      "FENA >1% + cilindros marrón = NTA, no prerrenal.",
-      "AKI hospitalaria suele ser multifactorial: sepsis + AINE + contraste + RAAS.",
-      "Suspender metformina en AKI (KDIGO/ADA).",
+      "Cuando veas: AKI hospitalaria con FENA >1% + cilindros granulosos marrón + múltiples nefrotóxicos.",
+      "Debes pensar en: NTA intrínseca multifactorial (sepsis + AINE + contraste + RAAS) → suspender nefrotóxicos.",
+      "FENA >1% descarta AKI prerrenal; cilindros marrón confirman NTA.",
+      "Suspender metformina en AKI (riesgo acidosis láctica; KDIGO/ADA).",
+      "Tema: AKI intrahospitalaria / nefrotoxicidad.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa AKI intrínseca multifactorial hospitalaria: FENA >1% + cilindros granulosos marrón = NTA; hay que retirar nefrotóxicos (AINE, metformina, ACEi) antes de pedir nefrología.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el diagnóstico y manejo de AKI intrínseca multifactorial en un paciente con múltiples nefrotóxicos hospitalarios.
+
+La clave no es expandir volumen agresivamente ni iniciar esteroides para NIA.
+La clave es:
+Identificar NTA multifactorial, retirar nefrotóxicos (AINE, metformina, ACEi) y monitorizar criterios de diálisis.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 63 años, día 8 por bacteriemia por E. coli sensible (ceftriaxona).
-- Oliguria 18 h, creatinina 4.2 (basal 1.0): AKI aguda severa.
-- Multifactorial: sepsis reciente + contraste yodado día 5 + ibuprofeno PRN (3 dosis/48 h) + enalapril + metformina.
-- Sedimento: cilindros granulosos marrón, eosinófilos ausentes.
-- FENA 1.8% (>1% = intrínseca); ecografía sin obstrucción.
+El paciente presenta:
+• Hombre de 63 años, día 8 por bacteriemia por E. coli sensible (ceftriaxona).
+• Oliguria 18 h, creatinina 4.2 (basal 1.0): AKI aguda severa.
+• Multifactorial: sepsis reciente + contraste yodado día 5 + ibuprofeno PRN (3 dosis/48 h) + enalapril + metformina.
+• Sedimento: cilindros granulosos marrón, eosinófilos ausentes.
+• FENA 1.8% (>1% = intrínseca); ecografía sin obstrucción.
 
-¿Qué dato es clave en el examen?
-- FENA >1% + cilindros marrón = necrosis tubular aguda (NTA), no prerrenal.
-- AKI hospitalaria suele ser multifactorial: sepsis + AINE + contraste + bloqueo RAAS.
-- Suspender metformina en AKI (riesgo acidosis láctica si empeora; KDIGO/ADA).
-- Suspender AINE y enalapril; hidratación cautelosa sin sobrecarga.
-- Diálisis si criterios KDIGO: hiperkalemia refractaria, acidosis, sobrecarga volémica, uremia sintomática.
-- NIA menos probable: sin eosinófilos, sin fiebre/rash típico; esteroides no empíricos.
+Recordemos la clasificación de AKI según KDIGO:
+• Prerrenal: FENA <1%, cilindros hialinos, responde a volumen.
+• Intrínseca (NTA): FENA >1%, cilindros granulosos marrón.
+• Postrenal: obstrucción en ecografía (descartada aquí).
+• AKI hospitalaria suele ser multifactorial: sepsis + AINE + contraste + bloqueo RAAS.
+
+Por lo tanto:
+El diagnóstico es AKI intrínseca aguda multifactorial (NTA); la conducta es suspender metformina, enalapril y AINE, hidratación cautelosa, y considerar diálisis si criterios urémicos.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica NTA multifactorial, indica suspensión de nefrotóxicos (metformina, ACEi, AINE), hidratación cautelosa con monitorización de K+ y balance, y diálisis según criterios KDIGO.
 
 ¿Por qué fallan las otras opciones?
-- NIA por ceftriaxona + esteroides + biopsia: datos insuficientes para NIA; esteroides no empíricos.
-- AKI prerrenal + SF 3 L + reiniciar ibuprofeno: FENA 1.8% descarta prerrenal; AINE empeora.
-- Obstrucción postrenal + cateterismo prioritario: ecografía descarta obstrucción.
+Opción A (NIA por ceftriaxona + esteroides + biopsia): datos insuficientes para NIA (sin eosinófilos, sin fiebre/rash); esteroides no empíricos.
+Opción C (AKI prerrenal + SF 3 L + reiniciar ibuprofeno): FENA 1.8% descarta prerrenal; AINE empeora.
+Opción D (obstrucción postrenal + cateterismo): ecografía descarta obstrucción.
 
-Clave: sepsis + contraste + AINE PRN + enalapril + metformina = AKI multifactorial → quita nefrotóxicos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Oliguria + Cr elevada post-sepsis" con AKI prerrenal y expansión agresiva.
+Pero el examen exige interpretar FENA y sedimento para distinguir prerrenal de NTA.
+Aquí el dato decisivo es:
+FENA 1.8% + cilindros granulosos marrón = NTA intrínseca, no prerrenal.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-AKI intrahospitalaria multifactorial (KDIGO)
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Calcular FENA y revisar sedimento urinario.
+2. Identificar y retirar nefrotóxicos (AINE, metformina, ACEi).
+3. Hidratación cautelosa sin sobrecarga.
+4. Diálisis si hiperkalemia refractaria, acidosis, sobrecarga o uremia sintomática.
 
-Fisiopatología:
-• Sepsis → hipoperfusión renal + toxinas.
-• AINE + ACEi → ↓ perfusión glomerular.
-• Contraste → NTA adicional en paciente vulnerable.
+Perlas de examen
+✅ FENA >1% + cilindros marrón = NTA, no prerrenal.
+✅ AKI hospitalaria suele ser multifactorial: sepsis + AINE + contraste + RAAS.
+✅ Suspender metformina en AKI (riesgo acidosis láctica; KDIGO/ADA).
+✅ Sepsis + contraste + AINE PRN + enalapril = AKI garantizada → quita nefrotóxicos.
+✅ NIA requiere eosinófilos, rash o fiebre; no esteroides empíricos.
+✅ Ecografía normal descarta postrenal; cateterismo no prioritario.
 
-Prioridad:
-1. Identificar y retirar nefrotóxicos (AINE, metformina, ACEi si hipotensión).
-2. Optimizar perfusión sin sobrecarga (sepsis resuelta).
-3. Monitorizar electrolitos/diuresis.
-4. Diálisis si indicaciones (K+, acidez, sobrecarga, uremia).
-
-Distractores:
-• A: NIA requiere más datos (eosinófilos, rash, fiebre); esteroides no empíricos.
-• C: FENA 1.8% no es prerrenal; AINE empeora.
-• D: Ecografía sin obstrucción descarta postrenal.
-
-Perla hospitalaria: Sepsis + contraste + AINE PRN + enalapril = AKI garantizada. Quita nefrotóxicos antes de pedir nefrología.
-
-Referencias: KDIGO AKI Guidelines; SHM; ACP Hospital Medicine.`,
+Referencias
+• KDIGO Clinical Practice Guideline for Acute Kidney Injury.
+• SHM Hospital Medicine Nephrotoxicity Guidelines.
+• ACP Hospital Medicine AKI Management.`,
   },
   {
     id: "dr-q-41",
@@ -3954,48 +4123,71 @@ Referencias: KDIGO AKI Guidelines; SHM; ACP Hospital Medicine.`,
     explanation:
       "Choque séptico con hipotensión, hiperlactatemia y disfunción orgánica: activación inmediata multidisciplinar (Code Sepsis), cristaloides balanceados, ATB IV precoz. SSC 2026: NEWS2 > qSOFA para cribado; desescalamiento condicional permitido. Coloides almidón contraindicados; norepinefrina es 1.ª línea vasopresora, no vasopresina inicial.",
     keyPoints: [
-      "SSC 2026: NEWS2 preferido sobre qSOFA para screening hospitalario.",
-      "ATB en <1 h en shock séptico; no esperar biomarcadores.",
-      "Cristaloides balanceados; coloides almidón no en sepsis.",
+      "Cuando veas: choque séptico hospitalario con hipotensión, lactato elevado y disfunción orgánica.",
+      "Debes pensar en: activación inmediata Code Sepsis con NEWS2 + cristaloides balanceados + ATB IV en <1 h.",
+      "SSC 2026: NEWS2 preferido sobre qSOFA para cribado hospitalario (mayor sensibilidad).",
+      "No retrasar ATB hasta biomarcadores; desescalamiento condicional permitido aunque cultivo negativo.",
+      "Tema: Sepsis hospitalaria / Surviving Sepsis Campaign.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa choque séptico hospitalario según Surviving Sepsis Campaign 2026: activación inmediata con NEWS2 y ATB IV en la primera hora, no esperar qSOFA ni biomarcadores.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa la conducta inmediata en choque séptico hospitalario según Surviving Sepsis Campaign 2026.
+
+La clave no es calcular qSOFA ni retrasar antibióticos hasta biomarcadores.
+La clave es:
+Activación inmediata multidisciplinar con NEWS2, reanimación hídrica temprana y ATB amplio espectro IV en la primera hora.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 75 años, día 5 por pancreatitis aguda biliar previamente estable.
-- Letargo, hipotensión (PA 85/50), taquicardia, fiebre 38.5 °C, SpO2 92%.
-- Llenado capilar 4 s, piel moteada, lactato 4.2 mmol/L, leucocitos 18,000.
-- Choque séptico de probable origen biliar/pancreático con disfunción orgánica.
+El paciente presenta:
+• Hombre de 75 años, día 5 por pancreatitis aguda biliar previamente estable.
+• Letargo, hipotensión (PA 85/50), taquicardia, fiebre 38.5 °C, SpO2 92%.
+• Llenado capilar 4 s, piel moteada, lactato 4.2 mmol/L, leucocitos 18,000.
+• Choque séptico de probable origen biliar/pancreático con disfunción orgánica.
 
-¿Qué dato es clave en el examen?
-- SSC 2026: NEWS2 preferido sobre qSOFA para cribado hospitalario (mayor sensibilidad).
-- Code Sepsis multidisciplinar + reanimación hídrica con cristaloides balanceados.
-- ATB amplio espectro IV en <1 h; desescalamiento condicional permitido aunque cultivo negativo.
-- Coloides almidón contraindicados en sepsis; norepinefrina es 1.ª línea vasopresora, no vasopresina inicial.
+Recordemos SSC 2026 para sepsis hospitalaria:
+• NEWS2 preferido sobre qSOFA para cribado (mayor sensibilidad en entorno hospitalario).
+• Code Sepsis multidisciplinar con reanimación hídrica con cristaloides balanceados.
+• ATB amplio espectro IV en <1 h en choque séptico; no esperar procalcitonina/PCR.
+• Desescalamiento condicional permitido aunque cultivo negativo.
+• Coloides almidón contraindicados; norepinefrina es 1.ª línea vasopresora.
+
+Por lo tanto:
+La conducta prioritaria es activar Code Sepsis con NEWS2, reanimación hídrica temprana, ATB IV de amplio espectro, y desescalamiento condicional posterior.
+
+¿Por qué la opción B es la respuesta correcta?
+Activa Code Sepsis con escalas sensibles (NEWS2), inicia reanimación hídrica temprana y ATB amplio espectro IV con desescalamiento condicional, alineado con SSC 2026.
 
 ¿Por qué fallan las otras opciones?
-- qSOFA + coloides: qSOFA baja sensibilidad; coloides almidón dañan riñón.
-- Retrasar ATB hasta procalcitonina/PCR: cada hora de retraso ↑ mortalidad ~8%.
-- Vasopresina periférica sin cristaloides: norepinefrina es 1.ª línea; omitir volumen en shock es error.
+Opción A (qSOFA + coloides): qSOFA tiene baja sensibilidad para cribado; coloides almidón dañan riñón en sepsis.
+Opción C (retrasar ATB hasta procalcitonina/PCR): cada hora de retraso aumenta mortalidad ~8%.
+Opción D (vasopresina periférica sin cristaloides): norepinefrina es 1.ª línea; omitir volumen en shock es error.
 
-Clave: choque séptico hospitalario = Code Sepsis + NEWS2 + cristaloides + ATB IV inmediato.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Sepsis" con qSOFA como herramienta principal de cribado.
+Pero el examen exige conocer la actualización SSC 2026 que prioriza NEWS2 en entorno hospitalario.
+Aquí el dato decisivo es:
+Choque séptico con lactato 4.2 = ATB IV inmediato, no esperar biomarcadores.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Sepsis hospitalaria · SSC 2026
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocimiento cero-demoras (NEWS2 + lactato).
+2. Activar Code Sepsis multidisciplinar.
+3. Cristaloides balanceados + ATB IV en <1 h.
+4. Vasopresores (norepinefrina 1.ª línea) si persiste hipotensión.
 
-• Choque distributivo: reconocimiento cero-demoras.
-• Code Sepsis + NEWS2 + lactato + ATB empírico IV inmediato.
-• Desescalamiento condicional aunque cultivo negativo (recomendación 2026).
+Perlas de examen
+✅ SSC 2026: NEWS2 preferido sobre qSOFA para screening hospitalario.
+✅ ATB en <1 h en choque séptico; no esperar biomarcadores.
+✅ Cristaloides balanceados; coloides almidón no en sepsis.
+✅ Desescalamiento condicional permitido aunque cultivo negativo.
+✅ Norepinefrina es 1.ª línea vasopresora, no vasopresina inicial.
+✅ Cada hora de retraso en ATB aumenta mortalidad significativamente.
 
-Distractores:
-• A: qSOFA baja sensibilidad; coloides dañan riñón.
-• C: cada hora de retraso ↑ mortalidad ~8%.
-• D: norepinefrina 1.ª línea; cristaloides no omitir en shock.
-
-Perla: qSOFA ya no es screening principal; NEWS2 + Code Sepsis + ATB en la 1.ª hora.
-
-Referencias: Surviving Sepsis Campaign 2026; SHM.`,
+Referencias
+• Surviving Sepsis Campaign Guidelines 2026.
+• SHM Sepsis Recognition and Management.
+• UpToDate: Evaluation and management of suspected sepsis in adults.`,
   },
   {
     id: "dr-q-42",
@@ -4019,46 +4211,70 @@ Referencias: Surviving Sepsis Campaign 2026; SHM.`,
     explanation:
       "pH 7.22 + pCO2 90 = acidosis respiratoria. AG = 142-(82+36)=24 (elevado) = acidosis metabólica adicional (láctica/urémica). HCO3 36 excesivo vs esperado → alcalosis metabólica superpuesta (furosemida, hipokalemia, hipocloremia). Trastorno triple clásico en paciente crítico hospitalizado.",
     keyPoints: [
-      "Siempre calcular anion gap aunque el pH sugiera trastorno respiratorio puro.",
-      "Delta gap revela alcalosis metabólica oculta cuando HCO3 está 'alto'.",
-      "Hipokalemia + Cl bajo + furosemida = alcalosis de contracción.",
+      "Cuando veas: EPOC descompensado con pH bajo, pCO2 alto, HCO3 elevado y Cl-/K+ bajos con furosemida.",
+      "Debes pensar en: trastorno ácido-base triple → calcular anion gap y delta gap siempre.",
+      "pH 7.22 + pCO2 90 = acidosis respiratoria; AG 24 = acidosis metabólica de gap elevado adicional.",
+      "HCO3 36 excesivo vs esperado (~12) → alcalosis metabólica superpuesta por furosemida.",
+      "Tema: Trastornos ácido-base triple / EPOC.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa trastorno ácido-base triple en EPOC hospitalizado: nunca te detengas en pCO2 alto — calcula anion gap y delta gap para detectar alcalosis metabólica oculta por furosemida.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa la identificación de un trastorno ácido-base triple en un paciente EPOC con furosemida crónica.
+
+La clave no es detenerse en la acidosis respiratoria pura del EPOC.
+La clave es:
+Calcular siempre anion gap y delta gap para detectar trastornos metabólicos superpuestos ocultos.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 68 años, día 3 por exacerbación EPOC GOLD D con cor pulmonale.
-- Somnolencia, mioclonías, FR 10 rpm, SpO2 86% con O2 2 L/min (encefalopatía hipercápnica).
-- GSA: pH 7.22, pCO2 90, pO2 55; K+ 2.5, Cl- 82, HCO3 36.
-- Furosemida crónica + hipokalemia + hipocloremia: trastorno triple superpuesto.
+La paciente presenta:
+• Mujer de 68 años, día 3 por exacerbación EPOC GOLD D con cor pulmonale.
+• Somnolencia, mioclonías, FR 10 rpm, SpO2 86% con O2 2 L/min (encefalopatía hipercápnica).
+• GSA: pH 7.22, pCO2 90, pO2 55; K+ 2.5, Cl- 82, HCO3 36.
+• Furosemida crónica + hipokalemia + hipocloremia: trastorno triple superpuesto.
 
-¿Qué dato es clave en el examen?
-- pH 7.22 + pCO2 90 = acidosis respiratoria (aguda sobre crónica en EPOC).
-- Anion gap = 142 - (82 + 36) = 24 → acidosis metabólica de gap elevado (láctica/urémica).
-- HCO3 36 es excesivo vs esperado (~12 con pCO2 90) → alcalosis metabólica superpuesta (furosemida, contracción).
-- Delta gap revela alcalosis oculta cuando HCO3 parece "compensado".
+Recordemos la interpretación de trastornos triples:
+• pH 7.22 + pCO2 90 = acidosis respiratoria (aguda sobre crónica en EPOC).
+• Anion gap = 142 - (82 + 36) = 24 → acidosis metabólica de gap elevado (láctica/urémica).
+• HCO3 36 es excesivo vs esperado (~12 con pCO2 90) → alcalosis metabólica superpuesta (furosemida, contracción).
+• Delta gap revela alcalosis oculta cuando HCO3 parece "compensado".
+
+Por lo tanto:
+El diagnóstico es trastorno triple: acidosis respiratoria aguda sobre crónica + alcalosis metabólica por furosemida + acidosis metabólica de anion gap elevado.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica correctamente los tres componentes: acidosis respiratoria, alcalosis metabólica hipoclorémica por diuréticos, y acidosis metabólica de gap elevado (AG 24).
 
 ¿Por qué fallan las otras opciones?
-- Acidosis respiratoria pura: error novato — ignorar electrolitos y anion gap.
-- Acidosis metabólica hiperclorémica: Cl está bajo (82), no alto; el gap está elevado.
-- Alcalosis metabólica primaria: el pH está ácido (7.22), no alcalino.
+Opción A (acidosis respiratoria pura): error novato al ignorar electrolitos y anion gap.
+Opción C (acidosis metabólica hiperclorémica): Cl está bajo (82), no alto; el gap está elevado.
+Opción D (alcalosis metabólica primaria): el pH está ácido (7.22), no alcalino.
 
-Clave: EPOC + furosemida + pH 7.22 + pCO2 90 = calcula SIEMPRE anion gap → trastorno triple.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"EPOC + pCO2 alto" con acidosis respiratoria pura y se detienen ahí.
+Pero el examen exige calcular anion gap y correlacionar con diuréticos y electrolitos.
+Aquí el dato decisivo es:
+HCO3 36 con pCO2 90 (esperado ~12) + AG 24 + Cl- 82 + K+ 2.5 = trastorno triple.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-Trastorno ácido-base triple
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar trastorno respiratorio (pH + pCO2).
+2. Calcular anion gap SIEMPRE.
+3. Comparar HCO3 observado vs esperado (delta gap).
+4. Correlacionar con medicamentos (furosemida) y contexto clínico.
 
-1. Acidosis respiratoria (pCO2 90, pH bajo).
-2. AG 24 → acidosis metabólica de gap alto.
-3. HCO3 36 cuando debería ser ~12 → alcalosis metabólica superpuesta.
+Perlas de examen
+✅ Siempre calcular anion gap aunque el pH sugiera trastorno respiratorio puro.
+✅ Delta gap revela alcalosis metabólica oculta cuando HCO3 está "alto".
+✅ Hipokalemia + Cl bajo + furosemida = alcalosis de contracción superpuesta.
+✅ EPOC + furosemida + pH 7.22 + pCO2 90 = calcula SIEMPRE anion gap.
+✅ pH 7.40 puede ocultar trastornos opuestos que se cancelan.
+✅ Encefalopatía hipercápnica explica somnolencia y mioclonías.
 
-Distractores:
-• A: Error novato — detenerse en EPOC sin electrolitos ni AG.
-
-Perla: pH 7.40 puede ocultar trastornos opuestos. Calcula SIEMPRE el anion gap.
-
-Referencias: ACP acid-base; SHM critical care.`,
+Referencias
+• ACP Acid-Base Disorders Guidelines.
+• SHM Critical Care Acid-Base Management.
+• UpToDate: Simple and mixed acid-base disorders.`,
   },
   {
     id: "dr-q-43",
@@ -4086,43 +4302,71 @@ Referencias: ACP acid-base; SHM critical care.`,
     explanation:
       "IDSA: usar criterios clínicos solos para decidir inicio de ATB, no sTREM-1 en BAL. HAP no-VAP: cultivos no invasivos (esputo espontáneo/inducido) preferidos sobre broncoscopia agresiva. ATB empírico precoz (cefepime/pip-tazo) y desescalar a 72 h.",
     keyPoints: [
-      "HAP: clínica + Rx > biomarcadores invasivos para decidir ATB.",
-      "Procalcitonina útil para suspender, no para negar inicio en sepsis respiratoria.",
-      "Cultivo no invasivo + ATB empírico rápido.",
+      "Cuando veas: fiebre + tos purulenta + infiltrado alveolar nuevo en paciente hospitalizado no ventilado.",
+      "Debes pensar en: HAP no ventilatoria → ATB empírico por criterios clínicos-radiológicos + cultivo no invasivo.",
+      "IDSA: criterios clínicos + Rx deciden inicio de ATB; no sTREM-1 en BAL ni procalcitonina para negar inicio.",
+      "Mortalidad aumenta si se retrasa ATB; desescalar a 72 h según antibiograma.",
+      "Tema: Neumonía asociada a atención en salud (HAP).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa neumonía asociada a atención en salud (HAP) no ventilatoria: IDSA manda ATB empírico por criterios clínicos-radiológicos, no esperar sTREM-1 en BAL ni procalcitonina para iniciar.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el abordaje de HAP no ventilatoria según guías IDSA/ATS.
+
+La clave no es diferir antibióticos hasta BAL con sTREM-1 ni procalcitonina.
+La clave es:
+Iniciar ATB empírico antipseudomónico por criterios clínicos-radiológicos y guiar con cultivos no invasivos.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 72 años, día 6 post-colecistectomía por tumor de colon.
-- Fiebre 39 °C, tos purulenta, desaturación.
-- Rx: infiltrado alveolar basal derecho nuevo (consolidación hospitalaria).
-- HAP no asociada a ventilador mecánico.
+El paciente presenta:
+• Hombre de 72 años, día 6 post-colecistectomía por tumor de colon.
+• Fiebre 39 °C, tos purulenta, desaturación.
+• Rx: infiltrado alveolar basal derecho nuevo (consolidación hospitalaria).
+• HAP no asociada a ventilador mecánico.
 
-¿Qué dato es clave en el examen?
-- IDSA HAP/VAP: usar criterios clínicos + radiológicos para decidir inicio de ATB, no sTREM-1 en BAL.
-- Mortalidad ↑ si se retrasa ATB; empírico antipseudomónico (cefepime/pip-tazo) y desescalar a 72 h.
-- Cultivos no invasivos preferidos: esputo espontáneo/inducido sobre broncoscopia agresiva.
-- Procalcitonina útil para suspender ATB, no para negar inicio en sepsis respiratoria clara.
+Recordemos las guías IDSA/ATS para HAP/VAP:
+• Usar criterios clínicos + radiológicos para decidir inicio de ATB, no sTREM-1 en BAL.
+• Mortalidad aumenta si se retrasa ATB; empírico antipseudomónico (cefepime/pip-tazo).
+• Cultivos no invasivos preferidos: esputo espontáneo/inducido sobre broncoscopia agresiva.
+• Procalcitonina útil para suspender ATB, no para negar inicio en sepsis respiratoria clara.
+• Desescalar a 72 h según antibiograma.
+
+Por lo tanto:
+La recomendación es ATB empírico por criterios clínicos-radiológicos, guiado con muestras respiratorias no invasivas (esputo) según protocolo local.
+
+¿Por qué la opción B es la respuesta correcta?
+Inicia ATB empírico basado en criterios clínicos-radiológicos y obtiene cultivos no invasivos (esputo) antes/después de la primera dosis, alineado con IDSA.
 
 ¿Por qué fallan las otras opciones?
-- BAL con sTREM-1 antes de ATB: sTREM-1 no recomendado vs juicio clínico; retrasa tratamiento.
-- ATB solo si procalcitonina >0.5: no negar inicio en paciente febril con infiltrado nuevo.
-- Profilaxis con fluoroquinolonas en todo post-op: no es profilaxis estándar; genera resistencia.
+Opción A (BAL con sTREM-1 antes de ATB): sTREM-1 no recomendado vs juicio clínico; retrasa tratamiento mortal.
+Opción C (ATB solo si procalcitonina >0.5): no negar inicio en paciente febril con infiltrado nuevo y desaturación.
+Opción D (profilaxis con fluoroquinolonas en todo post-op): no es profilaxis estándar; genera resistencia.
 
-Clave: HAP = clínica + Rx > biomarcadores → esputo + ATB empírico antipseudomónico → desescalar 72 h.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Neumonía hospitalaria" con broncoscopia invasiva y biomarcadores antes de antibióticos.
+Pero el examen exige priorizar criterios clínicos y no retrasar ATB empírico.
+Aquí el dato decisivo es:
+Fiebre + infiltrado nuevo + desaturación post-op = HAP → ATB empírico YA, esputo para guiar.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-HAP · IDSA
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar HAP con criterios clínicos + Rx (infiltrado nuevo).
+2. Obtener cultivo no invasivo (esputo) si es posible.
+3. ATB empírico antipseudomónico sin demora.
+4. Desescalar a 72 h según antibiograma.
 
-• Mortalidad ↑ si ATB retrasa.
-• sTREM-1 en BAL no recomendado vs juicio clínico.
-• Esputo no invasivo + empírico antipseudomónico → desescalar 72 h.
+Perlas de examen
+✅ HAP: clínica + Rx > biomarcadores invasivos para decidir ATB.
+✅ sTREM-1 en BAL no recomendado vs juicio clínico (IDSA).
+✅ Procalcitonina útil para suspender, no para negar inicio en sepsis respiratoria.
+✅ Mortalidad aumenta si ATB se retrasa en HAP.
+✅ Cultivo no invasivo + ATB empírico rápido → desescalar 72 h.
+✅ Profilaxis con fluoroquinolonas en todo post-op no es estándar.
 
-Perla: HAP = clínica > biomarcadores. Cultiva esputo, dispara ATB, desescala con antibiograma.
-
-Referencias: IDSA/ATS HAP-VAP Guidelines.`,
+Referencias
+• IDSA/ATS Guidelines for HAP and VAP.
+• SHM Hospital-Acquired Pneumonia Management.
+• UpToDate: Treatment of hospital-acquired and ventilator-associated pneumonia.`,
   },
   {
     id: "dr-q-44",
@@ -4146,44 +4390,70 @@ Referencias: IDSA/ATS HAP-VAP Guidelines.`,
     explanation:
       "KDIGO 2026 formaliza AKD: alteración renal funcional/estructural 7–90 días post-AKI. ERC requiere >90 días. Cr estancada 2.1 con diuresis conservada = fase subaguda post-isquémica, no prerrenal (fluidos empeorarían congestión). Seguimiento nefrológico y deprescripción nefrotóxica.",
     keyPoints: [
+      "Cuando veas: día 18 post-AKI severo con creatinina estancada y diuresis conservada.",
+      "Debes pensar en: AKD (enfermedad renal aguda 7–90 días post-AKI) → seguimiento estrecho y evitar nefrotóxicos.",
       "AKI <7 días; AKD 7–90 días; ERC >90 días.",
-      "AKD = ventana crítica para prevenir ERC.",
-      "No sobrecargar con volumen en daño estructural subagudo.",
+      "No es prerrenal: fluidos empeorarían congestión; es daño estructural subagudo post-isquémico.",
+      "Tema: Transición AKI → AKD / KDIGO 2026.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la transición AKI → AKD según KDIGO 2026: creatinina estancada en día 18 no es prerrenal ni ERC — es enfermedad renal aguda subaguda que requiere protección nefronas restantes.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa la transición AKI → AKD según KDIGO 2026 en un sobreviviente de sepsis con daño renal persistente.
+
+La clave no es clasificar como ERC ni tratar como falla prerrenal con expansión volémica.
+La clave es:
+Reconocer AKD como fase subaguda post-AKI que requiere protección nefronas restantes y seguimiento estrecho.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 58 años, día 18 post-pielonefritis enfisematosa y choque séptico.
-- AKI KDIGO 3 al ingreso (Cr pico 4.5, oliguria); infección resuelta.
-- Diuresis 1.5 L/día pero Cr estancada 2.1 mg/dL (TFGe 35) durante 1 semana.
-- Cr basal 0.8: riñón no ha normalizado pese a diuresis conservada.
+El paciente presenta:
+• Hombre de 58 años, día 18 post-pielonefritis enfisematosa y choque séptico.
+• AKI KDIGO 3 al ingreso (Cr pico 4.5, oliguria); infección resuelta.
+• Diuresis 1.5 L/día pero Cr estancada 2.1 mg/dL (TFGe 35) durante 1 semana.
+• Cr basal 0.8: riñón no ha normalizado pese a diuresis conservada.
 
-¿Qué dato es clave en el examen?
-- KDIGO 2026 formaliza AKD: alteración renal 7–90 días post-AKI.
-- AKI <7 días; AKD 7–90 días; ERC >90 días.
-- AKD = ventana crítica para prevenir cronicidad (fibrosis/inflamación temprana).
-- No es prerrenal: fluidos empeorarían congestión; es daño estructural subagudo post-isquémico.
-- Seguimiento nefrológico + deprescripción nefrotóxicos al egreso.
+Recordemos la clasificación KDIGO 2026:
+• AKI: alteración renal aguda <7 días.
+• AKD (Acute Kidney Disease): alteración renal funcional/estructural 7–90 días post-AKI.
+• ERC: alteración persistente >90 días.
+• AKD = ventana crítica para prevenir cronicidad (fibrosis/inflamación temprana).
+
+Por lo tanto:
+El diagnóstico es enfermedad renal aguda (AKD) en fase subaguda post-isquémica; la conducta es seguimiento estrecho y evitar nefrotóxicos por riesgo de cronicidad.
+
+¿Por qué la opción C es la respuesta correcta?
+Identifica AKD como continuo entre AKI y ERC (7–90 días), indica seguimiento estrecho y evitar nefrotóxicos por riesgo de progresión a ERC.
 
 ¿Por qué fallan las otras opciones?
-- ERC estadio 3b + fístula AV: requiere >90 días; es demasiado pronto.
-- Falla prerrenal + albúmina/critaloides hasta Cr 0.8: diuresis conservada descarta prerrenal; sobrecarga empeora.
-- AKI persistente hasta 6 meses: AKD formalmente es 7–90 días.
+Opción A (ERC estadio 3b + fístula AV): requiere >90 días de alteración persistente; es demasiado pronto en día 18.
+Opción B (falla prerrenal + albúmina/critaloides hasta Cr 0.8): diuresis conservada descarta prerrenal; sobrecarga empeora.
+Opción D (AKI persistente hasta 6 meses): AKD formalmente es 7–90 días según KDIGO 2026.
 
-Clave: día 18 post-AKI severo + Cr estancada + diuresis OK = AKD → protege nefronas, no sobrecargues volumen.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Creatinina aún elevada con diuresis normal" con falla prerrenal que requiere más volumen.
+Pero el examen exige distinguir AKD post-isquémica de prerrenal en día 18 post-AKI severo.
+Aquí el dato decisivo es:
+Día 18 + Cr estancada 2.1 + diuresis 1.5 L/día = AKD subaguda, no prerrenal ni ERC.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-AKI → AKD (KDIGO 2026)
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Clasificar según tiempo: AKI (<7 d), AKD (7–90 d), ERC (>90 d).
+2. AKD = ventana crítica para prevenir cronicidad.
+3. No sobrecargar con volumen en daño estructural subagudo.
+4. Deprescripción nefrotóxicos + seguimiento nefrológico al egreso.
 
-• Riñón post-séptico no normaliza de inmediato.
-• AKD: puente inflamación/fibrosis temprana.
-• Prohibir AINEs; ajustar fármacos; control ambulatorio.
+Perlas de examen
+✅ AKI <7 días; AKD 7–90 días; ERC >90 días.
+✅ AKD = ventana crítica para prevenir ERC.
+✅ Sobreviviente AKI severo en día 18 con Cr alta = AKD, no curado.
+✅ Diuresis conservada no descarta daño estructural persistente.
+✅ No sobrecargar con volumen en AKD post-isquémica.
+✅ Prohibir AINEs; ajustar fármacos; control ambulatorio nefrológico.
 
-Perla: Sobreviviente AKI severo en día 18 con Cr alta = AKD, no curado. Protege nefronas restantes.
-
-Referencias: KDIGO AKI/AKD 2026 update.`,
+Referencias
+• KDIGO Clinical Practice Guideline for AKI and AKD 2026 Update.
+• SHM Post-AKI Care Guidelines.
+• UpToDate: Definition and staging of acute kidney injury in adults.`,
   },
   {
     id: "dr-q-45",
@@ -4207,43 +4477,71 @@ Referencias: KDIGO AKI/AKD 2026 update.`,
     explanation:
       "CHEST: margen para observación exclusiva en TEP subsegmentario aislado, paciente estable, bajo riesgo clínico, Doppler negativo. Anticoagulación post-op reciente: riesgo sangrado puede superar beneficio. Filtro VCI solo con TVP proximal + contraindicación absoluta a AC.",
     keyPoints: [
-      "No todo TEP en TAC exige anticoagulación automática.",
-      "Subsegmentario + estable + sin TVP = observación seleccionada.",
-      "Trombólisis contraindicada en TEP subsegmentario estable.",
+      "Cuando veas: TEP subsegmentario aislado en paciente estable post-operatorio con Doppler EEII negativo.",
+      "Debes pensar en: observación clínica estrecha sin anticoagulación sistémica según CHEST.",
+      "No todo defecto en angioTAC exige anticoagulación automática.",
+      "Anticoagulación post-op reciente: riesgo sangrado puede superar beneficio en TEP pequeño.",
+      "Tema: TEP subsegmentario incidental / CHEST.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa TEP subsegmentario incidental según CHEST: no todo defecto en angioTAC obliga anticoagulación — estable + subsegmentario + Doppler negativo puede observarse.
+Esta es una pregunta clásica de medicina hospitalaria porque evalúa el abordaje de TEP subsegmentario incidental en un paciente estable post-operatorio según guías CHEST.
+
+La clave no es anticoagular automáticamente todo TEP detectado en angioTAC.
+La clave es:
+Estratificar riesgo clínico; en subsegmentario aislado, estable, sin TVP proximal, la observación es opción válida.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 45 años, día 5 post-colecistectomía complicada con íleo paralítico.
-- Dolor pleurítico leve al deambular; FC 80, SpO2 96%, hemodinámicamente estable.
-- AngioTAC: defecto subsegmentario aislado en LID; sin sobrecarga de VD.
-- Doppler EEII negativo bilateral: sin TVP proximal.
+La paciente presenta:
+• Mujer de 45 años, día 5 post-colecistectomía complicada con íleo paralítico.
+• Dolor pleurítico leve al deambular; FC 80, SpO2 96%, hemodinámicamente estable.
+• AngioTAC: defecto subsegmentario aislado en LID; sin sobrecarga de VD.
+• Doppler EEII negativo bilateral: sin TVP proximal.
 
-¿Qué dato es clave en el examen?
-- CHEST: margen para observación en TEP subsegmentario aislado, paciente estable, bajo riesgo clínico.
-- Tomógrafos de alta resolución ↑ diagnósticos de microembolia incidental.
-- Anticoagulación post-op reciente: riesgo sangrado puede superar beneficio en TEP pequeño.
-- Filtro VCI solo con TVP proximal + contraindicación absoluta a AC, no como profilaxis.
+Recordemos las guías CHEST para TEP subsegmentario:
+• Tomógrafos de alta resolución aumentan diagnósticos de microembolia incidental.
+• Margen para observación en TEP subsegmentario aislado, paciente estable, bajo riesgo clínico.
+• Sin TVP proximal en Doppler: menor beneficio de anticoagulación.
+• Anticoagulación post-op reciente: riesgo sangrado puede superar beneficio en TEP pequeño.
+• Filtro VCI solo con TVP proximal + contraindicación absoluta a AC, no como profilaxis.
+
+Por lo tanto:
+El abordaje de máxima calidad es observación clínica estrecha sin anticoagulación sistémica, dado TEP subsegmentario aislado, estabilidad hemodinámica y Doppler negativo.
+
+¿Por qué la opción C es la respuesta correcta?
+Aplica el margen CHEST para observación exclusiva en TEP subsegmentario aislado con paciente estable, bajo riesgo clínico y sin TVP proximal.
 
 ¿Por qué fallan las otras opciones?
-- HBPM puente a warfarina: anticoagulación automática no indicada en subsegmentario estable sin TVP.
-- Filtro de vena cava: contraindicación relativa post-cirugía no justifica filtro sin TVP proximal.
-- Trombólisis sistémica: contraindicada en TEP subsegmentario hemodinámicamente estable.
+Opción A (HBPM puente a warfarina): anticoagulación automática no indicada en subsegmentario estable sin TVP.
+Opción B (filtro de vena cava): contraindicación relativa post-cirugía no justifica filtro sin TVP proximal.
+Opción D (trombólisis sistémica): contraindicada en TEP subsegmentario hemodinámicamente estable.
 
-Clave: TEP subsegmentario + estable + Doppler (-) + post-op reciente = observación estrecha, no AC a ciegas.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Cualquier TEP en TAC" con anticoagulación terapéutica obligatoria.
+Pero el examen exige estratificar según tamaño, estabilidad hemodinámica y presencia de TVP.
+Aquí el dato decisivo es:
+Subsegmentario aislado + estable + Doppler (-) + post-op reciente = observación, no AC a ciegas.
 
-MEDICINA HOSPITALARIA — BY DR Q.
-TEP subsegmentario incidental (CHEST)
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar TEP con angioTAC y evaluar extensión (segmentario vs subsegmentario).
+2. Evaluar estabilidad hemodinámica y sobrecarga de VD.
+3. Doppler EEII para descartar TVP proximal.
+4. Decidir anticoagulación vs observación según CHEST.
 
-• Tomógrafos de alta resolución ↑ diagnósticos de microembolia.
-• Estable + subsegmentario + Doppler (-) = observación posible.
-• Filtro VCI: TVP proximal + AC contraindicada, no profilaxis.
+Perlas de examen
+✅ No todo TEP en TAC exige anticoagulación automática.
+✅ Subsegmentario + estable + sin TVP = observación seleccionada (CHEST).
+✅ TEP subsegmentario aislado + piernas limpias + estable = observar.
+✅ Anticoagulación post-op reciente: balance sangrado vs beneficio en TEP pequeño.
+✅ Filtro VCI: TVP proximal + AC contraindicada, no profilaxis.
+✅ Trombólisis contraindicada en TEP subsegmentario estable.
 
-Perla: TEP subsegmentario aislado + piernas limpias + estable = observar, no anticoagular a ciegas.
-
-Referencias: CHEST VTE Guidelines.`,
+Referencias
+• CHEST Antithrombotic Therapy for VTE Disease Guidelines.
+• SHM VTE Management in Hospitalized Patients.
+• UpToDate: Treatment of acute pulmonary embolism in adults.`,
   },
   {
     id: "dr-q-46",
