@@ -79,6 +79,16 @@ function mapDocToAdminRecord(
   let createdAtIso: string | undefined;
   if (createdAt instanceof Timestamp) {
     createdAtIso = createdAt.toDate().toISOString();
+  } else if (typeof createdAt === "string") {
+    createdAtIso = createdAt;
+  }
+
+  const updatedAt = data.updatedAt;
+  let updatedAtIso: string | undefined;
+  if (updatedAt instanceof Timestamp) {
+    updatedAtIso = updatedAt.toDate().toISOString();
+  } else if (typeof updatedAt === "string") {
+    updatedAtIso = updatedAt;
   }
 
   return {
@@ -102,6 +112,7 @@ function mapDocToAdminRecord(
     reviewedBy: data.reviewedBy ? String(data.reviewedBy) : undefined,
     source: (data.source as QuestionSource) ?? "manual",
     createdAt: createdAtIso,
+    updatedAt: updatedAtIso,
     theoryUrl: data.theoryUrl ? String(data.theoryUrl) : undefined,
     theoryContent: data.theoryContent ? String(data.theoryContent) : undefined,
   };

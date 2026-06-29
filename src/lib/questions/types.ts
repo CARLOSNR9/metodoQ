@@ -47,6 +47,7 @@ export type QuestionAdminRecord = TrainingQuestion & {
   firestoreId: string;
   inFirestore: boolean;
   createdAt?: string;
+  updatedAt?: string;
 };
 
 export type TrainingMode = "training" | "diagnostico" | "simulacro" | "daily-pill";

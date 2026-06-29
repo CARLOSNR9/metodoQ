@@ -21,6 +21,17 @@ function getCreatedAtSortKey(question: QuestionAdminRecord, order: CreatedAtSort
   return ms;
 }
 
+function formatAdminQuestionDate(iso: string | undefined): string | null {
+  if (!iso) return null;
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString("es-CO", {
+    day: "numeric",
+    month: "short",
+    year: "2-digit",
+  });
+}
+
 export function AdminQuestionsPreviewPanel({
   questions,
   reportedQuestionIds = [],
@@ -150,20 +161,23 @@ export function AdminQuestionsPreviewPanel({
                         isActive ? "bg-mq-accent/10" : "hover:bg-white/[0.03]"
                       }`}
                     >
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="font-mono text-xs font-bold text-mq-accent">
-                          {question.id}
-                        </span>
-                        {!hasTheory && (
-                          <span className="rounded-full bg-amber-500/15 px-2 py-0.5 text-[10px] font-bold uppercase text-amber-200">
-                            Sin píldora
+                      <div className="flex flex-wrap items-start justify-between gap-2">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="font-mono text-xs font-bold text-mq-accent">
+                            {question.id}
                           </span>
-                        )}
-                        {reportedSet.has(question.id) && (
-                          <span className="rounded-full bg-rose-500/15 px-2 py-0.5 text-[10px] font-bold uppercase text-rose-200">
-                            Reportada
-                          </span>
-                        )}
+                          {!hasTheory && (
+                            <span className="rounded-full bg-amber-500/15 px-2 py-0.5 text-[10px] font-bold uppercase text-amber-200">
+                              Sin píldora
+                            </span>
+                          )}
+                          {reportedSet.has(question.id) && (
+                            <span className="rounded-full bg-rose-500/15 px-2 py-0.5 text-[10px] font-bold uppercase text-rose-200">
+                              Reportada
+                            </span>
+                          )}
+                        </div>
+                        <QuestionAdminDates question={question} />
                       </div>
                       <span className="font-medium text-white">{question.topic}</span>
                       <p className="line-clamp-2 text-sm text-mq-muted">{question.statement}</p>
@@ -207,6 +221,20 @@ export function AdminQuestionsPreviewPanel({
         </section>
       </div>
     </>
+  );
+}
+
+function QuestionAdminDates({ question }: { question: QuestionAdminRecord }) {
+  const created = formatAdminQuestionDate(question.createdAt);
+  const updated = formatAdminQuestionDate(question.updatedAt);
+
+  if (!created && !updated) return null;
+
+  return (
+    <div className="shrink-0 text-right text-[10px] leading-snug text-mq-muted/75">
+      {created ? <p>Creada {created}</p> : null}
+      {updated ? <p>Mod. {updated}</p> : null}
+    </div>
   );
 }
 
