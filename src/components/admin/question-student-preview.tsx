@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { BookOpen, ClipboardList, Eye } from "lucide-react";
 import { QuestionCard } from "@/components/demo/question-card";
+import { ReportQuestionButton } from "@/components/admin/report-question-button";
 import { TheoryContent } from "@/components/study/theory-content";
 import type { QuestionAdminRecord } from "@/lib/questions/types";
 import { cn } from "@/lib/utils";
@@ -12,6 +13,7 @@ type PreviewTab = "training" | "study-note";
 type QuestionStudentPreviewProps = {
   question: QuestionAdminRecord;
   className?: string;
+  isReported?: boolean;
 };
 
 function firstWrongOptionId(question: QuestionAdminRecord): string {
@@ -19,7 +21,11 @@ function firstWrongOptionId(question: QuestionAdminRecord): string {
   return wrong?.id ?? "A";
 }
 
-export function QuestionStudentPreview({ question, className }: QuestionStudentPreviewProps) {
+export function QuestionStudentPreview({
+  question,
+  className,
+  isReported = false,
+}: QuestionStudentPreviewProps) {
   const [tab, setTab] = useState<PreviewTab>("training");
   const [answerMode, setAnswerMode] = useState<"correct" | "incorrect">("correct");
 
@@ -48,11 +54,20 @@ export function QuestionStudentPreview({ question, className }: QuestionStudentP
               <p className="mt-1 text-sm text-mq-muted">{question.examArea}</p>
             ) : null}
           </div>
-          <div className="rounded-lg border border-mq-accent/30 bg-mq-accent/10 px-3 py-2 text-right">
-            <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
-              Código
-            </p>
-            <p className="font-mono text-sm font-bold text-mq-accent">{question.id}</p>
+          <div className="flex flex-col items-end gap-2">
+            <div className="rounded-lg border border-mq-accent/30 bg-mq-accent/10 px-3 py-2 text-right">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+                Código
+              </p>
+              <p className="font-mono text-sm font-bold text-mq-accent">{question.id}</p>
+            </div>
+            <ReportQuestionButton
+              questionId={question.id}
+              topic={question.topic}
+              theoryCharCount={trimmedTheory ? trimmedTheory.length : null}
+              initiallyReported={isReported}
+              variant="compact"
+            />
           </div>
         </div>
 
@@ -124,7 +139,11 @@ export function QuestionStudentPreview({ question, className }: QuestionStudentP
           />
         </div>
       ) : (
-        <StudyNotePreview question={question} theoryContent={trimmedTheory} />
+        <StudyNotePreview
+          question={question}
+          theoryContent={trimmedTheory}
+          isReported={isReported}
+        />
       )}
     </div>
   );
@@ -133,9 +152,11 @@ export function QuestionStudentPreview({ question, className }: QuestionStudentP
 function StudyNotePreview({
   question,
   theoryContent,
+  isReported = false,
 }: {
   question: QuestionAdminRecord;
   theoryContent?: string;
+  isReported?: boolean;
 }) {
   if (!theoryContent) {
     return (
@@ -155,9 +176,17 @@ function StudyNotePreview({
   return (
     <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#071428] shadow-[0_32px_120px_-24px_rgb(0_209_255/0.25)]">
       <div className="border-b border-white/10 bg-gradient-to-br from-mq-accent/15 via-transparent to-indigo-500/10 px-5 py-5 sm:px-7">
-        <p className="text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
-          Mi Estudio · nota guardada
-        </p>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <p className="text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
+            Mi Estudio · nota guardada
+          </p>
+          <ReportQuestionButton
+            questionId={question.id}
+            topic={question.topic}
+            theoryCharCount={theoryContent.length}
+            initiallyReported={isReported}
+          />
+        </div>
         <h4 className="mt-2 text-xl font-black text-white">{question.topic}</h4>
         {question.examArea ? (
           <p className="mt-1 text-sm text-mq-muted">{question.examArea}</p>

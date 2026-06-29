@@ -7,9 +7,13 @@ import type { QuestionAdminRecord } from "@/lib/questions/types";
 
 type Props = {
   questions: QuestionAdminRecord[];
+  reportedQuestionIds?: string[];
 };
 
-export function AdminQuestionsPreviewPanel({ questions }: Props) {
+export function AdminQuestionsPreviewPanel({
+  questions,
+  reportedQuestionIds = [],
+}: Props) {
   const [search, setSearch] = useState("");
   const [bankFilter, setBankFilter] = useState<"all" | "dr-q">("dr-q");
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -33,6 +37,8 @@ export function AdminQuestionsPreviewPanel({ questions }: Props) {
       return haystack.includes(term);
     });
   }, [questions, search, bankFilter]);
+
+  const reportedSet = useMemo(() => new Set(reportedQuestionIds), [reportedQuestionIds]);
 
   const selected =
     filtered.find((question) => question.id === selectedId) ??
@@ -109,6 +115,11 @@ export function AdminQuestionsPreviewPanel({ questions }: Props) {
                             Sin píldora
                           </span>
                         )}
+                        {reportedSet.has(question.id) && (
+                          <span className="rounded-full bg-rose-500/15 px-2 py-0.5 text-[10px] font-bold uppercase text-rose-200">
+                            Reportada
+                          </span>
+                        )}
                       </div>
                       <span className="font-medium text-white">{question.topic}</span>
                       <p className="line-clamp-2 text-sm text-mq-muted">{question.statement}</p>
@@ -135,7 +146,10 @@ export function AdminQuestionsPreviewPanel({ questions }: Props) {
               >
                 <X className="h-5 w-5" />
               </button>
-              <QuestionStudentPreview question={selected} />
+              <QuestionStudentPreview
+                question={selected}
+                isReported={reportedSet.has(selected.id)}
+              />
             </div>
           ) : (
             <div className="flex min-h-[420px] flex-col items-center justify-center rounded-xl border border-dashed border-white/10 px-6 text-center">

@@ -38,6 +38,11 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
+    // Preguntas reportadas por admin (solo servidor / Admin SDK)
+    match /question_reports/{reportId} {
+      allow read, write: if false;
+    }
+
     // Eventos de analítica (cliente)
     match /analytics_events/{eventId} {
       allow create: if isSignedIn();

@@ -3,16 +3,22 @@ import {
   adminListQuestionsForReview,
   enrichAdminRecordsForPreview,
 } from "@/lib/server/questions-admin";
+import { adminGetReportedQuestionIds } from "@/lib/server/question-reports-admin";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminQuestionsPreviewPage() {
   let questions: Awaited<ReturnType<typeof enrichAdminRecordsForPreview>> = [];
+  let reportedQuestionIds: string[] = [];
   let loadError = "";
 
   try {
-    const listed = await adminListQuestionsForReview();
+    const [listed, reportedIds] = await Promise.all([
+      adminListQuestionsForReview(),
+      adminGetReportedQuestionIds().catch(() => new Set<string>()),
+    ]);
     questions = enrichAdminRecordsForPreview(listed);
+    reportedQuestionIds = [...reportedIds];
   } catch (error) {
     console.error("admin questions preview", error);
     loadError =
@@ -35,7 +41,10 @@ export default async function AdminQuestionsPreviewPage() {
           {loadError}
         </p>
       ) : null}
-      <AdminQuestionsPreviewPanel questions={questions} />
+      <AdminQuestionsPreviewPanel
+        questions={questions}
+        reportedQuestionIds={reportedQuestionIds}
+      />
     </>
   );
 }
