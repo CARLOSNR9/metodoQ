@@ -1,14 +1,25 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search, X } from "lucide-react";
+import { ArrowDown, ArrowUp, Search, X } from "lucide-react";
 import { QuestionStudentPreview } from "@/components/admin/question-student-preview";
 import type { QuestionAdminRecord } from "@/lib/questions/types";
+import { cn } from "@/lib/utils";
 
 type Props = {
   questions: QuestionAdminRecord[];
   reportedQuestionIds?: string[];
 };
+
+type CreatedAtSort = "newest" | "oldest";
+
+function getCreatedAtSortKey(question: QuestionAdminRecord, order: CreatedAtSort): number {
+  const ms = question.createdAt ? new Date(question.createdAt).getTime() : null;
+  if (ms === null || Number.isNaN(ms)) {
+    return order === "newest" ? Number.NEGATIVE_INFINITY : Number.POSITIVE_INFINITY;
+  }
+  return ms;
+}
 
 export function AdminQuestionsPreviewPanel({
   questions,
@@ -17,6 +28,7 @@ export function AdminQuestionsPreviewPanel({
   const [search, setSearch] = useState("");
   const [bankFilter, setBankFilter] = useState<"all" | "dr-q">("dr-q");
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [createdAtSort, setCreatedAtSort] = useState<CreatedAtSort>("newest");
 
   const filtered = useMemo(() => {
     const term = search.trim().toLowerCase();
@@ -38,9 +50,20 @@ export function AdminQuestionsPreviewPanel({
     });
   }, [questions, search, bankFilter]);
 
+  const sorted = useMemo(() => {
+    const items = [...filtered];
+    items.sort((a, b) => {
+      const aKey = getCreatedAtSortKey(a, createdAtSort);
+      const bKey = getCreatedAtSortKey(b, createdAtSort);
+      return createdAtSort === "newest" ? bKey - aKey : aKey - bKey;
+    });
+    return items;
+  }, [filtered, createdAtSort]);
+
   const reportedSet = useMemo(() => new Set(reportedQuestionIds), [reportedQuestionIds]);
 
   const selected =
+    sorted.find((question) => question.id === selectedId) ??
     filtered.find((question) => question.id === selectedId) ??
     questions.find((question) => question.id === selectedId) ??
     null;
@@ -83,17 +106,38 @@ export function AdminQuestionsPreviewPanel({
 
       <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
         <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised shadow-xl">
-          <p className="border-b border-white/10 px-5 py-3 text-sm text-mq-muted">
-            {filtered.length} pregunta{filtered.length === 1 ? "" : "s"}
+        <div className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-3">
+          <p className="text-sm text-mq-muted">
+            {sorted.length} pregunta{sorted.length === 1 ? "" : "s"}
           </p>
+          <div className="flex items-center gap-1.5">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+              Creadas
+            </span>
+            <SortArrowButton
+              active={createdAtSort === "oldest"}
+              onClick={() => setCreatedAtSort("oldest")}
+              label="Más antiguas primero"
+            >
+              <ArrowUp className="h-3.5 w-3.5" />
+            </SortArrowButton>
+            <SortArrowButton
+              active={createdAtSort === "newest"}
+              onClick={() => setCreatedAtSort("newest")}
+              label="Más nuevas primero"
+            >
+              <ArrowDown className="h-3.5 w-3.5" />
+            </SortArrowButton>
+          </div>
+        </div>
 
-          {filtered.length === 0 ? (
+          {sorted.length === 0 ? (
             <p className="px-5 py-10 text-center text-sm text-mq-muted">
               No hay preguntas con este filtro.
             </p>
           ) : (
             <ul className="max-h-[70vh] divide-y divide-white/5 overflow-y-auto">
-              {filtered.map((question) => {
+              {sorted.map((question) => {
                 const isActive = selectedId === question.id;
                 const hasTheory = Boolean(question.theoryContent?.trim() || question.theoryUrl);
 
@@ -163,6 +207,36 @@ export function AdminQuestionsPreviewPanel({
         </section>
       </div>
     </>
+  );
+}
+
+function SortArrowButton({
+  active,
+  onClick,
+  label,
+  children,
+}: {
+  active: boolean;
+  onClick: () => void;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      title={label}
+      aria-label={label}
+      aria-pressed={active}
+      className={cn(
+        "inline-flex h-7 w-7 items-center justify-center rounded-md border transition",
+        active
+          ? "border-mq-accent/50 bg-mq-accent/15 text-mq-accent"
+          : "border-white/10 text-mq-muted hover:border-white/20 hover:text-white",
+      )}
+    >
+      {children}
+    </button>
   );
 }
 
