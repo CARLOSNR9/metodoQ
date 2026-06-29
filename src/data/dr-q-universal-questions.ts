@@ -5869,42 +5869,70 @@ Referencias
     explanation:
       "PAMPs → TLR-4 → NF-κB → citoquinas → iNOS → NO masivo → vasorelajación vía GMPc. Peroxinitrito/citoquinas destruyen glicocálix y cadherinas VE → fuga capilar. ScvO2 alta por shunt microvascular (flujo rápido, extracción baja). Extremidades calientes = vasoplejía.",
     keyPoints: [
-      "Choque séptico = enfermedad del endotelio.",
-      "iNOS >> eNOS; destrucción glicocálix altera Starling.",
-      "ScvO2 alta no siempre = hipoperfusión en vasoplejía.",
+      "Cuando veas: choque séptico + extremidades calientes + anasarca rápida + GC alto + ScvO2 elevada.",
+      "Debes pensar en: citoquinas (TNF-α, IL-1) → iNOS → NO tóxico + daño glicocálix → vasoplejía y fuga capilar simultáneas.",
+      "Choque séptico = enfermedad del endotelio; iNOS >> eNOS.",
+      "ScvO2 alta no siempre indica hipoperfusión: puede ser shunt microvascular con extracción baja.",
+      "Tema: sepsis / vasoplejía / daño glicocálix endotelial.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la fisiopatología molecular del choque séptico: vasoplejía y fuga capilar simultáneas se explican por citoquinas → iNOS → NO tóxico + destrucción del glicocálix endotelial.
+Esta es una pregunta clásica de fisiopatología / UCI porque evalúa el mecanismo molecular que explica vasoplejía y fuga capilar simultáneas en choque séptico.
+
+La clave no es histamina, toxinas bacterianas ni acidosis láctica como causa primaria.
+La clave es:
+Citoquinas (TNF-α, IL-1) → iNOS → NO tóxico + daño glicocálix y uniones estrechas → vasoplejía y fuga capilar.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 65 años, choque séptico por neumonía multilobar.
-- PA 70/40, extremidades calientes, pulsos saltones (vasoplejía, no frío).
-- Anasarca en 12 h con balance +2 L (fuga capilar masiva).
-- Eco: VI hiperdinámico FEVI 75%, GC 8 L/min; ScvO2 82% (shunt microvascular).
+El paciente presenta:
+• Hombre de 65 años, choque séptico por neumonía multilobar.
+• PA 70/40, extremidades calientes, pulsos saltones (vasoplejía caliente, no choque frío).
+• Anasarca en 12 h con balance +2 L (fuga capilar masiva).
+• Eco: VI hiperdinámico FEVI 75%, GC 8 L/min; ScvO2 82% (shunt microvascular).
 
-¿Qué dato es clave en el examen?
-- PAMPs → TLR-4 → NF-κB → citoquinas (TNF-α, IL-1) → iNOS → NO masivo → vasorelajación vía GMPc.
-- Peroxinitrito/citoquinas destruyen glicocálix y cadherinas VE → fuga capilar (altera Starling).
-- Choque séptico = enfermedad del endotelio, no solo hipovolemia.
-- ScvO2 alta no siempre = hipoperfusión; puede ser flujo rápido con extracción baja (shunt microvascular).
-- Extremidades calientes = vasoplejía (iNOS >> eNOS).
+Recordemos fisiopatología del choque séptico:
+• PAMPs → TLR-4 → NF-κB → citoquinas (TNF-α, IL-1) → iNOS → NO masivo → vasorelajación vía GMPc.
+• Peroxinitrito/citoquinas destruyen glicocálix y cadherinas VE → fuga capilar (altera Starling).
+• Choque séptico = enfermedad del endotelio, no solo hipovolemia.
+• ScvO2 alta no siempre = hipoperfusión; puede ser flujo rápido con extracción baja.
+
+Por lo tanto:
+El mecanismo molecular primario es citoquinas → iNOS → NO tóxico + daño glicocálix endotelial.
+
+¿Por qué la opción B es la respuesta correcta?
+Integra la cascada inflamatoria séptica (citoquinas → iNOS → NO) con destrucción del glicocálix y uniones estrechas, explicando vasoplejía caliente y edema masivo simultáneos.
 
 ¿Por qué fallan las otras opciones?
-- Histamina por mastocitos: mecanismo de anafilaxia, no explica vasoplejía + fuga capilar masiva en sepsis.
-- Toxina bloquea Na+/K+ ATPasa: no es el mecanismo principal de sepsis bacteriana.
-- Acidosis láctica bloquea α-1 + hipoalbuminemia: la hipoalbuminemia agrava edema pero no explica vasoplejía caliente.
+Opción A (histamina por mastocitos): mecanismo de anafilaxia, no explica vasoplejía + fuga capilar masiva en sepsis.
+Opción C (toxina bloquea Na+/K+ ATPasa): no es el mecanismo principal de sepsis bacteriana.
+Opción D (acidosis láctica bloquea α-1 + hipoalbuminemia): la hipoalbuminemia agrava edema pero no explica vasoplejía caliente.
 
-Clave: sepsis + extremidades calientes + anasarca + GC alto = iNOS + daño glicocálix → vasoplejía + fuga capilar.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Choque = extremidades frías y vasoconstricción."
+Pero en sepsis avanzada predomina vasoplejía con extremidades calientes y GC alto.
+Aquí el dato decisivo es:
+Extremidades calientes + anasarca rápida + GC 8 L/min = iNOS + glicocálix destruido, no choque hipovolémico frío.
 
-FISIOPATOLOGÍA — BY DR Q.
-Sepsis · vasoplejía y fuga capilar
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. PAMPs activan TLR-4 → NF-κB → citoquinas.
+2. Citoquinas inducen iNOS → NO tóxico → vasoplejía vía GMPc.
+3. Peroxinitrito/citoquinas destruyen glicocálix → fuga capilar masiva.
+4. ScvO2 alta puede reflejar shunt microvascular, no oxigenación adecuada.
 
-Cadena: PAMPs → TLR-4 → TNF/IL-1 → iNOS → NO + daño glicocálix → vasoplejía + edema.
+Perlas de examen
+✅ Choque séptico = enfermedad del endotelio.
+✅ iNOS >> eNOS; extremidades calientes = vasoplejía.
+✅ Glicocálix destruido convierte capilares en coladores (altera Starling).
+✅ ScvO2 alta no siempre = hipoperfusión en vasoplejía.
+✅ GC alto + PA baja = vasoplejía, no hipovolemia pura.
+✅ Sepsis + anasarca rápida = fuga capilar por daño endotelial.
 
-Perla: iNOS dilata vasos; glicocálix destruido convierte capilares en coladores.
-
-Referencias: Surviving Sepsis; endothelial dysfunction literature.`,
+Referencias
+• Surviving Sepsis Campaign Guidelines.
+• UpToDate: Pathophysiology of sepsis.
+• Critical Care Reviews: Endothelial dysfunction in sepsis.`,
   },
   {
     id: "dr-q-62",
@@ -5928,42 +5956,71 @@ Referencias: Surviving Sepsis; endothelial dysfunction literature.`,
     explanation:
       "SDRA: alvéolos llenos de exudado (V=0) con perfusión intacta (Q normal) = shunt verdadero. FiO2 100% satura Hb en zonas ventiladas pero no oxigena sangre del shunt; PaO2 final permanece baja. Solución: PEEP recluta alvéolos, no más O2.",
     keyPoints: [
-      "PaO2 no corrige con FiO2 100% = shunt verdadero.",
-      "V/Q=0: perfusión sin ventilación.",
-      "Espacio muerto → hipercapnia, no hipoxemia refractaria severa.",
+      "Cuando veas: SDRA + hipoxemia severa + FiO2 100% con PaO2 que apenas sube (+5 mmHg).",
+      "Debes pensar en: shunt intrapulmonar verdadero (V/Q=0): alvéolos inundados perfundidos.",
+      "PaO2 no corrige con FiO2 100% = shunt verdadero, no defecto de difusión.",
+      "Solución: PEEP recluta alvéolos, no más oxígeno.",
+      "Tema: SDRA / shunt V/Q=0 / hipoxemia refractaria.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa shunt intrapulmonar verdadero en SDRA: hipoxemia que no corrige con FiO2 100% indica V/Q=0 (perfusión sin ventilación), no defecto de difusión.
+Esta es una pregunta clásica de fisiopatología / neumología porque evalúa la explicación de hipoxemia refractaria al oxígeno en SDRA.
+
+La clave no es espacio muerto, defecto de difusión puro ni efecto Bohr inverso.
+La clave es:
+Shunt intrapulmonar verdadero (V/Q=0): alvéolos inundados perfundidos; sangre venosa no oxigenada se mezcla con la arterial.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 45 años, SDRA post-pancreatitis severa; Rx pulmón blanco.
-- GSA ambiente: PaO2 45; FiO2 100% 30 min: PaO2 50 mmHg (+5 mmHg apenas).
-- Cianosis, crépitos difusos: alvéolos inundados de exudado.
+La paciente presenta:
+• Mujer de 45 años, SDRA post-pancreatitis severa; Rx pulmón blanco.
+• GSA ambiente: pH 7.48, PaCO2 30, PaO2 45.
+• FiO2 100% 30 min: PaO2 50 mmHg (+5 mmHg apenas).
+• Cianosis, crépitos difusos: alvéolos inundados de exudado.
 
-¿Qué dato es clave en el examen?
-- PaO2 no corrige con FiO2 100% = shunt verdadero (V/Q=0).
-- SDRA: alvéolos llenos de exudado (V=0) con perfusión intacta (Q normal).
-- Sangre venosa no oxigenada se mezcla con arterial → PaO2 final permanece baja.
-- FiO2 100% satura Hb en zonas ventiladas pero no oxigena sangre del shunt.
-- Solución: PEEP recluta alvéolos, no más oxígeno.
+Recordemos fisiología V/Q en SDRA:
+• SDRA: alvéolos llenos de exudado (V=0) con perfusión intacta (Q normal) = shunt verdadero.
+• FiO2 100% satura Hb en zonas ventiladas pero no oxigena sangre del shunt.
+• PaO2 final permanece baja porque sangre venosa se mezcla con arterial.
+• Espacio muerto (V/Q infinito) causa hipercapnia, no hipoxemia refractaria severa.
+• Solución: PEEP recluta alvéolos colapsados, no más oxígeno.
+
+Por lo tanto:
+La hipoxemia refractaria se explica por shunt intrapulmonar verdadero (V/Q=0).
+
+¿Por qué la opción B es la respuesta correcta?
+Describe perfusión sin ventilación en alvéolos inundados: la sangre pasa sin oxigenarse y se mezcla con la arterial, sin corrección con FiO2 alta.
 
 ¿Por qué fallan las otras opciones?
-- Espacio muerto (V/Q infinito): causa hipercapnia, no hipoxemia refractaria severa.
-- Defecto de difusión puro: mejora parcialmente con FiO2 alta; aquí PaO2 sube solo +5.
-- Efecto Bohr inverso: no explica hipoxemia refractaria en SDRA.
+Opción A (↑ espacio muerto V/Q infinito): causa hipercapnia, no hipoxemia refractaria severa.
+Opción C (defecto de difusión puro): mejora parcialmente con FiO2 alta; aquí PaO2 sube solo +5 mmHg.
+Opción D (efecto Bohr inverso): no explica hipoxemia refractaria en SDRA.
 
-Clave: hipoxemia refractaria a FiO2 100% = shunt verdadero → PEEP, no más oxígeno.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Hipoxemia refractaria = subir más FiO2."
+Pero en shunt verdadero el oxígeno no llega a la sangre del shunt; más O2 no corrige PaO2.
+Aquí el dato decisivo es:
+FiO2 100% con PaO2 que sube solo +5 mmHg = shunt verdadero → PEEP, no más oxígeno.
 
-FISIOPATOLOGÍA — BY DR Q.
-Shunt verdadero en SDRA
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. SDRA → exudado alveolar → V=0 con Q mantenida.
+2. Sangre venosa no oxigenada se mezcla con arterial → PaO2 baja.
+3. FiO2 100% no corrige shunt verdadero.
+4. PEEP recluta unidades colapsadas y reduce shunt.
 
-• Exudado alveolar → V=0, Q mantenida → mezcla venosa-arterial.
-• O2 puro no corrige shunt; PEEP recluta unidades colapsadas.
+Perlas de examen
+✅ PaO2 no corrige con FiO2 100% = shunt verdadero.
+✅ V/Q=0: perfusión sin ventilación.
+✅ Espacio muerto → hipercapnia, no hipoxemia refractaria severa.
+✅ Defecto de difusión mejora parcialmente con FiO2 alta.
+✅ Hipoxemia refractaria a FiO2 100% = shunt; usa PEEP.
+✅ Más oxígeno no sirve en shunt verdadero masivo.
 
-Perla: Hipoxemia refractaria a FiO2 100% = shunt. Más oxígeno no sirve; usa PEEP.
-
-Referencias: West V/Q physiology; ARDSNet.`,
+Referencias
+• West: Respiratory Physiology — The Essentials (V/Q relationships).
+• ARDSNet Protocol.
+• UpToDate: Pathophysiology and diagnosis of ARDS.`,
   },
   {
     id: "dr-q-63",
@@ -5991,42 +6048,70 @@ Referencias: West V/Q physiology; ARDSNet.`,
     explanation:
       "Hipovolemia: riñón dilata aferente (PG) y constriñe eferente (Ang II) para mantener TFG. AINE bloquea PG → aferente constriñida. Losartán bloquea Ang II → eferente dilatada. Sin entrada y salida abierta → presión glomerular ~0 → AKI prerrenal (FENa <1%).",
     keyPoints: [
-      "Aferente = Prostaglandinas (A-A). Eferente = Angiotensina (E-E).",
-      "Triple whammy: AINE + IECA/ARA II + diurético en hipovolemia.",
-      "FENa bajo = túbulos intactos, fallo hemodinámico.",
+      "Cuando veas: diarrea + deshidratación + ibuprofeno + losartán + Cr que sube rápido + FENa <1%.",
+      "Debes pensar en: triple whammy — AINE cierra aferente (PG) y ARA II abre eferente → colapso presión intraglomerular.",
+      "Aferente = Prostaglandinas (A-A). Eferente = Angiotensina II (E-E).",
+      "FENa bajo = túbulos intactos, fallo hemodinámico prerrenal.",
+      "Tema: triple whammy / autorregulación glomerular / AKI prerrenal.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa triple whammy y colapso de autorregulación glomerular: AINE cierra aferente (prostaglandinas) y losartán abre eferente (Ang II) → presión intraglomerular ~0 en hipovolemia.
+Esta es una pregunta clásica de fisiopatología / nefrología porque evalúa cómo los fármacos colapsan la autorregulación glomerular en hipovolemia.
+
+La clave no es nefritis intersticial, efectos diuréticos de losartán ni inversión de la fisiología aferente/eferente.
+La clave es:
+AINE bloquea prostaglandinas (↓ dilatación aferente); ARA II bloquea vasoconstricción eferente → colapso presión intraglomerular.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 75 años, diarrea 3 días + ibuprofeno + losartán; deshidratado PA 90/60.
-- Cr 1.1→4.8 en 72 h; Na urinario <10, FENa <1% (AKI prerrenal).
-- Hipovolemia activa mecanismos de rescate renal que ambos fármacos bloquean.
+El paciente presenta:
+• Hombre de 75 años, diarrea 3 días + ibuprofeno + losartán; deshidratado PA 90/60.
+• Cr 1.1→4.8 en 72 h; BUN 120, Na urinario <10, FENa <1%.
+• Hipovolemia activa mecanismos de rescate renal que ambos fármacos bloquean.
 
-¿Qué dato es clave en el examen?
-- Autorregulación: aferente = prostaglandinas (dilatación); eferente = angiotensina II (constricción).
-- Hipovolemia: riñón dilata aferente (PG) y constriñe eferente (Ang II) para mantener TFG.
-- AINE bloquea PG → aferente constriñida; losartán bloquea Ang II → eferente dilatada.
-- Sin entrada ni salida abierta → presión glomerular ~0 → anuria.
-- Triple whammy: AINE + IECA/ARA II + diurético en hipovolemia.
+Recordemos autorregulación glomerular:
+• Aferente = prostaglandinas (dilatación); eferente = angiotensina II (constricción).
+• Hipovolemia: riñón dilata aferente (PG) y constriñe eferente (Ang II) para mantener TFG.
+• AINE bloquea PG → aferente constriñida; losartán bloquea Ang II → eferente dilatada.
+• Sin entrada ni salida abierta → presión glomerular ~0 → anuria.
+• Triple whammy: AINE + IECA/ARA II + diurético en hipovolemia.
+
+Por lo tanto:
+Los fármacos colapsan la autorregulación cerrando la aferente y abriendo la eferente → AKI prerrenal.
+
+¿Por qué la opción B es la respuesta correcta?
+Describe el mecanismo fisiológico exacto: AINE impide dilatación aferente por PG y losartán impide constricción eferente por Ang II → caída de presión intraglomerular.
 
 ¿Por qué fallan las otras opciones?
-- AINE vasoconstrictor eferente + ARA II dilata aferente: invierte la fisiología real.
-- Nefritis intersticial: FENa bajo y Na urinario <10 descartan NTA/NIA.
-- Losartán inhibe ADH + ibuprofeno diurético: no es el mecanismo de AKI aguda.
+Opción A (AINE vasoconstrictor eferente + ARA II dilata aferente): invierte la fisiología real.
+Opción C (nefritis intersticial): FENa bajo y Na urinario <10 descartan NTA/NIA.
+Opción D (losartán inhibe ADH + ibuprofeno diurético): no es el mecanismo de AKI aguda hemodinámica.
 
-Clave: deshidratación + AINE + losartán = cierra entrada y abre salida → AKI prerrenal con FENa <1%.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"AINE daña riñón por nefritis intersticial."
+Pero con FENa <1% y Na urinario <10 el fallo es hemodinámico prerrenal, no tubular.
+Aquí el dato decisivo es:
+Deshidratación + AINE + losartán + FENa <1% = cierra entrada y abre salida → AKI prerrenal.
 
-FISIOPATOLOGÍA — BY DR Q.
-Autorregulación glomerular · triple whammy
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Hipovolemia activa PG (aferente) y Ang II (eferente) para mantener TFG.
+2. AINE bloquea PG → aferente constriñida.
+3. Losartán bloquea Ang II → eferente dilatada.
+4. Presión intraglomerular ~0 → AKI prerrenal con FENa <1%.
 
-• Hipovolemia activa PG (aferente) y Ang II (eferente).
-• AINE + losartán bloquean ambas vías de rescate.
+Perlas de examen
+✅ Aferente = Prostaglandinas (A-A). Eferente = Angiotensina (E-E).
+✅ AINE cierra entrada; IECA/ARA II abren salida.
+✅ Triple whammy: AINE + IECA/ARA II + diurético en hipovolemia.
+✅ FENa bajo = túbulos intactos, fallo hemodinámico.
+✅ En deshidratación = anuria si bloqueas ambas vías de rescate.
+✅ Na urinario <10 + FENa <1% descartan NTA.
 
-Perla: AINE cierra entrada; IECA/ARA II abren salida. En deshidratación = anuria.
-
-Referencias: KDIGO; nephrology physiology texts.`,
+Referencias
+• KDIGO Clinical Practice Guideline for Acute Kidney Injury.
+• UpToDate: NSAIDs and nephrotoxicity.
+• Brenner & Rector: The Kidney — Glomerular hemodynamics.`,
   },
   {
     id: "dr-q-64",
@@ -6050,41 +6135,70 @@ Referencias: KDIGO; nephrology physiology texts.`,
     explanation:
       "CAD: déficit total K+ masivo (diuresis osmótica) enmascarado por acidosis (H+ entra, K+ sale) e insulopenia. K+ 5.2 es espejismo. Insulina → Na+/K+ ATPasa → K+ plasmático colapsa en minutos. ADA: no insulina si K+ <3.3; reponer K+ antes/durante.",
     keyPoints: [
-      "K+ normal-alto en CAD = déficit corporal total.",
-      "Insulina desplaza K+ intracelular en minutos.",
-      "Nunca insulina sin asegurar K+ si <5.2 con acidosis.",
+      "Cuando veas: CAD severa + K+ aparentemente normal-alto + insulina iniciada → FV por hipokalemia en minutos.",
+      "Debes pensar en: paradoja del potasio — déficit corporal masivo enmascarado por acidosis e insulopenia.",
+      "K+ normal-alto en CAD = déficit corporal total; insulina desplaza K+ intracelular en minutos.",
+      "Nunca insulina sin asegurar K+ si ≤5.2 con acidosis (ADA: no insulina si K+ <3.3).",
+      "Tema: CAD / paradoja del potasio / Na+/K+ ATPasa.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la paradoja del potasio en CAD: K+ sérico 5.2 enmascara déficit corporal masivo — insulina activa Na+/K+ ATPasa y puede causar FV por hipokalemia en 30 min.
+Esta es una pregunta clásica de fisiopatología / endocrinología porque evalúa el mecanismo de caída catastrófica del potasio tras insulina en CAD.
+
+La clave no es pseudohiperkalemia hemolítica, ROMK/aldosterona en 30 min ni corrección rápida de pH por canales miocárdicos.
+La clave es:
+K+ sérico falsamente normal por intercambio H+/K+ y déficit corporal total por diuresis osmótica; insulina activa Na+/K+ ATPasa secuestrando K+ intracelular.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 22 años, debut DM1, CAD severa (pH 7.05, HCO3 5, AG 26).
-- K+ 5.2 mEq/L aparentemente normal; insulina 0.1 U/kg/h iniciada.
-- 30 min después: FV por K+ 1.8 mEq/L (caída catastrófica).
+El paciente presenta:
+• Hombre de 22 años, debut DM1, CAD severa (pH 7.05, HCO3 5, AG 26).
+• K+ 5.2 mEq/L aparentemente normal; insulina 0.1 U/kg/h iniciada.
+• 30 min después: FV por K+ 1.8 mEq/L (caída catastrófica).
 
-¿Qué dato es clave en el examen?
-- CAD: déficit total K+ masivo (diuresis osmótica) enmascarado por acidosis (H+ entra celula, K+ sale) e insulopenia.
-- K+ 5.2 en CAD es espejismo; déficit corporal puede ser 300–600 mEq.
-- Insulina → Na+/K+ ATPasa → K+ plasmático colapsa en minutos.
-- ADA: no insulina si K+ <3.3; reponer K+ antes/durante si ≤5.2 con acidosis.
-- Acidosis corrige parcialmente K+ al subir pH, pero insulina lo desplaza más rápido.
+Recordemos paradoja del potasio en CAD:
+• CAD: déficit total K+ masivo (diuresis osmótica) enmascarado por acidosis (H+ entra, K+ sale) e insulopenia.
+• K+ 5.2 en CAD es espejismo; déficit corporal puede ser 300–600 mEq.
+• Insulina → Na+/K+ ATPasa → K+ plasmático colapsa en minutos.
+• ADA: no insulina si K+ <3.3; reponer K+ antes/durante si ≤5.2 con acidosis.
+• Acidosis corrige parcialmente K+ al subir pH, pero insulina lo desplaza más rápido.
+
+Por lo tanto:
+La caída catastrófica se explica por déficit corporal enmascarado + internalización aguda de K+ por insulina vía Na+/K+ ATPasa.
+
+¿Por qué la opción A es la respuesta correcta?
+Integra el enmascaramiento del déficit (intercambio H+/K+, diuresis osmótica) con el mecanismo agudo de hipokalemia post-insulina (Na+/K+ ATPasa).
 
 ¿Por qué fallan las otras opciones?
-- Pseudohiperkalemia hemolítica: la caída post-insulina confirma déficit real, no artefacto.
-- Insulina activa ROMK y aldosterona en 30 min: el mecanismo principal es Na+/K+ ATPasa, no vía distal.
-- Insulina corrige pH rápido abriendo canales miocárdicos: no es el mecanismo de hipokalemia aguda.
+Opción B (pseudohiperkalemia hemolítica): la caída post-insulina confirma déficit real, no artefacto.
+Opción C (insulina activa ROMK y aldosterona en 30 min): el mecanismo principal es Na+/K+ ATPasa, no vía distal.
+Opción D (insulina corrige pH rápido abriendo canales miocárdicos): no es el mecanismo de hipokalemia aguda.
 
-Clave: K+ en CAD miente → si ≤5.2 con acidosis, repón K+ ANTES de insulina.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"K+ 5.2 = seguro iniciar insulina de inmediato."
+Pero en CAD el K+ sérico miente: déficit corporal masivo enmascarado por acidosis.
+Aquí el dato decisivo es:
+K+ ≤5.2 con acidosis en CAD → repón K+ ANTES de insulina; la caída puede ser letal en 30 min.
 
-FISIOPATOLOGÍA — BY DR Q.
-Paradoja del potasio en CAD
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. CAD causa déficit total K+ por diuresis osmótica.
+2. Acidosis e insulopenia enmascaran el déficit (K+ sérico falsamente normal-alto).
+3. Insulina activa Na+/K+ ATPasa → K+ intracelular en minutos.
+4. Repón K+ antes/durante insulina si ≤5.2 con acidosis; no insulina si K+ <3.3.
 
-Cadena: insulopenia + acidosis → K+ plasmático alto falso → insulina → internalización → hipokalemia letal.
+Perlas de examen
+✅ K+ normal-alto en CAD = déficit corporal total.
+✅ Insulina desplaza K+ intracelular en minutos vía Na+/K+ ATPasa.
+✅ Nunca insulina sin asegurar K+ si ≤5.2 con acidosis.
+✅ ADA: no insulina si K+ <3.3.
+✅ K+ en CAD miente — repón ANTES de insulina.
+✅ FV por hipokalemia puede ocurrir en 30 min post-insulina.
 
-Perla: K+ en CAD miente. Si ≤5.2 con acidosis, repón K+ ANTES de insulina.
-
-Referencias: ADA DKA guidelines.`,
+Referencias
+• ADA Standards of Care — Diabetic Ketoacidosis.
+• UpToDate: Treatment of diabetic ketoacidosis and hyperosmolar hyperglycemic state.
+• Harrison's Principles of Internal Medicine — Fluid and electrolyte disturbances in DKA.`,
   },
   {
     id: "dr-q-65",
@@ -6108,41 +6222,70 @@ Referencias: ADA DKA guidelines.`,
     explanation:
       "Remodelado excéntrico: radio ↑, h ↓ → estrés parietal (Laplace) ↑ → MVO2 ↑. Dilatación esferoidal estira anillo mitral y desplaza papilares → coaptación fallida → IM funcional → sobrecarga volumen (círculo vicioso). Starling en fase descendente (sarcómeras sobre-estiradas).",
     keyPoints: [
-      "Laplace: tensión = (P×r)/(2×h).",
-      "IM funcional = geometría, no valva enferma.",
-      "IECA/BB ↓ presión y radio → ↓ MVO2.",
+      "Cuando veas: HFrEF terminal + VI dilatado + pared delgada + IM funcional severa + soplo holosistólico en ápex.",
+      "Debes pensar en: Ley de Laplace (σ=P×r/2h) — ↑ radio y ↓ grosor ↑ tensión parietal/MVO2 + IM funcional por geometría.",
+      "Laplace: tensión = (P×r)/(2×h); VI esferoidal = agonía energética.",
+      "IM funcional = geometría (anillo estirado, papilares desplazados), no valva enferma.",
+      "Tema: HFrEF / Ley de Laplace / IM funcional / remodelado excéntrico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa HFrEF terminal con Ley de Laplace: VI dilatado y pared delgada ↑ tensión parietal/MVO2 y estira anillo mitral → IM funcional simultánea.
+Esta es una pregunta clásica de fisiopatología / cardiología porque evalúa el principio físico que explica ↑ consumo O2 miocárdico e IM funcional simultáneamente en HFrEF terminal.
+
+La clave no es efecto Venturi, Frank-Starling optimizador ni Poiseuille en coronarias.
+La clave es:
+Ley de Laplace (σ=P×r/2h): ↑ radio y ↓ grosor ↑ tensión parietal/MVO2; dilatación anillo mitral separa papilares → IM funcional.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 72 años, HFrEF terminal; VI dilatado (DDVI 70 mm), pared 8 mm, FEVI 20%.
-- IM funcional severa, soplo holosistólico en ápex.
-- Remodelado excéntrico: radio ↑, grosor ↓ → estrés parietal ↑ + coaptación mitral fallida.
+El paciente presenta:
+• Hombre de 72 años, HFrEF terminal; VI dilatado (DDVI 70 mm), pared 8 mm, FEVI 20%.
+• IM funcional severa, soplo holosistólico en ápex.
+• Remodelado excéntrico: radio ↑, grosor ↓ → estrés parietal ↑ + coaptación mitral fallida.
 
-¿Qué dato es clave en el examen?
-- Ley de Laplace: σ = (P×r)/(2×h); ↑ radio y ↓ grosor → tensión parietal y MVO2 ↑.
-- Dilatación esferoidal estira anillo mitral y desplaza papilares → IM funcional (geometría, no valva enferma).
-- IM funcional → sobrecarga volumen → círculo vicioso de remodelado.
-- Frank-Starling en fase descendente: sarcómeras sobre-estiradas, no optimización.
-- IECA/BB ↓ presión y radio → ↓ MVO2 y frenan remodelado.
+Recordemos Ley de Laplace y remodelado en HFrEF:
+• Ley de Laplace: σ = (P×r)/(2×h); ↑ radio y ↓ grosor → tensión parietal y MVO2 ↑.
+• Dilatación esferoidal estira anillo mitral y desplaza papilares → IM funcional (geometría, no valva enferma).
+• IM funcional → sobrecarga volumen → círculo vicioso de remodelado.
+• Frank-Starling en fase descendente: sarcómeras sobre-estiradas, no optimización.
+• IECA/BB ↓ presión y radio → ↓ MVO2 y frenan remodelado.
+
+Por lo tanto:
+Laplace explica simultáneamente el ↑ MVO2 por tensión parietal y la IM funcional por tracción papilar/anillo estirado.
+
+¿Por qué la opción C es la respuesta correcta?
+Aplica el principio físico de Laplace al VI esferoidal y delgado, vinculando ↑ tensión parietal/MVO2 con falla de coaptación mitral por geometría alterada.
 
 ¿Por qué fallan las otras opciones?
-- Efecto Venturi: no explica ↑ MVO2 ni geometría papilar.
-- Frank-Starling optimiza con estiramiento excesivo: en fase descendente empeora contracción.
-- Poiseuille en coronarias: isquemia papilar contribuye pero Laplace explica ambos fenómenos simultáneos.
+Opción A (efecto Venturi): no explica ↑ MVO2 ni geometría papilar.
+Opción B (Frank-Starling optimiza con estiramiento excesivo): en fase descendente empeora contracción.
+Opción D (Poiseuille en coronarias): isquemia papilar contribuye pero Laplace explica ambos fenómenos simultáneos.
 
-Clave: VI esferoidal y delgado = agonía energética (Laplace) + IM funcional por tracción papilar.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"IM = valvulopatía estructural primaria."
+Pero IM funcional en HFrEF es por geometría: anillo estirado y papilares desplazados, no valva enferma.
+Aquí el dato decisivo es:
+VI esferoidal (DDVI 70 mm) + pared 8 mm = Laplace → ↑ MVO2 + IM funcional simultáneos.
 
-FISIOPATOLOGÍA — BY DR Q.
-HFrEF · Laplace y IM funcional
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Remodelado excéntrico: radio ↑, grosor ↓.
+2. Laplace: ↑ tensión parietal → ↑ MVO2 (agonía energética).
+3. Dilatación esferoidal estira anillo mitral y desplaza papilares.
+4. IM funcional → sobrecarga volumen → círculo vicioso; IECA/BB frenan remodelado.
 
-• VI esferoidal → σ gigante → hambre energética + IM por tracción papilar.
+Perlas de examen
+✅ Laplace: tensión = (P×r)/(2×h).
+✅ VI esferoidal y delgado = agonía energética (Laplace).
+✅ IM funcional = geometría, no valva enferma.
+✅ Frank-Starling en fase descendente con estiramiento excesivo.
+✅ IECA/BB ↓ presión y radio → ↓ MVO2.
+✅ IM funcional → sobrecarga volumen → círculo vicioso.
 
-Perla: Corazón dilatado y delgado = agonía energética (Laplace). IECA/BB frenan remodelado.
-
-Referencias: Braunwald heart failure physiology.`,
+Referencias
+• Braunwald's Heart Disease — Heart Failure and Remodeling.
+• UpToDate: Pathophysiology of heart failure with reduced ejection fraction.
+• Otto: Functional mitral regurgitation in dilated cardiomyopathy.`,
   },
   {
     id: "dr-q-66",
@@ -6166,41 +6309,70 @@ Referencias: Braunwald heart failure physiology.`,
     explanation:
       "Stewart: pH depende de SID, pCO2, ácidos débiles. SF 0.9% (Na 154, Cl 154) SID=0 diluye SID plasmático. SID ↓ → agua se disocia → ↑ H+ → consume HCO3 → acidosis hiperclorémica con AG normal. Lactato normal descarta hipoperfusión.",
     keyPoints: [
-      "SID normal ~40 (Na-Cl gap).",
-      "SF 0.9% SID=0 → acidosis hiperclorémica iatrogénica.",
-      "Usar cristaloides balanceados (RL/Plasmalyte).",
+      "Cuando veas: 8 L SF 0.9% en 24 h + acidosis + AG aparente normal + Cl elevado + lactato normal.",
+      "Debes pensar en: acidosis hiperclorémica iatrogénica según Stewart — ↓ SID (Na-Cl) → disociación H2O → ↑ H+.",
+      "SID normal ~40 (Na-Cl gap); SF 0.9% tiene SID=0.",
+      "Usar cristaloides balanceados (RL/Plasmalyte) en reanimación masiva.",
+      "Tema: modelo Stewart / acidosis hiperclorémica / SF 0.9% iatrogénica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa acidosis hiperclorémica iatrogénica según modelo Stewart: SF 0.9% (SID=0) diluye el SID plasmático → disociación de H2O → ↑ H+ libre, con AG aparente normal.
+Esta es una pregunta clásica de fisiopatología / gasometría porque evalúa la alteración iónica primaria según el modelo Stewart tras infusión masiva de solución salina.
+
+La clave no es exceso de Cl- obligando reabsorción de H+, H+ libres exógenos del SF ni Na+ hiperactivo.
+La clave es:
+Infusión masiva ↓ SID (Na-Cl); electroneutralidad fuerza disociación H2O → ↑ H+ libre → acidosis hiperclorémica.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 40 años post-peritonitis, 8 L SF 0.9% en 24 h.
-- Euvolémica; lactato 1.2, Cr 0.9 (no hipoperfusión).
-- Na 154, Cl 126, pH 7.22, HCO3 14, AG aparente 14 (normal).
+La paciente presenta:
+• Mujer de 40 años post-peritonitis, 8 L SF 0.9% en 24 h.
+• Euvolémica; lactato 1.2, Cr 0.9 (no hipoperfusión).
+• Na 154, Cl 126, pH 7.22, HCO3 14, AG aparente 14 (normal).
 
-¿Qué dato es clave en el examen?
-- Stewart: pH depende de SID (strong ion difference), pCO2 y ácidos débiles.
-- SF 0.9% (Na 154, Cl 154) tiene SID=0; infusión masiva diluye SID plasmático (~40).
-- SID ↓ → agua se disocia → ↑ H+ → consume HCO3 → acidosis hiperclorémica con AG normal.
-- Lactato normal descarta acidosis por hipoperfusión.
-- SSC: cristaloides balanceados (RL/Plasmalyte) en reanimación.
+Recordemos modelo Stewart de equilibrio ácido-base:
+• Stewart: pH depende de SID (strong ion difference), pCO2 y ácidos débiles.
+• SF 0.9% (Na 154, Cl 154) tiene SID=0; infusión masiva diluye SID plasmático (~40).
+• SID ↓ → agua se disocia → ↑ H+ → consume HCO3 → acidosis hiperclorémica con AG normal.
+• Lactato normal descarta acidosis por hipoperfusión.
+• SSC: cristaloides balanceados (RL/Plasmalyte) en reanimación.
+
+Por lo tanto:
+La alteración iónica primaria es ↓ SID por infusión de solución con SID=0 → acidosis hiperclorémica iatrogénica.
+
+¿Por qué la opción C es la respuesta correcta?
+Describe el mecanismo Stewart completo: dilución del SID plasmático fuerza disociación de agua para mantener electroneutralidad → ↑ H+ libre → acidosis con AG normal.
 
 ¿Por qué fallan las otras opciones?
-- Exceso Cl- obliga riñón a reabsorber H+: simplificación incorrecta del mecanismo Stewart.
-- SF 0.9% aporta H+ libres in vitro: el ácido viene de disociación de agua, no de H+ exógeno.
-- Na+ hiperactiva Na+/H+ expulsa H+: no es el mecanismo de acidosis hiperclorémica.
+Opción A (exceso Cl- obliga riñón a reabsorber H+): simplificación incorrecta del mecanismo Stewart.
+Opción B (SF 0.9% aporta H+ libres in vitro): el ácido viene de disociación de agua, no de H+ exógeno.
+Opción D (Na+ hiperactiva Na+/H+ expulsa H+): no es el mecanismo de acidosis hiperclorémica.
 
-Clave: 8 L SF 0.9% + AG normal + Cl 126 = ↓ SID → acidosis hiperclorémica iatrogénica.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Acidosis con AG normal = solo acidosis tubular renal."
+Pero 8 L de SF 0.9% con Cl 126 y lactato normal = acidosis hiperclorémica iatrogénica por ↓ SID.
+Aquí el dato decisivo es:
+AG aparente 14 (normal) + Cl 126 + 8 L salina = ↓ SID, no acidosis metabólica con AG elevado.
 
-FISIOPATOLOGÍA — BY DR Q.
-Stewart · acidosis hiperclorémica
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. SF 0.9% (Na 154, Cl 154) tiene SID=0.
+2. Infusión masiva diluye SID plasmático (~40 → menor).
+3. SID ↓ → disociación de H2O → ↑ H+ libre → consume HCO3.
+4. Acidosis hiperclorémica con AG normal; usar cristaloides balanceados.
 
-Cadena: SF 0.9% → ↑ Cl → ↓ SID → disociación H2O → acidemia.
+Perlas de examen
+✅ SID normal ~40 (Na-Cl gap).
+✅ SF 0.9% SID=0 → acidosis hiperclorémica iatrogénica.
+✅ Salina "normal" no es normal para el pH.
+✅ AG normal + Cl elevado post-salina = Stewart, no hipoperfusión.
+✅ Lactato normal descarta acidosis por shock.
+✅ Usar cristaloides balanceados (RL/Plasmalyte) en reanimación masiva.
 
-Perla: Salina \"normal\" no es normal; SID cero enferma el pH.
-
-Referencias: Stewart acid-base; SSC fluid guidelines.`,
+Referencias
+• Stewart's Textbook of Acid-Base — Strong Ion Difference.
+• Surviving Sepsis Campaign — Fluid resuscitation guidelines.
+• UpToDate: Strong ion difference and acid-base disorders.`,
   },
   {
     id: "dr-q-67",
@@ -6224,41 +6396,71 @@ Referencias: Stewart acid-base; SSC fluid guidelines.`,
     explanation:
       "Relajación diastólica consume más ATP que sístole. Isquemia subendocárdica → ↓ ATP → falla SERCA2a (Ca2+ citosólico persistente) + rigor reversible → VI rígido → PTDVI ↑ → transmisión retrógrada → EAP. FEVI puede estar normal (disfunción diastólica aguda).",
     keyPoints: [
-      "Diástole es activa y ATP-dependiente.",
+      "Cuando veas: crisis HTA + EAP fulminante + infradesnivel ST + FEVI preservada (60%).",
+      "Debes pensar en: isquemia subendocárdica → ↓ ATP → falla SERCA2a → rigidez diastólica → EAP con FEVI normal.",
+      "Diástole es activa y ATP-dependiente; relajación gasta más ATP que contracción.",
       "Isquemia afecta lusitropismo antes que inotropismo.",
-      "EAP + FEVI normal = piensa disfunción diastólica isquémica.",
+      "Tema: EAP con FEVI preservada / SERCA2a / disfunción diastólica isquémica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa EAP fulminante con FEVI preservada: isquemia subendocárdica agota ATP → falla SERCA2a → rigidez diastólica → ↑ presión telediastólica → EAP sin caída de FEVI.
+Esta es una pregunta clásica de fisiopatología / cardiología porque evalúa el proceso molecular interrumpido por isquemia que colapsa la relajación diastólica con FEVI preservada.
+
+La clave no es glicólisis anaerobia bloqueando Na+ fase 0, noradrenalina prolongando potencial de acción ni citoquinas destruyendo elastina.
+La clave es:
+Isquemia depleta ATP → puentes actina-miosina no disocian y SERCA2a no reupta Ca2+ → rigidez diastólica → ↑ presión telediastólica → EAP con FEVI preservada.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 55 años, crisis HTA 200/120, EAP fulminante.
-- Infradesnivel ST V3-V6, FEVI 60% preservada.
-- Isquemia subendocárdica interrumpe relajación diastólica activa (ATP-dependiente).
+El paciente presenta:
+• Hombre de 55 años, crisis HTA 200/120, EAP fulminante.
+• Infradesnivel ST V3-V6, FEVI 60% preservada.
+• Isquemia subendocárdica interrumpe relajación diastólica activa (ATP-dependiente).
 
-¿Qué dato es clave en el examen?
-- Relajación diastólica consume más ATP que sístole.
-- Isquemia → ↓ ATP → falla SERCA2a (Ca2+ citosólico persistente) + rigor reversible.
-- VI rígido → PTDVI ↑ → transmisión retrógrada → EAP.
-- FEVI puede estar normal: disfunción diastólica aguda antes que inotropismo caiga.
-- Isquemia afecta lusitropismo antes que inotropismo.
+Recordemos disfunción diastólica isquémica aguda:
+• Relajación diastólica consume más ATP que sístole.
+• Isquemia → ↓ ATP → falla SERCA2a (Ca2+ citosólico persistente) + rigor reversible.
+• Puentes actina-miosina no disocian → VI rígido → PTDVI ↑.
+• Transmisión retrógrada de presión → EAP.
+• FEVI puede estar normal: disfunción diastólica aguda antes que inotropismo caiga.
+• Isquemia afecta lusitropismo antes que inotropismo.
+
+Por lo tanto:
+El proceso molecular interrumpido es la función de SERCA2a por depleción de ATP isquémica → rigidez diastólica → EAP con FEVI preservada.
+
+¿Por qué la opción A es la respuesta correcta?
+Integra depleción de ATP isquémica con falla de SERCA2a y rigidez diastólica, explicando EAP fulminante con FEVI aún normal.
 
 ¿Por qué fallan las otras opciones?
-- Glicólisis anaerobia bloquea Na+ fase 0: afecta contracción, no explica EAP con FEVI normal primero.
-- Noradrenalina prolonga potencial acción: no es el mecanismo de rigidez diastólica isquémica.
-- Citoquinas destruyen elastina: no es proceso instantáneo en crisis HTA aguda.
+Opción B (glicólisis anaerobia bloquea Na+ fase 0): afecta contracción, no explica EAP con FEVI normal primero.
+Opción C (noradrenalina prolonga potencial acción): no es el mecanismo de rigidez diastólica isquémica.
+Opción D (citoquinas destruyen elastina): no es proceso instantáneo en crisis HTA aguda.
 
-Clave: EAP + FEVI preservada + isquemia = falla SERCA2a → VI rígido → EAP por disfunción diastólica.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"EAP = FEVI baja siempre."
+Pero EAP fulminante con FEVI preservada indica disfunción diastólica isquémica aguda, no falla sistólica.
+Aquí el dato decisivo es:
+EAP + FEVI 60% + infradesnivel ST = isquemia apaga SERCA2a → VI rígido → EAP por disfunción diastólica.
 
-FISIOPATOLOGÍA — BY DR Q.
-EAP con FEVI preservada · isquemia
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Crisis HTA → ↑ demanda O2 subendocárdico → isquemia.
+2. ↓ ATP → falla SERCA2a + puentes actina-miosina no disocian.
+3. Rigidez diastólica → PTDVI ↑ → transmisión retrógrada → EAP.
+4. FEVI preservada porque inotropismo aún no colapsa (lusitropismo afectado primero).
 
-Cadena: isquemia → ↓ ATP → SERCA2a falla → VI rígido → EAP.
+Perlas de examen
+✅ Diástole es activa y ATP-dependiente.
+✅ Relajación gasta más ATP que contracción.
+✅ Isquemia afecta lusitropismo antes que inotropismo.
+✅ EAP + FEVI normal = piensa disfunción diastólica isquémica.
+✅ SERCA2a falla → Ca2+ citosólico persistente → rigidez.
+✅ Crisis HTA + EAP + FEVI preservada = isquemia subendocárdica.
 
-Perla: Relajación gasta más ATP que contracción. Isquemia apaga SERCA2a.
-
-Referencias: ACC/AHA HFpEF; ischemic diastolic dysfunction.`,
+Referencias
+• ACC/AHA Heart Failure Guidelines — HFpEF and acute decompensation.
+• Braunwald's Heart Disease — Diastolic heart failure.
+• UpToDate: Pathophysiology of diastolic dysfunction and heart failure with preserved ejection fraction.`,
   },
   {
     id: "dr-q-68",
@@ -6282,41 +6484,70 @@ Referencias: ACC/AHA HFpEF; ischemic diastolic dysfunction.`,
     explanation:
       "Interdependencia ventricular patológica: inspiración ↑ retorno al VD pero pericardio a tensión impide dilatación externa → volumen empuja septum hacia VI → ↓ precarga VI → ↓ volumen sistólico → caída PA >10 mmHg (pulso paradójico).",
     keyPoints: [
-      "Pericardio a tensión = coraza; pelea VD vs VI por volumen.",
+      "Cuando veas: taponamiento cardíaco + JVP extrema + pulso que desaparece en inspiración + septum abomba a izquierda en POCUS.",
+      "Debes pensar en: interdependencia ventricular patológica — inspiración ↑ retorno al VD pero pericardio rígido impide expansión → septum empuja VI.",
+      "Pericardio a tensión = coraza; pelea VD vs VI por volumen finito.",
       "Pulso paradójico: caída PA sistólica >10 mmHg en inspiración.",
-      "Bezold-Jarisch = bradicardia, no pulso rítmico con taquicardia.",
+      "Tema: taponamiento cardíaco / pulso paradójico / interdependencia ventricular.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa pulso paradójico en taponamiento cardíaco: inspiración ↑ retorno al VD pero pericardio rígido impide expansión → septum empuja VI → ↓ precarga y gasto sistémico.
+Esta es una pregunta clásica de fisiopatología / urgencias porque evalúa el mecanismo del pulso paradójico en taponamiento cardíaco.
+
+La clave no es succión de líquido pericárdico a pleura, colapso de aurícula izquierda ni reflejo Bezold-Jarisch.
+La clave es:
+↑ retorno venoso al VD en inspiración; pericardio rígido impide expansión externa → septum empuja VI → ↓ llenado VI → ↓ gasto sistémico.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 30 años, trauma torácico, taponamiento cardíaco.
-- PA 65/40, FC 145, JVP extrema, pulso desaparece en inspiración.
-- POCUS: derrame colapsa VD en diástole; septum abomba a izquierda en inspiración.
+El paciente presenta:
+• Hombre de 30 años, trauma torácico, taponamiento cardíaco.
+• PA 65/40, FC 145, JVP extrema, pulso desaparece en inspiración.
+• POCUS: derrame colapsa VD en diástole; septum abomba a izquierda en inspiración.
 
-¿Qué dato es clave en el examen?
-- Interdependencia ventricular patológica: pericardio a tensión = coraza inelástica.
-- Inspiración ↑ retorno venoso al VD; pericardio impide dilatación externa.
-- Volumen empuja septum hacia VI → ↓ precarga VI → ↓ volumen sistólico.
-- Caída PA sistólica >10 mmHg en inspiración = pulso paradójico.
-- Bezold-Jarisch = bradicardia por estímulo ventricular, no pulso paradójico con taquicardia.
+Recordemos interdependencia ventricular en taponamiento:
+• Pericardio a tensión = coraza inelástica; volumen total cardíaco fijo.
+• Inspiración ↑ retorno venoso al VD; pericardio impide dilatación externa.
+• Volumen empuja septum hacia VI → ↓ precarga VI → ↓ volumen sistólico.
+• Caída PA sistólica >10 mmHg en inspiración = pulso paradójico.
+• Bezold-Jarisch = bradicardia por estímulo ventricular, no pulso paradójico con taquicardia.
+
+Por lo tanto:
+El pulso paradójico se explica por batalla de volumen en coraza inelástica: VD gana en inspiración a costa del VI.
+
+¿Por qué la opción B es la respuesta correcta?
+Describe la interdependencia ventricular patológica: ↑ retorno al VD en inspiración sin espacio pericárdico → desplazamiento septal → ↓ llenado y gasto del VI.
 
 ¿Por qué fallan las otras opciones?
-- Inspiración succiona líquido a pleura: no explica interdependencia ventricular.
-- Presión negativa colapsa aurícula izquierda: el mecanismo es septum shift VD→VI.
-- Reflejo Bezold-Jarisch bloquea AV: causa bradicardia, no pulso paradójico.
+Opción A (inspiración succiona líquido a pleura): no explica interdependencia ventricular.
+Opción C (presión negativa colapsa aurícula izquierda): el mecanismo es septum shift VD→VI.
+Opción D (reflejo Bezold-Jarisch bloquea AV): causa bradicardia, no pulso paradójico con taquicardia.
 
-Clave: taponamiento + pulso paradójico = batalla de volumen en coraza → septum empuja VI.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Pulso paradójico = cualquier caída de pulso en inspiración sin mecanismo."
+Pero en taponamiento es interdependencia ventricular: VD se llena más y empuja septum contra VI rígido.
+Aquí el dato decisivo es:
+POCUS con septum abombando a izquierda en inspiración = batalla de volumen en coraza → pulso paradójico.
 
-FISIOPATOLOGÍA — BY DR Q.
-Taponamiento · pulso paradójico
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Taponamiento → pericardio a tensión = coraza inelástica.
+2. Inspiración ↑ retorno venoso al VD.
+3. Sin expansión externa → septum empuja VI → ↓ precarga VI.
+4. ↓ volumen sistólico → caída PA >10 mmHg = pulso paradójico.
 
-Cadena: inspiración → ↑ retorno VD → septum → VI colapsado → ↓ GC.
+Perlas de examen
+✅ Pericardio a tensión = coraza; pelea VD vs VI por volumen.
+✅ Pulso paradójico: caída PA sistólica >10 mmHg en inspiración.
+✅ Septum abomba a izquierda en inspiración en POCUS = interdependencia patológica.
+✅ Bezold-Jarisch = bradicardia, no pulso rítmico con taquicardia.
+✅ Pulso paradójico = batalla de volumen en coraza inelástica.
+✅ VD colapsado en diástole + JVP extrema = taponamiento.
 
-Perla: Pulso paradójico = batalla de volumen en coraza inelástica.
-
-Referencias: ATLS; cardiac tamponade physiology.`,
+Referencias
+• ATLS — Cardiac tamponade management.
+• UpToDate: Cardiac tamponade — Pathophysiology and clinical features.
+• Braunwald's Heart Disease — Pericardial diseases.`,
   },
   {
     id: "dr-q-69",
@@ -6340,41 +6571,70 @@ Referencias: ATLS; cardiac tamponade physiology.`,
     explanation:
       "Ca2+ extracelular blinda canales Na+ en reposo, elevando umbral de disparo. Hipocalcemia desestabiliza membrana → apertura espontánea Na+ → potenciales de acción repetitivos → tetania, Trousseau, Chvostek. Ca2+ excita menos la placa motora sin Ca presináptico (parálisis), no tetania.",
     keyPoints: [
-      "Ca2+ extracelular = estabilizador de membrana.",
-      "Hipocalcemia hiperexcita nervio periférico.",
-      "Tetania es origen neuromuscular, no placa motora.",
+      "Cuando veas: hipocalcemia post-tiroidectomía (Ca <8 mg/dL) + parestesias + Trousseau y Chvostek positivos.",
+      "Debes pensar en: Ca2+ extracelular estabiliza canales Na+ voltaje-dependientes → hipocalcemia ↓ umbral → descargas espontáneas → tetania.",
+      "Trousseau/Chvostek = hiperexcitabilidad neuromuscular periférica, no placa motora ni acumulación de ACh.",
+      "Calcio tranquiliza el nervio; sin él, canales Na+ disparan solos (tetania, no parálisis flácida).",
+      "Tema: Hipocalcemia — fisiopatología de la hiperexcitabilidad neuromuscular.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa tetania por hipocalcemia post-tiroidectomía: Ca2+ extracelular estabiliza canales Na+ voltaje-dependientes — hipocalcemia ↓ umbral → descargas espontáneas (Trousseau, Chvostek).
+Esta es una pregunta clásica de fisiopatología endocrina porque evalúa el mecanismo biofísico de la tetania por hipocalcemia post-tiroidectomía: Ca2+ extracelular estabiliza canales Na+ voltaje-dependientes, y su déficit genera hiperexcitabilidad neuromuscular.
+
+La clave no es confundir tetania con parálisis por placa motora, falla de liberación de Ca2+ en retículo o bloqueo de K+ en reposo.
+La clave es:
+Reconocer que Ca2+ extracelular blinda canales Na+ en reposo, elevando el umbral de disparo; hipocalcemia desestabiliza la membrana → apertura espontánea de Na+ → potenciales de acción repetitivos → Trousseau, Chvostek y tetania.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 35 años, 48 h post-tiroidectomía; Ca total 6.5 mg/dL.
-- Parestesias, Trousseau y Chvostek positivos.
-- Hipoparatiroidismo post-quirúrgico → ↓ PTH → ↓ Ca2+ extracelular.
+La paciente presenta:
+• Mujer de 35 años, 48 h post-tiroidectomía; Ca total 6.5 mg/dL.
+• Parestesias periféricas, signos de Trousseau y Chvostek positivos.
+• Hipoparatiroidismo post-quirúrgico → ↓ PTH → ↓ Ca2+ extracelular → hiperexcitabilidad neuromuscular.
 
-¿Qué dato es clave en el examen?
-- Ca2+ extracelular blinda canales Na+ en reposo, elevando umbral de disparo.
-- Hipocalcemia desestabiliza membrana → apertura espontánea Na+ → potenciales de acción repetitivos.
-- Tetania, Trousseau, Chvostek = hiperexcitabilidad neuromuscular periférica.
-- Ca2+ excita menos la placa motora sin Ca presináptico (parálisis), no tetania.
-- Tetania es origen nervio periférico, no placa motora ni ACh acumulada.
+Recordemos la fisiología del calcio y la excitabilidad de membrana:
+• Ca2+ extracelular se une a la superficie externa de canales Na+ voltaje-dependientes en reposo.
+• Este "blindaje" eleva el umbral de disparo y estabiliza el potencial de membrana.
+• Hipocalcemia ↓ blindaje → canales Na+ se abren con menor estímulo → descargas espontáneas.
+• Trousseau (espasmo carpopedal con manguito) y Chvostek (contracción facial) = signos clínicos de hiperexcitabilidad periférica.
+• Tetania es origen nervio periférico/muscular, no placa motora (ACh acumulada → parálisis flácida, no tetania).
+
+Por lo tanto:
+El mecanismo biofísico correcto es desestabilización de canales Na+ por hipocalcemia → hiperexcitabilidad neuromuscular con tetania.
+
+¿Por qué la opción D es la respuesta correcta?
+Describe con precisión que Ca2+ extracelular estabiliza canales Na+ voltaje-dependientes; hipocalcemia ↓ umbral → descargas espontáneas → tetania, Trousseau y Chvostek.
 
 ¿Por qué fallan las otras opciones?
-- Ca2+ activa acetilcolinesterasa: déficit causaría acumulación ACh y parálisis flácida, no tetania.
-- Falla liberación calcio en retículo: afecta contracción muscular, no hiperexcitabilidad de membrana.
-- Ca2+ bloquea K+ en reposo hiperpolarizando: mecanismo incorrecto; Ca2+ estabiliza Na+, no K+.
+Opción A (Ca2+ activa acetilcolinesterasa): déficit de AChE causaría acumulación de ACh y parálisis flácida, no tetania espástica.
+Opción B (falla liberación Ca2+ en retículo): afecta contracción muscular excitación-contracción, no hiperexcitabilidad de membrana en reposo.
+Opción C (Ca2+ bloquea K+ hiperpolarizando): mecanismo incorrecto; Ca2+ estabiliza Na+, no bloquea K+ en reposo.
 
-Clave: hipocalcemia + Trousseau/Chvostek = Ca2+ ya no estabiliza Na+ → tetania por hiperexcitabilidad.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Hipocalcemia = problemas en la placa motora o contracción muscular."
+Pero Trousseau y Chvostek son signos de hiperexcitabilidad de nervio periférico por desestabilización de Na+.
+Aquí el dato decisivo es:
+Post-tiroidectomía + Ca 6.5 + signos de Trousseau/Chvostek = tetania por ↓ estabilización de canales Na+.
 
-FISIOPATOLOGÍA — BY DR Q.
-Hipocalcemia · estabilización de membrana
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar hipocalcemia sintomática (parestesias, espasmo carpopedal, signos de Chvostek/Trousseau).
+2. Recordar que Ca2+ extracelular estabiliza canales Na+ voltaje-dependientes.
+3. Hipocalcemia → ↓ umbral de disparo → descargas espontáneas → tetania.
+4. Diferenciar de parálisis por placa motora (ACh acumulada) o falla de contracción (retículo).
 
-Cadena: ↓ PTH → ↓ Ca2+ → desprendimiento de canales Na+ → tetania.
+Perlas de examen
+✅ Ca2+ extracelular = estabilizador de membrana vía canales Na+.
+✅ Hipocalcemia → hiperexcitabilidad neuromuscular (Trousseau, Chvostek, tetania).
+✅ Tetania = origen nervio periférico, no placa motora.
+✅ Post-tiroidectomía: hipoparatiroidismo → ↓ PTH → ↓ Ca2+ en 24-48 h.
+✅ Parálisis flácida por ACh acumulada ≠ tetania espástica por hipocalcemia.
 
-Perla: Calcio tranquiliza el nervio; sin él, canales Na+ disparan solos.
-
-Referencias: Endocrine surgery complications; membrane physiology.`,
+Referencias
+• Endocrine surgery complications — hypoparathyroidism.
+• Guyton & Hall — membrane excitability and calcium.
+• Harrison's Principles of Internal Medicine — disorders of calcium metabolism.
+• UpToDate: Clinical manifestations of hypocalcemia.`,
   },
   {
     id: "dr-q-70",
@@ -6398,42 +6658,71 @@ Referencias: Endocrine surgery complications; membrane physiology.`,
     explanation:
       "Hipoxia alveolar global → VPH (cierre arteriolas pre-capilares). PEEP alto sobredistinde alvéolos → aplasta capilares intra-alveolares. RVP ↑ → VD choca contra muro → dilatación, estasis (PVC↑), PAOP baja (VI sin precarga), GC colapsa. Disociación Swan: presiones derechas altas, izquierdas bajas = bloqueo pulmonar.",
     keyPoints: [
-      "Pulmón: hipoxia vasoconstrictora (Euler-Liljestrand).",
-      "PEEP excesivo comprime capilares → ↑ RVP.",
-      "Cor pulmonale agudo: VD falla, VI muere de sed.",
+      "Cuando veas: SDRA/neumonía bilateral + PEEP alto + PVC↑ + PAOP baja + GC colapsado + VD dilatado en eco.",
+      "Debes pensar en: doble mecanismo ↑ RVP — VPH (hipoxia) + compresión capilar por PEEP → cor pulmonale agudo → ↓ precarga VI.",
+      "Disociación Swan: presiones derechas altas (PVC 22, PAP 60/30) + izquierdas bajas (PAOP 8) = bloqueo pulmonar, no falla VI primaria.",
+      "Hipoxia constriñe pulmón (Euler-Liljestrand); PEEP excesivo aplasta capilares intra-alveolares.",
+      "Tema: Cor pulmonale agudo — VPH + efecto hemodinámico del PEEP.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa cor pulmonale agudo en SDRA con PEEP alto: doble mecanismo de ↑ RVP — vasoconstricción pulmonar hipóxica (VPH) + compresión capilar por PEEP → VD dilatado colapsa precarga del VI.
+Esta es una pregunta clásica de fisiopatología hemodinámica en UCI porque evalúa cor pulmonale agudo en SDRA con PEEP alto: el doble mecanismo de ↑ RVP (vasoconstricción pulmonar hipóxica + compresión capilar por PEEP) colapsa la precarga del VI.
+
+La clave no es atribuir el shock a falla de bomba izquierda, fibrinolisis pleural o vasodilatación por hipercapnia.
+La clave es:
+Integrar VPH difusa por hipoxia alveolar global + compresión capilar por PEEP alto → ↑ RVP → VD dilatado → septum empuja VI → ↓ precarga y GC colapsado.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 50 años, neumonía bilateral Influenza A, VM PEEP 16.
-- PA 60/40; Swan-Ganz: PVC 22, PAP 60/30, PAOP 8, GC 2.0.
-- Eco: VD dilatado, septum hacia VI, VI colapsado.
-- Disociación Swan: presiones derechas altas, izquierdas bajas = bloqueo pulmonar.
+El paciente presenta:
+• Hombre de 50 años, neumonía bilateral por Influenza A, VM con PEEP 16.
+• PA 60/40; Swan-Ganz: PVC 22, PAP 60/30, PAOP 8, GC 2.0 L/min.
+• Eco: VD dilatado, septum abombado hacia VI, VI colapsado.
+• Disociación hemodinámica: presiones derechas altas, izquierdas bajas = bloqueo pulmonar.
 
-¿Qué dato es clave en el examen?
-- Hipoxia alveolar global → VPH (Euler-Liljestrand): cierre arteriolas pre-capilares.
-- PEEP alto sobredistinde alvéolos → aplasta capilares intra-alveolares → ↑ RVP adicional.
-- RVP ↑ → VD choca contra muro → dilatación, estasis (PVC↑), PAOP baja (VI sin precarga).
-- GC colapsa por falta de precarga VI, no por falla de bomba izquierda primaria.
-- Pulmón: hipoxia vasoconstrictora + PEEP excesivo comprime capilares.
+Recordemos VPH, PEEP y cor pulmonale agudo:
+• VPH (Euler-Liljestrand): hipoxia alveolar global → vasoconstricción arteriolar pre-capilar → ↑ RVP.
+• PEEP alto sobredistinde alvéolos → aplasta capilares intra-alveolares → ↑ RVP adicional.
+• RVP ↑ → VD choca contra muro pulmonar → dilatación, estasis (PVC↑), interdependencia ventricular.
+• PAOP baja (8) indica VI sin precarga, no falla de bomba izquierda primaria.
+• GC colapsa por ↓ retorno venoso al VI, no por disfunción miocárdica izquierda aislada.
+
+Por lo tanto:
+El doble mecanismo que ↑ RVP y colapsa GC es VPH difusa + compresión capilar por PEEP alto → cor pulmonale agudo con ↓ precarga VI.
+
+¿Por qué la opción B es la respuesta correcta?
+Integra ambos mecanismos (VPH por hipoxia + compresión capilar por PEEP) y explica la cascada hemodinámica: ↑ RVP → cor pulmonale agudo → ↓ precarga VI → GC colapsado.
 
 ¿Por qué fallan las otras opciones?
-- PEEP distiende VI comprimiendo VD: PEEP aumenta presión intratorácica pero aquí PAOP 8 (VI vacío).
-- Fibrinolisis licua sangre hacia pleura: no explica VPH + compresión capilar.
-- Hipercapnia dilata arteria pulmonar: la hipoxia causa vasoconstricción, no vasodilatación.
+Opción A (PEEP distiende VI comprimiendo VD): PEEP ↑ presión intratorácica, pero PAOP 8 indica VI vacío, no sobrecarga izquierda.
+Opción C (fibrinolisis licua sangre hacia pleura): no explica VPH ni compresión capilar alveolar en SDRA bilateral.
+Opción D (hipercapnia dilata arteria pulmonar): la hipoxia causa vasoconstricción pulmonar, no vasodilatación.
 
-Clave: hipoxia (VPH) + PEEP 16 + PAOP 8 + GC 2 = cor pulmonale agudo → VD falla, VI sin precarga.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Shock en VM = falla de bomba izquierda o hipovolemia."
+Pero la disociación Swan (PVC↑, PAP↑, PAOP↓) apunta a bloqueo pulmonar con cor pulmonale agudo.
+Aquí el dato decisivo es:
+PEEP 16 + neumonía bilateral + PAOP 8 + VD dilatado = VPH + compresión capilar, no falla VI primaria.
 
-FISIOPATOLOGÍA — BY DR Q.
-Cor pulmonale agudo · VPH + PEEP
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Interpretar Swan-Ganz: PVC↑ + PAP↑ + PAOP↓ = bloqueo pulmonar (cor pulmonale).
+2. Identificar VPH por hipoxia alveolar global en SDRA/neumonía bilateral.
+3. Reconocer que PEEP alto comprime capilares → ↑ RVP adicional.
+4. Correlacionar con eco: VD dilatado, septum → VI, VI colapsado = ↓ precarga sistémica.
 
-Cadena: hipoxia → VPH + PEEP alto → ↑ RVP → VD dilatado → GC ↓.
+Perlas de examen
+✅ VPH: hipoxia alveolar → vasoconstricción pulmonar (Euler-Liljestrand).
+✅ PEEP alto → compresión capilar intra-alveolar → ↑ RVP.
+✅ PVC↑ + PAOP↓ = cor pulmonale agudo, no falla VI primaria.
+✅ VD dilatado + septum → VI = interdependencia ventricular patológica.
+✅ GC bajo con PAOP baja = VI muere de sed (↓ precarga), no de bomba rota.
 
-Perla: Hipoxia constriñe pulmón; PEEP excesivo aplasta capilares. VD empuja contra ladrillos.
-
-Referencias: West lung zones; ARDS hemodynamics.`,
+Referencias
+• West — Respiratory Physiology: pulmonary circulation and V/Q.
+• ARDS hemodynamics and PEEP effects (ESICM/ATS).
+• Pinsky — Ventricular interaction in critical illness.
+• UpToDate: Acute cor pulmonale in the ICU.`,
   },
   {
     id: "dr-q-71",
@@ -6457,42 +6746,72 @@ Referencias: West lung zones; ARDS hemodynamics.`,
     explanation:
       "Endocarditis tricuspídea por S. aureus en usuario de drogas IV: fiebre + soplo + émbolos sépticos pulmonares (infiltrados cavitados periféricos). Conducta: hemocultivos (≥2 pares) y antibióticos empíricos sin demora (<1 h en shock). Vancomicina cubre MRSA; gentamicina sinergia (según guía). Eco transtorácica/transesofágica urgente.",
     keyPoints: [
-      "Endocarditis derecha: émbolos pulmonares, no sistémicos.",
-      "Hemocultivos antes de ATB, pero nunca retrasar tratamiento.",
-      "S. aureus = germen #1 en usuarios de drogas IV.",
+      "Cuando veas: usuario de drogas IV + fiebre + soplo tricuspídeo (aumenta con inspiración) + infiltrados cavitados pulmonares periféricos.",
+      "Debes pensar en: endocarditis tricuspídea por S. aureus → hemocultivos (≥2 pares) + ATB empírico sin demora + eco urgente.",
+      "Endocarditis derecha: émbolos pulmonares (infiltrados cavitados), no émbolos sistémicos como en válvula izquierda.",
+      "Hemocultivos antes de ATB, pero nunca retrasar tratamiento >1 h si inestable o sospecha alta.",
+      "Tema: Endocarditis tricuspídea en usuario de drogas IV — manejo empírico inmediato.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa endocarditis tricuspídea en usuario de drogas IV: fiebre + soplo tricuspídeo + émbolos pulmonares cavitados exige hemocultivos y ATB empírico sin demora.
+Esta es una pregunta clásica de infectología porque evalúa endocarditis tricuspídea en usuario de drogas IV: la tríada de fiebre + soplo tricuspídeo + émbolos sépticos pulmonares exige hemocultivos y antibióticos empíricos sin demora.
+
+La clave no es esperar 48 h de hemocultivos, anticoagular por TEP ni tratar como neumonía comunitaria ambulatoria.
+La clave es:
+Tomar ≥2 pares de hemocultivos e iniciar vancomicina + gentamicina empírica de inmediato, con ecocardiograma urgente.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 28 años, consumidor de heroína IV, fiebre 39 °C de 10 días.
-- Disnea, tos con expectoración sanguinolenta; soplo holosistólico tricuspídeo que aumenta con inspiración.
-- Rx: múltiples infiltrados nodulares cavitados bilaterales periféricos (émbolos sépticos pulmonares).
-- Endocarditis derecha por S. aureus hasta demostrar lo contrario.
+El paciente presenta:
+• Hombre de 28 años, consumidor de heroína IV, fiebre 39 °C de 10 días.
+• Disnea, tos con expectoración sanguinolenta; FC 115.
+• Soplo holosistólico en foco tricuspídeo que aumenta con inspiración (signo de Carvallo).
+• Rx tórax: múltiples infiltrados nodulares cavitados bilaterales periféricos (émbolos sépticos pulmonares).
+• Hemocultivos pendientes; endocarditis derecha por S. aureus hasta demostrar lo contrario.
 
-¿Qué dato es clave en el examen?
-- Tríada: fiebre + soplo tricuspídeo + émbolos pulmonares (no sistémicos como en válvula izquierda).
-- Hemocultivos ≥2 pares antes de ATB, pero nunca retrasar tratamiento >1 h si inestable.
-- ATB empírico: vancomicina (MRSA) ± gentamicina sinergia; eco transtorácica/transesofágica urgente.
-- S. aureus = germen #1 en usuarios de drogas IV.
+Recordemos endocarditis tricuspídea en usuarios de drogas IV:
+• Tríada clásica: fiebre + soplo tricuspídeo + émbolos pulmonares (no sistémicos).
+• S. aureus = germen #1 en usuarios de drogas IV (MRSA frecuente).
+• Conducta: hemocultivos ≥2 pares ANTES de ATB, pero nunca retrasar tratamiento si sospecha alta.
+• ATB empírico: vancomicina (cubre MRSA) ± gentamicina (sinergia según guía ESC/IDSA).
+• Ecocardiograma transtorácico/transesofágico urgente para confirmar vegetaciones.
+
+Por lo tanto:
+La conducta inmediata es iniciar vancomicina + gentamicina empírica tras tomar hemocultivos, con ecocardiograma urgente.
+
+¿Por qué la opción B es la respuesta correcta?
+Integra la secuencia correcta: hemocultivos (≥2 pares) + ATB empírico sin demora (vanco + gentamicina) + ecocardiograma urgente, según guías de endocarditis.
 
 ¿Por qué fallan las otras opciones?
-- Esperar hemocultivos 48 h: retrasa tratamiento en endocarditis con émbolos activos.
-- Anticoagulación plena: contraindicada en endocarditis (riesgo émbolos hemorrágicos).
-- Ceftriaxona ambulatoria: neumonía comunitaria no explica soplo + émbolos cavitados periféricos.
+Opción A (esperar hemocultivos 48 h): retrasa tratamiento en endocarditis con émbolos pulmonares activos; riesgo de empeoramiento y nuevos émbolos.
+Opción C (anticoagulación plena por TEP): contraindicada en endocarditis (riesgo de émbolos hemorrágicos y complicaciones).
+Opción D (ceftriaxona ambulatoria): neumonía comunitaria no explica soplo tricuspídeo + émbolos cavitados periféricos en IVDA.
 
-Clave: infiltrados cavitados periféricos + fiebre + IVDA = endocarditis derecha → vanco + gentamicina + eco urgente.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Infiltrados pulmonares + fiebre = neumonía comunitaria."
+Pero infiltrados cavitados periféricos + soplo + IVDA = endocarditis derecha con émbolos sépticos pulmonares.
+Aquí el dato decisivo es:
+Soplo tricuspídeo + émbolos pulmonares cavitados + fiebre prolongada en IVDA = endocarditis → ATB ya, no esperar cultivo.
 
-INFECTOLOGÍA — BY DR Q.
-Endocarditis tricuspídea · usuario de drogas IV
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer tríada: fiebre + soplo tricuspídeo + émbolos pulmonares en IVDA.
+2. Tomar ≥2 pares de hemocultivos antes de ATB.
+3. Iniciar vancomicina + gentamicina empírica sin demora (<1 h si inestable).
+4. Solicitar ecocardiograma urgente (TTE/TEE) para confirmar vegetaciones.
 
-• Tríada: fiebre + soplo tricuspídeo + émbolos pulmonares.
-• ATB empírico: vancomicina ± gentamicina tras hemocultivos.
+Perlas de examen
+✅ Endocarditis derecha: émbolos pulmonares, no sistémicos.
+✅ S. aureus = germen #1 en usuarios de drogas IV.
+✅ Hemocultivos antes de ATB, pero nunca retrasar tratamiento.
+✅ Vancomicina cubre MRSA; gentamicina aporta sinergia.
+✅ Anticoagulación contraindicada en endocarditis activa.
 
-Perla: Infiltrados cavitados periféricos + fiebre + IVDA = endocarditis derecha hasta demostrar lo contrario.
-
-Referencias: ESC Endocarditis Guidelines; IDSA.`,
+Referencias
+• ESC Guidelines for the Management of Infective Endocarditis.
+• IDSA Clinical Practice Guidelines for endocarditis.
+• Duke criteria for infective endocarditis.
+• UpToDate: Tricuspid valve endocarditis in injection drug users.`,
   },
   {
     id: "dr-q-72",
@@ -6516,41 +6835,71 @@ Referencias: ESC Endocarditis Guidelines; IDSA.`,
     explanation:
       "Neumonía grave con hiponatremia, transaminitis, LDH↑ y falla a betalactámico: Legionella pneumophila. Tratamiento: fluoroquinolona respiratoria o macrólido IV. Legionella no cultiva en medios habituales; antigenuria en orina confirma. HipoNa + diarrea + alteración neurológica = pistas clásicas.",
     keyPoints: [
-      "Legionella: hipoNa, hepatitis, CNS, falla a amoxicilina.",
-      "Antigenuria en orina es diagnóstico rápido.",
-      "Macrólido o fluoroquinolona; no responde a betalactámicos solos.",
+      "Cuando veas: neumonía grave + hipoNa + transaminitis + confusión + falla a amoxicilina/betalactámico en 48 h.",
+      "Debes pensar en: Legionella pneumophila → levofloxacino o azitromicina IV + betalactámico; investigar exposición hídrica.",
+      "Legionella no responde a betalactámicos solos; requiere macrólido o fluoroquinolona respiratoria.",
+      "Antigenuria en orina es diagnóstico rápido; no cultiva en medios habituales de neumonía.",
+      "Tema: Neumonía por Legionella — ajuste empírico tras falla a betalactámico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa neumonía por Legionella: hipoNa + transaminitis + confusión + falla a amoxicilina = cambiar a levofloxacino o azitromicina IV.
+Esta es una pregunta clásica de infectología/neumología porque evalúa neumonía por Legionella: hipoNa + transaminitis + alteración neurológica + falla a amoxicilina obligan a cambiar el esquema empírico a levofloxacino o azitromicina IV.
+
+La clave no es agregar macrólido ambulatorio leve, tratar anaerobios con metronidazol ni reservar cobertura amplia solo para derrame pleural.
+La clave es:
+Reconocer Legionella como causa probable y escalar a levofloxacino o azitromicina IV con betalactámico, investigando exposición hídrica/aire acondicionado.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 62 años, fumador, fiebre alta, tos seca, confusión.
-- PA 90/55, SatO2 88%; Na 128, transaminasas 3× LSN, LDH elevada.
-- Rx: consolidación lobar derecha; amoxicilina 48 h sin mejoría.
+El paciente presenta:
+• Hombre de 62 años, fumador, fiebre alta, tos seca, confusión.
+• PA 90/55, FR 28, SatO2 88% ambiente (neumonía grave/inestabilidad).
+• Na 128 (hiponatremia), transaminasas 3× LSN, LDH elevada.
+• Rx: consolidación lobar derecha; amoxicilina 48 h sin mejoría.
 
-¿Qué dato es clave en el examen?
-- Legionella: hipoNa, hepatitis, alteración neurológica, exposición hídrica/aire acondicionado.
-- No responde a betalactámicos solos (amoxicilina); requiere macrólido o fluoroquinolona respiratoria.
-- Antigenuria en orina es diagnóstico rápido; no cultiva en medios habituales.
-- Neumonía grave con hipotensión: tratamiento IV, no ambulatorio.
+Recordemos neumonía por Legionella pneumophila:
+• Pistas clásicas: hipoNa, transaminitis, alteración neurológica (confusión), diarrea, LDH↑.
+• Exposición: agua (torres de enfriamiento, duchas, aire acondicionado, hoteles).
+• No responde a betalactámicos solos (amoxicilina, ampicilina); requiere macrólido o fluoroquinolona.
+• Antigenuria en orina = diagnóstico rápido; cultivo requiere medio especial (carbono-levadura).
+• Neumonía grave con hipotensión: tratamiento IV, no ambulatorio.
+
+Por lo tanto:
+El ajuste empírico más apropiado es Legionella probable → levofloxacino o azitromicina IV + betalactámico, con investigación de exposición.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica Legionella como causa probable tras falla a betalactámico, con pistas clínicas clásicas (hipoNa, transaminitis, confusión) y propone tratamiento IV adecuado (fluoroquinolona o macrólido).
 
 ¿Por qué fallan las otras opciones?
-- Agregar azitromicina ambulatoria: paciente inestable requiere IV; ya falló betalactámico solo.
-- Metronidazol por anaerobios: olor no confirma; Legionella es acuática intracelular.
-- Vanco + pip-tazo solo con derrame: no cubre Legionella como monoterapia empírica adecuada.
+Opción A (agregar azitromicina ambulatoria leve): paciente inestable (PA 90/55, SatO2 88%) requiere IV; ya falló betalactámico solo.
+Opción C (metronidazol por anaerobios): olor a podrido no confirma anaerobios; Legionella es bacteria acuática intracelular.
+Opción D (vanco + pip-tazo solo con derrame): no cubre Legionella como esquema empírico adecuado ante sospecha clínica alta.
 
-Clave: amoxicilina fallida + hipoNa + transaminitis + confusión = Legionella → levofloxacino o azitromicina IV.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Neumonía comunitaria = amoxicilina o agregar macrólido ambulatorio."
+Pero hipoNa + transaminitis + confusión + falla a betalactámico = Legionella hasta demostrar lo contrario.
+Aquí el dato decisivo es:
+Amoxicilina 48 h sin mejoría + Na 128 + transaminasas 3× + confusión = cambiar a levofloxacino/azitromicina IV.
 
-INFECTOLOGÍA — BY DR Q.
-Neumonía por Legionella
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar neumonía grave con signos de inestabilidad (hipotensión, hipoxemia).
+2. Buscar pistas de Legionella: hipoNa, transaminitis, CNS, LDH↑, exposición hídrica.
+3. Si falla betalactámico → sospechar Legionella y escalar a macrólido/fluoroquinolona IV.
+4. Confirmar con antigenuria en orina; no depender de cultivo convencional.
 
-• Pistas: hipoNa, transaminitis, confusión, exposición hídrica.
-• ATB: levofloxacino o azitromicina.
+Perlas de examen
+✅ Legionella: hipoNa + hepatitis + CNS + falla a amoxicilina.
+✅ No responde a betalactámicos solos; requiere macrólido o fluoroquinolona.
+✅ Antigenuria en orina = diagnóstico rápido.
+✅ Exposición hídrica/aire acondicionado = pista epidemiológica.
+✅ Neumonía grave inestable → tratamiento IV, no ambulatorio.
 
-Perla: Amoxicilina no cubre Legionella. Si falla betalactámico + hipoNa, piensa Legionella.
-
-Referencias: ATS/IDSA CAP Guidelines; ESCMID Legionella.`,
+Referencias
+• ATS/IDSA Guidelines for Community-Acquired Pneumonia.
+• ESCMID Guidelines for Legionella infection.
+• Mandell — Legionella pneumophila pneumonia.
+• UpToDate: Clinical manifestations and diagnosis of Legionella infection.`,
   },
   {
     id: "dr-q-73",
@@ -6570,43 +6919,72 @@ Referencias: ATS/IDSA CAP Guidelines; ESCMID Legionella.`,
     explanation:
       "Fascitis necrotizante: dolor desproporcionado, progresión rápida, shock, LRINEC elevado (leucocitosis, Cr↑, Na↓, glucosa↑). Crepitación ausente no excluye (es signo tardío). Conducta: cirugía URGENTE + piperacilina-tazobactam + vancomicina ± clindamicina (toxina). TC solo si no retrasa cirugía.",
     keyPoints: [
-      "Dolor >> hallazgos cutáneos = bandera roja.",
-      "Crepitación es tardía; no esperarla.",
-      "Cirugía + ATB; cada hora de demora ↑ mortalidad.",
+      "Cuando veas: dolor desproporcionado al examen cutáneo + progresión rápida + shock + LRINEC elevado (leucocitosis, Cr↑, Na↓, glucosa↑).",
+      "Debes pensar en: fascitis necrotizante → desbridamiento quirúrgico urgente + ATB amplio espectro IV; no esperar crepitación ni TC.",
+      "Dolor >> hallazgos cutáneos = bandera roja; la piel miente, el dolor no.",
+      "Crepitación es signo tardío; su ausencia NO excluye fascitis necrotizante.",
+      "Tema: Fascitis necrotizante — LRINEC y manejo quirúrgico urgente.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa fascitis necrotizante: dolor desproporcionado al examen + shock + LRINEC elevado = desbridamiento quirúrgico urgente sin esperar crepitación ni TC.
+Esta es una pregunta clásica de infectología/urgencias porque evalúa fascitis necrotizante: dolor desproporcionado al examen + shock + LRINEC elevado exige desbridamiento quirúrgico urgente sin esperar crepitación ni estudios de imagen.
+
+La clave no es tratar ambulatoriamente con cefalexina, confiar en ATB solos sin cirugía ni anticoagular por TVP.
+La clave es:
+Reconocer fascitis necrotizante como emergencia quirúrgica → desbridamiento urgente + piperacilina-tazobactam + vancomicina ± clindamicina (antitoxina estreptocócica).
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 55 años, diabética, dolor intenso en muslo tras mínimo trauma.
-- PA 85/50, FC 125; piel eritematosa con equimosis progresiva.
-- Dolor desproporcionado al examen; no crepitación palpable (signo tardío).
-- Leucocitos 22,000, Cr 2.1, Na 130, glucosa 380, CRP muy elevada (LRINEC ≥6).
+La paciente presenta:
+• Mujer de 55 años, diabética, dolor intenso en muslo derecho tras mínimo trauma.
+• FC 125, PA 85/50 (shock); piel eritematosa con equimosis progresiva.
+• Dolor desproporcionado al examen físico; no crepitación palpable.
+• Leucocitos 22,000, creatinina 2.1, Na 130, glucosa 380, CRP muy elevada (LRINEC ≥6).
 
-¿Qué dato es clave en el examen?
-- Fascitis necrotizante: dolor >> hallazgos cutáneos = bandera roja.
-- Crepitación ausente no excluye (es signo tardío de gas subcutáneo).
-- LRINEC ≥6: alta sospecha; shock + progresión rápida = operar ya.
-- ATB: betalactámico + vancomicina + clindamicina (antitoxina estreptocócica).
-- TC solo si no retrasa cirugía; cada hora de demora ↑ mortalidad.
+Recordemos fascitis necrotizante y score LRINEC:
+• LRINEC ≥6: alta sospecha de fascitis necrotizante.
+• Dolor desproporcionado >> hallazgos cutáneos = bandera roja clásica.
+• Crepitación por gas subcutáneo es signo tardío; ausencia NO excluye diagnóstico.
+• Shock + progresión rápida + equimosis progresiva = operar ya.
+• ATB: betalactámico (pip-tazo) + vancomicina + clindamicina (↓ producción de toxinas estreptocócicas).
+• TC solo si no retrasa cirugía; cada hora de demora ↑ mortalidad.
+
+Por lo tanto:
+La conducta correcta es desbridamiento quirúrgico urgente + antibióticos de amplio espectro IV, sin esperar imagen si la sospecha es alta.
+
+¿Por qué la opción B es la respuesta correcta?
+Prioriza desbridamiento quirúrgico urgente + ATB amplio espectro IV y enfatiza no esperar estudios de imagen ante alta sospecha clínica (LRINEC ≥6, shock, dolor desproporcionado).
 
 ¿Por qué fallan las otras opciones?
-- Cefalexina VO ambulatoria: shock + progresión rápida = urgencia quirúrgica.
-- ATB solamente sin crepitación: la ausencia de crepitación no descarta fascitis.
-- Anticoagulación por TVP: el cuadro es infección necrotizante de tejidos blandos.
+Opción A (cefalexina VO ambulatoria): shock + progresión rápida = emergencia quirúrgica, no manejo ambulatorio.
+Opción C (ATB solamente; sin crepitación no hay fascitis): la ausencia de crepitación no descarta fascitis necrotizante (signo tardío).
+Opción D (anticoagulación por TVP complicada): el cuadro es infección necrotizante de tejidos blandos, no trombosis venosa.
 
-Clave: dolor desproporcionado + shock + equimosis progresiva = desbridamiento ya + ATB amplio espectro.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Fascitis necrotizante = crepitación subcutánea obligatoria."
+Pero la crepitación es tardía; el dato temprano es dolor desproporcionado al examen.
+Aquí el dato decisivo es:
+Dolor intenso >> hallazgos cutáneos + shock + LRINEC ≥6 = operar ya, con o sin crepitación.
 
-INFECTOLOGÍA — BY DR Q.
-Fascitis necrotizante
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar fascitis necrotizante ante dolor desproporcionado + progresión rápida.
+2. Calcular LRINEC (leucocitos, Cr, Na, glucosa, CRP); ≥6 = alta sospecha.
+3. Desbridamiento quirúrgico urgente + ATB amplio espectro (pip-tazo + vanco + clindamicina).
+4. TC solo si no retrasa cirugía; cada hora cuenta.
 
-• LRINEC ≥6: alta sospecha. Shock + progresión rápida = operar ya.
-• ATB: betalactámico + vancomicina + clindamicina (antitoxina).
+Perlas de examen
+✅ Dolor >> hallazgos cutáneos = bandera roja de fascitis necrotizante.
+✅ Crepitación es tardía; su ausencia no excluye diagnóstico.
+✅ LRINEC ≥6: alta sospecha; operar sin demora.
+✅ Clindamicina ↓ producción de toxinas estreptocócicas (antitoxina).
+✅ Cada hora de demora quirúrgica ↑ mortalidad.
 
-Perla: La piel miente; el dolor no. Sin crepitación no estás a salvo.
-
-Referencias: IDSA SSTI Guidelines; LRINEC score validation.`,
+Referencias
+• IDSA Guidelines for Skin and Soft Tissue Infections.
+• LRINEC score validation studies (Wong et al.).
+• Stevens DL — Necrotizing soft tissue infections.
+• UpToDate: Necrotizing soft tissue infections.`,
   },
   {
     id: "dr-q-74",
@@ -6630,41 +7008,71 @@ Referencias: IDSA SSTI Guidelines; LRINEC score validation.`,
     explanation:
       "Meningitis bacteriana aguda: ceftriaxona + vancomicina empíricos (cubrir S. pneumoniae resistente y N. meningitidis). Dexametasona reduce mortalidad/secuelas neurológicas en meningitis neumocócica si se administra ANTES o CON la primera dosis de ATB. Petequias sugieren meningococo; mismo esquema empírico.",
     keyPoints: [
-      "Ceftriaxona + vancomicina empíricos en adultos.",
-      "Dexametasona: antes/con primer ATB, no después.",
-      "TAC antes de PL si focalidad, inmunosupresión o alteración mental.",
+      "Cuando veas: meningitis bacteriana aguda (LCR turbio, glucosa baja, PMN >90%) + petequias (sugiere meningococo).",
+      "Debes pensar en: ceftriaxona + vancomicina empíricos + dexametasona 0.15 mg/kg ANTES o CON la primera dosis de ATB.",
+      "Dexametasona después del primer ATB pierde beneficio en reducción de mortalidad/secuelas neurológicas.",
+      "TAC antes de PL si focalidad, inmunosupresión o alteración mental (aquí TAC ya normal → PL confirmada).",
+      "Tema: Meningitis bacteriana aguda — timing de dexametasona y ATB empírico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa meningitis bacteriana aguda: dexametasona 0.15 mg/kg debe administrarse ANTES o CON la primera dosis de ceftriaxona + vancomicina, no después.
+Esta es una pregunta clásica de infectología/neurología porque evalúa la secuencia terapéutica en meningitis bacteriana aguda: dexametasona debe administrarse ANTES o CON la primera dosis de ceftriaxona + vancomicina, no después.
+
+La clave no es esperar cultivo para ATB dirigido, reservar dexametasona solo tras Gram confirmado ni tratar con aciclovir exclusivo.
+La clave es:
+Administrar dexametasona 0.15 mg/kg IV junto con ceftriaxona + vancomicina empíricos lo antes posible, idealmente antes o con la primera dosis de antibiótico.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 19 años, fiebre, cefalea intensa, rigidez de nuca, petequias en tronco.
-- TAC normal; PL: LCR turbio, glucosa 15, proteínas 280, PMN 95%.
-- Meningitis bacteriana aguda (petequias sugieren meningococo; mismo esquema empírico).
+El paciente presenta:
+• Hombre de 19 años, fiebre, cefalea intensa, rigidez de nuca, petequias en tronco.
+• TAC cerebral sin contraste: normal (no contraindicación para PL).
+• PL: LCR turbio, glucosa 15 mg/dL, proteínas 280 mg/dL, PMN 95%.
+• Meningitis bacteriana aguda; petequias sugieren meningococo (mismo esquema empírico que neumococo).
 
-¿Qué dato es clave en el examen?
-- ATB empírico adultos: ceftriaxona + vancomicina (cubrir S. pneumoniae resistente y N. meningitidis).
-- Dexametasona 0.15 mg/kg IV reduce mortalidad/secuelas en meningitis neumocócica.
-- Timing crítico: dexametasona ANTES o CON primera dosis ATB; después pierde beneficio.
-- TAC antes de PL si focalidad, inmunosupresión o alteración mental (aquí TAC ya normal).
+Recordemos meningitis bacteriana aguda en adultos:
+• ATB empírico: ceftriaxona + vancomicina (cubre S. pneumoniae resistente y N. meningitidis).
+• Dexametasona 0.15 mg/kg IV c/6 h × 4 días reduce mortalidad/secuelas en meningitis neumocócica.
+• Timing crítico: dexametasona ANTES o CON primera dosis ATB; después pierde beneficio (estudios van de Beek).
+• Petequias sugieren meningococo, pero dexametasona se administra empíricamente si sospecha neumocócica.
+• TAC antes de PL si focalidad neurológica, inmunosupresión o alteración mental (aquí TAC normal).
+
+Por lo tanto:
+La secuencia correcta es dexametasona + ceftriaxona + vancomicina lo antes posible, con dexametasona antes o con la primera dosis de ATB.
+
+¿Por qué la opción A es la respuesta correcta?
+Integra la triple terapia empírica (dexametasona + ceftriaxona + vancomicina) con el timing correcto: dexametasona antes o con la primera dosis de antibiótico.
 
 ¿Por qué fallan las otras opciones?
-- Esperar cultivo para ATB dirigido: retrasa tratamiento en emergencia neurológica.
-- Dexametasona solo si Gram confirma neumococo: en práctica se administra empíricamente si sospecha neumocócica.
-- Aciclovir exclusivo: LCR bacteriano con PMN 95% y glucosa 15 descarta herpes como causa primaria.
+Opción B (esperar cultivo para ATB dirigido): retrasa tratamiento en emergencia neurológica con alto riesgo de muerte/secuelas.
+Opción C (dexametasona solo si Gram confirma neumococo): en práctica se administra empíricamente ante sospecha de meningitis bacteriana con criterios de neumococo.
+Opción D (aciclovir exclusivo): LCR bacteriano con PMN 95% y glucosa 15 descarta herpes como causa primaria.
 
-Clave: meningitis bacteriana = ceftriaxona + vanco + dexametasona con/sin primer ATB, nunca después.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Dexametasona solo si confirmo neumococo en Gram o cultivo."
+Pero el beneficio depende del timing: debe darse antes o con el primer ATB, no después.
+Aquí el dato decisivo es:
+Meningitis bacteriana confirmada → dexametasona + ceftriaxona + vanco YA, con dexametasona antes/con primer ATB.
 
-INFECTOLOGÍA — BY DR Q.
-Meningitis bacteriana aguda
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar meningitis bacteriana (LCR: glucosa baja, PMN↑, proteínas↑).
+2. Administrar dexametasona 0.15 mg/kg IV.
+3. Iniciar ceftriaxona + vancomicina empíricos simultáneamente (dexametasona antes o con primer ATB).
+4. No retrasar ATB esperando cultivo; ajustar según antibiograma posterior.
 
-• ATB empírico: ceftriaxona + vancomicina.
-• Dexametasona 0.15 mg/kg c/6 h × 4 días si sospecha neumocócica.
+Perlas de examen
+✅ ATB empírico adultos: ceftriaxona + vancomicina.
+✅ Dexametasona 0.15 mg/kg c/6 h × 4 días si sospecha neumocócica.
+✅ Timing: dexametasona ANTES o CON primer ATB; después pierde beneficio.
+✅ Petequias = meningococo probable; mismo esquema empírico inicial.
+✅ TAC antes de PL si focalidad, inmunosupresión o ↓ conciencia.
 
-Perla: Dexametasona después del ATB pierde beneficio. Timing importa.
-
-Referencias: IDSA Bacterial Meningitis Guidelines; van de Beek et al.`,
+Referencias
+• IDSA Bacterial Meningitis Guidelines.
+• van de Beek et al. — Dexamethasone in adults with bacterial meningitis (NEJM).
+• Tunkel — Acute bacterial meningitis in adults.
+• UpToDate: Treatment of bacterial meningitis in adults.`,
   },
   {
     id: "dr-q-75",
@@ -6688,43 +7096,73 @@ Referencias: IDSA Bacterial Meningitis Guidelines; van de Beek et al.`,
     explanation:
       "C. difficile fulminante: shock, leucocitosis marcada, íleo/megacolon (colón >10-12 cm). Metronidazol VO ya no es primera línea. Fulminante: vancomicina oral alta dosis ± enema de vancomicina + metro IV; colectomía si refractario. Loperamida está contraindicada (retención toxina). Fidaxomicina es 1.ª línea en formas no fulminantes.",
     keyPoints: [
-      "Fulminante: WBC >15.000, Cr↑, shock, megacolon, íleo.",
-      "Vancomicina oral (no metro) en formas graves.",
-      "Nunca loperamida en colitis infecciosa.",
+      "Cuando veas: C. difficile post-antibióticos + shock + leucocitosis >15.000 + megacolon (>10-12 cm) + distensión abdominal.",
+      "Debes pensar en: colitis fulminante → vancomicina oral 500 mg c/6 h ± vancomicina rectal + metronidazol IV; cirugía si refractaria.",
+      "Metronidazol VO ya no es primera línea en formas graves/fulminantes.",
+      "Loperamida está contraindicada en colitis infecciosa activa (retención de toxinas → megacolon/toxicidad).",
+      "Tema: C. difficile fulminante — megacolon y manejo escalonado.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa C. difficile fulminante con megacolon: shock + colón >12 cm exige vancomicina oral alta dosis ± rectal + metronidazol IV, no metronidazol VO ni loperamida.
+Esta es una pregunta clásica de infectología/gastroenterología porque evalúa C. difficile fulminante con megacolon: shock + leucocitosis marcada + dilatación colónica >12 cm exige vancomicina oral alta dosis ± rectal + metronidazol IV, no metronidazol VO ni loperamida.
+
+La clave no es tratar ambulatoriamente con metronidazol VO, usar loperamida para controlar diarrea ni fidaxomicina como primera línea en fulminante con megacolon.
+La clave es:
+Reconocer colitis fulminante con megacolon y disfunción orgánica → vancomicina oral 500 mg c/6 h ± enema de retención + metronidazol IV, con colectomía si no responde.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 70 años, ceftriaxona 7 días por neumonía; día 10 diarrea acuosa >10/día.
-- PA 90/55, distensión abdominal, timpanismo; leucocitos 18,000.
-- PCR toxina C. difficile (+); Rx: dilatación colónica >12 cm (megacolon).
-- Colitis fulminante con disfunción orgánica.
+La paciente presenta:
+• Mujer de 70 años, hospitalizada por neumonía, ceftriaxona 7 días.
+• Día 10: diarrea acuosa >10/día, dolor abdominal, leucocitos 18,000.
+• PCR toxina C. difficile positiva; PA 90/55 (shock), distensión abdominal, timpanismo.
+• Rx abdomen: dilatación colónica >12 cm (megacolon tóxico).
+• Colitis fulminante con disfunción orgánica.
 
-¿Qué dato es clave en el examen?
-- Fulminante: WBC >15,000, Cr↑, shock, megacolon (>10-12 cm), íleo.
-- Metronidazol VO ya no es primera línea en formas graves.
-- Fulminante: vancomicina oral 500 mg c/6 h ± enema de retención + metronidazol IV.
-- Colectomía si refractario; loperamida contraindicada (retención toxinas → perforación).
-- Fidaxomicina es 1.ª línea en formas no fulminantes, no en megacolon con shock.
+Recordemos C. difficile: clasificación y tratamiento:
+• Leve-moderada: fidaxomicina o vancomicina oral (1.ª línea según IDSA/SHEA 2021).
+• Fulminante: WBC >15,000, Cr↑, shock, íleo/megacolon (>10-12 cm), lactato↑.
+• Fulminante: vancomicina oral 500 mg c/6 h ± enema de vancomicina de retención + metronidazol IV.
+• Metronidazol VO ya no es 1.ª línea en formas graves (inferior a vanco oral).
+• Colectomía subtotal si refractario a tratamiento médico máximo.
+• Loperamida contraindicada: retención de toxinas → riesgo megacolon/toxicidad sistémica.
+
+Por lo tanto:
+El tratamiento correcto es vancomicina oral alta dosis ± vancomicina rectal + metronidazol IV, con cirugía si no responde.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica colitis fulminante con megacolon y propone el esquema escalonado correcto: vancomicina oral ± rectal + metronidazol IV, con colectomía si refractaria.
 
 ¿Por qué fallan las otras opciones?
-- Metronidazol VO ambulatorio: insuficiente en colitis fulminante con megacolon y shock.
-- Loperamida: contraindicada en colitis infecciosa activa; riesgo megacolon/toxicidad.
-- Fidaxomicina en fulminante: reservada para formas leve-moderada; no megacolon con shock.
+Opción A (metronidazol VO ambulatorio): insuficiente en colitis fulminante con megacolon, shock y leucocitosis marcada.
+Opción C (loperamida): contraindicada en colitis infecciosa activa; retención de toxinas empeora megacolon.
+Opción D (fidaxomicina VO en fulminante): reservada para formas leve-moderada; no es 1.ª línea en megacolon con shock.
 
-Clave: megacolon + shock + C. diff (+) = vanco oral ± rectal + metro IV; nunca loperamida.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"C. diff = metronidazol oral siempre."
+Pero en formas fulminantes con megacolon y shock, vancomicina oral (± rectal) + metro IV es el estándar.
+Aquí el dato decisivo es:
+Megacolon >12 cm + PA 90/55 + WBC 18,000 + toxina (+) = fulminante → vanco oral ± rectal + metro IV.
 
-INFECTOLOGÍA — BY DR Q.
-C. difficile fulminante
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Clasificar severidad: leve-moderada vs grave vs fulminante (WBC, Cr, shock, megacolon).
+2. Fulminante: vancomicina oral 500 mg c/6 h ± enema de retención.
+3. Agregar metronidazol IV en formas fulminantes con disfunción orgánica.
+4. Colectomía subtotal si falla tratamiento médico; nunca loperamida.
 
-• 1.ª línea leve-moderada: fidaxomicina o vancomicina oral.
-• Fulminante: vancomicina oral ± rectal + metro IV; colectomía si falla.
+Perlas de examen
+✅ Fulminante: WBC >15,000, Cr↑, shock, megacolon (>10-12 cm), íleo.
+✅ Fulminante: vancomicina oral ± rectal + metro IV (no metro VO).
+✅ Fidaxomicina = 1.ª línea leve-moderada, no fulminante con megacolon.
+✅ Loperamida contraindicada en colitis infecciosa activa.
+✅ Colectomía si refractario a tratamiento médico máximo.
 
-Perla: Megacolon + shock = vancomicina oral, no metro. Loperamida mata.
-
-Referencias: IDSA/SHEA C. difficile Guidelines 2021.`,
+Referencias
+• IDSA/SHEA C. difficile Clinical Practice Guidelines 2021.
+• McDonald et al. — Clinical Practice Guidelines for C. difficile Infection.
+• Surawicz — Antibiotic-associated diarrhea and C. difficile infection.
+• UpToDate: Clostridioides difficile infection in adults: Treatment.`,
   },
   {
     id: "dr-q-76",
