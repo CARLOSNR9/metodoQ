@@ -2506,20 +2506,70 @@ Referencias
     correctOptionId: "B",
     explanation: "Los pacientes con fibrilación auricular asociada a miocardiopatía hipertrófica presentan un riesgo tromboembólico elevado independientemente del puntaje CHA₂DS₂-VA. Las guías actuales recomiendan anticoagulación oral crónica en todos estos pacientes, siendo los anticoagulantes orales directos la estrategia preferida en ausencia de contraindicaciones.",
     keyPoints: [
-      "Anticoagulación obligatoria.",
+      "Cuando veas: fibrilación auricular en paciente con miocardiopatía hipertrófica, incluso con CHA₂DS₂-VA de 0 puntos.",
+      "Debes pensar en: anticoagulación oral crónica obligatoria → anticoagulantes orales directos (apixabán, rivaroxabán) como estrategia preferida.",
+      "El CHA₂DS₂-VA no guía la anticoagulación en miocardiopatía hipertrófica; el riesgo tromboembólico es intrínsecamente elevado.",
+      "La aspirina no es suficiente para prevención embólica en este escenario.",
       "Tema: Fibrilación auricular en miocardiopatía hipertrófica.",
-      "La miocardiopatía hipertrófica aumenta significativamente el riesgo tromboembólico.",
-      "La fibrilación auricular es una complicación frecuente de la miocardiopatía hipertrófica.",
-      "El CHA₂DS₂-VA no guía la anticoagulación en estos pacientes.",
     ],
-    theoryContent: `CARDIOLOGÍA — BY DR Q.
-Fibrilación auricular en miocardiopatía hipertrófica.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes observan: "CHA₂DS₂-VA = 0." Y responden: "No anticoagular."
+Esta es una pregunta clásica de cardiología porque evalúa una trampa frecuente: aplicar el puntaje CHA₂DS₂-VA de forma literal en un paciente con miocardiopatía hipertrófica.
 
-Referencias:
-ESC Guidelines for the Management of Atrial Fibrillation.; AHA/ACC Guideline for the Diagnosis and Treatment of Hypertrophic Cardiomyopathy.; ACC/AHA/HRS Guideline for Atrial Fibrillation.; Braunwald's Heart Disease.`,
+La clave no es el puntaje CHA₂DS₂-VA.
+La clave es:
+Fibrilación auricular + miocardiopatía hipertrófica = anticoagulación oral crónica en todos los pacientes, independientemente del puntaje.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 30 años con miocardiopatía hipertrófica en seguimiento.
+• Fibrilación auricular no valvular.
+• Sin antecedente de ACV ni eventos embólicos.
+• CHA₂DS₂-VA = 0 puntos.
+• Necesita anticoagulación a pesar del puntaje bajo.
+
+Recordemos fibrilación auricular en miocardiopatía hipertrófica:
+• La miocardiopatía hipertrófica aumenta significativamente el riesgo tromboembólico por estasis auricular, disfunción sistólica y arritmias.
+• La fibrilación auricular es una complicación frecuente (hasta 20-25% de los pacientes).
+• Las guías ESC y AHA/ACC recomiendan anticoagulación oral en todos los pacientes con FA + MCH, sin importar el CHA₂DS₂-VA.
+• Los anticoagulantes orales directos (DOAC) son preferidos sobre warfarina en ausencia de contraindicaciones.
+• La aspirina no proporciona protección embólica adecuada en FA.
+
+Por lo tanto:
+La conducta correcta es iniciar anticoagulación con apixabán (opción B), no omitir anticoagulación ni usar aspirina.
+
+¿Por qué la opción B es la respuesta correcta?
+Los DOAC son la estrategia preferida en FA no valvular. En miocardiopatía hipertrófica la anticoagulación está indicada independientemente del puntaje CHA₂DS₂-VA.
+
+¿Por qué fallan las otras opciones?
+Opción A (warfarina): anticoagulación correcta en concepto, pero los DOAC son preferidos por menor complejidad y mejor perfil en FA no valvular.
+Opción C (no anticoagular): error clásico; el CHA₂DS₂-VA no aplica en MCH con FA.
+Opción D (aspirina): insuficiente para prevención embólica en fibrilación auricular.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan "CHA₂DS₂-VA = 0" y responden "no anticoagular".
+Pero en miocardiopatía hipertrófica el riesgo tromboembólico es intrínsecamente elevado y la anticoagulación es obligatoria.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar FA en paciente con miocardiopatía hipertrófica.
+2. Anticoagular a todos, sin calcular CHA₂DS₂-VA.
+3. Preferir DOAC (apixabán, rivaroxabán, edoxabán, dabigatrán).
+4. No usar aspirina como sustituto de anticoagulación.
+
+Perlas de examen
+✅ FA + miocardiopatía hipertrófica = anticoagulación obligatoria, sin importar CHA₂DS₂-VA.
+✅ Los DOAC son preferidos sobre warfarina en FA no valvular.
+✅ La aspirina no es suficiente para prevención embólica en FA.
+✅ La MCH es una de las pocas condiciones que anula el puntaje CHA₂DS₂-VA.
+✅ El riesgo tromboembólico en MCH es independiente de la edad y comorbilidades.
+
+Referencias
+• ESC Guidelines for the Management of Atrial Fibrillation.
+• AHA/ACC Guideline for the Diagnosis and Treatment of Hypertrophic Cardiomyopathy.
+• ACC/AHA/HRS Guideline for Atrial Fibrillation.
+• Braunwald's Heart Disease.
+• UpToDate: Atrial fibrillation in hypertrophic cardiomyopathy.`,
   },
   {
     id: "dr-q-187",
@@ -2538,20 +2588,71 @@ ESC Guidelines for the Management of Atrial Fibrillation.; AHA/ACC Guideline for
     correctOptionId: "C",
     explanation: "El paciente presentó una crisis convulsiva autolimitada que ya ha finalizado y actualmente se encuentra en fase posictal. En ausencia de actividad convulsiva persistente o estatus epiléptico, la conducta inicial consiste en estabilización, monitorización, búsqueda de causas precipitantes y estudio diagnóstico.",
     keyPoints: [
-      "Medidas de soporte y estudio etiológico.",
-      "Tema: Primera crisis epiléptica.",
-      "La primera medida siempre es asegurar ABCDE.",
+      "Cuando veas: crisis convulsiva tónico-clónica generalizada ya finalizada, paciente en fase posictal, sin actividad convulsiva activa ni antecedente de epilepsia.",
+      "Debes pensar en: medidas de soporte, evaluación diagnóstica y observación clínica, no antiepilépticos de inmediato.",
+      "Las benzodiacepinas (lorazepam) son el tratamiento de elección solo ante convulsión activa o estatus epiléptico.",
       "La glucemia capilar debe evaluarse en toda crisis convulsiva.",
-      "Las benzodiacepinas son el tratamiento de elección de la convulsión activa.",
+      "Tema: Primera crisis epiléptica.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Primera crisis epiléptica.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Crisis epiléptica." Y responden: Lorazepam o fenitoína.
+Esta es una pregunta clásica de neurología porque evalúa una trampa frecuente: administrar antiepilépticos ante toda mención de "crisis epiléptica", sin distinguir si la convulsión ya terminó.
 
-Referencias:
-American Academy of Neurology Guidelines.; Neurocritical Care Society Guidelines for Status Epilepticus.; Harrison's Principles of Internal Medicine.; Adams and Victor's Principles of Neurology.`,
+La clave no es iniciar fenitoína o lorazepam de inmediato.
+La clave es:
+Crisis autolimitada + fase posictal + sin actividad convulsiva activa = soporte, estudio etiológico y observación.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 20 años con crisis tónico-clónica generalizada de 2 minutos, ya finalizada.
+• Fase posictal con somnolencia progresivamente reversible.
+• Sin actividad convulsiva activa.
+• Sin antecedentes de epilepsia ni factores desencadenantes evidentes.
+• Signos vitales normales.
+
+Recordemos manejo de la primera crisis epiléptica:
+• La primera medida siempre es asegurar ABCDE (vía aérea, ventilación, circulación).
+• Glucemia capilar obligatoria en toda crisis convulsiva.
+• Benzodiacepinas IV (lorazepam) son tratamiento de elección de la convulsión activa o estatus epiléptico.
+• Si la crisis ya terminó y el paciente está estable en posictal → no antiepilépticos de urgencia; estudio etiológico.
+• Causas a descartar: hipoglucemia, infección del SNC, trauma, intoxicación, trastornos metabólicos.
+• La fenitoína no se administra de inmediato en crisis ya resuelta sin recurrencia.
+
+Por lo tanto:
+La conducta correcta es medidas de soporte, evaluación diagnóstica y observación clínica (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La crisis ya finalizó; el paciente está en fase posictal estable. La prioridad es identificar la causa y monitorizar, no tratar convulsión inexistente.
+
+¿Por qué fallan las otras opciones?
+Opción A (fenitoína IV): indicada en estatus epiléptico o crisis recurrentes, no en crisis única ya resuelta.
+Opción B (lorazepam IV): tratamiento de convulsión activa; aquí no hay actividad convulsiva.
+Opción D (intubación y coma farmacológico): reservado para estatus epiléptico refractario, no para posictal estable.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "crisis epiléptica" y responden lorazepam o fenitoína automáticamente.
+El examen exige distinguir convulsión activa vs crisis ya finalizada en fase posictal.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Asegurar ABCDE y glucemia capilar.
+2. Si convulsión activa → lorazepam IV.
+3. Si crisis finalizada y posictal estable → soporte, estudio etiológico, observación.
+4. Antiepilépticos de mantenimiento solo si se confirma epilepsia o riesgo alto de recurrencia.
+
+Perlas de examen
+✅ Convulsión activa = lorazepam IV; crisis resuelta en posictal = soporte y estudio.
+✅ Glucemia capilar en toda crisis convulsiva.
+✅ Primera crisis sin recurrencia no requiere fenitoína de urgencia.
+✅ Estatus epiléptico = convulsión >5 min o crisis recurrentes sin recuperación.
+✅ No intubar ni inducir coma en posictal estable sin estatus epiléptico.
+
+Referencias
+• American Academy of Neurology Guidelines.
+• Neurocritical Care Society Guidelines for Status Epilepticus.
+• Harrison's Principles of Internal Medicine.
+• Adams and Victor's Principles of Neurology.
+• UpToDate: Evaluation of the first seizure in adults.`,
   },
   {
     id: "dr-q-188",
@@ -2570,20 +2671,71 @@ American Academy of Neurology Guidelines.; Neurocritical Care Society Guidelines
     correctOptionId: "B",
     explanation: "El paciente presenta un neumotórax a tensión. Su fisiopatología consiste en la entrada de aire al espacio pleural mediante un mecanismo valvular que permite el ingreso de aire durante la inspiración pero impide su salida durante la espiración, generando aumento progresivo de la presión intratorácica, colapso pulmonar y compromiso hemodinámico.",
     keyPoints: [
-      "Neumotórax a tensión.",
+      "Cuando veas: disnea súbita + dolor torácico unilateral + timpanismo + ausencia de ruidos respiratorios + hipotensión y taquicardia.",
+      "Debes pensar en: neumotórax a tensión → mecanismo valvular unidireccional con aumento progresivo de presión intratorácica.",
+      "Produce choque obstructivo por disminución del retorno venoso, no por falla de bomba.",
+      "El neumotórax a tensión es una emergencia que requiere descompresión inmediata.",
       "Tema: Neumotórax a tensión.",
-      "El neumotórax a tensión es una emergencia médica.",
-      "Produce choque obstructivo por disminución del retorno venoso.",
-      "El mecanismo fisiopatológico es una válvula unidireccional.",
     ],
-    theoryContent: `NEUMOLOGÍA — BY DR Q.
-Neumotórax a tensión.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Dolor torácico súbito y disnea." Y responden: Tromboembolismo pulmonar.
+Esta es una pregunta clásica de neumología/urgencias porque evalúa el reconocimiento de la fisiopatología del neumotórax a tensión frente a otras causas de dolor torácico súbito.
 
-Referencias:
-Advanced Trauma Life Support (ATLS) 11th Edition.; Harrison's Principles of Internal Medicine.; Murray & Nadel's Textbook of Respiratory Medicine.; Tintinalli's Emergency Medicine.`,
+La clave no es tromboembolismo pulmonar ni derrame pleural.
+La clave es:
+Disnea súbita + timpanismo + ausencia de ruidos respiratorios + inestabilidad hemodinámica = neumotórax a tensión por válvula unidireccional.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 30 años con disnea súbita y dolor torácico intenso hemitórax derecho.
+• Hipotensión y taquicardia (compromiso hemodinámico).
+• Timpanismo a la percusión en hemitórax derecho.
+• Ausencia de ruidos respiratorios en el mismo lado.
+• Cuadro compatible con neumotórax a tensión.
+
+Recordemos fisiopatología del neumotórax a tensión:
+• Entrada de aire al espacio pleural mediante mecanismo valvular unidireccional.
+• El aire entra en inspiración pero no sale en espiración.
+• Aumento progresivo de presión intratorácica → colapso pulmonar ipsilateral.
+• Desviación traqueal contralateral (en casos avanzados).
+• Choque obstructivo: disminución del retorno venoso por compresión de cavas.
+• Emergencia que requiere descompresión con aguja seguida de tubo torácico.
+
+Por lo tanto:
+La fisiopatología más probable es entrada de aire con mecanismo valvular unidireccional (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+Describe exactamente el mecanismo del neumotórax a tensión: válvula unidireccional que incrementa presión intratorácica progresivamente.
+
+¿Por qué fallan las otras opciones?
+Opción A (derrame pleural): produce matidez, no timpanismo; no genera choque obstructivo valvular.
+Opción C (TEP): causa dolor pleurítico y disnea, pero no timpanismo ni ausencia de ruidos respiratorios unilateral.
+Opción D (SDRA/inflamación alveolar): cuadro bilateral difuso, no unilateral con timpanismo.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "dolor torácico súbito y disnea" y responden tromboembolismo pulmonar.
+El examen exige correlacionar hallazgos semiológicos: timpanismo + silencio auscultatorio unilateral = neumotórax.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Disnea súbita unilateral → evaluar percusión y auscultación.
+2. Timpanismo + silencio auscultatorio = neumotórax.
+3. Si hay inestabilidad hemodinámica = neumotórax a tensión → descompresión inmediata.
+4. Diferenciar de TEP (no timpanismo), derrame (matidez) y neumonía (crepitantes).
+
+Perlas de examen
+✅ Timpanismo + ausencia de ruidos respiratorios unilateral = neumotórax.
+✅ Neumotórax a tensión = choque obstructivo por válvula unidireccional.
+✅ Descompresión con aguja en 2º espacio intercostal línea medioclavicular antes del tubo torácico.
+✅ No confundir con TEP: el TEP no produce timpanismo ni silencio auscultatorio.
+✅ La hipotensión en neumotórax a tensión es por disminución del retorno venoso, no por falla cardíaca.
+
+Referencias
+• Advanced Trauma Life Support (ATLS) 11th Edition.
+• Harrison's Principles of Internal Medicine.
+• Murray & Nadel's Textbook of Respiratory Medicine.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Tension pneumothorax in adults.`,
   },
   {
     id: "dr-q-189",
@@ -2602,20 +2754,70 @@ Advanced Trauma Life Support (ATLS) 11th Edition.; Harrison's Principles of Inte
     correctOptionId: "B",
     explanation: "La combinación de dolor pélvico agudo, sangrado vaginal, amenorrea incierta, masa anexial y líquido libre intraperitoneal es altamente sugestiva de embarazo ectópico roto, una emergencia ginecológica potencialmente mortal.",
     keyPoints: [
-      "Embarazo ectópico roto.",
-      "Tema: Embarazo ectópico.",
+      "Cuando veas: mujer en edad fértil con dolor pélvico agudo + sangrado vaginal + amenorrea incierta + masa anexial + líquido libre intraperitoneal.",
+      "Debes pensar en: embarazo ectópico roto → emergencia ginecológica potencialmente mortal.",
       "Toda mujer en edad fértil con dolor abdominal debe considerarse embarazada hasta demostrar lo contrario.",
       "La tríada clásica es dolor abdominal, amenorrea y sangrado vaginal.",
-      "La masa anexial es un hallazgo característico del embarazo ectópico.",
+      "Tema: Embarazo ectópico.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Embarazo ectópico.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Sangrado vaginal." Y responden: Aborto.
+Esta es una pregunta clásica de ginecología porque evalúa el reconocimiento del embarazo ectópico roto frente a otras causas de sangrado vaginal en mujer joven.
 
-Referencias:
-Williams Obstetrics.; ACOG Practice Bulletin: Tubal Ectopic Pregnancy.; Novak's Gynecology.; UpToDate: Ectopic Pregnancy Clinical Manifestations and Diagnosis.`,
+La clave no es aborto ni enfermedad inflamatoria pélvica.
+La clave es:
+Dolor pélvico agudo + sangrado + masa anexial + líquido libre intraperitoneal = embarazo ectópico roto.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 25 años con sangrado vaginal abundante y dolor pélvico súbito.
+• Sin anticoncepción, ciclos irregulares (amenorrea incierta).
+• Ecografía transvaginal: masa anexial compleja + líquido libre en cavidad peritoneal.
+• Cuadro altamente sugestivo de embarazo ectópico roto.
+
+Recordemos embarazo ectópico:
+• Implantación del embrión fuera de la cavidad uterina (95% en trompa de Falopio).
+• Tríada clásica: dolor abdominal, amenorrea, sangrado vaginal.
+• La masa anexial es un hallazgo característico en ecografía.
+• La rotura produce hemoperitoneo (líquido libre) y puede causar shock hipovolemico.
+• β-hCG cuantitativa y ecografía transvaginal son estudios iniciales.
+• Emergencia quirúrgica si hay inestabilidad hemodinámica o rotura confirmada.
+
+Por lo tanto:
+El diagnóstico más probable es embarazo ectópico roto (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La combinación de dolor agudo, sangrado, masa anexial y líquido libre intraperitoneal es patognomónica de embarazo ectópico complicado con rotura.
+
+¿Por qué fallan las otras opciones?
+Opción A (EIP): fiebre, leucocitosis, dolor bilateral; no explica masa anexial con líquido libre hemático.
+Opción C (quiste ovárico simple): no produce hemoperitoneo ni sangrado abundante agudo.
+Opción D (aborto incompleto): requiere embarazo intrauterino visible; aquí hay masa anexial, no contenido intrauterino.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "sangrado vaginal" y responden aborto.
+El examen exige correlacionar masa anexial + líquido libre intraperitoneal, que orienta a embarazo ectópico, no intrauterino.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Mujer en edad fértil con dolor pélvico → β-hCG siempre.
+2. Si β-hCG positiva + masa anexial → embarazo ectópico hasta demostrar lo contrario.
+3. Líquido libre intraperitoneal = rotura o hemoperitoneo → emergencia.
+4. No confundir con aborto (embarazo intrauterino en ecografía).
+
+Perlas de examen
+✅ Masa anexial + líquido libre + sangrado = embarazo ectópico roto.
+✅ Toda mujer fértil con dolor abdominal = β-hCG obligatoria.
+✅ La tríada clásica: dolor + amenorrea + sangrado.
+✅ El quiste ovárico simple no produce hemoperitoneo.
+✅ La EIP no explica masa anexial con líquido libre hemático.
+
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Tubal Ectopic Pregnancy.
+• Novak's Gynecology.
+• UpToDate: Ectopic Pregnancy Clinical Manifestations and Diagnosis.
+• Gabbe's Obstetrics: Normal and Problem Pregnancies.`,
   },
   {
     id: "dr-q-190",
@@ -2634,20 +2836,70 @@ Williams Obstetrics.; ACOG Practice Bulletin: Tubal Ectopic Pregnancy.; Novak's 
     correctOptionId: "A",
     explanation: "La paciente presenta una amenaza de aborto. La presencia de sangrado vaginal durante el primer trimestre con embrión viable, actividad cardíaca fetal presente y cuello uterino cerrado indica un embarazo potencialmente viable que requiere vigilancia clínica y seguimiento obstétrico.",
     keyPoints: [
-      "Amenaza de aborto.",
-      "Tema: Hemorragia del primer trimestre.",
-      "La amenaza de aborto cursa con sangrado vaginal y cuello uterino cerrado.",
+      "Cuando veas: sangrado vaginal leve en primer trimestre + embarazo intrauterino viable con actividad cardíaca fetal + cuello uterino cerrado.",
+      "Debes pensar en: amenaza de aborto → observación y seguimiento, no intervención activa.",
       "La presencia de actividad cardíaca fetal indica viabilidad gestacional.",
       "No todo sangrado del primer trimestre implica pérdida del embarazo.",
+      "Tema: Hemorragia del primer trimestre.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Hemorragia del primer trimestre.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Sangrado vaginal." Y responden: Legrado o misoprostol.
+Esta es una pregunta clásica de obstetricia porque evalúa una trampa frecuente: intervenir quirúrgicamente o con misoprostol ante todo sangrado del primer trimestre.
 
-Referencias:
-Williams Obstetrics.; ACOG Practice Bulletin: Early Pregnancy Loss.; Gabbe's Obstetrics: Normal and Problem Pregnancies.; Novak's Gynecology.`,
+La clave no es legrado ni misoprostol.
+La clave es:
+Sangrado leve + embrión viable con actividad cardíaca + cuello cerrado = amenaza de aborto → observación y seguimiento.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Primigesta de 27 años, embarazo de 12 semanas confirmado por ecografía.
+• Sangrado vaginal leve de 12 horas, sin dolor abdominal significativo.
+• Ecografía: embarazo intrauterino viable con actividad cardíaca fetal presente.
+• Cuello uterino cerrado (implícito en amenaza de aborto).
+• Cuadro compatible con amenaza de aborto.
+
+Recordemos hemorragia del primer trimestre:
+• Amenaza de aborto: sangrado + cuello cerrado + embrión viable → observación y seguimiento.
+• Aborto incompleto: sangrado + cuello abierto + restos ovulares → legrado o misoprostol.
+• Aborto inevitable: sangrado + cuello abierto + embrión no viable.
+• Aborto completo: expulsión completa de productos de gestación.
+• La actividad cardíaca fetal es el predictor más importante de viabilidad.
+
+Por lo tanto:
+La conducta correcta es observación y seguimiento (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+El embarazo es viable con actividad cardíaca fetal; el sangrado leve con cuello cerrado define amenaza de aborto, que se maneja expectante.
+
+¿Por qué fallan las otras opciones?
+Opción B (legrado): indicado en aborto incompleto o retenido, no en embarazo viable.
+Opción C (misoprostol): mismo error; es para expulsión de productos no viables.
+Opción D (quirófano de urgencias): no hay indicación quirúrgica con embarazo viable y sangrado leve.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "sangrado vaginal" y responden legrado o misoprostol.
+El examen exige verificar viabilidad fetal antes de decidir manejo activo vs expectante.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sangrado en primer trimestre → ecografía transvaginal urgente.
+2. Evaluar viabilidad fetal (actividad cardíaca) y estado del cuello uterino.
+3. Viable + cuello cerrado = amenaza de aborto → observación.
+4. No viable o incompleto = manejo activo (misoprostol o legrado).
+
+Perlas de examen
+✅ Amenaza de aborto = sangrado + cuello cerrado + embrión viable → observación.
+✅ Actividad cardíaca fetal = predictor de viabilidad gestacional.
+✅ Legrado/misoprostol solo si embarazo no viable o incompleto.
+✅ No todo sangrado del primer trimestre implica pérdida gestacional.
+✅ Reposo relativo y seguimiento ecográfico en amenaza de aborto.
+
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Early Pregnancy Loss.
+• Gabbe's Obstetrics: Normal and Problem Pregnancies.
+• Novak's Gynecology.
+• UpToDate: Threatened abortion.`,
   },
   {
     id: "dr-q-191",
@@ -2666,20 +2918,71 @@ Williams Obstetrics.; ACOG Practice Bulletin: Early Pregnancy Loss.; Gabbe's Obs
     correctOptionId: "A",
     explanation: "El paciente presenta un episodio maníaco caracterizado por disminución de la necesidad de sueño, aumento de energía, verborrea, fuga de ideas, conductas de riesgo y deterioro funcional. La presencia de un episodio maníaco es suficiente para establecer el diagnóstico de trastorno bipolar tipo I.",
     keyPoints: [
-      "Episodio maníaco.",
-      "Tema: Trastorno bipolar.",
-      "Un episodio maníaco establece el diagnóstico de trastorno bipolar tipo I.",
+      "Cuando veas: disminución de necesidad de sueño + aumento de energía + verborrea + fuga de ideas + conductas de riesgo (gastos excesivos, apuestas) de ~3 semanas.",
+      "Debes pensar en: episodio maníaco → trastorno bipolar tipo I (un episodio maníaco basta para el diagnóstico).",
       "La disminución de la necesidad de sueño es un síntoma cardinal de manía.",
-      "La verborrea y la fuga de ideas son hallazgos clásicos.",
+      "La verborrea y la fuga de ideas son hallazgos clásicos del episodio maníaco.",
+      "Tema: Trastorno bipolar.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Trastorno bipolar.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes observan: "Irritabilidad." Y responden: Ansiedad.
+Esta es una pregunta clásica de psiquiatría porque evalúa el reconocimiento de un episodio maníaco frente a otros trastornos del estado de ánimo.
 
-Referencias:
-DSM-5-TR.; Kaplan & Sadock's Synopsis of Psychiatry.; Stahl's Essential Psychopharmacology.; American Psychiatric Association Practice Guideline for Bipolar Disorder.`,
+La clave no es depresión ni ansiedad.
+La clave es:
+Energía excesiva + disminución del sueño + verborrea + fuga de ideas + conductas de riesgo = episodio maníaco → trastorno bipolar tipo I.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 24 años con cambios de comportamiento de 3 semanas.
+• Disminución importante de necesidad de sueño (3 h/noche sin fatiga).
+• Múltiples proyectos de negocios, gastos excesivos, apuestas en línea.
+• Verborrea, fuga de ideas, irritabilidad.
+• Sin antecedentes psiquiátricos previos ni consumo de sustancias.
+• Cuadro compatible con episodio maníaco.
+
+Recordemos criterios del episodio maníaco (DSM-5):
+• Estado de ánimo elevado, expansivo o irritable + aumento de energía.
+• Duración mínima de 1 semana (o cualquier duración si requiere hospitalización).
+• Síntomas cardinales: disminución de necesidad de sueño, verborrea, fuga de ideas, grandiosidad, distractibilidad, aumento de actividad dirigida a metas, conductas de riesgo.
+• Un episodio maníaco establece diagnóstico de trastorno bipolar tipo I.
+• Diferenciar de hipomanía (menor duración y sin deterioro funcional grave).
+
+Por lo tanto:
+El diagnóstico más probable es trastorno bipolar (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+Cumple criterios completos de episodio maníaco con deterioro funcional significativo; un episodio maníaco basta para diagnosticar trastorno bipolar tipo I.
+
+¿Por qué fallan las otras opciones?
+Opción B (depresión mayor): requiere ánimo depresivo, no elevado; no explica verborrea ni gastos excesivos.
+Opción C (trastorno de ansiedad): no explica disminución del sueño con energía, fuga de ideas ni conductas de riesgo.
+Opción D (esquizofrenia): requiere síntomas psicóticos (alucinaciones, delirios) y síntomas negativos, no presentes aquí.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan "irritabilidad" y responden trastorno de ansiedad.
+La irritabilidad en contexto de energía elevada, verborrea y conductas de riesgo orienta a manía, no a ansiedad.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar estado de ánimo elevado/irritable + aumento de energía.
+2. Buscar síntomas cardinales: sueño disminuido, verborrea, fuga de ideas, conductas de riesgo.
+3. Si cumple criterios de manía → trastorno bipolar tipo I.
+4. Diferenciar de hipomanía (menor gravedad) y esquizofrenia (psicosis).
+
+Perlas de examen
+✅ Un episodio maníaco = trastorno bipolar tipo I.
+✅ Disminución de necesidad de sueño sin fatiga = síntoma cardinal de manía.
+✅ Verborrea + fuga de ideas = manía, no ansiedad.
+✅ Conductas de riesgo (gastos, apuestas) son criterio diagnóstico de manía.
+✅ La esquizofrenia requiere alucinaciones o delirios, no solo cambio conductual.
+
+Referencias
+• DSM-5-TR.
+• Kaplan & Sadock's Synopsis of Psychiatry.
+• Stahl's Essential Psychopharmacology.
+• American Psychiatric Association Practice Guideline for Bipolar Disorder.
+• UpToDate: Bipolar disorder in adults — Clinical manifestations.`,
   },
   {
     id: "dr-q-192",
@@ -2698,20 +3001,71 @@ DSM-5-TR.; Kaplan & Sadock's Synopsis of Psychiatry.; Stahl's Essential Psychoph
     correctOptionId: "A",
     explanation: "El paciente presenta un primer episodio psicótico compatible con esquizofrenia. El tratamiento inicial de elección consiste en antipsicóticos de segunda generación debido a su eficacia sobre los síntomas psicóticos y su mejor perfil de efectos adversos extrapiramidales.",
     keyPoints: [
-      "Esquizofrenia.",
-      "Tema: Tratamiento inicial de la esquizofrenia.",
+      "Cuando veas: primer episodio psicótico con alucinaciones auditivas (voces) + delirios persecutorios + deterioro funcional progresivo de ~3 meses.",
+      "Debes pensar en: esquizofrenia → antipsicótico de segunda generación como tratamiento de primera línea.",
       "Las alucinaciones auditivas son el síntoma psicótico más frecuente en esquizofrenia.",
-      "Los delirios persecutorios son una manifestación clásica.",
-      "El afecto aplanado corresponde a un síntoma negativo.",
+      "Los delirios persecutorios son una manifestación clásica del trastorno.",
+      "Tema: Tratamiento inicial de la esquizofrenia.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Tratamiento inicial de la esquizofrenia.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes observan: "Irritabilidad y agitación." Y responden: Benzodiacepinas.
+Esta es una pregunta clásica de psiquiatría porque evalúa el tratamiento de primera línea del primer episodio psicótico compatible con esquizofrenia.
 
-Referencias:
-DSM-5-TR.; Kaplan & Sadock's Synopsis of Psychiatry.; American Psychiatric Association Practice Guideline for Schizophrenia.; Stahl's Essential Psychopharmacology.`,
+La clave no es antidepresivos, litio ni benzodiacepinas en monoterapia.
+La clave es:
+Alucinaciones auditivas + delirios persecutorios + deterioro funcional = primer episodio psicótico → antipsicótico de segunda generación.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 26 años con cambios progresivos de 3 meses.
+• Aislamiento social, deterioro del autocuidado, dificultades laborales.
+• Alucinaciones auditivas (voces que le indican no confiar en familiares).
+• Delirios persecutorios (familiares conspirando en su contra).
+• Cuadro compatible con primer episodio psicótico de esquizofrenia.
+
+Recordemos tratamiento de la esquizofrenia:
+• Los antipsicóticos de segunda generación (risperidona, olanzapina, quetiapina, aripiprazol) son primera línea.
+• Mejor perfil de efectos adversos extrapiramidales que primera generación.
+• Los ISRS (sertralina) no tratan síntomas psicóticos.
+• El litio es para trastorno bipolar, no esquizofrenia.
+• Las benzodiacepinas en monoterapia no controlan psicosis.
+• Inicio precoz de antipsicóticos mejora pronóstico a largo plazo.
+
+Por lo tanto:
+El tratamiento de primera línea es iniciar antipsicótico de segunda generación (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+Los antipsicóticos de segunda generación son el estándar de tratamiento del primer episodio psicótico por eficacia sobre síntomas positivos y mejor tolerabilidad.
+
+¿Por qué fallan las otras opciones?
+Opción B (sertralina): antidepresivo; no trata alucinaciones ni delirios.
+Opción C (litio): estabilizador del ánimo para trastorno bipolar, no esquizofrenia.
+Opción D (clonazepam en monoterapia): no controla síntomas psicóticos; puede usarse como adjunto transitorio para agitación.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden agitación o irritabilidad con indicación de benzodiacepinas como tratamiento principal.
+El tratamiento de la psicosis es antipsicótico, no ansiolítico.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar síntomas psicóticos positivos (alucinaciones, delirios).
+2. Confirmar deterioro funcional y duración compatible con esquizofrenia.
+3. Iniciar antipsicótico de segunda generación como monoterapia.
+4. Psicoeducación y seguimiento multidisciplinario.
+
+Perlas de examen
+✅ Primer episodio psicótico = antipsicótico de segunda generación.
+✅ Alucinaciones auditivas son el síntoma psicótico más frecuente en esquizofrenia.
+✅ Los ISRS no tratan psicosis.
+✅ El litio es para trastorno bipolar, no esquizofrenia.
+✅ Inicio precoz de antipsicóticos mejora pronóstico.
+
+Referencias
+• DSM-5-TR.
+• Kaplan & Sadock's Synopsis of Psychiatry.
+• American Psychiatric Association Practice Guideline for Schizophrenia.
+• Stahl's Essential Psychopharmacology.
+• UpToDate: Pharmacotherapy for schizophrenia — Initial approach.`,
   },
   {
     id: "dr-q-193",
@@ -2730,20 +3084,72 @@ DSM-5-TR.; Kaplan & Sadock's Synopsis of Psychiatry.; American Psychiatric Assoc
     correctOptionId: "A",
     explanation: "El riesgo relativo compara la incidencia de un evento entre un grupo expuesto y un grupo no expuesto. Un RR de 15 indica que los individuos expuestos al factor de riesgo presentan una probabilidad 15 veces mayor de desarrollar el desenlace estudiado.",
     keyPoints: [
-      "Asociación positiva entre exposición y enfermedad.",
+      "Cuando veas: estudio de cohorte con riesgo relativo (RR) reportado.",
+      "Debes pensar en: RR = incidencia en expuestos / incidencia en no expuestos; RR > 1 = factor de riesgo.",
+      "RR de 15 significa 15 veces más riesgo, no 15% más riesgo.",
+      "RR = 1 indica ausencia de asociación entre exposición y enfermedad.",
       "Tema: Interpretación del riesgo relativo.",
-      "El riesgo relativo se calcula en estudios de cohorte.",
-      "RR = 1 indica ausencia de asociación.",
-      "RR > 1 indica factor de riesgo.",
     ],
-    theoryContent: `EPIDEMIOLOGÍA Y BIOESTADÍSTICA — BY DR Q.
-Interpretación del riesgo relativo.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes confunden: "15 veces más riesgo" con "15% más riesgo".
+Esta es una pregunta clásica de epidemiología porque evalúa la interpretación correcta del riesgo relativo, una medida fundamental en estudios de cohorte.
 
-Referencias:
-Gordis Epidemiology.; Rothman Epidemiology: An Introduction.; Fletcher & Fletcher Clinical Epidemiology.; Essentials of Medical Statistics.`,
+La clave no es confundir "veces más" con "porcentaje más".
+La clave es:
+RR = 15 en estudio de cohorte = los fumadores tienen 15 veces más riesgo de cáncer de pulmón que los no fumadores.
+
+¿Qué está ocurriendo realmente?
+El estudio presenta:
+• Estudio de cohorte con seguimiento de 7 años.
+• Exposición: tabaquismo.
+• Desenlace: cáncer de pulmón.
+• RR = 15 (fumadores vs no fumadores).
+• Asociación positiva fuerte entre tabaquismo y cáncer de pulmón.
+
+Recordemos medidas de asociación en epidemiología:
+• Riesgo relativo (RR): incidencia en expuestos / incidencia en no expuestos.
+• Se calcula en estudios de cohorte y ensayos clínicos.
+• RR = 1: ausencia de asociación.
+• RR > 1: factor de riesgo (aumenta probabilidad del desenlace).
+• RR < 1: factor protector (disminuye probabilidad del desenlace).
+• RR de 15 = riesgo 15 veces mayor, NO 15% mayor.
+• Diferenciar de odds ratio (OR), usado en estudios de casos y controles.
+
+Por lo tanto:
+La interpretación correcta es que los fumadores tienen 15 veces más riesgo (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+RR de 15 indica que la incidencia en fumadores es 15 veces la incidencia en no fumadores.
+
+¿Por qué fallan las otras opciones?
+Opción B (15% más riesgo): confunde riesgo relativo con diferencia porcentual; 15 veces ≠ 15%.
+Opción C (no hay asociación): RR = 1 sería ausencia de asociación; aquí RR = 15.
+Opción D (15 veces menor): RR < 1 indicaría factor protector; aquí RR > 1.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden "15 veces más riesgo" con "15% más riesgo".
+El examen exige distinguir medidas relativas (multiplicativas) de diferencias porcentuales (aditivas).
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar tipo de estudio (cohorte → RR; casos-controles → OR).
+2. Interpretar magnitud: RR = 1 sin asociación; RR > 1 factor de riesgo; RR < 1 protector.
+3. "N veces más" es multiplicativo, no porcentual.
+4. No confundir RR con razón de prevalencia ni odds ratio.
+
+Perlas de examen
+✅ RR se calcula en estudios de cohorte.
+✅ RR = 1: sin asociación; RR > 1: factor de riesgo; RR < 1: protector.
+✅ RR de 15 = 15 veces más riesgo, no 15% más.
+✅ OR se usa en casos-controles, no RR.
+✅ La magnitud del RR no implica causalidad por sí sola.
+
+Referencias
+• Gordis Epidemiology.
+• Rothman Epidemiology: An Introduction.
+• Fletcher & Fletcher Clinical Epidemiology.
+• Essentials of Medical Statistics.
+• UpToDate: Overview of measures of association.`,
   },
   {
     id: "dr-q-194",
@@ -2762,20 +3168,70 @@ Gordis Epidemiology.; Rothman Epidemiology: An Introduction.; Fletcher & Fletche
     correctOptionId: "A",
     explanation: "El paciente es un fumador activo con antecedente significativo de tabaquismo y se encuentra dentro del grupo de riesgo para cáncer de pulmón. Las guías actuales recomiendan tamizaje mediante tomografía computarizada de tórax de baja dosis en pacientes seleccionados de alto riesgo, incluso en ausencia de síntomas.",
     keyPoints: [
-      "Tamizaje para cáncer de pulmón con tomografía de baja dosis.",
-      "Tema: Tamizaje de cáncer de pulmón.",
+      "Cuando veas: fumador activo de 53 años con ≥20 paquetes-año, asintomático, en edad de tamizaje.",
+      "Debes pensar en: tomografía computarizada de tórax de baja dosis para tamizaje de cáncer de pulmón.",
       "El cáncer de pulmón puede ser asintomático en etapas iniciales.",
-      "La tomografía de baja dosis es el método recomendado para tamizaje.",
       "La radiografía de tórax no es una estrategia efectiva de cribado.",
+      "Tema: Tamizaje de cáncer de pulmón.",
     ],
-    theoryContent: `MEDICINA PREVENTIVA Y SALUD PÚBLICA — BY DR Q.
-Tamizaje de cáncer de pulmón.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Paciente asintomático." Y responden: "No necesita estudios."
+Esta es una pregunta clásica de medicina preventiva porque evalúa una trampa frecuente: no tamizar porque el paciente está asintomático.
 
-Referencias:
-United States Preventive Services Task Force (USPSTF) Lung Cancer Screening Recommendations.; National Comprehensive Cancer Network (NCCN) Guidelines.; American Cancer Society Guidelines for Lung Cancer Screening.; Harrison's Principles of Internal Medicine.`,
+La clave no es "no hacer estudios" ni radiografía de tórax.
+La clave es:
+Fumador activo ≥20 paquetes-año + edad 50-80 años + asintomático = tamizaje con TC de tórax de baja dosis.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 53 años, fumador activo con 20 paquetes-año.
+• Completamente asintomático.
+• Esposa solicita tamizajes preventivos.
+• Cumple criterios de alto riesgo para cáncer de pulmón.
+• Indicación de tamizaje con TC de baja dosis.
+
+Recordemos tamizaje de cáncer de pulmón:
+• Criterios USPSTF: edad 50-80 años, ≥20 paquetes-año, fumador activo o dejó de fumar <15 años.
+• TC de tórax de baja dosis (LDCT) es el único método con evidencia de reducción de mortalidad.
+• La radiografía de tórax NO es efectiva para cribado (no reduce mortalidad).
+• La broncoscopia es diagnóstica, no tamizaje en asintomáticos.
+• El cáncer de pulmón es asintomático en etapas tempranas; el tamizaje detecta lesiones antes de síntomas.
+
+Por lo tanto:
+La conducta correcta es solicitar TC de tórax de baja dosis (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+El paciente cumple criterios de alto riesgo; las guías USPSTF y NCCN recomiendan LDCT anual en este grupo, incluso asintomático.
+
+¿Por qué fallan las otras opciones?
+Opción B (radiografía anual): no reduce mortalidad por cáncer de pulmón; no es estrategia de cribado recomendada.
+Opción C (broncoscopia): procedimiento invasivo diagnóstico, no tamizaje en paciente asintomático sin lesión sospechosa.
+Opción D (no realizar estudios): error clásico; la asintomatía no excluye tamizaje en grupo de alto riesgo.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "paciente asintomático" y responden "no necesita estudios".
+El tamizaje se realiza precisamente en asintomáticos de alto riesgo para detectar enfermedad precoz.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar criterios de riesgo: edad, paquetes-año, estado de tabaquismo.
+2. Si cumple criterios → LDCT anual.
+3. No usar radiografía de tórax como tamizaje.
+4. La asintomatía es indicación de tamizaje, no contraindicación.
+
+Perlas de examen
+✅ LDCT es el único tamizaje con evidencia de reducción de mortalidad en cáncer de pulmón.
+✅ Criterios: ≥20 paquetes-año, edad 50-80, fumador activo o cesación <15 años.
+✅ La radiografía de tórax NO sirve para cribado de cáncer de pulmón.
+✅ Asintomático + alto riesgo = tamizaje indicado.
+✅ La broncoscopia es diagnóstica, no tamizaje.
+
+Referencias
+• United States Preventive Services Task Force (USPSTF) Lung Cancer Screening Recommendations.
+• National Comprehensive Cancer Network (NCCN) Guidelines.
+• American Cancer Society Guidelines for Lung Cancer Screening.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Screening for lung cancer.`,
   },
   {
     id: "dr-q-195",
@@ -2794,20 +3250,70 @@ United States Preventive Services Task Force (USPSTF) Lung Cancer Screening Reco
     correctOptionId: "C",
     explanation: "La paciente presenta fibrilación auricular no valvular y antecedente de accidente cerebrovascular isquémico previo, lo que la ubica en un grupo de muy alto riesgo tromboembólico. En ausencia de contraindicaciones, la anticoagulación oral está claramente indicada para reducir el riesgo de nuevos eventos cerebrovasculares.",
     keyPoints: [
-      "Anticoagulación oral obligatoria.",
+      "Cuando veas: fibrilación auricular no valvular + antecedente de ACV isquémico previo, sin contraindicaciones para anticoagulación.",
+      "Debes pensar en: anticoagulación oral obligatoria → anticoagulante oral directo (DOAC) como estrategia preferida.",
+      "El antecedente de ACV es uno de los factores de mayor peso en CHA₂DS₂-VASc (2 puntos).",
+      "Un ACV previo es indicación de anticoagulación, no contraindicación.",
       "Tema: Prevención tromboembólica en fibrilación auricular.",
-      "El antecedente de ACV es uno de los factores de mayor peso en CHA₂DS₂-VASc.",
-      "La fibrilación auricular aumenta significativamente el riesgo de embolia cerebral.",
-      "Los anticoagulantes orales directos son preferidos en fibrilación auricular no valvular.",
     ],
-    theoryContent: `CARDIOLOGÍA — BY DR Q.
-Prevención tromboembólica en fibrilación auricular.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Tuvo un accidente cerebrovascular." Y responden: "No anticoagular por riesgo de sangrado."
+Esta es una pregunta clásica de cardiología porque evalúa una trampa frecuente: evitar anticoagulación en paciente con antecedente de ACV por miedo a sangrado.
 
-Referencias:
-ESC Guidelines for the Management of Atrial Fibrillation.; ACC/AHA/HRS Guideline for Atrial Fibrillation.; Braunwald's Heart Disease.; Harrison's Principles of Internal Medicine.`,
+La clave no es omitir anticoagulación ni usar solo aspirina.
+La clave es:
+FA no valvular + ACV isquémico previo = muy alto riesgo tromboembólico → anticoagulación oral con DOAC.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 77 años con fibrilación auricular no valvular en betabloqueadores.
+• Antecedente de ACV isquémico hace 5 años, sin secuelas significativas.
+• Sin contraindicaciones para anticoagulación (sin hemorragia digestiva ni intracraneal).
+• CHA₂DS₂-VASc elevado (ACV previo = 2 puntos + edad + sexo femenino).
+• Indicación clara de anticoagulación oral.
+
+Recordemos prevención tromboembólica en FA:
+• CHA₂DS₂-VASc ≥2 en hombres o ≥3 en mujeres → anticoagulación indicada.
+• ACV previo es el factor de mayor peso (2 puntos) y indica anticoagulación independientemente del puntaje total.
+• Los DOAC son preferidos sobre warfarina en FA no valvular.
+• La aspirina no es suficiente para prevención secundaria en FA de alto riesgo.
+• Un ACV previo aumenta el riesgo de recurrencia, no lo disminuye; la anticoagulación es preventiva.
+
+Por lo tanto:
+La conducta correcta es iniciar anticoagulación oral con DOAC (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La paciente tiene FA + ACV previo sin contraindicaciones; la anticoagulación con DOAC reduce significativamente el riesgo de nuevo evento tromboembólico.
+
+¿Por qué fallan las otras opciones?
+Opción A (solo betabloqueadores): controlan frecuencia pero no previenen embolia.
+Opción B (aspirina): insuficiente en FA de alto riesgo; no reemplaza anticoagulación.
+Opción D (no anticoagular por ACV previo): error clásico; el ACV previo es indicación de anticoagulación, no contraindicación.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "tuvo un accidente cerebrovascular" y responden "no anticoagular por riesgo de sangrado".
+El ACV previo es la razón principal para anticoagular, no para suspender.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Calcular CHA₂DS₂-VASc en todo paciente con FA.
+2. ACV previo = anticoagulación obligatoria.
+3. Preferir DOAC sobre warfarina en FA no valvular.
+4. Evaluar HAS-BLED para riesgo de sangrado, pero no contraindica anticoagulación si beneficio supera riesgo.
+
+Perlas de examen
+✅ ACV previo en FA = anticoagulación obligatoria con DOAC.
+✅ El ACV previo es indicación, no contraindicación para anticoagular.
+✅ La aspirina no sustituye anticoagulación en FA de alto riesgo.
+✅ CHA₂DS₂-VASc ≥2 (hombres) o ≥3 (mujeres) = anticoagular.
+✅ Betabloqueadores controlan frecuencia, no previenen embolia.
+
+Referencias
+• ESC Guidelines for the Management of Atrial Fibrillation.
+• ACC/AHA/HRS Guideline for Atrial Fibrillation.
+• Braunwald's Heart Disease.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Atrial fibrillation — Anticoagulation.`,
   },
   {
     id: "dr-q-196",
@@ -2826,20 +3332,69 @@ ESC Guidelines for the Management of Atrial Fibrillation.; ACC/AHA/HRS Guideline
     correctOptionId: "C",
     explanation: "El paciente presenta manifestaciones neuromusculares y cambios electrocardiográficos clásicos de hiperkalemia. La enfermedad renal crónica es uno de los principales factores de riesgo para el desarrollo de esta alteración electrolítica debido a la disminución de la excreción renal de potasio.",
     keyPoints: [
-      "Hiperkalemia.",
+      "Cuando veas: enfermedad renal crónica + debilidad muscular + parestesias + alteraciones de conducción en ECG.",
+      "Debes pensar en: hiperkalemia → ondas T picudas como hallazgo más temprano en el ECG.",
+      "La ERC es una causa frecuente de hiperkalemia por disminución de excreción renal de potasio.",
+      "El ensanchamiento del QRS indica mayor gravedad de hiperkalemia.",
       "Tema: Trastornos del potasio.",
-      "Las ondas T picudas son el hallazgo más temprano de hiperkalemia.",
-      "La enfermedad renal crónica es una causa frecuente de hiperkalemia.",
-      "El ensanchamiento del QRS indica mayor gravedad.",
     ],
-    theoryContent: `NEFROLOGÍA — BY DR Q.
-Trastornos del potasio.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes observan: "Debilidad muscular." Y responden: Hipokalemia.
+Esta es una pregunta clásica de nefrología porque evalúa una trampa frecuente: asociar debilidad muscular solo con hipokalemia, sin considerar hiperkalemia en paciente con ERC.
 
-Referencias:
-KDIGO Clinical Practice Guidelines.; Harrison's Principles of Internal Medicine.; Brenner and Rector's The Kidney.; UpToDate: Clinical Manifestations and Treatment of Hyperkalemia.`,
+La clave no es hipokalemia ni hipocalcemia.
+La clave es:
+ERC + debilidad muscular + parestesias + alteraciones de conducción en ECG = hiperkalemia.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 60 años con enfermedad renal crónica.
+• Debilidad muscular progresiva y parestesias en extremidades.
+• ECG con alteraciones de conducción cardíaca.
+• Cuadro compatible con hiperkalemia en contexto de ERC.
+
+Recordemos trastornos del potasio:
+• Hiperkalemia: ERC es causa frecuente por disminución de excreción renal.
+• Manifestaciones neuromusculares: debilidad, parestesias, parálisis flácida.
+• Cambios ECG progresivos: ondas T picudas (más temprano) → ensanchamiento PR → ensanchamiento QRS → ondas sinusoidales → asistolia.
+• Hipokalemia: también causa debilidad, pero ECG muestra ondas T aplanadas, aparición de onda U, depresión ST.
+• La hiperkalemia es emergencia médica por riesgo de arritmias mortales.
+
+Por lo tanto:
+La alteración electrolítica más probable es hiperkalemia (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La ERC predispone a hiperkalemia; las manifestaciones neuromusculares y los cambios de conducción en ECG son compatibles con elevación de potasio sérico.
+
+¿Por qué fallan las otras opciones?
+Opción A (hipocalcemia): causa prolongación QT, no alteraciones de conducción típicas de hiperkalemia; no se asocia tan directamente a ERC.
+Opción B (hipokalemia): causa debilidad pero ECG muestra ondas T aplanadas y onda U, no alteraciones de conducción.
+Opción D (hipernatremia): causa alteración neurológica (confusión, convulsiones), no debilidad con cambios de conducción típicos.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan "debilidad muscular" y responden hipokalemia automáticamente.
+En paciente con ERC, la hiperkalemia es más probable y los cambios de conducción en ECG son la pista decisiva.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. ERC + síntomas neuromusculares → solicitar potasio sérico y ECG urgente.
+2. Interpretar ECG: ondas T picudas = hiperkalemia temprana.
+3. Tratar hiperkalemia agresivamente si hay cambios ECG (gluconato de calcio, insulina + glucosa, resinas).
+4. No confundir con hipokalemia: el ECG es diferente.
+
+Perlas de examen
+✅ ERC + debilidad + alteraciones ECG = hiperkalemia hasta demostrar lo contrario.
+✅ Ondas T picudas = hallazgo ECG más temprano de hiperkalemia.
+✅ Ensanchamiento del QRS = hiperkalemia grave → emergencia.
+✅ La hipokalemia produce ondas T aplanadas y onda U, no picudas.
+✅ Hiperkalemia con cambios ECG requiere tratamiento urgente.
+
+Referencias
+• KDIGO Clinical Practice Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Brenner and Rector's The Kidney.
+• UpToDate: Clinical Manifestations and Treatment of Hyperkalemia.
+• Braunwald's Heart Disease — Electrolyte disorders.`,
   },
   {
     id: "dr-q-197",
@@ -2858,20 +3413,71 @@ KDIGO Clinical Practice Guidelines.; Harrison's Principles of Internal Medicine.
     correctOptionId: "B",
     explanation: "El cuadro clínico es característico de eritema infeccioso, enfermedad causada por el Parvovirus B19. La aparición de eritema facial con aspecto de \"mejillas abofeteadas\" seguida de un exantema reticulado en tronco y extremidades constituye una presentación clásica.",
     keyPoints: [
-      "Eritema infeccioso por Parvovirus B19.",
+      "Cuando veas: fiebre de varios días + exantema eritematoso intenso en mejillas (\"bofetada\") + exantema reticulado en tronco y extremidades en niño con buen estado general.",
+      "Debes pensar en: eritema infeccioso (quinta enfermedad) por Parvovirus B19.",
+      "El signo de \"mejillas abofeteadas\" es característico y aparece antes del exantema corporal.",
+      "El exantema reticulado o en encaje es altamente sugestivo del diagnóstico.",
       "Tema: Exantemas virales de la infancia.",
-      "El eritema infeccioso es causado por Parvovirus B19.",
-      "El signo de \"mejillas abofeteadas\" es característico.",
-      "El exantema reticulado es altamente sugestivo del diagnóstico.",
     ],
-    theoryContent: `PEDIATRÍA — BY DR Q.
-Exantemas virales de la infancia.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Fiebre y exantema." Y responden: Sarampión.
+Esta es una pregunta clásica de pediatría porque evalúa el reconocimiento del eritema infeccioso frente a otros exantemas virales de la infancia.
 
-Referencias:
-Nelson Textbook of Pediatrics.; Red Book: American Academy of Pediatrics.; Rudolph's Pediatrics.; UpToDate: Erythema Infectiosum (Parvovirus B19 Infection).`,
+La clave no es sarampión ni rubéola.
+La clave es:
+Fiebre + eritema facial en \"bofetada\" + exantema reticulado en tronco/extremidades + buen estado general = eritema infeccioso (Parvovirus B19).
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Niño de 4 años con esquema de vacunación completo.
+• Fiebre de 4 días con malestar y mialgias.
+• Exantema eritematoso intenso en mejillas (\"bofetada\") de 24 h de evolución.
+• Exantema reticulado en tronco y extremidades.
+• Buen estado general, sin compromiso respiratorio ni prurito.
+• Cuadro clásico de eritema infeccioso.
+
+Recordemos exantemas virales de la infancia:
+• Eritema infeccioso (5ª enfermedad): Parvovirus B19; eritema facial + exantema reticulado; autolimitado.
+• Sarampión: manchas de Koplik, exantema morbiliforme cefalocaudal, fiebre alta, malestar intenso.
+• Rubéola: adenopatías retroauriculares/occipitales, exantema maculopapular fino.
+• Exantema súbito (roséola): fiebre alta 3-5 días que cede bruscamente, luego exantema.
+• El eritema infeccioso es benigno; riesgo en embarazadas (anemia fetal) y pacientes con hemólisis crónica.
+
+Por lo tanto:
+El diagnóstico más probable es eritema infeccioso (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La secuencia eritema facial en \"bofetada\" seguido de exantema reticulado con buen estado general es patognomónica de Parvovirus B19.
+
+¿Por qué fallan las otras opciones?
+Opción A (sarampión): requiere manchas de Koplik, exantema morbiliforme, mayor gravedad; vacunación completa lo hace improbable.
+Opción C (rubéola): adenopatías características, exantema maculopapular fino, no patrón reticulado ni \"bofetada\".
+Opción D (exantema súbito): la fiebre cede antes del exantema; aquí el exantema facial aparece durante la fiebre.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen \"fiebre y exantema\" y responden sarampión.
+El patrón reticulado + mejillas abofeteadas + buen estado general orienta a eritema infeccioso, no sarampión.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Fiebre + exantema en niño → clasificar patrón del exantema.
+2. Eritema facial en \"bofetada\" = eritema infeccioso hasta demostrar lo contrario.
+3. Exantema reticulado confirma Parvovirus B19.
+4. Manejo expectante; advertir riesgo en embarazadas contactadas.
+
+Perlas de examen
+✅ \"Mejillas abofeteadas\" + exantema reticulado = eritema infeccioso (Parvovirus B19).
+✅ Buen estado general a pesar del exantema intenso.
+✅ Sarampión: manchas de Koplik + exantema morbiliforme + mayor gravedad.
+✅ Roséola: fiebre que cede, luego exantema (no simultáneos).
+✅ Riesgo en embarazadas: anemia fetal por Parvovirus B19.
+
+Referencias
+• Nelson Textbook of Pediatrics.
+• Red Book: American Academy of Pediatrics.
+• Rudolph's Pediatrics.
+• UpToDate: Erythema Infectiosum (Parvovirus B19 Infection).
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "dr-q-198",
@@ -2890,20 +3496,71 @@ Nelson Textbook of Pediatrics.; Red Book: American Academy of Pediatrics.; Rudol
     correctOptionId: "B",
     explanation: "La paciente presenta un síndrome neurológico focal de inicio súbito altamente sugestivo de accidente cerebrovascular isquémico agudo dentro de la ventana terapéutica para reperfusión. La conducta inicial consiste en realizar neuroimagen urgente para descartar hemorragia intracraneal y determinar elegibilidad para trombólisis.",
     keyPoints: [
-      "Código ACV y tomografía urgente.",
+      "Cuando veas: déficit neurológico focal súbito (hemiparesia + afasia) de <4.5 horas en paciente con factores de riesgo vascular.",
+      "Debes pensar en: código ACV → tomografía cerebral simple urgente y valorar trombólisis intravenosa.",
+      "Todo déficit neurológico focal súbito debe considerarse ACV hasta demostrar lo contrario.",
+      "La tomografía simple es el estudio inicial para descartar hemorragia intracraneal.",
       "Tema: Accidente cerebrovascular isquémico agudo.",
-      "Todo déficit neurológico focal súbito debe considerarse un ACV hasta demostrar lo contrario.",
-      "La tomografía simple es el estudio inicial de elección.",
-      "La ventana habitual para trombólisis intravenosa es de hasta 4.5 horas en pacientes seleccionados.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Accidente cerebrovascular isquémico agudo.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Presión arterial 160/90 mmHg." Y responden: Control agresivo de la presión arterial.
+Esta es una pregunta clásica de neurología porque evalúa el manejo urgente del ACV isquémico agudo dentro de la ventana terapéutica de reperfusión.
 
-Referencias:
-American Heart Association/American Stroke Association Guidelines.; European Stroke Organisation Guidelines.; Adams and Victor's Principles of Neurology.; Harrison's Principles of Internal Medicine.`,
+La clave no es aspirina inmediata ni anticoagulación ni observación.
+La clave es:
+Déficit neurológico focal súbito + NIHSS 12 + 2 horas de evolución = ACV isquémico agudo → TC urgente y valorar trombólisis.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 50 años con HTA y DM mal controladas.
+• Inicio súbito de hemiparesia derecha y dificultad para hablar de 2 horas.
+• Hemiparesia derecha, desviación de la mirada, NIHSS 12.
+• Dentro de ventana terapéutica para trombólisis (≤4.5 horas).
+• Cuadro altamente sugestivo de ACV isquémico agudo.
+
+Recordemos manejo del ACV isquémico agudo:
+• Todo déficit neurológico focal súbito = ACV hasta demostrar lo contrario.
+• TC cerebral simple urgente: descartar hemorragia intracraneal antes de trombolizar.
+• Trombólisis IV con alteplasa (rt-PA): ventana hasta 4.5 h en pacientes seleccionados.
+• No administrar aspirina antes de descartar hemorragia.
+• No anticoagular en fase aguda del ACV isquémico.
+• Código ACV: tiempo es cerebro; cada minuto cuenta.
+
+Por lo tanto:
+La conducta correcta es solicitar TC cerebral simple urgente y valorar trombólisis IV (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La paciente está dentro de la ventana terapéutica con déficit moderado (NIHSS 12); la TC descarta hemorragia y determina elegibilidad para trombólisis.
+
+¿Por qué fallan las otras opciones?
+Opción A (aspirina inmediata): no antes de TC; si hay hemorragia, la aspirina empeora el cuadro.
+Opción C (anticoagulación con heparina): contraindicada en fase aguda del ACV isquémico sin TC previa.
+Opción D (observación 24 h): inaceptable; retrasa reperfusión y empeora pronóstico neurológico.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan en control de presión arterial o administrar aspirina de inmediato.
+La prioridad es neuroimagen urgente y reperfusión si está dentro de ventana terapéutica.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Déficit neurológico focal súbito → activar código ACV.
+2. TC cerebral simple urgente (descartar hemorragia).
+3. Si isquemia + dentro de ventana → trombólisis IV o trombectomía mecánica.
+4. Aspirina después de descartar hemorragia (24-48 h).
+
+Perlas de examen
+✅ Déficit neurológico focal súbito = ACV hasta demostrar lo contrario.
+✅ TC simple urgente antes de cualquier tratamiento.
+✅ Ventana trombólisis IV: hasta 4.5 horas en pacientes seleccionados.
+✅ No aspirina ni anticoagulación antes de descartar hemorragia.
+✅ NIHSS cuantifica severidad y guía elegibilidad para reperfusión.
+
+Referencias
+• American Heart Association/American Stroke Association Guidelines.
+• European Stroke Organisation Guidelines.
+• Adams and Victor's Principles of Neurology.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Initial assessment and management of acute ischemic stroke.`,
   },
   {
     id: "dr-q-199",
@@ -2922,20 +3579,71 @@ American Heart Association/American Stroke Association Guidelines.; European Str
     correctOptionId: "B",
     explanation: "La hematuria macroscópica indolora en un paciente fumador debe considerarse carcinoma urotelial hasta demostrar lo contrario. La evaluación diagnóstica inicial incluye estudio del tracto urinario, siendo la cistoscopia el método fundamental para descartar neoplasia vesical.",
     keyPoints: [
-      "Cáncer urotelial.",
-      "Tema: Hematuria y cáncer de vejiga.",
+      "Cuando veas: hematuria macroscópica indolora en fumador activo (≥20 paquetes-año), sin síntomas urinarios irritativos.",
+      "Debes pensar en: carcinoma urotelial hasta demostrar lo contrario → citología urinaria y cistoscopia.",
       "La hematuria macroscópica indolora es el síntoma clásico del cáncer vesical.",
       "El tabaquismo es el principal factor de riesgo para carcinoma urotelial.",
-      "La ausencia de eritrocitos dismórficos orienta a origen no glomerular.",
+      "Tema: Hematuria y cáncer de vejiga.",
     ],
-    theoryContent: `UROLOGÍA — BY DR Q.
-Hematuria y cáncer de vejiga.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Paciente joven." Y descartan malignidad. Sin embargo:
+Esta es una pregunta clásica de urología porque evalúa el abordaje diagnóstico de la hematuria macroscópica indolora en paciente fumador.
 
-Referencias:
-Campbell-Walsh-Wein Urology.; European Association of Urology (EAU) Guidelines on Non-Muscle-Invasive Bladder Cancer.; American Urological Association (AUA) Hematuria Guidelines.; Smith & Tanagho's General Urology.`,
+La clave no es antibióticos empíricos ni manejo de litiasis.
+La clave es:
+Hematuria macroscópica indolora + fumador activo = carcinoma urotelial hasta demostrar lo contrario → citología + cistoscopia.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 35 años, fumador activo con 20 paquetes-año.
+• Hematuria macroscópica indolora de una semana.
+• Sin síntomas urinarios irritativos, fiebre ni dolor lumbar.
+• Alto riesgo de carcinoma urotelial por tabaquismo.
+• Requiere estudio completo del tracto urinario.
+
+Recordemos hematuria y cáncer de vejiga:
+• La hematuria macroscópica indolora es el síntoma clásico del cáncer vesical.
+• El tabaquismo es el principal factor de riesgo (responsable del 50% de los casos).
+• La edad joven no excluye malignidad en fumadores.
+• Estudio inicial: citología urinaria + cistoscopia (método fundamental para vejiga).
+• Ecografía renal y uroTC según hallazgos.
+• No tratar empíricamente con antibióticos sin estudio completo.
+
+Por lo tanto:
+La conducta correcta es solicitar citología urinaria y cistoscopia (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La cistoscopia es el método fundamental para descartar neoplasia vesical; la citología complementa la evaluación del tracto urinario superior.
+
+¿Por qué fallan las otras opciones?
+Opción A (antibióticos empíricos): la hematuria indolora sin síntomas irritativos no sugiere infección; retrasa diagnóstico oncológico.
+Opción C (biopsia renal): la hematuria de origen glomerular cursa con eritrocitos dismórficos; aquí el cuadro es urológico.
+Opción D (litiasis y egreso): no hay dolor cólico ni cólico renal; la hematuria indolora en fumador obliga a descartar cáncer.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen \"paciente joven\" y descartan malignidad.
+El tabaquismo con 20 paquetes-año es factor de riesgo suficiente para estudio completo independientemente de la edad.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Hematuria macroscópica → estudio completo obligatorio.
+2. Indolora + fumador = cáncer vesical hasta demostrar lo contrario.
+3. Cistoscopia + citología como estudios iniciales.
+4. No antibióticos empíricos ni egreso sin estudio.
+
+Perlas de examen
+✅ Hematuria macroscópica indolora en fumador = cáncer vesical hasta demostrar lo contrario.
+✅ Cistoscopia es el estudio fundamental para vejiga.
+✅ El tabaquismo es el principal factor de riesgo de carcinoma urotelial.
+✅ La edad joven no excluye cáncer vesical en fumadores.
+✅ No tratar empíricamente con antibióticos sin estudio completo.
+
+Referencias
+• Campbell-Walsh-Wein Urology.
+• European Association of Urology (EAU) Guidelines on Non-Muscle-Invasive Bladder Cancer.
+• American Urological Association (AUA) Hematuria Guidelines.
+• Smith & Tanagho's General Urology.
+• UpToDate: Evaluation of hematuria in adults.`,
   },
   {
     id: "dr-q-200",
@@ -2954,20 +3662,70 @@ Campbell-Walsh-Wein Urology.; European Association of Urology (EAU) Guidelines o
     correctOptionId: "B",
     explanation: "La paciente presenta hematuria persistente con estudio urológico completamente negativo. En este contexto debe sospecharse una causa nefrológica, especialmente de origen glomerular, que requiere estudio especializado.",
     keyPoints: [
-      "Origen nefrológico de la hematuria.",
+      "Cuando veas: hematuria macroscópica persistente con estudio urológico completo negativo (imagen + cistoscopia).",
+      "Debes pensar en: origen glomerular → remisión a nefrología para estudio de hematuria glomerular.",
+      "Toda hematuria persistente requiere estudio completo de ambos compartimentos (urológico y nefrológico).",
+      "Un estudio urológico negativo obliga a pensar en origen renal/glomerular.",
       "Tema: Hematuria glomerular.",
-      "Toda hematuria persistente requiere estudio completo.",
-      "Un estudio urológico negativo obliga a pensar en origen renal.",
-      "La nefropatía por IgA es una causa frecuente de hematuria persistente.",
     ],
-    theoryContent: `NEFROLOGÍA — BY DR Q.
-Hematuria glomerular.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Cáncer renal en el padre." Y responden: Continuar estudios urológicos.
+Esta es una pregunta clásica de nefrología porque evalúa el siguiente paso tras descartar causa urológica en hematuria persistente.
 
-Referencias:
-KDIGO Clinical Practice Guidelines.; Brenner and Rector's The Kidney.; Campbell-Walsh-Wein Urology.; Harrison's Principles of Internal Medicine.`,
+La clave no es repetir cistoscopia ni nefrectomía profiláctica.
+La clave es:
+Hematuria persistente + estudio urológico negativo = sospechar origen glomerular → remisión a nefrología.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 22 años con hematuria macroscópica de 6 meses de evolución.
+• Antecedente familiar de cáncer renal en el padre (a los 52 años).
+• Estudio urológico completo negativo: imagen y cistoscopia sin hallazgos.
+• Hematuria persistente sin causa urológica identificada.
+• Requiere estudio nefrológico de origen glomerular.
+
+Recordemos hematuria glomerular:
+• Toda hematuria persistente requiere estudio urológico Y nefrológico.
+• Estudio urológico negativo → pensar en origen glomerular.
+• La nefropatía por IgA es causa frecuente de hematuria macroscóscica persistente en jóvenes.
+• Estudio nefrológico: sedimento urinario (eritrocitos dismórficos, cilindros eritrocitarios), proteinuria, función renal, complemento, autoanticuerpos, posible biopsia renal.
+• El antecedente familiar de cáncer renal no justifica estudios urológicos repetidos ni nefrectomía profiláctica en ausencia de lesión.
+
+Por lo tanto:
+La conducta correcta es remisión a nefrología para estudio de hematuria de origen glomerular (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+Con estudio urológico agotado y negativo, el siguiente paso lógico es evaluación nefrológica para descartar glomerulopatía.
+
+¿Por qué fallan las otras opciones?
+Opción A (seguimiento sin estudios): inaceptable con hematuria persistente de 6 meses sin diagnóstico.
+Opción C (repetir cistoscopia en 6 meses): ya fue negativa; no aporta información adicional.
+Opción D (nefrectomía profiláctica): no indicada; el antecedente familiar no justifica cirugía sin lesión identificada.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen \"cáncer renal en el padre\" y continúan con estudios urológicos o consideran cirugía profiláctica.
+El estudio urológico ya está completo y negativo; el siguiente paso es nefrología.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Hematuria persistente → estudio urológico completo (cistoscopia + imagen).
+2. Si urológico negativo → estudio nefrológico (sedimento, proteinuria, complemento).
+3. Eritrocitos dismórficos o cilindros eritrocitarios = origen glomerular.
+4. Biopsia renal si se confirma sospecha glomerular.
+
+Perlas de examen
+✅ Hematuria persistente + urología negativa = estudio nefrológico.
+✅ Nefropatía por IgA: causa frecuente de hematuria en jóvenes.
+✅ Eritrocitos dismórficos y cilindros eritrocitarios = origen glomerular.
+✅ No repetir cistoscopia si ya fue negativa sin nueva indicación.
+✅ Antecedente familiar no justifica nefrectomía profiláctica sin lesión.
+
+Referencias
+• KDIGO Clinical Practice Guidelines.
+• Brenner and Rector's The Kidney.
+• Campbell-Walsh-Wein Urology.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Evaluation of hematuria in adults — Glomerular causes.`,
   },
   {
     id: "dr-q-201",
