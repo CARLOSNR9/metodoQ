@@ -9574,34 +9574,75 @@ Referencias
     explanation:
       "Cuadro típico de delirium postoperatorio: inicio agudo, curso fluctuante, alteración de la atención, desorientación y alteraciones perceptivas. El manejo inicial debe centrarse en identificar causas reversibles y aplicar medidas no farmacológicas.",
     keyPoints: [
-      "Inicio agudo + curso fluctuante + alteración de la atención → delirium.",
-      "La alteración de la atención es el hallazgo cardinal.",
-      "Buscar causas reversibles: hipoxemia, infección, retención urinaria, fármacos.",
-      "Antipsicóticos no son rutina; reservar para agitación severa o riesgo.",
+      "Cuando veas: anciano postoperatorio con inicio agudo de agitación, alucinaciones visuales, desorientación fluctuante y alteración marcada de la atención.",
+      "Debes pensar en: delirium postoperatorio → identificar causas precipitantes, medidas no farmacológicas y reservar antipsicóticos solo si hay riesgo.",
+      "La alteración de la atención es el hallazgo cardinal del delirium; sin ella no se cumple el criterio diagnóstico.",
+      "Los antipsicóticos no son rutina en delirium; se reservan para agitación severa o riesgo para el paciente o el personal.",
+      "Tema: Delirium postoperatorio.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta separa delirium agudo de demencia, trastorno psiquiátrico primario o urgencia neurológica. En el anciano postoperatorio, el delirium es una emergencia médica reversible, no un diagnóstico psiquiátrico de partida.
+Esta es una pregunta clásica de psiquiatría de enlace porque evalúa una trampa frecuente de residencia: ante un anciano postoperatorio agitado con alucinaciones, no pensar primero en demencia, esquizofrenia o urgencia neurológica, sino en delirium agudo reversible.
+
+La clave no es iniciar antipsicóticos de forma rutinaria o solicitar neuroimagen de inmediato.
+La clave es:
+Anciano postoperatorio + inicio agudo + fluctuación + alteración de atención = delirium → buscar causas reversibles y aplicar medidas no farmacológicas antes de medicar.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 74 años, segundo día postoperatorio de cirugía mayor (reemplazo de cadera).
-- Inicio agudo de agitación, alucinaciones visuales y desorientación fluctuante.
-- Alteración marcada de la atención: somnoliento, orientado solo en persona, difícil de entrevistar.
-- Curso fluctuante típico de delirium, no de demencia ni esquizofrenia.
+El paciente presenta:
+• Hombre de 74 años, segundo día postoperatorio tras reemplazo total de cadera (cirugía mayor).
+• Comportamiento agresivo nocturno, intento de retirar sonda vesical y alucinaciones visuales ("insectos en las sábanas").
+• Somnoliento por la mañana, orientado únicamente en persona, marcada dificultad para mantener la atención.
+• Curso fluctuante típico de delirium: agitación nocturna alternada con somnolencia diurna.
+• SpO₂ 94%: posible hipoxemia como factor precipitante; creatinina 1.4 mg/dL sin focalidad neurológica.
 
-¿Qué dato es clave en el examen?
-- La alteración de la atención es el hallazgo cardinal del delirium.
-- Inicio agudo + curso fluctuante + contexto médico-quirúrgico = delirium hasta demostrar lo contrario.
-- El manejo inicial debe buscar causas reversibles y aplicar medidas no farmacológicas antes de medicar de forma rutinaria.
+Recordemos el delirium:
+• Trastorno neurocognitivo agudo con inicio súbito, curso fluctuante y alteración de la atención como hallazgo cardinal.
+• Factores precipitantes en postoperatorio: hipoxemia, infección, dolor, retención urinaria, fármacos, privación del sueño, deshidratación.
+• El manejo inicial se centra en identificar y corregir causas reversibles e implementar medidas no farmacológicas (reorientación, presencia familiar, normalizar ciclo sueño-vigilia, corregir déficits sensoriales).
+• Los antipsicóticos (haloperidol) se reservan para agitación severa con riesgo para el paciente o el personal, no como tratamiento rutinario y permanente.
+• No confundir con demencia (inicio insidioso, curso progresivo) ni con trastorno psiquiátrico primario (sin contexto médico-quirúrgico agudo).
+
+Por lo tanto:
+La conducta inicial más apropiada es identificar y corregir causas precipitantes, implementar medidas no farmacológicas para delirium y reservar antipsicóticos solo si existe riesgo.
+
+¿Por qué la opción D es la respuesta correcta?
+El cuadro es típico de delirium postoperatorio hiperactivo con componente mixto (agitación nocturna + somnolencia diurna).
+La prioridad es el enfoque multicomponente: buscar y tratar causas reversibles (hipoxemia, retención urinaria, infección, dolor, fármacos) e implementar intervenciones no farmacológicas.
+Los antipsicóticos no son primera línea; se reservan para agitación severa o riesgo inminente para el paciente o el personal.
+Este enfoque está alineado con las guías AGS y DSM-5-TR para manejo del delirium.
 
 ¿Por qué fallan las otras opciones?
-- RM cerebral urgente: no es la prioridad si el cuadro es típico de delirium sin focalidad neurológica; primero corregir causas precipitantes.
-- Haloperidol rutinario y permanente: los antipsicóticos no son primera línea; se reservan para agitación severa o riesgo para paciente/personal.
-- Inhibidores de acetilcolinesterasa: indicados en demencia establecida, no en delirium agudo postoperatorio.
+Opción A (RM cerebral urgente): no es la prioridad ante un cuadro típico de delirium sin focalidad neurológica; primero corregir causas precipitantes y estabilizar al paciente.
+Opción B (haloperidol IV rutinario y permanente): los antipsicóticos no son tratamiento de base; uso rutinario y prolongado aumenta riesgo de efectos adversos sin abordar la causa subyacente.
+Opción C (demencia + inhibidores de acetilcolinesterasa): la demencia tiene inicio insidioso y curso progresivo; los inhibidores de acetilcolinesterasa no tratan el delirium agudo postoperatorio.
 
-Clave: delirium = atención alterada + inicio agudo + fluctuación; tratar causa, no etiquetar como demencia.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen haloperidol ante cualquier paciente agitado con alucinaciones, aplicando el algoritmo de psicosis aguda.
+Pero en anciano postoperatorio con alteración de atención y curso fluctuante, el delirium es el diagnóstico hasta demostrar lo contrario.
+Otra trampa: solicitar neuroimagen urgente o iniciar tratamiento para demencia sin buscar primero causas reversibles del delirium.
 
-Referencias: Harrison's; DSM-5-TR; AGS Postoperative Delirium Guidelines; UpToDate: Delirium.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer delirium (inicio agudo + fluctuación + alteración de atención + contexto médico-quirúrgico).
+2. Buscar y corregir causas precipitantes (hipoxemia, infección, retención urinaria, fármacos, dolor).
+3. Implementar medidas no farmacológicas (reorientación, ciclo sueño-vigilia, presencia familiar).
+4. Reservar antipsicóticos solo si hay agitación severa o riesgo para paciente/personal.
+
+Perlas de examen
+✅ Alteración de la atención es el hallazgo cardinal del delirium.
+✅ Inicio agudo + fluctuación + contexto postoperatorio = delirium hasta demostrar lo contrario.
+✅ Primero buscar causas reversibles y medidas no farmacológicas, no antipsicóticos rutinarios.
+✅ Haloperidol se reserva para agitación severa con riesgo, no como tratamiento permanente de base.
+✅ No confundir delirium agudo con demencia ni iniciar inhibidores de acetilcolinesterasa.
+✅ SpO₂ 94% en postoperatorio: siempre considerar hipoxemia como factor precipitante.
+
+Referencias
+• DSM-5-TR: Delirium.
+• American Geriatrics Society: Postoperative Delirium in Older Adults.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Delirium in adults.
+• NICE Guidelines: Delirium.`,
   },
   {
     id: "dr-q-102",
@@ -9637,35 +9678,76 @@ Referencias: Harrison's; DSM-5-TR; AGS Postoperative Delirium Guidelines; UpToDa
     explanation:
       "Hipertermia, rigidez en tubo de plomo, alteración del estado mental, disautonomía y CPK muy elevada en paciente con haloperidol = síndrome neuroléptico maligno. Suspender el antipsicótico e iniciar soporte intensivo.",
     keyPoints: [
-      "Antipsicótico + fiebre + rigidez + CPK elevada → síndrome neuroléptico maligno.",
-      "Tríada: fiebre, rigidez, alteración del estado mental.",
-      "Suspensión inmediata del antipsicótico es obligatoria.",
-      "Rigidez en tubo de plomo orienta a SNM; clonus orienta a síndrome serotoninérgico.",
+      "Cuando veas: paciente con antipsicótico + fiebre alta + rigidez en tubo de plomo + CPK muy elevada + alteración del estado mental.",
+      "Debes pensar en: síndrome neuroléptico maligno (SNM) → suspender inmediatamente el antipsicótico e iniciar soporte intensivo.",
+      "La rigidez en tubo de plomo orienta a SNM; el clonus inducible orienta a síndrome serotoninérgico.",
+      "La suspensión inmediata del antipsicótico causal es obligatoria; continuarlo empeora el cuadro y aumenta la mortalidad.",
+      "Tema: Síndrome neuroléptico maligno.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa el reconocimiento del síndrome neuroléptico maligno (SNM), una emergencia psiquiátrica-médica potencialmente letal que exige suspender de inmediato el antipsicótico causal.
+Esta es una pregunta clásica de urgencias psiquiátricas porque evalúa el reconocimiento del síndrome neuroléptico maligno (SNM), una emergencia médica potencialmente letal que exige diferenciarlo de catatonia, síndrome serotoninérgico e infección del SNC.
+
+La clave no es continuar el antipsicótico ni confundir con síndrome serotoninérgico o meningoencefalitis.
+La clave es:
+Antipsicótico + hipertermia + rigidez en tubo de plomo + CPK muy elevada + disautonomía = SNM → suspender el neuroléptico de inmediato e iniciar soporte intensivo.
 
 ¿Qué está ocurriendo realmente?
-- Paciente con esquizofrenia en tratamiento con haloperidol.
-- Cuadro de 48 h con estupor, mutismo, fiebre alta (39.4°C) y diaforesis.
-- Rigidez muscular generalizada en "tubo de plomo".
-- CPK muy elevada (12.500 U/L), leucocitosis y taquicardia.
-- Tríada clásica: hipertermia + rigidez + alteración del estado mental + disautonomía.
+La paciente presenta:
+• Mujer de 28 años con esquizofrenia en tratamiento con haloperidol 10 mg/día.
+• Cuadro de 48 horas con estupor, mutismo y rechazo de la vía oral.
+• FC 110 lpm, diaforesis profusa, temperatura 39.4°C (disautonomía).
+• Rigidez muscular generalizada en "tubo de plomo" (lead-pipe rigidity).
+• Leucocitosis 15.000/mm³ y CPK 12.500 U/L (daño muscular masivo).
+• Cuadro compatible con SNM inducido por haloperidol.
 
-¿Qué dato es clave en el examen?
-- Antipsicótico reciente + fiebre + rigidez extrema + CPK marcada = SNM.
-- La rigidez en tubo de plomo orienta a SNM; el clonus inducible orienta a síndrome serotoninérgico.
-- La conducta inmediata es suspender el neuroléptico e iniciar soporte intensivo.
+Recordemos el SNM:
+• Emergencia iatrogénica asociada a antipsicóticos (típicos > atípicos, pero ambos pueden causarlo).
+• Tetrad: hipertermia + rigidez muscular extrema + alteración del estado mental + disautonomía (taquicardia, labilidad TA, diaforesis).
+• CPK muy elevada por rabdomiólisis; riesgo de insuficiencia renal aguda y muerte.
+• Tratamiento: suspensión inmediata del antipsicótico causal + soporte intensivo (hidratación, enfriamiento, monitorización).
+• Diferencial clave: rigidez en tubo de plomo (SNM) vs clonus inducible + hiperreflexia (síndrome serotoninérgico).
+
+Por lo tanto:
+El diagnóstico más probable es síndrome neuroléptico maligno y la conducta inmediata es suspender el antipsicótico e iniciar tratamiento de soporte intensivo.
+
+¿Por qué la opción D es la respuesta correcta?
+Todos los elementos del SNM están presentes: antipsicótico reciente, hipertermia, rigidez extrema, alteración del estado mental, disautonomía y CPK masivamente elevada.
+La suspensión inmediata del haloperidol es el paso terapéutico más importante y no puede postergarse.
+El soporte intensivo incluye hidratación IV agresiva (prevención de rabdomiólisis), enfriamiento activo, monitorización hemodinámica y corrección de complicaciones.
+El dantrolene o bromocriptina pueden considerarse como tratamiento adyuvante en casos severos.
 
 ¿Por qué fallan las otras opciones?
-- Catatonia maligna con benzodiacepinas y continuar haloperidol: empeoraría el cuadro; el haloperidol debe suspenderse de inmediato.
-- Síndrome serotoninérgico con ciproheptadina: se asocia a ISRS/serotoninérgicos y cursa con clonus e hiperreflexia, no rigidez en tubo de plomo.
-- Meningoencefalitis: puede dar fiebre y alteración mental, pero no explica rigidez extrema + CPK masiva en paciente con haloperidol.
+Opción A (catatonia maligna + benzodiacepinas + continuar haloperidol): la catatonia puede simular SNM, pero continuar haloperidol empeoraría el cuadro; el antipsicótico debe suspenderse de inmediato.
+Opción B (síndrome serotoninérgico + ciproheptadina): se asocia a ISRS, tramadol u otros serotoninérgicos; cursa con clonus inducible e hiperreflexia, no con rigidez en tubo de plomo.
+Opción C (meningoencefalitis bacteriana + antibióticos): puede causar fiebre y alteración mental, pero no explica rigidez extrema + CPK 12.500 U/L en paciente con haloperidol.
 
-Clave: antipsicótico + fiebre + rigidez + CPK alta = SNM; suspender la droga ya.
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden SNM con síndrome serotoninérgico porque ambos cursan con fiebre y alteración del estado mental.
+La clave diferencial es la rigidez en tubo de plomo + CPK muy elevada (SNM) vs clonus inducible + hiperreflexia (serotoninérgico).
+Otra trampa: proponer continuar el antipsicótico en catatonia sin reconocer que el haloperidol es la causa del cuadro.
 
-Referencias: Harrison's; UpToDate: Neuroleptic Malignant Syndrome; Kaplan & Sadock's.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer SNM (antipsicótico + fiebre + rigidez + CPK elevada + disautonomía).
+2. Suspender inmediatamente el antipsicótico causal.
+3. Iniciar soporte intensivo (hidratación, enfriamiento, monitorización).
+4. Considerar tratamiento adyuvante (dantrolene, bromocriptina) en casos severos.
+
+Perlas de examen
+✅ Antipsicótico + fiebre + rigidez en tubo de plomo + CPK elevada = SNM hasta demostrar lo contrario.
+✅ Suspensión inmediata del antipsicótico es el paso terapéutico más importante.
+✅ Rigidez en tubo de plomo = SNM; clonus inducible = síndrome serotoninérgico.
+✅ CPK muy elevada indica rabdomiólisis; hidratación IV agresiva es esencial.
+✅ No confundir con meningoencefalitis ni catatonia sin suspender el neuroléptico.
+✅ El SNM es potencialmente letal; requiere UCI y monitorización estrecha.
+
+Referencias
+• UpToDate: Neuroleptic Malignant Syndrome.
+• Harrison's Principles of Internal Medicine.
+• Kaplan & Sadock's Comprehensive Textbook of Psychiatry.
+• DSM-5-TR: Medication-Induced Movement Disorders.
+• Stahl's Essential Psychopharmacology.`,
   },
   {
     id: "dr-q-103",
@@ -9685,34 +9767,75 @@ Referencias: Harrison's; UpToDate: Neuroleptic Malignant Syndrome; Kaplan & Sado
     explanation:
       "Episodio maníaco agudo con síntomas psicóticos. La insuficiencia renal (creatinina 2.2 mg/dL) contraindica o limita severamente el litio; el valproato es el estabilizador de elección en este contexto.",
     keyPoints: [
-      "Manía: grandiosidad, ↓ necesidad de sueño, logorrea, conductas de riesgo.",
-      "Litio se elimina por vía renal; evitar en insuficiencia renal significativa.",
-      "Valproato: eficaz en manía aguda, no depende de eliminación renal.",
-      "Lamotrigina: prevención de fases depresivas, no manía aguda.",
+      "Cuando veas: episodio maníaco agudo con síntomas psicóticos de grandiosidad + creatinina elevada (insuficiencia renal).",
+      "Debes pensar en: trastorno bipolar tipo I en manía → valproato como estabilizador de elección (litio contraindicado por IRC).",
+      "El litio se elimina casi exclusivamente por vía renal; con creatinina 2.2 mg/dL aumenta el riesgo de toxicidad grave.",
+      "La lamotrigina es excelente para prevención de fases depresivas, pero no es tratamiento de elección para manía aguda.",
+      "Tema: Manía bipolar con insuficiencia renal.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta no evalúa solo el diagnóstico de manía, sino la psicofarmacología segura: en manía aguda con insuficiencia renal, el litio deja de ser primera opción.
+Esta es una pregunta clásica de psicofarmacología porque evalúa una trampa frecuente de residencia: ante manía aguda en trastorno bipolar, no elegir automáticamente litio sin evaluar la función renal del paciente.
+
+La clave no es prescribir litio como estabilizador universal en todo paciente bipolar.
+La clave es:
+Manía aguda + trastorno bipolar tipo I + insuficiencia renal (creatinina 2.2 mg/dL) = valproato como estabilizador de elección, no litio.
 
 ¿Qué está ocurriendo realmente?
-- Hombre con trastorno bipolar tipo I en episodio maníaco agudo de 5 días.
-- Logorrea, fuga de ideas, hiperactividad, gastos compulsivos y disminución marcada del sueño.
-- Síntomas psicóticos de grandiosidad ("enviado para salvar la economía").
-- Creatinina 2.2 mg/dL: insuficiencia renal que cambia la elección del estabilizador.
+El paciente presenta:
+• Hombre de 32 años con trastorno bipolar tipo I conocido.
+• Episodio maníaco agudo de 5 días: logorrea, fuga de ideas, hiperactividad, compras compulsivas.
+• Disminución marcada de la necesidad de sueño (2 horas/noche) y sensación de energía excesiva.
+• Síntomas psicóticos de grandiosidad ("enviado para salvar la economía del país").
+• Creatinina 2.2 mg/dL: insuficiencia renal que modifica la elección del estabilizador del ánimo.
 
-¿Qué dato es clave en el examen?
-- Manía aguda con síntomas psicóticos requiere estabilizador del ánimo, no solo antipsicótico ambulatorio.
-- El litio se elimina casi exclusivamente por vía renal; con IRC significativa aumenta el riesgo de toxicidad.
-- El valproato es eficaz en manía aguda y no depende de la eliminación renal como el litio.
+Recordemos la psicofarmacología del trastorno bipolar:
+• Manía aguda requiere estabilizador del ánimo (litio, valproato o carbamazepina) ± antipsicótico.
+• El litio es el gold standard histórico, pero se elimina casi exclusivamente por vía renal.
+• Con insuficiencia renal significativa (creatinina elevada), el litio acumula y aumenta el riesgo de toxicidad (temblor, confusión, arritmias, coma).
+• El valproato se metaboliza hepáticamente; es eficaz en manía aguda y no depende de la eliminación renal.
+• La lamotrigina previene fases depresivas, pero no tiene evidencia sólida como monoterapia de manía aguda.
+
+Por lo tanto:
+El estabilizador del ánimo de elección en este paciente es valproato.
+
+¿Por qué la opción B es la respuesta correcta?
+El valproato tiene evidencia robusta como tratamiento de manía aguda en trastorno bipolar tipo I.
+No depende de la eliminación renal, por lo que es seguro en pacientes con insuficiencia renal significativa.
+Puede combinarse con antipsicótico atípico si los síntomas psicóticos son prominentes.
+Es la alternativa de primera línea cuando el litio está contraindicado o limitado por función renal.
 
 ¿Por qué fallan las otras opciones?
-- Litio: clásico en bipolar, pero contraindicado o muy limitado con creatinina elevada por riesgo de intoxicación.
-- Carbamazepina: estabilizador válido, pero el valproato tiene evidencia más sólida como alternativa de primera línea en manía aguda.
-- Lamotrigina: excelente para prevención de fases depresivas, pero no es tratamiento de elección para manía aguda.
+Opción A (litio): clásico en bipolar, pero contraindicado o muy limitado con creatinina 2.2 mg/dL por riesgo de acumulación y toxicidad grave.
+Opción C (carbamazepina): estabilizador válido en bipolar, pero el valproato tiene evidencia más sólida como alternativa de primera línea en manía aguda.
+Opción D (lamotrigina): excelente para prevención de fases depresivas y mantenimiento, pero no es tratamiento de elección para manía aguda.
 
-Clave: bipolar + manía aguda + IRC = valproato, no litio automático.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen litio automáticamente ante cualquier pregunta de trastorno bipolar, sin leer la creatinina elevada.
+Otra trampa: elegir lamotrigina por ser un estabilizador "moderno", olvidando que su indicación principal es la prevención de depresión, no la manía aguda.
+La creatinina elevada es la pista que cambia toda la respuesta.
 
-Referencias: CANMAT Bipolar Guidelines; DSM-5-TR; UpToDate: Acute Mania.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer episodio maníaco agudo con síntomas psicóticos en trastorno bipolar tipo I.
+2. Evaluar función renal antes de elegir estabilizador del ánimo.
+3. Elegir valproato si hay insuficiencia renal significativa (litio contraindicado).
+4. Considerar antipsicótico atípico adyuvante si los síntomas psicóticos son prominentes.
+
+Perlas de examen
+✅ Manía aguda + IRC = valproato, no litio automático.
+✅ Litio se elimina por vía renal; creatinina elevada = riesgo de toxicidad.
+✅ Valproato: eficaz en manía aguda, metabolismo hepático, no depende de riñón.
+✅ Lamotrigina: prevención de depresión, NO manía aguda.
+✅ Siempre leer laboratorios antes de elegir estabilizador en bipolar.
+✅ CANMAT y guías actuales respaldan valproato como alternativa de primera línea en manía.
+
+Referencias
+• CANMAT Bipolar Disorder Guidelines.
+• DSM-5-TR: Bipolar I Disorder.
+• UpToDate: Acute Mania in Bipolar Disorder.
+• Stahl's Essential Psychopharmacology.
+• Kaplan & Sadock's Comprehensive Textbook of Psychiatry.`,
   },
   {
     id: "dr-q-104",
@@ -9748,34 +9871,76 @@ Referencias: CANMAT Bipolar Guidelines; DSM-5-TR; UpToDate: Acute Mania.`,
     explanation:
       "Síndrome serotoninérgico precipitado por sertralina + tramadol (ambos con actividad serotoninérgica). El exceso de serotonina produce hiperactividad neuromuscular, alteraciones autonómicas y cambios del estado mental.",
     keyPoints: [
-      "ISRS + tramadol → síndrome serotoninérgico.",
-      "Clonus inducible es hallazgo muy característico.",
-      "Hiperreflexia + clonus + diarrea orientan a serotoninérgico.",
-      "SNM: rigidez en tubo de plomo, hiporreflexia, antipsicóticos.",
+      "Cuando veas: inicio reciente de ISRS + paciente con tramadol + cuadro agudo de temblor, diaforesis, diarrea y clonus inducible.",
+      "Debes pensar en: síndrome serotoninérgico por interacción ISRS + tramadol → hiperestimulación serotoninérgica central y periférica.",
+      "El clonus inducible en miembros inferiores es un hallazgo muy característico del síndrome serotoninérgico.",
+      "Tramadol no es solo un opioide: inhibe la recaptación de serotonina y puede precipitar síndrome serotoninérgico con ISRS.",
+      "Tema: Síndrome serotoninérgico por interacción ISRS-tramadol.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa una interacción farmacológica muy preguntada: ISRS + tramadol puede precipitar síndrome serotoninérgico en horas, no en semanas.
+Esta es una pregunta clásica de psicofarmacología porque evalúa una interacción farmacológica muy preguntada en residencias: ISRS + tramadol puede precipitar síndrome serotoninérgico en horas, no en semanas.
+
+La clave no es buscar bloqueo dopaminérgico (SNM) ni disminución gabaérgica (delirium tremens).
+La clave es:
+ISRS recién iniciado + tramadol crónico + clonus inducible + hiperactividad autonómica = síndrome serotoninérgico por exceso de serotonina sináptica.
 
 ¿Qué está ocurriendo realmente?
-- Mujer con depresión mayor en quien se inicia sertralina 50 mg/día.
-- Recibe tramadol crónico por dolor lumbar (también tiene actividad serotoninérgica).
-- A las 24 horas presenta temblor, inquietud, diaforesis, diarrea y clonus inducible.
-- Cuadro agudo de hiperactividad neuromuscular y disautonomía tras sumar dos fármacos serotoninérgicos.
+La paciente presenta:
+• Mujer de 45 años con cuadro depresivo (tristeza, anhedonia, ideación de muerte, pérdida de 5 kg).
+• Recibe tramadol 50 mg c/8 h por lumbalgia crónica (actividad serotoninérgica además de opioide).
+• Se inicia sertralina 50 mg/día; a las 24 horas presenta cuadro agudo.
+• Temblor, inquietud motora intensa, diaforesis, diarrea y clonus inducible en miembros inferiores.
+• Cuadro de hiperactividad neuromuscular y disautonomía tras sumar dos fármacos serotoninérgicos.
 
-¿Qué dato es clave en el examen?
-- El clonus inducible en miembros inferiores es un hallazgo muy característico del síndrome serotoninérgico.
-- Tramadol no es "solo un opioide": inhibe la recaptación de serotonina y aumenta el riesgo con ISRS.
-- El mecanismo es hiperestimulación serotoninérgica central y periférica por exceso de serotonina sináptica.
+Recordemos el síndrome serotoninérgico:
+• Resultado de hiperestimulación serotoninérgica central y periférica por exceso de serotonina sináptica.
+• Fármacos implicados: ISRS, IRSN, tramadol, linezolid, triptanes, IMAO, fentanilo, ondansetrón.
+• Tríada: alteración del estado mental + hiperactividad neuromuscular + hiperactividad autonómica.
+• Hallazgo distintivo: clonus inducible (especialmente en miembros inferiores) e hiperreflexia.
+• Diferencial con SNM: clonus + hiperreflexia (serotoninérgico) vs rigidez en tubo de plomo + hiporreflexia (SNM).
+• Tratamiento: suspender fármacos causales, soporte, ciproheptadina en casos moderados-severos.
+
+Por lo tanto:
+El mecanismo fisiopatológico más probable es hiperestimulación serotoninérgica central y periférica por exceso de serotonina sináptica.
+
+¿Por qué la opción B es la respuesta correcta?
+La sertralina (ISRS) inhibe la recaptación de serotonina; el tramadol también tiene actividad serotoninérgica (inhibe recaptación de serotonina y noradrenalina).
+La combinación produce acumulación de serotonina sináptica que hiperestimula receptores 5-HT central y periféricos.
+El cuadro clínico (clonus inducible, diarrea, diaforesis, temblor) es patognomónico de síndrome serotoninérgico.
+El inicio a las 24 horas de iniciar sertralina confirma la relación temporal con la interacción farmacológica.
 
 ¿Por qué fallan las otras opciones?
-- Bloqueo dopaminérgico D2: mecanismo del síndrome neuroléptico maligno (rigidez en tubo de plomo, hiporreflexia), no de este cuadro.
-- Disminución gabaérgica: mecanismo del delirium tremens por abstinencia alcohólica, no de interacción ISRS-tramadol.
-- Hiperactividad colinérgica: se ve en intoxicación por inhibidores de colinesterasa, no aquí.
+Opción A (bloqueo dopaminérgico D2): mecanismo del síndrome neuroléptico maligno; cursa con rigidez en tubo de plomo e hiporreflexia, no con clonus inducible.
+Opción C (disminución gabaérgica): mecanismo del delirium tremens por abstinencia alcohólica; no se relaciona con interacción ISRS-tramadol.
+Opción D (hiperactividad colinérgica): se observa en intoxicación por inhibidores de colinesterasa (organofosforados, donepezilo); no aplica aquí.
 
-Clave: ISRS + tramadol + clonus = síndrome serotoninérgico; revisar siempre analgésicos con actividad serotonérgica.
+¿Cuál es la trampa del examen?
+Muchos estudiantes no reconocen que el tramadol tiene actividad serotoninérgica además de ser un opioide.
+Otra trampa: confundir con SNM porque ambos cursan con fiebre y alteración del estado mental; la clave es el clonus inducible vs rigidez en tubo de plomo.
+El inicio a las 24 horas (no semanas) es la pista temporal de interacción aguda, no de efecto terapéutico tardío del ISRS.
 
-Referencias: Stahl's Psychopharmacology; UpToDate: Serotonin Syndrome; Harrison's.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer síndrome serotoninérgico (ISRS + fármaco serotoninérgico + clonus inducible).
+2. Suspender todos los fármacos serotoninérgicos causales (sertralina y tramadol).
+3. Proporcionar soporte (hidratación, enfriamiento, benzodiacepinas para agitación).
+4. Considerar ciproheptadina (antagonista serotoninérgico) en casos moderados-severos.
+
+Perlas de examen
+✅ ISRS + tramadol = interacción clásica de síndrome serotoninérgico.
+✅ Clonus inducible es el hallazgo más característico del síndrome serotoninérgico.
+✅ Tramadol no es "solo un opioide": tiene actividad serotoninérgica significativa.
+✅ Inicio agudo (horas) tras añadir ISRS, no semanas de tratamiento.
+✅ Diferencial: clonus + hiperreflexia (serotoninérgico) vs rigidez + hiporreflexia (SNM).
+✅ Siempre revisar analgésicos con actividad serotonérgica antes de iniciar ISRS.
+
+Referencias
+• UpToDate: Serotonin Syndrome.
+• Stahl's Essential Psychopharmacology.
+• Harrison's Principles of Internal Medicine.
+• Hunter Serotonin Toxicity Criteria.
+• Micromedex Drug Interactions.`,
   },
   {
     id: "dr-q-105",
@@ -9795,35 +9960,76 @@ Referencias: Stahl's Psychopharmacology; UpToDate: Serotonin Syndrome; Harrison'
     explanation:
       "Delirium tremens: forma más grave del síndrome de abstinencia alcohólica. Las benzodiacepinas son el tratamiento de elección. Lorazepam es especialmente útil con posible compromiso hepático (AST/ALT elevadas).",
     keyPoints: [
-      "Abstinencia 48-96 h + agitación + alucinaciones + disautonomía → delirium tremens.",
-      "Benzodiacepinas sustituyen efecto GABAérgico perdido y previenen convulsiones.",
-      "Lorazepam preferido con disfunción hepática.",
-      "Haloperidol no es tratamiento principal; no previene convulsiones.",
+      "Cuando veas: consumo crónico de alcohol + abstinencia 48-96 h + agitación + alucinaciones visuales + inestabilidad autonómica (HTA, taquicardia, diaforesis).",
+      "Debes pensar en: delirium tremens → lorazepam como tratamiento de elección (especialmente con hepatopatía).",
+      "Las benzodiacepinas sustituyen el efecto GABAérgico perdido y previenen convulsiones en abstinencia alcohólica.",
+      "El lorazepam es preferido con disfunción hepática (AST/ALT elevadas) por metabolismo por glucuronidación, no por hígado.",
+      "Tema: Delirium tremens.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa el delirium tremens, la forma más grave de la abstinencia alcohólica, y por qué las benzodiacepinas —no los antipsicóticos— son el tratamiento de elección.
+Esta es una pregunta clásica de psiquiatría de urgencias porque evalúa el delirium tremens, la forma más grave del síndrome de abstinencia alcohólica, y por qué las benzodiacepinas —no los antipsicóticos— son el tratamiento de elección.
+
+La clave no es usar haloperidol como tratamiento principal ni fenitoína para controlar síntomas.
+La clave es:
+Abstinencia alcohólica 48 h + alucinaciones + agitación + inestabilidad autonómica = delirium tremens → lorazepam como tratamiento de elección.
 
 ¿Qué está ocurriendo realmente?
-- Hombre con consumo crónico de alcohol hospitalizado por neumonía.
-- Última ingesta hace 48 horas: ventana típica del delirium tremens.
-- Agitación intensa, desorientación, alucinaciones visuales ("paredes que se mueven").
-- Disautonomía marcada: diaforesis, midriasis, hipertensión y taquicardia.
-- Transaminasas elevadas sugieren hepatopatía asociada al alcohol.
+El paciente presenta:
+• Hombre de 50 años con consumo crónico de alcohol (botella de aguardiente diaria).
+• Hospitalizado por neumonía; última ingesta hace 48 horas (ventana típica del delirium tremens).
+• Agitación intensa, desorientación, alucinaciones visuales ("las paredes se están moviendo").
+• Disautonomía marcada: diaforesis profusa, midriasis, TA 170/110 mmHg, FC 125 lpm.
+• AST 120 U/L, ALT 90 U/L: hepatopatía alcohólica asociada.
 
-¿Qué dato es clave en el examen?
-- Abstinencia 48-96 h + alucinaciones + inestabilidad autonómica = delirium tremens.
-- El mecanismo es hiperexcitabilidad del SNC por adaptación GABA/glutamato al suspender el alcohol.
-- Las benzodiacepinas sustituyen el efecto GABAérgico perdido y previenen convulsiones.
+Recordemos el delirium tremens:
+• Forma más grave del síndrome de abstinencia alcohólica; aparece entre 48-96 horas tras la última ingesta.
+• Mecanismo: hiperexcitabilidad del SNC por adaptación GABA/glutamato al suspender el alcohol crónico.
+• Tríada: alteración del estado mental + hiperactividad autonómica + alucinaciones (típicamente visuales).
+• Mortalidad sin tratamiento: 5-15%; con benzodiacepinas adecuadas: <5%.
+• Tratamiento de elección: benzodiacepinas (lorazepam, diazepam, clordiazepóxido) en dosis altas tituladas al síntoma.
+• Lorazepam preferido con hepatopatía: metabolismo por glucuronidación, no por hígado (a diferencia de diazepam).
+
+Por lo tanto:
+El tratamiento de elección para el control de los síntomas es lorazepam.
+
+¿Por qué la opción B es la respuesta correcta?
+Las benzodiacepinas sustituyen el efecto GABAérgico perdido por la abstinencia alcohólica y previenen convulsiones.
+El lorazepam es especialmente útil con posible compromiso hepático (AST/ALT elevadas) porque se metaboliza por glucuronidación renal, no por el hígado.
+Se administra en dosis tituladas al síntoma (protocolo de síntomas) con monitorización estrecha en unidad de cuidados intensivos.
+Además del lorazepam, se requiere: tiamina IV (prevención de encefalopatía de Wernicke), hidratación, corrección de electrolitos y tratamiento de comorbilidades (neumonía).
 
 ¿Por qué fallan las otras opciones?
-- Haloperidol: puede controlar agitación superficialmente, pero no trata la abstinencia ni previene convulsiones; no es tratamiento principal.
-- Fenitoína: no es tratamiento de la abstinencia alcohólica ni del delirium tremens.
-- Carbamazepina: puede usarse en abstinencia leve-moderada ambulatoria, pero en delirium tremens grave las benzodiacepinas IV son estándar.
+Opción A (haloperidol IV): puede controlar agitación superficialmente, pero no trata la abstinencia ni previene convulsiones; además, reduce el umbral convulsivo.
+Opción C (fenitoína IV): no es tratamiento de la abstinencia alcohólica ni del delirium tremens; no sustituye el efecto GABAérgico perdido.
+Opción D (carbamazepina): puede usarse en abstinencia leve-moderada ambulatoria, pero en delirium tremens grave las benzodiacepinas IV son el estándar de oro.
 
-Clave: abstinencia alcohólica grave + alucinaciones + HTA/FC = lorazepam (especialmente si hay hepatopatía).
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen haloperidol ante agitación con alucinaciones, aplicando el algoritmo de psicosis aguda.
+Pero en abstinencia alcohólica grave, las benzodiacepinas son el tratamiento específico, no los antipsicóticos.
+Otra trampa: elegir diazepam sin considerar la hepatopatía; con AST/ALT elevadas, lorazepam es más seguro por su metabolismo independiente del hígado.
 
-Referencias: UpToDate: Alcohol Withdrawal; ASAM Guidelines; Harrison's.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer delirium tremens (abstinencia 48-96 h + alucinaciones + disautonomía).
+2. Administrar lorazepam IV titulado al síntoma en unidad monitorizada.
+3. Administrar tiamina IV antes de glucosa (prevención de Wernicke).
+4. Tratar comorbilidades (neumonía) y corregir desequilibrios hidroelectrolíticos.
+
+Perlas de examen
+✅ Abstinencia 48-96 h + alucinaciones + HTA/taquicardia = delirium tremens.
+✅ Benzodiacepinas son el tratamiento de elección, no antipsicóticos.
+✅ Lorazepam preferido con hepatopatía (metabolismo por glucuronidación).
+✅ Haloperidol no previene convulsiones y puede reducir umbral convulsivo.
+✅ Siempre administrar tiamina IV antes de glucosa en paciente alcohólico.
+✅ Mortalidad del DT es significativa sin tratamiento adecuado con benzodiacepinas.
+
+Referencias
+• UpToDate: Alcohol Withdrawal.
+• ASAM Clinical Practice Guideline on Alcohol Withdrawal.
+• Harrison's Principles of Internal Medicine.
+• Tintinalli's Emergency Medicine.
+• DSM-5-TR: Alcohol Withdrawal Delirium.`,
   },
   {
     id: "dr-q-106",
@@ -9859,35 +10065,77 @@ Referencias: UpToDate: Alcohol Withdrawal; ASAM Guidelines; Harrison's.`,
     explanation:
       "Ideación suicida activa con plan específico, acceso a método potencialmente letal y conducta preparatoria (carta de despedida). Riesgo suicida alto que requiere hospitalización y protección inmediata.",
     keyPoints: [
-      "Plan suicida + acceso al método + intención = riesgo alto.",
-      "Carta de despedida = conducta preparatoria de alto riesgo.",
-      "Ausencia de intentos previos no excluye riesgo elevado.",
-      "Objetivo: proteger la vida del paciente con supervisión continua.",
+      "Cuando veas: ideación suicida activa + plan específico + acceso al método letal + conducta preparatoria (carta de despedida).",
+      "Debes pensar en: riesgo suicida alto → hospitalización psiquiátrica y medidas de protección inmediata.",
+      "La carta de despedida es una conducta preparatoria que eleva significativamente el riesgo suicida.",
+      "La ausencia de intentos suicidas previos NO excluye riesgo elevado cuando hay plan activo con acceso al método.",
+      "Tema: Evaluación de riesgo suicida.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la estratificación del riesgo suicida: no basta con diagnosticar depresión; hay que identificar plan, método y conductas preparatorias que obligan a hospitalizar.
+Esta es una pregunta clásica de psiquiatría de urgencias porque evalúa la estratificación del riesgo suicida: no basta con diagnosticar depresión; hay que identificar plan, método y conductas preparatorias que obligan a hospitalizar.
+
+La clave no es manejar ambulatoriamente ni subestimar el riesgo por ausencia de intentos previos.
+La clave es:
+Ideación activa + plan concreto + acceso al método + conducta preparatoria (carta de despedida) = riesgo alto → hospitalización inmediata.
 
 ¿Qué está ocurriendo realmente?
-- Joven universitaria con episodio depresivo tras ruptura sentimental.
-- Tristeza, anhedonia, insomnio y abandono académico.
-- Carta de despedida encontrada por los padres: conducta preparatoria de alto riesgo.
-- Ideación activa con plan concreto: "ya tengo las pastillas guardadas para esta noche".
-- Acceso al método letal y intención expresada en la entrevista.
+La paciente presenta:
+• Mujer de 19 años, estudiante universitaria, llevada por sus padres.
+• Episodio depresivo de 2 meses tras ruptura sentimental: tristeza, anhedonia, insomnio, abandono académico.
+• Carta de despedida encontrada en su habitación: conducta preparatoria de alto riesgo.
+• Ideación suicida activa con plan específico: "ya tengo las pastillas guardadas para esta noche".
+• Acceso al método potencialmente letal confirmado; intención expresada en la entrevista.
+• Niega intentos suicidas previos, pero el riesgo actual es inminente.
 
-¿Qué dato es clave en el examen?
-- Plan suicida específico + acceso al método + intención = riesgo alto, independientemente de intentos previos.
-- La carta de despedida es una señal de alarma que eleva el riesgo de manera importante.
-- La conducta más segura es hospitalización psiquiátrica con medidas de protección inmediata.
+Recordemos la evaluación del riesgo suicida:
+• Factores de riesgo alto: ideación activa, plan específico, acceso al método, intención declarada, conductas preparatorias.
+• Conductas preparatorias: carta de despedida, regalar pertenencias, poner asuntos en orden, despedirse de seres queridos.
+• Factores protectores (insuficientes aquí): apoyo familiar, ausencia de intentos previos, edad joven.
+• Riesgo bajo: ideación pasiva sin plan ni intención → manejo ambulatorio con seguimiento cercano.
+• Riesgo moderado: ideación activa sin plan concreto → intensificar seguimiento, considerar hospitalización parcial.
+• Riesgo alto: plan + método + intención → hospitalización psiquiátrica con supervisión continua y restricción de medios letales.
+
+Por lo tanto:
+El nivel de riesgo es alto y la conducta más segura es hospitalización psiquiátrica con medidas de protección inmediata.
+
+¿Por qué la opción C es la respuesta correcta?
+Concurren todos los elementos de riesgo suicida alto: ideación activa, plan específico ("esta noche"), acceso al método (pastillas guardadas) e intención declarada.
+La carta de despedida es una conducta preparatoria que indica que el paciente ha avanzado más allá de la ideación hacia la planificación concreta.
+La hospitalización psiquiátrica con supervisión continua y restricción de medios letales es la única conducta que garantiza la protección inmediata de la vida.
+El objetivo primordial es proteger la vida del paciente; el tratamiento farmacológico puede iniciarse durante la hospitalización.
 
 ¿Por qué fallan las otras opciones?
-- Manejo ambulatorio con cita prioritaria: inaceptable con plan activo y acceso a pastillas.
-- Antidepresivo y control semanal: subestima el riesgo inminente; primero proteger la vida.
-- Riesgo bajo por ausencia de intentos previos: error grave; el riesgo actual depende del plan y la intención, no del historial.
+Opción A (riesgo bajo + manejo ambulatorio): inaceptable con plan activo, acceso a pastillas e intención declarada; el riesgo es inminente, no bajo.
+Opción B (riesgo moderado + antidepresivo + control semanal): subestima gravemente el riesgo; un control semanal no protege contra un intento planificado para "esta noche".
+Opción D (riesgo bajo por ausencia de intentos previos): error grave; el riesgo actual depende del plan, la intención y el acceso al método, no del historial de intentos.
 
-Clave: plan + método + intención = hospitalizar; no hay "solo depresión leve" aquí.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen manejo ambulatorio porque la paciente es joven, tiene apoyo familiar y no tiene intentos previos.
+Pero la carta de despedida + plan concreto + acceso a pastillas + intención para "esta noche" configura riesgo alto independientemente de esos factores.
+Otra trampa: iniciar antidepresivo ambulatorio sin proteger primero la vida; los ISRS pueden aumentar energía antes de reducir ideación suicida.
 
-Referencias: APA Suicide Risk Guidelines; DSM-5-TR; UpToDate: Suicide Risk Assessment.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar ideación, plan, intención, acceso al método y conductas preparatorias.
+2. Clasificar riesgo: plan + método + intención = alto → hospitalizar.
+3. Restringir medios letales y garantizar supervisión continua.
+4. Iniciar tratamiento (farmacológico y psicoterapéutico) en entorno seguro.
+
+Perlas de examen
+✅ Plan suicida + acceso al método + intención = riesgo alto → hospitalizar.
+✅ Carta de despedida = conducta preparatoria de alto riesgo.
+✅ Ausencia de intentos previos NO excluye riesgo elevado actual.
+✅ El objetivo primordial es proteger la vida, no solo tratar la depresión.
+✅ No manejar ambulatoriamente cuando hay plan activo con acceso al método.
+✅ Los ISRS pueden aumentar energía antes de reducir ideación; hospitalizar primero.
+
+Referencias
+• APA Practice Guideline for Assessment and Treatment of Suicidal Behaviors.
+• DSM-5-TR: Suicidal Behavior.
+• UpToDate: Suicide Risk Assessment and Management.
+• Columbia Suicide Severity Rating Scale (C-SSRS).
+• NICE Guidelines: Self-harm and Suicide Prevention.`,
   },
   {
     id: "dr-q-107",
@@ -9923,34 +10171,76 @@ Referencias: APA Suicide Risk Guidelines; DSM-5-TR; UpToDate: Suicide Risk Asses
     explanation:
       "Síntomas psiquiátricos de inicio tardío (65 años), pérdida de peso inexplicada, tabaquismo y síntomas psicóticos obligan a descartar primero una causa orgánica, particularmente neoplasia o enfermedad neurológica.",
     keyPoints: [
-      "Psicosis de inicio tardío + pérdida de peso + tabaquismo → descartar causa orgánica.",
-      "Síndrome de Cotard: delirios nihilistas, creencia de estar muerto.",
-      "Puede observarse en depresión psicótica, trastornos neurológicos o neoplasias.",
-      "No asumir etiología psiquiátrica primaria sin evaluar causas médicas.",
+      "Cuando veas: psicosis de inicio tardío (>60 años) + pérdida de peso inexplicada + tabaquismo + delirios nihilistas (síndrome de Cotard).",
+      "Debes pensar en: descartar causa médica u orgánica subyacente, especialmente neoplasia, antes de cerrar diagnóstico psiquiátrico.",
+      "El síndrome de Cotard (creencia de estar muerto, órganos pudriéndose) puede ser manifestación de depresión psicótica, enfermedad neurológica o neoplasia.",
+      "Psicosis nueva en anciano con síntomas sistémicos (baja de peso, tabaquismo) obliga a estudio médico completo antes de ISRS ambulatorio.",
+      "Tema: Síndrome de Cotard y psicosis de inicio tardío.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa psicosis de inicio tardío con síndrome de Cotard: antes de etiquetar como depresión psicótica, debes buscar causa orgánica, especialmente neoplasia.
+Esta es una pregunta clásica de psiquiatría de enlace porque evalúa psicosis de inicio tardío con síndrome de Cotard: antes de etiquetar como depresión psicótica primaria, debes buscar activamente causa orgánica, especialmente neoplasia.
+
+La clave no es iniciar ISRS ambulatorio ni diagnosticar trastorno delirante persistente sin estudio médico.
+La clave es:
+Psicosis de inicio tardío + pérdida de peso + tabaquismo + síndrome de Cotard = buscar neoplasia u otra causa orgánica antes de cerrar diagnóstico psiquiátrico.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 65 años con cambios progresivos de comportamiento en los últimos meses.
-- Pérdida involuntaria de 10 kg en 3 meses y antecedente de tabaquismo pesado.
-- Enlentecimiento psicomotor, aislamiento y delirios nihilistas ("sus órganos se pudren", "ya está muerto").
-- Cuadro compatible con síndrome de Cotard, pero con múltiples banderas rojas sistémicas.
+El paciente presenta:
+• Hombre de 65 años con cambios progresivos de comportamiento en los últimos meses.
+• Pérdida involuntaria de 10 kg en 3 meses y antecedente de tabaquismo pesado.
+• Enlentecimiento psicomotor, aislamiento social y aspecto "muy deprimido".
+• Delirios nihilistas: sus órganos "se están pudriendo", afirma que "ya está muerto" (síndrome de Cotard).
+• Cuadro con múltiples banderas rojas sistémicas que obligan a descartar causa orgánica.
 
-¿Qué dato es clave en el examen?
-- Psicosis de inicio tardío + pérdida de peso inexplicada + tabaquismo = descartar neoplasia (p. ej. pulmón) antes de cerrar diagnóstico psiquiátrico.
-- El síndrome de Cotard puede verse en depresión psicótica, enfermedad neurológica o procesos neoplásicos/paraneoplásicos.
-- La prioridad inicial es la búsqueda activa de causa médica u orgánica subyacente.
+Recordemos el síndrome de Cotard y la psicosis tardía:
+• Síndrome de Cotard: delirios nihilistas de negación de existencia propia o de órganos ("estoy muerto", "mi hígado se pudre").
+• Puede observarse en depresión psicótica mayor, esquizofrenia, enfermedad neurológica (ESL, demencia) o procesos neoplásicos/paraneoplásicos.
+• Psicosis de inicio tardío (>60 años): siempre considerar causa orgánica hasta demostrar lo contrario.
+• Banderas rojas: pérdida de peso inexplicada, tabaquismo (cáncer de pulmón), inicio tardío, síntomas neurológicos.
+• Estudio inicial: hemograma, perfil metabólico, TSH, vitamina B12, neuroimagen, TC de tórax (tabaquismo + baja de peso).
+• Síndromes paraneoplásicos pueden manifestarse con síntomas psiquiátricos antes del diagnóstico oncológico.
+
+Por lo tanto:
+La prioridad diagnóstica inicial es buscar activamente una causa médica u orgánica subyacente, especialmente una neoplasia.
+
+¿Por qué la opción C es la respuesta correcta?
+La psicosis de inicio tardío con pérdida de peso inexplicada y tabaquismo pesado obliga a descartar neoplasia (especialmente pulmonar) antes de cerrar un diagnóstico psiquiátrico primario.
+El síndrome de Cotard, aunque puede ser manifestación de depresión psicótica, también se asocia a enfermedades neurológicas y procesos neoplásicos/paraneoplásicos.
+Retrasar la búsqueda de causa orgánica con ISRS ambulatorio puede postergar el diagnóstico de cáncer en etapa tratable.
+El estudio debe incluir neuroimagen, laboratorios completos y TC de tórax dado el tabaquismo y la caquexia.
 
 ¿Por qué fallan las otras opciones?
-- ISRS ambulatorio en 4 semanas: peligroso sin descartar causa orgánica; puede retrasar diagnóstico de cáncer.
-- Trastorno delirante persistente con psicoterapia: ignora inicio tardío y síntomas sistémicos de alarma.
-- Benzodiacepinas por ansiedad: no aborda la gravedad del cuadro ni la necesidad de estudio médico urgente.
+Opción A (ISRS + control ambulatorio en 4 semanas): peligroso sin descartar causa orgánica; puede retrasar diagnóstico de neoplasia y empeorar pronóstico.
+Opción B (trastorno delirante persistente + psicoterapia): ignora inicio tardío, pérdida de peso y tabaquismo; no aborda la necesidad de estudio médico urgente.
+Opción D (benzodiacepinas por ansiedad): no aborda la gravedad del cuadro psicótico ni la necesidad de descartar causa orgánica subyacente.
 
-Clave: psicosis nueva en anciano + baja de peso + tabaco = buscar cáncer antes de psiquiatría pura.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen ISRS porque el paciente parece "deprimido" y tiene delirios compatibles con depresión psicótica.
+Pero la psicosis de inicio tardío + pérdida de peso + tabaquismo es la tríada que obliga a buscar cáncer antes de psiquiatría pura.
+Otra trampa: diagnosticar trastorno delirante persistente sin considerar que los síntomas psicóticos primarios raramente debutan a los 65 años sin causa orgánica.
 
-Referencias: Harrison's; UpToDate: Psychosis in Older Adults; Kaplan & Sadock's.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer psicosis de inicio tardío con banderas rojas sistémicas (baja de peso, tabaquismo).
+2. Buscar activamente causa orgánica (neoplasia, enfermedad neurológica, metabólica).
+3. Realizar estudio completo: laboratorios, neuroimagen, TC de tórax.
+4. Una vez descartada causa orgánica, tratar la etiología psiquiátrica identificada.
+
+Perlas de examen
+✅ Psicosis nueva en anciano (>60 años) = descartar causa orgánica primero.
+✅ Síndrome de Cotard: delirios nihilistas ("estoy muerto", "mis órganos se pudren").
+✅ Pérdida de peso + tabaquismo + psicosis tardía = buscar cáncer de pulmón.
+✅ No iniciar ISRS ambulatorio sin descartar neoplasia en psicosis tardía.
+✅ Síndromes paraneoplásicos pueden debutar con síntomas psiquiátricos.
+✅ El síndrome de Cotard puede ser depresión psicótica, neurológica o neoplásica.
+
+Referencias
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Psychosis in Older Adults.
+• Kaplan & Sadock's Comprehensive Textbook of Psychiatry.
+• DSM-5-TR: Psychotic Disorders Due to Another Medical Condition.
+• Berrios GE, Luque R. Cotard's Syndrome.`,
   },
   {
     id: "dr-q-108",
@@ -9986,34 +10276,77 @@ Referencias: Harrison's; UpToDate: Psychosis in Older Adults; Kaplan & Sadock's.
     explanation:
       "Fiebre y odinofagia en paciente con clozapina deben hacer sospechar agranulocitosis o neutropenia grave. Prioridad: hemograma urgente con recuento absoluto de neutrófilos y suspensión temporal de clozapina.",
     keyPoints: [
-      "Clozapina + fiebre + odinofagia → agranulocitosis hasta demostrar lo contrario.",
-      "Hemograma urgente con RAN es obligatorio.",
-      "Suspender clozapina temporalmente mientras se aclara el diagnóstico.",
-      "La agranulocitosis es el efecto adverso más temido de la clozapina.",
+      "Cuando veas: paciente con clozapina + fiebre + odinofagia sin foco infeccioso claro.",
+      "Debes pensar en: agranulocitosis inducida por clozapina → hemograma urgente con RAN y suspensión temporal de clozapina.",
+      "La agranulocitosis es el efecto adverso más temido de la clozapina; puede ser fatal si no se detecta a tiempo.",
+      "Ante fiebre en paciente con clozapina, el hemograma urgente va antes que cualquier antibiótico empírico ambulatorio.",
+      "Tema: Monitorización de clozapina y agranulocitosis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa el efecto adverso más temido de la clozapina: la agranulocitosis. Ante fiebre en un paciente con clozapina, el hemograma urgente va antes que cualquier antibiótico empírico.
+Esta es una pregunta clásica de psicofarmacología porque evalúa el efecto adverso más temido de la clozapina: la agranulocitosis. Ante fiebre en un paciente con clozapina, el hemograma urgente va antes que cualquier antibiótico empírico.
+
+La clave no es continuar clozapina con antibiótico empírico ni aumentar la dosis por recaída psicótica.
+La clave es:
+Clozapina + fiebre + odinofagia sin foco claro = agranulocitosis hasta demostrar lo contrario → hemograma urgente con RAN + suspensión temporal de clozapina.
 
 ¿Qué está ocurriendo realmente?
-- Joven con esquizofrenia refractaria en clozapina 300 mg/día desde hace 3 meses.
-- Consulta por fiebre 38.5°C, odinofagia y malestar general sin foco infeccioso claro.
-- Sin tos, disuria ni diarrea que expliquen el cuadro de forma evidente.
-- Sospecha de neutropenia grave o agranulocitosis inducida por clozapina.
+El paciente presenta:
+• Hombre de 24 años con esquizofrenia refractaria en clozapina 300 mg/día desde hace 3 meses.
+• Fiebre 38.5°C, odinofagia y malestar general de inicio reciente.
+• Niega tos, disuria, diarrea u otros síntomas infecciosos focales claros.
+• Cuadro compatible con neutropenia grave o agranulocitosis inducida por clozapina.
+• La odinofagia en paciente neutropénico puede ser la primera manifestación de infección faringea grave.
 
-¿Qué dato es clave en el examen?
-- Clozapina + fiebre + odinofagia = agranulocitosis hasta demostrar lo contrario.
-- La odinofagia en un paciente neutropénico puede ser la primera manifestación de infección faringea grave.
-- Conducta inmediata: hemograma urgente con recuento absoluto de neutrófilos y suspensión temporal de clozapina.
+Recordemos la clozapina y la agranulocitosis:
+• Clozapina: antipsicótico atípico reservado para esquizofrenia refractaria; superior en eficacia pero con perfil de efectos adversos único.
+• Agranulocitosis: incidencia 0.5-2%; puede ocurrir en cualquier momento, pero mayor riesgo en primeros 6 meses.
+• Síntomas de alarma: fiebre, odinofagia, aftas, infecciones recurrentes, malestar general.
+• Monitorización obligatoria: hemograma semanal las primeras 6 semanas, quincenal hasta 6 meses, mensual después.
+• Criterio de agranulocitosis: RAN <500/mm³; neutropenia: RAN <1500/mm³.
+• Conducta ante fiebre: hemograma urgente + suspensión temporal de clozapina hasta aclarar recuento de neutrófilos.
+• Si se confirma agranulocitosis: suspensión definitiva, aislamiento, factores estimulantes de colonias (G-CSF), antibióticos IV de amplio espectro.
+
+Por lo tanto:
+La conducta inmediata más importante es solicitar hemograma urgente con recuento absoluto de neutrófilos y suspender temporalmente la clozapina hasta aclarar el diagnóstico.
+
+¿Por qué la opción B es la respuesta correcta?
+Fiebre y odinofagia en paciente con clozapina deben hacer sospechar agranulocitosis o neutropenia grave hasta demostrar lo contrario.
+El hemograma urgente con recuento absoluto de neutrófilos (RAN) es el estudio diagnóstico prioritario e inmediato.
+La suspensión temporal de clozapina es obligatoria mientras se aclara el diagnóstico; continuarla puede agravar la neutropenia.
+Si el RAN es normal, se puede reanudar clozapina; si está deprimido, se inicia manejo de agranulocitosis/neutropenia.
 
 ¿Por qué fallan las otras opciones?
-- Antibiótico empírico ambulatorio y continuar clozapina: retrasa el diagnóstico y mantiene la droga causal.
-- Aumentar clozapina por recaída psicótica: absurdo ante fiebre con sospecha de agranulocitosis.
-- Solo PCR y seguimiento ambulatorio: insuficiente; se requiere hemograma urgente con RAN.
+Opción A (antibiótico empírico ambulatorio + continuar clozapina): retrasa el diagnóstico de agranulocitosis y mantiene la droga causal; el paciente necesita evaluación urgente, no ambulatoria.
+Opción C (aumentar clozapina por recaída psicótica): absurdo ante fiebre con sospecha de agranulocitosis; la fiebre no es recaída psicótica sino posible efecto adverso hematológico.
+Opción D (solo PCR + seguimiento ambulatorio): insuficiente; se requiere hemograma urgente con RAN, no solo un marcador inflamatorio inespecífico.
 
-Clave: clozapina + fiebre = hemograma ya + suspender hasta aclarar neutrófilos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen antibiótico empírico porque hay fiebre y odinofagia, interpretándolo como faringitis bacteriana común.
+Pero en paciente con clozapina, la fiebre debe hacer sospechar agranulocitosis primero; el hemograma urgente es prioritario.
+Otra trampa: continuar clozapina "porque funciona bien" sin reconocer que la fiebre puede ser la señal de un efecto adverso potencialmente mortal.
 
-Referencias: UpToDate: Clozapine Monitoring; Maudsley Prescribing Guidelines; Stahl's.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer fiebre en paciente con clozapina como posible agranulocitosis.
+2. Solicitar hemograma urgente con recuento absoluto de neutrófilos.
+3. Suspender temporalmente clozapina hasta aclarar el RAN.
+4. Si se confirma agranulocitosis: suspensión definitiva, G-CSF, antibióticos IV, aislamiento.
+
+Perlas de examen
+✅ Clozapina + fiebre = agranulocitosis hasta demostrar lo contrario.
+✅ Hemograma urgente con RAN es obligatorio ante fiebre en paciente con clozapina.
+✅ Suspender clozapina temporalmente mientras se aclara el diagnóstico.
+✅ Agranulocitosis: RAN <500/mm³; mayor riesgo en primeros 6 meses de tratamiento.
+✅ No continuar clozapina ni dar antibiótico ambulatorio sin hemograma urgente.
+✅ La odinofagia en neutropénico puede ser infección faringea grave, no faringitis simple.
+
+Referencias
+• UpToDate: Clozapine Monitoring and Adverse Effects.
+• Maudsley Prescribing Guidelines in Psychiatry.
+• Stahl's Essential Psychopharmacology.
+• FDA Clozapine REMS Program.
+• Leponex/clozapine prescribing information.`,
   },
   {
     id: "dr-q-109",
@@ -10049,34 +10382,76 @@ Referencias: UpToDate: Clozapine Monitoring; Maudsley Prescribing Guidelines; St
     explanation:
       "Prioridad inicial en agitación psicomotora severa: garantizar seguridad, controlar la conducta agitada y posteriormente completar la evaluación diagnóstica (psicosis primaria, intoxicación por estimulantes, manía, etc.).",
     keyPoints: [
-      "Agitación severa con riesgo para paciente y personal = urgencia médica.",
-      "Primero seguridad y sedación; diagnóstico etiológico después.",
-      "Midriasis + taquicardia + hipertensión pueden sugerir estimulantes.",
-      "No diagnosticar esquizofrenia en primer episicio sin descartar causas médicas/tóxicas.",
+      "Cuando veas: agitación psicomotora extrema con agresividad + ideación delirante + signos autonómicos (midriasis, taquicardia, hipertensión) en urgencias.",
+      "Debes pensar en: prioridad = controlar agitación mediante sedación farmacológica y garantizar seguridad del paciente y del personal.",
+      "Agitación severa con riesgo para paciente y personal es urgencia médica; primero seguridad y sedación, diagnóstico etiológico después.",
+      "Midriasis + taquicardia + hipertensión pueden sugerir intoxicación por estimulantes además de psicosis primaria; no cerrar diagnóstico sin estudio.",
+      "Tema: Manejo de agitación psicomotora en urgencias.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la prioridad en urgencias ante agitación psicomotora severa: primero seguridad y sedación, después el diagnóstico etiológico completo.
+Esta es una pregunta clásica de psiquiatría de urgencias porque evalúa la prioridad ante agitación psicomotora severa: primero seguridad y sedación, después el diagnóstico etiológico completo.
+
+La clave no es programar valoración ambulatoria ni solicitar neuroimagen antes de controlar la agitación.
+La clave es:
+Agitación extrema + agresividad + riesgo para paciente y personal = urgencia médica → sedación farmacológica y garantizar seguridad primero.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 30 años sin antecedentes psiquiátricos conocidos, traída por la policía.
-- Agitación extrema, agresividad y poco colaboración.
-- Ideación delirante de contenido bizarro (persecución extraterrestre).
-- Midriasis, taquicardia, hipertensión y diaforesis: pueden sugerir intoxicación por estimulantes además de psicosis primaria.
+La paciente presenta:
+• Mujer de 30 años sin antecedentes psiquiátricos conocidos, traída por la policía.
+• Extremadamente agitada, agresiva y poco colaboradora en urgencias.
+• Ideación delirante de contenido bizarro ("extraterrestres drenando energía a través de postes de luz").
+• Midriasis bilateral, FC 130 lpm, TA 160/100 mmHg y diaforesis leve.
+• Signos autonómicos que pueden sugerir intoxicación por estimulantes además de psicosis primaria.
 
-¿Qué dato es clave en el examen?
-- Agitación severa con riesgo para el paciente y el personal es una urgencia médica, no una consulta ambulatoria.
-- La secuencia correcta es: seguridad → contención verbal si es posible → sedación farmacológica → evaluación diagnóstica completa.
-- No se debe cerrar diagnóstico de esquizofrenia en primer episodio sin descartar causas médicas y tóxicas.
+Recordemos el manejo de la agitación psicomotora:
+• La agitación severa con riesgo para el paciente y el personal es una urgencia médica, no una consulta ambulatoria.
+• Secuencia correcta: seguridad del entorno → contención verbal (si es posible) → sedación farmacológica → evaluación diagnóstica completa.
+• Sedantes de elección en urgencias: antipsicóticos (haloperidol, olanzapina, ziprasidona) ± benzodiacepinas (lorazepam).
+• Diagnóstico diferencial post-sedación: psicosis primaria (esquizofrenia, trastorno bipolar), intoxicación (estimulantes, cannabis, alucinógenos), causa orgánica (delirium, tumor, epilepsia).
+• No diagnosticar esquizofrenia en primer episodio sin descartar causas médicas y tóxicas.
+• Estudio posterior: niveles de tóxicos en orina/sangre, glucosa, electrolitos, neuroimagen si indicada.
+
+Por lo tanto:
+La conducta inicial más adecuada es controlar primero la agitación mediante sedación farmacológica y garantizar la seguridad del paciente y del personal.
+
+¿Por qué la opción C es la respuesta correcta?
+La agitación extrema con agresividad y poco colaboración pone en riesgo inmediato al paciente y al personal de urgencias.
+La sedación farmacológica (haloperidol IM/IV ± lorazepam) permite controlar la conducta agitada de forma segura.
+Una vez sedada y estabilizada, se puede completar la evaluación diagnóstica (tóxicos, laboratorios, entrevista psiquiátrica).
+Este enfoque sigue las guías AAEP y de psiquiatría de urgencias para manejo del paciente agitado.
 
 ¿Por qué fallan las otras opciones?
-- Risperidona oral y cita ambulatoria: inadecuado con agitación grave y riesgo inmediato.
-- RM cerebral antes de cualquier intervención: retrasa el control de la agitación que pone en riesgo a todos.
-- Tratamiento de mantenimiento para esquizofrenia: prematuro sin evaluación completa ni control de la crisis aguda.
+Opción A (risperidona oral + valoración ambulatoria): inadecuado con agitación grave; una paciente agresiva y poco colaboradora no puede tomar medicación oral ni acudir a cita ambulatoria.
+Opción B (RM cerebral antes de cualquier intervención): retrasa el control de la agitación que pone en riesgo a todos; la neuroimagen se solicita después de estabilizar al paciente si hay indicación.
+Opción D (tratamiento de mantenimiento para esquizofrenia): prematuro sin evaluación completa ni control de la crisis aguda; no se puede diagnosticar esquizofrenia en primer episodio sin descartar causas tóxicas y orgánicas.
 
-Clave: agitación grave = sedar y proteger primero; diagnosticar después con tóxicos y estudio orgánico.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen risperidona oral porque la paciente tiene síntomas psicóticos claros y parece un primer episodio de esquizofrenia.
+Pero la agitación extrema con agresividad es una urgencia que requiere sedación parenteral inmediata, no medicación oral ambulatoria.
+Otra trampa: ignorar los signos autonómicos (midriasis, taquicardia, hipertensión) que sugieren intoxicación por estimulantes como diagnóstico diferencial.
 
-Referencias: UpToDate: Agitated Patient; AAEP Guidelines; Tintinalli's.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Garantizar seguridad del paciente y del personal (entorno controlado).
+2. Intentar contención verbal si es posible (escalada de contención).
+3. Sedación farmacológica parenteral (haloperidol ± lorazepam IM/IV).
+4. Evaluación diagnóstica completa post-sedación (tóxicos, laboratorios, entrevista psiquiátrica).
+
+Perlas de examen
+✅ Agitación severa con riesgo = urgencia médica, no consulta ambulatoria.
+✅ Primero sedar y proteger; diagnosticar después con estudio completo.
+✅ No administrar antipsicótico oral a paciente agresivo y poco colaborador.
+✅ Midriasis + taquicardia + HTA pueden sugerir intoxicación por estimulantes.
+✅ No diagnosticar esquizofrenia en primer episodio sin descartar tóxicos y causas orgánicas.
+✅ RM cerebral no es prioridad antes de controlar agitación que pone en riesgo a todos.
+
+Referencias
+• UpToDate: The Agitated Patient.
+• AAEP (American Association for Emergency Psychiatry) Guidelines.
+• Tintinalli's Emergency Medicine.
+• Kaplan & Sadock's Comprehensive Textbook of Psychiatry.
+• ACEP Clinical Policy on Critical Issues in the Diagnosis and Management of the Adult Psychiatric Patient.`,
   },
   {
     id: "dr-q-110",
@@ -10096,34 +10471,76 @@ Referencias: UpToDate: Agitated Patient; AAEP Guidelines; Tintinalli's.`,
     explanation:
       "Delirium hiperactivo con riesgo para el paciente y el personal. Cuando las medidas no farmacológicas fracasan, el haloperidol es el fármaco clásicamente utilizado para control de agitación en delirium (dosis bajas, monitorización).",
     keyPoints: [
-      "Delirium hiperactivo: inicio agudo, fluctuación, alteración de atención, agitación.",
-      "Base del tratamiento: medidas no farmacológicas + corregir causa.",
-      "Haloperidol: antipsicótico clásico para agitación grave en delirium.",
-      "Benzodiacepinas pueden empeorar delirium (excepto abstinencia alcohólica).",
+      "Cuando veas: anciano con desorientación fluctuante de inicio agudo + alteración de atención + agitación/agresividad que no responde a medidas no farmacológicas.",
+      "Debes pensar en: delirium hiperactivo con riesgo → haloperidol como fármaco de elección para contención farmacológica (dosis bajas).",
+      "Las benzodiacepinas pueden empeorar el delirium en ancianos; se reservan para abstinencia alcohólica.",
+      "El tratamiento de base del delirium siempre incluye buscar causas reversibles y medidas no farmacológicas antes de medicar.",
+      "Tema: Delirium hiperactivo y contención farmacológica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa el manejo farmacológico del delirium hiperactivo en el anciano: cuando la reorientación verbal falla y hay riesgo inmediato, ¿qué sedante usar sin empeorar el cuadro?
+Esta es una pregunta clásica de psiquiatría de enlace porque evalúa el manejo farmacológico del delirium hiperactivo en el anciano: cuando la reorientación verbal falla y hay riesgo inmediato, ¿qué sedante usar sin empeorar el cuadro?
+
+La clave no es usar benzodiacepinas (empeoran delirium) ni antidepresivos anticolinérgicos.
+La clave es:
+Delirium hiperactivo + agresividad + fracaso de medidas no farmacológicas = haloperidol en dosis bajas como contención farmacológica de elección.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 82 años con desorientación fluctuante de 12 horas de evolución.
-- Alteración marcada de la atención con períodos de somnolencia y agitación alternados.
-- Comportamiento agresivo que pone en riesgo al personal; no responde a medidas no farmacológicas.
-- Cuadro típico de delirium hiperactivo, no de demencia ni trastorno psiquiátrico primario.
+El paciente presenta:
+• Hombre de 82 años con insuficiencia cardíaca y fibrilación auricular.
+• Desorientación fluctuante de 12 horas de evolución (inicio agudo).
+• Alteración marcada de la atención con períodos de somnolencia alternados con agitación.
+• Comportamiento agresivo: intenta golpear al personal; no responde a reorientación verbal.
+• Cuadro típico de delirium hiperactivo que requiere contención farmacológica tras fracaso de medidas no farmacológicas.
 
-¿Qué dato es clave en el examen?
-- Delirium hiperactivo: inicio agudo + fluctuación + alteración de atención + agitación con riesgo.
-- El tratamiento de base siempre incluye buscar causas reversibles y medidas no farmacológicas.
-- Cuando estas fracasan, el haloperidol es el antipsicótico clásico para contención farmacológica en delirium (dosis bajas, monitorización).
+Recordemos el delirium hiperactivo:
+• Subtipo de delirium con predominio de agitación, agresividad, alucinaciones e hiperactividad psicomotora.
+• Criterios diagnósticos: inicio agudo, curso fluctuante, alteración de atención y conciencia, cambio cognitivo.
+• Tratamiento escalonado: (1) buscar causas reversibles, (2) medidas no farmacológicas, (3) antipsicóticos si hay riesgo.
+• Haloperidol: antipsicótico clásico para agitación grave en delirium; dosis bajas (0.5-1 mg IV/IM), monitorización de QT.
+• Benzodiacepinas: empeoran confusión y delirium en ancianos; solo indicadas en abstinencia alcohólica o benzodiacepínica.
+• Evitar: anticolinérgicos (amitriptilina), benzodiacepinas y sedantes que prolonguen el delirium.
+
+Por lo tanto:
+El fármaco de elección para el control de la agitación en este paciente es haloperidol.
+
+¿Por qué la opción B es la respuesta correcta?
+El cuadro es delirium hiperactivo con riesgo para el paciente y el personal tras fracaso de medidas no farmacológicas.
+El haloperidol es el antipsicótico clásicamente utilizado para contención farmacológica en delirium (dosis bajas: 0.5-1 mg IV/IM).
+Tiene menor efecto anticolinérgico y sedante que benzodiacepinas, lo que facilita la recuperación cognitiva.
+Debe administrarse con monitorización de QT y en dosis mínima efectiva, reevaluando frecuentemente.
 
 ¿Por qué fallan las otras opciones?
-- Diazepam: las benzodiacepinas pueden empeorar el delirium y la confusión en ancianos; se reservan para abstinencia alcohólica.
-- Amitriptilina: antidepresivo anticolinérgico que puede agravar delirium en adultos mayores.
-- Fenitoína: no tiene rol en el control de agitación por delirium.
+Opción A (diazepam): las benzodiacepinas empeoran el delirium y la confusión en ancianos; se reservan exclusivamente para abstinencia alcohólica o benzodiacepínica, no para delirium de otra etiología.
+Opción C (amitriptilina): antidepresivo tricíclico con marcado efecto anticolinérgico que puede agravar significativamente el delirium en adultos mayores.
+Opción D (fenitoína): antiepiléptico sin rol alguno en el control de agitación por delirium; no tiene propiedades sedantes ni antipsicóticas.
 
-Clave: delirium hiperactivo grave tras medidas no farmacológicas = haloperidol en dosis bajas, no benzodiacepina.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen diazepam porque es un sedante conocido y el paciente está agitado.
+Pero las benzodiacepinas empeoran el delirium en ancianos (excepto abstinencia alcohólica); el haloperidol es la opción correcta.
+Otra trampa: no reconocer que las medidas no farmacológicas ya fracasaron, lo que justifica la contención farmacológica con haloperidol.
 
-Referencias: AGS Delirium Guidelines; Harrison's; UpToDate: Delirium in Older Adults.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer delirium hiperactivo (inicio agudo + fluctuación + alteración de atención + agitación).
+2. Buscar causas reversibles e implementar medidas no farmacológicas.
+3. Si hay riesgo y fracasan medidas no farmacológicas: haloperidol en dosis bajas.
+4. Monitorizar QT, reevaluar frecuentemente y suspender cuando la agitación ceda.
+
+Perlas de examen
+✅ Delirium hiperactivo: agitación + agresividad + alteración de atención + fluctuación.
+✅ Haloperidol en dosis bajas es el fármaco clásico para agitación grave en delirium.
+✅ Benzodiacepinas empeoran delirium en ancianos (excepto abstinencia alcohólica).
+✅ Amitriptilina y fármacos anticolinérgicos agravan delirium; evitar en ancianos.
+✅ Siempre buscar causas reversibles antes de medicar; antipsicóticos son segunda línea.
+✅ Monitorizar QT con haloperidol IV; usar dosis mínima efectiva.
+
+Referencias
+• American Geriatrics Society: Clinical Practice Guideline for Postoperative Delirium.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Delirium in Older Adults.
+• DSM-5-TR: Delirium.
+• NICE Guidelines: Delirium.`,
   },
   {
     id: "dr-q-111",
@@ -10151,34 +10568,72 @@ Referencias: AGS Delirium Guidelines; Harrison's; UpToDate: Delirium in Older Ad
     explanation:
       "Entre 30 y 65 años, la estrategia preferida de tamización en Colombia es la prueba de ADN para VPH de alto riesgo, independientemente de tabaquismo o citologías previas negativas.",
     keyPoints: [
-      "25-29 años: citología cervical. 30-65 años: prueba de ADN para VPH de alto riesgo (Colombia).",
-      "VPH persistente = causa necesaria del cáncer de cuello uterino.",
-      "El tabaquismo aumenta riesgo de progresión pero no modifica la estrategia por edad.",
-      "VPH negativo = riesgo muy bajo; permite ampliar intervalos.",
+      "Cuando veas: mujer 30-65 años en chequeo APS con citología previa negativa y factor de riesgo (tabaquismo).",
+      "Debes pensar en: tamización por edad según Res. 3280 Colombia → ADN VPH de alto riesgo como estrategia preferida.",
+      "El tabaquismo aumenta riesgo de progresión de lesiones, pero NO cambia la estrategia de tamización por edad.",
+      "25-29 años: citología; 30-65 años: ADN VPH; VPH negativo permite ampliar intervalos con riesgo muy bajo.",
+      "Tema: Tamización cáncer de cuello uterino — ADN VPH en Colombia.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la ruta de tamización de cáncer de cuello uterino en Colombia: la estrategia depende de la edad, no de factores de riesgo como el tabaquismo.
+Esta es una pregunta clásica de APS y tamización porque evalúa una trampa frecuente: ante una fumadora con citología negativa reciente, no cambiar la estrategia por el tabaquismo sino aplicar la ruta por edad vigente en Colombia.
+
+La clave no es citología anual ni repetir citología cada 3 años solo porque ya la tuvo.
+La clave es:
+Mujer 34 años (30-65) + consulta preventiva en Colombia = prueba de ADN para VPH de alto riesgo como estrategia preferida, independiente del tabaquismo.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 34 años, asintomática, con citología negativa hace 2 años.
-- Fumadora activa, pero sin síntomas ni lesiones previas.
-- Consulta de promoción y mantenimiento de la salud en APS.
-- Debe tamizarse según la edad (30-65 años), no según la citología previa sola.
+La paciente presenta:
+• Mujer de 34 años, G2P2, asintomática, en consulta de chequeo general en APS.
+• Fumadora activa (5 cigarrillos/día), pero sin síntomas ni lesiones cervicales previas.
+• Citología cervical negativa hace 2 años.
+• Según Res. 3280 (Ruta de Promoción y Mantenimiento de la Salud), la edad define la estrategia de tamización, no el tabaquismo ni la citología previa sola.
 
-¿Qué dato es clave en el examen?
-- En Colombia (Res. 3280), entre 30 y 65 años la estrategia preferida es prueba de ADN para VPH de alto riesgo.
-- El VPH persistente es causa necesaria del cáncer de cuello uterino; la prueba de ADN tiene mayor sensibilidad que la citología.
-- El tabaquismo aumenta riesgo de progresión, pero no cambia la estrategia de tamización por edad.
+Recordemos la tamización de cuello uterino en Colombia:
+• 25-29 años: citología cervical cada 3 años.
+• 30-65 años: prueba de ADN para VPH de alto riesgo como estrategia preferida.
+• El VPH persistente es causa necesaria del cáncer de cuello uterino; la prueba de ADN tiene mayor sensibilidad que la citología.
+• VPH negativo = riesgo muy bajo; permite ampliar intervalos de seguimiento.
+• El tabaquismo es cofactor de progresión, pero no modifica la estrategia por edad.
+
+Por lo tanto:
+La conducta más apropiada es realizar prueba de ADN para VPH de alto riesgo y continuar tamización según resultado.
+
+¿Por qué la opción B es la respuesta correcta?
+La prueba de ADN para VPH de alto riesgo es la estrategia preferida entre 30 y 65 años según guías colombianas vigentes.
+Tiene mayor sensibilidad que la citología para detectar lesiones precursoras y permite estratificar riesgo según el resultado (negativo = intervalos más amplios; positivo = derivación según algoritmo).
+El tabaquismo no justifica cambiar a citología anual ni omitir la estrategia por edad.
 
 ¿Por qué fallan las otras opciones?
-- Citología anual por ser fumadora: la edad define la estrategia; no se indica citología anual solo por tabaquismo.
-- Repetir citología ahora y cada 3 años: esquema más propio de 25-29 años con citología, no la preferida a los 34.
-- No tamizar hasta los 50 años: incorrecto; la tamización inicia mucho antes.
+Opción A (citología anual por ser fumadora): la edad define la estrategia; no se indica citología anual solo por tabaquismo en una mujer de 34 años.
+Opción C (repetir citología ahora y cada 3 años): esquema más propio del rango 25-29 años con citología, no la estrategia preferida a los 34 en Colombia.
+Opción D (no tamizar hasta los 50 años): incorrecto; la tamización inicia mucho antes y esta paciente ya está en ventana activa (30-65 años).
 
-Clave: 34 años en Colombia = ADN VPH de alto riesgo, independiente del tabaquismo.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen citología anual porque la paciente es fumadora, confundiendo cofactor de progresión con cambio de estrategia de tamización.
+Otra trampa: repetir citología porque ya la tuvo hace 2 años, sin reconocer que a los 34 años la preferida es ADN VPH, no citología rutinaria.
 
-Referencias: Resolución 3280 de 2018; OMS Cervical Cancer Screening; INC Colombia.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar edad de la paciente (34 años → ventana 30-65).
+2. Aplicar estrategia preferida: ADN VPH de alto riesgo (Res. 3280 Colombia).
+3. No modificar la estrategia por tabaquismo ni por citología previa negativa.
+4. Continuar seguimiento según resultado de VPH (negativo = ampliar intervalo; positivo = algoritmo de derivación).
+
+Perlas de examen
+✅ 30-65 años en Colombia = ADN VPH de alto riesgo como estrategia preferida.
+✅ 25-29 años = citología cervical cada 3 años.
+✅ Tabaquismo aumenta progresión, pero NO cambia la estrategia de tamización por edad.
+✅ Citología negativa previa no exime de tamización actual si está en ventana etaria.
+✅ VPH negativo = riesgo muy bajo; permite intervalos más amplios.
+✅ Res. 3280 es la referencia clave para tamización en APS colombiana.
+
+Referencias
+• Resolución 3280 de 2018 — Ruta de Promoción y Mantenimiento de la Salud (Colombia).
+• OMS: Cervical Cancer Screening Guidelines.
+• INC Colombia — Guías de tamización de cáncer de cuello uterino.
+• USPSTF: Cervical Cancer Screening.
+• UpToDate: Screening for cervical cancer.`,
   },
   {
     id: "dr-q-112",
@@ -10210,34 +10665,72 @@ Referencias: Resolución 3280 de 2018; OMS Cervical Cancer Screening; INC Colomb
     explanation:
       "Obesidad, hipertensión, prediabetes y dislipidemia coexisten. La modificación intensiva del estilo de vida es la intervención con mayor impacto poblacional, mejor relación costo-beneficio y capacidad de modificar simultáneamente todos los factores de riesgo.",
     keyPoints: [
-      "Múltiples factores de riesgo modificables → intervención sobre estilo de vida primero.",
-      "Pérdida de 5-10% del peso mejora PA, glucemia y perfil lipídico.",
-      "Aspirina en prevención primaria: beneficio limitado vs riesgo de sangrado.",
-      "No tamización cardiovascular indiscriminada en asintomáticos.",
+      "Cuando veas: paciente asintomático con HTA + obesidad + prediabetes + dislipidemia coexistiendo.",
+      "Debes pensar en: prevención primaria CV → modificación estructurada del estilo de vida como intervención más costo-efectiva.",
+      "Pérdida del 5-10% del peso mejora simultáneamente PA, glucemia y perfil lipídico.",
+      "Aspirina en prevención primaria tiene beneficio limitado vs riesgo de sangrado; no es la prioridad aquí.",
+      "Tema: Prevención cardiovascular primaria — estilo de vida en APS.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa prevención cardiovascular primaria en APS: cuando coexisten varios factores de riesgo modificables, la intervención más costo-efectiva no es siempre un fármaco ni un estudio invasivo.
+Esta es una pregunta clásica de prevención cardiovascular en APS porque evalúa una trampa frecuente: ante múltiples factores de riesgo, no iniciar farmacoterapia agresiva ni estudios invasivos, sino la intervención con mayor impacto poblacional y mejor relación costo-beneficio.
+
+La clave no es aspirina, prueba de esfuerzo ni Doppler carotídeo en un asintomático.
+La clave es:
+Múltiples factores de riesgo modificables + asintomático = programa estructurado de modificación del estilo de vida como intervención prioritaria.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 52 años con hipertensión reciente, obesidad (IMC 31) y prediabetes (glucemia 108, HbA1c 5.9%).
-- Dislipidemia (LDL 155) sin síntomas cardiovasculares ni limitación funcional.
-- Múltiples factores de riesgo modificables coexistiendo en un mismo paciente asintomático.
-- Escenario típico de prevención primaria en consulta de APS.
+El paciente presenta:
+• Hombre de 52 años con hipertensión arterial recién diagnosticada.
+• Obesidad (IMC 31 kg/m²), prediabetes (glucemia 108 mg/dL, HbA1c 5.9%) y dislipidemia (LDL 155 mg/dL).
+• Sin síntomas cardiovasculares ni limitación funcional.
+• Cuatro factores de riesgo modificables coexistiendo en un escenario típico de prevención primaria en APS.
 
-¿Qué dato es clave en el examen?
-- La modificación estructurada del estilo de vida impacta simultáneamente peso, presión arterial, glucemia y lípidos.
-- Pérdida del 5-10% del peso corporal mejora de forma significativa todos estos parámetros.
-- Es la intervención con mejor relación costo-beneficio antes de farmacoterapia agresiva o estudios de imagen.
+Recordemos la prevención cardiovascular primaria:
+• La modificación del estilo de vida impacta simultáneamente peso, presión arterial, glucemia y lípidos.
+• Pérdida del 5-10% del peso corporal mejora de forma significativa todos estos parámetros.
+• Es la intervención con mayor impacto poblacional y mejor relación costo-beneficio antes de farmacoterapia agresiva.
+• Aspirina en prevención primaria: beneficio limitado frente al riesgo de sangrado en pacientes de riesgo intermedio.
+• No se recomienda tamización cardiovascular indiscriminada (prueba de esfuerzo, Doppler carotídeo) en asintomáticos.
+
+Por lo tanto:
+La intervención más costo-efectiva y prioritaria es implementar un programa estructurado de modificación del estilo de vida.
+
+¿Por qué la opción C es la respuesta correcta?
+Un programa estructurado de reducción de peso, actividad física regular y cambios dietarios modifica simultáneamente todos los factores de riesgo presentes.
+Tiene la mejor relación costo-beneficio, es accesible en APS y debe preceder a intervenciones farmacológicas agresivas o estudios de imagen en un paciente asintomático.
+La evidencia (AHA, ADA, ESC) posiciona el estilo de vida como piedra angular de la prevención primaria.
 
 ¿Por qué fallan las otras opciones?
-- Aspirina a dosis baja: en prevención primaria el beneficio es limitado frente al riesgo de sangrado; no es la prioridad aquí.
-- Prueba de esfuerzo: no se indica tamización cardiovascular indiscriminada en asintomáticos de bajo riesgo funcional.
-- Doppler carotídeo: tamización no recomendada de forma rutinaria en prevención primaria sin indicación específica.
+Opción A (aspirina a dosis baja indefinida): en prevención primaria el beneficio es limitado frente al riesgo de sangrado; no es la prioridad con factores de riesgo modificables no tratados.
+Opción B (prueba de esfuerzo): no se indica tamización cardiovascular indiscriminada en asintomáticos sin indicación específica.
+Opción D (Doppler carotídeo): tamización no recomendada de forma rutinaria en prevención primaria sin indicación clínica concreta.
 
-Clave: múltiples factores de riesgo + asintomático = estilo de vida primero, no aspirina ni estudios.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen aspirina porque ven múltiples factores de riesgo y piensan en prevención farmacológica inmediata.
+Otra trampa: solicitar prueba de esfuerzo o Doppler carotídeo como "tamización cardiovascular", cuando la prioridad es modificar factores de riesgo antes de investigar enfermedad silente.
 
-Referencias: AHA Primary Prevention; ADA Standards of Care; Guías ESC Prevención CV.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar factores de riesgo modificables coexistentes (HTA, obesidad, prediabetes, dislipidemia).
+2. Priorizar intervención sobre estilo de vida estructurada (peso, dieta, actividad física).
+3. Evaluar necesidad de farmacoterapia según metas individuales tras intervención sobre estilo de vida.
+4. Reservar estudios invasivos y aspirina para indicaciones específicas, no como primera línea.
+
+Perlas de examen
+✅ Múltiples factores de riesgo modificables = estilo de vida primero, no aspirina ni estudios.
+✅ Pérdida del 5-10% del peso mejora PA, glucemia y lípidos simultáneamente.
+✅ Aspirina en prevención primaria: beneficio limitado vs riesgo de sangrado.
+✅ No tamización CV indiscriminada (prueba de esfuerzo, Doppler) en asintomáticos.
+✅ Prevención primaria en APS = intervención más costo-efectiva antes de farmacoterapia agresiva.
+✅ AHA, ADA y ESC posicionan estilo de vida como piedra angular de prevención primaria.
+
+Referencias
+• AHA/ACC Guideline on the Primary Prevention of Cardiovascular Disease.
+• ADA Standards of Care in Diabetes.
+• ESC Guidelines on Cardiovascular Disease Prevention.
+• USPSTF: Statin Use for Primary Prevention.
+• UpToDate: Overview of primary prevention of coronary heart disease.`,
   },
   {
     id: "dr-q-113",
@@ -10265,34 +10758,73 @@ Referencias: AHA Primary Prevention; ADA Standards of Care; Guías ESC Prevenci�
     explanation:
       "Factores de riesgo importantes (≥65 años, EPOC, diabetes). Debe recibir vacunación anual contra influenza (última dosis hace 14 meses) y completar protección antineumocócica con PPSV23 tras PCV13 previa.",
     keyPoints: [
-      "Influenza: vacunación anual obligatoria.",
-      "Esquema clásico adultos: PCV13 seguida de PPSV23 para ampliar cobertura.",
-      "EPOC + diabetes + edad = alto riesgo de complicaciones respiratorias.",
-      "No repetir PCV13 rutinariamente; completar con PPSV23.",
+      "Cuando veas: adulto ≥65 años con EPOC + diabetes y carné con influenza caducada (>12 meses) + PCV13 previa sin PPSV23.",
+      "Debes pensar en: influenza anual obligatoria + completar esquema antineumocócico con PPSV23 tras PCV13.",
+      "Esquema clásico adultos: PCV13 seguida de PPSV23 para ampliar cobertura serológica.",
+      "No repetir PCV13 rutinariamente; tener solo PCV13 no significa esquema completo.",
+      "Tema: Vacunación adulto mayor — influenza anual y esquema antineumocócico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa el esquema de vacunación en adultos mayores con comorbilidades respiratorias: influenza anual y completar la protección antineumocócica son prioridades inmediatas.
+Esta es una pregunta clásica de inmunizaciones en APS porque evalúa una trampa frecuente: ante un adulto mayor con PCV13 previa, asumir que el esquema antineumocócico está completo e ignorar la influenza caducada.
+
+La clave no es omitir vacunas ni repetir PCV13.
+La clave es:
+≥65 años + EPOC + diabetes + influenza caducada + PCV13 sin PPSV23 = aplicar influenza anual y completar con PPSV23 ahora.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 68 años con EPOC GOLD B y diabetes tipo 2 compensada.
-- Última vacuna contra influenza hace 14 meses (caducada para protección óptima).
-- Recibió PCV13 a los 65 años, pero el esquema antineumocócico no está completo.
-- Alto riesgo de complicaciones respiratorias graves por edad y comorbilidades.
+La paciente presenta:
+• Mujer de 68 años con EPOC GOLD B y diabetes mellitus tipo 2 compensada.
+• Consulta en abril con carné de vacunación desactualizado.
+• Última vacuna contra influenza hace 14 meses (caducada para protección óptima).
+• Recibió PCV13 a los 65 años, pero nunca recibió PPSV23.
+• Alto riesgo de complicaciones respiratorias graves por edad y comorbilidades.
 
-¿Qué dato es clave en el examen?
-- La vacuna contra influenza debe aplicarse anualmente; la protección disminuye con el tiempo.
-- Esquema clásico en adultos: PCV13 seguida de PPSV23 para ampliar cobertura serológica.
-- Tener solo PCV13 no significa esquema antineumocócico completo.
+Recordemos el esquema de vacunación en adultos con comorbilidades:
+• Influenza: vacunación anual obligatoria; la protección disminuye con el tiempo.
+• Esquema antineumocócico clásico: PCV13 (conjugada) seguida de PPSV23 (polisacárida) para ampliar cobertura.
+• Tener solo PCV13 NO significa esquema antineumocócico completo.
+• No se repite PCV13 rutinariamente; lo pendiente es PPSV23.
+• EPOC + diabetes + edad avanzada = alto riesgo de complicaciones por influenza y neumococo.
+
+Por lo tanto:
+La recomendación inmediata es aplicar vacuna contra influenza y completar el esquema antineumocócico con PPSV23.
+
+¿Por qué la opción C es la respuesta correcta?
+La influenza requiere dosis anual; la última fue hace 14 meses y debe renovarse.
+El esquema antineumocócico está incompleto: PCV13 sin PPSV23 no ofrece cobertura serológica amplia.
+Ambas vacunas son prioritarias en un adulto mayor con EPOC y diabetes, sin contraindicación aparente.
 
 ¿Por qué fallan las otras opciones?
-- No requiere vacuna porque ya recibió PCV13: el esquema está incompleto sin PPSV23.
-- Solo influenza: omite completar la protección antineumocócica pendiente.
-- Repetir PCV13: no se indica repetir PCV13 rutinariamente; lo que falta es PPSV23.
+Opción A (no requiere vacuna porque ya recibió PCV13): el esquema está incompleto sin PPSV23 y la influenza está caducada.
+Opción B (solo influenza): omite completar la protección antineumocócica pendiente con PPSV23.
+Opción D (repetir PCV13): no se indica repetir PCV13 rutinariamente; lo que falta es PPSV23, no una segunda dosis de conjugada.
 
-Clave: ≥65 años + EPOC + PCV13 previa = influenza anual + PPSV23 ahora.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen "no requiere vacuna" porque ven PCV13 en el carné y asumen esquema completo.
+Otra trampa: aplicar solo influenza e ignorar PPSV23 pendiente, o repetir PCV13 en lugar de completar con polisacárida.
 
-Referencias: CDC Adult Immunization Schedule; PAI Colombia; GOLD Report.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Verificar fecha de última influenza (anual obligatoria).
+2. Revisar esquema antineumocócico: PCV13 → PPSV23 (secuencia clásica).
+3. Aplicar ambas vacunas pendientes si no hay contraindicación.
+4. No repetir PCV13 rutinariamente; completar con PPSV23.
+
+Perlas de examen
+✅ Influenza = vacunación anual obligatoria en adultos de riesgo.
+✅ PCV13 + PPSV23 = esquema clásico antineumocócico en adultos.
+✅ Tener PCV13 NO significa esquema completo; falta PPSV23.
+✅ No repetir PCV13 rutinariamente.
+✅ EPOC + diabetes + ≥65 años = alto riesgo; vacunar ambas (influenza + PPSV23).
+✅ Revisar carné de vacunación en cada consulta de APS.
+
+Referencias
+• CDC Adult Immunization Schedule.
+• PAI Colombia — Esquema de vacunación.
+• GOLD Report — EPOC y vacunación.
+• ACIP Recommendations: Pneumococcal and Influenza Vaccines.
+• UpToDate: Pneumococcal vaccination in adults.`,
   },
   {
     id: "dr-q-114",
@@ -10328,34 +10860,70 @@ Referencias: CDC Adult Immunization Schedule; PAI Colombia; GOLD Report.`,
     explanation:
       "Se recomienda iniciar tamización del cáncer colorrectal en adultos de riesgo promedio a partir de los 45 años, incluso sin síntomas ni factores de riesgo adicionales.",
     keyPoints: [
-      "Tamización colorrectal inicia a los 45 años en riesgo promedio (USPSTF, ACS).",
-      "Estrategias válidas: SOH, FIT, ADN fecal, colonoscopia.",
-      "Colonoscopia no es la única opción válida.",
-      "Tamización = detectar antes de síntomas.",
+      "Cuando veas: adulto de 45 años en consulta preventiva, asintomático, sin antecedentes familiares de cáncer colorrectal.",
+      "Debes pensar en: iniciar tamización colorrectal desde los 45 años en riesgo promedio con cualquier estrategia validada.",
+      "USPSTF y ACS bajaron la edad de inicio de cribado de 50 a 45 años en personas de riesgo promedio.",
+      "Colonoscopia no es la única estrategia válida: SOH, FIT, ADN fecal y colonoscopia son opciones aceptadas.",
+      "Tema: Tamización de cáncer colorrectal — inicio a los 45 años en APS.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa un cambio reciente en las guías de tamización: el cáncer colorrectal ya no se pospone hasta los 50 años en personas de riesgo promedio.
+Esta es una pregunta clásica de tamización en APS porque evalúa un cambio reciente en las guías: el cáncer colorrectal ya no se pospone hasta los 50 años en personas de riesgo promedio.
+
+La clave no es esperar hasta los 50 años, reservar colonoscopia como única opción ni tamizar solo cuando aparezcan síntomas.
+La clave es:
+Adulto de 45 años + riesgo promedio + asintomático = iniciar cribado colorrectal ya con una estrategia validada (SOH, FIT, ADN fecal o colonoscopia).
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 45 años en primera consulta preventiva, sin síntomas digestivos.
-- Sin antecedentes familiares conocidos de cáncer colorrectal.
-- Riesgo cardiovascular bajo (ASCVD 4.5%) pero edad que ya activa tamización colorrectal.
-- Paciente de riesgo promedio que requiere cribado, no esperar síntomas.
+El paciente presenta:
+• Hombre de 45 años en primera consulta preventiva, sin síntomas gastrointestinales.
+• Sin antecedentes familiares conocidos de cáncer colorrectal.
+• Riesgo cardiovascular bajo (ASCVD 4.5%) pero edad que ya activa tamización colorrectal.
+• Escenario típico de cribado en persona de riesgo promedio: detectar lesiones antes de síntomas.
 
-¿Qué dato es clave en el examen?
-- USPSTF y ACS recomiendan iniciar tamización a los 45 años en riesgo promedio.
-- Estrategias válidas: sangre oculta en heces, FIT, ADN fecal o colonoscopia según disponibilidad.
-- La tamización busca detectar lesiones antes de que aparezcan síntomas.
+Recordemos la tamización colorrectal:
+• USPSTF y ACS recomiendan iniciar tamización a los 45 años en adultos de riesgo promedio.
+• Estrategias válidas: sangre oculta en heces (SOH), FIT, ADN fecal o colonoscopia según disponibilidad y preferencia.
+• La colonoscopia no es la única opción aceptada; hay múltiples métodos de cribado equivalentes según guía.
+• La tamización busca detectar adenomas y cáncer en fase precoz en personas asintomáticas.
+• El riesgo cardiovascular calculado no modifica la indicación de cribado colorrectal por edad.
+
+Por lo tanto:
+La conducta más indicada es iniciar tamización para cáncer colorrectal desde este momento mediante una estrategia validada de cribado.
+
+¿Por qué la opción C es la respuesta correcta?
+A los 45 años, en riesgo promedio y sin síntomas, las guías actuales (USPSTF, ACS, Res. 3280 Colombia) indican iniciar cribado.
+Cualquier estrategia validada (SOH, FIT, ADN fecal o colonoscopia) es aceptable según contexto y recursos disponibles.
 
 ¿Por qué fallan las otras opciones?
-- Esperar hasta los 50 años: desactualizado; el inicio recomendado bajó a los 45 años.
-- Colonoscopia como única estrategia válida: hay múltiples métodos de cribado aceptados.
-- SOH solo si hay síntomas: la tamización es justamente en personas asintomáticas.
+Opción A (no tamizar hasta los 50 años): desactualizado; el inicio recomendado bajó a los 45 años en riesgo promedio.
+Opción B (colonoscopia como única estrategia válida): hay múltiples métodos de cribado aceptados; colonoscopia no es obligatoria como primera línea.
+Opción D (SOH solo si hay síntomas): la tamización es precisamente en personas asintomáticas para detectar enfermedad precoz.
 
-Clave: 45 años + riesgo promedio = iniciar cribado colorrectal ya, con cualquier estrategia validada.
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan "tamización colorrectal a los 50" y eligen esperar cinco años más.
+Otra trampa: pensar que colonoscopia es la única estrategia válida, cuando FIT, SOH y ADN fecal también son opciones aceptadas.
 
-Referencias: USPSTF Colorectal Screening; ACS Guidelines; Res. 3280 Colombia.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar edad y riesgo (45 años, riesgo promedio, asintomático).
+2. Recordar el cambio de guía: inicio a los 45 años, no a los 50.
+3. Ofrecer cualquier estrategia validada de cribado según disponibilidad.
+4. No condicionar la tamización a síntomas digestivos ni a riesgo cardiovascular.
+
+Perlas de examen
+✅ Tamización colorrectal inicia a los 45 años en riesgo promedio (USPSTF, ACS).
+✅ Estrategias válidas: SOH, FIT, ADN fecal, colonoscopia.
+✅ Colonoscopia no es la única opción válida.
+✅ Tamización = detectar enfermedad antes de síntomas en asintomáticos.
+✅ El ASCVD score no modifica la indicación de cribado colorrectal por edad.
+✅ Res. 3280 Colombia alinea tamización colorrectal con guías internacionales.
+
+Referencias
+• USPSTF: Colorectal Cancer Screening.
+• ACS Guidelines for Colorectal Cancer Screening.
+• Resolución 3280 de 2018 — Tamización en Colombia.
+• UpToDate: Screening for colorectal cancer.`,
   },
   {
     id: "dr-q-115",
@@ -10391,34 +10959,72 @@ Referencias: USPSTF Colorectal Screening; ACS Guidelines; Res. 3280 Colombia.`,
     explanation:
       "Aumento inusual de casos con características epidemiológicas comunes = sospecha de brote. Prioridad: activar vigilancia epidemiológica e implementar medidas de control oportunas sin esperar confirmación de todos los casos.",
     keyPoints: [
-      "Brote = casos superiores al esperado para población, lugar y periodo.",
-      "Notificación inmediata + investigación de campo + control de fuente.",
-      "No esperar confirmación etiológica completa para actuar.",
-      "APS: detección temprana y protección comunitaria.",
+      "Cuando veas: aumento inusual de casos con características epidemiológicas comunes y posible fuente compartida.",
+      "Debes pensar en: brote epidémico → notificar inmediatamente al sistema de vigilancia e iniciar investigación de campo.",
+      "Brote = número de casos superior al esperado para población, lugar y periodo.",
+      "No esperar confirmación etiológica completa para implementar medidas de control comunitario.",
+      "Tema: Respuesta a brotes — vigilancia epidemiológica en APS.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la respuesta de Salud Pública ante un posible brote: la prioridad no es tratar a todos ni esperar confirmación etiológica completa, sino activar vigilancia y control de la fuente.
+Esta es una pregunta clásica de salud pública en APS porque evalúa una trampa frecuente: ante un posible brote, tratar masivamente o esperar confirmación etiológica antes de actuar, en lugar de activar vigilancia y control de la fuente.
+
+La clave no es antibiótico empírico masivo ni pruebas diagnósticas a toda la población antes de intervenir.
+La clave es:
+Aumento inusual de casos + fuente común sospechada = notificar al sistema de vigilancia epidemiológica e iniciar investigación de campo y control de la fuente de inmediato.
 
 ¿Qué está ocurriendo realmente?
-- Aumento inusual de casos de fiebre, mialgias y exantema en una comunidad rural en 2 semanas.
-- El 60% de los afectados vive cerca de un depósito de agua estancada: posible fuente común.
-- El médico de APS detecta un patrón epidemiológico que supera lo esperado para esa población y periodo.
-- Cuadro compatible con brote epidémico (dengue, leptospirosis u otro arbovirus/zoonosis según contexto).
+El escenario presenta:
+• Aumento inusual de casos de fiebre, mialgias y exantema en una comunidad rural en las últimas 2 semanas.
+• El 60% de los afectados vive cerca de un depósito de agua estancada: posible fuente común.
+• El médico de APS detecta un patrón epidemiológico que supera lo esperado para esa población y periodo.
+• Cuadro compatible con brote epidémico (dengue, leptospirosis u otro arbovirus/zoonosis según contexto).
 
-¿Qué dato es clave en el examen?
-- Brote = número de casos superior al esperado para población, lugar y tiempo.
-- La primera acción es notificar al sistema de vigilancia epidemiológica e iniciar investigación de campo.
-- No se debe esperar confirmación etiológica de todos los casos para implementar medidas de control.
+Recordemos la respuesta ante un posible brote:
+• Brote = número de casos superior al esperado para población, lugar y tiempo.
+• La primera acción es notificar al sistema de vigilancia epidemiológica (INS en Colombia).
+• Debe iniciarse investigación de campo y control de la fuente sin esperar confirmación etiológica de todos los casos.
+• El médico de APS tiene rol clave en detección temprana y protección comunitaria.
+• Tratamiento masivo empírico o tamización universal retrasa el control de la transmisión.
+
+Por lo tanto:
+La primera acción de salud pública es notificar inmediatamente el posible brote al sistema de vigilancia epidemiológica e iniciar la investigación de campo y control de la fuente.
+
+¿Por qué la opción C es la respuesta correcta?
+La notificación oportuna activa la cadena de respuesta epidemiológica (investigación, confirmación selectiva, control vectorial/fuente).
+No se debe esperar confirmación etiológica de todos los casos para implementar medidas comunitarias de control.
+El APS es la primera línea de detección y debe liderar la respuesta inicial coordinada con vigilancia.
 
 ¿Por qué fallan las otras opciones?
-- Antibiótico empírico masivo a toda la población: inadecuado sin caracterizar el brote; puede ser inútil o dañino.
-- Pruebas diagnósticas a todos antes de intervenir: retrasa el control de la transmisión.
-- Esperar confirmación etiológica completa: viola el principio de respuesta oportuna en salud pública.
+Opción A (antibiótico empírico masivo a toda la población): inadecuado sin caracterizar el brote; puede ser inútil o dañino si la etiología es viral o zoonótica.
+Opción B (pruebas diagnósticas a todos antes de intervenir): retrasa el control de la transmisión; la investigación selectiva es suficiente inicialmente.
+Opción D (esperar confirmación etiológica completa): viola el principio de respuesta oportuna en salud pública; cada hora de retraso amplifica la transmisión.
 
-Clave: aumento inusual + fuente común = notificar, investigar y controlar ya.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen tratamiento masivo empírico pensando en "proteger a la población".
+Otra trampa: esperar confirmación de todos los casos antes de actuar, confundiendo rigor diagnóstico individual con respuesta epidemiológica comunitaria.
 
-Referencias: INS Colombia Vigilancia; OPS Investigación de Brotes; CDC Epidemiology Principles.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer patrón de brote (casos > esperado + posible fuente común).
+2. Notificar inmediatamente al sistema de vigilancia epidemiológica.
+3. Iniciar investigación de campo y control de la fuente (ej. eliminar agua estancada).
+4. Confirmar etiología selectivamente, sin retrasar medidas de control comunitario.
+
+Perlas de examen
+✅ Brote = casos superiores al esperado para población, lugar y periodo.
+✅ Primera acción: notificar + investigación de campo + control de fuente.
+✅ No esperar confirmación etiológica completa para actuar.
+✅ No antibiótico masivo empírico sin caracterizar el brote.
+✅ APS = detección temprana y protección comunitaria.
+✅ Fuente común (agua estancada) orienta medidas de control vectorial/ambiental.
+
+Referencias
+• INS Colombia — Protocolo de Vigilancia Epidemiológica.
+• OPS: Investigación de Brotes Epidemiológicos.
+• CDC: Principles of Epidemiology in Public Health Practice.
+• Ley 09 de 1979 — Sistema Nacional de Vigilancia Epidemiológica (Colombia).
+• UpToDate: Approach to the patient with fever in the tropics.`,
   },
   {
     id: "dr-q-116",
@@ -10438,34 +11044,73 @@ Referencias: INS Colombia Vigilancia; OPS Investigación de Brotes; CDC Epidemio
     explanation:
       "La principal barrera es la dificultad geográfica y económica para acceder a servicios y medicamentos. Corresponde a una falla en el acceso efectivo al sistema de salud.",
     keyPoints: [
+      "Cuando veas: paciente crónico que no reclama medicamentos por distancia geográfica y falta de recursos para transporte.",
+      "Debes pensar en: barrera de accesibilidad al sistema de salud, no desobediencia ni mala calidad clínica.",
       "Accesibilidad = posibilidad real de utilizar servicios cuando se necesitan.",
-      "Barreras: geográfica (distancia), económica (transporte), organizacional, cultural.",
-      "No es calidad técnica ni seguridad del paciente.",
-      "Barreras de acceso → inequidades y abandono involuntario del tratamiento.",
+      "Barreras: geográfica, económica, organizacional y cultural → abandono involuntario del tratamiento.",
+      "Tema: Accesibilidad a servicios de salud en APS.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa los determinantes del acceso en APS: cuando el paciente no recoge medicamentos, no siempre es desobediencia; puede ser una barrera estructural del sistema.
+Esta es una pregunta clásica de APS porque evalúa una trampa frecuente: cuando el paciente no recoge medicamentos, atribuirlo a desobediencia o mala calidad clínica en lugar de identificar barreras estructurales de acceso.
+
+La clave no es calidad técnico-científica, seguridad del paciente ni vigilancia epidemiológica.
+La clave es:
+Paciente crónico + no reclama medicamentos + distancia geográfica + sin recursos para transporte = falla en accesibilidad a los servicios de salud.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 58 años con HTA y diabetes que no ha reclamado medicamentos en 3 meses.
-- Vive sola y el centro de salud está a 2 horas de su vivienda.
-- No tiene recursos económicos para transporte.
-- Abandono involuntario del tratamiento por barreras geográficas y económicas, no por mala prescripción.
+La paciente presenta:
+• Mujer de 58 años con HTA y diabetes en consulta de control.
+• No ha reclamado medicamentos en los últimos 3 meses.
+• El centro de salud está a 2 horas de su vivienda.
+• No dispone de recursos económicos para transporte y vive sola.
+• Abandono involuntario del tratamiento por barreras geográficas y económicas, no por mala prescripción.
 
-¿Qué dato es clave en el examen?
-- Accesibilidad = posibilidad real de utilizar los servicios de salud cuando se necesitan.
-- Las barreras pueden ser geográficas, económicas, organizacionales o culturales.
-- Este caso es falla de acceso al sistema, no de calidad técnico-científica ni de seguridad del paciente.
+Recordemos la accesibilidad en APS:
+• Accesibilidad = posibilidad real de utilizar los servicios de salud cuando se necesitan.
+• Las barreras pueden ser geográficas (distancia), económicas (transporte), organizacionales (horarios, trámites) o culturales.
+• Este caso es falla de acceso al sistema, no de calidad técnico-científica ni de seguridad del paciente.
+• Las barreras de acceso generan inequidades y abandono involuntario del tratamiento crónico.
+• El médico de APS debe identificar y abordar barreras estructurales, no solo ajustar la prescripción.
+
+Por lo tanto:
+Este caso representa principalmente una falla en la accesibilidad a los servicios de salud.
+
+¿Por qué la opción C es la respuesta correcta?
+La principal barrera es la dificultad geográfica y económica para acceder a servicios y medicamentos.
+La paciente no puede utilizar el sistema de salud de forma efectiva a pesar de tener indicación correcta.
+Accesibilidad es uno de los atributos esenciales de la APS según Starfield y la OMS.
 
 ¿Por qué fallan las otras opciones?
-- Calidad técnico-científica: el tratamiento puede ser correcto; el problema es que la paciente no puede acceder a él.
-- Seguridad del paciente: no hay error médico ni evento adverso por mala práctica clínica.
-- Vigilancia epidemiológica: no corresponde; es un problema de acceso individual/comunitario.
+Opción A (calidad técnico-científica): el tratamiento puede ser correcto; el problema es que la paciente no puede acceder a él por barreras estructurales.
+Opción B (seguridad del paciente): no hay error médico ni evento adverso por mala práctica clínica; es un problema de acceso, no de seguridad.
+Opción D (vigilancia epidemiológica): no corresponde; es un problema de acceso individual/comunitario, no de detección de brotes.
 
-Clave: distancia + sin dinero para transporte + abandono de medicamentos = accesibilidad, no mala calidad.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen "calidad técnico-científica" porque la paciente no está controlada, confundiendo mal control por inaccesibilidad con mala prescripción.
+Otra trampa: atribuir el abandono a desobediencia del paciente sin indagar barreras geográficas y económicas.
 
-Referencias: OMS APS; OPS Renovación APS; Starfield Primary Care.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Indagar por qué el paciente no reclama medicamentos (no asumir desobediencia).
+2. Identificar barreras de acceso (geográfica, económica, organizacional).
+3. Clasificar como problema de accesibilidad, no de calidad clínica.
+4. Proponer soluciones (medicina domiciliaria, entrega en punto cercano, apoyo social).
+
+Perlas de examen
+✅ No reclamar medicamentos ≠ desobediencia; indagar barreras de acceso.
+✅ Accesibilidad = posibilidad real de utilizar servicios cuando se necesitan.
+✅ Barreras: geográfica, económica, organizacional, cultural.
+✅ Abandono involuntario del tratamiento crónico por barreras estructurales.
+✅ Distancia + sin transporte = accesibilidad, no calidad técnica.
+✅ APS debe identificar y abordar determinantes del acceso.
+
+Referencias
+• OMS: Primary Health Care — Now More Than Ever.
+• OPS: Renovación de la Atención Primaria de Salud en las Américas.
+• Starfield B: Primary Care — Concept, Evaluation, and Policy.
+• Ley 1438 de 2011 — Sistema General de Seguridad Social en Salud (Colombia).
+• UpToDate: Social determinants of health.`,
   },
   {
     id: "dr-q-117",
@@ -10501,34 +11146,73 @@ Referencias: OMS APS; OPS Renovación APS; Starfield Primary Care.`,
     explanation:
       "Síntomas compatibles con depresión en el adulto mayor y Yesavage sugestivo. En APS: confirmar diagnóstico clínico, valorar riesgo suicida, intervenir factores psicosociales y establecer seguimiento.",
     keyPoints: [
-      "Quejas de memoria + viudez + afecto depresivo + Yesavage positivo → depresión antes que demencia.",
-      "Pseudodemencia depresiva: depresión simula deterioro cognitivo.",
-      "Evaluar riesgo suicida en adultos mayores que viven solos.",
-      "Tristeza persistente no es envejecimiento normal.",
+      "Cuando veas: adulto mayor con olvidos + viudez reciente + afecto hiponímico + Yesavage positivo (≥5 puntos).",
+      "Debes pensar en: depresión geriátrica (pseudodemencia depresiva) antes que demencia neurodegenerativa.",
+      "Yesavage es tamización, no diagnóstico definitivo; requiere abordaje clínico integral en APS.",
+      "Evaluar riesgo suicida en adultos mayores que viven solos; tristeza persistente NO es envejecimiento normal.",
+      "Tema: Depresión geriátrica — abordaje integral en APS.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa depresión vs demencia en el adulto mayor: los "olvidos" con viudez reciente y Yesavage positivo obligan a tratar depresión antes de etiquetar demencia.
+Esta es una pregunta clásica de salud mental en APS porque evalúa una trampa frecuente: ante olvidos en el anciano, diagnosticar demencia y remitir a neurología sin considerar depresión reversible con contexto afectivo claro.
+
+La clave no es demencia de entrada, RM cerebral urgente ni normalizar los síntomas como envejecimiento.
+La clave es:
+Olvidos + viudez reciente + afecto depresivo + Yesavage positivo = abordaje integral de depresión en APS con evaluación de riesgo suicida y apoyo social.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 72 años con cansancio y olvidos de 6 meses tras enviudar hace un año.
-- Vive solo, con afecto hiponímico, lenguaje enlentecido y escasa iniciativa.
-- Sin síntomas psicóticos ni ideas delirantes.
-- Escala de Yesavage 9/15, sugestiva de depresión geriátrica (pseudodemencia depresiva posible).
+El paciente presenta:
+• Hombre de 72 años con cansancio y olvidos frecuentes de 6 meses de evolución.
+• Viudez hace un año; vive solo desde entonces.
+• Afecto hiponímico, lenguaje enlentecido y escasa iniciativa al examen mental.
+• Sin ideas delirantes ni síntomas psicóticos.
+• Escala de Depresión Geriátrica de Yesavage: 9/15 puntos, sugestiva de depresión.
 
-¿Qué dato es clave en el examen?
-- La depresión en el anciano puede manifestarse con quejas cognitivas que simulan demencia.
-- Yesavage es tamización, no diagnóstico definitivo; requiere abordaje clínico integral.
-- En APS: confirmar depresión, evaluar riesgo suicida, apoyo social y seguimiento estrecho.
+Recordemos la depresión en el adulto mayor:
+• La depresión puede manifestarse con quejas cognitivas que simulan demencia (pseudodemencia depresiva).
+• Yesavage (GDS-15) es herramienta de tamización, no diagnóstico definitivo.
+• Viudez reciente y aislamiento social son factores de riesgo importantes.
+• En APS: confirmar diagnóstico clínico, evaluar riesgo suicida, intervenir factores psicosociales y establecer seguimiento estrecho.
+• La tristeza persistente y el deterioro funcional NO son cambios normales del envejecimiento.
+
+Por lo tanto:
+La conducta más adecuada es iniciar abordaje integral de depresión en el adulto mayor, evaluar riesgo suicida, apoyo social y seguimiento estrecho.
+
+¿Por qué la opción C es la respuesta correcta?
+Los síntomas son compatibles con depresión geriátrica y el Yesavage es sugestivo (≥5 puntos indica tamización positiva).
+El abordaje integral en APS incluye: confirmación clínica, valoración de riesgo suicida (especialmente en quien vive solo), intervención psicosocial y seguimiento.
+Tratar depresión primero puede revertir las quejas cognitivas antes de etiquetar demencia irreversible.
 
 ¿Por qué fallan las otras opciones?
-- Diagnosticar demencia y remitir a neurología: prematuro sin tratar depresión reversible primero.
-- RM cerebral urgente: no es la prioridad ante cuadro depresivo con contexto afectivo claro.
-- Cambios normales del envejecimiento: la tristeza persistente y el Yesavage positivo no son envejecimiento normal.
+Opción A (diagnosticar demencia y remitir a neurología): prematuro sin tratar depresión reversible primero; la pseudodemencia depresiva mejora con tratamiento.
+Opción B (RM cerebral urgente): no es la prioridad ante cuadro depresivo con contexto afectivo claro (viudez, aislamiento); la neuroimagen no es urgente.
+Opción D (cambios normales del envejecimiento): la tristeza persistente, el Yesavage positivo y el deterioro funcional no son envejecimiento normal.
 
-Clave: viudez + olvidos + Yesavage positivo = depresión primero, no demencia de entrada.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen demencia ante cualquier queja de olvidos en el anciano, sin considerar depresión con pseudodemencia.
+Otra trampa: normalizar los síntomas como "parte del envejecimiento" e ignorar un Yesavage positivo con contexto de duelo reciente.
 
-Referencias: OMS Salud Mental Adulto Mayor; Yesavage GDS; Guías Salud Mental APS.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Aplicar Yesavage como tamización de depresión geriátrica.
+2. Evaluar contexto psicosocial (viudez, aislamiento, duelo).
+3. Iniciar abordaje integral de depresión con evaluación de riesgo suicida.
+4. Reservar estudio de demencia para casos que no mejoran tras tratar depresión.
+
+Perlas de examen
+✅ Olvidos + viudez + Yesavage positivo = depresión primero, no demencia de entrada.
+✅ Pseudodemencia depresiva: depresión simula deterioro cognitivo reversible.
+✅ Yesavage ≥5 puntos = tamización positiva; requiere abordaje clínico integral.
+✅ Evaluar riesgo suicida en adultos mayores que viven solos.
+✅ Tristeza persistente NO es envejecimiento normal.
+✅ Tratar depresión antes de etiquetar demencia irreversible.
+
+Referencias
+• Yesavage JA: Geriatric Depression Scale (GDS-15).
+• OMS: Mental Health of Older Adults.
+• Guías de Salud Mental en APS — Colombia.
+• APA Practice Guideline: Treatment of Major Depressive Disorder.
+• UpToDate: Diagnosis of depression in older adults.`,
   },
   {
     id: "dr-q-118",
@@ -10560,34 +11244,73 @@ Referencias: OMS Salud Mental Adulto Mayor; Yesavage GDS; Guías Salud Mental AP
     explanation:
       "El MAPA es el método de referencia para confirmar hipertensión arterial. Permite detectar hipertensión sostenida, de bata blanca y enmascarada antes de etiquetar al paciente como hipertenso.",
     keyPoints: [
-      "MAPA = estándar de referencia para confirmar HTA.",
-      "Detecta HTA de bata blanca y enmascarada.",
-      "Ecocardiograma evalúa daño orgánico, no confirma diagnóstico.",
-      "Confirmar diagnóstico antes de terapia crónica (salvo emergencias).",
+      "Cuando veas: PA elevada en consultorio en dos ocasiones distintas, sin daño de órgano blanco ni síntomas.",
+      "Debes pensar en: confirmar HTA con MAPA de 24 horas antes de etiquetar e iniciar tratamiento crónico.",
+      "MAPA = estándar de referencia para confirmar HTA; detecta HTA de bata blanca y enmascarada.",
+      "Ecocardiograma evalúa daño orgánico, NO confirma el diagnóstico hipertensivo.",
+      "Tema: Diagnóstico de hipertensión arterial — MAPA en APS.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa cómo confirmar hipertensión arterial en APS: las cifras en consultorio no bastan; el MAPA es el estándar de referencia actual.
+Esta es una pregunta clásica de HTA en APS porque evalúa una trampa frecuente: ante cifras elevadas en consultorio, iniciar tratamiento crónico o repetir PA en consultorio, sin confirmar con el método de referencia actual.
+
+La clave no es repetir PA en consultorio ni iniciar tratamiento empírico.
+La clave es:
+PA elevada en consultorio (146/94 y 142/92) + sospecha de HTA = confirmar diagnóstico con MAPA de 24 horas antes de etiquetar e iniciar terapia indefinida.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 48 años con obesidad (IMC 32) y dos mediciones elevadas en consultorio (146/94 y 142/92 mmHg).
-- Sin daño de órgano blanco ni síntomas cardiovasculares.
-- Sospecha de hipertensión arterial que requiere confirmación antes de iniciar tratamiento crónico.
-- Posible componente de hipertensión de bata blanca o enmascarada que solo el MAPA detecta.
+El paciente presenta:
+• Hombre de 48 años con obesidad (IMC 32 kg/m²) en valoración cardiovascular.
+• Dos mediciones elevadas en consultorio en fechas diferentes: 146/94 y 142/92 mmHg.
+• Sin evidencia clínica de daño de órgano blanco ni síntomas cardiovasculares.
+• Sospecha de hipertensión arterial que requiere confirmación antes de tratamiento crónico.
+• Posible componente de HTA de bata blanca o enmascarada que solo el MAPA detecta.
 
-¿Qué dato es clave en el examen?
-- El monitoreo ambulatorio de presión arterial (MAPA) de 24 horas es el método de referencia para confirmar HTA.
-- Permite distinguir HTA sostenida, de bata blanca y enmascarada.
-- Confirmar el diagnóstico antes de etiquetar al paciente e iniciar terapia indefinida.
+Recordemos el diagnóstico de HTA en APS:
+• El monitoreo ambulatorio de presión arterial (MAPA) de 24 horas es el método de referencia para confirmar HTA.
+• Permite distinguir HTA sostenida, de bata blanca y enmascarada.
+• Confirmar el diagnóstico antes de etiquetar al paciente e iniciar terapia antihipertensiva indefinida.
+• Ecocardiograma evalúa daño orgánico por HTA (hipertrofia ventricular), no confirma el diagnóstico.
+• Repetir PA en consultorio es estrategia histórica, pero ya no es el estándar de oro.
+
+Por lo tanto:
+El estándar de oro actual para confirmar el diagnóstico es realizar MAPA de 24 horas.
+
+¿Por qué la opción B es la respuesta correcta?
+El MAPA es el método de referencia según guías actuales (ESH, ISH, guías locales).
+Detecta patrones que las mediciones en consultorio no capturan: HTA de bata blanca (elevada solo en consultorio) y enmascarada (normal en consultorio, elevada fuera).
+Permite tomar decisiones informadas sobre inicio de tratamiento crónico.
 
 ¿Por qué fallan las otras opciones?
-- Repetir PA en consultorio tres veces más: estrategia histórica, pero ya no es el estándar de oro.
-- Ecocardiograma: evalúa daño orgánico por HTA, no confirma el diagnóstico hipertensivo.
-- Iniciar tratamiento y reevaluar: se debe confirmar antes de terapia crónica (salvo emergencia hipertensiva).
+Opción A (repetir PA en consultorio tres veces más): estrategia histórica válida, pero ya no es el estándar de oro; no detecta HTA enmascarada.
+Opción C (ecocardiograma transtorácico): evalúa daño orgánico por HTA (hipertrofia ventricular izquierda), no confirma el diagnóstico hipertensivo.
+Opción D (iniciar tratamiento y reevaluar): se debe confirmar antes de terapia crónica, salvo emergencia hipertensiva con daño de órgano blanco agudo.
 
-Clave: PA elevada en consultorio sin daño orgánico = confirmar con MAPA antes de tratar.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen repetir PA en consultorio porque "ya la midieron dos veces", sin reconocer que MAPA es el estándar actual.
+Otra trampa: solicitar ecocardiograma pensando en "confirmar HTA", cuando evalúa daño orgánico, no el diagnóstico mismo.
 
-Referencias: ESH Hypertension Guidelines; ISH Global Guidelines; Guías HTA APS.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Detectar PA elevada en consultorio en al menos dos ocasiones.
+2. Confirmar con MAPA de 24 horas (estándar de referencia).
+3. Clasificar patrón: HTA sostenida, de bata blanca o enmascarada.
+4. Iniciar tratamiento según confirmación, no antes (salvo emergencia).
+
+Perlas de examen
+✅ MAPA de 24 h = estándar de referencia para confirmar HTA.
+✅ Detecta HTA de bata blanca y enmascarada.
+✅ Ecocardiograma evalúa daño orgánico, NO confirma diagnóstico.
+✅ Confirmar antes de terapia crónica indefinida.
+✅ Repetir PA en consultorio ya no es el estándar de oro.
+✅ ESH e ISH posicionan MAPA como método de referencia.
+
+Referencias
+• ESH/ESC Guidelines for the Management of Arterial Hypertension.
+• ISH Global Hypertension Practice Guidelines.
+• Guías de HTA en APS — Colombia.
+• UpToDate: Ambulatory blood pressure monitoring.
+• USPSTF: Screening for Hypertension in Adults.`,
   },
   {
     id: "dr-q-119",
@@ -10623,35 +11346,73 @@ Referencias: ESH Hypertension Guidelines; ISH Global Guidelines; Guías HTA APS.
     explanation:
       "La albuminuria detecta precozmente enfermedad renal diabética y estratifica riesgo cardiovascular, permitiendo intervenciones oportunas antes de manifestaciones clínicas o elevación de creatinina.",
     keyPoints: [
-      "Albuminuria = primer hallazgo detectable de nefropatía diabética.",
-      "Puede aparecer con creatinina normal.",
-      "También es marcador de disfunción endotelial y riesgo CV.",
-      "Tamización anual en diabetes = prevención secundaria.",
+      "Cuando veas: paciente diabético asintomático que pregunta por qué necesita albuminuria anual sin síntomas urinarios.",
+      "Debes pensar en: albuminuria = primer marcador detectable de nefropatía diabética y de riesgo cardiovascular.",
+      "Puede aparecer con creatinina sérica normal; la nefropatía progresa silenciosamente años antes.",
+      "Tamización anual de albuminuria en diabetes = prevención secundaria oportuna, no diagnóstico de ITU.",
+      "Tema: Albuminuria en diabetes — tamización y riesgo cardiovascular.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa por qué tamizamos albuminuria en diabetes asintomática: es el primer signo de daño renal y también un marcador de riesgo cardiovascular sistémico.
+Esta es una pregunta clásica de diabetes en APS porque evalúa una trampa frecuente: pensar que la albuminuria sirve para detectar infecciones urinarias o ajustar insulina, cuando su valor es detectar daño renal y riesgo CV de forma precoz.
+
+La clave no es diagnosticar ITU asintomática, predecir cáncer renal ni decidir dosis de insulina.
+La clave es:
+Diabetes asintomática + albuminuria anual = detectar daño renal y riesgo cardiovascular antes de síntomas o elevación de creatinina.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 55 años con diabetes bien controlada, sin síntomas urinarios.
-- Pregunta por qué necesita albuminuria anual si se siente bien.
-- La nefropatía diabética puede progresar silenciosamente años antes de elevar la creatinina.
-- La albuminuria refleja daño glomerular y disfunción endotelial sistémica.
+El paciente presenta:
+• Hombre de 55 años con diabetes mellitus adecuadamente controlada.
+• Sin síntomas urinarios ni alteraciones evidentes en su estado de salud.
+• Pregunta por qué necesita prueba anual de albuminuria si se siente bien.
+• La nefropatía diabética puede progresar silenciosamente años antes de elevar la creatinina.
+• La albuminuria refleja daño glomerular y disfunción endotelial sistémica.
 
-¿Qué dato es clave en el examen?
-- La microalbuminuria es el primer hallazgo detectable de enfermedad renal diabética.
-- Puede estar presente con creatinina sérica normal.
-- También estratifica riesgo cardiovascular; no es solo un marcador renal.
-- La tamización anual en diabetes es prevención secundaria oportuna.
+Recordemos la albuminuria en diabetes:
+• La microalbuminuria es el primer hallazgo detectable de enfermedad renal diabética.
+• Puede estar presente con creatinina sérica normal (filtrado glomerular aún preservado).
+• También es marcador de disfunción endotelial y riesgo cardiovascular sistémico, no solo renal.
+• La tamización anual en diabetes es prevención secundaria oportuna (ADA, KDIGO).
+• Permite intervenciones tempranas: IECA/ARA-II, control glucémico estricto, control de PA.
+
+Por lo tanto:
+La mejor explicación es que la albuminuria es un marcador temprano de daño renal y de riesgo cardiovascular, incluso antes de síntomas o elevación de creatinina.
+
+¿Por qué la opción B es la respuesta correcta?
+La albuminuria detecta precozmente enfermedad renal diabética cuando la creatinina aún es normal.
+También estratifica riesgo cardiovascular al reflejar disfunción endotelial sistémica.
+La tamización anual permite intervenciones oportunas (IECA/ARA-II, control metabólico) antes de manifestaciones clínicas irreversibles.
 
 ¿Por qué fallan las otras opciones?
-- Diagnosticar infecciones urinarias asintomáticas: la albuminuria no es prueba de ITU.
-- Predecir cáncer renal: no es el propósito de la tamización de albuminuria en diabetes.
-- Decidir dosis de insulina: la albuminuria no guía ajuste de insulina.
+Opción A (diagnosticar ITU asintomáticas): la albuminuria no es prueba de infección urinaria; su propósito es detectar daño glomerular diabético.
+Opción C (predecir cáncer renal): no es el propósito de la tamización de albuminuria en diabetes; no tiene valor predictivo para neoplasia renal.
+Opción D (decidir dosis de insulina): la albuminuria no guía ajuste de insulina; orienta protección renal y cardiovascular.
 
-Clave: diabetes asintomática + albuminuria anual = detectar daño renal y riesgo CV antes de síntomas.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen ITU asintomática porque la prueba es urinaria, confundiendo tamización de daño glomerular con diagnóstico infeccioso.
+Otra trampa: pensar que si la creatinina es normal no hay daño renal, ignorando que la albuminuria precede a la elevación de creatinina por años.
 
-Referencias: ADA Standards of Care; KDIGO CKD Guidelines; Res. 3280 Colombia.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Tamizar albuminuria anual en todo paciente diabético (ADA, KDIGO).
+2. Interpretar como marcador precoz de nefropatía diabética y riesgo CV.
+3. Iniciar IECA/ARA-II si albuminuria persistente, independiente de PA.
+4. No esperar síntomas urinarios ni elevación de creatinina para actuar.
+
+Perlas de examen
+✅ Albuminuria = primer hallazgo detectable de nefropatía diabética.
+✅ Puede aparecer con creatinina normal (filtrado preservado).
+✅ También es marcador de riesgo cardiovascular sistémico.
+✅ Tamización anual en diabetes = prevención secundaria oportuna.
+✅ No es prueba de ITU ni guía dosis de insulina.
+✅ IECA/ARA-II indicados si albuminuria persistente.
+
+Referencias
+• ADA Standards of Care in Diabetes.
+• KDIGO Clinical Practice Guideline for CKD.
+• Resolución 3280 de 2018 — Tamización en diabetes (Colombia).
+• UpToDate: Diabetic kidney disease — Prevention and treatment.
+• DCCT/EDIC Study: Albuminuria and cardiovascular risk.`,
   },
   {
     id: "dr-q-120",
@@ -10675,34 +11436,71 @@ Referencias: ADA Standards of Care; KDIGO CKD Guidelines; Res. 3280 Colombia.`,
     explanation:
       "La estrategia modifica el entorno comunitario para facilitar elecciones saludables, actuando sobre determinantes sociales y ambientales de la salud, no sobre el tratamiento individual.",
     keyPoints: [
-      "Determinantes sociales: condiciones donde nacen, crecen, trabajan y envejecen.",
-      "Modificar entorno alimentario = promoción de la salud poblacional.",
-      "Prevención terciaria = reducir discapacidad de enfermedad establecida.",
-      "Tamización = buscar enfermedad en aparentemente sanos.",
+      "Cuando veas: intervención comunitaria que modifica el entorno alimentario (más frutas/verduras, menos bebidas azucaradas visibles) en barrio con alta obesidad.",
+      "Debes pensar en: intervención sobre determinantes sociales y ambientales de la salud, no prevención clínica individual.",
+      "Los determinantes sociales son las condiciones donde las personas nacen, crecen, trabajan y envejecen.",
+      "Promoción de la salud poblacional facilita elecciones saludables; no es tamización ni prevención terciaria.",
+      "Tema: Promoción de la salud — determinantes sociales en APS.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa promoción de la salud vs prevención clínica: modificar el entorno alimentario del barrio es actuar sobre determinantes sociales, no tratar obesidad caso a caso.
+Esta es una pregunta clásica de promoción de la salud en APS porque evalúa una trampa frecuente: clasificar como prevención terciaria o tamización una intervención que modifica el entorno comunitario, no el tratamiento individual.
+
+La clave no es prevención terciaria, tamización poblacional ni prevención cuaternaria.
+La clave es:
+Intervención comunitaria que modifica disponibilidad y visibilidad de alimentos = actuar sobre determinantes sociales y ambientales de la salud.
 
 ¿Qué está ocurriendo realmente?
-- Estrategia de promoción de la salud en un barrio con alta prevalencia de obesidad.
-- Intervención comunitaria: más frutas y verduras en tiendas locales, menos visibilidad de bebidas azucaradas.
-- Se modifica el entorno donde las personas toman decisiones alimentarias diarias.
-- No es consulta individual ni tamización de enfermedad.
+El escenario presenta:
+• Estrategia de promoción de la salud en un barrio con alta prevalencia de obesidad.
+• Intervención comunitaria con tiendas locales: aumentar frutas y verduras, disminuir visibilidad de bebidas azucaradas.
+• Se modifica el entorno donde las personas toman decisiones alimentarias diarias.
+• No es consulta clínica individual, tamización de enfermedad ni rehabilitación de pacientes con obesidad establecida.
 
-¿Qué dato es clave en el examen?
-- Los determinantes sociales son las condiciones en las que nacen, crecen, trabajan y envejecen.
-- Cambiar disponibilidad y visibilidad de alimentos es intervención sobre determinantes ambientales de la salud.
-- La promoción de la salud actúa sobre factores que facilitan o dificultan elecciones saludables.
+Recordemos determinantes sociales y promoción de la salud:
+• Los determinantes sociales son las condiciones en las que nacen, crecen, trabajan y envejecen (OMS).
+• Modificar el entorno alimentario es intervención sobre determinantes ambientales que facilitan o dificultan elecciones saludables.
+• La promoción de la salud actúa sobre factores poblacionales antes de que aparezca enfermedad individual.
+• Prevención terciaria: reduce discapacidad de enfermedad ya establecida (rehabilitación, control de complicaciones).
+• Tamización: busca enfermedad en aparentemente sanos; aquí no se diagnostica, se modifica el entorno.
+
+Por lo tanto:
+Esta intervención se clasifica como actuación sobre determinantes sociales y ambientales de la salud.
+
+¿Por qué la opción C es la respuesta correcta?
+Trabajar con tiendas locales para cambiar disponibilidad y visibilidad de alimentos modifica el entorno comunitario donde ocurren las decisiones alimentarias.
+Es promoción de la salud poblacional orientada a facilitar elecciones saludables, alineada con la Carta de Ottawa y el enfoque de APS.
 
 ¿Por qué fallan las otras opciones?
-- Prevención terciaria: reduce discapacidad de enfermedad ya establecida; aquí se previenen factores de riesgo poblacionales.
-- Tamización poblacional: busca enfermedad en aparentemente sanos; esto no diagnostica, modifica el entorno.
-- Prevención cuaternaria: evita intervenciones médicas innecesarias; no aplica a esta estrategia comunitaria.
+Opción A (prevención terciaria): reduce discapacidad de enfermedad ya establecida; aquí se actúa sobre factores de riesgo poblacionales antes del tratamiento individual.
+Opción B (tamización poblacional): busca enfermedad en aparentemente sanos; esta estrategia no diagnostica obesidad, modifica el entorno alimentario.
+Opción D (prevención cuaternaria): evita intervenciones médicas innecesarias; no aplica a una estrategia comunitaria de promoción de la salud.
 
-Clave: cambiar tiendas del barrio = determinantes sociales/ambientales, no prevención terciaria ni tamización.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen prevención terciaria porque el barrio tiene alta prevalencia de obesidad y confunden "enfermedad frecuente" con "rehabilitación de enfermedad establecida".
+Otra trampa: clasificar como tamización cualquier intervención poblacional, cuando tamizar implica buscar enfermedad, no modificar el entorno.
 
-Referencias: Carta de Ottawa; OMS Determinantes Sociales; OPS APS; Res. 3280 Colombia.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar si la intervención es individual o comunitaria (aquí: comunitaria con tiendas locales).
+2. Preguntar si modifica el entorno, detecta enfermedad o trata complicaciones.
+3. Si modifica condiciones donde las personas viven y eligen → determinantes sociales.
+4. Diferenciar promoción de la salud (facilitar elecciones) de prevención terciaria (rehabilitar) y tamización (detectar).
+
+Perlas de examen
+✅ Modificar entorno alimentario = determinantes sociales/ambientales.
+✅ Promoción de la salud facilita elecciones saludables a nivel poblacional.
+✅ Prevención terciaria = reducir discapacidad de enfermedad establecida.
+✅ Tamización = buscar enfermedad en aparentemente sanos.
+✅ Prevención cuaternaria = evitar intervenciones médicas innecesarias.
+✅ APS comunitaria actúa sobre condiciones donde viven las personas (Carta de Ottawa).
+
+Referencias
+• Carta de Ottawa para la Promoción de la Salud.
+• OMS: Social Determinants of Health.
+• OPS: Atención Primaria en Salud y promoción comunitaria.
+• Resolución 3280 de 2018 — Promoción y prevención en Colombia.
+• UpToDate: Overview of preventive medicine and health promotion.`,
   },
   {
     id: "dr-q-121",
