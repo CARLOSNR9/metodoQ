@@ -11536,34 +11536,69 @@ Referencias
     explanation:
       "La dobutamina es un agonista β1 predominante. Su efecto inotrópico positivo ocurre por aumento del AMPc intracelular, favoreciendo apertura de canales de calcio y mayor disponibilidad de calcio para la contracción miocárdica.",
     keyPoints: [
-      "Dobutamina → agonismo β1 → ↑ AMPc → ↑ calcio intracelular → ↑ contractilidad.",
-      "Digoxina: inhibe Na+/K+ ATPasa. Milrinona: inhibe fosfodiesterasa 3.",
-      "El calcio regula la interacción actina-miosina.",
-      "Inotrópico de elección en choque cardiogénico con bajo gasto.",
+      "Cuando veas: choque cardiogénico post-IAM con dobutamina y mejora de PA/gasto cardíaco, pregunta por mecanismo celular del efecto inotrópico.",
+      "Debes pensar en: agonismo β1 cardíaco → ↑ AMPc → entrada de Ca²⁺ → mayor contractilidad miocárdica.",
+      "Digoxina inhibe Na⁺/K⁺ ATPasa; milrinona inhibe fosfodiesterasa 3 (↑ GMPc). No confundir con dobutamina.",
+      "El calcio intracelular regula la interacción actina-miosina; dobutamina es inotrópico de elección en bajo gasto con choque cardiogénico.",
+      "Tema: Farmacología cardiovascular — mecanismo celular de la dobutamina.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa el mecanismo celular de la dobutamina en choque cardiogénico: no es digoxina ni milrinona; es agonismo β1 con aumento de AMPc y calcio intracelular.
+Esta es una pregunta clásica de farmacología cardiovascular porque evalúa una trampa frecuente: confundir el mecanismo de la dobutamina con el de digoxina (Na⁺/K⁺ ATPasa) o milrinona (fosfodiesterasa 3).
+
+La clave no es memorizar nombres de fármacos inotrópicos sin su vía molecular.
+La clave es:
+Dobutamina = β1 → AMPc → Ca²⁺ → contractilidad miocárdica.
 
 ¿Qué está ocurriendo realmente?
-- IAM anterior extenso con supradesnivel del ST en V1-V6 y choque cardiogénico (PA 70/40, extremidades frías).
-- Se inicia dobutamina y mejora la presión arterial y el gasto cardíaco.
-- La pregunta pide el mecanismo fisiológico directo del efecto inotrópico positivo a nivel celular.
-- Dobutamina es agonista β1 predominante en el miocardio.
+El paciente presenta:
+• Hombre de 68 años con IAM anterior extenso (supradesnivel del ST en V1-V6).
+• Choque cardiogénico: PA 70/40 mmHg, FC 115 lpm, extremidades frías, llenado capilar 5 s.
+• Se inicia infusión de dobutamina; a los 15 min mejora PA y aumenta el gasto cardíaco.
+• La pregunta pide el mecanismo fisiológico directo del efecto inotrópico positivo a nivel celular.
 
-¿Qué dato es clave en el examen?
-- β1 → proteína Gs → adenilato ciclasa → ↑ AMPc intracelular.
-- PKA fosforila canales de calcio tipo L → mayor entrada de Ca²⁺ al miocito.
-- Más calcio disponible para la unión actina-miosina → mayor contractilidad.
+Recordemos la dobutamina y la señal β1-adrenérgica:
+• Dobutamina es agonista β1 predominante en el miocardio.
+• β1 → proteína Gs → activación de adenilato ciclasa → ↑ AMPc intracelular.
+• PKA fosforila canales de calcio tipo L → mayor entrada de Ca²⁺ al miocito.
+• Más calcio disponible para actina-miosina → mayor fuerza de contracción (inotropismo positivo).
+
+Por lo tanto:
+El mecanismo directo es estimulación de receptores β1 cardíacos con incremento de AMPc y entrada de calcio a la célula.
+
+¿Por qué la opción B es la respuesta correcta?
+La dobutamina actúa como agonista β1 en el miocardio, activando la vía adenilato ciclasa–AMPc–PKA que aumenta la entrada de calcio por canales tipo L. Este es el mecanismo celular clásico del efecto inotrópico positivo de la dobutamina en choque cardiogénico.
 
 ¿Por qué fallan las otras opciones?
-- Inhibición Na⁺/K⁺ ATPasa: mecanismo de la digoxina, no de la dobutamina.
-- Bloqueo muscarínico: aumentaría FC por vía parasimpática, no es el mecanismo inotrópico principal de dobutamina.
-- Inhibición fosfodiesterasa (↑ GMPc): mecanismo de milrinona (inotrópico tipo PDE3), no de dobutamina.
+Opción A (inhibición Na⁺/K⁺ ATPasa): mecanismo de la digoxina, no de la dobutamina; la digoxina inhibe la bomba sodio-potasio y eleva calcio por intercambiador Na/Ca.
+Opción C (bloqueo muscarínico cardíaco): aumentaría FC por vía parasimpática, pero no explica el mecanismo inotrópico principal de la dobutamina.
+Opción D (inhibición fosfodiesterasa ↑ GMPc): mecanismo de milrinona (inotrópico tipo PDE3), no de la dobutamina; la dobutamina actúa vía AMPc, no GMPc.
 
-Clave: dobutamina = β1 → AMPc → Ca²⁺ → contractilidad; digoxina = Na/K ATPasa; milrinona = PDE3.
+¿Cuál es la trampa del examen?
+Muchos estudiantes mezclan los tres inotrópicos clásicos sin distinguir su vía molecular: digoxina = Na/K ATPasa, milrinona = PDE3 (↑ GMPc), dobutamina = β1 (↑ AMPc).
+Otra trampa: elegir bloqueo muscarínico porque la dobutamina también puede aumentar FC, pero la pregunta pide el mecanismo inotrópico directo.
 
-Referencias: Katzung; Guyton & Hall; Braunwald's Heart Disease.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el fármaco: dobutamina = agonista β1 predominante.
+2. Seguir la cascada: β1 → Gs → adenilato ciclasa → AMPc.
+3. Conectar con calcio: PKA → canales Ca²⁺ tipo L → ↑ calcio intracelular.
+4. Resultado clínico: mayor contractilidad miocárdica en choque cardiogénico.
+
+Perlas de examen
+✅ Dobutamina = β1 → AMPc → Ca²⁺ → contractilidad.
+✅ Digoxina = inhibe Na⁺/K⁺ ATPasa → ↑ Ca²⁺ por intercambiador Na/Ca.
+✅ Milrinona = inhibe PDE3 → ↑ GMPc → inotropismo + vasodilatación.
+✅ Inotrópico de elección en choque cardiogénico con bajo gasto cardíaco.
+✅ El calcio regula la interacción actina-miosina en el miocardio.
+✅ No confundir AMPc (β1/dobutamina) con GMPc (PDE3/milrinona).
+
+Referencias
+• Katzung & Trevor's Basic & Clinical Pharmacology.
+• Goodman & Gilman's: The Pharmacological Basis of Therapeutics.
+• Guyton & Hall: Textbook of Medical Physiology.
+• Braunwald's Heart Disease.
+• UpToDate: Use of inotropes in heart failure and cardiogenic shock.`,
   },
   {
     id: "dr-q-122",
@@ -11599,34 +11634,69 @@ Referencias: Katzung; Guyton & Hall; Braunwald's Heart Disease.`,
     explanation:
       "En choque séptico, citoquinas inducen iNOS con producción masiva de NO. El NO activa guanilato ciclasa → ↑ GMPc → relajación del músculo liso vascular → vasoplejía refractaria.",
     keyPoints: [
-      "Choque séptico = choque distributivo con vasoplejía.",
-      "Citoquinas → iNOS → NO → GMPc → vasodilatación.",
-      "Extremidades calientes en fases iniciales (↓ resistencia vascular).",
-      "Hiporreactividad a catecolaminas contribuye a hipotensión refractaria.",
+      "Cuando veas: choque séptico con extremidades calientes, hipotensión refractaria pese a cristaloides y vasopresores a dosis altas.",
+      "Debes pensar en: vasoplejía por sobreexpresión de iNOS → NO masivo → ↑ GMPc → relajación del músculo liso vascular.",
+      "Choque séptico = choque distributivo; extremidades calientes y rubicundas reflejan ↓ resistencia vascular periférica.",
+      "Hiporreactividad a catecolaminas contribuye a la hipotensión refractaria, pero la vía molecular central es iNOS–NO–GMPc.",
+      "Tema: Fisiopatología del choque — vasoplejía en sepsis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la fisiopatología molecular del choque séptico refractario: la vasoplejía no se explica por falla de bomba, sino por producción masiva de óxido nítrico vía iNOS.
+Esta es una pregunta clásica de fisiopatología del choque porque evalúa una trampa frecuente: atribuir la vasoplejía séptica a falla de bomba cardíaca o a bloqueo de canales de calcio, cuando el mecanismo central es la sobreproducción de óxido nítrico vía iNOS.
+
+La clave no es pensar en choque cardiogénico (extremidades frías) ni en falla de la vía AMPc.
+La clave es:
+Sepsis → iNOS → NO → GMPc → vasoplejía refractaria.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 72 años con fiebre, obnubilación, disuria y choque séptico (PA 75/40, lactato 5.5).
-- Extremidades calientes y rubicundas: patrón de choque distributivo con vasodilatación periférica.
-- Persiste hipotensa tras 3 litros de cristaloides y requiere vasopresores a dosis altas.
-- Cuadro de vasoplejía refractaria en sepsis avanzada.
+El paciente presenta:
+• Mujer de 72 años con fiebre (39.2°C), obnubilación, disuria y choque séptico.
+• PA 75/40 mmHg, FC 125 lpm, lactato 5.5 mmol/L.
+• Extremidades calientes y rubicundas: patrón de choque distributivo con vasodilatación periférica.
+• Persiste hipotensa tras 3 litros de cristaloides; requiere vasopresores a dosis elevadas (vasoplejía refractaria).
 
-¿Qué dato es clave en el examen?
-- En sepsis, citoquinas (TNF-α, IL-1) inducen sobreexpresión de óxido nítrico sintasa inducible (iNOS).
-- iNOS produce NO masivo → activa guanilato ciclasa → ↑ GMPc → relajación del músculo liso vascular.
-- Secuencia clásica de examen: sepsis → iNOS → NO → GMPc → vasoplejía.
+Recordemos la vasoplejía en sepsis:
+• Citoquinas proinflamatorias (TNF-α, IL-1, IL-6) inducen sobreexpresión de óxido nítrico sintasa inducible (iNOS) en músculo liso vascular y endotelio.
+• iNOS produce NO masivo y sostenido (a diferencia de eNOS fisiológica).
+• NO activa guanilato ciclasa soluble → ↑ GMPc → relajación del músculo liso vascular → vasodilatación generalizada.
+• Resultado: resistencia vascular sistémica muy baja, hipotensión refractaria e hiporreactividad a catecolaminas.
+
+Por lo tanto:
+La alteración fisiopatológica celular principal es la sobreexpresión de iNOS con producción excesiva de óxido nítrico.
+
+¿Por qué la opción B es la respuesta correcta?
+En choque séptico avanzado, las citoquinas inducen iNOS, que genera NO en cantidades patológicas. El NO eleva GMPc en el músculo liso vascular, provocando vasodilatación masiva y vasoplejía refractaria que no responde adecuadamente a fluidos ni a dosis convencionales de vasopresores.
 
 ¿Por qué fallan las otras opciones?
-- Inhibición de síntesis de AMPc: el problema es vía GMPc por NO, no falla de AMPc en músculo liso.
-- Bloqueo canales de calcio tipo L: los bloqueadores de calcio empeoran la hipotensión en choque séptico, no explican la vasoplejía.
-- Disminución de prostaciclinas: no es el mecanismo principal de la vasoplejía refractaria en sepsis.
+Opción A (inhibición de síntesis de AMPc): el problema en sepsis es la vía GMPc por NO, no la inhibición de AMPc; de hecho, la vía β-adrenérgica (AMPc) está comprometida por hiporreactividad, no por inhibición primaria de síntesis.
+Opción C (bloqueo de canales de calcio tipo L): los bloqueadores de calcio empeoran la hipotensión en choque séptico; no explican la vasoplejía, la agravan.
+Opción D (disminución de prostaciclinas): aunque el endotelio puede estar disfuncional, la disminución de prostaciclinas no es el mecanismo principal de la vasoplejía refractaria en sepsis.
 
-Clave: choque séptico caliente + vasopresores refractarios = iNOS → NO → GMPc → vasoplejía.
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden choque séptico (caliente, vasodilatado) con choque cardiogénico (frío, vasoconstricto).
+Otra trampa: elegir bloqueo de canales de calcio porque "relajan" el músculo liso, sin reconocer que la vasoplejía séptica se explica por la vía NO–GMPc inducida por iNOS.
 
-Referencias: Harrison's; Surviving Sepsis; Marino's ICU Book.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer choque séptico distributivo (extremidades calientes + hipotensión).
+2. Identificar vasoplejía refractaria (hipotensión persistente pese a fluidos y vasopresores).
+3. Recordar la cascada molecular: citoquinas → iNOS → NO → guanilato ciclasa → GMPc.
+4. Conectar con clínica: vasodilatación generalizada e hiporreactividad a catecolaminas.
+
+Perlas de examen
+✅ Choque séptico caliente = distributivo con vasoplejía, no falla de bomba.
+✅ iNOS → NO masivo → GMPc → relajación del músculo liso vascular.
+✅ Vasoplejía refractaria: hipotensión pese a cristaloides y vasopresores altos.
+✅ NO es el mediador central de la vasodilatación en sepsis avanzada.
+✅ Bloqueadores de calcio empeoran la hipotensión en choque séptico.
+✅ La hiporreactividad a catecolaminas es consecuencia, pero iNOS–NO es el mecanismo primario preguntado.
+
+Referencias
+• Harrison's Principles of Internal Medicine.
+• Surviving Sepsis Campaign Guidelines.
+• Marino's The ICU Book.
+• UpToDate: Pathophysiology of sepsis.
+• Vincent JL et al.: Sepsis and septic shock (Lancet).`,
   },
   {
     id: "dr-q-123",
@@ -11662,34 +11732,69 @@ Referencias: Harrison's; Surviving Sepsis; Marino's ICU Book.`,
     explanation:
       "La cetoacidosis fue corregida (cetonas negativas). La administración masiva de NaCl 0.9% elevó el cloro sérico, produciendo acidosis metabólica hiperclorémica con anión gap normal.",
     keyPoints: [
-      "CAD resuelta: cetonas negativas + anión gap normalizado.",
-      "NaCl 0.9% aporta 154 mEq/L de Cl⁻ → acidosis hiperclorémica.",
-      "Exceso de Cl⁻ reduce bicarbonato por electroneutralidad.",
-      "Persistencia de acidosis ≠ CAD activa si cetonas negativas.",
+      "Cuando veas: CAD resuelta (cetonas negativas) con acidosis persistente y Cl⁻ elevado tras reanimación con NaCl 0.9%.",
+      "Debes pensar en: acidosis metabólica hiperclorémica por expansión del compartimento extracelular con solución salina.",
+      "NaCl 0.9% aporta 154 mEq/L de Cl⁻; grandes volúmenes elevan cloro sérico y reducen bicarbonato por electroneutralidad.",
+      "Persistencia de acidosis ≠ CAD activa si las cetonas ya son negativas y el anión gap se normalizó.",
+      "Tema: Trastornos ácido-base — acidosis hiperclorémica post-CAD.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa una trampa post-CAD: la acidosis puede persistir aunque las cetonas ya sean negativas, por acidosis hiperclorémica inducida por solución salina al 0.9%.
+Esta es una pregunta clásica de trastornos ácido-base porque evalúa una trampa frecuente: asumir que la acidosis persistente tras tratar una CAD significa cetonas activas o acidosis láctica, cuando en realidad es acidosis hiperclorémica inducida por solución salina al 0.9%.
+
+La clave no es buscar cetonas persistentes ni acidosis láctica.
+La clave es:
+CAD resuelta (cetonas negativas) + Cl⁻ elevado + acidosis = hipercloremia por NaCl 0.9%.
 
 ¿Qué está ocurriendo realmente?
-- Joven con CAD severa (pH 7.10, HCO₃⁻ 8, anión gap elevado por cetonas).
-- Tratamiento con 6 litros de NaCl 0.9% e insulina.
-- A las 24 h las cetonas son negativas (CAD resuelta), pero persiste acidosis (pH 7.25, HCO₃⁻ 14).
-- El cloro subió de 98 a 118 mEq/L: acidosis metabólica hiperclorémica con anión gap normal.
+El paciente presenta:
+• Hombre de 25 años con DM1 y CAD severa inicial: pH 7.10, HCO₃⁻ 8 mEq/L, pCO₂ 25 mmHg, Cl⁻ 98 mEq/L.
+• Recibe 6 litros de NaCl 0.9% e infusión de insulina.
+• A las 24 h: cetonas negativas (CAD resuelta), pero persiste acidosis: pH 7.25, HCO₃⁻ 14 mEq/L.
+• El cloro subió de 98 a 118 mEq/L: patrón de acidosis metabólica hiperclorémica con anión gap normal.
 
-¿Qué dato es clave en el examen?
-- NaCl 0.9% aporta 154 mEq/L de cloro; grandes volúmenes expanden el compartimento extracelular con exceso de Cl⁻.
-- El exceso de cloro reduce bicarbonato por equilibrio de electroneutralidad.
-- Cetonas negativas confirman que la CAD activa ya se resolvió; la acidosis restante es hiperclorémica.
+Recordemos acidosis hiperclorémica post-reanimación:
+• NaCl 0.9% contiene 154 mEq/L de Na⁺ y 154 mEq/L de Cl⁻ (cloro suprafisiológico).
+• Grandes volúmenes expanden el compartimento extracelular con exceso de Cl⁻.
+• Por equilibrio de electroneutralidad, el exceso de Cl⁻ se compensa con ↓ bicarbonato → acidosis metabólica hiperclorémica.
+• Cetonas negativas confirman resolución de la CAD; la acidosis restante no es por cuerpos cetónicos.
+
+Por lo tanto:
+El mecanismo es desarrollo de acidosis metabólica hiperclorémica por expansión del compartimento extracelular con solución salina.
+
+¿Por qué la opción C es la respuesta correcta?
+La CAD fue corregida (cetonas negativas, anión gap normalizado), pero la administración masiva de NaCl 0.9% elevó el cloro sérico de 98 a 118 mEq/L, produciendo acidosis metabólica hiperclorémica con anión gap normal. Este es un efecto iatrogénico bien documentado en el manejo de la CAD.
 
 ¿Por qué fallan las otras opciones?
-- Cetonas persistentes por resistencia a insulina: las cetonas ya son negativas.
-- Acidosis láctica por hipoperfusión: no explica el cloro de 118 ni el patrón hiperclorémico.
-- Retención de fosfatos con anión gap elevado: el anión gap se normalizó; el problema es el cloro.
+Opción A (cetonas persistentes por resistencia a insulina): las cetonas ya son negativas; la CAD activa se resolvió con insulina.
+Opción B (acidosis láctica por hipoperfusión): no explica el cloro de 118 mEq/L ni el patrón hiperclorémico con anión gap normal.
+Opción D (retención de fosfatos con anión gap elevado): el anión gap se normalizó; el problema es el exceso de cloro, no un anión gap elevado.
 
-Clave: CAD resuelta (cetonas negativas) + Cl⁻ 118 + acidosis = hipercloremia por NaCl 0.9%.
+¿Cuál es la trampa del examen?
+Muchos estudiantes ven "acidosis persistente en CAD" y eligen cetonas activas o acidosis láctica, sin revisar que las cetonas ya son negativas y el cloro subió marcadamente.
+Otra trampa: no reconocer que NaCl 0.9% es una fuente masiva de cloro que puede mantener acidosis aunque la CAD esté resuelta.
 
-Referencias: Harrison's; ADA Standards; UpToDate: DKA and Hyperchloremic Acidosis.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar resolución de CAD: cetonas negativas + anión gap normalizado.
+2. Evaluar si persiste acidosis metabólica con bicarbonato bajo.
+3. Revisar cloro sérico: si está elevado → acidosis hiperclorémica.
+4. Correlacionar con volumen de NaCl 0.9% administrado.
+
+Perlas de examen
+✅ CAD resuelta + acidosis persistente + Cl⁻ ↑ = hipercloremia por NaCl 0.9%.
+✅ NaCl 0.9% aporta 154 mEq/L de Cl⁻ (suprafisiológico).
+✅ Exceso de Cl⁻ reduce HCO₃⁻ por electroneutralidad.
+✅ Cetonas negativas descartan CAD activa como causa de acidosis restante.
+✅ Anión gap normal orienta a acidosis hiperclorémica, no láctica ni por cetonas.
+✅ Usar soluciones balanceadas (RL, Plasmalyte) reduce este riesgo en reanimación prolongada.
+
+Referencias
+• Harrison's Principles of Internal Medicine.
+• ADA Standards of Medical Care in Diabetes.
+• UpToDate: Diabetic ketoacidosis and hyperosmolar hyperglycemic state.
+• UpToDate: Hyperchloremic metabolic acidosis.
+• LITFL: Normal Saline and Hyperchloremic Acidosis.`,
   },
   {
     id: "dr-q-124",
@@ -11721,34 +11826,69 @@ Referencias: Harrison's; ADA Standards; UpToDate: DKA and Hyperchloremic Acidosi
     explanation:
       "La hiperoxia revierte la vasoconstricción pulmonar hipóxica, desviando flujo hacia alveolos mal ventilados y empeorando el desajuste V/Q. Este es el mecanismo principal de hipercapnia inducida por oxígeno en EPOC.",
     keyPoints: [
-      "Mecanismo principal: empeoramiento V/Q por abolición de vasoconstricción hipóxica.",
-      "Vasoconstricción hipóxica redirige flujo a zonas mejor ventiladas.",
-      "Efecto Haldane y supresión del estímulo hipóxico contribuyen, pero no son principales.",
-      "Meta SpO₂ en EPOC grave: ~88-92%.",
+      "Cuando veas: EPOC severo con hipercapnia que empeora tras oxigenoterapia a alto flujo (SpO₂ ↑ pero pCO₂ ↑ y coma hipercápnico).",
+      "Debes pensar en: reversión de vasoconstricción pulmonar hipóxica → empeoramiento del desajuste V/Q como mecanismo primario.",
+      "La vasoconstricción hipóxica redirige flujo sanguíneo hacia alvéolos mejor ventilados; la hiperoxia la abole.",
+      "Supresión del estímulo hipóxico y efecto Haldane contribuyen, pero no son el mecanismo principal de la hipercapnia inducida por O₂.",
+      "Tema: Fisiología respiratoria — hipercapnia inducida por oxígeno en EPOC.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la hipercapnia inducida por oxígeno en EPOC: el mecanismo principal no es solo "apagar el estímulo hipóxico", sino empeorar el desajuste ventilación-perfusión.
+Esta es una pregunta clásica de fisiología respiratoria porque evalúa una trampa frecuente: atribuir la hipercapnia inducida por oxígeno en EPOC exclusivamente a la "supresión del estímulo hipóxico", cuando el mecanismo primario es el empeoramiento del desajuste ventilación-perfusión (V/Q).
+
+La clave no es pensar que el O₂ "apaga" completamente el centro respiratorio como única explicación.
+La clave es:
+Hiperoxia → abolición de vasoconstricción hipóxica → peor V/Q → ↑ pCO₂ → coma hipercápnico.
 
 ¿Qué está ocurriendo realmente?
-- Mujer con EPOC severo en exacerbación (pH 7.31, pCO₂ 58, pO₂ 45 con aire ambiente).
-- Recibe O₂ a alto flujo (FiO₂ ~100%): SpO₂ sube a 98% pero entra en coma hipercápnico.
-- Gasometría de control: pH 7.15, pCO₂ 85, pO₂ 120.
-- Paradójico: más oxígeno empeoró la hipercapnia y el nivel de conciencia.
+El paciente presenta:
+• Mujer de 65 años, fumadora, con EPOC severo en exacerbación infecciosa.
+• Disnea, cianosis, somnolencia; gasometría inicial (FiO₂ 21%): pH 7.31, pCO₂ 58, pO₂ 45 mmHg.
+• Recibe O₂ con mascarilla reservorio a 15 L/min (FiO₂ ~100%): SpO₂ sube a 98%.
+• Treinta minutos después: deterioro progresivo hasta coma hipercápnico; pH 7.15, pCO₂ 85, pO₂ 120 mmHg.
 
-¿Qué dato es clave en el examen?
-- La hiperoxia revierte la vasoconstricción pulmonar hipóxica (mecanismo de defensa en EPOC).
-- Se redirige flujo sanguíneo hacia alvéolos mal ventilados → empeora el desajuste V/Q.
-- Menor eliminación de CO₂ → narcosis por CO₂. Meta de SpO₂ en EPOC grave: ~88-92%.
+Recordemos la hipercapnia inducida por oxígeno en EPOC:
+• En EPOC, la vasoconstricción pulmonar hipóxica es un mecanismo de defensa: redirige flujo sanguíneo lejos de alvéolos mal ventilados hacia los mejor ventilados.
+• La hiperoxia revierte esta vasoconstricción → flujo sanguíneo aumenta hacia alvéolos mal ventilados.
+• Resultado: empeoramiento del desajuste V/Q → menor eliminación de CO₂ → hipercapnia aguda y narcosis por CO₂.
+• La supresión del estímulo hipóxico y el efecto Haldane (liberación de CO₂ por hemoglobina saturada) contribuyen secundariamente.
+
+Por lo tanto:
+El mecanismo fisiopatológico primario es la reversión de la vasoconstricción pulmonar hipóxica con incremento del desajuste V/Q.
+
+¿Por qué la opción C es la respuesta correcta?
+La hiperoxia abole la vasoconstricción hipóxica pulmonar, desviando perfusión hacia unidades alveolares mal ventiladas. Esto empeora el desajuste V/Q y reduce la eliminación de CO₂, explicando el aumento agudo de pCO₂ y el coma hipercápnico pese a la normalización de la SpO₂.
 
 ¿Por qué fallan las otras opciones?
-- Supresión completa del estímulo hipóxico: contribuye, pero la evidencia favorece el deterioro V/Q como mecanismo principal.
-- Aumento de producción de CO₂ por hiperoxia: no es el mecanismo central de la hipercapnia inducida por O₂.
-- Disminución de afinidad de Hb por O₂ (efecto Haldane): contribuye secundariamente, no es el mecanismo primario preguntado.
+Opción A (supresión completa del estímulo respiratorio hipóxico): contribuye al cuadro, pero la evidencia respaldada favorece el deterioro V/Q como mecanismo principal de la hipercapnia inducida por O₂ en EPOC.
+Opción B (aumento de producción metabólica de CO₂ por hiperoxia): no es el mecanismo central; la hiperoxia no aumenta significativamente la producción de CO₂.
+Opción D (disminución de afinidad de Hb por O₂): describe el efecto Haldane, que contribuye secundariamente a la retención de CO₂, pero no es el mecanismo primario preguntado.
 
-Clave: EPOC + O₂ alto flujo + coma hipercápnico = empeoramiento V/Q por abolir vasoconstricción hipóxica.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen "supresión del estímulo hipóxico" porque es el concepto más citado en la enseñanza tradicional, pero las guías y la fisiología actual enfatizan el desajuste V/Q como mecanismo principal.
+Otra trampa: pensar que más oxígeno siempre mejora al paciente con EPOC; aquí la SpO₂ sube pero el paciente empeora por retención de CO₂.
 
-Referencias: West's Respiratory Physiology; GOLD Report; Harrison's.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer EPOC severo con retención crónica de CO₂ en exacerbación.
+2. Identificar empeoramiento agudo tras O₂ a alto flujo (paradójico: SpO₂ ↑, pCO₂ ↑).
+3. Recordar: hiperoxia revierte vasoconstricción hipóxica → peor V/Q.
+4. Meta de oxigenoterapia en EPOC grave: SpO₂ ~88-92%, no 98-100%.
+
+Perlas de examen
+✅ Hipercapnia inducida por O₂ en EPOC: mecanismo principal = empeoramiento V/Q.
+✅ Vasoconstricción hipóxica protege redirigiendo flujo a alvéolos ventilados.
+✅ Meta SpO₂ en EPOC grave: ~88-92% (GOLD).
+✅ Supresión del estímulo hipóxico contribuye, pero no es el mecanismo primario.
+✅ Efecto Haldane: Hb saturada libera CO₂ más fácilmente (contribución secundaria).
+✅ O₂ a alto flujo en EPOC retenedor puede causar coma hipercápnico agudo.
+
+Referencias
+• West's Respiratory Physiology: The Essentials.
+• GOLD Report: Global Strategy for COPD.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Oxygen-induced hypercapnia in COPD.
+• Tobin MJ: Advances in mechanical ventilation (NEJM).`,
   },
   {
     id: "dr-q-125",
@@ -11784,34 +11924,69 @@ Referencias: West's Respiratory Physiology; GOLD Report; Harrison's.`,
     explanation:
       "Potasio y digoxina compiten por la Na⁺/K⁺ ATPasa. Con hipopotasemia hay menor competencia, mayor unión de digoxina, mayor inhibición de la bomba y mayor toxicidad (mecanismo farmacodinámico).",
     keyPoints: [
-      "Digoxina inhibe Na⁺/K⁺ ATPasa → ↑ Na intracelular → ↑ Ca → inotropismo.",
-      "↓ K⁺ = ↑ unión de digoxina a la bomba (competencia).",
-      "Hipomagnesemia también favorece toxicidad y arritmias.",
-      "Xantopsia + arritmias + hipopotasemia = intoxicación digitálica.",
+      "Cuando veas: intoxicación digitálica (xantopsia, arritmias) en paciente con digoxina + diurético y K⁺ bajo (2.8 mEq/L).",
+      "Debes pensar en: competencia farmacodinámica — K⁺ y digoxina compiten por el mismo sitio en la Na⁺/K⁺ ATPasa.",
+      "↓ K⁺ = menor competencia → ↑ unión de digoxina → ↑ inhibición de la bomba → ↑ toxicidad (no es farmacocinético).",
+      "Hipomagnesemia también favorece toxicidad digitálica y arritmias; corregir ambos electrolitos.",
+      "Tema: Farmacología cardiovascular — toxicidad digitálica y hipopotasemia.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa toxicidad digitálica: la hipopotasemia no aumenta niveles séricos de digoxina, sino que facilita su unión a la Na⁺/K⁺ ATPasa por competencia farmacodinámica.
+Esta es una pregunta clásica de farmacología cardiovascular porque evalúa una trampa frecuente: atribuir la potenciación de la toxicidad digitálica por hipopotasemia a cambios farmacocinéticos (eliminación renal, unión a proteínas), cuando el mecanismo es farmacodinámico por competencia en la Na⁺/K⁺ ATPasa.
+
+La clave no es pensar que la hipopotasemia "elimina" digoxina o aumenta su fracción libre plasmática.
+La clave es:
+↓ K⁺ → menos competencia en Na⁺/K⁺ ATPasa → más unión de digoxina → más toxicidad.
 
 ¿Qué está ocurriendo realmente?
-- Anciano con IC-FEr en digoxina, enalapril y furosemida (diurético que depleta K⁺).
-- Náuseas, xantopsia (halos amarillentos) y extrasístoles ventriculares.
-- K⁺ 2.8 mEq/L y Mg²⁺ 1.5 mg/dL: electrolitos que favorecen toxicidad.
-- Cuadro clásico de intoxicación digitálica con hipopotasemia e hipomagnesemia.
+El paciente presenta:
+• Hombre de 75 años con IC-FEr en digoxina, enalapril y furosemida (diurético que depleta K⁺).
+• Náuseas, xantopsia (halos amarillentos) y extrasístoles ventriculares frecuentes.
+• K⁺ 2.8 mEq/L y Mg²⁺ 1.5 mg/dL; creatinina 1.1 mg/dL (función renal conservada).
+• Cuadro clásico de intoxicación digitálica con hipopotasemia e hipomagnesemia.
 
-¿Qué dato es clave en el examen?
-- Digoxina inhibe la Na⁺/K⁺ ATPasa → ↑ Na⁺ intracelular → intercambiador Na/Ca → ↑ Ca²⁺ → inotropismo.
-- Potasio y digoxina compiten por el mismo sitio de unión en la bomba.
-- Con hipopotasemia hay menor competencia → más unión de digoxina → más inhibición → más toxicidad (farmacodinámico, no farmacocinético).
+Recordemos la digoxina y la Na⁺/K⁺ ATPasa:
+• Digoxina inhibe la Na⁺/K⁺ ATPasa → ↑ Na⁺ intracelular → intercambiador Na/Ca → ↑ Ca²⁺ → inotropismo positivo.
+• Potasio y digoxina compiten por el mismo sitio de unión en la bomba sodio-potasio.
+• Con hipopotasemia hay menor competencia por K⁺ → mayor afinidad/unión de digoxina → mayor inhibición de la bomba.
+• Este es un mecanismo farmacodinámico (potenciación del efecto), no farmacocinético (niveles séricos).
+
+Por lo tanto:
+La hipopotasemia facilita la toxicidad porque el potasio y la digoxina compiten por el mismo sitio de unión en la Na⁺/K⁺ ATPasa, aumentando la fijación de digoxina cuando el potasio disminuye.
+
+¿Por qué la opción C es la respuesta correcta?
+Potasio y digoxina compiten por el sitio de unión externo de la Na⁺/K⁺ ATPasa. Con K⁺ bajo (2.8 mEq/L), hay menos competencia, lo que permite que más moléculas de digoxina se unan e inhiban la bomba, intensificando los efectos tóxicos (arritmias, xantopsia, náuseas) sin necesariamente elevar los niveles séricos de digoxina.
 
 ¿Por qué fallan las otras opciones?
-- Aumento de eliminación renal con metabolitos tóxicos: no es el mecanismo; la creatinina está normal.
-- Disminución de unión a proteínas plasmáticas: no explica la competencia en la bomba sodio-potasio.
-- Degradación intracelular de la bomba: no es el mecanismo de potenciación por hipopotasemia.
+Opción A (aumento de eliminación renal con metabolitos tóxicos): no es el mecanismo; la creatinina está normal y la hipopotasemia no aumenta metabolitos tóxicos de digoxina.
+Opción B (disminución de unión a proteínas plasmáticas): no explica la competencia en la bomba sodio-potasio; es un mecanismo farmacocinético incorrecto para este escenario.
+Opción D (degradación intracelular de la Na⁺/K⁺ ATPasa): no es el mecanismo de potenciación por hipopotasemia; la hipopotasemia aumenta la unión de digoxina, no degrada la bomba.
 
-Clave: xantopsia + arritmias + hipopotasemia en digoxina = más unión a Na/K ATPasa por competencia con K⁺.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen mecanismos farmacocinéticos (eliminación renal, fracción libre) porque asocian "más toxicidad" con "más fármaco circulante", sin reconocer la competencia K⁺–digoxina a nivel de receptor.
+Otra trampa: olvidar que furosemida depleta K⁺ y Mg²⁺, ambos factores que predisponen a intoxicación digitálica.
 
-Referencias: Katzung; Goodman & Gilman's; Braunwald's Heart Disease.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer cuadro de intoxicación digitálica: xantopsia + arritmias + GI.
+2. Revisar electrolitos: K⁺ y Mg²⁺ (depleción por diuréticos).
+3. Recordar competencia K⁺–digoxina en Na⁺/K⁺ ATPasa (farmacodinámico).
+4. Corregir electrolitos antes y durante el manejo de la toxicidad.
+
+Perlas de examen
+✅ Digoxina inhibe Na⁺/K⁺ ATPasa → ↑ Ca²⁺ intracelular → inotropismo.
+✅ K⁺ y digoxina compiten por el mismo sitio de unión en la bomba.
+✅ ↓ K⁺ = ↑ unión de digoxina = ↑ toxicidad (farmacodinámico).
+✅ Xantopsia + arritmias + hipopotasemia = intoxicación digitálica clásica.
+✅ Hipomagnesemia también favorece toxicidad y arritmias digitálicas.
+✅ Furosemida + digoxina = riesgo de depleción de K⁺/Mg²⁺ y toxicidad.
+
+Referencias
+• Katzung & Trevor's Basic & Clinical Pharmacology.
+• Goodman & Gilman's: The Pharmacological Basis of Therapeutics.
+• Braunwald's Heart Disease.
+• UpToDate: Digitalis (cardiac glycoside) poisoning.
+• Antman EM et al.: Treatment of cardiac glycoside intoxication (NEJM).`,
   },
   {
     id: "dr-q-126",
@@ -11847,34 +12022,75 @@ Referencias: Katzung; Goodman & Gilman's; Braunwald's Heart Disease.`,
     explanation:
       "Lesión por reperfusión: restablecimiento súbito del flujo genera explosión de radicales libres (ROS), sobrecarga de calcio intracelular y daño mitocondrial, produciendo lesión adicional a la isquemia inicial.",
     keyPoints: [
-      "Daño paradójico ocurre DESPUÉS de recuperar el flujo.",
-      "ROS + sobrecarga de Ca²⁺ + poro de transición mitocondrial.",
-      "Manifestaciones: arritmias de reperfusión, miocardio aturdido, ↑ biomarcadores.",
-      "Más oxígeno no siempre significa menos daño celular.",
+      "Cuando veas: IAMCEST tratado con PCI exitosa + arritmias ventriculares y ↑ brusca de biomarcadores minutos después de la reperfusión.",
+      "Debes pensar en: lesión por reperfusión (daño paradójico post-flujo, no isquemia inicial).",
+      "Mecanismo central: explosión de ROS + sobrecarga intracelular de Ca²⁺ + apertura del poro de transición mitocondrial.",
+      "Miocardio aturdido (stunning) y arritmias de reperfusión son manifestaciones clínicas; más oxígeno no siempre significa menos daño.",
+      "Tema: Fisiopatología cardiovascular / Lesión por reperfusión en IAM.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la lesión por reperfusión en IAM: restablecer el flujo salva al paciente, pero puede dañar miocito adicionalmente por estrés oxidativo y sobrecarga de calcio.
+Esta es una pregunta clásica de fisiopatología cardiovascular porque evalúa una trampa frecuente: confundir el daño isquémico inicial con el daño paradójico que ocurre DESPUÉS de restablecer el flujo.
+
+La clave no es pensar que la angioplastia solo trae beneficio sin costo celular.
+La clave es:
+PCI exitosa + complicaciones inmediatas post-reperfusión = lesión por reperfusión (ROS + Ca²⁺ + daño mitocondrial).
 
 ¿Qué está ocurriendo realmente?
-- IAM con elevación del ST en cara anteroseptal tratado con angioplastia primaria exitosa.
-- Minutos después de la reperfusión: arritmias ventriculares, subida brusca de biomarcadores y deterioro transitorio de contractilidad regional.
-- Daño paradójico que ocurre DESPUÉS de recuperar el flujo, no durante la isquemia.
-- Miocardio aturdido (stunning) y arritmias de reperfusión como manifestaciones clínicas.
+El paciente presenta:
+• Hombre de 55 años con IAMCEST en cara anteroseptal (4 horas de evolución).
+• Intervención coronaria percutánea primaria exitosa: restablecimiento del flujo en la DA.
+• Minutos después de la reperfusión: arritmias ventriculares, aumento brusco de biomarcadores cardíacos y deterioro transitorio de contractilidad regional.
+• Daño tisular paradójico que empeora el miocito ADICIONALMENTE al daño isquémico previo.
 
-¿Qué dato es clave en el examen?
-- El restablecimiento súbito del flujo genera explosión de especies reactivas de oxígeno (ROS).
-- Sobrecarga de calcio intracelular y apertura del poro de transición mitocondrial.
-- Necrosis/apoptosis adicional al daño isquémico inicial + arritmias ventriculares.
+Recordemos la lesión por reperfusión:
+• Durante la isquemia: depleción de ATP, acumulación de lactato, entrada de Ca²⁺ por falla de bombas.
+• Al reperfundir súbitamente: explosión de especies reactivas de oxígeno (ROS) por reoxigenación abrupta.
+• La sobrecarga de Ca²⁺ intracelular abre el poro de transición de permeabilidad mitocondrial (MPTP).
+• Resultado: necrosis/apoptosis adicional, arritmias de reperfusión y miocardio aturdido (stunning).
+
+Por lo tanto:
+El mecanismo patológico celular responsable es la producción masiva de ROS con sobrecarga intracelular de calcio y daño mitocondrial.
+
+¿Por qué la opción B es la respuesta correcta?
+Describe el triplete fisiopatológico clásico de la lesión por reperfusión:
+• ROS masivas por reoxigenación abrupta del miocito isquémico.
+• Sobrecarga intracelular de calcio que perpetúa la lesión celular.
+• Daño mitocondrial por apertura del poro de transición → liberación de citocromo c y activación de vías de muerte celular.
+Explica el patrón temporal (minutos post-PCI) y las manifestaciones clínicas (arritmias, ↑ troponina, stunning).
 
 ¿Por qué fallan las otras opciones?
-- Microtrombos por vía extrínseca: no explica el patrón inmediato post-reperfusión con ROS.
-- Inhibición de fosforilación oxidativa por falta de O₂: al reperfundir hay oxígeno; el daño es por exceso de estrés oxidativo, no por hipoxia.
-- Cetonas en miocito isquémico: no es el mecanismo de lesión por reperfusión.
+Opción A (activación de vía extrínseca de coagulación con microtrombos): describe trombosis intracoronaria, no el mecanismo celular inmediato post-reperfusión con estrés oxidativo.
+Opción C (inhibición de fosforilación oxidativa por ↓ O₂ intracelular): al reperfundir HAY oxígeno abundante; el daño es por exceso de estrés oxidativo, no por hipoxia persistente.
+Opción D (acumulación de cuerpos cetónicos en miocito isquémico): las cetonas pueden elevarse en isquemia, pero no explican el daño paradójico inmediato tras recuperar el flujo.
 
-Clave: PCI exitosa + arritmias + ↑ troponina inmediata = lesión por reperfusión (ROS + Ca²⁺ + mitocondria).
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Daño miocárdico en IAM" = isquemia por falta de oxígeno.
+Pero el examen describe un paciente con PCI EXITOSA y complicaciones INMEDIATAS después de recuperar el flujo.
+La trampa es elegir mecanismos de isquemia (hipoxia, cetonas) cuando el escenario pide lesión por reperfusión.
 
-Referencias: Robbins & Cotran; Braunwald's; ESC ACS Guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Isquemia prolongada → depleción energética y acumulación de sustratos lesivos.
+2. Reperfusión súbita → explosión de ROS por reoxigenación abrupta.
+3. Sobrecarga de Ca²⁺ + apertura del poro mitocondrial → daño celular adicional.
+4. Manifestaciones clínicas: arritmias de reperfusión, miocardio aturdido y ↑ brusca de biomarcadores.
+
+Perlas de examen
+✅ El daño paradójico ocurre DESPUÉS de restablecer el flujo, no durante la isquemia.
+✅ ROS + sobrecarga de Ca²⁺ + poro de transición mitocondrial = tríada de lesión por reperfusión.
+✅ Miocardio aturdido (stunning): disfunción transitoria post-reperfusión sin necrosis irreversible.
+✅ Arritmias ventriculares inmediatas post-PCI son manifestación clásica de reperfusión.
+✅ Más oxígeno disponible no siempre significa menos daño celular.
+✅ La PCI salva al paciente, pero la reperfusión puede causar lesión adicional al miocito.
+
+Referencias
+• Robbins & Cotran Pathologic Basis of Disease.
+• Braunwald's Heart Disease.
+• ESC Guidelines for the Management of Acute Coronary Syndromes.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Reperfusion injury in acute myocardial infarction.`,
   },
   {
     id: "dr-q-127",
@@ -11910,34 +12126,75 @@ Referencias: Robbins & Cotran; Braunwald's; ESC ACS Guidelines.`,
     explanation:
       "A dosis altas, el propranolol inhibe parcialmente la 5'-desyodasa, reduciendo la conversión periférica de T4 a T3 (hormona metabólicamente más activa), además de su efecto betabloqueante.",
     keyPoints: [
-      "T3 es la hormona más activa; gran parte se forma por conversión periférica de T4.",
-      "Propranolol: β-bloqueo + inhibición parcial de 5'-desyodasa.",
-      "Metimazol/PTU inhiben síntesis; propranolol reduce síntomas y conversión.",
-      "Preferido en tirotoxicosis severa y tormenta tiroidea.",
+      "Cuando veas: Enfermedad de Graves con tirotoxicosis severa + propranolol a dosis altas como tratamiento sintomático.",
+      "Debes pensar en: propranolol = β-bloqueo + inhibición parcial de 5'-desyodasa (↓ conversión T4→T3).",
+      "T3 es la hormona metabólicamente más activa; gran parte se forma por conversión periférica de T4.",
+      "Metimazol/PTU inhiben síntesis tiroidea; propranolol reduce síntomas adrenérgicos Y disminuye T3 activa.",
+      "Tema: Endocrinología / Tirotoxicosis y Enfermedad de Graves.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa por qué el propranolol es preferido en tirotoxicosis severa: además del betabloqueo, inhibe la conversión periférica de T4 a T3.
+Esta es una pregunta clásica de endocrinología porque evalúa una trampa frecuente: confundir los mecanismos de los antitiroideos (metimazol, PTU) con los efectos diferenciales del propranolol en tirotoxicosis.
+
+La clave no es pensar que propranolol inhibe la síntesis tiroidea.
+La clave es:
+Propranolol a dosis altas = β-bloqueo + inhibición parcial de 5'-desyodasa → ↓ conversión periférica de T4 a T3.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 35 años con Enfermedad de Graves: TSH suprimida, T4 libre elevado, exoftalmos.
-- Síntomas adrenérgicos: palpitaciones, temblor, sudoración, pérdida de peso.
-- Se inicia propranolol a dosis altas para control sintomático.
-- La pregunta pide el mecanismo bioquímico que diferencia propranolol de otros betabloqueadores.
+El paciente presenta:
+• Mujer de 35 años con Enfermedad de Graves: TSH <0.01 mUI/L, T4 libre marcadamente elevada.
+• Síntomas adrenérgicos: palpitaciones, temblor fino distal, sudoración, pérdida de peso, exoftalmos.
+• Tirotoxicosis severa que requiere control sintomático inmediato.
+• Se inicia propranolol a dosis altas; la pregunta pide el mecanismo bioquímico que lo diferencia de otros betabloqueadores.
 
-¿Qué dato es clave en el examen?
-- T3 es la hormona metabólicamente más activa; gran parte se forma por conversión periférica de T4.
-- A dosis altas, el propranolol inhibe parcialmente la 5'-desyodasa.
-- Esto reduce la conversión T4 → T3, además de bloquear receptores β (FC, temblor, ansiedad).
+Recordemos el metabolismo de hormonas tiroideas:
+• La glándula tiroidea produce principalmente T4 (tiroxina) y menor cantidad de T3 (triyodotironina).
+• T3 es la hormona metabólicamente más activa (mayor afinidad por receptor nuclear).
+• Gran parte del T3 circulante se forma por conversión periférica de T4 mediante la enzima 5'-desyodasa.
+• Propranolol, a dosis altas, inhibe parcialmente esta enzima → reduce T3 activa disponible.
+
+Por lo tanto:
+El mecanismo fisiológico clave que justifica propranolol sobre otros betabloqueadores es la disminución de la conversión periférica de T4 a T3 por inhibición de la 5'-desyodasa.
+
+¿Por qué la opción C es la respuesta correcta?
+Describe el efecto diferencial del propranolol:
+• Inhibición parcial de la 5'-desyodasa en tejidos periféricos (hígado, riñón, músculo).
+• Disminución de la conversión T4 → T3, reduciendo la hormona metabólicamente más activa.
+• Este efecto se suma al bloqueo β-adrenérgico (↓ FC, temblor, ansiedad, sudoración).
+• Es la razón por la que propranolol (no atenolol ni metoprolol selectivos) es preferido en tirotoxicosis severa y tormenta tiroidea.
 
 ¿Por qué fallan las otras opciones?
-- Inhibición de peroxidasa tiroidea: mecanismo de metimazol/PTU, no de propranolol.
-- Inhibición de liberación hormonal del coloide: mecanismo de yodo/yoduros, no de betabloqueadores.
-- Inducción enzimática hepática de depuración: no es el efecto diferencial del propranolol.
+Opción A (inhibición de síntesis de T3 y T4 por bloqueo de peroxidasa tiroidea): mecanismo de metimazol y propiltiouracilo (PTU), no de propranolol.
+Opción B (inhibición de liberación hormonal del coloide): mecanismo de yodo/yoduros (efecto Wolff-Chaikoff), no de betabloqueadores.
+Opción D (aumento de depuración hepática por inducción enzimática): propranolol no induce metabolismo hepático de hormonas tiroideas de forma significativa.
 
-Clave: propranolol en Graves = β-bloqueo + inhibición parcial de 5'-desyodasa (↓ T4→T3).
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Tratamiento de hipertiroidismo" = inhibición de síntesis tiroidea.
+Pero propranolol NO es un antitiroideo; es un betabloqueador con efecto adicional sobre la conversión periférica.
+La trampa es elegir mecanismos de metimazol/PTU cuando la pregunta pide el efecto diferencial bioquímico del propranolol.
 
-Referencias: Williams Endocrinology; Katzung; ATA Hyperthyroidism Guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar tirotoxicosis severa con síntomas adrenérgicos (Graves).
+2. Iniciar propranolol para control sintomático inmediato (β-bloqueo).
+3. Reconocer el efecto adicional: inhibición parcial de 5'-desyodasa → ↓ T4→T3.
+4. Combinar con antitiroideo definitivo (metimazol/PTU) para control de la síntesis.
+
+Perlas de examen
+✅ Propranolol = β-bloqueo + inhibición parcial de 5'-desyodasa (efecto único a dosis altas).
+✅ T3 es la hormona más activa; se forma principalmente por conversión periférica de T4.
+✅ Metimazol/PTU inhiben síntesis; yodo inhibe liberación; propranolol ↓ conversión T4→T3.
+✅ Propranolol es preferido en tirotoxicosis severa y tormenta tiroidea por su doble mecanismo.
+✅ Betabloqueadores selectivos (atenolol, metoprolol) NO inhiben 5'-desyodasa.
+✅ El control sintomático con propranolol no cura Graves; requiere tratamiento antitiroideo concomitante.
+
+Referencias
+• Williams Textbook of Endocrinology.
+• Katzung Basic & Clinical Pharmacology.
+• ATA Guidelines for the Diagnosis and Management of Hyperthyroidism.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Beta blockers in the treatment of hyperthyroidism.`,
   },
   {
     id: "dr-q-128",
@@ -11973,34 +12230,77 @@ Referencias: Williams Endocrinology; Katzung; ATA Hyperthyroidism Guidelines.`,
     explanation:
       "HIT tipo II: IgG anti-complejo heparina-PF4 activa plaquetas vía FcγIIa → generación masiva de trombina → trombosis (paradoja protrombótica) y consumo plaquetario.",
     keyPoints: [
-      "HIT tipo II = trombocitopenia + trombosis (días 5-10 de heparina).",
-      "IgG contra complejo heparina-PF4 → activación plaquetaria → trombina.",
-      "Caída plaquetas >50%. Complicación principal: trombosis, no sangrado.",
-      "Suspender toda heparina (incluida HBPM) e iniciar anticoagulante alternativo.",
+      "Cuando veas: heparina día 5-10 + caída plaquetas >50% + trombosis nueva (paradoja protrombótica).",
+      "Debes pensar en: HIT tipo II = IgG anti complejo heparina-PF4 → activación plaquetaria → trombosis.",
+      "La complicación principal es TROMBOSIS, no sangrado; suspender toda heparina (incluida HBPM).",
+      "Iniciar anticoagulante alternativo (argatroban, bivalirudina, fondaparinux) sin esperar confirmación.",
+      "Tema: Hemostasia / Trombocitopenia inducida por heparina (HIT) tipo II.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa la HIT tipo II: la paradoja del paciente anticoagulado que desarrolla trombosis, por activación inmune de plaquetas mediada por heparina-PF4.
+Esta es una pregunta clásica de hemostasia porque evalúa una trampa frecuente: confundir HIT tipo II (inmunológica, protrombótica) con toxicidad medular o sangrado por anticoagulación.
+
+La clave no es pensar que heparina solo causa sangrado o destrucción medular de plaquetas.
+La clave es:
+Heparina día 5-10 + caída plaquetas >50% + trombosis nueva = IgG anti heparina-PF4 → activación masiva de plaquetas → generación de trombina.
 
 ¿Qué está ocurriendo realmente?
-- Hombre con TEP en heparina no fraccionada día 6 de tratamiento.
-- Dolor súbito, frialdad y ausencia de pulsos en miembro inferior: trombosis arterial nueva.
-- Plaquetas caen de 250,000 a 35,000/µL (>50% de descenso).
-- Cuadro clásico de trombocitopenia inducida por heparina (HIT) tipo II.
+El paciente presenta:
+• Hombre de 60 años con TEP tratado con heparina no fraccionada en infusión continua.
+• Al sexto día: dolor súbito, frialdad, palidez y ausencia de pulsos en miembro inferior derecho (trombosis arterial).
+• Plaquetas caen de 250,000 a 35,000/µL (descenso >50%).
+• Cuadro clásico de trombocitopenia inducida por heparina (HIT) tipo II con paradoja protrombótica.
 
-¿Qué dato es clave en el examen?
-- Heparina se une al factor plaquetario 4 (PF4) formando un complejo inmunogénico.
-- Se generan anticuerpos IgG que activan plaquetas vía receptor FcγIIa.
-- Activación masiva → generación de trombina → trombosis (paradoja protrombótica) + consumo plaquetario.
+Recordemos la fisiopatología de HIT tipo II:
+• La heparina se une al factor plaquetario 4 (PF4) formando un complejo inmunogénico.
+• Se generan anticuerpos IgG contra el complejo heparina-PF4.
+• Los IgG se unen a plaquetas vía receptor FcγRIIa → activación masiva plaquetaria.
+• Activación plaquetaria → generación masiva de trombina → TROMBOSIS (arterial y venosa).
+• Consumo simultáneo de plaquetas → trombocitopenia (paradoja: anticoagulado que trombosa).
+
+Por lo tanto:
+El proceso inmunológico central es la formación de anticuerpos IgG contra complejos heparina-PF4, con activación masiva de plaquetas y generación de trombina.
+
+¿Por qué la opción B es la respuesta correcta?
+Describe la cascada inmunológica completa de HIT tipo II:
+• Formación del complejo heparina-PF4 (antígeno).
+• Producción de anticuerpos IgG específicos.
+• Unión de IgG a plaquetas vía FcγRIIa → activación plaquetaria masiva.
+• Generación de trombina → trombosis (complicación principal) + consumo plaquetario.
+Explica la paradoja protrombótica: paciente anticoagulado que desarrolla trombosis.
 
 ¿Por qué fallan las otras opciones?
-- Toxicidad medular directa: la HIT no es aplasia medular; las plaquetas se consumen por activación, no por falla de producción.
-- Activación del complemento con hemólisis: no es el mecanismo central de HIT.
-- Inhibición de trombopoyetina hepática: no explica trombosis ni el patrón inmunológico.
+Opción A (destrucción directa de plaquetas por toxicidad medular): HIT no es aplasia medular; las plaquetas se consumen por activación inmune, no por falla de producción.
+Opción C (activación del complemento con hemólisis intravascular): no es el mecanismo central de HIT; no hay hemólisis como hallazgo principal.
+Opción D (inhibición de trombopoyetina hepática): la heparina no inhibe trombopoyetina; no explica el patrón inmunológico ni la trombosis.
 
-Clave: heparina día 5-10 + caída plaquetas + trombosis nueva = IgG anti heparina-PF4 → activación plaquetaria.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Trombocitopenia + anticoagulante" = riesgo de sangrado.
+Pero HIT tipo II es PROTROMBÓTICA: la complicación principal es trombosis (TEP, TVP, IAM, ACV, isquemia de extremidades).
+La trampa es elegir mecanismos de destrucción medular o sangrado cuando el escenario describe trombosis arterial nueva.
 
-Referencias: Harrison's; Williams Hematology; ASH HIT Guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar HIT si caída plaquetas >50% entre día 5-10 de heparina (o antes si exposición previa).
+2. Reconocer la paradoja: trombocitopenia + trombosis nueva en paciente anticoagulado.
+3. Suspender TODA heparina inmediatamente (HNF, HBPM, heparina en flushes).
+4. Iniciar anticoagulante alternativo (argatroban, bivalirudina, fondaparinux) sin esperar confirmación.
+
+Perlas de examen
+✅ HIT tipo II = trombocitopenia + trombosis (días 5-10 de heparina).
+✅ IgG anti complejo heparina-PF4 → activación plaquetaria vía FcγRIIa → generación de trombina.
+✅ Paradoja protrombótica: el paciente anticoagulado desarrolla trombosis, no sangrado.
+✅ Suspender toda heparina (incluida HBPM) e iniciar anticoagulante alternativo de inmediato.
+✅ Score 4T ayuda a estratificar probabilidad pre-test de HIT.
+✅ No administrar warfarina sola en HIT aguda (riesgo de necrosis por proteína C).
+
+Referencias
+• Harrison's Principles of Internal Medicine.
+• Williams Hematology.
+• ASH Guidelines on Heparin-Induced Thrombocytopenia.
+• Warkentin TE. HIT Paradox. Blood Reviews.
+• UpToDate: Clinical presentation and diagnosis of heparin-induced thrombocytopenia.`,
   },
   {
     id: "dr-q-129",
@@ -12024,34 +12324,78 @@ Referencias: Harrison's; Williams Hematology; ASH HIT Guidelines.`,
     explanation:
       "Staphylococcus aureus. La adhesión inicial al endotelio valvular lesionado depende de MSCRAMMs (unión a fibronectina, fibrinógeno y matriz extracelular expuesta). Coagulasa y proteína A actúan después (protección/evasión).",
     keyPoints: [
-      "Endocarditis en drogas IV: S. aureus, válvula tricúspide.",
-      "MSCRAMMs = adhesión inicial a fibronectina/fibrinógeno.",
-      "Coagulasa: fibrina alrededor de la bacteria (después de adhesión).",
-      "Proteína A: evasión inmune (une Fc de IgG).",
+      "Cuando veas: usuario de drogas IV + endocarditis tricuspídea + S. aureus (Gram+, racimos, catalasa+, coagulasa+).",
+      "Debes pensar en: adhesión inicial mediada por MSCRAMMs (unión a fibronectina y fibrinógeno expuestos).",
+      "Coagulasa y proteína A actúan DESPUÉS de la adhesión (protección y evasión inmune, no adhesión inicial).",
+      "Secuencia de virulencia: lesión endotelial → exposición de matriz → MSCRAMMs → colonización → vegetación.",
+      "Tema: Microbiología / Virulencia de Staphylococcus aureus en endocarditis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa virulencia de Staphylococcus aureus en endocarditis de válvula tricúspide por drogas IV: la adhesión inicial depende de MSCRAMMs, no de coagulasa.
+Esta es una pregunta clásica de microbiología porque evalúa una trampa frecuente: confundir los factores de virulencia de S. aureus según su función temporal (adhesión inicial vs protección/evasión posterior).
+
+La clave no es pensar que coagulasa o proteína A median la adhesión inicial.
+La clave es:
+Lesión endotelial valvular + exposición de matriz extracelular → MSCRAMMs (adhesinas) → adhesión inicial → colonización.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 32 años, usuario de drogas IV, con fiebre y soplo tricuspídeo.
-- Vegetación grande en válvula tricúspide (patrón clásico en endocarditis por drogas IV).
-- Hemocultivos: cocos Gram positivos en racimos, catalasa positivo, coagulasa positivo = S. aureus.
-- La pregunta pide el factor de virulencia de la adhesión inicial al endotelio valvular dañado.
+El paciente presenta:
+• Hombre de 32 años, usuario activo de drogas intravenosas.
+• Fiebre de 39°C, escalofríos, disnea y soplo holosistólico en foco tricuspídeo.
+• Ecocardiograma transesofágico: gran vegetación en válvula tricúspide (patrón clásico en endocarditis por drogas IV).
+• Hemocultivos: cocos Gram positivos en racimos, catalasa positivo, coagulasa positivo = Staphylococcus aureus.
+• La pregunta pide el factor de virulencia de la adhesión INICIAL al endotelio valvular dañado.
 
-¿Qué dato es clave en el examen?
-- La lesión endotelial expone fibronectina y fibrinógeno en la superficie valvular.
-- Las adhesinas MSCRAMMs (Microbial Surface Components Recognizing Adhesive Matrix Molecules) median la adhesión inicial.
-- Secuencia: lesión → exposición de matriz → MSCRAMMs → colonización → vegetación.
+Recordemos la virulencia de S. aureus en endocarditis:
+• MSCRAMMs (Microbial Surface Components Recognizing Adhesive Matrix Molecules): adhesinas de superficie.
+• Unen fibronectina, fibrinógeno y colágeno expuestos en el endotelio valvular lesionado.
+• Median la adhesión inicial y colonización de la válvula cardíaca.
+• Coagulasa: convierte fibrinógeno en fibrina → capa protectora alrededor de la bacteria (después de adhesión).
+• Proteína A: une dominio Fc de IgG → evasión de fagocitosis (no media adhesión).
+• Alfa-toxina: daña membranas celulares → necrosis tisular (no es adhesina).
+
+Por lo tanto:
+El principal mediador de la adhesión inicial es las adhesinas de superficie tipo MSCRAMMs (proteínas de unión a fibronectina y fibrinógeno).
+
+¿Por qué la opción C es la respuesta correcta?
+Describe el mecanismo de adhesión inicial en endocarditis por S. aureus:
+• La lesión endotelial (por drogas IV, catéteres, trauma valvular) expone fibronectina y fibrinógeno.
+• Las MSCRAMMs (ej. FnBP, ClfA) reconocen y se unen a estas moléculas de matriz extracelular.
+• Esta adhesión inicial es el paso obligatorio para colonización y formación de vegetación.
+• Es el factor de virulencia que responde directamente a "adhesión inicial" preguntada en el enunciado.
 
 ¿Por qué fallan las otras opciones?
-- Coagulasa: convierte fibrinógeno en fibrina y protege a la bacteria; actúa después de la adhesión, no es el paso inicial.
-- Proteína A: une el dominio Fc de IgG y evade inmunidad; no media adhesión valvular inicial.
-- Alfa-toxina: daña membranas celulares; no es el mediador de adhesión inicial.
+Opción A (coagulasa): convierte fibrinógeno en fibrina y forma un escudo fibrino alrededor de la bacteria; actúa DESPUÉS de la adhesión, no es el paso inicial.
+Opción B (proteína A): une el dominio Fc de IgG y evade la opsonización; es un mecanismo de evasión inmune, no de adhesión valvular.
+Opción D (alfa-toxina): daña membranas celulares causando necrosis; es una toxina citolítica, no un mediador de adhesión inicial.
 
-Clave: S. aureus + drogas IV + tricúspide = MSCRAMMs para adhesión a fibronectina/fibrinógeno; coagulasa es después.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"S. aureus coagulasa positivo" = coagulasa como factor principal de virulencia.
+Pero coagulasa actúa en la fase de PROTECCIÓN (escudo de fibrina), no en la adhesión INICIAL.
+La trampa es elegir coagulasa o proteína A cuando la pregunta especifica "adhesión inicial a células endoteliales dañadas".
 
-Referencias: Murray Medical Microbiology; Mandell; Harrison's.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Lesión endotelial valvular (drogas IV, catéter, válvula nativa dañada).
+2. Exposición de fibronectina, fibrinógeno y colágeno en la superficie valvular.
+3. Adhesión inicial mediada por MSCRAMMs (FnBP, ClfA, etc.).
+4. Colonización → formación de vegetación → coagulasa (protección) + proteína A (evasión).
+
+Perlas de examen
+✅ Endocarditis en drogas IV: S. aureus afecta válvula tricúspide (diferente a endocarditis clásica en válvula izquierda).
+✅ MSCRAMMs = adhesión inicial a fibronectina/fibrinógeno expuestos en endotelio dañado.
+✅ Coagulasa: fibrina alrededor de la bacteria (protección), NO adhesión inicial.
+✅ Proteína A: evasión inmune (une Fc de IgG), NO adhesión valvular.
+✅ Alfa-toxina: citotoxicidad/necrosis, NO adhesión.
+✅ La pregunta de virulencia siempre distingue función temporal: adhesión → colonización → evasión.
+
+Referencias
+• Murray's Medical Microbiology.
+• Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases.
+• Harrison's Principles of Internal Medicine.
+• Fowler VG et al. Staphylococcus aureus Endocarditis. JAMA.
+• UpToDate: Clinical manifestations of Staphylococcus aureus infection in adults.`,
   },
   {
     id: "dr-q-130",
@@ -12087,34 +12431,77 @@ Referencias: Murray Medical Microbiology; Mandell; Harrison's.`,
     explanation:
       "Fibrosis quística por mutación CFTR. Falla del canal de cloro altera secreción de cloro y bicarbonato en células ductales pancreáticas → secreciones viscosas → obstrucción ductal → pancreatitis crónica e insuficiencia exocrina.",
     keyPoints: [
-      "CFTR = canal de cloro regulado por ATP (autosómica recesiva).",
-      "Test de sudor: Cl⁻ >60 mmol/L sugestivo de fibrosis quística.",
-      "Páncreas: ↓ bicarbonato y agua → secreciones espesas → obstrucción.",
-      "Tos crónica + pancreatitis joven + sudor positivo = fibrosis quística.",
+      "Cuando veas: joven con pancreatitis crónica + tos crónica desde infancia + sudor Cl⁻ >60 mmol/L.",
+      "Debes pensar en: fibrosis quística por mutación CFTR → ↓ secreción de bicarbonato y agua en ductos pancreáticos.",
+      "CFTR es canal de cloro regulado por ATP; en páncreas falla la secreción de Cl⁻ y HCO₃⁻ hacia la luz ductal.",
+      "Secreciones espesas → obstrucción ductal → pancreatitis crónica e insuficiencia exocrina (consecuencia, no mecanismo directo).",
+      "Tema: Fisiología celular / Fibrosis quística y función del CFTR.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa fibrosis quística más allá del pulmón: la mutación CFTR altera secreción ductal pancreática de cloro y bicarbonato, causando pancreatitis crónica joven.
+Esta es una pregunta clásica de fisiología celular porque evalúa una trampa frecuente: confundir las consecuencias tardías de fibrosis quística (insuficiencia exocrina, ↓ tripsinógeno) con la alteración fisiológica DIRECTA del defecto CFTR en ductos pancreáticos.
+
+La clave no es pensar que CFTR afecta primariamente la síntesis de enzimas pancreáticas.
+La clave es:
+Mutación CFTR → falla secreción de Cl⁻ y HCO₃⁻ en células ductales → ↓ agua luminal → secreciones espesas → obstrucción ductal.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 22 años con pancreatitis crónica (calcificaciones en TAC) y dolor epigástrico recurrente.
-- Tos crónica productiva desde la infancia (compromiso respiratorio).
-- Prueba de sudor con cloruros 85 mmol/L (normal <40): diagnóstico de fibrosis quística.
-- Enfermedad autosómica recesiva por defecto del canal CFTR.
+El paciente presenta:
+• Hombre de 22 años con episodios recurrentes de dolor epigástrico irradiado a la espalda.
+• TAC con calcificaciones pancreáticas compatibles con pancreatitis crónica.
+• Tos crónica productiva desde la infancia (compromiso respiratorio).
+• Prueba de sudor: cloruros 85 mmol/L (normal <40 mmol/L) → diagnóstico de fibrosis quística.
+• Enfermedad autosómica recesiva por defecto del canal CFTR.
 
-¿Qué dato es clave en el examen?
-- CFTR es canal de cloro regulado por ATP en epitelios exocrinos.
-- En ductos pancreáticos: falla la secreción de Cl⁻ y HCO₃⁻ → menos agua luminal → secreciones espesas.
-- Obstrucción ductal → pancreatitis crónica e insuficiencia exocrina.
-- En sudor: CFTR no reabsorbe Cl⁻ → sudor hiperclorémico (test diagnóstico).
+Recordemos la función del CFTR:
+• CFTR = canal de cloro regulado por ATP (cAMP) en epitelios exocrinos.
+• En ductos pancreáticos: secreta Cl⁻ y HCO₃⁻ hacia la luz ductal → atracción osmótica de agua → fluido alcalino diluido.
+• En sudor: reabsorbe Cl⁻ del sudor ductal → sudor hipoclorémico en condiciones normales.
+• Mutación CFTR → falla secreción ductal de Cl⁻/HCO₃⁻ → secreciones viscosas → obstrucción.
+• En sudor: falla reabsorción de Cl⁻ → sudor hiperclorémico (test diagnóstico).
+
+Por lo tanto:
+La alteración fisiológica directa en células ductales pancreáticas es la disminución de la secreción de bicarbonato y agua hacia la luz ductal, produciendo secreciones espesas y obstrucción ductal.
+
+¿Por qué la opción A es la respuesta correcta?
+Describe el mecanismo fisiológico directo del defecto CFTR en el páncreas:
+• CFTR normalmente secreta Cl⁻ y HCO₃⁻ al lumen ductal pancreático.
+• El bicarbonato neutraliza la acidez del quimo gástrico que llega al duodeno.
+• La secreción de Cl⁻/HCO₃⁻ genera flujo osmótico de agua → fluido ductal diluido.
+• Con CFTR mutado: ↓ HCO₃⁻ y ↓ agua → secreciones espesas → obstrucción ductal → pancreatitis crónica.
+Responde directamente a "alteración fisiológica DIRECTA" preguntada en el enunciado.
 
 ¿Por qué fallan las otras opciones?
-- Aumento de secreción de enzimas activadas: el problema es viscosidad/obstrucción por falta de fluido alcalino, no hipersecreción enzimática primaria.
-- Incremento de absorción de bicarbonato: es lo opuesto; hay disminución de secreción de HCO₃⁻.
-- Disminución de síntesis de tripsinógeno: es consecuencia tardía (insuficiencia exocrina), no la alteración fisiológica directa del defecto CFTR.
+Opción B (aumento de secreción de enzimas pancreáticas activadas): el problema no es hipersecreción enzimática, sino falta de fluido alcalino que diluye y protege los conductos.
+Opción C (incremento de absorción ductal de bicarbonato): es lo opuesto; hay disminución de SECRECIÓN de HCO₃⁻, no aumento de absorción.
+Opción D (disminución de síntesis de tripsinógeno): es una consecuencia TARDÍA (destrucción glandular por obstrucción crónica), no la alteración fisiológica directa del defecto CFTR.
 
-Clave: tos crónica + pancreatitis joven + sudor Cl⁻ alto = CFTR → ↓ HCO₃⁻/agua ductal → obstrucción.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Fibrosis quística + páncreas" = insuficiencia pancreática exocrina (↓ enzimas).
+Pero la insuficiencia exocrina es una CONSECUENCIA tardía de la obstrucción crónica, no la alteración fisiológica directa.
+La trampa es elegir "↓ síntesis de tripsinógeno" cuando la pregunta pide el mecanismo primario del defecto CFTR en ductos.
 
-Referencias: Guyton & Hall; Robbins & Cotran; Cystic Fibrosis Foundation Guidelines.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Mutación CFTR (autosómica recesiva) → canal de cloro disfuncional.
+2. Falla secreción de Cl⁻ y HCO₃⁻ en ductos pancreáticos → ↓ agua luminal.
+3. Secreciones espesas → obstrucción ductal → pancreatitis crónica recurrente.
+4. Destrucción glandular progresiva → insuficiencia exocrina (consecuencia tardía).
+
+Perlas de examen
+✅ CFTR = canal de cloro regulado por ATP; mutación causa fibrosis quística (autosómica recesiva).
+✅ Test de sudor: Cl⁻ >60 mmol/L sugestivo; >80 mmol/L confirma fibrosis quística.
+✅ Páncreas: ↓ secreción de HCO₃⁻ y agua → secreciones espesas → obstrucción ductal.
+✅ Pulmón: ↓ secreción de Cl⁻/agua en vías aéreas → moco espeso → infecciones recurrentes.
+✅ Insuficiencia exocrina (↓ tripsinógeno) es consecuencia tardía, no alteración directa del CFTR.
+✅ Tos crónica + pancreatitis joven + sudor positivo = fibrosis quística hasta demostrar lo contrario.
+
+Referencias
+• Guyton & Hall Textbook of Medical Physiology.
+• Robbins & Cotran Pathologic Basis of Disease.
+• Cystic Fibrosis Foundation Clinical Care Guidelines.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Cystic fibrosis: Clinical manifestations and diagnosis.`,
   },
 ];
