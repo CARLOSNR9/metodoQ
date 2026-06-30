@@ -3744,20 +3744,70 @@ Referencias
     correctOptionId: "B",
     explanation: "La presencia de fiebre prolongada asociada a un nuevo soplo cardíaco debe hacer sospechar endocarditis infecciosa hasta demostrar lo contrario. El estudio inicial incluye hemocultivos seriados y ecocardiografía para confirmar el diagnóstico e identificar compromiso valvular.",
     keyPoints: [
-      "Endocarditis infecciosa.",
-      "Tema: Endocarditis infecciosa.",
-      "Fiebre más soplo cardíaco obliga a descartar endocarditis infecciosa.",
+      "Cuando veas: fiebre prolongada (>2 semanas) + astenia + pérdida de peso + nuevo soplo diastólico en foco aórtico.",
+      "Debes pensar en: endocarditis infecciosa → hemocultivos seriados y ecocardiograma antes de antibióticos.",
+      "Fiebre + soplo cardíaco nuevo obliga a descartar endocarditis infecciosa.",
       "Los hemocultivos deben obtenerse antes de iniciar antibióticos.",
-      "El ecocardiograma es fundamental para el diagnóstico.",
+      "Tema: Endocarditis infecciosa.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
-Endocarditis infecciosa.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes se enfocan en: La pérdida de peso. Y responden: Tuberculosis o neoplasia.
+Esta es una pregunta clásica de infectología porque evalúa una trampa frecuente: enfocarse en la pérdida de peso y pensar en tuberculosis o neoplasia, ignorando el soplo cardíaco nuevo.
 
-Referencias:
-European Society of Cardiology Guidelines for Infective Endocarditis.; American Heart Association Scientific Statement on Infective Endocarditis.; Harrison's Principles of Internal Medicine.; Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases.`,
+La clave no es tuberculosis ni linfoma.
+La clave es:
+Fiebre prolongada + nuevo soplo cardíaco = endocarditis infecciosa hasta demostrar lo contrario → hemocultivos + ecocardiograma.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 40 años con fiebre de 2 semanas, astenia y pérdida de peso.
+• Nuevo soplo diastólico en foco aórtico.
+• Sin antecedentes relevantes.
+• Cuadro altamente sugestivo de endocarditis infecciosa.
+
+Recordemos endocarditis infecciosa:
+• Fiebre + soplo cardíaco nuevo es la presentación clásica.
+• Criterios de Duke: hemocultivos positivos + ecocardiograma con vegetación.
+• Hemocultivos seriados (3 sets) antes de antibióticos.
+• Ecocardiograma transtorácico y/o transesofágico.
+• Complicaciones: embolia, insuficiencia valvular, absceso perivalvular.
+• Staphylococcus aureus y estreptococos viridans son agentes frecuentes.
+
+Por lo tanto:
+Diagnóstico: endocarditis infecciosa; conducta: hemocultivos y ecocardiograma (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+El soplo nuevo con fiebre prolongada define sospecha alta; el estudio inicial obligatorio son hemocultivos seriados y ecocardiografía.
+
+¿Por qué fallan las otras opciones?
+Opción A (fiebre reumática): requiere antecedente estreptocócico, artritis migratoria, carditis; no explica fiebre prolongada en adulto sin contexto reumático.
+Opción C (TB diseminada): no explica soplo cardíaco nuevo; baciloscopias no son estudio inicial ante soplo.
+Opción D (linfoma): no explica soplo diastólico aórtico; biopsia ganglionar no es primera línea sin adenopatías.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes se enfocan en pérdida de peso y responden tuberculosis o neoplasia.
+El soplo cardíaco nuevo es el dato que orienta a endocarditis infecciosa.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Fiebre prolongada + soplo nuevo → sospechar endocarditis.
+2. Hemocultivos seriados antes de antibióticos.
+3. Ecocardiograma para vegetaciones y complicaciones.
+4. Iniciar antibióticos empíricos según guías tras hemocultivos.
+
+Perlas de examen
+✅ Fiebre + soplo nuevo = endocarditis hasta demostrar lo contrario.
+✅ Hemocultivos antes de antibióticos siempre.
+✅ Ecocardiograma es fundamental para diagnóstico y complicaciones.
+✅ La pérdida de peso sola no define el diagnóstico; el soplo sí.
+✅ Criterios de Duke guían confirmación diagnóstica.
+
+Referencias
+• European Society of Cardiology Guidelines for Infective Endocarditis.
+• American Heart Association Scientific Statement on Infective Endocarditis.
+• Harrison's Principles of Internal Medicine.
+• Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases.
+• UpToDate: Infective endocarditis in adults.`,
   },
   {
     id: "dr-q-202",
@@ -3776,20 +3826,69 @@ European Society of Cardiology Guidelines for Infective Endocarditis.; American 
     correctOptionId: "A",
     explanation: "La presencia de desdoblamiento fijo del segundo ruido cardíaco asociado a un soplo sistólico eyectivo en foco pulmonar constituye el hallazgo clásico de la comunicación interauricular.",
     keyPoints: [
-      "Comunicación interauricular.",
+      "Cuando veas: niño con fatiga y disnea de esfuerzo + soplo mesosistólico en foco pulmonar + desdoblamiento fijo de S2.",
+      "Debes pensar en: comunicación interauricular (CIA) → cardiopatía congénita acianótica más frecuente en adultos jóvenes.",
+      "El desdoblamiento fijo de S2 es el hallazgo semiológico patognomónico de la CIA.",
+      "El soplo se produce por aumento del flujo pulmonar, no por el defecto mismo.",
       "Tema: Cardiopatías congénitas acianóticas.",
-      "El desdoblamiento fijo de S2 es el hallazgo clásico de la CIA.",
-      "La CIA es una cardiopatía congénita acianótica.",
-      "El soplo se produce por aumento del flujo pulmonar.",
     ],
-    theoryContent: `CARDIOLOGÍA PEDIÁTRICA — BY DR Q.
-Cardiopatías congénitas acianóticas.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes recuerdan: "Soplo pulmonar." Y responden: Persistencia del conducto arterioso.
+Esta es una pregunta clásica de cardiología pediátrica porque evalúa el reconocimiento del hallazgo patognomónico de la comunicación interauricular.
 
-Referencias:
-Nelson Textbook of Pediatrics.; Moss & Adams' Heart Disease in Infants, Children, and Adolescents.; Braunwald's Heart Disease.; American Heart Association Guidelines for Congenital Heart Disease.`,
+La clave no es CIV ni conducto arterioso persistente.
+La clave es:
+Soplo mesosistólico pulmonar + desdoblamiento fijo de S2 = comunicación interauricular.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Niño de 6 años con fatiga y disnea de esfuerzo progresiva.
+• Soplo mesosistólico en foco pulmonar.
+• Desdoblamiento fijo del segundo ruido cardíaco.
+• Cuadro clásico de CIA.
+
+Recordemos cardiopatías congénitas acianóticas:
+• CIA: defecto en tabique interauricular; desdoblamiento fijo de S2 es patognomónico.
+• CIV: soplo holosistólico en borde esternal izquierdo, no desdoblamiento fijo.
+• PCA: soplo continuo en \"maquinaria\", no desdoblamiento fijo.
+• Tetralogía de Fallot: cianótica, no acianótica.
+• La CIA puede ser asintomática en infancia y manifestarse en edad escolar.
+
+Por lo tanto:
+El diagnóstico más probable es comunicación interauricular (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+El desdoblamiento fijo de S2 es el hallazgo semiológico más específico de CIA; el soplo pulmonar refleja flujo aumentado.
+
+¿Por qué fallan las otras opciones?
+Opción B (CIV): soplo holosistólico, no mesosistólico pulmonar; no desdoblamiento fijo.
+Opción C (PCA): soplo continuo tipo maquinaria, no mesosistólico con desdoblamiento fijo.
+Opción D (Fallot): cardiopatía cianótica; no compatible con cuadro acianótico.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan \"soplo pulmonar\" y responden conducto arterioso persistente.
+El desdoblamiento fijo de S2 diferencia CIA de todas las demás.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Soplo en niño → clasificar tipo y localización.
+2. Desdoblamiento fijo de S2 = CIA hasta demostrar lo contrario.
+3. Confirmar con ecocardiograma.
+4. Cerrar si hay repercusión hemodinámica.
+
+Perlas de examen
+✅ Desdoblamiento fijo de S2 = CIA (hallazgo patognomónico).
+✅ Soplo mesosistólico pulmonar por flujo aumentado, no por el defecto.
+✅ CIA es acianótica; Fallot es cianótica.
+✅ PCA = soplo continuo, no mesosistólico.
+✅ La CIA puede diagnosticarse tardíamente en edad escolar.
+
+Referencias
+• Nelson Textbook of Pediatrics.
+• Moss & Adams' Heart Disease in Infants, Children, and Adolescents.
+• Braunwald's Heart Disease.
+• American Heart Association Guidelines for Congenital Heart Disease.
+• UpToDate: Isolated atrial septal defects in children.`,
   },
   {
     id: "dr-q-203",
@@ -3808,20 +3907,70 @@ Nelson Textbook of Pediatrics.; Moss & Adams' Heart Disease in Infants, Children
     correctOptionId: "B",
     explanation: "La escala de Glasgow se calcula sumando la respuesta ocular, verbal y motora. En este paciente la apertura ocular al dolor corresponde a 2 puntos, los sonidos incomprensibles a 2 puntos y la respuesta motora inadecuada (retirada al dolor) a 3 puntos, para un total de 7 puntos.",
     keyPoints: [
-      "Glasgow 7/15.",
-      "Tema: Escala de Coma de Glasgow.",
+      "Cuando veas: trauma craneoencefálico severo con apertura ocular al dolor + sonidos incomprensibles + respuesta motora inadecuada al dolor.",
+      "Debes pensar en: Glasgow 7/15 (2+2+3) → TCE grave con indicación de manejo avanzado de vía aérea.",
       "Glasgow ≤ 8 indica trauma craneoencefálico grave.",
       "La respuesta motora es el componente con mayor valor pronóstico.",
-      "La apertura ocular al dolor corresponde a 2 puntos.",
+      "Tema: Escala de Coma de Glasgow.",
     ],
-    theoryContent: `URGENCIAS — BY DR Q.
-Escala de Coma de Glasgow.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes olvidan: La puntuación individual de cada componente. O confunden: Flexión anormal con retirada al dolor.
+Esta es una pregunta clásica de urgencias/neurocirugía porque evalúa el cálculo correcto de la escala de Glasgow, una herramienta fundamental en trauma craneoencefálico.
 
-Referencias:
-Advanced Trauma Life Support (ATLS).; Brain Trauma Foundation Guidelines.; Greenberg's Handbook of Neurosurgery.; Tintinalli's Emergency Medicine.`,
+La clave no es confundir los componentes ni sumar incorrectamente.
+La clave es:
+Apertura ocular al dolor (2) + sonidos incomprensibles (2) + retirada al dolor (3) = Glasgow 7.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 43 años con TCE severo post-accidente de tránsito.
+• Apertura ocular al dolor = 2 puntos.
+• Emisión de sonidos incomprensibles = 2 puntos.
+• Respuesta motora inadecuada (retirada al dolor) = 3 puntos.
+• Total: Glasgow 7/15.
+
+Recordemos escala de Glasgow:
+• Apertura ocular: espontánea 4, a la voz 3, al dolor 2, ninguna 1.
+• Respuesta verbal: orientado 5, confuso 4, palabras inapropiadas 3, sonidos incomprensibles 2, ninguna 1.
+• Respuesta motora: obedece órdenes 6, localiza 5, retirada 4, flexión anormal (decorticación) 3, extensión anormal (descerebración) 2, ninguna 1.
+• Glasgow ≤ 8 = TCE grave → considerar intubación.
+• La respuesta motora tiene mayor valor pronóstico.
+
+Por lo tanto:
+El puntaje es 7 puntos (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+2 (ocular) + 2 (verbal) + 3 (motora) = 7; no confundir retirada al dolor (4) con flexión anormal (3).
+
+¿Por qué fallan las otras opciones?
+Opción A (6): suma incorrecta de componentes.
+Opción C (8): confunde retirada (4) con flexión anormal (3) o verbal.
+Opción D (9): sobreestima componentes motores o verbales.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden flexión anormal (decorticación, 3 puntos) con retirada al dolor (4 puntos).
+También confunden sonidos incomprensibles (2) con palabras inapropiadas (3).
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar apertura ocular, respuesta verbal y motora por separado.
+2. Sumar los tres componentes (máximo 15).
+3. Glasgow ≤ 8 → TCE grave, considerar intubación.
+4. La respuesta motora es el predictor pronóstico más importante.
+
+Perlas de examen
+✅ Glasgow = ocular + verbal + motora (máx. 15).
+✅ ≤ 8 = TCE grave → vía aérea definitiva.
+✅ Retirada al dolor = 4; flexión anormal = 3; no confundir.
+✅ Sonidos incomprensibles = 2; palabras inapropiadas = 3.
+✅ La respuesta motora tiene mayor valor pronóstico.
+
+Referencias
+• Advanced Trauma Life Support (ATLS).
+• Brain Trauma Foundation Guidelines.
+• Greenberg's Handbook of Neurosurgery.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Glasgow Coma Scale.`,
   },
   {
     id: "dr-q-204",
@@ -3840,20 +3989,71 @@ Advanced Trauma Life Support (ATLS).; Brain Trauma Foundation Guidelines.; Green
     correctOptionId: "B",
     explanation: "El paciente presenta una taquicardia supraventricular estable. En lactantes hemodinámicamente estables, la adenosina es el tratamiento farmacológico de elección debido a su capacidad para bloquear transitoriamente la conducción a través del nodo auriculoventricular.",
     keyPoints: [
-      "Taquicardia supraventricular.",
-      "Tema: Taquicardia supraventricular en pediatría.",
+      "Cuando veas: lactante con taquicardia de 230 lpm + TSV de complejos estrechos, regular, sin ondas P visibles, hemodinámicamente estable.",
+      "Debes pensar en: adenosina IV como tratamiento farmacológico de elección en TSV estable.",
       "La TSV es la arritmia sintomática más frecuente en lactantes.",
-      "La adenosina es el tratamiento farmacológico de elección en pacientes estables.",
-      "Debe administrarse en bolo intravenoso rápido.",
+      "La cardioversión sincronizada se reserva para inestabilidad hemodinámica.",
+      "Tema: Taquicardia supraventricular en pediatría.",
     ],
-    theoryContent: `CARDIOLOGÍA — BY DR Q.
-Taquicardia supraventricular en pediatría.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "230 lpm." Y responden: Cardioversión.
+Esta es una pregunta clásica de cardiología pediátrica porque evalúa una trampa frecuente: cardioversión ante taquicardia rápida sin evaluar estabilidad hemodinámica.
 
-Referencias:
-Nelson Textbook of Pediatrics.; Pediatric Advanced Life Support (PALS).; Braunwald's Heart Disease.; Moss & Adams' Heart Disease in Infants, Children, and Adolescents.`,
+La clave no es cardioversión ni amiodarona de primera línea.
+La clave es:
+TSV estable en lactante → adenosina IV en bolo rápido como tratamiento de elección.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Lactante de 2 meses con irritabilidad y disminución de succión súbita.
+• Taquicardia de 230 lpm.
+• ECG: TSV de complejos estrechos, regular, sin ondas P.
+• Hemodinámicamente estable (no shock ni hipotensión).
+• Cuadro compatible con TSV estable.
+
+Recordemos TSV en pediatría:
+• Arritmia sintomática más frecuente en lactantes.
+• ECG: taquicardia regular de complejos estrechos, ondas P ausentes o retrogradas.
+• Estable → adenosina IV (bloqueo transitorio AV).
+• Inestable (shock, hipotensión, alteración de conciencia) → cardioversión sincronizada.
+• Amiodarona es segunda línea, no primera en TSV estable.
+• Betabloqueadores IV no son primera línea en lactantes.
+
+Por lo tanto:
+Tratamiento de elección: adenosina intravenosa (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+En TSV estable, la adenosina interrumpe el circuito de reentrada bloqueando transitoriamente el nodo AV.
+
+¿Por qué fallan las otras opciones?
+Opción A (amiodarona): segunda línea; no primera en TSV estable pediátrica.
+Opción C (cardioversión sincronizada): reservada para inestabilidad hemodinámica.
+Opción D (metoprolol): no es primera línea en lactantes con TSV estable.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen \"230 lpm\" y responden cardioversión automáticamente.
+El examen exige distinguir TSV estable (adenosina) vs inestable (cardioversión).
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar TSV en ECG (complejos estrechos, regular, sin P).
+2. Evaluar estabilidad hemodinámica.
+3. Estable → adenosina IV en bolo rápido.
+4. Inestable → cardioversión sincronizada inmediata.
+
+Perlas de examen
+✅ TSV estable en lactante = adenosina IV.
+✅ Cardioversión solo si inestabilidad hemodinámica.
+✅ TSV es la arritmia sintomática más frecuente en lactantes.
+✅ Adenosina en bolo IV rápido seguido de flush salino.
+✅ Amiodarona es segunda línea, no primera.
+
+Referencias
+• Nelson Textbook of Pediatrics.
+• Pediatric Advanced Life Support (PALS).
+• Braunwald's Heart Disease.
+• Moss & Adams' Heart Disease in Infants, Children, and Adolescents.
+• UpToDate: Supraventricular tachycardia in children.`,
   },
   {
     id: "dr-q-205",
@@ -3872,20 +4072,70 @@ Nelson Textbook of Pediatrics.; Pediatric Advanced Life Support (PALS).; Braunwa
     correctOptionId: "B",
     explanation: "La hemorragia subaracnoidea clásicamente se presenta con cefalea intensa de inicio súbito (\"la peor cefalea de su vida\"), acompañada de signos de irritación meníngea como rigidez de nuca y fotofobia.",
     keyPoints: [
-      "Hemorragia subaracnoidea.",
+      "Cuando veas: cefalea intensa de inicio súbito (\"en trueno\") + náuseas + fotofobia + rigidez de nuca sin focalización neurológica.",
+      "Debes pensar en: hemorragia subaracnoidea → TC cerebral sin contraste urgente.",
+      "La HSA produce la clásica \"cefalea en trueno\" o \"la peor cefalea de su vida\".",
+      "La causa más frecuente es ruptura de aneurisma sacular.",
       "Tema: Hemorragia subaracnoidea.",
-      "La hemorragia subaracnoidea produce la clásica \"cefalea en trueno\".",
-      "La causa más frecuente es la ruptura de un aneurisma sacular.",
-      "La rigidez de nuca es un signo de irritación meníngea.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Hemorragia subaracnoidea.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Fotofobia." Y responden: Meningitis.
+Esta es una pregunta clásica de neurología porque evalúa el reconocimiento de hemorragia subaracnoidea frente a meningitis u otras cefaleas primarias.
 
-Referencias:
-Adams and Victor's Principles of Neurology.; Greenberg's Handbook of Neurosurgery.; American Heart Association Guidelines for Aneurysmal Subarachnoid Hemorrhage.; Harrison's Principles of Internal Medicine.`,
+La clave no es meningitis ni migraña.
+La clave es:
+Cefalea súbita intensa + rigidez de nuca + fotofobia = hemorragia subaracnoidea hasta demostrar lo contrario.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 57 años con HTA y obesidad.
+• Cefalea intensa de inicio súbito, náuseas, fotofobia.
+• Rigidez de nuca sin focalización neurológica.
+• Cuadro clásico de hemorragia subaracnoidea.
+
+Recordemos hemorragia subaracnoidea:
+• Cefalea en trueno: inicio súbito, máxima intensidad en segundos.
+• Irritación meníngea: rigidez de nuca, fotofobia.
+• Causa más frecuente: ruptura de aneurisma sacular (80%).
+• TC cerebral sin contraste es estudio inicial (sensibilidad >95% en primeras 6 h).
+• Si TC negativa → punción lumbar (xantocromía).
+• Complicaciones: vasoespasmo, hidrocefalia, re-sangrado.
+
+Por lo tanto:
+Diagnóstico más probable: hemorragia subaracnoidea (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La cefalea en trueno con irritación meníngea sin fiebre ni alteración del estado mental inicial orienta a HSA, no meningitis bacteriana.
+
+¿Por qué fallan las otras opciones?
+Opción A (meningitis bacteriana): requiere fiebre, alteración del estado mental; cefalea progresiva, no en trueno.
+Opción C (migraña): cefalea pulsátil unilateral con aura; no rigidez de nuca ni inicio en trueno.
+Opción D (encefalitis): alteración del estado mental, fiebre, convulsiones; no presentes aquí.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen \"fotofobia y rigidez de nuca\" y responden meningitis.
+La cefalea de inicio súbito (trueno) diferencia HSA de meningitis.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Cefalea en trueno → HSA hasta demostrar lo contrario.
+2. TC cerebral sin contraste urgente.
+3. Si TC negativa y alta sospecha → punción lumbar.
+4. Angiografía para localizar aneurisma si HSA confirmada.
+
+Perlas de examen
+✅ Cefalea en trueno = HSA hasta demostrar lo contrario.
+✅ Causa más frecuente: aneurisma sacular.
+✅ TC sin contraste es estudio inicial de elección.
+✅ Meningitis: fiebre + cefalea progresiva, no en trueno.
+✅ Vasoespasmo es complicación tardía (días 3-14).
+
+Referencias
+• Adams and Victor's Principles of Neurology.
+• Greenberg's Handbook of Neurosurgery.
+• American Heart Association Guidelines for Aneurysmal Subarachnoid Hemorrhage.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Aneurysmal subarachnoid hemorrhage.`,
   },
   {
     id: "dr-q-206",
@@ -3904,20 +4154,72 @@ Adams and Victor's Principles of Neurology.; Greenberg's Handbook of Neurosurger
     correctOptionId: "B",
     explanation: "El cuadro clínico es compatible con bronquiolitis aguda, cuyo tratamiento es fundamentalmente de soporte. La oxigenoterapia está indicada cuando existe hipoxemia y no se recomienda el uso rutinario de broncodilatadores, corticoides o antibióticos.",
     keyPoints: [
-      "Bronquiolitis aguda.",
-      "Tema: Bronquiolitis.",
+      "Cuando veas: lactante <2 años con fiebre, tos, sibilancias, tiraje y SatO₂ 92%, sin antecedente de sibilancias recurrentes.",
+      "Debes pensar en: bronquiolitis aguda → oxígeno suplementario y medidas de soporte, no broncodilatadores rutinarios.",
       "El VSR es la principal causa de bronquiolitis.",
-      "La bronquiolitis ocurre principalmente en menores de 2 años.",
-      "El tratamiento es fundamentalmente de soporte.",
+      "El tratamiento es fundamentalmente de soporte; no broncodilatadores ni corticoides de rutina.",
+      "Tema: Bronquiolitis.",
     ],
-    theoryContent: `PEDIATRÍA — BY DR Q.
-Bronquiolitis.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Sibilancias." Y responden: Salbutamol.
+Esta es una pregunta clásica de pediatría porque evalúa una trampa frecuente: tratar bronquiolitis como asma con salbutamol y corticoides.
 
-Referencias:
-Nelson Textbook of Pediatrics.; American Academy of Pediatrics Clinical Practice Guideline: Bronchiolitis.; Manual de Pediatría de la AEP.; UpToDate: Bronchiolitis in Infants and Children.`,
+La clave no es salbutamol ni antibióticos.
+La clave es:
+Lactante con primer episodio de sibilancias + hipoxemia → bronquiolitis → oxígeno y soporte.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Lactante de 1 año con fiebre, tos y dificultad respiratoria de 2 días.
+• Sibilancias difusas, tiraje intercostal.
+• SatO₂ 92% al aire ambiente (hipoxemia).
+• Sin antecedentes de episodios similares (primer episodio).
+• Cuadro compatible con bronquiolitis aguda por VSR.
+
+Recordemos bronquiolitis:
+• Principal causa: virus sincitial respiratorio (VSR).
+• Edad típica: <2 años, pico en <6 meses.
+• Tratamiento: soporte (oxígeno, hidratación, aspiración de secreciones).
+• No broncodilatadores de rutina (evidencia limitada).
+• No corticoides sistémicos.
+• No antibióticos (etiología viral).
+• Criterios de hospitalización: hipoxemia, deshidratación, apnea.
+
+Por lo tanto:
+Tratamiento más adecuado: oxígeno suplementario y medidas de soporte (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La hipoxemia (SatO₂ 92%) requiere oxigenoterapia; el manejo de bronquiolitis es fundamentalmente de soporte.
+
+¿Por qué fallan las otras opciones?
+Opción A (salbutamol + prednisolona): no recomendado de rutina en bronquiolitis según guías AAP.
+Opción C (ceftriaxona): etiología viral; antibióticos no indicados sin sobreinfección bacteriana.
+Opción D (adrenalina IM): indicada en anafilaxia, no bronquiolitis.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen \"sibilancias\" y responden salbutamol como en asma.
+Bronquiolitis en lactante primer episodio = soporte, no broncodilatadores rutinarios.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Lactante con sibilancias primer episodio → bronquiolitis hasta demostrar lo contrario.
+2. Evaluar hipoxemia y estado de hidratación.
+3. Oxígeno si SatO₂ <90-92%.
+4. No broncodilatadores, corticoides ni antibióticos de rutina.
+
+Perlas de examen
+✅ Bronquiolitis = soporte; no salbutamol de rutina.
+✅ VSR es la causa principal.
+✅ Hipoxemia (SatO₂ <90-92%) = indicación de oxígeno.
+✅ Primer episodio de sibilancias en lactante ≠ asma.
+✅ Antibióticos solo si sobreinfección bacteriana sospechada.
+
+Referencias
+• Nelson Textbook of Pediatrics.
+• American Academy of Pediatrics Clinical Practice Guideline: Bronchiolitis.
+• Manual de Pediatría de la AEP.
+• UpToDate: Bronchiolitis in Infants and Children.
+• WHO Pocket Book of Hospital Care for Children.`,
   },
   {
     id: "dr-q-207",
@@ -3936,32 +4238,70 @@ Nelson Textbook of Pediatrics.; American Academy of Pediatrics Clinical Practice
     correctOptionId: "B",
     explanation: "El vaso visible no sangrante en el lecho ulceroso corresponde a Forrest IIa. La hemorragia digestiva alta con anemia significativa, taquicardia y contexto de AINEs eleva el Glasgow-Blatchford por encima de 7, orientando a úlcera péptica secundaria a antiinflamatorios.",
     keyPoints: [
-      "Forrest IIa: vaso visible no sangrante en lecho ulceroso.",
+      "Cuando veas: hematemesis y melena en paciente con AINEs crónicos, endoscopia con vaso visible no sangrante, Hb 8 g/dL, BUN elevado y taquicardia.",
+      "Debes pensar en: Forrest IIa + Glasgow-Blatchford alto riesgo (>7) → úlcera péptica secundaria a AINE.",
+      "Forrest IIa implica vaso visible no sangrante; requiere hemostasia endoscópica por alto riesgo de resangrado.",
       "Glasgow-Blatchford >7 indica alto riesgo de reintervención o mortalidad.",
-      "Los AINEs son una causa frecuente de úlcera péptica complicada.",
-      "Forrest Ia implica sangrado activo; Forrest IIc, mancha hemática adherida.",
-      "El BUN elevado puede reflejar absorción de sangre digestiva.",
+      "Tema: Hemorragia digestiva alta y clasificación de Forrest.",
     ],
-    theoryContent: `GASTROENTEROLOGÍA — BY DR Q.
-Hemorragia digestiva alta y clasificación de Forrest.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-La clave no es la hemoglobina aislada.
-La clave es: vaso visible no sangrante = Forrest IIa.
+Esta es una pregunta clásica de gastroenterología porque evalúa una trampa frecuente: clasificar mal la lesión endoscópica o subestimar el riesgo clínico por no integrar Forrest con Glasgow-Blatchford.
 
-Forrest:
-• Ia/Ib: sangrado activo.
-• IIa: vaso visible no sangrante.
-• IIb: coágulo adherido.
-• IIc: mancha hemática plana.
-• III: base limpia.
+La clave no es la hemoglobina aislada ni el antecedente de AINEs por sí solo.
+La clave es:
+Vaso visible no sangrante en lecho ulceroso = Forrest IIa + anemia significativa y taquicardia = Glasgow-Blatchford alto riesgo.
 
-Glasgow-Blatchford estratifica riesgo clínico; valores altos sugieren manejo hospitalario estrecho.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 55 años con uso frecuente de AINEs por gonalgia.
+• Hematemesis abundante y melena de inicio reciente.
+• Taquicardia sin hipotensión (inestabilidad hemodinámica incipiente).
+• Endoscopia: úlcera gástrica 1.5 cm con vaso visible no sangrante, sin sangrado activo.
+• Hb 8 g/dL y BUN 32 mg/dL (anemia significativa y absorción de sangre digestiva).
 
-Trampa:
-Confundir Forrest IIa (vaso visible) con Forrest Ia (sangrado activo).
+Recordemos hemorragia digestiva alta y Forrest:
+• Forrest Ia/Ib: sangrado activo (chorro o babeo).
+• Forrest IIa: vaso visible no sangrante (alto riesgo de resangrado).
+• Forrest IIb: coágulo adherido; IIc: mancha hemática plana; III: base limpia.
+• Glasgow-Blatchford estratifica riesgo clínico; >7 indica alto riesgo.
+• Los AINEs inhiben prostaglandinas gástricas y son causa frecuente de úlcera péptica complicada.
+• El BUN elevado puede reflejar absorción de hemoglobina en el intestino.
 
-Referencias:
-ACG Guidelines on Upper GI Bleeding.; Sleisenger and Fordtran's Gastrointestinal and Liver Disease.`,
+Por lo tanto:
+Forrest IIa, Glasgow-Blatchford alto riesgo (>7) y úlcera péptica sangrante secundaria a AINE (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+El vaso visible no sangrante corresponde a Forrest IIa. La combinación de anemia (Hb 8), taquicardia, hematemesis y contexto de AINEs eleva el Glasgow-Blatchford por encima de 7.
+
+¿Por qué fallan las otras opciones?
+Opción A (Forrest Ia, bajo riesgo, gastritis erosiva): Forrest Ia implica sangrado activo; el Glasgow-Blatchford no es bajo con Hb 8 y taquicardia.
+Opción C (Forrest IIc, bajo riesgo, úlcera cicatrizada): IIc es mancha hemática plana, no vaso visible; la úlcera no está cicatrizada.
+Opción D (Forrest III, Mallory-Weiss): Forrest III es base limpia; Mallory-Weiss es desgarro mucoso, no úlcera con vaso visible.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden Forrest IIa (vaso visible no sangrante) con Forrest Ia (sangrado activo) o subestiman el Glasgow-Blatchford al no integrar anemia y taquicardia.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el hallazgo endoscópico: vaso visible = Forrest IIa.
+2. Calcular Glasgow-Blatchford con datos clínicos y de laboratorio.
+3. Relacionar AINEs con úlcera péptica complicada.
+4. Forrest IIa requiere hemostasia endoscópica por alto riesgo de resangrado.
+
+Perlas de examen
+✅ Vaso visible no sangrante = Forrest IIa.
+✅ Glasgow-Blatchford >7 = alto riesgo de reintervención o mortalidad.
+✅ Forrest Ia = sangrado activo; no confundir con IIa.
+✅ AINEs = causa frecuente de úlcera péptica complicada.
+✅ BUN elevado puede reflejar absorción de sangre digestiva.
+
+Referencias
+• ACG Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding.
+• Sleisenger and Fordtran's Gastrointestinal and Liver Disease.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Approach to acute upper gastrointestinal bleeding.
+• Baveno VII Consensus on Portal Hypertension.`,
   },
   {
     id: "dr-q-208",
@@ -3980,20 +4320,69 @@ ACG Guidelines on Upper GI Bleeding.; Sleisenger and Fordtran's Gastrointestinal
     correctOptionId: "B",
     explanation: "La elevación de TSH asociada a disminución de T4 libre es el patrón bioquímico característico del hipotiroidismo primario, generalmente secundario a enfermedad tiroidea primaria.",
     keyPoints: [
-      "Hipotiroidismo primario.",
+      "Cuando veas: mujer joven con fatiga, intolerancia al frío, aumento de peso, estreñimiento, caída del cabello, piel seca y TSH elevada con T4 libre baja.",
+      "Debes pensar en: hipotiroidismo primario (tiroiditis de Hashimoto como causa más frecuente).",
+      "TSH elevada + T4 libre disminuida = hipotiroidismo primario (falla tiroidea, retroalimentación positiva de TSH).",
+      "La intolerancia al frío, estreñimiento y piel seca son síntomas clásicos de hipotiroidismo.",
       "Tema: Hipotiroidismo.",
-      "TSH elevada y T4 libre baja = hipotiroidismo primario.",
-      "La causa más frecuente es la tiroiditis de Hashimoto.",
-      "La intolerancia al frío es un síntoma clásico.",
     ],
-    theoryContent: `ENDOCRINOLOGÍA — BY DR Q.
-Hipotiroidismo.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes memorizan: TSH alta = problema hipofisario. Sin embargo: El dato decisivo es:
+Esta es una pregunta clásica de endocrinología porque evalúa una trampa frecuente: interpretar mal el patrón TSH-T4 o confundir hipotiroidismo primario con central.
 
-Referencias:
-Williams Textbook of Endocrinology.; Harrison's Principles of Internal Medicine.; American Thyroid Association Guidelines.; Greenspan's Basic and Clinical Endocrinology.`,
+La clave no es solo los síntomas inespecíficos de fatiga.
+La clave es:
+TSH elevada + T4 libre disminuida = hipotiroidismo primario.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Mujer de 25 años con fatiga progresiva de varios meses.
+• Intolerancia al frío, aumento de peso no intencional y estreñimiento.
+• Caída del cabello y piel seca.
+• TSH elevada y T4 libre disminuida.
+• Cuadro clínico y bioquímico compatible con hipotiroidismo primario.
+
+Recordemos hipotiroidismo:
+• Hipotiroidismo primario: falla tiroidea → TSH ↑ y T4 libre ↓.
+• Hipotiroidismo central: falla hipofisaria/hipotalámica → TSH inapropiadamente normal o baja con T4 libre ↓.
+• Causa más frecuente de hipotiroidismo primario: tiroiditis de Hashimoto (autoinmune).
+• Síntomas clásicos: intolerancia al frío, estreñimiento, bradicardia, piel seca, caída del cabello, aumento de peso.
+• Tratamiento: levotiroxina oral.
+
+Por lo tanto:
+El diagnóstico más probable es hipotiroidismo primario (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La elevación de TSH con disminución de T4 libre es el patrón bioquímico característico del hipotiroidismo primario, con enfermedad tiroidea primaria.
+
+¿Por qué fallan las otras opciones?
+Opción A (hipertiroidismo primario): presentaría TSH suprimida y T4 libre elevada, con intolerancia al calor y pérdida de peso.
+Opción C (hipotiroidismo central): TSH inapropiadamente normal o baja con T4 libre disminuida.
+Opción D (tiroiditis subaguda): cuadro agudo con dolor cervical, fiebre y fase inicial de hipertiroidismo por liberación hormonal.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes memorizan "TSH alta = problema hipofisario", pero TSH elevada con T4 baja indica hipotiroidismo primario (la glándula no responde y la hipófisis eleva TSH).
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Correlacionar síntomas (frío, estreñimiento, piel seca) con perfil tiroideo.
+2. TSH ↑ + T4 libre ↓ = hipotiroidismo primario.
+3. TSH baja/normal + T4 libre ↓ = sospechar hipotiroidismo central.
+4. Iniciar levotiroxina y buscar causa (anticuerpos anti-TPO en Hashimoto).
+
+Perlas de examen
+✅ TSH elevada + T4 libre baja = hipotiroidismo primario.
+✅ Hashimoto es la causa más frecuente de hipotiroidismo primario.
+✅ Intolerancia al frío y estreñimiento son síntomas clásicos.
+✅ Hipotiroidismo central: TSH inapropiadamente normal o baja.
+✅ Tiroiditis subaguda: dolor cervical y fase inicial hipertiroidea.
+
+Referencias
+• Williams Textbook of Endocrinology.
+• Harrison's Principles of Internal Medicine.
+• American Thyroid Association Guidelines for Hypothyroidism.
+• Greenspan's Basic and Clinical Endocrinology.
+• UpToDate: Clinical manifestations of hypothyroidism.`,
   },
   {
     id: "dr-q-209",
@@ -4012,20 +4401,71 @@ Williams Textbook of Endocrinology.; Harrison's Principles of Internal Medicine.
     correctOptionId: "C",
     explanation: "El paciente presenta un tromboembolismo pulmonar de alto riesgo (masivo), evidenciado por hipotensión arterial e inestabilidad hemodinámica. En ausencia de contraindicaciones, la trombólisis sistémica constituye el tratamiento de elección.",
     keyPoints: [
-      "Tromboembolismo pulmonar de alto riesgo.",
+      "Cuando veas: disnea súbita, dolor torácico, hipotensión, hipoxemia, FA, patrón S1Q3T3 y defecto de llenado en arteria pulmonar derecha en angioTAC.",
+      "Debes pensar en: TEP de alto riesgo (masivo) → trombólisis sistémica si no hay contraindicaciones.",
+      "La hipotensión define TEP de alto riesgo; la anticoagulación sola no es suficiente.",
+      "El patrón S1Q3T3 sugiere sobrecarga aguda del ventrículo derecho.",
       "Tema: Tromboembolismo pulmonar.",
-      "La hipotensión define un TEP de alto riesgo.",
-      "El patrón S1Q3T3 puede observarse en sobrecarga aguda del ventrículo derecho.",
-      "La angioTAC es el estudio diagnóstico de elección en pacientes estables.",
     ],
-    theoryContent: `CARDIOLOGÍA — BY DR Q.
-Tromboembolismo pulmonar.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Defecto de llenado en arteria pulmonar." Y responden: Anticoagulación.
+Esta es una pregunta clásica de cardiología porque evalúa una trampa frecuente: indicar solo anticoagulación ante un TEP con inestabilidad hemodinámica.
 
-Referencias:
-European Society of Cardiology Guidelines for Pulmonary Embolism.; CHEST Guidelines for Venous Thromboembolism.; Harrison's Principles of Internal Medicine.; Braunwald's Heart Disease.`,
+La clave no es la anticoagulación ambulatoria ni el filtro de vena cava.
+La clave es:
+TEP confirmado + hipotensión = TEP de alto riesgo (masivo) → trombólisis sistémica.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 60 años con fibrilación auricular (fuente embólica potencial).
+• Disnea súbita y dolor torácico.
+• Hipotensión e hipoxemia (inestabilidad hemodinámica).
+• ECG con patrón S1Q3T3 (sobrecarga de VD).
+• AngioTAC: defecto de llenado en arteria pulmonar derecha (TEP confirmado).
+• Cuadro compatible con TEP masivo de alto riesgo.
+
+Recordemos tromboembolismo pulmonar:
+• TEP de alto riesgo (masivo): hipotensión o shock; mortalidad elevada.
+• TEP de riesgo intermedio: sin hipotensión pero con disfunción de VD o biomarcadores elevados.
+• TEP de bajo riesgo: sin hipotensión ni disfunción de VD.
+• Tratamiento TEP alto riesgo: trombólisis sistémica (alteplasa) si no hay contraindicaciones.
+• Anticoagulación es el pilar del tratamiento pero insuficiente sola en TEP masivo.
+• AngioTAC es el estudio de elección en pacientes hemodinámicamente estables.
+
+Por lo tanto:
+El siguiente paso más adecuado es trombólisis sistémica (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+El paciente presenta TEP de alto riesgo evidenciado por hipotensión arterial. En ausencia de contraindicaciones, la trombólisis sistémica constituye el tratamiento de elección.
+
+¿Por qué fallan las otras opciones?
+Opción A (anticoagulación y manejo ambulatorio): contraindicado en TEP con hipotensión; requiere hospitalización y reperfusión.
+Opción B (apixabán oral): anticoagulación correcta en TEP no masivo, pero insuficiente ante inestabilidad hemodinámica.
+Opción D (filtro de vena cava): reservado para contraindicación absoluta a anticoagulación, no como primera línea en TEP masivo.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "defecto de llenado en arteria pulmonar" y responden anticoagulación, sin valorar que la hipotensión define TEP de alto riesgo que requiere trombólisis.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar TEP (angioTAC o ecocardiograma en inestables).
+2. Estratificar riesgo: hipotensión = alto riesgo (masivo).
+3. TEP masivo sin contraindicaciones → trombólisis sistémica.
+4. Anticoagulación posterior y buscar fuente embólica (FA en este caso).
+
+Perlas de examen
+✅ Hipotensión en TEP = alto riesgo (masivo) → trombólisis.
+✅ S1Q3T3 sugiere sobrecarga aguda del ventrículo derecho.
+✅ Anticoagulación sola no es suficiente en TEP masivo.
+✅ AngioTAC es diagnóstico de elección en pacientes estables.
+✅ Filtro de VCI solo si contraindicación absoluta a anticoagulación.
+
+Referencias
+• ESC Guidelines for the Diagnosis and Management of Acute Pulmonary Embolism.
+• CHEST Guidelines for Antithrombotic Therapy in VTE.
+• Harrison's Principles of Internal Medicine.
+• Braunwald's Heart Disease.
+• UpToDate: Treatment, prognosis, and follow-up of acute pulmonary embolism.`,
   },
   {
     id: "dr-q-210",
@@ -4044,20 +4484,70 @@ European Society of Cardiology Guidelines for Pulmonary Embolism.; CHEST Guideli
     correctOptionId: "C",
     explanation: "El paciente presenta un cuadro de anafilaxia caracterizado por compromiso cutáneo, respiratorio y cardiovascular tras la exposición a un alérgeno. La adrenalina intramuscular es el tratamiento de primera línea y debe administrarse de forma inmediata.",
     keyPoints: [
-      "Anafilaxia.",
+      "Cuando veas: urticaria generalizada, edema de labios, hipotensión, taquicardia y estridor laríngeo 15 minutos tras ingestión de mariscos.",
+      "Debes pensar en: anafilaxia → adrenalina intramuscular de inmediato como primera línea.",
+      "La adrenalina IM es el tratamiento de primera línea; no existen contraindicaciones absolutas en anafilaxia.",
+      "El compromiso respiratorio (estridor) y cardiovascular (hipotensión) confirman anafilaxia grave.",
       "Tema: Anafilaxia.",
-      "La adrenalina intramuscular es el tratamiento de primera línea en anafilaxia.",
-      "No existen contraindicaciones absolutas para administrar adrenalina en una anafilaxia.",
-      "La hipotensión indica compromiso cardiovascular.",
     ],
-    theoryContent: `ALERGOLOGÍA — BY DR Q.
-Anafilaxia.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Urticaria." Y responden: Antihistamínicos.
+Esta es una pregunta clásica de alergología porque evalúa una trampa frecuente: tratar anafilaxia con antihistamínicos o corticoides en lugar de adrenalina.
 
-Referencias:
-World Allergy Organization (WAO) Anaphylaxis Guidelines.; European Academy of Allergy and Clinical Immunology (EAACI) Guidelines.; Nelson Textbook of Pediatrics.; Tintinalli's Emergency Medicine.`,
+La clave no es la hidrocortisona ni los antihistamínicos.
+La clave es:
+Exposición alérgena + compromiso cutáneo, respiratorio y cardiovascular = anafilaxia → adrenalina IM inmediata.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Adolescente de 15 años con urticaria generalizada y edema de labios.
+• Inicio 15 minutos tras ingestión de mariscos (exposición alérgena clara).
+• Hipotensión y taquicardia (compromiso cardiovascular).
+• Estridor laríngeo (compromiso respiratorio alto).
+• Cuadro de anafilaxia con criterios de gravedad.
+
+Recordemos anafilaxia:
+• Definición: reacción alérgica sistémica grave con inicio rápido que compromete múltiples sistemas.
+• Criterios: exposición alérgena + compromiso cutáneo/mucoso + respiratorio y/o cardiovascular.
+• Tratamiento de primera línea: adrenalina intramuscular (vasto lateral, 0.3-0.5 mg en adultos/adolescentes).
+• No existen contraindicaciones absolutas para adrenalina en anafilaxia.
+• Antihistamínicos y corticoides son tratamiento adyuvante, nunca de primera línea.
+• Posición supina con elevación de miembros inferiores si hay hipotensión.
+
+Por lo tanto:
+El manejo de primera línea es adrenalina intramuscular (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La adrenalina IM es el único tratamiento que revierte rápidamente la broncoconstricción, el edema y la hipotensión en anafilaxia. Debe administrarse de forma inmediata.
+
+¿Por qué fallan las otras opciones?
+Opción A (hidrocortisona IV): adyuvante; no revierte la anafilaxia aguda; su inicio de acción es lento.
+Opción B (clorfeniramina IV): antihistamínico adyuvante; no trata el compromiso cardiovascular ni respiratorio agudo.
+Opción D (salbutamol inhalado): puede ayudar broncoespasmo pero no trata edema laríngeo ni hipotensión.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "urticaria" y responden antihistamínicos, sin reconocer que hipotensión + estridor definen anafilaxia grave que requiere adrenalina IM de inmediato.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer anafilaxia: alérgeno + compromiso multiorgánico.
+2. Adrenalina IM inmediata (primera línea, sin demora).
+3. Medidas de soporte: oxígeno, líquidos IV, posición supina.
+4. Antihistamínicos y corticoides como adyuvantes, no como primera línea.
+
+Perlas de examen
+✅ Anafilaxia = adrenalina IM inmediata, sin excepciones.
+✅ No hay contraindicaciones absolutas para adrenalina en anafilaxia.
+✅ Hipotensión + estridor = anafilaxia grave.
+✅ Antihistamínicos y corticoides son adyuvantes, no primera línea.
+✅ Vía IM en vasto lateral; dosis 0.3-0.5 mg en adolescentes/adultos.
+
+Referencias
+• World Allergy Organization (WAO) Anaphylaxis Guidelines.
+• EAACI Guidelines on Anaphylaxis.
+• Nelson Textbook of Pediatrics.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Anaphylaxis: Emergency treatment.`,
   },
   {
     id: "dr-q-211",
@@ -4076,20 +4566,70 @@ World Allergy Organization (WAO) Anaphylaxis Guidelines.; European Academy of Al
     correctOptionId: "B",
     explanation: "La combinación de fiebre, edema facial, exantema extenso y exposición a un fármaco de alto riesgo como la carbamazepina es altamente sugestiva de síndrome DRESS (Drug Reaction with Eosinophilia and Systemic Symptoms), una reacción de hipersensibilidad potencialmente grave.",
     keyPoints: [
-      "Síndrome DRESS.",
+      "Cuando veas: fiebre, edema palpebral, exantema máculo-papular en ~17% de superficie corporal tras carbamazepina.",
+      "Debes pensar en: síndrome DRESS → suspender carbamazepina e iniciar corticoides sistémicos.",
+      "La carbamazepina es una causa clásica de DRESS; el edema facial es altamente característico.",
+      "DRESS se diferencia de SJS/TEN por exantema máculo-papular extenso sin descamación ni afectación mucosa severa.",
       "Tema: Reacciones cutáneas graves inducidas por medicamentos.",
-      "La carbamazepina es una causa clásica de síndrome DRESS.",
-      "El edema facial es uno de los hallazgos más característicos.",
-      "La eosinofilia es frecuente pero no indispensable para sospechar el diagnóstico.",
     ],
-    theoryContent: `DERMATOLOGÍA — BY DR Q.
-Reacciones cutáneas graves inducidas por medicamentos.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Exantema por medicamento." Y responden: Exantema medicamentoso simple.
+Esta es una pregunta clásica de dermatología porque evalúa una trampa frecuente: clasificar toda reacción cutánea por fármaco como exantema medicamentoso simple.
 
-Referencias:
-Fitzpatrick's Dermatology.; Bolognia Dermatology.; Harrison's Principles of Internal Medicine.; UpToDate: Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS).`,
+La clave no es continuar el fármaco ni desbridamiento quirúrgico.
+La clave es:
+Fiebre + edema facial + exantema extenso + fármaco de alto riesgo (carbamazepina) = DRESS → suspender fármaco y corticoides.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Mujer de 33 años en tratamiento con carbamazepina por epilepsia.
+• Malestar general, fiebre y edema palpebral.
+• Exantema máculo-papular pruriginoso en ~17% de superficie corporal.
+• Cuadro compatible con reacción de hipersensibilidad sistémica grave (DRESS).
+
+Recordemos síndrome DRESS:
+• Drug Reaction with Eosinophilia and Systemic Symptoms.
+• Fármacos clásicos: antiepilépticos aromáticos (carbamazepina, fenitoína, fenobarbital), alopurinol, sulfonamidas.
+• Tríada: fiebre + exantema + afectación de órganos internos (hígado, riñón, pulmón).
+• Edema facial es uno de los hallazgos más característicos.
+• Eosinofilia frecuente pero no indispensable para sospechar el diagnóstico.
+• Tratamiento: suspensión inmediata del fármaco + corticoides sistémicos.
+• Inicio tardío (2-8 semanas tras inicio del fármaco).
+
+Por lo tanto:
+Diagnóstico: síndrome DRESS; tratamiento: suspensión de carbamazepina e inicio de corticoides sistémicos (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La combinación de fiebre, edema facial, exantema extenso y carbamazepina es altamente sugestiva de DRESS, que requiere suspensión del fármaco y corticoides sistémicos.
+
+¿Por qué fallan las otras opciones?
+Opción A (Stevens-Johnson): afectación mucosa severa y descamación; SJS involucra <10% de superficie corporal con lesiones bolhosas.
+Opción C (NET): descamación epidérmica masiva (>30% SC); requiere manejo en UCI, no desbridamiento quirúrgico rutinario.
+Opción D (exantema simple): subestima la gravedad; continuar carbamazepina puede ser fatal.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "exantema por medicamento" y responden exantema medicamentoso simple con antihistamínicos, sin reconocer fiebre + edema facial como DRESS.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar fármaco de alto riesgo (carbamazepina, alopurinol).
+2. Buscar tríada: fiebre + exantema + edema facial/sistémico.
+3. Suspender fármaco causal de inmediato.
+4. Iniciar corticoides sistémicos y monitorizar función hepática y renal.
+
+Perlas de examen
+✅ Carbamazepina = causa clásica de DRESS.
+✅ Edema facial es altamente característico de DRESS.
+✅ DRESS ≠ exantema medicamentoso simple.
+✅ Eosinofilia frecuente pero no obligatoria.
+✅ Suspender fármaco y corticoides sistémicos es el manejo.
+
+Referencias
+• Fitzpatrick's Dermatology.
+• Bolognia Dermatology.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS).
+• RegiSCAR diagnostic criteria for DRESS.`,
   },
   {
     id: "dr-q-212",
@@ -4108,20 +4648,70 @@ Fitzpatrick's Dermatology.; Bolognia Dermatology.; Harrison's Principles of Inte
     correctOptionId: "B",
     explanation: "La intoxicación por monóxido de carbono produce formación de carboxihemoglobina, la cual disminuye el transporte de oxígeno sin alterar significativamente la PaO₂. Además, la pulsioximetría convencional no diferencia adecuadamente entre oxihemoglobina y carboxihemoglobina, generando lecturas falsamente normales.",
     keyPoints: [
-      "Intoxicación por monóxido de carbono.",
+      "Cuando veas: inconsciencia en cochera con motor encendido, pH 7.2, PaO₂ 190 mmHg, SatO₂ pulsioxímetro 98% vs 88% en gasometría.",
+      "Debes pensar en: intoxicación por monóxido de carbono con carboxihemoglobina → disociación pulsioximetría/gasometría.",
+      "El CO forma carboxihemoglobina que no transporta O₂; la PaO₂ puede ser normal.",
+      "La pulsioximetría convencional no diferencia oxihemoglobina de carboxihemoglobina (lectura falsamente normal).",
       "Tema: Intoxicación por monóxido de carbono.",
-      "El monóxido de carbono produce carboxihemoglobina.",
-      "La PaO₂ puede ser normal en la intoxicación por CO.",
-      "La pulsioximetría puede ser falsamente normal.",
     ],
-    theoryContent: `TOXICOLOGÍA — BY DR Q.
-Intoxicación por monóxido de carbono.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Saturación 98%." Y descartan hipoxia. Sin embargo:
+Esta es una pregunta clásica de toxicología porque evalúa una trampa frecuente: confiar en la pulsioximetría normal y descartar hipoxia en intoxicación por CO.
 
-Referencias:
-Goldfrank's Toxicologic Emergencies.; Tintinalli's Emergency Medicine.; Harrison's Principles of Internal Medicine.; UpToDate: Carbon Monoxide Poisoning.`,
+La clave no es la PaO₂ elevada ni la saturación del pulsioxímetro.
+La clave es:
+Exposición a CO + PaO₂ normal + pulsioximetría falsamente elevada = carboxihemoglobina.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 20 años inconsciente en cochera con motor encendido (exposición a CO).
+• pH 7.2 (acidosis).
+• PaO₂ 190 mmHg (normal o elevada).
+• Saturación arterial 88% vs pulsioximetría 98% (disociación).
+• Cuadro compatible con intoxicación por monóxido de carbono.
+
+Recordemos intoxicación por monóxido de carbono:
+• El CO se une a la hemoglobina con afinidad 200-250 veces mayor que el O₂.
+• Forma carboxihemoglobina (COHb) que no transporta oxígeno.
+• La PaO₂ mide oxígeno disuelto, no unido a hemoglobina → puede ser normal.
+• La pulsioximetría convencional mide absorción en longitudes de onda de oxihemoglobina y desoxihemoglobina, no distingue COHb.
+• Resultado: pulsioximetría falsamente normal o elevada con hipoxia tisular real.
+• Tratamiento: oxígeno al 100% (cámara hiperbárica si COHb >25% o grave).
+
+Por lo tanto:
+La explicación más probable es intoxicación por monóxido de carbono con formación de carboxihemoglobina (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+El CO produce carboxihemoglobina que disminuye el transporte de oxígeno sin alterar significativamente la PaO₂, y la pulsioximetría no diferencia COHb de oxihemoglobina.
+
+¿Por qué fallan las otras opciones?
+Opción A (metahemoglobinemia): contexto de nitritos; pulsioximetría típicamente ~85% fija; no asociada a exposición en cochera.
+Opción C (error por hipotermia): no explica la disociación sistemática ni el contexto de exposición a CO.
+Opción D (hipoventilación alveolar): produciría PaO₂ baja, no elevada con saturación disociada.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "saturación 98%" en pulsioximetría y descartan hipoxia, sin reconocer que la pulsioximetría es falsamente normal en intoxicación por CO.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar CO ante exposición en espacio cerrado con motor/combustión.
+2. No confiar en pulsioximetría convencional.
+3. Medir carboxihemoglobina en cooximetría.
+4. Tratar con O₂ 100%; cámara hiperbárica si indicado.
+
+Perlas de examen
+✅ CO → carboxihemoglobina; PaO₂ puede ser normal.
+✅ Pulsioximetría falsamente normal en intoxicación por CO.
+✅ Cooximetría es el estudio diagnóstico (mide COHb).
+✅ O₂ 100% es tratamiento de primera línea.
+✅ Cámara hiperbárica si COHb >25% o cuadro grave.
+
+Referencias
+• Goldfrank's Toxicologic Emergencies.
+• Tintinalli's Emergency Medicine.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Carbon monoxide poisoning.
+• AAPCC Guidelines on CO Poisoning.`,
   },
   {
     id: "dr-q-213",
@@ -4140,20 +4730,71 @@ Goldfrank's Toxicologic Emergencies.; Tintinalli's Emergency Medicine.; Harrison
     correctOptionId: "B",
     explanation: "La presencia de dolor pélvico asociado a dolor a la movilización cervical en una mujer con factores de riesgo para infecciones de transmisión sexual es altamente sugestiva de enfermedad inflamatoria pélvica (EIP). El tratamiento empírico debe iniciarse tan pronto como exista sospecha clínica.",
     keyPoints: [
-      "Enfermedad inflamatoria pélvica.",
+      "Cuando veas: mujer joven sexualmente activa, sin preservativo, dolor hipogástrico/pélvico y dolor a la movilización cervical sin dolor anexial.",
+      "Debes pensar en: enfermedad inflamatoria pélvica (EIP) → ceftriaxona + doxiciclina + metronidazol.",
+      "El dolor a la movilización cervical (signo de Chandelier) es un criterio clínico clave para EIP.",
+      "El tratamiento empírico no debe retrasarse esperando cultivos.",
       "Tema: Enfermedad inflamatoria pélvica.",
-      "El dolor a la movilización cervical es un criterio clínico importante para EIP.",
-      "El tratamiento no debe retrasarse esperando resultados microbiológicos.",
-      "Chlamydia y Gonococo son los agentes más frecuentes.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Enfermedad inflamatoria pélvica.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes se enfocan en: El dolor pélvico. Sin embargo: El dato decisivo es:
+Esta es una pregunta clásica de ginecología porque evalúa una trampa frecuente: enfocarse solo en el dolor pélvico sin valorar el signo de Chandelier ni los factores de riesgo de ITS.
 
-Referencias:
-CDC Sexually Transmitted Infections Treatment Guidelines.; ACOG Practice Bulletin: Pelvic Inflammatory Disease.; Novak's Gynecology.; Williams Gynecology.`,
+La clave no es el embarazo ectópico ni la observación de un quiste.
+La clave es:
+Mujer joven con factores de riesgo de ITS + dolor pélvico + dolor a la movilización cervical = EIP → antibióticos empíricos.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Mujer de 25 años, sexualmente activa, sin uso habitual de preservativo.
+• Antecedentes de relaciones sexuales de riesgo.
+• Dolor en hipogastrio y dolor pélvico fluctuante.
+• Dolor a la movilización cervical (signo de Chandelier positivo).
+• Sin dolor anexial a la palpación.
+• Cuadro altamente sugestivo de enfermedad inflamatoria pélvica.
+
+Recordemos enfermedad inflamatoria pélvica:
+• Infección ascendente del tracto genital superior (útero, trompas, ovarios).
+• Agentes: Chlamydia trachomatis y Neisseria gonorrhoeae (más frecuentes).
+• Criterios mínimos CDC: dolor pélvico + dolor a movilización cervical o anexial.
+• Tratamiento ambulatorio: ceftriaxona 500 mg IM dosis única + doxiciclina 100 mg VO c/12h + metronidazol 500 mg VO c/12h x 14 días.
+• No retrasar tratamiento esperando cultivos o pruebas.
+• Complicaciones: infertilidad, embarazo ectópico, dolor pélvico crónico.
+
+Por lo tanto:
+Enfermedad inflamatoria pélvica; tratamiento con ceftriaxona más doxiciclina y metronidazol (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La presencia de dolor pélvico con dolor a la movilización cervical en una mujer con factores de riesgo para ITS es altamente sugestiva de EIP. El tratamiento empírico debe iniciarse de inmediato.
+
+¿Por qué fallan las otras opciones?
+Opción A (embarazo ectópico): requiere β-hCG positiva y hallazgos ecográficos; el signo de Chandelier orienta a EIP.
+Opción C (endometriosis): cuadro crónico cíclico, no agudo con factores de riesgo de ITS.
+Opción D (quiste ovárico funcional): no explica dolor a la movilización cervical ni factores de riesgo de ITS.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes se enfocan en el dolor pélvico aislado y no valoran el dolor a la movilización cervical como criterio diagnóstico clave de EIP.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar factores de riesgo de ITS y dolor pélvico.
+2. Buscar signo de Chandelier (dolor a movilización cervical).
+3. Iniciar tratamiento empírico sin esperar cultivos.
+4. Ceftriaxona + doxiciclina + metronidazol x 14 días.
+
+Perlas de examen
+✅ Dolor a movilización cervical = signo de Chandelier (criterio EIP).
+✅ Tratamiento empírico inmediato, sin esperar cultivos.
+✅ Esquema: ceftriaxona + doxiciclina + metronidazol.
+✅ Chlamydia y Gonococo son los agentes más frecuentes.
+✅ Complicación principal: infertilidad por daño tubárico.
+
+Referencias
+• CDC Sexually Transmitted Infections Treatment Guidelines.
+• ACOG Practice Bulletin: Pelvic Inflammatory Disease.
+• Novak's Gynecology.
+• Williams Gynecology.
+• UpToDate: Pelvic inflammatory disease.`,
   },
   {
     id: "dr-q-214",
@@ -4172,20 +4813,70 @@ CDC Sexually Transmitted Infections Treatment Guidelines.; ACOG Practice Bulleti
     correctOptionId: "B",
     explanation: "La migraña se caracteriza por episodios recurrentes de cefalea pulsátil, habitualmente unilateral, asociada a náuseas, fotofobia y empeoramiento con la actividad física.",
     keyPoints: [
-      "Migraña.",
+      "Cuando veas: joven con cefalea unilateral pulsátil, náuseas, fotofobia y empeoramiento con actividad física intensa.",
+      "Debes pensar en: migraña (cefalea primaria más frecuente en jóvenes con este patrón).",
+      "La migraña es unilateral, pulsátil, con náuseas y fotofobia; empeora con actividad física.",
+      "Cumple criterios ICHD-3 de migraña sin aura.",
       "Tema: Migraña.",
-      "La migraña suele ser unilateral y pulsátil.",
-      "Las náuseas y la fotofobia son síntomas clásicos.",
-      "La actividad física suele empeorar la crisis.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Migraña.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Cefalea después del gimnasio." Y responden: Cefalea por esfuerzo.
+Esta es una pregunta clásica de neurología porque evalúa una trampa frecuente: confundir migraña con cefalea por esfuerzo o cefalea tensional por el desencadenante físico.
 
-Referencias:
-International Classification of Headache Disorders (ICHD-3).; Adams and Victor's Principles of Neurology.; Harrison's Principles of Internal Medicine.; American Headache Society Guidelines.`,
+La clave no es la cefalea tensional ni la cefalea en racimos.
+La clave es:
+Cefalea unilateral pulsátil + náuseas + fotofobia + empeoramiento con ejercicio = migraña.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Joven de 16 años con episodios recurrentes de cefalea.
+• Cefalea unilateral y pulsátil.
+• Náuseas y fotofobia asociadas.
+• Empeoramiento tras actividad física intensa.
+• Cuadro compatible con migraña sin aura (criterios ICHD-3).
+
+Recordemos migraña:
+• Cefalea primaria más frecuente en población joven.
+• Características ICHD-3: ≥5 episodios de 4-72 h, unilateral, pulsátil, intensidad moderada-severa.
+• Asociada a náuseas/vómitos y/o fotofobia/fonofobia.
+• Empeora con actividad física rutinaria.
+• Se diferencia de cefalea tensional (opresiva, bilateral) y cefalea en racimos (dolor extremo retroocular con síntomas autonómicos).
+• Tratamiento agudo: AINEs, triptanes; profilaxis si frecuencia elevada.
+
+Por lo tanto:
+El diagnóstico más probable es migraña (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La migraña se caracteriza por episodios recurrentes de cefalea pulsátil, habitualmente unilateral, asociada a náuseas, fotofobia y empeoramiento con actividad física.
+
+¿Por qué fallan las otras opciones?
+Opción A (cefalea tensional): dolor opresivo, bilateral, sin náuseas ni fotofobia típicamente.
+Opción C (cefalea en racimos): dolor retroocular extremo con lagrimeo, inyección conjuntival y congestión nasal ipsilateral.
+Opción D (hipertensión intracraneal idiopática): cefalea holocraneana con papiledema, más frecuente en mujeres obesas.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "cefalea después del gimnasio" y responden cefalea por esfuerzo, sin reconocer que el patrón pulsátil unilateral con náuseas y fotofobia define migraña.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar características: unilateral, pulsátil, náuseas, fotofobia.
+2. Valorar desencadenantes (ejercicio empeora migraña, no la define).
+3. Aplicar criterios ICHD-3 para migraña sin aura.
+4. Diferenciar de cefalea tensional (opresiva, bilateral) y racimos (autonómica).
+
+Perlas de examen
+✅ Migraña = unilateral, pulsátil, náuseas, fotofobia.
+✅ Empeora con actividad física (criterio ICHD-3).
+✅ Cefalea tensional = opresiva, bilateral, sin náuseas típicas.
+✅ Cefalea en racimos = dolor extremo + síntomas autonómicos ipsilaterales.
+✅ Ejercicio como desencadenante no excluye migraña.
+
+Referencias
+• International Classification of Headache Disorders (ICHD-3).
+• Adams and Victor's Principles of Neurology.
+• Harrison's Principles of Internal Medicine.
+• American Headache Society Guidelines.
+• UpToDate: Migraine with and without aura.`,
   },
   {
     id: "dr-q-215",
@@ -4204,20 +4895,70 @@ International Classification of Headache Disorders (ICHD-3).; Adams and Victor's
     correctOptionId: "B",
     explanation: "La cefalea tensional es la cefalea primaria más frecuente. Se caracteriza por dolor opresivo, habitualmente bilateral, localizado en región occipital, frontal o cervical, estrechamente relacionado con estrés emocional o tensión muscular.",
     keyPoints: [
-      "Cefalea tensional.",
+      "Cuando veas: cefalea recurrente occipital/cervical, opresiva, relacionada con estrés laboral y mejoría parcial con analgésicos.",
+      "Debes pensar en: cefalea tensional (cefalea primaria más frecuente).",
+      "La cefalea tensional es opresiva, bilateral u occipital, relacionada con estrés y tensión muscular.",
+      "Se diferencia de migraña por ausencia de pulsatilidad, náuseas y fotofobia.",
       "Tema: Cefaleas primarias.",
-      "La cefalea tensional es la cefalea primaria más frecuente.",
-      "El estrés emocional es uno de los principales desencadenantes.",
-      "El dolor suele ser opresivo y no pulsátil.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Cefaleas primarias.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Región occipital." Y responden: Neuralgia occipital.
+Esta es una pregunta clásica de neurología porque evalúa una trampa frecuente: diagnosticar neuralgia occipital o migraña ante cefalea occipital sin valorar el patrón opresivo y su relación con el estrés.
 
-Referencias:
-International Classification of Headache Disorders (ICHD-3).; Adams and Victor's Principles of Neurology.; Harrison's Principles of Internal Medicine.; American Headache Society Guidelines.`,
+La clave no es la migraña ni la neuralgia occipital.
+La clave es:
+Cefalea opresiva occipital/cervical + estrés laboral + mejoría parcial con analgésicos = cefalea tensional.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 40 años sin antecedentes relevantes.
+• Cefalea recurrente en región occipital y cervical.
+• Episodios durante periodos de alta carga laboral y estrés.
+• Mejoría parcial con analgésicos.
+• Cuadro compatible con cefalea tensional episódica.
+
+Recordemos cefalea tensional:
+• Cefalea primaria más frecuente en la población general.
+• Características: dolor opresivo o en banda, bilateral u occipital-frontal.
+• Relacionada con estrés emocional y tensión muscular cervical.
+• No pulsátil; sin náuseas, vómitos ni fotofobia típicamente.
+• Mejoría con analgésicos simples (paracetamol, AINEs).
+• Se diferencia de migraña (pulsátil, unilateral, con náuseas) y neuralgia occipital (dolor neuropático paroxístico en territorio de C2).
+
+Por lo tanto:
+El diagnóstico más probable es cefalea tensional (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La cefalea tensional es la cefalea primaria más frecuente, caracterizada por dolor opresivo en región occipital o cervical, estrechamente relacionado con estrés emocional.
+
+¿Por qué fallan las otras opciones?
+Opción A (migraña): requiere cefalea pulsátil unilateral con náuseas y fotofobia, ausentes en este caso.
+Opción C (cefalea en racimos): dolor retroocular extremo con síntomas autonómicos ipsilaterales.
+Opción D (neuralgia occipital): dolor neuropático paroxístico, breve, en territorio del nervio occipital mayor, no cefalea opresiva recurrente.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "región occipital" y responden neuralgia occipital, sin reconocer el patrón opresivo crónico relacionado con estrés como cefalea tensional.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar patrón opresivo (no pulsátil) en región occipital/cervical.
+2. Correlacionar con estrés y tensión muscular.
+3. Descartar migraña (pulsátil, náuseas, fotofobia).
+4. Manejo: analgésicos, manejo del estrés, fisioterapia cervical.
+
+Perlas de examen
+✅ Cefalea tensional = la cefalea primaria más frecuente.
+✅ Dolor opresivo, occipital/cervical, relacionado con estrés.
+✅ No pulsátil; sin náuseas ni fotofobia típicamente.
+✅ Neuralgia occipital = dolor neuropático paroxístico, no opresivo.
+✅ Mejoría parcial con analgésicos simples.
+
+Referencias
+• International Classification of Headache Disorders (ICHD-3).
+• Adams and Victor's Principles of Neurology.
+• Harrison's Principles of Internal Medicine.
+• American Headache Society Guidelines.
+• UpToDate: Tension-type headache.`,
   },
   {
     id: "dr-q-216",
@@ -4236,20 +4977,70 @@ International Classification of Headache Disorders (ICHD-3).; Adams and Victor's
     correctOptionId: "C",
     explanation: "La cefalea en racimos se caracteriza por crisis recurrentes de dolor orbitario o retroorbitario extremadamente intenso, asociado a síntomas autonómicos ipsilaterales como lagrimeo, inyección conjuntival y congestión nasal. El oxígeno al 100% es uno de los tratamientos abortivos de elección.",
     keyPoints: [
-      "Cefalea en racimos.",
+      "Cuando veas: dolor retroocular intenso recurrente con inyección conjuntival, epífora ipsilateral y mejoría rápida con oxígeno al 100%.",
+      "Debes pensar en: cefalea en racimos → oxígeno al 100% es tratamiento abortivo de elección.",
+      "La cefalea en racimos es una cefalea trigémino-autonómica con síntomas autonómicos ipsilaterales.",
+      "El dolor es orbitario/retroorbitario, extremadamente intenso y de corta duración.",
       "Tema: Cefaleas trigémino-autonómicas.",
-      "La cefalea en racimos es una cefalea trigémino-autonómica.",
-      "El dolor suele ser orbitario o retroorbitario.",
-      "El lagrimeo y la inyección conjuntival son hallazgos clásicos.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Cefaleas trigémino-autonómicas.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Dolor ocular." Y responden: Migraña.
+Esta es una pregunta clásica de neurología porque evalúa una trampa frecuente: diagnosticar migraña ante dolor ocular sin reconocer los síntomas autonómicos ipsilaterales y la respuesta al oxígeno.
 
-Referencias:
-International Classification of Headache Disorders (ICHD-3).; Adams and Victor's Principles of Neurology.; Harrison's Principles of Internal Medicine.; American Headache Society Guidelines.`,
+La clave no es la migraña ni la neuralgia del trigémino.
+La clave es:
+Dolor retroocular extremo + lagrimeo + inyección conjuntival ipsilateral + mejoría con O₂ = cefalea en racimos.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 27 años con episodios recurrentes de dolor retroocular intenso.
+• Inyección conjuntival y epífora ipsilateral.
+• Múltiples consultas previas por el mismo cuadro.
+• Mejoría rápida y significativa con oxígeno suplementario.
+• Cuadro compatible con cefalea en racimos.
+
+Recordemos cefalea en racimos:
+• Cefalea trigémino-autonómica (grupo de cefaleas con dolor severo + síntomas autonómicos ipsilaterales).
+• Dolor orbitario o retroorbitario extremadamente intenso (descrito como "el peor dolor de la vida").
+• Síntomas autonómicos ipsilaterales: lagrimeo, inyección conjuntival, congestión nasal, rinorrea, miosis.
+• Episodios cortos (15-180 minutos), frecuentes (hasta 8/día) en racimos.
+• Tratamiento abortivo: oxígeno al 100% (12-15 L/min x 15 min) o triptanes subcutáneos.
+• Más frecuente en hombres jóvenes.
+
+Por lo tanto:
+El diagnóstico más probable es cefalea en racimos (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La cefalea en racimos se caracteriza por crisis recurrentes de dolor orbitario extremo con síntomas autonómicos ipsilaterales. El oxígeno al 100% es uno de los tratamientos abortivos de elección.
+
+¿Por qué fallan las otras opciones?
+Opción A (migraña): puede tener dolor ocular pero sin síntomas autonómicos prominentes ni respuesta característica al oxígeno.
+Opción B (neuralgia del trigémino): dolor neuropático paroxístico breve (segundos), desencadenado por estímulos, sin síntomas autonómicos.
+Opción D (cefalea tensional): dolor opresivo leve-moderado, bilateral, sin síntomas autonómicos.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "dolor ocular" y responden migraña, sin reconocer la tríada de dolor extremo + síntomas autonómicos ipsilaterales + respuesta al oxígeno.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar dolor retroocular extremo con síntomas autonómicos ipsilaterales.
+2. Confirmar con respuesta al oxígeno al 100%.
+3. Diferenciar de migraña (sin autonómicos prominentes) y neuralgia del trigémino (paroxística breve).
+4. Tratamiento abortivo: O₂ 100% o triptán subcutáneo.
+
+Perlas de examen
+✅ Cefalea en racimos = dolor extremo + autonómicos ipsilaterales.
+✅ Oxígeno al 100% es tratamiento abortivo de elección.
+✅ Más frecuente en hombres jóvenes.
+✅ Lagrimeo e inyección conjuntival ipsilateral son clásicos.
+✅ Se diferencia de migraña por intensidad y síntomas autonómicos.
+
+Referencias
+• International Classification of Headache Disorders (ICHD-3).
+• Adams and Victor's Principles of Neurology.
+• Harrison's Principles of Internal Medicine.
+• American Headache Society Guidelines.
+• UpToDate: Cluster headache.`,
   },
   {
     id: "dr-q-217",
@@ -4268,20 +5059,70 @@ International Classification of Headache Disorders (ICHD-3).; Adams and Victor's
     correctOptionId: "A",
     explanation: "La combinación de \"muñeca caída\", compromiso transitorio del reflejo tricipital y recuperación completa posterior es característica de una neuropraxia del nervio radial, la forma más leve de lesión nerviosa periférica.",
     keyPoints: [
-      "Neuropraxia del nervio radial.",
+      "Cuando veas: imposibilidad para extender muñeca tras trauma, dolor dorsal de antebrazo, disminución del reflejo tricipital y recuperación completa en días.",
+      "Debes pensar en: neuropraxia del nervio radial (lesión nerviosa más leve con recuperación completa).",
+      "La neuropraxia implica bloqueo de conducción sin lesión axonal.",
+      "Muñeca caída + reflejo tricipital disminuido + recuperación completa = neuropraxia radial.",
       "Tema: Lesiones de nervios periféricos.",
-      "La neuropraxia es la lesión nerviosa periférica más leve.",
-      "Existe bloqueo de conducción sin lesión axonal.",
-      "La recuperación suele ser completa.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Lesiones de nervios periféricos.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes identifican: La lesión del nervio radial. Pero olvidan clasificar: El tipo de lesión nerviosa.
+Esta es una pregunta clásica de neurología porque evalúa una trampa frecuente: identificar la lesión del nervio radial pero olvidar clasificar el tipo de lesión según Seddon.
 
-Referencias:
-Adams and Victor's Principles of Neurology.; Bradley's Neurology in Clinical Practice.; Greenberg's Handbook of Neurosurgery.; Moore Clinically Oriented Anatomy.`,
+La clave no es axonotmesis ni neurotmesis.
+La clave es:
+Muñeca caída + reflejo tricipital disminuido + recuperación completa en días = neuropraxia del nervio radial.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Mujer con trauma (atraco callejero).
+• Imposibilidad para extender la muñeca (muñeca caída).
+• Dolor en región dorsal del antebrazo.
+• Disminución del reflejo tricipital.
+• Recuperación completa de la movilidad en días.
+• Cuadro compatible con neuropraxia del nervio radial.
+
+Recordemos clasificación de Seddon:
+• Neuropraxia (grado I): bloqueo de conducción sin lesión axonal; recuperación completa en días-semanas.
+• Axonotmesis (grado II-III): lesión axonal con endoneuro intacto (II) o dañado (III); recuperación lenta (mm/día).
+• Neurotmesis (grado IV-V): sección completa del nervio; requiere reparación quirúrgica.
+• Nervio radial: extensión de muñeca y dedos, sensibilidad dorso de mano, reflejo tricipital.
+• "Parálisis del sábado por la noche" es neuropraxia radial clásica por compresión.
+
+Por lo tanto:
+La lesión neurológica más probable es neuropraxia del nervio radial (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+La combinación de muñeca caída, compromiso transitorio del reflejo tricipital y recuperación completa posterior es característica de neuropraxia, la forma más leve de lesión nerviosa periférica.
+
+¿Por qué fallan las otras opciones?
+Opción B (axonotmesis cubital): afectaría flexión de 4°-5° dedos y sensibilidad cubital, no extensión de muñeca.
+Opción C (neurotmesis mediano): causaría déficit de oposición del pulgar y sensibilidad palmar, sin recuperación espontánea completa.
+Opción D (nervio musculocutáneo): afectaría flexión del codo y sensibilidad lateral del antebrazo.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes identifican correctamente la lesión del nervio radial pero olvidan clasificar el tipo de lesión; la recuperación completa en días define neuropraxia.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el nervio afectado por el déficit motor y sensitivo.
+2. Clasificar según Seddon: recuperación rápida y completa = neuropraxia.
+3. Muñeca caída = nervio radial hasta demostrar lo contrario.
+4. Neuropraxia no requiere intervención quirúrgica; manejo conservador.
+
+Perlas de examen
+✅ Recuperación completa en días = neuropraxia (Seddon I).
+✅ Muñeca caída = lesión del nervio radial.
+✅ Neuropraxia: bloqueo de conducción sin lesión axonal.
+✅ Axonotmesis: recuperación lenta a ~1 mm/día.
+✅ Neurotmesis: requiere reparación quirúrgica.
+
+Referencias
+• Adams and Victor's Principles of Neurology.
+• Bradley's Neurology in Clinical Practice.
+• Greenberg's Handbook of Neurosurgery.
+• Moore Clinically Oriented Anatomy.
+• UpToDate: Overview of peripheral nerve injuries.`,
   },
   {
     id: "dr-q-218",
@@ -4300,20 +5141,70 @@ Adams and Victor's Principles of Neurology.; Bradley's Neurology in Clinical Pra
     correctOptionId: "D",
     explanation: "La paciente presenta un feto pequeño para la edad gestacional (PEG), ya que el peso fetal estimado se encuentra por debajo del percentil 10. Sin embargo, un percentil 4 por sí solo no establece necesariamente una restricción del crecimiento intrauterino (RCIU) severa. Antes de decidir la interrupción del embarazo, es fundamental evaluar la circulación útero-placentaria y fetal mediante Doppler.",
     keyPoints: [
-      "Completar estudio con Doppler obstétrico.",
+      "Cuando veas: primigestante 37 semanas, peso fetal percentil 4, ILA 6 cm, asintomática y sin trabajo de parto.",
+      "Debes pensar en: feto pequeño para edad gestacional (PEG) → completar estudio con Doppler antes de decidir interrupción.",
+      "Percentil <10 define PEG; percentil 4 requiere Doppler para estratificar RCIU.",
+      "La interrupción inmediata no está indicada sin evaluar circulación útero-placentaria y fetal.",
       "Tema: Feto pequeño para la edad gestacional y restricción del crecimiento fetal.",
-      "Un peso fetal estimado < percentil 10 define un feto pequeño para la edad gestacional.",
-      "Un percentil <3 es altamente sugestivo de restricción del crecimiento fetal severa.",
-      "Los percentiles entre 3 y 10 requieren evaluación Doppler.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Feto pequeño para la edad gestacional y restricción del crecimiento fetal.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Percentil 4." Y responden: "Interrumpir embarazo."
+Esta es una pregunta clásica de obstetricia porque evalúa una trampa frecuente: indicar interrupción inmediata del embarazo ante un percentil 4 sin completar estudio Doppler.
 
-Referencias:
-Williams Obstetrics.; ACOG Practice Bulletin: Fetal Growth Restriction.; ISUOG Practice Guidelines: Diagnosis and Management of Small-for-Gestational-Age Fetus and Fetal Growth Restriction.; FIGO Guidelines on Fetal Growth Restriction.`,
+La clave no es la interrupción inmediata ni continuar control habitual.
+La clave es:
+PEG (percentil <10) a las 37 semanas + asintomática = Doppler fetal-materno para estratificar riesgo y definir conducta.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Primigestante de 26 años con embarazo de 37 semanas.
+• Peso fetal estimado en percentil 4 (< percentil 10 = PEG).
+• Índice de líquido amniótico de 6 cm (normal).
+• Asintomática, hemodinámicamente estable, sin trabajo de parto.
+• Requiere estratificación adicional antes de decidir interrupción.
+
+Recordemos PEG y RCIU:
+• PEG: peso fetal estimado < percentil 10 para edad gestacional.
+• RCIU severa: percentil <3 o Doppler alterado con percentil 3-10.
+• Percentil 4 por sí solo no establece RCIU severa ni indica interrupción inmediata.
+• Doppler evalúa circulación útero-placentaria (arteria uterina) y fetal (ACM, ductus venoso).
+• Doppler alterado con PEG confirma RCIU y guía timing de interrupción.
+• A las 37 semanas, la decisión depende de hallazgos Doppler y bienestar fetal.
+
+Por lo tanto:
+El manejo más adecuado es realizar estudio Doppler fetal-materno para estratificación del riesgo (opción D).
+
+¿Por qué la opción D es la respuesta correcta?
+Un percentil 4 define PEG pero no necesariamente RCIU severa. Antes de decidir interrupción, es fundamental evaluar la circulación útero-placentaria y fetal mediante Doppler.
+
+¿Por qué fallan las otras opciones?
+Opción A (control habitual en 4 semanas): inadecuado a las 37 semanas con PEG; requiere evaluación inmediata.
+Opción B (hospitalización y maduración pulmonar): indicada antes de 34 semanas, no a término con PEG aislado.
+Opción C (interrupción inmediata): prematura sin Doppler; percentil 4 requiere estratificación de riesgo primero.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "percentil 4" y responden "interrumpir embarazo", sin reconocer que percentil 3-10 requiere Doppler antes de decidir conducta obstétrica.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Percentil <10 = PEG (feto pequeño para edad gestacional).
+2. Percentil <3 o Doppler alterado = RCIU severa.
+3. Percentil 3-10: completar Doppler antes de decidir interrupción.
+4. A las 37 semanas: Doppler guía timing de finalización según riesgo.
+
+Perlas de examen
+✅ Percentil <10 = PEG; no equivale automáticamente a RCIU severa.
+✅ Percentil <3 = altamente sugestivo de RCIU severa.
+✅ Percentil 3-10 requiere Doppler obstétrico.
+✅ No interrumpir de inmediato sin estratificar con Doppler.
+✅ ILA 6 cm es normal (oligoamnios <5 cm).
+
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Fetal Growth Restriction.
+• ISUOG Practice Guidelines: Diagnosis and Management of Small-for-Gestational-Age Fetus.
+• FIGO Guidelines on Fetal Growth Restriction.
+• UpToDate: Fetal growth restriction.`,
   },
   {
     id: "dr-q-219",
@@ -4332,20 +5223,69 @@ Williams Obstetrics.; ACOG Practice Bulletin: Fetal Growth Restriction.; ISUOG P
     correctOptionId: "C",
     explanation: "La paciente cumple criterios diagnósticos de diabetes gestacional. El manejo inicial consiste en intervención nutricional, ejercicio físico adaptado al embarazo y monitorización glucémica. La insulinoterapia se reserva para pacientes que no alcanzan metas glucémicas con medidas no farmacológicas.",
     keyPoints: [
-      "Diabetes gestacional.",
+      "Cuando veas: embarazo 29 semanas, PTOG con ayunas 92 mg/dL, 1 hora 213 mg/dL y 2 horas 150 mg/dL (un valor alterado).",
+      "Debes pensar en: diabetes gestacional → cambios en estilo de vida y automonitoreo glucémico (no insulina de inmediato).",
+      "Un solo valor alterado en la PTOG es suficiente para diagnosticar diabetes gestacional.",
+      "El tratamiento inicial es nutricional y conductual; insulina si no se alcanzan metas.",
       "Tema: Diabetes gestacional.",
-      "Un solo valor alterado en la PTOG es suficiente para el diagnóstico.",
-      "La diabetes gestacional aumenta el riesgo de macrosomía fetal.",
-      "El tratamiento inicial es nutricional y conductual.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Diabetes gestacional.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes observan: Glucemia >200 mg/dL a la hora. Y responden: Insulinoterapia inmediata.
+Esta es una pregunta clásica de obstetricia porque evalúa una trampa frecuente: indicar insulinoterapia inmediata ante un valor elevado en la PTOG sin intentar medidas no farmacológicas primero.
 
-Referencias:
-American Diabetes Association (ADA) Standards of Care.; ACOG Practice Bulletin: Gestational Diabetes Mellitus.; Williams Obstetrics.; FIGO Guidelines on Gestational Diabetes.`,
+La clave no es la insulinoterapia inmediata ni repetir la curva.
+La clave es:
+Un valor alterado en PTOG = diabetes gestacional → dieta, ejercicio y automonitoreo glucémico.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Mujer de 37 años, multigestante, embarazo de 29 semanas.
+• PTOG: ayunas 92 mg/dL (≥92), 1 hora 213 mg/dL (≥180), 2 horas 150 mg/dL (≥153).
+• Múltiples valores alterados (diagnóstico confirmado de diabetes gestacional).
+• Requiere manejo inicial no farmacológico.
+
+Recordemos diabetes gestacional:
+• Diagnóstico (criterios IADPSG/ADA): un solo valor alterado en PTOG 75 g es suficiente.
+  - Ayunas ≥92 mg/dL, 1 h ≥180, 2 h ≥153 mg/dL.
+• Tratamiento inicial: intervención nutricional, ejercicio adaptado al embarazo, automonitoreo glucémico.
+• Insulinoterapia se reserva si no se alcanzan metas glucémicas con medidas no farmacológicas en 1-2 semanas.
+• Aumenta riesgo de macrosomía, preeclampsia, parto cesáreo y hipoglucemia neonatal.
+• Control glucémico objetivo: ayunas <95, 1 h postprandial <140, 2 h <120 mg/dL.
+
+Por lo tanto:
+Diagnosticar diabetes gestacional, iniciar cambios en estilo de vida y automonitoreo glucémico (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La paciente cumple criterios diagnósticos de diabetes gestacional. El manejo inicial consiste en intervención nutricional, ejercicio y monitorización glucémica antes de considerar insulina.
+
+¿Por qué fallan las otras opciones?
+Opción A (control habitual y repetir en 4 semanas): el diagnóstico ya está confirmado; retrasar manejo es inadecuado.
+Opción B (insulinoterapia inmediata): reservada para falla de medidas no farmacológicas; no es primera línea.
+Opción D (diabetes pregestacional y finalizar gestación): no hay criterios de diabetes pregestacional (ayunas <126 en contexto no diagnóstico); embarazo de 29 semanas no debe finalizarse.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan glucemia >200 mg/dL a la hora y responden insulinoterapia inmediata, sin reconocer que el manejo inicial de la diabetes gestacional es siempre nutricional y conductual.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Un valor alterado en PTOG = diagnóstico de diabetes gestacional.
+2. Iniciar dieta, ejercicio y automonitoreo glucémico.
+3. Evaluar metas en 1-2 semanas.
+4. Insulina solo si no se alcanzan metas con medidas no farmacológicas.
+
+Perlas de examen
+✅ Un solo valor alterado en PTOG = diabetes gestacional.
+✅ Tratamiento inicial: dieta + ejercicio + automonitoreo.
+✅ Insulina solo si fallan medidas no farmacológicas.
+✅ Aumenta riesgo de macrosomía fetal.
+✅ No finalizar embarazo de 29 semanas por DG.
+
+Referencias
+• American Diabetes Association (ADA) Standards of Care.
+• ACOG Practice Bulletin: Gestational Diabetes Mellitus.
+• Williams Obstetrics.
+• FIGO Guidelines on Gestational Diabetes.
+• UpToDate: Gestational diabetes mellitus.`,
   },
   {
     id: "dr-q-220",
@@ -4364,20 +5304,69 @@ American Diabetes Association (ADA) Standards of Care.; ACOG Practice Bulletin: 
     correctOptionId: "A",
     explanation: "La lesión del nervio radial en una fractura de la diáfisis humeral produce clásicamente \"muñeca caída\" debido a la pérdida de la extensión de la muñeca y los dedos, asociada a alteraciones sensitivas en el territorio radial.",
     keyPoints: [
-      "Muñeca caída.",
+      "Cuando veas: fractura desplazada de diáfisis media del húmero con lesión del nervio radial.",
+      "Debes pensar en: muñeca caída → incapacidad para extender muñeca y dedos + hipoestesia dorso de mano.",
+      "El nervio radial es el más frecuentemente lesionado en fracturas de diáfisis humeral.",
+      "El primer espacio interdigital dorsal es clave para exploración sensitiva del radial.",
       "Tema: Lesiones nerviosas periféricas.",
-      "El nervio radial es el nervio más frecuentemente lesionado en fracturas de diáfisis humeral.",
-      "La muñeca caída es el hallazgo clínico clásico.",
-      "El primer espacio interdigital dorsal es clave para la exploración sensitiva.",
     ],
-    theoryContent: `ORTOPEDIA Y TRAUMATOLOGÍA — BY DR Q.
-Lesiones nerviosas periféricas.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes recuerdan: "Fractura de húmero." Pero olvidan: Qué nervio se relaciona con la diáfisis media.
+Esta es una pregunta clásica de ortopedia porque evalúa una trampa frecuente: recordar que la fractura de húmero afecta un nervio pero olvidar cuál y cuál es su presentación clínica.
 
-Referencias:
-Campbell's Operative Orthopaedics.; Rockwood and Green's Fractures in Adults.; Moore Clinically Oriented Anatomy.; Greenberg's Handbook of Neurosurgery.`,
+La clave no es el nervio cubital ni el mediano.
+La clave es:
+Fractura de diáfisis humeral + lesión nerviosa = nervio radial → muñeca caída + hipoestesia dorso de mano.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Fractura desplazada de diáfisis media del húmero.
+• Lesión asociada del nervio radial.
+• Se pregunta por el hallazgo clínico más probable.
+• El nervio radial inerva extensores de muñeca y dedos, y sensibilidad del dorso de la mano.
+
+Recordemos nervio radial:
+• Recorre el surco espiral del húmero en la diáfisis media.
+• Es el nervio más frecuentemente lesionado en fracturas de diáfisis humeral (incidencia 10-18%).
+• Motor: extensión de muñeca, dedos y codo (tríceps); reflejo tricipital.
+• Sensitivo: dorso de mano, primer espacio interdigital dorsal (punto clave).
+• Lesión → "muñeca caída" (pérdida de extensión de muñeca y dedos).
+• La mayoría de lesiones radiales en fractura de húmero son neuropraxias con recuperación espontánea.
+
+Por lo tanto:
+El hallazgo más probable es incapacidad para extender muñeca y dedos con hipoestesia en dorso de mano (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+La lesión del nervio radial produce clásicamente muñeca caída por pérdida de extensión de muñeca y dedos, asociada a alteraciones sensitivas en el territorio radial.
+
+¿Por qué fallan las otras opciones?
+Opción B (flexión 4°-5° dedos, hipoestesia cubital): corresponde a lesión del nervio cubital.
+Opción C (oposición del pulgar, sensibilidad 3 primeros dedos): corresponde a lesión del nervio mediano.
+Opción D (abducción del hombro, sensibilidad cara lateral): corresponde a lesión del nervio axilar.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan "fractura de húmero = lesión nerviosa" pero olvidan que la diáfisis media afecta específicamente al nervio radial, no al cubital ni al mediano.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Fractura diáfisis humeral → sospechar lesión del nervio radial.
+2. Muñeca caída = extensión de muñeca y dedos perdida.
+3. Explorar sensibilidad en primer espacio interdigital dorsal.
+4. Mayoría son neuropraxias con recuperación espontánea en semanas.
+
+Perlas de examen
+✅ Diáfisis humeral = nervio radial (surco espiral).
+✅ Muñeca caída = hallazgo clásico de lesión radial.
+✅ Primer espacio interdigital dorsal = punto sensitivo clave.
+✅ 10-18% de fracturas de húmero asocian lesión radial.
+✅ Mayoría son neuropraxias con buen pronóstico.
+
+Referencias
+• Campbell's Operative Orthopaedics.
+• Rockwood and Green's Fractures in Adults.
+• Moore Clinically Oriented Anatomy.
+• Greenberg's Handbook of Neurosurgery.
+• UpToDate: Proximal humeral fractures in adults.`,
   },
   {
     id: "dr-q-221",
@@ -4396,20 +5385,69 @@ Campbell's Operative Orthopaedics.; Rockwood and Green's Fractures in Adults.; M
     correctOptionId: "D",
     explanation: "La fractura de escafoides es una de las lesiones ocultas más frecuentes tras trauma de muñeca. Cuando existe sospecha clínica y la radiografía AP inicial es normal, debe solicitarse una proyección específica para escafoides.",
     keyPoints: [
-      "Fractura oculta de escafoides.",
+      "Cuando veas: trauma de muñeca en adolescente, radiografía AP normal pero persistencia de sospecha clínica de lesión ósea.",
+      "Debes pensar en: fractura oculta de escafoides → proyección específica de escafoides (Stecher).",
+      "El escafoides es el hueso del carpo que más se fractura y la radiografía inicial puede ser normal.",
+      "La tabaquera anatómica dolorosa y el mecanismo de caída sobre mano extendida orientan al diagnóstico.",
       "Tema: Trauma de muñeca.",
-      "El escafoides es el hueso del carpo que más se fractura.",
-      "La radiografía inicial puede ser normal.",
-      "La proyección de Stecher mejora la visualización del escafoides.",
     ],
-    theoryContent: `ORTOPEDIA Y TRAUMATOLOGÍA — BY DR Q.
-Trauma de muñeca.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Radiografía normal." Y concluyen: Ausencia de fractura.
+Esta es una pregunta clásica de ortopedia porque evalúa una trampa frecuente: concluir ausencia de fractura cuando la radiografía AP inicial es normal pese a sospecha clínica persistente.
 
-Referencias:
-Rockwood and Green's Fractures in Adults.; Campbell's Operative Orthopaedics.; AO Trauma Principles.; Moore Clinically Oriented Anatomy.`,
+La clave no es dar por descartada la lesión con una sola proyección normal.
+La clave es:
+Trauma de muñeca con sospecha clínica + radiografía AP normal = complementar con proyección específica para escafoides (Stecher).
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Adolescente de 15 años con trauma de muñeca.
+• Radiografía AP sin fracturas visibles.
+• Persistencia de la sospecha clínica de lesión ósea.
+• Necesidad de proyección adicional dirigida al escafoides.
+
+Recordemos trauma de muñeca y fractura de escafoides:
+• El escafoides es el hueso del carpo que más se fractura.
+• Hasta el 20% de las fracturas de escafoides no son visibles en la radiografía inicial.
+• La caída sobre mano extendida (FOOSH) es el mecanismo clásico.
+• La proyección de Stecher (escafoides) mejora la visualización del hueso.
+• Si persiste la sospecha con radiografías negativas, puede requerirse inmovilización y control o RM.
+
+Por lo tanto:
+La conducta correcta es solicitar proyección de escafoides (Stecher) (opción D), no limitarse a lateral, oblicua o comparativa.
+
+¿Por qué la opción D es la respuesta correcta?
+La proyección de Stecher es la proyección radiográfica adicional más recomendada para descartar fractura oculta de escafoides cuando la AP es normal pero la sospecha clínica persiste.
+
+¿Por qué fallan las otras opciones?
+Opción A (lateral): complemento útil pero no la proyección específica de elección para escafoides oculto.
+Opción B (oblicua): puede ayudar pero no es la proyección estándar dirigida al escafoides.
+Opción C (AP comparativa): útil en niños pequeños para evaluar epífisis, no la primera elección para escafoides en adolescente con trauma.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "radiografía normal" y concluyen ausencia de fractura.
+Pero la fractura de escafoides es la lesión oculta más frecuente del trauma de muñeca y requiere proyección específica.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Ante trauma de muñeca con sospecha clínica, no descartar fractura con AP normal.
+2. Pensar en fractura de escafoides como lesión oculta más frecuente.
+3. Solicitar proyección de Stecher (escafoides).
+4. Si persiste sospecha, inmovilizar y reevaluar o ampliar estudio.
+
+Perlas de examen
+✅ Fractura de escafoides = lesión oculta más frecuente del trauma de muñeca.
+✅ La radiografía inicial puede ser normal en hasta el 20% de los casos.
+✅ La proyección de Stecher es la proyección adicional de elección.
+✅ FOOSH + dolor en tabaquera anatómica = sospecha de escafoides.
+✅ No dar de alta sin inmovilización si la sospecha clínica persiste.
+
+Referencias
+• Rockwood and Green's Fractures in Adults.
+• Campbell's Operative Orthopaedics.
+• AO Trauma Principles.
+• Moore Clinically Oriented Anatomy.
+• UpToDate: Scaphoid fractures.`,
   },
   {
     id: "dr-q-222",
@@ -4428,20 +5466,69 @@ Rockwood and Green's Fractures in Adults.; Campbell's Operative Orthopaedics.; A
     correctOptionId: "B",
     explanation: "La dermatitis seborreica es una dermatosis inflamatoria crónica caracterizada por placas eritematodescamativas con escamas amarillentas y grasosas en áreas ricas en glándulas sebáceas. Se ha asociado a la proliferación de levaduras del género Malassezia.",
     keyPoints: [
-      "Dermatitis seborreica.",
+      "Cuando veas: hombre anciano con placas amarillentas, pruriginosas y descamativas en cuero cabelludo y barba.",
+      "Debes pensar en: dermatitis seborreica → agente asociado Malassezia furfur.",
+      "Las escamas son amarillentas y grasosas, no plateadas y secas como en psoriasis.",
+      "Afecta áreas ricas en glándulas sebáceas: cuero cabelludo, cara, región presternal.",
       "Tema: Dermatitis seborreica.",
-      "La dermatitis seborreica se asocia a Malassezia spp.",
-      "Las escamas suelen ser amarillentas y grasosas.",
-      "El cuero cabelludo es la localización más frecuente.",
     ],
-    theoryContent: `DERMATOLOGÍA — BY DR Q.
-Dermatitis seborreica.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Placas descamativas." Y responden: Psoriasis.
+Esta es una pregunta clásica de dermatología porque evalúa una trampa frecuente: confundir placas descamativas del cuero cabelludo con psoriasis cuando las características clínicas orientan a dermatitis seborreica.
 
-Referencias:
-Fitzpatrick's Dermatology.; Bolognia Dermatology.; Andrews' Diseases of the Skin.; UpToDate: Seborrheic Dermatitis.`,
+La clave no es asociar toda descamación del cuero cabelludo con psoriasis.
+La clave es:
+Placas eritematodescamativas amarillentas y grasosas en áreas seborreicas + anciano = dermatitis seborreica por Malassezia.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 80 años.
+• Placas amarillentas, pruriginosas y descamativas.
+• Localización en cuero cabelludo y región de la barba.
+• Cuadro compatible con dermatitis seborreica inflamatoria crónica.
+
+Recordemos dermatitis seborreica:
+• Dermatosis inflamatoria crónica de áreas ricas en glándulas sebáceas.
+• Se asocia a proliferación de levaduras del género Malassezia (M. furfur).
+• Las escamas son amarillentas, grasosas y adheridas (no plateadas como en psoriasis).
+• El cuero cabelludo es la localización más frecuente.
+• El tratamiento incluye antifúngicos tópicos (ketoconazol) y corticoides tópicos de baja potencia.
+
+Por lo tanto:
+El diagnóstico más probable es dermatitis seborreica con Malassezia furfur (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La clínica de placas amarillentas descamativas en cuero cabelludo y barba en un anciano es característica de dermatitis seborreica, cuyo agente más asociado es Malassezia furfur.
+
+¿Por qué fallan las otras opciones?
+Opción A (psoriasis; S. pyogenes): la psoriasis tiene escamas plateadas y secas; no se asocia a Streptococcus como agente etiológico principal.
+Opción C (tiña capitis; T. rubrum): la tiña capitis causa alopecia con escamas y puede tener inflamación; no presenta placas amarillentas grasosas típicas de seborrea.
+Opción D (dermatitis atópica; S. aureus): la dermatitis atópica predomina en pliegues y presenta xerosis; no es el patrón clásico del cuero cabelludo seborreico.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "placas descamativas" y responden psoriasis.
+Pero las escamas amarillentas y grasosas en áreas seborreicas orientan a dermatitis seborreica, no a psoriasis.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar localización en áreas seborreicas (cuero cabelludo, barba).
+2. Distinguir escamas amarillentas/grasosas (seborrea) de plateadas/secas (psoriasis).
+3. Asociar dermatitis seborreica con Malassezia spp.
+4. Tratar con antifúngicos tópicos y medidas de higiene.
+
+Perlas de examen
+✅ Dermatitis seborreica = placas amarillentas grasosas en áreas seborreicas.
+✅ Malassezia furfur es el agente más asociado.
+✅ Psoriasis: escamas plateadas, secas, bien delimitadas.
+✅ Tiña capitis: alopecia, inflamación, más frecuente en niños.
+✅ El cuero cabelludo es la localización más frecuente de seborrea.
+
+Referencias
+• Fitzpatrick's Dermatology.
+• Bolognia Dermatology.
+• Andrews' Diseases of the Skin.
+• UpToDate: Seborrheic Dermatitis.
+• James, Berger, Elston: Andrews' Diseases of the Skin.`,
   },
   {
     id: "dr-q-223",
@@ -4460,20 +5547,70 @@ Fitzpatrick's Dermatology.; Bolognia Dermatology.; Andrews' Diseases of the Skin
     correctOptionId: "C",
     explanation: "La enfermedad de Kawasaki es una vasculitis sistémica de vasos medianos caracterizada por fiebre prolongada, alteraciones mucocutáneas, adenopatías cervicales y exantema. El tratamiento temprano con inmunoglobulina intravenosa disminuye significativamente el riesgo de aneurismas coronarios.",
     keyPoints: [
-      "Enfermedad de Kawasaki.",
+      "Cuando veas: niño con fiebre ≥5 días, exantema, cambios mucosos, adenopatías cervicales y malestar general.",
+      "Debes pensar en: enfermedad de Kawasaki → IVIG + ácido acetilsalicílico de forma temprana.",
+      "La fiebre prolongada sin foco claro en pediatría debe incluir Kawasaki en el diferencial.",
+      "El tratamiento precoz con IVIG reduce el riesgo de aneurismas coronarios.",
       "Tema: Vasculitis en pediatría.",
-      "Fiebre ≥ 5 días es un criterio indispensable para Kawasaki clásica.",
-      "La lengua en fresa es un hallazgo frecuente.",
-      "La adenopatía cervical suele ser unilateral.",
     ],
-    theoryContent: `PEDIATRÍA — BY DR Q.
-Vasculitis en pediatría.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Lengua roja." Y responden: Escarlatina.
+Esta es una pregunta clásica de pediatría porque evalúa una trampa frecuente: confundir fiebre prolongada con exantema y cambios mucosos con escarlatina o sarampión cuando el cuadro cumple criterios de Kawasaki.
 
-Referencias:
-Nelson Textbook of Pediatrics.; American Heart Association Guidelines for Kawasaki Disease.; Red Book: American Academy of Pediatrics.; Rudolph's Pediatrics.`,
+La clave no es tratar todo exantema febril como infección viral o estreptocócica.
+La clave es:
+Fiebre ≥5 días + alteraciones mucocutáneas + adenopatía cervical = enfermedad de Kawasaki → IVIG + AAS urgente.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Niño de 8 años con fiebre de 6 días.
+• Astenia, adinamia y malestar general.
+• Exantema cutáneo y cambios en mucosas orales.
+• Adenopatías cervicales.
+• Cuadro compatible con vasculitis sistémica de Kawasaki.
+
+Recordemos enfermedad de Kawasaki:
+• Vasculitis sistémica de vasos medianos que afecta principalmente niños <5 años (puede ocurrir en mayores).
+• Criterio indispensable: fiebre ≥5 días + ≥4 de 5 criterios clínicos (exantema, cambios mucosos, conjuntivitis, adenopatía cervical, cambios extremidades).
+• La complicación más temida son los aneurismas coronarios.
+• Tratamiento: inmunoglobulina intravenosa (2 g/kg) + ácido acetilsalicílico en dosis antiinflamatorias, luego antitrombóticas.
+• El tratamiento dentro de los primeros 10 días reduce significativamente el riesgo de aneurismas.
+
+Por lo tanto:
+El diagnóstico y tratamiento correctos son enfermedad de Kawasaki con IVIG y AAS (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+El cuadro cumple criterios de Kawasaki (fiebre prolongada, exantema, mucosas, adenopatía) y el tratamiento de elección es IVIG + ácido acetilsalicílico para prevenir aneurismas coronarios.
+
+¿Por qué fallan las otras opciones?
+Opción A (escarlatina; penicilina): la escarlatina tiene fiebre más corta, exantema arenoso y faringitis estreptocócica; la lengua en fresa puede confundir pero faltan otros criterios de Kawasaki.
+Opción B (sarampión; soporte): el sarampión tiene manchas de Koplik, tos, conjuntivitis y evolución diferente; no requiere IVIG.
+Opción D (mononucleosis; sintomático): la mono cursa con faringitis exudativa, linfadenopatía generalizada y fatiga; no presenta el patrón mucocutáneo de Kawasaki.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "lengua roja" o "exantema" y responden escarlatina.
+Pero la fiebre de 6 días con múltiples criterios mucocutáneos orienta a Kawasaki, urgencia cardiológica.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Ante fiebre ≥5 días sin foco en pediatría, incluir Kawasaki.
+2. Buscar criterios: exantema, mucosas, conjuntivitis, adenopatía, extremidades.
+3. Iniciar IVIG + AAS lo antes posible (idealmente <10 días de fiebre).
+4. Realizar ecocardiograma al diagnóstico y en seguimiento.
+
+Perlas de examen
+✅ Kawasaki = fiebre ≥5 días + ≥4 criterios clínicos.
+✅ IVIG + AAS temprano reduce aneurismas coronarios.
+✅ La adenopatía cervical suele ser unilateral y ≥1.5 cm.
+✅ La lengua en fresa y los labios fisurados son hallazgos frecuentes.
+✅ Es la causa más frecuente de cardiopatía adquirida en pediatría en países desarrollados.
+
+Referencias
+• Nelson Textbook of Pediatrics.
+• American Heart Association Guidelines for Kawasaki Disease.
+• Red Book: American Academy of Pediatrics.
+• Rudolph's Pediatrics.
+• UpToDate: Kawasaki disease.`,
   },
   {
     id: "dr-q-224",
@@ -4492,20 +5629,69 @@ Nelson Textbook of Pediatrics.; American Heart Association Guidelines for Kawasa
     correctOptionId: "C",
     explanation: "La presencia de signos duros de lesión vascular, como ausencia o disminución de pulsos y datos de isquemia distal, constituye una indicación de exploración quirúrgica inmediata sin retrasar el manejo con estudios diagnósticos adicionales.",
     keyPoints: [
-      "Lesión vascular mayor.",
+      "Cuando veas: herida penetrante en muslo con disminución de pulsos distales y frialdad de la extremidad.",
+      "Debes pensar en: signos duros de lesión vascular → exploración quirúrgica vascular urgente.",
+      "Los signos duros no requieren estudios de imagen que retrasen el manejo quirúrgico.",
+      "La isquemia distal (frialdad, palidez, ausencia de pulsos) es indicación de cirugía inmediata.",
       "Tema: Trauma vascular.",
-      "La ausencia o disminución de pulsos es un signo duro de lesión vascular.",
-      "La frialdad distal indica compromiso de la perfusión.",
-      "Los signos duros requieren cirugía inmediata.",
     ],
-    theoryContent: `CIRUGÍA VASCULAR — BY DR Q.
-Trauma vascular.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Paciente estable." Y responden: AngioTAC.
+Esta es una pregunta clásica de cirugía vascular porque evalúa una trampa frecuente: solicitar estudios de imagen en un paciente con signos duros de lesión vascular que requiere intervención quirúrgica inmediata.
 
-Referencias:
-Advanced Trauma Life Support (ATLS).; Rutherford's Vascular Surgery and Endovascular Therapy.; Eastern Association for the Surgery of Trauma (EAST) Guidelines.; Schwartz's Principles of Surgery.`,
+La clave no es confirmar con Doppler o angioTAC antes de operar.
+La clave es:
+Herida penetrante + signos duros de lesión vascular (pulsos disminuidos, frialdad distal) = exploración quirúrgica vascular urgente.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Habitante de calle con herida penetrante en muslo izquierdo.
+• Disminución de pulsos distales.
+• Frialdad de la extremidad afectada.
+• Signos duros de lesión vascular con isquemia distal.
+
+Recordemos trauma vascular de extremidades:
+• Los signos duros incluyen: ausencia/disminución de pulsos, sangrado activo, hematoma expansivo, soplo o thrill, isquemia distal (6 Ps: pain, pallor, pulselessness, paresthesia, paralysis, poikilothermia).
+• Los signos duros indican exploración quirúrgica inmediata sin retrasar con estudios de imagen.
+• Los signos blandos (historia de sangrado, proximidad a vaso, lesión nerviosa) permiten estudios no invasivos.
+• El tiempo isquémico determina la viabilidad de la extremidad.
+• Las guías EAST recomiendan cirugía inmediata ante signos duros.
+
+Por lo tanto:
+La conducta correcta es exploración quirúrgica vascular urgente (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La presencia de signos duros (pulsos disminuidos, frialdad distal) constituye indicación de exploración quirúrgica inmediata sin estudios diagnósticos adicionales que retrasen el manejo.
+
+¿Por qué fallan las otras opciones?
+Opción A (Doppler): estudio útil en signos blandos, pero retrasa cirugía en signos duros con isquemia activa.
+Opción B (angioTAC): puede ser útil en trauma estable con signos blandos, no en isquemia distal con signos duros.
+Opción D (observación 6 horas): inaceptable ante isquemia de extremidad; el tiempo isquémico aumenta riesgo de amputación.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes buscan confirmar con imagen antes de operar.
+Pero los signos duros de lesión vascular obligan a exploración quirúrgica inmediata sin demora.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar pulsos, perfusión y sensibilidad distal en trauma penetrante.
+2. Identificar signos duros vs blandos de lesión vascular.
+3. Ante signos duros: cirugía inmediata, no imagen.
+4. Ante signos blandos: Doppler o angioTAC según protocolo.
+
+Perlas de examen
+✅ Signos duros = cirugía inmediata, sin estudios que retrasen.
+✅ Los 6 Ps orientan isquemia distal: pain, pallor, pulselessness, paresthesia, paralysis, poikilothermia.
+✅ El Doppler y angioTAC son para signos blandos o trauma estable.
+✅ Cada minuto de isquemia aumenta riesgo de amputación.
+✅ La frialdad distal indica compromiso grave de perfusión.
+
+Referencias
+• Advanced Trauma Life Support (ATLS).
+• Rutherford's Vascular Surgery and Endovascular Therapy.
+• Eastern Association for the Surgery of Trauma (EAST) Guidelines.
+• Schwartz's Principles of Surgery.
+• UpToDate: Peripheral arterial trauma.`,
   },
   {
     id: "dr-q-225",
@@ -4524,20 +5710,71 @@ Advanced Trauma Life Support (ATLS).; Rutherford's Vascular Surgery and Endovasc
     correctOptionId: "D",
     explanation: "La clasificación Gustilo IIIC corresponde a cualquier fractura abierta asociada a lesión vascular que requiere reparación quirúrgica, independientemente del tamaño de la herida o del compromiso de partes blandas.",
     keyPoints: [
-      "Gustilo IIIC.",
+      "Cuando veas: fractura abierta de tibia/peroné tras atropello con ausencia de pulsos distales y pérdida de función motora.",
+      "Debes pensar en: Gustilo IIIC (fractura abierta + lesión vascular que requiere reparación).",
+      "En Gustilo, la lesión vascular define el grado IIIC independientemente del tamaño de la herida.",
+      "Las fracturas Gustilo IIIC tienen alto riesgo de amputación y requieren manejo multidisciplinario.",
       "Tema: Clasificación de Gustilo y Anderson.",
-      "La lesión vascular define una fractura Gustilo IIIC.",
-      "La tibia es el hueso largo más frecuentemente asociado a fracturas abiertas graves.",
-      "Las fracturas Gustilo IIIC tienen alto riesgo de amputación.",
     ],
-    theoryContent: `ORTOPEDIA Y TRAUMATOLOGÍA — BY DR Q.
-Clasificación de Gustilo y Anderson.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes buscan: El tamaño de la herida. Sin embargo: El dato decisivo es:
+Esta es una pregunta clásica de ortopedia porque evalúa una trampa frecuente: clasificar la fractura abierta solo por el tamaño de la herida sin considerar la lesión vascular asociada.
 
-Referencias:
-Gustilo RB, Anderson JT. Prevention of Infection in the Treatment of Open Fractures.; Rockwood and Green's Fractures in Adults.; Campbell's Operative Orthopaedics.; ATLS (Advanced Trauma Life Support).`,
+La clave no es el tamaño de la herida.
+La clave es:
+Fractura abierta + lesión vascular que requiere reparación quirúrgica = Gustilo IIIC, sin importar el tamaño de la herida.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 30 años atropellado con llantas pasando sobre la extremidad.
+• Fractura abierta de tibia y peroné.
+• Ausencia de pulsos distales.
+• Pérdida de función motora de la extremidad.
+• Lesión vascular asociada que define Gustilo IIIC.
+
+Recordemos clasificación de Gustilo y Anderson:
+• Tipo I: herida <1 cm, limpia, fractura simple.
+• Tipo II: herida 1-10 cm, lesión moderada de partes blandas.
+• Tipo IIIA: herida >10 cm, lesión extensa de partes blandas pero cobertura ósea posible.
+• Tipo IIIB: lesión extensa con pérdida de cobertura ósea y necesidad de colgajo.
+• Tipo IIIC: cualquier fractura abierta con lesión vascular que requiere reparación quirúrgica.
+• La tibia es el hueso largo más frecuentemente asociado a fracturas abiertas graves.
+
+Por lo tanto:
+La clasificación correcta es Gustilo IIIC (opción D).
+
+¿Por qué la opción D es la respuesta correcta?
+La presencia de lesión vascular (ausencia de pulsos distales) que requiere reparación quirúrgica clasifica automáticamente la fractura como Gustilo IIIC, independientemente del tamaño de la herida.
+
+¿Por qué fallan las otras opciones?
+Opción A (Gustilo I): fractura de baja energía con herida pequeña y sin lesión vascular; no aplica aquí.
+Opción B (Gustilo II): herida moderada sin lesión vascular significativa; ignora la ausencia de pulsos.
+Opción C (Gustilo IIIA): lesión extensa de partes blandas pero sin lesión vascular; la lesión vascular eleva a IIIC.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes buscan el tamaño de la herida para clasificar.
+Pero el dato decisivo es la lesión vascular que requiere reparación, que define Gustilo IIIC.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar fractura abierta y evaluar partes blandas.
+2. Evaluar pulsos, perfusión y función neurológica distal.
+3. Si hay lesión vascular que requiere reparación → Gustilo IIIC.
+4. Manejo multidisciplinario: ortopedia + vascular + antibióticos + estabilización.
+
+Perlas de examen
+✅ Gustilo IIIC = fractura abierta + lesión vascular que requiere reparación.
+✅ El tamaño de la herida no determina el grado cuando hay lesión vascular.
+✅ La tibia es el hueso más frecuente en fracturas abiertas graves.
+✅ Alto riesgo de amputación y infección en Gustilo IIIC.
+✅ Requiere reparación vascular urgente y estabilización ósea.
+
+Referencias
+• Gustilo RB, Anderson JT. Prevention of Infection in the Treatment of Open Fractures.
+• Rockwood and Green's Fractures in Adults.
+• Campbell's Operative Orthopaedics.
+• ATLS (Advanced Trauma Life Support).
+• UpToDate: Open tibial fractures.`,
   },
   {
     id: "dr-q-226",
@@ -4556,20 +5793,70 @@ Gustilo RB, Anderson JT. Prevention of Infection in the Treatment of Open Fractu
     correctOptionId: "C",
     explanation: "La dosis potencialmente tóxica de acetaminofén en una ingesta aguda única es ≥150 mg/kg (o aproximadamente ≥7.5 g en adultos). Ante una sobredosis intencional debe solicitarse concentración sérica de acetaminofén a las 4 horas de la ingesta (o tan pronto como sea posible si han transcurrido más de 4 horas) y valorar tratamiento con N-acetilcisteína.",
     keyPoints: [
-      "Intoxicación por acetaminofén.",
+      "Cuando veas: adolescente con ingesta intencional masiva de acetaminofén (43 tabletas), asintomática al ingreso.",
+      "Debes pensar en: dosis tóxica ≥150 mg/kg → nivel sérico a las 4 h y N-acetilcisteína según nomograma de Rumack-Matthew.",
+      "La ausencia de síntomas iniciales no descarta hepatotoxicidad grave posterior.",
+      "La NAC es más eficaz si se inicia dentro de las primeras 8 horas post-ingesta.",
       "Tema: Toxicología.",
-      "La dosis tóxica clásica es ≥150 mg/kg.",
-      "El antídoto es la N-acetilcisteína.",
-      "La mayor eficacia del antídoto ocurre si se administra dentro de las primeras 8 horas.",
     ],
-    theoryContent: `TOXICOLOGÍA — BY DR Q.
-Toxicología.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes creen que: La ausencia de síntomas descarta gravedad. Sin embargo: La mayoría de los pacientes se encuentran clínicamente bien durante las primeras horas.
+Esta es una pregunta clásica de toxicología porque evalúa una trampa frecuente: subestimar una sobredosis de acetaminofén por ausencia de síntomas al ingreso, cuando la hepatotoxicidad es tardía y potencialmente fatal.
 
-Referencias:
-Goldfrank's Toxicologic Emergencies.; Tintinalli's Emergency Medicine.; Nelson Textbook of Pediatrics.; UpToDate: Acetaminophen Poisoning in Children and Adolescents.`,
+La clave no es el estado clínico inicial.
+La clave es:
+Ingesta intencional masiva de acetaminofén + dosis potencial ≥150 mg/kg = solicitar nivel sérico y valorar N-acetilcisteína según nomograma.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Adolescente de 17 años con intento autolítico.
+• Ingesta de 43 tabletas de acetaminofén.
+• Hemodinámicamente estable sin hallazgos al examen.
+• Fase asintomática inicial de intoxicación por paracetamol.
+
+Recordemos intoxicación por acetaminofén:
+• Dosis potencialmente tóxica en ingesta aguda única: ≥150 mg/kg o ≥7.5 g en adultos.
+• 43 tabletas de 500 mg = ~21.5 g, claramente tóxico.
+• La hepatotoxicidad es tardía (24-72 h); la mayoría están asintomáticos al ingreso.
+• Nivel sérico a las 4 horas post-ingesta (o lo antes posible si >4 h) y nomograma de Rumack-Matthew.
+• N-acetilcisteína (NAC) es el antídoto; máxima eficacia si se inicia <8 horas.
+• La NAC repleta glutatión y previene necrosis hepatocelular.
+
+Por lo tanto:
+La conducta correcta es dosis tóxica >150 mg/kg, nivel sérico y protocolo con NAC según nomograma (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La ingesta de 43 tabletas supera ampliamente la dosis tóxica; debe solicitarse nivel sérico de acetaminofén y valorarse N-acetilcisteína según el nomograma de Rumack-Matthew.
+
+¿Por qué fallan las otras opciones?
+Opción A (>75 mg/kg; observación): subestima la dosis tóxica y omite antídoto; la hepatotoxicidad puede ser fatal.
+Opción B (>100 mg/kg; carbón activado): la dosis tóxica es ≥150 mg/kg; el carbón solo no es suficiente y debe darse precozmente (<1-2 h).
+Opción D (>300 mg/kg; hemodiálisis): la hemodiálisis no es el manejo de elección; la NAC es el tratamiento estándar.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes creen que la ausencia de síntomas descarta gravedad.
+Pero la mayoría de los pacientes están clínicamente bien durante las primeras horas y desarrollan falla hepática después.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Calcular dosis ingerida (mg/kg); ≥150 mg/kg = tóxico.
+2. Solicitar nivel sérico a las 4 horas (nomograma Rumack-Matthew).
+3. Iniciar N-acetilcisteína según nomograma (idealmente <8 h).
+4. Monitorizar función hepática y considerar trasplante si falla grave.
+
+Perlas de examen
+✅ Dosis tóxica aguda: ≥150 mg/kg o ≥7.5 g en adultos.
+✅ Fase I (0-24 h): asintomática o náusea leve.
+✅ NAC es el antídoto; máxima eficacia <8 horas post-ingesta.
+✅ Nomograma de Rumack-Matthew guía tratamiento con nivel a las 4 h.
+✅ Nunca dar de alta sin valorar riesgo y nivel sérico en sobredosis intencional.
+
+Referencias
+• Goldfrank's Toxicologic Emergencies.
+• Tintinalli's Emergency Medicine.
+• Nelson Textbook of Pediatrics.
+• UpToDate: Acetaminophen Poisoning in Children and Adolescents.
+• Rumack BH, Matthew H. Acetaminophen poisoning and toxicity.`,
   },
   {
     id: "dr-q-227",
@@ -4588,20 +5875,70 @@ Goldfrank's Toxicologic Emergencies.; Tintinalli's Emergency Medicine.; Nelson T
     correctOptionId: "B",
     explanation: "Toda taquicardia regular de complejo ancho debe considerarse taquicardia ventricular hasta demostrar lo contrario. En un paciente hemodinámicamente estable, el tratamiento farmacológico de elección es la amiodarona intravenosa.",
     keyPoints: [
-      "Taquicardia ventricular.",
+      "Cuando veas: dolor torácico con taquicardia regular de complejos anchos en ECG, paciente hemodinámicamente estable.",
+      "Debes pensar en: taquicardia ventricular hasta demostrar lo contrario → amiodarona IV.",
+      "Toda taquicardia de complejo ancho es TV hasta probar lo contrario (McConnell).",
+      "Adenosina y verapamilo están contraindicados en TV por riesgo de deterioro hemodinámico.",
       "Tema: Arritmias ventriculares.",
-      "Toda taquicardia de complejo ancho es TV hasta demostrar lo contrario.",
-      "La amiodarona es el antiarrítmico de elección en TV estable.",
-      "La cardioversión sincronizada es el manejo de elección en TV inestable.",
     ],
-    theoryContent: `CARDIOLOGÍA — BY DR Q.
-Arritmias ventriculares.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Dolor torácico." Y responden: Tratamiento antiisquémico.
+Esta es una pregunta clásica de cardiología porque evalúa una trampa frecuente: asociar dolor torácico con manejo antiisquémico cuando el ECG muestra taquicardia regular de complejo ancho que debe tratarse como TV.
 
-Referencias:
-ACLS American Heart Association.; Braunwald's Heart Disease.; Harrison's Principles of Internal Medicine.; ESC Guidelines for Ventricular Arrhythmias.`,
+La clave no es el dolor torácico.
+La clave es:
+Taquicardia regular de complejo ancho + estabilidad hemodinámica = taquicardia ventricular hasta demostrar lo contrario → amiodarona IV.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre con dolor torácico de 30 minutos.
+• FC 70 lpm y PA 110/70 mmHg al ingreso (antes del ECG).
+• ECG: taquicardia regular de complejos anchos.
+• Cuadro compatible con taquicardia ventricular estable.
+
+Recordemos taquicardia de complejo ancho:
+• Regla de McConnell: toda taquicardia regular de QRS ancho es TV hasta demostrar lo contrario.
+• Causas de TSV con aberrancia son menos frecuentes que TV en urgencias.
+• Paciente estable: amiodarona IV 150 mg en bolo, luego infusión.
+• Paciente inestable: cardioversión sincronizada inmediata.
+• Adenosina y verapamilo están contraindicados en TV (pueden causar colapso).
+• La nitroglicerina no trata arritmias ventriculares.
+
+Por lo tanto:
+El tratamiento de elección es amiodarona intravenosa (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+En taquicardia regular de complejo ancho hemodinámicamente estable, la amiodarona IV es el antiarrítmico de elección según ACLS para taquicardia ventricular.
+
+¿Por qué fallan las otras opciones?
+Opción A (adenosina): útil en TSV con aberrancia, pero arriesgado si es TV; no es primera línea en QRS ancho.
+Opción C (verapamilo): contraindicado en TV; puede causar hipotensión severa y colapso cardiovascular.
+Opción D (nitroglicerina): tratamiento antiisquémico, no antiarrítmico; no maneja taquicardia ventricular.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "dolor torácico" y responden tratamiento antiisquémico.
+Pero el ECG muestra taquicardia de complejo ancho que debe manejarse como TV.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar taquicardia regular de complejo ancho en ECG.
+2. Asumir TV hasta demostrar lo contrario.
+3. Si estable: amiodarona IV.
+4. Si inestable: cardioversión sincronizada inmediata.
+
+Perlas de examen
+✅ Toda taquicardia regular de QRS ancho = TV hasta demostrar lo contrario.
+✅ Amiodarona IV es el fármaco de elección en TV estable.
+✅ Verapamilo y adenosina están contraindicados en TV.
+✅ Cardioversión sincronizada si inestabilidad hemodinámica.
+✅ No confundir dolor torácico con indicación de nitroglicerina cuando hay arritmia ventricular.
+
+Referencias
+• ACLS American Heart Association.
+• Braunwald's Heart Disease.
+• Harrison's Principles of Internal Medicine.
+• ESC Guidelines for Ventricular Arrhythmias.
+• UpToDate: Wide QRS complex tachycardia.`,
   },
   {
     id: "dr-q-228",
@@ -4620,20 +5957,69 @@ ACLS American Heart Association.; Braunwald's Heart Disease.; Harrison's Princip
     correctOptionId: "C",
     explanation: "La combinación de miosis, bradicardia, hipotensión, sialorrea e hiperperistaltismo es característica de un toxíndrome colinérgico, habitualmente secundario a exposición a organofosforados o carbamatos.",
     keyPoints: [
-      "Toxíndrome colinérgico.",
+      "Cuando veas: inconsciencia tras fiesta rave con miosis, bradicardia, hipotensión, sialorrea e hiperperistaltismo.",
+      "Debes pensar en: toxíndrome colinérgico (organofosforados/carbamatos) → atropina + pralidoxima.",
+      "Miosis + sialorrea + bradicardia diferencia del toxíndrome opioide (sin sialorrea ni hiperperistaltismo).",
+      "La atropina es el tratamiento inicial más importante; la pralidoxima reactiva la acetilcolinesterasa.",
       "Tema: Intoxicaciones agudas.",
-      "Miosis + sialorrea + bradicardia = pensar en toxíndrome colinérgico.",
-      "Los organofosforados inhiben la acetilcolinesterasa.",
-      "La atropina es el tratamiento inicial más importante.",
     ],
-    theoryContent: `TOXICOLOGÍA — BY DR Q.
-Intoxicaciones agudas.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Miosis." Y responden: Intoxicación por opioides.
+Esta es una pregunta clásica de toxicología porque evalúa una trampa frecuente: asociar miosis con intoxicación por opioides cuando el cuadro completo (sialorrea, bradicardia, hiperperistaltismo) es característico del toxíndrome colinérgico.
 
-Referencias:
-Goldfrank's Toxicologic Emergencies.; Tintinalli's Emergency Medicine.; Harrison's Principles of Internal Medicine.; Olson's Poisoning & Drug Overdose.`,
+La clave no es la miosis aislada.
+La clave es:
+Miosis + bradicardia + hipotensión + sialorrea + hiperperistaltismo = toxíndrome colinérgico → atropina y pralidoxima.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Adolescente de 17 años inconsciente tras fiesta rave.
+• Hipotensión (70/40 mmHg) y bradicardia (40 lpm).
+• Pupilas mióticas, sialorrea y aumento de ruidos intestinales.
+• Cuadro clásico de toxíndrome colinérgico por organofosforados o carbamatos.
+
+Recordemos toxíndromes y síndrome colinérgico:
+• El toxíndrome colinérgico se caracteriza por: SLUDGE (salivation, lacrimation, urination, defecation, GI upset, emesis) + miosis + bradicardia.
+• Causas: organofosforados, carbamatos (inhiben acetilcolinesterasa).
+• Tratamiento: atropina IV (dosis altas hasta secar secreciones) + pralidoxima (reactiva acetilcolinesterasa en organofosforados).
+• Diferencia con opioides: estos causan miosis pero bradipnea, no sialorrea ni hiperperistaltismo.
+• Diferencia con anticolinérgico: midriasis, piel seca, taquicardia (opuesto al colinérgico).
+
+Por lo tanto:
+El toxíndrome y manejo correctos son colinérgico con atropina y pralidoxima (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La combinación de miosis, bradicardia, hipotensión, sialorrea e hiperperistaltismo es patognomónica de toxíndrome colinérgico, tratado con atropina y pralidoxima.
+
+¿Por qué fallan las otras opciones?
+Opción A (simpaticomimético; benzodiacepinas): cursa con midriasis, taquicardia, hipertensión y agitación; cuadro opuesto.
+Opción B (anticolinérgico; fisostigmina): cursa con midriasis, piel seca, retención urinaria; fisostigmina es para anticolinérgico, no colinérgico.
+Opción D (opioide; naloxona): los opioides causan miosis y depresión respiratoria, pero no sialorrea ni hiperperistaltismo.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "miosis" y responden intoxicación por opioides.
+Pero la sialorrea y el hiperperistaltismo son claves del toxíndrome colinérgico, no del opioide.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer el toxíndrome por el patrón clínico (SLUDGE + miosis + bradicardia).
+2. Identificar causa: organofosforados o carbamatos.
+3. Iniciar atropina IV en dosis altas hasta secar secreciones.
+4. Agregar pralidoxima si exposición a organofosforados.
+
+Perlas de examen
+✅ Colinérgico: miosis + sialorrea + bradicardia + hiperperistaltismo (SLUDGE).
+✅ Opioide: miosis + bradipnea + depresión del SNC (sin sialorrea).
+✅ Anticolinérgico: midriasis + piel seca + "loco como un sombrero".
+✅ Simpaticomimético: midriasis + taquicardia + agitación.
+✅ Atropina es el antídoto inicial más importante en colinérgico.
+
+Referencias
+• Goldfrank's Toxicologic Emergencies.
+• Tintinalli's Emergency Medicine.
+• Harrison's Principles of Internal Medicine.
+• Olson's Poisoning & Drug Overdose.
+• UpToDate: Organophosphate and carbamate poisoning.`,
   },
   {
     id: "dr-q-229",
@@ -4652,20 +6038,69 @@ Goldfrank's Toxicologic Emergencies.; Tintinalli's Emergency Medicine.; Harrison
     correctOptionId: "A",
     explanation: "La dislalia es un trastorno de la articulación de los fonemas sin compromiso de la comprensión ni de la organización del lenguaje. El paciente sabe qué quiere decir, pero presenta dificultad para pronunciar correctamente determinados sonidos.",
     keyPoints: [
-      "Dislalia.",
+      "Cuando veas: adolescente con dificultad para articular fonemas sin alteración de comprensión ni estructura del lenguaje.",
+      "Debes pensar en: dislalia (trastorno de articulación aislado).",
+      "La dislalia afecta solo la pronunciación; el lenguaje receptivo y expresivo están intactos.",
+      "Diferenciar de disfasia (lenguaje) y afasia (adquirida por lesión cerebral).",
       "Tema: Trastornos del lenguaje.",
-      "La dislalia afecta únicamente la articulación de los sonidos.",
-      "No existe alteración de la comprensión del lenguaje.",
-      "No existe alteración de la inteligencia.",
     ],
-    theoryContent: `DESARROLLO Y LENGUAJE — BY DR Q.
-Trastornos del lenguaje.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes confunden: Dislalia y disfasia. Sin embargo: El dato decisivo es:
+Esta es una pregunta clásica de desarrollo y lenguaje porque evalúa una trampa frecuente: confundir dislalia con disfasia o afasia cuando el único déficit es la articulación de fonemas.
 
-Referencias:
-Nelson Textbook of Pediatrics.; Developmental-Behavioral Pediatrics.; Manual de Pediatría de la AEP.; DSM-5-TR.`,
+La clave no es asumir un trastorno global del lenguaje.
+La clave es:
+Dificultad para articular fonemas + comprensión y expresión normales = dislalia.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Adolescente de 14 años.
+• Dificultades para articular ciertos fonemas.
+• Sin alteraciones en comprensión, expresión o estructura general del lenguaje.
+• Trastorno aislado de la articulación del habla.
+
+Recordemos trastornos del lenguaje y habla:
+• Dislalia: trastorno de articulación de fonemas; el paciente sabe qué decir pero no pronuncia correctamente.
+• Disfasia: trastorno del desarrollo del lenguaje (comprensión y/o expresión afectadas).
+• Disglosia: alteración anatómica que impide articulación (fisura palatina, anquiloglosia).
+• Afasia: pérdida adquirida del lenguaje por lesión cerebral (adultos, post-ictus).
+• La inteligencia no está afectada en dislalia.
+
+Por lo tanto:
+El diagnóstico más probable es dislalia (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+La dislalia es un trastorno exclusivo de la articulación de fonemas sin compromiso de comprensión ni organización del lenguaje, exactamente como describe el caso.
+
+¿Por qué fallan las otras opciones?
+Opción B (disfasia): implica alteración del desarrollo del lenguaje (comprensión y/o expresión), no solo articulación.
+Opción C (disglosia): se debe a alteración anatómica estructural (paladar, lengua); no se describe en el caso.
+Opción D (afasia): es adquirida por lesión cerebral en adultos; no aplica en adolescente con trastorno de articulación aislado.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden dislalia y disfasia.
+Pero el dato decisivo es que solo la articulación está afectada, no la comprensión ni la expresión.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar comprensión, expresión y articulación por separado.
+2. Si solo la articulación está afectada → dislalia.
+3. Si comprensión/expresión afectadas → disfasia.
+4. Si hay lesión cerebral adquirida → afasia.
+
+Perlas de examen
+✅ Dislalia = solo articulación afectada, lenguaje intacto.
+✅ Disfasia = trastorno del desarrollo del lenguaje (comprensión y/o expresión).
+✅ Afasia = pérdida adquirida del lenguaje por lesión cerebral.
+✅ Disglosia = causa anatómica (fisura, anquiloglosia).
+✅ En dislalia, el paciente sabe qué quiere decir pero no puede pronunciarlo.
+
+Referencias
+• Nelson Textbook of Pediatrics.
+• Developmental-Behavioral Pediatrics.
+• Manual de Pediatría de la AEP.
+• DSM-5-TR.
+• UpToDate: Speech and language delay in children.`,
   },
   {
     id: "dr-q-230",
@@ -4684,20 +6119,68 @@ Nelson Textbook of Pediatrics.; Developmental-Behavioral Pediatrics.; Manual de 
     correctOptionId: "A",
     explanation: "Las células glandulares atípicas (AGC) se asocian a un riesgo significativo de lesiones premalignas o malignas del cuello uterino y del endometrio. Por ello, toda paciente con AGC-NOS requiere evaluación diagnóstica inmediata mediante colposcopia con toma de biopsias dirigidas y muestreo endocervical.",
     keyPoints: [
-      "Colposcopia inmediata.",
+      "Cuando veas: citología cervical con AGC-NOS (células glandulares atípicas de significado indeterminado).",
+      "Debes pensar en: evaluación diagnóstica inmediata → colposcopia con biopsia dirigida y muestreo endocervical.",
+      "AGC se asocia a mayor riesgo de adenocarcinoma que las alteraciones escamosas leves.",
+      "No repetir citología ni limitarse a prueba de VPH; requiere evaluación invasiva inmediata.",
       "Tema: Tamizaje y patología cervical.",
-      "AGC significa células glandulares atípicas.",
-      "Toda paciente con AGC requiere colposcopia.",
-      "El riesgo de adenocarcinoma es mayor que en las alteraciones escamosas leves.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Tamizaje y patología cervical.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes asocian: Citología anormal. Con: Repetición del examen.
+Esta es una pregunta clásica de ginecología porque evalúa una trampa frecuente: manejar AGC como una alteración citológica leve que puede repetirse, cuando requiere evaluación diagnóstica inmediata.
 
-Referencias:
-ASCCP Risk-Based Management Guidelines.; ACOG Practice Bulletin: Cervical Cancer Screening.; Novak's Gynecology.; Berek & Novak's Gynecology.`,
+La clave no es repetir la citología o hacer solo prueba de VPH.
+La clave es:
+AGC-NOS en citología de tamizaje = colposcopia inmediata con biopsia dirigida y muestreo endocervical.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 40 años con citología de tamizaje.
+• Resultado: AGC-NOS (células glandulares atípicas de significado indeterminado).
+• Necesidad de evaluación diagnóstica urgente por riesgo de malignidad glandular.
+
+Recordemos AGC y manejo cervical:
+• AGC = células glandulares atípicas; pueden originarse del endocérvix o endometrio.
+• Se asocian a riesgo significativo de adenocarcinoma cervical y endometrial.
+• Las guías ASCCP recomiendan colposcopia inmediata con biopsia dirigida y curetaje endocervical.
+• No se debe repetir citología ni limitarse a prueba de VPH como primer paso.
+• La histeroscopia no es el estudio inicial de elección ante AGC.
+
+Por lo tanto:
+El siguiente paso es colposcopia y biopsia (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+Toda paciente con AGC-NOS requiere evaluación diagnóstica inmediata mediante colposcopia con toma de biopsias dirigidas y muestreo endocervical según guías ASCCP.
+
+¿Por qué fallan las otras opciones?
+Opción B (repetir citología en 6-12 meses): inadecuado; AGC requiere evaluación inmediata, no seguimiento citológico.
+Opción C (prueba de VPH): complementaria pero no sustituye la colposcopia ante AGC.
+Opción D (histeroscopia): no es el estudio inicial; la colposcopia con muestreo endocervical es el primer paso.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian citología anormal con repetición del examen.
+Pero AGC tiene mayor riesgo de malignidad glandular y exige colposcopia inmediata.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar AGC en citología de tamizaje.
+2. Referir a colposcopia inmediata (no repetir citología).
+3. Realizar biopsia dirigida y curetaje endocervical.
+4. Evaluar endometrio según edad y hallazgos (≥35 años o sangrado anormal).
+
+Perlas de examen
+✅ AGC = células glandulares atípicas → colposcopia inmediata.
+✅ Mayor riesgo de adenocarcinoma que LSIL o ASC-US.
+✅ Siempre incluir muestreo endocervical (curetaje).
+✅ No repetir citología como manejo inicial de AGC.
+✅ Evaluar endometrio en mujeres ≥35 años o con sangrado anormal.
+
+Referencias
+• ASCCP Risk-Based Management Guidelines.
+• ACOG Practice Bulletin: Cervical Cancer Screening.
+• Novak's Gynecology.
+• Berek & Novak's Gynecology.
+• UpToDate: Cervical cytology: Evaluation of atypical glandular cells.`,
   },
   {
     id: "dr-q-231",
@@ -4716,20 +6199,71 @@ ASCCP Risk-Based Management Guidelines.; ACOG Practice Bulletin: Cervical Cancer
     correctOptionId: "B",
     explanation: "Los criterios de Light confirman un exudado (relación proteínas LP/suero >0.5 y relación LDH LP/suero >0.6). Además, la glucosa baja y el pH <7.30 sugieren un derrame parapneumónico complicado que generalmente requiere drenaje pleural.",
     keyPoints: [
-      "Exudado complicado.",
+      "Cuando veas: líquido pleural con criterios de Light positivos (exudado), pH <7.30, glucosa baja y predominio neutrofílico.",
+      "Debes pensar en: derrame parapneumónico complicado que requiere drenaje pleural.",
+      "Criterios de Light: proteína LP/suero >0.5 y/o LDH LP/suero >0.6 confirman exudado.",
+      "pH <7.30 y glucosa <60 mg/dL orientan a derrame complicado con indicación de drenaje.",
       "Tema: Derrame pleural.",
-      "Los criterios de Light son el estándar para diferenciar exudados y transudados.",
-      "Glucosa <60 mg/dL sugiere exudado complicado.",
-      "pH <7.30 orienta a drenaje pleural.",
     ],
-    theoryContent: `NEUMOLOGÍA — BY DR Q.
-Derrame pleural.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes observan: "Derrame pleural." Y responden: Insuficiencia cardíaca.
+Esta es una pregunta clásica de neumología porque evalúa una trampa frecuente: clasificar todo derrame pleural hospitalizado como transudado por insuficiencia cardíaca sin aplicar los criterios de Light y los marcadores de complicación.
 
-Referencias:
-Light RW. Pleural Diseases.; ATS Guidelines for Pleural Disease.; Harrison's Principles of Internal Medicine.; Murray & Nadel's Textbook of Respiratory Medicine.`,
+La clave no es asumir transudado por contexto hospitalario.
+La clave es:
+Criterios de Light positivos + pH <7.30 + glucosa baja + neutrofilia = exudado parapneumónico complicado.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta análisis de líquido pleural con:
+• Proteínas LP/suero: 4.8/6.0 = 0.80 (>0.5 → exudado).
+• LDH LP/suero: 420/180 = 2.33 (>0.6 → exudado).
+• pH: 7.28 (<7.30 → complicado).
+• Glucosa: 45 mg/dL (<60 → complicado).
+• 3.500 leucocitos/mm³ con predominio neutrofílico.
+• Cuadro compatible con derrame parapneumónico complicado.
+
+Recordemos derrame pleural y criterios de Light:
+• Criterios de Light (cualquiera positivo = exudado): proteína LP/suero >0.5, LDH LP/suero >0.6, LDH LP >2/3 del límite superior sérico.
+• Derrame parapneumónico complicado: pH <7.30, glucosa <60 mg/dL, LDH >1000, empiema (pus).
+• El derrame complicado generalmente requiere drenaje pleural (tubo torácico).
+• Los transudados (ICC, cirrosis, síndrome nefrótico) tienen proteínas y LDH bajos.
+• El predominio neutrofílico orienta a proceso infeccioso agudo.
+
+Por lo tanto:
+Los hallazgos determinan derrame pleural exudativo compatible con parapneumónico complicado (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+Los criterios de Light confirman exudado y la combinación de pH <7.30, glucosa baja y neutrofilia es compatible con derrame parapneumónico complicado que requiere drenaje.
+
+¿Por qué fallan las otras opciones?
+Opción A (transudado por ICC): los criterios de Light son positivos; no es transudado.
+Opción C (síndrome nefrótico): causaría transudado con proteínas y LDH bajos; no coincide con los valores.
+Opción D (transudado por cirrosis): igualmente sería transudado; los criterios de Light descartan esta posibilidad.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan "derrame pleural" en paciente hospitalizado y responden insuficiencia cardíaca.
+Pero los criterios de Light y los marcadores bioquímicos confirman exudado complicado.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Aplicar criterios de Light para clasificar exudado vs transudado.
+2. En exudado, evaluar pH, glucosa, LDH y aspecto del líquido.
+3. pH <7.30 o glucosa <60 = parapneumónico complicado → drenaje.
+4. Diferenciar transudado (ICC, cirrosis, nefrótico) de exudado (infección, malignidad).
+
+Perlas de examen
+✅ Criterios de Light: proteína >0.5, LDH >0.6, LDH LP >2/3 LSN.
+✅ pH <7.30 en exudado = indicación de drenaje.
+✅ Glucosa <60 mg/dL sugiere derrame complicado.
+✅ Parapneumónico complicado requiere tubo de tórax.
+✅ Transudado: ICC, cirrosis, síndrome nefrótico, hipoalbuminemia.
+
+Referencias
+• Light RW. Pleural Diseases.
+• ATS Guidelines for Pleural Disease.
+• Harrison's Principles of Internal Medicine.
+• Murray & Nadel's Textbook of Respiratory Medicine.
+• UpToDate: Pleural fluid analysis.`,
   },
   {
     id: "dr-q-232",
@@ -4748,20 +6282,69 @@ Light RW. Pleural Diseases.; ATS Guidelines for Pleural Disease.; Harrison's Pri
     correctOptionId: "D",
     explanation: "La presencia de un nódulo sólido, hipoecoico y con microcalcificaciones corresponde a características ecográficas altamente sospechosas de malignidad. Un nódulo TI-RADS 5 de 1.5 cm tiene indicación de estudio citológico mediante BACAF.",
     keyPoints: [
-      "TI-RADS 5.",
+      "Cuando veas: nódulo tiroideo sólido, hipoecoico, con microcalcificaciones y síntomas compresivos (disfagia, odinofagia).",
+      "Debes pensar en: TI-RADS 5 (alta sospecha de malignidad) → biopsia por aspiración con aguja fina (BACAF).",
+      "Las microcalcificaciones son el signo ecográfico de mayor especificidad para carcinoma papilar.",
+      "Un nódulo TI-RADS 5 ≥1 cm tiene indicación de BACAF independientemente del tamaño aparentemente pequeño.",
       "Tema: Nódulo tiroideo.",
-      "Las microcalcificaciones son un signo ecográfico de alta sospecha.",
-      "El carcinoma papilar es el cáncer de tiroides más frecuente.",
-      "TI-RADS 5 implica alto riesgo de malignidad.",
     ],
-    theoryContent: `ENDOCRINOLOGÍA — BY DR Q.
-Nódulo tiroideo.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes se enfocan en: Que el nódulo mide solo 1.5 cm. Sin embargo: El dato decisivo es:
+Esta es una pregunta clásica de endocrinología porque evalúa una trampa frecuente: subestimar un nódulo de 1.5 cm con características de alta sospecha ecográfica, enfocándose en el tamaño en lugar de los criterios de malignidad.
 
-Referencias:
-American Thyroid Association Guidelines.; ACR TI-RADS White Paper.; Williams Textbook of Endocrinology.; UpToDate: Thyroid Nodules.`,
+La clave no es el tamaño aparentemente pequeño del nódulo.
+La clave es:
+Nódulo sólido + hipoecoico + microcalcificaciones = TI-RADS 5 → BACAF obligatoria.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 35 años con disfagia, odinofagia y masa cervical de 3 meses.
+• Ecografía: nódulo sólido de 1.5 cm, hipoecoico, con microcalcificaciones.
+• Características ecográficas de alta sospecha de malignidad (TI-RADS 5).
+
+Recordemos nódulo tiroideo y TI-RADS:
+• TI-RADS clasifica nódulos según composición, ecogenicidad, forma, márgenes y calcificaciones.
+• Microcalcificaciones (psamommas) = alta especificidad para carcinoma papilar.
+• Hipoecoicidad y nódulo sólido aumentan la sospecha.
+• TI-RADS 5 = alto riesgo de malignidad; BACAF indicada en nódulos ≥1 cm.
+• El carcinoma papilar es el cáncer de tiroides más frecuente (80-90%).
+• La gammagrafía se reserva para nódulos con TSH suprimida (nódulo tóxico).
+
+Por lo tanto:
+La clasificación y conducta correctas son TI-RADS 5 con BACAF (opción D).
+
+¿Por qué la opción D es la respuesta correcta?
+Un nódulo sólido, hipoecoico con microcalcificaciones corresponde a TI-RADS 5, y a 1.5 cm tiene indicación de estudio citológico mediante BACAF.
+
+¿Por qué fallan las otras opciones?
+Opción A (TI-RADS 2; seguimiento): TI-RADS 2 es benigno; las características del nódulo son altamente sospechosas.
+Opción B (TI-RADS 3; control 12 meses): TI-RADS 3 es de baja sospecha; las microcalcificaciones elevan a categoría 5.
+Opción C (TI-RADS 4; gammagrafía): la gammagrafía no es el siguiente paso en nódulo con TSH normal y alta sospecha ecográfica.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes se enfocan en que el nódulo mide solo 1.5 cm.
+Pero las microcalcificaciones y la hipoecoicidad definen TI-RADS 5 con indicación de BACAF.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar nódulo tiroideo con ecografía y clasificar TI-RADS.
+2. Identificar signos de alta sospecha: microcalcificaciones, hipoecoicidad, márgenes irregulares.
+3. TI-RADS 5 ≥1 cm → BACAF.
+4. No usar gammagrafía como primer paso si TSH es normal.
+
+Perlas de examen
+✅ Microcalcificaciones = signo ecográfico de mayor especificidad para malignidad.
+✅ TI-RADS 5 = alto riesgo; BACAF si nódulo ≥1 cm.
+✅ Carcinoma papilar = cáncer de tiroides más frecuente.
+✅ Gammagrafía solo si TSH suprimida (nódulo hiperfuncionante).
+✅ El tamaño no atenúa la sospecha si hay criterios de alto riesgo.
+
+Referencias
+• American Thyroid Association Guidelines.
+• ACR TI-RADS White Paper.
+• Williams Textbook of Endocrinology.
+• UpToDate: Thyroid Nodules.
+• Haugen BR et al. 2015 ATA Management Guidelines.`,
   },
   {
     id: "dr-q-233",
@@ -4780,20 +6363,71 @@ American Thyroid Association Guidelines.; ACR TI-RADS White Paper.; Williams Tex
     correctOptionId: "B",
     explanation: "La leucocoria (ausencia del reflejo rojo) en un niño pequeño debe considerarse retinoblastoma hasta demostrar lo contrario. Es el tumor intraocular maligno más frecuente de la infancia y constituye una urgencia diagnóstica.",
     keyPoints: [
-      "Retinoblastoma.",
+      "Cuando veas: niño pequeño con leucocoria (ausencia del reflejo rojo), descrito como \"ojo de gato\".",
+      "Debes pensar en: retinoblastoma hasta demostrar lo contrario — urgencia oncológica y oftalmológica.",
+      "La leucocoria es el signo de presentación más frecuente del retinoblastoma.",
+      "Nunca realizar biopsia intraocular por riesgo de diseminación extrarretiniana.",
       "Tema: Retinoblastoma.",
-      "La leucocoria es el signo más frecuente del retinoblastoma.",
-      "El estrabismo es la segunda forma de presentación más común.",
-      "Nunca debe realizarse biopsia intraocular por riesgo de diseminación.",
     ],
-    theoryContent: `OFTALMOLOGÍA — BY DR Q.
-Retinoblastoma.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Entropión." Y se distraen. Sin embargo:
+Esta es una pregunta clásica de oftalmología pediátrica porque evalúa una trampa frecuente: no reconocer la leucocoria como signo de retinoblastoma, el tumor intraocular maligno más frecuente de la infancia.
 
-Referencias:
-Nelson Textbook of Pediatrics.; American Academy of Ophthalmology.; Shields' Retinoblastoma.; UpToDate: Retinoblastoma.`,
+La clave no es atribuir el hallazgo a causas benignas.
+La clave es:
+Leucocoria (ausencia de reflejo rojo) en niño <5 años = retinoblastoma hasta demostrar lo contrario.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Niño de 2 años.
+• La madre refiere que "el ojo se ve como el de un gato".
+• Tamizaje visual: ausencia del reflejo rojo en un ojo (leucocoria unilateral).
+• Cuadro altamente sugestivo de retinoblastoma.
+
+Recordemos retinoblastoma:
+• Tumor intraocular maligno más frecuente de la infancia (incidencia ~1:15.000-20.000 nacidos vivos).
+• La leucocoria (reflejo blanco) es el signo de presentación más frecuente (60%).
+• El estrabismo es la segunda forma de presentación más común.
+• Puede ser hereditario (40%, bilateral) o esporádico (60%, unilateral).
+• NUNCA se debe biopsiar intraocularmente por riesgo de diseminación.
+• Diagnóstico: examen oftalmológico bajo anestesia + ecografía ocular + RM.
+• Tratamiento: quimioterapia, braquiterapia, enucleación según estadio.
+
+Por lo tanto:
+El diagnóstico más probable es retinoblastoma (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La leucocoria unilateral en un niño de 2 años es el hallazgo clásico del retinoblastoma, que constituye una urgencia diagnóstica oncológica.
+
+¿Por qué fallan las otras opciones?
+Opción A (estrabismo convergente): puede ser segunda presentación del retinoblastoma, pero el signo descrito es leucocoria, no desviación ocular.
+Opción C (catarata congénita): causa leucocoria pero suele ser bilateral y presente desde el nacimiento; menos probable a los 2 años con inicio referido.
+Opción D (glaucoma congénito): cursa con epífora, fotofobia y aumento del tamaño ocular (buftalmos), no leucocoria aislada.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes no reconocen "ojo de gato" como leucocoria ni su asociación con retinoblastoma.
+Pero toda leucocoria en la infancia debe considerarse retinoblastoma hasta demostrar lo contrario.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar leucocoria en tamizaje visual infantil.
+2. Considerar retinoblastoma hasta demostrar lo contrario.
+3. Referir urgente a oftalmología pediátrica.
+4. Nunca biopsiar intraocularmente.
+
+Perlas de examen
+✅ Leucocoria en niño = retinoblastoma hasta demostrar lo contrario.
+✅ Signo más frecuente: leucocoria (60%); segundo: estrabismo.
+✅ NUNCA biopsia intraocular (riesgo de diseminación).
+✅ Puede ser hereditario (RB1) o esporádico.
+✅ El tamizaje con reflejo rojo detecta leucocoria precozmente.
+
+Referencias
+• Nelson Textbook of Pediatrics.
+• American Academy of Ophthalmology.
+• Shields' Retinoblastoma.
+• UpToDate: Retinoblastoma.
+• WHO Classification of Tumours: Retinoblastoma.`,
   },
   {
     id: "dr-q-234",
@@ -4812,20 +6446,70 @@ Nelson Textbook of Pediatrics.; American Academy of Ophthalmology.; Shields' Ret
     correctOptionId: "C",
     explanation: "La lesión descrita es altamente sugestiva de chancro sifilítico. Durante la sífilis primaria temprana el VDRL puede ser negativo debido a que aún no se han desarrollado títulos detectables de anticuerpos no treponémicos.",
     keyPoints: [
-      "Sífilis primaria temprana.",
+      "Cuando veas: úlcera vulvar indolora de bordes bien definidos con VDRL no reactivo y antecedente de relaciones sexuales sin protección.",
+      "Debes pensar en: sífilis primaria temprana → prueba treponémica específica (FTA-ABS o prueba rápida treponémica).",
+      "El chancro sifilítico es típicamente indoloro con base limpia y bordes elevados.",
+      "El VDRL puede ser negativo en las primeras semanas de sífilis primaria.",
       "Tema: Sífilis.",
-      "El chancro sifilítico es típicamente indoloro.",
-      "El VDRL puede ser negativo en fases muy tempranas.",
-      "Las pruebas treponémicas son más sensibles en sífilis primaria.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
-Sífilis.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "VDRL negativo." Y descartan sífilis. Sin embargo:
+Esta es una pregunta clásica de infectología porque evalúa una trampa frecuente: descartar sífilis por VDRL negativo cuando la lesión clínica es un chancro sifilítico en fase primaria temprana.
 
-Referencias:
-CDC Sexually Transmitted Infections Treatment Guidelines.; Harrison's Principles of Internal Medicine.; Mandell, Douglas and Bennett's Infectious Diseases.; WHO Guidelines for the Management of Sexually Transmitted Infections.`,
+La clave no es el VDRL negativo.
+La clave es:
+Úlcera vulvar indolora + VDRL negativo en fase temprana = solicitar prueba treponémica específica antes de descartar sífilis.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 28 años con úlcera vulvar indolora de bordes bien definidos.
+• Actividad sexual sin protección en los últimos meses.
+• VDRL no reactivo en estudio inicial.
+• Cuadro compatible con sífilis primaria temprana con serología no treponémica aún negativa.
+
+Recordemos sífilis primaria:
+• El chancro sifilítico es una úlcera indolora, de bordes elevados y base limpia.
+• Aparece 3-6 semanas tras la exposición en el sitio de inoculación.
+• El VDRL (prueba no treponémica) puede ser negativo en las primeras 1-4 semanas.
+• Las pruebas treponémicas (FTA-ABS, TP-PA, pruebas rápidas) son más sensibles en fase primaria.
+• El algoritmo diagnóstico combina clínica + serología treponémica y no treponémica.
+• El tratamiento de elección es penicilina benzatínica 2.4 millones UI IM dosis única.
+
+Por lo tanto:
+La conducta correcta es solicitar prueba treponémica específica e iniciar manejo según hallazgos (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La lesión es altamente sugestiva de chancro sifilítico y el VDRL puede ser negativo en fase temprana; se requiere prueba treponémica más sensible antes de descartar sífilis.
+
+¿Por qué fallan las otras opciones?
+Opción A (descartar sífilis; biopsia): no se debe descartar sífilis con VDRL negativo en fase primaria temprana; la biopsia no es el primer paso.
+Opción B (repetir VDRL en 6 meses): retrasa diagnóstico y tratamiento de una ITS curable; se necesita prueba treponémica ahora.
+Opción D (tratamiento para herpes): la herpes genital causa vesículas dolorosas, no úlcera indolora de bordes definidos.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "VDRL negativo" y descartan sífilis.
+Pero en sífilis primaria temprana las pruebas no treponémicas pueden ser negativas; las treponémicas son más sensibles.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar úlcera genital indolora como posible chancro sifilítico.
+2. No descartar sífilis por VDRL negativo en fase temprana.
+3. Solicitar prueba treponémica específica (FTA-ABS o rápida treponémica).
+4. Tratar con penicilina benzatínica si se confirma.
+
+Perlas de examen
+✅ Chancro sifilítico = úlcera indolora, bordes elevados, base limpia.
+✅ VDRL puede ser negativo en sífilis primaria temprana (1-4 semanas).
+✅ Pruebas treponémicas son más sensibles en fase primaria.
+✅ Herpes genital = vesículas dolorosas, no úlcera indolora.
+✅ Tratamiento: penicilina benzatínica 2.4 millones UI IM dosis única.
+
+Referencias
+• CDC Sexually Transmitted Infections Treatment Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Mandell, Douglas and Bennett's Infectious Diseases.
+• WHO Guidelines for the Management of Sexually Transmitted Infections.
+• UpToDate: Syphilis: Epidemiology, clinical manifestations, and diagnosis.`,
   },
   {
     id: "dr-q-235",
@@ -4844,20 +6528,70 @@ CDC Sexually Transmitted Infections Treatment Guidelines.; Harrison's Principles
     correctOptionId: "D",
     explanation: "Las quemaduras eléctricas de alto voltaje producen una extensa destrucción muscular y tisular profunda que no se correlaciona con la superficie cutánea visible. Por ello, la reanimación hídrica no debe basarse únicamente en la regla de los nueves o en las lesiones de entrada y salida.",
     keyPoints: [
-      "Daño profundo oculto.",
+      "Cuando veas: quemadura eléctrica de alto voltaje con lesiones de entrada/salida mínimas y sin quemaduras cutáneas extensas visibles.",
+      "Debes pensar en: daño tisular profundo oculto masivo — no estimar SCQ por regla de los nueves.",
+      "Las quemaduras eléctricas de alto voltaje causan destrucción muscular profunda desproporcionada a la lesión cutánea.",
+      "Riesgo de mioglobinuria, rabdomiolisis, arritmias y síndrome compartimental.",
       "Tema: Quemaduras eléctricas.",
-      "Las quemaduras eléctricas suelen subestimar la lesión real.",
-      "El daño muscular profundo puede ser masivo.",
-      "La mioglobinuria es una complicación frecuente.",
     ],
-    theoryContent: `QUEMADURAS — BY DR Q.
-Quemaduras eléctricas.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes intentan: Calcular la superficie corporal quemada usando la regla de los nueves. Sin embargo: En quemaduras eléctricas de alto voltaje esto subestima gravemente la lesión.
+Esta es una pregunta clásica de cirugía de quemados porque evalúa una trampa frecuente: calcular la superficie corporal quemada (SCQ) con la regla de los nueves en una quemadura eléctrica de alto voltaje, subestimando gravemente la lesión real.
 
-Referencias:
-Advanced Burn Life Support (ABLS).; American Burn Association Guidelines.; Schwartz's Principles of Surgery.; Tintinalli's Emergency Medicine.`,
+La clave no es la apariencia externa de las lesiones.
+La clave es:
+Quemadura eléctrica de alto voltaje = daño tisular profundo extenso que no se correlaciona con la superficie cutánea visible.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 25 años, electricista, descarga eléctrica de alto voltaje.
+• Lesión de entrada en región occipital y salida en talón derecho.
+• Sin otras quemaduras cutáneas evidentes.
+• Daño muscular y tisular profundo oculto desproporcionado a la lesión visible.
+
+Recordemos quemaduras eléctricas:
+• Las de alto voltaje (>1000 V) producen destrucción muscular masiva a lo largo del trayecto del corriente.
+• La lesión cutánea visible subestima enormemente el daño interno (regla del "iceberg").
+• La regla de los nueves NO aplica para estimar reposición hídrica en quemaduras eléctricas.
+• Complicaciones: rabdomiolisis, mioglobinuria, insuficiencia renal, arritmias, síndrome compartimental.
+• La reanimación hídrica debe ser agresiva según diuresis y CPK, no solo por SCQ visible.
+• Pueden requerir fasciotomía por síndrome compartimental.
+
+Por lo tanto:
+La respuesta correcta es que no puede estimarse por apariencia externa; debe considerarse quemadura eléctrica profunda de alto voltaje (opción D).
+
+¿Por qué la opción D es la respuesta correcta?
+Las quemaduras eléctricas de alto voltaje producen extensa destrucción tisular profunda no correlacionada con la superficie cutánea visible; la reposición hídrica no debe basarse en la regla de los nueves.
+
+¿Por qué fallan las otras opciones?
+Opción A (1%): subestima gravemente la lesión; solo considera puntos de entrada/salida.
+Opción B (5%): igualmente insuficiente para una quemadura eléctrica de alto voltaje con trayecto occipital-talón.
+Opción C (20%): aún subestima el daño muscular profundo que puede afectar gran parte del cuerpo a lo largo del trayecto de la corriente.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes intentan calcular la SCQ usando la regla de los nueves con las lesiones de entrada y salida.
+Pero en quemaduras eléctricas de alto voltaje esto subestima gravemente la lesión y pone al paciente en riesgo de subrehidratación.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar quemadura eléctrica de alto voltaje.
+2. No usar regla de los nueves para estimar SCQ.
+3. Iniciar reanimación hídrica agresiva monitorizando diuresis y CPK.
+4. Vigilar arritmias, rabdomiolisis y síndrome compartimental.
+
+Perlas de examen
+✅ Quemadura eléctrica alto voltaje = daño profundo oculto ("iceberg").
+✅ La regla de los nueves NO aplica para reposición hídrica.
+✅ Mioglobinuria y rabdomiolisis son complicaciones frecuentes.
+✅ Monitorizar CPK, diuresis y función renal.
+✅ Vigilar síndrome compartimental → fasciotomía.
+
+Referencias
+• Advanced Burn Life Support (ABLS).
+• American Burn Association Guidelines.
+• Schwartz's Principles of Surgery.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Environmental and weapon-related electrical injuries.`,
   },
   {
     id: "dr-q-236",
@@ -4876,20 +6610,71 @@ Advanced Burn Life Support (ABLS).; American Burn Association Guidelines.; Schwa
     correctOptionId: "C",
     explanation: "Según las recomendaciones del Ministerio de Salud de Colombia y los protocolos de tamizaje neonatal para cardiopatías congénitas críticas, una diferencia mayor de 3% entre la saturación preductal (mano derecha) y postductal (miembro inferior), o una saturación menor de 95% en cualquiera de las extremidades tras mediciones repetidas, constituye un tamizaje positivo.",
     keyPoints: [
-      "Tamizaje positivo para cardiopatía congénita crítica.",
+      "Cuando veas: tamizaje neonatal con SpO₂ preductal (mano derecha) 98% y postductal (miembro inferior) 92%, diferencia >3% persistente.",
+      "Debes pensar en: tamizaje positivo para cardiopatía congénita crítica → valoración cardiológica y ecocardiograma.",
+      "La diferencia >3% entre preductal y postductal es criterio de tamizaje anormal.",
+      "Las cardiopatías ducto-dependientes pueden presentarse sin cianosis evidente al nacimiento.",
       "Tema: Tamizaje neonatal cardiovascular.",
-      "La mano derecha corresponde a la medición preductal.",
-      "Los miembros inferiores corresponden a la medición postductal.",
-      "Diferencia >3% es un tamizaje anormal.",
     ],
-    theoryContent: `CARDIOLOGÍA NEONATAL — BY DR Q.
-Tamizaje neonatal cardiovascular.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "No presenta cianosis." Y concluyen: Recién nacido sano.
+Esta es una pregunta clásica de cardiología neonatal porque evalúa una trampa frecuente: considerar normal un recién nacido sin cianosis evidente cuando el tamizaje con oximetría de pulso muestra diferencia significativa preductal-postductal.
 
-Referencias:
-Ministerio de Salud y Protección Social de Colombia. Lineamientos de Tamizaje Neonatal.; American Academy of Pediatrics.; Nelson Textbook of Pediatrics.; American Heart Association Guidelines.`,
+La clave no es la ausencia de cianosis clínica.
+La clave es:
+Diferencia de SpO₂ >3% entre mano derecha (preductal) y miembro inferior (postductal) = tamizaje positivo → ecocardiograma urgente.
+
+¿Qué está ocurriendo realmente?
+El neonato presenta:
+• Recién nacido a término con adaptación neonatal adecuada.
+• Tamizaje con oximetría de pulso antes del alta.
+• SpO₂ 98% en mano derecha (preductal) y 92% en miembro inferior (postductal).
+• Diferencia de 6% persistente en segunda medición.
+• Tamizaje positivo para cardiopatía congénita crítica.
+
+Recordemos tamizaje neonatal cardiovascular:
+• Protocolo de oximetría de pulso antes del alta hospitalaria (recomendado por AAP y Minsalud Colombia).
+• Medición preductal: mano derecha (antes del conducto arterioso).
+• Medición postductal: pie o miembro inferior (después del conducto arterioso).
+• Tamizaje positivo: SpO₂ <95% en cualquier sitio O diferencia >3% preductal-postductal en dos mediciones.
+• Detecta cardiopatías ducto-dependientes (coartación, TGA, atresia pulmonar, etc.).
+• El ecocardiograma es el estudio diagnóstico de confirmación.
+
+Por lo tanto:
+La conducta correcta es considerar tamizaje positivo, realizar valoración cardiológica y ecocardiograma (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La diferencia de 6% (>3%) entre mediciones preductal y postductal persistente constituye tamizaje positivo según protocolos de Minsalud Colombia y AAP, requiriendo evaluación cardiológica urgente.
+
+¿Por qué fallan las otras opciones?
+Opción A (tamizaje normal; egreso): la diferencia >3% es anormal; egresar sin estudio pone al neonato en riesgo.
+Opción B (repetir en control ambulatorio): retrasa diagnóstico de cardiopatía crítica ducto-dependiente.
+Opción D (oxígeno suplementario y repetir en 24 h): no es el manejo del tamizaje positivo; se requiere ecocardiograma, no oxígeno empírico.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "no presenta cianosis" y concluyen recién nacido sano.
+Pero las cardiopatías ducto-dependientes pueden manifestarse solo con diferencia preductal-postductal antes del cierre del conducto.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Realizar oximetría preductal (mano derecha) y postductal (pie) antes del alta.
+2. Tamizaje positivo si SpO₂ <95% o diferencia >3% en dos mediciones.
+3. No egresar; realizar ecocardiograma urgente.
+4. Iniciar prostaglandinas si cardiopatía ducto-dependiente confirmada.
+
+Perlas de examen
+✅ Preductal = mano derecha; postductal = pie/miembro inferior.
+✅ Diferencia >3% o SpO₂ <95% = tamizaje positivo.
+✅ Detecta cardiopatías críticas ducto-dependientes antes del cierre del conducto.
+✅ La cianosis puede ausentarse inicialmente.
+✅ Ecocardiograma es el estudio de confirmación.
+
+Referencias
+• Ministerio de Salud y Protección Social de Colombia. Lineamientos de Tamizaje Neonatal.
+• American Academy of Pediatrics.
+• Nelson Textbook of Pediatrics.
+• American Heart Association Guidelines.
+• UpToDate: Identifying newborns with critical congenital heart disease.`,
   },
   {
     id: "dr-q-237",
@@ -4908,20 +6693,70 @@ Ministerio de Salud y Protección Social de Colombia. Lineamientos de Tamizaje N
     correctOptionId: "B",
     explanation: "El sangrado uterino irregular es el efecto adverso más frecuente de los implantes de progestágeno. Cuando la paciente desea continuar con el método y se han descartado otras causas, puede realizarse tratamiento médico temporal con estrógenos o anticonceptivos combinados para mejorar el patrón de sangrado.",
     keyPoints: [
-      "Manejo médico del sangrado asociado al implante.",
+      "Cuando veas: sangrado uterino irregular persistente con implante de levonorgestrel, paciente desea continuar el método y sin anemia.",
+      "Debes pensar en: efecto adverso esperado del implante → anticonceptivos orales combinados temporales para control del sangrado.",
+      "El sangrado irregular es el efecto adverso más frecuente de los implantes de progestágeno.",
+      "No es necesario retirar el implante si la paciente desea continuar y se descartaron otras causas.",
       "Tema: Anticoncepción hormonal.",
-      "El sangrado irregular es el efecto adverso más frecuente de los implantes.",
-      "No disminuye la eficacia anticonceptiva.",
-      "Los anticonceptivos combinados pueden utilizarse temporalmente para controlar el sangrado.",
     ],
-    theoryContent: `GINECOLOGÍA Y PLANIFICACIÓN FAMILIAR — BY DR Q.
-Anticoncepción hormonal.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "5 meses de sangrado." Y responden: Retirar el implante.
+Esta es una pregunta clásica de ginecología y planificación familiar porque evalúa una trampa frecuente: retirar el implante ante sangrado irregular prolongado cuando la paciente desea continuar el método y existe tratamiento médico para controlar el sangrado.
 
-Referencias:
-WHO Family Planning Handbook.; CDC U.S. Selected Practice Recommendations for Contraceptive Use.; ACOG Long-Acting Reversible Contraception Guidelines.; Williams Gynecology.`,
+La clave no es retirar el implante automáticamente.
+La clave es:
+Sangrado irregular con implante de levonorgestrel + paciente desea continuar + sin anemia = tratamiento médico temporal con estrógenos o ACO combinados.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 20 años con sangrado uterino irregular de 5 meses.
+• Usa implante subdérmico de levonorgestrel.
+• Desea continuar con el método anticonceptivo.
+• Examen físico normal, sin signos de anemia.
+• Efecto adverso esperado del implante que afecta calidad de vida.
+
+Recordemos implante de levonorgestrel y sangrado:
+• El sangrado uterino irregular es el efecto adverso más frecuente de los implantes de progestágeno.
+• No disminuye la eficacia anticonceptiva del implante.
+• Cuando la paciente desea continuar y se descartaron otras causas (embarazo, patología uterina), se puede tratar con estrógenos o ACO combinados temporalmente.
+• Los estrógenos estabilizan el endometrio y reducen el sangrado irregular.
+• La retirada del implante solo se indica si la paciente no desea continuar o si el sangrado es inaceptable a pesar del tratamiento.
+
+Por lo tanto:
+La conducta terapéutica correcta es iniciar anticonceptivos orales combinados por corto tiempo (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+Ante sangrado irregular con implante de levonorgestrel en paciente que desea continuar el método, los ACO combinados temporales mejoran el patrón de sangrado sin comprometer la anticoncepción del implante.
+
+¿Por qué fallan las otras opciones?
+Opción A (retirar implante): no es necesario si la paciente desea continuar; existe tratamiento médico efectivo.
+Opción C (legrado): inadecuado; no hay indicación de procedimiento invasivo ante sangrado por implante sin sospecha de patología.
+Opción D (suspender intervención): el sangrado afecta su calidad de vida; no es adecuado solo explicar sin ofrecer tratamiento.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "5 meses de sangrado" y responden retirar el implante.
+Pero si la paciente desea continuar el método, el tratamiento con estrógenos o ACO combinados es la conducta adecuada.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar sangrado relacionado con implante y descartar otras causas.
+2. Evaluar deseo de la paciente de continuar el método.
+3. Si desea continuar: ACO combinados o estrógenos temporales.
+4. Retirar implante solo si no desea continuar o falla tratamiento médico.
+
+Perlas de examen
+✅ Sangrado irregular = efecto adverso más frecuente del implante de LNG.
+✅ No reduce la eficacia anticonceptiva del implante.
+✅ ACO combinados temporales controlan el sangrado sin retirar el implante.
+✅ Retirar solo si la paciente no desea continuar.
+✅ Descartar embarazo y patología uterina antes de atribuir al implante.
+
+Referencias
+• WHO Family Planning Handbook.
+• CDC U.S. Selected Practice Recommendations for Contraceptive Use.
+• ACOG Long-Acting Reversible Contraception Guidelines.
+• Williams Gynecology.
+• UpToDate: Implantable contraception: Management of bleeding irregularities.`,
   },
   {
     id: "dr-q-238",
@@ -4940,20 +6775,71 @@ WHO Family Planning Handbook.; CDC U.S. Selected Practice Recommendations for Co
     correctOptionId: "A",
     explanation: "La diverticulitis aguda no complicada con inflamación pericólica y ausencia de abscesos o perforación corresponde a un Hinchey Ia. El manejo inicial suele ser conservador con antibióticos, analgesia, hidratación y vigilancia clínica.",
     keyPoints: [
-      "Diverticulitis aguda no complicada.",
+      "Cuando veas: dolor en fosa ilíaca izquierda con fiebre, TAC con engrosamiento del sigmoide e infiltración de grasa pericólica sin absceso ni perforación.",
+      "Debes pensar en: diverticulitis aguda Hinchey Ia (pericolicitis) → manejo conservador con antibióticos.",
+      "El dolor en FII en anciano es diverticulitis hasta demostrar lo contrario.",
+      "Hinchey Ia = inflamación pericólica sin absceso ni perforación; no requiere cirugía inicial.",
       "Tema: Diverticulitis aguda.",
-      "El dolor en fosa ilíaca izquierda es la presentación clásica.",
-      "Hinchey Ia corresponde a inflamación pericólica.",
-      "La TAC es el estudio diagnóstico de elección.",
     ],
-    theoryContent: `CIRUGÍA GENERAL — BY DR Q.
-Diverticulitis aguda.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Paciente anciano con fiebre." Y responden: Cirugía.
+Esta es una pregunta clásica de cirugía general porque evalúa una trampa frecuente: indicar cirugía urgente en un anciano con fiebre y dolor abdominal cuando la TAC muestra diverticulitis no complicada (Hinchey Ia).
 
-Referencias:
-Schwartz's Principles of Surgery.; Sabiston Textbook of Surgery.; ASCRS Guidelines for Diverticulitis.; UpToDate: Acute Colonic Diverticulitis.`,
+La clave no es la edad avanzada ni la fiebre aisladas.
+La clave es:
+Diverticulitis con inflamación pericólica sin absceso, fístula, neumoperitoneo ni peritonitis = Hinchey Ia → manejo conservador.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 78 años con dolor en fosa ilíaca izquierda, fiebre y náuseas.
+• TAC: engrosamiento del colon sigmoide con infiltración de grasa pericólica.
+• Sin abscesos, fístulas, neumoperitoneo ni peritonitis.
+• Diverticulitis aguda no complicada (Hinchey Ia).
+
+Recordemos diverticulitis aguda y clasificación de Hinchey:
+• Hinchey Ia: inflamación pericólica / flemón pericólico (sin absceso).
+• Hinchey Ib: absceso pericólico o mesentérico pequeño (<4 cm).
+• Hinchey II: absceso pélvico o retroperitoneal distante.
+• Hinchey III: peritonitis purulenta generalizada.
+• Hinchey IV: peritonitis fecal generalizada.
+• Hinchey Ia-Ib: manejo conservador con antibióticos, analgesia, hidratación y vigilancia.
+• La TAC es el estudio diagnóstico de elección.
+
+Por lo tanto:
+La clasificación y manejo correctos son Hinchey Ia con tratamiento conservador (opción A).
+
+¿Por qué la opción A es la respuesta correcta?
+La diverticulitis con inflamación pericólica sin abscesos ni signos de perforación corresponde a Hinchey Ia, cuyo manejo inicial es conservador con antibióticos y medidas de soporte.
+
+¿Por qué fallan las otras opciones?
+Opción B (Hinchey Ib; drenaje): Hinchey Ib requiere absceso pericólico; la TAC no muestra absceso.
+Opción C (Hinchey III; laparotomía): Hinchey III implica peritonitis purulenta generalizada; no hay neumoperitoneo ni peritonitis.
+Opción D (Hinchey IV; Hartmann): Hinchey IV es peritonitis fecal; el caso describe inflamación pericólica sin perforación franca.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "paciente anciano con fiebre" y responden cirugía.
+Pero la TAC define la clasificación de Hinchey y Hinchey Ia se maneja médicamente.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar diverticulitis ante dolor en FII con fiebre.
+2. Confirmar con TAC abdominal.
+3. Clasificar según Hinchey modificado.
+4. Hinchey Ia: antibióticos + soporte; cirugía solo si complicaciones o falla médica.
+
+Perlas de examen
+✅ Dolor en FII + fiebre en anciano = diverticulitis hasta demostrar lo contrario.
+✅ Hinchey Ia = inflamación pericólica → manejo conservador.
+✅ TAC es el estudio diagnóstico de elección.
+✅ Absceso >4 cm (Hinchey II) → drenaje percutáneo.
+✅ Hartmann reservado para Hinchey III-IV o peritonitis generalizada.
+
+Referencias
+• Schwartz's Principles of Surgery.
+• Sabiston Textbook of Surgery.
+• ASCRS Guidelines for Diverticulitis.
+• UpToDate: Acute Colonic Diverticulitis.
+• Hinchey EJ, Schaal PG, Richards GK. Treatment of perforated diverticular disease.`,
   },
   {
     id: "dr-q-239",
@@ -4972,20 +6858,69 @@ Schwartz's Principles of Surgery.; Sabiston Textbook of Surgery.; ASCRS Guidelin
     correctOptionId: "B",
     explanation: "La presencia de desconexión del medio, automatismos orales y período posictal confusional es altamente sugestiva de una crisis focal con alteración de la conciencia, frecuentemente originada en el lóbulo temporal.",
     keyPoints: [
-      "Crisis focal con alteración de la conciencia.",
+      "Cuando veas: desconexión del entorno de ~3 minutos, mirada fija, automatismos orales repetitivos y confusión posictal prolongada.",
+      "Debes pensar en: crisis focal con alteración de la conciencia (focal compleja) → levetiracetam como tratamiento de primera línea.",
+      "Los automatismos orales sugieren origen en el lóbulo temporal.",
+      "La confusión posictal distingue la crisis focal compleja de la crisis de ausencia.",
       "Tema: Epilepsia focal.",
-      "Los automatismos orales sugieren epilepsia del lóbulo temporal.",
-      "La confusión posictal es típica de las crisis focales complejas.",
-      "Las ausencias no presentan período posictal.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Epilepsia focal.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Desconexión del entorno." Y responden: Crisis de ausencia.
+Esta es una pregunta clásica de neurología porque evalúa una trampa frecuente: confundir una crisis focal compleja con una crisis de ausencia por la desconexión del entorno.
 
-Referencias:
-Adams and Victor's Principles of Neurology.; Bradley's Neurology in Clinical Practice.; ILAE Classification of Seizures.; Harrison's Principles of Internal Medicine.`,
+La clave no es asumir que toda desconexión breve es ausencia.
+La clave es:
+Automatismos orales + período posictal confusional = crisis focal con alteración de la conciencia, frecuentemente del lóbulo temporal.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 45 años con episodios recurrentes de ~3 minutos.
+• Desconexión del entorno con mirada fija.
+• Automatismos orales repetitivos durante el evento.
+• Confusión y desorientación posictal de varios minutos.
+• Cuadro compatible con crisis focal compleja, no con ausencia típica.
+
+Recordemos clasificación de crisis epilépticas:
+• Las crisis de ausencia son breves (~10-20 segundos), sin automatismos complejos ni posictal.
+• La crisis focal con alteración de la conciencia incluye automatismos (orales, manuales) y posictal.
+• El lóbulo temporal es el origen más frecuente de crisis focales complejas con automatismos orales.
+• Levetiracetam, lamotrigina y carbamazepina son opciones de primera línea en epilepsia focal.
+• La etosuximida es específica para crisis de ausencia, no para crisis focales.
+
+Por lo tanto:
+El diagnóstico más probable es crisis focal con alteración de la conciencia y el tratamiento de primera línea es levetiracetam (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La tríada desconexión + automatismos orales + posictal confusional es altamente sugestiva de crisis focal compleja. Levetiracetam es un antiepiléptico de amplio espectro eficaz en epilepsia focal.
+
+¿Por qué fallan las otras opciones?
+Opción A (crisis de ausencia; etosuximida): las ausencias no tienen automatismos orales complejos ni período posictal confusional; la etosuximida no trata crisis focales.
+Opción C (crisis tónico-clónica generalizada; fenitoína): no hay convulsiones generalizadas ni pérdida tónico-clónica descrita; el cuadro es focal.
+Opción D (crisis mioclónica; ácido valproico): no hay descargas mioclónicas; el patrón es de desconexión con automatismos.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "desconexión del entorno" y responden crisis de ausencia.
+Pero la confusión posictal y los automatismos orales excluyen la ausencia típica.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar automatismos y posictal como signos de crisis focal compleja.
+2. Descartar ausencia (sin posictal, más breve, inicio en infancia/adolescencia típicamente).
+3. Considerar origen temporal por automatismos orales.
+4. Iniciar antiepiléptico de primera línea para epilepsia focal (levetiracetam).
+
+Perlas de examen
+✅ Automatismos orales + posictal = crisis focal compleja, no ausencia.
+✅ Etosuximida solo para crisis de ausencia.
+✅ Levetiracetam es opción de primera línea en epilepsia focal.
+✅ El lóbulo temporal es el origen clásico de automatismos orales.
+✅ La duración de ~3 minutos favorece crisis focal sobre ausencia.
+
+Referencias
+• Adams and Victor's Principles of Neurology.
+• Bradley's Neurology in Clinical Practice.
+• ILAE Classification of Seizures.
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "dr-q-240",
@@ -5004,20 +6939,68 @@ Adams and Victor's Principles of Neurology.; Bradley's Neurology in Clinical Pra
     correctOptionId: "B",
     explanation: "La coexistencia de síntomas depresivos (llanto, desesperanza, ideación de muerte) con síntomas maniformes (verborrea, agitación psicomotora e insomnio con aumento de energía) es altamente sugestiva de un episodio mixto del trastorno bipolar. Los antidepresivos pueden precipitar o desenmascarar estos episodios.",
     keyPoints: [
-      "Episodio mixto bipolar.",
-      "Tema: Trastorno bipolar.",
+      "Cuando veas: paciente con ISRS que presenta llanto, ideación de muerte junto con agitación, verborrea e insomnio de varios días.",
+      "Debes pensar en: trastorno bipolar en episodio mixto → suspender antidepresivo e iniciar estabilizador del ánimo y antipsicótico.",
       "El episodio mixto tiene uno de los mayores riesgos de suicidio en psiquiatría.",
-      "Los ISRS pueden precipitar manía o episodios mixtos.",
-      "El litio reduce el riesgo suicida.",
+      "Los ISRS pueden precipitar o desenmascarar manía o episodios mixtos.",
+      "Tema: Trastorno bipolar.",
     ],
-    theoryContent: `PSIQUIATRÍA — BY DR Q.
-Trastorno bipolar.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Depresión." Y responden: Aumentar el antidepresivo.
+Esta es una pregunta clásica de psiquiatría porque evalúa una trampa frecuente: interpretar síntomas depresivos en un paciente con antidepresivo sin buscar síntomas maniformes concurrentes.
 
-Referencias:
-DSM-5-TR.; Kaplan & Sadock's Synopsis of Psychiatry.; American Psychiatric Association Guidelines.; Stahl's Essential Psychopharmacology.`,
+La clave no es aumentar el antidepresivo ante llanto e ideación de muerte.
+La clave es:
+Síntomas depresivos + síntomas maniformes simultáneos en paciente con ISRS = episodio mixto bipolar → suspender antidepresivo e iniciar estabilizador del ánimo y antipsicótico.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 38 años con trastorno depresivo mayor en tratamiento con ISRS.
+• Síntomas depresivos: llanto persistente, pensamientos negativos, ideación de muerte.
+• Síntomas maniformes: agitación psicomotora, verborrea, insomnio de varios días.
+• Cuadro compatible con episodio mixto del trastorno bipolar.
+
+Recordemos trastorno bipolar y episodio mixto:
+• El episodio mixto combina criterios de manía/hipomanía y depresión mayor simultáneamente.
+• Los antidepresivos (ISRS) pueden precipitar manía, hipomanía o episodios mixtos en pacientes bipolares no diagnosticados.
+• El episodio mixto tiene uno de los mayores riesgos de suicidio en psiquiatría.
+• El manejo incluye suspender el antidepresivo e iniciar estabilizador del ánimo (litio, valproato) ± antipsicótico.
+• El litio reduce el riesgo suicida en trastorno bipolar.
+
+Por lo tanto:
+El diagnóstico más probable es trastorno bipolar en episodio mixto y la conducta de urgencia es suspender antidepresivo e iniciar estabilizador del ánimo y antipsicótico (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La coexistencia de síntomas depresivos y maniformes define el episodio mixto. Los ISRS deben suspenderse y el tratamiento requiere estabilización del ánimo.
+
+¿Por qué fallan las otras opciones?
+Opción A (episodio depresivo mayor; aumentar ISRS): ignoraría los síntomas maniformes y podría empeorar el cuadro; aumentar el antidepresivo es peligroso en episodio mixto.
+Opción C (delirium; haloperidol IV): la paciente no tiene alteración del sensorio ni desorientación fluctuante típica de delirium.
+Opción D (TAG; benzodiacepina y egreso): no explica la verborrea, agitación ni insomnio maniforme; subestima el riesgo suicida.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "depresión" e "ideación de muerte" y responden aumentar el antidepresivo.
+Pero la agitación, verborrea e insomnio indican componente maniforme concurrente.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Buscar siempre síntomas maniformes en pacientes depresivos con antidepresivos.
+2. Diagnosticar episodio mixto si coexisten ambos polos.
+3. Suspender el antidepresivo de inmediato.
+4. Iniciar estabilizador del ánimo ± antipsicótico.
+
+Perlas de examen
+✅ Episodio mixto = depresión + manía simultáneas.
+✅ ISRS pueden precipitar manía o episodios mixtos en bipolar no diagnosticado.
+✅ Nunca aumentar antidepresivo ante síntomas maniformes.
+✅ El episodio mixto tiene alto riesgo de suicidio.
+✅ El litio reduce el riesgo suicida en trastorno bipolar.
+
+Referencias
+• DSM-5-TR.
+• Kaplan & Sadock's Synopsis of Psychiatry.
+• American Psychiatric Association Guidelines.
+• Stahl's Essential Psychopharmacology.`,
   },
   {
     id: "dr-q-241",
@@ -5036,20 +7019,70 @@ DSM-5-TR.; Kaplan & Sadock's Synopsis of Psychiatry.; American Psychiatric Assoc
     correctOptionId: "B",
     explanation: "El cuadro es altamente sugestivo de síndrome de Guillain-Barré, una polirradiculoneuropatía inflamatoria aguda autoinmune. El tratamiento de primera línea consiste en inmunoglobulina intravenosa o plasmaféresis.",
     keyPoints: [
-      "Síndrome de Guillain-Barré.",
+      "Cuando veas: debilidad ascendente progresiva y parálisis facial bilateral tras infección respiratoria, con paciente alerta y EMG inicial no concluyente.",
+      "Debes pensar en: síndrome de Guillain-Barré → inmunoglobulina intravenosa como tratamiento de primera línea.",
+      "Campylobacter jejuni es el desencadenante infeccioso clásico, aunque aquí fue infección respiratoria.",
+      "La parálisis facial bilateral es frecuente en Guillain-Barré y ayuda a diferenciarlo de ictus.",
       "Tema: Neuropatías desmielinizantes.",
-      "Campylobacter jejuni es el desencadenante clásico.",
-      "La parálisis facial bilateral es frecuente.",
-      "La EMG puede ser normal al inicio.",
     ],
-    theoryContent: `NEUROLOGÍA — BY DR Q.
-Neuropatías desmielinizantes.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "EMG normal." Y descartan Guillain-Barré. Sin embargo:
+Esta es una pregunta clásica de neurología porque evalúa una trampa frecuente: descartar Guillain-Barré por una electromiografía inicial normal o confundirlo con patología del SNC.
 
-Referencias:
-Adams and Victor's Principles of Neurology.; Bradley's Neurology in Clinical Practice.; Harrison's Principles of Internal Medicine.; UpToDate: Guillain-Barré Syndrome in Adults.`,
+La clave no es esperar confirmación electromiográfica para tratar.
+La clave es:
+Debilidad ascendente + arreflexia + antecedente infeccioso + parálisis facial bilateral = Guillain-Barré → IVIG o plasmaféresis de inmediato.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 35 años con dolor lumbar y parestesias progresivas en MMII.
+• Infección respiratoria una semana antes del inicio.
+• Debilidad ascendente y parálisis facial bilateral.
+• Alerta, orientado, sin alteración de conciencia.
+• EMG inicial sin hallazgos concluyentes (normal al inicio del curso).
+
+Recordemos síndrome de Guillain-Barré:
+• Polirradiculoneuropatía inflamatoria aguda autoinmune postinfecciosa.
+• Cuadro clásico: debilidad ascendente simétrica, arreflexia, parestesias.
+• Campylobacter jejuni e infecciones respiratorias son desencadenantes frecuentes.
+• La parálisis facial bilateral ocurre en ~50% de los casos.
+• La EMG puede ser normal en la primera semana; el diagnóstico es clínico.
+• Tratamiento de primera línea: IVIG o plasmaféresis dentro de las 2-4 semanas.
+
+Por lo tanto:
+El tratamiento inicial más adecuado es inmunoglobulina intravenosa (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+Guillain-Barré requiere tratamiento inmunomodulador urgente. IVIG y plasmaféresis son equivalentes en eficacia como primera línea.
+
+¿Por qué fallan las otras opciones?
+Opción A (metilprednisolona IV): los corticoides no están indicados en Guillain-Barré clásico y pueden empeorar el pronóstico.
+Opción C (interferón beta): es tratamiento de esclerosis múltiple, no de neuropatía aguda postinfecciosa.
+Opción D (acetazolamida): se usa en canalopatías como parálisis periódica, no en polineuropatía inflamatoria aguda.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "EMG normal" y descartan Guillain-Barré.
+Pero la EMG puede ser normal al inicio; el cuadro clínico manda.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar debilidad ascendente postinfecciosa con arreflexia.
+2. Notar parálisis facial bilateral como pista de polineuropatía, no de ictus.
+3. No retrasar tratamiento por EMG inicial normal.
+4. Iniciar IVIG o plasmaféresis de inmediato.
+
+Perlas de examen
+✅ Guillain-Barré = debilidad ascendente + arreflexia postinfecciosa.
+✅ EMG normal al inicio no excluye el diagnóstico.
+✅ IVIG y plasmaféresis son tratamientos equivalentes de primera línea.
+✅ Los corticoides NO están indicados en Guillain-Barré clásico.
+✅ Parálisis facial bilateral sugiere neuropatía periférica, no ictus.
+
+Referencias
+• Adams and Victor's Principles of Neurology.
+• Bradley's Neurology in Clinical Practice.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Guillain-Barré Syndrome in Adults.`,
   },
   {
     id: "dr-q-242",
@@ -5068,20 +7101,69 @@ Adams and Victor's Principles of Neurology.; Bradley's Neurology in Clinical Pra
     correctOptionId: "C",
     explanation: "La hipertensión diagnosticada antes de las 20 semanas de gestación corresponde a hipertensión arterial crónica. Además, esta paciente presenta alto riesgo de recurrencia de preeclampsia por antecedente de preeclampsia severa, por lo que requiere profilaxis con ácido acetilsalicílico a dosis bajas.",
     keyPoints: [
-      "Hipertensión arterial crónica.",
+      "Cuando veas: gestante de 13 semanas con PA 150/90 mmHg, sin proteinuria ni daño a órgano blanco, y antecedente de preeclampsia severa previa.",
+      "Debes pensar en: hipertensión arterial crónica → antihipertensivo + ácido acetilsalicílico a baja dosis para profilaxis de preeclampsia.",
+      "Hipertensión diagnosticada antes de las 20 semanas = hipertensión crónica, no preeclampsia.",
+      "Antecedente de preeclampsia severa es indicación de aspirina profiláctica desde el primer trimestre.",
       "Tema: Trastornos hipertensivos del embarazo.",
-      "Hipertensión antes de las 20 semanas = hipertensión crónica.",
-      "La preeclampsia suele aparecer después de las 20 semanas.",
-      "Antecedente de preeclampsia severa es indicación de aspirina profiláctica.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Trastornos hipertensivos del embarazo.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Antecedente de preeclampsia." Y responden: Preeclampsia actual.
+Esta es una pregunta clásica de obstetricia porque evalúa una trampa frecuente: diagnosticar preeclampsia actual por el antecedente, ignorando el momento gestacional del diagnóstico hipertensivo.
 
-Referencias:
-ACOG Practice Bulletin: Chronic Hypertension in Pregnancy.; ISSHP Guidelines for Hypertensive Disorders of Pregnancy.; Williams Obstetrics.; FIGO Recommendations on Preeclampsia Prevention.`,
+La clave no es el antecedente de preeclampsia para el diagnóstico actual.
+La clave es:
+Hipertensión antes de las 20 semanas + sin proteinuria = hipertensión arterial crónica → antihipertensivo + aspirina profiláctica por alto riesgo de recurrencia.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Secundigestante de 13 semanas de gestación.
+• Antecedente de preeclampsia severa en embarazo previo.
+• PA 150/90 mmHg en dos mediciones separadas.
+• Sin proteinuria ni datos de daño a órgano blanco.
+• Hipertensión antes de las 20 semanas = hipertensión crónica.
+
+Recordemos trastornos hipertensivos del embarazo:
+• Hipertensión crónica: diagnóstico antes de las 20 semanas o preexistente al embarazo.
+• Preeclampsia: hipertensión después de las 20 semanas + proteinuria o disfunción orgánica.
+• Hipertensión gestacional: hipertensión después de las 20 semanas sin proteinuria.
+• Antecedente de preeclampsia severa indica aspirina 100-150 mg/día desde ~12-16 semanas.
+• El sulfato de magnesio es para preeclampsia con criterios de severidad o eclampsia, no profilaxis.
+
+Por lo tanto:
+El diagnóstico es hipertensión arterial crónica y el tratamiento incluye antihipertensivo y ácido acetilsalicílico a baja dosis (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La hipertensión a las 13 semanas es crónica. El antecedente de preeclampsia severa obliga profilaxis con aspirina además del control tensional.
+
+¿Por qué fallan las otras opciones?
+Opción A (hipertensión gestacional; sulfato de magnesio): la hipertensión gestacional se diagnostica después de las 20 semanas; el sulfato no es tratamiento de hipertensión crónica.
+Opción B (preeclampsia; finalizar gestación): no hay proteinuria ni criterios de preeclampsia; a las 13 semanas no corresponde interrupción.
+Opción D (hipertensión transitoria; observación): la PA persistente en dos mediciones requiere tratamiento, no solo observación.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "antecedente de preeclampsia" y responden preeclampsia actual.
+Pero el timing (<20 semanas) define hipertensión crónica.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Determinar el momento del diagnóstico hipertensivo (<20 vs ≥20 semanas).
+2. Clasificar: crónica, gestacional o preeclampsia.
+3. Iniciar antihipertensivo seguro en embarazo si está indicado.
+4. Ofrecer aspirina profiláctica si hay factores de alto riesgo de preeclampsia.
+
+Perlas de examen
+✅ Hipertensión antes de las 20 semanas = hipertensión crónica.
+✅ Preeclampsia se diagnostica después de las 20 semanas.
+✅ Antecedente de preeclampsia severa → aspirina profiláctica.
+✅ El sulfato de magnesio no trata hipertensión crónica sin severidad.
+✅ La proteinuria ausente excluye preeclampsia en este momento.
+
+Referencias
+• ACOG Practice Bulletin: Chronic Hypertension in Pregnancy.
+• ISSHP Guidelines for Hypertensive Disorders of Pregnancy.
+• Williams Obstetrics.
+• FIGO Recommendations on Preeclampsia Prevention.`,
   },
   {
     id: "dr-q-243",
@@ -5100,20 +7182,68 @@ ACOG Practice Bulletin: Chronic Hypertension in Pregnancy.; ISSHP Guidelines for
     correctOptionId: "B",
     explanation: "El conducto inguinal contiene el cordón espermático en el hombre y el ligamento redondo del útero en la mujer. En ambos sexos también atraviesa el nervio ilioinguinal.",
     keyPoints: [
-      "Cordón espermático y ligamento redondo.",
+      "Cuando veas: pregunta sobre contenido del conducto inguinal según sexo.",
+      "Debes pensar en: hombre → cordón espermático; mujer → ligamento redondo del útero.",
+      "El nervio ilioinguinal atraviesa el conducto inguinal en ambos sexos.",
+      "Confundir los contenidos es la trampa clásica de anatomía en exámenes.",
       "Tema: Conducto inguinal.",
-      "Hombre → cordón espermático.",
-      "Mujer → ligamento redondo del útero.",
-      "El nervio ilioinguinal atraviesa el conducto en ambos sexos.",
     ],
-    theoryContent: `CIRUGÍA GENERAL — BY DR Q.
-Conducto inguinal.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes invierten: Los contenidos masculinos y femeninos. Por ello debes recordar: 👉 Hombre = cordón espermático.
+Esta es una pregunta clásica de anatomía porque evalúa una trampa frecuente: invertir los contenidos masculinos y femeninos del conducto inguinal.
 
-Referencias:
-Moore. Anatomía con Orientación Clínica.; Gray's Anatomy.; Netter Atlas de Anatomía Humana.; Schwartz's Principles of Surgery.`,
+La clave no es memorizar ambos contenidos por separado sin asociación.
+La clave es:
+Conducto inguinal: hombre = cordón espermático; mujer = ligamento redondo del útero (+ nervio ilioinguinal en ambos).
+
+¿Qué está ocurriendo realmente?
+La pregunta evalúa:
+• Conocimiento anatómico del conducto inguinal.
+• Diferencia de contenidos según sexo.
+• Estructuras que atraviesan el canal inguinal interno y externo.
+• Base para comprender hernias inguinales directas e indirectas.
+
+Recordemos anatomía del conducto inguinal:
+• El conducto inguinal comunica el abdomen con la región inguinal.
+• En el hombre contiene el cordón espermático (ducto deferente, vasos testiculares, nervios).
+• En la mujer contiene el ligamento redondo del útero.
+• El nervio ilioinguinal atraviesa el conducto en ambos sexos.
+• La arteria epigástrica inferior forma el triángulo de Hesselbach (hernias directas).
+
+Por lo tanto:
+La respuesta correcta es hombre: cordón espermático / mujer: ligamento redondo del útero (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+Corresponde exactamente a la anatomía clásica del conducto inguinal según sexo.
+
+¿Por qué fallan las otras opciones?
+Opción A (invertida): intercambia los contenidos masculinos y femeninos; error clásico de examen.
+Opción C (arteria epigástrica inferior / vena safena magna): la arteria epigástrica inferior bordea el conducto pero no lo atraviesa; la safena magna no pasa por el conducto inguinal.
+Opción D (nervio femoral / nervio obturador): estos nervios no atraviesan el conducto inguinal; el femoral pasa por el canal femoral.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes invierten los contenidos masculinos y femeninos.
+Debes recordar: hombre = cordón espermático.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el conducto inguinal como vía de salida abdominal.
+2. Hombre: cordón espermático.
+3. Mujer: ligamento redondo del útero.
+4. Ambos: nervio ilioinguinal.
+
+Perlas de examen
+✅ Hombre = cordón espermático; mujer = ligamento redondo.
+✅ El nervio ilioinguinal atraviesa el conducto en ambos sexos.
+✅ La arteria epigástrica inferior NO atraviesa el conducto.
+✅ Base anatómica para hernias inguinales indirectas (por conducto) y directas.
+✅ Invertir los contenidos es el error más frecuente.
+
+Referencias
+• Moore. Anatomía con Orientación Clínica.
+• Gray's Anatomy.
+• Netter Atlas de Anatomía Humana.
+• Schwartz's Principles of Surgery.`,
   },
   {
     id: "dr-q-244",
@@ -5132,20 +7262,68 @@ Moore. Anatomía con Orientación Clínica.; Gray's Anatomy.; Netter Atlas de An
     correctOptionId: "C",
     explanation: "El ganglio de Virchow corresponde a una adenopatía supraclavicular izquierda secundaria a diseminación metastásica por vía linfática. Clásicamente se asocia al cáncer gástrico avanzado.",
     keyPoints: [
-      "Cáncer gástrico.",
+      "Cuando veas: adenopatía supraclavicular izquierda dura, fija e indolora (ganglio de Virchow).",
+      "Debes pensar en: adenocarcinoma gástrico avanzado con diseminación linfática.",
+      "El ganglio de Virchow también se denomina nódulo de Troisier.",
+      "La localización izquierda refleja drenaje linfático abdominal vía conducto torácico.",
       "Tema: Semiología oncológica.",
-      "Ganglio de Virchow = adenopatía supraclavicular izquierda.",
-      "También se denomina nódulo de Troisier.",
-      "Sugiere metástasis abdominal.",
     ],
-    theoryContent: `ONCOLOGÍA — BY DR Q.
-Semiología oncológica.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes responden: Cáncer pulmonar. Porque asocian: Ganglio supraclavicular.
+Esta es una pregunta clásica de semiología oncológica porque evalúa una trampa frecuente: asociar cualquier ganglio supraclavicular con cáncer de pulmón.
 
-Referencias:
-Bates' Guide to Physical Examination.; DeGowin's Diagnostic Examination.; Schwartz's Principles of Surgery.; Sabiston Textbook of Surgery.`,
+La clave no es la localización supraclavicular en general.
+La clave es:
+Adenopatía supraclavicular izquierda dura, fija e indolora = ganglio de Virchow → adenocarcinoma gástrico avanzado.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Adenopatía supraclavicular izquierda en examen físico.
+• Características: dura, fija e indolora.
+• Compatible con ganglio de Virchow (nódulo de Troisier).
+• Sugiere metástasis linfática de tumor abdominal.
+
+Recordemos ganglio de Virchow:
+• Adenopatía supraclavicular izquierda por diseminación linfática retrograda.
+• El conducto torácico drena el abdomen hacia la cadena linfática supraclavicular izquierda.
+• Clásicamente asociado a adenocarcinoma gástrico avanzado.
+• También puede verse en cáncer de páncreas, ovario u otros tumores abdominales.
+• La adenopatía supraclavicular derecha se asocia más a tumores torácicos (pulmón, esófago).
+
+Por lo tanto:
+La patología clásicamente asociada es adenocarcinoma gástrico (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+El ganglio de Virchow es el signo semiológico clásico de metástasis linfática de cáncer gástrico avanzado.
+
+¿Por qué fallan las otras opciones?
+Opción A (cáncer de pulmón): las metástasis supraclavicular de cáncer pulmonar suelen ser derechas; el Virchow es izquierdo.
+Opción B (linfoma de Hodgkin): puede causar adenopatías pero no es la asociación clásica del ganglio de Virchow.
+Opción D (carcinoma de tiroides): las metástasis cervicales suelen ser centrales/laterales del cuello, no el patrón clásico de Virchow.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes responden cáncer pulmonar porque asocian ganglio supraclavicular con patología torácica.
+Pero el ganglio de Virchow es izquierdo y refleja drenaje abdominal.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar adenopatía supraclavicular izquierda dura, fija e indolora.
+2. Nombrar ganglio de Virchow o nódulo de Troisier.
+3. Pensar en tumor abdominal, especialmente gástrico.
+4. Complementar con endoscopia y estudios de imagen abdominal.
+
+Perlas de examen
+✅ Ganglio de Virchow = supraclavicular izquierdo = cáncer gástrico clásico.
+✅ También llamado nódulo de Troisier.
+✅ Supraclavicular derecho → más asociado a cáncer pulmonar.
+✅ Metástasis por vía linfática vía conducto torácico.
+✅ Hallazgo de mal pronóstico que sugiere enfermedad avanzada.
+
+Referencias
+• Bates' Guide to Physical Examination.
+• DeGowin's Diagnostic Examination.
+• Schwartz's Principles of Surgery.
+• Sabiston Textbook of Surgery.`,
   },
   {
     id: "dr-q-245",
@@ -5164,20 +7342,68 @@ Bates' Guide to Physical Examination.; DeGowin's Diagnostic Examination.; Schwar
     correctOptionId: "B",
     explanation: "El trofoblasto es la estructura embrionaria que participa en la formación de la placenta. La invasión inadecuada del trofoblasto extravelloso sobre las arterias espirales uterinas constituye uno de los mecanismos fisiopatológicos fundamentales en el desarrollo de la preeclampsia.",
     keyPoints: [
-      "Trofoblasto.",
-      "Tema: Embriología placentaria.",
-      "El trofoblasto origina la porción fetal de la placenta.",
+      "Cuando veas: pregunta sobre estructura embrionaria que origina la placenta e interviene en preeclampsia.",
+      "Debes pensar en: trofoblasto → invasión inadecuada del trofoblasto extravelloso como mecanismo de preeclampsia.",
       "El citotrofoblasto y sincitiotrofoblasto derivan del trofoblasto.",
-      "La invasión trofoblástica es esencial para la perfusión placentaria.",
+      "La invasión trofoblástica de arterias espirales uterinas es esencial para perfusión placentaria normal.",
+      "Tema: Embriología placentaria.",
     ],
-    theoryContent: `EMBRIOLOGÍA Y OBSTETRICIA — BY DR Q.
-Embriología placentaria.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes responden: Sincitiotrofoblasto. Sin embargo: La pregunta solicita la estructura embrionaria principal.
+Esta es una pregunta clásica de embriología porque evalúa una trampa frecuente: responder sincitiotrofoblasto cuando la pregunta pide la estructura embrionaria principal.
 
-Referencias:
-Langman's Embryology.; Moore. The Developing Human.; Williams Obstetrics.; Cunningham Obstetricia.`,
+La clave no es confundir subtipos celulares con la estructura embrionaria madre.
+La clave es:
+Trofoblasto = estructura embrionaria que origina la placenta y cuya invasión deficiente causa preeclampsia.
+
+¿Qué está ocurriendo realmente?
+La pregunta evalúa:
+• Conocimiento de estructuras embrionarias extraembrionarias.
+• Origen de la porción fetal de la placenta.
+• Mecanismo fisiopatológico de la preeclampsia.
+• Diferencia entre trofoblasto, amnios, saco vitelino y alantoides.
+
+Recordemos embriología placentaria:
+• El trofoblasto es la capa externa del blastocisto que forma la placenta.
+• Deriva en citotrofoblasto y sincitiotrofoblasto.
+• El trofoblasto extravelloso invade el endometrio y remodela arterias espirales uterinas.
+• La invasión trofoblástica inadecuada → isquemia placentaria → preeclampsia.
+• El amnios forma la cavidad amniótica; el saco vitelino aporta nutrientes tempranos; el alantoides forma parte del cordón umbilical.
+
+Por lo tanto:
+La estructura correcta es el trofoblasto (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+El trofoblasto es la estructura embrionaria que origina la placenta y cuya disfunción invasiva explica la preeclampsia.
+
+¿Por qué fallan las otras opciones?
+Opción A (amnios): membrana que rodea al embrión y forma la cavidad amniótica, no la placenta.
+Opción C (saco vitelino): estructura temprana de nutrición y hematopoyesis primitiva, no origina la placenta.
+Opción D (alantoides): contribuye al cordón umbilical y vasos alantoideos, no es la estructura principal placentaria.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes responden sincitiotrofoblasto porque conocen su rol placentario.
+Pero la pregunta solicita la estructura embrionaria principal: trofoblasto.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el trofoblasto como origen de la placenta.
+2. Recordar sus derivados: citotrofoblasto y sincitiotrofoblasto.
+3. Comprender la invasión trofoblástica de arterias espirales.
+4. Relacionar invasión deficiente con preeclampsia.
+
+Perlas de examen
+✅ Trofoblasto = estructura embrionaria que origina la placenta.
+✅ Invasión trofoblástica deficiente → preeclampsia.
+✅ Citotrofoblasto y sincitiotrofoblasto derivan del trofoblasto.
+✅ El amnios forma la cavidad amniótica, no la placenta.
+✅ Remodelación de arterias espirales es clave para perfusión placentaria.
+
+Referencias
+• Langman's Embryology.
+• Moore. The Developing Human.
+• Williams Obstetrics.
+• Cunningham Obstetricia.`,
   },
   {
     id: "dr-q-246",
@@ -5196,20 +7422,68 @@ Langman's Embryology.; Moore. The Developing Human.; Williams Obstetrics.; Cunni
     correctOptionId: "B",
     explanation: "La motilidad ocular extrínseca depende de tres pares craneales: III (oculomotor), IV (troclear) y VI (abducens). El nervio troclear inerva el músculo oblicuo superior.",
     keyPoints: [
-      "Pares III, IV y VI.",
+      "Cuando veas: visión doble que empeora al mirar a la izquierda, limitación de abducción del ojo izquierdo y pregunta sobre pares craneales de motilidad ocular.",
+      "Debes pensar en: par craneal IV (troclear) como tercer nervio de motilidad ocular extrínseca junto con III y VI.",
+      "El nervio troclear inerva exclusivamente el músculo oblicuo superior.",
+      "El abducens (VI) inerva el recto lateral; la limitación de abducción sugiere su afectación.",
       "Tema: Pares craneales.",
-      "El nervio troclear inerva exclusivamente el oblicuo superior.",
-      "El troclear es el único par craneal que emerge por la cara dorsal del tronco encefálico.",
-      "El abducens inerva el recto lateral.",
     ],
-    theoryContent: `NEUROANATOMÍA — BY DR Q.
-Pares craneales.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes recuerdan únicamente: III y VI. Pero olvidan: El IV par craneal.
+Esta es una pregunta clásica de neuroanatomía porque evalúa una trampa frecuente: recordar solo los pares III y VI e olvidar el IV en la motilidad ocular extrínseca.
 
-Referencias:
-Snell Neuroanatomía Clínica.; Moore Anatomía con Orientación Clínica.; Adams and Victor's Neurology.; Gray's Anatomy.`,
+La clave no es detenerse en el caso clínico del abducens.
+La clave es:
+Motilidad ocular extrínseca = tres pares craneales: III (oculomotor), IV (troclear) y VI (abducens).
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 30 años con visión doble al mirar a la izquierda.
+• Limitación de abducción del ojo izquierdo (afectación de VI).
+• Reflejos pupilares normales.
+• La pregunta evalúa el tercer par de motilidad ocular más allá de III y VI.
+
+Recordemos pares craneales de motilidad ocular:
+• III (oculomotor): inerva recto superior, inferior, medial, oblicuo inferior y músculo elevador del párpado; parasimpático pupilar.
+• IV (troclear): inerva exclusivamente el oblicuo superior.
+• VI (abducens): inerva el recto lateral (abducción).
+• El II (óptico) es sensitivo visual, no motor ocular extrínseco.
+• El troclear es el único par que emerge por la cara dorsal del tronco encefálico.
+
+Por lo tanto:
+El tercer par craneal de motilidad ocular es el IV (troclear) (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La motilidad ocular extrínseca depende de III, IV y VI. El troclear inerva el oblicuo superior.
+
+¿Por qué fallan las otras opciones?
+Opción A (par II óptico): nervio sensitivo visual; no participa en motilidad ocular extrínseca.
+Opción C (par V trigémino): sensitivo facial y motor de masticación; no inerva músculos extraoculares.
+Opción D (par VII facial): expresión facial y gusto; no motilidad ocular.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan únicamente III y VI.
+Pero olvidan el IV par craneal (troclear) en la motilidad ocular.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Motilidad ocular extrínseca = III, IV y VI.
+2. III: mayoría de músculos extraoculares + pupila.
+3. IV: oblicuo superior exclusivamente.
+4. VI: recto lateral (abducción).
+
+Perlas de examen
+✅ Motilidad ocular = pares III, IV y VI.
+✅ Troclear (IV) inerva solo oblicuo superior.
+✅ Abducens (VI) inerva recto lateral.
+✅ El II es óptico (visión), no motor ocular.
+✅ Troclear emerge por cara dorsal del tronco encefálico.
+
+Referencias
+• Snell Neuroanatomía Clínica.
+• Moore Anatomía con Orientación Clínica.
+• Adams and Victor's Neurology.
+• Gray's Anatomy.`,
   },
   {
     id: "dr-q-247",
@@ -5228,20 +7502,70 @@ Snell Neuroanatomía Clínica.; Moore Anatomía con Orientación Clínica.; Adam
     correctOptionId: "C",
     explanation: "Los betabloqueadores disminuyen la frecuencia cardíaca al bloquear los receptores β1 cardíacos. Una de sus reacciones adversas más importantes es la bradicardia sintomática, que puede manifestarse con síncope.",
     keyPoints: [
-      "Betabloqueadores.",
+      "Cuando veas: síncope pocos días después de iniciar antihipertensivo, con PA relativamente normal pero FC 42 lpm.",
+      "Debes pensar en: betabloqueador (metoprolol) como causa de bradicardia sintomática.",
+      "Metoprolol es un betabloqueador β1-selectivo que reduce la frecuencia cardíaca.",
+      "La bradicardia sintomática puede manifestarse con síncope por disminución del gasto cardíaco.",
       "Tema: Antihipertensivos.",
-      "Los betabloqueadores son causa frecuente de bradicardia medicamentosa.",
-      "Metoprolol es un β1-selectivo.",
-      "La bradicardia sintomática puede manifestarse con síncope.",
     ],
-    theoryContent: `MEDICINA INTERNA — BY DR Q.
-Antihipertensivos.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Antihipertensivo." Y responden cualquier fármaco frecuente. Sin embargo:
+Esta es una pregunta clásica de medicina interna porque evalúa una trampa frecuente: buscar hipotensión como causa de síncope e ignorar la bradicardia medicamentosa.
 
-Referencias:
-Katzung. Basic and Clinical Pharmacology.; Goodman & Gilman's The Pharmacological Basis of Therapeutics.; Braunwald's Heart Disease.; Harrison's Principles of Internal Medicine.`,
+La clave no es la presión arterial en urgencias.
+La clave es:
+Síncope + bradicardia (FC 42 lpm) tras iniciar antihipertensivo = betabloqueador (metoprolol).
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 62 años con hipertensión recién diagnosticada.
+• Inicio de tratamiento antihipertensivo hace pocos días.
+• Episodio de síncope al caminar.
+• PA 140/90 mmHg (no hipotensión marcada).
+• FC 42 lpm (bradicardia significativa).
+• Sin alteraciones neurológicas.
+
+Recordemos betabloqueadores como antihipertensivos:
+• Bloquean receptores β1 cardíacos → disminuyen FC y contractilidad.
+• Metoprolol es β1-selectivo; atenolol, bisoprolol similares.
+• La bradicardia sintomática es efecto adverso frecuente, especialmente en ancianos.
+• Puede causar síncope por reducción del gasto cardíaco a pesar de PA aceptable.
+• Amlodipino causa edema; tiazidas causan hiponatremia/hypokalemia; losartán causa hiperkalemia raramente síncope.
+
+Por lo tanto:
+El medicamento más probable es metoprolol (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+Los betabloqueadores causan bradicardia al bloquear β1. FC 42 lpm con síncope es el patrón clásico de toxicidad por betabloqueador.
+
+¿Por qué fallan las otras opciones?
+Opción A (amlodipino): bloqueador de canales de calcio; causa edema y reflujo, no bradicardia significativa.
+Opción B (hidroclorotiazida): diurético tiazídico; puede causar hipovolemia pero no bradicardia a 42 lpm.
+Opción D (losartán): ARA-II; raramente causa síncope; no explica bradicardia.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes buscan hipotensión como causa del síncope.
+Pero la PA es 140/90; la bradicardia a 42 lpm es la pista clave.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Antihipertensivo nuevo + síncope → identificar efecto adverso del fármaco.
+2. Evaluar FC: bradicardia sugiere betabloqueador.
+3. No descartar betabloqueador si la PA no está muy baja.
+4. Considerar reducción de dosis o cambio de fármaco.
+
+Perlas de examen
+✅ Betabloqueador + bradicardia + síncope = patrón clásico de examen.
+✅ Metoprolol es β1-selectivo.
+✅ La PA puede estar relativamente normal con bradicardia sintomática.
+✅ Amlodipino no causa bradicardia significativa.
+✅ Siempre correlacionar fármaco iniciado con efecto adverso esperado.
+
+Referencias
+• Katzung. Basic and Clinical Pharmacology.
+• Goodman & Gilman's The Pharmacological Basis of Therapeutics.
+• Braunwald's Heart Disease.
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "dr-q-248",
@@ -5260,20 +7584,70 @@ Katzung. Basic and Clinical Pharmacology.; Goodman & Gilman's The Pharmacologica
     correctOptionId: "B",
     explanation: "La combinación de fiebre, síndrome meníngeo y exantema petequial o purpúrico debe hacer sospechar meningococcemia invasiva hasta demostrar lo contrario. Neisseria meningitidis es el agente clásicamente asociado.",
     keyPoints: [
-      "Meningococcemia.",
-      "Tema: Meningitis bacteriana.",
+      "Cuando veas: niña con fiebre, vómitos, rigidez de nuca y aparición súbita de petequias y equimosis.",
+      "Debes pensar en: meningococcemia con meningitis → Neisseria meningitidis.",
       "Petequias + meningismo = meningococo hasta demostrar lo contrario.",
-      "Neisseria meningitidis es un diplococo gramnegativo.",
-      "Puede evolucionar rápidamente a shock séptico.",
+      "Neisseria meningitidis es un diplococo gramnegativo que puede evolucionar rápidamente a shock séptico.",
+      "Tema: Meningitis bacteriana.",
     ],
-    theoryContent: `INFECTOLOGÍA — BY DR Q.
-Meningitis bacteriana.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Rigidez de nuca." Y responden: Neumococo.
+Esta es una pregunta clásica de infectología pediátrica porque evalúa una trampa frecuente: diagnosticar meningitis neumocócica solo por rigidez de nuca, ignorando el exantema petequial.
 
-Referencias:
-Nelson Textbook of Pediatrics.; Red Book: American Academy of Pediatrics.; Mandell, Douglas and Bennett's Infectious Diseases.; Harrison's Principles of Internal Medicine.`,
+La clave no es el meningismo aislado.
+La clave es:
+Fiebre + rigidez de nuca + petequias/equimosis súbitas = meningococcemia invasiva hasta demostrar lo contrario.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Niña de 10 años previamente sana, vacunación completa.
+• Fiebre, vómitos y aparición súbita de petequias y equimosis.
+• Rigidez de nuca (síndrome meníngeo).
+• Taquicardia.
+• Cuadro altamente sugestivo de enfermedad meningocócica invasiva.
+
+Recordemos meningococcemia y meningitis meningocócica:
+• Neisseria meningitidis: diplococo gramnegativo.
+• La tríada fiebre + meningismo + exantema petequial/purpúrico es patognomónica.
+• Puede progresar rápidamente a shock séptico y coagulación intravascular diseminada.
+• Requiere antibióticos empíricos de inmediato (cefalosporina de tercera generación ± vancomicina).
+• El neumococo causa meningitis pero raramente exantema petequial súbito.
+• La PTI no causa fiebre ni meningismo.
+
+Por lo tanto:
+La sospecha es meningococcemia con meningitis por Neisseria meningitidis (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La combinación de síndrome meníngeo con exantema petequial súbito es clásica de meningococo.
+
+¿Por qué fallan las otras opciones?
+Opción A (meningitis neumocócica): el neumococo causa meningitis pero no el patrón clásico de petequias súbitas con meningococcemia.
+Opción C (encefalitis por VHS-1): alteración de conciencia y focalidad neurológica predominan; no exantema petequial típico.
+Opción D (PTI por EBV): trombocitopenia aislada sin meningismo ni fiebre con rigidez de nuca.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "rigidez de nuca" y responden neumococo.
+Pero las petequias súbitas apuntan al meningococo.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Fiebre + meningismo → pensar meningitis bacteriana.
+2. Si hay petequias/equimosis súbitas → meningococo hasta demostrar lo contrario.
+3. Iniciar antibióticos empíricos de inmediato.
+4. Aislamiento y profilaxis de contactos si se confirma.
+
+Perlas de examen
+✅ Petequias + meningismo = meningococo hasta demostrar lo contrario.
+✅ Neisseria meningitidis = diplococo gramnegativo.
+✅ Puede evolucionar a shock séptico en horas.
+✅ El neumococo rara vez causa exantema petequial súbito.
+✅ Emergencia infectológica que no admite demora.
+
+Referencias
+• Nelson Textbook of Pediatrics.
+• Red Book: American Academy of Pediatrics.
+• Mandell, Douglas and Bennett's Infectious Diseases.
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "dr-q-249",
@@ -5292,20 +7666,68 @@ Nelson Textbook of Pediatrics.; Red Book: American Academy of Pediatrics.; Mande
     correctOptionId: "C",
     explanation: "Las fluoroquinolonas se asocian a tendinopatía y ruptura tendinosa, especialmente del tendón de Aquiles. El riesgo es mayor en adultos mayores, pacientes con insuficiencia renal y usuarios concomitantes de corticoides.",
     keyPoints: [
-      "Fluoroquinolonas.",
+      "Cuando veas: ruptura del tendón de Aquiles con uso reciente de antibiótico en adulto mayor.",
+      "Debes pensar en: fluoroquinolona (ciprofloxacina) → tendinopatía y ruptura tendinosa.",
+      "Ciprofloxacina es la asociación clásica en exámenes de medicina.",
+      "El tendón de Aquiles es el más frecuentemente afectado; el riesgo aumenta con edad, IRC y corticoides.",
       "Tema: Reacciones adversas medicamentosas.",
-      "Ciprofloxacina es la asociación clásica en exámenes.",
-      "Las fluoroquinolonas pueden causar tendinitis y ruptura tendinosa.",
-      "El tendón de Aquiles es el más frecuentemente afectado.",
     ],
-    theoryContent: `ORTOPEDIA — BY DR Q.
-Reacciones adversas medicamentosas.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes recuerdan: "Antibiótico." Pero olvidan: La reacción adversa específica.
+Esta es una pregunta clásica de farmacología porque evalúa una trampa frecuente: no asociar antibióticos con reacciones adversas musculoesqueléticas específicas.
 
-Referencias:
-Katzung. Basic and Clinical Pharmacology.; Goodman & Gilman's The Pharmacological Basis of Therapeutics.; Harrison's Principles of Internal Medicine.; FDA Safety Communication on Fluoroquinolones.`,
+La clave no es cualquier antibiótico reciente.
+La clave es:
+Ruptura de tendón de Aquiles + antibiótico reciente = fluoroquinolona (ciprofloxacina).
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Varón de 55 años con dolor súbito en región posterior del tobillo al caminar.
+• Ruptura confirmada del tendón de Aquiles.
+• Uso reciente de antibiótico identificado en antecedentes.
+• Cuadro compatible con tendinopatía medicamentosa por fluoroquinolona.
+
+Recordemos reacciones adversas de fluoroquinolonas:
+• Las fluoroquinolonas (ciprofloxacina, levofloxacina, moxifloxacina) causan tendinitis y ruptura tendinosa.
+• El tendón de Aquiles es el más frecuentemente afectado.
+• Factores de riesgo: edad >60 años, insuficiencia renal, uso concomitante de corticoides.
+• La FDA ha emitido advertencias de caja negra sobre este riesgo.
+• Amoxicilina, azitromicina y cefalexina no causan tendinopatía.
+
+Por lo tanto:
+El antibiótico asociado clásicamente es ciprofloxacina (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+Las fluoroquinolonas tienen asociación bien documentada con ruptura del tendón de Aquiles.
+
+¿Por qué fallan las otras opciones?
+Opción A (amoxicilina): penicilina de amplio espectro; no causa tendinopatía.
+Opción B (azitromicina): macrólido; no asociado a ruptura tendinosa.
+Opción D (cefalexina): cefalosporina de primera generación; no causa tendinopatía.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan "antibiótico" pero olvidan la reacción adversa específica.
+Deben asociar fluoroquinolona con tendón de Aquiles.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Ruptura tendinosa + fármaco reciente → revisar medicamentos.
+2. Asociar fluoroquinolona con tendón de Aquiles.
+3. Identificar factores de riesgo adicionales (edad, corticoides, IRC).
+4. Evitar fluoroquinolonas en pacientes con riesgo de tendinopatía.
+
+Perlas de examen
+✅ Fluoroquinolona + ruptura de Aquiles = asociación clásica de examen.
+✅ Ciprofloxacina es el ejemplo más frecuente en preguntas.
+✅ Riesgo mayor en ancianos, IRC y uso de corticoides.
+✅ Advertencia de caja negra de la FDA.
+✅ Penicilinas, macrólidos y cefalosporinas no causan tendinopatía.
+
+Referencias
+• Katzung. Basic and Clinical Pharmacology.
+• Goodman & Gilman's The Pharmacological Basis of Therapeutics.
+• Harrison's Principles of Internal Medicine.
+• FDA Safety Communication on Fluoroquinolones.`,
   },
   {
     id: "dr-q-250",
@@ -5324,20 +7746,72 @@ Katzung. Basic and Clinical Pharmacology.; Goodman & Gilman's The Pharmacologica
     correctOptionId: "C",
     explanation: "El varicocele corresponde a una dilatación anormal del plexo venoso pampiniforme. Se presenta típicamente como una masa escrotal que aumenta con el Valsalva y la bipedestación, con transiluminación negativa.",
     keyPoints: [
-      "Varicocele.",
+      "Cuando veas: masa escrotal indolora progresiva que aumenta con Valsalva y bipedestación, con transiluminación negativa.",
+      "Debes pensar en: varicocele → dilatación del plexo venoso pampiniforme.",
+      "El varicocele es la causa corrigible más frecuente de infertilidad masculina.",
+      "Transiluminación negativa diferencia de hidrocele (positiva); Valsalva positivo diferencia de tumor sólido.",
       "Tema: Patología escrotal.",
-      "El varicocele es la causa corregible más frecuente de infertilidad masculina.",
-      "Se origina por dilatación del plexo pampiniforme.",
-      "Es más frecuente en el lado izquierdo.",
     ],
-    theoryContent: `UROLOGÍA — BY DR Q.
-Patología escrotal.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Masa escrotal." Y responden: Hidrocele.
+Esta es una pregunta clásica de urología porque evalúa una trampa frecuente: diagnosticar hidrocele ante cualquier masa escrotal indolora.
 
-Referencias:
-Campbell-Walsh Urology.; Smith & Tanagho's General Urology.; Nelson Textbook of Pediatrics.; EAU Guidelines on Male Infertility.`,
+La clave no es la masa escrotal indolora sola.
+La clave es:
+Masa escrotal que aumenta con Valsalva/bipedestación + transiluminación negativa = varicocele.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Varón de 25 años, albañil (trabajo con esfuerzo físico y bipedestación).
+• Masa escrotal indolora progresiva de varios meses.
+• Aumenta de tamaño al estar de pie y con esfuerzo.
+• Test de Valsalva positivo.
+• Transiluminación negativa.
+• Cuadro clásico de varicocele.
+
+Recordemos patología escrotal:
+• Varicocele: dilatación del plexo venoso pampiniforme; "bolsa de gusanos".
+• Aumenta con Valsalva y bipedestación (mayor presión venosa).
+• Transiluminación negativa (contenido vascular, no líquido).
+• Más frecuente en lado izquierdo (~90%).
+• Causa corregible más frecuente de infertilidad masculina.
+• Hidrocele: transiluminación positiva; no cambia con Valsalva.
+• Hernia inguinoescrotal: se reduce o impulsa por conducto inguinal.
+
+Por lo tanto:
+El diagnóstico más probable es varicocele (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+El patrón clínico (indoloro, aumenta con Valsalva, transiluminación negativa) es clásico de varicocele.
+
+¿Por qué fallan las otras opciones?
+Opción A (hidrocele): transiluminación positiva; colección de líquido seroso.
+Opción B (hernia inguinoescrotal): masa que impulsa por conducto inguinal; no es patrón venoso pampiniforme.
+Opción D (espermatocele): quiste paratesticular; transiluminación positiva; no aumenta típicamente con Valsalva.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "masa escrotal" y responden hidrocele.
+Pero la transiluminación negativa y el Valsalva positivo apuntan a varicocele.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Caracterizar masa escrotal: dolor, transiluminación, Valsalva.
+2. Transiluminación negativa + Valsalva positivo = varicocele.
+3. Considerar infertilidad en varones jóvenes con varicocele.
+4. Tratamiento quirúrgico si infertilidad o dolor.
+
+Perlas de examen
+✅ Varicocele = Valsalva positivo + transiluminación negativa.
+✅ Hidrocele = transiluminación positiva.
+✅ Causa corregible más frecuente de infertilidad masculina.
+✅ Más frecuente en lado izquierdo.
+✅ Común en varones jóvenes con trabajo de pie.
+
+Referencias
+• Campbell-Walsh Urology.
+• Smith & Tanagho's General Urology.
+• Nelson Textbook of Pediatrics.
+• EAU Guidelines on Male Infertility.`,
   },
   {
     id: "dr-q-251",
@@ -5356,20 +7830,70 @@ Campbell-Walsh Urology.; Smith & Tanagho's General Urology.; Nelson Textbook of 
     correctOptionId: "D",
     explanation: "En pacientes con hemorragia mayor o trauma significativo bajo tratamiento con warfarina, la reversión más rápida y efectiva se logra con concentrado de complejo protrombínico (PCC de 4 factores) asociado a vitamina K intravenosa.",
     keyPoints: [
-      "Reversión urgente de anticoagulación.",
-      "Tema: Anticoagulación y reversión.",
+      "Cuando veas: hemorragia mayor por trauma en paciente anticoagulado con warfarina (INR 3.2).",
+      "Debes pensar en: reversión urgente con PCC de 4 factores + vitamina K IV.",
       "PCC de 4 factores es el método de reversión más rápido para warfarina.",
-      "La vitamina K siempre debe acompañar la reversión urgente.",
-      "El plasma fresco congelado es alternativa cuando no hay PCC.",
+      "La vitamina K sola tarda horas en corregir el INR; no es suficiente en hemorragia activa.",
+      "Tema: Anticoagulación y reversión.",
     ],
-    theoryContent: `URGENCIAS — BY DR Q.
-Anticoagulación y reversión.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "INR 3.2" Y responden: Vitamina K.
+Esta es una pregunta clásica de urgencias porque evalúa una trampa frecuente: usar vitamina K sola o suspender warfarina ante hemorragia mayor activa.
 
-Referencias:
-Harrison's Principles of Internal Medicine.; Tintinalli's Emergency Medicine.; ACC Expert Consensus on Management of Bleeding in Patients on Oral Anticoagulants.; CHEST Guidelines on Antithrombotic Therapy.`,
+La clave no es el valor del INR ni suspender la warfarina.
+La clave es:
+Hemorragia mayor + warfarina = PCC de 4 factores + vitamina K IV para reversión inmediata.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 45 años con fibrilación auricular en warfarina crónica.
+• Herida por arma de fuego en brazo con sangrado activo importante.
+• Hemodinámicamente estable pero con hemorragia significativa.
+• INR 3.2 (anticoagulación terapéutica).
+• Requiere reversión rápida de anticoagulación.
+
+Recordemos reversión de warfarina:
+• Hemorragia mayor o trauma significativo requiere reversión inmediata.
+• PCC de 4 factores (concentrado de complejo protrombínico): reversión en minutos.
+• Vitamina K IV debe administrarse junto al PCC para reversión sostenida.
+• Vitamina K sola tarda 12-24 horas en corregir INR; insuficiente en sangrado activo.
+• Plasma fresco congelado es alternativa si no hay PCC, pero es más lento y voluminoso.
+• Suspender warfarina sin reversión activa no corrige el INR de inmediato.
+
+Por lo tanto:
+La intervención más efectiva es PCC de 4 factores + vitamina K IV (opción D).
+
+¿Por qué la opción D es la respuesta correcta?
+El PCC restaura factores de coagulación de inmediato; la vitamina K IV asegura reversión sostenida al sintetizar nuevos factores.
+
+¿Por qué fallan las otras opciones?
+Opción A (vitamina K IV sola): demora horas en corregir INR; inadecuada para sangrado activo.
+Opción B (suspender warfarina y repetir INR): no revierte la anticoagulación de inmediato; el INR permanece elevado días.
+Opción C (plasma fresco congelado): alternativa válida pero más lenta, requiere mayor volumen y tiene riesgo de sobrecarga; PCC es preferido.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "INR 3.2" y responden vitamina K.
+Pero en hemorragia mayor activa se necesita reversión inmediata con PCC.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar hemorragia mayor en paciente anticoagulado con warfarina.
+2. Administrar PCC de 4 factores de inmediato.
+3. Asociar siempre vitamina K IV para reversión sostenida.
+4. Reservar PFC como alternativa si no hay PCC disponible.
+
+Perlas de examen
+✅ Hemorragia mayor + warfarina = PCC + vitamina K IV.
+✅ Vitamina K sola tarda horas; no sirve en sangrado activo.
+✅ PCC revierte en minutos.
+✅ PFC es alternativa, no primera opción.
+✅ Suspender warfarina no revierte el INR de inmediato.
+
+Referencias
+• Harrison's Principles of Internal Medicine.
+• Tintinalli's Emergency Medicine.
+• ACC Expert Consensus on Management of Bleeding in Patients on Oral Anticoagulants.
+• CHEST Guidelines on Antithrombotic Therapy.`,
   },
   {
     id: "dr-q-252",
@@ -5388,20 +7912,72 @@ Harrison's Principles of Internal Medicine.; Tintinalli's Emergency Medicine.; A
     correctOptionId: "C",
     explanation: "La PTI es una enfermedad autoinmune caracterizada por trombocitopenia aislada, con hemoglobina y leucocitos normales, sin evidencia de hemólisis ni alteraciones en otras series hematológicas. El tratamiento inicial en pacientes sintomáticos o con plaquetas <30.000/μL son los corticoides sistémicos.",
     keyPoints: [
-      "PTI.",
+      "Cuando veas: petequias y equimosis espontáneas con plaquetas 20.000/μL y resto del hemograma normal sin hemólisis.",
+      "Debes pensar en: púrpura trombocitopénica inmune (PTI) → corticoides como tratamiento inicial.",
+      "PTI = trombocitopenia aislada con hemoglobina y leucocitos normales.",
+      "Los corticoides son primera línea en pacientes sintomáticos o plaquetas <30.000/μL.",
       "Tema: Trastornos plaquetarios.",
-      "PTI = trombocitopenia aislada.",
-      "El resto del hemograma suele ser normal.",
-      "Los corticoides son el tratamiento inicial de primera línea.",
     ],
-    theoryContent: `HEMATOLOGÍA — BY DR Q.
-Trastornos plaquetarios.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Plaquetas 20.000." Y responden: Transfusión de plaquetas.
+Esta es una pregunta clásica de hematología porque evalúa una trampa frecuente: transfundir plaquetas o sospechar leucemia ante trombocitopenia aislada.
 
-Referencias:
-Williams Hematology.; Hoffbrand's Essential Haematology.; Harrison's Principles of Internal Medicine.; ASH Guidelines for Immune Thrombocytopenia.`,
+La clave no es la cifra de plaquetas sola.
+La clave es:
+Trombocitopenia aislada + hemograma normal + sin hemólisis = PTI → corticoides.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 23 años sin antecedentes relevantes.
+• Petequias y equimosis espontáneas progresivas.
+• Plaquetas 20.000/μL.
+• Hemoglobina y leucocitos normales.
+• Frotis sin hemólisis ni alteraciones en otras líneas.
+• Cuadro clásico de PTI.
+
+Recordemos púrpura trombocitopénica inmune:
+• Enfermedad autoinmune con destrucción plaquetaria periférica.
+• Trombocitopenia aislada: Hb y leucocitos normales.
+• Frecuente en mujeres jóvenes; puede ser postinfecciosa.
+• Tratamiento inicial: corticoides (prednisona) si sintomática o plaquetas <30.000/μL.
+• La transfusión de plaquetas no es tratamiento de primera línea (se destruyen rápidamente).
+• La TTP es diferente: anemia hemolítica microangiopática + fiebre + alteración neurológica.
+• Leucemia aguda: alteración de múltiples líneas celulares y blastos.
+
+Por lo tanto:
+El diagnóstico es PTI y la conducta inicial es iniciar corticoides (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La trombocitopenia aislada sin otras alteraciones hematológicas es clásica de PTI; los corticoides son tratamiento de primera línea.
+
+¿Por qué fallan las otras opciones?
+Opción A (PTT; plasmaféresis): requiere tríada de anemia hemolítica microangiopática, trombocitopenia y alteración neurológica/renal; no aplica aquí.
+Opción B (leucemia aguda; aspirado): habría citopenias múltiples o blastos en frotis.
+Opción D (CID; transfusión masiva): requiere consumo de factores de coagulación y alteración de TP/TTP; no es trombocitopenia aislada.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "plaquetas 20.000" y responden transfusión de plaquetas.
+Pero en PTI el tratamiento es inmunosupresor (corticoides), no transfusión rutinaria.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar trombocitopenia aislada (Hb y leucocitos normales).
+2. Descartar PTT, CID y leucemia por clínica y frotis.
+3. Diagnosticar PTI si no hay otra causa.
+4. Iniciar corticoides si sintomática o plaquetas <30.000/μL.
+
+Perlas de examen
+✅ PTI = trombocitopenia aislada + hemograma normal.
+✅ Corticoides son tratamiento inicial de primera línea.
+✅ No transfundir plaquetas rutinariamente en PTI.
+✅ PTT tiene anemia hemolítica microangiopática y alteración neurológica.
+✅ Mujer joven + petequias = pensar PTI.
+
+Referencias
+• Williams Hematology.
+• Hoffbrand's Essential Haematology.
+• Harrison's Principles of Internal Medicine.
+• ASH Guidelines for Immune Thrombocytopenia.`,
   },
   {
     id: "dr-q-253",
@@ -5420,20 +7996,69 @@ Williams Hematology.; Hoffbrand's Essential Haematology.; Harrison's Principles 
     correctOptionId: "B",
     explanation: "La nefropatía membranosa es la glomerulopatía que más se asocia a fenómenos tromboembólicos. La pérdida urinaria de anticoagulantes naturales (antitrombina III, proteínas C y S) y la hipoalbuminemia severa generan un importante estado de hipercoagulabilidad.",
     keyPoints: [
-      "Trombosis.",
-      "Tema: Complicaciones del síndrome nefrótico.",
+      "Cuando veas: síndrome nefrótico por nefropatía membranosa con albúmina 2.2 g/dL.",
+      "Debes pensar en: trombosis venosa profunda o trombosis de vena renal como complicación más probable.",
       "La nefropatía membranosa es la glomerulopatía con mayor riesgo trombótico.",
-      "La trombosis de la vena renal es una asociación clásica de examen.",
-      "Albúmina <2.5 g/dL aumenta significativamente el riesgo.",
+      "La hipoalbuminemia (<2.5 g/dL) y pérdida de anticoagulantes naturales generan hipercoagulabilidad.",
+      "Tema: Complicaciones del síndrome nefrótico.",
     ],
-    theoryContent: `NEFROLOGÍA — BY DR Q.
-Complicaciones del síndrome nefrótico.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes recuerdan: "Síndrome nefrótico = infecciones." Lo cual es cierto. Sin embargo:
+Esta es una pregunta clásica de nefrología porque evalúa una trampa frecuente: recordar infecciones como complicación del síndrome nefrótico e ignorar el riesgo trombótico, especialmente en nefropatía membranosa.
 
-Referencias:
-Brenner & Rector's The Kidney.; KDIGO Glomerular Disease Guidelines.; Harrison's Principles of Internal Medicine.; UpToDate: Hypercoagulability in Nephrotic Syndrome.`,
+La clave no es pensar solo en infecciones.
+La clave es:
+Nefropatía membranosa + hipoalbuminemia severa = alto riesgo de trombosis (DVT, trombosis de vena renal).
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 55 años con síndrome nefrótico secundario a nefropatía membranosa.
+• Albúmina sérica 2.2 g/dL (hipoalbuminemia severa).
+• Sin antecedentes de eventos trombóticos previos.
+• En riesgo elevado de complicaciones tromboembólicas.
+
+Recordemos complicaciones del síndrome nefrótico:
+• Infecciones: por pérdida de inmunoglobulinas (IgG).
+• Trombosis: por pérdida de antitrombina III, proteínas C y S + hipercoagulabilidad.
+• La nefropatía membranosa tiene el mayor riesgo trombótico entre glomerulopatías.
+• Trombosis de vena renal es asociación clásica de examen.
+• Albúmina <2.5 g/dL incrementa significativamente el riesgo.
+• También: edema, dislipidemia, insuficiencia renal progresiva.
+
+Por lo tanto:
+La complicación más probable es trombosis venosa profunda o trombosis de vena renal (opción B).
+
+¿Por qué la opción B es la respuesta correcta?
+La nefropatía membranosa con hipoalbuminemia severa genera estado de hipercoagulabilidad con riesgo trombótico superior a otras complicaciones en este contexto.
+
+¿Por qué fallan las otras opciones?
+Opción A (hemorragia intracraneal): el síndrome nefrótico causa hipercoagulabilidad, no sangrado espontáneo.
+Opción C (endocarditis infecciosa): aunque hay riesgo infeccioso, la trombosis es más característica de nefropatía membranosa con hipoalbuminemia severa.
+Opción D (crisis hipercalcémica): no es complicación típica del síndrome nefrótico.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan "síndrome nefrótico = infecciones".
+Lo cual es cierto, pero la nefropatía membranosa destaca por riesgo trombótico.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar síndrome nefrótico y su etiología (membranosa = alto riesgo trombótico).
+2. Evaluar grado de hipoalbuminemia (<2.5 g/dL = mayor riesgo).
+3. Considerar profilaxis anticoagulante en casos seleccionados.
+4. Vigilar signos de trombosis (DVT, dolor lumbar/flanco por trombosis renal).
+
+Perlas de examen
+✅ Nefropatía membranosa = glomerulopatía con mayor riesgo trombótico.
+✅ Trombosis de vena renal = asociación clásica de examen.
+✅ Albúmina <2.5 g/dL aumenta riesgo de trombosis.
+✅ Pérdida urinaria de antitrombina III, proteínas C y S → hipercoagulabilidad.
+✅ Infecciones son complicación frecuente, pero la trombosis es la respuesta aquí.
+
+Referencias
+• Brenner & Rector's The Kidney.
+• KDIGO Glomerular Disease Guidelines.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Hypercoagulability in Nephrotic Syndrome.`,
   },
   {
     id: "dr-q-254",
@@ -5452,20 +8077,69 @@ Brenner & Rector's The Kidney.; KDIGO Glomerular Disease Guidelines.; Harrison's
     correctOptionId: "C",
     explanation: "La torsión ovárica ocurre por rotación del ovario sobre su pedículo vascular, comprometiendo inicialmente el drenaje venoso y posteriormente el flujo arterial. El signo ecográfico de \"remolino\" es altamente sugestivo de torsión anexial y constituye una urgencia ginecológica.",
     keyPoints: [
-      "Torsión ovárica.",
+      "Cuando veas: dolor pélvico súbito durante ejercicio intenso, náuseas y masa anexial con signo de remolino (whirlpool sign).",
+      "Debes pensar en: torsión ovárica → laparoscopia urgente con destorsión ovárica.",
+      "El signo de whirlpool en ecografía es altamente sugestivo de torsión anexial.",
+      "Es una urgencia ginecológica: el compromiso vascular progresa de venoso a arterial.",
       "Tema: Abdomen agudo ginecológico.",
-      "El signo de \"whirlpool\" es altamente sugestivo de torsión ovárica.",
-      "El dolor suele ser súbito e intenso.",
-      "Las náuseas y vómitos son frecuentes.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Abdomen agudo ginecológico.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Masa anexial." Y responden: Quiste ovárico.
+Esta es una pregunta clásica de ginecología porque evalúa una trampa frecuente: diagnosticar quiste ovárico hemorrágico ante cualquier masa anexial con dolor.
 
-Referencias:
-Williams Gynecology.; Berek & Novak's Gynecology.; ACOG Committee Opinion on Adnexal Torsion.; UpToDate: Ovarian and Fallopian Tube Torsion.`,
+La clave no es la masa anexial sola.
+La clave es:
+Dolor súbito + masa anexial + signo de remolino (whirlpool) = torsión ovárica → cirugía urgente.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 34 años con dolor pélvico de inicio súbito durante actividad física intensa.
+• Náuseas asociadas.
+• Ecografía transvaginal: masa anexial izquierda con signo de "remolino".
+• Cuadro compatible con torsión ovárica, urgencia ginecológica.
+
+Recordemos torsión ovárica:
+• Rotación del ovario (y/o trompa) sobre su pedículo vascular.
+• Compromiso inicial del drenaje venoso → edema → compromiso arterial.
+• Dolor súbito e intenso; náuseas y vómitos frecuentes.
+• Signo ecográfico de "whirlpool" (remolino): altamente sugestivo.
+• Manejo: laparoscopia urgente con destorsión; ooforectomía si necrosis.
+• Factores de riesgo: masas anexiales, ovarios aumentados, actividad física.
+
+Por lo tanto:
+El diagnóstico es torsión ovárica y el manejo es laparoscopia urgente con destorsión (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+El signo de remolino es altamente específico de torsión anexial; requiere intervención quirúrgica urgente para preservar el ovario.
+
+¿Por qué fallan las otras opciones?
+Opción A (embarazo ectópico; metotrexato): no hay datos de embarazo; el signo de whirlpool apunta a torsión, no a gestación ectópica.
+Opción B (quiste hemorrágico; observación): el signo de remolino no es típico de quiste hemorrágico; la torsión requiere cirugía urgente.
+Opción D (EIP; antibióticos IV): no hay fiebre, leucocitosis ni hallazgos inflamatorios; el cuadro es vascular-quirúrgico.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "masa anexial" y responden quiste ovárico.
+Pero el signo de whirlpool es patognomónico de torsión.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Dolor pélvico súbito + masa anexial → pensar torsión.
+2. Buscar signo de whirlpool en ecografía.
+3. Laparoscopia urgente, no observación.
+4. Destorsión para preservar función ovárica si no hay necrosis.
+
+Perlas de examen
+✅ Whirlpool sign = torsión ovárica hasta demostrar lo contrario.
+✅ Urgencia ginecológica que requiere cirugía, no manejo médico.
+✅ El compromiso vascular progresa rápidamente.
+✅ Dolor súbito durante ejercicio es presentación clásica.
+✅ No confundir con quiste hemorrágico (manejo conservador).
+
+Referencias
+• Williams Gynecology.
+• Berek & Novak's Gynecology.
+• ACOG Committee Opinion on Adnexal Torsion.
+• UpToDate: Ovarian and Fallopian Tube Torsion.`,
   },
   {
     id: "dr-q-255",
@@ -5484,19 +8158,70 @@ Williams Gynecology.; Berek & Novak's Gynecology.; ACOG Committee Opinion on Adn
     correctOptionId: "C",
     explanation: "El cuadro clínico es compatible con mastitis puerperal. El microorganismo más frecuentemente implicado es Staphylococcus aureus. El tratamiento inicial consiste en antibióticos dirigidos contra cocos grampositivos y el mantenimiento de la lactancia o extracción frecuente de leche.",
     keyPoints: [
-      "Mastitis puerperal.",
-      "Tema: Patología mamaria del puerperio.",
+      "Cuando veas: fiebre y mama eritematosa, tumefacta y dolorosa al 8.º día postparto, sin fluctuación, con lactancia exclusiva.",
+      "Debes pensar en: mastitis puerperal → dicloxacilina o cefalexina y continuar lactancia.",
       "Staphylococcus aureus es el agente causal más frecuente.",
-      "La lactancia NO debe suspenderse.",
-      "Dicloxacilina y cefalexina son tratamientos de primera línea.",
+      "La lactancia NO debe suspenderse; la extracción frecuente ayuda a resolver la mastitis.",
+      "Tema: Patología mamaria del puerperio.",
     ],
-    theoryContent: `GINECOLOGÍA Y OBSTETRICIA — BY DR Q.
-Patología mamaria del puerperio.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Trampa:
-Muchos estudiantes leen: "Fiebre y mama dolorosa." Y responden: Drenaje quirúrgico.
+Esta es una pregunta clásica de obstetricia porque evalúa una trampa frecuente: indicar drenaje quirúrgico o suspender lactancia ante fiebre y mama dolorosa en el puerperio.
 
-Referencias:
-Williams Obstetrics.; ACOG Committee Opinion on Breastfeeding Challenges.; Academy of Breastfeeding Medicine Protocol #36.; Nelson Textbook of Pediatrics.`,
+La clave no es suspender la lactancia ni drenar quirúrgicamente de inmediato.
+La clave es:
+Mama eritematosa y dolorosa postparto sin fluctuación = mastitis puerperal → antibiótico antiestafilocócico + continuar lactancia.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Mujer de 30 años, G1P1, 8 días postparto vaginal.
+• Fiebre y dolor mamario.
+• Lactancia materna exclusiva.
+• Mama eritematosa, tumefacta y dolorosa sin fluctuación.
+• Sin colección (no absceso).
+• Cuadro compatible con mastitis puerperal.
+
+Recordemos mastitis puerperal:
+• Infección del parénquima mamario, generalmente por Staphylococcus aureus.
+• Ocurre por estasis láctea, fisuras del pezón o colonización bacteriana.
+• Tratamiento: dicloxacilina o cefalexina (antibióticos antiestafilocócicos).
+• La lactancia debe continuar o realizarse extracción frecuente.
+• El drenaje quirúrgico solo si hay absceso (fluctuación).
+• Suspender lactancia empeora la estasis y prolonga la infección.
+
+Por lo tanto:
+La conducta inicial es dicloxacilina o cefalexina y continuar lactancia (opción C).
+
+¿Por qué la opción C es la respuesta correcta?
+La mastitis sin absceso se trata con antibióticos y mantenimiento de la lactancia; es el manejo estándar según guías.
+
+¿Por qué fallan las otras opciones?
+Opción A (suspender lactancia y cabergolina): la lactancia no debe suspenderse; la cabergolina es para inhibición de lactación, no para mastitis.
+Opción B (drenaje quirúrgico): reservado para absceso mamario con fluctuación; esta paciente no tiene colección.
+Opción D (observación sin tratamiento): la mastitis requiere antibióticos; la observación puede progresar a absceso.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "fiebre y mama dolorosa" y responden drenaje quirúrgico.
+Pero sin fluctuación es mastitis, no absceso.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Diagnosticar mastitis vs absceso (fluctuación = absceso).
+2. Iniciar antibiótico antiestafilocócico (dicloxacilina o cefalexina).
+3. Continuar lactancia o extracción frecuente.
+4. Drenaje solo si hay absceso formado.
+
+Perlas de examen
+✅ Mastitis puerperal = antibiótico + continuar lactancia.
+✅ Staphylococcus aureus es el agente más frecuente.
+✅ Sin fluctuación = no drenaje quirúrgico.
+✅ Suspender lactancia empeora la estasis.
+✅ Dicloxacilina y cefalexina son tratamientos de primera línea.
+
+Referencias
+• Williams Obstetrics.
+• ACOG Committee Opinion on Breastfeeding Challenges.
+• Academy of Breastfeeding Medicine Protocol #36.
+• Nelson Textbook of Pediatrics.`,
   },
 ];
