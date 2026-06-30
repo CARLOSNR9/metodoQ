@@ -7186,42 +7186,76 @@ Referencias
     explanation:
       "PCP: CD4 <200, disnea subaguda, SatO2 baja, infiltrados intersticiales perihiliares, LDH↑. Tratamiento: TMP-SMX (dosis elevada). Corticoides si PaO2 <70 mmHg o A-a ≥35 mmHg (reduce mortalidad). Pentamidina es alternativa por alergia, no profilaxis en enfermedad activa. TARV se inicia tras mejoría clínica (2-4 semanas en PCP grave).",
     keyPoints: [
-      "PCP si CD4 <200: disnea + hipoxemia + LDH↑.",
-      "TMP-SMX es tratamiento de elección.",
-      "Esteroide si PaO2 <70 o A-a ≥35.",
+      "Cuando veas: VIH no diagnosticado + CD4 <200 + disnea subaguda + infiltrados intersticiales perihiliares en \"mariposa\" + LDH↑ + hipoxemia.",
+      "Debes pensar en: neumonía por Pneumocystis jirovecii (PCP) → TMP-SMX dosis elevada + corticoides si PaO2 <70 mmHg o gradiente A-a ≥35.",
+      "LDH elevado con infiltrados intersticiales en VIH avanzado es muy sugestivo de PCP hasta demostrar lo contrario.",
+      "Pentamidina inhalada es profilaxis primaria, no tratamiento de enfermedad activa; TARV se inicia tras mejoría clínica (2-4 semanas en PCP grave).",
+      "Tema: Infectología / VIH — neumonía por Pneumocystis jirovecii (PCP).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa neumonía por Pneumocystis jirovecii en VIH avanzado: CD4 85 + disnea + hipoxemia + LDH↑ + infiltrados en mariposa = TMP-SMX + esteroides si PaO2 <70.
+Esta es una pregunta clásica de infectología/VIH porque evalúa el reconocimiento y manejo inicial de neumonía por Pneumocystis jirovecii en inmunosupresión avanzada: CD4 <200, disnea subaguda, hipoxemia, LDH↑ e infiltrados en mariposa.
+
+La clave no es tratar como neumonía bacteriana típica, iniciar RIPE empírico sin confirmar TB activa ni dar profilaxis con pentamidina inhalada.
+La clave es:
+Identificar PCP en VIH avanzado → TMP-SMX (dosis elevada) + corticoides si hipoxemia moderada-grave; posponer TARV hasta estabilización clínica.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 34 años, VIH no diagnosticado, disnea progresiva, tos seca, fiebre baja.
-- SatO2 88% ambiente, FC 105; CD4 85 cél/μL.
-- Rx: infiltrados intersticiales bilaterales perihiliares en "mariposa"; LDH 650 U/L.
+El paciente presenta:
+• Hombre de 34 años, VIH no diagnosticado, disnea progresiva, tos seca, fiebre baja.
+• SatO2 88% ambiente, FC 105; CD4 85 cél/μL (inmunosupresión grave).
+• Rx: infiltrados intersticiales bilaterales perihiliares en "mariposa".
+• LDH 650 U/L (marcador indirecto de daño pulmonar en PCP).
 
-¿Qué dato es clave en el examen?
-- PCP si CD4 <200: disnea subaguda + hipoxemia + infiltrados intersticiales + LDH↑.
-- Tratamiento: TMP-SMX dosis elevada (1ª línea).
-- Corticoides si PaO2 <70 mmHg o gradiente A-a ≥35 mmHg (reduce mortalidad).
-- TARV se inicia tras mejoría clínica (2-4 semanas en PCP grave), no en fase aguda inestable.
-- Pentamidina es alternativa por alergia, no profilaxis en enfermedad activa.
+Recordemos PCP en VIH:
+• Ocurre típicamente con CD4 <200 cél/μL (profilaxis primaria con TMP-SMX cuando CD4 <200).
+• Cuadro: disnea subaguda, tos seca, fiebre baja, hipoxemia desproporcionada al examen físico.
+• Rx: infiltrados intersticiales bilaterales perihiliares ("mariposa"); puede ser inicialmente normal.
+• LDH frecuentemente elevado (>500 U/L).
+• Tratamiento: TMP-SMX 15-20 mg/kg/día (trimethoprim) IV/VO × 21 días.
+• Corticoides (prednisona 40 mg VO c/12 h × 5 días, luego taper) si PaO2 <70 mmHg o gradiente A-a ≥35 mmHg (reduce mortalidad).
+• Pentamidina IV/IM es alternativa por alergia a sulfa, no profilaxis inhalada en enfermedad activa.
+• TARV: iniciar tras mejoría clínica (2-4 semanas en PCP grave), no en fase aguda inestable (IRIS).
+
+Por lo tanto:
+El diagnóstico es PCP y el manejo inicial es TMP-SMX + evaluar indicación de corticoides por hipoxemia; no iniciar TARV en fase aguda grave sin estabilizar.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica PCP como diagnóstico más probable (CD4 85 + cuadro clínico-radiológico clásico + LDH↑) y propone el tratamiento de elección (TMP-SMX) con criterios correctos para corticoides (PaO2 <70 o A-a >35), además de la conducta adecuada respecto al TARV (no iniciar en fase aguda grave).
 
 ¿Por qué fallan las otras opciones?
-- Ceftriaxona + azitromicina: neumonía bacteriana típica; no cubre PCP.
-- RIPE inmediato: TB requiere confirmación; cuadro clásico de PCP con CD4 bajo.
-- Pentamidina inhalada profiláctica: es profilaxis, no tratamiento de enfermedad activa.
+Opción A (ceftriaxona + azitromicina): esquema de neumonía bacteriana adquirida en la comunidad; no cubre Pneumocystis jirovecii (hongo, no bacteria).
+Opción C (RIPE inmediato sin confirmar): TB requiere confirmación; el cuadro (disnea subaguda + infiltrados intersticiales + CD4 bajo + LDH↑) es clásico de PCP, no de TB activa primoinfección.
+Opción D (pentamidina inhalada profiláctica + alta): pentamidina inhalada es profilaxis primaria/secundaria, no tratamiento de enfermedad activa con hipoxemia; el paciente requiere hospitalización y TMP-SMX sistémico.
 
-Clave: CD4 <200 + disnea + LDH alto + infiltrados mariposa = PCP → TMP-SMX + esteroides si hipoxemia.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Infiltrados intersticiales + fiebre = TB en VIH."
+Pero el examen exige correlacionar:
+CD4 <200 + disnea subaguda + hipoxemia + LDH↑ + patrón en mariposa = PCP hasta demostrar lo contrario.
+Aquí el dato decisivo es:
+CD4 85 + SatO2 88% + LDH 650 + infiltrados perihiliares = PCP → TMP-SMX + esteroides si criterios de hipoxemia.
 
-INFECTOLOGÍA — BY DR Q.
-PCP en VIH avanzado
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar inmunosupresión grave (CD4 <200) con cuadro respiratorio subagudo.
+2. Reconocer patrón clínico-radiológico de PCP (disnea + hipoxemia + infiltrados mariposa + LDH↑).
+3. Iniciar TMP-SMX dosis elevada; agregar corticoides si PaO2 <70 mmHg o A-a ≥35.
+4. Posponer TARV hasta estabilización clínica (2-4 semanas en PCP grave).
 
-• CD4 <200: profilaxis con TMP-SMX.
-• Tratamiento: TMP-SMX + esteroides si hipoxemia moderada-grave.
+Perlas de examen
+✅ PCP: CD4 <200; profilaxis con TMP-SMX cuando CD4 <200.
+✅ Tratamiento: TMP-SMX dosis elevada × 21 días; pentamidina IV si alergia a sulfa.
+✅ Corticoides si PaO2 <70 mmHg o gradiente A-a ≥35 mmHg (reduce mortalidad).
+✅ LDH↑ + disnea + CD4 bajo = PCP hasta demostrar lo contrario.
+✅ No iniciar TARV en PCP grave aguda (riesgo IRIS); esperar mejoría clínica.
+✅ Pentamidina inhalada = profilaxis, no tratamiento de enfermedad activa.
 
-Perla: LDH alto + disnea + CD4 bajo = PCP hasta demostrar lo contrario.
-
-Referencias: DHHS HIV Guidelines; ATS PCP Guidelines.`,
+Referencias
+• DHHS Guidelines for the Prevention and Treatment of Opportunistic Infections in Adults and Adolescents with HIV.
+• ATS/IDSA Clinical Practice Guideline: Diagnosis and Treatment of Pneumocystis Pneumonia.
+• Kaplan et al. — Guidelines for prevention and treatment of opportunistic infections in HIV-infected adults.
+• UpToDate: Treatment and prevention of Pneumocystis pneumonia in patients without HIV.`,
   },
   {
     id: "dr-q-77",
@@ -7245,43 +7279,77 @@ Referencias: DHHS HIV Guidelines; ATS PCP Guidelines.`,
     explanation:
       "PBE: PMN ascítico ≥250 cél/μL (aquí 450). Tratamiento empírico: ceftriaxona 1-2 g/día (cubrir Enterobacteriaceae). Albúmina reduce síndrome hepatorrenal en pacientes con Creat↑ o BUN↑. Repetir paracentesis a 48 h si no mejora (PMN debe bajar >25%). Profilaxis secundaria con norfloxacino tras episodio.",
     keyPoints: [
-      "PBE: PMN ≥250 en ascitis.",
-      "Ceftriaxona empírica; albúmina si riesgo SHR.",
-      "Cultivo positivo en solo ~40%; tratar por PMN.",
+      "Cuando veas: cirrótico con ascitis + fiebre + dolor abdominal + encefalopatía + PMN ascítico ≥250 cél/μL + creatinina elevada.",
+      "Debes pensar en: peritonitis bacteriana espontánea (PBE) → ceftriaxona IV empírica + albúmina si riesgo de síndrome hepatorrenal.",
+      "El umbral diagnóstico de PBE es PMN ≥250, no 500; el cultivo es positivo solo en ~40% — tratar por PMN, no esperar cultivo.",
+      "Albúmina 1.5 g/kg día 1 y 1 g/kg día 3 reduce síndrome hepatorrenal en pacientes con Creat↑, BUN↑ o bilirrubina >4.",
+      "Tema: Hepatología / Infectología — peritonitis bacteriana espontánea en cirrosis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa peritonitis bacteriana espontánea (PBE): PMN ≥250 en ascitis = ceftriaxona empírica + albúmina si riesgo de síndrome hepatorrenal, sin esperar cultivo.
+Esta es una pregunta clásica de hepatología/infectología porque evalúa el diagnóstico y manejo de peritonitis bacteriana espontánea (PBE) en cirrosis: PMN ascítico ≥250 exige tratamiento empírico inmediato con ceftriaxona y albúmina si hay riesgo de síndrome hepatorrenal.
+
+La clave no es observar porque "PMN <500", tratar solo con metronidazol ni hacer paracentesis de alivio sin antibióticos.
+La clave es:
+Reconocer PBE (PMN ≥250) en cirrótico febril → ceftriaxona empírica + albúmina si creatinina elevada; no esperar cultivo.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 58 años, cirrosis por alcohol con ascitis conocida.
-- Fiebre 38.5 °C, dolor abdominal difuso, encefalopatía grado II.
-- Paracentesis: líquido turbio, PMN 450 cél/μL (≥250 = PBE), proteínas 0.8 g/dL.
-- Creatinina 1.4 (basal 0.9): riesgo de síndrome hepatorrenal.
+El paciente presenta:
+• Hombre de 58 años, cirrosis por alcohol con ascitis conocida.
+• Fiebre 38.5 °C, dolor abdominal difuso, encefalopatía grado II.
+• Paracentesis: líquido ascítico turbio, PMN 450 cél/μL (≥250 = PBE), proteínas 0.8 g/dL.
+• Creatinina 1.4 mg/dL (basal 0.9): riesgo de síndrome hepatorrenal (SHR).
+• Cultivo pendiente (positivo solo en ~40% de los casos).
 
-¿Qué dato es clave en el examen?
-- PBE: PMN ascítico ≥250 cél/μL (aquí 450); no esperar cultivo (positivo solo ~40%).
-- Tratamiento empírico: ceftriaxona 1-2 g/día (Enterobacteriaceae).
-- Albúmina 1.5 g/kg día 1 y 1 g/kg día 3 si Creat↑, BUN↑ o bilirrubina >4.
-- Repetir paracentesis a 48 h si no mejora (PMN debe bajar >25%).
-- Profilaxis secundaria con norfloxacino tras episodio.
+Recordemos PBE en cirrosis:
+• Diagnóstico: PMN ascítico ≥250 cél/μL (independiente del recuento total de leucocitos).
+• Cultivo positivo en solo ~40%; el tratamiento se basa en PMN, no en cultivo.
+• Germen más frecuente: E. coli, Klebsiella, Streptococcus pneumoniae (translocación bacteriana).
+• Tratamiento empírico: ceftriaxona 1-2 g/día IV (cubre Enterobacteriaceae) × 5-7 días.
+• Albúmina IV: 1.5 g/kg día 1 + 1 g/kg día 3 si Creat >1, BUN >30 o bilirrubina >4 (reduce SHR y mortalidad).
+• Repetir paracentesis a 48 h si no mejora clínica (PMN debe bajar >25%).
+• Profilaxis secundaria con norfloxacino 400 mg/día tras episodio.
+• Suspender betabloqueador si shock (reduce perfusión renal).
+
+Por lo tanto:
+El manejo correcto es ceftriaxona IV empírica + albúmina por creatinina elevada, sin esperar cultivo.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica PBE (PMN 450 ≥250), propone ceftriaxona empírica como tratamiento de elección y albúmina en dosis correctas (1.5 g/kg día 1, 1 g/kg día 3) por creatinina elevada con riesgo de SHR; además menciona suspender betabloqueador si shock.
 
 ¿Por qué fallan las otras opciones?
-- Observación con PMN <500: umbral es ≥250, no 500; aquí PMN 450 confirma PBE.
-- Metronidazol solo: PBE es principalmente Gram negativo entérico, no anaerobios solos.
-- Paracentesis de alivio sin ATB: no trata la infección; riesgo de recurrencia y SHR.
+Opción A (observación; PMN <500 descarta PBE): el umbral diagnóstico es PMN ≥250, no 500; aquí PMN 450 confirma PBE y requiere tratamiento inmediato.
+Opción C (metronidazol solo): PBE es principalmente infección por Gram negativos entéricos (E. coli, Klebsiella); metronidazol solo no cubre el espectro causal.
+Opción D (paracentesis de alivio masiva sin antibióticos): no trata la infección; aumenta riesgo de recurrencia, SHR y mortalidad.
 
-Clave: cirrótico febril + PMN ≥250 = ceftriaxona + albúmina; no esperes cultivo.
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden:
+"PMN <500 = no PBE" o esperan cultivo positivo para tratar.
+Pero el examen exige recordar:
+Umbral diagnóstico PMN ≥250; cultivo positivo solo ~40%; tratar empíricamente de inmediato.
+Aquí el dato decisivo es:
+Cirrótico febril + PMN 450 + Creat 1.4 (basal 0.9) = PBE + riesgo SHR → ceftriaxona + albúmina ya.
 
-INFECTOLOGÍA — BY DR Q.
-Peritonitis bacteriana espontánea
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar PBE en cirrótico con ascitis + fiebre/dolor/encefalopatía → paracentesis diagnóstica.
+2. Confirmar con PMN ≥250 (no esperar cultivo).
+3. Iniciar ceftriaxona empírica + albúmina si Creat↑, BUN↑ o bilirrubina >4.
+4. Repetir paracentesis a 48 h si no mejora; profilaxis secundaria con norfloxacino tras episodio.
 
-• Diagnóstico: PMN ≥250. Tratamiento empírico inmediato.
-• Albúmina 1.5/1 g/kg si Creat >1, BUN >30 o bilirrubina >4.
+Perlas de examen
+✅ PBE: PMN ascítico ≥250 cél/μL (umbral diagnóstico, no 500).
+✅ Cultivo positivo solo ~40%; tratar por PMN, no esperar cultivo.
+✅ Ceftriaxona 1-2 g/día empírica (Enterobacteriaceae).
+✅ Albúmina 1.5/1 g/kg reduce SHR si Creat >1, BUN >30 o bilirrubina >4.
+✅ Profilaxis secundaria: norfloxacino 400 mg/día tras episodio.
+✅ Suspender betabloqueador si shock (↓ perfusión renal).
 
-Perla: No esperes cultivo. PMN ≥250 = ceftriaxona + albúmina.
-
-Referencias: EASL Ascites Guidelines; AASLD.`,
+Referencias
+• EASL Clinical Practice Guidelines on the management of ascites, spontaneous bacterial peritonitis, and hepatorenal syndrome.
+• AASLD Practice Guidance on the management of ascites and spontaneous bacterial peritonitis.
+• Runyon — Management of adult patients with ascites due to cirrhosis.
+• UpToDate: Spontaneous bacterial peritonitis in adults: Treatment and prophylaxis.`,
   },
   {
     id: "dr-q-78",
@@ -7301,41 +7369,75 @@ Referencias: EASL Ascites Guidelines; AASLD.`,
     explanation:
       "Pielonefritis complicada con E. coli ESBL previa: fluoroquinolonas contraindicadas por resistencia. Nitrofurantoína no alcanza concentración renal parenquimatosa. Carbapenem (ertapenem) o betalactámico-β-lactamasa según sensibilidad local. Pielonefritis grave = IV inicialmente. Ajustar por antibiograma.",
     keyPoints: [
-      "ESBL: evitar quinolonas y amoxicilina-clavulanato empírico.",
-      "Nitrofurantoína solo para cistitis, no pielonefritis.",
-      "Pielonefritis complicada = IV + hospitalización.",
+      "Cuando veas: pielonefritis complicada + historial de ITU recurrente + E. coli BLEE (ESBL) documentada + uso previo de fluoroquinolonas.",
+      "Debes pensar en: infección por Enterobacteriaceae productora de BLEE → evitar fluoroquinolonas y amoxicilina-clavulánico; ertapenem IV o betalactámico según antibiograma local.",
+      "Nitrofurantoína y fosfomicina no alcanzan concentración adecuada en parénquima renal; solo sirven para cistitis no complicada.",
+      "Pielonefritis complicada con fiebre alta y dolor costovertebral requiere hospitalización e antibiótico IV inicialmente.",
+      "Tema: Infectología / Nefrología — pielonefritis complicada por E. coli BLEE (ESBL).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa pielonefritis complicada por E. coli BLEE: historial de ESBL contraindica fluoroquinolonas — ertapenem IV o betalactámico según antibiograma local.
+Esta es una pregunta clásica de infectología porque evalúa la selección de antibiótico empírico en pielonefritis complicada con resistencia documentada: historial de E. coli ESBL contraindica fluoroquinolonas y obliga carbapenem o betalactámico según antibiograma local.
+
+La clave no es repetir ciprofloxacino, usar nitrofurantoína en pielonefritis ni amoxicilina-clavulánico como monoterapia universal empírica.
+La clave es:
+Reconocer pielonefritis complicada por ESBL → ertapenem IV (o betalactámico-β-lactamasa según sensibilidad local) + hospitalización; ajustar por antibiograma.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 45 años, pielonefritis complicada; fiebre 39.5 °C, dolor costovertebral.
-- ITU recurrente con uso previo de ciprofloxacino.
-- UC previo: E. coli BLEE (ESBL); creatinina 1.0, sin alergia a betalactámicos.
+La paciente presenta:
+• Mujer de 45 años, pielonefritis complicada; fiebre 39.5 °C, dolor costovertebral, náuseas.
+• Antecedente de ITU recurrente con uso previo de ciprofloxacino.
+• UC previo: E. coli BLEE (ESBL) documentada.
+• Creatinina 1.0, sin alergia a betalactámicos.
 
-¿Qué dato es clave en el examen?
-- ESBL: evitar fluoroquinolonas y amoxicilina-clavulanato empírico.
-- Carbapenem (ertapenem) o betalactámico-β-lactamasa según sensibilidad local.
-- Nitrofurantoína no alcanza concentración en parénquima renal (solo cistitis).
-- Pielonefritis complicada = IV inicialmente + hospitalización.
+Recordemos resistencia BLEE (ESBL) y pielonefritis:
+• ESBL: betalactamasas de espectro extendido (E. coli, Klebsiella); resistencia a penicilinas, cefalosporinas y aztreonam.
+• Resistencia frecuente coexistente a fluoroquinolonas (historial de ciprofloxacino ↑ riesgo).
+• Amoxicilina-clavulánico: ineficaz empíricamente contra ESBL (clavulanato no neutraliza todas las BLEE).
+• Tratamiento empírico ESBL: carbapenem (ertapenem 1 g/día IV) o piperacilina-tazobactam/cefepime según antibiograma y resistencia local.
+• Nitrofurantoína: concentración insuficiente en parénquima renal → solo cistitis no complicada.
+• Fosfomicina: similar limitación; no indicada en pielonefritis complicada.
+• Pielonefritis complicada: hospitalización + ATB IV inicialmente; desescalar según evolución y antibiograma.
+
+Por lo tanto:
+El antibiótico empírico correcto es ertapenem IV (o betalactámico según antibiograma local), evitando fluoroquinolonas por resistencia documentada.
+
+¿Por qué la opción C es la respuesta correcta?
+Propone ertapenem IV o ceftriaxona según antibiograma local (ajustado a resistencia local) y enfatiza correctamente evitar fluoroquinolonas por resistencia documentada previa; cubre el espectro de ESBL en pielonefritis complicada que requiere vía IV.
 
 ¿Por qué fallan las otras opciones?
-- Ciprofloxacino VO: resistencia documentada por ESBL previo.
-- Nitrofurantoína: no sirve en pielonefritis (concentración insuficiente en riñón).
-- Amoxicilina-clavulánico universal: ineficaz contra ESBL empíricamente.
+Opción A (ciprofloxacino 500 mg VO): resistencia documentada por ESBL previo; repetir fluoroquinolona es ineficaz y peligroso.
+Opción B (nitrofurantoína 100 mg c/12 h): no alcanza concentración terapéutica en parénquima renal; indicada solo en cistitis no complicada.
+Opción D (amoxicilina-clavulánico VO universal): ineficaz empíricamente contra ESBL; no es monoterapia adecuada en pielonefritis complicada con resistencia documentada.
 
-Clave: pielonefritis + historial ESBL = no repitas cipro → ertapenem IV según antibiograma.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"ITU = ciprofloxacino o nitrofurantoína siempre."
+Pero el examen exige correlacionar:
+Historial de ESBL + uso previo de quinolonas + pielonefritis complicada = evitar quinolonas y nitrofurantoína → carbapenem IV.
+Aquí el dato decisivo es:
+UC previo E. coli BLEE + pielonefritis complicada = no repitas cipro → ertapenem IV según antibiograma local.
 
-INFECTOLOGÍA — BY DR Q.
-Pielonefritis por E. coli BLEE
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Clasificar ITU: cistitis vs pielonefritis vs complicada (fiebre alta, dolor costovertebral, náuseas).
+2. Revisar historial microbiológico (ESBL previo) y antibióticos previos (quinolonas).
+3. Evitar fluoroquinolonas y amoxicilina-clavulánico empírico si ESBL documentada.
+4. Iniciar ertapenem IV (o betalactámico según antibiograma local) + hospitalización; ajustar por cultivo.
 
-• ESBL: carbapenem o betalactámico según antibiograma.
-• Nitrofurantoína y fosfomicina no sirven en pielonefritis.
+Perlas de examen
+✅ ESBL: evitar fluoroquinolonas, cefalosporinas de 3.ª generación y amoxicilina-clavulánico empírico.
+✅ Tratamiento ESBL: carbapenem (ertapenem) o betalactámico-β-lactamasa según antibiograma.
+✅ Nitrofurantoína y fosfomicina: solo cistitis no complicada (no alcanzan parénquima renal).
+✅ Pielonefritis complicada = IV + hospitalización inicialmente.
+✅ Historia de ESBL = no repitas ciprofloxacino; piensa carbapenem.
+✅ Ajustar siempre por antibiograma y resistencia local.
 
-Perla: Historia de ESBL = no repitas ciprofloxacino. Piensa carbapenem.
-
-Referencias: IDSA UTI Guidelines; ESBL treatment reviews.`,
+Referencias
+• IDSA/SHEA Guidelines for the Diagnosis and Management of Complicated Urinary Tract Infections.
+• Pitout — Infections with extended-spectrum β-lactamase-producing Enterobacteriaceae.
+• Tamma et al. — Infectious Diseases Society of America guidance on ESBL-producing Enterobacteriaceae.
+• UpToDate: Extended-spectrum beta-lactamases and treatment of ESBL-producing Enterobacteriaceae.`,
   },
   {
     id: "dr-q-79",
@@ -7359,42 +7461,76 @@ Referencias: IDSA UTI Guidelines; ESBL treatment reviews.`,
     explanation:
       "PPD ≥5 mm en contacto estrecho = ILTB (independiente del cutoff general de 10-15 mm). Rx normal descarta activa. Tratamiento ILTB: 3HP (isoniazida + rifapentina 12 dosis semanales) preferido por adherencia, o isoniazida 6-9 meses. RIPE es para TB activa. BCG no revacunar en adultos contactos.",
     keyPoints: [
-      "Contacto estrecho: PPD ≥5 mm = positivo.",
-      "Rx normal + asintomática = ILTB, no activa.",
-      "3HP (12 semanas) preferido sobre 9 meses de H.",
+      "Cuando veas: contacto estrecho de TB pulmonar bacilífera + PPD positivo (≥5 mm en contacto) + Rx tórax normal + asintomático + VIH negativo.",
+      "Debes pensar en: infección latente por tuberculosis (ILTB) → profilaxis con 3HP (isoniazida + rifapentina 12 semanas) o isoniazida 9 meses, no RIPE.",
+      "En contacto estrecho el umbral de PPD positivo es ≥5 mm, independiente del cutoff general de 10-15 mm.",
+      "RIPE es esquema de TB activa; BCG no se revacuna en adultos contactos de TB.",
+      "Tema: Infectología — infección latente por tuberculosis (ILTB) en contacto estrecho.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa infección latente por TB (ILTB) en contacto estrecho: PPD 18 mm + Rx normal + asintomática = profilaxis con 3HP o isoniazida, no RIPE.
+Esta es una pregunta clásica de infectología/tuberculosis porque evalúa la diferenciación entre TB activa e infección latente en contacto estrecho: PPD positivo + Rx normal + asintomático = ILTB que requiere profilaxis, no tratamiento con RIPE.
+
+La clave no es iniciar RIPE como TB activa, omitir tratamiento porque "PPD <20 mm" ni revacunar con BCG.
+La clave es:
+Reconocer ILTB en contacto estrecho (PPD ≥5 mm + Rx normal + asintomático) → profilaxis con 3HP o isoniazida; descartar activa antes de tratar.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 30 años, asintomática, PPD 18 mm (lectura 48 h).
-- Rx tórax normal; contacto domiciliario de TB pulmonar bacilífera confirmada.
-- VIH negativo; no hay datos de enfermedad activa.
+La paciente presenta:
+• Mujer de 30 años, asintomática, PPD 18 mm (lectura a las 48 h).
+• Rx tórax normal (sin evidencia de enfermedad activa).
+• Contacto domiciliario de paciente con TB pulmonar bacilífera confirmada.
+• VIH negativo; sin síntomas respiratorios ni constitucionales.
 
-¿Qué dato es clave en el examen?
-- Contacto estrecho: PPD ≥5 mm = positivo (independiente del cutoff general 10-15 mm).
-- Rx normal + asintomática = ILTB, no TB activa.
-- Tratamiento ILTB: 3HP (isoniazida + rifapentina 12 dosis semanales) preferido por adherencia, o isoniazida 6-9 meses.
-- RIPE es para TB activa, no profilaxis.
-- BCG no revacunar en adultos contactos.
+Recordemos ILTB vs TB activa:
+• Contacto estrecho: conviviente o exposición prolongada a TB bacilífera confirmada.
+• En contacto estrecho: PPD ≥5 mm = positivo (umbral más bajo que población general 10-15 mm).
+• ILTB: infección por M. tuberculosis sin enfermedad activa (Rx normal + asintomático).
+• TB activa: síntomas (tos >2 semanas, fiebre, sudoración nocturna, pérdida peso) + Rx anormal o baciloscopia/cultivo positivo.
+• Tratamiento ILTB preferido: 3HP (isoniazida + rifapentina semanal × 12 dosis en 3 meses) por mejor adherencia.
+• Alternativa: isoniazida 300 mg/día × 6-9 meses (9 meses preferido en contactos).
+• RIPE (rifampicina, isoniazida, pirazinamida, etambutol): esquema de TB activa, no profilaxis.
+• BCG: no revacunar en adultos contactos; no sustituye tratamiento de ILTB.
+
+Por lo tanto:
+La conducta correcta es tratar ILTB con 3HP o isoniazida 9 meses, tras descartar enfermedad activa.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica ILTB (contacto + PPD positivo + Rx normal + asintomática) y propone profilaxis con 3HP (isoniazida + rifapentina 12 semanas) o isoniazida 9 meses según guía local, enfatizando descartar TB activa antes de tratar.
 
 ¿Por qué fallan las otras opciones?
-- RIPE 6 meses: esquema de TB activa; aquí no hay enfermedad activa.
-- No tratamiento con PPD <20 mm: en contacto estrecho el umbral es ≥5 mm.
-- Revacunación BCG: no indicada en adultos contactos de TB.
+Opción A (RIPE 6 meses por TB activa): RIPE es tratamiento de TB activa pulmonar; aquí no hay enfermedad activa (Rx normal, asintomática).
+Opción C (no tratamiento; PPD <20 mm): en contacto estrecho el umbral es ≥5 mm, no 20 mm; PPD 18 mm es positivo y requiere profilaxis.
+Opción D (vacuna BCG revacunación): BCG no se revacuna en adultos contactos; no trata ILTB ni previene reactivación.
 
-Clave: contacto + PPD positivo + Rx normal = ILTB → 3HP o isoniazida, no RIPE.
+¿Cuál es la trampa del examen?
+Muchos estudiantes confunden:
+"PPD positivo = TB activa = RIPE siempre" o aplican cutoff general de 10-15 mm sin considerar contacto estrecho.
+Pero el examen exige correlacionar:
+Contacto estrecho + PPD ≥5 mm + Rx normal + asintomático = ILTB → profilaxis, no RIPE.
+Aquí el dato decisivo es:
+Contacto bacilífero + PPD 18 mm + Rx normal = ILTB → 3HP o isoniazida 9 meses.
 
-INFECTOLOGÍA — BY DR Q.
-Infección latente por tuberculosis
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar contacto estrecho de TB bacilífera confirmada.
+2. Evaluar PPD (≥5 mm = positivo en contacto) y Rx tórax + síntomas.
+3. Si Rx normal + asintomático = ILTB → profilaxis (3HP preferido o isoniazida 9 meses).
+4. RIPE solo si TB activa confirmada o altamente probable.
 
-• Contacto + PPD ≥5 mm + Rx normal = ILTB.
-• Tratamiento: 3HP o isoniazida 9 meses.
+Perlas de examen
+✅ Contacto estrecho: PPD ≥5 mm = positivo (umbral más bajo).
+✅ Rx normal + asintomático + PPD (+) = ILTB, no TB activa.
+✅ Profilaxis preferida: 3HP (12 dosis semanales en 3 meses) por adherencia.
+✅ RIPE = TB activa; nunca profilaxis de ILTB.
+✅ BCG no revacunar en adultos contactos.
+✅ Descartar TB activa (Rx, síntomas, baciloscopia si indicada) antes de tratar ILTB.
 
-Perla: RIPE es para TB activa. ILTB en contacto se trata aunque PPD sea solo 6 mm.
-
-Referencias: WHO LTBI Guidelines; CDC TB Treatment.`,
+Referencias
+• WHO Guidelines on the Management of Latent Tuberculosis Infection.
+• CDC Treatment of Latent Tuberculosis Infection (LTBI).
+• Sterling et al. — Three months of rifapentine and isoniazid for latent tuberculosis infection (3HP trial).
+• UpToDate: Latent tuberculosis infection: Diagnosis and treatment.`,
   },
   {
     id: "dr-q-80",
@@ -7418,43 +7554,77 @@ Referencias: WHO LTBI Guidelines; CDC TB Treatment.`,
     explanation:
       "Colangitis aguda grave (criterios Tokyo): disfunción cardiovascular (shock), respiratoria, renal, hepática, hematológica o neurológica. Tríada de Charcot (fiebre, ictericia, dolor) + shock = Tokyo III. ATB IV de amplio espectro (Enterobacteriaceae + anaerobios) + drenaje biliar urgente. CPRE es gold standard si disponible; drenaje percutáneo si CPRE no factible.",
     keyPoints: [
-      "Colangitis = ATB + drenaje; no uno sin el otro.",
-      "Tokyo III (grave): disfunción orgánica + drenaje <48 h.",
-      "Piperacilina-tazobactam o carbapenem según resistencia local.",
+      "Cuando veas: tríada de Charcot (fiebre + ictericia + dolor) + shock (PA 78/45) + dilatación vía biliar + cálculo en colédoco + lactato elevado.",
+      "Debes pensar en: colangitis aguda grave (Tokyo III) → reanimación séptica + piperacilina-tazobactam IV + drenaje biliar urgente (<24-48 h).",
+      "Colangitis = antibióticos + drenaje biliar; no uno sin el otro; CPRE diferida en Tokyo III aumenta mortalidad.",
+      "Piperacilina-tazobactam o carbapenem cubren Enterobacteriaceae y anaerobios biliares; metronidazol monoterapia es insuficiente.",
+      "Tema: Infectología / Urgencias — colangitis aguda grave (Tokyo Guidelines III).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa colangitis aguda grave (Tokyo III): tríada de Charcot + shock = reanimación séptica + ATB IV + drenaje biliar urgente en <24-48 h, no CPRE diferida.
+Esta es una pregunta clásica de infectología/urgencias porque evalúa colangitis aguda grave (Tokyo III): tríada de Charcot + shock + obstrucción biliar confirmada exige reanimación séptica, antibióticos IV de amplio espectro y drenaje biliar urgente en <24-48 h.
+
+La clave no es antibióticos VO con colecistectomía electiva diferida, CPRE diferida 2 semanas ni metronidazol monoterapia.
+La clave es:
+Reconocer colangitis Tokyo III (disfunción orgánica + obstrucción biliar) → ATB IV + drenaje biliar urgente (CPRE o percutáneo); no diferir descompresión.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 67 años, ictericia dolorosa, fiebre 39.8 °C, escalofríos.
-- PA 78/45, FC 130, lactato 4.2; bilirrubina total 12, leucocitos 22,000.
-- Eco: dilatación vía biliar + cálculo en colédoco.
-- Colangitis aguda grave con disfunción cardiovascular (Tokyo III).
+El paciente presenta:
+• Hombre de 67 años, ictericia dolorosa, fiebre 39.8 °C, escalofríos.
+• PA 78/45, FC 130, lactato 4.2 (shock séptico).
+• Bilirrubina total 12 mg/dL (directa 10), leucocitos 22,000.
+• Eco: dilatación vía biliar + cálculo en colédoco (obstrucción confirmada).
+• Colangitis aguda grave con disfunción cardiovascular (Tokyo III).
 
-¿Qué dato es clave en el examen?
-- Tríada de Charcot: fiebre + ictericia + dolor; Pentada si shock + alteración mental.
-- Tokyo III: disfunción orgánica → ATB IV + drenaje biliar urgente <24-48 h.
-- ATB: piperacilina-tazobactam o carbapenem (Enterobacteriaceae + anaerobios biliares).
-- CPRE es gold standard si disponible; drenaje percutáneo si CPRE no factible.
-- Colangitis = ATB + drenaje; no uno sin el otro.
+Recordemos colangitis aguda y Tokyo Guidelines:
+• Tríada de Charcot: fiebre + ictericia + dolor en hipocondrio derecho.
+• Pentada de Reynolds: Charcot + hipotensión + alteración del estado mental.
+• Tokyo I (leve): sin disfunción orgánica → ATB + drenaje electivo (<24-48 h).
+• Tokyo II (moderada): leucocitosis >12,000, fiebre >39 °C, edad >75, bilirrubina >5 → ATB + drenaje urgente.
+• Tokyo III (grave): disfunción cardiovascular, respiratoria, renal, hepática, hematológica o neurológica → ATB IV + drenaje urgente <24-48 h.
+• ATB empírico: piperacilina-tazobactam o carbapenem (Enterobacteriaceae + anaerobios biliares).
+• Drenaje: CPRE (gold standard) si disponible; drenaje percutáneo transhepático si CPRE no factible.
+• Colangitis = ATB + drenaje; la descompresión biliar es tan crítica como los antibióticos.
+
+Por lo tanto:
+El manejo inmediato es reanimación séptica + piperacilina-tazobactam IV + drenaje biliar urgente (CPRE o percutáneo) en <24-48 h.
+
+¿Por qué la opción B es la respuesta correcta?
+Identifica colangitis grave (Tokyo III) por shock + disfunción orgánica, propone reanimación séptica, piperacilina-tazobactam IV (amplio espectro biliar) y drenaje biliar urgente (<24-48 h) por CPRE o drenaje percutáneo.
 
 ¿Por qué fallan las otras opciones?
-- ATB VO + colecistectomía electiva 6 semanas: shock requiere drenaje urgente, no diferido.
-- CPRE diferida 2 semanas: mortalidad ↑ sin descompresión biliar en Tokyo III.
-- Metronidazol monoterapia: no cubre Gram negativos entéricos causales.
+Opción A (ATB VO + colecistectomía electiva 6 semanas): shock y Tokyo III requieren drenaje urgente y ATB IV; colecistectomía electiva no descomprime vía biliar obstruida agudamente.
+Opción C (CPRE diferida 2 semanas): mortalidad ↑ significativamente sin descompresión biliar en colangitis grave; Tokyo III exige drenaje <24-48 h.
+Opción D (metronidazol monoterapia): no cubre Gram negativos entéricos (E. coli, Klebsiella) causales principales; monoterapia anaerobicida insuficiente.
 
-Clave: colangitis + shock + cálculo en colédoco = pip-tazo + drenaje biliar hoy, no mañana.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Colangitis = antibióticos primero, drenaje después" o "CPRE puede esperar si doy ATB."
+Pero el examen exige recordar:
+Colangitis = ATB + drenaje; Tokyo III con shock no espera CPRE "mañana".
+Aquí el dato decisivo es:
+Shock (PA 78/45) + cálculo en colédoco + lactato 4.2 = Tokyo III → pip-tazo + drenaje biliar hoy.
 
-INFECTOLOGÍA — BY DR Q.
-Colangitis aguda grave · Tokyo Guidelines
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer tríada de Charcot ± Pentada de Reynolds (shock + alteración mental).
+2. Confirmar obstrucción biliar (eco: dilatación + cálculo en colédoco).
+3. Clasificar severidad Tokyo (III si disfunción orgánica).
+4. Reanimación séptica + ATB IV amplio espectro + drenaje biliar urgente (<24-48 h).
 
-• Tríada Charcot; Pentada si shock + alteración mental.
-• Tokyo III: disfunción orgánica → ATB IV + drenaje urgente.
+Perlas de examen
+✅ Tríada Charcot: fiebre + ictericia + dolor; Pentada si shock + alteración mental.
+✅ Tokyo III: disfunción orgánica → ATB IV + drenaje urgente <24-48 h.
+✅ Colangitis = ATB + drenaje; no uno sin el otro.
+✅ CPRE = gold standard; drenaje percutáneo si CPRE no factible.
+✅ Pip-tazo o carbapenem cubren espectro biliar (GN + anaerobios).
+✅ Colangitis con shock no espera CPRE "mañana"; drena hoy.
 
-Perla: Colangitis con shock no espera CPRE \"mañana\". Drena hoy.
-
-Referencias: Tokyo Guidelines 2018; ASGE biliary drainage.`,
+Referencias
+• Tokyo Guidelines 2018/2019: Management of Acute Cholangitis and Choledocholithiasis.
+• Kiriyama et al. — Tokyo Guidelines for the management of acute cholangitis and cholecystitis.
+• ASGE Standards of Practice: Role of ERCP in choledocholithiasis.
+• UpToDate: Acute cholangitis: Clinical manifestations, diagnosis, and management.`,
   },
   {
     id: "dr-q-81",
@@ -7490,53 +7660,77 @@ Referencias: Tokyo Guidelines 2018; ASGE biliary drainage.`,
     explanation:
       "Cuadro altamente sugestivo de tromboembolismo pulmonar de alto riesgo (masivo), con hipotensión e inestabilidad hemodinámica. La reperfusión inmediata mediante trombólisis sistémica es el tratamiento de elección.",
     keyPoints: [
-      "Disnea súbita + dolor pleurítico + hipotensión + ingurgitación yugular → TEP de alto riesgo.",
-      "Hipotensión en TEP = alto riesgo; choque obstructivo.",
-      "La trombólisis está indicada en pacientes inestables.",
-      "La anticoagulación aislada no es suficiente en TEP de alto riesgo.",
+      "Cuando veas: disnea súbita + dolor pleurítico + hipotensión (PA 85/50) + ingurgitación yugular + signos de sobrecarga derecha (S1Q3T3).",
+      "Debes pensar en: tromboembolismo pulmonar de alto riesgo (masivo) con choque obstructivo → trombólisis sistémica inmediata.",
+      "La clave no es S1Q3T3; la clave es la hipotensión arterial que define alto riesgo y obliga reperfusión urgente.",
+      "No esperar angio-TC en paciente hemodinámicamente inestable; anticoagulación sola no basta en TEP con choque.",
+      "Tema: Neumología / Urgencias — TEP de alto riesgo y trombólisis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa TEP de alto riesgo (masivo): la hipotensión (PA 85/50) define choque obstructivo y obliga trombolisis sistémica inmediata, no angio-TC ni anticoagulación sola.
+Esta es una pregunta clásica de neumología/urgencias porque evalúa TEP de alto riesgo (masivo): la hipotensión arterial define choque obstructivo y obliga trombólisis sistémica inmediata, no anticoagulación sola ni angio-TC antes de tratar.
+
+La clave no es el patrón S1Q3T3 ni la anticoagulación con HBPM y observación.
+La clave es:
+Identificar TEP de alto riesgo por hipotensión (PA 85/50) → trombólisis sistémica inmediata para reperfusión; no retrasar tratamiento esperando confirmación imagenológica en paciente inestable.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 68 años con disnea súbita y dolor pleurítico.
-- PA 85/50, FC 120, SatO2 88%, ingurgitación yugular.
-- ECG: S1Q3T3 (sobrecarga derecha); inestabilidad hemodinámica.
+El paciente presenta:
+• Hombre de 68 años, HTA, disnea súbita y dolor torácico pleurítico.
+• PA 85/50 mmHg, FC 120 lpm, FR 28 rpm, SatO2 88%.
+• Ingurgitación yugular presente (sobrecarga de cavidades derechas).
+• ECG: taquicardia sinusal con patrón S1Q3T3 (sobrecarga aguda del VD).
+• Inestabilidad hemodinámica: cuadro altamente sugestivo de TEP masivo.
 
-¿Qué dato es clave en el examen?
-- Hipotensión en TEP = alto riesgo; choque obstructivo (trombo → ↑ RVP → VD dilatado → ↓ precarga VI).
-- La clave no es S1Q3T3; la clave es la hipotensión arterial.
-- Trombolisis sistémica inmediata para reperfusión rápida.
-- No esperar angio-TC en paciente inestable.
-- Anticoagulación sola no basta en choque.
+Recordemos estratificación de riesgo en TEP (ESC):
+• Alto riesgo (masivo): hipotensión (PAS <90 mmHg o necesidad de vasopresores) → mortalidad 25-65%.
+• Intermedio-alto riesgo: normotenso pero biomarcadores ↑ + disfunción VD → monitorización UCI.
+• Bajo riesgo: normotenso, sin disfunción VD ni biomarcadores ↑ → anticoagulación y posible alta precoz.
+• Fisiopatología del choque obstructivo: trombo ocluye circulación pulmonar → ↑ RVP → dilatación VD → ↓ llenado VI → ↓ gasto cardíaco.
+• Tratamiento alto riesgo: trombólisis sistémica (alteplase 100 mg IV en 2 h) o embolectomía si contraindicación.
+• Anticoagulación sola: insuficiente en choque; no disuelve trombo agudo.
+• Angio-TC: confirmatoria, pero no debe retrasar reperfusión en paciente inestable.
+• Filtro de VCI: no trata TEP establecido agudo; reservado para contraindicación absoluta a anticoagulación.
+
+Por lo tanto:
+La conducta inicial más adecuada es trombólisis sistémica inmediata por TEP de alto riesgo con hipotensión.
+
+¿Por qué la opción C es la respuesta correcta?
+Identifica inestabilidad hemodinámica como criterio de TEP de alto riesgo y propone trombólisis sistémica inmediata, que es el tratamiento de elección para reperfusión rápida y reducción de mortalidad en choque obstructivo.
 
 ¿Por qué fallan las otras opciones?
-- HBPM + observación: insuficiente en TEP masivo con hipotensión.
-- Angio-TC antes de tratar: retrasa reperfusión en paciente inestable.
-- Filtro de vena cava: no trata TEP establecido agudo; no disuelve trombo.
+Opción A (HBPM + observación): anticoagulación sola no basta en TEP masivo con hipotensión; no disuelve el trombo ni revierte el choque obstructivo.
+Opción B (angio-TC antes de tratar): retrasa reperfusión en paciente inestable; la trombólisis no debe esperar confirmación imagenológica si hay alta sospecha clínica con hipotensión.
+Opción D (filtro de VCI): no trata TEP agudo establecido; no disuelve trombo pulmonar; indicado en contraindicación a anticoagulación, no como primera línea en TEP masivo.
 
-Clave: disnea súbita + hipotensión + ingurgitación yugular = TEP alto riesgo → trombolisis ya.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"S1Q3T3 = TEP → siempre anticoagulación" o "confirmar con angio-TC antes de tratar."
+Pero el examen exige correlacionar:
+Hipotensión + disnea súbita + signos de sobrecarga derecha = alto riesgo → trombólisis ya.
+Aquí el dato decisivo es:
+PA 85/50 mmHg (hipotensión) define alto riesgo independientemente del ECG; la decisión se basa en estabilidad hemodinámica.
 
-URGENTES — BY DR Q.
-Tromboembolismo pulmonar de alto riesgo
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar TEP ante disnea súbita + dolor pleurítico + factores de riesgo.
+2. Valorar estabilidad hemodinámica (PAS <90 = alto riesgo).
+3. Identificar signos de sobrecarga derecha (ingurgitación yugular, S1Q3T3).
+4. Alto riesgo → trombólisis sistémica inmediata; no esperar angio-TC si inestable.
 
-Lo que debes saber para el examen:
-• Disnea súbita, dolor pleurítico, hipotensión, ingurgitación yugular, signos de sobrecarga derecha → TEP de alto riesgo.
+Perlas de examen
+✅ TEP alto riesgo: hipotensión (PAS <90) o vasopresores → trombólisis inmediata.
+✅ La clave no es S1Q3T3; la clave es la hipotensión arterial.
+✅ Choque obstructivo: trombo → ↑ RVP → dilatación VD → ↓ GC.
+✅ No esperar angio-TC en paciente hemodinámicamente inestable.
+✅ Anticoagulación sola no basta en TEP con choque.
+✅ Filtro VCI no trata TEP agudo; reservado para contraindicación a anticoagulación.
 
-La clave no es el patrón S1Q3T3; la clave es la hipotensión arterial (PA 85/50 mmHg). Un trombo ocluye la circulación pulmonar → ↑ resistencia vascular pulmonar → dilatación del VD → ↓ llenado del VI → ↓ gasto cardíaco = choque obstructivo.
-
-¿Por qué trombólisis?
-Hipotensión + hipoxemia + sobrecarga derecha requieren reperfusión rápida para disolver el trombo, reducir presión pulmonar y mejorar gasto cardíaco.
-
-Trampas de examen:
-• No esperar angio-TC en paciente inestable.
-• Anticoagulación sola no basta en choque.
-• S1Q3T3 sugiere sobrecarga derecha, pero la decisión se basa en estabilidad hemodinámica.
-
-Secuencia: sospechar TEP → valorar estabilidad → identificar hipotensión → clasificar alto riesgo → reperfusión urgente.
-
-Referencias: ESC Guidelines on Pulmonary Embolism; Harrison's; UpToDate: High-Risk PE; CHEST VTE Guidelines.`,
+Referencias
+• Konstantinides et al. — 2019 ESC Guidelines for the Diagnosis and Management of Acute Pulmonary Embolism.
+• Kearon et al. — Antithrombotic Therapy for VTE Disease: CHEST Guideline and Expert Panel Report.
+• Jaff et al. — Management of massive and submassive pulmonary embolism.
+• UpToDate: Treatment, prognosis, and follow-up of acute pulmonary embolism in adults.`,
   },
   {
     id: "dr-q-82",
@@ -7572,50 +7766,77 @@ Referencias: ESC Guidelines on Pulmonary Embolism; Harrison's; UpToDate: High-Ri
     explanation:
       "Cetoacidosis diabética. El manejo inicial debe comenzar con expansión de volumen mediante cristaloides, seguido de evaluación del potasio sérico y posteriormente administración de insulina intravenosa.",
     keyPoints: [
-      "Hiperglucemia + acidosis metabólica + anion gap elevado → cetoacidosis diabética.",
-      "La primera medida es la reposición de líquidos.",
-      "El potasio debe evaluarse antes de iniciar insulina.",
-      "El bicarbonato rara vez está indicado (pH < 6.9).",
+      "Cuando veas: DM1 + hiperglucemia (450 mg/dL) + acidosis metabólica (pH 7.1, HCO3 8) + anion gap elevado (22) + náuseas/vómitos.",
+      "Debes pensar en: cetoacidosis diabética (CAD) → secuencia: líquidos IV → evaluar/corregir K+ → insulina IV.",
+      "La insulina desplaza K+ intracelularmente; si K+ <3.3 mEq/L, posponer insulina y reponer potasio primero (hipokalemia letal).",
+      "Bicarbonato solo si pH <6.9 (rara vez indicado en pH 7.1); insulina SC inadecuada en CAD severa con vómitos.",
+      "Tema: Endocrinología / Urgencias — cetoacidosis diabética: secuencia de manejo.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa secuencia de manejo en CAD: volumen primero, evaluar K+ antes de insulina IV — la insulina sin reponer potasio puede causar hipokalemia letal.
+Esta es una pregunta clásica de endocrinología/urgencias porque evalúa la secuencia correcta de manejo en cetoacidosis diabética: volumen primero, evaluar potasio antes de insulina IV — la insulina sin reponer K+ puede causar hipokalemia letal.
+
+La clave no es la glucosa ni iniciar insulina inmediatamente.
+La clave es:
+Identificar CAD y aplicar la secuencia ADA: 1) líquidos IV (crialoides isotónicos), 2) evaluar/corregir K+, 3) insulina regular IV; bicarbonato solo en acidosis extrema (pH <6.9).
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 45 años, DM1, náuseas, vómito y dolor abdominal.
-- Glucometría 450 mg/dL; pH 7.1, HCO3 8, anion gap 22.
-- CAD severa con deshidratación osmótica por diuresis.
+La paciente presenta:
+• Mujer de 45 años, DM1, náuseas, vómito y dolor abdominal.
+• Glucometría 450 mg/dL (hiperglucemia severa).
+• Gasometría: pH 7.1, HCO3 8 mEq/L, anion gap 22 mEq/L.
+• CAD severa con deshidratación osmótica por diuresis (vómitos agravan pérdida de volumen).
 
-¿Qué dato es clave en el examen?
-- Secuencia ADA: 1) líquidos IV (crialoides isotónicos); 2) evaluar/corregir K+; 3) insulina regular IV.
-- Insulina desplaza K+ intracelularmente → hipokalemia grave si K+ bajo.
-- Si K+ <3.3: posponer insulina y reponer potasio primero.
-- Bicarbonato solo si pH <6.9 (rara vez indicado en pH 7.1).
-- Insulina SC inadecuada en CAD severa con vómitos.
+Recordemos manejo de CAD (ADA/Endocrine Society):
+• Criterios CAD: hiperglucemia (>250 mg/dL) + pH <7.3 + HCO3 <18 + anion gap >10 + cetonemia/cetonuria.
+• Fisiopatología: deficiencia insulina → lipólisis → cuerpos cetónicos → acidosis + diuresis osmótica → deshidratación severa.
+• Secuencia de manejo:
+  1. Líquidos IV: cristaloides isotónicos (SF 0.9%) 15-20 mL/kg primera hora (restaurar perfusión y filtración glomerular).
+  2. Evaluar K+ sérico: si K+ <3.3 → posponer insulina y reponer K+ primero; si 3.3-5.2 → iniciar insulina + reponer K+ simultáneamente; si >5.2 → insulina sin K+ hasta descenso.
+  3. Insulina regular IV: 0.1 U/kg bolus + infusión 0.1 U/kg/h (después de volumen y K+ evaluado).
+• Bicarbonato: solo si pH <6.9 (acidosis extrema con riesgo de arritmias); no indicado rutinariamente en pH 7.1.
+• Insulina SC: inadecuada en CAD severa con vómitos (absorción errática, no titulable).
+• Identificar y tratar factor desencadenante (infección, omisión insulina, IAM, etc.).
+
+Por lo tanto:
+El orden lógico del manejo inicial es líquidos IV → evaluación/corrección de potasio → insulina IV.
+
+¿Por qué la opción C es la respuesta correcta?
+Propone la secuencia ADA correcta: primero expansión de volumen con cristaloides (restaura perfusión), luego evaluación/corrección de K+ (previene hipokalemia letal con insulina), y finalmente insulina regular IV (reduce glucosa y cetogénesis de forma controlada).
 
 ¿Por qué fallan las otras opciones?
-- Insulina → líquidos → K+: volumen debe ir primero; insulina sin K+ evaluado es peligroso.
-- Bicarbonato → insulina → líquidos: bicarbonato no es primera línea en pH 7.1.
-- Insulina SC + bicarbonato: CAD severa requiere insulina IV y monitorización UCI.
+Opción A (insulina IV → líquidos → K+): insulina sin reponer volumen agrava deshidratación; insulina sin evaluar K+ puede causar hipokalemia grave/arritmias letales.
+Opción B (bicarbonato → insulina → líquidos): bicarbonato no es primera línea en pH 7.1; secuencia invertida (volumen debe ir primero); bicarbonato puede empeorar acidosis intracelular y hipokalemia.
+Opción D (insulina SC → líquidos → bicarbonato): insulina SC inadecuada en CAD severa con vómitos; bicarbonato no indicado en pH 7.1; volumen no es prioridad en esta secuencia.
 
-Clave: CAD = líquidos primero → K+ evaluado → insulina IV; no empieces por insulina.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"CAD = glucosa alta = insulina inmediata" o "acidosis = bicarbonato siempre."
+Pero el examen exige recordar:
+Volumen primero → K+ evaluado → insulina IV; bicarbonato solo pH <6.9.
+Aquí el dato decisivo es:
+La secuencia de intervenciones, no la cifra de glucosa; insulina sin K+ evaluado puede matar por hipokalemia.
 
-URGENTES — BY DR Q.
-Cetoacidosis diabética · secuencia de manejo
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Líquidos intravenosos (crialoides isotónicos) — restaurar perfusión.
+2. Evaluar y corregir potasio (insulina desplaza K+ intracelularmente).
+3. Insulina regular intravenosa (infusión continua titulable).
+4. Identificar y tratar el factor desencadenante; bicarbonato solo si pH <6.9.
 
-La clave no es la glucosa; la clave es el orden de las intervenciones.
+Perlas de examen
+✅ CAD: hiperglucemia + pH <7.3 + HCO3 <18 + anion gap ↑.
+✅ Secuencia: líquidos → K+ → insulina IV (no al revés).
+✅ Si K+ <3.3: posponer insulina y reponer K+ primero.
+✅ Bicarbonato solo si pH <6.9 (rara vez en pH 7.1).
+✅ Insulina SC inadecuada en CAD severa con vómitos.
+✅ La trampa: iniciar insulina sin reponer volumen ni evaluar K+.
 
-Fisiopatología: deficiencia de insulina → lipólisis → cuerpos cetónicos → acidosis + diuresis osmótica → deshidratación severa.
-
-Secuencia correcta:
-1. Líquidos intravenosos (crialoides isotónicos).
-2. Evaluar y corregir potasio (la insulina desplaza K+ intracelularmente y puede precipitar hipokalemia grave).
-3. Insulina regular intravenosa.
-4. Identificar y tratar el factor desencadenante.
-
-Trampa: iniciar insulina inmediatamente sin reponer volumen. El bicarbonato solo se considera en acidosis extrema (pH < 6.9).
-
-Referencias: ADA Standards of Care; Endocrine Society Guidelines; Harrison's; UpToDate: DKA in Adults.`,
+Referencias
+• American Diabetes Association Standards of Care in Diabetes.
+• Kitabchi et al. — Hyperglycemic crises in adult patients with diabetes (ADA consensus).
+• Joint British Diabetes Societies: The Management of Diabetic Ketoacidosis in Adults.
+• UpToDate: Diabetic ketoacidosis and hyperosmolar hyperglycemic state in adults: Treatment.`,
   },
   {
     id: "dr-q-83",
@@ -7643,48 +7864,74 @@ Referencias: ADA Standards of Care; Endocrine Society Guidelines; Harrison's; Up
     explanation:
       "Choque séptico de origen urinario. La administración precoz de antibióticos adecuados es una de las intervenciones con mayor impacto demostrado en la reducción de la mortalidad.",
     keyPoints: [
-      "Sospecha de infección + hipotensión + lactato elevado + disfunción orgánica → choque séptico.",
-      "Los antibióticos tempranos reducen la mortalidad.",
-      "Los cultivos no deben retrasar el tratamiento.",
-      "Vasopresores si persiste hipotensión tras reanimación con líquidos.",
+      "Cuando veas: fiebre + hipotensión + lactato elevado + alteración del estado de conciencia + disfunción orgánica (creatinina en ascenso).",
+      "Debes pensar en: choque séptico de origen urinario → antibióticos de amplio espectro en la primera hora.",
+      "Cada hora de retraso en antibióticos ↑ mortalidad ~8%; los cultivos se toman pero no retrasan el tratamiento.",
+      "Vasopresores solo si persiste hipotensión tras reanimación con cristaloides, no como primera medida.",
+      "Tema: Sepsis y choque séptico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa choque séptico de origen urinario: la medida con mayor impacto en supervivencia en la primera hora son antibióticos de amplio espectro, no vasopresores ni esperar cultivos.
+Esta es una pregunta clásica de urgencias e infectología porque evalúa la intervención con mayor impacto en supervivencia durante la primera hora del choque séptico.
+
+La clave no es la hipotensión aislada.
+La clave es:
+Identificar choque séptico y administrar antibióticos de amplio espectro dentro de la primera hora, sin retrasar el tratamiento por cultivos.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 72 años, DM2, ERC 3; fiebre, disuria, alteración del estado de conciencia 48 h.
-- PA 88/50, FC 115, Temp 38.5 °C, lactato 4.2, creatinina 2.1 (basal 1.2).
-- Choque séptico de probable origen urinario con disfunción orgánica.
+El paciente presenta:
+• Hombre de 72 años, DM2, ERC estadio 3.
+• Fiebre, disuria y alteración del estado de conciencia de 48 horas.
+• PA 88/50 mmHg, FC 115 lpm, FR 24 rpm, temperatura 38.5 °C.
+• Lactato 4.2 mmol/L, creatinina 2.1 mg/dL (basal 1.2), leucocitosis con desviación a la izquierda.
+• Choque séptico de probable origen urinario con disfunción orgánica aguda.
 
-¿Qué dato es clave en el examen?
-- Choque séptico: infección + hipotensión + lactato elevado + disfunción orgánica.
-- Antibióticos de amplio espectro en la primera hora: mayor impacto demostrado en mortalidad.
-- Cada hora de retraso en ATB ↑ mortalidad ~8%.
-- Cultivos antes de ATB, pero nunca retrasar tratamiento esperando resultados.
-- Vasopresores si persiste hipotensión tras reanimación con cristaloides, no como primera medida.
+Recordemos los criterios de choque séptico (Sepsis-3):
+• Infección sospechada o documentada.
+• Hipotensión persistente que requiere vasopresores para mantener PAM ≥65 mmHg (o lactato >2 mmol/L pese a reanimación).
+• Disfunción orgánica aguda (aquí: alteración mental + lesión renal aguda).
+
+Por lo tanto:
+El paciente tiene choque séptico de origen urinario.
+La intervención con mayor impacto demostrado en mortalidad en la primera hora es la administración precoz de antibióticos de amplio espectro.
+
+¿Por qué la opción C es la respuesta correcta?
+Los antibióticos de amplio espectro dentro de la primera hora reducen la mortalidad de forma significativa en sepsis y choque séptico.
+Cada hora de retraso en el inicio de antibióticos aumenta la mortalidad aproximadamente un 8%.
+Los hemocultivos y urocultivos deben obtenerse antes de la administración, pero nunca deben retrasar el tratamiento empírico.
+En foco urinario probable: ceftriaxona, piperacilina-tazobactam o carbapenémico según riesgo de multirresistencia.
 
 ¿Por qué fallan las otras opciones?
-- Bicarbonato IV: no es intervención de mayor impacto en primera hora de sepsis.
-- Vasopresores inmediatamente: no sustituyen tratamiento de la infección; van tras volumen.
-- Esperar urocultivo: retrasa ATB; mortalidad ↑ por cada hora de demora.
+Opción A (bicarbonato IV): no es la intervención de mayor impacto en supervivencia en la primera hora; su uso es excepcional en acidosis severa.
+Opción B (vasopresores inmediatamente): los vasopresores no sustituyen el tratamiento antimicrobiano; se indican si persiste hipotensión tras reanimación con cristaloides.
+Opción D (esperar urocultivo): retrasa los antibióticos y aumenta la mortalidad; el tratamiento empírico debe iniciarse de inmediato.
 
-Clave: sepsis + shock + lactato 4.2 = ATB amplio espectro en <1 h, no esperes cultivos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian choque con vasopresores como primera medida.
+Pero en sepsis, la intervención con mayor impacto en supervivencia demostrado es el antibiótico precoz.
+La secuencia correcta es: ABC + cultivos (sin retrasar ATB) + cristaloides + antibióticos + vasopresores si persiste hipotensión.
 
-URGENTES — BY DR Q.
-Choque séptico · primera hora
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer choque séptico (infección + hipotensión/lactato + disfunción orgánica).
+2. Obtener cultivos sin retrasar antibióticos.
+3. Administrar antibióticos de amplio espectro en la primera hora.
+4. Reanimar con cristaloides y agregar vasopresores si persiste hipotensión.
 
-La clave: hipotensión + lactato elevado + infección.
+Perlas de examen
+✅ Choque séptico = infección + hipotensión/lactato >2 + disfunción orgánica.
+✅ Antibióticos en la primera hora: mayor impacto en mortalidad de sepsis.
+✅ Cada hora de retraso en ATB ↑ mortalidad ~8%.
+✅ Cultivos sí, pero nunca retrasar el tratamiento empírico.
+✅ Vasopresores después de volumen, no como sustituto de antibióticos.
+✅ Las residencias preguntan prioridades de la primera hora, no el manejo completo.
 
-Infección urinaria probable + alteración mental + hipotensión + lactato 4.2 + LRA = choque séptico.
-
-Intervención con mayor impacto en supervivencia: antibióticos de amplio espectro en la primera hora. Cada hora de retraso aumenta mortalidad.
-
-Manejo inicial: cultivos (sin retrasar ATB) + cristaloides + antibióticos tempranos + control del foco + vasopresores si persiste hipotensión.
-
-Trampa: responder vasopresores como primera medida. Los vasopresores no sustituyen el tratamiento de la infección.
-
-Referencias: Surviving Sepsis Campaign; SCCM Sepsis Guidelines; Sepsis-3; UpToDate: Sepsis and Septic Shock.`,
+Referencias
+• Surviving Sepsis Campaign Guidelines.
+• SCCM/ESICM Sepsis Definitions (Sepsis-3).
+• IDSA Guidelines on Sepsis.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Evaluation and Management of Suspected Sepsis and Septic Shock in Adults.`,
   },
   {
     id: "dr-q-84",
@@ -7704,50 +7951,73 @@ Referencias: Surviving Sepsis Campaign; SCCM Sepsis Guidelines; Sepsis-3; UpToDa
     explanation:
       "Estatus epiléptico convulsivo. Tras las medidas iniciales de soporte, el tratamiento farmacológico de primera línea son las benzodiacepinas intravenosas.",
     keyPoints: [
-      "Convulsión ≥ 5 minutos o sin recuperación de conciencia → estatus epiléptico.",
-      "Las benzodiacepinas son el tratamiento inicial (lorazepam, diazepam, midazolam).",
-      "Fenitoína y levetiracetam son segunda línea.",
-      "Propofol se reserva para estatus refractario.",
+      "Cuando veas: convulsión tónico-clónica ≥5 minutos sin recuperación de conciencia entre episodios.",
+      "Debes pensar en: estatus epiléptico convulsivo → benzodiacepina IV como primera línea farmacológica.",
+      "Lorazepam o diazepam IV potencian GABA y detienen la actividad convulsiva; fenitoína es segunda línea.",
+      "Propofol se reserva para estatus refractario tras fallar BZD + segunda línea; levetiracetam oral no es viable en convulsión activa.",
+      "Tema: Estatus epiléptico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa estatus epiléptico convulsivo: tras ABC y acceso venoso, la primera línea farmacológica son benzodiacepinas IV (lorazepam o diazepam), no fenitoína ni propofol.
+Esta es una pregunta clásica de neurología y urgencias porque evalúa la secuencia farmacológica del estatus epiléptico convulsivo tras las medidas iniciales de soporte.
+
+La clave no es cualquier antiepiléptico.
+La clave es:
+Administrar benzodiacepina intravenosa (lorazepam o diazepam) como primera línea farmacológica, no fenitoína ni propofol.
 
 ¿Qué está ocurriendo realmente?
-- Hombre de 25 años sin antecedentes, convulsión tónico-clónica generalizada 12 minutos.
-- No recupera conciencia entre episodios convulsivos.
-- Estatus epiléptico convulsivo (≥5 min debe tratarse como tal).
+El paciente presenta:
+• Hombre de 25 años sin antecedentes conocidos.
+• Convulsión tónico-clónica generalizada que persiste 12 minutos.
+• No recupera el estado de conciencia entre episodios convulsivos.
+• Estatus epiléptico convulsivo (≥5 minutos debe tratarse como tal).
+• Vía aérea asegurada y acceso venoso permeabilizado.
 
-¿Qué dato es clave en el examen?
-- Convulsión ≥5 min o sin recuperación de conciencia = estatus epiléptico.
-- Secuencia: ABC + glucemia capilar → benzodiacepina IV (lorazepam/diazepam) → 2.ª línea → refractario.
-- Benzodiacepinas potencian GABA; son tratamiento de primera línea.
-- Fenitoína, levetiracetam, valproato: segunda línea.
-- Propofol: estatus refractario con anestesia, no primera medida.
+Recordemos la definición y clasificación del estatus epiléptico:
+• Convulsión ≥5 minutos o convulsiones repetidas sin recuperación de conciencia entre ellas.
+• Estatus establecido: persiste tras benzodiacepina → segunda línea (fenitoína, levetiracetam, valproato).
+• Estatus refractario: persiste tras segunda línea → anestésicos (propofol, midazolam, tiopental).
+
+Por lo tanto:
+Tras ABC y acceso venoso, el siguiente paso farmacológico correcto es benzodiacepina IV.
+
+¿Por qué la opción B es la respuesta correcta?
+Lorazepam o diazepam IV son el tratamiento de primera línea del estatus epiléptico convulsivo.
+Potencian la acción del GABA en el receptor GABA-A, deteniendo rápidamente la actividad convulsiva.
+La fenitoína, levetiracetam y valproato son segunda línea si la convulsión persiste tras la benzodiacepina.
+El propofol se reserva para estatus refractario que no responde a primera y segunda línea.
 
 ¿Por qué fallan las otras opciones?
-- Fenitoína IV como primera medida: es segunda línea, no inicial.
-- Propofol inmediato: reservado para estatus refractario tras fallar BZD + 2.ª línea.
-- Levetiracetam oral: vía oral inadecuada en convulsión activa; no es primera línea.
+Opción A (fenitoína IV como primera medida): es segunda línea, no tratamiento inicial; no sustituye la benzodiacepina.
+Opción C (propofol inmediato): reservado para estatus refractario con anestesia; no es primera medida farmacológica.
+Opción D (levetiracetam oral): vía oral inadecuada en convulsión activa; no es primera línea y la vía oral no es viable.
 
-Clave: convulsión >5 min sin recuperar conciencia = lorazepam/diazepam IV primero, no fenitoína.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen fenitoína como primera medida porque la asocian con epilepsia.
+Pero la secuencia correcta es siempre benzodiacepina primero.
+El examen pregunta el siguiente paso tras ABC, no el manejo del estatus refractario.
 
-URGENTES — BY DR Q.
-Estatus epiléptico convulsivo
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. ABC + glucemia capilar (descartar hipoglucemia).
+2. Benzodiacepina IV (lorazepam o diazepam) — primera línea.
+3. Segunda línea si persiste: levetiracetam, valproato o fosfenitoína.
+4. Refractario: anestésicos (propofol, midazolam).
 
-La clave: el paciente no recupera la conciencia entre las crisis.
+Perlas de examen
+✅ Convulsión ≥5 min o sin recuperación de conciencia = estatus epiléptico.
+✅ Primera línea: benzodiacepina IV (lorazepam o diazepam).
+✅ Fenitoína, levetiracetam, valproato: segunda línea.
+✅ Propofol: estatus refractario, no primera medida.
+✅ Siempre descartar hipoglucemia antes de antiepilépticos.
+✅ Las residencias preguntan la secuencia, no solo el diagnóstico.
 
-Convulsión prolongada + persistencia de actividad epiléptica = estatus epiléptico (≥ 5 min debe tratarse como tal).
-
-Secuencia:
-1. ABC + glucemia capilar.
-2. Benzodiacepina IV (lorazepam o diazepam) — potencian GABA.
-3. Segunda línea: levetiracetam, valproato o fosfenitoína.
-4. Refractario: anestésicos (propofol).
-
-Trampa: iniciar fenitoína como primera línea. La fenitoína es segunda línea.
-
-Referencias: Neurocritical Care Society; American Epilepsy Society; UpToDate: Convulsive Status Epilepticus.`,
+Referencias
+• Neurocritical Care Society Guidelines on Status Epilepticus.
+• American Epilepsy Society Treatment Guidelines.
+• ILAE Classification of Status Epilepticus.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Convulsive Status Epilepticus in Adults.`,
   },
   {
     id: "dr-q-85",
@@ -7767,49 +8037,74 @@ Referencias: Neurocritical Care Society; American Epilepsy Society; UpToDate: Co
     explanation:
       "Hiperpotasemia grave con cambios electrocardiográficos que amenazan la vida. La primera medida es estabilizar la membrana miocárdica mediante calcio intravenoso.",
     keyPoints: [
-      "Potasio > 6.5 + cambios ECG → hiperpotasemia grave con toxicidad cardíaca.",
-      "El calcio estabiliza la membrana cardíaca; no disminuye el potasio sérico.",
-      "Después del calcio: insulina + dextrosa, salbutamol, diálisis según contexto.",
-      "Ondas T picudas = hallazgo temprano; QRS ancho = mayor gravedad.",
+      "Cuando veas: potasio >6.5 mEq/L + ondas T picudas + desaparición de onda P + QRS ensanchado en ECG.",
+      "Debes pensar en: hiperpotasemia grave con toxicidad cardíaca → gluconato de calcio IV primero.",
+      "El calcio estabiliza la membrana miocárdica pero no disminuye el potasio sérico; insulina y diálisis vienen después.",
+      "Progresión ECG: T picuda → PR prolongado → onda P ausente → QRS ancho → asistolia; actuar antes del paro.",
+      "Tema: Hiperpotasemia grave.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa hiperpotasemia grave con cambios ECG: la primera medida es gluconato de calcio IV para estabilizar membrana miocárdica — no baja K+, pero previene arritmia fatal.
+Esta es una pregunta clásica de nefrología y urgencias porque evalúa la prioridad terapéutica en hiperpotasemia grave con cambios electrocardiográficos que amenazan la vida.
+
+La clave no es el valor del potasio.
+La clave es:
+Proteger el miocardio con gluconato de calcio IV antes de cualquier medida que disminuya el potasio sérico.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 60 años, ERC estadio 4, debilidad muscular progresiva.
-- K+ 7.4 mEq/L; ECG: T picudas simétricas, onda P ausente, QRS ensanchado.
-- Hiperpotasemia grave con toxicidad cardíaca inminente.
+El paciente presenta:
+• Hombre de 60 años con ERC estadio 4.
+• Debilidad muscular progresiva.
+• Potasio sérico 7.4 mEq/L.
+• ECG: ondas T picudas y simétricas, desaparición de la onda P, ensanchamiento del complejo QRS.
+• Hiperpotasemia grave con toxicidad cardíaca inminente.
 
-¿Qué dato es clave en el examen?
-- K+ >6.5 + cambios ECG = emergencia con riesgo de arritmia letal.
-- Gluconato de calcio IV primero: estabiliza membrana; no disminuye K+ sérico.
-- Después: insulina + dextrosa, salbutamol (redistribución intracelular).
-- Eliminación: diálisis definitiva en ERC avanzada.
-- Insulina baja K+ pero no protege corazón inmediatamente.
+Recordemos la progresión electrocardiográfica de la hiperpotasemia:
+• T picudas simétricas (hallazgo temprano).
+• Prolongación del PR y aplanamiento de la onda P.
+• Desaparición de la onda P y ensanchamiento del QRS.
+• Patrón de onda sinusoidal → asistolia o fibrilación ventricular.
+
+Por lo tanto:
+La intervención inicial para prevenir arritmia fatal es estabilizar la membrana miocárdica con calcio IV, no disminuir el potasio.
+
+¿Por qué la opción C es la respuesta correcta?
+El gluconato de calcio IV antagoniza los efectos del potasio elevado sobre la membrana miocárdica.
+Protege contra arritmias ventriculares letales de forma inmediata (efecto en minutos).
+No disminuye el potasio sérico, pero estabiliza el corazón mientras se implementan medidas de eliminación y redistribución.
+Debe administrarse antes de insulina, salbutamol o diálisis cuando hay cambios ECG.
 
 ¿Por qué fallan las otras opciones?
-- Insulina + dextrosa primero: baja K+ pero no estabiliza membrana de inmediato.
-- Hemodiálisis urgente: indicada pero después de calcio; no es primera medida en paro inminente.
-- Salbutamol nebulizado: redistribución lenta; no protege membrana como calcio.
+Opción A (insulina + dextrosa): reduce el potasio por redistribución intracelular, pero no protege la membrana cardíaca de inmediato.
+Opción B (hemodiálisis urgente): es el tratamiento definitivo de eliminación en ERC avanzada, pero no es la primera medida ante riesgo de arritmia inminente.
+Opción D (salbutamol nebulizado): redistribuye potasio al interior celular de forma lenta; no estabiliza la membrana miocárdica como el calcio.
 
-Clave: K+ 7.4 + QRS ancho = calcio IV primero, siempre; luego insulina/diálisis.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen insulina + dextrosa primero porque "baja el potasio".
+Pero la pregunta pide la intervención para prevenir arritmia fatal, no para disminuir el potasio.
+La secuencia correcta es: calcio primero (proteger corazón) → redistribución (insulina, salbutamol) → eliminación (diálisis).
 
-URGENTES — BY DR Q.
-Hiperpotasemia grave con cambios ECG
-
-La clave no es el valor del potasio; la clave son los cambios electrocardiográficos.
-
-Prioridad: proteger el corazón antes de disminuir el potasio.
-
-Secuencia:
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
 1. Gluconato de calcio IV (estabiliza membrana; no baja K+).
-2. Redistribución intracelular: insulina + dextrosa, salbutamol.
-3. Eliminación: diuréticos, resinas, hemodiálisis (definitivo en ERC avanzada).
+2. Redistribución intracelular: insulina + dextrosa, salbutamol nebulizado.
+3. Eliminación: resinas, diuréticos o hemodiálisis (definitivo en ERC avanzada).
+4. Monitorizar ECG continuamente y repetir calcio si persiste toxicidad cardíaca.
 
-Trampa: responder insulina + dextrosa primero. La insulina baja K+ pero no protege inmediatamente al corazón.
+Perlas de examen
+✅ K+ >6.5 + cambios ECG = emergencia con riesgo de arritmia letal.
+✅ Calcio IV primero: estabiliza membrana, no disminuye K+ sérico.
+✅ Insulina + dextrosa baja K+ pero no protege el corazón inmediatamente.
+✅ Hemodiálisis es definitiva en ERC avanzada, pero después del calcio.
+✅ Progresión ECG: T picuda → QRS ancho → onda sinusoidal → paro.
+✅ Las residencias preguntan la prioridad, no el manejo completo.
 
-Referencias: KDIGO; Harrison's; UpToDate: Hyperkalemia; European Resuscitation Council.`,
+Referencias
+• KDIGO Clinical Practice Guideline for CKD.
+• European Resuscitation Council Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Rosen's Emergency Medicine.
+• UpToDate: Treatment and Prevention of Hyperkalemia in Adults.`,
   },
   {
     id: "dr-q-86",
@@ -7841,48 +8136,72 @@ Referencias: KDIGO; Harrison's; UpToDate: Hyperkalemia; European Resuscitation C
     explanation:
       "IAM con elevación del ST (IAMCEST) de localización anterior. El objetivo principal del manejo inicial es restaurar el flujo coronario para limitar el tamaño del infarto y preservar miocardio viable.",
     keyPoints: [
-      "Dolor típico + elevación del ST en derivaciones contiguas → IAMCEST.",
-      "El IAMCEST es una emergencia de reperfusión: tiempo es músculo.",
-      "Angioplastia primaria preferida; fibrinólisis si PCI no disponible oportunamente.",
-      "Aspirina, analgesia y betabloqueadores son coadyuvantes, no el objetivo principal.",
+      "Cuando veas: dolor torácico típico + elevación del ST ≥1 mm en ≥2 derivaciones contiguas (V1-V4 = anterior).",
+      "Debes pensar en: IAMCEST → reperfusión coronaria lo más rápido posible (tiempo es músculo).",
+      "PCI primaria preferida si disponible en ≤120 min; fibrinólisis si PCI no oportuna.",
+      "Aspirina, analgesia y betabloqueadores son coadyuvantes, no el objetivo principal del manejo inicial.",
+      "Tema: IAM con elevación del ST (IAMCEST).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa IAMCEST anterior: el objetivo principal del manejo inicial es reperfusión coronaria lo más rápido posible — tiempo es músculo, no betabloqueadores ni analgesia como prioridad.
+Esta es una pregunta clásica de cardiología porque evalúa el objetivo principal del manejo inicial del infarto agudo de miocardio con elevación del ST.
+
+La clave no es la localización del infarto.
+La clave es:
+Restaurar el flujo coronario lo más rápido posible, porque cada minuto de oclusión aumenta la necrosis miocárdica.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 55 años, dolor opresivo 60 min, irradiado a MSI, diaforesis.
-- ECG: elevación ST 3 mm en V1-V4 (IAMCEST anterior).
-- PA 130/80, FC 90: hemodinámicamente estable pero con oclusión coronaria aguda.
+El paciente presenta:
+• Hombre de 55 años con dolor torácico opresivo de 60 minutos.
+• Irradiación a miembro superior izquierdo y diaforesis.
+• ECG: elevación del segmento ST de 3 mm en V1-V4 (IAMCEST anterior).
+• PA 130/80 mmHg, FC 90 lpm: hemodinámicamente estable pero con oclusión coronaria aguda.
 
-¿Qué dato es clave en el examen?
-- Dolor típico + elevación ST en derivaciones contiguas = IAMCEST.
-- Oclusión coronaria → isquemia transmural → necrosis progresiva.
-- Objetivo principal: reabrir arteria culpable (PCI primaria o fibrinólisis).
-- Angioplastia primaria preferida; fibrinólisis si PCI no disponible en ≤120 min.
-- Aspirina, morfina, betabloqueadores: coadyuvantes, no el objetivo principal.
+Recordemos la fisiopatología del IAMCEST:
+• Oclusión coronaria aguda → isquemia transmural → necrosis miocárdica progresiva.
+• La elevación del ST refleja lesión transmural en curso.
+• El tiempo de isquemia determina el tamaño del infarto y la supervivencia.
+
+Por lo tanto:
+El objetivo principal del manejo inicial es la reperfusión coronaria urgente, no el alivio sintomático ni la prevención de arritmias.
+
+¿Por qué la opción B es la respuesta correcta?
+Lograr la reperfusión coronaria lo más rápido posible es el objetivo principal del IAMCEST.
+Estrategias: angioplastia primaria (PCI) preferida si disponible en ≤120 min desde el primer contacto médico.
+Si PCI no está disponible oportunamente: fibrinólisis IV en ≤30 min (puerta-aguja).
+La reperfusión limita el tamaño del infarto, preserva miocardio viable y reduce mortalidad.
 
 ¿Por qué fallan las otras opciones?
-- Betabloqueadores para ↓ consumo O2: útil pero secundario; no reperfunde.
-- Control del dolor con opioides: alivia síntomas, no restaura flujo coronario.
-- Amiodarona profiláctica: no es objetivo principal en IAMCEST agudo.
+Opción A (betabloqueadores para ↓ consumo de O₂): medida coadyuvante útil, pero no reperfunde la arteria ocluida; no es el objetivo principal.
+Opción C (control del dolor con opioides): alivia síntomas pero no restaura el flujo coronario; es medida de soporte, no reperfusión.
+Opción D (amiodarona profiláctica): no es objetivo principal en IAMCEST agudo; la profilaxis antiarrítmica no sustituye la reperfusión.
 
-Clave: elevación ST + dolor típico = reperfusión urgente; no elijas medidas secundarias como objetivo principal.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen medidas útiles pero secundarias (morfina, betabloqueadores, amiodarona).
+Pero la pregunta pide el objetivo principal, no medidas coadyuvantes.
+En IAMCEST, "tiempo es músculo": reperfusión primero, todo lo demás es complementario.
 
-CARDIOLOGÍA — BY DR Q.
-IAM con elevación del ST
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer IAMCEST (dolor típico + elevación ST en derivaciones contiguas).
+2. Activar reperfusión urgente (PCI primaria o fibrinólisis).
+3. Administrar antitrombóticos (aspirina, P2Y12, anticoagulante).
+4. Medidas coadyuvantes (analgesia, betabloqueadores según hemodinamia).
 
-La clave no es la localización; la clave es el tiempo.
+Perlas de examen
+✅ Dolor típico + elevación ST en derivaciones contiguas = IAMCEST.
+✅ Objetivo principal: reperfusión coronaria urgente (tiempo es músculo).
+✅ PCI primaria preferida; fibrinólisis si PCI no disponible en ≤120 min.
+✅ Aspirina, morfina, betabloqueadores: coadyuvantes, no objetivo principal.
+✅ No esperar troponinas para iniciar reperfusión si el ECG es diagnóstico.
+✅ Las residencias preguntan prioridades, no el protocolo completo de SCA.
 
-Oclusión coronaria aguda → isquemia transmural → necrosis progresiva. Elevación del ST = oclusión completa.
-
-Objetivo principal: reabrir la arteria culpable (PCI primaria o fibrinólisis).
-
-Trampa: elegir medidas útiles pero secundarias (morfina, betabloqueadores, amiodarona) cuando la pregunta pide el objetivo principal.
-
-Secuencia: reconocer IAMCEST → activar reperfusión → antitrombóticos → restaurar flujo → prevenir complicaciones.
-
-Referencias: ESC STEMI Guidelines; AHA Guidelines; Braunwald's Heart Disease; UpToDate: STEMI.`,
+Referencias
+• ESC Guidelines for the Management of Acute Myocardial Infarction in Patients Presenting with ST-Segment Elevation.
+• AHA/ACC Guideline for the Management of Patients With STEMI.
+• Braunwald's Heart Disease.
+• Tintinalli Emergency Medicine.
+• UpToDate: Overview of the Acute Management of ST-Elevation Myocardial Infarction.`,
   },
   {
     id: "dr-q-87",
@@ -7918,51 +8237,75 @@ Referencias: ESC STEMI Guidelines; AHA Guidelines; Braunwald's Heart Disease; Up
     explanation:
       "Síndrome meníngeo con alteración del estado de conciencia, inmunosupresión y focalización neurológica. Debe descartarse lesión ocupante de espacio o hipertensión intracraneal antes de la punción lumbar.",
     keyPoints: [
-      "Síndrome meníngeo + alteración mental + déficit focal + inmunosupresión → neuroimagen antes de PL.",
-      "La PL en hipertensión intracraneal puede causar herniación cerebral.",
-      "VIH sin tratamiento aumenta riesgo de lesiones focales (toxoplasmosis, linfoma).",
-      "El tratamiento empírico no debe retrasarse, pero la PL requiere seguridad diagnóstica.",
+      "Cuando veas: síndrome meníngeo + alteración del estado de conciencia + déficit focal (ptosis) + inmunosupresión (VIH sin TARV).",
+      "Debes pensar en: posible lesión ocupante de espacio → tomografía cerebral antes de punción lumbar.",
+      "La PL con efecto de masa o hipertensión intracraneal puede provocar herniación cerebral.",
+      "El tratamiento empírico con ATB no debe retrasarse, pero la PL requiere seguridad diagnóstica previa.",
+      "Tema: Meningitis bacteriana.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa cuándo hacer TAC antes de punción lumbar: ptosis + somnolencia + VIH sin TARV = posible lesión ocupante de espacio — la PL puede causar herniación.
+Esta es una pregunta clásica de infectología y neurología porque evalúa cuándo realizar neuroimagen antes de la punción lumbar en el síndrome meníngeo.
+
+La clave no es la fiebre ni la rigidez nucal.
+La clave es:
+La focalización neurológica y la inmunosupresión obligan a descartar lesión ocupante de espacio con TAC antes de la punción lumbar.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 35 años, fiebre, cefalea intensa, rigidez nucal varios días.
-- VIH sin tratamiento antirretroviral; somnoliento con ptosis palpebral derecha (focalización).
-- Síndrome meníngeo con signos de alerta para TAC antes de PL.
+El paciente presenta:
+• Hombre de 35 años con fiebre, cefalea intensa y rigidez nucal de varios días.
+• Antecedente de infección por VIH sin tratamiento antirretroviral.
+• Somnolencia (alteración del estado de conciencia).
+• Ptosis palpebral derecha (déficit neurológico focal).
+• Síndrome meníngeo con signos de alerta para neuroimagen previa a PL.
 
-¿Qué dato es clave en el examen?
-- Indicaciones TAC antes de PL: alteración mental, déficit focal, papiledema, convulsiones recientes, inmunosupresión.
-- Ptosis + VIH sin TARV: riesgo toxoplasmosis, linfoma CNS (lesión ocupante).
-- PL con efecto de masa puede provocar herniación cerebral.
-- ATB empírico no debe retrasarse, pero PL requiere seguridad diagnóstica.
-- PL inmediata sin imagen: trampa clásica cuando hay focalización.
+Recordemos las indicaciones de TAC antes de punción lumbar:
+• Alteración del estado mental o nivel de conciencia.
+• Déficit neurológico focal (ptosis, hemiparesia, etc.).
+• Papiledema o signos de hipertensión intracraneal.
+• Convulsiones recientes.
+• Inmunosupresión significativa (VIH sin TARV, trasplante, quimioterapia).
+
+Por lo tanto:
+La conducta inicial correcta es solicitar tomografía cerebral antes de realizar la punción lumbar.
+
+¿Por qué la opción C es la respuesta correcta?
+La ptosis + somnolencia + VIH sin TARV sugieren posible lesión ocupante de espacio (toxoplasmosis cerebral, linfoma primario del SNC).
+La punción lumbar con efecto de masa o hipertensión intracraneal puede provocar herniación cerebral (transtentorial o tonsilar).
+La TAC descarta lesión ocupante de espacio antes de PL segura.
+El tratamiento empírico con antibióticos no debe retrasarse, pero la PL requiere seguridad diagnóstica.
 
 ¿Por qué fallan las otras opciones?
-- Ceftriaxona + vanco sin estudios: ATB sí, pero PL sin TAC es peligrosa con focalización.
-- PL inmediata antes de imagen: contraindicada con déficit focal + inmunosupresión.
-- Dexametasona + alta ambulatoria: meningitis con focalización requiere hospitalización e imagen.
+Opción A (ceftriaxona + vancomicina sin estudios): los ATB empíricos son correctos, pero la PL sin TAC es peligrosa con focalización neurológica.
+Opción B (PL inmediata antes de imagen): contraindicada con déficit focal + inmunosupresión; riesgo de herniación cerebral.
+Opción D (dexametasona + alta ambulatoria): meningitis con focalización requiere hospitalización, neuroimagen y tratamiento IV; no es manejo ambulatorio.
 
-Clave: meningitis + focalización + VIH = TAC antes de PL; no hernies al paciente.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian meningitis con punción lumbar inmediata siempre.
+Pero en presencia de signos de alerta (focalización, alteración mental, inmunosupresión), la neuroimagen precede a la PL.
+El examen pregunta la conducta inicial segura, no el protocolo completo de meningitis.
 
-INFECTOLOGÍA — BY DR Q.
-Meningitis · cuándo hacer TAC antes de PL
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer síndrome meníngeo con signos de alerta.
+2. Solicitar TAC cerebral antes de PL si hay focalización, alteración mental o inmunosupresión.
+3. Iniciar ATB empíricos sin retrasar (ceftriaxona + vancomicina ± ampicilina).
+4. Realizar PL solo si la TAC descarta lesión ocupante de espacio.
 
-La clave no es la fiebre; la clave es la focalización neurológica.
+Perlas de examen
+✅ Meningitis + focalización + inmunosupresión = TAC antes de PL.
+✅ PL con efecto de masa puede causar herniación cerebral.
+✅ VIH sin TARV: riesgo de toxoplasmosis y linfoma primario del SNC.
+✅ ATB empíricos no deben retrasarse, pero PL requiere seguridad.
+✅ Indicaciones TAC: alteración mental, déficit focal, papiledema, convulsiones, inmunosupresión.
+✅ Las residencias preguntan cuándo NO hacer PL inmediata.
 
-Ptosis + somnolencia + VIH sin TARV sugieren posible lesión ocupante de espacio. La PL con efecto de masa puede provocar herniación.
-
-Indicaciones de TAC antes de PL:
-• Alteración del estado mental.
-• Déficit neurológico focal.
-• Papiledema.
-• Convulsiones recientes.
-• Inmunosupresión significativa.
-
-Trampa: meningitis = PL inmediata siempre. En presencia de signos de alerta, la neuroimagen precede.
-
-Referencias: IDSA Bacterial Meningitis Guidelines; Mandell; UpToDate: Suspected Meningitis.`,
+Referencias
+• IDSA Guidelines on the Management of Community-Acquired Bacterial Meningitis.
+• Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases.
+• Harrison's Principles of Internal Medicine.
+• Tintinalli Emergency Medicine.
+• UpToDate: Clinical Features and Diagnosis of Acute Bacterial Meningitis in Adults.`,
   },
   {
     id: "dr-q-88",
@@ -7998,48 +8341,73 @@ Referencias: IDSA Bacterial Meningitis Guidelines; Mandell; UpToDate: Suspected 
     explanation:
       "Emergencia hipertensiva con lesión aguda de órgano diana (insuficiencia renal aguda e hipertensión severa). La reducción de la presión arterial debe ser controlada y progresiva para evitar hipoperfusión de órganos vitales.",
     keyPoints: [
-      "Emergencia hipertensiva = hipertensión severa + daño agudo de órgano diana.",
-      "No normalizar la PA de forma brusca; riesgo de isquemia cerebral, miocárdica y renal.",
-      "Meta inicial: reducir PAM ~20-25% en la primera hora.",
-      "Fármacos IV: nicardipino, labetalol, nitroprusiato según escenario.",
+      "Cuando veas: PA ≥180/120 mmHg + cefalea intensa + alteración visual + lesión aguda de órgano diana (LRA, retinopatía).",
+      "Debes pensar en: emergencia hipertensiva → reducir PAM ~20-25% en la primera hora, no normalizar bruscamente.",
+      "La reducción brusca de PA puede causar isquemia cerebral, miocárdica y renal por pérdida de autorregulación.",
+      "Fármacos IV de elección: nicardipino, labetalol o nitroprusiato según el escenario clínico.",
+      "Tema: Emergencia hipertensiva.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa emergencia hipertensiva: PA 230/130 con LRA aguda y retinopatía — meta inicial ↓ PAM 20-25% en la primera hora, no normalizar bruscamente.
+Esta es una pregunta clásica de medicina interna y urgencias porque evalúa la meta de reducción de presión arterial en la emergencia hipertensiva con daño agudo de órgano diana.
+
+La clave no es el valor absoluto de la PA.
+La clave es:
+Reducir la presión arterial media aproximadamente un 20-25% en la primera hora, evitando normalización brusca que cause isquemia de órganos vitales.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 60 años, cefalea intensa, visión borrosa.
-- PA 230/130; creatinina 2.5 (basal 1.0), retinopatía hipertensiva avanzada.
-- Emergencia hipertensiva con lesión aguda de órgano diana (renal + ocular).
+El paciente presenta:
+• Hombre de 60 años con cefalea intensa y visión borrosa.
+• PA 230/130 mmHg (hipertensión severa).
+• Creatinina 2.5 mg/dL (basal 1.0): lesión renal aguda.
+• Fondo de ojo con retinopatía hipertensiva avanzada.
+• Emergencia hipertensiva con daño agudo de órgano diana (renal + ocular).
 
-¿Qué dato es clave en el examen?
-- Emergencia hipertensiva = hipertensión severa + daño agudo de órgano diana.
-- No normalizar PA bruscamente: riesgo isquemia cerebral, miocárdica y renal por pérdida de autorregulación.
-- Meta primera hora: reducir PAM ~20-25%.
-- Descenso gradual en horas siguientes hacia meta ambulatoria.
-- Fármacos IV: nicardipino, labetalol, nitroprusiato según escenario.
+Recordemos la diferencia entre urgencia y emergencia hipertensiva:
+• Urgencia hipertensiva: PA elevada sin daño agudo de órgano diano → reducción gradual con fármacos orales.
+• Emergencia hipertensiva: PA elevada + daño agudo de órgano diano → reducción controlada con fármacos IV.
+• La autorregulación vascular crónica se adapta a PA elevada; descenso brusco → hipoperfusión.
+
+Por lo tanto:
+La meta de la primera hora es reducir la PAM aproximadamente un 20-25%, no normalizar la PA de inmediato.
+
+¿Por qué la opción B es la respuesta correcta?
+En emergencia hipertensiva, la reducción de PA debe ser controlada y progresiva.
+Meta inicial: disminuir la PAM ~20-25% durante la primera hora.
+Descenso gradual en las horas siguientes hacia la meta ambulatoria individualizada.
+Fármacos IV: nicardipino, labetalol o nitroprusiato según escenario (encefalopatía, disección, eclampsia, etc.).
 
 ¿Por qué fallan las otras opciones?
-- PA <120/80 inmediato: descenso brusco → isquemia de órganos con autorregulación crónica alterada.
-- PAS <140 en 30 min: demasiado rápido y agresivo para primera hora.
-- PAD <90 en primera hora: meta incorrecta; se usa reducción porcentual de PAM.
+Opción A (PA <120/80 mmHg inmediato): descenso brusco → riesgo de isquemia cerebral, miocárdica y renal por pérdida de autorregulación vascular.
+Opción C (PAS <140 mmHg en 30 min): demasiado rápido y agresivo para la primera hora; puede causar hipoperfusión de órganos vitales.
+Opción D (PAD <90 mmHg en primera hora): meta incorrecta; se usa reducción porcentual de PAM, no valores absolutos de diastólica.
 
-Clave: emergencia hipertensiva + LRA = ↓ PAM 20-25% en 1 h, no normalices de golpe.
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan que PA muy alta = bajar a normal lo más rápido posible.
+Pero en emergencia hipertensiva, la velocidad de descenso es tan importante como el objetivo.
+Reducir demasiado rápido puede ser tan peligroso como no tratar.
 
-URGENTES — BY DR Q.
-Emergencia hipertensiva
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer emergencia hipertensiva (PA severa + daño agudo de órgano diano).
+2. Iniciar fármaco IV de acción rápida (nicardipino, labetalol o nitroprusiato).
+3. Meta primera hora: ↓ PAM 20-25%.
+4. Descenso gradual en horas siguientes hacia meta ambulatoria.
 
-La clave: daño agudo de órgano diana, no solo el valor de la PA.
+Perlas de examen
+✅ Emergencia hipertensiva = PA severa + daño agudo de órgano diano.
+✅ Meta primera hora: ↓ PAM 20-25%, no normalizar bruscamente.
+✅ Descenso brusco → isquemia por pérdida de autorregulación vascular.
+✅ Fármacos IV: nicardipino, labetalol, nitroprusiato según escenario.
+✅ Urgencia hipertensiva (sin daño agudo): fármacos orales, no IV.
+✅ Las residencias preguntan la meta de reducción, no el fármaco específico.
 
-Hipertensión severa + cefalea + alteración visual + LRA aguda = emergencia hipertensiva.
-
-Reducción brusca → isquemia por pérdida de autorregulación vascular crónica.
-
-Meta primera hora: ↓ PAM 20-25%. Descenso gradual en horas siguientes.
-
-Trampa: bajar la PA a normal inmediatamente. La velocidad de descenso es tan importante como el objetivo.
-
-Referencias: European Society of Hypertension; AHA; UpToDate: Hypertensive Emergencies.`,
+Referencias
+• European Society of Hypertension Guidelines on Hypertensive Emergencies.
+• AHA Scientific Statement on Management of Hypertensive Emergencies.
+• Harrison's Principles of Internal Medicine.
+• Rosen's Emergency Medicine.
+• UpToDate: Evaluation and Treatment of Hypertensive Emergencies in Adults.`,
   },
   {
     id: "dr-q-89",
@@ -8059,48 +8427,73 @@ Referencias: European Society of Hypertension; AHA; UpToDate: Hypertensive Emerg
     explanation:
       "Edema agudo de pulmón hipertensivo. Los nitratos intravenosos producen una rápida reducción de la precarga y, a dosis mayores, también disminuyen la postcarga, mejorando rápidamente la congestión pulmonar.",
     keyPoints: [
-      "Disnea súbita + ortopnea + estertores + hipoxemia + hipertensión → EAP cardiogénico.",
-      "Nitroglicerina: venodilatación (↓ precarga) y vasodilatación arterial a dosis altas (↓ postcarga).",
-      "Furosemida es importante pero su efecto hemodinámico tarda más.",
-      "Dobutamina para bajo gasto/choque; digoxina no tiene utilidad aguda en EAP.",
+      "Cuando veas: disnea súbita + ortopnea + estertores bilaterales + hipoxemia + hipertensión arterial (PA 190/110).",
+      "Debes pensar en: edema agudo de pulmón cardiogénico hipertensivo → nitroglicerina IV para ↓ precarga y postcarga.",
+      "Nitroglicerina actúa en minutos por venodilatación (↓ precarga) y vasodilatación arterial a dosis altas (↓ postcarga).",
+      "Furosemida es importante pero su efecto hemodinámico tarda más; dobutamina es para bajo gasto, no EAP hipertensivo.",
+      "Tema: Edema agudo de pulmón cardiogénico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa edema agudo de pulmón hipertensivo: nitroglicerina IV impacta más rápido en precarga y postcarga que furosemida — actúa en minutos por venodilatación.
+Esta es una pregunta clásica de cardiología y urgencias porque evalúa la medida terapéutica con mayor impacto rápido en precarga y postcarga en el edema agudo de pulmón hipertensivo.
+
+La clave no es el edema pulmonar aislado.
+La clave es:
+La hipertensión severa con congestión pulmonar obliga a reducir precarga y postcarga de forma inmediata con nitratos IV.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 68 años, disnea severa súbita, ortopnea, sensación de ahogo.
-- PA 190/110, FC 115, SatO2 84%; estertores bilaterales hasta campos medios.
-- EAP cardiogénico hipertensivo: ↑ presiones de llenado VI → congestión pulmonar.
+El paciente presenta:
+• Hombre de 68 años con antecedente de hipertensión arterial.
+• Disnea severa de inicio súbito con ortopnea y sensación de ahogo progresiva.
+• PA 190/110 mmHg, FC 115 lpm, SatO₂ 84% al aire ambiente.
+• Estertores crepitantes bilaterales hasta campos medios y uso de musculatura accesoria.
+• EAP cardiogénico hipertensivo: ↑ presiones de llenado VI → congestión pulmonar.
 
-¿Qué dato es clave en el examen?
-- Disnea súbita + ortopnea + estertores + hipoxemia + hipertensión = EAP cardiogénico.
-- Nitroglicerina IV: venodilatación (↓ precarga) + vasodilatación arterial a dosis altas (↓ postcarga).
-- Actúa en minutos; impacto hemodinámico más rápido que furosemida.
-- Furosemida elimina volumen pero efecto hemodinámico tarda más.
-- Dobutamina para bajo gasto/choque; digoxina sin utilidad aguda en EAP.
+Recordemos la fisiopatología del EAP cardiogénico:
+• Falla del VI → ↑ presión telediastólica → ↑ presión hidrostática pulmonar.
+• Transudación de líquido a alvéolos → hipoxemia y disnea.
+• En el EAP hipertensivo, la postcarga elevada agrava la falla ventricular.
+
+Por lo tanto:
+La medida con mayor impacto rápido en precarga y postcarga es la nitroglicerina intravenosa.
+
+¿Por qué la opción B es la respuesta correcta?
+La nitroglicerina IV produce venodilatación rápida (↓ precarga) en minutos.
+A dosis mayores, también disminuye la postcarga por vasodilatación arterial.
+Mejora la congestión pulmonar y la hemodinamia de forma más rápida que los diuréticos.
+Es la medida de elección en EAP hipertensivo con PA elevada.
 
 ¿Por qué fallan las otras opciones?
-- Furosemida IV: importante pero no modifica tan rápido precarga/postcarga como nitratos.
-- Dobutamina: indicada en bajo gasto/choque, no en EAP hipertensivo con PA 190/110.
-- Digoxina: no tiene beneficio agudo en descompensación de EAP.
+Opción A (furosemida IV): elimina volumen y reduce precarga, pero su efecto hemodinámico tarda más que los nitratos; no es la respuesta más rápida.
+Opción C (dobutamina IV): indicada en bajo gasto cardíaco y choque cardiogénico, no en EAP hipertensivo con PA 190/110 mmHg.
+Opción D (digoxina IV): no tiene beneficio agudo en descompensación de EAP; su acción inotrópica es lenta e inadecuada en este escenario.
 
-Clave: EAP hipertensivo = nitroglicerina IV primero (↓ precarga/postcarga en minutos), luego diuréticos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen furosemida porque la asocian con edema pulmonar y congestión.
+Pero la furosemida elimina volumen de forma más lenta y no modifica tan rápido la hemodinamia.
+La pregunta pide el impacto más rápido en precarga y postcarga, no la eliminación de volumen.
 
-CARDIOLOGÍA — BY DR Q.
-Edema agudo de pulmón hipertensivo
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Oxigenación y posición (semisentado).
+2. Nitroglicerina IV (↓ precarga y postcarga en minutos).
+3. Furosemida IV según situación clínica (eliminación de volumen).
+4. Identificar y tratar la causa subyacente (IAM, arritmia, crisis hipertensiva).
 
-La clave: hipertensión severa + congestión pulmonar.
+Perlas de examen
+✅ Disnea súbita + ortopnea + estertores + hipoxemia + hipertensión = EAP cardiogénico hipertensivo.
+✅ Nitroglicerina IV: ↓ precarga (venodilatación) + ↓ postcarga (dosis altas) en minutos.
+✅ Furosemida elimina volumen pero efecto hemodinámico más lento.
+✅ Dobutamina: bajo gasto/choque, no EAP hipertensivo con PA elevada.
+✅ Digoxina: sin utilidad aguda en descompensación de EAP.
+✅ Las residencias preguntan la medida de impacto más rápido, no el manejo completo.
 
-↑ presiones de llenado del VI → ↑ presión hidrostática pulmonar → líquido en alvéolos.
-
-Objetivo inmediato: ↓ precarga y postcarga. Nitroglicerina IV actúa en minutos (venodilatación + vasodilatación arterial).
-
-Trampa: responder furosemida porque se asocia con edema pulmonar. La furosemida elimina volumen pero no modifica tan rápido la hemodinamia.
-
-Secuencia: oxigenación → nitratos IV → diuréticos según situación → corregir causa.
-
-Referencias: ESC Acute Heart Failure Guidelines; Braunwald's; UpToDate: Acute Decompensated HF.`,
+Referencias
+• ESC Guidelines for the Diagnosis and Treatment of Acute and Chronic Heart Failure.
+• AHA Scientific Statement on Management of Heart Failure.
+• Braunwald's Heart Disease.
+• Tintinalli Emergency Medicine.
+• UpToDate: Treatment of Acute Decompensated Heart Failure.`,
   },
   {
     id: "dr-q-90",
@@ -8128,51 +8521,75 @@ Referencias: ESC Acute Heart Failure Guidelines; Braunwald's; UpToDate: Acute De
     explanation:
       "Choque cardiogénico secundario a infarto agudo de miocardio. La prioridad es restaurar la perfusión sistémica y corregir la causa subyacente mediante revascularización precoz.",
     keyPoints: [
-      "IAM + hipotensión + oliguria + congestión pulmonar = choque cardiogénico.",
-      "Hipoperfusión + congestión pulmonar simultáneas definen el cuadro.",
-      "Revascularización precoz mejora supervivencia.",
-      "Líquidos y nitratos pueden empeorar congestión o hipoperfusión.",
+      "Cuando veas: IAM reciente + hipotensión (PA 80/50) + oliguria + estertores bilaterales + llenado capilar prolongado.",
+      "Debes pensar en: choque cardiogénico post-IAM → soporte inotrópico urgente + revascularización.",
+      "Hipoperfusión sistémica y congestión pulmonar simultáneas definen el choque cardiogénico.",
+      "Líquidos y nitratos empeoran el cuadro; furosemida sola no corrige el bajo gasto cardíaco.",
+      "Tema: Choque cardiogénico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa choque cardiogénico post-IAM: hipoperfusión + congestión pulmonar simultáneas — soporte inotrópico urgente y revascularización, no líquidos ni nitratos.
+Esta es una pregunta clásica de cardiología y urgencias porque evalúa el manejo del choque cardiogénico secundario a infarto agudo de miocardio.
+
+La clave no es la congestión pulmonar aislada.
+La clave es:
+Hipoperfusión sistémica y congestión pulmonar simultáneas obligan a soporte inotrópico urgente y revascularización, no a volumen ni nitratos.
 
 ¿Qué está ocurriendo realmente?
-- Paciente de 64 años, IAM cara anterior en evolución.
-- PA 80/50, FC 115, llenado capilar 4 s, oliguria, estertores bilaterales.
-- Choque cardiogénico: hipoperfusión sistémica + edema pulmonar simultáneos.
+El paciente presenta:
+• Hombre de 64 años hospitalizado por IAM de cara anterior.
+• PA 80/50 mmHg, FC 115 lpm (hipotensión y taquicardia compensatoria).
+• Llenado capilar de 4 segundos (hipoperfusión periférica).
+• Oliguria (hipoperfusión renal).
+• Estertores bilaterales en ambos campos pulmonares (congestión pulmonar).
+• Choque cardiogénico: hipoperfusión sistémica + edema pulmonar simultáneos.
 
-¿Qué dato es clave en el examen?
-- IAM + hipotensión + oliguria + congestión = choque cardiogénico.
-- Infarto extenso → ↓ función VI → ↓ gasto cardíaco + edema pulmonar.
-- Prioridades: 1) soporte inotrópico/hemodinámico; 2) revascularización urgente.
-- Revascularización precoz = mayor impacto en supervivencia.
-- Líquidos empeoran congestión; nitratos agravan hipotensión; solo diuréticos no corrigen bajo gasto.
+Recordemos la fisiopatología del choque cardiogénico post-IAM:
+• Infarto extenso (cara anterior) → ↓ función del VI → ↓ gasto cardíaco.
+• Hipoperfusión sistémica (oliguria, llenado capilar prolongado, hipotensión).
+• Congestión pulmonar por ↑ presiones de llenado (estertores bilaterales).
+• Revascularización precoz mejora supervivencia de forma significativa.
+
+Por lo tanto:
+La conducta más apropiada es soporte inotrópico urgente y activar estrategia de reperfusión/revascularización.
+
+¿Por qué la opción C es la respuesta correcta?
+El choque cardiogénico requiere restaurar la perfusión sistémica y corregir la causa subyacente.
+Soporte inotrópico urgente (dobutamina, milrinona) mejora el gasto cardíaco y la perfusión.
+Revascularización precoz (PCI urgente o cirugía de revascularización) tiene el mayor impacto en supervivencia.
+La prioridad es tratar la causa (oclusión coronaria) mientras se estabiliza hemodinámicamente.
 
 ¿Por qué fallan las otras opciones?
-- Bolo SF 0.9%: empeora congestión pulmonar con estertores bilaterales.
-- Nitroglicerina IV: agrava hipotensión (PA 80/50) en choque cardiogénico.
-- Furosemida sola: no corrige bajo gasto cardíaco; necesita inotrópico + reperfusión.
+Opción A (bolo rápido de SF 0.9%): empeora la congestión pulmonar con estertores bilaterales; el choque cardiogénico no se trata con volumen agresivo.
+Opción B (nitroglicerina IV): agrava la hipotensión (PA 80/50) al reducir la precarga y postcarga; contraindicada en choque cardiogénico hipotenso.
+Opción D (furosemida como única medida): no corrige el bajo gasto cardíaco; la diuresis sola no restaura perfusión ni trata la causa.
 
-Clave: post-IAM + shock + estertores = inotrópico + revascularización urgente, no volumen ni nitratos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen furosemida por los estertores pulmonares o nitroglicerina por la congestión.
+Pero en choque cardiogénico, la hipoperfusión es tan grave como la congestión.
+Volumen y nitratos empeoran el cuadro; se necesita inotrópico + revascularización.
 
-CARDIOLOGÍA — BY DR Q.
-Choque cardiogénico post-IAM
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer choque cardiogénico (IAM + hipotensión + oliguria + congestión pulmonar).
+2. Iniciar soporte inotrópico urgente (dobutamina, milrinona).
+3. Activar revascularización urgente (PCI o cirugía).
+4. Evitar volumen agresivo y nitratos en paciente hipotenso.
 
-La clave: hipoperfusión + congestión pulmonar.
+Perlas de examen
+✅ Choque cardiogénico = IAM + hipotensión + oliguria + congestión pulmonar.
+✅ Hipoperfusión + congestión simultáneas definen el cuadro.
+✅ Prioridad: inotrópico urgente + revascularización precoz.
+✅ Líquidos empeoran congestión; nitratos agravan hipotensión.
+✅ Furosemida sola no corrige bajo gasto cardíaco.
+✅ Las residencias preguntan la conducta más apropiada, no el manejo de la congestión aislada.
 
-Infarto extenso → ↓ función VI → ↓ gasto cardíaco + edema pulmonar + hipoperfusión sistémica.
-
-Prioridades:
-1. Soporte inotrópico/hemodinámico.
-2. Revascularización urgente (reperfusión = mayor impacto en supervivencia).
-
-Trampas:
-• Líquidos: empeoran congestión pulmonar.
-• Nitratos: agravan hipotensión.
-• Solo diuréticos: no corrigen bajo gasto cardíaco.
-
-Referencias: ESC ACS Guidelines; AHA STEMI and Cardiogenic Shock; UpToDate: Cardiogenic Shock.`,
+Referencias
+• ESC Guidelines for the Management of Acute Myocardial Infarction in Patients Presenting with ST-Segment Elevation.
+• AHA Scientific Statement on Cardiogenic Shock Complicating Acute Coronary Syndrome.
+• Braunwald's Heart Disease.
+• Tintinalli Emergency Medicine.
+• UpToDate: Prognosis and Treatment of Cardiogenic Shock Complicating Acute Myocardial Infarction.`,
   },
   {
     id: "dr-q-91",
