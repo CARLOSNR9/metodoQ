@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "migrate:topic-stats": "npx tsx scripts/migrate-topic-stats.ts",
-    "generate:hematologia": "node scripts/generate-hematologia-banco.mjs --pills-only"
+    "generate:hematologia": "node scripts/generate-hematologia-banco.mjs"
   },
   "dependencies": {
     "firebase": "^12.12.1",
