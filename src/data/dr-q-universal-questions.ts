@@ -8613,50 +8613,74 @@ Referencias
     explanation:
       "Embarazo ectópico roto con choque hemorrágico e irritación peritoneal generalizada. La prioridad es estabilización hemodinámica y control quirúrgico urgente de la hemorragia.",
     keyPoints: [
-      "Amenorrea + embarazo positivo + útero vacío + líquido libre + inestabilidad → embarazo ectópico roto.",
-      "Hipotensión y taquicardia indican choque hemorrágico.",
-      "Dolor en hombro = irritación diafragmática por hemoperitoneo (signo de Kehr).",
-      "Metotrexato contraindicado en pacientes inestables con hemoperitoneo.",
+      "Cuando veas: amenorrea + embarazo positivo + útero vacío + líquido libre ecogénico + hipotensión (TA 80/50) + irritación peritoneal.",
+      "Debes pensar en: embarazo ectópico roto con choque hemorrágico → reanimación inmediata y laparotomía exploratoria urgente.",
+      "Dolor irradiado a hombro derecho = signo de Kehr por irritación diafragmática (hemoperitoneo).",
+      "Metotrexato está contraindicado en pacientes inestables con ruptura y hemoperitoneo.",
+      "Tema: Embarazo ectópico roto.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa embarazo ectópico roto con choque hemorrágico: útero vacío + embarazo positivo + líquido libre + hipotensión = reanimación y laparotomía urgente, no metotrexato.
+Esta es una pregunta clásica de ginecología y obstetricia / urgencias porque evalúa el manejo del embarazo ectópico roto con choque hemorrágico.
+
+La clave no es el embarazo positivo aislado.
+La clave es:
+Amenorrea + útero vacío + líquido libre ecogénico + inestabilidad hemodinámica obligan a reanimación inmediata y laparotomía urgente, no a metotrexato ni observación.
 
 ¿Qué está ocurriendo realmente?
-- Mujer de 26 años, amenorrea 7 semanas, embarazo positivo.
-- Dolor abdominal bajo súbito irradiado a hombro derecho (signo de Kehr).
-- TA 80/50, FC 125; irritación peritoneal difusa, Douglas abombado.
-- FAST: útero vacío + abundante líquido libre ecogénico (hemoperitoneo).
+La paciente presenta:
+• Mujer de 26 años, G2P1, amenorrea de 7 semanas, prueba de embarazo positiva.
+• Dolor abdominal bajo súbito irradiado a hombro derecho (signo de Kehr).
+• Pálida, diaforética; TA 80/50 mmHg, FC 125 lpm (choque hemorrágico).
+• Irritación peritoneal difusa y abombamiento del fondo de saco de Douglas.
+• FAST: útero vacío + abundante líquido libre ecogénico intraabdominal (hemoperitoneo).
+• Embarazo ectópico roto con sangrado activo hacia cavidad peritoneal.
 
-¿Qué dato es clave en el examen?
-- Amenorrea + embarazo (+) + útero vacío + líquido libre + inestabilidad = embarazo ectópico roto.
-- Hipotensión y taquicardia = choque hemorrágico; prioridad reanimación + cirugía.
-- Metotrexato solo en pacientes estables sin ruptura ni hemoperitoneo.
-- No retrasar por β-hCG seriada en paciente inestable.
-- En inestabilidad, laparotomía suele ser más rápida que laparoscopia programada.
+Recordemos la fisiopatología del embarazo ectópico roto:
+• Implantación fuera de cavidad uterina (trompa de Falopio en >90% de casos).
+• Ruptura tubárica → hemorragia masiva intraabdominal.
+• Irritación del diafragma por sangre → dolor referido en hombro (signo de Kehr).
+• Hipovolemia progresiva → choque hemorrágico si no se interviene de inmediato.
+
+Por lo tanto:
+La conducta inicial más apropiada es reanimación hemodinámica inmediata y laparotomía exploratoria urgente.
+
+¿Por qué la opción D es la respuesta correcta?
+El paciente está en choque hemorrágico con hemoperitoneo confirmado.
+La prioridad absoluta es estabilización hemodinámica (accesos venosos calibrosos, cristaloides, hemoderivados) y control quirúrgico urgente del sangrado.
+La laparotomía permite acceso rápido y control definitivo en paciente inestable.
+Cada minuto de demora incrementa el riesgo de muerte por hipovolemia.
 
 ¿Por qué fallan las otras opciones?
-- β-hCG seriada + observación: retrasa tratamiento en choque hemorrágico.
-- Metotrexato IM: contraindicado con ruptura e inestabilidad hemodinámica.
-- Laparoscopia programada: demora inaceptable en choque; necesita cirugía urgente.
+Opción A (β-hCG cuantitativa seriada y observación): retrasa el tratamiento definitivo en choque hemorrágico activo; la β-hCG seriada es para pacientes estables con diagnóstico incierto.
+Opción B (metotrexato intramuscular): contraindicado con ruptura, hemoperitoneo e inestabilidad hemodinámica; reservado para ectópicos no rotos en pacientes estables.
+Opción C (laparoscopia diagnóstica programada): demora inaceptable en choque; en inestabilidad, la laparotomía suele ser más rápida y segura para control del sangrado.
 
-Clave: ectópico roto + shock = reanimación + laparotomía ya; no metotrexato ni observación.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen metotrexato porque asocian embarazo ectópico con tratamiento médico.
+Pero el metotrexato solo aplica en pacientes estables, sin ruptura y sin hemoperitoneo.
+Ante choque hemorrágico, la cirugía urgente es la única opción correcta.
 
-GINECOOBSTETRICIA — BY DR Q.
-Embarazo ectópico roto
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer embarazo ectópico roto (embarazo (+) + útero vacío + líquido libre + inestabilidad).
+2. Reanimación hemodinámica inmediata (cristaloides, hemoderivados, acceso venoso).
+3. Laparotomía exploratoria urgente para control del sangrado.
+4. Salpingectomía o salpingostomía según hallazgos intraoperatorios y deseo reproductivo.
 
-La clave: choque hemorrágico, no la amenorrea.
+Perlas de examen
+✅ Amenorrea + embarazo (+) + útero vacío + líquido libre + hipotensión = ectópico roto hasta demostrar lo contrario.
+✅ Signo de Kehr: dolor en hombro por irritación diafragmática por hemoperitoneo.
+✅ Metotrexato: solo en pacientes estables, sin ruptura, sin hemoperitoneo, β-hCG adecuada.
+✅ En choque hemorrágico: laparotomía > laparoscopia programada por velocidad de acceso.
+✅ No retrasar por β-hCG seriada en paciente hemodinámicamente inestable.
+✅ Las residencias preguntan la conducta urgente, no el algoritmo de seguimiento ambulatorio.
 
-Útero vacío + embarazo positivo + líquido libre ecogénico + hipotensión = embarazo ectópico roto con hemoperitoneo.
-
-Prioridad: reanimación (accesos venosos, cristaloides, hemoderivados) + cirugía urgente para control del sangrado.
-
-Trampas:
-• Metotrexato solo en pacientes estables sin ruptura.
-• No retrasar por β-hCG seriada.
-• En inestabilidad, laparotomía suele ser más rápida que laparoscopia.
-
-Referencias: Williams Obstetrics; ACOG Tubal Ectopic Pregnancy; UpToDate: Ectopic Pregnancy Management.`,
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Tubal Ectopic Pregnancy.
+• UpToDate: Ectopic Pregnancy: Clinical Manifestations and Diagnosis.
+• UpToDate: Ectopic Pregnancy: Choosing a treatment.`,
   },
   {
     id: "dr-q-92",
@@ -8692,46 +8716,74 @@ Referencias: Williams Obstetrics; ACOG Tubal Ectopic Pregnancy; UpToDate: Ectopi
     explanation:
       "Preeclampsia con criterios de gravedad asociada a síndrome HELLP. Estabilizar a la madre con sulfato de magnesio y antihipertensivos, y proceder a la finalización del embarazo independientemente del bienestar fetal.",
     keyPoints: [
-      "TA ≥160/110 + cefalea + fosfenos + epigastralgia + plaquetas <100.000 + transaminasas elevadas → preeclampsia grave con HELLP.",
-      "Sulfato de magnesio previene eclampsia.",
-      "La única cura definitiva es la finalización del embarazo.",
-      "La proteinuria no es indispensable cuando existe daño orgánico materno evidente.",
+      "Cuando veas: TA ≥160/110 + cefalea occipital + fosfenos + epigastralgia + plaquetas <100.000 + transaminasas elevadas en embarazo de 33 semanas.",
+      "Debes pensar en: preeclampsia grave con síndrome HELLP → sulfato de magnesio + control de PA + finalización del embarazo tras estabilizar.",
+      "Sulfato de magnesio previene eclampsia; la única cura definitiva de la preeclampsia es la finalización del embarazo.",
+      "La proteinuria de 24 horas no es indispensable cuando existe daño orgánico materno evidente (HELLP).",
+      "Tema: Preeclampsia grave con síndrome HELLP.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa preeclampsia grave con HELLP a las 33 semanas: sulfato de magnesio + control PA + finalización del embarazo tras estabilizar — no conducta expectante ni proteinuria 24 h.
+Esta es una pregunta clásica de ginecología y obstetricia / trastornos hipertensivos porque evalúa el manejo de la preeclampsia grave con síndrome HELLP en el tercer trimestre.
+
+La clave no es la presión arterial aislada.
+La clave es:
+Criterios de gravedad (cefalea, fosfenos, epigastralgia, hiperreflexia) + daño orgánico (plaquetopenia, transaminasas elevadas) obligan a estabilizar con sulfato de magnesio y finalizar el embarazo, no a conducta expectante.
 
 ¿Qué está ocurriendo realmente?
-- Primigestante 17 años, 33 semanas; cefalea occipital, fosfenos, epigastralgia 6 h.
-- TA 165/115 confirmada; hiperreflexia ++++, dolor hipocondrio derecho.
-- AST 180, ALT 210, plaquetas 75,000; RCTG fetal reactivo.
+La paciente presenta:
+• Primigestante de 17 años, embarazo de 33 semanas confirmado por ecografía.
+• Cefalea occipital intensa y fosfenos de 6 horas + dolor epigástrico tipo ardor.
+• TA 165/115 mmHg confirmada; hiperreflexia patelar ++++, dolor en hipocondrio derecho.
+• AST 180 U/L, ALT 210 U/L, plaquetas 75.000/μL (síndrome HELLP).
+• RCTG: feto reactivo sin desaceleraciones (bienestar fetal aparentemente conservado).
+• Preeclampsia grave con compromiso hepático y hematológico materno.
 
-¿Qué dato es clave en el examen?
-- TA ≥160/110 + cefalea + fosfenos + epigastralgia + plaquetas <100,000 + transaminasas ↑ = preeclampsia grave con HELLP.
-- Sulfato de magnesio previene eclampsia.
-- Única cura definitiva: finalización del embarazo.
-- No conducta expectante a 33 semanas con HELLP; condición materna tiene prioridad sobre bienestar fetal.
-- Proteinuria 24 h no es indispensable con daño orgánico evidente.
+Recordemos la fisiopatología del síndrome HELLP:
+• Variante grave de preeclampsia: Hemólisis, Elevated Liver enzymes, Low Platelets.
+• Vasoespasmo y activación endotelial → microangiopatía y daño hepático.
+• Riesgo de eclampsia, coagulación intravascular diseminada (CID), desprendimiento placentario y muerte materna.
+• La única cura definitiva es la finalización del embarazo; el tratamiento es de soporte hasta lograrlo.
+
+Por lo tanto:
+El siguiente paso más apropiado es administrar sulfato de magnesio, controlar la hipertensión e iniciar finalización del embarazo una vez estabilizada la madre.
+
+¿Por qué la opción B es la respuesta correcta?
+El sulfato de magnesio es el fármaco de elección para prevenir eclampsia en preeclampsia grave.
+Los antihipertensivos (labetalol, nifedipino, hidralazina) controlan la PA y reducen el riesgo de complicaciones cerebrovasculares.
+Con HELLP a las 33 semanas y criterios de gravedad, la finalización del embarazo está indicada tras estabilización materna.
+La condición materna tiene prioridad sobre el bienestar fetal aparentemente normal.
 
 ¿Por qué fallan las otras opciones?
-- Expectante hasta 37 semanas: contraindicado con HELLP y criterios de gravedad.
-- Corticoides + egreso: riesgo eclampsia, CID, desprendimiento placentario, muerte materna.
-- Proteinuria 24 h antes de decidir: retrasa tratamiento con daño orgánico ya documentado.
+Opción A (manejo expectante hasta 37 semanas): contraindicado con HELLP y criterios de gravedad; prolongar la gestación incrementa riesgo de eclampsia, CID y muerte materna.
+Opción C (corticoides para maduración pulmonar y egreso): inaceptable ante preeclampsia grave con síntomas neurológicos y HELLP; el egreso expone a eclampsia y complicaciones letales.
+Opción D (proteinuria de 24 horas antes de decidir): retrasa el tratamiento; la proteinuria no es indispensable para diagnosticar preeclampsia grave cuando hay daño orgánico evidente.
 
-Clave: HELLP + TA 165/115 + síntomas neurológicos = MgSO4 + finalizar embarazo, no esperes 37 semanas.
+¿Cuál es la trampa del examen?
+Muchos estudiantes prolongan la gestación por edad gestacional (33 semanas) o bienestar fetal normal en el RCTG.
+Pero con HELLP y criterios de gravedad, la madre está en riesgo inmediato.
+El bienestar fetal no contraindica la finalización cuando la vida materna está en peligro.
 
-GINECOOBSTETRICIA — BY DR Q.
-Preeclampsia grave con HELLP
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer preeclampsia grave con HELLP (TA ≥160/110 + síntomas + plaquetopenia + transaminasas ↑).
+2. Iniciar sulfato de magnesio IV para profilaxis de eclampsia.
+3. Controlar PA con antihipertensivos de acción rápida.
+4. Finalizar el embarazo (parto o cesárea) una vez estabilizada la madre.
 
-La clave: daño orgánico materno, no solo la presión arterial.
+Perlas de examen
+✅ HELLP: Hemólisis + transaminasas elevadas + plaquetas <100.000/μL.
+✅ Sulfato de magnesio: profilaxis de eclampsia en preeclampsia grave, no antihipertensivo.
+✅ La única cura de la preeclampsia es la finalización del embarazo.
+✅ Proteinuria ≥300 mg/24 h no es obligatoria si hay criterios de gravedad con daño orgánico.
+✅ Conducta expectante: solo en casos seleccionados sin criterios de gravedad, antes de 34 semanas.
+✅ Las residencias preguntan prioridad materna vs fetal en preeclampsia grave.
 
-HELLP: plaquetas <100.000 + transaminasas elevadas + (hemólisis). Riesgo de eclampsia, CID, desprendimiento placentario y muerte materna.
-
-Conducta: sulfato de magnesio + control de PA + finalización del embarazo tras estabilización. No conducta expectante a las 33 semanas con HELLP.
-
-Trampa: prolongar gestación por edad gestacional o bienestar fetal normal. La condición materna tiene prioridad.
-
-Referencias: ACOG Gestational Hypertension and Preeclampsia; Williams Obstetrics; UpToDate: HELLP Syndrome.`,
+Referencias
+• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
+• Williams Obstetrics.
+• UpToDate: HELLP Syndrome (Hemolysis, Elevated Liver Enzymes, and Low Platelets).
+• UpToDate: Preeclampsia: Clinical Features and Diagnosis.`,
   },
   {
     id: "dr-q-93",
@@ -8767,46 +8819,75 @@ Referencias: ACOG Gestational Hypertension and Preeclampsia; Williams Obstetrics
     explanation:
       "Cuadro clásico de DPPNI grave: dolor abdominal intenso, sangrado oscuro, útero leñoso, aumento de altura uterina por hematoma retroplacentario y compromiso fetal agudo. Estabilización materna y cesárea urgente.",
     keyPoints: [
-      "DPPNI: dolor intenso + útero leñoso + sangrado oscuro + sufrimiento fetal.",
-      "Placenta previa: sangrado rojo brillante, indoloro, útero blando.",
-      "El DPPNI es diagnóstico clínico; la ecografía no debe retrasar la intervención.",
-      "Tabaquismo es factor de riesgo importante para DPPNI.",
+      "Cuando veas: dolor abdominal intenso continuo + sangrado vaginal rojo oscuro + útero hipertónico (leñoso) + aumento de altura uterina + sufrimiento fetal agudo.",
+      "Debes pensar en: desprendimiento prematuro de placenta normoinserta (DPPNI) grave → estabilización materna y cesárea urgente.",
+      "Placenta previa: sangrado rojo brillante, indoloro, útero blando (cuadro opuesto al DPPNI).",
+      "El DPPNI es diagnóstico clínico; la ecografía no debe retrasar la intervención quirúrgica.",
+      "Tema: Desprendimiento prematuro de placenta normoinserta (DPPNI).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa DPPNI grave: dolor intenso + útero leñoso + sangrado oscuro + sufrimiento fetal = cesárea urgente sin esperar ecografía.
+Esta es una pregunta clásica de ginecología y obstetricia / hemorragias obstétricas porque evalúa el reconocimiento y manejo del DPPNI grave con sufrimiento fetal agudo.
+
+La clave no es el sangrado vaginal aislado.
+La clave es:
+Dolor abdominal intenso + útero hipertónico (leñoso) + sangrado oscuro + sufrimiento fetal obligan a cesárea urgente sin esperar ecografía, no a descartar placenta previa.
 
 ¿Qué está ocurriendo realmente?
-- Mujer 35 años, 36 semanas, tabaquismo; dolor abdominal intenso continuo + sangrado rojo oscuro.
-- Útero hipertónico ("leñoso"), altura uterina 38 cm (antes 34 cm) = hematoma retroplacentario.
-- CTG: FCF 100 lpm, variabilidad perdida, desaceleraciones tardías repetitivas.
+La paciente presenta:
+• Mujer de 35 años, G4P3, embarazo de 36 semanas, antecedente de tabaquismo pesado.
+• Inicio súbito de dolor abdominal intenso y continuo + sangrado vaginal rojo oscuro moderado.
+• TA 150/90 mmHg, FC 110 lpm; útero hipertónico ("leñoso"), doloroso, no relaja entre contracciones.
+• Altura uterina 38 cm (previamente 34 cm) = hematoma retroplacentario oculto.
+• CTG: FCF basal 100 lpm, variabilidad perdida, desaceleraciones tardías repetitivas (sufrimiento fetal agudo).
+• DPPNI grave con compromiso fetal inminente.
 
-¿Qué dato es clave en el examen?
-- DPPNI: dolor intenso + útero leñoso + sangrado oscuro + sufrimiento fetal agudo.
-- Placenta previa: sangrado rojo brillante, indoloro, útero blando (cuadro opuesto).
-- DPPNI es diagnóstico clínico; ecografía no debe retrasar intervención.
-- Separación placentaria → hematoma → ↑ presión intrauterina → hipoxia fetal.
-- Tabaquismo es factor de riesgo importante.
+Recordemos la fisiopatología del DPPNI:
+• Separación prematura de placenta normoinserta antes del nacimiento.
+• Sangre se acumula retroplacentariamente → hematoma → ↑ presión intrauterina.
+• Hipoxia fetal aguda por compresión placentaria y desplazamiento.
+• El sangrado vaginal puede subestimar la hemorragia real (hemorragia oculta retroplacentaria).
+• Tabaquismo, HTA, trauma y preeclampsia son factores de riesgo importantes.
+
+Por lo tanto:
+El diagnóstico más probable es DPPNI grave y la conducta inmediata es estabilización materna y cesárea urgente.
+
+¿Por qué la opción B es la respuesta correcta?
+El cuadro clínico es patognomónico de DPPNI: dolor intenso, útero leñoso, sangrado oscuro y sufrimiento fetal.
+El DPPNI es diagnóstico clínico; no se debe retrasar la intervención por estudios imagenológicos.
+La cesárea urgente es la vía de extracción fetal más rápida ante sufrimiento fetal agudo.
+Simultáneamente se estabiliza a la madre (acceso venoso, laboratorios, hemoderivados si necesario).
 
 ¿Por qué fallan las otras opciones?
-- Placenta previa + eco transvaginal: cuadro es doloroso con útero leñoso, no previa.
-- Rotura uterina + inducción: inducción empeoraría sufrimiento fetal agudo.
-- TPP + tocolíticos: tocolizar en DPPNI con bradicardia es contraindicado.
+Opción A (placenta previa + ecografía transvaginal urgente): cuadro opuesto — placenta previa es sangrado indoloro, rojo brillante, útero blando; la eco no debe retrasar cesárea en DPPNI.
+Opción C (rotura uterina + inducción del trabajo de parto): la inducción empeoraría el sufrimiento fetal agudo; además el cuadro no sugiere rotura uterina (sin antecedente de cicatriz uterina).
+Opción D (trabajo de parto pretérmino + tocolíticos y corticoides): los tocolíticos están contraindicados en DPPNI con sufrimiento fetal; retrasar la extracción aumenta riesgo de muerte fetal.
 
-Clave: dolor + útero leñoso + sangrado oscuro + CTG malo = DPPNI → cesárea ya, no eco.
+¿Cuál es la trampa del examen?
+Muchos estudiantes solicitan ecografía transvaginal ante todo sangrado del tercer trimestre.
+Pero en DPPNI con cuadro clínico clásico y sufrimiento fetal, la ecografía no debe retrasar la cesárea.
+Además confunden DPPNI (doloroso, leñoso) con placenta previa (indoloro, blando).
 
-GINECOOBSTETRICIA — BY DR Q.
-Desprendimiento prematuro de placenta normoinserta (DPPNI)
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer DPPNI (dolor + útero leñoso + sangrado oscuro ± sufrimiento fetal).
+2. Estabilización materna (vía venosa, tipo y cruzada, laboratorios, coagulación).
+3. Cesárea urgente si sufrimiento fetal o inestabilidad materna.
+4. Corregir coagulopatía si presente (CID secundaria a DPPNI masivo).
 
-La clave: dolor + hipertonía uterina, no solo el sangrado.
+Perlas de examen
+✅ DPPNI: dolor intenso + útero leñoso + sangrado oscuro + sufrimiento fetal.
+✅ Placenta previa: sangrado rojo brillante, indoloro, útero blando (cuadro opuesto).
+✅ DPPNI = diagnóstico clínico; ecografía no debe retrasar intervención.
+✅ Altura uterina mayor a la esperada sugiere hematoma retroplacentario oculto.
+✅ Tabaquismo es factor de riesgo importante para DPPNI.
+✅ Las residencias preguntan diferenciación clínica DPPNI vs placenta previa, no el estudio imagenológico.
 
-Separación prematura de placenta normoinserta → hematoma retroplacentario → ↑ presión intrauterina → hipoxia fetal aguda.
-
-Hallazgos: dolor brusco, útero leñoso, sangrado oscuro (puede subestimar hemorragia), ↑ altura uterina, CTG con bradicardia/desaceleraciones tardías.
-
-Conducta: estabilización materna + cesárea urgente. No esperar ecografía.
-
-Referencias: Williams Obstetrics; ACOG Placental Abruption; UpToDate: Placental Abruption.`,
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Placental Abruption.
+• UpToDate: Placental Abruption: Clinical Features and Diagnosis.
+• UpToDate: Placental Abruption: Management and Outcome.`,
   },
   {
     id: "dr-q-94",
@@ -8826,48 +8907,75 @@ Referencias: Williams Obstetrics; ACOG Placental Abruption; UpToDate: Placental 
     explanation:
       "Hemorragia posparto por atonía uterina. Antecedente de hipertensión gestacional contraindica metilergonovina por riesgo de crisis hipertensiva. El misoprostol es una alternativa segura y eficaz como uterotónico de segunda línea.",
     keyPoints: [
-      "Atonía uterina: sangrado + útero blando + fondo uterino elevado.",
-      "Secuencia: masaje uterino → oxitocina → segundo uterotónico.",
-      "Metilergonovina contraindicada en hipertensión gestacional/preeclampsia.",
-      "Misoprostol es alternativa segura en pacientes hipertensas.",
+      "Cuando veas: sangrado vaginal profuso postparto + fondo uterino supraumbilical flácido + fallo de masaje uterino y oxitocina + antecedente de hipertensión gestacional.",
+      "Debes pensar en: hemorragia posparto por atonía uterina → misoprostol como uterotónico de segunda línea seguro (metilergonovina contraindicada).",
+      "Secuencia HPP por atonía: masaje uterino → oxitocina → segundo uterotónico → medidas adicionales si persiste.",
+      "Metilergonovina causa vasoconstricción intensa y está contraindicada en hipertensión gestacional/preeclampsia.",
+      "Tema: Hemorragia posparto por atonía uterina.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa HPP por atonía con HTA gestacional: metilergonovina está contraindicada por vasoconstricción — misoprostol es uterotónico de 2.ª línea seguro en hipertensas.
+Esta es una pregunta clásica de ginecología y obstetricia / hemorragia posparto porque evalúa la elección del uterotónico de segunda línea en atonía uterina con comorbilidad hipertensiva.
+
+La clave no es la atonía uterina aislada.
+La clave es:
+Hemorragia posparto por atonía con hipertensión gestacional obliga a elegir misoprostol como segundo uterotónico, no metilergonovina por riesgo de crisis hipertensiva.
 
 ¿Qué está ocurriendo realmente?
-- Mujer 28 años, HTA gestacional, parto vaginal de RN macrosómico 4.200 g.
-- Trabajo de parto 14 h + oxitocina; sangrado profuso 15 min post-alumbramiento.
-- Fondo uterino supraumbilical, flácido, blando; masaje + oxitocina sin control.
+La paciente presenta:
+• Mujer de 28 años con hipertensión gestacional en seguimiento prenatal.
+• Parto vaginal de recién nacido macrosómico (4.200 g) tras 14 horas de trabajo de parto con oxitocina.
+• Sangrado vaginal profuso 15 minutos después del alumbramiento.
+• Fondo uterino supraumbilical, flácido y blando (atonía uterina).
+• Masaje uterino bimanual + oxitocina optimizada sin control del sangrado.
+• HPP por atonía uterina refractaria a medidas de primera línea.
 
-¿Qué dato es clave en el examen?
-- Atonía uterina: sangrado + útero blando + fondo uterino elevado.
-- Secuencia: masaje uterino → oxitocina → segundo uterotónico.
-- Metilergonovina: vasoconstricción intensa → contraindicada en HTA gestacional/preeclampsia.
-- Misoprostol: ↑ tono uterino sin riesgo significativo de crisis hipertensiva.
-- Ácido tranexámico no es uterotónico (es antifibrinolítico complementario).
+Recordemos la fisiopatología y manejo de la HPP por atonía:
+• Atonía uterina: miometrio no se contrae → vasos espiralados abiertos → sangrado profuso.
+• Factores de riesgo presentes: trabajo de parto prolongado, oxitocina prolongada, macrosomía, multiparidad.
+• Secuencia: masaje uterino → oxitocina IV → segundo uterotónico → balón intrauterino/cirugía.
+• Metilergonovina: excelente uterotónico pero vasoconstrictor → contraindicada en HTA gestacional/preeclampsia.
+• Misoprostol: prostaglandina E1, ↑ tono uterino sin riesgo significativo de crisis hipertensiva.
+
+Por lo tanto:
+El uterotónico de segunda línea más adecuado y seguro es misoprostol.
+
+¿Por qué la opción B es la respuesta correcta?
+Tras fallo de masaje uterino y oxitocina, se requiere un segundo uterotónico.
+La metilergonovina, aunque muy eficaz, está contraindicada por el antecedente de hipertensión gestacional (riesgo de crisis hipertensiva por vasoconstricción).
+El misoprostol (800-1000 mcg vía rectal o sublingual) es seguro y eficaz en pacientes hipertensas.
+Es la alternativa de elección cuando la ergonovina está contraindicada.
 
 ¿Por qué fallan las otras opciones?
-- Metilergonovina: excelente uterotónico pero contraindicada con HTA gestacional.
-- Carboprost: también puede elevar PA; menos preferido que misoprostol en hipertensas.
-- Ácido tranexámico solo: no corrige atonía; no sustituye uterotónico de 2.ª línea.
+Opción A (metilergonovina): excelente uterotónico de segunda línea, pero contraindicada en hipertensión gestacional/preeclampsia por vasoconstricción periférica y riesgo de crisis hipertensiva.
+Opción C (carboprost trometamina): prostaglandina F2α eficaz, pero también puede elevar la presión arterial y causar broncoespasmo; menos preferido que misoprostol en pacientes hipertensas.
+Opción D (ácido tranexámico): antifibrinolítico complementario, no es uterotónico; no corrige la atonía y no sustituye al segundo uterotónico.
 
-Clave: atonía + HTA gestacional = misoprostol como 2.ª línea, no metilergonovina.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen metilergonovina automáticamente ante atonía uterina porque es el uterotónico clásico de segunda línea.
+Pero siempre deben revisar comorbilidades: HTA gestacional, cardiopatía, enfermedad vascular.
+En hipertensas, misoprostol es la alternativa segura.
 
-GINECOOBSTETRICIA — BY DR Q.
-Hemorragia posparto por atonía uterina
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer HPP por atonía (sangrado + útero blando + fondo uterino elevado).
+2. Masaje uterino bimanual + oxitocina IV (primera línea).
+3. Segundo uterotónico según comorbilidades: misoprostol si HTA, metilergonovina si normotensa.
+4. Si persiste: balón intrauterino, ácido tranexámico, embolización o cirugía.
 
-La clave: hipertensión gestacional al elegir el segundo uterotónico.
+Perlas de examen
+✅ Atonía uterina: sangrado profuso + útero blando + fondo uterino supraumbilical.
+✅ Secuencia: masaje → oxitocina → segundo uterotónico → medidas invasivas.
+✅ Metilergonovina: contraindicada en HTA gestacional, preeclampsia, cardiopatía.
+✅ Misoprostol: alternativa segura en pacientes hipertensas.
+✅ Ácido tranexámico: complemento antifibrinolítico, no sustituye uterotónico.
+✅ Las residencias preguntan la contraindicación de ergonovina, no solo el algoritmo de HPP.
 
-Factores de riesgo en el caso: trabajo de parto prolongado, oxitocina prolongada, macrosomía → fatiga miometrial.
-
-Metilergonovina: excelente uterotónico pero vasoconstricción intensa → contraindicada en HTA gestacional/preeclampsia.
-
-Misoprostol: ↑ tono uterino sin riesgo significativo de crisis hipertensiva. Ácido tranexámico no es uterotónico.
-
-Trampa: atonía → metilergonovina sin revisar comorbilidades.
-
-Referencias: ACOG Postpartum Hemorrhage; WHO PPH Guidelines; Williams Obstetrics.`,
+Referencias
+• ACOG Practice Bulletin: Postpartum Hemorrhage.
+• WHO Recommendations for Prevention and Treatment of Postpartum Hemorrhage.
+• Williams Obstetrics.
+• UpToDate: Postpartum Hemorrhage: Medical and Surgical Management.`,
   },
   {
     id: "dr-q-95",
@@ -8899,46 +9007,76 @@ Referencias: ACOG Postpartum Hemorrhage; WHO PPH Guidelines; Williams Obstetrics
     explanation:
       "Cuadro altamente sugestivo de torsión ovárica. La ausencia de flujo venoso es uno de los hallazgos más precoces. El tratamiento es laparoscopia urgente para preservar la función ovárica.",
     keyPoints: [
-      "Dolor pélvico súbito intenso + náuseas/vómito + ovario aumentado → torsión ovárica.",
-      "Ausencia de flujo venoso en Doppler es hallazgo precoz y sugestivo.",
-      "Flujo arterial conservado no excluye torsión (obstrucción venosa ocurre primero).",
-      "Preservar el ovario siempre que sea posible.",
+      "Cuando veas: dolor pélvico súbito intenso que despierta al paciente + náuseas/vómitos + ovario aumentado con folículos periféricos + ausencia de flujo venoso en Doppler.",
+      "Debes pensar en: torsión ovárica → laparoscopia urgente con detorsión y preservación del ovario si es viable.",
+      "Flujo arterial conservado en Doppler NO excluye torsión (obstrucción venosa ocurre primero).",
+      "Ausencia de flujo venoso es uno de los hallazgos Doppler más precoces y sugestivos de torsión.",
+      "Tema: Torsión ovárica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa torsión ovárica: ausencia de flujo venoso en Doppler es hallazgo precoz — laparoscopia urgente con detorsión y preservación ovárica, no observar 24 h.
+Esta es una pregunta clásica de ginecología y obstetricia / urgencias ginecológicas porque evalúa el reconocimiento y manejo urgente de la torsión ovárica.
+
+La clave no es el quiste ovárico aislado.
+La clave es:
+Dolor pélvico súbito intenso + ovario aumentado + ausencia de flujo venoso en Doppler obligan a laparoscopia urgente con detorsión, no a observación ni antibióticos.
 
 ¿Qué está ocurriendo realmente?
-- Mujer 24 años, dolor FID súbito severo que la despertó, náuseas y vómitos.
-- Ecografía: ovario derecho 7×5 cm con folículos periféricos (signo de "tormenta de nieve").
-- Doppler: flujo arterial conservado, ausencia de flujo venoso en ovario derecho.
+La paciente presenta:
+• Mujer de 24 años, dolor abdominal bajo súbito en fosa ilíaca derecha, severo, punzante, que la despertó.
+• Náuseas y dos episodios de vómito.
+• Dolor a palpación profunda en FID con defensa voluntaria, sin irritación peritoneal clara.
+• Ecografía: ovario derecho 7 × 5 cm con múltiples folículos periféricos y quiste simple de 5 cm.
+• Doppler: flujo arterial conservado, ausencia de flujo venoso en ovario derecho.
+• Prueba de embarazo negativa.
+• Cuadro altamente sugestivo de torsión ovárica parcial o completa.
 
-¿Qué dato es clave en el examen?
-- Dolor pélvico súbito intenso + náuseas + ovario aumentado → torsión ovárica.
-- Obstrucción venosa ocurre primero → isquemia → necrosis; flujo arterial conservado NO excluye torsión.
-- Ausencia de flujo venoso = hallazgo precoz y sugestivo.
-- Conducta: laparoscopia urgente + detorsión + preservación ovárica si viable.
-- No observar 24 h: cada hora ↑ riesgo de pérdida ovárica.
+Recordemos la fisiopatología de la torsión ovárica:
+• El ovario gira sobre su pedículo vascular (trompa + ligamento infundíbulo-pélvico).
+• Obstrucción venosa ocurre primero → congestión → edema → isquemia progresiva.
+• Obstrucción arterial es tardía; flujo arterial conservado NO excluye torsión.
+• Ausencia de flujo venoso es hallazgo Doppler precoz y altamente sugestivo.
+• Cada hora de demora incrementa el riesgo de necrosis ovárica y pérdida de función.
+
+Por lo tanto:
+La conducta inicial de elección es laparoscopia urgente con detorsión ovárica y preservación del ovario si es viable.
+
+¿Por qué la opción C es la respuesta correcta?
+La torsión ovárica es una urgencia quirúrgica que requiere intervención inmediata.
+La laparoscopia permite detorsión del pedículo, evaluación de viabilidad ovárica y preservación si es posible.
+La preservación ovárica es preferible incluso si el ovario parece necrótico (revascularización puede ocurrir).
+Retrasar el tratamiento aumenta significativamente el riesgo de ooforectomía.
 
 ¿Por qué fallan las otras opciones?
-- Observación + eco en 24 h: demora tratamiento; isquemia progresa.
-- ATB por EIP: cuadro no sugiere infección; embarazo negativo, patrón de torsión.
-- Ooforectomía inmediata: preservar ovario siempre que sea posible tras detorsión.
+Opción A (observación y repetir Doppler en 24 horas): demora inaceptable; la isquemia progresa y cada hora incrementa riesgo de pérdida ovárica irreversible.
+Opción B (antibióticos por sospecha de EIP): cuadro no sugiere infección (sin fiebre, flujo patológico ni dolor a movilización cervical); el patrón ecográfico y Doppler apuntan a torsión.
+Opción D (ooforectomía derecha inmediata): excesiva como conducta inicial; siempre intentar detorsión y preservación ovárica si el tejido es viable o dudoso.
 
-Clave: dolor súbito + ovario grande + sin flujo venoso = laparoscopia urgente con detorsión.
+¿Cuál es la trampa del examen?
+Muchos estudiantes descartan torsión porque el Doppler muestra flujo arterial conservado.
+Pero la obstrucción venosa precede a la arterial; ausencia de flujo venoso es hallazgo precoz.
+Otra trampa: confundir con apendicitis o EIP por dolor en FID, ignorando los hallazgos ecográficos.
 
-GINECOOBSTETRICIA — BY DR Q.
-Torsión ovárica
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar torsión ante dolor pélvico súbito intenso + náuseas + ovario aumentado.
+2. Confirmar con Doppler: ausencia de flujo venoso es hallazgo clave (arterial conservado no excluye).
+3. Laparoscopia urgente (<8 horas idealmente) con detorsión ovárica.
+4. Preservar el ovario siempre que sea posible; ooforectomía solo si necrosis franca.
 
-La clave: ausencia de flujo venoso, no el quiste.
+Perlas de examen
+✅ Torsión ovárica: dolor súbito intenso + náuseas/vómitos + ovario aumentado.
+✅ Ausencia de flujo venoso en Doppler = hallazgo precoz y sugestivo.
+✅ Flujo arterial conservado NO excluye torsión (obstrucción venosa ocurre primero).
+✅ Laparoscopia urgente con detorsión; preservar ovario siempre que sea posible.
+✅ No observar 24 h: cada hora incrementa riesgo de necrosis y ooforectomía.
+✅ Las residencias preguntan el hallazgo Doppler precoz, no la apariencia del ovario en ecografía.
 
-Ovario gira sobre su pedículo → obstrucción venosa primero → isquemia → necrosis.
-
-Trampa clásica: flujo arterial conservado descarta torsión. FALSO: la obstrucción venosa precede a la arterial.
-
-Conducta: laparoscopia urgente + detorsión + preservación ovárica. No observar 24 h.
-
-Referencias: ACOG Adnexal Torsion; Williams Gynecology; UpToDate: Ovarian Torsion.`,
+Referencias
+• ACOG Committee Opinion: Adnexal Torsion.
+• Williams Gynecology.
+• UpToDate: Ovarian Torsion: Clinical Features and Diagnosis.
+• UpToDate: Ovarian Torsion: Management and Outcome.`,
   },
   {
     id: "dr-q-96",
@@ -8962,45 +9100,75 @@ Referencias: ACOG Adnexal Torsion; Williams Gynecology; UpToDate: Ovarian Torsio
     explanation:
       "Cuadro compatible con enfermedad inflamatoria pélvica (EIP). Tratamiento empírico inmediato cubriendo Neisseria gonorrhoeae, Chlamydia trachomatis y flora anaerobia.",
     keyPoints: [
-      "Dolor pélvico + fiebre + flujo mucopurulento + dolor a movilización cervical → EIP.",
-      "La ecografía puede ser normal en fases iniciales; EIP es diagnóstico clínico.",
-      "Esquema: ceftriaxona + doxiciclina + metronidazol.",
-      "Retrasar tratamiento aumenta riesgo de infertilidad tubárica y embarazo ectópico.",
+      "Cuando veas: dolor pélvico bilateral + fiebre + flujo mucopurulento + dolor a movilización cervical + anexos dolorosos.",
+      "Debes pensar en: enfermedad inflamatoria pélvica (EIP) → tratamiento empírico inmediato de amplio espectro.",
+      "La ecografía puede ser normal en EIP temprana; el diagnóstico es clínico, no ecográfico.",
+      "Esquema estándar: ceftriaxona (gonococo) + doxiciclina (clamidia) + metronidazol (anaerobios).",
+      "Tema: Enfermedad inflamatoria pélvica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa EIP: dolor a movilización cervical + fiebre + flujo mucopurulento = diagnóstico clínico — ceftriaxona + doxiciclina + metronidazol, aunque la ecografía sea normal.
+Esta es una pregunta clásica de ginecología e infectología porque evalúa el reconocimiento clínico de la EIP y la elección del esquema antibiótico empírico cuando la ecografía es normal.
+
+La clave no es la ecografía.
+La clave es:
+Dolor a la movilización cervical + fiebre + flujo mucopurulento = EIP clínica que requiere ceftriaxona + doxiciclina + metronidazol de inmediato, aunque la ecografía no muestre alteraciones.
 
 ¿Qué está ocurriendo realmente?
-- Mujer 25 años, dolor pélvico bilateral 4 días + fiebre 38.5°C + flujo amarillento fétido.
-- Cérvix eritematoso y friable; dolor intenso a movilización cervical; anexos dolorosos.
-- Eco: útero y ovarios normales, sin masas ni líquido libre; embarazo negativo.
+La paciente presenta:
+• Mujer de 25 años, nulípara, nueva pareja sexual hace 3 semanas.
+• Dolor pélvico bilateral progresivo de 4 días + fiebre de 38.5°C + malestar general.
+• Flujo vaginal amarillento de mal olor; cérvix eritematoso y friable con secreción mucopurulenta.
+• Dolor intenso a la movilización cervical y anexos dolorosos bilateralmente.
+• Ecografía pélvica normal (útero y ovarios sin masas ni líquido libre); embarazo negativo.
 
-¿Qué dato es clave en el examen?
-- Dolor pélvico + fiebre + flujo mucopurulento + dolor a movilización cervical = EIP.
-- EIP es diagnóstico clínico; ecografía normal no excluye (útil para absceso tuboovárico).
-- Esquema empírico: ceftriaxona (gonococo) + doxiciclina (clamidia) + metronidazol (anaerobios).
-- Retrasar tratamiento ↑ riesgo de infertilidad tubárica y embarazo ectópico.
+Recordemos la EIP:
+• Infección ascendente del tracto genital superior (útero, trompas, ovarios, peritoneo pélvico).
+• Diagnóstico clínico mínimo: dolor pélvico + dolor a movilización cervical ± fiebre ± flujo mucopurulento.
+• La ecografía es útil para detectar absceso tuboovárico, pero una eco normal NO excluye EIP temprana.
+• Retrasar el tratamiento aumenta el riesgo de infertilidad tubárica, embarazo ectópico y dolor pélvico crónico.
+
+Por lo tanto:
+El manejo empírico inicial más apropiado es ceftriaxona intramuscular más doxiciclina y metronidazol.
+
+¿Por qué la opción B es la respuesta correcta?
+La EIP requiere cobertura empírica simultánea de los tres patógenos principales:
+• Ceftriaxona IM: Neisseria gonorrhoeae (resistencia creciente a otros esquemas).
+• Doxiciclina oral: Chlamydia trachomatis (causa frecuente y silenciosa).
+• Metronidazol: flora anaerobia (Bacteroides, otros anaerobios pélvicos).
+Este es el esquema recomendado por CDC y ACOG para EIP ambulatoria sin absceso tuboovárico.
 
 ¿Por qué fallan las otras opciones?
-- Azitromicina dosis única: insuficiente para EIP; no cubre anaerobios ni gonococo adecuadamente.
-- Legrado uterino: no hay indicación; cuadro es infección ascendente, no retención.
-- Histerectomía: excesiva; EIP se trata con antibióticos de amplio espectro.
+Opción A (azitromicina dosis única): insuficiente para EIP; no cubre adecuadamente gonococo ni anaerobios; esquema para cervicitis, no infección del tracto superior.
+Opción C (legrado uterino): no hay indicación; el cuadro es infección ascendente, no retención de productos ni patología endometrial que requiera legrado.
+Opción D (histerectomía subtotal urgente): excesiva y contraindicada como manejo inicial; la EIP se trata con antibióticos de amplio espectro, reservando cirugía para complicaciones (absceso roto, no respuesta).
 
-Clave: movilización cervical dolorosa + fiebre = EIP → ceftriaxona + doxiciclina + metronidazol ya.
+¿Cuál es la trampa del examen?
+Muchos estudiantes descartan EIP porque la ecografía es normal.
+Pero la ecografía normal es compatible con EIP temprana o leve.
+El dato decisivo es la tríada clínica: dolor pélvico + movilización cervical dolorosa + fiebre/flujo mucopurulento.
+Otra trampa: elegir azitromicina dosis única (esquema de cervicitis/EPI leve) en lugar del triple esquema para EIP.
 
-GINECOOBSTETRICIA — BY DR Q.
-Enfermedad inflamatoria pélvica (EIP)
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer criterios clínicos de EIP (dolor pélvico + movilización cervical dolorosa ± fiebre ± flujo).
+2. Confirmar que no hay absceso tuboovárico complicado (eco útil pero no excluyente).
+3. Iniciar tratamiento empírico inmediato sin esperar cultivos.
+4. Cubrir gonococo + clamidia + anaerobios con ceftriaxona + doxiciclina + metronidazol.
 
-La clave: dolor a la movilización cervical, no la ecografía.
+Perlas de examen
+✅ EIP es diagnóstico clínico; ecografía normal no excluye la enfermedad.
+✅ Movilización cervical dolorosa (signo de Chandelier) es hallazgo clave.
+✅ Esquema triple: ceftriaxona + doxiciclina + metronidazol.
+✅ Azitromicina dosis única es para cervicitis, no para EIP.
+✅ Retrasar ATB aumenta riesgo de secuelas tubáricas e infertilidad.
+✅ Las residencias preguntan el esquema empírico correcto, no solo el diagnóstico.
 
-Diagnóstico clínico. Ecografía normal no excluye EIP (útil para absceso tuboovárico).
-
-Cobertura empírica: gonococo (ceftriaxona) + clamidia (doxiciclina) + anaerobios (metronidazol).
-
-Trampa: ecografía normal → descartar EIP. FALSO.
-
-Referencias: CDC STI Guidelines; ACOG PID Practice Bulletin; UpToDate: Pelvic Inflammatory Disease.`,
+Referencias
+• CDC Sexually Transmitted Infections Treatment Guidelines.
+• ACOG Practice Bulletin: Pelvic Inflammatory Disease.
+• Williams Gynecology.
+• UpToDate: Pelvic Inflammatory Disease: Clinical Manifestations and Diagnosis.`,
   },
   {
     id: "dr-q-97",
@@ -9024,44 +9192,73 @@ Referencias: CDC STI Guidelines; ACOG PID Practice Bulletin; UpToDate: Pelvic In
     explanation:
       "Cuadro clínico altamente sugestivo de placenta previa. El estudio inicial de elección es la ecografía para determinar la relación de la placenta con el orificio cervical interno.",
     keyPoints: [
-      "Placenta previa: sangrado rojo brillante, indoloro, útero blando en tercer trimestre.",
-      "Tacto vaginal contraindicado ante sospecha de placenta previa.",
-      "Ecografía es el estudio diagnóstico inicial de elección.",
-      "DPPNI: sangrado oscuro + dolor + útero leñoso.",
+      "Cuando veas: sangrado vaginal rojo brillante, indoloro, en tercer trimestre + útero blando con tono normal.",
+      "Debes pensar en: placenta previa → ecografía obstétrica para localización placentaria, nunca tacto vaginal.",
+      "El tacto vaginal está contraindicado ante sospecha de placenta previa (puede desencadenar hemorragia masiva).",
+      "DPPNI se diferencia por sangrado oscuro, dolor y útero leñoso/hipertono.",
+      "Tema: Hemorragias del tercer trimestre · placenta previa.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa placenta previa: sangrado rojo brillante indoloro en tercer trimestre = ecografía obstétrica, nunca tacto vaginal.
+Esta es una pregunta clásica de obstetricia porque evalúa el reconocimiento de placenta previa y la conducta diagnóstica inicial ante sangrado indoloro en el tercer trimestre.
+
+La clave no es el tacto vaginal para evaluar dilatación.
+La clave es:
+Sangrado rojo brillante indoloro en tercer trimestre con útero blando = sospecha de placenta previa → ecografía obstétrica, nunca tacto vaginal.
 
 ¿Qué está ocurriendo realmente?
-- Mujer 33 años, 32 semanas; despertó en charco de sangre rojo rutilante, indoloro.
-- Abdomen blando, útero con tono normal; CTG reactivo; TA estable.
+La paciente presenta:
+• Mujer de 33 años, G3P2, embarazo de 32 semanas.
+• Despertó en un charco de sangre: sangrado vaginal rojo rutilante, moderado, completamente indoloro.
+• Sin contracciones, sin RPM, sin trauma; TA 110/70 mmHg, FC 88 lpm.
+• Abdomen blando, no doloroso; útero con tono normal.
+• Registro cardiotocográfico reactivo (bienestar fetal conservado).
 
-¿Qué dato es clave en el examen?
-- Placenta previa: sangrado rojo brillante, indoloro, útero blando en tercer trimestre.
-- Tacto vaginal contraindicado ante sospecha de placenta previa (puede desencadenar hemorragia masiva).
-- Ecografía obstétrica es el estudio diagnóstico inicial de elección.
-- DPPNI: cuadro opuesto — sangrado oscuro + dolor + útero leñoso.
+Recordemos las hemorragias del tercer trimestre:
+• Placenta previa: placenta en segmento inferior → distensión uterina → separación parcial → sangrado rojo brillante, indoloro, útero blando.
+• DPPNI: desprendimiento de placenta normoinserta → sangrado oscuro, dolor intenso, útero leñoso/hipertono.
+• El tacto vaginal está contraindicado ante sospecha de placenta previa porque puede desencadenar hemorragia masiva al contactar la placenta sobre el orificio cervical interno.
+• La ecografía obstétrica transabdominal o transvaginal (modificada) es el estudio diagnóstico inicial de elección para determinar la relación placenta–OCI.
+
+Por lo tanto:
+El paso diagnóstico inicial más apropiado es ecografía obstétrica con evaluación de la localización placentaria.
+
+¿Por qué la opción C es la respuesta correcta?
+Ante sospecha clínica de placenta previa, la ecografía obstétrica confirma o descarta la localización placentaria.
+Es el estudio de elección antes de cualquier manipulación cervical o vaginal.
+Permite clasificar la previa (total, parcial, marginal) y planificar el manejo según edad gestacional y estabilidad materna.
+La paciente está hemodinámicamente estable con CTG reactivo, lo que permite realizar ecografía de forma segura.
 
 ¿Por qué fallan las otras opciones?
-- Tacto vaginal: peligroso; puede provocar sangrado masivo con placenta sobre OCI.
-- Amnioscopia: no es el estudio inicial para localización placentaria.
-- Inducción inmediata: primero confirmar diagnóstico y estabilidad; previa no siempre requiere parto urgente si estable.
+Opción A (tacto vaginal): peligroso y contraindicado; puede provocar sangrado masivo al contactar placenta sobre OCI; nunca realizar tacto vaginal ante sospecha de previa.
+Opción B (amnioscopia): no es el estudio inicial para localización placentaria; no responde la pregunta diagnóstica del caso.
+Opción D (inducción inmediata del trabajo de parto): prematura como conducta inicial; primero confirmar diagnóstico con ecografía y evaluar estabilidad; la previa no siempre requiere parto urgente si la paciente está estable.
 
-Clave: sangrado indoloro brillante = sospecha previa → eco, no tacto vaginal.
+¿Cuál es la trampa del examen?
+Muchos estudiantes realizan tacto vaginal en todo sangrado obstétrico para evaluar dilatación cervical.
+Pero en placenta previa, el tacto vaginal es peligroso y puede ser fatal.
+Otra trampa: confundir con DPPNI; recuerde que la previa es indolora con útero blando, mientras el DPPNI es doloroso con útero leñoso.
 
-GINECOOBSTETRICIA — BY DR Q.
-Placenta previa
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer el cuadro clínico (sangrado indoloro brillante + útero blando en tercer trimestre).
+2. Sospechar placenta previa y evitar tacto vaginal.
+3. Realizar ecografía obstétrica para confirmar localización placentaria.
+4. Estabilizar hemodinámicamente y planificar manejo según edad gestacional y gravedad.
 
-La clave: sangrado indoloro.
+Perlas de examen
+✅ Placenta previa = sangrado rojo brillante + indoloro + útero blando.
+✅ DPPNI = sangrado oscuro + dolor + útero leñoso (cuadro opuesto).
+✅ Tacto vaginal contraindicado ante sospecha de placenta previa.
+✅ Ecografía obstétrica es el estudio diagnóstico inicial de elección.
+✅ CTG reactivo no excluye previa; evalúa bienestar fetal, no localización placentaria.
+✅ Las residencias preguntan la conducta diagnóstica segura, no la intervención más agresiva.
 
-Placenta en segmento inferior → distensión uterina → separación parcial → sangrado rojo brillante sin dolor.
-
-Conducta diagnóstica: ecografía obstétrica. NO tacto vaginal (puede desencadenar hemorragia masiva).
-
-Trampa: tacto vaginal en todo sangrado obstétrico. En placenta previa es peligroso.
-
-Referencias: Williams Obstetrics; ACOG Placenta Previa; UpToDate: Placenta Previa.`,
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Placenta Previa and Placenta Accreta Spectrum.
+• UpToDate: Placenta Previa: Epidemiology, Clinical Features, Diagnosis, and Prognosis.
+• FIGO Guidelines on Obstetric Hemorrhage.`,
   },
   {
     id: "dr-q-98",
@@ -9085,44 +9282,74 @@ Referencias: Williams Obstetrics; ACOG Placenta Previa; UpToDate: Placenta Previ
     explanation:
       "Sangrado uterino anormal con múltiples factores de riesgo para hiperplasia y cáncer de endometrio (obesidad, diabetes, nuliparidad, edad >45 años) y endometrio engrosado heterogéneo. La biopsia endometrial es obligatoria.",
     keyPoints: [
-      "Mujer ≥45 años con SUA + factores de riesgo → descartar cáncer endometrial.",
-      "Obesidad → aromatización periférica → exposición estrogénica sin oposición.",
-      "Endometrio engrosado (17 mm) debe estudiarse histológicamente.",
-      "No iniciar tratamiento hormonal empírico sin excluir malignidad.",
+      "Cuando veas: mujer ≥45 años con sangrado uterino anormal + obesidad + diabetes + endometrio engrosado (>4 mm postmenopáusica o >8-10 mm premenopáusica).",
+      "Debes pensar en: descartar cáncer de endometrio → biopsia endometrial antes de cualquier tratamiento hormonal.",
+      "Obesidad → aromatización periférica → exposición estrogénica sin oposición progesterónica.",
+      "No iniciar tratamiento hormonal empírico sin excluir malignidad en pacientes de alto riesgo.",
+      "Tema: Sangrado uterino anormal y cáncer de endometrio.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa SUA con alto riesgo de cáncer endometrial: obesidad + diabetes + nuliparidad + endometrio 17 mm = biopsia endometrial obligatoria, no tratamiento empírico.
+Esta es una pregunta clásica de ginecología porque evalúa la estratificación del riesgo de cáncer endometrial en sangrado uterino anormal y la indicación de biopsia endometrial.
+
+La clave no es iniciar tratamiento hormonal empírico.
+La clave es:
+Mujer de alto riesgo (obesidad, diabetes, nuliparidad, edad >45 años) con endometrio engrosado heterogéneo de 17 mm = biopsia endometrial obligatoria antes de cualquier manejo.
 
 ¿Qué está ocurriendo realmente?
-- Mujer 48 años, IMC 36, DM2; sangrado abundante 6 meses, ciclos irregulares.
-- Nuliparidad; eco: endometrio heterogéneo 17 mm; embarazo negativo.
+La paciente presenta:
+• Mujer de 48 años, IMC 36 kg/m², diabetes mellitus tipo 2, nulípara.
+• Sangrado menstrual abundante y prolongado desde hace 6 meses (6-8 toallas/día).
+• Ciclos cada vez más irregulares; examen pélvico sin alteraciones; útero de tamaño normal.
+• Ecografía transvaginal: endometrio heterogéneo de 17 mm; ovarios normales; embarazo negativo.
 
-¿Qué dato es clave en el examen?
-- Mujer ≥45 años con SUA + factores de riesgo → descartar cáncer endometrial.
-- Obesidad → aromatización periférica → exposición estrogénica sin oposición progesterónica.
-- Endometrio engrosado (17 mm) debe estudiarse histológicamente.
-- No iniciar tratamiento hormonal empírico sin excluir malignidad.
+Recordemos la fisiopatología del cáncer endometrial:
+• Obesidad → aromatización periférica de andrógenos en estrógenos → exposición estrogénica crónica sin oposición progesterónica.
+• Diabetes, nuliparidad y edad avanzada son factores de riesgo adicionales.
+• La secuencia clásica: hiperplasia endometrial → hiperplasia con atipia → adenocarcinoma endometrial.
+• En mujeres premenopáusicas con factores de riesgo, endometrio >8-10 mm o engrosamiento asimétrico requiere evaluación histológica.
+• FSH/estradiol no descartan malignidad ni explican un endometrio de 17 mm en paciente de alto riesgo.
+
+Por lo tanto:
+El paso diagnóstico más importante a seguir es realizar biopsia endometrial.
+
+¿Por qué la opción C es la respuesta correcta?
+La biopsia endometrial (aspiración endometrial o histeroscopia con biopsia dirigida) es el estándar de oro para descartar hiperplasia y carcinoma endometrial.
+La paciente concentra múltiples factores de riesgo (obesidad, DM2, nuliparidad, edad >45 años) y tiene endometrio engrosado de 17 mm.
+Sin biopsia, no se puede iniciar tratamiento hormonal empírico de forma segura.
+ACOG recomienda evaluación endometrial en toda mujer ≥45 años con SUA y en mujeres <45 con factores de riesgo.
 
 ¿Por qué fallan las otras opciones?
-- FSH/estradiol: no explican endometrio de 17 mm ni descartan malignidad en alto riesgo.
-- Tratamiento hormonal empírico: peligroso sin biopsia; puede enmascarar carcinoma.
-- RM pélvica: no sustituye biopsia como paso diagnóstico fundamental.
+Opción A (FSH y estradiol): no descartan malignidad; pueden orientar perimenopausia pero no explican endometrio de 17 mm ni sustituyen la biopsia en alto riesgo.
+Opción B (tratamiento hormonal empírico + reevaluación en 6 meses): peligroso; puede enmascarar carcinoma endometrial y retrasar diagnóstico; nunca iniciar hormonas sin excluir malignidad.
+Opción D (RM pélvica): no sustituye biopsia endometrial como paso diagnóstico fundamental; la RM puede complementar estadiaje pero no confirma histología.
 
-Clave: SUA + obesidad + endometrio 17 mm = biopsia endometrial, no hormonas empíricas.
+¿Cuál es la trampa del examen?
+Muchos estudiantes atribuyen el sangrado a perimenopausia fisiológica y eligen tratamiento hormonal empírico.
+Pero en paciente obesa, diabética y nulípara con endometrio de 17 mm, la prioridad es descartar cáncer endometrial.
+Otra trampa: solicitar FSH/estradiol pensando en menopausia, cuando lo que se necesita es histología endometrial.
 
-GINECOOBSTETRICIA — BY DR Q.
-Sangrado uterino anormal · riesgo de cáncer endometrial
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar factores de riesgo de cáncer endometrial (obesidad, diabetes, nuliparidad, edad).
+2. Evaluar grosor y morfología endometrial con ecografía transvaginal.
+3. Realizar biopsia endometrial si hay factores de riesgo y/o endometrio engrosado.
+4. Solo después de descartar malignidad, planificar tratamiento médico o quirúrgico del SUA.
 
-La clave: factores de riesgo (obesidad, diabetes, nuliparidad, edad) + endometrio engrosado.
+Perlas de examen
+✅ SUA + obesidad + endometrio engrosado = biopsia endometrial obligatoria.
+✅ Obesidad → aromatización periférica → estrógenos sin oposición → hiperplasia → carcinoma.
+✅ No iniciar tratamiento hormonal empírico sin excluir malignidad.
+✅ FSH/estradiol no sustituyen biopsia en pacientes de alto riesgo.
+✅ Endometrio >8-10 mm en premenopáusicas con factores de riesgo requiere evaluación histológica.
+✅ Las residencias preguntan el paso diagnóstico prioritario, no el tratamiento sintomático.
 
-Obesidad → ↑ estrógenos por aromatización → hiperplasia → atipia → carcinoma.
-
-Paso diagnóstico fundamental: biopsia endometrial. FSH no explica endometrio de 17 mm en paciente de alto riesgo.
-
-Trampa: perimenopausia fisiológica sin evaluar endometrio.
-
-Referencias: ACOG Abnormal Uterine Bleeding; Williams Gynecology; NCCN Endometrial Cancer Guidelines.`,
+Referencias
+• ACOG Committee Opinion: Abnormal Uterine Bleeding Associated With Ovulatory Dysfunction.
+• NCCN Clinical Practice Guidelines: Uterine Neoplasms.
+• Williams Gynecology.
+• UpToDate: Endometrial Cancer: Epidemiology, Risk Factors, and Prevention.
+• FIGO Classification of Endometrial Carcinoma.`,
   },
   {
     id: "dr-q-99",
@@ -9154,45 +9381,76 @@ Referencias: ACOG Abnormal Uterine Bleeding; Williams Gynecology; NCCN Endometri
     explanation:
       "Criterios clínicos de corioamnionitis: fiebre materna, taquicardia materna y fetal, útero doloroso e irritable y líquido amniótico fétido. Antibioticoterapia IV inmediata y finalización del embarazo.",
     keyPoints: [
-      "RPM + fiebre + taquicardia materna/fetal + líquido fétido + dolor uterino → corioamnionitis.",
-      "Taquicardia fetal (175 lpm) es hallazgo frecuente de infección intraamniótica.",
-      "Tratamiento: ATB IV (ampicilina + gentamicina) + finalizar embarazo.",
-      "Corioamnionitis no es indicación absoluta de cesárea.",
+      "Cuando veas: RPM prolongada + fiebre materna + taquicardia materna/fetal + líquido amniótico fétido + útero doloroso e irritable.",
+      "Debes pensar en: corioamnionitis clínica → antibióticos IV de amplio espectro + finalizar el embarazo.",
+      "La taquicardia fetal (FCF >160 lpm) es hallazgo frecuente de infección intraamniótica.",
+      "Corioamnionitis no es indicación absoluta de cesárea; la vía de parto depende de condiciones obstétricas.",
+      "Tema: Corioamnionitis clínica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa corioamnionitis clínica: RPM + fiebre + taquicardia materna/fetal + líquido fétido + útero doloroso = ATB IV + finalizar embarazo, no manejo expectante.
+Esta es una pregunta clásica de obstetricia e infectología porque evalúa el reconocimiento de corioamnionitis clínica y la conducta terapéutica ante infección intraamniótica establecida.
+
+La clave no es el manejo expectante de la ruptura prematura de membranas.
+La clave es:
+RPM + fiebre + taquicardia materna/fetal + líquido amniótico fétido + útero doloroso = corioamnionitis clínica → ATB IV + finalizar el embarazo.
 
 ¿Qué está ocurriendo realmente?
-- Primigestante 21 años, 38 semanas; RPM 24 h + disminución movimientos fetales.
-- Fiebre 38.6°C, FC materna 115, útero doloroso e irritable; líquido amniótico fétido.
-- CTG: FCF basal 175 lpm, variabilidad mínima.
+La paciente presenta:
+• Primigestante de 21 años, embarazo de 38 semanas.
+• RPM de líquido claro y abundante hace 24 horas + disminución de movimientos fetales.
+• Fiebre materna de 38.6°C, FC materna 115 lpm (taquicardia).
+• Útero doloroso a la palpación profunda e irritable; líquido amniótico de mal olor al tacto vaginal.
+• Cérvix borrado 80%, dilatación 3 cm.
+• CTG: FCF basal 175 lpm, variabilidad mínima, sin desaceleraciones (taquicardia fetal por infección).
 
-¿Qué dato es clave en el examen?
-- RPM + fiebre + taquicardia materna/fetal + líquido fétido + dolor uterino = corioamnionitis.
-- Taquicardia fetal (175 lpm) es hallazgo frecuente de infección intraamniótica.
-- Tratamiento: ATB IV (ampicilina + gentamicina) + finalizar embarazo.
-- Corioamnionitis no es indicación absoluta de cesárea.
+Recordemos la corioamnionitis clínica:
+• Infección de membranas, líquido amniótico, placenta y feto, generalmente por ascenso bacteriano tras RPM prolongada.
+• Criterios clínicos: fiebre materna (≥38°C) + taquicardia materna (>100 lpm) + taquicardia fetal (>160 lpm) + dolor uterino + líquido amniótico purulento/fétido.
+• El tratamiento requiere dos acciones simultáneas: antibioticoterapia IV de amplio espectro + finalización del embarazo (la fuente infecciosa persiste mientras continúe la gestación).
+• Esquema clásico: ampicilina + gentamicina (± clindamicina si cesárea).
+• Corioamnionitis no es indicación absoluta de cesárea; el parto vaginal es preferible si las condiciones lo permiten.
+
+Por lo tanto:
+El diagnóstico más probable es corioamnionitis clínica y la conducta es iniciar antibióticos intravenosos de amplio espectro y finalizar el embarazo.
+
+¿Por qué la opción B es la respuesta correcta?
+La paciente cumple criterios clínicos de corioamnionitis establecida (no solo RPM sin infección).
+El manejo expectante está contraindicado: la infección progresará y aumenta riesgo de sepsis materna, bacteriemia neonatal y asfixia fetal.
+Los antibióticos IV (ampicilina + gentamicina) deben iniciarse de inmediato.
+Finalizar el embarazo elimina la fuente infecciosa; con 3 cm de dilatación y cérvix borrado, el parto vaginal es viable.
 
 ¿Por qué fallan las otras opciones?
-- RPM sin infección + expectante: hay fiebre, taquicardia y líquido fétido = infección establecida.
-- DPPNI + cesárea: cuadro sin dolor intenso ni útero leñoso; sangrado no descrito como oscuro/doloroso.
-- Preeclampsia + MgSO4: no hay HTA ni proteinuria; cuadro es infeccioso.
+Opción A (RPM sin infección + manejo expectante): incorrecto; hay fiebre, taquicardia materna y fetal, líquido fétido y dolor uterino = infección establecida, no RPM aislada.
+Opción C (DPPNI + cesárea urgente): cuadro incompatible; DPPNI presenta sangrado oscuro, dolor intenso y útero leñoso/hipertono, no fiebre con líquido fétido.
+Opción D (preeclampsia grave + sulfato de magnesio): no hay hipertensión ni proteinuria; el cuadro es infeccioso, no hipertensivo.
 
-Clave: fiebre + RPM + líquido fétido + taquicardia fetal = corioamnionitis → ATB + finalizar gestación.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen manejo expectante ante RPM prolongada.
+Pero la presencia de fiebre, taquicardia y líquido fétido transforma el escenario de RPM a corioamnionitis clínica, donde el expectante está contraindicado.
+Otra trampa: indicar cesárea automática; la corioamnionitis no es indicación absoluta de cesárea si el parto vaginal es factible.
 
-GINECOOBSTETRICIA — BY DR Q.
-Corioamnionitis clínica
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer criterios clínicos de corioamnionitis (fiebre + taquicardia + dolor uterino + líquido fétido).
+2. Iniciar antibioticoterapia IV de amplio espectro de inmediato.
+3. Finalizar el embarazo (parto vaginal preferible si condiciones favorables).
+4. Monitorizar madre y recién nacido por riesgo de sepsis.
 
-La clave: signos de infección materno-fetal, no solo ruptura de membranas.
+Perlas de examen
+✅ RPM + fiebre + taquicardia materna/fetal + líquido fétido = corioamnionitis clínica.
+✅ Taquicardia fetal (>160 lpm) es hallazgo frecuente de infección intraamniótica.
+✅ Tratamiento: ATB IV (ampicilina + gentamicina) + finalizar embarazo.
+✅ Corioamnionitis no es indicación absoluta de cesárea.
+✅ Manejo expectante contraindicado cuando hay infección establecida.
+✅ Las residencias preguntan diagnóstico + conducta, no solo el diagnóstico.
 
-RPM prolongada → ascenso bacteriano → infección de membranas, líquido, placenta y feto.
-
-Tratamiento: ATB IV + finalizar gestación (la fuente infecciosa persiste mientras continúe el embarazo).
-
-Trampa: RPM → observación. Si hay corioamnionitis establecida, no manejo expectante.
-
-Referencias: ACOG Intraamniotic Infection; Williams Obstetrics; UpToDate: Clinical Chorioamnionitis.`,
+Referencias
+• ACOG Committee Opinion: Intraamniotic Infection.
+• Williams Obstetrics.
+• UpToDate: Clinical Chorioamnionitis.
+• CDC Guidelines for Prevention of Perinatal Group B Streptococcal Disease.
+• FIGO Guidelines on Intrapartum Fetal Monitoring.`,
   },
   {
     id: "dr-q-100",
@@ -9212,34 +9470,75 @@ Referencias: ACOG Intraamniotic Infection; Williams Obstetrics; UpToDate: Clinic
     explanation:
       "Eclampsia posparto. El tratamiento de elección para controlar y prevenir nuevas convulsiones es el sulfato de magnesio, superior a fenitoína y benzodiacepinas en este contexto.",
     keyPoints: [
-      "Convulsiones + hipertensión + puerperio reciente → eclampsia hasta demostrar lo contrario.",
-      "La eclampsia puede aparecer en el puerperio, incluso días después del parto.",
-      "Sulfato de magnesio es el tratamiento de elección.",
-      "Además: vía aérea, oxigenación y control de hipertensión severa.",
+      "Cuando veas: convulsiones tónico-clónicas + hipertensión severa + puerperio reciente (incluso días después del parto).",
+      "Debes pensar en: eclampsia posparto → sulfato de magnesio IV como primera intervención farmacológica.",
+      "La eclampsia puede debutar en embarazo, parto o puerperio, incluso con parto aparentemente sin complicaciones.",
+      "Sulfato de magnesio es superior a diazepam, fenitoína y levetiracetam en eclampsia obstétrica.",
+      "Tema: Eclampsia posparto.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta pregunta evalúa una trampa clásica de residencia: ante convulsiones en una puérpera, no pienses primero en epilepsia ni en benzodiacepinas, sino en eclampsia y en el fármaco anticonvulsivante específico de la enfermedad hipertensiva del embarazo.
+Esta es una pregunta clásica de obstetricia porque evalúa una trampa frecuente de residencia: ante convulsiones en una puérpera, no pensar primero en epilepsia sino en eclampsia y en el anticonvulsivante específico de la enfermedad hipertensiva del embarazo.
+
+La clave no es tratar como crisis epiléptica con benzodiacepinas o fenitoína.
+La clave es:
+Convulsiones + hipertensión severa + puerperio reciente = eclampsia posparto → sulfato de magnesio IV como primera intervención farmacológica.
 
 ¿Qué está ocurriendo realmente?
-- Mujer en primera semana de puerperio con convulsiones tónico-clónicas recurrentes.
-- Hipertensión severa (160/110 mmHg) en contexto obstétrico reciente.
-- Parto aparentemente sin complicaciones, pero la eclampsia puede debutar hasta días después del parto.
-- Cuadro compatible con eclampsia posparto, no con crisis epiléptica primaria.
+La paciente presenta:
+• Mujer de 19 años, nulípara, primera semana de puerperio tras parto institucional sin complicaciones aparentes.
+• Convulsiones tónico-clónicas generalizadas en domicilio (2 minutos) con relajación de esfínteres y cianosis peribucal.
+• Llega somnolienta y confusa; durante valoración presenta nueva convulsión tónico-clónica.
+• TA 160/110 mmHg, FC 105 lpm, SatO₂ 96% con oxígeno suplementario.
+• Cuadro compatible con eclampsia posparto, no con crisis epiléptica primaria.
 
-¿Qué dato es clave en el examen?
-- La asociación convulsión + puerperio + hipertensión arterial severa.
-- La eclampsia es convulsión en contexto de preeclampsia/eclampsia; puede ocurrir en embarazo, parto o puerperio.
-- El sulfato de magnesio IV es superior a diazepam y fenitoína para controlar y prevenir nuevas crisis en eclampsia.
+Recordemos la eclampsia:
+• Convulsión tónico-clónica generalizada en contexto de preeclampsia/eclampsia (HTA + proteinuria ± otros signos de gravedad).
+• Puede ocurrir en embarazo, parto o puerperio (hasta 48-72 h o más después del parto).
+• Un parto sin complicaciones aparentes NO excluye eclampsia posparto.
+• El sulfato de magnesio IV es el tratamiento de elección para controlar y prevenir nuevas convulsiones en eclampsia.
+• Estudios clínicos (Magpie trial) demuestran superioridad del sulfato de magnesio sobre fenitoína y diazepam en eclampsia.
+
+Por lo tanto:
+La primera intervención farmacológica indicada es sulfato de magnesio intravenoso.
+
+¿Por qué la opción C es la respuesta correcta?
+El sulfato de magnesio IV controla las convulsiones activas y previene recurrencias en eclampsia.
+Es superior a diazepam (menor recurrencia, menor mortalidad materna) y a fenitoína (inferior en prevención de nuevas crisis).
+Se administra con esquema de carga (4-6 g IV) seguido de infusión de mantenimiento (1-2 g/h).
+Además del magnesio, se requiere: vía aérea, oxigenación, control de hipertensión severa y monitorización materno-fetal.
 
 ¿Por qué fallan las otras opciones?
-- Diazepam: útil en estado epiléptico generalizado, pero no es el anticonvulsivante de elección en eclampsia ni previene recurrencias tan bien como el magnesio.
-- Fenitoína: tratamiento clásico de epilepsia, no de eclampsia; inferior al sulfato de magnesio en este contexto.
-- Levetiracetam: antiepiléptico moderno, pero no sustituye al sulfato de magnesio en eclampsia obstétrica.
+Opción A (diazepam IV): útil en estado epiléptico generalizado, pero no es el anticonvulsivante de elección en eclampsia; inferior al sulfato de magnesio en prevención de recurrencias y mortalidad materna.
+Opción B (fenitoína IV): tratamiento clásico de epilepsia, no de eclampsia; estudios demuestran inferioridad al sulfato de magnesio en este contexto obstétrico.
+Opción D (levetiracetam IV): antiepiléptico moderno sin evidencia de superioridad sobre sulfato de magnesio en eclampsia; no sustituye al tratamiento específico de la enfermedad hipertensiva del embarazo.
 
-Clave: puerperio + convulsión + HTA severa = eclampsia hasta demostrar lo contrario; primera droga = sulfato de magnesio IV.
+¿Cuál es la trampa del examen?
+Muchos estudiantes eligen diazepam o fenitoína ante cualquier convulsión, aplicando el algoritmo de estado epiléptico generalizado.
+Pero en puérpera con hipertensión severa, la eclampsia es el diagnóstico hasta demostrar lo contrario.
+Otra trampa: asumir que un parto sin complicaciones excluye eclampsia; puede debutar días después en el puerperio.
 
-Referencias: ACOG Gestational Hypertension and Preeclampsia; Williams Obstetrics; UpToDate: Eclampsia.`,
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reconocer eclampsia posparto (convulsión + HTA + contexto obstétrico reciente).
+2. Administrar sulfato de magnesio IV de inmediato (carga + mantenimiento).
+3. Asegurar vía aérea, oxigenación y posición lateral de seguridad.
+4. Controlar hipertensión severa con antihipertensivos IV seguros (labetalol, hidralazina).
+
+Perlas de examen
+✅ Convulsión + puerperio + HTA severa = eclampsia hasta demostrar lo contrario.
+✅ Eclampsia puede aparecer días después del parto, incluso con parto sin complicaciones.
+✅ Sulfato de magnesio IV es el tratamiento de elección, no diazepam ni fenitoína.
+✅ Magpie trial: magnesio superior a fenitoína en eclampsia.
+✅ Además del anticonvulsivante: vía aérea, oxigenación y control de HTA severa.
+✅ Las residencias preguntan el fármaco específico de eclampsia, no el algoritmo general de convulsiones.
+
+Referencias
+• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
+• Williams Obstetrics.
+• The Magpie Trial Collaborative Group: Magnesium Sulphate for Eclampsia.
+• UpToDate: Eclampsia.
+• WHO Recommendations for Prevention and Treatment of Pre-eclampsia and Eclampsia.`,
   },
   {
     id: "dr-q-101",
