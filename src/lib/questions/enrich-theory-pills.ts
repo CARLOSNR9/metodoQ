@@ -1,10 +1,12 @@
 import { DAILY_CHALLENGES } from "@/data/daily-challenges";
 import { DR_Q_COEXAM_QUESTIONS } from "@/data/dr-q-coexam-questions";
+import { DR_Q_HEMATOLOGIA_BANCO_GENERAL_QUESTIONS } from "@/data/dr-q-hematologia-banco-general-questions";
 import { DR_Q_MULTISPECIALTY_QUESTIONS } from "@/data/dr-q-multispecialty-questions";
 import { DR_Q_UNIVERSAL_QUESTIONS } from "@/data/dr-q-universal-questions";
 import { DIAGNOSTIC_THEORY_PILLS } from "@/data/diagnostic-theory-pills";
 import { EXTENDED_QUESTIONS } from "@/data/extended-questions";
 import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
+import { HEMATOLOGIA_BANCO_THEORY_PILLS } from "@/data/hematologia-banco-theory-pills";
 import { QUESTION_THEORY_PILLS } from "@/data/question-theory-pills";
 import { UCC_PASTO_DIAGNOSTIC_QUESTIONS } from "@/data/ucc-pasto-diagnostico-questions";
 import { UCC_PASTO_PRO_QUESTIONS } from "@/data/ucc-pasto-pro-questions";
@@ -17,6 +19,7 @@ const REPOSITORY_QUESTIONS: TrainingQuestion[] = [
   ...EXTENDED_QUESTIONS,
   ...DR_Q_UNIVERSAL_QUESTIONS,
   ...DR_Q_MULTISPECIALTY_QUESTIONS,
+  ...DR_Q_HEMATOLOGIA_BANCO_GENERAL_QUESTIONS,
   ...DR_Q_COEXAM_QUESTIONS,
   ...DAILY_CHALLENGES,
   ...UDEA_DIAGNOSTIC_QUESTIONS,
@@ -29,6 +32,7 @@ function buildTheoryIndex(): Record<string, string> {
   const index: Record<string, string> = {
     ...QUESTION_THEORY_PILLS,
     ...DIAGNOSTIC_THEORY_PILLS,
+    ...HEMATOLOGIA_BANCO_THEORY_PILLS,
   };
 
   for (const question of REPOSITORY_QUESTIONS) {

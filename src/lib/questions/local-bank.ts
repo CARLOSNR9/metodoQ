@@ -1,5 +1,6 @@
 import { DAILY_CHALLENGES } from "@/data/daily-challenges";
 import { DR_Q_COEXAM_QUESTIONS } from "@/data/dr-q-coexam-questions";
+import { DR_Q_HEMATOLOGIA_BANCO_GENERAL_QUESTIONS } from "@/data/dr-q-hematologia-banco-general-questions";
 import { DR_Q_MULTISPECIALTY_QUESTIONS } from "@/data/dr-q-multispecialty-questions";
 import { DR_Q_UNIVERSAL_QUESTIONS } from "@/data/dr-q-universal-questions";
 import { EXTENDED_QUESTIONS } from "@/data/extended-questions";
@@ -29,6 +30,7 @@ export function getLocalQuestionBank(): TrainingQuestion[] {
     EXTENDED_QUESTIONS,
     DR_Q_UNIVERSAL_QUESTIONS,
     DR_Q_MULTISPECIALTY_QUESTIONS,
+    DR_Q_HEMATOLOGIA_BANCO_GENERAL_QUESTIONS,
     DR_Q_COEXAM_QUESTIONS,
     UDEA_DIAGNOSTIC_QUESTIONS,
     UNAL_DIAGNOSTIC_QUESTIONS,
@@ -44,6 +46,7 @@ export function getAllRepositoryQuestions(): TrainingQuestion[] {
     EXTENDED_QUESTIONS,
     DR_Q_UNIVERSAL_QUESTIONS,
     DR_Q_MULTISPECIALTY_QUESTIONS,
+    DR_Q_HEMATOLOGIA_BANCO_GENERAL_QUESTIONS,
     DR_Q_COEXAM_QUESTIONS,
     UDEA_DIAGNOSTIC_QUESTIONS,
     UNAL_DIAGNOSTIC_QUESTIONS,
