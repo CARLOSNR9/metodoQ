@@ -1,0 +1,861 @@
+PREGUNTA 11 (CIRUGÍA GENERAL)
+Hombre de 40 años consulta por una masa en región inguinal que aparece al realizar esfuerzos físicos y al toser, desapareciendo completamente cuando se encuentra en decúbito. Al examen físico la masa es reductible, aumenta con la maniobra de Valsalva y no existen signos de encarcelación ni estrangulación.
+¿Cuál es el diagnóstico más probable y el manejo más oportuno?
+A. Hernia inguinal reducible; remisión a cirugía general para hernioplastia electiva.
+B. Hernia estrangulada; laparotomía urgente.
+C. Hernia femoral encarcelada; observación ambulatoria.
+D. Lipoma inguinal; manejo conservador indefinido.
+✅ Respuesta correcta: A. Hernia inguinal reducible; remisión a cirugía general para hernioplastia electiva.
+La presencia de una masa inguinal que aumenta con el esfuerzo, es reductible y desaparece en decúbito es altamente sugestiva de hernia inguinal reducible. En ausencia de signos de complicación, el manejo indicado es la corrección quirúrgica programada.
+Lo que debes saber para el examen
+Cuando veas:
+• Masa inguinal.
+• Aumenta con el esfuerzo.
+• Reducible.
+• Valsalva positivo.
+Debes pensar en:
+Hernia inguinal reducible.
+Tema: Hernias de la pared abdominal.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el diagnóstico y manejo de la hernia inguinal no complicada.
+La clave no es la masa.
+La clave es:
+Que desaparece al acostarse.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Tumoración inguinal.
+• Aparición con esfuerzo.
+• Reducción espontánea en decúbito.
+Esto corresponde a:
+Hernia inguinal reducible.
+¿Qué significa reducible?
+Que el contenido herniario:
+Puede regresar a la cavidad abdominal.
+Por ello:
+No existe encarcelación.
+¿Requiere cirugía?
+Sí.
+El tratamiento definitivo es:
+Hernioplastia electiva.
+¿Por qué NO observación indefinida?
+Porque las hernias:
+No se resuelven espontáneamente.
+Y pueden progresar a:
+• Encarcelación.
+• Estrangulación.
+¿Por qué NO cirugía urgente?
+Porque no existen:
+• Dolor intenso.
+• Eritema.
+• Signos de isquemia.
+• Imposibilidad de reducción.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Masa inguinal."
+Y responden:
+Cirugía urgente.
+Sin embargo:
+El dato decisivo es:
+Que la hernia es reducible y no complicada.
+Esto orienta a:
+Corrección quirúrgica programada.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar masa inguinal.
+2.	Evaluar reducibilidad.
+3.	Buscar signos de complicación.
+4.	Diagnosticar hernia reducible.
+5.	Programar hernioplastia electiva.
+Perlas de examen
+✅ La hernia inguinal es la hernia de pared abdominal más frecuente.
+✅ La maniobra de Valsalva aumenta la protrusión herniaria.
+✅ Una hernia reducible no constituye una urgencia quirúrgica.
+✅ El tratamiento definitivo es quirúrgico.
+✅ El encarcelamiento implica imposibilidad de reducción.
+✅ La estrangulación se asocia a compromiso vascular.
+✅ Dolor intenso y cambios cutáneos sugieren complicación.
+Referencias
+• Schwartz's Principles of Surgery.
+• Sabiston Textbook of Surgery.
+• Townsend. Sabiston Surgery.
+• European Hernia Society Guidelines.
+• UpToDate: Adult Inguinal Hernia.
+
+PREGUNTA 12 (NEUROLOGÍA - URGENCIAS)
+Hombre de 45 años presenta movimientos tónico-clónicos generalizados continuos. Recibe una dosis inicial de benzodiacepina por vía intramuscular sin respuesta clínica. Un minuto después se obtiene acceso venoso periférico y se administra una benzodiacepina intravenosa, persistiendo la actividad convulsiva.
+¿Cuál es el diagnóstico y el siguiente paso más apropiado en el tratamiento?
+A. Convulsión febril; repetir benzodiacepina intravenosa indefinidamente.
+B. Estado epiléptico convulsivo establecido; administrar levetiracetam, ácido valproico o fosfenitoína intravenosa.
+C. Estado epiléptico refractario; iniciar anestesia general inmediatamente.
+D. Crisis psicógena no epiléptica; suspender tratamiento anticonvulsivante.
+✅ Respuesta correcta: B. Estado epiléptico convulsivo establecido; administrar levetiracetam, ácido valproico o fosfenitoína intravenosa.
+La persistencia de las convulsiones a pesar de benzodiacepinas iniciales corresponde a un estado epiléptico convulsivo establecido. El siguiente escalón terapéutico consiste en administrar un anticonvulsivante de segunda línea por vía intravenosa.
+Lo que debes saber para el examen
+Cuando veas:
+• Convulsión continua.
+• Benzodiacepina sin respuesta.
+• Persistencia de actividad convulsiva.
+Debes pensar en:
+Estado epiléptico establecido.
+Tema: Estado epiléptico.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el algoritmo moderno del estado epiléptico.
+La clave no es la duración exacta.
+La clave es:
+Que ya fracasó el tratamiento inicial con benzodiacepinas.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Crisis tónico-clónica persistente.
+• Benzodiacepina IM.
+• Benzodiacepina IV.
+• Sin control de la crisis.
+Esto corresponde a:
+Estado epiléptico convulsivo establecido.
+¿Cuál es el siguiente paso?
+Administrar un anticonvulsivante de segunda línea:
+• Levetiracetam IV.
+• Ácido valproico IV.
+• Fosfenitoína IV.
+¿Cuándo se considera refractario?
+Cuando persiste:
+Después de benzodiacepinas y un anticonvulsivante de segunda línea.
+En ese momento se considera:
+Estado epiléptico refractario.
+Y se requiere:
+• Intubación.
+• Sedación continua.
+• UCI.
+¿Por qué NO seguir administrando benzodiacepinas?
+Porque aumenta:
+• Depresión respiratoria.
+• Hipotensión.
+Sin mejorar significativamente el control de la crisis.
+¿Cuál es la trampa de examen?
+Muchos estudiantes responden:
+"Intubación inmediata."
+Sin embargo:
+Todavía no ha recibido el:
+Anticonvulsivante de segunda línea.
+Esto orienta a:
+Levetiracetam, valproato o fosfenitoína IV.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Benzodiacepina inicial.
+2.	Persistencia de crisis.
+3.	Anticonvulsivante de segunda línea.
+4.	Reevaluación.
+5.	Si continúa → estado epiléptico refractario.
+Perlas de examen
+✅ Estado epiléptico = crisis ≥5 minutos o crisis repetidas sin recuperación de conciencia.
+✅ Las benzodiacepinas son la primera línea.
+✅ Levetiracetam, valproato y fosfenitoína son tratamientos de segunda línea.
+✅ La fosfenitoína tiene menos efectos adversos que la fenitoína.
+✅ El estado epiléptico refractario requiere UCI.
+✅ La hipoglucemia siempre debe descartarse precozmente.
+✅ El retraso terapéutico aumenta la morbimortalidad.
+Referencias
+• American Epilepsy Society Guidelines.
+• Adams and Victor's Principles of Neurology.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Convulsive Status Epilepticus in Adults.
+• Neurocritical Care Society Guidelines.
+
+PREGUNTA 13 (MEDICINA INTERNA - URGENCIAS)
+Hombre de 70 años con antecedente de EPOC consulta por cuadro de 2 días de evolución consistente en fiebre, tos productiva, disnea y deterioro del estado general. Durante la valoración presenta confusión aguda, hipoxemia y estudios de laboratorio compatibles con hipoperfusión tisular.
+¿Cuál es la conducta más adecuada en el servicio de urgencias?
+A. Iniciar broncodilatadores inhalados y dar egreso con antibiótico oral.
+B. Administrar líquidos intravenosos, obtener cultivos, iniciar antibióticos de amplio espectro y oxigenoterapia temprana.
+C. Solicitar tomografía de tórax antes de iniciar cualquier tratamiento.
+D. Iniciar únicamente corticosteroides sistémicos y observación.
+✅ Respuesta correcta: B. Administrar líquidos intravenosos, obtener cultivos, iniciar antibióticos de amplio espectro y oxigenoterapia temprana.
+El cuadro clínico es compatible con neumonía adquirida en la comunidad complicada con sepsis. La presencia de alteración del estado mental, hipoxemia y elevación del lactato obliga a iniciar de manera inmediata el paquete de manejo para sepsis, incluyendo reanimación temprana, toma de cultivos y antibióticos intravenosos.
+Lo que debes saber para el examen
+Cuando veas:
+• Neumonía.
+• Confusión.
+• Lactato elevado.
+• Hipoxemia.
+Debes pensar en:
+Sepsis de origen pulmonar.
+Tema: Sepsis.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el reconocimiento temprano de la sepsis.
+La clave no es el EPOC.
+La clave es:
+La combinación de infección e hipoperfusión.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Infección respiratoria.
+• Alteración del estado mental.
+• Hipoxemia.
+• Lactato elevado.
+Esto cumple criterios de:
+Sepsis.
+¿Cuál es la conducta inmediata?
+El paquete inicial incluye:
+• Oxigenoterapia.
+• Acceso venoso.
+• Cultivos.
+• Antibióticos intravenosos tempranos.
+• Reanimación con cristaloides.
+¿Por qué es tan importante el tiempo?
+Porque:
+Cada hora de retraso en el inicio de antibióticos aumenta la mortalidad.
+¿Qué antibióticos podrían utilizarse?
+Dependiendo del contexto:
+• Ceftriaxona + azitromicina.
+o
+• Ampicilina/sulbactam + macrólido.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"EPOC."
+Y responden:
+Exacerbación aislada de EPOC.
+Sin embargo:
+El dato decisivo es:
+La presencia de fiebre, confusión y lactato elevado.
+Esto orienta a:
+Sepsis secundaria a neumonía.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Reconocer infección.
+2.	Identificar disfunción orgánica.
+3.	Diagnosticar sepsis.
+4.	Iniciar antibióticos tempranos.
+5.	Realizar reanimación y monitorización.
+Perlas de examen
+✅ Lactato elevado es marcador de hipoperfusión tisular.
+✅ La confusión constituye disfunción orgánica.
+✅ Los antibióticos deben iniciarse lo antes posible.
+✅ Los cultivos deben obtenerse antes de antibióticos si no retrasan el tratamiento.
+✅ La neumonía es una de las causas más frecuentes de sepsis.
+✅ La oxigenoterapia forma parte del manejo inicial.
+✅ qSOFA alterado aumenta la sospecha de sepsis.
+Referencias
+• Surviving Sepsis Campaign Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Tintinalli's Emergency Medicine.
+• GOLD Guidelines.
+• IDSA/ATS Guidelines for Community-Acquired Pneumonia.
+
+PREGUNTA 14 (MEDICINA INTERNA - CUIDADO CRÍTICO)
+Hombre de 60 años consulta por deterioro progresivo del estado general. Días previos presentó síntomas urinarios y fiebre, recibiendo tratamiento antibiótico ambulatorio sin mejoría. Al ingreso presenta hipotensión, fiebre y alteración del estado de conciencia. Se inicia reanimación con cristaloides (30 mL/kg) y antibióticos de amplio espectro. Posteriormente persiste hipotenso y con elevación del lactato sérico.
+¿Cuál es el siguiente paso más apropiado y cuál es la razón para realizarlo?
+A. Administrar un segundo bolo de cristaloides y observar la respuesta.
+B. Iniciar norepinefrina para mantener una PAM ≥65 mmHg debido a choque séptico.
+C. Iniciar dopamina por el antecedente de infección urinaria.
+D. Suspender líquidos e iniciar diuréticos intravenosos.
+✅ Respuesta correcta: B. Iniciar norepinefrina para mantener una PAM ≥65 mmHg debido a choque séptico.
+La persistencia de hipotensión e hipoperfusión tisular después de una adecuada reanimación con líquidos define choque séptico. En este contexto se requiere el inicio temprano de vasopresores, siendo la norepinefrina el fármaco de primera línea.
+Lo que debes saber para el examen
+Cuando veas:
+• Infección.
+• Hipotensión persistente.
+• Lactato elevado.
+• Líquidos adecuados.
+Debes pensar en:
+Choque séptico.
+Tema: Sepsis y choque séptico.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la diferencia entre sepsis y choque séptico.
+La clave no es la infección urinaria.
+La clave es:
+La persistencia de la hipotensión tras líquidos.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Infección probable de origen urinario.
+• Hipotensión severa.
+• Lactato elevado.
+• Persistencia de hipoperfusión.
+A pesar de:
+• Cristaloides 30 mL/kg.
+• Antibióticos adecuados.
+Esto corresponde a:
+Choque séptico.
+¿Cuál es la definición práctica?
+Hipotensión persistente que requiere:
+Vasopresores para mantener PAM ≥65 mmHg.
+Y generalmente:
+Lactato >2 mmol/L.
+¿Cuál es el vasopresor de elección?
+La respuesta clásica es:
+Norepinefrina.
+¿Por qué norepinefrina?
+Porque:
+• Aumenta la resistencia vascular sistémica.
+• Mejora la perfusión tisular.
+• Tiene menor riesgo de arritmias que dopamina.
+¿Cuál es el objetivo?
+Mantener:
+PAM ≥65 mmHg.
+Para asegurar:
+Perfusión cerebral, renal y coronaria.
+¿Por qué NO más líquidos indefinidamente?
+Porque ya recibió:
+Reanimación inicial adecuada.
+El problema ahora es:
+Vasoplejía séptica.
+No hay déficit de volumen.
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen:
+"Hipotensión."
+Y responden:
+Más líquidos.
+Sin embargo:
+El dato decisivo es:
+La persistencia de hipotensión después de 30 mL/kg.
+Esto define:
+Choque séptico.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar infección.
+2.	Administrar líquidos iniciales.
+3.	Iniciar antibióticos tempranos.
+4.	Reevaluar perfusión.
+5.	Si persiste hipotensión → iniciar norepinefrina.
+Perlas de examen
+✅ La norepinefrina es el vasopresor de primera línea en choque séptico.
+✅ PAM objetivo ≥65 mmHg.
+✅ Lactato elevado indica hipoperfusión tisular.
+✅ El choque séptico es una emergencia con alta mortalidad.
+✅ Los antibióticos deben administrarse precozmente.
+✅ La dopamina se asocia a más arritmias.
+✅ El control del foco infeccioso es fundamental para la supervivencia.
+Referencias
+• Surviving Sepsis Campaign 2021.
+• Harrison's Principles of Internal Medicine.
+• Marino's The ICU Book.
+• Tintinalli's Emergency Medicine.
+• SCCM Guidelines for Septic Shock.
+
+PREGUNTA 15 (NEUMOLOGÍA)
+Hombre de 64 años con diagnóstico de EPOC GOLD B en tratamiento con tiotropio consulta por aumento progresivo de la disnea, incremento del volumen del esputo y cambio a expectoración purulenta. Se encuentra consciente y orientado. La gasometría arterial evidencia hipercapnia con acidemia e hipoxemia.
+¿Cuál es el manejo inicial más apropiado y cuál sería el manejo crónico posterior?
+A. Oxígeno suplementario, broncodilatadores de acción corta, corticosteroides sistémicos, antibióticos y posteriormente terapia dual LABA/LAMA.
+B. Intubación orotraqueal inmediata y ventilación mecánica invasiva; posteriormente oxígeno domiciliario.
+C. Antibióticos únicamente y continuar tiotropio como único tratamiento.
+D. Oxígeno al 100% por mascarilla de no reinhalación y egreso con salbutamol inhalado.
+✅ Respuesta correcta: A. Oxígeno suplementario, broncodilatadores de acción corta, corticosteroides sistémicos, antibióticos y posteriormente terapia dual LABA/LAMA.
+El paciente presenta una exacerbación aguda de EPOC con insuficiencia respiratoria hipercápnica. El manejo inicial incluye oxigenoterapia titulada, broncodilatadores de acción corta, corticosteroides sistémicos y antibióticos debido a la presencia de esputo purulento. Una vez estabilizado, debe optimizarse el tratamiento de mantenimiento con doble broncodilatación LABA/LAMA.
+Lo que debes saber para el examen
+Cuando veas:
+• EPOC.
+• Aumento de disnea.
+• Esputo purulento.
+• Acidosis respiratoria.
+Debes pensar en:
+Exacerbación aguda de EPOC.
+Tema: EPOC.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el manejo agudo y crónico del EPOC.
+La clave no es el antecedente.
+La clave es:
+La gasometría.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Disnea.
+• Sibilancias.
+• Esputo purulento.
+• pH 7.30.
+• PaCO₂ elevada.
+Esto corresponde a:
+Exacerbación aguda de EPOC.
+¿Cuál es el manejo inicial?
+1.	Oxígeno suplementario titulado.
+Meta:
+SatO₂ 88-92%.
+2.	Broncodilatadores de acción corta.
+• Salbutamol.
+• Ipratropio.
+3.	Corticoides sistémicos.
+Ejemplo:
+• Prednisolona.
+• Hidrocortisona.
+4.	Antibióticos.
+Porque presenta:
+Esputo purulento.
+¿Qué hacer con la gasometría?
+El pH de 7.30 indica:
+Acidosis respiratoria aguda sobre crónica.
+Por ello:
+Debe considerarse ventilación mecánica no invasiva (VNI) si la acidosis persiste o empeora.
+¿Por qué NO intubarlo inmediatamente?
+Porque:
+• Está consciente.
+• No presenta agotamiento respiratorio.
+• No hay contraindicación para VNI.
+¿Cuál es el manejo crónico?
+Actualmente las guías GOLD recomiendan:
+Doble broncodilatación:
+• LABA + LAMA.
+Ejemplos:
+• Formoterol + tiotropio.
+• Indacaterol + glicopirronio.
+¿Cuándo agregar corticoide inhalado?
+En pacientes con:
+• Exacerbaciones frecuentes.
+• Eosinofilia elevada.
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen:
+"PaO₂ 55."
+Y responden:
+Oxígeno al 100%.
+Sin embargo:
+El dato decisivo es:
+La hipercapnia.
+Esto obliga a:
+Oxigenoterapia controlada.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Reconocer exacerbación.
+2.	Administrar oxígeno titulado.
+3.	Broncodilatadores de acción corta.
+4.	Corticoides y antibióticos.
+5.	Optimizar tratamiento crónico con LABA/LAMA.
+Perlas de examen
+✅ Los tres criterios de Anthonisen son: aumento de disnea, aumento del volumen del esputo y purulencia.
+✅ SatO₂ objetivo en EPOC: 88-92%.
+✅ La VNI disminuye mortalidad e intubación.
+✅ LABA/LAMA es la terapia de mantenimiento preferida en muchos pacientes GOLD B.
+✅ El oxígeno al 100% puede empeorar la hipercapnia.
+✅ Los corticosteroides sistémicos acortan la recuperación.
+✅ El abandono del tabaquismo es la medida más efectiva para modificar la progresión de la enfermedad.
+Referencias
+• GOLD Report 2025.
+• Harrison's Principles of Internal Medicine.
+• Murray & Nadel's Textbook of Respiratory Medicine.
+• UpToDate: Acute Exacerbations of COPD.
+• ERS/ATS Guidelines on COPD Exacerbations.
+
+PREGUNTA 16 (MEDICINA INTERNA - URGENCIAS)
+Hombre de 50 años consulta por dolor torácico súbito acompañado de disnea intensa de inicio reciente. Al examen físico se encuentra hemodinámicamente estable, con leve taquicardia y saturación de oxígeno de 93% al aire ambiente. Niega trauma reciente y no refiere antecedentes médicos de importancia.
+¿Cuál es el manejo inicial más apropiado?
+A. Solicitar dímero D y, si es positivo, realizar angiotomografía pulmonar.
+B. Iniciar trombólisis sistémica inmediata.
+C. Solicitar ecocardiograma transesofágico urgente.
+D. Administrar antibióticos de amplio espectro.
+✅ Respuesta correcta: A. Solicitar dímero D y, si es positivo, realizar angiotomografía pulmonar.
+El cuadro clínico es sugestivo de tromboembolismo pulmonar (TEP). En un paciente hemodinámicamente estable, el abordaje inicial consiste en estimar la probabilidad clínica (Wells o Ginebra). Si la probabilidad es baja o intermedia, debe solicitarse dímero D y confirmar posteriormente con angiotomografía pulmonar cuando esté indicado.
+Lo que debes saber para el examen
+Cuando veas:
+• Dolor torácico súbito.
+• Disnea aguda.
+• Taquicardia.
+• Estabilidad hemodinámica.
+Debes pensar en:
+Tromboembolismo pulmonar.
+Tema: Tromboembolismo pulmonar.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el algoritmo diagnóstico del TEP.
+La clave no es el dolor torácico.
+La clave es:
+La combinación de disnea súbita y taquicardia.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Disnea aguda.
+• Dolor torácico.
+• Hipoxemia leve.
+• Taquicardia.
+Esto obliga a sospechar:
+Tromboembolismo pulmonar.
+¿Qué debe hacerse primero?
+Determinar:
+Probabilidad clínica.
+Si es baja o intermedia:
+Solicitar:
+Dímero D.
+Si resulta positivo:
+Realizar:
+Angiotomografía pulmonar.
+¿Cuándo se tromboliza?
+Solo en:
+TEP de alto riesgo.
+Es decir:
+• Hipotensión.
+• Choque.
+• Inestabilidad hemodinámica.
+Hallazgos ausentes en este caso.
+¿Por qué NO antibióticos?
+No existen datos que sugieran:
+Infección respiratoria.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Disnea intensa."
+Y responden:
+Trombólisis inmediata.
+Sin embargo:
+El dato decisivo es:
+La estabilidad hemodinámica.
+Esto obliga primero a:
+Confirmar el diagnóstico.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Sospechar TEP.
+2.	Calcular probabilidad clínica.
+3.	Solicitar dímero D si corresponde.
+4.	Confirmar con angiotomografía.
+5.	Iniciar anticoagulación según resultados.
+Perlas de examen
+✅ La angiotomografía pulmonar es el estudio diagnóstico de elección.
+✅ El dímero D tiene alto valor predictivo negativo.
+✅ La trombólisis se reserva para TEP de alto riesgo.
+✅ La taquicardia es uno de los hallazgos más frecuentes.
+✅ La radiografía de tórax puede ser normal.
+✅ El ECG puede mostrar taquicardia sinusal.
+✅ La estabilidad hemodinámica define gran parte del manejo inicial.
+Referencias
+• ESC Guidelines for Acute Pulmonary Embolism.
+• Harrison's Principles of Internal Medicine.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Diagnosis of Acute Pulmonary Embolism.
+• Braunwald's Heart Disease.
+
+PREGUNTA 17 (GASTROENTEROLOGÍA)
+Mujer de 45 años consulta por hematemesis abundante y melena de inicio reciente. Durante la valoración presenta signos clínicos de hipovolemia leve. Se realiza endoscopia digestiva alta que evidencia una úlcera duodenal con sangrado activo en chorro.
+¿Cuál es la clasificación de Forrest y cuál es el manejo inicial más adecuado?
+A. Forrest III; inhibidor de bomba de protones oral y egreso.
+B. Forrest IIc; observación hospitalaria.
+C. Forrest Ia; terapia endoscópica urgente asociada a inhibidor de bomba de protones intravenoso.
+D. Forrest IIb; erradicación ambulatoria de Helicobacter pylori.
+✅ Respuesta correcta: C. Forrest Ia; terapia endoscópica urgente asociada a inhibidor de bomba de protones intravenoso.
+El sangrado activo en chorro corresponde a una lesión Forrest Ia, la categoría con mayor riesgo de resangrado. Requiere tratamiento endoscópico inmediato (inyección, termocoagulación o hemoclips) junto con inhibidores de bomba de protones intravenosos y reanimación hemodinámica.
+Lo que debes saber para el examen
+Cuando veas:
+• Hematemesis.
+• Melena.
+• Úlcera con sangrado activo.
+• Inestabilidad o hipovolemia.
+Debes pensar en:
+Forrest Ia.
+Tema: Hemorragia digestiva alta.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la clasificación de Forrest.
+La clave no es la úlcera.
+La clave es:
+El tipo de sangrado observado en la endoscopia.
+¿Cómo se clasifica Forrest?
+Forrest Ia:
+• Sangrado activo en chorro.
+Forrest Ib:
+• Sangrado activo en babeo.
+Forrest IIa:
+• Vaso visible no sangrante.
+Forrest IIb:
+• Coágulo adherido.
+Forrest IIc:
+• Mancha plana pigmentada.
+Forrest III:
+• Base limpia.
+¿Qué tiene esta paciente?
+La descripción clásica es:
+Sangrado activo en chorro.
+Por tanto corresponde a:
+Forrest Ia.
+¿Qué manejo requiere?
+1.	Reanimación hemodinámica.
+2.	Inhibidor de bomba de protones IV.
+3.	Endoscopia terapéutica urgente.
+¿Qué IBP se utiliza?
+Frecuentemente:
+• Omeprazol IV.
+• Pantoprazol IV.
+¿Y Helicobacter pylori?
+Debe investigarse y erradicarse posteriormente.
+Pero:
+No es la prioridad inmediata.
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen:
+"Antecedente de H. pylori."
+Y responden:
+Erradicación antibiótica.
+Sin embargo:
+El dato decisivo es:
+El sangrado activo.
+Esto obliga a:
+Control endoscópico urgente.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar hemorragia digestiva alta.
+2.	Revisar clasificación Forrest.
+3.	Reconocer Forrest Ia.
+4.	Iniciar IBP IV.
+5.	Realizar hemostasia endoscópica urgente.
+Perlas de examen
+✅ Forrest Ia = sangrado activo en chorro.
+✅ Forrest Ib = sangrado activo en babeo.
+✅ Forrest IIa = vaso visible.
+✅ Forrest IIb = coágulo adherido.
+✅ Forrest III = base limpia.
+✅ Forrest Ia tiene alto riesgo de resangrado.
+✅ La hemostasia endoscópica es el tratamiento de elección.
+Referencias
+• Sleisenger and Fordtran's Gastrointestinal Disease.
+• Harrison's Principles of Internal Medicine.
+• ESGE Guideline for Nonvariceal Upper GI Bleeding.
+• UpToDate: Peptic Ulcer Bleeding.
+• ASGE Guidelines on Upper Gastrointestinal Hemorrhage.
+
+PREGUNTA 18 (CIRUGÍA GENERAL)
+Hombre de 50 años consulta por dolor abdominal súbito e intenso de inicio reciente. Al examen físico presenta abdomen rígido con signos de irritación peritoneal generalizada. Una radiografía en decúbito lateral evidencia aire libre subdiafragmático.
+¿Cuál es el diagnóstico más probable?
+A. Pancreatitis aguda grave.
+B. Colecistitis aguda complicada.
+C. Perforación de úlcera péptica con neumoperitoneo.
+D. Obstrucción intestinal mecánica.
+✅ Respuesta correcta: C. Perforación de úlcera péptica con neumoperitoneo.
+La presencia de dolor abdominal súbito, abdomen en tabla y neumoperitoneo en una radiografía simple es altamente sugestiva de perforación de una víscera hueca, siendo la perforación de una úlcera péptica una de las causas más frecuentes.
+Lo que debes saber para el examen
+Cuando veas:
+• Dolor epigástrico súbito.
+• Abdomen rígido.
+• Peritonitis.
+• Aire libre subdiafragmático.
+Debes pensar en:
+Perforación de úlcera péptica.
+Tema: Abdomen agudo quirúrgico.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las urgencias quirúrgicas más importantes.
+La clave no es el dolor.
+La clave es:
+El neumoperitoneo.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Dolor súbito.
+• Signos de peritonitis.
+• Aire libre intraperitoneal.
+Esto significa:
+Perforación de una víscera hueca.
+¿Cuál es la causa más frecuente en los exámenes?
+La respuesta clásica es:
+Úlcera péptica perforada.
+¿Por qué aparece aire bajo el diafragma?
+Porque el contenido gaseoso del tubo digestivo:
+Escapa hacia la cavidad peritoneal.
+Produciendo:
+Neumoperitoneo.
+¿Qué hallazgo físico es característico?
+Abdomen en tabla.
+Debido a:
+Irritación peritoneal generalizada.
+¿Cuál es la conducta?
+• Reanimación inicial.
+• Antibióticos de amplio espectro.
+• Inhibidor de bomba de protones.
+• Valoración quirúrgica urgente.
+¿Por qué NO pancreatitis?
+La pancreatitis puede producir:
+Dolor epigástrico intenso.
+Pero:
+No produce neumoperitoneo.
+¿Por qué NO obstrucción intestinal?
+La radiografía mostraría:
+Niveles hidroaéreos.
+No aire libre subdiafragmático.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Dolor epigástrico."
+Y responden:
+Pancreatitis.
+Sin embargo:
+El dato decisivo es:
+El aire libre subdiafragmático.
+Esto prácticamente confirma:
+Perforación de víscera hueca.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar dolor abdominal súbito.
+2.	Reconocer peritonitis.
+3.	Detectar neumoperitoneo.
+4.	Diagnosticar perforación de víscera hueca.
+5.	Pensar primero en úlcera péptica perforada.
+Perlas de examen
+✅ Aire libre subdiafragmático = neumoperitoneo hasta demostrar lo contrario.
+✅ La úlcera duodenal perforada es una causa clásica de abdomen agudo.
+✅ El abdomen rígido sugiere irritación peritoneal.
+✅ Es una urgencia quirúrgica.
+✅ La TAC es el estudio más sensible para detectar neumoperitoneo.
+✅ Deben iniciarse antibióticos de amplio espectro precozmente.
+✅ El retraso quirúrgico aumenta significativamente la mortalidad.
+Referencias
+• Schwartz's Principles of Surgery.
+• Sabiston Textbook of Surgery.
+• Harrison's Principles of Internal Medicine.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Perforated Peptic Ulcer.
+
+PREGUNTA 19 (GASTROENTEROLOGÍA)
+Mujer de 60 años consulta por dolor epigástrico intenso irradiado a la espalda, asociado a náuseas y múltiples episodios de vómito. Refiere intolerancia completa a la vía oral durante las últimas 24 horas. Los estudios muestran elevación significativa de lipasa sérica y tomografía compatible con pancreatitis aguda intersticial sin necrosis ni colecciones.
+¿Cuál es la orden médica más adecuada respecto al soporte nutricional?
+A. Mantener ayuno absoluto hasta normalización de la lipasa.
+B. Iniciar nutrición parenteral total de forma temprana.
+C. Reiniciar alimentación enteral temprana tan pronto sea tolerada.
+D. Mantener ayuno durante 7 días y repetir tomografía.
+✅ Respuesta correcta: C. Reiniciar alimentación enteral temprana tan pronto sea tolerada.
+En la pancreatitis aguda leve o moderada se recomienda reiniciar la alimentación enteral precoz una vez disminuyan las náuseas y el dolor, incluso dentro de las primeras 24-48 horas. La nutrición enteral reduce complicaciones infecciosas, estancia hospitalaria y mortalidad en comparación con la nutrición parenteral.
+Lo que debes saber para el examen
+Cuando veas:
+• Pancreatitis aguda.
+• Sin necrosis.
+• Sin colecciones.
+• Estabilidad clínica.
+Debes pensar en:
+Nutrición enteral temprana.
+Tema: Pancreatitis aguda.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa uno de los cambios más importantes en el manejo moderno de la pancreatitis.
+La clave no es la lipasa.
+La clave es:
+La ausencia de complicaciones locales.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Pancreatitis aguda.
+• TAC sin necrosis.
+• Sin colecciones.
+• Sin falla orgánica.
+Esto corresponde a:
+Pancreatitis aguda leve.
+¿Qué se hacía antes?
+Durante años se indicaba:
+Ayuno prolongado.
+Esperando:
+Normalización de enzimas.
+Actualmente esto es incorrecto.
+¿Qué recomiendan las guías?
+Alimentación enteral temprana.
+Tan pronto como el paciente la tolere.
+¿Por qué?
+Porque:
+• Preserva la barrera intestinal.
+• Disminuye translocación bacteriana.
+• Reduce infecciones.
+• Disminuye estancia hospitalaria.
+¿Es necesario esperar que la lipasa se normalice?
+No.
+La evolución clínica es más importante que:
+Los valores enzimáticos.
+¿Cuándo usar nutrición parenteral?
+Solo cuando:
+La vía enteral no sea posible o esté contraindicada.
+¿Cuál es la trampa de examen?
+Muchos estudiantes recuerdan:
+"Pancreatitis = ayuno."
+Sin embargo:
+Las guías actuales recomiendan:
+Realimentación temprana.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Diagnosticar pancreatitis.
+2.	Clasificar gravedad.
+3.	Evaluar tolerancia gastrointestinal.
+4.	Reiniciar vía enteral precozmente.
+5.	Reservar nutrición parenteral para casos seleccionados.
+Perlas de examen
+✅ La nutrición enteral es superior a la nutrición parenteral.
+✅ No es necesario esperar la normalización de amilasa o lipasa.
+✅ La alimentación oral temprana es segura en pancreatitis leve.
+✅ La nutrición enteral disminuye complicaciones infecciosas.
+✅ El ayuno prolongado ya no se recomienda de rutina.
+✅ La pancreatitis intersticial tiene mejor pronóstico que la necrotizante.
+✅ La hidratación intravenosa temprana sigue siendo fundamental.
+Referencias
+• American College of Gastroenterology Guidelines on Acute Pancreatitis.
+• IAP/APA Evidence-Based Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Sleisenger and Fordtran's Gastrointestinal Disease.
+• UpToDate: Nutrition Support in Acute Pancreatitis.
+
+PREGUNTA 20 (HEMATOLOGÍA)
+Hombre de 45 años consulta por fatiga progresiva, disnea de esfuerzo y disminución de la tolerancia al ejercicio. Los exámenes muestran hemoglobina de 9 g/dL, volumen corpuscular medio (VCM) de 78 fL, ferritina disminuida y capacidad total de fijación de hierro (TIBC) elevada.
+¿Cuál es el diagnóstico más probable, la etiología más frecuente y el manejo inicial adecuado?
+A. Anemia de enfermedad crónica; proceso inflamatorio; eritropoyetina.
+B. Anemia ferropénica; pérdida crónica de sangre gastrointestinal; suplementación con hierro y estudio de la fuente de sangrado.
+C. Talasemia menor; trastorno hereditario; transfusión sanguínea.
+D. Anemia hemolítica autoinmune; destrucción eritrocitaria; corticosteroides.
+✅ Respuesta correcta: B. Anemia ferropénica; pérdida crónica de sangre gastrointestinal; suplementación con hierro y estudio de la fuente de sangrado.
+La combinación de anemia microcítica, ferritina baja y TIBC elevada es característica de anemia ferropénica. En hombres adultos debe considerarse pérdida crónica de sangre gastrointestinal hasta demostrar lo contrario, por lo que además de corregir el déficit de hierro debe investigarse la causa subyacente.
+Lo que debes saber para el examen
+Cuando veas:
+• VCM bajo.
+• Ferritina baja.
+• TIBC elevada.
+• Adulto masculino.
+Debes pensar en:
+Anemia ferropénica por sangrado gastrointestinal oculto.
+Tema: Anemias microcíticas.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la interpretación del perfil férrico.
+La clave no es la hemoglobina.
+La clave es:
+La ferritina.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hb 9 g/dL.
+• VCM 78 fL.
+• Ferritina baja.
+• TIBC elevada.
+Esto corresponde a:
+Anemia ferropénica.
+¿Qué significa una ferritina baja?
+Disminución de:
+Las reservas corporales de hierro.
+Es el marcador más específico de:
+Deficiencia de hierro.
+¿Por qué el TIBC está elevado?
+Porque el organismo intenta:
+Captar más hierro circulante.
+¿Qué causa debe sospecharse en un hombre adulto?
+La respuesta clásica de examen es:
+Sangrado gastrointestinal crónico.
+Hasta demostrar lo contrario.
+¿Qué estudios deben solicitarse?
+Habitualmente:
+• Colonoscopia.
+• Endoscopia digestiva alta.
+Según el contexto clínico.
+¿Cuál es el tratamiento inicial?
+• Hierro oral.
+• Corrección de la causa subyacente.
+¿Por qué NO transfundir?
+Porque una Hb de 9 g/dL en un paciente estable:
+No constituye indicación rutinaria de transfusión.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Anemia microcítica."
+Y responden:
+Talasemia.
+Sin embargo:
+El dato decisivo es:
+Ferritina baja + TIBC elevada.
+Patrón clásico de:
+Ferropenia.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar anemia microcítica.
+2.	Revisar ferritina.
+3.	Confirmar ferropenia.
+4.	Buscar la causa.
+5.	Iniciar hierro y corregir el origen del sangrado.
+Perlas de examen
+✅ Ferritina baja es el hallazgo más específico de ferropenia.
+✅ TIBC elevada es característica de anemia ferropénica.
+✅ En hombres y mujeres posmenopáusicas debe descartarse sangrado digestivo.
+✅ La anemia ferropénica es la causa más frecuente de anemia en el mundo.
+✅ El VCM suele disminuir progresivamente.
+✅ La ferritina puede elevarse falsamente en estados inflamatorios.
+✅ El tratamiento debe corregir la deficiencia y la causa subyacente.
+Referencias
+• Harrison's Principles of Internal Medicine.
+• Williams Hematology.
+• Hoffbrand's Essential Haematology.
+• UpToDate: Iron Deficiency Anemia in Adults.
+• British Society of Gastroenterology Guidelines on Iron Deficiency Anemia.

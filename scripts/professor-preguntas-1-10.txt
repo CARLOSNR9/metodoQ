@@ -1,0 +1,819 @@
+PREGUNTA 1 (ENDOCRINOLOGÍA)
+Hombre de 35 años consulta por disminución de la libido, disfunción eréctil y dificultades persistentes en su vida sexual. Refiere haber recibido psicoterapia sin mejoría. Se documenta testosterona total de 185 ng/dL.
+¿Cuál es el siguiente paso más adecuado?
+A. Iniciar inmediatamente terapia de reemplazo con testosterona.
+B. Solicitar una segunda medición matutina de testosterona total y estudio etiológico con LH, FSH y prolactina.
+C. Reiniciar psicoterapia y control en 6 meses.
+D. Iniciar sildenafil como tratamiento definitivo.
+✅ Respuesta correcta: B. Solicitar una segunda medición matutina de testosterona total y estudio etiológico con LH, FSH y prolactina.
+El diagnóstico de hipogonadismo masculino requiere síntomas compatibles y al menos dos determinaciones matutinas de testosterona disminuida. Una vez confirmada la alteración, debe establecerse si se trata de un hipogonadismo primario o secundario mediante la medición de gonadotropinas.
+Lo que debes saber para el examen
+Cuando veas:
+• Disminución de la libido.
+• Disfunción eréctil.
+• Testosterona baja.
+Debes pensar en:
+Hipogonadismo masculino.
+Tema: Hipogonadismo.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el algoritmo diagnóstico del hipogonadismo masculino.
+La clave no es la disfunción eréctil.
+La clave es:
+Confirmar el diagnóstico antes de iniciar tratamiento.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Disminución de la libido.
+• Disfunción sexual.
+• Testosterona baja.
+Esto genera una alta sospecha de:
+Hipogonadismo.
+¿Puede iniciarse testosterona inmediatamente?
+No.
+Las guías recomiendan:
+Confirmar el hallazgo con una segunda medición matutina.
+¿Por qué?
+Porque los niveles de testosterona:
+• Presentan variación circadiana.
+• Pueden alterarse por enfermedades agudas.
+• Pueden disminuir transitoriamente.
+¿Qué exámenes deben solicitarse?
+• LH.
+• FSH.
+• Prolactina.
+Para determinar si el origen es:
+Primario (testicular).
+O:
+Secundario (hipotálamo-hipófisis).
+¿Cuándo iniciar testosterona?
+Una vez:
+• Confirmado el hipogonadismo.
+• Establecida la etiología.
+• Evaluadas contraindicaciones.
+¿Por qué NO sildenafil?
+Porque corrige parcialmente la erección.
+Pero:
+No trata el déficit hormonal.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Testosterona 185 ng/dL."
+Y responden:
+"Iniciar testosterona."
+Sin embargo:
+El dato decisivo es:
+Que aún falta confirmar el diagnóstico y establecer la causa.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar síntomas compatibles.
+2.	Confirmar testosterona baja en una segunda muestra.
+3.	Solicitar LH, FSH y prolactina.
+4.	Clasificar el hipogonadismo.
+5.	Iniciar tratamiento según etiología.
+Perlas de examen
+✅ El diagnóstico requiere síntomas y testosterona baja confirmada.
+✅ La testosterona debe medirse en horas de la mañana.
+✅ LH y FSH diferencian hipogonadismo primario y secundario.
+✅ La prolactina elevada puede sugerir prolactinoma.
+✅ No debe iniciarse testosterona sin confirmar el diagnóstico.
+✅ El reemplazo hormonal puede afectar la fertilidad.
+✅ La disfunción eréctil no siempre implica hipogonadismo.
+Referencias
+• Endocrine Society Clinical Practice Guideline.
+• Harrison's Principles of Internal Medicine.
+• Williams Textbook of Endocrinology.
+• UpToDate: Clinical Features and Diagnosis of Male Hypogonadism.
+• American Urological Association Guidelines on Testosterone Deficiency.
+
+PREGUNTA 2 (NEUROCIRUGÍA)
+Varón de 45 años consulta por cambios progresivos de personalidad y debilidad en el brazo izquierdo una semana después de sufrir un accidente de tránsito. Durante la evaluación se realiza tomografía computarizada de cráneo que evidencia una lesión en el lóbulo frontal derecho compatible con hematoma subdural crónico.
+¿Cuál es la conducta más adecuada además de la remisión a neurocirugía?
+A. Iniciar dexametasona intravenosa.
+B. Iniciar ácido tranexámico.
+C. Iniciar levetiracetam para profilaxis anticonvulsivante.
+D. Administrar manitol de forma ambulatoria.
+✅ Respuesta correcta: C. Iniciar levetiracetam para profilaxis anticonvulsivante.
+Los pacientes con lesiones intracraneales traumáticas corticales presentan riesgo aumentado de crisis epilépticas tempranas. La profilaxis anticonvulsivante con levetiracetam o fenitoína suele recomendarse en presencia de lesiones estructurales cerebrales significativas mientras se completa la valoración neuroquirúrgica.
+Lo que debes saber para el examen
+Cuando veas:
+• Trauma craneoencefálico.
+• Lesión cortical.
+• Déficit neurológico focal.
+• Cambios de personalidad.
+Debes pensar en:
+Profilaxis anticonvulsivante.
+Tema: Trauma craneoencefálico.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa las complicaciones tardías del trauma craneoencefálico.
+La clave no es el accidente.
+La clave es:
+La lesión cortical identificada en la tomografía.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Traumatismo reciente.
+• Déficit neurológico focal.
+• Alteración conductual.
+• Lesión frontal.
+Esto implica:
+Irritación cortical.
+¿Que complicación puede aparecer?
+La más importante es:
+Crisis epiléptica postraumática.
+¿Por qué ocurre?
+La sangre y el tejido lesionado:
+Actúan como foco epileptógeno.
+¿Cuál es el medicamento más utilizado?
+Actualmente:
+• Levetiracetam.
+También puede utilizarse:
+• Fenitoína.
+¿Cuál es el objetivo?
+Prevenir:
+Crisis epilépticas tempranas.
+Mientras se define:
+Tratamiento neuroquirúrgico.
+¿Por qué NO dexametasona?
+No forma parte del manejo rutinario de lesiones traumáticas intracraneales.
+¿Por qué NO manitol?
+Se reserva para:
+Hipertensión intracraneal aguda.
+No para manejo ambulatorio.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Lesión cerebral."
+Y responden:
+Manitol.
+Sin embargo:
+El dato decisivo es:
+La lesión cortical subaguda con riesgo convulsivo.
+Esto orienta a:
+Profilaxis anticonvulsivante.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar lesión intracraneal traumática.
+2.	Reconocer riesgo de convulsiones.
+3.	Iniciar profilaxis anticonvulsivante.
+4.	Remitir a neurocirugía.
+5.	Vigilar progresión neurológica.
+Perlas de examen
+✅ Las lesiones corticales aumentan el riesgo de epilepsia postraumática.
+✅ Levetiracetam es ampliamente utilizado por su perfil de seguridad.
+✅ Los hematomas subdurales crónicos pueden manifestarse días o semanas después del trauma.
+✅ Los cambios de personalidad sugieren compromiso frontal.
+✅ La debilidad contralateral orienta a lesión hemisférica focal.
+✅ El tratamiento definitivo puede requerir drenaje neuroquirúrgico.
+✅ Todo deterioro neurológico tardío tras trauma obliga a neuroimagen.
+Referencias
+• Greenberg Handbook of Neurosurgery.
+• Brain Trauma Foundation Guidelines.
+• Adams and Victor's Principles of Neurology.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Post-Traumatic Seizures and Epilepsy.
+
+PREGUNTA 3 (MEDICINA INTERNA - NEUMOLOGÍA)
+Hombre de 61 años con antecedente de EPOC consulta por aumento progresivo de la disnea y limitación funcional. Se realiza gasometría arterial que reporta: pH 7.30, PaCO₂ 61 mmHg, HCO₃⁻ 31 mEq/L y PaO₂ 61 mmHg.
+¿Cuál es el trastorno ácido-base y la etiología más probable?
+A. Acidosis metabólica secundaria a sepsis.
+B. Alcalosis respiratoria por hiperventilación.
+C. Acidosis respiratoria parcialmente compensada secundaria a exacerbación de EPOC.
+D. Alcalosis metabólica secundaria a uso de diuréticos.
+✅ Respuesta correcta: C. Acidosis respiratoria parcialmente compensada secundaria a exacerbación de EPOC.
+La gasometría muestra acidemia (pH 7.30) con elevación de la PaCO₂ (61 mmHg), lo que indica una acidosis respiratoria. El bicarbonato elevado refleja compensación renal crónica, característica de pacientes con EPOC que desarrollan retención crónica de CO₂ y presentan una descompensación aguda.
+Lo que debes saber para el examen
+Cuando veas:
+• pH bajo.
+• PaCO₂ elevada.
+• HCO₃⁻ elevado.
+• Antecedente de EPOC.
+Debes pensar en:
+Acidosis respiratoria parcialmente compensada.
+Tema: Trastornos ácido-base.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la interpretación sistemática de la gasometría arterial.
+La clave no es el bicarbonato.
+La clave es:
+La elevación del CO₂.
+¿Qué está ocurriendo realmente?
+Paso 1:
+Evaluar el pH.
+• pH = 7.30
+Existe:
+Acidemia.
+Paso 2:
+Evaluar la PaCO₂.
+• PaCO₂ = 61 mmHg
+Está elevada.
+Por tanto:
+La alteración primaria es respiratoria.
+Paso 3:
+Evaluar el bicarbonato.
+• HCO₃⁻ = 31 mEq/L
+Está elevado.
+Esto indica:
+Compensación renal.
+¿Qué diagnóstico ácido-base tiene?
+Acidosis respiratoria parcialmente compensada.
+¿Cuál es la causa?
+El antecedente de:
+EPOC.
+Sugiere:
+Hipoventilación alveolar y retención de CO₂.
+¿Por qué la PaO₂ está disminuida?
+Porque la exacerbación del EPOC produce:
+• Alteración V/Q.
+• Hipoxemia.
+¿Cuál es la trampa de examen?
+Muchos estudiantes observan:
+"Bicarbonato elevado."
+Y responden:
+Alcalosis metabólica.
+Sin embargo:
+El dato decisivo es:
+La PaCO₂ elevada con acidemia.
+Esto define:
+Acidosis respiratoria.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Revisar pH.
+2.	Revisar CO₂.
+3.	Revisar bicarbonato.
+4.	Identificar compensación.
+5.	Buscar la causa clínica.
+Perlas de examen
+✅ EPOC es una causa clásica de acidosis respiratoria crónica.
+✅ La compensación renal aumenta el bicarbonato sérico.
+✅ pH bajo + CO₂ alto = acidosis respiratoria.
+✅ La compensación nunca normaliza completamente el pH durante una exacerbación aguda.
+✅ La hipoxemia suele acompañar las exacerbaciones de EPOC.
+✅ El tratamiento se orienta a mejorar la ventilación alveolar.
+✅ La ventilación no invasiva puede ser necesaria en exacerbaciones graves.
+Referencias
+• Harrison's Principles of Internal Medicine.
+• GOLD Guidelines for COPD.
+• West's Respiratory Physiology.
+• Murray & Nadel's Textbook of Respiratory Medicine.
+• UpToDate: Acid-Base Disorders in COPD.
+
+PREGUNTA 4 (FISIOLOGÍA RENAL)
+En relación con la fisiología renal, ¿cuál de los siguientes cambios hemodinámicos provoca un aumento de la tasa de filtración glomerular (TFG)?
+A. Vasoconstricción de la arteriola aferente.
+B. Vasodilatación de la arteriola eferente.
+C. Vasodilatación de la arteriola aferente.
+D. Disminución de la presión hidrostática glomerular.
+✅ Respuesta correcta: C. Vasodilatación de la arteriola aferente.
+La vasodilatación de la arteriola aferente aumenta el flujo sanguíneo renal y la presión hidrostática dentro de los capilares glomerulares, lo que incrementa la tasa de filtración glomerular.
+Lo que debes saber para el examen
+Cuando veas:
+• Tasa de filtración glomerular.
+• Presión glomerular.
+• Arteriolas aferente y eferente.
+Debes pensar en:
+Cambios de presión intraglomerular.
+Tema: Hemodinámica glomerular.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa uno de los conceptos más importantes de fisiología renal.
+La clave no es la filtración.
+La clave es:
+La presión hidrostática glomerular.
+¿Qué determina la TFG?
+Principalmente:
+• Presión hidrostática glomerular.
+• Presión oncótica plasmática.
+• Presión en la cápsula de Bowman.
+La más importante para examen es:
+La presión hidrostática glomerular.
+¿Qué ocurre si se dilata la arteriola aferente?
+Aumenta:
+• El flujo sanguíneo renal.
+• La entrada de sangre al glomérulo.
+Como consecuencia:
+Aumenta la presión dentro de los capilares glomerulares.
+Resultado:
+↑ TFG.
+¿Qué ocurre con la vasoconstricción aferente?
+Disminuye:
+• Flujo sanguíneo renal.
+• Presión glomerular.
+Resultado:
+↓ TFG.
+¿Qué ocurre con la vasodilatación eferente?
+La sangre sale más fácilmente del glomérulo.
+Disminuye:
+La presión intraglomerular.
+Resultado:
+↓ TFG.
+¿Cuál es la trampa de examen?
+Muchos estudiantes confunden:
+Aferente y eferente.
+Para recordar:
+👉 Abrir la aferente = entra más sangre = aumenta TFG.
+👉 Abrir la eferente = sale más sangre = disminuye TFG.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Evaluar la arteriola afectada.
+2.	Determinar si aumenta o disminuye la presión glomerular.
+3.	Relacionar el cambio con la TFG.
+4.	Identificar la respuesta fisiológica.
+Perlas de examen
+✅ Vasodilatación aferente → ↑ TFG.
+✅ Vasoconstricción aferente → ↓ TFG.
+✅ Vasoconstricción eferente moderada → ↑ TFG.
+✅ Vasodilatación eferente → ↓ TFG.
+✅ La angiotensina II produce vasoconstricción preferencial de la arteriola eferente.
+✅ Los AINE disminuyen la TFG por vasoconstricción aferente.
+✅ Los IECA y ARA-II pueden disminuir la TFG por vasodilatación eferente.
+Referencias
+• Guyton & Hall. Tratado de Fisiología Médica.
+• Boron & Boulpaep. Medical Physiology.
+• Ganong's Review of Medical Physiology.
+• Brenner & Rector's The Kidney.
+• Costanzo Physiology.
+
+PREGUNTA 5 (FISIOLOGÍA RENAL)
+En relación con la fisiología renal, ¿en cuál estructura anatómica se encuentra la mácula densa y cuál es su principal función?
+A. Túbulo contorneado proximal; reabsorción de glucosa.
+B. Asa descendente de Henle; regulación de la osmolaridad medular.
+C. Túbulo contorneado distal; detección de sodio y regulación de la tasa de filtración glomerular.
+D. Conducto colector; regulación de la secreción de potasio.
+✅ Respuesta correcta: C. Túbulo contorneado distal; detección de sodio y regulación de la tasa de filtración glomerular.
+La mácula densa corresponde a un grupo especializado de células localizadas en la porción inicial del túbulo contorneado distal, donde este entra en contacto con el polo vascular del glomérulo. Su función principal es detectar la concentración de cloruro de sodio tubular y participar en el mecanismo de retroalimentación tubuloglomerular.
+Lo que debes saber para el examen
+Cuando veas:
+• Mácula densa.
+• Aparato yuxtaglomerular.
+• Renina.
+• TFG.
+Debes pensar en:
+Retroalimentación tubuloglomerular.
+Tema: Aparato yuxtaglomerular.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la anatomía funcional del aparato yuxtaglomerular.
+La clave no es la renina.
+La clave es:
+La ubicación de la mácula densa.
+¿Dónde se encuentra?
+En:
+La porción inicial del túbulo contorneado distal.
+Justo cuando este pasa entre:
+• Arteriola aferente.
+• Arteriola eferente.
+¿Qué estructura forma?
+Junto con:
+• Células yuxtaglomerulares.
+• Células mesangiales extraglomerulares.
+Forma el:
+Aparato yuxtaglomerular.
+¿Cuál es su función?
+Detectar:
+La concentración de NaCl en el líquido tubular.
+¿Qué ocurre cuando disminuye el sodio tubular?
+La mácula densa interpreta:
+Disminución de la perfusión renal.
+Y estimula:
+• Liberación de renina.
+• Activación del sistema renina-angiotensina-aldosterona.
+¿Qué ocurre cuando aumenta el sodio tubular?
+Disminuye:
+La liberación de renina.
+Y reduce:
+La tasa de filtración glomerular.
+¿Cuál es la trampa de examen?
+Muchos estudiantes responden:
+"Asa de Henle."
+Porque la mácula densa se encuentra cerca de ella.
+Sin embargo:
+La localización anatómica correcta es:
+Túbulo contorneado distal.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar la mácula densa.
+2.	Ubicarla en el túbulo distal.
+3.	Relacionarla con el aparato yuxtaglomerular.
+4.	Detectar NaCl tubular.
+5.	Regular la liberación de renina y la TFG.
+Perlas de examen
+✅ La mácula densa pertenece al túbulo contorneado distal.
+✅ Detecta la concentración de NaCl tubular.
+✅ Participa en la retroalimentación tubuloglomerular.
+✅ Estimula la liberación de renina cuando disminuye la perfusión renal.
+✅ Forma parte del aparato yuxtaglomerular.
+✅ Regula indirectamente la tasa de filtración glomerular.
+✅ Es un tema clásico de fisiología y nefrología.
+Referencias
+• Guyton & Hall. Tratado de Fisiología Médica.
+• Costanzo Physiology.
+• Boron & Boulpaep Medical Physiology.
+• Ganong's Review of Medical Physiology.
+• Brenner & Rector's The Kidney.
+
+PREGUNTA 6 (MEDICINA INTERNA - NEFROLOGÍA)
+Mujer de 27 años, habitante de calle, hospitalizada por neumonía adquirida en la comunidad. Durante la hospitalización se documenta sodio sérico de 122 mEq/L y osmolaridad plasmática disminuida. Al examen físico no presenta signos de hipovolemia ni sobrecarga de volumen.
+¿Cuál es la causa más probable de este trastorno y cómo se clasifica esta hiponatremia?
+A. Pérdidas gastrointestinales; hiponatremia hipovolémica.
+B. Insuficiencia cardíaca; hiponatremia hipervolémica.
+C. Síndrome de secreción inadecuada de hormona antidiurética (SIADH); hiponatremia hipotónica euvolémica.
+D. Diabetes insípida; hipernatremia euvolémica.
+✅ Respuesta correcta: C. Síndrome de secreción inadecuada de hormona antidiurética (SIADH); hiponatremia hipotónica euvolémica.
+La neumonía es una de las causas más frecuentes de SIADH. La retención inapropiada de agua libre genera hiponatremia con osmolaridad plasmática baja y un estado clínico de euvolemia.
+Lo que debes saber para el examen
+Cuando veas:
+• Neumonía.
+• Hiponatremia.
+• Osmolaridad baja.
+• Euvolemia.
+Debes pensar en:
+SIADH.
+Tema: Hiponatremias.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el algoritmo diagnóstico de la hiponatremia.
+La clave no es el sodio.
+La clave es:
+El estado de volumen.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Sodio bajo.
+• Osmolaridad plasmática baja.
+Esto confirma:
+Hiponatremia hipotónica verdadera.
+¿Qué muestra el examen físico?
+• Sin edema.
+• Sin ascitis.
+• Sin deshidratación.
+Por tanto:
+La paciente es euvolémica.
+¿Cuál es la causa más frecuente de hiponatremia euvolémica?
+La respuesta clásica es:
+SIADH.
+¿Por qué una neumonía puede producir SIADH?
+Las infecciones pulmonares estimulan:
+Liberación inapropiada de ADH.
+Como consecuencia:
+• Retención de agua libre.
+• Dilución del sodio plasmático.
+¿Qué clasificación tiene?
+• Hiponatremia.
+• Hipotónica.
+• Euvolémica.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Hospitalizada."
+Y responden:
+Deshidratación.
+Sin embargo:
+El dato decisivo es:
+La ausencia de signos de hipovolemia.
+Esto orienta a:
+SIADH.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Confirmar hiponatremia.
+2.	Revisar osmolaridad.
+3.	Evaluar estado de volumen.
+4.	Identificar euvolemia.
+5.	Sospechar SIADH.
+Perlas de examen
+✅ SIADH es la causa más frecuente de hiponatremia euvolémica.
+✅ La neumonía es un desencadenante clásico.
+✅ La osmolaridad plasmática está disminuida.
+✅ Los pacientes suelen estar clínicamente euvolémicos.
+✅ La osmolaridad urinaria suele estar inapropiadamente elevada.
+✅ El tratamiento inicial suele incluir restricción hídrica.
+✅ El carcinoma microcítico de pulmón es otra causa clásica de SIADH.
+Referencias
+• Harrison's Principles of Internal Medicine.
+• Brenner & Rector's The Kidney.
+• UpToDate: Causes of Hyponatremia.
+• European Clinical Practice Guideline on Hyponatremia.
+• Guyton & Hall. Tratado de Fisiología Médica.
+
+PREGUNTA 7 (NEFROLOGÍA)
+Adolescente de 16 años consulta por episodios recurrentes de hematuria macroscópica que suelen aparecer pocos días después de infecciones respiratorias altas. Niega edema, hipertensión o disminución del volumen urinario. Los estudios iniciales no muestran proteinuria significativa ni deterioro de la función renal.
+¿Cuál es el diagnóstico más probable?
+A. Glomerulonefritis postestreptocócica.
+B. Nefropatía por IgA (Enfermedad de Berger).
+C. Síndrome de Alport.
+D. Enfermedad de cambios mínimos.
+✅ Respuesta correcta: B. Nefropatía por IgA (Enfermedad de Berger).
+La nefropatía por IgA es la causa más frecuente de hematuria glomerular recurrente. Se caracteriza por episodios de hematuria macroscópica coincidentes o poco después de infecciones respiratorias, debido al depósito mesangial de inmunoglobulina A.
+Lo que debes saber para el examen
+Cuando veas:
+• Adolescente o adulto joven.
+• Hematuria recurrente.
+• Infección respiratoria reciente.
+• Función renal inicialmente normal.
+Debes pensar en:
+Nefropatía por IgA.
+Tema: Glomerulopatías.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la glomerulopatía más frecuente a nivel mundial.
+La clave no es la hematuria.
+La clave es:
+Su relación temporal con las infecciones respiratorias.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hematuria recurrente.
+• Episodios posteriores a infecciones respiratorias.
+• Ausencia de insuficiencia renal significativa.
+Esto corresponde clásicamente a:
+Nefropatía por IgA.
+¿Cuál es el mecanismo?
+Existe:
+Producción anormal de IgA.
+Que posteriormente se deposita en:
+El mesangio glomerular.
+Produciendo:
+Inflamación glomerular recurrente.
+¿Cómo se presenta típicamente?
+La palabra clave de examen es:
+"Sinfaringítica".
+Es decir:
+La hematuria aparece durante o pocos días después de la infección respiratoria.
+¿Por qué NO es glomerulonefritis postestreptocócica?
+Porque en esta:
+La hematuria aparece típicamente:
+2 a 4 semanas después de la infección.
+Además suele asociarse a:
+• Edema.
+• Hipertensión.
+• Hipocomplementemia.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Infección respiratoria."
+Y responden:
+Glomerulonefritis postestreptocócica.
+Sin embargo:
+El dato decisivo es:
+La aparición casi inmediata de la hematuria.
+Esto orienta a:
+Nefropatía por IgA.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar hematuria recurrente.
+2.	Relacionarla con infección respiratoria.
+3.	Reconocer el patrón sinfaringítico.
+4.	Sospechar nefropatía por IgA.
+5.	Confirmar con biopsia renal cuando esté indicada.
+Perlas de examen
+✅ Es la glomerulopatía primaria más frecuente del mundo.
+✅ Produce hematuria macroscópica recurrente.
+✅ La hematuria aparece simultáneamente o pocos días después de la infección.
+✅ El complemento suele ser normal.
+✅ La biopsia muestra depósitos mesangiales de IgA.
+✅ Existe asociación con enfermedad celíaca y otras enfermedades autoinmunes.
+✅ El pronóstico suele ser bueno en pacientes sin proteinuria ni deterioro renal.
+Referencias
+• Brenner & Rector's The Kidney.
+• KDIGO Glomerular Disease Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Comprehensive Clinical Nephrology.
+• UpToDate: IgA Nephropathy.
+
+PREGUNTA 8 (GINECOLOGÍA Y OBSTETRICIA)
+Adolescente de 15 años, primigesta de 34 semanas de gestación, es llevada al servicio de urgencias por cefalea intensa y vómitos de varias horas de evolución. Al ingreso presenta presión arterial de 170/110 mmHg. Durante la evaluación se documenta edema cerebral en estudios de neuroimagen.
+¿Cuál es la intervención más apropiada?
+A. Observación hospitalaria y control tensional ambulatorio.
+B. Administración de sulfato de magnesio, control de la presión arterial y finalización del embarazo.
+C. Administración de manitol como única medida terapéutica.
+D. Maduración pulmonar fetal y continuación del embarazo hasta la semana 37.
+✅ Respuesta correcta: B. Administración de sulfato de magnesio, control de la presión arterial y finalización del embarazo.
+La paciente presenta una preeclampsia con criterios de severidad y compromiso neurológico. El manejo incluye estabilización materna con sulfato de magnesio para prevención de eclampsia, control de la hipertensión severa y finalización del embarazo una vez la madre se encuentre estabilizada.
+Lo que debes saber para el examen
+Cuando veas:
+• Embarazo >20 semanas.
+• Hipertensión severa.
+• Cefalea intensa.
+• Síntomas neurológicos.
+• Edema cerebral.
+Debes pensar en:
+Preeclampsia severa.
+Tema: Trastornos hipertensivos del embarazo.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una emergencia obstétrica potencialmente mortal.
+La clave no es la edad de la paciente.
+La clave es:
+El compromiso neurológico.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• TA 170/110 mmHg.
+• Cefalea intensa.
+• Vómitos.
+• Edema cerebral.
+Estos son:
+Criterios de severidad.
+Por tanto:
+El diagnóstico es:
+Preeclampsia severa.
+¿Cuál es el tratamiento inmediato?
+Primero:
+Estabilizar a la madre.
+Con:
+• Sulfato de magnesio.
+• Antihipertensivos de acción rápida (labetalol, hidralazina o nifedipino).
+¿Cuál es el tratamiento definitivo?
+La única cura definitiva es:
+La finalización del embarazo.
+¿Por qué NO continuar la gestación?
+Porque existe:
+Alto riesgo de:
+• Eclampsia.
+• Hemorragia cerebral.
+• Muerte materna.
+¿Por qué NO administrar solo manitol?
+El problema principal no es neuroquirúrgico.
+Es una:
+Emergencia hipertensiva obstétrica.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"34 semanas."
+Y responden:
+Maduración pulmonar y observación.
+Sin embargo:
+El dato decisivo es:
+La presencia de criterios de severidad con compromiso cerebral.
+Esto obliga a:
+Interrupción del embarazo tras estabilización materna.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Reconocer hipertensión severa.
+2.	Identificar síntomas neurológicos.
+3.	Iniciar sulfato de magnesio.
+4.	Controlar la presión arterial.
+5.	Finalizar la gestación.
+Perlas de examen
+✅ El sulfato de magnesio previene y trata la eclampsia.
+✅ TA ≥160/110 mmHg constituye hipertensión severa.
+✅ Cefalea persistente y edema cerebral son criterios de severidad.
+✅ El tratamiento definitivo de la preeclampsia es el parto.
+✅ La estabilización materna precede a la interrupción del embarazo.
+✅ El compromiso neurológico aumenta el riesgo de hemorragia intracraneal.
+✅ Toda preeclampsia severa requiere manejo hospitalario.
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
+• FIGO Guidelines on Hypertensive Disorders of Pregnancy.
+• Cunningham Obstetricia.
+• UpToDate: Preeclampsia with Severe Features.
+
+PREGUNTA 9 (GINECOLOGÍA Y OBSTETRICIA)
+Mujer de 34 años, G2P1, cursando 12 semanas de gestación, acude a su primer control prenatal. Como antecedente de importancia refiere preeclampsia severa durante su primer embarazo, con requerimiento de manejo en unidad de cuidados intensivos.
+¿Cuál de las siguientes pruebas debe realizarse obligatoriamente en esta visita?
+A. Prueba de tolerancia oral a la glucosa.
+B. Proteinuria basal mediante relación proteína/creatinina urinaria o proteinuria de 24 horas.
+C. Cardiotocografía fetal.
+D. Amniocentesis.
+✅ Respuesta correcta: B. Proteinuria basal mediante relación proteína/creatinina urinaria o proteinuria de 24 horas.
+Las pacientes con antecedente de preeclampsia severa constituyen un grupo de alto riesgo obstétrico. Durante el primer control prenatal debe documentarse una proteinuria basal para facilitar el diagnóstico diferencial entre hipertensión crónica, enfermedad renal previa y preeclampsia sobreagregada durante el embarazo.
+Lo que debes saber para el examen
+Cuando veas:
+• Antecedente de preeclampsia severa.
+• Primer control prenatal.
+• Embarazo temprano.
+Debes pensar en:
+Proteinuria basal.
+Tema: Control prenatal de alto riesgo.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa las medidas iniciales en embarazos de alto riesgo para preeclampsia.
+La clave no es la edad gestacional.
+La clave es:
+El antecedente obstétrico.
+¿Qué está ocurriendo realmente?
+La paciente tiene:
+• Antecedente de preeclampsia severa.
+• Riesgo elevado de recurrencia.
+Por ello necesita:
+Evaluación basal materna.
+¿Qué estudio es fundamental?
+La cuantificación basal de proteinuria.
+¿Por qué es importante?
+Porque si posteriormente desarrolla:
+• Hipertensión.
+• Proteinuria.
+Será necesario determinar:
+Si la proteinuria ya existía previamente o apareció durante la gestación.
+¿Qué otras medidas deben realizarse?
+Además:
+• Iniciar ácido acetilsalicílico a baja dosis.
+• Solicitar función renal basal.
+• Realizar seguimiento estrecho.
+¿Por qué NO la curva de glucosa?
+Se realiza habitualmente:
+Entre las semanas 24 y 28.
+¿Por qué NO la cardiotocografía?
+No tiene utilidad rutinaria a las 12 semanas.
+¿Por qué NO la amniocentesis?
+No está indicada por el antecedente descrito.
+¿Cuál es la trampa de examen?
+Muchos estudiantes responden:
+Aspirina.
+Porque recuerdan correctamente la prevención de preeclampsia.
+Sin embargo:
+La pregunta solicita una:
+Prueba diagnóstica obligatoria en la evaluación inicial.
+La respuesta correcta es:
+Proteinuria basal.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar antecedente de preeclampsia.
+2.	Clasificar embarazo de alto riesgo.
+3.	Solicitar proteinuria basal.
+4.	Evaluar función renal inicial.
+5.	Iniciar medidas preventivas.
+Perlas de examen
+✅ Antecedente de preeclampsia severa = alto riesgo de recurrencia.
+✅ La proteinuria basal facilita el diagnóstico de preeclampsia sobreagregada.
+✅ La relación proteína/creatinina urinaria es una alternativa válida a la recolección de 24 horas.
+✅ Debe iniciarse ácido acetilsalicílico entre las semanas 12 y 16.
+✅ El seguimiento prenatal debe ser más estrecho.
+✅ La función renal basal debe documentarse tempranamente.
+✅ La prevención temprana disminuye el riesgo de preeclampsia recurrente.
+Referencias
+• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
+• FIGO Recommendations on Preeclampsia Prevention.
+• Williams Obstetrics.
+• ISSHP Guidelines for Hypertensive Disorders of Pregnancy.
+• Ministerio de Salud de Colombia. Ruta Integral Materno Perinatal.
+
+PREGUNTA 10 (GINECOLOGÍA Y OBSTETRICIA)
+Mujer de 30 años, primigesta de 28 semanas de gestación, consulta por disnea progresiva, fatiga y edema en miembros inferiores. Durante la valoración se documenta presión arterial de 100/70 mmHg y frecuencia respiratoria de 26 rpm. Los estudios iniciales muestran plaquetas de 118.000/μL y proteinuria en tira reactiva.
+¿Cuál es el siguiente paso más apropiado?
+A. Indicar reposo domiciliario y control en una semana.
+B. Solicitar relación proteína/creatinina urinaria y remitir a valoración por obstetricia de alto riesgo.
+C. Iniciar hierro oral por sospecha de anemia gestacional.
+D. Administrar diuréticos y dar egreso.
+✅ Respuesta correcta: B. Solicitar relación proteína/creatinina urinaria y remitir a valoración por obstetricia de alto riesgo.
+La presencia de proteinuria después de las 20 semanas asociada a trombocitopenia y síntomas sugestivos de compromiso materno obliga a descartar un trastorno hipertensivo del embarazo, aun cuando la presión arterial no sea marcadamente elevada en el momento de la consulta. La confirmación de proteinuria y la valoración especializada son prioritarias.
+Lo que debes saber para el examen
+Cuando veas:
+• Embarazo >20 semanas.
+• Proteinuria.
+• Plaquetas bajas.
+• Síntomas maternos.
+Debes pensar en:
+Preeclampsia y sus variantes.
+Tema: Trastornos hipertensivos del embarazo.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la sospecha temprana de complicaciones hipertensivas del embarazo.
+La clave no es la presión arterial.
+La clave es:
+La proteinuria acompañada de trombocitopenia.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Embarazo de 28 semanas.
+• Proteinuria.
+• Plaquetas de 118.000/μL.
+• Disnea y edema.
+Estos hallazgos obligan a:
+Descartar preeclampsia.
+¿Qué debe hacerse primero?
+Confirmar la proteinuria mediante:
+• Relación proteína/creatinina urinaria.
+o
+• Proteinuria de 24 horas.
+Y realizar:
+Valoración obstétrica especializada.
+¿Por qué NO dar egreso?
+Porque existe riesgo de:
+• Preeclampsia.
+• Síndrome HELLP.
+• Complicaciones maternas.
+¿Por qué NO tratar como anemia?
+La hemoglobina es:
+Prácticamente normal para la gestación.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"TA 100/70 mmHg."
+Y descartan preeclampsia.
+Sin embargo:
+El dato decisivo es:
+La combinación de proteinuria y trombocitopenia.
+Esto obliga a:
+Estudio urgente y valoración por alto riesgo obstétrico.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar proteinuria.
+2.	Revisar plaquetas.
+3.	Confirmar cuantificación proteica.
+4.	Remitir a obstetricia de alto riesgo.
+5.	Continuar estudio de trastorno hipertensivo del embarazo.
+Perlas de examen
+✅ La tira reactiva positiva no confirma el diagnóstico.
+✅ La relación proteína/creatinina es una herramienta diagnóstica útil.
+✅ Plaquetas <150.000/μL obligan a vigilancia estrecha.
+✅ La preeclampsia puede debutar con manifestaciones sistémicas.
+✅ La disnea en embarazadas siempre requiere evaluación cuidadosa.
+✅ El síndrome HELLP puede iniciar con trombocitopenia.
+✅ Toda sospecha de preeclampsia requiere seguimiento especializado.
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
+• FIGO Guidelines on Hypertensive Disorders of Pregnancy.
+• ISSHP Recommendations.
+• Ministerio de Salud de Colombia. Ruta Integral Materno Perinatal.
