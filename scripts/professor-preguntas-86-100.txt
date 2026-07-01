@@ -1,0 +1,1283 @@
+PREGUNTA 86 (NEUROLOGÍA)
+Hombre de 35 años consulta por dolor lumbar y parestesias progresivas en miembros inferiores una semana después de una infección respiratoria. En los días siguientes desarrolla debilidad ascendente y parálisis facial bilateral. Se encuentra alerta, orientado y sin alteraciones del estado de conciencia. Un estudio inicial de electromiografía no muestra hallazgos concluyentes.
+¿Cuál es el tratamiento inicial más adecuado?
+A. Metilprednisolona intravenosa en altas dosis.
+B. Inmunoglobulina intravenosa.
+C. Interferón beta.
+D. Acetazolamida.
+✅ Respuesta correcta: B. Inmunoglobulina intravenosa.
+El cuadro es altamente sugestivo de síndrome de Guillain-Barré, una polirradiculoneuropatía inflamatoria aguda autoinmune. El tratamiento de primera línea consiste en inmunoglobulina intravenosa o plasmaféresis.
+Lo que debes saber para el examen
+Cuando veas:
+• Infección respiratoria reciente.
+• Parestesias ascendentes.
+• Debilidad progresiva.
+• Parálisis facial bilateral.
+• Estado de conciencia conservado.
+Debes pensar en:
+Síndrome de Guillain-Barré.
+Tema: Neuropatías desmielinizantes.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la emergencia neurológica periférica más preguntada en los exámenes.
+La clave no es la electromiografía.
+La clave es:
+La progresión ascendente de los síntomas.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Infección reciente.
+• Dolor lumbar.
+• Parestesias.
+• Debilidad ascendente.
+• Parálisis facial bilateral.
+Estos hallazgos son típicos de:
+Síndrome de Guillain-Barré.
+¿Por qué puede ser normal la EMG?
+Durante los primeros días:
+La electromiografía puede ser completamente normal.
+Por ello:
+Un estudio inicial normal no descarta el diagnóstico.
+¿Cuál es el tratamiento?
+Las dos terapias efectivas son:
+• Inmunoglobulina intravenosa (IVIG).
+• Plasmaféresis.
+Ambas tienen eficacia similar.
+¿Qué debe vigilarse?
+La principal complicación es:
+Insuficiencia respiratoria.
+Por ello debe monitorizarse:
+• Capacidad vital forzada.
+• Función bulbar.
+• Saturación de oxígeno.
+¿Por qué NO usar corticoides?
+A diferencia de otras enfermedades autoinmunes:
+Los corticoides no han demostrado beneficio clínico significativo en Guillain-Barré.
+¿Por qué NO interferón beta?
+Porque se utiliza en:
+Esclerosis múltiple.
+¿Por qué NO acetazolamida?
+Se emplea en:
+Hipertensión intracraneal idiopática.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"EMG normal."
+Y descartan Guillain-Barré.
+Sin embargo:
+El dato decisivo es:
+La debilidad ascendente posterior a infección.
+Esto orienta claramente a:
+Síndrome de Guillain-Barré.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar antecedente infeccioso.
+2.	Reconocer debilidad ascendente.
+3.	Buscar compromiso facial bilateral.
+4.	Sospechar Guillain-Barré.
+5.	Iniciar inmunoglobulina intravenosa o plasmaféresis.
+Perlas de examen
+✅ Campylobacter jejuni es el desencadenante clásico.
+✅ La parálisis facial bilateral es frecuente.
+✅ La EMG puede ser normal al inicio.
+✅ El LCR suele mostrar disociación albúmino-citológica.
+✅ La inmunoglobulina intravenosa es tratamiento de primera línea.
+✅ Los corticoides no mejoran el pronóstico.
+✅ La insuficiencia respiratoria es la principal causa de morbimortalidad.
+Referencias
+• Adams and Victor's Principles of Neurology.
+• Bradley's Neurology in Clinical Practice.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Guillain-Barré Syndrome in Adults.
+• American Academy of Neurology Guidelines.
+
+PREGUNTA 87 (GINECOLOGÍA Y OBSTETRICIA)
+Mujer de 27 años, secundigestante de 13 semanas de gestación, acude a control prenatal. Refiere antecedente de preeclampsia severa en un embarazo previo. Durante la valoración actual se documentan cifras tensionales de 150/90 mmHg en dos mediciones separadas. No presenta proteinuria ni datos de daño a órgano blanco.
+¿Cuál es el diagnóstico y el tratamiento más adecuado?
+A. Hipertensión gestacional; iniciar sulfato de magnesio.
+B. Preeclampsia sin criterios de severidad; finalizar la gestación.
+C. Hipertensión arterial crónica; iniciar antihipertensivo y ácido acetilsalicílico a baja dosis.
+D. Hipertensión transitoria del embarazo; observación únicamente.
+✅ Respuesta correcta: C. Hipertensión arterial crónica; iniciar antihipertensivo y ácido acetilsalicílico a baja dosis.
+La hipertensión diagnosticada antes de las 20 semanas de gestación corresponde a hipertensión arterial crónica. Además, esta paciente presenta alto riesgo de recurrencia de preeclampsia por antecedente de preeclampsia severa, por lo que requiere profilaxis con ácido acetilsalicílico a dosis bajas.
+Lo que debes saber para el examen
+Cuando veas:
+• Hipertensión antes de las 20 semanas.
+• Antecedente de preeclampsia.
+• Ausencia de proteinuria.
+Debes pensar en:
+Hipertensión arterial crónica.
+Tema: Trastornos hipertensivos del embarazo.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la diferencia entre hipertensión crónica y preeclampsia.
+La clave no es la presión arterial.
+La clave es:
+La edad gestacional.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Embarazo de 13 semanas.
+• TA ≥140/90 mmHg.
+• Sin proteinuria.
+• Sin daño orgánico.
+Por definición:
+La hipertensión diagnosticada antes de las 20 semanas corresponde a:
+Hipertensión arterial crónica.
+¿Por qué NO es preeclampsia?
+Porque la preeclampsia clásicamente aparece:
+Después de las 20 semanas.
+Salvo situaciones excepcionales.
+¿Qué tratamiento debe recibir?
+Control tensional con fármacos seguros en el embarazo:
+• Labetalol.
+• Nifedipino.
+• Metildopa.
+Además:
+Ácido acetilsalicílico en dosis bajas (75-150 mg/día, habitualmente 100 mg/día).
+¿Por qué usar aspirina?
+Porque presenta:
+Antecedente de preeclampsia severa.
+Lo que la convierte en:
+Paciente de alto riesgo.
+¿Cuándo debe iniciarse?
+Idealmente:
+Entre las 12 y 16 semanas.
+Y mantenerse hasta:
+36-37 semanas según protocolo.
+¿Por qué NO sulfato de magnesio?
+El sulfato de magnesio se utiliza para:
+• Prevención de eclampsia.
+• Tratamiento de convulsiones.
+No para hipertensión crónica aislada.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Antecedente de preeclampsia."
+Y responden:
+Preeclampsia actual.
+Sin embargo:
+El dato decisivo es:
+La hipertensión antes de las 20 semanas.
+Esto define:
+Hipertensión arterial crónica.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar la edad gestacional.
+2.	Clasificar la hipertensión.
+3.	Reconocer factores de alto riesgo.
+4.	Iniciar antihipertensivo seguro.
+5.	Prescribir aspirina profiláctica.
+Perlas de examen
+✅ Hipertensión antes de las 20 semanas = hipertensión crónica.
+✅ La preeclampsia suele aparecer después de las 20 semanas.
+✅ Antecedente de preeclampsia severa es indicación de aspirina profiláctica.
+✅ Labetalol y nifedipino son tratamientos de elección.
+✅ Los IECA y ARA-II están contraindicados en embarazo.
+✅ La aspirina disminuye el riesgo de recurrencia de preeclampsia.
+✅ El seguimiento obstétrico debe ser estrecho por el alto riesgo materno-fetal.
+Referencias
+• ACOG Practice Bulletin: Chronic Hypertension in Pregnancy.
+• ISSHP Guidelines for Hypertensive Disorders of Pregnancy.
+• Williams Obstetrics.
+• FIGO Recommendations on Preeclampsia Prevention.
+• UpToDate: Chronic Hypertension in Pregnancy.
+
+PREGUNTA 88 (BÁSICAS- ANATOMÍA - CIRUGÍA GENERAL)
+¿Cuál de las siguientes estructuras atraviesa el conducto inguinal en el hombre y cuál en la mujer?
+A. Hombre: ligamento redondo del útero / Mujer: cordón espermático.
+B. Hombre: cordón espermático / Mujer: ligamento redondo del útero.
+C. Hombre: arteria epigástrica inferior / Mujer: vena safena magna.
+D. Hombre: nervio femoral / Mujer: nervio obturador.
+✅ Respuesta correcta: B. Hombre: cordón espermático / Mujer: ligamento redondo del útero.
+El conducto inguinal contiene el cordón espermático en el hombre y el ligamento redondo del útero en la mujer. En ambos sexos también atraviesa el nervio ilioinguinal.
+Lo que debes saber para el examen
+Cuando veas:
+• Conducto inguinal.
+• Anatomía quirúrgica.
+• Hernias inguinales.
+Debes pensar en:
+Cordón espermático y ligamento redondo.
+Tema: Conducto inguinal.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las relaciones anatómicas más preguntadas en cirugía general.
+La clave no es el conducto.
+La clave es:
+Su contenido.
+¿Qué atraviesa el conducto inguinal en el hombre?
+El principal contenido es:
+• Cordón espermático.
+Dentro de él transcurren:
+• Conducto deferente.
+• Arteria testicular.
+• Plexo pampiniforme.
+• Vasos cremastéricos.
+• Ramas nerviosas.
+¿Qué atraviesa el conducto inguinal en la mujer?
+El principal contenido es:
+• Ligamento redondo del útero.
+Este se extiende:
+Desde el útero hasta los labios mayores.
+¿Qué estructura atraviesa el conducto en ambos sexos?
+El:
+• Nervio ilioinguinal.
+Es una pregunta frecuente de examen.
+¿Por qué es importante clínicamente?
+Porque:
+Las hernias inguinales siguen el trayecto del conducto inguinal.
+Y durante la cirugía:
+Deben identificarse estas estructuras para evitar lesiones.
+¿Cuál es la trampa de examen?
+Muchos estudiantes invierten:
+Los contenidos masculinos y femeninos.
+Por ello debes recordar:
+👉 Hombre = cordón espermático.
+👉 Mujer = ligamento redondo.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar el conducto inguinal.
+2.	Recordar el contenido masculino.
+3.	Recordar el contenido femenino.
+4.	Reconocer el nervio ilioinguinal en ambos sexos.
+5.	Relacionarlo con hernias inguinales.
+Perlas de examen
+✅ Hombre → cordón espermático.
+✅ Mujer → ligamento redondo del útero.
+✅ El nervio ilioinguinal atraviesa el conducto en ambos sexos.
+✅ El anillo inguinal profundo se localiza lateral a los vasos epigástricos inferiores.
+✅ Las hernias indirectas atraviesan el anillo inguinal profundo.
+✅ Las hernias directas protruyen a través del triángulo de Hesselbach.
+✅ Es una de las preguntas anatómicas más frecuentes en cirugía.
+Referencias
+• Moore. Anatomía con Orientación Clínica.
+• Gray's Anatomy.
+• Netter Atlas de Anatomía Humana.
+• Schwartz's Principles of Surgery.
+• Sabiston Textbook of Surgery.
+
+PREGUNTA 89 (BÁSICAS-SEMIOLOGÍA - ONCOLOGÍA)
+Durante el examen físico de un paciente se identifica una adenopatía supraclavicular izquierda dura, fija e indolora, compatible con ganglio de Virchow.
+¿Con cuál de las siguientes patologías se asocia clásicamente este hallazgo?
+A. Cáncer de pulmón.
+B. Linfoma de Hodgkin.
+C. Adenocarcinoma gástrico.
+D. Carcinoma de tiroides.
+✅ Respuesta correcta: C. Adenocarcinoma gástrico.
+El ganglio de Virchow corresponde a una adenopatía supraclavicular izquierda secundaria a diseminación metastásica por vía linfática. Clásicamente se asocia al cáncer gástrico avanzado.
+Lo que debes saber para el examen
+Cuando veas:
+• Adenopatía supraclavicular izquierda.
+• Ganglio duro.
+• Ganglio indoloro.
+Debes pensar en:
+Cáncer gástrico.
+Tema: Semiología oncológica.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa uno de los signos semiológicos más importantes en oncología.
+La clave no es el ganglio.
+La clave es:
+Su localización.
+¿Qué es el ganglio de Virchow?
+Es una adenopatía localizada en:
+La región supraclavicular izquierda.
+¿Por qué aparece?
+Porque recibe drenaje linfático proveniente de:
+• Abdomen.
+• Retroperitoneo.
+• Tubo digestivo.
+Por ello puede actuar como:
+Sitio de metástasis a distancia.
+¿Con qué cáncer se asocia clásicamente?
+La asociación histórica más importante es:
+Adenocarcinoma gástrico.
+Por eso también se conoce como:
+"Nódulo centinela de Troisier."
+¿Qué otros tumores pueden producirlo?
+También puede observarse en:
+• Cáncer pancreático.
+• Cáncer colorrectal.
+• Cáncer de ovario.
+• Linfomas.
+Sin embargo, para examen:
+Virchow = cáncer gástrico.
+¿Cuál es la trampa de examen?
+Muchos estudiantes responden:
+Cáncer pulmonar.
+Porque asocian:
+Ganglio supraclavicular.
+Sin embargo:
+El dato decisivo es:
+Que se encuentra en el lado izquierdo.
+Esto orienta a:
+Metástasis abdominal, especialmente gástrica.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar adenopatía supraclavicular izquierda.
+2.	Reconocer ganglio de Virchow.
+3.	Relacionarlo con drenaje linfático abdominal.
+4.	Sospechar malignidad digestiva.
+5.	Pensar principalmente en cáncer gástrico.
+Perlas de examen
+✅ Ganglio de Virchow = adenopatía supraclavicular izquierda.
+✅ También se denomina nódulo de Troisier.
+✅ Sugiere metástasis abdominal.
+✅ La asociación clásica es adenocarcinoma gástrico.
+✅ Es un hallazgo de enfermedad avanzada.
+✅ Generalmente es duro, fijo e indoloro.
+✅ Constituye un signo semiológico de alta relevancia oncológica.
+Referencias
+• Bates' Guide to Physical Examination.
+• DeGowin's Diagnostic Examination.
+• Schwartz's Principles of Surgery.
+• Sabiston Textbook of Surgery.
+• Harrison's Principles of Internal Medicine.
+
+PREGUNTA 90 (BÁSICAS- EMBRIOLOGÍA Y OBSTETRICIA)
+¿Cuál de las siguientes estructuras embrionarias da origen a la placenta y se encuentra directamente implicada en la fisiopatología de trastornos hipertensivos del embarazo como la preeclampsia?
+A. Amnios.
+B. Trofoblasto.
+C. Saco vitelino.
+D. Alantoides.
+✅ Respuesta correcta: B. Trofoblasto.
+El trofoblasto es la estructura embrionaria que participa en la formación de la placenta. La invasión inadecuada del trofoblasto extravelloso sobre las arterias espirales uterinas constituye uno de los mecanismos fisiopatológicos fundamentales en el desarrollo de la preeclampsia.
+Lo que debes saber para el examen
+Cuando veas:
+• Placenta.
+• Invasión de arterias espirales.
+• Preeclampsia.
+Debes pensar en:
+Trofoblasto.
+Tema: Embriología placentaria.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque integra embriología y obstetricia.
+La clave no es la placenta.
+La clave es:
+La invasión trofoblástica.
+¿Qué ocurre normalmente?
+El trofoblasto se diferencia en:
+• Citotrofoblasto.
+• Sincitiotrofoblasto.
+Posteriormente:
+El trofoblasto extravelloso invade las arterias espirales maternas.
+¿Para qué sirve esta invasión?
+Transforma arterias de:
+• Alta resistencia.
+En vasos de:
+• Baja resistencia.
+• Alto flujo.
+Garantizando:
+Adecuada perfusión placentaria.
+¿Qué ocurre en la preeclampsia?
+Existe:
+Invasión trofoblástica incompleta.
+Como consecuencia:
+Las arterias espirales permanecen estrechas.
+Esto produce:
+• Hipoperfusión placentaria.
+• Isquemia placentaria.
+• Liberación de factores antiangiogénicos.
+• Disfunción endotelial materna.
+Resultado final:
+Preeclampsia.
+¿Por qué NO es el amnios?
+El amnios forma:
+La cavidad amniótica.
+No participa en la formación de la placenta.
+¿Por qué NO es el saco vitelino?
+El saco vitelino participa en:
+La hematopoyesis primitiva.
+No en la invasión placentaria.
+¿Por qué NO es el alantoides?
+El alantoides contribuye a:
+La formación del uraco.
+No es el origen de la placenta.
+¿Cuál es la trampa de examen?
+Muchos estudiantes responden:
+Sincitiotrofoblasto.
+Sin embargo:
+La pregunta solicita la estructura embrionaria principal.
+La respuesta correcta es:
+Trofoblasto.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Trofoblasto.
+2.	Formación placentaria.
+3.	Invasión de arterias espirales.
+4.	Remodelación vascular uterina.
+5.	Preeclampsia cuando este proceso falla.
+Perlas de examen
+✅ El trofoblasto origina la porción fetal de la placenta.
+✅ El citotrofoblasto y sincitiotrofoblasto derivan del trofoblasto.
+✅ La invasión trofoblástica es esencial para la perfusión placentaria.
+✅ La falla de remodelación de arterias espirales es un mecanismo central de la preeclampsia.
+✅ La placenta es el órgano clave en la fisiopatología de la preeclampsia.
+✅ La resolución definitiva de la preeclampsia ocurre con la extracción de la placenta.
+✅ Es una de las preguntas clásicas de embriología aplicada a obstetricia.
+Referencias
+• Langman's Embryology.
+• Moore. The Developing Human.
+• Williams Obstetrics.
+• Cunningham Obstetricia.
+• ACOG Practice Bulletin: Preeclampsia and Hypertension in Pregnancy.
+
+PREGUNTA 91 (BÁSICAS-NEUROANATOMÍA)
+Hombre de 30 años consulta por visión doble que empeora al mirar hacia la izquierda. Al examen neurológico se evidencia limitación para la abducción del ojo izquierdo. Los reflejos pupilares son normales.
+Durante la evaluación de los músculos extraoculares, además de los pares craneales III (oculomotor) y VI (abducens), ¿qué otro par craneal participa en la motilidad ocular?
+A. Par craneal II (óptico).
+B. Par craneal IV (troclear).
+C. Par craneal V (trigémino).
+D. Par craneal VII (facial).
+✅ Respuesta correcta: B. Par craneal IV (troclear).
+La motilidad ocular extrínseca depende de tres pares craneales: III (oculomotor), IV (troclear) y VI (abducens). El nervio troclear inerva el músculo oblicuo superior.
+Lo que debes saber para el examen
+Cuando veas:
+• Movimientos oculares.
+• Diplopía.
+• Músculos extraoculares.
+Debes pensar en:
+Pares III, IV y VI.
+Tema: Pares craneales.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de neuroanatomía.
+La clave no es la diplopía.
+La clave es:
+Recordar la inervación de los músculos extraoculares.
+¿Qué nervios controlan los movimientos oculares?
+Existen tres:
+• III par: Oculomotor.
+• IV par: Troclear.
+• VI par: Abducens.
+¿Qué inerva cada uno?
+III par:
+• Recto superior.
+• Recto inferior.
+• Recto medial.
+• Oblicuo inferior.
+• Elevador del párpado.
+IV par:
+• Oblicuo superior.
+VI par:
+• Recto lateral.
+¿Cómo recordarlo?
+La regla clásica:
+LR6 SO4 AO3
+(Lateral Rectus VI, Superior Oblique IV, All Others III)
+¿Qué lesión tiene este paciente?
+La limitación de la abducción indica:
+Compromiso del VI par craneal izquierdo.
+¿Cuál es la trampa de examen?
+Muchos estudiantes recuerdan únicamente:
+III y VI.
+Pero olvidan:
+El IV par craneal.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar alteración de la motilidad ocular.
+2.	Recordar los músculos extraoculares.
+3.	Asociar cada músculo a su nervio.
+4.	Aplicar la regla LR6 SO4 AO3.
+5.	Reconocer que participan III, IV y VI.
+Perlas de examen
+✅ El nervio troclear inerva exclusivamente el oblicuo superior.
+✅ El troclear es el único par craneal que emerge por la cara dorsal del tronco encefálico.
+✅ El abducens inerva el recto lateral.
+✅ El oculomotor inerva todos los músculos extraoculares restantes.
+✅ LR6 SO4 AO3 es una regla clásica de examen.
+✅ La lesión del VI produce incapacidad para la abducción.
+✅ La lesión del IV produce diplopía vertical que empeora al mirar hacia abajo.
+Referencias
+• Snell Neuroanatomía Clínica.
+• Moore Anatomía con Orientación Clínica.
+• Adams and Victor's Neurology.
+• Gray's Anatomy.
+• Netter Atlas de Anatomía Humana.
+
+PREGUNTA 92 (MEDICINA INTERNA)
+Hombre de 62 años con diagnóstico reciente de hipertensión arterial inicia tratamiento farmacológico. Pocos días después presenta un episodio de síncope mientras caminaba. En el servicio de urgencias se documenta presión arterial de 140/90 mmHg y frecuencia cardíaca de 42 lpm. No presenta alteraciones neurológicas ni otros hallazgos relevantes.
+¿Cuál de los siguientes medicamentos es el más probable responsable del cuadro?
+A. Amlodipino.
+B. Hidroclorotiazida.
+C. Metoprolol.
+D. Losartán.
+✅ Respuesta correcta: C. Metoprolol.
+Los betabloqueadores disminuyen la frecuencia cardíaca al bloquear los receptores β1 cardíacos. Una de sus reacciones adversas más importantes es la bradicardia sintomática, que puede manifestarse con síncope.
+Lo que debes saber para el examen
+Cuando veas:
+• Síncope.
+• Bradicardia.
+• Inicio reciente de antihipertensivo.
+Debes pensar en:
+Betabloqueadores.
+Tema: Antihipertensivos.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa los efectos adversos cardiovasculares de los antihipertensivos.
+La clave no es el síncope.
+La clave es:
+La frecuencia cardíaca de 42 lpm.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Bradicardia marcada.
+• Episodio sincopal.
+• Inicio reciente de tratamiento.
+Esto orienta a:
+Exceso de bloqueo del nodo sinusal.
+¿Qué medicamento produce esto?
+El más clásico es:
+Metoprolol.
+¿Cómo actúa?
+Bloquea receptores β1 cardíacos produciendo:
+• Disminución de frecuencia cardíaca.
+• Disminución de contractilidad.
+• Disminución de conducción AV.
+¿Cuáles son los efectos adversos más importantes?
+• Bradicardia.
+• Bloqueo AV.
+• Hipotensión.
+• Fatiga.
+• Síncope.
+¿Por qué NO es amlodipino?
+El amlodipino produce:
+• Vasodilatación.
+• Edema periférico.
+Generalmente no produce bradicardia significativa.
+¿Por qué NO es hidroclorotiazida?
+La hidroclorotiazida suele producir:
+• Hipokalemia.
+• Hiponatremia.
+No bradicardia.
+¿Por qué NO es losartán?
+Los ARA-II no disminuyen directamente:
+La frecuencia cardíaca.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Antihipertensivo."
+Y responden cualquier fármaco frecuente.
+Sin embargo:
+El dato decisivo es:
+La bradicardia marcada.
+Esto orienta inmediatamente a:
+Betabloqueadores.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar síncope.
+2.	Revisar frecuencia cardíaca.
+3.	Reconocer bradicardia significativa.
+4.	Pensar en bloqueo β-adrenérgico.
+5.	Identificar metoprolol como causa probable.
+Perlas de examen
+✅ Los betabloqueadores son causa frecuente de bradicardia medicamentosa.
+✅ Metoprolol es un β1-selectivo.
+✅ La bradicardia sintomática puede manifestarse con síncope.
+✅ Los ARA-II no suelen alterar significativamente la frecuencia cardíaca.
+✅ Los calcioantagonistas dihidropiridínicos producen vasodilatación más que bradicardia.
+✅ La evaluación inicial incluye ECG para descartar trastornos de conducción.
+✅ La suspensión o ajuste del fármaco suele resolver el cuadro.
+Referencias
+• Katzung. Basic and Clinical Pharmacology.
+• Goodman & Gilman's The Pharmacological Basis of Therapeutics.
+• Braunwald's Heart Disease.
+• Harrison's Principles of Internal Medicine.
+• ESC Guidelines for Arterial Hypertension.
+
+PREGUNTA 93 (PEDIATRÍA - INFECTOLOGÍA)
+Niña de 10 años, previamente sana y con esquema de vacunación completo, consulta por fiebre, vómitos y aparición súbita de petequias y equimosis. Durante la valoración presenta rigidez de nuca y taquicardia.
+¿Cuál es la sospecha diagnóstica más probable y cuál es el microorganismo más frecuentemente implicado?
+A. Meningitis neumocócica; Streptococcus pneumoniae.
+B. Meningococcemia con meningitis; Neisseria meningitidis.
+C. Encefalitis viral; Virus herpes simple tipo 1.
+D. Púrpura trombocitopénica inmune; Epstein-Barr virus.
+✅ Respuesta correcta: B. Meningococcemia con meningitis; Neisseria meningitidis.
+La combinación de fiebre, síndrome meníngeo y exantema petequial o purpúrico debe hacer sospechar meningococcemia invasiva hasta demostrar lo contrario. Neisseria meningitidis es el agente clásicamente asociado.
+Lo que debes saber para el examen
+Cuando veas:
+• Fiebre.
+• Rigidez de nuca.
+• Petequias o púrpura.
+• Deterioro rápido.
+Debes pensar en:
+Meningococcemia.
+Tema: Meningitis bacteriana.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las emergencias infecciosas pediátricas más importantes.
+La clave no es la fiebre.
+La clave es:
+La asociación entre meningismo y petequias.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Fiebre.
+• Vómitos.
+• Rigidez de nuca.
+• Petequias.
+• Equimosis.
+Esta combinación es altamente sugestiva de:
+Enfermedad meningocócica invasiva.
+¿Cuál es el germen?
+El agente clásico es:
+Neisseria meningitidis.
+¿Por qué aparecen las petequias?
+Por:
+• Endotoxemia.
+• Vasculitis.
+• Coagulación intravascular diseminada.
+Esto explica la aparición de:
+• Petequias.
+• Púrpura.
+• Equimosis.
+¿Cuál es la complicación más temida?
+• Shock séptico.
+• Síndrome de Waterhouse-Friderichsen.
+• Coagulación intravascular diseminada.
+¿Cuál es el manejo inicial?
+Ante la sospecha clínica:
+• Hemocultivos.
+• Antibióticos intravenosos inmediatos (ceftriaxona o cefotaxima).
+• Soporte hemodinámico.
+No debe retrasarse el tratamiento esperando estudios.
+¿Por qué NO es neumococo?
+Streptococcus pneumoniae es una causa frecuente de meningitis.
+Sin embargo:
+No se asocia clásicamente al exantema petequial fulminante.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Rigidez de nuca."
+Y responden:
+Neumococo.
+Sin embargo:
+El dato decisivo es:
+La presencia de petequias y equimosis.
+Esto orienta a:
+Neisseria meningitidis.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar fiebre.
+2.	Reconocer signos meníngeos.
+3.	Buscar petequias o púrpura.
+4.	Sospechar meningococcemia.
+5.	Iniciar ceftriaxona inmediatamente.
+Perlas de examen
+✅ Petequias + meningismo = meningococo hasta demostrar lo contrario.
+✅ Neisseria meningitidis es un diplococo gramnegativo.
+✅ Puede evolucionar rápidamente a shock séptico.
+✅ La ceftriaxona es tratamiento empírico de elección.
+✅ La profilaxis de contactos cercanos es obligatoria.
+✅ El síndrome de Waterhouse-Friderichsen es una complicación clásica.
+✅ Es una verdadera emergencia pediátrica.
+Referencias
+• Nelson Textbook of Pediatrics.
+• Red Book: American Academy of Pediatrics.
+• Mandell, Douglas and Bennett's Infectious Diseases.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Meningococcal Infection.
+
+PREGUNTA 94 (BÁSICAS- FARMACOLOGÍA - ORTOPEDIA)
+Paciente de 55 años consulta por dolor súbito en la región posterior del tobillo mientras caminaba. La evaluación confirma ruptura del tendón de Aquiles. Al revisar antecedentes farmacológicos se identifica el uso reciente de un antibiótico.
+¿Cuál de los siguientes antibióticos se asocia clásicamente con este evento adverso?
+A. Amoxicilina.
+B. Azitromicina.
+C. Ciprofloxacina.
+D. Cefalexina.
+✅ Respuesta correcta: C. Ciprofloxacina.
+Las fluoroquinolonas se asocian a tendinopatía y ruptura tendinosa, especialmente del tendón de Aquiles. El riesgo es mayor en adultos mayores, pacientes con insuficiencia renal y usuarios concomitantes de corticoides.
+Lo que debes saber para el examen
+Cuando veas:
+• Ruptura del tendón de Aquiles.
+• Tendinopatía.
+• Uso reciente de antibióticos.
+Debes pensar en:
+Fluoroquinolonas.
+Tema: Reacciones adversas medicamentosas.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de farmacología clínica.
+La clave no es la ruptura.
+La clave es:
+La asociación medicamento-evento adverso.
+¿Qué está ocurriendo realmente?
+Las fluoroquinolonas pueden producir:
+• Tendinitis.
+• Degeneración del colágeno.
+• Ruptura tendinosa.
+El tendón más afectado es:
+El tendón de Aquiles.
+¿Cuál es el antibiótico clásico?
+La respuesta más preguntada en los exámenes es:
+Ciprofloxacina.
+Aunque el efecto puede ocurrir con:
+• Levofloxacina.
+• Moxifloxacina.
+• Otras fluoroquinolonas.
+¿Quiénes tienen mayor riesgo?
+• Mayores de 60 años.
+• Pacientes con enfermedad renal.
+• Trasplantados.
+• Usuarios de corticoides sistémicos.
+¿Por qué NO amoxicilina?
+Las penicilinas no se asocian a:
+Ruptura tendinosa.
+¿Por qué NO azitromicina?
+Los macrólidos se relacionan más con:
+Prolongación del QT.
+¿Por qué NO cefalexina?
+Las cefalosporinas no presentan esta asociación clásica.
+¿Cuál es la trampa de examen?
+Muchos estudiantes recuerdan:
+"Antibiótico."
+Pero olvidan:
+La reacción adversa específica.
+Siempre que aparezca:
+Tendón de Aquiles + antibiótico
+Debes pensar en:
+Fluoroquinolonas.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar tendinopatía.
+2.	Relacionarla con fármacos.
+3.	Pensar en fluoroquinolonas.
+4.	Recordar el tendón de Aquiles.
+5.	Elegir ciprofloxacina.
+Perlas de examen
+✅ Ciprofloxacina es la asociación clásica en exámenes.
+✅ Las fluoroquinolonas pueden causar tendinitis y ruptura tendinosa.
+✅ El tendón de Aquiles es el más frecuentemente afectado.
+✅ El riesgo aumenta con el uso concomitante de corticoides.
+✅ Puede ocurrir incluso semanas después de iniciar el medicamento.
+✅ La FDA mantiene advertencias específicas sobre este efecto adverso.
+✅ Ante síntomas tendinosos debe suspenderse la fluoroquinolona.
+Referencias
+• Katzung. Basic and Clinical Pharmacology.
+• Goodman & Gilman's The Pharmacological Basis of Therapeutics.
+• Harrison's Principles of Internal Medicine.
+• FDA Safety Communication on Fluoroquinolones.
+• UpToDate: Fluoroquinolone Adverse Effects.
+
+PREGUNTA 95 (UROLOGÍA)
+Varón de 25 años, albañil, consulta por aparición progresiva de una masa escrotal indolora de varios meses de evolución. Refiere que aumenta de tamaño al permanecer de pie y durante esfuerzos físicos. Al examen físico el test de Valsalva es positivo y la transiluminación es negativa.
+¿Cuál es el diagnóstico más probable?
+A. Hidrocele.
+B. Hernia inguinoescrotal.
+C. Varicocele.
+D. Espermatocele.
+✅ Respuesta correcta: C. Varicocele.
+El varicocele corresponde a una dilatación anormal del plexo venoso pampiniforme. Se presenta típicamente como una masa escrotal que aumenta con el Valsalva y la bipedestación, con transiluminación negativa.
+Lo que debes saber para el examen
+Cuando veas:
+• Masa escrotal indolora.
+• Aumenta con el esfuerzo.
+• Valsalva positivo.
+• Transiluminación negativa.
+Debes pensar en:
+Varicocele.
+Tema: Patología escrotal.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de urología porque evalúa el diagnóstico diferencial de las masas escrotales.
+La clave no es la masa.
+La clave es:
+Que aumenta con el Valsalva.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Masa escrotal.
+• Incremento con la bipedestación.
+• Incremento con el esfuerzo.
+• Transiluminación negativa.
+Esto corresponde a:
+Dilatación venosa del plexo pampiniforme.
+Es decir:
+Varicocele.
+¿Cómo se describe clásicamente?
+Como una:
+"Bolsa de gusanos."
+¿Qué lado se afecta más?
+Clásicamente:
+El lado izquierdo.
+Debido al drenaje de la vena gonadal izquierda hacia la vena renal izquierda.
+¿Por qué NO es hidrocele?
+Porque el hidrocele:
+• Transilumina.
+• No aumenta significativamente con Valsalva.
+¿Por qué NO es hernia inguinoescrotal?
+Puede aumentar con el esfuerzo.
+Sin embargo:
+El hallazgo clásico de examen con Valsalva positivo y masa venosa escrotal orienta más a varicocele.
+¿Por qué NO es espermatocele?
+El espermatocele suele ser:
+• Quístico.
+• Transiluminable.
+• Dependiente del epidídimo.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Masa escrotal."
+Y responden:
+Hidrocele.
+Sin embargo:
+El dato decisivo es:
+Valsalva positivo con transiluminación negativa.
+Esto orienta a:
+Varicocele.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar masa escrotal.
+2.	Evaluar transiluminación.
+3.	Realizar maniobra de Valsalva.
+4.	Reconocer dilatación venosa.
+5.	Diagnosticar varicocele.
+Perlas de examen
+✅ El varicocele es la causa corregible más frecuente de infertilidad masculina.
+✅ Se origina por dilatación del plexo pampiniforme.
+✅ Es más frecuente en el lado izquierdo.
+✅ La ecografía Doppler confirma el diagnóstico.
+✅ La masa aumenta con Valsalva y al estar de pie.
+✅ La transiluminación es negativa.
+✅ La descripción clásica es "bolsa de gusanos".
+Referencias
+• Campbell-Walsh Urology.
+• Smith & Tanagho's General Urology.
+• Nelson Textbook of Pediatrics.
+• EAU Guidelines on Male Infertility.
+• UpToDate: Clinical Manifestations and Diagnosis of Varicocele.
+
+PREGUNTA 96 (HEMATOLOGÍA - URGENCIAS)
+Hombre de 45 años con antecedente de fibrilación auricular en tratamiento crónico con warfarina consulta a urgencias tras sufrir una herida por arma de fuego en el brazo izquierdo. Presenta sangrado activo importante, aunque se encuentra hemodinámicamente estable. Los estudios iniciales reportan INR de 3.2.
+¿Cuál es la intervención más efectiva para revertir rápidamente la anticoagulación?
+A. Administrar vitamina K intravenosa como única medida.
+B. Suspender warfarina y repetir INR en 24 horas.
+C. Administrar plasma fresco congelado.
+D. Administrar concentrado de complejo protrombínico de 4 factores asociado a vitamina K intravenosa.
+✅ Respuesta correcta: D. Administrar concentrado de complejo protrombínico de 4 factores asociado a vitamina K intravenosa.
+En pacientes con hemorragia mayor o trauma significativo bajo tratamiento con warfarina, la reversión más rápida y efectiva se logra con concentrado de complejo protrombínico (PCC de 4 factores) asociado a vitamina K intravenosa.
+Lo que debes saber para el examen
+Cuando veas:
+• Warfarina.
+• Sangrado activo.
+• INR elevado.
+• Trauma.
+Debes pensar en:
+Reversión urgente de anticoagulación.
+Tema: Anticoagulación y reversión.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el manejo de hemorragias en pacientes anticoagulados.
+La clave no es el INR.
+La clave es:
+La presencia de sangrado activo.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Anticoagulación por warfarina.
+• Sangrado traumático.
+• INR supraterapéutico.
+Esto requiere:
+Reversión inmediata.
+¿Cuál es la mejor estrategia?
+La más rápida y efectiva es:
+• PCC de 4 factores.
+• Vitamina K intravenosa.
+¿Por qué PCC?
+Porque repone inmediatamente:
+• Factor II.
+• Factor VII.
+• Factor IX.
+• Factor X.
+Corrigiendo el INR en minutos.
+¿Por qué también vitamina K?
+Porque:
+La acción del PCC es temporal.
+La vitamina K permite:
+Restablecer la síntesis hepática de factores de coagulación.
+¿Por qué NO vitamina K sola?
+Porque tarda:
+6 a 24 horas en ejercer efecto.
+Insuficiente en un sangrado agudo.
+¿Por qué NO plasma fresco congelado?
+Puede utilizarse si no existe PCC disponible.
+Sin embargo:
+• Corrige más lentamente.
+• Requiere grandes volúmenes.
+• Tiene más complicaciones transfusionales.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"INR 3.2"
+Y responden:
+Vitamina K.
+Sin embargo:
+El dato decisivo es:
+La hemorragia activa traumática.
+Esto obliga a:
+Reversión inmediata con PCC.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar sangrado mayor.
+2.	Reconocer uso de warfarina.
+3.	Solicitar INR.
+4.	Administrar PCC de 4 factores.
+5.	Asociar vitamina K intravenosa.
+Perlas de examen
+✅ PCC de 4 factores es el método de reversión más rápido para warfarina.
+✅ La vitamina K siempre debe acompañar la reversión urgente.
+✅ El plasma fresco congelado es alternativa cuando no hay PCC.
+✅ El INR no determina por sí solo la gravedad; el sangrado sí.
+✅ La corrección del INR con PCC ocurre en minutos.
+✅ La warfarina inhibe los factores II, VII, IX y X dependientes de vitamina K.
+✅ Toda hemorragia mayor en anticoagulados requiere reversión inmediata.
+Referencias
+• Harrison's Principles of Internal Medicine.
+• Tintinalli's Emergency Medicine.
+• ACC Expert Consensus on Management of Bleeding in Patients on Oral Anticoagulants.
+• CHEST Guidelines on Antithrombotic Therapy.
+• UpToDate: Reversal of Warfarin Anticoagulation.
+
+PREGUNTA 97 (HEMATOLOGÍA)
+Mujer de 23 años, sin antecedentes de importancia, consulta por aparición progresiva de petequias y equimosis espontáneas. Los estudios iniciales reportan plaquetas de 20.000/μL. El resto del hemograma es normal. El frotis de sangre periférica no evidencia hemólisis ni alteraciones en otras líneas celulares.
+¿Cuál es el diagnóstico más probable y la conducta inicial más adecuada?
+A. Púrpura trombótica trombocitopénica; plasmaféresis urgente.
+B. Leucemia aguda; aspirado de médula ósea.
+C. Púrpura trombocitopénica inmune (PTI); iniciar corticoides.
+D. Coagulación intravascular diseminada; transfusión masiva.
+✅ Respuesta correcta: C. Púrpura trombocitopénica inmune (PTI); iniciar corticoides.
+La PTI es una enfermedad autoinmune caracterizada por trombocitopenia aislada, con hemoglobina y leucocitos normales, sin evidencia de hemólisis ni alteraciones en otras series hematológicas. El tratamiento inicial en pacientes sintomáticos o con plaquetas <30.000/μL son los corticoides sistémicos.
+Lo que debes saber para el examen
+Cuando veas:
+• Petequias.
+• Equimosis.
+• Trombocitopenia aislada.
+• Hemograma normal.
+Debes pensar en:
+PTI.
+Tema: Trastornos plaquetarios.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la causa más frecuente de trombocitopenia aislada en adultos jóvenes.
+La clave no es el número de plaquetas.
+La clave es:
+Que las demás líneas celulares son normales.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Petequias.
+• Moretones espontáneos.
+• Plaquetas 20.000/μL.
+• Leucocitos normales.
+• Hemoglobina normal.
+Esto corresponde a:
+Trombocitopenia aislada.
+El diagnóstico más probable es:
+Púrpura trombocitopénica inmune.
+¿Cuál es el mecanismo?
+Autoanticuerpos IgG contra:
+Glicoproteínas plaquetarias.
+Esto produce:
+Destrucción esplénica acelerada.
+¿Cuál es el tratamiento inicial?
+Si existen síntomas hemorrágicos o:
+Plaquetas <30.000/μL
+Debe iniciarse:
+• Prednisona.
+o
+• Dexametasona en dosis altas.
+¿Cuándo usar inmunoglobulina intravenosa?
+En:
+• Sangrado importante.
+• Necesidad de elevar rápidamente las plaquetas.
+• Preparación para procedimientos urgentes.
+¿Por qué NO es PTT?
+La púrpura trombótica trombocitopénica produce:
+• Anemia hemolítica microangiopática.
+• Esquistocitos.
+Hallazgos ausentes en el caso.
+¿Por qué NO es leucemia?
+La leucemia suele acompañarse de:
+• Alteración de múltiples líneas celulares.
+• Blastos.
+No se describen en el caso.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Plaquetas 20.000."
+Y responden:
+Transfusión de plaquetas.
+Sin embargo:
+El dato decisivo es:
+La trombocitopenia aislada compatible con PTI.
+La conducta inicial es:
+Corticoides.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Confirmar trombocitopenia aislada.
+2.	Excluir hemólisis.
+3.	Sospechar PTI.
+4.	Iniciar corticoides.
+5.	Reservar IVIG para casos seleccionados.
+Perlas de examen
+✅ PTI = trombocitopenia aislada.
+✅ El resto del hemograma suele ser normal.
+✅ Los corticoides son el tratamiento inicial de primera línea.
+✅ La IVIG eleva rápidamente el conteo plaquetario.
+✅ El riesgo hemorrágico aumenta marcadamente por debajo de 20.000/μL.
+✅ La médula ósea suele mostrar aumento de megacariocitos.
+✅ Es un diagnóstico de exclusión.
+Referencias
+• Williams Hematology.
+• Hoffbrand's Essential Haematology.
+• Harrison's Principles of Internal Medicine.
+• ASH Guidelines for Immune Thrombocytopenia.
+• UpToDate: Immune Thrombocytopenia in Adults.
+
+PREGUNTA 98 (NEFROLOGÍA)
+Hombre de 55 años con diagnóstico reciente de síndrome nefrótico secundario a nefropatía membranosa. Los estudios muestran albúmina sérica de 2.2 g/dL. No presenta antecedentes de eventos trombóticos.
+¿Cuál es la complicación más probable a desarrollar?
+A. Hemorragia intracraneal espontánea.
+B. Trombosis venosa profunda o trombosis de la vena renal.
+C. Endocarditis infecciosa.
+D. Crisis hipercalcémica.
+✅ Respuesta correcta: B. Trombosis venosa profunda o trombosis de la vena renal.
+La nefropatía membranosa es la glomerulopatía que más se asocia a fenómenos tromboembólicos. La pérdida urinaria de anticoagulantes naturales (antitrombina III, proteínas C y S) y la hipoalbuminemia severa generan un importante estado de hipercoagulabilidad.
+Lo que debes saber para el examen
+Cuando veas:
+• Síndrome nefrótico.
+• Nefropatía membranosa.
+• Albúmina <2.5 g/dL.
+Debes pensar en:
+Trombosis.
+Tema: Complicaciones del síndrome nefrótico.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la complicación más característica del síndrome nefrótico.
+La clave no es la proteinuria.
+La clave es:
+La hipoalbuminemia.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Síndrome nefrótico.
+• Albúmina de 2.2 g/dL.
+• Nefropatía membranosa.
+Esto genera:
+Estado de hipercoagulabilidad.
+¿Por qué ocurre?
+Por pérdida urinaria de:
+• Antitrombina III.
+• Proteína C.
+• Proteína S.
+Además existe:
+• Aumento de fibrinógeno.
+• Incremento de factores procoagulantes.
+Resultado:
+Mayor riesgo trombótico.
+¿Cuál es la trombosis clásica?
+La asociación más preguntada en exámenes es:
+Trombosis de la vena renal.
+También aumenta el riesgo de:
+• TVP.
+• Tromboembolismo pulmonar.
+¿Qué glomerulopatía se asocia más?
+La respuesta clásica es:
+Nefropatía membranosa.
+Especialmente cuando:
+Albúmina <2.5 g/dL.
+¿Por qué NO hemorragia?
+El síndrome nefrótico produce:
+Hipercoagulabilidad.
+No tendencia hemorrágica.
+¿Cuál es la trampa de examen?
+Muchos estudiantes recuerdan:
+"Síndrome nefrótico = infecciones."
+Lo cual es cierto.
+Sin embargo:
+La nefropatía membranosa tiene una asociación particularmente fuerte con:
+Eventos tromboembólicos.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar síndrome nefrótico.
+2.	Revisar albúmina sérica.
+3.	Reconocer estado hipercoagulable.
+4.	Asociar nefropatía membranosa.
+5.	Pensar en trombosis venosa renal o TVP.
+Perlas de examen
+✅ La nefropatía membranosa es la glomerulopatía con mayor riesgo trombótico.
+✅ La trombosis de la vena renal es una asociación clásica de examen.
+✅ Albúmina <2.5 g/dL aumenta significativamente el riesgo.
+✅ Existe pérdida urinaria de antitrombina III.
+✅ También aumenta el riesgo de embolia pulmonar.
+✅ El síndrome nefrótico es un estado de hipercoagulabilidad adquirida.
+✅ La profilaxis anticoagulante puede considerarse en pacientes seleccionados de alto riesgo.
+Referencias
+• Brenner & Rector's The Kidney.
+• KDIGO Glomerular Disease Guidelines.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Hypercoagulability in Nephrotic Syndrome.
+• Comprehensive Clinical Nephrology.
+
+PREGUNTA 99 (GINECOLOGÍA Y OBSTETRICIA)
+Mujer de 34 años consulta por dolor pélvico de inicio súbito durante actividad física intensa, asociado a náuseas. La ecografía transvaginal evidencia una masa anexial izquierda con signo de "remolino" (whirlpool sign).
+¿Cuál es el diagnóstico más probable y cuál es el manejo más adecuado?
+A. Embarazo ectópico; metotrexato.
+B. Quiste ovárico hemorrágico; observación.
+C. Torsión ovárica; laparoscopia urgente con destorsión ovárica.
+D. Enfermedad inflamatoria pélvica; antibióticos intravenosos.
+✅ Respuesta correcta: C. Torsión ovárica; laparoscopia urgente con destorsión ovárica.
+La torsión ovárica ocurre por rotación del ovario sobre su pedículo vascular, comprometiendo inicialmente el drenaje venoso y posteriormente el flujo arterial. El signo ecográfico de "remolino" es altamente sugestivo de torsión anexial y constituye una urgencia ginecológica.
+Lo que debes saber para el examen
+Cuando veas:
+• Dolor pélvico súbito.
+• Náuseas o vómitos.
+• Masa anexial.
+• Signo de remolino.
+Debes pensar en:
+Torsión ovárica.
+Tema: Abdomen agudo ginecológico.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las emergencias ginecológicas más importantes.
+La clave no es el dolor.
+La clave es:
+El signo ecográfico de remolino.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Dolor súbito.
+• Náuseas.
+• Masa anexial.
+Y la ecografía reporta:
+Signo de "whirlpool".
+Esto corresponde a:
+Torsión del pedículo anexial.
+¿Qué sucede fisiopatológicamente?
+Inicialmente se compromete:
+• Retorno venoso.
+Posteriormente:
+• Flujo arterial.
+Lo que puede producir:
+• Isquemia.
+• Necrosis ovárica.
+¿Cuál es el tratamiento?
+La conducta correcta es:
+Laparoscopia urgente.
+Con:
+• Destorsión ovárica.
+• Preservación del ovario si es viable.
+¿Por qué NO observar?
+Porque:
+Cada hora aumenta el riesgo de pérdida ovárica.
+¿Por qué NO administrar antibióticos?
+No existen datos sugestivos de:
+Enfermedad inflamatoria pélvica.
+¿Por qué NO metotrexato?
+No existen hallazgos sugestivos de:
+Embarazo ectópico.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Masa anexial."
+Y responden:
+Quiste ovárico.
+Sin embargo:
+El dato decisivo es:
+El signo de remolino.
+Este hallazgo es prácticamente clásico de:
+Torsión ovárica.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar dolor súbito.
+2.	Reconocer masa anexial.
+3.	Identificar signo de remolino.
+4.	Diagnosticar torsión ovárica.
+5.	Realizar laparoscopia urgente.
+Perlas de examen
+✅ El signo de "whirlpool" es altamente sugestivo de torsión ovárica.
+✅ El dolor suele ser súbito e intenso.
+✅ Las náuseas y vómitos son frecuentes.
+✅ La ecografía Doppler puede mostrar disminución o ausencia de flujo.
+✅ La presencia de flujo arterial NO excluye torsión.
+✅ El tratamiento es quirúrgico urgente.
+✅ Actualmente se recomienda preservar el ovario siempre que sea posible.
+Referencias
+• Williams Gynecology.
+• Berek & Novak's Gynecology.
+• ACOG Committee Opinion on Adnexal Torsion.
+• UpToDate: Ovarian and Fallopian Tube Torsion.
+• Campbell-Walsh Gynecology and Pelvic Surgery.
+
+PREGUNTA 100 (GINECOLOGÍA Y OBSTETRICIA)
+Mujer de 30 años, G1P1, consulta por fiebre y dolor mamario 8 días después de un parto vaginal. Refiere lactancia materna exclusiva. Al examen físico se evidencia una mama eritematosa, tumefacta y dolorosa a la palpación, sin fluctuación ni hallazgos sugestivos de colección.
+¿Cuál es la conducta inicial más adecuada?
+A. Suspender la lactancia e iniciar cabergolina.
+B. Drenaje quirúrgico urgente.
+C. Iniciar dicloxacilina o cefalexina y continuar la lactancia materna.
+D. Observación ambulatoria sin tratamiento.
+✅ Respuesta correcta: C. Iniciar dicloxacilina o cefalexina y continuar la lactancia materna.
+El cuadro clínico es compatible con mastitis puerperal. El microorganismo más frecuentemente implicado es Staphylococcus aureus. El tratamiento inicial consiste en antibióticos dirigidos contra cocos grampositivos y el mantenimiento de la lactancia o extracción frecuente de leche.
+Lo que debes saber para el examen
+Cuando veas:
+• Posparto.
+• Lactancia.
+• Mama dolorosa y eritematosa.
+• Fiebre.
+• Sin absceso.
+Debes pensar en:
+Mastitis puerperal.
+Tema: Patología mamaria del puerperio.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las complicaciones más frecuentes de la lactancia.
+La clave no es la fiebre.
+La clave es:
+La ausencia de absceso.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Posparto reciente.
+• Lactancia activa.
+• Dolor mamario.
+• Eritema.
+• Fiebre.
+Esto corresponde a:
+Mastitis puerperal.
+¿Cuál es el germen más frecuente?
+La respuesta clásica es:
+Staphylococcus aureus.
+¿Cuál es el tratamiento?
+• Dicloxacilina.
+o
+• Cefalexina.
+Además:
+Continuar la lactancia materna.
+¿Por qué continuar lactando?
+Porque favorece:
+• Vaciamiento mamario.
+• Resolución de la infección.
+• Disminución de la congestión.
+¿Cuándo se realiza drenaje?
+Solo cuando existe:
+• Absceso mamario.
+• Fluctuación.
+• Colección documentada.
+Hallazgos ausentes en este caso.
+¿Por qué NO suspender la lactancia?
+Porque:
+No mejora la evolución y puede empeorar la congestión mamaria.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Fiebre y mama dolorosa."
+Y responden:
+Drenaje quirúrgico.
+Sin embargo:
+El dato decisivo es:
+La ausencia de absceso.
+Esto orienta a:
+Manejo médico.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar mastitis puerperal.
+2.	Buscar absceso.
+3.	Si no existe colección → antibióticos.
+4.	Mantener lactancia.
+5.	Reevaluar respuesta clínica.
+Perlas de examen
+✅ Staphylococcus aureus es el agente causal más frecuente.
+✅ La lactancia NO debe suspenderse.
+✅ Dicloxacilina y cefalexina son tratamientos de primera línea.
+✅ El vaciamiento frecuente de la mama es fundamental.
+✅ El absceso mamario requiere drenaje.
+✅ La mastitis suele aparecer durante las primeras semanas posparto.
+✅ La ecografía mamaria se reserva para sospecha de absceso.
+Referencias
+• Williams Obstetrics.
+• ACOG Committee Opinion on Breastfeeding Challenges.
+• Academy of Breastfeeding Medicine Protocol #36.
+• Nelson Textbook of Pediatrics.
+• UpToDate: Lactational Mastitis.

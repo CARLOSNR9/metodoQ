@@ -1,0 +1,1347 @@
+PREGUNTA 52 (GASTROENTEROLOGÍA)
+Paciente masculino de 55 años, con antecedente de gonalgia izquierda en manejo frecuente con antiinflamatorios no esteroideos, consulta por hematemesis abundante y melena de inicio reciente. Al examen físico presenta taquicardia sin hipotensión.
+La endoscopia digestiva alta reporta:
+• Úlcera gástrica de 1.5 cm en curvatura menor.
+• Vaso visible no sangrante en el lecho ulceroso.
+• Sin sangrado activo al momento del procedimiento.
+Los laboratorios muestran:
+• Hemoglobina: 8 g/dL.
+• Nitrógeno ureico (BUN): 32 mg/dL.
+¿Cuál es la clasificación de Forrest, la puntuación de Glasgow-Blatchford y el diagnóstico más probable?
+A. Forrest Ia, Glasgow-Blatchford bajo riesgo (<3), gastritis erosiva por AINE.
+B. Forrest IIa, Glasgow-Blatchford alto riesgo (>7), úlcera péptica sangrante secundaria a AINE.
+C. Forrest IIc, Glasgow-Blatchford bajo riesgo (<3), úlcera gástrica cicatrizada.
+D. Forrest III, Glasgow-Blatchford intermedio, síndrome de Mallory-Weiss.
+✅ Respuesta correcta: B. Forrest IIa, Glasgow-Blatchford alto riesgo (>7), úlcera péptica sangrante secundaria a AINE.
+
+PREGUNTA 53 (ENDOCRINOLOGÍA)
+Paciente femenina de 25 años consulta por fatiga progresiva, intolerancia al frío, aumento de peso no intencional y estreñimiento de varios meses de evolución. Refiere además caída del cabello y piel seca. Los estudios de laboratorio muestran TSH elevada y T4 libre disminuida.
+¿Cuál es el diagnóstico más probable?
+A. Hipertiroidismo primario.
+B. Hipotiroidismo primario.
+C. Hipotiroidismo central.
+D. Tiroiditis subaguda.
+✅ Respuesta correcta: B. Hipotiroidismo primario.
+La elevación de TSH asociada a disminución de T4 libre es el patrón bioquímico característico del hipotiroidismo primario, generalmente secundario a enfermedad tiroidea primaria.
+Lo que debes saber para el examen
+Cuando veas:
+• Fatiga.
+• Intolerancia al frío.
+• Aumento de peso.
+• TSH elevada.
+• T4 libre baja.
+Debes pensar en:
+Hipotiroidismo primario.
+Tema: Hipotiroidismo.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa uno de los trastornos endocrinológicos más frecuentes.
+La clave no son los síntomas.
+La clave es:
+La combinación de TSH elevada y T4 libre baja.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Síntomas compatibles con disminución del metabolismo basal.
+• TSH elevada.
+• T4 libre disminuida.
+Estos hallazgos corresponden a:
+Hipotiroidismo primario.
+¿Por qué aumenta la TSH?
+Cuando la glándula tiroides produce menos hormonas:
+• Disminuye la T4.
+• Aumenta la secreción hipofisaria de TSH.
+Esto ocurre por:
+Retroalimentación negativa.
+¿Cuál es la causa más frecuente?
+En adultos, la causa más frecuente es:
+Tiroiditis de Hashimoto.
+Aunque también pueden producirlo:
+• Cirugía tiroidea.
+• Radioyodo.
+• Déficit de yodo.
+¿Por qué NO es hipotiroidismo central?
+En el hipotiroidismo central suele encontrarse:
+• T4 libre baja.
+• TSH baja o inapropiadamente normal.
+No elevada.
+¿Por qué NO es hipertiroidismo?
+El hipertiroidismo produce:
+• Pérdida de peso.
+• Intolerancia al calor.
+• Taquicardia.
+Hallazgos opuestos a los del caso.
+¿Por qué NO es tiroiditis subaguda?
+La tiroiditis subaguda típicamente cursa con:
+• Dolor cervical.
+• Fase inicial de hipertiroidismo.
+No corresponde al cuadro presentado.
+¿Cuál es la trampa de examen?
+Muchos estudiantes memorizan:
+TSH alta = problema hipofisario.
+Sin embargo:
+El dato decisivo es:
+La T4 libre disminuida.
+Esto indica:
+Falla primaria de la glándula tiroides.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar síntomas compatibles.
+2.	Interpretar TSH.
+3.	Interpretar T4 libre.
+4.	Diferenciar origen primario o central.
+5.	Diagnosticar hipotiroidismo primario.
+Perlas de examen
+✅ TSH elevada y T4 libre baja = hipotiroidismo primario.
+✅ La causa más frecuente es la tiroiditis de Hashimoto.
+✅ La intolerancia al frío es un síntoma clásico.
+✅ La piel seca y la caída del cabello son hallazgos frecuentes.
+✅ El estreñimiento es una manifestación común.
+✅ La bradicardia puede estar presente.
+✅ El tratamiento de elección es la levotiroxina.
+Referencias
+• Williams Textbook of Endocrinology.
+• Harrison's Principles of Internal Medicine.
+• American Thyroid Association Guidelines.
+• Greenspan's Basic and Clinical Endocrinology.
+• UpToDate: Clinical Manifestations and Diagnosis of Hypothyroidism.
+
+PREGUNTA 54 (CARDIOLOGÍA)
+Paciente masculino de 60 años, con antecedentes de fibrilación auricular en manejo para control del ritmo, consulta por disnea súbita y dolor torácico. Al ingreso presenta hipotensión e hipoxemia. El electrocardiograma muestra patrón S1Q3T3 y la angiotomografía pulmonar evidencia un defecto de llenado en la arteria pulmonar derecha.
+¿Cuál es el siguiente paso más adecuado en el manejo?
+A. Anticoagulación con heparina de bajo peso molecular y manejo ambulatorio.
+B. Iniciar anticoagulación oral con apixabán.
+C. Trombólisis sistémica.
+D. Colocación de filtro de vena cava inferior.
+✅ Respuesta correcta: C. Trombólisis sistémica.
+El paciente presenta un tromboembolismo pulmonar de alto riesgo (masivo), evidenciado por hipotensión arterial e inestabilidad hemodinámica. En ausencia de contraindicaciones, la trombólisis sistémica constituye el tratamiento de elección.
+Lo que debes saber para el examen
+Cuando veas:
+• Disnea súbita.
+• Dolor torácico.
+• Hipotensión.
+• AngioTAC positiva para TEP.
+Debes pensar en:
+Tromboembolismo pulmonar de alto riesgo.
+Tema: Tromboembolismo pulmonar.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el manejo del tromboembolismo pulmonar según el riesgo de mortalidad.
+La clave no es el patrón S1Q3T3.
+La clave es:
+La hipotensión.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Disnea súbita.
+• Dolor torácico.
+• Hipoxemia.
+• Hipotensión.
+• Confirmación imagenológica de TEP.
+Esto corresponde a:
+Tromboembolismo pulmonar de alto riesgo.
+¿Por qué la hipotensión es tan importante?
+La hipotensión indica:
+Compromiso hemodinámico secundario a falla ventricular derecha aguda.
+Esto aumenta significativamente:
+La mortalidad.
+Por ello:
+Requiere reperfusión urgente.
+¿Cuál es el tratamiento de elección?
+En pacientes con:
+• PAS <90 mmHg.
+• Choque obstructivo.
+• Inestabilidad hemodinámica.
+La conducta indicada es:
+Trombólisis sistémica.
+¿Qué medicamentos pueden utilizarse?
+Los más empleados son:
+• Alteplasa.
+• Tenecteplasa.
+Su objetivo es:
+Disolver rápidamente el trombo.
+¿Por qué NO anticoagulación aislada?
+La anticoagulación es el tratamiento estándar en:
+TEP de riesgo bajo o intermedio.
+Sin embargo:
+En presencia de choque o hipotensión es insuficiente como único tratamiento.
+¿Por qué NO iniciar directamente apixabán?
+Los anticoagulantes orales directos tienen indicación en:
+Tratamiento posterior y prevención secundaria.
+No son la estrategia inicial en un TEP masivo.
+¿Por qué NO colocar filtro de vena cava?
+Los filtros se reservan principalmente para:
+• Contraindicación absoluta para anticoagulación.
+• Recurrencia tromboembólica pese a anticoagulación adecuada.
+No es la indicación principal en este escenario.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Defecto de llenado en arteria pulmonar."
+Y responden:
+Anticoagulación.
+Sin embargo:
+El dato decisivo es:
+La hipotensión arterial.
+Esto convierte el cuadro en:
+TEP de alto riesgo con indicación de trombólisis.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Confirmar el diagnóstico.
+2.	Valorar estabilidad hemodinámica.
+3.	Identificar hipotensión o choque.
+4.	Clasificar como TEP de alto riesgo.
+5.	Realizar trombólisis sistémica.
+Perlas de examen
+✅ La hipotensión define un TEP de alto riesgo.
+✅ El patrón S1Q3T3 puede observarse en sobrecarga aguda del ventrículo derecho.
+✅ La angioTAC es el estudio diagnóstico de elección en pacientes estables.
+✅ La trombólisis reduce la obstrucción vascular rápidamente.
+✅ La anticoagulación aislada no es suficiente en pacientes inestables.
+✅ El ventrículo derecho es el principal determinante pronóstico en el TEP.
+✅ El TEP masivo constituye una emergencia cardiovascular.
+Referencias
+• European Society of Cardiology Guidelines for Pulmonary Embolism.
+• CHEST Guidelines for Venous Thromboembolism.
+• Harrison's Principles of Internal Medicine.
+• Braunwald's Heart Disease.
+• UpToDate: Risk Stratification and Initial Management of Acute Pulmonary Embolism.
+
+PREGUNTA 55 (PEDIATRÍA - ALERGOLOGÍA)
+Paciente masculino de 15 años es llevado a urgencias tras presentar urticaria generalizada y edema de labios aproximadamente 15 minutos después de ingerir mariscos. Al examen físico presenta hipotensión, taquicardia y estridor laríngeo.
+¿Cuál es el manejo de primera línea?
+A. Hidrocortisona intravenosa.
+B. Clorfeniramina intravenosa.
+C. Adrenalina intramuscular.
+D. Salbutamol inhalado.
+✅ Respuesta correcta: C. Adrenalina intramuscular.
+El paciente presenta un cuadro de anafilaxia caracterizado por compromiso cutáneo, respiratorio y cardiovascular tras la exposición a un alérgeno. La adrenalina intramuscular es el tratamiento de primera línea y debe administrarse de forma inmediata.
+Lo que debes saber para el examen
+Cuando veas:
+• Exposición a alérgeno.
+• Urticaria.
+• Angioedema.
+• Hipotensión.
+• Estridor.
+Debes pensar en:
+Anafilaxia.
+Tema: Anafilaxia.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las emergencias alérgicas más importantes.
+La clave no es la urticaria.
+La clave es:
+La hipotensión asociada a compromiso respiratorio.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Exposición reciente a mariscos.
+• Urticaria generalizada.
+• Edema de labios.
+• Estridor.
+• Hipotensión.
+Esto corresponde a:
+Anafilaxia.
+¿Qué es la anafilaxia?
+Es una reacción de hipersensibilidad sistémica grave que puede comprometer:
+• Vía aérea.
+• Respiración.
+• Circulación.
+Y puede causar:
+Muerte si no se trata oportunamente.
+¿Cuál es el tratamiento de elección?
+La medida más importante es:
+Adrenalina intramuscular.
+Debe administrarse en:
+La cara anterolateral del muslo.
+¿Por qué funciona la adrenalina?
+Produce:
+• Vasoconstricción.
+• Aumento de la presión arterial.
+• Disminución del edema laríngeo.
+• Broncodilatación.
+Por ello:
+Es el tratamiento de primera línea.
+¿Por qué NO administrar antihistamínicos primero?
+Los antihistamínicos:
+Mejoran síntomas cutáneos.
+Pero:
+No corrigen la hipotensión ni el compromiso de la vía aérea.
+¿Por qué NO administrar corticoides primero?
+Los corticoides tienen:
+Inicio de acción tardío.
+No son útiles como tratamiento inicial de rescate.
+¿Por qué NO usar únicamente salbutamol?
+El salbutamol puede mejorar:
+Broncoespasmo.
+Pero:
+No corrige el choque anafiláctico.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Urticaria."
+Y responden:
+Antihistamínicos.
+Sin embargo:
+El dato decisivo es:
+La presencia de hipotensión y estridor.
+Esto define:
+Anafilaxia.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Reconocer la anafilaxia.
+2.	Administrar adrenalina intramuscular.
+3.	Asegurar vía aérea.
+4.	Administrar oxígeno y líquidos intravenosos.
+5.	Añadir antihistamínicos y corticoides como tratamiento complementario.
+Perlas de examen
+✅ La adrenalina intramuscular es el tratamiento de primera línea en anafilaxia.
+✅ No existen contraindicaciones absolutas para administrar adrenalina en una anafilaxia.
+✅ La hipotensión indica compromiso cardiovascular.
+✅ El estridor sugiere edema de vía aérea superior.
+✅ Los antihistamínicos son tratamientos coadyuvantes.
+✅ Los corticoides no reemplazan la adrenalina.
+✅ El retraso en la administración de adrenalina aumenta la mortalidad.
+Referencias
+• World Allergy Organization (WAO) Anaphylaxis Guidelines.
+• European Academy of Allergy and Clinical Immunology (EAACI) Guidelines.
+• Nelson Textbook of Pediatrics.
+• Tintinalli's Emergency Medicine.
+• UpToDate: Anaphylaxis Recognition and Management.
+
+PREGUNTA 56 (DERMATOLOGÍA)
+Mujer de 33 años, con antecedente de epilepsia en tratamiento con carbamazepina, consulta por malestar general, fiebre y edema palpebral, seguido de la aparición de un exantema máculo-papular pruriginoso que compromete aproximadamente el 17% de la superficie corporal.
+¿Cuál es el diagnóstico y tratamiento más adecuado?
+A. Síndrome de Stevens-Johnson; suspensión de carbamazepina y manejo de soporte hospitalario.
+B. Síndrome DRESS; suspensión inmediata de carbamazepina e inicio de corticoides sistémicos.
+C. Necrólisis epidérmica tóxica; desbridamiento quirúrgico urgente.
+D. Exantema medicamentoso simple; continuar carbamazepina y administrar antihistamínicos.
+✅ Respuesta correcta: B. Síndrome DRESS; suspensión inmediata de carbamazepina e inicio de corticoides sistémicos.
+La combinación de fiebre, edema facial, exantema extenso y exposición a un fármaco de alto riesgo como la carbamazepina es altamente sugestiva de síndrome DRESS (Drug Reaction with Eosinophilia and Systemic Symptoms), una reacción de hipersensibilidad potencialmente grave.
+Lo que debes saber para el examen
+Cuando veas:
+• Carbamazepina.
+• Fiebre.
+• Edema facial o palpebral.
+• Exantema extenso.
+Debes pensar en:
+Síndrome DRESS.
+Tema: Reacciones cutáneas graves inducidas por medicamentos.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las farmacodermias graves más preguntadas en los exámenes.
+La clave no es el exantema.
+La clave es:
+El edema facial asociado a fiebre.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Exposición a carbamazepina.
+• Fiebre.
+• Malestar general.
+• Edema palpebral.
+• Exantema máculo-papular extenso.
+Estos hallazgos orientan fuertemente hacia:
+Síndrome DRESS.
+¿Qué es el síndrome DRESS?
+Es una reacción de hipersensibilidad medicamentosa severa caracterizada por:
+• Exantema cutáneo.
+• Fiebre.
+• Eosinofilia.
+• Compromiso sistémico.
+Puede afectar:
+• Hígado.
+• Riñones.
+• Pulmones.
+• Corazón.
+¿Cuáles son los medicamentos más asociados?
+Los más clásicos son:
+• Carbamazepina.
+• Fenitoína.
+• Lamotrigina.
+• Fenobarbital.
+• Alopurinol.
+¿Por qué el edema facial es importante?
+El edema facial o palpebral es uno de los hallazgos más característicos de DRESS y suele aparecer tempranamente.
+¿Qué tratamiento debe realizarse?
+La conducta inicial es:
+• Suspender inmediatamente el medicamento causal.
+• Iniciar corticoides sistémicos cuando existe compromiso importante o riesgo de afectación visceral.
+¿Por qué NO es síndrome de Stevens-Johnson?
+El síndrome de Stevens-Johnson suele caracterizarse por:
+• Lesiones en diana atípicas.
+• Desprendimiento epidérmico.
+• Compromiso mucoso prominente.
+Datos que no se describen en este caso.
+¿Por qué NO es necrólisis epidérmica tóxica?
+La NET se caracteriza por:
+• Desprendimiento epidérmico extenso.
+• Compromiso >30% de superficie corporal.
+No corresponde a la presentación descrita.
+¿Por qué NO es un exantema medicamentoso simple?
+La presencia de:
+• Fiebre.
+• Edema facial.
+• Afectación sistémica potencial.
+Descarta una reacción simple.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Exantema por medicamento."
+Y responden:
+Exantema medicamentoso simple.
+Sin embargo:
+El dato decisivo es:
+La asociación de fiebre y edema facial con carbamazepina.
+Esto orienta a:
+Síndrome DRESS.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar el medicamento implicado.
+2.	Reconocer fiebre y edema facial.
+3.	Sospechar DRESS.
+4.	Suspender el fármaco.
+5.	Iniciar manejo sistémico oportuno.
+Perlas de examen
+✅ La carbamazepina es una causa clásica de síndrome DRESS.
+✅ El edema facial es uno de los hallazgos más característicos.
+✅ La eosinofilia es frecuente pero no indispensable para sospechar el diagnóstico.
+✅ El compromiso hepático es la manifestación visceral más común.
+✅ La suspensión inmediata del fármaco es obligatoria.
+✅ Los corticoides sistémicos suelen emplearse en casos moderados o graves.
+✅ El síndrome DRESS puede aparecer semanas después de iniciar el medicamento.
+Referencias
+• Fitzpatrick's Dermatology.
+• Bolognia Dermatology.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Drug Reaction with Eosinophilia and Systemic Symptoms (DRESS).
+• European Academy of Dermatology and Venereology Guidelines.
+
+PREGUNTA 57 (MEDICINA INTERNA - TOXICOLOGÍA)
+Un hombre de 20 años es encontrado inconsciente tras permanecer toda la noche dentro de una cochera con el motor de un automóvil encendido. Los gases arteriales muestran pH de 7.2, PaO₂ de 190 mmHg y saturación de oxígeno de 88%, mientras que la pulsioximetría registra una saturación de 98%.
+¿Cuál es la explicación más probable para esta disociación?
+A. Metahemoglobinemia secundaria a intoxicación por nitritos.
+B. Intoxicación por monóxido de carbono con formación de carboxihemoglobina.
+C. Error técnico de la pulsioximetría por hipotermia.
+D. Hipoventilación alveolar secundaria a depresión respiratoria.
+✅ Respuesta correcta: B. Intoxicación por monóxido de carbono con formación de carboxihemoglobina.
+La intoxicación por monóxido de carbono produce formación de carboxihemoglobina, la cual disminuye el transporte de oxígeno sin alterar significativamente la PaO₂. Además, la pulsioximetría convencional no diferencia adecuadamente entre oxihemoglobina y carboxihemoglobina, generando lecturas falsamente normales.
+Lo que debes saber para el examen
+Cuando veas:
+• Exposición a humo o motores encendidos.
+• Alteración del estado de conciencia.
+• PaO₂ normal o elevada.
+• Pulsioximetría falsamente normal.
+Debes pensar en:
+Intoxicación por monóxido de carbono.
+Tema: Intoxicación por monóxido de carbono.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa uno de los errores diagnósticos más frecuentes en toxicología.
+La clave no es la hipoxemia.
+La clave es:
+La discrepancia entre los gases arteriales y la pulsioximetría.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Exposición prolongada a gases de combustión.
+• Alteración del estado de conciencia.
+• Acidosis.
+• Saturación discordante.
+Esto es altamente sugestivo de:
+Intoxicación por monóxido de carbono (CO).
+¿Cómo actúa el monóxido de carbono?
+El CO posee una afinidad por la hemoglobina aproximadamente:
+200 a 250 veces mayor que la del oxígeno.
+Como consecuencia:
+Se forma carboxihemoglobina.
+¿Qué ocurre con la PaO₂?
+La PaO₂ mide:
+Oxígeno disuelto en plasma.
+Por ello:
+Puede encontrarse normal o incluso elevada.
+¿Por qué la pulsioximetría es engañosa?
+La mayoría de los pulsioxímetros convencionales:
+No distinguen entre oxihemoglobina y carboxihemoglobina.
+Como resultado:
+Reportan saturaciones falsamente normales o elevadas.
+¿Qué examen confirma el diagnóstico?
+La prueba diagnóstica de elección es:
+Cooximetría arterial o venosa.
+La cual permite cuantificar:
+Carboxihemoglobina.
+¿Por qué NO es metahemoglobinemia?
+La metahemoglobinemia suele asociarse a:
+• Exposición a oxidantes.
+• Saturaciones cercanas a 85%.
+• Cianosis persistente.
+No al antecedente clásico del caso.
+¿Por qué NO es hipoventilación?
+La hipoventilación produciría:
+Disminución de la PaO₂.
+Lo contrario de lo observado.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Saturación 98%."
+Y descartan hipoxia.
+Sin embargo:
+El dato decisivo es:
+La exposición a un motor encendido junto con la discordancia gasométrica.
+Esto orienta a:
+Intoxicación por monóxido de carbono.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar la exposición.
+2.	Reconocer la alteración neurológica.
+3.	Detectar la discordancia entre pulsioximetría y gases arteriales.
+4.	Sospechar carboxihemoglobina.
+5.	Confirmar mediante cooximetría.
+Perlas de examen
+✅ El monóxido de carbono produce carboxihemoglobina.
+✅ La PaO₂ puede ser normal en la intoxicación por CO.
+✅ La pulsioximetría puede ser falsamente normal.
+✅ La cooximetría es el método diagnóstico de elección.
+✅ El tratamiento inicial es oxígeno al 100%.
+✅ Algunos pacientes requieren oxigenoterapia hiperbárica.
+✅ La intoxicación por CO es una causa frecuente de muerte accidental por inhalación.
+Referencias
+• Goldfrank's Toxicologic Emergencies.
+• Tintinalli's Emergency Medicine.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Carbon Monoxide Poisoning.
+• American College of Emergency Physicians Guidelines.
+
+PREGUNTA 58 (GINECOLOGÍA Y OBSTETRICIA)
+Paciente femenina de 25 años, sexualmente activa, con antecedentes de relaciones sexuales de riesgo y no uso habitual de preservativo, consulta por dolor en hipogastrio y dolor pélvico de intensidad fluctuante. Al examen ginecológico se evidencia dolor a la movilización cervical sin dolor anexial.
+¿Cuál es la enfermedad más probable y el tratamiento inicial recomendado?
+A. Embarazo ectópico; manejo quirúrgico urgente.
+B. Enfermedad inflamatoria pélvica; ceftriaxona más doxiciclina y metronidazol.
+C. Endometriosis; anticonceptivos orales combinados.
+D. Quiste ovárico funcional; observación clínica.
+✅ Respuesta correcta: B. Enfermedad inflamatoria pélvica; ceftriaxona más doxiciclina y metronidazol.
+La presencia de dolor pélvico asociado a dolor a la movilización cervical en una mujer con factores de riesgo para infecciones de transmisión sexual es altamente sugestiva de enfermedad inflamatoria pélvica (EIP). El tratamiento empírico debe iniciarse tan pronto como exista sospecha clínica.
+Lo que debes saber para el examen
+Cuando veas:
+• Mujer joven sexualmente activa.
+• Relaciones sexuales sin preservativo.
+• Dolor pélvico.
+• Dolor a la movilización cervical.
+Debes pensar en:
+Enfermedad inflamatoria pélvica.
+Tema: Enfermedad inflamatoria pélvica.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa uno de los diagnósticos ginecológicos más frecuentes en mujeres jóvenes.
+La clave no es el dolor pélvico.
+La clave es:
+El dolor a la movilización cervical.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Conductas sexuales de riesgo.
+• Dolor hipogástrico.
+• Dolor pélvico.
+• Dolor cervical al tacto bimanual.
+Estos hallazgos son altamente sugestivos de:
+Enfermedad inflamatoria pélvica.
+¿Qué es la EIP?
+Corresponde a una infección ascendente del tracto genital femenino superior que puede comprometer:
+• Endometrio.
+• Trompas de Falopio.
+• Ovarios.
+• Peritoneo pélvico.
+¿Cuáles son los microorganismos más frecuentes?
+Los principales agentes implicados son:
+• Neisseria gonorrhoeae.
+• Chlamydia trachomatis.
+Aunque suele ser una infección polimicrobiana.
+¿Cuál es el tratamiento inicial?
+El esquema ambulatorio recomendado incluye:
+• Ceftriaxona.
+• Doxiciclina.
+• Metronidazol.
+Este tratamiento cubre:
+• Gonococo.
+• Chlamydia.
+• Anaerobios.
+¿Por qué NO es embarazo ectópico?
+Aunque puede producir dolor pélvico:
+No existe información sugestiva de embarazo y el hallazgo característico es:
+Dolor a la movilización cervical en un contexto de riesgo infeccioso.
+¿Por qué NO es endometriosis?
+La endometriosis suele producir:
+• Dolor crónico.
+• Dismenorrea.
+• Dispareunia.
+No se asocia típicamente a:
+Dolor cervical sugestivo de infección.
+¿Por qué NO es un quiste funcional?
+No explica adecuadamente:
+Los factores de riesgo sexuales ni el dolor a la movilización cervical.
+¿Cuál es la trampa de examen?
+Muchos estudiantes se enfocan en:
+El dolor pélvico.
+Sin embargo:
+El dato decisivo es:
+El dolor a la movilización cervical.
+Este hallazgo es clásico de:
+Enfermedad inflamatoria pélvica.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar factores de riesgo sexuales.
+2.	Reconocer dolor pélvico.
+3.	Buscar dolor a la movilización cervical.
+4.	Sospechar EIP.
+5.	Iniciar tratamiento antibiótico empírico.
+Perlas de examen
+✅ El dolor a la movilización cervical es un criterio clínico importante para EIP.
+✅ El tratamiento no debe retrasarse esperando resultados microbiológicos.
+✅ Chlamydia y Gonococo son los agentes más frecuentes.
+✅ El metronidazol mejora la cobertura frente a anaerobios.
+✅ La EIP puede causar infertilidad tubárica.
+✅ El retraso terapéutico aumenta el riesgo de complicaciones.
+✅ Toda mujer joven con dolor pélvico debe evaluarse para EIP.
+Referencias
+• CDC Sexually Transmitted Infections Treatment Guidelines.
+• ACOG Practice Bulletin: Pelvic Inflammatory Disease.
+• Novak's Gynecology.
+• Williams Gynecology.
+• UpToDate: Pelvic Inflammatory Disease.
+
+PREGUNTA 59 (NEUROLOGÍA)
+Joven de 16 años presenta episodios recurrentes de cefalea unilateral, pulsátil, acompañada de náuseas y fotofobia. Refiere que los síntomas suelen desencadenarse o exacerbarse después de realizar actividad física intensa.
+¿Cuál es el diagnóstico más probable?
+A. Cefalea tensional.
+B. Migraña.
+C. Cefalea en racimos.
+D. Hipertensión intracraneal idiopática.
+✅ Respuesta correcta: B. Migraña.
+La migraña se caracteriza por episodios recurrentes de cefalea pulsátil, habitualmente unilateral, asociada a náuseas, fotofobia y empeoramiento con la actividad física.
+Lo que debes saber para el examen
+Cuando veas:
+• Cefalea unilateral.
+• Dolor pulsátil.
+• Náuseas.
+• Fotofobia.
+• Empeoramiento con ejercicio.
+Debes pensar en:
+Migraña.
+Tema: Migraña.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el reconocimiento clínico de la migraña.
+La clave no es la edad.
+La clave es:
+La combinación de cefalea pulsátil con síntomas asociados.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Cefalea recurrente.
+• Localización unilateral.
+• Carácter pulsátil.
+• Náuseas.
+• Fotofobia.
+• Empeoramiento con actividad física.
+Estos hallazgos son característicos de:
+Migraña.
+¿Cuáles son las características típicas de la migraña?
+Generalmente presenta:
+• Dolor unilateral.
+• Intensidad moderada o severa.
+• Carácter pulsátil.
+• Empeoramiento con actividad física.
+• Náuseas o vómitos.
+• Fotofobia y fonofobia.
+¿Por qué el ejercicio empeora el dolor?
+La actividad física aumenta:
+La percepción del dolor durante la crisis migrañosa.
+Por ello muchos pacientes:
+Prefieren permanecer en reposo.
+¿Por qué NO es cefalea tensional?
+La cefalea tensional suele ser:
+• Opresiva.
+• Bilateral.
+• No pulsátil.
+Además:
+No suele asociarse a náuseas importantes.
+¿Por qué NO es cefalea en racimos?
+La cefalea en racimos se caracteriza por:
+• Dolor orbitario intenso.
+• Lagrimeo.
+• Congestión nasal.
+No corresponde al cuadro descrito.
+¿Por qué NO es hipertensión intracraneal idiopática?
+Suele asociarse a:
+• Papiledema.
+• Alteraciones visuales.
+• Cefalea más persistente.
+No a episodios típicos de migraña.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Cefalea después del gimnasio."
+Y responden:
+Cefalea por esfuerzo.
+Sin embargo:
+El dato decisivo es:
+La presencia de náuseas y fotofobia asociadas.
+Esto orienta a:
+Migraña.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar cefalea recurrente.
+2.	Reconocer el carácter pulsátil.
+3.	Buscar síntomas acompañantes.
+4.	Evaluar desencadenantes.
+5.	Diagnosticar migraña.
+Perlas de examen
+✅ La migraña suele ser unilateral y pulsátil.
+✅ Las náuseas y la fotofobia son síntomas clásicos.
+✅ La actividad física suele empeorar la crisis.
+✅ Puede existir aura, aunque no es obligatoria.
+✅ Es una de las cefaleas primarias más frecuentes.
+✅ El diagnóstico es fundamentalmente clínico.
+✅ Los desencadenantes incluyen estrés, ejercicio intenso, ayuno y privación de sueño.
+Referencias
+• International Classification of Headache Disorders (ICHD-3).
+• Adams and Victor's Principles of Neurology.
+• Harrison's Principles of Internal Medicine.
+• American Headache Society Guidelines.
+• UpToDate: Migraine in Adults.
+
+PREGUNTA 60 (NEUROLOGÍA)
+Paciente de 40 años, sin antecedentes de importancia, consulta por cefalea recurrente localizada en región occipital y cervical. Refiere que los episodios suelen aparecer durante periodos de alta carga laboral y estrés. Ha utilizado analgésicos con mejoría parcial de los síntomas.
+¿Cuál es el diagnóstico más probable?
+A. Migraña.
+B. Cefalea tensional.
+C. Cefalea en racimos.
+D. Neuralgia occipital.
+✅ Respuesta correcta: B. Cefalea tensional.
+La cefalea tensional es la cefalea primaria más frecuente. Se caracteriza por dolor opresivo, habitualmente bilateral, localizado en región occipital, frontal o cervical, estrechamente relacionado con estrés emocional o tensión muscular.
+Lo que debes saber para el examen
+Cuando veas:
+• Estrés laboral.
+• Dolor occipital o cervical.
+• Cefalea recurrente.
+• Mejoría parcial con analgésicos.
+Debes pensar en:
+Cefalea tensional.
+Tema: Cefaleas primarias.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la cefalea primaria más frecuente en la práctica clínica.
+La clave no es la localización.
+La clave es:
+La asociación con estrés.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Cefalea recurrente.
+• Localización occipital y cervical.
+• Relación con estrés laboral.
+• Ausencia de síntomas neurológicos asociados.
+Estos hallazgos son compatibles con:
+Cefalea tensional.
+¿Cuáles son las características de la cefalea tensional?
+Habitualmente presenta:
+• Dolor opresivo.
+• Sensación de banda o presión.
+• Intensidad leve o moderada.
+• Localización bilateral.
+• Relación con estrés o fatiga.
+Generalmente:
+No empeora con la actividad física.
+¿Por qué aparece en región cervical?
+La tensión muscular de:
+• Cuello.
+• Hombros.
+• Región occipital.
+Participa en la fisiopatología del cuadro.
+¿Por qué NO es migraña?
+La migraña suele asociarse a:
+• Náuseas.
+• Fotofobia.
+• Dolor pulsátil.
+• Empeoramiento con ejercicio.
+Datos ausentes en este caso.
+¿Por qué NO es cefalea en racimos?
+La cefalea en racimos produce:
+• Dolor orbitario intenso.
+• Lagrimeo.
+• Rinorrea.
+No corresponde al cuadro descrito.
+¿Por qué NO es neuralgia occipital?
+La neuralgia occipital suele manifestarse como:
+Dolor lancinante o eléctrico.
+No como cefalea relacionada con estrés.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Región occipital."
+Y responden:
+Neuralgia occipital.
+Sin embargo:
+El dato decisivo es:
+La relación con estrés laboral.
+Esto orienta a:
+Cefalea tensional.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar el patrón de cefalea.
+2.	Buscar factores desencadenantes.
+3.	Evaluar síntomas acompañantes.
+4.	Diferenciar cefaleas primarias.
+5.	Diagnosticar cefalea tensional.
+Perlas de examen
+✅ La cefalea tensional es la cefalea primaria más frecuente.
+✅ El estrés emocional es uno de los principales desencadenantes.
+✅ El dolor suele ser opresivo y no pulsátil.
+✅ Generalmente no se acompaña de náuseas ni vómitos.
+✅ La exploración neurológica suele ser normal.
+✅ Puede asociarse a contractura muscular cervical.
+✅ El manejo incluye medidas no farmacológicas y analgésicos simples.
+Referencias
+• International Classification of Headache Disorders (ICHD-3).
+• Adams and Victor's Principles of Neurology.
+• Harrison's Principles of Internal Medicine.
+• American Headache Society Guidelines.
+• UpToDate: Tension-Type Headache in Adults.
+
+PREGUNTA 61 (NEUROLOGÍA)
+Paciente de 27 años consulta de forma recurrente al servicio de urgencias por episodios de dolor retroocular intenso, asociado a inyección conjuntival y epífora ipsilateral. Refiere múltiples consultas previas por el mismo cuadro. Durante una de las atenciones, un residente de neurología indica oxígeno suplementario, con mejoría rápida y significativa de los síntomas.
+¿Cuál es el diagnóstico más probable?
+A. Migraña.
+B. Neuralgia del trigémino.
+C. Cefalea en racimos.
+D. Cefalea tensional.
+✅ Respuesta correcta: C. Cefalea en racimos.
+La cefalea en racimos se caracteriza por crisis recurrentes de dolor orbitario o retroorbitario extremadamente intenso, asociado a síntomas autonómicos ipsilaterales como lagrimeo, inyección conjuntival y congestión nasal. El oxígeno al 100% es uno de los tratamientos abortivos de elección.
+Lo que debes saber para el examen
+Cuando veas:
+• Dolor retroocular intenso.
+• Epífora.
+• Inyección conjuntival.
+• Mejoría con oxígeno.
+Debes pensar en:
+Cefalea en racimos.
+Tema: Cefaleas trigémino-autonómicas.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las cefaleas primarias más incapacitantes.
+La clave no es el dolor.
+La clave es:
+Los síntomas autonómicos asociados.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Dolor retroocular severo.
+• Lagrimeo.
+• Inyección conjuntival.
+• Episodios recurrentes.
+• Respuesta al oxígeno.
+Estos hallazgos son característicos de:
+Cefalea en racimos.
+¿Por qué se llama cefalea en racimos?
+Porque los episodios suelen agruparse en:
+Períodos o "racimos" de semanas o meses.
+Durante estos períodos:
+Las crisis pueden repetirse varias veces al día.
+¿Cuáles son los síntomas autonómicos típicos?
+Los más frecuentes son:
+• Epífora.
+• Inyección conjuntival.
+• Congestión nasal.
+• Rinorrea.
+• Ptosis.
+• Miosis.
+Todos del mismo lado del dolor.
+¿Por qué mejora con oxígeno?
+El oxígeno al 100%:
+Es uno de los tratamientos abortivos más eficaces.
+Produce alivio rápido en muchos pacientes.
+¿Qué otros tratamientos se utilizan?
+Para abortar la crisis:
+• Oxígeno.
+• Sumatriptán.
+Para prevención:
+• Verapamilo.
+¿Por qué NO es migraña?
+La migraña suele asociarse a:
+• Náuseas.
+• Fotofobia.
+• Dolor pulsátil.
+Y no suele presentar:
+Síntomas autonómicos tan marcados.
+¿Por qué NO es neuralgia del trigémino?
+La neuralgia produce:
+Dolor eléctrico de segundos de duración.
+No crisis prolongadas con lagrimeo e inyección conjuntival.
+¿Por qué NO es cefalea tensional?
+La cefalea tensional es:
+Opresiva y menos intensa.
+No produce síntomas autonómicos.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Dolor ocular."
+Y responden:
+Migraña.
+Sin embargo:
+El dato decisivo es:
+La combinación de epífora, inyección conjuntival y mejoría con oxígeno.
+Esto orienta directamente a:
+Cefalea en racimos.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar dolor orbitario intenso.
+2.	Buscar síntomas autonómicos ipsilaterales.
+3.	Reconocer el patrón recurrente.
+4.	Recordar la respuesta al oxígeno.
+5.	Diagnosticar cefalea en racimos.
+Perlas de examen
+✅ La cefalea en racimos es una cefalea trigémino-autonómica.
+✅ El dolor suele ser orbitario o retroorbitario.
+✅ El lagrimeo y la inyección conjuntival son hallazgos clásicos.
+✅ El oxígeno al 100% es tratamiento abortivo de elección.
+✅ El sumatriptán también es altamente eficaz.
+✅ El verapamilo es el tratamiento preventivo más utilizado.
+✅ Se considera una de las cefaleas más dolorosas descritas en medicina.
+Referencias
+• International Classification of Headache Disorders (ICHD-3).
+• Adams and Victor's Principles of Neurology.
+• Harrison's Principles of Internal Medicine.
+• American Headache Society Guidelines.
+• UpToDate: Cluster Headache.
+
+PREGUNTA 62 (NEUROLOGÍA)
+Posterior a un atraco callejero, una mujer consulta por imposibilidad para extender la muñeca, asociada a dolor en la región dorsal del antebrazo. Al examen físico presenta disminución del reflejo tricipital. Días después recupera completamente la movilidad de la extremidad.
+¿Cuál es la lesión neurológica más probable?
+A. Neuropraxia del nervio radial.
+B. Axonotmesis del nervio cubital.
+C. Neurotmesis del nervio mediano.
+D. Lesión del nervio musculocutáneo.
+✅ Respuesta correcta: A. Neuropraxia del nervio radial.
+La combinación de "muñeca caída", compromiso transitorio del reflejo tricipital y recuperación completa posterior es característica de una neuropraxia del nervio radial, la forma más leve de lesión nerviosa periférica.
+Lo que debes saber para el examen
+Cuando veas:
+• Imposibilidad para extender la muñeca.
+• Dolor dorsal del antebrazo.
+• Recuperación espontánea.
+• Déficit neurológico transitorio.
+Debes pensar en:
+Neuropraxia del nervio radial.
+Tema: Lesiones de nervios periféricos.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa las lesiones traumáticas de nervios periféricos.
+La clave no es el trauma.
+La clave es:
+La recuperación completa de la función.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Déficit motor radial.
+• Alteración refleja.
+• Recuperación posterior.
+Esto corresponde a:
+Neuropraxia.
+¿Qué es una neuropraxia?
+Es la lesión nerviosa más leve según la clasificación de Seddon.
+Se caracteriza por:
+• Bloqueo transitorio de la conducción nerviosa.
+• Ausencia de degeneración axonal.
+• Recuperación completa.
+¿Por qué el nervio radial?
+El nervio radial controla:
+• Extensión de muñeca.
+• Extensión de dedos.
+• Extensión de codo (parcialmente).
+La lesión produce:
+La clásica "muñeca caída".
+¿Por qué NO es axonotmesis?
+La axonotmesis implica:
+Daño axonal con degeneración walleriana.
+La recuperación es:
+Más lenta y generalmente incompleta en fases iniciales.
+¿Por qué NO es neurotmesis?
+La neurotmesis corresponde a:
+Sección completa del nervio.
+No presenta:
+Recuperación espontánea temprana.
+¿Por qué NO es lesión del nervio musculocutáneo?
+El nervio musculocutáneo afecta principalmente:
+• Flexión del codo.
+• Sensibilidad lateral del antebrazo.
+No explica:
+La incapacidad para extender la muñeca.
+¿Cuál es la trampa de examen?
+Muchos estudiantes identifican:
+La lesión del nervio radial.
+Pero olvidan clasificar:
+El tipo de lesión nerviosa.
+El dato decisivo es:
+La recuperación completa posterior.
+Esto orienta a:
+Neuropraxia.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar el déficit motor.
+2.	Localizar el nervio comprometido.
+3.	Evaluar la evolución clínica.
+4.	Reconocer la recuperación espontánea.
+5.	Diagnosticar neuropraxia.
+Perlas de examen
+✅ La neuropraxia es la lesión nerviosa periférica más leve.
+✅ Existe bloqueo de conducción sin lesión axonal.
+✅ La recuperación suele ser completa.
+✅ El nervio radial es el más asociado a la "muñeca caída".
+✅ La neurotmesis es la lesión más grave.
+✅ La axonotmesis implica degeneración walleriana.
+✅ La evolución clínica es fundamental para diferenciar los tipos de lesión nerviosa.
+Referencias
+• Adams and Victor's Principles of Neurology.
+• Bradley's Neurology in Clinical Practice.
+• Greenberg's Handbook of Neurosurgery.
+• Moore Clinically Oriented Anatomy.
+• UpToDate: Peripheral Nerve Injury Classification and Evaluation.
+
+PREGUNTA 63 (GINECOLOGÍA Y OBSTETRICIA)
+Primigestante de 26 años con embarazo de 37 semanas acude a control prenatal. La ecografía obstétrica reporta un peso fetal estimado en percentil 4 e índice de líquido amniótico de 6 cm. La paciente se encuentra asintomática, hemodinámicamente estable y sin trabajo de parto.
+¿Cuál es el manejo más adecuado?
+A. Continuar control prenatal habitual y repetir ecografía en 4 semanas.
+B. Hospitalización y maduración pulmonar fetal.
+C. Interrupción inmediata del embarazo.
+D. Realizar estudio Doppler fetal-materno para estratificación del riesgo y definir conducta obstétrica.
+✅ Respuesta correcta: D. Realizar estudio Doppler fetal-materno para estratificación del riesgo y definir conducta obstétrica.
+La paciente presenta un feto pequeño para la edad gestacional (PEG), ya que el peso fetal estimado se encuentra por debajo del percentil 10. Sin embargo, un percentil 4 por sí solo no establece necesariamente una restricción del crecimiento intrauterino (RCIU) severa. Antes de decidir la interrupción del embarazo, es fundamental evaluar la circulación útero-placentaria y fetal mediante Doppler.
+Lo que debes saber para el examen
+Cuando veas:
+• Peso fetal estimado entre percentil 3 y 10.
+• Embarazo a término.
+• Paciente clínicamente estable.
+• Sin datos de compromiso fetal agudo.
+Debes pensar en:
+Completar estudio con Doppler obstétrico.
+Tema: Feto pequeño para la edad gestacional y restricción del crecimiento fetal.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa uno de los errores más frecuentes en obstetricia:
+Confundir un feto pequeño para la edad gestacional con una restricción del crecimiento fetal establecida.
+La clave no es la edad gestacional.
+La clave es:
+Que aún no se ha documentado compromiso hemodinámico fetal.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Embarazo de 37 semanas.
+• Peso fetal estimado en percentil 4.
+• Índice de líquido amniótico de 6 cm.
+• Ausencia de síntomas maternos.
+• Sin evidencia de sufrimiento fetal.
+Con estos datos:
+No puede concluirse automáticamente que exista una RCIU severa que obligue a finalizar la gestación.
+¿Qué debe hacerse primero?
+La siguiente conducta es:
+Realizar Doppler obstétrico.
+Idealmente evaluando:
+• Arterias uterinas.
+• Arteria umbilical.
+• Arteria cerebral media.
+• Relación cerebroplacentaria.
+¿Por qué es importante el Doppler?
+Porque permite diferenciar:
+• Un feto constitucionalmente pequeño (PEG).
+• Una verdadera restricción del crecimiento fetal secundaria a insuficiencia placentaria.
+Esta diferenciación modifica completamente la conducta.
+¿Cuándo se considera RCIU severa?
+Las definiciones pueden variar según las guías, pero clásicamente:
+• Percentil <3 es altamente sugestivo de RCIU severa.
+• Percentiles entre 3 y 10 requieren evaluación Doppler para clasificación adecuada.
+¿Por qué NO debe interrumpirse inmediatamente el embarazo?
+Porque:
+No existe evidencia presentada de deterioro fetal.
+La interrupción debe basarse en:
+• Hallazgos Doppler.
+• Bienestar fetal.
+• Perfil biofísico.
+• Monitoreo fetal.
+No únicamente en un percentil aislado.
+¿Por qué NO continuar control rutinario?
+Porque un percentil 4 requiere estudio adicional.
+No es una gestación de bajo riesgo.
+¿Por qué NO administrar maduración pulmonar?
+Porque:
+La paciente tiene 37 semanas.
+La maduración pulmonar no está indicada en este contexto.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Percentil 4."
+Y responden:
+"Interrumpir embarazo."
+Sin embargo:
+El dato decisivo es que aún no se dispone de evaluación Doppler.
+Antes de decidir la finalización del embarazo debe determinarse si existe insuficiencia placentaria.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar el percentil fetal.
+2.	Diferenciar PEG de RCIU.
+3.	Solicitar Doppler fetal-materno.
+4.	Estratificar riesgo fetal.
+5.	Definir conducta obstétrica según resultados.
+Perlas de examen
+✅ Un peso fetal estimado < percentil 10 define un feto pequeño para la edad gestacional.
+✅ Un percentil <3 es altamente sugestivo de restricción del crecimiento fetal severa.
+✅ Los percentiles entre 3 y 10 requieren evaluación Doppler.
+✅ El Doppler de arteria umbilical es fundamental para valorar insuficiencia placentaria.
+✅ La relación cerebroplacentaria aporta información pronóstica importante.
+✅ No todo feto pequeño requiere interrupción inmediata del embarazo.
+✅ La conducta obstétrica depende de la evaluación hemodinámica fetal y no únicamente del percentil de crecimiento.
+Referencias
+• Williams Obstetrics.
+• ACOG Practice Bulletin: Fetal Growth Restriction.
+• ISUOG Practice Guidelines: Diagnosis and Management of Small-for-Gestational-Age Fetus and Fetal Growth Restriction.
+• FIGO Guidelines on Fetal Growth Restriction.
+• UpToDate: Fetal Growth Restriction: Evaluation and Management.
+
+PREGUNTA 64 (GINECOLOGÍA Y OBSTETRICIA)
+Paciente de 37 años, multigestante G5A2C2V2, con embarazo de 29 semanas, acude a control prenatal. En la prueba de tolerancia oral a la glucosa presenta los siguientes resultados: glucemia en ayunas 92 mg/dL, glucemia a la hora 213 mg/dL y glucemia a las 2 horas 150 mg/dL.
+¿Cuál es el plan de manejo más adecuado?
+A. Continuar control prenatal habitual y repetir la curva de tolerancia en 4 semanas.
+B. Iniciar insulinoterapia de forma inmediata.
+C. Diagnosticar diabetes gestacional, iniciar cambios en el estilo de vida y automonitoreo glucémico.
+D. Diagnosticar diabetes pregestacional y finalizar la gestación.
+✅ Respuesta correcta: C. Diagnosticar diabetes gestacional, iniciar cambios en el estilo de vida y automonitoreo glucémico.
+La paciente cumple criterios diagnósticos de diabetes gestacional. El manejo inicial consiste en intervención nutricional, ejercicio físico adaptado al embarazo y monitorización glucémica. La insulinoterapia se reserva para pacientes que no alcanzan metas glucémicas con medidas no farmacológicas.
+Lo que debes saber para el examen
+Cuando veas:
+• PTOG alterada.
+• Embarazo entre 24 y 28 semanas o posterior.
+• Al menos un valor diagnóstico.
+Debes pensar en:
+Diabetes gestacional.
+Tema: Diabetes gestacional.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el diagnóstico y manejo inicial de la diabetes gestacional.
+La clave no es la edad materna.
+La clave es:
+Interpretar correctamente la curva de tolerancia.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Ayunas: 92 mg/dL.
+• 1 hora: 213 mg/dL.
+• 2 horas: 150 mg/dL.
+Según los criterios IADPSG/OMS:
+Se diagnostica diabetes gestacional cuando se cumple uno o más de los siguientes:
+• Ayunas ≥ 92 mg/dL.
+• 1 hora ≥ 180 mg/dL.
+• 2 horas ≥ 153 mg/dL.
+La paciente cumple:
+• Ayunas diagnósticas.
+• Glucemia a la hora del diagnóstico.
+Por tanto:
+Presenta diabetes gestacional.
+¿Cuál es el manejo inicial?
+La primera intervención consiste en:
+• Educación nutricional.
+• Plan alimentario individualizado.
+• Actividad física según condición obstétrica.
+• Automonitoreo glucémico.
+¿Qué metas glucémicas se buscan?
+Generalmente:
+• Ayunas <95 mg/dL.
+• 1 hora posprandial <140 mg/dL.
+• 2 horas posprandial <120 mg/dL.
+¿Cuándo se utiliza insulina?
+Cuando:
+Las metas glucémicas no se alcanzan con medidas no farmacológicas.
+O existe:
+Hiperglucemia importante desde el diagnóstico.
+¿Por qué NO iniciar insulina inmediatamente?
+Porque:
+La mayoría de las pacientes deben iniciar primero manejo conservador.
+La respuesta terapéutica se evalúa posteriormente.
+¿Por qué NO repetir la curva?
+El diagnóstico ya está establecido.
+No se requiere repetir la prueba.
+¿Por qué NO es diabetes pregestacional?
+No existen criterios diagnósticos de diabetes manifiesta en el embarazo.
+¿Cuál es la trampa de examen?
+Muchos estudiantes observan:
+Glucemia >200 mg/dL a la hora.
+Y responden:
+Insulinoterapia inmediata.
+Sin embargo:
+La pregunta solicita el plan inicial.
+Y el manejo inicial es:
+Cambios en estilo de vida y monitorización glucémica.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Interpretar la PTOG.
+2.	Confirmar diabetes gestacional.
+3.	Iniciar medidas no farmacológicas.
+4.	Realizar automonitoreo.
+5.	Escalar a insulina si no se alcanzan metas.
+Perlas de examen
+✅ Un solo valor alterado en la PTOG es suficiente para el diagnóstico.
+✅ La diabetes gestacional aumenta el riesgo de macrosomía fetal.
+✅ El tratamiento inicial es nutricional y conductual.
+✅ La insulina es el tratamiento farmacológico de elección cuando se requiere.
+✅ El control glucémico reduce complicaciones maternas y fetales.
+✅ Debe realizarse seguimiento obstétrico estrecho.
+✅ Toda paciente con diabetes gestacional requiere reevaluación metabólica posparto.
+Referencias
+• American Diabetes Association (ADA) Standards of Care.
+• ACOG Practice Bulletin: Gestational Diabetes Mellitus.
+• Williams Obstetrics.
+• FIGO Guidelines on Gestational Diabetes.
+• UpToDate: Gestational Diabetes Mellitus: Screening, Diagnosis and Management.
+
+PREGUNTA 65 (ORTOPEDIA Y TRAUMATOLOGÍA)
+Un hombre presenta una fractura desplazada de la diáfisis media del húmero asociada a lesión del nervio radial.
+¿Cuál de los siguientes hallazgos clínicos es más probable encontrar?
+A. Incapacidad para extender la muñeca y los dedos, con hipoestesia en el dorso de la mano.
+B. Incapacidad para flexionar los dedos cuarto y quinto, con hipoestesia del borde cubital de la mano.
+C. Pérdida de la oposición del pulgar e hipoestesia de los tres primeros dedos.
+D. Debilidad para la abducción del hombro con pérdida de sensibilidad en la cara lateral del hombro.
+✅ Respuesta correcta: A. Incapacidad para extender la muñeca y los dedos, con hipoestesia en el dorso de la mano.
+La lesión del nervio radial en una fractura de la diáfisis humeral produce clásicamente "muñeca caída" debido a la pérdida de la extensión de la muñeca y los dedos, asociada a alteraciones sensitivas en el territorio radial.
+Lo que debes saber para el examen
+Cuando veas:
+• Fractura de diáfisis humeral.
+• Lesión del nervio radial.
+• Déficit motor distal.
+Debes pensar en:
+Muñeca caída.
+Tema: Lesiones nerviosas periféricas.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la lesión nerviosa más frecuentemente asociada a las fracturas del húmero.
+La clave no es la fractura.
+La clave es:
+El nervio comprometido.
+¿Qué está ocurriendo realmente?
+El nervio radial discurre por:
+El surco espiral del húmero.
+Por ello:
+Las fracturas de la diáfisis media humeral pueden lesionarlo fácilmente.
+¿Cuál es el déficit motor típico?
+El nervio radial inerva:
+• Extensores de la muñeca.
+• Extensores de los dedos.
+• Supinadores del antebrazo.
+Su lesión produce:
+• Muñeca caída.
+• Imposibilidad para extender los dedos.
+• Debilidad en la extensión del pulgar.
+¿Cuál es el déficit sensitivo?
+La alteración sensitiva clásica compromete:
+• Dorso radial de la mano.
+• Primer espacio interdigital dorsal.
+¿Qué es la "muñeca caída"?
+Es la incapacidad para mantener la muñeca en extensión debido a la parálisis de los músculos extensores.
+Es uno de los hallazgos más preguntados en exámenes.
+¿Por qué NO es nervio cubital?
+El nervio cubital produce:
+• Garra cubital.
+• Déficit sensitivo del quinto dedo.
+No muñeca caída.
+¿Por qué NO es nervio mediano?
+La lesión del mediano produce:
+• Alteración de la oposición del pulgar.
+• Mano de simio.
+No pérdida de la extensión de muñeca.
+¿Por qué NO es nervio axilar?
+La lesión axilar afecta:
+• Deltoides.
+• Sensibilidad del hombro.
+No la función extensora de la muñeca.
+¿Cuál es la trampa de examen?
+Muchos estudiantes recuerdan:
+"Fractura de húmero."
+Pero olvidan:
+Qué nervio se relaciona con la diáfisis media.
+El dato decisivo es:
+La lesión del nervio radial.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar la localización de la fractura.
+2.	Relacionar el nervio lesionado.
+3.	Evaluar función motora.
+4.	Buscar muñeca caída.
+5.	Confirmar compromiso sensitivo radial.
+Perlas de examen
+✅ El nervio radial es el nervio más frecuentemente lesionado en fracturas de diáfisis humeral.
+✅ La muñeca caída es el hallazgo clínico clásico.
+✅ El primer espacio interdigital dorsal es clave para la exploración sensitiva.
+✅ El nervio radial recorre el surco espiral del húmero.
+✅ La mayoría de las lesiones son neuropraxias.
+✅ La recuperación espontánea es frecuente.
+✅ Siempre debe documentarse el examen neurovascular antes y después de la reducción.
+Referencias
+• Campbell's Operative Orthopaedics.
+• Rockwood and Green's Fractures in Adults.
+• Moore Clinically Oriented Anatomy.
+• Greenberg's Handbook of Neurosurgery.
+• UpToDate: Radial Nerve Injury Associated with Humeral Shaft Fractures.
+
+PREGUNTA 66 (ORTOPEDIA Y TRAUMATOLOGÍA)
+Paciente de 15 años consulta a urgencias tras sufrir un trauma en la muñeca. Se realiza radiografía anteroposterior (AP) sin evidencia de fracturas. Debido a la persistencia de la sospecha clínica de lesión ósea, se decide complementar el estudio radiológico.
+¿Cuál es la proyección radiográfica adicional más recomendada para descartar lesiones ocultas?
+A. Proyección lateral de muñeca.
+B. Proyección oblicua de muñeca.
+C. Proyección AP comparativa de ambas muñecas.
+D. Proyección de escafoides (Stecher).
+✅ Respuesta correcta: D. Proyección de escafoides (Stecher).
+La fractura de escafoides es una de las lesiones ocultas más frecuentes tras trauma de muñeca. Cuando existe sospecha clínica y la radiografía AP inicial es normal, debe solicitarse una proyección específica para escafoides.
+Lo que debes saber para el examen
+Cuando veas:
+• Trauma de muñeca.
+• Radiografía inicial normal.
+• Persistencia de sospecha clínica.
+Debes pensar en:
+Fractura oculta de escafoides.
+Tema: Trauma de muñeca.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las fracturas más frecuentemente pasadas por alto en urgencias.
+La clave no es la radiografía normal.
+La clave es:
+La sospecha clínica persistente.
+¿Qué está ocurriendo realmente?
+Tras un trauma de muñeca:
+La radiografía AP inicial puede ser normal.
+Sin embargo:
+Algunas fracturas del escafoides pueden no visualizarse inicialmente.
+¿Qué proyección debe solicitarse?
+La proyección de Stecher:
+Optimiza la visualización del escafoides.
+Y aumenta:
+La sensibilidad diagnóstica.
+¿Por qué es importante diagnosticarla?
+Porque el escafoides posee:
+Irrigación retrógrada.
+Las fracturas no diagnosticadas pueden evolucionar a:
+• Pseudoartrosis.
+• Necrosis avascular.
+¿Por qué NO basta con la AP?
+Porque:
+Muchas fracturas no desplazadas pasan desapercibidas.
+¿Por qué NO elegir únicamente la lateral?
+La lateral complementa el estudio.
+Pero:
+La proyección específica de escafoides es más útil cuando se sospecha esta lesión.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Radiografía normal."
+Y concluyen:
+Ausencia de fractura.
+Sin embargo:
+El dato decisivo es:
+La necesidad de descartar una lesión oculta.
+Esto orienta a:
+Proyección específica de escafoides.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar el trauma de muñeca.
+2.	Evaluar sospecha clínica.
+3.	Reconocer que la AP puede ser normal.
+4.	Solicitar proyección de escafoides.
+5.	Considerar inmovilización si persiste la sospecha.
+Perlas de examen
+✅ El escafoides es el hueso del carpo que más se fractura.
+✅ La radiografía inicial puede ser normal.
+✅ La proyección de Stecher mejora la visualización del escafoides.
+✅ La necrosis avascular es una complicación clásica.
+✅ La pseudoartrosis es frecuente cuando el diagnóstico se retrasa.
+✅ El dolor en tabaquera anatómica aumenta la sospecha diagnóstica.
+✅ Ante alta sospecha clínica debe inmovilizarse aunque la radiografía sea normal.
+Referencias
+• Rockwood and Green's Fractures in Adults.
+• Campbell's Operative Orthopaedics.
+• AO Trauma Principles.
+• Moore Clinically Oriented Anatomy.
+• UpToDate: Scaphoid Fractures.
