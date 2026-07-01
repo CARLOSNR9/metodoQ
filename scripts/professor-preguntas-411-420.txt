@@ -1,0 +1,1148 @@
+Pregunta 1 – Básicas, Inmunología
+Respecto a los mecanismos de reconocimiento inmunológico, ¿cuál de las siguientes características corresponde a la inmunidad innata?
+A. Memoria inmunológica.
+B. Reordenamiento génico.
+C. Reconocimiento mediante TCR.
+D. Reconocimiento mediante TLR.
+✅ Respuesta correcta: D. Reconocimiento mediante TLR.
+La inmunidad innata reconoce estructuras conservadas de microorganismos mediante receptores codificados en la línea germinal, conocidos como receptores de reconocimiento de patrones (PRR). Entre ellos, los Toll-Like Receptors (TLR) son los más importantes. Estos receptores identifican patrones moleculares asociados a patógenos (PAMPs) y desencadenan rápidamente la respuesta inflamatoria inicial.
+Lo que debes saber para el examen
+La principal diferencia entre inmunidad innata y adaptativa es que la inmunidad innata utiliza receptores preformados codificados genéticamente, mientras que la inmunidad adaptativa genera receptores específicos mediante reordenamiento génico.
+Tema: Inmunidad innata vs inmunidad adaptativa.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de inmunología básica y suele aparecer en exámenes de residencia porque evalúa si el estudiante entiende la diferencia fundamental entre la inmunidad innata y la adaptativa.
+Muchos estudiantes memorizan listas de células y moléculas, pero olvidan el concepto central:
+La inmunidad innata reconoce patrones; la inmunidad adaptativa reconoce antígenos específicos.
+Y esa diferencia explica prácticamente todo el funcionamiento del sistema inmunológico.
+¿Qué es la inmunidad innata?
+La inmunidad innata constituye la primera línea de defensa del organismo.
+Sus principales características son:
+•	Respuesta rápida.
+•	Ausencia de memoria inmunológica clásica.
+•	Reconocimiento inespecífico.
+•	Receptores codificados en la línea germinal.
+•	Activación inmediata frente a microorganismos.
+Entre sus componentes encontramos:
+•	Neutrófilos.
+•	Macrófagos.
+•	Células dendríticas.
+•	Células NK.
+•	Sistema del complemento.
+¿Cómo reconoce los microorganismos?
+La inmunidad innata utiliza receptores llamados:
+PRR (Pattern Recognition Receptors).
+Estos reconocen:
+PAMPs (Pathogen-Associated Molecular Patterns).
+Es decir, estructuras conservadas presentes en numerosos microorganismos.
+Ejemplos:
+•	Lipopolisacárido bacteriano (LPS).
+•	Peptidoglicano.
+•	ARN viral.
+•	ADN bacteriano rico en CpG.
+¿Qué son los TLR?
+Los Toll-Like Receptors (TLR) son los PRR más importantes y más preguntados en los exámenes.
+Su función es detectar rápidamente la presencia de microorganismos.
+Por ejemplo:
+•	TLR4 → reconoce LPS de bacterias gramnegativas.
+•	TLR3 → reconoce ARN viral bicatenario.
+•	TLR5 → reconoce flagelina bacteriana.
+Cuando un TLR se activa:
+•	Se liberan citocinas.
+•	Se reclutan leucocitos.
+•	Se inicia inflamación.
+•	Se activa posteriormente la inmunidad adaptativa.
+Por eso la opción D es correcta.
+¿Por qué las otras opciones son incorrectas?
+A. Memoria inmunológica ❌
+La memoria inmunológica es una característica clásica de la inmunidad adaptativa.
+Depende principalmente de:
+•	Linfocitos B memoria.
+•	Linfocitos T memoria.
+Gracias a ella una segunda exposición genera una respuesta más rápida y eficaz.
+B. Reordenamiento génico ❌
+El reordenamiento V(D)J es exclusivo de la inmunidad adaptativa.
+Permite generar millones de receptores distintos.
+Ocurre en:
+•	Linfocitos B.
+•	Linfocitos T.
+No ocurre en la inmunidad innata.
+C. Reconocimiento mediante TCR ❌
+El TCR (T Cell Receptor) pertenece exclusivamente a los linfocitos T.
+Forma parte de la inmunidad adaptativa.
+Además requiere:
+•	Presentación antigénica.
+•	Complejo mayor de histocompatibilidad (MHC).
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan que los TLR son receptores.
+Y también recuerdan que los TCR son receptores.
+Pero olvidan preguntar:
+¿A qué sistema pertenece cada uno?
+La clave es:
+•	TLR → inmunidad innata.
+•	TCR → inmunidad adaptativa.
+Regla de oro para residencia
+Si la pregunta menciona:
+•	TLR.
+•	PRR.
+•	PAMP.
+•	Macrófagos.
+•	Neutrófilos.
+•	Complemento.
+Piensa en:
+Inmunidad innata.
+Si menciona:
+•	TCR.
+•	BCR.
+•	Anticuerpos.
+•	Memoria.
+•	Reordenamiento V(D)J.
+Piensa en:
+Inmunidad adaptativa.
+Perlas de examen
+✅ Los TLR son receptores de la inmunidad innata.
+✅ Los TLR reconocen PAMPs.
+✅ La inmunidad innata no requiere exposición previa.
+✅ El reordenamiento génico es exclusivo de la inmunidad adaptativa.
+✅ El TCR pertenece a los linfocitos T.
+✅ La memoria inmunológica es una característica de la inmunidad adaptativa.
+✅ TLR = Innata; TCR = Adaptativa. Esta es una asociación clásica de examen.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Murphy & Weaver. Janeway Immunobiology.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• AMIR Inmunología.
+
+Pregunta 2 – Básicas, Inmunología
+¿Dónde maduran los linfocitos T?
+A. Bazo.
+B. Ganglio.
+C. Timo.
+D. MALT.
+✅ Respuesta correcta: C. Timo.
+Los linfocitos T se originan a partir de células madre hematopoyéticas en la médula ósea, pero completan su proceso de maduración en el timo. Allí adquieren la capacidad de reconocer antígenos mediante el receptor T (TCR) y son sometidos a procesos de selección positiva y negativa que garantizan la tolerancia inmunológica y la funcionalidad del sistema inmune adaptativo.
+Lo que debes saber para el examen
+Los linfocitos T nacen en la médula ósea, pero maduran en el timo.
+Una forma clásica de recordarlo es:
+T de Timo = T de linfocito T.
+Tema: Maduración de los linfocitos T.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una de las preguntas más clásicas de inmunología y suele aparecer en exámenes básicos porque evalúa si el estudiante conoce los órganos linfoides primarios y secundarios.
+La trampa consiste en confundir el lugar donde nacen los linfocitos con el lugar donde maduran.
+¿Dónde nacen los linfocitos?
+Todos los linfocitos derivan de células madre hematopoyéticas localizadas en:
+Médula ósea.
+Por eso inicialmente tanto los linfocitos B como los linfocitos T tienen un origen común.
+Sin embargo, posteriormente siguen rutas diferentes de maduración.
+¿Qué ocurre con los linfocitos T?
+Los precursores linfoides abandonan la médula ósea y migran hacia el:
+Timo.
+Una vez allí completan su maduración inmunológica.
+Durante este proceso desarrollan:
+•	TCR (Receptor de células T).
+•	CD4 o CD8.
+•	Capacidad de reconocer antígenos.
+Y además aprenden a distinguir:
+•	Lo propio.
+•	Lo extraño.
+¿Qué sucede dentro del timo?
+El timo funciona como una verdadera escuela inmunológica.
+Allí ocurren dos procesos fundamentales:
+Selección positiva
+Permite sobrevivir a los linfocitos capaces de reconocer moléculas del MHC.
+Si un linfocito no reconoce el MHC:
+Muere por apoptosis.
+Selección negativa
+Elimina linfocitos que reaccionan excesivamente contra antígenos propios.
+Este mecanismo es fundamental para prevenir:
+•	Autoinmunidad.
+•	Enfermedades autoinmunes.
+Gracias a estos procesos, solo una pequeña proporción de linfocitos T logra salir del timo completamente madura.
+¿Qué tipos de linfocitos T se generan?
+Tras la maduración aparecen principalmente:
+Linfocitos T CD4+
+También llamados:
+T helper.
+Su función es coordinar la respuesta inmune mediante citocinas.
+Linfocitos T CD8+
+También llamados:
+T citotóxicos.
+Su función principal es destruir células infectadas o tumorales.
+¿Por qué las otras opciones son incorrectas?
+A. Bazo ❌
+El bazo es un órgano linfoide secundario.
+Su función principal es:
+•	Filtrar sangre.
+•	Capturar antígenos circulantes.
+•	Activar respuestas inmunes.
+No es el sitio de maduración de linfocitos T.
+B. Ganglio ❌
+Los ganglios linfáticos también son órganos linfoides secundarios.
+Allí los linfocitos ya maduros se activan al entrar en contacto con antígenos.
+No ocurre maduración tímica.
+D. MALT ❌
+El tejido linfoide asociado a mucosas (MALT) participa en la vigilancia inmunológica de:
+•	Tracto gastrointestinal.
+•	Tracto respiratorio.
+•	Tracto genitourinario.
+No es el sitio de maduración de los linfocitos T.
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan que los linfocitos circulan por:
+•	Ganglios.
+•	Bazo.
+•	MALT.
+Y responden alguno de estos órganos.
+Pero la pregunta no pregunta dónde actúan.
+Pregunta:
+¿Dónde maduran?
+Y la respuesta siempre será:
+Timo.
+Regla de oro para residencia
+Órganos linfoides primarios:
+•	Médula ósea.
+•	Timo.
+Órganos linfoides secundarios:
+•	Ganglios.
+•	Bazo.
+•	MALT.
+La maduración ocurre en los órganos primarios.
+La activación ocurre en los órganos secundarios.
+Perlas de examen
+✅ Los linfocitos T maduran en el timo.
+✅ Los linfocitos T se originan en la médula ósea.
+✅ El timo realiza selección positiva y negativa.
+✅ La selección negativa previene autoinmunidad.
+✅ Los linfocitos CD4 y CD8 se desarrollan durante la maduración tímica.
+✅ Ganglios y bazo son órganos linfoides secundarios.
+✅ T de Timo = T de linfocito T.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Murphy & Weaver. Janeway Immunobiology.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• AMIR Inmunología.
+
+Pregunta 3 – Básicas, Inmunología
+La activación del inflamasoma produce principalmente:
+A. IL-4.
+B. IL-1.
+C. IL-10.
+D. IL-17.
+✅ Respuesta correcta: B. IL-1.
+El inflamasoma es un complejo multiproteico de la inmunidad innata cuya activación conduce a la activación de la caspasa-1. Esta enzima transforma las formas inactivas de IL-1β e IL-18 en sus formas biológicamente activas, siendo la IL-1β la principal citocina responsable de la respuesta inflamatoria aguda.
+Lo que debes saber para el examen
+El inflamasoma activa la caspasa-1, la cual convierte la pro-IL-1β en IL-1β activa, desencadenando una potente respuesta inflamatoria.
+Tema: Inflamasoma y citocinas de la inmunidad innata.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de inmunología y de fisiopatología de la inflamación. Aunque parece sencilla, suele confundir porque mezcla citocinas de diferentes respuestas inmunológicas.
+La clave es recordar que el inflamasoma pertenece a la inmunidad innata y su principal función es iniciar una respuesta inflamatoria intensa frente a infecciones o daño celular.
+¿Qué es el inflamasoma?
+El inflamasoma es un complejo multiproteico localizado en el citoplasma de células de la inmunidad innata, principalmente:
+•	Macrófagos.
+•	Monocitos.
+•	Células dendríticas.
+Se activa cuando estas células reconocen microorganismos o señales de daño celular.
+Su función principal es amplificar rápidamente la respuesta inflamatoria.
+¿Cómo se activa?
+El proceso ocurre en varias etapas.
+Primero, los receptores de reconocimiento de patrones (PRR), como los TLR y los receptores NOD-like (NLR), detectan:
+•	PAMPs (Patrones Moleculares Asociados a Patógenos).
+•	DAMPs (Patrones Moleculares Asociados a Daño).
+Posteriormente se ensambla el inflamasoma, siendo el más conocido el:
+Inflamasoma NLRP3.
+Este recluta y activa la:
+Caspasa-1.
+¿Qué hace la caspasa-1?
+Aquí está la clave de la pregunta.
+La caspasa-1 escinde las formas inactivas de varias citocinas:
+•	Pro-IL-1β → IL-1β.
+•	Pro-IL-18 → IL-18.
+La IL-1β es la principal responsable de:
+•	Fiebre.
+•	Inflamación.
+•	Reclutamiento de neutrófilos.
+•	Activación del endotelio.
+Por eso la respuesta correcta es la IL-1.
+¿Qué otras funciones tiene el inflamasoma?
+Además de activar IL-1β e IL-18, puede inducir:
+Piroptosis.
+La piroptosis es una forma de muerte celular inflamatoria que elimina células infectadas y favorece la respuesta inmune.
+Es un concepto de muy alto rendimiento en inmunología moderna.
+¿Por qué las otras opciones son incorrectas?
+A. IL-4 ❌
+La IL-4 es una citocina característica de los linfocitos Th2.
+Participa en:
+•	Producción de IgE.
+•	Respuesta contra helmintos.
+•	Enfermedades alérgicas.
+No depende del inflamasoma.
+C. IL-10 ❌
+La IL-10 es una citocina antiinflamatoria.
+Su función principal es limitar la respuesta inmune y disminuir la producción de citocinas proinflamatorias.
+No es activada por la caspasa-1.
+D. IL-17 ❌
+La IL-17 es producida principalmente por los linfocitos Th17.
+Participa en:
+•	Reclutamiento de neutrófilos.
+•	Defensa contra bacterias extracelulares y hongos.
+Pertenece a la inmunidad adaptativa.
+¿Cuál es la trampa del examen?
+Muchos estudiantes relacionan inflamación con IL-17 porque esta también participa en procesos inflamatorios.
+Sin embargo:
+•	IL-17 → Linfocitos Th17 (inmunidad adaptativa).
+•	IL-1 → Inflamasoma (inmunidad innata).
+Esa diferencia es una pregunta clásica de residencia.
+Regla de oro para residencia
+Si la pregunta menciona:
+•	Inflamasoma.
+•	Caspasa-1.
+•	NLRP3.
+•	Piroptosis.
+La respuesta casi siempre estará relacionada con:
+IL-1β.
+Perlas de examen
+✅ El inflamasoma pertenece a la inmunidad innata.
+✅ El inflamasoma activa la caspasa-1.
+✅ La caspasa-1 convierte pro-IL-1β en IL-1β activa.
+✅ IL-1β es una de las principales citocinas de la inflamación aguda.
+✅ IL-18 también es activada por la caspasa-1.
+✅ La activación del inflamasoma puede inducir piroptosis.
+✅ Inflamasoma = Caspasa-1 = IL-1β. Esta asociación es clásica de examen.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Murphy & Weaver. Janeway Immunobiology.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• AMIR Inmunología.
+Pregunta 4 – Básicas, Inmunología
+El SARS-CoV-2 es un virus de ARN de hebra sencilla. Entre los mecanismos que participan en la respuesta inmune innata frente a virus de ARN, como el SARS-CoV-2, se encuentra:
+A. Producción de anticuerpos neutralizantes por linfocitos B.
+B. Producción de interferones tipo I tras el reconocimiento del ARN viral por receptores de reconocimiento de patrones (PRR), como los Toll-Like Receptors (TLR).
+C. Activación de linfocitos T CD8+ mediante reconocimiento específico del TCR.
+D. Producción de IgA secretora por células plasmáticas de mucosas.
+✅ Respuesta correcta: B. Producción de interferones tipo I tras el reconocimiento del ARN viral por receptores de reconocimiento de patrones (PRR), como los Toll-Like Receptors (TLR).
+Los virus de ARN, como el SARS-CoV-2, son detectados inicialmente por la inmunidad innata mediante receptores de reconocimiento de patrones (PRR), especialmente los Toll-Like Receptors (TLR3, TLR7 y TLR8) y otros sensores citoplasmáticos como RIG-I y MDA5. Su activación induce la producción de interferones tipo I (IFN-α e IFN-β), que establecen un estado antiviral, limitan la replicación viral y activan múltiples mecanismos de defensa del sistema inmune.
+Lo que debes saber para el examen
+La primera respuesta del organismo frente a la mayoría de virus de ARN no depende de anticuerpos ni de linfocitos T.
+Depende de la producción temprana de interferones tipo I, desencadenada tras el reconocimiento del ARN viral por los receptores de la inmunidad innata.
+Tema: Respuesta inmune innata frente a virus de ARN.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de inmunología que tomó enorme importancia durante la pandemia por COVID-19.
+La trampa consiste en que muchos estudiantes piensan inmediatamente en:
+•	Anticuerpos.
+•	Linfocitos T.
+•	Vacunas.
+Pero esas respuestas pertenecen principalmente a la inmunidad adaptativa.
+La pregunta está evaluando:
+¿Cuál es la primera respuesta inmunológica frente a un virus de ARN?
+Y la respuesta es la inmunidad innata.
+¿Qué ocurre cuando el SARS-CoV-2 entra al organismo?
+El SARS-CoV-2 es un virus de ARN monocatenario (ARN de hebra sencilla).
+Al ingresar a las células del huésped, su ARN viral es reconocido por receptores especializados de la inmunidad innata llamados:
+PRR (Pattern Recognition Receptors).
+Entre los más importantes se encuentran:
+•	TLR3.
+•	TLR7.
+•	TLR8.
+•	RIG-I.
+•	MDA5.
+Estos receptores identifican al ARN viral como un patrón molecular extraño (PAMP).
+¿Qué sucede después del reconocimiento?
+Una vez activados los PRR, se desencadena una cascada de señalización intracelular que culmina con la producción de:
+•	Interferón alfa (IFN-α).
+•	Interferón beta (IFN-β).
+Estos corresponden a los:
+Interferones tipo I.
+¿Qué hacen los interferones tipo I?
+Los interferones tipo I representan una de las principales defensas antivirales del organismo.
+Sus funciones incluyen:
+•	Inhibir la replicación viral.
+•	Inducir un estado antiviral en células vecinas.
+•	Incrementar la expresión de moléculas del MHC clase I.
+•	Activar células NK.
+•	Favorecer posteriormente la respuesta adaptativa.
+Por esta razón constituyen la primera gran barrera frente a la infección viral.
+¿Por qué son tan importantes en COVID-19?
+Durante la pandemia se observó que muchos pacientes con COVID-19 grave presentaban una respuesta deficiente de interferones tipo I.
+Incluso se identificaron:
+•	Mutaciones en genes relacionados con IFN tipo I.
+•	Autoanticuerpos contra interferones.
+Ambas situaciones se asociaron con enfermedad grave.
+Por eso este mecanismo tiene enorme relevancia clínica.
+¿Por qué las otras opciones son incorrectas?
+A. Producción de anticuerpos neutralizantes ❌
+Los anticuerpos son producidos por linfocitos B y células plasmáticas.
+Corresponden a la:
+Inmunidad adaptativa.
+Además requieren varios días para desarrollarse.
+C. Activación de linfocitos T CD8+ ❌
+Los linfocitos T citotóxicos también pertenecen a la inmunidad adaptativa.
+Necesitan:
+•	Presentación antigénica.
+•	Activación específica mediante el TCR.
+•	Expansión clonal.
+No representan la respuesta inicial.
+D. Producción de IgA secretora ❌
+La IgA es un anticuerpo de mucosas.
+Su producción también depende de la inmunidad adaptativa.
+No constituye el mecanismo innato inicial frente al SARS-CoV-2.
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen:
+SARS-CoV-2.
+Y automáticamente piensan en:
+•	Vacunas.
+•	Anticuerpos.
+•	Linfocitos T.
+Pero la pregunta no está preguntando cómo se desarrolla la inmunidad adquirida.
+Pregunta:
+¿Qué hace primero la inmunidad innata?
+Y la respuesta es:
+Reconocer el ARN viral mediante PRR y producir interferones tipo I.
+Regla de oro para residencia
+Si la pregunta menciona:
+•	Virus de ARN.
+•	Respuesta temprana.
+•	Inmunidad innata.
+•	TLR.
+•	PRR.
+Debes pensar inmediatamente en:
+Interferones tipo I (IFN-α e IFN-β).
+Perlas de examen
+✅ Los virus de ARN son reconocidos inicialmente por PRR como TLR7 y TLR8.
+✅ Los interferones tipo I son las principales citocinas antivirales de la inmunidad innata.
+✅ IFN-α e IFN-β limitan la replicación viral.
+✅ Los interferones activan células NK y favorecen la respuesta adaptativa.
+✅ Los anticuerpos aparecen días después y pertenecen a la inmunidad adaptativa.
+✅ TLR → ARN viral → IFN tipo I es una asociación clásica de examen.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Murphy & Weaver. Janeway Immunobiology.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• AMIR Inmunología.
+Pregunta 5 – Básicas, Inmunología
+En relación con el inflamasoma, ¿cuál de las siguientes afirmaciones es FALSA?
+A. Interviene en la activación de la caspasa-1.
+B. Contiene receptores de tipo Toll (TLR).
+C. Interviene en la activación de la interleucina-1 (IL-1).
+D. Es una estructura citoplasmática.
+✅ Respuesta correcta: B. Contiene receptores de tipo Toll (TLR).
+El inflamasoma es un complejo multiproteico citoplasmático formado principalmente por receptores de la familia NOD-Like Receptors (NLR), como NLRP3, la proteína adaptadora ASC y la procaspasa-1. Los receptores Toll-Like (TLR) no forman parte estructural del inflamasoma; su función es reconocer inicialmente los PAMPs y DAMPs para inducir la síntesis de pro-IL-1β y favorecer posteriormente la activación del inflamasoma.
+Lo que debes saber para el examen
+Los TLR y el inflamasoma trabajan de manera coordinada, pero no son la misma estructura.
+Los TLR reconocen el peligro y el inflamasoma activa la caspasa-1 para convertir la pro-IL-1β en IL-1β activa.
+Tema: Inflamasoma y receptores de reconocimiento de patrones.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta muy clásica porque evalúa un error conceptual frecuente.
+Muchos estudiantes aprenden que los TLR y el inflamasoma participan en la inmunidad innata y terminan creyendo que hacen parte del mismo complejo.
+Eso es falso.
+Ambos participan en la misma respuesta inmunológica, pero cumplen funciones completamente diferentes.
+¿Qué es el inflamasoma?
+El inflamasoma es un complejo multiproteico localizado en el citoplasma de células de la inmunidad innata.
+Su función principal es detectar daño celular o infección intracelular e iniciar una potente respuesta inflamatoria.
+El inflamasoma más conocido es:
+NLRP3.
+Está conformado por tres componentes principales:
+•	Un receptor NLR (como NLRP3).
+•	La proteína adaptadora ASC.
+•	La procaspasa-1.
+Cuando estos componentes se ensamblan, la procaspasa-1 se activa y se convierte en:
+Caspasa-1.
+¿Qué hace la caspasa-1?
+La caspasa-1 activa las principales citocinas inflamatorias del inflamasoma:
+•	Pro-IL-1β → IL-1β.
+•	Pro-IL-18 → IL-18.
+Además induce:
+Piroptosis.
+Una forma de muerte celular inflamatoria que ayuda a eliminar células infectadas.
+Entonces, ¿qué hacen los TLR?
+Aquí está la trampa de la pregunta.
+Los Toll-Like Receptors (TLR):
+•	No pertenecen estructuralmente al inflamasoma.
+•	No forman parte de su complejo.
+Su función ocurre antes.
+Los TLR reconocen:
+•	PAMPs.
+•	DAMPs.
+Y activan factores de transcripción como:
+NF-κB.
+Esto produce la síntesis de:
+•	Pro-IL-1β.
+•	Pro-IL-18.
+Posteriormente el inflamasoma activa la caspasa-1 para convertir esas formas inactivas en citocinas funcionales.
+Por eso ambos mecanismos trabajan en secuencia.
+¿Cómo recordar fácilmente la diferencia?
+Piensa en dos pasos.
+Primer paso
+TLR:
+Detecta el peligro.
+↓
+Produce:
+•	Pro-IL-1β.
+Segundo paso
+Inflamasoma:
+Activa la caspasa-1.
+↓
+Convierte:
+•	Pro-IL-1β → IL-1β activa.
+Así funcionan de manera coordinada.
+¿Por qué las otras opciones son verdaderas?
+A. Interviene en la activación de la caspasa-1 ✅
+Es precisamente la principal función del inflamasoma.
+Sin caspasa-1 activa no existe producción de IL-1β funcional.
+C. Interviene en la activación de IL-1 ✅
+La IL-1β es sintetizada inicialmente como:
+Pro-IL-1β.
+La caspasa-1 la convierte en:
+IL-1β activa.
+Por ello esta afirmación es correcta.
+D. Es una estructura citoplasmática ✅
+El inflamasoma se encuentra en el citoplasma de:
+•	Macrófagos.
+•	Monocitos.
+•	Células dendríticas.
+No es un receptor de membrana.
+¿Cuál es la trampa del examen?
+Muchos estudiantes responden que los TLR forman parte del inflamasoma porque ambos pertenecen a la inmunidad innata.
+Sin embargo:
+•	Los TLR son receptores de membrana o endosomales que reconocen microorganismos.
+•	El inflamasoma es un complejo citoplasmático que activa caspasa-1.
+Son estructuras diferentes con funciones complementarias.
+Regla de oro para residencia
+Recuerda esta secuencia:
+TLR
+↓
+Reconoce PAMPs.
+↓
+Activa NF-κB.
+↓
+Produce pro-IL-1β.
+↓
+Inflamasoma (NLRP3)
+↓
+Activa caspasa-1.
+↓
+Produce IL-1β activa.
+Si memorizas esta secuencia, prácticamente nunca volverás a confundir ambas estructuras.
+Perlas de examen
+✅ Los TLR no forman parte del inflamasoma.
+✅ El inflamasoma está constituido por NLR, ASC y procaspasa-1.
+✅ La caspasa-1 activa IL-1β e IL-18.
+✅ El inflamasoma es una estructura citoplasmática.
+✅ Los TLR activan NF-κB y favorecen la síntesis de pro-IL-1β.
+✅ Inflamasoma y TLR actúan en la misma respuesta inmunológica, pero en etapas diferentes.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Murphy & Weaver. Janeway Immunobiology.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• AMIR Inmunología.
+
+Pregunta 6 – Básicas, Inmunología
+¿Cuál de los siguientes receptores del sistema inmune se localiza exclusivamente en el citoplasma celular?
+A. Toll-Like Receptors (TLR).
+B. Receptores tipo NOD (NOD-Like Receptors, NLR).
+C. Receptor de células T (TCR).
+D. Receptor de células B (BCR).
+✅ Respuesta correcta: B. Receptores tipo NOD (NOD-Like Receptors, NLR).
+Los receptores tipo NOD (NLR) son receptores de reconocimiento de patrones (PRR) localizados exclusivamente en el citoplasma celular. Su función es detectar microorganismos o señales de daño intracelular (PAMPs y DAMPs), participando en la activación del inflamasoma y de la caspasa-1, con la consecuente producción de IL-1β e IL-18.
+Lo que debes saber para el examen
+La localización de los PRR es una pregunta clásica de residencia:
+•	TLR: membrana plasmática o endosomas.
+•	NLR: exclusivamente citoplasma.
+•	RIG-I y MDA5: citoplasma (detectan ARN viral).
+Tema: Receptores de reconocimiento de patrones (PRR).
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta pregunta evalúa un concepto muy frecuente en inmunología: la localización celular de los receptores de reconocimiento de patrones (PRR).
+La trampa consiste en que muchos estudiantes recuerdan qué reconoce cada receptor, pero olvidan dónde se encuentra.
+Y en residencia esa diferencia suele ser suficiente para cambiar la respuesta correcta.
+¿Qué son los PRR?
+Los Pattern Recognition Receptors (PRR) son receptores de la inmunidad innata encargados de detectar:
+•	PAMPs (Patrones Moleculares Asociados a Patógenos).
+•	DAMPs (Patrones Moleculares Asociados a Daño).
+Su activación desencadena la producción de citocinas inflamatorias y activa múltiples mecanismos de defensa.
+Dependiendo de su localización, detectan distintos tipos de microorganismos.
+¿Qué son los NLR?
+Los NOD-Like Receptors (NLR) constituyen una familia de PRR localizada exclusivamente en el citoplasma.
+Su función es detectar microorganismos o señales de daño que ya lograron ingresar al interior celular.
+El miembro más importante para los exámenes es:
+NLRP3.
+Este receptor participa en la formación del inflamasoma.
+¿Qué ocurre cuando se activa un NLR?
+Tras reconocer un estímulo intracelular:
+•	Se ensambla el inflamasoma.
+•	Se activa la procaspasa-1.
+•	Se forma la caspasa-1 activa.
+•	Se producen IL-1β e IL-18.
+•	Puede inducirse piroptosis.
+Por eso NLR e inflamasoma prácticamente siempre aparecen asociados en los exámenes.
+¿Dónde se localizan los TLR?
+Aquí aparece la principal trampa.
+Los Toll-Like Receptors:
+No son exclusivamente citoplasmáticos.
+Se encuentran en:
+•	Membrana plasmática (TLR1, TLR2, TLR4, TLR5, TLR6).
+•	Membranas endosomales (TLR3, TLR7, TLR8 y TLR9).
+Su función consiste en detectar microorganismos antes de que estos invadan completamente la célula.
+Por ello la opción A es incorrecta.
+¿Qué ocurre con el TCR y el BCR?
+El:
+•	TCR (T Cell Receptor).
+•	BCR (B Cell Receptor).
+Son receptores exclusivos de la inmunidad adaptativa.
+Ambos se encuentran en la superficie celular.
+Nunca son receptores citoplasmáticos.
+¿Cuál es la trampa del examen?
+Muchos estudiantes responden:
+TLR.
+Porque recuerdan que participan en la inmunidad innata.
+Pero la pregunta no pregunta cuál pertenece a la inmunidad innata.
+Pregunta:
+¿Cuál está exclusivamente en el citoplasma?
+Y esa característica corresponde únicamente a los NLR.
+Regla de oro para residencia
+Memoriza este esquema:
+Membrana plasmática
+•	TLR1.
+•	TLR2.
+•	TLR4.
+•	TLR5.
+•	TLR6.
+↓
+Endosomas
+•	TLR3.
+•	TLR7.
+•	TLR8.
+•	TLR9.
+↓
+Citoplasma
+•	NLR.
+•	RIG-I.
+•	MDA5.
+Si recuerdas esa distribución, responderás la mayoría de preguntas sobre PRR.
+Perlas de examen
+✅ Los NLR son receptores exclusivamente citoplasmáticos.
+✅ NLRP3 participa en la formación del inflamasoma.
+✅ Los TLR se localizan en membrana plasmática y endosomas.
+✅ Los TCR y BCR pertenecen a la inmunidad adaptativa.
+✅ Los PRR reconocen PAMPs y DAMPs.
+✅ NLR → Inflamasoma → Caspasa-1 → IL-1β es una secuencia clásica de examen.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Murphy & Weaver. Janeway Immunobiology.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• AMIR Inmunología.
+
+Pregunta 7 – Básicas, Inmunología
+En el asma bronquial son numerosas las células que participan en la inflamación de la vía aérea. En relación con las diferentes poblaciones linfocitarias y las citocinas que liberan, ¿cuál de las siguientes afirmaciones es correcta?
+A. Los linfocitos B son los responsables de la coordinación de la respuesta inflamatoria.
+B. En el asma bronquial hay un predominio del fenotipo linfocitario Th1.
+C. Las citocinas IL-4 e IL-13 favorecen la síntesis de IgE.
+D. La población de linfocitos T reguladores (CD4+ CD25+) está aumentada.
+✅ Respuesta correcta: C. Las citocinas IL-4 e IL-13 favorecen la síntesis de IgE.
+El asma bronquial alérgica clásica está mediada por una respuesta inmunitaria de predominio Th2. Las citocinas IL-4 e IL-13 inducen el cambio de clase de los linfocitos B hacia la producción de IgE, la cual se fija a mastocitos y basófilos, favoreciendo la respuesta alérgica inmediata tras una nueva exposición al alérgeno.
+Lo que debes saber para el examen
+El asma alérgica es una enfermedad mediada principalmente por linfocitos Th2.
+Las tres citocinas que nunca debes olvidar son:
+•	IL-4 → Cambio de clase hacia IgE.
+•	IL-5 → Activación y supervivencia de eosinófilos.
+•	IL-13 → Producción de moco, hiperreactividad bronquial y síntesis de IgE.
+Tema: Respuesta inmunológica Th2 en el asma bronquial.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es probablemente una de las preguntas más preguntadas de inmunología clínica porque integra dos temas fundamentales:
+•	Diferenciación de linfocitos T helper.
+•	Fisiopatología inmunológica del asma.
+La mayoría de los errores ocurren porque el estudiante memoriza las citocinas por separado y no entiende qué hace cada población de linfocitos.
+¿Qué tipo de respuesta inmune predomina en el asma?
+El asma bronquial alérgica clásica está dominada por una respuesta:
+Th2.
+Los linfocitos Th2 coordinan prácticamente toda la respuesta alérgica.
+Su función consiste en estimular:
+•	Producción de IgE.
+•	Activación de eosinófilos.
+•	Activación de mastocitos.
+•	Hipersecreción de moco.
+Por eso constituyen la población linfocitaria predominante en la mayoría de pacientes con asma alérgica.
+¿Qué hacen las principales citocinas Th2?
+Aquí aparece una de las asociaciones más importantes para cualquier examen.
+IL-4
+Su principal función es:
+•	Inducir cambio de clase en los linfocitos B.
+•	Favorecer producción de IgE.
+Es una de las citocinas más importantes de la respuesta alérgica.
+IL-5
+La IL-5 es prácticamente sinónimo de:
+Eosinófilos.
+Estimula:
+•	Maduración.
+•	Activación.
+•	Reclutamiento.
+•	Supervivencia de eosinófilos.
+Por eso los fármacos anti-IL-5 (como mepolizumab o benralizumab) son útiles en el asma eosinofílica grave.
+IL-13
+Comparte múltiples funciones con IL-4.
+Favorece:
+•	Producción de IgE.
+•	Hipersecreción de moco.
+•	Remodelado de la vía aérea.
+•	Hiperreactividad bronquial.
+Por eso la afirmación correcta es que IL-4 e IL-13 favorecen la síntesis de IgE.
+¿Qué papel tienen los linfocitos B?
+Otra trampa clásica.
+Los linfocitos B:
+•	Producen anticuerpos.
+•	Se diferencian en células plasmáticas.
+Pero no coordinan la respuesta inflamatoria.
+Quienes dirigen esa respuesta son los:
+Linfocitos T helper.
+Por eso la opción A es falsa.
+¿Por qué no predomina Th1?
+Los linfocitos Th1 participan principalmente en:
+•	Infecciones intracelulares.
+•	Virus.
+•	Micobacterias.
+Su principal citocina es:
+IFN-γ.
+El asma alérgica, por el contrario, está dominada por:
+Th2.
+Por eso la opción B es incorrecta.
+¿Qué ocurre con los linfocitos T reguladores?
+Los T reguladores (Treg):
+•	CD4+.
+•	CD25+.
+•	FOXP3+.
+Su función consiste en:
+•	Frenar la respuesta inmune.
+•	Mantener la tolerancia inmunológica.
+En pacientes con enfermedades alérgicas suele existir una disminución funcional o cuantitativa de esta población, favoreciendo una respuesta Th2 exagerada.
+Por ello la opción D también es falsa.
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan que:
+"Asma = eosinófilos."
+Y responden pensando únicamente en IL-5.
+Pero la pregunta está preguntando específicamente por:
+Producción de IgE.
+Y esa función depende fundamentalmente de:
+•	IL-4.
+•	IL-13.
+Regla de oro para residencia
+Si la pregunta menciona:
+•	Asma.
+•	Alergia.
+•	IgE.
+•	Mastocitos.
+•	Eosinófilos.
+Debes pensar inmediatamente en:
+Respuesta Th2.
+Y recordar la regla clásica:
+•	IL-4 → IgE.
+•	IL-5 → Eosinófilos.
+•	IL-13 → Moco + IgE.
+Perlas de examen
+✅ El asma alérgica clásica es una enfermedad mediada por linfocitos Th2.
+✅ IL-4 induce el cambio de clase hacia IgE.
+✅ IL-5 activa y mantiene eosinófilos.
+✅ IL-13 favorece producción de moco e IgE.
+✅ Los linfocitos B producen anticuerpos, pero no coordinan la respuesta inflamatoria.
+✅ Th1 se relaciona con inmunidad celular frente a microorganismos intracelulares, no con asma alérgica.
+✅ IL-4, IL-5 e IL-13 constituyen la tríada clásica del asma en los exámenes de residencia.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• GINA 2025 (Global Initiative for Asthma).
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• AMIR Inmunología.
+
+Pregunta 8 – Básicas, Inmunología
+En la respuesta inmune innata, las células más numerosas a nivel pulmonar, que conforman la primera línea defensiva, son:
+A. Neutrófilos.
+B. Macrófagos.
+C. Eosinófilos.
+D. Mastocitos.
+✅ Respuesta correcta: B. Macrófagos.
+Los macrófagos alveolares constituyen la población celular inmunológica residente más abundante del pulmón y representan la primera línea de defensa frente a microorganismos inhalados. Actúan mediante fagocitosis, reconocimiento de patógenos a través de receptores de reconocimiento de patrones (PRR), producción de citocinas inflamatorias y presentación de antígenos a la inmunidad adaptativa.
+Lo que debes saber para el examen
+Los macrófagos alveolares son los principales centinelas inmunológicos del pulmón.
+Son las primeras células que encuentran los microorganismos inhalados y coordinan el inicio de la respuesta inmune innata.
+Tema: Macrófagos alveolares e inmunidad innata pulmonar.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de inmunología y fisiopatología respiratoria.
+La trampa consiste en pensar que, como los neutrófilos son los leucocitos más abundantes en sangre y participan intensamente en las infecciones pulmonares, también constituyen la primera línea de defensa del pulmón.
+Eso es falso.
+La primera barrera celular del pulmón está formada por los macrófagos alveolares.
+¿Cómo se defiende normalmente el pulmón?
+El aparato respiratorio está expuesto diariamente a millones de:
+•	Bacterias.
+•	Virus.
+•	Hongos.
+•	Partículas ambientales.
+•	Contaminantes.
+Si cada microorganismo inhalado desencadenara una respuesta inflamatoria intensa, el pulmón sufriría daño continuo.
+Por ello existe un sistema de vigilancia permanente.
+El protagonista de esa vigilancia es:
+El macrófago alveolar.
+¿Qué hacen los macrófagos alveolares?
+Estas células permanecen residentes sobre la superficie de los alvéolos y actúan como verdaderos centinelas inmunológicos.
+Sus funciones incluyen:
+•	Fagocitar microorganismos inhalados.
+•	Eliminar restos celulares.
+•	Reconocer PAMPs mediante PRR.
+•	Liberar citocinas inflamatorias.
+•	Reclutar otras células inmunes.
+•	Presentar antígenos a los linfocitos T.
+En condiciones normales pueden eliminar numerosos microorganismos sin necesidad de activar una inflamación masiva.
+¿Qué ocurre cuando el microorganismo supera esta primera barrera?
+Si la carga infecciosa es elevada o el microorganismo es especialmente virulento, los macrófagos liberan citocinas como:
+•	IL-1.
+•	TNF-α.
+•	IL-6.
+•	Quimiocinas.
+Estas sustancias reclutan:
+Neutrófilos.
+Por eso los neutrófilos llegan después.
+No constituyen la población residente predominante del pulmón.
+¿Qué ocurre con los neutrófilos?
+Los neutrófilos son las principales células efectoras durante:
+•	Neumonía bacteriana.
+•	Abscesos.
+•	Sepsis.
+Sin embargo:
+En un pulmón sano prácticamente no existen neutrófilos en gran cantidad.
+Ellos migran desde la circulación cuando aparece inflamación.
+Por eso la opción A es incorrecta.
+¿Qué papel tienen los eosinófilos?
+Los eosinófilos participan principalmente en:
+•	Asma eosinofílica.
+•	Reacciones alérgicas.
+•	Infecciones por helmintos.
+No constituyen la población inmunitaria residente predominante del pulmón.
+¿Qué hacen los mastocitos?
+Los mastocitos también residen en el tejido pulmonar.
+Su función principal consiste en participar en:
+•	Hipersensibilidad inmediata.
+•	Reacciones alérgicas.
+•	Anafilaxia.
+Tras la unión de IgE liberan:
+•	Histamina.
+•	Triptasa.
+•	Leucotrienos.
+Aunque son importantes, son mucho menos numerosos que los macrófagos alveolares y no representan la principal línea de defensa frente a microorganismos inhalados.
+¿Cuál es la trampa del examen?
+Muchos estudiantes responden:
+Neutrófilos.
+Porque recuerdan que predominan en las infecciones bacterianas.
+Pero la pregunta no pregunta:
+¿Qué célula llega durante una neumonía?
+Pregunta:
+¿Cuál constituye la primera línea defensiva residente del pulmón?
+Y esa respuesta corresponde a los macrófagos alveolares.
+Regla de oro para residencia
+Piensa en la secuencia fisiológica:
+Microorganismo inhalado
+↓
+Macrófago alveolar
+↓
+Fagocitosis y liberación de citocinas
+↓
+Reclutamiento de neutrófilos
+↓
+Respuesta inflamatoria.
+Si recuerdas este orden, responderás correctamente la mayoría de preguntas sobre inmunidad pulmonar.
+Perlas de examen
+✅ Los macrófagos alveolares son la principal población inmunológica residente del pulmón.
+✅ Constituyen la primera línea de defensa frente a microorganismos inhalados.
+✅ Expresan PRR como los Toll-Like Receptors.
+✅ Secretan IL-1, TNF-α e IL-6 para iniciar la respuesta inflamatoria.
+✅ Los neutrófilos llegan posteriormente desde la circulación.
+✅ Los eosinófilos predominan en asma y parasitosis.
+✅ Macrófago alveolar = centinela pulmonar. Es una asociación clásica de examen.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Murray & Nadel's Textbook of Respiratory Medicine.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• AMIR Inmunología.
+
+Pregunta 9 – Básicas, Inmunología
+Paciente con una infección por Mycobacterium tuberculosis. ¿Cuál es la respuesta inmunológica predominante?
+A. Respuesta Th2 con producción de IgE.
+B. Inmunidad humoral mediada por anticuerpos.
+C. Respuesta Th1 con activación de macrófagos.
+D. Producción de IgA secretora.
+✅ Respuesta correcta: C. Respuesta Th1 con activación de macrófagos.
+Mycobacterium tuberculosis es un microorganismo intracelular facultativo que sobrevive y se replica dentro de los macrófagos. Su control depende principalmente de la inmunidad celular, mediada por linfocitos Th1, los cuales producen interferón gamma (IFN-γ), activando los macrófagos para destruir el bacilo mediante mecanismos microbicidas. Esta respuesta también favorece la formación del granuloma, estructura característica de la tuberculosis.
+Lo que debes saber para el examen
+La tuberculosis es el ejemplo clásico de una enfermedad controlada por la inmunidad celular.
+Cuando una pregunta mencione:
+•	Mycobacterium tuberculosis.
+•	Micobacterias.
+•	Granulomas.
+Debes pensar inmediatamente en:
+Respuesta Th1 + IFN-γ + activación de macrófagos.
+Tema: Respuesta inmunológica frente a microorganismos intracelulares.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es probablemente una de las preguntas más clásicas de inmunología y enfermedades infecciosas en cualquier examen de residencia.
+La razón es sencilla:
+La tuberculosis resume prácticamente todo el funcionamiento de la inmunidad celular.
+Muchos estudiantes asocian cualquier infección con anticuerpos.
+Pero la tuberculosis es justamente el ejemplo que demuestra que los anticuerpos, por sí solos, son insuficientes para controlar ciertos microorganismos.
+¿Qué ocurre cuando el bacilo entra al organismo?
+La infección comienza cuando Mycobacterium tuberculosis es inhalada hasta los alvéolos.
+Allí el primer contacto ocurre con:
+Macrófagos alveolares.
+El problema es que la micobacteria posee mecanismos que le permiten sobrevivir dentro de estas células.
+Entre ellos:
+•	Inhibición de la fusión fagosoma-lisosoma.
+•	Resistencia a mecanismos oxidativos.
+•	Persistencia intracelular.
+Por ello el macrófago necesita ayuda del sistema inmune adaptativo.
+¿Quién proporciona esa ayuda?
+Los linfocitos:
+Th1.
+Cuando las células presentadoras de antígeno muestran péptidos de la micobacteria mediante MHC II, los linfocitos CD4+ se diferencian hacia un fenotipo Th1.
+Estas células producen principalmente:
+Interferón gamma (IFN-γ).
+¿Qué hace el IFN-γ?
+El interferón gamma es la citocina más importante en la defensa contra microorganismos intracelulares.
+Su función consiste en activar intensamente al macrófago.
+Como consecuencia aumenta:
+•	La producción de especies reactivas de oxígeno.
+•	La producción de óxido nítrico.
+•	La capacidad bactericida.
+•	La destrucción del bacilo.
+Por eso la tuberculosis depende fundamentalmente de la respuesta Th1.
+¿Cómo se forma el granuloma?
+Si el microorganismo no puede eliminarse completamente, el sistema inmune intenta contenerlo.
+Para ello se organiza un:
+Granuloma.
+Está compuesto por:
+•	Macrófagos activados.
+•	Células epitelioides.
+•	Células gigantes multinucleadas de Langhans.
+•	Linfocitos Th1.
+El granuloma limita la diseminación del bacilo y constituye uno de los hallazgos histológicos más característicos de la tuberculosis.
+¿Por qué las otras opciones son incorrectas?
+A. Respuesta Th2 con producción de IgE ❌
+La respuesta Th2 se relaciona con:
+•	Asma.
+•	Alergias.
+•	Parasitosis por helmintos.
+Sus principales citocinas son:
+•	IL-4.
+•	IL-5.
+•	IL-13.
+No constituye la respuesta predominante frente a micobacterias.
+B. Inmunidad humoral mediada por anticuerpos ❌
+Los anticuerpos son muy eficaces contra microorganismos extracelulares.
+Sin embargo, la tuberculosis vive dentro de los macrófagos.
+Por ello la inmunidad humoral tiene un papel muy limitado.
+D. Producción de IgA secretora ❌
+La IgA protege principalmente las superficies mucosas.
+Puede contribuir a la defensa inicial de la vía respiratoria.
+Pero no es el mecanismo responsable del control de la infección tuberculosa establecida.
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen:
+Infección bacteriana.
+Y responden:
+Anticuerpos.
+Pero no todas las bacterias se comportan igual.
+La clave consiste en identificar si el microorganismo es:
+Intracelular.
+Cuando un microorganismo vive dentro de los macrófagos, la respuesta predominante será:
+•	Th1.
+•	IFN-γ.
+•	Activación de macrófagos.
+Regla de oro para residencia
+Relaciona siempre estos conceptos:
+Microorganismos intracelulares
+↓
+Th1
+↓
+IFN-γ
+↓
+Macrófagos activados
+↓
+Granuloma
+↓
+Control de la infección.
+Si ves cualquiera de estos elementos en una pregunta, piensa inmediatamente en los demás.
+Perlas de examen
+✅ Mycobacterium tuberculosis es un microorganismo intracelular facultativo.
+✅ La respuesta predominante es Th1.
+✅ El IFN-γ es la principal citocina en la defensa frente a tuberculosis.
+✅ Los macrófagos activados son las células efectoras fundamentales.
+✅ La formación del granuloma depende de la respuesta Th1.
+✅ Los anticuerpos tienen un papel limitado en el control de la tuberculosis.
+✅ Tuberculosis = Th1 + IFN-γ + macrófagos + granuloma. Esta asociación es una de las más preguntadas en los exámenes de residencia.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases.
+• AMIR Inmunología.
+Pregunta 10 – Básicas, Inmunología
+Un niño presenta eccema severo desde los primeros meses de vida, abscesos cutáneos recurrentes por Staphylococcus aureus, candidiasis mucocutánea recurrente e IgE sérica mayor de 2.000 UI/mL. ¿Cuál es la alteración inmunológica más probable?
+A. Déficit de linfocitos CD8.
+B. Déficit de respuesta Th1.
+C. Déficit de linfocitos Th17.
+D. Déficit del sistema del complemento.
+✅ Respuesta correcta: C. Déficit de linfocitos Th17.
+El cuadro clínico es altamente sugestivo del síndrome de hiper-IgE (síndrome de Job), producido con mayor frecuencia por mutaciones en STAT3, que alteran la diferenciación de los linfocitos Th17. Estas células son esenciales para el reclutamiento de neutrófilos y la defensa contra bacterias extracelulares y hongos, especialmente Staphylococcus aureus y Candida spp..
+Lo que debes saber para el examen
+Cuando una pregunta incluya la combinación:
+•	Eccema severo.
+•	Abscesos recurrentes por S. aureus.
+•	Candidiasis.
+•	IgE extremadamente elevada.
+Debes pensar inmediatamente en:
+Síndrome de hiper-IgE (Síndrome de Job) → Déficit de Th17.
+Tema: Déficit de linfocitos Th17 y síndrome de hiper-IgE.
+________________________________________
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una de las inmunodeficiencias primarias más preguntadas en los exámenes de residencia.
+La razón es que combina datos clínicos muy característicos que permiten llegar al diagnóstico prácticamente sin necesidad de exámenes adicionales.
+El secreto consiste en reconocer el patrón.
+¿Qué está ocurriendo realmente?
+El paciente presenta cuatro datos clave:
+•	Eccema severo.
+•	Abscesos cutáneos por Staphylococcus aureus.
+•	Candidiasis recurrente.
+•	IgE >2000 UI/mL.
+Cuando estas cuatro características aparecen juntas, debes pensar inmediatamente en:
+Síndrome de hiper-IgE (Síndrome de Job).
+¿Qué defecto inmunológico produce esta enfermedad?
+La forma clásica del síndrome de Job está causada por mutaciones en:
+STAT3.
+STAT3 participa en la diferenciación de los linfocitos:
+Th17.
+Cuando esta vía falla, disminuye de forma importante la producción de células Th17.
+Y ese es el verdadero defecto inmunológico.
+¿Qué hacen normalmente los linfocitos Th17?
+Los linfocitos Th17 son fundamentales para proteger las superficies epiteliales.
+Producen principalmente:
+•	IL-17.
+•	IL-22.
+Estas citocinas estimulan:
+•	Reclutamiento de neutrófilos.
+•	Producción de péptidos antimicrobianos.
+•	Integridad de la barrera cutánea y mucosa.
+Gracias a ellas el organismo controla eficazmente:
+•	Staphylococcus aureus.
+•	Candida albicans.
+¿Por qué aparecen abscesos por Staphylococcus?
+La IL-17 es una de las principales responsables del reclutamiento de neutrófilos.
+Cuando disminuyen los Th17:
+↓
+Disminuye IL-17.
+↓
+Disminuye el reclutamiento de neutrófilos.
+↓
+Aumenta la susceptibilidad a:
+•	Abscesos cutáneos.
+•	Infecciones bacterianas recurrentes.
+Por eso los pacientes presentan infecciones repetidas por S. aureus.
+¿Por qué aparece candidiasis?
+Los Th17 también son esenciales para la inmunidad de las mucosas.
+Su deficiencia favorece:
+•	Candidiasis oral.
+•	Candidiasis cutánea.
+•	Candidiasis mucocutánea crónica.
+Este dato es otro de los hallazgos clásicos del síndrome.
+¿Por qué la IgE está tan elevada?
+Aunque el mecanismo es complejo, la alteración de STAT3 favorece un predominio relativo de la respuesta Th2.
+Como consecuencia aumenta:
+•	IL-4.
+•	IL-13.
+Y ambas inducen:
+Producción exagerada de IgE.
+Por eso estos pacientes presentan cifras extremadamente elevadas de IgE.
+¿Qué otros hallazgos pueden aparecer?
+El síndrome de Job puede asociarse con:
+•	Facies característica.
+•	Fracturas con traumatismos mínimos.
+•	Retención de dientes temporales.
+•	Escoliosis.
+•	Neumonías recurrentes.
+•	Neumatoceles pulmonares.
+Estos hallazgos son preguntas frecuentes de residencia.
+¿Por qué las otras opciones son incorrectas?
+A. Déficit de CD8 ❌
+Produce susceptibilidad principalmente a:
+•	Virus.
+•	Algunas infecciones intracelulares.
+No explica la elevación marcada de IgE ni el patrón de abscesos por Staphylococcus.
+B. Déficit de Th1 ❌
+Los Th1 participan en la defensa contra:
+•	Micobacterias.
+•	Hongos intracelulares.
+•	Parásitos intracelulares.
+Su principal citocina es:
+IFN-γ.
+No explican el síndrome de hiper-IgE.
+D. Déficit del complemento ❌
+Los déficits del complemento producen principalmente:
+•	Infecciones por bacterias encapsuladas.
+•	Infecciones por Neisseria.
+No ocasionan IgE elevada ni eccema severo.
+¿Cuál es la trampa del examen?
+Muchos estudiantes responden:
+Déficit de Th1.
+Porque observan infecciones recurrentes.
+Pero el microorganismo predominante es:
+Staphylococcus aureus.
+Y además existe:
+•	Candidiasis.
+•	IgE muy elevada.
+•	Eccema.
+Esa combinación prácticamente señala a los Th17.
+Regla de oro para residencia
+Relaciona siempre esta secuencia:
+Mutación STAT3
+↓
+Déficit Th17
+↓
+Disminución IL-17
+↓
+Menor reclutamiento de neutrófilos
+↓
+Infecciones por Staphylococcus y Candida
+↓
+IgE muy elevada
+↓
+Síndrome de Job.
+Perlas de examen
+✅ El síndrome de hiper-IgE clásico se asocia con mutaciones en STAT3.
+✅ El defecto inmunológico principal es el déficit de linfocitos Th17.
+✅ IL-17 es esencial para el reclutamiento de neutrófilos.
+✅ Staphylococcus aureus y Candida son los microorganismos característicos.
+✅ La IgE suele ser extremadamente elevada (>2000 UI/mL).
+✅ Eccema + abscesos + candidiasis + IgE elevada = pensar inmediatamente en síndrome de Job.
+✅ STAT3 → Th17 → IL-17 → Neutrófilos es una de las asociaciones más preguntadas en inmunología clínica.
+Referencias
+• Abbas AK. Cellular and Molecular Immunology.
+• Janeway's Immunobiology.
+• Harrison's Principles of Internal Medicine.
+• Robbins & Cotran Pathologic Basis of Disease.
+• ESID Clinical Practice Guidelines for Primary Immunodeficiencies.
+• AMIR Inmunología.
+
+</user_query>

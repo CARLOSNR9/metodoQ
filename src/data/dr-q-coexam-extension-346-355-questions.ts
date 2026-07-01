@@ -1,0 +1,876 @@
+import type { TrainingQuestion } from "@/lib/questions/types";
+
+/**
+ * Banco universal MetodoQ · Dr. Q — extensión coexam dr-q-346 a dr-q-355.
+ * PREGUNTA 21–30 (Univalle/UdeA/Caldas/UCC Pasto/Unimilitar) — adición neta al banco.
+ */
+export const DR_Q_COEXAM_EXTENSION_346_355_QUESTIONS: TrainingQuestion[] = [
+  {
+    id: "dr-q-346",
+    examArea: "REUMATOLOGÍA",
+    topic: "REUMATOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","reumatologia"],
+    statement: "Mujer de 52 años consulta por dolor articular crónico en ambas manos. Refiere rigidez matutina de pocos minutos de duración que mejora con el movimiento. Al examen físico se observan prominencias óseas en las articulaciones interfalángicas distales, sin calor local ni signos inflamatorios importantes.\n¿Cuál es el diagnóstico más probable y cómo se denomina el hallazgo semiológico descrito?",
+    options: [
+      { id: "A", label: "A", text: "Artritis reumatoide; nódulos reumatoideos." },
+      { id: "B", label: "B", text: "Osteoartrosis; nódulos de Heberden." },
+      { id: "C", label: "C", text: "Gota crónica; tofos gotosos." },
+      { id: "D", label: "D", text: "Artritis psoriásica; dactilitis." },
+    ],
+    correctOptionId: "B",
+    explanation: "La osteoartrosis es la enfermedad articular degenerativa más frecuente. Los nódulos de Heberden corresponden a proliferaciones óseas localizadas en las articulaciones interfalángicas distales y constituyen un hallazgo clásico de esta entidad.",
+    keyPoints: [
+      "Cuando veas: Mujer mayor de 50 años. Dolor mecánico. Rigidez matutina breve. Interfalángicas distales. Nódulos óseos.",
+      "Debes pensar en: Osteoartrosis.",
+      "Tema: Enfermedades articulares degenerativas.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la diferencia entre osteoartrosis y artritis inflamatorias.
+La clave no es el dolor.
+La clave es:
+La localización de los nódulos.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Dolor articular crónico.
+• Rigidez corta (<30 minutos).
+• Ausencia de inflamación significativa.
+• Compromiso de interfalángicas distales.
+Esto corresponde a:
+Osteoartrosis.
+¿Qué son los nódulos observados?
+Las prominencias óseas en:
+Interfalángicas distales.
+Reciben el nombre de:
+Nódulos de Heberden.
+¿Y los de las interfalángicas proximales?
+Se denominan:
+Nódulos de Bouchard.
+¿Por qué NO artritis reumatoide?
+Porque la artritis reumatoide típicamente:
+• Respeta las interfalángicas distales.
+• Presenta rigidez prolongada.
+• Tiene signos inflamatorios evidentes.
+¿Por qué NO gota?
+La gota crónica produce:
+Tofos.
+No nódulos de Heberden.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Dolor en manos."
+Y responden:
+Artritis reumatoide.
+Sin embargo:
+El dato decisivo es:
+Compromiso de interfalángicas distales con nódulos óseos.
+Esto orienta a:
+Osteoartrosis.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar dolor mecánico.
+2.	Evaluar duración de la rigidez.
+3.	Localizar las articulaciones afectadas.
+4.	Reconocer nódulos de Heberden.
+5.	Diagnosticar osteoartrosis.
+Perlas de examen
+✅ Nódulos de Heberden = articulaciones interfalángicas distales.
+✅ Nódulos de Bouchard = articulaciones interfalángicas proximales.
+✅ La osteoartrosis produce rigidez matutina breve.
+✅ Es la enfermedad articular más frecuente en adultos mayores.
+✅ La artritis reumatoide suele respetar las interfalángicas distales.
+✅ El dolor empeora con la actividad y mejora con el reposo.
+✅ Las radiografías muestran osteofitos y disminución del espacio articular.
+Referencias
+• Kelley and Firestein's Textbook of Rheumatology.
+• Harrison's Principles of Internal Medicine.
+• American College of Rheumatology Guidelines.
+• UpToDate: Clinical Manifestations of Osteoarthritis.
+• Oxford Textbook of Rheumatology.`,
+  },
+  {
+    id: "dr-q-347",
+    examArea: "DERMATOLOGÍA",
+    topic: "DERMATOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","dermatologia"],
+    statement: "Hombre de 22 años consulta por lesiones acneicas de varios años de evolución con progresión reciente. Refiere fracaso terapéutico con tratamientos tópicos previos. Al examen físico presenta comedones, pápulas inflamatorias, pústulas, lesiones noduloquísticas y múltiples cicatrices atróficas en rostro y espalda.\n¿Cuál es el siguiente paso farmacológico más adecuado?",
+    options: [
+      { id: "A", label: "A", text: "Continuar únicamente peróxido de benzoilo." },
+      { id: "B", label: "B", text: "Iniciar isotretinoína oral." },
+      { id: "C", label: "C", text: "Iniciar hidrocortisona tópica." },
+      { id: "D", label: "D", text: "Iniciar fluconazol oral." },
+    ],
+    correctOptionId: "B",
+    explanation: "La isotretinoína es el tratamiento de elección para el acné noduloquístico severo, el acné con cicatrices o el acné que no responde a tratamientos convencionales. Actúa disminuyendo la producción de sebo, la colonización por Cutibacterium acnes y la inflamación folicular.",
+    keyPoints: [
+      "Cuando veas: Acné severo. Nódulos o quistes. Cicatrices. Fracaso de tratamiento tópico.",
+      "Debes pensar en: Isotretinoína oral.",
+      "Tema: Acné vulgar.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa las indicaciones absolutas de isotretinoína.
+La clave no es el acné.
+La clave es:
+La presencia de cicatrices.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Acné inflamatorio severo.
+• Lesiones noduloquísticas.
+• Compromiso extenso.
+• Cicatrices permanentes.
+Esto corresponde a:
+Acné noduloquístico severo.
+¿Cuál es el tratamiento de elección?
+La respuesta clásica es:
+Isotretinoína oral.
+¿Por qué funciona?
+Disminuye:
+• Producción sebácea.
+• Obstrucción folicular.
+• Inflamación.
+• Colonización bacteriana.
+Es el único medicamento que actúa sobre:
+Los cuatro mecanismos fisiopatológicos del acné.
+¿Cuáles son las indicaciones clásicas?
+• Acné noduloquístico.
+• Acné con cicatrices.
+• Acné refractario.
+• Gran impacto psicológico.
+¿Por qué NO continuar tópicos?
+Porque:
+Ya hubo fracaso terapéutico.
+Además:
+Existen cicatrices establecidas.
+¿Por qué NO corticoides tópicos?
+No forman parte del tratamiento estándar del acné.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Pápulas y pústulas."
+Y responden:
+Peróxido de benzoilo.
+Sin embargo:
+El dato decisivo es:
+La presencia de quistes y cicatrices.
+Esto obliga a:
+Escalar a isotretinoína.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar gravedad.
+2.	Buscar nódulos o quistes.
+3.	Evaluar cicatrices.
+4.	Reconocer fracaso terapéutico.
+5.	Iniciar isotretinoína oral.
+Perlas de examen
+✅ La isotretinoína es el tratamiento de elección para el acné severo.
+✅ Las cicatrices son una indicación clásica de tratamiento sistémico.
+✅ Debe monitorizarse perfil hepático y lípidos.
+✅ Es altamente teratogénica.
+✅ Puede producir queilitis y xerosis.
+✅ Disminuye el tamaño y actividad de las glándulas sebáceas.
+✅ Tiene las tasas más altas de remisión prolongada.
+Referencias
+• Fitzpatrick's Dermatology.
+• Bolognia Dermatology.
+• American Academy of Dermatology Guidelines for Acne.
+• Rook's Textbook of Dermatology.
+• UpToDate: Treatment of Severe Acne Vulgaris.`,
+  },
+  {
+    id: "dr-q-348",
+    examArea: "REUMATOLOGÍA - ORTOPEDIA",
+    topic: "REUMATOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","reumatologia"],
+    statement: "Mujer de 40 años con diagnóstico conocido de artrosis de rodillas consulta por dolor crónico que limita sus actividades diarias, especialmente al subir escaleras y durante la marcha prolongada. Actualmente recibe glucosamina, condroitín sulfato y antiinflamatorios no esteroideos. Al examen físico no presenta calor, eritema ni otros signos de inflamación articular. Estudios de imagen reportan cambios degenerativos y pequeño derrame articular bilateral.\n¿Cuál es el manejo más apropiado?",
+    options: [
+      { id: "A", label: "A", text: "Iniciar metotrexato semanal." },
+      { id: "B", label: "B", text: "Realizar infiltración intraarticular con corticoide y fortalecer medidas no farmacológicas." },
+      { id: "C", label: "C", text: "Iniciar terapia biológica anti-TNF." },
+      { id: "D", label: "D", text: "Solicitar artrocentesis urgente por sospecha de artritis séptica." },
+    ],
+    correctOptionId: "B",
+    explanation: "La paciente presenta gonartrosis sintomática sin evidencia de artritis inflamatoria o infección. En pacientes con dolor persistente pese al manejo conservador, la infiltración intraarticular con corticosteroides puede mejorar temporalmente los síntomas, siempre acompañada de ejercicio terapéutico, fortalecimiento muscular y reducción de factores de riesgo.",
+    keyPoints: [
+      "Cuando veas: Dolor mecánico. Artrosis conocida. Sin signos inflamatorios. Derrame leve.",
+      "Debes pensar en: Gonartrosis sintomática.",
+      "Tema: Osteoartrosis.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el manejo escalonado de la osteoartrosis.
+La clave no es el derrame.
+La clave es:
+La ausencia de datos de inflamación.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Dolor con la actividad.
+• Empeora al subir escaleras.
+• Rigidez mecánica.
+• Derrame leve.
+Esto corresponde a:
+Artrosis de rodilla.
+¿Qué significa el derrame?
+En la artrosis puede existir:
+Sinovitis leve reactiva.
+No implica necesariamente:
+Infección.
+Ni enfermedad inflamatoria.
+¿Cuál es el siguiente paso?
+En un paciente sintomático a pesar de:
+• Analgésicos.
+• AINE.
+• Medidas conservadoras.
+Puede considerarse:
+Infiltración intraarticular con corticoides.
+¿Qué medidas deben mantenerse?
+• Pérdida de peso.
+• Fortalecimiento del cuádriceps.
+• Ejercicio supervisado.
+• Educación del paciente.
+¿Por qué NO metotrexato?
+Porque:
+La artrosis no es una enfermedad autoinmune.
+¿Por qué NO anti-TNF?
+Son medicamentos utilizados en:
+Artritis inflamatorias.
+No en osteoartrosis.
+¿Por qué NO artrocentesis urgente?
+No existen signos de:
+• Artritis séptica.
+• Calor.
+• Eritema.
+• Fiebre.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Derrame articular."
+Y responden:
+Artritis inflamatoria.
+Sin embargo:
+El dato decisivo es:
+El patrón mecánico del dolor y la ausencia de inflamación.
+Esto orienta a:
+Artrosis sintomática.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar dolor mecánico.
+2.	Reconocer artrosis.
+3.	Excluir inflamación o infección.
+4.	Optimizar tratamiento conservador.
+5.	Considerar infiltración intraarticular.
+Perlas de examen
+✅ La osteoartrosis produce dolor que empeora con la actividad.
+✅ El fortalecimiento muscular es uno de los tratamientos más efectivos.
+✅ La pérdida de peso reduce significativamente los síntomas.
+✅ Los corticoides intraarticulares mejoran el dolor a corto plazo.
+✅ Los biológicos no tienen indicación en osteoartrosis.
+✅ Un pequeño derrame puede observarse en enfermedad degenerativa.
+✅ La artroplastia se reserva para enfermedad avanzada con limitación funcional importante.
+Referencias
+• American College of Rheumatology Guidelines for Osteoarthritis.
+• EULAR Recommendations for Knee Osteoarthritis.
+• Kelley and Firestein's Textbook of Rheumatology.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Management of Knee Osteoarthritis.`,
+  },
+  {
+    id: "dr-q-349",
+    examArea: "INFECTOLOGÍA - UROLOGÍA",
+    topic: "INFECTOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","infectologia"],
+    statement: "Hombre de 30 años consulta por disuria, polaquiuria y dolor lumbar leve de varios días de evolución. Refiere múltiples parejas sexuales durante el último mes y relaciones sexuales con hombres. Niega antecedentes urológicos de importancia.\n¿Cuál es el tratamiento empírico inicial más apropiado?",
+    options: [
+      { id: "A", label: "A", text: "Nitrofurantoína por 5 días." },
+      { id: "B", label: "B", text: "Ciprofloxacina por 3 días." },
+      { id: "C", label: "C", text: "Ceftriaxona intramuscular dosis única asociada a doxiciclina por 7 días." },
+      { id: "D", label: "D", text: "Fluconazol dosis única." },
+    ],
+    correctOptionId: "C",
+    explanation: "En un paciente sexualmente activo con síntomas urinarios bajos y factores de riesgo para infecciones de transmisión sexual, debe sospecharse uretritis gonocócica o coinfección por Chlamydia trachomatis. El tratamiento empírico recomendado incluye cobertura para ambos microorganismos.",
+    keyPoints: [
+      "Cuando veas: Hombre joven. Múltiples parejas sexuales. Disuria. Síntomas urinarios. Conducta sexual de riesgo.",
+      "Debes pensar en: Uretritis por ITS.",
+      "Tema: Infecciones de transmisión sexual.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el manejo sindrómico de la uretritis.
+La clave no es la disuria.
+La clave es:
+El contexto epidemiológico.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Disuria.
+• Polaquiuria.
+• Conductas sexuales de riesgo.
+Esto obliga a sospechar:
+Uretritis infecciosa.
+¿Cuáles son los microorganismos más frecuentes?
+• Neisseria gonorrhoeae.
+• Chlamydia trachomatis.
+¿Por qué tratar ambos?
+Porque:
+La coinfección es frecuente.
+¿Cuál es el esquema clásico de examen?
+• Ceftriaxona IM.
+• Doxiciclina VO.
+¿Qué estudios adicionales deben solicitarse?
+• Prueba para VIH.
+• Tamización para sífilis.
+• Pruebas para gonorrea y clamidia.
+¿Qué debe hacerse con las parejas sexuales?
+• Estudio.
+• Tratamiento.
+• Consejería.
+¿Por qué NO nitrofurantoína?
+Porque:
+No cubre gonococo ni clamidia.
+¿Por qué NO fluconazol?
+No existen datos sugestivos de:
+Candidiasis.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Disuria."
+Y responden:
+Infección urinaria.
+Sin embargo:
+El dato decisivo es:
+La conducta sexual de alto riesgo.
+Esto orienta a:
+Uretritis por ITS.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar factores de riesgo sexual.
+2.	Sospechar uretritis.
+3.	Cubrir gonococo.
+4.	Cubrir clamidia.
+5.	Tamizar otras ITS.
+Perlas de examen
+✅ Gonococo y clamidia son las causas más frecuentes de uretritis.
+✅ La coinfección es común.
+✅ Debe realizarse tamización para VIH y sífilis.
+✅ Las parejas sexuales requieren evaluación y tratamiento.
+✅ La ceftriaxona es el tratamiento de elección para gonorrea.
+✅ La doxiciclina es tratamiento de primera línea para clamidia.
+✅ El manejo sindrómico evita retrasos terapéuticos.
+Referencias
+• Guía de Práctica Clínica Colombiana para ITS.
+• Ministerio de Salud y Protección Social de Colombia.
+• CDC Sexually Transmitted Infections Treatment Guidelines.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Urethritis in Adults.`,
+  },
+  {
+    id: "dr-q-350",
+    examArea: "UROLOGÍA",
+    topic: "UROLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","urologia"],
+    statement: "Hombre de 70 años consulta por disminución progresiva del calibre del chorro miccional, nicturia frecuente, tenesmo vesical y goteo postmiccional. Al examen físico se realiza tacto rectal, encontrándose una próstata aumentada de tamaño, de consistencia pétrea e irregular.\n¿Cuál es la conducta más indicada?",
+    options: [
+      { id: "A", label: "A", text: "Iniciar tamsulosina y control en 6 meses." },
+      { id: "B", label: "B", text: "Iniciar finasterida como único tratamiento." },
+      { id: "C", label: "C", text: "Solicitar antígeno prostático específico (PSA) y biopsia prostática transrectal guiada por ecografía." },
+      { id: "D", label: "D", text: "Realizar resección transuretral de próstata de forma inmediata." },
+    ],
+    correctOptionId: "C",
+    explanation: "La presencia de una próstata pétrea e irregular al tacto rectal es altamente sugestiva de cáncer de próstata hasta demostrar lo contrario. En este contexto, el siguiente paso es completar el estudio diagnóstico con PSA y confirmación histológica mediante biopsia.",
+    keyPoints: [
+      "Cuando veas: Hombre mayor. Síntomas urinarios obstructivos. Próstata pétrea. Tacto rectal anormal.",
+      "Debes pensar en: Cáncer de próstata.",
+      "Tema: Neoplasias urológicas.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la diferencia entre hiperplasia prostática benigna y cáncer de próstata.
+La clave no son los síntomas urinarios.
+La clave es:
+La palabra pétrea.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Chorro débil.
+• Nicturia.
+• Goteo postmiccional.
+Estos síntomas pueden observarse en:
+Hiperplasia prostática benigna.
+Sin embargo:
+El tacto rectal muestra:
+Próstata pétrea.
+Este hallazgo es altamente sugestivo de:
+Cáncer de próstata.
+¿Cómo suele encontrarse la próstata en la hiperplasia benigna?
+• Aumentada de tamaño.
+• Lisa.
+• Elástica.
+• Simétrica.
+¿Cómo suele encontrarse en cáncer?
+• Dura.
+• Irregular.
+• Nodular.
+• Pétrea.
+¿Cuál es el siguiente paso?
+Confirmar la sospecha mediante:
+• PSA.
+• Biopsia prostática.
+¿Por qué NO iniciar solo tamsulosina?
+Porque:
+Existe un signo de alarma para malignidad.
+¿Por qué NO realizar RTU de próstata?
+Porque primero debe establecerse:
+El diagnóstico definitivo.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Nicturia y chorro débil."
+Y responden:
+Hiperplasia prostática benigna.
+Sin embargo:
+El dato decisivo es:
+La próstata pétrea.
+Esto orienta a:
+Neoplasia prostática.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar síntomas obstructivos.
+2.	Realizar tacto rectal.
+3.	Reconocer próstata pétrea.
+4.	Sospechar cáncer de próstata.
+5.	Solicitar PSA y biopsia.
+Perlas de examen
+✅ Próstata pétrea = cáncer de próstata hasta demostrar lo contrario.
+✅ La hiperplasia prostática benigna suele ser lisa y elástica.
+✅ El PSA no confirma el diagnóstico por sí solo.
+✅ La biopsia es el estándar diagnóstico.
+✅ El adenocarcinoma es el tipo histológico más frecuente.
+✅ El tacto rectal sigue siendo una herramienta fundamental.
+✅ Los síntomas urinarios no permiten diferenciar con certeza entre HPB y cáncer.
+Referencias
+• Campbell-Walsh Urology.
+• EAU Guidelines on Prostate Cancer.
+• NCCN Prostate Cancer Guidelines.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Clinical Presentation and Diagnosis of Prostate Cancer.`,
+  },
+  {
+    id: "dr-q-351",
+    examArea: "PEDIATRÍA - NEUROPEDIATRÍA",
+    topic: "PEDIATRÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","pediatria"],
+    statement: "Niña de 4 años es llevada al servicio de urgencias por presentar episodio convulsivo tónico-clónico generalizado de aproximadamente 5 minutos de duración durante un cuadro febril agudo con temperaturas de hasta 40°C. La crisis se resolvió espontáneamente y actualmente presenta leve somnolencia con recuperación progresiva del estado basal. No tiene antecedentes neurológicos, alteraciones del neurodesarrollo ni signos clínicos de infección del sistema nervioso central.\n¿Cuál es el manejo inicial más adecuado?",
+    options: [
+      { id: "A", label: "A", text: "Iniciar tratamiento anticonvulsivante crónico con ácido valproico." },
+      { id: "B", label: "B", text: "Solicitar tomografía cerebral urgente y punción lumbar de rutina." },
+      { id: "C", label: "C", text: "Observación clínica, control de la fiebre y educación a los cuidadores." },
+      { id: "D", label: "D", text: "Solicitar electroencefalograma urgente e iniciar levetiracetam." },
+    ],
+    correctOptionId: "C",
+    explanation: "La paciente presenta una convulsión febril simple, definida como una crisis generalizada, única, de duración menor de 15 minutos y asociada a fiebre en niños entre 6 meses y 5 años sin evidencia de infección del sistema nervioso central. El manejo consiste en identificar la causa de la fiebre, observación clínica y educación familiar.",
+    keyPoints: [
+      "Cuando veas: Niño entre 6 meses y 5 años. Fiebre. Convulsión generalizada. Menos de 15 minutos. Recuperación completa.",
+      "Debes pensar en: Convulsión febril simple.",
+      "Tema: Convulsiones febriles.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el manejo de la convulsión febril simple.
+La clave no es la convulsión.
+La clave es:
+Que cumple todos los criterios de simplicidad.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Edad típica.
+• Fiebre alta.
+• Crisis tónico-clónica generalizada.
+• Duración de 5 minutos.
+• Recuperación completa.
+Esto corresponde a:
+Convulsión febril simple.
+¿Cuáles son los criterios?
+• Generalizada.
+• Menor de 15 minutos.
+• Un solo episodio en 24 horas.
+• Sin déficit neurológico posterior.
+¿Cuál es el manejo?
+• Observación.
+• Antipiréticos para confort.
+• Búsqueda del foco infeccioso.
+• Educación a los padres.
+¿Se requiere TAC?
+No.
+En ausencia de:
+• Trauma.
+• Déficit focal.
+• Alteración persistente de conciencia.
+¿Se requiere electroencefalograma?
+No de rutina.
+¿Se requieren anticonvulsivantes crónicos?
+No.
+Porque:
+El riesgo de epilepsia posterior es bajo.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Convulsión."
+Y responden:
+TAC o anticonvulsivantes.
+Sin embargo:
+El dato decisivo es:
+Que se trata de una convulsión febril simple.
+Esto orienta a:
+Manejo conservador.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Confirmar criterios de convulsión febril simple.
+2.	Buscar foco infeccioso.
+3.	Controlar síntomas.
+4.	Observar evolución.
+5.	Educar a los cuidadores.
+Perlas de examen
+✅ La convulsión febril simple es la más frecuente en pediatría.
+✅ Ocurre entre los 6 meses y 5 años.
+✅ La duración es menor de 15 minutos.
+✅ No requiere tratamiento anticonvulsivante crónico.
+✅ No requiere neuroimagen rutinaria.
+✅ El pronóstico es excelente.
+✅ La recurrencia es posible, pero la mayoría de los niños no desarrollará epilepsia.
+Referencias
+• Nelson Textbook of Pediatrics.
+• American Academy of Pediatrics Guidelines.
+• UpToDate: Febrile Seizures in Children.
+• Rudolph's Pediatrics.
+• Guías de Neuropediatría.`,
+  },
+  {
+    id: "dr-q-352",
+    examArea: "PEDIATRÍA - NEUMOLOGÍA",
+    topic: "PEDIATRÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","pediatria"],
+    statement: "Niña de 8 meses consulta por dificultad respiratoria de inicio agudo. Es el primer episodio de sibilancias de su vida. Al examen físico presenta tirajes, sibilancias difusas y saturación de oxígeno de 91% al aire ambiente. Tiene esquema de vacunación completo para la edad.\n¿Cuál es el manejo recomendado?",
+    options: [
+      { id: "A", label: "A", text: "Salbutamol inhalado de forma rutinaria y egreso." },
+      { id: "B", label: "B", text: "Oxigenoterapia suplementaria, medidas de soporte e hidratación." },
+      { id: "C", label: "C", text: "Iniciar corticosteroides sistémicos." },
+      { id: "D", label: "D", text: "Iniciar antibióticos de amplio espectro." },
+    ],
+    correctOptionId: "B",
+    explanation: "La paciente presenta un cuadro compatible con bronquiolitis aguda. El tratamiento recomendado es principalmente de soporte, incluyendo oxigenoterapia cuando la saturación es inferior a los valores normales, hidratación adecuada y vigilancia clínica. Los broncodilatadores, corticosteroides y antibióticos no se recomiendan de forma rutinaria.",
+    keyPoints: [
+      "Cuando veas: Lactante menor de 2 años. Primer episodio de sibilancias. Dificultad respiratoria. Hipoxemia.",
+      "Debes pensar en: Bronquiolitis aguda.",
+      "Tema: Infecciones respiratorias bajas.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa el manejo actual de la bronquiolitis.
+La clave no son las sibilancias.
+La clave es:
+Que es el primer episodio.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Menor de 2 años.
+• Primer episodio sibilante.
+• Tirajes.
+• Hipoxemia.
+Esto corresponde a:
+Bronquiolitis aguda.
+¿Cuál es el agente más frecuente?
+La respuesta clásica es:
+Virus sincitial respiratorio (VSR).
+¿Cuál es el tratamiento?
+Principalmente:
+• Oxígeno suplementario.
+• Lavados nasales.
+• Hidratación.
+• Vigilancia clínica.
+¿Se recomienda salbutamol?
+No de rutina.
+Las guías actuales no recomiendan:
+Broncodilatadores sistemáticamente.
+¿Se recomiendan corticoides?
+No.
+No han demostrado beneficio clínico significativo.
+¿Se recomiendan antibióticos?
+No.
+Porque se trata de:
+Una infección viral.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Sibilancias."
+Y responden:
+Salbutamol.
+Sin embargo:
+El dato decisivo es:
+Primer episodio de sibilancias en un lactante.
+Esto orienta a:
+Bronquiolitis.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar lactante menor de 2 años.
+2.	Reconocer primer episodio sibilante.
+3.	Diagnosticar bronquiolitis.
+4.	Administrar soporte respiratorio.
+5.	Vigilar evolución clínica.
+Perlas de examen
+✅ El VSR es la causa más frecuente de bronquiolitis.
+✅ La bronquiolitis ocurre principalmente en menores de 2 años.
+✅ El manejo es fundamentalmente de soporte.
+✅ La oxigenoterapia está indicada en presencia de hipoxemia.
+✅ Los antibióticos no se utilizan de rutina.
+✅ Los corticosteroides no han demostrado beneficio consistente.
+✅ El primer episodio de sibilancias en lactantes es bronquiolitis hasta demostrar lo contrario.
+Referencias
+• Nelson Textbook of Pediatrics.
+• American Academy of Pediatrics Bronchiolitis Guideline.
+• UpToDate: Bronchiolitis in Infants and Children.
+• Guías Colombianas de Atención Integrada de las Enfermedades Prevalentes de la Infancia (AIEPI).
+• Rudolph's Pediatrics.`,
+  },
+  {
+    id: "dr-q-353",
+    examArea: "PEDIATRÍA - OTORRINOLARINGOLOGÍA",
+    topic: "PEDIATRÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","pediatria"],
+    statement: "Niño de 3 años es llevado a consulta por fiebre, irritabilidad y malestar general de inicio reciente. La madre refiere llanto frecuente y dificultad para acostarse sobre el lado izquierdo. Al examen físico se encuentra irritable y la otoscopia evidencia membrana timpánica izquierda eritematosa con presencia de exudado en oído medio.\n¿Cuál es el diagnóstico más probable y el manejo adecuado?",
+    options: [
+      { id: "A", label: "A", text: "Otitis media con efusión; observación y control en 3 meses." },
+      { id: "B", label: "B", text: "Otitis externa aguda; gotas óticas con ciprofloxacina." },
+      { id: "C", label: "C", text: "Otitis media aguda bacteriana; amoxicilina a dosis altas." },
+      { id: "D", label: "D", text: "Mastoiditis aguda; mastoidectomía urgente." },
+    ],
+    correctOptionId: "C",
+    explanation: "La presencia de fiebre, irritabilidad y hallazgos inflamatorios del oído medio son compatibles con otitis media aguda. El tratamiento de primera línea en niños que cumplen criterios de manejo antibiótico es amoxicilina a dosis altas.",
+    keyPoints: [
+      "Cuando veas: Niño pequeño. Fiebre. Irritabilidad. Otalgia. Tímpano eritematoso con exudado.",
+      "Debes pensar en: Otitis media aguda.",
+      "Tema: Infecciones respiratorias pediátricas.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la infección bacteriana más frecuente en pediatría.
+La clave no es la fiebre.
+La clave es:
+La otoscopia.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Cuadro febril.
+• Irritabilidad.
+• Dolor de oído.
+• Inflamación del oído medio.
+Esto corresponde a:
+Otitis media aguda.
+¿Cuáles son los microorganismos más frecuentes?
+• Streptococcus pneumoniae.
+• Haemophilus influenzae.
+• Moraxella catarrhalis.
+¿Cuál es el tratamiento de elección?
+La respuesta clásica es:
+Amoxicilina a dosis altas.
+Usualmente:
+80-90 mg/kg/día.
+¿Por qué dosis altas?
+Porque mejora la cobertura frente a:
+Neumococo con sensibilidad disminuida.
+¿Por qué NO es otitis externa?
+Porque la lesión se encuentra en:
+El oído medio.
+No en el conducto auditivo externo.
+¿Por qué NO es mastoiditis?
+No existen datos de:
+• Tumefacción retroauricular.
+• Desplazamiento del pabellón auricular.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Eritema."
+Y responden:
+Otitis externa.
+Sin embargo:
+El dato decisivo es:
+El compromiso de la membrana timpánica y el exudado del oído medio.
+Esto orienta a:
+Otitis media aguda.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar síntomas compatibles.
+2.	Realizar otoscopia.
+3.	Confirmar inflamación del oído medio.
+4.	Diagnosticar otitis media aguda.
+5.	Iniciar amoxicilina.
+Perlas de examen
+✅ La otitis media aguda es una de las infecciones bacterianas más frecuentes de la infancia.
+✅ Streptococcus pneumoniae es el agente clásico de examen.
+✅ La amoxicilina es el tratamiento inicial de elección.
+✅ La otoscopia es fundamental para el diagnóstico.
+✅ La irritabilidad puede ser el síntoma predominante en niños pequeños.
+✅ El dolor suele empeorar en decúbito.
+✅ La mastoiditis es una complicación poco frecuente pero importante.
+Referencias
+• Nelson Textbook of Pediatrics.
+• American Academy of Pediatrics Guideline on Acute Otitis Media.
+• Red Book: Report of the Committee on Infectious Diseases.
+• UpToDate: Acute Otitis Media in Children.
+• Guías AIEPI - Ministerio de Salud.`,
+  },
+  {
+    id: "dr-q-354",
+    examArea: "CIRUGÍA GENERAL - TRAUMA",
+    topic: "CIRUGÍA GENERAL",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","cirugia_general"],
+    statement: "Hombre de 27 años es llevado a urgencias tras accidente de tránsito en calidad de pasajero de motocicleta. Ingresa inmovilizado en tabla rígida, sin collar cervical. Al examen físico presenta PA 86/53 mmHg y FC 110 lpm. No se evidencia sangrado externo. Se realiza ecografía FAST que resulta negativa. El abdomen es blando, depresible y sin signos de irritación peritoneal.\n¿Cuál es la causa más probable de la inestabilidad hemodinámica?",
+    options: [
+      { id: "A", label: "A", text: "Hemorragia intraabdominal oculta." },
+      { id: "B", label: "B", text: "Shock neurogénico por lesión medular cervical." },
+      { id: "C", label: "C", text: "Hemorragia retroperitoneal secundaria a fractura pélvica." },
+      { id: "D", label: "D", text: "Taponamiento cardíaco traumático." },
+    ],
+    correctOptionId: "C",
+    explanation: "En un paciente politraumatizado con hipotensión, taquicardia, FAST negativo y ausencia de sangrado externo, debe sospecharse hemorragia oculta. Una de las fuentes más importantes es el retroperitoneo, especialmente por fracturas pélvicas, que pueden albergar grandes volúmenes de sangre sin manifestaciones abdominales evidentes.",
+    keyPoints: [
+      "Cuando veas: Politrauma. Shock. FAST negativo. Abdomen normal.",
+      "Debes pensar en: Sangrado oculto retroperitoneal.",
+      "Tema: Shock hemorrágico en trauma.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa la búsqueda de la fuente de sangrado en el paciente politraumatizado.
+La clave no es la hipotensión.
+La clave es:
+El FAST negativo.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Trauma de alta energía.
+• Hipotensión.
+• Taquicardia.
+Esto corresponde inicialmente a:
+Shock hemorrágico hasta demostrar lo contrario.
+¿Dónde está el sangrado?
+No se observa:
+• Sangrado externo.
+• Hemoperitoneo.
+Por lo tanto deben buscarse los otros sitios clásicos de hemorragia.
+¿Cuáles son los 4 lugares donde puede perder sangre un traumatizado?
+1.	Tórax.
+2.	Abdomen.
+3.	Pelvis/retroperitoneo.
+4.	Huesos largos.
+¿Qué dato orienta a pelvis?
+FAST negativo.
+Abdomen normal.
+Persistencia de shock.
+Esto obliga a sospechar:
+Hemorragia retroperitoneal por fractura pélvica.
+¿Por qué NO shock neurogénico?
+El shock neurogénico clásicamente presenta:
+• Hipotensión.
+• Bradicardia.
+No:
+Taquicardia.
+¿Por qué NO taponamiento cardíaco?
+El FAST suele detectar líquido pericárdico y generalmente existen otros hallazgos clínicos sugestivos.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Motociclista."
+Y responden:
+Lesión medular.
+Sin embargo:
+El dato decisivo es:
+Hipotensión con taquicardia.
+Esto indica:
+Shock hemorrágico.
+Y con FAST negativo la principal sospecha es:
+Pelvis y retroperitoneo.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Identificar shock.
+2.	Asumir hemorragia hasta demostrar lo contrario.
+3.	Revisar FAST.
+4.	Si es negativo, buscar pelvis, tórax y huesos largos.
+5.	Sospechar hemorragia retroperitoneal.
+Perlas de examen
+✅ Todo politraumatizado hipotenso tiene shock hemorrágico hasta demostrar lo contrario.
+✅ El FAST negativo no descarta hemorragia grave.
+✅ Una fractura pélvica puede contener varios litros de sangre.
+✅ Shock neurogénico suele cursar con bradicardia.
+✅ El retroperitoneo es una fuente frecuente de sangrado oculto.
+✅ La radiografía AP de pelvis forma parte de la evaluación inicial.
+✅ El control temprano de la hemorragia reduce la mortalidad.
+Referencias
+• ATLS 11th Edition.
+• Sabiston Textbook of Surgery.
+• Schwartz's Principles of Surgery.
+• Tintinalli's Emergency Medicine.
+• EAST Practice Management Guidelines for Trauma.`,
+  },
+  {
+    id: "dr-q-355",
+    examArea: "CIRUGÍA GENERAL - GASTROENTEROLOGÍA",
+    topic: "GASTROENTEROLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","gastroenterologia"],
+    statement: "Hombre de 40 años con antecedente de dispepsia crónica es sometido a endoscopia digestiva alta. Horas después desarrolla dolor torácico intenso irradiado a la espalda, asociado a disnea leve. La radiografía de tórax muestra derrame pleural izquierdo. Se sospecha perforación esofágica (síndrome de Boerhaave o perforación iatrogénica).\n¿Cuál es el estudio que confirma el diagnóstico?",
+    options: [
+      { id: "A", label: "A", text: "Radiografía simple de tórax." },
+      { id: "B", label: "B", text: "Endoscopia digestiva alta repetida." },
+      { id: "C", label: "C", text: "Esofagograma con contraste hidrosoluble." },
+      { id: "D", label: "D", text: "Ecografía torácica." },
+    ],
+    correctOptionId: "C",
+    explanation: "El estudio diagnóstico inicial de elección ante sospecha de perforación esofágica es el esofagograma con contraste hidrosoluble (Gastrografin®), el cual permite demostrar la extravasación del contraste fuera de la luz esofágica. Si el estudio es negativo y la sospecha clínica persiste, puede complementarse con tomografía de tórax con contraste oral.",
+    keyPoints: [
+      "Cuando veas: Dolor torácico posterior a endoscopia. Dolor irradiado a espalda. Derrame pleural izquierdo. Enfisema subcutáneo.",
+      "Debes pensar en: Perforación esofágica.",
+      "Tema: Urgencias esofágicas.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica porque evalúa una de las complicaciones más graves de la endoscopia digestiva.
+La clave no es el dolor torácico.
+La clave es:
+El antecedente de instrumentación esofágica.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Procedimiento endoscópico reciente.
+• Dolor torácico intenso.
+• Derrame pleural izquierdo.
+Esto obliga a sospechar:
+Perforación esofágica.
+¿Cuál es el estudio confirmatorio?
+La respuesta clásica de examen es:
+Esofagograma con contraste hidrosoluble.
+¿Qué hallazgo se espera?
+Extravasación del contraste hacia:
+• Mediastino.
+• Pleura.
+• Tejidos vecinos.
+¿Por qué no utilizar bario inicialmente?
+Porque si existe perforación:
+El bario puede producir mediastinitis severa.
+Por ello se prefiere:
+Contraste hidrosoluble.
+¿Qué otros hallazgos pueden aparecer?
+• Neumomediastino.
+• Derrame pleural izquierdo.
+• Enfisema subcutáneo cervical.
+• Sepsis.
+¿Cuál es la trampa del examen?
+Muchos estudiantes responden:
+"TAC".
+Sin embargo:
+La prueba clásica y tradicionalmente preguntada para confirmar el diagnóstico es:
+Esofagograma con contraste hidrosoluble.
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1.	Sospechar perforación esofágica.
+2.	Solicitar esofagograma hidrosoluble.
+3.	Identificar fuga de contraste.
+4.	Confirmar el diagnóstico.
+5.	Iniciar manejo quirúrgico y antibiótico urgente.
+Perlas de examen
+✅ Dolor torácico posterior a endoscopia = perforación esofágica hasta demostrar lo contrario.
+✅ El derrame pleural izquierdo es un hallazgo clásico.
+✅ El esofagograma hidrosoluble es el estudio diagnóstico inicial de elección.
+✅ La TAC con contraste oral aumenta la sensibilidad diagnóstica.
+✅ La mediastinitis es la complicación más temida.
+✅ Requiere antibióticos de amplio espectro tempranos.
+✅ Es una emergencia quirúrgica con alta mortalidad si se retrasa el diagnóstico.
+Referencias
+• Sabiston Textbook of Surgery.
+• Schwartz's Principles of Surgery.
+• Cameron's Current Surgical Therapy.
+• UpToDate: Esophageal Perforation.
+• ASGE Guidelines on Endoscopic Complications.`,
+  }
+];

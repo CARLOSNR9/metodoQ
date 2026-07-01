@@ -6,1710 +6,1706 @@ import type { TrainingQuestion } from "@/lib/questions/types";
 export const DR_Q_COEXAM_QUESTIONS: TrainingQuestion[] = [
   {
     id: "dr-q-156",
+    examArea: "CIRUGÍA GENERAL",
+    topic: "CIRUGÍA GENERAL",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","cirugia_general"],
+    statement:
+      "Masculino de 25 años es llevado al servicio de urgencias tras sufrir una herida por arma de fuego durante un atraco. Al examen físico presenta una lesión por proyectil en el tercio distal de la pierna derecha, con orificio de entrada en la cara anterolateral y orificio de salida posteromedial. Refiere dolor intenso en la extremidad. Se evidencia edema progresivo, parestesias, palidez distal y disminución marcada de los pulsos pedio y tibial posterior. El dolor aumenta con la movilización pasiva del pie.\n¿Cuál es la conducta más adecuada?",
+    options: [
+      { id: "A", label: "A", text: "Solicitar ecografía Doppler arterial de la extremidad." },
+      { id: "B", label: "B", text: "Realizar angiotomografía de miembro inferior." },
+      { id: "C", label: "C", text: "Observación clínica y reevaluación seriada de pulsos." },
+      { id: "D", label: "D", text: "Exploración quirúrgica vascular urgente." },
+    ],
+    correctOptionId: "D",
+    explanation: "El paciente presenta trauma penetrante con signos duros de lesión vascular e isquemia aguda de extremidad, incluyendo disminución de pulsos, palidez, parestesias y dolor intenso. La presencia de estos hallazgos constituye indicación de exploración quirúrgica inmediata sin retrasar el manejo para realizar estudios diagnósticos adicionales.",
+    keyPoints: [
+      "Cuando veas: trauma penetrante en extremidad con signos duros de lesión vascular (pulsos disminuidos o ausentes, palidez, parestesias, dolor intenso y dolor con movilización pasiva).",
+      "Debes pensar en: isquemia arterial aguda por lesión vascular mayor → exploración quirúrgica vascular urgente sin retrasar para estudios de imagen.",
+      "Los signos duros obligan a cirugía inmediata; los signos blandos permiten estudios vasculares no invasivos antes de decidir.",
+      "El dolor que aumenta con la movilización pasiva del pie es un signo precoz de síndrome compartimental o isquemia crítica.",
+      "Tema: Trauma vascular periférico.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de cirugía general porque evalúa una trampa frecuente: solicitar ecografía Doppler o angiotomografía cuando ya existen signos duros de lesión vascular e isquemia aguda de extremidad.
+
+La clave no es demorar el manejo para confirmar con estudios de imagen en presencia de signos duros.
+La clave es:
+Trauma penetrante + signos duros (pulsos disminuidos, palidez, parestesias, dolor intenso, dolor con movilización pasiva) → exploración quirúrgica vascular urgente.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Masculino de 25 años con herida por arma de fuego en tercio distal de pierna derecha (orificio de entrada anterolateral, salida posteromedial).
+• Edema progresivo, parestesias y palidez distal.
+• Disminución marcada de pulsos pedio y tibial posterior.
+• Dolor intenso que aumenta con movilización pasiva del pie.
+• Cuadro compatible con lesión vascular arterial mayor e isquemia aguda de extremidad.
+
+Recordemos el trauma vascular periférico:
+• Signos duros: pulsos ausentes o disminuidos, sangrado activo, hematoma expansivo, soplo o thrill, isquemia evidente (palidez, parestesias, parálisis, dolor desproporcionado).
+• Signos duros = indicación de exploración quirúrgica inmediata sin estudios previos que retrasen el manejo.
+• Signos blandos (historia de sangrado moderado, lesión en trayecto vascular, déficit neurológico leve) → estudios no invasivos (Doppler, angioTC) antes de decidir.
+• ATLS y guías EAST/WTA: no retrasar cirugía cuando hay isquemia clínica evidente.
+
+Por lo tanto:
+No corresponde ecografía Doppler, angiotomografía ni observación seriada de pulsos.
+La conducta más adecuada es exploración quirúrgica vascular urgente.
+
+¿Por qué la opción D es la respuesta correcta?
+La presencia de signos duros de lesión vascular (disminución de pulsos, palidez, parestesias, dolor intenso con movilización pasiva) constituye indicación absoluta de exploración quirúrgica inmediata para restaurar flujo y prevenir pérdida de la extremidad.
+
+¿Por qué fallan las otras opciones?
+Opción A (ecografía Doppler arterial): útil en signos blandos o evaluación selectiva, pero retrasa el manejo definitivo cuando ya hay isquemia clínica evidente.
+Opción B (angiotomografía): puede definir anatomía vascular, pero no debe retrasar la cirugía ante signos duros de isquemia aguda.
+Opción C (observación y reevaluación seriada): inaceptable con isquemia activa; cada minuto de retraso aumenta el riesgo de daño neuromuscular irreversible.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan:
+"Antes de operar hay que confirmar la lesión con un estudio de imagen."
+Pero el examen exige reconocer que los signos duros de lesión vascular son indicación quirúrgica inmediata.
+El dato decisivo es:
+Pulsos disminuidos + palidez + parestesias + dolor con movilización pasiva → cirugía urgente, no más estudios.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar extremidad tras trauma penetrante: pulsos, color, sensibilidad, movilidad y dolor.
+2. Clasificar signos duros vs blandos de lesión vascular.
+3. Ante signos duros → exploración quirúrgica vascular urgente sin retrasar.
+4. Reservar estudios de imagen para pacientes hemodinámicamente estables con signos blandos o lesiones en zona de riesgo sin isquemia evidente.
+
+Perlas de examen
+✅ Signos duros = cirugía inmediata; no Doppler ni angioTC que retrasen el manejo.
+✅ Pulsos disminuidos o ausentes + palidez + parestesias = isquemia arterial aguda hasta demostrar lo contrario.
+✅ El dolor con movilización pasiva sugiere isquemia crítica o síndrome compartimental incipiente.
+✅ Signos blandos permiten estudios no invasivos antes de decidir exploración quirúrgica.
+✅ En trauma vascular, el tiempo isquémico determina la viabilidad de la extremidad.
+✅ No confundir estabilidad hemodinámica sistémica con viabilidad de la extremidad.
+
+Referencias
+• ATLS 11th Edition — Manejo de trauma vascular periférico.
+• Eastern Association for the Surgery of Trauma (EAST) Practice Management Guidelines.
+• Western Trauma Association Critical Decisions in Trauma.
+• Rutherford's Vascular Surgery and Endovascular Therapy.
+• Feliciano DV. Peripheral Vascular Injuries. Trauma, 9th ed.`,
+  },
+
+  {
+    id: "dr-q-157",
     examArea: "ENDOCRINOLOGÍA",
     topic: "ENDOCRINOLOGÍA",
     difficulty: "medium",
     tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","endocrinologia"],
-    statement: "Hombre de 35 años consulta por disminución de la libido, disfunción eréctil y dificultades persistentes en su vida sexual. Refiere haber recibido psicoterapia sin mejoría. Se documenta testosterona total de 185 ng/dL.\n¿Cuál es el siguiente paso más adecuado?",
+    statement:
+      "Paciente masculino de 22 años consulta para estudio etiológico de diabetes mellitus diagnosticada recientemente. Tiene IMC de 21 kg/m², niega antecedentes familiares de diabetes tipo 2 y no presenta signos clínicos de resistencia a la insulina. Los niveles de glucosa permanecen elevados a pesar del tratamiento inicial. Usted sospecha una etiología autoinmune de la enfermedad.\n¿Cuál de los siguientes estudios tiene mayor utilidad para orientar la causa de la diabetes en este paciente?",
     options: [
-      { id: "A", label: "A", text: "Iniciar inmediatamente terapia de reemplazo con testosterona." },
-      { id: "B", label: "B", text: "Solicitar una segunda medición matutina de testosterona total y estudio etiológico con LH, FSH y prolactina." },
-      { id: "C", label: "C", text: "Reiniciar psicoterapia y control en 6 meses." },
-      { id: "D", label: "D", text: "Iniciar sildenafil como tratamiento definitivo." },
+      { id: "A", label: "A", text: "Anticuerpos anti GAD65." },
+      { id: "B", label: "B", text: "Anticuerpos anti islote pancreático." },
+      { id: "C", label: "C", text: "Péptido C." },
+      { id: "D", label: "D", text: "Insulina basal." },
     ],
-    correctOptionId: "B",
-    explanation: "El diagnóstico de hipogonadismo masculino requiere síntomas compatibles y al menos dos determinaciones matutinas de testosterona disminuida. Una vez confirmada la alteración, debe establecerse si se trata de un hipogonadismo primario o secundario mediante la medición de gonadotropinas.",
+    correctOptionId: "A",
+    explanation: "Los anticuerpos anti GAD65 constituyen uno de los marcadores más sensibles y utilizados para identificar diabetes autoinmune. Su detección permite diferenciar formas autoinmunes de diabetes de otros tipos de diabetes en pacientes jóvenes sin evidencia de resistencia a la insulina.",
     keyPoints: [
-      "Cuando veas: Disminución de la libido. Disfunción eréctil. Testosterona baja.",
-      "Debes pensar en: Hipogonadismo masculino.",
-      "Tema: Hipogonadismo.",
+      "Cuando veas: paciente joven delgado (IMC normal) con diabetes reciente, sin antecedentes familiares de DM2 ni signos de resistencia a la insulina, y glucosa persistentemente elevada.",
+      "Debes pensar en: diabetes autoinmune (DM1 o LADA) → solicitar autoanticuerpos, siendo anti-GAD65 el marcador más sensible y utilizado.",
+      "El péptido C evalúa reserva funcional pancreática, no la etiología autoinmune de la enfermedad.",
+      "La ausencia de obesidad e insulinorresistencia obliga a descartar DM2 y buscar etiología autoinmune.",
+      "Tema: Clasificación etiológica de la diabetes mellitus.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el algoritmo diagnóstico del hipogonadismo masculino.
-La clave no es la disfunción eréctil.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de endocrinología porque evalúa una trampa frecuente: solicitar péptido C o insulina basal para clasificar etiológicamente la diabetes cuando el escenario clínico apunta a enfermedad autoinmune.
+
+La clave no es medir reserva funcional pancreática (péptido C) ni niveles de insulina basal.
 La clave es:
-Confirmar el diagnóstico antes de iniciar tratamiento.
+Paciente joven delgado + diabetes reciente + sin obesidad ni insulinorresistencia + sospecha de etiología autoinmune → anticuerpos anti-GAD65.
+
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Disminución de la libido.
-• Disfunción sexual.
-• Testosterona baja.
-Esto genera una alta sospecha de:
-Hipogonadismo.
-¿Puede iniciarse testosterona inmediatamente?
-No.
-Las guías recomiendan:
-Confirmar el hallazgo con una segunda medición matutina.
-¿Por qué?
-Porque los niveles de testosterona:
-• Presentan variación circadiana.
-• Pueden alterarse por enfermedades agudas.
-• Pueden disminuir transitoriamente.
-¿Qué exámenes deben solicitarse?
-• LH.
-• FSH.
-• Prolactina.
-Para determinar si el origen es:
-Primario (testicular).
-O:
-Secundario (hipotálamo-hipófisis).
-¿Cuándo iniciar testosterona?
-Una vez:
-• Confirmado el hipogonadismo.
-• Establecida la etiología.
-• Evaluadas contraindicaciones.
-¿Por qué NO sildenafil?
-Porque corrige parcialmente la erección.
-Pero:
-No trata el déficit hormonal.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Testosterona 185 ng/dL."
-Y responden:
-"Iniciar testosterona."
-Sin embargo:
+• Masculino de 22 años con diabetes mellitus diagnosticada recientemente.
+• IMC 21 kg/m² (peso normal), sin antecedentes familiares de DM2.
+• Sin signos clínicos de resistencia a la insulina (acantosis, obesidad central, etc.).
+• Glucosa persistentemente elevada a pesar del tratamiento inicial.
+• Perfil clínico compatible con diabetes autoinmune (DM1 o LADA), no DM2.
+
+Recordemos la clasificación etiológica de la diabetes:
+• DM1 / autoinmune: destrucción de células beta mediada por autoanticuerpos (anti-GAD65, anti-IA2, anti-insulina, anti-ZnT8).
+• Anti-GAD65: marcador más sensible y frecuentemente utilizado para identificar diabetes autoinmune.
+• Péptido C: refleja secreción endógena de insulina (reserva funcional), no distingue etiología autoinmune de otras formas.
+• Insulina basal: puede estar elevada por resistencia periférica o baja por destrucción beta; no es marcador de autoinmunidad.
+• LADA: diabetes autoinmune de inicio tardío en adultos jóvenes con presentación similar.
+
+Por lo tanto:
+No corresponde péptido C ni insulina basal como primer estudio etiológico.
+El estudio con mayor utilidad es anticuerpos anti-GAD65.
+
+¿Por qué la opción A es la respuesta correcta?
+Los anticuerpos anti-GAD65 constituyen uno de los marcadores más sensibles y utilizados para identificar diabetes autoinmune, permitiendo diferenciar formas autoinmunes de otros tipos de diabetes en pacientes jóvenes sin evidencia de resistencia a la insulina.
+
+¿Por qué fallan las otras opciones?
+Opción B (anticuerpos anti islote pancreático): menos estandarizados y con menor disponibilidad; anti-GAD65 es el marcador de referencia en la práctica clínica.
+Opción C (péptido C): evalúa reserva funcional pancreática (cuánta insulina produce el páncreas), no confirma etiología autoinmune.
+Opción D (insulina basal): refleja niveles circulantes en un momento dado; no identifica autoinmunidad y puede ser engañosa según la fase evolutiva.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan:
+"En un paciente joven con diabetes hay que medir péptido C para saber si es tipo 1 o tipo 2."
+Pero el examen pregunta cuál estudio orienta la causa autoinmune, no la reserva funcional.
 El dato decisivo es:
-Que aún falta confirmar el diagnóstico y establecer la causa.
+Joven delgado sin insulinorresistencia + sospecha autoinmune → autoanticuerpos (anti-GAD65), no péptido C.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Identificar síntomas compatibles.
-2.	Confirmar testosterona baja en una segunda muestra.
-3.	Solicitar LH, FSH y prolactina.
-4.	Clasificar el hipogonadismo.
-5.	Iniciar tratamiento según etiología.
+1. Caracterizar fenotipo clínico: edad, IMC, antecedentes familiares, signos de insulinorresistencia.
+2. Si el perfil no es de DM2 (delgado, joven, sin resistencia) → sospechar etiología autoinmune.
+3. Solicitar autoanticuerpos (anti-GAD65 como primer marcador).
+4. Reservar péptido C para evaluar reserva funcional, no para clasificar etiología autoinmune.
+
 Perlas de examen
-✅ El diagnóstico requiere síntomas y testosterona baja confirmada.
-✅ La testosterona debe medirse en horas de la mañana.
-✅ LH y FSH diferencian hipogonadismo primario y secundario.
-✅ La prolactina elevada puede sugerir prolactinoma.
-✅ No debe iniciarse testosterona sin confirmar el diagnóstico.
-✅ El reemplazo hormonal puede afectar la fertilidad.
-✅ La disfunción eréctil no siempre implica hipogonadismo.
+✅ Anti-GAD65 = marcador de referencia para diabetes autoinmune en el examen.
+✅ Péptido C mide reserva funcional; no distingue autoinmune de otras etiologías.
+✅ IMC normal + joven + sin FH de DM2 → pensar DM1/LADA, no DM2.
+✅ La insulina basal sola no clasifica etiología; puede variar según fase de la enfermedad.
+✅ Anti-islote pancreático existe pero anti-GAD65 es el estándar clínico.
+✅ Clasificar etiología cambia el manejo: autoinmune requiere insulinoterapia precoz.
+
 Referencias
-• Endocrine Society Clinical Practice Guideline.
-• Harrison's Principles of Internal Medicine.
+• American Diabetes Association (ADA) Standards of Care in Diabetes.
+• EASD Clinical Practice Recommendations.
+• Harrison's Principles of Internal Medicine — Diabetes Mellitus.
 • Williams Textbook of Endocrinology.
-• UpToDate: Clinical Features and Diagnosis of Male Hypogonadism.
-• American Urological Association Guidelines on Testosterone Deficiency.`,
+• Eisenbarth GS. Type 1 Diabetes: A Predictive and Preventive Disease.`,
   },
-  {
-    id: "dr-q-157",
-    examArea: "NEUROCIRUGÍA",
-    topic: "NEUROCIRUGÍA",
-    difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","neurocirugia"],
-    statement: "Varón de 45 años consulta por cambios progresivos de personalidad y debilidad en el brazo izquierdo una semana después de sufrir un accidente de tránsito. Durante la evaluación se realiza tomografía computarizada de cráneo que evidencia una lesión en el lóbulo frontal derecho compatible con hematoma subdural crónico.\n¿Cuál es la conducta más adecuada además de la remisión a neurocirugía?",
-    options: [
-      { id: "A", label: "A", text: "Iniciar dexametasona intravenosa." },
-      { id: "B", label: "B", text: "Iniciar ácido tranexámico." },
-      { id: "C", label: "C", text: "Iniciar levetiracetam para profilaxis anticonvulsivante." },
-      { id: "D", label: "D", text: "Administrar manitol de forma ambulatoria." },
-    ],
-    correctOptionId: "C",
-    explanation: "Los pacientes con lesiones intracraneales traumáticas corticales presentan riesgo aumentado de crisis epilépticas tempranas. La profilaxis anticonvulsivante con levetiracetam o fenitoína suele recomendarse en presencia de lesiones estructurales cerebrales significativas mientras se completa la valoración neuroquirúrgica.",
-    keyPoints: [
-      "Cuando veas: Trauma craneoencefálico. Lesión cortical. Déficit neurológico focal. Cambios de personalidad.",
-      "Debes pensar en: Profilaxis anticonvulsivante.",
-      "Tema: Trauma craneoencefálico.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa las complicaciones tardías del trauma craneoencefálico.
-La clave no es el accidente.
-La clave es:
-La lesión cortical identificada en la tomografía.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Traumatismo reciente.
-• Déficit neurológico focal.
-• Alteración conductual.
-• Lesión frontal.
-Esto implica:
-Irritación cortical.
-¿Que complicación puede aparecer?
-La más importante es:
-Crisis epiléptica postraumática.
-¿Por qué ocurre?
-La sangre y el tejido lesionado:
-Actúan como foco epileptógeno.
-¿Cuál es el medicamento más utilizado?
-Actualmente:
-• Levetiracetam.
-También puede utilizarse:
-• Fenitoína.
-¿Cuál es el objetivo?
-Prevenir:
-Crisis epilépticas tempranas.
-Mientras se define:
-Tratamiento neuroquirúrgico.
-¿Por qué NO dexametasona?
-No forma parte del manejo rutinario de lesiones traumáticas intracraneales.
-¿Por qué NO manitol?
-Se reserva para:
-Hipertensión intracraneal aguda.
-No para manejo ambulatorio.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Lesión cerebral."
-Y responden:
-Manitol.
-Sin embargo:
-El dato decisivo es:
-La lesión cortical subaguda con riesgo convulsivo.
-Esto orienta a:
-Profilaxis anticonvulsivante.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar lesión intracraneal traumática.
-2.	Reconocer riesgo de convulsiones.
-3.	Iniciar profilaxis anticonvulsivante.
-4.	Remitir a neurocirugía.
-5.	Vigilar progresión neurológica.
-Perlas de examen
-✅ Las lesiones corticales aumentan el riesgo de epilepsia postraumática.
-✅ Levetiracetam es ampliamente utilizado por su perfil de seguridad.
-✅ Los hematomas subdurales crónicos pueden manifestarse días o semanas después del trauma.
-✅ Los cambios de personalidad sugieren compromiso frontal.
-✅ La debilidad contralateral orienta a lesión hemisférica focal.
-✅ El tratamiento definitivo puede requerir drenaje neuroquirúrgico.
-✅ Todo deterioro neurológico tardío tras trauma obliga a neuroimagen.
-Referencias
-• Greenberg Handbook of Neurosurgery.
-• Brain Trauma Foundation Guidelines.
-• Adams and Victor's Principles of Neurology.
-• Tintinalli's Emergency Medicine.
-• UpToDate: Post-Traumatic Seizures and Epilepsy.`,
-  },
+
   {
     id: "dr-q-158",
-    examArea: "MEDICINA INTERNA - NEUMOLOGÍA",
-    topic: "NEUMOLOGÍA",
+    examArea: "ENDOCRINOLOGÍA",
+    topic: "ENDOCRINOLOGÍA",
     difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","neumologia"],
-    statement: "Hombre de 61 años con antecedente de EPOC consulta por aumento progresivo de la disnea y limitación funcional. Se realiza gasometría arterial que reporta: pH 7.30, PaCO₂ 61 mmHg, HCO₃⁻ 31 mEq/L y PaO₂ 61 mmHg.\n¿Cuál es el trastorno ácido-base y la etiología más probable?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","endocrinologia"],
+    statement:
+      "Mujer de 44 años con IMC de 29 kg/m² y diagnóstico reciente de diabetes mellitus tipo 2. Se encuentra en tratamiento con metformina en monoterapia. Acude a control aportando laboratorios que muestran HbA1c de 9% y glucemia en ayunas de 280 mg/dL. Niega pérdida de peso, poliuria severa, polidipsia intensa o síntomas sugestivos de catabolismo. Al examen físico no se encuentran hallazgos relevantes.\n¿Cómo se ajustaría su tratamiento?",
     options: [
-      { id: "A", label: "A", text: "Acidosis metabólica secundaria a sepsis." },
-      { id: "B", label: "B", text: "Alcalosis respiratoria por hiperventilación." },
-      { id: "C", label: "C", text: "Acidosis respiratoria parcialmente compensada secundaria a exacerbación de EPOC." },
-      { id: "D", label: "D", text: "Alcalosis metabólica secundaria a uso de diuréticos." },
+      { id: "A", label: "A", text: "Cambios en estilo de vida, metformina a dosis plena y añadir un inhibidor del cotransportador sodio-glucosa tipo 2 (iSGLT2)." },
+      { id: "B", label: "B", text: "Cambios en estilo de vida, metformina a dosis plena y añadir una sulfonilurea." },
+      { id: "C", label: "C", text: "Cambios en estilo de vida, metformina a dosis plena y empezar insulinoterapia." },
+      { id: "D", label: "D", text: "Cambios en estilo de vida, metformina a dosis plena, iniciar insulinoterapia y añadir un iSGLT2." },
     ],
-    correctOptionId: "C",
-    explanation: "La gasometría muestra acidemia (pH 7.30) con elevación de la PaCO₂ (61 mmHg), lo que indica una acidosis respiratoria. El bicarbonato elevado refleja compensación renal crónica, característica de pacientes con EPOC que desarrollan retención crónica de CO₂ y presentan una descompensación aguda.",
+    correctOptionId: "A",
+    explanation: "La paciente presenta una diabetes mellitus tipo 2 insuficientemente controlada con metformina en monoterapia. Sin embargo, no presenta síntomas de hiperglucemia severa ni datos sugestivos de déficit importante de insulina. En este contexto, las guías actuales recomiendan intensificar el tratamiento con un segundo agente antihiperglucemiante antes de considerar insulinoterapia.",
     keyPoints: [
-      "Cuando veas: pH bajo. PaCO₂ elevada. HCO₃⁻ elevado. Antecedente de EPOC.",
-      "Debes pensar en: Acidosis respiratoria parcialmente compensada.",
-      "Tema: Trastornos ácido-base.",
+      "Cuando veas: DM2 con HbA1c ≥9% en monoterapia con metformina, glucemia elevada pero sin síntomas catabólicos (sin pérdida de peso, poliuria severa ni polidipsia intensa).",
+      "Debes pensar en: intensificación con terapia dual (metformina a dosis plena + segundo agente) antes de insulinoterapia.",
+      "La insulinoterapia se reserva cuando hay síntomas de hiperglucemia severa, catabolismo o fallo de terapia dual.",
+      "Los iSGLT2 aportan beneficio adicional con pérdida de peso y bajo riesgo de hipoglucemia en monoterapia o combinación.",
+      "Tema: Intensificación del tratamiento en diabetes mellitus tipo 2.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la interpretación sistemática de la gasometría arterial.
-La clave no es el bicarbonato.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de endocrinología porque evalúa una trampa frecuente: iniciar insulinoterapia solo por cifras elevadas de HbA1c y glucemia en ayunas, sin evaluar si hay síntomas catabólicos que obliguen insulina.
+
+La clave no es iniciar insulina de inmediato por una glucemia de 280 mg/dL o HbA1c del 9%.
 La clave es:
-La elevación del CO₂.
+DM2 insuficientemente controlada sin síntomas catabólicos → intensificar con terapia dual (metformina plena + iSGLT2) antes de considerar insulina.
+
 ¿Qué está ocurriendo realmente?
-Paso 1:
-Evaluar el pH.
-• pH = 7.30
-Existe:
-Acidemia.
-Paso 2:
-Evaluar la PaCO₂.
-• PaCO₂ = 61 mmHg
-Está elevada.
-Por tanto:
-La alteración primaria es respiratoria.
-Paso 3:
-Evaluar el bicarbonato.
-• HCO₃⁻ = 31 mEq/L
-Está elevado.
-Esto indica:
-Compensación renal.
-¿Qué diagnóstico ácido-base tiene?
-Acidosis respiratoria parcialmente compensada.
-¿Cuál es la causa?
-El antecedente de:
-EPOC.
-Sugiere:
-Hipoventilación alveolar y retención de CO₂.
-¿Por qué la PaO₂ está disminuida?
-Porque la exacerbación del EPOC produce:
-• Alteración V/Q.
-• Hipoxemia.
-¿Cuál es la trampa de examen?
-Muchos estudiantes observan:
-"Bicarbonato elevado."
-Y responden:
-Alcalosis metabólica.
-Sin embargo:
+La paciente presenta:
+• Mujer de 44 años con DM2, IMC 29 kg/m², en metformina en monoterapia.
+• HbA1c 9% y glucemia en ayunas 280 mg/dL (control insuficiente).
+• Niega pérdida de peso, poliuria severa, polidipsia intensa o síntomas de catabolismo.
+• Examen físico sin hallazgos relevantes.
+• Cuadro de hiperglucemia crónica mal controlada sin urgencia metabólica aguda.
+
+Recordemos la intensificación en DM2 según ADA/EASD:
+• HbA1c por encima de meta → intensificar tratamiento.
+• Sin síntomas catabólicos ni déficit insulinico severo → agregar segundo agente antes de insulina.
+• iSGLT2: indicados en DM2 con beneficio cardiovascular y renal; pérdida de peso modesta; bajo riesgo de hipoglucemia.
+• Insulinoterapia: reservada para síntomas de hiperglucemia severa, catabolismo, contraindicación a otros fármacos o fallo de terapia dual/triple.
+• Metformina debe optimizarse a dosis plena tolerada como base de cualquier escalada.
+
+Por lo tanto:
+No corresponde iniciar insulina ni insulinoterapia combinada con iSGLT2 de entrada.
+La conducta adecuada es cambios en estilo de vida, metformina a dosis plena y añadir un iSGLT2.
+
+¿Por qué la opción A es la respuesta correcta?
+La paciente tiene DM2 mal controlada pero sin síntomas de hiperglucemia severa ni catabolismo; las guías actuales recomiendan intensificar con un segundo agente antihiperglucemiante (iSGLT2) antes de considerar insulinoterapia.
+
+¿Por qué fallan las otras opciones?
+Opción B (sulfonilurea): opción válida en algunos escenarios, pero los iSGLT2 tienen ventajas en peso y riesgo de hipoglucemia; en el contexto del examen, iSGLT2 es la escalada preferida según guías actuales.
+Opción C (insulinoterapia): reservada para síntomas catabólicos o fallo de terapia oral; esta paciente no tiene poliuria severa, polidipsia intensa ni pérdida de peso.
+Opción D (insulina + iSGLT2): combina insulinoterapia innecesaria con iSGLT2; no hay indicación de insulina en ausencia de síntomas severos.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan:
+"Glucemia de 280 mg/dL e HbA1c del 9% = insulina inmediata."
+Pero el examen exige distinguir hiperglucemia crónica mal controlada de urgencia metabólica con catabolismo.
 El dato decisivo es:
-La PaCO₂ elevada con acidemia.
-Esto define:
-Acidosis respiratoria.
+HbA1c elevada + sin síntomas catabólicos → terapia dual, no insulina.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Revisar pH.
-2.	Revisar CO₂.
-3.	Revisar bicarbonato.
-4.	Identificar compensación.
-5.	Buscar la causa clínica.
+1. Confirmar DM2 mal controlada (HbA1c ≥9% o por encima de meta individual).
+2. Evaluar síntomas de hiperglucemia severa o catabolismo (pérdida de peso, poliuria/polidipsia intensas).
+3. Sin catabolismo → optimizar metformina y añadir segundo agente (iSGLT2, GLP-1 RA u otro según perfil).
+4. Reservar insulinoterapia para síntomas severos, contraindicaciones o fallo de terapia combinada.
+
 Perlas de examen
-✅ EPOC es una causa clásica de acidosis respiratoria crónica.
-✅ La compensación renal aumenta el bicarbonato sérico.
-✅ pH bajo + CO₂ alto = acidosis respiratoria.
-✅ La compensación nunca normaliza completamente el pH durante una exacerbación aguda.
-✅ La hipoxemia suele acompañar las exacerbaciones de EPOC.
-✅ El tratamiento se orienta a mejorar la ventilación alveolar.
-✅ La ventilación no invasiva puede ser necesaria en exacerbaciones graves.
+✅ HbA1c ≥9% requiere intensificación, pero no siempre insulina de inmediato.
+✅ Sin síntomas catabólicos → terapia dual antes de insulina.
+✅ iSGLT2: pérdida de peso, bajo riesgo de hipoglucemia, beneficio CV/renal.
+✅ Insulina se indica con poliuria/polidipsia severas, pérdida de peso o catabolismo.
+✅ Metformina a dosis plena es la base antes de cualquier escalada terapéutica.
+✅ No confundir cifras altas crónicas con urgencia metabólica aguda.
+
 Referencias
-• Harrison's Principles of Internal Medicine.
-• GOLD Guidelines for COPD.
-• West's Respiratory Physiology.
-• Murray & Nadel's Textbook of Respiratory Medicine.
-• UpToDate: Acid-Base Disorders in COPD.`,
+• American Diabetes Association (ADA) Standards of Care in Diabetes.
+• European Association for the Study of Diabetes (EASD) Consensus Report.
+• Harrison's Principles of Internal Medicine — Diabetes Mellitus.
+• Williams Textbook of Endocrinology.
+• Davies MJ et al. Management of Hyperglycemia in Type 2 Diabetes (ADA/EASD).`,
   },
+
   {
     id: "dr-q-159",
-    examArea: "FISIOLOGÍA RENAL",
-    topic: "FISIOLOGÍA RENAL",
+    examArea: "PEDIATRÍA",
+    topic: "PEDIATRÍA",
     difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","nefrologia"],
-    statement: "En relación con la fisiología renal, ¿cuál de los siguientes cambios hemodinámicos provoca un aumento de la tasa de filtración glomerular (TFG)?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","pediatria"],
+    statement:
+      "Niño de 1 año es llevado a consulta de control por sus padres. La anamnesis no revela antecedentes de importancia y el examen físico general es normal. Durante la evaluación oftalmológica se documenta leucocoria en el ojo derecho. No se reportan otros hallazgos relevantes.\n¿Cuál es la impresión diagnóstica y la conducta más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Vasoconstricción de la arteriola aferente." },
-      { id: "B", label: "B", text: "Vasodilatación de la arteriola eferente." },
-      { id: "C", label: "C", text: "Vasodilatación de la arteriola aferente." },
-      { id: "D", label: "D", text: "Disminución de la presión hidrostática glomerular." },
+      { id: "A", label: "A", text: "Retinoblastoma, solicitar ecografía ocular." },
+      { id: "B", label: "B", text: "Estrabismo, realizar oclusión con parche en el ojo sano." },
+      { id: "C", label: "C", text: "Retinoblastoma, solicitar toma de biopsia con aguja fina." },
+      { id: "D", label: "D", text: "Estrabismo, solicitar resonancia magnética contrastada." },
     ],
-    correctOptionId: "C",
-    explanation: "La vasodilatación de la arteriola aferente aumenta el flujo sanguíneo renal y la presión hidrostática dentro de los capilares glomerulares, lo que incrementa la tasa de filtración glomerular.",
+    correctOptionId: "A",
+    explanation: "La leucocoria en un lactante o niño pequeño debe considerarse retinoblastoma hasta demostrar lo contrario. La ecografía ocular constituye una de las herramientas diagnósticas iniciales más importantes, ya que permite identificar masas intraoculares y calcificaciones características del tumor.",
     keyPoints: [
-      "Cuando veas: Tasa de filtración glomerular. Presión glomerular. Arteriolas aferente y eferente.",
-      "Debes pensar en: Cambios de presión intraglomerular.",
-      "Tema: Hemodinámica glomerular.",
+      "Cuando veas: leucocoria (reflejo blanco pupilar) en un lactante o niño pequeño aparentemente sano durante examen oftalmológico de rutina.",
+      "Debes pensar en: retinoblastoma hasta demostrar lo contrario → ecografía ocular como estudio diagnóstico inicial.",
+      "Nunca realizar biopsia con aguja fina en retinoblastoma por riesgo de diseminación extraocular.",
+      "La leucocoria es el signo de presentación más frecuente del retinoblastoma, no confundir con estrabismo simple.",
+      "Tema: Tumores oculares en pediatría.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa uno de los conceptos más importantes de fisiología renal.
-La clave no es la filtración.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de pediatría porque evalúa una trampa frecuente: minimizar la leucocoria como estrabismo benigno o proponer biopsia cuando se trata del tumor intraocular maligno más frecuente de la infancia.
+
+La clave no es ocluir con parche ni solicitar biopsia con aguja fina.
 La clave es:
-La presión hidrostática glomerular.
-¿Qué determina la TFG?
-Principalmente:
-• Presión hidrostática glomerular.
-• Presión oncótica plasmática.
-• Presión en la cápsula de Bowman.
-La más importante para examen es:
-La presión hidrostática glomerular.
-¿Qué ocurre si se dilata la arteriola aferente?
-Aumenta:
-• El flujo sanguíneo renal.
-• La entrada de sangre al glomérulo.
-Como consecuencia:
-Aumenta la presión dentro de los capilares glomerulares.
-Resultado:
-↑ TFG.
-¿Qué ocurre con la vasoconstricción aferente?
-Disminuye:
-• Flujo sanguíneo renal.
-• Presión glomerular.
-Resultado:
-↓ TFG.
-¿Qué ocurre con la vasodilatación eferente?
-La sangre sale más fácilmente del glomérulo.
-Disminuye:
-La presión intraglomerular.
-Resultado:
-↓ TFG.
-¿Cuál es la trampa de examen?
-Muchos estudiantes confunden:
-Aferente y eferente.
-Para recordar:
-👉 Abrir la aferente = entra más sangre = aumenta TFG.
-👉 Abrir la eferente = sale más sangre = disminuye TFG.
+Leucocoria en lactante → retinoblastoma hasta demostrar lo contrario → ecografía ocular como estudio inicial.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Niño de 1 año en consulta de control, aparentemente sano.
+• Anamnesis y examen físico general normales.
+• Durante evaluación oftalmológica: leucocoria en ojo derecho (reflejo pupilar blanco).
+• Hallazgo ocular aislado sin otros signos sistémicos.
+• Cuadro altamente sugestivo de retinoblastoma hasta demostrar lo contrario.
+
+Recordemos el retinoblastoma en pediatría:
+• Tumor intraocular maligno más frecuente en la infancia (pico 1-2 años).
+• Leucocoria: signo de presentación más común (reflejo rojo ausente o blanco).
+• Otras causas de leucocoria: catarata congénita, retinopatía de prematuridad, persistencia vítreo primario hiperplásico, endoftalmitis.
+• Ecografía ocular: estudio inicial clave; identifica masa intraocular y calcificaciones características (hiperecogenicidad con sombra acústica).
+• Biopsia con aguja fina: contraindicada por riesgo de siembra tumoral y diseminación extraocular.
+
+Por lo tanto:
+No corresponde manejo de estrabismo con parche ni biopsia con aguja fina.
+La impresión diagnóstica es retinoblastoma y la conducta es solicitar ecografía ocular.
+
+¿Por qué la opción A es la respuesta correcta?
+La leucocoria en un lactante debe considerarse retinoblastoma hasta demostrar lo contrario; la ecografía ocular es una de las herramientas diagnósticas iniciales más importantes por su capacidad de identificar masas intraoculares y calcificaciones características.
+
+¿Por qué fallan las otras opciones?
+Opción B (estrabismo + oclusión con parche): la leucocoria no es estrabismo; ocluir sin diagnóstico retrasa la identificación de un tumor maligno.
+Opción C (retinoblastoma + biopsia con aguja fina): aunque el diagnóstico es correcto, la biopsia está contraindicada por riesgo de diseminación tumoral extraocular.
+Opción D (estrabismo + RM contrastada): diagnóstico erróneo; la RM puede ser complementaria pero no sustituye la ecografía inicial ni justifica ignorar la leucocoria.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan:
+"El niño está sano, probablemente es estrabismo leve."
+Pero el examen exige reconocer que la leucocoria es una emergencia oncológica ocular hasta demostrar lo contrario.
+El dato decisivo es:
+Leucocoria en lactante = retinoblastoma hasta demostrar lo contrario → ecografía ocular, nunca biopsia.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Evaluar la arteriola afectada.
-2.	Determinar si aumenta o disminuye la presión glomerular.
-3.	Relacionar el cambio con la TFG.
-4.	Identificar la respuesta fisiológica.
+1. Identificar leucocoria en examen oftalmológico pediátrico.
+2. Considerar retinoblastoma hasta demostrar lo contrario.
+3. Solicitar ecografía ocular como estudio inicial (masa + calcificaciones).
+4. Evitar biopsia; confirmar con oftalmología/oncología y estudios de extensión según hallazgos.
+
 Perlas de examen
-✅ Vasodilatación aferente → ↑ TFG.
-✅ Vasoconstricción aferente → ↓ TFG.
-✅ Vasoconstricción eferente moderada → ↑ TFG.
-✅ Vasodilatación eferente → ↓ TFG.
-✅ La angiotensina II produce vasoconstricción preferencial de la arteriola eferente.
-✅ Los AINE disminuyen la TFG por vasoconstricción aferente.
-✅ Los IECA y ARA-II pueden disminuir la TFG por vasodilatación eferente.
+✅ Leucocoria en lactante = retinoblastoma hasta demostrar lo contrario.
+✅ Ecografía ocular: calcificaciones intraoculares son altamente sugestivas.
+✅ Nunca biopsiar retinoblastoma: riesgo de diseminación extraocular.
+✅ No confundir leucocoria con estrabismo; son entidades diferentes.
+✅ Retinoblastoma: tumor intraocular maligno más frecuente en la infancia.
+✅ El examen del reflejo rojo en pediatría puede salvar la vida del niño.
+
 Referencias
-• Guyton & Hall. Tratado de Fisiología Médica.
-• Boron & Boulpaep. Medical Physiology.
-• Ganong's Review of Medical Physiology.
-• Brenner & Rector's The Kidney.
-• Costanzo Physiology.`,
+• Nelson Textbook of Pediatrics — Retinoblastoma.
+• American Academy of Ophthalmology Guidelines.
+• Shields CL, Shields JA. Retinoblastoma Review.
+• UpToDate: Clinical Presentation and Diagnosis of Retinoblastoma.
+• Kivela T. The Epidemiological Challenge of the Most Frequent Eye Cancer.`,
   },
+
   {
     id: "dr-q-160",
-    examArea: "FISIOLOGÍA RENAL",
-    topic: "FISIOLOGÍA RENAL",
+    examArea: "OFTALMOLOGÍA",
+    topic: "OFTALMOLOGÍA",
     difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","nefrologia"],
-    statement: "En relación con la fisiología renal, ¿en cuál estructura anatómica se encuentra la mácula densa y cuál es su principal función?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","oftalmologia"],
+    statement:
+      "Hombre de 25 años consulta al servicio de urgencias tras sufrir trauma contuso en el ojo izquierdo durante una riña callejera. Refiere visión borrosa posterior al evento. Al examen oftalmológico se evidencia hifema grado II. La presión intraocular se encuentra dentro de límites normales y no se identifican otras alteraciones oculares asociadas.\n¿Cuál es la conducta más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Túbulo contorneado proximal; reabsorción de glucosa." },
-      { id: "B", label: "B", text: "Asa descendente de Henle; regulación de la osmolaridad medular." },
-      { id: "C", label: "C", text: "Túbulo contorneado distal; detección de sodio y regulación de la tasa de filtración glomerular." },
-      { id: "D", label: "D", text: "Conducto colector; regulación de la secreción de potasio." },
+      { id: "A", label: "A", text: "Manejo ambulatorio con tratamiento tópico, analgésicos, reposo y control por oftalmología." },
+      { id: "B", label: "B", text: "Manejo intrahospitalario, realizar oclusión con parche, tratamiento tópico y antibiótico, analgésicos, reposo y observación." },
+      { id: "C", label: "C", text: "Realizar lavado quirúrgico urgente de cámara anterior." },
+      { id: "D", label: "D", text: "Traslado inmediato a quirófano." },
     ],
-    correctOptionId: "C",
-    explanation: "La mácula densa corresponde a un grupo especializado de células localizadas en la porción inicial del túbulo contorneado distal, donde este entra en contacto con el polo vascular del glomérulo. Su función principal es detectar la concentración de cloruro de sodio tubular y participar en el mecanismo de retroalimentación tubuloglomerular.",
+    correctOptionId: "B",
+    explanation: "El paciente presenta un hifema traumático grado II. Debido al riesgo de resangrado, aumento de la presión intraocular y otras complicaciones durante los primeros días posteriores al trauma, se recomienda observación hospitalaria, reposo, protección ocular y seguimiento estrecho por oftalmología.",
     keyPoints: [
-      "Cuando veas: Mácula densa. Aparato yuxtaglomerular. Renina. TFG.",
-      "Debes pensar en: Retroalimentación tubuloglomerular.",
-      "Tema: Aparato yuxtaglomerular.",
+      "Cuando veas: hifema traumático grado II tras trauma ocular contuso, con presión intraocular normal pero riesgo de resangrado y complicaciones en los primeros días.",
+      "Debes pensar en: hospitalización con reposo, protección ocular (parche), tratamiento tópico, analgésicos y observación estrecha por oftalmología.",
+      "El hifema grado II (1/3 a 1/2 de la cámara anterior) requiere manejo intrahospitalario aunque la PIO esté normal al ingreso.",
+      "El riesgo de resangrado y aumento de PIO es máximo durante los primeros 3-5 días post-trauma (rebleed).",
+      "Tema: Hifema traumático.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la anatomía funcional del aparato yuxtaglomerular.
-La clave no es la renina.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de oftalmología porque evalúa una trampa frecuente: dar de alta al paciente con manejo ambulatorio solo porque la presión intraocular se encuentra normal al momento del examen.
+
+La clave no es el manejo ambulatorio ni el lavado quirúrgico urgente de cámara anterior.
 La clave es:
-La ubicación de la mácula densa.
-¿Dónde se encuentra?
-En:
-La porción inicial del túbulo contorneado distal.
-Justo cuando este pasa entre:
-• Arteriola aferente.
-• Arteriola eferente.
-¿Qué estructura forma?
-Junto con:
-• Células yuxtaglomerulares.
-• Células mesangiales extraglomerulares.
-Forma el:
-Aparato yuxtaglomerular.
-¿Cuál es su función?
-Detectar:
-La concentración de NaCl en el líquido tubular.
-¿Qué ocurre cuando disminuye el sodio tubular?
-La mácula densa interpreta:
-Disminución de la perfusión renal.
-Y estimula:
-• Liberación de renina.
-• Activación del sistema renina-angiotensina-aldosterona.
-¿Qué ocurre cuando aumenta el sodio tubular?
-Disminuye:
-La liberación de renina.
-Y reduce:
-La tasa de filtración glomerular.
-¿Cuál es la trampa de examen?
-Muchos estudiantes responden:
-"Asa de Henle."
-Porque la mácula densa se encuentra cerca de ella.
-Sin embargo:
-La localización anatómica correcta es:
-Túbulo contorneado distal.
+Hifema traumático grado II → hospitalización + reposo + protección ocular + tratamiento tópico + observación estrecha.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 25 años con trauma contuso en ojo izquierdo (riña callejera).
+• Visión borrosa posterior al evento.
+• Hifema grado II (sangre ocupa entre 1/3 y 1/2 de la cámara anterior).
+• Presión intraocular dentro de límites normales al examen inicial.
+• Sin otras alteraciones oculares asociadas identificadas.
+• Cuadro de hifema traumático moderado con riesgo de complicaciones en días siguientes.
+
+Recordemos el hifema traumático:
+• Clasificación por grado: I (<1/3), II (1/3-1/2), III (>1/2), IV (total/"bola ocho").
+• Complicaciones: resangrado (rebleed, pico días 3-5), hipertensión ocular, tinción hemática corneal, glaucoma secundario.
+• Manejo grado I-II sin complicaciones: hospitalización, reposo en cama, elevación de cabecera, protección ocular (parche/escudo), cicloplejía, esteroides tópicos, analgésicos; evitar AAS/AINEs.
+• PIO normal al ingreso no excluye aumento posterior; requiere monitorización seriada.
+• Lavado quirúrgico: reservado para hifema total, PIO refractaria, tinción corneal o rebleed masivo.
+
+Por lo tanto:
+No corresponde manejo ambulatorio ni lavado quirúrgico urgente.
+La conducta más adecuada es manejo intrahospitalario con oclusión, tratamiento tópico, analgésicos, reposo y observación.
+
+¿Por qué la opción B es la respuesta correcta?
+El hifema grado II conlleva riesgo significativo de resangrado, aumento de PIO y otras complicaciones durante los primeros días; se recomienda observación hospitalaria, reposo, protección ocular y seguimiento estrecho por oftalmología.
+
+¿Por qué fallan las otras opciones?
+Opción A (manejo ambulatorio): insuficiente para hifema grado II; el riesgo de rebleed y complicaciones requiere vigilancia hospitalaria.
+Opción C (lavado quirúrgico urgente): indicado en hifema total, PIO refractaria o complicaciones severas; no en hifema grado II sin complicaciones iniciales.
+Opción D (traslado inmediato a quirófano): no hay indicación quirúrgica urgente; el manejo inicial es conservador con observación hospitalaria.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan:
+"La presión intraocular está normal, puede irse a casa con gotas."
+Pero el examen exige reconocer que el hifema grado II requiere hospitalización por riesgo de resangrado y complicaciones tardías.
+El dato decisivo es:
+Hifema grado II + trauma reciente → hospitalización y observación, independientemente de PIO normal inicial.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Identificar la mácula densa.
-2.	Ubicarla en el túbulo distal.
-3.	Relacionarla con el aparato yuxtaglomerular.
-4.	Detectar NaCl tubular.
-5.	Regular la liberación de renina y la TFG.
+1. Clasificar el grado de hifema traumático (I-IV).
+2. Evaluar PIO, extensión del sangrado y complicaciones asociadas.
+3. Hifema grado II → hospitalización, reposo, protección ocular, tratamiento tópico y analgésicos.
+4. Monitorizar PIO seriadamente; considerar cirugía solo ante hifema total, PIO refractaria o rebleed masivo.
+
 Perlas de examen
-✅ La mácula densa pertenece al túbulo contorneado distal.
-✅ Detecta la concentración de NaCl tubular.
-✅ Participa en la retroalimentación tubuloglomerular.
-✅ Estimula la liberación de renina cuando disminuye la perfusión renal.
-✅ Forma parte del aparato yuxtaglomerular.
-✅ Regula indirectamente la tasa de filtración glomerular.
-✅ Es un tema clásico de fisiología y nefrología.
+✅ Hifema grado II → hospitalización, no manejo ambulatorio.
+✅ PIO normal al ingreso no descarta hipertensión ocular posterior.
+✅ Rebleed: máximo riesgo días 3-5 post-trauma; reposo y protección ocular son clave.
+✅ Evitar AAS y AINEs por riesgo de resangrado.
+✅ Lavado quirúrgico: hifema total ("bola ocho") o PIO refractaria, no grado II inicial.
+✅ No confundir hifema moderado (grado II) con hifema total que requiere cirugía urgente.
+
 Referencias
-• Guyton & Hall. Tratado de Fisiología Médica.
-• Costanzo Physiology.
-• Boron & Boulpaep Medical Physiology.
-• Ganong's Review of Medical Physiology.
-• Brenner & Rector's The Kidney.`,
+• American Academy of Ophthalmology Preferred Practice Pattern — Traumatic Hyphema.
+• Kanski Clinical Ophthalmology.
+• Vaughan & Asbury General Ophthalmology.
+• UpToDate: Traumatic Hyphema.
+• Gharaibeh A et al. Traumatic Hyphema Management Guidelines.`,
   },
+
   {
     id: "dr-q-161",
-    examArea: "MEDICINA INTERNA - NEFROLOGÍA",
-    topic: "NEFROLOGÍA",
+    examArea: "OFTALMOLOGÍA",
+    topic: "OFTALMOLOGÍA",
     difficulty: "hard",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","nefrologia"],
-    statement: "Mujer de 27 años, habitante de calle, hospitalizada por neumonía adquirida en la comunidad. Durante la hospitalización se documenta sodio sérico de 122 mEq/L y osmolaridad plasmática disminuida. Al examen físico no presenta signos de hipovolemia ni sobrecarga de volumen.\n¿Cuál es la causa más probable de este trastorno y cómo se clasifica esta hiponatremia?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","oftalmologia"],
+    statement:
+      "Estudiante universitario consulta al servicio de urgencias tras sufrir trauma ocular contuso por impacto de una piedra durante una protesta pública. Refiere dolor ocular intenso (EVA 10/10), fotofobia y epífora. Al examen físico se evidencia un hifema en \"bola ocho\" (eight-ball hyphema) que ocupa completamente la cámara anterior. La tonometría digital sugiere aumento de la presión intraocular. No es posible evaluar adecuadamente las estructuras intraoculares debido a la magnitud del sangrado.\n¿Cuál es la conducta más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Pérdidas gastrointestinales; hiponatremia hipovolémica." },
-      { id: "B", label: "B", text: "Insuficiencia cardíaca; hiponatremia hipervolémica." },
-      { id: "C", label: "C", text: "Síndrome de secreción inadecuada de hormona antidiurética (SIADH); hiponatremia hipotónica euvolémica." },
-      { id: "D", label: "D", text: "Diabetes insípida; hipernatremia euvolémica." },
+      { id: "A", label: "A", text: "Realizar lavado quirúrgico urgente de cámara anterior." },
+      { id: "B", label: "B", text: "Realizar oclusión con parche, lavado con solución salina y antibiótico oral." },
+      { id: "C", label: "C", text: "Tratamiento ambulatorio con medicamentos tópicos y orales, con seguimiento estricto." },
+      { id: "D", label: "D", text: "Hospitalización, tratamiento endovenoso e interconsulta con oftalmología." },
     ],
-    correctOptionId: "C",
-    explanation: "La neumonía es una de las causas más frecuentes de SIADH. La retención inapropiada de agua libre genera hiponatremia con osmolaridad plasmática baja y un estado clínico de euvolemia.",
+    correctOptionId: "A",
+    explanation: "El hifema en \"bola ocho\" corresponde a un hifema total asociado frecuentemente a hipertensión ocular significativa. Este hallazgo representa una urgencia oftalmológica debido al alto riesgo de daño irreversible del nervio óptico, tinción hemática corneal y pérdida visual permanente, por lo que requiere manejo quirúrgico urgente.",
     keyPoints: [
-      "Cuando veas: Neumonía. Hiponatremia. Osmolaridad baja. Euvolemia.",
-      "Debes pensar en: SIADH.",
-      "Tema: Hiponatremias.",
+      "Cuando veas: trauma ocular contuso con hifema en \"bola ocho\" (hifema total), hipertensión intraocular y imposibilidad de evaluar estructuras intraoculares.",
+      "Debes pensar en: hifema traumático complicado — urgencia oftalmológica con indicación de lavado quirúrgico urgente de cámara anterior.",
+      "El hifema en \"bola ocho\" ocupa completamente la cámara anterior y se asocia frecuentemente a hipertensión ocular significativa.",
+      "La tinción hemática corneal y el daño irreversible del nervio óptico son complicaciones que exigen intervención quirúrgica inmediata, no manejo ambulatorio.",
+      "Tema: Hifema traumático complicado.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el algoritmo diagnóstico de la hiponatremia.
-La clave no es el sodio.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de oftalmología porque evalúa el manejo del hifema traumático complicado, pidiendo diferenciar el hifema total en "bola ocho" con hipertensión ocular de formas menos graves que pueden manejarse de forma conservadora.
+
+La clave no es reposo ambulatorio con parche, oclusión con lavado tópico ni hospitalización médica sin intervención quirúrgica.
 La clave es:
-El estado de volumen.
+Trauma ocular contuso + hifema en "bola ocho" (hifema total) + aumento de presión intraocular + imposibilidad de evaluar estructuras intraoculares → urgencia oftalmológica con indicación de lavado quirúrgico urgente de cámara anterior.
+
 ¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Sodio bajo.
-• Osmolaridad plasmática baja.
-Esto confirma:
-Hiponatremia hipotónica verdadera.
-¿Qué muestra el examen físico?
-• Sin edema.
-• Sin ascitis.
-• Sin deshidratación.
-Por tanto:
-La paciente es euvolémica.
-¿Cuál es la causa más frecuente de hiponatremia euvolémica?
-La respuesta clásica es:
-SIADH.
-¿Por qué una neumonía puede producir SIADH?
-Las infecciones pulmonares estimulan:
-Liberación inapropiada de ADH.
-Como consecuencia:
-• Retención de agua libre.
-• Dilución del sodio plasmático.
-¿Qué clasificación tiene?
-• Hiponatremia.
-• Hipotónica.
-• Euvolémica.
-¿Cuál es la trampa de examen?
+El paciente presenta:
+• Estudiante universitario con trauma ocular contuso por impacto de piedra.
+• Dolor ocular intenso (EVA 10/10), fotofobia y epífora.
+• Hifema en "bola ocho" que ocupa completamente la cámara anterior.
+• Tonometría digital con aumento de presión intraocular.
+• Imposibilidad de evaluar adecuadamente las estructuras intraoculares por la magnitud del sangrado.
+
+Recordemos hifema traumático y sus grados de gravedad:
+• Hifema parcial: puede manejarse con reposo, cabecera elevada, cicloplejía y seguimiento estrecho.
+• Hifema total ("eight-ball" o "bola ocho"): sangre ocupa toda la cámara anterior; forma grave asociada a hipertensión ocular significativa.
+• Complicaciones del hifema total: hipertensión ocular → daño irreversible del nervio óptico; tinción hemática corneal → pérdida visual permanente; resangrado y glaucoma secundario.
+• Indicación quirúrgica: hifema total con hipertensión ocular no controlada, riesgo de tinción corneal o imposibilidad de evaluar el segmento posterior.
+
+Por lo tanto:
+El hifema en "bola ocho" con hipertensión ocular representa una urgencia oftalmológica que requiere lavado quirúrgico urgente de cámara anterior para prevenir daño irreversible del nervio óptico y tinción hemática corneal.
+
+¿Por qué la opción A es la respuesta correcta?
+El lavado quirúrgico urgente de cámara anterior es la conducta indicada en hifema total ("bola ocho") con hipertensión ocular, porque elimina el sangre de la cámara anterior, reduce la presión intraocular y permite evaluar las estructuras intraoculares.
+
+¿Por qué fallan las otras opciones?
+Opción B (oclusión con parche, lavado con solución salina y antibiótico oral): manejo conservador para hifemas leves; el parche puede empeorar la hipertensión ocular y no resuelve un hifema total con presión elevada.
+Opción C (tratamiento ambulatorio con medicamentos tópicos y orales): insuficiente ante hifema total con hipertensión ocular y riesgo de daño irreversible; requiere intervención quirúrgica urgente.
+Opción D (hospitalización, tratamiento endovenoso e interconsulta con oftalmología): la hospitalización e interconsulta son apropiadas, pero sin lavado quirúrgico urgente no se resuelve la urgencia; la intervención quirúrgica es el paso decisivo.
+
+¿Cuál es la trampa del examen?
 Muchos estudiantes leen:
-"Hospitalizada."
-Y responden:
-Deshidratación.
-Sin embargo:
-El dato decisivo es:
-La ausencia de signos de hipovolemia.
-Esto orienta a:
-SIADH.
+"Hifema traumático." Y responden: Reposo y observación.
+Pero el hifema en "bola ocho" no es un hifema leve; es hifema total con hipertensión ocular y riesgo de pérdida visual permanente.
+Aquí el dato decisivo es:
+Hifema que ocupa completamente la cámara anterior + presión intraocular elevada = urgencia quirúrgica, no manejo conservador.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Confirmar hiponatremia.
-2.	Revisar osmolaridad.
-3.	Evaluar estado de volumen.
-4.	Identificar euvolemia.
-5.	Sospechar SIADH.
+1. Clasificar la gravedad del hifema (parcial vs total/"bola ocho").
+2. Medir presión intraocular y evaluar visibilidad de estructuras intraoculares.
+3. Hifema total con hipertensión ocular → lavado quirúrgico urgente de cámara anterior.
+4. Monitorizar complicaciones: resangrado, glaucoma, tinción hemática corneal.
+5. No usar parche ocular en hifema con hipertensión ocular.
+
 Perlas de examen
-✅ SIADH es la causa más frecuente de hiponatremia euvolémica.
-✅ La neumonía es un desencadenante clásico.
-✅ La osmolaridad plasmática está disminuida.
-✅ Los pacientes suelen estar clínicamente euvolémicos.
-✅ La osmolaridad urinaria suele estar inapropiadamente elevada.
-✅ El tratamiento inicial suele incluir restricción hídrica.
-✅ El carcinoma microcítico de pulmón es otra causa clásica de SIADH.
+✅ "Bola ocho" = hifema total = urgencia oftalmológica quirúrgica.
+✅ Hipertensión ocular + hifema total → riesgo de daño del nervio óptico.
+✅ Tinción hemática corneal = secuela visual permanente si no se interviene.
+✅ Hifema leve: reposo + cabecera elevada + seguimiento; hifema total: cirugía.
+✅ Parche ocular contraindicado si hay hipertensión ocular asociada.
+
 Referencias
-• Harrison's Principles of Internal Medicine.
-• Brenner & Rector's The Kidney.
-• UpToDate: Causes of Hyponatremia.
-• European Clinical Practice Guideline on Hyponatremia.
-• Guyton & Hall. Tratado de Fisiología Médica.`,
+• American Academy of Ophthalmology Preferred Practice Pattern: Traumatic Hyphema.
+• Kanski Clinical Ophthalmology.
+• Vaughan & Asbury General Ophthalmology.
+• UpToDate: Traumatic hyphema — Treatment and prognosis.`,
   },
+
   {
     id: "dr-q-162",
-    examArea: "NEFROLOGÍA",
-    topic: "NEFROLOGÍA",
+    examArea: "GASTROENTEROLOGÍA",
+    topic: "GASTROENTEROLOGÍA",
     difficulty: "easy",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","nefrologia"],
-    statement: "Adolescente de 16 años consulta por episodios recurrentes de hematuria macroscópica que suelen aparecer pocos días después de infecciones respiratorias altas. Niega edema, hipertensión o disminución del volumen urinario. Los estudios iniciales no muestran proteinuria significativa ni deterioro de la función renal.\n¿Cuál es el diagnóstico más probable?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","gastroenterologia"],
+    statement:
+      "Mujer de 25 años consulta por cuadro de dolor abdominal crónico acompañado de diarrea de larga evolución, rectorragia ocasional, urgencia rectal y pérdida de aproximadamente 7 kg de peso en los últimos 3 meses. Al examen físico presenta signos de desnutrición y dolor a la palpación de la fosa ilíaca derecha. Se realiza colonoscopia que evidencia úlceras aftosas y lesiones con distribución discontinua. En el estudio anatomopatológico se describen granulomas no caseificantes.\nCon base en estos hallazgos, ¿cuál es el diagnóstico más probable?",
     options: [
-      { id: "A", label: "A", text: "Glomerulonefritis postestreptocócica." },
-      { id: "B", label: "B", text: "Nefropatía por IgA (Enfermedad de Berger)." },
-      { id: "C", label: "C", text: "Síndrome de Alport." },
-      { id: "D", label: "D", text: "Enfermedad de cambios mínimos." },
+      { id: "A", label: "A", text: "Enfermedad de Crohn." },
+      { id: "B", label: "B", text: "Colitis ulcerosa." },
+      { id: "C", label: "C", text: "Enterocolitis necrotizante." },
+      { id: "D", label: "D", text: "Síndrome de intestino irritable." },
     ],
-    correctOptionId: "B",
-    explanation: "La nefropatía por IgA es la causa más frecuente de hematuria glomerular recurrente. Se caracteriza por episodios de hematuria macroscópica coincidentes o poco después de infecciones respiratorias, debido al depósito mesangial de inmunoglobulina A.",
+    correctOptionId: "A",
+    explanation: "La paciente presenta manifestaciones clínicas, endoscópicas e histológicas características de enfermedad de Crohn. La presencia de lesiones salteadas, compromiso de la fosa ilíaca derecha y granulomas no caseificantes constituye un patrón clásico de esta entidad.",
     keyPoints: [
-      "Cuando veas: Adolescente o adulto joven. Hematuria recurrente. Infección respiratoria reciente. Función renal inicialmente normal.",
-      "Debes pensar en: Nefropatía por IgA.",
-      "Tema: Glomerulopatías.",
+      "Cuando veas: mujer joven con diarrea crónica, rectorragia, urgencia rectal, pérdida de peso, dolor en fosa ilíaca derecha, úlceras aftosas con lesiones discontinuas y granulomas no caseificantes.",
+      "Debes pensar en: enfermedad de Crohn — patrón clásico de EII con afectación segmentaria y granulomas no caseificantes.",
+      "Las lesiones salteadas (distribución discontinua) son características de enfermedad de Crohn, no de colitis ulcerosa.",
+      "Los granulomas no caseificantes en anatomopatología son un hallazgo clásico de enfermedad de Crohn.",
+      "Tema: Enfermedad inflamatoria intestinal.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la glomerulopatía más frecuente a nivel mundial.
-La clave no es la hematuria.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de gastroenterología porque evalúa el diagnóstico diferencial de enfermedad inflamatoria intestinal, pidiendo identificar enfermedad de Crohn frente a colitis ulcerosa según hallazgos clínicos, endoscópicos e histológicos.
+
+La clave no es asumir que toda diarrea con sangre es colitis ulcerosa ni confundir lesiones continuas con lesiones salteadas.
 La clave es:
-Su relación temporal con las infecciones respiratorias.
+Mujer joven con diarrea crónica, rectorragia, urgencia rectal, pérdida de peso, dolor en fosa ilíaca derecha, úlceras aftosas con distribución discontinua y granulomas no caseificantes → enfermedad de Crohn.
+
 ¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Hematuria recurrente.
-• Episodios posteriores a infecciones respiratorias.
-• Ausencia de insuficiencia renal significativa.
-Esto corresponde clásicamente a:
-Nefropatía por IgA.
-¿Cuál es el mecanismo?
-Existe:
-Producción anormal de IgA.
-Que posteriormente se deposita en:
-El mesangio glomerular.
-Produciendo:
-Inflamación glomerular recurrente.
-¿Cómo se presenta típicamente?
-La palabra clave de examen es:
-"Sinfaringítica".
-Es decir:
-La hematuria aparece durante o pocos días después de la infección respiratoria.
-¿Por qué NO es glomerulonefritis postestreptocócica?
-Porque en esta:
-La hematuria aparece típicamente:
-2 a 4 semanas después de la infección.
-Además suele asociarse a:
-• Edema.
-• Hipertensión.
-• Hipocomplementemia.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Infección respiratoria."
-Y responden:
-Glomerulonefritis postestreptocócica.
-Sin embargo:
-El dato decisivo es:
-La aparición casi inmediata de la hematuria.
-Esto orienta a:
-Nefropatía por IgA.
+La paciente presenta:
+• Mujer de 25 años con dolor abdominal crónico y diarrea de larga evolución.
+• Rectorragia ocasional, urgencia rectal y pérdida de 7 kg en 3 meses.
+• Signos de desnutrición y dolor a la palpación de fosa ilíaca derecha.
+• Colonoscopia: úlceras aftosas con lesiones de distribución discontinua.
+• Anatomopatología: granulomas no caseificantes.
+
+Recordemos enfermedad de Crohn vs colitis ulcerosa:
+• Crohn: afectación transmural segmentaria (cualquier segmento del TGI); lesiones salteadas; íleon terminal frecuente.
+• Colitis ulcerosa: afectación continua del colon desde el recto; limitada a mucosa; sin granulomas no caseificantes.
+• Hallazgos clásicos de Crohn: úlceras aftosas, lesiones discontinuas, granulomas no caseificantes, compromiso de íleon/fosa ilíaca derecha.
+• Enterocolitis necrotizante: neonatos prematuros, no adultos jóvenes con cuadro crónico.
+• Síndrome de intestino irritable: no produce rectorragia, úlceras ni granulomas.
+
+Por lo tanto:
+La paciente presenta manifestaciones clínicas, endoscópicas e histológicas características de enfermedad de Crohn: lesiones salteadas, compromiso de fosa ilíaca derecha y granulomas no caseificantes.
+
+¿Por qué la opción A es la respuesta correcta?
+La enfermedad de Crohn explica el cuadro completo: afectación segmentaria con úlceras aftosas discontinuas, compromiso ileal (fosa ilíaca derecha) y granulomas no caseificantes en anatomopatología.
+
+¿Por qué fallan las otras opciones?
+Opción B (colitis ulcerosa): afectación continua desde el recto, sin granulomas no caseificantes; las lesiones salteadas no son características de CU.
+Opción C (enterocolitis necrotizante): entidad de neonatos prematuros con necrosis intestinal; no corresponde a mujer adulta con cuadro crónico.
+Opción D (síndrome de intestino irritable): trastorno funcional sin inflamación, úlceras ni granulomas; no explica rectorragia ni pérdida de peso significativa.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan:
+"Diarrea con sangre." Y responden: Colitis ulcerosa.
+Pero la presencia de lesiones discontinuas, compromiso de fosa ilíaca derecha y granulomas no caseificantes orienta a enfermedad de Crohn, no a colitis ulcerosa.
+Aquí el dato decisivo es:
+Lesiones salteadas + granulomas no caseificantes + fosa ilíaca derecha = Crohn.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Identificar hematuria recurrente.
-2.	Relacionarla con infección respiratoria.
-3.	Reconocer el patrón sinfaringítico.
-4.	Sospechar nefropatía por IgA.
-5.	Confirmar con biopsia renal cuando esté indicada.
+1. Identificar cuadro de EII: diarrea crónica, sangre, pérdida de peso, dolor abdominal.
+2. Diferenciar Crohn (segmentaria, transmural, granulomas) de CU (continua desde recto, mucosa).
+3. Confirmar con colonoscopia + biopsias con granulomas no caseificantes.
+4. Evaluar extensión y manifestaciones extraintestinales.
+5. Iniciar tratamiento según localización y actividad.
+
 Perlas de examen
-✅ Es la glomerulopatía primaria más frecuente del mundo.
-✅ Produce hematuria macroscópica recurrente.
-✅ La hematuria aparece simultáneamente o pocos días después de la infección.
-✅ El complemento suele ser normal.
-✅ La biopsia muestra depósitos mesangiales de IgA.
-✅ Existe asociación con enfermedad celíaca y otras enfermedades autoinmunes.
-✅ El pronóstico suele ser bueno en pacientes sin proteinuria ni deterioro renal.
+✅ Lesiones salteadas = Crohn; afectación continua desde recto = colitis ulcerosa.
+✅ Granulomas no caseificantes = Crohn (hallazgo clásico, aunque no siempre presente).
+✅ Fosa ilíaca derecha dolorosa → pensar en íleon terminal (Crohn).
+✅ Diarrea con sangre no es sinónimo de colitis ulcerosa.
+✅ EII vs SII: SII no produce úlceras, granulomas ni desnutrición.
+
 Referencias
-• Brenner & Rector's The Kidney.
-• KDIGO Glomerular Disease Guidelines.
 • Harrison's Principles of Internal Medicine.
-• Comprehensive Clinical Nephrology.
-• UpToDate: IgA Nephropathy.`,
+• Sleisenger and Fordtran's Gastrointestinal and Liver Disease.
+• ECCO Guidelines on Crohn's Disease.
+• American College of Gastroenterology Guidelines on IBD.`,
   },
+
   {
     id: "dr-q-163",
-    examArea: "GINECOLOGÍA Y OBSTETRICIA",
-    topic: "GINECOLOGÍA Y OBSTETRICIA",
+    examArea: "GASTROENTEROLOGÍA",
+    topic: "GASTROENTEROLOGÍA",
     difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","ginecologia_y_obstetricia"],
-    statement: "Adolescente de 15 años, primigesta de 34 semanas de gestación, es llevada al servicio de urgencias por cefalea intensa y vómitos de varias horas de evolución. Al ingreso presenta presión arterial de 170/110 mmHg. Durante la evaluación se documenta edema cerebral en estudios de neuroimagen.\n¿Cuál es la intervención más apropiada?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","gastroenterologia"],
+    statement:
+      "Con respecto a los factores de riesgo asociados al desarrollo de colitis ulcerativa, ¿cuál de los siguientes NO se considera un factor de riesgo?",
     options: [
-      { id: "A", label: "A", text: "Observación hospitalaria y control tensional ambulatorio." },
-      { id: "B", label: "B", text: "Administración de sulfato de magnesio, control de la presión arterial y finalización del embarazo." },
-      { id: "C", label: "C", text: "Administración de manitol como única medida terapéutica." },
-      { id: "D", label: "D", text: "Maduración pulmonar fetal y continuación del embarazo hasta la semana 37." },
+      { id: "A", label: "A", text: "Tabaquismo." },
+      { id: "B", label: "B", text: "Uso crónico de fármacos." },
+      { id: "C", label: "C", text: "Infecciones gastrointestinales previas." },
+      { id: "D", label: "D", text: "Dieta." },
     ],
-    correctOptionId: "B",
-    explanation: "La paciente presenta una preeclampsia con criterios de severidad y compromiso neurológico. El manejo incluye estabilización materna con sulfato de magnesio para prevención de eclampsia, control de la hipertensión severa y finalización del embarazo una vez la madre se encuentre estabilizada.",
+    correctOptionId: "A",
+    explanation: "A diferencia de la enfermedad de Crohn, el tabaquismo se ha asociado consistentemente con una menor incidencia de colitis ulcerativa. De hecho, la suspensión del hábito tabáquico se ha relacionado con un aumento del riesgo de desarrollar la enfermedad en individuos susceptibles.",
     keyPoints: [
-      "Cuando veas: Embarazo >20 semanas. Hipertensión severa. Cefalea intensa. Síntomas neurológicos. Edema cerebral.",
-      "Debes pensar en: Preeclampsia severa.",
-      "Tema: Trastornos hipertensivos del embarazo.",
+      "Cuando veas: pregunta sobre factores de riesgo de colitis ulcerosa pidiendo identificar cuál NO es factor de riesgo.",
+      "Debes pensar en: tabaquismo — tiene relación inversa con colitis ulcerosa (NO es factor de riesgo; incluso se asocia a menor incidencia).",
+      "La suspensión del tabaquismo puede preceder al inicio de colitis ulcerosa en individuos susceptibles.",
+      "A diferencia de colitis ulcerosa, el tabaquismo aumenta el riesgo y la gravedad de enfermedad de Crohn.",
+      "Tema: Epidemiología de la colitis ulcerosa.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa una emergencia obstétrica potencialmente mortal.
-La clave no es la edad de la paciente.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de gastroenterología porque evalúa los factores de riesgo epidemiológicos de la colitis ulcerosa, pidiendo identificar cuál NO incrementa el riesgo — con la trampa clásica del tabaquismo.
+
+La clave no es asumir que el tabaquismo es factor de riesgo universal para todas las enfermedades inflamatorias intestinales.
 La clave es:
-El compromiso neurológico.
+En colitis ulcerosa, el tabaquismo tiene relación inversa: se asocia consistentemente con menor incidencia; la suspensión del hábito tabáquico puede desencadenar la enfermedad en individuos susceptibles.
+
 ¿Qué está ocurriendo realmente?
-La paciente presenta:
-• TA 170/110 mmHg.
-• Cefalea intensa.
-• Vómitos.
-• Edema cerebral.
-Estos son:
-Criterios de severidad.
-Por tanto:
-El diagnóstico es:
-Preeclampsia severa.
-¿Cuál es el tratamiento inmediato?
-Primero:
-Estabilizar a la madre.
-Con:
-• Sulfato de magnesio.
-• Antihipertensivos de acción rápida (labetalol, hidralazina o nifedipino).
-¿Cuál es el tratamiento definitivo?
-La única cura definitiva es:
-La finalización del embarazo.
-¿Por qué NO continuar la gestación?
-Porque existe:
-Alto riesgo de:
-• Eclampsia.
-• Hemorragia cerebral.
-• Muerte materna.
-¿Por qué NO administrar solo manitol?
-El problema principal no es neuroquirúrgico.
-Es una:
-Emergencia hipertensiva obstétrica.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"34 semanas."
-Y responden:
-Maduración pulmonar y observación.
-Sin embargo:
-El dato decisivo es:
-La presencia de criterios de severidad con compromiso cerebral.
-Esto obliga a:
-Interrupción del embarazo tras estabilización materna.
+La pregunta evalúa:
+• Factores de riesgo asociados al desarrollo de colitis ulcerosa.
+• Se pide identificar cuál de las opciones NO se considera factor de riesgo.
+• El tabaquismo es la excepción clásica: relación protectora/inversa en colitis ulcerosa.
+
+Recordemos epidemiología de colitis ulcerosa:
+• Factores de riesgo reconocidos: uso crónico de fármacos (AINEs, antibióticos), infecciones gastrointestinales previas, dieta (occidental, ultraprocesados), antecedentes familiares, predisposición genética.
+• Tabaquismo y colitis ulcerosa: relación inversa consistente; fumadores tienen menor incidencia de CU.
+• Suspensión del tabaco: puede preceder al debut de colitis ulcerosa en personas genéticamente susceptibles.
+• Contraste con Crohn: el tabaquismo aumenta riesgo, gravedad y recurrencias postoperatorias en enfermedad de Crohn.
+
+Por lo tanto:
+El tabaquismo NO es factor de riesgo para colitis ulcerosa; de hecho, tiene una relación inversa con su incidencia.
+
+¿Por qué la opción A es la respuesta correcta?
+El tabaquismo se ha asociado consistentemente con menor incidencia de colitis ulcerosa, por lo que NO se considera factor de riesgo para esta enfermedad (a diferencia de Crohn, donde sí lo es).
+
+¿Por qué fallan las otras opciones?
+Opción B (uso crónico de fármacos): AINEs y ciertos fármacos se han asociado a mayor riesgo de colitis ulcerosa; sí es factor de riesgo.
+Opción C (infecciones gastrointestinales previas): se postula como desencadenante en individuos predispuestos (mimetismo molecular); sí es factor de riesgo.
+Opción D (dieta): dieta occidental y factores dietéticos se asocian a mayor incidencia de EII; sí es factor de riesgo.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian:
+"Tabaquismo = factor de riesgo." Y responden cualquiera de las otras opciones.
+Pero en colitis ulcerosa el tabaquismo es la excepción: relación inversa, no directa.
+Aquí el dato decisivo es:
+Tabaco protege (relativamente) contra CU pero empeora Crohn → siempre diferenciar ambas EII.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Reconocer hipertensión severa.
-2.	Identificar síntomas neurológicos.
-3.	Iniciar sulfato de magnesio.
-4.	Controlar la presión arterial.
-5.	Finalizar la gestación.
+1. Conocer factores de riesgo de colitis ulcerosa: fármacos, infecciones, dieta, genética.
+2. Recordar la paradoja del tabaco: protector en CU, deletéreo en Crohn.
+3. Suspensión del tabaco puede desencadenar CU en susceptibles.
+4. No extrapolar factores de riesgo de Crohn a colitis ulcerosa sin verificar.
+5. En preguntas "NO es factor de riesgo", buscar la excepción clásica.
+
 Perlas de examen
-✅ El sulfato de magnesio previene y trata la eclampsia.
-✅ TA ≥160/110 mmHg constituye hipertensión severa.
-✅ Cefalea persistente y edema cerebral son criterios de severidad.
-✅ El tratamiento definitivo de la preeclampsia es el parto.
-✅ La estabilización materna precede a la interrupción del embarazo.
-✅ El compromiso neurológico aumenta el riesgo de hemorragia intracraneal.
-✅ Toda preeclampsia severa requiere manejo hospitalario.
+✅ Tabaquismo + CU = relación inversa (NO es factor de riesgo).
+✅ Dejar de fumar puede preceder al debut de colitis ulcerosa.
+✅ Tabaquismo + Crohn = mayor riesgo, mayor gravedad, más recurrencias.
+✅ Paradoja del tabaco: diferencia clave entre CU y Crohn en exámenes.
+✅ AINEs, infecciones GI y dieta occidental sí son factores de riesgo de CU.
+
 Referencias
-• Williams Obstetrics.
-• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
-• FIGO Guidelines on Hypertensive Disorders of Pregnancy.
-• Cunningham Obstetricia.
-• UpToDate: Preeclampsia with Severe Features.`,
+• ECCO Guidelines on Ulcerative Colitis.
+• American College of Gastroenterology Clinical Guidelines.
+• Harrison's Principles of Internal Medicine.
+• Sleisenger and Fordtran's Gastrointestinal and Liver Disease.`,
   },
+
   {
     id: "dr-q-164",
-    examArea: "GINECOLOGÍA Y OBSTETRICIA",
-    topic: "GINECOLOGÍA Y OBSTETRICIA",
+    examArea: "GASTROENTEROLOGÍA",
+    topic: "GASTROENTEROLOGÍA",
     difficulty: "hard",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","ginecologia_y_obstetricia"],
-    statement: "Mujer de 34 años, G2P1, cursando 12 semanas de gestación, acude a su primer control prenatal. Como antecedente de importancia refiere preeclampsia severa durante su primer embarazo, con requerimiento de manejo en unidad de cuidados intensivos.\n¿Cuál de las siguientes pruebas debe realizarse obligatoriamente en esta visita?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","gastroenterologia"],
+    statement:
+      "Paciente de 32 años con antecedente de enfermedad inflamatoria intestinal consulta por dolor lumbar inflamatorio crónico y rigidez matutina prolongada. Tras estudio por reumatología se confirma el diagnóstico de espondilitis anquilosante asociada a enfermedad inflamatoria intestinal.\n¿Cuál de las siguientes afirmaciones es FALSA?",
     options: [
-      { id: "A", label: "A", text: "Prueba de tolerancia oral a la glucosa." },
-      { id: "B", label: "B", text: "Proteinuria basal mediante relación proteína/creatinina urinaria o proteinuria de 24 horas." },
-      { id: "C", label: "C", text: "Cardiotocografía fetal." },
-      { id: "D", label: "D", text: "Amniocentesis." },
+      { id: "A", label: "A", text: "La espondilitis anquilosante es más frecuente en pacientes con enfermedad de Crohn." },
+      { id: "B", label: "B", text: "La actividad de la espondilitis anquilosante guarda relación con la actividad inflamatoria de la enfermedad inflamatoria intestinal." },
+      { id: "C", label: "C", text: "La actividad de la espondilitis anquilosante no remite con glucocorticoides." },
+      { id: "D", label: "D", text: "La evolución de la espondilitis anquilosante es lenta y progresiva." },
     ],
     correctOptionId: "B",
-    explanation: "Las pacientes con antecedente de preeclampsia severa constituyen un grupo de alto riesgo obstétrico. Durante el primer control prenatal debe documentarse una proteinuria basal para facilitar el diagnóstico diferencial entre hipertensión crónica, enfermedad renal previa y preeclampsia sobreagregada durante el embarazo.",
+    explanation: "La espondilitis anquilosante es una manifestación extraintestinal axial de la enfermedad inflamatoria intestinal. A diferencia de las manifestaciones articulares periféricas, su actividad suele evolucionar de manera independiente de la actividad intestinal.",
     keyPoints: [
-      "Cuando veas: Antecedente de preeclampsia severa. Primer control prenatal. Embarazo temprano.",
-      "Debes pensar en: Proteinuria basal.",
-      "Tema: Control prenatal de alto riesgo.",
+      "Cuando veas: paciente con EII y espondilitis anquilosante confirmada; pregunta pide identificar la afirmación FALSA.",
+      "Debes pensar en: espondilitis anquilosante asociada a EII — la actividad axial evoluciona de forma independiente de la actividad intestinal.",
+      "La espondilitis anquilosante es más frecuente en enfermedad de Crohn que en colitis ulcerosa.",
+      "La artritis periférica sí suele correlacionarse con la actividad digestiva; la espondilitis anquilosante es la excepción clásica.",
+      "Tema: Manifestaciones extraintestinales de la enfermedad inflamatoria intestinal.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa las medidas iniciales en embarazos de alto riesgo para preeclampsia.
-La clave no es la edad gestacional.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de gastroenterología porque evalúa las manifestaciones extraintestinales de la enfermedad inflamatoria intestinal, pidiendo identificar la afirmación FALSA sobre la espondilitis anquilosante asociada a EII.
+
+La clave no es asumir que todas las manifestaciones extraintestinales correlacionan con la actividad intestinal.
 La clave es:
-El antecedente obstétrico.
+La espondilitis anquilosante es una manifestación extraintestinal axial cuya actividad suele evolucionar de manera independiente de la actividad inflamatoria intestinal — a diferencia de la artritis periférica.
+
 ¿Qué está ocurriendo realmente?
-La paciente tiene:
-• Antecedente de preeclampsia severa.
-• Riesgo elevado de recurrencia.
-Por ello necesita:
-Evaluación basal materna.
-¿Qué estudio es fundamental?
-La cuantificación basal de proteinuria.
-¿Por qué es importante?
-Porque si posteriormente desarrolla:
-• Hipertensión.
-• Proteinuria.
-Será necesario determinar:
-Si la proteinuria ya existía previamente o apareció durante la gestación.
-¿Qué otras medidas deben realizarse?
-Además:
-• Iniciar ácido acetilsalicílico a baja dosis.
-• Solicitar función renal basal.
-• Realizar seguimiento estrecho.
-¿Por qué NO la curva de glucosa?
-Se realiza habitualmente:
-Entre las semanas 24 y 28.
-¿Por qué NO la cardiotocografía?
-No tiene utilidad rutinaria a las 12 semanas.
-¿Por qué NO la amniocentesis?
-No está indicada por el antecedente descrito.
-¿Cuál es la trampa de examen?
-Muchos estudiantes responden:
-Aspirina.
-Porque recuerdan correctamente la prevención de preeclampsia.
-Sin embargo:
-La pregunta solicita una:
-Prueba diagnóstica obligatoria en la evaluación inicial.
-La respuesta correcta es:
-Proteinuria basal.
+El paciente presenta:
+• Hombre de 32 años con antecedente de enfermedad inflamatoria intestinal.
+• Dolor lumbar inflamatorio crónico y rigidez matutina prolongada.
+• Diagnóstico confirmado de espondilitis anquilosante asociada a EII.
+• La pregunta pide identificar cuál afirmación es FALSA.
+
+Recordemos manifestaciones musculoesqueléticas de la EII:
+• Espondilitis anquilosante (axial): dolor lumbar inflamatorio, rigidez matutina; más frecuente en enfermedad de Crohn.
+• Actividad axial: evoluciona de forma independiente de la actividad intestinal (excepción clásica).
+• Artritis periférica tipo 1: sí correlaciona con actividad intestinal; mejora al controlar la EII.
+• Artritis periférica tipo 2: evolución independiente (similar a espondilitis).
+• Espondilitis anquilosante: evolución lenta y progresiva; no remite completamente con glucocorticoides.
+
+Por lo tanto:
+La afirmación FALSA es que la actividad de la espondilitis anquilosante guarda relación con la actividad inflamatoria intestinal (opción B), porque su curso axial es independiente del intestino.
+
+¿Por qué la opción B es la respuesta correcta?
+La espondilitis anquilosante es una manifestación extraintestinal axial cuya actividad suele evolucionar de manera independiente de la actividad intestinal, por lo que afirmar que guarda relación con ella es FALSO.
+
+¿Por qué fallan las otras opciones?
+Opción A (más frecuente en Crohn): VERDADERO; la espondilitis anquilosante es más frecuente en pacientes con enfermedad de Crohn que con colitis ulcerosa.
+Opción C (no remite con glucocorticoides): VERDADERO; la enfermedad axial no responde completamente a glucocorticoides, requiere AINEs y biológicos anti-TNF.
+Opción D (evolución lenta y progresiva): VERDADERO; la espondilitis anquilosante tiene curso crónico, lento y progresivo con riesgo de anquilosis.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan:
+"Todas las manifestaciones extraintestinales empeoran cuando empeora el intestino."
+Pero la espondilitis anquilosante es una excepción clásica: su actividad axial es independiente de la actividad intestinal.
+Aquí el dato decisivo es:
+Artritis periférica tipo 1 = correlaciona con intestino; espondilitis anquilosante = NO correlaciona.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Identificar antecedente de preeclampsia.
-2.	Clasificar embarazo de alto riesgo.
-3.	Solicitar proteinuria basal.
-4.	Evaluar función renal inicial.
-5.	Iniciar medidas preventivas.
+1. Identificar manifestaciones extraintestinales de EII: articulares, cutáneas, oculares, hepáticas.
+2. Diferenciar artritis periférica tipo 1 (correlaciona) de espondilitis anquilosante (independiente).
+3. Espondilitis anquilosante: más frecuente en Crohn, evolución lenta, no remite con esteroides solos.
+4. Tratamiento axial: AINEs, fisioterapia, biológicos anti-TNF (infliximab, adalimumab).
+5. Controlar EII no garantiza control de espondilitis anquilosante.
+
 Perlas de examen
-✅ Antecedente de preeclampsia severa = alto riesgo de recurrencia.
-✅ La proteinuria basal facilita el diagnóstico de preeclampsia sobreagregada.
-✅ La relación proteína/creatinina urinaria es una alternativa válida a la recolección de 24 horas.
-✅ Debe iniciarse ácido acetilsalicílico entre las semanas 12 y 16.
-✅ El seguimiento prenatal debe ser más estrecho.
-✅ La función renal basal debe documentarse tempranamente.
-✅ La prevención temprana disminuye el riesgo de preeclampsia recurrente.
+✅ Espondilitis anquilosante + EII = actividad axial independiente del intestino.
+✅ Artritis periférica tipo 1 = mejora al controlar la EII.
+✅ Espondilitis anquilosante más frecuente en Crohn que en colitis ulcerosa.
+✅ Glucocorticoides no controlan completamente la enfermedad axial.
+✅ Evolución lenta y progresiva con riesgo de anquilosis vertebral.
+
 Referencias
-• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
-• FIGO Recommendations on Preeclampsia Prevention.
-• Williams Obstetrics.
-• ISSHP Guidelines for Hypertensive Disorders of Pregnancy.
-• Ministerio de Salud de Colombia. Ruta Integral Materno Perinatal.`,
+• ECCO Guidelines on Extraintestinal Manifestations in Inflammatory Bowel Disease.
+• American College of Gastroenterology Guidelines.
+• EULAR Recommendations for the Management of Axial Spondyloarthritis.
+• Harrison's Principles of Internal Medicine.`,
   },
+
   {
     id: "dr-q-165",
-    examArea: "GINECOLOGÍA Y OBSTETRICIA",
-    topic: "GINECOLOGÍA Y OBSTETRICIA",
+    examArea: "GASTROENTEROLOGÍA",
+    topic: "GASTROENTEROLOGÍA",
     difficulty: "hard",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","ginecologia_y_obstetricia"],
-    statement: "Mujer de 30 años, primigesta de 28 semanas de gestación, consulta por disnea progresiva, fatiga y edema en miembros inferiores. Durante la valoración se documenta presión arterial de 100/70 mmHg y frecuencia respiratoria de 26 rpm. Los estudios iniciales muestran plaquetas de 118.000/μL y proteinuria en tira reactiva.\n¿Cuál es el siguiente paso más apropiado?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","gastroenterologia"],
+    statement:
+      "Con respecto a los factores asociados al desarrollo de neoplasia colorrectal en pacientes con colitis ulcerosa, ¿cuál de los siguientes NO incrementa el riesgo de cáncer colorrectal?",
     options: [
-      { id: "A", label: "A", text: "Indicar reposo domiciliario y control en una semana." },
-      { id: "B", label: "B", text: "Solicitar relación proteína/creatinina urinaria y remitir a valoración por obstetricia de alto riesgo." },
-      { id: "C", label: "C", text: "Iniciar hierro oral por sospecha de anemia gestacional." },
-      { id: "D", label: "D", text: "Administrar diuréticos y dar egreso." },
+      { id: "A", label: "A", text: "El tiempo de evolución de la enfermedad." },
+      { id: "B", label: "B", text: "La afectación extensa de la enfermedad." },
+      { id: "C", label: "C", text: "La coexistencia de cirrosis biliar primaria." },
+      { id: "D", label: "D", text: "Los antecedentes familiares de cáncer colorrectal." },
     ],
-    correctOptionId: "B",
-    explanation: "La presencia de proteinuria después de las 20 semanas asociada a trombocitopenia y síntomas sugestivos de compromiso materno obliga a descartar un trastorno hipertensivo del embarazo, aun cuando la presión arterial no sea marcadamente elevada en el momento de la consulta. La confirmación de proteinuria y la valoración especializada son prioritarias.",
+    correctOptionId: "C",
+    explanation: "La entidad asociada a un incremento del riesgo de cáncer colorrectal en pacientes con colitis ulcerosa es la colangitis esclerosante primaria y no la cirrosis biliar primaria. Por ello, esta opción constituye la respuesta incorrecta.",
     keyPoints: [
-      "Cuando veas: Embarazo >20 semanas. Proteinuria. Plaquetas bajas. Síntomas maternos.",
-      "Debes pensar en: Preeclampsia y sus variantes.",
-      "Tema: Trastornos hipertensivos del embarazo.",
+      "Cuando veas: pregunta sobre factores que incrementan riesgo de cáncer colorrectal en colitis ulcerosa pidiendo identificar cuál NO incrementa el riesgo.",
+      "Debes pensar en: cirrosis biliar primaria — no es la entidad hepática asociada al incremento de riesgo (esa es colangitis esclerosante primaria).",
+      "El riesgo de cáncer colorrectal aumenta con la duración de la enfermedad, la pancolitis y los antecedentes familiares.",
+      "La colangitis esclerosante primaria coexiste frecuentemente con colitis ulcerosa y multiplica el riesgo de displasia/neoplasia colorrectal.",
+      "Tema: Cáncer colorrectal asociado a colitis ulcerosa.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la sospecha temprana de complicaciones hipertensivas del embarazo.
-La clave no es la presión arterial.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de gastroenterología porque evalúa los factores de riesgo de neoplasia colorrectal en pacientes con colitis ulcerosa, pidiendo identificar cuál NO incrementa el riesgo — con la trampa de confundir cirrosis biliar primaria con colangitis esclerosante primaria.
+
+La clave no es asumir que cualquier hepatopatía incrementa el riesgo de cáncer colorrectal en colitis ulcerosa.
 La clave es:
-La proteinuria acompañada de trombocitopenia.
+La entidad hepática asociada al incremento del riesgo de cáncer colorrectal en colitis ulcerosa es la colangitis esclerosante primaria (CEP), NO la cirrosis biliar primaria.
+
 ¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Embarazo de 28 semanas.
-• Proteinuria.
-• Plaquetas de 118.000/μL.
-• Disnea y edema.
-Estos hallazgos obligan a:
-Descartar preeclampsia.
-¿Qué debe hacerse primero?
-Confirmar la proteinuria mediante:
-• Relación proteína/creatinina urinaria.
-o
-• Proteinuria de 24 horas.
-Y realizar:
-Valoración obstétrica especializada.
-¿Por qué NO dar egreso?
-Porque existe riesgo de:
-• Preeclampsia.
-• Síndrome HELLP.
-• Complicaciones maternas.
-¿Por qué NO tratar como anemia?
-La hemoglobina es:
-Prácticamente normal para la gestación.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"TA 100/70 mmHg."
-Y descartan preeclampsia.
-Sin embargo:
-El dato decisivo es:
-La combinación de proteinuria y trombocitopenia.
-Esto obliga a:
-Estudio urgente y valoración por alto riesgo obstétrico.
+La pregunta evalúa:
+• Factores asociados al desarrollo de neoplasia colorrectal en pacientes con colitis ulcerosa.
+• Se pide identificar cuál de las opciones NO incrementa el riesgo.
+• La trampa clásica: confundir cirrosis biliar primaria (CBP) con colangitis esclerosante primaria (CEP).
+
+Recordemos cáncer colorrectal en colitis ulcerosa:
+• Factores de riesgo que SÍ incrementan el riesgo: duración de la enfermedad (>8-10 años), extensión (pancolitis > enfermedad distal), actividad inflamatoria persistente, antecedentes familiares de CCR, displasia previa, colangitis esclerosante primaria asociada.
+• Colangitis esclerosante primaria (CEP): coexiste en ~5% de pacientes con CU; multiplica el riesgo de displasia y cáncer colorrectal; requiere vigilancia endoscópica más intensiva.
+• Cirrosis biliar primaria (CBP): enfermedad autoinmune de vías biliares intrahepáticas; NO se asocia al incremento de riesgo de CCR en colitis ulcerosa.
+• Vigilancia: colonoscopia con cromoendoscopia y biopsias dirigidas cada 1-5 años según riesgo.
+
+Por lo tanto:
+La cirrosis biliar primaria NO incrementa el riesgo de cáncer colorrectal en colitis ulcerosa; la entidad hepática relevante es la colangitis esclerosante primaria.
+
+¿Por qué la opción C es la respuesta correcta?
+La cirrosis biliar primaria no se asocia al incremento del riesgo de cáncer colorrectal en colitis ulcerosa; la entidad correcta es colangitis esclerosante primaria, por lo que esta opción NO incrementa el riesgo.
+
+¿Por qué fallan las otras opciones?
+Opción A (tiempo de evolución): el riesgo de CCR aumenta progresivamente con la duración de la colitis ulcerosa (>8-10 años); SÍ incrementa el riesgo.
+Opción B (afectación extensa): la pancolitis tiene mayor riesgo que la enfermedad limitada al recto o colon distal; SÍ incrementa el riesgo.
+Opción D (antecedentes familiares de CCR): los antecedentes familiares incrementan el riesgo neoplásico en pacientes con CU; SÍ incrementa el riesgo.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes reconocen:
+"Enfermedad hepática." Y asumen que cualquier hepatopatía aumenta el riesgo.
+Pero solo la colangitis esclerosante primaria (CEP), no la cirrosis biliar primaria (CBP), se asocia al incremento de riesgo de CCR en colitis ulcerosa.
+Aquí el dato decisivo es:
+CEP = riesgo ↑ de CCR en CU; CBP = entidad diferente, sin esa asociación.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Identificar proteinuria.
-2.	Revisar plaquetas.
-3.	Confirmar cuantificación proteica.
-4.	Remitir a obstetricia de alto riesgo.
-5.	Continuar estudio de trastorno hipertensivo del embarazo.
+1. Conocer factores de riesgo de CCR en CU: duración, extensión, CEP, antecedentes familiares, displasia previa.
+2. Diferenciar CEP (colangitis esclerosante primaria) de CBP (cirrosis biliar primaria).
+3. CEP + CU = vigilancia endoscópica intensificada (cromoendoscopia).
+4. Iniciar vigilancia tras 8-10 años de enfermedad en pancolitis.
+5. La remisión clínica no elimina el riesgo neoplásico.
+
 Perlas de examen
-✅ La tira reactiva positiva no confirma el diagnóstico.
-✅ La relación proteína/creatinina es una herramienta diagnóstica útil.
-✅ Plaquetas <150.000/μL obligan a vigilancia estrecha.
-✅ La preeclampsia puede debutar con manifestaciones sistémicas.
-✅ La disnea en embarazadas siempre requiere evaluación cuidadosa.
-✅ El síndrome HELLP puede iniciar con trombocitopenia.
-✅ Toda sospecha de preeclampsia requiere seguimiento especializado.
+✅ CEP (colangitis esclerosante primaria) ↑ riesgo CCR en CU; CBP no.
+✅ Duración >8-10 años + pancolitis = mayor riesgo neoplásico.
+✅ Antecedentes familiares de CCR incrementan el riesgo en pacientes con CU.
+✅ Vigilancia con cromoendoscopia y biopsias dirigidas, no SOH.
+✅ No confundir CEP con CBP: nombres similares, entidades distintas.
+
 Referencias
-• Williams Obstetrics.
-• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
-• FIGO Guidelines on Hypertensive Disorders of Pregnancy.
-• ISSHP Recommendations.
-• Ministerio de Salud de Colombia. Ruta Integral Materno Perinatal.`,
+• ECCO Guidelines on Colorectal Carcinoma Surveillance in Inflammatory Bowel Disease.
+• American College of Gastroenterology Guidelines for Ulcerative Colitis.
+• British Society of Gastroenterology Guidelines on IBD Surveillance.
+• Harrison's Principles of Internal Medicine.`,
   },
+
   {
     id: "dr-q-166",
-    examArea: "CIRUGÍA GENERAL",
-    topic: "CIRUGÍA GENERAL",
+    examArea: "GASTROENTEROLOGÍA",
+    topic: "GASTROENTEROLOGÍA",
     difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","cirugia_general"],
-    statement: "Hombre de 40 años consulta por una masa en región inguinal que aparece al realizar esfuerzos físicos y al toser, desapareciendo completamente cuando se encuentra en decúbito. Al examen físico la masa es reductible, aumenta con la maniobra de Valsalva y no existen signos de encarcelación ni estrangulación.\n¿Cuál es el diagnóstico más probable y el manejo más oportuno?",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","gastroenterologia"],
+    statement:
+      "Un hombre de 60 años con antecedente de colitis ulcerosa extensa de 15 años de evolución consulta para conocer su riesgo de desarrollar cáncer colorrectal y las estrategias disponibles para su prevención. Refiere encontrarse en remisión clínica durante los últimos 3 años. No presenta antecedentes personales de displasia ni cáncer colorrectal.\n¿Cuál de las siguientes afirmaciones es correcta?",
     options: [
-      { id: "A", label: "A", text: "Hernia inguinal reducible; remisión a cirugía general para hernioplastia electiva." },
-      { id: "B", label: "B", text: "Hernia estrangulada; laparotomía urgente." },
-      { id: "C", label: "C", text: "Hernia femoral encarcelada; observación ambulatoria." },
-      { id: "D", label: "D", text: "Lipoma inguinal; manejo conservador indefinido." },
+      { id: "A", label: "A", text: "La colitis ulcerosa sólo se asocia a un incremento en el riesgo de cáncer colorrectal en fumadores." },
+      { id: "B", label: "B", text: "En su caso, dado que está en remisión de larga duración, se considera adecuado el tamizaje aconsejado a la población general." },
+      { id: "C", label: "C", text: "En casos como el suyo se considera adecuado someterse a colonoscopia con cromoendoscopia y biopsias dirigidas a zonas sospechosas de malignidad." },
+      { id: "D", label: "D", text: "En casos como el suyo se considera adecuado el tamizaje mediante estudios periódicos de sangre oculta en heces, pero con una frecuencia superior a la utilizada en la población general." },
     ],
-    correctOptionId: "A",
-    explanation: "La presencia de una masa inguinal que aumenta con el esfuerzo, es reductible y desaparece en decúbito es altamente sugestiva de hernia inguinal reducible. En ausencia de signos de complicación, el manejo indicado es la corrección quirúrgica programada.",
+    correctOptionId: "C",
+    explanation: "Los pacientes con colitis ulcerosa extensa y larga evolución presentan un riesgo aumentado de desarrollar cáncer colorrectal. Las guías actuales recomiendan programas de vigilancia endoscópica mediante colonoscopia con cromoendoscopia y toma de biopsias dirigidas para detectar displasia precozmente.",
     keyPoints: [
-      "Cuando veas: Masa inguinal. Aumenta con el esfuerzo. Reducible. Valsalva positivo.",
-      "Debes pensar en: Hernia inguinal reducible.",
-      "Tema: Hernias de la pared abdominal.",
+      "Cuando veas: hombre de 60 años con colitis ulcerosa extensa de larga evolución (≥8-10 años) en remisión clínica, sin displasia previa.",
+      "Debes pensar en: vigilancia endoscópica con colonoscopia + cromoendoscopia y biopsias dirigidas a zonas sospechosas.",
+      "La remisión clínica NO elimina el riesgo de cáncer colorrectal en colitis ulcerosa extensa de larga evolución.",
+      "El tamizaje poblacional general (SOH) o con mayor frecuencia NO sustituye la vigilancia endoscópica estructurada en CU de alto riesgo.",
+      "Tema: Vigilancia de cáncer colorrectal en colitis ulcerosa.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el diagnóstico y manejo de la hernia inguinal no complicada.
-La clave no es la masa.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de gastroenterología porque evalúa la estrategia de vigilancia de cáncer colorrectal en pacientes con colitis ulcerosa extensa y larga evolución, pidiendo identificar la afirmación correcta frente a opciones que confunden remisión clínica con bajo riesgo o tamizaje poblacional.
+
+La clave no es asumir que la remisión clínica elimina el riesgo de cáncer colorrectal ni aplicar el tamizaje de población general.
 La clave es:
-Que desaparece al acostarse.
+Colitis ulcerosa extensa de larga evolución (15 años) → riesgo aumentado de cáncer colorrectal persistente → vigilancia endoscópica con colonoscopia, cromoendoscopia y biopsias dirigidas.
+
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Tumoración inguinal.
-• Aparición con esfuerzo.
-• Reducción espontánea en decúbito.
-Esto corresponde a:
-Hernia inguinal reducible.
-¿Qué significa reducible?
-Que el contenido herniario:
-Puede regresar a la cavidad abdominal.
-Por ello:
-No existe encarcelación.
-¿Requiere cirugía?
-Sí.
-El tratamiento definitivo es:
-Hernioplastia electiva.
-¿Por qué NO observación indefinida?
-Porque las hernias:
-No se resuelven espontáneamente.
-Y pueden progresar a:
-• Encarcelación.
-• Estrangulación.
-¿Por qué NO cirugía urgente?
-Porque no existen:
-• Dolor intenso.
-• Eritema.
-• Signos de isquemia.
-• Imposibilidad de reducción.
-¿Cuál es la trampa de examen?
+• Hombre de 60 años con colitis ulcerosa extensa de 15 años de evolución.
+• Remisión clínica durante los últimos 3 años.
+• Sin antecedentes personales de displasia ni cáncer colorrectal.
+• Consulta para conocer su riesgo de cáncer colorrectal y estrategias de prevención.
+
+Recordemos vigilancia de CCR en colitis ulcerosa:
+• Factores de riesgo: extensión (pancolitis > colitis izquierda), duración ≥8-10 años, antecedente de displasia, EII activa crónica, PSC asociada.
+• El riesgo de CCR aumenta con la duración de la enfermedad, independientemente de la remisión clínica.
+• La remisión clínica NO reduce el riesgo neoplásico; la inflamación crónica previa ya generó daño mucoso.
+• Vigilancia recomendada: colonoscopia periódica con cromoendoscopia (o colonoscopia de alta definición) y biopsias dirigidas a lesiones sospechosas.
+• SOH (sangre oculta en heces) NO es el estándar de vigilancia en CU de alto riesgo.
+• El tamizaje poblacional general (colonoscopia cada 10 años) es insuficiente para este perfil de riesgo.
+
+Por lo tanto:
+En casos como el suyo se considera adecuado someterse a colonoscopia con cromoendoscopia y biopsias dirigidas a zonas sospechosas de malignidad.
+
+¿Por qué la opción C es la respuesta correcta?
+Describe el estándar de vigilancia endoscópica en colitis ulcerosa extensa de larga evolución:
+• La cromoendoscopia mejora la detección de displasia plana y lesiones no polipoides.
+• Las biopsias dirigidas a zonas sospechosas permiten detectar displasia precoz antes de progresión a cáncer invasivo.
+• Las guías ECCO, ACG y BSG recomiendan vigilancia endoscópica estructurada, no tamizaje con SOH.
+
+¿Por qué fallan las otras opciones?
+Opción A (solo en fumadores): el riesgo de CCR en colitis ulcerosa no depende del tabaquismo; es inherente a la inflamación crónica y la duración/extensión de la enfermedad.
+Opción B (tamizaje población general): la remisión clínica de 3 años no elimina el riesgo; un paciente con CU extensa de 15 años requiere vigilancia intensificada, no el protocolo de población general.
+Opción D (SOH con mayor frecuencia): la sangre oculta en heces no es el método de vigilancia recomendado en CU de alto riesgo; se requiere colonoscopia con técnicas de detección de displasia.
+
+¿Cuál es la trampa del examen?
 Muchos estudiantes leen:
-"Masa inguinal."
-Y responden:
-Cirugía urgente.
-Sin embargo:
-El dato decisivo es:
-Que la hernia es reducible y no complicada.
-Esto orienta a:
-Corrección quirúrgica programada.
+"Remisión clínica durante 3 años" y concluyen que el riesgo desapareció o que basta el tamizaje general.
+Pero la remisión clínica no elimina el riesgo neoplásico en CU extensa de larga evolución.
+Aquí el dato decisivo es:
+15 años de CU extensa = alto riesgo persistente → colonoscopia con cromoendoscopia y biopsias dirigidas.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Identificar masa inguinal.
-2.	Evaluar reducibilidad.
-3.	Buscar signos de complicación.
-4.	Diagnosticar hernia reducible.
-5.	Programar hernioplastia electiva.
+1. Identificar factores de riesgo: extensión, duración ≥8-10 años, displasia previa.
+2. No confundir remisión clínica con bajo riesgo neoplásico.
+3. Vigilancia con colonoscopia + cromoendoscopia + biopsias dirigidas.
+4. NO usar SOH ni tamizaje poblacional general en CU de alto riesgo.
+
 Perlas de examen
-✅ La hernia inguinal es la hernia de pared abdominal más frecuente.
-✅ La maniobra de Valsalva aumenta la protrusión herniaria.
-✅ Una hernia reducible no constituye una urgencia quirúrgica.
-✅ El tratamiento definitivo es quirúrgico.
-✅ El encarcelamiento implica imposibilidad de reducción.
-✅ La estrangulación se asocia a compromiso vascular.
-✅ Dolor intenso y cambios cutáneos sugieren complicación.
+✅ CU extensa + larga evolución = riesgo aumentado de CCR independiente de remisión clínica.
+✅ Vigilancia: colonoscopia con cromoendoscopia y biopsias dirigidas.
+✅ SOH NO es el estándar en CU de alto riesgo.
+✅ Remisión clínica ≠ remisión del riesgo neoplásico.
+✅ El riesgo aumenta con duración ≥8-10 años y extensión (pancolitis > izquierda).
+
 Referencias
-• Schwartz's Principles of Surgery.
-• Sabiston Textbook of Surgery.
-• Townsend. Sabiston Surgery.
-• European Hernia Society Guidelines.
-• UpToDate: Adult Inguinal Hernia.`,
+• ECCO Guidelines on Colorectal Carcinoma Surveillance in Inflammatory Bowel Disease.
+• American College of Gastroenterology Clinical Guidelines.
+• British Society of Gastroenterology Guidelines for IBD Surveillance.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Colorectal cancer surveillance in inflammatory bowel disease.`,
   },
+
   {
     id: "dr-q-167",
-    examArea: "NEUROLOGÍA - URGENCIAS",
-    topic: "NEUROLOGÍA",
-    difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","neurologia"],
-    statement: "Hombre de 45 años presenta movimientos tónico-clónicos generalizados continuos. Recibe una dosis inicial de benzodiacepina por vía intramuscular sin respuesta clínica. Un minuto después se obtiene acceso venoso periférico y se administra una benzodiacepina intravenosa, persistiendo la actividad convulsiva.\n¿Cuál es el diagnóstico y el siguiente paso más apropiado en el tratamiento?",
-    options: [
-      { id: "A", label: "A", text: "Convulsión febril; repetir benzodiacepina intravenosa indefinidamente." },
-      { id: "B", label: "B", text: "Estado epiléptico convulsivo establecido; administrar levetiracetam, ácido valproico o fosfenitoína intravenosa." },
-      { id: "C", label: "C", text: "Estado epiléptico refractario; iniciar anestesia general inmediatamente." },
-      { id: "D", label: "D", text: "Crisis psicógena no epiléptica; suspender tratamiento anticonvulsivante." },
-    ],
-    correctOptionId: "B",
-    explanation: "La persistencia de las convulsiones a pesar de benzodiacepinas iniciales corresponde a un estado epiléptico convulsivo establecido. El siguiente escalón terapéutico consiste en administrar un anticonvulsivante de segunda línea por vía intravenosa.",
-    keyPoints: [
-      "Cuando veas: Convulsión continua. Benzodiacepina sin respuesta. Persistencia de actividad convulsiva.",
-      "Debes pensar en: Estado epiléptico establecido.",
-      "Tema: Estado epiléptico.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el algoritmo moderno del estado epiléptico.
-La clave no es la duración exacta.
-La clave es:
-Que ya fracasó el tratamiento inicial con benzodiacepinas.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Crisis tónico-clónica persistente.
-• Benzodiacepina IM.
-• Benzodiacepina IV.
-• Sin control de la crisis.
-Esto corresponde a:
-Estado epiléptico convulsivo establecido.
-¿Cuál es el siguiente paso?
-Administrar un anticonvulsivante de segunda línea:
-• Levetiracetam IV.
-• Ácido valproico IV.
-• Fosfenitoína IV.
-¿Cuándo se considera refractario?
-Cuando persiste:
-Después de benzodiacepinas y un anticonvulsivante de segunda línea.
-En ese momento se considera:
-Estado epiléptico refractario.
-Y se requiere:
-• Intubación.
-• Sedación continua.
-• UCI.
-¿Por qué NO seguir administrando benzodiacepinas?
-Porque aumenta:
-• Depresión respiratoria.
-• Hipotensión.
-Sin mejorar significativamente el control de la crisis.
-¿Cuál es la trampa de examen?
-Muchos estudiantes responden:
-"Intubación inmediata."
-Sin embargo:
-Todavía no ha recibido el:
-Anticonvulsivante de segunda línea.
-Esto orienta a:
-Levetiracetam, valproato o fosfenitoína IV.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Benzodiacepina inicial.
-2.	Persistencia de crisis.
-3.	Anticonvulsivante de segunda línea.
-4.	Reevaluación.
-5.	Si continúa → estado epiléptico refractario.
-Perlas de examen
-✅ Estado epiléptico = crisis ≥5 minutos o crisis repetidas sin recuperación de conciencia.
-✅ Las benzodiacepinas son la primera línea.
-✅ Levetiracetam, valproato y fosfenitoína son tratamientos de segunda línea.
-✅ La fosfenitoína tiene menos efectos adversos que la fenitoína.
-✅ El estado epiléptico refractario requiere UCI.
-✅ La hipoglucemia siempre debe descartarse precozmente.
-✅ El retraso terapéutico aumenta la morbimortalidad.
-Referencias
-• American Epilepsy Society Guidelines.
-• Adams and Victor's Principles of Neurology.
-• Tintinalli's Emergency Medicine.
-• UpToDate: Convulsive Status Epilepticus in Adults.
-• Neurocritical Care Society Guidelines.`,
-  },
-  {
-    id: "dr-q-168",
-    examArea: "MEDICINA INTERNA - URGENCIAS",
-    topic: "URGENCIAS",
-    difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","urgencias"],
-    statement: "Hombre de 70 años con antecedente de EPOC consulta por cuadro de 2 días de evolución consistente en fiebre, tos productiva, disnea y deterioro del estado general. Durante la valoración presenta confusión aguda, hipoxemia y estudios de laboratorio compatibles con hipoperfusión tisular.\n¿Cuál es la conducta más adecuada en el servicio de urgencias?",
-    options: [
-      { id: "A", label: "A", text: "Iniciar broncodilatadores inhalados y dar egreso con antibiótico oral." },
-      { id: "B", label: "B", text: "Administrar líquidos intravenosos, obtener cultivos, iniciar antibióticos de amplio espectro y oxigenoterapia temprana." },
-      { id: "C", label: "C", text: "Solicitar tomografía de tórax antes de iniciar cualquier tratamiento." },
-      { id: "D", label: "D", text: "Iniciar únicamente corticosteroides sistémicos y observación." },
-    ],
-    correctOptionId: "B",
-    explanation: "El cuadro clínico es compatible con neumonía adquirida en la comunidad complicada con sepsis. La presencia de alteración del estado mental, hipoxemia y elevación del lactato obliga a iniciar de manera inmediata el paquete de manejo para sepsis, incluyendo reanimación temprana, toma de cultivos y antibióticos intravenosos.",
-    keyPoints: [
-      "Cuando veas: Neumonía. Confusión. Lactato elevado. Hipoxemia.",
-      "Debes pensar en: Sepsis de origen pulmonar.",
-      "Tema: Sepsis.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el reconocimiento temprano de la sepsis.
-La clave no es el EPOC.
-La clave es:
-La combinación de infección e hipoperfusión.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Infección respiratoria.
-• Alteración del estado mental.
-• Hipoxemia.
-• Lactato elevado.
-Esto cumple criterios de:
-Sepsis.
-¿Cuál es la conducta inmediata?
-El paquete inicial incluye:
-• Oxigenoterapia.
-• Acceso venoso.
-• Cultivos.
-• Antibióticos intravenosos tempranos.
-• Reanimación con cristaloides.
-¿Por qué es tan importante el tiempo?
-Porque:
-Cada hora de retraso en el inicio de antibióticos aumenta la mortalidad.
-¿Qué antibióticos podrían utilizarse?
-Dependiendo del contexto:
-• Ceftriaxona + azitromicina.
-o
-• Ampicilina/sulbactam + macrólido.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"EPOC."
-Y responden:
-Exacerbación aislada de EPOC.
-Sin embargo:
-El dato decisivo es:
-La presencia de fiebre, confusión y lactato elevado.
-Esto orienta a:
-Sepsis secundaria a neumonía.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Reconocer infección.
-2.	Identificar disfunción orgánica.
-3.	Diagnosticar sepsis.
-4.	Iniciar antibióticos tempranos.
-5.	Realizar reanimación y monitorización.
-Perlas de examen
-✅ Lactato elevado es marcador de hipoperfusión tisular.
-✅ La confusión constituye disfunción orgánica.
-✅ Los antibióticos deben iniciarse lo antes posible.
-✅ Los cultivos deben obtenerse antes de antibióticos si no retrasan el tratamiento.
-✅ La neumonía es una de las causas más frecuentes de sepsis.
-✅ La oxigenoterapia forma parte del manejo inicial.
-✅ qSOFA alterado aumenta la sospecha de sepsis.
-Referencias
-• Surviving Sepsis Campaign Guidelines.
-• Harrison's Principles of Internal Medicine.
-• Tintinalli's Emergency Medicine.
-• GOLD Guidelines.
-• IDSA/ATS Guidelines for Community-Acquired Pneumonia.`,
-  },
-  {
-    id: "dr-q-169",
-    examArea: "MEDICINA INTERNA - CUIDADO CRÍTICO",
-    topic: "MEDICINA INTERNA",
-    difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","medicina_interna"],
-    statement: "Hombre de 60 años consulta por deterioro progresivo del estado general. Días previos presentó síntomas urinarios y fiebre, recibiendo tratamiento antibiótico ambulatorio sin mejoría. Al ingreso presenta hipotensión, fiebre y alteración del estado de conciencia. Se inicia reanimación con cristaloides (30 mL/kg) y antibióticos de amplio espectro. Posteriormente persiste hipotenso y con elevación del lactato sérico.\n¿Cuál es el siguiente paso más apropiado y cuál es la razón para realizarlo?",
-    options: [
-      { id: "A", label: "A", text: "Administrar un segundo bolo de cristaloides y observar la respuesta." },
-      { id: "B", label: "B", text: "Iniciar norepinefrina para mantener una PAM ≥65 mmHg debido a choque séptico." },
-      { id: "C", label: "C", text: "Iniciar dopamina por el antecedente de infección urinaria." },
-      { id: "D", label: "D", text: "Suspender líquidos e iniciar diuréticos intravenosos." },
-    ],
-    correctOptionId: "B",
-    explanation: "La persistencia de hipotensión e hipoperfusión tisular después de una adecuada reanimación con líquidos define choque séptico. En este contexto se requiere el inicio temprano de vasopresores, siendo la norepinefrina el fármaco de primera línea.",
-    keyPoints: [
-      "Cuando veas: Infección. Hipotensión persistente. Lactato elevado. Líquidos adecuados.",
-      "Debes pensar en: Choque séptico.",
-      "Tema: Sepsis y choque séptico.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la diferencia entre sepsis y choque séptico.
-La clave no es la infección urinaria.
-La clave es:
-La persistencia de la hipotensión tras líquidos.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Infección probable de origen urinario.
-• Hipotensión severa.
-• Lactato elevado.
-• Persistencia de hipoperfusión.
-A pesar de:
-• Cristaloides 30 mL/kg.
-• Antibióticos adecuados.
-Esto corresponde a:
-Choque séptico.
-¿Cuál es la definición práctica?
-Hipotensión persistente que requiere:
-Vasopresores para mantener PAM ≥65 mmHg.
-Y generalmente:
-Lactato >2 mmol/L.
-¿Cuál es el vasopresor de elección?
-La respuesta clásica es:
-Norepinefrina.
-¿Por qué norepinefrina?
-Porque:
-• Aumenta la resistencia vascular sistémica.
-• Mejora la perfusión tisular.
-• Tiene menor riesgo de arritmias que dopamina.
-¿Cuál es el objetivo?
-Mantener:
-PAM ≥65 mmHg.
-Para asegurar:
-Perfusión cerebral, renal y coronaria.
-¿Por qué NO más líquidos indefinidamente?
-Porque ya recibió:
-Reanimación inicial adecuada.
-El problema ahora es:
-Vasoplejía séptica.
-No hay déficit de volumen.
-¿Cuál es la trampa del examen?
-Muchos estudiantes leen:
-"Hipotensión."
-Y responden:
-Más líquidos.
-Sin embargo:
-El dato decisivo es:
-La persistencia de hipotensión después de 30 mL/kg.
-Esto define:
-Choque séptico.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar infección.
-2.	Administrar líquidos iniciales.
-3.	Iniciar antibióticos tempranos.
-4.	Reevaluar perfusión.
-5.	Si persiste hipotensión → iniciar norepinefrina.
-Perlas de examen
-✅ La norepinefrina es el vasopresor de primera línea en choque séptico.
-✅ PAM objetivo ≥65 mmHg.
-✅ Lactato elevado indica hipoperfusión tisular.
-✅ El choque séptico es una emergencia con alta mortalidad.
-✅ Los antibióticos deben administrarse precozmente.
-✅ La dopamina se asocia a más arritmias.
-✅ El control del foco infeccioso es fundamental para la supervivencia.
-Referencias
-• Surviving Sepsis Campaign 2021.
-• Harrison's Principles of Internal Medicine.
-• Marino's The ICU Book.
-• Tintinalli's Emergency Medicine.
-• SCCM Guidelines for Septic Shock.`,
-  },
-  {
-    id: "dr-q-170",
-    examArea: "NEUMOLOGÍA",
-    topic: "NEUMOLOGÍA",
-    difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","neumologia"],
-    statement: "Hombre de 64 años con diagnóstico de EPOC GOLD B en tratamiento con tiotropio consulta por aumento progresivo de la disnea, incremento del volumen del esputo y cambio a expectoración purulenta. Se encuentra consciente y orientado. La gasometría arterial evidencia hipercapnia con acidemia e hipoxemia.\n¿Cuál es el manejo inicial más apropiado y cuál sería el manejo crónico posterior?",
-    options: [
-      { id: "A", label: "A", text: "Oxígeno suplementario, broncodilatadores de acción corta, corticosteroides sistémicos, antibióticos y posteriormente terapia dual LABA/LAMA." },
-      { id: "B", label: "B", text: "Intubación orotraqueal inmediata y ventilación mecánica invasiva; posteriormente oxígeno domiciliario." },
-      { id: "C", label: "C", text: "Antibióticos únicamente y continuar tiotropio como único tratamiento." },
-      { id: "D", label: "D", text: "Oxígeno al 100% por mascarilla de no reinhalación y egreso con salbutamol inhalado." },
-    ],
-    correctOptionId: "A",
-    explanation: "El paciente presenta una exacerbación aguda de EPOC con insuficiencia respiratoria hipercápnica. El manejo inicial incluye oxigenoterapia titulada, broncodilatadores de acción corta, corticosteroides sistémicos y antibióticos debido a la presencia de esputo purulento. Una vez estabilizado, debe optimizarse el tratamiento de mantenimiento con doble broncodilatación LABA/LAMA.",
-    keyPoints: [
-      "Cuando veas: EPOC. Aumento de disnea. Esputo purulento. Acidosis respiratoria.",
-      "Debes pensar en: Exacerbación aguda de EPOC.",
-      "Tema: EPOC.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el manejo agudo y crónico del EPOC.
-La clave no es el antecedente.
-La clave es:
-La gasometría.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Disnea.
-• Sibilancias.
-• Esputo purulento.
-• pH 7.30.
-• PaCO₂ elevada.
-Esto corresponde a:
-Exacerbación aguda de EPOC.
-¿Cuál es el manejo inicial?
-1.	Oxígeno suplementario titulado.
-Meta:
-SatO₂ 88-92%.
-2.	Broncodilatadores de acción corta.
-• Salbutamol.
-• Ipratropio.
-3.	Corticoides sistémicos.
-Ejemplo:
-• Prednisolona.
-• Hidrocortisona.
-4.	Antibióticos.
-Porque presenta:
-Esputo purulento.
-¿Qué hacer con la gasometría?
-El pH de 7.30 indica:
-Acidosis respiratoria aguda sobre crónica.
-Por ello:
-Debe considerarse ventilación mecánica no invasiva (VNI) si la acidosis persiste o empeora.
-¿Por qué NO intubarlo inmediatamente?
-Porque:
-• Está consciente.
-• No presenta agotamiento respiratorio.
-• No hay contraindicación para VNI.
-¿Cuál es el manejo crónico?
-Actualmente las guías GOLD recomiendan:
-Doble broncodilatación:
-• LABA + LAMA.
-Ejemplos:
-• Formoterol + tiotropio.
-• Indacaterol + glicopirronio.
-¿Cuándo agregar corticoide inhalado?
-En pacientes con:
-• Exacerbaciones frecuentes.
-• Eosinofilia elevada.
-¿Cuál es la trampa del examen?
-Muchos estudiantes leen:
-"PaO₂ 55."
-Y responden:
-Oxígeno al 100%.
-Sin embargo:
-El dato decisivo es:
-La hipercapnia.
-Esto obliga a:
-Oxigenoterapia controlada.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Reconocer exacerbación.
-2.	Administrar oxígeno titulado.
-3.	Broncodilatadores de acción corta.
-4.	Corticoides y antibióticos.
-5.	Optimizar tratamiento crónico con LABA/LAMA.
-Perlas de examen
-✅ Los tres criterios de Anthonisen son: aumento de disnea, aumento del volumen del esputo y purulencia.
-✅ SatO₂ objetivo en EPOC: 88-92%.
-✅ La VNI disminuye mortalidad e intubación.
-✅ LABA/LAMA es la terapia de mantenimiento preferida en muchos pacientes GOLD B.
-✅ El oxígeno al 100% puede empeorar la hipercapnia.
-✅ Los corticosteroides sistémicos acortan la recuperación.
-✅ El abandono del tabaquismo es la medida más efectiva para modificar la progresión de la enfermedad.
-Referencias
-• GOLD Report 2025.
-• Harrison's Principles of Internal Medicine.
-• Murray & Nadel's Textbook of Respiratory Medicine.
-• UpToDate: Acute Exacerbations of COPD.
-• ERS/ATS Guidelines on COPD Exacerbations.`,
-  },
-  {
-    id: "dr-q-171",
-    examArea: "MEDICINA INTERNA - URGENCIAS",
-    topic: "URGENCIAS",
-    difficulty: "hard",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","urgencias"],
-    statement: "Hombre de 50 años consulta por dolor torácico súbito acompañado de disnea intensa de inicio reciente. Al examen físico se encuentra hemodinámicamente estable, con leve taquicardia y saturación de oxígeno de 93% al aire ambiente. Niega trauma reciente y no refiere antecedentes médicos de importancia.\n¿Cuál es el manejo inicial más apropiado?",
-    options: [
-      { id: "A", label: "A", text: "Solicitar dímero D y, si es positivo, realizar angiotomografía pulmonar." },
-      { id: "B", label: "B", text: "Iniciar trombólisis sistémica inmediata." },
-      { id: "C", label: "C", text: "Solicitar ecocardiograma transesofágico urgente." },
-      { id: "D", label: "D", text: "Administrar antibióticos de amplio espectro." },
-    ],
-    correctOptionId: "A",
-    explanation: "El cuadro clínico es sugestivo de tromboembolismo pulmonar (TEP). En un paciente hemodinámicamente estable, el abordaje inicial consiste en estimar la probabilidad clínica (Wells o Ginebra). Si la probabilidad es baja o intermedia, debe solicitarse dímero D y confirmar posteriormente con angiotomografía pulmonar cuando esté indicado.",
-    keyPoints: [
-      "Cuando veas: Dolor torácico súbito. Disnea aguda. Taquicardia. Estabilidad hemodinámica.",
-      "Debes pensar en: Tromboembolismo pulmonar.",
-      "Tema: Tromboembolismo pulmonar.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el algoritmo diagnóstico del TEP.
-La clave no es el dolor torácico.
-La clave es:
-La combinación de disnea súbita y taquicardia.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Disnea aguda.
-• Dolor torácico.
-• Hipoxemia leve.
-• Taquicardia.
-Esto obliga a sospechar:
-Tromboembolismo pulmonar.
-¿Qué debe hacerse primero?
-Determinar:
-Probabilidad clínica.
-Si es baja o intermedia:
-Solicitar:
-Dímero D.
-Si resulta positivo:
-Realizar:
-Angiotomografía pulmonar.
-¿Cuándo se tromboliza?
-Solo en:
-TEP de alto riesgo.
-Es decir:
-• Hipotensión.
-• Choque.
-• Inestabilidad hemodinámica.
-Hallazgos ausentes en este caso.
-¿Por qué NO antibióticos?
-No existen datos que sugieran:
-Infección respiratoria.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Disnea intensa."
-Y responden:
-Trombólisis inmediata.
-Sin embargo:
-El dato decisivo es:
-La estabilidad hemodinámica.
-Esto obliga primero a:
-Confirmar el diagnóstico.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Sospechar TEP.
-2.	Calcular probabilidad clínica.
-3.	Solicitar dímero D si corresponde.
-4.	Confirmar con angiotomografía.
-5.	Iniciar anticoagulación según resultados.
-Perlas de examen
-✅ La angiotomografía pulmonar es el estudio diagnóstico de elección.
-✅ El dímero D tiene alto valor predictivo negativo.
-✅ La trombólisis se reserva para TEP de alto riesgo.
-✅ La taquicardia es uno de los hallazgos más frecuentes.
-✅ La radiografía de tórax puede ser normal.
-✅ El ECG puede mostrar taquicardia sinusal.
-✅ La estabilidad hemodinámica define gran parte del manejo inicial.
-Referencias
-• ESC Guidelines for Acute Pulmonary Embolism.
-• Harrison's Principles of Internal Medicine.
-• Tintinalli's Emergency Medicine.
-• UpToDate: Diagnosis of Acute Pulmonary Embolism.
-• Braunwald's Heart Disease.`,
-  },
-  {
-    id: "dr-q-172",
-    examArea: "GASTROENTEROLOGÍA",
-    topic: "GASTROENTEROLOGÍA",
-    difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","gastroenterologia"],
-    statement: "Mujer de 45 años consulta por hematemesis abundante y melena de inicio reciente. Durante la valoración presenta signos clínicos de hipovolemia leve. Se realiza endoscopia digestiva alta que evidencia una úlcera duodenal con sangrado activo en chorro.\n¿Cuál es la clasificación de Forrest y cuál es el manejo inicial más adecuado?",
-    options: [
-      { id: "A", label: "A", text: "Forrest III; inhibidor de bomba de protones oral y egreso." },
-      { id: "B", label: "B", text: "Forrest IIc; observación hospitalaria." },
-      { id: "C", label: "C", text: "Forrest Ia; terapia endoscópica urgente asociada a inhibidor de bomba de protones intravenoso." },
-      { id: "D", label: "D", text: "Forrest IIb; erradicación ambulatoria de Helicobacter pylori." },
-    ],
-    correctOptionId: "C",
-    explanation: "El sangrado activo en chorro corresponde a una lesión Forrest Ia, la categoría con mayor riesgo de resangrado. Requiere tratamiento endoscópico inmediato (inyección, termocoagulación o hemoclips) junto con inhibidores de bomba de protones intravenosos y reanimación hemodinámica.",
-    keyPoints: [
-      "Cuando veas: Hematemesis. Melena. Úlcera con sangrado activo. Inestabilidad o hipovolemia.",
-      "Debes pensar en: Forrest Ia.",
-      "Tema: Hemorragia digestiva alta.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la clasificación de Forrest.
-La clave no es la úlcera.
-La clave es:
-El tipo de sangrado observado en la endoscopia.
-¿Cómo se clasifica Forrest?
-Forrest Ia:
-• Sangrado activo en chorro.
-Forrest Ib:
-• Sangrado activo en babeo.
-Forrest IIa:
-• Vaso visible no sangrante.
-Forrest IIb:
-• Coágulo adherido.
-Forrest IIc:
-• Mancha plana pigmentada.
-Forrest III:
-• Base limpia.
-¿Qué tiene esta paciente?
-La descripción clásica es:
-Sangrado activo en chorro.
-Por tanto corresponde a:
-Forrest Ia.
-¿Qué manejo requiere?
-1.	Reanimación hemodinámica.
-2.	Inhibidor de bomba de protones IV.
-3.	Endoscopia terapéutica urgente.
-¿Qué IBP se utiliza?
-Frecuentemente:
-• Omeprazol IV.
-• Pantoprazol IV.
-¿Y Helicobacter pylori?
-Debe investigarse y erradicarse posteriormente.
-Pero:
-No es la prioridad inmediata.
-¿Cuál es la trampa del examen?
-Muchos estudiantes leen:
-"Antecedente de H. pylori."
-Y responden:
-Erradicación antibiótica.
-Sin embargo:
-El dato decisivo es:
-El sangrado activo.
-Esto obliga a:
-Control endoscópico urgente.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar hemorragia digestiva alta.
-2.	Revisar clasificación Forrest.
-3.	Reconocer Forrest Ia.
-4.	Iniciar IBP IV.
-5.	Realizar hemostasia endoscópica urgente.
-Perlas de examen
-✅ Forrest Ia = sangrado activo en chorro.
-✅ Forrest Ib = sangrado activo en babeo.
-✅ Forrest IIa = vaso visible.
-✅ Forrest IIb = coágulo adherido.
-✅ Forrest III = base limpia.
-✅ Forrest Ia tiene alto riesgo de resangrado.
-✅ La hemostasia endoscópica es el tratamiento de elección.
-Referencias
-• Sleisenger and Fordtran's Gastrointestinal Disease.
-• Harrison's Principles of Internal Medicine.
-• ESGE Guideline for Nonvariceal Upper GI Bleeding.
-• UpToDate: Peptic Ulcer Bleeding.
-• ASGE Guidelines on Upper Gastrointestinal Hemorrhage.`,
-  },
-  {
-    id: "dr-q-173",
-    examArea: "CIRUGÍA GENERAL",
-    topic: "CIRUGÍA GENERAL",
-    difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","cirugia_general"],
-    statement: "Hombre de 50 años consulta por dolor abdominal súbito e intenso de inicio reciente. Al examen físico presenta abdomen rígido con signos de irritación peritoneal generalizada. Una radiografía en decúbito lateral evidencia aire libre subdiafragmático.\n¿Cuál es el diagnóstico más probable?",
-    options: [
-      { id: "A", label: "A", text: "Pancreatitis aguda grave." },
-      { id: "B", label: "B", text: "Colecistitis aguda complicada." },
-      { id: "C", label: "C", text: "Perforación de úlcera péptica con neumoperitoneo." },
-      { id: "D", label: "D", text: "Obstrucción intestinal mecánica." },
-    ],
-    correctOptionId: "C",
-    explanation: "La presencia de dolor abdominal súbito, abdomen en tabla y neumoperitoneo en una radiografía simple es altamente sugestiva de perforación de una víscera hueca, siendo la perforación de una úlcera péptica una de las causas más frecuentes.",
-    keyPoints: [
-      "Cuando veas: Dolor epigástrico súbito. Abdomen rígido. Peritonitis. Aire libre subdiafragmático.",
-      "Debes pensar en: Perforación de úlcera péptica.",
-      "Tema: Abdomen agudo quirúrgico.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa una de las urgencias quirúrgicas más importantes.
-La clave no es el dolor.
-La clave es:
-El neumoperitoneo.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Dolor súbito.
-• Signos de peritonitis.
-• Aire libre intraperitoneal.
-Esto significa:
-Perforación de una víscera hueca.
-¿Cuál es la causa más frecuente en los exámenes?
-La respuesta clásica es:
-Úlcera péptica perforada.
-¿Por qué aparece aire bajo el diafragma?
-Porque el contenido gaseoso del tubo digestivo:
-Escapa hacia la cavidad peritoneal.
-Produciendo:
-Neumoperitoneo.
-¿Qué hallazgo físico es característico?
-Abdomen en tabla.
-Debido a:
-Irritación peritoneal generalizada.
-¿Cuál es la conducta?
-• Reanimación inicial.
-• Antibióticos de amplio espectro.
-• Inhibidor de bomba de protones.
-• Valoración quirúrgica urgente.
-¿Por qué NO pancreatitis?
-La pancreatitis puede producir:
-Dolor epigástrico intenso.
-Pero:
-No produce neumoperitoneo.
-¿Por qué NO obstrucción intestinal?
-La radiografía mostraría:
-Niveles hidroaéreos.
-No aire libre subdiafragmático.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Dolor epigástrico."
-Y responden:
-Pancreatitis.
-Sin embargo:
-El dato decisivo es:
-El aire libre subdiafragmático.
-Esto prácticamente confirma:
-Perforación de víscera hueca.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar dolor abdominal súbito.
-2.	Reconocer peritonitis.
-3.	Detectar neumoperitoneo.
-4.	Diagnosticar perforación de víscera hueca.
-5.	Pensar primero en úlcera péptica perforada.
-Perlas de examen
-✅ Aire libre subdiafragmático = neumoperitoneo hasta demostrar lo contrario.
-✅ La úlcera duodenal perforada es una causa clásica de abdomen agudo.
-✅ El abdomen rígido sugiere irritación peritoneal.
-✅ Es una urgencia quirúrgica.
-✅ La TAC es el estudio más sensible para detectar neumoperitoneo.
-✅ Deben iniciarse antibióticos de amplio espectro precozmente.
-✅ El retraso quirúrgico aumenta significativamente la mortalidad.
-Referencias
-• Schwartz's Principles of Surgery.
-• Sabiston Textbook of Surgery.
-• Harrison's Principles of Internal Medicine.
-• Tintinalli's Emergency Medicine.
-• UpToDate: Perforated Peptic Ulcer.`,
-  },
-  {
-    id: "dr-q-174",
-    examArea: "GASTROENTEROLOGÍA",
-    topic: "GASTROENTEROLOGÍA",
-    difficulty: "medium",
-    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","gastroenterologia"],
-    statement: "Mujer de 60 años consulta por dolor epigástrico intenso irradiado a la espalda, asociado a náuseas y múltiples episodios de vómito. Refiere intolerancia completa a la vía oral durante las últimas 24 horas. Los estudios muestran elevación significativa de lipasa sérica y tomografía compatible con pancreatitis aguda intersticial sin necrosis ni colecciones.\n¿Cuál es la orden médica más adecuada respecto al soporte nutricional?",
-    options: [
-      { id: "A", label: "A", text: "Mantener ayuno absoluto hasta normalización de la lipasa." },
-      { id: "B", label: "B", text: "Iniciar nutrición parenteral total de forma temprana." },
-      { id: "C", label: "C", text: "Reiniciar alimentación enteral temprana tan pronto sea tolerada." },
-      { id: "D", label: "D", text: "Mantener ayuno durante 7 días y repetir tomografía." },
-    ],
-    correctOptionId: "C",
-    explanation: "En la pancreatitis aguda leve o moderada se recomienda reiniciar la alimentación enteral precoz una vez disminuyan las náuseas y el dolor, incluso dentro de las primeras 24-48 horas. La nutrición enteral reduce complicaciones infecciosas, estancia hospitalaria y mortalidad en comparación con la nutrición parenteral.",
-    keyPoints: [
-      "Cuando veas: Pancreatitis aguda. Sin necrosis. Sin colecciones. Estabilidad clínica.",
-      "Debes pensar en: Nutrición enteral temprana.",
-      "Tema: Pancreatitis aguda.",
-    ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa uno de los cambios más importantes en el manejo moderno de la pancreatitis.
-La clave no es la lipasa.
-La clave es:
-La ausencia de complicaciones locales.
-¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Pancreatitis aguda.
-• TAC sin necrosis.
-• Sin colecciones.
-• Sin falla orgánica.
-Esto corresponde a:
-Pancreatitis aguda leve.
-¿Qué se hacía antes?
-Durante años se indicaba:
-Ayuno prolongado.
-Esperando:
-Normalización de enzimas.
-Actualmente esto es incorrecto.
-¿Qué recomiendan las guías?
-Alimentación enteral temprana.
-Tan pronto como el paciente la tolere.
-¿Por qué?
-Porque:
-• Preserva la barrera intestinal.
-• Disminuye translocación bacteriana.
-• Reduce infecciones.
-• Disminuye estancia hospitalaria.
-¿Es necesario esperar que la lipasa se normalice?
-No.
-La evolución clínica es más importante que:
-Los valores enzimáticos.
-¿Cuándo usar nutrición parenteral?
-Solo cuando:
-La vía enteral no sea posible o esté contraindicada.
-¿Cuál es la trampa de examen?
-Muchos estudiantes recuerdan:
-"Pancreatitis = ayuno."
-Sin embargo:
-Las guías actuales recomiendan:
-Realimentación temprana.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Diagnosticar pancreatitis.
-2.	Clasificar gravedad.
-3.	Evaluar tolerancia gastrointestinal.
-4.	Reiniciar vía enteral precozmente.
-5.	Reservar nutrición parenteral para casos seleccionados.
-Perlas de examen
-✅ La nutrición enteral es superior a la nutrición parenteral.
-✅ No es necesario esperar la normalización de amilasa o lipasa.
-✅ La alimentación oral temprana es segura en pancreatitis leve.
-✅ La nutrición enteral disminuye complicaciones infecciosas.
-✅ El ayuno prolongado ya no se recomienda de rutina.
-✅ La pancreatitis intersticial tiene mejor pronóstico que la necrotizante.
-✅ La hidratación intravenosa temprana sigue siendo fundamental.
-Referencias
-• American College of Gastroenterology Guidelines on Acute Pancreatitis.
-• IAP/APA Evidence-Based Guidelines.
-• Harrison's Principles of Internal Medicine.
-• Sleisenger and Fordtran's Gastrointestinal Disease.
-• UpToDate: Nutrition Support in Acute Pancreatitis.`,
-  },
-  {
-    id: "dr-q-175",
     examArea: "HEMATOLOGÍA",
     topic: "HEMATOLOGÍA",
     difficulty: "medium",
     tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","hematologia"],
-    statement: "Hombre de 45 años consulta por fatiga progresiva, disnea de esfuerzo y disminución de la tolerancia al ejercicio. Los exámenes muestran hemoglobina de 9 g/dL, volumen corpuscular medio (VCM) de 78 fL, ferritina disminuida y capacidad total de fijación de hierro (TIBC) elevada.\n¿Cuál es el diagnóstico más probable, la etiología más frecuente y el manejo inicial adecuado?",
+    statement:
+      "Mujer de 28 años consulta por fatiga progresiva, disnea de medianos esfuerzos y disminución de la tolerancia al ejercicio. Refiere antecedentes de metrorragias abundantes desde hace varios meses. Los estudios de laboratorio confirman anemia ferropénica secundaria a pérdida crónica de sangre.\n¿Cuál de los siguientes parámetros se espera encontrar aumentado?",
     options: [
-      { id: "A", label: "A", text: "Anemia de enfermedad crónica; proceso inflamatorio; eritropoyetina." },
-      { id: "B", label: "B", text: "Anemia ferropénica; pérdida crónica de sangre gastrointestinal; suplementación con hierro y estudio de la fuente de sangrado." },
-      { id: "C", label: "C", text: "Talasemia menor; trastorno hereditario; transfusión sanguínea." },
-      { id: "D", label: "D", text: "Anemia hemolítica autoinmune; destrucción eritrocitaria; corticosteroides." },
+      { id: "A", label: "A", text: "Concentración de ferritina en suero." },
+      { id: "B", label: "B", text: "Concentración de hemoglobina en reticulocitos." },
+      { id: "C", label: "C", text: "Volumen corpuscular medio de los hematíes." },
+      { id: "D", label: "D", text: "Concentración de transferrina en suero." },
     ],
-    correctOptionId: "B",
-    explanation: "La combinación de anemia microcítica, ferritina baja y TIBC elevada es característica de anemia ferropénica. En hombres adultos debe considerarse pérdida crónica de sangre gastrointestinal hasta demostrar lo contrario, por lo que además de corregir el déficit de hierro debe investigarse la causa subyacente.",
+    correctOptionId: "D",
+    explanation: "La anemia ferropénica se caracteriza por disminución de los depósitos corporales de hierro. Como mecanismo compensatorio, el hígado aumenta la síntesis de transferrina para maximizar la captación y el transporte del hierro disponible.",
     keyPoints: [
-      "Cuando veas: VCM bajo. Ferritina baja. TIBC elevada. Adulto masculino.",
-      "Debes pensar en: Anemia ferropénica por sangrado gastrointestinal oculto.",
-      "Tema: Anemias microcíticas.",
+      "Cuando veas: mujer joven con metrorragias abundantes crónicas + anemia ferropénica confirmada por laboratorio.",
+      "Debes pensar en: aumento de transferrina sérica como respuesta compensatoria ante depósitos de hierro disminuidos.",
+      "La ferritina está DISMINUIDA (mejor marcador de reservas de hierro), no aumentada.",
+      "El VCM y la hemoglobina reticulocitaria están disminuidos por microcitosis y ferropenia.",
+      "Tema: Anemia ferropénica — parámetros de laboratorio.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la interpretación del perfil férrico.
-La clave no es la hemoglobina.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de hematología porque evalúa los parámetros de laboratorio en anemia ferropénica, pidiendo identificar cuál se encuentra AUMENTADO frente a opciones que confunden marcadores de reservas, producción eritrocitaria y transporte de hierro.
+
+La clave no es buscar parámetros de producción eritrocitaria ni asumir que todos los valores relacionados con hierro están disminuidos.
 La clave es:
-La ferritina.
+Anemia ferropénica por pérdida crónica de sangre → depósitos de hierro agotados → el hígado aumenta la síntesis de transferrina para maximizar la captación del hierro disponible.
+
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Hb 9 g/dL.
-• VCM 78 fL.
-• Ferritina baja.
-• TIBC elevada.
-Esto corresponde a:
-Anemia ferropénica.
-¿Qué significa una ferritina baja?
-Disminución de:
-Las reservas corporales de hierro.
-Es el marcador más específico de:
-Deficiencia de hierro.
-¿Por qué el TIBC está elevado?
-Porque el organismo intenta:
-Captar más hierro circulante.
-¿Qué causa debe sospecharse en un hombre adulto?
-La respuesta clásica de examen es:
-Sangrado gastrointestinal crónico.
-Hasta demostrar lo contrario.
-¿Qué estudios deben solicitarse?
-Habitualmente:
-• Colonoscopia.
-• Endoscopia digestiva alta.
-Según el contexto clínico.
-¿Cuál es el tratamiento inicial?
-• Hierro oral.
-• Corrección de la causa subyacente.
-¿Por qué NO transfundir?
-Porque una Hb de 9 g/dL en un paciente estable:
-No constituye indicación rutinaria de transfusión.
-¿Cuál es la trampa de examen?
+• Mujer de 28 años con fatiga progresiva, disnea de medianos esfuerzos y disminución de tolerancia al ejercicio.
+• Metrorragias abundantes desde hace varios meses.
+• Laboratorio confirma anemia ferropénica secundaria a pérdida crónica de sangre.
+• La pregunta pide el parámetro que se espera encontrar AUMENTADO.
+
+Recordemos perfil de laboratorio en anemia ferropénica:
+• Ferritina: DISMINUIDA (mejor marcador de depósitos corporales de hierro).
+• Transferrina (y capacidad total de fijación de hierro/TIBC): AUMENTADA (respuesta compensatoria hepática).
+• Hierro sérico: DISMINUIDO.
+• Saturación de transferrina: DISMINUIDA.
+• VCM: DISMINUIDO (microcitosis).
+• RDW: AUMENTADO (anisocitosis).
+• Hemoglobina reticulocitaria (CHr): DISMINUIDA (refleja ferropenia en eritropoyesis).
+
+Por lo tanto:
+La concentración de transferrina en suero se encuentra aumentada como mecanismo compensatorio para maximizar la captación y el transporte del hierro disponible.
+
+¿Por qué la opción D es la respuesta correcta?
+La transferrina aumenta en anemia ferropénica porque:
+• El hígado incrementa su síntesis en respuesta a la disminución de los depósitos de hierro.
+• Aumenta la capacidad de transporte del hierro circulante escaso.
+• Junto con TIBC elevado y saturación baja, confirma el patrón de ferropenia.
+
+¿Por qué fallan las otras opciones?
+Opción A (ferritina): está DISMINUIDA; es el mejor marcador de depósitos corporales de hierro y refleja agotamiento de reservas en ferropenia.
+Opción B (hemoglobina reticulocitaria): está DISMINUIDA; refleja contenido de hierro en reticulocitos y ferropenia en la eritropoyesis activa.
+Opción C (VCM): está DISMINUIDO por microcitosis; los eritrocitos son más pequeños por déficit de hierro en la hemoglobina.
+
+¿Cuál es la trampa del examen?
 Muchos estudiantes leen:
-"Anemia microcítica."
-Y responden:
-Talasemia.
-Sin embargo:
-El dato decisivo es:
-Ferritina baja + TIBC elevada.
-Patrón clásico de:
-Ferropenia.
+"Anemia" y buscan parámetros relacionados con la producción de eritrocitos (VCM, hemoglobina reticulocitaria).
+Pero la pregunta pide el parámetro AUMENTADO, no disminuido.
+La trampa es elegir ferritina (marcador de hierro) sin recordar que en ferropenia la ferritina está baja y la transferrina sube como compensación.
+
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1.	Identificar anemia microcítica.
-2.	Revisar ferritina.
-3.	Confirmar ferropenia.
-4.	Buscar la causa.
-5.	Iniciar hierro y corregir el origen del sangrado.
+1. Identificar anemia ferropénica: microcitosis + ferritina baja + saturación baja.
+2. Recordar que la transferrina (y TIBC) AUMENTA como respuesta compensatoria.
+3. La ferritina DISMINUYE (reservas agotadas).
+4. VCM y hemoglobina reticulocitaria DISMINUYEN.
+
 Perlas de examen
-✅ Ferritina baja es el hallazgo más específico de ferropenia.
-✅ TIBC elevada es característica de anemia ferropénica.
-✅ En hombres y mujeres posmenopáusicas debe descartarse sangrado digestivo.
-✅ La anemia ferropénica es la causa más frecuente de anemia en el mundo.
-✅ El VCM suele disminuir progresivamente.
-✅ La ferritina puede elevarse falsamente en estados inflamatorios.
-✅ El tratamiento debe corregir la deficiencia y la causa subyacente.
+✅ Ferropenia: ferritina ↓, transferrina ↑, hierro sérico ↓, saturación ↓.
+✅ La transferrina aumenta como mecanismo compensatorio hepático.
+✅ Ferritina = mejor marcador de depósitos de hierro (baja en ferropenia).
+✅ VCM bajo = microcitosis; no confundir con parámetro aumentado.
+✅ Metrorragias abundantes = causa ginecológica frecuente de ferropenia en mujer joven.
+
+Referencias
+• Harrison's Principles of Internal Medicine.
+• Hoffbrand's Essential Haematology.
+• Williams Hematology.
+• British Society for Haematology Guidelines.
+• UpToDate: Causes and diagnosis of iron deficiency and iron deficiency anemia in adults.`,
+  },
+
+  {
+    id: "dr-q-168",
+    examArea: "HEMATOLOGÍA",
+    topic: "HEMATOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","hematologia"],
+    statement:
+      "Hombre de 65 años, sin antecedentes médicos de importancia, consulta por astenia y adinamia de varios meses de evolución. Refiere no haber tenido seguimiento médico en los últimos años. Al examen físico presenta palidez conjuntival, sin otros hallazgos relevantes. Se realiza hemograma que reporta: hemoglobina 9.9 g/dL, hematocrito 29%, volumen corpuscular medio (VCM) 75 fL y RDW 19%.\n¿Cuál de los siguientes sería el paso inicial más apropiado?",
+    options: [
+      { id: "A", label: "A", text: "Tacto rectal y programar colonoscopia." },
+      { id: "B", label: "B", text: "Espirometría y programar broncoscopia." },
+      { id: "C", label: "C", text: "Medir haptoglobina y realizar prueba de Coombs." },
+      { id: "D", label: "D", text: "Medir vitamina B12 y programar biopsia de médula ósea." },
+    ],
+    correctOptionId: "A",
+    explanation: "El paciente presenta una anemia microcítica con anisocitosis, hallazgos altamente sugestivos de anemia ferropénica. En hombres mayores de 50 años, la principal causa que debe descartarse es pérdida crónica de sangre por cáncer colorrectal hasta demostrar lo contrario.",
+    keyPoints: [
+      "Cuando veas: hombre mayor de 50 años con anemia microcítica (VCM bajo) y RDW elevado (anisocitosis).",
+      "Debes pensar en: anemia ferropénica → descartar sangrado gastrointestinal oculto por cáncer colorrectal como paso inicial.",
+      "En hombres mayores la ferropenia se trata como sangrado GI hasta demostrar lo contrario — NO iniciar con estudios hematológicos complejos.",
+      "Tacto rectal + colonoscopia es el paso inicial; no espirometría, Coombs ni B12/biopsia medular.",
+      "Tema: Anemia ferropénica en el adulto mayor.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de hematología/medicina interna porque evalúa el abordaje inicial de anemia microcítica en un adulto mayor, pidiendo identificar el paso diagnóstico más apropiado frente a opciones que priorizan estudios hematológicos o de otros sistemas.
+
+La clave no es buscar estudios hematológicos complejos ni descartar causas pulmonares o carenciales sin antes investigar sangrado gastrointestinal.
+La clave es:
+Hombre mayor de 65 años + anemia microcítica con anisocitosis (VCM 75, RDW 19%) → anemia ferropénica → en hombres >50 años la principal causa a descartar es sangrado GI oculto por cáncer colorrectal → tacto rectal y colonoscopia.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 65 años sin antecedentes médicos de importancia.
+• Astenia y adinamia de varios meses de evolución.
+• Sin seguimiento médico en los últimos años.
+• Palidez conjuntival al examen físico.
+• Hemograma: Hb 9.9 g/dL, Hto 29%, VCM 75 fL (microcitosis), RDW 19% (anisocitosis).
+• La pregunta pide el paso inicial más apropiado.
+
+Recordemos anemia ferropénica en el adulto mayor:
+• VCM bajo + RDW elevado = patrón altamente sugestivo de ferropenia.
+• En hombres mayores de 50 años y mujeres posmenopáusicas: la causa más importante es pérdida crónica de sangre por vía gastrointestinal.
+• El cáncer colorrectal debe descartarse hasta demostrar lo contrario.
+• El abordaje inicial incluye: ferritina, hierro, transferrina + investigación GI (tacto rectal, colonoscopia).
+• NO iniciar con Coombs (anemia hemolítica), B12/biopsia medular (anemia megaloblástica) ni broncoscopia (vía respiratoria).
+
+Por lo tanto:
+El paso inicial más apropiado es tacto rectal y programar colonoscopia para descartar sangrado gastrointestinal oculto, especialmente cáncer colorrectal.
+
+¿Por qué la opción A es la respuesta correcta?
+El tacto rectal y la colonoscopia son el abordaje inicial indicado porque:
+• En hombres mayores con anemia ferropénica, el sangrado GI oculto (CCR, pólipos, angiodisplasias) es la causa prioritaria a investigar.
+• El tacto rectal puede detectar masas rectales y sangrado.
+• La colonoscopia permite visualizar todo el colon y detectar neoplasias.
+
+¿Por qué fallan las otras opciones?
+Opción B (espirometría y broncoscopia): orientada a vía respiratoria; no es el paso inicial en anemia microcítica sin datos respiratorios.
+Opción C (haptoglobina y Coombs): estudios para anemia hemolítica; el patrón microcítico con RDW elevado orienta a ferropenia, no hemólisis.
+Opción D (vitamina B12 y biopsia de médula ósea): orientado a anemia megaloblástica o aplasia; el VCM bajo descarta megaloblastosis como causa principal.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan:
+"Anemia" y buscan estudios hematológicos complejos (Coombs, biopsia medular, B12).
+Pero en un hombre mayor con microcitosis, la prioridad es encontrar la fuente de sangrado, no clasificar el tipo de anemia con estudios avanzados.
+Aquí el dato decisivo es:
+Hombre >50 años + VCM bajo + RDW alto = ferropenia → sangrado GI → tacto rectal + colonoscopia.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar patrón microcítico con anisocitosis (VCM bajo, RDW alto).
+2. Confirmar ferropenia con ferritina e índices de hierro.
+3. En hombres >50 y mujeres posmenopáusicas: investigar sangrado GI.
+4. Tacto rectal + colonoscopia como paso inicial prioritario.
+
+Perlas de examen
+✅ Hombre >50 años + anemia ferropénica = sangrado GI hasta demostrar lo contrario.
+✅ VCM bajo + RDW alto = patrón clásico de ferropenia.
+✅ Cáncer colorrectal es la causa más importante a descartar.
+✅ NO iniciar con Coombs, B12 o biopsia medular en microcitosis sin investigar GI.
+✅ Tacto rectal + colonoscopia = abordaje inicial correcto.
+
 Referencias
 • Harrison's Principles of Internal Medicine.
 • Williams Hematology.
-• Hoffbrand's Essential Haematology.
-• UpToDate: Iron Deficiency Anemia in Adults.
-• British Society of Gastroenterology Guidelines on Iron Deficiency Anemia.`,
+• British Society of Gastroenterology Guidelines for Iron Deficiency Anaemia.
+• American Gastroenterological Association Clinical Practice Guidelines.
+• UpToDate: Approach to the adult patient with anemia.`,
+  },
+
+  {
+    id: "dr-q-169",
+    examArea: "CARDIOLOGÍA",
+    topic: "CARDIOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","cardiologia"],
+    statement:
+      "Con respecto a los mecanismos fisiopatológicos de las taquiarritmias, señale cuál de las siguientes NO se explica por un mecanismo de reentrada:",
+    options: [
+      { id: "A", label: "A", text: "Flutter o aleteo auricular." },
+      { id: "B", label: "B", text: "Taquicardia ventricular polimórfica tipo torsade de pointes." },
+      { id: "C", label: "C", text: "Taquicardia auriculoventricular recíproca en el síndrome de Wolff-Parkinson-White." },
+      { id: "D", label: "D", text: "Taquicardias asociadas a defectos del tabique interauricular." },
+    ],
+    correctOptionId: "B",
+    explanation: "La torsade de pointes es una taquicardia ventricular polimórfica asociada a prolongación del intervalo QT y se produce principalmente por actividad desencadenada secundaria a posdespolarizaciones tempranas (early afterdepolarizations), no por mecanismos de reentrada.",
+    keyPoints: [
+      "Cuando veas: pregunta que pide identificar qué arritmia NO se explica por mecanismo de reentrada.",
+      "Debes pensar en: torsade de pointes = actividad desencadenada por posdespolarizaciones tempranas (EAP), NO reentrada.",
+      "El flutter auricular típico es una macrorreentrada auricular (SÍ reentrada).",
+      "La taquicardia AV recíproca en WPW y las taquicardias con defecto del tabique interauricular son por reentrada.",
+      "Tema: Mecanismos electrofisiológicos de las arritmias.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de cardiología porque evalúa los mecanismos electrofisiológicos de las taquiarritmias, pidiendo identificar cuál NO se explica por reentrada frente a arritmias clásicamente mediadas por este mecanismo.
+
+La clave no es asumir que todas las taquicardias ventriculares son por reentrada ni confundir mecanismos de actividad desencadenada con reentrada.
+La clave es:
+Torsade de pointes = taquicardia ventricular polimórfica asociada a QT prolongado → actividad desencadenada por posdespolarizaciones tempranas (EAP), NO reentrada.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Pregunta teórica sobre mecanismos fisiopatológicos de las taquiarritmias.
+• Se pide identificar cuál de las opciones NO se explica por mecanismo de reentrada.
+
+Recordemos mecanismos de arritmias:
+• Reentrada: impulso que circula en un circuito cerrado (flutter auricular, TV monomórfica, taquicardia AV recíproca en WPW, taquicardias con defecto del tabique interauricular).
+• Actividad desencadenada: despolarizaciones anómalas que ocurren durante o después de la repolarización (torsade de pointes por EAP).
+• Automatismo anormal: células con despolarización diastólica espontánea acelerada.
+• Torsade de pointes: TV polimórfica con QT prolongado; mecanismo = posdespolarizaciones tempranas (early afterdepolarizations), NO reentrada.
+
+Por lo tanto:
+La taquicardia ventricular polimórfica tipo torsade de pointes NO se explica por mecanismo de reentrada, sino por actividad desencadenada.
+
+¿Por qué la opción B es la respuesta correcta?
+La torsade de pointes se produce principalmente por:
+• Prolongación del intervalo QT (congénita o adquirida).
+• Posdespolarizaciones tempranas (EAP) durante la fase 2 de la repolarización.
+• Actividad desencadenada, no circuito de reentrada.
+
+¿Por qué fallan las otras opciones?
+Opción A (flutter o aleteo auricular): es una macrorreentrada auricular típica; el impulso circula por un circuito reentrante en la aurícula derecha.
+Opción C (taquicardia AV recíproca en WPW): es una arritmia por reentrada que utiliza la vía accesoria y el nodo AV como componentes del circuito.
+Opción D (taquicardias asociadas a defectos del tabique interauricular): frecuentemente mediadas por reentrada a través del defecto y estructuras adyacentes.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan:
+"Taquicardia ventricular" y asumen que todas las TV son por reentrada.
+Pero la torsade de pointes es una TV polimórfica con mecanismo de actividad desencadenada (EAP), asociada a QT prolongado.
+La trampa es elegir cualquier taquicardia ventricular sin distinguir el mecanismo electrofisiológico subyacente.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Reentrada: flutter auricular, TV monomórfica, taquicardia AV recíproca (WPW), taquicardias con CIA.
+2. Actividad desencadenada: torsade de pointes (EAP + QT prolongado).
+3. La pregunta pide la que NO es reentrada → torsade de pointes.
+
+Perlas de examen
+✅ Torsade de pointes = actividad desencadenada (EAP), NO reentrada.
+✅ Flutter auricular = macrorreentrada auricular clásica.
+✅ Taquicardia AV recíproca en WPW = reentrada por vía accesoria.
+✅ Taquicardias con defecto del tabique interauricular = reentrada.
+✅ QT prolongado + TV polimórfica = pensar en torsade de pointes.
+
+Referencias
+• Braunwald's Heart Disease.
+• ESC Guidelines for the Management of Ventricular Arrhythmias.
+• ACC/AHA/HRS Guideline for Management of Arrhythmias.
+• UpToDate: Acquired Long QT Syndrome and Torsades de Pointes.
+• Zipes DP et al. Elucidation of reentrant circuits and mechanisms of arrhythmias.`,
+  },
+
+  {
+    id: "dr-q-170",
+    examArea: "CARDIOLOGÍA",
+    topic: "CARDIOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","cardiologia"],
+    statement:
+      "Paciente de 60 años con antecedente de síndrome coronario agudo consulta al servicio de urgencias por palpitaciones y deterioro del estado general. El electrocardiograma muestra una taquicardia regular de complejo ancho con duración del QRS mayor de 0.20 segundos. Al examen físico presenta presión arterial de 70/40 mmHg, diaforesis, piel fría y desorientación.\n¿Cuál es el tratamiento de elección?",
+    options: [
+      { id: "A", label: "A", text: "Lidocaína intravenosa." },
+      { id: "B", label: "B", text: "Amiodarona intravenosa." },
+      { id: "C", label: "C", text: "Procainamida intravenosa." },
+      { id: "D", label: "D", text: "Cardioversión eléctrica urgente." },
+    ],
+    correctOptionId: "D",
+    explanation: "El paciente presenta una taquicardia de complejo ancho asociada a inestabilidad hemodinámica manifestada por hipotensión y alteración del estado mental. En este contexto, la conducta inmediata indicada es la cardioversión eléctrica sincronizada urgente.",
+    keyPoints: [
+      "Cuando veas: taquicardia de complejo ancho + hipotensión + alteración del estado mental.",
+      "Debes pensar en: taquicardia inestable → cardioversión eléctrica sincronizada urgente (NO antiarrítmicos IV primero).",
+      "Todo paciente con taquicardia y hipotensión debe considerarse hemodinámicamente inestable.",
+      "Lidocaína, amiodarona y procainamida son para pacientes ESTABLES con TV; en inestabilidad el tiempo es crítico.",
+      "Tema: Taquicardia de complejo ancho inestable — manejo ACLS.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de cardiología/urgencias porque evalúa el manejo de taquicardia de complejo ancho con inestabilidad hemodinámica, pidiendo identificar el tratamiento de elección frente a opciones que priorizan antiarrítmicos intravenosos.
+
+La clave no es buscar inmediatamente un antiarrítmico intravenoso ni diferenciar TV de TSV con aberrancia antes de estabilizar al paciente.
+La clave es:
+Taquicardia regular de complejo ancho + hipotensión (70/40) + alteración del estado mental = inestabilidad hemodinámica → cardioversión eléctrica sincronizada urgente.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 60 años con antecedente de síndrome coronario agudo.
+• Palpitaciones y deterioro del estado general.
+• ECG: taquicardia regular de complejo ancho con QRS >0.20 segundos.
+• Examen físico: PA 70/40 mmHg, diaforesis, piel fría, desorientación.
+• La pregunta pide el tratamiento de elección.
+
+Recordemos manejo de taquiarritmias según ACLS:
+• Criterios de inestabilidad hemodinámica: hipotensión, alteración del estado mental, dolor torácico isquémico, insuficiencia cardíaca aguda, choque.
+• Taquicardia inestable con pulso → cardioversión eléctrica sincronizada INMEDIATA.
+• Antiarrítmicos IV (lidocaína, amiodarona, procainamida) se reservan para pacientes ESTABLES con taquicardia de complejo ancho (probable TV).
+• En inestabilidad, cada minuto de retraso empeora el pronóstico; no hay tiempo para prueba terapéutica con fármacos.
+
+Por lo tanto:
+El tratamiento de elección es cardioversión eléctrica urgente (sincronizada).
+
+¿Por qué la opción D es la respuesta correcta?
+La cardioversión eléctrica sincronizada urgente es el tratamiento indicado porque:
+• El paciente cumple criterios de inestabilidad: hipotensión severa y alteración del estado mental.
+• La taquicardia de complejo ancho inestable requiere restauración inmediata del ritmo sinular.
+• Los antiarrítmicos no deben retrasar la cardioversión en pacientes inestables.
+
+¿Por qué fallan las otras opciones?
+Opción A (lidocaína IV): antiarrítmico para TV estable; no es primera línea en inestabilidad hemodinámica.
+Opción B (amiodarona IV): útil en TV estable o como alternativa si la cardioversión falla; no debe retrasar la cardioversión en inestabilidad.
+Opción C (procainamida IV): antiarrísmico para TV estable con QRS ancho; contraindicado como primera opción en paciente con hipotensión y alteración mental.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes observan:
+"Taquicardia ventricular" y buscan inmediatamente un antiarrítmico (lidocaína, amiodarona).
+Pero la prioridad en taquicardia INESTABLE es la cardioversión eléctrica, no la farmacoterapia.
+Aquí el dato decisivo es:
+PA 70/40 + desorientación = inestabilidad → cardioversión eléctrica urgente.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar estabilidad hemodinámica (PA, estado mental, perfusión).
+2. Si inestable con pulso → cardioversión eléctrica sincronizada inmediata.
+3. Si estable → entonces considerar antiarrítmicos (amiodarona, lidocaína, procainamida).
+4. No retrasar cardioversión con fármacos en paciente inestable.
+
+Perlas de examen
+✅ Taquicardia inestable con pulso = cardioversión eléctrica sincronizada inmediata.
+✅ Hipotensión + alteración mental = criterios de inestabilidad.
+✅ Antiarrítmicos IV son para pacientes ESTABLES con TV.
+✅ No diferenciar TV vs TSV con aberrancia antes de cardiovertir si hay inestabilidad.
+✅ Antecedente de SCA aumenta la sospecha de arritmia ventricular, pero el manejo depende de la estabilidad.
+
+Referencias
+• ACLS Provider Manual – American Heart Association.
+• ACC/AHA/HRS Guideline for the Management of Ventricular Arrhythmias.
+• ESC Guidelines for the Management of Supraventricular Tachycardia.
+• Braunwald's Heart Disease.
+• UpToDate: Wide QRS complex tachycardias: Approach to management.`,
+  },
+
+  {
+    id: "dr-q-171",
+    examArea: "CARDIOLOGÍA",
+    topic: "CARDIOLOGÍA",
+    difficulty: "hard",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","cardiologia"],
+    statement:
+      "Paciente de 76 años con antecedentes de hipertensión arterial y diabetes mellitus consulta al servicio de urgencias por cuadro de 72 horas de evolución consistente en palpitaciones y disminución progresiva de la tolerancia al esfuerzo. A su llegada se documenta fibrilación auricular con respuesta ventricular aproximada de 120 lpm. Se encuentra hemodinámicamente estable.\n¿Cuál de las siguientes afirmaciones es FALSA?",
+    options: [
+      { id: "A", label: "A", text: "Este paciente debe estar anticoagulado oralmente de por vida, salvo contraindicación." },
+      { id: "B", label: "B", text: "Si decidimos realizar una cardioversión a su llegada a urgencias, sería necesario realizar previamente una ecocardiografía transesofágica." },
+      { id: "C", label: "C", text: "Al ser el primer episodio de fibrilación auricular es el candidato idóneo para realizar una ablación con catéter." },
+      { id: "D", label: "D", text: "Para controlar la frecuencia cardíaca podrían emplearse betabloqueantes." },
+    ],
+    correctOptionId: "C",
+    explanation: "La ablación con catéter no constituye el manejo inicial rutinario de un primer episodio de fibrilación auricular. La indicación depende de múltiples factores clínicos, persistencia de síntomas, recurrencias y respuesta al tratamiento médico.",
+    keyPoints: [
+      "Cuando veas: FA de 72 h de evolución en anciano con HTA y DM, estable, pregunta cuál afirmación es FALSA.",
+      "Debes pensar en: ablación NO es manejo inicial rutinario del primer episodio de FA.",
+      "CHA₂DS₂-VASc elevado (edad, HTA, DM) indica anticoagulación oral de por vida salvo contraindicación.",
+      "FA >48 h requiere ETE o anticoagulación previa antes de cardioversión; betabloqueantes son válidos para control de frecuencia.",
+      "Tema: Fibrilación auricular — manejo y afirmaciones falsas.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de cardiología porque evalúa una trampa frecuente: asumir que el primer episodio de fibrilación auricular obliga a ablación con catéter como tratamiento definitivo inicial.
+
+La clave no es pensar que todo primer episodio de FA requiere ablación inmediata.
+La clave es:
+Primer episodio de FA ≠ candidato idóneo rutinario para ablación; la ablación depende de síntomas, recurrencias y respuesta al tratamiento médico.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 76 años con HTA y DM, FA de 72 horas de evolución.
+• Palpitaciones y disminución de tolerancia al ejercicio; FC ~120 lpm, hemodinámicamente estable.
+• Pregunta de afirmación FALSA sobre manejo de FA.
+
+Recordemos el manejo de la fibrilación auricular:
+• Anticoagulación oral según CHA₂DS₂-VASc (este paciente tiene múltiples puntos).
+• Control de frecuencia con betabloqueantes es apropiado.
+• Cardioversión si se decide: FA >48 h requiere ETE o anticoagulación previa adecuada.
+• Ablación con catéter no es manejo inicial rutinario del primer episodio; se reserva según síntomas y falla terapéutica.
+
+Por lo tanto:
+La afirmación FALSA es que al ser el primer episodio es el candidato idóneo para ablación con catéter.
+
+¿Por qué la opción C es la respuesta correcta (afirmación falsa)?
+La ablación no constituye el manejo inicial rutinario de un primer episodio de FA.
+Su indicación depende de múltiples factores: persistencia de síntomas, recurrencias, respuesta al tratamiento médico y preferencia del paciente.
+
+¿Por qué fallan las otras opciones (son VERDADERAS)?
+Opción A: con CHA₂DS₂-VASc elevado, la anticoagulación oral de por vida está indicada salvo contraindicación.
+Opción B: con FA >48 h, la cardioversión requiere precaución; ETE previa es razonable para descartar trombo auricular.
+Opción D: betabloqueantes son opción válida para control de frecuencia en FA.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen "primer episodio" y piensan que debe corregirse definitivamente con ablación.
+La ablación es una opción avanzada, no el paso inicial automático en todo primer episodio.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar estabilidad y duración de la FA.
+2. Anticoagular según CHA₂DS₂-VASc.
+3. Controlar frecuencia o ritmo según síntomas y contexto.
+4. Reservar ablación para casos seleccionados, no como rutina del primer episodio.
+
+Perlas de examen
+✅ Primer episodio de FA ≠ ablación automática.
+✅ CHA₂DS₂-VASc guía anticoagulación (edad, HTA, DM suman puntos).
+✅ FA >48 h: ETE o anticoagulación antes de cardioversión.
+✅ Betabloqueantes válidos para control de frecuencia.
+✅ Preguntas de "afirmación FALSA" exigen identificar la excepción incorrecta.
+
+Referencias
+• ESC Guidelines for the Management of Atrial Fibrillation.
+• ACC/AHA/HRS Guideline for the Management of Atrial Fibrillation.
+• Braunwald's Heart Disease.
+• UpToDate: Atrial Fibrillation in Adults.
+• UpToDate: Catheter ablation for atrial fibrillation.`,
+  },
+
+  {
+    id: "dr-q-172",
+    examArea: "NEUMOLOGÍA",
+    topic: "NEUMOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","neumologia"],
+    statement:
+      "Hombre de 65 años con antecedente de enfermedad pulmonar obstructiva crónica (EPOC) y tabaquismo activo consulta por sensación de alza térmica, tos productiva y disnea de 3 días de evolución. En la radiografía de tórax se evidencia un infiltrado localizado en el lóbulo inferior izquierdo. Al examen físico se encuentra consciente, orientado y sin signos de choque.\n¿Cuál es la conducta más adecuada respecto al tratamiento y lugar de manejo?",
+    options: [
+      { id: "A", label: "A", text: "Tratamiento antibiótico oral y manejo ambulatorio." },
+      { id: "B", label: "B", text: "Tratamiento antibiótico intravenoso y hospitalización." },
+      { id: "C", label: "C", text: "Manejo en urgencias con observación por 6 horas y egreso sin antibióticos." },
+      { id: "D", label: "D", text: "Ingreso a unidad de cuidados intensivos para ventilación mecánica." },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente presenta una neumonía adquirida en la comunidad asociada a una comorbilidad importante (EPOC), edad avanzada y compromiso radiológico pulmonar. Estos factores aumentan el riesgo de complicaciones y justifican manejo intrahospitalario con antibioticoterapia apropiada.",
+    keyPoints: [
+      "Cuando veas: neumonía en anciano con EPOC, infiltrado en Rx, estable pero sin choque.",
+      "Debes pensar en: estratificación de riesgo → hospitalización con ATB IV, no manejo ambulatorio.",
+      "EPOC + edad avanzada + neumonía confirmada aumentan riesgo de complicaciones.",
+      "La ausencia de choque no significa automáticamente manejo ambulatorio en comorbilidades importantes.",
+      "Tema: Neumonía adquirida en la comunidad — estratificación de riesgo.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de neumología porque evalúa una trampa frecuente: manejar ambulatoriamente toda neumonía en paciente "estable" sin estratificar comorbilidades y factores de riesgo.
+
+La clave no es el infiltrado aislado ni la ausencia de choque como único criterio.
+La clave es:
+Neumonía + EPOC + edad 65 años + infiltrado en Rx → hospitalización con antibiótico intravenoso.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 65 años con EPOC y tabaquismo activo.
+• Fiebre, tos productiva y disnea de 3 días; infiltrado en lóbulo inferior izquierdo.
+• Consciente, orientado, sin signos de choque.
+• Comorbilidad respiratoria importante que eleva el riesgo de complicaciones.
+
+Recordemos la NAC y estratificación:
+• La radiografía confirma neumonía; el manejo depende de gravedad y comorbilidades.
+• EPOC y edad avanzada son factores que favorecen hospitalización.
+• Escalas como CURB-65 o PSI ayudan a decidir lugar de manejo.
+• ATB IV en hospitalizado; ambulatorio solo en bajo riesgo sin comorbilidades graves.
+
+Por lo tanto:
+La conducta más adecuada es tratamiento antibiótico intravenoso y hospitalización.
+
+¿Por qué la opción B es la respuesta correcta?
+El paciente tiene neumonía confirmada con factores de riesgo (EPOC, edad) que justifican manejo intrahospitalario y antibioticoterapia IV para reducir complicaciones.
+
+¿Por qué fallan las otras opciones?
+Opción A (ATB oral ambulatorio): subestima el riesgo por EPOC y edad; no es manejo apropiado en este escenario.
+Opción C (observación 6 h sin ATB): inadecuado ante neumonía confirmada con síntomas y comorbilidad.
+Opción D (UCI y VM): no hay criterios de insuficiencia respiratoria grave ni choque; es sobretratamiento.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes ven "sin signos de choque" y eligen manejo ambulatorio.
+La estratificación integra edad, comorbilidades (EPOC) y extensión del cuadro, no solo estabilidad hemodinámica momentánea.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar neumonía (clínica + Rx).
+2. Estratificar riesgo (edad, comorbilidades, gasometría si indicada).
+3. Decidir lugar de manejo y vía de ATB.
+4. EPOC + neumonía en anciano → típicamente hospitalización.
+
+Perlas de examen
+✅ EPOC + NAC en anciano → hospitalizar con ATB IV.
+✅ Estabilidad hemodinámica ≠ bajo riesgo automático.
+✅ UCI solo si insuficiencia respiratoria grave o choque.
+✅ CURB-65/PSI guían decisión ambulatoria vs hospitalaria.
+✅ Infiltrado en Rx confirma neumonía, no define gravedad sola.
+
+Referencias
+• IDSA/ATS Guidelines for Community-Acquired Pneumonia.
+• GOLD Report.
+• Harrison's Principles of Internal Medicine.
+• Mandell, Douglas, and Bennett's Principles and Practice of Infectious Diseases.
+• UpToDate: Community-acquired pneumonia in adults.`,
+  },
+
+  {
+    id: "dr-q-173",
+    examArea: "ENDOCRINOLOGÍA",
+    topic: "ENDOCRINOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","endocrinologia"],
+    statement:
+      "Paciente de 53 años con diabetes mellitus tipo 2 en tratamiento con metformina a dosis plena consulta por polidipsia, poliuria, polifagia y pérdida de peso no intencionada en los últimos meses. Los estudios de laboratorio muestran una HbA1c de 9.5%. No se documentan episodios de cetoacidosis ni otras complicaciones agudas.\n¿Cuál es el siguiente paso más apropiado en el manejo?",
+    options: [
+      { id: "A", label: "A", text: "Añadir un inhibidor del cotransportador sodio-glucosa tipo 2 (iSGLT2)." },
+      { id: "B", label: "B", text: "Añadir un agonista del receptor GLP-1." },
+      { id: "C", label: "C", text: "Iniciar insulinoterapia." },
+      { id: "D", label: "D", text: "Añadir una sulfonilurea." },
+    ],
+    correctOptionId: "C",
+    explanation: "El paciente presenta hiperglucemia sintomática con manifestaciones clásicas de catabolismo metabólico, incluyendo poliuria, polidipsia, polifagia y pérdida de peso. En este escenario, las guías recomiendan iniciar insulinoterapia independientemente de que se encuentre recibiendo tratamiento oral.",
+    keyPoints: [
+      "Cuando veas: DM2 con poliuria, polidipsia, polifagia, pérdida de peso y HbA1c 9.5% pese a metformina plena.",
+      "Debes pensar en: síntomas de catabolismo metabólico → insulinoterapia, no solo intensificar oral.",
+      "La pérdida de peso involuntaria en DM mal controlada es dato de alarma de déficit de insulina.",
+      "HbA1c elevada sin síntomas puede manejarse con terapia dual; con síntomas catabólicos → insulina.",
+      "Tema: Indicaciones de insulinoterapia en diabetes mellitus tipo 2.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de endocrinología porque evalúa una trampa frecuente: intensificar con iSGLT2, GLP-1 o sulfonilurea solo por HbA1c elevada, ignorando síntomas de catabolismo metabólico.
+
+La clave no es la cifra de HbA1c aislada.
+La clave es:
+Poliuria + polidipsia + polifagia + pérdida de peso = déficit de insulina → insulinoterapia aunque ya reciba metformina.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 53 años con DM2 en metformina a dosis plena.
+• Polidipsia, poliuria, polifagia y pérdida de peso no intencionada.
+• HbA1c 9.5%; sin cetoacidosis ni complicaciones agudas documentadas.
+• Cuadro de hiperglucemia sintomática con manifestaciones catabólicas.
+
+Recordemos indicaciones de insulina en DM2:
+• HbA1c elevada sin síntomas: intensificar con segundo agente (iSGLT2, GLP-1, etc.).
+• Síntomas de catabolismo (pérdida de peso, poliuria severa): insulinoterapia indicada.
+• La pérdida de peso en DM mal controlada sugiere déficit relativo de insulina.
+• La insulina corrige rápidamente el metabolismo y alivia síntomas.
+
+Por lo tanto:
+El siguiente paso más apropiado es iniciar insulinoterapia.
+
+¿Por qué la opción C es la respuesta correcta?
+Las guías recomiendan insulinoterapia ante hiperglucemia sintomática con manifestaciones de catabolismo metabólico, independientemente del tratamiento oral actual.
+
+¿Por qué fallan las otras opciones?
+Opción A (iSGLT2): apropiado para intensificación sin síntomas catabólicos; no es prioridad aquí.
+Opción B (GLP-1): similar; útil para intensificación pero no sustituye insulina con catabolismo activo.
+Opción D (sulfonilurea): no aborda el déficit de insulina con la misma eficacia; riesgo de hipoglucemia sin resolver catabolismo.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes ven HbA1c 9.5% y eligen terapia dual o triple oral.
+Los síntomas catabólicos (especialmente pérdida de peso) cambian la indicación a insulina.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar síntomas además de HbA1c.
+2. Si hay catabolismo (poliuria, polifagia, pérdida de peso) → insulina.
+3. Si asintomático con HbA1c elevada → intensificar terapia oral.
+4. Metformina plena no excluye necesidad de insulina con síntomas.
+
+Perlas de examen
+✅ Pérdida de peso + poliuria en DM2 = pensar insulina.
+✅ HbA1c 9.5% sin síntomas ≠ misma conducta que con catabolismo.
+✅ iSGLT2/GLP-1 son para intensificación sin déficit sintomático de insulina.
+✅ ADA: insulina indicada con síntomas de hiperglucemia y catabolismo.
+✅ No confundir con CAD: aquí no hay cetoacidosis pero sí déficit funcional.
+
+Referencias
+• American Diabetes Association (ADA) Standards of Care.
+• EASD Consensus Report on Hyperglycemia Management.
+• Williams Textbook of Endocrinology.
+• Harrison's Principles of Internal Medicine.
+• UpToDate: Insulin therapy in type 2 diabetes mellitus.`,
+  },
+
+  {
+    id: "dr-q-174",
+    examArea: "NEUMOLOGÍA",
+    topic: "NEUMOLOGÍA",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","neumologia"],
+    statement:
+      "Hombre de 72 años con antecedente de enfermedad pulmonar obstructiva crónica (EPOC) en tratamiento con tiotropio. Durante los últimos 6 meses ha presentado dos exacerbaciones que han requerido atención médica. En los estudios de laboratorio presenta un recuento de eosinófilos de 150 células/μL.\n¿Cuál es el siguiente paso más apropiado en el manejo?",
+    options: [
+      { id: "A", label: "A", text: "Agregar un corticoide inhalado." },
+      { id: "B", label: "B", text: "Cambiar a LAMA + LABA." },
+      { id: "C", label: "C", text: "Iniciar roflumilast." },
+      { id: "D", label: "D", text: "Mantener el tratamiento actual." },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente presenta EPOC con exacerbaciones persistentes pese al tratamiento con un LAMA en monoterapia. Según las recomendaciones actuales, el siguiente paso consiste en escalar a broncodilatación dual con LAMA + LABA. El recuento de eosinófilos de 150 células/μL no favorece el uso inicial de corticoides inhalados.",
+    keyPoints: [
+      "Cuando veas: EPOC con ≥2 exacerbaciones en 6 meses pese a LAMA (tiotropio) y eosinófilos 150/μL.",
+      "Debes pensar en: escalar a LAMA + LABA antes de añadir corticoide inhalado.",
+      "Eosinófilos ≥300/μL favorecen beneficio de ICS; con 150 no es el siguiente paso inicial.",
+      "GOLD: exacerbaciones persistentes en monoterapia LAMA → doble broncodilatación.",
+      "Tema: Tratamiento escalonado del EPOC.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de neumología porque evalúa una trampa frecuente: añadir corticoide inhalado ante exacerbaciones sin verificar el recuento de eosinófilos adecuado.
+
+La clave no es ICS automático por exacerbaciones.
+La clave es:
+EPOC no controlado con LAMA + ≥2 exacerbaciones → LAMA + LABA; eosinófilos 150/μL no favorecen ICS inicial.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 72 años con EPOC en tiotropio (LAMA) en monoterapia.
+• Dos exacerbaciones en 6 meses que requirieron atención médica.
+• Eosinófilos 150 células/μL (por debajo del umbral típico para ICS).
+• Necesidad de escalamiento terapéutico según GOLD.
+
+Recordemos el tratamiento escalonado del EPOC:
+• LAMA en monoterapia es primer escalón en EPOC moderado-severo.
+• Exacerbaciones persistentes → escalar a LAMA + LABA (doble broncodilatación).
+• ICS se considera con eosinófilos ≥300/μL y exacerbaciones, o asma-EPOC overlap.
+• Con eosinófilos 150, el beneficio de ICS es menor; no es el siguiente paso inicial.
+
+Por lo tanto:
+El siguiente paso más apropiado es cambiar a LAMA + LABA.
+
+¿Por qué la opción B es la respuesta correcta?
+Según GOLD, ante exacerbaciones persistentes pese a LAMA en monoterapia, el escalamiento inicial es doble broncodilatación (LAMA + LABA).
+
+¿Por qué fallan las otras opciones?
+Opción A (añadir ICS): eosinófilos 150 no favorecen ICS como siguiente paso; mayor beneficio con ≥300.
+Opción C (roflumilast): indicado en bronquitis crónica con exacerbaciones frecuentes y FEV1 bajo, no como escalón estándar aquí.
+Opción D (mantener actual): inadecuado con 2 exacerbaciones en 6 meses; requiere escalamiento.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes ven "dos exacerbaciones" y eligen corticoide inhalado automáticamente.
+El recuento de eosinófilos guía la adición de ICS; con 150/μL se prioriza LAMA + LABA.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar adherencia y técnica inhalatoria.
+2. Si exacerbaciones pese a LAMA → LAMA + LABA.
+3. Considerar ICS si eosinófilos ≥300 y exacerbaciones persistentes.
+4. Roflumilast en subgrupo específico (bronquitis crónica, FEV1 bajo).
+
+Perlas de examen
+✅ LAMA + exacerbaciones → escalar a LAMA + LABA.
+✅ ICS en EPOC: eosinófilos ≥300/μL como guía.
+✅ Eosinófilos 150 no justifican ICS como primer escalón.
+✅ GOLD 2025: doble broncodilatación antes de triple terapia en muchos casos.
+✅ No mantener monoterapia con exacerbaciones recurrentes.
+
+Referencias
+• GOLD Report 2025.
+• Global Initiative for Chronic Obstructive Lung Disease.
+• Harrison's Principles of Internal Medicine.
+• Murray & Nadel's Textbook of Respiratory Medicine.
+• UpToDate: COPD: Treatment of stable disease.`,
+  },
+
+  {
+    id: "dr-q-175",
+    examArea: "CIRUGÍA GENERAL",
+    topic: "CIRUGÍA GENERAL",
+    difficulty: "medium",
+    tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","cirugia_general"],
+    statement:
+      "Hombre de 25 años es llevado al servicio de urgencias tras sufrir un accidente de tránsito con trauma abdominal contuso. Al ingreso presenta dolor abdominal difuso, presión arterial de 85/50 mmHg y frecuencia cardíaca de 125 lpm. Durante la evaluación inicial se realiza un FAST que resulta positivo para líquido libre intraabdominal.\n¿Cuál es la conducta más adecuada?",
+    options: [
+      { id: "A", label: "A", text: "Realizar una tomografía abdominal contrastada." },
+      { id: "B", label: "B", text: "Llevar a laparotomía exploratoria." },
+      { id: "C", label: "C", text: "Observación en urgencias con reevaluación clínica seriada." },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente presenta trauma abdominal contuso asociado a inestabilidad hemodinámica y FAST positivo para líquido libre intraabdominal. Estos hallazgos sugieren hemorragia intraabdominal activa y constituyen indicación de exploración quirúrgica urgente.",
+    keyPoints: [
+      "Cuando veas: trauma abdominal contuso + inestabilidad hemodinámica (PA 85/50, FC 125) + FAST positivo.",
+      "Debes pensar en: hemorragia intraabdominal activa → laparotomía exploratoria urgente.",
+      "La estabilidad hemodinámica define el algoritmo: inestable + FAST (+) = cirugía, no TAC.",
+      "FAST positivo en paciente inestable es indicación de exploración quirúrgica inmediata.",
+      "Tema: Trauma abdominal cerrado.",
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de cirugía de trauma porque evalúa una trampa frecuente: solicitar tomografía abdominal en paciente hemodinámicamente inestable con FAST positivo.
+
+La clave no es TAC ni observación seriada.
+La clave es:
+Trauma abdominal contuso + inestabilidad hemodinámica + FAST positivo = laparotomía exploratoria urgente.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 25 años con trauma abdominal contuso por accidente de tránsito.
+• Dolor abdominal difuso, PA 85/50 mmHg, FC 125 lpm (inestabilidad hemodinámica).
+• FAST positivo para líquido libre intraabdominal.
+• Cuadro compatible con hemorragia intraabdominal activa.
+
+Recordemos el algoritmo de trauma abdominal cerrado:
+• Estabilidad hemodinámica es el primer dato que define la conducta.
+• Inestable + FAST positivo → laparotomía exploratoria urgente (no retrasar con TAC).
+• Estable + FAST positivo o duda → TAC abdominal contrastada para caracterizar lesiones.
+• Observación seriada solo en pacientes estables sin indicación quirúrgica clara.
+
+Por lo tanto:
+La conducta más adecuada es llevar a laparotomía exploratoria.
+
+¿Por qué la opción B es la respuesta correcta?
+La inestabilidad hemodinámica con FAST positivo sugiere hemorragia intraabdominal activa que requiere control quirúrgico urgente según ATLS y guías EAST.
+
+¿Por qué fallan las otras opciones?
+Opción A (TAC contrastada): contraindicada o inapropiada en paciente inestable; retrasa cirugía salvadora.
+Opción C (observación seriada): inaceptable con shock y FAST positivo; riesgo de muerte por hemorragia no controlada.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes recuerdan "trauma abdominal = TAC" sin evaluar primero la estabilidad hemodinámica.
+Inestable + FAST (+) = cirugía, no imagen.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Evaluar ABC y estabilidad hemodinámica.
+2. FAST en trauma abdominal con inestabilidad o mecanismo de alto riesgo.
+3. Inestable + FAST (+) → laparotomía.
+4. Estable → TAC para manejo selectivo/no operativo si indicado.
+
+Perlas de examen
+✅ Inestabilidad + FAST (+) = laparotomía exploratoria.
+✅ TAC se reserva para pacientes ESTABLES con trauma abdominal.
+✅ No confundir trauma penetrante con contuso: algoritmo similar en inestabilidad.
+✅ ATLS: no retrasar cirugía por estudios en paciente en shock.
+✅ FC 125 + PA 85/50 = inestabilidad hemodinámica.
+
+Referencias
+• Advanced Trauma Life Support (ATLS) 11th Edition.
+• Eastern Association for the Surgery of Trauma (EAST) Guidelines.
+• Western Trauma Association Critical Decisions in Trauma.
+• Sabiston Textbook of Surgery.
+• UpToDate: Blunt abdominal trauma in adults.`,
   },
   {
     id: "dr-q-176",
