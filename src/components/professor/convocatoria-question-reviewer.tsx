@@ -251,7 +251,7 @@ export function ConvocatoriaQuestionReviewer({
     : correctIndexFromId(currentQuestion.options, currentQuestion.correctOptionId);
 
   return (
-    <div className="space-y-6">
+    <div className={cn("space-y-6", isEditing && "pb-28")}>
       {/* Navegación superior */}
       <div className="flex flex-col gap-4 rounded-2xl border border-mq-border bg-mq-surface-raised/40 p-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
@@ -295,37 +295,9 @@ export function ConvocatoriaQuestionReviewer({
             Editar pregunta
           </button>
         ) : (
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={cancelEdit}
-              disabled={isPending}
-              className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/[0.05]"
-            >
-              <X className="h-4 w-4" />
-              Cancelar
-            </button>
-            {hasOverride ? (
-              <button
-                type="button"
-                onClick={handleRestore}
-                disabled={isPending}
-                className="inline-flex items-center gap-2 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-2.5 text-sm font-semibold text-amber-200 transition hover:bg-amber-500/15"
-              >
-                <RotateCcw className="h-4 w-4" />
-                Restaurar original
-              </button>
-            ) : null}
-            <button
-              type="button"
-              onClick={handleSave}
-              disabled={isPending}
-              className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-400 disabled:opacity-60"
-            >
-              <Save className="h-4 w-4" />
-              {isPending ? "Guardando…" : "Guardar"}
-            </button>
-          </div>
+          <span className="rounded-full border border-mq-accent/30 bg-mq-accent/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-mq-accent">
+            Modo edición
+          </span>
         )}
       </div>
 
@@ -418,6 +390,55 @@ export function ConvocatoriaQuestionReviewer({
       <p className="text-center text-xs text-mq-muted">
         ID: <code className="text-mq-muted/80">{currentQuestion.id}</code>
       </p>
+
+      {isEditing ? (
+        <div
+          className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#0A1F44]/95 px-4 py-3 shadow-[0_-12px_40px_-12px_rgb(0_0_0/0.5)] backdrop-blur-md md:left-64"
+          role="toolbar"
+          aria-label="Acciones de edición"
+        >
+          <div className="mx-auto flex max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-mq-muted">
+              Editando{" "}
+              <span className="font-semibold text-white">
+                pregunta {questionNumber}
+              </span>{" "}
+              de {total}
+            </p>
+            <div className="flex flex-wrap gap-2 sm:justify-end">
+              <button
+                type="button"
+                onClick={cancelEdit}
+                disabled={isPending}
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/[0.05]"
+              >
+                <X className="h-4 w-4" />
+                Cancelar
+              </button>
+              {hasOverride ? (
+                <button
+                  type="button"
+                  onClick={handleRestore}
+                  disabled={isPending}
+                  className="inline-flex items-center gap-2 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-2.5 text-sm font-semibold text-amber-200 transition hover:bg-amber-500/15"
+                >
+                  <RotateCcw className="h-4 w-4" />
+                  Restaurar
+                </button>
+              ) : null}
+              <button
+                type="button"
+                onClick={handleSave}
+                disabled={isPending}
+                className="inline-flex min-w-[8.5rem] items-center justify-center gap-2 rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgb(16_185_129/0.6)] transition hover:bg-emerald-400 disabled:opacity-60"
+              >
+                <Save className="h-4 w-4" />
+                {isPending ? "Guardando…" : "Guardar"}
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
