@@ -12,6 +12,7 @@ import { DR_Q_UNIVERSAL_QUESTIONS } from "@/data/dr-q-universal-questions";
 import { EXTENDED_QUESTIONS } from "@/data/extended-questions";
 import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
 import { UCC_CONV_2025_06_21_QUESTIONS } from "@/data/ucc-conv-2025-06-21-questions";
+import { UCC_CONV_2025_07_05_QUESTIONS } from "@/data/ucc-conv-2025-07-05-questions";
 import { UCC_PASTO_DIAGNOSTIC_QUESTIONS } from "@/data/ucc-pasto-diagnostico-questions";
 import { UCC_PASTO_PRO_QUESTIONS } from "@/data/ucc-pasto-pro-questions";
 import { UDEA_DIAGNOSTIC_QUESTIONS } from "@/data/udea-diagnostico-questions";
@@ -71,6 +72,7 @@ export function getAllRepositoryQuestions(): TrainingQuestion[] {
     UCC_PASTO_DIAGNOSTIC_QUESTIONS,
     UCC_PASTO_PRO_QUESTIONS,
     UCC_CONV_2025_06_21_QUESTIONS,
+    UCC_CONV_2025_07_05_QUESTIONS,
     DAILY_CHALLENGES,
   ]);
 }

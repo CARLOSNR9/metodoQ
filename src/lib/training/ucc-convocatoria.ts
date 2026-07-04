@@ -161,7 +161,13 @@ export async function resolveConvocatoriaAttempt(
   editionCode: string,
 ): Promise<UccConvocatoriaAttempt | null> {
   const stored = await getConvocatoriaAttempt(userId, editionCode);
-  if (stored) return stored;
+  const storedNeedsSessionData = stored
+    ? !stored.sessionQuestionIds?.length ||
+      !stored.answersByQuestionId ||
+      Object.keys(stored.answersByQuestionId).length === 0
+    : false;
+
+  if (stored && !storedNeedsSessionData) return stored;
 
   try {
     const results = await getUserDemoResults(userId);
@@ -169,16 +175,31 @@ export async function resolveConvocatoriaAttempt(
       (item) =>
         item.sessionType === "convocatoria" && item.convocatoriaEdition === editionCode,
     );
-    if (!match) return null;
+    if (!match) return stored ?? null;
 
-    const attempt = buildAttemptFromResult(editionCode, match);
+    const fromHistory = buildAttemptFromResult(editionCode, match);
+    const attempt = stored
+      ? {
+          ...stored,
+          sessionQuestionIds: stored.sessionQuestionIds?.length
+            ? stored.sessionQuestionIds
+            : fromHistory.sessionQuestionIds,
+          answersByQuestionId:
+            stored.answersByQuestionId &&
+            Object.keys(stored.answersByQuestionId).length > 0
+              ? stored.answersByQuestionId
+              : fromHistory.answersByQuestionId,
+          resultId: stored.resultId ?? fromHistory.resultId,
+        }
+      : fromHistory;
+
     void saveConvocatoriaAttempt(userId, attempt).catch((error) => {
       console.error("No se pudo sincronizar el intento de convocatoria.", error);
     });
     return attempt;
   } catch (error) {
     console.error("No se pudo resolver el intento de convocatoria.", error);
-    return null;
+    return stored ?? null;
   }
 }
 
