@@ -1,0 +1,169 @@
+PREGUNTA 41 (MEDICINA INTERNA - NEUMOLOGÍA / URGENCIAS)
+Hombre de 62 años, con antecedente de tuberculosis pulmonar tratada hace 10 años, ingresa al servicio de urgencias por presentar expectoración con sangre rutilante. Durante su evaluación, el paciente presenta un episodio súbito de tos expulsando aproximadamente 400 mL de sangre fresca en menos de 20 minutos. Signos vitales: PA 90/60 mmHg, FC 122 lpm, FR 28 rpm, SatO2 84% con FiO2 al 50%. A la auscultación se evidencian abundantes crépitos de burbuja gruesa en el hemitórax derecho, mientras que el hemitórax izquierdo ventila adecuadamente. La radiografía de tórax previa a su ingreso mostraba una gran cavidad residual en el lóbulo inferior derecho. El paciente luce ansioso y con signos de dificultad respiratoria inminente. ¿Cuál es el paso INMEDIATO MÁS apropiado en el manejo de este paciente?
+A. Proceder a la intubación orotraqueal selectiva del bronquio principal derecho para aislar el sangrado.
+B. Posicionar al paciente en decúbito lateral derecho e iniciar maniobras para intubación orotraqueal urgente.
+C. Posicionar al paciente en decúbito lateral izquierdo para favorecer el drenaje postural de la caverna sangrante.
+D. Administrar Ácido Tranexámico nebulizado y endovenoso, difiriendo la intubación hasta obtener una broncoscopia flexible.
+✅ Respuesta correcta: B. Posicionar al paciente en decúbito lateral derecho e iniciar maniobras para intubación orotraqueal urgente.
+El paciente cursa con una Hemoptisis Masiva (o amenazante para la vida, definida por >100 mL/h o repercusión hemodinámica/gasométrica). La causa primaria de muerte en la hemoptisis masiva no es la exanguinación, sino la asfixia por inundación del pulmón sano. El principio universal de rescate es "proteger el pulmón sano". Esto se logra posicionando inmediatamente al paciente sobre el lado que sangra (decúbito lateral derecho, o "pulmón enfermo hacia abajo") para que la gravedad evite que la sangre inunde el pulmón izquierdo. Dado el compromiso hemodinámico y la hipoxemia severa, la intubación orotraqueal (idealmente con tubo de doble luz o al menos un tubo simple avanzado) es el siguiente paso mandatorio antes de la arteriografía o cirugía.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con hemoptisis masiva y compromiso respiratorio.
+• Localización clínica o radiológica clara del pulmón sangrante (ej. caverna derecha).
+• Pregunta sobre manejo inicial de vía aérea y posicionamiento.
+Debes pensar en:
+Posicionar al paciente en decúbito lateral sobre el lado afectado (pulmón malo abajo) + Intubación orotraqueal para evitar asfixia.
+Tema: Hemoptisis Masiva.
+
+PREGUNTA 42 (PEDIATRÍA - CARDIOLOGÍA)
+Lactante masculino de 8 meses de edad, con diagnóstico conocido de Tetralogía de Fallot pendiente de corrección quirúrgica, es llevado al servicio de urgencias por sus padres. Refieren que, tras un episodio de llanto intenso por la aplicación de una vacuna, el niño se tornó profundamente cianótico, letárgico y con patrón respiratorio rápido y superficial. Al examen físico: SatO2 65% al aire ambiente, FC 170 lpm. El soplo sistólico eyectivo en foco pulmonar, previamente audible y descrito en su historia clínica, ha desaparecido por completo. A su llegada, el médico de triage lo posiciona en genupectoral (rodillas al pecho) y le administra oxígeno por máscara de no reinhalación y sulfato de morfina subcutáneo, sin observar mejoría clínica a los 10 minutos. ¿Cuál es el siguiente paso farmacológico MÁS apropiado?
+A. Iniciar infusión de Prostaglandina E1 (Alprostadil) para reabrir el ductus arterioso.
+B. Administrar Digoxina intravenosa acompañada de Furosemida en bolo para manejar la falla cardíaca.
+C. Administrar un bolo intravenoso de Fenilefrina o Esmolol/Propranolol para vencer el espasmo del tracto de salida.
+D. Realizar pericardiocentesis urgente ante la sospecha de taponamiento cardíaco por ruptura de pared libre.
+✅ Respuesta correcta: C. Administrar un bolo intravenoso de Fenilefrina o Esmolol/Propranolol para vencer el espasmo del tracto de salida.
+El paciente cursa con una Crisis Hipóxica (Tet spell) refractaria a las medidas de primera línea. En la Tetralogía de Fallot, la crisis ocurre por un espasmo dinámico del infundíbulo del ventrículo derecho, lo que bloquea completamente el flujo hacia la arteria pulmonar (de ahí la desaparición repentina del soplo sistólico, pues ya no hay flujo turbulento) y fuerza un cortocircuito masivo de derecha a izquierda a través de la CIV. Si la posición genupectoral (que aumenta la resistencia vascular sistémica - RVS), el oxígeno y la morfina fallan, se debe utilizar un agente vasoconstrictor alfa-puro (Fenilefrina) para aumentar drásticamente la RVS y forzar la sangre hacia los pulmones, o un beta-bloqueador intravenoso (Esmolol o Propranolol) para relajar el espasmo infundibular muscular.
+Lo que debes saber para el examen
+Cuando veas:
+• Lactante con Tetralogía de Fallot que presenta crisis de cianosis profunda desencadenada por llanto/esfuerzo.
+• Desaparición aguda del soplo sistólico durante la crisis (patognomónico de espasmo infundibular severo).
+• Falla de las medidas iniciales (genupectoral, O2, morfina).
+Debes pensar en:
+Fármacos que aumenten la RVS (Fenilefrina) o relajen el infundíbulo (Propranolol/Esmolol). Evitar inotrópicos positivos.
+Tema: Tetralogía de Fallot / Crisis Hipóxica.
+
+PREGUNTA 43 (MEDICINA INTERNA - GASTROENTEROLOGÍA)
+Hombre de 58 años, con diagnóstico de cirrosis hepática por MASH (esteatohepatitis asociada a disfunción metabólica), ingresó hace 7 días por cuadro de fiebre y dolor abdominal. Se le diagnosticó Peritonitis Bacteriana Espontánea (PBE) (recuento de polimorfonucleares en líquido ascítico de 550/mm³, cultivo positivo para E. coli). El paciente completó satisfactoriamente un curso de 7 días de Cefotaxima IV, con resolución de los síntomas y un nuevo recuento de PMN en líquido ascítico de 120/mm³. Actualmente se encuentra asintomático y en condiciones de egreso. ¿Qué indicación farmacológica profiláctica debe prescribirse MÁS apropiadamente al momento del alta?
+A. Suspender todos los antibióticos y citar a control en un mes, reservando la antibioterapia solo si reaparece la fiebre.
+B. Iniciar profilaxis secundaria indefinida con Norfloxacino 400 mg/día o Ciprofloxacino 500 mg/día vía oral.
+C. Prescribir un curso adicional de Ceftriaxona IM semanal por 6 meses para erradicar focos crónicos de E. coli.
+D. Iniciar profilaxis con Rifaximina 550 mg dos veces al día de manera exclusiva como prevención primaria de PBE.
+✅ Respuesta correcta: B. Iniciar profilaxis secundaria indefinida con Norfloxacino 400 mg/día o Ciprofloxacino 500 mg/día vía oral.
+Los pacientes con cirrosis hepática que han sobrevivido a un episodio de Peritonitis Bacteriana Espontánea (PBE) tienen un riesgo altísimo de recurrencia (hasta un 70% en el primer año). Según las guías internacionales (AASLD, EASL), todo paciente con antecedente de PBE documentada debe recibir profilaxis secundaria a largo plazo de manera indefinida (hasta el trasplante hepático o el fallecimiento). Los fármacos de elección son las fluoroquinolonas orales (Norfloxacino 400 mg/día, Ciprofloxacino 500 mg/día) o Trimetoprima-Sulfametoxazol (Bactrim) en zonas de alta resistencia local.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente cirrótico tratado exitosamente de un episodio de PBE.
+• Preparación para el egreso hospitalario.
+• Decisión sobre manejo preventivo.
+Debes pensar en:
+Profilaxis secundaria indefinida para PBE obligatoria (Fluoroquinolonas o TMP-SMX).
+Tema: Complicaciones de la Cirrosis / Peritonitis Bacteriana Espontánea.
+
+PREGUNTA 44 (PEDIATRÍA - ENDOCRINOLOGÍA)
+En la consulta de control de niño sano de un recién nacido de 15 días de vida, la madre trae los resultados del tamizaje metabólico neonatal tomado al nacer. El reporte evidencia un nivel de TSH en papel de filtro de 115 mUI/L (rango normal < 10 mUI/L). El paciente se encuentra completamente asintomático, con ganancia de peso adecuada, amamantamiento vigoroso, sin facies tosca ni macroglosia, y presenta un examen neurológico normal. Se solicita perfil tiroideo venoso confirmatorio STAT que reporta: TSH 130 mUI/L, T4 libre 0.3 ng/dL (marcadamente disminuido). Los padres, preocupados, solicitan que se realice una gammagrafía tiroidea de inmediato "para saber exactamente si hay glándula o no" antes de someter al niño a medicamentos crónicos. ¿Cuál es la conducta médica MÁS adecuada?
+A. Suspender lactancia materna temporalmente e iniciar el reemplazo hormonal solo si el niño desarrolla síntomas clínicos de hipotiroidismo.
+B. Diferir el tratamiento farmacológico por un máximo de 72 horas hasta obtener el resultado de la gammagrafía tiroidea solicitada por los padres.
+C. Iniciar Levotiroxina (L-T4) a dosis de 10 a 15 mcg/kg/día inmediatamente; la gammagrafía se puede diferir sin retrasar el tratamiento.
+D. Iniciar Propiltiouracilo a dosis pediátricas inmediatamente para evitar la progresión del defecto enzimático subyacente.
+✅ Respuesta correcta: C. Iniciar Levotiroxina (L-T4) a dosis de 10 a 15 mcg/kg/día inmediatamente; la gammagrafía se puede diferir sin retrasar el tratamiento.
+El Hipotiroidismo Congénito (HC) es una de las causas más frecuentes de discapacidad intelectual prevenible. Los pacientes son casi invariablemente asintomáticos al nacer debido al paso transplacentario de hormona materna, de ahí el inmenso valor del tamizaje. Al documentar una TSH elevada y T4 libre baja, el diagnóstico está confirmado. El objetivo supremo es normalizar la T4 en las primeras 2 a 4 semanas de vida para garantizar un desarrollo neurocognitivo normal. Retrasar el inicio del tratamiento con Levotiroxina para realizar estudios etiológicos (como gammagrafía o ecografía tiroidea) es un error crítico. La L-T4 debe iniciarse YA; las imágenes pueden hacerse de forma paralela o diferirse a los 3 años de vida cuando se haga la prueba de retiro.
+Lo que debes saber para el examen
+Cuando veas:
+• Recién nacido con Tamizaje Neonatal positivo para hipotiroidismo y TSH/T4 venosa confirmatoria.
+• Ausencia de síntomas clínicos (clásico).
+• Dilema entre investigar etiología (imagen) versus iniciar tratamiento.
+Debes pensar en:
+El inicio de Levotiroxina es prioritario e inmediato. Los estudios imagenológicos NO deben retrasar NUNCA la primera dosis del fármaco.
+Tema: Hipotiroidismo Congénito.
+
+PREGUNTA 45 (MEDICINA INTERNA - INFECTOLOGÍA / NEUROLOGÍA)
+Hombre de 35 años, con diagnóstico de VIH (CD4 28 cél/mm³), se encuentra hospitalizado recibiendo Anfotericina B liposomal y Flucitosina por una Meningitis por Cryptococcus neoformans diagnosticada hace 6 días. Durante las últimas 24 horas presenta deterioro clínico caracterizado por cefalea holocraneana severa refractaria a opioides, diplopía y confusión leve. Al examen físico se evidencia limitación para la abducción del ojo izquierdo (paresia del VI par craneal). Se realiza de urgencia una tomografía computarizada (TC) de cráneo simple que NO evidencia hidrocefalia, lesiones ocupantes de espacio ni edema cerebral focal, conservando la diferenciación de la sustancia blanca-gris. ¿Cuál es el manejo INMEDIATO MÁS adecuado para la complicación actual de este paciente?
+A. Administrar Dexametasona IV a altas dosis para disminuir el edema cerebral de origen criptocócico.
+B. Suspender la Anfotericina B y cambiar a monoterapia con Fluconazol a dosis altas (1200 mg/día) para evitar toxicidad.
+C. Realizar de inmediato una punción lumbar terapéutica (evacuadora) para disminuir la presión intracraneal.
+D. Iniciar infusión de Manitol al 20% y derivar para colocación urgente de una derivación ventriculoperitoneal.
+✅ Respuesta correcta: C. Realizar de inmediato una punción lumbar terapéutica (evacuadora) para disminuir la presión intracraneal.
+El paciente cursa con un síndrome de Hipertensión Intracraneal (HIC) secundaria a meningitis criptocócica (manifestada por cefalea extrema, alteración del sensorio y paresia del VI par craneal por estiramiento). A diferencia de otras neuroinfecciones, el Cryptococcus eleva masivamente la presión intracraneal al obstruir el drenaje del LCR en las granulaciones aracnoideas mediante su cápsula de polisacáridos, a menudo SIN generar hidrocefalia en la imagen (TAC normal). Dado que el problema es puramente de volumen/presión del LCR, el tratamiento de oro son las Punciones Lumbares (PL) seriadas evacuadoras (drenando 20-30 mL hasta lograr una presión de apertura < 20 cm H2O).
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con VIH y Meningitis Criptocócica.
+• Deterioro neurológico nuevo (cefalea, alteración de pares craneales, letargia).
+• TAC de cráneo normal o sin hidrocefalia obstructiva.
+Debes pensar en:
+Hipertensión intracraneana severa que requiere descompresión INMEDIATA mediante punción lumbar evacuadora. Los esteroides están contraindicados.
+Tema: Meningitis Criptocócica en VIH.
+
+PREGUNTA 46 (MEDICINA INTERNA - NEFROLOGÍA / REUMATOLOGÍA)
+Hombre de 45 años, previamente sano, acude a urgencias por un cuadro de 3 semanas de congestión nasal persistente, úlceras en la mucosa oral y costras nasales sanguinolentas. Desde hace 48 horas presenta tos seca que evolucionó a hemoptisis franca, disnea y fiebre. Paraclínicos: Creatinina sérica 4.2 mg/dL (basal reportada hace un año de 0.9 mg/dL), BUN 85 mg/dL, Hemoglobina 8.5 g/dL. El parcial de orina muestra proteinuria (++) y hematuria macroscópica; en el sedimento se observan abundantes glóbulos rojos dismórficos y cilindros eritrocitarios. La radiografía de tórax evidencia infiltrados alveolares bilaterales difusos compatibles con hemorragia alveolar masiva. Ante la sospecha de un Síndrome Pulmón-Riñón, ¿cuál marcador inmunológico tiene la MAYOR especificidad diagnóstica para la patología subyacente de este paciente?
+A. Anticuerpos anti-membrana basal glomerular (Anti-MBG).
+B. Anticuerpos anticitoplasma de neutrófilos con patrón perinuclear (p-ANCA / Anti-MPO).
+C. Anticuerpos antinucleares (ANA) con patrón homogéneo.
+D. Anticuerpos anticitoplasma de neutrófilos con patrón citoplasmático (c-ANCA / Anti-PR3).
+✅ Respuesta correcta: D. Anticuerpos anticitoplasma de neutrófilos con patrón citoplasmático (c-ANCA / Anti-PR3).
+El paciente presenta un Síndrome Pulmón-Riñón (hemorragia alveolar difusa + glomerulonefritis rápidamente progresiva). El detalle clínico clave (perla) es el antecedente de afectación severa destructiva de la vía aérea superior (úlceras orales, costras nasales sanguinolentas). Esta triada clínica (vía aérea superior + pulmón + riñón) es patognomónica de la Granulomatosis con Poliangeítis (GPA, antes granulomatosis de Wegener). La GPA está estrechamente asociada a la positividad de los anticuerpos c-ANCA, los cuales están dirigidos contra la enzima Proteinasa 3 (Anti-PR3), con una especificidad >90% en la enfermedad sistémica activa.
+Lo que debes saber para el examen
+Cuando veas:
+• Glomerulonefritis rápidamente progresiva (cilindros eritrocitarios + falla renal aguda).
+• Hemorragia alveolar masiva (hemoptisis).
+• Compromiso destructivo o granulomatoso de vía aérea superior (sinusitis crónica, nariz en silla de montar).
+Debes pensar en:
+Granulomatosis con Poliangeítis (Wegener). Su anticuerpo marcador es el c-ANCA (Anti-PR3).
+Tema: Vasculitis de Vasos Pequeños / Síndrome Pulmón-Riñón.
+
+PREGUNTA 47 (PEDIATRÍA - ONCOLOGÍA / CIRUGÍA)
+Niño de 7 años con diagnóstico de Leucemia Linfoblástica Aguda (LLA), se encuentra en el décimo día post-quimioterapia de consolidación. Ingresa a urgencias por dolor abdominal intenso, fiebre de 39.1°C y episodios de diarrea sanguinolenta. Al examen físico: PA 92/58 mmHg, FC 128 lpm. Abdomen plano pero con dolor severo y resistencia muscular localizada exquisitamente en la fosa ilíaca derecha; sin signos claros de abdomen en tabla. Hemograma: Leucocitos 400/mm³, Neutrófilos absolutos 60/mm³ (neutropenia profunda), Plaquetas 45,000/mm³. Una tomografía (TC) de abdomen simple y con contraste evidencia engrosamiento marcado de la pared del ciego y del colon ascendente (11 mm), edema de la grasa pericecal y neumatosis focal leve, pero sin neumoperitoneo ni colecciones organizadas. ¿Cuál es la conducta terapéutica de elección en este momento?
+A. Remitir urgentemente a cirugía pediátrica para hemicolectomía derecha y lavado de la cavidad.
+B. Iniciar manejo conservador con reposo intestinal absoluto, líquidos IV y antibióticos de amplio espectro incluyendo cobertura para anaerobios y Pseudomonas.
+C. Administrar enema con bario para descartar intususcepción íleo-cólica como complicación primaria.
+D. Realizar colonoscopia urgente para tomar biopsias de la pared cecal y confirmar etiología infecciosa vs leucémica.
+✅ Respuesta correcta: B. Iniciar manejo conservador con reposo intestinal absoluto, líquidos IV y antibióticos de amplio espectro incluyendo cobertura para anaerobios y Pseudomonas.
+El paciente cursa con Enterocolitis Neutropénica (Tiflitis), una complicación gravísima que afecta clásicamente el íleon terminal y el ciego en pacientes pediátricos con neutropenia profunda (<500/mm³) tras quimioterapia citotóxica. El cuadro clínico simula perfectamente una apendicitis aguda, pero el hallazgo tomográfico de engrosamiento de la pared cecal (>4 mm) sella el diagnóstico. En ausencia de complicaciones quirúrgicas absolutas (como neumoperitoneo por perforación franca, sangrado masivo incontrolable o choque refractario al manejo médico), la tiflitis se maneja de forma CONSERVADORA agresiva. El intestino de un paciente severamente neutropénico y trombocitopénico sana muy mal, y la cirugía profiláctica o exploratoria acarrea una mortalidad prohibitiva.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente pediátrico (o adulto) neutropénico febril post-quimioterapia.
+• Dolor en fosa ilíaca derecha + diarrea/sangrado.
+• TAC que muestra engrosamiento de la pared del ciego (>4 mm).
+Debes pensar en:
+Tiflitis (Enterocolitis neutropénica). El manejo primario es médico conservador (Piperacilina-Tazobactam o Cefepime + Metronidazol) y evitar el bisturí salvo perforación.
+Tema: Complicaciones Oncológicas / Tiflitis.
+
+PREGUNTA 48 (MEDICINA INTERNA - CARDIOLOGÍA / NEUROLOGÍA)
+Mujer de 52 años, portadora de una válvula cardíaca mecánica en posición mitral implantada hace 4 años secundaria a estenosis reumática. Consulta a urgencias por presentar un episodio de hemiparesia derecha y afasia de expresión de inicio súbito, los cuales revirtieron espontánea y completamente tras 45 minutos (diagnóstico de Ataque Isquémico Transitorio - AIT). Signos vitales estables. La paciente venía recibiendo manejo crónico con Warfarina 5 mg al día de forma intermitente por mala adherencia. Paraclínicos en urgencias reportan un INR actual de 1.4. Una tomografía simple de cráneo descarta hemorragia y no muestra signos de isquemia aguda. ¿Cuál es la conducta farmacológica INMEDIATA MÁS apropiada para prevenir la recurrencia embólica?
+A. Reiniciar la Warfarina aumentando la dosis a 7.5 mg y dar egreso con cita de control de INR en una semana.
+B. Suspender definitivamente la Warfarina e iniciar un Anticoagulante Oral Directo (ej. Rivaroxaban 20 mg/día o Apixaban) por su mayor seguridad neurológica.
+C. Hospitalizar, iniciar terapia puente con Heparina de Bajo Peso Molecular (Enoxaparina) subcutánea o Heparina no fraccionada IV, y ajustar simultáneamente la dosis de Warfarina.
+D. Adicionar Ácido Acetilsalicílico (AAS) y Clopidogrel (terapia dual) a la dosis actual de Warfarina para asegurar la inhibición tromboembólica del anillo valvular.
+✅ Respuesta correcta: C. Hospitalizar, iniciar terapia puente con Heparina de Bajo Peso Molecular (Enoxaparina) subcutánea o Heparina no fraccionada IV, y ajustar simultáneamente la dosis de Warfarina.
+La paciente presenta un evento tromboembólico agudo (AIT) secundario a un estado de sub-anticoagulación (INR de 1.4). Para las prótesis valvulares mecánicas en posición mitral, el INR objetivo estricto es de 2.5 a 3.5. Al estar por debajo de la meta y haber presentado ya un evento isquémico de rebote, la paciente debe ser ingresada para recibir "terapia puente" (bridging). Se inicia de inmediato una heparina (HBPM a dosis terapéuticas o HNF en infusión) por su rápida acción anticoagulante, mientras paralelamente se ajusta e inicia nuevamente la Warfarina. La heparina se suspenderá únicamente cuando la Warfarina logre elevar el INR nuevamente a rango terapéutico (≥ 2.5) por al menos dos días consecutivos.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con válvula cardíaca mecánica y evento cardioembólico subagudo o AIT.
+• INR subterapéutico (ej. < 2.5 para mitral o < 2.0 para aórtica).
+• Dudas sobre el uso de nuevos anticoagulantes o antiagregación.
+Debes pensar en:
+Terapia puente con Heparina + Ajuste de Warfarina. Los Anticoagulantes Orales Directos (DOACs) están CONTRAINDICADOS ABSOLUTAMENTE en válvulas mecánicas.
+Tema: Anticoagulación en Prótesis Valvulares.
+
+PREGUNTA 49 (MEDICINA INTERNA - GASTROENTEROLOGÍA / TOXICOLOGÍA)
+Mujer de 22 años, sin antecedentes psiquiátricos conocidos, es encontrada en su habitación letárgica y ictérica. Sus amigas refieren haber encontrado frascos vacíos de acetaminofén extra-fuerte y calculan que la ingesta masiva (aprox. 15 gramos) ocurrió hace 72 horas. Al ingreso: estuporosa, desorientada (encefalopatía grado III). Paraclínicos: AST 7,500 U/L, ALT 8,200 U/L, Bilirrubina total 5.8 mg/dL, INR 4.2. Creatinina 2.1 mg/dL. Se establece diagnóstico de Falla Hepática Aguda fulminante. El nivel sérico de acetaminofén está indetectable (ha superado su vida media). ¿Cuál es la conducta terapéutica sistémica INMEDIATA MÁS apropiada además de contactar a un centro de trasplante hepático?
+A. Diferir el uso de antídotos y administrar un complejo protrombínico y plasma fresco para revertir el INR e intubar a la paciente.
+B. Iniciar infusión intravenosa de N-acetilcisteína (NAC) de inmediato, independientemente del tiempo transcurrido y de los niveles séricos del fármaco.
+C. Iniciar terapia de hemodiálisis de urgencia o diálisis de albúmina (MARS) para remover el metabolito tóxico NAPQI circulante.
+D. La N-acetilcisteína no tiene beneficio terapéutico útil después de las primeras 24 horas de la ingesta; se debe proveer solo soporte vital agresivo.
+✅ Respuesta correcta: B. Iniciar infusión intravenosa de N-acetilcisteína (NAC) de inmediato, independientemente del tiempo transcurrido y de los niveles séricos del fármaco.
+El paciente cursa con una insuficiencia hepática aguda severa (coagulopatía severa y encefalopatía) secundaria a sobredosis de paracetamol/acetaminofén. Aunque la máxima eficacia de la N-acetilcisteína (NAC) para prevenir el daño hepático se obtiene cuando se administra dentro de las primeras 8 horas post-ingesta (antes del pico de lesión), múltiples ensayos clínicos y las guías hepatológicas mundiales dictan que la NAC DEBE administrarse incluso en presentaciones tardías (>24-48 horas) o cuando ya hay Falla Hepática Aguda instaurada. En esta fase tardía, la NAC mejora la microcirculación hepática, optimiza la oxigenación de los tejidos periféricos y disminuye la mortalidad global, el edema cerebral y la necesidad de trasplante.
+Lo que debes saber para el examen
+Cuando veas:
+• Intoxicación por paracetamol de presentación tardía (> 24-48 horas) o con niveles indetectables.
+• Presencia ya establecida de Falla Hepática Aguda (elevación masiva de transaminasas, INR alto, encefalopatía).
+• Toma de decisión respecto al uso de NAC.
+Debes pensar en:
+Iniciar la infusión de N-acetilcisteína (NAC) SIEMPRE. Nunca es demasiado tarde para la NAC si hay daño hepático activo.
+Tema: Toxicología / Falla Hepática Aguda.
+
+PREGUNTA 50 (PEDIATRÍA - INFECTOLOGÍA / URGENCIAS)
+Niño de 5 años, residente de zona urbana pero vacacionando en una cabaña ecológica, despierta en medio de la noche llorando tras un episodio de pánico. Sus padres acuden y encuentran un murciélago volando dentro de la habitación del menor. Al revisar al niño, observan una pequeña laceración superficial sangrante en el lóbulo de la oreja izquierda. El murciélago escapa por la ventana. El niño cuenta con esquema de vacunación de la primera infancia completo, pero no tiene antecedente de vacunación antirrábica preexposición. Es llevado a un centro de urgencias. ¿Cuál es el esquema de profilaxis post-exposición (PEP) MÁS apropiado y completo?
+A. Lavado exhaustivo de la herida con agua y jabón, e iniciar de inmediato una pauta de 4 dosis de vacuna antirrábica celular los días 0, 3, 7 y 14.
+B. Infiltrar Inmunoglobulina Antirrábica Humana (IGAR) alrededor y dentro de la herida, e iniciar simultáneamente el esquema de vacuna antirrábica celular en un sitio anatómico diferente.
+C. Diferir la vacunación e instaurar manejo empírico con toxoide tetánico y Amoxicilina/Clavulanato oral; la rabia urbana está erradicada.
+D. Administrar Inmunoglobulina Antirrábica (IGAR) exclusivamente, ya que la lesión es superficial y la vacuna requiere varias semanas para ser efectiva.
+✅ Respuesta correcta: B. Infiltrar Inmunoglobulina Antirrábica Humana (IGAR) alrededor y dentro de la herida, e iniciar simultáneamente el esquema de vacuna antirrábica celular en un sitio anatómico diferente.
+Cualquier exposición directa con un animal silvestre vector natural de la rabia (como un murciélago), mordeduras en cabeza/cuello o lesiones sangrantes (Categoría III de la OMS) es considerada una emergencia epidemiológica absoluta. Dado que el periodo de incubación de la rabia por mordedura en cabeza/cuello es extremadamente corto (días), se requiere protección pasiva y activa simultánea. Es MANDATORIO administrar Inmunoglobulina Antirrábica (IGAR), la cual debe ser infiltrada en su totalidad localmente dentro y alrededor de la herida para neutralizar el virus in situ, y en el mismo momento (Día 0) administrar la primera dosis de la vacuna antirrábica celular (tejido deltoideo), pero NUNCA en el mismo sitio anatómico de la IGAR, completando el esquema los días 3, 7 y 14.
+Lo que debes saber para el examen
+Cuando veas:
+• Exposición Categoría III (mordedura o rasguño transdérmico, contacto con saliva de mucosas, o exposición a murciélago).
+• Mordeduras por animales de alto riesgo (murciélagos, zorros, perros callejeros endémicos no observados).
+• Paciente no vacunado previamente contra la rabia.
+Debes pensar en:
+Profilaxis combinada obligatoria: IGAR (Inmunoglobulina pasiva en la herida) + Vacuna Antirrábica (inmunidad activa sistémica).
+Tema: Rabia / Inmunoprofilaxis.

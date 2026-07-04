@@ -1,0 +1,169 @@
+PREGUNTA 21 (MEDICINA INTERNA - HEMATO-ONCOLOGÍA)
+Hombre de 19 años con diagnóstico reciente de Linfoma de Burkitt debuta con una gran masa abdominal. Se planifica inicio de quimioterapia citotóxica en 24 horas. Paraclínicos de ingreso: Ácido úrico 11.2 mg/dL, Potasio sérico 5.8 mEq/L, Fósforo sérico 6.1 mg/dL, Calcio sérico 7.1 mg/dL, Creatinina 1.9 mg/dL (basal conocida de 0.8 mg/dL). El gasto urinario es de 0.8 cc/kg/h bajo hidratación basal. ¿Cuál es el paso terapéutico MÁS apropiado para prevenir la progresión de la lesión renal aguda en este paciente?
+A. Administrar Alopurinol 300 mg vía oral cada 8 horas y alcalinizar la orina con bicarbonato de sodio.
+B. Iniciar infusión agresiva de cristaloides isotónicos y administrar Rasburicasa intravenosa de forma inmediata.
+C. Suspender el inicio de la quimioterapia y remitir a nefrología para colocación de catéter de diálisis de urgencia.
+D. Administrar una dosis alta de Furosemida IV para forzar el gasto urinario por encima de 3 cc/kg/h antes de usar hipourimiantes.
+✅ Respuesta correcta: B. Iniciar infusión agresiva de cristaloides isotónicos y administrar Rasburicasa intravenosa de forma inmediata.
+El paciente ya cumple con los criterios laboratoriales y clínicos de Síndrome de Lisis Tumoral (SLT) establecido (hiperuricemia, hiperkalemia, hiperfosfatemia e hipocalcemia secundaria, asociado a lesión renal aguda). El Alopurinol solo previene la formación de nuevo ácido úrico pero no degrada el ya existente, por lo que es ineficaz en el SLT instaurado. La Rasburicasa (uricasa recombinante) cataliza la conversión del ácido úrico en alantoína, un metabolito 10 veces más soluble, actuando de forma inmediata. Esto, junto con la optimización de la volemia con cristaloides para mejorar el flujo tubular renal, es el pilar para evitar el depósito intramedular de cristales de fosfato de calcio y urato.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con neoplasia hematológica de alta replicación (Burkitt, LLA) con LRA y alteraciones metabólicas de lisis.
+• Ácido úrico marcadamente elevado ya instaurado (> 8 mg/dL o aumento del 25%).
+• Necesidad de yugular el daño renal agudo obstructivo por cristales.
+Debes pensar en:
+Uso inmediato de Rasburicasa + Hidratación enérgica; el alopurinol está contraindicado como monoterapia en crisis aguda.
+Tema: Síndrome de Lisis Tumoral.
+
+PREGUNTA 22 (PEDIATRÍA - NEUROLOGÍA / URGENCIAS)
+Niño de 3 años, previamente sano, es traído en ambulancia por presentar una crisis convulsiva tónico-clónica generalizada que inició en su hogar hace 22 minutos y persiste a su llegada. En la ambulancia recibió dos dosis de Midazolam intranasal (0.2 mg/kg por dosis) separadas por 5 minutos, sin cese de la actividad motora. Al examen físico en reanimación: convulsión activa, FC 142 lpm, PA 98/62 mmHg, SatO2 93% con máscara de flujo libre. Se logra canalizar una vena periférica. ¿Cuál es el siguiente paso terapéutico MÁS apropiado?
+A. Administrar un bolo intravenoso de Diazepam a 0.3 mg/kg por riesgo de refractariedad al midazolam.
+B. Iniciar la infusión de una dosis de carga de Levetiracetam (60 mg/kg IV) o Fenitoína (20 mg/kg IV).
+C. Proceder de inmediato a la secuencia de inducción e intubación orotraqueal usando Propofol.
+D. Administrar Fenobarbital IV a dosis de 20 mg/kg como fármaco de elección en la segunda línea del estado epiléptico.
+✅ Respuesta correcta: B. Iniciar la infusión de una dosis de carga de Levetiracetam (60 mg/kg IV) o Fenitoína (20 mg/kg IV).
+El paciente cursa con un Estado Epiléptico Convulsivo Establecido (fase de estado epiléptico precoz/establecido al superar los 5-10 minutos de crisis continua). Habiendo fallado la primera línea de manejo (benzodiacepinas adecuadamente administradas), es imperativo iniciar de inmediato un anticonvulsivo de segunda línea por vía intravenosa. Los estudios de gran escala (como el ensayo CONVIRT o ESETT) han demostrado que el Levetiracetam, la Fenitoína y el Valproato de Sodio tienen una eficacia similar (~50-60%) para yugular la crisis en esta fase, prefiriéndose el Levetiracetam por su excelente perfil de seguridad cardiovascular en comparación con la Fenitoína.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño en estatus convulsivo que no cede tras 2 dosis de benzodiacepinas.
+• Tiempo de crisis que supera la ventana inicial (> 15-20 minutos).
+• Acceso venoso periférico disponible y estabilidad hemodinámica.
+Debes pensar en:
+Inicio inmediato de la segunda línea de anticonvulsivantes IV (Levetiracetam o Fenitoína); no repetir benzodiacepinas por riesgo de apnea.
+Tema: Estado Epiléptico Pediátrico.
+
+PREGUNTA 23 (MEDICINA INTERNA - NEFROLOGÍA)
+Hombre de 68 años con antecedente de enfermedad arterial oclusiva crónica se sometió a un cateterismo cardíaco izquierdo con angioplastia coronaria hace 3 semanas. Acude por astenia y aparición de lesiones dolorosas en los pies. Al examen físico: PA 142/86 mmHg, FC 78 lpm. Se observa livedo reticularis en muslos y flancos, y coloración purpúrea/cianótica asimétrica en el primer y tercer dedo del pie izquierdo ("síndrome del dedo azul"), con pulsos pedios y tibiales posteriores presentes y de buena intensidad. Paraclínicos: Creatinina sérica 3.4 mg/dL (basal de 1.1 mg/dL pre-procedimiento), Hemograma con Eosinofilia (850 eosinófilos/uL), C3 y C4 disminuidos. Parcial de orina con proteinuria leve y presencia de eosinofiluria. ¿Cuál es la etiología MÁS probable de la lesión renal aguda en este paciente?
+A. Nefropatía por contraste radiológico debido a toxicidad tubular directa.
+B. Enfermedad ateroembólica renal (embolia de cristales de colesterol).
+C. Nefritis tubulointersticial aguda (NTIA) secundaria a exposición a antibióticos.
+D. Glomerulonefritis postinfecciosa de inicio tardío.
+✅ Respuesta correcta: B. Enfermedad ateroembólica renal (embolia de cristales de colesterol).
+La enfermedad ateroembólica renal ocurre por la ruptura de placas de ateroma durante procedimientos endovasculares (como un cateterismo), lo que libera microcristales de colesterol que ocluyen las arteriolas aferentes y glomerulares. A diferencia de la nefropatía por contraste (que eleva la creatinina a las 24-48 horas y resuelve en una semana), la enfermedad ateroembólica tiene un inicio subagudo (semanas después) y se caracteriza por manifestaciones sistémicas extra-renales por microémbolos: livedo reticularis, "síndrome del dedo azul" con pulsos distales conservados, eosinofilia, eosinofiluria e hipocomplementemia por activación de la vía alternativa.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente anciano post-cateterismo o cirugía aórtica hace 2 a 6 semanas con LRA progresiva.
+• Lesiones cutáneas isquémicas periféricas (livedo reticularis, dedos azules) con pulsos arteriales palpables.
+• Paraclínicos con Eosinofilia, eosinofiluria e hipocomplementemia.
+Debes pensar en:
+Enfermedad ateroembólica por cristales de colesterol (Atheroembolic Renal Disease).
+Tema: Lesión Renal Aguda Isquémica/Tóxica.
+
+PREGUNTA 24 (PEDIATRÍA - GASTROENTEROLOGÍA / CIRUGÍA)
+Lactante masculino de 4 semanas de vida es traído a urgencias por presentar un cuadro de 5 días de vómitos no biliosos, de contenido alimentario, que ocurren de forma proyectiva e inmediata después de cada toma de lactancia. Sus padres refieren que el niño luce con apetito voraz constante, pero ha disminuido el número de pañales mojados. Al examen físico: letárgico, fontanela anterior deprimida, signo del pliegue positivo, mucosas secas. Se palpa una pequeña masa móvil y firme de 2 cm en el epigastrio/hipocondrio derecho. Paraclínicos: pH 7.54, PaCO2 48 mmHg, HCO3 36 mEq/L, Sodio 132 mEq/L, Potasio 2.9 mEq/L, Cloro 80 mEq/L. ¿Cuál es la conducta MÁS adecuada en este momento?
+A. Remitir urgentemente a cirugía pediátrica para realización de piloromiotomía de Ramstedt de forma inmediata.
+B. Iniciar reanimación hídrica intravenosa con Dextrosa al 5% en solución salina al 0.9% más Cloruro de Potasio (KCl) para corregir el estado ácido-base antes de cualquier intervención quirúrgica.
+C. Suspender la lactancia materna e iniciar una fórmula láctea extensamente hidrolizada por sospecha de alergia a la proteína de la leche de vaca.
+D. Colocar sonda nasogástrica a drenaje e iniciar una infusión de Bicarbonato de Sodio IV para estabilizar el pH sanguíneo.
+✅ Respuesta correcta: B. Iniciar reanimación hídrica intravenosa con Dextrosa al 5% en solución salina al 0.9% más Cloruro de Potasio (KCl) para corregir el estado ácido-base antes de cualquier intervención quirúrgica.
+El paciente presenta una Estenosis Hipertrófica del Píloro (EHP) clásica, evidenciada por la edad, el vómito proyectivo no bilioso, la avidez por comer y la palpación de la "oliva pilórica". Los vómitos repetidos de contenido gástrico causan pérdida masiva de agua, hidrogeniones y cloro, lo que genera el trastorno hidroelectrolítico y ácido-base patognomónico: Alcalosis metabólica hipoclorémica e hipokalémica. La EHP no es una emergencia quirúrgica de minutos, sino una emergencia médica. Operar a un niño con alcalosis severa deshidratado dispara el riesgo de apnea perioperatoria por depresión del centro respiratorio central y arritmias. El paso prioritario es la corrección metabólica y la reposición de volumen con soluciones con suficiente cloro y potasio.
+Lo que debes saber para el examen
+Cuando veas:
+• Neonato/lactante menor con vómitos postprandiales proyectivos no biliosos + oliva pilórica palpable.
+• Gases arteriales con alcalosis metabólica profunda asociada a hipocloremia e hipokalemia.
+• Decisión de manejo inicial versus programación de cirugía.
+Debes pensar en:
+Estabilización hídrica y metabólica obligatoria ANTES de pasar a quirófano (Piloromiotomía).
+Tema: Estenosis Hipertrófica del Píloro.
+
+PREGUNTA 25 (MEDICINA INTERNA - REUMATOLOGÍA / NEFROLOGÍA)
+Mujer de 24 años con diagnóstico de Lupus Eritematoso Sistémico (LES) en manejo con Hidroxicloroquina y Azatioprina acude a consulta por cuadro de 2 semanas de edema progresivo en miembros inferiores y cara. Al examen físico: PA 156/98 mmHg, FC 84 lpm. Edema grado III simétrico con fóvea. Paraclínicos: Creatinina sérica 1.8 mg/dL (basal de 0.7 mg/dL hace 3 meses), Albúmina sérica 2.4 g/dL. Parcial de orina: Proteínas > 300 mg/dL, hematocrito urinario con 25 glóbulos rojos por campo (80% dismórficos) y cilindros eritrocitarios. Niveles de C3 y C4 marcadamente disminuidos, Anti-dsDNA con títulos elevados. ¿Cuál es la conducta MÁS apropiada para definir el manejo específico de esta paciente?
+A. Iniciar pulsos de Metilprednisolona 1 g IV al día por 3 días de forma empírica y suspender la hidroxicloroquina.
+B. Realizar de forma prioritaria una biopsia renal para estadificar histológicamente la nefritis lúpica.
+C. Cambiar la Azatioprina por Micofenolato de Mofetilo vía oral e iniciar manejo antihipertensivo con Enalapril.
+D. Solicitar recolección de orina de 24 horas para cuantificar la proteinuria antes de modificar cualquier terapia.
+✅ Respuesta correcta: B. Realizar de forma prioritaria una biopsia renal para estadificar histológicamente la nefritis lúpica.
+La paciente presenta un cuadro clínico altamente sugestivo de un brote severo de Nefritis Lúpica (NL), manifestado por un síndrome nefrítico-nefrótico mixto (LRA, hipertensión, proteinuria masiva y sedimento activo con hematuria glomerular y cilindros). En LES, el tratamiento inmunosupresor específico de la afectación renal (Inducción con Ciclofosfamida o Micofenolato) depende estrictamente de la clasificación histopatológica de la ISN/RPS (ej. Clase III o IV proliferativa versus Clase V membranosa). Las guías ACR y EULAR establecen que ante toda sospecha de NL activa con proteinuria significativa o deterioro de la función renal, la biopsia renal es obligatoria e insustituible para guiar la terapia y evaluar pronóstico de cronicidad.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente lúpica con aparición de proteinuria, hematuria glomerular o elevación súbita de creatinina.
+• Hipocomplementemia activa con títulos elevados de Anti-dsDNA (marcador de actividad renal).
+• Dilema entre iniciar tratamiento a ciegas o estadificar.
+Debes pensar en:
+Realización de biopsia renal como el paso mandatorio para guiar el tratamiento de inducción.
+Tema: Nefritis Lúpica.
+
+PREGUNTA 26 (PEDIATRÍA - INFECTOLOGÍA / ORTOPEDIA)
+Niño de 4 años es llevado a urgencias por presentar cuadro de 48 horas de cojera que progresó a incapacidad total para la marcha y el apoyo del miembro inferior derecho. Antecedente de resfriado común hace una semana. Al examen físico: febril (T 38.7°C), irritable. La cadera derecha se mantiene en flexión, abducción y rotación externa; cualquier intento de movilización pasiva genera llanto inconsolable. Paraclínicos: Leucocitos 13,200/mm³ (70% neutrófilos), VSG 42 mm/h, PCR 35 mg/L. Una ecografía de cadera derecha evidencia la presencia de un derrame articular significativo. ¿Cuál es la conducta MÁS adecuada?
+A. Diagnosticar sinovitis transitoria de la cadera, prescribir Ibuprofeno vía oral y dar de alta con pautas de alarma.
+B. Iniciar manejo antibiótico empírico intravenoso con Oxacilina más Clindamicina previa toma de hemocultivos.
+C. Realizar una artrocantesis (aspiración articular) bajo guía ecográfica de forma prioritaria para análisis de líquido y descompresión.
+D. Solicitar una resonancia magnética (RMN) de caderas simple y contrastada para descartar osteomielitis antes de invadir la articulación.
+✅ Respuesta correcta: C. Realizar una artrocantesis (aspiración articular) bajo guía ecográfica de forma prioritaria para análisis de líquido y descompresión.
+El paciente cumple con 3 de los 4 criterios de Kocher para el diagnóstico diferencial entre Artritis Séptica y Sinovitis Transitoria de la cadera: incapacidad para apoyar la extremidad, fiebre >38.5°C y VSG >40 mm/h (además de una PCR elevada). Con 3 de 4 criterios positivos, la probabilidad de Artritis Séptica de cadera supera el 93%. La artritis séptica de cadera es una emergencia quirúrgica real en pediatría; el aumento de la presión intraarticular purulenta colapsa los vasos retinaculares, provocando necrosis avascular de la cabeza femoral en pocas horas. El siguiente paso mandatorio, tanto para el diagnóstico definitivo (Gram y cultivo) como para el tratamiento inicial (descompresión mecánica), es la artrocantesis urgente.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente pediátrico con cojera o rechazo a la marcha, fiebre y dolor severo a la movilización pasiva de una articulación.
+• Aplicación de los Criterios de Kocher con alta probabilidad (>3 criterios).
+• Evidencia ecográfica de líquido libre intraarticular.
+Debes pensar en:
+Artritis Séptica; requiere punción articular (artrocantesis) diagnóstica y evacuadora inmediata, seguida de lavado quirúrgico y ATB.
+Tema: Artritis Séptica en Pediatría.
+
+PREGUNTA 27 (MEDICINA INTERNA - CARDIOLOGÍA / URGENCIAS)
+Hombre de 56 años con antecedente de hipertensión arterial mal controlada ingresa a urgencias por un cuadro de 2 horas de dolor torácico retroesternal de intensidad 10/10, súbito, que describe como "desgarrador" y que se irradia hacia la región interescapular. Al examen físico: diaforético, PA en brazo derecho 178/102 mmHg, PA en brazo izquierdo 140/82 mmHg. Se ausculta un soplo diastólico III/VI en el foco aórtico, ausente en controles previos. El ECG de ingreso muestra una elevación del segmento ST de 3 mm en las derivadas II, III y aVF, con imágenes de espejo en I y aVL. ¿Cuál es el siguiente paso MÁS apropiado en el manejo de este paciente?
+A. Activar el código de infarto de forma inmediata y trasladar al laboratorio de hemodinámica para angioplastia coronaria primaria.
+B. Iniciar infusión de Labetalol IV para controlar de forma agresiva la PA y la FC, y solicitar una Angio-TC de tórax y abdomen de urgencia.
+C. Administrar un bolo de Tenecteplase (fibrinólisis endovenosa) debido a que se encuentra en ventana para un IAM de pared inferior.
+D. Iniciar carga oral de Ácido Acetilsalicílico (300 mg) y Clopidogrel (600 mg) junto con infusión de Heparina no fraccionada.
+✅ Respuesta correcta: B. Iniciar infusión de Labetalol IV para controlar de forma agresiva la PA y la FC, y solicitar una Angio-TC de tórax y abdomen de urgencia.
+El cuadro clínico describe de manera idéntica una Disección Aórtica Aguda Tipo A de Stanford (dolor desgarrador irradiado a espalda, asimetría de pulsos/presiones >20 mmHg entre ambos brazos y la aparición de un soplo de insuficiencia aórtica aguda). El hallazgo electrocardiográfico de un IAM de cara inferior ocurre porque la disección aórtica se extendió retrógradamente hacia la raíz de la aorta, ocluyendo el ostium de la arteria coronaria derecha (compromiso en el 1-2% de las disecciones tipo A). Entrar a hemodinámica o, peor aún, heparinizar o fibrinolizar a este paciente basándose solo en el ECG es fatal. El paso mandatorio es controlar el doble producto (FC <60 lpm, PA sistólica entre 100-120 mmHg con beta-bloqueadores como Labetalol o Esmolol) para reducir la fuerza de cizallamiento (dP/dt) sobre la pared aórtica, y confirmar con Angio-TC previo a cirugía cardiovascular de emergencia.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente hipertenso con dolor torácico irradiado a espalda + asimetría de PA entre miembros superiores.
+• ECG con elevación del ST en cara inferior (II, III, aVF) que confunde con un IAM aislado.
+• Soplo diastólico aórtico nuevo (insuficiencia aórtica por disrupción del anillo).
+Debes pensar en:
+Disección Aórtica Tipo A con extensión coronaria; el manejo es antihipertensivo/bradicardizante estricto (Labetalol) y Angio-TC urgente. ¡Antiagregantes y anticoagulantes contraindicados!
+Tema: Síndrome Aórtico Agudo.
+
+PREGUNTA 28 (PEDIATRÍA - NEUMOLOGÍA / URGENCIAS)
+Lactante de 14 meses es traído por su madre por presentar tos paroxística y estridor intermitente desde hace 3 días. Refiere que el cuadro inició de forma súbita mientras el niño jugaba en el suelo con sus hermanos mayores, presentando un episodio de ahogo y cianosis perioral que resolvió espontáneamente. Al examen físico actual: alerta, FR 32 rpm, SatO2 94% al aire ambiente. A la auscultación se documenta una franca disminución del murmullo vesicular en el hemitórax derecho, asociada a sibilancias espiratorias localizadas en dicha zona. La radiografía de tórax en proyección inspiratoria y espiratoria muestra atrapamiento aéreo focalizado en el pulmón derecho (hiperlucidez y aplanamiento diafragmático derecho en espiración), sin evidencia de imágenes radiopacas. ¿Cuál es la conducta MÁS apropiada?
+A. Prescribir manejo sintomático con micronebulizaciones de solución salina hipertónica y egreso con diagnóstico de bronquiolitis obliterante.
+B. Iniciar manejo broncodilatador con Salbutamol e iniciar un ciclo de corticoides orales por sospecha de un debut asmático atípico.
+C. Programar de forma prioritaria la realización de una broncoscopia rígida para exploración y extracción del cuerpo extraño.
+D. Solicitar una tomografía computarizada (TC) de alta resolución de tórax para confirmar la naturaleza del cuerpo extraño antes de intervenir.
+✅ Respuesta correcta: C. Programar de forma prioritaria la realización de una broncoscopia rígida para exploración y extracción del cuerpo extraño.
+El cuadro clínico (inicio súbito con síndrome de penetración, tos paroxística, asimetría en la auscultación y sibilancias fijas/localizadas) es patognomónico de una aspiración de cuerpo extraño, un evento crítico común en niños de 1 a 3 años. El hallazgo radiológico de atrapamiento aéreo asimétrico (debido al efecto de válvula unidireccional que permite la entrada de aire pero bloquea su salida en espiración) confirma la obstrucción bronquial focal. Dado que la gran mayoría de los cuerpos extraños en pediatría son orgánicos (ej. frutos secos, fragmentos de comida) y por ende son radiolúcidos (no se ven en la radiografía tradicional), la ausencia de una imagen radiopaca no descarta el diagnóstico. El estándar de oro terapéutico y diagnóstico es la broncoscopia rígida bajo anestesia general.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño pequeño con antecedente de ahogo súbito (síndrome de penetración) seguido de sibilancias fijas unilaterales.
+• Radiografía con signos indirectos de obstrucción (atrapamiento aéreo, enfisema obstructivo o atelectasia lobar).
+• Ausencia de opacidad metálica en la radiografía de tórax.
+Debes pensar en:
+Aspiración de cuerpo extraño radiolúcido; el paso definitivo es la Broncoscopia Rígida (no flexible, ya que la rígida permite mejor control de la vía aérea y paso de pinzas de extracción).
+Tema: Aspiración de Cuerpo Extraño en Pediatría.
+
+PREGUNTA 29 (MEDICINA INTERNA - ENDOCRINOLOGÍA)
+Hombre de 42 años es enviado a la consulta especializada de Medicina Interna para estudio de hipertensión arterial resistente. Actualmente toma tres fármacos antihipertensores a dosis óptimas: Losartán 50 mg cada 12 horas, Amlodipino 10 mg al día e Hidroclorotiazida 25 mg al día. En los paraclínicos de control resalta un Potasio sérico persistente de 3.1 mEq/L (hipokalemia moderada) sin pérdidas digestivas aparentes. Se sospecha Hiperaldosteronismo Primario (HAP). ¿Cuál es la conducta preparatoria MÁS adecuada previo a la medición de la Relación Aldosterona-Renina (ARR) en plasma?
+A. Suspender inmediatamente el Losartán y la Hidroclorotiazida durante al menos 4 semanas, y sustituir el manejo antihipertensivo con Espironolactona.
+B. Suspender la Hidroclorotiazida y el Losartán por 4 semanas, manejando las cifras tensionales con Verapamilo de liberación prolongada y/o Prazosina si es necesario, y corregir la hipokalemia.
+C. Realizar la toma de muestras de aldosterona y renina plasmática de forma inmediata; los medicamentos actuales no alteran la validez de la relación ARR.
+D. Suspender todos los antihipertensivos de forma absoluta por 2 semanas manteniendo al paciente sin medicación hasta la toma de laboratorios.
+✅ Respuesta correcta: B. Suspender la Hidroclorotiazida y el Losartán por 4 semanas, manejando las cifras tensionales con Verapamilo de liberación prolongada y/o Prazosina si es necesario, y corregir la hipokalemia.
+El tamizaje de elección para el HAP es la Relación Aldosterona-Renina (ARR). Sin embargo, múltiples medicamentos antihipertensivos interfieren con el eje renina-angiotensina-aldosterona, induciendo falsos positivos o negativos. Los ARA-II (Losartán) elevan la renina falsamente, disminuyendo la ARR (falso negativo), mientras que los diuréticos (Hidroclorotiazida) estimulan la renina por depleción de volumen (otro falso negativo). Para un tamizaje fiable, se deben suspender estos fármacos por al menos 4 semanas. Si se requiere control de la PA, se deben usar medicamentos con un impacto mínimo sobre el eje, siendo de elección los bloqueadores de canales de calcio no dihidropiridínicos (Verapamilo) y los alfa-bloqueadores (Prazosina o Doxazosina). Además, la hipokalemia suprime directamente la secreción de aldosterona, por lo que debe corregirse de forma obligatoria antes de la prueba.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con hipertensión resistente + hipokalemia espontánea o inducida por diuréticos.
+• Planeación de tamizaje para Hiperaldosteronismo Primario (medición de ARR).
+• Necesidad de lavado ("washout") farmacológico previo.
+Debes pensar en:
+Suspensión de IECA/ARA-II, diuréticos y beta-bloqueadores por 4 semanas (y antagonistas de aldosterona por 6 semanas); sustitución segura con Verapamilo/Prazosina + normalización del Potasio.
+Tema: Hiperaldosteronismo Primario / Hipertensión Secundaria.
+
+PREGUNTA 30 (MEDICINA INTERNA - NEUMOLOGÍA / URGENCIAS)
+Mujer de 26 años, cursando embarazo de 24 semanas por fecha de última regla, consulta a urgencias por un cuadro de 24 horas de disnea de inicio súbito asociada a dolor torácico de características pleuríticas en el hemitórax derecho. Niega antecedentes asmáticos o cardiovasculares. Signos vitales: PA 118/72 mmHg, FC 112 lpm, FR 24 rpm, T 36.6°C, SatO2 91% al aire ambiente. El examen físico del tórax es completamente normal, sin soplos ni ruidos agregados. Las extremidades no muestran edema asimétrico. Una radiografía de tórax digital con protección fetal es reportada como completamente normal. ¿Cuál es el siguiente paso MÁS apropiado en el algoritmo diagnóstico de esta paciente?
+A. Solicitar niveles de Dímero D plasmático por técnica de ELISA de alta sensibilidad para descartar Tromboembolismo Pulmonar (TEP).
+B. Realizar una ecografía Doppler compresiva bilateral de miembros inferiores como estudio inicial de imagen.
+C. Solicitar de forma directa e inmediata una Angio-TC de arterias pulmonares (Angiotac) debido a la alta sospecha clínica.
+D. Realizar una gammagrafía de ventilación/perfusión (V/Q) pulmonar como única opción validada en el embarazo.
+✅ Respuesta correcta: B. Realizar una ecografía Doppler compresiva bilateral de miembros inferiores como estudio inicial de imagen.
+El embarazo es un estado hipercoagulable fisiológico que incrementa significativamente el riesgo de Tromboembolismo Pulmonar (TEP). El algoritmo diagnóstico del TEP en la gestante difiere del adulto general (según guías de la ESC y la ATS). El Dímero D no es útil de forma rutinaria porque se eleva fisiológicamente trimestre a trimestre durante el embarazo normal (baja especificidad, aunque un resultado negativo tiene valor). Ante una sospecha clínica y una radiografía de tórax normal, el siguiente paso más rentable y seguro es la ecografía Doppler de miembros inferiores. Si esta documenta una Trombosis Venosa Profunda (TVP), se confirma indirectamente el diagnóstico y se inicia tratamiento anticoagulante pleno, evitando exponer a la gestante y al feto a la radiación ionizante de una Angio-TC o gammagrafía.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente gestante con disnea súbita y dolor pleurítico sugerente de TEP.
+• Radiografía de tórax inicial normal (esencial para definir el algoritmo).
+• Necesidad de definir la primera línea de imágenes diagnósticas.
+Debes pensar en:
+Ecografía Doppler de miembros inferiores como paso inicial no invasivo; si es positiva, trata; si es negativa, progresa a Angio-TC o Gammagrafía V/Q.
+Tema: Tromboembolismo Pulmonar en el Embarazo.

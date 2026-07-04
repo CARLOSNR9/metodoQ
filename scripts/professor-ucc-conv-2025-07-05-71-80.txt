@@ -1,0 +1,166 @@
+PREGUNTA 71 (MEDICINA INTERNA - CARDIOLOGÍA)
+Mujer de 28 años, cursando embarazo de 26 semanas, acude a urgencias por un cuadro de 12 horas de disnea súbita que progresa al reposo y ortopnea severa. Tiene antecedente de fiebre reumática en la infancia. Al examen físico: PA 115/70 mmHg, FC 122 lpm (irregular, compatible con fibrilación auricular de novo), FR 28 rpm, SatO2 88% con máscara de no reinhalación. A la auscultación se documentan estertores crepitantes bilaterales hasta los ápices pulmonares y un soplo diastólico con rodamiento en el ápex cardíaco precedido de un chasquido de apertura. Un ecocardiograma urgente revela Estenosis Mitral Reumática severa (Área Valvular Mitral de 0.9 cm²). ¿Cuál es la conducta inmediata MÁS apropiada para el manejo hemodinámico de esta paciente?
+A. Realizar de forma inmediata una valvuloplastia mitral percutánea con balón (procedimiento de Inoue) sin intentar manejo médico.
+B. Iniciar infusión de diuréticos de asa (Furosemida IV) y control agresivo de la frecuencia cardíaca con un betabloqueador (Esmolol o Propranolol IV).
+C. Proceder a cardioversión eléctrica inmediata con 200 Joules, prescindiendo del uso previo de fármacos cronotrópicos.
+D. Iniciar infusión de Nitroprusiato de Sodio para disminuir la postcarga ventricular izquierda de forma drástica.
+✅ Respuesta correcta: B. Iniciar infusión de diuréticos de asa (Furosemida IV) y control agresivo de la frecuencia cardíaca con un betabloqueador (Esmolol o Propranolol IV).
+La paciente presenta un edema agudo de pulmón secundario a una estenosis mitral severa, desencadenado por la pérdida de la patada auricular y la taquicardia de una Fibrilación Auricular (FA) de novo, todo potenciado por el aumento fisiológico del gasto cardíaco y volumen plasmático del embarazo. En la estenosis mitral, el llenado ventricular es puramente dependiente del tiempo diastólico. La taquicardia acorta drásticamente la diástole, aumentando de forma masiva la presión en la aurícula izquierda y la vasculatura pulmonar. El manejo inicial mandatorio es médico: disminuir la congestión hidrostática con Furosemida y prolongar el tiempo de llenado diastólico disminuyendo la FC con beta-bloqueadores hidrofílicos seguros en el embarazo.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente gestante con antecedente de fiebre reumática que debuta con edema agudo de pulmón.
+• Presencia de Fibrilación Auricular con respuesta ventricular rápida + Soplo diastólico apexal.
+• Diagnóstico establecido de Estenosis Mitral Severa.
+Debes pensar en:
+Falla cardíaca diastólica por obstrucción mecánica al flujo; el manejo de urgencia es controlar la FC (prolongar diástole) con Betabloqueadores + Furosemida.
+Tema: Valvulopatías en el Embarazo / Estenosis Mitral.
+
+PREGUNTA 72 (PEDIATRÍA - INFECTOLOGÍA)
+Niño de 6 años es llevado a urgencias en un municipio de la costa pacífica nariñense por cuadro de 5 días de fiebre alta, cefalea, dolor retroocular y mialgias intensas. Desde hace 12 horas la fiebre cedió, pero el niño presenta dolor abdominal continuo y vómitos repetidos. Al examen físico actual: letárgico, frío, pulso filiforme, PA 82/60 mmHg (Presión de pulso de 22 mmHg), FC 138 lpm, llenado capilar de 4 segundos. Se observan petequias difusas y hepatomegalia a 4 cm del reborde costal. Un hemograma urgente reporta: Hemoglobina 16.2 g/dL, Hematocrito 52% (previo conocido de 36%), Plaquetas 18,000/mm³, Leucocitos 2,100/mm³. ¿Cuál es la conducta inmediata MÁS apropiada según la Guía Nacional de Dengue?
+A. Transfundir de forma inmediata una unidad de concentrado de plaquetas por riesgo inminente de sangrado intracraneal.
+B. Iniciar reanimación hídrica inmediata con un bolo de cristaloides isotónicos (Lactato de Ringer o SSN 0.9%) a razón de 20 cc/kg en 15 a 30 minutos y revaluar de inmediato.
+C. Iniciar soporte inotrópico con Dopamina y Norepinefrina por vía periférica antes de administrar líquidos para evitar el edema pulmonar.
+D. Solicitar ecografía de detalle abdominal y radiografía de tórax previo al inicio de líquidos para cuantificar el tercer espacio.
+✅ Respuesta correcta: B. Iniciar reanimación hídrica inmediata con un bolo de cristaloides isotónicos (Lactato de Ringer o SSN 0.9%) a razón de 20 cc/kg en 15 a 30 minutos y revaluar de inmediato.
+El paciente presenta Dengue Grave con Choque por extravasación de plasma (Dengue Grupo C), evidenciado por los signos de alarma (dolor abdominal, letargia), la caída de la fiebre (fase crítica), la hipotensión con estrechamiento de la presión de pulso (≤ 20-22 mmHg es signo de choque en niños) y la hemoconcentración masiva (aumento del hematocrito >20% respecto al basal). La causa del choque es puramente hipovolémica por fuga capilar severa hacia el tercer espacio. El tratamiento de urgencia vital es la expansión rápida del volumen intravascular con cristaloides isotónicos a 20 cc/kg.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente pediátrico en zona endémica que al ceder la fiebre desarrolla signos de choque (hipotensión, pulso rápido, llenado lento).
+• Laboratorio con trombocitopenia severa y aumento marcado del hematocrito (hemoconcentración).
+• Clasificación de Dengue en fase crítica (Grupo C).
+Debes pensar en:
+Choque por Dengue Grave; el manejo es el bolo inmediato de cristaloides isotónicos a 20 cc/kg. Las plaquetas NO se transfunden de rutina.
+Tema: Dengue Grave / Choque Hipovolémico.
+
+PREGUNTA 73 (MEDICINA INTERNA - GASTROENTEROLOGÍA)
+Hombre de 56 años con cirrosis hepática Child-Pugh C secundaria a hepatitis C crónica es traído a urgencias por un cuadro de 48 horas de desorientación temporoespacial, somnolencia profunda y lenguaje incoherente. Al examen físico se documenta asterixis (flapping) bilateral franco, ictericia marcada y ascitis a tensión. Refiere estreñimiento de 4 días de evolución. No hay signos de focalización motora ni rigidez nucal. Paraclínicos: Creatinina 1.1 mg/dL, Amonio sérico 160 ug/dL, Potasio 3.2 mEq/L. Se instaura manejo con Lactulosa por sonda nasogástrica y enemas de evacuación. Tras 48 horas de tratamiento, el paciente progresa al estupor profundo, sin responder al llamado (encefalopatía hepática refractaria). ¿Cuál es la adición farmacológica MÁS adecuada en este momento según las guías clínicas actuales?
+A. Suspender la lactulosa e iniciar infusión continua de Neomicina por sonda nasogástrica.
+B. Adicionar Rifaximina 550 mg vía oral (o por sonda) cada 12 horas al esquema actual de lactulosa.
+C. Iniciar infusión de Flumazenil intravenoso a altas dosis de forma continua.
+D. Administrar L-ornitina L-aspartato (LOLA) endovenosa de forma aislada y suspender el manejo entérico.
+✅ Respuesta correcta: B. Adicionar Rifaximina 550 mg vía oral (o por sonda) cada 12 horas al esquema actual de lactulosa.
+El paciente presenta una Encefalopatía Hepática (EH) Grado III-IV de la clasificación de West Haven. Al ser refractario al manejo inicial con disacáridos no absorbibles (Lactulosa), el cual busca acidificar el colon para convertir el amonio en amoníaco no absorbible, las guías de la EASL y AASLD establecen con el mayor grado de recomendación la adición de Rifaximina. La Rifaximina es un antibiótico oral de mínima absorción sistémica que elimina selectivamente las bacterias colónicas productoras de ureasa, disminuyendo la producción local de amonio. Su uso conjunto con lactulosa es el estándar de oro para el fallo terapéutico y la prevención de recurrencias.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente cirrótico con encefalopatía hepática aguda moderada-severa.
+• Respuesta insuficiente o refractariedad al uso exclusivo de Lactulosa.
+Debes pensar en:
+Asociación inmediata de Rifaximina (550 mg cada 12 horas) manteniendo la lactulosa; el manejo dual es superior a la monoterapia.
+Tema: Complicaciones de la Cirrosis / Encefalopatía Hepática.
+
+PREGUNTA 74 (PEDIATRÍA - NEFROLOGÍA)
+Escolar masculino de 8 años es traído a consulta de nefrología infantil por presentar un cuadro de 4 semanas de edema palpebral y de miembros inferiores, asociado a orinas oscuras ("aspecto de té o coca-cola"). Como antecedente, presentó piodermitis severa hace 6 semanas. En la evaluación inicial en urgencias se documentó hipertensión arterial (PA 125/85 mmHg) y se diagnosticó Glomerulonefritis Postestreptocócica (GNPE), confirmada por títulos elevados de Antiestreptolisina O (ASTO) y un nivel de Complemento C3 sérico marcadamente disminuido (25 mg/dL; valor normal >80). Hoy, a las 10 semanas de evolución del cuadro inicial, el niño se encuentra completamente asintomático, normotenso y sin edemas, pero un control laboratorial de ayer reporta que el nivel de C3 persiste bajo en 30 mg/dL, y el parcial de orina mantiene hematuria microscópica aislada. ¿Cuál es la conducta MÁS adecuada?
+A. Dar de alta definitiva al paciente; la persistencia de C3 bajo es un hallazgo normal hasta por un año en la GNPE.
+B. Indicar de forma prioritaria la realización de una biopsia renal para descartar una Glomerulonefritis Membranoproliferativa o Nefropatía lúpica.
+C. Iniciar tratamiento inmunosupresor empírico con Ciclosporina o deflazacort oral a dosis plenas.
+D. Solicitar un nuevo nivel de ASTO y repetir el curso de antibióticos con Penicilina benzatínica por sospecha de persistencia bacteriana.
+✅ Respuesta correcta: B. Indicar de forma prioritaria la realización de una biopsia renal para descartar una Glomerulonefritis Membranoproliferativa o Nefropatía lúpica.
+En la Glomerulonefritis Postestreptocócica (GNPE) clásica, la hipocomplementemia por consumo de la vía alternativa (C3 bajo con C4 normal o levemente disminuido) es transitoria. El tiempo estricto exigido por las guías para la normalización del C3 sérico es de máximo 6 a 8 semanas. Si un paciente supera las 8 semanas de evolución (este niño lleva 10 semanas) con niveles persistentemente bajos de C3, el diagnóstico de GNPE debe ser fuertemente cuestionado. Se vuelve imperativo realizar una biopsia renal para descartar patologías glomerulares crónicas que debutan de forma similar pero tienen peor pronóstico, fundamentalmente la Glomerulonefritis Membranoproliferativa (GNMP) o una glomerulonefritis por depósitos de C3 (C3 glomerulopathy).
+Lo que debes saber para el examen
+Cuando veas:
+• Niño con sospecha inicial de Glomerulonefritis Postinfecciosa (Postestreptocócica).
+• Persistencia del nivel de Complemento C3 bajo por más de 8 semanas.
+• Dudas sobre dar el alta versus invadir diagnósticamente.
+Debes pensar en:
+Indicación absoluta de Biopsia Renal por sospecha de Glomerulonefritis Membranoproliferativa crónica.
+Tema: Síndrome Nefrítico / Glomerulopatías Pediátricas.
+
+PREGUNTA 75 (MEDICINA INTERNA - NEUROLOGÍA)
+Mujer de 34 años, previamente sana, consulta por cuadro de 5 días de evolución consistente en parestesias en los pies que progresaron a debilidad muscular ascendente simétrica. Hoy refiere dificultad para ponerse de pie y debilidad en ambas manos. Como antecedente, tuvo un cuadro de gastroenteritis disentérica hace 3 semanas. Al examen físico: hemodinámicamente estable (PA 122/78 mmHg, FC 82 lpm, FR 18 rpm), fuerza muscular 3/5 proximal y distal en miembros inferiores, 4/5 en miembros superiores. Los reflejos miotáticos están completamente abolidos (arreflexia generalizada). No hay compromiso aparente de pares craneales. Se sospecha Síndrome de Guillain-Barré (SGB). ¿Cuál es el parámetro clínico inmediato MÁS crítico para definir la necesidad de ingreso a la Unidad de Cuidado Intensivo (UCI) para ventilación mecánica protectora?
+A. El recuento de proteínas en el líquido cefalorraquídeo obtenido por punción lumbar.
+B. La medición seriada de la Capacidad Vital Forzada (CVF < 15-20 mL/kg) y la Presión Inspiratoria Máxima (PIM < 30 cmH2O).
+C. El grado de simetría del bloqueo de la conducción nerviosa en la electromiografía de las cuatro extremidades.
+D. La positividad de los anticuerpos anti-gangliósidos GM1 en suero sanguíneo.
+✅ Respuesta correcta: B. La medición seriada de la Capacidad Vital Forzada (CVF < 15-20 mL/kg) y la Presión Inspiratoria Máxima (PIM < 30 cmH2O).
+El Síndrome de Guillain-Barré (polirradiculoneuropatía desmielinizante inflamatoria aguda) tiene como principal complicación mortal la falla respiratoria aguda por parálisis muscular diafragmática e intercostal (ocurre en ~25% de los pacientes). La evaluación clínica gruesa (como la frecuencia respiratoria o el uso de músculos accesorios) es un indicador tardío y peligroso en las enfermedades neuromusculares, ya que el paciente puede colapsar de forma súbita. El estándar de oro para monitorizar y predecir la falla ventilatoria inminente (Regla de los 20-30-40) es el seguimiento objetivo de la función de los músculos respiratorios mediante espirometría o manometría a la cabecera del paciente: Capacidad Vital Forzada (CVF) < 20 mL/kg o Presión Inspiratoria Máxima (PIM) peor de -30 cmH2O son indicaciones absolutas de traslado a UCI para intubación electiva segura.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con polineuropatía aguda rápidamente ascendente con arreflexia (Guillain-Barré).
+• Necesidad de monitorizar el riesgo de falla respiratoria neuromuscular en el piso de Medicina Interna.
+Debes pensar en:
+Monitoreo estricto con Capacidad Vital Forzada (CVF) y Presión Inspiratoria Máxima (PIM); los gases arteriales y la oximetría fallan en detectar el riesgo temprano.
+Tema: Síndrome de Guillain-Barré / Falla Neuromuscular.
+
+PREGUNTA 76 (PEDIATRÍA - INFECTOLOGÍA / NEONATOLOGÍA)
+Recién nacido de 36 horas de vida, producto de parto pretérmino intrahospitalario a las 34 semanas de gestación. Su madre, una primigesta de 19 años, presentó ruptura prematura de membranas de 26 horas de evolución y picos febriles intraparto de hasta 38.5°C; no recibió profilaxis antibiótica intraparto. El neonato ingresa a la unidad neonatal por presentar pobre succión, inestabilidad térmica (hipotermia de 35.4°C), quejido respiratorio audible y cianosis perioral intermitente. Al examen físico: letárgico, hipotónico, FR 72 rpm con tirajes intercostales moderados, llenado capilar de 3 segundos. Tras tomar hemocultivos y realizar punción lumbar, ¿cuál es el esquema antibiótico empírico inicial de elección inmediata?
+A. Ampicilina intravenosa más Gentamicina intravenosa.
+B. Ceftriaxona endovenosa asociada a Vancomicina para cobertura de gérmenes intrahospitalarios.
+C. Piperacilina/Tazobactam más Amikacina por alto riesgo de Pseudomonas resistente.
+D. Ampicilina intravenosa más Ceftriaxona endovenosa para asegurar niveles en líquido cefalorraquídeo.
+✅ Respuesta correcta: A. Ampicilina intravenosa más Gentamicina intravenosa.
+El paciente presenta una Sepsis Neonatal Temprana (SNT, manifestada en las primeras 72 horas de vida) con alta probabilidad de Meningitis concomitante, desencadenada por factores de riesgo maternos mayores: prematurez, ruptura prolongada de membranas y corioamnionitis clínica materna (fiebre intraparto) no tratada. Los tres patógenos causales del 90% de las SNT son Streptococcus agalactiae (Estreptococo del Grupo B - GBS), Escherichia coli y Listeria monocytogenes. El esquema universal empírico de elección absoluta es la combinación de Ampicilina (cubre de forma óptima GBS y es el fármaco de elección para Listeria) más un aminoglucósido como la Gentamicina (que genera sinergia y ofrece excelente cobertura contra bacilos Gram negativos como E. coli).
+Lo que debes saber para el examen
+Cuando veas:
+• Neonato en las primeras 72 horas de vida con signos de respuesta inflamatoria o sepsis (hipotermia, distrés respiratorio, letargia).
+• Factores de riesgo de corioamnionitis o RPM prolongada materna sin profilaxis.
+• Decisión sobre antibióticos empíricos de primera línea.
+Debes pensar en:
+Sepsis Neonatal Temprana; el esquema obligatorio es Ampicilina + Gentamicina. Evitar ceftriaxona en neonatología.
+Tema: Sepsis Neonatal Temprana.
+
+PREGUNTA 77 (MEDICINA INTERNA - GASTROENTEROLOGÍA)
+Hombre de 48 años con cirrosis hepática Child-Pugh B secundaria a alcoholismo crónico ingresa a urgencias por presentar hematemesis masiva y melenas. A su ingreso: PA 88/44 mmHg, FC 126 lpm. Se inicia reanimación hídrica restrictiva con cristaloides, se transfunde 1 unidad de glóbulos rojos (meta de Hb ~7-8 g/dL) y se inicia infusión continua de Terlipresina IV (2 mg en bolo seguido de 2 mg cada 4 horas) más Ceftriaxona 1g IV. El servicio de gastroenterología realiza una endoscopia digestiva alta de urgencia a las 3 horas del ingreso, evidenciando várices esofágicas grandes con sangrado activo en "bombeo", procediendo a la colocación de 5 bandas elásticas de ligadura. Treinta minutos después de finalizado el procedimiento endoscópico, el paciente presenta un nuevo episodio de hematemesis masiva (aproximadamente 600 mL de sangre fresca) y cae nuevamente en choque severo (PA 75/40 mmHg). ¿Cuál es la conducta terapéutica MÁS adecuada a continuación?
+A. Coordinar de forma urgente la realización de una derivación portosistémica intrahepática transyugular (TIPS) precoz o rescate.
+B. Regresar de inmediato a salas de endoscopia para realizar una segunda sesión de ligadura con bandas e inyección de esclerosantes.
+C. Suspender la terlipresina por falla terapéutica e iniciar infusión de Octreotide a dosis máximas asociados a Omeprazol.
+D. Colocar un balón de Sengstaken-Blakemore y trasladar al paciente a la sala de cirugía para ligadura quirúrgica abierta de la vena porta.
+✅ Respuesta correcta: A. Coordinar de forma urgente la realización de una derivación portosistémica intrahepática transyugular (TIPS) precoz o rescate.
+El paciente cursa con un fallo del tratamiento farmacológico y endoscópico inicial para la hemorragia variceal aguda (sangrado variceal refractario, que ocurre en el 10-15% de los casos). Las directrices internacionales unificadas de Baveno VII establecen de forma contundente que ante el fracaso de una primera endoscopia terapéutica optimizada combinada con vasoactivos, el siguiente paso de elección definitiva es el TIPS (Transjugular Intrahepatic Portosystemic Shunt) de rescate. El TIPS disminuye de forma mecánica e inmediata la presión portal al crear una comunicación de baja resistencia entre la vena porta y la vena hepática, deteniendo el sangrado de las várices de manera definitiva.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente cirrótico con sangrado por várices esofágicas que vuelve a sangrar masivamente de forma inmediata post-ligadura con bandas.
+• Persistencia de inestabilidad hemodinámica a pesar de dosis plenas de Terlipresina/Octreotide.
+Debes pensar en:
+Sangrado variceal refractario; la indicación mandatoria por guías de Baveno VII es el TIPS de rescate (o la colocación de un stent esofágico metálico autoexpandible como puente al TIPS).
+Tema: Hemorragia Variceal Refractaria / Cirrosis.
+
+PREGUNTA 78 (PEDIATRÍA - URGENCIAS / TOXICOLOGÍA)
+Niño de 3 años es traído a urgencias por sus padres por presentar un cuadro de 2 horas de somnolencia marcada, marcha inestable (ataxia) y llanto intermitente como "asustado" con alucinaciones visuales (refiere ver insectos en el techo). Al examen físico: temperatura de 38.2°C, FC 142 lpm (taquicardia), PA 102/64 mmHg. Se observa la piel marcadamente caliente, eritematosa y completamente seca (ausencia absoluta de sudoración), pupilas midriáticas bilaterales de 6 mm con muy escasa respuesta a la luz, mucosas orales secas como "un papel". No se palpan masas abdominales pero no se auscultan ruidos hidroaéreos (íleo paralítico). ¿Cuál es el toxídrome y el antídoto específico de elección para este cuadro clínico?
+A. Toxídrome Colinérgico; el antídoto de elección es la Pralidoxima.
+B. Toxídrome Anticolinérgico; el antídoto específico (reservado para manifestaciones severas respiratorias o del SNC) es la Fisostigmina.
+C. Toxídrome Simpaticomimético; el antídoto es el Propranolol endovenoso a altas dosis.
+D. Toxídrome Sedante-Hipnótico; el antídoto inmediato es el Flumazenil en bolo.
+✅ Respuesta correcta: B. Toxídrome Anticolinérgico; el antídoto específico (reservado para manifestaciones severas respiratorias o del SNC) es la Fisostigmina.
+El paciente presenta la descripción mnemotécnica perfecta del Toxídrome Anticolinérgico (provocado comúnmente en nuestro medio por ingesta accidental de plantas con alcaloides de belladona como el cacao sabanero/escopolamina, o medicamentos como antihistamínicos de primera generación o atropina): "Rojo como un tomate" (eritema cutáneo), "Seco como un hueso" (anhidrosis y xerostomía), "Ciego como un topo" (midriasis y visión borrosa), "Caliente como una liebre" (hipertermia central) y "Loco como una cabra" (delirio, alucinaciones y agitación psicomotriz). Fisiopatológicamente, ocurre un bloqueo total de los receptores muscarínicos de la acetilcolina. El antídoto específico de elección es la Fisostigmina, un inhibidor reversible de la acetilcolinesterasa que, a diferencia de la neostigmina o piridostigmina, es una amina terciaria que cruza eficazmente la barrera hematoencefálica, revirtiendo el delirio central.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño o adulto con taquicardia, midriasis, piel caliente/roja/seca e íleo paralítico.
+• Compromiso del SNC con delirio, alucinaciones visuales zoológicas y agitación.
+• Ausencia de sudoración (diferencia clave con el simpaticomimético).
+Debes pensar en:
+Toxídrome Anticolinérgico; el antídoto específico es la Fisostigmina (anticolinesterásico central).
+Tema: Toxicología Pediátrica / Toxídromes.
+
+PREGUNTA 79 (MEDICINA INTERNA - NEUMOLOGÍA / URGENCIAS)
+Hombre de 68 años, con diagnóstico de EPOC severo (GOLD grupo E, fenotipo exacerbador crónico) bajo manejo con oxigenoterapia domiciliaria, ingresa a urgencias por un cuadro de 3 días de aumento marcado de la disnea basal, tos con expectoración francamente purulenta y somnolencia fluctuante. Signos vitales: PA 138/84 mmHg, FC 112 lpm, FR 28 rpm, SatO2 84% con cánula nasal a 2 L/min. Al examen físico: somnoliento, asterixis presente, tórax en tonel con disminución global del murmullo vesicular y sibilancias espiratorias difusas. Unos gases arteriales al ingreso reportan: pH 7.22, PaCO2 74 mmHg, PaO2 50 mmHg, HCO3 28 mEq/L, compatible con Acidosis Respiratoria Aguda reagudizada severa. ¿Cuál es el paso terapéutico MÁS adecuado en este momento?
+A. Proceder de forma inmediata a la secuencia de intubación orotraqueal e iniciar ventilación mecánica invasiva en la cama de urgencias.
+B. Instaurar de inmediato Ventilación Mecánica No Invasiva (VMNI) en modo BiPAP, titulando presiones, y ajustar el flujo de oxígeno para metas de SatO2 entre 88-92%.
+C. Aumentar el flujo de la cánula nasal de oxígeno a 6 L/min de forma inmediata para revertir la hipoxemia tisular severa (meta SatO2 >95%).
+D. Administrar un bolo de Metilprednisolona 125 mg IV y nebulizaciones continuas con salbutamol, difiriendo el soporte ventilatorio mecánico por 2 horas para evaluar respuesta médica.
+✅ Respuesta correcta: B. Instaurar de inmediato Ventilación Mecánica No Invasiva (VMNI) en modo BiPAP, titulando presiones, y ajustar el flujo de oxígeno para metas de SatO2 entre 88-92%.
+El paciente presenta una exacerbación grave de EPOC (Criterios de Anthonisen tipo I completos: aumento de disnea, volumen y purulencia del esputo) complicada con una falla respiratoria hipercápnica aguda con acidosis respiratoria (pH 7.22, PaCO2 74 mmHg). En las exacerbaciones de EPOC con acidosis respiratoria moderada-severa (pH entre 7.20 y 7.35), la Ventilación Mecánica No Invasiva (VMNI) es la terapia de primera línea con el mayor nivel de evidencia científica (Recomendación Clase I). La VMNI reduce de forma contundente la necesidad de intubación endotraqueal, disminuye los días de estancia hospitalaria y disminuye significativamente la mortalidad intrahospitalaria. La somnolencia leve/moderada por narcosis de CO2 en EPOC no es una contraindicación absoluta para VMNI si el paciente mantiene la capacidad de proteger la vía aérea y cooperar inicialmente con la máscara. La meta de oxigenación estricta en el paciente con EPOC retenedor es de 88% a 92% para evitar abolir el estímulo respiratorio hipóxico central.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con EPOC exacerbado que desarrolla acidosis respiratoria con pH < 7.35 y PaCO2 > 45-50 mmHg.
+• Ausencia de criterios de intubación inmediata (choque severo, paro respiratorio, coma profundo arreactivo).
+• Necesidad de definir la modalidad de soporte ventilatorio.
+Debes pensar en:
+Inicio inmediato de Ventilación Mecánica No Invasiva (VMNI) con metas de saturación restrictivas (88-92%).
+Tema: Exacerbación de EPOC / Ventilación Mecánica No Invasiva.
+
+PREGUNTA 80 (MEDICINA INTERNA - NEFROLOGÍA / TRASTORNOS ÁCIDO-BASE)
+Mujer de 34 años con antecedentes de bulimia nerviosa es traída a urgencias por debilidad muscular profunda generalizada. Su familia reporta que la paciente ha presentado múltiples episodios de vómitos autoinducidos diarios en las últimas dos semanas. Al examen físico: marcadamente deshidratada, letárgica, reflejos osteotendinosos disminuidos. Signos vitales: PA 90/50 mmHg, FC 106 lpm, FR 12 rpm. Los gases arteriales reportan: pH 7.56, PaCO2 49 mmHg, PaO2 68 mmHg, HCO3 42 mEq/L. Electrolitos séricos: Sodio 135 mEq/L, Potasio 2.1 mEq/L (hipokalemia severa), Cloro 78 mEq/L (hipocloremia severa). Creatinina 1.8 mg/dL. Se sospecha una Alcalosis Metabólica. Se solicita una muestra aislada de orina que reporta un Cloro urinario de 6 mEq/L (marcadamente bajo). ¿Cuál es la conducta diagnóstica-terapéutica fisiopatológicamente MÁS adecuada para resolver el trastorno metabólico de esta paciente?
+A. Clasificar como alcalosis metabólica cloruro-resistente; iniciar infusión de Ácido Clorhídrico (HCl) diluido a través de un catéter venoso central.
+B. Clasificar como alcalosis metabólica cloruro-sensible; iniciar reanimación hídrica enérgica con Solución Salina Normal al 0.9% (SSN) asociada a aportes agresivos de Cloruro de Potasio (KCl) endovenoso.
+C. Administrar Acetazolamida IV de forma aislada para forzar la excreción renal de bicarbonato, restringiendo el uso de soluciones con sodio.
+D. Iniciar infusión de Gluconato de Calcio al 10% para bloquear el efecto neurotóxico de la alcalosis sistémica.
+✅ Respuesta correcta: B. Clasificar como alcalosis metabólica cloruro-sensible; iniciar reanimación hídrica enérgica con Solución Salina Normal al 0.9% (SSN) asociada a aportes agresivos de Cloruro de Potasio (KCl) endovenoso.
+La paciente presenta una Alcalosis Metabólica severa (pH 7.56, HCO3 42) con compensación respiratoria secundaria (PaCO2 elevada a 49 mmHg debido a hipoventilación alveolar). Fisiopatológicamente, la pérdida persistente de jugos gástricos ricos en HCl y agua genera depleción de volumen, hipocloremia e hipokalemia profunda. La contracción de volumen activa el SRAA, forzando al riñón a reabsorber ávidamente Sodio en el túbulo distal a expensas de secretar Protones y Potasio, perpetuando la alcalosis ("alcalosis por contracción"). El dato del Cloro urinario < 10 mEq/L confirma de forma matemática que el trastorno es Cloruro-sensible (dependiente de volumen). El tratamiento definitivo requiere aportar el ion cloro faltante mediante Solución Salina Normal (0.9%), lo cual apaga el SRAA y permite al riñón excretar el exceso de bicarbonato, sumado a la reposición agresiva de potasio mediante Cloruro de Potasio (KCl), indispensable para corregir los transportadores tubulares alterados.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con antecedente de vómitos repetidos, uso de diuréticos o bulimia que presenta Alcalosis Metabólica.
+• Electrolitos con Hipokalemia e Hipocloremia marcadas.
+• Cloro urinario < 10-15 mEq/L (dato decisivo).
+Debes pensar en:
+Alcalosis Metabólica Cloruro-sensible; el tratamiento mandatorio es reanimación con Cloro (SSN 0.9% + KCl).
+Tema: Trastornos Ácido-Base / Alcalosis Metabólica.

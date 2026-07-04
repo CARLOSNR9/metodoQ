@@ -1,0 +1,168 @@
+PREGUNTA 61 (MEDICINA INTERNA - REUMATOLOGÍA / NEUMOLOGÍA)
+Mujer de 45 años consulta por un cuadro de 3 meses de debilidad muscular proximal e indolora en las cuatro extremidades, dificultad para subir escaleras y disnea progresiva de medianos a pequeños esfuerzos. Al examen físico se evidencia eritema violáceo bipalpebral y pápulas descamativas sobre las articulaciones metacarpofalángicas. Resalta una marcada hiperqueratosis, descamación y fisuras dolorosas en las caras laterales y palmares de los dedos de ambas manos ("manos de mecánico"). Una tomografía computarizada de alta resolución (TCAR) de tórax muestra opacidades en vidrio esmerilado periféricas y bronquiectasias por tracción en las bases pulmonares, compatibles con Neumonía Intersticial No Específica (NINE). CPK total: 3.500 U/L. ¿Cuál es el autoanticuerpo sérico MÁS específico para confirmar la sospecha diagnóstica de este síndrome clínico?
+A. Anticuerpos anti-Mi2.
+B. Anticuerpos anti-Scl70.
+C. Anticuerpos anti-tRNA sintetasa (Anti-Jo1).
+D. Anticuerpos anti-MDA5.
+✅ Respuesta correcta: C. Anticuerpos anti-tRNA sintetasa (Anti-Jo1).
+La paciente presenta la constelación clásica del Síndrome de Antisintetasa, una variante de miopatía inflamatoria idiopática. Clínicamente se caracteriza por la tríada de miositis (CPK elevada, debilidad proximal), enfermedad pulmonar intersticial difusa (EPID, comúnmente con patrón NINE) y las lesiones cutáneas patognomónicas denominadas "manos de mecánico", acompañadas a menudo de fiebre y fenómeno de Raynaud. El anticuerpo dirigido contra la enzima histidil-tRNA sintetasa (Anti-Jo1) es el marcador inmunológico más frecuente y específico de este síndrome, correlacionándose fuertemente con la gravedad del compromiso pulmonar intersticial.
+Lo que debes saber para el examen
+Cuando veas:
+• Miopatía inflamatoria (debilidad proximal + CPK > 1000) asociada a neumopatía intersticial (NINE/NID).
+• Hiperqueratosis y fisuras en las caras laterales de los dedos ("manos de mecánico").
+• Signos de solapamiento autoinmune.
+Debes pensar en:
+Síndrome de Antisintetasa, confirmado por anticuerpos Anti-Jo1.
+Tema: Miopatías Inflamatorias.
+
+PREGUNTA 62 (PEDIATRÍA - NEFROLOGÍA / TRASTORNOS ELECTROLÍTICOS)
+Un escolar de 7 años es llevado a la consulta de pediatría por presentar fatiga crónica, debilidad muscular intermitente y episodios de calambres dolorosos en miembros inferiores. No refiere antecedentes de vómitos, diarrea, ni uso de medicamentos. Al examen físico: peso y talla en el percentil 10, PA 92/58 mmHg (normotenso para la edad), resto del examen sin alteraciones. Paraclínicos: Sodio sérico 138 mEq/L, Potasio sérico 2.8 mEq/L (hipokalemia persistente), Cloro 94 mEq/L, pH 7.48, HCO3 31 mEq/L (alcalosis metabólica), Magnesio sérico 1.2 mg/dL (hipomagnesemia moderada). Se realiza una recolección de orina que reporta una excreción fraccional de Calcio marcadamente baja (hipocalciuria significativa). ¿Cuál es el diagnóstico fisiopatológico MÁS probable?
+A. Síndrome de Bartter.
+B. Síndrome de Gitelman.
+C. Hiperaldosteronismo primario por adenoma suprarrenal.
+D. Acidosis Tubular Renal Tipo 1 (Distal).
+✅ Respuesta correcta: B. Síndrome de Gitelman.
+El paciente presenta una tubulopatía perdedora de sal autosómica recesiva. El Síndrome de Gitelman está causado por una mutación inactivante en el cotransportador de Sodio-Cloro (NCCT) en el túbulo contorneado distal, simulando el efecto crónico de un diurético tiazídico. Se diferencia clínicamente del Síndrome de Bartter (que afecta el asa de Henle imitando a la furosemida) en que Gitelman debuta de forma más tardía (etapa escolar o adolescencia), cursa con hipomagnesemia severa y presenta de manera característica hipocalciuria (debido al aumento de la reabsorción pasiva de calcio en el túbulo contorneado distal inducido por la inactivación del cotransportador).
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente pediátrico mayor o adulto joven con alcalosis metabólica, hipokalemia y normotensión arterial.
+• Presencia de hipomagnesemia marcada.
+• Excreción de calcio en orina muy baja (hipocalciuria).
+Debes pensar en:
+Síndrome de Gitelman (daño en el túbulo contorneado distal, efecto tiazida).
+Tema: Tubulopatías / Síndrome de Gitelman.
+
+PREGUNTA 63 (MEDICINA INTERNA - NEFROLOGÍA)
+Hombre de 24 años, con antecedente de episodios recurrentes de hematuria macroscópica asintomática que coinciden con infecciones respiratorias altas desde hace 2 años, ingresa por cuadro de astenia y edema bipalpebral de una semana de evolución. Paraclínicos de ingreso: Creatinina sérica 2.9 mg/dL (basal de 1.0 mg/dL documentada hace 6 meses), BUN 54 mg/dL. Parcial de orina: Proteínas de 2.1 g/24h, hematuria macroscópica con 90% de glóbulos rojos dismórficos y cilindros hemáticos abundantes. Se realiza de forma urgente una biopsia renal que reporta: expansión mesangial con depósitos inmunes de IgA y C3 en la inmunofluorescencia, asociado a la presencia de semilunas (crescentes) celulares epiteliales que comprometen el 55% de los glomérulos evaluados. ¿Cuál es la conducta terapéutica MÁS adecuada?
+A. Iniciar tratamiento conservador estricto con optimización de IECA (Dapagliflozina + Losartán) y suspender estudios.
+B. Iniciar terapia de inducción inmunosupresora inmediata con pulsos intravenosos de Metilprednisolona seguidos de Ciclofosfamida o Rituximab.
+C. Administrar plasmaféresis diaria por 7 días asociada a corticoides orales a bajas dosis.
+D. Remitir de forma prioritaria a nefrología exclusivamente para inicio de hemodiálisis crónica ambulatoria.
+✅ Respuesta correcta: B. Iniciar terapia de inducción inmunosupresora inmediata con pulsos intravenosos de Metilprednisolona seguidos de Ciclofosfamida o Rituximab.
+El paciente presenta una variante extremadamente agresiva y rara de la Nefropatía por IgA (Enfermedad de Berger): una glomerulonefritis con semilunas (crecentérica) de rápido progreso, clínicamente evidenciada por la duplicación de la creatinina en poco tiempo y confirmada histológicamente por crescentes en >50% de los glomérulos. Aunque la Nefropatía por IgA estándar se trata de forma conservadora con bloqueo del SRAA e inhibidores de SGLT2 (y esteroides optimizados según el estudio TESTING si hay alto riesgo de progresión), la presencia de semilunas histológicas con deterioro rápido renal configura una Glomerulonefritis Rápidamente Progresiva (GNRP). El estándar de cuidado exige inmunosupresión agresiva idéntica al protocolo de vasculitis ANCA (Pulsos de metilprednisolona + Ciclofosfamida/Rituximab) para salvar la función del órgano.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con Nefropatía por IgA conocida o sospechada (hematuria sincrónica con faringitis).
+• Deterioro agudo y severo de la función renal (Falla Renal Aguda).
+• Biopsia con compromiso por semilunas o crescentes extracapilares > 50%.
+Debes pensar en:
+Variante crecentérica de IgA (GNRP); requiere de forma mandatoria inmunosupresión de inducción agresiva (Metilprednisolona + Ciclofosfamida).
+Tema: Glomerulopatías / Nefropatía por IgA Crecentérica.
+
+PREGUNTA 64 (PEDIATRÍA - GASTROENTEROLOGÍA / CIRUGÍA)
+Niño de 22 meses de edad es llevado al servicio de urgencias por presentar un episodio de sangrado digestivo bajo masivo, indoloro, consistente en la expulsión de abundante sangre rutilante y coágulos oscuros por el recto ("heces en biscote de cereza"). Niega antecedentes de trauma, estreñimiento, dolor abdominal previo o fiebre. Al examen físico: palidez mucocutánea moderada, PA 94/60 mmHg, FC 118 lpm, resto estable. El abdomen se encuentra blando, depresible, completamente indoloro a la palpación y sin masas ni visceromegalias. Un hemograma reporta una Hemoglobina de 8.2 g/dL con plaquetas y tiempos normales. Una ecografía abdominal de alta resolución es informada como completamente normal, descartando invaginación intestinal. ¿Cuál es el siguiente paso diagnóstico MÁS adecuado?
+A. Programar una videocolonoscopia total de urgencia bajo anestesia general para buscar pólipos juveniles.
+B. Realizar una gammagrafía con pertecnato de Tecnecio-99m (Meckel Scan).
+C. Solicitar una tomografía computarizada de abdomen contrastada con reconstrucción angiográfica.
+D. Iniciar manejo empírico para colitis infecciosa con Metronidazol oral y dar de alta.
+✅ Respuesta correcta: B. Realizar una gammagrafía con pertecnato de Tecnecio-99m (Meckel Scan).
+El paciente presenta la descripción clínica clásica del Divertículo de Meckel complicado con sangrado: sangrado rectal masivo, intermitente e indoloro en un niño menor de 2 años ("la regla de los dos"). El divertículo de Meckel es un remanente del conducto onfalomesentérico que contiene tejido heterotópico, más comúnmente mucosa gástrica (50%). Esta mucosa gástrica ectópica produce ácido clorhídrico, el cual ulcera la mucosa ileal adyacente sana, provocando el sangrado profuso. El examen diagnóstico de elección (gold standard no invasivo) es la gammagrafía con pertecnato de Tecnecio-99m, el cual es captado selectivamente por las células mucosecretoras gástricas del divertículo, revelando su ubicación.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño pequeño (< 2-3 años) con hematoquecia o rectorragia masiva, macroscópica y COMPLETAMENTE INDOLORA.
+• Abdomen normal al examen físico, sin signos de obstrucción o invaginación.
+• Anemia aguda secundaria con tiempos de coagulación normales.
+Debes pensar en:
+Divertículo de Meckel; el paso diagnóstico inicial de elección es la Gammagrafía con Tecnecio-99m.
+Tema: Sangrado Digestivo en Pediatría / Divertículo de Meckel.
+
+PREGUNTA 65 (MEDICINA INTERNA - CARDIOLOGÍA)
+Hombre de 72 años, con antecedente de hipertensión arterial y tabaquismo, consulta por disnea progresiva que actualmente se presenta al caminar una cuadra (NYHA III) asociada a episodios ocasionales de mareo de esfuerzo. Al examen físico: pulso apical sostenido, pulso arterial periférico de ascenso lento y amplitud disminuida (pulsus parvus et tardus). Se ausculta un soplo sistólico eyectivo III/VI en el foco aórtico, áspero, que se irradia a las arterias carótidas, con un segundo ruido (R2) marcadamente disminuido. Un ecocardiograma transtorácico reporta: Fracción de Eyección del Ventrículo Izquierdo (FEVI) del 32%, Área Valvular Aórtica (AVA) calculada por ecuación de continuidad de 0.7 cm², Gradiente medio transaórtico de 32 mmHg. ¿Cuál es el siguiente paso MÁS adecuado para clasificar la gravedad de la valvulopatía y guiar la conducta terapéutica?
+A. Programar reemplazo valvular aórtico quirúrgico inmediato basándose exclusivamente en el área valvular.
+B. Realizar un ecocardiograma de estrés con Dobutamina a bajas dosis.
+C. Solicitar una tomografía computarizada cardíaca para medición del score de calcio valvular aórtico de forma aislada.
+D. Iniciar manejo médico agresivo con dosis altas de betabloqueadores e IECA, revaluando en 6 meses.
+✅ Respuesta correcta: B. Realizar un ecocardiograma de estrés con Dobutamina a bajas dosis.
+El paciente presenta un dilema diagnóstico clásico: Estenosis Aórtica de Bajo Flujo, Bajo Gradiente con FEVI reducida. Presenta un área valvular en rango severo (<1.0 cm²), pero un gradiente medio que no alcanza el umbral de severidad (debería ser ≥40 mmHg). Esto ocurre porque el ventrículo izquierdo está severamente dilatado y disfuncional (FEVI 32%), siendo incapaz de generar la fuerza (flujo) suficiente para abrir completamente una válvula rígida o para demostrar el gradiente real. El ecocardiograma de estrés con dobutamina a dosis bajas (hasta 20 mcg/kg/min) es el paso mandatorio para diferenciar entre: 1) Estenosis Aórtica Severa Verdadera (el área se mantiene fija <1.0 cm² y el gradiente sube >40 mmHg al aumentar el flujo) y 2) Pseudosevera (el ventrículo abre la válvula al recibir el inotrópico, demostrando un área real >1.0 cm²). Además, evalúa la presencia de reserva contráctil (aumento del volumen sistólico >20%).
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con Estenosis Aórtica con Área Valvular < 1.0 cm² pero Gradiente Medio < 40 mmHg.
+• Fracción de eyección del ventrículo izquierdo disminuida (FEVI < 50%).
+Debes pensar en:
+Estenosis Aórtica de Bajo Flujo / Bajo Gradiente clásica; requiere Ecocardiograma de estrés con Dobutamina para confirmar severidad real y evaluar reserva contráctil.
+Tema: Estenosis Aórtica / Valvulopatías.
+
+PREGUNTA 66 (PEDIATRÍA - INFECTOLOGÍA / URGENCIAS)
+Niña de 8 años es traída a urgencias por un cuadro de 24 horas de fiebre muy alta (40°C), escalofríos, mialgias severas, náuseas y postración profunda. Al examen físico: confusa, letárgica, PA 72/40 mmHg (choque profundo), FC 145 lpm, llenado capilar de 4 segundos. Se observa una eritrodermia macular difusa generalizada (aspecto de quemadura solar) que compromete palmas y plantas, asociado a una marcada hiperemia conjuntival bilateral no purulenta y lengua en fresa. Al interrogatorio dirigido, la madre refiere que la niña inició su menarquia hace dos meses y actualmente se encuentra en su tercer día de sangrado menstrual, utilizando tampones vaginales. Tras iniciar una reanimación hídrica agresiva con cristaloides, ¿cuál es el régimen antibiótico empírico inicial MÁS adecuado?
+A. Ceftriaxona intravenosa a dosis máximas de forma aislada.
+B. Vancomicina más Clindamicina intravenosas inmediatas.
+C. Penicilina G cristalina más Gentamicina endovenosas.
+D. Meropenem de forma aislada para cubrir bacilos Gram negativos intrahospitalarios.
+✅ Respuesta correcta: B. Vancomicina más Clindamicina intravenosas inmediatas.
+La paciente presenta todos los criterios clínicos de un Síndrome de Choque Tóxico (SCT) Estafilocócico, clásicamente asociado al uso de tampones hiperabsorbentes en mujeres jóvenes (mediado por la toxina TSST-1 de Staphylococcus aureus). El manejo antibiótico empírico de esta emergencia requiere dos objetivos críticos: 1) Cobertura bactericida contra S. aureus, incluyendo cepas resistentes de la comunidad (SAMR) mediante el uso de Vancomicina y 2) Bloqueo de la síntesis de la toxina. La Clindamicina (un lincosamido que actúa en la subunidad ribosomal 50S) es obligatoria y mandatoria en el SCT porque apaga de forma inmediata la producción de la exotoxina bacteriana superantigénica, contrarrestando el "efecto Eagle" (la pérdida de eficacia de los beta-lactámicos en infecciones con alta carga bacteriana en fase estacionaria).
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente joven en choque con fiebre alta + eritrodermia macular difusa (quemadura solar).
+• Asociación epidemiológica con el uso de tampones vaginales o infecciones de heridas quirúrgicas/quemaduras.
+• Afectación multiorgánica rápida con descamación palmoplantar posterior.
+Debes pensar en:
+Síndrome de Choque Tóxico por S. aureus; el tratamiento empírico exige Vancomicina + Clindamicina (esta última por su efecto antitoxina imprescindible).
+Tema: Síndrome de Choque Tóxico.
+
+PREGUNTA 67 (MEDICINA INTERNA - GASTROENTEROLOGÍA)
+Hombre de 42 años acude a urgencias por un cuadro de un mes de distensión abdominal progresiva, saciedad temprana, alza térmica vespertina intermitente y pérdida de peso involuntaria de 7 kg. Niega antecedentes de alcoholismo o hepatitis. Al examen físico: caquéctico, febril (T 38.2°C). Abdomen globoso con matidez cambiante y onda ascítica franca, doloroso a la palpación difusa profunda, sin masas delimitables. Se realiza una paracentesis diagnóstica que reporta: Líquido ascítico de aspecto amarillo cetrino, proteínas totales en líquido de 4.5 g/dL, albúmina en líquido ascítico de 1.2 g/dL. Los paraclínicos sanguíneos simultáneos informan una Albúmina sérica de 2.1 g/dL. El recuento celular del líquido muestra 850 leucocitos/mm³ con un 88% de linfocitos. ¿Cuál es el siguiente paso MÁS apropiado para confirmar el diagnóstico etiológico?
+A. Iniciar manejo empírico con diuréticos (Espironolactona + Furosemida) y solicitar una ecografía Doppler portal.
+B. Solicitar de forma prioritaria una Laparoscopia exploratoria con toma de biopsia peritoneal.
+C. Iniciar tratamiento antibiótico empírico para peritonitis bacteriana espontánea con Ceftriaxona IV.
+D. Solicitar citología seriada del líquido ascítico y suspender estudios invasivos por sospecha de falla cardíaca.
+✅ Respuesta correcta: B. Solicitar de forma prioritaria una Laparoscopia exploratoria con toma de biopsia peritoneal.
+El paciente presenta una ascitis con un Gradiente de Albúmina Sérico-Ascítico (SAAG) bajo. Calculando el SAAG: Albúmina sérica (2.1) - Albúmina del líquido (1.2) = 0.9 g/dL. Un SAAG < 1.1 g/dL descarta de forma absoluta la presencia de hipertensión portal (como cirrosis o falla cardíaca) como causa de la ascitis. Dado que las proteínas en el líquido son altas (>2.5 g/dL) y hay un predominio linfocítico marcado asociado a fiebre y pérdida de peso, los dos diagnósticos diferenciales principales son la Carcinomatosis Peritoneal y la Tuberculosis Peritoneal. Las guías internacionales establecen que la laparoscopia directa con visualización de granulomas (siembras) y toma de biopsia peritoneal para histopatología y cultivo/PCR (GeneXpert) es el método de elección por su rendimiento diagnóstico cercano al 100%.
+Lo que debes saber para el examen
+Cuando veas:
+• Líquido ascítico con gradiente SAAG < 1.1 g/dL (descarta hipertensión portal).
+• Proteínas elevadas en líquido (>2.5 g/dL) + celularidad con linfocitosis marcada.
+• Clínica constitucional con fiebre vespertina y pérdida de peso.
+Debes pensar en:
+Tuberculosis Peritoneal (o Carcinomatosis); el paso confirmatorio definitivo es la Laparoscopia con biopsia peritoneal (el cultivo de líquido tiene muy baja sensibilidad).
+Tema: Enfoque de la Ascitis / Tuberculosis Peritoneal.
+
+PREGUNTA 68 (PEDIATRÍA - HEMATOLOGÍA)
+Un niño de 5 años es traído a urgencias por presentar palidez mucocutánea intensa, ictericia escleral generalizada y coluria de 48 horas de evolución. Como antecedente de importancia, el paciente fue tratado hace 10 días por una neumonía atípica comunitaria extrahospitalaria. Al examen físico: FC 124 lpm, TA 96/62 mmHg, se palpa el polo inferior del bazo a 2 cm del reborde costal izquierdo; campos pulmonares limpios. Paraclínicos: Hemoglobina 6.5 g/dL, Reticulocitos 12% (hiperregenerativa), Bilirrubina indirecta elevada, LDH 950 U/L. El frotis de sangre periférica reporta policromasia macroscópica marcada, ausencia de esquizocitos, y una llamativa aglutinación de los glóbulos rojos en grumos microscópicos. La prueba de Coombs directo reporta: Positivo para C3d, Negativo para IgG. ¿Cuál es el mecanismo fisiopatológico y diagnóstico MÁS probable?
+A. Anemia hemolítica autoinmune por anticuerpos calientes (IgG) secundaria a leucemia.
+B. Anemia hemolítica autoinmune por anticuerpos fríos (Enfermedad de Crioaglutininas por IgM) secundaria a infección por Mycoplasma pneumoniae.
+C. Esferocitosis hereditaria reactivada por crisis de lisis esplénica.
+D. Síndrome Urémico Hemolítico inducido por neumococo.
+✅ Respuesta correcta: B. Anemia hemolítica autoinmune por anticuerpos fríos (Enfermedad de Crioaglutininas por IgM) secundaria a infección por Mycoplasma pneumoniae.
+El paciente presenta una Anemia Hemolítica Autoinmune (AHAI) por anticuerpos fríos (crioaglutininas). Fisiopatológicamente, la infección por Mycoplasma pneumoniae genera una respuesta de anticuerpos de tipo IgM que presentan reactividad cruzada con el antígeno "I" de la membrana de los eritrocitos humanos. Estos anticuerpos IgM se fijan al glóbulo rojo en temperaturas corporales periféricas más bajas (como en extremidades) y activan la cascada del complemento. Al retornar a la circulación central (37°C), la IgM se desprende pero el complemento permanece fijado; de ahí que el perfil clásico del Coombs directo sea positivo exclusivamente para fracciones del complemento (C3d) y negativo para IgG. La aglutinación en grumos en el frotis confirma mecánicamente la acción de la IgM pentamérica.
+Lo que debes saber para el examen
+Cuando veas:
+• Escolar con anemia hemolítica intravascular/extravascular aguda e ictericia post-neumonía atípica.
+• Frotis de sangre con fenómeno de autoaglutinación eritrocitaria.
+• Prueba de Coombs directo positiva selectiva para C3d y negativa para IgG.
+Debes pensar en:
+Anemia Hemolítica por Anticuerpos Fríos (Crioaglutininas) post-Mycoplasma. El manejo inicial requiere mantener abrigado al paciente y evitar transfundir a menos que haya compromiso vital.
+Tema: Anemias Hemolíticas en Pediatría.
+
+PREGUNTA 69 (MEDICINA INTERNA - ENDOCRINOLOGÍA / URGENCIAS)
+Mujer de 48 años, con antecedente conocido de un microprolactinoma en manejo intermitente con Cabergolina, es traída al servicio de urgencias por presentar un cuadro de inicio súbito (hace 3 horas) consistente en cefalea holocraneana de intensidad 10/10, descrita como "el peor dolor de cabeza de su vida", acompañada de náuseas, vómitos y visión borrosa. Al examen físico: estuporosa, responde únicamente a estímulos dolorosos generalizados. Signos vitales: PA 74/38 mmHg (hipotensión severa refractaria a un bolo de 1.000 cc de cristaloides), FC 106 lpm, T 36.1°C. Al examen oftalmológico se evidencia ptosis palpebral derecha con midriasis paralítica ipsilateral (parálisis aguda del III par craneal). Una tomografía computarizada (TC) de cráneo simple muestra un aumento de tamaño de la silla turca con una imagen hiperdensa en su interior compatible con hemorragia aguda. ¿Cuál es la intervención terapéutica inmediata MÁS importante para salvar la vida de la paciente?
+A. Administrar una dosis urgente de Cabergolina por sonda nasogástrica para reducir el volumen tumoral de forma rápida.
+B. Iniciar infusión intravenosa inmediata de Hidrocortisona a dosis de estrés (100 mg IV cada 8 horas).
+C. Trasladar de forma inmediata a sala de operaciones para craneotomía descompresiva de fosa anterior.
+D. Iniciar infusión continua de Nitroprusiato de Sodio para el manejo de la masa endocraneana hemorrágica.
+✅ Respuesta correcta: B. Iniciar infusión intravenosa inmediata de Hidrocortisona a dosis de estrés (100 mg IV cada 8 horas).
+La paciente cursa con una Apoplejía Hipofisiaria, una emergencia endocrinológica médica y quirúrgica catastrófica causada por el infarto hemorrágico agudo de un adenoma hipofisiario preexistente. La expansión súbita de la masa dentro de la silla turca comprime las estructuras adyacentes (el quiasma óptico causa la alteración visual y los pares craneales en el seno cavernoso explican la parálisis del III par). Sin embargo, la causa de muerte inmediata y del choque hemodinámico profundo refractario es la pérdida aguda y total de la secreción de ACTH, induciendo una Insuficiencia Adrenal Aguda (crisis adrenal fulminante). La administración de glucocorticoides intravenosos (Hidrocortisona) a dosis de estrés es prioritaria sobre cualquier otra medida (incluida la descompresión quirúrgica) para estabilizar hemodinámicamente a la paciente y asegurar la supervivencia.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con antecedente de tumor/adenoma hipofisiario que presenta cefalea súbita hiperaguda destructiva ("thunderclap headache").
+• Signos de compresión local: parálisis de pares craneales oculomotores (III, IV, VI) o hemianopsia bitemporal.
+• Choque circulatorio severo e irreversible con cristaloides.
+Debes pensar en:
+Apoplejía Hipofisiaria con insuficiencia adrenal aguda secundaria; el tratamiento inicial de vida o muerte es Hidrocortisona IV a dosis de estrés.
+Tema: Urgencias Endocrinológicas / Apoplejía Hipofisiaria.
+
+PREGUNTA 70 (MEDICINA INTERNA - INFECTOLOGÍA / URGENCIAS)
+Hombre de 28 años, agricultor procedente del municipio de Tumaco (Nariño), es traído a urgencias por presentar cuadro de 4 días de fiebre alta (40°C) precedida de escalofríos intensos, cefalea y mialgias. En las últimas 12 horas, los familiares notan ictericia generalizada y marcada tendencia a la somnolencia. Al examen físico: estuporoso, responde al llamado de forma incoherente. Signos vitales: PA 95/55 mmHg, FC 112 lpm, FR 26 rpm, T 39.5°C. Tinte ictérico marcado en piel y mucosas, hepatomegalia dolorosa a 3 cm del reborde costal. Se realiza una gota gruesa urgente que reporta: Positivo para trofozoítos de Plasmodium falciparum con una densidad parasitaria del 6% (hiperparasitemia). Paraclínicos: Creatinina sérica 2.4 mg/dL (LRA), Hemoglobina 6.8 g/dL, Plaquetas 65,000/mm³. ¿Cuál es el tratamiento farmacológico de elección inmediata según la guía de práctica clínica nacional vigente del Ministerio de Salud de Colombia?
+A. Iniciar manejo ambulatorio con Cloroquina más Primaquina por vía oral.
+B. Hospitalizar en unidad de cuidados intensivos e iniciar Artesunato por vía intravenosa de forma inmediata.
+C. Iniciar terapia combinada oral con Arteméter más Lumefantrina.
+D. Administrar Sulfato de Quinina intravenoso asociado a Clindamicina por riesgo de resistencia.
+✅ Respuesta correcta: B. Hospitalizar en unidad de cuidados intensivos e iniciar Artesunato por vía intravenosa de forma inmediata.
+El paciente cursa con un cuadro de Malaria Grave (o complicada) por Plasmodium falciparum, definida por la presencia de criterios de severidad clínicos y de laboratorio: compromiso del sistema nervioso central (malaria cerebral manifestada por estupor/somnolencia), disfunción renal (creatinina 2.4 mg/dL), anemia severa (Hb < 7 g/dL) e hiperparasitemia (>50,000 parásitos/uL o >5% de eritrocitos parasitados). La guía de práctica clínica de MinSalud Colombia establece con fuerza de recomendación absoluta que el fármaco de elección de primera línea para la malaria grave es el Artesunato intravenoso (esquema de 2.4 mg/kg a las 0, 12 y 24 horas, y luego diario). El artesunato IV ha demostrado reducir significativamente la mortalidad comparado con la antigua quinina y limpia la parasitemia de forma ultra-rápida.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente procedente de zona endémica de malaria (como la costa pacífica nariñense).
+• Gota gruesa positiva para P. falciparum asociada a disfunción orgánica (coma, falla renal, ictericia profunda, anemia grave o parasitemia >5%).
+• Selección del esquema antimicrobiano de urgencia.
+Debes pensar en:
+Malaria Grave; el único esquema de primera línea aprobado y exigido por guías colombianas y de la OMS es el Artesunato Intravenoso.
+Tema: Enfermedades Transmitidas por Vectores / Malaria Grave.

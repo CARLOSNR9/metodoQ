@@ -84,6 +84,7 @@ import {
 import { markRepasoCierreCompleted } from "@/lib/training/repaso-cierre";
 import type { SessionTypeLabel } from "@/lib/results";
 import { getConvocatoriaQuestionBank } from "@/lib/questions/convocatoria-bank";
+import { getConvocatoriaBankAction } from "@/app/profesor/convocatorias/actions";
 import {
   buildConvocatoriaEditionStatus,
   getConvocatoriaAttempt,
@@ -566,8 +567,20 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
           mounted = false;
         };
       }
-      setQuestionBank(getConvocatoriaQuestionBank(convocatoriaEdition.code));
-      setIsLoadingQuestions(false);
+      const codeBank = getConvocatoriaQuestionBank(convocatoriaEdition.code);
+      // Aplica las correcciones editoriales del profesor (Firestore) sobre el
+      // banco base del código; si falla, usa el banco base como respaldo.
+      getConvocatoriaBankAction(convocatoriaEdition.code)
+        .then(({ questions }) => {
+          if (!mounted) return;
+          setQuestionBank(questions.length > 0 ? questions : codeBank);
+          setIsLoadingQuestions(false);
+        })
+        .catch(() => {
+          if (!mounted) return;
+          setQuestionBank(codeBank);
+          setIsLoadingQuestions(false);
+        });
       return () => {
         mounted = false;
       };

@@ -1,0 +1,165 @@
+PREGUNTA 11 (PEDIATRÍA - ENDOCRINOLOGÍA / NEONATOLOGÍA)
+Recién nacido de 12 días, con sexo asignado masculino al nacer, es traído a urgencias por presentar vómitos repetidos, deshidratación grave y una pérdida de peso del 15% respecto al peso de nacimiento. Al examen físico: PA 52/32 mmHg, FC 182 lpm, FR 46 rpm, T 36.1°C. Se observan genitales externos normoconfigurados, pero con una marcada hiperpigmentación del saco escrotal; los testículos no son palpables con certeza en las bolsas. Paraclínicos: Sodio sérico 120 mEq/L, Potasio sérico 7.3 mEq/L, Cloro 89 mEq/L, pH 7.22, HCO3 12 mEq/L. ¿Cuál es la conducta inmediata MÁS apropiada?
+A. Administrar un bolo de solución salina isotónica al 0.9% seguido de hidrocortisona intravenosa a dosis de estrés.
+B. Suspender la vía oral de forma absoluta y solicitar cariotipo urgente con bandas G.
+C. Iniciar infusión de Gluconato de Calcio al 10% y suspender la lactancia materna por sospecha de galactosemia clásica.
+D. Instaurar un protocolo de restricción hídrica estricta ante la sospecha de Síndrome de Secreción Inadecuada de ADH (SIADH).
+✅ Respuesta correcta: A. Administrar un bolo de solución salina isotónica al 0.9% seguido de hidrocortisona intravenosa a dosis de estrés.
+El paciente cursa con una crisis de pérdida de sal por Hiperplasia Suprarrenal Congénita (HSC) clásica por deficiencia de 21-hidroxilasa. En los recién nacidos con genotipo 46,XX, la virilización orienta al diagnóstico, pero en pacientes 46,XY (varones genéticos), los genitales externos son normales y debutan a la segunda semana de vida con deshidratación profunda, choque, hiponatremia, hiperkalemia y acidosis metabólica. El manejo crítico requiere reanimación con cristaloides isotónicos para expandir el volumen intravascular y el inicio inmediato de hidrocortisona endovenosa, la cual posee el efecto glucocorticoide y mineralocorticoide necesario para estabilizar al paciente.
+Lo que debes saber para el examen
+Cuando veas:
+• Neonato de 1-2 semanas de vida con deshidratación grave y choque sin causa infecciosa obvia.
+• Trastorno hidroelectrolítico con hiponatremia severa, hiperkalemia y acidosis metabólica.
+• Hiperpigmentación genital o genitales ambiguos (o aspecto masculino con testículos no descendidos).
+Debes pensar en:
+Crisis de pérdida de sal por Hiperplasia Suprarrenal Congénita (deficiencia de 21-hidroxilasa); el manejo urgente es SSN 0.9% + Hidrocortisona.
+Tema: Hiperplasia Suprarrenal Congénita.
+
+PREGUNTA 12 (MEDICINA INTERNA - REUMATOLOGÍA)
+Mujer de 28 años con antecedente de tres abortos espontáneos embrionarios consecutivos (<10 semanas). Consulta al servicio de urgencias por un cuadro de 48 horas de dolor, eritema y edema asimétrico en el miembro inferior izquierdo. Una ecografía Doppler confirma el diagnóstico de trombosis venosa profunda iliofemoral. Dentro de los paraclínicos solicitados se reporta: TP normal, TPTa prolongado en 58 segundos (control de 30 segundos). Se solicita una prueba de mezcla (mixing study) 1:1 con plasma normal, la cual reporta un TPTa de 55 segundos que no corrige a los 0 ni a los 120 minutos de incubación. ¿Cuál es la interpretación fisiopatológica e indicación diagnóstica MÁS adecuada?
+A. Existe una deficiencia cuantitativa de factores de la vía intrínseca; se debe solicitar dosificación de factores VIII y IX.
+B. La paciente cursa con una coagulopatía por consumo secundaria a sepsis; requiere manejo con crioprecipitados.
+C. Presencia de un inhibidor circulante de tipo Anticoagulante Lúpico; se debe confirmar mediante la prueba del tiempo de veneno de víbora de Russell diluido (dRVVT).
+D. Corrección parcial del TPTa; indica la necesidad de repetir el estudio mezclando el plasma en una relación de 2:1.
+✅ Respuesta correcta: C. Presencia de un inhibidor circulante de tipo Anticoagulante Lúpico; se debe confirmar mediante la prueba del tiempo de veneno de víbora de Russell diluido (dRVVT).
+El cuadro de pérdidas fetales recurrentes y un evento trombótico venoso es patognomónico del Síndrome Antifosfolípido (SAF). Fisiológicamente, el anticoagulante lúpico prolonga los tiempos dependientes de fosfolípidos (in vitro), particularmente el TPTa. Al realizar la prueba de mezcla 1:1 con plasma normal, si el tiempo prolongado NO corrige, se demuestra la presencia de un inhibidor (anticuerpos que bloquean los fosfolípidos del ensayo) y no una deficiencia de factores (la cual corregiría al aportar plasma sano). Según los criterios de ISTH, el siguiente paso para confirmar el anticoagulante lúpico es un ensayo de base diferente, siendo el dRVVT el estándar de elección.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente joven con trombosis o abortos recurrentes + TPTa prolongado de forma aislada.
+• Prueba de mezcla 1:1 que NO corrige el TPTa prolongado.
+• Sospecha de Síndrome Antifosfolípido (SAF).
+Debes pensar en:
+Anticoagulante Lúpico que requiere confirmación con dRVVT o pruebas de alta concentración de fosfolípidos.
+Tema: Síndrome Antifosfolípido / Pruebas de coagulación.
+
+PREGUNTA 13 (MEDICINA INTERNA - INFECTOLOGÍA / ONCOLOGÍA)
+Paciente masculino de 45 años en su décimo día post-quimioterapia de inducción para Leucemia Mieloide Aguda (LMA). Es traído a urgencias por presentar dos picos febriles de 38.8°C en las últimas 4 horas. Al examen físico: hemodinámicamente estable (PA 118/74 mmHg, FC 90 lpm, FR 18 rpm, T 38.9°C), alerta, orientado; es portador de un catéter venoso central tunelizado en región subclavia derecha el cual no evidencia eritema, fluctuación ni dolor a la palpación. Paraclínicos: Leucocitos 220/mm³, Neutrófilos absolutos 70/mm³ (neutropenia grave), Plaquetas 24,000/mm³. Se toman hemocultivos pareados (central y periférico). ¿Cuál es la conducta terapéutica MÁS apropiada?
+A. Iniciar manejo antibiótico ambulatorio con Ciprofloxacino oral más Amoxicilina/Clavulanato debido a la estabilidad hemodinámica.
+B. Hospitalizar al paciente de inmediato e iniciar monoterapia intravenosa empírica con Cefepime dentro de la primera hora del ingreso.
+C. Iniciar terapia combinada endovenosa con Vancomicina más Piperacilina/Tazobactam por la presencia del catéter venoso central.
+D. Diferir el inicio de la terapia antibiótica hasta obtener el reporte preliminar del crecimiento bacteriano en los hemocultivos (24 horas).
+✅ Respuesta correcta: B. Hospitalizar al paciente de inmediato e iniciar monoterapia intravenosa empírica con Cefepime dentro de la primera hora del ingreso.
+El paciente cursa con un cuadro de Neutropenia Febril de alto riesgo. El antecedente de quimioterapia para leucemia mieloide aguda y un conteo de neutrófilos < 100/mm³ lo clasifican automáticamente como alto riesgo (o una escala MASCC < 21), requiriendo hospitalización y manejo antibiótico empírico de amplio espectro endovenoso con cobertura obligatoria contra Pseudomonas aeruginosa. La monoterapia con una cefalosporina de cuarta generación (Cefepime) o un carbapenémico es el estándar de oro. El antibiótico debe administrarse de forma urgente dentro de la primera hora de la consulta ("la hora de oro"), pues la mortalidad aumenta drásticamente por cada hora de retraso.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente oncológico post-quimioterapia con fiebre (un pico ≥ 38.3°C o ≥ 38.0°C por una hora) + Neutrófilos < 500/mm³.
+• Neutropenia profunda (< 100/mm³) o antecedente de neoplasia hematológica (Alto Riesgo).
+• Estabilidad hemodinámica inicial sin foco de piel evidente.
+Debes pensar en:
+Neutropenia febril de alto riesgo; manejo intrahospitalario urgente con Cefepime o Piperacilina/Tazobactam (Monoterapia antipseudomónica).
+Tema: Neutropenia Febril.
+
+PREGUNTA 14 (PEDIATRÍA - URGENCIAS / NEUMOLOGÍA)
+Paciente femenina de 6 años con diagnóstico de asma persistente moderada. Es traída a urgencias por una crisis asmática de 6 horas de evolución. A su ingreso recibe manejo con 3 ciclos de salbutamol e ipratropio por inhalador de dosis medida con espaciador, asociado a una dosis de metilprednisolona IV (2 mg/kg). Dos horas después de iniciado el manejo, la paciente persiste con marcada dificultad respiratoria, tirajes intercostales y supraclaviculares generalizados, sibilancias espiratorias e inspiratorias bilaterales, y una SatO2 de 91% con oxígeno suplementario por cánula nasal a 2 L/min. FC 130 lpm, FR 38 rpm. Se encuentra alerta y reactiva. ¿Cuál es el siguiente paso terapéutico MÁS adecuado?
+A. Administrar una dosis de Sulfato de Magnesio intravenoso (40 mg/kg) en infusión lenta para 20 minutos.
+B. Iniciar infusión continua de Aminofilina endovenosa con dosis de carga previa y monitorización de niveles séricos.
+C. Trasladar de forma inmediata a la unidad de cuidado intensivo pediátrico para intubación orotraqueal directa.
+D. Suspender de inmediato los beta-2 agonistas por riesgo de taquiarritmia y cambiar a nebulizaciones con solución salina hipertónica al 3%.
+✅ Respuesta correcta: A. Administrar una dosis de Sulfato de Magnesio intravenoso (40 mg/kg) en infusión lenta para 20 minutos.
+La paciente presenta una crisis asmática severa que es refractaria al manejo de primera línea (SABA + SAMA + corticoide sistémico). Dado que no presenta signos inmediatos de falla ventilatoria inminente (está alerta, reactiva, y mantiene sibilancias audibles, lo que indica flujo de aire), el escalamiento terapéutico protocolizado por guías internacionales (GINA) y nacionales consiste en la administración de Sulfato de Magnesio endovenoso. Este actúa bloqueando los canales de calcio en el músculo liso bronquial, induciendo una potente broncodilatación, reduciendo las tasas de hospitalización y la necesidad de ventilación mecánica.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño con crisis asmática severa persistente que no responde a los primeros 3 ciclos de SABA + esteroide sistémico.
+• Ausencia de criterios de intubación inmediata (sensorio conservado, sin tórax silente).
+Debes pensar en:
+Uso de Sulfato de Magnesio IV como terapia de rescate de segunda línea.
+Tema: Crisis Asmática Pediátrica Refractaria.
+
+PREGUNTA 15 (MEDICINA INTERNA - HEMATOLOGÍA)
+Mujer de 34 años es traída a urgencias por un cuadro de astenia marcada, adinamia y aparición de equimosis espontáneas. Durante la evaluación médica, la paciente se torna confusa y desorientada en tiempo y espacio de manera fluctuante. Signos vitales: PA 128/78 mmHg, FC 102 lpm, T 37.9°C. Se observa ictericia leve en escleras. Paraclínicos: Hemoglobina 6.8 g/dL, Plaquetas 9,000/mm³, Reticulocitos 9%, Bilirrubina total 3.8 mg/dL (a expensas de la indirecta), LDH 1,450 U/L. Creatinina sérica 1.8 mg/dL. El frotis de sangre periférica revela la presencia abundante de esquizocitos (4%). Tiempos de coagulación (TP y TPTa) normales. Prueba de Coombs directo: Negativa. ¿Cuál es el manejo inicial MÁS apropiado y prioritario?
+A. Transfusión inmediata de 2 unidades de glóbulos rojos empaquetados y 6 unidades de plaquetas.
+B. Iniciar Recambio Plasmático Terapéutico (plasmaféresis) de urgencia asociado a corticosteroides sistémicos.
+C. Administrar Inmunoglobulina G intravenosa (IGIV) a dosis de 1 g/kg/día por dos días consecutivos.
+D. Solicitar de manera urgente un aspirado y biopsia de médula ósea para descartar leucemia aguda.
+✅ Respuesta correcta: B. Iniciar Recambio Plasmático Terapéutico (plasmaféresis) de urgencia asociado a corticosteroides sistémicos.
+La paciente presenta la pentada clásica (aunque solo se requiere la díada de anemia hemolítica microangiopática y trombocitopenia sin otra causa evidente) de la Púrpura Trombocitopénica Trombótica (PTT): anemia hemolítica no inmune (Coombs negativo con esquizocitos y LDH muy elevada), trombocitopenia severa, síntomas neurológicos fluctuantes, fiebre y disfunción renal leve, con tiempos de coagulación normales (lo que descarta CID). La PTT es una emergencia hematológica con mortalidad >90% sin tratamiento. El recambio plasmático (PEX) debe iniciarse de inmediato para remover los autoanticuerpos contra ADAMTS13 y aportar la enzima faltante, frenando la microtrombosis diseminada.
+Lo que debes saber para el examen
+Cuando veas:
+• Anemia severa + Trombocitopenia marcada + Esquizocitos en frotis periférico.
+• Tiempos de coagulación (TP, TPTa, Fibrinógeno) normales.
+• Alteración neurológica fluctuante, fiebre o falla renal.
+Debes pensar en:
+Púrpura Trombocitopénica Trombótica (PTT); el tratamiento es Plasmaféresis urgente + Esteroides. ¡Transfusión de plaquetas contraindicada!
+Tema: Púrpura Trombocitopénica Trombótica.
+
+PREGUNTA 16 (PEDIATRÍA - NEFROLOGÍA / INFECTOLOGÍA)
+Niño de 4 años con diagnóstico de Síndrome Nefrótico primario, quien se encuentra recibiendo tratamiento inmunosupresor ambulatorio con Prednisolona oral (60 mg/m²/día) desde hace 3 semanas, con respuesta proteínica parcial. Es traído por sus padres por un cuadro de 12 horas de dolor abdominal difuso de intensidad progresiva, fiebre de 39.2°C y dos episodios de vómitos. Al examen físico: facie álgica, abdomen marcadamente distendido, dolor generalizado a la palpación superficial con signo de descompresión (Blumberg) francamente positivo. Se documenta edema grado II en miembros inferiores y ascitis moderada. Tras tomar hemocultivos y cultivo de líquido ascítico, ¿cuál es la conducta MÁS adecuada?
+A. Suspender inmediatamente la prednisolona oral de forma abrupta y remitir para laparotomía exploratoria urgente por sospecha de apendicitis perforada.
+B. Mantener la terapia esteroidea e iniciar inmediatamente cobertura antibiótica empírica intravenosa con una cefalosporina de tercera generación (Cefotaxime o Ceftriaxona).
+C. Duplicar la dosis de prednisolona por sospecha de una recaída severa del síndrome nefrótico con ascitis a tensión inflamatoria.
+D. Administrar de forma prioritaria una infusión de albúmina humana al 20% asociada a furosemida IV, difiriendo el uso de antibióticos.
+✅ Respuesta correcta: B. Mantener la terapia esteroidea e iniciar inmediatamente cobertura antibiótica empírica intravenosa con una cefalosporina de tercera generación (Cefotaxime o Ceftriaxona).
+Los niños con Síndrome Nefrótico activo tienen una susceptibilidad drásticamente aumentada a infecciones bacterianas graves, siendo la Peritonitis Bacteriana Espontánea (PBE) la complicación infecciosa intraabdominal más común. Esto ocurre debido a la pérdida urinaria de inmunoglobulinas (IgG), factores del complemento (factor B) y la inmunosupresión farmacológica por los corticoides. El agente etiológico causal número uno es el Streptococcus pneumoniae. Ante la presencia de un abdomen agudo peritoneal en este contexto, se debe iniciar de inmediato antibióticos de amplio espectro de tipo cefalosporina de tercera generación. Los esteroides no se deben suspender abruptamente para evitar una crisis suprarrenal iatrogénica por supresión del eje.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente pediátrico con síndrome nefrótico (particularmente en manejo con corticoides o ascitis activa).
+• Cuadro de dolor abdominal agudo, fiebre y signos de irritación peritoneal (Blumberg positivo).
+Debes pensar en:
+Peritonitis Bacteriana Espontánea (PBE) por S. pneumoniae; el manejo requiere Ceftriaxona/Cefotaxime IV y NO suspender los esteroides de golpe.
+Tema: Complicaciones del Síndrome Nefrótico en Pediatría.
+
+PREGUNTA 17 (MEDICINA INTERNA - NEUROLOGÍA / URGENCIAS)
+Paciente masculino de 62 años es traído por sus familiares debido a un cuadro de inicio súbito consistente en hemiparesia izquierda y disartria. El tiempo exacto transcurrido desde el inicio de los síntomas hasta su ingreso a urgencias es de 2 horas. Al examen neurológico se documenta una escala NIHSS de 13 puntos. Signos vitales de ingreso: PA 196/112 mmHg, FC 86 lpm, FR 16 rpm, T 36.5°C. La tomografía computarizada (TC) de cráneo simple descarta la presencia de hemorragia intracraneal u otros signos tempranos de infarto extenso. El paciente no presenta antecedentes médicos relevantes ni contraindicaciones absolutas para la reperfusión. ¿Cuál es la conducta MÁS apropiada en este momento?
+A. Iniciar inmediatamente la infusión endovenosa de Alteplase (r-tPA) a dosis estándar; las cifras de presión arterial se controlarán de manera concomitante durante la infusión.
+B. Administrar Labetalol IV en bolos lentos buscando disminuir de forma controlada la presión arterial por debajo de 185/110 mmHg, y luego iniciar de inmediato la infusión de Alteplase.
+C. Contraindicar formalmente la terapia fibrinolítica debido al alto riesgo de transformación hemorrágica secundario a las cifras de PA actuales; iniciar Ácido Acetilsalicílico (AAS) 300 mg vía oral.
+D. Iniciar una infusión continua de Nitroprusiato de Sodio para disminuir de forma agresiva la presión arterial a rangos normales (120/80 mmHg) en los primeros 30 minutos, previo a la trombólisis.
+✅ Respuesta correcta: B. Administrar Labetalol IV en bolos lentos buscando disminuir de forma controlada la presión arterial por debajo de 185/110 mmHg, y luego iniciar de inmediato la infusión de Alteplase.
+El paciente cursa con un Ataque Cerebrovascular (ACV) isquémico agudo dentro de la ventana terapéutica ideal para la trombólisis endovenosa (< 4.5 horas desde el inicio de los síntomas). Sin embargo, unas cifras de presión arterial superiores a 185/110 mmHg constituyen una contraindicación relativa temporal que incrementa de forma crítica el riesgo de transformación hemorrágica cerebral si se administra el fibrinolítico. Las guías internacionales (AHA/ASA) establecen de forma estricta que la PA debe reducirse por debajo de 185/110 mmHg antes de iniciar el Alteplase utilizando medicamentos antihipertensivos endovenosos de acción corta y titulables como el Labetalol o Nicardipina.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con ACV isquémico agudo en ventana de tiempo para trombólisis endovenosa (< 4.5 horas).
+• Presión arterial al ingreso > 185/110 mmHg sin otras contraindicaciones.
+Debes pensar en:
+Control agudo y controlado de la PA con Labetalol o Nicardipina IV hasta metas (< 185/110 mmHg) para poder iniciar inmediatamente el fibrinolítico.
+Tema: Ataque Cerebrovascular Agudo / Criterios de Trombólisis.
+
+PREGUNTA 18 (PEDIATRÍA - CARDIOLOGÍA / REUMATOLOGÍA)
+Niño de 9 años es traído a la consulta por presentar desde hace 4 días dolor, edema e incapacidad funcional de carácter migratorio; el cuadro inició en la rodilla derecha y hoy afecta predominantemente el tobillo izquierdo. Fiebre intermitente de hasta 38.6°C. Los padres refieren que hace un mes presentó un cuadro de faringoamigdalitis purulenta que no recibió manejo médico. Al examen físico: articulaciones mencionadas calientes, eritematosas y marcadamente dolorosas. Auscultación cardíaca normal, sin soplos; ecocardiograma Doppler reporta morfología y función valvular normal. Paraclínicos: Antiestreptolisina O (ASTO) marcadamente elevada, VSG 78 mm/h, PCR 45 mg/L. ¿Cuál es el esquema terapéutico de elección?
+A. Penicilina G benzatínica intramuscular junto con Naproxeno por vía oral.
+B. Amoxicilina por vía oral durante 10 días asociada a Prednisolona oral a altas dosis.
+C. Ceftriaxona endovenosa por 7 días asociada a infiltración articular con corticoides.
+D. Acetaminofén vía oral a demanda y reposo absoluto; los antiinflamatorios potentes están contraindicados hasta obtener cultivos articulares.
+✅ Respuesta correcta: A. Penicilina G benzatínica intramuscular junto con Naproxeno por vía oral.
+El paciente cumple con los criterios de Jones modificados para el diagnóstico de Fiebre Reumática Aguda (un criterio mayor: poliartritis migratoria; dos criterios menores: fiebre y reactantes de fase aguda elevados, sumado a la evidencia obligatoria de infección estreptocócica previa por ASTO elevado). El pilar del tratamiento consiste en: 1) Erradicación del Streptococcus pyogenes de la faringe mediante una dosis única de Penicilina G benzatínica IM para detener el estímulo inmunológico y 2) Control de las manifestaciones inflamatorias articulares. El Naproxeno (o la Aspirina a dosis altas) es el antiinflamatorio no esteroideo (AINE) de elección por su excelente respuesta en la artritis reumática.
+Lo que debes saber para el examen
+Cuando veas:
+• Escolar con poliartritis migratoria post-faringitis estreptocócica + reactantes elevados.
+• Diagnóstico establecido de Fiebre Reumática Aguda.
+• Ausencia de carditis clínica o ecocardiográfica.
+Debes pensar en:
+Manejo combinado obligatorio: Antibiótico erradicador (Penicilina Benzatinica) + AINE de alta potencia (Naproxeno o Aspirina). Los corticoides se reservan solo si hay carditis moderada-severa.
+Tema: Fiebre Reumática Aguda.
+
+PREGUNTA 19 (MEDICINA INTERNA - GASTROENTEROLOGÍA / URGENCIAS)
+Paciente femenina de 53 años acude a urgencias refiriendo dolor abdominal severo localizado en epigastrio, de inicio súbito tras una ingesta copiosa, irradiado en banda hacia la espalda y acompañado de múltiples episodios de vómitos alimentarios y biliares. Signos vitales: PA 106/66 mmHg, FC 106 lpm, FR 22 rpm, T 37.4°C. Paraclínicos: Amilasa sérica 1,350 U/L (Valor normal <110), Lipasa sérica 980 U/L. Ecografía hepatobiliar evidencia colelitiasis múltiple sin signos de colecistitis ni dilatación del colédoco. Hematocrito de ingreso: 46%, BUN: 24 mg/dL. Con el diagnóstico establecido de pancreatitis aguda litiásica, ¿cuál es la estrategia de reanimación hídrica inicial MÁS adecuada según la evidencia clínica actual?
+A. Infusión agresiva a flujo libre de Solución Salina Normal (SSN 0.9%) a razón de 500 cc/hora con el objetivo de normalizar el hematocrito en las primeras 6 horas.
+B. Reanimación hídrica moderada y dirigida por metas (goal-directed) utilizando preferiblemente Lactato de Ringer (200 cc/h previo bolo inicial si se requiere), revaluando parámetros clínicos, BUN y hematocrito cada 6 a 12 horas.
+C. Restricción estricta de líquidos endovenosos a mantenimiento basal (menos de 60 cc/hora) para prevenir el desarrollo temprano de edema pulmonar no cardiogénico (SDRA).
+D. Administración prioritaria de expansores plasmáticos coloides (Albúmina humana al 5% o Almidones) para evitar el tercer espacio retroperitoneal.
+✅ Respuesta correcta: B. Reanimación hídrica moderada y dirigida por metas (goal-directed) utilizando preferiblemente Lactato de Ringer (200 cc/h previo bolo inicial si se requiere), revaluando parámetros clínicos, BUN y hematocrito cada 6 a 12 horas.
+El manejo inicial de la pancreatitis aguda se basa en el soporte hídrico. Sin embargo, estudios multicéntricos recientes (como el ensayo clínico WATERFALL) demostraron de forma contundente que la reanimación hídrica agresiva y a ciegas no aporta beneficios y, por el contrario, incrementa drásticamente el riesgo de sobrecarga de volumen, falla cardíaca y distrés respiratorio sin reducir la necrosis pancreática. El estándar actual dicta una estrategia de reanimación hídrica moderada y guiada por metas. Adicionalmente, el Lactato de Ringer es el cristaloide de elección frente a la solución salina normal, ya que reduce la incidencia de SIRS (Síndrome de Respuesta Inflamatoria Sistémica) y evita la acidosis metabólica hiperclorémica.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con Pancreatitis Aguda en las primeras 24 horas de evolución.
+• Decisión sobre el tipo de líquido y velocidad de infusión para reanimación.
+Debes pensar en:
+Lactato de Ringer administrado bajo una estrategia moderada dirigida por metas (BUN, Hto, Gasto urinario), evitando la sobrehidratación agresiva.
+Tema: Pancreatitis Aguda / Reanimación hídrica.
+
+PREGUNTA 20 (MEDICINA INTERNA - ENDOCRINOLOGÍA / URGENCIAS)
+Mujer de 68 años con antecedente de hipotiroidismo primario en abandono terapéutico de larga evolución. Es traída al servicio de urgencias inconsciente. Los familiares refieren que hace 4 días la paciente inició con tos productiva mucopurulenta y fiebre, tornándose progresivamente somnolienta hasta el estupor actual. Al examen físico: estuporosa, marcada hipotermia (T 34.1°C), bradicardia extrema (FC 44 lpm), bradipnea (FR 9 rpm) e hipotensión (PA 84/48 mmHg). Se observa piel sumamente fría, pálida, seca, macroglosia y edema generalizado duro que no deja fóvea. Paraclínicos: Sodio sérico 121 mEq/L, Glucemia 56 mg/dL. TSH 92 mUI/L, T4 libre indetectable. Ante la sospecha diagnóstica de Coma Mixematoso, ¿Cuál es la conducta terapéutica farmacológica inmediata MÁS apropiada?
+A. Administrar una dosis de carga endovenosa de Levotiroxina (T4) de manera aislada e inmediata a través de un catéter venoso central.
+B. Iniciar administración intravenosa de Hidrocortisona a dosis de estrés (100 mg cada 8 horas) ANTES o de forma estrictamente simultánea con el reemplazo de hormona tiroidea.
+C. Iniciar infusión continua de Dopamina a dosis altas para corregir la bradicardia y la hipotensión, postergando el manejo hormonal hasta estabilizar los signos vitales.
+D. Administrar de forma prioritaria un bolo de solución salina hipertónica al 3% para corregir la hiponatremia severa y diferir el manejo tiroideo por riesgo de arritmias.
+✅ Respuesta correcta: B. Iniciar administración intravenosa de Hidrocortisona a dosis de estrés (100 mg cada 8 horas) ANTES o de forma estrictamente simultánea con el reemplazo de hormona tiroidea.
+El coma mixematoso es una complicación extrema del hipotiroidismo grave no tratado, precipitado comúnmente por procesos infecciosos. Es una emergencia endocrina de alta mortalidad. Fisiológicamente, existe una asociación frecuente entre hipotiroidismo severo de larga evolución y una reserva adrenal disminuida o insuficiencia adrenal secundaria concomitante (Síndrome de Schmidt o hipopituitarismo). Si se administra hormona tiroidea de forma aislada, se produce un aumento súbito del metabolismo basal y de la tasa de aclaramiento metabólico del cortisol circulante, lo cual precipita de forma iatrogénica una insuficiencia suprarrenal aguda (crisis adrenal) y choque irreversible. Por ende, la hidrocortisona empírica debe preceder siempre a la terapia de reemplazo tiroideo.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente anciano con hipotiroidismo crónico grave que presenta la triada: alteración del sensorio + hipotermia + bradicardia/hipotensión.
+• Hiponatremia dilucional y/o hiporreactividad metabólica.
+• Diagnóstico clínico de Coma Mixematoso.
+Debes pensar en:
+Administración obligatoria de Hidrocortisona IV a dosis de estrés ANTES de pasar la dosis de Levotiroxina (T4) o Liotironina (T3) endovenosa.
+Tema: Urgencias Endocrinas / Coma Mixematoso.

@@ -1,0 +1,165 @@
+PREGUNTA 81 (PEDIATRÍA - URGENCIAS / NEUMOLOGÍA)
+Niño de 3 años, con esquema de vacunación desconocido, es traído a urgencias por un cuadro de 6 horas de evolución de fiebre alta (39.4°C), dolor de garganta severo e incapacidad para deglutir. Al examen físico: el paciente se encuentra sentado hacia adelante, con el cuello en extensión y apoyado sobre sus manos (posición de trípode), luce pálido, ansioso, con sialorrea profusa y estridor inspiratorio leve. No presenta tos de intensidad perruna. Ante la sospecha clínica de Epiglotitis Aguda, ¿cuál es la conducta inmediata MÁS apropiada?
+A. Utilizar un bajalenguas para visualizar directamente la faringe y confirmar la presencia de la "epiglottis en cereza".
+B. Trasladar de inmediato al paciente bajo monitorización estricta a quirófano para asegurar la vía aérea mediante intubación endotraqueal controlada.
+C. Administrar una micronebulización con Adrenalina racémica asociada a dexametasona intramuscular y observar por 2 horas.
+D. Remitir al servicio de radiología para la toma urgente de una radiografía lateral de cuello blando buscando el "signo del dedo pulgar".
+✅ Respuesta correcta: B. Trasladar de inmediato al paciente bajo monitorización estricta a quirófano para asegurar la vía aérea mediante intubación endotraqueal controlada.
+La epiglotitis aguda (causada clásicamente por Haemophilus influenzae tipo b) es una emergencia de la vía aérea pediátrica potencialmente mortal debido al riesgo inminente de oclusión laringea completa. El paciente presenta signos clásicos de obstrucción severa y agotamiento (sialorrea por imposibilidad de tragar saliva, posición en trípode). Cualquier intento de manipular la cavidad oral con un bajalenguas o el estrés de trasladarlo a radiología puede desencadenar un laringoespasmo reflejo fatal. El manejo de elección dicta mantener al paciente tranquilo junto a sus padres y movilizarlo directamente a quirófano o a una sala de reanimación equipada, donde un anestesiólogo o cirujano pediátrico pueda intubarlo bajo anestesia inhalatoria de forma controlada.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño pequeño con fiebre alta súbita, estridor, babeo (sialorrea) y postura en trípode.
+• Ausencia de tos disfónica o perruna (característica del crupe).
+• Alto riesgo de colapso respiratorio por obstrucción mecánica.
+Debes pensar en:
+Epiglotitis Aguda; el paso inicial es el aseguramiento de la vía aérea en un ambiente controlado (quirófano), contraindicando bajalenguas o exámenes retrasados.
+Tema: Obstrucción de Vía Aérea Superior / Epiglotitis.
+
+PREGUNTA 82 (MEDICINA INTERNA - GASTROENTEROLOGÍA / ONCOLOGÍA)
+Hombre de 60 años con diagnóstico de cirrosis hepática secundaria a infección crónica por Virus de la Hepatitis C (Child-Pugh A), acude a su control semestral de tamizaje. Una ecografía hepatobiliar de control revela un nódulo sólido y circunscrito de 2.2 cm en el segmento VII del lóbulo derecho, ausente en estudios previos. Los niveles séricos de Alfa-fetoproteína (AFP) se reportan en 45 ng/mL. Se solicita una Tomografía Computarizada (TC) de abdomen trifásica que demuestra una lesión con hipercaptación intensa del medio de contraste en la fase arterial ("wash-in") seguida de un lavado rápido del contraste en la fase venosa/tardía ("wash-out"), clasificándose como una lesión LI-RADS 5. ¿Cuál es el siguiente paso MÁS adecuado en el manejo de este paciente?
+A. Programar una biopsia percutánea con aguja gruesa (tru-cut) guiada por ecografía para confirmación histológica obligatoria.
+B. Evaluar de forma prioritaria al paciente para manejo terapéutico definitivo (resección quirúrgica, ablación por radiofrecuencia o evaluación de trasplante) sin necesidad de biopsia tisular.
+C. Solicitar una Resonancia Magnética (RMN) con contraste hepatospecífico y suspender conductas terapéuticas por 6 meses.
+D. Iniciar tratamiento sistémico de primera línea con Sorafenib de forma empírica por sospecha de malignidad avanzada.
+✅ Respuesta correcta: B. Evaluar de forma prioritaria al paciente para manejo terapéutico definitivo (resección quirúrgica, ablación por radiofrecuencia o evaluación de trasplante) sin necesidad de biopsia tisular.
+En un paciente con cirrosis hepática establecida, el diagnóstico de Carcinoma Hepatocelular (CHC) se realiza de forma puramente IMAGENOLÓGICA mediante criterios no invasivos validados internacionalmente (AASLD/EASL y el sistema LI-RADS). Una lesión >1 cm que muestra el patrón de vascularización típico en un estudio dinámico (TC o RMN trifásica): hiperrealce arterial seguido de lavado ("wash-out") en fase venosa, se clasifica como LI-RADS 5 (definitivo para CHC). En este escenario, la biopsia percutánea NO está indicada de rutina y está desaconsejada, ya que añade un riesgo innecesario de siembra tumoral en el trayecto de la aguja (~1-3%) y complicaciones hemorrágicas, sin cambiar la conducta que ya está definida por la imagen.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente cirrótico con nódulo hepático > 1 cm detectado en tamizaje.
+• TC trifásica con el binomio patognomónico: Hiperrealce arterial + Lavado venoso (LI-RADS 5).
+• Dilema sobre realizar biopsia histológica versus tratar directamente.
+Debes pensar en:
+Carcinoma Hepatocelular confirmado por criterios no invasivos; el paciente pasa directo a estadificación de Barcelona (BCLC) y propuesta de tratamiento sin biopsia.
+Tema: Carcinoma Hepatocelular / Cirrosis.
+
+PREGUNTA 83 (MEDICINA INTERNA - REUMATOLOGÍA)
+Mujer de 72 años consulta a urgencias por un cuadro de 2 semanas de cefalea de predominio temporal izquierdo, de intensidad progresiva, acompañada de dolor en la mandíbula al masticar alimentos sólidos (claudicación mandibular) y episodios fluctuantes de fiebre de hasta 38.0°C. Hace 12 horas presenta visión borrosa y percepción de una "cortina oscura" en el campo visual inferior del ojo izquierdo. Al examen físico: arteria temporal izquierda engrosada, tortuosa, dolorosa a la palpación y sin pulso detectable. Paraclínicos: Velocidad de Sedimentación Globular (VSG) de 105 mm/h, Proteína C Reactiva (PCR) de 68 mg/L. ¿Cuál es el siguiente paso inmediato MÁS adecuado en el manejo?
+A. Programar la realización de una biopsia de la arteria temporal izquierda y diferir el uso de medicamentos hasta obtener el reporte histológico.
+B. Iniciar inmediatamente pulsos endovenosos de Metilprednisolona (500 a 1000 mg diarios por 3 días) antes de realizar cualquier estudio invasivo.
+C. Prescribir Prednisona oral a dosis bajas (20 mg/día) y programar una ecografía Doppler de vasos supraaórticos de forma ambulatoria.
+D. Iniciar anticoagulación plena con Heparina no fraccionada IV por sospecha de oclusión embólica pura de la arteria retiniana central.
+✅ Respuesta correcta: B. Iniciar inmediatamente pulsos endovenosos de Metilprednisolona (500 a 1000 mg diarios por 3 días) antes de realizar cualquier estudio invasivo.
+La paciente presenta un cuadro clínico clásico y altamente sugestivo de Arteritis de Células Gigantes (ACG o Arteritis de Horton) complicada con neuropatía óptica isquémica anterior aguda (pérdida visual/amaurosis). La ACG es una vasculitis de vasos grandes que afecta de forma preferente a personas mayores de 50 años. Ante la aparición de síntomas visuales ("amenaza de ceguera"), el tratamiento inmunosupresor sistémico con corticosteroides a altas dosis (pulsos de metilprednisolona IV) es una emergencia médica extrema e inmediata. No se debe retrasar el inicio del esteroide bajo ninguna circunstancia por esperar la realización de la biopsia de la arteria temporal; la histopatología no se alterará significativamente si la biopsia se realiza dentro de las primeras dos semanas de iniciado el medicamento.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente anciano con cefalea unilateral de novo + claudicación mandibular + VSG marcadamente elevada (> 50-100 mm/h).
+• Aparición aguda de síntomas visuales isquémicos (amaurosis fugax o defectos de campo).
+Debes pensar en:
+Arteritis de Células Gigantes (Horton) con riesgo de ceguera irreversible; la conducta obligatoria es poner esteroides IV a dosis de estrés YA, postergando la biopsia confirmatoria temporal.
+Tema: Vasculitis de Vasos Grandes / Arteritis de Células Gigantes.
+
+PREGUNTA 84 (PEDIATRÍA - GASTROENTEROLOGÍA / CIRUGÍA)
+Recién nacido de 14 días de vida es traído a urgencias por presentar distensión abdominal severa, rechazo a la vía oral y vómitos de contenido bilioso en las últimas 24 horas. Los padres refieren que el niño requirió estimulación rectal para lograr la expulsión de su primer meconio a las 60 horas del nacimiento. Hoy asocia deposiciones líquidas explosivas, sumamente fétidas y con estrías de sangre. Al examen físico: febril (T 38.6°C), marcadamente letárgico, PA 56/34 mmHg, distensión abdominal con circulación colateral visible; al realizar el tacto rectal se produce una salida explosiva de gas y materia fecal líquida (signo de la válvula o de la escupitada positivo). ¿Cuál es el paso inicial MÁS apropiado en el manejo de este paciente?
+A. Trasladar de forma inmediata a quirófano para laparotomía exploratoria urgente y descompresión quirúrgica.
+B. Iniciar reanimación hídrica agresiva con cristaloides isotónicos, administrar antibióticos de amplio espectro (Ampicilina + Gentamicina + Metronidazol) e instaurar descompresión rectal mecánica mediante irrigaciones con solución salina tibia.
+C. Realizar un colon por enema con bario de forma prioritaria para localizar la zona de transición aganglionar.
+D. Suspender la vía oral e iniciar una infusión de Prostaglandina E1 por sospecha de cardiopatía congénita obstructiva izquierda.
+✅ Respuesta correcta: B. Iniciar reanimación hídrica agresiva con cristaloides isotónicos, administrar antibióticos de amplio espectro (Ampicilina + Gentamicina + Metronidazol) e instaurar descompresión rectal mecánica mediante irrigaciones con solución salina tibia.
+El paciente cursa con una Enterocolitis asociada a Enfermedad de Hirschsprung (EAH), la complicación más grave y potencialmente mortal del megacolon aganglionar congénito. Se manifiesta por la tríada de retraso en la expulsión de meconio (>48 horas), distensión abdominal masiva y posterior diarrea fétida explosiva con choque séptico/tóxico. La EAH es una emergencia médica de estabilización inmediata. El manejo inicial fundamental NO es la cirugía de entrada, sino revertir el choque con líquidos, cubrir la translocación bacteriana masiva con antibióticos dirigidos (incluyendo anaerobios) y realizar la descompresión mecánica del colon retenido mediante irrigaciones rectales salinas repetidas con sonda lubricada, lo cual alivia la estasis, disminuye la presión intraluminal y frena la necrosis mucosa. El colon por enema está estrictamente contraindicado en la fase aguda por riesgo de perforación.
+Lo que debes saber para el examen
+Cuando veas:
+• Neonato con antecedente de retraso en meconio que desarrolla distensión, vómito bilioso y diarrea fétida con sangre.
+• Signo del tacto rectal con salida explosiva de heces y descompresión gaseosa.
+• Signos de respuesta inflamatoria sistémica y choque.
+Debes pensar en:
+Enterocolitis asociada a Enfermedad de Hirschsprung; estabilización médica agresiva (antibióticos + irrigaciones rectales de descompresión) antes de cualquier cirugía electiva/diagnóstica.
+Tema: Abdomen Agudo Neonatal / Enfermedad de Hirschsprung.
+
+PREGUNTA 85 (MEDICINA INTERNA - NEFROLOGÍA / TRASTORNOS ELECTROLÍTICOS)
+Hombre de 64 años, con antecedente de enfermedad renal crónica etapa 4 secundaria a nefropatía diabética, es traído a urgencias por un cuadro de 24 horas de debilidad muscular marcada que progresa a cuadriparesia flácida. Reporta automedicación con Ibuprofeno por dolor lumbar crónico en la última semana. Paraclínicos urgentes reportan: Creatinina sérica de 4.8 mg/dL (basal de 2.4 mg/dL), BUN 92 mg/dL. Potasio sérico de 7.4 mEq/L (Hiperkalemia severa). Un electrocardiograma (ECG) tomado a la cabecera muestra ausencia completa de ondas P, complejos QRS marcadamente ensanchados (165 ms) que se fusionan con la onda T, configurando un patrón de onda sinusoidal ("sine-wave"). ¿Cuál es la conducta inmediata MÁS adecuada?
+A. Administrar una dosis endovenosa de Furosemida 80 mg asociada a una ampolla de bicarbonato de sodio.
+B. Iniciar una infusión intravenosa de 10 unidades de Insulina regular mezcladas con 50 mL de Dextrosa al 50% (DAD 50%) para pasar en 15 minutos.
+C. Administrar de forma inmediata 10 mL de Gluconato de Calcio al 10% por vía intravenosa lenta en 3 a 5 minutos bajo monitorización electrocardiográfica continua.
+D. Conectar al paciente de forma directa a la máquina de hemodiálisis de urgencia, suspendiendo manejos farmacológicos previos.
+✅ Respuesta correcta: C. Administrar de forma inmediata 10 mL de Gluconato de Calcio al 10% por vía intravenosa lenta en 3 a 5 minutos bajo monitorización electrocardiográfica continua.
+El paciente presenta una hiperkalemia severa con cambios electrocardiográficos avanzados de inminencia de paro cardíaco (patrón en onda sinusoidal que precede a la fibrilación ventricular). Fisiopatológicamente, el potasio elevado altera el potencial de membrana en reposo de los miocardiocitos, inactivando los canales de sodio y retrasando la conducción celular. Ante la presencia de CUALQUIER cambio electrocardiográfico inducido por hiperkalemia (desde ondas T picudas hasta QRS ancho), la prioridad absoluta y de vida o muerte es estabilizar la membrana miocárdica. Esto se logra administrando de inmediato Gluconato de Calcio IV, el cual antagoniza directamente los efectos electrofisiológicos del potasio al restaurar el umbral de potencial de acción del corazón en cuestión de 1 a 3 minutos, sin alterar los niveles séricos de potasio.
+Lo que debes saber para el examen
+Cuando veas:
+• Hiperkalemia severa (>6.0 - 6.5 mEq/L) asociada a cambios en el ECG (QRS ancho, onda sinusoidal, pérdida de P).
+• Necesidad de definir el orden estricto de las intervenciones farmacológicas.
+Debes pensar en:
+Estabilización de membrana miocárdica con Gluconato de Calcio como primer paso absoluto. Las medidas de cambio intracelular (Insulina/Dextrosa) y eliminación (diálisis/resinas) van después.
+Tema: Trastornos Hidroelectrolíticos / Hiperkalemia Severa.
+
+PREGUNTA 86 (PEDIATRÍA - ONCOLOGÍA)
+Niño de 3 años es llevado a la consulta de pediatría por su madre tras haberle palpado de forma accidental una masa en el abdomen mientras lo bañaba. El niño se encuentra asintomático, vital, sin pérdida de peso. Al examen físico: se evidencia una masa firme, lisa, palpable en el flanco izquierdo, la cual es de características fijas y NO cruza la línea media abdominal. Signos vitales: FC 102 lpm, PA 132/86 mmHg (hipertensión arterial para el grupo etario). Un parcial de orina reporta hematuria microscópica aislada (15 glóbulos rojos por campo) sin piuria. Ante la sospecha clínica de un Tumor de Wilms (Nefroblastoma), ¿cuál es el siguiente paso MÁS apropiado?
+A. Realizar una biopsia percutánea con aguja fina guiada por ecografía para confirmar el diagnóstico histológico antes de estadificar.
+B. Solicitar una Tomografía Computarizada (TC) con contraste de abdomen y tórax para evaluar la extensión local, la relación con grandes vasos y buscar metástasis pulmonares.
+C. Programar de inmediato una nefrectomía radical izquierda abierta de urgencia, prescindiendo de estudios imagenológicos avanzados.
+D. Iniciar un ciclo de quimioterapia neoadyuvante empírica basada en Vincristina y Dactinomicina basándose solo en el parcial de orina.
+✅ Respuesta correcta: B. Solicitar una Tomografía Computarizada (TC) con contraste de abdomen y tórax para evaluar la extensión local, la relación con grandes vasos y buscar metástasis pulmonares.
+El cuadro describe la presentación clásica del Tumor de Wilms (nefroblastoma): masa abdominal palpable unilateral, lisa, que respeta la línea media en un niño de la primera infancia, asociada a hipertensión arterial (por activación del eje RAA secundario a isquemia renal por compresión tumoral) y hematuria microscópica. Tras el hallazgo físico, el paso inmediato mandatorio es la realización de imágenes seccionales contrastadas (TC de abdomen y pelvis) para evaluar el origen de la masa, la presencia de trombo tumoral en la vena renal o vena cava inferior, y el estado del riñón contralateral. Adicionalmente, se exige la TC de tórax debido a que el pulmón es el sitio número uno de metástasis a distancia de este tumor.
+Lo que debes saber para el examen
+Cuando veas:
+• Preescolar sano con masa abdominal lisa unilateral que no cruza la línea media + hipertensión.
+• Sospecha diagnóstica firme de Tumor de Wilms.
+• Discusión sobre realizar biopsia inicial.
+Debes pensar en:
+Estadificación por TC contrastada de abdomen y tórax. La biopsia con aguja está CONTRAINDICADA en el tumor de Wilms resecable por riesgo de ruptura capsular y siembra peritoneal.
+Tema: Oncología Pediátrica / Tumor de Wilms.
+
+PREGUNTA 87 (MEDICINA INTERNA - INFECTOLOGÍA / CARDIOLOGÍA)
+Hombre de 45 años se encuentra hospitalizado en el piso de Medicina Interna recibiendo tratamiento antibiótico intravenoso con Vancomicina por una Endocarditis Infecciosa de la válvula aórtica nativa por Staphylococcus aureus meticilino-resistente (SAMR), diagnosticada hace 6 días. El paciente ha evolucionado con persistencia de picos febriles aislados. Durante la ronda médica de hoy, se evalúa el electrocardiograma (ECG) de control diario, documentando un intervalo PR de 245 ms (Bloqueo AV de primer grado de novo); el ECG de ingreso mostraba un PR normal de 160 ms. El paciente se encuentra hemodinámicamente estable, sin disnea ni soplos nuevos de insuficiencia aguda. ¿Cuál es la complicación subyacente MÁS probable y la conducta diagnóstica de elección?
+A. Progresión bacteriana normal de la vegetación; se debe mantener el antibiótico actual y repetir el ECG en una semana.
+B. Formación de un absceso perivalvular/anular aórtico; se debe solicitar de forma urgente un Ecocardiograma Transesofágico (ETE).
+C. Toxicidad cardíaca directa por niveles séricos elevados de Vancomicina; se debe suspender el fármaco de inmediato.
+D. Extensión de la infección a la válvula tricúspide; se debe ordenar una radiografía de tórax digital urgente.
+✅ Respuesta correcta: B. Formación de un absceso perivalvular/anular aórtico; se debe solicitar de forma urgente un Ecocardiograma Transesofágico (ETE).
+La aparición de un trastorno de la conducción auriculoventricular de novo (prolongación del intervalo PR o bloqueo de rama nuevo) en un paciente con endocarditis infecciosa de la válvula aórtica es un signo de alarma crítico que indica la extensión de la infección más allá de las valvas hacia el miocardio adyacente, configurando un Absceso Perivalvular. La raíz aórtica se localiza anatómicamente en íntima contigüidad con el nodo AV y el haz de His; la inflamación purulenta de un absceso comprime estas estructuras eléctricas causando bloqueos cardíacos. Ante esta sospecha de complicación anatómica severa, el ecocardiograma transtorácico se queda corto, siendo de elección obligatoria el Ecocardiograma Transesofágico (ETE) debido a su máxima sensibilidad (>90%) para detectar abscesos y fístulas anulares.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con endocarditis aórtica activa en tratamiento médico.
+• Aparición en el ECG diario de prolongación del PR o bloqueos AV nuevos.
+Debes pensar en:
+Absceso perivalvular/anular aórtico; requiere confirmación diagnóstica inmediata con Ecocardiograma Transesofágico (ETE) y evaluación urgente por cirugía cardiovascular (indicación operatoria).
+Tema: Endocarditis Infecciosa / Complicaciones Cardíacas.
+
+PREGUNTA 88 (MEDICINA INTERNA - ENDOCRINOLOGÍA)
+Mujer de 45 años es enviada al servicio de Medicina Interna para preparación preoperatoria tras documentarse un Feocromocitoma de 4 cm en la glándula suprarrenal derecha. El diagnóstico se estableció mediante elevación de metanefrinas fraccionadas en orina de 24 horas (5 veces por encima del límite superior normal). La paciente presenta episodios recurrentes de cefalea pulsátil, diaforesis profusa y crisis hipertensivas paroxísticas con cifras de hasta 210/120 mmHg. La cirugía de resección tumoral (adrenalectomía) se ha programado para dentro de dos semanas. ¿Cuál es la estrategia de bloqueo autonómico preoperatorio MÁS adecuada y fisiológicamente correcta?
+A. Iniciar de inmediato Propranolol oral a dosis altas para controlar la taquicardia paroxística, y posteriormente asociar Prazosina 3 días antes de la cirugía.
+B. Iniciar primero un bloqueo alfa-adrenérgico selectivo (ej. Prazosina o Doxazosina) o no selectivo (Fenoxibenzamina) por un mínimo de 10 a 14 días; posteriormente, adicionar un betabloqueador (ej. Propranolol) SOLO si aparece taquicardia refleja y una vez asegurado el bloqueo alfa previo.
+C. Administrar una combinación simultánea de Metoprolol más Losartán a dosis máximas toleradas; los alfa-bloqueadores están obsoletos según las guías recientes.
+D. Evitar el uso de cualquier bloqueador autonómico previo a la cirugía para no enmascarar la actividad tumoral; manejar la presión intraoperatoriamente de forma exclusiva con Nitroprusiato de Sodio.
+✅ Respuesta correcta: B. Iniciar primero un bloqueo alfa-adrenérgico selectivo (ej. Prazosina o Doxazosina) o no selectivo (Fenoxibenzamina) por un mínimo de 10 a 14 días; posteriormente, adicionar un betabloqueador (ej. Propranolol) SOLO si aparece taquicardia refleja y una vez asegurado el bloqueo alfa previo.
+El feocromocitoma es un tumor productor de catecolaminas (norepinefrina y epinefrina). El principio fisiopatológico e inamovible de la preparación quirúrgica del feocromocitoma exige que el bloqueo ALFA-adrenérgico debe preceder SIEMPRE al bloqueo BETA-adrenérgico por al menos 10 a 14 días (Regla de oro de la Endocrinología). Si se administra un beta-bloqueador de entrada de forma aislada (Opción A), se bloquean los receptores beta-2 vasculares (que median vasodilatación), dejando la estimulación de los receptores alfa-1 por las catecolaminas circulantes completamente libre y sin oposición. Esto desencadena una vasoconstricción periférica extrema masiva, precipitando crisis hipertensivas malignas, edema agudo de pulmón o infartos cerebrovasculares fatales.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con Feocromocitoma confirmado programado para cirugía de resección.
+• Necesidad de seleccionar la cronología del bloqueo preoperatorio.
+Debes pensar en:
+Bloqueo Alfa primero, Bloqueo Beta después ("Alfa antes que Beta"). El orden inverso está estrictamente contraindicado.
+Tema: Feocromocitoma / Urgencias Endocrinas.
+
+PREGUNTA 89 (PEDIATRÍA - NEUMOLOGÍA / INFECTOLOGÍA)
+Lactante masculino de 1 mes y 15 días de vida es traído al servicio de urgencias por presentar un cuadro de 3 días de rinorrea clara y estornudos, que hoy progresa a dificultad respiratoria severa y rechazo total a la alimentación. Al examen físico: reactivo, marcadamente taquipneico (FR 70 rpm), con tirajes intercostales, subcostales y aleteo nasal franco. A la auscultación pulmonar se documenta una espiración prolongada con abundantes sibilancias y estertores crepitantes bilaterales diseminados. Signos vitales: SatO2 de 85% al aire ambiente, FC 162 lpm, T 37.4°C. Durante su estancia en el cubículo de observación, el monitor registra dos episodios espontáneos de cese del flujo respiratorio de 15 segundos de duración acompañados de bradicardia (FC 90 lpm) que resuelven con estimulación táctil (apneas). ¿Cuál es la estrategia de manejo MÁS adecuada en este momento?
+A. Prescribir micronebulizaciones con Salbutamol cada 20 minutos por 3 ciclos asociado a un ciclo oral de Prednisolona a dosis altas.
+B. Iniciar soporte respiratorio no invasivo inmediato con Cánula Nasal de Alto Flujo (CNAF) o Presión Positiva Continua en la Vía Aérea (CPAP), monitorización estricta en la Unidad de Cuidado Intermedio/Intensivo Pediátrico y asegurar soporte hídrico intravenoso.
+C. Proceder a la intubación orotraqueal inmediata y conexión a ventilación mecánica invasiva de control por el antecedente de apneas.
+D. Iniciar micronebulizaciones con Solución Salina Hipertónica al 3% combinada con Adrenalina racémica y egreso hospitalario con pautas de alarma.
+✅ Respuesta correcta: B. Iniciar soporte respiratorio no invasivo inmediato con Cánula Nasal de Alto Flujo (CNAF) o Presión Positiva Continua en la Vía Aérea (CPAP), monitorización estricta en la Unidad de Cuidado Intermedio/Intensivo Pediátrico y asegurar soporte hídrico intravenoso.
+El paciente presenta un cuadro de Bronquiolitis Aguda Severa (primer episodio de sibilancias en un lactante menor de 2 años precedido de pródromo viral, comúnmente por Virus Sincitial Respiratorio - VRS). En lactantes muy pequeños (< 6-8 semanas), el VRS altera los quimiorreceptores centrales y fatiga los músculos respiratorios, manifestándose de forma típica y peligrosa con apneas centrales acompañadas de bradicardia. Las guías mundiales actuales (AAP, NICE) establecen que la base del tratamiento de la bronquiolitis es de SOPORTE. Ante la severidad y la presencia de apneas, está indicado el inicio temprano de soporte respiratorio no invasivo (CNAF o CPAP), el cual aporta presión positiva al final de la espiración (PEEP), recluta alvéolos, disminuye el trabajo respiratorio y reduce drásticamente las apneas y la tasa de intubación invasiva. Los esteroides y los broncodilatadores (salbutamol) están desaconsejados de forma rutinaria por falta de eficacia biológica en la fisiopatología del moco y edema bronquiolar.
+Lo que debes saber para el examen
+Cuando veas:
+• Lactante menor de 2 meses con sibilancias difusas bilaterales post-coriza.
+• Presencia de dificultad respiratoria severa (FR > 60-70) y desarrollo de apneas agudas.
+• Discusión sobre el uso de terapias farmacológicas tradicionales vs soporte físico.
+Debes pensar en:
+Bronquiolitis Aguda Severa; el tratamiento es puramente de soporte de vía aérea no invasivo (Alto Flujo/CPAP) y líquidos. Evitar el uso de Salbutamol o esteroides sistémicos.
+Tema: Bronquiolitis Aguda Pediátrica.
+
+PREGUNTA 90 (MEDICINA INTERNA - REUMATOLOGÍA / NEFROLOGÍA)
+Hombre de 70 años consulta a urgencias por un cuadro de 48 horas de dolor insoportable, eritema marcado, calor local y edema tenso en la primera articulación metatarsofalángica del pie derecho (podagra aguda), el cual le impide el apoyo o el roce con las sábanas. Como antecedentes de importancia presenta Enfermedad Renal Crónica Etapa 4 secundaria a nefroesclerosis hipertensiva (Última Creatinina sérica basal conocida de 2.8 mg/dL, Tasa de Filtrado Glomerular calculada por CKD-EPI de 21 mL/min/1.73m²). Al examen físico actual: articulación mencionada con francos signos inflamatorios agudos; resto sin alteraciones. Ácido úrico sérico de ingreso: 8.9 mg/dL. ¿Cuál es la estrategia terapéutica MÁS adecuada y segura para el control de la crisis aguda en este paciente?
+A. Prescribir Indometacina 50 mg por vía oral cada 8 horas o Naproxeno a dosis plenas hasta la resolución del dolor.
+B. Iniciar Colchicina oral a dosis estándar de ataque (1.2 mg seguido de 0.6 mg a la hora) y mantener 0.6 mg cada 12 horas por 7 días.
+C. Administrar Corticosteroides sistémicos (Prednisolona 30 mg al día por vía oral por 5 días) o considerar infiltración intraarticular directa con triamcinolona si es viable.
+D. Iniciar de forma inmediata Alopurinol 300 mg al día por vía oral para forzar el descenso rápido del ácido úrico en sangre.
+✅ Respuesta correcta: C. Administrar Corticosteroides sistémicos (Prednisolona 30 mg al día por vía oral por 5 días) o considerar infiltración intraarticular directa con triamcinolona si es viable.
+El paciente presenta un ataque agudo de Artritis por microcristales de urato monosódico (Gota aguda). El dilema central radica en la selección de la terapia antiinflamatoria en el contexto de una Enfermedad Renal Crónica (ERC) avanzada (TFGe <30 mL/min). Los Antiinflamatorios No Esteroideos (AINEs, como la indometacina) están absolutamente CONTRAINDICADOS en la ERC avanzada debido a que bloquean las prostaglandinas renales vasodilatadoras, provocando vasoconstricción de la arteriola aferente y una falla renal aguda sobre crónica severa de forma iatrogénica. La Colchicina está severamente desaconsejada o requiere una reducción drástica extrema de dosis en TFGe <30 por riesgo de acumulación tóxica masiva (neuromiopatía y aplasia medular fatal). Por lo tanto, las guías ACR (American College of Rheumatology) establecen que los Corticosteroides (orales o intraarticulares) son la primera línea absoluta de elección segura y eficaz en pacientes con disfunción renal grave.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con ataque agudo de Gota (podagra o monoartritis inflamatoria).
+• Coexistencia de Enfermedad Renal Crónica avanzada (TFG < 30 mL/min o creatinina alta).
+• Toma de decisión farmacológica para el manejo analgésico agudo.
+Debes pensar en:
+Uso exclusivo de Corticosteroides (Prednisolona oral o corticoides intraarticulares). Los AINEs y la colchicina están contraindicados o restringidos por alta toxicidad renal y sistémica.
+Tema: Artritis por Microcristales / Gota / Farmacología Renal.

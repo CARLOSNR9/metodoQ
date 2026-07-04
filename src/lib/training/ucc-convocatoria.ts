@@ -1,5 +1,6 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { UCC_CONV_2025_06_21_QUESTIONS } from "@/data/ucc-conv-2025-06-21-questions";
+import { UCC_CONV_2025_07_05_QUESTIONS } from "@/data/ucc-conv-2025-07-05-questions";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -44,6 +45,15 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     minutes: 180,
     stayOpenUntilNext: true,
     questions: UCC_CONV_2025_06_21_QUESTIONS,
+  },
+  {
+    code: "UCC-2025-07-05",
+    label: "Edición #2",
+    examDate: "2025-07-05",
+    questionCount: 100,
+    minutes: 180,
+    stayOpenUntilNext: true,
+    questions: UCC_CONV_2025_07_05_QUESTIONS,
   },
 ];
 
@@ -186,7 +196,7 @@ export async function saveConvocatoriaAttempt(
 }
 
 export function getFeaturedConvocatoriaEdition(): UccConvocatoriaEdition | null {
-  return UCC_CONVOCATORIA_EDITIONS[0] ?? null;
+  return UCC_CONVOCATORIA_EDITIONS[UCC_CONVOCATORIA_EDITIONS.length - 1] ?? null;
 }
 
 export function buildConvocatoriaEditionStatus(options: {

@@ -1,0 +1,162 @@
+PREGUNTA 51 (MEDICINA INTERNA - NEUMOLOGÍA / INFECTOLOGÍA)
+Hombre de 45 años, sin antecedentes de importancia, acude a urgencias por un cuadro de 7 días de tos productiva con expectoración purulenta, disnea progresiva y dolor pleurítico en el hemitórax derecho, acompañado de picos febriles de hasta 39°C. Signos vitales: PA 118/76 mmHg, FC 102 lpm, FR 24 rpm, SatO2 90% al aire ambiente. Una radiografía de tórax muestra un consolidado lobar inferior derecho asociado a un derrame pleural que ocupa más de la mitad del hemitórax. Se realiza toracocentesis diagnóstica que reporta líquido de aspecto turbio, pH 7.08, Glucosa 32 mg/dL, LDH 1,200 U/L y tinción de Gram con cocos Gram positivos en cadenas. ¿Cuál es la conducta MÁS adecuada en este momento?
+A. Continuar el manejo antibiótico empírico intravenoso y repetir la toracocentesis en 48 horas para evaluar respuesta.
+B. Insertar de forma inmediata un tubo de tórax (toracostomía cerrada) asociado al inicio de antibioticoterapia dirigida.
+C. Remitir urgentemente a cirugía de tórax para decorticación pulmonar por videotoracoscopia (VATS).
+D. Realizar una tomografía computarizada (TC) de tórax contrastada previa al inicio de cualquier intervención para evaluar loculaciones.
+✅ Respuesta correcta: B. Insertar de forma inmediata un tubo de tórax (toracostomía cerrada) asociado al inicio de antibioticoterapia dirigida.
+El paciente presenta un derrame pleural paraneumónico complejo/complicado, definido bioquímicamente por un pH < 7.2, glucosa < 40 mg/dL, LDH > 1,000 U/L o la presencia directa de bacterias en el Gram/cultivo (o pus franco, que configuraría un empiema). A diferencia de los derrames paraneumónicos simples, los complicados no resuelven únicamente con antibióticos sistémicos debido al secuestro del líquido y el riesgo inminente de organización fibrosa. Las guías de la BTS (British Thoracic Society) y la ATS establecen que la indicación inmediata es el drenaje percutáneo mediante tubo de tórax para evitar la paquipleurititis y el atrapamiento pulmonar irreversible.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con neumonía aguda que desarrolla derrame pleural significativo.
+• Líquido pleural con pH < 7.2, Glucosa < 40 mg/dL o Gram positivo.
+Debes pensar en:
+Derrame paraneumónico complicado; requiere drenaje inmediato con tubo de tórax (toracostomía).
+Tema: Derrame Pleural Paraneumónico.
+
+PREGUNTA 52 (PEDIATRÍA - INFECTOLOGÍA / NEFROLOGÍA)
+Lactante femenina de 10 meses es traída a urgencias por un cuadro de 48 horas de fiebre de hasta 39.1°C, irritabilidad y disminución del apetito, sin focos respiratorios ni gastrointestinales. Un uranálisis obtenido por cateterismo vesical muestra piuria (>20 leucocitos por campo), nitritos positivos y bacterias abundantes. Se inicia manejo antibiótico empírico endovenoso y el urocultivo confirma a las 48 horas el crecimiento de E. coli (>100,000 UFC/mL) sensible. Tras 72 horas el cuadro febril remite por completo y la niña luce en excelentes condiciones clínicas. Este es su primer episodio documentado de infección de vías urinarias (IVU). ¿Cuál es la conducta de seguimiento imagenológico MÁS adecuada según las guías clínicas actuales (AAP)?
+A. Solicitar una ecografía renal y de vías urinarias de forma prioritaria pre-alta; diferir otros estudios invasivos por ser el primer episodio.
+B. Realizar una cistouretrografía miccional cistoscópica (CUMC) inmediata antes del alta para descartar reflujo vesicoureteral.
+C. Programar una gammagrafía renal con DMSA a las 4 semanas del egreso de forma rutinaria obligatoria.
+D. Dar de alta sin estudios de imagen; las infecciones urinarias en lactantes femeninas no requieren investigación diagnóstica inicial.
+✅ Respuesta correcta: A. Solicitar una ecografía renal y de vías urinarias de forma prioritaria pre-alta; diferir otros estudios invasivos por ser el primer episodio.
+Las guías de la Academia Americana de Pediatría (AAP) para el manejo de la primera IVU febril en lactantes de 2 a 24 meses dictan que se debe realizar una ecografía renal y de vías urinarias de forma rutinaria. Su objetivo es detectar anomalías anatómicas estructurales mayores (como hidronefrosis, duplicación calicial u obstrucciones). La cistouretrografía miccional (CUMC/VCUG), que es un examen invasivo e irradia al paciente, NO se realiza de rutina en el primer episodio de IVU febril a menos que la ecografía muestre hidronefrosis, cicatrices corticales u otros hallazgos sugestivos de alto grado de reflujo, o si el paciente presenta una IVU recurrente.
+Lo que debes saber para el examen
+Cuando veas:
+• Lactante de 2 a 24 meses con su PRIMER episodio de IVU febril confirmada.
+• Paciente que responde adecuadamente al tratamiento antibiótico.
+Debes pensar en:
+Realizar Ecografía Renal y de Vías Urinarias únicamente. Guardar la CUMC y el DMSA para ecografías anormales o IVU recurrentes.
+Tema: Infección de Vías Urinarias en Pediatría.
+
+PREGUNTA 53 (MEDICINA INTERNA - ENDOCRINOLOGÍA)
+Mujer de 54 años acude al servicio de urgencias por un cuadro de 48 horas de náuseas, vómitos, dolor abdominal difuso, constipación severa y un estado de somnolencia fluctuante progresivo. Al examen físico: deshidratación mucosa grave, desorientada, bradipsíquica, sin signos de focalización neurológica. Signos vitales: PA 105/65 mmHg, FC 92 lpm, T 36.8°C. Paraclínicos: Calcio sérico corregido de 14.8 mg/dL (marcada hipercalcemia), Fósforo sérico 2.1 mg/dL, Creatinina 1.9 mg/dL (basal de 0.8 mg/dL), Potasio 3.8 mEq/L. Un electrocardiograma muestra acortamiento evidente del intervalo QT. ¿Cuál es el orden secuencial de manejo MÁS adecuado para esta crisis hipercalcémica?
+A. Infusión de solución salina isotónica al 0.9% para expansión de volumen, seguido de la administración de un bifosfonato intravenoso (Ácido Zoledrónico o Pamidronato) y Calcitonina SC.
+B. Administración inmediata de Furosemida endovenosa a altas dosis para forzar la calciuresis, seguido de aportes de calcio oral.
+C. Iniciar infusión de Gluconato de Calcio al 10% para estabilizar la membrana miocárdica y posteriormente administrar corticoides.
+D. Remisión inmediata para paratiroidectomía de urgencia; el tratamiento médico está contraindicado con calcio >14 mg/dL.
+✅ Respuesta correcta: A. Infusión de solución salina isotónica al 0.9% para expansión de volumen, seguido de la administración de un bifosfonato intravenoso (Ácido Zoledrónico o Pamidronato) y Calcitonina SC.
+La paciente cursa con una crisis hipercalcémica severa (>14 mg/dL) complicada con alteración neurológica y lesión renal aguda (prerrenal por diabetes insípida nefrogénica inducida por calcio y vómitos). El paso inicial y más crítico es la reanimación hídrica agresiva con solución salina normal al 0.9% (típicamente 200-500 cc/h) para restaurar el filtrado glomerular y promover la excreción renal pasiva de calcio. Una vez normovolemizada, se asocian los fármacos hipocalcemiantes: la Calcitonina actúa rápido (horas) pero hace taquifilaxia, mientras que los bifosfonatos intravenosos (Ácido Zoledrónico) bloquean potentemente la resorción ósea pero tardan de 2 a 4 días en alcanzar su máximo efecto, complementándose perfectamente.
+Lo que debes saber para el examen
+Cuando veas:
+• Hipercalcemia severa (>14 mg/dL) con síntomas neurológicos, gastrointestinales y acortamiento del QT.
+• Necesidad de definir la cronología exacta del tratamiento hipocalcemiante.
+Debes pensar en:
+La hidratación enérgica con SSN 0.9% es siempre el primer paso absoluto. Los bifosfonatos y la calcitonina se añaden en paralelo; la furosemida solo se usa si hay sobrecarga de volumen demostrada.
+Tema: Trastornos del Calcio / Hipercalcemia Severa.
+
+PREGUNTA 54 (PEDIATRÍA - GASTROENTEROLOGÍA)
+Niño de 22 meses es llevado a la consulta de gastroenterología pediátrica por presentar desde hace 6 meses detención del crecimiento pondoestatural, distensión abdominal marcada, irritabilidad y deposiciones pastosas, fétidas y esteatorreicas de forma crónica. Al examen físico: desnutrición crónica (peso/edad y talla/edad por debajo del percentil 3), marcada pérdida de masa muscular en extremidades (glúteos hipotróficos) y abdomen prominente. Ante la sospecha clínica de Enfermedad Celíaca, se solicitan laboratorios de tamizaje. ¿Cuál es la combinación de pruebas serológicas iniciales MÁS adecuada y recomendada por las guías europeas (ESPGHAN)?
+A. Anticuerpos anti-gliadina de tipo IgG más anticuerpos anti-endomisio de tipo IgG de forma aislada.
+B. Anticuerpos antitransglutaminasa tisular IgA (anti-tTG IgA) asociados a la medición de los niveles séricos de IgA total.
+C. Biopsia duodenal directa por endoscopia digestiva alta sin realizar pruebas serológicas previas.
+D. Cuantificación de grasa en materia fecal (prueba de Van de Kamer) y anticuerpos anti-gliadina desamidada de tipo IgM.
+✅ Respuesta correcta: B. Anticuerpos antitransglutaminasa tisular IgA (anti-tTG IgA) asociados a la medición de los niveles séricos de IgA total.
+Según las directrices unificadas de ESPGHAN y NASPGHAN, el abordaje diagnóstico inicial de la enfermedad celíaca en pediatría debe realizarse mediante la determinación de anticuerpos anti-tTG de isotipo IgA, debido a su altísima sensibilidad y especificidad (>95-98%). Sin embargo, es OBLIGATORIO medir concomitantemente los niveles de IgA total sérica. Esto se debe a que los pacientes con enfermedad celíaca tienen una prevalencia de deficiencia selectiva de IgA 10 a 15 veces mayor que la población general; si un niño tiene deficiencia de IgA, la prueba anti-tTG IgA saldrá falsamente negativa (falso negativo), obligando en ese caso específico a realizar el tamizaje con anticuerpos de isotipo IgG (anti-DGP IgG o anti-tTG IgG).
+Lo que debes saber para el examen
+Cuando veas:
+• Niño pequeño con síndrome de malabsorción crónica (esteatorrea, desnutrición, glúteos planos).
+• Sospecha de Enfermedad Celíaca y selección de pruebas de laboratorio.
+Debes pensar en:
+Tamizaje de elección con Anti-transglutaminasa IgA + Niveles de IgA total. Descartar deficiencia de IgA para evitar falsos negativos.
+Tema: Enfermedad Celíaca en Pediatría.
+
+PREGUNTA 55 (MEDICINA INTERNA - CARDIOLOGÍA)
+Mujer de 24 años, sin antecedentes médicos conocidos, ingresa a urgencias por un cuadro de 30 minutos de palpitaciones taquicárdicas de inicio súbito, mareo y disnea leve. Al examen físico: PA 112/68 mmHg, FC 175 lpm, FR 20 rpm, SatO2 97% al aire ambiente. Neurológicamente íntegra, sin signos de choque ni congestión pulmonar. El electrocardiograma muestra una taquicardia de complejo QRS ancho (>120 ms), marcadamente irregular, con frecuencias ventriculares que varían latido a latido entre 140 y 230 lpm. Se observan variaciones notorias en la morfología y amplitud del QRS (complejos preexcitados alternando con conducción normal). ¿Cuál es el tratamiento farmacológico de elección en esta paciente?
+A. Administrar un bolo intravenoso de Adenosina 6 mg por vía central seguido de lavado rápido.
+B. Iniciar infusión endovenosa de Amiodarona o Procainamida, prefiriendo la Procainamida si se dispone de ella.
+C. Administrar Metoprolol o Verapamilo endovenoso inmediato para frenar la conducción del nodo auriculoventricular.
+D. Realizar cardioversión eléctrica sincronizada inmediata con 200 Joules bajo sedación por inestabilidad.
+✅ Respuesta correcta: B. Iniciar infusión endovenosa de Amiodarona o Procainamida, prefiriendo la Procainamida si se dispone de ella.
+La paciente presenta una Fibrilación Auricular Preexcitada (FA en el contexto de un Síndrome de Wolff-Parkinson-White). Se reconoce electrocardiográficamente por ser una taquicardia de QRS ancho irregular con morfologías variables (tasa de preexcitación variable). Dado que la paciente se encuentra hemodinámicamente estable (PA normal, sensorio preservado), el manejo es farmacológico. El fármaco de elección por guías (AHA/ESC) es la Procainamida endovenosa (o Ibutilide/Amiodarona como alternativa), ya que prolonga el periodo refractario de la vía accesoria. Está estrictamente PROHIBIDO el uso de bloqueadores del nodo AV (Adenosina, Betabloqueadores, Verapamilo, Digoxina).
+Lo que debes saber para el examen
+Cuando veas:
+• Taquicardia de QRS ancho marcadamente IRREGULAR con FC muy elevada (>200 lpm por zonas).
+• Paciente joven sin cardiopatía estructural previa.
+• Criterios de estabilidad hemodinámica conservados.
+Debes pensar en:
+Fibrilación Auricular Preexcitada (WPW + FA). El tratamiento es Procainamida IV. Los bloqueadores del nodo AV están absolutamente contraindicados.
+Tema: Arritmias Cardíacas / Síndrome de Wolff-Parkinson-White.
+
+PREGUNTA 56 (PEDIATRÍA - REUMATOLOGÍA / NEFROLOGÍA)
+Niño de 6 años es llevado a urgencias por presentar lesiones maculopapulares eritematosas que progresaron a púrpuras palpables no pruriginosas localizadas simétricamente en los miembros inferiores y glúteos. Asocia dolor abdominal tipo cólico intermitente y artralgias en ambos tobillos. Dos semanas antes tuvo un cuadro de rinofaringitis viral. Paraclínicos de ingreso: Hemograma con leucocitos y plaquetas normales (Plaquetas: 240,000/mm³). Tiempos de coagulación normales. El parcial de orina revela proteinuria de 150 mg/dL y hematuria con 30 glóbulos rojos por campo (70% dismórficos). Presión arterial en el percentil 50 para la edad. ¿Cuál es el enfoque de manejo MÁS adecuado para este paciente?
+A. Iniciar pulsos de Metilprednisolona intravenosa de forma inmediata para prevenir la insuficiencia renal crónica a largo plazo.
+B. Brindar manejo sintomático ambulatorio con analgésicos (Acetaminofén), reposo, y realizar un seguimiento estricto semanal de la presión arterial y el parcial de orina.
+C. Administrar Ciclofosfamida endovenosa de inmediato debido al compromiso renal glomerular activo (hematuria y proteinuria).
+D. Prescribir Ácido Acetilsalicílico a dosis antiinflamatorias y suspender la vía oral ante el riesgo de invaginación intestinal crónica.
+✅ Respuesta correcta: B. Brindar manejo sintomático ambulatorio con analgésicos (Acetaminofén), reposo, y realizar un seguimiento estricto semanal de la presión arterial y el parcial de orina.
+El paciente presenta una Vasculitis por IgA (antiguamente Púrpura de Henoch-Schönlein), caracterizada por la tétrada clásica: púrpura palpable no trombocitopénica (plaquetas normales), artralgias, dolor abdominal y afección renal (nefritis por IgA). En la inmensa mayoría de los niños, la enfermedad es benigna y autolimitada. El compromiso renal inicial leve (hematuria microscópica y proteinuria no nefrótica, sin hipertensión ni elevación de creatinina) NO justifica el uso de corticoterapia sistémica ni inmunosupresores mayores de entrada. El estándar de manejo dicta soporte sintomático y monitorización estrecha ambulatoria del sedimento urinario y la presión arterial por al menos 6 meses, ya que el daño renal puede aparecer o progresar tardíamente.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño con púrpura palpable simétrica en piernas + plaquetas normales + dolor abdominal.
+• Parcial de orina con hematuria microscópica aislada o proteinuria leve estable.
+Debes pensar en:
+Vasculitis por IgA (Henoch-Schönlein); el manejo es puramente sintomático y de observación estrecha. Los esteroides no previenen la nefritis y solo se usan si hay dolor abdominal severo o nefritis proliferativa demostrada.
+Tema: Vasculitis por IgA / Púrpura de Henoch-Schönlein.
+
+PREGUNTA 57 (MEDICINA INTERNA - NEFROLOGÍA)
+Mujer de 42 años acude a consulta externa de Medicina Interna remitida por un cuadro de 2 meses de edema progresivo en miembros inferiores que hoy compromete párpados y manos. No refiere antecedentes de diabetes ni hipertensión. Paraclínicos: Creatinina sérica 0.9 mg/dL, Albúmina sérica 2.1 g/dL, Colesterol total 310 mg/dL. Proteinuria en orina de 24 horas de 6.8 gramos (Rango Nefrótico). Sedimento urinario inactivo, sin hematuria. Estudios de inmunología reportan: ANA, anti-DNA y ANCA negativos; C3 y C4 normales. Serologías para VIH, Hepatitis B y C negativas. Se recibe un reporte altamente positivo para anticuerpos circulantes contra el receptor de fosfolipasa A2 (Anti-PLA2R). ¿Cuál es la interpretación diagnóstica e indicación de manejo MÁS apropiada?
+A. Diagnóstico de Nefropatía de Cambios Mínimos; se debe iniciar tratamiento inmediato con Ciclofosfamida oral de forma prioritaria.
+B. Diagnóstico de Nefropatía Membranosa Primaria; dada la positividad de Anti-PLA2R, se puede obviar la biopsia si no hay sospecha de malignidad y clasificar el riesgo para definir inmunosupresión (Rituximab).
+C. Diagnóstico de Glomerulonefritis Membranoproliferativa secundaria a infección oculta; requiere tratamiento antibiótico empírico prolongado.
+D. Diagnóstico de Glomeruloesclerosis Focal y Segmentaria; el anticuerpo PLA2R es un marcador de excelente respuesta a la monoterapia con IECA sin requerir esteroides.
+✅ Respuesta correcta: B. Diagnóstico de Nefropatía Membranosa Primaria; dada la positividad de Anti-PLA2R, se puede obviar la biopsia si no hay sospecha de malignidad y clasificar el riesgo para definir inmunosupresión (Rituximab).
+La paciente cursa con un Síndrome Nefrótico puro. El hallazgo de anticuerpos circulantes Anti-PLA2R es un dato decisivo moderno en nefrología: estos anticuerpos están dirigidos contra los podocitos en el 70-80% de los casos de Nefropatía Membranosa (NM) Primaria. Las guías KDIGO actualizadas establecen que en un paciente con síndrome nefrótico y títulos francamente positivos de Anti-PLA2R, el diagnóstico de Nefropatía Membranosa Primaria está confirmado bioquímicamente, permitiendo iniciar el manejo clínico y la estratificación de riesgo (e inmunosupresión con Rituximab o esquema de Ponticelli modificado si el riesgo es alto) incluso sin necesidad de realizar una biopsia renal, siempre y cuando la función renal esté preservada y no haya sospechas de causas secundarias (lupus, cáncer, infecciones).
+Lo que debes saber para el examen
+Cuando veas:
+• Adulto con Síndrome Nefrótico franco y función renal inicialmente normal (Creatinina normal).
+• Presencia de anticuerpos Anti-PLA2R altamente positivos en suero.
+Debes pensar en:
+Nefropatía Membranosa Primaria. Los Anti-PLA2R sirven como "biopsia líquida" diagnóstica y marcador de seguimiento terapéutico.
+Tema: Glomerulopatías / Nefropatía Membranosa.
+
+PREGUNTA 58 (PEDIATRÍA - NEUMOLOGÍA)
+Lactante masculino de 4 meses de edad es llevado a la consulta de neumología pediátrica por presentar desde el nacimiento cuadros repetitivos de tos húmeda, sibilancias recurrentes y tres episodios de neumonía que requirieron hospitalización. Su madre refiere además que el niño "sabe muy salado" cuando lo besa y sus deposiciones son abundantes, pastosas y flotan en el pañal. Se sospecha Fibrosis Quística (FQ). Se realiza una prueba de iontoforesis con pilocarpina (test de sudor) en dos ocasiones independientes, reportando niveles de Cloro en sudor de 48 mEq/L y 52 mEq/L respectivamente. ¿Cuál es la interpretación diagnóstica y el siguiente paso MÁS adecuado?
+A. El resultado es francamente negativo (normal); se descarta Fibrosis Quística y se debe dar de alta al paciente.
+B. El resultado se encuentra en la zona gris (indeterminado o limítrofe); se debe realizar un estudio genético molecular para buscar mutaciones del gen CFTR.
+C. El resultado es confirmatorio absoluto de Fibrosis Quística; se debe iniciar de inmediato terapia de reemplazo con enzimas pancreáticas sin más estudios.
+D. El resultado indica falsedad técnica; se debe repetir la prueba de sudor utilizando una muestra de saliva en lugar de sudoración cutánea.
+✅ Respuesta correcta: B. El resultado se encuentra en la zona gris (indeterminado o limítrofe); se debe realizar un estudio genético molecular para buscar mutaciones del gen CFTR.
+En el algoritmo diagnóstico de la Fibrosis Quística, los niveles de cloro en sudor menores a 30 mEq/L se consideran normales (improbables), mientras que valores ≥ 60 mEq/L son confirmatorios absolutos en presencia de clínica sugestiva. El rango entre 30 y 59 mEq/L constituye la "zona gris" o rango intermedio/indeterminado. Ante un paciente con alta sospecha clínica (síntomas respiratorios crónicos, malabsorción pancreática exocrina descrita por deposiciones que flotan) y un test de sudor indeterminado, las guías internacionales (Cystic Fibrosis Foundation) establecen que el siguiente paso mandatorio es realizar el análisis genético molecular para identificar mutaciones en el gen CFTR (como la deleción F508del) o medir la diferencia de potencial nasal.
+Lo que debes saber para el examen
+Cuando veas:
+• Lactante con infecciones respiratorias recurrentes + esteatorrea (deposiciones que flotan) + "sudor salado".
+• Test de sudor con niveles de Cloro entre 30 y 59 mEq/L.
+Debes pensar en:
+Resultado limítrofe/indeterminado para Fibrosis Quística, que exige escalamiento diagnóstico mediante panel de secuenciación genética del gen CFTR.
+Tema: Fibrosis Quística.
+
+PREGUNTA 59 (MEDICINA INTERNA - INFECTOLOGÍA / CARDIOLOGÍA)
+Hombre de 34 años, usuario de drogas intravenosas, se encuentra hospitalizado recibiendo vancomicina endovenosa por un cuadro de Endocarditis Infecciosa de la válvula tricúspide por Staphylococcus aureus meticilino-resistente (SAMR) diagnosticada hace 5 días. Durante la evolución de hoy, el paciente desarrolla disnea súbita y dolor torácico pleurítico izquierdo. Una angio-TC de tórax confirma múltiples infartos pulmonares sépticos cavitados bilaterales secundarios a embolismo microvascular. El ecocardiograma transesofágico de control revela una vegetación móvil en la valva anterior tricúspide que mide 22 mm de diámetro mayor, con insuficiencia tricúspide moderada y función del ventrículo derecho conservada. El paciente persiste con picos febriles diarios a pesar del antibiótico ajustado. ¿Cuál es la indicación de manejo MÁS adecuada en este momento?
+A. Continuar el tratamiento antibiótico con vancomicina de forma aislada por un mínimo de 6 semanas; la endocarditis derecha nunca se opera.
+B. Adicionar anticoagulación plena con heparina de bajo peso molecular para disolver los émbolos sépticos pulmonares.
+C. Remitir de forma prioritaria a cirugía cardiovascular para la escisión de la vegetación y reparación/reemplazo valvular.
+D. Suspender la vancomicina y cambiar a daptomicina, difiriendo la cirugía hasta completar al menos 14 días de terapia médica esterilizante.
+✅ Respuesta correcta: C. Remitir de forma prioritaria a cirugía cardiovascular para la escisión de la vegetación y reparación/reemplazo valvular.
+Aunque clásicamente la endocarditis infecciosa del lado derecho (tricúspide) se maneja médicamente con altas tasas de éxito, existen indicaciones quirúrgicas absolutas y claras validadas por las guías de la AHA y la ESC. Este paciente cumple dos criterios mayores para cirugía de urgencia: 1) Vegetación persistente de gran tamaño (> 20 mm) asociada a embolismos sépticos pulmonares recurrentes y 2) Falla terapéutica médica manifestada por bacteriemia persistente o fiebre refractaria tras >5 días de antibioterapia adecuada contra un germen agresivo como SAMR. Retrasar la cirugía en presencia de vegetaciones gigantes de la tricúspide que siguen embolizando destruirá el parénquima pulmonar del paciente.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con Endocarditis Infecciosa activa en terapia antibiótica adecuada.
+• Presencia de vegetación gigante (>20 mm en lado derecho o >10 mm en lado izquierdo con embolismo previo).
+• Embolismos sépticos recurrentes o persistencia de fiebre/cultivos positivos tras 5-7 días de ATB.
+Debes pensar en:
+Indicación quirúrgica de urgencia (remisión a cirugía cardiovascular); la terapia médica exclusiva ha fracasado.
+Tema: Endocarditis Infecciosa / Indicaciones Quirúrgicas.
+
+PREGUNTA 60 (MEDICINA INTERNA - URGENCIAS / TOXICOLOGÍA)
+Hombre de 38 años, con antecedente de alcoholismo severo, es traído inconsciente a urgencias tras ser hallado en la calle junto a envases de licores artesanales adulterados. Al examen físico: comatoso (Glasgow 6/15), respiración profunda y rápida (patrón de Kussmaul). Signos vitales: PA 95/55 mmHg, FC 110 lpm, FR 32 rpm, T 35.8°C. Pupilas midriáticas bilaterales con muy escasa respuesta a la luz. Paraclínicos: pH 6.95, PaCO2 18 mmHg, HCO3 5 mEq/L, Anión Gap 28 (acidosis metabólica severa con anión gap ensanchado). Creatinina 1.1 mg/dL. Brecha u osmolaridad calculada (Osmolal Gap) de 35 mOsm/kg H2O (marcadamente elevada). Ante la sospecha de intoxicación aguda por Metanol, ¿cuál es el siguiente paso terapéutico MÁS adecuado y prioritario para salvar la vida y la función visual del paciente?
+A. Administrar una dosis de carga intravenosa de Bicarbonato de Sodio de forma aislada y esperar los niveles séricos cuantitativos de metanol.
+B. Iniciar de inmediato la infusión de un inhibidor de la alcohol deshidrogenasa (Fomepizol o Etanol endovenoso/oral) y coordinar de urgencia la realización de Hemodiálisis intermitente.
+C. Administrar Flumazenil más Naloxona intravenosos por protocolo de coma de origen desconocido previo a evaluar el estado ácido-base.
+D. Realizar lavado gástrico con carbón activado seriado cada 4 horas para adsorber los alcoholes residuales del lumen intestinal.
+✅ Respuesta correcta: B. Iniciar de inmediato la infusión de un inhibidor de la alcohol deshidrogenasa (Fomepizol o Etanol endovenoso/oral) y coordinar de urgencia la realización de Hemodiálisis intermitente.
+El paciente presenta una intoxicación crítica por Metanol, evidenciada por la combinación clínica-laboratorial de acidosis metabólica extrema (pH <7.0), brecha aniónica ensanchada (acumulación de ácido fórmico) y una brecha osmolar elevada (>10 mOsm/kg), sumado a los signos de toxicidad ocular (midriasis arreactiva por daño del nervio óptico). El metanol en sí mismo no es tóxico; el daño lo producen sus metabolitos (formaldehído y ácido fórmico) formados por la enzima alcohol deshidrogenasa (ADH). El manejo requiere dos acciones críticas simultáneas: 1) Bloquear la ADH de inmediato con Fomepizol o Etanol para detener la producción del tóxico ocular, y 2) Iniciar Hemodiálisis urgente, la cual está formalmente indicada ante un pH < 7.15, alteraciones visuales o niveles altos de metanol, siendo el único método capaz de remover rápidamente el metanol libre y el ácido fórmico del cuerpo, además de corregir la acidosis extrema.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con antecedente de ingesta de alcohol adulterado o solventes industriales.
+• Triada bioquímica: Acidosis metabólica extrema + Anión Gap muy alto + Brecha Osmolar elevada.
+• Signos visuales (midriasis, ceguera) o coma profundo.
+Debes pensar en:
+Intoxicación por Metanol; el manejo es Antídoto (Fomepizol/Etanol) + Hemodiálisis urgente de soporte vital.
+Tema: Intoxicación por Alcoholes Tóxicos (Metanol).
