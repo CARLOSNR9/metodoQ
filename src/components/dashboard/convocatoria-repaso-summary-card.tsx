@@ -91,6 +91,25 @@ export function ConvocatoriaRepasoSummaryCard({ userId }: ConvocatoriaRepasoSumm
     });
   }, [loaded]);
 
+  const [sessionErrorsHref, setSessionErrorsHref] = useState<string>("");
+
+  useEffect(() => {
+    if (!loaded?.attempt?.sessionQuestionIds) {
+      setSessionErrorsHref("");
+      return;
+    }
+    resolveSessionQuestions(loaded.attempt.sessionQuestionIds).then((questions) => {
+      const href = buildSessionErrorsTrainingHref({
+        resultId: loaded.attempt.resultId,
+        questionIds: questions
+          .filter((q) => loaded.attempt.answersByQuestionId?.[q.id] !== q.correctOptionId)
+          .map((q) => q.id),
+        count: Math.min(loaded.attempt.wrongAnswers, 25),
+      });
+      setSessionErrorsHref(href);
+    });
+  }, [loaded]);
+
   if (isLoading) {
     return (
       <div
@@ -107,24 +126,6 @@ export function ConvocatoriaRepasoSummaryCard({ userId }: ConvocatoriaRepasoSumm
   const topTopics = insights?.topics.slice(0, 4) ?? [];
   const reviewHref = buildReviewHref(attempt.resultId);
   const wrongOnlyHref = buildReviewHref(attempt.resultId, "wrong");
-  const [sessionErrorsHref, setSessionErrorsHref] = useState<string>("");
-
-  useEffect(() => {
-    if (!attempt.sessionQuestionIds) {
-      setSessionErrorsHref("");
-      return;
-    }
-    resolveSessionQuestions(attempt.sessionQuestionIds).then((questions) => {
-      const href = buildSessionErrorsTrainingHref({
-        resultId: attempt.resultId,
-        questionIds: questions
-          .filter((q) => attempt.answersByQuestionId?.[q.id] !== q.correctOptionId)
-          .map((q) => q.id),
-        count: Math.min(attempt.wrongAnswers, 25),
-      });
-      setSessionErrorsHref(href);
-    });
-  }, [attempt]);
 
   return (
     <motion.section
