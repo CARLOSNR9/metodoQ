@@ -196,7 +196,12 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
           </select>
         </td>
         <td className="py-3 text-xs text-mq-muted">
-          {new Date(report.updatedAt || report.createdAt).toLocaleDateString("es-CO")}
+          {(() => {
+            const val = report.updatedAt || report.createdAt;
+            if (!val) return "—";
+            const d = new Date(val);
+            return isNaN(d.getTime()) ? "Fecha inválida" : d.toLocaleDateString("es-CO");
+          })()}
         </td>
       </tr>
       
@@ -208,7 +213,13 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
                 <div key={i} className="rounded-lg bg-white/5 p-3 text-sm">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-semibold text-rose-300">{r.category}</span>
-                    <span className="text-xs text-mq-muted">{new Date(r.createdAt).toLocaleDateString("es-CO")}</span>
+                    <span className="text-xs text-mq-muted">
+                      {(() => {
+                        if (!r.createdAt) return "—";
+                        const d = new Date(r.createdAt);
+                        return isNaN(d.getTime()) ? "Fecha inválida" : d.toLocaleDateString("es-CO");
+                      })()}
+                    </span>
                   </div>
                   {r.comments ? (
                     <p className="text-white/90">{r.comments}</p>
