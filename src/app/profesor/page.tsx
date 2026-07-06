@@ -2,7 +2,7 @@ import Link from "next/link";
 import { adminListQuestionsForReview } from "@/lib/server/questions-admin";
 import { adminListClasses } from "@/lib/server/classes-admin";
 import { getProfessorStudentDirectory } from "@/lib/server/professor-users";
-import { ChevronRight, Users, BookOpen, Calendar, GraduationCap, ClipboardCheck } from "lucide-react";
+import { ChevronRight, Users, BookOpen, Calendar, GraduationCap, ClipboardCheck, Flag } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -52,6 +52,12 @@ export default async function ProfessorHomePage() {
         totalQuestions > 0
           ? `${pendingCount} pendiente${pendingCount === 1 ? "" : "s"} de ${totalQuestions}`
           : "Abrir banco clínico",
+    },
+    {
+      href: "/profesor/preguntas-reportadas",
+      icon: Flag,
+      title: "Preguntas reportadas",
+      detail: "Revisar reportes de los estudiantes",
     },
     {
       href: "/profesor/convocatorias",

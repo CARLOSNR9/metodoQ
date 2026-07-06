@@ -15,6 +15,7 @@ import {
   ClipboardList,
   LogOut,
   ClipboardCheck,
+  Flag,
 } from "lucide-react";
 
 type ProfessorShellProps = {
@@ -24,6 +25,7 @@ type ProfessorShellProps = {
 const navigationItems = [
   { label: "Inicio", href: "/profesor", icon: LayoutDashboard, exact: true },
   { label: "Banco de preguntas", href: "/profesor/preguntas", icon: BookOpen, exact: true },
+  { label: "Preguntas reportadas", href: "/profesor/preguntas-reportadas", icon: Flag },
   { label: "Revisar convocatorias", href: "/profesor/convocatorias", icon: ClipboardCheck },
   { label: "Agregar preguntas", href: "/profesor/preguntas/nueva", icon: PlusCircle, exact: true },
   { label: "Mis grupos", href: "/profesor/cursos", icon: GraduationCap },

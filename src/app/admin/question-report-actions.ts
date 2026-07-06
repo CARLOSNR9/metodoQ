@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { isAdminUser } from "@/lib/roles";
+import { canManageQuestions } from "@/lib/roles";
 import {
   adminReportQuestion,
   adminUpdateQuestionReportStatus,
@@ -11,7 +11,7 @@ import type { QuestionReportStatus } from "@/lib/server/question-reports-admin";
 export type { QuestionReportStatus };
 import { verifyStaffCaller } from "@/lib/server/verify-staff";
 
-const REPORT_PATHS = ["/admin/preguntas", "/admin/preguntas-reportadas"] as const;
+const REPORT_PATHS = ["/admin/preguntas", "/admin/preguntas-reportadas", "/profesor/preguntas-reportadas"] as const;
 
 function revalidateReportPaths() {
   for (const path of REPORT_PATHS) {
@@ -19,13 +19,13 @@ function revalidateReportPaths() {
   }
 }
 
-async function requireAdmin(idToken: string | null | undefined) {
+async function requireManageQuestions(idToken: string | null | undefined) {
   const caller = await verifyStaffCaller(idToken);
   if (!caller.ok) {
     return { ok: false as const, error: caller.error };
   }
-  if (!isAdminUser(caller.role, caller.email)) {
-    return { ok: false as const, error: "Solo administradores pueden gestionar reportes." };
+  if (!canManageQuestions(caller.role, caller.email)) {
+    return { ok: false as const, error: "Solo administradores y profesores pueden gestionar reportes." };
   }
   return { ok: true as const, uid: caller.uid, email: caller.email };
 }
@@ -36,7 +36,7 @@ export async function reportQuestionAction(
   theoryCharCount: number | null,
   idToken: string | null | undefined,
 ) {
-  const auth = await requireAdmin(idToken);
+  const auth = await requireManageQuestions(idToken);
   if (!auth.ok) return { error: auth.error };
 
   const trimmedId = questionId.trim();
@@ -65,7 +65,7 @@ export async function updateQuestionReportStatusAction(
   status: QuestionReportStatus,
   idToken: string | null | undefined,
 ) {
-  const auth = await requireAdmin(idToken);
+  const auth = await requireManageQuestions(idToken);
   if (!auth.ok) return { error: auth.error };
 
   if (status !== "pending" && status !== "reviewed" && status !== "dismissed") {
