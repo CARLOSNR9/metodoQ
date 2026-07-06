@@ -67,6 +67,7 @@ function ReviewQuestionCard({
   item,
   isOpen,
   onToggle,
+  userId,
 }: {
   item: SessionReviewItem;
   isOpen: boolean;
