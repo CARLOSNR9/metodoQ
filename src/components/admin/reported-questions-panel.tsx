@@ -134,9 +134,12 @@ export function ReportedQuestionsPanel({ reports }: Props) {
   );
 }
 
+import { useRouter } from "next/navigation";
+
 function ReportedQuestionRow({ report }: { report: QuestionReport }) {
   const [isPending, startTransition] = useTransition();
   const [isExpanded, setIsExpanded] = useState(false);
+  const router = useRouter();
 
   const reportsCount = report.reportsList?.length || 0;
 
@@ -147,10 +150,24 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
         .then((result) => {
           if (result.error) {
             console.error(result.error);
+          } else {
+            router.refresh();
           }
         })
         .catch(console.error);
     });
+  };
+
+  const getStatusColor = (status: QuestionReportStatus) => {
+    switch (status) {
+      case "reviewed":
+        return "border-emerald-500/30 bg-emerald-500/10 text-emerald-400";
+      case "dismissed":
+        return "border-rose-500/30 bg-rose-500/10 text-rose-400";
+      case "pending":
+      default:
+        return "border-white/10 bg-[#0f2744] text-white";
+    }
   };
 
   return (
@@ -189,7 +206,7 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
             onChange={(event) =>
               handleStatusChange(event.target.value as QuestionReportStatus)
             }
-            className={`${selectInputClassName} px-2 py-1 text-xs`}
+            className={`${selectInputClassName} px-2 py-1 text-xs border ${getStatusColor(report.status)} focus:border-mq-accent focus:ring-1 focus:ring-mq-accent/50 outline-none rounded-lg transition-colors`}
           >
             {STATUS_OPTIONS.map((opt) => (
               <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
