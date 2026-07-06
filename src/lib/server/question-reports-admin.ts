@@ -35,6 +35,19 @@ function parseTimestamp(value: unknown): string | null {
 
 function mapReportDoc(doc: { id: string; data: () => Record<string, unknown> | undefined }): QuestionReport {
   const data = doc.data() ?? {};
+  
+  // Sanitize reportsList to ensure no complex objects like Timestamps are passed to Client Components
+  let safeReportsList: StudentReport[] = [];
+  if (Array.isArray(data.reportsList)) {
+    safeReportsList = data.reportsList.map((r: any) => ({
+      userId: r.userId ? String(r.userId) : null,
+      userEmail: r.userEmail ? String(r.userEmail) : null,
+      category: String(r.category ?? "Sin categoría"),
+      comments: String(r.comments ?? ""),
+      createdAt: parseTimestamp(r.createdAt) ?? new Date().toISOString(),
+    }));
+  }
+
   return {
     id: doc.id,
     questionId: String(data.questionId ?? doc.id),
@@ -44,7 +57,7 @@ function mapReportDoc(doc: { id: string; data: () => Record<string, unknown> | u
     reportedBy: String(data.reportedBy ?? ""),
     reportedByEmail: data.reportedByEmail ? String(data.reportedByEmail) : null,
     status: (data.status as QuestionReportStatus) ?? "pending",
-    reportsList: Array.isArray(data.reportsList) ? data.reportsList : [],
+    reportsList: safeReportsList,
     createdAt: parseTimestamp(data.createdAt) ?? new Date().toISOString(),
     updatedAt: parseTimestamp(data.updatedAt),
   };
