@@ -288,7 +288,7 @@ export async function migrateUserTopicStats(userId: string): Promise<{
   totalQuestions: number;
 }> {
   const results = await getUserDemoResults(userId);
-  const nextTopicStats = rebuildTopicStatsFromHistory(results);
+  const nextTopicStats = await rebuildTopicStatsFromHistory(results);
   const cumulative = computeCumulativePerformance(nextTopicStats);
   const strengths = getTopTopicsByMetric(nextTopicStats, "correct");
   const weaknesses = getTopTopicsByMetric(nextTopicStats, "wrong");

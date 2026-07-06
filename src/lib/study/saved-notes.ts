@@ -91,12 +91,12 @@ function mapStudyNoteDoc(docSnap: { id: string; data: () => Record<string, unkno
   };
 }
 
-function deliverEnrichedStudyNotes(
+async function deliverEnrichedStudyNotes(
   userId: string,
   storedNotes: StudyNote[],
   onChange: (notes: StudyNote[]) => void,
 ) {
-  const enrichedNotes = enrichStudyNotesLocally(storedNotes);
+  const enrichedNotes = await enrichStudyNotesLocally(storedNotes);
   onChange(enrichedNotes);
 
   void persistStudyNotesReEnrichment(userId, storedNotes, enrichedNotes).catch(
@@ -110,7 +110,7 @@ export async function getStudyNotes(userId: string): Promise<StudyNote[]> {
   const q = query(studyNotesCollection(userId), orderBy("savedAt", "desc"));
   const snap = await getDocs(q);
   const storedNotes = snap.docs.map(mapStudyNoteDoc);
-  const enrichedNotes = enrichStudyNotesLocally(storedNotes);
+  const enrichedNotes = await enrichStudyNotesLocally(storedNotes);
 
   void persistStudyNotesReEnrichment(userId, storedNotes, enrichedNotes).catch(
     (error) => {
@@ -131,7 +131,9 @@ export function subscribeStudyNotes(
   return onSnapshot(
     q,
     (snapshot) => {
-      deliverEnrichedStudyNotes(userId, snapshot.docs.map(mapStudyNoteDoc), onChange);
+      deliverEnrichedStudyNotes(userId, snapshot.docs.map(mapStudyNoteDoc), onChange).catch(
+        (error) => console.warn("[studyNotes] Error delivering enriched notes:", error)
+      );
     },
     (error) => onError?.(error),
   );

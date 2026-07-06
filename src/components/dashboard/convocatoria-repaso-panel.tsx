@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { AlertTriangle, ArrowRight, BookOpenCheck } from "lucide-react";
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import { getUccRepasoInsights } from "@/lib/diagnostic/ucc-exam-blueprint";
 import { resolveSessionQuestions } from "@/lib/session-review";
 import type { UccConvocatoriaAttempt } from "@/lib/training/ucc-convocatoria";
@@ -27,13 +27,20 @@ export function ConvocatoriaRepasoPanel({
   compact = false,
   insightsOnly = false,
 }: ConvocatoriaRepasoPanelProps) {
-  const insights = useMemo(() => {
+  const [insights, setInsights] = useState<ReturnType<typeof getUccRepasoInsights> | null>(null);
+
+  useEffect(() => {
     if (!attempt.sessionQuestionIds?.length || !attempt.answersByQuestionId) {
-      return null;
+      setInsights(null);
+      return;
     }
-    const questions = resolveSessionQuestions(attempt.sessionQuestionIds);
-    if (questions.length === 0) return null;
-    return getUccRepasoInsights(questions, attempt.answersByQuestionId);
+    resolveSessionQuestions(attempt.sessionQuestionIds).then((questions) => {
+      if (questions.length === 0) {
+        setInsights(null);
+      } else {
+        setInsights(getUccRepasoInsights(questions, attempt.answersByQuestionId!));
+      }
+    });
   }, [attempt.answersByQuestionId, attempt.sessionQuestionIds]);
 
   const weakestAxes = insights?.axes.filter((axis) => axis.wrong > 0).slice(0, compact ? 2 : 4) ?? [];

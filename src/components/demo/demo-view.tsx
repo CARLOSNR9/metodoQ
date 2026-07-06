@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { onAuthStateChanged, type User } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
@@ -427,7 +427,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         const result = await getDemoResultById(user.uid, sessionErrorsResultId);
         if (result?.sessionQuestionIds?.length && result.answersByQuestionId) {
           wrongIds = getWrongQuestionIds(
-            resolveSessionQuestions(result.sessionQuestionIds),
+            await resolveSessionQuestions(result.sessionQuestionIds),
             result.answersByQuestionId,
           );
         }

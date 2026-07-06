@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   AlertTriangle,
@@ -75,13 +75,20 @@ export function ConvocatoriaRepasoSummaryCard({ userId }: ConvocatoriaRepasoSumm
     };
   }, [userId]);
 
-  const insights = useMemo(() => {
+  const [insights, setInsights] = useState<ReturnType<typeof getUccRepasoInsights> | null>(null);
+
+  useEffect(() => {
     if (!loaded?.attempt.sessionQuestionIds?.length || !loaded.attempt.answersByQuestionId) {
-      return null;
+      setInsights(null);
+      return;
     }
-    const questions = resolveSessionQuestions(loaded.attempt.sessionQuestionIds);
-    if (questions.length === 0) return null;
-    return getUccRepasoInsights(questions, loaded.attempt.answersByQuestionId);
+    resolveSessionQuestions(loaded.attempt.sessionQuestionIds).then((questions) => {
+      if (questions.length === 0) {
+        setInsights(null);
+      } else {
+        setInsights(getUccRepasoInsights(questions, loaded.attempt.answersByQuestionId!));
+      }
+    });
   }, [loaded]);
 
   if (isLoading) {
@@ -100,15 +107,24 @@ export function ConvocatoriaRepasoSummaryCard({ userId }: ConvocatoriaRepasoSumm
   const topTopics = insights?.topics.slice(0, 4) ?? [];
   const reviewHref = buildReviewHref(attempt.resultId);
   const wrongOnlyHref = buildReviewHref(attempt.resultId, "wrong");
-  const sessionErrorsHref = buildSessionErrorsTrainingHref({
-    resultId: attempt.resultId,
-    questionIds: attempt.sessionQuestionIds
-      ? resolveSessionQuestions(attempt.sessionQuestionIds)
+  const [sessionErrorsHref, setSessionErrorsHref] = useState<string>("");
+
+  useEffect(() => {
+    if (!attempt.sessionQuestionIds) {
+      setSessionErrorsHref("");
+      return;
+    }
+    resolveSessionQuestions(attempt.sessionQuestionIds).then((questions) => {
+      const href = buildSessionErrorsTrainingHref({
+        resultId: attempt.resultId,
+        questionIds: questions
           .filter((q) => attempt.answersByQuestionId?.[q.id] !== q.correctOptionId)
-          .map((q) => q.id)
-      : undefined,
-    count: Math.min(attempt.wrongAnswers, 25),
-  });
+          .map((q) => q.id),
+        count: Math.min(attempt.wrongAnswers, 25),
+      });
+      setSessionErrorsHref(href);
+    });
+  }, [attempt]);
 
   return (
     <motion.section

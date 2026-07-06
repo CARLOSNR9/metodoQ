@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState, useTransition } from "react";
-import { Check, Copy, Flag } from "lucide-react";
+import { Check, Copy, Flag, ChevronDown, ChevronUp, MessageSquare } from "lucide-react";
 import {
   updateQuestionReportStatusAction,
   type QuestionReportStatus,
@@ -115,9 +115,9 @@ export function ReportedQuestionsPanel({ reports }: Props) {
                   <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
                     <th className="pb-3 pr-4">Código</th>
                     <th className="pb-3 pr-4">Tema</th>
-                    <th className="pb-3 pr-4">Píldora</th>
+                    <th className="pb-3 pr-4">Reportes</th>
                     <th className="pb-3 pr-4">Estado</th>
-                    <th className="pb-3">Fecha</th>
+                    <th className="pb-3">Última act.</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -136,6 +136,9 @@ export function ReportedQuestionsPanel({ reports }: Props) {
 
 function ReportedQuestionRow({ report }: { report: QuestionReport }) {
   const [isPending, startTransition] = useTransition();
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const reportsCount = report.reportsList?.length || 0;
 
   const handleStatusChange = (status: QuestionReportStatus) => {
     startTransition(async () => {
@@ -148,36 +151,80 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
   };
 
   return (
-    <tr className="border-b border-white/5">
-      <td className="py-3 pr-4">
-        <span className="font-mono text-sm font-bold text-mq-accent">{report.questionId}</span>
-      </td>
-      <td className="py-3 pr-4 text-mq-muted">{report.topic || "—"}</td>
-      <td className="py-3 pr-4 text-mq-muted">
-        {report.theoryCharCount != null
-          ? `${report.theoryCharCount.toLocaleString("es-CO")} car.`
-          : "—"}
-      </td>
-      <td className="py-3 pr-4">
-        <select
-          value={report.status}
-          disabled={isPending}
-          onChange={(event) =>
-            handleStatusChange(event.target.value as QuestionReportStatus)
-          }
-          className={`${selectInputClassName} px-2 py-1 text-xs`}
-        >
-          {STATUS_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
-              {opt.label}
-            </option>
-          ))}
-        </select>
-      </td>
-      <td className="py-3 text-xs text-mq-muted">
-        {new Date(report.createdAt).toLocaleDateString("es-CO")}
-      </td>
-    </tr>
+    <>
+      <tr className="border-b border-white/5">
+        <td className="py-3 pr-4">
+          <div className="flex items-center gap-2">
+            <span className="font-mono text-sm font-bold text-mq-accent">{report.questionId}</span>
+            {reportsCount > 0 && (
+              <button
+                type="button"
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="rounded-full bg-white/5 p-1 text-mq-muted transition hover:bg-white/10 hover:text-white"
+                title="Ver comentarios"
+              >
+                {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+              </button>
+            )}
+          </div>
+        </td>
+        <td className="py-3 pr-4 text-mq-muted">{report.topic || "—"}</td>
+        <td className="py-3 pr-4">
+          {reportsCount > 0 ? (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-rose-500/10 px-2 py-0.5 text-xs font-semibold text-rose-400">
+              <MessageSquare className="h-3 w-3" />
+              {reportsCount} reporte{reportsCount > 1 ? "s" : ""}
+            </span>
+          ) : (
+            <span className="text-mq-muted">—</span>
+          )}
+        </td>
+        <td className="py-3 pr-4">
+          <select
+            value={report.status}
+            disabled={isPending}
+            onChange={(event) =>
+              handleStatusChange(event.target.value as QuestionReportStatus)
+            }
+            className={`${selectInputClassName} px-2 py-1 text-xs`}
+          >
+            {STATUS_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
+                {opt.label}
+              </option>
+            ))}
+          </select>
+        </td>
+        <td className="py-3 text-xs text-mq-muted">
+          {new Date(report.updatedAt || report.createdAt).toLocaleDateString("es-CO")}
+        </td>
+      </tr>
+      
+      {isExpanded && reportsCount > 0 && (
+        <tr className="border-b border-white/5 bg-black/20">
+          <td colSpan={5} className="p-4">
+            <div className="space-y-3 pl-4 border-l-2 border-mq-accent/30">
+              {report.reportsList?.map((r, i) => (
+                <div key={i} className="rounded-lg bg-white/5 p-3 text-sm">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="font-semibold text-rose-300">{r.category}</span>
+                    <span className="text-xs text-mq-muted">{new Date(r.createdAt).toLocaleDateString("es-CO")}</span>
+                  </div>
+                  {r.comments ? (
+                    <p className="text-white/90">{r.comments}</p>
+                  ) : (
+                    <p className="text-mq-muted italic">Sin comentarios adicionales</p>
+                  )}
+                  {r.userId && (
+                    <p className="mt-2 text-xs text-mq-muted text-right">User ID: {r.userId}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </td>
+        </tr>
+      )}
+    </>
   );
 }
 

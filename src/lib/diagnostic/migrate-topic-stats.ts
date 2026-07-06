@@ -67,12 +67,12 @@ function accumulateLegacyTopics(
   }
 }
 
-function accumulateFromSession(
+async function accumulateFromSession(
   stats: Record<string, TopicStat>,
   sessionQuestionIds: string[],
   answersByQuestionId: Record<string, string>,
 ) {
-  const questions = resolveSessionQuestions(sessionQuestionIds);
+  const questions = await resolveSessionQuestions(sessionQuestionIds);
 
   for (const question of questions) {
     const selected = answersByQuestionId[question.id];
@@ -85,14 +85,14 @@ function accumulateFromSession(
 }
 
 /** Recalcula topicStats por asignatura a partir del historial de sesiones. */
-export function rebuildTopicStatsFromHistory(
+export async function rebuildTopicStatsFromHistory(
   results: ResultForTopicMigration[],
-): Record<string, TopicStat> {
+): Promise<Record<string, TopicStat>> {
   const stats: Record<string, TopicStat> = {};
 
   for (const result of results) {
     if (hasSessionReviewData(result.sessionQuestionIds, result.answersByQuestionId)) {
-      accumulateFromSession(
+      await accumulateFromSession(
         stats,
         result.sessionQuestionIds!,
         result.answersByQuestionId!,

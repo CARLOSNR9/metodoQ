@@ -1,86 +1,46 @@
-import { DAILY_CHALLENGES } from "@/data/daily-challenges";
-import { DR_Q_BANCO_GENERAL_276_325_QUESTIONS } from "@/data/dr-q-banco-general-276-325-questions";
-import { DR_Q_COEXAM_EXTENSION_326_345_QUESTIONS } from "@/data/dr-q-coexam-extension-326-345-questions";
-import { DR_Q_COEXAM_EXTENSION_346_355_QUESTIONS } from "@/data/dr-q-coexam-extension-346-355-questions";
-import { DR_Q_COEXAM_EXTENSION_356_380_QUESTIONS } from "@/data/dr-q-coexam-extension-356-380-questions";
-import { DR_Q_COEXAM_EXTENSION_381_410_QUESTIONS } from "@/data/dr-q-coexam-extension-381-410-questions";
-import { DR_Q_COEXAM_EXTENSION_411_420_QUESTIONS } from "@/data/dr-q-coexam-extension-411-420-questions";
-import { DR_Q_COEXAM_QUESTIONS } from "@/data/dr-q-coexam-questions";
-import { DR_Q_HEMATOLOGIA_BANCO_GENERAL_QUESTIONS } from "@/data/dr-q-hematologia-banco-general-questions";
-import { DR_Q_MULTISPECIALTY_QUESTIONS } from "@/data/dr-q-multispecialty-questions";
-import { DR_Q_UNIVERSAL_QUESTIONS } from "@/data/dr-q-universal-questions";
 import { DIAGNOSTIC_THEORY_PILLS } from "@/data/diagnostic-theory-pills";
-import { EXTENDED_QUESTIONS } from "@/data/extended-questions";
-import { FALLBACK_QUESTIONS } from "@/data/fallback-questions";
 import { HEMATOLOGIA_BANCO_THEORY_PILLS } from "@/data/hematologia-banco-theory-pills";
 import { QUESTION_THEORY_PILLS } from "@/data/question-theory-pills";
-import { UCC_PASTO_DIAGNOSTIC_QUESTIONS } from "@/data/ucc-pasto-diagnostico-questions";
-import { UCC_PASTO_PRO_QUESTIONS } from "@/data/ucc-pasto-pro-questions";
-import { UDEA_DIAGNOSTIC_QUESTIONS } from "@/data/udea-diagnostico-questions";
-import { UNAL_DIAGNOSTIC_QUESTIONS } from "@/data/unal-diagnostico-questions";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
-const REPOSITORY_QUESTIONS: TrainingQuestion[] = [
-  ...FALLBACK_QUESTIONS,
-  ...EXTENDED_QUESTIONS,
-  ...DR_Q_UNIVERSAL_QUESTIONS,
-  ...DR_Q_MULTISPECIALTY_QUESTIONS,
-  ...DR_Q_HEMATOLOGIA_BANCO_GENERAL_QUESTIONS,
-  ...DR_Q_BANCO_GENERAL_276_325_QUESTIONS,
-  ...DR_Q_COEXAM_QUESTIONS,
-  ...DR_Q_COEXAM_EXTENSION_326_345_QUESTIONS,
-  ...DR_Q_COEXAM_EXTENSION_346_355_QUESTIONS,
-  ...DR_Q_COEXAM_EXTENSION_356_380_QUESTIONS,
-  ...DR_Q_COEXAM_EXTENSION_381_410_QUESTIONS,
-  ...DR_Q_COEXAM_EXTENSION_411_420_QUESTIONS,
-  ...DAILY_CHALLENGES,
-  ...UDEA_DIAGNOSTIC_QUESTIONS,
-  ...UNAL_DIAGNOSTIC_QUESTIONS,
-  ...UCC_PASTO_DIAGNOSTIC_QUESTIONS,
-  ...UCC_PASTO_PRO_QUESTIONS,
-];
-
-function buildTheoryIndex(): Record<string, string> {
-  const index: Record<string, string> = {
-    ...QUESTION_THEORY_PILLS,
-    ...DIAGNOSTIC_THEORY_PILLS,
-    ...HEMATOLOGIA_BANCO_THEORY_PILLS,
-  };
-
-  for (const question of REPOSITORY_QUESTIONS) {
-    const content = question.theoryContent?.trim();
-    if (content) {
-      index[question.id] = content;
-    }
-  }
-
-  return index;
-}
+let theoryIndexBuilt = false;
+let THEORY_BY_QUESTION_ID: Record<string, string> = {};
+let THEORY_BY_STATEMENT: Map<string, string> = new Map();
 
 function statementFingerprint(statement: string): string {
   const stem = statement.trim().toLowerCase().split("¿")[0]?.trim() ?? statement.trim();
   return stem.slice(0, 120);
 }
 
-function buildStatementTheoryIndex(
-  theoryById: Record<string, string>,
-): Map<string, string> {
-  const map = new Map<string, string>();
+function ensureTheoryIndex(questions: TrainingQuestion[]) {
+  if (theoryIndexBuilt) return;
 
-  for (const question of REPOSITORY_QUESTIONS) {
-    const content =
-      question.theoryContent?.trim() ?? theoryById[question.id]?.trim();
+  THEORY_BY_QUESTION_ID = {
+    ...QUESTION_THEORY_PILLS,
+    ...DIAGNOSTIC_THEORY_PILLS,
+    ...HEMATOLOGIA_BANCO_THEORY_PILLS,
+  };
+
+  for (const question of questions) {
+    const content = question.theoryContent?.trim();
     if (content) {
-      map.set(question.statement.trim(), content);
-      map.set(statementFingerprint(question.statement), content);
+      THEORY_BY_QUESTION_ID[question.id] = content;
     }
   }
 
-  return map;
+  THEORY_BY_STATEMENT = new Map();
+  for (const question of questions) {
+    const content = question.theoryContent?.trim() ?? THEORY_BY_QUESTION_ID[question.id]?.trim();
+    if (content) {
+      THEORY_BY_STATEMENT.set(question.statement.trim(), content);
+      THEORY_BY_STATEMENT.set(statementFingerprint(question.statement), content);
+    }
+  }
+
+  theoryIndexBuilt = true;
 }
 
-const THEORY_BY_QUESTION_ID = buildTheoryIndex();
-const THEORY_BY_STATEMENT = buildStatementTheoryIndex(THEORY_BY_QUESTION_ID);
+// removed static index build
 
 function findTheoryByStatement(statement: string): string | undefined {
   const trimmed = statement.trim();
@@ -124,6 +84,7 @@ export function enrichQuestionWithTheoryPill(
 export function enrichQuestionsWithTheoryPills(
   questions: TrainingQuestion[],
 ): TrainingQuestion[] {
+  ensureTheoryIndex(questions);
   return questions.map(enrichQuestionWithTheoryPill);
 }
 

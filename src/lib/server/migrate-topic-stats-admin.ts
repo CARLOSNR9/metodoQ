@@ -25,7 +25,7 @@ export async function migrateUserTopicStatsAdmin(userId: string): Promise<{
   const db = getFirebaseAdminDb();
   const resultsSnap = await db.collection("results").where("userId", "==", userId).get();
   const results = resultsSnap.docs.map((docItem) => mapAdminResultDoc(docItem.data()));
-  const nextTopicStats = rebuildTopicStatsFromHistory(results);
+  const nextTopicStats = await rebuildTopicStatsFromHistory(results);
   const cumulative = computeCumulativePerformance(nextTopicStats);
   const strengths = getTopTopicsByMetric(nextTopicStats, "correct");
   const weaknesses = getTopTopicsByMetric(nextTopicStats, "wrong");

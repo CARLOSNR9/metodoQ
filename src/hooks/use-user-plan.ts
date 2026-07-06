@@ -1,6 +1,6 @@
 "use client";
 
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 import {
@@ -55,18 +55,30 @@ export function useUserPlan() {
           userData?.planExpiresAt ?? null,
         );
 
-        // Verificar si el plan ha expirado (no aplica en vista previa admin)
+        // Verificar si el plan ha expirado — la mutación ocurre en el servidor
         if (
           expiresAt &&
           new Date(expiresAt) < new Date() &&
           currentPlan === (userData?.plan ?? "FREE")
         ) {
-          await updateDoc(userRef, {
-            plan: "FREE",
-            planStartedAt: null,
-            planExpiresAt: null,
-          });
-          currentPlan = "FREE";
+          try {
+            const idToken = await user.getIdToken();
+            const res = await fetch("/api/expire-plan", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${idToken}`,
+              },
+            });
+            const result = await res.json();
+            if (result.expired) {
+              currentPlan = "FREE";
+            }
+          } catch (err) {
+            console.warn("No se pudo verificar expiración de plan en el servidor:", err);
+            // Mostrar como FREE localmente si expiró, aunque el server no haya respondido
+            currentPlan = "FREE";
+          }
         }
 
         setPlan(currentPlan);

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { ConvocatoriaRepasoPanel } from "@/components/dashboard/convocatoria-repaso-panel";
 import { UccConvocatoriaResultsPanel } from "@/components/dashboard/ucc-convocatoria-results-panel";
@@ -14,6 +14,7 @@ import {
   type DemoResultItem,
 } from "@/lib/results";
 import { hasSessionReviewData, resolveSessionQuestions } from "@/lib/session-review";
+import type { TrainingQuestion } from "@/lib/questions/types";
 import { getConvocatoriaEdition } from "@/lib/training/ucc-convocatoria";
 
 type SessionReviewPageProps = {
@@ -66,9 +67,14 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
     };
   }, [resultId, user]);
 
-  const sessionQuestions = useMemo(() => {
-    if (!result?.sessionQuestionIds) return [];
-    return resolveSessionQuestions(result.sessionQuestionIds);
+  const [sessionQuestions, setSessionQuestions] = useState<TrainingQuestion[]>([]);
+
+  useEffect(() => {
+    if (!result?.sessionQuestionIds) {
+      setSessionQuestions([]);
+      return;
+    }
+    resolveSessionQuestions(result.sessionQuestionIds).then(setSessionQuestions);
   }, [result?.sessionQuestionIds]);
 
   const isConvocatoria = result?.sessionType === "convocatoria";

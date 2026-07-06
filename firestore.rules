@@ -10,9 +10,30 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == uid;
     }
 
-    // Perfil del usuario: solo el dueño puede leer/escribir su documento
+    // Campos que SOLO el servidor (Admin SDK) puede modificar
+    function isProtectedField(field) {
+      return field in ['plan', 'planStartedAt', 'planExpiresAt', 'planBillingCycle',
+                        'role', 'manualSale', 'lastPaymentStatus', 'lastPaymentProvider',
+                        'billingCycleMonths', 'stripeCheckoutSessionId', 'stripeCustomerId',
+                        'stripeSubscriptionId', 'planActivatedAt'];
+    }
+
+    // Verifica que ningún campo protegido sea modificado por el cliente
+    function noProtectedFieldsChanged() {
+      return !request.resource.data.diff(resource.data).affectedKeys()
+        .hasAny(['plan', 'planStartedAt', 'planExpiresAt', 'planBillingCycle',
+                 'role', 'manualSale', 'lastPaymentStatus', 'lastPaymentProvider',
+                 'billingCycleMonths', 'stripeCheckoutSessionId', 'stripeCustomerId',
+                 'stripeSubscriptionId', 'planActivatedAt']);
+    }
+
+    // Perfil del usuario: lectura completa para el dueño;
+    // escritura restringida — el cliente NO puede modificar plan, role, ni campos de pago.
     match /users/{userId} {
-      allow read, write: if isOwner(userId);
+      allow read: if isOwner(userId);
+      allow create: if isOwner(userId);
+      allow update: if isOwner(userId) && noProtectedFieldsChanged();
+      allow delete: if false;
 
       // Notas guardadas desde píldoras de teoría en entrenamiento
       match /studyNotes/{noteId} {

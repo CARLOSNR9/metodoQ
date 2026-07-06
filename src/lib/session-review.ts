@@ -13,17 +13,17 @@ export type SessionReviewItem = {
 
 const questionByIdCache = new Map<string, TrainingQuestion>();
 
-function getQuestionLookup(): Map<string, TrainingQuestion> {
+async function getQuestionLookup(): Promise<Map<string, TrainingQuestion>> {
   if (questionByIdCache.size === 0) {
-    for (const question of getAllRepositoryQuestions()) {
+    for (const question of await getAllRepositoryQuestions()) {
       questionByIdCache.set(question.id, question);
     }
   }
   return questionByIdCache;
 }
 
-export function resolveSessionQuestions(questionIds: string[]): TrainingQuestion[] {
-  const lookup = getQuestionLookup();
+export async function resolveSessionQuestions(questionIds: string[]): Promise<TrainingQuestion[]> {
+  const lookup = await getQuestionLookup();
   return questionIds
     .map((id) => lookup.get(id))
     .filter((question): question is TrainingQuestion => Boolean(question));

@@ -19,8 +19,11 @@ function resolveFreshTheoryContent(note: StudyNote): string | undefined {
   return getTheoryContentForQuestion(note.questionId, note.statement);
 }
 
+import { getAllRepositoryQuestions } from "@/lib/questions/local-bank";
+
 /** Aplica la píldora vigente del repositorio sin escribir en Firestore. */
-export function enrichStudyNoteLocally(note: StudyNote): StudyNote {
+export async function enrichStudyNoteLocally(note: StudyNote): Promise<StudyNote> {
+  await getAllRepositoryQuestions(); // Ensure theory index is built
   const fresh = resolveFreshTheoryContent(note);
   if (!fresh || fresh === note.theoryContent.trim()) {
     return note;
@@ -29,8 +32,8 @@ export function enrichStudyNoteLocally(note: StudyNote): StudyNote {
   return { ...note, theoryContent: fresh };
 }
 
-export function enrichStudyNotesLocally(notes: StudyNote[]): StudyNote[] {
-  return notes.map(enrichStudyNoteLocally);
+export async function enrichStudyNotesLocally(notes: StudyNote[]): Promise<StudyNote[]> {
+  return Promise.all(notes.map(enrichStudyNoteLocally));
 }
 
 /** Persiste en Firestore solo las notas cuya teoría quedó desactualizada. */

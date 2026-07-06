@@ -17,14 +17,15 @@ export default async function AdminQuestionsPreviewPage() {
       adminListQuestionsForReview(),
       adminGetReportedQuestionIds().catch(() => new Set<string>()),
     ]);
-    questions = enrichAdminRecordsForPreview(listed);
+    questions = await enrichAdminRecordsForPreview(listed);
     reportedQuestionIds = [...reportedIds];
   } catch (error) {
     console.error("admin questions preview", error);
     loadError =
       "No se pudo cargar el banco. Revisa la conexión con Firestore o usa las preguntas del código local.";
     const { getAllRepositoryQuestions } = await import("@/lib/questions/local-bank");
-    questions = getAllRepositoryQuestions().map((question) => ({
+    const localQuestions = await getAllRepositoryQuestions();
+    questions = localQuestions.map((question) => ({
       ...question,
       firestoreId: question.id,
       inFirestore: false,

@@ -2,6 +2,13 @@ import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 
 export type QuestionReportStatus = "pending" | "reviewed" | "dismissed";
 
+export type StudentReport = {
+  userId: string | null;
+  category: string;
+  comments: string;
+  createdAt: string;
+};
+
 export type QuestionReport = {
   id: string;
   questionId: string;
@@ -10,6 +17,7 @@ export type QuestionReport = {
   reportedBy: string;
   reportedByEmail: string | null;
   status: QuestionReportStatus;
+  reportsList?: StudentReport[];
   createdAt: string;
   updatedAt: string | null;
 };
@@ -35,6 +43,7 @@ function mapReportDoc(doc: { id: string; data: () => Record<string, unknown> | u
     reportedBy: String(data.reportedBy ?? ""),
     reportedByEmail: data.reportedByEmail ? String(data.reportedByEmail) : null,
     status: (data.status as QuestionReportStatus) ?? "pending",
+    reportsList: Array.isArray(data.reportsList) ? data.reportsList : [],
     createdAt: parseTimestamp(data.createdAt) ?? new Date().toISOString(),
     updatedAt: parseTimestamp(data.updatedAt),
   };

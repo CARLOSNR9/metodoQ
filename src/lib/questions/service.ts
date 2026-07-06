@@ -36,7 +36,7 @@ function mapDocToQuestion(docId: string, data: Record<string, unknown>): Trainin
 
 /** Preguntas activas: Firestore + banco local (código) sin duplicar por id. */
 export async function getActiveQuestions(): Promise<TrainingQuestion[]> {
-  const localBank = getLocalQuestionBank();
+  const localBank = await getLocalQuestionBank();
 
   try {
     const db = getFirebaseDb();
@@ -82,7 +82,7 @@ export async function seedFallbackQuestionsToFirestore(): Promise<number> {
   }
 
   let count = 0;
-  for (const question of getLocalQuestionBank()) {
+  for (const question of await getLocalQuestionBank()) {
     await createQuestion({ ...question, active: true });
     count += 1;
   }

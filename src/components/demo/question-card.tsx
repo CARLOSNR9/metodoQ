@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { BookOpen, Sparkles, Info, Lock, ArrowRight, ExternalLink, ChevronRight } from "lucide-react";
+import { BookOpen, Sparkles, Info, Lock, ArrowRight, ExternalLink, ChevronRight, Flag } from "lucide-react";
 import Link from "next/link";
 import { isExternalTheoryLink } from "@/lib/questions/theory-link";
 import { TheoryDeepDivePanel } from "@/components/demo/theory-deep-dive-panel";
+import { ReportQuestionModal } from "@/components/demo/report-question-modal";
 
 export type QuestionOption = {
   id: string;
@@ -80,6 +81,7 @@ export function QuestionCard({
     defaultSelectedOptionId,
   );
   const [isTheoryPanelOpen, setIsTheoryPanelOpen] = useState(false);
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
   useEffect(() => {
     setSelectedOptionId(defaultSelectedOptionId);
@@ -191,6 +193,15 @@ export function QuestionCard({
                     </>
                   )}
                 </p>
+                <button
+                  type="button"
+                  onClick={() => setIsReportModalOpen(true)}
+                  className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-semibold text-mq-muted transition hover:bg-white/10 hover:text-white"
+                  title="Reportar pregunta"
+                >
+                  <Flag className="h-3.5 w-3.5" />
+                  <span className="hidden sm:inline">Reportar</span>
+                </button>
               </div>
               
               {!isCorrect && incorrectAnswerDetail && (
@@ -344,6 +355,16 @@ export function QuestionCard({
           </motion.section>
         )}
       </AnimatePresence>
+
+      {questionId && (
+        <ReportQuestionModal
+          isOpen={isReportModalOpen}
+          onClose={() => setIsReportModalOpen(false)}
+          questionId={questionId}
+          topic={topic}
+          userId={userId}
+        />
+      )}
     </article>
   );
 }

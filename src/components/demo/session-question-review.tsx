@@ -11,6 +11,7 @@ import {
   Sparkles,
   Target,
   XCircle,
+  Flag,
 } from "lucide-react";
 import {
   buildSessionErrorsTrainingHref,
@@ -21,6 +22,7 @@ import {
   type SessionReviewItem,
 } from "@/lib/session-review";
 import type { TrainingQuestion } from "@/lib/questions/types";
+import { ReportQuestionModal } from "@/components/demo/report-question-modal";
 
 type FilterMode = "all" | "correct" | "wrong";
 
@@ -32,6 +34,7 @@ type SessionQuestionReviewProps = {
   defaultExpandedIndex?: number | null;
   savedResultId?: string | null;
   defaultFilter?: FilterMode;
+  userId?: string | null;
 };
 
 function ReviewFilterButton({
@@ -68,8 +71,10 @@ function ReviewQuestionCard({
   item: SessionReviewItem;
   isOpen: boolean;
   onToggle: () => void;
+  userId?: string | null;
 }) {
   const { question, isCorrect } = item;
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
   return (
     <article className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
@@ -149,23 +154,34 @@ function ReviewQuestionCard({
               </div>
 
               <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                <p
-                  className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider ${
-                    isCorrect ? "text-emerald-400" : "text-rose-400"
-                  }`}
-                >
-                  {isCorrect ? (
-                    <>
-                      <Sparkles className="h-3.5 w-3.5" />
-                      Muy bien, acertaste
-                    </>
-                  ) : (
-                    <>
-                      <Info className="h-3.5 w-3.5" />
-                      Por qué era correcta
-                    </>
-                  )}
-                </p>
+                <div className="flex items-center justify-between">
+                  <p
+                    className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider ${
+                      isCorrect ? "text-emerald-400" : "text-rose-400"
+                    }`}
+                  >
+                    {isCorrect ? (
+                      <>
+                        <Sparkles className="h-3.5 w-3.5" />
+                        Muy bien, acertaste
+                      </>
+                    ) : (
+                      <>
+                        <Info className="h-3.5 w-3.5" />
+                        Por qué era correcta
+                      </>
+                    )}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setIsReportModalOpen(true)}
+                    className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-semibold text-mq-muted transition hover:bg-white/10 hover:text-white"
+                    title="Reportar pregunta"
+                  >
+                    <Flag className="h-3 w-3" />
+                    <span className="hidden sm:inline">Reportar</span>
+                  </button>
+                </div>
                 {item.incorrectFeedback ? (
                   <p className="mt-3 rounded-lg border border-rose-500/15 bg-rose-500/5 p-3 text-sm leading-relaxed text-rose-100">
                     {item.incorrectFeedback}
@@ -192,6 +208,14 @@ function ReviewQuestionCard({
           </motion.div>
         ) : null}
       </AnimatePresence>
+
+      <ReportQuestionModal
+        isOpen={isReportModalOpen}
+        onClose={() => setIsReportModalOpen(false)}
+        questionId={question.id}
+        topic={question.topic}
+        userId={userId}
+      />
     </article>
   );
 }
@@ -204,6 +228,7 @@ export function SessionQuestionReview({
   defaultExpandedIndex = 1,
   savedResultId = null,
   defaultFilter = "all",
+  userId = null,
 }: SessionQuestionReviewProps) {
   const items = useMemo(
     () => buildSessionReviewItems(sessionQuestions, answersByQuestionId),
@@ -356,6 +381,7 @@ export function SessionQuestionReview({
             onToggle={() =>
               setOpenIndex((current) => (current === item.index ? null : item.index))
             }
+            userId={userId}
           />
         ))}
       </div>

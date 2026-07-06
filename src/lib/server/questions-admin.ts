@@ -35,9 +35,9 @@ type QuestionWriteInput = {
   theoryContent?: string;
 };
 
-function buildStatementIndex(): Map<string, string> {
+async function buildStatementIndex(): Promise<Map<string, string>> {
   const byStatement = new Map<string, string>();
-  for (const q of getAllRepositoryQuestions()) {
+  for (const q of await getAllRepositoryQuestions()) {
     const key = q.statement.trim().slice(0, 240);
     if (!byStatement.has(key)) {
       byStatement.set(key, q.id);
@@ -196,14 +196,14 @@ function dedupeQuestionRecords(records: QuestionAdminRecord[]): QuestionAdminRec
 export async function adminListQuestionsForReview(): Promise<QuestionAdminRecord[]> {
   const db = getFirebaseAdminDb();
   const snap = await db.collection(COLLECTION).get();
-  const statementIndex = buildStatementIndex();
+  const statementIndex = await buildStatementIndex();
   const records: QuestionAdminRecord[] = snap.docs.map((doc) => {
     const data = doc.data();
     const logicalId = resolveLogicalId(doc.id, data, statementIndex);
     return mapDocToAdminRecord(doc.id, data, logicalId);
   });
 
-  for (const local of getAllRepositoryQuestions()) {
+  for (const local of await getAllRepositoryQuestions()) {
     const inFirestore = [...snap.docs].some((doc) =>
       firestoreMatchesLocal(doc.id, doc.data(), local.id),
     );
@@ -231,10 +231,11 @@ export async function adminListQuestionsForReview(): Promise<QuestionAdminRecord
 }
 
 /** Prioriza el banco en código para vista previa editorial (retroalimentación recién editada). */
-export function mergeAdminRecordWithLocalRepository(
+export async function mergeAdminRecordWithLocalRepository(
   record: QuestionAdminRecord,
-): QuestionAdminRecord {
-  const local = getAllRepositoryQuestions().find((q) => q.id === record.id);
+): Promise<QuestionAdminRecord> {
+  const allQuestions = await getAllRepositoryQuestions();
+  const local = allQuestions.find((q) => q.id === record.id);
   if (!local) return record;
 
   return {
@@ -251,10 +252,10 @@ export function mergeAdminRecordWithLocalRepository(
   };
 }
 
-export function enrichAdminRecordsForPreview(
+export async function enrichAdminRecordsForPreview(
   records: QuestionAdminRecord[],
-): QuestionAdminRecord[] {
-  return records.map(mergeAdminRecordWithLocalRepository);
+): Promise<QuestionAdminRecord[]> {
+  return Promise.all(records.map(mergeAdminRecordWithLocalRepository));
 }
 
 export async function adminCreateQuestion(input: QuestionWriteInput) {
@@ -352,13 +353,15 @@ export async function getQuestionTheoryPageData(
     if (mapped) return mapped;
   }
 
-  const local = getAllRepositoryQuestions().find((q) => q.id === id);
+  const allQuestions = await getAllRepositoryQuestions();
+  const local = allQuestions.find((q) => q.id === id);
   if (!local) return null;
   return mapTheoryFromDoc(local.id, local as unknown as Record<string, unknown>);
 }
 
 export async function adminImportLocalQuestion(questionId: string): Promise<string> {
-  const local = getAllRepositoryQuestions().find((q) => q.id === questionId);
+  const allQuestions = await getAllRepositoryQuestions();
+  const local = allQuestions.find((q) => q.id === questionId);
   if (!local) {
     throw new Error("Pregunta no encontrada en el repositorio.");
   }
@@ -442,7 +445,7 @@ export async function adminSeedFullQuestionBank() {
   const db = getFirebaseAdminDb();
   let added = 0;
 
-  for (const question of getAllRepositoryQuestions()) {
+  for (const question of await getAllRepositoryQuestions()) {
     const ref = db.collection(COLLECTION).doc(question.id);
     const existing = await ref.get();
     if (existing.exists) continue;

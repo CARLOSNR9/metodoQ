@@ -11,7 +11,6 @@ import {
   doc,
   getDoc,
   getCountFromServer,
-  getDocs,
   query,
   serverTimestamp,
   setDoc,
@@ -19,7 +18,6 @@ import {
   where,
 } from "firebase/firestore";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
-import { trackRewardUnlocked } from "@/lib/analytics/events";
 import { resolveLoginIdentifier } from "@/lib/resolve-login-identifier";
 
 export type UserPlan = "FREE" | "BASICO" | "PRO" | "RESIDENTE";
@@ -74,6 +72,40 @@ export function generateReferralCode() {
   return result;
 }
 
+/**
+ * Factory para crear el documento inicial de un usuario nuevo.
+ * Fuente única de verdad — cualquier campo nuevo se agrega aquí.
+ */
+export function createDefaultUserDoc(
+  uid: string,
+  email: string,
+  options?: { referredByCode?: string | null },
+): UserDocument {
+  return {
+    uid,
+    email,
+    plan: "FREE",
+    createdAt: serverTimestamp(),
+    streakCount: 0,
+    streakLastTrainingDate: null,
+    strengths: [],
+    weaknesses: [],
+    avgResponseTime: 0,
+    lastScore: null,
+    attemptsCount: 0,
+    topicStats: {},
+    referralCode: generateReferralCode(),
+    referredBy: options?.referredByCode || null,
+    planStartedAt: null,
+    planExpiresAt: null,
+    emailOptIn: true,
+    lastActiveAt: serverTimestamp(),
+    achievements: [],
+    onboardingCompleted: false,
+    role: "student",
+  };
+}
+
 export async function loginWithEmail(email: string, password: string) {
   const resolvedEmail = resolveLoginIdentifier(email);
   return signInWithEmailAndPassword(
@@ -112,29 +144,7 @@ export async function loginWithGoogle(): Promise<{
   const isNewUser = !userDocSnap.exists();
 
   if (isNewUser) {
-    const newUserDoc: UserDocument = {
-      uid: user.uid,
-      email: user.email ?? "",
-      plan: "FREE",
-      createdAt: serverTimestamp(),
-      streakCount: 0,
-      streakLastTrainingDate: null,
-      strengths: [],
-      weaknesses: [],
-      avgResponseTime: 0,
-      lastScore: null,
-      attemptsCount: 0,
-      topicStats: {},
-      referralCode: generateReferralCode(),
-      referredBy: null, // Podría extenderse para detectar referral en Google login también
-      planStartedAt: null,
-      planExpiresAt: null,
-      emailOptIn: true,
-      lastActiveAt: serverTimestamp(),
-      achievements: [],
-      onboardingCompleted: false,
-      role: "student",
-    };
+    const newUserDoc = createDefaultUserDoc(user.uid, user.email ?? "");
     try {
       await setDoc(userDocRef, newUserDoc);
     } catch (error: any) {
@@ -169,29 +179,7 @@ export async function loginWithFacebook(): Promise<{
   const isNewUser = !userDocSnap.exists();
 
   if (isNewUser) {
-    const newUserDoc: UserDocument = {
-      uid: user.uid,
-      email: user.email ?? "",
-      plan: "FREE",
-      createdAt: serverTimestamp(),
-      streakCount: 0,
-      streakLastTrainingDate: null,
-      strengths: [],
-      weaknesses: [],
-      avgResponseTime: 0,
-      lastScore: null,
-      attemptsCount: 0,
-      topicStats: {},
-      referralCode: generateReferralCode(),
-      referredBy: null,
-      planStartedAt: null,
-      planExpiresAt: null,
-      emailOptIn: true,
-      lastActiveAt: serverTimestamp(),
-      achievements: [],
-      onboardingCompleted: false,
-      role: "student",
-    };
+    const newUserDoc = createDefaultUserDoc(user.uid, user.email ?? "");
     await setDoc(userDocRef, newUserDoc);
   } else {
     await updateDoc(userDocRef, {
@@ -214,62 +202,28 @@ export async function registerWithEmail(
   );
 
   const userDocRef = doc(getFirebaseDb(), "users", credential.user.uid);
-  const userDoc: UserDocument = {
-    uid: credential.user.uid,
-    email: credential.user.email ?? email,
-    plan: "FREE",
-    createdAt: serverTimestamp(),
-    streakCount: 0,
-    streakLastTrainingDate: null,
-    strengths: [],
-    weaknesses: [],
-    avgResponseTime: 0,
-    lastScore: null,
-    attemptsCount: 0,
-    topicStats: {},
-    referralCode: generateReferralCode(),
-    referredBy: referredByCode || null,
-    planStartedAt: null,
-    planExpiresAt: null,
-    emailOptIn: true,
-    lastActiveAt: serverTimestamp(),
-    achievements: [],
-    onboardingCompleted: false,
-    role: "student",
-  };
+  const userDoc = createDefaultUserDoc(
+    credential.user.uid,
+    credential.user.email ?? email,
+    { referredByCode },
+  );
 
   await setDoc(userDocRef, userDoc, { merge: true });
 
-  // Lógica de recompensa para el referente
+  // Procesar recompensa de referido en el servidor (evita que el cliente modifique plan)
   if (referredByCode) {
     try {
-      const usersRef = collection(getFirebaseDb(), "users");
-      
-      // Contar cuántos referidos tiene ahora el referente
-      const referralQuery = query(usersRef, where("referredBy", "==", referredByCode));
-      const referrerSnap = await getCountFromServer(referralQuery);
-      const count = referrerSnap.data().count;
-
-      // Si llegó exactamente a 3, darle 7 días de PRO
-      if (count === 3) {
-        const q = query(usersRef, where("referralCode", "==", referredByCode));
-        const querySnapshot = await getDocs(q);
-        
-        if (!querySnapshot.empty) {
-          const referrerDoc = querySnapshot.docs[0];
-          const expirationDate = new Date();
-          expirationDate.setDate(expirationDate.getDate() + 7);
-
-          await updateDoc(referrerDoc.ref, {
-            plan: "PRO",
-            planExpiresAt: expirationDate.toISOString(),
-          });
-
-          trackRewardUnlocked({ userId: referrerDoc.id, rewardType: "PRO_7_DAYS" });
-        }
-      }
+      const idToken = await credential.user.getIdToken();
+      await fetch("/api/referral-reward", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${idToken}`,
+        },
+        body: JSON.stringify({ referralCode: referredByCode }),
+      });
     } catch (e) {
-      console.error("Error al procesar recompensa:", e);
+      console.error("Error al procesar recompensa de referido:", e);
     }
   }
 
@@ -287,49 +241,10 @@ export async function logoutUser() {
   return signOut(getFirebaseAuth());
 }
 
-export async function activateProPlanForCurrentUser() {
-  const auth = getFirebaseAuth();
-  const currentUser = auth.currentUser;
+// REMOVED: activateProPlanForCurrentUser — plan activation must happen server-side
+// via Stripe webhook or Admin SDK only. See /api/payments/webhook/route.ts.
 
-  if (!currentUser) {
-    throw new Error("No hay usuario autenticado para actualizar el plan.");
-  }
-
-  const userDocRef = doc(getFirebaseDb(), "users", currentUser.uid);
-  await setDoc(
-    userDocRef,
-    {
-      plan: "PRO",
-      planActivatedAt: serverTimestamp(),
-      planStartedAt: new Date().toISOString(),
-      planExpiresAt: null, // O definir una fecha si es necesario
-    },
-    { merge: true },
-  );
-}
-
-export async function updateUserSubscription(
-  userId: string,
-  plan: UserPlan,
-  durationDays: number | null = null,
-) {
-  const userRef = doc(getFirebaseDb(), "users", userId);
-  const now = new Date();
-  const startDate = now.toISOString();
-  let endDate: string | null = null;
-
-  if (durationDays) {
-    const end = new Date(now);
-    end.setDate(end.getDate() + durationDays);
-    endDate = end.toISOString();
-  }
-
-  await updateDoc(userRef, {
-    plan,
-    planStartedAt: startDate,
-    planExpiresAt: endDate,
-  });
-}
+// REMOVED: updateUserSubscription — same reason. Use admin panel or Stripe webhook.
 
 export async function getReferralCount(referralCode: string) {
   const usersRef = collection(getFirebaseDb(), "users");
