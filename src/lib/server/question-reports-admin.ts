@@ -4,6 +4,7 @@ export type QuestionReportStatus = "pending" | "reviewed" | "dismissed";
 
 export type StudentReport = {
   userId: string | null;
+  userEmail?: string | null;
   category: string;
   comments: string;
   createdAt: string;

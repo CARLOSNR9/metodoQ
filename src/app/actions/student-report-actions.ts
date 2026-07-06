@@ -21,8 +21,21 @@ export async function submitStudentQuestionReportAction(input: StudentReportInpu
   const ref = getFirebaseAdminDb().collection("question_reports").doc(trimmedId);
 
   try {
+    let userEmail: string | null = null;
+    if (input.userId) {
+      try {
+        const userDoc = await getFirebaseAdminDb().collection("users").doc(input.userId).get();
+        if (userDoc.exists) {
+          userEmail = String(userDoc.data()?.email ?? "");
+        }
+      } catch (err) {
+        console.error("Error fetching user email for report:", err);
+      }
+    }
+
     const studentReport = {
       userId: input.userId,
+      userEmail,
       category: input.category,
       comments: input.comments,
       createdAt: now,

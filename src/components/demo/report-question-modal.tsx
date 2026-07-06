@@ -34,9 +34,10 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
 
     setErrorMsg("");
     startTransition(async () => {
+      const selectedLabel = CATEGORIES.find(c => c.id === selectedCategory)?.label || selectedCategory;
       const res = await submitStudentQuestionReportAction({
         questionId,
-        category: selectedCategory,
+        category: selectedLabel,
         comments,
         userId: userId ?? null,
         topic,

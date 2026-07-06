@@ -215,8 +215,10 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
                   ) : (
                     <p className="text-mq-muted italic">Sin comentarios adicionales</p>
                   )}
-                  {r.userId && (
-                    <p className="mt-2 text-xs text-mq-muted text-right">User ID: {r.userId}</p>
+                  {(r.userEmail || r.userId) && (
+                    <p className="mt-2 text-xs text-mq-muted text-right">
+                      {r.userEmail ? r.userEmail : `User ID: ${r.userId}`}
+                    </p>
                   )}
                 </div>
               ))}
