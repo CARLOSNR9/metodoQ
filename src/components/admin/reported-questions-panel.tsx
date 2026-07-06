@@ -140,13 +140,16 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
 
   const reportsCount = report.reportsList?.length || 0;
 
-  const handleStatusChange = (status: QuestionReportStatus) => {
-    startTransition(async () => {
-      const token = await getFirebaseAuth().currentUser?.getIdToken();
-      const result = await updateQuestionReportStatusAction(report.questionId, status, token);
-      if (result.error) {
-        console.error(result.error);
-      }
+  const handleStatusChange = async (status: QuestionReportStatus) => {
+    const token = await getFirebaseAuth().currentUser?.getIdToken();
+    startTransition(() => {
+      updateQuestionReportStatusAction(report.questionId, status, token)
+        .then((result) => {
+          if (result.error) {
+            console.error(result.error);
+          }
+        })
+        .catch(console.error);
     });
   };
 
