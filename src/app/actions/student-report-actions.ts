@@ -28,17 +28,23 @@ export async function submitStudentQuestionReportAction(input: StudentReportInpu
       createdAt: now,
     };
 
-    // Use set with merge: true to create if it doesn't exist, and update if it does.
-    await ref.set(
-      {
+    const docSnap = await ref.get();
+    if (!docSnap.exists) {
+      await ref.set({
         questionId: trimmedId,
         topic: input.topic || "Sin tema",
-        status: "pending", // Re-open the report if it was dismissed/reviewed
+        status: "pending",
+        createdAt: now,
+        updatedAt: now,
+        reportsList: [studentReport],
+      });
+    } else {
+      await ref.update({
+        status: "pending",
         updatedAt: now,
         reportsList: FieldValue.arrayUnion(studentReport),
-      },
-      { merge: true },
-    );
+      });
+    }
 
     return { success: true };
   } catch (e) {
