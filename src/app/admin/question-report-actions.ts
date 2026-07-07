@@ -8,7 +8,6 @@ import {
 } from "@/lib/server/question-reports-admin";
 import type { QuestionReportStatus } from "@/lib/server/question-reports-admin";
 
-export type { QuestionReportStatus };
 import { verifyStaffCaller } from "@/lib/server/verify-staff";
 
 const REPORT_PATHS = ["/admin/preguntas", "/admin/preguntas-reportadas", "/profesor/preguntas-reportadas"] as const;

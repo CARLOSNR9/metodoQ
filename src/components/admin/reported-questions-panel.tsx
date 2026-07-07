@@ -2,10 +2,8 @@
 
 import { useMemo, useState, useTransition } from "react";
 import { Check, Copy, Flag, ChevronDown, ChevronUp, MessageSquare } from "lucide-react";
-import {
-  updateQuestionReportStatusAction,
-  type QuestionReportStatus,
-} from "@/app/admin/question-report-actions";
+import { updateQuestionReportStatusAction } from "@/app/admin/question-report-actions";
+import type { QuestionReportStatus } from "@/lib/server/question-reports-admin";
 import { getFirebaseAuth } from "@/lib/firebase";
 import type { QuestionReport } from "@/lib/server/question-reports-admin";
 import { selectInputClassName } from "@/components/ui/select-field";
@@ -145,16 +143,17 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
 
   const handleStatusChange = async (status: QuestionReportStatus) => {
     const token = await getFirebaseAuth().currentUser?.getIdToken();
-    startTransition(() => {
-      updateQuestionReportStatusAction(report.questionId, status, token)
-        .then((result) => {
-          if (result.error) {
-            console.error(result.error);
-          } else {
-            router.refresh();
-          }
-        })
-        .catch(console.error);
+    startTransition(async () => {
+      try {
+        const result = await updateQuestionReportStatusAction(report.questionId, status, token ?? null);
+        if (result.error) {
+          console.error(result.error);
+        } else {
+          router.refresh();
+        }
+      } catch (e) {
+        console.error(e);
+      }
     });
   };
 
