@@ -1,5 +1,6 @@
 import { ReportedQuestionsPanel } from "@/components/admin/reported-questions-panel";
 import { adminListQuestionReports } from "@/lib/server/question-reports-admin";
+import { adminListQuestionsForReview } from "@/lib/server/questions-admin";
 
 export const dynamic = "force-dynamic";
 
@@ -7,11 +8,13 @@ export default async function ProfessorReportedQuestionsPage() {
   let reports: Awaited<ReturnType<typeof adminListQuestionReports>> = [];
   let loadError = "";
 
+  let questions: Awaited<ReturnType<typeof adminListQuestionsForReview>> = [];
   try {
     reports = await adminListQuestionReports("all");
+    questions = await adminListQuestionsForReview();
   } catch (error) {
     console.error("profesor reported questions", error);
-    loadError = "No se pudo cargar el listado de preguntas reportadas.";
+    loadError = "No se pudo cargar el listado de preguntas reportadas o las preguntas.";
   }
 
   return (
@@ -21,7 +24,7 @@ export default async function ProfessorReportedQuestionsPage() {
           {loadError}
         </p>
       ) : null}
-      <ReportedQuestionsPanel reports={reports} />
+      <ReportedQuestionsPanel reports={reports} questions={questions} />
     </>
   );
 }

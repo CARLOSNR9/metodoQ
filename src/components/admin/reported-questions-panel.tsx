@@ -6,10 +6,13 @@ import { updateQuestionReportStatusAction } from "@/app/admin/question-report-ac
 import type { QuestionReportStatus } from "@/lib/server/question-reports-admin";
 import { getFirebaseAuth } from "@/lib/firebase";
 import type { QuestionReport } from "@/lib/server/question-reports-admin";
+import type { QuestionAdminRecord } from "@/lib/questions/types";
+import { ProfessorQuestionEditor } from "@/components/professor/professor-question-editor";
 import { selectInputClassName } from "@/components/ui/select-field";
 
 type Props = {
   reports: QuestionReport[];
+  questions?: QuestionAdminRecord[];
 };
 
 const STATUS_OPTIONS: { value: QuestionReportStatus; label: string }[] = [
@@ -18,9 +21,11 @@ const STATUS_OPTIONS: { value: QuestionReportStatus; label: string }[] = [
   { value: "dismissed", label: "Descartada" },
 ];
 
-export function ReportedQuestionsPanel({ reports }: Props) {
+export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
   const [filter, setFilter] = useState<"pending" | "all">("pending");
   const [copied, setCopied] = useState(false);
+  const [selectedQuestion, setSelectedQuestion] = useState<QuestionAdminRecord | null>(null);
+  const router = useRouter();
 
   const visible = useMemo(() => {
     if (filter === "all") return reports;
@@ -39,6 +44,15 @@ export function ReportedQuestionsPanel({ reports }: Props) {
     await navigator.clipboard.writeText(codesList);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleEdit = (questionId: string) => {
+    const q = questions.find((q) => q.id === questionId);
+    if (q) {
+      setSelectedQuestion(q);
+    } else {
+      alert("No se encontró la información de la pregunta.");
+    }
   };
 
   return (
@@ -120,7 +134,7 @@ export function ReportedQuestionsPanel({ reports }: Props) {
                 </thead>
                 <tbody>
                   {visible.map((report) => (
-                    <ReportedQuestionRow key={report.id} report={report} />
+                    <ReportedQuestionRow key={report.id} report={report} onEdit={() => handleEdit(report.questionId)} />
                   ))}
                 </tbody>
               </table>
@@ -128,13 +142,21 @@ export function ReportedQuestionsPanel({ reports }: Props) {
           </section>
         </div>
       )}
+
+      {selectedQuestion && (
+        <ProfessorQuestionEditor
+          question={selectedQuestion}
+          onClose={() => setSelectedQuestion(null)}
+          onSaved={() => router.refresh()}
+        />
+      )}
     </>
   );
 }
 
 import { useRouter } from "next/navigation";
 
-function ReportedQuestionRow({ report }: { report: QuestionReport }) {
+function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdit?: () => void }) {
   const [isPending, startTransition] = useTransition();
   const [isExpanded, setIsExpanded] = useState(false);
   const router = useRouter();
@@ -252,6 +274,17 @@ function ReportedQuestionRow({ report }: { report: QuestionReport }) {
                   )}
                 </div>
               ))}
+              {onEdit && (
+                <div className="mt-4 flex justify-end">
+                  <button
+                    type="button"
+                    onClick={onEdit}
+                    className="inline-flex items-center gap-2 rounded-lg bg-mq-accent px-4 py-2 text-sm font-semibold text-mq-accent-foreground transition hover:opacity-90"
+                  >
+                    Editar pregunta
+                  </button>
+                </div>
+              )}
             </div>
           </td>
         </tr>
