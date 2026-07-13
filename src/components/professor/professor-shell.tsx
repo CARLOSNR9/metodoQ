@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useUserProfile } from "@/hooks/use-user-profile";
+import { useUserRole } from "@/hooks/use-user-role";
 import { logoutUser } from "@/lib/auth";
 import { getUserGreetingName } from "@/lib/plans/subscription-display";
 import {
@@ -16,6 +17,7 @@ import {
   LogOut,
   ClipboardCheck,
   Flag,
+  Shield,
 } from "lucide-react";
 
 type ProfessorShellProps = {
@@ -45,6 +47,7 @@ export function ProfessorShell({ children }: ProfessorShellProps) {
   const router = useRouter();
   const pathname = usePathname();
   const { profile } = useUserProfile();
+  const { isAdmin, loading: isLoadingRole } = useUserRole();
   const greetingName = getUserGreetingName(profile);
 
   return (
@@ -104,17 +107,28 @@ export function ProfessorShell({ children }: ProfessorShellProps) {
             </p>
           </div>
 
-          <button
-            type="button"
-            onClick={async () => {
-              await logoutUser();
-              router.replace("/login");
-            }}
-            className="group flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-semibold text-mq-muted transition-colors hover:bg-red-500/10 hover:text-red-400"
-          >
+          <div className="flex items-center gap-2 sm:gap-3">
+            {!isLoadingRole && isAdmin ? (
+              <Link
+                href="/admin"
+                className="group flex items-center gap-2 rounded-lg border border-mq-accent/30 bg-mq-accent/10 px-3 py-1.5 text-xs font-semibold text-mq-accent transition-colors hover:bg-mq-accent/20"
+              >
+                <Shield size={14} className="transition-transform group-hover:-translate-x-0.5" />
+                <span className="hidden sm:inline">Panel admin</span>
+              </Link>
+            ) : null}
+            <button
+              type="button"
+              onClick={async () => {
+                await logoutUser();
+                router.replace("/login");
+              }}
+              className="group flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-semibold text-mq-muted transition-colors hover:bg-red-500/10 hover:text-red-400"
+            >
             <LogOut size={14} className="transition-transform group-hover:translate-x-0.5" />
             <span>Salir</span>
           </button>
+          </div>
         </header>
 
         <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-8 sm:py-10">

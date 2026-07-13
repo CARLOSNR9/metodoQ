@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Home, LogOut } from "lucide-react";
+import { Home, LogOut, Shield } from "lucide-react";
 import type { User } from "firebase/auth";
 import { Logo } from "@/components/ui/logo";
+import { useUserRole } from "@/hooks/use-user-role";
 import { logoutUser } from "@/lib/auth";
 
 type StaffPanelHeaderProps = {
@@ -13,6 +14,7 @@ type StaffPanelHeaderProps = {
 
 export function StaffPanelHeader({ user }: StaffPanelHeaderProps) {
   const router = useRouter();
+  const { isAdmin, loading: isLoadingRole } = useUserRole();
 
   async function handleLogout() {
     await logoutUser();
@@ -42,6 +44,16 @@ export function StaffPanelHeader({ user }: StaffPanelHeaderProps) {
           <p className="hidden max-w-[12rem] truncate text-xs text-mq-muted sm:block sm:max-w-xs sm:text-sm">
             <span className="text-white">{user.email}</span>
           </p>
+
+          {!isLoadingRole && isAdmin ? (
+            <Link
+              href="/admin"
+              className="group flex items-center gap-2 rounded-lg border border-mq-accent/30 bg-mq-accent/10 px-3 py-1.5 text-xs font-semibold text-mq-accent transition-colors hover:bg-mq-accent/20"
+            >
+              <Shield size={14} className="transition-transform group-hover:-translate-x-0.5" />
+              <span className="hidden sm:inline">Panel admin</span>
+            </Link>
+          ) : null}
 
           <button
             type="button"
