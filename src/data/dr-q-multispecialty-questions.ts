@@ -864,13 +864,14 @@ Referencias
     ],
     correctOptionId: "C",
     explanation:
-      "RPM pretérmino a las 30 semanas, sin trabajo de parto, sin infección y con bienestar fetal. Manejo expectante con corticoides, antibióticos y vigilancia para prolongar gestación y mejorar madurez fetal.",
+      "El manejo de la ruptura prematura de membranas (RPM) depende de la edad gestacional y la estabilidad materno-fetal. En una gestación pretérmino de 30 semanas (<34 semanas), sin evidencia de infección (corioamnionitis), sin trabajo de parto y con pruebas de bienestar fetal normales (patrón categoría I), la indicación es manejo expectante intrahospitalario.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Inducir el parto): No está indicado finalizar el embarazo antes de las 34 semanas si no hay complicaciones, ya que esto aumentaría la morbimortalidad por prematuridad.\n• Opción B (Cesárea urgente): La RPM por sí sola NO es indicación de cesárea. Esta vía se reserva para indicaciones obstétricas absolutas o compromiso fetal inminente.\n• Opción D (Egreso ambulatorio): El manejo de la RPM pretérmino debe ser intrahospitalario para vigilancia estrecha de signos de infección y administrar profilaxis (corticoides y antibióticos), los cuales prolongan el periodo de latencia.",
     keyPoints: [
-      "Cuando veas: RPM pretérmino (30 semanas) + líquido claro por orificio cervical + sin contracciones, fiebre ni sufrimiento fetal.",
-      "Debes pensar en: manejo expectante intrahospitalario con corticoides antenatales, antibióticos y vigilancia materno-fetal.",
-      "Antes de 34 semanas sin complicaciones: prolongar gestación mejora madurez pulmonar fetal (corticoides) y reduce morbilidad.",
-      "Los antibióticos prolongan la latencia y reducen el riesgo de corioamnionitis; la RPM sola no indica cesárea.",
-      "Tema: Ruptura prematura de membranas pretérmino — manejo expectante.",
+      "Cuando veas: RPM en embarazo pretérmino (<34 semanas) sin signos de infección ni sufrimiento fetal.",
+      "Debes pensar en: Manejo expectante intrahospitalario con corticoides y profilaxis antibiótica.",
+      "Los antibióticos en RPM pretérmino prolongan el periodo de latencia y reducen la morbilidad infecciosa neonatal.",
+      "La finalización inmediata (independiente de las semanas) se indica si hay: corioamnionitis clínica, desprendimiento de placenta, alteración grave del bienestar fetal o trabajo de parto avanzado.",
+      "La RPM aislada nunca es una indicación por sí misma para realizar cesárea urgente.",
+      "Tema: Ruptura prematura de membranas (RPM) pretérmino — manejo expectante.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
