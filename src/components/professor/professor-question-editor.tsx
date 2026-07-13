@@ -12,7 +12,8 @@ import { REVIEW_STATUS_LABELS } from "@/lib/questions/review-labels";
 import type { QuestionAdminRecord, QuestionReviewStatus } from "@/lib/questions/types";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { cn } from "@/lib/utils";
-import { X, Copy, Check } from "lucide-react";
+import { X, Copy, Check, Eye, Edit2 } from "lucide-react";
+import { QuestionStudentPreview } from "@/components/admin/question-student-preview";
 
 const selectOptionClassName = "bg-[#0f2744] text-white";
 
@@ -58,6 +59,7 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved, copySuffix
   const [firestoreId, setFirestoreId] = useState(question.firestoreId);
   const [inFirestore, setInFirestore] = useState(question.inFirestore);
   const [hasCopied, setHasCopied] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
 
   const handleCopyForAI = async () => {
     const textToCopy = `CÓDIGO: ${question.id}
@@ -186,18 +188,53 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
             <h2 className="mt-1 text-lg font-semibold text-white">{topic}</h2>
             <p className="mt-1 font-mono text-xs text-mq-muted">{question.id}</p>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-lg p-2 text-mq-muted hover:bg-white/10 hover:text-white"
-            aria-label="Cerrar"
-          >
-            <X className="h-5 w-5" />
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setShowPreview(!showPreview)}
+              className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/10"
+            >
+              {showPreview ? (
+                <>
+                  <Edit2 className="h-4 w-4" /> Editar
+                </>
+              ) : (
+                <>
+                  <Eye className="h-4 w-4" /> Vista previa
+                </>
+              )}
+            </button>
+            <button
+              type="button"
+              onClick={onClose}
+              className="rounded-lg p-2 text-mq-muted hover:bg-white/10 hover:text-white"
+              aria-label="Cerrar"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
         </div>
 
         <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
-          {!inFirestore && (
+          {showPreview ? (
+            <QuestionStudentPreview
+              question={{
+                ...question,
+                topic,
+                statement,
+                explanation,
+                correctOptionId,
+                keyPoints: keyPoints.split('\n').filter(Boolean),
+                theoryUrl,
+                theoryContent,
+                university,
+                examArea,
+                options: (["A", "B", "C", "D"] as const).map((id, index) => ({ id, label: id, text: options[index] })),
+              }}
+            />
+          ) : (
+            <>
+              {!inFirestore && (
             <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-4 text-sm text-amber-100">
               Esta pregunta solo existe en el código del proyecto. Impórtala a Firestore para
               editarla y registrar tu revisión.
@@ -406,6 +443,8 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
                 timeStyle: "short",
               })}
             </p>
+          )}
+            </>
           )}
         </div>
 
