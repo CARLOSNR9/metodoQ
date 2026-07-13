@@ -20,6 +20,7 @@ type Props = {
   question: QuestionAdminRecord;
   onClose: () => void;
   onSaved: () => void;
+  copySuffix?: string;
 };
 
 async function appendIdToken(formData: FormData) {
@@ -29,7 +30,7 @@ async function appendIdToken(formData: FormData) {
   }
 }
 
-export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
+export function ProfessorQuestionEditor({ question, onClose, onSaved, copySuffix }: Props) {
   const [isPending, startTransition] = useTransition();
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
@@ -77,7 +78,7 @@ EXPLICACIÓN:
 ${explanation}
 
 PUNTOS CLAVE:
-${keyPoints}`;
+${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
 
     await navigator.clipboard.writeText(textToCopy);
     setHasCopied(true);

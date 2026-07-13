@@ -25,6 +25,7 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
   const [filter, setFilter] = useState<"pending" | "all">("pending");
   const [copied, setCopied] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState<QuestionAdminRecord | null>(null);
+  const [aiPrompt, setAiPrompt] = useState("");
   const router = useRouter();
 
   const visible = useMemo(() => {
@@ -46,10 +47,14 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleEdit = (questionId: string) => {
-    const q = questions.find((q) => q.id === questionId);
+  const handleEdit = (report: QuestionReport) => {
+    const q = questions.find((q) => q.id === report.questionId);
     if (q) {
+      const reportText = report.reportsList?.map(r => `- ${r.category}: ${r.comments || 'Sin comentarios'}`).join('\n') || 'Sin reportes';
+      const prompt = `REPORTE DEL ESTUDIANTE:\n${reportText}\n\nPor favor revisa la pregunta y el reporte del estudiante. Realiza las correcciones necesarias para mejorar la pregunta.`;
+      
       setSelectedQuestion(q);
+      setAiPrompt(prompt);
     } else {
       alert("No se encontró la información de la pregunta.");
     }
@@ -134,7 +139,7 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
                 </thead>
                 <tbody>
                   {visible.map((report) => (
-                    <ReportedQuestionRow key={report.id} report={report} onEdit={() => handleEdit(report.questionId)} />
+                    <ReportedQuestionRow key={report.id} report={report} onEdit={() => handleEdit(report)} />
                   ))}
                 </tbody>
               </table>
@@ -148,6 +153,7 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
           question={selectedQuestion}
           onClose={() => setSelectedQuestion(null)}
           onSaved={() => router.refresh()}
+          copySuffix={aiPrompt}
         />
       )}
     </>
