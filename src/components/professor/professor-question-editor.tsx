@@ -12,7 +12,7 @@ import { REVIEW_STATUS_LABELS } from "@/lib/questions/review-labels";
 import type { QuestionAdminRecord, QuestionReviewStatus } from "@/lib/questions/types";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { cn } from "@/lib/utils";
-import { X } from "lucide-react";
+import { X, Copy, Check } from "lucide-react";
 
 const selectOptionClassName = "bg-[#0f2744] text-white";
 
@@ -56,6 +56,33 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
   const [active, setActive] = useState(question.active !== false);
   const [firestoreId, setFirestoreId] = useState(question.firestoreId);
   const [inFirestore, setInFirestore] = useState(question.inFirestore);
+  const [hasCopied, setHasCopied] = useState(false);
+
+  const handleCopyForAI = async () => {
+    const textToCopy = `CÓDIGO: ${question.id}
+TEMA: ${topic}
+
+CASO CLÍNICO:
+${statement}
+
+OPCIONES:
+A. ${options[0]}
+B. ${options[1]}
+C. ${options[2]}
+D. ${options[3]}
+
+RESPUESTA CORRECTA: ${correctOptionId}
+
+EXPLICACIÓN:
+${explanation}
+
+PUNTOS CLAVE:
+${keyPoints}`;
+
+    await navigator.clipboard.writeText(textToCopy);
+    setHasCopied(true);
+    setTimeout(() => setHasCopied(false), 2000);
+  };
 
   const handleImport = () => {
     setMessage("");
@@ -386,6 +413,14 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved }: Props) {
           {error && <p className="text-sm text-rose-400">{error}</p>}
 
           <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={handleCopyForAI}
+              className="rounded-lg border border-mq-accent/40 px-4 py-2.5 text-sm font-semibold text-mq-accent hover:bg-mq-accent/10 flex items-center gap-2"
+            >
+              {hasCopied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+              {hasCopied ? "Copiado" : "Copiar"}
+            </button>
             <button
               type="button"
               onClick={handleSave}
