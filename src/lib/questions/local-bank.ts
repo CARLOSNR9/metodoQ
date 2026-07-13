@@ -78,15 +78,18 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
 
 /** Banco local para entrenamiento cuando Firestore no está disponible o está vacío. */
 export async function getLocalQuestionBank(): Promise<TrainingQuestion[]> {
-  if (localBankCache) return localBankCache;
+  if (process.env.NODE_ENV === "production" && localBankCache) return localBankCache;
   const sources = await loadTrainingSources();
-  localBankCache = mergeQuestionsById(sources);
-  return localBankCache;
+  const bank = mergeQuestionsById(sources);
+  if (process.env.NODE_ENV === "production") {
+    localBankCache = bank;
+  }
+  return bank;
 }
 
 /** Todas las preguntas definidas en el repositorio (revisión editorial). */
 export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
-  if (allRepositoryCache) return allRepositoryCache;
+  if (process.env.NODE_ENV === "production" && allRepositoryCache) return allRepositoryCache;
 
   const trainingSources = await loadTrainingSources();
 
@@ -100,11 +103,16 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     import("@/data/ucc-conv-2025-07-05-questions"),
   ]);
 
-  allRepositoryCache = mergeQuestionsById([
+  const allQuestions = mergeQuestionsById([
     ...trainingSources,
     UCC_CONV_2025_06_21_QUESTIONS,
     UCC_CONV_2025_07_05_QUESTIONS,
     DAILY_CHALLENGES,
   ]);
-  return allRepositoryCache;
+  
+  if (process.env.NODE_ENV === "production") {
+    allRepositoryCache = allQuestions;
+  }
+  
+  return allQuestions;
 }
