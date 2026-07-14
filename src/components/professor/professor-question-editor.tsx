@@ -10,15 +10,18 @@ import {
 import { selectInputClassName } from "@/components/ui/select-field";
 import { REVIEW_STATUS_LABELS } from "@/lib/questions/review-labels";
 import type { QuestionAdminRecord, QuestionReviewStatus } from "@/lib/questions/types";
+import type { QuestionReport, QuestionReportStatus } from "@/lib/server/question-reports-admin";
+import { updateQuestionReportStatusAction } from "@/app/admin/question-report-actions";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { cn } from "@/lib/utils";
-import { X, Copy, Check, Eye, Edit2 } from "lucide-react";
+import { X, Copy, Check, Eye, Edit2, RefreshCw } from "lucide-react";
 import { QuestionStudentPreview } from "@/components/admin/question-student-preview";
 
 const selectOptionClassName = "bg-[#0f2744] text-white";
 
 type Props = {
   question: QuestionAdminRecord;
+  report?: QuestionReport | null;
   onClose: () => void;
   onSaved: () => void;
   copySuffix?: string;
@@ -31,10 +34,12 @@ async function appendIdToken(formData: FormData) {
   }
 }
 
-export function ProfessorQuestionEditor({ question, onClose, onSaved, copySuffix }: Props) {
+export function ProfessorQuestionEditor({ question, report, onClose, onSaved, copySuffix }: Props) {
   const [isPending, startTransition] = useTransition();
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  
+  const [reportStatus, setReportStatus] = useState<QuestionReportStatus | null>(report?.status ?? null);
 
   const [topic, setTopic] = useState(question.topic);
   const [statement, setStatement] = useState(question.statement);
@@ -60,6 +65,25 @@ export function ProfessorQuestionEditor({ question, onClose, onSaved, copySuffix
   const [inFirestore, setInFirestore] = useState(question.inFirestore);
   const [hasCopied, setHasCopied] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+
+  const handleReportStatusChange = (status: QuestionReportStatus) => {
+    if (!report) return;
+    setReportStatus(status);
+    startTransition(async () => {
+      try {
+        const token = await getFirebaseAuth().currentUser?.getIdToken();
+        const result = await updateQuestionReportStatusAction(report.questionId, status, token ?? null);
+        if (result.error) {
+          setError(result.error);
+        } else {
+          setMessage(`Estado del reporte actualizado a: ${status === "reviewed" ? "Revisada" : status === "dismissed" ? "Descartada" : "Pendiente"}.`);
+          onSaved();
+        }
+      } catch (e) {
+        setError(String(e));
+      }
+    });
+  };
 
   const handleCopyForAI = async () => {
     const textToCopy = `CÓDIGO: ${question.id}
@@ -102,6 +126,24 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
       setFirestoreId(result.firestoreId ?? question.id);
       setInFirestore(true);
       setMessage("Pregunta importada a Firestore. Ya puedes guardar cambios.");
+    });
+  };
+
+  const handleSync = () => {
+    setMessage("");
+    setError("");
+    startTransition(async () => {
+      const formData = new FormData();
+      formData.set("questionId", question.id);
+      await appendIdToken(formData);
+      const result = await importLocalQuestionAction(formData);
+      if (result.error) {
+        setError(result.error);
+        return;
+      }
+      setMessage("Pregunta sincronizada desde el código.");
+      onSaved();
+      onClose();
     });
   };
 
@@ -310,7 +352,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
             </div>
             <div>
               <label className="text-xs font-semibold uppercase text-mq-muted">
-                Estado de revisión
+                Estado de revisión (Pregunta)
               </label>
               <select
                 value={reviewStatus}
@@ -326,6 +368,25 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
               </select>
             </div>
           </div>
+          
+          {report && (
+            <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-4">
+              <label className="text-xs font-semibold uppercase text-rose-300">
+                Estado del Reporte (Calidad de Contenido)
+              </label>
+              <select
+                value={reportStatus ?? "pending"}
+                onChange={(e) => handleReportStatusChange(e.target.value as QuestionReportStatus)}
+                disabled={isPending}
+                className={cn(selectInputClassName, "mt-2 disabled:opacity-60 border-rose-500/30 text-rose-100")}
+              >
+                <option value="pending" className={selectOptionClassName}>Pendiente</option>
+                <option value="reviewed" className={selectOptionClassName}>Revisada</option>
+                <option value="dismissed" className={selectOptionClassName}>Descartada</option>
+              </select>
+              <p className="mt-2 text-xs text-mq-muted">Al cambiar el estado del reporte, se guardará automáticamente y la pregunta se moverá de la pestaña correspondiente en el panel principal.</p>
+            </div>
+          )}
 
           <div>
             <label className="text-xs font-semibold uppercase text-mq-muted">Explicación</label>
@@ -460,6 +521,16 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
             >
               {hasCopied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
               {hasCopied ? "Copiado" : "Copiar"}
+            </button>
+            <button
+              type="button"
+              onClick={handleSync}
+              disabled={isPending}
+              className="rounded-lg border border-sky-400/40 px-4 py-2.5 text-sm font-semibold text-sky-300 hover:bg-sky-400/10 flex items-center gap-2"
+              title="Trae los cambios del código a Firestore"
+            >
+              <RefreshCw className={cn("h-4 w-4", isPending && "animate-spin")} />
+              Sincronizar
             </button>
             <button
               type="button"

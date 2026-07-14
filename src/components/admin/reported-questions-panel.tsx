@@ -22,15 +22,16 @@ const STATUS_OPTIONS: { value: QuestionReportStatus; label: string }[] = [
 ];
 
 export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
-  const [filter, setFilter] = useState<"pending" | "all">("pending");
+  const [filter, setFilter] = useState<"pending" | "reviewed" | "dismissed" | "all">("pending");
   const [copied, setCopied] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState<QuestionAdminRecord | null>(null);
+  const [selectedReport, setSelectedReport] = useState<QuestionReport | null>(null);
   const [aiPrompt, setAiPrompt] = useState("");
   const router = useRouter();
 
   const visible = useMemo(() => {
     if (filter === "all") return reports;
-    return reports.filter((report) => report.status === "pending");
+    return reports.filter((report) => report.status === filter);
   }, [filter, reports]);
 
   const codesList = useMemo(
@@ -39,6 +40,8 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
   );
 
   const pendingCount = reports.filter((report) => report.status === "pending").length;
+  const reviewedCount = reports.filter((report) => report.status === "reviewed").length;
+  const dismissedCount = reports.filter((report) => report.status === "dismissed").length;
 
   const handleCopy = async () => {
     if (!codesList) return;
@@ -54,6 +57,7 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
       const prompt = `REPORTE DEL ESTUDIANTE:\n${reportText}\n\nPor favor revisa la pregunta y el reporte del estudiante. Realiza las correcciones necesarias para mejorar la pregunta.`;
       
       setSelectedQuestion(q);
+      setSelectedReport(report);
       setAiPrompt(prompt);
     } else {
       alert("No se encontró la información de la pregunta.");
@@ -78,6 +82,12 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
       <div className="mb-6 flex flex-wrap items-center gap-3">
         <FilterChip active={filter === "pending"} onClick={() => setFilter("pending")}>
           Pendientes ({pendingCount})
+        </FilterChip>
+        <FilterChip active={filter === "reviewed"} onClick={() => setFilter("reviewed")}>
+          Revisadas ({reviewedCount})
+        </FilterChip>
+        <FilterChip active={filter === "dismissed"} onClick={() => setFilter("dismissed")}>
+          Descartadas ({dismissedCount})
         </FilterChip>
         <FilterChip active={filter === "all"} onClick={() => setFilter("all")}>
           Todas ({reports.length})
@@ -151,7 +161,11 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
       {selectedQuestion && (
         <ProfessorQuestionEditor
           question={selectedQuestion}
-          onClose={() => setSelectedQuestion(null)}
+          report={selectedReport}
+          onClose={() => {
+            setSelectedQuestion(null);
+            setSelectedReport(null);
+          }}
           onSaved={() => router.refresh()}
           copySuffix={aiPrompt}
         />
