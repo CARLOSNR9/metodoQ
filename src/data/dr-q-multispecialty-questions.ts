@@ -481,13 +481,13 @@ Referencias
     ],
     correctOptionId: "D",
     explanation:
-      "Abrasión corneal asociada a lentes de contacto. Manejo: antibiótico tópico para prevenir sobreinfección (especialmente Pseudomonas). El parche oclusivo ya no se recomienda de rutina.",
+      "Se trata de una abrasión corneal. En usuarios de lentes de contacto, el riesgo de queratitis por Pseudomonas aeruginosa es muy alto. El manejo indicado es retirar el lente de contacto e iniciar antibióticos tópicos de amplio espectro profilácticos.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Lente terapéutico): Mantener un lente de contacto en una abrasión reciente aumenta drásticamente el riesgo de infección severa.\n• Opciones B y C (Uso de parche): El parche ocular está contraindicado en usuarios de lentes de contacto y en trauma vegetal, ya que crear un ambiente cálido y cerrado favorece la proliferación bacteriana y no acelera la cicatrización.",
     keyPoints: [
-      "Cuando veas: dolor ocular + sensación de cuerpo extraño tras retirar lente de contacto + defecto epitelial corneal con fluoresceína.",
-      "Debes pensar en: abrasión corneal en usuario de lentes de contacto → antibiótico tópico sin parche oclusivo.",
-      "Usuarios de lentes de contacto tienen mayor riesgo de sobreinfección por Pseudomonas; el antibiótico tópico es profiláctico.",
-      "El parche ocular ya no se recomienda de rutina: no acelera la cicatrización y puede aumentar el riesgo de infección.",
-      "Tema: Abrasión corneal asociada a lentes de contacto.",
+      "Cuando veas: Dolor ocular + sensación de cuerpo extraño + tinción positiva con fluoresceína en usuario de lentes de contacto.",
+      "Debes pensar en: Abrasión corneal con alto riesgo de infección por Pseudomonas.",
+      "Manejo: Retiro del lente + Antibiótico tópico profiláctico.",
+      "NUNCA usar parche ocular en abrasiones por lentes de contacto o trauma vegetal (aumenta el riesgo de úlcera bacteriana/fúngica).",
+      "Tema: Abrasión corneal en usuarios de lentes de contacto.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 

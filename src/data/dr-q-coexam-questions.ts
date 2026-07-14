@@ -1817,11 +1817,13 @@ Referencias
       { id: "D", label: "D", text: "Herniación secundaria a inflamación apendicular; manejo antibiótico y observación." },
     ],
     correctOptionId: "B",
-    explanation: "La presentación clínica es compatible con una hernia inguinal directa, típica en adultos que realizan esfuerzos físicos repetitivos. Su fisiopatología se relaciona con debilidad adquirida de la pared posterior del canal inguinal, permitiendo la protrusión del contenido abdominal a través del triángulo de Hesselbach. El tratamiento definitivo es la corrección quirúrgica electiva.",
+    explanation: "La clínica (masa reductible con Valsalva) corresponde a una hernia inguinal. Al ser directa, su fisiopatología se debe a una debilidad adquirida de la pared posterior (fascia transversalis) que permite la protrusión a través del triángulo de Hesselbach.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Persistencia del conducto peritoneo-vaginal): Es la fisiopatología de la hernia inguinal INDIRECTA, típicamente congénita y que protruye por el anillo inguinal profundo (lateral a los vasos epigástricos).\n• Opción C (Laparotomía urgente): Si bien la debilidad fascial es parte del proceso, la masa es *reductible*, por lo que no hay encarcelamiento ni estrangulación que amerite cirugía de urgencia. El manejo es electivo.\n• Opción D: No hay clínica infecciosa (fiebre, peritonitis) que sugiera un plastrón o absceso apendicular.",
     keyPoints: [
-      "Cuando veas: Adulto mayor de 30 años. Trabajos con esfuerzo físico repetitivo. Masa inguinal reductible. Aumento con maniobras de Valsalva.",
-      "Debes pensar en: Hernia inguinal directa.",
-      "Tema: Hernias inguinales.",
+      "Cuando veas: Adulto con esfuerzo físico + Masa inguinal reductible.",
+      "Debes pensar en: Hernia inguinal.",
+      "Diferencia anatómica clave: La Directa pasa por el triángulo de Hesselbach (medial a vasos epigástricos) por debilidad adquirida de la pared posterior.",
+      "La Indirecta pasa por el anillo inguinal profundo (lateral a los vasos epigástricos) por persistencia del conducto peritoneo-vaginal.",
+      "Tema: Hernias inguinales — Directa vs Indirecta.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa la fisiopatología y el manejo de las hernias inguinales.
@@ -4617,11 +4619,13 @@ Referencias
       { id: "D", label: "D", text: "Metoprolol intravenoso." },
     ],
     correctOptionId: "B",
-    explanation: "El paciente presenta una taquicardia supraventricular estable. En lactantes hemodinámicamente estables, la adenosina es el tratamiento farmacológico de elección debido a su capacidad para bloquear transitoriamente la conducción a través del nodo auriculoventricular.",
+    explanation: "El ECG con taquicardia (230 lpm) regular, de complejos QRS estrechos y sin ondas P visibles es diagnóstico de una Taquicardia Supraventricular (TSV). Al no referirse compromiso grave de perfusión o hipotensión marcada, se asume una TSV estable, cuyo fármaco de elección aguda para abortar la crisis es la Adenosina IV.\n\n¿Por qué se descartan las otras opciones?\n• Opción A y D (Amiodarona, Metoprolol): No son fármacos de primera línea para el manejo agudo de una TSV estable en pediatría por su perfil de seguridad.\n• Opción C (Cardioversión eléctrica): Sería la respuesta correcta ÚNICAMENTE si el lactante estuviera inestable hemodinámicamente (hipotenso, mala perfusión, alteración grave del estado de conciencia).",
     keyPoints: [
-      "Cuando veas: Lactante. Taquicardia regular. Complejos estrechos. Ausencia de ondas P.",
-      "Debes pensar en: Taquicardia supraventricular.",
-      "Tema: Taquicardia supraventricular en pediatría.",
+      "Cuando veas: Lactante con FC >220 lpm, complejos QRS estrechos sin ondas P visibles.",
+      "Debes pensar en: Taquicardia Supraventricular (TSV).",
+      "Si está ESTABLE hemodinámicamente: Maniobras vagales, seguidas de Adenosina IV en bolo rápido.",
+      "Si está INESTABLE (choque): Cardioversión eléctrica sincronizada (0.5 a 1 J/kg).",
+      "Tema: Taquicardia Supraventricular (TSV) en Pediatría.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa una de las arritmias más frecuentes en pediatría.
@@ -4977,11 +4981,13 @@ Referencias
       { id: "D", label: "D", text: "Tiroiditis subaguda." },
     ],
     correctOptionId: "B",
-    explanation: "La elevación de TSH asociada a disminución de T4 libre es el patrón bioquímico característico del hipotiroidismo primario, generalmente secundario a enfermedad tiroidea primaria.",
+    explanation: "La paciente presenta clínica clásica de hipotiroidismo. El perfil tiroideo con TSH elevada y T4 libre baja confirma el origen primario (el problema radica en la glándula tiroides que no produce hormonas, y la hipófisis responde elevando la TSH para intentar estimularla).\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Hipertiroidismo): Cursa con pérdida de peso, calor, taquicardia y bioquímicamente tendría TSH suprimida y T4/T3 altas.\n• Opción C (Hipotiroidismo central): En el origen hipofisario o hipotalámico, la TSH no puede elevarse adecuadamente, por lo que encontraríamos T4 libre baja con TSH baja o inapropiadamente normal.\n• Opción D (Tiroiditis subaguda): Suele presentar una fase inicial de tirotoxicosis asociada clásicamente a dolor cervical anterior severo tras un cuadro viral, lo cual está ausente en este caso.",
     keyPoints: [
-      "Cuando veas: Fatiga. Intolerancia al frío. Aumento de peso. TSH elevada. T4 libre baja.",
-      "Debes pensar en: Hipotiroidismo primario.",
-      "Tema: Hipotiroidismo.",
+      "Cuando veas: Fatiga, ganancia de peso, intolerancia al frío, caída de cabello + TSH elevada con T4 libre baja.",
+      "Debes pensar en: Hipotiroidismo primario (falla de la glándula tiroidea).",
+      "En el hipotiroidismo primario, la TSH se eleva por pérdida del feedback negativo.",
+      "En el hipotiroidismo central (secundario), la TSH suele estar baja o inapropiadamente normal con T4 baja.",
+      "Tema: Hipotiroidismo Primario — Perfil Tiroideo.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa uno de los trastornos endocrinológicos más frecuentes.
@@ -5068,11 +5074,13 @@ Referencias
       { id: "D", label: "D", text: "Colocación de filtro de vena cava inferior." },
     ],
     correctOptionId: "C",
-    explanation: "El paciente presenta un tromboembolismo pulmonar de alto riesgo (masivo), evidenciado por hipotensión arterial e inestabilidad hemodinámica. En ausencia de contraindicaciones, la trombólisis sistémica constituye el tratamiento de elección.",
+    explanation: "El cuadro es altamente sugestivo de un Tromboembolismo Pulmonar (TEP). La presencia de hipotensión (o choque) lo clasifica inmediatamente como un TEP de ALTO RIESGO (masivo), cuya mortalidad aguda es muy elevada. En estos pacientes, la terapia de reperfusión primaria (trombólisis sistémica) está indicada para salvar la vida.\n\n¿Por qué se descartan las otras opciones?\n• Opciones A y B (Anticoagulación sola/ambulatoria): Aunque se debe anticoagular, en un paciente inestable hemodinámicamente, la anticoagulación por sí sola no disuelve el trombo lo suficientemente rápido para revertir el choque obstructivo del ventrículo derecho.\n• Opción D (Filtro de Vena Cava): Se reserva para pacientes con contraindicación absoluta para anticoagular o trombolisar, o en recurrencias a pesar de anticoagulación óptima, pero no es el manejo primario inicial de un TEP masivo.",
     keyPoints: [
-      "Cuando veas: Disnea súbita. Dolor torácico. Hipotensión. AngioTAC positiva para TEP.",
-      "Debes pensar en: Tromboembolismo pulmonar de alto riesgo.",
-      "Tema: Tromboembolismo pulmonar.",
+      "Cuando veas: Disnea súbita, dolor torácico pleurítico y S1Q3T3 asociado a HIPOTENSIÓN o CHOQUE.",
+      "Debes pensar en: Tromboembolismo Pulmonar de ALTO RIESGO (Masivo).",
+      "Manejo inicial en TEP de alto riesgo sin contraindicaciones: Trombólisis sistémica (Alteplasa).",
+      "Si el paciente está estable hemodinámicamente (sin hipotensión): Anticoagulación aislada.",
+      "Tema: TEP Masivo — Indicaciones de trombólisis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa el manejo del tromboembolismo pulmonar según el riesgo de mortalidad.
