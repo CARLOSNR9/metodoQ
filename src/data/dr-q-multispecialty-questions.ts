@@ -675,13 +675,13 @@ Referencias
     ],
     correctOptionId: "C",
     explanation:
-      "Profilaxis de migraña indicada (~1 crisis/semana). El asma contraindica propranolol y limita otros betabloqueadores. La venlafaxina es alternativa eficaz y segura.",
+      "El paciente presenta criterios para iniciar profilaxis antimigrañosa debido a la frecuencia (4 al mes) e impacto funcional de las crisis. Sin embargo, su antecedente de asma es clave para la elección del fármaco.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (AINEs a demanda): Son útiles para el manejo agudo, pero no previenen la aparición de nuevas crisis ni reducen su frecuencia a largo plazo.\n• Opciones B y D (Propranolol, Bisoprolol): Los betabloqueadores son de primera línea en profilaxis de migraña, pero están contraindicados de forma relativa o absoluta en pacientes asmáticos debido al riesgo de broncoespasmo (especialmente los no selectivos como el propranolol).\n\nPor tanto, la venlafaxina (un IRSN) o la amitriptilina son alternativas eficaces y seguras en pacientes con asma.",
     keyPoints: [
-      "Cuando veas: migraña frecuente (~1 crisis/semana) con indicación de profilaxis + antecedente de asma.",
-      "Debes pensar en: venlafaxina como profiláctico alternativo (betabloqueadores contraindicados en asma).",
-      "El propranolol es el betabloqueador clásico en migraña pero está contraindicado en asma por bloqueo β2 bronquial.",
-      "Los AINEs a demanda son tratamiento agudo, no profilaxis; no resuelven la frecuencia de crisis.",
-      "Tema: Profilaxis de migraña en paciente con asma.",
+      "Cuando veas: Migraña con indicación de profilaxis (≥4 crisis/mes o gran impacto funcional) + Antecedente de Asma.",
+      "Debes pensar en: Evitar betabloqueadores (como propranolol) por riesgo de broncoespasmo severo.",
+      "Opciones seguras para profilaxis en asma: Venlafaxina, Amitriptilina, Topiramato o Ácido Valproico.",
+      "El tratamiento a demanda (AINEs, triptanes) rescata del dolor, pero no reemplaza la necesidad de profilaxis cuando las crisis son frecuentes.",
+      "Tema: Migraña — Profilaxis y contraindicaciones.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 

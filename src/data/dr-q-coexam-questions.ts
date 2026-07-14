@@ -2982,11 +2982,13 @@ Referencias
       { id: "D", label: "D", text: "Inflamación alveolar difusa con alteración de la membrana alveolocapilar." },
     ],
     correctOptionId: "B",
-    explanation: "El paciente presenta un neumotórax a tensión. Su fisiopatología consiste en la entrada de aire al espacio pleural mediante un mecanismo valvular que permite el ingreso de aire durante la inspiración pero impide su salida durante la espiración, generando aumento progresivo de la presión intratorácica, colapso pulmonar y compromiso hemodinámico.",
+    explanation: "El cuadro de disnea súbita, ausencia de ruidos respiratorios, timpanismo y choque (hipotensión/taquicardia) es la presentación clásica del Neumotórax a Tensión. Su fisiopatología es un mecanismo de válvula unidireccional (Opción B) donde entra aire a la pleura pero no sale, colapsando el pulmón y desviando el mediastino, lo que disminuye el retorno venoso y causa choque obstructivo.\n\n¿Por qué se descartan las otras opciones?\n• Opción A: Describe un derrame pleural (líquido). Cursaría con matidez a la percusión, no timpanismo, y rara vez causa choque obstructivo súbito.\n• Opción C: Describe un TEP. Causa disnea súbita e hipotensión, pero la auscultación y percusión pulmonar suelen ser normales.\n• Opción D: Describe edema pulmonar o neumonía difusa; son cuadros con estertores a la auscultación, no timpanismo ni asimetría brusca.",
     keyPoints: [
-      "Cuando veas: Disnea súbita. Dolor torácico. Hipotensión. Timpanismo. Ausencia de ruidos respiratorios.",
+      "Cuando veas: Paciente con disnea súbita, asimetría torácica (timpanismo + abolición de ruidos de un lado) e inestabilidad hemodinámica (choque).",
       "Debes pensar en: Neumotórax a tensión.",
-      "Tema: Neumotórax a tensión.",
+      "Fisiopatología: Válvula unidireccional que atrapa aire → aumenta presión intratorácica → desviación mediastinal → ↓ retorno venoso → choque obstructivo.",
+      "Diferencias semiológicas: Neumotórax (timpanismo), Derrame (matidez), TEP (percusión/auscultación normal).",
+      "Tema: Neumotórax a tensión — Fisiopatología.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa una de las emergencias respiratorias más importantes.
@@ -4040,11 +4042,13 @@ Referencias
       { id: "D", label: "D", text: "Observación clínica durante 24 horas y repetir valoración neurológica." },
     ],
     correctOptionId: "B",
-    explanation: "La paciente presenta un síndrome neurológico focal de inicio súbito altamente sugestivo de accidente cerebrovascular isquémico agudo dentro de la ventana terapéutica para reperfusión. La conducta inicial consiste en realizar neuroimagen urgente para descartar hemorragia intracraneal y determinar elegibilidad para trombólisis.",
+    explanation: "Ante un déficit neurológico focal de inicio súbito, el primer paso SIEMPRE es solicitar una tomografía de cráneo simple de urgencia (Código ACV) para diferenciar un origen isquémico de uno hemorrágico y evaluar si el paciente está en ventana de reperfusión (típicamente <4.5 horas).\n\n¿Por qué se descartan las otras opciones?\n• Opción A (AAS inmediatamente): Dar aspirina sin una neuroimagen previa es un error grave, ya que empeoraría un sangrado si el ACV resultara ser hemorrágico.\n• Opción C (Anticoagulación): La heparina no está indicada en el manejo hiperagudo rutinario del ACV isquémico y, nuevamente, requiere descartar hemorragia antes.\n• Opción D (Observación): Retrasar el diagnóstico impide administrar la terapia trombolítica, cuyo beneficio es tiempo-dependiente (el tejido cerebral se pierde por cada minuto de retraso).",
     keyPoints: [
-      "Cuando veas: Déficit neurológico focal súbito. Menos de 4.5 horas de evolución. NIHSS elevado. Paciente potencialmente trombolizable.",
-      "Debes pensar en: Código ACV y tomografía urgente.",
-      "Tema: Accidente cerebrovascular isquémico agudo.",
+      "Cuando veas: Déficit neurológico focal de inicio súbito (ej. hemiparesia, afasia) de menos de 4.5 horas de evolución.",
+      "Debes pensar en: Activar Código ACV y solicitar TAC de cráneo simple de urgencia.",
+      "Nunca se deben administrar antiagregantes (AAS) ni anticoagulantes sin haber descartado antes una hemorragia por TAC.",
+      "La ventana habitual para trombólisis intravenosa con alteplasa es de 4.5 horas.",
+      "Tema: ACV isquémico — Manejo inicial (Código ACV).",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa el manejo inicial del accidente cerebrovascular agudo.
@@ -4430,10 +4434,14 @@ Referencias
       { id: "D", label: "D", text: "Tetralogía de Fallot." },
     ],
     correctOptionId: "A",
-    explanation: "La presencia de desdoblamiento fijo del segundo ruido cardíaco asociado a un soplo sistólico eyectivo en foco pulmonar constituye el hallazgo clásico de la comunicación interauricular.",
+    explanation: "El hallazgo patognomónico de la Comunicación Interauricular (CIA) es el desdoblamiento amplio y FIJO del segundo ruido (S2), acompañado de un soplo mesosistólico eyectivo en el foco pulmonar (generado por el hiperflujo a través de la válvula pulmonar, no por la CIA en sí misma).\n\n¿Por qué se descartan las otras opciones?\n• Opción B (CIV): Se caracteriza clásicamente por un soplo pansistólico o holosistólico rudo, de alta frecuencia, en el borde paraesternal inferior izquierdo.\n• Opción C (PCA): Presenta el característico soplo continuo o \"en maquinaria\" (soplo de Gibson) en el foco pulmonar o infraclavicular izquierdo.\n• Opción D (Tetralogía de Fallot): Es una cardiopatía cianótica. Su soplo es sistólico eyectivo rudo (por la estenosis pulmonar), pero no tiene desdoblamiento fijo de S2 (frecuentemente el S2 es único).",
     keyPoints: [
-      "Cuando veas: Soplo mesosistólico en foco pulmonar. Desdoblamiento fijo del segundo ruido. Niño con intolerancia al ejercicio.",
-      "Debes pensar en: Comunicación interauricular.",
+      "Cuando veas: Niño preescolar/escolar con disnea/fatiga + Desdoblamiento FIJO del segundo ruido (S2) + Soplo en foco pulmonar.",
+      "Debes pensar en: Comunicación Interauricular (CIA).",
+      "Recuerda las claves auscultatorias de las cardiopatías acianóticas:",
+      "CIA: Desdoblamiento fijo de S2.",
+      "CIV: Soplo holosistólico rudo.",
+      "PCA: Soplo continuo \"en maquinaria\".",
       "Tema: Cardiopatías congénitas acianóticas.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
@@ -7758,11 +7766,13 @@ Referencias
       { id: "D", label: "D", text: "Hinchey IV; procedimiento de Hartmann." },
     ],
     correctOptionId: "A",
-    explanation: "La diverticulitis aguda no complicada con inflamación pericólica y ausencia de abscesos o perforación corresponde a un Hinchey Ia. El manejo inicial suele ser conservador con antibióticos, analgesia, hidratación y vigilancia clínica.",
+    explanation: "El cuadro clínico y tomográfico (inflamación pericólica sin abscesos) define una diverticulitis aguda no complicada, estadificada como Hinchey Ia. El tratamiento de elección en este estadio es conservador (antibióticos, analgesia, dieta y vigilancia).\n\n¿Por qué se descartan las otras opciones?\n• Opción B (Hinchey Ib): Corresponde a la formación de un absceso pericólico o mesentérico localizado (≤4 cm), que puede requerir drenaje percutáneo o antibióticos IV según su tamaño.\n• Opción C (Hinchey III): Corresponde a peritonitis purulenta generalizada, con indicación de cirugía de urgencia.\n• Opción D (Hinchey IV): Corresponde a peritonitis fecaloidea generalizada, con indicación absoluta de cirugía urgente (usualmente procedimiento de Hartmann).",
     keyPoints: [
-      "Cuando veas: Dolor en fosa ilíaca izquierda. Engrosamiento sigmoideo. Inflamación de grasa pericólica. Sin absceso.",
-      "Debes pensar en: Diverticulitis aguda no complicada.",
-      "Tema: Diverticulitis aguda.",
+      "Cuando veas: Dolor en fosa ilíaca izquierda, fiebre, y TAC con inflamación pericólica sin absceso.",
+      "Debes pensar en: Diverticulitis aguda no complicada (Hinchey Ia).",
+      "El manejo del estadio Hinchey Ia es siempre médico conservador.",
+      "Estadios avanzados (Hinchey III - peritonitis purulenta y Hinchey IV - peritonitis fecaloidea) son indicaciones de cirugía de urgencia.",
+      "Tema: Diverticulitis aguda — Clasificación de Hinchey.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa la clasificación tomográfica de Hinchey.
