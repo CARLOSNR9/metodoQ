@@ -5461,10 +5461,12 @@ Referencias
       { id: "D", label: "D", text: "Quiste ovárico funcional; observación clínica." },
     ],
     correctOptionId: "B",
-    explanation: "La presencia de dolor pélvico asociado a dolor a la movilización cervical en una mujer con factores de riesgo para infecciones de transmisión sexual es altamente sugestiva de enfermedad inflamatoria pélvica (EIP). El tratamiento empírico debe iniciarse tan pronto como exista sospecha clínica.",
+    explanation: "El cuadro clínico de dolor pélvico asociado a dolor a la movilización cervical en una paciente con factores de riesgo (relaciones de riesgo, no uso de preservativo) es altamente sugestivo de Enfermedad Inflamatoria Pélvica (EIP). El diagnóstico es clínico y el tratamiento empírico (Ceftriaxona + Doxiciclina + Metronidazol) debe iniciarse de inmediato para evitar secuelas como infertilidad o embarazo ectópico.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Embarazo ectópico): Suele cursar con amenorrea, dolor de inicio agudo (frecuentemente unilateral) y prueba de embarazo positiva.\n• Opción C (Endometriosis): Se caracteriza por dolor crónico cíclico (dismenorrea severa, dispareunia), no por un cuadro agudo tras relaciones de riesgo con dolor a la movilización cervical.\n• Opción D (Quiste ovárico funcional): Puede causar dolor pélvico, pero generalmente es unilateral y no se asocia primariamente al dolor exquisito a la movilización del cérvix ni a factores de riesgo para ITS.",
     keyPoints: [
-      "Cuando veas: Mujer joven sexualmente activa. Relaciones sexuales sin preservativo. Dolor pélvico. Dolor a la movilización cervical.",
-      "Debes pensar en: Enfermedad inflamatoria pélvica.",
+      "Cuando veas: Mujer joven sexualmente activa, no uso de preservativo, dolor pélvico bajo y dolor a la movilización cervical.",
+      "Debes pensar en: Enfermedad Inflamatoria Pélvica (EIP).",
+      "El diagnóstico es clínico. Se debe iniciar tratamiento empírico ante la sospecha (dolor a la palpación uterina/anexial o dolor a movilización cervical).",
+      "Tratamiento ambulatorio de elección: Ceftriaxona IM (dosis única) + Doxiciclina (14 días) + Metronidazol (14 días).",
       "Tema: Enfermedad inflamatoria pélvica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
