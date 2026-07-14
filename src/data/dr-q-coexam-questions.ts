@@ -1320,13 +1320,13 @@ Referencias
       { id: "D", label: "D", text: "Para controlar la frecuencia cardíaca podrían emplearse betabloqueantes." },
     ],
     correctOptionId: "C",
-    explanation: "La ablación con catéter no constituye el manejo inicial rutinario de un primer episodio de fibrilación auricular. La indicación depende de múltiples factores clínicos, persistencia de síntomas, recurrencias y respuesta al tratamiento médico.",
+    explanation: "La afirmación falsa es la C, ya que la ablación con catéter NO es el tratamiento de primera línea ni rutinario para un primer episodio de Fibrilación Auricular (FA). Generalmente se reserva para pacientes muy sintomáticos, refractarios al tratamiento farmacológico o con miocardiopatía mediada por taquicardia.\n\n¿Por qué las demás son VERDADERAS?\n• Opción A: Es verdadera. Su CHA₂DS₂-VASc es alto (edad >75 años = 2 pts, HTA = 1 pt, DM = 1 pt), lo que obliga a anticoagulación oral de por vida para prevención de ACV.\n• Opción B: Es verdadera. Si un episodio de FA lleva >48 horas (o tiempo indeterminado) sin anticoagulación previa óptima, es obligatorio realizar un Ecocardiograma Transesofágico (ETE) para descartar trombos en la orejuela izquierda ANTES de cardiovertir.\n• Opción D: Es verdadera. El uso de betabloqueadores o calcioantagonistas no dihidropiridínicos (diltiazem) es la base para el control de la frecuencia cardíaca.",
     keyPoints: [
-      "Cuando veas: FA de 72 h de evolución en anciano con HTA y DM, estable, pregunta cuál afirmación es FALSA.",
-      "Debes pensar en: ablación NO es manejo inicial rutinario del primer episodio de FA.",
-      "CHA₂DS₂-VASc elevado (edad, HTA, DM) indica anticoagulación oral de por vida salvo contraindicación.",
-      "FA >48 h requiere ETE o anticoagulación previa antes de cardioversión; betabloqueantes son válidos para control de frecuencia.",
-      "Tema: Fibrilación auricular — manejo y afirmaciones falsas.",
+      "Cuando veas: Primer episodio de FA, paciente estable, preguntando por conducta o afirmación falsa.",
+      "Debes pensar en: La ablación con catéter NO es el manejo inicial.",
+      "Todo paciente con FA de >48 horas debe tener anticoagulación por 3 semanas o un ETE que descarte trombos antes de cardiovertir.",
+      "CHA₂DS₂-VASc ≥2 en hombres (o ≥3 en mujeres) = Anticoagulación oral formal.",
+      "Tema: Fibrilación Auricular — Conductas correctas e incorrectas.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
@@ -6333,11 +6333,13 @@ Referencias
       { id: "D", label: "D", text: "Dermatitis atópica; Staphylococcus aureus." },
     ],
     correctOptionId: "B",
-    explanation: "La dermatitis seborreica es una dermatosis inflamatoria crónica caracterizada por placas eritematodescamativas con escamas amarillentas y grasosas en áreas ricas en glándulas sebáceas. Se ha asociado a la proliferación de levaduras del género Malassezia.",
+    explanation: "El caso clínico (placas eritematodescamativas con escamas amarillas/grasosas en cuero cabelludo y barba) es el cuadro típico de Dermatitis Seborreica. Su agente etiológico fuertemente asociado es el hongo levaduriforme Malassezia furfur.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Psoriasis): Produce placas eritematosas con escamas PLATEADAS, gruesas y secas, típicamente en zonas de extensión (codos, rodillas) y no se asocia a Streptococcus pyogenes directamente (salvo en la psoriasis en gotas).\n• Opción C (Tiña capitis): Clásica de niños, produce placas alopécicas descamativas (no grasosas ni amarillentas). El Trichophyton rubrum es más típico de tiña pedis o corporis.\n• Opción D (Dermatitis atópica): Cursa con eccema y prurito intenso en flexuras o diseminado; aunque frecuentemente se sobreinfecta con S. aureus, sus escamas no son amarillentas/grasosas.",
     keyPoints: [
-      "Cuando veas: Escamas amarillentas. Cuero cabelludo. Barba. Prurito.",
-      "Debes pensar en: Dermatitis seborreica.",
-      "Tema: Dermatitis seborreica.",
+      "Cuando veas: Placas eritematosas con escamas amarillentas y grasosas en áreas seborreicas (cuero cabelludo, surcos nasogenianos, cejas, barba).",
+      "Debes pensar en: Dermatitis Seborreica.",
+      "Agente etiológico implicado: Hongo levaduriforme Malassezia furfur.",
+      "Diferencial clave: La psoriasis tiene escamas plateadas y gruesas; la dermatitis seborreica tiene escamas amarillas y untuosas.",
+      "Tema: Dermatitis Seborreica vs Psoriasis.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa una de las enfermedades dermatológicas más frecuentes.
@@ -6793,11 +6795,13 @@ Referencias
       { id: "D", label: "D", text: "Nitroglicerina sublingual." },
     ],
     correctOptionId: "B",
-    explanation: "Toda taquicardia regular de complejo ancho debe considerarse taquicardia ventricular hasta demostrar lo contrario. En un paciente hemodinámicamente estable, el tratamiento farmacológico de elección es la amiodarona intravenosa.",
+    explanation: "El paciente presenta una taquicardia de complejos anchos (QRS >0.12s). La regla de oro en urgencias es: toda taquicardia de complejo ancho es una Taquicardia Ventricular (TV) hasta que se demuestre lo contrario. Dado que tiene pulso y está estable (PA 110/70), el manejo de elección es la cardioversión farmacológica con Amiodarona IV.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Adenosina): Es el tratamiento de elección para las taquicardias supraventriculares (QRS ESTRECHO). No está indicada rutinariamente para una TV.\n• Opción C (Verapamilo): Está CONTRAINDICADO en las taquicardias de complejo ancho porque si se trata de una TV, puede precipitar hipotensión severa, fibrilación ventricular y paro cardíaco.\n• Opción D (Nitroglicerina): Es un manejo para isquemia coronaria, pero la prioridad hemodinámica aquí es tratar la arritmia (que es muy probable que esté originando la isquemia secundaria).",
     keyPoints: [
-      "Cuando veas: Taquicardia. QRS ancho (>120 ms). Paciente estable. Dolor torácico.",
-      "Debes pensar en: Taquicardia ventricular.",
-      "Tema: Arritmias ventriculares.",
+      "Cuando veas: Taquicardia con QRS ancho (>0.12 s o >3 cuadritos) regular.",
+      "Debes pensar en: Taquicardia Ventricular (TV).",
+      "Si está ESTABLE: Amiodarona intravenosa (o Procainamida).",
+      "Si está INESTABLE (hipotenso, alterado): Cardioversión eléctrica sincronizada INMEDIATA.",
+      "Tema: Taquicardia Ventricular — Manejo agudo.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa una de las emergencias cardiológicas más importantes.
@@ -8661,11 +8665,13 @@ Referencias
       { id: "D", label: "D", text: "Púrpura trombocitopénica inmune; Epstein-Barr virus." },
     ],
     correctOptionId: "B",
-    explanation: "La combinación de fiebre, síndrome meníngeo y exantema petequial o purpúrico debe hacer sospechar meningococcemia invasiva hasta demostrar lo contrario. Neisseria meningitidis es el agente clásicamente asociado.",
+    explanation: "El cuadro clínico de fiebre, rigidez de nuca (síndrome meníngeo) y, de forma súbita, la aparición de un exantema petequial o purpúrico, es la presentación patognomónica de la Meningococcemia (infección invasiva por Neisseria meningitidis), una verdadera urgencia médica.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Neumococo): El Streptococcus pneumoniae es la causa más frecuente de meningitis en niños y adultos, PERO típicamente NO cursa con un exantema petequial o purpúrico.\n• Opción C (Encefalitis por VHS-1): Cursa con fiebre, alteración del estado de conciencia y convulsiones o focalidad, pero sin exantema petequial.\n• Opción D (PTI): Cursa con petequias/equimosis y trombocitopenia aislada en niños sanos (frecuentemente tras infección viral), pero NO se asocia con fiebre alta aguda ni signos meníngeos (rigidez de nuca).",
     keyPoints: [
-      "Cuando veas: Fiebre. Rigidez de nuca. Petequias o púrpura. Deterioro rápido.",
-      "Debes pensar en: Meningococcemia.",
-      "Tema: Meningitis bacteriana.",
+      "Cuando veas: Niño o adolescente con Fiebre + Signos meníngeos + Exantema petequial/purpúrico súbito.",
+      "Debes pensar en: Meningococcemia invasiva (Neisseria meningitidis).",
+      "El inicio temprano de antibióticos empíricos (ej. Ceftriaxona) es vital; no debe retrasarse por estudios.",
+      "La enfermedad puede evolucionar rápidamente a choque séptico y síndrome de Waterhouse-Friderichsen (infarto suprarrenal).",
+      "Tema: Meningococcemia y Meningitis bacteriana.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa una de las emergencias infecciosas pediátricas más importantes.

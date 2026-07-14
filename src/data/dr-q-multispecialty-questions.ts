@@ -1859,13 +1859,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "La anticoagulación en FA se basa en CHA₂DS₂-VASc. Edad <60 años aislada no aporta puntos y es la situación donde menos estaría indicada la anticoagulación.",
+      "La indicación de anticoagulación en la fibrilación auricular no valvular se determina mediante la escala CHA₂DS₂-VASc. En este score, una edad menor de 65 años (como en la opción A) aporta 0 puntos, por lo que de forma aislada, es la situación donde MENOS indicada estaría la anticoagulación.\n\n¿Por qué se descartan las otras opciones?\n• Opción B (Hipertensión): Aporta 1 punto (la 'H' del score).\n• Opción C (Edad >75 años): Aporta 2 puntos (la 'A₂' del score), siendo una indicación formal y fuerte de anticoagulación.\n• Opción D (Insuficiencia Cardíaca): Aporta 1 punto (la 'C' del score).",
     keyPoints: [
-      "Cuando veas: pregunta sobre anticoagulación en FA no valvular y cuál situación estaría MENOS indicada.",
-      "Debes pensar en: CHA₂DS₂-VASc — edad <65 años sin otros factores aporta 0 puntos; HTA, IC y edad ≥75 sí aumentan riesgo embólico.",
-      "Edad <60 años aislada es la situación donde menos estaría indicada la anticoagulación.",
-      "No toda FA requiere anticoagulación automáticamente; el score guía la decisión.",
-      "Tema: Fibrilación auricular — anticoagulación y CHA₂DS₂-VASc.",
+      "Cuando veas: Fibrilación auricular y decisión de anticoagular.",
+      "Debes pensar en: Calcular de inmediato el CHA₂DS₂-VASc.",
+      "Edad <65 años suma 0 puntos. Edad 65-74 años suma 1 punto. Edad ≥75 años suma 2 puntos.",
+      "HTA (1), IC (1), Diabetes (1), ACV/AIT previo (2), Enf. vascular (1), Sexo femenino (1).",
+      "Tema: Fibrilación auricular — Escala CHA₂DS₂-VASc.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
