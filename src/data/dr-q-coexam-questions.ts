@@ -3288,17 +3288,19 @@ Referencias
     tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","psiquiatria"],
     statement: "Paciente masculino de 24 años, estudiante universitario, consulta acompañado por su madre debido a cambios de comportamiento de aproximadamente tres semanas de evolución. Refiere sentirse \"lleno de energía\", con disminución importante de la necesidad de sueño, durmiendo apenas 3 horas por noche sin presentar fatiga durante el día. Además, manifiesta múltiples proyectos de negocios simultáneos, planes de inversión de alto riesgo y gastos excesivos en apuestas en línea y compras innecesarias. La familia refiere que habla de manera acelerada, cambia constantemente de tema durante las conversaciones y se muestra más irritable de lo habitual. Niega antecedentes psiquiátricos previos, consumo de sustancias psicoactivas o síntomas depresivos recientes.\n¿Cuál es el diagnóstico más probable?",
     options: [
-      { id: "A", label: "A", text: "Trastorno bipolar." },
-      { id: "B", label: "B", text: "Depresión mayor." },
-      { id: "C", label: "C", text: "Trastorno de ansiedad." },
-      { id: "D", label: "D", text: "Esquizofrenia." },
+      { id: "A", label: "A", text: "Trastorno bipolar tipo I." },
+      { id: "B", label: "B", text: "Trastorno depresivo mayor con características atípicas." },
+      { id: "C", label: "C", text: "Trastorno de ansiedad generalizada." },
+      { id: "D", label: "D", text: "Esquizofrenia paranoide." },
     ],
     correctOptionId: "A",
-    explanation: "El paciente presenta un episodio maníaco caracterizado por disminución de la necesidad de sueño, aumento de energía, verborrea, fuga de ideas, conductas de riesgo y deterioro funcional. La presencia de un episodio maníaco es suficiente para establecer el diagnóstico de trastorno bipolar tipo I.",
+    explanation: "El cuadro clínico corresponde a un episodio maníaco franco (duración mayor a 1 semana, marcada elevación de la energía, disminución de la necesidad de sueño, fuga de ideas, verborrea y conductas de riesgo que causan deterioro funcional). Según los criterios del DSM-5, la presencia de al menos un episodio maníaco a lo largo de la vida es suficiente para establecer el diagnóstico de Trastorno Bipolar tipo I, incluso si el paciente no ha presentado episodios depresivos previos.\n\n¿Por qué se descartan las otras opciones?\n• Opción B (Trastorno depresivo mayor): El paciente no presenta síntomas depresivos (tristeza, anhedonia). Sus síntomas son de polaridad netamente elevada/maníaca.\n• Opción C (Trastorno de ansiedad): Aunque la ansiedad puede presentar aceleración y problemas de sueño, el paciente en este caso tiene una disminución de la necesidad de dormir (no insomnio con fatiga diurna) y grandiosidad/conductas de riesgo que no son propias de la ansiedad.\n• Opción D (Esquizofrenia): No presenta síntomas psicóticos primarios (delirios extraños, alucinaciones, síntomas negativos) y el curso agudo con síntomas afectivos prominentes aleja este diagnóstico diferencial.",
     keyPoints: [
-      "Cuando veas: Disminución de la necesidad de sueño. Aumento de energía. Conductas riesgosas. Gastos excesivos. Verborrea. Fuga de ideas.",
+      "Cuando veas: Disminución de la necesidad de sueño, aumento de energía, conductas riesgosas, verborrea y fuga de ideas.",
       "Debes pensar en: Episodio maníaco.",
-      "Tema: Trastorno bipolar.",
+      "El diagnóstico de un solo episodio maníaco basta para diagnosticar Trastorno Bipolar tipo I (no requiere antecedente de depresión).",
+      "La disminución de la necesidad de sueño es un síntoma cardinal de manía que la diferencia del insomnio por ansiedad o depresión.",
+      "Tema: Trastorno Bipolar tipo I.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica porque evalúa el reconocimiento clínico de la manía.
