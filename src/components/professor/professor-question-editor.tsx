@@ -30,7 +30,7 @@ type Props = {
 async function appendIdToken(formData: FormData) {
   const user = getFirebaseAuth().currentUser;
   if (user) {
-    formData.set("idToken", await user.getIdToken());
+    formData.set("idToken", await user.getIdToken(true));
   }
 }
 
@@ -71,7 +71,7 @@ export function ProfessorQuestionEditor({ question, report, onClose, onSaved, co
     setReportStatus(status);
     startTransition(async () => {
       try {
-        const token = await getFirebaseAuth().currentUser?.getIdToken();
+        const token = await getFirebaseAuth().currentUser?.getIdToken(true);
         const result = await updateQuestionReportStatusAction(report.questionId, status, token ?? null);
         if (result.error) {
           setError(result.error);
