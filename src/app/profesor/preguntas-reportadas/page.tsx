@@ -2,7 +2,7 @@ import { ReportedQuestionsPanel } from "@/components/admin/reported-questions-pa
 import { adminListQuestionReports } from "@/lib/server/question-reports-admin";
 import { adminListQuestionsForReview } from "@/lib/server/questions-admin";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86400; // Caché por 24 horas (se limpia al editar)
 
 export default async function ProfessorReportedQuestionsPage() {
   let reports: Awaited<ReturnType<typeof adminListQuestionReports>> = [];

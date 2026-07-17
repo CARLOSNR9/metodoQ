@@ -1,7 +1,7 @@
 import { ProfessorQuestionsPanel } from "@/components/professor/professor-questions-panel";
 import { adminListQuestionsForReview } from "@/lib/server/questions-admin";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86400; // Caché por 24 horas (se limpia al editar)
 
 export default async function ProfessorQuestionsPage() {
   let questions: Awaited<ReturnType<typeof adminListQuestionsForReview>> = [];

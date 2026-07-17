@@ -5,7 +5,7 @@ import {
 } from "@/lib/server/questions-admin";
 import { adminGetReportedQuestionIds } from "@/lib/server/question-reports-admin";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 86400; // Caché por 24 horas (se limpia al editar)
 
 export default async function AdminQuestionsPreviewPage() {
   let questions: Awaited<ReturnType<typeof enrichAdminRecordsForPreview>> = [];
