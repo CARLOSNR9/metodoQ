@@ -147,6 +147,36 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
     });
   };
 
+  const handleSyncAndReview = () => {
+    setMessage("");
+    setError("");
+    startTransition(async () => {
+      // 1. Sync from code
+      const formData = new FormData();
+      formData.set("questionId", question.id);
+      await appendIdToken(formData);
+      const syncResult = await importLocalQuestionAction(formData);
+      if (syncResult.error) {
+        setError(syncResult.error);
+        return;
+      }
+      
+      // 2. Mark report as reviewed
+      if (report) {
+        const token = await getFirebaseAuth().currentUser?.getIdToken(true);
+        const reportResult = await updateQuestionReportStatusAction(report.questionId, "reviewed", token ?? null);
+        if (reportResult.error) {
+          setError(reportResult.error);
+          return;
+        }
+      }
+
+      setMessage("Sincronizada y marcada como revisada.");
+      onSaved();
+      onClose();
+    });
+  };
+
   const handleSave = () => {
     if (!inFirestore) {
       setError("Importa la pregunta a Firestore antes de guardar.");
@@ -532,14 +562,28 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
               <RefreshCw className={cn("h-4 w-4", isPending && "animate-spin")} />
               Sincronizar
             </button>
-            <button
-              type="button"
-              onClick={handleSave}
-              disabled={isPending || !inFirestore}
-              className="flex-1 rounded-lg bg-mq-accent py-2.5 text-sm font-bold text-mq-accent-foreground disabled:opacity-50"
-            >
-              {isPending ? "Guardando..." : "Guardar revisión"}
-            </button>
+            {report && reportStatus !== "reviewed" && (
+              <button
+                type="button"
+                onClick={handleSyncAndReview}
+                disabled={isPending}
+                className="flex-1 rounded-lg bg-emerald-500 px-4 py-2.5 text-sm font-bold text-white hover:bg-emerald-600 disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20"
+                title="Sincroniza desde el código y marca como Revisada de inmediato"
+              >
+                <Check className={cn("h-4 w-4", isPending && "animate-pulse")} />
+                {isPending ? "Procesando..." : "Sincronizar y Revisada"}
+              </button>
+            )}
+            {(!report || reportStatus === "reviewed") && (
+              <button
+                type="button"
+                onClick={handleSave}
+                disabled={isPending || !inFirestore}
+                className="flex-1 rounded-lg bg-mq-accent py-2.5 text-sm font-bold text-mq-accent-foreground disabled:opacity-50"
+              >
+                {isPending ? "Guardando..." : "Guardar revisión"}
+              </button>
+            )}
             {inFirestore && (
               <>
                 <button
