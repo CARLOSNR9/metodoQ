@@ -192,41 +192,98 @@ function dedupeQuestionRecords(records: QuestionAdminRecord[]): QuestionAdminRec
   return Array.from(byLogicalId.values());
 }
 
-/** Lista unificada: Firestore + preguntas solo en código aún no subidas. */
-export async function adminListQuestionsForReview(): Promise<QuestionAdminRecord[]> {
-  const db = getFirebaseAdminDb();
-  const snap = await db.collection(COLLECTION).get();
-  const statementIndex = await buildStatementIndex();
-  const records: QuestionAdminRecord[] = snap.docs.map((doc) => {
-    const data = doc.data();
-    const logicalId = resolveLogicalId(doc.id, data, statementIndex);
-    return mapDocToAdminRecord(doc.id, data, logicalId);
-  });
+const CACHE_KEY_ALL_QUESTIONS = "__admin_questions_promise__";
 
+export function clearQuestionsCache() {
+  delete (global as any)[CACHE_KEY_ALL_QUESTIONS];
+}
+
+export async function adminListQuestionsForReview(): Promise<QuestionAdminRecord[]> {
+  if ((global as any)[CACHE_KEY_ALL_QUESTIONS]) {
+    return (global as any)[CACHE_KEY_ALL_QUESTIONS];
+  }
+
+  const fetchPromise = (async () => {
+    const db = getFirebaseAdminDb();
+    const snap = await db.collection(COLLECTION).get();
+    const statementIndex = await buildStatementIndex();
+    const records: QuestionAdminRecord[] = snap.docs.map((doc) => {
+      const data = doc.data();
+      const logicalId = resolveLogicalId(doc.id, data, statementIndex);
+      return mapDocToAdminRecord(doc.id, data, logicalId);
+    });
+
+    for (const local of await getAllRepositoryQuestions()) {
+      const inFirestore = [...snap.docs].some((doc) =>
+        firestoreMatchesLocal(doc.id, doc.data(), local.id),
+      );
+      if (!inFirestore) {
+        records.push(localToAdminRecord(local));
+      }
+    }
+
+    const deduped = dedupeQuestionRecords(records);
+
+    deduped.sort((a, b) => {
+      const statusOrder: Record<QuestionReviewStatus, number> = {
+        pending: 0,
+        needs_changes: 1,
+        rejected: 2,
+        approved: 3,
+      };
+      const sa = statusOrder[normalizeReviewStatus(a.reviewStatus)];
+      const sb = statusOrder[normalizeReviewStatus(b.reviewStatus)];
+      if (sa !== sb) return sa - sb;
+      return a.topic.localeCompare(b.topic, "es");
+    });
+
+    return deduped;
+  })();
+
+  (global as any)[CACHE_KEY_ALL_QUESTIONS] = fetchPromise;
+
+  // Limpiar caché automáticamente después de 1 minuto por si acaso
+  setTimeout(() => {
+    if ((global as any)[CACHE_KEY_ALL_QUESTIONS] === fetchPromise) {
+      delete (global as any)[CACHE_KEY_ALL_QUESTIONS];
+    }
+  }, 60000);
+
+  return fetchPromise;
+}
+
+export async function adminListSpecificQuestionsForReview(logicalIds: string[]): Promise<QuestionAdminRecord[]> {
+  if (logicalIds.length === 0) return [];
+  const db = getFirebaseAdminDb();
+  const statementIndex = await buildStatementIndex();
+  const records: QuestionAdminRecord[] = [];
+
+  const chunks = [];
+  for (let i = 0; i < logicalIds.length; i += 30) {
+    chunks.push(logicalIds.slice(i, i + 30));
+  }
+
+  // Fetch only the specific documents from Firestore to save reads
+  for (const chunk of chunks) {
+    const snap = await db.collection(COLLECTION).where("id", "in", chunk).get();
+    for (const doc of snap.docs) {
+      const data = doc.data();
+      const logicalId = resolveLogicalId(doc.id, data, statementIndex);
+      records.push(mapDocToAdminRecord(doc.id, data, logicalId));
+    }
+  }
+
+  // Merge with local questions
   for (const local of await getAllRepositoryQuestions()) {
-    const inFirestore = [...snap.docs].some((doc) =>
-      firestoreMatchesLocal(doc.id, doc.data(), local.id),
-    );
-    if (!inFirestore) {
-      records.push(localToAdminRecord(local));
+    if (logicalIds.includes(local.id)) {
+      const inFirestore = records.some((r) => firestoreMatchesLocal(r.firestoreId, r as any, local.id));
+      if (!inFirestore) {
+        records.push(localToAdminRecord(local));
+      }
     }
   }
 
   const deduped = dedupeQuestionRecords(records);
-
-  deduped.sort((a, b) => {
-    const statusOrder: Record<QuestionReviewStatus, number> = {
-      pending: 0,
-      needs_changes: 1,
-      rejected: 2,
-      approved: 3,
-    };
-    const sa = statusOrder[normalizeReviewStatus(a.reviewStatus)];
-    const sb = statusOrder[normalizeReviewStatus(b.reviewStatus)];
-    if (sa !== sb) return sa - sb;
-    return a.topic.localeCompare(b.topic, "es");
-  });
-
   return deduped;
 }
 

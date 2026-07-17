@@ -13,6 +13,7 @@ import {
   adminSeedFullQuestionBank,
   adminSetQuestionActive,
   adminUpdateQuestion,
+  clearQuestionsCache,
 } from "@/lib/server/questions-admin";
 import { verifyStaffCaller } from "@/lib/server/verify-staff";
 
@@ -26,6 +27,7 @@ const REVIEW_PATHS = [
 ] as const;
 
 function revalidateQuestionPaths() {
+  clearQuestionsCache();
   for (const path of REVIEW_PATHS) {
     revalidatePath(path);
   }
