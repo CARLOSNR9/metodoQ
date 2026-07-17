@@ -21,6 +21,7 @@ const REVIEW_PATHS = [
   "/profesor",
   "/profesor/preguntas",
   "/profesor/preguntas/nueva",
+  "/profesor/preguntas-reportadas",
   "/teoria",
 ] as const;
 
