@@ -8665,12 +8665,12 @@ Referencias
       { id: "D", label: "D", text: "Púrpura trombocitopénica inmune; Epstein-Barr virus." },
     ],
     correctOptionId: "B",
-    explanation: "El cuadro clínico de fiebre, rigidez de nuca (síndrome meníngeo) y, de forma súbita, la aparición de un exantema petequial o purpúrico, es la presentación patognomónica de la Meningococcemia (infección invasiva por Neisseria meningitidis), una verdadera urgencia médica.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Neumococo): El Streptococcus pneumoniae es la causa más frecuente de meningitis en niños y adultos, PERO típicamente NO cursa con un exantema petequial o purpúrico.\n• Opción C (Encefalitis por VHS-1): Cursa con fiebre, alteración del estado de conciencia y convulsiones o focalidad, pero sin exantema petequial.\n• Opción D (PTI): Cursa con petequias/equimosis y trombocitopenia aislada en niños sanos (frecuentemente tras infección viral), pero NO se asocia con fiebre alta aguda ni signos meníngeos (rigidez de nuca).",
+    explanation: "El cuadro clínico de fiebre, rigidez de nuca (síndrome meníngeo) y, de forma súbita, la aparición de un exantema petequial o purpúrico, es la presentación patognomónica de la Meningococcemia (infección invasiva por Neisseria meningitidis), una verdadera urgencia médica.\n\nEl antecedente de 'esquema de vacunación completo' es un distractor clásico. En muchos países, el esquema rutinario protege contra H. influenzae tipo B y Neumococo, pero la cobertura para Meningococo suele estar limitada a ciertos serogrupos (ej. C o ACWY), dejando al paciente susceptible a otros serogrupos frecuentes como el B (cuya vacuna suele ser opcional o no universal). Por tanto, estar vacunado NO descarta esta infección ante una clínica compatible.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Neumococo): El Streptococcus pneumoniae es la causa más frecuente de meningitis, PERO típicamente NO cursa con un exantema petequial o purpúrico.\n• Opción C (Encefalitis por VHS-1): Cursa con fiebre y alteración de conciencia/focalidad, pero sin exantema petequial.\n• Opción D (PTI): Cursa con petequias y trombocitopenia aislada en niños sanos (sin fiebre alta aguda ni signos meníngeos).",
     keyPoints: [
       "Cuando veas: Niño o adolescente con Fiebre + Signos meníngeos + Exantema petequial/purpúrico súbito.",
       "Debes pensar en: Meningococcemia invasiva (Neisseria meningitidis).",
+      "El 'esquema de vacunación completo' no descarta Meningococo (puede ser un serogrupo no cubierto, ej. serogrupo B).",
       "El inicio temprano de antibióticos empíricos (ej. Ceftriaxona) es vital; no debe retrasarse por estudios.",
-      "La enfermedad puede evolucionar rápidamente a choque séptico y síndrome de Waterhouse-Friderichsen (infarto suprarrenal).",
       "Tema: Meningococcemia y Meningitis bacteriana.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
