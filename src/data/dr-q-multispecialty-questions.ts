@@ -766,8 +766,7 @@ Referencias
       { id: "D", label: "D", text: "Hiperparatiroidismo primario." },
     ],
     correctOptionId: "D",
-    explanation:
-      "Hipercalcemia con PTH inapropiadamente normal (debería estar suprimida). Hiperparatiroidismo primario. Calcio urinario normal-alto descarta hipercalcemia hipocalciúrica familiar.",
+    explanation: "El diagnóstico más probable es hiperparatiroidismo primario. La paciente presenta hipercalcemia (calcio >10.5 mg/dL). Fisiológicamente, ante la hipercalcemia, la glándula paratiroides debería suprimirse (PTH <20 pg/mL). El hallazgo de una PTH de 60 pg/mL (dentro del rango de referencia del laboratorio, pero NO suprimida) en este contexto se denomina 'PTH inapropiadamente normal', lo cual indica una secreción autónoma de la glándula (hiperparatiroidismo primario).\n\n¿Por qué fallan las otras opciones?\n• Hipercalcemia hipocalciúrica familiar (A): También cursa con hipercalcemia y PTH normal, pero se distingue por una excreción urinaria de calcio muy baja (<100 mg/24h). La paciente tiene hipercalciuria relativa (287 mg/24h), lo que descarta esta opción.\n• Diuréticos tiazídicos (B): Generan hipercalcemia, pero la glándula paratiroides funcionaría bien y la PTH estaría suprimida.\n• Hiperparatiroidismo secundario (C): Es una respuesta compensatoria a la hipocalcemia (ej. por déficit de Vitamina D o falla renal). Se descarta porque la paciente tiene hipercalcemia y una función renal normal.",
     keyPoints: [
       "Cuando veas: hipercalcemia (Ca 11.4 mg/dL) + PTH en rango normal o elevada (no suprimida) + calcio urinario normal-alto.",
       "Debes pensar en: hiperparatiroidismo primario (PTH inapropiadamente normal o elevada ante hipercalcemia).",
@@ -2031,8 +2030,7 @@ Referencias
       { id: "D", label: "D", text: "Hemibloqueo anterior izquierdo." },
     ],
     correctOptionId: "C",
-    explanation:
-      "QRS ≥120 ms + patrón rSR' en V1 + S ancha en I y V6 = bloqueo completo de rama derecha (BCRD).",
+    explanation: "El electrocardiograma describe los tres criterios clásicos del bloqueo completo de rama derecha (BCRD):\n1. Ensanchamiento del QRS (≥0.12 segundos o 120 ms).\n2. Morfología en 'orejas de conejo' (patrón rSR') en la derivación precordial derecha V1.\n3. Retraso de la despolarización del ventrículo derecho que genera una onda S ancha y empastada en las derivaciones laterales (I, aVL, V5, V6).\n\n¿Por qué fallan las otras opciones?\n• Bloqueo incompleto de rama derecha (B): Presenta el mismo patrón morfológico (rSR' en V1), pero la duración del QRS es menor a 120 ms (típicamente 100-110 ms). En el caso clínico, el QRS es de 0.14 s (140 ms).\n• Bloqueo completo de rama izquierda (A): Se caracteriza por un QRS ≥120 ms pero con ondas R anchas y melladas en I, aVL, V5 y V6, y un patrón QS o rS en V1 (no rSR').\n• Hemibloqueo anterior izquierdo (D): Se manifiesta con una marcada desviación del eje eléctrico a la izquierda y morfología qR en I y aVL, sin causar un ensanchamiento significativo del QRS.",
     keyPoints: [
       "Cuando veas: QRS ≥120 ms con morfología rSR' en V1 y onda S ancha en derivaciones laterales (I, V5, V6).",
       "Debes pensar en: bloqueo completo de rama derecha (BCRD).",
