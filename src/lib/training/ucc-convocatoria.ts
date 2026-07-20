@@ -1,6 +1,7 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { UCC_CONV_2025_06_21_QUESTIONS } from "@/data/ucc-conv-2025-06-21-questions";
 import { UCC_CONV_2025_07_05_QUESTIONS } from "@/data/ucc-conv-2025-07-05-questions";
+import { UCC_CONV_2025_07_19_QUESTIONS } from "@/data/ucc-conv-2025-07-19-questions";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -54,6 +55,15 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     minutes: 180,
     stayOpenUntilNext: true,
     questions: UCC_CONV_2025_07_05_QUESTIONS,
+  },
+  {
+    code: "UCC-2025-07-19",
+    label: "Edición #3",
+    examDate: "2025-07-19",
+    questionCount: 100,
+    minutes: 180,
+    stayOpenUntilNext: true,
+    questions: UCC_CONV_2025_07_19_QUESTIONS,
   },
 ];
 
