@@ -97,16 +97,19 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     { DAILY_CHALLENGES },
     { UCC_CONV_2025_06_21_QUESTIONS },
     { UCC_CONV_2025_07_05_QUESTIONS },
+    { UCC_CONV_2025_07_19_QUESTIONS },
   ] = await Promise.all([
     import("@/data/daily-challenges"),
     import("@/data/ucc-conv-2025-06-21-questions"),
     import("@/data/ucc-conv-2025-07-05-questions"),
+    import("@/data/ucc-conv-2025-07-19-questions"),
   ]);
 
   const allQuestions = mergeQuestionsById([
     ...trainingSources,
     UCC_CONV_2025_06_21_QUESTIONS,
     UCC_CONV_2025_07_05_QUESTIONS,
+    UCC_CONV_2025_07_19_QUESTIONS,
     DAILY_CHALLENGES,
   ]);
   
