@@ -362,79 +362,59 @@ Referencias
     difficulty: "medium",
     tags: ["dr-q","universal","metodoq","univalle","udea","caldas","ucc_pasto","unimilitar","oftalmologia"],
     statement:
-      "Hombre de 25 años consulta al servicio de urgencias tras sufrir trauma contuso en el ojo izquierdo durante una riña callejera. Refiere visión borrosa posterior al evento. Al examen oftalmológico se evidencia hifema grado II. La presión intraocular se encuentra dentro de límites normales y no se identifican otras alteraciones oculares asociadas.\n¿Cuál es la conducta más adecuada?",
+      "Hombre de 25 años consulta al servicio de urgencias tras sufrir trauma contuso en el ojo izquierdo durante una riña callejera. Refiere visión borrosa posterior al evento. Al examen oftalmológico se evidencia hifema grado II. La presión intraocular se encuentra dentro de límites normales y no se identifican otras alteraciones oculares asociadas o antecedentes de riesgo.\n¿Cuál es la conducta más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Manejo ambulatorio con tratamiento tópico, analgésicos, reposo y control por oftalmología." },
-      { id: "B", label: "B", text: "Manejo intrahospitalario, realizar oclusión con parche, tratamiento tópico y antibiótico, analgésicos, reposo y observación." },
-      { id: "C", label: "C", text: "Realizar lavado quirúrgico urgente de cámara anterior." },
-      { id: "D", label: "D", text: "Traslado inmediato a quirófano." },
+      { id: "A", label: "A", text: "Manejo ambulatorio con protector ocular rígido, reposo con cabecera elevada a 30-45°, colirios tópicos (esteroide y ciclopléjico), analgésico (como acetaminofén) y seguimiento oftalmológico diario." },
+      { id: "B", label: "B", text: "Manejo intrahospitalario con oclusión mediante parche compresivo, reposo en decúbito prono, antibióticos profilácticos sistémicos y observación." },
+      { id: "C", label: "C", text: "Realizar lavado quirúrgico de cámara anterior de urgencia." },
+      { id: "D", label: "D", text: "Manejo ambulatorio con reposo, analgésicos tipo ácido acetilsalicílico (aspirina) y control por oftalmología en 2 semanas." },
     ],
-    correctOptionId: "B",
-    explanation: "El paciente presenta un hifema traumático grado II. Debido al riesgo de resangrado, aumento de la presión intraocular y otras complicaciones durante los primeros días posteriores al trauma, se recomienda observación hospitalaria, reposo, protección ocular y seguimiento estrecho por oftalmología.",
+    correctOptionId: "A",
+    explanation: "El paciente es un adulto joven cooperador con un hifema traumático grado II no complicado (presión intraocular normal, sin otros hallazgos ni factores de riesgo como anemia de células falciformes o trastornos de la coagulación). Según las guías de la Academia Americana de Oftalmología (AAO), estos pacientes pueden ser manejados de forma ambulatoria con reposo relativo, cabecera elevada (30-45°), protector ocular rígido (para evitar trauma accidental, evitando parches compresivos), analgésicos no plaquetarios (evitando AINEs/aspirina) y colirios de ciclopléjicos y esteroides, siempre garantizando un seguimiento diario y estrecho por oftalmología durante los primeros 5 días para vigilar la PIO y el riesgo de resangrado.",
     keyPoints: [
-      "Cuando veas: hifema traumático grado II tras trauma ocular contuso, con presión intraocular normal pero riesgo de resangrado y complicaciones en los primeros días.",
-      "Debes pensar en: hospitalización con reposo, protección ocular (parche), tratamiento tópico, analgésicos y observación estrecha por oftalmología.",
-      "El hifema grado II (1/3 a 1/2 de la cámara anterior) requiere manejo intrahospitalario aunque la PIO esté normal al ingreso.",
-      "El riesgo de resangrado y aumento de PIO es máximo durante los primeros 3-5 días post-trauma (rebleed).",
-      "Tema: Hifema traumático.",
+      "Cuando veas: hifema traumático grado I o II en un adulto cooperador, con presión intraocular (PIO) normal, sin hemoglobinopatías y con adecuada red de apoyo.",
+      "Debes pensar en: manejo ambulatorio con cabecera elevada, protector rígido (no parche), colirios (esteroide + ciclopléjico) y seguimiento diario por oftalmología.",
+      "El parche compresivo u oclusión completa está contraindicado porque impide evaluar la visión y puede aumentar la presión ocular.",
+      "Los antibióticos profilácticos no están indicados en hifema cerrado sin heridas penetrantes.",
+      "Los AINEs y la aspirina están contraindicados por el riesgo elevado de resangrado secundario.",
+      "Criterios de hospitalización: hifema grado III-IV (total), PIO elevada refractaria, anemia de células falciformes, mala adherencia o pacientes pediátricos.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta es una pregunta clásica de oftalmología porque evalúa una trampa frecuente: dar de alta al paciente con manejo ambulatorio solo porque la presión intraocular se encuentra normal al momento del examen.
+Esta pregunta evalúa los criterios de manejo del hifema traumático y desmitifica la hospitalización sistemática y el uso de parches compresivos o antibióticos en traumas cerrados.
 
-La clave no es el manejo ambulatorio ni el lavado quirúrgico urgente de cámara anterior.
-La clave es:
-Hifema traumático grado II → hospitalización + reposo + protección ocular + tratamiento tópico + observación estrecha.
+La clave del manejo actual se basa en discernir entre manejo ambulatorio y criterios de hospitalización:
+• Hifema Grado II (sangre que ocupa entre 1/3 y 1/2 de la cámara anterior).
+• Paciente de 25 años, cooperador, con PIO normal y sin otros factores de riesgo.
+→ El manejo de elección es AMBULATORIO con medidas de soporte y control diario.
 
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Hombre de 25 años con trauma contuso en ojo izquierdo (riña callejera).
-• Visión borrosa posterior al evento.
-• Hifema grado II (sangre ocupa entre 1/3 y 1/2 de la cámara anterior).
-• Presión intraocular dentro de límites normales al examen inicial.
-• Sin otras alteraciones oculares asociadas identificadas.
-• Cuadro de hifema traumático moderado con riesgo de complicaciones en días siguientes.
-
-Recordemos el hifema traumático:
-• Clasificación por grado: I (<1/3), II (1/3-1/2), III (>1/2), IV (total/"bola ocho").
-• Complicaciones: resangrado (rebleed, pico días 3-5), hipertensión ocular, tinción hemática corneal, glaucoma secundario.
-• Manejo grado I-II sin complicaciones: hospitalización, reposo en cama, elevación de cabecera, protección ocular (parche/escudo), cicloplejía, esteroides tópicos, analgésicos; evitar AAS/AINEs.
-• PIO normal al ingreso no excluye aumento posterior; requiere monitorización seriada.
-• Lavado quirúrgico: reservado para hifema total, PIO refractaria, tinción corneal o rebleed masivo.
-
-Por lo tanto:
-No corresponde manejo ambulatorio ni lavado quirúrgico urgente.
-La conducta más adecuada es manejo intrahospitalario con oclusión, tratamiento tópico, analgésicos, reposo y observación.
-
-¿Por qué la opción B es la respuesta correcta?
-El hifema grado II conlleva riesgo significativo de resangrado, aumento de PIO y otras complicaciones durante los primeros días; se recomienda observación hospitalaria, reposo, protección ocular y seguimiento estrecho por oftalmología.
+¿En qué consiste el manejo médico estándar (Opción A)?
+1. Elevación de la cabecera (30 a 45 grados): Favorece la sedimentación de la sangre en la cámara anterior por gravedad, lo que acelera el aclaramiento visual, previene la obstrucción de la malla trabecular y facilita la evaluación del segmento anterior.
+2. Protector ocular rígido (Shield): Protege el globo ocular de frotamientos accidentales durante el sueño o actividades diarias. ¡Ojo! No se debe usar parche compresivo (occlusión completa), ya que impide vigilar la agudeza visual y la respuesta pupilar, y puede generar presión indeseada sobre el ojo.
+3. Tratamiento tópico farmacológico:
+   • Corticosteroides tópicos: Disminuyen la inflamación iridociliar asociada y reducen la incidencia de resangrados.
+   • Ciclopléjicos (ej. atropina o ciclopentolato): Inmovilizan el esfínter del iris y el músculo ciliar, aliviando el dolor por espasmo y previniendo la formación de sinequias.
+4. Analgésicos selectivos: Se prefiere el acetaminofén. Los AINEs (como ibuprofeno o naproxeno) y el ácido acetilsalicílico (aspirina) están terminantemente contraindicados por su efecto antiagregante plaquetario, el cual incrementa sustancialmente el riesgo de un resangrado secundario (cuyo pico de incidencia ocurre del día 2 al 5).
+5. Seguimiento diario: Es crucial evaluar al paciente todos los días durante la primera semana para monitorizar la PIO y detectar de forma temprana el resangrado o la tinción corneal por sangre.
 
 ¿Por qué fallan las otras opciones?
-Opción A (manejo ambulatorio): insuficiente para hifema grado II; el riesgo de rebleed y complicaciones requiere vigilancia hospitalaria.
-Opción C (lavado quirúrgico urgente): indicado en hifema total, PIO refractaria o complicaciones severas; no en hifema grado II sin complicaciones iniciales.
-Opción D (traslado inmediato a quirófano): no hay indicación quirúrgica urgente; el manejo inicial es conservador con observación hospitalaria.
+• Opción B es INCORRECTA y peligrosa: El hifema cerrado no requiere hospitalización obligatoria si el paciente es cooperador y tiene PIO normal. La oclusión con parche compresivo está contraindicada por ocultar el estado visual y presionar el globo. La posición de decúbito prono aumentaría la congestión venosa y dificultaría la decantación. Además, no existe indicación alguna de antibióticos profilácticos ya que es un trauma cerrado sin pérdida de la integridad del globo ocular.
+• Opción C es INCORRECTA: El lavado quirúrgico no es la conducta inicial. Se reserva como medida de rescate ante hipertensión ocular refractaria al tratamiento médico, sospecha de tinción hemática de la córnea o hifema total persistente.
+• Opción D es INCORRECTA: El ácido acetilsalicílico está contraindicado por alterar la coagulación y predisponer al resangrado. Además, citar a control en 2 semanas es negligente, pues el periodo crítico de resangrado ocurre entre los días 2 y 5 post-trauma, requiriendo vigilancia diaria.
 
-¿Cuál es la trampa del examen?
-Muchos estudiantes piensan:
-"La presión intraocular está normal, puede irse a casa con gotas."
-Pero el examen exige reconocer que el hifema grado II requiere hospitalización por riesgo de resangrado y complicaciones tardías.
-El dato decisivo es:
-Hifema grado II + trauma reciente → hospitalización y observación, independientemente de PIO normal inicial.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Clasificar el grado de hifema traumático (I-IV).
-2. Evaluar PIO, extensión del sangrado y complicaciones asociadas.
-3. Hifema grado II → hospitalización, reposo, protección ocular, tratamiento tópico y analgésicos.
-4. Monitorizar PIO seriadamente; considerar cirugía solo ante hifema total, PIO refractaria o rebleed masivo.
+¿Cuáles son los criterios verdaderos de hospitalización?
+• Pacientes pediátricos o con sospecha de maltrato.
+• Pacientes no cooperadores o con barreras sociales/geográficas que impidan el control diario.
+• Coexistencia de hemoglobinopatías (ej. anemia de células falciformes), donde incluso una PIO discretamente elevada puede causar isquemia del nervio óptico y atrofia.
+• Presión intraocular persistentemente elevada (>22 mmHg) a pesar de tratamiento hipotensor máximo.
+• Hifema severo (Grado III o IV / hifema total o en "bola de billar de ocho").
 
 Perlas de examen
-✅ Hifema grado II → hospitalización, no manejo ambulatorio.
-✅ PIO normal al ingreso no descarta hipertensión ocular posterior.
-✅ Rebleed: máximo riesgo días 3-5 post-trauma; reposo y protección ocular son clave.
-✅ Evitar AAS y AINEs por riesgo de resangrado.
-✅ Lavado quirúrgico: hifema total ("bola ocho") o PIO refractaria, no grado II inicial.
-✅ No confundir hifema moderado (grado II) con hifema total que requiere cirugía urgente.
+✅ El hifema no complicado (Grado I-II) se maneja de forma AMBULATORIA.
+✅ Usa siempre PROTECTOR ocular rígido, NUNCA parche compresivo oclusivo.
+✅ Está prohibida la ASPIRINA y los AINEs; el analgésico de elección es el acetaminofén.
+✅ El riesgo máximo de resangrado ocurre entre el 2.º y 5.º día posterior al trauma.
+✅ Pacientes con anemia de células falciformes (sickling) e hifema tienen un riesgo altísimo de daño del nervio óptico y requieren un control de la PIO extremadamente estricto.
 
 Referencias
 • American Academy of Ophthalmology Preferred Practice Pattern — Traumatic Hyphema.
