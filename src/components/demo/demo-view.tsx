@@ -91,6 +91,7 @@ import {
   getConvocatoriaEdition,
   saveConvocatoriaAttempt,
   selectConvocatoriaExamQuestions,
+  getUserConvocatoriaSchedule,
 } from "@/lib/training/ucc-convocatoria";
 import {
   getWrongQuestionIds,
@@ -354,9 +355,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       }
       if (user) {
         const attempt = await getConvocatoriaAttempt(user.uid, convocatoriaEdition.code);
+        const schedule = getUserConvocatoriaSchedule(userTrackProfile?.planStartedAt);
         const status = buildConvocatoriaEditionStatus({
           edition: convocatoriaEdition,
           attempt,
+          schedule,
         });
         if (!status.canStart) {
           setUsageBlockReason(
