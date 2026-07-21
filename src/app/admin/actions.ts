@@ -117,6 +117,7 @@ export async function createUserAction(formData: FormData) {
       achievements: [],
       onboardingCompleted: Boolean(goalUniversity),
       emailOptIn: true,
+      requiresPasswordChange: true,
       ...(goalUniversity ? { goalUniversity } : {}),
       ...(resolvedSpecialty ? { goalSpecialty: resolvedSpecialty } : {}),
     };

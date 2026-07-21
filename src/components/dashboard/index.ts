@@ -20,6 +20,7 @@ export { MotivationalReminder } from "./motivational-reminder";
 export { SubscriptionExpirationAlert } from "./subscription-expiration-alert";
 export { StreakReminderBanner } from "./streak-reminder-banner";
 export { OnboardingModal } from "./onboarding-modal";
+export { ForcePasswordChangeModal } from "./force-password-change-modal";
 export { FreeDashboardView } from "./free-dashboard-view";
 export { Act1DiagnosticModal } from "./act1-diagnostic-modal";
 export { DashboardPricingView } from "./dashboard-pricing-view";

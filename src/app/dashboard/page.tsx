@@ -2,6 +2,7 @@
 
 import {
   OnboardingModal,
+  ForcePasswordChangeModal,
   FreeDashboardView,
   ProDashboardView,
   SubscriptionExpirationAlert,
@@ -76,7 +77,11 @@ export default function DashboardPage() {
 
   return (
     <>
-      <OnboardingModal userId={user.uid} />
+      <ForcePasswordChangeModal 
+        userId={user.uid} 
+        isOpen={Boolean(profile?.requiresPasswordChange)} 
+      />
+      {!profile?.requiresPasswordChange && <OnboardingModal userId={user.uid} />}
 
       <div className="mb-6 space-y-3">
         <SubscriptionExpirationAlert />

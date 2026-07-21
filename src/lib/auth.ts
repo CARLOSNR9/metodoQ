@@ -56,6 +56,7 @@ export interface UserDocument {
   lastActiveAt: ReturnType<typeof serverTimestamp> | null;
   achievements: string[];
   onboardingCompleted?: boolean;
+  requiresPasswordChange?: boolean;
   goalUniversity?: string;
   goalSpecialty?: string;
   attemptedExam?: boolean;

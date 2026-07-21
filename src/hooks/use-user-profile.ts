@@ -20,6 +20,7 @@ export interface UserProfile {
   attemptedExam?: boolean;
   usedCourses?: boolean;
   onboardingCompleted?: boolean;
+  requiresPasswordChange?: boolean;
   plan?: string;
   planStartedAt?: string | null;
   planExpiresAt?: string | null;
