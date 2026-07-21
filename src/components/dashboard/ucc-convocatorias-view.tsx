@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import {
   buildConvocatoriaEditionStatus,
   buildConvocatoriaExamHref,
+  getUserConvocatoriaSchedule,
   resolveConvocatoriaAttempt,
   UCC_CONVOCATORIA_EDITIONS,
   type UccConvocatoriaEditionStatus,
@@ -15,9 +16,10 @@ import { ConvocatoriaRepasoPanel } from "@/components/dashboard/convocatoria-rep
 
 type UccConvocatoriasViewProps = {
   userId: string;
+  planStartedAt?: string | null;
 };
 
-export function UccConvocatoriasView({ userId }: UccConvocatoriasViewProps) {
+export function UccConvocatoriasView({ userId, planStartedAt }: UccConvocatoriasViewProps) {
   const [statuses, setStatuses] = useState<UccConvocatoriaEditionStatus[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,10 +29,11 @@ export function UccConvocatoriasView({ userId }: UccConvocatoriasViewProps) {
     async function load() {
       setIsLoading(true);
       try {
+        const schedule = getUserConvocatoriaSchedule(planStartedAt);
         const nextStatuses = await Promise.all(
-          UCC_CONVOCATORIA_EDITIONS.map(async (edition) => {
+          schedule.map(async (edition) => {
             const attempt = await resolveConvocatoriaAttempt(userId, edition.code);
-            return buildConvocatoriaEditionStatus({ edition, attempt });
+            return buildConvocatoriaEditionStatus({ edition, attempt, schedule });
           }),
         );
         if (mounted) setStatuses(nextStatuses);

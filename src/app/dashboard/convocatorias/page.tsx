@@ -39,5 +39,5 @@ export default function ConvocatoriasPage() {
 
   if (!user) return null;
 
-  return <UccConvocatoriasView userId={user.uid} />;
+  return <UccConvocatoriasView userId={user.uid} planStartedAt={profile?.planStartedAt} />;
 }
