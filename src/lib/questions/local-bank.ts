@@ -37,6 +37,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     { UNAL_DIAGNOSTIC_QUESTIONS },
     { UCC_PASTO_DIAGNOSTIC_QUESTIONS },
     { UCC_PASTO_PRO_QUESTIONS },
+    { UMNG_DIAGNOSTIC_QUESTIONS },
   ] = await Promise.all([
     import("@/data/fallback-questions"),
     import("@/data/extended-questions"),
@@ -54,6 +55,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     import("@/data/unal-diagnostico-questions"),
     import("@/data/ucc-pasto-diagnostico-questions"),
     import("@/data/ucc-pasto-pro-questions"),
+    import("@/data/umng-diagnostico-questions"),
   ]);
 
   return [
@@ -73,6 +75,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     UNAL_DIAGNOSTIC_QUESTIONS,
     UCC_PASTO_DIAGNOSTIC_QUESTIONS,
     UCC_PASTO_PRO_QUESTIONS,
+    UMNG_DIAGNOSTIC_QUESTIONS,
   ];
 }
 

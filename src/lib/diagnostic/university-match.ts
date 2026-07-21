@@ -24,9 +24,19 @@ export function isUccPastoUniversity(university: string | null | undefined): boo
   );
 }
 
+export function isUmngUniversity(university: string | null | undefined): boolean {
+  const n = normalize(university);
+  return n.includes("militar") || n.includes("nueva granada") || n.includes("umng");
+}
+
 export function isMedicinaInternaSpecialty(specialty: string | null | undefined): boolean {
   const n = normalize(specialty);
   return n.includes("medicina interna");
+}
+
+export function isCirugiaPlasticaSpecialty(specialty: string | null | undefined): boolean {
+  const n = normalize(specialty);
+  return n.includes("cirugia plastica") || n.includes("cirugía plástica");
 }
 
 export function supportsDedicatedDiagnosticBattery(
@@ -38,11 +48,15 @@ export function supportsDedicatedDiagnosticBattery(
       ? specialty
       : isUccPastoUniversity(university)
         ? "Medicina Interna"
-        : specialty;
+        : isUmngUniversity(university)
+          ? "Cirugía Plástica"
+          : specialty;
+  
   return (
-    isMedicinaInternaSpecialty(effectiveSpecialty) &&
-    (isUdeaUniversity(university) ||
-      isUnalUniversity(university) ||
-      isUccPastoUniversity(university))
+    (isMedicinaInternaSpecialty(effectiveSpecialty) &&
+      (isUdeaUniversity(university) ||
+        isUnalUniversity(university) ||
+        isUccPastoUniversity(university))) ||
+    (isCirugiaPlasticaSpecialty(effectiveSpecialty) && isUmngUniversity(university))
   );
 }

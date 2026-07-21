@@ -2,6 +2,7 @@ const ACT1_UNIVERSITIES = [
   "Universidad Nacional de Colombia (UNAL)",
   "Universidad de Antioquia (UdeA)",
   "Universidad Cooperativa (Pasto)",
+  "Universidad Militar Nueva Granada (UMNG)",
   "Pontificia Universidad Javeriana",
   "Universidad del Rosario",
   "Universidad de los Andes",
@@ -63,6 +64,9 @@ export function resolveUniversityFromProfile(
   }
   if (n.includes("nacional") || n.includes("unal")) {
     return "Universidad Nacional de Colombia (UNAL)";
+  }
+  if (n.includes("militar") || n.includes("nueva granada") || n.includes("umng")) {
+    return "Universidad Militar Nueva Granada (UMNG)";
   }
   if (n.includes("javeriana")) {
     return "Pontificia Universidad Javeriana";

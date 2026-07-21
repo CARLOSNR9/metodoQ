@@ -23,9 +23,13 @@ import {
   hasCalibratedLearningTrack,
 } from "@/lib/diagnostic/ucc-pasto-track";
 import {
+  getEffectiveGoalSpecialtyUMNG,
+} from "@/lib/diagnostic/umng-track";
+import {
   isUccPastoUniversity,
   isUdeaUniversity,
   isUnalUniversity,
+  isUmngUniversity,
 } from "@/lib/diagnostic/university-match";
 
 interface Act1DiagnosticModalProps {
@@ -47,10 +51,10 @@ const specialties = [
   { name: "Radiología e Imágenes Diagnósticas", regularSpots: 5, totalSpots: 6 },
   { name: "Medicina del Deporte", regularSpots: 5, totalSpots: 6 },
   { name: "Neurología Clínica", regularSpots: 3, totalSpots: 4 },
-  { name: "Cirugía Plástica", regularSpots: 3, totalSpots: 4 },
   { name: "Otorrinolaringología", regularSpots: 3, totalSpots: 4 },
   { name: "Dermatología", regularSpots: 2, totalSpots: 3 },
   { name: "Urología", regularSpots: 2, totalSpots: 3 },
+  { name: "Cirugía Plástica", regularSpots: 2, totalSpots: 2 },
   { name: "Oftalmología", regularSpots: 1, totalSpots: 2 },
   { name: "Neurocirugía", regularSpots: 1, totalSpots: 2 },
 ];
@@ -59,6 +63,7 @@ const universities = [
   "Universidad Nacional de Colombia (UNAL)",
   "Universidad de Antioquia (UdeA)",
   "Universidad Cooperativa (Pasto)",
+  "Universidad Militar Nueva Granada (UMNG)",
   "Pontificia Universidad Javeriana",
   "Universidad del Rosario",
   "Universidad de los Andes",
@@ -73,7 +78,12 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
   const router = useRouter();
   const profileUniversity = user?.goalUniversity as string | undefined;
   const profileSpecialty = user?.goalSpecialty as string | undefined;
-  const effectiveSpecialty = getEffectiveGoalSpecialty(profileUniversity, profileSpecialty);
+  
+  // Resolvemos especialidad efectiva dependiendo de si es UMNG o UCC
+  const effectiveSpecialty = isUmngUniversity(resolveUniversityFromProfile(profileUniversity))
+    ? getEffectiveGoalSpecialtyUMNG(profileUniversity, profileSpecialty)
+    : getEffectiveGoalSpecialty(profileUniversity, profileSpecialty);
+    
   const skipConfigStep = hasCalibratedLearningTrack(profileUniversity, profileSpecialty);
 
   const [step, setStep] = useState<Step>(skipConfigStep ? "anxiety" : "config");
@@ -92,7 +102,10 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
     }
 
     const university = resolveUniversityFromProfile(profileUniversity);
-    const specialtyName = getEffectiveGoalSpecialty(profileUniversity, profileSpecialty);
+    const specialtyName = isUmngUniversity(university)
+      ? getEffectiveGoalSpecialtyUMNG(profileUniversity, profileSpecialty)
+      : getEffectiveGoalSpecialty(profileUniversity, profileSpecialty);
+      
     setSelectedUniversity(university);
     setSelectedSpecialty(findSpecialtyByName(specialtyName));
     setStep(hasCalibratedLearningTrack(profileUniversity, profileSpecialty) ? "anxiety" : "config");
@@ -104,25 +117,37 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
       ? "UNAL"
       : isUccPastoUniversity(selectedUniversity)
         ? "UCC Pasto"
-        : "tu universidad";
+        : isUmngUniversity(selectedUniversity)
+          ? "UMNG"
+          : "tu universidad";
+
   const loadingSteps = isUccPastoUniversity(selectedUniversity)
     ? [
         "Cargando viñetas estilo MIR — UCC Pasto",
         "Ponderando epidemiología (30%) y Res. 3280",
         "Calibrando tu hoja de ruta Medicina Interna",
       ]
-    : [
-        `Cargando casos clínicos ${universityShortLabel}`,
-        "Calibrando batería Medicina Interna",
-        "Ajustando retroalimentación por distractores",
-      ];
+    : isUmngUniversity(selectedUniversity)
+      ? [
+          "Calibrando módulo de Ciencias Básicas y Trauma",
+          "Inyectando quinta opción de respuesta penalizante",
+          "Ajustando presión temporal extrema (1.2 min/preg)",
+        ]
+      : [
+          `Cargando casos clínicos ${universityShortLabel}`,
+          `Calibrando batería ${selectedSpecialty.name}`,
+          "Ajustando retroalimentación por distractores",
+        ];
+
   const readyQuote = isUdeaUniversity(selectedUniversity)
     ? "Doc, en la UdeA el examen unificado exige integración clínica y dominio de guías MSPS/INS. Estas 10 preguntas definirán tu hoja de ruta."
     : isUnalUniversity(selectedUniversity)
       ? "Doc, en la UNAL no gana quien más sabe, sino quien mejor aplica bajo presión. Este diagnóstico de 10 preguntas definirá tu hoja de ruta."
       : isUccPastoUniversity(selectedUniversity)
         ? "Doc, en la UCC Pasto el 30% del examen es epidemiología y otro 10% es Res. 3280. Estas 10 preguntas calibran exactamente esa estructura — estilo MIR, saber y descartar."
-        : "Doc, este diagnóstico de 10 preguntas calibrará tu preparación para la especialidad elegida.";
+        : isUmngUniversity(selectedUniversity)
+          ? "Doc, en el HMC y la UMNG, el examen es de resistencia. La excelencia clínica debe ir de la mano con la resiliencia psicológica. Prepárate para el rigor."
+          : "Doc, este diagnóstico de 10 preguntas calibrará tu preparación para la especialidad elegida.";
 
   if (!isOpen) return null;
 

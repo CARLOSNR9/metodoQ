@@ -37,6 +37,22 @@ const DEMO_STUDENT_PATCHES: Record<string, Partial<UserProfile>> = {
     goalUniversity: "Universidad Cooperativa (Pasto)",
     goalSpecialty: "Medicina Interna",
   },
+  "andrea@gmail.com": {
+    displayName: "Andrea Zapata",
+    gender: "female",
+    plan: "PRO",
+    planBillingCycle: 6,
+    goalUniversity: "Universidad Militar Nueva Granada (UMNG)",
+    goalSpecialty: "Cirugía Plástica",
+    manualSale: {
+      negotiatedPriceCOP: 1_000_000,
+      listPriceCOP: 1_600_000,
+      negotiatorName: "Demo",
+      notes: "Demo profile para UMNG",
+      recordedAt: new Date().toISOString(),
+      recordedByUid: "demo",
+    },
+  },
   [ELIZABETH_EMAIL]: {
     displayName: "Elizabeth",
     gender: "female",
