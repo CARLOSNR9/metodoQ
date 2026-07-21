@@ -3,14 +3,14 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useOnboarding, OnboardingData } from "@/hooks/use-onboarding";
-import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
+import { isUccPastoUniversity, isUmngUniversity } from "@/lib/diagnostic/university-match";
 import Image from "next/image";
 
 interface OnboardingModalProps {
   userId: string | undefined;
 }
 
-type Step = "welcome" | "university" | "experience" | "courses" | "transition";
+type Step = "welcome" | "university" | "specialty" | "experience" | "courses" | "transition";
 
 const universities = [
   "Universidad de Antioquia (UdeA)",
@@ -34,6 +34,16 @@ const universities = [
   "Universidad del Sinú (Unisinu)",
   "Universidad del Norte (Uninorte)",
   "Universidad Cooperativa (Pasto)",
+  "Otra",
+];
+
+const specialties = [
+  "Medicina Interna",
+  "Pediatría",
+  "Anestesiología y Reanimación",
+  "Obstetricia y Ginecología",
+  "Cirugía General",
+  "Cirugía Plástica",
   "Otra",
 ];
 
@@ -166,8 +176,13 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                           const patch: Partial<OnboardingData> = { goalUniversity: uni };
                           if (isUccPastoUniversity(uni)) {
                             patch.goalSpecialty = "Medicina Interna";
+                            handleNext("experience", patch);
+                          } else if (isUmngUniversity(uni)) {
+                            patch.goalSpecialty = "Cirugía Plástica";
+                            handleNext("experience", patch);
+                          } else {
+                            handleNext("specialty", patch);
                           }
-                          handleNext("experience", patch);
                         }}
                         className="p-4 text-sm font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95 disabled:opacity-50"
                       >
@@ -175,6 +190,34 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                       </button>
                     ))}
                   </div>
+                </div>
+              </motion.div>
+            )}
+
+            {step === "specialty" && (
+              <motion.div
+                key="specialty"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+              >
+                <h3 className="mb-2 text-xl font-bold text-white">
+                  ¿Qué especialidad buscas?
+                </h3>
+                <p className="mb-6 text-sm text-mq-muted">
+                  Selecciona la especialidad para personalizar tu experiencia.
+                </p>
+
+                <div className="grid max-h-[340px] grid-cols-1 gap-3 pr-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-white/10">
+                  {specialties.map((spec) => (
+                    <button
+                      key={spec}
+                      onClick={() => handleNext("experience", { goalSpecialty: spec })}
+                      className="p-4 text-sm font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
+                    >
+                      {spec}
+                    </button>
+                  ))}
                 </div>
               </motion.div>
             )}

@@ -9,7 +9,7 @@ import {
 } from "@/lib/plans/manual-sale";
 import { canAssignRole, verifyStaffCaller } from "@/lib/server/verify-staff";
 import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
-import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
+import { isUccPastoUniversity, isUmngUniversity } from "@/lib/diagnostic/university-match";
 import { normalizeUserRole, roleUsesStudentSubscription } from "@/lib/roles";
 import type { BillingCycle } from "@/lib/plans/config";
 
@@ -41,7 +41,8 @@ export async function createUserAction(formData: FormData) {
     : "";
   const resolvedSpecialty =
     goalSpecialty ||
-    (goalUniversity && isUccPastoUniversity(goalUniversity) ? "Medicina Interna" : "");
+    (goalUniversity && isUccPastoUniversity(goalUniversity) ? "Medicina Interna" : "") ||
+    (goalUniversity && isUmngUniversity(goalUniversity) ? "Cirugía Plástica" : "");
 
   if (!email || !password || !displayName) {
     return { error: "Faltan campos obligatorios." };

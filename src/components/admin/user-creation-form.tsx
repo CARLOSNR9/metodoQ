@@ -45,6 +45,7 @@ const GOAL_SPECIALTY_OPTIONS = [
   { value: "Anestesiología y Reanimación", label: "Anestesiología y Reanimación" },
   { value: "Obstetricia y Ginecología", label: "Obstetricia y Ginecología" },
   { value: "Cirugía General", label: "Cirugía General" },
+  { value: "Cirugía Plástica", label: "Cirugía Plástica" },
 ];
 
 export function AdminUserForm() {
