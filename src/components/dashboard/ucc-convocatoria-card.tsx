@@ -22,9 +22,10 @@ import {
 type UccConvocatoriaCardProps = {
   userId: string;
   planStartedAt?: string | null;
+  trackName?: string;
 };
 
-export function UccConvocatoriaCard({ userId, planStartedAt }: UccConvocatoriaCardProps) {
+export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }: UccConvocatoriaCardProps) {
   const [status, setStatus] = useState<UccConvocatoriaEditionStatus | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -45,7 +46,7 @@ export function UccConvocatoriaCard({ userId, planStartedAt }: UccConvocatoriaCa
         const schedule = getUserConvocatoriaSchedule(planStartedAt);
         setStatus(buildConvocatoriaEditionStatus({ edition: featured, attempt, schedule }));
       } catch (error) {
-        console.error("No se pudo cargar la convocatoria UCC.", error);
+        console.error("No se pudo cargar la convocatoria.", error);
         if (mounted) setStatus(null);
       } finally {
         if (mounted) setIsLoading(false);
@@ -72,6 +73,7 @@ export function UccConvocatoriaCard({ userId, planStartedAt }: UccConvocatoriaCa
   const { edition, attempt, canStart, phase } = status;
   const completed = Boolean(attempt);
   const examHref = buildConvocatoriaExamHref(edition.code);
+  const displayCode = trackName !== "UCC" ? edition.code.replace("UCC", trackName) : edition.code;
 
   return (
     <motion.section
@@ -111,7 +113,7 @@ export function UccConvocatoriaCard({ userId, planStartedAt }: UccConvocatoriaCa
 
           <div>
             <h2 className="text-2xl font-black text-white sm:text-3xl">
-              Convocatoria UCC · {edition.label}
+              Convocatoria {trackName} · {edition.label}
             </h2>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-mq-muted sm:text-base">
               Simulacro tipo admisión: banco exclusivo de esta edición, cronómetro de 3 horas

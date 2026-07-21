@@ -17,9 +17,10 @@ import { ConvocatoriaRepasoPanel } from "@/components/dashboard/convocatoria-rep
 type UccConvocatoriasViewProps = {
   userId: string;
   planStartedAt?: string | null;
+  trackName?: string;
 };
 
-export function UccConvocatoriasView({ userId, planStartedAt }: UccConvocatoriasViewProps) {
+export function UccConvocatoriasView({ userId, planStartedAt, trackName = "UCC" }: UccConvocatoriasViewProps) {
   const [statuses, setStatuses] = useState<UccConvocatoriaEditionStatus[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -64,7 +65,7 @@ export function UccConvocatoriasView({ userId, planStartedAt }: UccConvocatorias
           Exámenes oficiales
         </p>
         <h1 className="text-3xl font-black tracking-tight text-white sm:text-4xl">
-          Convocatorias UCC
+          Convocatorias {trackName}
         </h1>
         <p className="max-w-2xl text-sm leading-relaxed text-mq-muted sm:text-base">
           Simulacros quincenales exclusivos para plan PRO: 100 preguntas, 3 horas,
@@ -74,14 +75,14 @@ export function UccConvocatoriasView({ userId, planStartedAt }: UccConvocatorias
 
       <div className="grid gap-5">
         {statuses.map((status) => (
-          <EditionCard key={status.edition.code} status={status} />
+          <EditionCard key={status.edition.code} status={status} trackName={trackName} />
         ))}
       </div>
     </div>
   );
 }
 
-function EditionCard({ status }: { status: UccConvocatoriaEditionStatus }) {
+function EditionCard({ status, trackName = "UCC" }: { status: UccConvocatoriaEditionStatus; trackName?: string }) {
   const { edition, phase, attempt, canStart } = status;
   const href = buildConvocatoriaExamHref(edition.code);
   const completed = Boolean(attempt);
@@ -102,6 +103,8 @@ function EditionCard({ status }: { status: UccConvocatoriaEditionStatus }) {
         ? "border-amber-500/30 bg-amber-500/10 text-amber-200"
         : "border-white/10 bg-white/[0.03] text-mq-muted";
 
+  const displayCode = trackName !== "UCC" ? edition.code.replace("UCC", trackName) : edition.code;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 12 }}
@@ -121,7 +124,7 @@ function EditionCard({ status }: { status: UccConvocatoriaEditionStatus }) {
               {phaseLabel}
             </span>
             <span className="text-xs font-semibold uppercase tracking-widest text-mq-muted">
-              {edition.code}
+              {displayCode}
             </span>
           </div>
 

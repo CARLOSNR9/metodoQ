@@ -292,7 +292,7 @@ export function ProDashboardView({
 
       {showLiveClasses && user?.uid && !isUmngUniversity(profile?.goalUniversity) ? (
         <>
-          <UccConvocatoriaCard userId={user.uid} planStartedAt={profile?.planStartedAt} />
+          <UccConvocatoriaCard userId={user.uid} planStartedAt={profile?.planStartedAt} trackName={isUmngUniversity(profile?.goalUniversity) ? "UMNG" : "UCC"} />
           <ConvocatoriaRepasoSummaryCard userId={user.uid} planStartedAt={profile?.planStartedAt} />
         </>
       ) : null}
