@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useOnboarding, OnboardingData } from "@/hooks/use-onboarding";
-import { isUccPastoUniversity, isUmngUniversity } from "@/lib/diagnostic/university-match";
+import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
 import Image from "next/image";
 
 interface OnboardingModalProps {
@@ -176,9 +176,6 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                           const patch: Partial<OnboardingData> = { goalUniversity: uni };
                           if (isUccPastoUniversity(uni)) {
                             patch.goalSpecialty = "Medicina Interna";
-                            handleNext("experience", patch);
-                          } else if (isUmngUniversity(uni)) {
-                            patch.goalSpecialty = "Cirugía Plástica";
                             handleNext("experience", patch);
                           } else {
                             handleNext("specialty", patch);

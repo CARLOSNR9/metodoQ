@@ -23,13 +23,7 @@ export function getEffectiveGoalSpecialtyUMNG(
   goalUniversity?: string | null,
   goalSpecialty?: string | null,
 ): string {
-  if (goalSpecialty) {
-    return resolveSpecialtyFromProfile(goalSpecialty);
-  }
-  if (isUmngUniversity(goalUniversity)) {
-    return "Cirugía Plástica";
-  }
-  return resolveSpecialtyFromProfile(goalSpecialty);
+  return goalSpecialty ? resolveSpecialtyFromProfile(goalSpecialty) : "";
 }
 
 /** Usuario en la ruta UMNG · Cirugía Plástica (cualquier plan). */

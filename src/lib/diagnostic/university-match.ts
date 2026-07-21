@@ -48,9 +48,7 @@ export function supportsDedicatedDiagnosticBattery(
       ? specialty
       : isUccPastoUniversity(university)
         ? "Medicina Interna"
-        : isUmngUniversity(university)
-          ? "Cirugía Plástica"
-          : specialty;
+        : specialty;
   
   return (
     (isMedicinaInternaSpecialty(effectiveSpecialty) &&
