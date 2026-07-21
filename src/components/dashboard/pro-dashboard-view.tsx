@@ -37,6 +37,7 @@ import {
   getEffectiveGoalSpecialty,
   isUccPastoMedicinaInternaProUser,
 } from "@/lib/diagnostic/ucc-pasto-track";
+import { isUmngUniversity } from "@/lib/diagnostic/university-match";
 import { UccPastoInsightCard } from "./ucc-pasto-insight-card";
 import { UccDailyMissionCard } from "./ucc-daily-mission-card";
 import { UccPercentileTrackerCard } from "./ucc-percentile-tracker-card";
@@ -289,9 +290,9 @@ export function ProDashboardView({
         isUccMiTrack={dailyGoal.isUccMiTrack}
       />
 
-      {showLiveClasses && user?.uid ? (
+      {showLiveClasses && user?.uid && !isUmngUniversity(profile?.goalUniversity) ? (
         <>
-          <UccConvocatoriaCard userId={user.uid} />
+          <UccConvocatoriaCard userId={user.uid} planStartedAt={profile?.planStartedAt} />
           <ConvocatoriaRepasoSummaryCard userId={user.uid} />
         </>
       ) : null}

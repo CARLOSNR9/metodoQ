@@ -1,5 +1,14 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 
+import { resolveUniversityFromProfile } from "@/lib/diagnostic/resolve-profile-target";
+import { getFeaturedConvocatoriaEditionForUser } from "@/lib/training/ucc-convocatoria";
+
+export type AdminUniversityStat = {
+  name: string;
+  studentsCount: number;
+  nextConvocatoria: string | null;
+};
+
 export type AdminMetrics = {
   usersCount: number;
   demosCompletedCount: number;
@@ -7,6 +16,7 @@ export type AdminMetrics = {
   demoStartedCount: number;
   paywallViewedCount: number;
   paywallClickedCount: number;
+  universityStats: AdminUniversityStat[];
 };
 
 export type AdminAlertItem = {
@@ -22,6 +32,7 @@ const EMPTY_METRICS: AdminMetrics = {
   demoStartedCount: 0,
   paywallViewedCount: 0,
   paywallClickedCount: 0,
+  universityStats: [],
 };
 
 const MIN_SAMPLE_SIZE = 20;
@@ -57,18 +68,71 @@ export async function getAdminMetrics(): Promise<{
       db.collection("analytics_events").where("eventName", "==", "click_upgrade").get(),
     ]);
 
+    const proUsersDocs = [
+      ...proSnapshot.docs,
+      ...basicoSnapshot.docs,
+      ...residenteSnapshot.docs,
+      ...legacyProPlusSnapshot.docs,
+    ];
+
+    const statsMap = new Map<string, { count: number; nextDate: Date | null }>();
+    const today = new Date();
+    
+    for (const doc of proUsersDocs) {
+      const data = doc.data();
+      const rawUni = typeof data.goalUniversity === "string" ? data.goalUniversity : "";
+      if (!rawUni) continue;
+
+      const uniName = resolveUniversityFromProfile(rawUni);
+      if (!uniName) continue;
+      
+      const planStartedAt = typeof data.planStartedAt === "string" ? data.planStartedAt : null;
+      const featured = getFeaturedConvocatoriaEditionForUser(planStartedAt);
+      
+      let thisNextDate: Date | null = null;
+      if (featured) {
+        // Asume YYYY-MM-DD
+        const [y, m, d] = featured.examDate.split("-").map(Number);
+        const examDate = new Date(y, m - 1, d, 0, 0, 0, 0);
+        
+        const closingDate = new Date(examDate);
+        closingDate.setDate(closingDate.getDate() + 5);
+        if (today < closingDate) {
+          thisNextDate = examDate;
+        }
+      }
+
+      const existing = statsMap.get(uniName) ?? { count: 0, nextDate: null };
+      existing.count += 1;
+      
+      if (thisNextDate) {
+        if (!existing.nextDate || thisNextDate < existing.nextDate) {
+          existing.nextDate = thisNextDate;
+        }
+      }
+      statsMap.set(uniName, existing);
+    }
+    
+    const universityStats: AdminUniversityStat[] = Array.from(statsMap.entries()).map(([name, stat]) => ({
+      name,
+      studentsCount: stat.count,
+      nextConvocatoria: stat.nextDate
+        ? `${stat.nextDate.getFullYear()}-${String(stat.nextDate.getMonth() + 1).padStart(2, "0")}-${String(stat.nextDate.getDate()).padStart(2, "0")}`
+        : null,
+    }));
+
+    // Sort by count descending
+    universityStats.sort((a, b) => b.studentsCount - a.studentsCount);
+
     return {
       metrics: {
         usersCount: usersSnapshot.size,
         demosCompletedCount: demosSnapshot.size,
-        proConversionsCount:
-          proSnapshot.size +
-          basicoSnapshot.size +
-          residenteSnapshot.size +
-          legacyProPlusSnapshot.size,
+        proConversionsCount: proUsersDocs.length,
         demoStartedCount: demoStartedSnapshot.size,
         paywallViewedCount: paywallViewedSnapshot.size,
         paywallClickedCount: paywallClickedSnapshot.size,
+        universityStats,
       },
       loadError: null,
     };

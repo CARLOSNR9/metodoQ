@@ -14,15 +14,17 @@ import {
   buildConvocatoriaEditionStatus,
   buildConvocatoriaExamHref,
   resolveConvocatoriaAttempt,
-  getFeaturedConvocatoriaEdition,
+  getFeaturedConvocatoriaEditionForUser,
+  getUserConvocatoriaSchedule,
   type UccConvocatoriaEditionStatus,
 } from "@/lib/training/ucc-convocatoria";
 
 type UccConvocatoriaCardProps = {
   userId: string;
+  planStartedAt?: string | null;
 };
 
-export function UccConvocatoriaCard({ userId }: UccConvocatoriaCardProps) {
+export function UccConvocatoriaCard({ userId, planStartedAt }: UccConvocatoriaCardProps) {
   const [status, setStatus] = useState<UccConvocatoriaEditionStatus | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -32,7 +34,7 @@ export function UccConvocatoriaCard({ userId }: UccConvocatoriaCardProps) {
     async function load() {
       setIsLoading(true);
       try {
-        const featured = getFeaturedConvocatoriaEdition();
+        const featured = getFeaturedConvocatoriaEditionForUser(planStartedAt);
         if (!featured) {
           if (mounted) setStatus(null);
           return;
@@ -40,7 +42,8 @@ export function UccConvocatoriaCard({ userId }: UccConvocatoriaCardProps) {
 
         const attempt = await resolveConvocatoriaAttempt(userId, featured.code);
         if (!mounted) return;
-        setStatus(buildConvocatoriaEditionStatus({ edition: featured, attempt }));
+        const schedule = getUserConvocatoriaSchedule(planStartedAt);
+        setStatus(buildConvocatoriaEditionStatus({ edition: featured, attempt, schedule }));
       } catch (error) {
         console.error("No se pudo cargar la convocatoria UCC.", error);
         if (mounted) setStatus(null);

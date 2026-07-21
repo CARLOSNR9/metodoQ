@@ -90,8 +90,45 @@ function shuffleQuestions<T>(items: T[]): T[] {
   return copy;
 }
 
-export function getConvocatoriaEdition(code: string): UccConvocatoriaEdition | null {
-  return UCC_CONVOCATORIA_EDITIONS.find((edition) => edition.code === code) ?? null;
+export function getUserConvocatoriaSchedule(planStartedAtStr: string | null | undefined): UccConvocatoriaEdition[] {
+  if (!planStartedAtStr) return UCC_CONVOCATORIA_EDITIONS;
+
+  const planStartedAt = new Date(planStartedAtStr);
+  if (isNaN(planStartedAt.getTime())) return UCC_CONVOCATORIA_EDITIONS;
+
+  // S1 = first Sunday strictly after planStartedAt
+  const dayOfWeek = planStartedAt.getDay(); // 0 is Sunday
+  const daysToS1 = dayOfWeek === 0 ? 7 : 7 - dayOfWeek;
+  const s1 = new Date(planStartedAt);
+  s1.setDate(s1.getDate() + daysToS1);
+  s1.setHours(0, 0, 0, 0);
+
+  // S2 = S1 + 7 days (Second Sunday)
+  const s2 = new Date(s1);
+  s2.setDate(s2.getDate() + 7);
+
+  return UCC_CONVOCATORIA_EDITIONS.map((edition, index) => {
+    const examDate = new Date(s2);
+    examDate.setDate(examDate.getDate() + (index * 14));
+    
+    // Format to YYYY-MM-DD local
+    const yyyy = examDate.getFullYear();
+    const mm = String(examDate.getMonth() + 1).padStart(2, "0");
+    const dd = String(examDate.getDate()).padStart(2, "0");
+    
+    return {
+      ...edition,
+      examDate: `${yyyy}-${mm}-${dd}`,
+    };
+  });
+}
+
+export function getConvocatoriaEdition(
+  code: string,
+  planStartedAt?: string | null,
+): UccConvocatoriaEdition | null {
+  const schedule = getUserConvocatoriaSchedule(planStartedAt);
+  return schedule.find((edition) => edition.code === code) ?? null;
 }
 
 export function selectConvocatoriaExamQuestions(edition: UccConvocatoriaEdition): TrainingQuestion[] {
@@ -113,14 +150,13 @@ function getEditionPhase(
   const examDay = parseLocalDate(edition.examDate);
   if (today < examDay) return "upcoming";
 
-  const index = editions.findIndex((item) => item.code === edition.code);
-  const nextEdition = editions[index + 1];
+  // El examen permanece abierto por un espacio de 5 días
+  const closingDay = new Date(examDay);
+  closingDay.setDate(closingDay.getDate() + 5);
 
-  if (nextEdition) {
-    return today < parseLocalDate(nextEdition.examDate) ? "open" : "closed";
+  if (today < closingDay) {
+    return "open";
   }
-
-  if (edition.stayOpenUntilNext) return "open";
 
   return "closed";
 }
@@ -226,23 +262,45 @@ export async function saveConvocatoriaAttempt(
   );
 }
 
-export function getFeaturedConvocatoriaEdition(): UccConvocatoriaEdition | null {
-  return UCC_CONVOCATORIA_EDITIONS[UCC_CONVOCATORIA_EDITIONS.length - 1] ?? null;
+export function getFeaturedConvocatoriaEditionForUser(
+  planStartedAt: string | null | undefined,
+): UccConvocatoriaEdition | null {
+  const schedule = getUserConvocatoriaSchedule(planStartedAt);
+  const today = new Date();
+
+  // Encontramos la primera edición cuya *siguiente* edición aún no ha abierto.
+  for (let i = 0; i < schedule.length; i++) {
+    const nextEdition = schedule[i + 1];
+    if (!nextEdition || today < parseLocalDate(nextEdition.examDate)) {
+      return schedule[i];
+    }
+  }
+
+  return schedule[schedule.length - 1] ?? null;
 }
 
 export function buildConvocatoriaEditionStatus(options: {
   edition: UccConvocatoriaEdition;
+  schedule: UccConvocatoriaEdition[];
   attempt?: UccConvocatoriaAttempt | null;
   today?: Date;
 }): UccConvocatoriaEditionStatus {
   const today = options.today ?? new Date();
-  const phase = getEditionPhase(options.edition, today, UCC_CONVOCATORIA_EDITIONS);
+  const schedule = options.schedule;
+  const phase = getEditionPhase(options.edition, today, schedule);
   const attempt = options.attempt ?? null;
-  const nextEdition = UCC_CONVOCATORIA_EDITIONS[
-    UCC_CONVOCATORIA_EDITIONS.findIndex((item) => item.code === options.edition.code) + 1
-  ];
 
   const canStart = phase === "open" && !attempt;
+
+  // Calculamos la fecha de cierre (+5 días)
+  const examDay = parseLocalDate(options.edition.examDate);
+  const closingDay = new Date(examDay);
+  closingDay.setDate(closingDay.getDate() + 5);
+  
+  // Format to local date string (e.g. YYYY-MM-DD)
+  const yyyy = closingDay.getFullYear();
+  const mm = String(closingDay.getMonth() + 1).padStart(2, "0");
+  const dd = String(closingDay.getDate()).padStart(2, "0");
 
   return {
     edition: options.edition,
@@ -250,6 +308,6 @@ export function buildConvocatoriaEditionStatus(options: {
     attempt,
     canStart,
     opensLabel: formatEditionDate(options.edition.examDate),
-    closesLabel: nextEdition ? formatEditionDate(nextEdition.examDate) : null,
+    closesLabel: formatEditionDate(`${yyyy}-${mm}-${dd}`),
   };
 }
