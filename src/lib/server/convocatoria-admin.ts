@@ -1,6 +1,6 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import {
-  getFeaturedConvocatoriaEdition,
+  getFeaturedConvocatoriaEditionForUser,
   type UccConvocatoriaAttempt,
 } from "@/lib/training/ucc-convocatoria";
 
@@ -119,7 +119,7 @@ export function resolveAdminConvocatoriaAttempt(options: {
   userData: Record<string, unknown>;
   results: ConvocatoriaResultCandidate[];
 }): AdminConvocatoriaAttemptStatus | null {
-  const edition = getFeaturedConvocatoriaEdition();
+  const edition = getFeaturedConvocatoriaEditionForUser(null);
   if (!edition) return null;
 
   const attempt = resolveUserConvocatoriaAttempt(
@@ -197,7 +197,7 @@ export async function getAdminConvocatoriaTracking(options?: {
   rows: AdminConvocatoriaRow[];
   loadError: string | null;
 }> {
-  const edition = getFeaturedConvocatoriaEdition();
+  const edition = getFeaturedConvocatoriaEditionForUser(null);
   if (!edition) {
     return {
       summary: {

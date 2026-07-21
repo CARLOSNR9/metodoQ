@@ -17,7 +17,7 @@ import {
   resolveSessionQuestions,
 } from "@/lib/session-review";
 import {
-  getFeaturedConvocatoriaEdition,
+  getFeaturedConvocatoriaEditionForUser,
   resolveConvocatoriaAttempt,
   type UccConvocatoriaAttempt,
   type UccConvocatoriaEdition,
@@ -25,6 +25,7 @@ import {
 
 type ConvocatoriaRepasoSummaryCardProps = {
   userId: string;
+  planStartedAt?: string | null;
 };
 
 type LoadedState = {
@@ -38,7 +39,7 @@ function buildReviewHref(resultId: string | undefined, filter?: "wrong") {
   return filter ? `${base}?filter=${filter}` : base;
 }
 
-export function ConvocatoriaRepasoSummaryCard({ userId }: ConvocatoriaRepasoSummaryCardProps) {
+export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: ConvocatoriaRepasoSummaryCardProps) {
   const [loaded, setLoaded] = useState<LoadedState | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -48,7 +49,7 @@ export function ConvocatoriaRepasoSummaryCard({ userId }: ConvocatoriaRepasoSumm
     async function load() {
       setIsLoading(true);
       try {
-        const edition = getFeaturedConvocatoriaEdition();
+        const edition = getFeaturedConvocatoriaEditionForUser(planStartedAt);
         if (!edition) {
           if (mounted) setLoaded(null);
           return;
