@@ -358,14 +358,61 @@ export const UCC_CONV_2025_07_19_51_60_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "El paciente presenta la tríada clásica de la Nefritis Intersticial Aguda (NIA) inducida por fármacos: fiebre, exantema cutáneo (rash) y eosinofilia, asociada a una Lesión Renal Aguda severa. Aunque la tríada completa solo se ve en el 10-15% de los pacientes, el hallazgo de eosinofilia periférica masiva y eosinofiluria en un paciente que recientemente inició/aumentó un fármaco gatillo de alto riesgo (como Alopurinol, AINEs, Omeprazol, Penicilinas o Sulfas) sella el diagnóstico clínico. Fisiopatológicamente, es una reacción de hipersensibilidad retardada tipo IV (mediada por células T) en el intersticio renal. El tratamiento exige la suspensión inmediata del fármaco ofensor y, ante la severidad del daño renal (creatinina de 3.8), el inicio temprano de corticosteroides (Prednisolona) para apagar la inflamación intersticial y prevenir la fibrosis irreversible.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** En nefrología clínica, diferenciar la causa de una lesión renal aguda en un anciano medicado es vital. La Necrosis Tubular Aguda (Opción A) presenta cilindros \"granulosos oscuros o color barro\" (muddy brown) y NUNCA cursa con exantema, fiebre y eosinofilos en orina, es puramente isquémica o tóxica directa. El Alopurinol, además de causar el temido Síndrome de Steven-Johnson (que cursaría con descamación masiva y compromiso de mucosas orales/conjuntivales), es uno de los reyes de la Nefritis Intersticial Aguda. Si retiras la pastilla hoy y le pasas bolos de corticoides, ese riñón puede recuperar su filtrado basal en semanas.",
+    explanation: "El paciente presenta la tríada clásica de la Nefritis Intersticial Aguda (NIA) inducida por fármacos: fiebre, exantema cutáneo (rash) y eosinofilia, asociada a una Lesión Renal Aguda severa. Aunque la tríada completa solo se ve en el 10-15% de los pacientes, el hallazgo de eosinofilia periférica masiva y eosinofiluria en un paciente que recientemente inició/aumentó un fármaco gatillo de alto riesgo (como Alopurinol, AINEs, Omeprazol, Penicilinas o Sulfas) sella el diagnóstico clínico. Fisiopatológicamente, es una reacción de hipersensibilidad retardada tipo IV (mediada por células T) en el intersticio renal. El tratamiento exige la suspensión inmediata del fármaco ofensor y, ante la severidad del daño renal (creatinina de 3.8), el inicio temprano de corticosteroides (Prednisolona) para apagar la inflamación intersticial y prevenir la fibrosis irreversible.",
     keyPoints: [
       "Paciente con inicio reciente de un medicamento nuevo (Alopurinol, AINEs, IBPs, antibióticos).",
       "Desarrollo de Falla Renal Aguda + Fiebre + Exantema cutáneo.",
       "Marcador pivote laboratorial: Eosinofilia en sangre y/o Eosinofiluria en el sedimento.",
       "Nefritis Intersticial Aguda. El tratamiento primario es suspender la droga causante y administrar esteroides sistémicos tempranos.",
       "Tema: Lesión Renal Aguda / Nefritis Intersticial."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de nefrología clínica porque evalúa la capacidad de identificar una etiología alérgica/inmunológica como causa de falla renal aguda.
+
+La clave no es asumir que todo riñón que falla en un anciano hipertenso es por daño crónico o isquémico.
+La clave es:
+Fiebre + Rash + Eosinofilia + Falla Renal reciente = Nefritis Intersticial Aguda (NIA).
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 70 años medicado crónicamente.
+• Aumento reciente de dosis de Alopurinol (gatillo clásico de NIA).
+• Lesión Renal Aguda severa (Creatinina sube de 1.5 a 3.8 mg/dL).
+• Clínica alérgica sistémica: Fiebre y exantema prurítico.
+• Laboratorio patognomónico: Eosinofilia periférica masiva (12%) y eosinofiluria.
+
+¿Por qué la opción B es la respuesta correcta?
+El cuadro es la tríada de oro (fiebre, rash, eosinofilia) de una reacción inmuno-alérgica renal. El Alopurinol es uno de los principales culpables de la Nefritis Intersticial Aguda mediada por linfocitos T. Identificarla es crucial, ya que el tratamiento no es dar líquidos (como en isquemia), sino suspender la droga inmediatamente y administrar esteroides sistémicos para evitar la diálisis.
+
+¿Por qué fallan las otras opciones?
+• Necrosis Tubular Aguda isquémica (A): La NTA isquémica cursa con cilindros "granulosos oscuros color barro" en la orina, pero NUNCA genera fiebre primaria, rash pruriginoso ni eosinofilia periférica o urinaria.
+• Síndrome de DRESS (C): El alopurinol causa DRESS, pero este síndrome es multisistémico catastrófico (hepatitis severa, adenopatías difusas, neumonitis) y no se limita a un daño renal puro con eosinofilia sin afectar otros órganos. Tampoco causa primariamente microangiopatía trombótica.
+• Nefropatía aguda por cristales de ácido úrico (D): Ocurre en Síndrome de Lisis Tumoral por destrucción masiva de células cancerígenas (Ej. quimioterapia en linfomas), no por alopurinol. De hecho, el alopurinol *previene* esta complicación bloqueando la síntesis de ácido úrico.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes ven un anciano deshidratado o polimedicado y asumen inmediatamente NTA (Necrosis Tubular Aguda) por hipoperfusión.
+Pero el dato decisivo es:
+Un sedimento urinario con eosinófilos (Hansel positivo) y un cuadro tipo alergia sistémica obligan a pensar en el intersticio renal inflamado por drogas.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Paciente desarrolla LRA tras iniciar Alopurinol, AINEs, IBPs (Omeprazol) o Antibióticos (Betalactámicos).
+2. Buscar signos de hipersensibilidad (Fiebre, Exantema).
+3. Solicitar Hemograma (Eosinofilia) y Sedimento Urinario (Eosinofiluria).
+4. Diagnosticar Nefritis Intersticial Aguda Inmuno-alérgica.
+5. Suspender el fármaco inmediatamente e iniciar Prednisona.
+
+Perlas de examen
+✅ Fármaco nuevo + Falla renal + Rash/Fiebre = Nefritis Intersticial Aguda.
+✅ Alopurinol, Omeprazol, AINEs y Penicilinas son los gatillos más preguntados.
+✅ Eosinofiluria (Tinción de Hansel) es muy específica, aunque poco sensible.
+✅ El riñón de la NIA es de tamaño normal o grande por el edema inflamatorio, no está encogido.
+
+Referencias
+• Harrison's Principles of Internal Medicine: Acute Kidney Injury.
+• KDIGO Clinical Practice Guideline for Acute Kidney Injury.
+• UpToDate: Clinical manifestations and diagnosis of acute interstitial nephritis.`
   },
   {
     id: "ucc-conv-2025-07-19-59",
@@ -404,14 +451,60 @@ export const UCC_CONV_2025_07_19_51_60_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "A",
-    explanation: "El paciente cursa con un cuadro clásico de Enfermedad Granulomatosa Crónica (EGC), un defecto primario de la inmunidad fagocítica. Los pacientes presentan un defecto genético en la enzima NAPDH oxidasa de los neutrófilos, lo que les impide generar especies reactivas de oxígeno (\"estallido respiratorio\" o *respiratory burst*) como el peróxido de hidrógeno y anión superóxido, incapacitándolos para destruir bacterias y hongos que son fagocitados. El sello clínico de la EGC es la susceptibilidad patognomónica a microorganismos **catalasa-positivos** (que destruyen el propio peróxido de hidrógeno bacteriano), siendo los más comunes: *Staphylococcus aureus*, *Aspergillus spp.*, *Serratia marcescens*, *Burkholderia cepacia* y *Nocardia*. Las células B y T son numéricamente normales. La prueba de oro confirmatoria moderna (que reemplazó a la antigua prueba del azul de nitroazul de tetrazolio [NBT]) es la prueba de la **Dihidrorrodamina (DHR) por citometría de flujo**, la cual mide directamente la falla en la producción de superóxido de los neutrófilos estimulados.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** El diferencial de las inmunodeficiencias no tiene que ser un dolor de cabeza, Colega. Búscales el patrón: Si el niño hace meningitis o neumonías bacterianas repetitivas por neumococo desde que se le acaban los anticuerpos de la mamá (6 meses), le faltan Linfocitos B (Agammaglobulinemia de Bruton). Si hace hongos invasivos orales masivos (Cándida) y virus fulminantes, le faltan Linfocitos T (SCID o DiGeorge). Pero si sus infecciones son puramente ABSCESOS llenos de pus, especialmente de estafilococo o *Aspergillus*, el problema está en los soldados rasos: los neutrófilos. Los neutrófilos del paciente con EGC se \"tragan\" la bacteria, pero como no tienen NADPH oxidasa, no la pueden disolver. El estallido respiratorio (DHR 123) expone directamente que el neutrófilo dispara salvas en blanco.",
+    explanation: "El paciente cursa con un cuadro clásico de Enfermedad Granulomatosa Crónica (EGC), un defecto primario de la inmunidad fagocítica. Los pacientes presentan un defecto genético en la enzima NAPDH oxidasa de los neutrófilos, lo que les impide generar especies reactivas de oxígeno (\"estallido respiratorio\" o *respiratory burst*) como el peróxido de hidrógeno y anión superóxido, incapacitándolos para destruir bacterias y hongos que son fagocitados. El sello clínico de la EGC es la susceptibilidad patognomónica a microorganismos **catalasa-positivos** (que destruyen el propio peróxido de hidrógeno bacteriano), siendo los más comunes: *Staphylococcus aureus*, *Aspergillus spp.*, *Serratia marcescens*, *Burkholderia cepacia* y *Nocardia*. Las células B y T son numéricamente normales. La prueba de oro confirmatoria moderna (que reemplazó a la antigua prueba del azul de nitroazul de tetrazolio [NBT]) es la prueba de la **Dihidrorrodamina (DHR) por citometría de flujo**, la cual mide directamente la falla en la producción de superóxido de los neutrófilos estimulados.",
     keyPoints: [
       "Niño con abscesos recurrentes de piel, ganglios o pulmón.",
       "Cultivos persistentes de microorganismos catalasa-positivos (S. aureus, Aspergillus, Serratia, Burkholderia).",
       "Inmunoglobulinas y conteo de linfocitos normales.",
       "Falla fagocítica por Enfermedad Granulomatosa Crónica. Se diagnostica mediante la prueba del estallido respiratorio con Dihidrorrodamina (DHR) 123.",
       "Tema: Inmunodeficiencias Primarias Pediátricas."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de inmunodeficiencias porque evalúa la capacidad de reconocer un defecto fagocítico específico basándose en el tipo de infecciones (abscesos y hongos) y el microorganismo aislado.
+
+La clave no es perderse en el mar de las inmunodeficiencias combinadas severas.
+La clave es:
+Abscesos recurrentes + Staphylococcus/Aspergillus + Inmunidad humoral y celular conservada = Falla en el estallido respiratorio de los neutrófilos.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Lactante masculino de 14 meses de edad.
+• Abscesos subcutáneos profundos y recurrentes por Staphylococcus aureus meticilino-sensible.
+• Neumonía severa previa por Aspergillus fumigatus y antecedente de onfalitis.
+• Niveles de linfocitos (T, B, NK) y anticuerpos (IgG, IgA, IgM) totalmente normales.
+
+¿Por qué la opción A es la respuesta correcta?
+El cuadro es patognomónico de la Enfermedad Granulomatosa Crónica (EGC), un defecto de la enzima NADPH oxidasa de los fagocitos. Las células ingieren al patógeno, pero no pueden destruirlo con oxígeno reactivo ("estallido respiratorio"), predisponiendo a bacterias y hongos catalasa-positivos. Para confirmar que los neutrófilos están "disparando salvas en blanco", la prueba diagnóstica de elección es la Dihidrorrodamina (DHR) 123 por citometría de flujo.
+
+¿Por qué fallan las otras opciones?
+• Pruebas de hipersensibilidad retardada (Cándida/PPD) (B): Evalúan linfocitos T. Un defecto aquí (como SCID o DiGeorge) cursaría con candidiasis mucocutánea pertinaz o infecciones virales sistémicas, no abscesos estafilocócicos. Además, sus niveles de células T están documentados como normales.
+• Complemento total CH50 y C5-C9 (C): Las fallas de complemento, particularmente del complejo de ataque a la membrana, predisponen a bacteriemias y meningitis fulminantes casi exclusivamente por Neisseria, no a granulomas fúngicos por Aspergillus.
+• Búsqueda de cuerpos de Howell-Jolly (D): Indica asplenia (ausencia anatómica o funcional del bazo). La asplenia predispone a sepsis por bacterias encapsuladas (Neumococo, Meningococo, Haemophilus), no al desarrollo de múltiples abscesos profundos.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes se abruman con las inmunodeficiencias primarias y asumen que cualquier infección severa repetitiva indica un fallo en anticuerpos o linfocitos T.
+Pero el dato decisivo es:
+Infecciones en forma de ABSCESOS de pus y la presencia de Aspergillus o S. aureus en un niño con "laboratorios inmunológicos" normales obligan a estudiar a los fagocitos.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta para las inmunodeficiencias es:
+1. Infecciones virales y fúngicas superficiales desde el nacimiento = Falla de Linfocitos T.
+2. Neumonías o meningitis bacterianas a partir de los 6 meses = Falla de Linfocitos B (Anticuerpos).
+3. Bacteriemias fulminantes por Neisseria = Falla del Complemento tardío.
+4. Abscesos de piel/pulmón por S. aureus o Aspergillus = Falla Fagocítica (Enfermedad Granulomatosa Crónica).
+5. Diagnóstico de EGC = DHR 123 por citometría de flujo.
+
+Perlas de examen
+✅ EGC = Falla de NADPH oxidasa = Incapacidad de producir estallido respiratorio.
+✅ Microorganismos catalasa-positivos (S. aureus, Aspergillus, Burkholderia, Serratia, Nocardia) son su talón de Aquiles.
+✅ Prueba de NBT (Azul de nitroazul tetrazolio) es la antigua; la DHR 123 es el Gold Standard moderno.
+✅ Un niño con EGC tiene "anticuerpos de sobra", el problema está en los neutrófilos.
+
+Referencias
+• Abbas AK, Lichtman AH, Pillai S. Cellular and Molecular Immunology.
+• Nelson Textbook of Pediatrics: Primary Immunodeficiency Diseases.
+• UpToDate: Chronic granulomatous disease: Pathogenesis, clinical manifestations, and diagnosis.`
   },
   {
     id: "ucc-conv-2025-07-19-60",

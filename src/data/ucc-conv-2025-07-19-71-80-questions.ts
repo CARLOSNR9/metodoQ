@@ -1,4 +1,4 @@
-﻿import type { TrainingQuestion } from "@/lib/questions/types";
+import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
  * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #71”“#80.
@@ -42,13 +42,59 @@ export const UCC_CONV_2025_07_19_71_80_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "La paciente cursa con Infección Tuberculosa Latente (ITBL), demostrada por un IGRA positivo en ausencia de síntomas y con radiografía de tórax normal (lo que descarta TB activa). El Factor de Necrosis Tumoral alfa (TNF-Î±) es la molécula maestra que mantiene a los macrófagos estructurados alrededor del granuloma tuberculoso. Si se administra un fármaco anti-TNF (Infliximab, Adalimumab, Etanercept) a una paciente con ITBL, el granuloma se \"desmorona\" y la paciente sufrirá una reactivación tuberculosa fulminante (a menudo miliar o extrapulmonar). Las guías mundiales exigen iniciar tratamiento para la TB latente (usualmente Isoniazida x 9 meses o Rifampicina x 4 meses) y diferir obligatoriamente el inicio del biológico al menos durante 3 a 4 semanas (1 mes) para asegurar que el bacilo latente esté bajo control bactericida.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Un error fatal en la reumatología moderna. El IGRA (QuantiFERON) no da falsos positivos por vacunas previas de BCG ni por autoinmunidad, a diferencia del PPD. Si el IGRA es positivo, el bacilo está dormido en los vértices pulmonares. Bloquear el TNF es abrirle las puertas de la prisión al Mycobacterium. No necesitas darle los cuatro medicamentos (HRZE, Opción C) porque la paciente no tiene la enfermedad activa cavitada, no hay millones de bacterias que requieran 4 fármacos para evitar resistencia; hay unos pocos bacilos dormidos que la Isoniazida o Rifampicina en monoterapia barrerán exitosamente.",
+    explanation: "La paciente cursa con Infección Tuberculosa Latente (ITBL), demostrada por un IGRA positivo en ausencia de síntomas y con radiografía de tórax normal (lo que descarta TB activa). El Factor de Necrosis Tumoral alfa (TNF-α) es la molécula maestra que mantiene a los macrófagos estructurados alrededor del granuloma tuberculoso. Si se administra un fármaco anti-TNF (Infliximab, Adalimumab, Etanercept) a una paciente con ITBL, el granuloma se \"desmorona\" y la paciente sufrirá una reactivación tuberculosa fulminante (a menudo miliar o extrapulmonar). Las guías mundiales exigen iniciar tratamiento para la TB latente (usualmente Isoniazida x 9 meses o Rifampicina x 4 meses) y diferir obligatoriamente el inicio del biológico al menos durante 3 a 4 semanas (1 mes) para asegurar que el bacilo latente esté bajo control bactericida.",
     keyPoints: [
       "Paciente que iniciará Terapia Biológica (especialmente anti-TNF).",
       "Tamizaje con IGRA o PPD positivo + Radiografía normal (asintomático).",
       "Tuberculosis Latente de alto riesgo de reactivación. Requiere profilaxis antibacilífera (Isoniazida o Rifampicina) y el biológico DEBE postergarse por 1 mes.",
       "Tema: Tuberculosis Latente / Farmacología Inmunosupresora."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de farmacología e infectología porque evalúa el conocimiento de un efecto adverso fatal y absolutamente prevenible asociado a la inmunosupresión biológica moderna.
+
+La clave no es sobretratar una enfermedad que no está activa, ni subestimar una prueba positiva.
+La clave es:
+Dar profilaxis para la Infección Tuberculosa Latente (ITBL) y retrasar la dosis del Anti-TNF un mes para evitar reactivación fulminante.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Artritis Reumatoide severa candidata a Infliximab (un biológico Anti-TNF alfa).
+• Paciente asintomática sin síntomas respiratorios o sistémicos de Tuberculosis (TB).
+• Radiografía de tórax normal (excluye TB activa).
+• IGRA (QuantiFERON-TB) positivo (confirma infección latente).
+
+¿Por qué la opción B es la respuesta correcta?
+El IGRA positivo indica que el bacilo Mycobacterium tuberculosis está vivo, pero "encerrado" dentro de granulomas pulmonares asintomáticos mantenidos por el TNF-alfa del propio paciente. Si administramos Infliximab (Anti-TNF), destruimos la cerradura del granuloma, causando una diseminación miliar letal. La regla de oro es iniciar profilaxis mono-fármaco (Isoniazida o Rifampicina) para matar los bacilos latentes y esperar al menos 1 mes antes de iniciar el biológico para asegurar que la profilaxis esté haciendo efecto.
+
+¿Por qué fallan las otras opciones?
+• Asumir falso positivo (A): A diferencia del PPD (que da falsos positivos por la vacuna BCG), el IGRA es altamente específico para TB. Ignorarlo es condenar a la paciente a una reactivación mortal.
+• Esquema tetraconjugado HRZE (C): El esquema de cuatro drogas se utiliza ÚNICAMENTE cuando hay Tuberculosis Activa confirmada (Ej. cavernas pulmonares o baciloscopia positiva). Usar HRZE para una ITBL expone a la paciente a un riesgo enorme e innecesario de toxicidad hepática.
+• Repetir con PPD (D): El PPD es menos específico. Además, si saliera negativo no "anularía" el IGRA, sino que evidenciaría anergia inmunológica por la AR base. El IGRA positivo manda.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes se confunden pensando que al haber un IGRA positivo deben dar el esquema completo de TB "por si acaso", o peor, descartan la TB porque la radiografía es normal.
+Pero el dato decisivo es:
+IGRA positivo + asintomático + Rx normal = Tuberculosis Latente (ITBL). Solo requiere 1 fármaco, no 4, y un compás de espera prudente de 1 mes antes del biológico.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Paciente a iniciar biológico Anti-TNF (Infliximab, Adalimumab, Etanercept).
+2. Protocolo obligatorio: Solicitar Rx de tórax y prueba de IGRA o PPD.
+3. Si IGRA (+), confirmar que Rx tórax sea normal (ausencia de TB activa).
+4. Iniciar tratamiento para ITBL: Isoniazida (9 meses) o Rifampicina (4 meses).
+5. Diferir el inicio del biológico Anti-TNF por 3 a 4 semanas.
+
+Perlas de examen
+✅ Anti-TNF alfa rompe granulomas = altísimo riesgo de TB de reactivación diseminada.
+✅ IGRA (+) no requiere confirmación con PPD, y no se afecta por la vacuna BCG.
+✅ ITBL = Profilaxis (Isoniazida o Rifampicina). TB Activa = Tetraconjugado (HRZE).
+✅ Nunca iniciar un anti-TNF en un paciente IGRA (+) el mismo día del diagnóstico.
+
+Referencias
+• American College of Rheumatology (ACR) Guidelines for Rheumatoid Arthritis.
+• CDC Guidelines for Targeted Tuberculin Testing and Treatment of Latent Tuberculosis Infection.
+• UpToDate: Treatment of latent tuberculosis infection in adults.`
   },
   {
     id: "ucc-conv-2025-07-19-72",

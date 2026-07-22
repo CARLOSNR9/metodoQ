@@ -317,14 +317,61 @@ Referencias
       }
     ],
     correctOptionId: "C",
-    explanation: "El paciente presenta la descripción clínica y radiológica perfecta de la Leucoencefalopatía Multifocal Progresiva (LMP), una enfermedad desmielinizante subaguda causada por la reactivación del Virus JC en pacientes con inmunosupresión profunda (CD4 clásicamente < 100). Su sello patognomónico distintivo frente a otras infecciones oportunistas en la neuroimagen (RMN) es la presencia de lesiones en la sustancia blanca que **carecen de realce (no captan contraste)** y **no presentan efecto de masa ni edema perilesional**, a diferencia de la toxoplasmosis o el linfoma. Lamentablemente, no existe ningún fármaco antiviral o terapia dirigida que destruya el virus JC con eficacia clínica probada. El ÚNICO tratamiento que mejora la supervivencia en la LMP es la reconstitución rápida del sistema inmunológico celular mediante el inicio y optimización urgente de la Terapia Antirretroviral (TARV).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Colega, aquí te juegan la psicología del médico que siempre quiere formular un antibiótico. En pacientes con SIDA y lesiones cerebrales: si realzan en \"anillo\" y tienen edema, es Toxoplasma. Si es lesión única grandota que realza periventricular, es Linfoma. Pero si las manchas son \"fantasmas\" (están ahí, desbaratan los nervios del paciente, pero no empujan el cerebro, no se inflaman y no captan el contraste del radiólogo), es el Virus JC causando LMP. Como la farmacología no le hace cosquillas al virus JC, tu única medicina es devolverle los linfocitos CD4 al paciente dándole su tratamiento contra el VIH de inmediato.",
+    explanation: "El paciente presenta la descripción clínica y radiológica perfecta de la Leucoencefalopatía Multifocal Progresiva (LMP), una enfermedad desmielinizante subaguda causada por la reactivación del Virus JC en pacientes con inmunosupresión profunda (CD4 clásicamente < 100). Su sello patognomónico distintivo frente a otras infecciones oportunistas en la neuroimagen (RMN) es la presencia de lesiones en la sustancia blanca que carecen de realce (no captan contraste) y no presentan efecto de masa ni edema perilesional, a diferencia de la toxoplasmosis o el linfoma. Lamentablemente, no existe ningún fármaco antiviral o terapia dirigida que destruya el virus JC con eficacia clínica probada. El ÚNICO tratamiento que mejora la supervivencia en la LMP es la reconstitución rápida del sistema inmunológico celular mediante el inicio y optimización urgente de la Terapia Antirretroviral (TARV).",
     keyPoints: [
       "Paciente con VIH severamente inmunosuprimido (CD4 < 50-100).",
       "Déficit neurológico focal subagudo SIN fiebre ni cefalea (apiretico).",
       "RMN cerebral: Lesiones en sustancia blanca, ASIMÉTRICAS, SIN realce de contraste y SIN efecto de masa/edema.",
       "Leucoencefalopatía Multifocal Progresiva (Virus JC). Tratamiento: Iniciar o reiniciar el TARV inmediatamente (Inmunoreconstitución).",
       "Tema: Infecciones Oportunistas SNC / VIH."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de infectología neurológica porque evalúa la capacidad de diferenciar lesiones cerebrales en pacientes con VIH basándose en un patrón radiológico clave.
+
+La clave no es formular un antibiótico o antiviral específico.
+La clave es:
+Identificar las lesiones "silenciosas" (sin edema, sin realce) del Virus JC e iniciar urgentemente la Terapia Antirretroviral (TARV).
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Hombre de 35 años con infección por VIH y abandono crónico del TARV.
+• Inmunosupresión profunda (CD4 = 35 cél/mm³).
+• Déficit neurológico focal subagudo (hemiparesia, ataxia, disartria) sin síntomas de hipertensión endocraneana ni fiebre.
+• RMN: Lesiones en la sustancia blanca asimétricas que NO captan contraste, NO tienen edema y NO generan efecto de masa.
+
+¿Por qué la opción C es la respuesta correcta?
+El cuadro clínico y el hallazgo radiológico "fantasma" son patognomónicos de la Leucoencefalopatía Multifocal Progresiva (LMP) causada por la reactivación del Virus JC. Dado que ningún antiviral ha demostrado eficacia probada contra este virus, la única intervención salvadora es reconstituir el sistema inmunitario del paciente reiniciando o ajustando rápidamente la Terapia Antirretroviral.
+
+¿Por qué fallan las otras opciones?
+• Linfoma Primario del SNC (A): Produce lesiones periventriculares que SÍ captan contraste (a menudo de forma sólida o en anillo irregular) y generan importante efecto de masa.
+• Toxoplasmosis cerebral (B): Cursa clásicamente con lesiones nodulares múltiples en ganglios basales que presentan intenso realce en anillo con gadolinio y abundante edema vasogénico.
+• Encefalitis por CMV (D): Genera una ventriculoencefalitis con realce ependimario, no un daño en la sustancia blanca profunda sin realce. Además, el paciente típico con CMV presenta más síntomas constitucionales.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes asumen que cualquier infección grave en el SNC requiere un tratamiento antimicrobiano directo (como Ganciclovir o Pirimetamina).
+Pero el dato decisivo es:
+Frente al Virus JC causando LMP, el único "fármaco" eficaz son los propios linfocitos CD4 del paciente, los cuales solo se recuperan reiniciando el TARV.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Paciente con VIH severamente inmunosuprimido y síntomas focales subagudos.
+2. Evaluar RMN cerebral.
+3. Si hay múltiples nódulos con realce en anillo y edema: Toxoplasmosis.
+4. Si hay lesión(es) focal(es) grande(s) con realce y efecto de masa: Linfoma.
+5. Si hay daño asimétrico en sustancia blanca SIN realce, SIN edema, SIN efecto de masa: LMP por Virus JC.
+6. Manejo de LMP: Reconstitución inmunológica con TARV lo antes posible.
+
+Perlas de examen
+✅ LMP (Virus JC) = Lesiones en RMN sin realce, sin edema y sin efecto de masa ("lesiones fantasma").
+✅ Toxoplasmosis = Múltiples nódulos con realce en anillo y edema periférico.
+✅ Linfoma = Masa periventricular única/pocas con realce y efecto de masa.
+✅ El único tratamiento para la LMP es el rescate inmunológico (TARV).
+
+Referencias
+• Harrison's Principles of Internal Medicine: HIV/AIDS.
+• Guidelines for the Prevention and Treatment of Opportunistic Infections in Adults and Adolescents with HIV.
+• UpToDate: Progressive multifocal leukoencephalopathy (PML): Treatment and prognosis.`
   },
   {
     id: "ucc-conv-2025-07-19-27",
