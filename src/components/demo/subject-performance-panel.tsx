@@ -44,7 +44,7 @@ function SubjectBar({ subject, barClass }: { subject: SubjectStatus; barClass: s
   return (
     <div className="space-y-1.5">
       <div className="flex items-center justify-between gap-3 text-xs">
-        <span className="min-w-0 font-semibold text-white">{subject.label}</span>
+        <span className="truncate font-semibold text-white">{subject.label}</span>
         <span className="shrink-0 tabular-nums text-mq-muted">
           {subject.score}% · {subject.questions} preg.
         </span>

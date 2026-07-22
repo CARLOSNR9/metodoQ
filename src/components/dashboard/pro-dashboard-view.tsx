@@ -214,7 +214,7 @@ export function ProDashboardView({
                       className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:scale-105 active:scale-95"
                     >
                       <Zap size={20} fill="currentColor" />
-                      <span>{isUccMiPro ? "CONTINUAR MISIÓN" : "ENTRENAR AHORA"}</span>
+                      <span>{isUccMiPro ? "CONTINUAR MISIÓN" : totalQuestions > 10 ? "VOLVER A ENTRENAR" : "ENTRENAR AHORA"}</span>
                       <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                     </Link>
                     <Link
