@@ -98,9 +98,20 @@ export function QuestionCard({
       className={`w-full rounded-2xl border border-mq-border-strong bg-mq-surface p-5 shadow-[0_24px_60px_-36px_rgb(0_209_255/0.45)] sm:p-7 ${className ?? ""}`}
       aria-label="Tarjeta de pregunta"
     >
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-accent">
-        {examAreaLabel ?? "Pregunta"}
-      </p>
+      <div className="flex items-center justify-between">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-accent">
+          {examAreaLabel ?? "Pregunta"}
+        </p>
+        <button
+          type="button"
+          onClick={() => setIsReportModalOpen(true)}
+          className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-semibold text-mq-muted transition hover:bg-white/10 hover:text-white"
+          title="Reportar pregunta"
+        >
+          <Flag className="h-3.5 w-3.5" />
+          <span className="hidden sm:inline">Reportar</span>
+        </button>
+      </div>
       <h2 className="mt-3 text-pretty text-base font-medium leading-relaxed text-foreground sm:text-lg">
         {question}
       </h2>
@@ -193,15 +204,6 @@ export function QuestionCard({
                     </>
                   )}
                 </p>
-                <button
-                  type="button"
-                  onClick={() => setIsReportModalOpen(true)}
-                  className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-semibold text-mq-muted transition hover:bg-white/10 hover:text-white"
-                  title="Reportar pregunta"
-                >
-                  <Flag className="h-3.5 w-3.5" />
-                  <span className="hidden sm:inline">Reportar</span>
-                </button>
               </div>
               
               {!isCorrect && incorrectAnswerDetail && (
