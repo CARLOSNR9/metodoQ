@@ -228,6 +228,25 @@ export function ProDashboardView({
                       Repetir diagnóstico
                     </Link>
                   </div>
+                  
+                  {(() => {
+                    const dateOpts: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'long' };
+                    const todayStrRaw = new Date().toLocaleDateString("es-ES", dateOpts);
+                    const todayStr = todayStrRaw.replace(',', '');
+                    const isToday = profile?.lastSessionDateStr === new Date().toLocaleDateString("en-CA");
+                    const sessionsToday = isToday ? (profile?.todaySessionsCount || 0) : 0;
+                    
+                    if (sessionsToday > 0) {
+                      return (
+                        <div className="mt-2 text-[13px] font-medium text-mq-accent/90">
+                          {sessionsToday === 1 
+                            ? `Hoy ${todayStr} has entrenado 1 vez. ¡Sigue así!` 
+                            : `¡Eres un duro! Hoy ${todayStr} ya has entrenado ${sessionsToday} veces.`}
+                        </div>
+                      );
+                    }
+                    return null;
+                  })()}
                 )}
               </div>
             </div>

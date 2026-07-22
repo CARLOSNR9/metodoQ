@@ -97,6 +97,8 @@ type UserPerformanceProfile = {
   cumulativeScore?: number;
   totalCorrectAnswers?: number;
   totalQuestionsAnswered?: number;
+  todaySessionsCount?: number;
+  lastSessionDateStr?: string;
 };
 
 async function updateUserPerformanceProfile({
@@ -139,6 +141,10 @@ async function updateUserPerformanceProfile({
     const weaknesses = getTopTopicsByMetric(nextTopicStats, "wrong");
     const cumulative = computeCumulativePerformance(nextTopicStats);
 
+    const todayStr = new Date().toLocaleDateString("en-CA");
+    const isSameDay = currentData.lastSessionDateStr === todayStr;
+    const nextTodaySessionsCount = isSameDay ? (currentData.todaySessionsCount || 0) + 1 : 1;
+
     transaction.set(
       userRef,
       {
@@ -155,6 +161,8 @@ async function updateUserPerformanceProfile({
         performanceProfileUpdatedAt: serverTimestamp(),
         topicStatsVersion: TOPIC_STATS_VERSION,
         lastActiveAt: serverTimestamp(),
+        todaySessionsCount: nextTodaySessionsCount,
+        lastSessionDateStr: todayStr,
       },
       { merge: true },
     );

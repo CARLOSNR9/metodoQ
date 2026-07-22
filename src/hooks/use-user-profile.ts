@@ -36,6 +36,8 @@ export interface UserProfile {
   lastScore?: number | null;
   lastSessionScore?: number | null;
   totalQuestionsAnswered?: number;
+  todaySessionsCount?: number;
+  lastSessionDateStr?: string;
   topicStats?: Record<string, { correct: number; wrong: number }>;
   topicStatsVersion?: number;
   strengths?: string[];
