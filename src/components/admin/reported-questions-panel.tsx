@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useMemo, useState, useTransition, useEffect } from "react";
 import { Check, Copy, Flag, ChevronDown, ChevronUp, MessageSquare } from "lucide-react";
 import { updateQuestionReportStatusAction } from "@/app/admin/question-report-actions";
 import type { QuestionReportStatus } from "@/lib/server/question-reports-admin";
