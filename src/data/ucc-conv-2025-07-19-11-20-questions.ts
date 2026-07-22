@@ -1,4 +1,4 @@
-﻿import type { TrainingQuestion } from "@/lib/questions/types";
+import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
  * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #11”“#20.
@@ -179,13 +179,62 @@ export const UCC_CONV_2025_07_19_11_20_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "La lactante presenta una Taquicardia Supraventricular (TSV) paroxística, identificada por frecuencia >220 lpm en lactantes, QRS estrecho y ausencia de ondas P. Dado que la paciente se encuentra hemodinámicamente ESTABLE (PA normal, llenado capilar conservado), las guías de reanimación pediátrica (PALS/AHA) indican maniobras vagales como primera línea (hielo en el rostro en lactantes). Si estas fallan, el fármaco de elección absoluto es la Adenosina. La adenosina tiene una vida media ultracorta (<10 segundos), por lo que DEBE administrarse como un bolo rápido (push) por una vía venosa lo más proximal posible al corazón, seguido inmediatamente de un bolo rápido de solución salina normal usando una llave de tres vías para empujar la medicación antes de que sea metabolizada por los eritrocitos.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Cuidado con los calcioantagonistas en pediatría, Colega. El Verapamilo (Opción C) está ESTRÍCTAMENTE CONTRAINDICADO en lactantes menores de 1 año con TSV. El miocardio inmaduro del lactante depende en extremo de los canales de calcio para mantener la contractilidad; si usas verapamilo, produces un colapso cardiovascular refractario y paro cardíaco inmediato. Si el niño está estable, la adenosina es la regla. Si está inestable (chocado, PA por el piso, pálido), olvidas los medicamentos y vas directo al choque eléctrico sincronizado.",
+    explanation: "La lactante presenta una Taquicardia Supraventricular (TSV) paroxística, identificada por frecuencia >220 lpm en lactantes, QRS estrecho y ausencia de ondas P. Dado que la paciente se encuentra hemodinámicamente ESTABLE (PA normal, llenado capilar conservado), las guías de reanimación pediátrica (PALS/AHA) indican maniobras vagales como primera línea (hielo en el rostro en lactantes). Si estas fallan, el fármaco de elección absoluto es la Adenosina. La adenosina tiene una vida media ultracorta (<10 segundos), por lo que DEBE administrarse como un bolo rápido (push) por una vía venosa lo más proximal posible al corazón, seguido inmediatamente de un bolo rápido de solución salina normal usando una llave de tres vías para empujar la medicación antes de que sea metabolizada por los eritrocitos.",
     keyPoints: [
       "Lactante con FC > 220 lpm o niño con FC > 180 lpm con QRS estrecho.",
       "Paciente hemodinámicamente estable tras fallo de maniobras vagales.",
       "Adenosina intravenosa rápida con técnica de doble jeringa. Cardioversión eléctrica solo si hay inestabilidad.",
       "Tema: Taquicardia Supraventricular Pediátrica."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica porque evalúa el manejo escalonado de la TSV en pediatría y el peligro de los calcioantagonistas.
+
+La clave no es saltar directamente al choque eléctrico.
+La clave es:
+Adenosina en bolo rápido como primera línea farmacológica tras fallo de maniobras vagales en paciente estable.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Lactante de 3 meses con pobre succión, irritabilidad y palidez.
+• FC de 250 lpm, QRS estrecho, sin ondas P.
+• Paciente hemodinámicamente estable (PA y llenado capilar adecuados).
+• Fallo de maniobras vagales (hielo en el rostro).
+
+¿Por qué la opción B es la respuesta correcta?
+La adenosina intravenosa en bolo rápido (técnica de doble jeringa) es el fármaco de elección indiscutible para la TSV estable en pediatría que no revierte con maniobras vagales.
+
+¿Por qué NO amiodarona?
+Es un antiarrítmico de segunda línea, requiere infusión lenta, no es de rescate ultra-rápido para este contexto.
+
+¿Por qué NO verapamilo?
+Contraindicación absoluta y letal en menores de 1 año. El miocardio inmaduro depende en extremo de los canales de calcio; usar verapamilo producirá colapso cardiovascular irreversible.
+
+¿Por qué NO cardioversión eléctrica?
+Solo está indicada como primer paso si hay inestabilidad hemodinámica clara (choque, hipotensión profunda, mala perfusión severa). Esta paciente está estable.
+
+¿Cuál es la trampa de examen?
+Muchos estudiantes se asustan por la FC de 250 lpm y responden cardioversión eléctrica de inmediato.
+Pero el dato decisivo es la estabilidad hemodinámica relativa y el fallo vagal previo.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar TSV estable vs inestable.
+2. Si está inestable → Cardioversión eléctrica sincronizada.
+3. Si está estable → Maniobras vagales (hielo en lactantes).
+4. Si fallan las maniobras → Adenosina IV rápida con doble jeringa.
+5. Evitar a toda costa Verapamilo en menores de 1 año.
+
+Perlas de examen
+✅ TSV en lactantes = FC > 220 lpm.
+✅ Adenosina siempre en técnica de doble jeringa por su vida media <10 segundos.
+✅ Verapamilo = PROSCRITO en menores de 1 año.
+✅ Estabilidad hemodinámica define el uso de fármacos vs electricidad.
+
+Referencias
+• PALS (Pediatric Advanced Life Support) AHA Guidelines.
+• Nelson Textbook of Pediatrics.
+• UpToDate: Management of supraventricular tachycardia in children.`
   },
   {
     id: "ucc-conv-2025-07-19-15",

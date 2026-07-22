@@ -1,4 +1,4 @@
-﻿import type { TrainingQuestion } from "@/lib/questions/types";
+import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
  * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #21”“#30.
@@ -178,13 +178,62 @@ export const UCC_CONV_2025_07_19_21_30_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "La paciente cursa con una exacerbación pulmonar aguda en el contexto de una Fibrosis Quística (FQ) con colonización crónica confirmada por *Pseudomonas aeruginosa*. Las guías de la Cystic Fibrosis Foundation (CFF) establecen categóricamente que, para tratar una exacerbación aguda en un paciente colonizado por *Pseudomonas*, el tratamiento de elección EXIGE una terapia combinada intravenosa con **dos** antibióticos de diferentes clases con actividad antipseudomónica (terapia dual). Esto se realiza para asegurar un efecto bactericida sinérgico y, fundamentalmente, para prevenir la aparición in vivo de cepas extremadamente resistentes. La combinación clásica recomendada es un beta-lactámico antipseudomónico (Ceftazidima, Cefepime, Meropenem o Piperacilina-Tazobactam) asociado a un aminoglucósido (Tobramicina o Amikacina).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** En la Fibrosis Quística, la *Pseudomonas* vive protegida bajo una biopelícula (biofilm) espesa de alginato (cepas mucoides). Si la atacas con un solo antibiótico (monoterapia, Opción A), las bacterias que sobreviven dentro de la película mutarán sus porinas en menos de 48 horas y crearás un \"súper bicho\" intratable. Por eso siempre la acorralamos con dos mecanismos diferentes: un beta-lactámico que rompe su pared por fuera (Ceftazidima) y un aminoglucósido que viaja hasta el ribosoma para bloquear su síntesis (Tobramicina). La terapia inhalada sola (Opción D) es el pilar de mantenimiento ambulatorio, no el manejo agudo de una exacerbación grave con caída del VEF1.",
+    explanation: "La paciente cursa con una exacerbación pulmonar aguda en el contexto de una Fibrosis Quística (FQ) con colonización crónica confirmada por *Pseudomonas aeruginosa*. Las guías de la Cystic Fibrosis Foundation (CFF) establecen categóricamente que, para tratar una exacerbación aguda en un paciente colonizado por *Pseudomonas*, el tratamiento de elección EXIGE una terapia combinada intravenosa con **dos** antibióticos de diferentes clases con actividad antipseudomónica (terapia dual). Esto se realiza para asegurar un efecto bactericida sinérgico y, fundamentalmente, para prevenir la aparición in vivo de cepas extremadamente resistentes. La combinación clásica recomendada es un beta-lactámico antipseudomónico (Ceftazidima, Cefepime, Meropenem o Piperacilina-Tazobactam) asociado a un aminoglucósido (Tobramicina o Amikacina).",
     keyPoints: [
       "Niño/adulto con Fibrosis Quística colonizado por *Pseudomonas aeruginosa*.",
       "Cuadro clínico de exacerbación pulmonar infecciosa aguda.",
       "Terapia intravenosa DUAL obligatoria antipseudomónica (ej. Ceftazidima + Aminoglucósido). La monoterapia está proscrita en exacerbaciones severas de FQ.",
       "Tema: Fibrosis Quística / Exacerbación Pulmonar."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica porque evalúa la prevención de resistencia bacteriana en exacerbaciones pulmonares de FQ.
+
+La clave no es iniciar antibiótico de amplio espectro en monoterapia.
+La clave es:
+Terapia combinada intravenosa con dos antipseudomónicos de diferentes clases en pacientes con FQ colonizados por Pseudomonas.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Fibrosis Quística con mutación F508del.
+• Exacerbación aguda: caída del VEF1, esputo purulento, tos.
+• Colonización crónica por Pseudomonas aeruginosa mucoide.
+
+¿Por qué la opción B es la respuesta correcta?
+La combinación de Ceftazidima (beta-lactámico antipseudomónico) más Tobramicina (aminoglucósido) asegura un efecto sinérgico y previene la rápida resistencia que surge durante el tratamiento agudo hospitalario de cepas formadoras de biopelículas.
+
+¿Por qué NO cefepime en monoterapia?
+En la Fibrosis Quística, la Pseudomonas vive protegida bajo una biopelícula (biofilm) espesa de alginato. Si usas monoterapia, las bacterias mutarán sus porinas en menos de 48 horas creando cepas multirresistentes inmanejables. La monoterapia está proscrita en exacerbaciones severas de FQ.
+
+¿Por qué NO levofloxacino oral?
+Las quinolonas orales están reservadas para exacerbaciones muy leves de manejo estrictamente ambulatorio sin compromiso de la función pulmonar. Con caída del VEF1, se requiere la potencia de la vía intravenosa.
+
+¿Por qué NO tobramicina inhalada exclusiva?
+La terapia inhalada es el pilar de mantenimiento ambulatorio para frenar la colonización, pero no alcanza la penetración alveolar profunda necesaria para resolver un episodio inflamatorio consolidativo agudo.
+
+¿Cuál es la trampa de examen?
+Muchos estudiantes piensan:
+"Cefepime es un antibiótico de muy amplio espectro, con eso bastará."
+Pero el dato decisivo es:
+En fibrosis quística colonizada, la Pseudomonas siempre requiere DOS mecanismos de acción diferentes durante una crisis grave (uno para la pared y otro intracelular).
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar paciente con FQ exacerbado y caída de función pulmonar.
+2. Confirmar antecedente de colonización por Pseudomonas.
+3. Iniciar manejo intrahospitalario intravenoso.
+4. Prescribir obligatoriamente DOBLE terapia antipseudomónica (Beta-lactámico + Aminoglucósido).
+
+Perlas de examen
+✅ FQ con caída de VEF1 = Exacerbación aguda grave = Manejo IV hospitalario.
+✅ Exacerbación por Pseudomonas = Siempre terapia combinada doble.
+✅ Monoterapia intravenosa antipseudomónica = Fracaso garantizado en FQ.
+✅ Tratamiento inhalado = Mantenimiento, NUNCA manejo de crisis aguda.
+
+Referencias
+• Cystic Fibrosis Foundation Pulmonary Exacerbations Guidelines.
+• Nelson Textbook of Pediatrics.
+• UpToDate: Treatment of acute pulmonary exacerbations in cystic fibrosis.`
   },
   {
     id: "ucc-conv-2025-07-19-25",

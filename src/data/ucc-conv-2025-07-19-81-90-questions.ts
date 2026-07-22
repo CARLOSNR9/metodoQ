@@ -1,4 +1,4 @@
-﻿import type { TrainingQuestion } from "@/lib/questions/types";
+import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
  * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #81”“#90.
@@ -361,13 +361,63 @@ export const UCC_CONV_2025_07_19_81_90_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "La paciente cursa con Artritis Idiopática Juvenil (AIJ) variedad Oligoarticular (afecta â‰¤ 4 articulaciones en los primeros 6 meses). A diferencia de los adultos, el gran peligro oculto de las niñas preescolares con AIJ Oligoarticular y **Anticuerpos Antinucleares (ANA) positivos** no es la destrucción ósea severa, sino el desarrollo de **Uveítis Anterior Crónica NO granulomatosa**. Esta inflamación del ojo es engañosa porque cursa típicamente de forma COMPLETAMENTE ASINTOMÁTICA (ojo blanco, indoloro, sin fotofobia). Sin embargo, si no se detecta y se trata tempranamente con esteroides oftálmicos, el daño inflamatorio silencioso provocará sinequias (adherencias del iris), cataratas secundarias, glaucoma y, finalmente, ceguera bilateral irreversible. Las guías reumatológicas internacionales exigen que todo niño con AIJ Oligoarticular ANA (+) sea evaluado con Lámpara de Hendidura por el oftalmólogo cada 3 meses durante los primeros años de la enfermedad.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Pura medicina preventiva fina, Colega. La mamá viene asustada porque la niña cojea. El problema articular de la AIJ Oligoarticular casi siempre remite muy bien con AINEs o infiltraciones, la niña no perderá la pierna. Pero si tú (el pediatra) no agendas la cita con el oftalmólogo hoy mismo, la niña perderá la vista de por vida, porque la uveítis de la AIJ no enrojece el ojo como la uveítis del adulto. El ojo se ve blanco y sano por fuera, pero por dentro el iris se está fusionando al cristalino (sinequias posteriores). El ANA positivo es el marcador estadístico infalible que te grita \"este ojo corre peligro\".",
+    explanation: "La paciente cursa con Artritis Idiopática Juvenil (AIJ) variedad Oligoarticular (afecta ≤ 4 articulaciones en los primeros 6 meses). A diferencia de los adultos, el gran peligro oculto de las niñas preescolares con AIJ Oligoarticular y **Anticuerpos Antinucleares (ANA) positivos** no es la destrucción ósea severa, sino el desarrollo de **Uveítis Anterior Crónica NO granulomatosa**. Esta inflamación del ojo es engañosa porque cursa típicamente de forma COMPLETAMENTE ASINTOMÁTICA (ojo blanco, indoloro, sin fotofobia). Sin embargo, si no se detecta y se trata tempranamente con esteroides oftálmicos, el daño inflamatorio silencioso provocará sinequias (adherencias del iris), cataratas secundarias, glaucoma y, finalmente, ceguera bilateral irreversible. Las guías reumatológicas internacionales exigen que todo niño con AIJ Oligoarticular ANA (+) sea evaluado con Lámpara de Hendidura por el oftalmólogo cada 3 meses durante los primeros años de la enfermedad.",
     keyPoints: [
       "Niña preescolar (<6 años) con inflamación de 1 a 4 articulaciones (clásico rodilla/tobillo), típicamente indolora.",
       "ANA Positivos, FR Negativo (AIJ Oligoarticular clásica).",
       "Riesgo elevadísimo de Uveítis Anterior Asintomática. La evaluación con Lámpara de Hendidura por oftalmología es mandatoria para evitar la ceguera.",
       "Tema: Artritis Idiopática Juvenil / Complicaciones Oftalmológicas."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica porque evalúa la complicación más grave y silenciosa de la AIJ.
+
+La clave no es preocuparse excesivamente por el daño articular.
+La clave es:
+Evaluación rutinaria oftalmológica obligatoria con lámpara de hendidura en niñas con AIJ oligoarticular y ANA positivo.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Niña preescolar de 3 años.
+• Mono u oligoartritis crónica (rodilla y tobillo), indolora.
+• Factor reumatoide negativo y ANA fuertemente positivos.
+• Diagnóstico establecido de AIJ variedad oligoarticular.
+
+¿Por qué la opción B es la respuesta correcta?
+El gran peligro de la AIJ Oligoarticular ANA (+) es el desarrollo de Uveítis Anterior Crónica, que es COMPLETAMENTE asintomática. Remitir urgentemente a oftalmología es la única forma de diagnosticarla tempranamente y evitar la ceguera irreversible.
+
+¿Por qué NO Nefrología Pediátrica?
+Aunque los ANA son positivos, el Lupus Eritematoso Sistémico (LES) pediátrico debuta con nefritis, citopenias, rash y compromiso sistémico grave. La paciente tiene una enfermedad articular aislada y sana en todos los demás aspectos, descartando nefropatía lúpica por ahora.
+
+¿Por qué NO Cardiología Pediátrica?
+La fiebre reumática causa poliartritis migratoria hiperaguda, carditis y reactantes de fase aguda elevadísimos. No cursa con ANA positivos ni oligoartritis indolente de meses de duración.
+
+¿Por qué NO Ortopedia Infantil?
+El lavado articular está indicado en artritis séptica comprobada, no en enfermedad autoinmune. La AIJ se maneja con inmunosupresión o esteroides locales, no con intervenciones quirúrgicas agresivas.
+
+¿Cuál es la trampa de examen?
+Muchos estudiantes asumen que, como los ANA están positivos, el diagnóstico oculto es un Lupus.
+Pero el dato decisivo es:
+En una niña de 3 años, ANA (+) asociados a una artritis leve y prolongada en la rodilla indican el mayor riesgo estadístico para presentar ceguera por uveítis silenciosa.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Confirmar diagnóstico de AIJ oligoarticular (≤4 articulaciones).
+2. Solicitar Anticuerpos Antinucleares (ANA).
+3. Si los ANA son POSITIVOS, clasificar a la paciente como de "Alto Riesgo".
+4. Referir inmediatamente a Oftalmología para examen con lámpara de hendidura cada 3-4 meses.
+5. Iniciar tratamiento inmunosupresor o esteroides oftálmicos si se detecta uveítis silenciosa.
+
+Perlas de examen
+✅ Niña + AIJ Oligoarticular + ANA (+) = Riesgo MÁXIMO de uveítis asintomática.
+✅ La uveítis de la AIJ es la única que NO enrojece el ojo (ojo blanco indoloro).
+✅ ANA positivo en este contexto no significa Lupus, significa "ojo en peligro".
+✅ El pronóstico de movilidad articular en la AIJ oligoarticular es excelente, el pronóstico visual es el que debe preocupar.
+
+Referencias
+• ACR Guidelines for the Treatment of JIA and JIA-Associated Uveitis.
+• Nelson Textbook of Pediatrics.
+• Cassidy JT, Petty RE. Textbook of Pediatric Rheumatology.`
   },
   {
     id: "ucc-conv-2025-07-19-89",

@@ -1,4 +1,4 @@
-﻿import type { TrainingQuestion } from "@/lib/questions/types";
+import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
  * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #51”“#60.
@@ -450,13 +450,63 @@ export const UCC_CONV_2025_07_19_51_60_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "La paciente presenta un \"Incidentaloma Suprarrenal\". A pesar de su carácter incidental (descubierto por estudios de otra causa) y su aparente benignidad radiológica (tumor < 4 cm con baja atenuación < 10 Unidades Hounsfield, indicativo de tejido rico en lípidos típico del adenoma benigno), las guías de la Sociedad Europea de Endocrinología (ESE) y la Endocrine Society exigen una evaluación funcional hormonal OBLIGATORIA para TODO tumor adrenal > 1 cm, sea sintomático o no. El cribado inicial mandatorio para toda masa incluye excluir hipercortisolismo autónomo subclínico (prueba de supresión con 1 mg de Dexametasona) y excluir feocromocitoma silente (Metanefrinas libres en plasma o fraccionadas en orina de 24h). El estudio del eje renina-aldosterona (ARR) solo es obligatorio si la paciente asocia hipertensión o hipokalemia.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** El incidentaloma suprarrenal tiene dos preguntas vitales: \"¿Es cáncer?\" y \"¿Produce hormonas?\". Lo de si es cáncer te lo responde el tomógrafo: los adenomas benignos están llenos de grasa, y la grasa en la TAC es \"oscura\", por lo que marcan menos de 10 Unidades Hounsfield (HU). Si tiene 8 HU, te quedas tranquila por ese lado. Pero la segunda pregunta te obliga a pincharle la vena a la paciente. Hasta el 10% de estos tumores benignos producen cortisol \"de a poquitos\" (Síndrome de Cushing subclínico) que no te engorda pero te desbarata los huesos y te infarta en silencio. NUNCA ordenes una biopsia (Opción A) en un tumor suprarrenal sin antes descartar feocromocitoma; la aguja apretará el tumor y disparará catecolaminas causando la muerte del paciente en el tomógrafo.",
+    explanation: "La paciente presenta un \"Incidentaloma Suprarrenal\". A pesar de su carácter incidental (descubierto por estudios de otra causa) y su aparente benignidad radiológica (tumor < 4 cm con baja atenuación < 10 Unidades Hounsfield, indicativo de tejido rico en lípidos típico del adenoma benigno), las guías de la Sociedad Europea de Endocrinología (ESE) y la Endocrine Society exigen una evaluación funcional hormonal OBLIGATORIA para TODO tumor adrenal > 1 cm, sea sintomático o no. El cribado inicial mandatorio para toda masa incluye excluir hipercortisolismo autónomo subclínico (prueba de supresión con 1 mg de Dexametasona) y excluir feocromocitoma silente (Metanefrinas libres en plasma o fraccionadas en orina de 24h). El estudio del eje renina-aldosterona (ARR) solo es obligatorio si la paciente asocia hipertensión o hipokalemia.",
     keyPoints: [
       "Masa Suprarrenal diagnosticada por incidentalidad (por otra razón clínica).",
       "Paciente sin sintomatología metabólica (normotenso, no obeso).",
       "Regla de oro: Todo Incidentaloma Suprarrenal debe estudiarse hormonalmente (Cushing y Feocromocitoma por protocolo básico; Aldosterona solo si hay HTA o hipokalemia). La biopsia es la última y rara opción.",
       "Tema: Endocrinología / Incidentaloma Suprarrenal."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica porque evalúa el abordaje diagnóstico obligatorio de todo tumor adrenal mayor a 1 cm.
+
+La clave no es ignorar el tumor por ser asintomático.
+La clave es:
+Excluir hipercortisolismo autónomo (Cushing subclínico) y feocromocitoma obligatoriamente antes de cualquier procedimiento.
+
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Masa suprarrenal descubierta incidentalmente (incidentaloma).
+• Apariencia benigna en TAC (8 Unidades Hounsfield indican contenido graso típico de adenoma).
+• Asintomática y normotensa (PA 118/72 mmHg).
+• Sin datos de hipokalemia o síndrome de Cushing clínico.
+
+¿Por qué la opción B es la respuesta correcta?
+Todo incidentaloma adrenal requiere descartar hipercortisolismo (Test de supresión con dexametasona) y feocromocitoma (Metanefrinas), independiente de los síntomas, ya que un porcentaje produce hormonas de forma silente.
+
+¿Por qué NO vigilancia expectante?
+El incidentaloma suprarrenal tiene dos preguntas vitales: "¿Es cáncer?" y "¿Produce hormonas?". La TAC responde la primera (es benigno por sus <10 HU), pero la segunda te obliga a evaluar la funcionalidad hormonal para evitar infartos u osteoporosis silentes.
+
+¿Por qué NO medición de Aldosterona-Renina (ARR)?
+El tamizaje para hiperaldosteronismo primario (Síndrome de Conn) solo se exige si la paciente asocia Hipertensión Arterial o Hipokalemia. Si es normotensa, se puede obviar de forma segura.
+
+¿Por qué NO biopsia percutánea?
+NUNCA ordenes una biopsia en un tumor suprarrenal sin antes descartar feocromocitoma. La aguja apretará el tumor y, si resulta ser un feocromocitoma, disparará una tormenta de catecolaminas causando crisis hipertensiva fatal en el tomógrafo.
+
+¿Cuál es la trampa de examen?
+Muchos estudiantes asumen que si un tumor radiológicamente benigno no da síntomas, el manejo es simplemente observarlo.
+Pero el dato decisivo es:
+Una lesión benigna grasa puede ser endocrinológicamente activa (Cushing subclínico) y debe descartarse su funcionalidad.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Identificar el incidentaloma suprarrenal.
+2. Evaluar riesgo de malignidad por imagen (Tamaño >4 cm o atenuación >10 HU sugieren malignidad).
+3. Solicitar cribado hormonal BÁSICO OBLIGATORIO: Dexametasona 1 mg y metanefrinas.
+4. Solicitar cribado EXTENDIDO (ARR) solo si hay HTA o hipokalemia.
+5. Evitar la biopsia a menos que haya sospecha fuerte de metástasis y se haya descartado feocromocitoma.
+
+Perlas de examen
+✅ Incidentaloma adrenal = Medir siempre Dexametasona 1 mg y Metanefrinas.
+✅ Atenuación < 10 HU en TAC simple = Adenoma benigno (rico en lípidos).
+✅ Nunca realizar biopsia suprarrenal sin descartar feocromocitoma.
+✅ Aldosterona solo se evalúa si hay HTA o hipokalemia.
+
+Referencias
+• Endocrine Society Clinical Practice Guidelines on the Management of Adrenal Incidentalomas.
+• European Society of Endocrinology (ESE) Guidelines.
+• Harrison's Principles of Internal Medicine.`
   }
 ];
 
