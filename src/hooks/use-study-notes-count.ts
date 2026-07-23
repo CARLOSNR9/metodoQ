@@ -1,6 +1,6 @@
 "use client";
 
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, getCountFromServer } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { getFirebaseDb } from "@/lib/firebase";
 
@@ -13,13 +13,21 @@ export function useStudyNotesCount(userId: string | undefined) {
       return;
     }
 
+    let isMounted = true;
     const notesRef = collection(getFirebaseDb(), "users", userId, "studyNotes");
+    
+    getCountFromServer(notesRef).then((snapshot) => {
+      if (isMounted) {
+        setCount(snapshot.data().count);
+      }
+    }).catch(err => {
+      console.error("Error fetching study notes count:", err);
+      if (isMounted) setCount(0);
+    });
 
-    return onSnapshot(
-      notesRef,
-      (snapshot) => setCount(snapshot.size),
-      () => setCount(0),
-    );
+    return () => {
+      isMounted = false;
+    };
   }, [userId]);
 
   return count;
