@@ -25,7 +25,7 @@ export const DR_Q_MULTISPECIALTY_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation:
-      "Obesidad (IMC 32.9) con DM2 severamente descontrolada (HbA1c 13.5%) pese a tratamiento médico intensivo (insulina basal-bolo, ADO, GLP-1) y ganancia de peso. Indicación de cirugía metabólica según recomendaciones actuales (IMC 30-34.9 + DM2 refractaria).",
+      "La paciente presenta una DM2 severamente descontrolada (HbA1c 13.5%) con un IMC de 32.9 kg/m², a pesar de recibir tratamiento médico intensivo documentado (insulina basal-bolo, antidiabéticos orales, y un agonista GLP-1 semanal). Las guías recomiendan la cirugía metabólica/bariátrica como el paso a seguir ante el fracaso terapéutico en este escenario.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Ajustar solo insulina): Seguir aumentando la insulina empeorará la ganancia ponderal sin resolver la resistencia a la insulina de base, ignorando el fracaso terapéutico global.\n• Opción C (Aumentar dosis de GLP-1): La paciente ya recibe un análogo GLP-1 semanal y su descontrol persiste masivamente (HbA1c 13.5%). Escalar farmacológicamente cuando ya hay fracaso documentado retrasa la cirugía, que es más efectiva en este punto.\n• Opción D (Optimizar medidas no farmacológicas): Ha tenido más de 3 meses de polifarmacia óptima sin respuesta; insistir en la dieta y ejercicio de forma aislada, obviando el fracaso farmacológico, es insuficiente.",
     keyPoints: [
       "Cuando veas: IMC ≥30 + DM2 con HbA1c muy elevada pese a tratamiento médico intensivo (insulina, ADO, GLP-1) y ganancia de peso.",
       "Debes pensar en: fracaso terapéutico documentado → remisión a cirugía bariátrica/metabólica.",

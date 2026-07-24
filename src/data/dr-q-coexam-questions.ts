@@ -7192,81 +7192,38 @@ Referencias
       { id: "D", label: "D", text: "Glaucoma congénito." },
     ],
     correctOptionId: "B",
-    explanation: "La leucocoria (ausencia del reflejo rojo) en un niño pequeño debe considerarse retinoblastoma hasta demostrar lo contrario. Es el tumor intraocular maligno más frecuente de la infancia y constituye una urgencia diagnóstica.",
+    explanation: "La presencia de leucocoria (ausencia del reflejo rojo u \"ojo de gato\") en un paciente pediátrico es indicativa de retinoblastoma, el tumor intraocular maligno más frecuente de la infancia, hasta demostrar lo contrario. Requiere remisión urgente a oftalmología pediátrica para estudio imagenológico.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Estrabismo convergente): Aunque el estrabismo puede ser el segundo signo de presentación del retinoblastoma, por sí solo no explica la leucocoria evidente al tamizaje.\n• Opción C (Catarata congénita): Es un diagnóstico diferencial válido de leucocoria, pero en contextos de examen, la asociación clásica de \"ojo de gato\" en un lactante sano está dirigida invariablemente a descartar retinoblastoma.\n• Opción D (Glaucoma congénito): Clínicamente se manifiesta con la tríada clásica de epífora (lagrimeo), fotofobia y blefaroespasmo, acompañado de buftalmos (ojo grande) y opacidad corneal, no como leucocoria aislada.",
     keyPoints: [
       "Cuando veas: Leucocoria. \"Ojo de gato\". Ausencia de reflejo rojo. Niño pequeño.",
       "Debes pensar en: Retinoblastoma.",
       "Tema: Retinoblastoma.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa una de las urgencias oftalmológicas pediátricas más importantes.
-La clave no es el entropión.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica que evalúa una de las urgencias oncológicas y oftalmológicas más críticas en pediatría.
+
+La clave no es dudar entre las múltiples causas de leucocoria.
 La clave es:
-La leucocoria.
+Interiorizar el dogma médico de que "Leucocoria en niño = Retinoblastoma hasta demostrar lo contrario".
+
 ¿Qué está ocurriendo realmente?
-La madre describe:
-"El ojo como el de un gato."
-Y el examen confirma:
-Ausencia del reflejo rojo.
-Esto corresponde a:
-Leucocoria.
-¿Cuál es la causa más importante que debe descartarse?
-Retinoblastoma.
-Siempre que aparezca en un examen:
-Leucocoria = Retinoblastoma hasta demostrar lo contrario.
-¿Por qué?
-Porque es:
-El tumor intraocular maligno más frecuente en la infancia.
-¿Cuál es la edad típica?
-Generalmente:
-Menores de 5 años.
-Especialmente:
-Entre 1 y 3 años.
-¿Cuál es la manifestación más frecuente?
-• Leucocoria.
-• Estrabismo.
-¿Cuál es el siguiente paso?
-Remisión urgente a oftalmología pediátrica y estudio imagenológico ocular.
-¿Por qué NO es catarata congénita?
-También puede producir leucocoria.
-Sin embargo:
-En los exámenes la asociación clásica "ojo de gato" corresponde a retinoblastoma.
-¿Por qué NO es glaucoma congénito?
-Produce típicamente:
-• Epífora.
-• Fotofobia.
-• Buftalmos.
-No leucocoria.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Entropión."
-Y se distraen.
-Sin embargo:
-El dato decisivo es:
-La ausencia del reflejo rojo.
-Esto orienta inmediatamente a:
-Retinoblastoma.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar leucocoria.
-2.	Sospechar retinoblastoma.
-3.	Realizar valoración oftalmológica urgente.
-4.	Solicitar ecografía ocular e imágenes complementarias.
-5.	Confirmar el diagnóstico y estadificar.
+Durante la evaluación del reflejo rojo (prueba de Brückner), la luz del oftalmoscopio debe reflejarse en la retina vascularizada, emitiendo un brillo rojo-anaranjado. Cuando existe una masa tumoral blanquecina ocupando el espacio vítreo o retiniano (como en el retinoblastoma), la luz se refleja sobre esta masa, generando una pupila blanca o "leucocoria" (descrita por los padres como "ojo de gato amaurótico"). 
+Al tratarse del tumor maligno intraocular primario más frecuente en menores de 5 años, su detección temprana es vital para salvar la vida y el globo ocular del paciente.
+
+¿Cuál es la trampa del examen?
+El distractor más frecuente es la catarata congénita. Si bien la catarata da leucocoria, el abordaje en el ENAM/MIR/exámenes de residencia siempre penalizará a quien no piense primero en el retinoblastoma, debido a su letalidad si no se diagnostica a tiempo.
+
 Perlas de examen
-✅ La leucocoria es el signo más frecuente del retinoblastoma.
-✅ El estrabismo es la segunda forma de presentación más común.
-✅ Nunca debe realizarse biopsia intraocular por riesgo de diseminación.
-✅ La ecografía ocular suele ser el primer estudio de imagen.
-✅ El retinoblastoma deriva de células retinianas primitivas.
-✅ La mutación del gen RB1 se asocia a formas hereditarias.
-✅ Toda leucocoria en pediatría es una urgencia diagnóstica.
+✅ Signo de presentación #1 del retinoblastoma: Leucocoria (reflejo blanco).
+✅ Signo de presentación #2 del retinoblastoma: Estrabismo (ojo desviado por la pérdida de fijación visual).
+✅ El retinoblastoma se asocia a la mutación del gen supresor de tumores RB1 (cromosoma 13q14).
+✅ Nunca debe realizarse biopsia con aguja de un retinoblastoma sospechoso por el altísimo riesgo de siembra tumoral extraocular. Se diagnostica clínicamente y por imagen (ecografía ocular / RM).
+✅ Tríada del glaucoma congénito: Epífora, fotofobia, buftalmos (no leucocoria).
+
 Referencias
 • Nelson Textbook of Pediatrics.
 • American Academy of Ophthalmology.
-• Shields' Retinoblastoma.
-• UpToDate: Retinoblastoma.
-• American Academy of Pediatrics Visual Screening Guidelines.`,
+• UpToDate: Retinoblastoma.`,
   },
   {
     id: "dr-q-234",
@@ -7529,80 +7486,36 @@ Referencias
       { id: "D", label: "D", text: "Suspender toda intervención y explicar que es un efecto esperado." },
     ],
     correctOptionId: "B",
-    explanation: "El sangrado uterino irregular es el efecto adverso más frecuente de los implantes de progestágeno. Cuando la paciente desea continuar con el método y se han descartado otras causas, puede realizarse tratamiento médico temporal con estrógenos o anticonceptivos combinados para mejorar el patrón de sangrado.",
+    explanation: "El sangrado uterino irregular es el efecto adverso más frecuente de los implantes de progestágeno. Si se han descartado otras causas patológicas y la paciente desea continuar con el método anticonceptivo, la conducta adecuada es ofrecer manejo médico temporal (estrógenos o anticonceptivos orales combinados) para estabilizar el endometrio y mejorar el patrón de sangrado.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Retirar implante): Solo se justificaría si la paciente solicitara explícitamente su retiro tras la consejería o si hubiera contraindicación, pero ella manifiesta su deseo de conservarlo.\n• Opción C (Legrado uterino): Es un procedimiento invasivo no justificado en mujeres jóvenes sin signos de alarma, anemia severa o factores de riesgo de hiperplasia endometrial.\n• Opción D (Suspender intervención): Aunque es un efecto esperado, ignorar el impacto en su calidad de vida lleva al fracaso del método y a la insatisfacción de la paciente.",
     keyPoints: [
       "Cuando veas: Implante subdérmico. Sangrado irregular persistente. Paciente desea conservar el método. Sin signos de alarma.",
       "Debes pensar en: Manejo médico del sangrado asociado al implante.",
       "Tema: Anticoncepción hormonal.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa uno de los efectos adversos más frecuentes de los implantes anticonceptivos.
-La clave no es el sangrado.
-La clave es:
-Que la paciente desea continuar con el método.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de anticoncepción que evalúa el manejo de efectos adversos y la retención de métodos de larga duración (LARC).
+
+La clave de este caso no es centrarse únicamente en los "5 meses de sangrado", sino leer con atención un dato fundamental: "la paciente desea continuar utilizando el método".
+
 ¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Sangrado irregular prolongado.
-• Uso de implante de solo progestágeno.
-• Ausencia de anemia.
-• Examen normal.
-Esto corresponde a:
-Sangrado uterino asociado al implante.
-¿Cuál es el manejo inicial?
-Luego de descartar:
-• Embarazo.
-• Infección.
-• Patología estructural.
-Puede ofrecerse:
-• Anticonceptivo oral combinado por corto tiempo.
-• Estrógenos.
-• Algunos protocolos utilizan AINEs.
-¿Qué se busca?
-Estabilizar el endometrio.
-Y disminuir:
-Los episodios de sangrado irregular.
-¿Por qué NO retirar el implante?
-Porque:
-La paciente desea conservarlo.
-Además:
-La mayoría mejora con manejo médico.
-¿Por qué NO realizar legrado?
-No existe:
-Sangrado severo ni sospecha de patología endometrial.
-¿Por qué NO limitarse a observar?
-Porque:
-El sangrado está afectando significativamente su calidad de vida.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"5 meses de sangrado."
-Y responden:
-Retirar el implante.
-Sin embargo:
-El dato decisivo es:
-La paciente desea continuar el método.
-Esto orienta a:
-Tratamiento médico antes de retirarlo.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Confirmar que el sangrado es secundario al implante.
-2.	Descartar otras causas.
-3.	Evaluar impacto clínico.
-4.	Ofrecer manejo farmacológico.
-5.	Mantener el método si la paciente lo desea.
+El implante subdérmico de levonorgestrel (solo progestina) produce un endometrio decidualizado y atrófico, lo que genera fragilidad vascular superficial y, en consecuencia, un patrón de sangrado irregular, prolongado o manchado (spotting). Este es el motivo principal por el que las usuarias abandonan el método. Al confirmar que la paciente está estable, no tiene anemia, ni factores de riesgo adicionales (descartando embarazo o ITS), el objetivo terapéutico es estabilizar ese endometrio.
+Para lograrlo, los protocolos recomiendan ciclos cortos de estrógenos, anticonceptivos orales combinados o, en algunos casos, AINEs (como ibuprofeno o ácido mefenámico).
+
+¿Cuál es la trampa del examen?
+Muchos médicos ven a una paciente molesta por sangrado y su reflejo automático es "retirar el dispositivo" (Opción A). El examen evalúa tu capacidad de ofrecer opciones terapéuticas antes de rendirte y retirar un anticonceptivo altamente eficaz en una paciente que desea conservarlo.
+
 Perlas de examen
-✅ El sangrado irregular es el efecto adverso más frecuente de los implantes.
-✅ No disminuye la eficacia anticonceptiva.
-✅ Los anticonceptivos combinados pueden utilizarse temporalmente para controlar el sangrado.
-✅ Los AINEs también pueden ser útiles en algunos casos.
-✅ El retiro del implante no es la primera medida si la paciente desea conservarlo.
-✅ Siempre debe descartarse embarazo antes de atribuir el sangrado al método.
-✅ La consejería adecuada mejora la adherencia al implante.
+✅ Sangrado irregular = Efecto adverso #1 de los implantes subdérmicos (y motivo #1 de abandono).
+✅ El manejo de primera línea (si desea conservar el implante y se descartan causas orgánicas) son los anticonceptivos combinados, estrógenos orales o AINEs por corto tiempo.
+✅ Retirar el implante se reserva para cuando el manejo médico falla o la paciente lo exige a pesar de la consejería.
+✅ El sangrado inducido por el implante no altera la protección anticonceptiva.
+
 Referencias
 • WHO Family Planning Handbook.
 • CDC U.S. Selected Practice Recommendations for Contraceptive Use.
 • ACOG Long-Acting Reversible Contraception Guidelines.
-• Williams Gynecology.
-• UpToDate: Management of Bleeding Irregularities with Progestin-Only Contraceptives.`,
+• Williams Gynecology.`,
   },
   {
     id: "dr-q-238",
@@ -7710,87 +7623,36 @@ Referencias
       { id: "D", label: "D", text: "Crisis mioclónica; ácido valproico." },
     ],
     correctOptionId: "B",
-    explanation: "La presencia de desconexión del medio, automatismos orales y período posictal confusional es altamente sugestiva de una crisis focal con alteración de la conciencia, frecuentemente originada en el lóbulo temporal.",
+    explanation: "El cuadro clínico de desconexión del medio, asociado a automatismos orales repetitivos (masticación/chupeteo) y un período confusional posterior al evento (estado posictal) es la presentación patognomónica de una crisis focal con alteración de la conciencia (focal compleja), originada más frecuentemente en el lóbulo temporal. El tratamiento antiepiléptico de elección actual suele incluir fármacos como el levetiracetam, carbamazepina o lamotrigina.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Crisis de ausencia): Las ausencias duran escasos segundos (no minutos) y NO tienen confusión posictal (el paciente retoma la actividad inmediatamente). Además, no suelen presentar automatismos orales tan marcados y son más frecuentes en escolares.\n• Opción C (Crisis tónico-clónica generalizada): Se descarta inmediatamente por la falta de componentes motores masivos (sacudidas bilaterales, fase tónica de rigidez y relajación de esfínteres).\n• Opción D (Crisis mioclónica): Se caracterizan por sacudidas súbitas y breves (fracciones de segundo) en uno o varios grupos musculares, conservando generalmente la conciencia.",
     keyPoints: [
       "Cuando veas: Mirada fija. Automatismos orales. Duración de minutos. Confusión posictal.",
       "Debes pensar en: Crisis focal con alteración de la conciencia.",
       "Tema: Epilepsia focal.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el reconocimiento clínico de las crisis focales temporales.
-La clave no es la desconexión.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta fundamental en neurología, ya que evalúa la habilidad clínica para diferenciar los dos grandes simuladores: la crisis focal compleja vs. la crisis de ausencia.
+
+La clave no es solo leer "desconexión del entorno".
 La clave es:
-Los automatismos y la confusión posterior.
+Automatismos + Duración prolongada (minutos) + Estado de confusión posictal.
+
 ¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Desconexión del entorno.
-• Automatismos orales.
-• Mirada fija.
-• Estado posictal.
-Estos hallazgos son característicos de:
-Crisis focal con alteración de la conciencia.
-¿Dónde suelen originarse?
-Con mayor frecuencia en:
-Lóbulo temporal.
-¿Qué son los automatismos?
-Movimientos involuntarios repetitivos como:
-• Masticación.
-• Chasquido de labios.
-• Deglución.
-• Manipulación de objetos.
-Son muy característicos de:
-Epilepsia temporal.
-¿Cuál es el tratamiento de primera línea?
-Actualmente uno de los fármacos más utilizados como primera línea es:
-Levetiracetam.
-También pueden emplearse:
-• Lamotrigina.
-• Carbamazepina.
-¿Por qué NO es crisis de ausencia?
-Las ausencias típicamente:
-• Duran segundos.
-• No presentan período posictal.
-• Son más frecuentes en niños.
-¿Por qué NO es crisis tónico-clónica?
-No existen:
-• Sacudidas generalizadas.
-• Fase tónica.
-• Fase clónica.
-¿Por qué NO es crisis mioclónica?
-Las mioclonías son:
-Contracciones musculares breves.
-No producen automatismos ni confusión prolongada.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Desconexión del entorno."
-Y responden:
-Crisis de ausencia.
-Sin embargo:
-El dato decisivo es:
-La duración de varios minutos y la confusión posictal.
-Esto orienta a:
-Crisis focal con alteración de la conciencia.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar la alteración de conciencia.
-2.	Buscar automatismos.
-3.	Evaluar período posictal.
-4.	Reconocer origen focal temporal.
-5.	Iniciar tratamiento antiepiléptico.
+La paciente sufre un foco epiléptico hiperactivo, comúnmente ubicado en las estructuras mesiales del lóbulo temporal (hipocampo, amígdala). Al activarse, genera una interrupción de la conciencia. Durante la crisis, el paciente realiza movimientos involuntarios y estereotipados llamados automatismos (chupeteo, deglución, frotarse las manos). Dado que es una crisis más prolongada y con fuerte reclutamiento neuronal, el cerebro entra en un período de agotamiento y reestructuración posterior, lo que se manifiesta clínicamente como confusión o letargo (período posictal) durante varios minutos.
+
+¿Cuál es la trampa del examen?
+Poner a un paciente con "mirada fija y desconexión" hace que el estudiante sin entrenamiento responda "Crisis de ausencia". La trampa se desactiva con dos datos infalibles de la ausencia: duran segundos (no 3 minutos) y carecen por completo de período posictal. 
+
 Perlas de examen
-✅ Los automatismos orales sugieren epilepsia del lóbulo temporal.
-✅ La confusión posictal es típica de las crisis focales complejas.
-✅ Las ausencias no presentan período posictal.
-✅ Levetiracetam es una terapia de primera línea ampliamente utilizada.
-✅ La resonancia cerebral suele formar parte del estudio etiológico.
-✅ El EEG puede mostrar descargas focales temporales.
-✅ Las crisis focales son el tipo más frecuente de epilepsia en adultos.
+✅ Epilepsia del Lóbulo Temporal: Causa #1 de crisis focales con alteración de la conciencia en adultos.
+✅ Tríada de la crisis temporal: Aura (epigástrica/olfatoria) + Automatismos orales/manuales + Confusión posictal.
+✅ Crisis de Ausencia: Escolares + Duración <20 segundos + EEG con espiga-onda a 3 Hz + Ausencia de confusión posictal. Fármaco: Etosuximida.
+✅ Crisis Focales: Fármacos de primera línea = Levetiracetam, Lamotrigina, Carbamazepina.
+
 Referencias
-• Adams and Victor's Principles of Neurology.
-• Bradley's Neurology in Clinical Practice.
 • ILAE Classification of Seizures.
-• Harrison's Principles of Internal Medicine.
-• UpToDate: Focal Seizures in Adults.`,
+• Adams and Victor's Principles of Neurology.
+• Bradley's Neurology in Clinical Practice.`,
   },
   {
     id: "dr-q-240",

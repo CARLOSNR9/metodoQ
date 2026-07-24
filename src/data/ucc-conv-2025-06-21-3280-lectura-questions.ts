@@ -830,12 +830,38 @@ export const UCC_CONV_2025_06_21_3280_LECTURA_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation:
-      "Sin signos de deshidratación (lágrimas, mucosas húmedas, pliegue normal, bebe bien): Plan A con SRO post-deposición y continuar alimentación.",
+      "Un lactante con diarrea y mucosas húmedas, pliegue normal (<2 segundos), llora con lágrimas y sin pérdida de peso no presenta evidencia de deshidratación. Según la estrategia AIEPI/OMS, esto es indicación estricta de Plan A: manejo ambulatorio previniendo la deshidratación mediante el aumento de líquidos (SRO después de cada deposición líquida) y la continuación ininterrumpida de la alimentación habitual.\n\n¿Por qué se descartan las otras opciones?\n• Opción B (Plan C): Está reservado exclusivamente para pacientes con deshidratación grave o shock hipovolémico (letargia, ausencia de pulsos, pliegue >2 seg).\n• Opción C (Plan B): Se indica en niños que presentan *algún grado de deshidratación* (inquieto/irritable, ojos hundidos, sediento, pliegue lento pero <2 seg). Este niño no tiene ninguno.\n• Opción D (Ayuno prolongado): Práctica proscrita. Retrasar la alimentación perpetúa el daño de las microvellosidades intestinales y favorece la desnutrición.",
     keyPoints: [
       "Sin deshidratación → Plan A.",
       "Plan B: algún grado de deshidratación.",
       "Continuar alimentación en diarrea aguda.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta de pediatría de alta relevancia en atención primaria (guías AIEPI), diseñada para evaluar si sabes estadificar correctamente el estado de hidratación de un niño con enfermedad diarreica aguda.
+
+La clave no es preocuparse por el volumen de la diarrea.
+La clave es:
+Evaluar sistemáticamente los signos de deshidratación (estado de conciencia, ojos, lágrimas, sed y pliegue cutáneo).
+
+¿Qué está ocurriendo realmente?
+El niño está perdiendo líquidos por vía gastrointestinal, pero sus mecanismos de compensación y la ingesta oral actual son suficientes para mantener el equilibrio hídrico. El hecho de que esté alerta, tenga lágrimas, mucosas húmedas, y el pliegue retorne rápidamente significa que su déficit de volumen extracelular es mínimo (menor al 5% del peso corporal). 
+Como no está deshidratado, el objetivo no es rehidratar urgentemente, sino *prevenir* la deshidratación y la desnutrición. Eso es exactamente lo que busca el Plan A de la OMS.
+
+¿Cuál es la trampa del examen?
+Muchos se confunden con la indicación de "Sales de Rehidratación Oral (SRO)". Piensan que el SRO solo se usa en el Plan B. Sin embargo, en el Plan A, el SRO se utiliza para reponer las pérdidas *gota a gota*, administrándolo de forma profiláctica *después de cada deposición diarreica* (aprox. 50-100 mL en menores de 2 años).
+Otra trampa histórica (Opción D) es "dejar descansar el intestino" limitando la dieta. Las guías modernas ordenan mantener la dieta habitual para regenerar los enterocitos.
+
+Perlas de examen
+✅ Sin signos de deshidratación = Plan A (Aumentar líquidos, Continuar alimentación, Educar signos de alarma).
+✅ Algún grado de deshidratación (Inquieto, sediento, ojos hundidos, pliegue lento <2s) = Plan B (SRO 75 mL/kg en 4 horas en la sala de observación).
+✅ Deshidratación Grave (Letárgico, no puede beber, pliegue muy lento >2s, shock) = Plan C (Cristaloides IV urgentes: Lactato de Ringer o Solución Salina).
+✅ La lactancia materna NUNCA debe suspenderse durante los cuadros de diarrea.
+
+Referencias
+• Manual AIEPI - Organización Panamericana de la Salud (OPS).
+• Tratamiento de la Diarrea Clínica - OMS.
+• Nelson Textbook of Pediatrics.`,
   },
   {
     id: "ucc-conv-2025-06-21-98",
