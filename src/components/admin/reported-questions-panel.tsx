@@ -30,8 +30,21 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
   const router = useRouter();
 
   const visible = useMemo(() => {
-    if (filter === "all") return reports;
-    return reports.filter((report) => report.status === filter);
+    let list = reports;
+    if (filter !== "all") {
+      list = reports.filter((report) => report.status === filter);
+    }
+    
+    return [...list].sort((a, b) => {
+      if (filter === "reviewed" || filter === "dismissed") {
+        const timeA = a.updatedAt ? new Date(a.updatedAt).getTime() : new Date(a.createdAt).getTime();
+        const timeB = b.updatedAt ? new Date(b.updatedAt).getTime() : new Date(b.createdAt).getTime();
+        if (timeA !== timeB) return timeB - timeA;
+      }
+      const timeA = new Date(a.createdAt).getTime();
+      const timeB = new Date(b.createdAt).getTime();
+      return timeB - timeA;
+    });
   }, [filter, reports]);
 
   const codesList = useMemo(
