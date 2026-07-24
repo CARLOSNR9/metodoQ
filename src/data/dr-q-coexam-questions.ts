@@ -2345,93 +2345,34 @@ Referencias
       { id: "D", label: "D", text: "Realizar valoración quirúrgica urgente y herniorrafia de urgencia." },
     ],
     correctOptionId: "D",
-    explanation: "La paciente presenta una hernia inguinal encarcelada, definida por la imposibilidad de reducir el contenido herniario. Aunque aún no existen signos claros de estrangulación intestinal, el riesgo de progresión a compromiso vascular intestinal obliga a realizar manejo quirúrgico urgente.",
+    explanation: "La paciente presenta una hernia inguinal encarcelada (irreductible pero sin signos de isquemia aún). El manejo adecuado es la intervención quirúrgica de urgencia debido al elevadísimo riesgo de progresión a hernia estrangulada (compromiso vascular y necrosis intestinal).\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Reducción manual y egreso): Intentar reducir manualmente una hernia dolorosa e irreductible de 24 horas es peligroso; existe el riesgo de perforación iatrogénica o de realizar una \"reducción en masa\" (devolver a la cavidad un asa intestinal ya isquémica), lo cual puede ser fatal. Darle egreso sin cirugía es negligencia.\n• Opción B (Tomografía y observación): La tomografía contrastada retrasará el manejo quirúrgico en un cuadro clínico que ya tiene indicación quirúrgica urgente por la irreductibilidad. El tiempo es músculo/intestino.\n• Opción C (Cirugía electiva): Las cirugías electivas se reservan exclusivamente para hernias no complicadas (completamente reductibles y asintomáticas). Esta hernia está encarcelada y duele, lo que la convierte en una urgencia inminente.",
     keyPoints: [
       "Cuando veas: Masa inguinal. Dolor súbito. Hernia irreductible. Ausencia de signos peritoneales.",
       "Debes pensar en: Hernia encarcelada.",
       "Tema: Complicaciones de las hernias de la pared abdominal.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa las complicaciones agudas de las hernias abdominales.
-La clave no es el dolor.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de cirugía general y urgencias que evalúa tu capacidad para diferenciar una hernia no complicada de una urgencia quirúrgica inminente, y evitar manejos conservadores peligrosos.
+
+La clave no es enfocarse en la ausencia de "cambios de coloración".
 La clave es:
-La irreductibilidad.
-¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Masa inguinal.
-• Dolor agudo.
-• Imposibilidad para reducir la hernia.
-• Ausencia de datos de perforación.
-Esto corresponde a:
-Hernia encarcelada.
-¿Qué es una hernia encarcelada?
-Es aquella en la que:
-El contenido herniario queda atrapado fuera de la cavidad abdominal.
-Como consecuencia:
-No puede reducirse espontáneamente ni mediante maniobras simples.
-¿Por qué es una urgencia?
-Porque puede progresar hacia:
-Hernia estrangulada.
-Cuando esto ocurre aparece:
-• Compromiso vascular.
-• Isquemia intestinal.
-• Necrosis.
-• Perforación.
-Por ello:
-La corrección quirúrgica no debe retrasarse.
-¿Cuál es la diferencia entre encarcelamiento y estrangulación?
-Hernia encarcelada:
-• Irreductible.
-• Sin compromiso vascular demostrado.
-Hernia estrangulada:
-• Irreductible.
-• Isquemia intestinal.
-• Riesgo de necrosis.
-• Mayor urgencia quirúrgica.
-¿Qué hallazgos sugieren estrangulación?
-• Eritema local.
-• Cambios violáceos de la piel.
-• Fiebre.
-• Taquicardia.
-• Irritación peritoneal.
-• Obstrucción intestinal avanzada.
-Estos datos no aparecen en el caso.
-¿Por qué NO realizar observación?
-La irreductibilidad implica:
-Riesgo elevado de progresión a estrangulación.
-Retrasar el tratamiento aumenta la morbimortalidad.
-¿Por qué NO programar cirugía electiva?
-Las hernias reductibles pueden repararse electivamente.
-Sin embargo:
-Una hernia encarcelada requiere intervención urgente.
-¿Por qué NO dar egreso?
-La paciente presenta una complicación quirúrgica establecida.
-No es candidata a manejo ambulatorio.
-¿Cuál es la trampa de examen?
-Muchos estudiantes observan:
-"No hay cambios de coloración."
-Y concluyen:
-"No es urgente."
-Sin embargo:
-El dato decisivo es:
-La irreductibilidad de la hernia.
-Esto define:
-Hernia encarcelada y necesidad de cirugía urgente.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar la masa herniaria.
-2.	Determinar si es reductible.
-3.	Reconocer el encarcelamiento.
-4.	Buscar signos de estrangulación.
-5.	Realizar corrección quirúrgica urgente.
-Perlas de examen
-✅ La irreductibilidad define una hernia encarcelada.
-✅ La estrangulación implica compromiso vascular del contenido herniario.
-✅ Toda hernia encarcelada requiere valoración quirúrgica urgente.
-✅ Los cambios cutáneos sugieren progresión a estrangulación.
-✅ La demora terapéutica aumenta el riesgo de necrosis intestinal.
-✅ Las hernias reductibles suelen manejarse de forma electiva.
-✅ La evaluación temprana mejora el pronóstico quirúrgico.
+Masa inguinal + Dolor súbito + Irreductibilidad = Hernia Encarcelada = Intervención quirúrgica de urgencia.
+
+¿Qué está ocurriendo realmente en la fisiopatología?
+La paciente presenta una hernia inguinal cuyo contenido (epiplón o asas intestinales) ha quedado atrapado en el anillo herniario debido a un aumento de la presión intraabdominal, edematizándose y volviéndose irreductible. Esto es una **hernia encarcelada**. 
+Si esta situación no se resuelve quirúrgicamente de inmediato, el edema venoso progresará, comprimirá el flujo arterial y generará isquemia, necrosis y perforación del asa intestinal (cascada isquémica). Cuando esto ocurre, la hernia pasa a llamarse **hernia estrangulada**.
+La ausencia de cambios de coloración o signos peritoneales solo nos dice que *todavía* no hay estrangulación completa, pero el dolor y la irreductibilidad son los predictores inminentes de que ocurrirá si no se interviene.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes se confían al leer "No presenta cambios en la coloración de la piel suprayacente ni signos de perforación". Esto los lleva a elegir falsamente el manejo conservador o diferido (Opción A o C). En los exámenes (y en la vida real), la irreductibilidad aguda y dolorosa de una hernia constituye una urgencia quirúrgica *per se*, independientemente de si la piel aún luce normal. Retrasar la cirugía para pedir TACs o mandar al paciente a su casa es la ruta directa a una peritonitis fecal.
+
+Perlas de examen y práctica clínica:
+✅ Hernia Reductible: No complicada. Tratamiento: Herniorrafia electiva.
+✅ Hernia Encarcelada: Irreductible, dolorosa, *sin* compromiso vascular evidente aún. Tratamiento: Cirugía de Urgencia (horas).
+✅ Hernia Estrangulada: Irreductible + compromiso vascular (fiebre, eritema violáceo, taquicardia, leucocitosis, irritación peritoneal). Tratamiento: Cirugía de Emergencia absoluta + posible resección intestinal.
+✅ Nunca intentes reducir a la fuerza una hernia con signos de estrangulación o encarcelada de muchas horas de evolución; corres el riesgo de reducir un asa necrótica hacia el abdomen ("reducción en masa") y causar sepsis fulminante.
+
 Referencias
 • Schwartz's Principles of Surgery.
 • Sabiston Textbook of Surgery.
@@ -3349,101 +3290,41 @@ Referencias
       { id: "D", label: "D", text: "Iniciar clonazepam en monoterapia." },
     ],
     correctOptionId: "A",
-    explanation: "El paciente presenta un primer episodio psicótico compatible con esquizofrenia. El tratamiento inicial de elección consiste en antipsicóticos de segunda generación debido a su eficacia sobre los síntomas psicóticos y su mejor perfil de efectos adversos extrapiramidales.",
+    explanation: "El paciente presenta un cuadro agudo clásico de primer episodio psicótico con síntomas positivos (delirio de persecución, alucinaciones auditivas de comando) y negativos (aislamiento, deterioro del autocuidado) de más de 1 mes de evolución. El tratamiento de elección de primera línea farmacológica son los antipsicóticos atípicos (de segunda generación) como Risperidona, Olanzapina, Aripiprazol o Quetiapina. Estos bloquean los receptores D2 mesolímbicos controlando la psicosis, pero con un antagonismo 5HT2A que previene el extrapiramidalismo masivo de los típicos.\n\n¿Por qué se descartan las otras opciones?\n• Opción B (Sertralina): Es un inhibidor selectivo de la recaptación de serotonina (ISRS) para depresión y ansiedad. No tiene ninguna eficacia sobre las vías dopaminérgicas responsables de la psicosis.\n• Opción C (Litio): Es el gold standard para el trastorno bipolar, no para un primer episodio psicótico esquizofrénico aislado sin clínica afectiva mayor.\n• Opción D (Clonazepam): Es una benzodiacepina que puede usarse como adyuvante para controlar agitación psicomotriz extrema, pero en monoterapia no trata el síntoma psicótico de base, por lo tanto no es la terapia primaria.",
     keyPoints: [
       "Cuando veas: Alucinaciones auditivas. Delirios persecutorios. Pensamiento desorganizado. Afecto aplanado. Deterioro funcional.",
       "Debes pensar en: Esquizofrenia.",
       "Tema: Tratamiento inicial de la esquizofrenia.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el reconocimiento y tratamiento del primer episodio psicótico.
-La clave no es la agitación.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de psiquiatría porque evalúa el manejo inicial del síndrome psicótico y la farmacología básica.
+
+La clave no es usar benzodiacepinas para calmar al paciente.
 La clave es:
-La presencia de síntomas psicóticos positivos y negativos.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Alucinaciones auditivas.
-• Delirios persecutorios.
-• Pensamiento desorganizado.
-• Aislamiento social.
-• Afecto aplanado.
-• Deterioro funcional.
-Estos hallazgos son altamente sugestivos de:
-Esquizofrenia.
-¿Cuáles son los síntomas positivos?
-Los síntomas positivos corresponden a fenómenos que aparecen y no deberían estar presentes.
-Incluyen:
-• Alucinaciones.
-• Delirios.
-• Pensamiento desorganizado.
-• Conducta desorganizada.
-Este paciente presenta varios de ellos.
-¿Cuáles son los síntomas negativos?
-Los síntomas negativos corresponden a pérdida o disminución de funciones normales.
-Incluyen:
-• Afecto aplanado.
-• Aislamiento social.
-• Abulia.
-• Anhedonia.
-También están presentes en el caso.
-¿Cuál es el tratamiento inicial?
-Los antipsicóticos de segunda generación son el tratamiento de elección.
-Entre ellos:
-• Risperidona.
-• Olanzapina.
-• Quetiapina.
-• Aripiprazol.
-• Paliperidona.
-Estos medicamentos actúan principalmente mediante:
-Bloqueo dopaminérgico.
-¿Por qué NO utilizar sertralina?
-La sertralina es un antidepresivo.
-Está indicada para:
-• Depresión.
-• Trastornos de ansiedad.
-No controla adecuadamente:
-Los síntomas psicóticos.
-¿Por qué NO utilizar litio?
-El litio se utiliza principalmente en:
-• Trastorno bipolar.
-No constituye el tratamiento de primera línea para esquizofrenia.
-¿Por qué NO utilizar clonazepam?
-Las benzodiacepinas pueden ayudar a controlar:
-• Agitación.
-• Ansiedad.
-Sin embargo:
-No tratan la psicosis subyacente.
-¿Cuál es la trampa de examen?
-Muchos estudiantes observan:
-"Irritabilidad y agitación."
-Y responden:
-Benzodiacepinas.
-Sin embargo:
-El dato decisivo es:
-La presencia de alucinaciones auditivas y delirios persecutorios.
-Estos hallazgos definen:
-Psicosis.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar síntomas psicóticos.
-2.	Reconocer síntomas positivos y negativos.
-3.	Diagnosticar esquizofrenia.
-4.	Iniciar antipsicótico de segunda generación.
-5.	Realizar seguimiento psiquiátrico integral.
-Perlas de examen
-✅ Las alucinaciones auditivas son el síntoma psicótico más frecuente en esquizofrenia.
-✅ Los delirios persecutorios son una manifestación clásica.
-✅ El afecto aplanado corresponde a un síntoma negativo.
-✅ Los antipsicóticos de segunda generación son el tratamiento inicial de elección.
-✅ El deterioro funcional es fundamental para el diagnóstico.
-✅ Siempre debe descartarse consumo de sustancias como causa secundaria.
-✅ La intervención temprana mejora el pronóstico a largo plazo.
+Psicosis aguda (síntomas positivos prominentes) = Antipsicótico de Segunda Generación.
+
+¿Qué está ocurriendo realmente en la neurobiología?
+El paciente joven está experimentando el "brote" inicial de una esquizofrenia paranoide. Esto se explica por la **Teoría Dopaminérgica**:
+1. **Hiperactividad Mesolímbica:** El exceso de dopamina en esta vía genera los síntomas "positivos" (cosas que se agregan a la realidad: alucinaciones, delirios, agitación).
+2. **Hipoactividad Mesocortical:** La falta de dopamina en la corteza prefrontal genera los síntomas "negativos" (cosas que se restan: abulia, alogia, aplanamiento afectivo, aislamiento).
+Los antipsicóticos de segunda generación (Risperidona, Olanzapina, Paliperidona) bloquean los receptores D2 reduciendo la hiperactividad mesolímbica (y por ende las alucinaciones), mientras que su bloqueo de los receptores de Serotonina (5HT2A) en la vía nigroestriada evita la aparición de parkinsonismo inducido por fármacos (un problema letal de los antipsicóticos antiguos como el Haloperidol).
+
+¿Cuál es la trampa del examen?
+Los distractores típicos en estas preguntas son medicamentos "calmantes" (Clonazepam - Opción D). Si bien en la urgencia real un paciente violento o muy agitado puede recibir benzodiacepinas para sedarlo, la pregunta indaga por el *tratamiento de primera línea para la condición subyacente*, el cual es siempre un antipsicótico. Las benzodiacepinas no apagan los delirios ni las voces.
+
+Perlas de examen y práctica clínica:
+✅ Síntomas Positivos (exceso dopaminérgico mesolímbico): Delirios, Alucinaciones, Desorganización.
+✅ Síntomas Negativos (déficit dopaminérgico mesocortical): Aplanamiento afectivo, Abulia (falta de voluntad), Alogia (pobreza del habla), Anhedonia.
+✅ Tratamiento de 1ra Línea: Antipsicóticos de segunda generación (Aripiprazol, Risperidona, Quetiapina, Olanzapina).
+✅ Efectos secundarios clave a vigilar de los antipsicóticos atípicos: **Síndrome metabólico** (aumento de peso, diabetes, dislipidemia), especialmente con Olanzapina y Clozapina.
+✅ Clozapina: Es el antipsicótico más eficaz de todos, pero se reserva SOLO para **Esquizofrenia Refractaria** (fallo a 2 antipsicóticos previos) por el altísimo riesgo de **Agranulocitosis** (requiere hemogramas estrictos).
+
 Referencias
 • DSM-5-TR.
 • Kaplan & Sadock's Synopsis of Psychiatry.
 • American Psychiatric Association Practice Guideline for Schizophrenia.
-• Stahl's Essential Psychopharmacology.
-• UpToDate: Schizophrenia in Adults: Clinical Features, Assessment and Diagnosis.`,
+• Stahl's Essential Psychopharmacology.`,
   },
   {
     id: "dr-q-193",
@@ -5104,90 +4985,38 @@ Referencias
       { id: "D", label: "D", text: "Salbutamol inhalado." },
     ],
     correctOptionId: "C",
-    explanation: "El paciente presenta un cuadro de anafilaxia caracterizado por compromiso cutáneo, respiratorio y cardiovascular tras la exposición a un alérgeno. La adrenalina intramuscular es el tratamiento de primera línea y debe administrarse de forma inmediata.",
+    explanation: "El paciente presenta un choque anafiláctico (Anafilaxia grave), evidenciado por compromiso multisistémico agudo tras exposición a un alérgeno (mariscos). Presenta síntomas mucocutáneos (urticaria, angioedema), respiratorios (estridor por edema laríngeo) y cardiovasculares (hipotensión y taquicardia compensatoria). La Adrenalina (Epinefrina) intramuscular en la cara anterolateral del muslo es el único medicamento de primera línea capaz de revertir simultáneamente la vasodilatación, el broncoespasmo y el edema de vía aérea, salvando la vida del paciente.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Hidrocortisona): Los corticosteroides tardan entre 4 a 6 horas en ejercer su efecto antiinflamatorio genómico. Son útiles para prevenir la fase bifásica o tardía de la anafilaxia, pero jamás se usan como droga de rescate inicial.\n• Opción B (Clorfeniramina): Los antihistamínicos H1 intravenosos solo mejoran el prurito y la urticaria. No revierten la hipotensión ni el edema laríngeo; su uso primario retrasa la administración de adrenalina y aumenta la mortalidad.\n• Opción D (Salbutamol): Como agonista Beta-2, aliviará el broncoespasmo, pero no tiene efecto Alfa-1 adrenérgico (vasoconstrictor), por lo que la hipotensión por choque distributivo y el edema laríngeo no se resolverán.",
     keyPoints: [
       "Cuando veas: Exposición a alérgeno. Urticaria. Angioedema. Hipotensión. Estridor.",
       "Debes pensar en: Anafilaxia.",
       "Tema: Anafilaxia.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa una de las emergencias alérgicas más importantes.
-La clave no es la urticaria.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta crítica de urgencias. Evalúa si el estudiante sabe identificar la anafilaxia y, más importante aún, si conoce el único fármaco que previene el paro cardiorrespiratorio inminente.
+
+La clave no es aliviar el "brote" (urticaria) con antialérgicos.
 La clave es:
-La hipotensión asociada a compromiso respiratorio.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Exposición reciente a mariscos.
-• Urticaria generalizada.
-• Edema de labios.
-• Estridor.
-• Hipotensión.
-Esto corresponde a:
-Anafilaxia.
-¿Qué es la anafilaxia?
-Es una reacción de hipersensibilidad sistémica grave que puede comprometer:
-• Vía aérea.
-• Respiración.
-• Circulación.
-Y puede causar:
-Muerte si no se trata oportunamente.
-¿Cuál es el tratamiento de elección?
-La medida más importante es:
-Adrenalina intramuscular.
-Debe administrarse en:
-La cara anterolateral del muslo.
-¿Por qué funciona la adrenalina?
-Produce:
-• Vasoconstricción.
-• Aumento de la presión arterial.
-• Disminución del edema laríngeo.
-• Broncodilatación.
-Por ello:
-Es el tratamiento de primera línea.
-¿Por qué NO administrar antihistamínicos primero?
-Los antihistamínicos:
-Mejoran síntomas cutáneos.
-Pero:
-No corrigen la hipotensión ni el compromiso de la vía aérea.
-¿Por qué NO administrar corticoides primero?
-Los corticoides tienen:
-Inicio de acción tardío.
-No son útiles como tratamiento inicial de rescate.
-¿Por qué NO usar únicamente salbutamol?
-El salbutamol puede mejorar:
-Broncoespasmo.
-Pero:
-No corrige el choque anafiláctico.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Urticaria."
-Y responden:
-Antihistamínicos.
-Sin embargo:
-El dato decisivo es:
-La presencia de hipotensión y estridor.
-Esto define:
-Anafilaxia.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Reconocer la anafilaxia.
-2.	Administrar adrenalina intramuscular.
-3.	Asegurar vía aérea.
-4.	Administrar oxígeno y líquidos intravenosos.
-5.	Añadir antihistamínicos y corticoides como tratamiento complementario.
-Perlas de examen
-✅ La adrenalina intramuscular es el tratamiento de primera línea en anafilaxia.
-✅ No existen contraindicaciones absolutas para administrar adrenalina en una anafilaxia.
-✅ La hipotensión indica compromiso cardiovascular.
-✅ El estridor sugiere edema de vía aérea superior.
-✅ Los antihistamínicos son tratamientos coadyuvantes.
-✅ Los corticoides no reemplazan la adrenalina.
-✅ El retraso en la administración de adrenalina aumenta la mortalidad.
+Hipotensión + Estridor Laríngeo = Anafilaxia Grave = Adrenalina IM inmediata.
+
+¿Qué está ocurriendo realmente en la fisiopatología?
+Tras ingerir el marisco (alérgeno), los anticuerpos IgE preformados en el paciente se entrecruzan en la superficie de los mastocitos y basófilos. Esto provoca una **degranulación masiva** de histamina, triptasa, leucotrienos y prostaglandinas.
+- La histamina causa vasodilatación profunda y aumento de la permeabilidad capilar, lo que resulta en una caída abrupta de la presión arterial (choque distributivo) y extravasación de plasma hacia los tejidos (angioedema, que en la laringe produce estridor y asfixia).
+- Los leucotrienos causan un broncoespasmo severo.
+Solo la **Adrenalina (Epinefrina)** actúa de inmediato como agonista de los receptores alfa-1 (causando vasoconstricción y subiendo la presión arterial), beta-1 (aumentando la inotropía cardíaca) y beta-2 (produciendo broncodilatación e inhibiendo la liberación adicional de mediadores por los mastocitos).
+
+¿Cuál es la trampa del examen?
+El distractor clásico es ofrecer un antihistamínico (Opción B) o un corticoide (Opción A). El instinto erróneo es pensar: "es una alergia, demos antialérgicos". Esto es un error letal en la anafilaxia. En el mundo real, demorar el uso de adrenalina por buscar y administrar difenhidramina o hidrocortisona es la principal causa de muerte evitable en estos pacientes.
+
+Perlas de examen y práctica clínica:
+✅ Anafilaxia = Adrenalina Intramuscular (IM) al 1:1,000 (1 mg/mL).
+✅ **Sitio de aplicación:** Vasto externo (cara anterolateral) del muslo. La absorción aquí es mucho más rápida y constante que en el brazo (deltoides) o por vía subcutánea.
+✅ **Dosis pediátrica:** 0.01 mg/kg (máximo 0.3 mg en prepúberes o 0.5 mg en adolescentes).
+✅ Segunda dosis: Si no hay mejoría en 5-15 minutos, se repite la dosis de adrenalina IM.
+✅ NUNCA existen contraindicaciones absolutas para la adrenalina en el contexto de una anafilaxia.
+
 Referencias
 • World Allergy Organization (WAO) Anaphylaxis Guidelines.
-• European Academy of Allergy and Clinical Immunology (EAACI) Guidelines.
-• Nelson Textbook of Pediatrics.
-• Tintinalli's Emergency Medicine.
 • UpToDate: Anaphylaxis Recognition and Management.`,
   },
   {
@@ -6931,74 +6760,37 @@ Referencias
       { id: "D", label: "D", text: "Histeroscopia." },
     ],
     correctOptionId: "A",
-    explanation: "Las células glandulares atípicas (AGC) se asocian a un riesgo significativo de lesiones premalignas o malignas del cuello uterino y del endometrio. Por ello, toda paciente con AGC-NOS requiere evaluación diagnóstica inmediata mediante colposcopia con toma de biopsias dirigidas y muestreo endocervical.",
+    explanation: "El hallazgo de Células Glandulares Atípicas (AGC) en una citología cérvico-vaginal es una alerta roja de alto grado. A diferencia de las atipias escamosas leves (ASC-US o LEIBG), las AGC tienen una altísima probabilidad (hasta 30-50%) de esconder una neoplasia subyacente (Adenocarcinoma in situ, Adenocarcinoma cervical, o Adenocarcinoma de endometrio). Por ende, el manejo indiscutible según las guías de la ASCCP es la evaluación exhaustiva inmediata: Colposcopia con biopsias dirigidas + Curetaje (muestreo) endocervical. En mujeres >35 años o con factores de riesgo, se debe añadir Biopsia Endometrial.\n\n¿Por qué se descartan las otras opciones?\n• Opción B (Repetir citología): Actitud negligente y peligrosa. AGC nunca se observa ni se repite en 6 meses; esto permite que un adenocarcinoma oculto progrese a etapas invasivas intratables.\n• Opción C (Prueba de ADN para VPH): Aunque la prueba de VPH es útil en el triaje de células escamosas atípicas (ASC-US), en el caso de AGC, independientemente del resultado del VPH (positivo o negativo), la paciente *tiene* que ir a colposcopia y curetaje endocervical. No cambia la conducta inicial.\n• Opción D (Histeroscopia): Es un estudio de segunda línea. Solo se indicaría si las biopsias iniciales por colposcopia/legrado son negativas o indeterminadas, y persiste la sospecha, pero no es el paso diagnóstico inicial.",
     keyPoints: [
       "Cuando veas: AGC. Células glandulares atípicas. Citología cervical anormal.",
       "Debes pensar en: Colposcopia inmediata.",
       "Tema: Tamizaje y patología cervical.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa uno de los hallazgos citológicos de mayor relevancia clínica.
-La clave no es la edad.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta trampa espectacular y recurrente en los exámenes de ginecología. Juega con el sesgo cognitivo del estudiante que está acostumbrado a manejar las citologías de bajo grado con "seguimiento" o "prueba de VPH". 
+
+La clave no es pedir test de VPH para descartar.
 La clave es:
-El reporte de AGC.
-¿Qué está ocurriendo realmente?
-La citología reporta:
-AGC-NOS.
-Esto significa:
-Células glandulares atípicas de significado indeterminado.
-¿Por qué es importante?
-Porque las alteraciones glandulares tienen:
-Mayor asociación con lesiones premalignas y adenocarcinoma.
-¿Qué debe hacerse?
-Toda paciente con AGC debe ser remitida a:
-• Colposcopia.
-• Biopsias dirigidas.
-• Muestreo endocervical.
-Dependiendo de la edad y factores de riesgo:
-Puede requerirse evaluación endometrial adicional.
-¿Por qué NO repetir la citología?
-Porque:
-AGC no es una alteración de bajo riesgo.
-Repetir la citología retrasa el diagnóstico.
-¿Por qué NO solicitar únicamente ADN-VPH?
-La prueba de VPH puede complementar la evaluación.
-Sin embargo:
-No reemplaza la colposcopia.
-¿Por qué NO realizar histeroscopia inicialmente?
-La histeroscopia no constituye:
-El estudio inicial estándar.
-¿Cuál es la trampa de examen?
-Muchos estudiantes asocian:
-Citología anormal.
-Con:
-Repetición del examen.
-Sin embargo:
-El dato decisivo es:
-La presencia de células glandulares atípicas.
-Esto obliga a:
-Estudio colposcópico inmediato.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar AGC.
-2.	Reconocer alto riesgo de neoplasia.
-3.	Realizar colposcopia.
-4.	Tomar biopsias dirigidas.
-5.	Completar estudio según hallazgos.
-Perlas de examen
-✅ AGC significa células glandulares atípicas.
-✅ Toda paciente con AGC requiere colposcopia.
-✅ El riesgo de adenocarcinoma es mayor que en las alteraciones escamosas leves.
-✅ El muestreo endocervical suele formar parte de la evaluación.
-✅ Puede requerirse estudio endometrial en mujeres mayores o con factores de riesgo.
-✅ No debe manejarse con simple observación.
-✅ Es una de las citologías que más obliga a estudio diagnóstico inmediato.
+AGC (Células Glandulares Atípicas) = Alerta de Cáncer Glandular = Colposcopia + Muestreo Endocervical Urgente (y endometrial si >35 años).
+
+¿Qué está ocurriendo realmente en la fisiopatología?
+El cuello uterino tiene dos tipos de epitelio: el escamoso (ectocérvix) y el glandular (endocérvix). La mayoría de los cánceres de cérvix son de células escamosas, los cuales tienen lesiones precursoras lentas (NIC 1, 2, 3) detectables tempranamente por el papanicolaou.
+Sin embargo, los cánceres del epitelio glandular (adenocarcinomas) se desarrollan en el canal endocervical, son más difíciles de detectar, crecen más rápido ("skip lesions" o lesiones a saltos) y su reporte como "Atipia (AGC)" frecuentemente significa que ya hay un Cáncer In Situ o invasivo oculto en las criptas glandulares del cérvix, o más arriba, en el endometrio de la cavidad uterina. Por eso, AGC jamás se subestima.
+
+¿Cuál es la trampa del examen?
+La trampa clásica es la Opción C (Prueba de VPH). En pacientes con **ASC-US** (Células Escamosas Atípicas de Significado Indeterminado), lo correcto *sí es* pedir VPH para decidir si va a colposcopia. Pero el examen te pone **AGC**, esperando que el estudiante confunda "Glandular" (G) con "Escamosa" (S) y pida VPH. Recuerda: AGC va directo a colposcopia con legrado endocervical.
+
+Perlas de examen y práctica clínica (Guías ASCCP):
+✅ **ASC-US (Escamosas Atípicas):** Hacer Test de VPH. Si VPH(+), va a colposcopia. Si VPH(-), citología en 1-3 años.
+✅ **LEIBG (Lesión Intraepitelial de Bajo Grado):** Dependiendo de la edad y test previo de VPH; usualmente colposcopia si VPH(+) o seguimiento.
+✅ **AGC (Glandulares Atípicas):** Colposcopia + Legrado Endocervical SIEMPRE, sin importar VPH.
+✅ **AGC en paciente >35 años** o con sangrado uterino anormal crónico, obesidad, anovulación (SOP): Añadir Biopsia Endometrial (riesgo de cáncer de endometrio).
+
 Referencias
-• ASCCP Risk-Based Management Guidelines.
+• ASCCP Risk-Based Management Guidelines for Abnormal Cervical Cancer Screening Tests and Cancer Precursors.
 • ACOG Practice Bulletin: Cervical Cancer Screening.
-• Novak's Gynecology.
-• Berek & Novak's Gynecology.
-• UpToDate: Management of Atypical Glandular Cells on Cervical Cytology.`,
+• Berek & Novak's Gynecology.`,
   },
   {
     id: "dr-q-231",

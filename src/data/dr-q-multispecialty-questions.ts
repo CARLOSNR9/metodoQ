@@ -1769,7 +1769,7 @@ Referencias
     ],
     correctOptionId: "C",
     explanation:
-      "Anemia hemolítica crónica + crisis vasooclusivas + úlceras maleolares + infecciones recurrentes (asplenia funcional) = drepanocitosis. Confirmar con electroforesis de hemoglobina.",
+      "El paciente presenta una clásica enfermedad de células falciformes (Drepanocitosis). La combinación de anemia hemolítica crónica (ictericia, fatiga), crisis vasooclusivas (dolor recurrente en extremidades) y manifestaciones de daño orgánico crónico (úlceras maleolares y asplenia funcional evidenciada por infecciones a repetición) es patognomónica. El antecedente afrodescendiente es clave epidemiológicamente.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Esferocitosis hereditaria): Es un defecto de las proteínas de membrana (espectrina/anquirina) que causa hemólisis y esplenomegalia masiva, pero los eritrocitos esféricos no polimerizan ni se atascan en los capilares, por lo que jamás produce isquemia, crisis de dolor ni úlceras maleolares.\n• Opción B (Deficiencia de G6PD): Es un defecto enzimático que protege contra la malaria pero causa episodios agudos de hemólisis intravascular (con orina oscura) únicamente cuando el paciente se expone a estrés oxidativo (habas, primaquina, sulfas, infecciones agudas). Entre episodios, el paciente es totalmente asintomático, sin úlceras crónicas ni isquemia.\n• Opción D (Talasemia menor): Es un defecto cuantitativo de las cadenas de globina que produce un rasgo talasémico. Clínicamente, el paciente es asintomático o tiene una anemia microcítica leve confundible con ferropenia; nunca tiene crisis isquémicas ni asplenia.",
     keyPoints: [
       "Cuando veas: paciente joven afrodescendiente con anemia crónica, ictericia, crisis dolorosas recurrentes y úlceras maleolares.",
       "Debes pensar en: drepanocitosis (anemia falciforme).",
@@ -1785,62 +1785,34 @@ La clave no es esferocitosis, G6PD ni talasemia menor.
 La clave es:
 Anemia hemolítica crónica + crisis vasooclusivas dolorosas + úlceras maleolares + infecciones recurrentes desde la infancia → drepanocitosis.
 
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Hombre joven con ascendencia afrodescendiente.
-• Fatiga crónica e ictericia intermitente (hemólisis crónica).
-• Episodios recurrentes de dolor intenso en extremidades (crisis vasooclusivas).
-• Úlceras maleolares de difícil cicatrización (cicatriz compatible al examen).
-• Infecciones respiratorias repetidas desde la infancia (asplenia funcional).
-• Palidez mucocutánea.
+¿Qué está ocurriendo realmente en la fisiopatología?
+La drepanocitosis (anemia falciforme) es causada por una mutación puntual (sustitución de ácido glutámico por valina en la posición 6 de la cadena beta de la globina), creando la Hemoglobina S (HbS). 
+Cuando la HbS se desoxigena (por hipoxia, acidosis, fiebre o deshidratación), polimeriza formando cristales intracelulares táctoides que deforman el eritrocito, dándole forma de hoz (falciforme) o medialuna. 
+Esta deformación tiene dos consecuencias letales:
+1. **Hemólisis:** El glóbulo rojo deforme y rígido es destruido prematuramente (sobrevida de 10-20 días vs 120 días).
+2. **Vasooclusión:** Los eritrocitos falciformes pierden su flexibilidad, adhiriéndose al endotelio y atascándose en la microcirculación. Esto genera **microinfartos tisulares** que causan el dolor extremo en huesos/extremidades, necrosis papilar renal, y las clásicas **úlceras maleolares**. 
 
-Recordemos la drepanocitosis:
-• Hemoglobinopatía por HbS que produce hemólisis crónica y rigidez eritrocitaria.
-• Las crisis vasooclusivas causan dolor óseo, abdominal y otros síntomas isquémicos.
-• La asplenia funcional predispone a infecciones por bacterias encapsuladas (Streptococcus pneumoniae, Haemophilus influenzae).
-• Las úlceras maleolares son un hallazgo clásico en adultos jóvenes con enfermedad falciforme.
-• Confirmación: electroforesis de hemoglobina (HbS predominante).
-
-Por lo tanto:
-No corresponde esferocitosis hereditaria, déficit de G6PD ni talasemia menor como diagnóstico principal.
-El diagnóstico más probable es drepanocitosis (anemia falciforme).
-
-¿Por qué la opción C es la respuesta correcta?
-El cuadro integra anemia hemolítica crónica con manifestaciones vasooclusivas, úlceras maleolares e infecciones recurrentes desde la infancia.
-Este conjunto es altamente específico de drepanocitosis, especialmente en paciente con ascendencia afrodescendiente.
-
-¿Por qué fallan las otras opciones?
-Opción A (esferocitosis hereditaria): causa anemia hemolítica hereditaria, pero no explica crisis vasooclusivas recurrentes ni úlceras maleolares típicas de enfermedad falciforme.
-Opción B (deficiencia de G6PD): produce hemólisis episódica desencadenada por oxidantes, no un cuadro crónico con vasooclusión, úlceras maleolares e infecciones desde la infancia.
-Opción D (talasemia menor): causa anemia microcítica habitualmente, no el patrón de hemólisis con vasooclusión, úlceras maleolares y asplenia funcional descrito.
+¿Por qué las infecciones a repetición?
+El bazo sufre microinfartos repetidos desde la infancia por estas vasooclusiones. A los 4-5 años de edad, el bazo se auto-destruye y fibrosa (autoesplenectomía o **asplenia funcional**). Sin bazo, el paciente queda indefenso contra bacterias encapsuladas (*S. pneumoniae*, *N. meningitidis*, *H. influenzae*), siendo la sepsis neumocócica una causa principal de muerte en la infancia.
 
 ¿Cuál es la trampa del examen?
 Muchos estudiantes piensan:
-"Anemia + ictericia = cualquier anemia hemolítica hereditaria."
-Pero el examen exige reconocer los fenómenos vasooclusivos y las complicaciones crónicas que distinguen la drepanocitosis.
+"Anemia + ictericia = cualquier anemia hemolítica hereditaria." y dudan con esferocitosis o G6PD. 
+Pero el examen exige reconocer los **fenómenos vasooclusivos**. Ni la esferocitosis ni el déficit de G6PD causan microtrombos, isquemia, ni infartos óseos.
 El dato decisivo es:
 Crisis dolorosas + úlceras maleolares + infecciones recurrentes desde la infancia = drepanocitosis.
 
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Identificar anemia hemolítica crónica con ictericia intermitente.
-2. Buscar manifestaciones vasooclusivas (dolor óseo o extremidades recurrente).
-3. Valorar complicaciones crónicas: úlceras maleolares, asplenia funcional, infecciones repetidas.
-4. Confirmar con electroforesis de hemoglobina.
-
-Perlas de examen
-✅ La clave no es solo anemia, sino fenómenos vasooclusivos.
-✅ Úlceras maleolares = hallazgo clásico de drepanocitosis.
-✅ Asplenia funcional → infecciones por bacterias encapsuladas desde la infancia.
-✅ G6PD: hemólisis episódica por oxidantes, no vasooclusión crónica.
-✅ Esferocitosis: hemólisis hereditaria sin patrón vasooclusivo ni úlceras maleolares típicas.
-✅ Las residencias preguntan el diagnóstico por el patrón clínico completo, no un solo hallazgo.
+Perlas de examen y práctica clínica:
+✅ Anemia hemolítica + Vasooclusión isquémica = Drepanocitosis.
+✅ Úlceras maleolares = hallazgo clásico cutáneo en adultos jóvenes con enfermedad falciforme.
+✅ Dactilitis (Síndrome mano-pie) = primera manifestación vasooclusiva en lactantes (inflamación dolorosa de manos y pies).
+✅ Asplenia funcional = alto riesgo de sepsis por neumococo. Requieren vacunación profiláctica agresiva y penicilina profiláctica hasta los 5 años.
+✅ Tratamiento de mantenimiento principal: **Hidroxiurea** (aumenta la producción de Hemoglobina Fetal, la cual no polimeriza, diluyendo la HbS y evitando las crisis).
 
 Referencias
 • Williams Hematology.
 • NHLBI Evidence-Based Management of Sickle Cell Disease.
-• UpToDate: Overview of the clinical manifestations of sickle cell disease.
-• Bolaños-Meade J et al. Sickle cell disease.`,
+• UpToDate: Overview of the clinical manifestations of sickle cell disease.`,
   },
   {
     id: "dr-q-151",

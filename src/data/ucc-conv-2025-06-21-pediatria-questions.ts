@@ -243,12 +243,43 @@ export const UCC_CONV_2025_06_21_PEDIATRICS_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "D",
     explanation:
-      "NAC no complicada de probable etiología bacteriana típica (Streptococcus pneumoniae) sin criterios de gravedad: manejo ambulatorio con amoxicilina a altas dosis (80–90 mg/kg/día).",
+      "La paciente de 4 años presenta una Neumonía Adquirida en la Comunidad (NAC) típica no complicada. Clínicamente está estable (SpO2 > 92%, tolera la vía oral, sin signos de dificultad respiratoria severa). En este grupo etario, el patógeno bacteriano más frecuente es el Streptococcus pneumoniae. Las guías de práctica clínica internacionales y nacionales indican de forma unánime que el tratamiento de primera línea ambulatorio es la Amoxicilina a dosis altas (80-90 mg/kg/día) para vencer la resistencia bacteriana mediada por alteración de las PBP (Proteínas Fijadoras de Penicilina). No requiere hospitalización ni antibióticos intravenosos.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Azitromicina): Los macrólidos son de primera línea para sospecha de NAC *atípica* (Mycoplasma pneumoniae), la cual es más común en escolares mayores (>5 años) y se presenta de forma subaguda, sin fiebre tan alta y con tos seca difusa. No es el caso aquí.\n• Opción B (Ceftriaxona IV): La paciente no tiene ningún criterio de hospitalización (Saturación normal, sin tirajes graves, tolera vía oral, no luce tóxica, > 6 meses de edad). El uso indiscriminado de cefalosporinas de tercera generación promueve resistencia antimicrobiana innecesariamente.\n• Opción C (Diferir antibiótico): La presentación clínica de fiebre de 39°C de rápida instauración con crépitos localizados focalmente es clásica de neumonía bacteriana típica. Retrasar la antibiótico terapia empírica por esperar paneles virales en NAC bacteriana franca aumenta el riesgo de complicaciones (derrame pleural paraneumónico, empiema, sepsis).",
     keyPoints: [
       "Amoxicilina alta dosis es primera línea en NAC típica ambulatoria.",
       "Hospitalizar si SpO₂ <92%, distrés severo, intolerancia oral o lactante muy pequeño.",
       "Macrólidos si sospecha de neumonía atípica (escolar mayor).",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta pilar de la pediatría ambulatoria. Evalúa tu juicio clínico para decidir quién se hospitaliza y quién se va para la casa, así como el uso racional de antibióticos frente a las NAC.
+
+La clave no es "asustarse" por la taquipnea ni los estertores.
+La clave es:
+Paciente estable + > 6 meses + Fiebre alta + Foco de consolidación = Neumonía Bacteriana Típica Ambulatoria (Amoxicilina).
+
+¿Qué está ocurriendo realmente en la fisiopatología?
+El *Streptococcus pneumoniae* (Neumococo) ha colonizado el espacio alveolar del lóbulo inferior derecho, generando un exudado inflamatorio rico en neutrófilos. Esto se ausculta como crépitos. La paciente responde con fiebre y taquipnea compensatoria para mantener la oxigenación (SpO2 94%). Al no haber hipoxemia severa (<92%) ni falla respiratoria, su sistema cardiovascular y respiratorio están compensando el cuadro.
+La Amoxicilina a 90 mg/kg/día logra niveles en el líquido del revestimiento epitelial pulmonar suficientes para saturar las Proteínas Fijadoras de Penicilina (PBP) del Neumococo, incluso en cepas con resistencia intermedia, destruyendo su pared celular y erradicando la infección de forma muy segura y económica.
+
+¿Cuál es la trampa del examen?
+Dos trampas clásicas:
+1. Ponerte opciones con antibióticos intravenosos o de amplio espectro (Ceftriaxona - Opción B). Recuerda: ¡En pediatría, menos es más! Si no hay criterios de severidad, mándalo a casa con Amoxicilina oral.
+2. Hacerte creer que es una NAC "atípica" (Opción A). Las atípicas por *Mycoplasma* son raras en < 5 años; sus síntomas son constitucionales (cefalea, mialgias), tos seca que empeora de noche, y a la auscultación se escuchan sibilancias difusas, no un foco crepitante localizado.
+
+Perlas de examen y práctica clínica:
+✅ **Etiología por edad:**
+   - < 1 mes: S. agalactiae, E. coli, L. monocytogenes.
+   - 1 a 3 meses: C. trachomatis, VSR, B. pertussis, S. pneumoniae.
+   - 3 meses a 5 años: **Virus (VSR, parainfluenza, adenovirus)** son la causa #1 global. Si es bacteriana: **S. pneumoniae**.
+   - > 5 años: M. pneumoniae, C. pneumoniae, S. pneumoniae.
+✅ **Criterios de Hospitalización en NAC pediátrica:** Saturación <92%, dificultad respiratoria grave (tirajes generalizados, aleteo, quejido), intolerancia a la vía oral / deshidratación, lactante < 3 a 6 meses de edad, aspecto tóxico, falla de tratamiento ambulatorio previo.
+✅ NAC Ambulatoria típica = Amoxicilina altas dosis.
+✅ NAC Atípica = Macrólido (Azitromicina o Claritromicina).
+✅ NAC que requiere Hospitalización = Ampicilina IV o Penicilina G IV (Ceftriaxona si hay esquema de vacunación incompleto o alta prevalencia de resistencia).
+
+Referencias
+• Pediatric Infectious Diseases Society / IDSA Guidelines for the Management of Community-Acquired Pneumonia in Infants and Children.
+• Nelson Textbook of Pediatrics.`,
   },
   {
     id: "ucc-conv-2025-06-21-20",

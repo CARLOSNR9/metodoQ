@@ -144,12 +144,36 @@ export const UCC_CONV_2025_06_21_URO_REUMA_BIO_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation:
-      "Pielonefritis aguda complicada (diabetes, fiebre alta, posible obstrucción): hospitalización, ATB IV empírico (ceftriaxona o fluoroquinolona según resistencia), urocultivo, hidratación; imagen si no responde o empeora.",
+      "La paciente presenta un cuadro florido de Pielonefritis Aguda. Al tener diabetes mellitus y una ecografía que ya muestra una dilatación de la vía urinaria, se clasifica como una Pielonefritis Complicada. El manejo estándar y seguro exige hospitalización, hemocultivos/urocultivos y el inicio inmediato de antibioterapia empírica intravenosa (Ceftriaxona o Ciprofloxacino según epidemiología local) junto con soporte hídrico.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Nitrofurantoína): Es un antiséptico urinario excelente para cistitis no complicadas porque se concentra en la orina de la vejiga, pero JAMÁS alcanza niveles tisulares terapéuticos en el parénquima renal ni en la sangre. Tratar una pielonefritis con nitrofurantoína es equivalente a darle un placebo y condenar a la paciente a la urosepsis.\n• Opción C (Retrasar ATB para TAC): Ante un cuadro clínico y paraclínico tan claro de infección renal severa, diferir el inicio de los antibióticos para priorizar una tomografía aumenta exponencialmente el riesgo de choque séptico. La TAC se reserva si el paciente no mejora tras 48-72 horas de tratamiento (para descartar absceso renal o pionefrosis).\n• Opción D (Ciprofloxacino oral ambulatorio): Aunque el ciprofloxacino oral tiene excelente biodisponibilidad y penetra el parénquima renal, mandarla a casa con taquicardia (115 lpm), fiebre de 39.2°C, leucocitosis severa y diabetes descompensada es un riesgo inaceptable de mortalidad ambulatoria.",
     keyPoints: [
       "Pielonefritis: no nitrofurantoína (no llega al parénquima).",
       "Complicada (diabetes, obstrucción): ATB IV + hospitalización.",
       "No retrasar ATB para TAC en cuadro febril claro.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta evalúa dos conceptos críticos y muy evaluados en urgencias: la selección correcta del antibiótico en infecciones de vías urinarias (IVU) altas y el reconocimiento de los criterios de severidad.
+
+La clave no es que tenga bacterias en la orina.
+La clave es:
+Fiebre + Puñopercusión (+) + Taquicardia + Comorbilidad = Pielonefritis Complicada (Hospitalizar + ATB IV).
+
+¿Qué está ocurriendo realmente en la fisiopatología?
+Las bacterias (usualmente E. coli uropatógena) han ascendido desde la vejiga por los uréteres y han invadido el parénquima renal. La diabetes produce una alteración en la quimiotaxis de los neutrófilos, lo que facilita la invasión. La dilatación pielocalicial leve sugiere que podría haber una resistencia al flujo (microcálculo, necrosis papilar incipiente por la diabetes).
+En este escenario, el riñón está inflamado (pielonefritis). Si tratas esto con medicamentos que solo flotan en la orina de la vejiga (como la nitrofurantoína o la fosfomicina), la bacteria que está destruyendo el tejido renal no será tocada, pasará al torrente sanguíneo y causará una urosepsis letal. Necesitamos antibióticos que tengan altísima penetración tisular renal (Cefalosporinas de 3ra generación, Fluoroquinolonas, Aminoglucósidos).
+
+¿Cuál es la trampa del examen?
+La trampa asesina (Opción A) es el uso de Nitrofurantoína. A los examinadores les encanta ponerla porque los estudiantes la asocian instintivamente con "infección urinaria". Grábate esto: La nitrofurantoína solo sirve de la vejiga para abajo (Cistitis). De los uréteres para arriba (Pielonefritis), está formalmente contraindicada.
+
+Perlas de examen y práctica clínica:
+✅ **Nitrofurantoína y Fosfomicina:** Excelentes para cistitis. Contraindicadas en pielonefritis.
+✅ **Criterios de hospitalización en Pielonefritis:** Embarazo, intolerancia a la vía oral (vómitos severos), inestabilidad hemodinámica, falla terapéutica ambulatoria, comorbilidades graves (inmunosupresión, diabetes descompensada), obstrucción de la vía urinaria.
+✅ **Bacteriuria Asintomática:** Solo se trata en 3 escenarios: Embarazadas, previo a procedimientos urológicos invasivos, y en receptores de trasplante renal reciente. En ancianos o pacientes sondados crónicos NO se trata.
+
+Referencias
+• IDSA / ESCMID Guidelines for the Treatment of Acute Uncomplicated Cystitis and Pyelonephritis in Women.
+• EAU Guidelines on Urological Infections.
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "ucc-conv-2025-06-21-42",
@@ -291,12 +315,37 @@ export const UCC_CONV_2025_06_21_URO_REUMA_BIO_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation:
-      "Lupus eritematoso sistémico con nefritis probable (proteinuria >3 g, HTA, cilindros, creatinina elevada, anti-dsDNA y complemento bajo): biopsia renal para clasificación y tratamiento inmunosupresor (corticoides + micofenolato o ciclofosfamida según clase).",
+      "La paciente presenta un brote severo de Lupus Eritematoso Sistémico (LES) con compromiso renal agudo (Nefritis Lúpica). La presencia de hipertensión de novo, edema, proteinuria en rango nefrótico (>3g/24h), falla renal aguda (creatinina 1.6 mg/dL) y un sedimento urinario \"telescopado\" (cilindros granulosos y eritrocitos dismórficos) indican inflamación glomerular activa grave. Todo paciente con sospecha de nefritis lúpica requiere una Biopsia Renal Urgente para clasificar histológicamente la lesión (Clases I a VI de la ISN/RPS) y guiar la terapia inmunosupresora de inducción agresiva (usualmente Megadosis de Metilprednisolona seguidas de Ciclofosfamida o Micofenolato Mofetilo).\n\n¿Por qué se descartan las otras opciones?\n• Opción A (AINEs ambulatorios): El ibuprofeno está contraindicado en un paciente con falla renal aguda (empeoraría la tasa de filtración glomerular por vasoconstricción de la arteriola aferente). Dar manejo ambulatorio a un brote lúpico severo es negligencia.\n• Opción C (Glomerulonefritis postinfecciosa): Aunque la GN postinfecciosa causa síndrome nefrítico y baja el complemento (C3), no explica los ANAs positivos a títulos altos, los anti-dsDNA positivos, ni la afectación sistémica (rash malar, artralgias).\n• Opción D (Restricción hídrica y diurético): Los diuréticos mejorarán temporalmente el edema, pero no detendrán la destrucción inmunomediada del glomérulo. Sin inmunosupresión pesada e inmediata, esta paciente terminará en diálisis permanente en pocas semanas.",
     keyPoints: [
       "Nefritis lúpica: proteinuria + sedimento activo + anti-dsDNA + complemento bajo.",
       "Biopsia renal guía tratamiento.",
       "Inmunosupresión precoz previene ERC terminal.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta es el estándar de oro en reumatología/nefrología para evaluar si sabes reconocer y abordar la complicación más temida y letal del Lupus: La Nefritis Lúpica.
+
+La clave no es enfocarse solo en el edema o la falla renal.
+La clave es:
+Mujer joven + Rash malar + Proteinuria/Eritrocitos dismórficos + Anti-dsDNA (+) + Complemento Bajo = Nefritis Lúpica Activa.
+
+¿Qué está ocurriendo realmente en la fisiopatología?
+En el LES, la pérdida de la tolerancia inmunológica genera autoanticuerpos (ANAs, Anti-dsDNA). Estos anticuerpos se unen a antígenos circulantes formando Inmunocomplejos. Estos inmunocomplejos viajan por la sangre y quedan atrapados (depositados) en los glomérulos renales (mesangio, subendotelio o subepitelio).
+Al depositarse, activan la cascada del **Complemento** por la vía clásica, lo que causa un consumo masivo de C3 y C4 (por eso sus niveles en sangre caen). Esta activación atrae leucocitos y causa un daño destructivo severo en la membrana basal glomerular, permitiendo la fuga masiva de proteínas (proteinuria nefrótica) y sangre (eritrocitos dismórficos).
+
+¿Cuál es la trampa del examen?
+La principal trampa es intentar tratar esto solo sintomáticamente (diuréticos o antihipertensivos) u ofrecer inmunosupresión sin biopsia. En la Nefritis Lúpica, la biopsia renal NO ES OPCIONAL. Dicta el pronóstico y el tratamiento. No se trata igual una Nefritis Lúpica Clase II (Mesangial proliferativa, buen pronóstico) que una Clase IV (Glomerulonefritis Proliferativa Difusa, la más severa, agresiva y frecuente).
+
+Perlas de examen y práctica clínica:
+✅ **Marcador de Actividad Lúpica:** Los niveles de Anti-dsDNA correlacionan directamente con la actividad de la Nefritis Lúpica (a mayor título, peor inflamación).
+✅ **Consumo de Complemento:** C3 y C4 bajos indican brote lúpico activo. En un paciente en remisión, C3 y C4 son normales.
+✅ **Eritrocitos Dismórficos:** Indican hematuria de origen **glomerular** (se deforman al pasar por la membrana basal rota).
+✅ **Manejo Inicial Inductor (Clases III y IV):** Corticoides a altas dosis (Metilprednisolona IV) + Ciclofosfamida o Micofenolato Mofetilo. (El Micofenolato se prefiere en mujeres jóvenes por menor riesgo de falla ovárica que la ciclofosfamida).
+
+Referencias
+• KDIGO Clinical Practice Guideline for the Management of Glomerular Diseases.
+• EULAR/ERA-EDTA recommendations for the management of lupus nephritis.
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "ucc-conv-2025-06-21-45",

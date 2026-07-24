@@ -9765,7 +9765,7 @@ Referencias
     ],
     correctOptionId: "B",
     explanation:
-      "Episodio maníaco agudo con síntomas psicóticos. La insuficiencia renal (creatinina 2.2 mg/dL) contraindica o limita severamente el litio; el valproato es el estabilizador de elección en este contexto.",
+      "El paciente cursa con un episodio maníaco agudo clásico (logorrea, hiperactividad, delirio de grandiosidad) en el contexto de un Trastorno Bipolar tipo I. Sin embargo, presenta una creatinina de 2.2 mg/dL (Insuficiencia Renal). Dado que el litio se excreta de forma casi exclusiva por el riñón, administrarlo en este momento causará una intoxicación grave. El Ácido Valproico (valproato), de metabolismo hepático, es el estabilizador del ánimo de primera línea más seguro y efectivo en este escenario clínico.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Litio): Aunque es el gold standard histórico para el trastorno bipolar, el 95% se depura por el riñón. En falla renal aguda o crónica (creatinina 2.2), su vida media se prolonga exponencialmente, llevando a neurotoxicidad letal, arritmias, coma y mayor daño tubular renal (nefritis intersticial). Está absolutamente contraindicado aquí.\n• Opción C (Carbamazepina): Es una alternativa válida y de metabolismo hepático, pero el valproato tiene mayor peso de evidencia (Nivel 1) en las guías CANMAT para el tratamiento de primera línea de la manía aguda comparado con la carbamazepina.\n• Opción D (Lamotrigina): Es un excelente neuromodulador, pero su principal indicación es la profilaxis y el tratamiento de las fases depresivas del trastorno bipolar. Es ineficaz y de titulación demasiado lenta para controlar un episodio maníaco agudo.",
     keyPoints: [
       "Cuando veas: episodio maníaco agudo con síntomas psicóticos de grandiosidad + creatinina elevada (insuficiencia renal).",
       "Debes pensar en: trastorno bipolar tipo I en manía → valproato como estabilizador de elección (litio contraindicado por IRC).",
@@ -9775,67 +9775,31 @@ Referencias
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta es una pregunta clásica de psicofarmacología porque evalúa una trampa frecuente de residencia: ante manía aguda en trastorno bipolar, no elegir automáticamente litio sin evaluar la función renal del paciente.
+Esta es una pregunta clásica de psicofarmacología porque evalúa una trampa frecuente de residencia: ante manía aguda en trastorno bipolar, no elegir automáticamente litio sin evaluar primero la función del órgano que lo excreta (el riñón).
 
-La clave no es prescribir litio como estabilizador universal en todo paciente bipolar.
+La clave no es recetar litio por acto reflejo al leer "bipolar".
 La clave es:
-Manía aguda + trastorno bipolar tipo I + insuficiencia renal (creatinina 2.2 mg/dL) = valproato como estabilizador de elección, no litio.
+Manía aguda + Creatinina alta = Prohibido el Litio = Usar Valproato (Ácido Valproico).
 
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Hombre de 32 años con trastorno bipolar tipo I conocido.
-• Episodio maníaco agudo de 5 días: logorrea, fuga de ideas, hiperactividad, compras compulsivas.
-• Disminución marcada de la necesidad de sueño (2 horas/noche) y sensación de energía excesiva.
-• Síntomas psicóticos de grandiosidad ("enviado para salvar la economía del país").
-• Creatinina 2.2 mg/dL: insuficiencia renal que modifica la elección del estabilizador del ánimo.
-
-Recordemos la psicofarmacología del trastorno bipolar:
-• Manía aguda requiere estabilizador del ánimo (litio, valproato o carbamazepina) ± antipsicótico.
-• El litio es el gold standard histórico, pero se elimina casi exclusivamente por vía renal.
-• Con insuficiencia renal significativa (creatinina elevada), el litio acumula y aumenta el riesgo de toxicidad (temblor, confusión, arritmias, coma).
-• El valproato se metaboliza hepáticamente; es eficaz en manía aguda y no depende de la eliminación renal.
-• La lamotrigina previene fases depresivas, pero no tiene evidencia sólida como monoterapia de manía aguda.
-
-Por lo tanto:
-El estabilizador del ánimo de elección en este paciente es valproato.
-
-¿Por qué la opción B es la respuesta correcta?
-El valproato tiene evidencia robusta como tratamiento de manía aguda en trastorno bipolar tipo I.
-No depende de la eliminación renal, por lo que es seguro en pacientes con insuficiencia renal significativa.
-Puede combinarse con antipsicótico atípico si los síntomas psicóticos son prominentes.
-Es la alternativa de primera línea cuando el litio está contraindicado o limitado por función renal.
-
-¿Por qué fallan las otras opciones?
-Opción A (litio): clásico en bipolar, pero contraindicado o muy limitado con creatinina 2.2 mg/dL por riesgo de acumulación y toxicidad grave.
-Opción C (carbamazepina): estabilizador válido en bipolar, pero el valproato tiene evidencia más sólida como alternativa de primera línea en manía aguda.
-Opción D (lamotrigina): excelente para prevención de fases depresivas y mantenimiento, pero no es tratamiento de elección para manía aguda.
+¿Qué está ocurriendo realmente en la farmacocinética?
+El catión Litio (Li+) es una molécula diminuta que no se une a proteínas plasmáticas, no se metaboliza en el hígado y se filtra libremente por el glomérulo, reabsorbiéndose en el túbulo proximal competitivo con el sodio. Si el paciente tiene insuficiencia renal (creatinina 2.2 mg/dL) o depleción de volumen (deshidratación, uso de tiazidas o AINEs), el riñón reabsorberá masivamente el litio intentando retener sodio, disparando la litemia a rangos tóxicos (>1.5 mEq/L).
+Por tanto, el Ácido Valproico, que sufre glucuronidación y oxidación en el hígado, evade completamente la dependencia renal y logra estabilizar el estado de ánimo al aumentar los niveles de GABA y bloquear canales de sodio voltaje dependientes.
 
 ¿Cuál es la trampa del examen?
-Muchos estudiantes eligen litio automáticamente ante cualquier pregunta de trastorno bipolar, sin leer la creatinina elevada.
-Otra trampa: elegir lamotrigina por ser un estabilizador "moderno", olvidando que su indicación principal es la prevención de depresión, no la manía aguda.
-La creatinina elevada es la pista que cambia toda la respuesta.
+El distractor principal es el Litio (Opción A). El estudiante ve un paciente hiperactivo, que no duerme, gasta dinero y se cree el mesías, y rápidamente marca "Litio" sin haber leído la última línea del caso clínico: "creatinina 2.2 mg/dL". ¡Boom! Caíste en la trampa. Siempre lee los laboratorios en psiquiatría. 
+La segunda trampa es la Lamotrigina (Opción D); recuerda que la lamotrigina sirve para levantar la depresión bipolar, no para bajar la manía (carece de propiedades antimaníacas agudas).
 
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Reconocer episodio maníaco agudo con síntomas psicóticos en trastorno bipolar tipo I.
-2. Evaluar función renal antes de elegir estabilizador del ánimo.
-3. Elegir valproato si hay insuficiencia renal significativa (litio contraindicado).
-4. Considerar antipsicótico atípico adyuvante si los síntomas psicóticos son prominentes.
-
-Perlas de examen
-✅ Manía aguda + IRC = valproato, no litio automático.
-✅ Litio se elimina por vía renal; creatinina elevada = riesgo de toxicidad.
-✅ Valproato: eficaz en manía aguda, metabolismo hepático, no depende de riñón.
-✅ Lamotrigina: prevención de depresión, NO manía aguda.
-✅ Siempre leer laboratorios antes de elegir estabilizador en bipolar.
-✅ CANMAT y guías actuales respaldan valproato como alternativa de primera línea en manía.
+Perlas de examen y práctica clínica:
+✅ Estabilizadores del ánimo de 1ra línea en Manía Aguda (CANMAT): Litio, Valproato, o Antipsicóticos Atípicos (Quetiapina, Aripiprazol, Asenapina, Risperidona, Paliperidona, Cariprazina).
+✅ Contraindicaciones formales del Litio: Insuficiencia Renal, Enfermedad del Nodo Sinusal, Insuficiencia Cardíaca severa, Hipotiroidismo no controlado (relativa), Embarazo (Anomalía de Ebstein en primer trimestre).
+✅ Interacciones fatales del Litio: Tiazidas, AINEs, IECAs/ARA-II (todos disminuyen su excreción y causan toxicidad).
+✅ Rango terapéutico del litio: 0.6 - 1.2 mEq/L.
+✅ Valproato: Precaución con hepatotoxicidad, pancreatitis y teratogenicidad (defectos del tubo neural).
 
 Referencias
-• CANMAT Bipolar Disorder Guidelines.
-• DSM-5-TR: Bipolar I Disorder.
-• UpToDate: Acute Mania in Bipolar Disorder.
-• Stahl's Essential Psychopharmacology.
-• Kaplan & Sadock's Comprehensive Textbook of Psychiatry.`,
+• CANMAT and ISBD Bipolar Disorder Guidelines.
+• APA Practice Guideline for the Treatment of Patients With Bipolar Disorder.
+• Stahl's Essential Psychopharmacology.`,
   },
   {
     id: "dr-q-104",
@@ -10169,7 +10133,7 @@ Referencias
     ],
     correctOptionId: "C",
     explanation:
-      "Síntomas psiquiátricos de inicio tardío (65 años), pérdida de peso inexplicada, tabaquismo y síntomas psicóticos obligan a descartar primero una causa orgánica, particularmente neoplasia o enfermedad neurológica.",
+      "En psiquiatría geriátrica, el debut de síntomas psicóticos (como los delirios nihilistas del Síndrome de Cotard) asociados a \"banderas rojas\" sistémicas (pérdida de 10 kg, inicio tardío a los 65 años, tabaquismo pesado) es un cuadro orgánico o paraneoplásico hasta que se demuestre lo contrario. La prioridad absoluta e indelegable es buscar una neoplasia oculta (ej. cáncer de pulmón) o una patología neurológica mediante neuroimagen, TC de tórax y laboratorios exhaustivos.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (ISRS y control ambulatorio): Iniciar sertralina o fluoxetina en un anciano con banderas rojas oncológicas, enviándolo a su casa por 4 semanas, es una negligencia que retrasará el diagnóstico de un posible cáncer tratable y empeorará dramáticamente su pronóstico vital.\n• Opción B (Trastorno delirante persistente): Los trastornos psicóticos primarios rara vez debutan a los 65 años sin causa orgánica. Además, esta opción ignora por completo la pérdida severa de peso y el tabaquismo, asumiendo un origen puramente psiquiátrico de forma prematura.\n• Opción D (Benzodiacepinas): No abordan la gravedad del cuadro psicótico, no descartan la causa subyacente y pueden causar delirium, caídas o depresión respiratoria en un adulto mayor.",
     keyPoints: [
       "Cuando veas: psicosis de inicio tardío (>60 años) + pérdida de peso inexplicada + tabaquismo + delirios nihilistas (síndrome de Cotard).",
       "Debes pensar en: descartar causa médica u orgánica subyacente, especialmente neoplasia, antes de cerrar diagnóstico psiquiátrico.",
@@ -10179,68 +10143,33 @@ Referencias
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta es una pregunta clásica de psiquiatría de enlace porque evalúa psicosis de inicio tardío con síndrome de Cotard: antes de etiquetar como depresión psicótica primaria, debes buscar activamente causa orgánica, especialmente neoplasia.
+Esta es una de las preguntas de oro en psiquiatría de enlace. Evalúa el pilar más importante de la psiquiatría clínica: el diagnóstico de exclusión. Nunca asumas un trastorno psiquiátrico primario si el paciente tiene "banderas rojas" orgánicas.
 
-La clave no es iniciar ISRS ambulatorio ni diagnosticar trastorno delirante persistente sin estudio médico.
+La clave no es diagnosticar rápido la depresión psicótica.
 La clave es:
-Psicosis de inicio tardío + pérdida de peso + tabaquismo + síndrome de Cotard = buscar neoplasia u otra causa orgánica antes de cerrar diagnóstico psiquiátrico.
+Psicosis de inicio tardío + Baja de peso severa + Tabaquismo = Buscar Cáncer (Síndrome Paraneoplásico u Orgánico).
 
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Hombre de 65 años con cambios progresivos de comportamiento en los últimos meses.
-• Pérdida involuntaria de 10 kg en 3 meses y antecedente de tabaquismo pesado.
-• Enlentecimiento psicomotor, aislamiento social y aspecto "muy deprimido".
-• Delirios nihilistas: sus órganos "se están pudriendo", afirma que "ya está muerto" (síndrome de Cotard).
-• Cuadro con múltiples banderas rojas sistémicas que obligan a descartar causa orgánica.
-
-Recordemos el síndrome de Cotard y la psicosis tardía:
-• Síndrome de Cotard: delirios nihilistas de negación de existencia propia o de órganos ("estoy muerto", "mi hígado se pudre").
-• Puede observarse en depresión psicótica mayor, esquizofrenia, enfermedad neurológica (ESL, demencia) o procesos neoplásicos/paraneoplásicos.
-• Psicosis de inicio tardío (>60 años): siempre considerar causa orgánica hasta demostrar lo contrario.
-• Banderas rojas: pérdida de peso inexplicada, tabaquismo (cáncer de pulmón), inicio tardío, síntomas neurológicos.
-• Estudio inicial: hemograma, perfil metabólico, TSH, vitamina B12, neuroimagen, TC de tórax (tabaquismo + baja de peso).
-• Síndromes paraneoplásicos pueden manifestarse con síntomas psiquiátricos antes del diagnóstico oncológico.
-
-Por lo tanto:
-La prioridad diagnóstica inicial es buscar activamente una causa médica u orgánica subyacente, especialmente una neoplasia.
-
-¿Por qué la opción C es la respuesta correcta?
-La psicosis de inicio tardío con pérdida de peso inexplicada y tabaquismo pesado obliga a descartar neoplasia (especialmente pulmonar) antes de cerrar un diagnóstico psiquiátrico primario.
-El síndrome de Cotard, aunque puede ser manifestación de depresión psicótica, también se asocia a enfermedades neurológicas y procesos neoplásicos/paraneoplásicos.
-Retrasar la búsqueda de causa orgánica con ISRS ambulatorio puede postergar el diagnóstico de cáncer en etapa tratable.
-El estudio debe incluir neuroimagen, laboratorios completos y TC de tórax dado el tabaquismo y la caquexia.
-
-¿Por qué fallan las otras opciones?
-Opción A (ISRS + control ambulatorio en 4 semanas): peligroso sin descartar causa orgánica; puede retrasar diagnóstico de neoplasia y empeorar pronóstico.
-Opción B (trastorno delirante persistente + psicoterapia): ignora inicio tardío, pérdida de peso y tabaquismo; no aborda la necesidad de estudio médico urgente.
-Opción D (benzodiacepinas por ansiedad): no aborda la gravedad del cuadro psicótico ni la necesidad de descartar causa orgánica subyacente.
+¿Qué está ocurriendo realmente en la fisiopatología?
+El paciente presenta el clásico **Síndrome de Cotard** (delirio nihilista: el paciente afirma estar muerto, vacío, o que sus órganos se pudren). Históricamente, este síndrome se ha asociado a la depresión mayor con síntomas psicóticos.
+Sin embargo, el cerebro del adulto mayor es altamente vulnerable a noxas sistémicas. Un tumor oculto (ej. carcinoma microcítico de pulmón en un fumador pesado) puede generar anticuerpos onconeurales o alteraciones metabólicas que cruzan la barrera hematoencefálica, desencadenando psicosis, letargo y cuadros seudodepresivos antes de que aparezcan los síntomas respiratorios clásicos. Por ello, la pérdida de 10 kg en 3 meses grita "¡Neoplasia!" y no "¡Falta de serotonina!".
 
 ¿Cuál es la trampa del examen?
-Muchos estudiantes eligen ISRS porque el paciente parece "deprimido" y tiene delirios compatibles con depresión psicótica.
-Pero la psicosis de inicio tardío + pérdida de peso + tabaquismo es la tríada que obliga a buscar cáncer antes de psiquiatría pura.
-Otra trampa: diagnosticar trastorno delirante persistente sin considerar que los síntomas psicóticos primarios raramente debutan a los 65 años sin causa orgánica.
+El distractor principal (Opción A) busca apelar al "reflejo medular" del estudiante: "Paciente deprimido = Dar ISRS". Pero en psiquiatría geriátrica, recetar antidepresivos sin hacer un tamizaje orgánico frente a pérdida de peso es un error imperdonable que retrasa el diagnóstico oncológico.
 
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Reconocer psicosis de inicio tardío con banderas rojas sistémicas (baja de peso, tabaquismo).
-2. Buscar activamente causa orgánica (neoplasia, enfermedad neurológica, metabólica).
-3. Realizar estudio completo: laboratorios, neuroimagen, TC de tórax.
-4. Una vez descartada causa orgánica, tratar la etiología psiquiátrica identificada.
-
-Perlas de examen
-✅ Psicosis nueva en anciano (>60 años) = descartar causa orgánica primero.
-✅ Síndrome de Cotard: delirios nihilistas ("estoy muerto", "mis órganos se pudren").
-✅ Pérdida de peso + tabaquismo + psicosis tardía = buscar cáncer de pulmón.
-✅ No iniciar ISRS ambulatorio sin descartar neoplasia en psicosis tardía.
-✅ Síndromes paraneoplásicos pueden debutar con síntomas psiquiátricos.
-✅ El síndrome de Cotard puede ser depresión psicótica, neurológica o neoplásica.
+Perlas de examen y práctica clínica:
+✅ **Banderas rojas en Psiquiatría que obligan a neuroimagen y laboratorios completos:**
+1. Inicio tardío de psicosis o manía (mayores de 40-50 años).
+2. Síntomas atípicos (alucinaciones visuales u olfatorias; en esquizofrenia suelen ser auditivas).
+3. Alteración del sensorio (confusión, letargo, fluctuación de conciencia = Delirium).
+4. Síntomas constitucionales (fiebre, baja de peso extrema, diaforesis nocturna).
+5. Examen neurológico focal anormal.
+✅ **Síndrome de Cotard:** Delirio nihilista ("no tengo sangre", "estoy muerto").
+✅ **Síndrome de Capgras:** Delirio de que un familiar ha sido reemplazado por un impostor idéntico. Frecuente en demencia por cuerpos de Lewy o esquizofrenia.
 
 Referencias
-• Harrison's Principles of Internal Medicine.
-• UpToDate: Psychosis in Older Adults.
-• Kaplan & Sadock's Comprehensive Textbook of Psychiatry.
-• DSM-5-TR: Psychotic Disorders Due to Another Medical Condition.
-• Berrios GE, Luque R. Cotard's Syndrome.`,
+• Harrison's Principles of Internal Medicine (Paraneoplastic Syndromes).
+• UpToDate: New-onset psychosis in older adults.
+• Kaplan & Sadock's Comprehensive Textbook of Psychiatry.`,
   },
   {
     id: "dr-q-108",
