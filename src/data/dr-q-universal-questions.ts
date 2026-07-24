@@ -6643,86 +6643,45 @@ Referencias
     difficulty: "hard",
     tags: ["dr-q", "universal", "metodoq", "fisiopatologia", "cor_pulmonale", "vph", "peep"],
     statement:
-      "Hombre de 50 años, neumonía bilateral Influenza A, VM PEEP 16. PA 60/40. Swan-Ganz: PVC 22, PAP 60/30, PAOP 8, GC 2.0. Eco: VD dilatado, septum hacia VI, VI colapsado. ¿Doble mecanismo que ↑ RVP y colapsa GC?",
+      "Hombre de 50 años con neumonía bilateral grave por Influenza A. Ingresa con fiebre alta, disnea intensa, saturación de oxígeno de 82% pese a oxígeno suplementario y extensa afectación pulmonar en la radiografía de tórax. Requiere ventilación mecánica por insuficiencia respiratoria aguda. ¿Cuál es el tratamiento antibiótico empírico más apropiado y en qué área del hospital debe manejarse inicialmente este paciente?",
     options: [
-      { id: "A", label: "A", text: "PEEP distiende VI comprimiendo VD; hipoxia vasodilata pulmón." },
-      {
-        id: "B",
-        label: "B",
-        text: "Vasoconstricción pulmonar hipóxica difusa + compresión capilar por PEEP alto → ↑ RVP → cor pulmonale agudo → ↓ precarga VI.",
-      },
-      { id: "C", label: "C", text: "Fibrinolisis licua sangre hacia pleura." },
-      { id: "D", label: "D", text: "Hipercapnia dilata arteria pulmonar y constriñe venas." },
+      { id: "A", label: "A", text: "Amoxicilina-clavulanato más claritromicina y manejo en sala de hospitalización convencional." },
+      { id: "B", label: "B", text: "Ceftriaxona más azitromicina y manejo en Unidad de Cuidados Intensivos (UCI)." },
+      { id: "C", label: "C", text: "Levofloxacino en monoterapia y observación en urgencias." },
+      { id: "D", label: "D", text: "Cefotaxima más claritromicina y manejo en sala de hospitalización convencional." },
     ],
     correctOptionId: "B",
-    explanation:
-      "Hipoxia alveolar global → VPH (cierre arteriolas pre-capilares). PEEP alto sobredistinde alvéolos → aplasta capilares intra-alveolares. RVP ↑ → VD choca contra muro → dilatación, estasis (PVC↑), PAOP baja (VI sin precarga), GC colapsa. Disociación Swan: presiones derechas altas, izquierdas bajas = bloqueo pulmonar.",
+    explanation: "El paciente presenta una Neumonía Adquirida en la Comunidad (NAC) grave con insuficiencia respiratoria que requiere intubación, siendo esto un criterio mayor de la ATS/IDSA para ingreso a UCI. Aunque la infección viral primaria sea Influenza, las guías internacionales recomiendan agregar siempre un esquema antibiótico empírico (como Betalactámico + Macrólido, ej. Ceftriaxona + Azitromicina) debido a la altísima incidencia y mortalidad de la sobreinfección bacteriana por S. aureus o S. pneumoniae en estos casos graves.\n\n¿Por qué se descartan las otras opciones?\n• Opciones A, C y D: Plantean manejo en hospitalización convencional u observación en urgencias, lo cual es inaceptable en un paciente que ya requiere ventilación mecánica invasiva (Criterio mayor absoluto para UCI). Además, la monoterapia con fluoroquinolona (Opción C) suele reservarse para salas de hospitalización o manejo ambulatorio, no para NAC grave en UCI.",
     keyPoints: [
-      "Cuando veas: SDRA/neumonía bilateral + PEEP alto + PVC↑ + PAOP baja + GC colapsado + VD dilatado en eco.",
-      "Debes pensar en: doble mecanismo ↑ RVP — VPH (hipoxia) + compresión capilar por PEEP → cor pulmonale agudo → ↓ precarga VI.",
-      "Disociación Swan: presiones derechas altas (PVC 22, PAP 60/30) + izquierdas bajas (PAOP 8) = bloqueo pulmonar, no falla VI primaria.",
-      "Hipoxia constriñe pulmón (Euler-Liljestrand); PEEP excesivo aplasta capilares intra-alveolares.",
-      "Tema: Cor pulmonale agudo — VPH + efecto hemodinámico del PEEP.",
+      "Necesidad de Ventilación Mecánica = Criterio Mayor de la ATS/IDSA para ingreso obligatorio a UCI.",
+      "Neumonía por Influenza A grave = Alto riesgo de sobreinfección bacteriana letal (S. aureus, Neumococo).",
+      "Tratamiento Empírico NAC Grave en UCI = Betalactámico IV (Ceftriaxona/Cefotaxima) + Macrólido (Azitromicina) O Fluoroquinolona respiratoria.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta es una pregunta clásica de fisiopatología hemodinámica en UCI porque evalúa cor pulmonale agudo en SDRA con PEEP alto: el doble mecanismo de ↑ RVP (vasoconstricción pulmonar hipóxica + compresión capilar por PEEP) colapsa la precarga del VI.
+Esta es una de esas preguntas de medicina interna y UCI que busca romper un preconcepto peligroso en los estudiantes: "Si es un virus, no doy antibióticos". 
 
-La clave no es atribuir el shock a falla de bomba izquierda, fibrinolisis pleural o vasodilatación por hipercapnia.
+La clave no es enfocarse solo en el diagnóstico de Influenza A.
 La clave es:
-Integrar VPH difusa por hipoxia alveolar global + compresión capilar por PEEP alto → ↑ RVP → VD dilatado → septum empuja VI → ↓ precarga y GC colapsado.
+Paciente crítico intubado + Infección viral pulmonar extensa = Co-infección bacteriana hasta que se demuestre lo contrario.
 
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Hombre de 50 años, neumonía bilateral por Influenza A, VM con PEEP 16.
-• PA 60/40; Swan-Ganz: PVC 22, PAP 60/30, PAOP 8, GC 2.0 L/min.
-• Eco: VD dilatado, septum abombado hacia VI, VI colapsado.
-• Disociación hemodinámica: presiones derechas altas, izquierdas bajas = bloqueo pulmonar.
-
-Recordemos VPH, PEEP y cor pulmonale agudo:
-• VPH (Euler-Liljestrand): hipoxia alveolar global → vasoconstricción arteriolar pre-capilar → ↑ RVP.
-• PEEP alto sobredistinde alvéolos → aplasta capilares intra-alveolares → ↑ RVP adicional.
-• RVP ↑ → VD choca contra muro pulmonar → dilatación, estasis (PVC↑), interdependencia ventricular.
-• PAOP baja (8) indica VI sin precarga, no falla de bomba izquierda primaria.
-• GC colapsa por ↓ retorno venoso al VI, no por disfunción miocárdica izquierda aislada.
-
-Por lo tanto:
-El doble mecanismo que ↑ RVP y colapsa GC es VPH difusa + compresión capilar por PEEP alto → cor pulmonale agudo con ↓ precarga VI.
-
-¿Por qué la opción B es la respuesta correcta?
-Integra ambos mecanismos (VPH por hipoxia + compresión capilar por PEEP) y explica la cascada hemodinámica: ↑ RVP → cor pulmonale agudo → ↓ precarga VI → GC colapsado.
-
-¿Por qué fallan las otras opciones?
-Opción A (PEEP distiende VI comprimiendo VD): PEEP ↑ presión intratorácica, pero PAOP 8 indica VI vacío, no sobrecarga izquierda.
-Opción C (fibrinolisis licua sangre hacia pleura): no explica VPH ni compresión capilar alveolar en SDRA bilateral.
-Opción D (hipercapnia dilata arteria pulmonar): la hipoxia causa vasoconstricción pulmonar, no vasodilatación.
+¿Qué está ocurriendo realmente en la fisiopatología?
+El paciente tiene un cuadro de Neumonía Adquirida en la Comunidad (NAC) que ha progresado a Síndrome de Dificultad Respiratoria Aguda (SDRA), requiriendo Ventilación Mecánica. Según los criterios ATS/IDSA, necesitar ventilación mecánica o soporte vasopresor son **Criterios Mayores** que obligan al ingreso a la Unidad de Cuidados Intensivos (UCI).
+Respecto al cuestionamiento válido del estudiante: *"Si es influenza, ¿por qué tirar antibióticos?"*. Excelente observación, pero en el paciente CRÍTICO, la infección por el virus de la influenza daña severamente el epitelio respiratorio ciliado, alterando el clearance mucociliar y deprimiendo localmente a los macrófagos alveolares. Esto crea el caldo de cultivo perfecto para una **sobreinfección bacteriana secundaria**. Los agentes clásicos que "aprovechan" este daño viral son el *Staphylococcus aureus* y el *Streptococcus pneumoniae*. La mortalidad de una sobreinfección no tratada empíricamente en las primeras horas en un paciente ventilado supera el 50%. 
+Por ello, TODO paciente con NAC que ingresa a UCI recibe empíricamente un esquema de amplio espectro, típicamente **Betalactámico (Ceftriaxona) + Macrólido (Azitromicina)** o Betalactámico + Quinolona respiratoria, independientemente de que se haya aislado un virus, al menos hasta tener procalcitonina baja repetida o cultivos negativos a las 48-72h.
 
 ¿Cuál es la trampa del examen?
-Muchos estudiantes asocian:
-"Shock en VM = falla de bomba izquierda o hipovolemia."
-Pero la disociación Swan (PVC↑, PAP↑, PAOP↓) apunta a bloqueo pulmonar con cor pulmonale agudo.
-Aquí el dato decisivo es:
-PEEP 16 + neumonía bilateral + PAOP 8 + VD dilatado = VPH + compresión capilar, no falla VI primaria.
+Poner un diagnóstico viral inicial para que el estudiante suspenda o no marque los antibióticos por miedo a "crear resistencia". En urgencias y en UCI, la prioridad es salvar la vida: se dispara primero (antibiótico empírico agresivo) y se averigua después (desescalamiento con cultivos).
 
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Interpretar Swan-Ganz: PVC↑ + PAP↑ + PAOP↓ = bloqueo pulmonar (cor pulmonale).
-2. Identificar VPH por hipoxia alveolar global en SDRA/neumonía bilateral.
-3. Reconocer que PEEP alto comprime capilares → ↑ RVP adicional.
-4. Correlacionar con eco: VD dilatado, septum → VI, VI colapsado = ↓ precarga sistémica.
-
-Perlas de examen
-✅ VPH: hipoxia alveolar → vasoconstricción pulmonar (Euler-Liljestrand).
-✅ PEEP alto → compresión capilar intra-alveolar → ↑ RVP.
-✅ PVC↑ + PAOP↓ = cor pulmonale agudo, no falla VI primaria.
-✅ VD dilatado + septum → VI = interdependencia ventricular patológica.
-✅ GC bajo con PAOP baja = VI muere de sed (↓ precarga), no de bomba rota.
+Perlas de examen y práctica clínica:
+✅ **Criterios Mayores de NAC grave (ATS/IDSA):** Shock séptico que requiere vasopresores o Falla respiratoria que requiere ventilación mecánica invasiva. Con 1 solo criterio mayor el paciente va a UCI.
+✅ **Sobrinfección bacteriana post-Influenza:** Sospechar fuertemente de *S. aureus* (incluso MRSA si hay factores de riesgo) y *S. pneumoniae*.
+✅ **Esquema de Oro NAC en UCI:** Ceftriaxona + Azitromicina. (Y agregar Oseltamivir por la Influenza documentada).
 
 Referencias
-• West — Respiratory Physiology: pulmonary circulation and V/Q.
-• ARDS hemodynamics and PEEP effects (ESICM/ATS).
-• Pinsky — Ventricular interaction in critical illness.
-• UpToDate: Acute cor pulmonale in the ICU.`,
+• ATS/IDSA Clinical Practice Guidelines for the Management of Community-Acquired Pneumonia in Adults.
+• Surviving Sepsis Campaign Guidelines.
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "dr-q-71",
@@ -10308,79 +10267,38 @@ Referencias
       },
     ],
     correctOptionId: "C",
-    explanation:
-      "Prioridad inicial en agitación psicomotora severa: garantizar seguridad, controlar la conducta agitada y posteriormente completar la evaluación diagnóstica (psicosis primaria, intoxicación por estimulantes, manía, etc.).",
+    correctOptionId: "C",
+    explanation: "La prioridad inicial en un paciente con agitación psicomotora severa y agresividad en urgencias es garantizar la seguridad del paciente y del personal médico mediante la contención farmacológica (y física si es necesario). No es seguro ni ético proceder con estudios de imagen, laboratorios o intentar medicación oral hasta que el paciente esté sedado. Los signos autonómicos obligan a descartar etiologías orgánicas o tóxicas (ej. cocaína, anfetaminas) antes de diagnosticar una psicosis primaria.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Risperidona oral): En un paciente con agitación extrema, poco colaborador y agresivo, la vía oral es inviable por el alto riesgo de aspiración, rechazo y agresión al personal.\n• Opción B (RM cerebral): Es imposible realizar una resonancia magnética en un paciente agitado y no colaborador. Primero debe lograrse la sedación.\n• Opción D (Tratamiento de esquizofrenia): Es un error grave diagnosticar esquizofrenia en el servicio de urgencias durante un primer episodio de psicosis sin haber descartado antes causas tóxicas (ej. inducida por estimulantes) o médicas (encefalitis, lupus).",
     keyPoints: [
-      "Cuando veas: agitación psicomotora extrema con agresividad + ideación delirante + signos autonómicos (midriasis, taquicardia, hipertensión) en urgencias.",
-      "Debes pensar en: prioridad = controlar agitación mediante sedación farmacológica y garantizar seguridad del paciente y del personal.",
-      "Agitación severa con riesgo para paciente y personal es urgencia médica; primero seguridad y sedación, diagnóstico etiológico después.",
-      "Midriasis + taquicardia + hipertensión pueden sugerir intoxicación por estimulantes además de psicosis primaria; no cerrar diagnóstico sin estudio.",
-      "Tema: Manejo de agitación psicomotora en urgencias.",
+      "Agitación psicomotora extrema = Urgencia médica. Primera prioridad: Seguridad (sedación IM/IV rápida).",
+      "Síntomas psicóticos + Alteraciones autonómicas (midriasis, taquicardia) = Alta sospecha de Intoxicación o Abstinencia.",
+      "Nunca diagnosticar un trastorno psiquiátrico primario en urgencias sin descartar causas secundarias.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta es una pregunta clásica de psiquiatría de urgencias porque evalúa la prioridad ante agitación psicomotora severa: primero seguridad y sedación, después el diagnóstico etiológico completo.
+Esta pregunta de psiquiatría de urgencias evalúa un escenario de la vida real donde el instinto clínico básico debe priorizar el control de daños.
 
-La clave no es programar valoración ambulatoria ni solicitar neuroimagen antes de controlar la agitación.
+La clave no es llegar a un diagnóstico etiológico en los primeros 5 minutos.
 La clave es:
-Agitación extrema + agresividad + riesgo para paciente y personal = urgencia médica → sedación farmacológica y garantizar seguridad primero.
+Agitación agresiva = Asegurar el área (Sedación) -> Estudiar al paciente.
 
-¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Mujer de 30 años sin antecedentes psiquiátricos conocidos, traída por la policía.
-• Extremadamente agitada, agresiva y poco colaboradora en urgencias.
-• Ideación delirante de contenido bizarro ("extraterrestres drenando energía a través de postes de luz").
-• Midriasis bilateral, FC 130 lpm, TA 160/100 mmHg y diaforesis leve.
-• Signos autonómicos que pueden sugerir intoxicación por estimulantes además de psicosis primaria.
-
-Recordemos el manejo de la agitación psicomotora:
-• La agitación severa con riesgo para el paciente y el personal es una urgencia médica, no una consulta ambulatoria.
-• Secuencia correcta: seguridad del entorno → contención verbal (si es posible) → sedación farmacológica → evaluación diagnóstica completa.
-• Sedantes de elección en urgencias: antipsicóticos (haloperidol, olanzapina, ziprasidona) ± benzodiacepinas (lorazepam).
-• Diagnóstico diferencial post-sedación: psicosis primaria (esquizofrenia, trastorno bipolar), intoxicación (estimulantes, cannabis, alucinógenos), causa orgánica (delirium, tumor, epilepsia).
-• No diagnosticar esquizofrenia en primer episodio sin descartar causas médicas y tóxicas.
-• Estudio posterior: niveles de tóxicos en orina/sangre, glucosa, electrolitos, neuroimagen si indicada.
-
-Por lo tanto:
-La conducta inicial más adecuada es controlar primero la agitación mediante sedación farmacológica y garantizar la seguridad del paciente y del personal.
-
-¿Por qué la opción C es la respuesta correcta?
-La agitación extrema con agresividad y poco colaboración pone en riesgo inmediato al paciente y al personal de urgencias.
-La sedación farmacológica (haloperidol IM/IV ± lorazepam) permite controlar la conducta agitada de forma segura.
-Una vez sedada y estabilizada, se puede completar la evaluación diagnóstica (tóxicos, laboratorios, entrevista psiquiátrica).
-Este enfoque sigue las guías AAEP y de psiquiatría de urgencias para manejo del paciente agitado.
-
-¿Por qué fallan las otras opciones?
-Opción A (risperidona oral + valoración ambulatoria): inadecuado con agitación grave; una paciente agresiva y poco colaboradora no puede tomar medicación oral ni acudir a cita ambulatoria.
-Opción B (RM cerebral antes de cualquier intervención): retrasa el control de la agitación que pone en riesgo a todos; la neuroimagen se solicita después de estabilizar al paciente si hay indicación.
-Opción D (tratamiento de mantenimiento para esquizofrenia): prematuro sin evaluación completa ni control de la crisis aguda; no se puede diagnosticar esquizofrenia en primer episodio sin descartar causas tóxicas y orgánicas.
+¿Qué está ocurriendo realmente en la clínica?
+Nos enfrentamos a una mujer joven cursando con un episodio de psicosis aguda ("extraterrestres") acompañado de severa agitación psicomotora. 
+Cualquier estudiante podría pensar apresuradamente: "Mujer joven con delirios = Esquizofrenia o Trastorno Bipolar". Sin embargo, un clínico astuto nota de inmediato las **banderas rojas autonómicas**: Midriasis, Taquicardia y Cifras Tensionales Altas. Esta tríada grita "Síndrome Simpaticomimético" (intoxicación por cocaína, anfetaminas, tusi, metanfetaminas). 
+Frente a un paciente en este estado, intentar tomar laboratorios o realizar imágenes es riesgoso tanto para el personal (agresiones) como para el paciente. El protocolo (ej. Guías BETA) dicta que la primera intervención es el "Verbal De-escalation" (Contención verbal) y, si falla como en este caso, se debe proceder inmediatamente a la contención farmacológica (usualmente Haloperidol IM o Olanzapina IM, a menudo combinados con Midazolam o Lorazepam).
 
 ¿Cuál es la trampa del examen?
-Muchos estudiantes eligen risperidona oral porque la paciente tiene síntomas psicóticos claros y parece un primer episodio de esquizofrenia.
-Pero la agitación extrema con agresividad es una urgencia que requiere sedación parenteral inmediata, no medicación oral ambulatoria.
-Otra trampa: ignorar los signos autonómicos (midriasis, taquicardia, hipertensión) que sugieren intoxicación por estimulantes como diagnóstico diferencial.
+La trampa es la Opción D (Esquizofrenia). En psiquiatría, los diagnósticos primarios (como la esquizofrenia) son diagnósticos de exclusión. NO puedes rotular a un paciente como esquizofrénico en urgencias sin antes hacer un toxicológico en orina, panel metabólico y, si hay focalización, neuroimagen.
 
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Garantizar seguridad del paciente y del personal (entorno controlado).
-2. Intentar contención verbal si es posible (escalada de contención).
-3. Sedación farmacológica parenteral (haloperidol ± lorazepam IM/IV).
-4. Evaluación diagnóstica completa post-sedación (tóxicos, laboratorios, entrevista psiquiátrica).
-
-Perlas de examen
-✅ Agitación severa con riesgo = urgencia médica, no consulta ambulatoria.
-✅ Primero sedar y proteger; diagnosticar después con estudio completo.
-✅ No administrar antipsicótico oral a paciente agresivo y poco colaborador.
-✅ Midriasis + taquicardia + HTA pueden sugerir intoxicación por estimulantes.
-✅ No diagnosticar esquizofrenia en primer episodio sin descartar tóxicos y causas orgánicas.
-✅ RM cerebral no es prioridad antes de controlar agitación que pone en riesgo a todos.
+Perlas de examen y práctica clínica:
+✅ **El Protocolo de Agitación:** 1. Seguridad/Contención verbal -> 2. Contención farmacológica -> 3. Contención física (último recurso) -> 4. Evaluación médica completa.
+✅ **Cóctel lítico clásico:** Haloperidol 5mg + Lorazepam 2mg intramuscular.
+✅ **Diagnóstico Diferencial del "Primer Episodio Psicótico":** Siempre descartar drogas (estimulantes, cannabis sintético), infecciones (encefalitis herpética, sífilis terciaria) y causas autoinmunes (Encefalitis por anticuerpos anti-NMDA).
 
 Referencias
-• UpToDate: The Agitated Patient.
-• AAEP (American Association for Emergency Psychiatry) Guidelines.
-• Tintinalli's Emergency Medicine.
-• Kaplan & Sadock's Comprehensive Textbook of Psychiatry.
-• ACEP Clinical Policy on Critical Issues in the Diagnosis and Management of the Adult Psychiatric Patient.`,
+• American Association for Emergency Psychiatry (AAEP): Project BETA Guidelines.
+• Tintinalli's Emergency Medicine: A Comprehensive Study Guide.
+• Kaplan & Sadock's Synopsis of Psychiatry.`,
   },
   {
     id: "dr-q-110",

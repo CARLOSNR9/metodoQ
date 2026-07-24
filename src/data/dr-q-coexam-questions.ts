@@ -610,72 +610,37 @@ Referencias
       { id: "D", label: "D", text: "Dieta." },
     ],
     correctOptionId: "A",
-    explanation: "A diferencia de la enfermedad de Crohn, el tabaquismo se ha asociado consistentemente con una menor incidencia de colitis ulcerativa. De hecho, la suspensión del hábito tabáquico se ha relacionado con un aumento del riesgo de desarrollar la enfermedad en individuos susceptibles.",
+    explanation: "A diferencia de la enfermedad de Crohn, el tabaquismo se ha asociado consistentemente con una menor incidencia de colitis ulcerativa. De hecho, la suspensión del hábito tabáquico se ha relacionado con un aumento del riesgo de desarrollar la enfermedad en individuos susceptibles. \n\n¿Por qué se descartan las otras opciones?\n• Opción B (Uso crónico de fármacos): Especialmente los AINEs alteran la barrera mucosa y se consideran un factor de riesgo claro.\n• Opción C (Infecciones gastrointestinales): Episodios de gastroenteritis infecciosa previa (Ej. Salmonella, Campylobacter) pueden desencadenar la autoinmunidad inicial.\n• Opción D (Dieta): Dietas ricas en grasas y azúcares ultraprocesados (dieta occidental) alteran la microbiota y aumentan el riesgo de EII.",
     keyPoints: [
-      "Cuando veas: pregunta sobre factores de riesgo de colitis ulcerosa pidiendo identificar cuál NO es factor de riesgo.",
-      "Debes pensar en: tabaquismo — tiene relación inversa con colitis ulcerosa (NO es factor de riesgo; incluso se asocia a menor incidencia).",
-      "La suspensión del tabaquismo puede preceder al inicio de colitis ulcerosa en individuos susceptibles.",
-      "A diferencia de colitis ulcerosa, el tabaquismo aumenta el riesgo y la gravedad de enfermedad de Crohn.",
-      "Tema: Epidemiología de la colitis ulcerosa.",
+      "Colitis Ulcerativa y Tabaco: Relación inversamente proporcional (es un factor protector relativo).",
+      "Enfermedad de Crohn y Tabaco: El tabaquismo aumenta el riesgo, la gravedad y la necesidad de cirugía.",
+      "Cese del tabaquismo: Frecuentemente precipita el debut de la Colitis Ulcerativa en pacientes susceptibles.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta es una pregunta clásica de gastroenterología porque evalúa los factores de riesgo epidemiológicos de la colitis ulcerosa, pidiendo identificar cuál NO incrementa el riesgo — con la trampa clásica del tabaquismo.
+Esta es una pregunta clásica de gastroenterología porque evalúa la curiosa "paradoja del tabaco" en la Enfermedad Inflamatoria Intestinal (EII).
 
-La clave no es asumir que el tabaquismo es factor de riesgo universal para todas las enfermedades inflamatorias intestinales.
+La clave no es asumir que el tabaquismo es malo para todo.
 La clave es:
-En colitis ulcerosa, el tabaquismo tiene relación inversa: se asocia consistentemente con menor incidencia; la suspensión del hábito tabáquico puede desencadenar la enfermedad en individuos susceptibles.
+En Colitis Ulcerativa, el tabaco protege. En Enfermedad de Crohn, el tabaco destruye.
 
-¿Qué está ocurriendo realmente?
-La pregunta evalúa:
-• Factores de riesgo asociados al desarrollo de colitis ulcerosa.
-• Se pide identificar cuál de las opciones NO se considera factor de riesgo.
-• El tabaquismo es la excepción clásica: relación protectora/inversa en colitis ulcerosa.
-
-Recordemos epidemiología de colitis ulcerosa:
-• Factores de riesgo reconocidos: uso crónico de fármacos (AINEs, antibióticos), infecciones gastrointestinales previas, dieta (occidental, ultraprocesados), antecedentes familiares, predisposición genética.
-• Tabaquismo y colitis ulcerosa: relación inversa consistente; fumadores tienen menor incidencia de CU.
-• Suspensión del tabaco: puede preceder al debut de colitis ulcerosa en personas genéticamente susceptibles.
-• Contraste con Crohn: el tabaquismo aumenta riesgo, gravedad y recurrencias postoperatorias en enfermedad de Crohn.
-
-Por lo tanto:
-El tabaquismo NO es factor de riesgo para colitis ulcerosa; de hecho, tiene una relación inversa con su incidencia.
-
-¿Por qué la opción A es la respuesta correcta?
-El tabaquismo se ha asociado consistentemente con menor incidencia de colitis ulcerosa, por lo que NO se considera factor de riesgo para esta enfermedad (a diferencia de Crohn, donde sí lo es).
-
-¿Por qué fallan las otras opciones?
-Opción B (uso crónico de fármacos): AINEs y ciertos fármacos se han asociado a mayor riesgo de colitis ulcerosa; sí es factor de riesgo.
-Opción C (infecciones gastrointestinales previas): se postula como desencadenante en individuos predispuestos (mimetismo molecular); sí es factor de riesgo.
-Opción D (dieta): dieta occidental y factores dietéticos se asocian a mayor incidencia de EII; sí es factor de riesgo.
+¿Qué está ocurriendo realmente en la fisiopatología?
+El humo del tabaco tiene múltiples efectos sistémicos y locales en la mucosa intestinal. En la **Colitis Ulcerativa (CU)**, la nicotina parece aumentar la producción de moco colónico, reducir el flujo sanguíneo (disminuyendo la llegada de células inflamatorias) y alterar el tono inmunomodulador, lo que resulta en una **menor incidencia** de la enfermedad en fumadores activos. 
+De hecho, un escenario clínico clásico es el paciente de 35 años que decide dejar de fumar y, a los pocos meses, debuta con rectorragia y diarrea mucosanguinolenta severa (el cese del tabaco "desenmascaró" su CU latente).
+Por el contrario, en la **Enfermedad de Crohn**, el tabaquismo es el factor de riesgo modificable más deletéreo: duplica el riesgo de desarrollar la enfermedad, aumenta la formación de fístulas, estenosis y la necesidad de resecciones quirúrgicas repetidas.
 
 ¿Cuál es la trampa del examen?
-Muchos estudiantes asocian:
-"Tabaquismo = factor de riesgo." Y responden cualquiera de las otras opciones.
-Pero en colitis ulcerosa el tabaquismo es la excepción: relación inversa, no directa.
-Aquí el dato decisivo es:
-Tabaco protege (relativamente) contra CU pero empeora Crohn → siempre diferenciar ambas EII.
+La trampa (Opción A) es el instinto médico básico: "El tabaco siempre es malo, debe ser un factor de riesgo". En el 99% de las enfermedades (Cáncer, EPOC, IAM) esto es cierto, pero la CU es la gran excepción que los examinadores adoran preguntar.
 
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Conocer factores de riesgo de colitis ulcerosa: fármacos, infecciones, dieta, genética.
-2. Recordar la paradoja del tabaco: protector en CU, deletéreo en Crohn.
-3. Suspensión del tabaco puede desencadenar CU en susceptibles.
-4. No extrapolar factores de riesgo de Crohn a colitis ulcerosa sin verificar.
-5. En preguntas "NO es factor de riesgo", buscar la excepción clásica.
-
-Perlas de examen
-✅ Tabaquismo + CU = relación inversa (NO es factor de riesgo).
-✅ Dejar de fumar puede preceder al debut de colitis ulcerosa.
-✅ Tabaquismo + Crohn = mayor riesgo, mayor gravedad, más recurrencias.
-✅ Paradoja del tabaco: diferencia clave entre CU y Crohn en exámenes.
-✅ AINEs, infecciones GI y dieta occidental sí son factores de riesgo de CU.
+Perlas de examen y práctica clínica:
+✅ **Paradoja del Tabaquismo:** Protector en CU, Agravante severo en Crohn.
+✅ **Tratamiento con Parches de Nicotina:** Se han utilizado experimentalmente y en ensayos clínicos para tratar brotes de CU refractaria en ex-fumadores, con cierta eficacia demostrada, aunque no es el estándar de cuidado actual debido a los efectos adversos cardiovasculares.
+✅ **AINEs:** Las exacerbaciones de EII a menudo son precipitadas por el uso reciente de AINEs (ej. ibuprofeno) debido a la inhibición de prostaglandinas citoprotectoras de la mucosa.
 
 Referencias
-• ECCO Guidelines on Ulcerative Colitis.
-• American College of Gastroenterology Clinical Guidelines.
-• Harrison's Principles of Internal Medicine.
-• Sleisenger and Fordtran's Gastrointestinal and Liver Disease.`,
+• ECCO Guidelines on Therapeutics in Ulcerative Colitis.
+• American College of Gastroenterology (ACG) Clinical Guideline: Ulcerative Colitis in Adults.
+• Harrison's Principles of Internal Medicine.`,
   },
 
   {
@@ -2599,90 +2564,39 @@ Referencias
       { id: "D", label: "D", text: "Realizar manejo sintomático y control en un año." },
     ],
     correctOptionId: "B",
-    explanation: "El paciente presenta dispepsia persistente pese a tratamiento con inhibidores de bomba de protones y tiene más de 50 años. En este contexto está indicada la realización de endoscopia digestiva alta para descartar patología estructural del tracto gastrointestinal superior.",
+    explanation: "Paciente de 50 años con síndrome dispéptico que NO responde al ensayo terapéutico con IBPs durante 3-4 semanas tiene indicación absoluta de Endoscopia Digestiva Alta (EDA). Según las guías (ej. ACG/CAG), la edad ≥50 años (o incluso ≥60 en guías americanas recientes, pero clásicamente 50-55 en LATAM) o la falla al tratamiento empírico obligan a descartar una patología orgánica estructural (ej. úlcera péptica refractaria, cáncer gástrico temprano).\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Continuar IBP): Continuar con IBP empírico tras el fracaso terapéutico a las 3-4 semanas es mala praxis, ya que enmascararía un posible cáncer gástrico y retrasaría su diagnóstico.\n• Opción C (Colonoscopia): La colonoscopia está indicada para estudio de sangrado digestivo bajo, cambios en el hábito intestinal o tamizaje de cáncer colorrectal. No evalúa el epigastrio.\n• Opción D (Manejo sintomático y control en 1 año): Negligencia médica. Un paciente de 50 años con dispepsia refractaria a tratamiento no debe dejarse sin estudio endoscópico.",
     keyPoints: [
-      "Cuando veas: Dolor epigástrico crónico. Dispepsia persistente. Edad mayor de 50 años. Falta de respuesta a IBP.",
-      "Debes pensar en: Endoscopia digestiva alta.",
-      "Tema: Dispepsia.",
+      "Dispepsia refractaria a IBP = Indicación de Endoscopia Digestiva Alta.",
+      "Edad ≥50 años con dispepsia nueva = Criterio de alarma que exige Endoscopia.",
+      "No mantener IBP empírico por meses si no hay mejoría.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el algoritmo diagnóstico de la dispepsia.
-La clave no es el antecedente de colecistectomía.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta de gastroenterología evalúa el abordaje correcto del Síndrome Dispéptico.
+
+La clave no es que le hayan sacado la vesícula (colecistectomía).
 La clave es:
-La edad y la persistencia de los síntomas.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Dolor epigástrico crónico.
-• Relación con la ingesta.
-• Ausencia de respuesta al tratamiento antisecretor.
-• Edad de 50 años.
-Esto corresponde a:
-Síndrome dispéptico en estudio.
-¿Qué es la dispepsia?
-Es un conjunto de síntomas originados en el tracto gastrointestinal superior, incluyendo:
-• Dolor epigástrico.
-• Ardor epigástrico.
-• Saciedad precoz.
-• Plenitud posprandial.
-¿Cuándo está indicada la endoscopia?
-Las guías recomiendan realizar endoscopia en presencia de:
-• Edad ≥50-60 años (según la guía).
-• Síntomas persistentes.
-• Falta de respuesta al tratamiento inicial.
-• Signos de alarma.
-Este paciente cumple:
-Edad de riesgo y persistencia sintomática.
-¿Qué busca la endoscopia?
-Permite identificar:
-• Úlcera gástrica.
-• Úlcera duodenal.
-• Gastritis erosiva.
-• Neoplasias gástricas.
-• Esofagitis.
-• Otras lesiones estructurales.
-¿Por qué NO continuar únicamente IBP?
-El paciente ya recibió:
-Tratamiento empírico.
-La persistencia de síntomas obliga a:
-Continuar el estudio diagnóstico.
-¿Por qué NO solicitar colonoscopia?
-La sintomatología corresponde al:
-Tracto digestivo superior.
-No existen datos que sugieran patología colónica.
-¿Por qué NO realizar únicamente observación?
-La persistencia del cuadro requiere:
-Descartar enfermedad orgánica.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"No tiene pérdida de peso."
-Y responden:
-Continuar IBP.
-Sin embargo:
-El dato decisivo es:
-Edad de 50 años y falta de respuesta al tratamiento inicial.
-Esto justifica:
-Endoscopia digestiva alta.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar síntomas dispépticos.
-2.	Evaluar edad del paciente.
-3.	Buscar signos de alarma.
-4.	Valorar respuesta al tratamiento inicial.
-5.	Solicitar endoscopia digestiva alta cuando esté indicada.
-Perlas de examen
-✅ La dispepsia persistente requiere evaluación etiológica.
-✅ La endoscopia digestiva alta es el estudio de elección para descartar patología estructural.
-✅ La falta de respuesta a IBP obliga a reconsiderar el diagnóstico.
-✅ La edad mayor de 50 años modifica el algoritmo diagnóstico.
-✅ La ausencia de pérdida de peso no excluye enfermedad orgánica.
-✅ La úlcera péptica y las neoplasias deben descartarse en pacientes seleccionados.
-✅ La endoscopia permite diagnóstico y toma de biopsias cuando sea necesario.
+Paciente de 50 años + Dispepsia refractaria a IBP = Endoscopia (EDA).
+
+¿Qué está ocurriendo realmente en la fisiopatología y la clínica?
+La dispepsia es dolor o molestia centrada en el epigastrio superior. La mayoría de los casos son funcionales, pero siempre debemos descartar lo orgánico (Cáncer gástrico, Úlcera péptica). Las guías mundiales establecen dos vías para indicar una Endoscopia de manera inmediata:
+1. **Presencia de Signos de Alarma ("Red Flags"):** Pérdida de peso involuntaria, disfagia, odinofagia, sangrado digestivo (melenas/hematemesis), anemia ferropénica o masa palpable.
+2. **Edad de inicio:** Todo paciente que inicie con dispepsia por encima del dintel de edad de riesgo para cáncer gástrico (tradicionalmente 50-55 años; o ≥60 años en guías ACG 2017) DEBE ir a endoscopia para descartar malignidad.
+Adicionalmente, si a un paciente menor de esa edad sin banderas rojas se le da manejo empírico (IBPs x 4 semanas o test&treat para H. pylori) y **NO responde**, el siguiente paso obligatorio es la Endoscopia.
+
+¿Cuál es la trampa del examen?
+El distractor A (continuar IBP) intenta atrapar a quienes creen que la dispepsia funcional tarda meses en mejorar con IBP. Sin embargo, un ensayo empírico fallido de 3 a 4 semanas es el punto de corte para detenerse y "mirar por dentro" antes de que un posible adenocarcinoma gástrico haga metástasis.
+El antecedente de colecistectomía es otro distractor para hacerte pensar en disfunción del esfínter de Oddi o dolor biliar, pero la semiología apunta directamente al estómago.
+
+Perlas de examen y práctica clínica:
+✅ **Criterios para Endoscopia (EDA) en dispepsia:** Edad ≥50 años (o según guía local), Banderas rojas, Falla a tratamiento empírico con IBP.
+✅ **Estrategia Test and Treat:** En pacientes menores de 50 años SIN banderas rojas, se recomienda test no invasivo para H. pylori (antígeno en heces o test de aliento) y si es positivo, erradicar antes de pedir endoscopia.
+✅ **Sangre oculta en heces:** NUNCA se usa para estudiar dispepsia (se usa para tamizaje de cáncer de colon).
+
 Referencias
-• American College of Gastroenterology Guidelines on Dyspepsia.
-• British Society of Gastroenterology Guidelines.
-• Harrison's Principles of Internal Medicine.
-• Sleisenger and Fordtran's Gastrointestinal and Liver Disease.
-• UpToDate: Approach to the Adult with Dyspepsia.`,
+• ACG and CAG Clinical Guideline: Management of Dyspepsia.
+• AGA Clinical Practice Update on the Management of Refractory H. pylori.
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "dr-q-186",
@@ -4349,70 +4263,34 @@ Referencias
       "Debes pensar en: Glasgow 7/15.",
       "Tema: Escala de Coma de Glasgow.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa uno de los instrumentos más utilizados en urgencias y trauma.
-La clave no es el trauma.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta pregunta de trauma evalúa una de las herramientas más críticas en medicina de urgencias: la Escala de Coma de Glasgow (GCS).
+
+La clave es no cometer errores de suma.
 La clave es:
-Conocer la puntuación de cada componente.
-¿Qué está ocurriendo realmente?
-El paciente presenta:
-• Apertura ocular al dolor.
-• Sonidos incomprensibles.
-• Retirada al dolor.
-Debemos calcular:
-La suma de las tres respuestas.
-¿Cómo se puntúa la respuesta ocular?
-• Espontánea = 4.
-• A la voz = 3.
-• Al dolor = 2.
-• Ninguna = 1.
-El paciente obtiene:
-2 puntos.
-¿Cómo se puntúa la respuesta verbal?
-• Orientado = 5.
-• Confuso = 4.
-• Palabras inapropiadas = 3.
-• Sonidos incomprensibles = 2.
-• Ninguna = 1.
-El paciente obtiene:
-2 puntos.
-¿Cómo se puntúa la respuesta motora?
-• Obedece órdenes = 6.
-• Localiza dolor = 5.
-• Retirada al dolor = 4.
-• Flexión anormal = 3.
-• Extensión anormal = 2.
-• Ninguna = 1.
-El paciente obtiene:
-3 puntos según el enunciado de la pregunta (respuesta motora inadecuada).
-Por lo tanto:
-2 + 2 + 3 = 7 puntos.
-¿Cuál es la trampa de examen?
-Muchos estudiantes olvidan:
-La puntuación individual de cada componente.
-O confunden:
-Flexión anormal con retirada al dolor.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Evaluar respuesta ocular.
-2.	Evaluar respuesta verbal.
-3.	Evaluar respuesta motora.
-4.	Sumar los tres componentes.
-5.	Obtener el Glasgow total.
-Perlas de examen
-✅ Glasgow ≤ 8 indica trauma craneoencefálico grave.
-✅ La respuesta motora es el componente con mayor valor pronóstico.
-✅ La apertura ocular al dolor corresponde a 2 puntos.
-✅ Los sonidos incomprensibles corresponden a 2 puntos.
-✅ La escala máxima es 15 puntos.
-✅ La escala mínima es 3 puntos.
-✅ Glasgow ≤ 8 obliga a considerar protección de la vía aérea.
+**Ocular (2) + Verbal (2) + Motora (3) = 7 puntos.**
+
+¿Por qué esta escala es tan importante?
+Más allá del número, el GCS de 7 puntos clasifica al paciente como **Trauma Craneoencefálico (TCE) Severo**. La regla de oro en trauma es: "GCS menor o igual a 8, intúbalo". Un paciente con 7 puntos ha perdido su capacidad de proteger la vía aérea, y la hipoxia e hipercapnia resultantes del TCE aumentarán drásticamente el edema cerebral y la mortalidad.
+
+Desglose de la puntuación:
+1. **Respuesta Ocular (2 puntos):** Apertura al dolor. (Si fuera espontánea = 4; voz = 3; ninguna = 1).
+2. **Respuesta Verbal (2 puntos):** Sonidos incomprensibles. (Si fuera orientado = 5; confuso = 4; palabras inapropiadas = 3; ninguna = 1).
+3. **Respuesta Motora (3 puntos):** Postura de decorticación/flexión anormal. (Ojo: Si el paciente localiza el dolor, tiene 5 puntos; si retira al dolor, tiene 4 puntos).
+
+¿Cuál es la trampa del examen?
+El distractor más común es la respuesta motora. Muchos confunden la "retirada al dolor" (4 puntos) con la "flexión anormal" (3 puntos). Recuerda: la retirada es un movimiento intencional para alejar el miembro del estímulo doloroso (flexión normal rápida), mientras que la flexión anormal (decorticación) es una respuesta rígida y patológica que indica compromiso hemisférico profundo.
+
+Perlas de examen y práctica clínica:
+✅ **Glasgow menor o igual a 8:** Es el umbral crítico para protección de la vía aérea mediante secuencia rápida de intubación.
+✅ **La motora manda:** Si solo puedes evaluar una parte del Glasgow, evalúa la respuesta motora; es el componente con mayor valor pronóstico neurológico.
+✅ **Limitaciones:** El GCS no mide daño medular ni es útil en pacientes bajo sedación o bloqueadores neuromusculares.
+
 Referencias
-• Advanced Trauma Life Support (ATLS).
-• Brain Trauma Foundation Guidelines.
-• Greenberg's Handbook of Neurosurgery.
-• Tintinalli's Emergency Medicine.
-• UpToDate: Glasgow Coma Scale.`,
+• Advanced Trauma Life Support (ATLS) Student Course Manual.
+• Brain Trauma Foundation Guidelines for the Management of Severe TBI.
+• Tintinalli's Emergency Medicine: A Comprehensive Study Guide.`,
   },
   {
     id: "dr-q-204",
@@ -7654,83 +7532,40 @@ Referencias
       { id: "D", label: "D", text: "Hipertensión transitoria del embarazo; observación únicamente." },
     ],
     correctOptionId: "C",
-    explanation: "La hipertensión diagnosticada antes de las 20 semanas de gestación corresponde a hipertensión arterial crónica. Además, esta paciente presenta alto riesgo de recurrencia de preeclampsia por antecedente de preeclampsia severa, por lo que requiere profilaxis con ácido acetilsalicílico a dosis bajas.",
+    explanation: "Por definición, cualquier hipertensión documentada antes de la semana 20 de gestación es una Hipertensión Arterial Crónica. El tratamiento correcto incluye iniciar terapia antihipertensiva segura en el embarazo (Labetalol, Nifedipino o Metildopa) y, debido a su antecedente de preeclampsia severa previa (factor de alto riesgo clínico), es mandatorio el inicio de profilaxis con ácido acetilsalicílico (Aspirina) a dosis bajas (75-150 mg/día) antes de la semana 16 para prevenir una recurrencia.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Hipertensión gestacional): Se define como HTA de novo DESPUÉS de la semana 20, sin proteinuria ni daño a órgano blanco. El sulfato de magnesio está indicado solo para prevenir o tratar convulsiones en preeclampsia con criterios de severidad o eclampsia.\n• Opción B (Preeclampsia sin criterios): Requiere aparición después de la semana 20 con proteinuria o disfunción orgánica. Finalizar la gestación a las 13 semanas sería un aborto terapéutico innecesario e iatrogénico.\n• Opción D (Hipertensión transitoria): Este diagnóstico es retrospectivo y posparto. Observar a una paciente con HTA crónica y antecedente de preeclampsia severa sin darle aspirina ni hipotensores es condenarla a una recurrencia grave.",
     keyPoints: [
-      "Cuando veas: Hipertensión antes de las 20 semanas. Antecedente de preeclampsia. Ausencia de proteinuria.",
-      "Debes pensar en: Hipertensión arterial crónica.",
-      "Tema: Trastornos hipertensivos del embarazo.",
+      "HTA < 20 semanas = Hipertensión Arterial Crónica.",
+      "HTA > 20 semanas sin proteinuria/daño orgánico = Hipertensión Gestacional.",
+      "HTA > 20 semanas + proteinuria o daño orgánico = Preeclampsia.",
+      "Antecedente de Preeclampsia previa = Factor de alto riesgo = Iniciar Aspirina a dosis bajas antes de la semana 16.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la diferencia entre hipertensión crónica y preeclampsia.
-La clave no es la presión arterial.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta fundacional de obstetricia porque evalúa los tiempos de corte precisos en los trastornos hipertensivos del embarazo y el uso de profilaxis.
+
+La clave no es que tenga la tensión alta.
 La clave es:
-La edad gestacional.
-¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Embarazo de 13 semanas.
-• TA ≥140/90 mmHg.
-• Sin proteinuria.
-• Sin daño orgánico.
-Por definición:
-La hipertensión diagnosticada antes de las 20 semanas corresponde a:
-Hipertensión arterial crónica.
-¿Por qué NO es preeclampsia?
-Porque la preeclampsia clásicamente aparece:
-Después de las 20 semanas.
-Salvo situaciones excepcionales.
-¿Qué tratamiento debe recibir?
-Control tensional con fármacos seguros en el embarazo:
-• Labetalol.
-• Nifedipino.
-• Metildopa.
-Además:
-Ácido acetilsalicílico en dosis bajas (75-150 mg/día, habitualmente 100 mg/día).
-¿Por qué usar aspirina?
-Porque presenta:
-Antecedente de preeclampsia severa.
-Lo que la convierte en:
-Paciente de alto riesgo.
-¿Cuándo debe iniciarse?
-Idealmente:
-Entre las 12 y 16 semanas.
-Y mantenerse hasta:
-36-37 semanas según protocolo.
-¿Por qué NO sulfato de magnesio?
-El sulfato de magnesio se utiliza para:
-• Prevención de eclampsia.
-• Tratamiento de convulsiones.
-No para hipertensión crónica aislada.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Antecedente de preeclampsia."
-Y responden:
-Preeclampsia actual.
-Sin embargo:
-El dato decisivo es:
-La hipertensión antes de las 20 semanas.
-Esto define:
-Hipertensión arterial crónica.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar la edad gestacional.
-2.	Clasificar la hipertensión.
-3.	Reconocer factores de alto riesgo.
-4.	Iniciar antihipertensivo seguro.
-5.	Prescribir aspirina profiláctica.
-Perlas de examen
-✅ Hipertensión antes de las 20 semanas = hipertensión crónica.
-✅ La preeclampsia suele aparecer después de las 20 semanas.
-✅ Antecedente de preeclampsia severa es indicación de aspirina profiláctica.
-✅ Labetalol y nifedipino son tratamientos de elección.
-✅ Los IECA y ARA-II están contraindicados en embarazo.
-✅ La aspirina disminuye el riesgo de recurrencia de preeclampsia.
-✅ El seguimiento obstétrico debe ser estrecho por el alto riesgo materno-fetal.
+HTA ANTES de la semana 20 + Antecedente de preeclampsia = HTA Crónica + Obligación de profilaxis con Aspirina.
+
+¿Qué está ocurriendo realmente en la fisiopatología?
+La preeclampsia es una enfermedad de placentación anormal. Entre la semana 12 y 16 ocurre el segundo oleaje de invasión trofoblástica; si las arterias espirales uterinas no se remodelan adecuadamente, la placenta queda isquémica y libera factores antiangiogénicos (sFlt-1) a la sangre materna, desencadenando disfunción endotelial sistémica, hipertensión y proteinuria *en la segunda mitad del embarazo* (>20 semanas). 
+Por lógica fisiopatológica, una presión arterial elevada *antes* de la semana 20 (cuando la placenta aún no ha podido causar daño endotelial sistémico) significa que la paciente ya era hipertensa antes de embarazarse (Hipertensión Crónica).
+La profilaxis con **Aspirina a dosis bajas** bloquea preferencialmente el tromboxano A2 (vasoconstrictor y agregante plaquetario) favoreciendo a la prostaciclina (vasodilatador), mejorando la invasión trofoblástica y previniendo la preeclampsia. ¡Pero solo funciona si se inicia ANTES de la semana 16! (mientras las arterias espirales se están remodelando).
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes se confunden con el concepto de "Hipertensión Gestacional" (Opción A). Grábatelo: "Gestacional" significa que es *causada* por la gestación (después de la semana 20). Si ocurre antes de la semana 20, la gestación no la causó, es crónica. El otro error común es creer que a toda hipertensa embarazada hay que darle Sulfato de Magnesio; este se reserva EXCLUSIVAMENTE para neuroprotección fetal (parto prematuro <32 semanas) o profilaxis/tratamiento de convulsiones (Eclampsia).
+
+Perlas de examen y práctica clínica:
+✅ **HTA Crónica:** < 20 semanas.
+✅ **HTA Gestacional:** > 20 semanas, sin proteinuria ni disfunción orgánica.
+✅ **Preeclampsia:** > 20 semanas + Proteinuria (o, en su ausencia, plaquetopenia, creatinina >1.1, transaminasas x2, edema pulmonar o síntomas visuales/cerebrales).
+✅ **Fármacos antihipertensivos SEGUROS:** Labetalol, Nifedipino, Metildopa.
+✅ **Fármacos CONTRAINDICADOS (Teratogénicos):** IECAs (Enalapril), ARA-II (Losartán) -> Causan oligohidramnios y falla renal fetal.
+
 Referencias
+• ACOG Practice Bulletin: Gestational Hypertension and Preeclampsia.
 • ACOG Practice Bulletin: Chronic Hypertension in Pregnancy.
-• ISSHP Guidelines for Hypertensive Disorders of Pregnancy.
-• Williams Obstetrics.
-• FIGO Recommendations on Preeclampsia Prevention.
-• UpToDate: Chronic Hypertension in Pregnancy.`,
+• USPSTF Recommendation Statement: Low-Dose Aspirin Use for the Prevention of Preeclampsia.`,
   },
   {
     id: "dr-q-243",

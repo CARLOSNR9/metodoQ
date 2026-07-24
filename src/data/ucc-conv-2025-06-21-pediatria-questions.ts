@@ -144,13 +144,40 @@ export const UCC_CONV_2025_06_21_PEDIATRICS_QUESTIONS: TrainingQuestion[] = [
       },
     ],
     correctOptionId: "B",
-    explanation:
-      "Algún grado de deshidratación según AIEPI/OMS (irritable, ojos hundidos, bebe ávidamente, pliegue cutáneo lento): Plan B con sales de rehidratación oral 50–100 mL/kg en 4 horas bajo supervisión.",
+    explanation: "El paciente presenta 2 o más signos de la estrategia AIEPI/OMS para 'Algún grado de deshidratación' (está irritable, bebe ávidamente, tiene los ojos hundidos y el pliegue cutáneo es lento de 2 segundos). La perfusión periférica está conservada (llenado capilar normal, pulsos palpables), lo que descarta choque. Por lo tanto, el tratamiento de elección es el Plan B: Terapia de Rehidratación Oral (TRO) con suero de baja osmolaridad a dosis de 50-100 mL/kg administrado en 4 horas bajo estricta supervisión en el centro de salud.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Lactato de Ringer IV): Es el Plan C. Solo se indica si hay deshidratación grave con signos de choque (alteración del sensorio, llenado capilar >3s, pulsos débiles) o contraindicación absoluta para la vía oral (íleo, alteración del estado de conciencia).\n• Opción C (SRO en casa post-deposición): Es el Plan A. Se indica solo para prevenir la deshidratación en pacientes con diarrea aguda que NO tienen ningún signo clínico de deshidratación.\n• Opción D (Loperamida): El uso de antidiarreicos y antieméticos está formalmente contraindicado en la diarrea aguda pediátrica, ya que prolongan la excreción del patógeno, causan sedación y pueden desencadenar íleo paralítico o megacolon tóxico.",
     keyPoints: [
-      "Plan A: sin deshidratación → SRO en casa post-deposición.",
-      "Plan B: algún grado de deshidratación → SRO 50–100 mL/kg en 4 h supervisado.",
-      "Plan C: deshidratación grave o choque → líquidos IV en bolos.",
+      "Plan A = Sin deshidratación -> SRO post-deposición para prevención, manejo en casa.",
+      "Plan B = Algún grado de deshidratación -> SRO 50-100 mL/kg en 4h bajo supervisión médica.",
+      "Plan C = Deshidratación grave / Choque -> Líquidos IV (Bolo de Cristaloides 20 mL/kg).",
+      "La Loperamida NUNCA se da en diarrea aguda infantil.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta fundacional de pediatría que evalúa el algoritmo AIEPI de la OMS para el manejo de la Enfermedad Diarreica Aguda (EDA) y deshidratación.
+
+La clave no es asustarse por la cantidad de vómitos.
+La clave es:
+Estado de conciencia + Sed + Ojos + Pliegue.
+
+¿Qué está ocurriendo realmente en la clínica?
+El niño ha perdido volumen intravascular e intersticial por las pérdidas gastrointestinales, pero sus mecanismos compensatorios (taquicardia de 145 lpm) aún logran mantener una perfusión periférica adecuada (llenado capilar de 2s y pulsos palpables). 
+Según el AIEPI, para clasificar la deshidratación se evalúan 4 parámetros principales: 1) Estado general (alerta, irritable, letárgico), 2) Ojos (normales, hundidos), 3) Sed (normal, bebe con avidez, no puede beber), y 4) Pliegue cutáneo (rápido, <2s, >2s).
+Si el paciente tiene 2 o más signos de la columna amarilla (irritable, ojos hundidos, bebe ávidamente, pliegue < 2s), se clasifica como **"Algún grado de deshidratación"** y su manejo mandatorio es el **Plan B**.
+
+El Plan B consiste en dar Sales de Rehidratación Oral (SRO) a dosis de 50-100 mL/kg durante 4 horas. Como el niño pesa 11 kg, necesitará entre 550 y 1100 mL de SRO en ese lapso. Esto NO se manda a la casa; se hace en la sala de Rehidratación Oral (URO) bajo observación de enfermería para evaluar la tolerancia y el gasto fecal.
+
+¿Cuál es la trampa del examen?
+La trampa está en la Opción A (Plan C). Muchos estudiantes, al ver "4 episodios de vómito", piensan instintivamente que la vía oral está contraindicada y saltan a los líquidos IV. ¡Falso! El vómito NO contraindica el Plan B. La conducta correcta ante el vómito es pausar la hidratación por 10 minutos y luego reanudarla más lentamente (con cucharita). Solo si el vómito es incoercible (ej. >4 vómitos en 1 hora *durante* el plan B) o hay rechazo total de la vía oral, se plantea la gastroclisis (sonda nasogástrica) o la vía IV.
+
+Perlas de examen y práctica clínica:
+✅ **Plan A:** Prevención en casa. No tiene deshidratación clínica.
+✅ **Plan B:** Curación en clínica. Tiene "algún grado" de deshidratación (Irritable, ojos hundidos, sediento). Se usa vía oral.
+✅ **Plan C:** Rescate. Tiene deshidratación grave o choque (Letárgico/inconsciente, no puede beber, pliegue >2s, llenado capilar prolongado). Se usan líquidos IV de inmediato (Lactato de Ringer o Solución Salina Normal).
+✅ Nunca recetes loperamida, bismuto o caolín-pectina a un lactante con diarrea.
+
+Referencias
+• Manual AIEPI - Organización Panamericana de la Salud (OPS/OMS).
+• Nelson Textbook of Pediatrics.`,
   },
   {
     id: "ucc-conv-2025-06-21-18",
