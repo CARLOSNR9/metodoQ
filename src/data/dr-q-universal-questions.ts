@@ -10267,7 +10267,6 @@ Referencias
       },
     ],
     correctOptionId: "C",
-    correctOptionId: "C",
     explanation: "La prioridad inicial en un paciente con agitación psicomotora severa y agresividad en urgencias es garantizar la seguridad del paciente y del personal médico mediante la contención farmacológica (y física si es necesario). No es seguro ni ético proceder con estudios de imagen, laboratorios o intentar medicación oral hasta que el paciente esté sedado. Los signos autonómicos obligan a descartar etiologías orgánicas o tóxicas (ej. cocaína, anfetaminas) antes de diagnosticar una psicosis primaria.\n\n¿Por qué se descartan las otras opciones?\n• Opción A (Risperidona oral): En un paciente con agitación extrema, poco colaborador y agresivo, la vía oral es inviable por el alto riesgo de aspiración, rechazo y agresión al personal.\n• Opción B (RM cerebral): Es imposible realizar una resonancia magnética en un paciente agitado y no colaborador. Primero debe lograrse la sedación.\n• Opción D (Tratamiento de esquizofrenia): Es un error grave diagnosticar esquizofrenia en el servicio de urgencias durante un primer episodio de psicosis sin haber descartado antes causas tóxicas (ej. inducida por estimulantes) o médicas (encefalitis, lupus).",
     keyPoints: [
       "Agitación psicomotora extrema = Urgencia médica. Primera prioridad: Seguridad (sedación IM/IV rápida).",
