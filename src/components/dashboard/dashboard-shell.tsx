@@ -13,6 +13,7 @@ import { PomodoroProvider } from "@/contexts/pomodoro-context";
 import { AchievementNotification } from "./achievement-notification";
 import { PomodoroHeaderChip } from "./pomodoro-header-chip";
 import { PomodoroGlobalOverlay } from "./pomodoro-global-overlay";
+import { QBotWidget } from "./q-bot-widget";
 import {
   LayoutDashboard,
   GraduationCap,
@@ -181,6 +182,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
       </section>
       <AchievementNotification userId={user?.uid ?? ""} />
       {isProUser ? <PomodoroGlobalOverlay greetingName={doctorGreetingName} /> : null}
+      <QBotWidget />
     </main>
     </PomodoroProvider>
   );

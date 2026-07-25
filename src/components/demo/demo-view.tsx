@@ -20,6 +20,7 @@ import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { useExamFocusGuard } from "@/hooks/use-exam-focus-guard";
 import { useUserPlan } from "@/hooks/use-user-plan";
 import { ExamFocusWarningModal } from "@/components/demo/exam-focus-warning-modal";
+import { CustomTrainingCreator } from "@/components/training/custom-training-creator";
 import { hasProFeatures, hasUnlimitedTraining } from "@/lib/plans/access";
 import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
 import {
@@ -141,6 +142,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const isRepasoMode = isRepasoPractice || isRepasoCierre;
   const isSimulacro = searchParams.get("mode") === "simulacro";
   const isConvocatoria = searchParams.get("mode") === "convocatoria";
+  const isCustomMode = searchParams.get("mode") === "custom";
+  const customTopics = searchParams.get("topics")?.split(",") || [];
+  const customDifficulty = searchParams.get("difficulty");
+  const customSource = searchParams.get("source");
+  const customStatus = searchParams.get("status");
   const editionParam = searchParams.get("edition");
   const isUccSimulacro = searchParams.get("ucc") === "1";
   const isTimedExam = isSimulacro || isConvocatoria;
@@ -203,6 +209,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         ? simulacroMinutesOverride
         : limits.simulacroMinutes;
   const timedExamMaxSeconds = isTimedExam ? effectiveTimedExamMinutes * 60 : 0;
+  
+  const [trainingTab, setTrainingTab] = useState<"quick" | "custom">(
+    isCustomMode ? "custom" : "quick"
+  );
 
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
@@ -450,7 +460,46 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       }
     }
 
-    if (topicParam?.trim() && !isSessionErrorsMode && !isRepasoMode) {
+    let seenIds: Set<string> | undefined;
+    let cycleReset = false;
+    const trackCycle = shouldTrackQuestionCycle({
+      isAct1: Boolean(isAct1),
+      isDailyPill,
+      isRepasoMode,
+    });
+    
+    if (user && trackCycle) {
+      const cycle = await prepareQuestionCycle(user.uid, questionBank);
+      seenIds = cycle.seenIds;
+      cycleReset = cycle.cycleReset;
+    }
+
+    if (isCustomMode) {
+      if (customTopics.length > 0) {
+        pool = pool.filter((q) => customTopics.includes(q.topic));
+      }
+      if (customDifficulty) {
+        pool = pool.filter((q) => q.difficulty === customDifficulty);
+      }
+      if (customSource) {
+        pool = pool.filter((q) => q.source === customSource);
+      }
+      if (customStatus === "new" && user) {
+         if (!seenIds) {
+           const cycle = await prepareQuestionCycle(user.uid, questionBank);
+           seenIds = cycle.seenIds;
+         }
+         pool = pool.filter((q) => !seenIds!.has(q.id));
+      }
+      if (customStatus === "failed" && user) {
+         // Get all-time failed or recent failed? Let's use learningProfile topicStats as a proxy if we can't fetch all.
+         // A more precise way would be to get failed questions, but for now we filter by weak topics
+         const weakTopics = new Set(learningProfile.weaknesses);
+         if (weakTopics.size > 0) {
+           pool = pool.filter(q => weakTopics.has(q.topic));
+         }
+      }
+    } else if (topicParam?.trim() && !isSessionErrorsMode && !isRepasoMode) {
       const topicNeedle = topicParam.trim().toLowerCase();
       const matched = pool.filter((question) => {
         const blob = `${question.topic} ${question.examArea ?? ""}`.toLowerCase();
@@ -459,28 +508,6 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       if (matched.length > 0) {
         pool = matched;
       }
-    }
-
-    const count = isDailyPill
-      ? 1
-      : isSessionErrorsMode || isRepasoMode
-        ? Math.min(plannedQuestionCount || pool.length, pool.length)
-        : plannedQuestionCount;
-    const dedicatedBattery = isAct1
-      ? getAct1DiagnosticSession(urlUniversity, urlSpecialty)
-      : null;
-
-    const trackCycle = shouldTrackQuestionCycle({
-      isAct1: Boolean(isAct1),
-      isDailyPill,
-      isRepasoMode,
-    });
-    let seenIds: Set<string> | undefined;
-    let cycleReset = false;
-    if (user && trackCycle) {
-      const cycle = await prepareQuestionCycle(user.uid, questionBank);
-      seenIds = cycle.seenIds;
-      cycleReset = cycle.cycleReset;
     }
 
     const cycleOptions =
@@ -1081,117 +1108,149 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
             )}
 
             {!hasStarted ? (
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex min-h-[60vh] flex-col items-center justify-center text-center">
-                <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-[2rem] bg-mq-accent/10 text-mq-accent ring-1 ring-mq-accent/20">
-                  <Zap size={48} fill="currentColor" />
-                </div>
-                <h1 className="mb-4 text-4xl font-black tracking-tight text-slate-900 sm:text-6xl">
-                  {isConvocatoria ? (
-                    <>Convocatoria <span className="text-mq-accent">UCC</span></>
-                  ) : isSimulacro ? (
-                    <>Simulacro <span className="text-mq-accent">{isUccSimulacro ? "UCC Pasto" : "tipo examen"}</span></>
-                  ) : isRepasoCierre ? (
-                    <>Examen de <span className="text-mq-accent">cierre</span></>
-                  ) : isRepasoPractice ? (
-                    <>Refuerzo de <span className="text-mq-accent">fallas</span></>
-                  ) : isBonusMode ? (
-                    <>Modo <span className="text-mq-accent">bonus</span></>
-                  ) : blockParam ? (
-                    <>Bloque <span className="text-mq-accent">del día</span></>
-                  ) : (
-                    <>Prepárate para <span className="text-mq-accent">Ganar</span></>
-                  )}
-                </h1>
-                <p className="mb-6 max-w-lg text-lg text-slate-500">
-                  {isConvocatoria && convocatoriaEdition
-                    ? `${convocatoriaEdition.label} · ${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min · 1 intento · sin feedback durante el examen.`
-                    : isSimulacro
-                    ? `${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min máximo${isUccSimulacro ? " · Res. 108" : ""}.`
-                    : isRepasoCierre
-                      ? `${plannedQuestionCount} preguntas fallidas pendientes · examen final del día.`
-                      : isRepasoPractice
-                        ? `${plannedQuestionCount} preguntas que fallaste hoy · sin presión de misión.`
-                        : isSessionErrorsMode
-                          ? `${plannedQuestionCount} preguntas que fallaste en tu última sesión · con retroalimentación inmediata.`
-                        : topicParam
-                          ? `Entrenamiento enfocado en ${topicParam} · ${plannedQuestionCount} preguntas.`
-                        : isBonusMode
-                      ? `Hasta ${plannedQuestionCount} preguntas extra sin presión.`
-                      : blockParam
-                        ? `${plannedQuestionCount} preguntas · ${blockParam === "new" ? "material nuevo" : blockParam === "review" ? "repaso espaciado" : "debilidades"}${uccWeekModule ? ` · ${uccWeekModule.label}` : ""}.`
-                        : `Entrenamiento adaptativo de ${plannedQuestionCount} preguntas.`}
-                </p>
-                {usageBlockReason ? (
-                  <div className="mb-6 max-w-md rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
-                    {usageBlockReason}
-                    {usageBlockMeta.bonusAvailable ? (
-                      <Link
-                        href={`/dashboard/entrenar?mode=bonus&count=${UCC_MI_DAILY_BONUS_MAX}&block=weak`}
-                        className="mt-2 block font-bold text-mq-accent hover:underline"
-                      >
-                        Modo bonus opcional ({UCC_MI_DAILY_BONUS_MAX} preg)
-                      </Link>
-                    ) : null}
-                    {usageBlockMeta.dayClosed && !usageBlockMeta.bonusAvailable ? (
-                      <Link
-                        href="/dashboard"
-                        className="mt-2 block font-bold text-mq-accent hover:underline"
-                      >
-                        Volver al panel
-                      </Link>
-                    ) : null}
-                    {isConvocatoria && usageBlockReason ? (
-                      <Link
-                        href="/dashboard/convocatorias"
-                        className="mt-2 block font-bold text-mq-accent hover:underline"
-                      >
-                        Volver a simulacros
-                      </Link>
-                    ) : null}
-                    {!usageBlockMeta.dayClosed && upgradeCta ? (
-                      <Link
-                        href={upgradeCta.href}
-                        className="mt-2 block font-bold text-mq-accent hover:underline"
-                      >
-                        {upgradeCta.label}
-                      </Link>
-                    ) : null}
+              <div className="flex min-h-[60vh] flex-col items-center justify-center text-center w-full">
+                {isDashboard && !isDailyPill && !isAct1 && !isSimulacro && !isConvocatoria && !isRepasoMode && !isSessionErrorsMode && !blockParam && !topicParam && !isBonusMode && !isCustomMode && (
+                  <div className="flex bg-black/20 p-1 rounded-xl border border-white/10 mb-8 max-w-sm w-full animate-in fade-in slide-in-from-top-4">
+                    <button onClick={() => setTrainingTab("quick")} className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all ${trainingTab === "quick" ? "bg-mq-accent text-slate-900 shadow-md" : "text-slate-400 hover:text-slate-200"}`}>Inicio Rápido</button>
+                    <button onClick={() => setTrainingTab("custom")} className={`flex-1 py-2.5 text-sm font-bold rounded-lg transition-all ${trainingTab === "custom" ? "bg-mq-accent text-slate-900 shadow-md" : "text-slate-400 hover:text-slate-200"}`}>Personalizado</button>
                   </div>
-                ) : null}
-                {isTimedExam && !usageBlockReason ? (
-                  <p className="mb-6 max-w-lg text-sm text-amber-100/80">
-                    Permanece en esta pestaña durante todo el examen. Si cambias de ventana,
-                    verás un aviso para que vuelvas a concentrarte aquí.
-                  </p>
-                ) : null}
-                <button
-                  type="button"
-                  onClick={() => void startAdaptiveSession()}
-                  disabled={
-                    Boolean(usageBlockReason) ||
-                    questionBank.length === 0 ||
-                    (isRepasoMode && repasoPendingCount === null)
-                  }
-                  className="mq-premium-glow group flex h-16 items-center justify-center gap-4 rounded-2xl bg-mq-accent px-12 text-lg font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  {isConvocatoria
-                    ? "INICIAR CONVOCATORIA"
-                    : isSimulacro
-                    ? "INICIAR SIMULACRO"
-                    : isRepasoCierre
-                      ? "INICIAR EXAMEN DE CIERRE"
-                      : isRepasoPractice
-                        ? "REPASAR FALLAS"
-                        : isSessionErrorsMode
-                          ? "REFORZAR MIS ERRORES"
-                        : topicParam
-                          ? "ENTRENAR TEMA"
-                        : isBonusMode
-                          ? "INICIAR BONUS"
-                          : "COMENZAR ENTRENAMIENTO"}
-                  <ArrowRight className="transition-transform group-hover:translate-x-1" />
-                </button>
-              </motion.div>
+                )}
+                
+                {trainingTab === "custom" && isDashboard && !isDailyPill && !isAct1 && !isSimulacro && !isConvocatoria && !isRepasoMode && !isSessionErrorsMode && !blockParam && !topicParam && !isBonusMode && !isCustomMode ? (
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full">
+                    <CustomTrainingCreator 
+                      questionBank={questionBank} 
+                      onStart={(config) => {
+                         const params = new URLSearchParams();
+                         params.set("mode", "custom");
+                         params.set("count", config.count.toString());
+                         if (config.difficulty) params.set("difficulty", config.difficulty);
+                         if (config.source) params.set("source", config.source);
+                         if (config.topics.length > 0) params.set("topics", config.topics.join(","));
+                         router.push(`/dashboard/entrenar?${params.toString()}`);
+                      }} 
+                    />
+                  </motion.div>
+                ) : (
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center">
+                    <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-[2rem] bg-mq-accent/10 text-mq-accent ring-1 ring-mq-accent/20">
+                      <Zap size={48} fill="currentColor" />
+                    </div>
+                    <h1 className="mb-4 text-4xl font-black tracking-tight text-slate-900 sm:text-6xl">
+                      {isConvocatoria ? (
+                        <>Convocatoria <span className="text-mq-accent">UCC</span></>
+                      ) : isSimulacro ? (
+                        <>Simulacro <span className="text-mq-accent">{isUccSimulacro ? "UCC Pasto" : "tipo examen"}</span></>
+                      ) : isRepasoCierre ? (
+                        <>Examen de <span className="text-mq-accent">cierre</span></>
+                      ) : isRepasoPractice ? (
+                        <>Refuerzo de <span className="text-mq-accent">fallas</span></>
+                      ) : isBonusMode ? (
+                        <>Modo <span className="text-mq-accent">bonus</span></>
+                      ) : blockParam ? (
+                        <>Bloque <span className="text-mq-accent">del día</span></>
+                      ) : isCustomMode ? (
+                        <>Entrenamiento <span className="text-mq-accent">Personalizado</span></>
+                      ) : (
+                        <>Prepárate para <span className="text-mq-accent">Ganar</span></>
+                      )}
+                    </h1>
+                    <p className="mb-6 max-w-lg text-lg text-slate-500">
+                      {isConvocatoria && convocatoriaEdition
+                        ? `${convocatoriaEdition.label} · ${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min · 1 intento · sin feedback durante el examen.`
+                        : isSimulacro
+                        ? `${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min máximo${isUccSimulacro ? " · Res. 108" : ""}.`
+                        : isRepasoCierre
+                          ? `${plannedQuestionCount} preguntas fallidas pendientes · examen final del día.`
+                          : isRepasoPractice
+                            ? `${plannedQuestionCount} preguntas que fallaste hoy · sin presión de misión.`
+                            : isSessionErrorsMode
+                              ? `${plannedQuestionCount} preguntas que fallaste en tu última sesión · con retroalimentación inmediata.`
+                            : topicParam
+                              ? `Entrenamiento enfocado en ${topicParam} · ${plannedQuestionCount} preguntas.`
+                            : isBonusMode
+                          ? `Hasta ${plannedQuestionCount} preguntas extra sin presión.`
+                          : blockParam
+                            ? `${plannedQuestionCount} preguntas · ${blockParam === "new" ? "material nuevo" : blockParam === "review" ? "repaso espaciado" : "debilidades"}${uccWeekModule ? ` · ${uccWeekModule.label}` : ""}.`
+                            : isCustomMode
+                              ? `Batería de ${plannedQuestionCount} preguntas con tus filtros personalizados.`
+                            : `Entrenamiento adaptativo de ${plannedQuestionCount} preguntas.`}
+                    </p>
+                    {usageBlockReason ? (
+                      <div className="mb-6 max-w-md rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+                        {usageBlockReason}
+                        {usageBlockMeta.bonusAvailable ? (
+                          <Link
+                            href={`/dashboard/entrenar?mode=bonus&count=${UCC_MI_DAILY_BONUS_MAX}&block=weak`}
+                            className="mt-2 block font-bold text-mq-accent hover:underline"
+                          >
+                            Modo bonus opcional ({UCC_MI_DAILY_BONUS_MAX} preg)
+                          </Link>
+                        ) : null}
+                        {usageBlockMeta.dayClosed && !usageBlockMeta.bonusAvailable ? (
+                          <Link
+                            href="/dashboard"
+                            className="mt-2 block font-bold text-mq-accent hover:underline"
+                          >
+                            Volver al panel
+                          </Link>
+                        ) : null}
+                        {isConvocatoria && usageBlockReason ? (
+                          <Link
+                            href="/dashboard/convocatorias"
+                            className="mt-2 block font-bold text-mq-accent hover:underline"
+                          >
+                            Volver a simulacros
+                          </Link>
+                        ) : null}
+                        {!usageBlockMeta.dayClosed && upgradeCta ? (
+                          <Link
+                            href={upgradeCta.href}
+                            className="mt-2 block font-bold text-mq-accent hover:underline"
+                          >
+                            {upgradeCta.label}
+                          </Link>
+                        ) : null}
+                      </div>
+                    ) : null}
+                    {isTimedExam && !usageBlockReason ? (
+                      <p className="mb-6 max-w-lg text-sm text-amber-100/80">
+                        Permanece en esta pestaña durante todo el examen. Si cambias de ventana,
+                        verás un aviso para que vuelvas a concentrarte aquí.
+                      </p>
+                    ) : null}
+                    <button
+                      type="button"
+                      onClick={() => void startAdaptiveSession()}
+                      disabled={
+                        Boolean(usageBlockReason) ||
+                        questionBank.length === 0 ||
+                        (isRepasoMode && repasoPendingCount === null)
+                      }
+                      className="mq-premium-glow group flex h-16 items-center justify-center gap-4 rounded-2xl bg-mq-accent px-12 text-lg font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      {isConvocatoria
+                        ? "INICIAR CONVOCATORIA"
+                        : isSimulacro
+                        ? "INICIAR SIMULACRO"
+                        : isRepasoCierre
+                          ? "INICIAR EXAMEN DE CIERRE"
+                          : isRepasoPractice
+                            ? "REPASAR FALLAS"
+                            : isSessionErrorsMode
+                              ? "REFORZAR MIS ERRORES"
+                            : topicParam
+                              ? "ENTRENAR TEMA"
+                            : isBonusMode
+                              ? "INICIAR BONUS"
+                              : isCustomMode 
+                                ? "COMENZAR SIMULACRO"
+                              : "COMENZAR ENTRENAMIENTO"}
+                      <ArrowRight className="transition-transform group-hover:translate-x-1" />
+                    </button>
+                  </motion.div>
+                )}
+              </div>
             ) : (
               <div className="space-y-8 animate-in fade-in duration-500">
                  <div className="flex items-center justify-between">
