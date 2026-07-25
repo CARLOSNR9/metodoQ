@@ -12,6 +12,7 @@ type PlanCtaButtonProps = {
   cycle: BillingCycle;
   className?: string;
   label?: string;
+  children?: React.ReactNode;
   onDemoClick?: () => void;
 };
 
@@ -20,15 +21,18 @@ export function PlanCtaButton({
   cycle,
   className = "",
   label,
+  children,
   onDemoClick,
 }: PlanCtaButtonProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
+  const content = children || (label ?? plan.cta);
+
   if (plan.id === "FREE") {
     return (
       <Link href="/register" className={className}>
-        {plan.cta}
+        {content}
       </Link>
     );
   }
@@ -36,7 +40,7 @@ export function PlanCtaButton({
   if (plan.id === "RESIDENTE") {
     return (
       <Link href="/residente" className={className}>
-        {plan.cta}
+        {content}
       </Link>
     );
   }
@@ -64,7 +68,7 @@ export function PlanCtaButton({
       disabled={isLoading}
       className={`${className} disabled:cursor-not-allowed disabled:opacity-60`}
     >
-      {isLoading ? "Cargando..." : (label ?? plan.cta)}
+      {isLoading ? "Cargando..." : content}
     </button>
   );
 }
