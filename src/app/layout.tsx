@@ -18,22 +18,31 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${BRAND_NAME} — Residencia médica Colombia`,
-    template: `%s · ${BRAND_NAME}`,
+    default: `${BRAND_NAME} | Preparación Residencia Médica Colombia`,
+    template: `%s | ${BRAND_NAME}`,
   },
   description: BRAND_DESCRIPTION,
   keywords: [...BRAND_KEYWORDS],
   icons: {
-    icon: "/logo-icon.png",
-    shortcut: "/logo-icon.png",
-    apple: "/logo-icon.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
   },
   openGraph: {
-    title: `${BRAND_NAME} — Residencia médica Colombia`,
+    title: `${BRAND_NAME} | Preparación Residencia Médica Colombia`,
     description: BRAND_TAGLINE,
     type: "website",
     locale: "es_CO",
   },
+};
+
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  name: "Método Q",
+  url: "https://www.metodoq.pro/",
+  logo: "https://www.metodoq.pro/icon.png",
+  description: "Entrenamiento adaptativo y simulacros tipo examen para la residencia médica en Colombia.",
 };
 
 export default function RootLayout({
@@ -46,6 +55,12 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full bg-background antialiased text-foreground`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+        />
+      </head>
       <body className="flex min-h-full flex-col font-sans">
         <GoogleAnalytics />
         <ReferralTracker />
