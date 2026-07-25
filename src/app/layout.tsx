@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://metodoq.pro"),
   title: {
     default: `${BRAND_NAME} | Preparación Residencia Médica Colombia`,
     template: `%s | ${BRAND_NAME}`,
@@ -40,8 +41,8 @@ const schemaMarkup = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   name: "Método Q",
-  url: "https://www.metodoq.pro/",
-  logo: "https://www.metodoq.pro/icon.png",
+  url: "https://metodoq.pro/",
+  logo: "https://metodoq.pro/icon.png",
   description: "Entrenamiento adaptativo y simulacros tipo examen para la residencia médica en Colombia.",
 };
 
