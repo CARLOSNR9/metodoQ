@@ -151,6 +151,58 @@ export const UCC_CONV_2025_06_21_GYN_QUESTIONS: TrainingQuestion[] = [
       "Betametasona antenatal mejora outcomes pulmonares neonatales.",
       "Profilaxis ATB según protocolo; no cerclaje en RPM.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta vital en obstetricia porque evalúa el manejo conservador de la RPM lejos del término.
+La clave no es inducir el parto solo porque se rompió la fuente.
+La clave es:
+Prolongar el embarazo y madurar los pulmones del bebé en un ambiente sin infección activa.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Embarazo de 31 semanas.
+• Ruptura Prematura de Membranas (RPM) documentada.
+• Ausencia de contracciones (cuello cerrado).
+• Ausencia de corioamnionitis (afebril, frecuencia cardíaca normal en madre y feto).
+Estos hallazgos sugieren:
+RPM pretérmino (entre semana 24 y 33.6) sin signos de infección ni trabajo de parto.
+¿Por qué hospitalizar y dar maduración (Opción B) es la mejor conducta?
+En embarazos pretérminos sin infección intraamniótica:
+El mayor riesgo para el feto es la inmadurez pulmonar.
+Por lo tanto se requiere:
+• Hospitalización estricta.
+• Corticoides (Betametasona) para madurar pulmones y reducir hemorragia intraventricular.
+• Profilaxis antibiótica de latencia (ampicilina + macrólido) para prevenir infección ascendente y prolongar el embarazo.
+¿Por qué NO inducir el parto (Opción A)?
+La inducción inmediata está indicada si el embarazo es ≥34 semanas o si existe:
+• Corioamnionitis clínica.
+• Desprendimiento de placenta.
+• Estado fetal no tranquilizador.
+Ninguna de estas complicaciones está presente aquí. Inducir a las 31 semanas condenaría al neonato a la Unidad de Cuidados Intensivos.
+¿Por qué NO dar de alta (Opción C)?
+El manejo ambulatorio de la RPM pretérmino es inseguro por el alto riesgo de:
+• Prolapso de cordón.
+• Trabajo de parto rápido.
+• Corioamnionitis fulminante.
+Deben estar bajo monitorización materno-fetal en el hospital.
+¿Por qué NO realizar cerclaje cervical (Opción D)?
+El cerclaje cervical (suturar el cuello del útero):
+Se usa profilácticamente en Incompetencia Cervical (cuello corto < 25 mm sin contracciones) alrededor de las semanas 12-14.
+Colocar un cerclaje en el contexto de bolsas rotas es una contraindicación absoluta. Aumentaría drásticamente el riesgo de infección grave (sepsis).
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Salida de líquido amniótico confirmada."
+Y responden:
+Interrupción del embarazo.
+Sin embargo:
+La regla de oro de la obstetricia es intentar llegar al menos a la semana 34, siempre y cuando no haya signos de infección clínica o alteración fetal.
+Perlas de examen
+✅ RPM pretérmino (24 a 34 semanas): Corticoides + Antibióticos + Vigilancia (Manejo expectante).
+✅ Corticoides de elección: Betametasona 12 mg IM cada 24 horas (2 dosis) o Dexametasona.
+✅ RPM a término (≥37 sem) o casi a término (≥34 sem): Inducción del parto.
+✅ Fiebre + Taquicardia fetal en contexto de bolsas rotas = Corioamnionitis clínica (Inducir sin importar la semana).
+Referencias
+• ACOG Practice Bulletin No. 217: Prelabor Rupture of Membranes.
+• Williams Obstetrics, 26th Edition.
+• UpToDate: Preterm prelabor rupture of membranes: Clinical manifestations and diagnosis.`,
   },
   {
     id: "ucc-conv-2025-06-21-26",
