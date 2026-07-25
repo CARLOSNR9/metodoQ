@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Info, Ticket, Users, Link as LinkIcon, Gift, GraduationCap, Rocket, Crown, ArrowRight, Lock, ShieldCheck, Clock, MousePointerClick, LifeBuoy } from "lucide-react";
+import { Check, Info, Ticket, Users, Link as LinkIcon, Gift, GraduationCap, Rocket, Crown, ArrowRight, Lock, ShieldCheck, Clock, MousePointerClick, LifeBuoy, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import {
   BILLING_CYCLES,
