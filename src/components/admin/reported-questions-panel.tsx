@@ -142,7 +142,7 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
               readOnly
               value={codesList}
               rows={Math.min(visible.length + 1, 12)}
-              className="mt-4 w-full resize-y rounded-lg border border-slate-200 bg-black/30 px-4 py-3 font-mono text-sm text-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent/50"
+              className="mt-4 w-full resize-y rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 font-mono text-sm text-slate-700 focus:outline-none focus:ring-1 focus:ring-mq-accent/50"
               onFocus={(event) => event.target.select()}
             />
           </section>
@@ -215,18 +215,18 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
   const getStatusColor = (status: QuestionReportStatus) => {
     switch (status) {
       case "reviewed":
-        return "border-emerald-500/30 bg-emerald-500/10 text-emerald-400";
+        return "border-emerald-500/30 bg-emerald-50 text-emerald-700";
       case "dismissed":
-        return "border-rose-500/30 bg-rose-500/10 text-rose-400";
+        return "border-rose-500/30 bg-rose-50 text-rose-700";
       case "pending":
       default:
-        return "border-slate-200 bg-[#0f2744] text-slate-900";
+        return "border-amber-500/30 bg-amber-50 text-amber-700";
     }
   };
 
   return (
     <>
-      <tr className="border-b border-white/5">
+      <tr className="border-b border-slate-100">
         <td className="py-3 pr-4">
           <div className="flex items-center gap-2">
             <span className="font-mono text-sm font-bold text-mq-accent">{report.questionId}</span>
@@ -263,7 +263,7 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
             className={`${selectInputClassName} px-2 py-1 text-xs border ${getStatusColor(report.status)} focus:border-mq-accent focus:ring-1 focus:ring-mq-accent/50 outline-none rounded-lg transition-colors`}
           >
             {STATUS_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-slate-900">
+              <option key={opt.value} value={opt.value} className="bg-white text-slate-900">
                 {opt.label}
               </option>
             ))}
@@ -280,7 +280,7 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
       </tr>
       
       {isExpanded && reportsCount > 0 && (
-        <tr className="border-b border-white/5 bg-black/20">
+        <tr className="border-b border-slate-200 bg-slate-50">
           <td colSpan={5} className="p-4">
             <div className="space-y-3 pl-4 border-l-2 border-mq-accent/30">
               {report.reportsList?.map((r, i) => (
@@ -342,7 +342,7 @@ function FilterChip({
       className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
         active
           ? "bg-mq-accent text-mq-accent-foreground"
-          : "border border-white/15 text-slate-500 hover:text-slate-900"
+          : "border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-slate-50"
       }`}
     >
       {children}

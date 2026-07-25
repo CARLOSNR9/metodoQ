@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 import { X, Copy, Check, Eye, Edit2, RefreshCw } from "lucide-react";
 import { QuestionStudentPreview } from "@/components/admin/question-student-preview";
 
-const selectOptionClassName = "bg-[#0f2744] text-slate-900";
+const selectOptionClassName = "bg-white text-slate-900";
 
 type Props = {
   question: QuestionAdminRecord;
@@ -251,7 +251,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end bg-black/60 p-0 sm:p-4">
-      <div className="flex h-full w-full max-w-2xl flex-col border-l border-slate-200 bg-[#0d2447] shadow-2xl sm:rounded-l-xl">
+      <div className="flex h-full w-full max-w-2xl flex-col border-l border-slate-200 bg-white shadow-2xl sm:rounded-l-xl">
         <div className="flex items-start justify-between border-b border-slate-200 px-5 py-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
@@ -307,14 +307,14 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
           ) : (
             <>
               {!inFirestore && (
-            <div className="rounded-lg border border-amber-500/30 bg-amber-500/10 p-4 text-sm text-amber-100">
+            <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
               Esta pregunta solo existe en el código del proyecto. Impórtala a Firestore para
               editarla y registrar tu revisión.
               <button
                 type="button"
                 onClick={handleImport}
                 disabled={isPending}
-                className="mt-3 block rounded-lg bg-amber-500/20 px-4 py-2 font-semibold text-amber-200 hover:bg-amber-500/30 disabled:opacity-50"
+                className="mt-3 block rounded-lg bg-amber-100 px-4 py-2 font-semibold text-amber-900 hover:bg-amber-200 disabled:opacity-50"
               >
                 Importar a Firestore
               </button>
@@ -400,21 +400,21 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
           </div>
           
           {report && (
-            <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-4">
-              <label className="text-xs font-semibold uppercase text-rose-300">
+            <div className="rounded-xl border border-rose-200 bg-rose-50 p-4">
+              <label className="text-xs font-semibold uppercase text-rose-600">
                 Estado del Reporte (Calidad de Contenido)
               </label>
               <select
                 value={reportStatus ?? "pending"}
                 onChange={(e) => handleReportStatusChange(e.target.value as QuestionReportStatus)}
                 disabled={isPending}
-                className={cn(selectInputClassName, "mt-2 disabled:opacity-60 border-rose-500/30 text-rose-100")}
+                className={cn(selectInputClassName, "mt-2 disabled:opacity-60 border-rose-200 text-rose-700 focus:border-rose-400 focus:ring-rose-400/20")}
               >
                 <option value="pending" className={selectOptionClassName}>Pendiente</option>
                 <option value="reviewed" className={selectOptionClassName}>Revisada</option>
                 <option value="dismissed" className={selectOptionClassName}>Descartada</option>
               </select>
-              <p className="mt-2 text-xs text-slate-500">Al cambiar el estado del reporte, se guardará automáticamente y la pregunta se moverá de la pestaña correspondiente en el panel principal.</p>
+              <p className="mt-2 text-xs text-rose-600/70">Al cambiar el estado del reporte, se guardará automáticamente y la pregunta se moverá de la pestaña correspondiente en el panel principal.</p>
             </div>
           )}
 
@@ -540,8 +540,8 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
         </div>
 
         <div className="border-t border-slate-200 px-5 py-4 space-y-3">
-          {message && <p className="text-sm text-emerald-400">{message}</p>}
-          {error && <p className="text-sm text-rose-400">{error}</p>}
+          {message && <p className="text-sm text-emerald-600 font-medium">{message}</p>}
+          {error && <p className="text-sm text-rose-600 font-medium">{error}</p>}
 
           <div className="flex flex-wrap gap-2">
             <button
@@ -556,7 +556,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
               type="button"
               onClick={handleSync}
               disabled={isPending}
-              className="rounded-lg border border-sky-400/40 px-4 py-2.5 text-sm font-semibold text-sky-300 hover:bg-sky-400/10 flex items-center gap-2"
+              className="rounded-lg border border-slate-300 px-4 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-100 flex items-center gap-2"
               title="Trae los cambios del código a Firestore"
             >
               <RefreshCw className={cn("h-4 w-4", isPending && "animate-spin")} />
@@ -590,7 +590,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
                   type="button"
                   onClick={handleDeactivate}
                   disabled={isPending || !active}
-                  className="rounded-lg border border-amber-500/40 px-4 py-2.5 text-sm text-amber-200 hover:bg-amber-500/10 disabled:opacity-50"
+                  className="rounded-lg border border-amber-200 px-4 py-2.5 text-sm text-amber-700 font-medium hover:bg-amber-50 disabled:opacity-50"
                 >
                   Desactivar
                 </button>
@@ -598,7 +598,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
                   type="button"
                   onClick={handleDelete}
                   disabled={isPending}
-                  className="rounded-lg border border-rose-500/40 px-4 py-2.5 text-sm text-rose-300 hover:bg-rose-500/10 disabled:opacity-50"
+                  className="rounded-lg border border-rose-200 px-4 py-2.5 text-sm text-rose-700 font-medium hover:bg-rose-50 disabled:opacity-50"
                 >
                   Eliminar
                 </button>
