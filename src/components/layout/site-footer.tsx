@@ -28,10 +28,10 @@ export function SiteFooter() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 lg:gap-8 mb-20">
           
           {/* Col 1: Brand & Social */}
-          <div className="lg:col-span-2 flex flex-col items-start pr-8">
+          <div className="col-span-2 md:col-span-3 lg:col-span-2 flex flex-col items-start lg:pr-8">
             <div className="mb-6">
               <Logo />
             </div>
@@ -92,7 +92,7 @@ export function SiteFooter() {
           </div>
 
           {/* Col 5: Contacto */}
-          <div className="flex flex-col gap-5 lg:col-span-1">
+          <div className="flex flex-col gap-5 col-span-2 md:col-span-3 lg:col-span-1 mt-4 lg:mt-0">
             <h4 className="text-[11px] font-black tracking-widest text-slate-900 uppercase">Contacto</h4>
             <div className="flex flex-col gap-4">
               <a href="mailto:hola@metodoq.pro" className="flex items-center gap-3 group">

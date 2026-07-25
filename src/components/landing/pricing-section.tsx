@@ -44,7 +44,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
   };
 
   return (
-    <section id={id} className="relative overflow-hidden bg-slate-50 py-24 lg:py-32">
+    <section id={id} className="relative overflow-hidden bg-slate-50 py-16 sm:py-24 lg:py-32">
       
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/40 rounded-full blur-[100px] -z-10 translate-x-1/3 -translate-y-1/4" />
@@ -90,7 +90,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
               <button
                 key={c}
                 onClick={() => setCycle(c)}
-                className={`relative px-8 py-2.5 text-[15px] font-bold transition-colors duration-200 ${
+                className={`relative px-4 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[15px] font-bold transition-colors duration-200 ${
                   cycle === c ? "text-white" : "text-slate-600 hover:text-slate-900"
                 }`}
               >
@@ -106,7 +106,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
             ))}
           </div>
           
-          <div className="hidden sm:flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1.5 text-xs font-bold text-green-700">
+          <div className="flex sm:flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1.5 text-xs font-bold text-green-700">
             <Check className="w-3.5 h-3.5" />
             Ahorra hasta 33%
           </div>

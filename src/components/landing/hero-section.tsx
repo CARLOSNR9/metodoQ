@@ -43,7 +43,7 @@ function HeroMockup() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative w-[115%] -ml-[5%] lg:w-full lg:ml-0 lg:max-w-none shadow-2xl rounded-3xl"
+      className="relative w-full max-w-full sm:w-[115%] sm:-ml-[5%] lg:w-full lg:ml-0 lg:max-w-none shadow-2xl rounded-3xl overflow-hidden sm:overflow-visible"
     >
       {/* Decorative background blurs for the mockup */}
       <div className="absolute -inset-4 bg-gradient-to-tr from-mq-accent/20 via-blue-200/40 to-transparent blur-3xl rounded-3xl -z-10" />
@@ -257,7 +257,7 @@ export function HeroSection() {
         <div className="absolute bottom-[10%] -left-[10%] w-[50%] h-[50%] rounded-full bg-blue-400/5 blur-[100px]" />
       </div>
 
-      <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12 pt-20 pb-16 relative z-10">
+      <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-12 pt-12 sm:pt-20 pb-12 sm:pb-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Copy & CTA */}
@@ -277,7 +277,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-[2.75rem] font-black leading-[1.15] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.5rem]"
+              className="text-4xl sm:text-5xl lg:text-[3.5rem] font-black leading-[1.15] tracking-tight text-slate-900"
             >
               Tu residencia médica, <br/>
               <span className="text-mq-accent">asegurada con inteligencia artificial</span>
@@ -349,7 +349,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="mt-12 w-full pt-8 border-t border-slate-200/60 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-4"
+              className="mt-10 sm:mt-12 w-full pt-8 border-t border-slate-200/60 grid grid-cols-2 sm:grid-cols-4 gap-y-8 gap-x-4 sm:gap-4"
             >
               <div className="flex flex-col items-start">
                 <div className="flex items-center gap-2 mb-1.5">

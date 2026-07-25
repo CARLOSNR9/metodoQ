@@ -138,7 +138,7 @@ export function HowItWorksSection({ id = "como-funciona" }: { id?: string }) {
   ];
 
   return (
-    <section id={id} className="scroll-mt-14 bg-white overflow-hidden py-24 relative">
+    <section id={id} className="scroll-mt-14 bg-white overflow-hidden py-16 sm:py-24 relative">
       
       {/* Background decorations */}
       <div className="absolute top-40 right-0 w-[600px] h-[600px] bg-slate-50/50 rounded-full blur-3xl -z-10" />
