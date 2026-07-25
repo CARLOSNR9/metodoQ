@@ -1152,70 +1152,41 @@ Referencias
       "Tema: Trauma abdominal penetrante.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el manejo selectivo del trauma penetrante abdominal.
-La clave no es el arma.
+Esta es una pregunta clásica porque evalúa el manejo selectivo del trauma penetrante abdominal en un paciente agitado y exigente.
+La clave no es la agitación del paciente ni el arma.
 La clave es:
-La integridad de la fascia.
+Fascia anterior íntegra + Paciente estable = No hay penetración a cavidad peritoneal → Manejo local.
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Herida superficial.
-• Fascia íntegra.
-• Estabilidad hemodinámica.
-Esto indica:
-Que no existe evidencia de penetración a la cavidad abdominal.
-¿Cuál es el manejo?
-Debe realizarse:
-• Exploración local de la herida.
-• Irrigación y cierre cuando corresponda.
-• Profilaxis antitetánica.
-• Observación clínica.
-¿Debe ir a cirugía?
-No.
-Porque:
-La fascia no fue violada.
-¿Cuándo está indicada la laparotomía?
-Ante:
-• Inestabilidad hemodinámica.
-• Peritonitis.
-• Evisceración.
-• Violación peritoneal con indicación quirúrgica.
-• Sangrado no controlado.
-¿Qué hacer con el comportamiento agresivo?
-Las amenazas del paciente no constituyen una indicación quirúrgica.
-Debe:
-• Mantenerse la conducta basada en criterios clínicos.
-• Activar el protocolo institucional de seguridad.
-• Solicitar apoyo de personal de seguridad y, si es necesario, implementar medidas de contención de acuerdo con la normativa y la valoración médica.
-¿Cuál es la trampa de examen?
+• Herida por arma blanca superficial en abdomen.
+• Exploración local demuestra que la fascia NO está violada (no atravesó la pared abdominal).
+• Hemodinámicamente estable (signos vitales normales).
+• Comportamiento agresivo exigiendo cirugía inmediata.
+Estos hallazgos son indicativos de:
+Un trauma penetrante de abdomen descartado (herida de pared abdominal pura). Al no violar la fascia, es anatómicamente imposible que haya lesionado órganos intraabdominales.
+¿Por qué la opción C es la respuesta correcta?
+El manejo estándar para una herida de pared abdominal que no penetra la fascia es idéntico a cualquier herida superficial: lavado, debridamiento, cierre (si aplica), profilaxis antitetánica y antibióticos si hay signos de infección. La agitación y amenazas del paciente no cambian las guías médicas; se debe solicitar apoyo de seguridad y manejar psiquiátricamente la agitación si es necesario, pero nunca operar por presión.
+¿Por qué NO laparotomía exploratoria urgente (Opción A)?
+La laparotomía es una cirugía mayor con alta morbilidad. Solo está indicada en trauma penetrante si hay inestabilidad hemodinámica, peritonitis o evisceración. Aquí no hay ni siquiera penetración de la fascia. Operarlo sería una laparotomía "en blanco" totalmente injustificada.
+¿Por qué NO laparoscopia diagnóstica (Opción D)?
+Aunque la laparoscopia es útil para evaluar violación peritoneal cuando hay dudas, en este caso la exploración local directa YA confirmó que la fascia está íntegra. No se necesitan más procedimientos invasivos.
+¿Por qué NO Tomografía abdominal de rutina (Opción B)?
+La TAC tiene su rol cuando hay violación de fascia en un paciente estable para descartar lesiones orgánicas retroperitoneales o intraabdominales, pero si la herida ni siquiera atravesó la pared muscular/fascia, la tomografía no aportará información extra que cambie la conducta y solo irradiará al paciente.
+¿Cuál es la trampa del examen?
 Muchos estudiantes leen:
-"Herida por arma blanca."
+"El paciente exige cirugía y amenaza al personal."
 Y responden:
-Laparotomía.
+"Operarlo para calmarlo o evitar un problema legal."
 Sin embargo:
-El dato decisivo es:
-La fascia permanece íntegra.
-Esto orienta a:
-Manejo conservador.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Valorar estabilidad hemodinámica.
-2.	Explorar la herida.
-3.	Confirmar integridad de la fascia.
-4.	Realizar manejo local y observación.
-5.	Mantener la seguridad del equipo asistencial mediante los protocolos institucionales.
+Las indicaciones quirúrgicas son estrictamente médicas y anatómicas (ATLS). Ningún cirujano debe llevar a un paciente a quirófano sin una justificación anatómica/clínica clara, sin importar su nivel de exigencia. Protege a tu equipo de salud, pero no alteres tu criterio médico.
 Perlas de examen
-✅ La exploración local de la herida es fundamental en pacientes estables.
-✅ Si la fascia no está violada, generalmente no se requieren laparotomía ni TAC.
-✅ Las decisiones quirúrgicas se basan en hallazgos clínicos, no en la presión ejercida por el paciente.
-✅ La profilaxis antitetánica debe verificarse en todo trauma penetrante.
-✅ La seguridad del personal sanitario debe garantizarse mediante los protocolos institucionales.
-✅ La laparotomía innecesaria aumenta la morbilidad.
-✅ El manejo selectivo del trauma penetrante ha disminuido significativamente el número de laparotomías no terapéuticas.
+✅ Exploración local de herida: Primer paso en trauma abdominal anterior con arma blanca en paciente estable.
+✅ Fascia íntegra: Descarta lesión intraabdominal. Alta temprana tras cura local y observación.
+✅ Laparotomía en trauma penetrante: Indicada por inestabilidad hemodinámica o peritonitis franca.
+✅ Agresividad en urgencias: Manejo con protocolos de seguridad institucional, nunca operar por coerción.
 Referencias
-• ATLS® 11th Edition.
+• ATLS (Advanced Trauma Life Support) Guidelines.
 • EAST Practice Management Guidelines for Penetrating Abdominal Trauma.
-• WSES Guidelines on Penetrating Abdominal Trauma.
-• Sabiston Textbook of Surgery.
 • Schwartz's Principles of Surgery.`,
   },
   {
@@ -1239,65 +1210,40 @@ Referencias
       "Tema: Valoración nutricional pediátrica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la interpretación de los indicadores antropométricos de la OMS.
-La clave no es el peso.
+Esta es una pregunta clásica de pediatría porque evalúa la correcta interpretación de los indicadores antropométricos de la OMS, una competencia obligatoria en la consulta de crecimiento y desarrollo.
+La clave no es mirar todos los indicadores a la vez y confundirse.
 La clave es:
-Qué indicador está alterado.
+Peso para la Talla (P/T) = Define Desnutrición Aguda. Talla para la Edad (T/E) = Define Desnutrición Crónica.
 ¿Qué está ocurriendo realmente?
-El niño presenta:
-• Peso/Talla: -2.8 DE.
-• Talla/Edad: -1.1 DE.
-Esto significa:
-Existe:
-Desnutrición aguda.
-No existe:
-Desnutrición crónica.
-¿Cómo se clasifican los indicadores?
-Peso para la talla
-• ≥ -2 DE → Normal.
-• < -2 y ≥ -3 DE → Desnutrición aguda moderada.
-• < -3 DE → Desnutrición aguda severa.
-Talla para la edad
-• ≥ -2 DE → Normal.
-• < -2 DE → Desnutrición crónica (talla baja).
-Peso para la edad
-Se utiliza como:
-Indicador global de desnutrición.
-No diferencia entre:
-Desnutrición aguda y crónica.
-¿Por qué NO es desnutrición severa?
-Porque el peso para la talla es:
--2.8 DE.
-La desnutrición aguda severa requiere:
-< -3 DE.
-¿Cuál es la trampa de examen?
+El niño de 24 meses presenta:
+• P/T: -2.8 DE (anormal, indica pérdida de masa reciente).
+• T/E: -1.1 DE (normal, no hay compromiso de la talla final).
+• P/E: -2.3 DE (indicador global alterado por el bajo peso actual).
+• MUAC: 12.0 cm (riesgo/desnutrición moderada).
+Estos hallazgos sugieren:
+Un cuadro agudo de pérdida de peso por baja ingesta y diarrea, que se refleja directamente en el índice Peso para la Talla (P/T).
+¿Por qué la opción B es la respuesta correcta?
+Según los criterios de la OMS y el Ministerio de Salud (Resolución 2465), un indicador de Peso para la Talla entre -2 y -3 desviaciones estándar (DE) se clasifica exactamente como Desnutrición Aguda Moderada. El niño encaja perfectamente (-2.8 DE).
+¿Por qué NO es Desnutrición aguda severa (Opción C)?
+Para que sea clasificada como severa, el indicador de Peso para la Talla debe estar por debajo de -3 DE (< -3 DE), el perímetro braquial debe ser < 11.5 cm, o el niño debe tener edema nutricional bilateral. Ninguno de estos tres criterios está presente.
+¿Por qué NO es Desnutrición crónica (Opción D)?
+La desnutrición crónica ("talla baja" o "retraso en el crecimiento") se diagnostica exclusivamente cuando la Talla para la Edad (T/E) es menor a -2 DE. Nuestro paciente tiene T/E de -1.1 DE, por lo que su talla es normal.
+¿Cuál es la trampa del examen?
 Muchos estudiantes observan:
-Peso para la edad.
-Y clasifican la desnutrición.
+"Peso para la Edad en -2.3 DE."
+Y responden:
+Cualquier clasificación de desnutrición basándose en ese único número.
 Sin embargo:
-El indicador que determina la desnutrición aguda es:
-Peso para la talla.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Revisar peso para la talla.
-2.	Clasificar la desnutrición aguda.
-3.	Revisar talla para la edad.
-4.	Determinar si existe talla baja.
-5.	Formular el diagnóstico nutricional.
+El Peso para la Edad (P/E) es un indicador GLOBAL. En menores de 5 años NO diferencia entre un niño agudamente adelgazado y un niño con talla baja. Siempre debes guiarte por el P/T para lo agudo y el T/E para lo crónico.
 Perlas de examen
-✅ Peso para la talla evalúa desnutrición aguda.
-✅ Talla para la edad evalúa desnutrición crónica.
-✅ Peso para la edad identifica bajo peso, pero no diferencia el tipo de desnutrición.
-✅ -2 a -3 DE corresponde a desnutrición aguda moderada.
-✅ < -3 DE corresponde a desnutrición aguda severa.
-✅ El edema nutricional clasifica automáticamente al paciente como desnutrición aguda severa.
-✅ Los estándares antropométricos de referencia corresponden a la OMS para menores de 5 años.
+✅ Desnutrición Aguda Moderada: P/T entre -2 y -3 DE, o MUAC entre 11.5 y <12.5 cm.
+✅ Desnutrición Aguda Severa: P/T < -3 DE, MUAC < 11.5 cm, o presencia de edema bilateral (Kwashiorkor).
+✅ Desnutrición Crónica (Talla Baja): T/E < -2 DE.
+✅ El Peso para la Edad (P/E) NO clasifica el tipo de desnutrición, solo tamiza riesgo global.
 Referencias
 • OMS. WHO Child Growth Standards.
-• Ministerio de Salud y Protección Social de Colombia. Lineamiento para el manejo integrado de la desnutrición aguda en menores de 5 años.
-• Guías AIEPI.
-• Nelson Textbook of Pediatrics.
-• UpToDate: Assessment of Nutritional Status in Children.`,
+• Lineamiento para el manejo integrado de la desnutrición aguda (MinSalud Colombia / AIEPI).
+• Nelson Textbook of Pediatrics.`,
   },
   {
     id: "dr-q-396",
@@ -1320,62 +1266,38 @@ Referencias
       "Tema: Desnutrición aguda.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa uno de los criterios diagnósticos más utilizados en programas de tamización nutricional.
-La clave no es el peso.
+Esta es una pregunta clásica de pediatría porque evalúa uno de los criterios diagnósticos más importantes y rápidos en programas de tamización nutricional infantil (AIEPI y MinSalud).
+La clave no es calcular mentalmente fórmulas complejas de peso.
 La clave es:
-El perímetro braquial.
+Niño de 6 a 59 meses + Sospecha de desnutrición aguda = Perímetro braquial (MUAC) indispensable para clasificar el riesgo de mortalidad inminente.
 ¿Qué está ocurriendo realmente?
-La paciente presenta:
-• Bajo peso para la talla.
-• Pérdida de masa muscular.
-Debe establecerse:
-La gravedad de la desnutrición.
-¿Qué medición permite hacerlo rápidamente?
-La respuesta clásica es:
-Perímetro braquial (MUAC).
-¿Cómo se interpreta?
-MUAC ≥12.5 cm
-• Normal.
-MUAC ≥11.5 cm y <12.5 cm
-• Desnutrición aguda moderada.
-MUAC <11.5 cm
-• Desnutrición aguda severa.
-¿Y si presenta edema bilateral con fóvea?
-Se clasifica como:
-Desnutrición aguda severa.
-Aunque el MUAC sea mayor de 11.5 cm.
-¿Por qué es tan importante?
-Porque:
-• Es fácil de realizar.
-• Tiene buena capacidad para identificar niños con alto riesgo de mortalidad.
-• Puede utilizarse incluso en escenarios comunitarios.
-¿Cuál es la trampa de examen?
-Muchos estudiantes responden:
-Índice de masa corporal.
+La paciente de 18 meses presenta:
+• Diarrea prolongada y pobre ingesta.
+• Pérdida de peso reciente con emaciación visible (pérdida de grasa subcutánea y masa muscular).
+• Peso para la Talla francamente anormal (-2.6 DE).
+Estos hallazgos sugieren:
+Desnutrición aguda desencadenada por una infección (diarrea). Para definir si esta desnutrición aguda es moderada o severa y su riesgo de mortalidad, se necesita una medición complementaria al Peso/Talla.
+¿Por qué la opción C es la respuesta correcta?
+El perímetro braquial o MUAC (Mid-Upper Arm Circumference) es la medición recomendada universalmente por la OMS y MinSalud Colombia como indicador independiente y predictivo de mortalidad en niños de 6 a 59 meses con desnutrición aguda. Permite clasificar la severidad inmediatamente: < 11.5 cm es desnutrición aguda severa; entre 11.5 y 12.5 cm es moderada.
+¿Por qué NO el Índice de Masa Corporal (Opción D)?
+El IMC se utiliza rutinariamente para evaluar el estado nutricional (sobrepeso, obesidad, delgadez) en niños MAYORES de 5 años y adolescentes. En menores de 5 años, los indicadores primarios de desnutrición aguda son el Peso/Talla y el MUAC.
+¿Por qué NO la Circunferencia Cefálica (Opción A)?
+La circunferencia cefálica evalúa el neurodesarrollo y crecimiento del encéfalo, predominantemente en los primeros 2 a 3 años de vida (macro/microcefalia). No es un indicador para evaluar desnutrición aguda.
+¿Por qué NO el Pliegue tricipital (Opción B)?
+Aunque los pliegues cutáneos evalúan la masa grasa, su medición es susceptible a mucha variabilidad interobservador y no es la herramienta de tamización estándar ni exigida en el lineamiento de MinSalud para clasificar la gravedad en el servicio de urgencias.
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan:
+"Si ya tengo el Peso para la Talla en -2.6 DE, ya sé que es moderada, no necesito nada más."
 Sin embargo:
-En menores de 5 años el indicador recomendado por las guías es:
-El perímetro braquial.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar al menor de 5 años.
-2.	Sospechar desnutrición aguda.
-3.	Medir el perímetro braquial.
-4.	Clasificar la gravedad.
-5.	Definir el manejo según los lineamientos nacionales.
+Las guías actuales obligan a medir el MUAC y evaluar la presencia de edema bilateral. Si el MUAC resulta < 11.5 cm, automáticamente se reclasifica a desnutrición aguda SEVERA, lo cual cambia totalmente la conducta (manejo hospitalario vs. ambulatorio con fórmula terapéutica lista para consumir - FTLC).
 Perlas de examen
-✅ El perímetro braquial (MUAC) se utiliza en niños de 6 a 59 meses.
-✅ MUAC <11.5 cm = desnutrición aguda severa.
-✅ MUAC entre 11.5 y <12.5 cm = desnutrición aguda moderada.
-✅ MUAC ≥12.5 cm = sin desnutrición aguda por este criterio.
-✅ El edema bilateral con fóvea clasifica al paciente como desnutrición aguda severa, independientemente del MUAC.
-✅ El MUAC es uno de los mejores predictores de mortalidad por desnutrición.
-✅ Es una herramienta recomendada por la OMS y el Ministerio de Salud de Colombia para tamización y clasificación nutricional.
+✅ Perímetro Braquial (MUAC): Evalúa riesgo de mortalidad por desnutrición en niños de 6 a 59 meses.
+✅ Puntos de corte MUAC: < 11.5 cm (Severa), 11.5 a 12.5 cm (Moderada), > 12.5 cm (Normal).
+✅ Criterios independientes de Desnutrición Aguda Severa: P/T < -3 DE, MUAC < 11.5 cm, o Edema bilateral (Kwashiorkor). Cualquiera de los tres basta para el diagnóstico.
 Referencias
-• Ministerio de Salud y Protección Social de Colombia. Lineamiento para el manejo integrado de la desnutrición aguda moderada y severa en niños de 0 a 59 meses.
-• Organización Mundial de la Salud (OMS). WHO Guideline: Updates on the Management of Severe Acute Malnutrition in Infants and Children.
-• Guías AIEPI.
-• Nelson Textbook of Pediatrics.
-• UNICEF. Guidance on MUAC in Children 6–59 Months.`,
+• Lineamiento para el manejo integrado de la desnutrición aguda en menores de 5 años (MinSalud Colombia).
+• Organización Mundial de la Salud (OMS). Child Growth Standards.
+• Guías AIEPI Clínico.`,
   },
   {
     id: "dr-q-397",
@@ -1594,80 +1516,42 @@ Referencias
       "Tema: Infecciones de transmisión sexual.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el manejo del herpes genital recurrente.
-La clave no son las úlceras.
+Esta es una pregunta clásica de ginecología porque evalúa el manejo integral del herpes genital recurrente en una paciente con conductas sexuales de riesgo.
+La clave no es quedarse solo en la lesión vulvar.
 La clave es:
-La recurrencia.
+Antiviral sistémico (oral) para la crisis + Tamizaje completo de ITS + Consejería.
 ¿Qué está ocurriendo realmente?
 La paciente presenta:
-• Lesiones vesiculares.
-• Dolor.
-• Prurito.
-• Antecedente de episodio previo.
-Esto corresponde a:
-Herpes genital recurrente por virus herpes simple (VHS), generalmente tipo 2, aunque el VHS-1 también puede ser responsable.
-¿Cuál es el tratamiento?
-Debe iniciarse:
-Aciclovir oral.
-Esquemas aceptados incluyen:
-• Aciclovir 400 mg VO cada 8 horas durante 5 días.
-O
-• Valaciclovir.
-O
-• Famciclovir.
-¿Cuándo se considera tratamiento supresor?
-Cuando existen:
-• Recurrencias frecuentes (habitualmente ≥6 episodios por año).
-• Importante afectación de la calidad de vida.
-En ese caso se indica:
-Aciclovir o valaciclovir diariamente durante varios meses.
-¿Qué otras intervenciones deben realizarse?
-Toda persona con una ITS debe recibir:
-• Tamizaje para VIH.
-• Prueba para sífilis.
-• Tamizaje para hepatitis B y C cuando esté indicado.
-• Evaluación para gonorrea y clamidia según el riesgo.
-• Consejería sobre preservativo.
-¿Por qué NO usar solo aciclovir en crema?
-Porque:
-Su beneficio es escaso.
-Las guías internacionales no recomiendan el tratamiento tópico como monoterapia.
-¿Por qué NO penicilina?
-Porque:
-La penicilina trata:
-Sífilis.
-No herpes genital.
-¿Cuál es la trampa de examen?
+• Lesiones vesiculares y ulcerativas vulvares muy dolorosas.
+• Cuadro clínico típico de herpes genital (VHS-1 o VHS-2).
+• Antecedente de un episodio previo (es decir, es una recurrencia).
+• Prácticas de alto riesgo: trabajadora sexual sin uso de método de barrera (el condón no es anticoncepción en este caso, es profilaxis).
+Estos hallazgos son clásicos de:
+Un brote recurrente de Herpes Genital en un contexto de alto riesgo para coinfecciones.
+¿Por qué la opción B es la respuesta correcta?
+El manejo actual y basado en guías para las recurrencias del herpes genital es usar antivirales orales (Aciclovir, Valaciclovir o Famciclovir) durante el brote (usualmente por 5 días). Dado su alto riesgo epidemiológico por no usar preservativo, es OBLIGATORIO ofrecerle tamizaje para otras Infecciones de Transmisión Sexual (VIH, sífilis, hepatitis B y C, clamidia, gonorrea) y consejería estricta sobre el uso del condón.
+¿Por qué NO dar solo Aciclovir tópico (Opción A)?
+Las guías internacionales (CDC, OMS, MinSalud) NO recomiendan la monoterapia tópica con cremas antivirales para el herpes genital (ni en primoinfección ni en recurrencia). Su beneficio clínico es mínimo y no altera la carga viral ni el tiempo de curación de forma significativa comparado con la vía oral.
+¿Por qué NO Penicilina benzatínica (Opción C)?
+La penicilina es el tratamiento de elección para la Sífilis, que causa una úlcera INDOLORA (chancro duro). Las úlceras del herpes son múltiples y supremamente DOLOROSAS.
+¿Por qué NO Crioterapia (Opción D)?
+La crioterapia o la escisión física se utilizan para el manejo de los condilomas acuminados (VPH). El herpes genital no se congela ni se quema, se maneja sistémicamente con antivirales.
+¿Cuál es la trampa del examen?
 Muchos estudiantes leen:
-"Ya había mejorado con aciclovir en crema."
-Y responden:
-Repetir el tratamiento tópico.
+"La paciente ya tiene salpingectomía bilateral."
+Y asumen:
+"No necesita cuidarse con preservativo porque no va a quedar en embarazo."
 Sin embargo:
-El dato decisivo es:
-La recurrencia de herpes genital.
-El manejo recomendado es:
-Antiviral sistémico.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Reconocer el herpes genital recurrente.
-2.	Iniciar antiviral oral.
-3.	Realizar tamizaje para otras ITS.
-4.	Educar sobre prevención y uso del preservativo.
-5.	Considerar terapia supresora si las recurrencias son frecuentes.
+La anticoncepción definitiva protege contra embarazos, pero tiene CERO efectividad contra las ITS. Siempre que veas una paciente con una ITS confirmada (como el herpes), debes tamizarla para las demás (especialmente VIH y sífilis) como parte integral de la consulta.
 Perlas de examen
-✅ El herpes genital recurrente se trata con antivirales por vía oral.
-✅ El aciclovir tópico no se recomienda como tratamiento único.
-✅ Debe ofrecerse tamizaje para VIH y sífilis a todo paciente con una ITS.
-✅ El uso del preservativo disminuye, pero no elimina completamente, el riesgo de transmisión del VHS.
-✅ La terapia supresora está indicada en pacientes con recurrencias frecuentes o gran impacto en la calidad de vida.
-✅ La planificación definitiva no protege contra las infecciones de transmisión sexual.
-✅ El VHS permanece latente en los ganglios sensitivos y puede reactivarse periódicamente.
+✅ Úlceras genitales dolorosas + vesículas = Herpes Genital.
+✅ Tratamiento de elección en brotes o recurrencias: Antivirales ORALES.
+✅ Tratamiento tópico en herpes genital: No recomendado como monoterapia.
+✅ Abordaje integral ITS: Siempre incluye tamizaje de VIH, Sífilis, Hepatitis y educación sobre preservativo.
 Referencias
-• Guía de Práctica Clínica Colombiana para la atención de las infecciones de transmisión sexual.
-• Centers for Disease Control and Prevention (CDC). Sexually Transmitted Infections Treatment Guidelines, 2021.
-• Organización Mundial de la Salud. Guidelines for the Management of Sexually Transmitted Infections.
-• UpToDate: Treatment and Prevention of Herpes Simplex Virus Type 1 in Immunocompetent Adolescents and Adults.
-• Red Book. American Academy of Pediatrics.`,
+• Centers for Disease Control and Prevention (CDC). STI Treatment Guidelines, 2021.
+• Guía de Práctica Clínica Colombiana para la atención de ITS (MinSalud).
+• UpToDate: Treatment of genital herpes simplex virus infection.`,
   },
   {
     id: "dr-q-400",

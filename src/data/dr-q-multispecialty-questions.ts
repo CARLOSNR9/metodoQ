@@ -974,62 +974,38 @@ Referencias
       "Restos placentarios retenidos perpetúan infección; el legrado sin ATB no es conducta inicial.",
       "Tema: Endometritis puerperal / infección postparto.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
-Esta es una pregunta clásica de obstetricia porque evalúa el reconocimiento y manejo inicial de la endometritis puerperal: una infección uterina postparto que requiere hospitalización, antibióticos intravenosos de amplio espectro y evaluación de restos ovulares retenidos.
-
-La clave no es el manejo ambulatorio, el legrado inmediato ni retrasar antibióticos por estudios de imagen.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de obstetricia porque evalúa el reconocimiento y manejo inicial de la endometritis puerperal.
+La clave no es retrasar el tratamiento por estudios de imagen.
 La clave es:
-Hospitalización, inicio de antibióticos intravenosos de amplio espectro y evaluación de restos ovulares retenidos.
-
+Fiebre puerperal + Útero doloroso + Loquios fétidos = Endometritis → Hospitalización + Antibióticos IV de amplio espectro inmediatos.
 ¿Qué está ocurriendo realmente?
 La paciente presenta:
-• Femenina de 27 años, puerperio de parto vaginal con expulsivo prolongado (factor de riesgo).
-• Dada de alta el día anterior; consulta por alza térmica, dolor pélvico y sangrado vaginal fétido.
-• FC 116 lpm, FR 22 rpm, PA 100/70 mmHg (taquicardia compatible con infección).
-• Dolor a la palpación del fondo uterino.
-• Cérvix abierto con salida de material hemático de mal olor.
-
-Recordemos la endometritis puerperal:
-• Infección del endometrio en las primeras 6 semanas postparto.
-• Factores de riesgo: parto prolongado, múltiples tactos vaginales, retención de restos placentarios, cesárea.
-• Cuadro clínico: fiebre, taquicardia, dolor uterino, loquios fétidos, subinvolución uterina.
-• Tratamiento: hospitalización + antibióticos IV de amplio espectro (clindamicina + gentamicina es esquema clásico).
-• Evaluar restos retenidos con ecografía; si hay retención significativa, evacuar tras iniciar ATB.
-• No retrasar antibióticos esperando resultados de imagen.
-
-Por lo tanto:
-El diagnóstico es endometritis puerperal y la conducta es hospitalización con ATB IV y evaluación de restos retenidos.
-
+• Puerperio temprano tras parto con expulsivo prolongado (factor de riesgo clave).
+• Tríada clásica: fiebre, dolor pélvico/uterino y loquios fétidos.
+• Taquicardia (116 lpm) y cérvix abierto con sangrado maloliente.
+Estos hallazgos son patognomónicos de:
+Endometritis puerperal (infección polimicrobiana ascendente).
 ¿Por qué la opción D es la respuesta correcta?
-Combina los tres pilares del manejo: ingreso hospitalario, antibióticos intravenosos de amplio espectro inmediatos y evaluación de restos ovulares retenidos que pueden perpetuar la infección.
-
-¿Por qué fallan las otras opciones?
-Opción A (manejo ambulatorio con amoxicilina/clavulanato): la endometritis puerperal requiere hospitalización y ATB IV; el manejo oral ambulatorio es insuficiente.
-Opción B (legrado uterino inmediato sin medidas adicionales): evacuar restos sin tratar la infección sistémica primero aumenta el riesgo de complicaciones; el legrado se reserva si hay retención documentada, generalmente tras iniciar ATB.
-Opción C (ecografía antes de iniciar tratamiento): no se debe retrasar el inicio de antibióticos por estudios de imagen; la ecografía es complementaria, no previa al tratamiento.
-
+La endometritis puerperal es una infección severa que requiere hospitalización inmediata. El pilar del tratamiento es iniciar antibióticos intravenosos de amplio espectro (típicamente clindamicina + gentamicina) sin esperar resultados de cultivos o ecografías. Además, es obligatorio evaluar si hay restos ovulares o placentarios retenidos que estén perpetuando la infección.
+¿Por qué NO manejo ambulatorio (Opción A)?
+La paciente está taquicárdica, con fiebre y una infección uterina establecida. El manejo ambulatorio con antibióticos orales es insuficiente y riesgoso, pudiendo progresar a sepsis pélvica, peritonitis o choque séptico.
+¿Por qué NO legrado uterino inmediato (Opción B)?
+Instrumentar un útero infectado SIN cobertura antibiótica previa es extremadamente peligroso porque puede diseminar las bacterias al torrente sanguíneo (bacteriemia masiva) y perforar un útero friable. Si se requieren evacuar restos, se hace DESPUÉS de iniciar la impregnación antibiótica.
+¿Por qué NO solicitar ecografía y esperar resultados (Opción C)?
+En sepsis e infecciones severas obstétricas, "el tiempo es tejido". Retrasar la primera dosis de antibióticos por esperar a que le hagan un ultrasonido aumenta drásticamente la morbimortalidad materna. La ecografía se solicita, pero el antibiótico va primero.
 ¿Cuál es la trampa del examen?
-Muchos estudiantes asocian:
-"Sangrado postparto + cérvix abierto = retención de restos → legrado inmediato."
-Pero la clave es el cuadro infeccioso completo (fiebre, taquicardia, dolor uterino, loquios fétidos).
-Aquí el dato decisivo es:
-Endometritis puerperal = ATB IV primero, no legrado ni ambulatorio.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Reconocer endometritis: fiebre + dolor uterino + loquios fétidos en puerperio.
-2. Hospitalizar e iniciar ATB IV de amplio espectro sin demora.
-3. Evaluar restos retenidos con ecografía de forma paralela.
-4. Evacuar restos si están presentes, generalmente tras iniciar antibióticos.
-
+Muchos estudiantes ven:
+"Cérvix abierto y sangrado."
+Y responden:
+"Legrado uterino inmediato para sacar los restos."
+Sin embargo:
+Nunca debes hacer un legrado a ciegas como primera medida en un útero francamente infectado sin antes haber estabilizado e iniciado antibióticos parenterales.
 Perlas de examen
-✅ Dolor uterino + loquios fétidos en puerperio = endometritis, no solo sangrado anormal.
-✅ ATB IV inmediato (clindamicina + gentamicina); no retrasar por ecografía.
-✅ Hospitalización obligatoria; el manejo ambulatorio oral es insuficiente.
-✅ Legrado sin ATB no es conducta inicial; primero tratar infección.
-✅ Restos placentarios retenidos perpetúan infección → evaluar siempre.
-
+✅ Tríada de Endometritis Puerperal: Fiebre + Hipersensibilidad uterina + Loquios fétidos.
+✅ Principal factor de riesgo para endometritis: Parto por cesárea (seguido de parto prolongado o RPM).
+✅ Tratamiento de elección empírico: Clindamicina + Gentamicina IV hasta que la paciente esté afebril por 24-48 horas.
+✅ Papel del legrado: Solo tras impregnación antibiótica, si se documentan restos retenidos por ecografía.
 Referencias
 • ACOG Practice Bulletin: Postpartum Infections.
 • Williams Obstetrics.

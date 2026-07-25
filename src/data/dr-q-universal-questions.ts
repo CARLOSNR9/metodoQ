@@ -8502,68 +8502,44 @@ Referencias
       "Metotrexato está contraindicado en pacientes inestables con ruptura y hemoperitoneo.",
       "Tema: Embarazo ectópico roto.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica de ginecología y obstetricia / urgencias porque evalúa el manejo del embarazo ectópico roto con choque hemorrágico.
-
 La clave no es el embarazo positivo aislado.
 La clave es:
-Amenorrea + útero vacío + líquido libre ecogénico + inestabilidad hemodinámica obligan a reanimación inmediata y laparotomía urgente, no a metotrexato ni observación.
-
+Amenorrea + Útero vacío + Líquido libre + Inestabilidad hemodinámica (Choque) = Embarazo ectópico roto → Reanimación y Laparotomía urgente.
 ¿Qué está ocurriendo realmente?
 La paciente presenta:
-• Mujer de 26 años, G2P1, amenorrea de 7 semanas, prueba de embarazo positiva.
-• Dolor abdominal bajo súbito irradiado a hombro derecho (signo de Kehr).
-• Pálida, diaforética; TA 80/50 mmHg, FC 125 lpm (choque hemorrágico).
+• Mujer joven con amenorrea de 7 semanas y prueba de embarazo positiva.
+• Dolor abdominal bajo súbito irradiado a hombro derecho (signo de Kehr por irritación diafragmática).
 • Irritación peritoneal difusa y abombamiento del fondo de saco de Douglas.
-• FAST: útero vacío + abundante líquido libre ecogénico intraabdominal (hemoperitoneo).
-• Embarazo ectópico roto con sangrado activo hacia cavidad peritoneal.
-
-Recordemos la fisiopatología del embarazo ectópico roto:
-• Implantación fuera de cavidad uterina (trompa de Falopio en >90% de casos).
-• Ruptura tubárica → hemorragia masiva intraabdominal.
-• Irritación del diafragma por sangre → dolor referido en hombro (signo de Kehr).
-• Hipovolemia progresiva → choque hemorrágico si no se interviene de inmediato.
-
-Por lo tanto:
-La conducta inicial más apropiada es reanimación hemodinámica inmediata y laparotomía exploratoria urgente.
-
+• Choque hemorrágico (pálida, diaforética, TA 80/50, FC 125 lpm).
+• FAST positivo: abundante líquido libre ecogénico (sangre).
+Estos hallazgos son el cuadro dramático de:
+Embarazo ectópico roto con hemoperitoneo masivo, una de las principales causas de muerte materna en el primer trimestre.
 ¿Por qué la opción D es la respuesta correcta?
-El paciente está en choque hemorrágico con hemoperitoneo confirmado.
-La prioridad absoluta es estabilización hemodinámica (accesos venosos calibrosos, cristaloides, hemoderivados) y control quirúrgico urgente del sangrado.
-La laparotomía permite acceso rápido y control definitivo en paciente inestable.
-Cada minuto de demora incrementa el riesgo de muerte por hipovolemia.
-
-¿Por qué fallan las otras opciones?
-Opción A (β-hCG cuantitativa seriada y observación): retrasa el tratamiento definitivo en choque hemorrágico activo; la β-hCG seriada es para pacientes estables con diagnóstico incierto.
-Opción B (metotrexato intramuscular): contraindicado con ruptura, hemoperitoneo e inestabilidad hemodinámica; reservado para ectópicos no rotos en pacientes estables.
-Opción C (laparoscopia diagnóstica programada): demora inaceptable en choque; en inestabilidad, la laparotomía suele ser más rápida y segura para control del sangrado.
-
+Ante un choque hemorrágico secundario a un embarazo ectópico roto, la única intervención salvavidas es la reanimación hemodinámica inmediata enérgica (cristaloides y hemoderivados) simultánea con la laparotomía exploratoria urgente para clampear y controlar el sangrado (usualmente salpingectomía de la trompa rota). La cirugía abierta (laparotomía) es de elección sobre la laparoscopia cuando la paciente está francamente inestable por la rapidez de acceso al abdomen.
+¿Por qué NO usar metotrexato intramuscular (Opción B)?
+El metotrexato es excelente para el manejo MÉDICO del embarazo ectópico, pero requiere criterios estrictos: paciente estable, sin signos de ruptura, saco pequeño y sin evidencia de hemoperitoneo. Dar metotrexato a una mujer sangrando activamente y en choque es un error letal.
+¿Por qué NO solicitar β-hCG cuantitativa seriada (Opción A)?
+La cuantificación seriada de la hormona se usa en el diagnóstico de "embarazo de ubicación desconocida" en pacientes ESTABLES para diferenciar aborto, ectópico o intrauterino incipiente. Aquí el diagnóstico ya es obvio clínicamente y la paciente se está desangrando; no hay tiempo para pruebas seriadas de laboratorio.
+¿Por qué NO realizar laparoscopia diagnóstica (Opción C)?
+Aunque la laparoscopia se usa frecuentemente para operar ectópicos en pacientes estables o "borderline", en una paciente en franco choque hemorrágico (TA 80/50) la creación de neumoperitoneo puede empeorar el retorno venoso y causar paro cardíaco. La incisión laparotómica permite entrar en segundos y salvar la vida.
 ¿Cuál es la trampa del examen?
-Muchos estudiantes eligen metotrexato porque asocian embarazo ectópico con tratamiento médico.
-Pero el metotrexato solo aplica en pacientes estables, sin ruptura y sin hemoperitoneo.
-Ante choque hemorrágico, la cirugía urgente es la única opción correcta.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Reconocer embarazo ectópico roto (embarazo (+) + útero vacío + líquido libre + inestabilidad).
-2. Reanimación hemodinámica inmediata (cristaloides, hemoderivados, acceso venoso).
-3. Laparotomía exploratoria urgente para control del sangrado.
-4. Salpingectomía o salpingostomía según hallazgos intraoperatorios y deseo reproductivo.
-
+Muchos estudiantes leen:
+"Embarazo ectópico."
+Y responden:
+"Metotrexato o cirugía laparoscópica siempre."
+Sin embargo:
+No olvides que los protocolos cambian radicalmente según el estado hemodinámico. Inestabilidad = Laparotomía urgente. Siempre mira los signos vitales antes de elegir la respuesta.
 Perlas de examen
-✅ Amenorrea + embarazo (+) + útero vacío + líquido libre + hipotensión = ectópico roto hasta demostrar lo contrario.
-✅ Signo de Kehr: dolor en hombro por irritación diafragmática por hemoperitoneo.
-✅ Metotrexato: solo en pacientes estables, sin ruptura, sin hemoperitoneo, β-hCG adecuada.
-✅ En choque hemorrágico: laparotomía > laparoscopia programada por velocidad de acceso.
-✅ No retrasar por β-hCG seriada en paciente hemodinámicamente inestable.
-✅ Las residencias preguntan la conducta urgente, no el algoritmo de seguimiento ambulatorio.
-
+✅ Tríada clásica de embarazo ectópico roto: Amenorrea + Dolor pélvico + Sangrado transvaginal (a menudo oculto intraabdominal).
+✅ Signo de Kehr: Dolor referido al hombro (frecuentemente derecho) por irritación del nervio frénico secundario a hemoperitoneo masivo.
+✅ Criterios de exclusión absoluta para Metotrexato: Inestabilidad hemodinámica, evidencia de ruptura (líquido libre), alteración renal/hepática.
+✅ Cirugía en ectópico: Laparoscopia (si estable) vs. Laparotomía (si inestable o choque).
 Referencias
 • Williams Obstetrics.
 • ACOG Practice Bulletin: Tubal Ectopic Pregnancy.
-• UpToDate: Ectopic Pregnancy: Clinical Manifestations and Diagnosis.
-• UpToDate: Ectopic Pregnancy: Choosing a treatment.`,
+• UpToDate: Ectopic Pregnancy: Clinical Manifestations and Diagnosis.`,
   },
   {
     id: "dr-q-92",

@@ -249,6 +249,40 @@ export const UCC_CONV_2025_06_21_SURGERY_QUESTIONS: TrainingQuestion[] = [
       "Observación seriada o TAC selectiva según evolución.",
       "Cirugía si inestabilidad hemodinámica o peritonitis.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de trauma que evalúa la conducta ante un paciente con trauma de abdomen cerrado y un FAST positivo, pero que se mantiene HEMODINÁMICAMENTE ESTABLE.
+La clave no es que el FAST esté positivo.
+La clave es:
+FAST positivo + Estabilidad hemodinámica = TAC abdominal / Observación estricta (no laparotomía inmediata).
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Trauma cerrado de alta energía (impacto con volante).
+• Líquido libre en cavidad documentado por ecografía FAST.
+• ¡OJO! Signos vitales normales (PA 140/85, FC 95 lpm) y hemoglobina estable (13.5 g/dL).
+Estos hallazgos sugieren:
+Un sangrado intraabdominal contenido o autolimitado (probablemente lesión de órgano sólido de bajo grado). El líquido libre en el FAST (Morrison y Douglas) nos confirma que hay lesión, pero la estabilidad nos da tiempo.
+¿Por qué la opción A es la respuesta correcta?
+El paradigma del manejo del trauma abdominal cambió hace años. Actualmente, en un paciente hemodinámicamente estable, la presencia de líquido libre en el FAST NO es indicación de laparotomía inmediata. La conducta ideal es realizar una TAC de abdomen con contraste (para clasificar exactamente la lesión del órgano sólido) u observación estrecha en monitorización. Muchos de estos pacientes se manejan de forma no operatoria.
+¿Por qué NO la laparotomía inmediata (Opciones B y C)?
+Llevar a un paciente estable a cirugía genera morbilidad innecesaria (laparotomías en blanco o no terapéuticas). La laparotomía se reserva estrictamente para:
+1. FAST positivo + Inestabilidad hemodinámica (choque).
+2. Signos francos de peritonitis.
+3. Neumoperitoneo (lesión de víscera hueca).
+¿Por qué NO la TAC como única opción obligatoria (Opción D)?
+Aunque la TAC es el gold standard en el paciente estable, la opción A ("observación seriada o TAC selectiva") es un enfoque quirúrgico válido y más completo. Además, la Opción D descarta la observación de plano.
+¿Cuál es la trampa del examen?
+Muchos estudiantes asocian automáticamente:
+"Líquido libre en FAST = Quirófano de urgencia."
+Sin embargo:
+Esta es una falacia de la vieja escuela. Recuerda siempre el binomio del ATLS: FAST positivo SÓLO significa laparotomía si hay INESTABILIDAD HEMODINÁMICA refractaria a cristaloides.
+Perlas de examen
+✅ Trauma abdominal + FAST positivo + INESTABLE = Laparotomía exploratoria.
+✅ Trauma abdominal + FAST positivo + ESTABLE = TAC abdominal c/contraste (manejo conservador inicial).
+✅ Paciente INESTABLE con FAST negativo = Buscar otras fuentes de sangrado (tórax, pelvis, retroperitoneo, fractura de huesos largos).
+Referencias
+• ATLS (Advanced Trauma Life Support) Guidelines.
+• Sabiston Textbook of Surgery.
+• Schwartz's Principles of Surgery.`,
   },
   {
     id: "ucc-conv-2025-06-21-36",
@@ -396,5 +430,40 @@ export const UCC_CONV_2025_06_21_SURGERY_QUESTIONS: TrainingQuestion[] = [
       "Analgesia + colecistectomía electiva (4–6 semanas).",
       "No ATB ni CPRE en cólico simple.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta fundamental de cirugía general porque exige diferenciar un cólico biliar simple de una colecistitis aguda, lo cual cambia radicalmente la conducta médica.
+La clave no es que tenga cálculos (litiasis).
+La clave es:
+Dolor transitorio + Ausencia de fiebre + Murphy negativo + Pared vesicular fina (<3 mm) = Cólico Biliar.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Dolor biliar autolimitado y que cede parcialmente.
+• Signos vitales normales (no fiebre, no taquicardia).
+• Examen físico sin irritación peritoneal (Murphy negativo).
+• Ecografía "limpia" (pared de 2 mm, litos móviles, sin líquido perivesicular).
+Estos hallazgos sugieren:
+Un cálculo obstruyó transitoriamente el bacinete vesicular o el cístico, causó el cólico, y luego se movió o cayó nuevamente a la vesícula, aliviando la obstrucción antes de generar inflamación. Es decir, es un Cólico Biliar, NO una Colecistitis Aguda.
+¿Por qué la opción B es la respuesta correcta?
+El manejo del cólico biliar simple (sin inflamación aguda) es puramente médico en urgencias (analgesia, antiespasmódicos) seguido del alta domiciliaria. La curación definitiva es la colecistectomía laparoscópica electiva (idealmente en las siguientes 4 a 6 semanas) por consulta externa.
+¿Por qué NO dar antibióticos (Opciones A y D)?
+¡Los antibióticos están totalmente contraindicados en un cólico biliar! No hay infección ni inflamación tisular, solo un problema mecánico transitorio. Dar antibióticos aquí es una mala práctica clínica. Adicionalmente, operar de urgencia a una paciente con cólico biliar no está justificado, se opera de forma electiva.
+¿Por qué NO solicitar CPRE (Opción C)?
+La CPRE (Colangiopancreatografía Retrógrada Endoscópica) se indica exclusivamente si hay sospecha de coledocolitiasis (cálculo en la vía biliar principal con bilirrubina alta o vía biliar dilatada en ecografía) o colangitis aguda. Esta paciente tiene laboratorios normales.
+¿Cuál es la trampa del examen?
+Muchos estudiantes leen:
+"Dolor en hipocondrio derecho y piedras en vesícula."
+Y responden:
+"Antibióticos y colecistectomía de urgencia."
+Sin embargo:
+Si no hay engrosamiento de la pared vesicular (>4 mm), líquido perivesicular, fiebre, ni Murphy positivo, NO ES una colecistitis. No trates un cólico como si fuera una infección.
+Perlas de examen
+✅ Cólico biliar: Dolor autolimitado (< 6h), sin signos inflamatorios. Tratamiento: Analgesia + Cirugía electiva.
+✅ Colecistitis aguda: Dolor prolongado (> 6h), Murphy positivo, fiebre, pared vesicular > 4 mm. Tratamiento: Antibióticos + Colecistectomía temprana (primeras 72h).
+✅ Coledocolitiasis: Ictericia, bilirrubina directa alta, FA/GGT altas, vía biliar dilatada. Tratamiento: CPRE + luego colecistectomía.
+✅ Colangitis aguda: Tríada de Charcot (fiebre, dolor, ictericia) o Péntada de Reynolds (shock, alteración mental). Tratamiento: ATB + Descompresión urgente de vía biliar (CPRE).
+Referencias
+• Tokyo Guidelines 2018 (TG18) para infecciones biliares.
+• Schwartz's Principles of Surgery.
+• Sabiston Textbook of Surgery.`,
   },
 ];

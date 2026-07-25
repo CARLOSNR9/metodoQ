@@ -666,65 +666,39 @@ Referencias
       "La artritis periférica sí suele correlacionarse con la actividad digestiva; la espondilitis anquilosante es la excepción clásica.",
       "Tema: Manifestaciones extraintestinales de la enfermedad inflamatoria intestinal.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
-Esta es una pregunta clásica de gastroenterología porque evalúa las manifestaciones extraintestinales de la enfermedad inflamatoria intestinal, pidiendo identificar la afirmación FALSA sobre la espondilitis anquilosante asociada a EII.
-
-La clave no es asumir que todas las manifestaciones extraintestinales correlacionan con la actividad intestinal.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de gastroenterología porque evalúa las manifestaciones extraintestinales de la enfermedad inflamatoria intestinal (EII) pidiendo identificar la afirmación FALSA.
+La clave no es asumir que todas las manifestaciones extraintestinales mejoran al tratar el intestino.
 La clave es:
-La espondilitis anquilosante es una manifestación extraintestinal axial cuya actividad suele evolucionar de manera independiente de la actividad inflamatoria intestinal — a diferencia de la artritis periférica.
-
+Espondilitis anquilosante (compromiso axial) = Curso independiente de la actividad intestinal.
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Hombre de 32 años con antecedente de enfermedad inflamatoria intestinal.
-• Dolor lumbar inflamatorio crónico y rigidez matutina prolongada.
-• Diagnóstico confirmado de espondilitis anquilosante asociada a EII.
-• La pregunta pide identificar cuál afirmación es FALSA.
-
-Recordemos manifestaciones musculoesqueléticas de la EII:
-• Espondilitis anquilosante (axial): dolor lumbar inflamatorio, rigidez matutina; más frecuente en enfermedad de Crohn.
-• Actividad axial: evoluciona de forma independiente de la actividad intestinal (excepción clásica).
-• Artritis periférica tipo 1: sí correlaciona con actividad intestinal; mejora al controlar la EII.
-• Artritis periférica tipo 2: evolución independiente (similar a espondilitis).
-• Espondilitis anquilosante: evolución lenta y progresiva; no remite completamente con glucocorticoides.
-
-Por lo tanto:
-La afirmación FALSA es que la actividad de la espondilitis anquilosante guarda relación con la actividad inflamatoria intestinal (opción B), porque su curso axial es independiente del intestino.
-
-¿Por qué la opción B es la respuesta correcta?
-La espondilitis anquilosante es una manifestación extraintestinal axial cuya actividad suele evolucionar de manera independiente de la actividad intestinal, por lo que afirmar que guarda relación con ella es FALSO.
-
-¿Por qué fallan las otras opciones?
-Opción A (más frecuente en Crohn): VERDADERO; la espondilitis anquilosante es más frecuente en pacientes con enfermedad de Crohn que con colitis ulcerosa.
-Opción C (no remite con glucocorticoides): VERDADERO; la enfermedad axial no responde completamente a glucocorticoides, requiere AINEs y biológicos anti-TNF.
-Opción D (evolución lenta y progresiva): VERDADERO; la espondilitis anquilosante tiene curso crónico, lento y progresivo con riesgo de anquilosis.
-
+• Hombre joven con antecedente de EII.
+• Dolor lumbar inflamatorio y rigidez matutina prolongada.
+• Diagnóstico de Espondilitis Anquilosante (EA) asociado a su EII.
+Estos hallazgos son clásicos de:
+Las manifestaciones musculoesqueléticas de la EII, que se dividen en periféricas y axiales (como la EA).
+¿Por qué la afirmación B es la FALSA (Opción correcta)?
+La espondilitis anquilosante tiene un curso clínico completamente independiente de la actividad inflamatoria del intestino. Es decir, el paciente puede tener el colon perfecto y asintomático (en remisión profunda), pero su columna puede seguir doliendo y anquilosándose. Por tanto, afirmar que "guarda relación con la actividad inflamatoria" es incorrecto (FALSO).
+¿Por qué la afirmación A es VERDADERA?
+La espondilitis anquilosante (y en general el compromiso axial) se observa con mayor frecuencia en pacientes con Enfermedad de Crohn que en aquellos con Colitis Ulcerosa.
+¿Por qué la afirmación C es VERDADERA?
+El compromiso axial en la espondilitis anquilosante clásica (o asociada a EII) NO responde de forma óptima ni completa a los glucocorticoides orales o tópicos; su base de tratamiento son los AINEs, fisioterapia y terapia biológica (anti-TNF).
+¿Por qué la afirmación D es VERDADERA?
+El curso natural de la espondilitis anquilosante es típicamente crónico, de progresión muy lenta a lo largo de décadas, llevando gradualmente a la limitación funcional y fusión vertebral ("columna en caña de bambú").
 ¿Cuál es la trampa del examen?
-Muchos estudiantes piensan:
-"Todas las manifestaciones extraintestinales empeoran cuando empeora el intestino."
-Pero la espondilitis anquilosante es una excepción clásica: su actividad axial es independiente de la actividad intestinal.
-Aquí el dato decisivo es:
-Artritis periférica tipo 1 = correlaciona con intestino; espondilitis anquilosante = NO correlaciona.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Identificar manifestaciones extraintestinales de EII: articulares, cutáneas, oculares, hepáticas.
-2. Diferenciar artritis periférica tipo 1 (correlaciona) de espondilitis anquilosante (independiente).
-3. Espondilitis anquilosante: más frecuente en Crohn, evolución lenta, no remite con esteroides solos.
-4. Tratamiento axial: AINEs, fisioterapia, biológicos anti-TNF (infliximab, adalimumab).
-5. Controlar EII no garantiza control de espondilitis anquilosante.
-
+Muchos estudiantes asocian lógicamente:
+"EII activa = más manifestaciones extraintestinales."
+Sin embargo:
+Existen dos excepciones clásicas que NO se relacionan con la actividad intestinal y que a los examinadores les fascina preguntar: 1) La Espondilitis Anquilosante, y 2) La Pioderma Gangrenoso (aunque esta última es más debatida, la EA es regla de oro).
+En contraste, la artritis periférica tipo 1 y el eritema nodoso SÍ mejoran cuando mejora el intestino.
 Perlas de examen
-✅ Espondilitis anquilosante + EII = actividad axial independiente del intestino.
-✅ Artritis periférica tipo 1 = mejora al controlar la EII.
-✅ Espondilitis anquilosante más frecuente en Crohn que en colitis ulcerosa.
-✅ Glucocorticoides no controlan completamente la enfermedad axial.
-✅ Evolución lenta y progresiva con riesgo de anquilosis vertebral.
-
+✅ Manifestación que NO mejora con el control del intestino: Espondilitis anquilosante (axial).
+✅ Manifestación que SÍ mejora con el control del intestino: Artritis periférica (tipo 1), eritema nodoso.
+✅ La Espondilitis Anquilosante es más frecuente en Enfermedad de Crohn.
 Referencias
 • ECCO Guidelines on Extraintestinal Manifestations in Inflammatory Bowel Disease.
 • American College of Gastroenterology Guidelines.
-• EULAR Recommendations for the Management of Axial Spondyloarthritis.
 • Harrison's Principles of Internal Medicine.`,
   },
 
@@ -2937,90 +2911,40 @@ Referencias
       "Tema: Hemorragia del primer trimestre.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa el diagnóstico diferencial de los sangrados del primer trimestre.
-La clave no es el sangrado.
+Esta es una pregunta súper rentable en obstetricia porque evalúa cómo clasificar el sangrado del primer trimestre basado en la ecografía transvaginal.
+La clave no es asustarse con el sangrado.
 La clave es:
-La viabilidad fetal.
+Sangrado leve + Útero cerrado + Ecografía con latido cardíaco fetal presente = Amenaza de aborto.
 ¿Qué está ocurriendo realmente?
 La paciente presenta:
-• Embarazo de 12 semanas.
-• Sangrado vaginal leve.
-• Ausencia de dolor importante.
-• Cuello uterino cerrado.
-• Actividad cardíaca fetal presente.
-Estos hallazgos corresponden a:
-Amenaza de aborto.
-¿Qué es una amenaza de aborto?
-Se define como:
-Sangrado vaginal antes de las 20 semanas de gestación con:
-• Cuello uterino cerrado.
-• Producto gestacional viable.
-En estos casos:
-El embarazo aún puede evolucionar normalmente.
-¿Qué aporta la ecografía?
-La ecografía confirma:
-• Embarazo intrauterino.
-• Viabilidad fetal.
-• Ausencia de signos de aborto en curso.
-La presencia de actividad cardíaca fetal es:
-Un factor pronóstico favorable.
-¿Cuál es el manejo?
-La conducta habitual incluye:
-• Observación.
-• Educación sobre signos de alarma.
-• Seguimiento obstétrico.
-• Control ecográfico según evolución.
-No existe indicación de evacuación uterina.
-¿Por qué NO realizar legrado?
-El legrado está indicado en:
-• Aborto incompleto.
-• Aborto retenido.
-• Algunas pérdidas gestacionales no viables.
-La paciente presenta:
-Embarazo viable.
-¿Por qué NO administrar misoprostol?
-El misoprostol se utiliza para:
-• Interrupción del embarazo.
-• Aborto retenido.
-• Evacuación uterina.
-No está indicado cuando existe:
-Viabilidad fetal demostrada.
-¿Por qué NO requiere cirugía urgente?
-No existen datos de:
-• Inestabilidad hemodinámica.
-• Hemorragia severa.
-• Aborto inevitable.
-• Embarazo ectópico.
-¿Cuál es la trampa de examen?
+• Gestante de 12 semanas con sangrado escaso.
+• Cérvix cerrado y ausencia de dolor intenso.
+• Ecografía con embrión viable y actividad cardíaca.
+Estos hallazgos son clásicos de:
+Una amenaza de aborto. No hay signos de aborto inminente (cérvix dilatado), y el feto está completamente vivo y dentro del útero.
+¿Por qué la opción A es la respuesta correcta?
+En una amenaza de aborto con un embarazo viable y madre hemodinámicamente estable, el manejo clínico consiste puramente en observación, reposo relativo (opcional pero muy recomendado en la práctica clínica), seguimiento obstétrico estrecho e indicar signos de alarma (aumento del dolor o sangrado, fiebre). El pronóstico general suele ser favorable.
+¿Por qué NO el legrado uterino (Opción B)?
+El legrado uterino instrumental (o AMEU) está reservado para evacuar la cavidad uterina en abortos incompletos o retenidos. En este caso el feto ESTÁ VIVO. Realizar un legrado sería interrumpir un embarazo viable.
+¿Por qué NO administrar misoprostol (Opción C)?
+El misoprostol (análogo de prostaglandina E1) genera contracciones uterinas y maduración cervical. Se usa para tratamiento médico del aborto (incompleto o retenido) o inducción del parto. Administrarlo aquí causaría un aborto provocado.
+¿Por qué NO llevar a quirófano de urgencia (Opción D)?
+Un quirófano de emergencia se reserva para sangrados exanguinantes, inestabilidad hemodinámica profunda (por ejemplo, ruptura de embarazo ectópico), o si requiere legrado urgente por shock hipovolémico/séptico. La paciente está estable con sangrado leve.
+¿Cuál es la trampa del examen?
 Muchos estudiantes leen:
-"Sangrado vaginal."
+"Sangrado en el primer trimestre."
 Y responden:
-Legrado o misoprostol.
+"Evacuación inmediata porque la paciente puede desangrarse."
 Sin embargo:
-El dato decisivo es:
-Latidos cardíacos fetales presentes.
-Esto indica:
-Embarazo viable.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Confirmar embarazo intrauterino.
-2.	Evaluar viabilidad fetal.
-3.	Revisar estado cervical.
-4.	Diagnosticar amenaza de aborto.
-5.	Realizar observación y seguimiento.
+Cualquier caso de sangrado del primer trimestre debe evaluarse primero con especuloscopia (para ver el cérvix) y ecografía. Si el cérvix está cerrado y el feto late, es solo una amenaza. ¡No intervengas agresivamente un embarazo que puede progresar normalmente!
 Perlas de examen
-✅ La amenaza de aborto cursa con sangrado vaginal y cuello uterino cerrado.
-✅ La presencia de actividad cardíaca fetal indica viabilidad gestacional.
-✅ No todo sangrado del primer trimestre implica pérdida del embarazo.
-✅ El legrado no está indicado en embarazos viables.
-✅ El misoprostol está contraindicado cuando se desea continuar la gestación.
-✅ La ecografía transvaginal es fundamental para el diagnóstico.
-✅ El seguimiento obstétrico es la conducta estándar en pacientes estables.
+✅ Amenaza de aborto: Sangrado uterino + Cérvix CERRADO + Embrión vivo. Manejo: Observación.
+✅ Aborto inminente / inevitable: Sangrado uterino + Cérvix ABIERTO + (Con o sin embrión vivo). Manejo: Evacuación.
+✅ Aborto diferido / retenido: Ausencia de síntomas + Cérvix CERRADO + Embrión muerto (sin latido).
+✅ Aborto incompleto: Sangrado abundante + Cérvix ABIERTO + Restos endocavitarios.
 Referencias
 • Williams Obstetrics.
 • ACOG Practice Bulletin: Early Pregnancy Loss.
-• Gabbe's Obstetrics: Normal and Problem Pregnancies.
-• Novak's Gynecology.
 • UpToDate: Threatened Miscarriage.`,
   },
   {
@@ -5172,80 +5096,41 @@ Referencias
       "Tema: Cefaleas primarias.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la cefalea primaria más frecuente en la práctica clínica.
-La clave no es la localización.
+Esta es una pregunta súper frecuente en neurología de consulta externa porque evalúa la cefalea primaria más común en el mundo.
+La clave no es buscar banderas rojas (que no las hay).
 La clave es:
-La asociación con estrés.
+Cefalea recurrente + Asociación clara con estrés + Ausencia de síntomas asociados (fotofobia, náuseas) = Cefalea Tensional.
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Cefalea recurrente.
-• Localización occipital y cervical.
-• Relación con estrés laboral.
-• Ausencia de síntomas neurológicos asociados.
-Estos hallazgos son compatibles con:
-Cefalea tensional.
-¿Cuáles son las características de la cefalea tensional?
-Habitualmente presenta:
-• Dolor opresivo.
-• Sensación de banda o presión.
-• Intensidad leve o moderada.
-• Localización bilateral.
-• Relación con estrés o fatiga.
-Generalmente:
-No empeora con la actividad física.
-¿Por qué aparece en región cervical?
-La tensión muscular de:
-• Cuello.
-• Hombros.
-• Región occipital.
-Participa en la fisiopatología del cuadro.
-¿Por qué NO es migraña?
-La migraña suele asociarse a:
-• Náuseas.
-• Fotofobia.
-• Dolor pulsátil.
-• Empeoramiento con ejercicio.
-Datos ausentes en este caso.
-¿Por qué NO es cefalea en racimos?
-La cefalea en racimos produce:
-• Dolor orbitario intenso.
-• Lagrimeo.
-• Rinorrea.
-No corresponde al cuadro descrito.
-¿Por qué NO es neuralgia occipital?
-La neuralgia occipital suele manifestarse como:
-Dolor lancinante o eléctrico.
-No como cefalea relacionada con estrés.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Región occipital."
+• Cefalea occipito-cervical opresiva o "en banda".
+• Disparador claro: estrés laboral, tensión emocional.
+• Responde parcialmente a analgésicos convencionales.
+• El examen neurológico es normal.
+Estos hallazgos son clásicos de:
+Cefalea de tipo Tensión. Fisiopatológicamente, el estrés genera una contractura o tensión mantenida en los músculos pericraneales, occipitales y cervicales.
+¿Por qué la opción B es la respuesta correcta?
+La cefalea tensional es la principal causa de cefalea primaria y se describe precisamente así: dolor leve a moderado, opresivo, bilateral, de localización fronto-occipital, sin fotofobia/fonofobia significativas ni náuseas, típicamente desencadenado por estrés.
+¿Por qué NO es Migraña (Opción A)?
+La migraña es pulsátil, unilateral, de moderada a severa intensidad, empeora con la actividad física, y típicamente asocia fotofobia, fonofobia y náuseas/vómitos. Ninguno de estos datos está presente en este paciente.
+¿Por qué NO es Cefalea en Racimos (Opción C)?
+La cefalea en racimos ("cluster headache") genera un dolor periorbitario extremadamente intenso, estrictamente unilateral, asociado a disautonomía ipsilateral (lagrimeo, rinorrea, inyección conjuntival, síndrome de Horner). Es más frecuente en hombres jóvenes y los pacientes suelen estar inquietos ("pacing").
+¿Por qué NO es Neuralgia Occipital (Opción D)?
+La neuralgia (p. ej., neuralgia de Arnold) causa un dolor paroxístico, lancinante o tipo "corrientazo" en el territorio del nervio occipital, desencadenado por palpación, no una cefalea opresiva relacionada con estrés laboral.
+¿Cuál es la trampa del examen?
+Muchos estudiantes se asustan al ver:
+"Cefalea occipital y cervical."
 Y responden:
-Neuralgia occipital.
+"Neuralgia occipital o Meningitis."
 Sin embargo:
-El dato decisivo es:
-La relación con estrés laboral.
-Esto orienta a:
-Cefalea tensional.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar el patrón de cefalea.
-2.	Buscar factores desencadenantes.
-3.	Evaluar síntomas acompañantes.
-4.	Diferenciar cefaleas primarias.
-5.	Diagnosticar cefalea tensional.
+La localización cervico-occipital por contractura muscular debido al estrés es el sello distintivo de la cefalea tensional. Siempre revisa si hay "banderas rojas"; si no las hay, piensa en tensional.
 Perlas de examen
-✅ La cefalea tensional es la cefalea primaria más frecuente.
-✅ El estrés emocional es uno de los principales desencadenantes.
-✅ El dolor suele ser opresivo y no pulsátil.
-✅ Generalmente no se acompaña de náuseas ni vómitos.
-✅ La exploración neurológica suele ser normal.
-✅ Puede asociarse a contractura muscular cervical.
-✅ El manejo incluye medidas no farmacológicas y analgésicos simples.
+✅ Cefalea Tensional: Opresiva, bilateral, en banda, intensidad leve/moderada, relacionada a estrés/fatiga.
+✅ Migraña: Pulsátil, unilateral, moderada/severa, con náuseas, fotofobia y fonofobia.
+✅ Cefalea en Racimos: Unilateral, severa (periorbitaria), con disautonomía ipsilateral (lagrimeo, rinorrea).
+✅ Neuralgia Occipital: Dolor lancinante/paroxístico ("eléctrico") en territorio occipital.
 Referencias
 • International Classification of Headache Disorders (ICHD-3).
-• Adams and Victor's Principles of Neurology.
 • Harrison's Principles of Internal Medicine.
-• American Headache Society Guidelines.
 • UpToDate: Tension-Type Headache in Adults.`,
   },
   {
@@ -6215,61 +6100,40 @@ Referencias
       "Tema: Toxicología.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa la intoxicación medicamentosa más frecuente a nivel mundial.
-La clave no es el examen físico.
+Esta es una pregunta de oro en toxicología porque el acetaminofén (paracetamol) es la intoxicación medicamentosa aguda más común.
+La clave no es el examen físico (suele ser normal al inicio).
 La clave es:
-La cantidad ingerida.
+Dosis tóxica > 150 mg/kg → Solicitar niveles a las 4 horas → Nomograma de Rumack-Matthew → N-acetilcisteína si hay riesgo.
 ¿Qué está ocurriendo realmente?
 La paciente presenta:
-• Ingesta voluntaria masiva.
-• Riesgo de hepatotoxicidad grave.
-• Examen físico inicialmente normal.
-Esto ocurre porque:
-La intoxicación por acetaminofén suele ser inicialmente asintomática.
-¿Cuál es la dosis tóxica?
-La cifra que debes recordar para examen es:
-≥150 mg/kg.
-También suele recordarse:
-≥7.5 gramos en adultos.
-¿Cuál es el siguiente paso?
-1.	Determinar hora exacta de la ingesta.
-2.	Solicitar nivel sérico de acetaminofén.
-3.	Aplicar nomograma de Rumack-Matthew.
-4.	Iniciar N-acetilcisteína cuando esté indicada.
-¿Cuándo iniciar N-acetilcisteína inmediatamente?
-Cuando:
-• La dosis ingerida claramente supera el umbral tóxico.
-• Se desconoce el tiempo de ingesta.
-• No será posible obtener niveles oportunamente.
-¿Por qué la paciente puede estar asintomática?
-Porque la hepatotoxicidad suele desarrollarse:
-Entre las 24 y 72 horas posteriores.
-¿Cuál es la trampa de examen?
-Muchos estudiantes creen que:
-La ausencia de síntomas descarta gravedad.
+• Ingesta autolítica de 43 tabletas (asumiendo de 500mg, son 21.5 gramos, muy superior a la dosis tóxica).
+• Asintomática en urgencias.
+Estos hallazgos sugieren:
+Fase I (primeras 24h) de la intoxicación por acetaminofén. Clínicamente los pacientes pueden estar asintomáticos o presentar náuseas y vómitos leves. El daño hepático real (necrosis centrolobulillar por acúmulo de NAPQI) comienza después de 24-72 horas.
+¿Por qué la opción C es la respuesta correcta?
+La dosis tóxica umbral de acetaminofén en una dosis aguda única es ≥150 mg/kg (o aproximadamente 7.5 gramos en adultos). Como este umbral fue superado, la conducta médica mandatoria es solicitar la acetaminofenemia (niveles séricos) a las 4 horas postingesta para trazarla en el nomograma de Rumack-Matthew, el cual indicará si la paciente requiere tratamiento antidótico con N-acetilcisteína.
+¿Por qué NO solo observación (Opción A)?
+Darle el egreso a un paciente asintomático tras una ingesta masiva de acetaminofén es mala praxis. Desarrollará falla hepática aguda en los próximos días si no se interviene.
+¿Por qué NO administrar solo carbón activado (Opción B)?
+El carbón activado es útil solo en la primera a segunda hora tras la ingesta para descontaminación gastrointestinal, pero NO reemplaza la necesidad de usar el nomograma y la N-acetilcisteína (el antídoto definitivo).
+¿Por qué NO hemodiálisis de urgencia (Opción D)?
+La hemodiálisis no es el tratamiento de primera línea para la intoxicación aguda por acetaminofén. La diálisis se reserva para pacientes que ya han desarrollado falla hepática fulminante o si los niveles son monstruosamente altos con disfunción multiorgánica (muy raro como manejo inicial).
+¿Cuál es la trampa del examen?
+Muchos estudiantes ven:
+"Paciente asintomática con signos vitales normales."
+Y responden:
+"Observación clínica o alta psiquiátrica."
 Sin embargo:
-La mayoría de los pacientes se encuentran clínicamente bien durante las primeras horas.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Calcular la dosis ingerida.
-2.	Compararla con 150 mg/kg.
-3.	Solicitar nivel sérico.
-4.	Aplicar nomograma.
-5.	Iniciar N-acetilcisteína cuando corresponda.
+La latencia de los síntomas es la mayor trampa del paracetamol. El hígado se está destruyendo de forma silenciosa por el metabolito NAPQI (agota el glutatión). ¡Nunca confíes en un paciente asintomático por paracetamol en las primeras horas!
 Perlas de examen
-✅ La dosis tóxica clásica es ≥150 mg/kg.
-✅ El antídoto es la N-acetilcisteína.
-✅ La mayor eficacia del antídoto ocurre si se administra dentro de las primeras 8 horas.
-✅ El nomograma de Rumack-Matthew se utiliza en intoxicaciones agudas únicas.
-✅ La hepatotoxicidad puede aparecer después de 24 horas.
-✅ El paciente puede estar inicialmente asintomático.
-✅ El acetaminofén es una de las causas más frecuentes de falla hepática aguda.
+✅ Dosis tóxica aguda Acetaminofén: ≥ 150 mg/kg (o > 7.5 g en adulto).
+✅ Fase I (< 24h): Asintomático o náuseas leves. Fase II (24-72h): Elevación de transaminasas, dolor hipocondrio derecho.
+✅ Manejo inicial: Niveles séricos a las 4 horas + Nomograma de Rumack-Matthew.
+✅ Antídoto de elección: N-Acetilcisteína (restituye el glutatión hepático).
 Referencias
 • Goldfrank's Toxicologic Emergencies.
-• Tintinalli's Emergency Medicine.
-• Nelson Textbook of Pediatrics.
-• UpToDate: Acetaminophen Poisoning in Children and Adolescents.
-• American Academy of Clinical Toxicology Guidelines.`,
+• UpToDate: Acetaminophen (paracetamol) poisoning in adults: Pathophysiology, presentation, and evaluation.
+• Tintinalli's Emergency Medicine.`,
   },
   {
     id: "dr-q-227",

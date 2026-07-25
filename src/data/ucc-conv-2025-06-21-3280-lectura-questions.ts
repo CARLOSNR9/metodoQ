@@ -640,6 +640,38 @@ export const UCC_CONV_2025_06_21_3280_LECTURA_QUESTIONS: TrainingQuestion[] = [
       "Uremia acorta vida eritrocitaria.",
       "Inflamación → hierro funcional limitado.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta de comprensión lectora aplicada a la nefrología que evalúa la capacidad de integrar la fisiopatología de la anemia en la enfermedad renal crónica (ERC) según un texto dado.
+La clave no es buscar respuestas fuera del texto.
+La clave es:
+El texto menciona tres factores, pero destaca la disminución de masa renal y producción de eritropoyetina como el primer eslabón.
+¿Qué está ocurriendo realmente?
+El texto describe múltiples mecanismos:
+• Disminución de eritropoyetina (por pérdida de células peritubulares).
+• Acortamiento de supervivencia eritrocitaria (por toxinas urémicas).
+• Resistencia a la eritropoyetina.
+• Limitación del hierro funcional (por inflamación).
+Todos estos factores convergen para causar la anemia en el paciente con ERC avanzada.
+¿Por qué la opción A es la respuesta correcta?
+La opción A sintetiza perfectamente todos los mecanismos expuestos en el párrafo: el déficit principal de producción de eritropoyetina, sumado a la contribución secundaria de la uremia, la inflamación y la disfunción del hierro. Es la única opción que captura la imagen completa descrita en el texto.
+¿Por qué NO es pérdida exclusiva de hierro (Opción B)?
+El texto no menciona la hematuria macroscópica en absoluto. Atribuir la anemia a una "pérdida exclusiva" contradice directamente el párrafo.
+¿Por qué NO es anemia hemolítica autoinmune (Opción C)?
+Aunque el texto habla de "acortamiento de la supervivencia eritrocitaria", esto es mediado por toxinas urémicas (ambiente hostil), no por un proceso autoinmune primario.
+¿Por qué NO es sobrerregeneración medular (Opción D)?
+El texto indica explícitamente una "disminución de la producción de eritropoyetina", lo que lleva a hiporregeneración medular, no a un exceso de hormona endógena.
+¿Cuál es la trampa del examen?
+Muchos estudiantes:
+Se dejan llevar por conocimientos externos o asumen una sola causa.
+Sin embargo:
+En preguntas de comprensión lectora médica, debes ceñirte estrictamente a lo que el párrafo expone y cómo integra los diferentes mecanismos patogénicos.
+Perlas de examen
+✅ Principal causa de anemia en ERC: Déficit en la producción de eritropoyetina (células peritubulares).
+✅ Rol de la uremia: Disminuye la vida media del eritrocito y genera resistencia a la EPO.
+✅ Rol de la inflamación crónica: Bloquea la utilización del hierro (hierro funcional limitado pese a depósitos normales), mediado por la hepcidina.
+Referencias
+• Harrison's Principles of Internal Medicine.
+• Brenner and Rector's The Kidney.`,
   },
   {
     id: "ucc-conv-2025-06-21-94",
