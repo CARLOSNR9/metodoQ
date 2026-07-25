@@ -17,7 +17,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
   const getPlanIcon = (planId: string) => {
     switch (planId) {
       case "FREE": return <Gift className="w-7 h-7 text-green-500" />;
-      case "BASIC": return <GraduationCap className="w-7 h-7 text-blue-500" />;
+      case "BASICO": return <GraduationCap className="w-7 h-7 text-blue-500" />;
       case "PRO": return <Rocket className="w-7 h-7 text-purple-500" />;
       case "RESIDENTE": return <Crown className="w-7 h-7 text-orange-500" />;
       default: return null;
@@ -30,7 +30,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
     if (planId === "FREE") {
       return `${base} bg-white text-slate-800 border border-slate-200 hover:bg-slate-50 group`;
     }
-    if (planId === "BASIC") {
+    if (planId === "BASICO") {
       return `${base} bg-white text-blue-600 border border-blue-600 hover:bg-blue-50 group`;
     }
     if (planId === "PRO") {
@@ -189,7 +189,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                   cycle={cycle} 
                   className={getPlanButtonStyle(plan.id, plan.highlighted)}
                 >
-                  {plan.id === "FREE" ? "Empezar gratis" : plan.id === "BASIC" ? "Elegir Básico" : plan.id === "PRO" ? "Elegir plan PRO" : "Postular a Residente"}
+                  {plan.id === "FREE" ? "Empezar gratis" : plan.id === "BASICO" ? "Elegir Básico" : plan.id === "PRO" ? "Elegir plan PRO" : "Postular a Residente"}
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </PlanCtaButton>
                 
