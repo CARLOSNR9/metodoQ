@@ -510,6 +510,15 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       }
     }
 
+    const count = isDailyPill
+      ? 1
+      : isSessionErrorsMode || isRepasoMode
+        ? Math.min(plannedQuestionCount || pool.length, pool.length)
+        : plannedQuestionCount;
+    const dedicatedBattery = isAct1
+      ? getAct1DiagnosticSession(urlUniversity, urlSpecialty)
+      : null;
+
     const cycleOptions =
       seenIds !== undefined
         ? { fullBank: questionBank, seenIds, cycleReset }
