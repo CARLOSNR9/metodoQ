@@ -1,4 +1,4 @@
-﻿import type { TrainingQuestion } from "@/lib/questions/types";
+import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
  * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #31”“#40.
@@ -405,13 +405,16 @@ export const UCC_CONV_2025_07_19_31_40_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "C",
-    explanation: "Esta pregunta aborda un escenario médico de altísimo riesgo y cada vez más evaluado. La paciente presenta un perfil serológico clásico de **infección resuelta/previa por Hepatitis B** (HBsAg negativo y Anti-HBc positivo, usualmente con Anti-HBs protector). Sin embargo, el VHB nunca se erradica completamente del cuerpo; su ADN (cccDNA) permanece latente de forma vitalicia en los hepatocitos, bajo el estricto control de la inmunidad celular. Al administrar un fármaco intensamente inmunosupresor celular, y de forma suprema el **Rituximab** (Anti-CD20), el sistema inmune pierde el control del virus latente. Esto provoca una Reactivación del Virus de la Hepatitis B (mutación fulminante o necrosis masiva por reactivación inmune posterior), con mortalidades superiores al 30%. Las guías AASLD y AGA establecen con máxima rigidez que TODO paciente expuesto a agentes depletores de células B que tenga el marcador \"Anti-HBc\" positivo (así su antígeno esté negativo y su carga viral en cero) DEBE recibir profilaxis antiviral universal diaria (ej. Entecavir) desde el inicio de la terapia y hasta 12-18 meses después de suspenderla.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Colega, aquí es donde cae la mayoría de la gente en el examen de medicina interna. La gran \"cascarita\" es el término \"infección resuelta o curada\". Como el HBsAg salió negativo y el paciente tiene anticuerpos protectores (Anti-HBs), el médico general anota \"paciente inmunizado\" y autoriza el Rituximab (Opción A). Tres meses después, la paciente ingresa amarilla, en coma hepático y fallece porque el Rituximab despertó el ADN latente en los hepatocitos. El anticuerpo clave para vigilar no es el de superficie, es el Core (Anti-HBc). Si el Anti-HBc está positivo alguna vez en la vida de un paciente, el virus está durmiendo ahí dentro. Ponle el Entecavir profiláctico y te evitas una demanda médica y un fallecimiento.",
+    explanation: "Esta pregunta aborda un escenario médico de altísimo riesgo y cada vez más evaluado. La paciente presenta un perfil serológico clásico de **infección resuelta/previa por Hepatitis B** (HBsAg negativo y Anti-HBc positivo, usualmente con Anti-HBs protector). Sin embargo, el VHB nunca se erradica completamente del cuerpo; su ADN (cccDNA) permanece latente de forma vitalicia en los hepatocitos, bajo el estricto control de la inmunidad celular. Al administrar un fármaco intensamente inmunosupresor celular, y de forma suprema el **Rituximab** (Anti-CD20), el sistema inmune pierde el control del virus latente. Esto provoca una Reactivación del Virus de la Hepatitis B (mutación fulminante o necrosis masiva por reactivación inmune posterior), con mortalidades superiores al 30%. Las guías AASLD y AGA establecen con máxima rigidez que TODO paciente expuesto a agentes depletores de células B que tenga el marcador \"Anti-HBc\" positivo (así su antígeno esté negativo y su carga viral en cero) DEBE recibir profilaxis antiviral universal diaria (ej. Entecavir) desde el inicio de la terapia y hasta 12-18 meses después de suspenderla.",
     keyPoints: [
       "Paciente oncológico o reumatológico programado para recibir Rituximab (o quimioterapia intensiva).",
       "Serología de Hepatitis B: HBsAg (-) PERO Anti-HBc (+). (Infección resuelta).",
       "Riesgo extremo de reactivación viral letal de la Hepatitis B. El uso de profilaxis profiláctica crónica con Entecavir o Tenofovir es MANDATORIO antes del biológico.",
       "Tema: Reactivación de Hepatitis B / Inmunosupresión en Reumatología."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Colega, aquí es donde cae la mayoría de la gente en el examen de medicina interna. La gran "cascarita" es el término "infección resuelta o curada". Como el HBsAg salió negativo y el paciente tiene anticuerpos protectores (Anti-HBs), el médico general anota "paciente inmunizado" y autoriza el Rituximab (Opción A). Tres meses después, la paciente ingresa amarilla, en coma hepático y fallece porque el Rituximab despertó el ADN latente en los hepatocitos. El anticuerpo clave para vigilar no es el de superficie, es el Core (Anti-HBc). Si el Anti-HBc está positivo alguna vez en la vida de un paciente, el virus está durmiendo ahí dentro. Ponle el Entecavir profiláctico y te evitas una demanda médica y un fallecimiento.`
   },
   {
     id: "ucc-conv-2025-07-19-40",

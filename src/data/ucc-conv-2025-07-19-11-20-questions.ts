@@ -42,14 +42,17 @@ export const UCC_CONV_2025_07_19_11_20_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "La paciente cursa con un Síndrome Antifosfolípido Catastrófico (CAPS), la variante más letal del SAF (mortalidad >50%). Se define por el desarrollo de trombosis en tres o más órganos, sistemas o tejidos en menos de una semana (en este caso: pulmón, riñón y piel), con confirmación de microangiopatía trombótica (esquizocitos/trombocitopenia). El desencadenante clásico es la suspensión de la anticoagulación o una infección. Las guías internacionales (Task Force for CAPS) establecen que la supervivencia exige una \"terapia triple\" agresiva e inmediata: Anticoagulación (para frenar la trombosis en cascada), Corticosteroides a dosis de pulso (para frenar el SIRS/tormenta de citoquinas) y Plasmaféresis y/o IGIV (para remover/neutralizar los anticuerpos antifosfolípidos circulantes y citoquinas).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Colega, en el CAPS la sangre del paciente se coagula en la microcirculación de todo el cuerpo simultáneamente. Si te dejas asustar por las plaquetas bajas (35.000) y le quitas la anticoagulación (Opción A), la paciente morirá infartada. La trombocitopenia es por *consumo* trombótico, no por sangrado. Transfundir plaquetas (Opción C) es gasolina para el fuego (más sustrato para hacer trombos). La anticoagulación debe ser parenteral (Heparina) y nunca con DOACs, que son inferiores a la warfarina/heparinas en SAF de alto riesgo.",
+    explanation: "La paciente cursa con un Síndrome Antifosfolípido Catastrófico (CAPS), la variante más letal del SAF (mortalidad >50%). Se define por el desarrollo de trombosis en tres o más órganos, sistemas o tejidos en menos de una semana (en este caso: pulmón, riñón y piel), con confirmación de microangiopatía trombótica (esquizocitos/trombocitopenia). El desencadenante clásico es la suspensión de la anticoagulación o una infección. Las guías internacionales (Task Force for CAPS) establecen que la supervivencia exige una \"terapia triple\" agresiva e inmediata: Anticoagulación (para frenar la trombosis en cascada), Corticosteroides a dosis de pulso (para frenar el SIRS/tormenta de citoquinas) y Plasmaféresis y/o IGIV (para remover/neutralizar los anticuerpos antifosfolípidos circulantes y citoquinas).",
     keyPoints: [
       "Paciente con SAF conocido (o joven con trombosis atípicas).",
       "Falla multiorgánica rápida (< 1 semana) involucrando 3 o más órganos (clásico: riñón, pulmón, piel/SNC).",
       "Microangiopatía trombótica activa (trombocitopenia + esquizocitos).",
       "SAF Catastrófico (CAPS). El manejo es siempre combinado: Anticoagulación + Corticoides + Plasmaféresis/IGIV.",
       "Tema: Síndrome Antifosfolípido Catastrófico."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Colega, en el CAPS la sangre del paciente se coagula en la microcirculación de todo el cuerpo simultáneamente. Si te dejas asustar por las plaquetas bajas (35.000) y le quitas la anticoagulación (Opción A), la paciente morirá infartada. La trombocitopenia es por *consumo* trombótico, no por sangrado. Transfundir plaquetas (Opción C) es gasolina para el fuego (más sustrato para hacer trombos). La anticoagulación debe ser parenteral (Heparina) y nunca con DOACs, que son inferiores a la warfarina/heparinas en SAF de alto riesgo.`
   },
   {
     id: "ucc-conv-2025-07-19-12",
@@ -363,13 +366,16 @@ Referencias
       }
     ],
     correctOptionId: "B",
-    explanation: "El paciente cursó con una Hemorragia Digestiva Alta No Variceal por úlcera péptica con estigmas endoscópicos de alto riesgo (Forrest I o IIa/IIb). La hemostasia endoscópica combinada fue exitosa. Sin embargo, para que el coágulo plaquetario recién formado no se degrade y se consolide, se requiere mantener el pH gástrico constantemente por encima de 6.0 (la pepsina y el ácido clorhídrico destruyen los coágulos a pH < 5.0). Las guías internacionales recomiendan fuertemente que TODOS los pacientes con úlceras de alto riesgo (después del manejo endoscópico) reciban infusión intravenosa continua de un IBP a dosis altas (8 mg/h) durante 72 horas, ya que esto ha demostrado reducir la tasa de resangrado, cirugía de rescate y mortalidad.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Recuerda que el cirujano y el endoscopista hacen el tapón mecánico, pero la medicina interna protege ese tapón. Si le pasas el omeprazol a vía oral (Opción A), el pH gástrico fluctuará por debajo de 4 durante la noche, el ácido digerirá la fibrina del hemoclip y el paciente te hará un resangrado masivo al tercer día. La Terlipresina (Opción C) se usa para las várices esofágicas de los cirróticos, no tiene rol clínico en la úlcera péptica gastroduodenal.",
+    explanation: "El paciente cursó con una Hemorragia Digestiva Alta No Variceal por úlcera péptica con estigmas endoscópicos de alto riesgo (Forrest I o IIa/IIb). La hemostasia endoscópica combinada fue exitosa. Sin embargo, para que el coágulo plaquetario recién formado no se degrade y se consolide, se requiere mantener el pH gástrico constantemente por encima de 6.0 (la pepsina y el ácido clorhídrico destruyen los coágulos a pH < 5.0). Las guías internacionales recomiendan fuertemente que TODOS los pacientes con úlceras de alto riesgo (después del manejo endoscópico) reciban infusión intravenosa continua de un IBP a dosis altas (8 mg/h) durante 72 horas, ya que esto ha demostrado reducir la tasa de resangrado, cirugía de rescate y mortalidad.",
     keyPoints: [
       "Úlcera péptica sangrante activa (Forrest I) o con estigmas de alto riesgo (Forrest IIa: vaso visible, o IIb: coágulo adherido).",
       "Post-terapia endoscópica exitosa.",
       "Mantener estricto soporte farmacológico con IBP intravenoso en infusión continua a 8 mg/hora durante las primeras 72 horas (el periodo de máximo riesgo de caída de la escara).",
       "Tema: Hemorragia Digestiva No Variceal."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Recuerda que el cirujano y el endoscopista hacen el tapón mecánico, pero la medicina interna protege ese tapón. Si le pasas el omeprazol a vía oral (Opción A), el pH gástrico fluctuará por debajo de 4 durante la noche, el ácido digerirá la fibrina del hemoclip y el paciente te hará un resangrado masivo al tercer día. La Terlipresina (Opción C) se usa para las várices esofágicas de los cirróticos, no tiene rol clínico en la úlcera péptica gastroduodenal.`
   },
   {
     id: "ucc-conv-2025-07-19-18",

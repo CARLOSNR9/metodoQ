@@ -1,4 +1,4 @@
-﻿import type { TrainingQuestion } from "@/lib/questions/types";
+import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
  * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #61”“#70.
@@ -87,14 +87,17 @@ export const UCC_CONV_2025_07_19_61_70_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "A",
-    explanation: "El paciente presenta una crisis aguda de Pseudogota (Enfermedad por depósito de cristales de Pirofosfato de Calcio Dihidratado - CPPD). Las claves del diagnóstico son: la afectación de una articulación grande (típicamente la rodilla), la radiografía con condrocalcinosis, y el líquido articular confirmatorio (cristales ROMBOIDALES con birrefringencia POSITIVA débil). Aunque la celularidad de 35,000 sugiere un proceso inflamatorio intenso, no cruza el umbral purulento de la artritis séptica (>50k-100k). El dilema aquí es terapéutico: en un paciente con Enfermedad Renal Crónica Estadio 4 (TFGe 22 mL/min), los AINEs y la Colchicina sistémica están **contraindicados** o conllevan toxicidad inaceptable. Al ser una monoartritis pura, la intervención más segura, rápida y efectiva (recomendada por las guías ACR/EULAR) es el vaciamiento del líquido inflamatorio seguido de una inyección intraarticular de glucocorticoides, evitando la toxicidad sistémica en un riñón frágil.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** En reumatología de urgencias, los cristales tienen formas y signos. Gota (ácido úrico): forma de aguja, birrefringencia negativa, en el dedo gordo. Pseudogota (pirofosfato de calcio): forma de rombo, birrefringencia positiva, en la rodilla. Las opciones B y C están diseñadas para que mates el riñón o la médula ósea del paciente; con una TFG de 22, los AINEs le causarán diálisis irreversible al día siguiente, y la colchicina lo intoxicará neuromuscolarmente porque se acumula. La aguja directo en la rodilla con triamcinolona apaga el fuego localmente sin tocar el riñón.",
+    explanation: "El paciente presenta una crisis aguda de Pseudogota (Enfermedad por depósito de cristales de Pirofosfato de Calcio Dihidratado - CPPD). Las claves del diagnóstico son: la afectación de una articulación grande (típicamente la rodilla), la radiografía con condrocalcinosis, y el líquido articular confirmatorio (cristales ROMBOIDALES con birrefringencia POSITIVA débil). Aunque la celularidad de 35,000 sugiere un proceso inflamatorio intenso, no cruza el umbral purulento de la artritis séptica (>50k-100k). El dilema aquí es terapéutico: en un paciente con Enfermedad Renal Crónica Estadio 4 (TFGe 22 mL/min), los AINEs y la Colchicina sistémica están **contraindicados** o conllevan toxicidad inaceptable. Al ser una monoartritis pura, la intervención más segura, rápida y efectiva (recomendada por las guías ACR/EULAR) es el vaciamiento del líquido inflamatorio seguido de una inyección intraarticular de glucocorticoides, evitando la toxicidad sistémica en un riñón frágil.",
     keyPoints: [
       "Anciano con monoartritis aguda en rodilla o muñeca.",
       "RX: Condrocalcinosis (calcificación del cartílago).",
       "Líquido sinovial: Cristales ROMBOIDALES, birrefringencia POSITIVA débil.",
       "Pseudogota (CPPD). En pacientes con daño renal (donde AINEs/Colchicina están prohibidos), la infiltración intraarticular con esteroides es el estándar de oro para 1 o 2 articulaciones comprometidas.",
       "Tema: Artritis por Microcristales / Pseudogota."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+En reumatología de urgencias, los cristales tienen formas y signos. Gota (ácido úrico): forma de aguja, birrefringencia negativa, en el dedo gordo. Pseudogota (pirofosfato de calcio): forma de rombo, birrefringencia positiva, en la rodilla. Las opciones B y C están diseñadas para que mates el riñón o la médula ósea del paciente; con una TFG de 22, los AINEs le causarán diálisis irreversible al día siguiente, y la colchicina lo intoxicará neuromuscolarmente porque se acumula. La aguja directo en la rodilla con triamcinolona apaga el fuego localmente sin tocar el riñón.`
   },
   {
     id: "ucc-conv-2025-07-19-63",
@@ -360,14 +363,17 @@ export const UCC_CONV_2025_07_19_61_70_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "La paciente presenta la descripción de texto de la **Colangitis Biliar Primaria** (CBP, antiguamente Cirrosis Biliar Primaria). Es una enfermedad autoinmune del hígado que ataca los conductos biliares intrahepáticos pequeños. Afecta típicamente a mujeres de mediana edad. Su presentación cardinal incluye fatiga extrema, prurito y patrón de colestasis disociada (Fosfatasa Alcalina y GGT por las nubes con bilirrubina normal en etapas tempranas) e hipercolesterolemia con xantomas/xantelasmas. El hallazgo de laboratorio pivote y patognomónico es la positividad a **Anticuerpos Mitocondriales (AMA)** en más del 90-95% de las pacientes. El único fármaco de primera línea comprobado para mejorar los parámetros bioquímicos, retrasar la progresión a cirrosis, prevenir várices y extender el tiempo libre de trasplante es el **Ácido Ursodesoxicólico (UDCA)**.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Punto para diferenciar las hepatopatías autoinmunes, Colega. Si el paciente tiene las transaminasas (AST/ALT) en 1.000 y anticuerpos Anti-Músculo Liso (ASMA) positivos, eso es Hepatitis Autoinmune y se trata con Esteroides + Azatioprina (Opción A). Pero si el paciente tiene las enzimas biliares (Fosfatasa Alcalina/GGT) en 1.000 y anticuerpos Antimitocondriales (AMA), eso es Colangitis Biliar Primaria y su único salvavidas es el Ácido Ursodesoxicólico. Este ácido es un ácido biliar hidrofílico y protector que desplaza a los ácidos biliares tóxicos (litocólico), desinflamando el conductillo hepático desde adentro.",
+    explanation: "La paciente presenta la descripción de texto de la **Colangitis Biliar Primaria** (CBP, antiguamente Cirrosis Biliar Primaria). Es una enfermedad autoinmune del hígado que ataca los conductos biliares intrahepáticos pequeños. Afecta típicamente a mujeres de mediana edad. Su presentación cardinal incluye fatiga extrema, prurito y patrón de colestasis disociada (Fosfatasa Alcalina y GGT por las nubes con bilirrubina normal en etapas tempranas) e hipercolesterolemia con xantomas/xantelasmas. El hallazgo de laboratorio pivote y patognomónico es la positividad a **Anticuerpos Mitocondriales (AMA)** en más del 90-95% de las pacientes. El único fármaco de primera línea comprobado para mejorar los parámetros bioquímicos, retrasar la progresión a cirrosis, prevenir várices y extender el tiempo libre de trasplante es el **Ácido Ursodesoxicólico (UDCA)**.",
     keyPoints: [
       "Mujer de mediana edad con fatiga, prurito insoportable y patrón colestásico (Fosfatasa Alcalina altísima).",
       "Ecografía de vías biliares completamente normal (la obstrucción es micro-intrahepática).",
       "Anticuerpos Mitocondriales (AMA) fuertemente positivos.",
       "Colangitis Biliar Primaria (CBP). Fármaco modificador de la enfermedad: Ácido Ursodesoxicólico (UDCA). Los esteroides no sirven.",
       "Tema: Hepatopatías Autoinmunes / Colangitis Biliar Primaria."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Punto para diferenciar las hepatopatías autoinmunes, Colega. Si el paciente tiene las transaminasas (AST/ALT) en 1.000 y anticuerpos Anti-Músculo Liso (ASMA) positivos, eso es Hepatitis Autoinmune y se trata con Esteroides + Azatioprina (Opción A). Pero si el paciente tiene las enzimas biliares (Fosfatasa Alcalina/GGT) en 1.000 y anticuerpos Antimitocondriales (AMA), eso es Colangitis Biliar Primaria y su único salvavidas es el Ácido Ursodesoxicólico. Este ácido es un ácido biliar hidrofílico y protector que desplaza a los ácidos biliares tóxicos (litocólico), desinflamando el conductillo hepático desde adentro.`
   },
   {
     id: "ucc-conv-2025-07-19-69",

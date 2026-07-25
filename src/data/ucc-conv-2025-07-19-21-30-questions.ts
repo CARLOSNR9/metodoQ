@@ -501,13 +501,16 @@ Referencias
       }
     ],
     correctOptionId: "B",
-    explanation: "El manejo del LES en el embarazo requiere un balance delicadísimo. El principio rector es que el riesgo de muerte fetal o complicaciones maternas catastróficas por una *recaída lúpica* durante el embarazo supera el riesgo general de usar medicamentos compatibles. La Hidroxicloroquina es el pilar de supervivencia y SE DEBE MANTENER OBLIGATORIAMENTE en todo el embarazo (suspenderla precipita brotes lúpicos masivos y daño orgánico materno-fetal). SIN EMBARGO, el Micofenolato de Mofetilo es un teratógeno humano absoluto comprobado (Clasificación D/X, asociado a malformaciones craneofaciales y abortos) y debe suspenderse DE INMEDIATO. El fármaco de transición y mantenimiento de elección para reemplazar al micofenolato, considerado seguro durante la gestación (no atraviesa la barrera placentaria de forma enzimáticamente activa para el feto), es la Azatioprina.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Punto clave en control prenatal de reumatología. Hay fármacos que están vetados para las mujeres encinta. Si dice Metotrexato, Ciclofosfamida o Micofenolato: aléjalos de la embarazada si no quieres provocar deformidades severas o aborto. La Azatioprina es el salvavidas inmunosupresor de la mujer encinta porque el hígado fetal inmaduro carece de la enzima inosinato pirofosforilasa, protegiéndolo de los efectos tóxicos celulares del fármaco mientras cuida el riñón de la madre. Quitarle la Hidroxicloroquina (Opción C) por \"miedo\", como hacían los médicos de antaño, garantiza casi con certeza un brote renal o cutáneo letal a mitad del embarazo.",
+    explanation: "El manejo del LES en el embarazo requiere un balance delicadísimo. El principio rector es que el riesgo de muerte fetal o complicaciones maternas catastróficas por una *recaída lúpica* durante el embarazo supera el riesgo general de usar medicamentos compatibles. La Hidroxicloroquina es el pilar de supervivencia y SE DEBE MANTENER OBLIGATORIAMENTE en todo el embarazo (suspenderla precipita brotes lúpicos masivos y daño orgánico materno-fetal). SIN EMBARGO, el Micofenolato de Mofetilo es un teratógeno humano absoluto comprobado (Clasificación D/X, asociado a malformaciones craneofaciales y abortos) y debe suspenderse DE INMEDIATO. El fármaco de transición y mantenimiento de elección para reemplazar al micofenolato, considerado seguro durante la gestación (no atraviesa la barrera placentaria de forma enzimáticamente activa para el feto), es la Azatioprina.",
     keyPoints: [
       "Paciente con Lupus u otra enfermedad autoinmune grave embarazada.",
       "Manejo previo que incluye Micofenolato de Mofetilo, Metotrexato o Ciclofosfamida.",
       "La Hidroxicloroquina SIEMPRE se continúa (es segura y salva embarazos lúpicos). El Micofenolato es TERATOGÉNICO absoluto y se sustituye inmediatamente por Azatioprina (que es segura).",
       "Tema: Lupus y Embarazo / Farmacología Autoinmune."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Punto clave en control prenatal de reumatología. Hay fármacos que están vetados para las mujeres encinta. Si dice Metotrexato, Ciclofosfamida o Micofenolato: aléjalos de la embarazada si no quieres provocar deformidades severas o aborto. La Azatioprina es el salvavidas inmunosupresor de la mujer encinta porque el hígado fetal inmaduro carece de la enzima inosinato pirofosforilasa, protegiéndolo de los efectos tóxicos celulares del fármaco mientras cuida el riñón de la madre. Quitarle la Hidroxicloroquina (Opción C) por "miedo", como hacían los médicos de antaño, garantiza casi con certeza un brote renal o cutáneo letal a mitad del embarazo.`
   },
   {
     id: "ucc-conv-2025-07-19-30",

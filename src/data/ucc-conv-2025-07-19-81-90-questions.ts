@@ -501,14 +501,17 @@ Referencias
       }
     ],
     correctOptionId: "C",
-    explanation: "La paciente presenta la tríada clásica de la Infección Gonocócica Diseminada (IGD): tenosinovitis, dermatitis (lesiones pustulosas acrales) y poliartralgias migratorias. Ocurre característicamente en mujeres jóvenes sexualmente activas (a menudo coincidiendo con la menstruación o un embarazo temprano). *Neisseria gonorrhoeae* es un microorganismo muy fastidioso; por tanto, los hemocultivos y los cultivos de líquido sinovial rutinarios son negativos en más del 70-80% de los casos (pues requiere medios especiales como el agar Thayer-Martin, e incluso así la rentabilidad es baja). Para confirmar el patógeno, la prueba más sensible y específica es el NAAT (Prueba de Amplificación de Ácidos Nucleicos) tomado directamente de las mucosas donde el patógeno coloniza primariamente: endocérvix, uretra, faringe o recto, independientemente de que la paciente no tenga síntomas genitourinarios (flujo).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Un clásico de los servicios de urgencias. Ves las pústulas, la inflamación de los tendones y piensas \"¡Artritis séptica!\". Le sacas líquido a la rodilla y oh sorpresa, el líquido está estéril. ¡No caigas en la trampa! El gonococo diseminado daña las articulaciones más por mecanismos inmunomediados circulantes y microabscesos que por purulencia franca masiva dentro del espacio articular. Como el gonococo odia el medio ambiente externo y no crece en los caldos de cultivo normales, tienes que ir a buscar su ADN directamente a su \"cueva\" (el cérvix) usando NAAT (PCR).",
+    explanation: "La paciente presenta la tríada clásica de la Infección Gonocócica Diseminada (IGD): tenosinovitis, dermatitis (lesiones pustulosas acrales) y poliartralgias migratorias. Ocurre característicamente en mujeres jóvenes sexualmente activas (a menudo coincidiendo con la menstruación o un embarazo temprano). *Neisseria gonorrhoeae* es un microorganismo muy fastidioso; por tanto, los hemocultivos y los cultivos de líquido sinovial rutinarios son negativos en más del 70-80% de los casos (pues requiere medios especiales como el agar Thayer-Martin, e incluso así la rentabilidad es baja). Para confirmar el patógeno, la prueba más sensible y específica es el NAAT (Prueba de Amplificación de Ácidos Nucleicos) tomado directamente de las mucosas donde el patógeno coloniza primariamente: endocérvix, uretra, faringe o recto, independientemente de que la paciente no tenga síntomas genitourinarios (flujo).",
     keyPoints: [
       "Tríada: Tenosinovitis + Pústulas acrales + Poliartralgia migratoria.",
       "Mujer joven sexualmente activa.",
       "Cultivos articulares y hemocultivos TÍPICAMENTE NEGATIVOS por la naturaleza fastidiosa de la bacteria.",
       "El diagnóstico etiológico se confirma buscando *Neisseria gonorrhoeae* en las mucosas primarias mediante NAAT (PCR endocervical).",
       "Tema: Infecciones de Transmisión Sexual / Artritis Gonocócica."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Un clásico de los servicios de urgencias. Ves las pústulas, la inflamación de los tendones y piensas "¡Artritis séptica!". Le sacas líquido a la rodilla y oh sorpresa, el líquido está estéril. ¡No caigas en la trampa! El gonococo diseminado daña las articulaciones más por mecanismos inmunomediados circulantes y microabscesos que por purulencia franca masiva dentro del espacio articular. Como el gonococo odia el medio ambiente externo y no crece en los caldos de cultivo normales, tienes que ir a buscar su ADN directamente a su "cueva" (el cérvix) usando NAAT (PCR).`
   }
 ];
 

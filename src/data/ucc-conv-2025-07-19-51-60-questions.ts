@@ -42,13 +42,16 @@ export const UCC_CONV_2025_07_19_51_60_QUESTIONS: TrainingQuestion[] = [
       }
     ],
     correctOptionId: "B",
-    explanation: "La paciente presenta la clásica \"Tríada de Meltzer\" (púrpura palpable, artralgias y debilidad) sumada a una glomerulonefritis membranoproliferativa, en el contexto de una infección crónica por el VHC. Este cuadro es patognomónico de la Vasculitis Crioglobulinémica (Crioglobulinemia Mixta, tipos II o III). El VHC estimula la producción de IgM monoclonal con actividad de Factor Reumatoide, la cual se une a la IgG del huésped formando inmunocomplejos masivos que precipitan con el frío (crioglobulinas). Estos inmunocomplejos se depositan en el subendotelio y activan poderosamente la **vía clásica** del complemento. El sello laboratorial absoluto de la crioglobulinemia mixta es la caída profunda, a veces indetectable, del **C4**, manteniendo el C3 relativamente normal o levemente disminuido.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Colega, en las preguntas de glomerulonefritis el complemento es el rey del diagnóstico. Si cae el C3 y el C4 juntos, piensa en Lupus (vía clásica masiva). Si cae SOLO el C3, piensa en Postinfecciosa (GNPE) o en la nefropatía por C3 (activación de vía alternativa). Pero si ves que el C4 se fue a cero y el C3 está normal, eso grita ¡CRIOGLOBULINEMIA! a los cuatro vientos. La pista del \"Factor Reumatoide alto\" en alguien que no tiene artritis reumatoide deformante te lo confirma: esa IgM es la crioglobulina disfrazada.",
+    explanation: "La paciente presenta la clásica \"Tríada de Meltzer\" (púrpura palpable, artralgias y debilidad) sumada a una glomerulonefritis membranoproliferativa, en el contexto de una infección crónica por el VHC. Este cuadro es patognomónico de la Vasculitis Crioglobulinémica (Crioglobulinemia Mixta, tipos II o III). El VHC estimula la producción de IgM monoclonal con actividad de Factor Reumatoide, la cual se une a la IgG del huésped formando inmunocomplejos masivos que precipitan con el frío (crioglobulinas). Estos inmunocomplejos se depositan en el subendotelio y activan poderosamente la **vía clásica** del complemento. El sello laboratorial absoluto de la crioglobulinemia mixta es la caída profunda, a veces indetectable, del **C4**, manteniendo el C3 relativamente normal o levemente disminuido.",
     keyPoints: [
       "Paciente con antecedente de Hepatitis C que hace Síndrome Nefrítico + Púrpura palpable + Factor Reumatoide positivo.",
       "Perfil de complemento: C4 marcadamente bajo (casi cero) con C3 normal.",
       "Crioglobulinemia Mixta. Requiere tratamiento combinado con antivirales directos (AAD) para el VHC e inmunosupresión (Rituximab/Esteroides) para la vasculitis activa.",
       "Tema: Vasculitis de Vasos Pequeños / Crioglobulinemia."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Colega, en las preguntas de glomerulonefritis el complemento es el rey del diagnóstico. Si cae el C3 y el C4 juntos, piensa en Lupus (vía clásica masiva). Si cae SOLO el C3, piensa en Postinfecciosa (GNPE) o en la nefropatía por C3 (activación de vía alternativa). Pero si ves que el C4 se fue a cero y el C3 está normal, eso grita ¡CRIOGLOBULINEMIA! a los cuatro vientos. La pista del "Factor Reumatoide alto" en alguien que no tiene artritis reumatoide deformante te lo confirma: esa IgM es la crioglobulina disfrazada.`
   },
   {
     id: "ucc-conv-2025-07-19-52",
