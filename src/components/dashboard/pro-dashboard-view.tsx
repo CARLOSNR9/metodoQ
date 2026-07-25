@@ -325,15 +325,15 @@ export function ProDashboardView({
           className="flex flex-col gap-3 rounded-2xl border border-emerald-500/25 bg-emerald-500/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:px-6 backdrop-blur-md"
         >
           <div className="flex items-start gap-3 sm:items-center">
-            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 sm:mt-0" />
-            <p className="text-sm leading-relaxed text-emerald-50">
+            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600 sm:mt-0" />
+            <p className="text-sm leading-relaxed text-emerald-800">
               <span className="font-bold text-slate-900">Tu diagnóstico ya está hecho.</span> Con esa batería
               inicial calibramos Método Q
               {goalUniversityLabel ? ` para ${goalUniversityLabel}` : ""}
               {totalQuestions > 0 ? (
                 <>
                   {" "}
-                  (promedio actual <span className="font-bold text-emerald-200">{displayScore}%</span> en{" "}
+                  (promedio actual <span className="font-bold text-emerald-600">{displayScore}%</span> en{" "}
                   {totalQuestions} preguntas)
                 </>
               ) : null}
@@ -349,8 +349,8 @@ export function ProDashboardView({
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center gap-3 rounded-2xl border border-amber-500/20 bg-amber-500/10 p-5 sm:px-6 backdrop-blur-md"
         >
-          <Brain className="h-5 w-5 shrink-0 text-amber-400" />
-          <p className="text-sm font-medium text-amber-100">
+          <Brain className="h-5 w-5 shrink-0 text-amber-600" />
+          <p className="text-sm font-medium text-amber-900">
             El diagnóstico inicial calibra tu radar, retos diarios y entrenamiento adaptativo.
             {profile?.goalUniversity && profile.goalUniversity !== "Otra"
               ? ` Ya tenemos registrada tu meta: ${profile.goalUniversity}.`

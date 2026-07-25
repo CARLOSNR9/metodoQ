@@ -15,28 +15,28 @@ const SECTION_CONFIG = {
     title: "Refuerza primero",
     hint: "Menos del 55% de aciertos. Empieza por estas antes del examen.",
     icon: AlertCircle,
-    iconClass: "text-red-400",
-    borderClass: "border-red-500/20 bg-red-500/[0.04]",
+    iconClass: "text-red-500",
+    borderClass: "border-red-200 bg-red-50",
     barClass: "bg-red-400",
-    labelClass: "text-red-200",
+    labelClass: "text-red-500",
   },
   ok: {
     title: "Sigue practicando",
     hint: "Vas bien, pero aún puedes subir. Un poco más de estudio y pasan a verde.",
     icon: TrendingUp,
-    iconClass: "text-amber-400",
-    borderClass: "border-amber-500/20 bg-amber-500/[0.04]",
+    iconClass: "text-amber-500",
+    borderClass: "border-amber-200 bg-amber-50",
     barClass: "bg-amber-400",
-    labelClass: "text-amber-200",
+    labelClass: "text-amber-600",
   },
   strong: {
     title: "Lo dominas",
     hint: "70% o más de aciertos. Mantén repaso ligero para no perderlo.",
     icon: Sparkles,
-    iconClass: "text-emerald-400",
-    borderClass: "border-emerald-500/20 bg-emerald-500/[0.04]",
+    iconClass: "text-emerald-500",
+    borderClass: "border-emerald-200 bg-emerald-50",
     barClass: "bg-emerald-400",
-    labelClass: "text-emerald-200",
+    labelClass: "text-emerald-600",
   },
 } as const;
 
@@ -49,8 +49,8 @@ function SubjectBar({ subject, barClass }: { subject: SubjectStatus; barClass: s
       <div className="flex items-center justify-between gap-3 text-xs">
         <span className="truncate font-semibold text-slate-900">{subject.label}</span>
         <span className="shrink-0 text-slate-500 text-[10px]">
-          <span className="font-bold text-emerald-400">{buenas}% Buenas</span> {" · "}
-          <span className="font-bold text-red-400/80">{malas}% Malas</span>
+          <span className="font-bold text-emerald-600">{buenas}% Buenas</span> {" · "}
+          <span className="font-bold text-red-500/90">{malas}% Malas</span>
         </span>
       </div>
       <div className="h-2 overflow-hidden rounded-full bg-red-500/20">
@@ -125,21 +125,21 @@ export function SubjectPerformancePanel({
       ) : (
         <>
           <div className="grid grid-cols-3 gap-2">
-            <div className="rounded-xl border border-red-500/20 bg-red-500/10 px-3 py-2 text-center">
-              <p className="text-lg font-black text-red-300">{weak.length}</p>
-              <p className="text-[9px] font-bold uppercase tracking-wide text-red-200/80">
+            <div className="rounded-xl border border-red-200 bg-red-50 px-3 py-2 text-center">
+              <p className="text-lg font-black text-red-600">{weak.length}</p>
+              <p className="text-[9px] font-bold uppercase tracking-wide text-red-700/80">
                 A reforzar
               </p>
             </div>
-            <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-center">
-              <p className="text-lg font-black text-amber-300">{ok.length}</p>
-              <p className="text-[9px] font-bold uppercase tracking-wide text-amber-200/80">
+            <div className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-2 text-center">
+              <p className="text-lg font-black text-amber-600">{ok.length}</p>
+              <p className="text-[9px] font-bold uppercase tracking-wide text-amber-700/80">
                 En progreso
               </p>
             </div>
-            <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-3 py-2 text-center">
-              <p className="text-lg font-black text-emerald-300">{strong.length}</p>
-              <p className="text-[9px] font-bold uppercase tracking-wide text-emerald-200/80">
+            <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2 text-center">
+              <p className="text-lg font-black text-emerald-600">{strong.length}</p>
+              <p className="text-[9px] font-bold uppercase tracking-wide text-emerald-700/80">
                 Dominadas
               </p>
             </div>

@@ -33,12 +33,12 @@ function DayPill({ day }: { day: DailyHabitDay }) {
       <div
         className={`flex h-11 w-11 items-center justify-center rounded-2xl border transition-all ${
           studied
-            ? "border-emerald-500/40 bg-emerald-500/20 text-emerald-300"
+            ? "border-emerald-200 bg-emerald-50 text-emerald-600"
             : missed
-              ? "border-rose-500/30 bg-rose-500/10 text-rose-400"
+              ? "border-rose-200 bg-rose-50 text-rose-600"
               : partial || pending
-                ? "border-amber-500/30 bg-amber-500/10 text-amber-300"
-                : "border-slate-200 bg-white/[0.03] text-slate-500"
+                ? "border-amber-200 bg-amber-50 text-amber-600"
+                : "border-slate-200 bg-slate-50 text-slate-500"
         }`}
         title={
           studied
@@ -134,7 +134,7 @@ export function StudyStreakSummary({
     : `Hábito Pro · ${dailyTarget} preg/día`;
 
   return (
-    <section className="rounded-[2rem] border border-orange-500/20 bg-gradient-to-br from-orange-500/[0.08] via-mq-surface to-transparent p-6 sm:p-8">
+    <section className="rounded-[2rem] border border-orange-500/20 bg-gradient-to-br from-orange-500/[0.08] via-white to-transparent p-6 sm:p-8">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           <div
@@ -151,7 +151,7 @@ export function StudyStreakSummary({
             />
           </div>
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-widest text-orange-300/90">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-orange-500/90">
               {habitLabel} · últimos 5 días
             </p>
             <p className="text-2xl font-black text-slate-900">
@@ -165,7 +165,7 @@ export function StudyStreakSummary({
                     <>
                       {" "}
                       ·{" "}
-                      <span className="text-rose-300">
+                      <span className="text-rose-500">
                         {incompleteDays} día{incompleteDays === 1 ? "" : "s"} sin cumplir meta
                       </span>
                     </>
@@ -207,7 +207,7 @@ export function StudyStreakSummary({
       )}
 
       {!isLoading && incompleteDays >= 2 && (
-        <p className="mt-4 rounded-xl border border-amber-500/25 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+        <p className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-700">
           Llevas varios días sin cumplir la meta de {dailyTarget} preguntas. Retoma hoy para
           no acumular más huecos.
         </p>

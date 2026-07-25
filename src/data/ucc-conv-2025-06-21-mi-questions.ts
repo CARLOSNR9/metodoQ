@@ -298,6 +298,38 @@ export const UCC_CONV_2025_06_21_MI_QUESTIONS: TrainingQuestion[] = [
       "Cristaloides 30 mL/kg antes de escalar vasopresores.",
       "No retrasar manejo por estudios de imagen en shock.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta mandatoria de urgencias y UCI porque evalúa tu adherencia al paquete de reanimación de la primera hora (Surviving Sepsis Campaign) en un paciente que se está chocando frente a ti.
+La clave no es diagnosticar el foco quirúrgico primero.
+La clave es:
+Foco Infeccioso + Hipotensión/Lactato alto = Sepsis/Shock Séptico → Iniciar antibióticos y cristaloides en la primera hora SIN retrasos por imágenes.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Fiebre, dolor en fosa ilíaca derecha y defensa abdominal (sospecha de apendicitis complicada / peritonitis).
+• Hipotensión severa (88/52 mmHg) y taquicardia (132 lpm).
+• Hiperlactatemia (4.2 mmol/L) e hiperleucocitosis (22,000).
+Estos hallazgos son indicativos de:
+Sepsis de origen abdominal evolucionando a choque séptico.
+¿Por qué la opción B es la respuesta correcta?
+Según las guías internacionales (Surviving Sepsis), el "Hour-1 Bundle" exige: medir lactato, tomar hemocultivos ANTES del antibiótico (si no retrasa su inicio), administrar antibióticos de amplio espectro e iniciar reanimación hídrica rápida con cristaloides (30 mL/kg) para la hipotensión o lactato > 4. Los vasopresores van después si el paciente no responde a los líquidos.
+¿Por qué NO Tomografía abdominal primero (Opción A)?
+Un paciente inestable NUNCA va al tomógrafo. La reanimación (líquidos, antibióticos) debe comenzar de inmediato. El "source control" (control quirúrgico) es fundamental, pero no debes retrasar los antibióticos y los líquidos por una imagen.
+¿Por qué NO iniciar vasopresores primero (Opción C)?
+La noradrenalina es el vasopresor de elección en choque séptico, pero la regla de oro de la reanimación es: "no exprimas un tanque vacío". Primero debes llenar el volumen intravascular con el bolo de cristaloides a 30 mL/kg.
+¿Por qué NO diferir antibióticos (Opción D)?
+Cada hora de retraso en la administración del antibiótico empírico en un paciente con choque séptico incrementa drásticamente la mortalidad (aproximadamente un 7.6% por hora). Jamás esperes cultivos para iniciar el tratamiento empírico.
+¿Cuál es la trampa del examen?
+Muchos estudiantes, al ver abdomen agudo, se inclinan por "Cirugía inmediata" o "Tomografía para confirmar", olvidando que el paciente se está muriendo de choque.
+Sin embargo:
+La estabilización inicial y el antibiótico matan a las bacterias circulantes; la cirugía vendrá muy poco tiempo después para erradicar el foco.
+Perlas de examen
+✅ Bundle de Sepsis de la 1° hora: Medir lactato, Hemocultivos, Antibiótico IV, Cristaloides (30 mL/kg).
+✅ Meta de reanimación inicial: PAM ≥ 65 mmHg y depuración de lactato.
+✅ Vasopresor de elección: Noradrenalina (solo tras o simultáneo a adecuada reanimación hídrica si hay hipotensión profunda).
+✅ Nunca se deben retrasar los antibióticos por ir a imagen (TAC/Eco) en un paciente con inestabilidad hemodinámica.
+Referencias
+• Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock.
+• UpToDate: Evaluation and management of suspected sepsis and septic shock in adults.`,
   },
   {
     id: "ucc-conv-2025-06-21-07",

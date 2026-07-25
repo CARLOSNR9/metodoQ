@@ -139,7 +139,7 @@ function TopicRankRow({ subject, rank }: { subject: SubjectStatus; rank: number 
       initial={{ opacity: 0, x: -8 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: rank * 0.04 }}
-      className="flex items-center gap-3 rounded-xl border border-white/5 bg-slate-50 px-3 py-2.5"
+      className="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5"
     >
       <RankBadge rank={rank} />
       <div className="min-w-0 flex-1 space-y-1.5">
@@ -188,7 +188,7 @@ export function UccPastoInsightCard({
     <motion.section
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className="overflow-hidden rounded-[2rem] border border-mq-accent/25 bg-gradient-to-br from-mq-accent/10 via-[#071428] to-purple-500/5"
+      className="overflow-hidden rounded-[2rem] border border-mq-accent/25 bg-gradient-to-br from-mq-accent/10 via-white to-purple-500/5"
     >
       {/* Header */}
       <div className="border-b border-white/5 px-6 py-5 sm:px-8">
@@ -201,7 +201,7 @@ export function UccPastoInsightCard({
           </div>
           <div className="inline-flex items-center gap-2 rounded-full border border-rose-500/30 bg-rose-500/10 px-3 py-1">
             <AlertTriangle size={14} className="text-rose-400" />
-            <span className="text-[10px] font-bold uppercase tracking-widest text-rose-300">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-rose-600">
               Percentil 75 = mínimo para evaluar HV
             </span>
           </div>
@@ -216,7 +216,7 @@ export function UccPastoInsightCard({
 
       <div className="grid gap-0 lg:grid-cols-5">
         {/* Left: exam info */}
-        <div className="space-y-6 border-b border-white/5 p-6 sm:p-8 lg:col-span-3 lg:border-b-0 lg:border-r">
+        <div className="space-y-6 border-b border-slate-200 p-6 sm:p-8 lg:col-span-3 lg:border-b-0 lg:border-r">
           {/* Roadmap */}
           <div className="space-y-3">
             <p className="text-[10px] font-black uppercase tracking-[0.25em] text-mq-accent">
@@ -237,21 +237,21 @@ export function UccPastoInsightCard({
                     transition={{ delay: i * 0.08 }}
                     className={`relative rounded-2xl border p-4 ${
                       step.highlight
-                        ? "border-rose-500/30 bg-rose-500/[0.06] shadow-[0_0_24px_-8px_rgba(244,63,94,0.35)]"
-                        : "border-slate-200 bg-white/[0.03]"
+                        ? "border-rose-200 bg-rose-50 shadow-sm"
+                        : "border-slate-200 bg-slate-50"
                     }`}
                   >
                     <div className="mb-3 flex items-center justify-between">
                       <span
                         className={`text-[10px] font-black uppercase tracking-widest ${
-                          step.highlight ? "text-rose-300" : "text-slate-500"
+                          step.highlight ? "text-rose-500" : "text-slate-500"
                         }`}
                       >
                         Paso {step.step}
                       </span>
                       <div
                         className={`flex h-8 w-8 items-center justify-center rounded-xl ${
-                          step.highlight ? "bg-rose-500/20 text-rose-300" : "bg-slate-50 text-mq-accent"
+                          step.highlight ? "bg-rose-100 text-rose-500" : "bg-slate-50 text-mq-accent"
                         }`}
                       >
                         <Icon size={16} />
@@ -281,7 +281,7 @@ export function UccPastoInsightCard({
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.1 + i * 0.05 }}
                     whileHover={{ y: -2 }}
-                    className={`rounded-xl border ${area.borderClass} bg-white/[0.03] p-4`}
+                    className={`rounded-xl border ${area.borderClass} bg-slate-50 p-4`}
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex items-center gap-2">
@@ -313,11 +313,11 @@ export function UccPastoInsightCard({
 
           {/* Footer meta */}
           <div className="flex flex-wrap items-center gap-4 text-[11px] font-medium text-slate-500">
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/5 bg-white/[0.03] px-3 py-1.5">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
               <Clock size={14} className="text-mq-accent" />
               180 min · ritmo de simulacro
             </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-white/5 bg-white/[0.03] px-3 py-1.5">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5">
               <Users size={14} className="text-mq-accent" />
               3 cupos/semestre · 12 preseleccionados
             </span>
@@ -337,7 +337,7 @@ export function UccPastoInsightCard({
 
           {totalQuestions > 0 ? (
             <>
-              <div className="rounded-2xl border border-slate-200 bg-white/[0.03] p-4">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                   Preguntas respondidas
                 </p>
@@ -362,24 +362,24 @@ export function UccPastoInsightCard({
                 </div>
 
                 <div className="mt-3 grid grid-cols-2 gap-2">
-                  <div className="flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-3 py-2">
-                    <CheckCircle2 size={16} className="shrink-0 text-emerald-400" />
+                  <div className="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2">
+                    <CheckCircle2 size={16} className="shrink-0 text-emerald-500" />
                     <div>
-                      <p className="text-lg font-black tabular-nums text-emerald-300">
+                      <p className="text-lg font-black tabular-nums text-emerald-600">
                         {totalCorrect}
                       </p>
-                      <p className="text-[9px] font-bold uppercase tracking-wide text-emerald-200/70">
+                      <p className="text-[9px] font-bold uppercase tracking-wide text-emerald-700/80">
                         Buenas
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2 rounded-xl border border-rose-500/20 bg-rose-500/10 px-3 py-2">
-                    <XCircle size={16} className="shrink-0 text-rose-400" />
+                  <div className="flex items-center gap-2 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2">
+                    <XCircle size={16} className="shrink-0 text-rose-500" />
                     <div>
-                      <p className="text-lg font-black tabular-nums text-rose-300">
+                      <p className="text-lg font-black tabular-nums text-rose-600">
                         {totalWrong}
                       </p>
-                      <p className="text-[9px] font-bold uppercase tracking-wide text-rose-200/70">
+                      <p className="text-[9px] font-bold uppercase tracking-wide text-rose-700/80">
                         Malas
                       </p>
                     </div>
@@ -395,7 +395,7 @@ export function UccPastoInsightCard({
                       Ranking por tema estudiado
                     </p>
                   </div>
-                  <div className="max-h-[18rem] space-y-2 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-white/10">
+                  <div className="max-h-[18rem] space-y-2 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-200">
                     {rankedTopics.map((subject, i) => (
                       <TopicRankRow key={subject.key} subject={subject} rank={i + 1} />
                     ))}

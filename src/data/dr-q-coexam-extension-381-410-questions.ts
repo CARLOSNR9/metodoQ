@@ -1320,79 +1320,39 @@ Referencias
       "Tema: Asma pediátrica.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa uno de los cambios más importantes introducidos por GINA en los últimos años.
-La clave no son las sibilancias.
+Esta es una pregunta clásica porque evalúa uno de los cambios paradigmáticos más importantes introducidos por la guía GINA en los últimos años para el manejo del asma.
+La clave no es simplemente dar un broncodilatador para aliviar el síntoma.
 La clave es:
-La frecuencia de los síntomas nocturnos.
+Asma en niños (o adultos) = Tratar la inflamación subyacente. NUNCA dar un SABA como tratamiento único.
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Tos nocturna.
-• Despertares por síntomas.
-• Episodios recurrentes desencadenados por infecciones virales.
-• Uso exclusivo de SABA.
-Esto corresponde a:
-Asma persistente.
-¿Qué recomienda GINA 2025?
-En niños entre 6 y 11 años:
-No utilizar SABA como único tratamiento.
-Debe iniciarse:
-Corticosteroide inhalado diario en dosis bajas.
-Además:
-• Salbutamol como medicamento de rescate.
-• Educación en técnica inhalatoria.
-• Plan escrito de acción para el asma.
-• Control de factores desencadenantes.
-¿Cuáles son ejemplos de ICS en dosis bajas?
-• Budesonida.
-• Beclometasona.
-• Fluticasona.
-¿Cuándo se escala el tratamiento?
-Si persisten síntomas pese a buena adherencia y técnica inhalatoria:
-Se considera:
-• Incrementar la dosis del ICS.
-O
-• Añadir LABA en combinación con ICS.
-¿Por qué NO continuar solo con SABA?
-Porque múltiples estudios han demostrado que:
-El uso aislado de SABA incrementa el riesgo de:
-• Exacerbaciones.
-• Hospitalización.
-• Mortalidad por asma.
-¿Por qué NO LABA solo?
-Porque:
-La monoterapia con LABA está contraindicada en el asma.
-Siempre debe asociarse a un corticosteroide inhalado.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Bronquiolitis previa."
-Y responden:
-Broncoespasmo viral.
+• Antecedente de riesgo (bronquiolitis).
+• Disnea y sibilancias recurrentes por infecciones virales.
+• Tos nocturna muy frecuente (3 noches/semana) y despertares nocturnos por asma.
+Estos hallazgos son indicativos de:
+Asma Persistente. Este niño tiene una inflamación crónica de la vía aérea que no está siendo controlada por el manejo exclusivo con Salbutamol (SABA).
+¿Por qué la opción B es la respuesta correcta?
+Según GINA 2025 (y versiones recientes), en niños de 6 a 11 años con síntomas persistentes de asma (síntomas la mayoría de los días o despertares nocturnos ≥ 1 vez a la semana), el paso indicado (Paso 2/3) es iniciar un controlador diario con Corticosteroides Inhalados (ICS) a dosis bajas y mantener el SABA como rescate. Además, la educación sobre la técnica inhalatoria es fundamental, ya que muchos fracasos terapéuticos en pediatría se deben a una mala técnica.
+¿Por qué NO continuar solo con Salbutamol (Opción A)?
+GINA fue enfática en eliminar la monoterapia con SABA. Tratar el asma solo con broncodilatadores alivia el músculo liso pero IGNORA la inflamación. El uso excesivo y aislado de SABA aumenta dramáticamente el riesgo de exacerbaciones severas y mortalidad por asma.
+¿Por qué NO iniciar LABA en monoterapia (Opción C)?
+Los Beta-agonistas de larga acción (LABA, como salmeterol o formoterol) NUNCA deben usarse sin un ICS (Corticosteroide Inhalado) asociado en el asma, debido a un aumento paradójico en la mortalidad relacionada con el asma (Black Box Warning de la FDA).
+¿Por qué NO prednisolona oral diaria (Opción D)?
+Los corticosteroides orales se reservan para el manejo corto de las exacerbaciones agudas severas (ciclos de 3-5 días) o como último recurso en asma grave refractaria (Paso 5). Usarlos a diario como control inicial causaría toxicidad severa (síndrome de Cushing, retraso del crecimiento) sin estar justificado en este nivel de severidad.
+¿Cuál es la trampa del examen?
+Muchos estudiantes, al ver "niño con episodios virales y bronquiolitis", piensan que solo necesita salbutamol "cuando le dé la crisis".
 Sin embargo:
-El dato decisivo es:
-La recurrencia de síntomas nocturnos y el patrón compatible con asma persistente.
-Esto orienta a:
-Iniciar tratamiento controlador con corticosteroide inhalado.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Confirmar el diagnóstico clínico de asma.
-2.	Identificar la frecuencia de los síntomas.
-3.	Suspender el uso de SABA como única terapia.
-4.	Iniciar ICS diario.
-5.	Reevaluar el control en 1 a 3 meses.
+La frecuencia de sus síntomas (3 noches por semana) grita que su vía aérea está crónicamente inflamada. Ignorar esto y dejarlo solo con rescate es mala praxis.
 Perlas de examen
-✅ GINA 2025 no recomienda el uso de SABA como único tratamiento en niños con asma.
-✅ Todo niño de 6 a 11 años con asma debe recibir un corticosteroide inhalado.
-✅ Los corticosteroides inhalados son el tratamiento controlador de primera línea.
-✅ Antes de escalar el tratamiento siempre debe verificarse la técnica inhalatoria y la adherencia.
-✅ La radiografía de tórax suele ser normal en el asma.
-✅ La bronquiolitis en la infancia aumenta el riesgo de desarrollar asma en algunos pacientes.
-✅ El objetivo del tratamiento es lograr control de síntomas y prevenir exacerbaciones.
+✅ GINA ya NO recomienda monoterapia con SABA (Salbutamol) para el tratamiento del asma.
+✅ Tratamiento controlador de primera línea en asma: Corticosteroides Inhalados (ICS).
+✅ ICS previene exacerbaciones, mejora la función pulmonar y reduce síntomas nocturnos.
+✅ LABA NUNCA en monoterapia: Siempre debe ir acompañado de un ICS (ICS-LABA) en asma.
+✅ Síntomas nocturnos frecuentes (despertares) = Falta de control; indicación absoluta de iniciar o subir dosis de ICS.
 Referencias
-• Global Initiative for Asthma (GINA) 2025.
+• Global Initiative for Asthma (GINA) 2025 Report.
 • Nelson Textbook of Pediatrics.
-• UpToDate: Management of Asthma in Children.
-• Guía Colombiana para el Diagnóstico y Manejo del Asma.
-• European Respiratory Society Guidelines for Pediatric Asthma.`,
+• Guía Colombiana para el Diagnóstico y Manejo del Asma.`,
   },
   {
     id: "dr-q-398",

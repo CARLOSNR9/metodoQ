@@ -58,10 +58,10 @@ export function ScoreComparisonCards({
       </motion.div>
 
       <motion.div
-        className="rounded-2xl border border-slate-200 bg-white/[0.03] p-4"
+        className="rounded-2xl border border-amber-200 bg-amber-50 p-4"
         whileHover={{ scale: 1.01 }}
       >
-        <div className="mb-3 flex items-center gap-2 text-amber-300/90">
+        <div className="mb-3 flex items-center gap-2 text-amber-600">
           <Zap size={16} />
           <span className="text-[10px] font-black uppercase tracking-widest">
             Última sesión
@@ -74,7 +74,7 @@ export function ScoreComparisonCards({
               {sessionStandardized} estandarizado · intento más reciente
             </p>
             {lastSessionScore !== globalScorePercentage && (
-              <p className="mt-2 text-[10px] leading-relaxed text-amber-200/70">
+              <p className="mt-2 text-[10px] leading-relaxed text-amber-700/80">
                 {lastSessionScore > globalScorePercentage
                   ? "Subió tu última sesión; el promedio global se actualiza con todas las preguntas."
                   : "Tu última sesión fue más baja; el promedio global refleja todo tu historial."}

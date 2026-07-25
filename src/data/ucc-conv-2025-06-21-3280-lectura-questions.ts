@@ -395,6 +395,36 @@ export const UCC_CONV_2025_06_21_3280_LECTURA_QUESTIONS: TrainingQuestion[] = [
       "No mediación con agresor presente.",
       "Atención no condicionada a denuncia.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta transversal de salud pública y ética que aborda la obligatoriedad del médico frente a la ruta de atención a víctimas de violencia.
+La clave no es solo tratar la lesión física.
+La clave es:
+Atención médica integral + Documentación + Activación de la ruta institucional de protección, SIN condicionar al paciente a denunciar primero.
+¿Qué está ocurriendo realmente?
+La paciente presenta:
+• Lesión física evidente (contusión) causada por su pareja.
+• Reconocimiento explícito de violencia intrafamiliar repetida.
+Estos hallazgos obligan a:
+Una intervención integral regida por la Ley 1257 de 2008 y la Resolución 3280, orientada a evitar la re-victimización y garantizar la seguridad inmediata.
+¿Por qué la opción A es la respuesta correcta?
+El protocolo exige que todo prestador de salud documente clínicamente los hallazgos (con fines médicos y potencialmente forenses), evalúe el riesgo para la vida de la paciente, active el código fucsia o ruta de violencia intrafamiliar (involucrando trabajo social y psicología) y notifique al sistema de vigilancia (SIVIGILA) y autoridades competentes sin que esto dependa de que la víctima interponga la denuncia.
+¿Por qué NO dar de alta sin indagar (Opción B)?
+Ignorar el contexto de la agresión es una falla grave (omisión de socorro). El médico tiene la obligación legal y ética de explorar y reportar el caso para evitar un potencial feminicidio.
+¿Por qué NO exigir mediación conyugal (Opción C)?
+La mediación familiar está absolutamente PROHIBIDA en casos de violencia intrafamiliar, ya que pone a la víctima en riesgo inminente y legitima la asimetría de poder del agresor.
+¿Por qué NO negar atención sin denuncia penal (Opción D)?
+El derecho a la atención médica de urgencias es fundamental. Condicionarlo a un trámite legal es ilegal e inmoral. El sector salud atiende y reporta; el sector justicia penaliza.
+¿Cuál es la trampa del examen?
+Muchos estudiantes piensan que si la paciente "no quiere denunciar", el médico no puede hacer nada.
+Sin embargo:
+Tú estás obligado a reportar a la red de apoyo y SIVIGILA los casos de violencia. Tu labor no es ser fiscal, sino garantizar la protección y la derivación psicosocial segura de tu paciente.
+Perlas de examen
+✅ Notificación obligatoria: Violencia física, sexual o psicológica comprobada o sospechada debe reportarse (SIVIGILA).
+✅ Ley 1257 de 2008: Garantiza el derecho de las mujeres a una vida libre de violencias.
+✅ Nunca mediar: En casos de violencia de género, no se hace terapia de pareja ni mediación.
+Referencias
+• Ministerio de Salud (Colombia) - Resolución 3280 de 2018.
+• Ley 1257 de 2008 sobre el derecho de las mujeres a una vida libre de violencias.`,
   },
   {
     id: "ucc-conv-2025-06-21-89",
@@ -819,6 +849,36 @@ Referencias
       "IC sin 1 → significancia.",
       "RR es medida poblacional, no destino individual.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de epidemiología y medicina basada en la evidencia porque evalúa tu capacidad para interpretar correctamente una medida de asociación (el Riesgo Relativo o RR) y su significancia estadística (Intervalo de Confianza).
+La clave no es enredarse con los porcentajes absolutos.
+La clave es:
+RR de 2.1 con un IC95% que NO incluye el 1 (1.6 a 2.8) = Asociación estadísticamente significativa de mayor riesgo en el grupo expuesto.
+¿Qué está ocurriendo realmente?
+El resumen (abstract) indica:
+• La exposición estudiada es ser "Fumador activo".
+• El desenlace es "Mortalidad por enfermedad cardiovascular".
+• El Riesgo Relativo (RR) es de 2.1 tras ajustar por variables confusoras (edad, sexo, HTA).
+Esto significa que:
+Los fumadores tienen 2.1 veces (aproximadamente el doble) más riesgo de morir por enfermedad cardiovascular en comparación con los no fumadores, y este resultado no se debe al azar porque el IC del 95% va de 1.6 a 2.8 (ambos valores por encima de 1).
+¿Por qué la opción A es la respuesta correcta?
+Esta opción resume fielmente el significado epidemiológico del RR ajustado: existe una asociación donde fumar incrementa el riesgo de mortalidad, y la magnitud de este riesgo es aproximadamente el doble (2.1 veces) que el de los no expuestos, incluso después de controlar por posibles factores de confusión.
+¿Por qué NO interpretar de otra forma (Opciones B, C y D)?
+• Opción B: Absurdo estadístico. Un RR > 1 siempre implica un AUMENTO del riesgo, no una reducción.
+• Opción C: Un IC es "amplio" o "estrecho", pero lo importante para la significancia en un RR es si INCLUYE EL 1 (el valor nulo). Como 1.6 a 2.8 no incluye el 1, SÍ hay asociación significativa.
+• Opción D: El RR es un promedio de probabilidad a nivel POBLACIONAL. No significa que a nivel individual el destino de un fumador sea "necesariamente" morir en 10 años, sino que tiene estadísticamente más probabilidades que un no fumador.
+¿Cuál es la trampa del examen?
+Muchos estudiantes se asustan con los números (8% vs 3%) y tratan de hacer cálculos matemáticos innecesarios, o se confunden al ver la palabra "ajustado".
+Sin embargo:
+"Ajustado" solo significa que los investigadores utilizaron modelos estadísticos para eliminar el sesgo de otras enfermedades (como la HTA). Solo concéntrate en el valor del RR y en el IC. Si RR > 1 e IC no cruza el 1, la asociación es positiva y significativa.
+Perlas de examen
+✅ Riesgo Relativo (RR) > 1: La exposición es un factor de riesgo (aumenta la probabilidad del desenlace).
+✅ Riesgo Relativo (RR) < 1: La exposición es un factor protector (disminuye la probabilidad del desenlace).
+✅ Intervalo de Confianza (IC 95%) para RR/OR: Si el intervalo INCLUYE el número 1 (ej. 0.8 a 1.5), el resultado NO es estadísticamente significativo.
+✅ Si el IC 95% NO incluye el 1 (ej. 1.2 a 2.0, o 0.4 a 0.8), el resultado SÍ es estadísticamente significativo.
+Referencias
+• Fletcher RH, Fletcher SW. Clinical Epidemiology: The Essentials.
+• Gordis L. Epidemiology.`,
   },
   {
     id: "ucc-conv-2025-06-21-97",

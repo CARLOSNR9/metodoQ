@@ -705,93 +705,39 @@ Referencias
       "Debes pensar en: aplasia medular.",
       "Tema: Insuficiencia medular.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
-Esta es una pregunta clásica de hematología porque obliga a diferenciar una falla de producción medular de una infiltración medular.
-
-La clave no es la trombocitopenia.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de hematología porque obliga a diferenciar una falla primaria de producción medular (médula vacía) frente a una infiltración tumoral (médula ocupada).
+La clave no es asustarse con la severidad de la pancitopenia.
 La clave es:
-La pancitopenia con reticulocitopenia.
-
+Pancitopenia + Reticulocitopenia + AUSENCIA de visceromegalias/adenopatías = Aplasia Medular.
 ¿Qué está ocurriendo realmente?
-La médula ósea normal produce:
-• Eritrocitos.
-• Leucocitos.
-• Plaquetas.
-En la aplasia medular existe:
-Destrucción o fracaso de las células madre hematopoyéticas.
-Como consecuencia disminuyen simultáneamente:
-• Hemoglobina.
-• Leucocitos.
-• Plaquetas.
-Esto genera:
-Pancitopenia.
-
-¿Por qué son importantes los reticulocitos?
-Los reticulocitos reflejan:
-La capacidad productiva de la médula ósea.
-En la aplasia:
-La médula no produce.
-Por ello los reticulocitos están muy disminuidos.
-
-¿Por qué no es una leucemia aguda?
-La leucemia suele acompañarse de:
-• Blastos circulantes.
-• Adenopatías.
-• Hepatoesplenomegalia.
-Además la médula generalmente está:
-Hipercelular.
-En la aplasia ocurre lo contrario:
-Médula hipocelular.
-
-¿Qué dato cambia completamente la respuesta?
-Este:
-Ausencia de hepatoesplenomegalia.
-Es una de las pistas más clásicas para aplasia medular.
-
-¿Cómo se confirma el diagnóstico?
-Mediante:
-Biopsia de médula ósea.
-Hallazgo característico:
-Médula marcadamente hipocelular reemplazada por grasa.
-
-¿Cuáles son las causas clásicas?
-• Idiopática.
-• Fármacos (cloranfenicol, carbamazepina).
-• Radiación.
-• Hepatitis viral.
-• Tóxicos como benceno.
-
+El paciente presenta:
+• Falla de 3 líneas celulares (Pancitopenia): Anemia (Hb 7.8) con fatiga, Leucopenia (neutrófilos 400) con infecciones y Trombocitopenia (plaquetas 18,000) con sangrado.
+• Reticulocitos bajísimos (0.2%): Indica que la médula ósea no está respondiendo para compensar la anemia (arregenerativa).
+• Examen físico: Ausencia de ganglios crecidos (adenopatías) y ausencia de bazo/hígado palpables.
+Estos hallazgos son indicativos de:
+Una médula ósea que ha dejado de producir células (aplasia), generalmente por un ataque autoinmune contra las células madre hematopoyéticas, sin infiltración maligna extramedular.
+¿Por qué la opción B es la respuesta correcta?
+La presentación clínica típica de la aplasia medular adquirida es una pancitopenia severa con un examen físico "sorprendentemente normal" a excepción de la palidez y el sangrado. No hay células neoplásicas infiltrando los órganos (por eso no hay hepatoesplenomegalia ni adenopatías). El diagnóstico definitivo requiere una biopsia de médula ósea que muestre una hipocelularidad profunda reemplazada por grasa.
+¿Por qué NO es Leucemia Mieloide Aguda (Opción A)?
+Aunque las leucemias agudas causan pancitopenia por reemplazo medular, es muy frecuente encontrar proliferación celular anormal que infiltra tejidos, causando hepatoesplenomegalia, adenopatías o dolor óseo severo, además de la presencia de blastos en sangre periférica.
+¿Por qué NO es Púrpura Trombocitopénica Inmune - PTI (Opción C)?
+La PTI clásica se presenta como una trombocitopenia AISLADA en un paciente por lo demás sano, con la serie roja (Hb) y blanca (leucocitos) completamente normales. Aquí el paciente tiene pancitopenia.
+¿Por qué NO es Hiperesplenismo (Opción D)?
+El hiperesplenismo causa destrucción periférica de las células sanguíneas atrapándolas en un bazo gigante (esplenomegalia). En nuestro paciente, el bazo ni siquiera se palpa.
 ¿Cuál es la trampa del examen?
-Muchos estudiantes responden:
-Leucemia.
-Porque observan pancitopenia.
+Muchos estudiantes asocian automáticamente "sangrado, infecciones y anemia" con Leucemia en un adulto joven.
 Sin embargo:
-La ausencia de organomegalias y la reticulocitopenia apuntan hacia aplasia medular.
-
-Entonces, ¿qué debe recordarse?
-La secuencia es:
-1. Falla de células madre hematopoyéticas.
-2. Disminución de producción medular.
-3. Pancitopenia.
-4. Reticulocitopenia.
-5. Médula hipocelular.
-
+Debes leer siempre los signos negativos pertinentes. La "ausencia de organomegalias" es el dato clásico que ponen los examinadores para orientarte hacia aplasia medular en lugar de leucemia.
 Perlas de examen
-✅ Pancitopenia + reticulocitos bajos = falla medular.
-✅ La aplasia medular suele cursar sin adenopatías ni esplenomegalia.
-✅ La biopsia muestra médula hipocelular.
-✅ Infecciones recurrentes se explican por neutropenia.
-✅ Gingivorragia y petequias se explican por trombocitopenia.
-✅ Fatiga y palidez se explican por anemia.
-✅ En pacientes jóvenes, el trasplante alogénico es una opción curativa.
-
+✅ Tríada clínica de Aplasia Medular: Síndrome anémico + Infecciones (neutropenia) + Sangrado (trombocitopenia).
+✅ Hallazgo cardinal en examen físico de Aplasia: Ausencia de hepatoesplenomegalia y adenopatías.
+✅ Índice reticulocitario: Profundamente disminuido (anemia arregenerativa).
+✅ Biopsia de médula ósea: Hipocelular (<25% de celularidad), reemplazada por tejido adiposo.
 Referencias
 • Harrison's Principles of Internal Medicine.
 • Williams Hematology.
-• Hoffbrand's Essential Haematology.
-• British Society for Haematology Guidelines on Aplastic Anemia.
-• UpToDate: Aplastic Anemia in Adults.`,
+• UpToDate: Aplastic anemia: Pathogenesis, clinical manifestations, and diagnosis.`,
   },
   {
     id: "dr-q-263",
