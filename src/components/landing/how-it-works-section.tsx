@@ -1,6 +1,6 @@
 "use client";
 
-import { Brain, Target, ClipboardCheck, Clock, FileText, BarChart, ChevronRight, Trophy, Users, ShieldCheck, HeartPulse, Stethoscope, FileClock, Sparkles, Home, User, MessageSquare } from "lucide-react";
+import { Brain, Target, ClipboardCheck, Clock, FileText, BarChart, ChevronRight, Trophy, Users, ShieldCheck, HeartPulse, Stethoscope, FileClock, Sparkles, Home, User, MessageSquare, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 function DashboardMockup() {
