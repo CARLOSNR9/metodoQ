@@ -5,9 +5,7 @@ export {
   type SolutionSectionProps,
 } from "./solution-section";
 export {
-  HowItWorksSection,
-  type HowItWorksSectionProps,
-  type HowItWorksStep,
+  HowItWorksSection
 } from "./how-it-works-section";
 export {
   DifferentiatorSection,

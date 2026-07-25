@@ -397,23 +397,12 @@ export function HeroSection() {
       <div className="w-full border-t border-slate-200/60 bg-white py-10">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <p className="text-sm font-bold text-slate-800 mb-8">Confían en nosotros</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Fallback text logos if SVG assets don't exist */}
-            <div className="flex items-center gap-2 font-bold text-slate-800 text-lg">
-              <BookOpen className="w-6 h-6" /> Univ. de Antioquia
-            </div>
-            <div className="flex items-center gap-2 font-bold text-slate-800 text-lg">
-              <ShieldCheck className="w-6 h-6" /> Javeriana
-            </div>
-            <div className="flex items-center gap-2 font-bold text-slate-800 text-lg">
-              <Activity className="w-6 h-6" /> Univ. del Valle
-            </div>
-            <div className="flex items-center gap-2 font-bold text-slate-800 text-lg">
-              <HelpCircle className="w-6 h-6" /> Hosp. San Ignacio
-            </div>
-            <div className="flex items-center gap-2 font-bold text-slate-800 text-lg">
-              <Star className="w-6 h-6" /> Univ. de La Sabana
-            </div>
+          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            <img src="https://logo.clearbit.com/udea.edu.co" alt="Universidad de Antioquia" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+            <img src="https://logo.clearbit.com/javeriana.edu.co" alt="Pontificia Universidad Javeriana" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+            <img src="https://logo.clearbit.com/univalle.edu.co" alt="Universidad del Valle" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+            <img src="https://logo.clearbit.com/husi.org.co" alt="Hospital Universitario San Ignacio" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+            <img src="https://logo.clearbit.com/unisabana.edu.co" alt="Universidad de La Sabana" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
           </div>
         </div>
       </div>
