@@ -259,17 +259,21 @@ export function Act2PredictiveDashboard({
             </div>
             {topicLosses.length > 0 ? (
               <ul className="space-y-3">
-                {topicLosses.map((t) => (
-                  <motion.li
-                    key={t.name}
-                    className="flex items-center justify-between text-xs"
-                    initial={{ opacity: 0, x: -8 }}
-                    animate={{ opacity: 1, x: 0 }}
-                  >
-                    <span className="text-mq-muted">{t.name}</span>
-                    <span className="font-bold text-red-400">-{t.loss} pts</span>
-                  </motion.li>
-                ))}
+                {topicLosses.map((t) => {
+                  const subjectStat = subjectStatuses.find((s) => s.label === t.name);
+                  const errorRate = subjectStat ? 100 - subjectStat.score : 0;
+                  return (
+                    <motion.li
+                      key={t.name}
+                      className="flex items-center justify-between text-xs"
+                      initial={{ opacity: 0, x: -8 }}
+                      animate={{ opacity: 1, x: 0 }}
+                    >
+                      <span className="text-mq-muted">{t.name}</span>
+                      <span className="font-bold text-red-400">{errorRate}% errores</span>
+                    </motion.li>
+                  );
+                })}
               </ul>
             ) : (
               <p className="text-xs text-mq-muted">

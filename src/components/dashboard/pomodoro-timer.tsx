@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Coffee, Pause, Play, Square, Timer } from "lucide-react";
 import { usePomodoro } from "@/contexts/pomodoro-context";
 import {
@@ -9,6 +9,8 @@ import {
   POMODORO_STUDY_MINUTES,
   POMODORO_TOTAL_MINUTES,
 } from "@/lib/study/pomodoro-config";
+
+import { Settings } from "lucide-react"; // Import Settings optionally for the config toggle
 
 function formatClock(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60);
@@ -27,7 +29,11 @@ export function PomodoroTimer() {
     dismissComplete,
     totalCycles,
     isRunning,
+    config,
+    updateConfig,
   } = usePomodoro();
+
+  const [showConfig, setShowConfig] = useState(false);
 
   const phaseLabel = useMemo(() => {
     if (phase === "study") return "Estudio";
@@ -39,13 +45,15 @@ export function PomodoroTimer() {
 
   const progressPercent = useMemo(() => {
     if (phase === "study") {
-      return ((POMODORO_STUDY_MINUTES * 60 - secondsLeft) / (POMODORO_STUDY_MINUTES * 60)) * 100;
+      return ((config.studyMinutes * 60 - secondsLeft) / (config.studyMinutes * 60)) * 100;
     }
     if (phase === "break") {
-      return ((POMODORO_BREAK_MINUTES * 60 - secondsLeft) / (POMODORO_BREAK_MINUTES * 60)) * 100;
+      return ((config.breakMinutes * 60 - secondsLeft) / (config.breakMinutes * 60)) * 100;
     }
     return 0;
-  }, [phase, secondsLeft]);
+  }, [phase, secondsLeft, config]);
+
+  const totalMinutes = config.cycles * (config.studyMinutes + config.breakMinutes);
 
   return (
     <section className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
@@ -55,28 +63,80 @@ export function PomodoroTimer() {
             <Timer className="h-3.5 w-3.5" />
             Técnica Pomodoro
           </p>
-          <h2 className="mt-2 text-lg font-black text-white sm:text-xl">
-            {phase === "idle"
-              ? "3 horas de foco amigable"
-              : `${phaseLabel} · bloque ${Math.min(cycle, totalCycles)} de ${totalCycles}`}
-          </h2>
+          <div className="flex items-center gap-2">
+            <h2 className="mt-2 text-lg font-black text-white sm:text-xl">
+              {phase === "idle"
+                ? "Foco amigable personalizable"
+                : `${phaseLabel} · bloque ${Math.min(cycle, totalCycles)} de ${totalCycles}`}
+            </h2>
+            {phase === "idle" && (
+              <button
+                onClick={() => setShowConfig(!showConfig)}
+                className="mt-2 p-1 text-mq-muted hover:text-white transition-colors"
+                title="Configurar Pomodoro"
+              >
+                <Settings size={18} />
+              </button>
+            )}
+          </div>
           <p className="mt-1 max-w-xl text-sm text-mq-muted">
             {phase === "idle" ? (
               <>
-                Al iniciar sesión arranca solo. Son {POMODORO_CYCLES} ciclos de{" "}
-                {POMODORO_STUDY_MINUTES} min estudio + {POMODORO_BREAK_MINUTES} min descanso (
-                {POMODORO_TOTAL_MINUTES} min). Puedes detenerlo cuando quieras.
+                Al iniciar sesión arranca solo. Son {config.cycles} ciclos de{" "}
+                {config.studyMinutes} min estudio + {config.breakMinutes} min descanso (
+                {totalMinutes} min). Puedes detenerlo cuando quieras.
               </>
             ) : phase === "break" ? (
-              <>Descansa estos {POMODORO_BREAK_MINUTES} minutos — lo mereces.</>
+              <>Descansa estos {config.breakMinutes} minutos — lo mereces.</>
             ) : phase === "complete" ? (
               <>¡Sesión terminada! Puedes empezar otra cuando quieras.</>
             ) : (
-              <>Mantén el ritmo; al terminar los {POMODORO_STUDY_MINUTES} min te cuidamos.</>
+              <>Mantén el ritmo; al terminar los {config.studyMinutes} min te cuidamos.</>
             )}
           </p>
         </div>
       </div>
+
+      {phase === "idle" && showConfig && (
+        <div className="mt-4 flex flex-wrap gap-4 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-sm">
+          <div className="flex flex-col gap-1">
+            <label className="text-xs text-mq-muted">Minutos Estudio</label>
+            <input
+              type="number"
+              min="1"
+              value={config.studyMinutes}
+              onChange={(e) =>
+                updateConfig({ ...config, studyMinutes: parseInt(e.target.value) || 1 })
+              }
+              className="w-20 rounded bg-white/5 px-2 py-1 text-white border border-white/10 outline-none focus:border-mq-accent"
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-xs text-mq-muted">Minutos Descanso</label>
+            <input
+              type="number"
+              min="1"
+              value={config.breakMinutes}
+              onChange={(e) =>
+                updateConfig({ ...config, breakMinutes: parseInt(e.target.value) || 1 })
+              }
+              className="w-20 rounded bg-white/5 px-2 py-1 text-white border border-white/10 outline-none focus:border-mq-accent"
+            />
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="text-xs text-mq-muted">Ciclos</label>
+            <input
+              type="number"
+              min="1"
+              value={config.cycles}
+              onChange={(e) =>
+                updateConfig({ ...config, cycles: parseInt(e.target.value) || 1 })
+              }
+              className="w-20 rounded bg-white/5 px-2 py-1 text-white border border-white/10 outline-none focus:border-mq-accent"
+            />
+          </div>
+        </div>
+      )}
 
       <div className="mt-6 flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-between">
         <div className="relative flex h-36 w-36 items-center justify-center">
@@ -107,7 +167,7 @@ export function PomodoroTimer() {
           </svg>
           <div className="text-center">
             <p className="text-3xl font-black tabular-nums text-white">
-              {phase === "idle" ? formatClock(POMODORO_STUDY_MINUTES * 60) : formatClock(secondsLeft)}
+              {phase === "idle" ? formatClock(config.studyMinutes * 60) : formatClock(secondsLeft)}
             </p>
             <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-mq-muted">
               {phase === "idle" ? "por bloque" : phaseLabel}

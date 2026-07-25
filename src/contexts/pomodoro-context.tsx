@@ -20,7 +20,10 @@ import {
   loadPomodoroPersisted,
   peekPomodoroAutostart,
   savePomodoroPersisted,
+  type PomodoroConfig,
 } from "@/lib/study/pomodoro-session";
+
+export type { PomodoroConfig } from "@/lib/study/pomodoro-session";
 
 export type PomodoroPhase = "idle" | "study" | "break" | "resume-prompt" | "complete";
 
@@ -31,21 +34,32 @@ type TimerState = {
   secondsLeft: number;
   cycle: number;
   overlay: PomodoroOverlay;
+  config: PomodoroConfig;
+};
+
+const DEFAULT_CONFIG: PomodoroConfig = {
+  studyMinutes: POMODORO_STUDY_MINUTES,
+  breakMinutes: POMODORO_BREAK_MINUTES,
+  cycles: POMODORO_CYCLES,
 };
 
 const DEFAULT_STATE: TimerState = {
   phase: "idle",
-  secondsLeft: POMODORO_STUDY_SECONDS,
+  secondsLeft: DEFAULT_CONFIG.studyMinutes * 60,
   cycle: 1,
   overlay: "none",
+  config: DEFAULT_CONFIG,
 };
 
-const ACTIVE_STUDY_STATE: TimerState = {
-  phase: "study",
-  secondsLeft: POMODORO_STUDY_SECONDS,
-  cycle: 1,
-  overlay: "none",
-};
+function createActiveStudyState(config: PomodoroConfig): TimerState {
+  return {
+    phase: "study",
+    secondsLeft: config.studyMinutes * 60,
+    cycle: 1,
+    overlay: "none",
+    config,
+  };
+}
 
 function isValidPersisted(state: TimerState): boolean {
   return (
@@ -60,26 +74,27 @@ function isValidPersisted(state: TimerState): boolean {
 function getInitialTimerState(userId?: string): TimerState {
   const saved = loadPomodoroPersisted(userId);
   if (saved && isValidPersisted(saved as TimerState)) {
-    return saved as TimerState;
+    return { ...DEFAULT_STATE, ...saved } as TimerState;
   }
   if (saved?.phase === "complete" || saved?.phase === "resume-prompt") {
-    return saved as TimerState;
+    return { ...DEFAULT_STATE, ...saved } as TimerState;
   }
   return DEFAULT_STATE;
 }
 
 function advanceAfterPhaseEnd(prev: TimerState, userId?: string): TimerState {
+  const config = prev.config;
   if (prev.phase === "study") {
     return {
       ...prev,
       phase: "break",
-      secondsLeft: POMODORO_BREAK_SECONDS,
+      secondsLeft: config.breakMinutes * 60,
       overlay: "break",
     };
   }
 
   if (prev.phase === "break") {
-    if (prev.cycle >= POMODORO_CYCLES) {
+    if (prev.cycle >= config.cycles) {
       clearPomodoroPersisted(userId);
       return {
         ...prev,
@@ -91,7 +106,7 @@ function advanceAfterPhaseEnd(prev: TimerState, userId?: string): TimerState {
     return {
       ...prev,
       phase: "resume-prompt",
-      secondsLeft: POMODORO_STUDY_SECONDS,
+      secondsLeft: config.studyMinutes * 60,
       overlay: "resume",
     };
   }
@@ -104,10 +119,12 @@ type PomodoroContextValue = {
   secondsLeft: number;
   cycle: number;
   overlay: PomodoroOverlay;
+  config: PomodoroConfig;
   startSession: () => void;
   continueToNextStudy: () => void;
   stopSession: () => void;
   dismissComplete: () => void;
+  updateConfig: (newConfig: PomodoroConfig) => void;
   totalCycles: number;
   isRunning: boolean;
   isActive: boolean;
@@ -140,8 +157,9 @@ export function PomodoroProvider({
       if (!peekPomodoroAutostart()) return current;
 
       consumePomodoroAutostart();
-      savePomodoroPersisted(ACTIVE_STUDY_STATE, userId);
-      return ACTIVE_STUDY_STATE;
+      const activeState = createActiveStudyState(current.config || DEFAULT_CONFIG);
+      savePomodoroPersisted(activeState, userId);
+      return activeState;
     });
   }, [userId, isProUser]);
 
@@ -168,14 +186,18 @@ export function PomodoroProvider({
 
   const startSession = useCallback(() => {
     if (!userId) return;
-    savePomodoroPersisted(ACTIVE_STUDY_STATE, userId);
-    setTimer(ACTIVE_STUDY_STATE);
+    setTimer((t) => {
+      const activeState = createActiveStudyState(t.config);
+      savePomodoroPersisted(activeState, userId);
+      return activeState;
+    });
   }, [userId]);
 
   const continueToNextStudy = useCallback(() => {
     setTimer((t) => ({
+      ...t,
       phase: "study",
-      secondsLeft: POMODORO_STUDY_SECONDS,
+      secondsLeft: t.config.studyMinutes * 60,
       cycle: t.cycle + 1,
       overlay: "none",
     }));
@@ -188,8 +210,22 @@ export function PomodoroProvider({
 
   const dismissComplete = useCallback(() => {
     clearPomodoroPersisted(userId);
-    setTimer(DEFAULT_STATE);
+    setTimer((t) => ({ ...DEFAULT_STATE, config: t.config }));
   }, [userId]);
+
+  const updateConfig = useCallback((newConfig: PomodoroConfig) => {
+    setTimer((t) => {
+      // If we are currently idle, we can update the secondsLeft right away to reflect the new config
+      if (t.phase === "idle") {
+        return {
+          ...t,
+          config: newConfig,
+          secondsLeft: newConfig.studyMinutes * 60,
+        };
+      }
+      return { ...t, config: newConfig };
+    });
+  }, []);
 
   const value = useMemo<PomodoroContextValue>(
     () => ({
@@ -197,15 +233,17 @@ export function PomodoroProvider({
       secondsLeft: timer.secondsLeft,
       cycle: timer.cycle,
       overlay: timer.overlay,
+      config: timer.config,
       startSession,
       continueToNextStudy,
       stopSession,
       dismissComplete,
-      totalCycles: POMODORO_CYCLES,
+      updateConfig,
+      totalCycles: timer.config.cycles,
       isRunning: timer.phase === "study" || timer.phase === "break",
       isActive: timer.phase !== "idle",
     }),
-    [timer, startSession, continueToNextStudy, stopSession, dismissComplete],
+    [timer, startSession, continueToNextStudy, stopSession, dismissComplete, updateConfig],
   );
 
   return (

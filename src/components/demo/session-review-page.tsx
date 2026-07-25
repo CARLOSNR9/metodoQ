@@ -82,7 +82,7 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
     ? getConvocatoriaEdition(result.convocatoriaEdition)
     : null;
   const backHref = isConvocatoria ? "/dashboard/convocatorias" : "/dashboard/historial";
-  const backLabel = isConvocatoria ? "Volver a convocatorias" : "Volver al historial";
+  const backLabel = isConvocatoria ? "Volver a simulacros" : "Volver al historial";
 
   if (isCheckingAuth || !user) {
     return (

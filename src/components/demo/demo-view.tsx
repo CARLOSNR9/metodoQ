@@ -1145,7 +1145,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                         href="/dashboard/convocatorias"
                         className="mt-2 block font-bold text-mq-accent hover:underline"
                       >
-                        Volver a convocatorias
+                        Volver a simulacros
                       </Link>
                     ) : null}
                     {!usageBlockMeta.dayClosed && upgradeCta ? (

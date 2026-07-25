@@ -14,21 +14,15 @@ import { PlanCtaButton } from "@/components/pricing/plan-cta-button";
 const ctaClass = (highlighted?: boolean) =>
   `flex h-12 w-full items-center justify-center rounded-xl text-sm font-bold transition-all active:scale-[0.98] lg:h-14 lg:text-base ${
     highlighted
-      ? "bg-mq-accent text-mq-accent-foreground hover:brightness-110 hover:shadow-[0_0_20px_rgba(0,209,255,0.4)]"
-      : "bg-white/10 text-white hover:bg-white/15 border border-white/5"
+      ? "bg-mq-accent text-white hover:brightness-110 hover:shadow-lg"
+      : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200 shadow-sm"
   }`;
 
 export function PricingSection({ id = "precios" }: { id?: string }) {
   const [cycle, setCycle] = useState<BillingCycle>(3);
 
   return (
-    <section id={id} className="relative overflow-hidden bg-[#0a1f44] py-24 lg:py-32">
-      {/* Background Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-mq-accent/10 blur-[120px]" />
-        <div className="absolute bottom-[10%] right-[-10%] w-[30%] h-[30%] rounded-full bg-mq-accent/5 blur-[100px]" />
-      </div>
-
+    <section id={id} className="relative overflow-hidden bg-slate-50 py-24 lg:py-32">
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -45,7 +39,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="mt-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
           >
             Elige el plan que te llevará a la <span className="text-mq-accent">Residencia</span>
           </motion.h2>
@@ -54,7 +48,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-6 text-lg leading-8 text-mq-muted"
+            className="mt-6 text-lg leading-8 text-slate-600"
           >
             Empieza gratis. Mejora primero. Paga cuando veas resultados reales en tu simulacro.
           </motion.p>
@@ -62,19 +56,19 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
 
         {/* Cycle Toggle */}
         <div className="mt-12 flex justify-center">
-          <div className="relative flex rounded-full bg-white/5 p-1 backdrop-blur-sm border border-white/10">
+          <div className="relative flex rounded-full bg-white p-1 shadow-sm border border-slate-200">
             {BILLING_CYCLES.map((c) => (
               <button
                 key={c}
                 onClick={() => setCycle(c)}
-                className={`relative px-6 py-2 text-sm font-medium transition-colors duration-200 ${
-                  cycle === c ? "text-mq-accent-foreground" : "text-white/70 hover:text-white"
+                className={`relative px-6 py-2 text-sm font-bold transition-colors duration-200 ${
+                  cycle === c ? "text-white" : "text-slate-600 hover:text-slate-900"
                 }`}
               >
                 {cycle === c && (
                   <motion.div
                     layoutId="active-cycle"
-                    className="absolute inset-0 rounded-full bg-mq-accent"
+                    className="absolute inset-0 rounded-full bg-mq-accent shadow-sm"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -97,42 +91,42 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                 transition={{ delay: index * 0.1 }}
                 className={`relative flex flex-col rounded-3xl p-6 transition-all duration-300 lg:p-8 ${
                   plan.highlighted
-                    ? "bg-gradient-to-b from-white/10 to-white/5 ring-2 ring-mq-accent shadow-[0_0_40px_-10px_rgba(0,209,255,0.3)] lg:scale-105 z-10"
-                    : "bg-white/[0.03] ring-1 ring-white/10 hover:bg-white/[0.05]"
+                    ? "bg-white ring-2 ring-mq-accent shadow-xl lg:scale-105 z-10"
+                    : "bg-white ring-1 ring-slate-200 hover:shadow-md"
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-mq-accent px-4 py-1 text-xs font-bold uppercase tracking-wider text-mq-accent-foreground">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-mq-accent px-4 py-1 text-xs font-bold uppercase tracking-wider text-white">
                     Más Elegido
                   </div>
                 )}
 
                 <div className="mb-8">
-                  <h3 className="text-xl font-bold text-white">{plan.name}</h3>
-                  <p className="mt-2 text-sm text-mq-muted leading-relaxed">
+                  <h3 className="text-xl font-bold text-slate-900">{plan.name}</h3>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                     {plan.description}
                   </p>
                 </div>
 
                 <div className="mb-8 flex flex-col gap-1">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-white">
+                    <span className="text-4xl font-extrabold text-slate-900">
                       {plan.id === "FREE" ? "$0" : formatCOP(currentPrice.monthly)}
                     </span>
-                    {plan.id !== "FREE" && <span className="text-mq-muted text-sm">/mes</span>}
+                    {plan.id !== "FREE" && <span className="text-slate-500 text-sm font-medium">/mes</span>}
                   </div>
                   {plan.id === "FREE" ? (
-                    <p className="text-sm text-mq-accent font-medium">
+                    <p className="text-sm text-mq-accent font-bold">
                       Pruébalo por 7 días
                     </p>
                   ) : (
                     cycle > 1 && (
                       <div className="flex items-center gap-2">
-                        <p className="text-sm text-mq-accent font-medium">
+                        <p className="text-sm text-mq-accent font-bold">
                           Pago total: {formatCOP(currentPrice.total)}
                         </p>
                         {currentPrice.savings && (
-                          <span className="rounded-md bg-green-500/20 px-2 py-0.5 text-[10px] font-bold text-green-400 uppercase">
+                          <span className="rounded-md bg-green-100 px-2 py-0.5 text-[10px] font-bold text-green-700 uppercase">
                             Ahorra {currentPrice.savings}
                           </span>
                         )}
@@ -147,13 +141,13 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                       <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-mq-accent/10">
                         <Check className="h-3 w-3 text-mq-accent" />
                       </div>
-                      <span className="text-sm leading-snug text-white/80">{feature}</span>
+                      <span className="text-sm leading-snug text-slate-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <PlanCtaButton plan={plan} cycle={cycle} className={ctaClass(plan.highlighted)} />
-                <p className="mt-4 text-center text-[10px] text-mq-muted uppercase tracking-widest font-semibold">
+                <p className="mt-4 text-center text-[10px] text-slate-500 uppercase tracking-widest font-bold">
                   {plan.id === "FREE" ? "Sin tarjeta de crédito" : "Pago seguro con Stripe"}
                 </p>
               </motion.div>
@@ -162,26 +156,26 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
         </div>
 
         {/* Marketing Extra Sections */}
-        <div className="mt-20 flex flex-col items-center gap-12 lg:flex-row lg:justify-between border-t border-white/10 pt-16">
+        <div className="mt-20 flex flex-col items-center gap-12 lg:flex-row lg:justify-between border-t border-slate-200 pt-16">
           {/* Coupon Space */}
           <div className="flex items-center gap-4 group cursor-pointer">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 transition-colors group-hover:bg-mq-accent/10">
-              <Ticket className="h-6 w-6 text-mq-muted group-hover:text-mq-accent" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 transition-colors group-hover:bg-mq-accent/10">
+              <Ticket className="h-6 w-6 text-slate-400 group-hover:text-mq-accent" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">¿Tienes un cupón?</p>
-              <p className="text-xs text-mq-muted">Agrégalo en el siguiente paso de tu inscripción.</p>
+              <p className="text-sm font-bold text-slate-900">¿Tienes un cupón?</p>
+              <p className="text-xs text-slate-500">Agrégalo en el siguiente paso de tu inscripción.</p>
             </div>
           </div>
 
           {/* Referral Space */}
           <div className="flex items-center gap-4 group cursor-pointer">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 transition-colors group-hover:bg-mq-accent/10">
-              <Users className="h-6 w-6 text-mq-muted group-hover:text-mq-accent" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 transition-colors group-hover:bg-mq-accent/10">
+              <Users className="h-6 w-6 text-slate-400 group-hover:text-mq-accent" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">Recomienda y Gana</p>
-              <p className="text-xs text-mq-muted">Gana un 10% por cada compañero que se una al método.</p>
+              <p className="text-sm font-bold text-slate-900">Recomienda y Gana</p>
+              <p className="text-xs text-slate-500">Gana un 10% por cada compañero que se una al método.</p>
             </div>
           </div>
 
@@ -191,8 +185,8 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
               <Info className="h-6 w-6 text-mq-accent" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">Prueba de Nivel Gratuita</p>
-              <p className="text-xs text-mq-muted">Descubre tus puntos débiles antes de invertir un peso.</p>
+              <p className="text-sm font-bold text-slate-900">Prueba de Nivel Gratuita</p>
+              <p className="text-xs text-slate-500">Descubre tus puntos débiles antes de invertir un peso.</p>
             </div>
           </div>
         </div>

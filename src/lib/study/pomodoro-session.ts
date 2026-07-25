@@ -3,11 +3,18 @@ import type { PomodoroPhase } from "@/contexts/pomodoro-context";
 export const POMODORO_STORAGE_KEY = "mq-pomodoro-v1";
 export const POMODORO_AUTOSTART_KEY = "mq-pomodoro-autostart";
 
+export type PomodoroConfig = {
+  studyMinutes: number;
+  breakMinutes: number;
+  cycles: number;
+};
+
 export type PersistedPomodoroState = {
   phase: PomodoroPhase;
   secondsLeft: number;
   cycle: number;
   overlay: "none" | "break" | "resume" | "complete";
+  config?: PomodoroConfig;
 };
 
 export function getPomodoroStorageKey(userId?: string): string {

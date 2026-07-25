@@ -40,7 +40,7 @@ export default async function ProfessorConvocatoriaEditionPage({ params }: PageP
         className="mb-6 inline-flex items-center gap-2 text-sm font-medium text-mq-muted transition hover:text-white"
       >
         <ArrowLeft className="h-4 w-4" />
-        Volver a convocatorias
+        Volver a simulacros
       </Link>
 
       <header className="mb-8 border-b border-mq-border-strong pb-6">

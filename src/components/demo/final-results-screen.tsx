@@ -505,7 +505,7 @@ export function FinalResultsScreen({
                 href="/dashboard/convocatorias"
                 className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
               >
-                Volver a convocatorias
+                Volver a simulacros
               </Link>
               <Link
                 href="/dashboard/historial"

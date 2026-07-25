@@ -41,19 +41,23 @@ const SECTION_CONFIG = {
 } as const;
 
 function SubjectBar({ subject, barClass }: { subject: SubjectStatus; barClass: string }) {
+  const buenas = subject.score;
+  const malas = 100 - buenas;
+  
   return (
     <div className="space-y-1.5">
       <div className="flex items-center justify-between gap-3 text-xs">
         <span className="truncate font-semibold text-white">{subject.label}</span>
-        <span className="shrink-0 tabular-nums text-mq-muted">
-          {subject.score}% · {subject.questions} preg.
+        <span className="shrink-0 text-mq-muted text-[10px]">
+          <span className="font-bold text-emerald-400">{buenas}% Buenas</span> {" · "}
+          <span className="font-bold text-red-400/80">{malas}% Malas</span>
         </span>
       </div>
-      <div className="h-2 overflow-hidden rounded-full bg-white/5">
+      <div className="h-2 overflow-hidden rounded-full bg-red-500/20">
         <motion.div
           className={`h-full rounded-full ${barClass}`}
           initial={{ width: 0 }}
-          animate={{ width: `${subject.score}%` }}
+          animate={{ width: `${buenas}%` }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         />
       </div>
