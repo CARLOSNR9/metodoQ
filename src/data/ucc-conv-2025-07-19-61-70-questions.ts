@@ -97,7 +97,44 @@ export const UCC_CONV_2025_07_19_61_70_QUESTIONS: TrainingQuestion[] = [
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-En reumatología de urgencias, los cristales tienen formas y signos. Gota (ácido úrico): forma de aguja, birrefringencia negativa, en el dedo gordo. Pseudogota (pirofosfato de calcio): forma de rombo, birrefringencia positiva, en la rodilla. Las opciones B y C están diseñadas para que mates el riñón o la médula ósea del paciente; con una TFG de 22, los AINEs le causarán diálisis irreversible al día siguiente, y la colchicina lo intoxicará neuromuscolarmente porque se acumula. La aguja directo en la rodilla con triamcinolona apaga el fuego localmente sin tocar el riñón.`
+Esta pregunta es una obra maestra de la reumatología en urgencias porque cruza una monoartritis por microcristales con una comorbilidad limitante: la Enfermedad Renal Crónica avanzada.
+
+La clave no es diagnosticar el cristal; es saber cómo tratar al paciente sin destruir sus riñones.
+La clave es:
+AINEs y Colchicina sistémica son nefro y mielotóxicos letales en ERC estadio 4. La infiltración intraarticular de esteroides es el tratamiento de oro focal y seguro.
+
+### ¿Qué está ocurriendo realmente?
+El paciente, un anciano, debuta con una monoartritis aguda en la rodilla. Las pistas radiológicas (condrocalcinosis) y del líquido sinovial (cristales romboidales con birrefringencia positiva débil) sellan el diagnóstico de Pseudogota (Enfermedad por depósito de Pirofosfato de Calcio Dihidratado - CPPD).
+La celularidad de 35.000 leucocitos confirma inflamación intensa pero aleja la artritis séptica (que suele tener >50.000-100.000).
+
+El gran dilema es que este paciente tiene ERC Estadio 4 (TFG de 22 mL/min).
+Los AINEs inhiben las prostaglandinas renales vasodilatadoras, y en un riñón crónico, causarán isquemia glomerular aguda (Falla renal Aguda sobre Crónica) que puede requerir diálisis inmediata.
+La Colchicina se excreta por el riñón. En depuraciones <30 mL/min, usar dosis plenas provoca acumulación tóxica masiva: miopatía severa y aplasia medular (agranulocitosis) letal.
+
+Por tanto, las terapias sistémicas convencionales están contraindicadas. Al ser 1 sola articulación (rodilla), evacuar el líquido a tensión e inyectar un corticoide de depósito (triamcinolona) intraarticular apaga el fuego localmente sin exposición sistémica significativa.
+
+### ¿Por qué la opción A es la respuesta correcta?
+La inyección intraarticular de esteroides (tras descartar fehacientemente infección) es la intervención más segura y de elección para monoartritis aguda por cristales en pacientes con insuficiencia renal severa.
+
+### ¿Por qué fallan las otras opciones?
+• Opción B (AINEs a dosis altas): Provocarán necrosis papilar o fracaso renal agudo inmediato en una TFG de 22 mL/min por inhibición de prostaglandinas.
+• Opción C (Colchicina oral dosis carga): Causará toxicidad neuromuscular y hematológica potencialmente mortal al no poder ser excretada por el riñón insuficiente.
+• Opción D (Antibióticos IV y lavado quirúrgico): El cuadro es por cristales (35.000 cél). Someter al paciente a cirugía y antibióticos sistémicos de amplio espectro es un sobretratamiento peligroso e innecesario.
+
+### La trampa del examen
+Muchos estudiantes piensan:
+"Cristales agudos = siempre empezar AINEs o Colchicina de entrada".
+El examinador pone el valor de "TFG 22 mL/min" específicamente para invalidar esas dos opciones. Leer siempre las comorbilidades del paciente antes de recetar el tratamiento estándar.
+
+### Perlas de examen
+• Diferencia de cristales: Gota (Ácido Úrico) = Agujas, birrefringencia Negativa. Pseudogota (CPPD) = Romboides, birrefringencia Positiva débil.
+• Signo radiológico de CPPD: Condrocalcinosis (calcificación fina del cartílago, típico en rodillas o sínfisis púbica).
+• Tratamiento en ERC severa: Infiltración intraarticular de corticosteroides (si es mono u oligoarticular) o Corticosteroides sistémicos orales (si es poliarticular). Nunca AINEs.
+
+### Referencias
+• ACR Guidelines for the Management of Gout and CPPD.
+• EULAR recommendations for calcium pyrophosphate deposition.
+• Harrison's Principles of Internal Medicine.`
   },
   {
     id: "ucc-conv-2025-07-19-63",
@@ -373,7 +410,42 @@ En reumatología de urgencias, los cristales tienen formas y signos. Gota (ácid
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Punto para diferenciar las hepatopatías autoinmunes, Colega. Si el paciente tiene las transaminasas (AST/ALT) en 1.000 y anticuerpos Anti-Músculo Liso (ASMA) positivos, eso es Hepatitis Autoinmune y se trata con Esteroides + Azatioprina (Opción A). Pero si el paciente tiene las enzimas biliares (Fosfatasa Alcalina/GGT) en 1.000 y anticuerpos Antimitocondriales (AMA), eso es Colangitis Biliar Primaria y su único salvavidas es el Ácido Ursodesoxicólico. Este ácido es un ácido biliar hidrofílico y protector que desplaza a los ácidos biliares tóxicos (litocólico), desinflamando el conductillo hepático desde adentro.`
+Esta es una pregunta vital en gastroenterología porque evalúa la capacidad de distinguir entre las diferentes hepatopatías autoinmunes, cuyo tratamiento es radicalmente opuesto y confundirlo puede ser letal.
+
+La clave no es ver pruebas hepáticas alteradas y pensar automáticamente en esteroides.
+La clave es:
+Fosfatasa Alcalina elevada + AMA positivos = Colangitis Biliar Primaria (CBP) → Ácido Ursodesoxicólico.
+Transaminasas elevadas + ASMA positivos = Hepatitis Autoinmune → Esteroides.
+
+### ¿Qué está ocurriendo realmente?
+La paciente presenta la descripción de texto clásica de la Colangitis Biliar Primaria (CBP): una mujer de mediana edad con fatiga incapacitante y prurito generalizado severo (típicamente nocturno). Los laboratorios muestran un patrón colestásico disociado: Fosfatasa Alcalina y GGT elevadísimas, con bilirrubina normal en estadios tempranos.
+La colestasis crónica impide la excreción de colesterol, produciendo xantelasmas/xantomas. El hallazgo inmunológico patognomónico es la presencia de Anticuerpos Mitocondriales (AMA), positivos en más del 95% de los casos.
+
+El sistema inmune destruye los conductos biliares intrahepáticos pequeños. A diferencia de otras enfermedades autoinmunes, los corticosteroides no han demostrado alterar la historia natural de la CBP y empeoran dramáticamente la osteoporosis inducida por la colestasis. El pilar absoluto del tratamiento es el Ácido Ursodesoxicólico (UDCA), un ácido biliar hidrofílico que desplaza los ácidos biliares tóxicos y protege a los colangiocitos de la destrucción.
+
+### ¿Por qué la opción B es la respuesta correcta?
+El Ácido Ursodesoxicólico es el único fármaco de primera línea probado para retrasar la progresión histológica hacia cirrosis, mejorar la supervivencia libre de trasplante y reducir la bilirrubina a largo plazo en pacientes con CBP.
+
+### ¿Por qué fallan las otras opciones?
+• Opción A (Corticosteroides y Azatioprina): Es el tratamiento estándar para la Hepatitis Autoinmune (patrón hepatocelular, ASMA positivos), pero no retrasa la progresión de la CBP y causa osteoporosis severa.
+• Opción C (Plasmaféresis y Colestiramina): La colestiramina trata los síntomas (el prurito) al quelar sales biliares en el intestino, pero no es un fármaco modificador de la enfermedad histológica.
+• Opción D (Tenofovir/Entecavir): Son antivirales para Hepatitis B crónica. Las hepatitis virales causan elevación de transaminasas, no un patrón colestásico puro con AMA positivos.
+
+### La trampa del examen
+Muchos estudiantes piensan:
+"Enfermedad autoinmune (CBP) = Inmunosupresión con esteroides".
+En la Colangitis Biliar Primaria, el mecanismo fisiopatológico requiere cambiar el perfil de los ácidos biliares tóxicos (con UDCA) más que una inmunosupresión sistémica indiscriminada. Dar esteroides es una mala praxis en CBP temprana sin sobreposición.
+
+### Perlas de examen
+• Patrón CBP: Mujer mediana edad + Fatiga/Prurito + Fosfatasa Alcalina altísima + Anticuerpos AMA.
+• Ecografía en CBP: Completamente normal, porque la lesión es de los microconductos intrahepáticos.
+• Tratamiento modificador de la enfermedad: Ácido Ursodesoxicólico (UDCA).
+• Complicaciones de la CBP: Osteoporosis severa (malabsorción de Vitamina D), hipercolesterolemia (xantomas) y deficiencia de vitaminas liposolubles.
+
+### Referencias
+• AASLD Practice Guidelines: Primary Biliary Cholangitis.
+• EASL Clinical Practice Guidelines: Management of cholestatic liver diseases.
+• Sleisenger and Fordtran's Gastrointestinal and Liver Disease.`
   },
   {
     id: "ucc-conv-2025-07-19-69",

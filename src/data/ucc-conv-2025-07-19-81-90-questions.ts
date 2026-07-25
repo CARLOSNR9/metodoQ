@@ -511,7 +511,44 @@ Referencias
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Un clásico de los servicios de urgencias. Ves las pústulas, la inflamación de los tendones y piensas "¡Artritis séptica!". Le sacas líquido a la rodilla y oh sorpresa, el líquido está estéril. ¡No caigas en la trampa! El gonococo diseminado daña las articulaciones más por mecanismos inmunomediados circulantes y microabscesos que por purulencia franca masiva dentro del espacio articular. Como el gonococo odia el medio ambiente externo y no crece en los caldos de cultivo normales, tienes que ir a buscar su ADN directamente a su "cueva" (el cérvix) usando NAAT (PCR).`
+Esta es una pregunta clásica de urgencias e infectología porque evalúa una trampa frecuente: asumir que toda inflamación articular aguda con pústulas es una artritis séptica purulenta clásica y que el cultivo articular será el estándar de oro.
+
+La clave no es limitarse a la articulación.
+La clave es:
+Infección gonocócica diseminada ≠ Artritis séptica purulenta; el patógeno es fastidioso y su confirmación requiere NAAT en mucosas (cérvix/uretra), no cultivos articulares rutinarios.
+
+### ¿Qué está ocurriendo realmente?
+La paciente presenta la tríada clásica de la Infección Gonocócica Diseminada (IGD):
+• Tenosinovitis (inflamación de los tendones, típicamente en muñecas o tobillos).
+• Dermatitis (lesiones pustulosas acrales indoloras).
+• Poliartralgias migratorias.
+Ocurre en mujeres jóvenes, sexualmente activas, frecuentemente asociado a la menstruación o embarazo temprano. *Neisseria gonorrhoeae* se disemina hematógenamente, pero rara vez produce una artritis supurativa destructiva como el S. aureus. El daño articular es más un fenómeno inflamatorio/inmunológico reactivo a la bacteriemia.
+
+Como el gonococo es extremadamente fastidioso (requiere agar Thayer-Martin y CO2), los hemocultivos y cultivos de líquido sinovial suelen ser negativos. Por lo tanto, debes buscar su ADN (mediante Pruebas de Amplificación de Ácidos Nucleicos - NAAT) en su "reservorio" primario: el endocérvix, la uretra, la faringe o el recto.
+
+### ¿Por qué la opción C es la respuesta correcta?
+Porque la tríada es patognomónica de Infección Gonocócica Diseminada, y el diagnóstico definitivo y más sensible se logra amplificando el ADN del gonococo de las mucosas genitales (NAAT endocervical/vaginal), dado el bajo rendimiento de los cultivos articulares.
+
+### ¿Por qué fallan las otras opciones?
+• Opción A (Endocarditis por S. aureus): Causa lesiones embólicas (lesiones de Janeway, nódulos de Osler) pero la tenosinovitis franca no es su presentación típica, y el paciente tendría fiebre alta y soplo cardíaco.
+• Opción B (Fiebre reumática): Presenta poliartritis migratoria, pero sus lesiones cutáneas son eritema marginado o nódulos subcutáneos, no pústulas acrales. Es muy rara post-adolescencia.
+• Opción D (Artritis reactiva por Chlamydia): Causa uretritis, uveítis y artritis (síndrome de Reiter), pero la tenosinovitis simultánea con pústulas hemorrágicas es la "firma" del gonococo, no de la chlamydia.
+
+### La trampa del examen
+Muchos estudiantes piensan:
+"Articulación inflamada + líquido sinovial = siempre buscar la bacteria ahí mismo".
+El gonococo diseminado daña las articulaciones desde lejos o en cantidades mínimas; si esperas a que el cultivo de líquido sinovial sea positivo para tratarla, la paciente perderá la articulación.
+
+### Perlas de examen
+• Tríada de IGD: Tenosinovitis + Pústulas acrales + Poliartralgia migratoria.
+• Perfil típico: Mujer joven, sexualmente activa, con síntomas articulares y cutáneos tras su periodo menstrual.
+• Rendimiento diagnóstico: Líquido sinovial es < 50% positivo. NAAT en cérvix/uretra es > 90% positivo.
+• Tratamiento empírico de elección: Ceftriaxona intravenosa + Azitromicina (por co-infección frecuente con Chlamydia).
+
+### Referencias
+• CDC Sexually Transmitted Infections Treatment Guidelines (Disseminated Gonococcal Infection).
+• UpToDate: Disseminated gonococcal infection.
+• Harrison's Principles of Internal Medicine.`
   }
 ];
 

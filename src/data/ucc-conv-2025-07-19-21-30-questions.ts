@@ -510,7 +510,41 @@ Referencias
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Punto clave en control prenatal de reumatología. Hay fármacos que están vetados para las mujeres encinta. Si dice Metotrexato, Ciclofosfamida o Micofenolato: aléjalos de la embarazada si no quieres provocar deformidades severas o aborto. La Azatioprina es el salvavidas inmunosupresor de la mujer encinta porque el hígado fetal inmaduro carece de la enzima inosinato pirofosforilasa, protegiéndolo de los efectos tóxicos celulares del fármaco mientras cuida el riñón de la madre. Quitarle la Hidroxicloroquina (Opción C) por "miedo", como hacían los médicos de antaño, garantiza casi con certeza un brote renal o cutáneo letal a mitad del embarazo.`
+Punto fundamental en el control prenatal de reumatología. El manejo farmacológico de la gestante lúpica exige conocer exactamente qué medicamentos salvan al feto y cuáles lo deforman.
+
+La clave no es suspender todas las medicinas por miedo a dañar al bebé.
+La clave es:
+La Hidroxicloroquina salva embarazos lúpicos (no se suspende). El Micofenolato es un teratógeno absoluto y debe sustituirse de inmediato por Azatioprina.
+
+### ¿Qué está ocurriendo realmente?
+Una paciente joven con Lupus Eritematoso Sistémico (LES) se embaraza estando bajo tratamiento de mantenimiento con Hidroxicloroquina y Micofenolato de Mofetilo (MMF).
+El Lupus en el embarazo es una enfermedad de alto riesgo: si la madre hace un brote lúpico (especialmente renal), el riesgo de preeclampsia severa, restricción del crecimiento y muerte fetal o materna se dispara a niveles catastróficos. Por ende, **abandonar el tratamiento inmunosupresor (la opción C) es una sentencia de muerte o complicaciones graves para ambos.**
+La **Hidroxicloroquina** es el pilar de la supervivencia: estabiliza la enfermedad, previene recaídas, disminuye bloqueos cardíacos congénitos y es completamente segura para el feto. ¡JAMÁS se suspende!
+Sin embargo, el **Micofenolato de Mofetilo**, la **Ciclofosfamida** y el **Metotrexato** son teratógenos humanos absolutos (Categoría X/D). Causan abortos espontáneos tempranos o malformaciones craneofaciales y viscerales graves. El Micofenolato DEBE suspenderse el mismo día que se confirma el embarazo (idealmente meses antes de la concepción).
+Para no dejar a la paciente sin protección renal, la alternativa inmunosupresora que ha demostrado ser segura durante todo el embarazo es la **Azatioprina**. El hígado fetal inmaduro carece de la enzima inosinato pirofosforilasa, protegiendo al bebé de los efectos tóxicos de la Azatioprina mientras el fármaco sí actúa inmunosuprimiendo a la madre.
+
+### ¿Por qué la opción B es la respuesta correcta?
+Porque retira inmediatamente el agente teratogénico comprobado (Micofenolato), lo reemplaza por una alternativa segura y probada (Azatioprina) para evitar el rebote de la enfermedad renal, y mantiene la Hidroxicloroquina protectora.
+
+### ¿Por qué fallan las otras opciones?
+• Opción A (Continuar ambos): Someter al feto al Micofenolato causará una embriopatía (ausencia de desarrollo de orejas, paladar hendido, defectos cardíacos).
+• Opción C (Suspender todo): Dejar a una paciente lúpica sin inmunosupresión durante el primer trimestre garantiza casi con certeza un brote severo de la enfermedad o pérdida gestacional autoinmune.
+• Opción D (Cambiar por Metotrexato): El Metotrexato es el inhibidor del ácido fólico más potente del arsenal reumatológico. Es un abortifaciente y teratógeno letal en el embarazo.
+
+### La trampa del examen
+Muchos estudiantes piensan:
+"Embarazo = cero fármacos químicos = suspenderlo todo por precaución".
+En reumatología, la enfermedad activa es mucho más letal para el embarazo que los fármacos permitidos. Suspender la Hidroxicloroquina es el error más castigado en los exámenes.
+
+### Perlas de examen
+• Fármacos SEGUROS en gestante Lúpica: Hidroxicloroquina, Corticosteroides a baja dosis, Azatioprina, Tacrolimus/Ciclosporina.
+• Fármacos PROHIBIDOS (Teratógenos absolutos): Micofenolato, Metotrexato, Ciclofosfamida, Leflunomida.
+• Prevención en gestante con Ac Antifosfolípidos: Añadir Aspirina a dosis bajas (81-150 mg) antes de la semana 16 para prevenir preeclampsia.
+
+### Referencias
+• EULAR recommendations for women's health and the management of family planning, assisted reproduction, pregnancy and menopause in patients with systemic lupus erythematosus.
+• ACR Guidelines for Management of Reproductive Health in Rheumatic and Musculoskeletal Diseases.
+• UpToDate: Pregnancy in women with systemic lupus erythematosus.`
   },
   {
     id: "ucc-conv-2025-07-19-30",

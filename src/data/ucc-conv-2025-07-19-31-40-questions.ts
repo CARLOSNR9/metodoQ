@@ -414,7 +414,40 @@ export const UCC_CONV_2025_07_19_31_40_QUESTIONS: TrainingQuestion[] = [
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Colega, aquí es donde cae la mayoría de la gente en el examen de medicina interna. La gran "cascarita" es el término "infección resuelta o curada". Como el HBsAg salió negativo y el paciente tiene anticuerpos protectores (Anti-HBs), el médico general anota "paciente inmunizado" y autoriza el Rituximab (Opción A). Tres meses después, la paciente ingresa amarilla, en coma hepático y fallece porque el Rituximab despertó el ADN latente en los hepatocitos. El anticuerpo clave para vigilar no es el de superficie, es el Core (Anti-HBc). Si el Anti-HBc está positivo alguna vez en la vida de un paciente, el virus está durmiendo ahí dentro. Ponle el Entecavir profiláctico y te evitas una demanda médica y un fallecimiento.`
+Esta pregunta es una de las más mortales en la práctica real y en los exámenes de medicina interna. Aborda el altísimo riesgo de muerte por falla hepática al usar inmunosupresores biológicos.
+
+La clave no es fijarse solo en si el antígeno de superficie (HBsAg) está negativo.
+La clave es:
+Rituximab + Anti-HBc positivo = Reactivación fulminante latente. Profilaxis con Entecavir es obligatoria.
+
+### ¿Qué está ocurriendo realmente?
+La paciente tiene un perfil serológico clásico de **infección resuelta o pasada por Hepatitis B** (HBsAg negativo, Anti-HBc positivo y Anti-HBs protector positivo). Clínicamente, ella "se curó" hace años. Sin embargo, el VHB nunca se erradica del cuerpo; su ADN (cccDNA) permanece latente, durmiendo dentro de los hepatocitos, acorralado por los linfocitos B y T del paciente.
+Cuando administramos **Rituximab** (un anticuerpo monoclonal Anti-CD20 que destruye indiscriminadamente a todos los linfocitos B), rompemos las rejas de la prisión inmunológica. El ADN viral despierta, se replica masivamente, y cuando el sistema inmune intenta recuperarse, destruye su propio hígado (Reactivación del VHB), causando insuficiencia hepática aguda con altísima mortalidad (>30%).
+
+Las guías hepatológicas mundiales exigen que TODO paciente que vaya a recibir terapia depletera de células B y tenga el **Anti-HBc positivo** reciba profilaxis con antivirales (Entecavir, Tenofovir) independientemente del HBsAg o la carga viral.
+
+### ¿Por qué la opción C es la respuesta correcta?
+El inicio de terapia profiláctica antiviral diaria ininterrumpida (Entecavir/Tenofovir) es la única intervención capaz de suprimir la replicación del ADN viral latente mientras dure la inmunosupresión biológica.
+
+### ¿Por qué fallan las otras opciones?
+• Opción A (Considerar inmunizada y no dar profilaxis): Es una negligencia fatal. Aunque tenga anticuerpos protectores (Anti-HBs), la memoria inmunológica será borrada por el Rituximab, permitiendo la reactivación letal.
+• Opción B (Refuerzo de vacuna VHB): La vacuna introduce antígeno de superficie falso para crear anticuerpos. La paciente ya los tiene. La vacuna no sirve contra los virus latentes que viven dentro del propio hígado.
+• Opción D (Monitorizar e iniciar solo si hay daño): Esperar a que las transaminasas suban o el antígeno se vuelva positivo significa que el daño hepático masivo ya comenzó. El tratamiento en esta fase (rescate) suele fallar, derivando en coma hepático.
+
+### La trampa del examen
+Muchos estudiantes piensan:
+"HBsAg negativo y Anti-HBs positivo = Paciente curado e inmunizado, no hay riesgo".
+Esta es la gran "cascarita". El marcador a vigilar en terapias biológicas potentes es el Anti-HBc (Core). Si alguna vez en la vida el Core dio positivo, el virus vive en el hígado.
+
+### Perlas de examen
+• Profilaxis VHB en Inmunosupresión (Rituximab/Quimioterapia): Si HBsAg(+) o Anti-HBc(+), DEBES iniciar Entecavir o Tenofovir profiláctico.
+• Duración de la profilaxis: Desde antes o el mismo día del biológico, hasta 12 a 18 meses después de la última dosis de Rituximab.
+• Rituximab: Anticuerpo monoclonal Anti-CD20. Borra a los linfocitos B.
+
+### Referencias
+• AASLD Hepatitis B Guidance: Prevention of Hepatitis B Reactivation During Immunosuppression.
+• AGA Institute Guidelines on the Prevention and Treatment of Hepatitis B Virus Reactivation During Immunosuppressive Therapy.
+• UpToDate: Hepatitis B virus reactivation associated with immunosuppressive therapy.`
   },
   {
     id: "ucc-conv-2025-07-19-40",

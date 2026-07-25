@@ -51,7 +51,42 @@ export const UCC_CONV_2025_07_19_51_60_QUESTIONS: TrainingQuestion[] = [
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Colega, en las preguntas de glomerulonefritis el complemento es el rey del diagnóstico. Si cae el C3 y el C4 juntos, piensa en Lupus (vía clásica masiva). Si cae SOLO el C3, piensa en Postinfecciosa (GNPE) o en la nefropatía por C3 (activación de vía alternativa). Pero si ves que el C4 se fue a cero y el C3 está normal, eso grita ¡CRIOGLOBULINEMIA! a los cuatro vientos. La pista del "Factor Reumatoide alto" en alguien que no tiene artritis reumatoide deformante te lo confirma: esa IgM es la crioglobulina disfrazada.`
+Esta es una pregunta top-tier de nefrología y reumatología, porque evalúa tu capacidad para integrar perfiles de complemento con síndromes sistémicos.
+
+La clave no es aprenderse de memoria todas las glomerulonefritis.
+La clave es:
+En las preguntas de glomerulonefritis, el complemento es el rey del diagnóstico. C4 indetectable con C3 normal + Factor Reumatoide positivo = Crioglobulinemia Mixta.
+
+### ¿Qué está ocurriendo realmente?
+La paciente presenta la "Tríada de Meltzer" (púrpura palpable, artralgias y debilidad), sumada a una glomerulonefritis membranoproliferativa. Todo esto ocurre en el contexto de una infección crónica por el Virus de la Hepatitis C (VHC).
+El VHC estimula crónicamente a los linfocitos B para que produzcan una IgM monoclonal. Esta IgM actúa como un Factor Reumatoide (FR) que se une a la IgG normal del paciente, formando inmunocomplejos masivos que precipitan con el frío (las crioglobulinas).
+Estos grandes inmunocomplejos viajan por la sangre, se depositan en el subendotelio de los capilares (piel y riñón) y activan poderosamente la **vía clásica** del complemento.
+
+El sello laboratorial absoluto de la Crioglobulinemia Mixta (Tipos II o III) es el consumo masivo y profundo del componente C4 (frecuentemente indetectable), manteniendo el C3 relativamente normal o levemente disminuido.
+
+### ¿Por qué la opción B es la respuesta correcta?
+Porque la Crioglobulinemia Mixta Esencial es impulsada por estos complejos IgM-IgG (donde la IgM tiene actividad de Factor Reumatoide) que desencadenan la vía clásica del complemento, consumiendo primariamente C4, lo cual encaja perfectamente con el cuadro y el laboratorio de la paciente.
+
+### ¿Por qué fallan las otras opciones?
+• Opción A (Nefropatía por IgA): Es la GN más común del mundo (hematuria asintomática post-faringitis), pero NO consume el complemento sérico, y no cursa con púrpura generalizada ni factor reumatoide altísimo.
+• Opción C (Poliangeítis Microscópica - MPA): Las vasculitis ANCA (MPA, granulomatosis con poliangeítis) son "pauci-inmunes", es decir, causan daño directo sin formar grandes inmunocomplejos, por lo que el C3 y C4 son ESTRICTAMENTE NORMALES.
+• Opción D (GN postinfecciosa): Activa predominantemente la vía alternativa del complemento (y a veces la de las lectinas), consumiendo de manera característica el C3 mientras deja el C4 normal, justo al revés del caso clínico.
+
+### La trampa del examen
+Muchos estudiantes piensan:
+"Factor Reumatoide positivo = Artritis Reumatoide".
+En el contexto de una vasculitis sistémica con hepatitis C y caída del C4, ese Factor Reumatoide altísimo no es por daño articular puro, ¡es la mismísima IgM monoclonal de la crioglobulina disfrazada en el laboratorio!
+
+### Perlas de examen
+• Consumo C3 y C4 juntos: Lupus Eritematoso Sistémico (LES).
+• Consumo C3 con C4 normal: GN Postinfecciosa (GNPE) o Nefropatía por C3.
+• Consumo C4 con C3 normal: Crioglobulinemia.
+• Infección clásica asociada a Crioglobulinemia: Virus de la Hepatitis C (VHC).
+
+### Referencias
+• KDIGO Clinical Practice Guideline for Glomerulonephritis.
+• UpToDate: Mixed cryoglobulinemia syndrome.
+• Harrison's Principles of Internal Medicine.`
   },
   {
     id: "ucc-conv-2025-07-19-52",

@@ -52,7 +52,43 @@ export const UCC_CONV_2025_07_19_11_20_QUESTIONS: TrainingQuestion[] = [
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Colega, en el CAPS la sangre del paciente se coagula en la microcirculación de todo el cuerpo simultáneamente. Si te dejas asustar por las plaquetas bajas (35.000) y le quitas la anticoagulación (Opción A), la paciente morirá infartada. La trombocitopenia es por *consumo* trombótico, no por sangrado. Transfundir plaquetas (Opción C) es gasolina para el fuego (más sustrato para hacer trombos). La anticoagulación debe ser parenteral (Heparina) y nunca con DOACs, que son inferiores a la warfarina/heparinas en SAF de alto riesgo.`
+Esta pregunta es de nivel superior en hematología y reumatología. Evalúa si el médico sabe identificar la variante más mortífera de un síndrome trombótico y si conoce el protocolo heroico de rescate.
+
+La clave no es asustarse por las plaquetas bajas e intentar subirlas.
+La clave es:
+Falla multiorgánica aguda + Trombosis + Esquizocitos en un paciente con Lupus/SAF = SAF Catastrófico. El tratamiento es la Terapia Triple (Anticoagulación + Corticoides + Plasmaféresis/IGIV).
+
+### ¿Qué está ocurriendo realmente?
+La paciente sufre un Síndrome Antifosfolípido Catastrófico (CAPS). Esta es una condición rara pero fulminante (mortalidad >50%), en la cual los anticuerpos antifosfolípidos (como el anticoagulante lúpico o anti-cardiolipina) desencadenan una "tormenta trombótica" masiva en la microcirculación.
+Se diagnostica cuando hay trombosis simultánea en 3 o más órganos (aquí: pulmón/disnea, riñón/anuria, piel/necrosis) en menos de 1 semana, acompañado de Microangiopatía Trombótica (MAT).
+La MAT se manifiesta en el laboratorio por:
+- Esquizocitos (glóbulos rojos cortados por las redes de fibrina intravascular).
+- Trombocitopenia (las plaquetas están bajas porque se están consumiendo masivamente para formar trombos en todo el cuerpo).
+
+Si ves que las plaquetas bajan a 35,000, el instinto básico es "peligro de sangrado, hay que parar la anticoagulación". ¡GRAVE ERROR! En el CAPS, las plaquetas bajas indican que la coagulación intravascular está descontrolada. El pilar del tratamiento es mantener y optimizar la anticoagulación parenteral de inmediato para detener el consumo, asociado a pulsos de esteroides y plasmaféresis para limpiar los anticuerpos destructivos.
+
+### ¿Por qué la opción B es la respuesta correcta?
+La Task Force internacional para el Síndrome Antifosfolípido Catastrófico establece que el único manejo que ha demostrado mejorar la supervivencia es la Terapia Triple: Anticoagulación completa (Heparina), Inmunosupresión severa (Corticoides a dosis altas) y recambio inmunológico (Plasmaféresis o Inmunoglobulina Intravenosa).
+
+### ¿Por qué fallan las otras opciones?
+• Opción A (Suspender anticoagulación): Es el error más frecuente y letal. La trombocitopenia en este contexto es por consumo trombótico, no por sangrado activo. Suspender la heparina acelerará los infartos de los órganos.
+• Opción C (Transfusión de plaquetas): Echarle plaquetas nuevas a un paciente con CAPS (o cualquier MAT como PTT/SUH) es "echar leña al fuego", pues provees más sustrato fresco para formar más trombos y empeorar la isquemia.
+• Opción D (Pasar a Rivaroxabán): Los Anticoagulantes Orales Directos (DOACs) han demostrado ser inferiores e inseguros en pacientes con SAF de alto riesgo (triple positividad o historia de trombosis arterial/CAPS). El manejo inicial debe ser siempre parenteral.
+
+### La trampa del examen
+Muchos estudiantes piensan:
+"Plaquetas < 50.000 = Contraindicación absoluta para anticoagular".
+En las microangiopatías trombóticas mediadas inmunológicamente, esa regla no aplica. Las plaquetas están bajas porque están atrapadas en trombos microscópicos. Tratar la causa base (anticoagulación y plasmaféresis) es lo que hará subir las plaquetas.
+
+### Perlas de examen
+• Criterios de CAPS: Trombosis en ≥3 órganos, desarrollo en <1 semana, confirmación histológica de oclusión microvascular (esquizocitos), y anticuerpos SAF fuertemente positivos.
+• Desencadenante clásico: Infección, cirugía o suspensión abrupta de la anticoagulación crónica.
+• Terapia de Rescate: Rituximab o Eculizumab en casos refractarios a la terapia triple.
+
+### Referencias
+• The catastrophic antiphospholipid syndrome (CAPS) registry.
+• EULAR recommendations for the management of antiphospholipid syndrome in adults.
+• UpToDate: Catastrophic antiphospholipid syndrome (CAPS).`
   },
   {
     id: "ucc-conv-2025-07-19-12",
@@ -375,7 +411,41 @@ Referencias
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Recuerda que el cirujano y el endoscopista hacen el tapón mecánico, pero la medicina interna protege ese tapón. Si le pasas el omeprazol a vía oral (Opción A), el pH gástrico fluctuará por debajo de 4 durante la noche, el ácido digerirá la fibrina del hemoclip y el paciente te hará un resangrado masivo al tercer día. La Terlipresina (Opción C) se usa para las várices esofágicas de los cirróticos, no tiene rol clínico en la úlcera péptica gastroduodenal.`
+Esta pregunta es de altísima frecuencia en gastroenterología porque evalúa qué sucede *después* del manejo agudo de una hemorragia digestiva grave. Salvar al paciente de morir desangrado en urgencias no sirve de nada si se vuelve a desangrar al tercer día en hospitalización.
+
+La clave no es solo hacer la endoscopia con éxito.
+La clave es:
+Úlcera sangrante manejada (Forrest I, IIa, IIb) requiere pH gástrico > 6.0 ininterrumpido. El omeprazol intravenoso en infusión continua a altas dosis es mandatorio por 72 horas.
+
+### ¿Qué está ocurriendo realmente?
+El paciente sobrevivió a una Hemorragia Digestiva Alta No Variceal (por una úlcera péptica). El endoscopista encontró estigmas de alto riesgo (como un sangrado a chorro/babeante - Forrest I, un vaso visible no sangrante - Forrest IIa, o un coágulo adherido - Forrest IIb) y logró sellar el defecto (terapia hemostática combinada).
+En la mucosa del estómago quedó un coágulo plaquetario nuevo, taponando la arteria ulcerada.
+El problema es que el ambiente gástrico es hostil. El ácido clorhídrico y la pepsina se encargan de digerir las proteínas. Si el pH gástrico cae por debajo de 5.0, la pepsina se activa y destruye las redes de fibrina del coágulo recién formado. Si cae por debajo de 6.0, las plaquetas se desagregan.
+Para garantizar que el coágulo sobreviva y se organice, se necesita suprimir la secreción ácida a niveles donde la pepsina sea inútil (pH consistentemente > 6.0) durante los primeros 3 días (72 horas), que es el periodo de máximo riesgo de resangrado.
+La única forma de asegurar esto, evitando los valles nocturnos de pH, es mediante un Inhibidor de la Bomba de Protones (IBP) en infusión continua (dosis de carga 80 mg + 8 mg/h).
+
+### ¿Por qué la opción B es la respuesta correcta?
+Las guías internacionales (ACG, ESGE, Baveno) son categóricas: tras la hemostasia endoscópica de úlceras pépticas de alto riesgo, se debe administrar infusión intravenosa continua de IBP a 8 mg/h durante 72 horas para estabilizar el coágulo y prevenir el resangrado mortal.
+
+### ¿Por qué fallan las otras opciones?
+• Opción A (Pasar a Vía Oral): En las úlceras de alto riesgo, los IBPs orales (o en bolo IV intermitente) permiten "escapes ácidos" en la madrugada (el pH cae a 2-3). En ese momento, la pepsina destruye el coágulo y el paciente sufre una hemorragia masiva.
+• Opción C (Terlipresina u Octreótide IV): Estos son los análogos de somatostatina/vasopresina que se usan para reducir la presión portal en la **hemorragia digestiva por várices esofágicas** en pacientes cirróticos, no tienen ninguna eficacia comprobada en la úlcera péptica.
+• Opción D (Transfusión rutinaria): Las transfusiones en hemorragia digestiva no son rutinarias. La estrategia es restrictiva (transfundir solo si Hb < 7 g/dL, o < 9 g/dL con cardiopatía). Transfundir en exceso aumenta la presión arterial y puede empujar el coágulo, provocando resangrado.
+
+### La trampa del examen
+Muchos estudiantes piensan:
+"Hemorragia detenida = el paciente puede comer y tomar pastillas al día siguiente".
+El periodo de 72 horas es crítico. Dar de alta tempranamente con IBP oral a una úlcera con vaso visible es una trampa mortal de las pruebas clínicas.
+
+### Perlas de examen
+• Clasificación de Forrest (Alto Riesgo): Ia (chorro), Ib (babeante), IIa (vaso visible), IIb (coágulo adherido). Manejo: Endoscopia + IBP Infusión.
+• Clasificación de Forrest (Bajo Riesgo): IIc (mancha de hematina), III (base limpia). Manejo: No requiere terapia endoscópica, IBP oral, alta precoz.
+• Umbral transfusional: Estrategia restrictiva (Hb < 7 g/dL) mejora la supervivencia respecto a la estrategia liberal (Hb < 9 g/dL) en hemorragias digestivas no masivas.
+
+### Referencias
+• ACG Clinical Guideline: Upper Gastrointestinal and Ulcer Bleeding.
+• ESGE Guideline: Endoscopic diagnosis and management of nonvariceal upper gastrointestinal hemorrhage.
+• UpToDate: Medical management of bleeding peptic ulcers.`
   },
   {
     id: "ucc-conv-2025-07-19-18",
