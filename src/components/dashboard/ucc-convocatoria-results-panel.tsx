@@ -27,16 +27,16 @@ export function UccConvocatoriaResultsPanel({
   const hasRadarValues = radarData.some((point) => point.A > 0);
 
   return (
-    <section className="relative mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 sm:p-8">
+    <section className="relative mt-10 overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 p-6 sm:p-8">
       <div className="mb-6 text-center">
-        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-mq-muted">
+        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">
           Resultado tipo convocatoria UCC
         </p>
-        <p className="mt-3 text-4xl font-black text-white sm:text-5xl">
+        <p className="mt-3 text-4xl font-black text-slate-900 sm:text-5xl">
           {correctAnswers}
-          <span className="text-2xl text-mq-muted">/{totalQuestions}</span>
+          <span className="text-2xl text-slate-500">/{totalQuestions}</span>
         </p>
-        <p className="mt-2 text-sm text-mq-muted">
+        <p className="mt-2 text-sm text-slate-500">
           aciertos · calificación sugerida (UCC no publica escala oficial)
         </p>
       </div>

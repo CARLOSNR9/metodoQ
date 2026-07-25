@@ -25,10 +25,10 @@ export default function EstudioPage() {
           <StickyNote className="h-3.5 w-3.5" />
           Mi Estudio
         </p>
-        <h1 className="text-2xl font-black text-white sm:text-3xl">
+        <h1 className="text-2xl font-black text-slate-900 sm:text-3xl">
           Tablero de notas
         </h1>
-        <p className="max-w-2xl text-sm leading-relaxed text-mq-muted">
+        <p className="max-w-2xl text-sm leading-relaxed text-slate-500">
           Usa el Pomodoro para sesiones de foco y repasa las píldoras de teoría que
           guardaste al entrenar en los temas donde fallaste.
         </p>

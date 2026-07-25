@@ -11,10 +11,10 @@ export default function AdminUsersPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Administración
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Gestión de usuarios
         </h1>
-        <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">
           Crea cuentas manualmente, asigna roles y planes, y administra el directorio completo
           de usuarios registrados.
         </p>

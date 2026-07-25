@@ -32,7 +32,7 @@ const ctaClass = (highlighted?: boolean) =>
   `flex h-14 w-full items-center justify-center gap-2 rounded-xl text-sm font-bold transition-all active:scale-[0.98] lg:text-base ${
     highlighted
       ? "bg-mq-accent text-mq-accent-foreground hover:brightness-110 hover:shadow-[0_0_20px_rgba(0,209,255,0.4)]"
-      : "bg-white/10 text-white hover:bg-white/15 border border-white/5"
+      : "bg-slate-100 text-slate-900 hover:bg-white/15 border border-white/5"
   }`;
 
 const paidPlans = PLANS.filter((p) => p.id !== "FREE");
@@ -148,15 +148,15 @@ function PlanPriceDisplay({
   return (
     <div className="mb-8">
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-        <span className="text-4xl font-bold text-white">
+        <span className="text-4xl font-bold text-slate-900">
           {formatCOP(isRenewal ? discountedMonthly : currentPrice.monthly)}
         </span>
         {isRenewal ? (
-          <span className="text-lg text-mq-muted line-through">
+          <span className="text-lg text-slate-500 line-through">
             {formatCOP(currentPrice.monthly)}
           </span>
         ) : null}
-        <span className="text-mq-muted text-sm">/mes</span>
+        <span className="text-slate-500 text-sm">/mes</span>
       </div>
       {isRenewal ? (
         <p className="mt-2 text-sm font-medium text-yellow-400">
@@ -239,7 +239,7 @@ export function DashboardPricingView() {
           className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-mq-accent/15 to-indigo-500/10 border border-mq-accent/25 p-4 px-6 backdrop-blur-md"
         >
           <Sparkles className="text-mq-accent w-6 h-6 shrink-0" />
-          <p className="text-sm text-white/90">
+          <p className="text-sm text-slate-900/90">
             Tienes <span className="font-bold text-mq-accent">PRO activo</span>. El plan Residente
             incluye seguimiento 1 a 1 con el equipo médico para asegurar tu plaza.
           </p>
@@ -271,22 +271,22 @@ export function DashboardPricingView() {
       ) : null}
 
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+        <h1 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
           {pageCopy.title}
         </h1>
-        <p className="text-mq-muted text-lg max-w-2xl mx-auto">{pageCopy.subtitle}</p>
+        <p className="text-slate-500 text-lg max-w-2xl mx-auto">{pageCopy.subtitle}</p>
       </div>
 
       {visiblePlans.length > 1 || userPlan === "FREE" ? (
         <div className="flex justify-center">
-          <div className="relative flex rounded-full bg-white/5 p-1 backdrop-blur-sm border border-white/10">
+          <div className="relative flex rounded-full bg-slate-50 p-1 backdrop-blur-sm border border-slate-200">
             {BILLING_CYCLES.map((c) => (
               <button
                 key={c}
                 type="button"
                 onClick={() => setCycle(c)}
                 className={`relative px-6 py-2 text-sm font-medium transition-colors ${
-                  cycle === c ? "text-mq-accent-foreground" : "text-white/70 hover:text-white"
+                  cycle === c ? "text-mq-accent-foreground" : "text-slate-900/70 hover:text-slate-900"
                 }`}
               >
                 {cycle === c && (
@@ -340,8 +340,8 @@ export function DashboardPricingView() {
               ) : null}
 
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
-                <p className="mt-2 text-sm text-mq-muted leading-relaxed">{plan.description}</p>
+                <h3 className="text-2xl font-bold text-slate-900">{plan.name}</h3>
+                <p className="mt-2 text-sm text-slate-500 leading-relaxed">{plan.description}</p>
               </div>
 
               <PlanPriceDisplay
@@ -356,7 +356,7 @@ export function DashboardPricingView() {
                     <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-mq-accent/10">
                       <Check className="h-3 w-3 text-mq-accent" />
                     </div>
-                    <span className="text-sm leading-snug text-white/80">{feature}</span>
+                    <span className="text-sm leading-snug text-slate-900/80">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -373,7 +373,7 @@ export function DashboardPricingView() {
       </div>
 
       <div className="flex justify-center pt-8">
-        <div className="flex items-center gap-6 text-sm text-mq-muted">
+        <div className="flex items-center gap-6 text-sm text-slate-500">
           <motion.div className="flex items-center gap-2">
             <ShieldAlert size={16} />
             <span>Pago 100% seguro con Stripe</span>

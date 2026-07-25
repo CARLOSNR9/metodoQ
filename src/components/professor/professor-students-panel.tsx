@@ -112,7 +112,7 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
   return (
     <div className="space-y-6">
       {loadingCourses ? (
-        <div className="animate-pulse rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 h-16" />
+        <div className="animate-pulse rounded-xl border border-slate-200 bg-white-raised p-6 h-16" />
       ) : null}
       <div className="flex flex-wrap gap-2">
         {PLAN_TABS.map((item) => (
@@ -123,7 +123,7 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
             className={`rounded-full px-4 py-1.5 text-xs font-semibold transition ${
               tab === item.key
                 ? "bg-mq-accent text-mq-accent-foreground"
-                : "bg-white/[0.05] text-mq-muted hover:text-white"
+                : "bg-slate-100 text-slate-500 hover:text-slate-900"
             }`}
           >
             {item.label} ({counts[item.key]})
@@ -137,7 +137,7 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Buscar por nombre o correo"
-          className="rounded-lg border border-mq-border bg-mq-surface px-3 py-2.5 text-sm text-white"
+          className="rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900"
         />
         <ThemeSelect
           value={selectedCourse}
@@ -159,10 +159,10 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
       {message ? <p className="text-sm text-mq-accent">{message}</p> : null}
       {error ? <p className="text-sm text-rose-400">{error}</p> : null}
 
-      <div className="overflow-x-auto rounded-xl border border-mq-border-strong bg-mq-surface-raised">
+      <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white-raised">
         <table className="w-full min-w-[640px] text-left text-sm">
           <thead>
-            <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+            <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
               <th className="px-4 py-3">Alumno</th>
               <th className="px-4 py-3">Plan</th>
               <th className="px-4 py-3 text-right">Acción</th>
@@ -171,7 +171,7 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={3} className="px-4 py-8 text-center text-mq-muted">
+                <td colSpan={3} className="px-4 py-8 text-center text-slate-500">
                   No hay alumnos con este filtro.
                 </td>
               </tr>
@@ -182,11 +182,11 @@ export function ProfessorStudentsPanel({ students }: ProfessorStudentsPanelProps
                 return (
                 <tr key={student.uid} className="border-b border-white/5">
                   <td className="px-4 py-3">
-                    <p className="font-medium text-white">{student.displayName}</p>
-                    <p className="text-xs text-mq-muted">{student.email}</p>
+                    <p className="font-medium text-slate-900">{student.displayName}</p>
+                    <p className="text-xs text-slate-500">{student.email}</p>
                   </td>
                   <td className="px-4 py-3">
-                    <span className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-semibold text-mq-muted">
+                    <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-500">
                       {getPlanDisplayName(student.plan)}
                     </span>
                     {student.plan !== "PRO" && student.plan !== "RESIDENTE" ? (

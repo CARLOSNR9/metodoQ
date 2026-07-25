@@ -37,7 +37,7 @@ export function AccumulatedStats({ userId }: AccumulatedStatsProps) {
     return (
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {[1, 2, 3].map((i) => (
-          <div key={i} className="h-20 animate-pulse rounded-2xl bg-white/5" />
+          <div key={i} className="h-20 animate-pulse rounded-2xl bg-slate-50" />
         ))}
       </div>
     );
@@ -47,36 +47,36 @@ export function AccumulatedStats({ userId }: AccumulatedStatsProps) {
 
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-      <div className="group relative overflow-hidden rounded-2xl border border-mq-border-strong bg-mq-surface p-5 transition-all duration-300 hover:border-mq-accent/50 hover:bg-mq-surface-raised">
+      <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:border-mq-accent/50 hover:bg-white-raised">
         <div className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-mq-muted">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
             Impacto total
           </p>
-          <p className="mt-2 text-xl font-bold text-white">
+          <p className="mt-2 text-xl font-bold text-slate-900">
             Has respondido <span className="text-mq-accent">{stats.totalQuestions}</span> preguntas
           </p>
         </div>
         <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-mq-accent/5 blur-2xl transition-all duration-300 group-hover:bg-mq-accent/10" />
       </div>
 
-      <div className="group relative overflow-hidden rounded-2xl border border-mq-border-strong bg-mq-surface p-5 transition-all duration-300 hover:border-emerald-500/50 hover:bg-mq-surface-raised">
+      <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:border-emerald-500/50 hover:bg-white-raised">
         <div className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-mq-muted">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
             Crecimiento
           </p>
-          <p className="mt-2 text-xl font-bold text-white">
+          <p className="mt-2 text-xl font-bold text-slate-900">
             Has mejorado <span className="text-emerald-400">{stats.improvement}%</span>
           </p>
         </div>
         <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-emerald-500/5 blur-2xl transition-all duration-300 group-hover:bg-emerald-500/10" />
       </div>
 
-      <div className="group relative overflow-hidden rounded-2xl border border-mq-border-strong bg-mq-surface p-5 transition-all duration-300 hover:border-indigo-500/50 hover:bg-mq-surface-raised">
+      <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:border-indigo-500/50 hover:bg-white-raised">
         <div className="relative z-10">
-          <p className="text-xs font-semibold uppercase tracking-widest text-mq-muted">
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">
             Consistencia
           </p>
-          <p className="mt-2 text-xl font-bold text-white">
+          <p className="mt-2 text-xl font-bold text-slate-900">
             Llevas <span className="text-indigo-400">{stats.activeDays}</span> días activos
           </p>
         </div>

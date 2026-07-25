@@ -31,7 +31,7 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
         isCompletedToday 
           ? 'border-emerald-500/30 bg-emerald-500/5' 
           : isLocked 
-            ? 'border-white/10 bg-white/[0.02] grayscale-[0.5]' 
+            ? 'border-slate-200 bg-slate-50 grayscale-[0.5]' 
             : 'border-mq-accent/30 bg-gradient-to-br from-mq-accent/10 via-mq-surface to-transparent'
       } shadow-xl transition-all duration-500`}
     >
@@ -46,10 +46,10 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
       
       {isLocked && (
         <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] z-20 flex items-center justify-center">
-          <div className="bg-mq-surface/90 border border-white/10 p-4 rounded-2xl shadow-2xl flex flex-col items-center gap-2 max-w-[200px] text-center transform -rotate-2">
+          <div className="bg-white/90 border border-slate-200 p-4 rounded-2xl shadow-2xl flex flex-col items-center gap-2 max-w-[200px] text-center transform -rotate-2">
             <Lock size={24} className="text-mq-accent" />
-            <p className="text-[10px] font-black uppercase tracking-widest text-white">Reto Bloqueado</p>
-            <p className="text-[9px] text-mq-muted font-medium">Completa tu diagnóstico inicial para desbloquear tu reto personalizado.</p>
+            <p className="text-[10px] font-black uppercase tracking-widest text-slate-900">Reto Bloqueado</p>
+            <p className="text-[9px] text-slate-500 font-medium">Completa tu diagnóstico inicial para desbloquear tu reto personalizado.</p>
           </div>
         </div>
       )}
@@ -63,10 +63,10 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
             <div className="min-w-0 flex-1">
               <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-accent/80">LA PÍLDORA DEL DR. Q</p>
               <div className="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-1">
-                <h3 className="text-lg font-black leading-tight text-white sm:text-xl">
+                <h3 className="text-lg font-black leading-tight text-slate-900 sm:text-xl">
                   {isCompletedToday ? `Reto Día ${streak} Completado` : `Reto del Día ${streak + 1}`}
                 </h3>
-                <span className={`inline-flex shrink-0 items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold border ${isCompletedToday ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-white/5 text-mq-muted border-white/10'}`}>
+                <span className={`inline-flex shrink-0 items-center rounded-full px-2.5 py-0.5 text-[10px] font-bold border ${isCompletedToday ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-slate-50 text-slate-500 border-slate-200'}`}>
                   {isCompletedToday ? '¡CONSEGUIDO!' : 'GRATIS'}
                 </span>
               </div>
@@ -75,7 +75,7 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
 
           <div className="space-y-2">
             {isCompletedToday ? (
-              <p className="text-base font-medium text-white/90">
+              <p className="text-base font-medium text-slate-900/90">
                 {wasCorrect ? (
                   <>¡Impresionante, Doc! Has ganado el trofeo del <span className="text-mq-accent font-black">Día {streak}</span>.</>
                 ) : (
@@ -83,11 +83,11 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
                 )}
               </p>
             ) : (
-              <p className="text-base font-medium text-white/90">
+              <p className="text-base font-medium text-slate-900/90">
                 1 pregunta de alto nivel sobre <span className="text-mq-accent font-black italic">{isLocked ? "???" : topic}</span>.
               </p>
             )}
-            <p className="text-sm text-mq-muted leading-relaxed">
+            <p className="text-sm text-slate-500 leading-relaxed">
               {isCompletedToday 
                 ? "Has cumplido con tu dosis de conocimiento diaria. El 85% de los aspirantes fallan por falta de constancia. Tú no eres uno de ellos."
                 : isLocked
@@ -102,23 +102,23 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
             <div className="flex flex-wrap items-center gap-2">
               <div className="flex -space-x-2">
                 {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-mq-surface bg-mq-border-strong text-[10px] font-bold text-mq-muted">
+                  <div key={i} className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-mq-surface bg-mq-border-strong text-[10px] font-bold text-slate-500">
                     {i === 1 ? "👨‍⚕️" : i === 2 ? "👩‍⚕️" : "🩺"}
                   </div>
                 ))}
               </div>
-              <span className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">+120 hoy</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">+120 hoy</span>
             </div>
           )}
 
           {isCompletedToday ? (
-            <div className="flex items-center gap-3 bg-white/5 p-3 rounded-2xl border border-white/10">
-              <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${wasCorrect ? 'bg-mq-accent/20 text-mq-accent shadow-[0_0_20px_rgba(0,209,255,0.4)]' : 'bg-white/10 text-white/30'}`}>
+            <div className="flex items-center gap-3 bg-slate-50 p-3 rounded-2xl border border-slate-200">
+              <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${wasCorrect ? 'bg-mq-accent/20 text-mq-accent shadow-[0_0_20px_rgba(0,209,255,0.4)]' : 'bg-slate-100 text-white/30'}`}>
                 <Trophy size={28} />
               </div>
               <div>
-                <p className="text-[10px] font-black uppercase tracking-widest text-mq-muted">Estado</p>
-                <p className="text-sm font-bold text-white">{wasCorrect ? 'Trofeo Ganado' : 'Fallo'}</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Estado</p>
+                <p className="text-sm font-bold text-slate-900">{wasCorrect ? 'Trofeo Ganado' : 'Fallo'}</p>
               </div>
             </div>
           ) : null}
@@ -138,9 +138,9 @@ export function DailyPillCard({ topic = "Medicina Interna", isLocked = false }: 
             }}
             className={`mq-premium-glow group/btn inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-2xl sm:h-14 ${
               isLocked
-                ? 'bg-white/5 text-white/30 border border-white/10 cursor-not-allowed'
+                ? 'bg-slate-50 text-slate-900/30 border border-slate-200 cursor-not-allowed'
                 : isCompletedToday 
-                  ? 'bg-white/10 text-white border border-white/10 hover:bg-white/20' 
+                  ? 'bg-slate-100 text-slate-900 border border-slate-200 hover:bg-white/20' 
                   : 'bg-mq-accent text-mq-accent-foreground hover:brightness-110'
             } px-8 text-sm font-black transition-all active:scale-95`}
           >

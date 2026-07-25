@@ -88,12 +88,12 @@ export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerPr
           className={`mt-0.5 h-5 w-5 shrink-0 ${isUrgent ? "text-rose-400" : "text-amber-400"}`}
         />
         <div>
-          <p className="text-sm font-semibold text-white">
+          <p className="text-sm font-semibold text-slate-900">
             {inactiveDays === 2
               ? `Llevas 2 días sin cumplir tu meta de ${dailyTarget} preguntas`
               : `Llevas ${inactiveDays} días sin cumplir tu meta diaria`}
           </p>
-          <p className="mt-0.5 text-xs text-mq-muted">
+          <p className="mt-0.5 text-xs text-slate-500">
             Tu plan Pro exige {dailyTarget} preguntas al día. Cierra hoy tu cuota para
             retomar el ritmo.
           </p>

@@ -120,7 +120,7 @@ export function ProfessorClassAttendancePanel({ classId }: ProfessorClassAttenda
 
   if (loading) {
     return (
-      <div className="animate-pulse rounded-xl border border-mq-border-strong bg-mq-surface-raised p-8 h-64" />
+      <div className="animate-pulse rounded-xl border border-slate-200 bg-white-raised p-8 h-64" />
     );
   }
 
@@ -146,8 +146,8 @@ export function ProfessorClassAttendancePanel({ classId }: ProfessorClassAttenda
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Lista de asistencia
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white">{title}</h1>
-        <p className="mt-2 text-sm text-mq-muted capitalize">{formattedDate}</p>
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900">{title}</h1>
+        <p className="mt-2 text-sm text-slate-500 capitalize">{formattedDate}</p>
         {courseName ? (
           <p className="mt-1 text-sm text-mq-accent/80">Grupo: {courseName}</p>
         ) : null}
@@ -175,17 +175,17 @@ export function ProfessorClassAttendancePanel({ classId }: ProfessorClassAttenda
             >
               Marcar todos ausentes
             </button>
-            <span className="text-xs text-mq-muted">
+            <span className="text-xs text-slate-500">
               {counts.present} presente{counts.present === 1 ? "" : "s"} · {counts.absent} ausente
               {counts.absent === 1 ? "" : "s"}
               {counts.pending > 0 ? ` · ${counts.pending} sin marcar` : ""}
             </span>
           </div>
 
-          <div className="overflow-x-auto rounded-xl border border-mq-border-strong bg-mq-surface-raised">
+          <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white-raised">
             <table className="w-full min-w-[640px] text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+                <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
                   <th className="px-4 py-3">Alumno</th>
                   <th className="px-4 py-3 text-right">Asistencia</th>
                 </tr>
@@ -196,8 +196,8 @@ export function ProfessorClassAttendancePanel({ classId }: ProfessorClassAttenda
                   return (
                     <tr key={student.uid} className="border-b border-white/5">
                       <td className="px-4 py-3">
-                        <p className="font-medium text-white">{student.displayName}</p>
-                        <p className="text-xs text-mq-muted">{student.email}</p>
+                        <p className="font-medium text-slate-900">{student.displayName}</p>
+                        <p className="text-xs text-slate-500">{student.email}</p>
                       </td>
                       <td className="px-4 py-3">
                         <div className="flex justify-end gap-2">
@@ -207,7 +207,7 @@ export function ProfessorClassAttendancePanel({ classId }: ProfessorClassAttenda
                             className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${
                               status === "present"
                                 ? "bg-emerald-500/20 text-emerald-300 ring-1 ring-emerald-400/40"
-                                : "bg-white/[0.04] text-mq-muted hover:text-white"
+                                : "bg-white/[0.04] text-slate-500 hover:text-slate-900"
                             }`}
                           >
                             Presente
@@ -218,7 +218,7 @@ export function ProfessorClassAttendancePanel({ classId }: ProfessorClassAttenda
                             className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${
                               status === "absent"
                                 ? "bg-rose-500/20 text-rose-300 ring-1 ring-rose-400/40"
-                                : "bg-white/[0.04] text-mq-muted hover:text-white"
+                                : "bg-white/[0.04] text-slate-500 hover:text-slate-900"
                             }`}
                           >
                             Ausente

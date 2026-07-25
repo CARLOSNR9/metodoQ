@@ -25,7 +25,7 @@ export function ProfessorClassFormWrapper() {
 
   if (loading) {
     return (
-      <div className="animate-pulse rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 h-48" />
+      <div className="animate-pulse rounded-xl border border-slate-200 bg-white-raised p-6 h-48" />
     );
   }
 

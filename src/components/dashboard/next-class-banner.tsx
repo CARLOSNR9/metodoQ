@@ -20,7 +20,7 @@ export function NextClassBanner({ userId }: NextClassBannerProps) {
 
   if (loading) {
     return (
-      <div className="animate-pulse rounded-2xl border border-mq-border-strong bg-mq-surface p-6 h-28" />
+      <div className="animate-pulse rounded-2xl border border-slate-200 bg-white p-6 h-28" />
     );
   }
 
@@ -30,7 +30,7 @@ export function NextClassBanner({ userId }: NextClassBannerProps) {
 
   if (!nextClass) {
     return (
-      <section className="rounded-2xl border border-dashed border-mq-border-strong bg-white/[0.02] p-5 sm:p-6">
+      <section className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-5 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-start gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent">
@@ -40,7 +40,7 @@ export function NextClassBanner({ userId }: NextClassBannerProps) {
               <p className="text-xs font-bold uppercase tracking-wider text-mq-accent">
                 Mis clases
               </p>
-              <p className="mt-1 text-sm text-mq-muted">
+              <p className="mt-1 text-sm text-slate-500">
                 No tienes clases programadas por ahora. Revisa el calendario cuando tu profesor
                 publique una sesión.
               </p>
@@ -63,7 +63,7 @@ export function NextClassBanner({ userId }: NextClassBannerProps) {
       className={`relative overflow-hidden rounded-2xl border p-5 sm:p-6 ${
         nextClass.isLiveNow || countdown.active
           ? "border-mq-accent/50 bg-gradient-to-r from-mq-accent/15 to-transparent shadow-[0_0_30px_-12px_rgba(0,209,255,0.45)]"
-          : "border-mq-border-strong bg-mq-surface"
+          : "border-slate-200 bg-white"
       }`}
     >
       <div className="flex flex-col gap-5">
@@ -84,13 +84,13 @@ export function NextClassBanner({ userId }: NextClassBannerProps) {
                   {nextClass.isLiveNow ? "Clase en vivo ahora" : "Próxima clase"}
                 </p>
                 {upcoming.length > 1 ? (
-                  <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold text-mq-muted">
+                  <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-semibold text-slate-500">
                     +{upcoming.length - 1} más
                   </span>
                 ) : null}
               </div>
-              <h2 className="mt-1 text-xl font-bold text-white sm:text-2xl">{nextClass.title}</h2>
-              <p className="mt-1 text-sm capitalize text-mq-muted">
+              <h2 className="mt-1 text-xl font-bold text-slate-900 sm:text-2xl">{nextClass.title}</h2>
+              <p className="mt-1 text-sm capitalize text-slate-500">
                 {formatClassDate(nextClass.classDate)} · {formatClassTime(nextClass.classDate)} ·{" "}
                 {nextClass.duration} min
               </p>
@@ -114,7 +114,7 @@ export function NextClassBanner({ userId }: NextClassBannerProps) {
 
           <Link
             href="/dashboard/clases"
-            className="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-xl border border-mq-border px-5 py-2.5 text-sm font-semibold text-white transition hover:border-mq-accent/40 hover:text-mq-accent"
+            className="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-semibold text-slate-900 transition hover:border-mq-accent/40 hover:text-mq-accent"
           >
             Ver calendario
             <ChevronRight size={16} />

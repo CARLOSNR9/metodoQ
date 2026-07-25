@@ -46,10 +46,10 @@ export function StreakReminderBanner({
       <div className="flex items-start gap-3">
         <Flame className="mt-0.5 h-5 w-5 shrink-0 text-orange-400" fill="currentColor" />
         <div>
-          <p className="text-sm font-semibold text-white">
+          <p className="text-sm font-semibold text-slate-900">
             No pierdas tu racha de {streakCount} día{streakCount === 1 ? "" : "s"}
           </p>
-          <p className="mt-0.5 text-xs text-mq-muted">
+          <p className="mt-0.5 text-xs text-slate-500">
             Completa hoy tu meta de {targetLabel} para mantener la racha.
           </p>
         </div>

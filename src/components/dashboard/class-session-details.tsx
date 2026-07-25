@@ -21,7 +21,7 @@ export function ClassSessionDetails({ cls, layout = "stack" }: ClassSessionDetai
   return (
     <div>
       {cls.description?.trim() ? (
-        <p className="mt-2 text-sm leading-relaxed text-mq-muted">{cls.description}</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-500">{cls.description}</p>
       ) : null}
 
       {(showMeetLink || hasRecording) && (

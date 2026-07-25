@@ -2,17 +2,17 @@ import type { AdminAlertItem } from "@/lib/server/admin-metrics";
 
 export function MetricCard({ label, value }: { label: string; value: number }) {
   return (
-    <article className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-5 shadow-lg">
-      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">{label}</p>
-      <p className="mt-3 text-3xl font-semibold text-white sm:text-4xl">{value}</p>
+    <article className="rounded-xl border border-slate-200 bg-white-raised p-5 shadow-lg">
+      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">{label}</p>
+      <p className="mt-3 text-3xl font-semibold text-slate-900 sm:text-4xl">{value}</p>
     </article>
   );
 }
 
 export function FunnelAlerts({ alerts }: { alerts: AdminAlertItem[] }) {
   return (
-    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-      <h3 className="text-lg font-semibold text-white">Alertas de embudo</h3>
+    <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
+      <h3 className="text-lg font-semibold text-slate-900">Alertas de embudo</h3>
       {alerts.length > 0 ? (
         <ul className="mt-6 space-y-4">
           {alerts.map((alert) => (
@@ -26,7 +26,7 @@ export function FunnelAlerts({ alerts }: { alerts: AdminAlertItem[] }) {
           ))}
         </ul>
       ) : (
-        <p className="mt-6 text-sm text-mq-muted">
+        <p className="mt-6 text-sm text-slate-500">
           Embudo saludable. No hay alertas críticas de fricción.
         </p>
       )}

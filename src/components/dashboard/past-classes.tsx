@@ -59,7 +59,7 @@ export function PastClasses() {
 
   if (loading && isPro) {
     return (
-      <div className="animate-pulse rounded-2xl border border-mq-border-strong bg-mq-surface p-6 h-32" />
+      <div className="animate-pulse rounded-2xl border border-slate-200 bg-white p-6 h-32" />
     );
   }
 
@@ -67,11 +67,11 @@ export function PastClasses() {
     return (
       <section className="space-y-4 opacity-75">
         <div className="flex items-center gap-2 px-1">
-          <History className="w-5 h-5 text-mq-muted" />
-          <h2 className="text-xl font-bold text-white">Clases pasadas (80+ horas)</h2>
+          <History className="w-5 h-5 text-slate-500" />
+          <h2 className="text-xl font-bold text-slate-900">Clases pasadas (80+ horas)</h2>
         </div>
-        <div className="rounded-xl border border-dashed border-mq-border bg-white/[0.02] p-8 text-center">
-          <p className="text-sm text-mq-muted">Accede a la biblioteca completa de clases estratégicas.</p>
+        <div className="rounded-xl border border-dashed border-slate-200 bg-slate-50 p-8 text-center">
+          <p className="text-sm text-slate-500">Accede a la biblioteca completa de clases estratégicas.</p>
         </div>
       </section>
     );
@@ -80,8 +80,8 @@ export function PastClasses() {
   return (
     <section className="space-y-4">
       <div className="flex items-center gap-2 px-1">
-        <History className="w-5 h-5 text-mq-muted" />
-        <h2 className="text-xl font-bold text-white">Clases pasadas</h2>
+        <History className="w-5 h-5 text-slate-500" />
+        <h2 className="text-xl font-bold text-slate-900">Clases pasadas</h2>
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -90,12 +90,12 @@ export function PastClasses() {
           return (
             <div 
               key={cls.id} 
-              className="group rounded-xl border border-mq-border bg-white/[0.02] p-4 transition-all hover:bg-white/[0.04]"
+              className="group rounded-xl border border-slate-200 bg-slate-50 p-4 transition-all hover:bg-white/[0.04]"
             >
-              <h3 className="font-semibold text-white text-sm line-clamp-1 mb-1">
+              <h3 className="font-semibold text-slate-900 text-sm line-clamp-1 mb-1">
                 {cls.title}
               </h3>
-              <p className="text-[10px] text-mq-muted uppercase tracking-wider mb-3">
+              <p className="text-[10px] text-slate-500 uppercase tracking-wider mb-3">
                 {classDate.toLocaleDateString("es-ES", { day: 'numeric', month: 'short', year: 'numeric' })}
               </p>
               
@@ -104,13 +104,13 @@ export function PastClasses() {
                   href={cls.recordingLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-white/5 text-white hover:bg-white/10 font-bold py-2 px-3 rounded-lg text-xs transition-all border border-white/10"
+                  className="flex items-center justify-center gap-2 w-full bg-slate-50 text-slate-900 hover:bg-slate-100 font-bold py-2 px-3 rounded-lg text-xs transition-all border border-slate-200"
                 >
                   <PlayCircle className="w-3.5 h-3.5 text-mq-accent" />
                   Ver grabación
                 </a>
               ) : (
-                <div className="text-[10px] text-mq-muted italic text-center py-2 bg-white/[0.01] rounded border border-white/[0.05]">
+                <div className="text-[10px] text-slate-500 italic text-center py-2 bg-white/[0.01] rounded border border-white/[0.05]">
                   Grabación no disponible
                 </div>
               )}

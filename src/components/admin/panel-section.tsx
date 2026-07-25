@@ -13,10 +13,10 @@ export function PanelSection({
 }: PanelSectionProps) {
   return (
     <section className={`space-y-6 ${className}`}>
-      <div className="border-b border-mq-border-strong pb-4">
-        <h2 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{title}</h2>
+      <div className="border-b border-slate-200 pb-4">
+        <h2 className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl">{title}</h2>
         {description ? (
-          <p className="mt-2 max-w-3xl text-sm text-mq-muted sm:text-base">{description}</p>
+          <p className="mt-2 max-w-3xl text-sm text-slate-500 sm:text-base">{description}</p>
         ) : null}
       </div>
       <div className="space-y-8">{children}</div>

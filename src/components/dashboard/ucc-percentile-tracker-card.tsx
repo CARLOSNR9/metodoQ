@@ -38,8 +38,8 @@ function SubjectRow({ subject }: { subject: SubjectStatus }) {
   return (
     <div className="space-y-1.5">
       <div className="flex items-center justify-between gap-2 text-xs">
-        <span className="font-bold text-white">{subject.label}</span>
-        <span className="shrink-0 text-mq-muted">
+        <span className="font-bold text-slate-900">{subject.label}</span>
+        <span className="shrink-0 text-slate-500">
           {subject.questions > 0 ? (
             <>
               {subject.score}% · {subject.questions} preg.
@@ -49,7 +49,7 @@ function SubjectRow({ subject }: { subject: SubjectStatus }) {
           )}
         </span>
       </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-white/5">
+      <div className="h-1.5 overflow-hidden rounded-full bg-slate-50">
         <div
           className={`h-full rounded-full transition-all ${barColor}`}
           style={{ width: `${subject.questions > 0 ? subject.score : 0}%` }}
@@ -100,7 +100,7 @@ export function UccPercentileTrackerCard({
     <motion.section
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className="rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 sm:p-8"
+      className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6 sm:p-8"
     >
       <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
         <div>
@@ -110,8 +110,8 @@ export function UccPercentileTrackerCard({
               Percentil competitivo · Fase I
             </span>
           </div>
-          <h2 className="text-2xl font-black text-white">Tu posición vs cohorte</h2>
-          <p className="mt-1 text-sm text-mq-muted">
+          <h2 className="text-2xl font-black text-slate-900">Tu posición vs cohorte</h2>
+          <p className="mt-1 text-sm text-slate-500">
             Meta UCC: percentil {UCC_P75_CUTOFF}+ para que evalúen tu hoja de vida.
           </p>
         </div>
@@ -122,13 +122,13 @@ export function UccPercentileTrackerCard({
               : "border-rose-500/25 bg-rose-500/10"
           }`}
         >
-          <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+          <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
             {cohortStats?.source === "cohort" ? "Percentil cohorte" : "Percentil est."}
           </p>
-          <p className="text-3xl font-black text-white">
+          <p className="text-3xl font-black text-slate-900">
             {cohortLoading ? "…" : `P${displayPercentile}`}
           </p>
-          <p className="text-xs font-medium text-mq-muted">
+          <p className="text-xs font-medium text-slate-500">
             {getPercentileLabel(displayPercentile)}
           </p>
         </div>
@@ -137,7 +137,7 @@ export function UccPercentileTrackerCard({
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="space-y-4">
           <div className="relative pt-2">
-            <div className="relative h-4 overflow-hidden rounded-full bg-white/5">
+            <div className="relative h-4 overflow-hidden rounded-full bg-slate-50">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${gaugePercent}%` }}
@@ -151,7 +151,7 @@ export function UccPercentileTrackerCard({
                 title={`Corte P${UCC_P75_CUTOFF}`}
               />
             </div>
-            <div className="mt-2 flex justify-between text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+            <div className="mt-2 flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
               <span>P0</span>
               <span className="text-rose-300">P{UCC_P75_CUTOFF} corte</span>
               <span>P100</span>
@@ -160,28 +160,28 @@ export function UccPercentileTrackerCard({
 
           <dl className="grid grid-cols-2 gap-3 text-sm">
             <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
-              <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                 Promedio acumulado
               </dt>
-              <dd className="mt-1 text-xl font-black text-white">{estimate.score}%</dd>
+              <dd className="mt-1 text-xl font-black text-slate-900">{estimate.score}%</dd>
             </div>
             <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
-              <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                 Puntaje ~P75
               </dt>
               <dd className="mt-1 text-xl font-black text-rose-300">{p75Score}%</dd>
             </div>
             <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
-              <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                 Preguntas base
               </dt>
-              <dd className="mt-1 text-xl font-black text-white">{totalQuestions}</dd>
+              <dd className="mt-1 text-xl font-black text-slate-900">{totalQuestions}</dd>
             </div>
             <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
-              <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+              <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                 Semana plan
               </dt>
-              <dd className="mt-1 text-xl font-black text-white">{weekNumber}/24</dd>
+              <dd className="mt-1 text-xl font-black text-slate-900">{weekNumber}/24</dd>
             </div>
           </dl>
 
@@ -190,14 +190,14 @@ export function UccPercentileTrackerCard({
               <Users className="mt-0.5 h-5 w-5 shrink-0 text-mq-accent" />
               <p className="text-sm text-mq-accent">
                 Cohort MetodoQ UCC:{" "}
-                <span className="font-bold text-white">
+                <span className="font-bold text-slate-900">
                   #{cohortStats.rank} de {cohortStats.cohortSize}
                 </span>
                 {cohortStats.p75 !== null ? (
                   <>
                     {" "}
                     · P75 cohorte ≈{" "}
-                    <span className="font-bold text-white">{cohortStats.p75}%</span>
+                    <span className="font-bold text-slate-900">{cohortStats.p75}%</span>
                   </>
                 ) : null}
               </p>
@@ -209,12 +209,12 @@ export function UccPercentileTrackerCard({
               <TrendingUp className="mt-0.5 h-5 w-5 shrink-0 text-amber-400" />
               <p className="text-sm text-amber-100">
                 A este ritmo (~45 preg/día), podrías alcanzar P75 en aproximadamente{" "}
-                <span className="font-bold text-white">
+                <span className="font-bold text-slate-900">
                   {estimate.projectionWeeksToP75} semana
                   {estimate.projectionWeeksToP75 === 1 ? "" : "s"}
                 </span>
                 . Te faltan{" "}
-                <span className="font-bold text-white">
+                <span className="font-bold text-slate-900">
                   {Math.max(0, UCC_P75_CUTOFF - displayPercentile)} pts
                 </span>{" "}
                 de percentil.
@@ -235,17 +235,17 @@ export function UccPercentileTrackerCard({
 
         <div className="space-y-4">
           <div className="flex items-center justify-between gap-3">
-            <h3 className="text-sm font-black uppercase tracking-wider text-white">
+            <h3 className="text-sm font-black uppercase tracking-wider text-slate-900">
               Desglose por asignatura
             </h3>
             {subjects.length > 0 && (
-              <span className="text-[10px] text-mq-muted">
+              <span className="text-[10px] text-slate-500">
                 {subjects.length} asignatura{subjects.length === 1 ? "" : "s"}
               </span>
             )}
           </div>
           {subjects.length === 0 ? (
-            <p className="text-xs text-mq-muted">
+            <p className="text-xs text-slate-500">
               Responde preguntas para ver tu desempeño por asignatura.
             </p>
           ) : (

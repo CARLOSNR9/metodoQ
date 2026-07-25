@@ -26,7 +26,7 @@ export function StudyBoardPreviewCard({ userId }: StudyBoardPreviewCardProps) {
   return (
     <motion.div
       whileHover={{ scale: 1.02 }}
-      className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-xl"
+      className="rounded-[2rem] border border-slate-200 bg-white/[0.03] p-6 shadow-xl"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-mq-accent/15 text-mq-accent">
@@ -40,8 +40,8 @@ export function StudyBoardPreviewCard({ userId }: StudyBoardPreviewCardProps) {
       </div>
 
       <div className="mt-5 space-y-2">
-        <h3 className="text-lg font-black text-white">Mi Estudio</h3>
-        <p className="text-sm leading-relaxed text-mq-muted">
+        <h3 className="text-lg font-black text-slate-900">Mi Estudio</h3>
+        <p className="text-sm leading-relaxed text-slate-500">
           {count > 0 && latestTopic
             ? `Última guardada: ${latestTopic}. Repasa tus píldoras de teoría cuando tengas tiempo.`
             : "Guarda píldoras de teoría al fallar preguntas en entrenamiento y repásalas aquí."}

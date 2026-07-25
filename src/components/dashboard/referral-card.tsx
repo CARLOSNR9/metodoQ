@@ -86,7 +86,7 @@ export function ReferralCard({
 
   if (loading) {
     return (
-      <div className="h-56 animate-pulse rounded-[2rem] border border-mq-border-strong bg-white/[0.04]" />
+      <div className="h-56 animate-pulse rounded-[2rem] border border-slate-200 bg-white/[0.04]" />
     );
   }
 
@@ -128,8 +128,8 @@ export function ReferralCard({
             <Sparkles size={12} />
             {copy.badge}
           </div>
-          <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl">{copy.title}</h2>
-          <p className="text-sm leading-relaxed text-mq-muted sm:text-base">{copy.description}</p>
+          <h2 className="text-2xl font-bold leading-tight text-slate-900 sm:text-3xl">{copy.title}</h2>
+          <p className="text-sm leading-relaxed text-slate-500 sm:text-base">{copy.description}</p>
         </div>
 
         <div className="min-w-0 rounded-3xl bg-white/[0.03] p-4 backdrop-blur-md sm:p-5">
@@ -138,10 +138,10 @@ export function ReferralCard({
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mq-premium-purple/20 text-mq-premium-purple">
                 <Users size={20} />
               </div>
-              <span className="text-sm font-bold text-white">{currentCount} de 3 referidos</span>
+              <span className="text-sm font-bold text-slate-900">{currentCount} de 3 referidos</span>
             </div>
             {remaining > 0 ? (
-              <span className="shrink-0 text-xs font-medium text-mq-muted">
+              <span className="shrink-0 text-xs font-medium text-slate-500">
                 Faltan {remaining} colegas
               </span>
             ) : (
@@ -151,7 +151,7 @@ export function ReferralCard({
             )}
           </div>
 
-          <div className="mb-5 h-3 w-full overflow-hidden rounded-full bg-white/10">
+          <div className="mb-5 h-3 w-full overflow-hidden rounded-full bg-slate-100">
             <div
               className="h-full bg-mq-premium-purple transition-all duration-1000 ease-out shadow-[0_0_15px_rgba(168,85,247,0.5)]"
               style={{ width: `${progressPercentage}%` }}
@@ -159,8 +159,8 @@ export function ReferralCard({
           </div>
 
           <div className="flex min-w-0 flex-col gap-3">
-            <div className="min-w-0 overflow-hidden rounded-xl border border-white/10 bg-black/20 px-4 py-3">
-              <p className="truncate font-mono text-xs text-mq-muted">{referralLink}</p>
+            <div className="min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-black/20 px-4 py-3">
+              <p className="truncate font-mono text-xs text-slate-500">{referralLink}</p>
             </div>
             <button
               type="button"
@@ -184,7 +184,7 @@ export function ReferralCard({
           {copy.showResidenteLink && remaining === 0 ? (
             <Link
               href="/residente"
-              className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-mq-premium-purple/30 bg-mq-premium-purple/10 text-xs font-bold text-white transition-all hover:bg-mq-premium-purple/20"
+              className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-mq-premium-purple/30 bg-mq-premium-purple/10 text-xs font-bold text-slate-900 transition-all hover:bg-mq-premium-purple/20"
             >
               Postular a Residente
               <ArrowRight size={14} />

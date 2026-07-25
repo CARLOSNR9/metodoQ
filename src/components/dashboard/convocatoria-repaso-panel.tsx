@@ -58,17 +58,17 @@ export function ConvocatoriaRepasoPanel({
           }`}
         >
           <div className="min-w-0 flex-1">
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-mq-muted">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
               Tu resultado
             </p>
-            <p className="mt-1 text-3xl font-black text-white">
+            <p className="mt-1 text-3xl font-black text-slate-900">
               {attempt.correctAnswers}
-              <span className="text-xl text-mq-muted">/{questionCount}</span>
+              <span className="text-xl text-slate-500">/{questionCount}</span>
               <span className="ml-3 text-lg font-bold text-mq-accent">
                 {attempt.scorePercentage}%
               </span>
             </p>
-            <p className="mt-1 text-xs text-mq-muted">
+            <p className="mt-1 text-xs text-slate-500">
               {attempt.wrongAnswers} incorrectas · 1 intento registrado
             </p>
           </div>
@@ -85,7 +85,7 @@ export function ConvocatoriaRepasoPanel({
               {attempt.wrongAnswers > 0 ? (
                 <Link
                   href={wrongOnlyHref}
-                  className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 text-sm font-bold text-white transition hover:bg-white/[0.08]"
+                  className="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/[0.04] px-5 text-sm font-bold text-slate-900 transition hover:bg-white/[0.08]"
                 >
                   Solo fallidas
                   <ArrowRight size={14} />
@@ -95,7 +95,7 @@ export function ConvocatoriaRepasoPanel({
           ) : attempt.resultId ? (
             <Link
               href={reviewHref}
-              className="inline-flex min-h-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-5 text-sm font-bold text-white transition hover:bg-white/[0.08]"
+              className="inline-flex min-h-10 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.04] px-5 text-sm font-bold text-slate-900 transition hover:bg-white/[0.08]"
             >
               Ver en historial
             </Link>
@@ -104,24 +104,24 @@ export function ConvocatoriaRepasoPanel({
       ) : null}
 
       {weakestAxes.length > 0 ? (
-        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-amber-300">
             <AlertTriangle size={12} />
             Áreas a repasar
           </p>
-          <p className="mt-2 text-sm text-mq-muted">
+          <p className="mt-2 text-sm text-slate-500">
             Prioriza estas áreas del examen UCC antes del simulacro real.
           </p>
           <ul className="mt-4 space-y-3">
             {weakestAxes.map((axis) => (
               <li key={axis.axis}>
                 <div className="mb-1 flex items-center justify-between gap-3 text-sm">
-                  <span className="font-semibold text-white">{axis.label}</span>
-                  <span className="text-mq-muted">
+                  <span className="font-semibold text-slate-900">{axis.label}</span>
+                  <span className="text-slate-500">
                     {axis.percentage}% · {axis.wrong} fallo{axis.wrong === 1 ? "" : "s"}
                   </span>
                 </div>
-                <div className="h-2 overflow-hidden rounded-full bg-white/10">
+                <div className="h-2 overflow-hidden rounded-full bg-slate-100">
                   <div
                     className={`h-full rounded-full transition-all ${
                       axis.percentage >= 70
@@ -140,8 +140,8 @@ export function ConvocatoriaRepasoPanel({
       ) : null}
 
       {!compact && topTopics.length > 0 ? (
-        <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-muted">
+        <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
             Temas con más errores
           </p>
           <div className="mt-3 flex flex-wrap gap-2">

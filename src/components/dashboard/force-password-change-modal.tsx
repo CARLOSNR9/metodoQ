@@ -71,7 +71,7 @@ export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChange
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="relative w-full max-w-md overflow-hidden bg-mq-surface border border-red-500/30 rounded-[2rem] shadow-[0_32px_64px_-16px_rgba(220,38,38,0.2)]"
+        className="relative w-full max-w-md overflow-hidden bg-white border border-red-500/30 rounded-[2rem] shadow-[0_32px_64px_-16px_rgba(220,38,38,0.2)]"
       >
         <div className="absolute top-0 w-full h-32 opacity-10 -z-10 bg-gradient-to-b from-red-500 to-transparent" />
 
@@ -80,8 +80,8 @@ export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChange
             <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10 text-red-500 mb-6">
               <Lock size={32} />
             </div>
-            <h2 className="text-2xl font-black text-white">Actualización de Seguridad</h2>
-            <p className="mt-2 text-sm leading-relaxed text-mq-muted">
+            <h2 className="text-2xl font-black text-slate-900">Actualización de Seguridad</h2>
+            <p className="mt-2 text-sm leading-relaxed text-slate-500">
               Has iniciado sesión con una contraseña temporal. Por tu seguridad, debes crear una contraseña personal antes de continuar.
             </p>
           </div>
@@ -95,7 +95,7 @@ export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChange
             )}
 
             <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-mq-muted">
+              <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
                 Nueva Contraseña
               </label>
               <div className="relative">
@@ -103,14 +103,14 @@ export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChange
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full rounded-xl border border-white/10 bg-white/5 p-4 pr-12 text-sm text-white placeholder:text-mq-muted focus:border-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 pr-12 text-sm text-slate-900 placeholder:text-slate-500 focus:border-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent"
                   placeholder="Mínimo 6 caracteres"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-mq-muted hover:text-white"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-900"
                 >
                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                 </button>
@@ -118,14 +118,14 @@ export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChange
             </div>
 
             <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-mq-muted">
+              <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
                 Confirmar Contraseña
               </label>
               <input
                 type={showPassword ? "text" : "password"}
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white placeholder:text-mq-muted focus:border-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent"
+                className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-900 placeholder:text-slate-500 focus:border-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent"
                 placeholder="Vuelve a escribir la contraseña"
                 required
               />

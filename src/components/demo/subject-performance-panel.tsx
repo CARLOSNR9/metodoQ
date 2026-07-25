@@ -47,8 +47,8 @@ function SubjectBar({ subject, barClass }: { subject: SubjectStatus; barClass: s
   return (
     <div className="space-y-1.5">
       <div className="flex items-center justify-between gap-3 text-xs">
-        <span className="truncate font-semibold text-white">{subject.label}</span>
-        <span className="shrink-0 text-mq-muted text-[10px]">
+        <span className="truncate font-semibold text-slate-900">{subject.label}</span>
+        <span className="shrink-0 text-slate-500 text-[10px]">
           <span className="font-bold text-emerald-400">{buenas}% Buenas</span> {" · "}
           <span className="font-bold text-red-400/80">{malas}% Malas</span>
         </span>
@@ -84,9 +84,9 @@ function SubjectSection({
         <div className="min-w-0 space-y-0.5">
           <h5 className={`text-xs font-black uppercase tracking-wider ${config.labelClass}`}>
             {config.title}{" "}
-            <span className="font-bold text-white/70">({subjects.length})</span>
+            <span className="font-bold text-slate-900/70">({subjects.length})</span>
           </h5>
-          <p className="text-[10px] leading-relaxed text-mq-muted">{config.hint}</p>
+          <p className="text-[10px] leading-relaxed text-slate-500">{config.hint}</p>
         </div>
       </div>
       <div className="space-y-3">
@@ -110,16 +110,16 @@ export function SubjectPerformancePanel({
   return (
     <div className="space-y-4">
       <div className="space-y-1">
-        <h4 className="text-sm font-black uppercase tracking-widest text-white">
+        <h4 className="text-sm font-black uppercase tracking-widest text-slate-900">
           Anatomía de tus fallos
         </h4>
-        <p className="text-[10px] text-mq-muted">
+        <p className="text-[10px] text-slate-500">
           {subtitle ?? "Cuánto aciertas en cada asignatura. Más barra = mejor rendimiento."}
         </p>
       </div>
 
       {subjects.length === 0 ? (
-        <div className="flex min-h-[12rem] items-center justify-center rounded-2xl border border-dashed border-white/10 bg-white/[0.02] px-6 text-center text-xs text-mq-muted">
+        <div className="flex min-h-[12rem] items-center justify-center rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-6 text-center text-xs text-slate-500">
           {emptyMessage}
         </div>
       ) : (

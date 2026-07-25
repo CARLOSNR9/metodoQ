@@ -122,32 +122,32 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
   return (
     <div className="space-y-8">
       {loadingCourses ? (
-        <div className="animate-pulse rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 h-32" />
+        <div className="animate-pulse rounded-xl border border-slate-200 bg-white-raised p-6 h-32" />
       ) : null}
-      <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-        <h2 className="text-xl font-semibold text-white">Crear grupo</h2>
-        <p className="mt-1 text-sm text-mq-muted">
+      <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
+        <h2 className="text-xl font-semibold text-slate-900">Crear grupo</h2>
+        <p className="mt-1 text-sm text-slate-500">
           Un grupo reúne a tus alumnos. Matrícalos y luego programa clases solo para ese
           grupo.
         </p>
 
         <form action={handleCreate} className="mt-6 grid gap-4">
           <div>
-            <label className="text-xs font-semibold uppercase text-mq-muted">Nombre</label>
+            <label className="text-xs font-semibold uppercase text-slate-500">Nombre</label>
             <input
               name="name"
               required
               placeholder="Cardiología — Grupo A"
-              className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
             />
           </div>
           <div>
-            <label className="text-xs font-semibold uppercase text-mq-muted">Descripción</label>
+            <label className="text-xs font-semibold uppercase text-slate-500">Descripción</label>
             <textarea
               name="description"
               rows={2}
               placeholder="Objetivo del grupo, universidad, especialidad..."
-              className="mt-1 w-full resize-none rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+              className="mt-1 w-full resize-none rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
             />
           </div>
           <div>
@@ -165,9 +165,9 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
         {error ? <p className="mt-4 text-sm text-rose-400">{error}</p> : null}
       </section>
 
-      <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-        <h2 className="text-xl font-semibold text-white">Mis grupos</h2>
-        <p className="mt-1 text-sm text-mq-muted">
+      <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
+        <h2 className="text-xl font-semibold text-slate-900">Mis grupos</h2>
+        <p className="mt-1 text-sm text-slate-500">
           {courses.length} grupo{courses.length === 1 ? "" : "s"} activo
           {courses.length === 1 ? "" : "s"}.
         </p>
@@ -175,7 +175,7 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
         {listError ? <p className="mt-4 text-sm text-rose-400">{listError}</p> : null}
 
         {courses.length === 0 ? (
-          <p className="mt-6 text-sm text-mq-muted">
+          <p className="mt-6 text-sm text-slate-500">
             Aún no tienes grupos. Crea el primero arriba para empezar a matricular alumnos.
           </p>
         ) : (
@@ -197,7 +197,7 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
               return (
                 <li
                   key={course.id}
-                  className="rounded-xl border border-mq-border bg-mq-surface/60 p-5"
+                  className="rounded-xl border border-slate-200 bg-white/60 p-5"
                 >
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <button
@@ -205,9 +205,9 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
                       onClick={() => setExpandedId(isOpen ? null : course.id)}
                       className="text-left"
                     >
-                      <p className="text-lg font-semibold text-white">{course.name}</p>
+                      <p className="text-lg font-semibold text-slate-900">{course.name}</p>
                       {course.description ? (
-                        <p className="mt-1 text-sm text-mq-muted">{course.description}</p>
+                        <p className="mt-1 text-sm text-slate-500">{course.description}</p>
                       ) : null}
                       <p className="mt-2 text-xs text-mq-accent">
                         {enrolled.length} alumno{enrolled.length === 1 ? "" : "s"} matriculado
@@ -226,13 +226,13 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
                   </div>
 
                   {isOpen ? (
-                    <div className="mt-5 space-y-5 border-t border-white/10 pt-5">
+                    <div className="mt-5 space-y-5 border-t border-slate-200 pt-5">
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                           Matriculados
                         </p>
                         {enrolled.length === 0 ? (
-                          <p className="mt-2 text-sm text-mq-muted">Sin alumnos aún.</p>
+                          <p className="mt-2 text-sm text-slate-500">Sin alumnos aún.</p>
                         ) : (
                           <ul className="mt-3 space-y-2">
                             {enrolled.map((student) => (
@@ -241,16 +241,16 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
                                 className="flex items-center justify-between rounded-lg bg-white/[0.03] px-3 py-2"
                               >
                                 <div>
-                                  <p className="text-sm font-medium text-white">
+                                  <p className="text-sm font-medium text-slate-900">
                                     {student.displayName}
                                   </p>
-                                  <p className="text-xs text-mq-muted">{student.email}</p>
+                                  <p className="text-xs text-slate-500">{student.email}</p>
                                 </div>
                                 <button
                                   type="button"
                                   disabled={isPending}
                                   onClick={() => handleUnenroll(course.id, student.uid)}
-                                  className="inline-flex items-center gap-1 text-xs font-semibold text-mq-muted hover:text-rose-300"
+                                  className="inline-flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-rose-300"
                                 >
                                   <UserMinus size={14} />
                                   Quitar
@@ -262,7 +262,7 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
                       </div>
 
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+                        <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                           Agregar alumno
                         </p>
                         <input
@@ -275,7 +275,7 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
                             }))
                           }
                           placeholder="Buscar por nombre o correo"
-                          className="mt-2 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white"
+                          className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900"
                         />
                         <ul className="mt-3 max-h-48 space-y-2 overflow-y-auto">
                           {available.slice(0, 8).map((student) => (
@@ -284,10 +284,10 @@ export function ProfessorCoursesPanel({ students }: ProfessorCoursesPanelProps) 
                               className="flex items-center justify-between rounded-lg bg-white/[0.03] px-3 py-2"
                             >
                               <div>
-                                <p className="text-sm font-medium text-white">
+                                <p className="text-sm font-medium text-slate-900">
                                   {student.displayName}
                                 </p>
-                                <p className="text-xs text-mq-muted">
+                                <p className="text-xs text-slate-500">
                                   {student.email} · {student.plan}
                                 </p>
                               </div>

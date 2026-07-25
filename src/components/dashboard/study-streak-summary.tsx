@@ -38,7 +38,7 @@ function DayPill({ day }: { day: DailyHabitDay }) {
               ? "border-rose-500/30 bg-rose-500/10 text-rose-400"
               : partial || pending
                 ? "border-amber-500/30 bg-amber-500/10 text-amber-300"
-                : "border-white/10 bg-white/[0.03] text-mq-muted"
+                : "border-slate-200 bg-white/[0.03] text-slate-500"
         }`}
         title={
           studied
@@ -70,7 +70,7 @@ function DayPill({ day }: { day: DailyHabitDay }) {
       </div>
       <span
         className={`text-[10px] font-bold uppercase tracking-wider ${
-          day.isToday ? "text-mq-accent" : "text-mq-muted"
+          day.isToday ? "text-mq-accent" : "text-slate-500"
         }`}
       >
         {day.isToday ? "Hoy" : day.weekdayShort}
@@ -141,7 +141,7 @@ export function StudyStreakSummary({
             className={`flex h-14 w-14 items-center justify-center rounded-2xl ${
               displayStreak > 0
                 ? "bg-orange-500 text-white shadow-[0_0_24px_rgba(249,115,22,0.35)]"
-                : "bg-white/5 text-mq-muted"
+                : "bg-slate-50 text-slate-500"
             }`}
           >
             <Flame
@@ -154,13 +154,13 @@ export function StudyStreakSummary({
             <p className="text-[10px] font-bold uppercase tracking-widest text-orange-300/90">
               {habitLabel} · últimos 5 días
             </p>
-            <p className="text-2xl font-black text-white">
+            <p className="text-2xl font-black text-slate-900">
               {isLoading ? "..." : `${displayStreak} ${displayStreak === 1 ? "día" : "días"} de racha`}
             </p>
-            <p className="mt-1 text-sm text-mq-muted">
+            <p className="mt-1 text-sm text-slate-500">
               {planStartedAt ? (
                 <>
-                  Desde el <span className="font-semibold text-white">{planStartLabel}</span>
+                  Desde el <span className="font-semibold text-slate-900">{planStartLabel}</span>
                   {incompleteDays > 0 ? (
                     <>
                       {" "}
@@ -185,7 +185,7 @@ export function StudyStreakSummary({
             ? Array.from({ length: 5 }).map((_, index) => (
                 <div
                   key={index}
-                  className="h-11 w-11 animate-pulse rounded-2xl bg-white/10"
+                  className="h-11 w-11 animate-pulse rounded-2xl bg-slate-100"
                 />
               ))
             : days.map((day) => <DayPill key={day.dateKey} day={day} />)}
@@ -195,11 +195,11 @@ export function StudyStreakSummary({
       {!isLoading && todayProgress && todayProgress.questionsCount > 0 && todayProgress.status === "today_pending" && (
         <p className="mt-4 rounded-xl border border-mq-accent/25 bg-mq-accent/10 px-4 py-3 text-sm text-mq-accent">
           Hoy llevas{" "}
-          <span className="font-bold text-white">
+          <span className="font-bold text-slate-900">
             {todayProgress.questionsCount}/{dailyTarget}
           </span>{" "}
           preguntas. Te faltan{" "}
-          <span className="font-bold text-white">
+          <span className="font-bold text-slate-900">
             {dailyTarget - todayProgress.questionsCount}
           </span>{" "}
           para cerrar el día.
@@ -214,7 +214,7 @@ export function StudyStreakSummary({
       )}
 
       {!isLoading && displayStreak === 0 && incompleteDays < 2 && !todayProgress?.questionsCount && (
-        <p className="mt-4 text-sm text-mq-muted">
+        <p className="mt-4 text-sm text-slate-500">
           {isUccMiTrack
             ? `Tu misión UCC exige ${dailyTarget} preguntas diarias (~90 min). Entrena hoy para encender la llama.`
             : `Tu plan Pro exige ${dailyTarget} preguntas diarias. Entrena hoy para encender la llama.`}
@@ -224,7 +224,7 @@ export function StudyStreakSummary({
       <div className="mt-4 flex justify-end">
         <Link
           href="/dashboard/perfil"
-          className="text-xs font-bold uppercase tracking-wider text-mq-accent transition-colors hover:text-white"
+          className="text-xs font-bold uppercase tracking-wider text-mq-accent transition-colors hover:text-slate-900"
         >
           Ver cronograma completo →
         </Link>

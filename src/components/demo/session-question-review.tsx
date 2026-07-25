@@ -55,7 +55,7 @@ function ReviewFilterButton({
       className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
         active
           ? "border-mq-accent/40 bg-mq-accent/15 text-mq-accent"
-          : "border-white/10 bg-white/[0.03] text-mq-muted hover:border-white/20 hover:text-white"
+          : "border-slate-200 bg-white/[0.03] text-slate-500 hover:border-slate-300 hover:text-slate-900"
       }`}
     >
       {label} ({count})
@@ -78,7 +78,7 @@ function ReviewQuestionCard({
   const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
   return (
-    <article className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
+    <article className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
       <button
         type="button"
         onClick={onToggle}
@@ -93,7 +93,7 @@ function ReviewQuestionCard({
         </span>
         <span className="min-w-0 flex-1">
           <span className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-[0.14em] text-mq-muted">
+            <span className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
               Pregunta {item.index}
             </span>
             <span
@@ -106,17 +106,17 @@ function ReviewQuestionCard({
               {isCorrect ? "Acertaste" : "Fallaste"}
             </span>
             {question.topic ? (
-              <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-mq-accent">
+              <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-mq-accent">
                 {question.topic}
               </span>
             ) : null}
           </span>
-          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-white/90">
+          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-900/90">
             {question.statement}
           </p>
         </span>
         <ChevronDown
-          className={`mt-1 h-5 w-5 shrink-0 text-mq-muted transition-transform ${
+          className={`mt-1 h-5 w-5 shrink-0 text-slate-500 transition-transform ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -131,7 +131,7 @@ function ReviewQuestionCard({
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <div className="space-y-4 border-t border-white/10 px-4 pb-5 pt-4 sm:px-5">
+            <div className="space-y-4 border-t border-slate-200 px-4 pb-5 pt-4 sm:px-5">
               <p className="text-sm leading-relaxed text-slate-200">{question.statement}</p>
 
               {!isCorrect && item.selectedOptionLabel ? (
@@ -154,7 +154,7 @@ function ReviewQuestionCard({
                 </p>
               </div>
 
-              <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
+              <div className="rounded-xl border border-slate-200 bg-white/[0.03] p-4">
                 <div className="flex items-center justify-between">
                   <p
                     className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider ${
@@ -176,7 +176,7 @@ function ReviewQuestionCard({
                   <button
                     type="button"
                     onClick={() => setIsReportModalOpen(true)}
-                    className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-semibold text-mq-muted transition hover:bg-white/10 hover:text-white"
+                    className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
                     title="Reportar pregunta"
                   >
                     <Flag className="h-3 w-3" />
@@ -196,7 +196,7 @@ function ReviewQuestionCard({
                     {question.keyPoints.map((point) => (
                       <li
                         key={point}
-                        className="flex gap-2 text-sm leading-relaxed text-mq-muted"
+                        className="flex gap-2 text-sm leading-relaxed text-slate-500"
                       >
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-mq-accent" />
                         <span>{point}</span>
@@ -273,7 +273,7 @@ export function SessionQuestionReview({
   return (
     <section
       id="session-question-review"
-      className={`relative z-10 mt-10 rounded-[2rem] border border-white/10 bg-white/[0.02] p-6 sm:p-8 ${className ?? ""}`}
+      className={`relative z-10 mt-10 rounded-[2rem] border border-slate-200 bg-slate-50 p-6 sm:p-8 ${className ?? ""}`}
     >
       {wrongCount > 0 ? (
         <div className="mb-6 rounded-2xl border border-rose-500/20 bg-gradient-to-br from-rose-500/10 to-mq-accent/5 p-5 sm:p-6">
@@ -283,10 +283,10 @@ export function SessionQuestionReview({
                 <Target className="h-3.5 w-3.5" />
                 Plan de refuerzo
               </p>
-              <h4 className="text-lg font-bold text-white">
+              <h4 className="text-lg font-bold text-slate-900">
                 Tienes {wrongCount} pregunta{wrongCount === 1 ? "" : "s"} por reforzar
               </h4>
-              <p className="max-w-xl text-sm leading-relaxed text-mq-muted">
+              <p className="max-w-xl text-sm leading-relaxed text-slate-500">
                 Repasa exactamente lo que fallaste en esta sesión o entrena por tema para
                 cerrar la brecha más rápido.
               </p>
@@ -295,7 +295,7 @@ export function SessionQuestionReview({
               <button
                 type="button"
                 onClick={showOnlyWrong}
-                className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-5 text-sm font-bold text-white transition hover:bg-white/[0.08]"
+                className="inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.04] px-5 text-sm font-bold text-slate-900 transition hover:bg-white/[0.08]"
               >
                 Solo mis errores
               </button>
@@ -310,8 +310,8 @@ export function SessionQuestionReview({
           </div>
 
           {wrongTopics.length > 0 ? (
-            <div className="mt-5 border-t border-white/10 pt-5">
-              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-mq-muted">
+            <div className="mt-5 border-t border-slate-200 pt-5">
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">
                 Refuerzo por tema
               </p>
               <ul className="mt-3 flex flex-wrap gap-2">
@@ -322,7 +322,7 @@ export function SessionQuestionReview({
                         topic: topicSummary.topic,
                         count: Math.min(topicSummary.wrongCount + 5, 20),
                       })}
-                      className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-white transition hover:border-mq-accent/30 hover:bg-mq-accent/10 hover:text-mq-accent"
+                      className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-900 transition hover:border-mq-accent/30 hover:bg-mq-accent/10 hover:text-mq-accent"
                     >
                       {topicSummary.topic}
                       <span className="rounded-full bg-rose-500/15 px-1.5 py-0.5 text-[10px] font-bold text-rose-300">
@@ -342,8 +342,8 @@ export function SessionQuestionReview({
           <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-mq-accent">
             Revisión completa
           </p>
-          <h3 className="mt-2 text-xl font-bold text-white sm:text-2xl">{title}</h3>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-mq-muted">
+          <h3 className="mt-2 text-xl font-bold text-slate-900 sm:text-2xl">{title}</h3>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-500">
             Revisa cada ítem con tu respuesta, la opción correcta y la explicación clínica.
           </p>
         </div>

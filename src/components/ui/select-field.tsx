@@ -18,8 +18,8 @@ type SelectFieldProps = {
 };
 
 export const selectInputClassName = cn(
-  "w-full cursor-pointer appearance-none rounded-lg border border-mq-border",
-  "bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-white",
+  "w-full cursor-pointer appearance-none rounded-lg border border-slate-200",
+  "bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-slate-900",
   "outline-none transition-all",
   "focus:border-mq-accent focus:ring-1 focus:ring-mq-accent",
   "[color-scheme:dark]",
@@ -39,7 +39,7 @@ export function SelectField({
 
   return (
     <div className={cn("space-y-1.5", className)}>
-      <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+      <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">
         {label}
       </label>
       <select
@@ -54,7 +54,7 @@ export function SelectField({
           <option
             key={option.value}
             value={option.value}
-            className="bg-[#0f2744] text-white"
+            className="bg-[#0f2744] text-slate-900"
           >
             {option.label}
           </option>

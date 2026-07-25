@@ -14,7 +14,7 @@ const STATUS_STYLES: Record<ActivityStatus, string> = {
   activo: "bg-emerald-500/15 text-emerald-300 border-emerald-500/30",
   riesgo: "bg-amber-500/15 text-amber-300 border-amber-500/30",
   inactivo: "bg-rose-500/15 text-rose-300 border-rose-500/30",
-  sin_datos: "bg-white/10 text-mq-muted border-white/10",
+  sin_datos: "bg-slate-100 text-slate-500 border-slate-200",
 };
 
 function ActivityBadge({ status }: { status: ActivityStatus }) {
@@ -43,7 +43,7 @@ function HabitDayPill({ day }: { day: DailyHabitDay }) {
               ? "border-rose-500/30 bg-rose-500/10 text-rose-400"
               : partial || pending
                 ? "border-amber-500/30 bg-amber-500/10 text-amber-300"
-                : "border-white/10 bg-white/[0.03] text-mq-muted"
+                : "border-slate-200 bg-white/[0.03] text-slate-500"
         }`}
         title={
           studied
@@ -75,7 +75,7 @@ function HabitDayPill({ day }: { day: DailyHabitDay }) {
       </div>
       <span
         className={`text-[10px] font-bold uppercase tracking-wider ${
-          day.isToday ? "text-mq-accent" : "text-mq-muted"
+          day.isToday ? "text-mq-accent" : "text-slate-500"
         }`}
       >
         {day.isToday ? "Hoy" : day.weekdayShort}
@@ -94,10 +94,10 @@ function MetricCard({
   hint?: string;
 }) {
   return (
-    <article className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-5 shadow-lg">
-      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">{label}</p>
-      <p className="mt-3 text-3xl font-semibold text-white">{value}</p>
-      {hint ? <p className="mt-1 text-xs text-mq-muted">{hint}</p> : null}
+    <article className="rounded-xl border border-slate-200 bg-white-raised p-5 shadow-lg">
+      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">{label}</p>
+      <p className="mt-3 text-3xl font-semibold text-slate-900">{value}</p>
+      {hint ? <p className="mt-1 text-xs text-slate-500">{hint}</p> : null}
     </article>
   );
 }
@@ -143,10 +143,10 @@ function ConvocatoriaStatusSection({
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
               Convocatoria UCC
             </p>
-            <h2 className="mt-1 text-lg font-semibold text-white">
+            <h2 className="mt-1 text-lg font-semibold text-slate-900">
               {convocatoria.editionLabel} · {convocatoria.editionCode}
             </h2>
-            <p className="mt-1 text-sm text-mq-muted">
+            <p className="mt-1 text-sm text-slate-500">
               Simulacro oficial de {convocatoria.questionCount} preguntas · 1 intento
             </p>
           </div>
@@ -168,35 +168,35 @@ function ConvocatoriaStatusSection({
       {completed ? (
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
               Puntaje
             </p>
-            <p className="mt-2 text-3xl font-semibold text-white">
+            <p className="mt-2 text-3xl font-semibold text-slate-900">
               {convocatoria.scorePercentage}%
             </p>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
               Respuestas
             </p>
-            <p className="mt-2 text-lg font-semibold text-white">
+            <p className="mt-2 text-lg font-semibold text-slate-900">
               {convocatoria.correctAnswers}✓ / {convocatoria.wrongAnswers}✗
             </p>
-            <p className="mt-1 text-xs text-mq-muted">
+            <p className="mt-1 text-xs text-slate-500">
               de {convocatoria.questionCount} preguntas
             </p>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
               Fecha
             </p>
-            <p className="mt-2 text-sm font-medium text-white">
+            <p className="mt-2 text-sm font-medium text-slate-900">
               {formatConvocatoriaDate(convocatoria.completedAt)}
             </p>
           </div>
         </div>
       ) : (
-        <p className="mt-6 text-sm text-mq-muted">
+        <p className="mt-6 text-sm text-slate-500">
           Este usuario aún no ha completado el simulacro de la convocatoria activa.
         </p>
       )}
@@ -232,23 +232,23 @@ export function StudentActivityView({ student }: StudentActivityViewProps) {
           <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
             Actividad del estudiante
           </p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
             {displayName}
           </h1>
-          <p className="mt-2 text-sm text-mq-muted">{student.email}</p>
-          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-mq-muted">
+          <p className="mt-2 text-sm text-slate-500">{student.email}</p>
+          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-slate-500">
             <span>{getPlanDisplayName(student.plan)}</span>
-            <span className="text-white/30">·</span>
+            <span className="text-slate-900/30">·</span>
             <span>{getRoleLabel(normalizeUserRole(student.role))}</span>
             {student.goalUniversity ? (
               <>
-                <span className="text-white/30">·</span>
+                <span className="text-slate-900/30">·</span>
                 <span>{student.goalUniversity}</span>
               </>
             ) : null}
             {student.goalSpecialty ? (
               <>
-                <span className="text-white/30">·</span>
+                <span className="text-slate-900/30">·</span>
                 <span>{student.goalSpecialty}</span>
               </>
             ) : null}
@@ -298,12 +298,12 @@ export function StudentActivityView({ student }: StudentActivityViewProps) {
         />
       </div>
 
-      <section className="mt-10 rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
+      <section className="mt-10 rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
         <div className="flex items-center gap-2">
           <Flame size={18} className="text-mq-accent" />
-          <h2 className="text-lg font-semibold text-white">Hábito de estudio — últimos 14 días</h2>
+          <h2 className="text-lg font-semibold text-slate-900">Hábito de estudio — últimos 14 días</h2>
         </div>
-        <p className="mt-1 text-sm text-mq-muted">
+        <p className="mt-1 text-sm text-slate-500">
           Verde = meta diaria cumplida · Ámbar = actividad parcial o pendiente hoy · Rojo = sin
           actividad
         </p>
@@ -319,7 +319,7 @@ export function StudentActivityView({ student }: StudentActivityViewProps) {
           {student.strengths.length > 0 ? (
             <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-5">
               <h3 className="text-sm font-semibold text-emerald-300">Fortalezas</h3>
-              <ul className="mt-3 space-y-1 text-sm text-mq-muted">
+              <ul className="mt-3 space-y-1 text-sm text-slate-500">
                 {student.strengths.map((topic) => (
                   <li key={topic}>{topic}</li>
                 ))}
@@ -329,7 +329,7 @@ export function StudentActivityView({ student }: StudentActivityViewProps) {
           {student.weaknesses.length > 0 ? (
             <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-5">
               <h3 className="text-sm font-semibold text-rose-300">Debilidades</h3>
-              <ul className="mt-3 space-y-1 text-sm text-mq-muted">
+              <ul className="mt-3 space-y-1 text-sm text-slate-500">
                 {student.weaknesses.map((topic) => (
                   <li key={topic}>{topic}</li>
                 ))}
@@ -339,17 +339,17 @@ export function StudentActivityView({ student }: StudentActivityViewProps) {
         </section>
       )}
 
-      <section className="mt-10 rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-        <h2 className="text-lg font-semibold text-white">Sesiones recientes</h2>
-        <p className="mt-1 text-sm text-mq-muted">Últimas 20 sesiones registradas en Firestore.</p>
+      <section className="mt-10 rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
+        <h2 className="text-lg font-semibold text-slate-900">Sesiones recientes</h2>
+        <p className="mt-1 text-sm text-slate-500">Últimas 20 sesiones registradas en Firestore.</p>
 
         {student.recentSessions.length === 0 ? (
-          <p className="mt-6 text-sm text-mq-muted">Este usuario aún no tiene sesiones guardadas.</p>
+          <p className="mt-6 text-sm text-slate-500">Este usuario aún no tiene sesiones guardadas.</p>
         ) : (
           <div className="mt-6 overflow-x-auto">
             <table className="w-full min-w-[640px] text-left text-sm">
               <thead>
-                <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+                <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
                   <th className="pb-3 pr-3">Fecha</th>
                   <th className="pb-3 pr-3">Tipo</th>
                   <th className="pb-3 pr-3">Preguntas</th>
@@ -359,15 +359,15 @@ export function StudentActivityView({ student }: StudentActivityViewProps) {
               <tbody>
                 {student.recentSessions.map((session) => (
                   <tr key={session.id} className="border-b border-white/5">
-                    <td className="py-3 pr-3 text-mq-muted whitespace-nowrap">
+                    <td className="py-3 pr-3 text-slate-500 whitespace-nowrap">
                       {session.fechaLabel}
                     </td>
-                    <td className="py-3 pr-3 text-white">{session.sessionLabel}</td>
-                    <td className="py-3 pr-3 text-mq-muted">
+                    <td className="py-3 pr-3 text-slate-900">{session.sessionLabel}</td>
+                    <td className="py-3 pr-3 text-slate-500">
                       {session.correctAnswers + session.wrongAnswers} (
                       {session.correctAnswers}✓ / {session.wrongAnswers}✗)
                     </td>
-                    <td className="py-3 font-medium text-white">{session.scorePercentage}%</td>
+                    <td className="py-3 font-medium text-slate-900">{session.scorePercentage}%</td>
                   </tr>
                 ))}
               </tbody>

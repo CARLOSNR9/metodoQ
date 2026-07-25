@@ -91,7 +91,7 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-        className="relative w-full max-w-md overflow-hidden bg-mq-surface border border-mq-border-strong rounded-[2rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.8)]"
+        className="relative w-full max-w-md overflow-hidden bg-white border border-slate-200 rounded-[2rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.8)]"
       >
         {/* Glow effect */}
         <div className="absolute top-0 w-full h-32 opacity-20 -z-10 bg-gradient-to-b from-mq-accent to-transparent" />
@@ -121,10 +121,10 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                   </div>
                 </div>
                 
-                <h2 className="mb-3 text-2xl font-bold tracking-tight text-white">
+                <h2 className="mb-3 text-2xl font-bold tracking-tight text-slate-900">
                   Bienvenido a Método Q 👋
                 </h2>
-                <p className="mb-10 text-base leading-relaxed text-mq-muted">
+                <p className="mb-10 text-base leading-relaxed text-slate-500">
                   Vamos a personalizar tu entrenamiento en menos de 30 segundos.
                 </p>
                 
@@ -144,10 +144,10 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
               >
-                <h3 className="mb-2 text-xl font-bold text-white">
+                <h3 className="mb-2 text-xl font-bold text-slate-900">
                   ¿A qué universidad quieres aplicar?
                 </h3>
-                <p className="mb-6 text-sm text-mq-muted">
+                <p className="mb-6 text-sm text-slate-500">
                   Selecciona tu objetivo. Adaptamos el entrenamiento a ese examen.
                 </p>
 
@@ -158,7 +158,7 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-mq-surface/90 backdrop-blur-sm border border-mq-accent/30"
+                        className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-white/90 backdrop-blur-sm border border-mq-accent/30"
                       >
                         <p className="px-6 text-center text-sm font-bold text-mq-accent">
                           {selectionFeedback}
@@ -181,7 +181,7 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                             handleNext("specialty", patch);
                           }
                         }}
-                        className="p-4 text-sm font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95 disabled:opacity-50"
+                        className="p-4 text-sm font-semibold transition-all border text-left text-slate-900 rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95 disabled:opacity-50"
                       >
                         {uni}
                       </button>
@@ -198,10 +198,10 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
               >
-                <h3 className="mb-2 text-xl font-bold text-white">
+                <h3 className="mb-2 text-xl font-bold text-slate-900">
                   ¿Qué especialidad buscas?
                 </h3>
-                <p className="mb-6 text-sm text-mq-muted">
+                <p className="mb-6 text-sm text-slate-500">
                   Selecciona la especialidad para personalizar tu experiencia.
                 </p>
 
@@ -210,7 +210,7 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                     <button
                       key={spec}
                       onClick={() => handleNext("experience", { goalSpecialty: spec })}
-                      className="p-4 text-sm font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
+                      className="p-4 text-sm font-semibold transition-all border text-left text-slate-900 rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
                     >
                       {spec}
                     </button>
@@ -226,23 +226,23 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
               >
-                <h3 className="mb-2 text-xl font-bold text-white">
+                <h3 className="mb-2 text-xl font-bold text-slate-900">
                   ¿Has presentado el examen antes?
                 </h3>
-                <p className="mb-6 text-sm text-mq-muted">
+                <p className="mb-6 text-sm text-slate-500">
                   Para ajustar el nivel de dificultad inicial.
                 </p>
 
                 <div className="flex flex-col gap-3">
                   <button
                     onClick={() => handleNext("courses", { attemptedExam: true })}
-                    className="p-5 text-base font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
+                    className="p-5 text-base font-semibold transition-all border text-left text-slate-900 rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
                   >
                     Sí, ya lo he presentado
                   </button>
                   <button
                     onClick={() => handleNext("courses", { attemptedExam: false })}
-                    className="p-5 text-base font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
+                    className="p-5 text-base font-semibold transition-all border text-left text-slate-900 rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
                   >
                     No, es mi primera vez
                   </button>
@@ -257,23 +257,23 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
               >
-                <h3 className="mb-2 text-xl font-bold text-white">
+                <h3 className="mb-2 text-xl font-bold text-slate-900">
                   ¿Has usado cursos antes?
                 </h3>
-                <p className="mb-6 text-sm text-mq-muted">
+                <p className="mb-6 text-sm text-slate-500">
                   Nos ayuda a entender tu base teórica.
                 </p>
 
                 <div className="flex flex-col gap-3">
                   <button
                     onClick={() => handleNext("transition", { usedCourses: true })}
-                    className="p-5 text-base font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
+                    className="p-5 text-base font-semibold transition-all border text-left text-slate-900 rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
                   >
                     Sí, he tomado cursos
                   </button>
                   <button
                     onClick={() => handleNext("transition", { usedCourses: false })}
-                    className="p-5 text-base font-semibold transition-all border text-left text-white rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
+                    className="p-5 text-base font-semibold transition-all border text-left text-slate-900 rounded-xl bg-white/[0.03] border-white/5 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
                   >
                     No, estudio por mi cuenta
                   </button>
@@ -302,10 +302,10 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                   </div>
                 </div>
                 
-                <h3 className="mb-2 text-2xl font-bold text-white">
+                <h3 className="mb-2 text-2xl font-bold text-slate-900">
                   Perfecto.
                 </h3>
-                <p className="mb-10 text-base text-mq-muted">
+                <p className="mb-10 text-base text-slate-500">
                   Ya sabemos cómo ayudarte.
                 </p>
 

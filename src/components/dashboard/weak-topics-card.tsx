@@ -92,7 +92,7 @@ export function WeakTopicsCard({
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-500/10 text-rose-400">
           <AlertTriangle size={20} />
         </div>
-        <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Áreas de Mejora</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Áreas de Mejora</p>
       </div>
 
       {isLoading ? (
@@ -111,8 +111,8 @@ export function WeakTopicsCard({
                   <span className="text-[10px] font-black uppercase tracking-widest text-mq-accent">Perla de Supervivencia</span>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-white mb-1">{hack.title}</h4>
-                  <p className="text-xs text-mq-muted leading-relaxed">
+                  <h4 className="text-sm font-bold text-slate-900 mb-1">{hack.title}</h4>
+                  <p className="text-xs text-slate-500 leading-relaxed">
                     {hack.content}
                   </p>
                 </div>
@@ -130,11 +130,11 @@ export function WeakTopicsCard({
                 className="group flex flex-col gap-4 rounded-2xl bg-white/[0.03] p-4 transition-all hover:bg-white/[0.06] sm:flex-row sm:items-center sm:justify-between"
               >
                 <div className="flex items-center gap-4">
-                  <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${i === 0 ? "bg-rose-500/20 text-rose-400" : "bg-white/5 text-mq-muted"}`}>
+                  <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${i === 0 ? "bg-rose-500/20 text-rose-400" : "bg-slate-50 text-slate-500"}`}>
                     <span className="text-xs font-bold">{i + 1}</span>
                   </div>
                   <div className="space-y-0.5">
-                    <p className="text-sm font-bold text-white">
+                    <p className="text-sm font-bold text-slate-900">
                       {item.topic}
                     </p>
                     <p className="text-[10px] text-rose-400 font-medium">
@@ -145,13 +145,13 @@ export function WeakTopicsCard({
                 
                 <div className="flex items-center gap-2">
                   {i > 0 && !isProUser && (
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/5 text-mq-muted/30">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-50 text-slate-500/30">
                        <Lock size={14} />
                     </div>
                   )}
                   <Link
                     href={`/dashboard/entrenar?topic=${encodeURIComponent(item.topic)}`}
-                    className={`inline-flex h-9 items-center justify-center rounded-lg px-4 text-xs font-bold transition-all ${i === 0 || isProUser ? "bg-mq-accent text-mq-accent-foreground hover:scale-105" : "bg-white/10 text-white hover:bg-white/20"}`}
+                    className={`inline-flex h-9 items-center justify-center rounded-lg px-4 text-xs font-bold transition-all ${i === 0 || isProUser ? "bg-mq-accent text-mq-accent-foreground hover:scale-105" : "bg-slate-100 text-white hover:bg-white/20"}`}
                   >
                     {i === 0 || isProUser ? "Reforzar ahora" : "Ver más"}
                   </Link>
@@ -164,7 +164,7 @@ export function WeakTopicsCard({
             <div className="pt-2">
               <Link
                 href={upgradeCta.href}
-                className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-mq-muted transition-colors hover:text-mq-accent"
+                className="flex items-center justify-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-500 transition-colors hover:text-mq-accent"
               >
                 {upgradeCta.planId === "PRO" ? (
                   <>

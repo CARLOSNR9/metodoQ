@@ -163,23 +163,23 @@ export function DailyPlanCard({ userId }: DailyPlanCardProps) {
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent">
           <Calendar size={20} />
         </div>
-        <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Plan de Entrenamiento</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Plan de Entrenamiento</p>
       </div>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-2 lg:items-end">
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-white">Objetivos para hoy:</h2>
+          <h2 className="text-3xl font-bold text-slate-900">Objetivos para hoy:</h2>
           
           <ul className="space-y-4">
             {isLoading ? (
-              <li className="flex items-center gap-3 text-mq-muted animate-pulse">
-                <Circle size={18} className="text-white/20" />
+              <li className="flex items-center gap-3 text-slate-500 animate-pulse">
+                <Circle size={18} className="text-slate-900/20" />
                 <span>Calculando tu ruta óptima...</span>
               </li>
             ) : (
               <>
                 {plan.topicTasks.map((task) => (
-                  <li key={task.topic} className="flex items-center gap-3 text-white">
+                  <li key={task.topic} className="flex items-center gap-3 text-slate-900">
                     {hasTrainingToday ? (
                       <CheckCircle2 size={18} className="text-emerald-500" />
                     ) : (
@@ -189,7 +189,7 @@ export function DailyPlanCard({ userId }: DailyPlanCardProps) {
                   </li>
                 ))}
                 {plan.includeMockExam && (
-                  <li className="flex items-center gap-3 text-white">
+                  <li className="flex items-center gap-3 text-slate-900">
                     {hasTrainingToday ? (
                       <CheckCircle2 size={18} className="text-emerald-500" />
                     ) : (
@@ -198,8 +198,8 @@ export function DailyPlanCard({ userId }: DailyPlanCardProps) {
                     <span className="font-medium">1 simulacro corto de refuerzo</span>
                   </li>
                 )}
-                <li className="flex items-center gap-3 text-mq-muted">
-                  <Circle size={18} className="text-white/10" />
+                <li className="flex items-center gap-3 text-slate-500">
+                  <Circle size={18} className="text-slate-900/10" />
                   <span className="text-sm">Revisión de errores y explicaciones</span>
                 </li>
               </>

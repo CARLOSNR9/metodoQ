@@ -23,10 +23,10 @@ export default async function AdminConvocatoriasPage() {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Seguimiento
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Convocatorias UCC
         </h1>
-        <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">
           Control de quién completó el simulacro oficial por edición, con puntaje y fecha.
           Incluye todos los roles registrados.
         </p>

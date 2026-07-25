@@ -117,39 +117,39 @@ export function ConvocatoriaTrackingTable({
   return (
     <div className="space-y-6">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <article className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-5 shadow-lg">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+        <article className="rounded-xl border border-slate-200 bg-white-raised p-5 shadow-lg">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
             Completaron
           </p>
-          <p className="mt-3 text-3xl font-semibold text-white">
+          <p className="mt-3 text-3xl font-semibold text-slate-900">
             {summary.completedCount}
-            <span className="ml-2 text-lg text-mq-muted">/ {summary.totalUsers}</span>
+            <span className="ml-2 text-lg text-slate-500">/ {summary.totalUsers}</span>
           </p>
-          <p className="mt-1 text-xs text-mq-muted">{summary.completionRate}% del directorio</p>
+          <p className="mt-1 text-xs text-slate-500">{summary.completionRate}% del directorio</p>
         </article>
-        <article className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-5 shadow-lg">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+        <article className="rounded-xl border border-slate-200 bg-white-raised p-5 shadow-lg">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
             Pendientes
           </p>
           <p className="mt-3 text-3xl font-semibold text-amber-300">{summary.pendingCount}</p>
         </article>
-        <article className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-5 shadow-lg">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+        <article className="rounded-xl border border-slate-200 bg-white-raised p-5 shadow-lg">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
             Promedio
           </p>
-          <p className="mt-3 text-3xl font-semibold text-white">
+          <p className="mt-3 text-3xl font-semibold text-slate-900">
             {summary.averageScore != null ? `${summary.averageScore}%` : "—"}
           </p>
-          <p className="mt-1 text-xs text-mq-muted">Solo quienes completaron</p>
+          <p className="mt-1 text-xs text-slate-500">Solo quienes completaron</p>
         </article>
-        <article className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-5 shadow-lg">
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted">
+        <article className="rounded-xl border border-slate-200 bg-white-raised p-5 shadow-lg">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-500">
             Examen
           </p>
-          <p className="mt-3 text-lg font-semibold text-white">
+          <p className="mt-3 text-lg font-semibold text-slate-900">
             {summary.questionCount} preguntas
           </p>
-          <p className="mt-1 text-xs text-mq-muted">1 intento por usuario</p>
+          <p className="mt-1 text-xs text-slate-500">1 intento por usuario</p>
         </article>
       </div>
 
@@ -157,20 +157,20 @@ export function ConvocatoriaTrackingTable({
         <div className="relative max-w-md flex-1">
           <Search
             size={16}
-            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-mq-muted"
+            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-500"
           />
           <input
             type="search"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             placeholder="Buscar por email o nombre…"
-            className="w-full rounded-xl border border-white/10 bg-white/[0.03] py-2.5 pl-10 pr-4 text-sm text-white placeholder:text-mq-muted focus:border-mq-accent/50 focus:outline-none"
+            className="w-full rounded-xl border border-slate-200 bg-white/[0.03] py-2.5 pl-10 pr-4 text-sm text-slate-900 placeholder:text-slate-500 focus:border-mq-accent/50 focus:outline-none"
           />
         </div>
         <button
           type="button"
           onClick={() => exportCsv(filtered, summary.editionLabel)}
-          className="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/[0.06]"
+          className="rounded-xl border border-slate-200 bg-white/[0.03] px-4 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-white/[0.06]"
         >
           Exportar CSV ({filtered.length})
         </button>
@@ -185,7 +185,7 @@ export function ConvocatoriaTrackingTable({
             className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${
               statusFilter === filter.key
                 ? "bg-mq-accent text-mq-accent-foreground"
-                : "bg-white/[0.05] text-mq-muted hover:text-white"
+                : "bg-slate-100 text-slate-500 hover:text-slate-900"
             }`}
           >
             {filter.label} ({counts[filter.key]})
@@ -202,7 +202,7 @@ export function ConvocatoriaTrackingTable({
             className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition ${
               roleFilter === filter.key
                 ? "bg-violet-500/20 text-violet-200"
-                : "bg-white/[0.05] text-mq-muted hover:text-white"
+                : "bg-slate-100 text-slate-500 hover:text-slate-900"
             }`}
           >
             {filter.label}
@@ -210,10 +210,10 @@ export function ConvocatoriaTrackingTable({
         ))}
       </div>
 
-      <div className="overflow-x-auto rounded-xl border border-mq-border-strong bg-mq-surface-raised shadow-xl">
+      <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white-raised shadow-xl">
         <table className="w-full min-w-[880px] text-left text-sm">
           <thead>
-            <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+            <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
               <th className="px-4 py-3">Usuario</th>
               <th className="px-4 py-3">Rol</th>
               <th className="px-4 py-3">Plan</th>
@@ -226,7 +226,7 @@ export function ConvocatoriaTrackingTable({
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={7} className="px-4 py-8 text-center text-mq-muted">
+                <td colSpan={7} className="px-4 py-8 text-center text-slate-500">
                   No hay usuarios que coincidan con los filtros.
                 </td>
               </tr>
@@ -234,15 +234,15 @@ export function ConvocatoriaTrackingTable({
               filtered.map((row) => (
                 <tr key={row.uid} className="border-b border-white/5">
                   <td className="px-4 py-3">
-                    <p className="font-medium text-white">
+                    <p className="font-medium text-slate-900">
                       {row.displayName !== "—" ? row.displayName : row.email.split("@")[0]}
                     </p>
-                    <p className="text-xs text-mq-muted">{row.email}</p>
+                    <p className="text-xs text-slate-500">{row.email}</p>
                   </td>
-                  <td className="px-4 py-3 text-mq-muted">
+                  <td className="px-4 py-3 text-slate-500">
                     {getRoleLabel(normalizeUserRole(row.role))}
                   </td>
-                  <td className="px-4 py-3 text-mq-muted">
+                  <td className="px-4 py-3 text-slate-500">
                     {getPlanDisplayName(row.plan)}
                   </td>
                   <td className="px-4 py-3">
@@ -261,16 +261,16 @@ export function ConvocatoriaTrackingTable({
                   <td className="px-4 py-3">
                     {row.status === "completed" ? (
                       <div>
-                        <p className="font-semibold text-white">{row.scorePercentage}%</p>
-                        <p className="text-xs text-mq-muted">
+                        <p className="font-semibold text-slate-900">{row.scorePercentage}%</p>
+                        <p className="text-xs text-slate-500">
                           {row.correctAnswers}✓ / {row.wrongAnswers}✗
                         </p>
                       </div>
                     ) : (
-                      <span className="text-mq-muted">—</span>
+                      <span className="text-slate-500">—</span>
                     )}
                   </td>
-                  <td className="px-4 py-3 whitespace-nowrap text-mq-muted">
+                  <td className="px-4 py-3 whitespace-nowrap text-slate-500">
                     {formatDate(row.completedAt)}
                   </td>
                   <td className="px-4 py-3">
@@ -288,7 +288,7 @@ export function ConvocatoriaTrackingTable({
         </table>
       </div>
 
-      <p className="text-xs text-mq-muted">
+      <p className="text-xs text-slate-500">
         Mostrando {filtered.length} de {rows.length} usuarios registrados (últimos{" "}
         {summary.totalUsers} por fecha de creación).
       </p>

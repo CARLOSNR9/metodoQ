@@ -25,7 +25,7 @@ export default function PerfilPage() {
 
   if (isCheckingAuth || loading || !user) {
     return (
-      <section className="h-40 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
+      <section className="h-40 animate-pulse rounded-2xl border border-slate-200 bg-white/[0.04]" />
     );
   }
 
@@ -53,27 +53,27 @@ export default function PerfilPage() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
-        <h1 className="text-2xl font-semibold text-white">
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
+        <h1 className="text-2xl font-semibold text-slate-900">
           Perfil{greetingName !== "Doc" ? ` · ${greetingName}` : ""}
         </h1>
         <dl className="mt-4 space-y-3 text-sm">
           <div>
-            <dt className="text-mq-muted">Email</dt>
-            <dd className="font-medium text-white">{profile?.email ?? user.email}</dd>
+            <dt className="text-slate-500">Email</dt>
+            <dd className="font-medium text-slate-900">{profile?.email ?? user.email}</dd>
           </div>
           <div>
-            <dt className="text-mq-muted">Plan actual</dt>
-            <dd className="font-medium text-white">{getPlanDisplayName(profile?.plan)}</dd>
+            <dt className="text-slate-500">Plan actual</dt>
+            <dd className="font-medium text-slate-900">{getPlanDisplayName(profile?.plan)}</dd>
           </div>
           {profile?.goalUniversity ? (
             <div>
-              <dt className="text-mq-muted">Universidad objetivo</dt>
-              <dd className="font-medium text-white">{profile.goalUniversity}</dd>
+              <dt className="text-slate-500">Universidad objetivo</dt>
+              <dd className="font-medium text-slate-900">{profile.goalUniversity}</dd>
             </div>
           ) : null}
           <div>
-            <dt className="text-mq-muted">Tratamiento en Pomodoro</dt>
+            <dt className="text-slate-500">Tratamiento en Pomodoro</dt>
             <dd className="mt-2 space-y-2">
               <div className="flex flex-wrap gap-2">
                 {(
@@ -92,7 +92,7 @@ export default function PerfilPage() {
                       className={`rounded-xl border px-4 py-2 text-sm font-semibold transition disabled:opacity-50 ${
                         isActive
                           ? "border-mq-accent/40 bg-mq-accent/15 text-mq-accent"
-                          : "border-white/10 bg-white/[0.03] text-mq-muted hover:border-white/20 hover:text-white"
+                          : "border-slate-200 bg-white/[0.03] text-slate-500 hover:border-slate-300 hover:text-slate-900"
                       }`}
                     >
                       {option.label}
@@ -100,7 +100,7 @@ export default function PerfilPage() {
                   );
                 })}
               </div>
-              <p className="text-xs text-mq-muted">
+              <p className="text-xs text-slate-500">
                 {doctorGreetingName !== "Doc"
                   ? `Te saludaremos como «${doctorGreetingName}» en los descansos del Pomodoro.`
                   : "Agrega tu nombre para personalizar los mensajes del Pomodoro."}

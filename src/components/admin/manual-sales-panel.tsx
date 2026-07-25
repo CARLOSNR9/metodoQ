@@ -17,18 +17,18 @@ export async function ManualSalesPanel() {
   const totalNegotiated = sales.reduce((sum, s) => sum + s.negotiatedPriceCOP, 0);
 
   return (
-    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
+    <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="text-xl font-semibold text-white">Ventas internas (negociadores)</h2>
-          <p className="mt-1 text-sm text-mq-muted">
+          <h2 className="text-xl font-semibold text-slate-900">Ventas internas (negociadores)</h2>
+          <p className="mt-1 text-sm text-slate-500">
             Últimos acuerdos registrados al crear usuarios con plan de pago manual. Puedes editar o
             eliminar registros de prueba.
           </p>
         </div>
         {sales.length > 0 ? (
-          <p className="text-sm text-mq-muted">
-            Mostrando <span className="font-semibold text-white">{sales.length}</span> ventas · Total
+          <p className="text-sm text-slate-500">
+            Mostrando <span className="font-semibold text-slate-900">{sales.length}</span> ventas · Total
             negociado:{" "}
             <span className="font-semibold text-mq-accent">{formatCOP(totalNegotiated)}</span>
           </p>
@@ -40,7 +40,7 @@ export async function ManualSalesPanel() {
           {loadError}
         </p>
       ) : sales.length === 0 ? (
-        <p className="mt-6 text-sm text-mq-muted">
+        <p className="mt-6 text-sm text-slate-500">
           Aún no hay ventas registradas. Al crear un usuario con plan Básico, Pro o Residente y
           precio negociado, aparecerá aquí.
         </p>

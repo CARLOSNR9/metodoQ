@@ -39,7 +39,7 @@ function CalendarCell({ day }: { day: DailyHabitDay }) {
             : partial || pending
               ? "border-amber-500/30 bg-amber-500/10 ring-1 ring-amber-500/20"
               : beforePlan
-                ? "border-white/5 bg-white/[0.02] opacity-50"
+                ? "border-white/5 bg-slate-50 opacity-50"
                 : "border-white/5 bg-white/[0.03]"
       }`}
       title={
@@ -56,10 +56,10 @@ function CalendarCell({ day }: { day: DailyHabitDay }) {
                 : "Antes del inicio del plan"
       }
     >
-      <span className="text-[9px] font-bold uppercase tracking-wider text-mq-muted">
+      <span className="text-[9px] font-bold uppercase tracking-wider text-slate-500">
         {day.weekdayShort}
       </span>
-      <span className="text-sm font-black text-white">{day.dayNumber}</span>
+      <span className="text-sm font-black text-slate-900">{day.dayNumber}</span>
       <div className="flex h-5 w-5 items-center justify-center">
         {studied ? (
           <Check size={14} className="text-emerald-400" strokeWidth={3} />
@@ -129,23 +129,23 @@ export function StudyHabitCalendar({
   const planStartLabel = formatSubscriptionDate(planStartedAt ?? null);
 
   return (
-    <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
+    <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div className="space-y-1">
           <p className="text-[10px] font-bold uppercase tracking-widest text-mq-accent">
             Cronograma de estudio
           </p>
-          <h2 className="text-xl font-bold text-white">Tu constancia en el plan Pro</h2>
-          <p className="text-sm text-mq-muted">
+          <h2 className="text-xl font-bold text-slate-900">Tu constancia en el plan Pro</h2>
+          <p className="text-sm text-slate-500">
             {planStartedAt ? (
               <>
-                Desde el <span className="font-medium text-white">{planStartLabel}</span> · meta diaria:{" "}
-                <span className="font-medium text-white">{dailyTarget} preguntas</span>
+                Desde el <span className="font-medium text-slate-900">{planStartLabel}</span> · meta diaria:{" "}
+                <span className="font-medium text-slate-900">{dailyTarget} preguntas</span>
                 {streakMinimum < dailyTarget ? (
                   <>
                     {" "}
                     · racha desde{" "}
-                    <span className="font-medium text-white">{streakMinimum}</span>
+                    <span className="font-medium text-slate-900">{streakMinimum}</span>
                   </>
                 ) : null}
                 .
@@ -153,7 +153,7 @@ export function StudyHabitCalendar({
             ) : (
               <>
                 Meta diaria del plan Pro:{" "}
-                <span className="font-medium text-white">{dailyTarget} preguntas</span>.
+                <span className="font-medium text-slate-900">{dailyTarget} preguntas</span>.
               </>
             )}
           </p>
@@ -161,12 +161,12 @@ export function StudyHabitCalendar({
         <div className="flex items-center gap-3 rounded-xl border border-orange-500/25 bg-orange-500/10 px-4 py-3">
           <Flame
             size={22}
-            className={displayStreak > 0 ? "text-orange-400" : "text-mq-muted"}
+            className={displayStreak > 0 ? "text-orange-400" : "text-slate-500"}
             fill={displayStreak > 0 ? "currentColor" : "none"}
           />
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">Racha</p>
-            <p className="text-lg font-black text-white">
+            <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Racha</p>
+            <p className="text-lg font-black text-slate-900">
               {isLoading ? "..." : `${displayStreak} días`}
             </p>
           </div>
@@ -175,26 +175,26 @@ export function StudyHabitCalendar({
 
       <dl className="mt-5 grid grid-cols-2 gap-3 text-center text-sm sm:grid-cols-4">
         <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
-          <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">Meta cumplida</dt>
+          <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Meta cumplida</dt>
           <dd className="mt-1 text-lg font-black text-emerald-300">
             {isLoading ? "—" : studiedCount}
           </dd>
         </div>
         <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
-          <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">Incompleto</dt>
+          <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Incompleto</dt>
           <dd className="mt-1 text-lg font-black text-amber-300">
             {isLoading ? "—" : partialCount}
           </dd>
         </div>
         <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
-          <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">Sin actividad</dt>
+          <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Sin actividad</dt>
           <dd className="mt-1 text-lg font-black text-rose-300">
             {isLoading ? "—" : missedCount}
           </dd>
         </div>
         <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3">
-          <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">En el período</dt>
-          <dd className="mt-1 text-lg font-black text-white">
+          <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">En el período</dt>
+          <dd className="mt-1 text-lg font-black text-slate-900">
             {isLoading ? "—" : days.filter((d) => d.status !== "before_plan").length}
           </dd>
         </div>
@@ -203,11 +203,11 @@ export function StudyHabitCalendar({
       {isLoading ? (
         <div className="mt-6 grid grid-cols-7 gap-2">
           {Array.from({ length: 14 }).map((_, index) => (
-            <div key={index} className="h-16 animate-pulse rounded-xl bg-white/10" />
+            <div key={index} className="h-16 animate-pulse rounded-xl bg-slate-100" />
           ))}
         </div>
       ) : days.length === 0 ? (
-        <p className="mt-6 text-sm text-mq-muted">
+        <p className="mt-6 text-sm text-slate-500">
           Aún no hay historial. Tu primer día con {dailyTarget} preguntas aparecerá aquí en
           verde.
         </p>
@@ -219,7 +219,7 @@ export function StudyHabitCalendar({
         </div>
       )}
 
-      <div className="mt-5 flex flex-wrap items-center gap-4 text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+      <div className="mt-5 flex flex-wrap items-center gap-4 text-[10px] font-bold uppercase tracking-wider text-slate-500">
         <span className="inline-flex items-center gap-1.5">
           <Check size={12} className="text-emerald-400" /> {dailyTarget}+ preguntas
         </span>

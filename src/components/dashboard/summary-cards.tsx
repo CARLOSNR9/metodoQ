@@ -63,7 +63,7 @@ export function SummaryCards({ userId }: SummaryCardsProps) {
         {[1, 2, 3].map((item) => (
           <div
             key={item}
-            className="h-32 animate-pulse rounded-3xl border border-mq-border-strong bg-white/[0.04]"
+            className="h-32 animate-pulse rounded-3xl border border-slate-200 bg-white/[0.04]"
           />
         ))}
       </section>
@@ -84,8 +84,8 @@ export function SummaryCards({ userId }: SummaryCardsProps) {
           <Sparkles size={14} className="opacity-0 transition-opacity group-hover:opacity-100 text-mq-accent" />
         </div>
         <div className="mt-4">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Mejor Puntaje</p>
-          <p className="mt-1 text-3xl font-bold text-white">{metrics.bestScore}%</p>
+          <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Mejor Puntaje</p>
+          <p className="mt-1 text-3xl font-bold text-slate-900">{metrics.bestScore}%</p>
         </div>
         <div className="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-emerald-500/5 blur-2xl" />
       </article>
@@ -97,22 +97,22 @@ export function SummaryCards({ userId }: SummaryCardsProps) {
           </div>
         </div>
         <div className="mt-4">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Promedio Total</p>
-          <p className="mt-1 text-3xl font-bold text-white">{metrics.averageScore}%</p>
+          <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Promedio Total</p>
+          <p className="mt-1 text-3xl font-bold text-slate-900">{metrics.averageScore}%</p>
         </div>
         <div className="absolute -right-4 -bottom-4 h-24 w-24 rounded-full bg-mq-accent/5 blur-2xl" />
       </article>
 
       <article className="mq-glass group relative overflow-hidden rounded-3xl p-6 transition-all hover:-translate-y-1 hover:border-mq-accent/50">
         <div className="flex items-center justify-between">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 text-white">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50 text-slate-900">
             <History size={20} />
           </div>
         </div>
         <div className="mt-4">
-          <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Último Intento</p>
-          <p className="mt-1 text-3xl font-bold text-white">{metrics.latestAttempt?.scorePercentage}%</p>
-          <p className="mt-1 text-[10px] text-mq-muted">{metrics.latestAttempt?.fechaLabel}</p>
+          <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Último Intento</p>
+          <p className="mt-1 text-3xl font-bold text-slate-900">{metrics.latestAttempt?.scorePercentage}%</p>
+          <p className="mt-1 text-[10px] text-slate-500">{metrics.latestAttempt?.fechaLabel}</p>
         </div>
       </article>
     </section>

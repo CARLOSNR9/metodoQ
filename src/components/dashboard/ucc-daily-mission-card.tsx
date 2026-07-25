@@ -59,10 +59,10 @@ function UccBlockStepper({ blockProgress }: { blockProgress: UccBlockProgressIte
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">
+        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
           Bloques de hoy
         </p>
-        <p className="text-xs font-bold text-white">
+        <p className="text-xs font-bold text-slate-900">
           {completedCount}/{blockProgress.length} completados
         </p>
       </div>
@@ -77,7 +77,7 @@ function UccBlockStepper({ blockProgress }: { blockProgress: UccBlockProgressIte
                     ? "border-emerald-400 bg-emerald-500/20 text-emerald-300"
                     : block.status === "active"
                       ? "border-mq-accent bg-mq-accent/15 text-mq-accent shadow-[0_0_14px_rgba(0,209,255,0.35)]"
-                      : "border-white/15 bg-white/[0.03] text-white/25"
+                      : "border-white/15 bg-white/[0.03] text-slate-900/25"
                 }`}
               >
                 {block.status === "done" ? (
@@ -92,7 +92,7 @@ function UccBlockStepper({ blockProgress }: { blockProgress: UccBlockProgressIte
                     ? "text-emerald-300"
                     : block.status === "active"
                       ? "text-mq-accent"
-                      : "text-white/30"
+                      : "text-slate-900/30"
                 }`}
               >
                 {block.label.split("·")[0]?.trim()}
@@ -101,7 +101,7 @@ function UccBlockStepper({ blockProgress }: { blockProgress: UccBlockProgressIte
             {index < blockProgress.length - 1 ? (
               <div
                 className={`mb-6 h-0.5 min-w-[12px] flex-1 ${
-                  block.status === "done" ? "bg-emerald-500/40" : "bg-white/10"
+                  block.status === "done" ? "bg-emerald-500/40" : "bg-slate-100"
                 }`}
               />
             ) : null}
@@ -126,7 +126,7 @@ function UccBlockListItem({
         ? href
           ? "border-mq-accent/30 bg-mq-accent/5 hover:border-mq-accent/50 hover:bg-mq-accent/10"
           : "border-mq-accent/30 bg-mq-accent/5"
-        : "border-white/10 bg-white/[0.02]"
+        : "border-slate-200 bg-slate-50"
   }`;
 
   const content = (
@@ -136,11 +136,11 @@ function UccBlockListItem({
       ) : block.status === "active" ? (
         <Zap size={20} className="mt-0.5 shrink-0 text-mq-accent" />
       ) : (
-        <Circle size={20} className="mt-0.5 shrink-0 text-white/30" />
+        <Circle size={20} className="mt-0.5 shrink-0 text-slate-900/30" />
       )}
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2">
-          <p className="font-bold text-white">{block.label}</p>
+          <p className="font-bold text-slate-900">{block.label}</p>
           {block.status === "done" ? (
             <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-emerald-300">
               Completado
@@ -151,7 +151,7 @@ function UccBlockListItem({
             </span>
           ) : null}
         </div>
-        <p className="mt-0.5 text-sm text-mq-muted">{block.description}</p>
+        <p className="mt-0.5 text-sm text-slate-500">{block.description}</p>
         <p className="mt-1 text-xs font-medium text-mq-accent">
           {block.questionsDone}/{block.questions} preg · ~{block.minutesEstimate} min
         </p>
@@ -307,10 +307,10 @@ export function UccDailyMissionCard({
                 Misión del día · UCC Pasto MI
               </span>
             </div>
-            <h2 className="text-3xl font-black text-white">
+            <h2 className="text-3xl font-black text-slate-900">
               {missionComplete ? "Día cerrado" : "Tu entrenamiento de hoy"}
             </h2>
-            <p className="max-w-xl text-sm text-mq-muted">
+            <p className="max-w-xl text-sm text-slate-500">
               Semana {weekNumber} · {weekModule.label}: {weekModule.focus}
               {!isLoading && completedBlocksCount > 0 ? (
                 <span className="text-emerald-300">
@@ -321,14 +321,14 @@ export function UccDailyMissionCard({
             </p>
           </div>
 
-          <div className="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-right">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">
+          <div className="rounded-2xl border border-slate-200 bg-white/[0.04] px-5 py-4 text-right">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
               Progreso
             </p>
-            <p className="text-3xl font-black text-white">
+            <p className="text-3xl font-black text-slate-900">
               {isLoading ? "…" : `${todayQuestions}/${goal.dailyTarget}`}
             </p>
-            <p className="text-xs text-mq-muted">
+            <p className="text-xs text-slate-500">
               {missionComplete
                 ? "Meta cumplida"
                 : `~${remainingMinutes} min restantes`}
@@ -339,15 +339,15 @@ export function UccDailyMissionCard({
         {!isLoading ? (
           <UccBlockStepper blockProgress={blockProgress} />
         ) : (
-          <div className="animate-pulse text-sm text-mq-muted">Calculando bloques…</div>
+          <div className="animate-pulse text-sm text-slate-500">Calculando bloques…</div>
         )}
 
         <div className="space-y-2">
-          <div className="flex justify-between text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+          <div className="flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
             <span>Preguntas del día</span>
             <span>{isLoading ? "…" : `${progressPercent}%`}</span>
           </div>
-          <div className="h-3 overflow-hidden rounded-full bg-white/5">
+          <div className="h-3 overflow-hidden rounded-full bg-slate-50">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${progressPercent}%` }}
@@ -358,7 +358,7 @@ export function UccDailyMissionCard({
               }`}
             />
           </div>
-          <p className="text-xs text-mq-muted">
+          <p className="text-xs text-slate-500">
             Racha mínima: {goal.streakMinimum} preg · Meta perfecta: {goal.dailyTarget} preg
           </p>
         </div>
@@ -375,7 +375,7 @@ export function UccDailyMissionCard({
                   <Moon size={24} />
                 </div>
                 <div className="space-y-2">
-                  <p className="text-lg font-black text-white">
+                  <p className="text-lg font-black text-slate-900">
                     Completaste tu misión de {goal.dailyTarget} preguntas
                   </p>
                   <p className="text-sm leading-relaxed text-emerald-100/90">
@@ -428,7 +428,7 @@ export function UccDailyMissionCard({
         ) : (
           <ul className="space-y-3">
             {isLoading ? (
-              <li className="animate-pulse text-sm text-mq-muted">Calculando bloques…</li>
+              <li className="animate-pulse text-sm text-slate-500">Calculando bloques…</li>
             ) : (
               blockProgress.map((block) => (
                 <UccBlockListItem
@@ -443,7 +443,7 @@ export function UccDailyMissionCard({
 
         <div className="flex flex-col gap-3 sm:flex-row">
           {dayClosed && !bonusAvailable ? (
-            <div className="flex h-14 flex-1 items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 text-sm font-bold text-mq-muted">
+            <div className="flex h-14 flex-1 items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 text-sm font-bold text-slate-500">
               <Lock size={18} />
               Entrenamiento cerrado hasta mañana
             </div>
@@ -471,7 +471,7 @@ export function UccDailyMissionCard({
           {!missionComplete && (
             <Link
               href="/dashboard/entrenar"
-              className="inline-flex h-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 text-sm font-bold text-white/80 transition hover:bg-white/10"
+              className="inline-flex h-14 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 px-6 text-sm font-bold text-slate-900/80 transition hover:bg-slate-100"
             >
               Entrenamiento libre
             </Link>

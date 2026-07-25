@@ -94,7 +94,7 @@ export function Act2PredictiveDashboard({
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-mq-muted">
+        <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">
           Puntaje estandarizado · promedio global
         </p>
         <motion.div className="relative inline-block">
@@ -113,7 +113,7 @@ export function Act2PredictiveDashboard({
             {isAdmitted ? "ADMITIDO" : "NO ADMITIDO"}
           </motion.div>
         </motion.div>
-        <p className="mx-auto max-w-sm text-sm text-mq-muted">
+        <p className="mx-auto max-w-sm text-sm text-slate-500">
           {isAdmitted
             ? "Felicidades. Estadísticamente estás dentro del rango competitivo de cupos."
             : `Te faltan ${gap} puntos para alcanzar el umbral de corte estimado (${cutoffScore}).`}
@@ -128,19 +128,19 @@ export function Act2PredictiveDashboard({
       </motion.div>
 
       <motion.div
-        className="space-y-6 rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8"
+        className="space-y-6 rounded-[2.5rem] border border-white/5 bg-slate-50 p-8"
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
       >
         <div className="flex items-center justify-between">
-          <h4 className="text-sm font-black uppercase tracking-widest text-white">
+          <h4 className="text-sm font-black uppercase tracking-widest text-slate-900">
             Distribución de aspirantes
           </h4>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1.5">
               <div className="h-2 w-2 rounded-full bg-red-500" />
-              <span className="text-[10px] font-bold text-mq-muted">Tú</span>
+              <span className="text-[10px] font-bold text-slate-500">Tú</span>
             </div>
             <div className="flex items-center gap-1.5">
               <motion.div
@@ -148,7 +148,7 @@ export function Act2PredictiveDashboard({
                 animate={{ opacity: [1, 0.5, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               />
-              <span className="text-[10px] font-bold text-mq-muted">Corte</span>
+              <span className="text-[10px] font-bold text-slate-500">Corte</span>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@ export function Act2PredictiveDashboard({
 
       <div className="grid gap-6 sm:grid-cols-2">
         <motion.div
-          className="rounded-[2.5rem] border border-white/5 bg-white/[0.02] p-8"
+          className="rounded-[2.5rem] border border-white/5 bg-slate-50 p-8"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.35 }}
@@ -253,7 +253,7 @@ export function Act2PredictiveDashboard({
               >
                 <TrendingDown size={18} />
               </motion.div>
-              <h5 className="text-sm font-bold uppercase tracking-wider text-white">
+              <h5 className="text-sm font-bold uppercase tracking-wider text-slate-900">
                 Fuga crítica de puntos
               </h5>
             </div>
@@ -269,14 +269,14 @@ export function Act2PredictiveDashboard({
                       initial={{ opacity: 0, x: -8 }}
                       animate={{ opacity: 1, x: 0 }}
                     >
-                      <span className="text-mq-muted">{t.name}</span>
+                      <span className="text-slate-500">{t.name}</span>
                       <span className="font-bold text-red-400">{errorRate}% errores</span>
                     </motion.li>
                   );
                 })}
               </ul>
             ) : (
-              <p className="text-xs text-mq-muted">
+              <p className="text-xs text-slate-500">
                 Sin fugas críticas en esta sesión. Mantén el ritmo de estudio.
               </p>
             )}
@@ -296,14 +296,14 @@ export function Act2PredictiveDashboard({
               <Info size={18} />
               <h5 className="text-sm font-black uppercase tracking-wider">Plan de supervivencia</h5>
             </motion.div>
-            <p className="text-xs leading-relaxed text-mq-muted">
+            <p className="text-xs leading-relaxed text-slate-500">
               {bestTopics.length > 0
                 ? `Tu dominio en ${bestTopics.join(", ")} te mantiene competitivo, pero `
                 : "Es prioritario reforzar "}
               {worstTopics.length > 0 ? (
                 <>
                   las asignaturas de{" "}
-                  <span className="font-bold text-white">{worstTopics.join(" y ")}</span> están
+                  <span className="font-bold text-slate-900">{worstTopics.join(" y ")}</span> están
                   limitando tu puntaje. Enfoca módulos clínicos y guías MSPS/INS en esas áreas.
                 </>
               ) : (

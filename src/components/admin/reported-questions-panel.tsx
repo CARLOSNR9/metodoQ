@@ -83,10 +83,10 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Calidad de contenido
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Preguntas reportadas
         </h1>
-        <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">
           Preguntas marcadas desde la vista previa por retroalimentación escueta o débil. Copia el
           listado de códigos y envíalo a tu flujo de revisión con IA.
         </p>
@@ -108,23 +108,23 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
       </div>
 
       {visible.length === 0 ? (
-        <section className="rounded-xl border border-dashed border-white/15 bg-white/[0.02] p-10 text-center">
-          <Flag className="mx-auto h-8 w-8 text-mq-muted" />
-          <p className="mt-4 text-sm font-semibold text-white">No hay preguntas reportadas</p>
-          <p className="mx-auto mt-2 max-w-md text-sm text-mq-muted">
+        <section className="rounded-xl border border-dashed border-white/15 bg-slate-50 p-10 text-center">
+          <Flag className="mx-auto h-8 w-8 text-slate-500" />
+          <p className="mt-4 text-sm font-semibold text-slate-900">No hay preguntas reportadas</p>
+          <p className="mx-auto mt-2 max-w-md text-sm text-slate-500">
             Desde{" "}
-            <span className="font-medium text-white">Vista previa → Nota en Mi Estudio</span> puedes
-            pulsar <span className="font-medium text-white">Reportar pregunta</span> cuando la
+            <span className="font-medium text-slate-900">Vista previa → Nota en Mi Estudio</span> puedes
+            pulsar <span className="font-medium text-slate-900">Reportar pregunta</span> cuando la
             retroalimentación sea demasiado breve.
           </p>
         </section>
       ) : (
         <div className="space-y-6">
-          <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-5 shadow-xl">
+          <section className="rounded-xl border border-slate-200 bg-white-raised p-5 shadow-xl">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <h2 className="text-lg font-semibold text-white">Listado de códigos</h2>
-                <p className="mt-1 text-sm text-mq-muted">
+                <h2 className="text-lg font-semibold text-slate-900">Listado de códigos</h2>
+                <p className="mt-1 text-sm text-slate-500">
                   {visible.length} código{visible.length === 1 ? "" : "s"} — uno por línea
                 </p>
               </div>
@@ -142,17 +142,17 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
               readOnly
               value={codesList}
               rows={Math.min(visible.length + 1, 12)}
-              className="mt-4 w-full resize-y rounded-lg border border-white/10 bg-black/30 px-4 py-3 font-mono text-sm text-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent/50"
+              className="mt-4 w-full resize-y rounded-lg border border-slate-200 bg-black/30 px-4 py-3 font-mono text-sm text-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent/50"
               onFocus={(event) => event.target.select()}
             />
           </section>
 
-          <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-            <h2 className="text-lg font-semibold text-white">Detalle</h2>
+          <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
+            <h2 className="text-lg font-semibold text-slate-900">Detalle</h2>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full min-w-[640px] text-left text-sm">
                 <thead>
-                  <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+                  <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
                     <th className="pb-3 pr-4">Código</th>
                     <th className="pb-3 pr-4">Tema</th>
                     <th className="pb-3 pr-4">Reportes</th>
@@ -220,7 +220,7 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
         return "border-rose-500/30 bg-rose-500/10 text-rose-400";
       case "pending":
       default:
-        return "border-white/10 bg-[#0f2744] text-white";
+        return "border-slate-200 bg-[#0f2744] text-slate-900";
     }
   };
 
@@ -234,7 +234,7 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
               <button
                 type="button"
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="rounded-full bg-white/5 p-1 text-mq-muted transition hover:bg-white/10 hover:text-white"
+                className="rounded-full bg-slate-50 p-1 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
                 title="Ver comentarios"
               >
                 {isExpanded ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
@@ -242,7 +242,7 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
             )}
           </div>
         </td>
-        <td className="py-3 pr-4 text-mq-muted">{report.topic || "—"}</td>
+        <td className="py-3 pr-4 text-slate-500">{report.topic || "—"}</td>
         <td className="py-3 pr-4">
           {reportsCount > 0 ? (
             <span className="inline-flex items-center gap-1.5 rounded-full bg-rose-500/10 px-2 py-0.5 text-xs font-semibold text-rose-400">
@@ -250,7 +250,7 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
               {reportsCount} reporte{reportsCount > 1 ? "s" : ""}
             </span>
           ) : (
-            <span className="text-mq-muted">—</span>
+            <span className="text-slate-500">—</span>
           )}
         </td>
         <td className="py-3 pr-4">
@@ -263,13 +263,13 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
             className={`${selectInputClassName} px-2 py-1 text-xs border ${getStatusColor(report.status)} focus:border-mq-accent focus:ring-1 focus:ring-mq-accent/50 outline-none rounded-lg transition-colors`}
           >
             {STATUS_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
+              <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-slate-900">
                 {opt.label}
               </option>
             ))}
           </select>
         </td>
-        <td className="py-3 text-xs text-mq-muted">
+        <td className="py-3 text-xs text-slate-500">
           {(() => {
             const val = report.updatedAt || report.createdAt;
             if (!val) return "—";
@@ -284,10 +284,10 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
           <td colSpan={5} className="p-4">
             <div className="space-y-3 pl-4 border-l-2 border-mq-accent/30">
               {report.reportsList?.map((r, i) => (
-                <div key={i} className="rounded-lg bg-white/5 p-3 text-sm">
+                <div key={i} className="rounded-lg bg-slate-50 p-3 text-sm">
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-semibold text-rose-300">{r.category}</span>
-                    <span className="text-xs text-mq-muted">
+                    <span className="text-xs text-slate-500">
                       {(() => {
                         if (!r.createdAt) return "—";
                         const d = new Date(r.createdAt);
@@ -296,12 +296,12 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
                     </span>
                   </div>
                   {r.comments ? (
-                    <p className="text-white/90">{r.comments}</p>
+                    <p className="text-slate-900/90">{r.comments}</p>
                   ) : (
-                    <p className="text-mq-muted italic">Sin comentarios adicionales</p>
+                    <p className="text-slate-500 italic">Sin comentarios adicionales</p>
                   )}
                   {(r.userEmail || r.userId) && (
-                    <p className="mt-2 text-xs text-mq-muted text-right">
+                    <p className="mt-2 text-xs text-slate-500 text-right">
                       {r.userEmail ? r.userEmail : `User ID: ${r.userId}`}
                     </p>
                   )}
@@ -342,7 +342,7 @@ function FilterChip({
       className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
         active
           ? "bg-mq-accent text-mq-accent-foreground"
-          : "border border-white/15 text-mq-muted hover:text-white"
+          : "border border-white/15 text-slate-500 hover:text-slate-900"
       }`}
     >
       {children}

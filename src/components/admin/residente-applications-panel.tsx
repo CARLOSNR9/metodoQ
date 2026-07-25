@@ -53,19 +53,19 @@ export async function ResidenteApplicationsPanel({
       : "Para activar el plan, usa creación de usuario en admin.";
 
   return (
-    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-      <h2 className="text-xl font-semibold text-white">Postulaciones Plan Residente</h2>
-      <p className="mt-1 text-sm text-mq-muted">
+    <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
+      <h2 className="text-xl font-semibold text-slate-900">Postulaciones Plan Residente</h2>
+      <p className="mt-1 text-sm text-slate-500">
         Actualiza el estado tras contactar al candidato. {activationHint}
       </p>
 
       {applications.length === 0 ? (
-        <p className="mt-6 text-sm text-mq-muted">No hay postulaciones recientes.</p>
+        <p className="mt-6 text-sm text-slate-500">No hay postulaciones recientes.</p>
       ) : (
         <div className="mt-6 overflow-x-auto">
           <table className="w-full min-w-[720px] text-left text-sm">
             <thead>
-              <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+              <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
                 <th className="pb-3 pr-4">Nombre</th>
                 <th className="pb-3 pr-4">Contacto</th>
                 <th className="pb-3 pr-4">Universidad</th>

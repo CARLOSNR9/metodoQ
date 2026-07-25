@@ -78,15 +78,15 @@ export function AttemptHistory({
   const recentResults = results.slice(0, safeMaxItems);
 
   return (
-    <section className="mt-8 rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
-      <h3 className="text-lg font-semibold text-white">Historial de intentos</h3>
+    <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
+      <h3 className="text-lg font-semibold text-slate-900">Historial de intentos</h3>
 
       {isLoading ? (
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {[1, 2, 3, 4].map((item) => (
             <div
               key={item}
-              className="h-28 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]"
+              className="h-28 animate-pulse rounded-2xl border border-slate-200 bg-white/[0.04]"
             />
           ))}
         </div>
@@ -95,8 +95,8 @@ export function AttemptHistory({
           {errorMessage}
         </p>
       ) : results.length === 0 ? (
-        <div className="mt-4 rounded-2xl border border-mq-border-strong bg-white/[0.03] p-4">
-          <p className="text-sm text-mq-muted">Aun no tienes intentos. Empieza ahora</p>
+        <div className="mt-4 rounded-2xl border border-slate-200 bg-white/[0.03] p-4">
+          <p className="text-sm text-slate-500">Aun no tienes intentos. Empieza ahora</p>
           <Link
             href="/dashboard/diagnostico"
             className="mt-4 inline-flex min-h-12 items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground shadow-[0_14px_34px_-16px_rgb(0_209_255/0.9)] transition-all duration-200 hover:-translate-y-0.5 hover:brightness-110"
@@ -116,16 +116,16 @@ export function AttemptHistory({
               const cardContent = (
                 <div className="space-y-2">
                   <div className="flex flex-wrap items-center gap-2">
-                    <p className="text-xs font-medium uppercase tracking-[0.1em] text-mq-muted">
+                    <p className="text-xs font-medium uppercase tracking-[0.1em] text-slate-500">
                       {result.fechaLabel}
                     </p>
                     {showSessionType ? (
-                      <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mq-accent">
+                      <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mq-accent">
                         {getSessionTypeLabel(result.sessionType)}
                       </span>
                     ) : null}
                   </div>
-                  <p className="text-2xl font-semibold text-white">
+                  <p className="text-2xl font-semibold text-slate-900">
                     {result.scorePercentage}%
                   </p>
                   <p className="text-xs text-foreground/80">
@@ -156,10 +156,10 @@ export function AttemptHistory({
             })}
           </ul>
           {limitedMessage ? (
-            <p className="mt-3 text-xs text-mq-muted">{limitedMessage}</p>
+            <p className="mt-3 text-xs text-slate-500">{limitedMessage}</p>
           ) : null}
           {results.length > safeMaxItems ? (
-            <p className="mt-3 text-xs text-mq-muted">
+            <p className="mt-3 text-xs text-slate-500">
               Mostrando los {safeMaxItems} intentos mas recientes.
             </p>
           ) : null}

@@ -54,7 +54,7 @@ export function UccConvocatoriasView({ userId, planStartedAt, trackName = "UCC" 
 
   if (isLoading) {
     return (
-      <div className="h-56 animate-pulse rounded-[2rem] border border-white/10 bg-white/[0.03]" />
+      <div className="h-56 animate-pulse rounded-[2rem] border border-slate-200 bg-white/[0.03]" />
     );
   }
 
@@ -64,10 +64,10 @@ export function UccConvocatoriasView({ userId, planStartedAt, trackName = "UCC" 
         <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-mq-accent">
           Exámenes oficiales
         </p>
-        <h1 className="text-3xl font-black tracking-tight text-white sm:text-4xl">
+        <h1 className="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
           Convocatorias {trackName}
         </h1>
-        <p className="max-w-2xl text-sm leading-relaxed text-mq-muted sm:text-base">
+        <p className="max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
           Simulacros quincenales exclusivos para plan PRO: 100 preguntas, 3 horas,
           un solo intento por edición y retroalimentación al finalizar.
         </p>
@@ -101,7 +101,7 @@ function EditionCard({ status, trackName = "UCC" }: { status: UccConvocatoriaEdi
       ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
       : phase === "upcoming"
         ? "border-amber-500/30 bg-amber-500/10 text-amber-200"
-        : "border-white/10 bg-white/[0.03] text-mq-muted";
+        : "border-slate-200 bg-white/[0.03] text-slate-500";
 
   const displayCode = trackName !== "UCC" ? edition.code.replace("UCC", trackName) : edition.code;
 
@@ -109,7 +109,7 @@ function EditionCard({ status, trackName = "UCC" }: { status: UccConvocatoriaEdi
     <motion.article
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 sm:p-8"
+      className="rounded-[2rem] border border-slate-200 bg-white/[0.03] p-6 sm:p-8"
     >
       <div
         className={`flex flex-col gap-6 ${
@@ -123,20 +123,20 @@ function EditionCard({ status, trackName = "UCC" }: { status: UccConvocatoriaEdi
             >
               {phaseLabel}
             </span>
-            <span className="text-xs font-semibold uppercase tracking-widest text-mq-muted">
+            <span className="text-xs font-semibold uppercase tracking-widest text-slate-500">
               {displayCode}
             </span>
           </div>
 
           <div>
-            <h2 className="text-2xl font-black text-white">{edition.label}</h2>
-            <p className="mt-2 flex items-center gap-2 text-sm text-mq-muted">
+            <h2 className="text-2xl font-black text-slate-900">{edition.label}</h2>
+            <p className="mt-2 flex items-center gap-2 text-sm text-slate-500">
               <Calendar size={14} />
               {status.opensLabel}
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-sm text-mq-muted">
+          <div className="flex flex-wrap gap-4 text-sm text-slate-500">
             <span className="inline-flex items-center gap-2">
               <Clock size={14} className="text-mq-accent" />
               {edition.questionCount} preg · {edition.minutes} min
@@ -166,7 +166,7 @@ function EditionCard({ status, trackName = "UCC" }: { status: UccConvocatoriaEdi
                 Disponible el {status.opensLabel}
               </div>
             ) : (
-              <div className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-6 text-sm font-semibold text-mq-muted">
+              <div className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/[0.03] px-6 text-sm font-semibold text-slate-500">
                 <CheckCircle2 size={16} />
                 Ventana cerrada
               </div>

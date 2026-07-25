@@ -59,12 +59,12 @@ function StudyNoteCard({
           onOpen();
         }
       }}
-      className={`group relative cursor-pointer overflow-hidden rounded-2xl border bg-white/[0.03] p-5 text-left transition hover:bg-white/[0.05] ${theme.cardBorder} ${theme.cardGlow}`}
+      className={`group relative cursor-pointer overflow-hidden rounded-2xl border bg-white/[0.03] p-5 text-left transition hover:bg-slate-100 ${theme.cardBorder} ${theme.cardGlow}`}
     >
       <div
         className={`pointer-events-none absolute inset-0 bg-gradient-to-br opacity-80 ${theme.cardGradient}`}
       />
-      <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/[0.03] blur-2xl transition group-hover:bg-white/[0.05]" />
+      <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/[0.03] blur-2xl transition group-hover:bg-slate-100" />
 
       <div className="relative">
         <div className="flex items-start justify-between gap-3">
@@ -81,7 +81,7 @@ function StudyNoteCard({
             </span>
           </div>
           <div className="flex shrink-0 items-center gap-2">
-            <span className="text-[10px] font-semibold text-mq-muted">
+            <span className="text-[10px] font-semibold text-slate-500">
               {formatSavedDate(note.savedAt)}
             </span>
             <button
@@ -92,7 +92,7 @@ function StudyNoteCard({
                 event.stopPropagation();
                 onRemove();
               }}
-              className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-transparent text-mq-muted opacity-70 transition hover:border-rose-500/30 hover:bg-rose-500/10 hover:text-rose-200 hover:opacity-100 disabled:opacity-50 group-hover:opacity-100"
+              className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-transparent text-slate-500 opacity-70 transition hover:border-rose-500/30 hover:bg-rose-500/10 hover:text-rose-200 hover:opacity-100 disabled:opacity-50 group-hover:opacity-100"
             >
               {removingId === note.questionId ? (
                 <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -103,10 +103,10 @@ function StudyNoteCard({
           </div>
         </div>
 
-        <h3 className="mt-4 line-clamp-2 text-base font-black text-white">
+        <h3 className="mt-4 line-clamp-2 text-base font-black text-slate-900">
           {note.topic}
         </h3>
-        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-mq-muted">
+        <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-slate-500">
           {note.statement}
         </p>
 
@@ -115,7 +115,7 @@ function StudyNoteCard({
             <BookOpen className="h-3.5 w-3.5" />
             Leer nota
           </p>
-          <span className="rounded-lg bg-white/[0.04] px-2 py-1 text-[10px] font-semibold text-mq-muted">
+          <span className="rounded-lg bg-white/[0.04] px-2 py-1 text-[10px] font-semibold text-slate-500">
             Píldora
           </span>
         </div>
@@ -172,9 +172,9 @@ function StudyNoteModal({
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 40, scale: 0.98 }}
         transition={{ type: "spring", damping: 28, stiffness: 320 }}
-        className="relative z-10 flex max-h-[88vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[2rem] border border-white/10 bg-[#071428] shadow-[0_32px_120px_-24px_rgb(0_209_255/0.25)] sm:rounded-[2rem]"
+        className="relative z-10 flex max-h-[88vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[2rem] border border-slate-200 bg-[#071428] shadow-[0_32px_120px_-24px_rgb(0_209_255/0.25)] sm:rounded-[2rem]"
       >
-        <div className="relative overflow-hidden border-b border-white/10 px-5 py-5 sm:px-7">
+        <div className="relative overflow-hidden border-b border-slate-200 px-5 py-5 sm:px-7">
           <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br opacity-90 ${theme.cardGradient}`} />
           <div className="relative flex items-start justify-between gap-4">
             <div className="min-w-0">
@@ -189,17 +189,17 @@ function StudyNoteModal({
                   {specialty}
                 </span>
               </div>
-              <h2 className="mt-3 text-xl font-black text-white sm:text-2xl">
+              <h2 className="mt-3 text-xl font-black text-slate-900 sm:text-2xl">
                 {note.topic}
               </h2>
               {note.examArea ? (
-                <p className="mt-1 text-sm text-mq-muted">{note.examArea}</p>
+                <p className="mt-1 text-sm text-slate-500">{note.examArea}</p>
               ) : null}
             </div>
             <button
               type="button"
               onClick={onClose}
-              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-mq-muted transition hover:bg-white/10 hover:text-white"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
             >
               <X className="h-5 w-5" />
             </button>
@@ -207,14 +207,14 @@ function StudyNoteModal({
         </div>
 
         <div className="min-h-0 flex-1 overflow-y-auto px-5 py-5 sm:px-7">
-          <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
+          <div className="rounded-2xl border border-slate-200 bg-white/[0.04] p-4 sm:p-5">
             <div className="flex items-center gap-2">
-              <ClipboardList className="h-4 w-4 text-mq-muted" />
-              <p className="text-[10px] font-black uppercase tracking-[0.16em] text-mq-muted">
+              <ClipboardList className="h-4 w-4 text-slate-500" />
+              <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">
                 Caso clínico
               </p>
             </div>
-            <p className="mt-2 text-sm leading-relaxed text-slate-300 sm:text-base">
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
               {note.statement}
             </p>
           </div>
@@ -222,13 +222,13 @@ function StudyNoteModal({
           <div className="mt-6">
             <div className="mb-4 flex items-center gap-2">
               <BookOpen className={`h-4 w-4 ${theme.accentClass}`} />
-              <p className="text-sm font-bold text-white">Lectura para el examen</p>
+              <p className="text-sm font-bold text-slate-900">Lectura para el examen</p>
             </div>
             <TheoryContent content={note.theoryContent} />
           </div>
         </div>
 
-        <div className="border-t border-white/10 bg-[#050f22]/95 px-5 py-4 backdrop-blur-md sm:px-7">
+        <div className="border-t border-slate-200 bg-[#050f22]/95 px-5 py-4 backdrop-blur-md sm:px-7">
           <button
             type="button"
             onClick={onRemove}
@@ -296,7 +296,7 @@ export function StudyNotesBoard({ userId }: StudyNotesBoardProps) {
 
   if (loading) {
     return (
-      <div className="flex min-h-[240px] items-center justify-center rounded-2xl border border-white/10 bg-white/[0.02]">
+      <div className="flex min-h-[240px] items-center justify-center rounded-2xl border border-slate-200 bg-slate-50">
         <Loader2 className="h-8 w-8 animate-spin text-mq-accent" />
       </div>
     );
@@ -304,14 +304,14 @@ export function StudyNotesBoard({ userId }: StudyNotesBoardProps) {
 
   if (notes.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-10 text-center">
+      <div className="rounded-2xl border border-dashed border-white/15 bg-slate-50 p-10 text-center">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-mq-accent/10 text-mq-accent">
           <StickyNote className="h-7 w-7" />
         </div>
-        <h2 className="mt-5 text-lg font-bold text-white">Tu tablero está vacío</h2>
-        <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-mq-muted">
+        <h2 className="mt-5 text-lg font-bold text-slate-900">Tu tablero está vacío</h2>
+        <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-slate-500">
           Cuando falles una pregunta con píldora de teoría, ábrela y pulsa{" "}
-          <span className="font-semibold text-white">Agregar a mi Estudio</span>{" "}
+          <span className="font-semibold text-slate-900">Agregar a mi Estudio</span>{" "}
           para leerla después.
         </p>
       </div>

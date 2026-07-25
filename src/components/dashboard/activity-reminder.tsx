@@ -72,7 +72,7 @@ export function ActivityReminder() {
       className={`relative overflow-hidden rounded-2xl border ${config.border} ${config.bg} p-4 sm:p-5`}
     >
       <div className="flex items-center gap-4">
-        <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5`}>
+        <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-50`}>
           {config.icon}
         </div>
         <div className="flex-1">

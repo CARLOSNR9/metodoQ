@@ -75,9 +75,9 @@ export function EmailPreferencesCard({
   };
 
   return (
-    <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
-      <h2 className="text-lg font-semibold text-white">Recordatorios de estudio</h2>
-      <p className="mt-2 text-sm text-mq-muted">
+    <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
+      <h2 className="text-lg font-semibold text-slate-900">Recordatorios de estudio</h2>
+      <p className="mt-2 text-sm text-slate-500">
         Avisos de vencimiento de plan, racha de estudio
         {isUccMiPro
           ? ", misión diaria UCC y simulacros programados (máximo uno de cada tipo por día)."
@@ -90,7 +90,7 @@ export function EmailPreferencesCard({
           checked={optIn}
           disabled={saving}
           onChange={() => void handleEmailToggle()}
-          className="h-4 w-4 rounded border-mq-border accent-mq-accent"
+          className="h-4 w-4 rounded border-slate-200 accent-mq-accent"
         />
         <span className="text-sm text-foreground">Recibir recordatorios por email</span>
       </label>
@@ -102,7 +102,7 @@ export function EmailPreferencesCard({
             checked={browserOptIn}
             disabled={saving}
             onChange={() => void handleBrowserToggle()}
-            className="h-4 w-4 rounded border-mq-border accent-mq-accent"
+            className="h-4 w-4 rounded border-slate-200 accent-mq-accent"
           />
           <span className="flex items-center gap-2 text-sm text-foreground">
             <Bell size={14} className="text-mq-accent" />

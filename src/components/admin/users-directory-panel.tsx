@@ -14,10 +14,10 @@ export async function UsersDirectoryPanel() {
   }
 
   return (
-    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
+    <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
       <div>
-        <h2 className="text-xl font-semibold text-white">Directorio de usuarios</h2>
-        <p className="mt-1 text-sm text-mq-muted">
+        <h2 className="text-xl font-semibold text-slate-900">Directorio de usuarios</h2>
+        <p className="mt-1 text-sm text-slate-500">
           Todos los registrados con estado de actividad, racha y preguntas respondidas. Haz clic en
           Actividad para ver el detalle de estudio de cada alumno.
         </p>

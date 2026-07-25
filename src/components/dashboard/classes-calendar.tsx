@@ -61,17 +61,17 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
   const selectedClasses = classesByDay.get(selectedKey) ?? [];
 
   return (
-    <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-6 shadow-sm">
+    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-white">Calendario</h2>
-          <p className="mt-1 text-sm text-mq-muted capitalize">{monthLabel}</p>
+          <h2 className="text-xl font-bold text-slate-900">Calendario</h2>
+          <p className="mt-1 text-sm text-slate-500 capitalize">{monthLabel}</p>
         </div>
         <div className="flex items-center gap-2">
           <button
             type="button"
             onClick={() => setViewMonth((current) => addMonths(current, -1))}
-            className="rounded-lg border border-mq-border p-2 text-mq-muted transition hover:text-white"
+            className="rounded-lg border border-slate-200 p-2 text-slate-500 transition hover:text-slate-900"
             aria-label="Mes anterior"
           >
             <ChevronLeft size={18} />
@@ -83,14 +83,14 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
               setViewMonth(today);
               setSelectedKey(dateKey(new Date()));
             }}
-            className="rounded-lg border border-mq-border px-3 py-2 text-xs font-semibold text-mq-muted transition hover:text-white"
+            className="rounded-lg border border-slate-200 px-3 py-2 text-xs font-semibold text-slate-500 transition hover:text-slate-900"
           >
             Hoy
           </button>
           <button
             type="button"
             onClick={() => setViewMonth((current) => addMonths(current, 1))}
-            className="rounded-lg border border-mq-border p-2 text-mq-muted transition hover:text-white"
+            className="rounded-lg border border-slate-200 p-2 text-slate-500 transition hover:text-slate-900"
             aria-label="Mes siguiente"
           >
             <ChevronRight size={18} />
@@ -102,7 +102,7 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
         {WEEKDAY_LABELS.map((label) => (
           <div
             key={label}
-            className="pb-1 text-center text-[10px] font-bold uppercase tracking-wider text-mq-muted"
+            className="pb-1 text-center text-[10px] font-bold uppercase tracking-wider text-slate-500"
           >
             {label}
           </div>
@@ -126,12 +126,12 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
                   ? "border-mq-accent bg-mq-accent/10"
                   : hasClass
                     ? "border-mq-accent/30 bg-mq-accent/5 hover:border-mq-accent/50"
-                    : "border-white/5 bg-white/[0.02] hover:bg-white/[0.04]"
+                    : "border-white/5 bg-slate-50 hover:bg-white/[0.04]"
               } ${inCurrentMonth ? "" : "opacity-35"}`}
             >
               <span
                 className={`text-sm font-bold ${
-                  isToday ? "text-mq-accent" : inCurrentMonth ? "text-white" : "text-mq-muted"
+                  isToday ? "text-mq-accent" : inCurrentMonth ? "text-slate-900" : "text-slate-500"
                 }`}
               >
                 {day.getDate()}
@@ -155,23 +155,23 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
         })}
       </div>
 
-      <div className="mt-6 rounded-xl border border-white/5 bg-white/[0.02] p-4">
-        <p className="text-xs font-bold uppercase tracking-wider text-mq-muted">
+      <div className="mt-6 rounded-xl border border-white/5 bg-slate-50 p-4">
+        <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
           Clases del día seleccionado
         </p>
         {selectedClasses.length === 0 ? (
-          <p className="mt-3 text-sm text-mq-muted">No hay clases en esta fecha.</p>
+          <p className="mt-3 text-sm text-slate-500">No hay clases en esta fecha.</p>
         ) : (
           <ul className="mt-3 space-y-3">
             {selectedClasses.map((cls) => (
               <li
                 key={cls.id}
-                className="rounded-xl border border-mq-border bg-mq-surface-raised/70 p-4"
+                className="rounded-xl border border-slate-200 bg-white-raised/70 p-4"
               >
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="min-w-0 flex-1">
-                    <p className="font-semibold text-white">{cls.title}</p>
-                    <p className="mt-1 text-sm capitalize text-mq-muted">
+                    <p className="font-semibold text-slate-900">{cls.title}</p>
+                    <p className="mt-1 text-sm capitalize text-slate-500">
                       {formatClassDate(cls.classDate)} · {formatClassTime(cls.classDate)}
                     </p>
                     {cls.courseName ? (

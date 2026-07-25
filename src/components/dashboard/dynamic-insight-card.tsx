@@ -81,7 +81,7 @@ function getToneClasses(tone: InsightTone) {
     return "border-amber-400/35 bg-amber-500/10 text-amber-100";
   }
 
-  return "border-mq-border-strong bg-white/[0.03] text-foreground";
+  return "border-slate-200 bg-white/[0.03] text-foreground";
 }
 
 export function DynamicInsightCard({ userId }: DynamicInsightCardProps) {

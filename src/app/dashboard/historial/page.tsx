@@ -9,17 +9,17 @@ export default function HistorialPage() {
 
   if (isCheckingAuth || !user) {
     return (
-      <section className="h-48 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
+      <section className="h-48 animate-pulse rounded-2xl border border-slate-200 bg-white/[0.04]" />
     );
   }
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-2xl font-semibold text-white">Historial</h1>
-            <p className="mt-2 text-sm text-mq-muted sm:text-base">
+            <h1 className="text-2xl font-semibold text-slate-900">Historial</h1>
+            <p className="mt-2 text-sm text-slate-500 sm:text-base">
               Todas tus sesiones de entrenamiento, diagnósticos y simulacros.
             </p>
           </div>

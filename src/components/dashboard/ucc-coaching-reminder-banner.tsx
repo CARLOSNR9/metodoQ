@@ -65,8 +65,8 @@ export function UccCoachingReminderBanner({
           <div className="flex items-start gap-3">
             <Target className="mt-0.5 h-5 w-5 shrink-0 text-mq-accent" />
             <div>
-              <p className="text-sm font-semibold text-white">Misión del día pendiente</p>
-              <p className="mt-0.5 text-xs text-mq-muted">
+              <p className="text-sm font-semibold text-slate-900">Misión del día pendiente</p>
+              <p className="mt-0.5 text-xs text-slate-500">
                 Llevas {status.todayQuestions}/{status.dailyTarget} preguntas · faltan{" "}
                 {remaining} (~{remaining * 2} min) para cerrar hoy.
               </p>
@@ -96,12 +96,12 @@ export function UccCoachingReminderBanner({
               }`}
             />
             <div>
-              <p className="text-sm font-semibold text-white">
+              <p className="text-sm font-semibold text-slate-900">
                 {status.simulacroOverdue
                   ? "Simulacro UCC pendiente esta semana"
                   : "Simulacro UCC programado para hoy"}
               </p>
-              <p className="mt-0.5 text-xs text-mq-muted">
+              <p className="mt-0.5 text-xs text-slate-500">
                 {status.simulacroStatus?.config.questionCount} preg ·{" "}
                 {status.simulacroStatus?.config.minutes} min · Res. 108
                 {status.simulacroStatus

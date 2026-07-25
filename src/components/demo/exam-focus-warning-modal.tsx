@@ -34,7 +34,7 @@ export function ExamFocusWarningModal({
         </p>
         <h2
           id="exam-focus-warning-title"
-          className="mt-2 text-2xl font-bold text-white sm:text-3xl"
+          className="mt-2 text-2xl font-bold text-slate-900 sm:text-3xl"
         >
           Permanece en esta pestaña
         </h2>

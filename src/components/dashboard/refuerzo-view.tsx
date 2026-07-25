@@ -51,14 +51,14 @@ export function RefuerzoView({ userId }: RefuerzoViewProps) {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-accent">
               Segunda oportunidad
             </p>
-            <h1 className="mt-2 text-2xl font-semibold text-white">Refuerzo</h1>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-mq-muted sm:text-base">
+            <h1 className="mt-2 text-2xl font-semibold text-slate-900">Refuerzo</h1>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-500 sm:text-base">
               Cada error del día queda registrado aquí. Repasa sin presión y, al cerrar tu
               misión, enfrenta el examen final solo con lo que aún no dominas.
             </p>
@@ -75,16 +75,16 @@ export function RefuerzoView({ userId }: RefuerzoViewProps) {
         <StatCard label="Dominadas en refuerzo" value={resolved.length} />
       </section>
 
-      <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h2 className="text-lg font-bold text-white">Examen de cierre del día</h2>
-            <p className="mt-1 text-sm text-mq-muted">
+            <h2 className="text-lg font-bold text-slate-900">Examen de cierre del día</h2>
+            <p className="mt-1 text-sm text-slate-500">
               Se desbloquea al completar tu misión diaria. Solo incluye fallas pendientes.
             </p>
           </div>
           {isLoading ? (
-            <div className="h-11 w-40 animate-pulse rounded-xl bg-white/5" />
+            <div className="h-11 w-40 animate-pulse rounded-xl bg-slate-50" />
           ) : cierreStatus?.cierreAvailable ? (
             <Link
               href={`/dashboard/entrenar?mode=repaso-cierre&count=${pending.length}`}
@@ -94,7 +94,7 @@ export function RefuerzoView({ userId }: RefuerzoViewProps) {
               Iniciar cierre ({pending.length})
             </Link>
           ) : (
-            <span className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 text-sm font-bold text-mq-muted">
+            <span className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-5 text-sm font-bold text-slate-500">
               <Lock size={16} />
               Bloqueado
             </span>
@@ -107,9 +107,9 @@ export function RefuerzoView({ userId }: RefuerzoViewProps) {
         ) : null}
       </section>
 
-      <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
         <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-lg font-bold text-white">Preguntas falladas hoy</h2>
+          <h2 className="text-lg font-bold text-slate-900">Preguntas falladas hoy</h2>
           {pending.length > 0 ? (
             <Link
               href={`/dashboard/entrenar?mode=repaso&count=${pending.length}`}
@@ -124,14 +124,14 @@ export function RefuerzoView({ userId }: RefuerzoViewProps) {
         {isLoading ? (
           <ul className="space-y-3">
             {[1, 2, 3].map((key) => (
-              <li key={key} className="h-20 animate-pulse rounded-xl bg-white/5" />
+              <li key={key} className="h-20 animate-pulse rounded-xl bg-slate-50" />
             ))}
           </ul>
         ) : failed.length === 0 ? (
-          <div className="flex flex-col items-center gap-3 rounded-xl border border-dashed border-white/10 py-12 text-center">
+          <div className="flex flex-col items-center gap-3 rounded-xl border border-dashed border-slate-200 py-12 text-center">
             <CheckCircle2 className="text-emerald-400" size={32} />
-            <p className="text-sm font-semibold text-white">Sin fallas registradas hoy</p>
-            <p className="max-w-sm text-xs text-mq-muted">
+            <p className="text-sm font-semibold text-slate-900">Sin fallas registradas hoy</p>
+            <p className="max-w-sm text-xs text-slate-500">
               Entrena, completa bloques o el reto del día: aquí aparecerá cada pregunta que
               no aciertes.
             </p>
@@ -150,7 +150,7 @@ export function RefuerzoView({ userId }: RefuerzoViewProps) {
                 className={`rounded-xl border p-4 ${
                   item.resolved
                     ? "border-emerald-500/20 bg-emerald-500/5"
-                    : "border-white/10 bg-white/[0.03]"
+                    : "border-slate-200 bg-white/[0.03]"
                 }`}
               >
                 <div className="flex items-start gap-3">
@@ -164,10 +164,10 @@ export function RefuerzoView({ userId }: RefuerzoViewProps) {
                       {item.topic}
                       {item.failCount > 1 ? ` · ${item.failCount} intentos` : ""}
                     </p>
-                    <p className="mt-1 text-sm leading-relaxed text-white/90">
+                    <p className="mt-1 text-sm leading-relaxed text-slate-900/90">
                       {item.statementPreview}
                     </p>
-                    <p className="mt-2 text-[11px] text-mq-muted">
+                    <p className="mt-2 text-[11px] text-slate-500">
                       {item.resolved ? "Resuelta en refuerzo" : "Pendiente para el cierre"}
                     </p>
                   </div>
@@ -195,11 +195,11 @@ function StatCard({
       className={`rounded-2xl border p-4 ${
         accent
           ? "border-mq-accent/30 bg-mq-accent/10"
-          : "border-mq-border-strong bg-mq-surface"
+          : "border-slate-200 bg-white"
       }`}
     >
-      <p className="text-xs font-bold uppercase tracking-wide text-mq-muted">{label}</p>
-      <p className={`mt-2 text-3xl font-black ${accent ? "text-mq-accent" : "text-white"}`}>
+      <p className="text-xs font-bold uppercase tracking-wide text-slate-500">{label}</p>
+      <p className={`mt-2 text-3xl font-black ${accent ? "text-mq-accent" : "text-slate-900"}`}>
         {value}
       </p>
     </div>

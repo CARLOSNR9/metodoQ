@@ -22,79 +22,79 @@ export function AdminClassForm() {
   };
 
   return (
-    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
-      <h2 className="text-xl font-semibold text-white">Programar clase en vivo</h2>
-      <p className="mt-1 text-sm text-mq-muted">
+    <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
+      <h2 className="text-xl font-semibold text-slate-900">Programar clase en vivo</h2>
+      <p className="mt-1 text-sm text-slate-500">
         Visible para usuarios con plan Pro o Residente en el dashboard.
       </p>
 
       <form action={handleSubmit} className="mt-6 grid gap-4 sm:grid-cols-2">
         <div className="sm:col-span-2">
-          <label className="text-xs font-semibold uppercase text-mq-muted">Título</label>
+          <label className="text-xs font-semibold uppercase text-slate-500">Título</label>
           <input
             name="title"
             required
             placeholder="Estrategia para el examen de cardiología"
-            className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
           />
         </div>
         <div className="sm:col-span-2">
-          <label className="text-xs font-semibold uppercase text-mq-muted">Descripción</label>
+          <label className="text-xs font-semibold uppercase text-slate-500">Descripción</label>
           <textarea
             name="description"
             required
             rows={3}
-            className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white resize-none"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 resize-none"
           />
         </div>
         <div>
-          <label className="text-xs font-semibold uppercase text-mq-muted">Fecha</label>
+          <label className="text-xs font-semibold uppercase text-slate-500">Fecha</label>
           <input
             name="date"
             type="date"
             required
-            className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
           />
         </div>
         <div>
-          <label className="text-xs font-semibold uppercase text-mq-muted">Hora</label>
+          <label className="text-xs font-semibold uppercase text-slate-500">Hora</label>
           <input
             name="time"
             type="time"
             required
-            className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
           />
         </div>
         <div>
-          <label className="text-xs font-semibold uppercase text-mq-muted">Duración (min)</label>
+          <label className="text-xs font-semibold uppercase text-slate-500">Duración (min)</label>
           <input
             name="duration"
             type="number"
             min={15}
             defaultValue={60}
             required
-            className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
           />
         </div>
         <div>
-          <label className="text-xs font-semibold uppercase text-mq-muted">Enlace reunión (Meet/Zoom)</label>
+          <label className="text-xs font-semibold uppercase text-slate-500">Enlace reunión (Meet/Zoom)</label>
           <input
             name="meetingLink"
             type="url"
             required
             placeholder="https://meet.google.com/..."
-            className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
           />
         </div>
         <div className="sm:col-span-2">
-          <label className="text-xs font-semibold uppercase text-mq-muted">
+          <label className="text-xs font-semibold uppercase text-slate-500">
             Enlace grabación (opcional, para clases pasadas)
           </label>
           <input
             name="recordingLink"
             type="url"
             placeholder="https://youtube.com/..."
-            className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+            className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
           />
         </div>
         <div className="sm:col-span-2 flex items-center gap-4">

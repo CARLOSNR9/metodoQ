@@ -48,31 +48,31 @@ export function ManualSaleFields({ planId }: ManualSaleFieldsProps) {
       <legend className="px-1 text-sm font-semibold text-mq-accent">
         Venta interna (negociador)
       </legend>
-      <p className="text-xs leading-relaxed text-mq-muted">
+      <p className="text-xs leading-relaxed text-slate-500">
         Registra el acuerdo fuera de Stripe. El acceso del usuario va desde la fecha de inicio
         hasta el fin del período elegido.
       </p>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+          <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">
             Período del plan
           </label>
           <select
             name="planBillingCycle"
             value={String(cycle)}
             onChange={(e) => setCycle(Number(e.target.value) as BillingCycle)}
-            className="w-full cursor-pointer appearance-none rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-white outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
+            className="w-full cursor-pointer appearance-none rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-slate-900 outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
           >
             {CYCLE_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
+              <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-slate-900">
                 {opt.label}
               </option>
             ))}
           </select>
         </div>
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+          <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">
             Fecha de inicio
           </label>
           <input
@@ -81,11 +81,11 @@ export function ManualSaleFields({ planId }: ManualSaleFieldsProps) {
             required
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
-            className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
+            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
           />
         </div>
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+          <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">
             Precio negociado (COP)
           </label>
           <input
@@ -94,42 +94,42 @@ export function ManualSaleFields({ planId }: ManualSaleFieldsProps) {
             inputMode="numeric"
             required
             placeholder={`Ej: 220000`}
-            className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
-          <p className="text-[11px] text-mq-muted">
+          <p className="text-[11px] text-slate-500">
             Precio de lista ({cycle} {cycle === 1 ? "mes" : "meses"}):{" "}
-            <span className="text-white">{formatCOP(listPrice)}</span>
+            <span className="text-slate-900">{formatCOP(listPrice)}</span>
           </p>
         </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+          <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">
             Negociador (opcional)
           </label>
           <input
             name="negotiatorName"
             type="text"
             placeholder="Ej: María López"
-            className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
         </div>
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+          <label className="text-xs font-semibold uppercase tracking-wider text-slate-500">
             Notas internas (opcional)
           </label>
           <input
             name="saleNotes"
             type="text"
             placeholder="Ej: Pago transferencia 15/05"
-            className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2.5 text-white placeholder:text-mq-muted/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
         </div>
       </div>
 
       {endPreview ? (
-        <p className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-xs text-mq-muted">
+        <p className="rounded-lg border border-slate-200 bg-white/[0.03] px-3 py-2 text-xs text-slate-500">
           <span className="font-medium text-emerald-300">Fin del plan:</span>{" "}
           {new Date(endPreview).toLocaleDateString("es-CO", {
             day: "numeric",

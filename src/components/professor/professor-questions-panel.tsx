@@ -143,10 +143,10 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Revisión editorial
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Preguntas
         </h1>
-        <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">
           Revisa cada caso clínico del banco: edita, aprueba, marca observaciones o desactiva
           preguntas que no cumplan el estándar. Las pendientes son las que aún no has revisado.
         </p>
@@ -161,13 +161,13 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
 
       <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="relative flex-1 max-w-md">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mq-muted" />
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
           <input
             type="search"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Buscar por tema, caso, universidad..."
-            className="w-full rounded-lg border border-mq-border bg-mq-surface py-2.5 pl-10 pr-3 text-sm text-white"
+            className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pl-10 pr-3 text-sm text-slate-900"
           />
         </div>
         <button
@@ -181,7 +181,7 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
       </div>
 
       {syncMessage && (
-        <p className="mb-4 text-sm text-mq-muted">{syncMessage}</p>
+        <p className="mb-4 text-sm text-slate-500">{syncMessage}</p>
       )}
 
       <div className="mb-4 flex flex-wrap gap-2">
@@ -193,7 +193,7 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
             className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
               filter === f.key
                 ? "bg-mq-accent text-mq-accent-foreground"
-                : "border border-white/15 text-mq-muted hover:text-white"
+                : "border border-white/15 text-slate-500 hover:text-slate-900"
             }`}
           >
             {f.label}
@@ -202,14 +202,14 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
         ))}
       </div>
 
-      <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised shadow-xl">
-        <p className="border-b border-white/10 px-5 py-3 text-sm text-mq-muted">
+      <section className="rounded-xl border border-slate-200 bg-white-raised shadow-xl">
+        <p className="border-b border-slate-200 px-5 py-3 text-sm text-slate-500">
           {filtered.length} pregunta{filtered.length === 1 ? "" : "s"}
           {isPending ? " · actualizando..." : ""}
         </p>
 
         {filtered.length === 0 ? (
-          <p className="px-5 py-10 text-center text-sm text-mq-muted">
+          <p className="px-5 py-10 text-center text-sm text-slate-500">
             No hay preguntas con este filtro.
           </p>
         ) : (
@@ -223,7 +223,7 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
                 >
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-medium text-white">{q.topic}</span>
+                      <span className="font-medium text-slate-900">{q.topic}</span>
                       <StatusBadge status={normalizeReviewStatus(q.reviewStatus)} />
                       {!q.inFirestore && (
                         <span className="rounded-full bg-violet-500/15 px-2 py-0.5 text-[10px] font-bold uppercase text-violet-300">
@@ -231,13 +231,13 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
                         </span>
                       )}
                       {q.active === false && (
-                        <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-bold uppercase text-mq-muted">
+                        <span className="rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase text-slate-500">
                           Inactiva
                         </span>
                       )}
                     </div>
-                    <p className="mt-1 line-clamp-2 text-sm text-mq-muted">{q.statement}</p>
-                    <p className="mt-1 text-xs text-mq-muted/80">
+                    <p className="mt-1 line-clamp-2 text-sm text-slate-500">{q.statement}</p>
+                    <p className="mt-1 text-xs text-slate-500/80">
                       {q.university ? `${q.university} · ` : ""}
                       ID: {q.id}
                     </p>
@@ -277,11 +277,11 @@ function StatCard({
       className={`rounded-xl border p-4 ${
         highlight
           ? "border-amber-500/30 bg-amber-500/10"
-          : "border-mq-border-strong bg-mq-surface-raised/80"
+          : "border-slate-200 bg-white-raised/80"
       }`}
     >
-      <p className="text-xs uppercase tracking-wider text-mq-muted">{label}</p>
-      <p className={`mt-1 text-2xl font-bold ${highlight ? "text-amber-200" : "text-white"}`}>
+      <p className="text-xs uppercase tracking-wider text-slate-500">{label}</p>
+      <p className={`mt-1 text-2xl font-bold ${highlight ? "text-amber-200" : "text-slate-900"}`}>
         {value}
       </p>
     </div>

@@ -46,7 +46,7 @@ export function FreePlanPaywall({
         </p>
         <h2
           id="free-plan-paywall-title"
-          className="mt-3 text-2xl font-semibold text-white sm:text-3xl"
+          className="mt-3 text-2xl font-semibold text-slate-900 sm:text-3xl"
         >
           Ya diste el primer paso 🚀
         </h2>
@@ -66,7 +66,7 @@ export function FreePlanPaywall({
           Tu progreso depende de lo que hagas hoy
         </p>
 
-        <ul className="mt-5 space-y-2 rounded-2xl border border-[#27406B] bg-[#0A1F44]/70 p-4">
+        <ul className="mt-5 space-y-2 rounded-2xl border border-[#27406B] bg-slate-50/70 p-4">
           <li className="text-sm text-[#DCE7FA]">- Clases en vivo con médicos aprobados</li>
           <li className="text-sm text-[#DCE7FA]">- Estrategias reales para tu examen</li>
           <li className="text-sm text-[#DCE7FA]">- Preguntas y simulacros ilimitados</li>

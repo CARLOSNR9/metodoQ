@@ -34,7 +34,7 @@ export function SubscriptionStatusCard({
           {summary.planName} · {summary.billingCycleLabel}
         </span>
         {daysLabel ? (
-          <span className="text-[10px] font-semibold text-mq-muted">{daysLabel}</span>
+          <span className="text-[10px] font-semibold text-slate-500">{daysLabel}</span>
         ) : null}
       </div>
     );
@@ -47,19 +47,19 @@ export function SubscriptionStatusCard({
           <p className="text-[10px] font-bold uppercase tracking-widest text-mq-accent">
             Tu membresía
           </p>
-          <h2 className="text-xl font-bold text-white">
+          <h2 className="text-xl font-bold text-slate-900">
             Plan {summary.planName} · {summary.billingCycleLabel}
           </h2>
-          {daysLabel ? <p className="text-sm text-mq-muted">{daysLabel}</p> : null}
+          {daysLabel ? <p className="text-sm text-slate-500">{daysLabel}</p> : null}
         </div>
         {summary.negotiatedPrice != null ? (
           <div className="text-right">
-            <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
               Inversión
             </p>
-            <p className="text-lg font-black text-white">{summary.priceLabel}</p>
+            <p className="text-lg font-black text-slate-900">{summary.priceLabel}</p>
             {summary.listPrice != null && summary.listPrice > summary.negotiatedPrice ? (
-              <p className="text-xs text-mq-muted line-through">
+              <p className="text-xs text-slate-500 line-through">
                 {formatCOP(summary.listPrice)}
               </p>
             ) : null}
@@ -69,11 +69,11 @@ export function SubscriptionStatusCard({
 
       {summary.progressPercent != null ? (
         <div className="mt-5">
-          <div className="mb-2 flex justify-between text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+          <div className="mb-2 flex justify-between text-[10px] font-bold uppercase tracking-wider text-slate-500">
             <span>Progreso del período</span>
             <span className="text-mq-accent">{summary.progressPercent}%</span>
           </div>
-          <div className="h-2 overflow-hidden rounded-full bg-white/10">
+          <div className="h-2 overflow-hidden rounded-full bg-slate-100">
             <div
               className="h-full rounded-full bg-mq-accent transition-all duration-500"
               style={{ width: `${summary.progressPercent}%` }}
@@ -86,19 +86,19 @@ export function SubscriptionStatusCard({
         <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.03] p-3">
           <Calendar size={16} className="mt-0.5 shrink-0 text-mq-accent" />
           <div>
-            <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+            <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
               Inicio
             </dt>
-            <dd className="font-medium text-white">{summary.startedLabel}</dd>
+            <dd className="font-medium text-slate-900">{summary.startedLabel}</dd>
           </div>
         </div>
         <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.03] p-3">
           <CreditCard size={16} className="mt-0.5 shrink-0 text-mq-accent" />
           <div>
-            <dt className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+            <dt className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
               Vence
             </dt>
-            <dd className="font-medium text-white">{summary.expiresLabel}</dd>
+            <dd className="font-medium text-slate-900">{summary.expiresLabel}</dd>
           </div>
         </div>
       </dl>

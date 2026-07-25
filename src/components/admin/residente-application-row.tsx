@@ -48,12 +48,12 @@ export function ResidenteApplicationRow({
 
   return (
     <tr className="border-b border-white/5">
-      <td className="py-3 pr-4 font-medium text-white">{name}</td>
-      <td className="py-3 pr-4 text-mq-muted">
+      <td className="py-3 pr-4 font-medium text-slate-900">{name}</td>
+      <td className="py-3 pr-4 text-slate-500">
         <div>{email}</div>
         <div className="text-xs">{phone}</div>
       </td>
-      <td className="py-3 pr-4 text-mq-muted">{university || "—"}</td>
+      <td className="py-3 pr-4 text-slate-500">{university || "—"}</td>
       <td className="py-3 pr-4">
         <select
           value={status}
@@ -64,13 +64,13 @@ export function ResidenteApplicationRow({
           className={`${selectInputClassName} px-2 py-1 text-xs`}
         >
           {STATUS_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-white">
+            <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-slate-900">
               {opt.label}
             </option>
           ))}
         </select>
       </td>
-      <td className="py-3 text-xs text-mq-muted">
+      <td className="py-3 text-xs text-slate-500">
         {createdAt ? new Date(createdAt).toLocaleDateString("es-CO") : "—"}
       </td>
     </tr>

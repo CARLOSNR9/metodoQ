@@ -86,13 +86,13 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
 
   if (isCheckingAuth || !user) {
     return (
-      <section className="h-48 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
+      <section className="h-48 animate-pulse rounded-2xl border border-slate-200 bg-white/[0.04]" />
     );
   }
 
   return (
     <div className="mx-auto w-full max-w-4xl space-y-6">
-      <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 sm:p-6">
+      <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
         <Link
           href={backHref}
           className="inline-flex items-center gap-2 text-sm font-semibold text-mq-accent hover:brightness-110"
@@ -100,18 +100,18 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
           <ArrowLeft className="h-4 w-4" />
           {backLabel}
         </Link>
-        <h1 className="mt-4 text-2xl font-semibold text-white">
+        <h1 className="mt-4 text-2xl font-semibold text-slate-900">
           {isConvocatoria
             ? `Retroalimentación · ${convocatoriaEdition?.label ?? "Convocatoria UCC"}`
             : "Retroalimentación del intento"}
         </h1>
         {result ? (
-          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-mq-muted">
+          <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-slate-500">
             <span>{result.fechaLabel}</span>
-            <span className="rounded-full border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mq-accent">
+            <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-mq-accent">
               {getSessionTypeLabel(result.sessionType)}
             </span>
-            <span className="font-semibold text-white">{result.scorePercentage}%</span>
+            <span className="font-semibold text-slate-900">{result.scorePercentage}%</span>
             <span>
               {result.correctAnswers} correctas · {result.wrongAnswers} incorrectas
             </span>
@@ -120,7 +120,7 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
       </section>
 
       {isLoading ? (
-        <section className="h-64 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
+        <section className="h-64 animate-pulse rounded-2xl border border-slate-200 bg-white/[0.04]" />
       ) : errorMessage ? (
         <section className="rounded-2xl border border-rose-400/30 bg-rose-500/10 p-5 text-sm text-rose-100">
           {errorMessage}

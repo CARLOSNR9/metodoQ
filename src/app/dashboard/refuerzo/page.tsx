@@ -8,7 +8,7 @@ export default function RefuerzoPage() {
 
   if (isCheckingAuth || !user) {
     return (
-      <section className="h-48 animate-pulse rounded-2xl border border-mq-border-strong bg-white/[0.04]" />
+      <section className="h-48 animate-pulse rounded-2xl border border-slate-200 bg-white/[0.04]" />
     );
   }
 

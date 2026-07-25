@@ -1060,14 +1060,14 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                   {user ? (
                     <>
-                      <p className="text-xs text-mq-muted sm:text-sm">Sesion activa: {user.email}</p>
-                      <button onClick={() => logoutUser()} className="touch-manipulation inline-flex min-h-10 items-center justify-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-foreground transition hover:border-white/30 hover:bg-white/[0.07] sm:text-sm">
+                      <p className="text-xs text-slate-500 sm:text-sm">Sesion activa: {user.email}</p>
+                      <button onClick={() => logoutUser()} className="touch-manipulation inline-flex min-h-10 items-center justify-center rounded-lg border border-slate-200 bg-white/[0.03] px-3 text-xs font-semibold text-foreground transition hover:border-white/30 hover:bg-white/[0.07] sm:text-sm">
                         Cerrar sesion
                       </button>
                     </>
                   ) : (
                     <div className="flex items-center gap-4">
-                      <p className="inline-flex min-h-10 items-center rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 text-xs font-semibold text-mq-muted sm:text-sm">Modo invitado</p>
+                      <p className="inline-flex min-h-10 items-center rounded-lg border border-slate-200 bg-white/[0.03] px-3 text-xs font-semibold text-slate-500 sm:text-sm">Modo invitado</p>
                       {hasStarted && (
                         <div className="flex items-center gap-2 rounded-lg border border-mq-accent/20 bg-mq-accent/5 px-3 py-1.5 text-sm font-bold text-mq-accent">
                           <span className="h-2 w-2 rounded-full bg-mq-accent animate-pulse" />
@@ -1085,7 +1085,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-[2rem] bg-mq-accent/10 text-mq-accent ring-1 ring-mq-accent/20">
                   <Zap size={48} fill="currentColor" />
                 </div>
-                <h1 className="mb-4 text-4xl font-black tracking-tight text-white sm:text-6xl">
+                <h1 className="mb-4 text-4xl font-black tracking-tight text-slate-900 sm:text-6xl">
                   {isConvocatoria ? (
                     <>Convocatoria <span className="text-mq-accent">UCC</span></>
                   ) : isSimulacro ? (
@@ -1102,7 +1102,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     <>Prepárate para <span className="text-mq-accent">Ganar</span></>
                   )}
                 </h1>
-                <p className="mb-6 max-w-lg text-lg text-mq-muted">
+                <p className="mb-6 max-w-lg text-lg text-slate-500">
                   {isConvocatoria && convocatoriaEdition
                     ? `${convocatoriaEdition.label} · ${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min · 1 intento · sin feedback durante el examen.`
                     : isSimulacro
@@ -1209,7 +1209,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                                   ? "Simulacro en curso"
                                   : "Entrenamiento adaptativo"}
                        </p>
-                       <h2 className="text-xl font-bold text-white">Pregunta {currentQuestionIndex + 1} de {totalQuestions}</h2>
+                       <h2 className="text-xl font-bold text-slate-900">Pregunta {currentQuestionIndex + 1} de {totalQuestions}</h2>
                     </div>
                     {(isDailyPill || isTimedExam) && (
                        <div
@@ -1229,7 +1229,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     )}
                  </div>
 
-                 <div className="relative h-2 w-full overflow-hidden rounded-full bg-white/5">
+                 <div className="relative h-2 w-full overflow-hidden rounded-full bg-slate-50">
                     <motion.div initial={{ width: 0 }} animate={{ width: `${progressPercent}%` }} className="absolute inset-y-0 left-0 bg-mq-accent shadow-[0_0_15px_rgba(0,209,255,0.5)]" />
                  </div>
 

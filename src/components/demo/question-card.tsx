@@ -95,7 +95,7 @@ export function QuestionCard({
 
   return (
     <article
-      className={`w-full rounded-2xl border border-mq-border-strong bg-mq-surface p-5 shadow-[0_24px_60px_-36px_rgb(0_209_255/0.45)] sm:p-7 ${className ?? ""}`}
+      className={`w-full rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_24px_60px_-36px_rgb(0_209_255/0.45)] sm:p-7 ${className ?? ""}`}
       aria-label="Tarjeta de pregunta"
     >
       <div className="flex items-center justify-between">
@@ -105,7 +105,7 @@ export function QuestionCard({
         <button
           type="button"
           onClick={() => setIsReportModalOpen(true)}
-          className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-semibold text-mq-muted transition hover:bg-white/10 hover:text-white"
+          className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
           title="Reportar pregunta"
         >
           <Flag className="h-3.5 w-3.5" />
@@ -140,12 +140,12 @@ export function QuestionCard({
               disabled={hasAnswered}
               className={`touch-manipulation relative flex min-h-14 w-full items-center gap-3 overflow-hidden rounded-xl border px-4 py-3 text-left transition-all duration-300 sm:min-h-16 sm:px-5 ${
                 showCorrectStyle
-                  ? "border-emerald-500/50 bg-emerald-500/10 text-white shadow-[0_0_20px_-5px_rgba(16,185_129,0.3)]"
+                  ? "border-emerald-500/50 bg-emerald-500/10 text-slate-900 shadow-[0_0_20px_-5px_rgba(16,185_129,0.3)]"
                   : showIncorrectStyle
-                    ? "border-rose-500/50 bg-rose-500/10 text-white shadow-[0_0_20px_-5px_rgba(244,63,94,0.3)]"
+                    ? "border-rose-500/50 bg-rose-500/10 text-slate-900 shadow-[0_0_20px_-5px_rgba(244,63,94,0.3)]"
                     : isSelected
                       ? "border-mq-accent/50 bg-mq-accent/10 text-white shadow-[0_0_20px_-5px_rgba(0,209,255,0.3)]"
-                      : "border-white/10 bg-white/[0.02] text-foreground backdrop-blur-sm hover:border-white/20 hover:bg-white/[0.05]"
+                      : "border-slate-200 bg-slate-50 text-foreground backdrop-blur-sm hover:border-slate-300 hover:bg-slate-100"
               }`}
               aria-pressed={isSelected}
             >
@@ -165,7 +165,7 @@ export function QuestionCard({
                       ? "border-rose-400 bg-rose-400 text-[#3f0d1a]"
                       : isSelected
                         ? "border-mq-accent bg-mq-accent text-mq-accent-foreground"
-                        : "border-white/20 bg-white/5 text-mq-muted"
+                        : "border-slate-300 bg-slate-50 text-slate-500"
                 }`}
               >
                 {option.label}
@@ -183,7 +183,7 @@ export function QuestionCard({
             initial={{ opacity: 0, height: 0, y: 20 }}
             animate={{ opacity: 1, height: "auto", y: 0 }}
             transition={{ type: "spring", damping: 20, stiffness: 100 }}
-            className={`mt-6 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-md sm:p-6 relative ${isLocked ? "min-h-[300px]" : ""}`}
+            className={`mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white/[0.03] p-5 backdrop-blur-md sm:p-6 relative ${isLocked ? "min-h-[300px]" : ""}`}
           >
             <div className={`transition-all duration-700 ${isLocked ? "blur-xl select-none pointer-events-none grayscale" : ""}`}>
               <div className="flex items-center justify-between">
@@ -222,7 +222,7 @@ export function QuestionCard({
                       <button
                         type="button"
                         onClick={() => setIsTheoryPanelOpen(true)}
-                        className="group flex w-full items-center gap-4 rounded-2xl border border-white/10 bg-gradient-to-r from-white/[0.06] to-mq-accent/10 p-4 text-left transition hover:border-mq-accent/35 hover:from-white/[0.08] hover:to-mq-accent/15"
+                        className="group flex w-full items-center gap-4 rounded-2xl border border-slate-200 bg-gradient-to-r from-white/[0.06] to-mq-accent/10 p-4 text-left transition hover:border-mq-accent/35 hover:from-white/[0.08] hover:to-mq-accent/15"
                       >
                         <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/15 text-mq-accent ring-1 ring-mq-accent/20">
                           <BookOpen className="h-5 w-5" />
@@ -231,10 +231,10 @@ export function QuestionCard({
                           <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
                             {isCorrect ? "Repasar tema" : "Profundizar"}
                           </span>
-                          <span className="mt-1 block text-sm font-bold text-white">
+                          <span className="mt-1 block text-sm font-bold text-slate-900">
                             {topic ?? "Leer explicación completa"}
                           </span>
-                          <span className="mt-1 block text-xs text-mq-muted">
+                          <span className="mt-1 block text-xs text-slate-500">
                             Abre la píldora de teoría y guárdala en Mi Estudio
                           </span>
                         </span>
@@ -265,7 +265,7 @@ export function QuestionCard({
                         <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
                           Profundizar
                         </span>
-                        <span className="mt-0.5 block truncate text-sm font-semibold text-white">
+                        <span className="mt-0.5 block truncate text-sm font-semibold text-slate-900">
                           {topic ? `Teoría externa: ${topic}` : "Abrir teoría completa"}
                         </span>
                       </span>
@@ -283,7 +283,7 @@ export function QuestionCard({
                         <span className="block text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
                           Profundizar
                         </span>
-                        <span className="mt-0.5 block truncate text-sm font-semibold text-white">
+                        <span className="mt-0.5 block truncate text-sm font-semibold text-slate-900">
                           {topic ? `Píldora de teoría: ${topic}` : "Leer explicación completa del tema"}
                         </span>
                       </span>
@@ -303,8 +303,8 @@ export function QuestionCard({
                 </motion.div>
               )}
 
-              <div className="mt-6 rounded-xl border border-white/10 bg-white/[0.02] p-5">
-                <h4 className="flex items-center gap-2 text-sm font-bold text-white/90">
+              <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
+                <h4 className="flex items-center gap-2 text-sm font-bold text-slate-900/90">
                   <span className="flex h-5 w-5 items-center justify-center rounded-lg bg-mq-accent/20 text-mq-accent">
                     🧠
                   </span>
@@ -317,7 +317,7 @@ export function QuestionCard({
                       initial={{ opacity: 0, x: -5 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 + i * 0.05 }}
-                      className="flex gap-3 text-sm leading-relaxed text-mq-muted"
+                      className="flex gap-3 text-sm leading-relaxed text-slate-500"
                     >
                       <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-mq-accent/60" />
                       {point}
@@ -338,8 +338,8 @@ export function QuestionCard({
                   <Lock size={32} />
                 </motion.div>
                 
-                <h4 className="text-lg font-black text-white uppercase tracking-tighter">Explicación Bloqueada</h4>
-                <p className="mt-2 text-sm text-mq-muted max-w-[280px]">
+                <h4 className="text-lg font-black text-slate-900 uppercase tracking-tighter">Explicación Bloqueada</h4>
+                <p className="mt-2 text-sm text-slate-500 max-w-[280px]">
                   El 85% de los errores en este tema se deben a falta de bases moleculares. No te quedes con la duda.
                 </p>
                 

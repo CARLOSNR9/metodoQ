@@ -143,9 +143,9 @@ export function TheoryDeepDivePanel({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 48, scale: 0.98 }}
             transition={{ type: "spring", damping: 28, stiffness: 320 }}
-            className="relative z-10 flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[2rem] border border-white/10 bg-[#071428] shadow-[0_32px_120px_-24px_rgb(0_209_255/0.35)] sm:rounded-[2rem]"
+            className="relative z-10 flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[2rem] border border-slate-200 bg-[#071428] shadow-[0_32px_120px_-24px_rgb(0_209_255/0.35)] sm:rounded-[2rem]"
           >
-            <div className="relative overflow-hidden border-b border-white/10 px-5 py-5 sm:px-7">
+            <div className="relative overflow-hidden border-b border-slate-200 px-5 py-5 sm:px-7">
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-mq-accent/15 via-transparent to-indigo-500/10" />
               <div className="relative flex items-start justify-between gap-4">
                 <div className="min-w-0">
@@ -155,19 +155,19 @@ export function TheoryDeepDivePanel({
                   </div>
                   <h2
                     id="theory-deep-dive-title"
-                    className="mt-3 text-xl font-black text-white sm:text-2xl"
+                    className="mt-3 text-xl font-black text-slate-900 sm:text-2xl"
                   >
                     {topic}
                   </h2>
                   {examArea ? (
-                    <p className="mt-1 text-sm text-mq-muted">{examArea}</p>
+                    <p className="mt-1 text-sm text-slate-500">{examArea}</p>
                   ) : null}
                 </div>
                 <button
                   type="button"
                   onClick={onClose}
                   aria-label="Cerrar"
-                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-mq-muted transition hover:bg-white/10 hover:text-white"
+                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -175,11 +175,11 @@ export function TheoryDeepDivePanel({
             </div>
 
             <div className="flex-1 overflow-y-auto px-5 py-5 sm:px-7">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
-                <p className="text-[10px] font-black uppercase tracking-[0.16em] text-mq-muted">
+              <div className="rounded-2xl border border-slate-200 bg-white/[0.04] p-4 sm:p-5">
+                <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">
                   Pregunta
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-slate-300 sm:text-base">
+                <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
                   {statement}
                 </p>
               </div>
@@ -187,13 +187,13 @@ export function TheoryDeepDivePanel({
               <div className="mt-6">
                 <div className="mb-4 flex items-center gap-2">
                   <BookOpen className="h-4 w-4 text-mq-accent" />
-                  <p className="text-sm font-bold text-white">Lectura para el examen</p>
+                  <p className="text-sm font-bold text-slate-900">Lectura para el examen</p>
                 </div>
                 <TheoryContent content={theoryContent} />
               </div>
             </div>
 
-            <div className="border-t border-white/10 bg-[#050f22]/95 px-5 py-4 backdrop-blur-md sm:px-7">
+            <div className="border-t border-slate-200 bg-[#050f22]/95 px-5 py-4 backdrop-blur-md sm:px-7">
               {saveMessage ? (
                 <p
                   className={`mb-3 text-center text-xs font-medium ${
@@ -232,15 +232,15 @@ export function TheoryDeepDivePanel({
                     <button
                       type="button"
                       onClick={onClose}
-                      className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-white/10 px-5 text-sm font-semibold text-mq-muted transition hover:bg-white/5 hover:text-white sm:min-w-[140px]"
+                      className="inline-flex min-h-12 items-center justify-center rounded-2xl border border-slate-200 px-5 text-sm font-semibold text-slate-500 transition hover:bg-slate-50 hover:text-slate-900 sm:min-w-[140px]"
                     >
                       Cerrar
                     </button>
                   </>
                 ) : (
-                  <div className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-center text-sm text-mq-muted">
+                  <div className="w-full rounded-2xl border border-slate-200 bg-white/[0.03] px-4 py-3 text-center text-sm text-slate-500">
                     Inicia sesión para guardar esta nota en{" "}
-                    <span className="font-semibold text-white">Mi Estudio</span>.
+                    <span className="font-semibold text-slate-900">Mi Estudio</span>.
                   </div>
                 )}
               </div>

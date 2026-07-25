@@ -47,10 +47,10 @@ export default async function AdminHomePage() {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Panel de administración
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Control total de Método Q
         </h1>
-        <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">
           Gestión de usuarios, ventas internas y operación del negocio. Usa el menú lateral
           para navegar entre las secciones.
         </p>
@@ -78,19 +78,19 @@ export default async function AdminHomePage() {
       ) : null}
 
       <section className="mt-10">
-        <h2 className="text-lg font-semibold text-white">Estado de Convocatorias</h2>
+        <h2 className="text-lg font-semibold text-slate-900">Estado de Convocatorias</h2>
         {metrics.universityStats && metrics.universityStats.length > 0 ? (
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {metrics.universityStats.map((stat) => (
-              <div key={stat.name} className="rounded-xl border border-mq-border bg-mq-surface p-5">
-                <p className="font-semibold text-white">{stat.name}</p>
+              <div key={stat.name} className="rounded-xl border border-slate-200 bg-white p-5">
+                <p className="font-semibold text-slate-900">{stat.name}</p>
                 <div className="mt-4 flex flex-col gap-2">
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-mq-muted">Estudiantes PRO:</span>
-                    <span className="font-bold text-white">{stat.studentsCount}</span>
+                    <span className="text-slate-500">Estudiantes PRO:</span>
+                    <span className="font-bold text-slate-900">{stat.studentsCount}</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-mq-muted">Próximo examen:</span>
+                    <span className="text-slate-500">Próximo examen:</span>
                     <span className={`font-bold ${stat.nextConvocatoria ? "text-amber-300" : "text-emerald-400"}`}>
                       {stat.nextConvocatoria ? stat.nextConvocatoria : "Sin programación"}
                     </span>
@@ -100,21 +100,21 @@ export default async function AdminHomePage() {
             ))}
           </div>
         ) : (
-          <p className="mt-4 text-sm text-mq-muted">No hay estudiantes con plan de pago activos.</p>
+          <p className="mt-4 text-sm text-slate-500">No hay estudiantes con plan de pago activos.</p>
         )}
       </section>
 
       <section className="mt-10">
-        <h2 className="text-lg font-semibold text-white">Accesos rápidos</h2>
+        <h2 className="text-lg font-semibold text-slate-900">Accesos rápidos</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {quickLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="group rounded-xl border border-mq-border bg-mq-surface-raised/60 p-5 transition hover:border-mq-accent/40 hover:bg-mq-surface-raised"
+              className="group rounded-xl border border-slate-200 bg-white-raised/60 p-5 transition hover:border-mq-accent/40 hover:bg-white-raised"
             >
-              <p className="font-semibold text-white group-hover:text-mq-accent">{link.title}</p>
-              <p className="mt-1 text-sm text-mq-muted">{link.description}</p>
+              <p className="font-semibold text-slate-900 group-hover:text-mq-accent">{link.title}</p>
+              <p className="mt-1 text-sm text-slate-500">{link.description}</p>
             </Link>
           ))}
         </div>

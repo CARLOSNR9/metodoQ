@@ -45,20 +45,20 @@ export function ScoreComparisonCards({
             Promedio global
           </span>
         </motion.div>
-        <p className="text-3xl font-black text-white">{globalScorePercentage}%</p>
-        <p className="mt-1 text-xs text-mq-muted">
+        <p className="text-3xl font-black text-slate-900">{globalScorePercentage}%</p>
+        <p className="mt-1 text-xs text-slate-500">
           {globalStandardized} estandarizado
           {totalQuestionsAnswered > 0
             ? ` · ${totalQuestionsAnswered} preguntas en total`
             : ""}
         </p>
-        <p className="mt-2 text-[10px] leading-relaxed text-mq-muted/80">
+        <p className="mt-2 text-[10px] leading-relaxed text-slate-500/80">
           Diagnóstico + retos diarios + entrenamiento acumulados.
         </p>
       </motion.div>
 
       <motion.div
-        className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+        className="rounded-2xl border border-slate-200 bg-white/[0.03] p-4"
         whileHover={{ scale: 1.01 }}
       >
         <div className="mb-3 flex items-center gap-2 text-amber-300/90">
@@ -69,8 +69,8 @@ export function ScoreComparisonCards({
         </div>
         {showLastSession ? (
           <>
-            <p className="text-3xl font-black text-white">{lastSessionScore}%</p>
-            <p className="mt-1 text-xs text-mq-muted">
+            <p className="text-3xl font-black text-slate-900">{lastSessionScore}%</p>
+            <p className="mt-1 text-xs text-slate-500">
               {sessionStandardized} estandarizado · intento más reciente
             </p>
             {lastSessionScore !== globalScorePercentage && (
@@ -82,7 +82,7 @@ export function ScoreComparisonCards({
             )}
           </>
         ) : (
-          <p className="text-sm text-mq-muted">Sin sesiones registradas aún.</p>
+          <p className="text-sm text-slate-500">Sin sesiones registradas aún.</p>
         )}
       </motion.div>
     </motion.div>

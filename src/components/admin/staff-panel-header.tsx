@@ -22,7 +22,7 @@ export function StaffPanelHeader({ user }: StaffPanelHeaderProps) {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-mq-border-strong bg-[#0A1F44]/95 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-slate-50/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link
           href="/"
@@ -35,14 +35,14 @@ export function StaffPanelHeader({ user }: StaffPanelHeaderProps) {
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
             href="/"
-            className="hidden items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold text-mq-muted transition hover:bg-white/[0.05] hover:text-white sm:inline-flex sm:text-sm"
+            className="hidden items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-900 sm:inline-flex sm:text-sm"
           >
             <Home size={14} />
             Inicio
           </Link>
 
-          <p className="hidden max-w-[12rem] truncate text-xs text-mq-muted sm:block sm:max-w-xs sm:text-sm">
-            <span className="text-white">{user.email}</span>
+          <p className="hidden max-w-[12rem] truncate text-xs text-slate-500 sm:block sm:max-w-xs sm:text-sm">
+            <span className="text-slate-900">{user.email}</span>
           </p>
 
           {!isLoadingRole && isAdmin ? (
@@ -58,7 +58,7 @@ export function StaffPanelHeader({ user }: StaffPanelHeaderProps) {
           <button
             type="button"
             onClick={handleLogout}
-            className="group inline-flex items-center gap-1.5 rounded-lg border border-mq-border-strong bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-mq-muted transition hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-400 sm:gap-2 sm:text-sm"
+            className="group inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold text-slate-500 transition hover:border-red-500/30 hover:bg-red-500/10 hover:text-red-400 sm:gap-2 sm:text-sm"
           >
             <LogOut size={14} className="shrink-0" />
             <span>Cerrar sesión</span>

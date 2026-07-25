@@ -157,7 +157,7 @@ export function FreeDashboardView({
       </motion.div>
 
       {/* 1. HERO (ARRIBA) — MEJORADO */}
-      <header className="relative overflow-hidden rounded-[2.5rem] border border-mq-border-strong bg-gradient-to-br from-red-500/10 via-mq-surface to-transparent p-8 sm:p-12">
+      <header className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-gradient-to-br from-red-500/10 via-mq-surface to-transparent p-8 sm:p-12">
         <div className="relative z-10">
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 px-4 py-1.5 backdrop-blur-md">
@@ -167,7 +167,7 @@ export function FreeDashboardView({
               </span>
             </div>
             
-            <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl leading-[1.1]">
+            <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-6xl leading-[1.1]">
               {user?.attemptsCount > 0
                 ? <>Análisis de <span className="text-red-500 italic">Supervivencia</span> <br className="hidden sm:block" /> Completado.</>
                 : user?.attemptedExam 
@@ -176,7 +176,7 @@ export function FreeDashboardView({
               }
             </h1>
             
-            <p className="text-lg leading-relaxed text-mq-muted sm:text-xl max-w-xl">
+            <p className="text-lg leading-relaxed text-slate-500 sm:text-xl max-w-xl">
               {user?.goalUniversity && user.goalUniversity !== "Otra"
                 ? `Haz tu diagnóstico y descubre qué te separa de tu plaza en la ${user.goalUniversity}. No dejes tu futuro al azar.`
                 : "Haz tu diagnóstico y descubre qué te está costando la plaza en la residencia médica. No dejes tu futuro al azar."
@@ -185,7 +185,7 @@ export function FreeDashboardView({
 
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               {user?.attemptsCount > 0 ? (
-                <div className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-surface/50 border border-white/10 px-10 text-base font-black text-white/50 cursor-not-allowed">
+                <div className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-white/50 border border-slate-200 px-10 text-base font-black text-slate-900/50 cursor-not-allowed">
                   <Lock size={20} />
                   <span>Diagnóstico Completado</span>
                 </div>
@@ -202,7 +202,7 @@ export function FreeDashboardView({
               
               <Link
                 href="/dashboard/planes"
-                className="inline-flex h-16 items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-8 text-base font-bold text-white transition-all hover:bg-white/10"
+                className="inline-flex h-16 items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-8 text-base font-bold text-slate-900 transition-all hover:bg-slate-100"
               >
                 Ver planes PRO
               </Link>
@@ -213,7 +213,7 @@ export function FreeDashboardView({
         {/* Background Decorative elements */}
         <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-red-500/10 blur-[120px] animate-pulse" />
         <div className="absolute bottom-0 right-0 p-12 opacity-10 select-none pointer-events-none hidden lg:block">
-           <Zap size={300} className="text-white" />
+           <Zap size={300} className="text-slate-900" />
         </div>
       </header>
 
@@ -259,14 +259,14 @@ export function FreeDashboardView({
             <div className="space-y-10">
               <SummaryCards userId={user.uid} />
               
-              <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
+              <section className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-slate-50 p-8 sm:p-10 shadow-2xl backdrop-blur-md">
                 <div className="mb-8 space-y-2">
                   <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/20 bg-mq-accent/10 px-4 py-1">
                     <Sparkles size={14} className="text-mq-accent" />
                     <span className="text-[10px] font-bold uppercase tracking-widest text-mq-accent">Análisis de Desempeño IA</span>
                   </div>
-                  <h2 className="text-3xl font-black text-white">Tu Realidad Académica</h2>
-                  <p className="text-mq-muted text-sm">
+                  <h2 className="text-3xl font-black text-slate-900">Tu Realidad Académica</h2>
+                  <p className="text-slate-500 text-sm">
                     Promedio acumulado de todas tus respuestas (diagnóstico, retos diarios y entrenamiento).
                     {totalQuestions > 0 ? ` Basado en ${totalQuestions} preguntas.` : ""}
                   </p>
@@ -294,8 +294,8 @@ export function FreeDashboardView({
                     <Sparkles size={32} />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-white italic">"Doc, los números no mienten, pero no definen tu final."</h3>
-                  <p className="text-sm text-mq-muted max-w-lg mx-auto leading-relaxed">
+                  <h3 className="text-xl font-bold text-slate-900 italic">"Doc, los números no mienten, pero no definen tu final."</h3>
+                  <p className="text-sm text-slate-500 max-w-lg mx-auto leading-relaxed">
                     {displayScore < 60 
                       ? "Tu base actual tiene fugas críticas que te dejarían fuera en la primera ronda. Necesitas dejar de 'estudiar' y empezar a 'entrenar' bajo presión."
                       : "Tienes un potencial real, pero en la UNAL la diferencia entre un residente y un médico general es de apenas 1.5 puntos. No te confíes."
@@ -315,14 +315,14 @@ export function FreeDashboardView({
               </div>
             </div>
           ) : (
-            <section className="relative overflow-hidden rounded-[2rem] border-2 border-mq-accent/30 bg-mq-surface p-8 sm:p-10 shadow-2xl">
+            <section className="relative overflow-hidden rounded-[2rem] border-2 border-mq-accent/30 bg-white p-8 sm:p-10 shadow-2xl">
                <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
                   <div className="flex-1 space-y-4">
-                    <h2 className="text-3xl font-black text-white">Tu Análisis de Rendimiento está esperando</h2>
-                    <p className="text-mq-muted leading-relaxed">
+                    <h2 className="text-3xl font-black text-slate-900">Tu Análisis de Rendimiento está esperando</h2>
+                    <p className="text-slate-500 leading-relaxed">
                       Nuestra IA necesita al menos un entrenamiento para calcular tu probabilidad de éxito y detectar tus puntos débiles.
                     </p>
-                    <div className="flex items-center gap-4 text-xs font-bold text-mq-muted uppercase tracking-widest pt-2">
+                    <div className="flex items-center gap-4 text-xs font-bold text-slate-500 uppercase tracking-widest pt-2">
                       <span className="flex items-center gap-1.5"><Clock size={14} className="text-mq-accent" /> Duración: 2 min</span>
                       <span className="flex items-center gap-1.5"><Target size={14} className="text-mq-accent" /> IA Adaptativa</span>
                     </div>
@@ -342,17 +342,17 @@ export function FreeDashboardView({
           <div className="space-y-4">
             <div className="flex items-center gap-2 px-2">
               <div className="h-2 w-2 rounded-full bg-mq-accent" />
-              <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-mq-muted">Tu misión de hoy</h3>
+              <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">Tu misión de hoy</h3>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
-               <div className="group rounded-2xl border border-mq-border-strong bg-white/[0.03] p-6 transition-all hover:bg-white/[0.05]">
+               <div className="group rounded-2xl border border-slate-200 bg-white/[0.03] p-6 transition-all hover:bg-slate-100">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-mq-accent/20 text-mq-accent">
                       <Zap size={20} />
                     </div>
-                    <span className="text-lg font-bold text-white">10 Preguntas rápidas</span>
+                    <span className="text-lg font-bold text-slate-900">10 Preguntas rápidas</span>
                   </div>
-                  <p className="text-sm text-mq-muted mb-6">Mantén tu racha y entrena tu agilidad mental con el simulacro diario.</p>
+                  <p className="text-sm text-slate-500 mb-6">Mantén tu racha y entrena tu agilidad mental con el simulacro diario.</p>
                   <button 
                     onClick={() => {
                       if (user?.attemptsCount > 0) {
@@ -362,20 +362,20 @@ export function FreeDashboardView({
                         setIsAct1Open(true);
                       }
                     }}
-                    className={`text-xs font-bold flex items-center gap-2 group-hover:gap-3 transition-all ${user?.attemptsCount > 0 ? "text-mq-muted" : "text-mq-accent"}`}
+                    className={`text-xs font-bold flex items-center gap-2 group-hover:gap-3 transition-all ${user?.attemptsCount > 0 ? "text-slate-500" : "text-mq-accent"}`}
                   >
                     {user?.attemptsCount > 0 ? <><Lock size={14} /> DESBLOQUEAR EN PRO</> : <>IR A ENTRENAR <ArrowRight size={14} /></>}
                   </button>
                </div>
-               <div className="group rounded-2xl border border-mq-border-strong bg-white/[0.03] p-6 transition-all hover:bg-white/[0.05]">
+               <div className="group rounded-2xl border border-slate-200 bg-white/[0.03] p-6 transition-all hover:bg-slate-100">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/20 text-purple-400">
                       <Sparkles size={20} />
                     </div>
-                    <span className="text-lg font-bold text-white">Revisión de errores</span>
+                    <span className="text-lg font-bold text-slate-900">Revisión de errores</span>
                   </div>
-                  <p className="text-sm text-mq-muted mb-6">Analiza por qué fallaste y evita cometer el mismo error en el examen real.</p>
-                  <button disabled className="text-xs font-bold text-mq-muted flex items-center gap-2 cursor-not-allowed">
+                  <p className="text-sm text-slate-500 mb-6">Analiza por qué fallaste y evita cometer el mismo error en el examen real.</p>
+                  <button disabled className="text-xs font-bold text-slate-500 flex items-center gap-2 cursor-not-allowed">
                     <Lock size={14} /> DESBLOQUEAR EN PRO
                   </button>
                </div>
@@ -393,14 +393,14 @@ export function FreeDashboardView({
           <section className="group relative overflow-hidden rounded-[2rem] border border-white/5 bg-black/40 p-8 transition-all hover:bg-black/60">
              <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex items-center gap-6">
-                   <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white/5 text-mq-muted group-hover:text-mq-accent transition-colors">
+                   <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-slate-50 text-slate-500 group-hover:text-mq-accent transition-colors">
                       <ShieldAlert size={32} />
                    </div>
                    <div className="space-y-1">
-                      <h3 className="text-xl font-bold text-white">
+                      <h3 className="text-xl font-bold text-slate-900">
                         Simulacro {user?.goalUniversity && user.goalUniversity !== "Otra" ? user.goalUniversity : "Universidad Nacional de Colombia"}
                       </h3>
-                      <p className="text-sm text-mq-muted">
+                      <p className="text-sm text-slate-500">
                         {user?.goalUniversity && user.goalUniversity !== "Otra" 
                           ? `Banco de preguntas oficial para el examen de la ${user.goalUniversity}`
                           : "80 preguntas reales actualizadas al 2024"
@@ -410,7 +410,7 @@ export function FreeDashboardView({
                 </div>
                 <Link
                   href="/dashboard/planes"
-                  className="w-full sm:w-auto inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-white/10 px-6 text-xs font-black text-white transition-all hover:bg-white/20"
+                  className="w-full sm:w-auto inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-slate-100 px-6 text-xs font-black text-slate-900 transition-all hover:bg-white/20"
                 >
                   <Lock size={14} /> DESBLOQUEAR COMPLETO
                 </Link>
@@ -421,16 +421,16 @@ export function FreeDashboardView({
 
         {/* SIDEBAR: 3. RESULTADO BLOQUEADO (CLAVE DE VENTA) */}
         <aside className="space-y-6">
-          <div className="rounded-[2rem] border border-mq-border-strong bg-white/[0.02] p-8 space-y-8 relative overflow-hidden">
+          <div className="rounded-[2rem] border border-slate-200 bg-slate-50 p-8 space-y-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 p-4 opacity-10">
               <Lock size={100} />
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-xl font-black text-white">
+              <h3 className="text-xl font-black text-slate-900">
                 {user?.attemptsCount > 0 ? "Lleva tu análisis al siguiente nivel" : "Lo que vas a desbloquear"}
               </h3>
-              <p className="text-sm text-mq-muted">
+              <p className="text-sm text-slate-500">
                 {user?.attemptsCount > 0 ? "Tu perfil PRO incluye:" : "Al completar tu diagnóstico Pro:"}
               </p>
             </div>
@@ -443,12 +443,12 @@ export function FreeDashboardView({
                 { label: "Ranking vs otros médicos", sub: "Sabe dónde estás parado realmente" },
               ].map((item, i) => (
                 <li key={i} className="flex gap-4 group">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-mq-muted">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-50 text-slate-500">
                     <Lock size={18} className="group-hover:text-mq-accent transition-colors" />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-sm font-bold text-white/80">{item.label}</p>
-                    <p className="text-[10px] text-mq-muted leading-tight">{item.sub}</p>
+                    <p className="text-sm font-bold text-slate-900/80">{item.label}</p>
+                    <p className="text-[10px] text-slate-500 leading-tight">{item.sub}</p>
                   </div>
                 </li>
               ))}
@@ -456,7 +456,7 @@ export function FreeDashboardView({
 
             <Link
               href="/dashboard/planes"
-              className="w-full inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-white/10 text-xs font-bold text-white transition-all hover:bg-white/20"
+              className="w-full inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-slate-100 text-xs font-bold text-slate-900 transition-all hover:bg-white/20"
             >
               Ver demo de reportes
             </Link>
@@ -466,13 +466,13 @@ export function FreeDashboardView({
              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-mq-accent/20 text-mq-accent">
                 <Sparkles size={24} />
              </div>
-             <p className="text-sm font-bold text-white italic">
+             <p className="text-sm font-bold text-slate-900 italic">
                {user?.goalUniversity && user.goalUniversity !== "Otra"
                  ? `"La ${user.goalUniversity} te espera, Doc. La diferencia entre un médico y un residente es la estrategia."`
                  : `"La diferencia entre un médico y un residente es la estrategia."`
                }
              </p>
-             <p className="text-[10px] uppercase tracking-widest text-mq-muted">- Dr. Q</p>
+             <p className="text-[10px] uppercase tracking-widest text-slate-500">- Dr. Q</p>
           </div>
         </aside>
       </div>
@@ -480,8 +480,8 @@ export function FreeDashboardView({
       {/* 4. BLOQUE DE CONTENIDO BLOQUEADO */}
       <section className="space-y-8 pt-10">
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-black text-white">Esto es lo que te falta para competir de verdad</h2>
-          <p className="text-mq-muted">El plan Pro te da las armas que los demás ya están usando.</p>
+          <h2 className="text-3xl font-black text-slate-900">Esto es lo que te falta para competir de verdad</h2>
+          <p className="text-slate-500">El plan Pro te da las armas que los demás ya están usando.</p>
         </div>
         
         <div className="grid gap-6 opacity-60 pointer-events-none grayscale-[0.5]">

@@ -57,7 +57,7 @@ export function AchievementNotification({ userId }: AchievementNotificationProps
 
   return (
     <div className="fixed bottom-6 left-1/2 z-50 w-[90%] -translate-x-1/2 animate-in fade-in slide-in-from-bottom-10 sm:right-6 sm:left-auto sm:w-80 sm:translate-x-0">
-      <div className="relative overflow-hidden rounded-2xl border border-mq-accent/30 bg-[#0A1F44]/90 p-4 shadow-[0_20px_50px_-20px_rgba(0,209,255,0.5)] backdrop-blur-xl">
+      <div className="relative overflow-hidden rounded-2xl border border-mq-accent/30 bg-slate-50/90 p-4 shadow-[0_20px_50px_-20px_rgba(0,209,255,0.5)] backdrop-blur-xl">
         <div className="flex items-start gap-4">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-mq-accent/20">
             <svg
@@ -84,13 +84,13 @@ export function AchievementNotification({ userId }: AchievementNotificationProps
             <p className="text-xs font-bold uppercase tracking-widest text-mq-accent">
               Logro desbloqueado
             </p>
-            <p className="mt-1 text-sm font-medium text-white">
+            <p className="mt-1 text-sm font-medium text-slate-900">
               {notification.message}
             </p>
           </div>
           <button 
             onClick={dismiss}
-            className="rounded-lg p-1 text-mq-muted transition-colors hover:bg-white/10 hover:text-white"
+            className="rounded-lg p-1 text-slate-500 transition-colors hover:bg-slate-100 hover:text-slate-900"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

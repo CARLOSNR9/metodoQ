@@ -112,7 +112,7 @@ export function StaffGuard({
 
   if (isLoading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#0A1F44]">
+      <div className="flex min-h-screen items-center justify-center bg-slate-50">
         <div className="h-8 w-8 animate-spin rounded-full border-4 border-mq-accent border-t-transparent" />
       </div>
     );
@@ -120,8 +120,8 @@ export function StaffGuard({
 
   if (!canEnter) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#0A1F44] px-4">
-        <div className="w-full max-w-md rounded-2xl border border-mq-border-strong bg-mq-surface-raised p-8 shadow-2xl">
+      <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
+        <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white-raised p-8 shadow-2xl">
           <div className="text-center">
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-mq-accent/10 text-mq-accent">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -133,14 +133,14 @@ export function StaffGuard({
                 />
               </svg>
             </div>
-            <h1 className="mt-4 text-2xl font-bold text-white">{title}</h1>
-            <p className="mt-2 text-sm text-mq-muted">{subtitle}</p>
+            <h1 className="mt-4 text-2xl font-bold text-slate-900">{title}</h1>
+            <p className="mt-2 text-sm text-slate-500">{subtitle}</p>
           </div>
 
           <form onSubmit={handleLogin} className="mt-8 space-y-6">
             <div className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-mq-muted">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500">
                   Correo o usuario
                 </label>
                 <input
@@ -149,19 +149,19 @@ export function StaffGuard({
                   placeholder="nombre@ejemplo.com"
                   value={loginEmail}
                   onChange={(e) => setLoginEmail(e.target.value)}
-                  className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white outline-none focus:border-mq-accent"
+                  className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 outline-none focus:border-mq-accent"
                   required
                 />
               </div>
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-mq-muted">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500">
                   Contraseña
                 </label>
                 <input
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-4 py-2.5 text-white outline-none focus:border-mq-accent"
+                  className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 outline-none focus:border-mq-accent"
                   required
                 />
               </div>

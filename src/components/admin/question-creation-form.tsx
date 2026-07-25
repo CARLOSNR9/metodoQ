@@ -65,11 +65,11 @@ export function QuestionCreationForm() {
   };
 
   return (
-    <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised p-6 shadow-xl">
+    <section className="rounded-xl border border-slate-200 bg-white-raised p-6 shadow-xl">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h2 className="text-xl font-semibold text-white">Banco de preguntas</h2>
-          <p className="mt-1 text-sm text-mq-muted">Agrega preguntas al catálogo Firestore.</p>
+          <h2 className="text-xl font-semibold text-slate-900">Banco de preguntas</h2>
+          <p className="mt-1 text-sm text-slate-500">Agrega preguntas al catálogo Firestore.</p>
         </div>
         <div className="flex flex-wrap gap-2">
           <button
@@ -84,7 +84,7 @@ export function QuestionCreationForm() {
             type="button"
             onClick={handleSeedExtended}
             disabled={isPending}
-            className="rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:bg-white/5 disabled:opacity-50"
+            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-slate-50 disabled:opacity-50"
           >
             Agregar banco extendido
           </button>
@@ -93,33 +93,33 @@ export function QuestionCreationForm() {
 
       <form action={handleSubmit} className="mt-6 space-y-4">
         <div>
-          <label className="text-xs font-semibold uppercase text-mq-muted">Tema</label>
-          <input name="topic" required className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white" />
+          <label className="text-xs font-semibold uppercase text-slate-500">Tema</label>
+          <input name="topic" required className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900" />
         </div>
         <div>
-          <label className="text-xs font-semibold uppercase text-mq-muted">Enunciado</label>
-          <textarea name="statement" required rows={4} className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white resize-none" />
+          <label className="text-xs font-semibold uppercase text-slate-500">Enunciado</label>
+          <textarea name="statement" required rows={4} className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 resize-none" />
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           {["A", "B", "C", "D"].map((opt) => (
             <div key={opt}>
-              <label className="text-xs font-semibold uppercase text-mq-muted">Opción {opt}</label>
-              <input name={`option_${opt}`} required className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white" />
+              <label className="text-xs font-semibold uppercase text-slate-500">Opción {opt}</label>
+              <input name={`option_${opt}`} required className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900" />
             </div>
           ))}
         </div>
         <div>
-          <label className="text-xs font-semibold uppercase text-mq-muted">Respuesta correcta</label>
+          <label className="text-xs font-semibold uppercase text-slate-500">Respuesta correcta</label>
           <select name="correctOptionId" required className={cn(selectInputClassName, "mt-1")}>
-            <option value="A" className="bg-[#0f2744] text-white">A</option>
-            <option value="B" className="bg-[#0f2744] text-white">B</option>
-            <option value="C" className="bg-[#0f2744] text-white">C</option>
-            <option value="D" className="bg-[#0f2744] text-white">D</option>
+            <option value="A" className="bg-[#0f2744] text-slate-900">A</option>
+            <option value="B" className="bg-[#0f2744] text-slate-900">B</option>
+            <option value="C" className="bg-[#0f2744] text-slate-900">C</option>
+            <option value="D" className="bg-[#0f2744] text-slate-900">D</option>
           </select>
         </div>
         <div>
-          <label className="text-xs font-semibold uppercase text-mq-muted">Explicación</label>
-          <textarea name="explanation" required rows={3} className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white resize-none" />
+          <label className="text-xs font-semibold uppercase text-slate-500">Explicación</label>
+          <textarea name="explanation" required rows={3} className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 resize-none" />
         </div>
         <button
           type="submit"

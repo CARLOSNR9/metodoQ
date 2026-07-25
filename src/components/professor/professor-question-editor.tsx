@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 import { X, Copy, Check, Eye, Edit2, RefreshCw } from "lucide-react";
 import { QuestionStudentPreview } from "@/components/admin/question-student-preview";
 
-const selectOptionClassName = "bg-[#0f2744] text-white";
+const selectOptionClassName = "bg-[#0f2744] text-slate-900";
 
 type Props = {
   question: QuestionAdminRecord;
@@ -251,20 +251,20 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
 
   return (
     <div className="fixed inset-0 z-50 flex justify-end bg-black/60 p-0 sm:p-4">
-      <div className="flex h-full w-full max-w-2xl flex-col border-l border-mq-border-strong bg-[#0d2447] shadow-2xl sm:rounded-l-xl">
-        <div className="flex items-start justify-between border-b border-white/10 px-5 py-4">
+      <div className="flex h-full w-full max-w-2xl flex-col border-l border-slate-200 bg-[#0d2447] shadow-2xl sm:rounded-l-xl">
+        <div className="flex items-start justify-between border-b border-slate-200 px-5 py-4">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-mq-muted">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
               Revisión editorial
             </p>
-            <h2 className="mt-1 text-lg font-semibold text-white">{topic}</h2>
-            <p className="mt-1 font-mono text-xs text-mq-muted">{question.id}</p>
+            <h2 className="mt-1 text-lg font-semibold text-slate-900">{topic}</h2>
+            <p className="mt-1 font-mono text-xs text-slate-500">{question.id}</p>
           </div>
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={() => setShowPreview(!showPreview)}
-              className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-white/10"
+              className="flex items-center gap-2 rounded-lg bg-slate-50 px-3 py-1.5 text-xs font-semibold text-slate-900 transition hover:bg-slate-100"
             >
               {showPreview ? (
                 <>
@@ -279,7 +279,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
             <button
               type="button"
               onClick={onClose}
-              className="rounded-lg p-2 text-mq-muted hover:bg-white/10 hover:text-white"
+              className="rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900"
               aria-label="Cerrar"
             >
               <X className="h-5 w-5" />
@@ -322,30 +322,30 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
           )}
 
           <div>
-            <label className="text-xs font-semibold uppercase text-mq-muted">Tema</label>
+            <label className="text-xs font-semibold uppercase text-slate-500">Tema</label>
             <input
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
               disabled={!inFirestore}
-              className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white disabled:opacity-60"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 disabled:opacity-60"
             />
           </div>
 
           <div>
-            <label className="text-xs font-semibold uppercase text-mq-muted">Caso clínico</label>
+            <label className="text-xs font-semibold uppercase text-slate-500">Caso clínico</label>
             <textarea
               value={statement}
               onChange={(e) => setStatement(e.target.value)}
               disabled={!inFirestore}
               rows={6}
-              className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white resize-none disabled:opacity-60"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 resize-none disabled:opacity-60"
             />
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">
             {(["A", "B", "C", "D"] as const).map((id, index) => (
               <div key={id}>
-                <label className="text-xs font-semibold uppercase text-mq-muted">
+                <label className="text-xs font-semibold uppercase text-slate-500">
                   Opción {id}
                 </label>
                 <input
@@ -356,7 +356,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
                     setOptions(next);
                   }}
                   disabled={!inFirestore}
-                  className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white disabled:opacity-60"
+                  className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 disabled:opacity-60"
                 />
               </div>
             ))}
@@ -364,7 +364,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="text-xs font-semibold uppercase text-mq-muted">
+              <label className="text-xs font-semibold uppercase text-slate-500">
                 Respuesta correcta
               </label>
               <select
@@ -381,7 +381,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
               </select>
             </div>
             <div>
-              <label className="text-xs font-semibold uppercase text-mq-muted">
+              <label className="text-xs font-semibold uppercase text-slate-500">
                 Estado de revisión (Pregunta)
               </label>
               <select
@@ -414,23 +414,23 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
                 <option value="reviewed" className={selectOptionClassName}>Revisada</option>
                 <option value="dismissed" className={selectOptionClassName}>Descartada</option>
               </select>
-              <p className="mt-2 text-xs text-mq-muted">Al cambiar el estado del reporte, se guardará automáticamente y la pregunta se moverá de la pestaña correspondiente en el panel principal.</p>
+              <p className="mt-2 text-xs text-slate-500">Al cambiar el estado del reporte, se guardará automáticamente y la pregunta se moverá de la pestaña correspondiente en el panel principal.</p>
             </div>
           )}
 
           <div>
-            <label className="text-xs font-semibold uppercase text-mq-muted">Explicación</label>
+            <label className="text-xs font-semibold uppercase text-slate-500">Explicación</label>
             <textarea
               value={explanation}
               onChange={(e) => setExplanation(e.target.value)}
               disabled={!inFirestore}
               rows={4}
-              className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white resize-none disabled:opacity-60"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 resize-none disabled:opacity-60"
             />
           </div>
 
           <div>
-            <label className="text-xs font-semibold uppercase text-mq-muted">
+            <label className="text-xs font-semibold uppercase text-slate-500">
               Puntos clave (uno por línea)
             </label>
             <textarea
@@ -438,12 +438,12 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
               onChange={(e) => setKeyPoints(e.target.value)}
               disabled={!inFirestore}
               rows={3}
-              className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white resize-none disabled:opacity-60"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 resize-none disabled:opacity-60"
             />
           </div>
 
           <div>
-            <label className="text-xs font-semibold uppercase text-mq-muted">
+            <label className="text-xs font-semibold uppercase text-slate-500">
               Opinión / notas del revisor
             </label>
             <textarea
@@ -452,7 +452,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
               disabled={!inFirestore}
               rows={3}
               placeholder="Ej.: distractor B demasiado obvio; ajustar semiología..."
-              className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white resize-none disabled:opacity-60"
+              className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 resize-none disabled:opacity-60"
             />
           </div>
 
@@ -461,7 +461,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
               <label className="text-xs font-semibold uppercase text-mq-accent">
                 Píldora de estudio — enlace externo (opcional)
               </label>
-              <p className="mt-1 text-xs text-mq-muted leading-relaxed">
+              <p className="mt-1 text-xs text-slate-500 leading-relaxed">
                 Notion, Drive u otra URL. Si no hay contenido abajo, el estudiante abre este enlace al
                 fallar la pregunta.
               </p>
@@ -471,17 +471,17 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
                 onChange={(e) => setTheoryUrl(e.target.value)}
                 disabled={!inFirestore}
                 placeholder="https://… o /teoria/ext-end-01"
-                className="mt-2 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white disabled:opacity-60"
+                className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 disabled:opacity-60"
               />
             </div>
             <div>
               <label className="text-xs font-semibold uppercase text-mq-accent">
                 Píldora de estudio — texto largo
               </label>
-              <p className="mt-1 text-xs text-mq-muted">
+              <p className="mt-1 text-xs text-slate-500">
                 Explicación profunda que el estudiante ve al fallar (o repasar) y puede guardar en{" "}
-                <span className="font-semibold text-white">Mi Estudio</span>. Sin URL externa, también
-                queda en <span className="font-mono text-white/80">/teoria/{question.id}</span>
+                <span className="font-semibold text-slate-900">Mi Estudio</span>. Sin URL externa, también
+                queda en <span className="font-mono text-slate-900/80">/teoria/{question.id}</span>
               </p>
               <textarea
                 value={theoryContent}
@@ -489,45 +489,45 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
                 disabled={!inFirestore}
                 rows={8}
                 placeholder="Cómo resolver esta pregunta, trampas de examen, fisiopatología extendida…"
-                className="mt-2 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white resize-none disabled:opacity-60"
+                className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 resize-none disabled:opacity-60"
               />
             </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="text-xs font-semibold uppercase text-mq-muted">Universidad</label>
+              <label className="text-xs font-semibold uppercase text-slate-500">Universidad</label>
               <input
                 value={university}
                 onChange={(e) => setUniversity(e.target.value)}
                 disabled={!inFirestore}
-                className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white disabled:opacity-60"
+                className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 disabled:opacity-60"
               />
             </div>
             <div>
-              <label className="text-xs font-semibold uppercase text-mq-muted">Área examen</label>
+              <label className="text-xs font-semibold uppercase text-slate-500">Área examen</label>
               <input
                 value={examArea}
                 onChange={(e) => setExamArea(e.target.value)}
                 disabled={!inFirestore}
-                className="mt-1 w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-sm text-white disabled:opacity-60"
+                className="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 disabled:opacity-60"
               />
             </div>
           </div>
 
-          <label className="flex items-center gap-2 text-sm text-mq-muted">
+          <label className="flex items-center gap-2 text-sm text-slate-500">
             <input
               type="checkbox"
               checked={active}
               onChange={(e) => setActive(e.target.checked)}
               disabled={!inFirestore}
-              className="rounded border-mq-border"
+              className="rounded border-slate-200"
             />
             Activa para estudiantes
           </label>
 
           {question.reviewedAt && (
-            <p className="text-xs text-mq-muted">
+            <p className="text-xs text-slate-500">
               Última revisión:{" "}
               {new Date(question.reviewedAt).toLocaleString("es-CO", {
                 dateStyle: "medium",
@@ -539,7 +539,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
           )}
         </div>
 
-        <div className="border-t border-white/10 px-5 py-4 space-y-3">
+        <div className="border-t border-slate-200 px-5 py-4 space-y-3">
           {message && <p className="text-sm text-emerald-400">{message}</p>}
           {error && <p className="text-sm text-rose-400">{error}</p>}
 
@@ -567,7 +567,7 @@ ${keyPoints}${copySuffix ? `\n\n${copySuffix}` : ''}`;
                 type="button"
                 onClick={handleSyncAndReview}
                 disabled={isPending}
-                className="flex-1 rounded-lg bg-emerald-500 px-4 py-2.5 text-sm font-bold text-white hover:bg-emerald-600 disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20"
+                className="flex-1 rounded-lg bg-emerald-500 px-4 py-2.5 text-sm font-bold text-slate-900 hover:bg-emerald-600 disabled:opacity-50 flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20"
                 title="Sincroniza desde el código y marca como Revisada de inmediato"
               >
                 <Check className={cn("h-4 w-4", isPending && "animate-pulse")} />

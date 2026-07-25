@@ -23,9 +23,9 @@ export default function ConvocatoriasPage() {
 
   if (!isProUser) {
     return (
-      <div className="mx-auto max-w-xl rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-center">
-        <h1 className="text-2xl font-black text-white">Convocatorias {trackName}</h1>
-        <p className="mt-4 text-sm leading-relaxed text-mq-muted">
+      <div className="mx-auto max-w-xl rounded-[2rem] border border-slate-200 bg-white/[0.03] p-8 text-center">
+        <h1 className="text-2xl font-black text-slate-900">Convocatorias {trackName}</h1>
+        <p className="mt-4 text-sm leading-relaxed text-slate-500">
           Los exámenes oficiales quincenales están disponibles en el plan PRO. Tu
           entrenamiento libre y simulacros semanales siguen en Entrenar y Simulacro.
         </p>

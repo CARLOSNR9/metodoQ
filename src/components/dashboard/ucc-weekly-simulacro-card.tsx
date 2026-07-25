@@ -50,7 +50,7 @@ export function UccWeeklySimulacroCard({ userId, planStartedAt }: UccWeeklySimul
 
   if (isLoading) {
     return (
-      <div className="h-40 animate-pulse rounded-[2rem] border border-white/10 bg-white/[0.03]" />
+      <div className="h-40 animate-pulse rounded-[2rem] border border-slate-200 bg-white/[0.03]" />
     );
   }
 
@@ -72,7 +72,7 @@ export function UccWeeklySimulacroCard({ userId, planStartedAt }: UccWeeklySimul
             ? "border-rose-500/30 bg-rose-500/5"
             : status.isDue
               ? "border-mq-accent/30 bg-mq-accent/5"
-              : "border-white/10 bg-white/[0.02]"
+              : "border-slate-200 bg-slate-50"
       }`}
     >
       <div className="flex flex-wrap items-start justify-between gap-4">
@@ -83,22 +83,22 @@ export function UccWeeklySimulacroCard({ userId, planStartedAt }: UccWeeklySimul
               Simulacro programado · Sem. {status.planWeek}
             </span>
           </div>
-          <h2 className="text-xl font-black text-white">{status.config.label}</h2>
-          <p className="text-sm text-mq-muted">
+          <h2 className="text-xl font-black text-slate-900">{status.config.label}</h2>
+          <p className="text-sm text-slate-500">
             {status.config.questionCount} preguntas · {status.config.minutes} min · distribución
             Res. 108 (20/50/20/10)
           </p>
         </div>
 
-        <div className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-center">
-          <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">Esta semana</p>
-          <p className="text-2xl font-black text-white">
+        <div className="rounded-xl border border-slate-200 bg-white/[0.04] px-4 py-3 text-center">
+          <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Esta semana</p>
+          <p className="text-2xl font-black text-slate-900">
             {status.simulacrosCompleted}/{status.simulacrosRequired || "—"}
           </p>
         </div>
       </div>
 
-      <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-mq-muted">
+      <div className="mt-5 flex flex-wrap items-center gap-4 text-xs text-slate-500">
         <span className="inline-flex items-center gap-1.5">
           <Clock size={14} className="text-mq-accent" />
           {status.nextDueLabel ?? "Según fase del plan"}
@@ -121,7 +121,7 @@ export function UccWeeklySimulacroCard({ userId, planStartedAt }: UccWeeklySimul
           </p>
         </div>
       ) : status.simulacrosRequired === 0 ? (
-        <p className="mt-5 text-sm text-mq-muted">
+        <p className="mt-5 text-sm text-slate-500">
           Esta semana no hay simulacro obligatorio (fase de consolidación mensual). Puedes
           practicar uno opcional.
         </p>
@@ -140,7 +140,7 @@ export function UccWeeklySimulacroCard({ userId, planStartedAt }: UccWeeklySimul
           href={href}
           className={`inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl text-sm font-black transition sm:w-auto sm:px-8 ${
             completed
-              ? "border border-white/10 bg-white/5 text-white/70 hover:bg-white/10"
+              ? "border border-slate-200 bg-slate-50 text-slate-900/70 hover:bg-slate-100"
               : "bg-mq-accent text-mq-accent-foreground hover:brightness-110"
           }`}
         >

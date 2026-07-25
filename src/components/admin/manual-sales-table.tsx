@@ -106,7 +106,7 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
       <div className="overflow-x-auto">
         <table className="w-full min-w-[1040px] text-left text-sm">
           <thead>
-            <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+            <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
               <th className="pb-3 pr-3">Registro</th>
               <th className="pb-3 pr-3">Usuario</th>
               <th className="pb-3 pr-3">Plan</th>
@@ -122,20 +122,20 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
           <tbody>
             {sales.map((sale) => (
               <tr key={sale.id} className="border-b border-white/5 align-top">
-                <td className="py-3 pr-3 text-xs text-mq-muted whitespace-nowrap">
+                <td className="py-3 pr-3 text-xs text-slate-500 whitespace-nowrap">
                   {formatDate(sale.createdAt)}
                 </td>
                 <td className="py-3 pr-3">
-                  <p className="font-medium text-white">{sale.displayName}</p>
-                  <p className="text-xs text-mq-muted">{sale.email}</p>
+                  <p className="font-medium text-slate-900">{sale.displayName}</p>
+                  <p className="text-xs text-slate-500">{sale.email}</p>
                 </td>
                 <td className="py-3 pr-3 whitespace-nowrap">
-                  <span className="font-medium text-white">
+                  <span className="font-medium text-slate-900">
                     {getPlanDisplayName(sale.plan)}
                   </span>
-                  <span className="text-mq-muted"> · {sale.billingCycle}m</span>
+                  <span className="text-slate-500"> · {sale.billingCycle}m</span>
                 </td>
-                <td className="py-3 pr-3 text-mq-muted whitespace-nowrap">
+                <td className="py-3 pr-3 text-slate-500 whitespace-nowrap">
                   {formatCOP(sale.listPriceCOP)}
                 </td>
                 <td className="py-3 pr-3 font-semibold text-mq-accent whitespace-nowrap">
@@ -147,17 +147,17 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
                       −{sale.discountPercent}%
                     </span>
                   ) : (
-                    <span className="text-mq-muted">—</span>
+                    <span className="text-slate-500">—</span>
                   )}
                 </td>
-                <td className="py-3 pr-3 text-mq-muted">{sale.negotiatorName ?? "—"}</td>
-                <td className="py-3 pr-3 text-xs text-mq-muted whitespace-nowrap">
+                <td className="py-3 pr-3 text-slate-500">{sale.negotiatorName ?? "—"}</td>
+                <td className="py-3 pr-3 text-xs text-slate-500 whitespace-nowrap">
                   {formatDate(sale.planStartedAt)}
-                  <span className="text-white/40"> → </span>
+                  <span className="text-slate-900/40"> → </span>
                   {formatDate(sale.planExpiresAt)}
                 </td>
                 <td
-                  className="py-3 pr-3 max-w-[120px] truncate text-xs text-mq-muted"
+                  className="py-3 pr-3 max-w-[120px] truncate text-xs text-slate-500"
                   title={sale.notes ?? ""}
                 >
                   {sale.notes ?? "—"}
@@ -172,7 +172,7 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
                         setMessage("");
                         setEditingId(sale.id);
                       }}
-                      className="rounded-lg border border-mq-border px-2.5 py-1 text-xs font-medium text-white transition hover:border-mq-accent hover:text-mq-accent disabled:opacity-50"
+                      className="rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-900 transition hover:border-mq-accent hover:text-mq-accent disabled:opacity-50"
                     >
                       Editar
                     </button>
@@ -196,16 +196,16 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
           <form
             onSubmit={handleUpdate}
-            className="w-full max-w-lg rounded-2xl border border-mq-border-strong bg-[#0f2744] p-6 shadow-2xl"
+            className="w-full max-w-lg rounded-2xl border border-slate-200 bg-[#0f2744] p-6 shadow-2xl"
           >
-            <h3 className="text-lg font-semibold text-white">Editar venta interna</h3>
-            <p className="mt-1 text-sm text-mq-muted">
+            <h3 className="text-lg font-semibold text-slate-900">Editar venta interna</h3>
+            <p className="mt-1 text-sm text-slate-500">
               {editingSale.displayName} · {editingSale.email}
             </p>
 
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               <div className="space-y-1.5 sm:col-span-2">
-                <label className="text-xs font-semibold uppercase text-mq-muted">
+                <label className="text-xs font-semibold uppercase text-slate-500">
                   Precio negociado (COP)
                 </label>
                 <input
@@ -213,17 +213,17 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
                   type="text"
                   required
                   defaultValue={String(editingSale.negotiatedPriceCOP)}
-                  className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold uppercase text-mq-muted">
+                <label className="text-xs font-semibold uppercase text-slate-500">
                   Período (meses)
                 </label>
                 <select
                   name="planBillingCycle"
                   defaultValue={String(editingSale.billingCycle)}
-                  className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white [color-scheme:dark]"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
                 >
                   <option value="1">1 mes</option>
                   <option value="3">3 meses</option>
@@ -231,7 +231,7 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
                 </select>
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold uppercase text-mq-muted">
+                <label className="text-xs font-semibold uppercase text-slate-500">
                   Fecha inicio
                 </label>
                 <input
@@ -239,27 +239,27 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
                   type="date"
                   required
                   defaultValue={toDateInput(editingSale.planStartedAt)}
-                  className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white [color-scheme:dark]"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
                 />
               </div>
               <div className="space-y-1.5 sm:col-span-2">
-                <label className="text-xs font-semibold uppercase text-mq-muted">
+                <label className="text-xs font-semibold uppercase text-slate-500">
                   Negociador
                 </label>
                 <input
                   name="negotiatorName"
                   type="text"
                   defaultValue={editingSale.negotiatorName ?? ""}
-                  className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                 />
               </div>
               <div className="space-y-1.5 sm:col-span-2">
-                <label className="text-xs font-semibold uppercase text-mq-muted">Notas</label>
+                <label className="text-xs font-semibold uppercase text-slate-500">Notas</label>
                 <input
                   name="saleNotes"
                   type="text"
                   defaultValue={editingSale.notes ?? ""}
-                  className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                 />
               </div>
             </div>
@@ -269,7 +269,7 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
                 type="button"
                 disabled={isPending}
                 onClick={() => setEditingId(null)}
-                className="rounded-lg border border-mq-border px-4 py-2 text-sm text-mq-muted hover:text-white"
+                className="rounded-lg border border-slate-200 px-4 py-2 text-sm text-slate-500 hover:text-slate-900"
               >
                 Cancelar
               </button>

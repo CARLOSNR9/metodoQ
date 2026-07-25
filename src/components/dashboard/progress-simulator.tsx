@@ -48,7 +48,7 @@ export function ProgressSimulator({ currentScore = 468 }: { currentScore?: numbe
   const projectedStatus = getStatusLabel(targetPro);
 
   return (
-    <section className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
+    <section className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-slate-50 p-8 sm:p-10 shadow-2xl backdrop-blur-md">
       <div className="flex flex-col lg:flex-row gap-10">
         {/* INFO SIDE */}
         <div className="flex-1 space-y-6">
@@ -58,20 +58,20 @@ export function ProgressSimulator({ currentScore = 468 }: { currentScore?: numbe
           </div>
           
           <div className="space-y-4">
-            <h2 className="text-3xl font-black text-white leading-tight">
+            <h2 className="text-3xl font-black text-slate-900 leading-tight">
               ¿Dónde estarás en <span className="text-mq-accent">20 días</span>?
             </h2>
-            <p className="text-mq-muted text-sm leading-relaxed max-w-md">
-              Sin una estrategia, tu curva de aprendizaje es plana. Con el <span className="text-white font-bold">Arsenal Pro</span>, optimizamos cada minuto para disparar tu probabilidad de admisión.
+            <p className="text-slate-500 text-sm leading-relaxed max-w-md">
+              Sin una estrategia, tu curva de aprendizaje es plana. Con el <span className="text-slate-900 font-bold">Arsenal Pro</span>, optimizamos cada minuto para disparar tu probabilidad de admisión.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-4 pt-4">
-            <div className="rounded-2xl border border-white/5 bg-white/5 p-4">
-              <p className="text-[10px] font-bold text-mq-muted uppercase tracking-wider mb-1">Hoy (Diagnóstico)</p>
+            <div className="rounded-2xl border border-white/5 bg-slate-50 p-4">
+              <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Hoy (Diagnóstico)</p>
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-black text-white">{currentScore}</span>
-                <span className="text-xs text-mq-muted">pts</span>
+                <span className="text-2xl font-black text-slate-900">{currentScore}</span>
+                <span className="text-xs text-slate-500">pts</span>
               </div>
               <p className={`text-[10px] ${currentStatus.color} font-bold mt-1 italic uppercase`}>{currentStatus.text}</p>
             </div>
@@ -148,11 +148,11 @@ export function ProgressSimulator({ currentScore = 468 }: { currentScore?: numbe
             <div className="absolute top-0 right-0 space-y-2">
                <div className="flex items-center gap-2">
                  <div className="h-1 w-4 bg-mq-accent" />
-                 <span className="text-[10px] font-bold text-white uppercase tracking-tighter">Plan Pro</span>
+                 <span className="text-[10px] font-bold text-slate-900 uppercase tracking-tighter">Plan Pro</span>
                </div>
                <div className="flex items-center gap-2">
                  <div className="h-1 w-4 bg-white/20 border-t border-dashed border-white/40" />
-                 <span className="text-[10px] font-bold text-mq-muted uppercase tracking-tighter">Sin Plan</span>
+                 <span className="text-[10px] font-bold text-slate-500 uppercase tracking-tighter">Sin Plan</span>
                </div>
             </div>
           </div>

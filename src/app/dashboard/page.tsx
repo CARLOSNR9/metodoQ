@@ -62,12 +62,12 @@ export default function DashboardPage() {
   if (isCheckingAuth || isLoadingProfile || !user) {
     return (
       <section className="space-y-6">
-        <div className="h-32 animate-pulse rounded-3xl border border-mq-border-strong bg-white/[0.04]" />
+        <div className="h-32 animate-pulse rounded-3xl border border-slate-200 bg-white/[0.04]" />
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {[1, 2, 3].map((item) => (
             <div
               key={item}
-              className="h-40 animate-pulse rounded-3xl border border-mq-border-strong bg-white/[0.04]"
+              className="h-40 animate-pulse rounded-3xl border border-slate-200 bg-white/[0.04]"
             />
           ))}
         </div>

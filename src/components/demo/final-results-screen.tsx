@@ -137,14 +137,14 @@ export function FinalResultsScreen({
       <motion.article 
         initial={{ opacity: 0, y: 30, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        className="relative w-full max-w-2xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#0C1425]/80 p-6 backdrop-blur-2xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] sm:p-10"
+        className="relative w-full max-w-2xl overflow-hidden rounded-[2rem] border border-slate-200 bg-[#0C1425]/80 p-6 backdrop-blur-2xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] sm:p-10"
       >
         {/* Decorative background effects */}
         <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-mq-accent/10 blur-[80px]" />
         <div className="absolute -left-20 -bottom-20 h-40 w-40 rounded-full bg-indigo-500/10 blur-[80px]" />
 
         <header className="relative z-10 flex flex-col items-center text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-mq-accent">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-mq-accent">
             <TrendingUp className="h-3 w-3" />
             {isDailyPill ? "ESTADO DEL RETO" : "Análisis de Desempeño"}
           </div>
@@ -208,18 +208,18 @@ export function FinalResultsScreen({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 }}
-                  className="text-4xl font-black text-white"
+                  className="text-4xl font-black text-slate-900"
                 >
                   {sessionScore}%
                 </motion.span>
-                <span className="text-[10px] font-bold uppercase tracking-tighter text-mq-muted">
+                <span className="text-[10px] font-bold uppercase tracking-tighter text-slate-500">
                   Esta sesión
                 </span>
               </div>
             </div>
           )}
 
-          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             {isDailyPill
               ? sessionScore === 100
                 ? "¡Dosis Inyectada!"
@@ -230,7 +230,7 @@ export function FinalResultsScreen({
                   ? "Diagnóstico Predictivo de Plaza"
                   : profile.title}
           </h2>
-          <p className="mt-3 max-w-md text-base leading-relaxed text-mq-muted sm:text-lg">
+          <p className="mt-3 max-w-md text-base leading-relaxed text-slate-500 sm:text-lg">
             {isDailyPill
               ? sessionScore === 100
                 ? "Tu agilidad clínica hoy ha sido impecable. Has ganado el trofeo del día y tu racha se mantiene activa."
@@ -263,8 +263,8 @@ export function FinalResultsScreen({
               <Clock className="h-5 w-5" />
             </div>
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Tiempo Total</p>
-              <p className="text-lg font-bold text-white">{formatTime(totalSeconds)}</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Tiempo Total</p>
+              <p className="text-lg font-bold text-slate-900">{formatTime(totalSeconds)}</p>
             </div>
           </motion.div>
 
@@ -278,8 +278,8 @@ export function FinalResultsScreen({
               <Zap className="h-5 w-5" />
             </div>
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-mq-muted">Velocidad</p>
-              <p className="text-lg font-bold text-white">{avgResponseTime}s <span className="text-xs font-normal text-mq-muted">/ preg</span></p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Velocidad</p>
+              <p className="text-lg font-bold text-slate-900">{avgResponseTime}s <span className="text-xs font-normal text-slate-500">/ preg</span></p>
             </div>
           </motion.div>
         </div>
@@ -295,7 +295,7 @@ export function FinalResultsScreen({
         ) : null}
 
         {!isDailyPill && !isConvocatoria && (
-          <section className="relative mt-12 overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 sm:p-10 shadow-2xl backdrop-blur-md">
+          <section className="relative mt-12 overflow-hidden rounded-[2.5rem] border border-slate-200 bg-slate-50 p-8 sm:p-10 shadow-2xl backdrop-blur-md">
             <Act2PredictiveDashboard 
                scorePercentage={globalScore}
                lastSessionScore={sessionScore}
@@ -347,12 +347,12 @@ export function FinalResultsScreen({
               <div className="space-y-2">
                 {upgradePlanId === "PRO" ? (
                   <>
-                    <h4 className="text-sm font-black uppercase tracking-wider text-white">
+                    <h4 className="text-sm font-black uppercase tracking-wider text-slate-900">
                       ¿Quieres más que una píldora?
                     </h4>
-                    <p className="text-xs leading-relaxed text-mq-muted">
+                    <p className="text-xs leading-relaxed text-slate-500">
                       Los usuarios <span className="text-mq-accent font-bold">PRO</span> resuelven{" "}
-                      <span className="text-white font-bold">5 retos diarios</span> especializados en
+                      <span className="text-slate-900 font-bold">5 retos diarios</span> especializados en
                       sus debilidades. No dejes tu plaza al azar.
                     </p>
                     <Link
@@ -364,10 +364,10 @@ export function FinalResultsScreen({
                   </>
                 ) : upgradePlanId === "RESIDENTE" ? (
                   <>
-                    <h4 className="text-sm font-black uppercase tracking-wider text-white">
+                    <h4 className="text-sm font-black uppercase tracking-wider text-slate-900">
                       ¿Quieres asegurar tu plaza?
                     </h4>
-                    <p className="text-xs leading-relaxed text-mq-muted">
+                    <p className="text-xs leading-relaxed text-slate-500">
                       Ya tienes acceso <span className="text-mq-accent font-bold">PRO</span>. El plan{" "}
                       <span className="text-amber-200 font-bold">Residente</span> suma seguimiento 1
                       a 1, preparación para entrevistas y acompañamiento personalizado hasta el día del
@@ -382,10 +382,10 @@ export function FinalResultsScreen({
                   </>
                 ) : (
                   <>
-                    <h4 className="text-sm font-black uppercase tracking-wider text-white">
+                    <h4 className="text-sm font-black uppercase tracking-wider text-slate-900">
                       Sigues en el camino correcto
                     </h4>
-                    <p className="text-xs leading-relaxed text-mq-muted">
+                    <p className="text-xs leading-relaxed text-slate-500">
                       Tu plan <span className="text-emerald-300 font-bold">Residente</span> incluye
                       seguimiento personalizado. Mantén la racha y revisa tu radar de debilidades en el
                       panel.
@@ -415,7 +415,7 @@ export function FinalResultsScreen({
                 <Target className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-sm font-black text-white">
+                <p className="text-sm font-black text-slate-900">
                   {uccBlockCompletion.completedBlock.label} completado
                 </p>
                 <p className="mt-1 text-sm leading-relaxed text-emerald-100/90">
@@ -440,24 +440,24 @@ export function FinalResultsScreen({
                 <Target className="h-4 w-4" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white">
+                <h4 className="text-sm font-bold text-slate-900">
                   {scorePercentage >= 80 ? "Nivel de Residente" : "Tu brecha para la plaza"}
                 </h4>
-                <p className="mt-1 text-sm leading-relaxed text-mq-muted">
+                <p className="mt-1 text-sm leading-relaxed text-slate-500">
                   {scorePercentage >= 90 ? (
-                    <>Estás en el <span className="text-white font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
+                    <>Estás en el <span className="text-slate-900 font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
                   ) : scorePercentage >= 80 ? (
                     isProUser ? (
-                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Usa simulacros y la píldora diaria para blindar este resultado.</>
+                      <>Tu puntaje actual es <span className="text-slate-900 font-bold">superior al promedio</span> de ingreso. Usa simulacros y la píldora diaria para blindar este resultado.</>
                     ) : (
-                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
+                      <>Tu puntaje actual es <span className="text-slate-900 font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
                     )
                   ) : isResidenteUser ? (
-                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> del rango competitivo. Tu plan Residente incluye seguimiento 1 a 1 para cerrar esa brecha.</>
+                    <>Estás a <span className="text-slate-900 font-bold">{80 - scorePercentage} puntos</span> del rango competitivo. Tu plan Residente incluye seguimiento 1 a 1 para cerrar esa brecha.</>
                   ) : isProUser ? (
-                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> del promedio competitivo. Con tu plan Pro, enfoca las próximas <span className="font-bold text-mq-accent">4 semanas</span> en tus áreas rojas del radar.</>
+                    <>Estás a <span className="text-slate-900 font-bold">{80 - scorePercentage} puntos</span> del promedio competitivo. Con tu plan Pro, enfoca las próximas <span className="font-bold text-mq-accent">4 semanas</span> en tus áreas rojas del radar.</>
                   ) : (
-                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
+                    <>Estás a <span className="text-slate-900 font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
                   )}
                 </p>
               </div>
@@ -478,7 +478,7 @@ export function FinalResultsScreen({
                 </Link>
                 <Link
                   href="/dashboard"
-                  className="group flex h-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
+                  className="group flex h-14 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900/70 transition-all hover:bg-slate-100 hover:text-slate-900 active:scale-[0.98]"
                 >
                   Volver al dashboard
                 </Link>
@@ -503,13 +503,13 @@ export function FinalResultsScreen({
               </a>
               <Link
                 href="/dashboard/convocatorias"
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Volver a simulacros
               </Link>
               <Link
                 href="/dashboard/historial"
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Ver historial
               </Link>
@@ -525,7 +525,7 @@ export function FinalResultsScreen({
               </Link>
               <Link
                 href={repeatDiagnosticHref}
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Repetir diagnóstico
               </Link>
@@ -541,7 +541,7 @@ export function FinalResultsScreen({
               </Link>
               <Link
                 href={repeatDiagnosticHref}
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Repetir diagnóstico
               </Link>
@@ -557,7 +557,7 @@ export function FinalResultsScreen({
               </Link>
               <Link
                 href={repeatDiagnosticHref}
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Repetir diagnóstico
               </Link>
@@ -573,7 +573,7 @@ export function FinalResultsScreen({
               </Link>
               <Link
                 href="/dashboard/planes"
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white/70 transition-all hover:bg-white/10 hover:text-white active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900/70 transition-all hover:bg-slate-100 hover:text-slate-900 active:scale-[0.98]"
               >
                 <Lock className="mr-2 h-4 w-4" />
                 Repetir Diagnóstico (PRO)
@@ -601,7 +601,7 @@ export function FinalResultsScreen({
               )}
               <Link
                 href={uccBlockCompletion?.dashboardHref ?? "/dashboard"}
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Volver al panel
               </Link>
@@ -618,7 +618,7 @@ export function FinalResultsScreen({
               <button
                 type="button"
                 onClick={onRepeatDemo}
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Repetir entrenamiento
               </button>
@@ -635,7 +635,7 @@ export function FinalResultsScreen({
               <button
                 type="button"
                 onClick={onRepeatDemo}
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Repetir entrenamiento
               </button>
@@ -652,7 +652,7 @@ export function FinalResultsScreen({
               <button
                 type="button"
                 onClick={onRepeatDemo}
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Repetir entrenamiento
               </button>
@@ -669,7 +669,7 @@ export function FinalResultsScreen({
               <button
                 type="button"
                 onClick={onRepeatDemo}
-                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 px-8 text-sm font-bold text-white transition-all hover:bg-white/10 active:scale-[0.98]"
+                className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
                 Repetir entrenamiento
               </button>

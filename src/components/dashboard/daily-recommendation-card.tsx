@@ -75,7 +75,7 @@ export function DailyRecommendationCard({ userId }: DailyRecommendationCardProps
       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-indigo-200">
         Recomendacion para hoy
       </p>
-      <p className="mt-2 text-base font-semibold text-white sm:text-lg">{recommendationMessage}</p>
+      <p className="mt-2 text-base font-semibold text-slate-900 sm:text-lg">{recommendationMessage}</p>
       <Link
         href="/demo"
         className="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl bg-mq-accent px-4 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110"

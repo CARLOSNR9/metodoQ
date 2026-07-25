@@ -115,7 +115,7 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
     return (
       <div
         id="convocatoria-repaso-summary"
-        className="h-52 animate-pulse rounded-[2rem] border border-white/10 bg-white/[0.03]"
+        className="h-52 animate-pulse rounded-[2rem] border border-slate-200 bg-white/[0.03]"
       />
     );
   }
@@ -145,30 +145,30 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
                 <ClipboardCheck size={12} />
                 Post-convocatoria
               </span>
-              <span className="text-xs font-semibold uppercase tracking-widest text-mq-muted">
+              <span className="text-xs font-semibold uppercase tracking-widest text-slate-500">
                 {edition.label}
               </span>
             </div>
             <div>
-              <h2 className="text-2xl font-black text-white sm:text-3xl">
+              <h2 className="text-2xl font-black text-slate-900 sm:text-3xl">
                 Qué repasar antes del simulacro
               </h2>
-              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-mq-muted">
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-500">
                 Basado en tu intento de la convocatoria UCC: prioriza las áreas y temas donde
                 más fallaste.
               </p>
             </div>
           </div>
 
-          <div className="shrink-0 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 text-center lg:min-w-[180px]">
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-mq-muted">
+          <div className="shrink-0 rounded-2xl border border-slate-200 bg-white/[0.04] px-5 py-4 text-center lg:min-w-[180px]">
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
               Tu puntaje
             </p>
-            <p className="mt-1 text-4xl font-black text-white">
+            <p className="mt-1 text-4xl font-black text-slate-900">
               {attempt.scorePercentage}
               <span className="text-lg text-mq-accent">%</span>
             </p>
-            <p className="mt-1 text-xs text-mq-muted">
+            <p className="mt-1 text-xs text-slate-500">
               {attempt.correctAnswers}/{edition.questionCount} aciertos
             </p>
           </div>
@@ -177,7 +177,7 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
         {(weakestAxes.length > 0 || topTopics.length > 0) && (
           <div className="grid gap-5 lg:grid-cols-2">
             {weakestAxes.length > 0 ? (
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+              <div className="rounded-2xl border border-slate-200 bg-white/[0.03] p-5">
                 <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-amber-300">
                   <AlertTriangle size={12} />
                   Áreas del examen UCC
@@ -186,23 +186,23 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
                   {weakestAxes.map((axis, index) => (
                     <li key={axis.axis}>
                       <div className="mb-1 flex items-center justify-between gap-3 text-sm">
-                        <span className="flex items-center gap-2 font-semibold text-white">
+                        <span className="flex items-center gap-2 font-semibold text-slate-900">
                           <span
                             className={`flex h-5 w-5 items-center justify-center rounded-md text-[10px] font-black ${
                               index === 0
                                 ? "bg-rose-500/20 text-rose-300"
-                                : "bg-white/10 text-mq-muted"
+                                : "bg-slate-100 text-slate-500"
                             }`}
                           >
                             {index + 1}
                           </span>
                           {axis.label}
                         </span>
-                        <span className="text-mq-muted">
+                        <span className="text-slate-500">
                           {axis.percentage}% · {axis.wrong} fallo{axis.wrong === 1 ? "" : "s"}
                         </span>
                       </div>
-                      <div className="h-2 overflow-hidden rounded-full bg-white/10">
+                      <div className="h-2 overflow-hidden rounded-full bg-slate-100">
                         <div
                           className={`h-full rounded-full ${
                             axis.percentage >= 70
@@ -221,8 +221,8 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
             ) : null}
 
             {topTopics.length > 0 ? (
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-mq-muted">
+              <div className="rounded-2xl border border-slate-200 bg-white/[0.03] p-5">
+                <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
                   <Target size={12} />
                   Temas prioritarios
                 </p>
@@ -237,13 +237,13 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
                           className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xs font-bold ${
                             index === 0
                               ? "bg-rose-500/20 text-rose-300"
-                              : "bg-white/5 text-mq-muted"
+                              : "bg-slate-50 text-slate-500"
                           }`}
                         >
                           {index + 1}
                         </span>
                         <div>
-                          <p className="text-sm font-bold text-white">{item.topic}</p>
+                          <p className="text-sm font-bold text-slate-900">{item.topic}</p>
                           <p className="text-[10px] font-medium text-rose-400">
                             {item.wrongCount} error{item.wrongCount === 1 ? "" : "es"} en el simulacro
                           </p>
@@ -277,7 +277,7 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
                 <>
                   <Link
                     href={wrongOnlyHref}
-                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-6 text-sm font-bold text-white transition hover:bg-white/[0.08]"
+                    className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/[0.04] px-6 text-sm font-bold text-slate-900 transition hover:bg-white/[0.08]"
                   >
                     Solo preguntas fallidas
                     <ArrowRight size={14} />
@@ -294,7 +294,7 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
           ) : null}
           <Link
             href="/dashboard/convocatorias"
-            className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-mq-muted transition hover:bg-white/[0.06] hover:text-white"
+            className="inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-slate-500 transition hover:bg-white/[0.06] hover:text-slate-900"
           >
             Ver convocatorias
           </Link>

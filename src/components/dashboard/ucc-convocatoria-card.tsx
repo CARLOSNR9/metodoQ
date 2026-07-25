@@ -63,7 +63,7 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
     return (
       <div
         id="ucc-convocatoria"
-        className="h-44 animate-pulse rounded-[2rem] border border-white/10 bg-white/[0.03]"
+        className="h-44 animate-pulse rounded-[2rem] border border-slate-200 bg-white/[0.03]"
       />
     );
   }
@@ -85,7 +85,7 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
           ? "border-emerald-500/30 bg-emerald-500/5"
           : canStart
             ? "border-mq-accent/35 bg-gradient-to-br from-mq-accent/10 via-white/[0.02] to-transparent"
-            : "border-white/10 bg-white/[0.02]"
+            : "border-slate-200 bg-slate-50"
       }`}
     >
       <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-mq-accent/10 blur-[80px]" />
@@ -112,16 +112,16 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
           </div>
 
           <div>
-            <h2 className="text-2xl font-black text-white sm:text-3xl">
+            <h2 className="text-2xl font-black text-slate-900 sm:text-3xl">
               Convocatoria {trackName} · {edition.label}
             </h2>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-mq-muted sm:text-base">
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-500 sm:text-base">
               Simulacro tipo admisión: banco exclusivo de esta edición, cronómetro de 3 horas
               y resultado al final sin feedback durante el examen.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-xs text-mq-muted sm:text-sm">
+          <div className="flex flex-wrap gap-4 text-xs text-slate-500 sm:text-sm">
             <span className="inline-flex items-center gap-2">
               <Clock size={14} className="text-mq-accent" />
               {edition.questionCount} preg · {edition.minutes} min
@@ -135,7 +135,7 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
 
           {attempt ? (
             <div className="inline-flex flex-wrap items-center gap-3">
-              <div className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-2 text-sm text-white">
+              <div className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-2 text-sm text-slate-900">
                 <CheckCircle2 size={16} className="text-emerald-300" />
                 {attempt.correctAnswers}/{edition.questionCount} aciertos ({attempt.scorePercentage}%)
               </div>
@@ -173,14 +173,14 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
                 Próximamente
               </div>
             ) : (
-              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-sm font-semibold text-mq-muted">
+              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.03] px-6 text-sm font-semibold text-slate-500">
                 Ventana cerrada
               </div>
             )}
 
             <Link
               href="/dashboard/convocatorias"
-              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-mq-muted transition hover:bg-white/[0.06] hover:text-white"
+              className="inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-slate-500 transition hover:bg-white/[0.06] hover:text-slate-900"
             >
               Ver calendario
             </Link>
@@ -188,7 +188,7 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
         ) : (
           <Link
             href="/dashboard/convocatorias"
-            className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-mq-muted transition hover:bg-white/[0.06] hover:text-white lg:min-w-[220px]"
+            className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.03] px-6 text-xs font-bold uppercase tracking-wider text-slate-500 transition hover:bg-white/[0.06] hover:text-slate-900 lg:min-w-[220px]"
           >
             Ver calendario
           </Link>

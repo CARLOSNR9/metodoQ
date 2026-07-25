@@ -27,7 +27,7 @@ export function ProfessorAttendanceOverview() {
 
   if (loading) {
     return (
-      <div className="animate-pulse rounded-xl border border-mq-border-strong bg-mq-surface-raised p-8 h-64" />
+      <div className="animate-pulse rounded-xl border border-slate-200 bg-white-raised p-8 h-64" />
     );
   }
 
@@ -36,9 +36,9 @@ export function ProfessorAttendanceOverview() {
       {error ? <p className="text-sm text-rose-400">{error}</p> : null}
 
       {summary.length === 0 ? (
-        <section className="rounded-xl border border-dashed border-mq-border-strong bg-white/[0.02] p-8 text-center">
+        <section className="rounded-xl border border-dashed border-slate-200 bg-slate-50 p-8 text-center">
           <ClipboardList className="mx-auto h-10 w-10 text-mq-accent" />
-          <p className="mt-4 text-sm text-mq-muted">
+          <p className="mt-4 text-sm text-slate-500">
             Aún no hay registros de asistencia. Pasa lista desde una clase de un grupo en{" "}
             <Link href="/profesor/clases" className="text-mq-accent hover:underline">
               Programar clases
@@ -47,10 +47,10 @@ export function ProfessorAttendanceOverview() {
           </p>
         </section>
       ) : (
-        <div className="overflow-x-auto rounded-xl border border-mq-border-strong bg-mq-surface-raised">
+        <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white-raised">
           <table className="w-full min-w-[760px] text-left text-sm">
             <thead>
-              <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+              <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
                 <th className="px-4 py-3">Alumno</th>
                 <th className="px-4 py-3">Presente</th>
                 <th className="px-4 py-3">Ausente</th>
@@ -62,8 +62,8 @@ export function ProfessorAttendanceOverview() {
               {summary.map((student) => (
                 <tr key={student.uid} className="border-b border-white/5 align-top">
                   <td className="px-4 py-3">
-                    <p className="font-medium text-white">{student.displayName}</p>
-                    <p className="text-xs text-mq-muted">{student.email}</p>
+                    <p className="font-medium text-slate-900">{student.displayName}</p>
+                    <p className="text-xs text-slate-500">{student.email}</p>
                     {student.absentCount >= 3 ? (
                       <p className="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-amber-300">
                         <AlertTriangle size={12} />
@@ -73,10 +73,10 @@ export function ProfessorAttendanceOverview() {
                   </td>
                   <td className="px-4 py-3 text-emerald-300">{student.presentCount}</td>
                   <td className="px-4 py-3 text-rose-300">{student.absentCount}</td>
-                  <td className="px-4 py-3 text-mq-muted">{student.totalMarkedSessions}</td>
+                  <td className="px-4 py-3 text-slate-500">{student.totalMarkedSessions}</td>
                   <td className="px-4 py-3">
                     {student.recentAbsences.length === 0 ? (
-                      <span className="text-mq-muted">—</span>
+                      <span className="text-slate-500">—</span>
                     ) : (
                       <ul className="space-y-1">
                         {student.recentAbsences.slice(0, 3).map((absence) => (
@@ -88,7 +88,7 @@ export function ProfessorAttendanceOverview() {
                               {absence.classTitle}
                             </Link>
                             {absence.classDateIso ? (
-                              <span className="block text-[11px] text-mq-muted">
+                              <span className="block text-[11px] text-slate-500">
                                 {new Date(absence.classDateIso).toLocaleDateString("es-CO", {
                                   day: "numeric",
                                   month: "short",

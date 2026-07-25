@@ -54,7 +54,7 @@ const SOURCE_LABELS: Record<UserAcquisitionSource, string> = {
 };
 
 const SOURCE_STYLES: Record<UserAcquisitionSource, string> = {
-  free: "bg-white/10 text-mq-muted",
+  free: "bg-slate-100 text-slate-500",
   stripe: "bg-violet-500/15 text-violet-300",
   manual: "bg-mq-accent/15 text-mq-accent",
 };
@@ -218,7 +218,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                 className={`rounded-full px-3 py-1 text-xs font-medium transition ${
                   filter === f.key
                     ? "bg-mq-accent text-[#0A1F44]"
-                    : "border border-mq-border text-mq-muted hover:text-white"
+                    : "border border-slate-200 text-slate-500 hover:text-slate-900"
                 }`}
               >
                 {f.label} ({counts[f.key]})
@@ -230,7 +230,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Buscar por correo o nombre..."
-            className="w-full rounded-lg border border-mq-border bg-[#0f2744] px-4 py-2 text-sm text-white placeholder:text-mq-muted/50 sm:max-w-xs"
+            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500/50 sm:max-w-xs"
           />
         </div>
 
@@ -243,7 +243,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
               className={`rounded-full px-3 py-1 text-xs font-medium transition ${
                 activityFilter === f.key
                   ? "border border-mq-accent/50 bg-mq-accent/10 text-mq-accent"
-                  : "border border-mq-border text-mq-muted hover:text-white"
+                  : "border border-slate-200 text-slate-500 hover:text-slate-900"
               }`}
             >
               {f.key === "all" ? f.label : getActivityStatusLabel(f.key)} ({activityCounts[f.key]})
@@ -252,7 +252,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
         </div>
       </div>
 
-      <p className="mt-3 text-xs text-mq-muted">
+      <p className="mt-3 text-xs text-slate-500">
         {filtered.length} usuario{filtered.length === 1 ? "" : "s"} · Usa Actividad para ver el
         detalle de estudio de cada alumno
       </p>
@@ -260,7 +260,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
       <div className="mt-4 overflow-x-auto">
         <table className="w-full min-w-[1180px] text-left text-sm">
           <thead>
-            <tr className="border-b border-white/10 text-xs uppercase tracking-wider text-mq-muted">
+            <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
               <th className="pb-3 pr-3">Registro</th>
               <th className="pb-3 pr-3">Usuario</th>
               <th className="pb-3 pr-3">Estado</th>
@@ -277,7 +277,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={11} className="py-8 text-center text-mq-muted">
+                <td colSpan={11} className="py-8 text-center text-slate-500">
                   No hay usuarios con este filtro.
                 </td>
               </tr>
@@ -286,34 +286,34 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                 const isProtectedAdmin = user.email === ADMIN_EMAIL;
                 return (
                   <tr key={user.uid} className="border-b border-white/5">
-                    <td className="py-3 pr-3 text-xs text-mq-muted whitespace-nowrap">
+                    <td className="py-3 pr-3 text-xs text-slate-500 whitespace-nowrap">
                       {formatDate(user.createdAt)}
                     </td>
                     <td className="py-3 pr-3">
-                      <p className="font-medium text-white">
+                      <p className="font-medium text-slate-900">
                         {user.displayName !== "—" ? user.displayName : user.email.split("@")[0]}
                       </p>
-                      <p className="text-xs text-mq-muted">{user.email || "—"}</p>
+                      <p className="text-xs text-slate-500">{user.email || "—"}</p>
                     </td>
                     <td className="py-3 pr-3">
                       <ActivityBadge status={user.activityStatus} />
                     </td>
-                    <td className="py-3 pr-3 text-xs text-mq-muted whitespace-nowrap">
+                    <td className="py-3 pr-3 text-xs text-slate-500 whitespace-nowrap">
                       {formatRelativeLastActive(user.lastActiveAt)}
                     </td>
-                    <td className="py-3 pr-3 text-white whitespace-nowrap">
+                    <td className="py-3 pr-3 text-slate-900 whitespace-nowrap">
                       {user.streakCount > 0 ? (
                         <span>{user.streakCount} d</span>
                       ) : (
-                        <span className="text-mq-muted">—</span>
+                        <span className="text-slate-500">—</span>
                       )}
                     </td>
-                    <td className="py-3 pr-3 text-mq-muted whitespace-nowrap">
+                    <td className="py-3 pr-3 text-slate-500 whitespace-nowrap">
                       {user.totalQuestionsAnswered > 0 ? (
                         <span>
                           {user.totalQuestionsAnswered}
                           {user.cumulativeScore != null ? (
-                            <span className="text-white/40"> · {user.cumulativeScore}%</span>
+                            <span className="text-slate-900/40"> · {user.cumulativeScore}%</span>
                           ) : null}
                         </span>
                       ) : (
@@ -327,19 +327,19 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                         {SOURCE_LABELS[user.source]}
                       </span>
                     </td>
-                    <td className="py-3 pr-3 font-medium text-white whitespace-nowrap">
+                    <td className="py-3 pr-3 font-medium text-slate-900 whitespace-nowrap">
                       {getPlanDisplayName(user.plan)}
                     </td>
-                    <td className="py-3 pr-3 text-mq-muted whitespace-nowrap">
+                    <td className="py-3 pr-3 text-slate-500 whitespace-nowrap">
                       {getRoleLabel(normalizeUserRole(user.role))}
                     </td>
-                    <td className="py-3 pr-3 text-xs text-mq-muted whitespace-nowrap">
+                    <td className="py-3 pr-3 text-xs text-slate-500 whitespace-nowrap">
                       {user.plan === "FREE" ? (
                         "—"
                       ) : (
                         <>
                           {formatDate(user.planStartedAt)}
-                          <span className="text-white/40"> → </span>
+                          <span className="text-slate-900/40"> → </span>
                           {formatDate(user.planExpiresAt)}
                         </>
                       )}
@@ -356,7 +356,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                           type="button"
                           disabled={isPending}
                           onClick={() => openEdit(user)}
-                          className="rounded-lg border border-mq-border px-2.5 py-1 text-xs font-medium text-white transition hover:border-mq-accent hover:text-mq-accent disabled:opacity-50"
+                          className="rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-900 transition hover:border-mq-accent hover:text-mq-accent disabled:opacity-50"
                         >
                           Editar
                         </button>
@@ -387,14 +387,14 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
           <form
             onSubmit={handleUpdate}
-            className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-mq-border-strong bg-[#0f2744] p-6 shadow-2xl"
+            className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-slate-200 bg-[#0f2744] p-6 shadow-2xl"
           >
-            <h3 className="text-lg font-semibold text-white">Editar usuario</h3>
-            <p className="mt-1 text-sm text-mq-muted">{editingUser.email}</p>
+            <h3 className="text-lg font-semibold text-slate-900">Editar usuario</h3>
+            <p className="mt-1 text-sm text-slate-500">{editingUser.email}</p>
 
             <div className="mt-5 space-y-4">
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold uppercase text-mq-muted">
+                <label className="text-xs font-semibold uppercase text-slate-500">
                   Nombre completo
                 </label>
                 <input
@@ -404,18 +404,18 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                   defaultValue={
                     editingUser.displayName !== "—" ? editingUser.displayName : ""
                   }
-                  className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                 />
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold uppercase text-mq-muted">Plan</label>
+                  <label className="text-xs font-semibold uppercase text-slate-500">Plan</label>
                   <select
                     name="plan"
                     value={editPlan}
                     onChange={(e) => setEditPlan(e.target.value as UserPlan)}
-                    className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white [color-scheme:dark]"
+                    className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
                   >
                     {PLAN_OPTIONS.map((opt) => (
                       <option key={opt.value} value={opt.value} className="bg-[#0f2744]">
@@ -425,11 +425,11 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                   </select>
                 </div>
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold uppercase text-mq-muted">Rol</label>
+                  <label className="text-xs font-semibold uppercase text-slate-500">Rol</label>
                   <select
                     name="role"
                     defaultValue={normalizeUserRole(editingUser.role)}
-                    className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white [color-scheme:dark]"
+                    className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
                   >
                     {ROLE_OPTIONS.map((opt) => (
                       <option key={opt.value} value={opt.value} className="bg-[#0f2744]">
@@ -443,13 +443,13 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
               {showPaidFields ? (
                 <div className="grid gap-4 rounded-lg border border-mq-accent/20 bg-mq-accent/5 p-4 sm:grid-cols-2">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold uppercase text-mq-muted">
+                    <label className="text-xs font-semibold uppercase text-slate-500">
                       Período (meses)
                     </label>
                     <select
                       name="planBillingCycle"
                       defaultValue={String(editingUser.planBillingCycle ?? 3)}
-                      className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white [color-scheme:dark]"
+                      className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
                     >
                       <option value="1">1 mes</option>
                       <option value="3">3 meses</option>
@@ -457,18 +457,18 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                     </select>
                   </div>
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold uppercase text-mq-muted">
+                    <label className="text-xs font-semibold uppercase text-slate-500">
                       Fecha inicio
                     </label>
                     <input
                       name="planStartDate"
                       type="date"
                       defaultValue={toDateInput(editingUser.planStartedAt)}
-                      className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white [color-scheme:dark]"
+                      className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
                     />
                   </div>
                   <div className="space-y-1.5 sm:col-span-2">
-                    <label className="text-xs font-semibold uppercase text-mq-muted">
+                    <label className="text-xs font-semibold uppercase text-slate-500">
                       Precio negociado (opcional)
                     </label>
                     <input
@@ -480,7 +480,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                           ? String(editingUser.negotiatedPriceCOP)
                           : ""
                       }
-                      className="w-full rounded-lg border border-mq-border bg-mq-surface px-3 py-2 text-white"
+                      className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                     />
                   </div>
                 </div>
@@ -492,7 +492,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                 type="button"
                 disabled={isPending}
                 onClick={() => setEditingId(null)}
-                className="rounded-lg border border-mq-border px-4 py-2 text-sm text-mq-muted hover:text-white"
+                className="rounded-lg border border-slate-200 px-4 py-2 text-sm text-slate-500 hover:text-slate-900"
               >
                 Cancelar
               </button>

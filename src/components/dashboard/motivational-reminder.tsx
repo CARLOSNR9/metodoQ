@@ -62,7 +62,7 @@ export function MotivationalReminder() {
           <p className="text-xs font-bold uppercase tracking-widest text-indigo-300">
             Foco en la meta • {daysRemaining} {daysRemaining === 1 ? 'día' : 'días'} restante{daysRemaining !== 1 ? 's' : ''} de Pro
           </p>
-          <p className="mt-1 text-sm font-medium text-white sm:text-base">
+          <p className="mt-1 text-sm font-medium text-slate-900 sm:text-base">
             {message}
           </p>
         </div>

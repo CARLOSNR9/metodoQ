@@ -88,7 +88,7 @@ export function TrainingReminderCard({ userId }: TrainingReminderCardProps) {
       <p className="text-xs font-semibold uppercase tracking-[0.14em] text-amber-200">
         Recordatorio
       </p>
-      <p className="mt-2 text-base font-semibold text-white sm:text-lg">{reminderMessage}</p>
+      <p className="mt-2 text-base font-semibold text-slate-900 sm:text-lg">{reminderMessage}</p>
     </section>
   );
 }

@@ -253,31 +253,31 @@ export function ConvocatoriaQuestionReviewer({
   return (
     <div className={cn("space-y-6", isEditing && "pb-28")}>
       {/* Navegación superior */}
-      <div className="flex flex-col gap-4 rounded-2xl border border-mq-border bg-mq-surface-raised/40 p-4 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4 rounded-2xl border border-slate-200 bg-white-raised/40 p-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2">
           <button
             type="button"
             disabled={currentIndex === 0 || isPending}
             onClick={() => goTo(currentIndex - 1)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white transition hover:bg-white/[0.08] disabled:opacity-40"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.03] text-slate-900 transition hover:bg-white/[0.08] disabled:opacity-40"
             aria-label="Pregunta anterior"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <div className="min-w-[8rem] text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mq-muted">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
               Pregunta
             </p>
-            <p className="text-lg font-bold text-white">
+            <p className="text-lg font-bold text-slate-900">
               {questionNumber}{" "}
-              <span className="text-sm font-medium text-mq-muted">/ {total}</span>
+              <span className="text-sm font-medium text-slate-500">/ {total}</span>
             </p>
           </div>
           <button
             type="button"
             disabled={currentIndex >= total - 1 || isPending}
             onClick={() => goTo(currentIndex + 1)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white transition hover:bg-white/[0.08] disabled:opacity-40"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.03] text-slate-900 transition hover:bg-white/[0.08] disabled:opacity-40"
             aria-label="Pregunta siguiente"
           >
             <ChevronRight className="h-5 w-5" />
@@ -302,8 +302,8 @@ export function ConvocatoriaQuestionReviewer({
       </div>
 
       {/* Grilla de saltos */}
-      <div className="rounded-2xl border border-mq-border bg-mq-surface-raised/30 p-4">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-mq-muted">
+      <div className="rounded-2xl border border-slate-200 bg-white-raised/30 p-4">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
           Ir a pregunta
         </p>
         <div className="grid grid-cols-10 gap-1.5">
@@ -322,7 +322,7 @@ export function ConvocatoriaQuestionReviewer({
                   "relative flex h-8 items-center justify-center rounded-lg text-xs font-semibold transition",
                   isActive
                     ? "bg-mq-accent text-mq-accent-foreground"
-                    : "border border-white/10 bg-white/[0.03] text-mq-muted hover:border-mq-accent/30 hover:text-white",
+                    : "border border-slate-200 bg-white/[0.03] text-slate-500 hover:border-mq-accent/30 hover:text-slate-900",
                 )}
               >
                 {num}
@@ -347,7 +347,7 @@ export function ConvocatoriaQuestionReviewer({
       ) : null}
 
       {/* Tarjeta principal */}
-      <article className="rounded-2xl border border-mq-border-strong bg-mq-surface p-5 shadow-[0_24px_60px_-36px_rgb(0_209_255/0.35)] sm:p-8">
+      <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_24px_60px_-36px_rgb(0_209_255/0.35)] sm:p-8">
         <div className="flex flex-wrap items-center gap-2">
           {currentQuestion.examArea ? (
             <span className="rounded-full border border-mq-accent/25 bg-mq-accent/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-mq-accent">
@@ -355,7 +355,7 @@ export function ConvocatoriaQuestionReviewer({
             </span>
           ) : null}
           {currentQuestion.topic ? (
-            <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-mq-muted">
+            <span className="rounded-full border border-slate-200 bg-white/[0.04] px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate-500">
               {currentQuestion.topic}
             </span>
           ) : null}
@@ -387,20 +387,20 @@ export function ConvocatoriaQuestionReviewer({
         )}
       </article>
 
-      <p className="text-center text-xs text-mq-muted">
-        ID: <code className="text-mq-muted/80">{currentQuestion.id}</code>
+      <p className="text-center text-xs text-slate-500">
+        ID: <code className="text-slate-500/80">{currentQuestion.id}</code>
       </p>
 
       {isEditing ? (
         <div
-          className="fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#0A1F44]/95 px-4 py-3 shadow-[0_-12px_40px_-12px_rgb(0_0_0/0.5)] backdrop-blur-md md:left-64"
+          className="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-200 bg-slate-50/95 px-4 py-3 shadow-[0_-12px_40px_-12px_rgb(0_0_0/0.5)] backdrop-blur-md md:left-64"
           role="toolbar"
           aria-label="Acciones de edición"
         >
           <div className="mx-auto flex max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm text-mq-muted">
+            <p className="text-sm text-slate-500">
               Editando{" "}
-              <span className="font-semibold text-white">
+              <span className="font-semibold text-slate-900">
                 pregunta {questionNumber}
               </span>{" "}
               de {total}
@@ -410,7 +410,7 @@ export function ConvocatoriaQuestionReviewer({
                 type="button"
                 onClick={cancelEdit}
                 disabled={isPending}
-                className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/[0.05]"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/15 px-4 py-2.5 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
               >
                 <X className="h-4 w-4" />
                 Cancelar
@@ -430,7 +430,7 @@ export function ConvocatoriaQuestionReviewer({
                 type="button"
                 onClick={handleSave}
                 disabled={isPending}
-                className="inline-flex min-w-[8.5rem] items-center justify-center gap-2 rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgb(16_185_129/0.6)] transition hover:bg-emerald-400 disabled:opacity-60"
+                className="inline-flex min-w-[8.5rem] items-center justify-center gap-2 rounded-xl bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-[0_8px_24px_-8px_rgb(16_185_129/0.6)] transition hover:bg-emerald-400 disabled:opacity-60"
               >
                 <Save className="h-4 w-4" />
                 {isPending ? "Guardando…" : "Guardar"}
@@ -450,7 +450,7 @@ function ReadMode({ question }: { question: TrainingQuestion }) {
         <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-mq-accent">
           Caso clínico
         </h3>
-        <p className="mt-3 text-pretty text-base leading-relaxed text-white sm:text-lg">
+        <p className="mt-3 text-pretty text-base leading-relaxed text-slate-900 sm:text-lg">
           {question.statement}
         </p>
       </section>
@@ -469,7 +469,7 @@ function ReadMode({ question }: { question: TrainingQuestion }) {
                   "rounded-xl border px-4 py-3.5",
                   isCorrect
                     ? "border-emerald-500/40 bg-emerald-500/10"
-                    : "border-white/10 bg-white/[0.02]",
+                    : "border-slate-200 bg-slate-50",
                 )}
               >
                 <div className="flex items-start gap-3">
@@ -477,14 +477,14 @@ function ReadMode({ question }: { question: TrainingQuestion }) {
                     className={cn(
                       "flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold",
                       isCorrect
-                        ? "bg-emerald-500 text-white"
-                        : "bg-white/10 text-mq-muted",
+                        ? "bg-emerald-500 text-slate-900"
+                        : "bg-slate-100 text-slate-500",
                     )}
                   >
                     {option.label}
                   </span>
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm leading-relaxed text-white sm:text-base">
+                    <p className="text-sm leading-relaxed text-slate-900 sm:text-base">
                       {option.text}
                     </p>
                     {isCorrect ? (
@@ -506,7 +506,7 @@ function ReadMode({ question }: { question: TrainingQuestion }) {
           <Sparkles className="h-3.5 w-3.5" />
           Retroalimentación por opción incorrecta
         </h3>
-        <p className="mt-1 text-xs text-mq-muted">
+        <p className="mt-1 text-xs text-slate-500">
           Lo que verá el estudiante al finalizar el simulacro, pregunta por pregunta.
         </p>
         <ul className="mt-4 space-y-3">
@@ -515,23 +515,23 @@ function ReadMode({ question }: { question: TrainingQuestion }) {
             .map((option) => (
               <li
                 key={option.id}
-                className="rounded-xl border border-white/10 bg-white/[0.02] p-4"
+                className="rounded-xl border border-slate-200 bg-slate-50 p-4"
               >
                 <p className="text-xs font-bold uppercase tracking-wider text-rose-300/90">
                   Opción {option.label}
                 </p>
-                <p className="mt-2 text-sm text-mq-muted line-clamp-2">{option.text}</p>
+                <p className="mt-2 text-sm text-slate-500 line-clamp-2">{option.text}</p>
                 {option.distractorProfile ? (
-                  <p className="mt-2 text-[10px] font-mono uppercase tracking-wide text-mq-muted/70">
+                  <p className="mt-2 text-[10px] font-mono uppercase tracking-wide text-slate-500/70">
                     {option.distractorProfile}
                   </p>
                 ) : null}
                 {option.incorrectFeedback ? (
-                  <p className="mt-2 text-sm leading-relaxed text-white/90">
+                  <p className="mt-2 text-sm leading-relaxed text-slate-900/90">
                     {option.incorrectFeedback}
                   </p>
                 ) : (
-                  <p className="mt-2 text-sm italic text-mq-muted">Sin retroalimentación.</p>
+                  <p className="mt-2 text-sm italic text-slate-500">Sin retroalimentación.</p>
                 )}
               </li>
             ))}
@@ -542,7 +542,7 @@ function ReadMode({ question }: { question: TrainingQuestion }) {
         <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-mq-accent">
           Explicación / Método Q
         </h3>
-        <p className="mt-3 whitespace-pre-wrap text-sm leading-relaxed text-white/95 sm:text-base">
+        <p className="mt-3 whitespace-pre-wrap text-sm leading-relaxed text-slate-900/95 sm:text-base">
           {question.explanation}
         </p>
       </section>
@@ -556,7 +556,7 @@ function ReadMode({ question }: { question: TrainingQuestion }) {
             {question.keyPoints.map((point, i) => (
               <li
                 key={i}
-                className="flex gap-2 text-sm leading-relaxed text-white/90"
+                className="flex gap-2 text-sm leading-relaxed text-slate-900/90"
               >
                 <ChevronDown className="mt-0.5 h-4 w-4 shrink-0 rotate-[-90deg] text-mq-accent" />
                 {point}
@@ -583,8 +583,8 @@ function EditMode({
   onMoveOption: (index: number, direction: -1 | 1) => void;
 }) {
   const inputClass =
-    "w-full rounded-xl border border-white/10 bg-[#0f2744]/80 px-4 py-3 text-sm text-white placeholder:text-mq-muted/60 focus:border-mq-accent/50 focus:outline-none focus:ring-2 focus:ring-mq-accent/20";
-  const labelClass = "text-xs font-semibold uppercase tracking-[0.12em] text-mq-muted";
+    "w-full rounded-xl border border-slate-200 bg-[#0f2744]/80 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500/60 focus:border-mq-accent/50 focus:outline-none focus:ring-2 focus:ring-mq-accent/20";
+  const labelClass = "text-xs font-semibold uppercase tracking-[0.12em] text-slate-500";
 
   return (
     <div className="mt-6 space-y-8">
@@ -608,7 +608,7 @@ function EditMode({
           {form.options.map((option, index) => (
             <li
               key={`${option.id}-${index}`}
-              className="rounded-xl border border-white/10 bg-white/[0.02] p-4"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4"
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <label className="inline-flex cursor-pointer items-center gap-2">
@@ -622,7 +622,7 @@ function EditMode({
                     }
                     className="h-4 w-4 accent-emerald-500"
                   />
-                  <span className="text-sm font-bold text-white">
+                  <span className="text-sm font-bold text-slate-900">
                     Opción {option.label} — correcta
                   </span>
                 </label>
@@ -631,7 +631,7 @@ function EditMode({
                     type="button"
                     disabled={isPending || index === 0}
                     onClick={() => onMoveOption(index, -1)}
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-mq-muted hover:text-white disabled:opacity-40"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:text-slate-900 disabled:opacity-40"
                     aria-label={`Subir opción ${option.label}`}
                   >
                     <ChevronUp className="h-4 w-4" />
@@ -640,7 +640,7 @@ function EditMode({
                     type="button"
                     disabled={isPending || index === form.options.length - 1}
                     onClick={() => onMoveOption(index, 1)}
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 text-mq-muted hover:text-white disabled:opacity-40"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-slate-200 text-slate-500 hover:text-slate-900 disabled:opacity-40"
                     aria-label={`Bajar opción ${option.label}`}
                   >
                     <ChevronDown className="h-4 w-4" />

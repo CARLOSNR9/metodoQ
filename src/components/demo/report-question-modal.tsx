@@ -73,17 +73,17 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative z-10 w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-[#0A1629] shadow-2xl"
+            className="relative z-10 w-full max-w-lg overflow-hidden rounded-2xl border border-slate-200 bg-[#0A1629] shadow-2xl"
           >
-            <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
-              <h2 className="flex items-center gap-2 text-lg font-bold text-white">
+            <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4">
+              <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
                 <Flag className="h-5 w-5 text-mq-accent" />
                 Reportar pregunta
               </h2>
               <button
                 type="button"
                 onClick={onClose}
-                className="rounded-full p-2 text-mq-muted transition-colors hover:bg-white/5 hover:text-white"
+                className="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-50 hover:text-slate-900"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -94,14 +94,14 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
                   <Send className="h-8 w-8" />
                 </div>
-                <h3 className="mt-4 text-xl font-bold text-white">¡Gracias por tu reporte!</h3>
-                <p className="mt-2 text-sm text-mq-muted">
+                <h3 className="mt-4 text-xl font-bold text-slate-900">¡Gracias por tu reporte!</h3>
+                <p className="mt-2 text-sm text-slate-500">
                   Revisaremos la pregunta pronto para seguir mejorando la calidad.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="px-6 py-5">
-                <p className="mb-4 text-sm text-mq-muted">
+                <p className="mb-4 text-sm text-slate-500">
                   ¿Qué problema encontraste en esta pregunta? Ayúdanos a mejorar el contenido.
                 </p>
 
@@ -112,7 +112,7 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
                       className={`flex cursor-pointer items-start gap-3 rounded-xl border p-3 transition-colors ${
                         selectedCategory === cat.id
                           ? "border-mq-accent/50 bg-mq-accent/10"
-                          : "border-white/10 bg-white/5 hover:border-white/20 hover:bg-white/10"
+                          : "border-slate-200 bg-slate-50 hover:border-slate-300 hover:bg-slate-100"
                       }`}
                     >
                       <input
@@ -121,18 +121,18 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
                         value={cat.id}
                         checked={selectedCategory === cat.id}
                         onChange={() => setSelectedCategory(cat.id)}
-                        className="mt-0.5 shrink-0 appearance-none rounded-full border-2 border-white/20 bg-transparent p-2 checked:border-mq-accent checked:bg-mq-accent"
+                        className="mt-0.5 shrink-0 appearance-none rounded-full border-2 border-slate-300 bg-transparent p-2 checked:border-mq-accent checked:bg-mq-accent"
                       />
                       <div>
-                        <p className="text-sm font-semibold text-white">{cat.label}</p>
-                        <p className="mt-0.5 text-xs text-mq-muted">{cat.desc}</p>
+                        <p className="text-sm font-semibold text-slate-900">{cat.label}</p>
+                        <p className="mt-0.5 text-xs text-slate-500">{cat.desc}</p>
                       </div>
                     </label>
                   ))}
                 </div>
 
                 <div className="mt-5">
-                  <label htmlFor="comments" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-mq-muted">
+                  <label htmlFor="comments" className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-slate-500">
                     Comentarios adicionales (Opcional)
                   </label>
                   <textarea
@@ -141,7 +141,7 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
                     value={comments}
                     onChange={(e) => setComments(e.target.value)}
                     placeholder="Danos más contexto sobre el error..."
-                    className="w-full rounded-xl border border-white/10 bg-black/30 p-3 text-sm text-white placeholder:text-white/20 focus:border-mq-accent/50 focus:outline-none focus:ring-1 focus:ring-mq-accent/50"
+                    className="w-full rounded-xl border border-slate-200 bg-black/30 p-3 text-sm text-slate-900 placeholder:text-slate-900/20 focus:border-mq-accent/50 focus:outline-none focus:ring-1 focus:ring-mq-accent/50"
                   />
                 </div>
 
@@ -153,7 +153,7 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
                   <button
                     type="button"
                     onClick={onClose}
-                    className="rounded-xl border border-white/10 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/5"
+                    className="rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-50"
                   >
                     Cancelar
                   </button>

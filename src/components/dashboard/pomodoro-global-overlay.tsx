@@ -70,18 +70,18 @@ export function PomodoroGlobalOverlay({ greetingName }: PomodoroGlobalOverlayPro
             initial={{ opacity: 0, scale: 0.92, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.92, y: 16 }}
-            className="relative z-10 w-full max-w-md rounded-3xl border border-white/10 bg-[#0A1F44] p-6 shadow-2xl shadow-black/40 sm:p-8"
+            className="relative z-10 w-full max-w-md rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-2xl shadow-black/40 sm:p-8"
           >
             <p className="text-4xl" aria-hidden>
               {overlayContent.emoji}
             </p>
             <h2
               id="pomodoro-modal-title"
-              className="mt-4 text-xl font-black leading-snug text-white sm:text-2xl"
+              className="mt-4 text-xl font-black leading-snug text-slate-900 sm:text-2xl"
             >
               {overlayContent.title}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-300">
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">
               {overlayContent.subtitle}
             </p>
 

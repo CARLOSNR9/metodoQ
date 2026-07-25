@@ -54,16 +54,16 @@ export function LiveClasses() {
 
   if (isLoadingPlan || (loading && isPro)) {
     return (
-      <div className="animate-pulse rounded-2xl border border-mq-border-strong bg-mq-surface p-6 h-40" />
+      <div className="animate-pulse rounded-2xl border border-slate-200 bg-white p-6 h-40" />
     );
   }
 
   return (
-    <section className="rounded-2xl border border-mq-border-strong bg-mq-surface p-6 shadow-sm overflow-hidden relative">
+    <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm overflow-hidden relative">
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
           <Calendar className="w-5 h-5 text-mq-accent" />
-          <h2 className="text-xl font-bold text-white">Próximas clases</h2>
+          <h2 className="text-xl font-bold text-slate-900">Próximas clases</h2>
         </div>
         {!isPro && (
           <span className="text-[10px] font-bold uppercase tracking-widest text-mq-accent bg-mq-accent/10 px-2 py-1 rounded">
@@ -71,19 +71,19 @@ export function LiveClasses() {
           </span>
         )}
       </div>
-      <p className="text-sm text-mq-muted mb-6">
+      <p className="text-sm text-slate-500 mb-6">
         Clases en vivo con médico que ya aprobó el examen. Resuelve tus dudas en tiempo real.
       </p>
 
       {!isPro ? (
-        <div className="flex flex-col items-center justify-center py-8 text-center bg-white/[0.02] rounded-xl border border-dashed border-mq-border">
+        <div className="flex flex-col items-center justify-center py-8 text-center bg-slate-50 rounded-xl border border-dashed border-slate-200">
           <div className="bg-mq-accent/10 p-3 rounded-full mb-4">
             <Lock className="w-6 h-6 text-mq-accent" />
           </div>
-          <p className="text-lg font-black text-white italic">"Esto es lo que te falta para competir de verdad"</p>
+          <p className="text-lg font-black text-slate-900 italic">"Esto es lo que te falta para competir de verdad"</p>
           <div className="space-y-1 mt-2 mb-4 px-6">
-            <p className="text-sm text-mq-muted font-medium">Aprende estrategias reales, no teoría.</p>
-            <p className="text-xs text-mq-muted">Desbloquea el acceso a sesiones en vivo con expertos que ya superaron el reto.</p>
+            <p className="text-sm text-slate-500 font-medium">Aprende estrategias reales, no teoría.</p>
+            <p className="text-xs text-slate-500">Desbloquea el acceso a sesiones en vivo con expertos que ya superaron el reto.</p>
           </div>
           <a
             href="/dashboard/planes"
@@ -95,7 +95,7 @@ export function LiveClasses() {
       ) : (
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {classes.length === 0 ? (
-            <p className="text-mq-muted text-sm py-4 col-span-full text-center">
+            <p className="text-slate-500 text-sm py-4 col-span-full text-center">
               No hay clases programadas próximamente.
             </p>
           ) : (
@@ -108,10 +108,10 @@ export function LiveClasses() {
               return (
                 <div 
                   key={cls.id} 
-                  className={`group relative rounded-xl border bg-white/[0.03] p-5 transition-all duration-300 hover:bg-white/[0.05] ${
+                  className={`group relative rounded-xl border bg-white/[0.03] p-5 transition-all duration-300 hover:bg-slate-100 ${
                     isLiveNow 
                       ? "border-mq-accent/60 shadow-[0_0_20px_-10px_rgba(0,209,255,0.3)]" 
-                      : "border-mq-border hover:border-mq-accent/40"
+                      : "border-slate-200 hover:border-mq-accent/40"
                   }`}
                 >
                   {isLiveNow && (
@@ -124,10 +124,10 @@ export function LiveClasses() {
                     </div>
                   )}
 
-                  <h3 className="font-bold text-white text-lg line-clamp-1 mb-1 pr-16">
+                  <h3 className="font-bold text-slate-900 text-lg line-clamp-1 mb-1 pr-16">
                     {cls.title}
                   </h3>
-                  <div className="text-xs text-mq-muted flex items-center gap-1.5 mb-4">
+                  <div className="text-xs text-slate-500 flex items-center gap-1.5 mb-4">
                     <span className="capitalize">
                       {classDate.toLocaleDateString("es-ES", { weekday: 'long', day: 'numeric', month: 'short' })}
                     </span>
@@ -144,7 +144,7 @@ export function LiveClasses() {
                     className={`flex items-center justify-center gap-2 w-full font-bold py-2.5 px-4 rounded-lg text-sm transition-all active:scale-[0.97] ${
                       isLiveNow 
                         ? "bg-mq-accent text-mq-accent-foreground shadow-lg shadow-mq-accent/20 hover:brightness-110" 
-                        : "bg-white/10 text-white hover:bg-white/20"
+                        : "bg-slate-100 text-slate-900 hover:bg-white/20"
                     }`}
                   >
                     Unirse ahora

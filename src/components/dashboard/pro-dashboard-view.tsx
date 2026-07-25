@@ -145,7 +145,7 @@ export function ProDashboardView({
       <motion.header 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="relative overflow-hidden rounded-[2.5rem] border border-mq-border-strong bg-gradient-to-br from-white/[0.05] via-mq-surface to-transparent p-8 sm:p-12 shadow-2xl"
+        className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-gradient-to-br from-white/[0.05] via-mq-surface to-transparent p-8 sm:p-12 shadow-2xl"
       >
         <div className="relative z-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
@@ -184,10 +184,10 @@ export function ProDashboardView({
               </div>
 
               <div>
-                <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl">
+                <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-6xl">
                   Hola, <span className="text-mq-accent">{greetingName}.</span>
                 </h1>
-                <p className="mt-4 max-w-xl text-lg leading-relaxed text-mq-muted sm:text-xl">
+                <p className="mt-4 max-w-xl text-lg leading-relaxed text-slate-500 sm:text-xl">
                   {needsDiagnostic
                     ? goalUniversityLabel
                       ? `Tu plan Pro está activo. Completa tu diagnóstico de 10 preguntas para calibrar la IA hacia la ${goalUniversityLabel}.`
@@ -224,7 +224,7 @@ export function ProDashboardView({
                           ? `/dashboard/diagnostico?source=act1&university=${encodeURIComponent(goalUniversityLabel)}&specialty=${encodeURIComponent(effectiveSpecialty)}`
                           : "/dashboard/diagnostico?source=act1"
                       }
-                      className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 text-sm font-bold text-white/80 transition-all hover:bg-white/10 hover:text-white"
+                      className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-6 text-sm font-bold text-slate-900/80 transition-all hover:bg-slate-100 hover:text-slate-900"
                     >
                       Repetir diagnóstico
                     </Link>
@@ -263,8 +263,8 @@ export function ProDashboardView({
                   <TrendingUp size={24} />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-mq-muted">Tendencia</p>
-                  <p className="text-sm font-bold text-white">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Tendencia</p>
+                  <p className="text-sm font-bold text-slate-900">
                     {statsLoading
                       ? "..."
                       : improvement !== null && improvement !== 0
@@ -281,8 +281,8 @@ export function ProDashboardView({
                   <Trophy size={24} />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-mq-muted">Nivel</p>
-                  <p className="text-sm font-bold text-white">
+                  <p className="text-[10px] font-black uppercase tracking-widest text-slate-500">Nivel</p>
+                  <p className="text-sm font-bold text-slate-900">
                     {statsLoading
                       ? "..."
                       : needsDiagnostic
@@ -327,7 +327,7 @@ export function ProDashboardView({
           <div className="flex items-start gap-3 sm:items-center">
             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-400 sm:mt-0" />
             <p className="text-sm leading-relaxed text-emerald-50">
-              <span className="font-bold text-white">Tu diagnóstico ya está hecho.</span> Con esa batería
+              <span className="font-bold text-slate-900">Tu diagnóstico ya está hecho.</span> Con esa batería
               inicial calibramos Método Q
               {goalUniversityLabel ? ` para ${goalUniversityLabel}` : ""}
               {totalQuestions > 0 ? (
@@ -363,7 +363,7 @@ export function ProDashboardView({
         <div id="diagnostico-pro" className="space-y-10">
           <section
             id="diagnostico-pro-radar"
-            className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/[0.02] p-8 shadow-2xl backdrop-blur-md sm:p-10"
+            className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-slate-50 p-8 shadow-2xl backdrop-blur-md sm:p-10"
           >
             <div className="mb-8 space-y-2">
               <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/20 bg-mq-accent/10 px-4 py-1">
@@ -372,8 +372,8 @@ export function ProDashboardView({
                   Análisis de desempeño IA
                 </span>
               </div>
-              <h2 className="text-3xl font-black text-white">Tu realidad competitiva</h2>
-              <p className="text-sm text-mq-muted">
+              <h2 className="text-3xl font-black text-slate-900">Tu realidad competitiva</h2>
+              <p className="text-sm text-slate-500">
                 Promedio acumulado de diagnóstico, retos diarios y entrenamiento.
                 {totalQuestions > 0 ? ` Basado en ${totalQuestions} preguntas.` : ""}
               </p>
@@ -473,8 +473,8 @@ export function ProDashboardView({
                 <MessageSquare size={28} />
               </div>
               <div className="space-y-2">
-                <h3 className="text-xl font-black text-white">Comunidad Privada</h3>
-                <p className="text-sm leading-relaxed text-mq-muted">
+                <h3 className="text-xl font-black text-slate-900">Comunidad Privada</h3>
+                <p className="text-sm leading-relaxed text-slate-500">
                   Conéctate con otros aspirantes y resuelve dudas con el Doctor Q en nuestro canal exclusivo.
                 </p>
               </div>
@@ -501,8 +501,8 @@ export function ProDashboardView({
           />
 
           {/* MOTIVATIONAL QUOTE */}
-          <div className="rounded-[2rem] border border-white/5 bg-white/[0.02] p-8 text-center border-dashed">
-            <p className="text-lg font-bold text-white italic leading-relaxed">
+          <div className="rounded-[2rem] border border-white/5 bg-slate-50 p-8 text-center border-dashed">
+            <p className="text-lg font-bold text-slate-900 italic leading-relaxed">
               {isUccMiPro
                 ? '"En la UCC Pasto no gana quien más leyó, sino quien más simuló con el formato correcto."'
                 : '"El éxito en la residencia no es cuestión de suerte, es cuestión de datos y disciplina."'}

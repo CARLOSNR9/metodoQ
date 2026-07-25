@@ -40,15 +40,15 @@ export function ProfessorClassRow({
   return (
     <tr className="border-b border-white/5">
       <td className="py-3 pr-4">
-        <p className="font-medium text-white">{title}</p>
-        <p className="text-xs text-mq-muted">{duration} min</p>
+        <p className="font-medium text-slate-900">{title}</p>
+        <p className="text-xs text-slate-500">{duration} min</p>
       </td>
-      <td className="py-3 pr-4 text-xs text-mq-muted">{destination}</td>
-      <td className="py-3 pr-4 text-sm text-mq-muted">{formatted ?? "—"}</td>
+      <td className="py-3 pr-4 text-xs text-slate-500">{destination}</td>
+      <td className="py-3 pr-4 text-sm text-slate-500">{formatted ?? "—"}</td>
       <td className="py-3 pr-4">
         <span
           className={`rounded-full px-2 py-0.5 text-[10px] font-bold uppercase ${
-            isPast ? "bg-white/10 text-mq-muted" : "bg-mq-accent/15 text-mq-accent"
+            isPast ? "bg-slate-100 text-slate-500" : "bg-mq-accent/15 text-mq-accent"
           }`}
         >
           {isPast ? "Finalizada" : "Próxima"}
@@ -64,7 +64,7 @@ export function ProfessorClassRow({
             {attendanceTotal > 0 ? `Lista (${attendanceTotal})` : "Pasar lista"}
           </Link>
         ) : (
-          <span className="text-xs text-mq-muted">Sin grupo</span>
+          <span className="text-xs text-slate-500">Sin grupo</span>
         )}
       </td>
       <td className="py-3 pr-4">

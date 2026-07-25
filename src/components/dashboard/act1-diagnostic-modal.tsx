@@ -173,7 +173,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="relative w-full max-w-xl overflow-hidden bg-mq-surface border border-mq-border-strong rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.9)]"
+        className="relative w-full max-w-xl overflow-hidden bg-white border border-slate-200 rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.9)]"
       >
         {/* Glow Decorativo */}
         <div className="absolute top-0 w-full h-40 opacity-30 -z-10 bg-gradient-to-b from-mq-accent/40 to-transparent" />
@@ -195,10 +195,10 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                       Configuración del Motor Predictivo
                     </span>
                   </div>
-                  <h2 className="text-3xl font-black text-white leading-tight">
+                  <h2 className="text-3xl font-black text-slate-900 leading-tight">
                     Calibra tu <span className="text-mq-accent italic">Escenario de Realidad</span>
                   </h2>
-                  <p className="text-mq-muted text-sm leading-relaxed">
+                  <p className="text-slate-500 text-sm leading-relaxed">
                     {skipConfigStep
                       ? "Usaremos la universidad y especialidad de tu registro. Revisa que sean correctas antes de continuar."
                       : "Para calcular tus probabilidades reales de ingreso, necesitamos saber contra qué estándar vas a competir."}
@@ -207,7 +207,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
 
                 <div className="space-y-6">
                   <div className="space-y-3">
-                    <label className="text-xs font-bold uppercase tracking-widest text-mq-muted/60 px-2">Institución Objetivo</label>
+                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500/60 px-2">Institución Objetivo</label>
                     <div className="grid grid-cols-1 gap-2">
                       {(universities.includes(selectedUniversity as (typeof universities)[number])
                         ? universities
@@ -221,7 +221,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                           className={`flex items-center justify-between p-4 rounded-2xl border transition-all ${
                             selectedUniversity === uni 
                               ? "bg-mq-accent/10 border-mq-accent text-white" 
-                              : "bg-white/[0.03] border-white/5 text-mq-muted hover:bg-white/[0.05]"
+                              : "bg-white/[0.03] border-white/5 text-slate-500 hover:bg-slate-100"
                           }`}
                         >
                           <span className="font-bold text-sm">{uni}</span>
@@ -232,7 +232,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                   </div>
 
                   <div className="space-y-3">
-                    <label className="text-xs font-bold uppercase tracking-widest text-mq-muted/60 px-2">Especialidad a la que aspiras</label>
+                    <label className="text-xs font-bold uppercase tracking-widest text-slate-500/60 px-2">Especialidad a la que aspiras</label>
                     <div className="max-h-[200px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/10 space-y-2">
                       {specialties.map((spec) => (
                         <button
@@ -241,7 +241,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                           className={`w-full flex items-center justify-between p-4 rounded-2xl border transition-all ${
                             selectedSpecialty.name === spec.name 
                               ? "bg-mq-accent/10 border-mq-accent text-white" 
-                              : "bg-white/[0.03] border-white/5 text-mq-muted hover:bg-white/[0.05]"
+                              : "bg-white/[0.03] border-white/5 text-slate-500 hover:bg-slate-100"
                           }`}
                         >
                           <span className="font-bold text-sm text-left">{spec.name}</span>
@@ -273,10 +273,10 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                   <div className="mx-auto w-16 h-16 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center">
                     <ShieldAlert size={32} className="text-red-500 animate-pulse" />
                   </div>
-                  <h2 className="text-2xl font-black text-white">Choque de Realidad Estandarizado</h2>
-                  <p className="text-mq-muted text-sm">
+                  <h2 className="text-2xl font-black text-slate-900">Choque de Realidad Estandarizado</h2>
+                  <p className="text-slate-500 text-sm">
                     Escenario proyectado para 2027 en la{" "}
-                    <span className="text-white font-bold">{selectedUniversity}</span>
+                    <span className="text-slate-900 font-bold">{selectedUniversity}</span>
                     {skipConfigStep ? (
                       <>
                         {" "}
@@ -285,7 +285,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                     ) : null}
                   </p>
                   {skipConfigStep ? (
-                    <p className="text-[11px] text-mq-muted/80">
+                    <p className="text-[11px] text-slate-500/80">
                       Tomado de tu perfil. Si necesitas cambiar universidad, actualízala en Perfil.
                     </p>
                   ) : null}
@@ -293,14 +293,14 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/[0.03] border border-white/5 p-6 rounded-[2rem] text-center space-y-1">
-                    <p className="text-[10px] font-bold text-mq-muted uppercase tracking-widest">Cupos Regulares</p>
+                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Cupos Regulares</p>
                     <p className="text-4xl font-black text-mq-accent">{selectedSpecialty.regularSpots}</p>
-                    <p className="text-[10px] text-mq-muted">Para todo el país</p>
+                    <p className="text-[10px] text-slate-500">Para todo el país</p>
                   </div>
                   <div className="bg-white/[0.03] border border-white/5 p-6 rounded-[2rem] text-center space-y-1">
-                    <p className="text-[10px] font-bold text-mq-muted uppercase tracking-widest">Dificultad Est.</p>
+                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Dificultad Est.</p>
                     <p className="text-4xl font-black text-red-500">9.8/10</p>
-                    <p className="text-[10px] text-mq-muted">Nivel de Exclusión</p>
+                    <p className="text-[10px] text-slate-500">Nivel de Exclusión</p>
                   </div>
                 </div>
 
@@ -318,7 +318,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
 
                 <div className="space-y-4">
                    <div className="flex items-center gap-3 px-2">
-                      <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                      <div className="h-1 w-full bg-slate-50 rounded-full overflow-hidden">
                         <motion.div 
                           initial={{ width: 0 }}
                           animate={{ width: "100%" }}
@@ -353,9 +353,9 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                   </div>
                 </div>
                 <div className="text-center space-y-2">
-                  <h3 className="text-2xl font-black text-white">Inyectando Variables...</h3>
-                  <p className="text-mq-muted text-sm max-w-[280px] mx-auto">
-                    Cargando banco de preguntas específico para <span className="text-white font-bold">{selectedSpecialty.name}</span>.
+                  <h3 className="text-2xl font-black text-slate-900">Inyectando Variables...</h3>
+                  <p className="text-slate-500 text-sm max-w-[280px] mx-auto">
+                    Cargando banco de preguntas específico para <span className="text-slate-900 font-bold">{selectedSpecialty.name}</span>.
                   </p>
                 </div>
                 <div className="grid grid-cols-1 w-full gap-2">
@@ -368,7 +368,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                       className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/5"
                     >
                       <div className="h-1.5 w-1.5 rounded-full bg-mq-accent animate-ping" />
-                      <span className="text-[10px] font-bold text-mq-muted uppercase tracking-widest">{text}</span>
+                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{text}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -387,13 +387,13 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                     <Trophy size={48} className="text-mq-accent" />
                   </div>
                   <div className="space-y-2">
-                    <h2 className="text-3xl font-black text-white italic">¡ESTÁS LISTO!</h2>
-                    <p className="text-mq-muted">El motor ha sido calibrado con éxito.</p>
+                    <h2 className="text-3xl font-black text-slate-900 italic">¡ESTÁS LISTO!</h2>
+                    <p className="text-slate-500">El motor ha sido calibrado con éxito.</p>
                   </div>
                 </div>
 
                 <div className="bg-mq-accent/10 border border-mq-accent/20 rounded-3xl p-8 text-center space-y-4">
-                  <p className="text-sm leading-relaxed text-white font-medium">
+                  <p className="text-sm leading-relaxed text-slate-900 font-medium">
                     {`"${readyQuote}"`}
                   </p>
                   <p className="text-[10px] uppercase tracking-[0.3em] text-mq-accent font-black">- DR. Q</p>
@@ -415,7 +415,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
         {/* Botón de cerrar discreto */}
         <button 
           onClick={onClose}
-          className="absolute top-6 right-6 text-mq-muted hover:text-white transition-colors"
+          className="absolute top-6 right-6 text-slate-500 hover:text-slate-900 transition-colors"
         >
           <ChevronRight className="rotate-90" />
         </button>

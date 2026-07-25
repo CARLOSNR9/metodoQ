@@ -32,15 +32,15 @@ function NumberField({
 }) {
   return (
     <label className="block space-y-1.5">
-      <span className="text-xs font-bold text-white">{label}</span>
-      {hint ? <span className="block text-[10px] text-mq-muted">{hint}</span> : null}
+      <span className="text-xs font-bold text-slate-900">{label}</span>
+      {hint ? <span className="block text-[10px] text-slate-500">{hint}</span> : null}
       <input
         type="number"
         min={0}
         max={max}
         value={value}
         onChange={(e) => onChange(Math.max(0, parseInt(e.target.value, 10) || 0))}
-        className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-white outline-none focus:border-mq-accent/40"
+        className="w-full rounded-xl border border-slate-200 bg-white/[0.04] px-3 py-2 text-sm text-slate-900 outline-none focus:border-mq-accent/40"
       />
     </label>
   );
@@ -56,13 +56,13 @@ function ToggleField({
   onChange: (checked: boolean) => void;
 }) {
   return (
-    <label className="flex cursor-pointer items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-      <span className="text-sm font-medium text-white">{label}</span>
+    <label className="flex cursor-pointer items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white/[0.03] px-4 py-3">
+      <span className="text-sm font-medium text-slate-900">{label}</span>
       <input
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="h-4 w-4 rounded border-white/20 accent-mq-accent"
+        className="h-4 w-4 rounded border-slate-300 accent-mq-accent"
       />
     </label>
   );
@@ -116,8 +116,8 @@ export function UccCvSimulatorCard({ userId, uccCvProfile }: UccCvSimulatorCardP
               Simulador HV · Fase I UCC
             </span>
           </div>
-          <h2 className="text-2xl font-black text-white">Tu hoja de vida (baremo oficial)</h2>
-          <p className="mt-1 max-w-xl text-sm text-mq-muted">
+          <h2 className="text-2xl font-black text-slate-900">Tu hoja de vida (baremo oficial)</h2>
+          <p className="mt-1 max-w-xl text-sm text-slate-500">
             Máximo 20 pts. Solo se evalúa si superas P75 en la prueba escrita.
           </p>
         </div>
@@ -128,19 +128,19 @@ export function UccCvSimulatorCard({ userId, uccCvProfile }: UccCvSimulatorCardP
               : "border-amber-500/30 bg-amber-500/10"
           }`}
         >
-          <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+          <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
             Proyección HV
           </p>
-          <p className="text-3xl font-black text-white">
+          <p className="text-3xl font-black text-slate-900">
             {assessment.total}/{assessment.maxTotal}
           </p>
-          <p className="text-xs text-mq-muted">puntos</p>
+          <p className="text-xs text-slate-500">puntos</p>
         </div>
       </div>
 
       <div className="grid gap-8 lg:grid-cols-2">
         <div className="space-y-4">
-          <h3 className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-white">
+          <h3 className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-900">
             <GraduationCap size={16} className="text-purple-300" />
             Antecedentes académicos
           </h3>
@@ -204,7 +204,7 @@ export function UccCvSimulatorCard({ userId, uccCvProfile }: UccCvSimulatorCardP
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-xs font-black uppercase tracking-wider text-white">
+          <h3 className="text-xs font-black uppercase tracking-wider text-slate-900">
             Desglose de puntaje
           </h3>
           <dl className="space-y-2 text-sm">
@@ -218,8 +218,8 @@ export function UccCvSimulatorCard({ userId, uccCvProfile }: UccCvSimulatorCardP
                 key={row.label}
                 className="flex items-center justify-between rounded-xl border border-white/5 bg-white/[0.03] px-4 py-3"
               >
-                <dt className="text-mq-muted">{row.label}</dt>
-                <dd className="font-black text-white">
+                <dt className="text-slate-500">{row.label}</dt>
+                <dd className="font-black text-slate-900">
                   {row.value}/{row.max}
                 </dd>
               </div>
@@ -240,7 +240,7 @@ export function UccCvSimulatorCard({ userId, uccCvProfile }: UccCvSimulatorCardP
             {assessment.recommendations.map((rec) => (
               <li
                 key={rec}
-                className="flex items-start gap-2 text-xs leading-relaxed text-mq-muted"
+                className="flex items-start gap-2 text-xs leading-relaxed text-slate-500"
               >
                 <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-mq-accent" />
                 {rec}

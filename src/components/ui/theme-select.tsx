@@ -71,18 +71,18 @@ export function ThemeSelect({
         aria-controls={listId}
         onClick={() => setOpen((prev) => !prev)}
         className={cn(
-          "flex w-full items-center justify-between gap-2 rounded-lg border border-mq-border",
-          "bg-mq-surface px-3 py-2.5 text-left text-sm outline-none transition-colors",
+          "flex w-full items-center justify-between gap-2 rounded-lg border border-slate-200",
+          "bg-white px-3 py-2.5 text-left text-sm outline-none transition-colors",
           "hover:border-mq-accent/40 focus:border-mq-accent focus:ring-1 focus:ring-mq-accent",
           "disabled:cursor-not-allowed disabled:opacity-50",
         )}
       >
-        <span className={selected ? "font-medium text-white" : "text-mq-muted"}>
+        <span className={selected ? "font-medium text-slate-900" : "text-slate-500"}>
           {selected?.label ?? placeholder}
         </span>
         <ChevronDown
           size={16}
-          className={cn("shrink-0 text-mq-muted transition-transform", open && "rotate-180")}
+          className={cn("shrink-0 text-slate-500 transition-transform", open && "rotate-180")}
         />
       </button>
 
@@ -90,10 +90,10 @@ export function ThemeSelect({
         <ul
           id={listId}
           role="listbox"
-          className="absolute z-30 mt-1 max-h-56 w-full overflow-y-auto rounded-lg border border-mq-border-strong bg-[#0f2744] py-1 shadow-2xl"
+          className="absolute z-30 mt-1 max-h-56 w-full overflow-y-auto rounded-lg border border-slate-200 bg-[#0f2744] py-1 shadow-2xl"
         >
           {options.length === 0 ? (
-            <li className="px-3 py-2.5 text-sm text-mq-muted">Sin opciones</li>
+            <li className="px-3 py-2.5 text-sm text-slate-500">Sin opciones</li>
           ) : (
             options.map((option) => {
               const isSelected = option.value === value;
@@ -109,7 +109,7 @@ export function ThemeSelect({
                       "w-full px-3 py-2.5 text-left text-sm transition-colors",
                       isSelected
                         ? "bg-mq-accent/15 font-semibold text-mq-accent"
-                        : "text-white hover:bg-white/[0.06]",
+                        : "text-slate-900 hover:bg-white/[0.06]",
                     )}
                   >
                     {option.label}

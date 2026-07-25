@@ -7,10 +7,10 @@ export default function AdminError({
   reset: () => void;
 }) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#0A1F44] px-4">
-      <section className="w-full max-w-md rounded-2xl border border-mq-border-strong bg-mq-surface-raised p-8 text-center shadow-2xl">
-        <h1 className="text-xl font-semibold text-white">No se pudo cargar el panel</h1>
-        <p className="mt-3 text-sm text-mq-muted">
+    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
+      <section className="w-full max-w-md rounded-2xl border border-slate-200 bg-white-raised p-8 text-center shadow-2xl">
+        <h1 className="text-xl font-semibold text-slate-900">No se pudo cargar el panel</h1>
+        <p className="mt-3 text-sm text-slate-500">
           Revisa que las variables FIREBASE_ADMIN_* estén configuradas en Vercel y que los índices
           de Firestore estén desplegados.
         </p>

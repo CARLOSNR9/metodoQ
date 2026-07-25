@@ -107,7 +107,7 @@ function RankBadge({ rank }: { rank: number }) {
   }
   if (rank === 2) {
     return (
-      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 text-sm font-black text-white/70">
+      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-slate-100 text-sm font-black text-slate-900/70">
         2
       </span>
     );
@@ -120,7 +120,7 @@ function RankBadge({ rank }: { rank: number }) {
     );
   }
   return (
-    <span className="flex h-6 w-6 shrink-0 items-center justify-center text-xs font-bold tabular-nums text-mq-muted">
+    <span className="flex h-6 w-6 shrink-0 items-center justify-center text-xs font-bold tabular-nums text-slate-500">
       {rank}
     </span>
   );
@@ -139,17 +139,17 @@ function TopicRankRow({ subject, rank }: { subject: SubjectStatus; rank: number 
       initial={{ opacity: 0, x: -8 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: rank * 0.04 }}
-      className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-3 py-2.5"
+      className="flex items-center gap-3 rounded-xl border border-white/5 bg-slate-50 px-3 py-2.5"
     >
       <RankBadge rank={rank} />
       <div className="min-w-0 flex-1 space-y-1.5">
         <div className="flex items-center justify-between gap-2">
-          <span className="truncate text-xs font-bold text-white">{subject.label}</span>
-          <span className="shrink-0 text-[11px] tabular-nums text-mq-muted">
+          <span className="truncate text-xs font-bold text-slate-900">{subject.label}</span>
+          <span className="shrink-0 text-[11px] tabular-nums text-slate-500">
             {subject.score}% · {subject.correct}/{subject.questions}
           </span>
         </div>
-        <div className="h-1.5 overflow-hidden rounded-full bg-white/5">
+        <div className="h-1.5 overflow-hidden rounded-full bg-slate-50">
           <motion.div
             className={`h-full rounded-full ${barColor}`}
             initial={{ width: 0 }}
@@ -206,10 +206,10 @@ export function UccPastoInsightCard({
             </span>
           </div>
         </div>
-        <h2 className="mt-4 text-xl font-black text-white sm:text-2xl">
+        <h2 className="mt-4 text-xl font-black text-slate-900 sm:text-2xl">
           Tu examen en una mirada
         </h2>
-        <p className="mt-1 max-w-2xl text-sm text-mq-muted">
+        <p className="mt-1 max-w-2xl text-sm text-slate-500">
           Así es la convocatoria, qué pesa en la prueba y cómo se llega al cupo.
         </p>
       </div>
@@ -238,28 +238,28 @@ export function UccPastoInsightCard({
                     className={`relative rounded-2xl border p-4 ${
                       step.highlight
                         ? "border-rose-500/30 bg-rose-500/[0.06] shadow-[0_0_24px_-8px_rgba(244,63,94,0.35)]"
-                        : "border-white/10 bg-white/[0.03]"
+                        : "border-slate-200 bg-white/[0.03]"
                     }`}
                   >
                     <div className="mb-3 flex items-center justify-between">
                       <span
                         className={`text-[10px] font-black uppercase tracking-widest ${
-                          step.highlight ? "text-rose-300" : "text-mq-muted"
+                          step.highlight ? "text-rose-300" : "text-slate-500"
                         }`}
                       >
                         Paso {step.step}
                       </span>
                       <div
                         className={`flex h-8 w-8 items-center justify-center rounded-xl ${
-                          step.highlight ? "bg-rose-500/20 text-rose-300" : "bg-white/5 text-mq-accent"
+                          step.highlight ? "bg-rose-500/20 text-rose-300" : "bg-slate-50 text-mq-accent"
                         }`}
                       >
                         <Icon size={16} />
                       </div>
                     </div>
-                    <p className="text-sm font-black text-white">{step.title}</p>
-                    <p className="mt-1 text-[11px] leading-snug text-mq-muted">{step.detail}</p>
-                    <p className="mt-2 text-[10px] leading-relaxed text-white/50">{step.sub}</p>
+                    <p className="text-sm font-black text-slate-900">{step.title}</p>
+                    <p className="mt-1 text-[11px] leading-snug text-slate-500">{step.detail}</p>
+                    <p className="mt-2 text-[10px] leading-relaxed text-slate-900/50">{step.sub}</p>
                   </motion.div>
                 );
               })}
@@ -285,19 +285,19 @@ export function UccPastoInsightCard({
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex items-center gap-2">
-                        <div className={`rounded-lg bg-white/5 p-1.5 ${area.color}`}>
+                        <div className={`rounded-lg bg-slate-50 p-1.5 ${area.color}`}>
                           <Icon size={16} />
                         </div>
                         <div>
-                          <p className="text-xs font-bold text-white">{area.label}</p>
-                          <p className="text-[10px] text-mq-muted">{area.detail}</p>
+                          <p className="text-xs font-bold text-slate-900">{area.label}</p>
+                          <p className="text-[10px] text-slate-500">{area.detail}</p>
                         </div>
                       </div>
                       <span className={`text-xl font-black tabular-nums ${area.color}`}>
                         {area.pct}%
                       </span>
                     </div>
-                    <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/5">
+                    <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-slate-50">
                       <motion.div
                         className={`h-full rounded-full ${area.barClass}`}
                         initial={{ width: 0 }}
@@ -312,7 +312,7 @@ export function UccPastoInsightCard({
           </div>
 
           {/* Footer meta */}
-          <div className="flex flex-wrap items-center gap-4 text-[11px] font-medium text-mq-muted">
+          <div className="flex flex-wrap items-center gap-4 text-[11px] font-medium text-slate-500">
             <span className="inline-flex items-center gap-1.5 rounded-full border border-white/5 bg-white/[0.03] px-3 py-1.5">
               <Clock size={14} className="text-mq-accent" />
               180 min · ritmo de simulacro
@@ -330,23 +330,23 @@ export function UccPastoInsightCard({
             <p className="text-[10px] font-black uppercase tracking-[0.25em] text-mq-accent">
               Tu progreso acumulado
             </p>
-            <p className="text-xs text-mq-muted">
+            <p className="text-xs text-slate-500">
               Diagnóstico + retos + entrenamiento
             </p>
           </div>
 
           {totalQuestions > 0 ? (
             <>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                <p className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+              <div className="rounded-2xl border border-slate-200 bg-white/[0.03] p-4">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
                   Preguntas respondidas
                 </p>
-                <p className="mt-1 text-4xl font-black tabular-nums text-white">
+                <p className="mt-1 text-4xl font-black tabular-nums text-slate-900">
                   {totalQuestions}
                 </p>
-                <p className="mt-0.5 text-xs text-mq-muted">{accuracy}% de acierto global</p>
+                <p className="mt-0.5 text-xs text-slate-500">{accuracy}% de acierto global</p>
 
-                <div className="mt-4 flex h-3 overflow-hidden rounded-full bg-white/5">
+                <div className="mt-4 flex h-3 overflow-hidden rounded-full bg-slate-50">
                   <motion.div
                     className="h-full bg-emerald-500"
                     initial={{ width: 0 }}
@@ -391,7 +391,7 @@ export function UccPastoInsightCard({
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <Trophy size={14} className="text-amber-400" />
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-900">
                       Ranking por tema estudiado
                     </p>
                   </div>
@@ -404,10 +404,10 @@ export function UccPastoInsightCard({
               )}
             </>
           ) : (
-            <div className="flex min-h-[14rem] flex-col items-center justify-center rounded-2xl border border-dashed border-white/10 bg-white/[0.02] px-6 text-center">
+            <div className="flex min-h-[14rem] flex-col items-center justify-center rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-6 text-center">
               <Layers size={28} className="mb-3 text-mq-accent/50" />
-              <p className="text-sm font-bold text-white">Aún sin preguntas</p>
-              <p className="mt-1 text-xs text-mq-muted">
+              <p className="text-sm font-bold text-slate-900">Aún sin preguntas</p>
+              <p className="mt-1 text-xs text-slate-500">
                 Completa el diagnóstico o una sesión de entrenamiento para ver tus stats y ranking.
               </p>
             </div>

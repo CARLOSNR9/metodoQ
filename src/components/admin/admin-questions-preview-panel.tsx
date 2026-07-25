@@ -85,10 +85,10 @@ export function AdminQuestionsPreviewPanel({
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Vista previa
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Preguntas del banco
         </h1>
-        <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
+        <p className="mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">
           Revisa cómo ve el estudiante cada pregunta, sus opciones, la respuesta correcta y la
           retroalimentación larga tal como quedaría en Mi Estudio — sin entrar al simulador.
         </p>
@@ -96,13 +96,13 @@ export function AdminQuestionsPreviewPanel({
 
       <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-center">
         <div className="relative flex-1 max-w-xl">
-          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-mq-muted" />
+          <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
           <input
             type="search"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             placeholder="Buscar por código (dr-q-91), tema o enunciado..."
-            className="w-full rounded-lg border border-mq-border bg-mq-surface py-2.5 pl-10 pr-3 text-sm text-white"
+            className="w-full rounded-lg border border-slate-200 bg-white py-2.5 pl-10 pr-3 text-sm text-slate-900"
           />
         </div>
         <div className="flex flex-wrap gap-2">
@@ -116,13 +116,13 @@ export function AdminQuestionsPreviewPanel({
       </div>
 
       <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
-        <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised shadow-xl">
-        <div className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-3">
-          <p className="text-sm text-mq-muted">
+        <section className="rounded-xl border border-slate-200 bg-white-raised shadow-xl">
+        <div className="flex items-center justify-between gap-3 border-b border-slate-200 px-5 py-3">
+          <p className="text-sm text-slate-500">
             {sorted.length} pregunta{sorted.length === 1 ? "" : "s"}
           </p>
           <div className="flex items-center gap-1.5">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-mq-muted">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
               Creadas
             </span>
             <SortArrowButton
@@ -143,7 +143,7 @@ export function AdminQuestionsPreviewPanel({
         </div>
 
           {sorted.length === 0 ? (
-            <p className="px-5 py-10 text-center text-sm text-mq-muted">
+            <p className="px-5 py-10 text-center text-sm text-slate-500">
               No hay preguntas con este filtro.
             </p>
           ) : (
@@ -179,9 +179,9 @@ export function AdminQuestionsPreviewPanel({
                         </div>
                         <QuestionAdminDates question={question} />
                       </div>
-                      <span className="font-medium text-white">{question.topic}</span>
-                      <p className="line-clamp-2 text-sm text-mq-muted">{question.statement}</p>
-                      <p className="text-xs text-mq-muted/80">
+                      <span className="font-medium text-slate-900">{question.topic}</span>
+                      <p className="line-clamp-2 text-sm text-slate-500">{question.statement}</p>
+                      <p className="text-xs text-slate-500/80">
                         Correcta: {question.correctOptionId}
                         {question.examArea ? ` · ${question.examArea}` : ""}
                       </p>
@@ -193,13 +193,13 @@ export function AdminQuestionsPreviewPanel({
           )}
         </section>
 
-        <section className="rounded-xl border border-mq-border-strong bg-mq-surface-raised/60 p-4 sm:p-6">
+        <section className="rounded-xl border border-slate-200 bg-white-raised/60 p-4 sm:p-6">
           {selected ? (
             <div className="relative">
               <button
                 type="button"
                 onClick={() => setSelectedId(null)}
-                className="absolute right-0 top-0 rounded-lg p-2 text-mq-muted hover:bg-white/10 hover:text-white xl:hidden"
+                className="absolute right-0 top-0 rounded-lg p-2 text-slate-500 hover:bg-slate-100 hover:text-slate-900 xl:hidden"
                 aria-label="Cerrar vista previa"
               >
                 <X className="h-5 w-5" />
@@ -210,9 +210,9 @@ export function AdminQuestionsPreviewPanel({
               />
             </div>
           ) : (
-            <div className="flex min-h-[420px] flex-col items-center justify-center rounded-xl border border-dashed border-white/10 px-6 text-center">
-              <p className="text-lg font-semibold text-white">Selecciona una pregunta</p>
-              <p className="mt-2 max-w-sm text-sm text-mq-muted">
+            <div className="flex min-h-[420px] flex-col items-center justify-center rounded-xl border border-dashed border-slate-200 px-6 text-center">
+              <p className="text-lg font-semibold text-slate-900">Selecciona una pregunta</p>
+              <p className="mt-2 max-w-sm text-sm text-slate-500">
                 Elige un ítem de la lista para ver el enunciado, las opciones, la respuesta
                 correcta y la retroalimentación como la vería un estudiante.
               </p>
@@ -231,7 +231,7 @@ function QuestionAdminDates({ question }: { question: QuestionAdminRecord }) {
   if (!created && !updated) return null;
 
   return (
-    <div className="shrink-0 text-right text-[10px] leading-snug text-mq-muted/75">
+    <div className="shrink-0 text-right text-[10px] leading-snug text-slate-500/75">
       {created ? <p>Creada {created}</p> : null}
       {updated ? <p>Mod. {updated}</p> : null}
     </div>
@@ -260,7 +260,7 @@ function SortArrowButton({
         "inline-flex h-7 w-7 items-center justify-center rounded-md border transition",
         active
           ? "border-mq-accent/50 bg-mq-accent/15 text-mq-accent"
-          : "border-white/10 text-mq-muted hover:border-white/20 hover:text-white",
+          : "border-slate-200 text-slate-500 hover:border-slate-300 hover:text-slate-900",
       )}
     >
       {children}
@@ -284,7 +284,7 @@ function FilterChip({
       className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
         active
           ? "bg-mq-accent text-mq-accent-foreground"
-          : "border border-white/15 text-mq-muted hover:text-white"
+          : "border border-white/15 text-slate-500 hover:text-slate-900"
       }`}
     >
       {children}
