@@ -14,7 +14,9 @@ import { UrgencyBanner } from "@/components/landing/urgency-banner";
 
 const nav = [
   { label: "Método", href: "/#como-funciona" },
+  { label: "Simulacros", href: "/#simulacros" },
   { label: "Precios", href: "/#precios" },
+  { label: "Testimonios", href: "/#testimonios" },
   { label: "FAQ", href: "/#faq" },
 ] as const;
 
@@ -49,7 +51,7 @@ function AuthNavActions({
           href={panelPath}
           className={
             compact
-              ? "min-h-11 flex-1 rounded-lg px-1 py-2 text-center text-[0.75rem] font-bold uppercase tracking-wider transition duration-200 hover:bg-slate-50 hover:text-teal-600 flex items-center justify-center text-slate-600"
+              ? "min-h-11 flex-1 rounded-lg px-1 py-2 text-center text-[0.75rem] font-bold uppercase tracking-wider transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center text-slate-600"
               : "hidden text-sm font-semibold text-slate-600 transition hover:text-slate-900 sm:block"
           }
         >
@@ -80,11 +82,11 @@ function AuthNavActions({
       onClick={onOpenAuth}
       className={
         compact
-          ? "min-h-11 flex-1 rounded-lg px-1 py-2 text-center text-[0.75rem] font-bold uppercase tracking-wider transition duration-200 hover:bg-slate-50 hover:text-teal-600 flex items-center justify-center text-slate-600"
+          ? "min-h-11 flex-1 rounded-lg px-1 py-2 text-center text-[0.75rem] font-bold uppercase tracking-wider transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center text-slate-600"
           : "hidden text-sm font-semibold text-slate-600 transition hover:text-slate-900 sm:block"
       }
     >
-      Acceder
+      Iniciar sesión
     </button>
   );
 }
@@ -109,20 +111,21 @@ export function SiteHeader() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:h-[4.5rem] sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="flex items-center transition duration-200 hover:scale-[1.02] active:scale-95"
+            className="flex items-center transition duration-200 hover:scale-[1.02] active:scale-95 gap-2"
           >
             <Logo />
+            <span className="text-[10px] font-bold text-mq-accent bg-mq-accent/10 px-2 py-0.5 rounded-full border border-mq-accent/20">PRO</span>
           </Link>
           
           <nav
-            className="hidden items-center gap-10 text-sm font-semibold text-slate-600 sm:flex ml-8"
+            className="hidden items-center gap-8 text-sm font-semibold text-slate-600 sm:flex ml-4"
             aria-label="Principal"
           >
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="transition duration-200 hover:text-teal-600"
+                className="transition duration-200 hover:text-mq-accent"
               >
                 {item.label}
               </Link>
@@ -134,7 +137,7 @@ export function SiteHeader() {
             <Link
               href="/demo"
               onClick={() => trackClickDemo()}
-              className="group relative inline-flex min-h-10 items-center justify-center rounded-xl bg-teal-600 px-5 text-[13px] font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-teal-500 hover:shadow-md active:translate-y-0 sm:min-h-11 sm:px-6 sm:text-sm"
+              className="group relative inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-accent px-5 text-[13px] font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-md active:translate-y-0 sm:min-h-11 sm:px-6 sm:text-sm"
             >
               <span className="relative">Haz tu diagnóstico gratis</span>
             </Link>
@@ -153,7 +156,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-teal-600 flex items-center justify-center"
+                className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center"
               >
                 {item.label}
               </Link>
