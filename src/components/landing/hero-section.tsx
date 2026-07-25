@@ -397,12 +397,22 @@ export function HeroSection() {
       <div className="w-full border-t border-slate-200/60 bg-white py-10">
         <div className="mx-auto max-w-7xl px-6 text-center">
           <p className="text-sm font-bold text-slate-800 mb-8">Confían en nosotros</p>
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            <img src="https://logo.clearbit.com/udea.edu.co" alt="Universidad de Antioquia" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
-            <img src="https://logo.clearbit.com/javeriana.edu.co" alt="Pontificia Universidad Javeriana" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
-            <img src="https://logo.clearbit.com/univalle.edu.co" alt="Universidad del Valle" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
-            <img src="https://logo.clearbit.com/husi.org.co" alt="Hospital Universitario San Ignacio" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
-            <img src="https://logo.clearbit.com/unisabana.edu.co" alt="Universidad de La Sabana" className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" />
+          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-50 hover:opacity-100 transition-all duration-500">
+            <div className="flex items-center gap-1.5 font-black text-slate-800 text-xl tracking-tighter">
+              <span className="text-green-700">U</span>de<span className="text-green-700">A</span>
+            </div>
+            <div className="flex items-center gap-2 font-serif font-bold text-slate-800 text-xl tracking-wide">
+              JAVERIANA
+            </div>
+            <div className="flex items-center gap-1.5 font-extrabold text-red-700 text-lg uppercase tracking-widest">
+              Univalle
+            </div>
+            <div className="flex items-center gap-2 font-bold text-slate-800 text-lg">
+              <ShieldCheck className="w-6 h-6 text-blue-800" /> San Ignacio
+            </div>
+            <div className="flex items-center gap-1 font-semibold text-slate-800 text-2xl tracking-tight">
+              <span className="text-blue-900">Uni</span>Sabana
+            </div>
           </div>
         </div>
       </div>
