@@ -608,69 +608,40 @@ Referencias
       "La glucemia en ayunas puede pasar por alto alteraciones posprandiales iniciales.",
       "Tema: Diabetes mellitus — diagnóstico y tamizaje.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica de endocrinología porque evalúa la elección de la prueba diagnóstica más sensible según el mecanismo fisiopatológico de la diabetes tipo 2.
-
 La clave no es elegir la prueba más práctica.
 La clave es:
-Identificar que la resistencia a la insulina altera primero la glucemia posprandial y que la PTOG la detecta antes.
-
+Resistencia a la insulina (Acantosis nigricans) → Alteración temprana de glucemia posprandial → PTOG 75 g es la más sensible.
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
 • Síntomas cardinales de novo: polidipsia, polifagia, poliuria.
-• Acantosis nigricans (marcador clínico de resistencia a la insulina).
+• Acantosis nigricans (marcador clínico inequívoco de resistencia a la insulina).
 • Antecedentes de alcoholismo y obesidad.
-• La pregunta pide la prueba de tamizaje más sensible, no la más conveniente.
-
-Recordemos las pruebas diagnósticas según ADA:
-• HbA1c ≥6.5%: refleja exposición crónica a glucosa (práctica, pero puede ser normal al inicio).
-• Glucemia en ayunas ≥126 mg/dL: útil, pero puede ser normal con alteración posprandial aislada.
-• PTOG 75 g: ≥200 mg/dL a las 2 h — mayor sensibilidad en fases tempranas.
-• Glucemia aleatoria ≥200 mg/dL con síntomas: también diagnóstica, pero la pregunta pide tamizaje.
-
-Por lo tanto:
-La alteración metabólica más temprana es la hiperglucemia posprandial.
-La PTOG es la prueba que mejor la captura.
-
-¿Por qué la opción D es la respuesta correcta?
-La prueba de tolerancia oral a la glucosa con 75 g evalúa la respuesta glucémica postcarga.
-En resistencia a la insulina, la glucemia en ayunas puede permanecer normal mientras la posprandial ya está alterada.
-Por eso la PTOG tiene la mayor sensibilidad para detectar diabetes en fases tempranas.
-
-¿Por qué fallan las otras opciones?
-Opción A (HbA1c): excelente para seguimiento y tamizaje poblacional, pero refleja promedio de 2-3 meses; puede ser normal al inicio.
-Opción B (glucosa en ayunas): buena especificidad, pero menor sensibilidad que la PTOG en etapas tempranas.
-Opción C (test de Sullivan): prueba de función hepática, no tiene relación con el diagnóstico de diabetes.
-
+Estos hallazgos sugieren:
+Un síndrome metabólico con alta sospecha de Diabetes Mellitus tipo 2 incipiente o ya establecida. La pregunta exige la prueba de tamizaje de MAYOR SENSIBILIDAD.
+¿Por qué la PTOG con 75 g (Opción D) es la mejor conducta?
+La fisiopatología de la diabetes tipo 2 inicia con resistencia a la insulina. El páncreas compensa secretando más insulina basal, manteniendo la glucosa en ayunas normal, PERO falla en el pico secretor rápido ante los alimentos, elevando primero la glucosa posprandial. Por eso, dar una carga de 75g de glucosa destapa esta alteración mucho antes que cualquier otra prueba.
+¿Por qué NO la Hemoglobina glicada (Opción A)?
+La HbA1c es excelente y muy práctica (no requiere ayuno), pero refleja un promedio de glucosa de 3 meses. En fases muy tempranas de resistencia a la insulina, el promedio global puede seguir dentro de límites normales (<6.5%), restándole sensibilidad frente a la PTOG.
+¿Por qué NO la Glucosa en ayunas (Opción B)?
+La hiperglucemia de ayuno (por producción hepática nocturna de glucosa) ocurre en etapas más tardías de la diabetes. Es decir, un paciente puede tener 95 mg/dL en ayunas, pero tener 210 mg/dL a las dos horas de comer. Por tanto, no es la prueba más sensible.
+¿Por qué NO el Test de Sullivan (Opción C)?
+El Test de O'Sullivan (carga de 50 g sin ayuno y medición a 1 hora) se usa EXCLUSIVAMENTE para el tamizaje de Diabetes Gestacional entre las 24 y 28 semanas de embarazo, no en hombres adultos ni en la población general.
 ¿Cuál es la trampa del examen?
 Muchos estudiantes asocian:
-"HbA1c = prueba de elección siempre" o "glucemia en ayunas = suficiente".
-Pero el examen exige distinguir:
-Sensibilidad vs practicidad según el contexto clínico.
-Aquí el dato decisivo es:
-La pregunta pide la prueba MÁS SENSIBLE, no la más usada en consulta.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Identificar factores de riesgo y síntomas (obesidad, acantosis, poliuria).
-2. Diferenciar sensibilidad de practicidad de cada prueba.
-3. Si buscan sensibilidad máxima → PTOG 75 g.
-4. Si buscan tamizaje poblacional práctico → HbA1c o glucemia en ayunas.
-
+"Tamizaje de diabetes" = "Glucosa en ayunas o HbA1c".
+Sin embargo:
+La pregunta enfatiza en la prueba MÁS SENSIBLE, no en la más práctica, económica ni la más usada en consulta externa. La PTOG gana en sensibilidad pura.
 Perlas de examen
-✅ PTOG: prueba más sensible en fases tempranas.
-✅ HbA1c: prueba más práctica para tamizaje y seguimiento.
-✅ Acantosis nigricans = marcador clínico de resistencia a la insulina.
-✅ La alteración posprandial precede a la elevación de HbA1c y glucemia en ayunas.
-✅ Síntomas cardinales + glucemia aleatoria ≥200 mg/dL también diagnostican.
-
+✅ Prueba más sensible para Diabetes Mellitus: PTOG con 75 g (detecta picos posprandiales precoces).
+✅ Prueba más práctica para Diabetes Mellitus: HbA1c (no requiere ayuno).
+✅ Criterios diagnósticos ADA: HbA1c ≥ 6.5%, Ayunas ≥ 126 mg/dL, PTOG ≥ 200 mg/dL, Aleatoria ≥ 200 mg/dL con síntomas clásicos.
+✅ Test de O'Sullivan (50 g): Solo para embarazadas (tamizaje).
 Referencias
 • ADA Standards of Care in Diabetes.
 • Endocrine Society Clinical Practice Guidelines.
-• Harrison's Principles of Internal Medicine.
-• Williams Textbook of Endocrinology.
-• UpToDate: Screening for type 2 diabetes mellitus.`,
+• Harrison's Principles of Internal Medicine.`,
   },
   {
     id: "dr-q-08",
@@ -8463,14 +8434,11 @@ Referencias
       "Líquidos y nitratos empeoran el cuadro; furosemida sola no corrige el bajo gasto cardíaco.",
       "Tema: Choque cardiogénico.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica de cardiología y urgencias porque evalúa el manejo del choque cardiogénico secundario a infarto agudo de miocardio.
-
 La clave no es la congestión pulmonar aislada.
 La clave es:
 Hipoperfusión sistémica y congestión pulmonar simultáneas obligan a soporte inotrópico urgente y revascularización, no a volumen ni nitratos.
-
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
 • Hombre de 64 años hospitalizado por IAM de cara anterior.
@@ -8478,54 +8446,33 @@ El paciente presenta:
 • Llenado capilar de 4 segundos (hipoperfusión periférica).
 • Oliguria (hipoperfusión renal).
 • Estertores bilaterales en ambos campos pulmonares (congestión pulmonar).
-• Choque cardiogénico: hipoperfusión sistémica + edema pulmonar simultáneos.
-
-Recordemos la fisiopatología del choque cardiogénico post-IAM:
-• Infarto extenso (cara anterior) → ↓ función del VI → ↓ gasto cardíaco.
-• Hipoperfusión sistémica (oliguria, llenado capilar prolongado, hipotensión).
-• Congestión pulmonar por ↑ presiones de llenado (estertores bilaterales).
-• Revascularización precoz mejora supervivencia de forma significativa.
-
-Por lo tanto:
-La conducta más apropiada es soporte inotrópico urgente y activar estrategia de reperfusión/revascularización.
-
-¿Por qué la opción C es la respuesta correcta?
+Estos hallazgos sugieren:
+Choque cardiogénico: hipoperfusión sistémica + edema pulmonar simultáneos por falla de bomba aguda.
+¿Por qué iniciar soporte inotrópico y revascularizar (Opción C) es la mejor conducta?
 El choque cardiogénico requiere restaurar la perfusión sistémica y corregir la causa subyacente.
-Soporte inotrópico urgente (dobutamina, milrinona) mejora el gasto cardíaco y la perfusión.
-Revascularización precoz (PCI urgente o cirugía de revascularización) tiene el mayor impacto en supervivencia.
-La prioridad es tratar la causa (oclusión coronaria) mientras se estabiliza hemodinámicamente.
-
-¿Por qué fallan las otras opciones?
-Opción A (bolo rápido de SF 0.9%): empeora la congestión pulmonar con estertores bilaterales; el choque cardiogénico no se trata con volumen agresivo.
-Opción B (nitroglicerina IV): agrava la hipotensión (PA 80/50) al reducir la precarga y postcarga; contraindicada en choque cardiogénico hipotenso.
-Opción D (furosemida como única medida): no corrige el bajo gasto cardíaco; la diuresis sola no restaura perfusión ni trata la causa.
-
+Soporte inotrópico urgente (dobutamina, milrinona) mejora la fuerza de contracción y el gasto cardíaco sin dar líquidos.
+Revascularización precoz (PCI urgente o cirugía) tiene el mayor impacto demostrado en la supervivencia de estos pacientes.
+¿Por qué NO administrar bolo de solución salina (Opción A)?
+Empeora la congestión pulmonar con estertores bilaterales (edema agudo de pulmón). El choque cardiogénico izquierdo no se trata con volumen agresivo porque el corazón izquierdo no puede bombearlo.
+¿Por qué NO iniciar nitroglicerina intravenosa (Opción B)?
+Agrava la hipotensión (PA 80/50) al reducir la precarga y postcarga. Los vasodilatadores están absolutamente contraindicados en el choque cardiogénico hipotenso.
+¿Por qué NO administrar furosemida sola (Opción D)?
+La furosemida alivia la congestión pulmonar, pero no corrige el bajo gasto cardíaco que está matando los riñones y el cerebro. La diuresis sola no restaura la perfusión.
 ¿Cuál es la trampa del examen?
-Muchos estudiantes eligen furosemida por los estertores pulmonares o nitroglicerina por la congestión.
-Pero en choque cardiogénico, la hipoperfusión es tan grave como la congestión.
-Volumen y nitratos empeoran el cuadro; se necesita inotrópico + revascularización.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Reconocer choque cardiogénico (IAM + hipotensión + oliguria + congestión pulmonar).
-2. Iniciar soporte inotrópico urgente (dobutamina, milrinona).
-3. Activar revascularización urgente (PCI o cirugía).
-4. Evitar volumen agresivo y nitratos en paciente hipotenso.
-
+Muchos estudiantes leen:
+"Estertores pulmonares bilaterales."
+Y responden:
+"Nitroglicerina o furosemida inmediata."
+Sin embargo:
+En choque cardiogénico, la hipoperfusión sistémica (PA 80/50, oliguria) es tan grave como la congestión. Los nitratos son letales con hipotensión severa. Se necesita un inotrópico para mejorar el bombeo y revascularizar de inmediato.
 Perlas de examen
-✅ Choque cardiogénico = IAM + hipotensión + oliguria + congestión pulmonar.
-✅ Hipoperfusión + congestión simultáneas definen el cuadro.
-✅ Prioridad: inotrópico urgente + revascularización precoz.
-✅ Líquidos empeoran congestión; nitratos agravan hipotensión.
-✅ Furosemida sola no corrige bajo gasto cardíaco.
-✅ Las residencias preguntan la conducta más apropiada, no el manejo de la congestión aislada.
-
+✅ Choque cardiogénico = IAM + hipotensión severa + oliguria + congestión pulmonar (Killip Kimball IV).
+✅ Tratamiento inmediato: Inotrópico urgente (Dobutamina/Norepinefrina) + Revascularización precoz.
+✅ Líquidos (bolos de SSN): Contraindicados si hay estertores (edema pulmonar).
+✅ Vasodilatadores (Nitratos): Contraindicados si hay hipotensión severa (TAS < 90 mmHg).
 Referencias
 • ESC Guidelines for the Management of Acute Myocardial Infarction in Patients Presenting with ST-Segment Elevation.
-• AHA Scientific Statement on Cardiogenic Shock Complicating Acute Coronary Syndrome.
-• Braunwald's Heart Disease.
-• Tintinalli Emergency Medicine.
-• UpToDate: Prognosis and Treatment of Cardiogenic Shock Complicating Acute Myocardial Infarction.`,
+• AHA Scientific Statement on Cardiogenic Shock Complicating Acute Coronary Syndrome.`,
   },
   {
     id: "dr-q-91",
@@ -10300,70 +10247,43 @@ Referencias
       "El tratamiento de base del delirium siempre incluye buscar causas reversibles y medidas no farmacológicas antes de medicar.",
       "Tema: Delirium hiperactivo y contención farmacológica.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
 Esta es una pregunta clásica de psiquiatría de enlace porque evalúa el manejo farmacológico del delirium hiperactivo en el anciano: cuando la reorientación verbal falla y hay riesgo inmediato, ¿qué sedante usar sin empeorar el cuadro?
-
-La clave no es usar benzodiacepinas (empeoran delirium) ni antidepresivos anticolinérgicos.
+La clave no es usar benzodiacepinas.
 La clave es:
 Delirium hiperactivo + agresividad + fracaso de medidas no farmacológicas = haloperidol en dosis bajas como contención farmacológica de elección.
-
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Hombre de 82 años con insuficiencia cardíaca y fibrilación auricular.
-• Desorientación fluctuante de 12 horas de evolución (inicio agudo).
-• Alteración marcada de la atención con períodos de somnolencia alternados con agitación.
-• Comportamiento agresivo: intenta golpear al personal; no responde a reorientación verbal.
-• Cuadro típico de delirium hiperactivo que requiere contención farmacológica tras fracaso de medidas no farmacológicas.
-
-Recordemos el delirium hiperactivo:
-• Subtipo de delirium con predominio de agitación, agresividad, alucinaciones e hiperactividad psicomotora.
-• Criterios diagnósticos: inicio agudo, curso fluctuante, alteración de atención y conciencia, cambio cognitivo.
-• Tratamiento escalonado: (1) buscar causas reversibles, (2) medidas no farmacológicas, (3) antipsicóticos si hay riesgo.
-• Haloperidol: antipsicótico clásico para agitación grave en delirium; dosis bajas (0.5-1 mg IV/IM), monitorización de QT.
-• Benzodiacepinas: empeoran confusión y delirium en ancianos; solo indicadas en abstinencia alcohólica o benzodiacepínica.
-• Evitar: anticolinérgicos (amitriptilina), benzodiacepinas y sedantes que prolonguen el delirium.
-
-Por lo tanto:
-El fármaco de elección para el control de la agitación en este paciente es haloperidol.
-
-¿Por qué la opción B es la respuesta correcta?
-El cuadro es delirium hiperactivo con riesgo para el paciente y el personal tras fracaso de medidas no farmacológicas.
-El haloperidol es el antipsicótico clásicamente utilizado para contención farmacológica en delirium (dosis bajas: 0.5-1 mg IV/IM).
-Tiene menor efecto anticolinérgico y sedante que benzodiacepinas, lo que facilita la recuperación cognitiva.
-Debe administrarse con monitorización de QT y en dosis mínima efectiva, reevaluando frecuentemente.
-
-¿Por qué fallan las otras opciones?
-Opción A (diazepam): las benzodiacepinas empeoran el delirium y la confusión en ancianos; se reservan exclusivamente para abstinencia alcohólica o benzodiacepínica, no para delirium de otra etiología.
-Opción C (amitriptilina): antidepresivo tricíclico con marcado efecto anticolinérgico que puede agravar significativamente el delirium en adultos mayores.
-Opción D (fenitoína): antiepiléptico sin rol alguno en el control de agitación por delirium; no tiene propiedades sedantes ni antipsicóticas.
-
+• Hombre de 82 años con factores de riesgo cardiovascular.
+• Desorientación fluctuante de inicio agudo (12 horas).
+• Alteración marcada de la atención y agresividad.
+• No responde a reorientación verbal.
+Estos hallazgos sugieren:
+Un cuadro típico de delirium hiperactivo severo que requiere contención farmacológica tras el fracaso de las medidas verbales no farmacológicas, para proteger al paciente y al personal.
+¿Por qué Haloperidol (Opción B) es la mejor conducta?
+El haloperidol (un antipsicótico típico) es el fármaco de elección mundialmente para la agitación grave en delirium no inducido por abstinencia.
+Se usa a dosis muy bajas (0.5-1 mg) y tiene mucho menor efecto anticolinérgico y sedante que otros psicofármacos, permitiendo controlar la agresividad sin deprimir el centro respiratorio del anciano.
+¿Por qué NO Diazepam (Opción A)?
+Las benzodiacepinas en los ancianos con delirium inducen confusión paradójica, depresión respiratoria, caídas y empeoran drásticamente el curso del delirium. Solo están indicadas si el delirium es por síndrome de abstinencia alcohólica o de sedantes.
+¿Por qué NO Amitriptilina (Opción C)?
+Es un antidepresivo tricíclico con un fortísimo efecto anticolinérgico (bloqueo muscarínico). El delirium del anciano suele ser mediado por déficit de acetilcolina, así que darle amitriptilina agravaría el cuadro hasta el coma.
+¿Por qué NO Fenitoína (Opción D)?
+Es un antiepiléptico clásico. No tiene ningún rol en el control agudo de la agitación por delirium. No posee propiedades antipsicóticas ni sedantes de rescate.
 ¿Cuál es la trampa del examen?
-Muchos estudiantes eligen diazepam porque es un sedante conocido y el paciente está agitado.
-Pero las benzodiacepinas empeoran el delirium en ancianos (excepto abstinencia alcohólica); el haloperidol es la opción correcta.
-Otra trampa: no reconocer que las medidas no farmacológicas ya fracasaron, lo que justifica la contención farmacológica con haloperidol.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Reconocer delirium hiperactivo (inicio agudo + fluctuación + alteración de atención + agitación).
-2. Buscar causas reversibles e implementar medidas no farmacológicas.
-3. Si hay riesgo y fracasan medidas no farmacológicas: haloperidol en dosis bajas.
-4. Monitorizar QT, reevaluar frecuentemente y suspender cuando la agitación ceda.
-
+Muchos estudiantes leen:
+"Paciente anciano agitado intentando golpear al personal."
+Y responden:
+"Diazepam intravenoso para dormirlo rápido."
+Sin embargo:
+La "sedación rápida" con diazepam en un anciano con delirium lo empeora a largo plazo e incrementa la mortalidad. El antipsicótico (haloperidol o atípicos como quetiapina/risperidona a dosis bajas) es siempre la elección.
 Perlas de examen
-✅ Delirium hiperactivo: agitación + agresividad + alteración de atención + fluctuación.
-✅ Haloperidol en dosis bajas es el fármaco clásico para agitación grave en delirium.
-✅ Benzodiacepinas empeoran delirium en ancianos (excepto abstinencia alcohólica).
-✅ Amitriptilina y fármacos anticolinérgicos agravan delirium; evitar en ancianos.
-✅ Siempre buscar causas reversibles antes de medicar; antipsicóticos son segunda línea.
-✅ Monitorizar QT con haloperidol IV; usar dosis mínima efectiva.
-
+✅ Delirium hiperactivo (agitación, agresividad, fluctuación): Haloperidol a dosis bajas es el pilar farmacológico.
+✅ Benzodiacepinas en delirium: Contraindicadas (empeoran el cuadro), EXCEPTO en abstinencia alcohólica (Delirium tremens).
+✅ Evitar siempre: Fármacos con alto efecto anticolinérgico (Tricíclicos, antihistamínicos de 1ra generación).
+✅ Siempre se debe intentar medidas no farmacológicas primero y buscar causas reversibles (infecciones, dolor, retención urinaria).
 Referencias
-• American Geriatrics Society: Clinical Practice Guideline for Postoperative Delirium.
-• Harrison's Principles of Internal Medicine.
-• UpToDate: Delirium in Older Adults.
-• DSM-5-TR: Delirium.
-• NICE Guidelines: Delirium.`,
+• American Psychiatric Association (APA) Practice Guideline for the Treatment of Patients with Delirium.
+• UpToDate: Delirium and acute confusional states: Prevention, treatment, and prognosis.`,
   },
   {
     id: "dr-q-111",

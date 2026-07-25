@@ -1071,61 +1071,42 @@ Referencias
       "PEG constitucional sin alteraciones Doppler ni ILA no requiere vigilancia especializada intensiva.",
       "Tema: Restricción del crecimiento fetal tardía — estadios y conducta.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
-Esta es una pregunta clásica de medicina materno-fetal porque evalúa la clasificación de la restricción del crecimiento fetal (RCF) tardía según el Doppler fetal y la conducta apropiada según el estadio.
-
-La clave no es asumir PEG constitucional, interrumpir inmediatamente ni confundir ILA 7 cm con oligohidramnios severo.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de medicina materno-fetal porque evalúa la clasificación de la restricción del crecimiento fetal (RCF) según el Doppler fetal, y la conducta obstétrica apropiada.
+La clave no es asumir que todo feto pequeño debe ser extraído inmediatamente.
 La clave es:
-RCF tardía estadio I (PFE < p10 + Doppler normal) → vigilancia estrecha con Doppler y finalización alrededor de las 37-38 semanas.
-
+Feto pequeño (< p10) + Doppler normal = RCF Estadio I = Vigilancia estrecha hasta el término cercano.
 ¿Qué está ocurriendo realmente?
 La paciente presenta:
-• Mujer de 28 años, G2P1A0, gestación de 33 semanas.
-• ILA de 7 cm (líquido amniótico en rango normal; oligohidramnios severo <5 cm).
-• Peso fetal estimado en percentil 7 para la edad gestacional (< percentil 10).
-• Doppler fetal y Doppler de arterias uterinas normales.
-
-Recordemos la clasificación de RCF tardía (≥32 semanas):
-• RCF: PFE o circunferencia abdominal < percentil 10 (o < percentil 3 con otros criterios).
-• Estadio I: Doppler de arteria umbilical normal → vigilancia estrecha con Doppler seriado.
-• Estadio II: Doppler umbilical alterado (diástole cero o reversa) → vigilancia intensiva, considerar finalización según edad gestacional.
-• Estadio III: Doppler de ducto venoso alterado o biometría estática → alto riesgo, finalización según contexto.
-• Conducta en estadio I: vigilancia con Doppler cada 1-2 semanas; parto electivo ~37-38 semanas si estable.
-• PEG constitucional: feto pequeño pero con Doppler normal, crecimiento paralelo y sin otros hallazgos; requiere criterios más estrictos.
-
-Por lo tanto:
-El diagnóstico es RCF tardía estadio I y la conducta es vigilancia estrecha con Doppler y finalización alrededor de 37-38 semanas.
-
-¿Por qué la opción A es la respuesta correcta?
-Identifica correctamente RCF tardía estadio I (PFE percentil 7 + Doppler normal) y propone la conducta estándar: vigilancia estrecha con Doppler seriado y finalización electiva ~37-38 semanas.
-
-¿Por qué fallan las otras opciones?
-Opción B (PEG constitucional sin vigilancia adicional): un PFE en percentil 7 requiere clasificar como RCF y vigilar con Doppler, no asumir variante constitucional sin seguimiento especializado.
-Opción C (RCF severa con interrupción inmediata): la RCF severa implica Doppler alterado, biometría estática o compromiso fetal; con Doppler normal es estadio I, no severa.
-Opción D (oligohidramnios severo con inducción inmediata): ILA 7 cm está en rango normal; oligohidramnios severo se define como ILA <5 cm.
-
+• Gestación de 33 semanas.
+• ILA de 7 cm (líquido amniótico en rango normal; oligohidramnios severo es < 5 cm).
+• Peso fetal estimado (PFE) en percentil 7 (por debajo del p10, lo que define RCF o feto pequeño para la edad gestacional).
+• Doppler fetal (umbilical, cerebral media) y Doppler uterino NORMALES.
+Estos hallazgos sugieren:
+Restricción del Crecimiento Fetal Tardía Estadio I.
+El feto es pequeño, pero su función placentaria y hemodinamia (evaluada por el Doppler) aún están compensadas. No está en hipoxia severa ni acidosis.
+¿Por qué vigilar estrechamente y finalizar a las 37-38 semanas (Opción A) es la mejor conducta?
+En el Estadio I (Doppler umbilical normal), el riesgo de muerte fetal súbita antes de término es bajísimo.
+Sacar a un feto a las 33 semanas por una RCF estadio I lo somete innecesariamente a los riesgos de la prematuridad severa (SDR, hemorragia intraventricular, sepsis).
+La recomendación internacional es vigilar con Doppler seriado (cada 1-2 semanas) y finalizar la gestación de manera electiva alrededor de la semana 37-38.
+¿Por qué NO continuar control prenatal habitual sin vigilancia (Opción B)?
+Asumir que es un "Pequeño para la Edad Gestacional (PEG) constitucional" y soltar a la paciente al control prenatal de bajo riesgo es peligroso. Todo PFE < p10 requiere seguimiento especializado (Ruta de Alto Riesgo Obstétrico) con ecografías Doppler seriadas para descartar deterioro.
+¿Por qué NO interrumpir inmediatamente el embarazo (Opción C)?
+La interrupción inmediata (cesárea de urgencia) por RCF se reserva para Estadios III o IV (ej. Doppler del ducto venoso alterado, flujo diastólico reverso umbilical, perfil biofísico alterado), donde el riesgo de muerte in útero supera al riesgo de nacer prematuro.
+¿Por qué NO diagnosticar oligohidramnios e inducir (Opción D)?
+Un Índice de Líquido Amniótico (ILA) de 7 cm es normal-bajo (el corte inferior de la normalidad suele ser 5 cm). No cumple criterios de oligohidramnios severo, y mucho menos justifica inducir un feto prematuro de 33 semanas sin compromiso hemodinámico.
 ¿Cuál es la trampa del examen?
 Muchos estudiantes asocian:
-"Peso fetal bajo = interrumpir embarazo de inmediato."
-Pero el estadio depende del Doppler fetal, no solo del percentil de peso.
-Aquí el dato decisivo es:
-PFE percentil 7 + Doppler normal = estadio I → vigilancia, no interrupción inmediata.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. PFE < percentil 10 → sospechar RCF (no solo PEG).
-2. Clasificar estadio según Doppler fetal (umbilical, MCA, ducto venoso).
-3. Estadio I con Doppler normal → vigilancia estrecha.
-4. Finalizar electivamente ~37-38 semanas si estable.
-
+"Peso fetal bajo en la ecografía."
+Y responden:
+"Interrumpir el embarazo de inmediato."
+Sin embargo:
+En la obstetricia moderna, la decisión de cuándo finalizar el embarazo en un feto pequeño la dicta el DOPPLER, no el peso estimado.
 Perlas de examen
-✅ PFE < p10 + Doppler normal = RCF tardía estadio I → vigilancia.
-✅ ILA 7 cm es normal; oligohidramnios severo <5 cm.
-✅ No interrumpir inmediatamente si Doppler es normal (estadio I).
-✅ PEG constitucional requiere criterios más estrictos que un solo percentil bajo.
-✅ Doppler seriado cada 1-2 semanas en estadio I; parto ~37-38 semanas.
-
+✅ PFE < p10 + Doppler normal = RCF Estadio I → Vigilancia estrecha y parto a término temprano (37-38 sem).
+✅ PFE < p10 + Doppler Umbilical alterado (ausente/reverso) = RCF severa → Finalización pretérmino según estadio.
+✅ Oligohidramnios: ILA < 5 cm o Bolsillo Máximo Vertical (BMV) < 2 cm.
+✅ El Doppler de la arteria umbilical es el principal predictor de resultados perinatales adversos en RCF.
 Referencias
 • ISUOG Practice Guidelines: Diagnosis and Management of Fetal Growth Restriction.
 • FIGO Consensus on FGR.
@@ -1602,69 +1583,44 @@ Referencias
       "Si el testículo es palpable, el diagnóstico es clínico y no requiere ecografía previa.",
       "Tema: Criptorquidia y manejo quirúrgico en pediatría.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
-Esta es una pregunta clásica de pediatría y urología pediátrica porque evalúa una trampa frecuente: seguir observando o pedir ecografía cuando la edad y la palpabilidad ya definen el manejo.
-
-La clave no es esperar hasta los 2 años ni solicitar ecografía inguinoescrotal.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de pediatría y urología pediátrica porque evalúa una trampa frecuente: seguir observando o pedir ecografías cuando la edad y la clínica ya dictaron la conducta.
+La clave no es pedir imágenes.
 La clave es:
-Criptorquidia unilateral palpable a los 8 meses → descenso espontáneo improbable → remisión para orquidopexia entre 6-18 meses.
-
+Criptorquidia palpable + Mayor de 6 meses = Cirugía (Orquidopexia).
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Lactante masculino de 8 meses en buenas condiciones generales.
-• Genitales externos normales.
-• Testículo derecho en bolsa escrotal.
-• Testículo izquierdo palpable en canal inguinal (criptorquidia unilateral palpable).
-
-Recordemos la criptorquidia:
-• Testículo no descendido al escroto al nacer o en los primeros meses.
-• La mayoría de testículos no descendidos al nacer descienden espontáneamente en el primer semestre de vida.
-• Después de los 6 meses, el descenso espontáneo es poco probable.
-• La orquidopexia ideal se realiza entre 6-18 meses para reducir riesgo de infertilidad, torsión y cáncer testicular.
-• Testículo palpable: diagnóstico clínico; no requiere ecografía para confirmar.
-• Testículo no palpable: requiere evaluación adicional para descartar testículo abdominal o ausente.
-
-Por lo tanto:
-No corresponde observar hasta los 2 años, solicitar ecografía de rutina ni iniciar testosterona.
-La conducta más adecuada es remisión a cirugía pediátrica/urología pediátrica para orquidopexia.
-
-¿Por qué la opción C es la respuesta correcta?
-A los 8 meses, con testículo palpable en canal inguinal, el manejo es quirúrgico.
-Las guías actuales (AUA, ESPU) recomiendan orquidopexia entre 6-18 meses para optimizar resultados funcionales y oncológicos a largo plazo.
-
-¿Por qué fallan las otras opciones?
-Opción A (observar hasta los 2 años): retrasa innecesariamente el tratamiento; después de 6 meses el descenso espontáneo es improbable y se pierde la ventana óptima quirúrgica.
-Opción B (ecografía inguinoescrotal): innecesaria cuando el testículo es palpable; el diagnóstico es clínico y la ecografía no cambia la indicación de cirugía.
-Opción D (testosterona intramuscular): no es tratamiento de elección; no sustituye la orquidopexia y no corrige de forma confiable la criptorquidia persistente.
-
+• Lactante masculino de 8 meses.
+• Testículo derecho normal en escroto.
+• Testículo izquierdo no descendido, pero palpable en el canal inguinal.
+Estos hallazgos sugieren:
+Criptorquidia unilateral palpable persistente.
+Fisiológicamente, los testículos pueden descender durante los primeros 6 meses de vida debido a la oleada de testosterona neonatal (minipubertad). Sin embargo, después de los 6 meses, la probabilidad de descenso espontáneo es casi nula.
+¿Por qué remitir a cirugía (Opción C) es la mejor conducta?
+Las guías actuales de urología pediátrica (AUA, ESPU) establecen que la orquidopexia debe realizarse entre los 6 y 18 meses de edad.
+Operar temprano previene el daño de las células germinales (infertilidad futura), reduce el riesgo de torsión testicular y facilita el autoexamen futuro para detección temprana de cáncer testicular (el riesgo de malignidad siempre será mayor, pero al estar en el escroto se puede detectar a tiempo).
+¿Por qué NO observar hasta los 2 años (Opción A)?
+Antes se esperaba hasta los 2 años. Hoy se sabe que después del primer año ya hay pérdida irreversible de espermatogonias. Esperar retrasa innecesariamente el tratamiento óptimo.
+¿Por qué NO solicitar ecografía inguinoescrotal (Opción B)?
+Si el testículo se toca (es palpable) en el canal inguinal, el diagnóstico es CLÍNICO. La ecografía no cambia la conducta (sigue siendo cirugía) y solo gasta recursos.
+¿Por qué NO iniciar testosterona (Opción D)?
+La terapia hormonal (hCG o análogos de GnRH) tuvo su auge en el pasado, pero sus tasas de éxito a largo plazo son muy bajas (menos del 20%) y no reemplaza el estándar de oro, que es el descenso y fijación quirúrgica.
 ¿Cuál es la trampa del examen?
-Muchos estudiantes piensan:
-"Si el testículo es palpable, puedo observar más tiempo o confirmar con ecografía."
-Pero el examen exige reconocer que la edad (8 meses) es el dato decisivo junto con la palpabilidad.
-El dato decisivo es:
-Más de 6 meses con criptorquidia persistente → orquidopexia, no observación prolongada.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Identificar testículo no descendido al examen físico.
-2. Determinar si es palpable o no palpable.
-3. Si es palpable y tiene más de 6 meses: remitir para orquidopexia (ideal 6-18 meses).
-4. Si es no palpable: evaluación adicional para localizar el testículo antes de cirugía.
-
+Muchos estudiantes asocian:
+"Algo no se ve o no está en su lugar."
+Y responden:
+"Pedir ecografía para confirmar."
+Sin embargo:
+En criptorquidia PALPABLE, el dedo del médico es suficiente. Pedir imágenes es la respuesta distractora favorita de los examinadores para detectar quién no sabe guías clínicas.
 Perlas de examen
-✅ Descenso espontáneo raro después de los 6 meses.
-✅ Testículo palpable → diagnóstico clínico, sin ecografía de rutina.
-✅ Orquidopexia ideal entre 6-18 meses de edad.
-✅ Riesgos de no tratar: infertilidad, torsión testicular, mayor riesgo de cáncer testicular.
-✅ Testosterona no reemplaza la orquidopexia en criptorquidia persistente.
-✅ Las residencias preguntan cuándo operar, no cuándo seguir observando.
-
+✅ Descenso espontáneo del testículo: Ocurre solo en los primeros 6 meses.
+✅ Edad ideal para la Orquidopexia: Entre los 6 y 18 meses.
+✅ Testículo palpable en canal inguinal: No requiere ecografía; va a cirugía directo.
+✅ Riesgos a largo plazo de la criptorquidia: Infertilidad y Cáncer testicular (Seminoma).
 Referencias
-• AUA Guidelines on Cryptorchidism.
-• ESPU Guidelines on Undescended Testes.
-• Nelson Textbook of Pediatrics.
-• UpToDate: Undescended Testes (Cryptorchidism).`,
+• AUA (American Urological Association) Guidelines on Cryptorchidism.
+• ESPU (European Society for Paediatric Urology) Guidelines on Undescended Testes.
+• Nelson Textbook of Pediatrics.`,
   },
   {
     id: "dr-q-149",

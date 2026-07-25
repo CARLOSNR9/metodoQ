@@ -1492,62 +1492,42 @@ Referencias
       "GOLD: exacerbaciones persistentes en monoterapia LAMA → doble broncodilatación.",
       "Tema: Tratamiento escalonado del EPOC.",
     ],
-    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
-
-Esta es una pregunta clásica de neumología porque evalúa una trampa frecuente: añadir corticoide inhalado ante exacerbaciones sin verificar el recuento de eosinófilos adecuado.
-
-La clave no es ICS automático por exacerbaciones.
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta clásica de neumología porque evalúa una trampa frecuente: añadir corticoides inhalados empíricamente ante exacerbaciones de EPOC sin verificar el biomarcador (eosinófilos).
+La clave no es iniciar corticoide automático.
 La clave es:
-EPOC no controlado con LAMA + ≥2 exacerbaciones → LAMA + LABA; eosinófilos 150/μL no favorecen ICS inicial.
-
+EPOC no controlado en monoterapia + Eosinófilos < 300 = Terapia Broncodilatadora Dual (LAMA + LABA).
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Hombre de 72 años con EPOC en tiotropio (LAMA) en monoterapia.
-• Dos exacerbaciones en 6 meses que requirieron atención médica.
-• Eosinófilos 150 células/μL (por debajo del umbral típico para ICS).
-• Necesidad de escalamiento terapéutico según GOLD.
-
-Recordemos el tratamiento escalonado del EPOC:
-• LAMA en monoterapia es primer escalón en EPOC moderado-severo.
-• Exacerbaciones persistentes → escalar a LAMA + LABA (doble broncodilatación).
-• ICS se considera con eosinófilos ≥300/μL y exacerbaciones, o asma-EPOC overlap.
-• Con eosinófilos 150, el beneficio de ICS es menor; no es el siguiente paso inicial.
-
-Por lo tanto:
-El siguiente paso más apropiado es cambiar a LAMA + LABA.
-
-¿Por qué la opción B es la respuesta correcta?
-Según GOLD, ante exacerbaciones persistentes pese a LAMA en monoterapia, el escalamiento inicial es doble broncodilatación (LAMA + LABA).
-
-¿Por qué fallan las otras opciones?
-Opción A (añadir ICS): eosinófilos 150 no favorecen ICS como siguiente paso; mayor beneficio con ≥300.
-Opción C (roflumilast): indicado en bronquitis crónica con exacerbaciones frecuentes y FEV1 bajo, no como escalón estándar aquí.
-Opción D (mantener actual): inadecuado con 2 exacerbaciones en 6 meses; requiere escalamiento.
-
+• Hombre de 72 años con EPOC severo (2 exacerbaciones en 6 meses).
+• Está usando Tiotropio (LAMA) en monoterapia.
+• Eosinófilos de 150 células/μL.
+Estos hallazgos sugieren:
+Un paciente del Grupo E de las guías GOLD (alto riesgo de exacerbación) que está subtratado. Su fenotipo no es eosinofílico.
+¿Por qué cambiar a LAMA + LABA (Opción B) es la mejor conducta?
+Según las guías GOLD, si un paciente exacerbador persiste sintomático usando un solo broncodilatador (LAMA o LABA), el siguiente paso mandatorio es escalar a la Terapia Dual (LAMA + LABA). Esto maximiza la broncodilatación, reduce el atrapamiento aéreo y disminuye las exacerbaciones.
+¿Por qué NO agregar un corticoide inhalado (Opción A)?
+Los Corticoides Inhalados (ICS) en EPOC aumentan el riesgo de neumonías. Solo están indicados (en terapia triple: LAMA+LABA+ICS) si el paciente tiene un perfil "asmático" o hiperreactivo, lo cual se define en EPOC con Eosinófilos en sangre periférica ≥ 300 células/μL. Este paciente tiene 150, por lo que el corticoide no le dará beneficio y sí le dará riesgos.
+¿Por qué NO iniciar roflumilast (Opción C)?
+El roflumilast (inhibidor de la fosfodiesterasa 4) es un fármaco de tercera línea. Solo se usa en fenotipos de "Bronquitis Crónica" (tos y expectoración) con exacerbaciones severas y un VEF1 < 50%, y siempre añadido a una terapia LAMA/LABA/ICS previa. No es el siguiente paso.
+¿Por qué NO mantener el tratamiento actual (Opción D)?
+Mantenerlo solo con Tiotropio es negligencia. El paciente está teniendo exacerbaciones a repetición, lo cual deteriora irreversiblemente su función pulmonar y aumenta su mortalidad. Hay que escalar la terapia.
 ¿Cuál es la trampa del examen?
-Muchos estudiantes ven "dos exacerbaciones" y eligen corticoide inhalado automáticamente.
-El recuento de eosinófilos guía la adición de ICS; con 150/μL se prioriza LAMA + LABA.
-
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1. Evaluar adherencia y técnica inhalatoria.
-2. Si exacerbaciones pese a LAMA → LAMA + LABA.
-3. Considerar ICS si eosinófilos ≥300 y exacerbaciones persistentes.
-4. Roflumilast en subgrupo específico (bronquitis crónica, FEV1 bajo).
-
+Muchos estudiantes ven:
+"Paciente con EPOC que se exacerba mucho."
+Y responden:
+"Meterle corticoide inhalado de una vez."
+Sin embargo:
+En EPOC, los corticoides no son la piedra angular como en el asma. El escalón natural es maximizar la broncodilatación (LAMA + LABA). Los corticoides solo entran si los eosinófilos lo justifican (≥ 300).
 Perlas de examen
-✅ LAMA + exacerbaciones → escalar a LAMA + LABA.
-✅ ICS en EPOC: eosinófilos ≥300/μL como guía.
-✅ Eosinófilos 150 no justifican ICS como primer escalón.
-✅ GOLD 2025: doble broncodilatación antes de triple terapia en muchos casos.
-✅ No mantener monoterapia con exacerbaciones recurrentes.
-
+✅ Escalón terapéutico EPOC exacerbador: Monoterapia (LAMA) → Terapia Dual (LAMA + LABA).
+✅ Indicación de Corticoide Inhalado en EPOC: Eosinófilos ≥ 300 células/μL o antecedente concomitante de asma.
+✅ Efecto adverso principal de los ICS en EPOC: Neumonía bacteriana.
+✅ El Roflumilast se reserva para pacientes con bronquitis crónica severa con VEF1 < 50%.
 Referencias
-• GOLD Report 2025.
-• Global Initiative for Chronic Obstructive Lung Disease.
-• Harrison's Principles of Internal Medicine.
-• Murray & Nadel's Textbook of Respiratory Medicine.
-• UpToDate: COPD: Treatment of stable disease.`,
+• Global Initiative for Chronic Obstructive Lung Disease (GOLD) Report.
+• UpToDate: Management of infection in exacerbations of chronic obstructive pulmonary disease.
+• Harrison's Principles of Internal Medicine.`,
   },
 
   {
@@ -3642,92 +3622,42 @@ Referencias
       "Tema: Exantemas virales de la infancia.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa uno de los exantemas virales más característicos de pediatría.
-La clave no es la fiebre.
+Esta es una pregunta clásica de pediatría porque evalúa el reconocimiento visual de uno de los exantemas virales más característicos de la infancia.
+La clave no es que el niño tenga exantema.
 La clave es:
-La apariencia de "bofetada" en las mejillas.
+Fiebre leve + Signo de "mejillas abofeteadas" + Exantema reticulado en encaje = Eritema Infeccioso (Quinta enfermedad).
 ¿Qué está ocurriendo realmente?
 El paciente presenta:
-• Fiebre leve.
-• Malestar general.
-• Exantema facial intenso.
-• Patrón reticulado en extremidades y tronco.
-• Buen estado general.
-Estos hallazgos son clásicos de:
-Eritema infeccioso.
-¿Cuál es el agente causal?
-La enfermedad es producida por:
-Parvovirus B19.
-Este virus tiene tropismo por:
-Los precursores eritroides de la médula ósea.
-¿Por qué aparecen las mejillas abofeteadas?
-La fase exantemática se caracteriza por:
-Eritema intenso en ambas mejillas.
-Con palidez peribucal relativa.
-Este hallazgo es prácticamente diagnóstico.
-¿Cómo evoluciona el exantema?
-Posteriormente aparece:
-• Exantema reticulado.
-• Patrón en encaje.
-• Distribución en tronco y extremidades.
-Puede fluctuar durante semanas.
-¿Qué importancia clínica tiene?
-La mayoría de los niños presentan:
-Curso benigno y autolimitado.
-Sin embargo, puede producir complicaciones en:
-• Pacientes con hemoglobinopatías.
-• Inmunosuprimidos.
-• Mujeres embarazadas.
-¿Por qué NO es sarampión?
-El sarampión suele presentar:
-• Tos.
-• Coriza.
-• Conjuntivitis.
-• Manchas de Koplik.
-Además:
-El exantema inicia detrás de las orejas y progresa cefalocaudalmente.
-¿Por qué NO es rubéola?
-La rubéola se caracteriza por:
-• Adenopatías retroauriculares.
-• Exantema maculopapular difuso.
-No produce típicamente:
-Mejillas abofeteadas.
-¿Por qué NO es roséola?
-La roséola suele ocurrir en:
-Menores de 2 años.
-Además:
-El exantema aparece después de la desaparición de la fiebre alta.
-¿Cuál es la trampa de examen?
-Muchos estudiantes leen:
-"Fiebre y exantema."
+• Preescolar/escolar con pródromos leves (fiebre baja, malestar, mialgias).
+• Exantema facial eritematoso intenso, simétrico ("mejillas abofeteadas").
+• Progresión a un exantema maculopapular en tronco y extremidades que se vuelve "reticulado" o "en encaje" a medida que aclara.
+• Excelente estado general.
+Estos hallazgos sugieren:
+Eritema infeccioso, causado por el Parvovirus B19. Es un virus con tropismo por los precursores eritroides en la médula ósea.
+¿Por qué el Eritema infeccioso (Opción B) es la respuesta correcta?
+El cuadro clínico descrito es el patrón clásico (y casi patognomónico) del Parvovirus B19 en niños inmunocompetentes sin comorbilidades. Su curso es benigno, autolimitado, y el exantema reticular puede persistir o fluctuar (empeorando con el calor o el estrés) durante semanas.
+¿Por qué NO es Sarampión (Opción A)?
+El sarampión presenta un pródromo mucho más tóxico con "las 3 C" (Coriza, Tos/Cough, Conjuntivitis) y fiebre alta. El exantema es maculopapular morbiliforme (no en encaje) e inicia en la línea de implantación del cabello y detrás de las orejas, progresando cefalocaudalmente. Además, las manchas de Koplik son el enantema patognomónico.
+¿Por qué NO es Rubéola (Opción C)?
+La rubéola cursa con adenopatías llamativas (retroauriculares, suboccipitales, cervicales posteriores) y un exantema maculopapular rosado que también tiene diseminación cefalocaudal rápida (en 24 horas), pero NO el patrón clásico de "bofetada" o reticulado.
+¿Por qué NO es Exantema Súbito / Roséola (Opción D)?
+La roséola (causada por VHH-6) típicamente afecta a lactantes menores de 2 años. Se caracteriza por 3 a 5 días de fiebre MUY ALTA (que puede causar convulsiones febriles), y el exantema aparece SÓLO DESPUÉS de que la fiebre desaparece ("fiebre que cae y brote que sale").
+¿Cuál es la trampa del examen?
+Muchos estudiantes ven:
+"Niño con brote y fiebre."
 Y responden:
-Sarampión.
+"Sarampión o Rubéola."
 Sin embargo:
-El dato decisivo es:
-La apariencia de mejillas abofeteadas.
-Este hallazgo es clásico de:
-Parvovirus B19.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar el exantema facial.
-2.	Reconocer el aspecto de bofetada.
-3.	Observar el patrón reticulado.
-4.	Evaluar el buen estado general.
-5.	Diagnosticar eritema infeccioso.
+Las descriptivas "mejillas abofeteadas" y "patrón reticulado en encaje" son palabras clave (buzzwords) intocables del Parvovirus B19. Además, es crucial recordar las complicaciones del Parvovirus en poblaciones de riesgo (no presentes en este niño sano).
 Perlas de examen
-✅ El eritema infeccioso es causado por Parvovirus B19.
-✅ El signo de "mejillas abofeteadas" es característico.
-✅ El exantema reticulado es altamente sugestivo del diagnóstico.
-✅ La enfermedad suele ser autolimitada.
-✅ Puede desencadenar crisis aplásica en pacientes con hemoglobinopatías.
-✅ La infección durante el embarazo puede producir hidrops fetal.
-✅ Es uno de los exantemas virales más preguntados en exámenes.
+✅ Clínica típica de Parvovirus B19 (Quinta enf.): Mejillas abofeteadas → Exantema reticulado en extremidades.
+✅ Complicación en anemias hemolíticas (ej. Células falciformes, esferocitosis): Crisis aplásica transitoria.
+✅ Complicación en embarazadas: Hidrops fetalis secundario a anemia fetal severa.
+✅ Complicación en adultos: Poliartropatía aguda simétrica (imita artritis reumatoide).
 Referencias
 • Nelson Textbook of Pediatrics.
 • Red Book: American Academy of Pediatrics.
-• Rudolph's Pediatrics.
-• UpToDate: Erythema Infectiosum (Parvovirus B19 Infection).
-• Manual de Infectología Pediátrica.`,
+• UpToDate: Clinical manifestations and pathogenesis of human parvovirus B19 infection.`,
   },
   {
     id: "dr-q-198",
@@ -8512,73 +8442,44 @@ Referencias
       "Tema: Abdomen agudo ginecológico.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
-Esta es una pregunta clásica porque evalúa una de las emergencias ginecológicas más importantes.
-La clave no es el dolor.
+Esta es una pregunta clásica de ginecología porque evalúa el reconocimiento de una emergencia quirúrgica a partir de un signo ecográfico patognomónico.
+La clave no es confundirse con cólicos o apendicitis.
 La clave es:
-El signo ecográfico de remolino.
+Dolor pélvico súbito + Signo de "remolino" (whirlpool sign) = Torsión ovárica.
 ¿Qué está ocurriendo realmente?
 La paciente presenta:
-• Dolor súbito.
-• Náuseas.
-• Masa anexial.
-Y la ecografía reporta:
-Signo de "whirlpool".
-Esto corresponde a:
-Torsión del pedículo anexial.
-¿Qué sucede fisiopatológicamente?
-Inicialmente se compromete:
-• Retorno venoso.
-Posteriormente:
-• Flujo arterial.
-Lo que puede producir:
-• Isquemia.
-• Necrosis ovárica.
-¿Cuál es el tratamiento?
-La conducta correcta es:
-Laparoscopia urgente.
-Con:
-• Destorsión ovárica.
-• Preservación del ovario si es viable.
-¿Por qué NO observar?
-Porque:
-Cada hora aumenta el riesgo de pérdida ovárica.
-¿Por qué NO administrar antibióticos?
-No existen datos sugestivos de:
-Enfermedad inflamatoria pélvica.
-¿Por qué NO metotrexato?
-No existen hallazgos sugestivos de:
-Embarazo ectópico.
-¿Cuál es la trampa de examen?
+• Mujer en edad fértil con dolor pélvico súbito durante actividad física.
+• Náuseas asociadas (reflejo vagal muy común en torsión).
+• Masa anexial izquierda documentada.
+• Ecografía transvaginal con el clásico "signo de remolino" en el pedículo vascular.
+Estos hallazgos sugieren:
+Torsión del pedículo anexial (ovario y/o trompa). La rotación obstruye primero el retorno venoso y linfático (causando edema y aumento del tamaño ovárico), y luego el flujo arterial, llevando a isquemia y necrosis si no se interviene.
+¿Por qué realizar laparoscopia urgente con destorsión (Opción C) es la mejor conducta?
+La torsión ovárica es una emergencia quirúrgica. La laparoscopia es el abordaje de elección para confirmar el diagnóstico y realizar la destorsión inmediata del anexo.
+Actualmente, el pilar del manejo en mujeres premenopáusicas es la PRESERVACIÓN OVÁRICA. Se destuerce el ovario y se observa su viabilidad; la ooforectomía (quitar el ovario) solo se realiza si hay tejido francamente necrótico que no recupera color tras la destorsión, o si se sospecha malignidad.
+¿Por qué NO dar metotrexato (Opción A)?
+El metotrexato es para el embarazo ectópico no roto en pacientes estables. Aquí no hay clínica de ectópico (amenorrea, sangrado, beta-hCG positiva) y el signo de remolino no es de ectópico.
+¿Por qué NO solo observar (Opción B)?
+Un quiste hemorrágico puede doler y observarse, pero el "signo de remolino" indica torsión, no simplemente sangrado intraquístico. Observar una torsión garantiza la pérdida del ovario por necrosis.
+¿Por qué NO administrar antibióticos intravenosos (Opción D)?
+La Enfermedad Inflamatoria Pélvica (EIP) da un dolor más insidioso, bilateral, asociado a flujo vaginal, fiebre, y dolor a la movilización cervical, no un dolor súbito tras ejercicio físico ni signo de remolino.
+¿Cuál es la trampa del examen?
 Muchos estudiantes leen:
-"Masa anexial."
+"Masa anexial y dolor pélvico."
 Y responden:
-Quiste ovárico.
+"Embarazo ectópico o quiste roto."
 Sin embargo:
-El dato decisivo es:
-El signo de remolino.
-Este hallazgo es prácticamente clásico de:
-Torsión ovárica.
-Entonces, ¿qué debe recordarse?
-La secuencia correcta es:
-1.	Identificar dolor súbito.
-2.	Reconocer masa anexial.
-3.	Identificar signo de remolino.
-4.	Diagnosticar torsión ovárica.
-5.	Realizar laparoscopia urgente.
+El desencadenante (actividad física intensa) y el hallazgo ecográfico (signo de remolino) apuntan directamente a una torsión. Recuerda: tener flujo arterial normal en el Doppler NO DESCARTA una torsión ovárica (porque el flujo arterial es el último en perderse).
 Perlas de examen
-✅ El signo de "whirlpool" es altamente sugestivo de torsión ovárica.
-✅ El dolor suele ser súbito e intenso.
-✅ Las náuseas y vómitos son frecuentes.
-✅ La ecografía Doppler puede mostrar disminución o ausencia de flujo.
-✅ La presencia de flujo arterial NO excluye torsión.
-✅ El tratamiento es quirúrgico urgente.
-✅ Actualmente se recomienda preservar el ovario siempre que sea posible.
+✅ Torsión ovárica clínica: Dolor pélvico agudo, súbito, a menudo tras esfuerzo, con náuseas y vómitos.
+✅ Signo ecográfico clave: Signo de remolino ("whirlpool sign") en el pedículo.
+✅ Tratamiento gold standard: Laparoscopia de urgencia para destorsión y preservación ovárica.
+✅ ¿El Doppler arterial normal descarta la torsión?: FALSO. La presencia de flujo arterial en el Doppler color NO descarta la torsión ovárica temprana.
 Referencias
 • Williams Gynecology.
 • Berek & Novak's Gynecology.
-• ACOG Committee Opinion on Adnexal Torsion.
-• UpToDate: Ovarian and Fallopian Tube Torsion.
-• Campbell-Walsh Gynecology and Pelvic Surgery.`,
+• ACOG Committee Opinion: Adnexal Torsion in Adolescents.
+• UpToDate: Ovarian and fallopian tube torsion.`,
   },
   {
     id: "dr-q-255",

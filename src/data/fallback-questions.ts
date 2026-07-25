@@ -288,6 +288,48 @@ export const FALLBACK_QUESTIONS: TrainingQuestion[] = [
       "La vía intramuscular está proscrita; el antiveneno requiere distribución sistémica intravenosa.",
       "Tema: Fisiopatología del veneno botrópico y protocolos de dosificación del INS.",
     ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q
+Esta es una pregunta crítica en urgencias y toxicología porque evalúa el manejo del accidente ofídico más común y letal en Colombia (la mordedura por víbora Bothrops o "Mapaná").
+La clave no es calcular la dosis del antiveneno según el peso del paciente.
+La clave es:
+Clasificar la gravedad clínica (Leve, Moderado o Grave) y neutralizar el veneno de inmediato por vía intravenosa.
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Mordedura de serpiente Mapaná (Género Bothrops).
+• Edema masivo de toda la extremidad.
+• Sangrado activo por los colmillos.
+• Gingivorragia y hematuria (sangrado sistémico).
+• Tiempos de coagulación incoagulables.
+Estos hallazgos sugieren:
+Un accidente botrópico GRAVE.
+El veneno botrópico es rico en metaloproteinasas y enzimas procoagulantes que consumen el fibrinógeno del paciente, causando una "Coagulación Intravascular Diseminada" (CID) tóxica y daño tisular severo (edema, necrosis).
+¿Por qué administrar suero antiofídico polivalente IV (Opción B) es la mejor conducta?
+El antiveneno es el único tratamiento capaz de detener la destrucción tisular y la coagulopatía.
+En Colombia (protocolo INS), para un accidente botrópico GRAVE, se requieren de 6 a 10 ampollas (viales) de suero antiofídico polivalente.
+Debe administrarse siempre por vía intravenosa (diluido en SSN) para que alcance la circulación sistémica y neutralice el veneno rápidamente.
+NUNCA se ajusta la dosis por el peso del paciente: la serpiente inyecta la misma cantidad de veneno a un niño de 10 kg que a un adulto de 80 kg. De hecho, los niños requieren la misma o mayor dosis inicial porque la concentración del veneno en su cuerpo es mayor.
+¿Por qué NO suero antielapídico (Opción A)?
+Las serpientes Elapidae (Corales / Micrurus) causan neurotoxicidad (parálisis respiratoria, ptosis palpebral), no causan sangrado ni edema masivo. El suero antielapídico no sirve para mordeduras de Mapaná.
+¿Por qué NO vía intramuscular (Opción C)?
+Inyectar el suero alrededor de la mordedura (perilesional) o intramuscular retrasa la absorción sistémica y no frena la coagulopatía de consumo. Además, aumenta el daño tisular local.
+¿Por qué NO plasma fresco congelado (Opción D)?
+Transfundir plasma o factores de coagulación antes de neutralizar el veneno es "echarle gasolina al fuego". El veneno circulante destruirá los factores de coagulación nuevos inmediatamente. Solo se usa plasma si la coagulopatía persiste muchas horas DESPUÉS de haber aplicado la dosis adecuada de antiveneno.
+¿Cuál es la trampa de examen?
+Muchos estudiantes leen:
+"Paciente requiere dosis de medicamentos."
+Y responden:
+"Ajustar los miligramos según el peso en kg."
+Sin embargo:
+La sueroterapia antiofídica busca neutralizar miligramos de VENENO inyectado, no depende de la masa corporal del receptor. Es el único "fármaco" de urgencias cuya dosis no se calcula por kg.
+Perlas de examen
+✅ Mapaná (Bothrops): Edema, necrosis, ampollas y sangrado (coagulopatía). Tratamiento: Suero Polivalente IV.
+✅ Coral (Micrurus): Parálisis, falla respiratoria, sin edema local. Tratamiento: Suero Antielapídico IV.
+✅ Dosis de antiveneno: Depende exclusivamente de la GRAVEDAD del cuadro, NO del peso del paciente.
+✅ Vía de administración: Siempre intravenosa. Nunca intramuscular ni subcutánea.
+Referencias
+• Protocolo de Manejo de Accidente Ofídico del Instituto Nacional de Salud (INS), Colombia.
+• Guías de Práctica Clínica para el manejo de accidentes por animales venenosos - Ministerio de Salud.
+• UpToDate: Evaluation and management of crotalid (rattlesnake, copperhead, and cottonmouth) bites.`,
   },
   {
     id: "q8",
