@@ -10,8 +10,10 @@ import {
   type ReactNode,
 } from "react";
 import {
+  POMODORO_BREAK_MINUTES,
   POMODORO_BREAK_SECONDS,
   POMODORO_CYCLES,
+  POMODORO_STUDY_MINUTES,
   POMODORO_STUDY_SECONDS,
 } from "@/lib/study/pomodoro-config";
 import {
