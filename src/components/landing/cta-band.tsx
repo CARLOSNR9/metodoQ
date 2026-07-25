@@ -11,7 +11,7 @@ export type CtaBandProps = {
 
 export function CtaBand({ className }: CtaBandProps) {
   return (
-    <div className={`relative overflow-hidden bg-[#F8FAFC] py-20 lg:py-32 ${className ?? ""}`}>
+    <div className={`relative overflow-hidden bg-white py-20 lg:py-32 ${className ?? ""}`}>
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/img/grid-pattern.svg')] opacity-[0.02] pointer-events-none" />
       <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[60%] rounded-full bg-blue-400/10 blur-[120px] pointer-events-none" />
