@@ -4,14 +4,12 @@ import {
   HowItWorksSection,
   PricingSection,
   SocialProofSection,
-  UrgencyBanner,
 } from "@/components/landing";
 import { LandingVisitTracker } from "@/components/analytics/landing-visit-tracker";
 
 export default function HomePage() {
   return (
     <main className="flex flex-1 flex-col bg-background">
-      <UrgencyBanner />
       <LandingVisitTracker />
       
       <div className="mq-fade-up">

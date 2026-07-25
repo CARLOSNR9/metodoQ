@@ -1,7 +1,8 @@
 "use client";
 
-import { Sparkles, Clock } from "lucide-react";
+import { Sparkles, Clock, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export function UrgencyBanner() {
   const [timeLeft, setTimeLeft] = useState({
@@ -25,38 +26,30 @@ export function UrgencyBanner() {
   const format = (n: number) => n.toString().padStart(2, '0');
 
   return (
-    <div className="relative z-[60] flex h-8 w-full items-center justify-center overflow-hidden bg-gradient-to-r from-mq-accent via-[#33e0ff] to-mq-accent px-4 text-center text-[10px] font-black uppercase tracking-[0.12em] text-mq-accent-foreground sm:h-9 sm:text-[11px]">
-      <div className="relative z-10 flex items-center gap-2 sm:gap-6">
-        <div className="hidden items-center gap-2 sm:flex">
-          <Sparkles className="h-3 w-3 fill-current opacity-80" />
-          <span>Oferta de Lanzamiento</span>
+    <div className="relative z-[60] flex h-10 w-full items-center justify-center overflow-hidden bg-slate-900 px-4 text-center text-xs font-medium text-slate-200">
+      <Link href="/demo" className="relative z-10 flex items-center gap-3 sm:gap-4 transition-opacity hover:opacity-90">
+        <div className="flex items-center gap-1.5">
+          <span className="flex h-2 w-2 rounded-full bg-teal-400 animate-pulse" />
+          <span className="font-bold text-white hidden sm:inline">Oferta de Lanzamiento</span>
         </div>
 
-        <div className="flex items-center gap-2 bg-mq-accent-foreground/10 px-3 py-0.5 rounded-full backdrop-blur-sm border border-mq-accent-foreground/10">
-          <Clock className="h-3 w-3 animate-pulse" />
-          <span className="drop-shadow-sm">
-            EL ACCESO GRATUITO TERMINA EN: 
-            <span className="ml-2 font-mono tabular-nums bg-mq-accent-foreground text-mq-accent px-1.5 py-0.5 rounded shadow-sm">
+        <div className="h-4 w-px bg-slate-700 hidden sm:block" />
+
+        <div className="flex items-center gap-1.5">
+          <Clock className="h-3.5 w-3.5 text-teal-400" />
+          <span>
+            Acceso gratuito por tiempo limitado:
+            <span className="ml-2 font-mono font-bold text-teal-400">
               {format(timeLeft.hours)}:{format(timeLeft.minutes)}:{format(timeLeft.seconds)}
             </span>
           </span>
         </div>
 
-        <div className="hidden items-center gap-2 sm:flex">
-          <span>¡Regístrate ahora!</span>
-          <Sparkles className="h-3 w-3 fill-current opacity-80" />
+        <div className="items-center gap-1 text-teal-400 hidden sm:flex font-bold">
+          <span className="ml-2 border-b border-teal-400/30 pb-0.5">Regístrate ahora</span>
+          <ArrowRight className="h-3.5 w-3.5" />
         </div>
-      </div>
-      
-      {/* Refined shimmer effect */}
-      <div className="absolute inset-0 translate-x-[-100%] animate-[shimmer_3s_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-      
-      <style jsx>{`
-        @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          50%, 100% { transform: translateX(100%); }
-        }
-      `}</style>
+      </Link>
     </div>
   );
 }
