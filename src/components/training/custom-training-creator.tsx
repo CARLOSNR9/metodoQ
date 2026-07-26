@@ -97,10 +97,10 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
             <div className="p-2 bg-mq-accent/10 rounded-lg">
               <BookOpen size={20} className="text-mq-accent" />
             </div>
-            <h3 className="text-xl font-bold text-slate-100">Temas a repasar</h3>
+            <h3 className="text-xl font-bold text-slate-900">Temas a repasar</h3>
           </div>
           
-          <div className="bg-slate-900/50 border border-white/10 rounded-2xl overflow-hidden h-[400px] overflow-y-auto">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl overflow-hidden h-[400px] overflow-y-auto">
             {groupedTopics.map((group) => {
               const isExpanded = expandedAreas.has(group.area);
               const selectedCount = group.topics.filter(t => selectedTopics.has(t)).length;
@@ -108,23 +108,23 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
               const someSelected = selectedCount > 0 && !allSelected;
 
               return (
-                <div key={group.area} className="border-b border-white/5 last:border-0">
-                  <div className="flex items-center justify-between p-4 hover:bg-white/5 transition-colors">
+                <div key={group.area} className="border-b border-slate-200 last:border-0">
+                  <div className="flex items-center justify-between p-4 hover:bg-slate-100 transition-colors">
                     <div className="flex items-center gap-3 flex-1">
                       <button 
                         onClick={() => toggleArea(group.area)}
-                        className="p-1 hover:bg-white/10 rounded-md transition-colors text-slate-400"
+                        className="p-1 hover:bg-slate-200 rounded-md transition-colors text-slate-500"
                       >
                         {isExpanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
                       </button>
                       <button 
                         onClick={() => toggleAllInArea(group.area, group.topics)}
-                        className={`flex h-5 w-5 items-center justify-center rounded border transition-colors ${allSelected ? 'bg-mq-accent border-mq-accent' : someSelected ? 'bg-mq-accent/50 border-mq-accent' : 'border-slate-500 hover:border-mq-accent'}`}
+                        className={`flex h-5 w-5 items-center justify-center rounded border transition-colors ${allSelected ? 'bg-mq-accent border-mq-accent' : someSelected ? 'bg-mq-accent/50 border-mq-accent' : 'border-slate-300 hover:border-mq-accent'}`}
                       >
-                        {allSelected && <Check size={14} className="text-slate-900" />}
-                        {someSelected && <div className="h-2 w-2 rounded-sm bg-slate-900" />}
+                        {allSelected && <Check size={14} className="text-white" />}
+                        {someSelected && <div className="h-2 w-2 rounded-sm bg-white" />}
                       </button>
-                      <span className="font-semibold text-slate-200 cursor-pointer" onClick={() => toggleArea(group.area)}>
+                      <span className="font-semibold text-slate-700 cursor-pointer" onClick={() => toggleArea(group.area)}>
                         {group.area}
                       </span>
                     </div>
@@ -141,7 +141,7 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden bg-black/20"
+                        className="overflow-hidden bg-slate-100/50"
                       >
                         <div className="p-2 pl-12 space-y-1">
                           {group.topics.map((topic) => {
@@ -150,10 +150,10 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
                               <button
                                 key={topic}
                                 onClick={() => toggleTopic(topic)}
-                                className={`w-full flex items-center gap-3 p-2 rounded-lg transition-colors text-left ${isSelected ? 'bg-mq-accent/10 text-mq-accent' : 'hover:bg-white/5 text-slate-400'}`}
+                                className={`w-full flex items-center gap-3 p-2 rounded-lg transition-colors text-left ${isSelected ? 'bg-mq-accent/10 text-mq-accent' : 'hover:bg-slate-200 text-slate-500'}`}
                               >
-                                <div className={`flex h-4 w-4 items-center justify-center rounded border transition-colors ${isSelected ? 'bg-mq-accent border-mq-accent' : 'border-slate-500'}`}>
-                                  {isSelected && <Check size={12} className="text-slate-900" />}
+                                <div className={`flex h-4 w-4 items-center justify-center rounded border transition-colors ${isSelected ? 'bg-mq-accent border-mq-accent' : 'border-slate-300 bg-white'}`}>
+                                  {isSelected && <Check size={12} className="text-white" />}
                                 </div>
                                 <span className="text-sm">{topic}</span>
                               </button>
@@ -175,14 +175,14 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
             <div className="p-2 bg-mq-accent/10 rounded-lg">
               <Settings2 size={20} className="text-mq-accent" />
             </div>
-            <h3 className="text-xl font-bold text-slate-100">Filtros</h3>
+            <h3 className="text-xl font-bold text-slate-900">Filtros</h3>
           </div>
 
-          <div className="space-y-5 p-5 bg-slate-900/50 border border-white/10 rounded-2xl">
+          <div className="space-y-5 p-5 bg-slate-50 border border-slate-200 rounded-2xl">
             {/* Dificultad */}
             <div className="space-y-2">
-              <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Dificultad</label>
-              <div className="flex bg-black/40 rounded-lg p-1 border border-white/5">
+              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Dificultad</label>
+              <div className="flex bg-slate-100 rounded-lg p-1 border border-slate-200">
                 {[
                   { id: 'all', label: 'Todas' },
                   { id: 'easy', label: 'Fácil' },
@@ -192,7 +192,7 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
                   <button
                     key={opt.id}
                     onClick={() => setDifficulty(opt.id)}
-                    className={`flex-1 text-xs font-semibold py-1.5 rounded-md transition-all ${difficulty === opt.id ? 'bg-white/10 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}
+                    className={`flex-1 text-xs font-semibold py-1.5 rounded-md transition-all ${difficulty === opt.id ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                   >
                     {opt.label}
                   </button>
@@ -202,11 +202,11 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
 
             {/* Estado */}
             <div className="space-y-2">
-              <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Mi Rendimiento</label>
+              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Mi Rendimiento</label>
               <select 
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
-                className="w-full bg-black/40 border border-white/10 rounded-lg p-2.5 text-sm text-slate-300 outline-none focus:border-mq-accent transition-colors"
+                className="w-full bg-white border border-slate-200 rounded-lg p-2.5 text-sm text-slate-700 outline-none focus:border-mq-accent transition-colors"
               >
                 <option value="all">Cualquier estado</option>
                 <option value="new">Solo nuevas (no vistas)</option>
@@ -217,7 +217,7 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
             {/* Cantidad */}
             <div className="space-y-3 pt-2">
               <div className="flex justify-between items-end">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Preguntas</label>
+                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Preguntas</label>
                 <span className="text-2xl font-black text-mq-accent">{count}</span>
               </div>
               <input 
@@ -227,17 +227,17 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
                 step="5"
                 value={count}
                 onChange={(e) => setCount(parseInt(e.target.value))}
-                className="w-full accent-mq-accent h-2 bg-black/40 rounded-lg appearance-none cursor-pointer"
+                className="w-full accent-mq-accent h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer"
               />
               <p className="text-xs text-slate-500 text-right">
-                Disponibles: <span className="font-bold text-slate-300">{availableQuestionsCount}</span>
+                Disponibles: <span className="font-bold text-slate-700">{availableQuestionsCount}</span>
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center pt-4 border-t border-white/10">
+      <div className="flex justify-center pt-4 border-t border-slate-200">
         <button
           onClick={handleStart}
           disabled={availableQuestionsCount === 0 || count > availableQuestionsCount}

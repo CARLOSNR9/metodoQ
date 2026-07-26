@@ -132,7 +132,7 @@ export function TheoryDeepDivePanel({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="absolute inset-0 bg-[#020817]/75 backdrop-blur-md"
+            className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"
           />
 
           <motion.div
@@ -143,10 +143,10 @@ export function TheoryDeepDivePanel({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 48, scale: 0.98 }}
             transition={{ type: "spring", damping: 28, stiffness: 320 }}
-            className="relative z-10 flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[2rem] border border-slate-200 bg-[#071428] shadow-[0_32px_120px_-24px_rgb(0_209_255/0.35)] sm:rounded-[2rem]"
+            className="relative z-10 flex max-h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[2rem] border border-slate-200 bg-white shadow-[0_32px_120px_-24px_rgb(0_209_255/0.35)] sm:rounded-[2rem]"
           >
             <div className="relative overflow-hidden border-b border-slate-200 px-5 py-5 sm:px-7">
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-mq-accent/15 via-transparent to-indigo-500/10" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-mq-accent/5 via-transparent to-indigo-500/5" />
               <div className="relative flex items-start justify-between gap-4">
                 <div className="min-w-0">
                   <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/25 bg-mq-accent/10 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-mq-accent">
@@ -175,7 +175,7 @@ export function TheoryDeepDivePanel({
             </div>
 
             <div className="flex-1 overflow-y-auto px-5 py-5 sm:px-7">
-              <div className="rounded-2xl border border-slate-200 bg-white/[0.04] p-4 sm:p-5">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
                 <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">
                   Pregunta
                 </p>
@@ -193,7 +193,7 @@ export function TheoryDeepDivePanel({
               </div>
             </div>
 
-            <div className="border-t border-slate-200 bg-[#050f22]/95 px-5 py-4 backdrop-blur-md sm:px-7">
+            <div className="border-t border-slate-200 bg-white/95 px-5 py-4 backdrop-blur-md sm:px-7">
               {saveMessage ? (
                 <p
                   className={`mb-3 text-center text-xs font-medium ${
@@ -238,7 +238,7 @@ export function TheoryDeepDivePanel({
                     </button>
                   </>
                 ) : (
-                  <div className="w-full rounded-2xl border border-slate-200 bg-white/[0.03] px-4 py-3 text-center text-sm text-slate-500">
+                  <div className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-center text-sm text-slate-500">
                     Inicia sesión para guardar esta nota en{" "}
                     <span className="font-semibold text-slate-900">Mi Estudio</span>.
                   </div>

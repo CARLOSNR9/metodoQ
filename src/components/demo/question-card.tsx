@@ -189,7 +189,7 @@ export function QuestionCard({
               <div className="flex items-center justify-between">
                 <p
                   className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider ${
-                    isCorrect ? "text-emerald-400" : "text-rose-400"
+                    isCorrect ? "text-emerald-600" : "text-rose-500"
                   }`}
                 >
                   {isCorrect ? (
@@ -207,11 +207,11 @@ export function QuestionCard({
               </div>
               
               {!isCorrect && incorrectAnswerDetail && (
-                <p className="mt-4 rounded-xl border border-rose-500/20 bg-rose-500/5 p-4 text-base leading-relaxed text-rose-100">
+                <p className="mt-4 rounded-xl border border-rose-500/20 bg-rose-500/10 p-4 text-base leading-relaxed text-rose-800">
                   {incorrectAnswerDetail}
                 </p>
               )}
-              <p className="mt-4 text-base leading-relaxed text-slate-200">
+              <p className="mt-4 text-base leading-relaxed text-slate-700">
                 {explanation}
               </p>
 
@@ -222,7 +222,7 @@ export function QuestionCard({
                       <button
                         type="button"
                         onClick={() => setIsTheoryPanelOpen(true)}
-                        className="group flex w-full items-center gap-4 rounded-2xl border border-slate-200 bg-gradient-to-r from-white/[0.06] to-mq-accent/10 p-4 text-left transition hover:border-mq-accent/35 hover:from-white/[0.08] hover:to-mq-accent/15"
+                        className="group flex w-full items-center gap-4 rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-50 to-mq-accent/10 p-4 text-left transition hover:border-mq-accent/35 hover:from-slate-100 hover:to-mq-accent/15"
                       >
                         <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-mq-accent/15 text-mq-accent ring-1 ring-mq-accent/20">
                           <BookOpen className="h-5 w-5" />
