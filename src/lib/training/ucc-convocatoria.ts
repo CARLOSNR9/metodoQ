@@ -2,6 +2,7 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import { UCC_CONV_2025_06_21_QUESTIONS } from "@/data/ucc-conv-2025-06-21-questions";
 import { UCC_CONV_2025_07_05_QUESTIONS } from "@/data/ucc-conv-2025-07-05-questions";
 import { UCC_CONV_2025_07_19_QUESTIONS } from "@/data/ucc-conv-2025-07-19-questions";
+import { UCC_CONV_2026_07_26_QUESTIONS } from "@/data/ucc-conv-2026-07-26-questions";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -14,6 +15,8 @@ export type UccConvocatoriaEdition = {
   minutes: number;
   /** Permanece abierta hasta que exista la siguiente edición. */
   stayOpenUntilNext?: boolean;
+  /** Custom duration for the exam window, defaults to 5 days if undefined. */
+  daysOpen?: number;
   questions: TrainingQuestion[];
 };
 
@@ -64,6 +67,16 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     minutes: 180,
     stayOpenUntilNext: true,
     questions: UCC_CONV_2025_07_19_QUESTIONS,
+  },
+  {
+    code: "UCC-2026-07-26",
+    label: "Edición #4",
+    examDate: "2026-07-26",
+    questionCount: 100,
+    minutes: 180,
+    stayOpenUntilNext: true,
+    daysOpen: 6, // Opens today (26th), open for 6 days so it closes midnight on Saturday Aug 1 (2026-08-01T00:00:00 is technically Friday midnight, let's use 7 days so it closes 2026-08-02 which is Sunday midnight, so available all Saturday)
+    questions: UCC_CONV_2026_07_26_QUESTIONS,
   },
 ];
 
@@ -150,9 +163,9 @@ function getEditionPhase(
   const examDay = parseLocalDate(edition.examDate);
   if (today < examDay) return "upcoming";
 
-  // El examen permanece abierto por un espacio de 5 días
+  // El examen permanece abierto por un espacio de X días
   const closingDay = new Date(examDay);
-  closingDay.setDate(closingDay.getDate() + 5);
+  closingDay.setDate(closingDay.getDate() + (edition.daysOpen ?? 5));
 
   if (today < closingDay) {
     return "open";
@@ -292,10 +305,10 @@ export function buildConvocatoriaEditionStatus(options: {
 
   const canStart = phase === "open" && !attempt;
 
-  // Calculamos la fecha de cierre (+5 días)
+  // Calculamos la fecha de cierre
   const examDay = parseLocalDate(options.edition.examDate);
   const closingDay = new Date(examDay);
-  closingDay.setDate(closingDay.getDate() + 5);
+  closingDay.setDate(closingDay.getDate() + (options.edition.daysOpen ?? 5));
   
   // Format to local date string (e.g. YYYY-MM-DD)
   const yyyy = closingDay.getFullYear();
