@@ -1186,12 +1186,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                             : `Entrenamiento adaptativo de ${plannedQuestionCount} preguntas.`}
                     </p>
                     {usageBlockReason ? (
-                      <div className="mb-6 max-w-md rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+                      <div className="mb-6 max-w-md rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
                         {usageBlockReason}
                         {usageBlockMeta.bonusAvailable ? (
                           <Link
                             href={`/dashboard/entrenar?mode=bonus&count=${UCC_MI_DAILY_BONUS_MAX}&block=weak`}
-                            className="mt-2 block font-bold text-mq-accent hover:underline"
+                            className="mt-2 block font-bold text-blue-600 hover:underline"
                           >
                             Modo bonus opcional ({UCC_MI_DAILY_BONUS_MAX} preg)
                           </Link>
@@ -1199,7 +1199,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                         {usageBlockMeta.dayClosed && !usageBlockMeta.bonusAvailable ? (
                           <Link
                             href="/dashboard"
-                            className="mt-2 block font-bold text-mq-accent hover:underline"
+                            className="mt-2 block font-bold text-blue-600 hover:underline"
                           >
                             Volver al panel
                           </Link>
@@ -1207,7 +1207,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                         {isConvocatoria && usageBlockReason ? (
                           <Link
                             href="/dashboard/convocatorias"
-                            className="mt-2 block font-bold text-mq-accent hover:underline"
+                            className="mt-2 block font-bold text-blue-600 hover:underline"
                           >
                             Volver a simulacros
                           </Link>
@@ -1215,7 +1215,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                         {!usageBlockMeta.dayClosed && upgradeCta ? (
                           <Link
                             href={upgradeCta.href}
-                            className="mt-2 block font-bold text-mq-accent hover:underline"
+                            className="mt-2 block font-bold text-blue-600 hover:underline"
                           >
                             {upgradeCta.label}
                           </Link>

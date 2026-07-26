@@ -59,12 +59,12 @@ function StudyNoteCard({
           onOpen();
         }
       }}
-      className={`group relative cursor-pointer overflow-hidden rounded-2xl border bg-white/[0.03] p-5 text-left transition hover:bg-slate-100 ${theme.cardBorder} ${theme.cardGlow}`}
+      className={`group relative cursor-pointer overflow-hidden rounded-2xl border bg-white p-5 text-left transition hover:bg-slate-50 ${theme.cardBorder} ${theme.cardGlow}`}
     >
       <div
-        className={`pointer-events-none absolute inset-0 bg-gradient-to-br opacity-80 ${theme.cardGradient}`}
+        className={`pointer-events-none absolute inset-0 bg-gradient-to-br opacity-40 ${theme.cardGradient}`}
       />
-      <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/[0.03] blur-2xl transition group-hover:bg-slate-100" />
+      <div className="pointer-events-none absolute -right-8 -top-8 h-28 w-28 rounded-full bg-slate-100 blur-2xl transition group-hover:bg-slate-200" />
 
       <div className="relative">
         <div className="flex items-start justify-between gap-3">
@@ -110,12 +110,12 @@ function StudyNoteCard({
           {note.statement}
         </p>
 
-        <div className="mt-5 flex items-center justify-between gap-3 border-t border-white/8 pt-4">
+        <div className="mt-5 flex items-center justify-between gap-3 border-t border-slate-100 pt-4">
           <p className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider ${theme.accentClass}`}>
             <BookOpen className="h-3.5 w-3.5" />
             Leer nota
           </p>
-          <span className="rounded-lg bg-white/[0.04] px-2 py-1 text-[10px] font-semibold text-slate-500">
+          <span className="rounded-lg bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-500">
             Píldora
           </span>
         </div>
@@ -162,7 +162,7 @@ function StudyNoteModal({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         onClick={onClose}
-        className="absolute inset-0 bg-[#020817]/75 backdrop-blur-md"
+        className="absolute inset-0 bg-slate-900/40 backdrop-blur-md"
       />
 
       <motion.div
@@ -172,14 +172,14 @@ function StudyNoteModal({
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 40, scale: 0.98 }}
         transition={{ type: "spring", damping: 28, stiffness: 320 }}
-        className="relative z-10 flex max-h-[88vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[2rem] border border-slate-200 bg-[#071428] shadow-[0_32px_120px_-24px_rgb(0_209_255/0.25)] sm:rounded-[2rem]"
+        className="relative z-10 flex max-h-[88vh] w-full max-w-3xl flex-col overflow-hidden rounded-t-[2rem] border border-slate-200 bg-white shadow-2xl sm:rounded-[2rem]"
       >
         <div className="relative overflow-hidden border-b border-slate-200 px-5 py-5 sm:px-7">
-          <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br opacity-90 ${theme.cardGradient}`} />
+          <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br opacity-20 ${theme.cardGradient}`} />
           <div className="relative flex items-start justify-between gap-4">
             <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-2">
-                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-accent">
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">
                   Mi estudio
                 </p>
                 <span
@@ -207,7 +207,7 @@ function StudyNoteModal({
         </div>
 
         <div className="min-h-0 flex-1 overflow-y-auto px-5 py-5 sm:px-7">
-          <div className="rounded-2xl border border-slate-200 bg-white/[0.04] p-4 sm:p-5">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
             <div className="flex items-center gap-2">
               <ClipboardList className="h-4 w-4 text-slate-500" />
               <p className="text-[10px] font-black uppercase tracking-[0.16em] text-slate-500">
@@ -228,7 +228,7 @@ function StudyNoteModal({
           </div>
         </div>
 
-        <div className="border-t border-slate-200 bg-[#050f22]/95 px-5 py-4 backdrop-blur-md sm:px-7">
+        <div className="border-t border-slate-200 bg-white/95 px-5 py-4 backdrop-blur-md sm:px-7">
           <button
             type="button"
             onClick={onRemove}
