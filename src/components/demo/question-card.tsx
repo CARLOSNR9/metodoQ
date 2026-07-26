@@ -144,7 +144,7 @@ export function QuestionCard({
                   : showIncorrectStyle
                     ? "border-rose-500/50 bg-rose-500/10 text-slate-900 shadow-[0_0_20px_-5px_rgba(244,63,94,0.3)]"
                     : isSelected
-                      ? "border-mq-accent/50 bg-mq-accent/10 text-white shadow-[0_0_20px_-5px_rgba(0,209,255,0.3)]"
+                      ? "border-mq-accent/50 bg-mq-accent/10 text-slate-900 shadow-[0_0_20px_-5px_rgba(0,209,255,0.3)]"
                       : "border-slate-200 bg-slate-50 text-foreground backdrop-blur-sm hover:border-slate-300 hover:bg-slate-100"
               }`}
               aria-pressed={isSelected}
