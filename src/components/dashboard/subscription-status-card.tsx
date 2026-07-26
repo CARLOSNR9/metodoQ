@@ -73,7 +73,7 @@ export function SubscriptionStatusCard({
             <span>Progreso del período</span>
             <span className="text-mq-accent">{summary.progressPercent}%</span>
           </div>
-          <div className="h-2 overflow-hidden rounded-full bg-slate-100">
+          <div className="h-2 overflow-hidden rounded-full bg-slate-200">
             <div
               className="h-full rounded-full bg-mq-accent transition-all duration-500"
               style={{ width: `${summary.progressPercent}%` }}

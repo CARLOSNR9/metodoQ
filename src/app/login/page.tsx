@@ -79,11 +79,11 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="flex flex-1 bg-[#0A1F44]">
+    <main className="flex flex-1 bg-background">
       <section className="mx-auto flex w-full max-w-md flex-1 items-center px-4 py-12 sm:px-6">
-        <article className="w-full rounded-2xl border border-mq-border-strong bg-mq-surface p-6 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.6)] backdrop-blur-sm sm:p-8">
+        <article className="w-full rounded-2xl mq-glass-raised p-6 sm:p-8">
           <div className="text-center">
-            <h1 className="text-3xl font-bold tracking-tight text-white">Bienvenido</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-foreground">Bienvenido</h1>
             <p className="mt-2 text-sm text-mq-muted">
               Entrena con inteligencia y domina tu examen.
             </p>
@@ -93,10 +93,10 @@ export default function LoginPage() {
             <button
               onClick={handleGoogleLogin}
               disabled={isGoogleSubmitting || isSubmitting}
-              className="flex min-h-12 w-full items-center justify-center gap-3 rounded-xl border border-mq-border bg-white/[0.03] px-4 text-sm font-semibold text-white transition duration-200 hover:border-white/40 hover:bg-white/[0.07] disabled:cursor-not-allowed disabled:opacity-50"
+              className="flex min-h-12 w-full items-center justify-center gap-3 rounded-xl border border-mq-border bg-white px-4 text-sm font-semibold text-foreground transition duration-200 hover:bg-mq-surface disabled:cursor-not-allowed disabled:opacity-50"
             >
               {isGoogleSubmitting ? (
-                <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/20 border-t-white" />
+                <span className="h-4 w-4 animate-spin rounded-full border-2 border-mq-muted border-t-foreground" />
               ) : (
                 <svg className="h-5 w-5" viewBox="0 0 24 24">
                   <path
@@ -125,7 +125,7 @@ export default function LoginPage() {
                 <div className="w-full border-t border-mq-border/50"></div>
               </div>
               <div className="relative flex justify-center text-xs uppercase tracking-widest">
-                <span className="bg-mq-surface px-3 text-mq-muted">o usa tu correo</span>
+                <span className="bg-white px-3 text-mq-muted">o usa tu correo</span>
               </div>
             </div>
 
@@ -137,7 +137,7 @@ export default function LoginPage() {
                   required
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  className="min-h-12 w-full rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm text-foreground outline-none transition focus:border-mq-accent focus:ring-2 focus:ring-mq-accent/20"
+                  className="min-h-12 w-full rounded-xl border border-mq-border bg-white px-4 text-sm text-foreground outline-none transition focus:border-mq-accent focus:ring-2 focus:ring-mq-accent/20"
                   placeholder="nombre@ejemplo.com"
                 />
               </div>
@@ -149,13 +149,13 @@ export default function LoginPage() {
                   required
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
-                  className="min-h-12 w-full rounded-xl border border-mq-border bg-white/[0.04] px-4 text-sm text-foreground outline-none transition focus:border-mq-accent focus:ring-2 focus:ring-mq-accent/20"
+                  className="min-h-12 w-full rounded-xl border border-mq-border bg-white px-4 text-sm text-foreground outline-none transition focus:border-mq-accent focus:ring-2 focus:ring-mq-accent/20"
                   placeholder="Contraseña"
                 />
               </div>
 
               {errorMessage ? (
-                <p className="rounded-lg border border-rose-400/20 bg-rose-500/10 px-3 py-2 text-xs text-rose-200">
+                <p className="rounded-lg border border-rose-400/20 bg-rose-500/10 px-3 py-2 text-xs text-rose-600">
                   {errorMessage}
                 </p>
               ) : null}

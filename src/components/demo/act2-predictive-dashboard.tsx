@@ -101,7 +101,7 @@ export function Act2PredictiveDashboard({
           <motion.h3
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className={`text-7xl font-black italic ${isAdmitted ? "text-emerald-400" : "text-red-500"}`}
+            className={`text-7xl font-black italic border-4 px-8 py-2 rounded-3xl ${isAdmitted ? "text-emerald-500 border-emerald-500/20" : "text-red-500 border-red-500/20"}`}
           >
             {standardizedScore}
           </motion.h3>
@@ -206,13 +206,13 @@ export function Act2PredictiveDashboard({
         </motion.div>
 
         <motion.div
-          className="flex items-start gap-4 rounded-2xl border border-red-500/20 bg-red-500/10 p-4"
+          className={`flex items-start gap-4 rounded-2xl border p-4 ${isAdmitted ? "border-emerald-500/20 bg-emerald-500/10" : "border-red-500/20 bg-red-500/10"}`}
           initial={{ opacity: 0, x: -12 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <AlertTriangle size={20} className="mt-0.5 shrink-0 text-red-400" />
-          <p className="text-xs italic leading-relaxed text-red-200">
+          <AlertTriangle size={20} className={`mt-0.5 shrink-0 ${isAdmitted ? "text-emerald-600" : "text-red-600"}`} />
+          <p className={`text-xs italic leading-relaxed ${isAdmitted ? "text-emerald-800" : "text-red-800"}`}>
             {isAdmitted
               ? `"En ${university ?? "tu universidad"}, tu promedio acumulado te ubica en rango competitivo para ${specialty ?? "tu especialidad"}, pero el examen exige constancia diaria."`
               : `"En ${university ?? "tu universidad"}, la competencia por cupos de ${specialty ?? "tu especialidad"} es alta. Tu promedio acumulado (${scorePercentage}% en ${totalQuestionsAnswered || "varias"} preguntas) aún tiene margen de mejora."`}
