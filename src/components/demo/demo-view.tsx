@@ -1223,10 +1223,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                       </div>
                     ) : null}
                     {isTimedExam && !usageBlockReason ? (
-                      <p className="mb-6 max-w-lg text-sm text-amber-100/80">
+                      <div className="mb-6 max-w-lg rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium text-amber-800">
                         Permanece en esta pestaña durante todo el examen. Si cambias de ventana,
                         verás un aviso para que vuelvas a concentrarte aquí.
-                      </p>
+                      </div>
                     ) : null}
                     <button
                       type="button"
