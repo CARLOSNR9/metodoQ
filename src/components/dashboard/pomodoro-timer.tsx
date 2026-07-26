@@ -191,7 +191,7 @@ export function PomodoroTimer() {
             <button
               type="button"
               onClick={stopSession}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-rose-500/35 bg-rose-500/10 px-6 text-sm font-black uppercase tracking-wider text-rose-100 transition hover:bg-rose-500/20"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-rose-200 bg-rose-50 px-6 text-sm font-black uppercase tracking-wider text-rose-600 transition hover:bg-rose-100"
             >
               <Square className="h-4 w-4 fill-current" />
               Detener Pomodoro
@@ -211,7 +211,7 @@ export function PomodoroTimer() {
               <button
                 type="button"
                 onClick={stopSession}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-rose-500/30 px-5 text-xs font-bold uppercase tracking-wider text-rose-200/90 transition hover:bg-rose-500/10"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-rose-200 px-5 text-xs font-bold uppercase tracking-wider text-rose-600 transition hover:bg-rose-50"
               >
                 <Square className="h-3.5 w-3.5 fill-current" />
                 Detener

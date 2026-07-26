@@ -96,12 +96,12 @@ function EditionCard({ status, trackName = "UCC" }: { status: UccConvocatoriaEdi
         : "Cerrada";
 
   const phaseClass = completed
-    ? "border-mq-accent/30 bg-mq-accent/10 text-mq-accent"
+    ? "border-blue-200 bg-blue-50 text-blue-700"
     : phase === "open"
-      ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-300"
+      ? "border-emerald-200 bg-emerald-50 text-emerald-700"
       : phase === "upcoming"
-        ? "border-amber-500/30 bg-amber-500/10 text-amber-200"
-        : "border-slate-200 bg-white/[0.03] text-slate-500";
+        ? "border-amber-200 bg-amber-50 text-amber-700"
+        : "border-slate-200 bg-slate-50 text-slate-500";
 
   const displayCode = trackName !== "UCC" ? edition.code.replace("UCC", trackName) : edition.code;
 
@@ -162,11 +162,11 @@ function EditionCard({ status, trackName = "UCC" }: { status: UccConvocatoriaEdi
                 Iniciar examen
               </Link>
             ) : phase === "upcoming" ? (
-              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/5 px-6 text-sm font-semibold text-amber-100">
+              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-amber-200 bg-amber-50 px-6 text-sm font-semibold text-amber-700">
                 Disponible el {status.opensLabel}
               </div>
             ) : (
-              <div className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/[0.03] px-6 text-sm font-semibold text-slate-500">
+              <div className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-6 text-sm font-semibold text-slate-500">
                 <CheckCircle2 size={16} />
                 Ventana cerrada
               </div>

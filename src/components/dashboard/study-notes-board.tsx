@@ -233,7 +233,7 @@ function StudyNoteModal({
             type="button"
             onClick={onRemove}
             disabled={removingId === note.questionId}
-            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl border border-rose-500/25 bg-rose-500/10 text-sm font-bold text-rose-200 transition hover:bg-rose-500/15"
+            className="inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-2xl border border-rose-200 bg-rose-50 text-sm font-bold text-rose-600 transition hover:bg-rose-100"
           >
             {removingId === note.questionId ? (
               <Loader2 className="h-4 w-4 animate-spin" />

@@ -100,12 +100,12 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
               </span>
             </div>
             {completed ? (
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-emerald-300">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-emerald-700">
                 <CheckCircle2 size={12} />
                 Completada
               </span>
             ) : canStart ? (
-              <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/25 bg-amber-500/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-200">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-amber-700">
                 Abierta · 1 intento
               </span>
             ) : null}
@@ -135,8 +135,8 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
 
           {attempt ? (
             <div className="inline-flex flex-wrap items-center gap-3">
-              <div className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-2 text-sm text-slate-900">
-                <CheckCircle2 size={16} className="text-emerald-300" />
+              <div className="inline-flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm text-slate-900">
+                <CheckCircle2 size={16} className="text-emerald-600" />
                 {attempt.correctAnswers}/{edition.questionCount} aciertos ({attempt.scorePercentage}%)
               </div>
               {attempt.resultId ? (
@@ -150,7 +150,7 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
               ) : null}
               <Link
                 href="#convocatoria-repaso-summary"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-200 transition hover:text-amber-100"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition hover:text-blue-800"
               >
                 Qué repasar ↓
               </Link>
@@ -169,11 +169,11 @@ export function UccConvocatoriaCard({ userId, planStartedAt, trackName = "UCC" }
                 <ArrowRight size={16} />
               </Link>
             ) : phase === "upcoming" ? (
-              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/5 px-6 text-sm font-semibold text-amber-100">
+              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-amber-200 bg-amber-50 px-6 text-sm font-semibold text-amber-700">
                 Próximamente
               </div>
             ) : (
-              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-200 bg-white/[0.03] px-6 text-sm font-semibold text-slate-500">
+              <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-6 text-sm font-semibold text-slate-500">
                 Ventana cerrada
               </div>
             )}
