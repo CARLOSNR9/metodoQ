@@ -13,6 +13,8 @@ export type UccConvocatoriaEdition = {
   examDate: string;
   questionCount: number;
   minutes: number;
+  /** Si es true, su fecha no será sobreescrita por el calendario personal. */
+  isGlobal?: boolean;
   /** Permanece abierta hasta que exista la siguiente edición. */
   stayOpenUntilNext?: boolean;
   /** Custom duration for the exam window, defaults to 5 days if undefined. */
@@ -74,8 +76,9 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     examDate: "2026-07-26",
     questionCount: 100,
     minutes: 180,
+    isGlobal: true,
     stayOpenUntilNext: true,
-    daysOpen: 6, // Opens today (26th), open for 6 days so it closes midnight on Saturday Aug 1 (2026-08-01T00:00:00 is technically Friday midnight, let's use 7 days so it closes 2026-08-02 which is Sunday midnight, so available all Saturday)
+    daysOpen: 8, // Opens today (26th) and open for 8 more days
     questions: UCC_CONV_2026_07_26_QUESTIONS,
   },
 ];
@@ -120,9 +123,17 @@ export function getUserConvocatoriaSchedule(planStartedAtStr: string | null | un
   const s2 = new Date(s1);
   s2.setDate(s2.getDate() + 7);
 
-  return UCC_CONVOCATORIA_EDITIONS.map((edition, index) => {
+  // Keep track of the index of personalized editions to calculate the 14-day offset correctly
+  let personalizedIndex = 0;
+
+  return UCC_CONVOCATORIA_EDITIONS.map((edition) => {
+    if (edition.isGlobal) {
+      return edition; // Las globales no se ajustan al plan individual
+    }
+    
     const examDate = new Date(s2);
-    examDate.setDate(examDate.getDate() + (index * 14));
+    examDate.setDate(examDate.getDate() + (personalizedIndex * 14));
+    personalizedIndex++;
     
     // Format to YYYY-MM-DD local
     const yyyy = examDate.getFullYear();
