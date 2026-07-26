@@ -113,7 +113,16 @@ export function QuestionCard({
         </button>
       </div>
       <h2 className="mt-3 text-pretty text-base font-medium leading-relaxed text-foreground sm:text-lg">
-        {question}
+        {question.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            return (
+              <strong key={index} className="font-bold text-slate-900">
+                {part.slice(2, -2)}
+              </strong>
+            );
+          }
+          return part;
+        })}
       </h2>
 
       <div className="mt-6 grid gap-3">
@@ -170,7 +179,18 @@ export function QuestionCard({
               >
                 {option.label}
               </span>
-              <span className="relative z-10 text-sm leading-snug sm:text-base">{option.text}</span>
+              <span className="relative z-10 text-sm leading-snug sm:text-base">
+                {option.text.split(/(\*\*.*?\*\*)/g).map((part, partIndex) => {
+                  if (part.startsWith("**") && part.endsWith("**")) {
+                    return (
+                      <strong key={partIndex} className="font-bold">
+                        {part.slice(2, -2)}
+                      </strong>
+                    );
+                  }
+                  return part;
+                })}
+              </span>
             </motion.button>
           );
         })}
@@ -208,11 +228,21 @@ export function QuestionCard({
               
               {!isCorrect && incorrectAnswerDetail && (
                 <p className="mt-4 rounded-xl border border-rose-500/20 bg-rose-500/10 p-4 text-base leading-relaxed text-rose-800">
-                  {incorrectAnswerDetail}
+                  {incorrectAnswerDetail.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+                    if (part.startsWith("**") && part.endsWith("**")) {
+                      return <strong key={index} className="font-bold">{part.slice(2, -2)}</strong>;
+                    }
+                    return part;
+                  })}
                 </p>
               )}
               <p className="mt-4 text-base leading-relaxed text-slate-700">
-                {explanation}
+                {explanation.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+                  if (part.startsWith("**") && part.endsWith("**")) {
+                    return <strong key={index} className="font-bold text-slate-900">{part.slice(2, -2)}</strong>;
+                  }
+                  return part;
+                })}
               </p>
 
               {showTheoryPill && (
