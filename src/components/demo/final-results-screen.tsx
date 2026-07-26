@@ -208,18 +208,18 @@ export function FinalResultsScreen({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 }}
-                  className="text-4xl font-black text-slate-900"
+                  className="text-4xl font-black text-white"
                 >
                   {sessionScore}%
                 </motion.span>
-                <span className="text-[10px] font-bold uppercase tracking-tighter text-slate-500">
+                <span className="text-[10px] font-bold uppercase tracking-tighter text-slate-400">
                   Esta sesión
                 </span>
               </div>
             </div>
           )}
 
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+          <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
             {isDailyPill
               ? sessionScore === 100
                 ? "¡Dosis Inyectada!"
@@ -230,7 +230,7 @@ export function FinalResultsScreen({
                   ? "Diagnóstico Predictivo de Plaza"
                   : profile.title}
           </h2>
-          <p className="mt-3 max-w-md text-base leading-relaxed text-slate-500 sm:text-lg">
+          <p className="mt-3 max-w-md text-base leading-relaxed text-slate-300 sm:text-lg">
             {isDailyPill
               ? sessionScore === 100
                 ? "Tu agilidad clínica hoy ha sido impecable. Has ganado el trofeo del día y tu racha se mantiene activa."

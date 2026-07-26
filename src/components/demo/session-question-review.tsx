@@ -99,8 +99,8 @@ function ReviewQuestionCard({
             <span
               className={`rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
                 isCorrect
-                  ? "bg-emerald-500/15 text-emerald-300"
-                  : "bg-rose-500/15 text-rose-300"
+                  ? "bg-emerald-500/15 text-emerald-700"
+                  : "bg-rose-500/15 text-rose-700"
               }`}
             >
               {isCorrect ? "Acertaste" : "Fallaste"}
@@ -132,33 +132,38 @@ function ReviewQuestionCard({
             className="overflow-hidden"
           >
             <div className="space-y-4 border-t border-slate-200 px-4 pb-5 pt-4 sm:px-5">
-              <p className="text-sm leading-relaxed text-slate-200">{question.statement}</p>
+              <p className="text-sm leading-relaxed text-slate-700">{question.statement.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+                if (part.startsWith("**") && part.endsWith("**")) {
+                  return <strong key={index} className="font-bold text-slate-900">{part.slice(2, -2)}</strong>;
+                }
+                return part;
+              })}</p>
 
               {!isCorrect && item.selectedOptionLabel ? (
                 <div className="rounded-xl border border-rose-500/20 bg-rose-500/5 p-4">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-rose-300">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-rose-600">
                     Tu respuesta
                   </p>
-                  <p className="mt-2 text-sm leading-relaxed text-rose-100">
+                  <p className="mt-2 text-sm leading-relaxed text-rose-800">
                     {item.selectedOptionLabel}
                   </p>
                 </div>
               ) : null}
 
               <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-4">
-                <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-emerald-300">
+                <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-emerald-600">
                   Respuesta correcta
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-emerald-50">
+                <p className="mt-2 text-sm leading-relaxed text-emerald-900">
                   {item.correctOptionLabel}
                 </p>
               </div>
 
-              <div className="rounded-xl border border-slate-200 bg-white/[0.03] p-4">
+              <div className="rounded-xl border border-slate-200 bg-white p-4">
                 <div className="flex items-center justify-between">
                   <p
                     className={`inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider ${
-                      isCorrect ? "text-emerald-400" : "text-rose-400"
+                      isCorrect ? "text-emerald-600" : "text-rose-600"
                     }`}
                   >
                     {isCorrect ? (
@@ -184,12 +189,22 @@ function ReviewQuestionCard({
                   </button>
                 </div>
                 {item.incorrectFeedback ? (
-                  <p className="mt-3 rounded-lg border border-rose-500/15 bg-rose-500/5 p-3 text-sm leading-relaxed text-rose-100">
-                    {item.incorrectFeedback}
+                  <p className="mt-3 rounded-lg border border-rose-500/15 bg-rose-500/5 p-3 text-sm leading-relaxed text-rose-800">
+                    {item.incorrectFeedback.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+                      if (part.startsWith("**") && part.endsWith("**")) {
+                        return <strong key={index} className="font-bold">{part.slice(2, -2)}</strong>;
+                      }
+                      return part;
+                    })}
                   </p>
                 ) : null}
-                <p className="mt-3 text-sm leading-relaxed text-slate-200">
-                  {question.explanation}
+                <p className="mt-3 text-sm leading-relaxed text-slate-700">
+                  {question.explanation.split(/(\*\*.*?\*\*)/g).map((part, index) => {
+                    if (part.startsWith("**") && part.endsWith("**")) {
+                      return <strong key={index} className="font-bold text-slate-900">{part.slice(2, -2)}</strong>;
+                    }
+                    return part;
+                  })}
                 </p>
                 {question.keyPoints.length > 0 ? (
                   <ul className="mt-4 space-y-2">

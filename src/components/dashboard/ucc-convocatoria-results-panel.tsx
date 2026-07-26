@@ -45,7 +45,7 @@ export function UccConvocatoriaResultsPanel({
         <div className="mx-auto h-72 w-full max-w-md">
           <ResponsiveContainer width="100%" height="100%">
             <RadarChart data={radarData}>
-              <PolarGrid stroke="rgba(255,255,255,0.08)" />
+              <PolarGrid stroke="#cbd5e1" />
               <PolarAngleAxis
                 dataKey="subject"
                 tick={{ fill: "#94a3b8", fontSize: 11, fontWeight: 600 }}
