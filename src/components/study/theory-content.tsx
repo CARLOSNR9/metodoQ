@@ -163,20 +163,20 @@ function QuestionBlock({ text }: { text: string }) {
   const proseLines = bodyLines.filter((line) => !line.trim().startsWith("-"));
 
   return (
-    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-5">
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
       <div className="flex items-start gap-3">
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-mq-accent/12 text-mq-accent">
           <HelpCircle className="h-4 w-4" />
         </div>
         <div className="min-w-0 flex-1 space-y-3">
-          <p className="text-[15px] font-bold leading-snug text-white">{header}</p>
+          <p className="text-[15px] font-bold leading-snug text-slate-900">{header}</p>
           {proseLines.length > 0 ? (
-            <p className="text-[15px] leading-7 text-slate-300">{proseLines.join("\n")}</p>
+            <p className="text-[15px] leading-7 text-slate-700">{proseLines.join("\n")}</p>
           ) : null}
           {bulletLines.length > 0 ? (
             <ul className="space-y-2">
               {bulletLines.map((line) => (
-                <li key={line} className="flex gap-3 text-[15px] leading-relaxed text-slate-200">
+                <li key={line} className="flex gap-3 text-[15px] leading-relaxed text-slate-700">
                   <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-mq-accent" />
                   <span>{line.replace(/^\-\s*/, "")}</span>
                 </li>
@@ -195,14 +195,14 @@ function KeyInsightBlock({ text }: { text: string }) {
   return (
     <div className="rounded-2xl border border-amber-400/25 bg-gradient-to-br from-amber-500/12 to-orange-500/5 p-4">
       <div className="flex items-start gap-3">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-500/15 text-amber-300">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-500/15 text-amber-600">
           <Lightbulb className="h-4 w-4" />
         </div>
         <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.16em] text-amber-300">
+          <p className="text-[10px] font-black uppercase tracking-[0.16em] text-amber-700">
             Clave de examen
           </p>
-          <p className="mt-1.5 text-[15px] leading-7 text-amber-50/90">{body}</p>
+          <p className="mt-1.5 text-[15px] leading-7 text-amber-900">{body}</p>
         </div>
       </div>
     </div>
@@ -215,13 +215,13 @@ function WarningBlock({ text }: { text: string }) {
   return (
     <div className="rounded-2xl border border-orange-400/20 bg-gradient-to-br from-orange-500/10 to-rose-500/5 p-4">
       <div className="flex items-start gap-3">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-orange-500/15 text-orange-300">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-orange-500/15 text-orange-600">
           <AlertTriangle className="h-4 w-4" />
         </div>
         <div className="min-w-0 flex-1">
-          <p className="text-[15px] font-bold leading-snug text-orange-100">{header}</p>
+          <p className="text-[15px] font-bold leading-snug text-orange-900">{header}</p>
           {body ? (
-            <p className="mt-2 whitespace-pre-wrap text-[15px] leading-7 text-orange-50/80">
+            <p className="mt-2 whitespace-pre-wrap text-[15px] leading-7 text-orange-900">
               {body}
             </p>
           ) : null}
@@ -233,15 +233,15 @@ function WarningBlock({ text }: { text: string }) {
 
 function BulletBlock({ lines }: { lines: string[] }) {
   return (
-    <ul className="space-y-2.5 rounded-2xl border border-white/10 bg-white/[0.03] p-4 sm:p-5">
+    <ul className="space-y-2.5 rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5">
       {lines
         .filter((line) => line.trim())
         .map((line) => (
           <li
             key={line}
-            className="flex gap-3 text-[15px] leading-relaxed text-slate-200"
+            className="flex gap-3 text-[15px] leading-relaxed text-slate-700"
           >
-            <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-mq-accent shadow-[0_0_8px_rgb(0_209_255/0.6)]" />
+            <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-mq-accent shadow-[0_0_8px_rgb(0_209_255/0.3)]" />
             <span>{line.replace(/^\-\s*/, "")}</span>
           </li>
         ))}
@@ -290,13 +290,13 @@ function renderBlock(block: string, index: number) {
       return (
         <div key={index} className="space-y-3">
           <SectionHeader text={header} />
-          <p className="text-[15px] leading-7 text-slate-200">{body}</p>
+          <p className="text-[15px] leading-7 text-slate-700">{body}</p>
         </div>
       );
     }
     default:
       return (
-        <p key={index} className="whitespace-pre-wrap text-[15px] leading-7 text-slate-200">
+        <p key={index} className="whitespace-pre-wrap text-[15px] leading-7 text-slate-700">
           {block}
         </p>
       );
