@@ -136,60 +136,6 @@ export function getUserConvocatoriaSchedule(planStartedAtStr: string | null | un
 
 export function getConvocatoriaEdition(
   code: string,
-}
-
-function shuffleQuestions<T>(items: T[]): T[] {
-  const copy = [...items];
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
-}
-
-export function getUserConvocatoriaSchedule(planStartedAtStr: string | null | undefined): UmngConvocatoriaEdition[] {
-  if (!planStartedAtStr) return UMNG_CONVOCATORIA_EDITIONS;
-
-  const planStartedAt = new Date(planStartedAtStr);
-  if (isNaN(planStartedAt.getTime())) return UMNG_CONVOCATORIA_EDITIONS;
-
-  // S1 = first Sunday strictly after planStartedAt
-  const dayOfWeek = planStartedAt.getDay(); // 0 is Sunday
-  const daysToS1 = dayOfWeek === 0 ? 7 : 7 - dayOfWeek;
-  const s1 = new Date(planStartedAt);
-  s1.setDate(s1.getDate() + daysToS1);
-  s1.setHours(0, 0, 0, 0);
-
-  // S2 = S1 + 7 days (Second Sunday)
-  const s2 = new Date(s1);
-  s2.setDate(s2.getDate() + 7);
-
-  // Keep track of the index of personalized editions to calculate the 14-day offset correctly
-  let personalizedIndex = 0;
-
-  return UMNG_CONVOCATORIA_EDITIONS.map((edition) => {
-    if (edition.isGlobal) {
-      return edition; // Las globales no se ajustan al plan individual
-    }
-    
-    const examDate = new Date(s2);
-    examDate.setDate(examDate.getDate() + (personalizedIndex * 14));
-    personalizedIndex++;
-    
-    // Format to YYYY-MM-DD local
-    const yyyy = examDate.getFullYear();
-    const mm = String(examDate.getMonth() + 1).padStart(2, "0");
-    const dd = String(examDate.getDate()).padStart(2, "0");
-    
-    return {
-      ...edition,
-      examDate: `${yyyy}-${mm}-${dd}`,
-    };
-  });
-}
-
-export function getConvocatoriaEdition(
-  code: string,
   planStartedAt?: string | null,
 ): UmngConvocatoriaEdition | null {
   const schedule = getUserConvocatoriaSchedule(planStartedAt);
