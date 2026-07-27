@@ -129,7 +129,7 @@ function EditionCard({ status, trackName = "UMNG" }: { status: UmngConvocatoriaE
           </div>
 
           <div>
-            <h2 className="text-2xl font-black text-slate-900">{edition.label}</h2>
+            <h2 className="text-2xl font-black text-slate-900">{edition.label.replace("Edición", "Simulacro")}</h2>
             <p className="mt-2 flex items-center gap-2 text-sm text-slate-500">
               <Calendar size={14} />
               {status.opensLabel}
@@ -159,7 +159,7 @@ function EditionCard({ status, trackName = "UMNG" }: { status: UmngConvocatoriaE
                 href={href}
                 className="inline-flex min-h-12 items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground transition hover:scale-[1.02]"
               >
-                Iniciar examen
+                Iniciar simulacro
               </Link>
             ) : phase === "upcoming" ? (
               <div className="inline-flex min-h-12 items-center justify-center rounded-xl border border-amber-200 bg-amber-50 px-6 text-sm font-semibold text-amber-700">

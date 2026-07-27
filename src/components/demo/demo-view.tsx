@@ -1148,7 +1148,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     </div>
                     <h1 className="mb-4 text-4xl font-black tracking-tight text-slate-900 sm:text-6xl">
                       {isConvocatoria ? (
-                        <>Convocatoria <span className="text-mq-accent">UCC</span></>
+                        <>Simulacro <span className="text-mq-accent">{convocatoriaEdition?.code.startsWith("UMNG") ? "UMNG" : "UCC"}</span></>
                       ) : isSimulacro ? (
                         <>Simulacro <span className="text-mq-accent">{isUccSimulacro ? "UCC Pasto" : "tipo examen"}</span></>
                       ) : isRepasoCierre ? (
@@ -1167,7 +1167,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     </h1>
                     <p className="mb-6 max-w-lg text-lg text-slate-500">
                       {isConvocatoria && convocatoriaEdition
-                        ? `${convocatoriaEdition.label} · ${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min · 1 intento · sin feedback durante el examen.`
+                        ? `${convocatoriaEdition.label.replace("Edición", "Simulacro")} · ${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min · 1 intento · sin feedback durante el examen.`
                         : isSimulacro
                         ? `${plannedQuestionCount} preguntas · ${effectiveTimedExamMinutes} min máximo${isUccSimulacro ? " · Res. 108" : ""}.`
                         : isRepasoCierre
@@ -1240,7 +1240,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                       className="mq-premium-glow group flex h-16 items-center justify-center gap-4 rounded-2xl bg-mq-accent px-12 text-lg font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       {isConvocatoria
-                        ? "INICIAR CONVOCATORIA"
+                        ? `INICIAR ${convocatoriaEdition?.label.toUpperCase().replace("EDICIÓN", "SIMULACRO") || "SIMULACRO"}`
                         : isSimulacro
                         ? "INICIAR SIMULACRO"
                         : isRepasoCierre
@@ -1269,7 +1269,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                           {isDailyPill
                             ? "La Pildora del Dr. Q"
                             : isConvocatoria
-                              ? "Convocatoria UCC en curso"
+                              ? `Simulacro ${convocatoriaEdition?.code.startsWith("UMNG") ? "UMNG" : "UCC"} en curso`
                             : isRepasoCierre
                               ? "Examen de cierre"
                               : isRepasoPractice
