@@ -4,7 +4,7 @@ import { PanelSection } from "@/components/admin/panel-section";
 import {
   adminListConvocatoriaOverrides,
 } from "@/lib/server/convocatoria-edits-admin";
-import { UCC_CONVOCATORIA_EDITIONS } from "@/lib/training/ucc-convocatoria";
+import { UCC_CONVOCATORIA_EDITIONS } from "@/lib/training/convocatorias";
 
 export const dynamic = "force-dynamic";
 

@@ -20,17 +20,19 @@ import {
   getFeaturedConvocatoriaEditionForUser,
   resolveConvocatoriaAttempt,
   type UccConvocatoriaAttempt,
-  type UccConvocatoriaEdition,
-} from "@/lib/training/ucc-convocatoria";
+  type UccConvocatoriaAttempt as ConvocatoriaAttempt,
+  type UccConvocatoriaEdition as ConvocatoriaEdition,
+} from "@/lib/training/convocatorias";
 
 type ConvocatoriaRepasoSummaryCardProps = {
   userId: string;
   planStartedAt?: string | null;
+  trackName?: string;
 };
 
 type LoadedState = {
-  edition: UccConvocatoriaEdition;
-  attempt: UccConvocatoriaAttempt;
+  edition: ConvocatoriaEdition;
+  attempt: ConvocatoriaAttempt;
 };
 
 function buildReviewHref(resultId: string | undefined, filter?: "wrong") {
@@ -39,7 +41,11 @@ function buildReviewHref(resultId: string | undefined, filter?: "wrong") {
   return filter ? `${base}?filter=${filter}` : base;
 }
 
-export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: ConvocatoriaRepasoSummaryCardProps) {
+export function ConvocatoriaRepasoSummaryCard({
+  userId,
+  planStartedAt,
+  trackName = "UCC",
+}: ConvocatoriaRepasoSummaryCardProps) {
   const [loaded, setLoaded] = useState<LoadedState | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -49,7 +55,7 @@ export function ConvocatoriaRepasoSummaryCard({ userId, planStartedAt }: Convoca
     async function load() {
       setIsLoading(true);
       try {
-        const edition = getFeaturedConvocatoriaEditionForUser(planStartedAt);
+        const edition = getFeaturedConvocatoriaEditionForUser(trackName, planStartedAt);
         if (!edition) {
           if (mounted) setLoaded(null);
           return;

@@ -93,7 +93,7 @@ import {
   saveConvocatoriaAttempt,
   selectConvocatoriaExamQuestions,
   getUserConvocatoriaSchedule,
-} from "@/lib/training/ucc-convocatoria";
+} from "@/lib/training/convocatorias";
 import {
   getWrongQuestionIds,
   resolveSessionQuestions,
@@ -365,7 +365,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       }
       if (user) {
         const attempt = await getConvocatoriaAttempt(user.uid, convocatoriaEdition.code);
-        const schedule = getUserConvocatoriaSchedule(userTrackProfile?.planStartedAt);
+        const track = convocatoriaEdition.code.startsWith("UMNG") ? "UMNG" : "UCC";
+        const schedule = getUserConvocatoriaSchedule(track, userTrackProfile?.planStartedAt);
         const status = buildConvocatoriaEditionStatus({
           edition: convocatoriaEdition,
           attempt,

@@ -9,9 +9,6 @@ import {
 import { getFirebaseDb } from "@/lib/firebase";
 import { getLocalQuestionBank } from "@/lib/questions/local-bank";
 import { DR_Q_MULTISPECIALTY_QUESTIONS } from "@/data/dr-q-multispecialty-questions";
-import { UCC_CONV_2025_06_21_QUESTIONS } from "@/data/ucc-conv-2025-06-21-questions";
-import { UCC_CONV_2025_07_05_QUESTIONS } from "@/data/ucc-conv-2025-07-05-questions";
-import { UCC_CONV_2025_07_19_QUESTIONS } from "@/data/ucc-conv-2025-07-19-questions";
 import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
 import type { TrainingQuestion } from "./types";
 
@@ -43,9 +40,6 @@ export async function getActiveQuestions(): Promise<TrainingQuestion[]> {
   const localBank = [
     ...await getLocalQuestionBank(),
     ...DR_Q_MULTISPECIALTY_QUESTIONS,
-    ...UCC_CONV_2025_06_21_QUESTIONS,
-    ...UCC_CONV_2025_07_05_QUESTIONS,
-    ...UCC_CONV_2025_07_19_QUESTIONS,
   ];
 
   try {

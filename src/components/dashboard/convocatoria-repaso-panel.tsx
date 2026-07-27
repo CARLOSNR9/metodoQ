@@ -5,7 +5,7 @@ import { AlertTriangle, ArrowRight, BookOpenCheck } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getUccRepasoInsights } from "@/lib/diagnostic/ucc-exam-blueprint";
 import { resolveSessionQuestions } from "@/lib/session-review";
-import type { UccConvocatoriaAttempt } from "@/lib/training/ucc-convocatoria";
+import type { UccConvocatoriaAttempt } from "@/lib/training/convocatorias";
 
 type ConvocatoriaRepasoPanelProps = {
   attempt: UccConvocatoriaAttempt;

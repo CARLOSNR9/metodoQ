@@ -15,7 +15,7 @@ import {
 } from "@/lib/results";
 import { hasSessionReviewData, resolveSessionQuestions } from "@/lib/session-review";
 import type { TrainingQuestion } from "@/lib/questions/types";
-import { getConvocatoriaEdition } from "@/lib/training/ucc-convocatoria";
+import { getConvocatoriaEdition } from "@/lib/training/convocatorias";
 
 type SessionReviewPageProps = {
   resultId: string;

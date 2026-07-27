@@ -6,7 +6,7 @@ import { getConvocatoriaQuestionBank } from "@/lib/questions/convocatoria-bank";
 import { mergeConvocatoriaBank } from "@/lib/questions/convocatoria-overrides";
 import { sortConvocatoriaQuestions } from "@/lib/convocatoria/question-number";
 import { adminListConvocatoriaOverrides } from "@/lib/server/convocatoria-edits-admin";
-import { getConvocatoriaEdition } from "@/lib/training/ucc-convocatoria";
+import { getConvocatoriaEdition } from "@/lib/training/convocatorias";
 
 export const dynamic = "force-dynamic";
 

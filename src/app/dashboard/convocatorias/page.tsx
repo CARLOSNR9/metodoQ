@@ -5,6 +5,7 @@ import { useUserProfile } from "@/hooks/use-user-profile";
 import { hasProFeatures } from "@/lib/plans/access";
 import Link from "next/link";
 import { UccConvocatoriasView } from "@/components/dashboard/ucc-convocatorias-view";
+import { UmngConvocatoriasView } from "@/components/dashboard/umng-convocatorias-view";
 import { isUmngUniversity } from "@/lib/diagnostic/university-match";
 
 export default function ConvocatoriasPage() {
@@ -40,6 +41,10 @@ export default function ConvocatoriasPage() {
   }
 
   if (!user) return null;
+
+  if (trackName === "UMNG") {
+    return <UmngConvocatoriasView userId={user.uid} planStartedAt={profile?.planStartedAt} trackName={trackName} />;
+  }
 
   return <UccConvocatoriasView userId={user.uid} planStartedAt={profile?.planStartedAt} trackName={trackName} />;
 }
