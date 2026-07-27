@@ -148,10 +148,10 @@ export function ConvocatoriaRepasoPanel({
             {topTopics.map((item) => (
               <span
                 key={item.topic}
-                className="inline-flex items-center gap-1.5 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-xs font-semibold text-rose-100"
+                className="inline-flex items-center gap-1.5 rounded-full border border-rose-500/20 bg-rose-500/10 px-3 py-1 text-xs font-semibold text-rose-700"
               >
                 {item.topic}
-                <span className="text-rose-300">×{item.wrongCount}</span>
+                <span className="text-rose-500">×{item.wrongCount}</span>
               </span>
             ))}
           </div>
