@@ -1,5 +1,5 @@
 import { getApp, getApps, initializeApp } from "firebase/app";
-import { getAuth, type Auth } from "firebase/auth";
+import { getAuth, setPersistence, browserSessionPersistence, type Auth } from "firebase/auth";
 import { getFirestore, type Firestore } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -10,6 +10,8 @@ const firebaseConfig = {
   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
+
+let persistenceSet = false;
 
 export function getFirebaseAuth(): Auth {
   if (typeof window === "undefined") {
@@ -22,7 +24,14 @@ export function getFirebaseAuth(): Auth {
     console.error("⚠️ Configuración de Firebase incompleta. Revisa tus variables de entorno (.env.local)");
   }
   
-  return getAuth(app);
+  const auth = getAuth(app);
+
+  if (!persistenceSet) {
+    setPersistence(auth, browserSessionPersistence).catch(console.error);
+    persistenceSet = true;
+  }
+  
+  return auth;
 }
 
 export function getFirebaseDb(): Firestore {
