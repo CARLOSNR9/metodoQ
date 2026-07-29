@@ -126,7 +126,7 @@ export function AdminUserForm() {
               type="text"
               required
               placeholder="Ej: Juan Pérez"
-              className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+              className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
             />
           </div>
           <div className="space-y-1.5">
@@ -138,7 +138,7 @@ export function AdminUserForm() {
               type="email"
               required
               placeholder="juan@ejemplo.com"
-              className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+              className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
             />
           </div>
         </div>
@@ -153,7 +153,7 @@ export function AdminUserForm() {
             required
             minLength={6}
             placeholder="Mín. 6 caracteres"
-            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+            className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
         </div>
 
@@ -185,10 +185,10 @@ export function AdminUserForm() {
                 name="plan"
                 value={selectedPlan}
                 onChange={(e) => setSelectedPlan(e.target.value as UserPlan)}
-                className="w-full cursor-pointer appearance-none rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-slate-900 outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
+                className="w-full cursor-pointer appearance-none rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-900 outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
               >
                 {PLAN_OPTIONS.map((opt) => (
-                  <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-slate-900">
+                  <option key={opt.value} value={opt.value} className="bg-white text-slate-900">
                     {opt.label}
                   </option>
                 ))}
