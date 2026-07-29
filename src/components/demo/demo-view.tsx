@@ -27,11 +27,10 @@ import {
   trackClickUpgrade,
   trackDemoQuestionAnswered,
   trackFinishDemo,
-  trackStartDemo,
-  trackViewPaywall,
-} from "@/lib/analytics/events";
-import { motion } from "framer-motion";
-import { Zap, Target, ArrowRight, Sparkles } from "lucide-react";
+import { trackClickUpgrade, trackDemoQuestionAnswered, trackFinishDemo, trackStartDemo, trackViewPaywall } from "@/lib/analytics/events";
+import { motion, AnimatePresence } from "framer-motion";
+import { Zap, Target, ArrowRight, Sparkles, Loader2 } from "lucide-react";
+import { universities, universitySpecialties, defaultSpecialties } from "@/data/university-specialties";
 import {
   saveDemoResult,
   registerTrainingDay,
@@ -168,6 +167,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingAuth, setIsCheckingAuth] = useState(true);
   const [hasStarted, setHasStarted] = useState(false);
+  const [demoStep, setDemoStep] = useState<"welcome" | "university" | "specialty" | "transition">("welcome");
+  const [localUniversity, setLocalUniversity] = useState<string | null>(null);
+  const [localSpecialty, setLocalSpecialty] = useState<string | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answersByQuestionId, setAnswersByQuestionId] = useState<
     Record<string, string>
@@ -516,8 +518,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       : isSessionErrorsMode || isRepasoMode
         ? Math.min(plannedQuestionCount || pool.length, pool.length)
         : plannedQuestionCount;
+    const effectiveUniversity = localUniversity || urlUniversity;
+    const effectiveSpec = localSpecialty || urlSpecialty;
     const dedicatedBattery = isAct1
-      ? getAct1DiagnosticSession(urlUniversity, urlSpecialty)
+      ? getAct1DiagnosticSession(effectiveUniversity, effectiveSpec)
       : null;
 
     const cycleOptions =
@@ -570,11 +574,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
               )
             : selectAdaptiveQuestions(pool, count, learningProfile);
 
-    if (user && isAct1 && urlUniversity) {
-      const goalSpecialty = getEffectiveGoalSpecialty(urlUniversity, urlSpecialty);
+    if (user && isAct1 && effectiveUniversity) {
+      const goalSpecialty = getEffectiveGoalSpecialty(effectiveUniversity, effectiveSpec);
       void setDoc(
         doc(getFirebaseDb(), "users", user.uid),
-        { goalUniversity: urlUniversity, goalSpecialty },
+        { goalUniversity: effectiveUniversity, goalSpecialty },
         { merge: true },
       );
     }
@@ -1141,7 +1145,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                       }} 
                     />
                   </motion.div>
-                ) : (
+                ) : demoStep === "welcome" ? (
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center">
                     <div className="mb-8 flex h-24 w-24 items-center justify-center rounded-[2rem] bg-mq-accent/10 text-mq-accent ring-1 ring-mq-accent/20">
                       <Zap size={48} fill="currentColor" />
@@ -1231,7 +1235,13 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     ) : null}
                     <button
                       type="button"
-                      onClick={() => void startAdaptiveSession()}
+                      onClick={() => {
+                        if (isAct1 && !usageBlockReason && questionBank.length > 0) {
+                          setDemoStep("university");
+                        } else {
+                          void startAdaptiveSession();
+                        }
+                      }}
                       disabled={
                         Boolean(usageBlockReason) ||
                         questionBank.length === 0 ||
@@ -1259,7 +1269,85 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                       <ArrowRight className="transition-transform group-hover:translate-x-1" />
                     </button>
                   </motion.div>
+                ) : demoStep === "university" ? (
+                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="flex flex-col items-center w-full max-w-md bg-white border border-slate-200 rounded-[2rem] shadow-xl p-8 relative overflow-hidden">
+                    <div className="absolute top-0 w-full h-32 opacity-20 -z-10 bg-gradient-to-b from-mq-accent to-transparent" />
+                    <h3 className="mb-2 text-xl font-bold text-slate-900">
+                      ¿A qué universidad quieres aplicar?
+                    </h3>
+                    <p className="mb-6 text-sm text-slate-500">
+                      Selecciona tu objetivo. Adaptamos el entrenamiento a ese examen.
+                    </p>
+                    <div className="grid max-h-[340px] w-full grid-cols-1 gap-3 pr-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-slate-200">
+                      {universities.map((uni) => (
+                        <button
+                          key={uni}
+                          onClick={() => {
+                            setLocalUniversity(uni);
+                            setDemoStep("specialty");
+                          }}
+                          className="p-4 text-sm font-semibold transition-all border text-left text-slate-900 rounded-xl bg-slate-50 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
+                        >
+                          {uni}
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                ) : demoStep === "specialty" ? (
+                  <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="flex flex-col items-center w-full max-w-md bg-white border border-slate-200 rounded-[2rem] shadow-xl p-8 relative overflow-hidden">
+                    <div className="absolute top-0 w-full h-32 opacity-20 -z-10 bg-gradient-to-b from-mq-accent to-transparent" />
+                    <h3 className="mb-2 text-xl font-bold text-slate-900">
+                      ¿Qué especialidad buscas?
+                    </h3>
+                    <p className="mb-6 text-sm text-slate-500">
+                      Selecciona la especialidad para personalizar tu experiencia.
+                    </p>
+                    <div className="grid max-h-[340px] w-full grid-cols-1 gap-3 pr-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-slate-200">
+                      {(localUniversity ? (universitySpecialties[localUniversity] || defaultSpecialties) : defaultSpecialties).map((spec) => (
+                        <button
+                          key={spec}
+                          onClick={() => {
+                            setLocalSpecialty(spec);
+                            setDemoStep("transition");
+                            setTimeout(() => {
+                              void startAdaptiveSession();
+                            }, 2500);
+                          }}
+                          className="p-4 text-sm font-semibold transition-all border text-left text-slate-900 rounded-xl bg-slate-50 hover:border-mq-accent/50 hover:bg-mq-accent/10 active:scale-95"
+                        >
+                          {spec}
+                        </button>
+                      ))}
+                    </div>
+                  </motion.div>
+                ) : (
+                  <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center w-full max-w-md bg-white border border-slate-200 rounded-[2rem] shadow-xl p-10 text-center relative overflow-hidden">
+                    <div className="absolute top-0 w-full h-32 opacity-20 -z-10 bg-gradient-to-b from-mq-accent to-transparent" />
+                    <div className="relative mb-8 mt-4">
+                      <Loader2 size={80} className="text-mq-accent animate-spin opacity-20" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Target size={40} className="text-mq-accent animate-pulse" />
+                      </div>
+                    </div>
+                    <h3 className="mb-2 text-2xl font-bold text-slate-900">
+                      Calibrando motor...
+                    </h3>
+                    <p className="mb-10 text-sm text-slate-500 max-w-[280px]">
+                      Adaptando las preguntas para <span className="font-bold text-slate-900">{localUniversity || "tu universidad"}</span> en la especialidad de <span className="font-bold text-slate-900">{localSpecialty || "tu elección"}</span>.
+                    </p>
+                    <div className="w-full flex items-center gap-3 px-2 mb-4">
+                      <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                        <motion.div 
+                          initial={{ width: 0 }}
+                          animate={{ width: "100%" }}
+                          transition={{ duration: 2, ease: "easeInOut" }}
+                          className="h-full bg-mq-accent" 
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
                 )}
+              </div>
               </div>
             ) : (
               <div className="space-y-8 animate-in fade-in duration-500">

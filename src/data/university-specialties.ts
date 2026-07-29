@@ -1,3 +1,28 @@
+export const universities = [
+  "Universidad de Antioquia (UdeA)",
+  "Universidad de Caldas",
+  "Universidad del Valle (Univalle)",
+  "Universidad Nacional de Colombia",
+  "MIR (España)",
+  "Residencia Perú",
+  "ENARM (México)",
+  "Pontificia Universidad Javeriana",
+  "Universidad El Bosque",
+  "Fundación Universitaria Sanitas",
+  "Universidad del Rosario",
+  "Universidad Militar Nueva Granada",
+  "FUCS",
+  "Universidad Pontificia Bolivariana (UPB)",
+  "Universidad CES",
+  "Universidad Icesi",
+  "Universidad Industrial de Santander (UIS)",
+  "Universidad de Cartagena",
+  "Universidad del Sinú (Unisinu)",
+  "Universidad del Norte (Uninorte)",
+  "Universidad Cooperativa (Pasto)",
+  "Otra",
+];
+
 export const universitySpecialties: Record<string, string[]> = {
   "Universidad Cooperativa (Pasto)": [
     "Medicina Interna",
