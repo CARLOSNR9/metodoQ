@@ -212,40 +212,12 @@ export function HowItWorksSection({ id = "como-funciona" }: { id?: string }) {
           </div>
         </div>
 
-        {/* Bottom Banner */}
+        {/* Bottom Banner commented out for now since the course is new
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-[#F8FAFC] rounded-3xl p-8 sm:p-10 border border-slate-100 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-6"
-        >
-          <div className="flex items-center gap-6 max-w-lg text-center lg:text-left">
-            <div className="hidden sm:flex w-16 h-16 shrink-0 rounded-full bg-blue-100 text-blue-600 items-center justify-center">
-              <Trophy className="w-8 h-8" />
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-slate-900 mb-2">Un método respaldado por resultados</h4>
-              <p className="text-[13px] text-slate-500 font-medium leading-relaxed">
-                Miles de médicos han transformado su preparación y ya están ejerciendo su especialidad soñada.
-              </p>
-            </div>
-          </div>
-          
-          <div className="flex items-center gap-8 sm:gap-16">
-            <div className="flex flex-col items-center">
-              <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-1">+50K</span>
-              <span className="text-[11px] font-bold text-slate-600">Médicos preparados</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-green-500 mb-1">95%</span>
-              <span className="text-[11px] font-bold text-slate-600">Satisfacción</span>
-            </div>
-            <div className="hidden sm:flex flex-col items-center">
-              <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500 mb-1">24/7</span>
-              <span className="text-[11px] font-bold text-slate-600">Acompañamiento</span>
-            </div>
-          </div>
+          ...
         </motion.div>
+        */}
 
       </div>
     </section>

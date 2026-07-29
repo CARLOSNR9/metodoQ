@@ -5,7 +5,7 @@ import { Star, ArrowRight, Play, CheckCircle2, TrendingUp, BookOpen, Clock, Acti
 import { trackClickDemo } from "@/lib/analytics/events";
 import { formatUserCount, usePublicStats } from "@/hooks/use-public-stats";
 import { motion } from "framer-motion";
-
+import { universities } from "@/data/medical-programs";
 function SidebarMockup() {
   return (
     <div className="w-16 flex flex-col items-center py-6 bg-white border-r border-slate-100 gap-8 h-full rounded-l-3xl shadow-[4px_0_24px_-12px_rgba(0,0,0,0.05)] z-10 relative">
@@ -315,7 +315,7 @@ export function HeroSection() {
               </Link>
             </motion.div>
 
-            {/* Trust Elements */}
+            {/* Trust Elements & Stats commented out for now since the course is new
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -344,7 +344,6 @@ export function HeroSection() {
               </div>
             </motion.div>
 
-            {/* 4 Stats Row */}
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -383,6 +382,7 @@ export function HeroSection() {
                 <span className="text-[11px] font-semibold text-slate-500">IA siempre disponible</span>
               </div>
             </motion.div>
+            */}
 
           </div>
 
@@ -393,25 +393,21 @@ export function HeroSection() {
         </div>
       </div>
       
-      {/* Logos Section - Confían en nosotros */}
+      {/* Logos Section - Universidades */}
       <div className="w-full border-t border-slate-200/60 bg-white py-10">
         <div className="mx-auto max-w-7xl px-6 text-center">
-          <p className="text-sm font-bold text-slate-800 mb-8">Confían en nosotros</p>
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-50 hover:opacity-100 transition-all duration-500">
-            <div className="flex items-center gap-1.5 font-black text-slate-800 text-xl tracking-tighter">
-              <span className="text-green-700">U</span>de<span className="text-green-700">A</span>
-            </div>
-            <div className="flex items-center gap-2 font-serif font-bold text-slate-800 text-xl tracking-wide">
-              JAVERIANA
-            </div>
-            <div className="flex items-center gap-1.5 font-extrabold text-red-700 text-lg uppercase tracking-widest">
-              Univalle
-            </div>
-            <div className="flex items-center gap-2 font-bold text-slate-800 text-lg">
-              <ShieldCheck className="w-6 h-6 text-blue-800" /> San Ignacio
-            </div>
-            <div className="flex items-center gap-1 font-semibold text-slate-800 text-2xl tracking-tight">
-              <span className="text-blue-900">Uni</span>Sabana
+          <p className="text-sm font-bold text-slate-800 mb-8">Te preparamos para ingresar a las mejores universidades</p>
+          <div className="relative flex overflow-hidden group">
+            {/* Fade gradients for smooth edge transition */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r from-white to-transparent z-10" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l from-white to-transparent z-10" />
+            
+            <div className="flex animate-marquee group-hover:[animation-play-state:paused] gap-4 md:gap-6 px-3">
+              {[...universities, ...universities].map((uni, i) => (
+                <div key={i} className="flex items-center justify-center px-5 py-2.5 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-200 rounded-full transition-colors cursor-default whitespace-nowrap shrink-0">
+                  <span className="text-sm font-bold text-slate-600 hover:text-blue-700 transition-colors">{uni}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
