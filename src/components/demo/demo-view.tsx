@@ -1232,7 +1232,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     <button
                       type="button"
                       onClick={() => {
-                        if (isAct1 && !usageBlockReason && questionBank.length > 0) {
+                        const isPlainDemo = !isSimulacro && !isConvocatoria && !isDailyPill && !isBonusMode && !isRepasoMode && !isSessionErrorsMode && !blockParam && !topicParam && !isCustomMode;
+                        if ((isAct1 || isPlainDemo) && !usageBlockReason && questionBank.length > 0) {
                           setDemoStep("university");
                         } else {
                           void startAdaptiveSession();
