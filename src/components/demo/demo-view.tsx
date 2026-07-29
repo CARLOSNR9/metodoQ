@@ -1344,7 +1344,6 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                   </motion.div>
                 )}
               </div>
-              </div>
             ) : (
               <div className="space-y-8 animate-in fade-in duration-500">
                  <div className="flex items-center justify-between">
