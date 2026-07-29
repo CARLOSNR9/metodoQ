@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useOnboarding, OnboardingData } from "@/hooks/use-onboarding";
 import { isUccPastoUniversity } from "@/lib/diagnostic/university-match";
 import Image from "next/image";
+import { universitySpecialties, defaultSpecialties } from "@/data/university-specialties";
+import { Loader2, Target } from "lucide-react";
 
 interface OnboardingModalProps {
   userId: string | undefined;
@@ -37,15 +39,7 @@ const universities = [
   "Otra",
 ];
 
-const specialties = [
-  "Medicina Interna",
-  "Pediatría",
-  "Anestesiología y Reanimación",
-  "Obstetricia y Ginecología",
-  "Cirugía General",
-  "Cirugía Plástica",
-  "Otra",
-];
+
 
 export function OnboardingModal({ userId }: OnboardingModalProps) {
   const { needsOnboarding, loading, completeOnboarding } = useOnboarding(userId);
@@ -55,6 +49,10 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
   const [selectionFeedback, setSelectionFeedback] = useState<string | null>(null);
 
   if (loading || !needsOnboarding) return null;
+
+  const currentSpecialties = data.goalUniversity 
+    ? (universitySpecialties[data.goalUniversity] || defaultSpecialties) 
+    : defaultSpecialties;
 
   const handleNext = (nextStep: Step, newData?: Partial<OnboardingData>) => {
     if (newData) {
@@ -132,7 +130,7 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                   onClick={() => handleNext("university")}
                   className="w-full py-4 text-base font-bold transition-all duration-200 rounded-2xl bg-mq-accent text-mq-accent-foreground hover:brightness-110 active:scale-95 shadow-[0_0_40px_-10px_rgb(0_209_255/0.5)]"
                 >
-                  Comenzar
+                  Comenzar entrenamiento
                 </button>
               </motion.div>
             )}
@@ -206,7 +204,7 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                 </p>
 
                 <div className="grid max-h-[340px] grid-cols-1 gap-3 pr-2 overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-white/10">
-                  {specialties.map((spec) => (
+                  {currentSpecialties.map((spec) => (
                     <button
                       key={spec}
                       onClick={() => handleNext("experience", { goalSpecialty: spec })}
@@ -286,35 +284,39 @@ export function OnboardingModal({ userId }: OnboardingModalProps) {
                 key="transition"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="flex flex-col items-center text-center py-6"
+                className="flex flex-col items-center text-center py-10"
               >
-                <div className="relative w-32 h-32 mb-6">
-                  <Image
-                    src="/drq.png"
-                    alt="Dr. Q"
-                    fill
-                    className="object-contain"
-                  />
-                  <div className="absolute bottom-1 right-1 w-9 h-9 flex items-center justify-center rounded-full bg-mq-accent text-mq-accent-foreground border-4 border-[#0F172A] shadow-lg">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
+                <div className="relative mb-8">
+                  <Loader2 size={80} className="text-mq-accent animate-spin opacity-20" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Target size={40} className="text-mq-accent animate-pulse" />
                   </div>
                 </div>
                 
                 <h3 className="mb-2 text-2xl font-bold text-slate-900">
-                  Perfecto.
+                  Calibrando motor...
                 </h3>
-                <p className="mb-10 text-base text-slate-500">
-                  Ya sabemos cómo ayudarte.
+                <p className="mb-10 text-sm text-slate-500 max-w-[280px]">
+                  Adaptando las preguntas para <span className="font-bold text-slate-900">{data.goalUniversity || "tu universidad"}</span> en la especialidad de <span className="font-bold text-slate-900">{data.goalSpecialty || "tu elección"}</span>.
                 </p>
+
+                <div className="w-full flex items-center gap-3 px-2 mb-8">
+                  <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 2, ease: "easeInOut" }}
+                      className="h-full bg-mq-accent" 
+                    />
+                  </div>
+                </div>
 
                 <button
                   onClick={handleComplete}
                   disabled={isSaving}
-                  className="w-full py-4 text-base font-bold transition-all duration-200 rounded-2xl bg-mq-accent text-mq-accent-foreground hover:brightness-110 active:scale-95 shadow-[0_0_40px_-10px_rgb(0_209_255/0.5)] disabled:opacity-70 disabled:cursor-wait"
+                  className="w-full py-4 flex items-center justify-center gap-3 text-base font-bold transition-all duration-200 rounded-2xl bg-mq-accent text-mq-accent-foreground hover:brightness-110 active:scale-95 shadow-[0_0_40px_-10px_rgb(0_209_255/0.5)] disabled:opacity-70 disabled:cursor-wait"
                 >
-                  {isSaving ? "Guardando..." : "Comenzar entrenamiento"}
+                  {isSaving ? "Iniciando..." : "Ir a las 10 preguntas"}
                 </button>
               </motion.div>
             )}
