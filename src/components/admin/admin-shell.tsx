@@ -36,7 +36,8 @@ const navigationItems = [
 ] as const;
 
 const externalLinks = [
-  { label: "Panel estudiante", href: "/dashboard" },
+  { label: "Panel estudiante (Cooperativa)", href: "/dashboard?preview_uni=ucc" },
+  { label: "Panel estudiante (UMNG)", href: "/dashboard?preview_uni=umng" },
   { label: "Panel profesor", href: "/profesor" },
   { label: "Panel moderador", href: "/moderador" },
 ] as const;

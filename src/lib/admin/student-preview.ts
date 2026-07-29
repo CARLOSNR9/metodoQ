@@ -15,6 +15,7 @@ export function isAdminStudentPreview(
 export function applyAdminStudentPreviewProfile(
   profile: UserProfile,
   role?: string | null,
+  previewUni?: "ucc" | "umng" | null
 ): UserProfile {
   const effectiveRole =
     role ?? (profile as UserProfile & { role?: string }).role ?? null;
@@ -30,6 +31,13 @@ export function applyAdminStudentPreviewProfile(
     onboardingCompleted: profile.onboardingCompleted ?? true,
     attemptedExam: profile.attemptedExam ?? true,
   };
+
+  if (previewUni === "ucc") {
+    withPro.goalUniversity = "Universidad Cooperativa (Pasto)";
+    withPro.goalSpecialty = "Medicina Interna";
+  } else if (previewUni === "umng") {
+    withPro.goalUniversity = "Universidad Militar Nueva Granada";
+  }
 
   return ensureSubscriptionDates(withPro, 6) as UserProfile;
 }

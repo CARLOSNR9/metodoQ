@@ -90,10 +90,22 @@ export function useUserProfile() {
           base,
           user.email ?? base.email,
         );
+        
+        let previewUni: "ucc" | "umng" | null = null;
+        if (typeof window !== "undefined") {
+          const searchParams = new URLSearchParams(window.location.search);
+          const uni = searchParams.get("preview_uni") as "ucc" | "umng" | null;
+          if (uni === "ucc" || uni === "umng") {
+            sessionStorage.setItem("admin_preview_uni", uni);
+          }
+          previewUni = sessionStorage.getItem("admin_preview_uni") as "ucc" | "umng" | null;
+        }
+
         setProfile(
           applyAdminStudentPreviewProfile(
             withDemoProfile,
             (base as UserProfile & { role?: string }).role,
+            previewUni
           ),
         );
         setLoading(false);
