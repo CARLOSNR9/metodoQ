@@ -230,7 +230,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Buscar por correo o nombre..."
-            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500/50 sm:max-w-xs"
+            className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm text-slate-900 placeholder:text-slate-500/50 sm:max-w-xs"
           />
         </div>
 
@@ -263,6 +263,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
             <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
               <th className="pb-3 pr-3">Registro</th>
               <th className="pb-3 pr-3">Usuario</th>
+              <th className="pb-3 pr-3">Universidad</th>
               <th className="pb-3 pr-3">Estado</th>
               <th className="pb-3 pr-3">Última actividad</th>
               <th className="pb-3 pr-3">Racha</th>
@@ -277,7 +278,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={11} className="py-8 text-center text-slate-500">
+                <td colSpan={12} className="py-8 text-center text-slate-500">
                   No hay usuarios con este filtro.
                 </td>
               </tr>
@@ -294,6 +295,9 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                         {user.displayName !== "—" ? user.displayName : user.email.split("@")[0]}
                       </p>
                       <p className="text-xs text-slate-500">{user.email || "—"}</p>
+                    </td>
+                    <td className="py-3 pr-3 text-slate-500">
+                      {user.university || "—"}
                     </td>
                     <td className="py-3 pr-3">
                       <ActivityBadge status={user.activityStatus} />

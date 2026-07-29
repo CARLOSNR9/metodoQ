@@ -20,6 +20,7 @@ export type AdminUserRow = {
   totalQuestionsAnswered: number;
   cumulativeScore: number | null;
   activityStatus: ActivityStatus;
+  university: string | null;
 };
 
 function resolveSource(data: Record<string, unknown>): UserAcquisitionSource {
@@ -84,6 +85,7 @@ export async function getAdminUserDirectory(limit = 150): Promise<AdminUserRow[]
       cumulativeScore:
         typeof data.cumulativeScore === "number" ? data.cumulativeScore : null,
       activityStatus: resolveActivityStatus(lastActiveAt),
+      university: typeof data.university === "string" ? data.university : null,
     };
   });
 }
