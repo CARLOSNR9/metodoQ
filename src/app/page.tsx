@@ -4,6 +4,7 @@ import {
   HowItWorksSection,
   PricingSection,
   SocialProofSection,
+  FAQSection,
 } from "@/components/landing";
 import { LandingVisitTracker } from "@/components/analytics/landing-visit-tracker";
 
@@ -29,6 +30,10 @@ export default function HomePage() {
       </div>
       
       <div className="mq-fade-up [animation-delay:400ms]">
+        <FAQSection />
+      </div>
+      
+      <div className="mq-fade-up [animation-delay:500ms]">
         <CtaBand />
       </div>
     </main>

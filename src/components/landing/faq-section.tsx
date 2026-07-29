@@ -13,16 +13,24 @@ export type FAQSectionProps = {
 
 const defaultItems: FAQItem[] = [
   {
-    question: "¿Es gratis?",
-    answer: "Sí, puedes probar Método Q sin costo alguno. Queremos que experimentes la claridad antes de decidirte por un plan avanzado.",
+    question: "¿Qué es Método Q y cómo me ayuda a pasar el examen?",
+    answer: "Método Q es una plataforma inteligente que evalúa tu nivel de conocimiento, detecta tus puntos débiles y crea un plan de estudio personalizado. Con nuestra IA y simulacros reales, optimizamos tu preparación para asegurar tu ingreso a la especialidad médica.",
   },
   {
-    question: "¿Funciona para cualquier tema?",
-    answer: "Sí, nuestra IA está entrenada para procesar desde temas académicos básicos hasta conceptos profesionales avanzados.",
+    question: "¿Sirve para el examen de cualquier universidad?",
+    answer: "¡Sí! Contamos con un amplio banco de preguntas basadas en los exámenes de admisión de las mejores universidades del país (UdeA, Nacional, Javeriana, Univalle, etc.) y cubrimos todas las especialidades médicas.",
   },
   {
-    question: "¿Necesito experiencia previa?",
-    answer: "No, Método Q está diseñado para ser intuitivo. Solo escribe lo que quieres aprender y deja que el método haga el resto.",
+    question: "¿Puedo probar la plataforma antes de pagar?",
+    answer: "Por supuesto. Puedes registrarte y realizar un diagnóstico inicial de forma gratuita para conocer tus fortalezas y debilidades, todo sin necesidad de ingresar tu tarjeta de crédito.",
+  },
+  {
+    question: "¿En qué se diferencia de los cursos tradicionales?",
+    answer: "A diferencia de los cursos tradicionales donde todos estudian lo mismo, Método Q adapta el temario diariamente a tus necesidades. Así inviertes tu tiempo en lo que realmente te falta por aprender, aumentando drásticamente tus probabilidades de aprobar.",
+  },
+  {
+    question: "¿Puedo estudiar desde mi celular en los turnos?",
+    answer: "Sí, la plataforma está 100% optimizada para dispositivos móviles. Podrás resolver micro-simulacros, revisar perlas clínicas y ver tu progreso en cualquier momento que tengas disponible.",
   },
 ];
 
