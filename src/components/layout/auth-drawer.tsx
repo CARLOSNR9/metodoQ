@@ -64,11 +64,13 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
     setError("");
     setIsLoading(true);
     try {
-      const { isNewUser } = await loginWithGoogle();
+      const { credential, isNewUser } = await loginWithGoogle();
       if (isNewUser) {
-        await sendWelcomeEmailIfPossible();
+        await sendWelcomeEmailIfPossible(credential.user.displayName);
       }
-      router.push("/dashboard");
+      const { resolvePostLoginPath } = await import("@/lib/client/post-login");
+      const path = await resolvePostLoginPath(credential.user.uid, credential.user.email);
+      router.push(path);
       onClose();
     } catch (err: any) {
       console.error("Error completo de login social:", err);
@@ -87,8 +89,10 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
     try {
       if (mode === "login") {
         try {
-          await loginWithEmail(email.trim(), password);
-          router.push("/dashboard");
+          const credential = await loginWithEmail(email.trim(), password);
+          const { resolvePostLoginPath } = await import("@/lib/client/post-login");
+          const path = await resolvePostLoginPath(credential.user.uid, credential.user.email);
+          router.push(path);
           onClose();
         } catch (err: any) {
           setMode("register");
@@ -97,8 +101,10 @@ export function AuthDrawer({ isOpen, onClose }: AuthDrawerProps) {
       } else {
         try {
           const { registerWithEmail: registerFn } = await import("@/lib/auth");
-          await registerFn(email.trim(), password);
-          router.push("/dashboard");
+          const credential = await registerFn(email.trim(), password);
+          const { resolvePostLoginPath } = await import("@/lib/client/post-login");
+          const path = await resolvePostLoginPath(credential.user.uid, credential.user.email);
+          router.push(path);
           onClose();
         } catch (err: any) {
           if (err.code === "auth/email-already-in-use") {
