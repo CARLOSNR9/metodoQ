@@ -23,10 +23,6 @@ import { ExamFocusWarningModal } from "@/components/demo/exam-focus-warning-moda
 import { CustomTrainingCreator } from "@/components/training/custom-training-creator";
 import { hasProFeatures, hasUnlimitedTraining } from "@/lib/plans/access";
 import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
-import {
-  trackClickUpgrade,
-  trackDemoQuestionAnswered,
-  trackFinishDemo,
 import { trackClickUpgrade, trackDemoQuestionAnswered, trackFinishDemo, trackStartDemo, trackViewPaywall } from "@/lib/analytics/events";
 import { motion, AnimatePresence } from "framer-motion";
 import { Zap, Target, ArrowRight, Sparkles, Loader2 } from "lucide-react";
