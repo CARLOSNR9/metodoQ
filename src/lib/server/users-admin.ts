@@ -85,7 +85,7 @@ export async function getAdminUserDirectory(limit = 150): Promise<AdminUserRow[]
       cumulativeScore:
         typeof data.cumulativeScore === "number" ? data.cumulativeScore : null,
       activityStatus: resolveActivityStatus(lastActiveAt),
-      university: typeof data.university === "string" ? data.university : null,
+      university: typeof data.goalUniversity === "string" ? data.goalUniversity : (typeof data.university === "string" ? data.university : null),
     };
   });
 }
