@@ -28,19 +28,19 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
     const base = "flex h-12 w-full items-center justify-center rounded-xl text-[15px] font-bold transition-all active:scale-[0.98] lg:h-14";
     
     if (planId === "FREE") {
-      return `${base} bg-white text-slate-800 border border-slate-200 hover:bg-slate-50 group`;
-    }
-    if (planId === "BASICO") {
-      return `${base} bg-white text-blue-600 border border-blue-600 hover:bg-blue-50 group`;
-    }
-    if (planId === "PRO") {
       return `${base} bg-blue-600 text-white hover:bg-blue-700 shadow-md group`;
     }
+    if (planId === "BASICO") {
+      return `${base} bg-blue-50 text-blue-700 border border-blue-200 hover:bg-blue-100 hover:border-blue-300 group`;
+    }
+    if (planId === "PRO") {
+      return `${base} bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/25 group`;
+    }
     if (planId === "RESIDENTE") {
-      return `${base} bg-white text-orange-500 border border-orange-500 hover:bg-orange-50 group`;
+      return `${base} bg-orange-50 text-orange-600 border border-orange-200 hover:bg-orange-100 hover:border-orange-300 group`;
     }
     
-    return `${base} bg-white text-slate-700 border border-slate-200`;
+    return `${base} bg-blue-50 text-blue-700 border border-blue-200`;
   };
 
   return (
@@ -148,7 +148,7 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
 
                 <div className="mb-8 flex flex-col gap-1 min-h-[90px]">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-4xl font-black text-slate-900">
+                    <span className="text-4xl font-black text-blue-600">
                       {plan.id === "FREE" ? "$0" : formatCOP(currentPrice.monthly)}
                     </span>
                     {plan.id !== "FREE" && <span className="text-slate-500 text-xs font-semibold">/mes</span>}
