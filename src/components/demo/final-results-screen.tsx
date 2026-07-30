@@ -440,24 +440,24 @@ export function FinalResultsScreen({
                 <Target className="h-4 w-4" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-slate-900">
+                <h4 className="text-base font-bold text-white">
                   {scorePercentage >= 80 ? "Nivel de Residente" : "Tu brecha para la plaza"}
                 </h4>
-                <p className="mt-1 text-sm leading-relaxed text-slate-500">
+                <p className="mt-1.5 text-sm leading-relaxed text-slate-300">
                   {scorePercentage >= 90 ? (
-                    <>Estás en el <span className="text-slate-900 font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
+                    <>Estás en el <span className="text-white font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
                   ) : scorePercentage >= 80 ? (
                     isProUser ? (
-                      <>Tu puntaje actual es <span className="text-slate-900 font-bold">superior al promedio</span> de ingreso. Usa simulacros y la píldora diaria para blindar este resultado.</>
+                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Usa simulacros y la píldora diaria para blindar este resultado.</>
                     ) : (
-                      <>Tu puntaje actual es <span className="text-slate-900 font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
+                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
                     )
                   ) : isResidenteUser ? (
-                    <>Estás a <span className="text-slate-900 font-bold">{80 - scorePercentage} puntos</span> del rango competitivo. Tu plan Residente incluye seguimiento 1 a 1 para cerrar esa brecha.</>
+                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> del rango competitivo. Tu plan Residente incluye seguimiento 1 a 1 para cerrar esa brecha.</>
                   ) : isProUser ? (
-                    <>Estás a <span className="text-slate-900 font-bold">{80 - scorePercentage} puntos</span> del promedio competitivo. Con tu plan Pro, enfoca las próximas <span className="font-bold text-mq-accent">4 semanas</span> en tus áreas rojas del radar.</>
+                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> del promedio competitivo. Con tu plan Pro, enfoca las próximas <span className="font-bold text-mq-accent">4 semanas</span> en tus áreas rojas del radar.</>
                   ) : (
-                    <>Estás a <span className="text-slate-900 font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
+                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
                   )}
                 </p>
               </div>
