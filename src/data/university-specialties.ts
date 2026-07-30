@@ -57,3 +57,37 @@ export const defaultSpecialties = [
   "Cirugía Plástica",
   "Otra",
 ];
+
+export function getUniversitiesBySpecialty(): Record<string, string[]> {
+  const result: Record<string, string[]> = {};
+  
+  for (const [uni, specs] of Object.entries(universitySpecialties)) {
+    for (const spec of specs) {
+      if (!result[spec]) {
+        result[spec] = [];
+      }
+      result[spec].push(uni);
+    }
+  }
+  
+  return result;
+}
+
+export function getAllSpecialties(): string[] {
+  const specialties = new Set<string>();
+  
+  for (const specs of Object.values(universitySpecialties)) {
+    for (const spec of specs) {
+      specialties.add(spec);
+    }
+  }
+  
+  // Agregamos las por defecto que puedan no estar en la lista aún
+  for (const spec of defaultSpecialties) {
+    if (spec !== "Otra") {
+      specialties.add(spec);
+    }
+  }
+  
+  return Array.from(specialties).sort();
+}

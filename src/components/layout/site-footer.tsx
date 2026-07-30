@@ -59,7 +59,7 @@ export function SiteFooter() {
             <h4 className="text-[11px] font-black tracking-widest text-slate-900 uppercase">Plataforma</h4>
             <ul className="flex flex-col gap-3.5">
               <li><Link href="#como-funciona" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Método</Link></li>
-              <li><Link href="#precios" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Simulacros</Link></li>
+              <li><Link href="#universidades" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Universidades</Link></li>
               <li><Link href="#" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Preguntas</Link></li>
               <li><Link href="/residente" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Plan Residente</Link></li>
               <li><Link href="#" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Doctor Q (IA)</Link></li>

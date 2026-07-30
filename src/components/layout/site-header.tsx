@@ -11,10 +11,11 @@ import { useUserRole } from "@/hooks/use-user-role";
 import { logoutUser } from "@/lib/auth";
 import { getPostLoginPath } from "@/lib/roles";
 import { UrgencyBanner } from "@/components/landing/urgency-banner";
+import { UniversitiesMegaMenu } from "./universities-mega-menu";
+
 
 const nav = [
   { label: "Método", href: "/#como-funciona" },
-  { label: "Simulacros", href: "/#simulacros" },
   { label: "Precios", href: "/#precios" },
   { label: "Testimonios", href: "/#testimonios" },
   { label: "FAQ", href: "/#faq" },
@@ -121,15 +122,11 @@ export function SiteHeader() {
             className="hidden items-center gap-8 text-sm font-semibold text-slate-600 sm:flex ml-4"
             aria-label="Principal"
           >
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="transition duration-200 hover:text-mq-accent"
-              >
-                {item.label}
-              </Link>
-            ))}
+            <Link href="/#como-funciona" className="transition duration-200 hover:text-mq-accent">Método</Link>
+            <UniversitiesMegaMenu />
+            <Link href="/#precios" className="transition duration-200 hover:text-mq-accent">Precios</Link>
+            <Link href="/#testimonios" className="transition duration-200 hover:text-mq-accent">Testimonios</Link>
+            <Link href="/#faq" className="transition duration-200 hover:text-mq-accent">FAQ</Link>
           </nav>
 
           <div className="flex flex-1 justify-end items-center gap-4 sm:gap-6">
@@ -152,15 +149,10 @@ export function SiteHeader() {
           aria-label="Secciones"
         >
           <div className="flex w-full justify-between gap-1 text-[0.75rem] font-bold text-slate-500 uppercase tracking-wider">
-            {nav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center"
-              >
-                {item.label}
-              </Link>
-            ))}
+            <Link href="/#como-funciona" className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center">Método</Link>
+            <Link href="/#universidades" className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center">Universidades</Link>
+            <Link href="/#precios" className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center">Precios</Link>
+            <Link href="/#testimonios" className="hidden md:flex min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent items-center justify-center">Testimonios</Link>
             <AuthNavActions onOpenAuth={() => setIsAuthOpen(true)} compact />
           </div>
         </nav>
