@@ -1,6 +1,6 @@
 "use client";
 
-import { Zap, Target, Lock, ArrowRight, Sparkles, Clock, Users, ShieldAlert } from "lucide-react";
+import { Zap, Target, Lock, ArrowRight, Sparkles, Clock, Users, ShieldAlert, Star } from "lucide-react";
 import Link from "next/link";
 import { 
   ReferralCard, 
