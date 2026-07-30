@@ -101,7 +101,7 @@ export function RefuerzoView({ userId }: RefuerzoViewProps) {
           )}
         </div>
         {!isLoading && cierreStatus?.cierreLockedReason ? (
-          <p className="mt-4 rounded-xl border border-amber-500/20 bg-amber-500/10 px-4 py-3 text-sm text-amber-100/90">
+          <p className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
             {cierreStatus.cierreLockedReason}
           </p>
         ) : null}

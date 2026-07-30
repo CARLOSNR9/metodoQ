@@ -209,25 +209,25 @@ export function DashboardPricingView() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col sm:flex-row items-center justify-between rounded-2xl bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 p-4 px-6 backdrop-blur-md gap-4"
+          className="flex flex-col sm:flex-row items-center justify-between rounded-2xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-4 px-6 shadow-sm gap-4"
         >
           <div className="flex items-center gap-3">
-            <Clock className="text-amber-400 w-6 h-6 animate-pulse" />
+            <Clock className="text-amber-600 w-6 h-6 animate-pulse" />
             <div>
-              <p className="text-sm font-bold text-amber-100">
+              <p className="text-sm font-bold text-amber-900">
                 Tu plan vence pronto —{" "}
-                <span className="text-yellow-400 font-black">
+                <span className="text-orange-600 font-black">
                   {RENEWAL_DISCOUNT_PERCENT}% DE DESCUENTO
                 </span>{" "}
                 al renovar
               </p>
-              <p className="text-xs text-amber-200/80">
+              <p className="text-xs text-amber-800/80">
                 {formatDaysRemainingLabel(daysRemaining)}. Renueva ahora y no pierdas tu progreso.
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center bg-black/40 rounded-xl px-4 py-2 border border-amber-500/20 min-w-[120px]">
-            <span className="text-xl font-mono font-bold text-amber-400 tracking-wider">
+          <div className="flex items-center justify-center bg-white rounded-xl px-4 py-2 border border-amber-200 min-w-[120px] shadow-sm">
+            <span className="text-xl font-mono font-bold text-amber-600 tracking-wider">
               {daysRemaining != null && daysRemaining > 0 ? `${daysRemaining}d` : "Hoy"}
             </span>
           </div>
@@ -236,10 +236,10 @@ export function DashboardPricingView() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-mq-accent/15 to-indigo-500/10 border border-mq-accent/25 p-4 px-6 backdrop-blur-md"
+          className="flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 p-4 px-6 shadow-sm"
         >
           <Sparkles className="text-mq-accent w-6 h-6 shrink-0" />
-          <p className="text-sm text-slate-900/90">
+          <p className="text-sm text-slate-800">
             Tienes <span className="font-bold text-mq-accent">PRO activo</span>. El plan Residente
             incluye seguimiento 1 a 1 con el equipo médico para asegurar tu plaza.
           </p>
@@ -248,22 +248,22 @@ export function DashboardPricingView() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col sm:flex-row items-center justify-between rounded-2xl bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 p-4 px-6 backdrop-blur-md gap-4"
+          className="flex flex-col sm:flex-row items-center justify-between rounded-2xl bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 p-4 px-6 shadow-sm gap-4"
         >
           <div className="flex items-center gap-3">
-            <Clock className="text-red-400 w-6 h-6 animate-pulse" />
+            <Clock className="text-red-500 w-6 h-6 animate-pulse" />
             <div>
-              <p className="text-sm font-bold text-red-100">
+              <p className="text-sm font-bold text-red-900">
                 Oferta exclusiva:{" "}
-                <span className="text-yellow-400 font-black">{RENEWAL_DISCOUNT_PERCENT}% DE DESCUENTO</span>
+                <span className="text-orange-600 font-black">{RENEWAL_DISCOUNT_PERCENT}% DE DESCUENTO</span>
               </p>
-              <p className="text-xs text-red-200/80">
+              <p className="text-xs text-red-800/80">
                 Los precios vuelven a la normalidad cuando termine el contador.
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center bg-black/40 rounded-xl px-4 py-2 border border-red-500/20 min-w-[120px]">
-            <span className="text-xl font-mono font-bold text-red-400 tracking-wider">
+          <div className="flex items-center justify-center bg-white rounded-xl px-4 py-2 border border-red-200 min-w-[120px] shadow-sm">
+            <span className="text-xl font-mono font-bold text-red-600 tracking-wider">
               {formatTime(timeLeft)}
             </span>
           </div>
