@@ -128,73 +128,78 @@ export function FreeDashboardView({
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-red-500/10 border border-red-500/20 p-4 sm:px-6 backdrop-blur-md"
+        className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-800 border border-slate-700 p-4 sm:px-6 shadow-lg"
       >
         <div className="flex items-center gap-3 w-full sm:w-auto justify-center sm:justify-start">
-          <Clock className="text-red-400 w-5 h-5 animate-pulse shrink-0" />
-          <p className="text-sm font-bold text-red-100 text-center sm:text-left">
-            Tu acceso gratis expira en:
-          </p>
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
+            <Clock className="text-mq-yellow w-5 h-5 animate-pulse shrink-0" />
+          </div>
+          <div>
+            <p className="text-sm font-bold text-white text-center sm:text-left">
+              Tu acceso de prueba está activo
+            </p>
+            <p className="text-xs text-slate-400">Desbloquea tu potencial antes de que expire</p>
+          </div>
         </div>
 
         {mounted ? (
-          <div className="flex items-center gap-2 text-red-400 font-mono font-black text-xl tracking-wider bg-black/30 px-6 py-2.5 rounded-xl border border-red-500/20 shadow-[0_0_20px_rgba(239,68,68,0.15)]">
+          <div className="flex items-center gap-2 text-white font-mono font-black text-xl tracking-wider bg-black/40 px-6 py-2.5 rounded-xl border border-white/10 shadow-inner">
             <span>{String(timeLeft.days).padStart(2, '0')}d</span>
-            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50">:</span>
+            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50 text-slate-500">:</span>
             <span>{String(timeLeft.hours).padStart(2, '0')}h</span>
-            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50">:</span>
+            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50 text-slate-500">:</span>
             <span>{String(timeLeft.minutes).padStart(2, '0')}m</span>
-            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50">:</span>
+            <span className="animate-[pulse_1s_ease-in-out_infinite] opacity-50 text-slate-500">:</span>
             <span>{String(timeLeft.seconds).padStart(2, '0')}s</span>
           </div>
         ) : (
-          <div className="h-11 w-48 bg-black/20 rounded-xl animate-pulse" />
+          <div className="h-11 w-48 bg-white/10 rounded-xl animate-pulse" />
         )}
 
-        <p className="hidden lg:block text-xs font-medium text-red-200/60 uppercase tracking-wider text-right">
-          Después de esto pierdes tu progreso
-        </p>
+        <Link href="/dashboard/planes" className="hidden lg:flex items-center gap-2 text-xs font-bold text-mq-yellow hover:text-yellow-300 transition-colors uppercase tracking-wider text-right group">
+          Hazte PRO <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+        </Link>
       </motion.div>
 
       {/* 1. HERO (ARRIBA) — MEJORADO */}
-      <header className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-gradient-to-br from-red-500/10 via-mq-surface to-transparent p-8 sm:p-12">
+      <header className="relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-950 p-8 sm:p-12 shadow-2xl">
         <div className="relative z-10">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 px-4 py-1.5 backdrop-blur-md">
-              <ShieldAlert size={14} className="text-red-400" />
-              <span className="text-[10px] font-bold uppercase tracking-wider text-red-400">
-                Alerta de Rendimiento
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-800/50 px-4 py-1.5 backdrop-blur-md">
+              <Sparkles size={14} className="text-mq-yellow" />
+              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-300">
+                Bienvenido al Método Q
               </span>
             </div>
             
-            <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-6xl leading-[1.1]">
+            <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl leading-[1.1]">
               {user?.attemptsCount > 0
-                ? <>Análisis de <span className="text-red-500 italic">Supervivencia</span> <br className="hidden sm:block" /> Completado.</>
+                ? <>Análisis de <span className="text-transparent bg-clip-text bg-gradient-to-r from-mq-yellow to-yellow-200 italic">Supervivencia</span> <br className="hidden sm:block" /> Completado.</>
                 : user?.attemptedExam 
-                  ? <>Tu estrategia actual <span className="text-red-500 italic">necesita un ajuste</span> <br className="hidden sm:block" /> para pasar.</>
-                  : <>Tu nivel actual <span className="text-red-500 italic">NO es suficiente</span> <br className="hidden sm:block" /> para pasar.</>
+                  ? <>Tu estrategia actual <span className="text-transparent bg-clip-text bg-gradient-to-r from-mq-yellow to-yellow-200 italic">necesita un ajuste</span> <br className="hidden sm:block" /> para pasar.</>
+                  : <>Descubre qué te separa <br className="hidden sm:block" /> de tu <span className="text-transparent bg-clip-text bg-gradient-to-r from-mq-yellow to-yellow-200 italic">residencia médica.</span></>
               }
             </h1>
             
-            <p className="text-lg leading-relaxed text-slate-500 sm:text-xl max-w-xl">
+            <p className="text-lg leading-relaxed text-slate-400 sm:text-xl max-w-xl">
               {user?.goalUniversity && user.goalUniversity !== "Otra"
-                ? `Haz tu diagnóstico y descubre qué te separa de tu plaza en la ${user.goalUniversity}. No dejes tu futuro al azar.`
-                : "Haz tu diagnóstico y descubre qué te está costando la plaza en la residencia médica. No dejes tu futuro al azar."
+                ? `Haz tu diagnóstico inicial y obtén una radiografía exacta de lo que necesitas para asegurar tu plaza en la ${user.goalUniversity}.`
+                : "Haz tu diagnóstico inicial y obtén una radiografía exacta de lo que necesitas para asegurar tu plaza. No dejes tu futuro al azar."
               }
             </p>
 
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
               {user?.attemptsCount > 0 ? (
-                <div className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-white/50 border border-slate-200 px-10 text-base font-black text-slate-900/50 cursor-not-allowed">
+                <div className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-white/10 border border-white/20 px-10 text-base font-black text-white/50 cursor-not-allowed backdrop-blur-md">
                   <Lock size={20} />
                   <span>Diagnóstico Completado</span>
                 </div>
               ) : (
                 <button
                   onClick={() => setIsAct1Open(true)}
-                  className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:-translate-y-1 hover:brightness-110 active:scale-95"
+                  className="mq-premium-glow group inline-flex h-16 items-center justify-center gap-3 rounded-2xl bg-white px-10 text-base font-black text-slate-950 transition-all hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] active:scale-95"
                 >
-                  <Target size={20} fill="currentColor" />
+                  <Target size={20} className="text-mq-accent" />
                   <span>Empezar diagnóstico ahora</span>
                   <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
                 </button>
@@ -202,7 +207,7 @@ export function FreeDashboardView({
               
               <Link
                 href="/dashboard/planes"
-                className="inline-flex h-16 items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-8 text-base font-bold text-slate-900 transition-all hover:bg-slate-100"
+                className="inline-flex h-16 items-center justify-center gap-2 rounded-2xl border border-slate-700 bg-slate-900/50 px-8 text-base font-bold text-white transition-all hover:bg-slate-800"
               >
                 Ver planes PRO
               </Link>
@@ -211,9 +216,10 @@ export function FreeDashboardView({
         </div>
         
         {/* Background Decorative elements */}
-        <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-red-500/10 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 right-0 p-12 opacity-10 select-none pointer-events-none hidden lg:block">
-           <Zap size={300} className="text-slate-900" />
+        <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-mq-accent/20 blur-[120px] animate-pulse" />
+        <div className="absolute -left-20 -bottom-20 h-96 w-96 rounded-full bg-mq-yellow/10 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 p-12 opacity-[0.03] select-none pointer-events-none hidden lg:block">
+           <Zap size={300} className="text-white" />
         </div>
       </header>
 
