@@ -127,19 +127,19 @@ export function SubjectPerformancePanel({
           <div className="grid grid-cols-3 gap-3">
             <div className="flex flex-col items-center justify-center rounded-2xl border border-red-200 bg-red-50 p-3 text-center">
               <p className="text-2xl font-black text-red-600 leading-none">{weak.length}</p>
-              <p className="mt-1.5 text-[10px] font-bold uppercase tracking-widest text-red-700/80">
+              <p className="mt-1.5 text-[9px] font-bold uppercase tracking-tight text-red-700/80">
                 A reforzar
               </p>
             </div>
             <div className="flex flex-col items-center justify-center rounded-2xl border border-amber-200 bg-amber-50 p-3 text-center">
               <p className="text-2xl font-black text-amber-600 leading-none">{ok.length}</p>
-              <p className="mt-1.5 text-[10px] font-bold uppercase tracking-widest text-amber-700/80">
+              <p className="mt-1.5 text-[9px] font-bold uppercase tracking-tight text-amber-700/80">
                 En progreso
               </p>
             </div>
             <div className="flex flex-col items-center justify-center rounded-2xl border border-emerald-200 bg-emerald-50 p-3 text-center">
               <p className="text-2xl font-black text-emerald-600 leading-none">{strong.length}</p>
-              <p className="mt-1.5 text-[10px] font-bold uppercase tracking-widest text-emerald-700/80">
+              <p className="mt-1.5 text-[9px] font-bold uppercase tracking-tight text-emerald-700/80">
                 Dominadas
               </p>
             </div>

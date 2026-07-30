@@ -133,11 +133,11 @@ export function FinalResultsScreen({
     : "Continuar entrenamiento";
 
   return (
-    <div className={`mt-10 flex w-full max-w-4xl flex-col items-center px-4 ${className ?? ""}`}>
+    <div className={`mt-10 flex w-full max-w-5xl flex-col items-center px-4 ${className ?? ""}`}>
       <motion.article 
         initial={{ opacity: 0, y: 30, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        className="relative w-full max-w-2xl overflow-hidden rounded-[2rem] border border-slate-200 bg-[#0C1425]/80 p-6 backdrop-blur-2xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] sm:p-10"
+        className="relative w-full max-w-4xl overflow-hidden rounded-[2rem] border border-slate-200 bg-[#0C1425]/80 p-6 backdrop-blur-2xl shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] sm:p-10"
       >
         {/* Decorative background effects */}
         <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-mq-accent/10 blur-[80px]" />
@@ -263,8 +263,8 @@ export function FinalResultsScreen({
               <Clock className="h-5 w-5" />
             </div>
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Tiempo Total</p>
-              <p className="text-lg font-bold text-slate-900">{formatTime(totalSeconds)}</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Tiempo Total</p>
+              <p className="text-lg font-bold text-white">{formatTime(totalSeconds)}</p>
             </div>
           </motion.div>
 
@@ -278,8 +278,8 @@ export function FinalResultsScreen({
               <Zap className="h-5 w-5" />
             </div>
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Velocidad</p>
-              <p className="text-lg font-bold text-slate-900">{avgResponseTime}s <span className="text-xs font-normal text-slate-500">/ preg</span></p>
+              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Velocidad</p>
+              <p className="text-lg font-bold text-white">{avgResponseTime}s <span className="text-xs font-normal text-slate-400">/ preg</span></p>
             </div>
           </motion.div>
         </div>
