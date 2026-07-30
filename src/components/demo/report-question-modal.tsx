@@ -73,7 +73,7 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative z-10 w-full max-w-lg overflow-hidden rounded-2xl border border-slate-200 bg-[#0A1629] shadow-2xl"
+            className="relative z-10 w-full max-w-lg overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl"
           >
             <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4">
               <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
@@ -141,7 +141,7 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
                     value={comments}
                     onChange={(e) => setComments(e.target.value)}
                     placeholder="Danos más contexto sobre el error..."
-                    className="w-full rounded-xl border border-slate-200 bg-black/30 p-3 text-sm text-slate-900 placeholder:text-slate-900/20 focus:border-mq-accent/50 focus:outline-none focus:ring-1 focus:ring-mq-accent/50"
+                    className="w-full rounded-xl border border-slate-200 bg-white p-3 text-sm text-slate-900 placeholder:text-slate-400 focus:border-mq-accent/50 focus:outline-none focus:ring-1 focus:ring-mq-accent/50"
                   />
                 </div>
 
