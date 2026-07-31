@@ -126,9 +126,15 @@ export const universitySpecialties: Record<string, string[]> = {
     "Radiología",
     "Urología",
   ],
-  "Universidad Cooperativa de Colombia": [
+  "Universidad Cooperativa de Colombia (Medellín)": [
     "Medicina Interna",
     "Medicina de Urgencias",
+  ],
+  "Universidad Cooperativa de Colombia (Pasto)": [
+    "Ginecología y Obstetricia",
+    "Medicina Interna",
+    "Pediatría",
+    "Psiquiatría",
   ],
   "Universidad EIA": [
     "Urología",
