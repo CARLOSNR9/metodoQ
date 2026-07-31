@@ -138,7 +138,7 @@ export function UniversitiesMegaMenu() {
                       initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="pb-16"
+                      className="pb-24"
                     >
                       <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
                         <div className="h-10 w-10 rounded-full bg-mq-accent/10 flex items-center justify-center text-mq-accent">
@@ -177,7 +177,7 @@ export function UniversitiesMegaMenu() {
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="pb-16"
+                      className="pb-24"
                     >
                       <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
                         <div className="h-10 w-10 rounded-full bg-mq-accent/10 flex items-center justify-center text-mq-accent">
