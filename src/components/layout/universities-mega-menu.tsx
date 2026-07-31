@@ -130,7 +130,6 @@ export function UniversitiesMegaMenu() {
 
                 {/* Detail View */}
                 <div className="w-2/3 p-6 bg-white overflow-y-auto relative scrollbar-thin">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none h-full z-10 opacity-90" />
                   
                   {activeTab === "universities" && selectedUniversity && (
                     <motion.div
@@ -138,7 +137,7 @@ export function UniversitiesMegaMenu() {
                       initial={{ opacity: 0, x: 10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="pb-24"
+                      className="pb-2"
                     >
                       <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
                         <div className="h-10 w-10 rounded-full bg-mq-accent/10 flex items-center justify-center text-mq-accent">
@@ -177,7 +176,7 @@ export function UniversitiesMegaMenu() {
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="pb-24"
+                      className="pb-2"
                     >
                       <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
                         <div className="h-10 w-10 rounded-full bg-mq-accent/10 flex items-center justify-center text-mq-accent">
@@ -211,11 +210,11 @@ export function UniversitiesMegaMenu() {
                   )}
                   
                   {/* Call to action at bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-white via-white to-transparent z-20">
+                  <div className="mt-8 pt-4 border-t border-slate-100">
                     <Link 
                       href="/demo" 
                       onClick={() => setIsOpen(false)}
-                      className="w-full flex items-center justify-between bg-slate-900 hover:bg-slate-800 text-white px-5 py-3 rounded-xl text-sm font-semibold transition-all group"
+                      className="w-full flex items-center justify-between bg-blue-900 hover:bg-blue-800 text-white px-5 py-3 rounded-xl text-sm font-semibold transition-all group shadow-md"
                     >
                       Empezar a prepararme
                       <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
