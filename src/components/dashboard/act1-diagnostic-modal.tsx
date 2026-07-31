@@ -270,8 +270,8 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                 className="space-y-8"
               >
                 <div className="text-center space-y-4">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center">
-                    <ShieldAlert size={32} className="text-red-500 animate-pulse" />
+                  <div className="mx-auto w-16 h-16 rounded-full bg-mq-accent/10 border border-mq-accent/20 flex items-center justify-center">
+                    <ShieldAlert size={32} className="text-mq-accent animate-pulse" />
                   </div>
                   <h2 className="text-2xl font-black text-slate-900">Choque de Realidad Estandarizado</h2>
                   <p className="text-slate-500 text-sm">
@@ -292,25 +292,25 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/[0.03] border border-white/5 p-6 rounded-[2rem] text-center space-y-1">
+                  <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
                     <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Cupos Regulares</p>
                     <p className="text-4xl font-black text-mq-accent">{selectedSpecialty.regularSpots}</p>
                     <p className="text-[10px] text-slate-500">Para todo el país</p>
                   </div>
-                  <div className="bg-white/[0.03] border border-white/5 p-6 rounded-[2rem] text-center space-y-1">
+                  <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
                     <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Dificultad Est.</p>
-                    <p className="text-4xl font-black text-red-500">9.8/10</p>
+                    <p className="text-4xl font-black text-mq-accent">9.8/10</p>
                     <p className="text-[10px] text-slate-500">Nivel de Exclusión</p>
                   </div>
                 </div>
 
-                <div className="rounded-2xl bg-red-500/10 border border-red-500/20 p-6 space-y-4">
+                <div className="rounded-2xl bg-slate-50 border border-slate-200 p-6 space-y-4">
                   <div className="flex gap-4 items-start">
-                    <AlertCircle className="text-red-400 shrink-0 mt-1" size={20} />
+                    <AlertCircle className="text-mq-accent shrink-0 mt-1" size={20} />
                     <div className="space-y-2">
-                      <p className="text-sm font-bold text-red-100">Dato Crítico:</p>
-                      <p className="text-sm text-red-100/70 leading-relaxed italic">
-                        "En {selectedSpecialty.name}, la brecha entre el admitido y el rechazado es de apenas <span className="text-red-400 font-bold">1.2 puntos estandarizados</span>. El 40% del examen será específico de tu área y el Listening de Inglés tiene límite de 2 reproducciones."
+                      <p className="text-sm font-bold text-slate-900">Dato Crítico:</p>
+                      <p className="text-sm text-slate-700 leading-relaxed italic">
+                        "En {selectedSpecialty.name}, la brecha entre el admitido y el rechazado es de apenas <span className="text-mq-accent font-bold">1.2 puntos estandarizados</span>. El 40% del examen será específico de tu área y el Listening de Inglés tiene límite de 2 reproducciones."
                       </p>
                     </div>
                   </div>
@@ -331,7 +331,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                    
                    <button
                     onClick={handleNext}
-                    className="w-full h-16 flex items-center justify-center gap-3 rounded-2xl bg-red-500 font-black text-white transition-all hover:bg-red-600 active:scale-95 shadow-[0_0_40px_-10px_rgba(239,68,68,0.5)]"
+                    className="w-full h-16 flex items-center justify-center gap-3 rounded-2xl bg-mq-accent font-black text-mq-accent-foreground transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_40px_-10px_rgba(0,209,255,0.5)]"
                   >
                     Aceptar el Reto e Iniciar <ArrowRight size={20} />
                   </button>
