@@ -149,6 +149,42 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
           ? "Doc, en el HMC y la UMNG, el examen es de resistencia. La excelencia clínica debe ir de la mano con la resiliencia psicológica. Prepárate para el rigor."
           : "Doc, este diagnóstico de 10 preguntas calibrará tu preparación para la especialidad elegida.";
 
+  const renderCriticalData = () => {
+    if (isUdeaUniversity(selectedUniversity)) {
+      return (
+        <>
+          "En {selectedSpecialty.name}, la brecha entre el admitido y el rechazado es de apenas <span className="text-mq-accent font-bold">1.2 puntos estandarizados</span>. El 40% del examen será específico de tu área y el Listening de Inglés tiene límite de 2 reproducciones."
+        </>
+      );
+    }
+    if (isUnalUniversity(selectedUniversity)) {
+      return (
+        <>
+          "Para {selectedSpecialty.name} en la UNAL, el tiempo es tu mayor enemigo. La prueba exige responder casos clínicos complejos en <span className="text-mq-accent font-bold">menos de 1 minuto por pregunta</span>, donde la indecisión te deja fuera."
+        </>
+      );
+    }
+    if (isUccPastoUniversity(selectedUniversity)) {
+      return (
+        <>
+          "En la UCC, el examen no incluye 'Listening' eliminatorio, pero para {selectedSpecialty.name} te reta con un <span className="text-mq-accent font-bold">fuerte componente de Epidemiología y Leyes</span>. La entrevista y prueba psicotécnica son los verdaderos filtros decisivos."
+        </>
+      );
+    }
+    if (isUmngUniversity(selectedUniversity)) {
+      return (
+        <>
+          "En la UMNG para {selectedSpecialty.name}, el filtro es táctico. El examen incluye una <span className="text-mq-accent font-bold">quinta opción de respuesta penalizante</span> que castiga severamente intentar adivinar."
+        </>
+      );
+    }
+    return (
+      <>
+        "Para {selectedSpecialty.name}, la competencia es extrema. La diferencia entre ser admitido o no suele definirse por <span className="text-mq-accent font-bold">menos de 2 puntos</span> en la prueba de conocimientos específicos."
+      </>
+    );
+  };
+
   if (!isOpen) return null;
 
   const handleNext = () => {
@@ -310,7 +346,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                     <div className="space-y-2">
                       <p className="text-sm font-bold text-slate-900">Dato Crítico:</p>
                       <p className="text-sm text-slate-700 leading-relaxed italic">
-                        "En {selectedSpecialty.name}, la brecha entre el admitido y el rechazado es de apenas <span className="text-mq-accent font-bold">1.2 puntos estandarizados</span>. El 40% del examen será específico de tu área y el Listening de Inglés tiene límite de 2 reproducciones."
+                        {renderCriticalData()}
                       </p>
                     </div>
                   </div>
