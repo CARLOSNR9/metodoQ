@@ -1129,7 +1129,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 {trainingTab === "custom" && isDashboard && !isDailyPill && !isAct1 && !isSimulacro && !isConvocatoria && !isRepasoMode && !isSessionErrorsMode && !blockParam && !topicParam && !isBonusMode && !isCustomMode ? (
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="w-full">
                     <CustomTrainingCreator 
-                      questionBank={questionBank} 
+                      questionBank={questionBank}
+                      isFreePlan={isFreePlan}
+                      onLimitExceeded={() => setIsFreeLimitModalOpen(true)}
                       onStart={(config) => {
                          const params = new URLSearchParams();
                          params.set("mode", "custom");

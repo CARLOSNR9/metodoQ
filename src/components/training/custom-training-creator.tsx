@@ -7,10 +7,12 @@ import type { TrainingQuestion } from "@/lib/questions/types";
 
 interface CustomTrainingCreatorProps {
   questionBank: TrainingQuestion[];
+  isFreePlan?: boolean;
+  onLimitExceeded?: () => void;
   onStart: (config: { topics: string[]; count: number; difficulty?: string; source?: string }) => void;
 }
 
-export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingCreatorProps) {
+export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceeded, onStart }: CustomTrainingCreatorProps) {
   const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
   const [expandedAreas, setExpandedAreas] = useState<Set<string>>(new Set());
   const [count, setCount] = useState<number>(50);
@@ -226,7 +228,15 @@ export function CustomTrainingCreator({ questionBank, onStart }: CustomTrainingC
                 max="100" 
                 step="5"
                 value={count}
-                onChange={(e) => setCount(parseInt(e.target.value))}
+                onChange={(e) => {
+                  const val = parseInt(e.target.value);
+                  if (isFreePlan && val > 15) {
+                    setCount(15);
+                    if (onLimitExceeded) onLimitExceeded();
+                  } else {
+                    setCount(val);
+                  }
+                }}
                 className="w-full accent-mq-accent h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer"
               />
               <p className="text-xs text-slate-500 text-right">
