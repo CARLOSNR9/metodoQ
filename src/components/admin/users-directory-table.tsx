@@ -93,12 +93,13 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
   const [editPlan, setEditPlan] = useState<UserPlan>("FREE");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+  const [lastActiveSort, setLastActiveSort] = useState<"desc" | "asc">("desc");
 
   const editingUser = users.find((u) => u.uid === editingId);
 
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    return users.filter((user) => {
+    const result = users.filter((user) => {
       if (filter === "paid" && user.plan === "FREE") return false;
       if (filter !== "all" && filter !== "paid" && user.source !== filter) return false;
       if (activityFilter !== "all" && user.activityStatus !== activityFilter) return false;
@@ -108,7 +109,16 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
         user.displayName.toLowerCase().includes(q)
       );
     });
-  }, [users, filter, activityFilter, search]);
+
+    result.sort((a, b) => {
+      const aTime = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
+      const bTime = b.lastActiveAt ? new Date(b.lastActiveAt).getTime() : 0;
+      
+      return lastActiveSort === "desc" ? bTime - aTime : aTime - bTime;
+    });
+
+    return result;
+  }, [users, filter, activityFilter, search, lastActiveSort]);
 
   const counts = useMemo(
     () => ({
@@ -265,7 +275,13 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
               <th className="pb-3 pr-3">Usuario</th>
               <th className="pb-3 pr-3">Universidad</th>
               <th className="pb-3 pr-3">Estado</th>
-              <th className="pb-3 pr-3">Última actividad</th>
+              <th 
+                className="pb-3 pr-3 cursor-pointer select-none whitespace-nowrap hover:text-slate-800 transition-colors"
+                onClick={() => setLastActiveSort((s) => (s === "desc" ? "asc" : "desc"))}
+                title="Ordenar por última actividad"
+              >
+                Última actividad {lastActiveSort === "desc" ? "↓" : "↑"}
+              </th>
               <th className="pb-3 pr-3">Racha</th>
               <th className="pb-3 pr-3">Preguntas</th>
               <th className="pb-3 pr-3">Origen</th>
