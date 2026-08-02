@@ -171,6 +171,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     Record<string, string>
   >({});
   
+  const [sessionQuestions, setSessionQuestions] = useState<DemoQuestion[]>([]);
+
   const correctAnswers = useMemo(() => {
     return Object.entries(answersByQuestionId).reduce((count, [qId, optionId]) => {
       const q = sessionQuestions.find(sq => sq.id === qId);
@@ -216,7 +218,6 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [hasRegisteredTrainingDay, setHasRegisteredTrainingDay] = useState(false);
   const [showProgressFeedback, setShowProgressFeedback] = useState(false);
   const [learningProfile, setLearningProfile] = useState<UserLearningProfile>(EMPTY_PROFILE);
-  const [sessionQuestions, setSessionQuestions] = useState<DemoQuestion[]>([]);
   const [questionBank, setQuestionBank] = useState<DemoQuestion[]>([]);
   const [isLoadingQuestions, setIsLoadingQuestions] = useState(true);
   const [usageBlockReason, setUsageBlockReason] = useState<string | null>(null);
