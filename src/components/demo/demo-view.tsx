@@ -1236,7 +1236,11 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                       onClick={() => {
                         const isPlainDemo = !isSimulacro && !isConvocatoria && !isDailyPill && !isBonusMode && !isRepasoMode && !isSessionErrorsMode && !blockParam && !topicParam && !isCustomMode;
                         if ((isAct1 || isPlainDemo) && !usageBlockReason && questionBank.length > 0) {
-                          setDemoStep("university");
+                          if (userTrackProfile?.goalUniversity && userTrackProfile?.goalSpecialty) {
+                            void startAdaptiveSession();
+                          } else {
+                            setDemoStep("university");
+                          }
                         } else {
                           void startAdaptiveSession();
                         }

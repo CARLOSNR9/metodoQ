@@ -15,7 +15,7 @@ interface CustomTrainingCreatorProps {
 export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceeded, onStart }: CustomTrainingCreatorProps) {
   const [selectedTopics, setSelectedTopics] = useState<Set<string>>(new Set());
   const [expandedAreas, setExpandedAreas] = useState<Set<string>>(new Set());
-  const [count, setCount] = useState<number>(50);
+  const [count, setCount] = useState<number>(isFreePlan ? 15 : 50);
   const [difficulty, setDifficulty] = useState<string>("all");
   const [source, setSource] = useState<string>("all");
   const [status, setStatus] = useState<string>("all");
