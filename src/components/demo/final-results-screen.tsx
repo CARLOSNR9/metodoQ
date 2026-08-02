@@ -92,6 +92,7 @@ export function FinalResultsScreen({
   preferDashboardReturn = false,
   convocatoriaEdition = null,
   savedResultId = null,
+  userId,
 }: FinalResultsScreenProps) {
   const isAct1 = source === "act1";
   const isDailyPill = source === "daily-pill";
