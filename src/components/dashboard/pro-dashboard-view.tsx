@@ -387,6 +387,7 @@ export function ProDashboardView({
               specialty={effectiveSpecialty}
               correctTopics={mapTopicStats(profile?.topicStats, "correct")}
               wrongTopics={mapTopicStats(profile?.topicStats, "wrong")}
+              userId={profile?.uid}
             />
           </section>
         </div>

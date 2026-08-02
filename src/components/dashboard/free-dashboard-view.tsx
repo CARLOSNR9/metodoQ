@@ -292,6 +292,7 @@ export function FreeDashboardView({
                     totalQuestionsAnswered={totalQuestions}
                     correctTopics={user?.topicStats ? Object.fromEntries(Object.entries(user.topicStats).map(([k, v]: [string, any]) => [k, v.correct])) : {}}
                     wrongTopics={user?.topicStats ? Object.fromEntries(Object.entries(user.topicStats).map(([k, v]: [string, any]) => [k, v.wrong])) : {}}
+                    userId={user?.uid}
                 />
               </section>
 

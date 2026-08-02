@@ -22,6 +22,7 @@ import {
 } from "@/lib/diagnostic/university-match";
 import { ScoreComparisonCards } from "@/components/demo/score-comparison-cards";
 import { SubjectPerformancePanel } from "@/components/demo/subject-performance-panel";
+import { useUserWeeklyStats } from "@/hooks/use-user-weekly-stats";
 
 interface Act2PredictiveDashboardProps {
   /** Promedio global acumulado (%). */
@@ -35,6 +36,7 @@ interface Act2PredictiveDashboardProps {
   wrongTopics?: Record<string, number>;
   sessionQuestions?: TrainingQuestion[];
   answersByQuestionId?: Record<string, string>;
+  userId?: string;
 }
 
 const gaussData = (() => {
@@ -66,7 +68,10 @@ export function Act2PredictiveDashboard({
   wrongTopics = {},
   sessionQuestions,
   answersByQuestionId,
+  userId,
 }: Act2PredictiveDashboardProps) {
+  const { weeklyStats } = useUserWeeklyStats(userId);
+  
   const standardizedScore = Math.round(scorePercentage * 7.2 + 180);
   const cutoffScore = getCutoffScore(university);
   const isAdmitted = standardizedScore >= cutoffScore;
@@ -84,6 +89,15 @@ export function Act2PredictiveDashboard({
 
   const topicLosses = getTopicLossesFromRadar(radarData, wrongTopics);
   const subjectStatuses = buildSubjectStatusFromRadar(radarData);
+
+  const weeklyRadarData = buildRadarChartData({
+    university,
+    specialty,
+    correctTopics: weeklyStats?.correctTopicsByName || {},
+    wrongTopics: weeklyStats?.wrongTopicsByName || {},
+  });
+  const weeklySubjectStatuses = buildSubjectStatusFromRadar(weeklyRadarData);
+
   const bestTopics = subjectStatuses.filter((s) => s.status === "strong").map((s) => s.label);
   const worstTopics = topicLosses.map((t) => t.name);
 
@@ -222,13 +236,34 @@ export function Act2PredictiveDashboard({
 
       <div className="grid gap-6 sm:grid-cols-2">
         <motion.div
-          className="rounded-[2.5rem] border border-white/5 bg-slate-50 p-8"
+          className="rounded-[2.5rem] border border-white/5 bg-slate-50 p-8 flex flex-col gap-8"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.35 }}
         >
+          {weeklyStats && weeklyStats.totalQuestions > 0 && (
+            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm flex items-center justify-between">
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                  Rendimiento esta semana
+                </p>
+                <div className="mt-1 flex items-baseline gap-2">
+                  <span className="text-2xl font-black text-mq-accent">{weeklyStats.scorePercentage}%</span>
+                  <span className="text-xs font-medium text-slate-500">acierto</span>
+                </div>
+              </div>
+              <div className="text-right">
+                <p className="text-sm font-bold text-slate-900">{weeklyStats.totalQuestions} preguntas</p>
+                <p className="text-xs text-slate-500">
+                  <span className="text-emerald-600 font-bold">{weeklyStats.totalCorrect}</span> bien · <span className="text-red-500 font-bold">{weeklyStats.wrongAnswers}</span> mal
+                </p>
+              </div>
+            </div>
+          )}
+
           <SubjectPerformancePanel
             subjects={subjectStatuses}
+            weeklySubjects={weeklyStats && weeklyStats.totalQuestions > 0 ? weeklySubjectStatuses : undefined}
             subtitle={
               dedicatedDiagnostic
                 ? "Cuánto aciertas en cada asignatura de tu diagnóstico."

@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { AlertCircle, Sparkles, TrendingUp } from "lucide-react";
 import type { SubjectStatus } from "@/lib/diagnostic/question-subject";
 
 type SubjectPerformancePanelProps = {
   subjects: SubjectStatus[];
+  weeklySubjects?: SubjectStatus[];
   subtitle?: string;
   emptyMessage?: string;
 };
@@ -100,25 +102,56 @@ function SubjectSection({
 
 export function SubjectPerformancePanel({
   subjects,
+  weeklySubjects,
   subtitle,
   emptyMessage = "Completa el diagnóstico para ver tu desempeño por asignatura.",
 }: SubjectPerformancePanelProps) {
-  const weak = subjects.filter((s) => s.status === "weak");
-  const ok = subjects.filter((s) => s.status === "ok");
-  const strong = subjects.filter((s) => s.status === "strong");
+  const [viewMode, setViewMode] = useState<"global" | "weekly">("global");
+
+  const activeSubjects = viewMode === "weekly" && weeklySubjects ? weeklySubjects : subjects;
+
+  const weak = activeSubjects.filter((s) => s.status === "weak");
+  const ok = activeSubjects.filter((s) => s.status === "ok");
+  const strong = activeSubjects.filter((s) => s.status === "strong");
 
   return (
     <div className="space-y-4">
-      <div className="space-y-1">
-        <h4 className="text-sm font-black uppercase tracking-widest text-slate-900">
-          Anatomía de tus fallos
-        </h4>
-        <p className="text-[10px] text-slate-500">
-          {subtitle ?? "Cuánto aciertas en cada asignatura. Más barra = mejor rendimiento."}
-        </p>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="space-y-1">
+          <h4 className="text-sm font-black uppercase tracking-widest text-slate-900">
+            Anatomía de tus fallos
+          </h4>
+          <p className="text-[10px] text-slate-500">
+            {subtitle ?? "Cuánto aciertas en cada asignatura. Más barra = mejor rendimiento."}
+          </p>
+        </div>
+        {weeklySubjects && weeklySubjects.length > 0 && (
+          <div className="flex shrink-0 items-center overflow-hidden rounded-lg border border-slate-200 bg-slate-50 p-1">
+            <button
+              onClick={() => setViewMode("global")}
+              className={`rounded-md px-3 py-1.5 text-xs font-bold transition-all ${
+                viewMode === "global"
+                  ? "bg-white text-slate-900 shadow-sm ring-1 ring-slate-200"
+                  : "text-slate-500 hover:text-slate-700"
+              }`}
+            >
+              Global
+            </button>
+            <button
+              onClick={() => setViewMode("weekly")}
+              className={`rounded-md px-3 py-1.5 text-xs font-bold transition-all ${
+                viewMode === "weekly"
+                  ? "bg-white text-slate-900 shadow-sm ring-1 ring-slate-200"
+                  : "text-slate-500 hover:text-slate-700"
+              }`}
+            >
+              Semanal
+            </button>
+          </div>
+        )}
       </div>
 
-      {subjects.length === 0 ? (
+      {activeSubjects.length === 0 ? (
         <div className="flex min-h-[12rem] items-center justify-center rounded-2xl border border-dashed border-slate-200 bg-slate-50 px-6 text-center text-xs text-slate-500">
           {emptyMessage}
         </div>

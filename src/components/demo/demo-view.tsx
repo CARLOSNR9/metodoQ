@@ -170,10 +170,41 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [answersByQuestionId, setAnswersByQuestionId] = useState<
     Record<string, string>
   >({});
-  const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [wrongAnswers, setWrongAnswers] = useState(0);
-  const [wrongTopicsByName, setWrongTopicsByName] = useState<Record<string, number>>({});
-  const [correctTopicsByName, setCorrectTopicsByName] = useState<Record<string, number>>({});
+  
+  const correctAnswers = useMemo(() => {
+    return Object.entries(answersByQuestionId).reduce((count, [qId, optionId]) => {
+      const q = sessionQuestions.find(sq => sq.id === qId);
+      return count + (q && q.correctOptionId === optionId ? 1 : 0);
+    }, 0);
+  }, [answersByQuestionId, sessionQuestions]);
+
+  const wrongAnswers = useMemo(() => {
+    return Object.keys(answersByQuestionId).length - correctAnswers;
+  }, [answersByQuestionId, correctAnswers]);
+
+  const correctTopicsByName = useMemo(() => {
+    const topics: Record<string, number> = {};
+    Object.entries(answersByQuestionId).forEach(([qId, optionId]) => {
+      const q = sessionQuestions.find(sq => sq.id === qId);
+      if (q && q.correctOptionId === optionId) {
+        const key = getPerformanceStatsKey(q);
+        topics[key] = (topics[key] || 0) + 1;
+      }
+    });
+    return topics;
+  }, [answersByQuestionId, sessionQuestions]);
+
+  const wrongTopicsByName = useMemo(() => {
+    const topics: Record<string, number> = {};
+    Object.entries(answersByQuestionId).forEach(([qId, optionId]) => {
+      const q = sessionQuestions.find(sq => sq.id === qId);
+      if (q && q.correctOptionId !== optionId && optionId !== null) {
+        const key = getPerformanceStatsKey(q);
+        topics[key] = (topics[key] || 0) + 1;
+      }
+    });
+    return topics;
+  }, [answersByQuestionId, sessionQuestions]);
   const [responseTimes, setResponseTimes] = useState<number[]>([]);
   const [questionStartAt, setQuestionStartAt] = useState<number | null>(null);
   const [hasSavedCurrentAttempt, setHasSavedCurrentAttempt] = useState(false);
@@ -322,13 +353,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     setHasStarted(false);
     setCurrentQuestionIndex(0);
     setAnswersByQuestionId({});
-    setCorrectAnswers(0);
-    setWrongAnswers(0);
     setResponseTimes([]);
     setHasSavedCurrentAttempt(false);
     setSavedResultId(null);
-    setWrongTopicsByName({});
-    setCorrectTopicsByName({});
     hasTrackedFinishDemoRef.current = false;
     hasRecordedSessionRef.current = false;
     setTotalSeconds(0);
@@ -953,14 +980,6 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
 
     const statsKey = getPerformanceStatsKey(currentQuestion);
 
-    if (isCorrect) {
-      setCorrectAnswers((prev) => prev + 1);
-      setCorrectTopicsByName((prev) => ({ ...prev, [statsKey]: (prev[statsKey] || 0) + 1 }));
-    } else {
-      setWrongAnswers((prev) => prev + 1);
-      setWrongTopicsByName((prev) => ({ ...prev, [statsKey]: (prev[statsKey] || 0) + 1 }));
-    }
-
     if (user) {
       if (
         shouldTrackQuestionCycle({
@@ -1079,6 +1098,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                 uccBlockCompletion?.nextBlock ? handleContinueNextUccBlock : undefined
               }
               preferDashboardReturn={preferDashboardReturn}
+              userId={user?.uid}
             />
             {user && !isDailyPill && (
               <div className="mt-12 space-y-12">
@@ -1420,11 +1440,57 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                            ? false
                            : isAct1 && currentQuestionIndex > 0 && isFreePlan
                        }
-                       examMode={isConvocatoria}
+                       examMode={isTimedExam}
+                       allowChange={isTimedExam}
                     />
                  )}
 
-                 {hasAnsweredCurrentQuestion && !isResultsStep && (
+                 {isTimedExam && !isResultsStep ? (
+                    <div className="flex flex-col gap-6 pt-6">
+                       <div className="flex items-center justify-between">
+                          <button
+                             onClick={() => setCurrentQuestionIndex(Math.max(0, currentQuestionIndex - 1))}
+                             disabled={currentQuestionIndex === 0}
+                             className="flex items-center gap-2 rounded-xl px-4 py-2 font-bold text-slate-500 hover:bg-slate-100 disabled:opacity-50"
+                          >
+                             Anterior
+                          </button>
+                          
+                          <button
+                             onClick={() => {
+                               if (currentQuestionIndex === totalQuestions - 1) {
+                                  setCurrentQuestionIndex(totalQuestions);
+                               } else {
+                                  setCurrentQuestionIndex(currentQuestionIndex + 1);
+                               }
+                             }}
+                             className="mq-premium-glow flex items-center gap-2 rounded-xl bg-mq-accent px-6 py-2 font-bold text-mq-accent-foreground hover:scale-105"
+                          >
+                             {currentQuestionIndex === totalQuestions - 1 ? "FINALIZAR" : "SIGUIENTE"}
+                          </button>
+                       </div>
+                       
+                       <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                          <h4 className="mb-3 text-xs font-black uppercase tracking-widest text-slate-500">Navegación del Examen</h4>
+                          <div className="flex flex-wrap gap-2 max-h-48 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-200">
+                             {Array.from({ length: totalQuestions }).map((_, idx) => {
+                                const q = sessionQuestions[idx];
+                                const isAnswered = q ? Boolean(answersByQuestionId[q.id]) : false;
+                                const isCurrent = idx === currentQuestionIndex;
+                                return (
+                                   <button
+                                      key={idx}
+                                      onClick={() => setCurrentQuestionIndex(idx)}
+                                      className={`h-9 w-9 rounded-lg text-sm font-bold flex items-center justify-center transition-colors ${isCurrent ? "ring-2 ring-mq-accent ring-offset-1" : ""} ${isAnswered ? "bg-mq-accent/20 text-mq-accent" : "bg-slate-100 text-slate-400 hover:bg-slate-200"}`}
+                                   >
+                                      {idx + 1}
+                                   </button>
+                                );
+                             })}
+                          </div>
+                       </div>
+                    </div>
+                 ) : hasAnsweredCurrentQuestion && !isResultsStep && (
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center gap-6 pt-4">
                        {showProgressFeedback && liveFeedbackMessage && (
                           <div className="flex items-center gap-2 rounded-full bg-mq-accent/10 px-6 py-2 border border-mq-accent/20">

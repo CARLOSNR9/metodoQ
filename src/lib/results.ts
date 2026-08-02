@@ -348,8 +348,58 @@ export async function getUserDemoResults(userId: string): Promise<DemoResultItem
     console.error("Error al consultar historial en Firestore:", error);
     const fallback = await getDemoResultsFallback(userId);
     if (fallback) return fallback;
-    throw error;
+    return [];
   }
+}
+
+export async function getUserWeeklyStats(userId: string) {
+  const allResults = await getUserDemoResults(userId);
+  
+  // Calculate start of current week (Monday)
+  const now = new Date();
+  const day = now.getDay(); // 0 is Sunday, 1 is Monday...
+  const diff = now.getDate() - day + (day === 0 ? -6 : 1); // adjust when day is sunday
+  const startOfWeek = new Date(now.setDate(diff));
+  startOfWeek.setHours(0, 0, 0, 0);
+
+  const weeklyResults = allResults.filter(result => {
+    if (!result.fechaIso) return false;
+    const resultDate = new Date(result.fechaIso);
+    return resultDate >= startOfWeek;
+  });
+
+  let totalCorrect = 0;
+  let totalQuestions = 0;
+  const correctTopicsByName: Record<string, number> = {};
+  const wrongTopicsByName: Record<string, number> = {};
+
+  weeklyResults.forEach(result => {
+    totalCorrect += result.correctAnswers ?? 0;
+    totalQuestions += (result.correctAnswers ?? 0) + (result.wrongAnswers ?? 0);
+    
+    if (result.correctTopics) {
+      Object.entries(result.correctTopics).forEach(([topic, count]) => {
+        correctTopicsByName[topic] = (correctTopicsByName[topic] || 0) + count;
+      });
+    }
+    if (result.wrongTopics) {
+      Object.entries(result.wrongTopics).forEach(([topic, count]) => {
+        wrongTopicsByName[topic] = (wrongTopicsByName[topic] || 0) + count;
+      });
+    }
+  });
+
+  const wrongAnswers = totalQuestions - totalCorrect;
+  const scorePercentage = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+
+  return {
+    totalCorrect,
+    totalQuestions,
+    wrongAnswers,
+    scorePercentage,
+    correctTopicsByName,
+    wrongTopicsByName,
+  };
 }
 
 export function getSessionTypeLabel(type: SessionTypeLabel): string {

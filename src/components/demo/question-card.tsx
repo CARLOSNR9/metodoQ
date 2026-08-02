@@ -37,6 +37,8 @@ export type QuestionCardProps = {
   examMode?: boolean;
   /** Vista previa admin: muestra retroalimentación sin responder. */
   defaultSelectedOptionId?: string | null;
+  /** Permite cambiar la opción seleccionada. */
+  allowChange?: boolean;
 };
 
 const defaultQuestion =
@@ -76,6 +78,7 @@ export function QuestionCard({
   isLocked = false,
   examMode = false,
   defaultSelectedOptionId = null,
+  allowChange = false,
 }: QuestionCardProps) {
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(
     defaultSelectedOptionId,
@@ -140,13 +143,13 @@ export function QuestionCard({
               transition={{ delay: index * 0.05 }}
               type="button"
               onClick={() => {
-                if (hasAnswered) {
+                if (hasAnswered && !allowChange) {
                   return;
                 }
                 setSelectedOptionId(option.id);
                 onAnswerSelect?.(option.id, option.id === correctOptionId);
               }}
-              disabled={hasAnswered}
+              disabled={hasAnswered && !allowChange}
               className={`touch-manipulation relative flex min-h-14 w-full items-center gap-3 overflow-hidden rounded-xl border px-4 py-3 text-left transition-all duration-300 sm:min-h-16 sm:px-5 ${
                 showCorrectStyle
                   ? "border-emerald-500/50 bg-emerald-500/10 text-slate-900 shadow-[0_0_20px_-5px_rgba(16,185_129,0.3)]"

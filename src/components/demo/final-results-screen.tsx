@@ -41,6 +41,7 @@ export type FinalResultsScreenProps = {
   preferDashboardReturn?: boolean;
   convocatoriaEdition?: string | null;
   savedResultId?: string | null;
+  userId?: string;
 };
 
 function getPerformanceProfile(scorePercentage: number) {
@@ -306,6 +307,7 @@ export function FinalResultsScreen({
                wrongTopics={wrongTopics}
                sessionQuestions={sessionQuestions}
                answersByQuestionId={answersByQuestionId}
+               userId={userId}
             />
           </section>
         )}
