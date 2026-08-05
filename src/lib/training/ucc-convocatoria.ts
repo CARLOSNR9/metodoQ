@@ -19,6 +19,8 @@ export type UccConvocatoriaEdition = {
   stayOpenUntilNext?: boolean;
   /** Custom duration for the exam window, defaults to 5 days if undefined. */
   daysOpen?: number;
+  /** Custom closing date (YYYY-MM-DD). Overrides daysOpen if provided. */
+  closingDate?: string;
   questions: TrainingQuestion[];
 };
 
@@ -50,6 +52,7 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     questionCount: 100,
     minutes: 180,
     stayOpenUntilNext: true,
+    closingDate: "2026-08-10",
     questions: UCC_CONV_2025_06_21_QUESTIONS,
   },
   {
@@ -59,6 +62,7 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     questionCount: 100,
     minutes: 180,
     stayOpenUntilNext: true,
+    closingDate: "2026-08-10",
     questions: UCC_CONV_2025_07_05_QUESTIONS,
   },
   {
@@ -68,6 +72,7 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     questionCount: 100,
     minutes: 180,
     stayOpenUntilNext: true,
+    closingDate: "2026-08-10",
     questions: UCC_CONV_2025_07_19_QUESTIONS,
   },
   {
@@ -79,6 +84,7 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     isGlobal: true,
     stayOpenUntilNext: true,
     daysOpen: 8, // Opens today (26th) and open for 8 more days
+    closingDate: "2026-08-10",
     questions: UCC_CONV_2026_07_26_QUESTIONS,
   },
 ];
@@ -166,6 +172,34 @@ export function buildConvocatoriaExamHref(editionCode: string): string {
   return `/dashboard/entrenar?${params.toString()}`;
 }
 
+function getClosingDayForEdition(
+  edition: UccConvocatoriaEdition,
+  schedule: UccConvocatoriaEdition[],
+): Date {
+  if (edition.closingDate) {
+    return parseLocalDate(edition.closingDate);
+  }
+
+  const examDay = parseLocalDate(edition.examDate);
+
+  if (edition.stayOpenUntilNext && schedule) {
+    const idx = schedule.findIndex((e) => e.code === edition.code);
+    if (idx !== -1 && idx < schedule.length - 1) {
+      // Cierra exactamente el día en que empieza la siguiente edición
+      const nextEdition = schedule[idx + 1];
+      return parseLocalDate(nextEdition.examDate);
+    }
+    // Si es la última edición y tiene stayOpenUntilNext, por defecto son 14 días (2 semanas)
+    const fallbackDay = new Date(examDay);
+    fallbackDay.setDate(fallbackDay.getDate() + 14);
+    return fallbackDay;
+  }
+
+  const closingDay = new Date(examDay);
+  closingDay.setDate(closingDay.getDate() + (edition.daysOpen ?? 5));
+  return closingDay;
+}
+
 function getEditionPhase(
   edition: UccConvocatoriaEdition,
   today: Date,
@@ -174,9 +208,8 @@ function getEditionPhase(
   const examDay = parseLocalDate(edition.examDate);
   if (today < examDay) return "upcoming";
 
-  // El examen permanece abierto por un espacio de X días
-  const closingDay = new Date(examDay);
-  closingDay.setDate(closingDay.getDate() + (edition.daysOpen ?? 5));
+  // El examen permanece abierto por un espacio de X días, o hasta closingDate
+  const closingDay = getClosingDayForEdition(edition, editions);
 
   if (today < closingDay) {
     return "open";
@@ -317,14 +350,16 @@ export function buildConvocatoriaEditionStatus(options: {
   const canStart = phase === "open" && !attempt;
 
   // Calculamos la fecha de cierre
-  const examDay = parseLocalDate(options.edition.examDate);
-  const closingDay = new Date(examDay);
-  closingDay.setDate(closingDay.getDate() + (options.edition.daysOpen ?? 5));
+  const closingDay = getClosingDayForEdition(options.edition, schedule);
   
   // Format to local date string (e.g. YYYY-MM-DD)
-  const yyyy = closingDay.getFullYear();
-  const mm = String(closingDay.getMonth() + 1).padStart(2, "0");
-  const dd = String(closingDay.getDate()).padStart(2, "0");
+  // Restamos 1 día para mostrar el último día en que está abierto (opcional, pero consistente con "hasta el día X")
+  const displayDay = new Date(closingDay);
+  displayDay.setDate(displayDay.getDate() - 1);
+
+  const yyyy = displayDay.getFullYear();
+  const mm = String(displayDay.getMonth() + 1).padStart(2, "0");
+  const dd = String(displayDay.getDate()).padStart(2, "0");
 
   return {
     edition: options.edition,
