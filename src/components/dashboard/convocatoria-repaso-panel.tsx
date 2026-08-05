@@ -14,6 +14,8 @@ type GenericAttempt = {
   scorePercentage: number;
   sessionQuestionIds?: string[];
   answersByQuestionId?: Record<string, string>;
+  editionCode?: string;
+  completedAt?: string;
 };
 
 type ConvocatoriaRepasoPanelProps = {
