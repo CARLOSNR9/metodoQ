@@ -48,7 +48,7 @@ export const UMNG_CONVOCATORIA_EDITIONS: UmngConvocatoriaEdition[] = [
     minutes: 120,
     isGlobal: true,
     stayOpenUntilNext: true,
-    daysOpen: 8,
+    daysOpen: 12,
     questions: UMNG_CONV_2026_07_26_QUESTIONS,
   },
   {
@@ -57,7 +57,7 @@ export const UMNG_CONVOCATORIA_EDITIONS: UmngConvocatoriaEdition[] = [
     examDate: "",
     questionCount: 100,
     minutes: 120,
-    questions: [],
+    questions: UMNG_CONV_2026_07_26_QUESTIONS,
   },
   {
     code: "UMNG-ED3",
