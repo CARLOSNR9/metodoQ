@@ -4,15 +4,25 @@ import Link from "next/link";
 import { AlertTriangle, ArrowRight, BookOpenCheck } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getUccRepasoInsights } from "@/lib/diagnostic/ucc-exam-blueprint";
+import { getUmngRepasoInsights } from "@/lib/diagnostic/exam-blueprint";
 import { resolveSessionQuestions } from "@/lib/session-review";
-import type { UccConvocatoriaAttempt } from "@/lib/training/convocatorias";
+
+type GenericAttempt = {
+  resultId?: string;
+  correctAnswers: number;
+  wrongAnswers: number;
+  scorePercentage: number;
+  sessionQuestionIds?: string[];
+  answersByQuestionId?: Record<string, string>;
+};
 
 type ConvocatoriaRepasoPanelProps = {
-  attempt: UccConvocatoriaAttempt;
+  attempt: GenericAttempt;
   questionCount: number;
   compact?: boolean;
   /** Oculta puntaje y CTAs cuando ya estás en la pantalla de retroalimentación. */
   insightsOnly?: boolean;
+  track?: "UCC" | "UMNG";
 };
 
 function buildReviewHref(resultId: string | undefined, filter?: "wrong") {
@@ -26,8 +36,12 @@ export function ConvocatoriaRepasoPanel({
   questionCount,
   compact = false,
   insightsOnly = false,
+  track = "UCC",
 }: ConvocatoriaRepasoPanelProps) {
-  const [insights, setInsights] = useState<ReturnType<typeof getUccRepasoInsights> | null>(null);
+  const [insights, setInsights] = useState<{
+    axes: { label: string; percentage: number; wrong: number; axis: string }[];
+    topics: { topic: string; wrongCount: number }[];
+  } | null>(null);
 
   useEffect(() => {
     if (!attempt.sessionQuestionIds?.length || !attempt.answersByQuestionId) {
@@ -38,10 +52,14 @@ export function ConvocatoriaRepasoPanel({
       if (questions.length === 0) {
         setInsights(null);
       } else {
-        setInsights(getUccRepasoInsights(questions, attempt.answersByQuestionId!));
+        if (track === "UMNG") {
+          setInsights(getUmngRepasoInsights(questions, attempt.answersByQuestionId!));
+        } else {
+          setInsights(getUccRepasoInsights(questions, attempt.answersByQuestionId!));
+        }
       }
     });
-  }, [attempt.answersByQuestionId, attempt.sessionQuestionIds]);
+  }, [attempt.answersByQuestionId, attempt.sessionQuestionIds, track]);
 
   const weakestAxes = insights?.axes.filter((axis) => axis.wrong > 0).slice(0, compact ? 2 : 4) ?? [];
   const topTopics = insights?.topics.slice(0, compact ? 3 : 5) ?? [];
@@ -110,7 +128,7 @@ export function ConvocatoriaRepasoPanel({
             Áreas a repasar
           </p>
           <p className="mt-2 text-sm text-slate-500">
-            Prioriza estas áreas del examen UCC antes del simulacro real.
+            Prioriza estas áreas del examen {track} antes del simulacro real.
           </p>
           <ul className="mt-4 space-y-3">
             {weakestAxes.map((axis) => (

@@ -149,6 +149,7 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
                   }}
                   questionCount={convocatoriaEdition.questionCount}
                   insightsOnly
+                  track={convocatoriaEdition.code.startsWith("UMNG") ? "UMNG" : "UCC"}
                 />
               ) : null}
             </>

@@ -148,7 +148,7 @@ function EditionCard({ status, trackName = "UMNG" }: { status: UmngConvocatoriaE
           </div>
 
           {attempt ? (
-            <ConvocatoriaRepasoPanel attempt={attempt} questionCount={edition.questionCount} />
+            <ConvocatoriaRepasoPanel attempt={attempt} questionCount={edition.questionCount} track="UMNG" />
           ) : null}
         </div>
 

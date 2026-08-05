@@ -139,6 +139,60 @@ export function buildRadarFromStats(
   return countsToRadarPoints(counts);
 }
 
+export type UmngRepasoAxisInsight = {
+  axis: MiExamRadarAxis;
+  label: string;
+  correct: number;
+  wrong: number;
+  percentage: number;
+};
+
+export type UmngRepasoTopicInsight = {
+  topic: string;
+  wrongCount: number;
+};
+
+export function getUmngRepasoInsights(
+  questions: TrainingQuestion[],
+  answersByQuestionId: Record<string, string>,
+): { axes: UmngRepasoAxisInsight[]; topics: UmngRepasoTopicInsight[] } {
+  const counts = emptyAxisCounts();
+  const topicWrong = new Map<string, number>();
+
+  for (const question of questions) {
+    const selected = answersByQuestionId[question.id];
+    if (!selected) continue;
+
+    const axis = mapExamAreaToRadarAxis(question.examArea ?? question.topic);
+    const isCorrect = selected === question.correctOptionId;
+    if (isCorrect) counts[axis].correct += 1;
+    else {
+      counts[axis].wrong += 1;
+      const topic = question.topic || "General";
+      topicWrong.set(topic, (topicWrong.get(topic) ?? 0) + 1);
+    }
+  }
+
+  const axes: UmngRepasoAxisInsight[] = MI_EXAM_RADAR_AXES.map((axis) => {
+    const { correct, wrong } = counts[axis];
+    const total = correct + wrong;
+    const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+    return {
+      axis,
+      label: RADAR_DISPLAY_LABELS[axis],
+      correct,
+      wrong,
+      percentage,
+    };
+  }).sort((a, b) => a.percentage - b.percentage);
+
+  const topics: UmngRepasoTopicInsight[] = Array.from(topicWrong.entries())
+    .map(([topic, wrongCount]) => ({ topic, wrongCount }))
+    .sort((a, b) => b.wrongCount - a.wrongCount);
+
+  return { axes, topics };
+}
+
 export function buildRadarChartData({
   university,
   specialty,

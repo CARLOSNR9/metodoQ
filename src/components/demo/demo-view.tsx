@@ -1054,6 +1054,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
       setCurrentQuestionIndex((prev) => prev + 1);
       setLiveFeedbackMessage(null);
     } else {
+      if (isTimedExam && Object.keys(answersByQuestionId).length < totalQuestions) {
+        window.alert("Debes responder todas las preguntas antes de finalizar el examen.");
+        return;
+      }
       setCurrentQuestionIndex(totalQuestions);
     }
   };
@@ -1460,6 +1464,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                           <button
                              onClick={() => {
                                if (currentQuestionIndex === totalQuestions - 1) {
+                                  if (Object.keys(answersByQuestionId).length < totalQuestions) {
+                                     window.alert("Debes responder todas las preguntas antes de finalizar el examen.");
+                                     return;
+                                  }
                                   setCurrentQuestionIndex(totalQuestions);
                                } else {
                                   setCurrentQuestionIndex(currentQuestionIndex + 1);
