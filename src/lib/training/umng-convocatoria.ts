@@ -66,14 +66,16 @@ export const UMNG_CONVOCATORIA_EDITIONS: UmngConvocatoriaEdition[] = [
   {
     code: "UMNG-ED3",
     label: "Edición #3",
-    examDate: "",
+    examDate: "2026-08-09T08:00:00-05:00",
     questionCount: 100,
     minutes: 120,
+    isGlobal: true,
     questions: [],
   }
 ];
 function parseLocalDate(dateKey: string): Date {
   if (!dateKey) return new Date(8640000000000000);
+  if (dateKey.includes("T")) return new Date(dateKey);
   const [year, month, day] = dateKey.split("-").map(Number);
   return new Date(year, month - 1, day, 0, 0, 0, 0);
 }
