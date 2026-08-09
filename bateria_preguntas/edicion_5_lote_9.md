@@ -1,0 +1,318 @@
+PREGUNTA 81 (MEDICINA INTERNA - REUMATOLOGÍA / NEUMOLOGÍA)
+Mujer de 54 años, con diagnóstico de Esclerosis Sistémica variante cutánea limitada (Síndrome de CREST), acude a consulta externa de neumología por disnea de esfuerzo progresiva de 8 meses de evolución, que actualmente le impide caminar una cuadra, asociada a episodios de presíncope. Al examen físico: esclerodactilia, múltiples telangiectasias faciales y un segundo ruido cardíaco (P2) estruendoso y palpable en el foco pulmonar. No se auscultan crépitos y los pulmones están limpios. Las Pruebas de Función Pulmonar (Espirometría) revelan una Capacidad Vital Forzada (CVF) del 90% (Normal), pero la Capacidad de Difusión de Monóxido de Carbono (DLCO) se encuentra desplomada al 35% del predicho. El ecocardiograma estima una presión sistólica de la arteria pulmonar de 65 mmHg con dilatación del ventrículo derecho. Ante esta disociación pulmonar (espirometría normal con DLCO baja), ¿cuál es el grupo patológico y el tratamiento farmacológico OBLIGATORIO de primera línea?
+A. Hipertensión Pulmonar Grupo 3 (por Neumopatía Intersticial); el tratamiento exige inicio inmediato de Ciclofosfamida o Micofenolato para frenar la fibrosis.
+B. Hipertensión Pulmonar Grupo 1 (Hipertensión Arterial Pulmonar pura); requiere inicio inmediato de antagonistas de endotelina (Bosentán) y/o inhibidores de PDE-5 (Sildenafil).
+C. Falla cardíaca izquierda diastólica severa (Grupo 2); el manejo es con dosis altas de diuréticos de asa y restricción hídrica.
+D. Hipertensión Pulmonar Grupo 4 (Tromboembólica crónica); se debe programar para Tromboendarterectomía pulmonar urgente.
+✅ Respuesta correcta: B. Hipertensión Pulmonar Grupo 1 (Hipertensión Arterial Pulmonar pura); requiere inicio inmediato de antagonistas de endotelina (Bosentán) y/o inhibidores de PDE-5 (Sildenafil).
+La paciente cursa con Hipertensión Arterial Pulmonar (HAP) asociada a Esclerosis Sistémica limitada. En la esclerodermia, hay dos formas de dañar el pulmón: 1) La variante difusa produce Fibrosis Pulmonar Intersticial (el pulmón se vuelve pequeño y rígido, CVF muy baja, crepitantes tipo velcro = HTP Grupo 3). 2) La variante limitada (CREST, con anticuerpos anti-centrómero) destruye exclusivamente la vasculatura arterial pulmonar (hiperplasia de la íntima), dejando los alvéolos intactos; por ende, la espirometría es normal (CVF 90%), no hay crépitos, pero el intercambio de gases cae al piso (DLCO 35%) porque no hay capilares funcionales. Esto clasifica como HAP Grupo 1. A diferencia de la fibrosis (que requeriría inmunosupresión), el daño vascular del Grupo 1 requiere vasodilatadores pulmonares agresivos directos (Endotelina, Óxido Nítrico, Prostaciclinas) para evitar que el ventrículo derecho colapse por Cor Pulmonale.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con Esclerodermia Limitada (CREST) o anticuerpos anti-centrómero.
+• Disnea + Espirometría Normal + DLCO muy baja.
+• P2 fuerte y dilatación derecha en ecocardiograma.
+Debes pensar en:
+Hipertensión Arterial Pulmonar (Grupo 1). El endotelio pulmonar se cerró. Tratamiento: Sildenafil, Macitentan/Bosentan. Los inmunosupresores NO sirven aquí porque no hay alveolitis fibrosante.
+Tema: Complicaciones de la Esclerodermia / Neumología.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Elizabeth, aquí te exijo hacer la distinción que salva vidas en reumatología. Un paciente con esclerodermia que se ahoga siempre te planteará el dilema: "¿Se le fibrosó el pulmón o se le taparon las arterias?". La Espirometría y la DLCO tienen la respuesta. Si ambas caen juntas, es Fibrosis (Grupo 3, dale Micofenolato). Si solo cae la DLCO pero el pulmón tiene buen tamaño (CVF normal), los vasos sanguíneos capilares están extintos (Grupo 1, dale Sildenafil). Es una vasculopatía pura sin fibrosis del intersticio. Si le das inmunosupresores (Opción A) a una vasculopatía pura, no ganarás nada y el ventrículo derecho claudicará irreversiblemente.
+❌ Opción A: Hipertensión Pulmonar Grupo 3 (por Neumopatía Intersticial); el tratamiento exige inicio inmediato de Ciclofosfamida o Micofenolato para frenar la fibrosis.
+distractorProfile: overlapping_complication_in_wrong_variant
+incorrectFeedback: La fibrosis intersticial severa (Grupo 3) es más propia de la Esclerosis Sistémica variante Difusa (anti-Scl-70). Cursa con estertores crujientes y una espirometría con franca restricción (CVF < 70%). Aquí la CVF es normal y los pulmones están limpios.
+
+❌ Opción C: Falla cardíaca izquierda diastólica severa (Grupo 2); el manejo es con dosis altas de diuréticos de asa y restricción hídrica.
+distractorProfile: wrong_hemodynamic_group
+incorrectFeedback: La falla cardíaca izquierda (Grupo 2) produce edema pulmonar, ortopnea y crecimiento de cavidades izquierdas, pero no se asocia patognomónicamente a una caída tan aislada de la DLCO con espirometría y clínica respiratoria seca en reposo.
+
+❌ Opción D: Hipertensión Pulmonar Grupo 4 (Tromboembólica crónica); se debe programar para Tromboendarterectomía pulmonar urgente.
+distractorProfile: wrong_pulmonary_hypertension_group
+incorrectFeedback: Requiere el antecedente patognomónico de TEP agudo previo y defectos de perfusión en la gammagrafía V/Q. La esclerodermia no es una enfermedad tromboembólica venosa, sino una arteriopatía proliferativa intrínseca.
+
+
+PREGUNTA 82 (PEDIATRÍA - INFECTOLOGÍA / INMUNOLOGÍA)
+Un niño de 8 años es traído a urgencias en estado crítico. La madre refiere que hace una semana inició con fiebre alta (39.5°C), irritabilidad y dolor abdominal difuso. Posteriormente, presentó enrojecimiento de ambos ojos sin secreción purulenta y una erupción cutánea difusa, por lo que fue diagnosticado con "Enfermedad de Kawasaki atípica" en otro centro. Hoy, el niño presenta vómitos severos, diarrea acuosa, letargia profunda y extremidades frías. Al examen físico: obnubilado, PA 65/40 mmHg (Choque descompensado), FC 165 lpm. Hay inyección conjuntival, eritema palmar y labios agrietados. El ecocardiograma de urgencia revela una Fracción de Eyección del Ventrículo Izquierdo (FEVI) desplomada al 28% sin dilatación aneurismática de las coronarias. Los laboratorios muestran Ferritina en 1.200 ng/mL, Dímero D marcadamente elevado y Linfopenia severa. Revisando la historia clínica electrónica, se confirma que el paciente cursó con una infección asintomática por SARS-CoV-2 (COVID-19) hace 4 semanas (IgG positiva). ¿Cuál es el diagnóstico clínico MÁS preciso de esta tormenta inmunológica postinfecciosa y la terapia combinada INICIAL de rescate?
+A. Enfermedad de Kawasaki refractaria; requiere segunda dosis de IGIV e infusión de Infliximab.
+B. Síndrome Inflamatorio Multisistémico Pediátrico (MIS-C); requiere Inmunoglobulina G intravenosa (IGIV), Corticosteroides a altas dosis (Metilprednisolona) y soporte inotrópico agresivo.
+C. Choque Tóxico Estafilocócico; el manejo exige inicio de Clindamicina intravenosa y Vancomicina para apagar la toxina TSST-1.
+D. Apendicitis aguda complicada con choque séptico; requiere laparotomía exploratoria de emergencia y cristaloides a chorro.
+✅ Respuesta correcta: B. Síndrome Inflamatorio Multisistémico Pediátrico (MIS-C); requiere Inmunoglobulina G intravenosa (IGIV), Corticosteroides a altas dosis (Metilprednisolona) y soporte inotrópico agresivo.
+El paciente cursa con un Síndrome Inflamatorio Multisistémico Pediátrico (MIS-C / PIMS), la letal complicación post-infecciosa que surgió con el SARS-CoV-2. Clínicamente es el gran simulador: "imita" a la Enfermedad de Kawasaki (ojos rojos, rash, labios fisurados), pero ocurre típicamente en niños mayores/escolares (a diferencia del Kawasaki que afecta a < 5 años) y se distingue por una presentación gastrointestinal fulminante (dolor abdominal severo, vómitos, diarrea) que progresa violentamente hacia el Choque Cardiogénico y Vasopléjico (disfunción ventricular severa, FEVI en el suelo). Es una reacción hiperinflamatoria mediada por macrófagos que ocurre de 3 a 6 semanas DESPUÉS de la infección aguda por COVID-19. El tratamiento de rescate validado a nivel mundial exige apagar el sistema inmune con una terapia dual INMEDIATA: IGIV a 2 g/kg MÁS Metilprednisolona intravenosa a dosis de pulso, junto con inotrópicos (Milrinona/Epinefrina) para sostener al miocardio aturdido.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño escolar (6-12 años) que se presenta como "Kawasaki" pero en estado de CHOQUE profundo.
+• Síntomas gastrointestinales muy severos que simulan apendicitis.
+• Disfunción del ventrículo izquierdo aguda (miocarditis fulminante).
+• Antecedente reciente de COVID-19.
+Debes pensar en:
+MIS-C (PIMS). Tratamiento urgente: Inmunomodulación masiva (IGIV + Esteroides) y soporte en UCIP.
+Tema: Infectología Pediátrica / MIS-C.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Elizabeth, el MIS-C vino a reescribir los libros de pediatría intensiva. La gran trampa es creer que es un Kawasaki clásico (Opción A). El Kawasaki da aneurismas coronarios, pero rara vez destruye la fracción de eyección del ventrículo al 28% y casi nunca se presenta con choque profundo desde el día 1, afectando a bebés pequeños. El dolor abdominal del MIS-C es tan brutal que muchos de estos niños entran a cirugía con diagnóstico de apendicitis (Opción D), y en medio de la inducción anestésica, el corazón hace un paro cardíaco por la inflamación miocárdica oculta. Si un escolar tiene "Kawasaki" y la presión en los tobillos, es MIS-C; ponle inotrópicos, IGIV y esteroides a chorro antes de que el choque mixto termine en muerte cerebral.
+❌ Opción A: Enfermedad de Kawasaki refractaria; requiere segunda dosis de IGIV e infusión de Infliximab.
+distractorProfile: classic_mimic_trap
+incorrectFeedback: Aunque comparte fenotipo mucocutáneo, el Kawasaki puro afecta a <5 años y es una vasculitis coronaria, pero rara vez produce una miocarditis aguda fulminante con choque cardiogénico y disfunción ventricular masiva (FEVI 28%).
+
+❌ Opción C: Choque Tóxico Estafilocócico; el manejo exige inicio de Clindamicina intravenosa y Vancomicina para apagar la toxina TSST-1.
+distractorProfile: toxic_shock_overlap
+incorrectFeedback: El choque tóxico cursa con hipotensión y rash descamativo, pero no se asocia al contexto temporal epidémico de una IgG positiva para SARS-CoV-2 de hace 4 semanas, ni a una miocarditis primaria tan predominante frente a la vasoplejía.
+
+❌ Opción D: Apendicitis aguda complicada con choque séptico; requiere laparotomía exploratoria de emergencia y cristaloides a chorro.
+distractorProfile: surgical_misdiagnosis_of_medical_disease
+incorrectFeedback: La inflamación mesentérica masiva del MIS-C simula un abdomen agudo quirúrgico. Intervenir quirúrgicamente a un paciente con FEVI de 28% y choque cardiomiopático inflamatorio resultará en mortalidad intraoperatoria inmediata por colapso anestésico.
+
+
+PREGUNTA 83 (MEDICINA INTERNA - TOXICOLOGÍA / HEPATOLOGÍA)
+Mujer de 22 años es llevada a urgencias por sus padres debido a alteración del estado mental progresiva en las últimas horas, somnolencia profunda e ictericia franca. Los padres encontraron una nota de despedida en su habitación y decenas de blísteres vacíos de Paracetamol (Acetaminofén) extra-fuerte (500 mg). La paciente confiesa haber ingerido "un montón de pastillas" el día de ayer por la mañana (aproximadamente hace 30 horas). Al ingreso: estuporosa (Glasgow 9/15), hepatomegalia dolorosa a la palpación y asterixis positiva. Laboratorios de urgencia: AST 4.800 U/L, ALT 5.200 U/L, Bilirrubina Total 5.5 mg/dL. El TP está prolongado (INR 2.5). El residente extrae un nivel sérico de acetaminofén para trazarlo en el Normograma de Rumack-Matthew y decidir si iniciar N-Acetilcisteína. ¿Cuál es el error de concepto GRAVE y la conducta médica OBLIGATORIA ante la cronología y la clínica de esta intoxicación?
+A. El normograma es inútil después de las 24 horas; se debe iniciar la infusión intravenosa de N-Acetilcisteína (NAC) de inmediato de forma empírica ante la evidencia de hepatotoxicidad activa.
+B. Se debe esperar el resultado del nivel sérico de acetaminofén; si está por debajo de la línea tóxica del normograma, se descarta el riesgo y la NAC no es necesaria.
+C. Al haber superado las 24 horas, la NAC carece de cualquier efecto beneficioso; el paciente debe ser manejado exclusivamente con medidas de soporte y enemas de lactulosa.
+D. Se debe insertar una sonda nasogástrica y administrar dosis múltiples de Carbón Activado para adsorber las pastillas remanentes, difiriendo la NAC.
+✅ Respuesta correcta: A. El normograma es inútil después de las 24 horas; se debe iniciar la infusión intravenosa de N-Acetilcisteína (NAC) de inmediato de forma empírica ante la evidencia de hepatotoxicidad activa.
+La paciente cursa con una Hepatotoxicidad Aguda Severa por sobredosis de Paracetamol (Acetaminofén) de presentación TARDÍA. La regla inquebrbindable de urgencias es que el Nomograma de Rumack-Matthew, que guía el inicio de la N-Acetilcisteína (NAC) basado en los niveles de la droga en sangre, es válido ÚNICA Y EXCLUSIVAMENTE para presentaciones agudas únicas entre las 4 y las 24 horas tras la ingesta. Si el paciente consulta después de 24 horas, la droga ya ha sido metabolizada a NAPQI (el metabolito tóxico) y los niveles séricos de acetaminofén en sangre saldrán bajos o indetectables, dando una falsa sensación de seguridad. Sin embargo, el hígado ya se está necrosando (AST y ALT en miles). En estos casos de presentación tardía, el nivel de sangre no importa: si hay elevación de transaminasas, ictericia o coagulopatía, la N-Acetilcisteína (NAC) intravenosa debe iniciarse DE INMEDIATO. La NAC administrada tardíamente (incluso después de la falla hepática) ha demostrado mejorar espectacularmente el flujo sanguíneo microvascular hepático, la oxigenación y la supervivencia global (reduciendo el riesgo de muerte por falla fulminante).
+Lo que debes saber para el examen
+Cuando veas:
+• Ingesta masiva de Paracetamol hace MÁS de 24 horas o ingestas escalonadas repetitivas.
+• Transaminasas (AST/ALT) elevadísimas.
+• Duda de urgencias: ¿Aplicar o no el Normograma de Rumack-Matthew?
+Debes pensar en:
+El Normograma no sirve post-24 horas. Iniciar NAC empíricamente al instante. Un nivel bajo de acetaminofén en este punto no descarta la toxicidad mortal en curso.
+Tema: Toxicología / Intoxicación por Paracetamol.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Esta es la trampa tóxica más sutil, Elizabeth. El médico confía a ciegas en la tecnología: le toma sangre, la manda al laboratorio, el resultado regresa diciendo "Acetaminofén: 5 mcg/mL (Nivel No Tóxico)" y da de alta a la paciente. ¡Catástrofe! Ese nivel está bajo porque la pastilla ya no está en la sangre, ya se transformó en el veneno (NAPQI) que se pegó a las mitocondrias del hígado, destrozando al paciente. En toxicología tardía, el hígado te da el diagnóstico, no el nivel de la pastilla. Además, el lavado gástrico o el carbón activado (Opción D) después de 30 horas es absolutamente fútil y solo causará broncoaspiración en una paciente que ya está en estupor por encefalopatía hepática. NAC a la vena y prepárate para llamar a la unidad de trasplantes.
+❌ Opción B: Se debe esperar el resultado del nivel sérico de acetaminofén; si está por debajo de la línea tóxica del normograma, se descarta el riesgo y la NAC no es necesaria.
+distractorProfile: nomogram_misapplication_trap
+incorrectFeedback: El Nomograma de Rumack-Matthew pierde toda su validez predictiva a las 24 horas de la ingesta. Un nivel bajo a las 30 horas es garantizado, pero irrelevante frente al daño hepático masivo celular (AST > 4000) ya instaurado, haciendo de la NAC un rescate vital.
+
+❌ Opción C: Al haber superado las 24 horas, la NAC carece de cualquier efecto beneficioso; el paciente debe ser manejado exclusivamente con medidas de soporte y enemas de lactulosa.
+distractorProfile: obsolete_time_window_myth
+incorrectFeedback: Aunque la NAC es hepatoprotectora preventiva si se da antes de las 8 horas, múltiples ensayos demostraron que la NAC tardía sigue disminuyendo dramáticamente la mortalidad y el edema cerebral en pacientes que ya cursan con Falla Hepática Fulminante, debido a sus propiedades inotrópicas microvasculares y antioxidantes.
+
+❌ Opción D: Se debe insertar una sonda nasogástrica y administrar dosis múltiples de Carbón Activado para adsorber las pastillas remanentes, difiriendo la NAC.
+distractorProfile: deadly_aspiration_risk_and_futility
+incorrectFeedback: El tránsito gástrico de los comprimidos ya se completó hace más de 24 horas; el carbón activado será fútil. Instaurarlo en una paciente con Glasgow 9 sin proteger la vía aérea condena a una neumonitis por aspiración mortal, y retrasar la infusión de NAC es letal.
+
+
+PREGUNTA 84 (PEDIATRÍA - NEFROLOGÍA / HEMATOLOGÍA)
+Un niño de 5 años es evaluado en control por nefrología pediátrica. Hace un año fue diagnosticado con Síndrome Nefrótico Idiopático (Enfermedad de Cambios Mínimos), cursando actualmente con su tercera recaída en tratamiento activo con Corticosteroides a dosis plenas (Prednisolona 60 mg/m2/día). En los últimos dos días el niño presentó fiebre, y esta mañana debuta súbitamente con dolor intenso en el flanco derecho, vómitos y la aparición aguda de hematuria macroscópica franca (la orina, que solía ser solo espumosa, ahora es rojo intenso). Al examen físico, se documenta asimetría abdominal con palpación de una masa dolorosa en fosa renal derecha. Una ecografía Doppler renal urgente reporta un aumento drástico del tamaño del riñón derecho, pérdida de la diferenciación corticomedular y AUSENCIA total de flujo en la vena renal ipsilateral. ¿Cuál es el mecanismo fisiopatológico primario subyacente que precipita esta complicación catastrófica en el contexto de su síndrome nefrótico?
+A. Trombosis de la Vena Renal debida a la pérdida masiva en la orina de factores anticoagulantes endógenos, principalmente la Antitrombina III.
+B. Hemorragia quística espontánea secundaria a necrosis papilar isquémica por el uso prolongado de corticosteroides a altas dosis.
+C. Progresión a Glomeruloesclerosis Focal y Segmentaria (GEFS) colapsante que causa isquemia vascular intra-renal severa.
+D. Peritonitis Bacteriana Espontánea (PBE) que ha fistulizado hacia la cápsula renal generando un absceso perinefrítico.
+✅ Respuesta correcta: A. Trombosis de la Vena Renal debida a la pérdida masiva en la orina de factores anticoagulantes endógenos, principalmente la Antitrombina III.
+El paciente cursa con una Trombosis de la Vena Renal, una de las complicaciones más agudas, clásicas y temidas del Síndrome Nefrótico severo. Fisiopatológicamente, la membrana basal del glomérulo nefrótico está arruinada y permite la "fuga" de proteínas corporales vitales hacia el inodoro. Mientras el paciente pierde albúmina (hinchándose), también pierde agresivamente Antitrombina III, Proteína C y Proteína S (los "frenos" naturales de la coagulación). Simultáneamente, el hígado, en su afán por compensar la pérdida de proteínas, sintetiza y libera en exceso factores procoagulantes (Fibrinógeno, Factor VIII) y lípidos. Esto crea un estado de hipercoagulabilidad extrema. Si el niño se deshidrata un poco (por fiebre o vómitos), la sangre se estanca y forma un trombo sólido en la gran vena del riñón. La triada clínica infalible de la trombosis de la vena renal es: Dolor súbito en el flanco, Hematuria macroscópica masiva (porque el riñón se ingurgita de sangre que no puede salir y estalla hacia las vías urinarias) y un riñón gigante y doloroso a la ecografía. Requiere anticoagulación inmediata plena.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente (niño o adulto) con Síndrome Nefrótico activo (Pérdida masiva de proteínas).
+• Aparición súbita de Dolor de Flanco + Hematuria macroscópica + Aumento de tamaño del riñón.
+Debes pensar en:
+Trombosis de la Vena Renal. Causa principal: El paciente "orinó" todos sus anticoagulantes naturales (Pérdida de Antitrombina III por la orina).
+Tema: Complicaciones del Síndrome Nefrótico / Nefrología.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+La Enfermedad de Cambios Mínimos no mata por falla renal, mata por sus complicaciones. Y esta es la más peligrosa. Nunca olvides que el síndrome nefrótico es un estado PROTROMBÓTICO brutal. Si te olvidas de este detalle, confundirás el dolor del niño y la hematuria con una "simple infección de orina" o un cálculo renal. Un riñón que ayer medía 8 cm y hoy mide 12 cm de forma súbita, está lleno de sangre atascada porque su desagüe venoso se taponó. La ecografía Doppler (que muestra la arteria bombeando sangre, pero la vena oscura y tapada) te da la orden para iniciar Heparina de Bajo Peso Molecular de emergencia antes de que el riñón sufra necrosis isquémica cortical.
+❌ Opción B: Hemorragia quística espontánea secundaria a necrosis papilar isquémica por el uso prolongado de corticosteroides a altas dosis.
+distractorProfile: ains_toxicity_mimic
+incorrectFeedback: La necrosis papilar produce dolor de flanco y hematuria, pero está clásicamente ligada al abuso crónico de analgésicos (AINEs) o a la Anemia de Células Falciformes, no a los corticosteroides; además, no explica la ausencia total de flujo venoso en el Doppler.
+
+❌ Opción C: Progresión a Glomeruloesclerosis Focal y Segmentaria (GEFS) colapsante que causa isquemia vascular intra-renal severa.
+distractorProfile: histologic_progression_confusion
+incorrectFeedback: La progresión histológica a GEFS explica la corticorresistencia y la persistencia de la proteinuria, pero no genera eventos hiperagudos isquémicos macrovasculares en cuestión de horas con infarto doloroso de toda la víscera y trombo oclusivo de la vena principal.
+
+❌ Opción D: Peritonitis Bacteriana Espontánea (PBE) que ha fistulizado hacia la cápsula renal generando un absceso perinefrítico.
+distractorProfile: infectious_complication_misplaced
+incorrectFeedback: Los niños nefróticos tienen alto riesgo de PBE (por infección neumocócica del líquido ascítico), lo cual causaría fiebre, dolor abdominal difuso y choque séptico. Pero el hallazgo patognomónico de hematuria macroscópica y la vena renal ocluida por Doppler excluyen la inflamación purulenta extravascular como causa primera.
+
+
+PREGUNTA 85 (MEDICINA INTERNA - NEUROLOGÍA / TOXICOLOGÍA)
+Un joven de 22 años es llevado en ambulancia al cuarto de reanimación por la policía tras ser arrestado durante una riña callejera violenta. Los oficiales informan que el paciente presentaba agresividad extrema, paranoia y "fuerza sobrehumana". A su ingreso, el paciente convulsiona brevemente. Al examen físico: sudoración profusa, midriasis paralítica bilateral masiva (pupilas dilatadas), y palidez generalizada. Los signos vitales revelan una emergencia hipertensiva extrema: PA 240/140 mmHg, con taquicardia sostenida de 155 lpm. El electrocardiograma inicial evidencia isquemia endocárdica anterolateral generalizada. Un panel toxicológico rápido en orina resulta fuertemente positivo para Cocaína y sus metabolitos. Con el fin de controlar la emergencia hipertensiva letal y prevenir una hemorragia intracraneana inminente, ¿cuál de los siguientes fármacos antihipertensivos intravenosos está ABSOLUTAMENTE CONTRAINDICADO en este paciente y podría precipitar su muerte por isquemia coronaria fulminante?
+A. Fentolamina intravenosa.
+B. Labetalol intravenoso.
+C. Propranolol intravenoso en infusión rápida.
+D. Nitroglicerina y Diazepam intravenoso.
+✅ Respuesta correcta: C. Propranolol intravenoso en infusión rápida.
+El paciente cursa con una Intoxicación Aguda y Severa por Cocaína complicada con crisis hipertensiva extrema e isquemia miocárdica. La cocaína bloquea la recaptación presináptica de catecolaminas (noradrenalina, dopamina, serotonina), inundando los receptores adrenérgicos (tanto Alfa como Beta) y desencadenando una "tormenta simpática". La estimulación de los receptores Alfa-1 produce una vasoconstricción periférica brutal (que dispara la presión a 240/140), y la estimulación de los receptores Beta-1 acelera el corazón (taquicardia) y los Beta-2 provocan una leve dilatación vasodilatadora de rescate en el músculo liso periférico. La REGLA DE ORO DE TOXICOLOGÍA dicta que el uso de Betabloqueadores Puros o No Selectivos (como el Propranolol o Metoprolol) está ESTRÍCTAMENTE PROHIBIDO. Si bloqueas los receptores Beta (eliminando la poca vasodilatación protectora) sin haber bloqueado antes los receptores Alfa, toda la carga de noradrenalina choca violentamente y sin oposición contra el receptor Alfa-1. Esto genera el letal "Efecto Alfa Sin Oposición": la presión arterial se vuelve incontrolable, cerrando por completo las arterias coronarias y causando un infarto masivo o un ACV hemorrágico fulminante en la sala de urgencias.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente con dolor torácico, crisis hipertensiva y taquicardia.
+• Pupilas dilatadas y antecedente o sospecha de uso de COCAÍNA o Anfetaminas.
+Debes pensar en:
+Peligro extremo. Contraindicación ABSOLUTA: Betabloqueadores puros (Propranolol, Metoprolol).
+Tratamiento de oro: Benzodiacepinas (Diazepam/Lorazepam para apagar el cerebro), Fentolamina (bloqueador Alfa) o Nitroglicerina para vasodilatar. (El Labetalol es mixto Alfa/Beta y es aceptable o controvertido, pero el beta puro es el asesino).
+Tema: Toxicología / Drogas de Abuso / Urgencias Cardiovasculares.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Elizabeth, esta pregunta encarna el miedo de todo urgenciólogo. Llega un joven de 20 años agarrándose el pecho, con el monitor pitando en 155 latidos por minuto y la presión en la estratosfera. El impulso del médico es frenar ese corazón a toda costa y pide la ampolleta de Propranolol. Si la inyectas, el paciente se lleva las manos a la cabeza, grita y muere. La cocaína ya tiene a sus arterias constreñidas al máximo; si le quitas la acción del receptor Beta, las arterias se cerrarán como una prensa de hierro oxidada. Relaja el cerebro del chico primero. El Diazepam a dosis altas (Opción D) calma el sistema nervioso central, apagando la descarga de noradrenalina desde la raíz, y baja la presión milagrosamente. Si el pecho le sigue doliendo, usa vasodilatadores directos (Fentolamina o Nitroglicerina, Opciones A y D).
+❌ Opción A: Fentolamina intravenosa.
+distractorProfile: specific_antidote_mechanism
+incorrectFeedback: La Fentolamina es un antagonista puro de los receptores Alfa-adrenérgicos. Es el fármaco de oro teórico para revertir la vasoconstricción periférica masiva y la hipertensión inducida por la cocaína, dilatando las coronarias de inmediato.
+
+❌ Opción B: Labetalol intravenoso.
+distractorProfile: mixed_blocker_controversy
+incorrectFeedback: El labetalol bloquea tanto receptores Alfa como Beta (aunque más Beta que Alfa). Las guías más recientes de la AHA lo consideran una opción razonable y segura en emergencias hiperadrenérgicas por cocaína cuando se requiere un control antihipertensivo potente, a diferencia de los betabloqueadores puros.
+
+❌ Opción D: Nitroglicerina y Diazepam intravenoso.
+distractorProfile: first_line_support_therapy
+incorrectFeedback: Las benzodiacepinas (Diazepam) son el tratamiento inicial mandatorio universal para apagar el hiper-simpatotonismo central, y la Nitroglicerina revierte la isquemia coronaria aguda, siendo ambos pilares salvavidas del protocolo, no contraindicaciones.
+
+
+PREGUNTA 86 (PEDIATRÍA - CARDIOLOGÍA / URGENCIAS)
+Lactante masculino de 3 meses de edad, es ingresado de emergencia por rechazo total al alimento, letargia profunda y dificultad para respirar de 12 horas de evolución. La madre refiere que el niño "respira muy rápido y el pecho le late como un motorcito". Al ingreso al cuarto de reanimación, el bebé luce cenizo, diaforético, con un llenado capilar de 5 segundos, pulsos femorales y distales débiles y PA de 60/35 mmHg (Choque cardiogénico). El monitor cardíaco evidencia de forma sostenida una taquicardia extrema a una frecuencia de 260 latidos por minuto. El ECG de 12 derivaciones muestra complejos QRS estrechos (50 ms), absolutamente regulares, y con ausencia total de ondas P visibles antes de los complejos. Ante la inestabilidad hemodinámica profunda del lactante, ¿cuál es el paso de reanimación INMEDIATO Y DE ORO para frenar el colapso vascular?
+A. Realizar maniobras vagales intensas (bolsa de hielo en el rostro) durante 5 minutos y reevaluar el ritmo.
+B. Administrar Adenosina intravenosa en bolo rápido por vía periférica gruesa con técnica de doble jeringa.
+C. Realizar Cardioversión Eléctrica Sincronizada inmediata (inicio a 0.5 - 1 Joules/kg).
+D. Administrar Amiodarona intravenosa en infusión para frenar el circuito de reentrada sinusal.
+✅ Respuesta correcta: C. Realizar Cardioversión Eléctrica Sincronizada inmediata (inicio a 0.5 - 1 Joules/kg).
+El lactante cursa con una Taquicardia Supraventricular (TSV), que es la arritmia sintomática más frecuente en la pediatría (frecuencias > 220 lpm en lactantes, QRS estrecho y regular). El eje del algoritmo PALS (Soporte Vital Avanzado Pediátrico) para las arritmias rápidas exige una respuesta automática a una sola pregunta inicial: ¿El paciente está hemodinámicamente ESTABLE o INESTABLE? Este lactante presenta compromiso de conciencia (letargia), signos de mala perfusión (cenizo, llenado capilar de 5 segundos) e hipotensión franca (choque). Está profundamente INESTABLE. En cualquier paciente pediátrico (o adulto) con una taquiarritmia y signos innegables de descompensación hemodinámica, las maniobras farmacológicas (Adenosina) o físicas (vagal) están supeditadas o reemplazadas por la inmediatez de la electricidad. La conducta universal salvavidas es la Cardioversión Eléctrica Sincronizada inmediata, ya que el gasto cardíaco está a punto de colapsar a paro cardiorrespiratorio en asistolia o fibrilación ventricular.
+Lo que debes saber para el examen
+Cuando veas:
+• Lactante con FC > 220 lpm (TSV).
+• Signos de choque inminente: Letargia, frialdad, hipotensión.
+Debes pensar en:
+El algoritmo de Inestabilidad. Si está INESTABLE, la electricidad gana a los medicamentos = Cardioversión Sincronizada (0.5 a 1 J/kg). Si estuviera rosado, sonriente y con buena presión (ESTABLE), la Adenosina sería la respuesta perfecta.
+Tema: Reanimación Pediátrica (PALS) / Taquicardia Supraventricular.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Elizabeth, esta es la "trampa de la Adenosina" que cobra más puntos en las preguntas de reanimación. Todos los estudiantes aprenden que "TSV se trata con Adenosina", y marcan la Opción B ciegamente al ver un QRS estrecho. Detente siempre en la presión arterial y el color de la piel. Si el niño está chocado (gris y sin presión), no tienes los 60 segundos que tarda buscar la ampolla de Adenosina, canalizar dos venas, empujar el bolo rápido, empujar el suero fisiológico y rezar para que funcione. Un corazón a 260 latidos por minuto no se llena de sangre, su gasto cardíaco es nulo. Tienes que colocar las paletas pediátricas en su pecho, oprimir el botón "Sincronizar" (para no caer en la onda T y causar fibrilación) y descargar 1 Joule por kilo. La electricidad "apaga y enciende" el nodo AV en un milisegundo, salvando la vida del lactante al instante.
+❌ Opción A: Realizar maniobras vagales intensas (bolsa de hielo en el rostro) durante 5 minutos y reevaluar el ritmo.
+distractorProfile: stable_protocol_in_unstable_patient
+incorrectFeedback: La maniobra del hielo en la cara estimula el reflejo de inmersión y es la primera línea exclusiva para pacientes ESTABLES. En un paciente en choque profundo, retrasar el reseteo eléctrico por 5 minutos provocará daño anóxico isquémico irreversible al cerebro y paro cardíaco inminente.
+
+❌ Opción B: Administrar Adenosina intravenosa en bolo rápido por vía periférica gruesa con técnica de doble jeringa.
+distractorProfile: pharmacological_fixation_ignoring_hemodynamics
+incorrectFeedback: La adenosina es la piedra angular del paciente ESTABLE. Aunque algunas guías permiten intentarla en inestables sólo si la vía IV ya está perfectamente canalizada y la ampolla lista en mano, la prioridad dictaminada por PALS ante la inestabilidad severa (y la demora en accesos venosos periféricos en shock) es siempre preparar la energía eléctrica.
+
+❌ Opción D: Administrar Amiodarona intravenosa en infusión para frenar el circuito de reentrada sinusal.
+distractorProfile: wrong_antiarrhythmic_timing
+incorrectFeedback: La Amiodarona se pasa en infusión de 20 a 60 minutos y tiene efectos hipotensores. Dar un medicamento lento a un paciente que requiere reversión inmediata del ritmo para no morir de choque cardiogénico asfixiará el poco gasto cardíaco que le queda.
+
+
+PREGUNTA 87 (MEDICINA INTERNA - HEMATOLOGÍA / INMUNOLOGÍA)
+Un hombre de 65 años, residente en una zona de clima gélido, acude a consulta por fatiga profunda y "coloración morada azulada dolorosa" en las puntas de los dedos, la nariz y las orejas cada vez que sale de casa o se lava las manos con agua fría (Acrocianosis inducida por el frío). No refiere dolor articular ni fiebre. Al examen físico resalta ictericia conjuntival leve y hepatoesplenomegalia. Los paraclínicos evidencian una Hemoglobina de 7.5 g/dL (Anemia severa), VCM de 105 fL, y Reticulocitos aumentados. Hay elevación de la bilirrubina indirecta y la LDH, con haptoglobina baja. Se realiza una prueba de Antiglobulina Directa (Coombs Directo), el cual arroja un resultado fuertemente Positivo para la fracción C3d del complemento, pero completamente Negativo para Inmunoglobulina G (IgG). Las pruebas serológicas demuestran que los anticuerpos se aglutinan y lisan masivamente a bajas temperaturas (4°C). ¿Cuál es la fisiopatología inmunológica que subyace a esta enfermedad y cuál es el tratamiento biológico MÁS efectivo a mediano plazo, asumiendo que los corticosteroides son ineficaces?
+A. Autoanticuerpos calientes IgG se adhieren al eritrocito a 37°C y los macrófagos del bazo los destruyen; el tratamiento es esplenectomía.
+B. Autoanticuerpos fríos de tipo IgM se unen al eritrocito a bajas temperaturas, fijando el complemento terminal que lisa la célula; el tratamiento es evitar el frío y administrar Rituximab (Anti-CD20).
+C. Falla en la expresión de proteínas protectoras de complemento (CD55/CD59) generando lisis ácida nocturna; el tratamiento de rescate es Eculizumab.
+D. Hiperproducción de macroglobulinas que causan hiperviscosidad sanguínea e isquemia distal microvascular; el manejo exige Plasmaféresis inmediata.
+✅ Respuesta correcta: B. Autoanticuerpos fríos de tipo IgM se unen al eritrocito a bajas temperaturas, fijando el complemento terminal que lisa la célula; el tratamiento es evitar el frío y administrar Rituximab (Anti-CD20).
+El paciente cursa con Enfermedad por Crioaglutininas (Anemia Hemolítica Autoinmune por Anticuerpos Fríos). Es un trastorno mediado casi exclusivamente por un anticuerpo gigante, la Inmunoglobulina M (IgM). Cuando la sangre del paciente pasa por las zonas frías del cuerpo (manos, nariz, orejas a <30°C), los anticuerpos IgM se pegan a los glóbulos rojos, los aglutinan violentamente (formando tapones que causan la acrocianosis dolorosa) y activan la cascada del complemento de forma brutal. Al regresar a las zonas "calientes" del tronco (37°C), la IgM se despega de la célula y huye, pero deja clavada en el eritrocito la "bomba" del complemento (la proteína C3d), la cual destruye el glóbulo en la sangre (hemólisis intravascular). Por esto, cuando el patólogo hace el Test de Coombs Directo, no encuentra anticuerpos IgG pegados, solo encuentra "cenizas del crimen": la proteína C3d del complemento adherida. A diferencia de la anemia hemolítica caliente (IgG), la enfermedad por crioaglutininas (IgM) NO RESPONDE a corticosteroides ni a la esplenectomía. El tratamiento curativo/supresor primario, más allá de prohibirle al paciente el contacto con el frío, es el uso de Rituximab para destruir el clon de linfocitos B que fabrica la IgM tóxica.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente mayor con anemia hemolítica e ictericia + Fenómenos de frío (dedos azules dolorosos en invierno).
+• Marcador Pivote: Coombs Directo POSITIVO para C3d, pero NEGATIVO para IgG.
+Debes pensar en:
+Enfermedad por Crioaglutininas (Anticuerpos Fríos IgM). No intentes tratar con esteroides. Evitar frío, calentar la sangre para transfusiones y dar Rituximab es el estándar de oro.
+Tema: Anemias Hemolíticas Inmunitarias / Hematología.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Elizabeth, contrasta esto con la Pregunta 57 del lote anterior. Allá, la IgG destruía la célula en el calor del bazo (Anticuerpos calientes, respondía a corticoides). Aquí, la enorme molécula IgM espera a que el paciente toque el agua fría de la nevera para "ahorcar" al glóbulo rojo y clavarle la molécula del complemento C3. Si tú le prescribes Prednisona a este paciente, el sistema inmune te ignorará y el paciente sangrará (hemólisis) hasta requerir transfusión, la cual será catastrófica si la bolsa de sangre del banco (que viene a 4°C de la nevera) no se pasa por un "calentador de fluidos" antes de entrar a la vena del abuelo. ¡Mándale el Rituximab directo a los linfocitos rebeldes!
+❌ Opción A: Autoanticuerpos calientes IgG se adhieren al eritrocito a 37°C y los macrófagos del bazo los destruyen; el tratamiento es esplenectomía.
+distractorProfile: warm_aha_overlap_trap
+incorrectFeedback: Este es el mecanismo y tratamiento de la AHAI por anticuerpos CALIENTES. En la viñeta, el Coombs directo es explícitamente negativo para IgG, descartando por completo esta fisiopatología esplénica.
+
+❌ Opción C: Falla en la expresión de proteínas protectoras de complemento (CD55/CD59) generando lisis ácida nocturna; el tratamiento de rescate es Eculizumab.
+distractorProfile: paroxysmal_nocturnal_hemoglobinuria_trap
+incorrectFeedback: La Hemoglobinuria Paroxística Nocturna (HPN) también cursa con hemólisis mediada por complemento, PERO el test de Coombs directo es característicamente NEGATIVO para complemento y para IgG, ya que la lisis no es desencadenada por la presencia de autoanticuerpos en la membrana celular.
+
+❌ Opción D: Hiperproducción de macroglobulinas que causan hiperviscosidad sanguínea e isquemia distal microvascular; el manejo exige Plasmaféresis inmediata.
+distractorProfile: waldenstrom_macroglobulinemia_overlap
+incorrectFeedback: La Macroglobulinemia de Waldenström produce IgM masiva causando hiperviscosidad (sangrado por encías, letargia), pero no cursa patognomónicamente con un síndrome hemolítico crónico brutal autoinmune (Coombs + a C3) gatillado estrictamente por la caída de la temperatura periférica.
+
+
+PREGUNTA 88 (PEDIATRÍA - INFECTOLOGÍA / OTORRINOLARINGOLOGÍA)
+Un niño no inmunizado de 3 años, residente en una comunidad antivacunas, es traído en brazos por sus padres a la sala de emergencias a medianoche. El paciente luce supremamente tóxico, pálido y sudoroso. Presenta una fiebre altísima (40°C) de inicio brusco en la tarde. Llama la atención que el niño no presenta tos en lo absoluto, pero se encuentra en una posición obligada: sentado, inclinado hacia adelante con el cuello hiperextendido y apoyando las manos en la camilla (Posición de trípode). Tiene la boca abierta, babea saliva continuamente (sialorrea masiva) y la escasa voz que emite suena gangosa, como si tuviera "una papa caliente en la garganta". Al respirar emite un estridor inspiratorio suave pero ahogado. El residente de urgencias saca un baja lenguas de madera de su bolsillo y se dispone a explorar vigorosamente la faringe del niño para buscar pus en las amígdalas. ¿Por qué esta maniobra diagnóstica está ABSOLUTAMENTE CONTRAINDICADA y cuál es el paso OBLIGATORIO que salva la vida en este escenario?
+A. Causaría una ruptura de un absceso retrofaríngeo con broncoaspiración purulenta letal; se debe realizar TAC de cuello contrastado primero.
+B. Puede precipitar un espasmo laríngeo reflejo con obstrucción total y asfixia irreversible; se debe trasladar inmediatamente al quirófano para intubación controlada por anestesiología.
+C. Podría desplazar una pseudomembrana diftérica de la laringe hacia la tráquea central; se debe aplicar antitoxina y penicilina de forma inmediata en urgencias.
+D. Induciría el vómito, incrementando el riesgo de neumonía por aspiración en el crupe viral agudo; se debe administrar Adrenalina racémica nebulizada.
+✅ Respuesta correcta: B. Puede precipitar un espasmo laríngeo reflejo con obstrucción total y asfixia irreversible; se debe trasladar inmediatamente al quirófano para intubación controlada por anestesiología.
+El paciente cursa con Epiglotitis Aguda, la emergencia supraglótica más letal de la infancia. La triada de oro histórica en niños no vacunados (por Haemophilus influenzae tipo b) es: 1) Fiebre alta de inicio brutal, 2) Posición de trípode (el niño intenta mantener la vía abierta mecánicamente), 3) Sialorrea masiva (babeo porque le duele tanto tragar que prefiere dejar que la saliva caiga) y aspecto tóxico, con AUSENCIA de tos (lo que lo diferencia del crupe, que tiene la clásica "tos perruna"). El tejido de la epiglotis está rojo cereza y tan edematizado que apenas deja pasar un hilo de aire. La REGLA UNIVERSAL E INFALIBLE de la reanimación es prohibir absolutamente la manipulación física de la boca o el uso de baja lenguas en urgencias, y prohibir alterar/estresar al niño (sin vías venosas forzadas ni llanto). Si la espátula toca la epiglotis inflamada o el niño entra en pánico, los músculos de la laringe sufrirán un espasmo reflejo de rebote, cerrando herméticamente y para siempre el milímetro de vía aérea que quedaba abierto, matando al niño por asfixia antes de lograr una traqueostomía. La única acción médica aceptable es llamar al anestesiólogo y al otorrino, y llevar al niño calmadamente al quirófano para dormirlo suavemente e intubarlo en un ambiente hiper-controlado, donde un bisturí está listo para abrir el cuello (traqueostomía) si falla el tubo.
+Lo que debes saber para el examen
+Cuando veas:
+• Niño no vacunado (3 a 7 años).
+• Sialorrea (Babeo constante) + Ausencia de tos + Postura de trípode + Fiebre tóxica.
+• Dolor al tragar exquisito.
+Debes pensar en:
+Epiglotitis Aguda (por H. influenzae tipo b). CONTRAINDICACIÓN DE ORO: No usar baja lenguas, no acostar al niño, no hacerlo llorar. El manejo es INTUBACIÓN directiva en quirófano.
+Tema: Urgencias de Vía Aérea / Infectología Pediátrica.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Elizabeth, esta es la viñeta donde el médico "proactivo" mata al paciente. La mamá te dice "el niño no traga", y tu instinto médico grita "¡Déjame ver qué tiene en la garganta!". Si sacas la espátula de madera, abres la boca y alumbras la úvula, el niño llorará aterrado. La epiglotis, que está hinchada como una fresa al rojo vivo, caerá hacia atrás como una tapa de inodoro y sellará la tráquea por completo. El niño morirá asfixiado azul frente a la madre y el juicio legal destruirá tu carrera. Nunca toques a un niño con "babeo tóxico y sin tos". Llévate a la madre con el niño en brazos directo a las luces de la sala de cirugía; allí, el anestesiólogo con propofol y oxígeno al 100% asegura el tubo endotraqueal salvando su vida.
+❌ Opción A: Causaría una ruptura de un absceso retrofaríngeo con broncoaspiración purulenta letal; se debe realizar TAC de cuello contrastado primero.
+distractorProfile: overlapping_ent_emergency_trap
+incorrectFeedback: El absceso retrofaríngeo da tortícolis, dolor y abombamiento de la faringe posterior, pero permite una vía aérea mucho más estable que soporta la intubación o la evaluación tomográfica sin el colapso hiperagudo del reflejo glótico mortal de la epiglotis superior.
+
+❌ Opción C: Podría desplazar una pseudomembrana diftérica de la laringe hacia la tráquea central; se debe aplicar antitoxina y penicilina de forma inmediata en urgencias.
+distractorProfile: historical_disease_mimic
+incorrectFeedback: La Difteria (C. diphtheriae) da fiebre baja y una pseudomembrana grisácea faríngea adherente que sangra al rasparla (cuello de toro), pero el cuadro agudísimo de fiebre de 40°C, babeo espumoso y trípode asfíctico en un niño es el rostro patognomónico clásico del edema epiglotítico.
+
+❌ Opción D: Induciría el vómito, incrementando el riesgo de neumonía por aspiración en el crupe viral agudo; se debe administrar Adrenalina racémica nebulizada.
+distractorProfile: croup_therapeutic_error
+incorrectFeedback: El Crupe (Laringotraqueítis viral) produce estridor pero se caracteriza ruidosamente por una tos "perruna o de foca" incesante y el niño NO se ve tóxico ni babeante. Dar adrenalina nebulizada a una epiglotitis bacteriana es fútil y retrasa la protección mecánica ineludible de la vía aérea estrangulada.
+
+
+PREGUNTA 89 (MEDICINA INTERNA - ENDOCRINOLOGÍA / NEFROLOGÍA)
+Un hombre de 45 años, intervenido quirúrgicamente hace 3 días por neurocirugía (Resección transesfenoidal endoscópica de un macroadenoma hipofisiario gigante), se encontraba evolucionando favorablemente. Hoy la enfermera del piso alerta al equipo médico porque la bolsa recolectora de orina se ha llenado con 6 Litros de líquido en las últimas 12 horas. El paciente refiere estar sumamente cansado, confuso y quejándose de una "sed espantosa e insaciable" que lo obliga a pedir jarras enteras de agua fría. Al examen físico: mucosas secas, signo de pliegue positivo, PA 105/65 mmHg. Laboratorios STAT: Sodio sérico 156 mEq/L (Hipernatremia extrema), Osmolaridad sérica elevada (320 mOsm/kg H2O). A pesar del sodio por los cielos, la orina es casi transparente, con una Osmolaridad Urinaria en el piso (80 mOsm/kg H2O). El internista, sospechando una falla del eje neurohipofisiario, ordena la administración de un análogo sintético intravenoso: Desmopresina (DDAVP). A las 2 horas, la orina se oscurece y su Osmolaridad Urinaria sube radicalmente a 600 mOsm/kg H2O. ¿Cuál es el diagnóstico metabólico definitivo confirmado por esta prueba dinámica y su fisiopatología?
+A. Diabetes Insípida Nefrogénica aguda; los túbulos renales perdieron la capacidad de responder a la hormona antidiurética (ADH).
+B. Síndrome de Secreción Inadecuada de ADH (SIADH); el trauma hipofisiario liberó hormona reteniendo sodio.
+C. Diabetes Insípida Central transitoria o permanente; el tallo pituitario seccionado en cirugía dejó de producir/liberar ADH al torrente.
+D. Polidipsia Primaria (Psicógena); el paciente lava su médula renal bebiendo agua por un trastorno psiquiátrico de base.
+✅ Respuesta correcta: C. Diabetes Insípida Central transitoria o permanente; el tallo pituitario seccionado en cirugía dejó de producir/liberar ADH al torrente.
+El paciente cursa con Diabetes Insípida (DI), la complicación reina del periodo postoperatorio de las cirugías hipofisiarias y del trauma craneoencefálico. La fisiopatología es pura: al resecar la hipófisis, el cirujano corta el tallo pituitario (infundíbulo) o destruye la neurohipófisis. Al desaparecer la "fábrica" o el "almacén" de Hormona Antidiurética (ADH/Vasopresina), las "puertas de salida de agua" en el riñón se quedan abiertas de par en par. El paciente orina litros y litros de agua pura (poliuria de 6L a 15L diarios con Osmolaridad Urinaria menor de 300), lo que concentra brutalmente su sangre, causándole Hipernatremia y deshidratación extrema (Sodio > 145, y sed insaciable para tratar de empatar la pérdida). El "Test de Desmopresina" (DDAVP) diferencia entre la DI Central y la DI Nefrogénica. Al inyectar la Desmopresina (ADH sintética de banco):
+Si el riñón responde cerrando el grifo y concentrando la orina maravillosamente a 600 mOsm/kg (como en la viñeta), significa que el riñón funciona perfecto y el problema era que el cerebro no le mandaba la hormona. Esto diagnostica la Diabetes Insípida Central.
+Si el riñón ignora a la pastilla y sigue botando agua diluida, significa que el problema está en los receptores del propio riñón (Diabetes Insípida Nefrogénica).
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente post-Neurocirugía o post-TEC que orina LITROS incontrolables de agua transparente.
+• Laboratorios opuestos: Sangre muy concentrada (Hipernatremia > 145) + Orina muy diluida (Osmolaridad orina < 300).
+• Responde al Test de Desmopresina con aumento de la osmolaridad urinaria.
+Debes pensar en:
+Diabetes Insípida Central. Tratamiento: Desmopresina (DDAVP) de por vida o de forma transitoria, según la evolución, y reposición de agua libre.
+Tema: Trastornos del Sodio y Agua / Endocrinología y Neurocirugía.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Elizabeth, la clave aquí está en entender el origen de la fuga. Si operaron su cabeza, el daño está en la cabeza. El riñón está pidiendo a gritos la señal para detener la pérdida de agua, pero la hipófisis está apagada o extirpada. Cuando le inyectas la Desmopresina por la vena, el riñón dice "¡Por fin, jefe!" y cierra las acuaporinas, concentrando la orina en horas. Si hubiera sido daño renal puro (Opción A, inducido por litio por ejemplo), el riñón ignoraría olímpicamente tu DDAVP porque sus receptores están dañados. El SIADH (Opción B) es exactamente lo inverso: demasiada hormona ADH que causaría orina oscura (concentrada) e Hiponatremia extrema, con el paciente ahogándose en su propia agua, no deshidratado pidiendo jarras heladas.
+❌ Opción A: Diabetes Insípida Nefrogénica aguda; los túbulos renales perdieron la capacidad de responder a la hormona antidiurética (ADH).
+distractorProfile: failure_to_interpret_dynamic_test
+incorrectFeedback: En la DI Nefrogénica (ej. por toxicidad de litio o hipercalcemia), el receptor tubular de ADH (V2) es resistente. Por ende, la inyección exógena de Desmopresina NO causaría ninguna elevación de la osmolaridad urinaria; el riñón seguiría produciendo orina diluida.
+
+❌ Opción B: Síndrome de Secreción Inadecuada de ADH (SIADH); el trauma hipofisiario liberó hormona reteniendo sodio.
+distractorProfile: exact_opposite_pathophysiology
+incorrectFeedback: El SIADH cursa con un exceso de ADH, lo que genera retención masiva de agua libre y una HIPONATREMIA dilucional severa (< 135 mEq/L), acompañada de orina inadecuadamente concentrada y oliguria, todo lo contrario al fenotipo de la viñeta.
+
+❌ Opción D: Polidipsia Primaria (Psicógena); el paciente lava su médula renal bebiendo agua por un trastorno psiquiátrico de base.
+distractorProfile: wrong_trigger_for_polyuria
+incorrectFeedback: Aunque estos pacientes también orinan litros, su problema primario es tomar agua en exceso, lo que apaga fisiológicamente su ADH y diluye la sangre, resultando en HIPONATREMIA (< 135 mEq/L). Un sodio de 156 mEq/L descarta categóricamente que la polidipsia sea la causa primaria de la poliuria.
+
+
+PREGUNTA 90 (MEDICINA INTERNA - REUMATOLOGÍA / OFTALMOLOGÍA)
+Una mujer de 75 años acude a urgencias quejándose de una cefalea temporal derecha nueva y pulsátil, y sensibilidad exquisita al peinarse en esa zona. Refiere que al comer alimentos sólidos presenta un "dolor que la obliga a dejar de masticar" (claudicación mandibular). En la sala de espera, nota bruscamente que "se le bajó un telón negro" sobre el ojo derecho, perdiendo la visión en ese ojo por completo de manera súbita e indolora. Al examen físico: la arteria temporal derecha se palpa engrosada, indurada y sin pulso. Se extrae sangre de urgencia que reporta una Velocidad de Sedimentación Globular (VSG) de 105 mm/h (marcadamente elevada) y Proteína C Reactiva (PCR) alta. El residente de medicina interna planea contactar al cirujano vascular para una biopsia urgente de la arteria temporal. Con el fin de salvar el ojo contralateral de una ceguera irreversible, ¿cuál es el paso terapéutico INMEDIATO E INNEGOCIABLE que debe instaurarse en esta paciente, incluso antes de la confirmación histológica?
+A. Esperar la biopsia de la arteria temporal para confirmar el diagnóstico y evitar la inmunosupresión innecesaria en una anciana.
+B. Iniciar Corticosteroides sistémicos a dosis altas (Metilprednisolona/Prednisona) INMEDIATAMENTE.
+C. Administrar inmunosupresores ahorradores de esteroides como Metotrexato o Tocilizumab en bolo de ataque.
+D. Realizar un ecocardiograma Doppler carotídeo y dar antiagregación con Aspirina masiva por sospecha de infarto embólico (TIA/ACV).
+✅ Respuesta correcta: B. Iniciar Corticosteroides sistémicos a dosis altas (Metilprednisolona/Prednisona) INMEDIATAMENTE.
+La paciente cursa con Arteritis de Células Gigantes (ACG) o Arteritis de la Temporal. Es una vasculitis de grandes y medianos vasos que afecta predilectamente a adultos mayores (> 50 años). Las ramas de la carótida externa se inflaman y se ocluyen, generando el cuadro clásico: cefalea temporal, cuero cabelludo hipersensible y el síntoma de máximo riesgo isquémico: la claudicación mandibular. La inflamación severa sistémica se refleja en una VSG elevadísima (> 50 o 100 mm/h). La complicación más temida es que la inflamación se propague a la arteria oftálmica y ciliar posterior, causando una Neuropatía Óptica Isquémica Anterior (NOIA), que es el "infarto del nervio óptico", manifestándose como la pérdida súbita de visión ("el telón negro") en un ojo. Cuando un paciente con ACG pierde la visión o amenaza con hacerlo, la REGLA DE ORO es iniciar de inmediato pulsos de corticosteroides intravenosos (Metilprednisolona) o Prednisona oral a dosis altísimas, ANTES de la biopsia. Los esteroides detienen el proceso inflamatorio en horas y salvan el ojo contralateral de la misma suerte. La biopsia de la arteria temporal (el gold standard diagnóstico) puede realizarse hasta 1 o 2 semanas después de iniciados los esteroides sin que se borren los granulomas patognomónicos. Retrasar el tratamiento esperando la biopsia es negligencia médica que condenará a la paciente a la ceguera bilateral permanente.
+Lo que debes saber para el examen
+Cuando veas:
+• Paciente anciano (> 50 años) con Cefalea nueva, claudicación mandibular o dolor al peinarse.
+• Pérdida súbita de visión monocular (Amaurosis Fugax o permanente).
+• VSG > 50 mm/h.
+Debes pensar en:
+Arteritis de Células Gigantes. Conducta inmediata: Esteroides a altas dosis (Metilprednisolona IV o Prednisona oral). NUNCA esperar la biopsia para iniciar tratamiento.
+Tema: Vasculitis / Reumatología de Urgencias.
+
+EXPLICACIÓN DEL PROFE BY DR Q
+Elizabeth, aquí te juegas los ojos de tu paciente. El residente inexperto piensa: "no le daré dosis masivas de corticoides hasta estar seguro con la biopsia, porque los corticoides tienen efectos adversos". ¡Grave error! El nervio óptico es el tejido que menos perdona la isquemia en el cuerpo humano. Si demoras el corticoide 24 horas esperando al cirujano, mañana esa señora será ciega de ambos ojos de forma irreversible. La inflamación granulomatosa de la arteria temporal deja cicatrices que el patólogo puede ver incluso si le das esteroides por una semana antes del bisturí. Por eso, actúas como un escuadrón de bomberos: apagas el incendio primero con Metilprednisolona y preguntas por el diagnóstico definitivo después con la patología.
+❌ Opción A: Esperar la biopsia de la arteria temporal para confirmar el diagnóstico y evitar la inmunosupresión innecesaria en una anciana.
+distractorProfile: diagnostic_delay_trap
+incorrectFeedback: Retrasar el tratamiento con esteroides en presencia de síntomas isquémicos oculares para asegurar el diagnóstico histológico es una negligencia absoluta, ya que el riesgo inminente de ceguera del ojo contralateral es altísimo y la biopsia seguirá siendo positiva hasta por dos semanas post-esteroides.
+
+❌ Opción C: Administrar inmunosupresores ahorradores de esteroides como Metotrexato o Tocilizumab en bolo de ataque.
+distractorProfile: second_line_misplacement
+incorrectFeedback: El Tocilizumab (anti-IL-6) se utiliza como terapia ahorradora de esteroides para el mantenimiento a largo plazo de la ACG y reducir recaídas, pero carece de la velocidad de inducción antiinflamatoria ultrarrápida que ofrecen los corticosteroides sistémicos requerida en la crisis isquémica aguda.
+
+❌ Opción D: Realizar un ecocardiograma Doppler carotídeo y dar antiagregación con Aspirina masiva por sospecha de infarto embólico (TIA/ACV).
+distractorProfile: atherosclerotic_stroke_mimic
+incorrectFeedback: Aunque un accidente isquémico o placa carotídea ulcerada produce amaurosis fugax, no explicaría la claudicación mandibular, la sensibilidad en el cuero cabelludo, la arteria temporal engrosada sin pulso ni la VSG por los cielos, características exclusivas de una vasculitis de grandes vasos.

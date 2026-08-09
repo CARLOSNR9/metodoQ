@@ -109,8 +109,12 @@ export function createDefaultUserDoc(
 
 export async function loginWithEmail(email: string, password: string) {
   const resolvedEmail = resolveLoginIdentifier(email);
+  const auth = getFirebaseAuth();
+  const { setPersistence, browserSessionPersistence } = await import("firebase/auth");
+  await setPersistence(auth, browserSessionPersistence);
+  
   return signInWithEmailAndPassword(
-    getFirebaseAuth(),
+    auth,
     resolvedEmail,
     password,
   );
@@ -121,7 +125,11 @@ export async function loginWithGoogle(): Promise<{
   isNewUser: boolean;
 }> {
   const provider = new GoogleAuthProvider();
-  const credential = await signInWithPopup(getFirebaseAuth(), provider);
+  const auth = getFirebaseAuth();
+  const { setPersistence, browserSessionPersistence } = await import("firebase/auth");
+  await setPersistence(auth, browserSessionPersistence);
+  
+  const credential = await signInWithPopup(auth, provider);
   const user = credential.user;
 
   // Validar configuración básica antes de proceder
@@ -172,7 +180,11 @@ export async function loginWithFacebook(): Promise<{
   isNewUser: boolean;
 }> {
   const provider = new FacebookAuthProvider();
-  const credential = await signInWithPopup(getFirebaseAuth(), provider);
+  const auth = getFirebaseAuth();
+  const { setPersistence, browserSessionPersistence } = await import("firebase/auth");
+  await setPersistence(auth, browserSessionPersistence);
+  
+  const credential = await signInWithPopup(auth, provider);
   const user = credential.user;
 
   const userDocRef = doc(getFirebaseDb(), "users", user.uid);
@@ -196,8 +208,12 @@ export async function registerWithEmail(
   password: string,
   referredByCode?: string | null,
 ) {
+  const auth = getFirebaseAuth();
+  const { setPersistence, browserSessionPersistence } = await import("firebase/auth");
+  await setPersistence(auth, browserSessionPersistence);
+  
   const credential = await createUserWithEmailAndPassword(
-    getFirebaseAuth(),
+    auth,
     email,
     password,
   );

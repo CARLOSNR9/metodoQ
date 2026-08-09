@@ -3,6 +3,7 @@ import { UCC_CONV_2025_06_21_QUESTIONS } from "@/data/ucc-conv-2025-06-21-questi
 import { UCC_CONV_2025_07_05_QUESTIONS } from "@/data/ucc-conv-2025-07-05-questions";
 import { UCC_CONV_2025_07_19_QUESTIONS } from "@/data/ucc-conv-2025-07-19-questions";
 import { UCC_CONV_2026_07_26_QUESTIONS } from "@/data/ucc-conv-2026-07-26-questions";
+import { UCC_CONV_2026_08_09_QUESTIONS } from "@/data/ucc-conv-2026-08-09-questions";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -83,9 +84,21 @@ export const UCC_CONVOCATORIA_EDITIONS: UccConvocatoriaEdition[] = [
     minutes: 180,
     isGlobal: true,
     stayOpenUntilNext: true,
-    daysOpen: 8, // Opens today (26th) and open for 8 more days
+    daysOpen: 8,
     closingDate: "2026-08-10",
     questions: UCC_CONV_2026_07_26_QUESTIONS,
+  },
+  {
+    code: "UCC-2026-08-09",
+    label: "Edición #5",
+    examDate: "2026-08-09",
+    questionCount: 100,
+    minutes: 180,
+    isGlobal: true,
+    stayOpenUntilNext: false,
+    daysOpen: 8,
+    closingDate: "2026-08-17",
+    questions: UCC_CONV_2026_08_09_QUESTIONS,
   },
 ];
 
