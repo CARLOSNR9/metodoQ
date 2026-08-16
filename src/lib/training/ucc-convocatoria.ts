@@ -185,50 +185,12 @@ export function buildConvocatoriaExamHref(editionCode: string): string {
   return `/dashboard/entrenar?${params.toString()}`;
 }
 
-function getClosingDayForEdition(
-  edition: UccConvocatoriaEdition,
-  schedule: UccConvocatoriaEdition[],
-): Date {
-  if (edition.closingDate) {
-    return parseLocalDate(edition.closingDate);
-  }
-
-  const examDay = parseLocalDate(edition.examDate);
-
-  if (edition.stayOpenUntilNext && schedule) {
-    const idx = schedule.findIndex((e) => e.code === edition.code);
-    if (idx !== -1 && idx < schedule.length - 1) {
-      // Cierra exactamente el día en que empieza la siguiente edición
-      const nextEdition = schedule[idx + 1];
-      return parseLocalDate(nextEdition.examDate);
-    }
-    // Si es la última edición y tiene stayOpenUntilNext, por defecto son 14 días (2 semanas)
-    const fallbackDay = new Date(examDay);
-    fallbackDay.setDate(fallbackDay.getDate() + 14);
-    return fallbackDay;
-  }
-
-  const closingDay = new Date(examDay);
-  closingDay.setDate(closingDay.getDate() + (edition.daysOpen ?? 5));
-  return closingDay;
-}
-
 function getEditionPhase(
   edition: UccConvocatoriaEdition,
-  today: Date,
-  editions: UccConvocatoriaEdition[],
 ): UccConvocatoriaEditionStatus["phase"] {
-  const examDay = parseLocalDate(edition.examDate);
-  if (today < examDay) return "upcoming";
-
-  // El examen permanece abierto por un espacio de X días, o hasta closingDate
-  const closingDay = getClosingDayForEdition(edition, editions);
-
-  if (today < closingDay) {
-    return "open";
-  }
-
-  return "closed";
+  // Simulacros publicados permanecen abiertos sin ventana de cierre.
+  if (edition.questions.length > 0) return "open";
+  return "upcoming";
 }
 
 export async function getConvocatoriaAttempt(
@@ -336,17 +298,12 @@ export function getFeaturedConvocatoriaEditionForUser(
   planStartedAt: string | null | undefined,
 ): UccConvocatoriaEdition | null {
   const schedule = getUserConvocatoriaSchedule(planStartedAt);
-  const today = new Date();
 
-  // Encontramos la primera edición cuya *siguiente* edición aún no ha abierto.
-  for (let i = 0; i < schedule.length; i++) {
-    const nextEdition = schedule[i + 1];
-    if (!nextEdition || today < parseLocalDate(nextEdition.examDate)) {
-      return schedule[i];
-    }
+  for (let i = schedule.length - 1; i >= 0; i--) {
+    if (schedule[i].questions.length > 0) return schedule[i];
   }
 
-  return schedule[schedule.length - 1] ?? null;
+  return null;
 }
 
 export function buildConvocatoriaEditionStatus(options: {
@@ -355,24 +312,10 @@ export function buildConvocatoriaEditionStatus(options: {
   attempt?: UccConvocatoriaAttempt | null;
   today?: Date;
 }): UccConvocatoriaEditionStatus {
-  const today = options.today ?? new Date();
-  const schedule = options.schedule;
-  const phase = getEditionPhase(options.edition, today, schedule);
+  const phase = getEditionPhase(options.edition);
   const attempt = options.attempt ?? null;
 
   const canStart = phase === "open" && !attempt;
-
-  // Calculamos la fecha de cierre
-  const closingDay = getClosingDayForEdition(options.edition, schedule);
-  
-  // Format to local date string (e.g. YYYY-MM-DD)
-  // Restamos 1 día para mostrar el último día en que está abierto (opcional, pero consistente con "hasta el día X")
-  const displayDay = new Date(closingDay);
-  displayDay.setDate(displayDay.getDate() - 1);
-
-  const yyyy = displayDay.getFullYear();
-  const mm = String(displayDay.getMonth() + 1).padStart(2, "0");
-  const dd = String(displayDay.getDate()).padStart(2, "0");
 
   return {
     edition: options.edition,
@@ -380,6 +323,6 @@ export function buildConvocatoriaEditionStatus(options: {
     attempt,
     canStart,
     opensLabel: formatEditionDate(options.edition.examDate),
-    closesLabel: formatEditionDate(`${yyyy}-${mm}-${dd}`),
+    closesLabel: null,
   };
 }
