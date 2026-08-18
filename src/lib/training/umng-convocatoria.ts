@@ -1,6 +1,7 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { UMNG_CONV_2026_07_26_QUESTIONS } from "@/data/umng-conv-2026-07-26-questions";
 import { UMNG_CONV_ED2_QUESTIONS } from "@/data/umng-conv-ed2-questions";
+import { UMNG_CONV_ED3_QUESTIONS } from "@/data/umng-conv-ed3-questions";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -70,7 +71,8 @@ export const UMNG_CONVOCATORIA_EDITIONS: UmngConvocatoriaEdition[] = [
     questionCount: 100,
     minutes: 120,
     isGlobal: true,
-    questions: [],
+    stayOpenUntilNext: true,
+    questions: UMNG_CONV_ED3_QUESTIONS,
   }
 ];
 function parseLocalDate(dateKey: string): Date {
