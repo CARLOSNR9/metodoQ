@@ -6,6 +6,7 @@ import { UCC_CONV_2026_08_09_QUESTIONS } from "@/data/ucc-conv-2026-08-09-questi
 import { UMNG_CONV_2026_07_26_QUESTIONS } from "@/data/umng-conv-2026-07-26-questions";
 import { UMNG_CONV_ED2_QUESTIONS } from "@/data/umng-conv-ed2-questions";
 import { UMNG_CONV_ED3_QUESTIONS } from "@/data/umng-conv-ed3-questions";
+import { UMNG_CONV_ED4_QUESTIONS } from "@/data/umng-conv-ed4-questions";
 import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -18,6 +19,7 @@ const BANK_BY_EDITION: Record<string, TrainingQuestion[]> = {
   "UMNG-2026-07-26": UMNG_CONV_2026_07_26_QUESTIONS,
   "UMNG-ED2": UMNG_CONV_ED2_QUESTIONS,
   "UMNG-ED3": UMNG_CONV_ED3_QUESTIONS,
+  "UMNG-ED4": UMNG_CONV_ED4_QUESTIONS,
 };
 
 
