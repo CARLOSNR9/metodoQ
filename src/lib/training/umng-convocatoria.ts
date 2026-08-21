@@ -1,6 +1,7 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { UMNG_CONV_2026_07_26_QUESTIONS } from "@/data/umng-conv-2026-07-26-questions";
 import { UMNG_CONV_ED2_QUESTIONS } from "@/data/umng-conv-ed2-questions";
+import { UMNG_CONV_ED3_QUESTIONS } from "@/data/umng-conv-ed3-questions";
 import { UMNG_CONV_ED4_QUESTIONS } from "@/data/umng-conv-ed4-questions";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
@@ -71,7 +72,8 @@ export const UMNG_CONVOCATORIA_EDITIONS: UmngConvocatoriaEdition[] = [
     questionCount: 100,
     minutes: 120,
     isGlobal: true,
-    questions: [],
+    stayOpenUntilNext: true,
+    questions: UMNG_CONV_ED3_QUESTIONS,
   },
   {
     code: "UMNG-ED4",
@@ -173,21 +175,10 @@ export function buildConvocatoriaExamHref(editionCode: string): string {
 
 function getEditionPhase(
   edition: UmngConvocatoriaEdition,
-  today: Date,
-  editions: UmngConvocatoriaEdition[],
 ): UmngConvocatoriaEditionStatus["phase"] {
-  const examDay = parseLocalDate(edition.examDate);
-  if (today < examDay) return "upcoming";
-
-  // El examen permanece abierto por un espacio de X días
-  const closingDay = new Date(examDay);
-  closingDay.setDate(closingDay.getDate() + (edition.daysOpen ?? 5));
-
-  if (today < closingDay) {
-    return "open";
-  }
-
-  return "closed";
+  // Simulacros publicados permanecen abiertos sin ventana de cierre.
+  if (edition.questions.length > 0) return "open";
+  return "upcoming";
 }
 
 export async function getConvocatoriaAttempt(
@@ -295,17 +286,12 @@ export function getFeaturedConvocatoriaEditionForUser(
   planStartedAt: string | null | undefined,
 ): UmngConvocatoriaEdition | null {
   const schedule = getUserConvocatoriaSchedule(planStartedAt);
-  const today = new Date();
 
-  // Encontramos la primera edición cuya *siguiente* edición aún no ha abierto.
-  for (let i = 0; i < schedule.length; i++) {
-    const nextEdition = schedule[i + 1];
-    if (!nextEdition || today < parseLocalDate(nextEdition.examDate)) {
-      return schedule[i];
-    }
+  for (let i = schedule.length - 1; i >= 0; i--) {
+    if (schedule[i].questions.length > 0) return schedule[i];
   }
 
-  return schedule[schedule.length - 1] ?? null;
+  return null;
 }
 
 export function buildConvocatoriaEditionStatus(options: {
@@ -314,22 +300,10 @@ export function buildConvocatoriaEditionStatus(options: {
   attempt?: UmngConvocatoriaAttempt | null;
   today?: Date;
 }): UmngConvocatoriaEditionStatus {
-  const today = options.today ?? new Date();
-  const schedule = options.schedule;
-  const phase = getEditionPhase(options.edition, today, schedule);
+  const phase = getEditionPhase(options.edition);
   const attempt = options.attempt ?? null;
 
   const canStart = phase === "open" && !attempt;
-
-  // Calculamos la fecha de cierre
-  const examDay = parseLocalDate(options.edition.examDate);
-  const closingDay = new Date(examDay);
-  closingDay.setDate(closingDay.getDate() + (options.edition.daysOpen ?? 5));
-  
-  // Format to local date string (e.g. YYYY-MM-DD)
-  const yyyy = closingDay.getFullYear();
-  const mm = String(closingDay.getMonth() + 1).padStart(2, "0");
-  const dd = String(closingDay.getDate()).padStart(2, "0");
 
   return {
     edition: options.edition,
@@ -337,6 +311,6 @@ export function buildConvocatoriaEditionStatus(options: {
     attempt,
     canStart,
     opensLabel: formatEditionDate(options.edition.examDate),
-    closesLabel: formatEditionDate(`${yyyy}-${mm}-${dd}`),
+    closesLabel: null,
   };
 }

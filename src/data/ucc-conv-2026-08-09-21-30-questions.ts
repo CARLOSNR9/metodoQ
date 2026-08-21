@@ -1,0 +1,400 @@
+import type { TrainingQuestion } from "@/lib/questions/types";
+
+/**
+ * Convocatoria UCC — Edición #5 (9 ago 2026) · Preguntas #21–#30.
+ * Banco exclusivo del examen oficial.
+ */
+export const UCC_CONV_2026_08_09_21_30_QUESTIONS: TrainingQuestion[] = [
+  {
+    id: "ucc-conv-2026-08-09-21",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - GASTROENTEROLOGÍA / INFECTOLOGÍA",
+    topic: "Urgencias Gastroenterológicas",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","urgencias-gastroenterol-gicas","urgencias","gastroenterol","gicas"],
+    statement: "Hombre de 58 años, con diagnóstico de cirrosis hepática de origen enólico (Child-Pugh C), es traído a urgencias por presentar dos episodios de hematemesis masiva y desvanecimiento. Al ingreso: PA 85/50 mmHg, FC 120 lpm, estigmas de hepatopatía crónica franca y ascitis a tensión. Se inicia de inmediato reanimación con cristaloides y transfusión de 2 unidades de glóbulos rojos empacados. El equipo médico administra una infusión de Octreotide (análogo de somatostatina) y programa una Endoscopia de Vías Digestivas Altas de emergencia para la ligadura con bandas de las várices esofágicas sangrantes. Además de la reanimación hemodinámica y el control endoscópico/farmacológico del sangrado, ¿cuál es la intervención médica profiláctica OBLIGATORIA que ha demostrado reducir drásticamente la mortalidad y la tasa de resangrado temprano en este escenario?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Administración de Inhibidores de la Bomba de Protones (IBP) en infusión continua a altas dosis (8 mg/h).",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Inicio inmediato de antibióticos profilácticos intravenosos (ej. Ceftriaxona 1 g/día) por un máximo de 7 días.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Infusión de Plasma Fresco Congelado (PFC) y Vitamina K para corregir la coagulopatía cirrótica de base.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar Propranolol o Carvedilol por sonda nasogástrica para reducir la hipertensión portal de forma aguda.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente cursa con una Hemorragia Variceal Aguda. En el paciente cirrótico, una hemorragia gastrointestinal masiva rompe la barrera mucosa e inmunológica, precipitando una translocación bacteriana brutal desde el intestino hacia la sangre y el líquido ascítico (sepsis y Peritonitis Bacteriana Espontánea). Las infecciones bacterianas son la principal causa de muerte y de resangrado variceal temprano (la infección impide la hemostasia del coágulo en la várice). Las guías internacionales (Baveno, AASLD) dictaminan como Nivel de Evidencia 1A que TODO paciente cirrótico con hemorragia digestiva alta debe recibir profilaxis antibiótica intravenosa de inmediato (la Ceftriaxona es de elección por su cobertura frente a Gram negativos entéricos y alta resistencia a las fluoroquinolonas). Esta simple medida aumenta la supervivencia más que el propio uso de derivados de la somatostatina.",
+    keyPoints: [
+      "Paciente con Cirrosis Hepática + Hemorragia Digestiva Alta (Várices).; Manejo agudo en Urgencias/UCI.",
+      "Profilaxis antibiótica mandatoria (Ceftriaxona IV). Es el pilar farmacológico que más impacta la supervivencia al prevenir la peritonitis bacteriana y el resangrado por translocación.",
+      "Urgencias Gastroenterológicas / Sangrado Variceal.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-22",
+    university: "UCC",
+    examArea: "PEDIATRÍA - CIRUGÍA / NEONATOLOGÍA",
+    topic: "Cirugía Neonatal",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","cirug-a-neonatal","cirug","a","neonatal"],
+    statement: "Un recién nacido prematuro de 28 semanas de edad gestacional, en su décimo día de vida en la Unidad de Cuidados Intensivos Neonatales, venía recibiendo nutrición enteral con fórmula de prematuros. Esta mañana presenta súbitamente residuo gástrico bilioso, letargia profunda, inestabilidad térmica, apnea y un abdomen marcadamente tenso y distendido, con la piel de la pared abdominal de coloración eritematosa y brillante. Los laboratorios revelan neutropenia severa, trombocitopenia y acidosis metabólica láctica. Se toma una radiografía de abdomen de urgencia que documenta neumatosis intestinal difusa y gas en el sistema venoso portal. El equipo suspende la vía oral, inicia antibióticos de amplio espectro y descompresión con sonda gástrica, pero el cirujano pediatra indica que, por el momento, el paciente NO es candidato a laparotomía inmediata. A las 4 horas, una nueva radiografía revela presencia de aire libre subdiafragmático (neumoperitoneo franco). ¿Cuál es el cambio en la conducta médica y la justificación fisiopatológica absoluta?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Continuar manejo médico intensivo, ya que el neumoperitoneo es una fuga de gas benigna desde las asas isquémicas; la cirugía se difiere por el alto riesgo de morbimortalidad en el prematuro extremo.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Indicar intervención quirúrgica de EMERGENCIA ABSOLUTA (laparotomía o drenaje peritoneal primario), ya que el hallazgo confirma la perforación de víscera hueca secundaria a necrosis transmural.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Realizar colonoscopia descompresiva de urgencia para aliviar la presión del gas acumulado en el ciego y evitar la isquemia completa.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Aumentar el soporte inotrópico y realizar una paracentesis evacuadora simple en la cama de la UCIN para extraer el gas y mantener el tratamiento conservador 48 horas más.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El neonato cursa con una Enterocolitis Necrotizante (NEC), la emergencia gastrointestinal más catastrófica de la prematurez. Se desencadena por isquemia intestinal, inmadurez inmunológica y colonización bacteriana patógena tras el inicio de la vía enteral. Los hallazgos radiológicos son evolutivos: dilatación de asas -> neumatosis intestinal (gas en la pared del intestino) -> gas en la vena porta. Hasta este punto (Estadio II de Bell), el tratamiento ES MÉDICO (ayuno, antibióticos, descompresión gástrica, inotrópicos). El cirujano solo interviene de forma obligatoria, innegociable e inmediata cuando se alcanza el Estadio IIIb de Bell, cuyo único marcador radiológico absoluto es el NEUMOPERITONEO (aire libre en la cavidad abdominal), lo que significa que la pared del intestino se necrosó por completo y estalló, vertiendo heces en la cavidad peritoneal. La intervención puede ser una laparotomía exploratoria para resecar el intestino podrido o un drenaje peritoneal primario (si el neonato está extremadamente inestable o pesa < 1.000 g).",
+    keyPoints: [
+      "Prematuro que empeora al iniciar la vía enteral (residuos biliosos, abdomen rojo/tenso).; Radiografía: Neumatosis intestinal (burbujas en la pared) o Gas Portal = Manejo MÉDICO.; Radiografía: Neumoperitoneo (Aire libre subdiafragmático / Signo de Rigler) = Manejo QUIRÚRGICO INMEDIATO.",
+      "Enterocolitis Necrotizante (NEC). El neumoperitoneo es el límite entre la medicina y el bisturí.",
+      "Cirugía Neonatal / Enterocolitis Necrotizante.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-23",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - CARDIOLOGÍA / URGENCIAS",
+    topic: "Urgencias Cardiovasculares",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","urgencias-cardiovasculares","urgencias","cardiovasculares"],
+    statement: "Un hombre de 62 años es trasladado a urgencias tras experimentar un síncope en su domicilio. Refiere dolor torácico opresivo de 4 horas de evolución. Al ingreso, el paciente se encuentra lúcido pero frío, diaforético, con extremidades moteadas. Signos vitales: PA 75/40 mmHg (choque francamente establecido), FC 55 lpm. La auscultación revela campos pulmonares completamente limpios y secos (ausencia de estertores), pero se evidencia una marcada ingurgitación de las venas yugulares a 45 grados y el Signo de Kussmaul es positivo. El ECG de ingreso muestra una elevación del segmento ST de 3 mm en las derivaciones II, III y aVF (Infarto Agudo de Miocardio de cara inferior). Ante el cuadro de choque y la clínica presente, ¿cuál es la medida farmacológica INICIAL de rescate obligatorio y qué medicamentos de uso rutinario en isquemia están absolutamente CONTRAINDICADOS?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Iniciar Nitroglicerina en infusión continua para vasodilatar las arterias coronarias y administrar Furosemida para descargar el corazón derecho.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Administrar bolos agresivos de cristaloides (Solución Salina Normal 0.9%) intravenosos; están absolutamente contraindicados los nitratos y los diuréticos.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar soporte inotrópico con Dobutamina e insertar un Balón de Contrapulsación Intraaórtico (BCIA) inmediatamente.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Administrar Morfina IV para el control del dolor y oxígeno al 100%, seguidos de infusión de Levosimendán.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente cursa con un Infarto Agudo de Miocardio de Ventrículo Derecho (IAM del VD), una complicación que acompaña hasta al 30-50% de los infartos de pared inferior (las derivaciones II, III, aVF miran la pared diafragmática irrigada por la coronaria derecha). La tríada patognomónica del IAM de ventrículo derecho es: Hipotensión (Choque) + Ingurgitación Yugular + Pulmones Limpios. Fisiopatológicamente, el ventrículo derecho se infarta y se vuelve un saco inerte incapaz de bombear sangre hacia el pulmón. Al no llegar sangre al pulmón, tampoco llega sangre al lado izquierdo del corazón, por lo que el gasto cardíaco sistémico cae a cero (hipotensión). La única forma de forzar la sangre a través del ventrículo derecho paralizado hacia los pulmones es AUMENTANDO LA PRECARGA mecánicamente con volumen puro. Por lo tanto, el tratamiento vital inicial es administrar líquidos intravenosos a chorro (bolos de SSN 0.9%). Cualquier fármaco que disminuya la precarga o vacíe el sistema venoso (como la Nitroglicerina, la Morfina o los Diuréticos) \"secará\" el empuje venoso, colapsando el ventrículo derecho y precipitando la muerte instantánea del paciente.",
+    keyPoints: [
+      "Paciente con Infarto Inferior en ECG (Supra ST en II, III, aVF).; Tríada clínica: Choque/Hipotensión severa + Cuello ingurgitado (Falla derecha) + Pulmones secos (Falla izquierda no primaria).",
+      "Infarto del Ventrículo Derecho. (Se confirma tomando derivaciones derechas V3R-V4R). Tratamiento salvavidas: BOLOS DE LÍQUIDOS IV (Aumentar precarga). Contraindicación absoluta y mortal: Nitroglicerina, Diuréticos, Morfina (disminuyen la precarga).",
+      "Urgencias Cardiovasculares / Infarto Ventrículo Derecho.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-24",
+    university: "UCC",
+    examArea: "PEDIATRÍA - INFECTOLOGÍA / ORTOPEDIA",
+    topic: "Infectología Ortopédica Pediátrica",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","infectolog-a-ortop-dica-pedi-trica","infectolog","a","ortop","dica","pedi","trica"],
+    statement: "Niño de 6 años de edad, con antecedente genético conocido de Anemia de Células Falciformes (HbSS), es traído a consulta por un cuadro febril de 39°C de tres días de evolución, irritabilidad y negativa a caminar. El paciente cojea visiblemente y se niega a apoyar la extremidad inferior derecha. Al examen físico, se documenta inflamación, calor, rubor y un dolor exquisito a la palpación en el tercio distal del fémur derecho. Una resonancia magnética (RMN) temprana sugiere edema de la médula ósea y absceso subperióstico sugestivo de Osteomielitis Aguda. Dado el defecto esplénico funcional y los riesgos epidemiológicos singulares de este paciente, ¿cuál es la combinación antibiótica empírica intravenosa INICIAL MÁS adecuada para cubrir los patógenos prevalentes específicos?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Ceftriaxona (o Cefotaxima) asociada a Vancomicina o Clindamicina intravenosa.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Oxacilina asociada a Gentamicina para cubrir el patógeno infantil clásico.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Penicilina G intravenosa en monoterapia a dosis altas, dado que el neumococo es el agresor capsulado predominante.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Ciprofloxacino oral o intravenoso aislado para garantizar penetración ósea contra gram negativos.",
+      },
+    ],
+    correctOptionId: "A",
+    explanation: "El paciente cursa con una Osteomielitis Aguda. En la población pediátrica general, el microorganismo causante de osteomielitis en el >90% de los casos es el Staphylococcus aureus. SIN EMBARGO, en los pacientes con Anemia de Células Falciformes (Drepanocitosis), la fisiopatología dicta un cambio de reglas: debido a los infartos óseos continuos, los intestinos isquémicos microperforados y el autoesplenismo (ausencia funcional del bazo), estos niños tienen un riesgo inmenso y único de presentar osteomielitis por Especies de Salmonella (bacilo gram negativo encapsulado). Por lo tanto, en todo niño con anemia falciforme y dolor óseo febril, el tratamiento antibiótico empírico OBLIGATORIO debe tener una doble cobertura implacable: Un medicamento para el Staphylococcus aureus (usualmente MRSA en ambientes hospitalizados/severos, requiriendo Vancomicina o Clindamicina) Y un medicamento para Salmonella spp. (una Cefalosporina de 3ra generación como Ceftriaxona o Cefotaxima).",
+    keyPoints: [
+      "Niño con Anemia Falciforme (HbSS).; Fiebre alta y dolor óseo localizado intenso (Osteomielitis vs. Crisis vasoclusiva).",
+      "Osteomielitis por dos gigantes: Staphylococcus aureus (el más común en general) y Salmonella (el patógeno \"especial\" de los falciformes). Terapia empírica doble: Cefalosporina de 3ra generación (para Salmonella) + Cobertura MRSA/MSSA (Vanco/Clinda).",
+      "Infectología Ortopédica Pediátrica / Anemia Falciforme.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-25",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - NEUMOLOGÍA / CUIDADO INTENSIVO",
+    topic: "Urgencias Respiratorias",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","urgencias-respiratorias","urgencias","respiratorias"],
+    statement: "Hombre de 68 años, fumador pesado con antecedente de EPOC (GOLD III) severo, acude a urgencias por un cuadro de aumento en la disnea, tos con esputo purulento abundante y somnolencia progresiva de 48 horas de evolución. Al ingreso: el paciente está letárgico (despierta al llamado fuerte, pero vuelve a dormirse), utiliza intensamente los músculos accesorios de la respiración (tirajes intercostales, respiración paradójica abdominal) y presenta una SatO2 del 82% a pesar del oxígeno por cánula nasal a 3 L/min. Se extraen gases arteriales (GSA) en urgencias que reportan: pH 7.24, PaCO2 72 mmHg, HCO3 34 mEq/L, PaO2 55 mmHg. La radiografía de tórax no muestra consolidaciones masivas ni neumotórax. ¿Cuál es el paso INMEDIATO de soporte ventilatorio que ofrece la mejor evidencia para reducir la mortalidad y la tasa de intubación en este paciente?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Proceder inmediatamente a Intubación Orotraqueal (IOT) y ventilación mecánica invasiva debido a la letargia y el nivel tóxico de CO2.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Instaurar Soporte Ventilatorio No Invasivo (VMNI - tipo BiPAP) a través de una máscara oronasal y monitorizar evolución clínica y de gases en 1 a 2 horas.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Administrar un bolo intravenoso de Bicarbonato de Sodio para neutralizar la acidosis severa e instaurar oxígeno de alto flujo.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Aumentar el oxígeno suplementario a 15 L/min con máscara de no reinhalación para forzar la oxigenación del parénquima pulmonar dañado.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente cursa con una Exacerbación Grave de EPOC con Falla Respiratoria Hipercápnica Aguda sobre Crónica (Acidosis Respiratoria). Los signos de claudicación inminente son la alteración del sensorio (narcosis por CO2) y la acidosis (pH < 7.35). Antes, a estos pacientes se les intubaba inmediatamente. Hoy, la medicina basada en la evidencia (Cochrane, GOLD) es tajante: la Ventilación Mecánica No Invasiva (VMNI - BiPAP) es el estándar de ORO y el tratamiento de primera línea para las exacerbaciones de EPOC que cursen con acidosis respiratoria (pH entre 7.20 y 7.35 y PaCO2 elevada). La VMNI proporciona presión de soporte que \"descansa\" los músculos respiratorios agotados y empuja el aire hacia adentro y hacia afuera, barriendo el CO2 y mejorando el nivel de conciencia rápidamente. La VMNI reduce contundentemente la necesidad de intubación, los días de estancia en UCI y la mortalidad global.",
+    keyPoints: [
+      "Paciente con EPOC exacerbado.; Gases Arteriales con Acidosis Respiratoria: pH < 7.35 y PaCO2 > 45 mmHg (clásicamente entre 7.20 y 7.35).; Signos de fatiga muscular respiratoria o somnolencia leve a moderada.",
+      "Soporte Ventilatorio No Invasivo (VMNI / BiPAP). Es la intervención que salva vidas en la EPOC descompensada. Intubación solo si falla la VMNI, si hay paro inminente o coma profundo sin reflejos.",
+      "Urgencias Respiratorias / EPOC y VMNI.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-26",
+    university: "UCC",
+    examArea: "PEDIATRÍA - NEUROLOGÍA / INMUNOLOGÍA",
+    topic: "Urgencias Neurológicas Pediátricas",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","urgencias-neurol-gicas-pedi-tricas","urgencias","neurol","gicas","pedi","tricas"],
+    statement: "Un escolar de 7 años es traído a urgencias porque desde hace 3 días viene presentando hormigueo y \"pesadez\" en las piernas que le impiden caminar de manera independiente. Hoy en la mañana, la madre notó que el niño no puede levantar los brazos por encima de la cabeza y habla de manera \"gangosa\" y apagada. Su historial reciente revela que hace dos semanas cursó con un episodio de gastroenteritis aguda que resolvió espontáneamente (se sospecha infección por Campylobacter jejuni). Al examen neurológico: el paciente se encuentra afebril y lúcido, pero presenta parálisis flácida simétrica ascendente. Se corrobora arreflexia osteotendinosa generalizada (reflejos abolidos en 4 extremidades). No hay nivel sensitivo espinal. Una punción lumbar demuestra líquido acelular (0 leucocitos) con proteínas marcadamente elevadas (120 mg/dL). ¿Cuál es el tratamiento inmunomodulador ESPECÍFICO de primera línea y cuál es el parámetro ventilatorio crítico que determina el ingreso profiláctico a la UCIP (Unidad de Cuidados Intensivos Pediátricos)?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Corticosteroides a altas dosis intravenosos; ingreso a UCIP si la oximetría de pulso cae por debajo de 90%.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Inmunoglobulina G intravenosa (IGIV) o Plasmaféresis; ingreso a UCIP si la Capacidad Vital Forzada (CVF) cae agudamente (ej. < 15 a 20 mL/kg) o aparecen signos bulbares de falla tusígena.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Tratamiento antibiótico intravenoso con Azitromicina para erradicar el Campylobacter oculto; ingreso a UCIP condicionado por presencia de disautonomía cardíaca.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Plasmaféresis obligatoria (evitando IGIV); ingreso a UCIP basado en la alteración de los gases arteriales con retención inminente de pCO2 > 50 mmHg.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente cursa con el Síndrome de Guillain-Barré (SGB) (Polirradiculoneuropatía Desmielinizante Inflamatoria Aguda). El cuadro es el clásico de libro: parálisis flácida ascendente, arreflexia (sin reflejos, lo más clave) y antecedente infeccioso diarreico o respiratorio semanas antes. La punción lumbar confirma la \"disociación albúmino-citológica\" (muchas proteínas, cero células blancas). El tratamiento modificador de la enfermedad, que acelera la recuperación de la fuerza muscular, se basa en la remoción o neutralización de los autoanticuerpos contra la mielina. Se debe usar Inmunoglobulina G Intravenosa (IGIV) O Plasmaféresis terapéutica (ambas tienen eficacia equivalente, aunque en pediatría la IGIV se prefiere por su abrumadora facilidad y seguridad de aplicación vs. la máquina de plasmaféresis). El asesino de esta enfermedad es la insuficiencia respiratoria neuromuscular silenciosa. NUNCA se debe esperar a que el paciente desature en el oxímetro o acumule CO2; el parámetro maestro para ordenar la intubación y traslado a UCI es la caída de la \"fuerza de la caja torácica\", medida a la cabecera del paciente mediante la Capacidad Vital Forzada (CVF) espiratoria o la Fuerza Inspiratoria Negativa (NIF).",
+    keyPoints: [
+      "Niño o adulto con debilidad ASCENDENTE simétrica tras diarrea o cuadro viral.; Exploración física pivote: ARREFLEXIA (Sin reflejos tendinosos).; Punción lumbar: Proteínas altas con células normales.",
+      "Síndrome de Guillain-Barré. Tratamiento: IGIV o Plasmaféresis en fase aguda (Los Corticosteroides ESTÁN CONTRAINDICADOS, NO SIRVEN). Vigilancia crítica en UCI: Medir CVF / espirometría junto a la cama, no esperar gases.",
+      "Urgencias Neurológicas Pediátricas / Guillain-Barré.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-27",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - HEMATOLOGÍA / NEFROLOGÍA",
+    topic: "Urgencias Oncológicas",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","urgencias-oncol-gicas","urgencias","oncol","gicas"],
+    statement: "Joven de 19 años es admitido en la sala de oncohematología con un diagnóstico de Leucemia Linfoblástica Aguda (LLA) de células B con una carga tumoral inicial extrema (recuento leucocitario de 250,000/mm³). Veinticuatro horas después de iniciar su primer ciclo de poliquimioterapia de inducción intensiva, el paciente desarrolla bradicardia marcada (45 lpm), náuseas, letargia aguda y fasciculaciones musculares en los brazos, asociadas a oliguria súbita (300 cc/24h). En el panel de laboratorio STAT se constata una Creatinina sérica de 3.2 mg/dL (falla renal aguda sobre base normal). ¿Cuál es la constelación o perfil electrolítico patognomónico que documentará este grave Síndrome de Lisis Tumoral (SLT) inducido por la destrucción química de los blastos?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Hipokalemia, Hipofosfatemia, Hipercalcemia e Hiperuricemia.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Hiperkalemia, Hiperfosfatemia, Hipocalcemia e Hiperuricemia.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Hiperkalemia, Hipofosfatemia, Hipercalcemia y niveles normales de Ácido Úrico.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Hipokalemia, Hiperfosfatemia, Hipercalcemia e Hipouricemia inducida.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente cursa con un florido Síndrome de Lisis Tumoral (SLT) clínico. Es la emergencia oncológica y metabólica más crítica durante el inicio del tratamiento quimioterapéutico en neoplasias hematológicas de crecimiento fulminante (Leucemias Agudas, Linfoma de Burkitt). Al inyectar la quimioterapia, millones de células cancerosas estallan de forma masiva y simultánea, derramando todo su contenido intracelular en la sangre del paciente. Dado que el interior de las células es inmensamente rico en Potasio, Fósforo y Ácidos Nucleicos, el plasma se inunda de estos elementos. Los ácidos nucleicos (ADN del tumor) se metabolizan en el hígado generando Ácido Úrico en cantidades tóxicas. El ácido úrico y el fosfato masivo viajan al riñón, precipitan en los túbulos y causan fallo renal agudo anúrico u obstructivo. El único electrolito que baja en esta cascada es el Calcio (Hipocalcemia), porque el exceso de Fósforo circulante atrapa al calcio en la sangre y forma piedras microscópicas (cristales de fosfato de calcio) que se depositan en los tejidos.",
+    keyPoints: [
+      "Paciente con Leucemia/Linfoma (alta carga tumoral) que recién inicia Quimioterapia.; Deterioro brusco con Falla Renal Aguda, arritmias o convulsiones.",
+      "Síndrome de Lisis Tumoral. Las células explotaron en la sangre.\nPerfil infalible a memorizar: Sube TODO lo de adentro de la célula (Potasio, Fósforo y Ácido Úrico), y BAJA el Calcio (Hipocalcemia) por quelación del fósforo.",
+      "Urgencias Oncológicas / Síndrome de Lisis Tumoral.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-28",
+    university: "UCC",
+    examArea: "PEDIATRÍA - ENDOCRINOLOGÍA / NEONATOLOGÍA",
+    topic: "Endocrinología Pediátrica",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","endocrinolog-a-pedi-trica","endocrinolog","a","pedi","trica"],
+    statement: "Un neonato femenino es evaluado a las 3 semanas de vida por sospecha de problemas en el desarrollo. Nació en parto domiciliario rural, no se le realizó la prueba de tamizaje neonatal (cribado del talón). La madre nota que la niña es inusualmente pasiva (\"es un bebé excelente, duerme casi todo el día y casi no llora\"), presenta ictericia leve prolongada desde la primera semana y tiene episodios severos de constipación. Al examen físico se documenta llanto ronco apagado, marcada distensión abdominal con hernia umbilical gigante de 3 cm, fontanela anterior y posterior inusualmente amplias, piel fría y moteada, e hipotonía generalizada con una lengua engrosada que protruye de la boca (macroglosia). Ante la innegable sospecha clínica del déficit endocrinológico más común del periodo neonatal, ¿cuál es el tratamiento OBLIGATORIO Y URGENTE que debe iniciarse antes de referir a especialidad?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Administrar Glucocorticoides intravenosos (Hidrocortisona) inmediatamente, antes de dar soporte de yodo, para evitar crisis adrenal concomitante.",
+        distractorProfile: "adult_myxedema_coma_protocol_misapplied",
+        incorrectFeedback: "Esta regla salva vidas en el Coma Mixematoso del anciano con fallo del eje pituitario. En el neonato, el hipotiroidismo primario (por disgenesia anatómica de la tiroides) no se asocia al fallo hipofisiario de la ACTH ni amenaza con crisis adrenal al recibir la levotiroxina.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Reemplazo inmediato con dosis supresoras de Levotiroxina (L-T4) oral (10 a 15 mcg/kg/día) para evitar el retraso mental severo e irreversible.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Administrar Fototerapia intensiva y enemas evacuadores antes de abordar la endocrinopatía subyacente que causa la ictericia y la hernia.",
+        distractorProfile: "symptomatic_palliation_ignoring_cure",
+        incorrectFeedback: "La ictericia prolongada (hiperbilirrubinemia indirecta por inmadurez de glucuronidación) y el estreñimiento son meros síntomas del letargo metabólico hipotiroideo; no resolverán hasta que se suministre la hormona basal y tratar solo los síntomas condenará al niño a retraso mental irreversible.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Suplementación con Yoduro de Potasio oral y espera vigilante de re-evaluación del desarrollo cognitivo a los 3 meses.",
+        distractorProfile: "wrong_etiology_and_fatal_delay",
+        incorrectFeedback: "En los países occidentales con sal yodada, el >85% de los hipotiroidismos congénitos se debe a disgenesia tiroidea (agenesia o tejido ectópico en la base de la lengua), no a carencia de yodo nutricional; posponer la hormona exógena unos meses asegura cretinismo.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "La paciente cursa con Hipotiroidismo Congénito profundo. Clínicamente es \"el bebé perfecto que está muriendo en silencio\" (son letárgicos, hipotónicos y no lloran). La constelación de síntomas tardíos a las 3 semanas incluye ictericia fisiológica prolongada, fontanelas amplias, macroglosia, llanto ronco, distensión abdominal masiva y hernia umbilical prominente (por hipotonía muscular de la pared y acumulación de mixedema). El problema crítico del hipotiroidismo congénito es que las hormonas tiroideas son absolutamente esenciales para la mielinización del cerebro durante los primeros dos años de vida. Si no se instaura tratamiento con Levotiroxina a dosis plenas inmediatamente (idealmente antes de los primeros 14 días de vida), el niño sufrirá un daño cerebral y retraso psicomotor catastrófico e irreversible (Cretinismo). El tamizaje metabólico neonatal fue creado universalmente en el mundo específicamente para diagnosticar esta enfermedad antes de que los daños neurológicos sean inminentes y permanentes.",
+    keyPoints: [
+      "Neonato (> 2-3 semanas) de área rural/sin tamizaje del talón que es \"demasiado tranquilo\".; Ictericia prolongada + Hernia umbilical muy grande + Macroglosia + Hipotonía (\"Floppy baby\").",
+      "Hipotiroidismo Congénito (frecuentemente por disgenesia tiroidea). Urgencia médica: Dar Levotiroxina oral inmediatamente para salvar el coeficiente intelectual y prevenir el Cretinismo. Cada semana que se retrasa baja el CI del niño en edad adulta.",
+      "Endocrinología Pediátrica / Hipotiroidismo Congénito.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-29",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - HEMATOLOGÍA / FARMACOLOGÍA",
+    topic: "Efectos Adversos Farmacológicos",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","efectos-adversos-farmacol-gicos","efectos","adversos","farmacol","gicos"],
+    statement: "Una mujer de 65 años, hospitalizada en traumatología tras una cirugía de reemplazo de cadera izquierda hace 8 días. Desde su ingreso posoperatorio, ha estado recibiendo Heparina No Fraccionada (HNF) intravenosa/subcutánea como profilaxis antitrombótica profunda. Al momento de la visita de ronda médica matutina, se observa la aparición de una extensa úlcera de color negro necrótico en el abdomen, exactamente en la pared donde se estaban administrando las inyecciones de heparina, rodeada de un margen isquémico muy doloroso. Al revisar la curva de laboratorios del sistema, resalta que su recuento de plaquetas preoperatorio era de 380,000/mm³, y el recuento de plaquetas de control de esta madrugada es de 95,000/mm³ (una caída drástica e inexplicable > 50%). Mientras usted evalúa a la paciente, ella empieza a referir súbita disnea pleurítica sugestiva de un Tromboembolismo Pulmonar. Sospechando fuertemente una Trombocitopenia Inducida por Heparina (HIT) Tipo II, ¿cuál es el paso de modificación farmacológica antitrombótica OBLIGATORIO de inmediato?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Suspender inmediatamente la Heparina No Fraccionada y transitar urgentemente a Heparina de Bajo Peso Molecular (Enoxaparina) por su menor peso inmunogénico.",
+        distractorProfile: "deadly_cross_reactivity_trap",
+        incorrectFeedback: "La Heparina de Bajo Peso Molecular (HBPM) presenta una reactividad cruzada cercana al 100% con los autoanticuerpos anti-PF4 formados por la exposición a la Heparina No Fraccionada. Usarla perpetuará y agravará letalmente el ciclo autoinmune protrombótico.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Suspender todas las heparinas y comenzar de forma aguda el tratamiento oral con Warfarina (antivitamina K) a dosis plenas de choque para evitar el TEP.",
+        distractorProfile: "paradoxical_venous_gangrene_initiation",
+        incorrectFeedback: "Iniciar la Warfarina como monoterapia de rescate en la fase aguda del HIT bloquea precozmente la proteína C (anticoagulante endógeno), exacerbando el estado hipercoagulable brutal y precipitando la pérdida isquémica de extremidades (\"gangrena venosa\").",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Transfundir un pool de 6 unidades de plaquetas para corregir el defecto trombocitopénico grave e infundir protamina.",
+        distractorProfile: "lethal_substrate_replenishment",
+        incorrectFeedback: "Transfundir plaquetas a un paciente con anticuerpos anti-PF4 libres solo ofrece más sustrato fresco para que el complejo inmune las aglutine, lo que desencadenará infartos isquémicos arteriales fulminantes (cerebro, corazón, miembros).",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Suspender absolutamente cualquier tipo de Heparina e iniciar un inhibidor directo de la trombina intravenoso (ej. Argatrobán o Bivalirudina).",
+      },
+    ],
+    correctOptionId: "D",
+    explanation: "La paciente cursa con una Trombocitopenia Inducida por Heparina (HIT) Tipo II, una reacción paradójica, autoinmune y protrombótica masiva. Fisiopatológicamente, el paciente desarrolla anticuerpos IgG contra el complejo Heparina-Factor Plaquetario 4 (PF4). Estos anticuerpos se pegan a las plaquetas, las \"hiper-activan\" (haciendo que formen coágulos masivos por todo el cuerpo, por eso el TEP en la paciente) y luego las consumen/destruyen en el bazo (explicando la caída plaquetaria del 50% en los días 5 a 10 de tratamiento). La necrosis en el sitio de inyección de heparina es el signo dermatológico \"oro\" de alerta. La conducta terapéutica médica y legal ante un paciente que hace trombosis por culpa de heparina es tajante: Suspender de golpe toda forma de heparina (incluyendo enoxaparina/fraxiparina, que presentan reactividad cruzada casi total) e instaurar un anticoagulante que no tenga nada que ver molecularmente con la heparina: los inhibidores directos de la trombina parenterales (Argatrobán, Lepirudina) o los bloqueadores indirectos de Factor Xa sintéticos como el Fondaparinux.",
+    keyPoints: [
+      "Paciente expuesto a Heparinas (HNF o Enoxaparina) por más de 5 días.; Caída súbita y dramática de PLAQUETAS (>50% de su valor inicial basal).; Trombosis paradójica VENOSA O ARTERIAL de novo (TEP/TVP o necrosis de la piel en la inyección).",
+      "HIT Tipo II. El cuerpo activó todas las plaquetas causando coágulos (bajan en sangre, suben en las venas). Tratamiento salvavidas: Quitar CUALQUIER heparina + Poner Inhibidor Directo de la Trombina (Argatrobán) o Fondaparinux.",
+      "Efectos Adversos Farmacológicos / Urgencias Hematológicas.",
+    ],
+  },
+  {
+    id: "ucc-conv-2026-08-09-30",
+    university: "UCC",
+    examArea: "PEDIATRÍA - CARDIOLOGÍA / NEONATOLOGÍA",
+    topic: "Cardiopatías Congénitas Cianosantes",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_08_09","cardiopat-as-cong-nitas-cianosantes","cardiopat","as","cong","nitas","cianosantes"],
+    statement: "Recién nacido cianótico en la unidad de cuidados intensivos es valorado por sospecha de cardiopatía congénita crítica dependiente del ductus. Se inició profilácticamente infusión de Prostaglandina E1 (Alprostadil) con mejoría parcial de las saturaciones sistémicas y la cianosis. Un ecocardiograma diagnóstico exhaustivo reporta que las aurículas, la aorta y la válvula mitral/tricúspide son normales, pero se documenta de forma asombrosa la ausencia absoluta de conexión anatómica entre los 4 troncos venosos pulmonares (venas pulmonares que traen sangre oxigenada desde el pulmón) y la aurícula izquierda. En su lugar, el radiólogo visualiza una confluencia de estas venas pulmonares uniéndose en un tronco venoso anómalo (vena vertical) que desemboca directamente y hacia arriba en la Vena Inominada y posteriormente a la Vena Cava Superior, derramando toda la sangre oxigenada en el lado derecho del corazón. El flujo sanguíneo general depende estrictamente de un foramen oval permeable muy grande. El paciente entra súbitamente en un cuadro de edema pulmonar hiperagudo (los pulmones se llenan de líquido en la radiografía) por obstrucción aguda mecánica de este vaso anómalo ascendente. ¿Cuál es la única intervención médica o quirúrgica definitiva que salvará la vida de este paciente frente a la obstrucción venosa pulmonar?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Incrementar la dosis de Prostaglandina E1 (Alprostadil) para asegurar el flujo pulmonar y administrar diuréticos de asa (Furosemida).",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Realizar una septostomía auricular con balón (Procedimiento de Rashkind) de emergencia en hemodinamia.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Iniciar soporte inotrópico y vasodilatador con Óxido Nítrico inhalado (iNO) para reducir la resistencia vascular pulmonar.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Traslado a quirófano para cirugía cardiovascular de EMERGENCIA ABSOLUTA (reconexión de las venas pulmonares a la aurícula izquierda).",
+      },
+    ],
+    correctOptionId: "D",
+    explanation: "El paciente cursa con una Conexión (o Drenaje) Venosa Pulmonar Anómala Total (TAPVR, por sus siglas en inglés) de tipo supracardíaco. En esta cardiopatía, la sangre oxigenada no llega al lado izquierdo del corazón, sino que \"da un rodeo\" cayendo al lado derecho, mezclándose con la sangre azul. El paciente sobrevive únicamente si la sangre mezclada logra cruzar al lado izquierdo por un hueco en el tabique (CIA o foramen oval). Sin embargo, el escenario se vuelve letal y cambia por completo si el vaso venoso anómalo se OBSTRUYE (por compresión anatómica o estrechez). Si la sangre venosa oxigenada no puede salir del pulmón, el pulmón se inunda masivamente (Edema Pulmonar Agudo), la presión pulmonar se dispara y el gasto cardíaco cae a cero. Una conexión venosa pulmonar anómala total OBSTRUIDA es una de las emergencias quirúrgicas pediátricas más absolutas e innegociables. A diferencia de otras cardiopatías, las prostaglandinas no ayudan aquí, e incluso pueden empeorar el cuadro, ya que si abres el ductus envías aún más sangre a unos pulmones que ya no pueden drenar. La única cura es abrir el tórax y reconectar quirúrgicamente el tronco de venas pulmonares a la aurícula izquierda.",
+    keyPoints: [
+      "Neonato cianótico con venas pulmonares que \"no llegan a la aurícula izquierda\" (drenan a cava superior, seno coronario o infra-diafragma).; Diagnóstico de TAPVR (Drenaje Venoso Pulmonar Anómalo Total).; Aparición aguda de Edema Pulmonar Severo (signo clínico de OBSTRUCCIÓN).",
+      "Falla de drenaje del pulmón = Cirugía Cardíaca de Emergencia. Ningún medicamento o cateterismo soluciona la obstrucción anatómica venosa externa.",
+      "Cardiopatías Congénitas Cianosantes / Emergencias Quirúrgicas Neonatales.",
+    ],
+  }
+];
