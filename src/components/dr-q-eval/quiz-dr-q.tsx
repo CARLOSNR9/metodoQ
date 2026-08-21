@@ -173,12 +173,15 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
                     </h3>
                   </div>
                   
-                  <div className="space-y-4 max-w-none text-slate-100 leading-relaxed">
+                  <div className="space-y-1 max-w-none text-slate-100">
                     {parseTheoryContent(question.theoryContent || question.explanation).split('\\n').map((line, idx) => {
-                      if (!line.trim()) return <br key={idx} />;
+                      if (!line.trim()) return <div key={idx} className="h-4" />;
                       
                       const isTrampa = line.toLowerCase().includes("trampa");
                       const isPerla = line.toLowerCase().includes("perla") || line.toLowerCase().includes("oro");
+                      const isList = line.trim().startsWith("•") || line.trim().startsWith("-");
+                      const hasCross = line.includes("❌");
+                      const hasCheck = line.includes("✅");
                       
                       let Icon = null;
                       if (isTrampa) Icon = <AlertTriangle className="inline-block mr-2 text-red-400 mb-1" size={18} />;
@@ -186,20 +189,53 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
 
                       if (line.startsWith("¿") || line.includes("?")) {
                         return (
-                          <h3 key={idx} className="flex items-center text-lg font-bold text-white mt-6 mb-2 border-b border-white/10 pb-2">
+                          <h3 key={idx} className="flex items-center text-lg font-bold text-white mt-8 mb-3 border-b border-white/10 pb-2">
                             {Icon || <BookOpen className="inline-block mr-2 text-yellow-400 mb-1" size={18} />}
                             {line}
                           </h3>
                         );
                       }
 
-                      // Handle my markdown bold
                       if (line.startsWith("**") && line.endsWith("**")) {
-                        return <h3 key={idx} className="text-xl font-bold text-yellow-400 mt-6 mb-2">{line.replace(/\\*\\*/g, '')}</h3>;
+                        return <h3 key={idx} className="text-xl font-bold text-yellow-400 mt-8 mb-3">{line.replace(/\\*\\*/g, '')}</h3>;
+                      }
+
+                      if (isList) {
+                        return (
+                          <div key={idx} className="flex items-start gap-3 ml-2 mb-2 text-slate-200">
+                            <span className="text-yellow-400 font-bold mt-0.5 text-lg leading-none">•</span>
+                            <span className="flex-1 leading-relaxed">{line.replace(/^[•-]/, '').trim()}</span>
+                          </div>
+                        );
+                      }
+
+                      if (hasCross) {
+                        return (
+                          <div key={idx} className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 mb-3 text-red-200 leading-relaxed font-medium">
+                            {line}
+                          </div>
+                        );
+                      }
+
+                      if (hasCheck) {
+                        return (
+                          <div key={idx} className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 mb-3 text-emerald-200 leading-relaxed font-medium">
+                            {line}
+                          </div>
+                        );
+                      }
+
+                      // Check for short, bold-like statements that don't have markdown but are short
+                      if (line.length > 0 && line.length < 40 && !line.includes(":") && !line.includes(".") && (line.toLowerCase() === line.toLowerCase().toUpperCase() || line.match(/^[A-Z][A-Za-z ]+$/))) {
+                          return (
+                              <h4 key={idx} className="text-yellow-400 font-bold mt-6 mb-2 text-base">
+                                  {line}
+                              </h4>
+                          );
                       }
 
                       return (
-                        <p key={idx} className="flex items-start">
+                        <p key={idx} className="mb-3 text-slate-300 leading-relaxed">
                           {line}
                         </p>
                       );
