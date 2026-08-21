@@ -94,6 +94,7 @@ for (let i = 0; i < questionsRaw.length; i++) {
         options: options,
         correctOptionId: correctOptionId,
         explanation: explanationParts.join('\n\n'),
+        keyPoints: [],
         theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q\n\n${drQText}`
     });
 }
