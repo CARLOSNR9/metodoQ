@@ -143,9 +143,7 @@ ${options.join("\n")}
     ],
     correctOptionId: ${JSON.stringify(q.correct)},
     explanation: ${JSON.stringify(q.explanation)},
-    keyPoints: [
-      ${q.keyPoints.map((kp) => JSON.stringify(kp)).join(",\n      ")},
-    ],
+    keyPoints: ${JSON.stringify(q.keyPoints, null, 4)},
   }`;
 }
 

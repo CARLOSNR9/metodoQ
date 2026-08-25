@@ -104,6 +104,11 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     { UCC_CONV_2026_07_26_QUESTIONS },
     { UCC_CONV_2026_08_09_QUESTIONS },
     { UCC_CONV_2026_08_23_QUESTIONS },
+    { UMNG_CONV_2026_07_26_QUESTIONS },
+    { UMNG_CONV_ED2_QUESTIONS },
+    { UMNG_CONV_ED3_QUESTIONS },
+    { UMNG_CONV_ED4_QUESTIONS },
+    { UMNG_CONV_ED5_QUESTIONS },
   ] = await Promise.all([
     import("@/data/daily-challenges"),
     import("@/data/ucc-conv-2025-06-21-questions"),
@@ -112,6 +117,11 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     import("@/data/ucc-conv-2026-07-26-questions"),
     import("@/data/ucc-conv-2026-08-09-questions"),
     import("@/data/ucc-conv-2026-08-23-questions"),
+    import("@/data/umng-conv-2026-07-26-questions"),
+    import("@/data/umng-conv-ed2-questions"),
+    import("@/data/umng-conv-ed3-questions"),
+    import("@/data/umng-conv-ed4-questions"),
+    import("@/data/umng-conv-ed5-questions"),
   ]);
 
   const allQuestions = mergeQuestionsById([
@@ -122,6 +132,11 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     UCC_CONV_2026_07_26_QUESTIONS,
     UCC_CONV_2026_08_09_QUESTIONS,
     UCC_CONV_2026_08_23_QUESTIONS,
+    UMNG_CONV_2026_07_26_QUESTIONS,
+    UMNG_CONV_ED2_QUESTIONS,
+    UMNG_CONV_ED3_QUESTIONS,
+    UMNG_CONV_ED4_QUESTIONS,
+    UMNG_CONV_ED5_QUESTIONS,
     DAILY_CHALLENGES,
   ]);
   

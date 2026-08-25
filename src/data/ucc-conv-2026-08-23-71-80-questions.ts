@@ -38,10 +38,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Fenilcetonuria (PKU), el error innato del metabolismo de los aminoácidos más famoso y evaluado en pediatría. Se hereda de forma autosómica recesiva y se debe a la ausencia de la enzima Fenilalanina Hidroxilasa (PAH), la cual convierte la fenilalanina en tirosina. Al no poder metabolizarse, la fenilalanina se acumula en niveles neurotóxicos en el cerebro, causando retraso mental irreversible y convulsiones. La falta de tirosina (que es precursora de la melanina) explica por qué el niño tiene piel pálida, cabello rubio y ojos azules a pesar de la genética de sus padres. El rasgo clínico supremo en los exámenes es el olor corporal a \"ratón\" o moho (musty odor), producto de la excreción de ácido fenilacético por la orina y el sudor. La tragedia de este caso es que el daño cerebral de la PKU es 100% prevenible si se diagnostica en la primera semana de vida mediante la prueba del talón (tamizaje neonatal) y se instaura una dieta estricta libre de fenilalanina.",
     keyPoints: [
-      "Niño con retraso mental, convulsiones y eccema cutáneo severo.; Fenotipo característico: Piel/Pelo inusualmente claros para su genética.; Sello clínico infalible: Olor a \"ratón\" (moho/musty odor) en el pañal.",
-      "Fenilcetonuria (PKU). Enzima faltante: Fenilalanina hidroxilasa. Tratamiento: Dieta libre de fenilalanina de por vida.",
-      "Errores Innatos del Metabolismo / Genética.",
-    ],
+    "Niño con retraso mental, convulsiones y eccema cutáneo severo.; Fenotipo característico: Piel/Pelo inusualmente claros para su genética.; Sello clínico infalible: Olor a \"ratón\" (moho/musty odor) en el pañal.",
+    "Fenilcetonuria (PKU). Enzima faltante: Fenilalanina hidroxilasa. Tratamiento: Dieta libre de fenilalanina de por vida.",
+    "Errores Innatos del Metabolismo / Genética."
+],
   },
   {
     id: "ucc-conv-2026-08-23-72",
@@ -76,10 +76,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con el Síndrome de Goodpasture (Enfermedad por Anticuerpos Anti-MBG). Es el prototipo del \"Síndrome Pulmón-Riñón\" fulminante en varones jóvenes. La enfermedad es causada por autoanticuerpos dirigidos contra la cadena alfa-3 del colágeno tipo IV, una proteína que es fundamental tanto en la Membrana Basal Glomerular (riñón) como en la Membrana Basal Alveolar (pulmones). Clínicamente debuta como una Glomerulonefritis Rápidamente Progresiva (GNRP con semilunas, cilindros eritrocitarios y creatinina volando en días) combinada con Hemorragia Alveolar Masiva (hemoptisis que asfixia al paciente). El diagnóstico de oro absoluto es la biopsia renal con Inmunofluorescencia, la cual mostrará el infame y patognomónico patrón de Depósitos LINEALES y continuos de IgG dibujando la membrana de los capilares glomerulares. (El tratamiento de urgencia para evitar la muerte por asfixia y salvar el riñón es la Plasmaféresis diaria inmediata para lavar los anticuerpos de la sangre, combinada con ciclofosfamida y esteroides).",
     keyPoints: [
-      "Hombre joven con Hemoptisis severa (Hemorragia pulmonar) + Falla renal aguda con sangre en orina (Síndrome Nefrítico).; ANCA negativo, Complementos normales.",
-      "Enfermedad de Goodpasture (Anticuerpos anti-MBG). Sello histológico obligatorio: Inmunofluorescencia con Patrón LINEAL de IgG en la membrana basal. Terapia salvavidas: Plasmaféresis.",
-      "Glomerulopatías / Síndrome Pulmón-Riñón.",
-    ],
+    "Hombre joven con Hemoptisis severa (Hemorragia pulmonar) + Falla renal aguda con sangre en orina (Síndrome Nefrítico).; ANCA negativo, Complementos normales.",
+    "Enfermedad de Goodpasture (Anticuerpos anti-MBG). Sello histológico obligatorio: Inmunofluorescencia con Patrón LINEAL de IgG en la membrana basal. Terapia salvavidas: Plasmaféresis.",
+    "Glomerulopatías / Síndrome Pulmón-Riñón."
+],
   },
   {
     id: "ucc-conv-2026-08-23-73",
@@ -114,10 +114,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "La paciente presenta una Atonía Uterina (la causa número 1 de Hemorragia Postparto). Cuando el útero no se contrae para \"estrangular\" las arterias espirales sangrantes, la oxitocina a altas dosis es la primera línea indiscutida. Si la oxitocina falla, el médico debe recurrir a uterotónicos de segunda línea. La Metilergonovina (Ergonovina/Methergine) es un derivado de los alcaloides del cornezuelo del centeno (ergot). Es un uterotónico formidable, pero actúa causando una intensa y violenta vasoconstricción arterial periférica generalizada, además de contraer el útero. La regla absoluta e inquebrantable de la obstetricia de urgencias es que la Metilergonovina está TOTAL Y ABSOLUTAMENTE CONTRAINDICADA en cualquier paciente con Hipertensión Arterial, Preeclampsia o Eclampsia. Si le inyectas este fármaco a una mujer que ya tiene los vasos espásticos y una presión en 165/105, la presión sistólica subirá instantáneamente a más de 220 mmHg, destrozando una arteria cerebral y matando a la paciente por un Accidente Cerebrovascular (ACV) Hemorrágico o edema agudo de pulmón. El fármaco de elección correcto de segunda línea en esta paciente hipertensa sería el Misoprostol (vía rectal/sublingual) o el Ácido Tranexámico.",
     keyPoints: [
-      "Hemorragia Postparto por Atonía uterina que no responde a Oxitocina.; Paciente con PREECLAMPSIA o HIPERTENSIÓN.",
-      "Fármaco CONTRAINDICADO y mortal: Metilergonovina (Methergine). Jamás usar alcaloides del ergot en pacientes hipertensas.\n(Nota de contraste: Si la paciente fuera Asmática, el medicamento que estaría absolutamente contraindicado sería el Carboprost/Hemabate, porque causa broncoespasmo letal).",
-      "Emergencias Obstétricas / Farmacología Uterotónica.",
-    ],
+    "Hemorragia Postparto por Atonía uterina que no responde a Oxitocina.; Paciente con PREECLAMPSIA o HIPERTENSIÓN.",
+    "Fármaco CONTRAINDICADO y mortal: Metilergonovina (Methergine). Jamás usar alcaloides del ergot en pacientes hipertensas.\n(Nota de contraste: Si la paciente fuera Asmática, el medicamento que estaría absolutamente contraindicado sería el Carboprost/Hemabate, porque causa broncoespasmo letal).",
+    "Emergencias Obstétricas / Farmacología Uterotónica."
+],
   },
   {
     id: "ucc-conv-2026-08-23-74",
@@ -152,10 +152,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con un Taponamiento Cardíaco Agudo secundario a un trauma penetrante. La bolsa de pericardio, que es inelástica, se llenó rápidamente de sangre procedente de la herida del miocardio. El diagnóstico es infalible por la legendaria Tríada de Beck: Hipotensión profunda + Ruidos cardíacos velados/apagados + Ingurgitación Yugular (aumento de la presión venosa central). El corazón literalmente está \"ahogado y comprimido\" desde afuera por la sangre pericárdica; no tiene espacio para expandirse en diástole ni llenarse de sangre. El único tratamiento definitivo es la Pericardiocentesis (drenaje con aguja o ventana pericárdica quirúrgica). Como puente médico de supervivencia en los minutos previos al pinchazo, el corazón depende ABSOLUTAMENTE de tener una Presión Venosa Central (Precarga) elevadísima para lograr forzar y empujar algo de sangre hacia las cámaras cardíacas comprimidas. La reanimación inicial exige bolos rápidos de líquidos intravenosos (Lactato de Ringer o sangre) para mantener el ventrículo derecho lleno a alta presión. Administrar Diuréticos (Furosemida) o Nitroglicerina, asumiendo erróneamente que el paciente tiene \"falla cardíaca congestiva\" por verle las yugulares llenas, es un error fatal. La Furosemida vaciará las venas, tumbará la precarga a cero y el corazón asfixiado dejará de bombear instantáneamente, provocando Actividad Eléctrica Sin Pulso (AESP) y muerte.",
     keyPoints: [
-      "Paciente con trauma de tórax o pericarditis aguda.; Tríada de Beck: Hipotensión + Ruidos cardíacos apagados + Yugulares llenas.; Signo hemodinámico: Pulso Paradójico (caída de la PAS >10 mmHg a la inspiración).",
-      "Taponamiento Cardíaco. Tratamiento vital: Pericardiocentesis de urgencia. Medida puente médica de soporte: Bolos de Líquidos IV para mantener la precarga muy alta. Fármacos contraindicados (Asesinos): Diuréticos, Nitratos o cualquier venodilatador.",
-      "Urgencias Traumáticas y Cardiovasculares.",
-    ],
+    "Paciente con trauma de tórax o pericarditis aguda.; Tríada de Beck: Hipotensión + Ruidos cardíacos apagados + Yugulares llenas.; Signo hemodinámico: Pulso Paradójico (caída de la PAS >10 mmHg a la inspiración).",
+    "Taponamiento Cardíaco. Tratamiento vital: Pericardiocentesis de urgencia. Medida puente médica de soporte: Bolos de Líquidos IV para mantener la precarga muy alta. Fármacos contraindicados (Asesinos): Diuréticos, Nitratos o cualquier venodilatador.",
+    "Urgencias Traumáticas y Cardiovasculares."
+],
   },
   {
     id: "ucc-conv-2026-08-23-75",
@@ -190,10 +190,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con una severa Intoxicación por Metanol (Alcohol Metílico o Alcohol de Madera), el cual se encuentra clásicamente en licores adulterados de fabricación clandestina, solventes y líquido limpiaparabrisas. A diferencia del Etilenglicol (que destruye el riñón formando cristales en sobre de carta de oxalato cálcico), el Metanol es metabolizado por la enzima Alcohol Deshidrogenasa (ADH) hacia Formaldehído y luego hacia Ácido Fórmico (Formiato). El ácido fórmico es extremadamente tóxico para las mitocondrias de la retina y el Nervio Óptico. Esto desencadena la clínica de oro: pérdida visual abrupta que el paciente describe dramáticamente como \"ver una tormenta de nieve\", seguida de edema y enrojecimiento (hiperemia) del disco óptico, llevándolo a ceguera irreversible si no se actúa en horas. El tratamiento salvavidas se basa en bloquear inmediatamente a la enzima ADH para que no siga convirtiendo el metanol en ácido fórmico. El antídoto de ORO que compite con avidez 8.000 veces mayor por esta enzima es el Fomepizol intravenoso. Si no se dispone de Fomepizol, el \"antídoto antiguo\" es emborrachar al paciente con Etanol intravenoso de grado médico, el cual \"distrae\" a la enzima ADH. (El ácido folínico se asocia para acelerar el metabolismo del ácido fórmico hacia CO2 y agua). Al final, se requerirá hemodiálisis para lavar el tóxico de la sangre.",
     keyPoints: [
-      "Indigente, alcohólico crónico o paciente que tomó \"licor casero\" / Moonshine.; Acidosis Metabólica severa de Gap Alto + Gap Osmolar Alto.; Foco Clínico Rey: Ceguera Súbita, visión de \"Tormenta de Nieve\", hiperemia del disco óptico.",
-      "Intoxicación por Metanol. Veneno ocular: Ácido Fórmico. Antídoto inhibidor enzimático: Fomepizol. Terapia puente: Etanol IV.",
-      "Toxicología de Urgencias / Alcoholes Tóxicos.",
-    ],
+    "Indigente, alcohólico crónico o paciente que tomó \"licor casero\" / Moonshine.; Acidosis Metabólica severa de Gap Alto + Gap Osmolar Alto.; Foco Clínico Rey: Ceguera Súbita, visión de \"Tormenta de Nieve\", hiperemia del disco óptico.",
+    "Intoxicación por Metanol. Veneno ocular: Ácido Fórmico. Antídoto inhibidor enzimático: Fomepizol. Terapia puente: Etanol IV.",
+    "Toxicología de Urgencias / Alcoholes Tóxicos."
+],
   },
   {
     id: "ucc-conv-2026-08-23-76",
@@ -228,10 +228,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente presenta el temido Síndrome Torácico Agudo (Acute Chest Syndrome - ACS), la principal causa de mortalidad prematura en pacientes con Anemia de Células Falciformes (Drepanocitosis). Fisiopatológicamente, cualquier insulto inflamatorio en el pulmón (una neumonía por micoplasma, asma, o infartos por microembolos de grasa de la médula ósea) causa hipoxia local. La falta de oxígeno en el alvéolo hace que los glóbulos rojos del paciente, cargados de Hemoglobina S, se deformen instantáneamente en forma de hoz (falciformación masiva), taponando por completo todos los capilares del pulmón. Esto crea un ciclo vicioso letal: el taponamiento causa más hipoxia, y la hipoxia atrofia y forma más células falciformes. Clínicamente se define por Fiebre, dolor torácico, taquipnea e hipoxemia profunda, asociadas a la aparición de un NUEVO INFILTRADO radiológico en un lóbulo pulmonar. En cuadros leves, se manejan con oxígeno, hidratación y antibióticos. Pero en cuadros graves y de rápido deterioro con hipoxemia refractaria (como este paciente, que cayó al 80%), el tratamiento salvavidas obligatorio es el recambio mecánico de sangre infectada: la Exanguinotransfusión o Eritrocitaféresis. Al extraer la sangre llena de células deformes HbS y reemplazarla con sangre normal del banco (rica en HbA flexible), el ciclo de hipoxia se corta de golpe y la vasculatura pulmonar se destapa, salvando la vida del niño.",
     keyPoints: [
-      "Paciente con Anemia Falciforme (HbSS).; Aparición aguda de Fiebre + Dolor de Pecho/Disnea + NUEVO infiltrado pulmonar en la Rx.",
-      "Síndrome Torácico Agudo (Acute Chest Syndrome). Es una catástrofe isquémica pulmonar cíclica. Terapia de rescate en enfermedad hipoxémica severa: Eritrocitaféresis (Exanguinotransfusión) para bajar urgentemente la fracción de HbS por debajo del 30%.",
-      "Complicaciones Hematológicas Pediátricas / Anemia Falciforme.",
-    ],
+    "Paciente con Anemia Falciforme (HbSS).; Aparición aguda de Fiebre + Dolor de Pecho/Disnea + NUEVO infiltrado pulmonar en la Rx.",
+    "Síndrome Torácico Agudo (Acute Chest Syndrome). Es una catástrofe isquémica pulmonar cíclica. Terapia de rescate en enfermedad hipoxémica severa: Eritrocitaféresis (Exanguinotransfusión) para bajar urgentemente la fracción de HbS por debajo del 30%.",
+    "Complicaciones Hematológicas Pediátricas / Anemia Falciforme."
+],
   },
   {
     id: "ucc-conv-2026-08-23-77",
@@ -266,10 +266,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con una Cetoacidosis Diabética (CAD) grave. Aquí se expone el \"asesino silencioso\" más grande en el manejo de la CAD: la gestión del potasio. Por definición, los pacientes con CAD tienen un DÉFICIT CORPORAL TOTAL de potasio masivo (lo han perdido todo orinando por diuresis osmótica y vomitando por la cetosis). Paradójicamente, la sangre al ingresar suele mostrar niveles \"normales\" o \"altos\" de potasio porque la profunda acidosis empujó el poco potasio intracelular restante hacia afuera de las células, engañando al médico. PERO, en el paciente de esta viñeta, la pérdida fue tan colosal que incluso con la acidosis empujando potasio afuera, el valor en sangre marca un terrorífico 2.9 mEq/L. La insulina es la llave universal del potasio: cuando administras insulina intravenosa, esta hormona obliga a las células de todo el cuerpo a abrir sus puertas y absorber masivamente la glucosa y el POTASIO desde la sangre hacia su interior. La regla de oro, legal y estricta en las pautas ADA e ISPAD para CAD dicta: Si el paciente ingresa con Potasio SÉRICO MENOR A 3.3 mEq/L, ESTÁ ESTRICTAMENTE PROHIBIDO INICIAR LA INSULINA. Si tú le abres la bomba de insulina a este paciente, el poco 2.9 de potasio que le queda en sangre entrará velozmente al músculo, el nivel en sangre caerá a 1.5 mEq/L, los músculos respiratorios se paralizarán y el corazón colapsará en Paro Cardiorrespiratorio por fibrilación ventricular o asistolia letal en 5 minutos. Primero lo hidratas, le cuelgas bolos de Potasio por la vena central, y cuando el papel de laboratorio te jure que el potasio llegó a 3.3, ahí recién le enciendes el goteo de insulina.",
     keyPoints: [
-      "Paciente en Cetoacidosis Diabética confirmada (Azúcar alta, pH bajo, Cetonas altas).; Panel de electrolitos en el triage muestra Potasio (K+) < 3.3 mEq/L.",
-      "La Trampa Mortal de la Insulina. Regla de oro OBLIGATORIA: NUNCA INICIAR INSULINA SI K < 3.3. Primero se debe reponer agresivamente el Potasio intravenoso. Una vez superado el umbral, se inicia la bomba de insulina.",
-      "Urgencias Metabólicas / Complicaciones del Manejo de CAD.",
-    ],
+    "Paciente en Cetoacidosis Diabética confirmada (Azúcar alta, pH bajo, Cetonas altas).; Panel de electrolitos en el triage muestra Potasio (K+) < 3.3 mEq/L.",
+    "La Trampa Mortal de la Insulina. Regla de oro OBLIGATORIA: NUNCA INICIAR INSULINA SI K < 3.3. Primero se debe reponer agresivamente el Potasio intravenoso. Una vez superado el umbral, se inicia la bomba de insulina.",
+    "Urgencias Metabólicas / Complicaciones del Manejo de CAD."
+],
   },
   {
     id: "ucc-conv-2026-08-23-78",
@@ -304,10 +304,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "La paciente cursa con Colangitis Aguda Ascendente, específicamente en su grado más severo y letal de toxicidad sistémica, caracterizada por la infame Péntada de Reynolds. Un cálculo biliar cayó de la vesícula y bloqueó el conducto colédoco principal, estancando la bilis. Las bacterias del intestino (ej. E. coli, Klebsiella) ascendieron hacia ese \"pantano\" de bilis obstruida, multiplicándose y reventando hacia la sangre venosa del hígado, causando una bacteriemia masiva purulenta. Clínicamente, presenta la Tríada de Charcot (Dolor en cuadrante superior derecho + Fiebre con escalofríos + Ictericia franca) SUMADA a los signos de colapso extremo: Alteración del estado mental (Confusión) e Hipotensión/Choque profundo, sellando la Péntada de Reynolds. Esta paciente tiene pus a presión letal atascada dentro del árbol biliar principal del hígado. Los antibióticos IV potentes no penetrarán la vía tapada a tiempo. La medida salvavidas absoluta innegociable, tras usar líquidos y vasopresores transitorios, es la descompresión mecánica de urgencia del conducto colédoco. El procedimiento Gold Standard de oro mundial es la CPRE (Colangiopancreatografía Retrógrada Endoscópica): el endoscopista corta el esfínter de Oddi desde el duodeno y saca el cálculo, permitiendo que litros de bilis purulenta drenen al intestino, aliviando la fiebre y el choque del paciente casi al instante.",
     keyPoints: [
-      "Paciente (a menudo mayor, con piedras previas).; Tríada de Charcot: Fiebre/Escalofrío + Dolor HCD + Ictericia franca = Colangitis aguda.; Se añade letargo o hipotensión (Choque) -> Péntada de Reynolds = Emergencia inminente.",
-      "Pus a tensión atascado en el colédoco. Intervención OBLIGATORIA inmediata tras estabilizar la UCI: Drenaje biliar urgente mediante CPRE. Extraer la vesícula (Colecistectomía) se hace mucho después, en otro ingreso, cuando el paciente ya no esté chocado.",
-      "Urgencias Biliares / Gastroenterología Endoscópica.",
-    ],
+    "Paciente (a menudo mayor, con piedras previas).; Tríada de Charcot: Fiebre/Escalofrío + Dolor HCD + Ictericia franca = Colangitis aguda.; Se añade letargo o hipotensión (Choque) -> Péntada de Reynolds = Emergencia inminente.",
+    "Pus a tensión atascado en el colédoco. Intervención OBLIGATORIA inmediata tras estabilizar la UCI: Drenaje biliar urgente mediante CPRE. Extraer la vesícula (Colecistectomía) se hace mucho después, en otro ingreso, cuando el paciente ya no esté chocado.",
+    "Urgencias Biliares / Gastroenterología Endoscópica."
+],
   },
   {
     id: "ucc-conv-2026-08-23-79",
@@ -342,10 +342,10 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Retinitis por Citomegalovirus (CMV). Es la infección ocular oportunista devastadora más frecuente y amenazante para la visión en pacientes con SIDA avanzado que han cruzado la frontera de la inmunosupresión extrema (CD4 crónicamente por debajo de 50 cél/mm³). A diferencia de otras retinitis, el CMV ataca a los fotoreceptores de forma indolora, causando miodesopsias (moscas volantes/luces) seguidas de defectos visuales o ceguera por desprendimiento de retina. El sello visual indiscutido de las preguntas médicas es el aspecto en \"Pizza de queso con salsa de tomate\" o \"Salsa y queso\" (Pizza-pie / Ketchup and cottage cheese appearance): extensas hemorragias rojas confluentes mezcladas con exudados blanquecinos necróticos perivasculares. Para salvar la visión y detener la ceguera progresiva, el tratamiento de primera línea innegociable debe iniciarse inmediatamente (antes de esperar la TARV) con antivirales activos que inhiban la polimerasa del CMV: el Ganciclovir intravenoso (o inyecciones directas dentro del ojo en lesiones peligrosamente centrales) y luego transición rápida a Valganciclovir oral para mantenimiento de por vida o hasta que los CD4 superen las 100 células sostenidas con TARV.",
     keyPoints: [
-      "Paciente con VIH severamente inmunodeprimido (CD4 < 50).; Pérdida visual rápida INDOLORA.; Fondo de ojo: \"Ketchup y Queso\" (Hemorragias intensas rojas + exudados blancos).",
-      "Retinitis por Citomegalovirus (CMV). El tratamiento OBLIGATORIO que detiene la ceguera es el Ganciclovir (o Valganciclovir). El Aciclovir clásico no tiene acción curativa potente contra el CMV.",
-      "Infecciones Oportunistas Oculares / SIDA.",
-    ],
+    "Paciente con VIH severamente inmunodeprimido (CD4 < 50).; Pérdida visual rápida INDOLORA.; Fondo de ojo: \"Ketchup y Queso\" (Hemorragias intensas rojas + exudados blancos).",
+    "Retinitis por Citomegalovirus (CMV). El tratamiento OBLIGATORIO que detiene la ceguera es el Ganciclovir (o Valganciclovir). El Aciclovir clásico no tiene acción curativa potente contra el CMV.",
+    "Infecciones Oportunistas Oculares / SIDA."
+],
   },
   {
     id: "ucc-conv-2026-08-23-80",
@@ -380,9 +380,9 @@ export const UCC_CONV_2026_08_23_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con un debut neonatal de Atresia Duodenal clásica. Embriológicamente, la luz del duodeno fetal falla en su proceso de \"recanalización\" (las células sólidas que llenan el tubo en desarrollo no mueren, dejando una pared ciega impenetrable, casi siempre justo a la altura o debajo de la ampolla de Vater, de ahí el color verde bilioso del vómito). El diagnóstico radiológico de oro universal para los exámenes de residencia es el Signo de la Doble Burbuja: la primera burbuja es el aire atascado inflando el estómago y la segunda burbuja, más pequeña a la derecha, es el aire y los líquidos estancados inflando la primera porción del duodeno ciego cerrado. La trampa fina de esta radiografía es la \"ausencia de gas distal\"; como la atresia duodenal es un muro de concreto ciego cerrado, NO HAY PASO DE AIRE y todo el intestino grueso y delgado distal al tapón está oscuro/vacío de gases en la Rx. Esta patología obstructiva mecánica tiene una asociación profunda y genéticamente innegable con el Síndrome de Down (Trisomía 21): aproximadamente un tercio de todos los bebés que nacen con atresia duodenal padecen Trisomía 21. Si el cirujano entra a operar un duodeno tapado (Duodeno-duodenostomía en diamante), el pediatra debe buscar inmediatamente el pliegue palmar único, las fisuras palpebrales oblícuas y prepararse para un ecocardiograma (buscando el canal AV completo del niño Down).",
     keyPoints: [
-      "Neonato que debuta el Día 1 con VÓMITO BILIOSO.; Rx de abdomen clave: Signo de la DOBLE BURBUJA + Sin gas en intestino distal.",
-      "Atresia Duodenal. Cirugía urgente. Asociación genética estrella: Trisomía 21 (Síndrome de Down).",
-      "Anomalías Congénitas del Tracto Digestivo / Genética.",
-    ],
+    "Neonato que debuta el Día 1 con VÓMITO BILIOSO.; Rx de abdomen clave: Signo de la DOBLE BURBUJA + Sin gas en intestino distal.",
+    "Atresia Duodenal. Cirugía urgente. Asociación genética estrella: Trisomía 21 (Síndrome de Down).",
+    "Anomalías Congénitas del Tracto Digestivo / Genética."
+],
   }
 ];

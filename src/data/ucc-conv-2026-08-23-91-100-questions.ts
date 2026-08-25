@@ -37,9 +37,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation: "El paciente cursa con Enfermedad de Hirschsprung (Megacolon Aganglionar Congénito). Fisiopatológicamente, se produce por una falla en la migración cefalocaudal de las células de la cresta neural durante las semanas 5 a 12 de gestación. Esto deja un segmento distal del intestino (siempre iniciando en el esfínter anal interno y extendiéndose en longitud variable en dirección proximal, afectando en el 80% de los casos al rectosigmoides) completamente privado de células ganglionares en los plexos mientérico (Auerbach) y submucoso (Meissner). El segmento aganglionar no se puede relajar (permanece tónico y contraído), produciendo una obstrucción intestinal funcional. La clínica neonatal es patognomónica: retraso en la expulsión del meconio (>48 horas), distensión y la salida explosiva de heces/gas tras el tacto rectal.\nEl estándar de oro diagnóstico indiscutido es la Biopsia Rectal por Succión: se debe tomar por encima de la línea pectínea (para no confundir con la zona de aganglionosis fisiológica del esfínter) e incluir submucosa. Muestra dos hallazgos patognomónicos:\nAusencia de células ganglionares parasimpáticas.\nHipertrofia de filetes nerviosos no mielinizados con tinción positiva para Acetilcolinesterasa (AChE).",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-92",
@@ -73,9 +71,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "En el algoritmo de Soporte Vital Cardiovascular Avanzado (ACLS) para Paro Cardíaco, los ritmos se dividen estrictamente en dos categorías:\nRitmos Desfibrilables: Fibrilación Ventricular (FV) y Taquicardia Ventricular SIN PULSO (TVSP).\nRitmos NO Desfibrilables: Asistolia y Actividad Eléctrica Sin Pulso (AESP).\nEl punto crítico evaluado aquí es la distinción entre Cardioversión Sincronizada y Desfibrilación:\nCardioversión Sincronizada: Se usa en pacientes CON PULSO que tienen taquiarritmias inestables (ej. TV con pulso, TSV inestable, FA rápida inestable). El desfibrilador lee la onda R para no descargar durante la repolarización (onda T) y evitar precipitar FV.\nDesfibrilación No Sincronizada: Se usa en ritmos SIN PULSO (FV y TVSP). Al no haber pulso ni perfusión, el paciente está en Paro Cardíaco. Intentar \"sincronizar\" un ritmo en un paciente en paro retrasará la descarga (o el desfibrilador se negará a descargar si no detecta ondas R claras). La indicación de ORO ante una TV sin pulso es la Desfibrilación inmediata no sincronizada a máxima energía, seguida de 2 minutos de RCP de alta calidad.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-93",
@@ -109,9 +105,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "La paciente cursa con un Prolactinoma (Macroadenoma hipofisiario secretor de Prolactina). Es el tumor funcional de la hipófisis más frecuente. La hiperprolactinemia inhibe la secreción pulsátil de GnRH en el hipotálamo, causando hypogonadismo (amenorrea e infertilidad) y galactorrea. Al crecer el tumor (>1 cm = Macroadenoma), se extiende hacia arriba fuera de la silla turca y comprime el Quiasma Óptico (donde se cruzan las fibras nasales de la retina que ven el campo visual temporal), produciendo el signo neuro-oftalmológico patognomónico: Hemianopsia Bitemporal.\nAquí reside la gran \"excepción quirúrgica\" de la neurocirugía endocrina: A diferencia de TODOS los demás tumores hipofisiarios compresivos (que se operan si comprimen la vía óptica), los Prolactinomas se tratan de PRIMERA LÍNEA con manejo MÉDICO, incluso si son macroadenomas y causan alteración visual. Los Agonistas Dopaminérgicos (Cabergolina de elección por mayor potencia y tolerancia, o Bromocriptina) simulan a la dopamina endógena (el inhibidor fisiológico de la prolactina). Este tratamiento no solo normaliza los niveles de prolactina y devuelve los ciclos menstruales, sino que induce una reducción (encogimiento) masiva y rápida del tamaño del tumor en el 80-90% de los casos, liberando el quiasma óptico y recuperando la visión sin necesidad de bisturí. La cirugía transesfenoidal se reserva solo si hay falla o intolerancia al tratamiento médico.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-94",
@@ -145,9 +139,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "El paciente cursa con la Corea de Sydenham, la manifestación neurológica patognomónica y criterio mayor de Jones para el diagnóstico de Fiebre Reumática Aguda. Ocurre semanas o meses después de una infección faríngea no tratada por Streptococcus pyogenes (Estreptococo del Grupo A). Fisiopatológicamente, se produce por mimetismo molecular: los anticuerpos generados contra la bacteria reaccionan cruzadamente contra los ganglios basales (núcleo caudado y putamen) en el cerebro y contra las válvulas cardíacas (carditis reumática, afectando principalmente la válvula mitral).\nClínica de la Corea de Sydenham:\nMovimientos involuntarios rápidos e incoordinados (corea) que cesan al dormir.\nSigno del ordeñador (Milkmaid's grip): Incapacidad para mantener una prensión sostenida al apretar la mano del médico.\nSigno de la lengua en dardo (Snake tongue): Incapacidad para mantener la lengua protruida.\nLabilidad emocional y cambios de conducta.\nUna vez diagnosticada la Fiebre Reumática, para prevenir nuevos brotes que destruyan la válvula mitral, el niño DEBE recibir Profilaxis Secundaria Antibiótica de larga duración: inyecciones de Penicilina G Benzatínica IM cada 3 a 4 semanas (durante al menos 10 años o hasta cumplir 21 años si no hubo carditis grave, o de por vida si hay daño valvular severo).",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-95",
@@ -181,9 +173,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation: "La paciente presenta la pentalogía clásica de la Púrpura Trombocitopénica Trombótica (PTT):\nAnemia hemolítica microangiopática (con esquizocitos en frotis y LDH alta).\nTrombocitopenia severa por consumo.\nSíntomas neurológicos fluctuantes (confusión, cefalea, paresias).\nFalla renal (usualmente leve/moderada).\nFiebre.\nFisiopatológicamente, se produce por la falta o inhibición autoinmune de la enzima ADAMTS13 (una metaloproteasa que normalmente \"recorta\" los megamultímeros del Factor de von Willebrand). Al faltar la enzima, los multímeros gigantes de von Willebrand atrapan y agregan plaquetas en toda la microcirculación, formando microtrombos de plaquetas puras que ocluyen los capilares del cerebro y riñón (los glóbulos rojos chocan con las redes de fibrina/plaquetas y se rompen en esquizocitos). Un dato de laboratorio crucial para los exámenes: los tiempos de coagulación (TP y TPTa) son NORMALES porque la cascada de coagulación soluble no está consumida (a diferencia de la CID donde los tiempos están muy alargados).\nManejo de Emergencia:\nTratamiento de ORO: Plasmaféresis (Recambio Plasmático Terapéutico) urgente. Remueve el autoanticuerpo anti-ADAMTS13 y el plasma fresco aportado repone la enzima faltante.\nPROHIBICIÓN ABSOLUTA: NO transfundir plaquetas de rutina. Transfundir plaquetas en la PTT es \"echarle gasolina al fuego\": las plaquetas nuevas transfundidas se agregarán inmediatamente a los multímeros del vWF, creando miles de nuevos microtrombos que infartarán el cerebro y el corazón del paciente.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-96",
@@ -217,9 +207,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation: "El lactante cursa con una Gastroenteritis Aguda Severa (muy probablemente por Rotavirus, el agente viral gastrointestinal más común y grave en lactantes no vacunados en guarderías). Fisiopatológicamente, el virus destruye los enterocitos maduros de las vellosidades del intestino delgado, causando una diarrea osmotico-secretora masiva con pérdida severa de agua libre y electrolitos.\nManejo según el Grado de Deshidratación (OMS/PALS):\nDeshidratación Grave / Choque (Llenado capilar >3-4s, fontanela deprimida, letargia): Es una EMERGENCIA MEDICA. La vía oral/SRO NO es suficiente ni segura de primera línea. Se debe colocar una vía periférica o intraósea e iniciar Bolos de Cristaloides Isotónicos (Solución Salina 0.9% o Lactato de Ringer) a 20 mL/kg en 10-20 minutos, repitiendo según respuesta hasta estabilizar la perfusión. Una vez reanimado el volumen intravascular y recuperada la conciencia, se transiciona a Sales de Rehidratación Oral (SRO).\nPrevención: La vacuna oral contra Rotavirus (administrada a los 2 y 4 meses de vida) es la medida de salud pública más efectiva para prevenir la diarrea grave por este virus.\nContraindicación: Los antidiarréicos/antimotilidad (Loperamida) están TOTALMENTE CONTRAINDICADOS en pediatría por riesgo de íleo paralítico, megacolon tóxico y somnolencia.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-97",
@@ -253,9 +241,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "C",
     explanation: "El paciente presenta una Neumonía Adquirida en la Comunidad (NAC) severa. Para decidir el lugar de manejo (ambulatorio vs. piso vs. UCI), la herramienta pronóstica estándar validada por las guías es la escala CURB-65:\nC (Confusion / Confusión): SÍ (Desorientado/somnoliento) -> 1 punto.\nU (Urea / BUN > 19 mg/dL o Urea > 42 mg/dL): Asumido alto por deshidratación/sepsis -> (Incluso sin la urea anotada, veamos el resto).\nR (Respiratory rate / FR >= 30 rpm): SÍ (FR = 34 rpm) -> 1 punto.\nB (Blood pressure / PAS < 90 mmHg o PAD <= 60 mmHg): SÍ (PA 85/50) -> 1 punto.\n65 (Edad >= 65 años): NO (Tiene 62 años) -> 0 puntos.\nSumando los puntos confirmados: Confusión (1) + FR >= 30 (1) + Hipotensión (1) = Mínimo 3 a 4 puntos (CURB-65 de 3 a 5).\nInterpretación del CURB-65:\n0 a 1 punto: Bajo riesgo -> Manejo Ambulatorio.\n2 puntos: Riesgo moderado -> Hospitalización en Piso/Sala general.\n3 a 5 puntos: Riesgo alto / Neumonía Severa (Mortalidad >20-30%) -> Requiere Ingreso a UCI / Cuidados Intensivos y cobertura antibiótica empírica doble para gérmenes típicos y atípicos (Cefalosporina 3ra gen + Macrólido o Fluoroquinolona respiratoria) junto con soporte ventilatorio por la acidosis respiratoria (pH 7.22).",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-98",
@@ -289,9 +275,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "La paciente presenta una Hiperplasia Suprarrenal Congénita (HSC) variante perdedora de sal e hipervirilizante, la causa más común de ambigüedad genital en recién nacidos con genotipo femenino (46,XX).\nFisiopatológicamente, en más del 90-95% de los casos de HSC, la enzima ausente por mutación autosómica recesiva es la 21-alfa-hidroxilasa. Esta enzima es la encargada de convertir la 17-hidroxiprogesterona en desoxicorticosterona y cortisol. Al no haber 21-hidroxilasa:\nFalta de Cortisol y Aldosterona: Al no haber aldosterona, el riñón no puede retener sodio ni tirar potasio. En la 1ra-2da semana de vida, el bebé hace la crisis perdedora de sal (Hiponatremia + Hiperkalemia + Hipotensión/Choque e hipoglucemia).\nExceso de Andrógenos: Toda la materia prima metabólica (17-OH-Progesterona) que no puede bajar por la vía del cortisol se \"desvía\" masivamente hacia la vía de los andrógenos (testosterona). En una niña genéticamente 46,XX con útero y ovarios sanos, este exceso de andrógenos fetales viriliza los genitales externos (clitoromegalia y fusión labial).",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-99",
@@ -325,9 +309,7 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "La paciente presenta una Artritis Reumatoide (AR) establecida de libro: poliartritis simétrica de pequeñas articulaciones (MCF e IFP, respetando típicamente las IFD que son de la osteoartritis), rigidez matutina > 1 hora, nódulos reumatoideos y erosiones en rayos X.\nEn el abordaje serológico moderno de la AR:\nFactor Reumatoide (FR): Es un anticuerpo (generalmente IgM) dirigido contra la porción Fc de la IgG humana. Es muy sensible (70-80%), pero POCO específico (70-80%), ya que puede positivizarse en muchas otras enfermedades (Lupus, Endocarditis, Hepatitis C, Síndrome de Sjögren, infecciones crónicas y ancianos sanos).\nAnticuerpos Anti-Péptidos Cíclicos Citrulinados (Anti-CCP / ACPA): Se dirigen contra proteínas donde el aminoácido arginina ha sido cambiado por citrulina en el tejido sinovial inflamado. Tienen una sensibilidad similar al FR (70-80%), pero poseen una ESPECIFICIDAD ABRUMADORA (>95-98%) para Artritis Reumatoide. Además, la presencia de Anti-CCP positivo precozmente es el marcador pronóstico más fuerte para predecir un curso agresivo, erosivo articular y progresivo de la enfermedad.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-100",
@@ -361,8 +343,6 @@ export const UCC_CONV_2026_08_23_91_100_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "El paciente cursa con la complicación tardía más letal de la pancreatitis: la Necrosis Pancreática Infectada.\nCronología: La necrosis estéril inicial suele infectarse por translocación bacteriana entérica en la 2da a 4ta semana de evolución (típicamente después del día 7-10). La sospecha se enciende cuando un paciente que venía \"bien\" vuelve a hacer fiebre alta, sepsis y leucocitosis en la segunda semana.\nHallazgo radiológico patognomónico: La presencia de gas (burbujas de aire) dentro de la zona de necrosis en la TC con contraste es la prueba irrefutable de que bacterias anaerobias o entéricas productoras de gas están colonizando el tejido muerto del páncreas. Si no hay gas pero la sospecha es alta, se puede hacer una Punción Aspiración con Aguja Fina (PAAF) guiada por TC para Gram y cultivo.\nManejo Moderno (Step-up Approach / Enfoque Escalonado):\nAntiguamente, ver una necrosis infectada significaba abrir el abdomen inmediatamente (laparotomía abierta). Hoy en día, los ensayos mundiales (Estudio PANTER) demostraron que la cirugía abierta temprana tiene una mortalidad altísima. El manejo moderno exige:\nPaso 1 (Médico): Iniciar antibióticos de alta penetración en el tejido pancreático (Carbapenémicos como Meropenem, o Fluoroquinolonas + Metronidazol).\nPaso 2 (Drenaje Mínimamente Invasivo): Retrasar cualquier intervención quirúrgica idealmente más de 4 semanas hasta que la necrosis se encapsule (\"Walled-off necrosis\"). Si el paciente no mejora con antibióticos, se realiza drenaje percutáneo o endoscópico transgastrico mínimamente invasivo, dejando la necrosectomía quirúrgica como último recurso.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   }
 ];

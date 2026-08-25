@@ -38,10 +38,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Atresia de Vías Biliares (AVB), la principal causa de ictericia colestásica neonatal y la indicación número uno de trasplante hepático en pediatría. Se trata de un proceso fibro-obliterativo progresivo que destruye las vías biliares extrahepáticas. La clínica clásica es un bebé que luce \"sano\" (no tóxico, a diferencia de la sepsis), pero que a las 2-4 semanas de vida presenta ictericia progresiva, acolia (heces blancas por falta de bilis en el intestino) y coluria (exceso de bilirrubina directa filtrada en riñón). La cirugía salvavidas y de derivación es la Hepatoportoenterostomía de Kasai (se conecta un asa de yeyuno directamente al hilio hepático cortado para que la bilis drene al intestino). La regla sagrada y el factor pronóstico más importante de esta cirugía es el TIEMPO: el procedimiento de Kasai debe realizarse idealmente antes de los 60 días de vida (8 semanas). Si se opera después de los 90 días, la tasa de éxito (flujo de bilis) cae en picada a menos del 20%, ya que la fibrosis habrá destruido los conductos intrahepáticos de forma irreversible, condenando al bebé a cirrosis biliar terminal y muerte sin un trasplante.",
     keyPoints: [
-      "Neonato de 2 a 6 semanas de vida con Ictericia que NO mejora.; Signos de colestasis: Heces blancas (Acolia) + Orina oscura (Coluria).; Predominio de Bilirrubina DIRECTA/Conjugada.",
-      "Atresia de Vías Biliares. (Nunca es ictericia por leche materna si hay acolia y bilirrubina directa). El tratamiento es la Cirugía de Kasai y DEBE hacerse antes de las 8 semanas de vida.",
-      "Cirugía Pediátrica / Gastroenterología.",
-    ],
+    "Neonato de 2 a 6 semanas de vida con Ictericia que NO mejora.; Signos de colestasis: Heces blancas (Acolia) + Orina oscura (Coluria).; Predominio de Bilirrubina DIRECTA/Conjugada.",
+    "Atresia de Vías Biliares. (Nunca es ictericia por leche materna si hay acolia y bilirrubina directa). El tratamiento es la Cirugía de Kasai y DEBE hacerse antes de las 8 semanas de vida.",
+    "Cirugía Pediátrica / Gastroenterología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-12",
@@ -76,10 +76,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con una Peritonitis Bacteriana Espontánea (PBE) (confirmada por > 250 PMN/mm³ en el líquido ascítico). En el paciente cirrótico, la PBE no solo causa sepsis, sino que genera una vasodilatación esplácnica masiva mediada por citoquinas. Esta vasodilatación \"roba\" la sangre de la circulación central, provocando una caída brutal de la perfusión hacia los riñones, precipitando el letal Síndrome Hepatorrenal (SHR). Aproximadamente el 30-40% de los pacientes con PBE desarrollan insuficiencia renal aguda, la cual dispara la mortalidad por encima del 50%. Múltiples ensayos clínicos mundiales han demostrado de forma irrefutable que la administración intravenosa de Albúmina humana (1.5 g/kg el Día 1 y 1.0 g/kg el Día 3) como expansor de volumen plasmático potente y prolongado, reduce la incidencia de falla renal del 33% al 10%, y reduce la mortalidad de forma dramática. Esta infusión está estrictamente indicada (es obligatoria) si el paciente presenta signos de riesgo en sus laboratorios de ingreso: Creatinina > 1 mg/dL, BUN > 30 mg/dL, o Bilirrubina Total > 4 mg/dL. (Nuestro paciente cumple todos estos criterios de alto riesgo).",
     keyPoints: [
-      "Cirrótico con PBE (> 250 PMN en ascitis) + Antibióticos (Cefotaxima).; Presencia de Falla Renal sutil (Creatinina o BUN elevados) o Ictericia marcada (Bilirrubina > 4).",
-      "Prevención OBLIGATORIA del Síndrome Hepatorrenal. El pilar para evitar que el riñón muera es la expansión con Albúmina IV los días 1 y 3.",
-      "Hepatología / Complicaciones de PBE.",
-    ],
+    "Cirrótico con PBE (> 250 PMN en ascitis) + Antibióticos (Cefotaxima).; Presencia de Falla Renal sutil (Creatinina o BUN elevados) o Ictericia marcada (Bilirrubina > 4).",
+    "Prevención OBLIGATORIA del Síndrome Hepatorrenal. El pilar para evitar que el riñón muera es la expansión con Albúmina IV los días 1 y 3.",
+    "Hepatología / Complicaciones de PBE."
+],
   },
   {
     id: "ucc-conv-2026-08-23-13",
@@ -114,10 +114,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "El paciente cursa con una Intoxicación digitálica (Toxicidad por Digoxina). Los signos visuales patognomónicos (visión amarilla / xantopsia o halos), las náuseas (primer síntoma tóxico usual) y las arritmias mixtas paradójicas (Taquicardia auricular con Bloqueo AV simultáneo) son el sello clásico de la intoxicación. La digoxina actúa bloqueando la bomba Na+/K+ ATPasa en el miocardiocito. Sin embargo, el Potasio sérico (K+) compite directamente con la Digoxina por el mismo sitio de unión en la bomba. Si un paciente desarrolla HIPOKALEMIA (Potasio bajo), la digoxina ya no tiene competencia y se une masivamente a las bombas, desencadenando una toxicidad fulminante y arritmias letales incluso con niveles séricos de digoxina que podrían considerarse en \"rango terapéutico\" normal. Al duplicar la Furosemida (un diurético perdedor de potasio), el paciente vació sus reservas de potasio, abriendo la puerta a la intoxicación. El tratamiento incluye reponer el potasio, suspender la digoxina y, si hay inestabilidad extrema o riesgo vital, administrar anticuerpos antidigoxina (Fragmentos Fab / Digibind).",
     keyPoints: [
-      "Paciente anciano cardiópata tomando Digoxina + Diuréticos de asa.; Síntomas GI (náuseas/vómitos) + Alteraciones visuales (halos amarillos/verdes).; ECG con arritmias complejas (ej. Taquicardia Auricular + Bloqueo AV).",
-      "Intoxicación por Digoxina. El factor precipitante número uno es la Hipokalemia. (Ojo al detalle: la intoxicación en sí puede causar hiperkalemia severa por envenenamiento general de las bombas, pero es la hipokalemia inicial la que dispara la toxicidad al permitirle paso libre al fármaco).",
-      "Toxicología Cardiovascular / Efectos Adversos Farmacológicos.",
-    ],
+    "Paciente anciano cardiópata tomando Digoxina + Diuréticos de asa.; Síntomas GI (náuseas/vómitos) + Alteraciones visuales (halos amarillos/verdes).; ECG con arritmias complejas (ej. Taquicardia Auricular + Bloqueo AV).",
+    "Intoxicación por Digoxina. El factor precipitante número uno es la Hipokalemia. (Ojo al detalle: la intoxicación en sí puede causar hiperkalemia severa por envenenamiento general de las bombas, pero es la hipokalemia inicial la que dispara la toxicidad al permitirle paso libre al fármaco).",
+    "Toxicología Cardiovascular / Efectos Adversos Farmacológicos."
+],
   },
   {
     id: "ucc-conv-2026-08-23-14",
@@ -152,10 +152,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Inmunodeficiencia Combinada Grave (SCID, por sus siglas en inglés), la forma más letal y profunda de las inmunodeficiencias primarias (famosa históricamente por el caso del \"Niño Burbuja\"). Se llama \"combinada\" porque el defecto genético paraliza el desarrollo tanto de la inmunidad celular (Linfocitos T) como de la inmunidad humoral (Linfocitos B). El niño nace virtualmente sin sistema inmunológico defensivo. La clínica debuta en los primeros meses de vida (cuando los anticuerpos maternos se desgastan) con infecciones oportunistas monstruosas (Cándida oral invasiva, Pneumocystis, CMV), diarrea intratable, falla de medro y Linfopenia absoluta severa. La falta de timo en la placa es por ausencia total de células T en desarrollo. Sin tratamiento, la condición es invariablemente mortal antes del primer año de vida. Las IGIV y profilaxis antibióticas solo ganan tiempo; la única cura absoluta y permanente que reescribe el sistema inmunológico del paciente desde cero es el Trasplante de Células Madre Hematopoyéticas (Médula Ósea).",
     keyPoints: [
-      "Lactante (meses de vida) con infecciones oportunistas brutales (Pneumocystis jirovecii, Cándida severa).; Hallazgos físicos: \"No hay ganglios\" ni amígdalas + Ausencia de sombra de Timo en Rx.; Laboratorio: LINFOPENIA absoluta extrema.",
-      "SCID (Inmunodeficiencia Combinada Grave). Tratamiento definitivo: Trasplante de Médula Ósea. Reglas de oro: PROHIBIDAS las vacunas vivas atenuadas (ej. BCG, Rotavirus, Triple Viral, Polio) porque lo matarán de una infección diseminada. Y si requiere transfusión de sangre, DEBE ser sangre Irradiada (para evitar la Enfermedad de Injerto contra Huésped por los leucocitos del donante).",
-      "Inmunodeficiencias Primarias Pediátricas / SCID.",
-    ],
+    "Lactante (meses de vida) con infecciones oportunistas brutales (Pneumocystis jirovecii, Cándida severa).; Hallazgos físicos: \"No hay ganglios\" ni amígdalas + Ausencia de sombra de Timo en Rx.; Laboratorio: LINFOPENIA absoluta extrema.",
+    "SCID (Inmunodeficiencia Combinada Grave). Tratamiento definitivo: Trasplante de Médula Ósea. Reglas de oro: PROHIBIDAS las vacunas vivas atenuadas (ej. BCG, Rotavirus, Triple Viral, Polio) porque lo matarán de una infección diseminada. Y si requiere transfusión de sangre, DEBE ser sangre Irradiada (para evitar la Enfermedad de Injerto contra Huésped por los leucocitos del donante).",
+    "Inmunodeficiencias Primarias Pediátricas / SCID."
+],
   },
   {
     id: "ucc-conv-2026-08-23-15",
@@ -190,10 +190,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "Esta es la complicación bandera y el \"coco\" del uso del contraste en Resonancia Magnética. A diferencia del contraste yodado de las Tomografías (que \"quema\" el riñón causando Nefropatía por Contraste aguda), el contraste de Gadolinio utilizado en la RMN no es típicamente nefrotóxico, PERO en pacientes con falla renal severa (TFG < 30 mL/min, y especialmente en diálisis), el riñón es incapaz de excretarlo. El Gadolinio se estanca en la sangre por días, perdiendo sus moléculas protectoras (quelantes) y liberando iones tóxicos libres que se depositan en la piel, articulaciones y órganos internos. Esto desata una catástrofe fibrótica irremediable conocida como Fibrosis Sistémica Nefrógena (NSF). Clínicamente, semanas o meses después del estudio, la piel del paciente se vuelve tan dura, brillante e indurada como la madera (esclerodermia-like), causando contracturas articulares severas que postran al paciente en silla de ruedas, fibrosis pulmonar y de órganos internos, sin tratamiento curativo conocido hasta la fecha.",
     keyPoints: [
-      "Paciente con Enfermedad Renal Crónica severa (Estadio 4 o 5, TFG < 30) o falla renal aguda.; Necesidad de realizar una Resonancia Magnética con contraste.",
-      "Peligro extremo de Fibrosis Sistémica Nefrógena (NSF). REGLA OBLIGATORIA: Está absolutamente contraindicado el uso de contrastes de gadolinio clásicos en pacientes con TFG < 30. (Se deben buscar alternativas de imagen como TAC sin contraste o eco).",
-      "Efectos Adversos Radiológicos / Nefrología.",
-    ],
+    "Paciente con Enfermedad Renal Crónica severa (Estadio 4 o 5, TFG < 30) o falla renal aguda.; Necesidad de realizar una Resonancia Magnética con contraste.",
+    "Peligro extremo de Fibrosis Sistémica Nefrógena (NSF). REGLA OBLIGATORIA: Está absolutamente contraindicado el uso de contrastes de gadolinio clásicos en pacientes con TFG < 30. (Se deben buscar alternativas de imagen como TAC sin contraste o eco).",
+    "Efectos Adversos Radiológicos / Nefrología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-16",
@@ -228,10 +228,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Silicosis crónica complicada. La exposición laboral clásica al polvo de cuarzo, canteras o limpieza con chorro de arena (sandblasting) genera depósitos de sílice cristalina en los pulmones. Los hallazgos radiológicos clásicos son los nódulos en lóbulos superiores y, patognomónicamente, los ganglios hiliares calcificados en \"cáscara de huevo\". El grave peligro de la silicosis radica en la biología celular: la sílice cristalina es fagocitada por los macrófagos alveolares pulmonares, pero el mineral es indestructible. La sílice perfora los lisosomas del macrófago por dentro, matando a la célula de defensa y liberando sus enzimas al intersticio (creando cicatrices/fibrosis). Al tener los macrófagos destruidos, los pacientes silicosos pierden la defensa de primera línea celular y sufren un riesgo inmensamente elevado (hasta 30 veces mayor que la población normal) de desarrollar y reactivar la Tuberculosis Pulmonar (Silicotuberculosis). Todo paciente con antecedente de silicosis que desarrolla una caverna, tos persistente nueva, fiebre o pérdida de peso, tiene Tuberculosis hasta que el frotis de bacilos ácido-alcohol resistentes (BAAR) y el cultivo demuestren lo contrario.",
     keyPoints: [
-      "Trabajador de canteras, vidrio, cerámica, o minero (expuesto a sílice).; Rx: Nódulos pulmonares superiores + Ganglios en \"cáscara de huevo\".; Deterioro clínico rápido: Cavernas o fiebre y sudores nocturnos.",
-      "Silicosis + Tuberculosis superpuesta. Fisiopatología: Disfunción masiva de los macrófagos alveolares por toxicidad de la sílice. Exige aislamiento y baciloscopias seriadas urgentes.",
-      "Neumopatías Ocupacionales / Infectología.",
-    ],
+    "Trabajador de canteras, vidrio, cerámica, o minero (expuesto a sílice).; Rx: Nódulos pulmonares superiores + Ganglios en \"cáscara de huevo\".; Deterioro clínico rápido: Cavernas o fiebre y sudores nocturnos.",
+    "Silicosis + Tuberculosis superpuesta. Fisiopatología: Disfunción masiva de los macrófagos alveolares por toxicidad de la sílice. Exige aislamiento y baciloscopias seriadas urgentes.",
+    "Neumopatías Ocupacionales / Infectología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-17",
@@ -266,10 +266,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "La lactante presenta la devastadora tríada del Síndrome de West (Espasmos Infantiles): 1) Espasmos infantiles (en salvas, tipo \"navaja\" o \"abrazo de moro\", típicos al despertar/dormir); 2) Estancamiento o retroceso del neurodesarrollo; y 3) Patrón de EEG patognomónico de Hipsarritmia (un caos eléctrico total). A diferencia de las convulsiones pediátricas convencionales, los antiepilépticos clásicos fallan rotundamente y pueden agravar el cuadro. El tratamiento hormonal OBLIGATORIO de primera línea, que ha demostrado \"apagar\" el caos de la hipsarritmia y detener los espasmos, es la ACTH (Hormona Adrenocorticotropa) intramuscular o, en su defecto, los corticosteroides orales a dosis altas (Prednisona/Prednisolona). (Nota fina: Si el Síndrome de West es secundario a Esclerosis Tuberosa - manchas acrómicas, nódulos en cerebro -, el fármaco de primera línea cambia a Vigabatrina).",
     keyPoints: [
-      "Lactante (4 a 8 meses) que hace episodios tipo \"susto/abrazo o flexión en navaja\" repetitivos al despertar.; Pérdida de los hitos del desarrollo (ya no sonríe, ya no se sienta).; Palabras mágicas en el EEG: Hipsarritmia.",
-      "Síndrome de West (Espasmos infantiles). Tratamiento de primera línea: ACTH (Corticotropina) o Corticoides. Si le das anticonvulsivos normales, el niño perderá el intelecto irreversiblemente.",
-      "Neurología Pediátrica / Encefalopatías Epilépticas.",
-    ],
+    "Lactante (4 a 8 meses) que hace episodios tipo \"susto/abrazo o flexión en navaja\" repetitivos al despertar.; Pérdida de los hitos del desarrollo (ya no sonríe, ya no se sienta).; Palabras mágicas en el EEG: Hipsarritmia.",
+    "Síndrome de West (Espasmos infantiles). Tratamiento de primera línea: ACTH (Corticotropina) o Corticoides. Si le das anticonvulsivos normales, el niño perderá el intelecto irreversiblemente.",
+    "Neurología Pediátrica / Encefalopatías Epilépticas."
+],
   },
   {
     id: "ucc-conv-2026-08-23-18",
@@ -304,10 +304,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con Malaria Severa o Complicada por Plasmodium falciparum (la especie más letal, deducida por la alta parasitemia >5%, ictericia, falla renal, hipoglucemia profunda y el neuro-paludismo/coma). El P. falciparum modifica la superficie de los glóbulos rojos haciéndolos \"pegajosos\" (rosetas o aglutinación), lo que tapona las microarterias del cerebro, riñón y pulmón, causando infartos isquémicos mortales. Las guías de la Organización Mundial de la Salud (OMS) abandonaron la Quinina IV por su alta toxicidad y menor eficacia, estableciendo como TRATAMIENTO DE ORO Y PRIMERA LÍNEA indiscutible el ARTESUNATO INTRAVENOSO. Es el antiparasitario más potente, que elimina y \"limpia\" la biomasa de parásitos en sangre a una velocidad abrumadora, reduciendo significativamente la mortalidad frente a la quinina. (Nota: en la malaria grave, JAMÁS se da tratamiento exclusivamente oral como primera opción).",
     keyPoints: [
-      "Paciente que regresa de zona endémica (África, Amazonía, Chocó-Colombia) con fiebre alta y escalofríos.; Signos de Malaria Severa: Coma (Neuropaludismo), Falla renal, Ictericia franca, Dificultad respiratoria, Hipoglucemia o Parasitemia > 5%.",
-      "Plasmodium falciparum. Emergencia infectológica. El fármaco intravenoso que \"barre\" el parásito de la sangre salvando la vida es el Artesunato IV.",
-      "Enfermedades Tropicales / Malaria Grave.",
-    ],
+    "Paciente que regresa de zona endémica (África, Amazonía, Chocó-Colombia) con fiebre alta y escalofríos.; Signos de Malaria Severa: Coma (Neuropaludismo), Falla renal, Ictericia franca, Dificultad respiratoria, Hipoglucemia o Parasitemia > 5%.",
+    "Plasmodium falciparum. Emergencia infectológica. El fármaco intravenoso que \"barre\" el parásito de la sangre salvando la vida es el Artesunato IV.",
+    "Enfermedades Tropicales / Malaria Grave."
+],
   },
   {
     id: "ucc-conv-2026-08-23-19",
@@ -342,10 +342,10 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con un Estado Hiperosmolar Hiperglucémico (HHS o EHH), la complicación metabólica más letal de la Diabetes Mellitus Tipo 2, típica en ancianos frágiles que no pueden acceder libremente al agua. A diferencia de la Cetoacidosis Diabética (CAD), el paciente tipo 2 produce un \"chorrito\" residual de insulina endógena; esta insulina mínima basta para frenar la quema de grasas (lipólisis), por lo que no se producen cetonas ni acidosis letal. Sin embargo, la insulina no alcanza para meter la glucosa a las células. El azúcar se acumula en la sangre a niveles astronómicos (>600 a 1000 mg/dL). Esta sangre hecha \"almíbar\" arrastra osmóticamente el agua desde las células y el cuerpo orina litros incontrolables de agua (diuresis osmótica). El déficit de líquidos en un HHS es masivo y aterrador: ¡un paciente puede tener un déficit de agua libre de 8 a 12 LITROS al momento de llegar a urgencias! El paso número UNO, que salva la vida y precede a cualquier ampolla de insulina, es rellenar los tanques colapsados del abuelo con Solución Salina Normal (0.9%) a chorro (1 a 2 Litros en las primeras horas). Si le pones insulina antes que el agua, empeorarás la hipovolemia.",
     keyPoints: [
-      "Anciano DM2 con alteración mental severa, letargia o coma.; Glucosa GIGANTE (> 600 - 1000) + Deshidratación extrema.; Diferencial clave: SIN acidosis metabólica severa y SIN cetonas en orina (No es CAD).",
-      "Estado Hiperosmolar Hiperglucémico. Conducta estelar salva-vidas: Líquidos, líquidos, líquidos (Solución Salina 0.9%) PRIMERO. El déficit de volumen mata al paciente antes que el azúcar alto.",
-      "Urgencias Metabólicas Endocrinas / EHH.",
-    ],
+    "Anciano DM2 con alteración mental severa, letargia o coma.; Glucosa GIGANTE (> 600 - 1000) + Deshidratación extrema.; Diferencial clave: SIN acidosis metabólica severa y SIN cetonas en orina (No es CAD).",
+    "Estado Hiperosmolar Hiperglucémico. Conducta estelar salva-vidas: Líquidos, líquidos, líquidos (Solución Salina 0.9%) PRIMERO. El déficit de volumen mata al paciente antes que el azúcar alto.",
+    "Urgencias Metabólicas Endocrinas / EHH."
+],
   },
   {
     id: "ucc-conv-2026-08-23-20",
@@ -380,9 +380,9 @@ export const UCC_CONV_2026_08_23_11_20_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente presenta Transposición de las Grandes Arterias (TGA), la causa más común de cianosis grave en el recién nacido inmediato. El fallo embriológico de rotación del conotronco genera dos circuitos paralelos cerrados: el ventrículo derecho bombea la sangre azul oscura desoxigenada directo de vuelta al cuerpo por la Aorta que nació del lugar equivocado; el ventrículo izquierdo recibe sangre roja del pulmón y la bombea en círculos inútiles de vuelta al pulmón por una Arteria Pulmonar desplazada. El bebé sobrevive en las primeras horas solo porque el Ductus Arterioso y el Foramen Oval (comunicaciones fetales) siguen abiertos, permitiendo que la sangre roja y la azul se mezclen. La radiografía en \"huevo en un cordón\" es el signo rey de los boards para la TGA (el pedículo superior es angosto porque la aorta está por delante de la pulmonar tapándola en sombra). Cuando estas ventanas de escape se cierran en el 2do día, el bebé entra en isquemia extrema y la prueba del oxígeno falla porque el O2 nunca llega a la Aorta. El manejo de rescate OBLIGATORIO incluye: 1) Prostaglandina E1 intravenosa a chorro para reabrir el ductus arterioso salvavidas y lograr mezcla. 2) Llevar al neonato de urgencia a cateterismo para realizar una Septostomía Atrial con Globo de Rashkind: se pasa un globo desinflado a través del foramen oval, se infla en la aurícula izquierda y se jala bruscamente hacia la derecha, rompiendo o \"rasgando\" el tabique interauricular (creando una Comunicación Interauricular - CIA masiva y fija). Este boquete en las aurículas garantiza que las sangres se sigan mezclando a raudales, comprando un valiosísimo tiempo de vida (días) hasta que el cirujano cardiovascular corte y cambie las grandes arterias a su posición anatómica real (Cirugía de Switch Arterial de Jatene).",
     keyPoints: [
-      "Neonato que debuta cianótico severo en sus primeras 24-48 horas de vida.; El oxígeno 100% NO LE SUBE LA SATURACIÓN (Prueba de Hiperoxia fallida = problema de circuito cardíaco, no pulmón).; Rx tórax con el \"Huevo en una cuerda\".",
-      "Transposición de Grandes Arterias (TGA). Supervivencia: Mantener abierta la tubería fetal con Prostaglandinas (PGE1) y rajar el tabique interauricular de urgencia (Procedimiento de Rashkind).",
-      "Urgencias Cardiológicas Pediátricas / Cardiopatías Congénitas Cianógenas.",
-    ],
+    "Neonato que debuta cianótico severo en sus primeras 24-48 horas de vida.; El oxígeno 100% NO LE SUBE LA SATURACIÓN (Prueba de Hiperoxia fallida = problema de circuito cardíaco, no pulmón).; Rx tórax con el \"Huevo en una cuerda\".",
+    "Transposición de Grandes Arterias (TGA). Supervivencia: Mantener abierta la tubería fetal con Prostaglandinas (PGE1) y rajar el tabique interauricular de urgencia (Procedimiento de Rashkind).",
+    "Urgencias Cardiológicas Pediátricas / Cardiopatías Congénitas Cianógenas."
+],
   }
 ];

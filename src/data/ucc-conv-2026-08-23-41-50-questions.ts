@@ -38,10 +38,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "La paciente cursa con una Falla Hepática Fulminante por Enfermedad de Wilson. Aunque la enfermedad de Wilson (acumulación de cobre) suele ser crónica, en algunos jóvenes debuta de forma explosiva y letal. La fisiopatología de este debut es asombrosa: el hígado enfermo se necrosa de golpe, liberando al torrente sanguíneo cantidades masivas de cobre libre tóxico. Este cobre en la sangre destruye la membrana de los glóbulos rojos, causando una Anemia Hemolítica intravascular severa con Coombs negativo. El perfil de laboratorio es el \"santo grial\" de esta enfermedad: Bilirrubina por los cielos (>20 mg/dL por el fallo hepático más la hemólisis) contrastando con una Fosfatasa Alcalina en el piso (< 40 U/L). ¿Por qué la Fosfatasa Alcalina está baja? Porque la enzima fosfatasa alcalina necesita zinc para funcionar, y el exceso de cobre libre en la sangre desplaza al zinc, paralizando la enzima. Si el índice Fosfatasa Alcalina / Bilirrubina Total es < 4, el diagnóstico de Wilson fulminante tiene una especificidad cercana al 100%. A diferencia del Wilson crónico, donde se usan quelantes (Penicilamina), en la falla fulminante la mortalidad es casi del 100% sin un hígado nuevo. El tratamiento es el Trasplante Hepático de urgencia absoluta; la plasmaféresis se usa solo para \"lavar\" el cobre de la sangre y que la paciente no muera mientras espera el órgano.",
     keyPoints: [
-      "Paciente joven con Falla Hepática Aguda (Encefalopatía + Ictericia).; Anemia Hemolítica (Coombs negativo) concomitante.; Perfil de oro: Bilirrubina MUY ALTA y Fosfatasa Alcalina MUY BAJA.",
-      "Enfermedad de Wilson fulminante. El exceso de cobre lisa los eritrocitos y apaga la fosfatasa alcalina. Conducta obligatoria: Trasplante Hepático Urgente. (Los quelantes orales son muy lentos para esta crisis).",
-      "Hepatología / Enfermedad de Wilson.",
-    ],
+    "Paciente joven con Falla Hepática Aguda (Encefalopatía + Ictericia).; Anemia Hemolítica (Coombs negativo) concomitante.; Perfil de oro: Bilirrubina MUY ALTA y Fosfatasa Alcalina MUY BAJA.",
+    "Enfermedad de Wilson fulminante. El exceso de cobre lisa los eritrocitos y apaga la fosfatasa alcalina. Conducta obligatoria: Trasplante Hepático Urgente. (Los quelantes orales son muy lentos para esta crisis).",
+    "Hepatología / Enfermedad de Wilson."
+],
   },
   {
     id: "ucc-conv-2026-08-23-42",
@@ -76,10 +76,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Fiebre Maculosa de las Montañas Rocosas (FMMR), causada por la bacteria intracelular obligada Rickettsia rickettsii, transmitida por la picadura de garrapatas. La clínica es un clásico de los boards: fiebre súbita y un rash que, de manera muy inusual, empieza en palmas, plantas, muñecas y tobillos, y luego avanza hacia el centro del cuerpo (centrípeto), volviéndose petequial. Esta enfermedad tiene una mortalidad altísima por vasculitis difusa y choque si no se trata a tiempo. El \"truco\" de esta pregunta es puramente farmacológico y legal: La regla general en pediatría dice que la Doxiciclina (una tetraciclina) está CONTRAINDICADA en niños menores de 8 años porque se une al calcio y tiñe los dientes de amarillo/marrón de forma permanente e inhibe el crecimiento óseo. ¡SIN EMBARGO!, las guías de los CDC, la AAP y la OMS establecen una EXCEPCIÓN ABSOLUTA a esta regla: Para cualquier sospecha de FMMR (o infecciones graves por Rickettsias), la Doxiciclina es el fármaco de primera línea innegociable SIN IMPORTAR LA EDAD DEL NIÑO. Es el único antibiótico que penetra eficazmente y evita la muerte. El beneficio de salvar la vida supera inmensamente el riesgo cosmético dental (que de hecho, en cursos cortos de 7 días, se ha demostrado que rara vez mancha los dientes).",
     keyPoints: [
-      "Niño con antecedente de acampar o jugar en bosques (garrapatas).; Rash que empieza en PALMAS y PLANTAS, luego va al tronco + Fiebre y cefalea.",
-      "Fiebre Maculosa de las Montañas Rocosas (Rickettsia rickettsii). Excepción Pediátrica de Oro: Doxiciclina INMEDIATA para todas las edades. Jamás uses otros antibióticos por miedo a manchar los dientes.",
-      "Infectología Pediátrica / Zoonosis.",
-    ],
+    "Niño con antecedente de acampar o jugar en bosques (garrapatas).; Rash que empieza en PALMAS y PLANTAS, luego va al tronco + Fiebre y cefalea.",
+    "Fiebre Maculosa de las Montañas Rocosas (Rickettsia rickettsii). Excepción Pediátrica de Oro: Doxiciclina INMEDIATA para todas las edades. Jamás uses otros antibióticos por miedo a manchar los dientes.",
+    "Infectología Pediátrica / Zoonosis."
+],
   },
   {
     id: "ucc-conv-2026-08-23-43",
@@ -114,10 +114,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Crioglobulinemia Mixta (Tipo II o III), una vasculitis de vasos pequeños impulsada abrumadoramente (hasta en un 80-90% de los casos) por la infección crónica del Virus de la Hepatitis C (VHC). La fisiopatología es una elegante cadena de desastres inmunológicos: la infección crónica vuelve locos a los linfocitos B, los cuales producen anticuerpos IgM. Estos anticuerpos IgM tienen actividad de Factor Reumatoide (FR), lo que significa que atacan a la propia IgG del paciente. Estos complejos inmunes (IgM-IgG) tienen la extraña propiedad de precipitar (coagularse) cuando la temperatura de la sangre baja (por eso se llaman Crio-globulinas) y se disuelven al calentarse. Al precipitar en la piel fría de las piernas, causan la púrpura palpable; al atascarse en los glomérulos renales, causan la falla renal (glomerulonefritis membranoproliferativa). El sello bioquímico irrefutable de la crioglobulinemia mixta en los exámenes es el consumo masivo del complemento por la vía clásica, lo que destruye el C4, dejando típicamente el C4 MUY BAJO o en cero, con un C3 normal, acompañado de un Factor Reumatoide altísimo en un paciente que no tiene artritis reumatoide.",
     keyPoints: [
-      "Paciente con antecedente de Hepatitis C crónica.; Tríada de Meltzer (o similar): Púrpura palpable + Artralgias + Debilidad (Añadiendo Falla Renal o Neuropatía).; Laboratorio infalible: C4 muy bajo + C3 normal + Factor Reumatoide Positivo.",
-      "Vasculitis por Crioglobulinemia Mixta. Las inmunoglobulinas precipitan con el frío. Tratamiento: Inmunosupresores (Rituximab) para la urgencia vascular y tratamiento antiviral curativo contra el VHC para erradicar la causa raíz.",
-      "Vasculitis de Pequeños Vasos / Complicaciones Hepatitis C.",
-    ],
+    "Paciente con antecedente de Hepatitis C crónica.; Tríada de Meltzer (o similar): Púrpura palpable + Artralgias + Debilidad (Añadiendo Falla Renal o Neuropatía).; Laboratorio infalible: C4 muy bajo + C3 normal + Factor Reumatoide Positivo.",
+    "Vasculitis por Crioglobulinemia Mixta. Las inmunoglobulinas precipitan con el frío. Tratamiento: Inmunosupresores (Rituximab) para la urgencia vascular y tratamiento antiviral curativo contra el VHC para erradicar la causa raíz.",
+    "Vasculitis de Pequeños Vasos / Complicaciones Hepatitis C."
+],
   },
   {
     id: "ucc-conv-2026-08-23-44",
@@ -152,10 +152,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "La paciente cursa con una severa Intoxicación por Antidepresivos Tricíclicos (ATC, como la Amitriptilina). Esta sobredosis se caracteriza por tres graves frentes de ataque: 1) Efecto anticolinérgico central y periférico (piel seca, roja, pupila dilatada, coma, retención urinaria). 2) Convulsiones (por bloqueo GABA y receptores de histamina). 3) Toxicidad cardiovascular letal: los ATC son potentes bloqueadores de los canales rápidos de Sodio en el corazón (actúan como un antiarrítmico de clase Ia tóxico). Esto enlentece la conducción ventricular, manifestándose en el ECG como un QRS muy ancho (> 100 ms) y una onda R terminal grande en aVR. Un QRS > 100 ms predice convulsiones, y un QRS > 160 ms predice arritmias ventriculares inminentes (Taquicardia Ventricular / Paro). La regla absolutista en toxicología dicta que la terapia salvavidas inmediata es la infusión de Bicarbonato de Sodio IV en bolos. El Bicarbonato actúa por dos vías simultáneas: aporta una carga brutal de Sodio que compite y \"empuja\" al veneno fuera de los canales bloqueados, y alcaliniza la sangre (pH meta de 7.45 - 7.55) lo que disminuye la fracción activa y tóxica del antidepresivo.",
     keyPoints: [
-      "Sobredosis de fármacos psiquiátricos en joven (Amitriptilina, Imipramina).; Toxíndrome Anticolinérgico: \"Loca como un sombrerero, ciega como un murciélago, roja como un betabel, seca como un hueso, caliente como una liebre\".; ECG Pivote: QRS ANCHO.",
-      "Intoxicación por Antidepresivos Tricíclicos. Antídoto obligado para el corazón (si el QRS es ancho o hay hipotensión): Bicarbonato de Sodio intravenoso. (Si tiene convulsiones, usar Benzodiacepinas, JAMÁS Fenitoína).",
-      "Toxicología de Urgencias / Antidepresivos Tricíclicos.",
-    ],
+    "Sobredosis de fármacos psiquiátricos en joven (Amitriptilina, Imipramina).; Toxíndrome Anticolinérgico: \"Loca como un sombrerero, ciega como un murciélago, roja como un betabel, seca como un hueso, caliente como una liebre\".; ECG Pivote: QRS ANCHO.",
+    "Intoxicación por Antidepresivos Tricíclicos. Antídoto obligado para el corazón (si el QRS es ancho o hay hipotensión): Bicarbonato de Sodio intravenoso. (Si tiene convulsiones, usar Benzodiacepinas, JAMÁS Fenitoína).",
+    "Toxicología de Urgencias / Antidepresivos Tricíclicos."
+],
   },
   {
     id: "ucc-conv-2026-08-23-45",
@@ -190,10 +190,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Estenosis Aórtica Severa. La clásica tríada clínica de síntomas de mal pronóstico es: Angina, Síncope (ambos desencadenados por el esfuerzo) y Falla Cardíaca (Disnea). El examen físico describe impecablemente el soplo sistólico que irradia al cuello y el pulso carotídeo débil y tardío (parvus et tardus), que indica que la sangre apenas logra salir por un orificio valvular casi calcificado por completo. Fisiopatológicamente, en la estenosis aórtica severa, el ventrículo izquierdo se vuelve hipertrófico y extremadamente rígido. Para lograr empujar la sangre contra una válvula estrecha como el agujero de una aguja, el ventrículo depende absolutamente de una PRECARGA altísima (necesita estar repleto de volumen de sangre venosa para generar la presión suficiente para abrir la válvula a la fuerza). Los nitratos (Nitroglicerina) son venodilatadores potentes: relajan las venas y estancan la sangre en las piernas. Al administrar la pastilla, el retorno venoso al corazón (precarga) cae drásticamente. El ventrículo rígido se quedó \"vacío\" de repente y no logró generar la fuerza para empujar sangre a través de la estenosis aórtica. El Gasto Cardíaco cayó a cero instantáneamente, causando el colapso y el choque profundo yatrogénico (Tratamiento de rescate: levantar las piernas y pasar bolos de líquido intravenoso rápido).",
     keyPoints: [
-      "Anciano con Síncope de esfuerzo + Angina.; Auscultación: Soplo sistólico en foco aórtico irradiado a cuello (carótidas) + Pulso parvus et tardus.",
-      "Estenosis Aórtica Severa. REGLA FARMACOLÓGICA DE ORO: En estos pacientes están contraindicados los medicamentos que bajan abruptamente la PRECARGA (Nitratos, Diuréticos excesivos) y la POSTCARGA (IECAs/Vasodilatadores fuertes), porque precipitan colapso cardiovascular. Dependen del volumen para vivir.",
-      "Valvulopatías / Cardiología.",
-    ],
+    "Anciano con Síncope de esfuerzo + Angina.; Auscultación: Soplo sistólico en foco aórtico irradiado a cuello (carótidas) + Pulso parvus et tardus.",
+    "Estenosis Aórtica Severa. REGLA FARMACOLÓGICA DE ORO: En estos pacientes están contraindicados los medicamentos que bajan abruptamente la PRECARGA (Nitratos, Diuréticos excesivos) y la POSTCARGA (IECAs/Vasodilatadores fuertes), porque precipitan colapso cardiovascular. Dependen del volumen para vivir.",
+    "Valvulopatías / Cardiología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-46",
@@ -228,10 +228,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con un Absceso Retrofaríngeo, una infección profunda y letal de los espacios fasciales del cuello típica en niños entre 2 y 5 años de edad. Es una complicación supurativa bacteriana (usualmente por flora mixta como Streptococcus pyogenes y anaerobios) secundaria a una infección de las vías respiratorias superiores (como amigdalitis), en la cual los ganglios linfáticos retrofaríngeos supuran y forman una cavidad purulenta por detrás de la faringe y el esófago, empujando la pared hacia adelante. La clínica de oro que lo distingue de otras infecciones agudas como la epiglotitis es el dolor cervical extremo: el paciente presenta torticólis marcada y rigidez o negativa absoluta a EXTENDER el cuello (porque extender el cuello tensa la fascia prevertebral aplastando el absceso, causando un dolor atroz), junto a la voz de \"papa caliente\". A diferencia de la epiglotitis donde la TAC está contraindicada por inestabilidad aguda total, en el absceso retrofaríngeo con vía aérea semi-estable, el abordaje Gold Standard es la Tomografía Computarizada (TC) de cuello con contraste. La TC delimita con precisión nanométrica el tamaño de la cápsula del absceso de pus, verifica si se ha diseminado hacia el espacio \"peligroso\" (peligro de fascitis necrotizante torácica o mediastinitis) y guía el bisturí del cirujano otorrinolaringólogo para el drenaje transoral o transcervical, complementado con altas dosis de Ampicilina/Sulbactam o Clindamicina IV.",
     keyPoints: [
-      "Niño preescolar (2 a 5 años) con fiebre alta y \"voz de papa caliente\" o baboseo.; Dato Pivote: Rigidez de cuello, tortícolis, o el niño SE NIEGA A EXTENDER EL CUELLO (porque estira el absceso). Abombamiento faríngeo posterior.",
-      "Absceso Retrofaríngeo. Manejo inicial de ORO: TAC de cuello con contraste.\n(Diferencia: El paciente con epiglotitis adopta la posición contraria, de trípode, con el cuello voluntariamente extendido hacia adelante para abrir la vía aérea, y nunca debe ser metido a un escáner).",
-      "Infecciones Profundas del Cuello / Otorrinolaringología Pediátrica.",
-    ],
+    "Niño preescolar (2 a 5 años) con fiebre alta y \"voz de papa caliente\" o baboseo.; Dato Pivote: Rigidez de cuello, tortícolis, o el niño SE NIEGA A EXTENDER EL CUELLO (porque estira el absceso). Abombamiento faríngeo posterior.",
+    "Absceso Retrofaríngeo. Manejo inicial de ORO: TAC de cuello con contraste.\n(Diferencia: El paciente con epiglotitis adopta la posición contraria, de trípode, con el cuello voluntariamente extendido hacia adelante para abrir la vía aérea, y nunca debe ser metido a un escáner).",
+    "Infecciones Profundas del Cuello / Otorrinolaringología Pediátrica."
+],
   },
   {
     id: "ucc-conv-2026-08-23-47",
@@ -266,10 +266,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "La paciente cursa con Nefritis Intersticial Aguda (NIA), una de las causas reversibles pero más \"invisibles\" de la falla renal aguda intrahospitalaria o ambulatoria. Es una clásica reacción de hipersensibilidad retardada tipo IV (celular) donde los linfocitos T y los eosinófilos atacan masivamente el intersticio que rodea los túbulos renales, inducidos típicamente por medicamentos. El clásico cuadro (\"Tríada de la NIA\", presente en el 10% de los pacientes pero altamente evaluada en los exámenes) es: Fiebre de bajo grado + Exantema maculopapular (rash alérgico) + Falla renal aguda con Eosinofiluria en la orina. Tradicionalmente se asociaba a las Penicilinas y Cefalosporinas, pero en la epidemiología moderna, los principales culpables silenciosos en adultos son los AINEs (Ibuprofeno) y los Inhibidores de Bomba de Protones - IBP (Omeprazol/Pantoprazol). El paso terapéutico primario, curativo e indispensable que detiene y revierte la inflamación túbulo-intersticial en más del 80% de los casos es la identificación y SUSPENSIÓN ABSOLUTA inmediata de todos los fármacos nefro-alergénicos sospechosos. Si tras la suspensión y reanimación hídrica no hay mejoría en 3 a 5 días, o el deterioro es dramático, el segundo paso es el uso de Corticosteroides sistémicos orales (Prednisona).",
     keyPoints: [
-      "Paciente tomando fármacos comunes recientes (AINEs, Omeprazol, Penicilinas, Diuréticos).; Clínica súbita de Fiebre + Erupción cutánea alérgica.; Laboratorio: Falla renal aguda + Eosinófilos en orina (Eosinofiluria).",
-      "Nefritis Intersticial Aguda (NIA). Fisiopatología: Hipersensibilidad en el intersticio renal. Tratamiento: Quitar las drogas ofensoras INMEDIATAMENTE. (Corticoides de rescate si no mejora o biopsia si hay duda).",
-      "Lesión Renal Aguda Pediátrica y de Adultos / Nefrología.",
-    ],
+    "Paciente tomando fármacos comunes recientes (AINEs, Omeprazol, Penicilinas, Diuréticos).; Clínica súbita de Fiebre + Erupción cutánea alérgica.; Laboratorio: Falla renal aguda + Eosinófilos en orina (Eosinofiluria).",
+    "Nefritis Intersticial Aguda (NIA). Fisiopatología: Hipersensibilidad en el intersticio renal. Tratamiento: Quitar las drogas ofensoras INMEDIATAMENTE. (Corticoides de rescate si no mejora o biopsia si hay duda).",
+    "Lesión Renal Aguda Pediátrica y de Adultos / Nefrología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-48",
@@ -304,10 +304,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente presenta el Síndrome de Neoplasia Endocrina Múltiple Tipo 1 (MEN 1 o Síndrome de Wermer), causado por una mutación en el gen supresor de tumores MEN1 (menin). El MEN 1 se define por la regla de oro nemotécnica de las \"3 P\" (tumores en órganos que empiezan con P en inglés/latín): Pituitaria (Hipófisis), Paratiroides y Páncreas (tumores neuroendocrinos pancreáticos). En esta brillante viñeta, el paciente tiene un cuadro florido de las primeras dos \"P\":\n\nPáncreas/Duodeno: Las múltiples úlceras refractarias y en ubicaciones atípicas (yeyuno) con diarrea masiva definen el Síndrome de Zollinger-Ellison (ZES), causado por un tumor neuroendocrino (Gastrinoma) secretor de Gastrina (que baña al intestino en un ácido mortal).\n\nParatiroides: La hipercalcemia y los cálculos renales con PTH altísima definen el Hiperparatiroidismo Primario hiperplásico (usualmente la primera manifestación en aparecer en el MEN1).\n\nEl tumor del padre en el cerebro que dañó su vista fue seguramente un Macroadenoma Hipofisiario (comprimiendo el quiasma óptico).\nPara completar el diagnóstico sistémico y profilaxis en este paciente, la tercera \"P\" faltante a tamizar de urgencia es la glándula Pituitaria/Hipófisis anterior, buscando frecuentemente un Prolactinoma (midiendo niveles de Prolactina y resonancia selar).",
     keyPoints: [
-      "Paciente joven/adulto con Úlceras múltiples y extrañas o diarrea brutal (Gastrinoma - ZES).; Y además le encuentran Calcio alto y piedras en riñón (Hiperparatiroidismo).",
-      "Síndrome MEN 1 (Mutación del gen Menin). Las 3 P: Paratiroides (100%), Páncreas (ZES/Insulinomas), Pituitaria (Prolactinomas). (El feocromocitoma no pertenece a este síndrome, pertenece al MEN 2).",
-      "Endocrinología Genética / Síndromes MEN.",
-    ],
+    "Paciente joven/adulto con Úlceras múltiples y extrañas o diarrea brutal (Gastrinoma - ZES).; Y además le encuentran Calcio alto y piedras en riñón (Hiperparatiroidismo).",
+    "Síndrome MEN 1 (Mutación del gen Menin). Las 3 P: Paratiroides (100%), Páncreas (ZES/Insulinomas), Pituitaria (Prolactinomas). (El feocromocitoma no pertenece a este síndrome, pertenece al MEN 2).",
+    "Endocrinología Genética / Síndromes MEN."
+],
   },
   {
     id: "ucc-conv-2026-08-23-49",
@@ -342,10 +342,10 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Ictericia por Leche Materna (Breast Milk Jaundice), un diagnóstico clínico de exclusión absolutamente benigno y tardío. La clave está en el niño sano y feliz: la bilirrubina está elevada, pero es a expensas de la Bilirrubina INDIRECTA (no conjugada), y el niño evacúa heces doradas y orina clara, con buen peso. Fisiopatológicamente, la leche materna contiene de forma natural enzimas (como beta-glucuronidasas y pregnandiol) que rompen la conjugación de la bilirrubina ya excretada en el intestino del bebé, obligándolo a reabsorberla y mandarla de vuelta a la sangre (aumenta la circulación enterohepática). Típicamente debuta en la segunda o tercera semana de vida y puede durar hasta dos o tres meses. La pauta de oro de las sociedades pediátricas modernas exige que el tratamiento de elección sea Tranquilizar a los padres (Reassurance) y mantener la lactancia materna exclusiva a demanda. JAMÁS se debe interrumpir la lactancia, a menos que la bilirrubina indirecta ascienda a niveles catastróficos de riesgo neurológico (ej. > 20-25 mg/dL), donde se indicaría fototerapia sin suspender la lactancia si es posible.",
     keyPoints: [
-      "Neonato > 2 semanas (tardío). GANA BUEN PESO (gordo y feliz).; Ictericia Indirecta alta + Deposiciones NORMALES (Mostaza).",
-      "Ictericia por Leche Materna (Breast Milk Jaundice). Causa: Enzimas en la leche aumentan reabsorción intestinal. NO SUSPENDER LA LECHE, continuar lactancia exclusiva, pronóstico excelente.\n(Contraste: La ictericia por falta de leche/Breastfeeding Jaundice ocurre en la 1ra semana, el niño pierde peso groseramente, está deshidratado y hace pocas heces).",
-      "Neonatología / Ictericias Benignas.",
-    ],
+    "Neonato > 2 semanas (tardío). GANA BUEN PESO (gordo y feliz).; Ictericia Indirecta alta + Deposiciones NORMALES (Mostaza).",
+    "Ictericia por Leche Materna (Breast Milk Jaundice). Causa: Enzimas en la leche aumentan reabsorción intestinal. NO SUSPENDER LA LECHE, continuar lactancia exclusiva, pronóstico excelente.\n(Contraste: La ictericia por falta de leche/Breastfeeding Jaundice ocurre en la 1ra semana, el niño pierde peso groseramente, está deshidratado y hace pocas heces).",
+    "Neonatología / Ictericias Benignas."
+],
   },
   {
     id: "ucc-conv-2026-08-23-50",
@@ -380,9 +380,9 @@ export const UCC_CONV_2026_08_23_41_50_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con Carditis de Lyme, una de las manifestaciones más letales y clásicas de la fase de diseminación temprana de la Enfermedad de Lyme (transmitida por la picadura de la garrapata Ixodes scapularis que esconde la espiroqueta Borrelia burgdorferi). La historia clínica está servida en bandeja de oro: el rash en forma de \"diana\" (Eritema Migrans) es la fase primaria, presente semanas antes del colapso del órgano interno. La bacteria entra a la circulación, llega al corazón, e invade masivamente el tejido del nodo auriculoventricular. Esta inflamación aguda bloquea eléctricamente los cables de conducción, produciendo bloqueos cardíacos de rápida progresión (frecuentemente culminando en Bloqueo AV Completo o de 3er grado e induciendo síncope en jóvenes sin aterosclerosis). Mientras que la enfermedad de Lyme temprana de piel sola se cura fácil con Doxiciclina oral, la afectación cardíaca o neurológica grave (Carditis severa o Meningitis) exige hospitalización y tratamiento con antibióticos intravenosos de alta potencia para salvar los nervios y las fibras cardíacas: la Ceftriaxona Intravenosa o Penicilina G en dosis plenas por 14 a 21 días es el régimen profiláctico y curativo innegociable mundial. Con el tratamiento adecuado, el nodo AV se desinflama y el bloqueo cardíaco suele resolver espontáneamente en días, permitiendo retirar el marcapasos temporal.",
     keyPoints: [
-      "Paciente joven, excursionista (bosques, riesgo de garrapatas) con síncope o bradicardia misteriosa profunda.; Sello clínico del mes anterior: Eritema migrans (Mancha en tiro al blanco).; ECG: Bloqueos AV de alto grado (2do o 3er grado) en corazón estructural sano.",
-      "Carditis de Lyme (Borrelia burgdorferi). Requiere estabilización eléctrica temporal (marcapasos) y Tratamiento de oro: Ceftriaxona IV (Doxiciclina solo si es bloqueo muy leve o en fase cutánea primaria pura).",
-      "Zoonosis Infecciosas / Lyme en Medicina Interna.",
-    ],
+    "Paciente joven, excursionista (bosques, riesgo de garrapatas) con síncope o bradicardia misteriosa profunda.; Sello clínico del mes anterior: Eritema migrans (Mancha en tiro al blanco).; ECG: Bloqueos AV de alto grado (2do o 3er grado) en corazón estructural sano.",
+    "Carditis de Lyme (Borrelia burgdorferi). Requiere estabilización eléctrica temporal (marcapasos) y Tratamiento de oro: Ceftriaxona IV (Doxiciclina solo si es bloqueo muy leve o en fase cutánea primaria pura).",
+    "Zoonosis Infecciosas / Lyme en Medicina Interna."
+],
   }
 ];

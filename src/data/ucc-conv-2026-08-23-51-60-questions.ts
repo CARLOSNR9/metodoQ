@@ -38,10 +38,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Equinococosis Quística (Quiste Hidatídico), una zoonosis transmitida típicamente por el ciclo perro-oveja. El humano se infecta al ingerir huevos del parásito Echinococcus granulosus. La larva se asienta principalmente en el hígado, formando un quiste complejo con calcificaciones y quistes hijos. El líquido dentro de este quiste es altamente antigénico. La REGLA DE ORO PROHIBITIVA en infectología y cirugía dicta que jamás se debe puncionar a ciegas un quiste hepático si hay sospecha epidemiológica y ecográfica de hidatidosis. Si la aguja rompe la capa germinal y el líquido a alta presión se derrama en la cavidad abdominal, el paciente sufrirá un Choque Anafiláctico fulminante y, si sobrevive, una siembra peritoneal masiva (hidatidosis secundaria). El manejo requiere confirmación serológica, albendazol preoperatorio y cirugía controlada (o técnica PAIR bajo estricto control esterilizante con agentes escolicidas como solución salina hipertónica).",
     keyPoints: [
-      "Paciente ganadero (contacto con perros/ovejas).; Quiste hepático complejo (con calcificaciones o \"quistes hijos\").",
-      "Quiste Hidatídico. Peligro máximo: Ruptura o punción accidental = Choque Anafiláctico. No lo pinches en urgencias. Inicia Albendazol.",
-      "Infectología Tropical / Zoonosis Parasitarias.",
-    ],
+    "Paciente ganadero (contacto con perros/ovejas).; Quiste hepático complejo (con calcificaciones o \"quistes hijos\").",
+    "Quiste Hidatídico. Peligro máximo: Ruptura o punción accidental = Choque Anafiláctico. No lo pinches en urgencias. Inicia Albendazol.",
+    "Infectología Tropical / Zoonosis Parasitarias."
+],
   },
   {
     id: "ucc-conv-2026-08-23-52",
@@ -76,10 +76,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "La paciente cursa con el inconfundible Síndrome de Rett. Es un trastorno del neurodesarrollo ligado al cromosoma X dominante, causado por mutaciones en el gen MECP2. Al ser letal en varones (quienes no tienen una copia sana de rescate), afecta casi exclusivamente a niñas. La curva clínica de la enfermedad es el secreto para los exámenes: Desarrollo normal entre los 6 y 18 meses, seguido de una REGRESIÓN profunda (pérdida de las habilidades manuales y del lenguaje ya adquiridas). El signo físico patognomónico es el movimiento constante de \"lavado de manos\" (hand-wringing stereotypic movements). Además, desarrollan desaceleración del crecimiento craneal (microcefalia adquirida), convulsiones, apneas intermitentes e hiperventilación. No tiene cura y el manejo es sintomático y multidisciplinario.",
     keyPoints: [
-      "NIÑA de 1 a 2 años.; Regresión del desarrollo (perdió lo que había aprendido).; Signo de oro: Estereotipias manuales (\"Lavado de manos\").",
-      "Síndrome de Rett. Gen mutado: MECP2. No lo confundas con autismo clásico, el autismo primario no suele dar una regresión tan devastadora con pérdida motora de las manos ni desaceleración de la cabeza (microcefalia).",
-      "Genética / Neurología Pediátrica.",
-    ],
+    "NIÑA de 1 a 2 años.; Regresión del desarrollo (perdió lo que había aprendido).; Signo de oro: Estereotipias manuales (\"Lavado de manos\").",
+    "Síndrome de Rett. Gen mutado: MECP2. No lo confundas con autismo clásico, el autismo primario no suele dar una regresión tan devastadora con pérdida motora de las manos ni desaceleración de la cabeza (microcefalia).",
+    "Genética / Neurología Pediátrica."
+],
   },
   {
     id: "ucc-conv-2026-08-23-53",
@@ -114,10 +114,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Proteinosis Alveolar Pulmonar (PAP). Es una enfermedad respiratoria rarísima pero infaltable en los exámenes de subespecialidad. Normalmente, los macrófagos alveolares \"comen y limpian\" el surfactante viejo que se acumula en los alvéolos. Para que estos macrófagos funcionen, necesitan la señal de una hormona llamada GM-CSF. En la PAP idiopática/autoinmune (90% de los casos, muy asociada a tabaquismo), el paciente desarrolla autoanticuerpos que bloquean y destruyen el GM-CSF. Los macrófagos se paralizan y los alvéolos se llenan lentamente de surfactante viejo (lipoproteínas), ahogando al paciente. El sello absoluto de esta enfermedad es el Lavado Broncoalveolar que sale \"lechoso\" u opaco, y que al microscopio se tiñe de fucsia brillante con la tinción de PAS. El tratamiento es espectacular: se intuba al paciente con un tubo de doble luz bajo anestesia general y se realiza un Lavado Pulmonar Total, metiendo y sacando litros de solución salina tibia hasta \"lavar\" toda la proteína lechosa del pulmón, curando al paciente por años.",
     keyPoints: [
-      "Paciente joven/adulto fumador con disnea seca crónica.; Líquido de lavado broncoalveolar LECHOSO (Milky effluent).; Tinción PAS positiva de material acelular.",
-      "Proteinosis Alveolar Pulmonar. Fisiopatología: Anticuerpos anti-GM-CSF (el macrófago no limpia el surfactante). Tratamiento de oro: Lavado Pulmonar Total (WLL).",
-      "Neumopatías Raras / Neumología.",
-    ],
+    "Paciente joven/adulto fumador con disnea seca crónica.; Líquido de lavado broncoalveolar LECHOSO (Milky effluent).; Tinción PAS positiva de material acelular.",
+    "Proteinosis Alveolar Pulmonar. Fisiopatología: Anticuerpos anti-GM-CSF (el macrófago no limpia el surfactante). Tratamiento de oro: Lavado Pulmonar Total (WLL).",
+    "Neumopatías Raras / Neumología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-54",
@@ -152,10 +152,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Tirotoxicosis Inducida por Amiodarona (AIT), pero la clave absoluta es identificar cuál de los dos tipos padece, ya que sus tratamientos son diametralmente opuestos.\n\nAIT Tipo 1: El exceso de yodo de la pastilla le da \"gasolina\" a una glándula tiroides con un bocio preexistente y la hace FABRICAR hormonas sin control. El Doppler muestra vascularidad a tope (Infierno tiroideo). Se trata con Metimazol/PTU.\n\nAIT Tipo 2 (Nuestra paciente): Es una Tiroiditis Destructiva. La Amiodarona se vuelve tóxica, inflama y destruye físicamente las células tiroideas, haciendo que derramen a la sangre todas las hormonas que ya tenían almacenadas. El Doppler, como en la viñeta, muestra vascularización DISMINUIDA O AUSENTE (la glándula está muriendo, no fabricando). Al no estar fabricando hormonas nuevas, darle Metimazol (Opción A) es absolutamente inútil. El tratamiento OBLIGATORIO Y DE ORO para el Tipo 2 son los Corticosteroides (Glucocorticoides), que desinflaman la glándula y detienen la destrucción. (La Amiodarona a menudo se puede continuar si es vital para la arritmia cardíaca, ya que los esteroides apagarán la tiroiditis subyacente).",
     keyPoints: [
-      "Paciente tomando Amiodarona que hace Hipertiroidismo (Tirotoxicosis).; Eco Doppler de cuello con flujo SANGUÍNEO DISMINUIDO.",
-      "Tirotoxicosis inducida por Amiodarona Tipo 2 (Tiroiditis destructiva). Tratamiento: Glucocorticoides (Prednisona). (Prohibido dar antitiroideos).",
-      "Efectos Adversos Farmacológicos / Endocrinología.",
-    ],
+    "Paciente tomando Amiodarona que hace Hipertiroidismo (Tirotoxicosis).; Eco Doppler de cuello con flujo SANGUÍNEO DISMINUIDO.",
+    "Tirotoxicosis inducida por Amiodarona Tipo 2 (Tiroiditis destructiva). Tratamiento: Glucocorticoides (Prednisona). (Prohibido dar antitiroideos).",
+    "Efectos Adversos Farmacológicos / Endocrinología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-55",
@@ -190,10 +190,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Nefropatía Membranosa, la causa más común de Síndrome Nefrótico primario en adultos no diabéticos y no afrodescendientes. Esta patología deposita inmunocomplejos por debajo de los podocitos (subepiteliales), destruyendo la barrera de proteínas pero sin inflamar el glomérulo (por eso no hay falla renal aguda ni sangre en la orina). El problema histórico de la Nefropatía Membranosa era que hasta el 25% de las veces es Secundaria a un Cáncer oculto de órgano sólido (pulmón, colon, próstata). Antes, todo abuelo con esta enfermedad era sometido a colonoscopias y tomografías aterradoras buscando cáncer. El descubrimiento médico que revolucionó esta entidad fue hallar que el 70-80% de las Nefropatías Membranosas Primarias (que NO son por cáncer ni lupus) son causadas por un anticuerpo específico contra un receptor de los podocitos: el Anticuerpo anti-PLA2R (Receptor de Fosfolipasa A2). Si le sacas sangre al paciente y tiene anti-PLA2R positivo, puedes respirar aliviado: su riñón está enfermo por una autoinmunidad directa primaria, y la probabilidad de que tenga un cáncer sólido oculto detrás es casi nula.",
     keyPoints: [
-      "Adulto mayor caucásico con Síndrome Nefrótico masivo (edema, albúmina baja, colesterol alto). Sedimento limpio.; Sospecha de Nefropatía Membranosa.",
-      "Anticuerpo Anti-PLA2R. Es el marcador de oro de la Membranosa Primaria. Si es negativo, ¡toca buscar el Cáncer oculto, Lupus o Hepatitis B urgente!",
-      "Glomerulopatías / Síndrome Nefrótico en adultos.",
-    ],
+    "Adulto mayor caucásico con Síndrome Nefrótico masivo (edema, albúmina baja, colesterol alto). Sedimento limpio.; Sospecha de Nefropatía Membranosa.",
+    "Anticuerpo Anti-PLA2R. Es el marcador de oro de la Membranosa Primaria. Si es negativo, ¡toca buscar el Cáncer oculto, Lupus o Hepatitis B urgente!",
+    "Glomerulopatías / Síndrome Nefrótico en adultos."
+],
   },
   {
     id: "ucc-conv-2026-08-23-56",
@@ -228,10 +228,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con Leucoencefalopatía Multifocal Progresiva (LMP), una neuroinfección oportunista devastadora que ataca a pacientes con profunda inmunosupresión celular (VIH con CD4 < 50, o pacientes usando inmunosupresores biológicos como Natalizumab). Es causada por la reactivación del Poliomavirus JC. El virus JC ataca y destruye exclusivamente a los Oligodendrocitos (las células que fabrican la mielina en el cerebro). Esto produce una desmielinización progresiva e inexorable de la sustancia blanca, manifestada como déficits motores (hemiparesia), visuales y cognitivos que empeoran semana a semana, sin causar fiebre. La pista radiológica que separa a la LMP del resto de infecciones oportunistas es negativa: en la RMN, la sustancia blanca se ve inflamada (blanca en T2), pero como el virus NO produce inflamación agresiva con ruptura de la barrera hematoencefálica, las lesiones NUNCA \"brillan\" ni captan contraste (No realce en anillo) y NUNCA empujan o hinchan el cerebro (No hay efecto de masa ni edema vasogénico). El único \"tratamiento\" es revivir el sistema inmune iniciando TARV de forma urgente.",
     keyPoints: [
-      "Paciente con VIH severo (CD4 muy bajos) y déficits neurológicos focales progresivos sin fiebre.; RMN de Cerebro Pivote: Lesiones en la sustancia blanca asimétricas, SIN REALCE AL CONTRASTE y SIN EFECTO DE MASA.",
-      "Leucoencefalopatía Multifocal Progresiva (LMP). Agente viral: Virus JC. (Si tuviera realce en anillo y edema, pensarías en Toxoplasmosis o Linfoma).",
-      "Infecciones Oportunistas en VIH / Neurología.",
-    ],
+    "Paciente con VIH severo (CD4 muy bajos) y déficits neurológicos focales progresivos sin fiebre.; RMN de Cerebro Pivote: Lesiones en la sustancia blanca asimétricas, SIN REALCE AL CONTRASTE y SIN EFECTO DE MASA.",
+    "Leucoencefalopatía Multifocal Progresiva (LMP). Agente viral: Virus JC. (Si tuviera realce en anillo y edema, pensarías en Toxoplasmosis o Linfoma).",
+    "Infecciones Oportunistas en VIH / Neurología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-57",
@@ -266,10 +266,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente padeció de manera inadvertida la Enfermedad de Kawasaki, una vasculitis sistémica aguda de vasos medianos que ataca preferencialmente a las arterias coronarias. La historia clínica inicial era de libro: fiebre prolongada > 5 días, conjuntivitis bulbar seca, cambios orales (lengua de fresa/labios rotos) y descamación periungueal. El enorme drama de la Enfermedad de Kawasaki no es la fiebre, sino lo que hace en el corazón si no se trata en los primeros 10 días. Si el niño no recibe Inmunoglobulina G Intravenosa (IGIV) de inmediato, el 25% desarrollará destrucción e inflamación de las arterias coronarias, formando Aneurismas Coronarios Gigantes. Al dilatarse la arteria como un globo, la sangre se estanca adentro, se coagula, y el niño de 2 años sufre un Infarto Agudo de Miocardio fulminante o miocarditis isquémica (lo que explica hoy su falla cardíaca, galope y soplo de insuficiencia mitral por isquemia de músculos papilares).",
     keyPoints: [
-      "Niño < 5 años. Fiebre > 5 días. Ojos rojos limpios, boca roja/partida, ganglio cervical y piel descamada.; Meses después: Regresa con Falla cardíaca, Muerte Súbita o Isquemia miocárdica (Infarto en pediatría).",
-      "Enfermedad de Kawasaki mal tratada. La IGIV dada en los primeros 10 días \"apaga\" el fuego autoinmune y previene los aneurismas coronarios en un 95%. Si el aneurisma ya es gigante (>8mm), el niño requerirá anticoagulación sistémica (Warfarina) más Aspirina de por vida para que la sangre no se coagule adentro.",
-      "Vasculitis Pediátricas / Cardiología Infantil.",
-    ],
+    "Niño < 5 años. Fiebre > 5 días. Ojos rojos limpios, boca roja/partida, ganglio cervical y piel descamada.; Meses después: Regresa con Falla cardíaca, Muerte Súbita o Isquemia miocárdica (Infarto en pediatría).",
+    "Enfermedad de Kawasaki mal tratada. La IGIV dada en los primeros 10 días \"apaga\" el fuego autoinmune y previene los aneurismas coronarios en un 95%. Si el aneurisma ya es gigante (>8mm), el niño requerirá anticoagulación sistémica (Warfarina) más Aspirina de por vida para que la sangre no se coagule adentro.",
+    "Vasculitis Pediátricas / Cardiología Infantil."
+],
   },
   {
     id: "ucc-conv-2026-08-23-58",
@@ -304,10 +304,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Policitemia Vera (PV), una neoplasia mieloproliferativa crónica caracterizada por la hiperproducción descontrolada de las tres líneas sanguíneas (glóbulos rojos, blancos y plaquetas = panmielosis), independientemente de la hormona eritropoyetina (EPO). La clínica es \"exquisitamente\" literaria: el Prurito Acuagénico (una picazón enloquecedora minutos después del contacto con agua tibia/caliente, debido a la liberación masiva de histamina por los basófilos clonales de la piel) y la Eritromelalgia (ardor agudo y enrojecimiento en manos/pies por microtrombos plaquetarios, que ceden mágicamente a la Aspirina). El exceso de sangre hace que la cara esté pletórica (roja) y tapan el bazo (esplenomegalia masiva). El hallazgo molecular de ORO para certificar la PV es la Mutación JAK2 V617F, que está presente en casi el 97% de los casos. Esta mutación mantiene el receptor de la célula madre hematopoyética \"encendido todo el tiempo\", como si hubiera EPO, haciendo que la médula ósea fabrique sangre a cántaros. De hecho, por mecanismo de retroalimentación negativa, el nivel de Eritropoyetina (EPO) en sangre en estos pacientes está anormalmente BAJO o suprimido.",
     keyPoints: [
-      "Adulto mayor con Hematocrito > 60% (Sangre súper espesa).; Detalles mágicos: Comezón después de bañarse con agua caliente y enrojecimiento ardoroso de las manos (eritromelalgia).; Plétora y bazo inmenso.",
-      "Policitemia Vera. Gen culpable: Mutación JAK2. (A diferencia de los que fuman o viven en la altura, donde la EPO está alta; en la PV, la EPO sérica está inhibida y baja).",
-      "Neoplasias Mieloproliferativas / Hematología.",
-    ],
+    "Adulto mayor con Hematocrito > 60% (Sangre súper espesa).; Detalles mágicos: Comezón después de bañarse con agua caliente y enrojecimiento ardoroso de las manos (eritromelalgia).; Plétora y bazo inmenso.",
+    "Policitemia Vera. Gen culpable: Mutación JAK2. (A diferencia de los que fuman o viven en la altura, donde la EPO está alta; en la PV, la EPO sérica está inhibida y baja).",
+    "Neoplasias Mieloproliferativas / Hematología."
+],
   },
   {
     id: "ucc-conv-2026-08-23-59",
@@ -342,10 +342,10 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "La paciente cursa con un Vólvulo de Intestino Medio secundario a una Malrotación Intestinal. Esta es la catástrofe que sigue invariablemente a los defectos de la pared abdominal congénitos grandes como el Onfalocele o la Gastrosquisis. Embriológicamente, en un feto sano, los intestinos salen al cordón umbilical a la sexta semana y regresan al abdomen en la décima semana, realizando una exquisita rotación de 270 grados en sentido contrario a las agujas del reloj alrededor del eje de la Arteria Mesentérica Superior (AMS), anclando firmemente el Ángulo de Treitz a la izquierda y el Ciego a la fosa ilíaca derecha. En un niño con Onfalocele, como los intestinos se pasaron el desarrollo \"viviendo afuera\" en el saco, NUNCA lograron rotar esos 270 grados al meterlos a la fuerza por el cirujano. El ciego queda \"flotando\" arriba en el centro, atado por bandas de tejido (Bandas de Ladd) que cruzan sobre el duodeno y lo obstruyen. Peor aún, todo el intestino delgado queda colgado de un pedículo arterial minúsculo e inestable. En cualquier momento de la infancia (como en esta niña de 2 meses), el intestino gira sobre sí mismo como un reloj, estrangulando la arteria mesentérica superior (Vólvulo), necrosando el intestino entero en 6 horas y produciendo los vómitos biliosos agudos y el signo de \"sacacorchos\" en el fluoroscopio de contraste.",
     keyPoints: [
-      "Bebé con VÓMITO BILIOSO.; Antecedente CLAVE: Niño operado de Onfalocele, Gastrosquisis o Hernia Diafragmática.; Serie gastrointestinal con aspecto de Sacacorchos (corkscrew sign).",
-      "Malrotación Intestinal y Vólvulo de Intestino Medio. Todo niño nacido con los intestinos \"afuera\" tiene malrotación anatómica obligatoria por definición embriológica. La cirugía innegociable inmediata es el Procedimiento de Ladd.",
-      "Embriología Quirúrgica / Malrotación.",
-    ],
+    "Bebé con VÓMITO BILIOSO.; Antecedente CLAVE: Niño operado de Onfalocele, Gastrosquisis o Hernia Diafragmática.; Serie gastrointestinal con aspecto de Sacacorchos (corkscrew sign).",
+    "Malrotación Intestinal y Vólvulo de Intestino Medio. Todo niño nacido con los intestinos \"afuera\" tiene malrotación anatómica obligatoria por definición embriológica. La cirugía innegociable inmediata es el Procedimiento de Ladd.",
+    "Embriología Quirúrgica / Malrotación."
+],
   },
   {
     id: "ucc-conv-2026-08-23-60",
@@ -380,9 +380,9 @@ export const UCC_CONV_2026_08_23_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con un Síndrome Neuroléptico Maligno (SNM), una emergencia neurológica fulminante (con alta tasa de mortalidad por falla renal o paro cardíaco) causada por un bloqueo drástico y masivo de los receptores D2 de Dopamina en el sistema nervioso central (cerebro y ganglios basales). Es desencadenado de manera clásica por los antipsicóticos típicos de alta potencia, como el Haloperidol. La tétrada patognomónica de oro es: 1) Alteración del estado mental; 2) Inestabilidad autonómica caótica (presión loca, diaforesis extrema); 3) Hipertermia altísima (> 40°C); y 4) Rigidez en \"TUBO DE PLOMO\" extrema y global (este es el sello, los músculos se quedan trabados al máximo y se deshacen liberando CPK altísima). Al identificar que la causa fisiopatológica es la falta abrupta de Dopamina, el antídoto específico de reversión de primera línea son los Agonistas Dopaminérgicos directos, como la Bromocriptina o la Amantadina (inundan el receptor y devuelven la movilidad). Como el músculo está en un espasmo rígido letal quemando energía, se asocia concomitantemente Dantroleno sódico intravenoso (un relajante muscular periférico directo) para frenar la necrosis miocítica y detener el daño por la CPK.",
     keyPoints: [
-      "Paciente psiquiátrico joven que tomó antipsicóticos recientes (Haloperidol, Clorpromazina).; Fiebre altísima (> 40°C) + Alteración mental + Disautonomía.; Dato Clínico Rey: Rigidez generalizada inquebrantable en \"Tubo de Plomo\". (NO hay clonus, NO hay hiperreflexia). CPK por las nubes.",
-      "Síndrome Neuroléptico Maligno. Causado por bloqueo brusco de Dopamina. Antídoto central: Bromocriptina (agonista dopaminérgico). Relajante muscular: Dantroleno.",
-      "Toxicología / Urgencias Psiquiátricas.",
-    ],
+    "Paciente psiquiátrico joven que tomó antipsicóticos recientes (Haloperidol, Clorpromazina).; Fiebre altísima (> 40°C) + Alteración mental + Disautonomía.; Dato Clínico Rey: Rigidez generalizada inquebrantable en \"Tubo de Plomo\". (NO hay clonus, NO hay hiperreflexia). CPK por las nubes.",
+    "Síndrome Neuroléptico Maligno. Causado por bloqueo brusco de Dopamina. Antídoto central: Bromocriptina (agonista dopaminérgico). Relajante muscular: Dantroleno.",
+    "Toxicología / Urgencias Psiquiátricas."
+],
   }
 ];

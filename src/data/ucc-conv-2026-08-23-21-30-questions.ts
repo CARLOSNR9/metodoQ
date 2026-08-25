@@ -38,10 +38,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con un Síndrome Urémico Hemolítico Típico (SUH positivo para Toxina Shiga), generalmente desencadenado por la infección intestinal por Escherichia coli enterohemorrágica (O157:H7). A diferencia del SUH atípico (que requiere anticuerpos monoclonales como Eculizumab), el SUH típico se maneja puramente con soporte estricto (líquidos, control de presión arterial, diálisis si es necesaria y transfusión de glóbulos rojos si la anemia es severa). La regla mundial y de oro en esta patología es la PROHIBICIÓN ABSOLUTA DE ANTIBIÓTICOS BACTERICIDAS Y ANTIMOTILIDAD. Si se administran antibióticos, estos destruyen la pared celular de la bacteria (E. coli) en el intestino, provocando una liberación masiva, explosiva y de golpe de toda la Toxina Shiga preformada hacia la sangre. Esta toxina aniquila el endotelio del riñón y el cerebro, empeorando la microangiopatía trombótica y disparando la mortalidad. De igual manera, transfundir plaquetas está contraindicado porque \"alimenta\" la formación de los microtrombos renales.",
     keyPoints: [
-      "Niño preescolar con Diarrea Sanguinolenta previa.; Seguido a los días por: Falla Renal Aguda + Plaquetas bajas + Anemia con Esquizocitos (Microangiopatía).",
-      "SUH Típico (STEC). REGLA PROHIBITIVA: Cero antibióticos, cero antidiarreicos (Loperamida) y cero transfusión de plaquetas. Manejo estrictamente de soporte dialítico y hemodinámico.",
-      "Nefrología Pediátrica / SUH.",
-    ],
+    "Niño preescolar con Diarrea Sanguinolenta previa.; Seguido a los días por: Falla Renal Aguda + Plaquetas bajas + Anemia con Esquizocitos (Microangiopatía).",
+    "SUH Típico (STEC). REGLA PROHIBITIVA: Cero antibióticos, cero antidiarreicos (Loperamida) y cero transfusión de plaquetas. Manejo estrictamente de soporte dialítico y hemodinámico.",
+    "Nefrología Pediátrica / SUH."
+],
   },
   {
     id: "ucc-conv-2026-08-23-22",
@@ -76,10 +76,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente presenta el inconfundible Síndrome de Wellens, un \"aviso de bomba\" electrocardiográfico. Este síndrome se caracteriza clínica y eléctricamente por un paciente que tuvo dolor isquémico agudo, pero que en el momento de tomar el ECG se encuentra SIN DOLOR (asintomático). Justo en ese momento de \"alivio\", el ECG revela ondas T profunda y simétricamente invertidas en V2 y V3 (Tipo B, el 75% de los casos) o unas ondas T bifásicas (Tipo A) en las mismas derivaciones. Las troponinas suelen ser normales o mínimamente elevadas. ¡Este patrón NO ES BENIGNO! Significa que el paciente tiene una estenosis crítica, hiperaguda y severa de la Arteria Descendente Anterior (DAI), que se recanalizó de manera espontánea hace unos minutos, pero que se volverá a ocluir al 100% en las próximas horas o días, causando un infarto anterior masivo (IAMCEST anterior). La regla de oro es: Todo paciente con Síndrome de Wellens debe ser hospitalizado inmediatamente, tratado con antiisquémicos y llevado a Cateterismo Cardíaco Urgente.",
     keyPoints: [
-      "Paciente que tuvo dolor de pecho, pero AHORA ESTÁ SIN DOLOR.; ECG (tomado sin dolor): Ondas T invertidas profundas o bifásicas en V2-V3.; Enzimas cardíacas (Troponinas) frecuentemente negativas.",
-      "Síndrome de Wellens (Estenosis crítica de la arteria Descendente Anterior - LAD). Regla legal/médica: PROHIBIDO hacerles una Prueba de Esfuerzo (los infartas en la banda rodante). Requieren Angiografía Coronaria inminente.",
-      "Electrocardiografía de Urgencias / Síndromes Coronarios Agudos.",
-    ],
+    "Paciente que tuvo dolor de pecho, pero AHORA ESTÁ SIN DOLOR.; ECG (tomado sin dolor): Ondas T invertidas profundas o bifásicas en V2-V3.; Enzimas cardíacas (Troponinas) frecuentemente negativas.",
+    "Síndrome de Wellens (Estenosis crítica de la arteria Descendente Anterior - LAD). Regla legal/médica: PROHIBIDO hacerles una Prueba de Esfuerzo (los infartas en la banda rodante). Requieren Angiografía Coronaria inminente.",
+    "Electrocardiografía de Urgencias / Síndromes Coronarios Agudos."
+],
   },
   {
     id: "ucc-conv-2026-08-23-23",
@@ -114,10 +114,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con el Complejo de Esclerosis Tuberosa (CET). Esta es una enfermedad genética neurocutánea multisistémica (facomatosis) producida por mutaciones inactivantes en los genes supresores de tumores TSC1 (hamartina) o TSC2 (tuberina), lo que hiperactiva la vía mTOR y causa crecimiento descontrolado de tumores benignos (hamartomas) en múltiples órganos. El paciente presenta la clínica más clásica, temprana y letal: los Espasmos Infantiles (Síndrome de West), que a menudo son la primera causa de consulta en lactantes. La exploración de la piel con luz ultravioleta revela las máculas hipopigmentadas (en hoja de fresno) que son el sello cutáneo precoz, y el antecedente del rabdomioma cardíaco (el tumor cardíaco pediátrico más frecuente, que crece en el feto y a menudo se encoge solo al nacer) es un criterio mayor diagnóstico. A futuro, este niño tiene un altísimo riesgo de desarrollar convulsiones refractarias por tuberosidades corticales en el cerebro y Angiomiolipomas renales, los cuales pueden crecer de forma masiva, causar hemorragias retroperitoneales fulminantes y requerir embolización o tratamiento con inhibidores de mTOR (Everolimus).",
     keyPoints: [
-      "Lactante con Convulsiones (Espasmos infantiles/West).; Manchas blancas en la piel (Ash-leaf spots / Hoja de fresno) o adenomas sebáceos en cara en niños mayores.; Masa en el corazón (Rabdomioma cardíaco en ecografía fetal/neonatal).",
-      "Complejo de Esclerosis Tuberosa. Gen mutado: TSC1/TSC2 (vía mTOR). Riesgo a futuro innegociable: Angiomiolipomas Renales y Astrocitomas Subependimarios de Células Gigantes (SEGA) en el cerebro.",
-      "Genética / Neurocutáneas Pediátricas.",
-    ],
+    "Lactante con Convulsiones (Espasmos infantiles/West).; Manchas blancas en la piel (Ash-leaf spots / Hoja de fresno) o adenomas sebáceos en cara en niños mayores.; Masa en el corazón (Rabdomioma cardíaco en ecografía fetal/neonatal).",
+    "Complejo de Esclerosis Tuberosa. Gen mutado: TSC1/TSC2 (vía mTOR). Riesgo a futuro innegociable: Angiomiolipomas Renales y Astrocitomas Subependimarios de Células Gigantes (SEGA) en el cerebro.",
+    "Genética / Neurocutáneas Pediátricas."
+],
   },
   {
     id: "ucc-conv-2026-08-23-24",
@@ -152,10 +152,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con una Infección por Clostridioides difficile (ICD) FULMINANTE. La ICD se clasifica en tres niveles: Leve/Moderada, Severa (Leucocitos > 15,000 o Creatinina > 1.5 mg/dL) y Fulminante (Severa + choque, íleo, o megacolon tóxico). Para las infecciones leves, moderadas o severas simples, el tratamiento de elección es la monoterapia con Vancomicina Oral o Fidaxomicina Oral. SIN EMBARGO, este paciente tiene megacolon tóxico y un íleo paralítico inminente. El intestino inflamado y paralizado no permite que la vancomicina tragada por vía oral avance por el tracto digestivo y llegue al colon inflamado. Por esta razón, las guías internacionales dictaminan que en la Infección Fulminante, se debe utilizar la terapia dual combinada y de máxima agresividad: Vancomicina Oral a altas dosis (500 mg c/6h) o por enemas rectales, ACOMPAÑADA OBLIGATORIAMENTE de Metronidazol INTRAVENOSO. El metronidazol por la vena asegura que el fármaco llegue a las capas profundas de la pared del colon a través de la circulación sistémica sanguínea, atacando la bacteria mientras la vancomicina intenta llegar por la luz luminal.",
     keyPoints: [
-      "Paciente con antecedente de antibióticos recientes + Diarrea severa.; Signos de C. difficile FULMINANTE: Leucocitosis masiva (>15k-25k), Falla Renal (AKI), Hipotensión o Megacolon / Íleo.",
-      "ICD Fulminante. La monoterapia oral fracasará porque el intestino está paralizado. Terapia de oro exigida: Vancomicina Oral (o Enemas) + Metronidazol Intravenoso. El Metronidazol IV solo se usa en este escenario específico.",
-      "Infecciones Asociadas a la Atención en Salud / C. difficile.",
-    ],
+    "Paciente con antecedente de antibióticos recientes + Diarrea severa.; Signos de C. difficile FULMINANTE: Leucocitosis masiva (>15k-25k), Falla Renal (AKI), Hipotensión o Megacolon / Íleo.",
+    "ICD Fulminante. La monoterapia oral fracasará porque el intestino está paralizado. Terapia de oro exigida: Vancomicina Oral (o Enemas) + Metronidazol Intravenoso. El Metronidazol IV solo se usa en este escenario específico.",
+    "Infecciones Asociadas a la Atención en Salud / C. difficile."
+],
   },
   {
     id: "ucc-conv-2026-08-23-25",
@@ -190,10 +190,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con Lupus Eritematoso Inducido por Fármacos (DILE, por sus siglas en inglés). Esta entidad es una reacción autoinmune mimética causada por medicamentos crónicos altamente metabolizados por acetilación en el hígado (como la Procainamida, Hidralazina, Isoniazida o D-penicilamina). Clínicamente imita al Lupus Eritematoso Sistémico (LES) puro, presentándose típicamente con fiebre, artralgias/artritis, y afectación prominente de serosas (Pleuritis, Pericarditis), pero una perla clínica es que RARA VEZ ataca al riñón (nefritis) o al cerebro. El perfil serológico es inconfundible y sella el diagnóstico: el paciente tendrá los ANAs positivos (patrón homogéneo), pero el marcador patognomónico es la presencia abrumadora (en más del 95% de los casos) de Anticuerpos Anti-Histonas. A diferencia del Lupus primario, el Lupus por drogas típicamente arroja resultados NEGATIVOS para los anticuerpos más letales (anti-dsDNA y Anti-Sm) y los niveles de complemento (C3 y C4) no se consumen. La curación es definitiva al retirar el medicamento ofensor (la procainamida) en cuestión de semanas o meses.",
     keyPoints: [
-      "Paciente mayor recibiendo Hidralazina, Procainamida o Isoniazida.; Síntomas nuevos de Lupus \"suave\": Fiebre, dolor articular y serositis (líquido en pleura o pericardio), sin daño renal.; Laboratorio diferencial: ANA (+).",
-      "Lupus Inducido por Drogas. Diagnóstico bioquímico absoluto: Anticuerpos Anti-Histonas (+) y anti-dsDNA (-). Se cura retirando el fármaco.",
-      "Enfermedades Autoinmunes Sistémicas / Efectos Farmacológicos.",
-    ],
+    "Paciente mayor recibiendo Hidralazina, Procainamida o Isoniazida.; Síntomas nuevos de Lupus \"suave\": Fiebre, dolor articular y serositis (líquido en pleura o pericardio), sin daño renal.; Laboratorio diferencial: ANA (+).",
+    "Lupus Inducido por Drogas. Diagnóstico bioquímico absoluto: Anticuerpos Anti-Histonas (+) y anti-dsDNA (-). Se cura retirando el fármaco.",
+    "Enfermedades Autoinmunes Sistémicas / Efectos Farmacológicos."
+],
   },
   {
     id: "ucc-conv-2026-08-23-26",
@@ -228,10 +228,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con una Peritonitis Bacteriana Primaria (PBP), la complicación infecciosa intraabdominal más grave y típica del Síndrome Nefrótico en pediatría. Fisiopatológicamente, los niños con síndrome nefrótico activo \"orinan\" (pierden por la vía renal) no solo albúmina, sino también proteínas de vital importancia inmunológica, específicamente la Inmunoglobulina G (IgG) y el Factor B de la vía alterna del complemento. Sin el Factor B, el sistema inmunológico es incapaz de opsonizar y destruir a las bacterias encapsuladas. Por lo tanto, el patógeno rey indiscutible que invade el líquido ascítico de los niños nefróticos es el Streptococcus pneumoniae, seguido por Haemophilus influenzae. (A diferencia del adulto con cirrosis hepática, donde el patógeno de la PBE es casi siempre E. coli por translocación). El manejo exige iniciar de inmediato Cefotaxima o Ceftriaxona.",
     keyPoints: [
-      "Niño con Síndrome Nefrótico activo (anasarca, ascitis).; Debut de Abdomen Agudo (Fiebre + Dolor con rebote).",
-      "Peritonitis Bacteriana Primaria. El germen MÁS probable es el Neumococo (S. pneumoniae), debido a la pérdida urinaria del Factor B del complemento y de opsoninas.",
-      "Complicaciones del Síndrome Nefrótico Pediátrico.",
-    ],
+    "Niño con Síndrome Nefrótico activo (anasarca, ascitis).; Debut de Abdomen Agudo (Fiebre + Dolor con rebote).",
+    "Peritonitis Bacteriana Primaria. El germen MÁS probable es el Neumococo (S. pneumoniae), debido a la pérdida urinaria del Factor B del complemento y de opsoninas.",
+    "Complicaciones del Síndrome Nefrótico Pediátrico."
+],
   },
   {
     id: "ucc-conv-2026-08-23-27",
@@ -266,10 +266,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con una Intoxicación severa por Calcioantagonistas (Verapamilo/Diltiazem). Ambas sobredosis (betabloqueadores y bloqueadores de calcio) causan hipotensión, bradicardia profunda y bloqueos AV. Sin embargo, el \"truco maestro\" del toxicólogo para diferenciarlos en urgencias es el nivel de glucosa en sangre. Los bloqueadores de canales de calcio (BCC) bloquean los canales tipo L en las células beta del páncreas, impidiendo la secreción de insulina; esto causa una Hiperglucemia característica. (Por el contrario, los betabloqueadores suelen causar normoglucemia o hipoglucemia). Ante el choque cardiogénico por BCC refractario a líquidos y calcio intravenoso, el antídoto de oro mundial es la Terapia HIET (High-Dose Insulin Euglycemic Therapy). Se administran dosis masivas de Insulina Regular (ej. bolo de 1 U/kg seguido de infusión de 1-10 U/kg/h) junto con un goteo de Dextrosa para no bajar el azúcar. La insulina a estas mega-dosis actúa como el inotrópico positivo más potente que existe para el miocito intoxicado, forzando la entrada de carbohidratos a la célula cardíaca \"hambrienta\" y mejorando la contractilidad y la presión arterial de forma espectacular.",
     keyPoints: [
-      "Paciente con choque cardiogénico, bradicardia severa e ingesta de pastillas desconocidas.; Dato Pivote Diferencial: Hiperglucemia apunta a Bloqueadores de Calcio (Verapamilo). Hipoglucemia apunta a Betabloqueadores.",
-      "Intoxicación por Calcioantagonistas. Terapia de Rescate (además de Calcio IV): Terapia con Insulina a Altas Dosis (HIET). El Glucagón es el rescate para betabloqueadores.",
-      "Toxicología / Antídotos Cardiovasculares.",
-    ],
+    "Paciente con choque cardiogénico, bradicardia severa e ingesta de pastillas desconocidas.; Dato Pivote Diferencial: Hiperglucemia apunta a Bloqueadores de Calcio (Verapamilo). Hipoglucemia apunta a Betabloqueadores.",
+    "Intoxicación por Calcioantagonistas. Terapia de Rescate (además de Calcio IV): Terapia con Insulina a Altas Dosis (HIET). El Glucagón es el rescate para betabloqueadores.",
+    "Toxicología / Antídotos Cardiovasculares."
+],
   },
   {
     id: "ucc-conv-2026-08-23-28",
@@ -304,10 +304,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con una Crisis Hemolítica por Deficiencia de G6PD. Es la enzimopatía eritrocitaria más común del mundo (ligada al cromosoma X, afecta predominantemente a varones). El glóbulo rojo carece de mitocondrias y depende absolutamente de la enzima G6PD para producir NADPH, el cual mantiene al glutatión en estado reducido. El glutatión reducido es el \"escudo\" del eritrocito contra los radicales libres y la oxidación. En estado basal el niño es asintomático. La crisis ocurre cuando el paciente ingiere un oxidante potente (Fármacos como TMP-SMX, Primaquina, Nitrofurantoína, o alimentos como las Habas/Fava beans) o sufre una infección severa. El estrés oxidativo \"oxida\" la hemoglobina, haciéndola precipitar dentro de la célula formando los Cuerpos de Heinz. Cuando este eritrocito dañado pasa por el bazo, los macrófagos le arrancan el pedazo de membrana donde está pegado el cuerpo de Heinz, dejando una célula \"mordida\" (Bite cell). Si el estrés es masivo, el eritrocito estalla en la sangre (hemólisis intravascular, hemoglobinuria oscura/café).",
     keyPoints: [
-      "Varón previamente sano que debuta con Anemia severa + Ictericia + Orina Oscura.; Gatillo clásico: Infección, pastilla de Sulfa (TMP-SMX), antimalárico o habas.; Frotis clave: Células mordidas (Bite cells) y Cuerpos de Heinz. (El Coombs será Negativo).",
-      "Deficiencia de Glucosa-6-Fosfato Deshidrogenasa (G6PD). Falla de glutatión y estrés oxidativo. Tratamiento: Transfusión si es necesario, hidratación y evitar el agente estresante.",
-      "Anemias Hemolíticas Congénitas / Hematología Pediátrica.",
-    ],
+    "Varón previamente sano que debuta con Anemia severa + Ictericia + Orina Oscura.; Gatillo clásico: Infección, pastilla de Sulfa (TMP-SMX), antimalárico o habas.; Frotis clave: Células mordidas (Bite cells) y Cuerpos de Heinz. (El Coombs será Negativo).",
+    "Deficiencia de Glucosa-6-Fosfato Deshidrogenasa (G6PD). Falla de glutatión y estrés oxidativo. Tratamiento: Transfusión si es necesario, hidratación y evitar el agente estresante.",
+    "Anemias Hemolíticas Congénitas / Hematología Pediátrica."
+],
   },
   {
     id: "ucc-conv-2026-08-23-29",
@@ -342,10 +342,10 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Meningococcemia fulminante (sepsis por Neisseria meningitidis), evidenciada por la meningitis febril y el infame rash purpúrico/petequial rápidamente progresivo. La complicación más letal y devastadora de esta bacteriemia es el Síndrome de Waterhouse-Friderichsen. La endotoxina del meningococo desencadena una Coagulación Intravascular Diseminada (CID) tan brutal que las venas de las glándulas suprarrenales se trombosan. Al taparse el drenaje, las glándulas suprarrenales se llenan de sangre hasta estallar, resultando en una Hemorragia Suprarrenal Bilateral que destruye por completo y en minutos la corteza adrenal. El paciente pierde súbitamente toda su producción de Aldosterona y Cortisol. La falta de aldosterona causa el perfil iónico patognomónico: Hiponatremia + Hiperkalemia. La falta de cortisol provoca un Choque Vasopléjico Refractario a líquidos y aminas (Noradrenalina). El rescate vital innegociable, además de la Ceftriaxona para la bacteria, es la administración inmediata de Hidrocortisona intravenosa (100 mg STAT) para restaurar el tono vascular.",
     keyPoints: [
-      "Joven o niño con fiebre, rigidez de nuca y Rash Purpúrico fulminante (Meningococcemia).; Que de repente hace un Choque Refractario a líquidos/aminas.; Laboratorio endocrino: El Sodio BAJA y el Potasio SUBE.",
-      "Síndrome de Waterhouse-Friderichsen. (Destrucción hemorrágica de las suprarrenales). La presión solo mejorará si le inyectas Hidrocortisona a dosis de estrés.",
-      "Urgencias Infecciosas / Crisis Adrenal Aguda.",
-    ],
+    "Joven o niño con fiebre, rigidez de nuca y Rash Purpúrico fulminante (Meningococcemia).; Que de repente hace un Choque Refractario a líquidos/aminas.; Laboratorio endocrino: El Sodio BAJA y el Potasio SUBE.",
+    "Síndrome de Waterhouse-Friderichsen. (Destrucción hemorrágica de las suprarrenales). La presión solo mejorará si le inyectas Hidrocortisona a dosis de estrés.",
+    "Urgencias Infecciosas / Crisis Adrenal Aguda."
+],
   },
   {
     id: "ucc-conv-2026-08-23-30",
@@ -380,9 +380,9 @@ export const UCC_CONV_2026_08_23_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "La paciente fue víctima de un Embolismo de Líquido Amniótico (AFE, por sus siglas en inglés) o Síndrome Anafilactoide del Embarazo. Es la catástrofe obstétrica más letal y temida (mortalidad >60%). Ocurre típicamente durante el trabajo de parto activo o inmediatamente post-parto (especialmente si hay hipertonía uterina o ruptura de membranas). Fisiopatológicamente, las contracciones empujan líquido amniótico (rico en restos fetales, meconio y antígenos) a través de los desgarros venosos uterinos hacia la circulación venosa materna, llegando directo a los pulmones. El cuerpo materno reacciona a estos antígenos fetales con una reacción anafilactoide masiva y una tormenta inmunológica: los vasos pulmonares sufren un espasmo constrictivo brutal (vasoespasmo pulmonar), lo que ahoga al ventrículo derecho causando paro cardíaco o falla derecha aguda. Simultáneamente, el líquido amniótico es increíblemente rico en factor tisular (tromboplastina), lo que desencadena una Coagulación Intravascular Diseminada (CID) inmediata e incontrolable (sangrado en sábana por todas partes).",
     keyPoints: [
-      "Mujer en trabajo de parto activo o cesárea reciente.; Colapso SÚBITO de 3 esferas: 1) Falla respiratoria/hipoxia, 2) Paro Cardíaco/Choque, y 3) CID masiva (sangra por todos lados).",
-      "Embolismo de Líquido Amniótico. No tiene antídoto. Tratamiento: Soporte Vital (RCP), intubación, transfusión masiva de hemoderivados (Protocolo de Transfusión Masiva) y Cesárea Perimortem urgente si ocurre antes del parto.",
-      "Emergencias Obstétricas Letales / Cuidado Intensivo.",
-    ],
+    "Mujer en trabajo de parto activo o cesárea reciente.; Colapso SÚBITO de 3 esferas: 1) Falla respiratoria/hipoxia, 2) Paro Cardíaco/Choque, y 3) CID masiva (sangra por todos lados).",
+    "Embolismo de Líquido Amniótico. No tiene antídoto. Tratamiento: Soporte Vital (RCP), intubación, transfusión masiva de hemoderivados (Protocolo de Transfusión Masiva) y Cesárea Perimortem urgente si ocurre antes del parto.",
+    "Emergencias Obstétricas Letales / Cuidado Intensivo."
+],
   }
 ];

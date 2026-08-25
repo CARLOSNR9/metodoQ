@@ -38,10 +38,10 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con Edema Agudo Hemorrágico del Lactante (EAHL), también conocido como Enfermedad de Finkelstein. Es una variante llamativa pero completamente benigna y autolimitada de vasculitis leucocitoclástica que afecta casi exclusivamente a lactantes entre los 4 y 24 meses de edad. Clásicamente aparece tras un cuadro viral de vías aéreas superiores o tras la toma de antibióticos. Su presentación provoca gran alarma en los padres e internistas novatos porque simula catástrofes: placas purpúricas/urticariformes en diana (escarapela) en cara y extremidades, asociadas a edema tenso asimétrico de manos y pies. La clave de oro del examen es el estado general del paciente: el lactante luce feliz, activo, afebril o con febrícula, sin compromiso de mucosas y sin afectación de órganos internos (a diferencia de Henoch-Schönlein que afecta intestino/riñón en niños más grandes). Las lesiones desaparecen espontáneamente en 1 a 3 semanas sin dejar cicatriz, por lo que el manejo es puramente conservador y expectante.",
     keyPoints: [
-      "Lactante < 2 años con placas purpúricas en \"escarapela/diana\" en cara y extremidades + Edema en manos/pies, PERO el niño está rosado, feliz y comiendo bien.",
-      "Edema Agudo Hemorrágico del Lactante (Finkelstein). Manejo: Tranquilizar a los padres, NO requiere corticoides ni hospitalizaciones agresivas.",
-      "Infectología y Dermatología Pediátrica.",
-    ],
+    "Lactante < 2 años con placas purpúricas en \"escarapela/diana\" en cara y extremidades + Edema en manos/pies, PERO el niño está rosado, feliz y comiendo bien.",
+    "Edema Agudo Hemorrágico del Lactante (Finkelstein). Manejo: Tranquilizar a los padres, NO requiere corticoides ni hospitalizaciones agresivas.",
+    "Infectología y Dermatología Pediátrica."
+],
   },
   {
     id: "ucc-conv-2026-08-23-82",
@@ -75,9 +75,7 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "El paciente presenta las dos grandes entidades del cáncer de esófago. Para los exámenes de residencia, la diferenciación entre los dos subtipos histológicos principales de cáncer esofágico es un clásico ineludible:\nAdenocarcinoma esofágico: Típico del tercio distal/inferior, fuertemente vinculado al reflujo ácido crónico (ERGE), la obesidad y la lesión precursora denominada Esófago de Barrett. En el Esófago de Barrett, el epitelio escamoso estratificado normal del esófago no soporta el ácido y cambia a un epitelio cilíndrico metaplásico de tipo intestinal con células caliciformes (goblet cells). Esta metaplasia progresa a displasia y finalmente a adenocarcinoma.\nCarcinoma Escamocelular (Epidermoide): Típico del tercio medio y superior, fuertemente vinculado al consumo crónico de alcohol, cigarrillo, bebidas muy calientes y achalasia.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-83",
@@ -111,9 +109,7 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation: "El paciente cursa con un Síndrome Cardiorrenal Tipo 1 (deterioro hemodinámico renal agudo secundario a una falla cardíaca aguda o descompensada). Fisiopatológicamente, la falla renal no se debe a un daño anatómico del glomérulo (el sedimento está limpio y la FeNa < 1% demuestra que los túbulos están sanos y reabsorbiendo sodio desesperadamente = patrón prerenal). El colapso del filtrado glomerular se produce por un \"doble golpe\" hemodinámico:\nCaída del gasto cardíaco anterógrado: Disminuye el volumen arterial circulante efectivo, activando el sistema simpático y el eje Renina-Angiotensina, lo que causa vasoconstricción de la arteriola aferente renal para proteger la presión sistémica.\nCongestión venosa retrógrada (Hipertensión venosa renal): La presión alta en la aurícula derecha y vena cava se transmite \"hacia atrás\" a las venas renales. Esto aumenta la presión intersticial del riñón y ahoga el gradiente de filtración en el glomérulo. La pérdida del tono de la arteriola eferente o su desregulación anula la presión intraglomerular neta.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-84",
@@ -147,9 +143,7 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation: "El paciente presenta un cuadro de Mielitis Flácida Aguda (AFM) o síndrome tipo poliomielitis (polio-like syndrome). Clásicamente, la destrucción de las neuronas motoras del asta anterior de la médula espinal produce la tríada de: Parálisis flácida asimétrica + Arreflexia + Conservación de la sensibilidad (porque las raíces sensitivas posteriores no están afectadas). Aunque el poliovirus salvaje está virtualmente erradicado en la mayoría del mundo, en la última década han emergido brotes epidémicos de parálisis flácida aguda en niños causados por otros enterovirus no poliológicos, abrumadoramente el Enterovirus D68 (EV-D68) y el Enterovirus A71 (EV-A71), así como el Virus del Nilo Occidental (West Nile Virus). Estos virus tienen un neurotropismo directo por la sustancia gris del asta anterior de la médula espinal.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-85",
@@ -183,9 +177,7 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "La paciente cursa con un Lupus Eritematoso Sistémico (LES) activo manifestado con una Trombocitopenia Inmune Secundaria (PTI lúpica) severa (< 20,000/mm³ con sangrado mucoso). La destrucción de las plaquetas ocurre en el bazo mediada por autoanticuerpos IgG dirigidos contra las glicoproteínas de membrana plaquetaria (GPIIb/IIIa). En el LES, la trombocitopenia grave es un criterio de severidad clínica que requiere intervención rápida. La piedra angular y primera línea de tratamiento indiscutida son los Corticosteroides a altas dosis (Pulsos de Metilprednisolona IV o Prednisona oral), los cuales frenan la producción de anticuerpos y bloquean los receptores Fc de los macrófagos esplénicos. Si hay sangrado activo grave o riesgo inminente del SNC, se adiciona Inmunoglobulina G Intravenosa (IGIV) para saturar los macrófagos de forma inmediata.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-86",
@@ -219,9 +211,7 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "El paciente presenta un Ductus Arterioso Permeable (PDA - Persistencia del Conducto Arterioso) sintomático con repercusión hemodinámica, la cardiopatía más común en el prematuro extremo. Fisiológicamente, el ductus debe cerrarse tras el nacimiento al caer las prostaglandinas placentarias y subir el O2. En el prematuro, el ductus no responde al O2 y se queda abierto. Al caer las resistencias pulmonares, la sangre oxigenada de la aorta se fuga masivamente hacia la arteria pulmonar (shunt I-D). Esto \"roba\" sangre a la aorta diastólica (causando la presión diastólica muy baja, la presión diferencial amplia y los pulsos saltones/híperdinámicos) y sobrecarga de volumen los pulmones. El soplo patognomónico es el soplo continuo en maquinaria (Gibson). Dado que las Prostaglandinas E2 mantienen el ductus abierto en la vida fetal, el tratamiento médico farmacológico para forzar su cierre consiste en administrar Inhibidores de la Ciclooxigenasa (AINEs intravenosos como Ibuprofeno o Indometacina, o Paracetamol IV), los cuales bloquean la síntesis de prostaglandinas permitiendo que el músculo ductal se contraiga y se cierre.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-87",
@@ -255,9 +245,7 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "La paciente presenta un SIADH (Síndrome de Secreción Inadecuada de ADH), la causa más común de hiponatremia normovolémica (euvolémica) en ancianos. En la población geriátrica, dos grupos de medicamentos son los culpables principales de desencadenar SIADH: los Inhibidores Selectivos de la Recaptación de Serotonina (ISRS como la Sertralina) y los Diuréticos Tiazídicos (Hidroclorotiazida). Fisiopatológicamente, la ADH (vasopresina) se secreta sin control, reteniendo agua pura en el túbulo colector. Criterios de SIADH: Hiponatremia + Hiposmolaridad plasmática + Euvolemia clínica + Osmolaridad urinaria concentrada (>100 mOsm/kg) + Sodio urinario alto (>30 mEq/L) con tiroides y suprarrenales normales. La regla de oro absoluta en la corrección de la hiponatremia crónica es el límite de corrección: la velocidad de ascenso del sodio sérico NUNCA debe superar los 8 a 10 mEq/L en las primeras 24 horas (o 18 mEq/L en 48 horas). Si se corrige demasiado rápido (ej. infundiendo solución hipertónica a ciegas), la deshidratación osmótica destruirá la mielina del puente de Varolio causando Mielinólisis Pontina Central (Síndrome de Desmielinización Osmótica), dejando a la paciente con cuadriplejía irreversible y síndrome de cautiverio.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-88",
@@ -291,9 +279,7 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "La Herpangina es una infección enantematosa febril común de la infancia causada por Enterovirus, predominantemente el Coxsackievirus grupo A (serotipos A1 a A10, A16, A22). La clave de oro para diferenciar las infecciones orales en pediatría para los exámenes radica en la localización estricta de las úlceras:\nHerpangina: Las vesículas y úlceras dolorosas se ubican EXCLUSIVAMENTE en la región POSTERIOR de la boca (pilares amigdalinos, paladar blando, úvula y pared faríngea posterior). Respetan la parte anterior.\nGingivoestomatitis Herpética (HSV-1): Afecta la región ANTERIOR y difusa de la boca (encías rojas y sangrantes, labios, mucosa yugal anterior y lengua) con alta fiebre y halitosis.\nLa Herpangina es un cuadro benigno y autolimitado que dura de 4 a 7 días. El manejo es puramente sintomático (analgésicos como paracetamol/ibuprofeno, hidratación con líquidos fríos o helados).",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-89",
@@ -327,9 +313,7 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "El paciente presenta un Cor Pulmonale Crónico, definido como la hipertrofia y/o dilatación del Ventrículo Derecho (con o sin falla cardíaca derecha) resultante de una Hipertensión Pulmonar primaria causada por enfermedades intrínsecas del parénquima pulmonar o de la ventilación (como el EPOC, fibrosis pulmonar o apnea del sueño). Fisiopatológicamente, la hipoxia alveolar crónica del EPOC desencadena una vasoconstricción arterial pulmonar hipóxica severa y remodelado vascular. Esto aumenta de forma masiva la resistencia vascular pulmonar (poscarga derecha). El ventrículo derecho debe trabajar contra este \"muro de presión\" pulmonar, adaptándose primero con hipertrofia y finalmente dilatándose y fallando. La clínica de Cor Pulmonale es la clínica de la Falla Cardíaca Derecha PURA: edema en piernas, hepatomegalia congestiva, ingurgitación yugular y el Signo de Carvallo (aumento de la intensidad del soplo de insuficiencia tricuspídea durante la inspiración debido al mayor retorno venoso). El ventrículo izquierdo es completamente normal.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   },
   {
     id: "ucc-conv-2026-08-23-90",
@@ -363,8 +347,6 @@ export const UCC_CONV_2026_08_23_81_90_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "B",
     explanation: "La Demencia por Cuerpos de Lewy (DCL) es la segunda causa más frecuente de demencia neurodegenerativa en el adulto mayor después del Alzheimer. Su diagnóstico clínico se basa en una tríada patognomónica central:\nFluctuaciones cognitivas: Variaciones pronunciadas en la atención y estado de alerta de un día a otro (o de una hora a otra).\nAlucinaciones visuales complejas y bien formadas: Típicamente precoces, donde el paciente ve personas, niños o animales de forma muy detallada.\nParkinsonismo motor espontáneo: Rigidez, bradicinesia y alteración del equilibrio que aparecen tempranamente junto a la demencia (a diferencia del Parkinson clásico donde la demencia aparece años después del trastorno motor).\nUn dato de seguridad farmacológica vital evaluado en la viñeta es la extrema sensibilidad a los neurolépticos/antipsicóticos típicos (como el Haloperidol): administrarlos desencadena un parkinsonismo irreversible o reacciones catatónicas graves. Histopatológicamente se caracteriza por el depósito de Cuerpos de Lewy (agregados intraneuronales de la proteína alfa-sinucleína) en la corteza cerebral, sistema límbico y sustancia negra.",
-    keyPoints: [
-      ,
-    ],
+    keyPoints: [],
   }
 ];
