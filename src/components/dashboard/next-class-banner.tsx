@@ -9,9 +9,11 @@ import { formatClassDate, formatClassTime } from "@/lib/classes/student-classes"
 
 type NextClassBannerProps = {
   userId: string;
+  /** En el home, no ocupar espacio si no hay clase próxima. */
+  hideEmpty?: boolean;
 };
 
-export function NextClassBanner({ userId }: NextClassBannerProps) {
+export function NextClassBanner({ userId, hideEmpty = false }: NextClassBannerProps) {
   const { nextClass, upcoming, loading, error } = useStudentClasses(userId, true);
   const countdown = useClassCountdown(
     nextClass?.classDate ?? null,
@@ -19,6 +21,7 @@ export function NextClassBanner({ userId }: NextClassBannerProps) {
   );
 
   if (loading) {
+    if (hideEmpty) return null;
     return (
       <div className="animate-pulse rounded-2xl border border-slate-200 bg-white p-6 h-28" />
     );
@@ -29,6 +32,7 @@ export function NextClassBanner({ userId }: NextClassBannerProps) {
   }
 
   if (!nextClass) {
+    if (hideEmpty) return null;
     return (
       <section className="rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-5 sm:p-6">
         <div className="flex flex-wrap items-center justify-between gap-4">

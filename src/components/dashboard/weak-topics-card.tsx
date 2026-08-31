@@ -12,6 +12,8 @@ type WeakTopicsCardProps = {
   /** Usuario con plan PRO o Residente: sin candados en temas secundarios. */
   isProUser?: boolean;
   userPlan?: StoredUserPlan | null;
+  /** Si se define, muestra solo los N temas más débiles. */
+  limit?: number;
 };
 
 const TOPIC_HACKS: Record<string, { title: string; content: string }> = {
@@ -45,6 +47,7 @@ export function WeakTopicsCard({
   userId,
   isProUser: isProUserProp = false,
   userPlan,
+  limit,
 }: WeakTopicsCardProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [topics, setTopics] = useState<WeakTopicItem[]>([]);
@@ -83,7 +86,8 @@ export function WeakTopicsCard({
     return null;
   }
 
-  const mainWeakness = topics[0];
+  const visibleTopics = typeof limit === "number" ? topics.slice(0, Math.max(limit, 0)) : topics;
+  const mainWeakness = visibleTopics[0];
   const hack = mainWeakness ? TOPIC_HACKS[mainWeakness.topic] || TOPIC_HACKS["Medicina Interna"] : null;
 
   return (
@@ -92,7 +96,9 @@ export function WeakTopicsCard({
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-500/10 text-rose-400">
           <AlertTriangle size={20} />
         </div>
-        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Áreas de Mejora</p>
+        <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
+          Temas que te pueden dejar por fuera
+        </p>
       </div>
 
       {isLoading ? (
@@ -124,7 +130,7 @@ export function WeakTopicsCard({
           )}
 
           <ul className="space-y-3">
-            {topics.map((item, i) => (
+            {visibleTopics.map((item, i) => (
               <li
                 key={item.topic}
                 className="group flex flex-col gap-4 rounded-2xl bg-white/[0.03] p-4 transition-all hover:bg-white/[0.06] sm:flex-row sm:items-center sm:justify-between"

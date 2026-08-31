@@ -77,7 +77,7 @@ export function DailyRecommendationCard({ userId }: DailyRecommendationCardProps
       </p>
       <p className="mt-2 text-base font-semibold text-slate-900 sm:text-lg">{recommendationMessage}</p>
       <Link
-        href="/demo"
+        href="/dashboard/entrenar"
         className="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl bg-mq-accent px-4 text-sm font-semibold text-mq-accent-foreground transition duration-150 hover:brightness-110"
       >
         Empezar entrenamiento
