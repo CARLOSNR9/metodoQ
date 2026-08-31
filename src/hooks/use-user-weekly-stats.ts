@@ -2,15 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { getUserWeeklyStats } from "@/lib/results";
+import type { WeeklyPracticeStats } from "@/lib/scoring/weekly-score";
 
-export interface WeeklyStats {
-  totalCorrect: number;
-  totalQuestions: number;
-  wrongAnswers: number;
-  scorePercentage: number;
-  correctTopicsByName: Record<string, number>;
-  wrongTopicsByName: Record<string, number>;
-}
+export type WeeklyStats = WeeklyPracticeStats;
 
 export function useUserWeeklyStats(userId: string | undefined) {
   const [weeklyStats, setWeeklyStats] = useState<WeeklyStats | null>(null);

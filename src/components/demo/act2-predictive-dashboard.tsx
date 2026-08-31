@@ -1,14 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ResponsiveContainer,
-  AreaChart,
-  Area,
-  XAxis,
-  ReferenceLine,
-} from "recharts";
-import { TrendingDown, Info, AlertTriangle } from "lucide-react";
+import { TrendingDown, Info } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import {
   buildRadarChartData,
@@ -17,17 +10,14 @@ import {
 import {
   buildSubjectStatusFromRadar,
 } from "@/lib/diagnostic/question-subject";
-import {
-  supportsDedicatedDiagnosticBattery,
-} from "@/lib/diagnostic/university-match";
 import { ScoreComparisonCards } from "@/components/demo/score-comparison-cards";
 import { SubjectPerformancePanel } from "@/components/demo/subject-performance-panel";
 import { useUserWeeklyStats } from "@/hooks/use-user-weekly-stats";
+import { toStandardizedScore } from "@/lib/scoring/cumulative-score";
 
 interface Act2PredictiveDashboardProps {
-  /** Promedio global acumulado (%). */
+  /** Fallback si aún no hay semana cargada (sesión actual). */
   scorePercentage: number;
-  /** Puntaje de la última sesión completada (%). */
   lastSessionScore?: number | null;
   university: string | null;
   specialty: string | null;
@@ -38,18 +28,6 @@ interface Act2PredictiveDashboardProps {
   answersByQuestionId?: Record<string, string>;
   userId?: string;
 }
-
-const gaussData = (() => {
-  const points = [];
-  const mean = 550;
-  const stdDev = 150;
-  for (let i = 0; i <= 1000; i += 20) {
-    const exponent = -Math.pow(i - mean, 2) / (2 * Math.pow(stdDev, 2));
-    const y = (1 / (stdDev * Math.sqrt(2 * Math.PI))) * Math.exp(exponent);
-    points.push({ x: i, y });
-  }
-  return points;
-})();
 
 function getCutoffScore(university: string | null): number {
   const n = (university ?? "").toLowerCase();
@@ -62,7 +40,6 @@ export function Act2PredictiveDashboard({
   scorePercentage,
   university = "Universidad Nacional",
   specialty = "Medicina Interna",
-  lastSessionScore = null,
   totalQuestionsAnswered = 0,
   correctTopics = {},
   wrongTopics = {},
@@ -70,36 +47,54 @@ export function Act2PredictiveDashboard({
   answersByQuestionId,
   userId,
 }: Act2PredictiveDashboardProps) {
-  const { weeklyStats } = useUserWeeklyStats(userId);
-  
-  const standardizedScore = Math.round(scorePercentage * 7.2 + 180);
+  const { weeklyStats, loading: weeklyLoading } = useUserWeeklyStats(userId);
+
+  const hasWeeklyData = Boolean(weeklyStats && weeklyStats.totalQuestions > 0);
+  const useSessionFallback = !userId && (sessionQuestions?.length || Object.keys(correctTopics).length > 0);
+
+  const displayPercentage = hasWeeklyData
+    ? weeklyStats!.scorePercentage
+    : useSessionFallback
+      ? scorePercentage
+      : 0;
+  const displayCorrect = hasWeeklyData
+    ? weeklyStats!.totalCorrect
+    : useSessionFallback
+      ? Math.round((scorePercentage / 100) * Math.max(totalQuestionsAnswered, 0))
+      : 0;
+  const displayWrong = hasWeeklyData
+    ? weeklyStats!.wrongAnswers
+    : useSessionFallback
+      ? Math.max(totalQuestionsAnswered - displayCorrect, 0)
+      : 0;
+  const displayTotal = hasWeeklyData
+    ? weeklyStats!.totalQuestions
+    : useSessionFallback
+      ? totalQuestionsAnswered
+      : 0;
+
+  const standardizedScore = toStandardizedScore(displayPercentage);
   const cutoffScore = getCutoffScore(university);
-  const isAdmitted = standardizedScore >= cutoffScore;
+  const isAdmitted = displayTotal > 0 && standardizedScore >= cutoffScore;
   const gap = cutoffScore - standardizedScore;
-  const dedicatedDiagnostic = supportsDedicatedDiagnosticBattery(university, specialty);
-
-  const radarData = buildRadarChartData({
-    university,
-    specialty,
-    correctTopics,
-    wrongTopics,
-    sessionQuestions,
-    answersByQuestionId,
-  });
-
-  const topicLosses = getTopicLossesFromRadar(radarData, wrongTopics);
-  const subjectStatuses = buildSubjectStatusFromRadar(radarData);
 
   const weeklyRadarData = buildRadarChartData({
     university,
     specialty,
-    correctTopics: weeklyStats?.correctTopicsByName || {},
-    wrongTopics: weeklyStats?.wrongTopicsByName || {},
+    correctTopics: weeklyStats?.correctTopicsByName || (useSessionFallback ? correctTopics : {}),
+    wrongTopics: weeklyStats?.wrongTopicsByName || (useSessionFallback ? wrongTopics : {}),
+    sessionQuestions: useSessionFallback ? sessionQuestions : undefined,
+    answersByQuestionId: useSessionFallback ? answersByQuestionId : undefined,
   });
-  const weeklySubjectStatuses = buildSubjectStatusFromRadar(weeklyRadarData);
+  const subjectStatuses = buildSubjectStatusFromRadar(weeklyRadarData);
+  const topicLosses = getTopicLossesFromRadar(
+    weeklyRadarData,
+    weeklyStats?.wrongTopicsByName || (useSessionFallback ? wrongTopics : {}),
+  );
 
   const bestTopics = subjectStatuses.filter((s) => s.status === "strong").map((s) => s.label);
   const worstTopics = topicLosses.map((t) => t.name);
+  const weekLabel = weeklyStats?.weekLabel;
 
   return (
     <div className="space-y-10 animate-in fade-in duration-1000">
@@ -109,129 +104,51 @@ export function Act2PredictiveDashboard({
         animate={{ opacity: 1, y: 0 }}
       >
         <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">
-          Puntaje estandarizado · promedio global
+          Puntaje estandarizado · total semanal
         </p>
-        <motion.div className="relative inline-block">
-          <motion.h3
-            initial={{ scale: 0.5, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className={`text-7xl font-black italic border-4 px-8 py-2 rounded-3xl ${isAdmitted ? "text-emerald-500 border-emerald-500/20" : "text-red-500 border-red-500/20"}`}
-          >
-            {standardizedScore}
-          </motion.h3>
-          <motion.div
-            initial={{ rotate: -8, opacity: 0 }}
-            animate={{ rotate: 12, opacity: 1 }}
-            className="absolute -right-12 top-0 border-2 border-red-500 px-2 py-1 text-[10px] font-black uppercase tracking-tighter text-red-500"
-          >
-            {isAdmitted ? "ADMITIDO" : "NO ADMITIDO"}
-          </motion.div>
-        </motion.div>
-        <p className="mx-auto max-w-sm text-sm text-slate-500">
-          {isAdmitted
-            ? "Felicidades. Estadísticamente estás dentro del rango competitivo de cupos."
-            : `Te faltan ${gap} puntos para alcanzar el umbral de corte estimado (${cutoffScore}).`}
-        </p>
-
-        <ScoreComparisonCards
-          globalScorePercentage={scorePercentage}
-          lastSessionScore={lastSessionScore}
-          totalQuestionsAnswered={totalQuestionsAnswered}
-          className="mx-auto max-w-lg pt-2 text-left"
-        />
-      </motion.div>
-
-      <motion.div
-        className="space-y-6 rounded-[2.5rem] border border-white/5 bg-slate-50 p-8"
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-      >
-        <div className="flex items-center justify-between">
-          <h4 className="text-sm font-black uppercase tracking-widest text-slate-900">
-            Distribución de aspirantes
-          </h4>
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1.5">
-              <div className="h-2 w-2 rounded-full bg-red-500" />
-              <span className="text-[10px] font-bold text-slate-500">Tú</span>
-            </div>
-            <div className="flex items-center gap-1.5">
+        {weeklyLoading && userId ? (
+          <p className="text-sm text-slate-500">Calculando tu semana…</p>
+        ) : displayTotal > 0 ? (
+          <>
+            <motion.div className="relative inline-block">
+              <motion.h3
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                className={`text-7xl font-black italic border-4 px-8 py-2 rounded-3xl ${isAdmitted ? "text-emerald-500 border-emerald-500/20" : "text-red-500 border-red-500/20"}`}
+              >
+                {standardizedScore}
+              </motion.h3>
               <motion.div
-                className="h-2 w-2 rounded-full bg-emerald-500"
-                animate={{ opacity: [1, 0.5, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-              <span className="text-[10px] font-bold text-slate-500">Corte</span>
-            </div>
-          </div>
-        </div>
-
-        <motion.div
-          className="h-48 w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={gaussData} margin={{ top: 20, right: 10, left: 10, bottom: 0 }}>
-              <XAxis dataKey="x" type="number" domain={["dataMin", "dataMax"]} hide />
-              <defs>
-                <linearGradient id="colorY" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#00d1ff" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#00d1ff" stopOpacity={0} />
-                </linearGradient>
-              </defs>
-              <Area
-                type="monotone"
-                dataKey="y"
-                stroke="#00d1ff"
-                fillOpacity={1}
-                fill="url(#colorY)"
-                strokeWidth={2}
-              />
-              <ReferenceLine
-                x={standardizedScore}
-                stroke="#ef4444"
-                strokeWidth={3}
-                label={{
-                  value: "Tú",
-                  position: "top",
-                  fill: "#ef4444",
-                  fontSize: 10,
-                  fontWeight: "bold",
-                }}
-              />
-              <ReferenceLine
-                x={cutoffScore}
-                stroke="#10b981"
-                strokeWidth={3}
-                strokeDasharray="3 3"
-                label={{
-                  value: "Corte",
-                  position: "top",
-                  fill: "#10b981",
-                  fontSize: 10,
-                  fontWeight: "bold",
-                }}
-              />
-            </AreaChart>
-          </ResponsiveContainer>
-        </motion.div>
-
-        <motion.div
-          className={`flex items-start gap-4 rounded-2xl border p-4 ${isAdmitted ? "border-emerald-500/20 bg-emerald-500/10" : "border-red-500/20 bg-red-500/10"}`}
-          initial={{ opacity: 0, x: -12 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          <AlertTriangle size={20} className={`mt-0.5 shrink-0 ${isAdmitted ? "text-emerald-600" : "text-red-600"}`} />
-          <p className={`text-xs italic leading-relaxed ${isAdmitted ? "text-emerald-800" : "text-red-800"}`}>
-            {isAdmitted
-              ? `"En ${university ?? "tu universidad"}, tu promedio acumulado te ubica en rango competitivo para ${specialty ?? "tu especialidad"}, pero el examen exige constancia diaria."`
-              : `"En ${university ?? "tu universidad"}, la competencia por cupos de ${specialty ?? "tu especialidad"} es alta. Tu promedio acumulado (${scorePercentage}% en ${totalQuestionsAnswered || "varias"} preguntas) aún tiene margen de mejora."`}
+                initial={{ rotate: -8, opacity: 0 }}
+                animate={{ rotate: 12, opacity: 1 }}
+                className="absolute -right-12 top-0 border-2 border-red-500 px-2 py-1 text-[10px] font-black uppercase tracking-tighter text-red-500"
+              >
+                {isAdmitted ? "ADMITIDO" : "NO ADMITIDO"}
+              </motion.div>
+            </motion.div>
+            <p className="mx-auto max-w-sm text-sm text-slate-500">
+              {isAdmitted
+                ? "Felicidades. Tu semana te ubica en rango competitivo de cupos."
+                : `Te faltan ${gap} puntos para alcanzar el umbral de corte estimado (${cutoffScore}).`}
+            </p>
+          </>
+        ) : (
+          <p className="mx-auto max-w-sm text-sm text-slate-500">
+            Esta semana (domingo a domingo) aún no tienes práctica registrada.
+            Los simulacros no entran en este total.
           </p>
-        </motion.div>
+        )}
+
+        {!weeklyLoading && (
+          <ScoreComparisonCards
+            scorePercentage={displayPercentage}
+            totalQuestions={displayTotal}
+            totalCorrect={displayCorrect}
+            wrongAnswers={displayWrong}
+            weekLabel={weekLabel}
+            className="mx-auto max-w-lg pt-2 text-left"
+          />
+        )}
       </motion.div>
 
       <div className="grid gap-6 sm:grid-cols-2">
@@ -241,35 +158,14 @@ export function Act2PredictiveDashboard({
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.35 }}
         >
-          {weeklyStats && weeklyStats.totalQuestions > 0 && (
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm flex items-center justify-between">
-              <div>
-                <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                  Rendimiento esta semana
-                </p>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <span className="text-2xl font-black text-mq-accent">{weeklyStats.scorePercentage}%</span>
-                  <span className="text-xs font-medium text-slate-500">acierto</span>
-                </div>
-              </div>
-              <div className="text-right">
-                <p className="text-sm font-bold text-slate-900">{weeklyStats.totalQuestions} preguntas</p>
-                <p className="text-xs text-slate-500">
-                  <span className="text-emerald-600 font-bold">{weeklyStats.totalCorrect}</span> bien · <span className="text-red-500 font-bold">{weeklyStats.wrongAnswers}</span> mal
-                </p>
-              </div>
-            </div>
-          )}
-
           <SubjectPerformancePanel
             subjects={subjectStatuses}
-            weeklySubjects={weeklyStats && weeklyStats.totalQuestions > 0 ? weeklySubjectStatuses : undefined}
             subtitle={
-              dedicatedDiagnostic
-                ? "Cuánto aciertas en cada asignatura de tu diagnóstico."
-                : "Cuánto aciertas en cada asignatura que has practicado."
+              weekLabel
+                ? `Debilidad y mejora de la semana ${weekLabel}. Sin simulacros.`
+                : "Temas de debilidad y de mejora de esta semana (domingo a domingo). Sin simulacros."
             }
-            emptyMessage="Completa el diagnóstico para ver tu desempeño por asignatura."
+            emptyMessage="Esta semana aún no hay práctica por asignatura. Completa diagnóstico, retos o entrenamiento (los simulacros no cuentan)."
           />
         </motion.div>
 
@@ -289,7 +185,7 @@ export function Act2PredictiveDashboard({
                 <TrendingDown size={18} />
               </motion.div>
               <h5 className="text-sm font-bold uppercase tracking-wider text-slate-900">
-                Fuga crítica de puntos
+                Debilidades de la semana
               </h5>
             </div>
             {topicLosses.length > 0 ? (
@@ -305,14 +201,16 @@ export function Act2PredictiveDashboard({
                       animate={{ opacity: 1, x: 0 }}
                     >
                       <span className="text-slate-500">{t.name}</span>
-                      <span className="font-bold text-red-400">{errorRate}% errores</span>
+                      <span className="font-bold text-red-400">
+                        {errorRate}% errores · {t.wrong} malas
+                      </span>
                     </motion.li>
                   );
                 })}
               </ul>
             ) : (
               <p className="text-xs text-slate-500">
-                Sin fugas críticas en esta sesión. Mantén el ritmo de estudio.
+                Sin fugas críticas esta semana. Mantén el ritmo de estudio.
               </p>
             )}
           </div>
@@ -329,20 +227,20 @@ export function Act2PredictiveDashboard({
               transition={{ duration: 2.5, repeat: Infinity }}
             >
               <Info size={18} />
-              <h5 className="text-sm font-black uppercase tracking-wider">Plan de supervivencia</h5>
+              <h5 className="text-sm font-black uppercase tracking-wider">Temas a mejorar</h5>
             </motion.div>
             <p className="text-xs leading-relaxed text-slate-500">
               {bestTopics.length > 0
-                ? `Tu dominio en ${bestTopics.join(", ")} te mantiene competitivo, pero `
-                : "Es prioritario reforzar "}
+                ? `Esta semana dominas ${bestTopics.join(", ")}, pero `
+                : "Esta semana es prioritario reforzar "}
               {worstTopics.length > 0 ? (
                 <>
                   las asignaturas de{" "}
                   <span className="font-bold text-slate-900">{worstTopics.join(" y ")}</span> están
-                  limitando tu puntaje. Enfoca módulos clínicos y guías MSPS/INS en esas áreas.
+                  limitando tu puntaje semanal. Enfoca módulos clínicos y guías MSPS/INS en esas áreas.
                 </>
               ) : (
-                <>tu nivel en esta sesión es sólido. Sigue con simulacros cronometrados.</>
+                <>tu nivel semanal es sólido. Sigue con práctica diaria; los simulacros no alteran este total.</>
               )}
             </p>
           </motion.div>

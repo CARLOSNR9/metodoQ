@@ -1,28 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe, Zap } from "lucide-react";
+import { CalendarDays, CheckCircle2, Hash } from "lucide-react";
 import { toStandardizedScore } from "@/lib/scoring/cumulative-score";
 
 type ScoreComparisonCardsProps = {
-  globalScorePercentage: number;
-  lastSessionScore?: number | null;
-  totalQuestionsAnswered?: number;
+  scorePercentage: number;
+  totalQuestions: number;
+  totalCorrect: number;
+  wrongAnswers: number;
+  weekLabel?: string;
+  title?: string;
+  subtitle?: string;
+  emptyMessage?: string;
   className?: string;
 };
 
 export function ScoreComparisonCards({
-  globalScorePercentage,
-  lastSessionScore,
-  totalQuestionsAnswered = 0,
+  scorePercentage,
+  totalQuestions,
+  totalCorrect,
+  wrongAnswers,
+  weekLabel,
+  title = "Total semanal",
+  subtitle = "Diagnóstico, retos diarios y entrenamiento. Los simulacros no cuentan.",
+  emptyMessage = "Aún no hay práctica esta semana. Completa preguntas para ver tu total.",
   className,
 }: ScoreComparisonCardsProps) {
-  const showLastSession =
-    typeof lastSessionScore === "number" && Number.isFinite(lastSessionScore);
-  const globalStandardized = toStandardizedScore(globalScorePercentage);
-  const sessionStandardized = showLastSession
-    ? toStandardizedScore(lastSessionScore)
-    : null;
+  const standardized = toStandardizedScore(scorePercentage);
+  const hasData = totalQuestions > 0;
 
   return (
     <motion.div
@@ -40,21 +46,25 @@ export function ScoreComparisonCards({
           animate={{ opacity: [0.85, 1, 0.85] }}
           transition={{ duration: 2.5, repeat: Infinity }}
         >
-          <Globe size={16} />
+          <CalendarDays size={16} />
           <span className="text-[10px] font-black uppercase tracking-widest">
-            Promedio global
+            {title}
           </span>
         </motion.div>
-        <p className="text-3xl font-black text-slate-900">{globalScorePercentage}%</p>
-        <p className="mt-1 text-xs text-slate-500">
-          {globalStandardized} estandarizado
-          {totalQuestionsAnswered > 0
-            ? ` · ${totalQuestionsAnswered} preguntas en total`
-            : ""}
-        </p>
-        <p className="mt-2 text-[10px] leading-relaxed text-slate-500/80">
-          Diagnóstico + retos diarios + entrenamiento acumulados.
-        </p>
+        {hasData ? (
+          <>
+            <p className="text-3xl font-black text-slate-900">{scorePercentage}%</p>
+            <p className="mt-1 text-xs text-slate-500">
+              {standardized} estandarizado
+              {weekLabel ? ` · ${weekLabel}` : ""}
+            </p>
+            <p className="mt-2 text-[10px] leading-relaxed text-slate-500/80">
+              {subtitle}
+            </p>
+          </>
+        ) : (
+          <p className="text-sm leading-relaxed text-slate-500">{emptyMessage}</p>
+        )}
       </motion.div>
 
       <motion.div
@@ -62,27 +72,37 @@ export function ScoreComparisonCards({
         whileHover={{ scale: 1.01 }}
       >
         <div className="mb-3 flex items-center gap-2 text-amber-600">
-          <Zap size={16} />
+          <CheckCircle2 size={16} />
           <span className="text-[10px] font-black uppercase tracking-widest">
-            Última sesión
+            Desglose
           </span>
         </div>
-        {showLastSession ? (
+        {hasData ? (
           <>
-            <p className="text-3xl font-black text-slate-900">{lastSessionScore}%</p>
-            <p className="mt-1 text-xs text-slate-500">
-              {sessionStandardized} estandarizado · intento más reciente
+            <div className="flex items-baseline gap-4">
+              <div>
+                <p className="text-3xl font-black text-emerald-600">{totalCorrect}</p>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-emerald-700/80">
+                  Buenas
+                </p>
+              </div>
+              <div>
+                <p className="text-3xl font-black text-red-500">{wrongAnswers}</p>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-red-600/80">
+                  Malas
+                </p>
+              </div>
+            </div>
+            <p className="mt-3 flex items-center gap-1.5 text-xs text-slate-600">
+              <Hash size={12} className="text-slate-400" />
+              {totalQuestions} preguntas en total
+              {weekLabel ? ` · ${weekLabel}` : ""}
             </p>
-            {lastSessionScore !== globalScorePercentage && (
-              <p className="mt-2 text-[10px] leading-relaxed text-amber-700/80">
-                {lastSessionScore > globalScorePercentage
-                  ? "Subió tu última sesión; el promedio global se actualiza con todas las preguntas."
-                  : "Tu última sesión fue más baja; el promedio global refleja todo tu historial."}
-              </p>
-            )}
           </>
         ) : (
-          <p className="text-sm text-slate-500">Sin sesiones registradas aún.</p>
+          <p className="text-sm leading-relaxed text-slate-500">
+            0 buenas · 0 malas · 0 preguntas esta semana.
+          </p>
         )}
       </motion.div>
     </motion.div>

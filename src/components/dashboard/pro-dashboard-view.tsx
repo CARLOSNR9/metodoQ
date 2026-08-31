@@ -23,7 +23,6 @@ import {
   AccumulatedStats,
   WeakTopicsCard,
   ProgressChart,
-  DailyPillCard,
   StudyBoardPreviewCard,
   NextClassBanner,
 } from "@/components/dashboard";
@@ -374,8 +373,8 @@ export function ProDashboardView({
               </div>
               <h2 className="text-3xl font-black text-slate-900">Tu realidad competitiva</h2>
               <p className="text-sm text-slate-500">
-                Promedio acumulado de diagnóstico, retos diarios y entrenamiento.
-                {totalQuestions > 0 ? ` Basado en ${totalQuestions} preguntas.` : ""}
+                Total semanal de domingo a domingo: diagnóstico, retos diarios y
+                entrenamiento. Los simulacros no se incluyen.
               </p>
             </div>
 
@@ -392,8 +391,6 @@ export function ProDashboardView({
           </section>
         </div>
       )}
-
-      <SubscriptionStatusCard profile={profile} />
 
       {isUccMiPro && hasDiagnosticData && (
         <>
@@ -452,9 +449,6 @@ export function ProDashboardView({
         </div>
 
         <aside className="space-y-8">
-          {/* DAILY PILL (SITUATION AWARE) */}
-          <DailyPillCard topic={dailyPillTopic} isLocked={needsDiagnostic} />
-
           <StudyBoardPreviewCard userId={user.uid} />
 
           {/* WEAK TOPICS / IA ANALYTICS */}
@@ -512,6 +506,8 @@ export function ProDashboardView({
           </div>
         </aside>
       </div>
+
+      <SubscriptionStatusCard profile={profile} />
 
       <Act1DiagnosticModal
         isOpen={isAct1Open}

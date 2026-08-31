@@ -39,6 +39,11 @@ service cloud.firestore {
       match /studyNotes/{noteId} {
         allow read, create, update, delete: if isOwner(userId);
       }
+
+      // Borrador de simulacro/convocatoria para retomar tras un corte
+      match /examDrafts/{draftId} {
+        allow read, create, update, delete: if isOwner(userId);
+      }
     }
 
     // Resultados de entrenamiento del usuario

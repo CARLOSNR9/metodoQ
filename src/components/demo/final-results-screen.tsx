@@ -246,9 +246,12 @@ export function FinalResultsScreen({
 
           {(isDailyPill || isAct1) && cumulativeScorePercentage !== undefined && (
             <ScoreComparisonCards
-              globalScorePercentage={globalScore}
-              lastSessionScore={sessionScore}
-              totalQuestionsAnswered={totalQuestionsAnswered}
+              scorePercentage={sessionScore}
+              totalQuestions={correctAnswers + wrongAnswers}
+              totalCorrect={correctAnswers}
+              wrongAnswers={wrongAnswers}
+              title="Esta sesión"
+              subtitle="Resultado del intento que acabas de completar."
               className="mt-8 max-w-lg"
             />
           )}

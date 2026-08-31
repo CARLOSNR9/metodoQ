@@ -25,7 +25,7 @@ import { hasProFeatures, hasUnlimitedTraining } from "@/lib/plans/access";
 import { getPlanUpgradeCta } from "@/lib/plans/upgrade-cta";
 import { trackClickUpgrade, trackDemoQuestionAnswered, trackFinishDemo, trackStartDemo, trackViewPaywall } from "@/lib/analytics/events";
 import { motion, AnimatePresence } from "framer-motion";
-import { Zap, Target, ArrowRight, Sparkles, Loader2 } from "lucide-react";
+import { Zap, Target, ArrowRight, Sparkles, Loader2, RotateCcw } from "lucide-react";
 import { universities, universitySpecialties, defaultSpecialties } from "@/data/university-specialties";
 import {
   saveDemoResult,
@@ -93,6 +93,19 @@ import {
   getWrongQuestionIds,
   resolveSessionQuestions,
 } from "@/lib/session-review";
+import {
+  clearExamDraft,
+  createExamDraft,
+  flushExamDraftRemoteSave,
+  getExamDraftAnsweredCount,
+  loadExamDraftLocal,
+  loadExamDraftRemote,
+  pickNewerExamDraft,
+  saveExamDraftLocal,
+  scheduleExamDraftRemoteSave,
+  type ExamDraft,
+  type ExamDraftIdentity,
+} from "@/lib/training/exam-draft";
 
 export type DemoQuestion = TrainingQuestion;
 
@@ -144,6 +157,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const customStatus = searchParams.get("status");
   const editionParam = searchParams.get("edition");
   const isUccSimulacro = searchParams.get("ucc") === "1";
+  const shouldAutoResume = searchParams.get("resume") === "1";
   const isTimedExam = isSimulacro || isConvocatoria;
   const convocatoriaEdition = useMemo(
     () => (isConvocatoria ? getConvocatoriaEdition(editionParam ?? "") : null),
@@ -243,6 +257,37 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [trainingTab, setTrainingTab] = useState<"quick" | "custom">(
     isCustomMode ? "custom" : "quick"
   );
+  const [pendingExamDraft, setPendingExamDraft] = useState<ExamDraft | null>(null);
+  const examDraftRef = useRef<ExamDraft | null>(null);
+  const examDraftStartedAtRef = useRef<string | null>(null);
+  const examDraftClearedRef = useRef(false);
+  const hasAutoResumedRef = useRef(false);
+  const isResultsStepRef = useRef(false);
+  const totalSecondsRef = useRef(0);
+
+  const examDraftIdentity = useMemo<ExamDraftIdentity | null>(() => {
+    if (isConvocatoria && convocatoriaEdition) {
+      return { kind: "convocatoria", editionCode: convocatoriaEdition.code };
+    }
+    if (isSimulacro) {
+      return {
+        kind: "simulacro",
+        isUccSimulacro,
+        count: sessionCountOverride ?? limits.simulacroQuestionCount,
+        minutes: simulacroMinutesOverride ?? limits.simulacroMinutes,
+      };
+    }
+    return null;
+  }, [
+    isConvocatoria,
+    convocatoriaEdition,
+    isSimulacro,
+    isUccSimulacro,
+    sessionCountOverride,
+    simulacroMinutesOverride,
+    limits.simulacroQuestionCount,
+    limits.simulacroMinutes,
+  ]);
 
   const effectivePlan = plan ?? "FREE";
   const isFreePlan = effectivePlan === "FREE";
@@ -287,6 +332,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const totalQuestions = hasStarted ? sessionQuestions.length : plannedQuestionCount;
   const availableQuestions = hasStarted ? sessionQuestions : [];
   const isResultsStep = hasStarted && currentQuestionIndex === totalQuestions;
+  isResultsStepRef.current = isResultsStep;
   const examFocusGuardEnabled = hasStarted && isTimedExam && !isResultsStep;
   const { isWarningOpen, dismissWarning, leaveCount } = useExamFocusGuard({
     enabled: examFocusGuardEnabled,
@@ -359,11 +405,79 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     setSavedResultId(null);
     hasTrackedFinishDemoRef.current = false;
     hasRecordedSessionRef.current = false;
+    examDraftStartedAtRef.current = null;
+    examDraftRef.current = null;
     setTotalSeconds(0);
     setSessionCompletedBlockId(null);
     setUsageBlockReason(null);
     setUsageBlockMeta({});
   }, []);
+
+  const resumeExamDraft = useCallback(
+    (draft: ExamDraft) => {
+      const restored = pickQuestionsFromBankByIds(questionBank, draft.questionIds);
+      if (restored.length !== draft.questionIds.length || restored.length === 0) {
+        setUsageBlockReason(
+          "No pudimos recuperar todas las preguntas de este simulacro. Empieza de nuevo.",
+        );
+        if (user && examDraftIdentity) {
+          void clearExamDraft(user.uid, examDraftIdentity);
+        }
+        setPendingExamDraft(null);
+        return;
+      }
+
+      const maxIndex = Math.max(restored.length - 1, 0);
+      const nextIndex =
+        isTimedExam &&
+        timedExamMaxSeconds > 0 &&
+        draft.elapsedSeconds >= timedExamMaxSeconds
+          ? restored.length
+          : Math.min(draft.currentQuestionIndex, maxIndex);
+
+      hasRecordedSessionRef.current = true;
+      examDraftStartedAtRef.current = draft.startedAt;
+      examDraftClearedRef.current = false;
+      examDraftRef.current = draft;
+      setSessionQuestions(restored);
+      setAnswersByQuestionId(draft.answersByQuestionId);
+      setResponseTimes(draft.responseTimes);
+      setCurrentQuestionIndex(nextIndex);
+      setTotalSeconds(draft.elapsedSeconds);
+      setHasStarted(true);
+      setPendingExamDraft(null);
+      setUsageBlockReason(null);
+      setUsageBlockMeta({});
+    },
+    [examDraftIdentity, isTimedExam, questionBank, timedExamMaxSeconds, user],
+  );
+
+  useEffect(() => {
+    if (!shouldAutoResume || hasAutoResumedRef.current) return;
+    if (!pendingExamDraft || hasStarted || questionBank.length === 0) return;
+    hasAutoResumedRef.current = true;
+    resumeExamDraft(pendingExamDraft);
+  }, [hasStarted, pendingExamDraft, questionBank.length, resumeExamDraft, shouldAutoResume]);
+
+  const discardExamDraft = useCallback(() => {
+    if (!user || !examDraftIdentity) {
+      setPendingExamDraft(null);
+      return;
+    }
+    const answered = pendingExamDraft
+      ? getExamDraftAnsweredCount(pendingExamDraft)
+      : 0;
+    if (answered > 0) {
+      const confirmed = window.confirm(
+        `Se perderán ${answered} respuesta${answered === 1 ? "" : "s"} guardada${answered === 1 ? "" : "s"}. ¿Empezar de nuevo?`,
+      );
+      if (!confirmed) return;
+    }
+    examDraftRef.current = null;
+    examDraftStartedAtRef.current = null;
+    setPendingExamDraft(null);
+    void clearExamDraft(user.uid, examDraftIdentity);
+  }, [examDraftIdentity, pendingExamDraft, user]);
 
   const handleContinueNextUccBlock = useCallback(() => {
     const nextBlock = uccBlockCompletion?.nextBlock;
@@ -609,6 +723,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     setSessionQuestions(selected);
     setHasStarted(true);
     setTotalSeconds(0);
+    examDraftStartedAtRef.current = new Date().toISOString();
+    examDraftClearedRef.current = false;
+    setPendingExamDraft(null);
     setUsageBlockReason(null);
     setUsageBlockMeta({});
     trackStartDemo({
@@ -870,6 +987,10 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   }, [answersByQuestionId, currentQuestion, hasStarted, isResultsStep]);
 
   useEffect(() => {
+    totalSecondsRef.current = totalSeconds;
+  }, [totalSeconds]);
+
+  useEffect(() => {
     if (!hasStarted || isResultsStep) return;
     const interval = setInterval(() => {
       setTotalSeconds((prev) => prev + 1);
@@ -889,6 +1010,132 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     }
     setCurrentQuestionIndex(totalQuestions);
   }, [hasStarted, isResultsStep, isTimedExam, timedExamMaxSeconds, totalSeconds, totalQuestions]);
+
+  useEffect(() => {
+    if (!user || !examDraftIdentity || hasStarted) return;
+
+    const local = loadExamDraftLocal(user.uid, examDraftIdentity);
+    if (local) setPendingExamDraft(local);
+
+    let cancelled = false;
+    void (async () => {
+      if (isConvocatoria && convocatoriaEdition) {
+        const attempt = await getConvocatoriaAttempt(user.uid, convocatoriaEdition.code);
+        if (attempt) {
+          await clearExamDraft(user.uid, examDraftIdentity);
+          if (!cancelled) setPendingExamDraft(null);
+          return;
+        }
+      }
+      const remote = await loadExamDraftRemote(user.uid, examDraftIdentity);
+      if (cancelled) return;
+      const best = pickNewerExamDraft(local, remote);
+      if (best) {
+        saveExamDraftLocal(best);
+        setPendingExamDraft(best);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    convocatoriaEdition,
+    examDraftIdentity,
+    hasStarted,
+    isConvocatoria,
+    user,
+  ]);
+
+  useEffect(() => {
+    if (
+      !user ||
+      !examDraftIdentity ||
+      !hasStarted ||
+      isResultsStep ||
+      examDraftClearedRef.current ||
+      sessionQuestions.length === 0
+    ) {
+      return;
+    }
+
+    const draft = createExamDraft({
+      userId: user.uid,
+      identity: examDraftIdentity,
+      questionIds: sessionQuestions.map((question) => question.id),
+      answersByQuestionId,
+      currentQuestionIndex,
+      elapsedSeconds: totalSecondsRef.current,
+      responseTimes,
+      startedAt: examDraftStartedAtRef.current ?? undefined,
+    });
+    if (!examDraftStartedAtRef.current) {
+      examDraftStartedAtRef.current = draft.startedAt;
+    }
+    examDraftRef.current = draft;
+    saveExamDraftLocal(draft);
+    scheduleExamDraftRemoteSave(draft);
+  }, [
+    answersByQuestionId,
+    currentQuestionIndex,
+    examDraftIdentity,
+    hasStarted,
+    isResultsStep,
+    responseTimes,
+    sessionQuestions,
+    user,
+  ]);
+
+  useEffect(() => {
+    if (!hasStarted || isResultsStep || examDraftClearedRef.current || !examDraftRef.current) return;
+    if (totalSeconds <= 0 || totalSeconds % 10 !== 0) return;
+    const draft = {
+      ...examDraftRef.current,
+      elapsedSeconds: totalSeconds,
+      updatedAt: new Date().toISOString(),
+    };
+    examDraftRef.current = draft;
+    saveExamDraftLocal(draft);
+    scheduleExamDraftRemoteSave(draft);
+  }, [hasStarted, isResultsStep, totalSeconds]);
+
+  useEffect(() => {
+    if (!hasStarted || !isTimedExam || isResultsStep) return;
+
+    const persistNow = () => {
+      if (examDraftClearedRef.current || isResultsStepRef.current) return;
+      const current = examDraftRef.current;
+      if (!current) return;
+      const draft = {
+        ...current,
+        elapsedSeconds: totalSecondsRef.current,
+        updatedAt: new Date().toISOString(),
+      };
+      examDraftRef.current = draft;
+      saveExamDraftLocal(draft);
+      flushExamDraftRemoteSave(draft);
+    };
+
+    const handleVisibility = () => {
+      if (document.hidden) persistNow();
+    };
+
+    window.addEventListener("beforeunload", persistNow);
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => {
+      persistNow();
+      window.removeEventListener("beforeunload", persistNow);
+      document.removeEventListener("visibilitychange", handleVisibility);
+    };
+  }, [hasStarted, isResultsStep, isTimedExam]);
+
+  useEffect(() => {
+    if (!isResultsStep || !user || !examDraftIdentity) return;
+    examDraftClearedRef.current = true;
+    examDraftRef.current = null;
+    examDraftStartedAtRef.current = null;
+    void clearExamDraft(user.uid, examDraftIdentity);
+  }, [examDraftIdentity, isResultsStep, user]);
 
   useEffect(() => {
     if (!isResultsStep || !user || hasSavedCurrentAttempt) return;
@@ -970,7 +1217,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   }, [isResultsStep, user, scorePercentage, correctAnswers, totalQuestions, hasStarted, isDailyPill, hasRegisteredTrainingDay]);
 
   const handleAnswer = (optionId: string, isCorrectFromCard?: boolean) => {
-    if (!currentQuestion || hasAnsweredCurrentQuestion) return;
+    if (!currentQuestion) return;
+    if (hasAnsweredCurrentQuestion) {
+      if (!isTimedExam) return;
+      setAnswersByQuestionId((prev) => ({ ...prev, [currentQuestion.id]: optionId }));
+      return;
+    }
 
     const isCorrect = isCorrectFromCard ?? (optionId === currentQuestion.correctOptionId);
     const now = Date.now();
@@ -1250,12 +1502,53 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                         ) : null}
                       </div>
                     ) : null}
+                    {isTimedExam && pendingExamDraft ? (
+                      <div className="mb-6 w-full max-w-lg rounded-2xl border border-mq-accent/30 bg-mq-accent/5 p-5 text-left">
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-accent">
+                          Simulacro interrumpido
+                        </p>
+                        <h3 className="mt-2 text-xl font-bold text-slate-900">
+                          Puedes retomar donde ibas
+                        </h3>
+                        <p className="mt-2 text-sm text-slate-600">
+                          Pregunta {Math.min(pendingExamDraft.currentQuestionIndex + 1, pendingExamDraft.questionIds.length)} de {pendingExamDraft.questionIds.length}
+                          {" · "}
+                          {getExamDraftAnsweredCount(pendingExamDraft)} respondida{getExamDraftAnsweredCount(pendingExamDraft) === 1 ? "" : "s"}
+                          {timedExamMaxSeconds > 0
+                            ? ` · ${formatRemainingExamTime(pendingExamDraft.elapsedSeconds, timedExamMaxSeconds)} restantes`
+                            : ""}
+                          .
+                        </p>
+                        <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                          <button
+                            type="button"
+                            onClick={() => resumeExamDraft(pendingExamDraft)}
+                            disabled={questionBank.length === 0}
+                            className="mq-premium-glow inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-mq-accent px-5 text-sm font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
+                          >
+                            Continuar simulacro
+                            <RotateCcw size={16} />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={discardExamDraft}
+                            className="inline-flex h-12 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-white px-5 text-sm font-bold text-slate-600 transition hover:bg-slate-50"
+                          >
+                            Empezar de nuevo
+                          </button>
+                        </div>
+                      </div>
+                    ) : null}
                     {isTimedExam && !usageBlockReason ? (
                       <div className="mb-6 max-w-lg rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium text-amber-800">
                         Permanece en esta pestaña durante todo el examen. Si cambias de ventana,
                         verás un aviso para que vuelvas a concentrarte aquí.
+                        {pendingExamDraft
+                          ? ""
+                          : " Si se va la luz o se cierra el navegador, podrás retomar el simulacro."}
                       </div>
                     ) : null}
+                    {pendingExamDraft ? null : (
                     <button
                       type="button"
                       onClick={() => {
@@ -1296,6 +1589,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                               : "COMENZAR ENTRENAMIENTO"}
                       <ArrowRight className="transition-transform group-hover:translate-x-1" />
                     </button>
+                    )}
                   </motion.div>
                 ) : demoStep === "university" ? (
                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="flex flex-col items-center w-full max-w-md bg-white border border-slate-200 rounded-[2rem] shadow-xl p-8 relative overflow-hidden">
@@ -1445,6 +1739,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                            ? false
                            : isAct1 && currentQuestionIndex > 0 && isFreePlan
                        }
+                       defaultSelectedOptionId={selectedOptionId}
                        examMode={isTimedExam}
                        allowChange={isTimedExam}
                     />

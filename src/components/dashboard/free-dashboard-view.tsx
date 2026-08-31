@@ -10,7 +10,6 @@ import {
   SummaryCards,
   AccumulatedStats,
   WeakTopicsCard,
-  DailyPillCard,
   ProgressSimulator,
   StudyBoardPreviewCard,
 } from "@/components/dashboard";
@@ -232,40 +231,6 @@ export function FreeDashboardView({
       <div className="grid gap-10 lg:grid-cols-3">
         {/* 2. BLOQUE PRINCIPAL - DIAGNÓSTICO O RESULTADOS */}
         <div className="lg:col-span-2 space-y-10">
-          {/* 2. EL HÁBITO: Daily Pill (Lo primero debajo del Hero) */}
-          {(() => {
-            const isLocked = !user?.attemptsCount || user.attemptsCount === 0;
-            let dynamicTopic = "Semiología"; // Default
-            
-            if (user?.topicStats) {
-              let maxWrong = -1;
-              Object.entries(user.topicStats).forEach(([topic, stats]: [string, any]) => {
-                if (stats.wrong > maxWrong) {
-                  maxWrong = stats.wrong;
-                  dynamicTopic = topic;
-                }
-              });
-            }
-
-            // Mapeo de nombres cortos para que el reto se vea enfocado en un solo tema específico
-            const shortTopicNames: Record<string, string> = {
-              "Medicina Interna - Cardiología / Guías de Práctica Clínica y Farmacología Cardiovascular.": "Cardiología",
-              "Medicina Interna - Endocrinología y Metabolismo / Farmacoterapéutica Avanzada.": "Endocrinología",
-              "Medicina Interna - Neumología / Terapia Respiratoria Inhalada.": "Neumología",
-              "Infectología / Epidemiología, Legislación y Salud Pública Colombiana.": "Salud Pública",
-              "Infectología / Farmacología Clínica y Políticas Ministeriales.": "Infectología",
-              "Medicina Interna - Neurología Clínica / Terapia Neurocrítica.": "Neurología",
-              "Ciencias Básicas Aplicadas / Fisiología Gastrointestinal y Bioquímica.": "Ciencias Básicas",
-              "Medicina Interna - Cardiología / Semiología Integrada y Fisiopatología Mecánica.": "Semiología",
-              "Salud Pública / Epidemiología, Administración Médica y Políticas de Estado.": "Administración",
-              "Razonamiento Abstracto y Lógico / Epidemiología, Análisis de Pruebas Diagnósticas y Bioestadística.": "Bioestadística"
-            };
-
-            const cleanTopic = shortTopicNames[dynamicTopic] || dynamicTopic.split(" / ")[0] || dynamicTopic;
-
-            return <DailyPillCard topic={cleanTopic} isLocked={isLocked} />;
-          })()}
-
           {/* 3. LA REVELACIÓN: Resultados del Diagnóstico o Invitación */}
           {user?.attemptsCount > 0 ? (
             <div className="space-y-10">
@@ -279,8 +244,8 @@ export function FreeDashboardView({
                   </div>
                   <h2 className="text-3xl font-black text-slate-900">Tu Realidad Académica</h2>
                   <p className="text-slate-500 text-sm">
-                    Promedio acumulado de todas tus respuestas (diagnóstico, retos diarios y entrenamiento).
-                    {totalQuestions > 0 ? ` Basado en ${totalQuestions} preguntas.` : ""}
+                    Total semanal de domingo a domingo: diagnóstico, retos diarios y
+                    entrenamiento. Los simulacros no se incluyen.
                   </p>
                 </div>
                 

@@ -9,6 +9,8 @@ import {
   StreakReminderBanner,
   ProStudyGapBanner,
   UccCoachingReminderBanner,
+  InterruptedExamBanner,
+  DrQRetoBanner,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
@@ -84,6 +86,8 @@ export default function DashboardPage() {
       {!profile?.requiresPasswordChange && <OnboardingModal userId={user.uid} />}
 
       <div className="mb-6 space-y-3">
+        <DrQRetoBanner profile={profile} />
+        <InterruptedExamBanner userId={user.uid} />
         <SubscriptionExpirationAlert />
         {showPaidDashboard ? (
           <ProStudyGapBanner
