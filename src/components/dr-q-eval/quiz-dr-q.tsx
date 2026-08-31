@@ -39,7 +39,25 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
   };
 
   const parseTheoryContent = (text: string) => {
-    return text.replace("EXPLICACIÓN DEL PROFE BY DR Q", "").trim();
+    return text
+      .replace(/EXPLICACI[OÓ]N DEL PROFE\s*:?\s*BY DR Q/gi, "")
+      .trim();
+  };
+
+  const isSectionHeading = (line: string) => {
+    const normalized = line.replace(/^[🔥📚✅👉❌\s]+/, "").trim();
+    return (
+      /^(lo que debes saber para el examen|regla de oro para residencia|perlas de examen|referencias|analicemos el caso|analicemos cada afirmación|tema:)/i.test(
+        normalized
+      ) ||
+      (normalized.length > 0 &&
+        normalized.length < 48 &&
+        !normalized.includes("?") &&
+        /^[A-ZÁÉÍÓÚÑ]/.test(normalized) &&
+        !/[.]$/.test(normalized) &&
+        (normalized === normalized.toUpperCase() ||
+          /^(paso|opción)\s/i.test(normalized)))
+    );
   };
 
   if (isFinished) {
@@ -174,7 +192,7 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
                   </div>
                   
                   <div className="space-y-1 max-w-none text-slate-100">
-                    {parseTheoryContent(question.theoryContent || question.explanation).split('\\n').map((line, idx) => {
+                    {parseTheoryContent(question.theoryContent || question.explanation).split("\n").map((line, idx) => {
                       if (!line.trim()) return <div key={idx} className="h-4" />;
                       
                       const isTrampa = line.toLowerCase().includes("trampa");
@@ -187,7 +205,7 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
                       if (isTrampa) Icon = <AlertTriangle className="inline-block mr-2 text-red-400 mb-1" size={18} />;
                       else if (isPerla) Icon = <Lightbulb className="inline-block mr-2 text-yellow-400 mb-1" size={18} />;
 
-                      if (line.startsWith("¿") || line.includes("?")) {
+                      if ((line.startsWith("¿") || line.trim().endsWith("?")) && line.length < 90) {
                         return (
                           <h3 key={idx} className="flex items-center text-lg font-bold text-white mt-8 mb-3 border-b border-white/10 pb-2">
                             {Icon || <BookOpen className="inline-block mr-2 text-yellow-400 mb-1" size={18} />}
@@ -196,8 +214,8 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
                         );
                       }
 
-                      if (line.startsWith("**") && line.endsWith("**")) {
-                        return <h3 key={idx} className="text-xl font-bold text-yellow-400 mt-8 mb-3">{line.replace(/\\*\\*/g, '')}</h3>;
+                      if ((line.startsWith("**") && line.endsWith("**")) || isSectionHeading(line)) {
+                        return <h3 key={idx} className="text-xl font-bold text-yellow-400 mt-8 mb-3">{line.replace(/\*\*/g, "")}</h3>;
                       }
 
                       if (isList) {
