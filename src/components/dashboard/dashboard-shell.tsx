@@ -27,6 +27,7 @@ import {
   CalendarDays,
   ClipboardCheck,
   Shield,
+  Stethoscope,
 } from "lucide-react";
 import { useFailedQuestionsCount } from "@/hooks/use-failed-questions-count";
 
@@ -41,6 +42,7 @@ const navigationItems = [
   { label: "Estudio", href: "/dashboard/estudio", icon: StickyNote },
   { label: "Simulacros", href: "/dashboard/convocatorias", icon: ClipboardCheck, proOnly: true },
   { label: "Mis clases", href: "/dashboard/clases", icon: CalendarDays, proOnly: true },
+  { label: "Retos Dr. Q", href: "/dashboard/evaluaciones/primera", icon: Stethoscope, proOnly: true },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
   { label: "Historial", href: "/dashboard/historial", icon: History },
   { label: "Perfil", href: "/dashboard/perfil", icon: User },

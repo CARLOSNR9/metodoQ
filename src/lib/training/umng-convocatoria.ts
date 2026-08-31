@@ -2,6 +2,8 @@ import { doc, getDoc, setDoc } from "firebase/firestore";
 import { UMNG_CONV_2026_07_26_QUESTIONS } from "@/data/umng-conv-2026-07-26-questions";
 import { UMNG_CONV_ED2_QUESTIONS } from "@/data/umng-conv-ed2-questions";
 import { UMNG_CONV_ED3_QUESTIONS } from "@/data/umng-conv-ed3-questions";
+import { UMNG_CONV_ED4_QUESTIONS } from "@/data/umng-conv-ed4-questions";
+import { UMNG_CONV_ED5_QUESTIONS } from "@/data/umng-conv-ed5-questions";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -73,6 +75,28 @@ export const UMNG_CONVOCATORIA_EDITIONS: UmngConvocatoriaEdition[] = [
     isGlobal: true,
     stayOpenUntilNext: true,
     questions: UMNG_CONV_ED3_QUESTIONS,
+  },
+  {
+    code: "UMNG-ED4",
+    label: "Edición #4",
+    examDate: "2026-08-16T08:00:00-05:00",
+    questionCount: 100,
+    minutes: 120,
+    isGlobal: true,
+    stayOpenUntilNext: true,
+    daysOpen: 7,
+    questions: UMNG_CONV_ED4_QUESTIONS,
+  },
+  {
+    code: "UMNG-ED5",
+    label: "Edición #5",
+    examDate: "2026-08-23T08:00:00-05:00",
+    questionCount: 100,
+    minutes: 120,
+    isGlobal: true,
+    stayOpenUntilNext: true,
+    daysOpen: 7,
+    questions: UMNG_CONV_ED5_QUESTIONS,
   }
 ];
 function parseLocalDate(dateKey: string): Date {

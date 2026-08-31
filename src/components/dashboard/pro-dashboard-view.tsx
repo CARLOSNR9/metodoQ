@@ -140,6 +140,40 @@ export function ProDashboardView({
     <div className="space-y-10 pb-12">
       {showLiveClasses && user?.uid ? <NextClassBanner userId={user.uid} /> : null}
 
+      {/* DR Q EVALUATION BANNER */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="relative overflow-hidden rounded-[2rem] border border-yellow-500/30 bg-gradient-to-r from-slate-900 to-slate-800 p-8 shadow-xl"
+      >
+        <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-yellow-400/20 blur-3xl" />
+        <div className="relative z-10 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-4">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-yellow-400/10 text-yellow-400 border border-yellow-400/20">
+              <Sparkles size={32} />
+            </div>
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-yellow-400/10 px-3 py-1 mb-2">
+                <span className="text-[10px] font-black uppercase tracking-widest text-yellow-400">
+                  Nuevo Módulo Premium
+                </span>
+              </div>
+              <h2 className="text-2xl font-black text-white">El Reto del Dr. Q</h2>
+              <p className="mt-1 text-sm text-slate-300">
+                Primera Evaluación interactiva con tips y perlas de examen.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/dashboard/evaluaciones/primera"
+            className="mq-premium-glow group inline-flex h-14 shrink-0 items-center justify-center gap-2 rounded-xl bg-yellow-400 px-8 font-bold text-slate-900 transition-all hover:bg-yellow-300 active:scale-95"
+          >
+            <span>Iniciar Reto</span>
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </motion.div>
+
       {/* 1. PREMIUM HEADER */}
       <motion.header 
         initial={{ opacity: 0, y: 20 }}
