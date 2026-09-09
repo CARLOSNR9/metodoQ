@@ -17,17 +17,27 @@ import type { LearningTrackProfile } from "@/lib/diagnostic/ucc-pasto-track";
 const INACTIVITY_ALERT_DAYS = 2;
 const LOOKBACK_DAYS = 14;
 
-type ProStudyGapBannerProps = {
-  userId: string;
-  planStartedAt?: string | null;
+export type StudyGapInfo = {
+  inactiveDays: number;
+  dailyTarget: number;
+  isUrgent: boolean;
 };
 
-export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerProps) {
+export function useProStudyGapAlert(
+  enabled: boolean,
+  userId: string,
+  planStartedAt?: string | null,
+): StudyGapInfo | null {
   const [inactiveDays, setInactiveDays] = useState(0);
   const [dailyTarget, setDailyTarget] = useState(PRO_DAILY_MIN_QUESTIONS);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(!enabled ? false : true);
 
   useEffect(() => {
+    if (!enabled) {
+      setIsLoading(false);
+      return;
+    }
+
     let mounted = true;
 
     async function load() {
@@ -63,17 +73,19 @@ export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerPr
     return () => {
       mounted = false;
     };
-  }, [userId, planStartedAt]);
+  }, [enabled, userId, planStartedAt]);
 
   const showAlert = useMemo(
-    () => !isLoading && inactiveDays >= INACTIVITY_ALERT_DAYS,
-    [inactiveDays, isLoading],
+    () => enabled && !isLoading && inactiveDays >= INACTIVITY_ALERT_DAYS,
+    [enabled, inactiveDays, isLoading],
   );
 
   if (!showAlert) return null;
 
-  const isUrgent = inactiveDays >= 3;
+  return { inactiveDays, dailyTarget, isUrgent: inactiveDays >= 3 };
+}
 
+export function ProStudyGapAlertView({ inactiveDays, dailyTarget, isUrgent }: StudyGapInfo) {
   return (
     <div
       className={`flex flex-col gap-3 rounded-2xl border px-4 py-3 sm:flex-row sm:items-center sm:justify-between ${
@@ -111,4 +123,15 @@ export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerPr
       </Link>
     </div>
   );
+}
+
+type ProStudyGapBannerProps = {
+  userId: string;
+  planStartedAt?: string | null;
+};
+
+export function ProStudyGapBanner({ userId, planStartedAt }: ProStudyGapBannerProps) {
+  const info = useProStudyGapAlert(true, userId, planStartedAt);
+  if (!info) return null;
+  return <ProStudyGapAlertView {...info} />;
 }

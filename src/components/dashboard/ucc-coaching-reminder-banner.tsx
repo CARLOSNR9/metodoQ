@@ -13,15 +13,30 @@ type UccCoachingReminderBannerProps = {
   planStartedAt?: string | null;
 };
 
-export function UccCoachingReminderBanner({
-  userId,
-  profile,
-  planStartedAt,
-}: UccCoachingReminderBannerProps) {
-  const [status, setStatus] = useState<ReturnType<typeof buildUccCoachingStatus>>(null);
+type UccCoachingStatus = ReturnType<typeof buildUccCoachingStatus>;
+
+export type UccCoachingAlertInfo = {
+  status: NonNullable<UccCoachingStatus>;
+  showDaily: boolean;
+  showSimulacro: boolean;
+};
+
+export function useUccCoachingAlert(
+  enabled: boolean,
+  userId: string,
+  profile: UccCoachingProfile | null | undefined,
+  planStartedAt?: string | null,
+): UccCoachingAlertInfo | null {
+  const [status, setStatus] = useState<UccCoachingStatus>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    if (!enabled) {
+      setStatus(null);
+      setIsLoading(false);
+      return;
+    }
+
     let mounted = true;
 
     async function load() {
@@ -47,15 +62,18 @@ export function UccCoachingReminderBanner({
     return () => {
       mounted = false;
     };
-  }, [userId, profile, planStartedAt]);
+  }, [enabled, userId, profile, planStartedAt]);
 
-  if (isLoading || !status) return null;
+  if (!enabled || isLoading || !status) return null;
 
   const showDaily = status.dailyMissionPending;
   const showSimulacro = status.simulacroDue || status.simulacroOverdue;
-
   if (!showDaily && !showSimulacro) return null;
 
+  return { status, showDaily, showSimulacro };
+}
+
+export function UccCoachingAlertView({ status, showDaily, showSimulacro }: UccCoachingAlertInfo) {
   const remaining = status.dailyTarget - status.todayQuestions;
 
   return (
@@ -124,4 +142,14 @@ export function UccCoachingReminderBanner({
       )}
     </div>
   );
+}
+
+export function UccCoachingReminderBanner({
+  userId,
+  profile,
+  planStartedAt,
+}: UccCoachingReminderBannerProps) {
+  const info = useUccCoachingAlert(true, userId, profile, planStartedAt);
+  if (!info) return null;
+  return <UccCoachingAlertView {...info} />;
 }

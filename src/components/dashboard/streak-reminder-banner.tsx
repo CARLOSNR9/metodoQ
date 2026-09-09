@@ -13,6 +13,12 @@ type StreakReminderBannerProps = {
   trainHref?: string;
 };
 
+export type StreakReminderInfo = {
+  streakCount: number;
+  targetLabel: string;
+  trainHref: string;
+};
+
 function daysSinceLastTraining(lastTrainingDate: string | null): number | null {
   if (!lastTrainingDate) return null;
   const [year, month, day] = lastTrainingDate.split("-").map(Number);
@@ -23,13 +29,13 @@ function daysSinceLastTraining(lastTrainingDate: string | null): number | null {
   return Math.round((today.getTime() - last.getTime()) / (1000 * 60 * 60 * 24));
 }
 
-export function StreakReminderBanner({
+export function getStreakReminderAlert({
   streakCount,
   lastTrainingDate,
   dailyTarget = PRO_DAILY_MIN_QUESTIONS,
   streakMinimum = PRO_DAILY_MIN_QUESTIONS,
   trainHref = "/dashboard/entrenar",
-}: StreakReminderBannerProps) {
+}: StreakReminderBannerProps): StreakReminderInfo | null {
   if (streakCount <= 0) return null;
   if (lastTrainingDate === getLocalDateKey(new Date())) return null;
 
@@ -41,6 +47,10 @@ export function StreakReminderBanner({
       ? `${streakMinimum} preg (racha) · meta ${dailyTarget}`
       : `${dailyTarget} preguntas`;
 
+  return { streakCount, targetLabel, trainHref };
+}
+
+export function StreakReminderAlertView({ streakCount, targetLabel, trainHref }: StreakReminderInfo) {
   return (
     <div className="flex flex-col gap-3 rounded-2xl border border-orange-500/30 bg-orange-500/10 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex items-start gap-3">
@@ -62,4 +72,10 @@ export function StreakReminderBanner({
       </Link>
     </div>
   );
+}
+
+export function StreakReminderBanner(props: StreakReminderBannerProps) {
+  const info = getStreakReminderAlert(props);
+  if (!info) return null;
+  return <StreakReminderAlertView {...info} />;
 }
