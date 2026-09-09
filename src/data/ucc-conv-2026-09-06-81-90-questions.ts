@@ -1,0 +1,448 @@
+import type { TrainingQuestion } from "@/lib/questions/types";
+
+/**
+ * Convocatoria UCC — Edición #7 (6 sep 2026) · Preguntas #81–#90.
+ * Banco exclusivo del examen oficial.
+ */
+export const UCC_CONV_2026_09_06_81_90_QUESTIONS: TrainingQuestion[] = [
+  {
+    id: "ucc-conv-2026-09-06-81",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - INFECTOLOGÍA / NEUROLOGÍA",
+    topic: "Infectología",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","infectolog-a","infectolog","a"],
+    statement: "Un hombre de 35 años, agricultor en zona rural, consulta por dolor y parestesias intensas en la mano derecha, en el sitio de una mordedura de murciélago ocurrida hace 6 semanas (que no recibió atención médica en su momento). En los últimos 2 días ha presentado fiebre, ansiedad marcada, agitación, y episodios de **hidrofobia** (espasmos dolorosos de los músculos de la faringe y laringe al intentar beber agua o incluso al ver agua), junto con **aerofobia** (espasmos similares al sentir corrientes de aire en la cara). Al examen físico hay hiperactividad autonómica marcada (sialorrea profusa, diaforesis, midriasis) alternada con periodos de lucidez. ¿Cuál es el diagnóstico, y cuál es el pronóstico una vez que los síntomas neurológicos ya se han manifestado clínicamente?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Tétanos; el pronóstico es excelente con tratamiento oportuno, con tasas de supervivencia superiores al 95%.",
+        distractorProfile: "wrong_diagnosis_missing_pathognomonic_signs",
+        incorrectFeedback: "El Tétanos no causa hidrofobia ni aerofobia (los hallazgos patognomónicos descritos en esta viñeta), sino trismus y rigidez muscular generalizada; además, el antecedente específico de mordedura de murciélago es clave para el diagnóstico de Rabia, no de Tétanos.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Rabia; una vez iniciados los síntomas clínicos neurológicos, la enfermedad es casi universalmente MORTAL, siendo la prevención (profilaxis post-exposición) la única estrategia realmente efectiva.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Encefalitis por Virus del Nilo Occidental; el pronóstico es favorable en la mayoría de los casos con soporte de cuidados intensivos exclusivamente.",
+        distractorProfile: "wrong_diagnosis_missing_specific_findings",
+        incorrectFeedback: "La Encefalitis por Virus del Nilo Occidental no presenta los hallazgos patognomónicos de hidrofobia y aerofobia, y no está asociada típicamente a mordeduras de murciélago; estos hallazgos específicos son característicos exclusivamente de la Rabia.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Intoxicación por Estricnina; el pronóstico depende exclusivamente de la dosis ingerida, siendo generalmente reversible con tratamiento de soporte.",
+        distractorProfile: "wrong_diagnosis_wrong_exposure_route",
+        incorrectFeedback: "La intoxicación por estricnina se presenta con espasmos musculares generalizados similares al tétanos por ingesta o exposición al tóxico, no por mordedura de animal, y no explica la hidrofobia ni el periodo de incubación prolongado descrito, características específicas de la Rabia.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente presenta **Rabia**, una encefalitis viral transmitida por la mordedura de un animal infectado (los murciélagos son un reservorio particularmente importante, y sus mordeduras pueden pasar desapercibidas o parecer triviales, siendo frecuentemente no reportadas ni tratadas oportunamente, como en este caso). El virus viaja de forma retrógrada por los nervios periféricos desde el sitio de la mordedura hasta el sistema nervioso central, con un periodo de incubación variable (semanas a meses, dependiendo de la distancia entre el sitio de la mordedura y el cerebro). Los hallazgos clínicos patognomónicos una vez establecida la fase neurológica son la **hidrofobia** (espasmos faringolaríngeos dolorosos desencadenados por el intento de tragar agua) y la **aerofobia** (espasmos similares desencadenados por corrientes de aire), junto con hiperactividad autonómica marcada y periodos alternantes de agitación y lucidez. El punto crítico y devastador de esta enfermedad es que, una vez que los **síntomas clínicos neurológicos ya se han manifestado, la Rabia es prácticamente 100% mortal**, sin tratamiento curativo efectivo disponible en la práctica clínica estándar. Por esta razón, la **profilaxis post-exposición** (lavado exhaustivo de la herida, inmunoglobulina antirrábica infiltrada en y alrededor de la herida, y esquema de vacunación antirrábica) administrada **antes** del inicio de los síntomas es absolutamente crítica y debe ofrecerse a cualquier persona con exposición de riesgo (mordedura o contacto significativo con un animal potencialmente rabioso), independientemente de cuán trivial parezca la herida inicial.",
+    keyPoints: [
+    "Antecedente de mordedura de animal (especialmente murciélago, perro no vacunado) semanas/meses antes + Parestesias en el sitio de la mordedura + Hidrofobia + Aerofobia + Hiperactividad autonómica.",
+    "Rabia. REGLA DE ORO: Una vez iniciados los síntomas neurológicos, la mortalidad es prácticamente del 100%. La ÚNICA estrategia efectiva es la PREVENCIÓN mediante profilaxis post-exposición (lavado de la herida + Inmunoglobulina antirrábica + Vacuna) administrada ANTES de que aparezcan los síntomas.",
+    "Infectología / Rabia."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-82",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - ENDOCRINOLOGÍA",
+    topic: "Endocrinología Oncológica",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","endocrinolog-a-oncol-gica","endocrinolog","a","oncol","gica"],
+    statement: "Una mujer de 45 años consulta por aumento de peso progresivo de predominio central (abdominal), debilidad muscular proximal marcada que le dificulta subir escaleras, hematomas espontáneos frecuentes ante traumas mínimos, e hipertensión arterial de reciente diagnóstico difícil de controlar. Al examen físico se observan estrías violáceas amplias (>1 cm) en abdomen, \"giba de búfalo\" en la región cervical posterior, y plétora facial. Los laboratorios muestran hipokalemia marcada y alcalosis metabólica. El cortisol libre urinario de 24 horas está masivamente elevado, y la prueba de supresión con dosis altas de Dexametasona (8 mg) NO logra suprimir el cortisol, mientras que la ACTH plasmática está marcadamente elevada. Una tomografía de tórax revela una masa pulmonar central. ¿Cuál es el diagnóstico más probable de este Síndrome de Cushing, y por qué la hipokalemia es particularmente PROFUNDA en esta variante específica?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Adenoma Hipofisario productor de ACTH (Enfermedad de Cushing); la hipokalemia se debe exclusivamente al uso concomitante de diuréticos.",
+        distractorProfile: "wrong_diagnosis_wrong_dst_response",
+        incorrectFeedback: "En la Enfermedad de Cushing hipofisaria, la ACTH típicamente SÍ se suprime, al menos parcialmente, con dosis altas de Dexametasona, a diferencia de la ausencia completa de supresión descrita en esta paciente; además, no hay mención de uso de diuréticos, y la hipokalemia se explica por el mecanismo de saturación enzimática renal característico del cortisol masivamente elevado de origen ectópico.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Síndrome de Cushing por Secreción Ectópica de ACTH (frecuentemente por Carcinoma Pulmonar de Células Pequeñas); la hipokalemia es particularmente profunda porque las concentraciones extremadamente altas de cortisol saturan la enzima que normalmente lo inactiva a nivel renal, permitiendo que actúe directamente sobre los receptores mineralocorticoides.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Adenoma Suprarrenal productor de Cortisol autónomo; la ACTH estaría característicamente SUPRIMIDA (baja), no elevada, en este escenario.",
+        distractorProfile: "wrong_diagnosis_contradicts_lab_finding",
+        incorrectFeedback: "En un tumor suprarrenal autónomo productor de cortisol, la ACTH hipofisaria estaría suprimida por retroalimentación negativa (ACTH baja), exactamente lo opuesto al hallazgo de ACTH marcadamente elevada en esta paciente, que confirma un origen dependiente de ACTH (hipofisario o ectópico), no suprarrenal primario.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Síndrome de Cushing Iatrogénico por uso crónico de corticoides exógenos; la hipokalemia se debe a un mecanismo completamente distinto no relacionado con el eje hipotálamo-hipófisis-adrenal.",
+        distractorProfile: "wrong_diagnosis_no_exogenous_source",
+        incorrectFeedback: "No hay antecedente de uso de corticoides exógenos en esta viñeta, y en el Cushing iatrogénico la ACTH endógena estaría suprimida (baja) por la retroalimentación negativa del corticoide exógeno, no elevada como se documenta en esta paciente con una masa pulmonar productora de ACTH ectópica.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "La paciente presenta un **Síndrome de Cushing por Secreción Ectópica de ACTH**, causado en este caso probablemente por un **Carcinoma Pulmonar de Células Pequeñas** (la masa pulmonar central identificada), uno de los tumores no hipofisarios más frecuentemente asociados a esta producción hormonal ectópica y autónoma de ACTH. La combinación de ACTH marcadamente elevada con **ausencia de supresión** incluso con dosis altas de Dexametasona (a diferencia de la Enfermedad de Cushing por adenoma hipofisario, donde dosis altas de Dexametasona SÍ suelen lograr cierta supresión, ya que el adenoma hipofisario retiene parcialmente su sensibilidad a la retroalimentación negativa) apoya fuertemente el origen ectópico. La clave conceptual de esta pregunta es entender por qué la **hipokalemia es particularmente profunda y severa** en la secreción ectópica de ACTH: normalmente, el cortisol es inactivado a nivel renal por la enzima **11-beta-hidroxiesteroide deshidrogenasa tipo 2**, que lo convierte a cortisona (inactiva sobre el receptor mineralocorticoide), protegiendo así al receptor de aldosterona de ser activado inapropiadamente por el cortisol. Sin embargo, cuando las concentraciones de cortisol son extremadamente altas (como ocurre típicamente en la producción ectópica de tumores agresivos), esta enzima protectora se **satura** y no logra inactivar todo el exceso de cortisol, permitiendo que este actúe directamente sobre los receptores mineralocorticoides renales, generando un efecto similar al de un exceso de aldosterona: retención de sodio, e **hipokalemia marcada con alcalosis metabólica**.",
+    keyPoints: [
+    "Síndrome de Cushing florido + ACTH muy elevada + NO supresión con Dexametasona en dosis altas + Hipokalemia PROFUNDA con alcalosis metabólica + Masa pulmonar (o de otro origen no hipofisario).",
+    "Síndrome de Cushing por Secreción ECTÓPICA de ACTH (frecuentemente Carcinoma Pulmonar de Células Pequeñas). Mecanismo de la hipokalemia profunda: saturación de la 11-beta-HSD2 renal por el exceso masivo de cortisol, que entonces activa directamente el receptor mineralocorticoide.",
+    "Endocrinología Oncológica / Síndrome de Cushing Ectópico."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-83",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - PSIQUIATRÍA / TOXICOLOGÍA",
+    topic: "Toxicología",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","toxicolog-a","toxicolog","a"],
+    statement: "Un hombre de 58 años, con antecedente de Trastorno Bipolar en tratamiento crónico con Litio, es traído a urgencias por temblor grosero de manos, ataxia de la marcha, confusión progresiva, y dos episodios de vómito. Refiere que hace una semana inició un nuevo medicamento antiinflamatorio (Ibuprofeno) para dolor lumbar, tomándolo diariamente en dosis altas, y que además ha tenido una disminución en su ingesta de líquidos por un cuadro gripal reciente con fiebre y sudoración profusa. El nivel sérico de Litio es de 2.8 mEq/L (rango terapéutico habitual: 0.6-1.2 mEq/L). El electrocardiograma muestra cambios inespecíficos de la onda T. ¿Cuál es el mecanismo por el cual la combinación de AINEs y deshidratación precipitó esta intoxicación, y cuál es el tratamiento de elección en la intoxicación severa con compromiso neurológico significativo?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "El Ibuprofeno desplaza al Litio de su unión a proteínas plasmáticas; el tratamiento de elección es la administración de carbón activado en dosis repetidas.",
+        distractorProfile: "wrong_mechanism_and_ineffective_treatment",
+        incorrectFeedback: "El Litio no se une significativamente a proteínas plasmáticas, por lo que el desplazamiento proteico no es el mecanismo relevante aquí; además, el carbón activado tiene utilidad muy limitada en la intoxicación por Litio porque este ion no se absorbe eficazmente por el carbón, siendo la hemodiálisis el tratamiento correcto en casos severos.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Los AINEs reducen la filtración glomerular renal (al inhibir las prostaglandinas vasodilatadoras renales) y la deshidratación reduce aún más el aclaramiento renal del Litio, que se elimina casi exclusivamente por esta vía; en intoxicación severa con compromiso neurológico, el tratamiento de elección es la Hemodiálisis.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "El Litio se metaboliza hepáticamente y el Ibuprofeno compite por las mismas enzimas del citocromo P450, aumentando su vida media; el tratamiento de elección es N-Acetilcisteína.",
+        distractorProfile: "wrong_mechanism_wrong_antidote",
+        incorrectFeedback: "El Litio NO se metaboliza hepáticamente ni involucra el sistema del citocromo P450; se elimina casi exclusivamente sin cambios por vía renal, y la N-Acetilcisteína (antídoto específico del Acetaminofén) no tiene ningún rol en su tratamiento.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "La combinación no tiene relevancia farmacocinética real; el nivel elevado se debe exclusivamente a un error de laboratorio que debe repetirse antes de cualquier intervención.",
+        distractorProfile: "dangerous_dismissal_of_real_interaction",
+        incorrectFeedback: "La interacción entre AINEs, deshidratación y Litio está bien documentada y es clínicamente relevante; asumir un error de laboratorio sin actuar ante un nivel claramente tóxico con síntomas neurológicos compatibles retrasa peligrosamente el tratamiento necesario.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El paciente presenta una **Intoxicación por Litio**, precipitada por una interacción farmacocinética clásica y clínicamente relevante. El **Litio se elimina casi exclusivamente por vía renal**, siendo manejado por el riñón de forma similar al sodio (se reabsorbe extensamente en el túbulo proximal). Dos factores convergieron en este paciente para reducir dramáticamente su aclaramiento renal: primero, los **AINEs (Ibuprofeno)** inhiben la síntesis de prostaglandinas renales, que normalmente mantienen la vasodilatación de la arteriola aferente glomerular; al perderse este efecto vasodilatador, se reduce la tasa de filtración glomerular, disminuyendo la eliminación de Litio. Segundo, la **deshidratación** (por la disminución de ingesta de líquidos asociada al cuadro gripal con fiebre y sudoración) activa mecanismos de reabsorción de sodio (y, por su similitud, de Litio) a nivel del túbulo proximal, reduciendo aún más su excreción. El resultado es una acumulación tóxica de Litio, manifestada por el síndrome neurotóxico clásico (temblor, ataxia, confusión, que puede progresar a convulsiones y coma en casos severos). En la intoxicación **severa con compromiso neurológico significativo** (como en este paciente), el tratamiento de elección para remover eficazmente el Litio del organismo es la **Hemodiálisis**, ya que el Litio es una molécula pequeña, no unida a proteínas, que se dializa eficientemente.",
+    keyPoints: [
+    "Paciente en tratamiento crónico con Litio + inicio de AINEs y/o deshidratación + Temblor + Ataxia + Confusión.",
+    "Intoxicación por Litio (interacción con AINEs por reducción de la filtración glomerular + deshidratación que reduce el aclaramiento renal). Tratamiento de elección en intoxicación severa/neurológica: HEMODIÁLISIS (el Litio se dializa eficientemente).",
+    "Toxicología / Intoxicación por Litio."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-84",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - CARDIOLOGÍA / TOXICOLOGÍA",
+    topic: "Toxicología Cardiovascular",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","toxicolog-a-cardiovascular","toxicolog","a","cardiovascular"],
+    statement: "Una mujer de 40 años, con antecedente de depresión, es traída a urgencias tras una sobredosis intencional con múltiples tabletas de un antidepresivo tricíclico (Amitriptilina) hace 90 minutos. Al ingreso está somnolienta pero responde a estímulos, con pupilas dilatadas, piel seca, e íleo (ausencia de ruidos intestinales). El electrocardiograma muestra taquicardia sinusal con **ensanchamiento marcado del complejo QRS (140 milisegundos)** y una onda R prominente en aVR. ¿Cuál es el mecanismo de toxicidad cardíaca de este fármaco, y cuál es el tratamiento de PRIMERA LÍNEA ante el ensanchamiento del QRS, que actúa tanto como antídoto directo como estabilizador de membrana?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "El fármaco bloquea los canales de Potasio, causando prolongación del QT; tratamiento de elección con Sulfato de Magnesio intravenoso.",
+        distractorProfile: "wrong_mechanism_and_wrong_ecg_finding",
+        incorrectFeedback: "Aunque los tricíclicos también pueden prolongar el QT en algunos casos, el hallazgo predominante y de mayor relevancia terapéutica inmediata en esta viñeta es el ensanchamiento del QRS por bloqueo de canales de sodio, que se trata específicamente con Bicarbonato de Sodio, no con Magnesio (reservado para Torsades de Pointes por QT prolongado aislado).",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "El fármaco bloquea los canales rápidos de Sodio cardíacos, ensanchando el QRS y predisponiendo a arritmias ventriculares; tratamiento de elección con Bicarbonato de Sodio intravenoso en bolo.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "El fármaco causa bloqueo AV completo por toxicidad directa del nodo AV; tratamiento de elección con Atropina intravenosa exclusivamente.",
+        distractorProfile: "wrong_mechanism_and_ineffective_treatment",
+        incorrectFeedback: "El hallazgo electrocardiográfico descrito (QRS ancho, onda R en aVR) refleja bloqueo de canales de sodio en el miocardio ventricular, no un bloqueo AV nodal; la Atropina no revierte este mecanismo de toxicidad, siendo el Bicarbonato de Sodio el tratamiento específico correcto.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "El fármaco causa vasoespasmo coronario directo; tratamiento de elección con Nitroglicerina intravenosa en infusión continua.",
+        distractorProfile: "wrong_mechanism_wrong_treatment",
+        incorrectFeedback: "El mecanismo de toxicidad cardíaca de los tricíclicos es el bloqueo directo de los canales de sodio del miocardio, no vasoespasmo coronario; la Nitroglicerina no tiene ningún rol en revertir este mecanismo específico de toxicidad.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "La paciente presenta una **Intoxicación por Antidepresivos Tricíclicos**, que causa toxicidad a través de múltiples mecanismos, siendo el **bloqueo de los canales rápidos de sodio cardíacos** (similar al efecto de los antiarrítmicos de Clase IA) el responsable de la toxicidad cardíaca más peligrosa. Este bloqueo enlentece la fase de despolarización rápida del potencial de acción cardíaco, manifestándose electrocardiográficamente como **ensanchamiento del complejo QRS** (un QRS mayor a 100 ms se asocia con riesgo de convulsiones, y mayor a 160 ms con riesgo de arritmias ventriculares graves) y una onda R prominente en la derivación aVR, predisponiendo a arritmias ventriculares potencialmente fatales (incluyendo Torsades de Pointes y Fibrilación Ventricular). El tratamiento de primera línea, tanto profiláctico como terapéutico ante el ensanchamiento del QRS, es el **Bicarbonato de Sodio intravenoso** en bolo, que actúa mediante un doble mecanismo: el aumento del **pH sérico** (alcalinización) reduce la afinidad del fármaco por los canales de sodio, y el aumento de la **concentración de sodio extracelular** ayuda a superar competitivamente el bloqueo de esos canales, ambos efectos estabilizando la membrana cardíaca y estrechando el QRS, reduciendo significativamente el riesgo de arritmias ventriculares malignas.",
+    keyPoints: [
+    "Sobredosis de Antidepresivos Tricíclicos + QRS ANCHO en el ECG (+ onda R prominente en aVR).",
+    "Toxicidad cardíaca por bloqueo de canales de Sodio. Tratamiento de PRIMERA LÍNEA: Bicarbonato de Sodio IV en bolo (alcaliniza y aporta sodio, revirtiendo el bloqueo del canal). Objetivo: estrechar el QRS y prevenir arritmias ventriculares. Otros hallazgos clásicos: síntomas anticolinérgicos (midriasis, piel seca, íleo, somnolencia).",
+    "Toxicología Cardiovascular / Intoxicación por Antidepresivos Tricíclicos."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-85",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - TOXICOLOGÍA",
+    topic: "Toxicología",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","toxicolog-a","toxicolog","a"],
+    statement: "Un hombre de 45 años, trabajador agrícola, es traído a urgencias tras exposición accidental masiva a un plaguicida durante la fumigación de un cultivo, sin uso adecuado de equipo de protección. Presenta salivación profusa, lagrimeo intenso, diaforesis, broncorrea marcada con dificultad respiratoria, miosis puntiforme bilateral, bradicardia (FC 45 lpm), incontinencia urinaria y fecal, y fasciculaciones musculares generalizadas. Los compañeros de trabajo reportan un olor característico \"a ajo\" en la ropa del paciente. ¿Cuál es el diagnóstico toxicológico, y cuál es el tratamiento farmacológico de PRIMERA LÍNEA que debe titularse agresivamente según la respuesta de las secreciones bronquiales?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Intoxicación por Organofosforados; tratamiento de primera línea con Atropina intravenosa en dosis repetidas y tituladas según el control de la broncorrea (secreciones), más Pralidoxima si está disponible.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Síndrome Colinérgico Central por Cocaína; tratamiento de primera línea con Benzodiacepinas exclusivamente, sin necesidad de otros antídotos.",
+        distractorProfile: "wrong_diagnosis_wrong_toxidrome",
+        incorrectFeedback: "La intoxicación por cocaína genera un síndrome simpaticomimético (midriasis, taquicardia, hipertensión), exactamente opuesto al síndrome colinérgico descrito (miosis, bradicardia); el contexto de exposición ocupacional a plaguicidas confirma organofosforados, no cocaína.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Intoxicación por Anfetaminas; tratamiento con Betabloqueadores intravenosos para controlar la hiperactividad simpática.",
+        distractorProfile: "wrong_diagnosis_opposite_findings",
+        incorrectFeedback: "Las anfetaminas causan un cuadro simpaticomimético con midriasis y taquicardia, no el síndrome colinérgico con miosis y bradicardia descrito en esta viñeta, que junto con el contexto ocupacional agrícola es característico de intoxicación por organofosforados.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Botulismo del adulto por exposición ocupacional; tratamiento con Inmunoglobulina Antibotulínica exclusivamente.",
+        distractorProfile: "wrong_diagnosis_opposite_autonomic_findings",
+        incorrectFeedback: "El Botulismo causa parálisis flácida con hallazgos anticolinérgicos (pupilas dilatadas, boca seca), exactamente opuestos al cuadro colinérgico hiperactivo con miosis, salivación y broncorrea masiva descrito aquí, que corresponde a intoxicación por organofosforados.",
+      },
+    ],
+    correctOptionId: "A",
+    explanation: "El paciente presenta una **Intoxicación por Organofosforados** (plaguicidas de uso agrícola común), que actúan **inhibiendo irreversiblemente la enzima Acetilcolinesterasa**, generando una acumulación masiva de acetilcolina en las sinapsis, con hiperestimulación tanto de receptores **muscarínicos** como **nicotínicos**. El cuadro clínico clásico se resume en la regla mnemotécnica **\"DUMBELS\"** (o su equivalente en español): Diarrea, Uresis (incontinencia urinaria), Miosis, Bradicardia/Broncorrea/Broncoespasmo, Emesis, Lagrimeo, Salivación; además de las manifestaciones nicotínicas (fasciculaciones musculares, debilidad, que puede progresar a parálisis). El **olor característico \"a ajo\"** es una pista clásica de examen para estos compuestos. El tratamiento de primera línea es la **Atropina intravenosa**, que bloquea competitivamente los receptores muscarínicos, y debe administrarse en **dosis repetidas, tituladas agresivamente según la mejoría de la broncorrea/secreciones bronquiales** (el parámetro clínico más importante a seguir, ya que la broncorrea masiva es lo que típicamente mata a estos pacientes por asfixia, no la bradicardia en sí), pudiendo requerirse dosis acumulativas muy altas. La **Pralidoxima**, cuando está disponible, se añade para reactivar la enzima acetilcolinesterasa (efectiva principalmente si se administra antes de que ocurra el \"envejecimiento\" del complejo enzima-tóxico, que lo vuelve irreversible).",
+    keyPoints: [
+    "Exposición a plaguicidas + Síndrome Colinérgico: Miosis + Bradicardia + Broncorrea/Broncoespasmo + Salivación/Lagrimeo + Incontinencia + Fasciculaciones. Olor \"a ajo\".",
+    "Intoxicación por Organofosforados (inhibición de Acetilcolinesterasa). Tratamiento de primera línea: ATROPINA IV, titulada según control de la BRONCORREA (no según la frecuencia cardíaca). + Pralidoxima si disponible (reactivador enzimático).",
+    "Toxicología / Intoxicación por Organofosforados."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-86",
+    university: "UCC",
+    examArea: "GINECOLOGÍA - MEDICINA REPRODUCTIVA",
+    topic: "Medicina Reproductiva",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","medicina-reproductiva","medicina","reproductiva"],
+    statement: "Una mujer de 26 años, con antecedente de ciclos menstruales irregulares (oligomenorrea) desde la adolescencia, consulta por dificultad para concebir tras 18 meses de búsqueda activa de embarazo, junto con hirsutismo progresivo (vello facial y en línea alba) y acné persistente en la edad adulta. Su índice de masa corporal es de 31 kg/m². Los laboratorios muestran una relación LH/FSH elevada (aproximadamente 3:1), Testosterona total en el límite superior normal-alto, y una ecografía transvaginal muestra ambos ovarios con múltiples folículos pequeños periféricos dispuestos \"en collar de perlas\" (más de 12 folículos por ovario, cada uno menor a 9 mm). Se han descartado hiperprolactinemia y disfunción tiroidea. ¿Cuál es el diagnóstico, y cuál es el riesgo metabólico a LARGO PLAZO que debe vigilarse activamente en estas pacientes, más allá de la infertilidad?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Insuficiencia Ovárica Prematura; el riesgo metabólico principal a largo plazo es la osteoporosis temprana por hipoestrogenismo.",
+        distractorProfile: "wrong_diagnosis_opposite_hormonal_pattern",
+        incorrectFeedback: "La Insuficiencia Ovárica Prematura cursa con HIPOestrogenismo y FSH elevada por falla ovárica (no con hiperandrogenismo ni morfología poliquística), un patrón hormonal opuesto al descrito en esta paciente, que presenta el cuadro clásico de SOP con relación LH/FSH elevada característica.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Síndrome de Ovario Poliquístico; el riesgo metabólico principal a largo plazo es la Resistencia a la Insulina/Diabetes Mellitus tipo 2 y el Síndrome Metabólico, requiriendo tamizaje activo y periódico.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Hiperplasia Suprarrenal Congénita de inicio tardío; el riesgo metabólico principal es la crisis suprarrenal aguda recurrente.",
+        distractorProfile: "wrong_diagnosis_missing_confirmatory_workup",
+        incorrectFeedback: "Aunque la Hiperplasia Suprarrenal Congénita de inicio tardío es un diagnóstico diferencial del hiperandrogenismo que debe descartarse (típicamente con 17-hidroxiprogesterona), la morfología ecográfica poliquística característica y la relación LH/FSH elevada son mucho más compatibles con SOP; además, esta condición no cursa típicamente con crisis suprarrenales recurrentes en su forma de inicio tardío.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Tumor Ovárico Productor de Andrógenos; el riesgo principal es la diseminación metastásica rápida, sin relevancia metabólica asociada.",
+        distractorProfile: "wrong_diagnosis_missing_chronicity",
+        incorrectFeedback: "Un tumor productor de andrógenos típicamente causa virilización RÁPIDAMENTE progresiva con testosterona muy marcadamente elevada, no el curso crónico e insidioso desde la adolescencia descrito en esta paciente, que junto con la morfología ovárica característica es mucho más compatible con SOP.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "La paciente cumple los **Criterios de Rotterdam** para el diagnóstico de **Síndrome de Ovario Poliquístico (SOP)** (requiere al menos 2 de 3: oligo/anovulación, hiperandrogenismo clínico o bioquímico, y morfología ovárica poliquística en ecografía), la endocrinopatía más frecuente en mujeres en edad reproductiva y una causa importante de infertilidad anovulatoria. Más allá de las manifestaciones reproductivas y dermatológicas (hirsutismo, acné) que suelen motivar la consulta inicial, es fundamental que el médico reconozca que el SOP es fundamentalmente un **trastorno metabólico** con **resistencia a la insulina** como mecanismo fisiopatológico central en la mayoría de las pacientes (independientemente del peso corporal, aunque más marcada en pacientes con sobrepeso/obesidad, como en este caso). Esta resistencia a la insulina no solo perpetúa el hiperandrogenismo (la insulina estimula directamente la producción ovárica de andrógenos y reduce la síntesis hepática de globulina transportadora de hormonas sexuales), sino que confiere a estas pacientes un **riesgo significativamente elevado a largo plazo de Diabetes Mellitus tipo 2, Síndrome Metabólico, dislipidemia, y enfermedad cardiovascular**, justificando el **tamizaje metabólico activo y periódico** (glucosa/prueba de tolerancia oral a la glucosa, perfil lipídico) independientemente de si la paciente busca o no embarazo en ese momento.",
+    keyPoints: [
+    "Mujer con Oligomenorrea + Hiperandrogenismo (hirsutismo/acné) + Ovarios poliquísticos en ecografía (Criterios de Rotterdam: 2 de 3).",
+    "Síndrome de Ovario Poliquístico. No es solo un problema reproductivo: es fundamentalmente un trastorno METABÓLICO con Resistencia a la Insulina central. Riesgo a largo plazo que se debe vigilar activamente: Diabetes Mellitus tipo 2 / Síndrome Metabólico / Enfermedad Cardiovascular.",
+    "Medicina Reproductiva / Síndrome de Ovario Poliquístico."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-87",
+    university: "UCC",
+    examArea: "PEDIATRÍA - NEONATOLOGÍA / HEMATOLOGÍA",
+    topic: "Hematología Neonatal",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","hematolog-a-neonatal","hematolog","a","neonatal"],
+    statement: "Una mujer embarazada, Rh negativo, sin haber recibido inmunoglobulina anti-D en su embarazo previo (su primer hijo fue Rh positivo), da a luz a su segundo hijo, también Rh positivo. El recién nacido presenta ictericia marcada dentro de las primeras 24 horas de vida (ictericia patológica, por su inicio temprano), palidez, y hepatoesplenomegalia al examen físico. Los laboratorios del neonato muestran Hemoglobina baja para su edad, Bilirrubina indirecta muy elevada de inicio precoz, y una Prueba de Coombs Directa POSITIVA en los eritrocitos del recién nacido. ¿Cuál es el diagnóstico de esta condición, cuál es el mecanismo de sensibilización materna que la originó, y cuál es la intervención que PREVIENE este cuadro en futuros embarazos si se administra oportunamente?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Ictericia Fisiológica del Recién Nacido; no requiere ninguna intervención preventiva específica en futuros embarazos.",
+        distractorProfile: "dangerous_dismissal_of_pathologic_findings",
+        incorrectFeedback: "La ictericia fisiológica aparece después de las 24 horas de vida y no se asocia a Coombs Directa positiva, anemia significativa ni hepatoesplenomegalia; el inicio temprano (<24h) junto con estos hallazgos confirma un proceso hemolítico patológico (Isoinmunización Rh), que sí requiere profilaxis específica en futuros embarazos.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Enfermedad Hemolítica del Recién Nacido por Isoinmunización Rh; la madre se sensibilizó por exposición a sangre fetal Rh positiva (típicamente durante el parto previo), generando anticuerpos IgG que atraviesan la placenta en embarazos posteriores; la PREVENCIÓN es la administración de Inmunoglobulina Anti-D a la madre Rh negativa en cada embarazo con feto potencialmente Rh positivo.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Deficiencia de Glucosa-6-Fosfato Deshidrogenasa neonatal; no tiene relación con el estado Rh materno ni requiere profilaxis en futuros embarazos.",
+        distractorProfile: "wrong_diagnosis_missing_coombs_significance",
+        incorrectFeedback: "El déficit de G6PD cursa característicamente con Coombs Directa NEGATIVA (el mecanismo hemolítico no es inmunomediado); la Coombs Directa POSITIVA en este neonato, junto con el antecedente de madre Rh negativa sin profilaxis previa, confirma un mecanismo de isoinmunización, no una enzimopatía congénita.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Sepsis Neonatal Temprana; el manejo es exclusivamente antibiótico, sin relación con isoinmunización materna.",
+        distractorProfile: "wrong_diagnosis_missing_hemolytic_markers",
+        incorrectFeedback: "La sepsis neonatal no explica la Coombs Directa positiva ni el patrón hemolítico específico descrito; estos hallazgos, junto con el contexto materno de Rh negativo sin profilaxis, son diagnósticos de Enfermedad Hemolítica del Recién Nacido por Isoinmunización Rh, una condición prevenible con Inmunoglobulina Anti-D.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El recién nacido presenta **Enfermedad Hemolítica del Recién Nacido por Isoinmunización Rh (D)**, causada por la destrucción de los eritrocitos fetales/neonatales por anticuerpos maternos dirigidos contra el antígeno Rh(D). El mecanismo de sensibilización ocurre cuando una madre **Rh negativa** es expuesta a sangre fetal **Rh positiva** (típicamente durante el parto, cuando ocurre hemorragia feto-materna significativa, aunque también puede ocurrir por procedimientos invasivos, aborto, o trauma abdominal durante la gestación), generando una respuesta inmune primaria con producción de anticuerpos **IgG anti-D**. En un **embarazo posterior** con un feto nuevamente Rh positivo, estos anticuerpos IgG maternos (ya presentes por la sensibilización previa) **atraviesan la placenta** y atacan los eritrocitos fetales, causando hemólisis progresiva que puede manifestarse como anemia fetal severa (hidrops fetal en casos graves) e ictericia neonatal de **inicio temprano** (dentro de las primeras 24 horas, a diferencia de la ictericia fisiológica que aparece después del segundo día) con Coombs Directa positiva. La intervención que **previene** esta sensibilización (y por tanto, la enfermedad en futuros embarazos) es la administración de **Inmunoglobulina Anti-D** a toda madre Rh negativa con pareja/feto Rh positivo (o de Rh desconocido), típicamente alrededor de las 28 semanas de gestación y dentro de las 72 horas posparto (y tras cualquier evento con riesgo de hemorragia feto-materna), que neutraliza los eritrocitos fetales Rh positivos que puedan haber entrado a la circulación materna antes de que el sistema inmune materno tenga oportunidad de sensibilizarse contra ellos.",
+    keyPoints: [
+    "Madre Rh NEGATIVA sin profilaxis previa + Segundo (o posterior) embarazo con feto Rh POSITIVO + RN con ictericia de inicio TEMPRANO (<24h) + Coombs Directa POSITIVA + Anemia + Hepatoesplenomegalia.",
+    "Enfermedad Hemolítica del Recién Nacido por Isoinmunización Rh. PREVENCIÓN clave: Inmunoglobulina Anti-D a la madre Rh negativa (~28 semanas + posparto + tras eventos de riesgo), administrada ANTES de que ocurra la sensibilización, no como tratamiento una vez ya sensibilizada.",
+    "Hematología Neonatal / Enfermedad Hemolítica del Recién Nacido (Isoinmunización Rh)."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-88",
+    university: "UCC",
+    examArea: "PEDIATRÍA - NEONATOLOGÍA",
+    topic: "Neonatología",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","neonatolog-a","neonatolog","a"],
+    statement: "Un recién nacido a las 37 semanas de gestación exactas, nacido por cesárea electiva programada (sin trabajo de parto previo), presenta dificultad respiratoria leve a moderada inmediatamente después del nacimiento: taquipnea (FR 75 rpm), quejido espiratorio leve, y retracciones subcostales leves, con requerimiento de oxígeno suplementario a bajo flujo (FiO2 30%) para mantener saturaciones adecuadas. Una radiografía de tórax muestra líquido en las cisuras interlobares, congestión perihiliar leve, y una silueta cardíaca ligeramente prominente, sin consolidación franca. Los síntomas mejoran progresivamente y se resuelven completamente hacia las 48-72 horas de vida sin tratamiento específico más allá del oxígeno suplementario transitorio. ¿Cuál es el diagnóstico de este cuadro respiratorio autolimitado, cuál es su mecanismo fisiopatológico, y qué factor de riesgo relacionado con la vía del parto lo predispone?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Enfermedad de Membrana Hialina; el mecanismo es el déficit de surfactante pulmonar por inmadurez, predispuesto por la prematuridad extrema.",
+        distractorProfile: "wrong_diagnosis_wrong_gestational_age",
+        incorrectFeedback: "La Enfermedad de Membrana Hialina es característica de recién nacidos PREMATUROS (típicamente menores de 34 semanas) por déficit de surfactante, con un patrón radiográfico de vidrio esmerilado difuso más severo; este neonato de 37 semanas con síntomas leves y resolución rápida en 24-72 horas es mucho más compatible con Taquipnea Transitoria.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Taquipnea Transitoria del Recién Nacido; el mecanismo es el retraso en la reabsorción/clearance del líquido pulmonar fetal, predispuesto por la ausencia de trabajo de parto (cesárea electiva sin labor previa, que no genera las catecolaminas del estrés del parto que normalmente aceleran esta reabsorción).",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Síndrome de Aspiración Meconial; el mecanismo es la obstrucción mecánica por meconio aspirado, predispuesto por sufrimiento fetal intraparto.",
+        distractorProfile: "wrong_diagnosis_missing_meconium_history",
+        incorrectFeedback: "No hay antecedente de líquido amniótico meconiado ni el patrón radiográfico característico de atelectasia/hiperinsuflación alternante del Síndrome de Aspiración Meconial; el cuadro leve y autolimitado en un neonato nacido por cesárea electiva sin trabajo de parto es característico de Taquipnea Transitoria.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Neumonía Congénita por Estreptococo del Grupo B; el mecanismo es la infección bacteriana transplacentaria, predispuesta por ruptura prolongada de membranas.",
+        distractorProfile: "wrong_diagnosis_missing_infectious_risk_factors",
+        incorrectFeedback: "No hay factores de riesgo infecciosos descritos (ruptura prolongada de membranas, fiebre materna, colonización por Estreptococo del Grupo B no tratada) ni el cuadro clínico séptico esperado; la resolución rápida y espontánea sin tratamiento antibiótico es más compatible con un proceso autolimitado como la Taquipnea Transitoria.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "El recién nacido presenta **Taquipnea Transitoria del Recién Nacido (TTRN)**, la causa más común de dificultad respiratoria leve a moderada en neonatos a término o cercanos al término, causada por un **retraso en la reabsorción del líquido pulmonar fetal** que normalmente ocupa los pulmones durante la vida intrauterina. Durante un parto vaginal normal, el proceso de trabajo de parto genera una descarga de **catecolaminas fetales** que activa canales de sodio epiteliales pulmonares, acelerando activamente la reabsorción de ese líquido pulmonar hacia el intersticio y la circulación linfática/venosa, preparando los pulmones para la transición a la respiración aérea. En los neonatos nacidos por **cesárea electiva sin trabajo de parto previo** (como en este caso), se pierde ese estímulo catecolaminérgico natural del parto, resultando en una reabsorción más lenta e incompleta del líquido pulmonar, que permanece parcialmente en los espacios alveolares y en las cisuras interlobares (visible radiográficamente), causando taquipnea y dificultad respiratoria leve. Es un cuadro característicamente **autolimitado**, con resolución típica dentro de las **primeras 24-72 horas** de vida, requiriendo solo manejo de soporte (oxígeno suplementario según necesidad) mientras el líquido residual se reabsorbe completamente.",
+    keyPoints: [
+    "RN a término o cercano al término, nacido por CESÁREA ELECTIVA sin trabajo de parto previo + Dificultad respiratoria LEVE-MODERADA de inicio inmediato + Resolución en 24-72 horas.",
+    "Taquipnea Transitoria del Recién Nacido. Mecanismo: retraso en la reabsorción del líquido pulmonar fetal (por ausencia del estímulo catecolaminérgico del trabajo de parto). Es AUTOLIMITADA; manejo de soporte únicamente (oxígeno transitorio).",
+    "Neonatología / Taquipnea Transitoria del Recién Nacido."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-89",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - CARDIOLOGÍA",
+    topic: "Arritmias Cardíacas",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","arritmias-card-acas","arritmias","card","acas"],
+    statement: "Una mujer de 38 años, con antecedente de anorexia nerviosa severa y desnutrición crónica, en tratamiento reciente con un antibiótico macrólido (Azitromicina) por una infección respiratoria, presenta un episodio sincopal súbito en su domicilio. Es traída a urgencias, donde el electrocardiograma muestra un **Intervalo QT corregido marcadamente prolongado (QTc de 550 milisegundos)**. Durante la monitorización, el paciente presenta un episodio de taquicardia ventricular polimórfica con un patrón característico de \"torsión de las puntas\" alrededor de la línea isoeléctrica, que se autolimita espontáneamente tras 20 segundos. Los electrolitos muestran Magnesio y Potasio séricos en el límite inferior normal-bajo. ¿Cuál es el diagnóstico de esta arritmia, cuál es el tratamiento farmacológico de PRIMERA LÍNEA para el episodio agudo (independientemente de los niveles séricos exactos de magnesio), y qué medida se debe tomar respecto al fármaco prescrito recientemente?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Fibrilación Ventricular; tratamiento con desfibrilación inmediata como único manejo, sin necesidad de suspender ningún medicamento.",
+        distractorProfile: "wrong_diagnosis_and_incomplete_management",
+        incorrectFeedback: "El patrón electrocardiográfico descrito, con el eje de los QRS \"girando\" característicamente alrededor de la línea isoeléctrica, es específico de Torsades de Pointes, no de Fibrilación Ventricular; además, incluso si el paciente requiriera desfibrilación por inestabilidad, identificar y suspender el fármaco causal (macrólido) es esencial para prevenir la recurrencia.",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Torsades de Pointes (por QT largo adquirido, multifactorial: desnutrición + macrólido + electrolitos límite); tratamiento de primera línea con Sulfato de Magnesio intravenoso en bolo, independientemente del nivel sérico; se debe suspender INMEDIATAMENTE el macrólido y cualquier otro fármaco que prolongue el QT.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Taquicardia Ventricular Monomórfica sostenida; tratamiento con Amiodarona intravenosa como primera línea, continuando el macrólido sin cambios.",
+        distractorProfile: "wrong_diagnosis_and_dangerous_continued_offending_drug",
+        incorrectFeedback: "El patrón polimórfico con torsión del eje descrito no corresponde a una taquicardia ventricular monomórfica; además, la Amiodarona misma puede prolongar aún más el QT y empeorar el Torsades de Pointes, y continuar el macrólido causal sería peligroso al perpetuar el factor precipitante de la arritmia.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Síncope vasovagal simple; no requiere ninguna intervención farmacológica específica ni ajuste de la medicación actual.",
+        distractorProfile: "dangerous_dismissal_of_documented_arrhythmia",
+        incorrectFeedback: "El síncope vasovagal no se asocia a QT marcadamente prolongado ni a episodios documentados de taquicardia ventricular polimórfica; la arritmia objetivamente registrada en el monitor confirma un evento cardíaco potencialmente letal que requiere tratamiento específico e identificación del fármaco causal.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "La paciente presenta **Torsades de Pointes** (\"torsión de las puntas\"), una forma específica y peligrosa de taquicardia ventricular polimórfica que ocurre en el contexto de un **QT largo** (adquirido en este caso, por la combinación de múltiples factores de riesgo convergentes: la **desnutrición severa** asociada a anorexia nerviosa, que frecuentemente causa alteraciones electrolíticas subclínicas y disfunción autonómica cardíaca; el uso de **Azitromicina**, un macrólido reconocido por su capacidad de prolongar el intervalo QT al bloquear canales de potasio cardíacos; y electrolitos en el límite bajo, que potencian aún más el riesgo). El QT prolongado crea las condiciones eléctricas ideales para que un latido prematuro desencadene esta arritmia característica, en la que el eje eléctrico de los complejos QRS \"gira\" progresivamente alrededor de la línea isoeléctrica, dándole su nombre distintivo. El tratamiento de **primera línea** para el episodio agudo es el **Sulfato de Magnesio intravenoso en bolo**, que es efectivo para suprimir y prevenir la recurrencia de esta arritmia específica **incluso cuando el nivel sérico de magnesio del paciente es normal**, actuando mediante mecanismos que estabilizan la membrana cardíaca más allá de la simple corrección de un déficit. Es igualmente crítico **suspender de inmediato** el macrólido (y cualquier otro fármaco conocido por prolongar el QT) y corregir cualquier alteración electrolítica adicional (potasio, magnesio) para prevenir la recurrencia.",
+    keyPoints: [
+    "QT prolongado + Taquicardia Ventricular Polimórfica con patrón de \"torsión\" alrededor de la línea isoeléctrica, en contexto de factores de riesgo para QT largo (fármacos que lo prolongan, desnutrición, alteraciones electrolíticas).",
+    "Torsades de Pointes. Tratamiento de primera línea: Sulfato de Magnesio IV en bolo (efectivo incluso con Mg sérico normal). Medida esencial adicional: SUSPENDER el fármaco causal (macrólidos, antipsicóticos, antiarrítmicos Clase IA/III, entre otros son causas clásicas de QT largo adquirido) y corregir electrolitos.",
+    "Arritmias Cardíacas / Torsades de Pointes."
+],
+  },
+  {
+    id: "ucc-conv-2026-09-06-90",
+    university: "UCC",
+    examArea: "MEDICINA INTERNA - NEUROLOGÍA",
+    topic: "Enfermedades Desmielinizantes",
+    difficulty: "hard",
+    tags: ["ucc","convocatoria","2026_09_06","enfermedades-desmielinizantes","enfermedades","desmielinizantes"],
+    statement: "Una mujer de 29 años consulta por un segundo episodio, en los últimos 8 meses, de pérdida de visión parcial en el ojo derecho (con dolor a los movimientos oculares) que se resolvió parcialmente en semanas, y ahora presenta un nuevo episodio de debilidad y parestesias en la pierna izquierda de 5 días de evolución, junto con sensación de \"descarga eléctrica\" que baja por la columna al flexionar el cuello (Signo de Lhermitte). Al examen físico hay debilidad leve en la pierna izquierda con hiperreflexia y Babinski positivo ipsilateral, y palidez del disco óptico derecho residual del episodio previo. Una resonancia magnética cerebral y de columna muestra múltiples lesiones hiperintensas en sustancia blanca periventricular, yuxtacortical, y en la médula espinal cervical, algunas con realce con gadolinio (activas) y otras sin realce (antiguas). El líquido cefalorraquídeo muestra bandas oligoclonales positivas no presentes en el suero. ¿Cuál es el diagnóstico, basado en el concepto de \"diseminación en tiempo y espacio\", y cuál es el tratamiento de PRIMERA LÍNEA para el brote agudo actual?",
+    options: [
+      {
+        id: "A",
+        label: "A",
+        text: "Neuromielitis Óptica (Enfermedad de Devic); tratamiento del brote agudo con Interferón Beta subcutáneo como primera línea.",
+        distractorProfile: "wrong_diagnosis_and_wrong_acute_treatment",
+        incorrectFeedback: "Aunque la Neuromielitis Óptica también afecta el nervio óptico y la médula espinal, típicamente causa lesiones medulares más extensas (longitudinalmente extensas) y se asocia a anticuerpos anti-Acuaporina-4, un perfil distinto; además, el Interferón Beta es una terapia modificadora de la enfermedad de mantenimiento, no el tratamiento del brote agudo (que en ambas condiciones es la Metilprednisolona IV).",
+      },
+      {
+        id: "B",
+        label: "B",
+        text: "Esclerosis Múltiple; tratamiento del brote agudo con Metilprednisolona intravenosa en altas dosis por 3-5 días.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Accidente Cerebrovascular Isquémico recurrente; tratamiento con Trombólisis sistémica si está dentro de la ventana terapéutica.",
+        distractorProfile: "wrong_diagnosis_wrong_lesion_pattern",
+        incorrectFeedback: "El patrón de lesiones recurrentes en el tiempo, en una paciente joven, con hallazgos de resonancia característicos (lesiones periventriculares/yuxtacorticales con y sin realce) y bandas oligoclonales positivas en LCR, es incompatible con eventos vasculares isquémicos recurrentes y es característico de un proceso desmielinizante autoinmune como la Esclerosis Múltiple.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Mielitis Transversa aislada; tratamiento exclusivamente con antibióticos de amplio espectro empíricos.",
+        distractorProfile: "wrong_diagnosis_ignoring_dissemination_pattern",
+        incorrectFeedback: "Una Mielitis Transversa aislada no explicaría el episodio previo de neuritis óptica ni las lesiones cerebrales adicionales encontradas en la resonancia; el patrón de diseminación en tiempo y espacio confirma Esclerosis Múltiple, y no hay evidencia de un proceso infeccioso que justifique tratamiento antibiótico.",
+      },
+    ],
+    correctOptionId: "B",
+    explanation: "La paciente cumple los criterios diagnósticos de **Esclerosis Múltiple**, una enfermedad desmielinizante autoinmune crónica del sistema nervioso central, basados en el concepto fundamental de **\"diseminación en tiempo y espacio\"**: **diseminación en espacio** (evidencia de lesiones en múltiples ubicaciones anatómicas distintas del sistema nervioso central: en este caso, el nervio óptico —causando la neuritis óptica previa—, la sustancia blanca cerebral periventricular/yuxtacortical, y la médula espinal) y **diseminación en tiempo** (evidencia de que las lesiones ocurrieron en momentos diferentes: el episodio de neuritis óptica hace 8 meses y el episodio actual de mielitis, apoyado además por la presencia simultánea de lesiones con y sin realce de gadolinio en la resonancia, indicando actividad inflamatoria en diferentes momentos). El **Signo de Lhermitte** (sensación eléctrica descendente con la flexión cervical) es un hallazgo clásico sugestivo de compromiso de cordones posteriores cervicales. Las **bandas oligoclonales** en LCR (ausentes en suero) apoyan la síntesis intratecal de inmunoglobulinas, característica de esta enfermedad. El tratamiento del **brote agudo** (exacerbación con nuevos síntomas neurológicos significativos) es la **Metilprednisolona intravenosa en altas dosis** durante 3-5 días, que acelera la recuperación del brote (aunque no modifica necesariamente el curso a largo plazo de la enfermedad, para lo cual se requieren terapias modificadoras de la enfermedad distintas, iniciadas posteriormente).",
+    keyPoints: [
+    "Episodios neurológicos RECURRENTES, en DIFERENTES ubicaciones anatómicas del SNC (ej. nervio óptico + médula espinal + cerebro), en mujer joven.; RM: lesiones de sustancia blanca con y sin realce (diferentes edades) + Bandas oligoclonales en LCR.",
+    "Esclerosis Múltiple (diseminación en TIEMPO y ESPACIO). Tratamiento del BROTE AGUDO: Metilprednisolona IV en altas dosis. El tratamiento a largo plazo requiere terapias modificadoras de la enfermedad distintas (no cubiertas por el manejo del brote agudo).",
+    "Enfermedades Desmielinizantes / Esclerosis Múltiple."
+],
+  }
+];
