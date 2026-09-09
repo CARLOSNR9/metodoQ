@@ -5,7 +5,12 @@ import { hasPaidPlan } from "@/lib/plans/access";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export function SubscriptionExpirationAlert() {
+export type SubscriptionExpirationInfo = {
+  daysRemaining: number;
+  urgent: boolean;
+};
+
+export function useSubscriptionExpirationAlert(): SubscriptionExpirationInfo | null {
   const { plan, expiresAt, loading } = useUserPlan();
   const [daysRemaining, setDaysRemaining] = useState<number | null>(null);
 
@@ -32,8 +37,13 @@ export function SubscriptionExpirationAlert() {
     return null;
   }
 
-  const urgent = daysRemaining <= 2;
+  return { daysRemaining, urgent: daysRemaining <= 2 };
+}
 
+export function SubscriptionExpirationAlertView({
+  daysRemaining,
+  urgent,
+}: SubscriptionExpirationInfo) {
   return (
     <div
       className={`relative overflow-hidden rounded-2xl border p-5 animate-in fade-in zoom-in duration-300 ${
@@ -73,7 +83,7 @@ export function SubscriptionExpirationAlert() {
             </p>
           </div>
         </div>
-        
+
         <Link
           href="/dashboard/planes"
           className={`inline-flex min-h-12 w-full items-center justify-center rounded-xl px-8 text-sm font-bold text-slate-900 transition-all duration-200 active:scale-95 sm:w-auto ${
@@ -85,9 +95,15 @@ export function SubscriptionExpirationAlert() {
           Renovar ahora
         </Link>
       </div>
-      
+
       {/* Background decoration */}
       <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-rose-500/10 blur-2xl" />
     </div>
   );
+}
+
+export function SubscriptionExpirationAlert() {
+  const info = useSubscriptionExpirationAlert();
+  if (!info) return null;
+  return <SubscriptionExpirationAlertView {...info} />;
 }

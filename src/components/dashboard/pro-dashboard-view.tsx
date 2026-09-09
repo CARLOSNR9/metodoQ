@@ -16,8 +16,6 @@ import {
   LiveClasses,
   PastClasses,
   DailyPlanCard,
-  SummaryCards,
-  AccumulatedStats,
   WeakTopicsCard,
   ProgressChart,
   StudyBoardPreviewCard,
@@ -35,13 +33,11 @@ import {
   isUccPastoMedicinaInternaProUser,
 } from "@/lib/diagnostic/ucc-pasto-track";
 import { isUmngUniversity } from "@/lib/diagnostic/university-match";
-import { UccPastoInsightCard } from "./ucc-pasto-insight-card";
 import { UccDailyMissionCard } from "./ucc-daily-mission-card";
-import { UccPercentileTrackerCard } from "./ucc-percentile-tracker-card";
-import { UccWeeklySimulacroCard } from "./ucc-weekly-simulacro-card";
 import { UccConvocatoriaCard } from "./ucc-convocatoria-card";
 import { ConvocatoriaRepasoSummaryCard } from "./convocatoria-repaso-summary-card";
-import { UccPhase2SimulatorCard } from "./ucc-phase2-simulator-card";
+import { UccTrackSection } from "./ucc-track-section";
+import { PerformanceStatsSection } from "./performance-stats-section";
 import { SubscriptionStatusCard } from "./subscription-status-card";
 import { StudyStreakSummary } from "./study-streak-summary";
 import { useUserPerformanceStats } from "@/hooks/use-user-performance-stats";
@@ -298,33 +294,21 @@ export function ProDashboardView({
           ) : null}
 
           {isUccMiPro && hasDiagnosticData ? (
-            <>
-              <UccPercentileTrackerCard
-                cumulativeScore={displayScore}
-                totalQuestions={totalQuestions}
-                planStartedAt={profile?.planStartedAt}
-                correctTopics={mapTopicStats(profile?.topicStats, "correct")}
-                wrongTopics={mapTopicStats(profile?.topicStats, "wrong")}
-              />
-              <UccWeeklySimulacroCard userId={user.uid} planStartedAt={profile?.planStartedAt} />
-              <UccPhase2SimulatorCard
-                userId={user.uid}
-                cumulativeScore={displayScore}
-                uccPhase2Progress={profile?.uccPhase2Progress}
-              />
-              <UccPastoInsightCard
-                totalQuestions={totalQuestions}
-                totalCorrect={cumulative.totalCorrect}
-                totalWrong={cumulative.totalWrong}
-                correctTopics={mapTopicStats(profile?.topicStats, "correct")}
-                wrongTopics={mapTopicStats(profile?.topicStats, "wrong")}
-              />
-            </>
+            <UccTrackSection
+              userId={user.uid}
+              planStartedAt={profile?.planStartedAt}
+              cumulativeScore={displayScore}
+              totalQuestions={totalQuestions}
+              totalCorrect={cumulative.totalCorrect}
+              totalWrong={cumulative.totalWrong}
+              correctTopics={mapTopicStats(profile?.topicStats, "correct")}
+              wrongTopics={mapTopicStats(profile?.topicStats, "wrong")}
+              uccPhase2Progress={profile?.uccPhase2Progress}
+            />
           ) : null}
 
-          <SummaryCards userId={user.uid} />
+          <PerformanceStatsSection userId={user.uid} />
           <ProgressChart userId={user.uid} />
-          <AccumulatedStats userId={user.uid} />
 
           {showLiveClasses ? (
             <>
@@ -338,27 +322,20 @@ export function ProDashboardView({
           <DrQRetoBanner profile={profile} />
           <StudyBoardPreviewCard userId={user.uid} />
 
-          <div className="group relative overflow-hidden rounded-[1.75rem] border border-mq-accent/20 bg-mq-accent/5 p-6">
-            <div className="relative z-10 space-y-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-mq-accent/20 text-mq-accent">
-                <MessageSquare size={24} />
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-lg font-black text-slate-900">Comunidad de aspirantes</h3>
-                <p className="text-sm leading-relaxed text-slate-500">
-                  Dudas de casos y perlas de examen con el Dr. Q y otros médicos rumbo a residencia.
-                </p>
-              </div>
-              <a
-                href="https://t.me/metodoq_pro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground transition-all hover:brightness-110 active:scale-95"
-              >
-                Unirme a Telegram
-              </a>
+          <a
+            href="https://t.me/metodoq_pro"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-3 rounded-2xl border border-mq-accent/20 bg-mq-accent/5 px-4 py-3 transition-colors hover:bg-mq-accent/10"
+          >
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-mq-accent/20 text-mq-accent">
+              <MessageSquare size={18} />
             </div>
-          </div>
+            <div className="min-w-0">
+              <p className="text-sm font-bold text-slate-900">Comunidad de aspirantes</p>
+              <p className="truncate text-xs text-slate-500">Únete al grupo de Telegram con el Dr. Q</p>
+            </div>
+          </a>
 
           <ReferralCard
             referralCode={referralCode}

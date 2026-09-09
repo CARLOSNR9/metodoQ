@@ -13,11 +13,7 @@ import {
   type ExamDraft,
 } from "@/lib/training/exam-draft";
 
-type InterruptedExamBannerProps = {
-  userId: string;
-};
-
-export function InterruptedExamBanner({ userId }: InterruptedExamBannerProps) {
+export function useInterruptedExamDraft(userId: string): ExamDraft | null {
   const [draft, setDraft] = useState<ExamDraft | null>(null);
 
   useEffect(() => {
@@ -36,8 +32,10 @@ export function InterruptedExamBanner({ userId }: InterruptedExamBannerProps) {
     };
   }, [userId]);
 
-  if (!draft) return null;
+  return draft;
+}
 
+export function InterruptedExamAlertView({ draft }: { draft: ExamDraft }) {
   const answered = getExamDraftAnsweredCount(draft);
   const total = draft.questionIds.length;
   const current = Math.min(draft.currentQuestionIndex + 1, total);
@@ -63,4 +61,14 @@ export function InterruptedExamBanner({ userId }: InterruptedExamBannerProps) {
       </div>
     </div>
   );
+}
+
+type InterruptedExamBannerProps = {
+  userId: string;
+};
+
+export function InterruptedExamBanner({ userId }: InterruptedExamBannerProps) {
+  const draft = useInterruptedExamDraft(userId);
+  if (!draft) return null;
+  return <InterruptedExamAlertView draft={draft} />;
 }

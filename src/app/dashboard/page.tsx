@@ -5,11 +5,7 @@ import {
   ForcePasswordChangeModal,
   FreeDashboardView,
   ProDashboardView,
-  SubscriptionExpirationAlert,
-  StreakReminderBanner,
-  ProStudyGapBanner,
-  UccCoachingReminderBanner,
-  InterruptedExamBanner,
+  PriorityAlertBanner,
 } from "@/components/dashboard";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
@@ -84,29 +80,19 @@ export default function DashboardPage() {
       />
       {!profile?.requiresPasswordChange && <OnboardingModal userId={user.uid} />}
 
-      <div className="mb-6 space-y-3">
-        <InterruptedExamBanner userId={user.uid} />
-        <SubscriptionExpirationAlert />
-        {showPaidDashboard ? (
-          <ProStudyGapBanner
-            userId={user.uid}
-            planStartedAt={profile?.planStartedAt}
-          />
-        ) : null}
-        <StreakReminderBanner
+      <div className="mb-6">
+        <PriorityAlertBanner
+          userId={user.uid}
+          planStartedAt={profile?.planStartedAt}
           streakCount={profile?.streakCount ?? 0}
           lastTrainingDate={profile?.streakLastTrainingDate ?? null}
           dailyTarget={dailyGoal.dailyTarget}
           streakMinimum={dailyGoal.streakMinimum}
           trainHref={uccTrainHref}
+          isPaidPlan={showPaidDashboard}
+          isUccMiPro={isUccMiPro}
+          coachingProfile={profile}
         />
-        {isUccMiPro ? (
-          <UccCoachingReminderBanner
-            userId={user.uid}
-            profile={profile}
-            planStartedAt={profile?.planStartedAt}
-          />
-        ) : null}
       </div>
 
       {showPaidDashboard ? (

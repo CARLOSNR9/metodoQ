@@ -41,5 +41,6 @@ export { StudyBoardPreviewCard } from "./study-board-preview-card";
 export { ProStudyGapBanner } from "./pro-study-gap-banner";
 export { UccCoachingReminderBanner } from "./ucc-coaching-reminder-banner";
 export { InterruptedExamBanner } from "./interrupted-exam-banner";
+export { PriorityAlertBanner } from "./priority-alert-banner";
 export { DrQRetoBanner } from "./dr-q-reto-banner";
 export { EmailPreferencesCard } from "./email-preferences-card";
