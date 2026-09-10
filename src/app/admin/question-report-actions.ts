@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { canManageQuestions } from "@/lib/roles";
 import {
+  adminBulkUpdateQuestionReportStatus,
   adminReportQuestion,
   adminUpdateQuestionReportStatus,
 } from "@/lib/server/question-reports-admin";
@@ -78,5 +79,32 @@ export async function updateQuestionReportStatusAction(
   } catch (e) {
     console.error(e);
     return { error: "No se pudo actualizar el reporte." };
+  }
+}
+
+export async function bulkUpdateQuestionReportStatusAction(
+  questionIds: string[],
+  status: QuestionReportStatus,
+  idToken: string | null | undefined,
+) {
+  const auth = await requireManageQuestions(idToken);
+  if (!auth.ok) return { error: auth.error };
+
+  if (status !== "pending" && status !== "reviewed" && status !== "dismissed") {
+    return { error: "Estado no válido." };
+  }
+
+  const trimmedIds = questionIds.map((id) => id.trim()).filter(Boolean);
+  if (trimmedIds.length === 0) {
+    return { error: "No hay preguntas seleccionadas." };
+  }
+
+  try {
+    await adminBulkUpdateQuestionReportStatus(trimmedIds, status);
+    revalidateReportPaths();
+    return { success: true as const, count: trimmedIds.length };
+  } catch (e) {
+    console.error(e);
+    return { error: "No se pudo actualizar el lote de reportes." };
   }
 }

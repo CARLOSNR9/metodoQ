@@ -122,3 +122,27 @@ export async function adminUpdateQuestionReportStatus(
     .doc(questionId)
     .set({ status, updatedAt: new Date().toISOString() }, { merge: true });
 }
+
+const FIRESTORE_BATCH_LIMIT = 500;
+
+export async function adminBulkUpdateQuestionReportStatus(
+  questionIds: string[],
+  status: QuestionReportStatus,
+): Promise<void> {
+  const db = getFirebaseAdminDb();
+  const now = new Date().toISOString();
+  const uniqueIds = [...new Set(questionIds)];
+
+  for (let i = 0; i < uniqueIds.length; i += FIRESTORE_BATCH_LIMIT) {
+    const chunk = uniqueIds.slice(i, i + FIRESTORE_BATCH_LIMIT);
+    const batch = db.batch();
+    for (const questionId of chunk) {
+      batch.set(
+        db.collection("question_reports").doc(questionId),
+        { status, updatedAt: now },
+        { merge: true },
+      );
+    }
+    await batch.commit();
+  }
+}

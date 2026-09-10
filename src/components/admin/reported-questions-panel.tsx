@@ -1,8 +1,11 @@
 "use client";
 
 import { useMemo, useState, useTransition, useEffect } from "react";
-import { Check, Copy, Flag, ChevronDown, ChevronUp, MessageSquare } from "lucide-react";
-import { updateQuestionReportStatusAction } from "@/app/admin/question-report-actions";
+import { Check, CheckCheck, Copy, Flag, ChevronDown, ChevronUp, MessageSquare } from "lucide-react";
+import {
+  bulkUpdateQuestionReportStatusAction,
+  updateQuestionReportStatusAction,
+} from "@/app/admin/question-report-actions";
 import type { QuestionReportStatus } from "@/lib/server/question-reports-admin";
 import { getFirebaseAuth } from "@/lib/firebase";
 import type { QuestionReport } from "@/lib/server/question-reports-admin";
@@ -27,6 +30,8 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
   const [selectedQuestion, setSelectedQuestion] = useState<QuestionAdminRecord | null>(null);
   const [selectedReport, setSelectedReport] = useState<QuestionReport | null>(null);
   const [aiPrompt, setAiPrompt] = useState("");
+  const [isBulkPending, startBulkTransition] = useTransition();
+  const [bulkError, setBulkError] = useState("");
   const router = useRouter();
 
   const visible = useMemo(() => {
@@ -61,6 +66,31 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
     await navigator.clipboard.writeText(codesList);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleBulkMarkReviewed = () => {
+    if (visible.length === 0) return;
+    const confirmed = window.confirm(
+      `¿Marcar las ${visible.length} preguntas listadas como "Revisada"? Esta acción no se puede deshacer.`,
+    );
+    if (!confirmed) return;
+
+    setBulkError("");
+    const questionIds = visible.map((report) => report.questionId);
+    startBulkTransition(async () => {
+      try {
+        const token = await getFirebaseAuth().currentUser?.getIdToken();
+        const result = await bulkUpdateQuestionReportStatusAction(questionIds, "reviewed", token ?? null);
+        if (result.error) {
+          setBulkError(result.error);
+        } else {
+          router.refresh();
+        }
+      } catch (e) {
+        console.error(e);
+        setBulkError("No se pudo actualizar el lote de reportes.");
+      }
+    });
   };
 
   const handleEdit = (report: QuestionReport) => {
@@ -128,15 +158,36 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
                   {visible.length} código{visible.length === 1 ? "" : "s"} — uno por línea
                 </p>
               </div>
-              <button
-                type="button"
-                onClick={handleCopy}
-                className="inline-flex items-center gap-2 rounded-lg bg-mq-accent px-4 py-2 text-sm font-semibold text-mq-accent-foreground transition hover:opacity-90"
-              >
-                {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-                {copied ? "Copiado" : "Copiar listado"}
-              </button>
+              <div className="flex flex-wrap items-center gap-2">
+                {filter !== "reviewed" && (
+                  <button
+                    type="button"
+                    onClick={handleBulkMarkReviewed}
+                    disabled={isBulkPending || visible.length === 0}
+                    className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    <CheckCheck className="h-4 w-4" />
+                    {isBulkPending
+                      ? "Marcando…"
+                      : `Marcar todas como revisadas (${visible.length})`}
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={handleCopy}
+                  className="inline-flex items-center gap-2 rounded-lg bg-mq-accent px-4 py-2 text-sm font-semibold text-mq-accent-foreground transition hover:opacity-90"
+                >
+                  {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                  {copied ? "Copiado" : "Copiar listado"}
+                </button>
+              </div>
             </div>
+
+            {bulkError ? (
+              <p className="mt-3 rounded-lg border border-rose-500/30 bg-rose-50 px-3 py-2 text-sm text-rose-700">
+                {bulkError}
+              </p>
+            ) : null}
 
             <textarea
               readOnly
