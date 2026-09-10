@@ -46,7 +46,66 @@ export const UMNG_CONV_ED2_81_90_QUESTIONS: TrainingQuestion[] = [
       "Meta diuresis Quemadura Térmica: 0.5 mL/kg/h.",
       "Meta diuresis Quemadura Eléctrica (Rabdomiólisis): 1 a 1.5 mL/kg/h (100 mL/hora).",
       "Indicador: Orina café oscura (Mioglobinuria). El lavado exige volumen, no diuréticos puros de inicio."
-    ]
+    ],
+    theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
+
+Esta es una pregunta clásica de trauma y quemados porque evalúa una trampa frecuente: aplicar la meta de diuresis de las quemaduras térmicas a una quemadura eléctrica de alto voltaje, donde el daño real no está en la piel sino en el músculo profundo.
+
+La clave no es la extensión de la quemadura cutánea (SCQ < 5%).
+La clave es:
+Quemadura eléctrica de alto voltaje = "efecto iceberg" → destrucción muscular profunda (rabdomiólisis) con mioglobinuria, que exige el doble de diuresis horaria que una quemadura térmica para evitar falla renal aguda.
+
+¿Qué está ocurriendo realmente?
+El paciente presenta:
+• Contacto con cable de alta tensión (10.000 voltios) y proyección a distancia.
+• Herida de entrada carbonizada en mano derecha y salida en pie derecho (trayecto de la corriente).
+• SCQ < 5%: quemadura cutánea mínima, engañosamente tranquilizadora.
+• Extremidad superior derecha dura, tensa y edematizada (sospecha de necrosis muscular profunda/síndrome compartimental).
+• Orina "café oscuro"/rojo vino, positiva para sangre en tira reactiva pero sin eritrocitos en sedimento: mioglobinuria, no hematuria.
+
+Recordemos quemadura eléctrica vs quemadura térmica:
+• Térmica: el daño es proporcional a la superficie corporal quemada (SCQ); meta de diuresis 0.5 mL/kg/h (~30-50 mL/h).
+• Eléctrica de alto voltaje: la corriente sigue el camino de menor resistencia (nervios, vasos, músculo) y destruye tejido profundo aunque la piel luzca casi indemne ("efecto iceberg").
+• Esta destrucción muscular libera mioglobina a la circulación → mioglobinuria → precipitación de mioglobina en los túbulos renales en ambiente ácido y de bajo flujo → necrosis tubular aguda.
+• Por eso la meta de diuresis en quemadura eléctrica se duplica: 1 a 1.5 mL/kg/h (~100 mL/h en el adulto), manteniendo el "lavado" tubular hasta que la orina aclare.
+
+Por lo tanto:
+La conducta correcta es reanimar con cristaloides para forzar una diuresis de 1 a 1.5 mL/kg/h, no la meta térmica de 0.5 mL/kg/h.
+
+¿Por qué la opción B es la respuesta correcta?
+Reconoce que la rabdomiólisis por electricidad exige lavado tubular agresivo con volumen (no diuréticos de entrada), y fija la meta correcta según ATLS: 1-1.5 mL/kg/h hasta que la orina se aclare.
+
+¿Por qué fallan las otras opciones?
+Opción A (0.5 mL/kg/h): es la meta de quemados térmicos; en electricidad esa diuresis es insuficiente y permite que la mioglobina se impacte en los túbulos.
+Opción C (oliguria permisiva): la oliguria en rabdomiólisis acelera la falla renal y la hiperkalemia; nunca se restringe volumen en este contexto salvo compromiso cardiogénico franco documentado.
+Opción D (furosemida en bomba continua): un diurético de asa sin volumen adecuado deshidrata el intravascular y concentra aún más la mioglobina en el túbulo; el lavado se logra con líquidos, no con diuréticos como primera medida.
+
+¿Cuál es la trampa del examen?
+Muchos estudiantes ven "SCQ < 5%" y piensan que la quemadura es leve, aplicando la fórmula y las metas de un quemado térmico.
+Pero el examen exige correlacionar:
+Trayecto eléctrico de alto voltaje + orina oscura + extremidad tensa = daño muscular masivo oculto bajo piel casi sana.
+El dato decisivo es:
+Orina café oscura con tira positiva para sangre pero sedimento sin eritrocitos = mioglobinuria, que obliga a duplicar la meta de diuresis.
+
+Entonces, ¿qué debe recordarse?
+La secuencia correcta es:
+1. Sospechar rabdomiólisis en toda quemadura eléctrica de alto voltaje, aunque la SCQ sea mínima.
+2. Confirmar mioglobinuria (tira positiva para sangre + sedimento sin eritrocitos).
+3. Reanimar con cristaloides para alcanzar diuresis de 1-1.5 mL/kg/h (~100 mL/h).
+4. Evitar diuréticos de asa como medida inicial; considerar alcalinización urinaria si está disponible.
+5. Vigilar síndrome compartimental y monitorizar potasio y función renal.
+
+Perlas de examen
+✅ Quemadura eléctrica de alto voltaje = "efecto iceberg": piel casi sana, músculo profundo destruido.
+✅ Meta de diuresis en rabdomiólisis eléctrica: 1-1.5 mL/kg/h (el doble que en quemados térmicos).
+✅ Orina café oscura con tira (+) para sangre y sedimento sin eritrocitos = mioglobinuria.
+✅ El "lavado" tubular se hace con volumen, no con diuréticos de asa de entrada.
+✅ Vigilar hiperkalemia y síndrome compartimental asociados a rabdomiólisis.
+
+Referencias
+• ATLS (Advanced Trauma Life Support), 10.ª edición — Manejo de quemaduras eléctricas.
+• Harrison's Principles of Internal Medicine — Rabdomiólisis y lesión renal aguda por mioglobina.
+• UpToDate: Electrical injuries and lightning strikes; Rhabdomyolysis.`
   },
   {
     id: "umng-conv-ed2-82",
