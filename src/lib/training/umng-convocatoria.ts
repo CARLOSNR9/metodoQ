@@ -5,6 +5,7 @@ import { UMNG_CONV_ED3_QUESTIONS } from "@/data/umng-conv-ed3-questions";
 import { UMNG_CONV_ED4_QUESTIONS } from "@/data/umng-conv-ed4-questions";
 import { UMNG_CONV_ED5_QUESTIONS } from "@/data/umng-conv-ed5-questions";
 import { UMNG_CONV_ED6_QUESTIONS } from "@/data/umng-conv-ed6-questions";
+import { UMNG_CONV_ED7_QUESTIONS } from "@/data/umng-conv-ed7-questions";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getUserDemoResults } from "@/lib/results";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -109,6 +110,17 @@ export const UMNG_CONVOCATORIA_EDITIONS: UmngConvocatoriaEdition[] = [
     stayOpenUntilNext: false,
     daysOpen: 7,
     questions: UMNG_CONV_ED6_QUESTIONS,
+  },
+  {
+    code: "UMNG-ED7",
+    label: "Edición #7",
+    examDate: "2026-09-20T08:00:00-05:00",
+    questionCount: 100,
+    minutes: 120,
+    isGlobal: true,
+    stayOpenUntilNext: false,
+    daysOpen: 7,
+    questions: UMNG_CONV_ED7_QUESTIONS,
   }
 ];
 function parseLocalDate(dateKey: string): Date {
