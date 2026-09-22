@@ -7,12 +7,14 @@ import {
   FAQSection,
 } from "@/components/landing";
 import { LandingVisitTracker } from "@/components/analytics/landing-visit-tracker";
+import { MirLandingBanner } from "@/components/landing/mir-landing-banner";
 
 export default function HomePage() {
   return (
     <main className="flex flex-1 flex-col bg-background">
       <LandingVisitTracker />
-      
+      <MirLandingBanner />
+
       <div className="mq-fade-up">
         <HeroSection />
       </div>

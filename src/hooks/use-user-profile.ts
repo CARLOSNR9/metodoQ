@@ -55,6 +55,12 @@ export interface UserProfile {
   seenQuestionIds?: string[];
   questionCycleCount?: number;
   drQChallenges?: Record<string, { completedAt: string; score: number; total: number }>;
+  mirAccess?: {
+    active: boolean;
+    purchasedAt: string | null;
+    expiresAt: string | null;
+    stripeCheckoutSessionId?: string | null;
+  } | null;
 }
 
 export function useUserProfile() {
