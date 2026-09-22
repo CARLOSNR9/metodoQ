@@ -5,12 +5,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, XCircle, ChevronRight, Stethoscope, Lightbulb, AlertTriangle, Crown, Sparkles, BookOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
 import type { TrainingQuestion } from "@/lib/questions/types";
+import { saveDrQChallengeCompletion } from "@/lib/dr-q-challenges";
 
 interface QuizDrQProps {
   questions: TrainingQuestion[];
+  challengeId: string;
+  userId: string;
+  editionLabel: string;
 }
 
-export function QuizDrQ({ questions }: QuizDrQProps) {
+export function QuizDrQ({ questions, challengeId, userId, editionLabel }: QuizDrQProps) {
   const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -35,6 +39,13 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
       setShowExplanation(false);
     } else {
       setIsFinished(true);
+      void saveDrQChallengeCompletion(userId, challengeId, {
+        completedAt: new Date().toISOString(),
+        score,
+        total: questions.length,
+      }).catch((error) => {
+        console.error("No se pudo guardar la finalización del reto del Dr. Q.", error);
+      });
     }
   };
 
@@ -70,7 +81,7 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
         <Crown className="mx-auto mb-6 h-20 w-20 text-yellow-400" />
         <h2 className="mb-4 text-4xl font-black text-white">¡Reto Completado!</h2>
         <p className="mb-8 text-xl text-slate-300">
-          Has completado la Primera Evaluación del Dr. Q.
+          Has completado la {editionLabel} del Dr. Q.
         </p>
         <div className="mb-10 inline-block rounded-3xl bg-white/10 px-8 py-6 backdrop-blur-md">
           <p className="text-6xl font-black text-yellow-400">
@@ -105,7 +116,7 @@ export function QuizDrQ({ questions }: QuizDrQProps) {
               El Reto del Dr. Q
             </h1>
             <p className="text-sm font-medium text-slate-500">
-              Primera Evaluación • {question.examArea}
+              {editionLabel} • {question.examArea}
             </p>
           </div>
         </div>

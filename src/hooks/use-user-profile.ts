@@ -54,6 +54,7 @@ export interface UserProfile {
   };
   seenQuestionIds?: string[];
   questionCycleCount?: number;
+  drQChallenges?: Record<string, { completedAt: string; score: number; total: number }>;
 }
 
 export function useUserProfile() {

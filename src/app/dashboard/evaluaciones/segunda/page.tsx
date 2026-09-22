@@ -2,10 +2,10 @@
 
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
-import { DR_Q_EVAL_1_QUESTIONS } from "@/data/evaluaciones/evaluacion-dr-q";
+import { DR_Q_EVAL_2_QUESTIONS } from "@/data/evaluaciones/evaluacion-dr-q-2";
 import { QuizDrQ } from "@/components/dr-q-eval/quiz-dr-q";
 
-export default function DrQEvaluacionPage() {
+export default function DrQEvaluacionSegundaPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile, loading: isLoadingProfile } = useUserProfile();
 
@@ -23,10 +23,10 @@ export default function DrQEvaluacionPage() {
   return (
     <div className="min-h-[80vh] py-8">
       <QuizDrQ
-        questions={DR_Q_EVAL_1_QUESTIONS}
-        challengeId="eval1"
+        questions={DR_Q_EVAL_2_QUESTIONS}
+        challengeId="eval2"
         userId={user.uid}
-        editionLabel="Primera Evaluación"
+        editionLabel="Segunda Evaluación"
       />
     </div>
   );
