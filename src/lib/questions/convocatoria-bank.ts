@@ -12,6 +12,7 @@ import { UMNG_CONV_ED3_QUESTIONS } from "@/data/umng-conv-ed3-questions";
 import { UMNG_CONV_ED4_QUESTIONS } from "@/data/umng-conv-ed4-questions";
 import { UMNG_CONV_ED5_QUESTIONS } from "@/data/umng-conv-ed5-questions";
 import { UMNG_CONV_ED6_QUESTIONS } from "@/data/umng-conv-ed6-questions";
+import { UMNG_CONV_ED7_QUESTIONS } from "@/data/umng-conv-ed7-questions";
 import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -30,6 +31,7 @@ const BANK_BY_EDITION: Record<string, TrainingQuestion[]> = {
   "UMNG-ED4": UMNG_CONV_ED4_QUESTIONS,
   "UMNG-ED5": UMNG_CONV_ED5_QUESTIONS,
   "UMNG-ED6": UMNG_CONV_ED6_QUESTIONS,
+  "UMNG-ED7": UMNG_CONV_ED7_QUESTIONS,
 };
 
 
