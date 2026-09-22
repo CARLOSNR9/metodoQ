@@ -67,15 +67,15 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "A",
         label: "A",
-        text: "Nefropatía por contraste; manejo con suspensión de la hidratación intravenosa y observación clínica exclusivamente.",
-        distractorProfile: "wrong_diagnosis_and_dangerous_opposite_management",
-        incorrectFeedback:
-          "No hay antecedente de administración de medio de contraste yodado, y el patrón de hiperpotasemia, hiperuricemia, hiperfosfatemia e hipocalcemia tras el inicio de quimioterapia en un tumor de alta carga es diagnóstico de síndrome de lisis tumoral, que requiere HIDRATACIÓN intravenosa intensiva, no su suspensión.",
+        text: "Síndrome de Lisis Tumoral; el pilar del manejo agudo es la hidratación intravenosa intensiva para mantener un flujo urinario alto, junto con Rasburicasa para el control rápido de la hiperuricemia y monitorización electrocardiográfica continua por el riesgo de arritmias letales por hiperpotasemia.",
       },
       {
         id: "B",
         label: "B",
-        text: "Síndrome de Lisis Tumoral; el pilar del manejo agudo es la hidratación intravenosa intensiva para mantener un flujo urinario alto, junto con Rasburicasa para el control rápido de la hiperuricemia y monitorización electrocardiográfica continua por el riesgo de arritmias letales por hiperpotasemia.",
+        text: "Nefropatía por contraste; manejo con suspensión de la hidratación intravenosa y observación clínica exclusivamente.",
+        distractorProfile: "wrong_diagnosis_and_dangerous_opposite_management",
+        incorrectFeedback:
+          "No hay antecedente de administración de medio de contraste yodado, y el patrón de hiperpotasemia, hiperuricemia, hiperfosfatemia e hipocalcemia tras el inicio de quimioterapia en un tumor de alta carga es diagnóstico de síndrome de lisis tumoral, que requiere HIDRATACIÓN intravenosa intensiva, no su suspensión.",
       },
       {
         id: "C",
@@ -94,7 +94,7 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
           "La insuficiencia suprarrenal aguda cursa típicamente con hiponatremia e hipoglucemia, no con el patrón específico de hiperpotasemia, hiperuricemia e hiperfosfatemia con hipocalcemia descrito; este perfil metabólico, en el contexto temporal preciso de inicio reciente de quimioterapia citorreductora, es diagnóstico de síndrome de lisis tumoral.",
       },
     ],
-    correctOptionId: "B",
+    correctOptionId: "A",
     explanation:
       "El paciente presenta un **Síndrome de Lisis Tumoral (SLT)**, una urgencia oncológica metabólica que ocurre por la **destrucción masiva y súbita de células tumorales** (espontánea o, más frecuentemente, inducida por quimioterapia) en neoplasias de **alto índice proliferativo y gran masa tumoral**, como el Linfoma de Burkitt, uno de los tumores de mayor riesgo. La lisis celular libera grandes cantidades de potasio, fósforo y ácidos nucleicos (metabolizados a ácido úrico) hacia la circulación, generando la tétrada característica: **hiperpotasemia**, **hiperuricemia**, **hiperfosfatemia**, y **hipocalcemia secundaria** (por precipitación de fosfato de calcio y quelación del calcio por el exceso de fósforo). Estas alteraciones pueden causar **arritmias cardíacas letales** (por la hiperpotasemia, reflejada aquí en las ondas T picudas) y **lesión renal aguda** (por precipitación de cristales de ácido úrico y fosfato de calcio en los túbulos renales). El pilar del manejo agudo, además de la corrección específica y urgente de las alteraciones electrolíticas potencialmente letales (manejo de la hiperpotasemia con las medidas estándar), es la **hidratación intravenosa intensiva** para mantener un flujo urinario alto que favorezca la excreción de ácido úrico y fosfato y minimice su precipitación tubular, junto con el uso de **Rasburicasa** (urato oxidasa recombinante), que degrada rápida y eficazmente el ácido úrico existente, siendo superior al alopurinol en el manejo agudo de la hiperuricemia ya establecida. La **monitorización electrocardiográfica continua** es esencial por el riesgo de arritmias.",
     keyPoints: [
@@ -124,7 +124,10 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "B",
         label: "B",
-        text: "Compresión Medular Metastásica; la conducta inmediata es iniciar corticosteroides sistémicos en dosis altas (p. ej., Dexametasona) sin demora, y solicitar de forma URGENTE una resonancia magnética de toda la columna para confirmar el nivel y extensión de la compresión, con el objetivo de definir el tratamiento definitivo (radioterapia y/o cirugía descompresiva) lo antes posible.",
+        text: "Estenosis del canal lumbar; manejo con infiltración epidural de corticoides de forma ambulatoria.",
+        distractorProfile: "wrong_diagnosis_wrong_anatomic_level",
+        incorrectFeedback:
+          "El nivel sensitivo descrito es torácico (T8), no lumbar, y la estenosis del canal lumbar no explica un nivel sensitivo definido ni la progresión tan rápida; el antecedente oncológico y este patrón clínico obligan a descartar compresión medular metastásica torácica con estudio de imagen urgente e inicio inmediato de corticosteroides.",
       },
       {
         id: "C",
@@ -137,13 +140,10 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "D",
         label: "D",
-        text: "Estenosis del canal lumbar; manejo con infiltración epidural de corticoides de forma ambulatoria.",
-        distractorProfile: "wrong_diagnosis_wrong_anatomic_level",
-        incorrectFeedback:
-          "El nivel sensitivo descrito es torácico (T8), no lumbar, y la estenosis del canal lumbar no explica un nivel sensitivo definido ni la progresión tan rápida; el antecedente oncológico y este patrón clínico obligan a descartar compresión medular metastásica torácica con estudio de imagen urgente e inicio inmediato de corticosteroides.",
+        text: "Compresión Medular Metastásica; la conducta inmediata es iniciar corticosteroides sistémicos en dosis altas (p. ej., Dexametasona) sin demora, y solicitar de forma URGENTE una resonancia magnética de toda la columna para confirmar el nivel y extensión de la compresión, con el objetivo de definir el tratamiento definitivo (radioterapia y/o cirugía descompresiva) lo antes posible.",
       },
     ],
-    correctOptionId: "B",
+    correctOptionId: "D",
     explanation:
       "La paciente presenta hallazgos clásicos de **Compresión Medular Metastásica**, una verdadera **urgencia oncológica neurológica**, en la cual cada hora de retraso en el tratamiento puede traducirse en pérdida IRREVERSIBLE de función neurológica (motora, sensitiva y esfinteriana). Los elementos de alarma son: **antecedente de cáncer** (el cáncer de mama es una de las neoplasias que con mayor frecuencia metastatiza a columna), **dolor dorsal progresivo que empeora característicamente en decúbito y durante la noche** (a diferencia del dolor mecánico degenerativo, que típicamente mejora con el reposo), y la aparición de **déficit neurológico progresivo**: paraparesia con signos de motoneurona superior (hiperreflexia, ya que la lesión está por encima del cono medular), un **nivel sensitivo** que localiza el sitio de la lesión, y **disfunción esfinteriana** (retención urinaria), que indica compromiso avanzado y es un signo de mal pronóstico si no se actúa con rapidez. Ante esta sospecha clínica, la conducta **no debe esperar** la confirmación imagenológica para iniciar tratamiento: se deben administrar **corticosteroides sistémicos en dosis altas (Dexametasona)** de forma inmediata, ya que reducen el edema perilesional y pueden mejorar o estabilizar la función neurológica mientras se organiza el estudio definitivo, y simultáneamente solicitar con carácter **urgente** una **resonancia magnética de toda la columna** (dado que puede haber múltiples niveles de compresión) para definir el tratamiento definitivo, que según el caso puede ser radioterapia y/o descompresión quirúrgica.",
     keyPoints: [
@@ -222,15 +222,15 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "B",
         label: "B",
-        text: "Dado que existe un riesgo real, grave e identificable para un tercero específico (la esposa, con exposición sexual continua sin protección), y habiendo agotado razonablemente los esfuerzos para persuadir al paciente de revelar su condición o adoptar medidas de protección, está éticamente justificado que el médico, siguiendo los protocolos institucionales y legales aplicables, tome medidas para que la pareja sea informada o protegida, priorizando la prevención de un daño grave sobre la confidencialidad estricta en este escenario específico.",
-      },
-      {
-        id: "C",
-        label: "C",
         text: "El médico debe notificar inmediatamente a las autoridades judiciales para que inicien un proceso penal contra el paciente por posible exposición a un tercero, sin intentar previamente ninguna medida de persuasión o protección menos invasiva.",
         distractorProfile: "disproportionate_punitive_response_skipping_graduated_approach",
         incorrectFeedback:
           "El abordaje ético y clínico apropiado sigue un principio de proporcionalidad y gradualidad: primero agotar la persuasión, ofrecer apoyo y educar sobre medidas de protección, y solo si esto fracasa considerar la revelación protectora siguiendo protocolos establecidos; acudir directamente a un proceso penal sin agotar estas instancias no es la conducta médica ética inicial apropiada.",
+      },
+      {
+        id: "C",
+        label: "C",
+        text: "Dado que existe un riesgo real, grave e identificable para un tercero específico (la esposa, con exposición sexual continua sin protección), y habiendo agotado razonablemente los esfuerzos para persuadir al paciente de revelar su condición o adoptar medidas de protección, está éticamente justificado que el médico, siguiendo los protocolos institucionales y legales aplicables, tome medidas para que la pareja sea informada o protegida, priorizando la prevención de un daño grave sobre la confidencialidad estricta en este escenario específico.",
       },
       {
         id: "D",
@@ -241,7 +241,7 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
           "La eventual revelación protectora, cuando está justificada, debe limitarse estrictamente al tercero en riesgo real e identificable (la pareja sexual), y no extenderse a otros familiares sin riesgo directo, lo cual constituiría una violación desproporcionada e injustificada de la confidencialidad del paciente.",
       },
     ],
-    correctOptionId: "B",
+    correctOptionId: "C",
     explanation:
       "Este caso ilustra la tensión clásica entre dos principios bioéticos fundamentales: el **respeto a la confidencialidad y autonomía del paciente**, y el **deber de no maleficencia hacia terceros** (evitar un daño grave y prevenible a otra persona). La confidencialidad médico-paciente, aunque es un pilar esencial de la relación clínica y está protegida legalmente, **no es un principio absoluto**: la ética médica y la jurisprudencia reconocen una excepción justificada cuando existe un **riesgo grave, real e inminente para un tercero identificable y específico** (no un riesgo difuso a la población general), como ocurre en este caso con la esposa del paciente, quien mantiene exposición sexual continua sin protección ante una infección de transmisión sexual con consecuencias potencialmente graves. La conducta éticamente apropiada sigue un **principio de gradualidad y proporcionalidad**: el médico debe primero **agotar razonablemente los esfuerzos de persuasión** (como se describe que ya se hizo en varias consultas), ofreciendo apoyo, educación y explorando las razones del paciente; solo si estos esfuerzos fracasan y el riesgo persiste, está justificado que el médico, **siguiendo los protocolos institucionales y el marco legal aplicable** (que en muchos contextos incluye la posibilidad de que el equipo de salud pública o el propio médico, con el debido respaldo, informe a la pareja en riesgo), tome medidas para proteger al tercero identificado, priorizando la **prevención de un daño grave y evitable** sobre una confidencialidad que, en este escenario límite específico, entra en conflicto directo con la seguridad de otra persona.",
     keyPoints: [
@@ -263,15 +263,15 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "A",
         label: "A",
-        text: "Indicar a la paciente que debe bañarse y cambiarse de ropa antes de la valoración médica para su comodidad, y remitirla directamente a Medicina Legal sin brindar atención médica en el servicio de urgencias, ya que la evaluación forense debe realizarse primero.",
-        distractorProfile: "dangerous_evidence_destruction_and_care_denial",
-        incorrectFeedback:
-          "Indicar a la paciente que se bañe o cambie de ropa antes de la valoración médica destruiría evidencia médico-legal crucial; además, la atención médica integral en urgencias (incluyendo profilaxis y atención de lesiones) NO debe condicionarse ni postergarse a la espera de la valoración forense, la cual puede coordinarse en paralelo o inmediatamente después según la organización institucional.",
+        text: "Brindar atención médica integral inmediata (evaluación de lesiones, apoyo psicológico inicial, profilaxis para infecciones de transmisión sexual incluyendo VIH y hepatitis B, y anticoncepción de emergencia si aplica), preservar cuidadosamente la evidencia física sin que la paciente se bañe o cambie de ropa previamente, y activar la ruta de atención integral a víctimas de violencia sexual (incluyendo la articulación con Medicina Legal y las autoridades competentes), la cual NO requiere denuncia previa por parte de la víctima para iniciarse.",
       },
       {
         id: "B",
         label: "B",
-        text: "Brindar atención médica integral inmediata (evaluación de lesiones, apoyo psicológico inicial, profilaxis para infecciones de transmisión sexual incluyendo VIH y hepatitis B, y anticoncepción de emergencia si aplica), preservar cuidadosamente la evidencia física sin que la paciente se bañe o cambie de ropa previamente, y activar la ruta de atención integral a víctimas de violencia sexual (incluyendo la articulación con Medicina Legal y las autoridades competentes), la cual NO requiere denuncia previa por parte de la víctima para iniciarse.",
+        text: "Indicar a la paciente que debe bañarse y cambiarse de ropa antes de la valoración médica para su comodidad, y remitirla directamente a Medicina Legal sin brindar atención médica en el servicio de urgencias, ya que la evaluación forense debe realizarse primero.",
+        distractorProfile: "dangerous_evidence_destruction_and_care_denial",
+        incorrectFeedback:
+          "Indicar a la paciente que se bañe o cambie de ropa antes de la valoración médica destruiría evidencia médico-legal crucial; además, la atención médica integral en urgencias (incluyendo profilaxis y atención de lesiones) NO debe condicionarse ni postergarse a la espera de la valoración forense, la cual puede coordinarse en paralelo o inmediatamente después según la organización institucional.",
       },
       {
         id: "C",
@@ -290,7 +290,7 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
           "La profilaxis para infecciones de transmisión sexual (incluyendo VIH) y la anticoncepción de emergencia son medidas TIEMPO-DEPENDIENTES cuya eficacia disminuye significativamente con el retraso; deben ofrecerse desde la atención inicial en urgencias con base en el relato de la paciente, sin esperar la confirmación de Medicina Legal, cuyo dictamen tiene fines periciales distintos y no debe retrasar la atención clínica urgente.",
       },
     ],
-    correctOptionId: "B",
+    correctOptionId: "A",
     explanation:
       "La atención inicial a una víctima de violencia sexual en urgencias debe seguir un enfoque de **atención integral, oportuna y centrada en la persona**, que simultáneamente proteja la salud física y mental de la paciente y preserve adecuadamente la evidencia médico-legal, sin que ambos objetivos sean excluyentes. Los elementos clave del manejo inicial incluyen: **evaluación y manejo de lesiones físicas**, **apoyo psicológico/en salud mental inicial**, y de forma **tiempo-sensible**, el inicio de **profilaxis post-exposición para infecciones de transmisión sexual** (incluyendo esquema profiláctico para VIH cuando esté indicado según el tiempo transcurrido y el tipo de exposición, y profilaxis/vacunación para hepatitis B), así como **anticoncepción de emergencia** cuando sea pertinente, medidas cuya eficacia depende críticamente de su administración temprana y que **no deben condicionarse** a la valoración forense previa. En cuanto a la **preservación de evidencia**, es fundamental **evitar que la paciente se bañe, cambie de ropa o realice higiene genital** antes de la valoración médico-legal, ya que esto puede destruir evidencia física crucial (fluidos biológicos, fibras, etc.). Un punto legal y ético central es que, en el marco de la atención integral a víctimas de violencia sexual, la **atención en salud es un derecho que NO está condicionado a la presentación previa de una denuncia penal formal**: el sistema de salud debe activar la ruta de atención de forma inmediata con base en el relato de la paciente, articulándose posteriormente (o en paralelo, según la organización institucional) con Medicina Legal y las autoridades competentes, sin que la ausencia de denuncia sea un obstáculo para brindar la atención médica que la paciente necesita.",
     keyPoints: [
@@ -320,7 +320,10 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "B",
         label: "B",
-        text: "Iniciar un Agente Estimulante de la Eritropoyesis (AEE) para la anemia, dado que los depósitos de hierro ya son adecuados y la anemia en ERC avanzada se debe predominantemente a la deficiencia de eritropoyetina endógena; y para la hiperfosfatemia, iniciar restricción dietética de fósforo junto con quelantes de fósforo orales con las comidas.",
+        text: "No se requiere ninguna intervención específica para la anemia ni para el fósforo, ya que ambas alteraciones son hallazgos esperados y benignos en la Enfermedad Renal Crónica que no impactan el pronóstico del paciente.",
+        distractorProfile: "dangerous_dismissal_of_treatable_ckd_complications",
+        incorrectFeedback:
+          "Tanto la anemia como la hiperfosfatemia en ERC son complicaciones TRATABLES que, si no se manejan, se asocian a mayor morbimortalidad cardiovascular, progresión del hiperparatiroidismo secundario y deterioro de la calidad de vida; ambas requieren manejo activo específico, no solo observación.",
       },
       {
         id: "C",
@@ -333,13 +336,10 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "D",
         label: "D",
-        text: "No se requiere ninguna intervención específica para la anemia ni para el fósforo, ya que ambas alteraciones son hallazgos esperados y benignos en la Enfermedad Renal Crónica que no impactan el pronóstico del paciente.",
-        distractorProfile: "dangerous_dismissal_of_treatable_ckd_complications",
-        incorrectFeedback:
-          "Tanto la anemia como la hiperfosfatemia en ERC son complicaciones TRATABLES que, si no se manejan, se asocian a mayor morbimortalidad cardiovascular, progresión del hiperparatiroidismo secundario y deterioro de la calidad de vida; ambas requieren manejo activo específico, no solo observación.",
+        text: "Iniciar un Agente Estimulante de la Eritropoyesis (AEE) para la anemia, dado que los depósitos de hierro ya son adecuados y la anemia en ERC avanzada se debe predominantemente a la deficiencia de eritropoyetina endógena; y para la hiperfosfatemia, iniciar restricción dietética de fósforo junto con quelantes de fósforo orales con las comidas.",
       },
     ],
-    correctOptionId: "B",
+    correctOptionId: "D",
     explanation:
       "El paciente presenta dos complicaciones clásicas y frecuentes de la **Enfermedad Renal Crónica (ERC) avanzada**: **anemia** e **hiperfosfatemia con hiperparatiroidismo secundario**. La **anemia de la ERC** se debe predominantemente a la **disminución en la producción de eritropoyetina** por el riñón enfermo (el principal órgano productor de esta hormona, que estimula la eritropoyesis medular), generando una anemia típicamente **normocítica normocrómica**; en este paciente, con **depósitos de hierro ya adecuados** (ferritina y saturación de transferrina dentro de rango), la suplementación adicional de hierro no sería el manejo apropiado, y el tratamiento indicado es el inicio de un **Agente Estimulante de la Eritropoyesis (AEE)**, como la eritropoyetina recombinante o sus análogos, que corrige la anemia al suplir la deficiencia hormonal subyacente (siempre asegurando previamente depósitos de hierro adecuados, ya que un AEE sin suficiente hierro disponible sería inefectivo). Respecto a la **hiperfosfatemia**, que ocurre porque el riñón enfermo pierde su capacidad de excretar el exceso de fósforo dietético, y que es un contribuyente clave al desarrollo de **hiperparatiroidismo secundario** (el fósforo elevado estimula directamente la secreción de PTH, además de reducir la producción renal de calcitriol) y a la calcificación vascular, el manejo consiste en la **restricción dietética de fósforo** y el uso de **quelantes de fósforo orales**, administrados junto con las comidas para unirse al fósforo dietético en el tracto gastrointestinal y reducir su absorción.",
     keyPoints: [
@@ -418,26 +418,26 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "B",
         label: "B",
-        text: "Taponamiento Cardíaco; la conducta definitiva e inmediata es la Pericardiocentesis urgente (guiada por ecocardiografía cuando sea posible) para evacuar el líquido pericárdico y aliviar la compresión cardíaca, mientras se mantiene un adecuado soporte hemodinámico con líquidos intravenosos como medida transitoria.",
-      },
-      {
-        id: "C",
-        label: "C",
-        text: "Tromboembolismo Pulmonar Masivo; manejo con trombolisis sistémica inmediata como tratamiento de elección.",
-        distractorProfile: "wrong_diagnosis_ignoring_echocardiographic_confirmation",
-        incorrectFeedback:
-          "Aunque el tromboembolismo pulmonar puede causar disnea, hipotensión y taquicardia, el ecocardiograma en este caso confirma específicamente un derrame pericárdico de gran volumen con colapso diastólico del ventrículo derecho, hallazgo diagnóstico de taponamiento cardíaco, no de tromboembolismo pulmonar; la trombolisis no es el tratamiento del taponamiento y podría ser peligrosa en este contexto.",
-      },
-      {
-        id: "D",
-        label: "D",
         text: "Neumotórax a Tensión; manejo con toracostomía con aguja de urgencia en el segundo espacio intercostal.",
         distractorProfile: "wrong_diagnosis_wrong_procedure_for_confirmed_pericardial_effusion",
         incorrectFeedback:
           "El neumotórax a tensión se confirma clínicamente (ausencia unilateral de ruidos respiratorios, hiperresonancia, desviación traqueal) y no requiere ecocardiograma para su diagnóstico; en este caso el ecocardiograma confirma específicamente derrame pericárdico con colapso del ventrículo derecho, diagnóstico de taponamiento cardíaco, que requiere pericardiocentesis, no toracostomía con aguja.",
       },
+      {
+        id: "C",
+        label: "C",
+        text: "Taponamiento Cardíaco; la conducta definitiva e inmediata es la Pericardiocentesis urgente (guiada por ecocardiografía cuando sea posible) para evacuar el líquido pericárdico y aliviar la compresión cardíaca, mientras se mantiene un adecuado soporte hemodinámico con líquidos intravenosos como medida transitoria.",
+      },
+      {
+        id: "D",
+        label: "D",
+        text: "Tromboembolismo Pulmonar Masivo; manejo con trombolisis sistémica inmediata como tratamiento de elección.",
+        distractorProfile: "wrong_diagnosis_ignoring_echocardiographic_confirmation",
+        incorrectFeedback:
+          "Aunque el tromboembolismo pulmonar puede causar disnea, hipotensión y taquicardia, el ecocardiograma en este caso confirma específicamente un derrame pericárdico de gran volumen con colapso diastólico del ventrículo derecho, hallazgo diagnóstico de taponamiento cardíaco, no de tromboembolismo pulmonar; la trombolisis no es el tratamiento del taponamiento y podría ser peligrosa en este contexto.",
+      },
     ],
-    correctOptionId: "B",
+    correctOptionId: "C",
     explanation:
       "El paciente presenta un **Taponamiento Cardíaco**, una urgencia cardiovascular que ocurre cuando la acumulación de líquido en el espacio pericárdico (en este caso, probablemente de origen **maligno**, dado el antecedente de carcinoma pulmonar avanzado, una de las causas más frecuentes de derrame pericárdico neoplásico) genera una **compresión externa progresiva de las cámaras cardíacas**, comprometiendo el llenado diastólico y, en consecuencia, el gasto cardíaco. Los hallazgos clásicos incluyen la **tríada de Beck** (hipotensión, ingurgitación yugular, ruidos cardíacos velados/hipofonéticos), el **pulso paradójico** (descenso exagerado de la presión arterial sistólica durante la inspiración, mayor a 10 mmHg, reflejo de la interdependencia ventricular acentuada por la compresión pericárdica), y la confirmación ecocardiográfica mediante la presencia de **derrame pericárdico** con **colapso diastólico de las cámaras cardíacas de baja presión** (típicamente la aurícula derecha primero, y el ventrículo derecho en taponamiento más avanzado), signo ecocardiográfico específico de compromiso hemodinámico significativo. La conducta terapéutica **definitiva e inmediata** es la **Pericardiocentesis urgente** (idealmente guiada por ecocardiografía para mayor seguridad y precisión), que evacúa el líquido pericárdico causal y **alivia de forma inmediata** la compresión cardíaca, revirtiendo rápidamente el compromiso hemodinámico. Mientras se organiza este procedimiento, el soporte con **líquidos intravenosos** puede ayudar transitoriamente a mantener la precarga y el gasto cardíaco, pero constituye únicamente una **medida puente**, nunca un sustituto del drenaje definitivo del derrame.",
     keyPoints: [
