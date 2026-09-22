@@ -5,6 +5,7 @@ import { UCC_CONV_2026_07_26_QUESTIONS } from "@/data/ucc-conv-2026-07-26-questi
 import { UCC_CONV_2026_08_09_QUESTIONS } from "@/data/ucc-conv-2026-08-09-questions";
 import { UCC_CONV_2026_08_23_QUESTIONS } from "@/data/ucc-conv-2026-08-23-questions";
 import { UCC_CONV_2026_09_06_QUESTIONS } from "@/data/ucc-conv-2026-09-06-questions";
+import { UCC_CONV_2026_09_20_QUESTIONS } from "@/data/ucc-conv-2026-09-20-questions";
 import { UMNG_CONV_2026_07_26_QUESTIONS } from "@/data/umng-conv-2026-07-26-questions";
 import { UMNG_CONV_ED2_QUESTIONS } from "@/data/umng-conv-ed2-questions";
 import { UMNG_CONV_ED3_QUESTIONS } from "@/data/umng-conv-ed3-questions";
@@ -22,6 +23,7 @@ const BANK_BY_EDITION: Record<string, TrainingQuestion[]> = {
   "UCC-2026-08-09": UCC_CONV_2026_08_09_QUESTIONS,
   "UCC-2026-08-23": UCC_CONV_2026_08_23_QUESTIONS,
   "UCC-2026-09-06": UCC_CONV_2026_09_06_QUESTIONS,
+  "UCC-2026-09-20": UCC_CONV_2026_09_20_QUESTIONS,
   "UMNG-2026-07-26": UMNG_CONV_2026_07_26_QUESTIONS,
   "UMNG-ED2": UMNG_CONV_ED2_QUESTIONS,
   "UMNG-ED3": UMNG_CONV_ED3_QUESTIONS,

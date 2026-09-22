@@ -459,15 +459,15 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
       {
         id: "A",
         label: "A",
-        text: "No se requiere ninguna profilaxis, ya que la enfermera completó su esquema de vacunación contra hepatitis B en el pasado y el riesgo de transmisión del VIH por un pinchazo accidental es considerado despreciable.",
-        distractorProfile: "dangerous_dismissal_of_significant_occupational_exposure",
-        incorrectFeedback:
-          "El riesgo de transmisión de VIH por pinchazo con aguja hueca de un paciente con carga viral no controlada, aunque relativamente bajo por evento individual, es clínicamente significativo y justifica profilaxis postexposición; además, sin documentación del título de anticuerpos anti-HBs, no puede asumirse protección adecuada contra hepatitis B, por lo que omitir toda profilaxis sería inapropiado.",
+        text: "Iniciar profilaxis postexposición para VIH con un esquema antirretroviral de al menos tres fármacos lo antes posible (idealmente dentro de las primeras horas, sin exceder las 72 horas), y para hepatitis B, dado que no hay documentación de anticuerpos protectores, solicitar título de anti-HBs de forma urgente y considerar inmunoglobulina antihepatitis B más refuerzo de vacuna si el título no puede confirmarse a tiempo o resulta inadecuado.",
       },
       {
         id: "B",
         label: "B",
-        text: "Iniciar profilaxis postexposición para VIH con un esquema antirretroviral de al menos tres fármacos lo antes posible (idealmente dentro de las primeras horas, sin exceder las 72 horas), y para hepatitis B, dado que no hay documentación de anticuerpos protectores, solicitar título de anti-HBs de forma urgente y considerar inmunoglobulina antihepatitis B más refuerzo de vacuna si el título no puede confirmarse a tiempo o resulta inadecuado.",
+        text: "No se requiere ninguna profilaxis, ya que la enfermera completó su esquema de vacunación contra hepatitis B en el pasado y el riesgo de transmisión del VIH por un pinchazo accidental es considerado despreciable.",
+        distractorProfile: "dangerous_dismissal_of_significant_occupational_exposure",
+        incorrectFeedback:
+          "El riesgo de transmisión de VIH por pinchazo con aguja hueca de un paciente con carga viral no controlada, aunque relativamente bajo por evento individual, es clínicamente significativo y justifica profilaxis postexposición; además, sin documentación del título de anticuerpos anti-HBs, no puede asumirse protección adecuada contra hepatitis B, por lo que omitir toda profilaxis sería inapropiado.",
       },
       {
         id: "C",
@@ -486,7 +486,7 @@ export const UCC_CONV_2026_09_20_91_100_QUESTIONS: TrainingQuestion[] = [
           "El calibre de la aguja no elimina el riesgo de transmisión del VIH en una exposición con aguja hueca de un paciente con carga viral no controlada, por lo que omitir la profilaxis antirretroviral sería inapropiado; además, sin conocer el título de anticuerpos anti-HBs, no puede asumirse que un simple refuerzo de vacuna sea suficiente sin considerar inmunoglobulina si el título resulta inadecuado o no puede confirmarse a tiempo.",
       },
     ],
-    correctOptionId: "B",
+    correctOptionId: "A",
     explanation:
       "Este caso corresponde a un **accidente biológico laboral (exposición ocupacional percutánea)** con **doble riesgo infeccioso**: **VIH** (paciente fuente con infección conocida y carga viral no controlada, lo que representa un riesgo significativo) y **hepatitis B** (estado serológico del paciente fuente desconocido, y la enfermera sin documentación de anticuerpos protectores propios). Para el riesgo de **VIH**, la profilaxis postexposición (PEP) debe iniciarse **lo antes posible tras la exposición**, siendo la eficacia **tiempo-dependiente** (idealmente en las primeras horas, y en general no después de las 72 horas), utilizando un **esquema antirretroviral combinado de al menos tres fármacos**, sin esperar los resultados de pruebas basales de la persona expuesta, que se solicitan en paralelo pero no deben retrasar el inicio de la profilaxis. Para el riesgo de **hepatitis B**, dado que la enfermera fue vacunada previamente pero **no cuenta con documentación de un título protector de anticuerpos anti-HBs** (es decir, se desconoce si desarrolló o mantiene inmunidad adecuada), la conducta apropiada es **solicitar el título de anti-HBs de forma urgente**; si este no puede obtenerse a tiempo o resulta **inadecuado** (no protector), se debe considerar la administración de **inmunoglobulina específica antihepatitis B** junto con un **refuerzo de la vacuna**, ya que la combinación de ambas maximiza la protección cuando el estado inmunológico es incierto. Este abordaje dual, iniciado sin demora, es la conducta estándar recomendada ante un accidente biológico laboral con fuente de riesgo conocido para VIH y estado incierto para hepatitis B.",
     keyPoints: [
