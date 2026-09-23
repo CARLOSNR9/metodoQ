@@ -1,8 +1,15 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { MIR_2026_01_10_QUESTIONS } from "@/data/mir-2026-01-10-questions";
+import { MIR_2026_11_20_QUESTIONS } from "@/data/mir-2026-11-20-questions";
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
+
+/** Banco acumulado de preguntas del módulo MIR (se amplía por lotes de 10). */
+const MIR_QUESTIONS: TrainingQuestion[] = [
+  ...MIR_2026_01_10_QUESTIONS,
+  ...MIR_2026_11_20_QUESTIONS,
+];
 
 /**
  * Modelo del módulo "Simulacro MIR". Sigue el mismo patrón que las
@@ -39,12 +46,12 @@ export type MirExamAttempt = {
  */
 export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
   {
-    code: "MIR-2027-LOTE-1",
-    label: "Simulacro MIR · Lote 1",
+    code: "MIR-2027-SIMULACRO",
+    label: "Simulacro MIR",
     examDate: MIR_EXAM_DATE,
-    questionCount: MIR_2026_01_10_QUESTIONS.length,
-    minutes: 15,
-    questions: MIR_2026_01_10_QUESTIONS,
+    questionCount: MIR_QUESTIONS.length,
+    minutes: Math.round(MIR_QUESTIONS.length * (270 / 210)), // ritmo real MIR: 4h30m / 210 preguntas
+    questions: MIR_QUESTIONS,
   },
 ];
 
