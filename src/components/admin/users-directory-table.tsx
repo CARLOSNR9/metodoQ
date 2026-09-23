@@ -349,6 +349,11 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                     </td>
                     <td className="py-3 pr-3 font-medium text-slate-900 whitespace-nowrap">
                       {getPlanDisplayName(user.plan)}
+                      {user.mirAccessActive ? (
+                        <span className="ml-1.5 inline-flex rounded-md bg-mq-premium-gold/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-mq-premium-gold">
+                          MIR
+                        </span>
+                      ) : null}
                     </td>
                     <td className="py-3 pr-3 text-slate-500 whitespace-nowrap">
                       {getRoleLabel(normalizeUserRole(user.role))}
@@ -459,6 +464,16 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                   </select>
                 </div>
               </div>
+
+              <label className="flex items-center gap-2 rounded-lg border border-mq-premium-gold/30 bg-mq-premium-gold/5 px-3 py-2.5 text-sm text-slate-900">
+                <input
+                  type="checkbox"
+                  name="mirAccessActive"
+                  defaultChecked={editingUser.mirAccessActive}
+                  className="h-4 w-4 accent-mq-premium-gold"
+                />
+                Acceso al módulo MIR (examen internacional, independiente del plan)
+              </label>
 
               {showPaidFields ? (
                 <div className="grid gap-4 rounded-lg border border-mq-accent/20 bg-mq-accent/5 p-4 sm:grid-cols-2">

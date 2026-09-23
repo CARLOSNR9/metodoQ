@@ -21,6 +21,7 @@ export type AdminUserRow = {
   cumulativeScore: number | null;
   activityStatus: ActivityStatus;
   university: string | null;
+  mirAccessActive: boolean;
 };
 
 function resolveSource(data: Record<string, unknown>): UserAcquisitionSource {
@@ -86,6 +87,9 @@ export async function getAdminUserDirectory(limit = 150): Promise<AdminUserRow[]
         typeof data.cumulativeScore === "number" ? data.cumulativeScore : null,
       activityStatus: resolveActivityStatus(lastActiveAt),
       university: typeof data.goalUniversity === "string" ? data.goalUniversity : (typeof data.university === "string" ? data.university : null),
+      mirAccessActive: Boolean(
+        (data.mirAccess as { active?: boolean } | undefined)?.active,
+      ),
     };
   });
 }

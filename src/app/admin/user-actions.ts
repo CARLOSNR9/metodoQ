@@ -114,6 +114,19 @@ export async function updateUserAction(formData: FormData) {
       role,
     };
 
+    const existingMirAccess = existing.mirAccess as
+      | { active?: boolean; purchasedAt?: string | null; expiresAt?: string | null; stripeCheckoutSessionId?: string | null }
+      | undefined;
+    const mirAccessActive = formData.get("mirAccessActive") === "on";
+    update.mirAccess = {
+      active: mirAccessActive,
+      purchasedAt: mirAccessActive
+        ? existingMirAccess?.purchasedAt ?? new Date().toISOString()
+        : existingMirAccess?.purchasedAt ?? null,
+      expiresAt: existingMirAccess?.expiresAt ?? null,
+      stripeCheckoutSessionId: existingMirAccess?.stripeCheckoutSessionId ?? null,
+    };
+
     if (plan === "FREE") {
       update.planBillingCycle = null;
       update.planStartedAt = null;
