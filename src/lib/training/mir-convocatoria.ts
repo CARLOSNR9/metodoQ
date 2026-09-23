@@ -1,5 +1,7 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
+import { MIR_2026_01_10_QUESTIONS } from "@/data/mir-2026-01-10-questions";
+import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
@@ -30,12 +32,21 @@ export type MirExamAttempt = {
 };
 
 /**
- * TODO(contenido): cargar aquí las ediciones reales una vez definido el
- * banco de preguntas (fuente: exámenes oficiales publicados por el
- * Ministerio de Sanidad; los comentarios/explicaciones deben redactarse
- * con contenido propio, no copiados de material editorial de terceros).
+ * Preguntas propias de Método Q, calibradas al temario/nivel del examen MIR
+ * más reciente (MIR 2026, 24 ene 2026). No son transcripción literal del
+ * cuadernillo oficial ni de material editorial de terceros — ver TODO en
+ * cada lote para ampliar la cobertura por especialidad.
  */
-export const MIR_EXAM_EDITIONS: MirExamEdition[] = [];
+export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
+  {
+    code: "MIR-2027-LOTE-1",
+    label: "Simulacro MIR · Lote 1",
+    examDate: MIR_EXAM_DATE,
+    questionCount: MIR_2026_01_10_QUESTIONS.length,
+    minutes: 15,
+    questions: MIR_2026_01_10_QUESTIONS,
+  },
+];
 
 function shuffleQuestions<T>(items: T[]): T[] {
   const copy = [...items];
