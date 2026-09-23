@@ -20,15 +20,18 @@ export default function MirDashboardPage() {
 
   if (!hasMirAccess(profile?.mirAccess)) {
     return (
-      <div className="mx-auto max-w-xl rounded-[2rem] border border-slate-200 bg-white/[0.03] p-8 text-center">
-        <h1 className="text-2xl font-black text-slate-900">Simulacro MIR</h1>
-        <p className="mt-4 text-sm leading-relaxed text-slate-500">
+      <div className="mx-auto max-w-xl rounded-[2rem] border border-white/10 bg-[#0A1F44] p-8 text-center">
+        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
+          Módulo internacional
+        </p>
+        <h1 className="mt-2 text-2xl font-black text-white">Simulacro MIR</h1>
+        <p className="mt-4 text-sm leading-relaxed text-slate-300">
           Este es un módulo aparte de tu plan actual, con banco de preguntas y
           simulacros dedicados a la convocatoria MIR.
         </p>
         <Link
           href="/mir"
-          className="mt-6 inline-flex min-h-11 items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground"
+          className="mt-6 inline-flex min-h-11 items-center justify-center rounded-xl bg-mq-premium-gold px-6 text-sm font-black text-[#0A1F44]"
         >
           Ver módulo MIR
         </Link>

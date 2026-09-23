@@ -1,6 +1,31 @@
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
+import { MIR_2026_01_10_QUESTIONS } from "@/data/mir-2026-01-10-questions";
+import { MIR_2026_11_20_QUESTIONS } from "@/data/mir-2026-11-20-questions";
+import { MIR_2026_21_30_QUESTIONS } from "@/data/mir-2026-21-30-questions";
+import { MIR_2026_31_40_QUESTIONS } from "@/data/mir-2026-31-40-questions";
+import { MIR_2026_41_50_QUESTIONS } from "@/data/mir-2026-41-50-questions";
+import { MIR_2026_51_60_QUESTIONS } from "@/data/mir-2026-51-60-questions";
+import { MIR_2026_61_70_QUESTIONS } from "@/data/mir-2026-61-70-questions";
+import { MIR_2026_71_80_QUESTIONS } from "@/data/mir-2026-71-80-questions";
+import { MIR_2026_81_90_QUESTIONS } from "@/data/mir-2026-81-90-questions";
+import { MIR_2026_91_100_QUESTIONS } from "@/data/mir-2026-91-100-questions";
+import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
+
+/** Banco acumulado de preguntas del módulo MIR (se amplía por lotes de 10). */
+const MIR_QUESTIONS: TrainingQuestion[] = [
+  ...MIR_2026_01_10_QUESTIONS,
+  ...MIR_2026_11_20_QUESTIONS,
+  ...MIR_2026_21_30_QUESTIONS,
+  ...MIR_2026_31_40_QUESTIONS,
+  ...MIR_2026_41_50_QUESTIONS,
+  ...MIR_2026_51_60_QUESTIONS,
+  ...MIR_2026_61_70_QUESTIONS,
+  ...MIR_2026_71_80_QUESTIONS,
+  ...MIR_2026_81_90_QUESTIONS,
+  ...MIR_2026_91_100_QUESTIONS,
+];
 
 /**
  * Modelo del módulo "Simulacro MIR". Sigue el mismo patrón que las
@@ -30,12 +55,21 @@ export type MirExamAttempt = {
 };
 
 /**
- * TODO(contenido): cargar aquí las ediciones reales una vez definido el
- * banco de preguntas (fuente: exámenes oficiales publicados por el
- * Ministerio de Sanidad; los comentarios/explicaciones deben redactarse
- * con contenido propio, no copiados de material editorial de terceros).
+ * Preguntas propias de Método Q, calibradas al temario/nivel del examen MIR
+ * más reciente (MIR 2026, 24 ene 2026). No son transcripción literal del
+ * cuadernillo oficial ni de material editorial de terceros — ver TODO en
+ * cada lote para ampliar la cobertura por especialidad.
  */
-export const MIR_EXAM_EDITIONS: MirExamEdition[] = [];
+export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
+  {
+    code: "MIR-2027-SIMULACRO",
+    label: "Simulacro MIR",
+    examDate: MIR_EXAM_DATE,
+    questionCount: MIR_QUESTIONS.length,
+    minutes: Math.round(MIR_QUESTIONS.length * (270 / 210)), // ritmo real MIR: 4h30m / 210 preguntas
+    questions: MIR_QUESTIONS,
+  },
+];
 
 function shuffleQuestions<T>(items: T[]): T[] {
   const copy = [...items];

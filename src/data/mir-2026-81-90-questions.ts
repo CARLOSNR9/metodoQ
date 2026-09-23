@@ -1,0 +1,244 @@
+import type { TrainingQuestion } from "@/lib/questions/types";
+
+export const MIR_2026_81_90_QUESTIONS: TrainingQuestion[] = [
+  {
+    id: "mir-2026-81",
+    university: "MIR (España)",
+    examArea: "CARDIOLOGÍA",
+    topic: "PERICARDITIS AGUDA",
+    difficulty: "medium",
+    tags: ["mir", "espana", "cardiologia"],
+    statement:
+      "Un varón de 28 años, tras un cuadro catarral la semana previa, presenta dolor torácico pleurítico que mejora al sentarse inclinado hacia adelante y empeora en decúbito supino. A la auscultación se percibe un roce pericárdico. El ECG muestra elevación difusa del segmento ST de morfología cóncava en la mayoría de las derivaciones, junto con descenso del segmento PR. ¿Cuál es el diagnóstico más probable y el tratamiento de primera línea?",
+    options: [
+      { id: "A", label: "A", text: "Pericarditis aguda (probablemente de origen viral); el tratamiento de primera línea es un antiinflamatorio no esteroideo a dosis altas, asociado a colchicina, que reduce además el riesgo de recurrencia." },
+      { id: "B", label: "B", text: "Infarto agudo de miocardio con elevación del ST; el tratamiento de elección es la angioplastia primaria urgente." },
+      { id: "C", label: "C", text: "Tromboembolismo pulmonar; el tratamiento de elección es la anticoagulación inmediata." },
+      { id: "D", label: "D", text: "Neumotórax espontáneo; el tratamiento de elección es la colocación de un tubo de toracostomía." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con **pericarditis aguda**, frecuentemente de origen **viral** (a menudo precedida por un cuadro catarral, como en este caso): dolor torácico **pleurítico** que característicamente **mejora al sentarse e inclinarse hacia adelante** y empeora en decúbito supino, **roce pericárdico** a la auscultación, y en el ECG, una **elevación difusa y cóncava** del ST (a diferencia de la elevación **localizada y convexa** del IAMCEST, que sigue un territorio coronario específico) junto con **descenso del segmento PR**, otro hallazgo característico de la pericarditis. El tratamiento de **primera línea** son los **AINE a dosis altas** (por ejemplo, ibuprofeno o ácido acetilsalicílico), asociados a **colchicina**, que ha demostrado reducir significativamente el riesgo de recurrencia de la pericarditis.\n\n**TRAMPA DEL EXAMEN:** Confundir la pericarditis con un IAMCEST es el error central de esta pregunta: la clave está en el patrón electrocardiográfico (difuso y cóncavo en la pericarditis, frente a localizado y convexo, siguiendo un territorio coronario, en el IAMCEST) y en el contexto clínico (dolor que cambia con la posición y el roce pericárdico son ajenos al síndrome coronario agudo). Confundir el cuadro con TEP o neumotórax ignora los hallazgos específicos (roce pericárdico, patrón ECG característico) que apuntan claramente a un proceso pericárdico.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el ECG es su mejor aliado para no confundir una pericarditis con un infarto: en la pericarditis, la elevación del ST es difusa (afecta a la mayoría de las derivaciones, no un territorio coronario específico) y de morfología cóncava (como una sonrisa), mientras que en el IAMCEST la elevación es localizada y convexa (como el lomo de un gato arqueado), siguiendo el territorio de una arteria coronaria concreta. Sume a eso el dato clínico clásico: un dolor que mejora al inclinarse hacia adelante y empeora acostado, junto con un roce pericárdico a la auscultación, y el diagnóstico de pericarditis se vuelve bastante claro. El tratamiento es sencillo y efectivo: AINE a dosis altas junto con colchicina desde el principio, que no solo ayuda a controlar el episodio agudo, sino que reduce notablemente el riesgo de que este paciente vuelva con una recurrencia en los próximos meses.",
+    keyPoints: [
+      "Pericarditis aguda: dolor pleurítico que mejora al sentarse inclinado hacia adelante, roce pericárdico, elevación difusa y cóncava del ST con descenso del PR.",
+      "Diferenciar del IAMCEST: elevación localizada y convexa siguiendo un territorio coronario, sin roce pericárdico ni cambio postural del dolor.",
+      "Tratamiento de primera línea: AINE a dosis altas + colchicina (reduce el riesgo de recurrencia).",
+    ],
+  },
+  {
+    id: "mir-2026-82",
+    university: "MIR (España)",
+    examArea: "CIRUGÍA GENERAL / VASCULAR",
+    topic: "ISQUEMIA MESENTÉRICA AGUDA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "cirugia-general"],
+    statement:
+      "Un varón de 75 años, con fibrilación auricular no anticoagulada, presenta dolor abdominal intenso y difuso de inicio súbito, con vómitos, pero con un examen abdominal relativamente blando y sin defensa marcada en las primeras horas. El lactato sérico está elevado. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Ante la alta sospecha de isquemia mesentérica aguda (dolor desproporcionado al examen físico, factor de riesgo embólico, lactato elevado), debe solicitarse angio-TC urgente para confirmar el diagnóstico, y activar cirugía/radiología vascular para revascularización urgente (embolectomía, trombolisis o cirugía) sin demorar el tratamiento, dado el riesgo de progresión rápida a necrosis intestinal." },
+      { id: "B", label: "B", text: "Dado que el examen abdominal es relativamente blando y sin defensa marcada, se descarta razonablemente una urgencia abdominal grave, permitiendo manejo ambulatorio con analgesia." },
+      { id: "C", label: "C", text: "Debe iniciarse manejo conservador con dieta absoluta y observación durante 48-72 horas antes de considerar cualquier estudio de imagen urgente." },
+      { id: "D", label: "D", text: "El lactato elevado en este contexto se debe exclusivamente a la fibrilación auricular y no tiene relevancia diagnóstica adicional." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es sugestivo de **isquemia mesentérica aguda**, probablemente de origen **embólico** dado el antecedente de fibrilación auricular no anticoagulada (fuente embolígena clásica hacia la circulación mesentérica, igual que hacia las extremidades). Un dato clave y clásico de esta entidad es el **dolor desproporcionado** respecto a los hallazgos del examen físico (el abdomen puede parecer relativamente blando en las fases iniciales, antes de que se instaure la necrosis transmural y la peritonitis franca), junto con un **lactato elevado** (marcador de hipoperfusión e isquemia tisular). Ante esta sospecha, se debe solicitar **angio-TC urgente** para confirmar el diagnóstico y localizar la oclusión, y activar de inmediato al equipo de **cirugía vascular/radiología intervencionista** para la **revascularización urgente** (embolectomía, trombolisis dirigida, o cirugía con eventual resección intestinal si ya hay necrosis), sin demorar el tratamiento, ya que el intestino tiene una tolerancia limitada a la isquemia antes de progresar a necrosis irreversible, con una mortalidad muy elevada si el diagnóstico y tratamiento se retrasan.\n\n**TRAMPA DEL EXAMEN:** La trampa central de esta pregunta es confiar en un examen abdominal relativamente benigno para descartar gravedad: precisamente el \"dolor desproporcionado al examen físico\" es la pista diagnóstica clásica de la isquemia mesentérica, no una razón para tranquilizarse. Adoptar un manejo conservador con observación prolongada retrasa peligrosamente el diagnóstico y el tratamiento de una entidad donde cada hora de isquemia no resuelta aumenta el riesgo de necrosis intestinal extensa e irreversible.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la isquemia mesentérica aguda es la gran \"simuladora silenciosa\" del abdomen agudo: el paciente le va a decir que le duele muchísimo, pero cuando usted palpa el abdomen, no va a encontrar la defensa ni la rigidez que esperaría para ese nivel de dolor, al menos en las primeras horas. Ese contraste —dolor intenso con examen relativamente tranquilo— es precisamente la pista que tiene que hacerle sospechar isquemia mesentérica, no descartarla. Sume el antecedente de fibrilación auricular no anticoagulada (fuente clásica de émbolos hacia la arteria mesentérica superior) y un lactato elevado, y la sospecha se vuelve muy alta. No se quede observando 48-72 horas \"a ver cómo evoluciona\"; pida la angio-TC urgente y active al equipo vascular de inmediato, porque el intestino isquémico tiene un reloj biológico corriendo hacia la necrosis, y esta es de las patologías abdominales con mayor mortalidad si el diagnóstico se retrasa.",
+    keyPoints: [
+      "Isquemia mesentérica aguda: dolor abdominal desproporcionado al examen físico (abdomen relativamente blando inicialmente) + factor de riesgo embólico (FA) + lactato elevado.",
+      "Diagnóstico: angio-TC urgente. Tratamiento: revascularización urgente (embolectomía, trombolisis o cirugía), sin demorarlo.",
+      "Un examen abdominal benigno NO descarta la isquemia mesentérica en fases iniciales; el retraso diagnóstico se asocia a mortalidad muy elevada por necrosis intestinal.",
+    ],
+  },
+  {
+    id: "mir-2026-83",
+    university: "MIR (España)",
+    examArea: "TOXICOLOGÍA",
+    topic: "INTOXICACIÓN POR PARACETAMOL",
+    difficulty: "hard",
+    tags: ["mir", "espana", "toxicologia"],
+    statement:
+      "Una mujer de 22 años acude 6 horas después de la ingesta voluntaria de 12 gramos de paracetamol, actualmente asintomática. Se determina el nivel plasmático de paracetamol y se compara con el nomograma de Rumack-Matthew. ¿Cuál es la actuación más apropiada respecto al tratamiento antidótico?",
+    options: [
+      { id: "A", label: "A", text: "Si el nivel plasmático de paracetamol, interpretado según el nomograma de Rumack-Matthew en función del tiempo transcurrido desde la ingesta, se encuentra en el rango de riesgo de hepatotoxicidad, debe iniciarse N-acetilcisteína, independientemente de que la paciente esté actualmente asintomática, ya que el daño hepático se desarrolla de forma diferida." },
+      { id: "B", label: "B", text: "No debe iniciarse ningún tratamiento antidótico mientras la paciente permanezca asintomática, reservando la N-acetilcisteína únicamente para cuando aparezcan signos clínicos de insuficiencia hepática." },
+      { id: "C", label: "C", text: "El carbón activado administrado a las 6 horas de la ingesta es, por sí solo, un tratamiento suficiente, sin necesidad de valorar N-acetilcisteína." },
+      { id: "D", label: "D", text: "La N-acetilcisteína solo es eficaz si se administra dentro de la primera hora tras la ingesta; pasado ese tiempo, no aporta ningún beneficio." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "En la **intoxicación por paracetamol**, un dato crítico es que el paciente puede estar **asintomático** en las primeras horas/días a pesar de un riesgo real de **hepatotoxicidad grave** (que se manifiesta clínicamente de forma diferida, típicamente a partir de las 24-72 horas). La actuación estándar es determinar el **nivel plasmático de paracetamol** (idealmente a partir de las 4 horas de la ingesta, momento en que los niveles son más interpretables) y compararlo con el **nomograma de Rumack-Matthew**, que relaciona el nivel plasmático con el tiempo transcurrido desde la ingesta para estimar el riesgo de hepatotoxicidad. Si el nivel se encuentra en el rango de riesgo, debe iniciarse **N-acetilcisteína** (por vía oral o intravenosa) **independientemente de la ausencia de síntomas**, ya que su eficacia para prevenir el daño hepático depende de iniciarla precozmente, antes de que se desarrolle la lesión hepatocelular.\n\n**TRAMPA DEL EXAMEN:** Esperar a que aparezcan síntomas de insuficiencia hepática antes de iniciar la N-acetilcisteína es un error grave: para entonces, el daño hepático ya puede estar establecido y el antídoto pierde gran parte de su eficacia preventiva. El carbón activado puede tener un papel si se administra muy precozmente (generalmente dentro de la primera hora-hora y media), pero no sustituye a la N-acetilcisteína cuando el nivel plasmático indica riesgo. Afirmar que la N-acetilcisteína solo funciona en la primera hora es incorrecto: mantiene beneficio incluso administrada más tarde (incluyendo en la insuficiencia hepática ya establecida, donde también ha demostrado mejorar el pronóstico, aunque su eficacia para prevenir el daño es mayor cuanto antes se inicie).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la trampa mortal de la intoxicación por paracetamol es precisamente que el paciente se siente bien en las primeras horas, a veces incluso días, mientras el hígado se está dañando silenciosamente por dentro; no se deje tranquilizar por la ausencia de síntomas. Su herramienta de decisión es el nomograma de Rumack-Matthew: mida el nivel plasmático (a partir de las 4 horas de la ingesta) y crúcelo con el tiempo transcurrido; si cae en la zona de riesgo, la N-acetilcisteína se inicia ya, sin esperar a que aparezcan náuseas, dolor en hipocondrio derecho o ictericia, porque para cuando eso ocurra, usted ya perdió la ventana más eficaz de protección hepática. Y aunque la eficacia es mayor cuanto antes se administre, no piense que después de la primera hora ya no sirve de nada: la N-acetilcisteína sigue teniendo un papel protector incluso administrada más tarde, y se sigue usando incluso en pacientes que ya desarrollaron fallo hepático agudo por paracetamol.",
+    keyPoints: [
+      "Intoxicación por paracetamol: el paciente puede estar asintomático mientras el riesgo de hepatotoxicidad diferida es real; no esperar síntomas para actuar.",
+      "Nivel plasmático de paracetamol (a partir de 4h post-ingesta) interpretado con el nomograma de Rumack-Matthew determina la necesidad de N-acetilcisteína.",
+      "N-acetilcisteína: iniciar si el nivel está en rango de riesgo, independientemente de síntomas; mantiene beneficio incluso administrada tardíamente.",
+    ],
+  },
+  {
+    id: "mir-2026-84",
+    university: "MIR (España)",
+    examArea: "TOXICOLOGÍA",
+    topic: "INTOXICACIÓN POR OPIOIDES",
+    difficulty: "medium",
+    tags: ["mir", "espana", "toxicologia"],
+    statement:
+      "Un varón de 35 años es encontrado inconsciente, con frecuencia respiratoria de 6 rpm, pupilas mióticas puntiformes bilaterales, y saturación de oxígeno de 82%. Se sospecha sobredosis de opioides. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Administrar naloxona (intravenosa, intramuscular o intranasal), titulando la dosis para revertir la depresión respiratoria sin necesidad de revertir completamente el efecto opioide (para minimizar el riesgo de síndrome de abstinencia agudo), con monitorización estrecha posterior por el riesgo de resedación, dado que la vida media de la naloxona suele ser más corta que la de muchos opioides." },
+      { id: "B", label: "B", text: "Administrar flumazenilo como antídoto específico, dado que las pupilas mióticas son características de la intoxicación por benzodiacepinas, no por opioides." },
+      { id: "C", label: "C", text: "Realizar lavado gástrico como primera medida, sin necesidad de ningún antídoto específico." },
+      { id: "D", label: "D", text: "Dar de alta al paciente en cuanto recupere el nivel de conciencia tras la primera dosis de naloxona, sin necesidad de ningún periodo de observación posterior." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (depresión respiratoria marcada, miosis puntiforme bilateral, disminución del nivel de conciencia, hipoxemia) es característico de una **intoxicación por opioides**. El tratamiento es la **naloxona**, un antagonista opioide que revierte rápidamente la depresión respiratoria y del nivel de conciencia. Debe **titularse** la dosis buscando revertir principalmente la **depresión respiratoria** (el objetivo prioritario, que amenaza la vida), sin necesidad de revertir completamente todos los efectos opioides, ya que una reversión demasiado brusca y completa puede precipitar un **síndrome de abstinencia agudo** (agitación, dolor, taquicardia) en pacientes con dependencia. Un punto de seguridad crítico: la **vida media de la naloxona es habitualmente más corta** que la de muchos opioides (especialmente los de acción prolongada), por lo que existe riesgo de **resedación** (el paciente vuelve a deprimirse respiratoriamente cuando el efecto de la naloxona desaparece antes que el del opioide), lo que obliga a mantener una **monitorización estrecha** tras la reversión inicial, con dosis repetidas de naloxona o perfusión continua si es necesario.\n\n**TRAMPA DEL EXAMEN:** El flumazenilo es el antídoto de las benzodiacepinas, no de los opioides; la miosis puntiforme es, de hecho, un hallazgo característico de la intoxicación opioide (a diferencia de la intoxicación por benzodiacepinas, que no suele producir miosis tan marcada). El lavado gástrico no tiene un papel relevante en la intoxicación aguda por opioides con compromiso respiratorio; la prioridad es la reversión farmacológica inmediata y el soporte de la vía aérea. Dar de alta inmediatamente tras la primera dosis de naloxona, sin periodo de observación, ignora el riesgo de resedación por la diferencia de vida media entre la naloxona y el opioide causante.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante depresión respiratoria + miosis puntiforme + bajo nivel de conciencia, la sospecha de intoxicación opioide debe ser casi automática, y su antídoto es la naloxona, no el flumazenilo (ese es para benzodiacepinas, y aquí las pupilas mióticas le están apuntando justo a lo contrario). Titule la dosis pensando en recuperar una respiración adecuada, no en \"despertar completamente\" al paciente; si revierte todo el efecto de golpe en alguien con dependencia opioide, se puede desencadenar un síndrome de abstinencia agudo, con agitación y sufrimiento innecesario para el paciente. Y el detalle que más le puede salvar la vida a este paciente después de la primera dosis: la naloxona se metaboliza más rápido que muchos opioides, así que no lo mande a casa apenas abra los ojos; manténgalo en observación, porque puede volver a deprimirse respiratoriamente cuando el efecto de la naloxona se agote antes que el del opioide que tomó.",
+    keyPoints: [
+      "Intoxicación por opioides: depresión respiratoria + miosis puntiforme + disminución del nivel de conciencia; antídoto: naloxona.",
+      "Titular la naloxona para revertir la depresión respiratoria, no necesariamente todo el efecto opioide (riesgo de abstinencia aguda si se revierte en exceso).",
+      "Riesgo de resedación por vida media más corta de la naloxona que muchos opioides: mantener observación/monitorización estrecha, no dar de alta inmediatamente.",
+    ],
+  },
+  {
+    id: "mir-2026-85",
+    university: "MIR (España)",
+    examArea: "NEUROLOGÍA / GERIATRÍA",
+    topic: "SÍNDROME CONFUSIONAL AGUDO (DELIRIUM)",
+    difficulty: "medium",
+    tags: ["mir", "espana", "neurologia"],
+    statement:
+      "Un varón de 82 años, ingresado por una neumonía, presenta desde ayer fluctuaciones en su nivel de atención y conciencia, con periodos de agitación y desorientación alternando con somnolencia, de inicio agudo en las últimas 48 horas. No tenía deterioro cognitivo conocido previamente. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "El cuadro es compatible con un síndrome confusional agudo (delirium); debe buscarse y tratarse activamente la causa subyacente (en este caso, probablemente relacionada con la infección/sepsis, aunque también deben revisarse fármacos, alteraciones metabólicas y otros factores precipitantes), priorizando medidas no farmacológicas, y reservando fármacos como los antipsicóticos a dosis bajas solo para la agitación grave con riesgo para el paciente o terceros." },
+      { id: "B", label: "B", text: "El cuadro es compatible con una demencia de inicio agudo, un diagnóstico frecuente en el anciano hospitalizado, que no requiere investigación de una causa subyacente." },
+      { id: "C", label: "C", text: "Debe iniciarse una benzodiacepina a dosis altas como tratamiento de primera línea del delirium en el anciano, independientemente de la causa subyacente." },
+      { id: "D", label: "D", text: "El cuadro no requiere ninguna intervención específica, dado que la confusión es un hallazgo esperable y sin relevancia clínica en todo paciente anciano hospitalizado." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (inicio **agudo**, curso **fluctuante**, alteración de la atención y el nivel de conciencia, sin deterioro cognitivo previo conocido) es característico de un **síndrome confusional agudo (delirium)**, muy frecuente en el paciente anciano hospitalizado, especialmente en el contexto de una **infección/sepsis** (como la neumonía de este paciente), aunque también deben revisarse otros factores precipitantes frecuentes: fármacos (sedantes, anticolinérgicos, opioides), alteraciones metabólicas/hidroelectrolíticas, retención urinaria/fecal, dolor no controlado, privación de sueño, o deprivación sensorial. El manejo prioriza **medidas no farmacológicas** (reorientación, presencia familiar, facilitar el sueño nocturno, movilización precoz, corregir déficits sensoriales como gafas/audífonos, evitar sujeciones físicas innecesarias) y el **tratamiento activo de la causa subyacente**; los **antipsicóticos a dosis bajas** se reservan para la **agitación grave** que suponga un riesgo real para el paciente o terceros, y solo tras haber agotado o en paralelo con las medidas no farmacológicas.\n\n**TRAMPA DEL EXAMEN:** Confundir el delirium con una demencia de inicio agudo es un error conceptual importante: la **demencia** es un proceso de curso **crónico y progresivo**, sin la fluctuación característica del delirium, y su presencia no exime de buscar la causa de un cuadro confusional de instauración aguda, que siempre debe investigarse activamente. Las **benzodiacepinas** no son el tratamiento de primera línea del delirium en el anciano (salvo cuando la causa es la abstinencia de alcohol o de sedantes), ya que pueden **empeorar** el cuadro confusional en la mayoría de las otras causas. Ignorar el cuadro asumiendo que \"es esperable\" en el anciano hospitalizado retrasa el diagnóstico y tratamiento de la causa subyacente, que puede ser grave (como una sepsis en evolución).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la clave para reconocer un delirium frente a una demencia es el patrón temporal: el delirium aparece de forma AGUDA (horas a días) y fluctúa a lo largo del día (el paciente puede estar relativamente lúcido por la mañana y muy confuso por la noche), mientras que la demencia es un declive gradual y sostenido en el tiempo, sin esas fluctuaciones tan marcadas. Ante un delirium, su trabajo detectivesco es buscar la causa: en este paciente hospitalizado por neumonía, la infección es la sospechosa número uno, pero revise también los fármacos que le han dado, sus electrolitos, si tiene retención urinaria o fecal, si está durmiendo mal por el ambiente hospitalario. Trate esa causa de fondo, y en paralelo, aplique medidas simples pero efectivas: que la familia lo acompañe, que tenga sus gafas y audífonos puestos, que se mueva lo antes posible, que duerma de noche y esté despierto de día. Reserve el antipsicótico a dosis bajas solo si la agitación es tan grave que pone en riesgo al paciente o a quienes lo rodean, y evite las benzodiacepinas salvo que la causa sea específicamente la abstinencia de alcohol o sedantes, porque en el resto de causas tienden a empeorar la confusión, no a mejorarla.",
+    keyPoints: [
+      "Delirium: inicio agudo + curso fluctuante + alteración de la atención/conciencia; frecuente en el anciano hospitalizado, buscar causa subyacente activamente.",
+      "Manejo: medidas no farmacológicas prioritarias + tratar la causa; antipsicóticos a dosis bajas solo para agitación grave con riesgo.",
+      "Diferenciar de demencia (curso crónico, sin fluctuación marcada); benzodiacepinas no son primera línea (salvo abstinencia de alcohol/sedantes).",
+    ],
+  },
+  {
+    id: "mir-2026-86",
+    university: "MIR (España)",
+    examArea: "REUMATOLOGÍA",
+    topic: "ESPONDILOARTROPATÍA AXIAL",
+    difficulty: "medium",
+    tags: ["mir", "espana", "reumatologia"],
+    statement:
+      "Un varón de 26 años presenta dolor lumbar de 8 meses de evolución, de inicio insidioso, con rigidez matutina de más de 45 minutos que mejora progresivamente con la actividad física y empeora con el reposo. Refiere episodios alternantes de dolor en ambas nalgas. ¿Cuál es la orientación diagnóstica más probable y la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "El patrón es compatible con dolor lumbar inflamatorio, sugestivo de espondiloartropatía axial (por ejemplo, espondilitis anquilosante); debe solicitarse estudio (incluyendo HLA-B27 y resonancia magnética de articulaciones sacroilíacas, más sensible que la radiografía simple en fases iniciales) e iniciar tratamiento con antiinflamatorios no esteroideos como primera línea." },
+      { id: "B", label: "B", text: "El patrón es compatible con dolor lumbar mecánico simple; el tratamiento es reposo absoluto prolongado, evitando la actividad física hasta la resolución completa del dolor." },
+      { id: "C", label: "C", text: "Debe iniciarse tratamiento biológico (anti-TNF) como primera línea, sin necesidad de ensayar antiinflamatorios no esteroideos previamente." },
+      { id: "D", label: "D", text: "El cuadro no requiere estudio adicional, dado que el dolor lumbar en un varón joven siempre tiene un origen mecánico benigno." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro presenta las características clásicas del **dolor lumbar inflamatorio**: inicio insidioso, en un paciente **joven** (típicamente <45 años), de **larga evolución** (>3 meses), con **rigidez matutina prolongada** (>30 minutos) que **mejora con la actividad física** y **empeora con el reposo** (patrón opuesto al dolor lumbar mecánico), junto con **dolor glúteo alternante** (sugestivo de sacroileítis). Este patrón es sugestivo de una **espondiloartropatía axial** (siendo la espondilitis anquilosante la forma clásica). El estudio incluye la determinación de **HLA-B27** (presente en la mayoría de los pacientes, aunque no es exclusivo ni obligatorio para el diagnóstico) y **resonancia magnética de articulaciones sacroilíacas**, que es más **sensible** que la radiografía simple para detectar sacroileítis en **fases iniciales** (antes de que aparezcan los cambios estructurales visibles radiológicamente). El tratamiento de **primera línea** son los **AINE**, que además tienen valor diagnóstico-terapéutico (la buena respuesta al AINE es otro dato que apoya el origen inflamatorio del dolor).\n\n**TRAMPA DEL EXAMEN:** Confundir este patrón con dolor lumbar mecánico simple, y recomendar reposo prolongado, es contraproducente: en el dolor lumbar inflamatorio, el reposo empeora los síntomas y la actividad física los mejora, justo lo contrario del patrón mecánico. Iniciar tratamiento biológico (anti-TNF) como primera línea, sin ensayar primero los AINE, no respeta el orden terapéutico estándar (los biológicos se reservan para la falta de respuesta adecuada a los AINE). Descartar la necesidad de estudio en un varón joven con este patrón tan característico de dolor inflamatorio ignora una entidad con implicaciones diagnósticas y terapéuticas importantes a largo plazo.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., aprenda a distinguir el dolor lumbar inflamatorio del mecánico con estas preguntas clave: ¿el paciente es joven (menos de 45 años)? ¿El dolor lleva más de 3 meses, de inicio insidioso? ¿La rigidez matutina dura más de media hora? ¿Mejora con el ejercicio y empeora con el reposo? ¿Hay dolor glúteo alternante? Si la respuesta es sí a varias de estas, usted está ante un patrón inflamatorio, no mecánico, y eso cambia completamente su enfoque: en vez de mandarlo a reposo (que empeoraría este tipo de dolor), pida el HLA-B27 y una resonancia magnética de sacroilíacas, que le va a mostrar la sacroileítis mucho antes de que aparezca en una radiografía simple. Empiece el tratamiento con AINE, que en esta enfermedad no solo alivia, sino que además le confirma la sospecha si el paciente responde muy bien; los biológicos quedan reservados para cuando los AINE no sean suficientes, no como punto de partida.",
+    keyPoints: [
+      "Dolor lumbar inflamatorio (espondiloartropatía axial): inicio insidioso en <45 años, >3 meses, rigidez matutina >30 min que mejora con ejercicio y empeora con reposo, dolor glúteo alternante.",
+      "Estudio: HLA-B27 + resonancia magnética de sacroilíacas (más sensible que radiografía simple en fases iniciales).",
+      "Tratamiento de primera línea: AINE; los biológicos (anti-TNF) se reservan para la falta de respuesta adecuada.",
+    ],
+  },
+  {
+    id: "mir-2026-87",
+    university: "MIR (España)",
+    examArea: "HEMATOLOGÍA",
+    topic: "HIPERLEUCOCITOSIS Y LEUCOSTASIS EN LEUCEMIA AGUDA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "hematologia"],
+    statement:
+      "Un varón de 45 años, con sospecha de leucemia mieloide aguda de nuevo diagnóstico, presenta un recuento leucocitario de 180.000/µL, con disnea, confusión leve y visión borrosa. La hemoglobina es de 7.8 g/dL. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "El cuadro es compatible con leucostasis sintomática por hiperleucocitosis; requiere citorreducción urgente (hidroxiurea y/o leucaféresis según disponibilidad y gravedad) junto con profilaxis de síndrome de lisis tumoral, evitando la transfusión de concentrados de hematíes salvo que sea imprescindible, ya que puede aumentar la viscosidad sanguínea y empeorar la leucostasis." },
+      { id: "B", label: "B", text: "Debe transfundirse de inmediato un concentrado de hematíes para corregir la anemia como prioridad absoluta, sin considerar el recuento leucocitario ni sus síntomas asociados." },
+      { id: "C", label: "C", text: "El recuento leucocitario elevado no tiene relevancia clínica inmediata si el paciente mantiene un nivel de conciencia aceptable, por lo que puede diferirse cualquier intervención urgente." },
+      { id: "D", label: "D", text: "Debe iniciarse quimioterapia de inducción completa de inmediato, sin ninguna medida previa de citorreducción ni profilaxis de lisis tumoral." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (hiperleucocitosis marcada junto con síntomas de **leucostasis**: disnea, confusión, alteraciones visuales, en el contexto de una leucemia aguda de nuevo diagnóstico) es una **urgencia hematológica**: los blastos leucémicos en gran cantidad aumentan la **viscosidad sanguínea** y pueden ocluir la microcirculación (pulmonar, cerebral, entre otras), produciendo los síntomas descritos. El manejo urgente incluye la **citorreducción** (hidroxiurea oral, y/o **leucaféresis** si está disponible y la situación clínica lo justifica) para reducir rápidamente el recuento de blastos circulantes, junto con **profilaxis del síndrome de lisis tumoral** (hidratación intensiva e hipouricemiante), dado el alto riesgo de esta complicación cuando se inicia la citorreducción/quimioterapia en un paciente con tan alta carga tumoral. Un punto de seguridad importante: debe **evitarse la transfusión de concentrados de hematíes** salvo que sea absolutamente imprescindible (por ejemplo, ante inestabilidad hemodinámica grave por la anemia), ya que aumenta aún más la **viscosidad sanguínea** y puede **empeorar la leucostasis**.\n\n**TRAMPA DEL EXAMEN:** Priorizar la transfusión de hematíes sin considerar el riesgo de leucostasis es un error clásico y potencialmente peligroso en este contexto específico (a diferencia de la anemia aislada sin hiperleucocitosis, donde la transfusión sería una medida estándar sin esta contraindicación relativa). Subestimar la gravedad de la hiperleucocitosis sintomática, pensando que el nivel de conciencia relativamente conservado descarta urgencia, ignora el riesgo de progresión rápida hacia complicaciones graves (hemorragia intracraneal, insuficiencia respiratoria) si no se actúa con celeridad. Iniciar quimioterapia de inducción completa sin las medidas previas de citorreducción y profilaxis de lisis tumoral expone al paciente a un riesgo muy elevado de síndrome de lisis tumoral grave.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., cuando vea un recuento de leucocitos tan alto junto con síntomas neurológicos y respiratorios en una leucemia aguda recién diagnosticada, piense en leucostasis: literalmente hay tanta cantidad de blastos circulando que la sangre se vuelve más viscosa y empieza a taponar los vasos pequeños del cerebro y los pulmones. Su prioridad es bajar ese recuento rápido, con hidroxiurea o leucaféresis según lo que tenga disponible, mientras en paralelo protege al paciente del síndrome de lisis tumoral que casi seguro viene detrás con tanta carga tumoral destruyéndose. Y aquí viene el detalle que puede salvarle la vida a este paciente o empeorarlo gravemente: NO transfunda hematíes por reflejo solo por ver una hemoglobina de 7.8; en este contexto específico de hiperleucocitosis sintomática, subir aún más la viscosidad de la sangre con una transfusión puede empeorar la leucostasis. Guarde esa transfusión para cuando sea verdaderamente imprescindible, y mientras tanto, concéntrese en bajar los leucocitos.",
+    keyPoints: [
+      "Leucostasis sintomática (hiperleucocitosis + síntomas neurológicos/respiratorios): urgencia hematológica en leucemia aguda de nuevo diagnóstico.",
+      "Manejo: citorreducción urgente (hidroxiurea y/o leucaféresis) + profilaxis de síndrome de lisis tumoral.",
+      "Evitar transfusión de concentrados de hematíes salvo imprescindible: aumenta la viscosidad sanguínea y puede empeorar la leucostasis.",
+    ],
+  },
+  {
+    id: "mir-2026-88",
+    university: "MIR (España)",
+    examArea: "GINECOLOGÍA",
+    topic: "ENFERMEDAD PÉLVICA INFLAMATORIA",
+    difficulty: "medium",
+    tags: ["mir", "espana", "ginecologia"],
+    statement:
+      "Una mujer de 24 años, sexualmente activa con múltiples parejas, presenta dolor pélvico bilateral de una semana de evolución, fiebre de 38.1°C y flujo vaginal purulento. Al examen ginecológico presenta dolor a la movilización cervical y dolor anexial bilateral. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "El cuadro es compatible con enfermedad pélvica inflamatoria; debe iniciarse antibioterapia empírica de amplio espectro (cubriendo gonococo, clamidia y anaerobios) de forma precoz, ante la sospecha clínica, sin esperar la confirmación microbiológica, valorando manejo ambulatorio u hospitalario según la gravedad." },
+      { id: "B", label: "B", text: "Debe esperarse el resultado del cultivo cervical antes de iniciar cualquier antibiótico, dado que un tratamiento empírico podría dificultar la identificación del microorganismo causante." },
+      { id: "C", label: "C", text: "El manejo es exclusivamente sintomático con analgesia, dado que la mayoría de los casos de dolor pélvico en mujeres jóvenes se resuelven espontáneamente sin tratamiento específico." },
+      { id: "D", label: "D", text: "Debe realizarse histerectomía como tratamiento de primera línea ante cualquier sospecha de enfermedad pélvica inflamatoria." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (dolor pélvico, fiebre, flujo vaginal purulento, dolor a la movilización cervical y dolor anexial, en una mujer joven sexualmente activa con múltiples parejas, un factor de riesgo reconocido) es compatible con **enfermedad pélvica inflamatoria (EPI)**, una infección ascendente del tracto genital superior (habitualmente por *Neisseria gonorrhoeae* y/o *Chlamydia trachomatis*, con frecuente participación de flora polimicrobiana incluyendo anaerobios). Dado el riesgo de complicaciones a largo plazo (infertilidad, embarazo ectópico, dolor pélvico crónico) asociado al retraso del tratamiento, la actuación estándar es iniciar **antibioterapia empírica de amplio espectro** (cubriendo gonococo, clamidia y anaerobios) de forma **precoz**, ante la sospecha clínica, **sin esperar** la confirmación microbiológica (los cultivos pueden tomar días y no deben retrasar el tratamiento). La decisión entre manejo **ambulatorio** o **hospitalario** depende de la gravedad clínica (criterios de ingreso: absceso tuboovárico, imposibilidad de tolerar tratamiento oral, embarazo, falta de respuesta al tratamiento ambulatorio, enfermedad grave con náuseas/vómitos/fiebre alta, entre otros).\n\n**TRAMPA DEL EXAMEN:** Esperar el resultado del cultivo antes de tratar retrasa innecesariamente el tratamiento de una infección que puede progresar y dejar secuelas reproductivas permanentes si no se trata con prontitud; el umbral para iniciar tratamiento empírico en la EPI es deliberadamente bajo, precisamente para minimizar ese riesgo. El manejo exclusivamente sintomático ignora la naturaleza infecciosa del cuadro y el riesgo de complicaciones graves. La histerectomía no es el tratamiento de primera línea de la EPI; es una medida extrema reservada para situaciones excepcionales, no para el manejo estándar de esta infección.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en la enfermedad pélvica inflamatoria, el umbral para tratar es deliberadamente bajo: con dolor pélvico, dolor a la movilización cervical y dolor anexial, junto con los factores de riesgo adecuados, ya tiene suficiente para iniciar el antibiótico empírico, sin necesidad de confirmar con cultivo antes de actuar. La razón es que las consecuencias de no tratar a tiempo son serias y a largo plazo: infertilidad por daño tubárico, mayor riesgo de embarazo ectópico en el futuro, y dolor pélvico crónico, todo esto en una mujer joven que probablemente todavía quiere tener hijos algún día. Decida si esta paciente puede manejarse de forma ambulatoria con antibiótico oral y seguimiento estrecho, o si necesita ingreso (por ejemplo, si sospecha un absceso tuboovárico, si no tolera la vía oral, o si el cuadro es más grave de lo habitual). Y desde luego, no piense en la histerectomía para esto; eso sería un tratamiento completamente desproporcionado para una infección que responde bien a antibióticos en la gran mayoría de los casos.",
+    keyPoints: [
+      "Enfermedad pélvica inflamatoria: dolor pélvico + fiebre + flujo purulento + dolor a la movilización cervical/anexial, en mujer sexualmente activa.",
+      "Iniciar antibioterapia empírica de amplio espectro (gonococo, clamidia, anaerobios) precozmente ante sospecha clínica, sin esperar cultivo.",
+      "Manejo ambulatorio vs hospitalario según gravedad (absceso tuboovárico, intolerancia oral, embarazo, falta de respuesta, enfermedad grave = criterios de ingreso).",
+    ],
+  },
+  {
+    id: "mir-2026-89",
+    university: "MIR (España)",
+    examArea: "UROLOGÍA",
+    topic: "RETENCIÓN URINARIA AGUDA",
+    difficulty: "medium",
+    tags: ["mir", "espana", "urologia"],
+    statement:
+      "Un varón de 74 años, con antecedente de hiperplasia benigna de próstata, presenta incapacidad súbita para orinar, con dolor suprapúbico intenso y una masa suprapúbica palpable y dolorosa (globo vesical). ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Sondaje vesical urgente (uretral, o suprapúbico si el uretral no es posible o está contraindicado) para el drenaje de la vejiga, con posterior estudio de la causa subyacente e inicio de tratamiento dirigido (en este caso, probablemente relacionado con la hiperplasia benigna de próstata), y monitorización posterior por el riesgo de diuresis posobstructiva." },
+      { id: "B", label: "B", text: "Manejo exclusivamente con analgesia, dado que la retención urinaria aguda se resuelve espontáneamente en la mayoría de los casos sin necesidad de sondaje." },
+      { id: "C", label: "C", text: "Debe realizarse cirugía prostática urgente como primera medida, sin necesidad de sondaje vesical previo." },
+      { id: "D", label: "D", text: "Debe administrarse un diurético de asa para forzar la diuresis y resolver la retención, sin necesidad de sondaje vesical." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (incapacidad súbita para orinar, dolor suprapúbico intenso, globo vesical palpable) es compatible con una **retención urinaria aguda**, frecuentemente secundaria a una **hiperplasia benigna de próstata** en el varón de edad avanzada (aunque deben considerarse otras causas: fármacos con efecto anticolinérgico, estreñimiento, infección, litiasis, entre otras). La actuación inmediata es el **sondaje vesical urgente** (habitualmente por vía uretral; si no es posible o está contraindicado, por ejemplo por sospecha de lesión uretral, se recurre al **sondaje suprapúbico**) para aliviar la retención y el dolor asociado. Tras el drenaje, se debe **investigar la causa subyacente** e iniciar tratamiento dirigido, y mantener una **monitorización posterior** por el riesgo de **diuresis posobstructiva** (poliuria compensatoria tras aliviar la obstrucción prolongada, que puede en ocasiones ser marcada y requerir reposición de líquidos).\n\n**TRAMPA DEL EXAMEN:** Un globo vesical doloroso con incapacidad completa para orinar no se resuelve espontáneamente ni con analgesia sola; requiere el drenaje mecánico urgente mediante sondaje. La cirugía prostática urgente no es la conducta inicial ante una retención urinaria aguda; primero se drena la vejiga con sondaje, se estabiliza al paciente, y la eventual cirugía prostática (si está indicada) se planifica de forma diferida, no como primera medida de urgencia. Un diurético de asa no tiene sentido en este contexto: el problema no es una falta de producción de orina, sino la incapacidad de eliminarla por la obstrucción; forzar más producción de orina sin resolver la obstrucción solo aumentaría el malestar y la distensión vesical.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante un globo vesical doloroso y una incapacidad completa para orinar, su primera acción es mecánica, no farmacológica ni quirúrgica de entrada: sondaje vesical urgente para drenar esa vejiga distendida y aliviar el dolor del paciente de inmediato. Si la sonda uretral no entra o está contraindicada, no se quede sin opciones; el sondaje suprapúbico es su alternativa. Una vez drenado, ahí sí, investigue la causa (en este señor, lo más probable es su hiperplasia prostática ya conocida) y planifique el tratamiento a más largo plazo, que puede incluir medicación o cirugía prostática programada, no urgente. Y un detalle que no debe olvidar después del sondaje: vigile la diuresis en las horas siguientes, porque algunos pacientes desarrollan una diuresis posobstructiva importante tras aliviar una retención prolongada, y eso puede requerir que usted reponga líquidos para evitar que se deshidraten.",
+    keyPoints: [
+      "Retención urinaria aguda (globo vesical doloroso): sondaje vesical urgente (uretral, o suprapúbico si contraindicado/imposible) como primera medida.",
+      "Tras el drenaje, investigar y tratar la causa subyacente (frecuentemente HBP en el varón mayor); la cirugía prostática, si procede, se planifica de forma diferida.",
+      "Monitorizar tras el sondaje por riesgo de diuresis posobstructiva (poliuria compensatoria que puede requerir reposición de líquidos).",
+    ],
+  },
+  {
+    id: "mir-2026-90",
+    university: "MIR (España)",
+    examArea: "PEDIATRÍA",
+    topic: "DESHIDRATACIÓN AGUDA POR GASTROENTERITIS",
+    difficulty: "medium",
+    tags: ["mir", "espana", "pediatria"],
+    statement:
+      "Un niño de 2 años, con gastroenteritis aguda de 2 días de evolución, presenta mucosas ligeramente secas, ojos algo hundidos, buen nivel de alerta, y llanto con lágrimas presentes. Tolera pequeñas cantidades de líquido por vía oral sin vomitar de forma persistente. ¿Cuál es el manejo más apropiado de la deshidratación?",
+    options: [
+      { id: "A", label: "A", text: "Rehidratación oral con soluciones de rehidratación oral de osmolaridad reducida, en tomas pequeñas y frecuentes, dado que corresponde a una deshidratación leve-moderada y el niño tolera la vía oral; la fluidoterapia intravenosa se reserva para la deshidratación grave, el shock, la intolerancia oral persistente o la alteración del nivel de consciencia." },
+      { id: "B", label: "B", text: "Debe iniciarse fluidoterapia intravenosa de entrada en todo niño con signos de deshidratación, independientemente de su capacidad para tolerar líquidos por vía oral." },
+      { id: "C", label: "C", text: "Debe mantenerse al niño en ayuno completo (incluyendo líquidos) durante 24 horas para permitir el reposo digestivo antes de iniciar cualquier rehidratación." },
+      { id: "D", label: "D", text: "Debe iniciarse antibioterapia empírica de amplio espectro como primera medida, independientemente de la sospecha de causa viral o bacteriana." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El niño presenta signos de **deshidratación leve-moderada** (mucosas algo secas, ojos algo hundidos, pero con buen nivel de alerta y lágrimas presentes, sin signos de deshidratación grave como letargia marcada, ausencia de lágrimas, relleno capilar muy prolongado o shock). Dado que **tolera la vía oral**, el tratamiento de elección, respaldado por la evidencia actual (guías como las de la ESPGHAN), es la **rehidratación oral** con **soluciones de rehidratación oral de osmolaridad reducida**, administradas en **tomas pequeñas y frecuentes** (lo que mejora la tolerancia y reduce el riesgo de vómitos). La **fluidoterapia intravenosa** se reserva para la **deshidratación grave**, el **shock**, la **intolerancia oral persistente** (vómitos incoercibles que impiden la rehidratación oral) o la **alteración del nivel de consciencia**, situaciones donde la vía oral no es segura o suficiente.\n\n**TRAMPA DEL EXAMEN:** Indicar fluidoterapia intravenosa de entrada en un niño con deshidratación leve-moderada que tolera bien la vía oral sobretrata innecesariamente, exponiendo al niño a los riesgos e incomodidades de una vía intravenosa cuando la rehidratación oral es igual de eficaz y menos invasiva en este contexto. El ayuno prolongado (incluyendo líquidos) es contraproducente: en la deshidratación, la prioridad es reponer líquidos y electrolitos cuanto antes, no \"dar reposo digestivo\" reteniendo la hidratación. La antibioterapia empírica no está indicada de rutina en la gastroenteritis aguda, que en la gran mayoría de los casos en la infancia es de causa **viral**, y el tratamiento antibiótico sin indicación específica no aporta beneficio y sí riesgos innecesarios.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., no todo niño deshidratado necesita una vía intravenosa; de hecho, la rehidratación oral es hoy en día el tratamiento de elección para la deshidratación leve-moderada, siempre que el niño la tolere, como es el caso aquí. La clave está en la técnica: tomas pequeñas y frecuentes de la solución de rehidratación oral, no intentar que se beba un vaso entero de golpe, porque eso favorece los vómitos y el fracaso de la rehidratación oral. Guarde la vía intravenosa para cuando realmente la necesite: deshidratación grave, shock, un niño que vomita todo lo que le da por boca de forma persistente, o que tiene el nivel de consciencia alterado. Y sobre el ayuno prolongado y los antibióticos: ambos son errores clásicos en esta pregunta. No retrase la hidratación con ayuno pensando en \"dar reposo\" al intestino, y no le ponga antibiótico a una gastroenteritis que, en la inmensísima mayoría de los casos en niños, es viral y se resuelve sola con buena hidratación.",
+    keyPoints: [
+      "Deshidratación leve-moderada por gastroenteritis con tolerancia oral: rehidratación oral con soluciones de osmolaridad reducida, en tomas pequeñas y frecuentes.",
+      "Fluidoterapia intravenosa: reservada para deshidratación grave, shock, intolerancia oral persistente o alteración del nivel de consciencia.",
+      "No indicar antibioterapia empírica de rutina (la mayoría de gastroenteritis pediátricas son virales); no prolongar el ayuno de líquidos.",
+    ],
+  },
+];
