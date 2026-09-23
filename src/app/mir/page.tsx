@@ -65,7 +65,7 @@ export default function MirLandingPage() {
                 Contáctanos por WhatsApp
               </a>
               <Link
-                href="/demo"
+                href="/mir/demo"
                 className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 px-8 text-sm font-bold text-white transition hover:border-white/40"
               >
                 Probar demo gratuita
