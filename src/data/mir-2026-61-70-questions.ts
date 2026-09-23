@@ -1,0 +1,244 @@
+import type { TrainingQuestion } from "@/lib/questions/types";
+
+export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
+  {
+    id: "mir-2026-61",
+    university: "MIR (España)",
+    examArea: "CARDIOLOGÍA",
+    topic: "DISECCIÓN AÓRTICA AGUDA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "cardiologia"],
+    statement:
+      "Un varón de 62 años, hipertenso mal controlado, presenta dolor torácico intenso de inicio súbito, descrito como \"desgarrador\", irradiado a la espalda interescapular. La presión arterial en el brazo derecho es 178/98 mmHg y en el izquierdo 132/84 mmHg. La angio-TC confirma una disección aórtica que afecta a la aorta ascendente. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Control inicial de la frecuencia cardíaca y la presión arterial con betabloqueantes intravenosos (antes de añadir vasodilatadores, si son necesarios), y cirugía urgente, dado que la afectación de la aorta ascendente (disección tipo A de Stanford) es una emergencia quirúrgica." },
+      { id: "B", label: "B", text: "Manejo exclusivamente médico con control de presión arterial, sin necesidad de cirugía, independientemente del segmento aórtico afectado." },
+      { id: "C", label: "C", text: "Administrar un vasodilatador puro (por ejemplo, nitroprusiato) sin control previo de la frecuencia cardíaca, dado que reducir la presión arterial es la única prioridad terapéutica." },
+      { id: "D", label: "D", text: "Anticoagulación sistémica inmediata con heparina, de forma análoga al manejo del síndrome coronario agudo." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con una **disección aórtica aguda**: dolor torácico súbito de características \"desgarradoras\" irradiado a la espalda, y una asimetría significativa de presión arterial entre ambos brazos (dato clásico, aunque no universal). La afectación de la **aorta ascendente** define una **disección tipo A de Stanford**, que es una **emergencia quirúrgica** por el alto riesgo de complicaciones catastróficas (rotura, taponamiento cardíaco, insuficiencia aórtica aguda, afectación de troncos supraaórticos), requiriendo **cirugía urgente**. Mientras se organiza la cirugía, el manejo médico inicial busca reducir el estrés de cizallamiento sobre la pared aórtica: primero **betabloqueantes intravenosos** para controlar la frecuencia cardíaca (objetivo aproximado 60 lpm) y, secundariamente, la presión arterial, añadiendo **vasodilatadores** si es necesario un control adicional de la presión **después** de haber controlado la frecuencia cardíaca.\n\n**TRAMPA DEL EXAMEN:** Administrar un vasodilatador puro sin control previo de la frecuencia cardíaca es un error grave: la vasodilatación aislada puede producir taquicardia refleja, que aumenta la fuerza de contracción (dP/dt) y el estrés de cizallamiento sobre la pared aórtica disecada, empeorando potencialmente la disección; por eso el betabloqueante siempre precede o se administra junto con el vasodilatador, nunca después. Anticoagular a un paciente con disección aórtica es contraproducente y peligroso, ya que favorecería la extensión del hematoma disecante y el sangrado, a diferencia del síndrome coronario agudo.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., lo primero es clasificar: si la disección afecta la aorta ascendente (tipo A de Stanford), es cirugía urgente sin discusión, por el riesgo de rotura o taponamiento inminente; si afecta solo la aorta descendente (tipo B), el manejo suele ser médico salvo complicaciones (isquemia de órganos, rotura), reservando la intervención para esos casos complicados. Mientras organiza el quirófano en este paciente tipo A, controle primero la frecuencia cardíaca con betabloqueante intravenoso; solo después, si la presión sigue alta, añada un vasodilatador. Si invierte el orden y da el vasodilatador primero, el cuerpo responde con taquicardia refleja, y esa taquicardia aumenta exactamente la fuerza de \"empuje\" que está disecando la pared aórtica, el efecto contrario al que busca. Y nunca, nunca anticoagule a un paciente con disección aórtica pensando en un síndrome coronario; aquí el problema es una pared arterial que se está rasgando, no una arteria coronaria ocluida.",
+    keyPoints: [
+      "Disección aórtica tipo A de Stanford (afecta aorta ascendente): emergencia quirúrgica; tipo B (solo descendente): manejo médico salvo complicaciones.",
+      "Manejo médico inicial: betabloqueante IV primero (control de frecuencia cardíaca), luego vasodilatador si es necesario más control de presión; nunca vasodilatador aislado.",
+      "La anticoagulación está contraindicada en la disección aórtica (a diferencia del síndrome coronario agudo).",
+    ],
+  },
+  {
+    id: "mir-2026-62",
+    university: "MIR (España)",
+    examArea: "CIRUGÍA GENERAL",
+    topic: "ÚLCERA PÉPTICA PERFORADA",
+    difficulty: "medium",
+    tags: ["mir", "espana", "cirugia-general"],
+    statement:
+      "Un varón de 55 años, con antecedente de gastritis y uso crónico de AINE, presenta dolor epigástrico intenso y súbito que se generaliza a todo el abdomen en minutos, con abdomen en tabla a la exploración (defensa involuntaria generalizada). La radiografía de tórax en bipedestación muestra aire libre subdiafragmático. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Dieta absoluta, sonda nasogástrica, fluidoterapia intravenosa, antibioterapia de amplio espectro, e intervención quirúrgica urgente (sutura/parche de la perforación, habitualmente por vía laparoscópica cuando es posible), dado el cuadro compatible con perforación de víscera hueca (úlcera péptica perforada)." },
+      { id: "B", label: "B", text: "Manejo médico conservador exclusivo con inhibidores de la bomba de protones intravenosos, sin necesidad de cirugía, dado que la mayoría de las úlceras pépticas perforadas cicatrizan espontáneamente." },
+      { id: "C", label: "C", text: "Solicitar endoscopia digestiva alta urgente como primer paso diagnóstico y terapéutico, antes de considerar cualquier otra medida." },
+      { id: "D", label: "D", text: "Manejo ambulatorio con analgesia oral, dado que el aire libre subdiafragmático es un hallazgo incidental sin relevancia clínica en este contexto." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (dolor epigástrico súbito e intenso que se generaliza, abdomen en tabla, y aire libre subdiafragmático en la radiografía, es decir, **neumoperitoneo**) es compatible con una **perforación de víscera hueca**, en este contexto muy probablemente una **úlcera péptica perforada** (favorecida por el antecedente de uso crónico de AINE). Es una **urgencia quirúrgica**: el manejo incluye estabilización inicial (dieta absoluta, sonda nasogástrica para descompresión, fluidoterapia intravenosa, antibioterapia de amplio espectro por la contaminación peritoneal con flora digestiva) e **intervención quirúrgica urgente**, habitualmente mediante **sutura simple o parche** (por ejemplo, con epiplón, técnica de Graham), preferiblemente por vía **laparoscópica** cuando las condiciones del paciente y la disponibilidad lo permiten.\n\n**TRAMPA DEL EXAMEN:** El manejo médico conservador exclusivo (sin cirugía) no es la conducta estándar ante una perforación confirmada con peritonitis franca; se reserva de forma muy selectiva para pacientes con perforaciones muy pequeñas, contenidas, y con mínima repercusión clínica (manejo de Taylor, poco frecuente y siempre bajo estrecha vigilancia). La endoscopia digestiva alta está **contraindicada** como primer paso en la perforación aguda, ya que la insuflación de aire durante el procedimiento puede agravar la contaminación peritoneal y la propia perforación.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el aire libre bajo el diafragma en la radiografía de tórax en bipedestación es una de esas imágenes que no admiten interpretación ambigua: significa que hay una perforación de víscera hueca, y en el contexto de dolor epigástrico súbito con abdomen en tabla, la úlcera péptica perforada es la sospecha número uno, sobre todo con el antecedente de AINE crónico. Esto es quirófano, no manejo ambulatorio ni endoscopia; de hecho, meterle un endoscopio e insuflar aire a un abdomen que ya tiene una perforación activa solo va a empeorar la contaminación peritoneal. Estabilice con sonda nasogástrica, líquidos y antibióticos de amplio espectro mientras se prepara la cirugía, que casi siempre consiste en cerrar la perforación con un parche de epiplón (técnica de Graham), preferiblemente por laparoscopia si el paciente lo tolera y el equipo tiene la experiencia.",
+    keyPoints: [
+      "Perforación de víscera hueca (úlcera péptica perforada): dolor súbito + abdomen en tabla + neumoperitoneo en radiografía; urgencia quirúrgica.",
+      "Manejo: SNG + dieta absoluta + fluidoterapia + antibioterapia de amplio espectro + cirugía urgente (sutura/parche, preferiblemente laparoscópica).",
+      "La endoscopia digestiva alta está contraindicada en la perforación aguda (la insuflación de aire agrava la contaminación peritoneal).",
+    ],
+  },
+  {
+    id: "mir-2026-63",
+    university: "MIR (España)",
+    examArea: "ENDOCRINOLOGÍA",
+    topic: "CRISIS HIPERCALCÉMICA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "endocrinologia"],
+    statement:
+      "Una mujer de 65 años, con neoplasia de pulmón conocida, presenta confusión, estreñimiento intenso, poliuria y deshidratación. El calcio sérico corregido es de 15.2 mg/dL. ¿Cuál es la secuencia de manejo inicial más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Hidratación intravenosa intensiva con suero salino isotónico como primera medida (corrige la depleción de volumen y aumenta la excreción renal de calcio), seguida de un bifosfonato intravenoso (por ejemplo, ácido zoledrónico) para un control más sostenido, considerando calcitonina si se necesita un efecto más rápido mientras el bifosfonato hace efecto." },
+      { id: "B", label: "B", text: "Restricción hídrica estricta como primera medida, dado que el objetivo es reducir el volumen circulante para disminuir indirectamente el calcio sérico." },
+      { id: "C", label: "C", text: "Administrar diuréticos tiazídicos como primera línea, dado su efecto hipocalcemiante." },
+      { id: "D", label: "D", text: "Iniciar furosemida a dosis altas de inmediato, antes de cualquier hidratación, como medida principal para forzar la excreción urinaria de calcio." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con una **crisis hipercalcémica** (calcio corregido >14 mg/dL, con síntomas asociados: confusión, estreñimiento, poliuria por diabetes insípida nefrogénica inducida por la hipercalcemia, y deshidratación secundaria), en el contexto de una neoplasia conocida (causa frecuente de hipercalcemia, mediada habitualmente por PTHrP o metástasis óseas). La mayoría de estos pacientes están **deshidratados** (por la poliuria inducida por la hipercalcemia y la disminución de la ingesta por las náuseas/confusión), por lo que el primer paso es la **hidratación intravenosa intensiva con suero salino isotónico**, que corrige la depleción de volumen y, al restaurar la filtración glomerular y el flujo tubular, aumenta la excreción renal de calcio. Posteriormente, se añade un **bifosfonato intravenoso** (ácido zoledrónico u otro) para un control más sostenido (su efecto tarda 2-4 días en alcanzar el máximo), y se puede considerar **calcitonina** si se necesita un efecto más rápido (inicio de acción en horas, aunque de efecto limitado y transitorio por taquifilaxia) mientras el bifosfonato hace su efecto completo.\n\n**TRAMPA DEL EXAMEN:** La restricción hídrica es exactamente lo contrario de lo indicado: estos pacientes están deshidratados y necesitan volumen, no restricción. Los **diuréticos tiazídicos** están **contraindicados** en la hipercalcemia, ya que reducen la excreción renal de calcio y pueden empeorarla; se confunden a veces con los diuréticos de asa, que sí aumentan la calciuria, pero estos últimos solo se utilizan **después** de una hidratación adecuada (para evitar profundizar la depleción de volumen), y no como primera medida antes de hidratar.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en la crisis hipercalcémica, el primer movimiento siempre es el mismo: agua, mucha agua, por vía intravenosa. Estos pacientes están deshidratados casi siempre (la hipercalcemia les provoca una especie de diabetes insípida nefrogénica que los hace orinar en exceso, y encima suelen tener náuseas que reducen su ingesta), así que corregir esa depleción de volumen con suero salino isotónico ya empieza a bajar el calcio al mejorar la excreción renal. No caiga en la trampa de las tiazidas, que son justo lo contrario de lo que necesita (retienen calcio); y no empiece con furosemida antes de hidratar bien, porque forzar diuresis en un paciente todavía deshidratado solo lo hunde más. Una vez que ya lo hidrató adecuadamente, ahí sí, si necesita bajar más la diuresis calcica, puede usar furosemida. Pero su tratamiento de fondo más sostenido en el tiempo es el bifosfonato intravenoso, que tarda unos días en hacer su efecto máximo; si necesita algo más inmediato mientras tanto, la calcitonina le da un efecto rápido aunque limitado en el tiempo.",
+    keyPoints: [
+      "Crisis hipercalcémica: hidratación intravenosa intensiva con suero salino isotónico como primera medida (corrige la deshidratación característica y aumenta la calciuria).",
+      "Bifosfonato intravenoso (ácido zoledrónico) para control sostenido (tarda días); calcitonina para efecto rápido pero transitorio mientras actúa el bifosfonato.",
+      "Diuréticos tiazídicos CONTRAINDICADOS (retienen calcio); furosemida solo tras hidratación adecuada, nunca antes ni como sustituto de esta.",
+    ],
+  },
+  {
+    id: "mir-2026-64",
+    university: "MIR (España)",
+    examArea: "ENFERMEDADES INFECCIOSAS / DERMATOLOGÍA",
+    topic: "FASCITIS NECROTIZANTE VS CELULITIS",
+    difficulty: "hard",
+    tags: ["mir", "espana", "infecciosas"],
+    statement:
+      "Un varón de 50 años, diabético, presenta desde hace 24 horas dolor intenso y desproporcionado en la pierna izquierda, con eritema de bordes mal definidos que progresa rápidamente, algunas ampollas hemorrágicas, y crepitación a la palpación. Presenta fiebre alta y taquicardia, con aspecto de gravedad. ¿Cuál es el diagnóstico más probable y la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Fascitis necrotizante; requiere desbridamiento quirúrgico urgente (exploración y resección de todo el tejido necrótico) junto con antibioterapia empírica de amplio espectro, sin retrasar la cirugía esperando confirmación por pruebas de imagen." },
+      { id: "B", label: "B", text: "Celulitis no complicada; el manejo es antibioterapia oral ambulatoria, sin necesidad de ingreso ni valoración quirúrgica." },
+      { id: "C", label: "C", text: "Trombosis venosa profunda; el manejo es anticoagulación, sin necesidad de antibioterapia ni valoración quirúrgica." },
+      { id: "D", label: "D", text: "Debe solicitarse resonancia magnética de la pierna y esperar su resultado antes de decidir si el paciente requiere cirugía." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro presenta varios **signos de alarma** que diferencian una **fascitis necrotizante** de una celulitis no complicada: **dolor desproporcionado** a los hallazgos cutáneos iniciales, progresión **rápida**, **ampollas hemorrágicas**, **crepitación** (por gas producido por ciertos microorganismos, como algunos anaerobios), y **toxicidad sistémica** marcada (fiebre alta, taquicardia, aspecto de gravedad), en un paciente diabético (factor de riesgo reconocido). La fascitis necrotizante es una **emergencia quirúrgica**: el tratamiento definitivo es el **desbridamiento quirúrgico urgente** de todo el tejido necrótico (a menudo requiere múltiples reintervenciones), junto con **antibioterapia empírica de amplio espectro** (cobertura frente a grampositivos, gramnegativos y anaerobios) y soporte hemodinámico. La cirugía **no debe retrasarse** esperando la confirmación por pruebas de imagen, ya que la exploración quirúrgica es en sí misma diagnóstica (visualización directa de la necrosis fascial) y terapéutica.\n\n**TRAMPA DEL EXAMEN:** Tratar este cuadro como una simple celulitis con antibiótico oral ambulatorio subestima gravemente la gravedad y el riesgo vital de la fascitis necrotizante, que tiene una mortalidad elevada si se retrasa el tratamiento quirúrgico. Solicitar una resonancia magnética y esperar su resultado antes de decidir la cirugía es un error que retrasa peligrosamente el desbridamiento definitivo; ante alta sospecha clínica, la exploración quirúrgica no debe demorarse por estudios de imagen.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., memorice estos signos de alarma como su alerta roja para diferenciar fascitis necrotizante de una celulitis banal: dolor que no cuadra con lo que ve en la piel (desproporcionado), progresión rápida en horas, ampollas hemorrágicas, crepitación, y un paciente que luce sistémicamente enfermo, no solo con una pierna roja. Con este cuadro, usted no tiene tiempo para \"esperar a ver cómo evoluciona\" con antibiótico oral en casa, ni para pedir una resonancia magnética y quedarse esperando el resultado; la fascitis necrotizante mata en horas si no se desbrida quirúrgicamente. Active cirugía general o el equipo quirúrgico correspondiente de inmediato para exploración y desbridamiento urgente, y en paralelo, arranque el antibiótico de amplio espectro; ambas cosas van en paralelo, no una después de la otra.",
+    keyPoints: [
+      "Fascitis necrotizante: dolor desproporcionado + progresión rápida + ampollas hemorrágicas + crepitación + toxicidad sistémica; emergencia quirúrgica.",
+      "Tratamiento: desbridamiento quirúrgico urgente + antibioterapia empírica de amplio espectro; no retrasar la cirugía esperando imagen.",
+      "La exploración quirúrgica es diagnóstica y terapéutica a la vez; no confundir con celulitis no complicada (manejo mucho menos agresivo).",
+    ],
+  },
+  {
+    id: "mir-2026-65",
+    university: "MIR (España)",
+    examArea: "NEUROLOGÍA",
+    topic: "MIASTENIA GRAVIS - CRISIS MIASTÉNICA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "neurologia"],
+    statement:
+      "Una mujer de 45 años, con miastenia gravis conocida, presenta empeoramiento progresivo de la ptosis, diplopía y debilidad generalizada en las últimas 48 horas, coincidiendo con un cuadro respiratorio infeccioso intercurrente. Refiere además dificultad progresiva para tragar y presenta disnea. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Ingreso hospitalario con monitorización estrecha de la función respiratoria (capacidad vital forzada) por riesgo de crisis miasténica con insuficiencia respiratoria, tratamiento del factor precipitante (la infección), y tratamiento específico con inmunoglobulinas intravenosas o plasmaféresis si la debilidad es grave, evitando fármacos que puedan empeorar la transmisión neuromuscular." },
+      { id: "B", label: "B", text: "Aumentar de forma empírica y sin monitorización la dosis de piridostigmina de manera indefinida, dado que la debilidad siempre indica un déficit de tratamiento anticolinesterásico." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con reposo, dado que los brotes de miastenia gravis no representan riesgo vital y se resuelven espontáneamente." },
+      { id: "D", label: "D", text: "Iniciar un aminoglucósido para tratar la infección respiratoria intercurrente, sin considerar otras alternativas antibióticas." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro sugiere una posible **crisis miasténica**: empeoramiento marcado de la debilidad (ptosis, diplopía, debilidad generalizada, disfagia) en una paciente con miastenia gravis conocida, precipitado por una **infección intercurrente** (uno de los desencadenantes más frecuentes de exacerbación), con **disnea** que hace sospechar compromiso de la musculatura respiratoria. Es una **urgencia neurológica** por el riesgo de **insuficiencia respiratoria** que puede requerir ventilación mecánica. La actuación es el **ingreso hospitalario** con **monitorización seriada de la capacidad vital forzada** y de la función bulbar (riesgo de aspiración por la disfagia), **tratamiento del factor precipitante** (la infección), y **tratamiento específico** de la crisis (inmunoglobulinas intravenosas o plasmaféresis) si la debilidad es grave o hay compromiso respiratorio/bulbar. Además, debe evitarse el uso de fármacos que puedan **empeorar la transmisión neuromuscular** (ciertos antibióticos como los **aminoglucósidos**, algunos antiarrítmicos, el sulfato de magnesio, entre otros).\n\n**TRAMPA DEL EXAMEN:** Aumentar la dosis de piridostigmina de forma empírica sin monitorización, asumiendo que toda debilidad en un miasténico es \"falta de tratamiento anticolinesterásico\", es peligroso: un exceso de anticolinesterásicos puede producir una **crisis colinérgica** (con síntomas muscarínicos como salivación excesiva, diarrea, miosis, bradicardia, además de debilidad), que clínicamente puede ser difícil de distinguir de la crisis miasténica sin una evaluación cuidadosa, y tratarla de la misma forma (más anticolinesterásico) empeoraría el cuadro. Usar un aminoglucósido en un paciente miasténico es un error clásico, ya que estos fármacos pueden bloquear aún más la transmisión neuromuscular y precipitar o agravar una crisis.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en la miastenia gravis, cuando ve empeoramiento agudo de la debilidad, sobre todo con compromiso respiratorio o de la deglución, piense primero en seguridad: ingrese a la paciente, mida su capacidad vital forzada de forma seriada, y esté preparado para intubar antes de que la insuficiencia respiratoria sea franca, no después. Trate el gatillo (en este caso, la infección respiratoria), pero tenga mucho cuidado con qué antibiótico elige: los aminoglucósidos son un clásico \"no lo haga\" en miastenia gravis, porque pueden empeorar directamente la debilidad neuromuscular. Para el tratamiento específico de la crisis, sus opciones son inmunoglobulinas intravenosas o plasmaféresis, con eficacia similar. Y un consejo final: no suba la piridostigmina a ciegas pensando que \"más anticolinesterásico siempre ayuda\"; si se pasa, puede inducir una crisis colinérgica que se parece mucho a la miasténica pero que requiere el manejo opuesto.",
+    keyPoints: [
+      "Crisis miasténica: empeoramiento agudo de debilidad/ptosis/diplopía/disfagia con riesgo de insuficiencia respiratoria; monitorizar capacidad vital forzada seriada.",
+      "Tratamiento: inmunoglobulinas IV o plasmaféresis + tratar el factor precipitante (frecuentemente infección); evitar aminoglucósidos y otros fármacos que empeoran la transmisión neuromuscular.",
+      "No aumentar empíricamente el anticolinesterásico sin evaluación cuidadosa: riesgo de precipitar una crisis colinérgica (clínicamente distinta pero a veces difícil de diferenciar).",
+    ],
+  },
+  {
+    id: "mir-2026-66",
+    university: "MIR (España)",
+    examArea: "REUMATOLOGÍA",
+    topic: "ARTERITIS DE CÉLULAS GIGANTES",
+    difficulty: "hard",
+    tags: ["mir", "espana", "reumatologia"],
+    statement:
+      "Una mujer de 72 años presenta cefalea temporal de inicio reciente, dolor a la palpación en la región temporal, claudicación mandibular al masticar, y un episodio transitorio de pérdida de visión en el ojo derecho que se resolvió espontáneamente. La VSG está marcadamente elevada. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Iniciar corticoides sistémicos a dosis altas de inmediato, ante la alta sospecha clínica de arteritis de células gigantes, sin esperar la biopsia de la arteria temporal para confirmar el diagnóstico, dado el riesgo inminente de pérdida visual permanente e irreversible." },
+      { id: "B", label: "B", text: "Esperar el resultado de la biopsia de la arteria temporal (que puede demorar días) antes de iniciar cualquier tratamiento con corticoides." },
+      { id: "C", label: "C", text: "Manejo con analgésicos simples únicamente, dado que la cefalea temporal en el anciano rara vez tiene relevancia clínica grave." },
+      { id: "D", label: "D", text: "Iniciar antiagregación con ácido acetilsalicílico como único tratamiento, sin necesidad de corticoides." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (cefalea temporal de inicio reciente en mujer mayor de 50 años, dolor a la palpación de la arteria temporal, claudicación mandibular, episodio de amaurosis fugax, y VSG marcadamente elevada) es altamente sugestivo de **arteritis de células gigantes (arteritis temporal)**. Es una **urgencia reumatológica** por el riesgo de **pérdida visual permanente e irreversible** (por neuropatía óptica isquémica anterior arterítica), que puede progresar rápidamente y afectar también al ojo contralateral si no se trata. Ante alta sospecha clínica, se debe iniciar **tratamiento con corticoides sistémicos a dosis altas de inmediato**, **sin esperar** la confirmación por **biopsia de la arteria temporal** (que puede realizarse en los días siguientes, habitualmente hasta 1-2 semanas después de iniciar el tratamiento, con razonable probabilidad de seguir siendo diagnóstica), ya que el riesgo de pérdida visual aumenta con cada hora de retraso en el tratamiento.\n\n**TRAMPA DEL EXAMEN:** Esperar la confirmación histológica antes de tratar es el error central y más peligroso de esta pregunta: el objetivo prioritario es **prevenir la ceguera**, y los corticoides no deben demorarse por el resultado de una biopsia que, además, sigue siendo razonablemente sensible incluso después de iniciado el tratamiento. Tratar la cefalea como un hallazgo banal en el anciano, sin investigar ni tratar, ignora el contexto clínico de alarma (claudicación mandibular, amaurosis fugax, VSG muy elevada) que apunta a una vasculitis de grandes vasos con riesgo vital y de órgano (visión).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., esta es una de esas urgencias donde el tratamiento va ANTES que la confirmación diagnóstica definitiva, y la razón es simple: lo que está en juego es la visión de esta paciente, y una vez que se pierde por esta causa, casi nunca se recupera. Con cefalea temporal, claudicación mandibular, un episodio ya de amaurosis fugax (que es una señal de alarma máxima, casi un preaviso de que el ojo se va a quedar sin flujo de forma permanente) y una VSG por las nubes, usted no puede darse el lujo de esperar los días que tarda la biopsia de la arteria temporal. Inicie corticoides a dosis altas ya mismo, y programe la biopsia para los próximos días; el tratamiento precoz no invalida significativamente el resultado de la biopsia si se hace con relativa rapidez. Retrasar el corticoide \"para no contaminar\" el resultado histológico es un error que puede costarle la visión a la paciente, y eso no tiene marcha atrás.",
+    keyPoints: [
+      "Arteritis de células gigantes: cefalea temporal + claudicación mandibular + amaurosis fugax + VSG muy elevada, en mujer >50 años.",
+      "Riesgo de pérdida visual permanente e irreversible; iniciar corticoides a dosis altas de INMEDIATO ante la sospecha clínica.",
+      "No esperar la biopsia de la arteria temporal para iniciar el tratamiento; esta puede realizarse en los días siguientes y sigue siendo razonablemente diagnóstica.",
+    ],
+  },
+  {
+    id: "mir-2026-67",
+    university: "MIR (España)",
+    examArea: "HEMATOLOGÍA",
+    topic: "COAGULACIÓN INTRAVASCULAR DISEMINADA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "hematologia"],
+    statement:
+      "Un varón de 58 años, con sepsis de origen abdominal grave, presenta sangrado espontáneo por los sitios de venopunción y petequias difusas. La analítica muestra plaquetas 42.000/µL, TP y TTPa prolongados, fibrinógeno bajo (95 mg/dL), dímero D muy elevado, y esquistocitos ocasionales en el frotis. ¿Cuál es el diagnóstico más probable y el manejo más apropiado?",
+    options: [
+      { id: "A", label: "A", text: "Coagulación intravascular diseminada (CID), secundaria a la sepsis; el manejo es tratar la causa subyacente de forma agresiva, junto con soporte transfusional (plasma fresco congelado, crioprecipitado si el fibrinógeno es muy bajo, y plaquetas) guiado por la clínica hemorrágica y los parámetros de laboratorio." },
+      { id: "B", label: "B", text: "Púrpura trombocitopénica trombótica; el manejo es plasmaféresis urgente sin necesidad de soporte transfusional con hemoderivados." },
+      { id: "C", label: "C", text: "Hemofilia adquirida; el manejo es la administración de factor VIII recombinante como tratamiento único." },
+      { id: "D", label: "D", text: "Trombocitopenia inmune primaria; el manejo de primera línea son los corticoides sistémicos en monoterapia." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con una **coagulación intravascular diseminada (CID)**, secundaria a la sepsis (una de sus causas más frecuentes): activación generalizada y descontrolada de la cascada de coagulación, con consumo de plaquetas y factores de coagulación (de ahí la clínica hemorrágica: sangrado por venopunciones, petequias), reflejado en el laboratorio por **trombocitopenia**, **TP y TTPa prolongados** (a diferencia de la PTT, donde suelen ser normales), **fibrinógeno bajo** (consumido en el proceso), **dímero D muy elevado** (por la fibrinólisis secundaria), y esquistocitos (por el daño mecánico de los hematíes al atravesar la microvasculatura con microtrombos de fibrina). El manejo se basa en **tratar agresivamente la causa subyacente** (en este caso, controlar el foco séptico) y **soporte transfusional** guiado por la clínica hemorrágica y los parámetros de laboratorio: **plasma fresco congelado** (repone factores de coagulación), **crioprecipitado** (si el fibrinógeno está muy bajo), y **plaquetas** si hay sangrado activo o trombocitopenia muy severa.\n\n**TRAMPA DEL EXAMEN:** Confundir la CID con la PTT es un error clásico y frecuente: el dato clave que las diferencia es el estudio de coagulación, **prolongado en la CID** y típicamente **normal en la PTT**; además, la CID cursa con fibrinógeno bajo (consumo), mientras que en la PTT el fibrinógeno suele ser normal. La hemofilia adquirida y la trombocitopenia inmune primaria no explican el patrón combinado de trombocitopenia + coagulación prolongada + fibrinógeno bajo + dímero D muy elevado que presenta este paciente, y ambas tienen mecanismos y tratamientos completamente distintos.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., cuando vea sangrado difuso en un paciente séptico grave, con plaquetas bajas, tiempos de coagulación alargados y fibrinógeno bajo, la CID tiene que ser su primera sospecha. El detalle de laboratorio que le ayuda a diferenciarla de la PTT (que puede parecerse por la trombocitopenia y los esquistocitos) es justamente el TP y el TTPa: en la CID están alargados porque se están consumiendo los factores de coagulación en microtrombos por todo el cuerpo, mientras que en la PTT esos tiempos suelen ser normales. El tratamiento de la CID no es una fórmula mágica única; depende de tratar la causa de fondo con toda la agresividad posible (en este caso, controlar la sepsis abdominal) y de reponer lo que se está consumiendo según la clínica: plasma fresco congelado para los factores, crioprecipitado si el fibrinógeno está muy bajo, y plaquetas si hay sangrado activo relevante. No hay un protocolo transfusional rígido; se guía por la evolución clínica y analítica del paciente.",
+    keyPoints: [
+      "CID: trombocitopenia + TP/TTPa prolongados + fibrinógeno bajo + dímero D muy elevado + esquistocitos; secundaria a sepsis, trauma, neoplasia, complicaciones obstétricas, entre otras.",
+      "Diferenciar de la PTT: en la CID el TP/TTPa están prolongados y el fibrinógeno bajo; en la PTT suelen ser normales.",
+      "Manejo: tratar agresivamente la causa subyacente + soporte transfusional guiado por clínica/laboratorio (PFC, crioprecipitado, plaquetas).",
+    ],
+  },
+  {
+    id: "mir-2026-68",
+    university: "MIR (España)",
+    examArea: "PSIQUIATRÍA",
+    topic: "EVALUACIÓN DEL RIESGO SUICIDA",
+    difficulty: "medium",
+    tags: ["mir", "espana", "psiquiatria"],
+    statement:
+      "Un varón de 40 años, con antecedente de trastorno depresivo mayor, acude acompañado de un familiar tras verbalizar ideas de \"no querer seguir viviendo\". El médico de guardia duda si preguntar directamente por ideación e intención suicida, por temor a \"sugerir la idea\" al paciente. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Preguntar de forma directa y explícita sobre ideación suicida, plan, medios disponibles e intencionalidad, ya que la evidencia disponible indica que preguntar directamente NO induce ni aumenta el riesgo de conducta suicida, y permite una evaluación adecuada del riesgo para decidir el manejo (ingreso, observación, o seguimiento ambulatorio estrecho)." },
+      { id: "B", label: "B", text: "Evitar cualquier pregunta directa sobre ideación o intención suicida, dado que verbalizarlo puede plantar la idea en la mente del paciente y precipitar un intento." },
+      { id: "C", label: "C", text: "Dar de alta al paciente sin evaluación específica del riesgo suicida, dado que ya está en tratamiento por su trastorno depresivo de base." },
+      { id: "D", label: "D", text: "Remitir al paciente a una cita ambulatoria programada en varias semanas, sin necesidad de una evaluación de riesgo en el momento agudo." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "Ante un paciente que verbaliza ideas de \"no querer seguir viviendo\", la actuación correcta es realizar una **evaluación directa y explícita del riesgo suicida**: preguntar por la presencia de **ideación suicida**, si existe un **plan** concreto, la disponibilidad de **medios** para llevarlo a cabo, y el grado de **intencionalidad**, además de explorar factores de riesgo (intentos previos, enfermedad psiquiátrica de base, consumo de tóxicos, impulsividad, falta de apoyo social) y factores protectores. Un principio fundamental, respaldado por la evidencia, es que **preguntar directamente sobre ideación e intención suicida NO induce ni aumenta el riesgo** de que el paciente actúe sobre esas ideas; por el contrario, permite una evaluación adecuada para decidir la conducta más apropiada (ingreso hospitalario, observación, contención ambiental, o seguimiento ambulatorio estrecho con red de apoyo), y a menudo resulta terapéutico para el propio paciente sentirse escuchado y comprendido.\n\n**TRAMPA DEL EXAMEN:** El mito de que \"preguntar por el suicidio puede inducirlo\" es una creencia extendida pero **no respaldada por la evidencia**, y el examen la utiliza deliberadamente para poner a prueba si el candidato la reconoce como un error. Dar de alta sin evaluación específica, o diferir la valoración a una cita programada en semanas, en un paciente que acaba de verbalizar ideación de este tipo, ignora la necesidad de una evaluación de riesgo en el momento agudo, que es cuando el riesgo puede ser más alto.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., olvide ese miedo tan extendido, pero equivocado, de que preguntarle a un paciente si ha pensado en quitarse la vida le va a \"meter la idea en la cabeza\"; la evidencia es clara en que esto no es así, y de hecho, muchas veces el paciente se siente aliviado de poder hablarlo abiertamente con alguien que no lo va a juzgar. Su trabajo aquí es preguntar sin rodeos: ¿ha pensado en hacerse daño?, ¿tiene un plan específico?, ¿tiene acceso a los medios para llevarlo a cabo?, ¿qué tan decidido está a actuar sobre esa idea? Esas respuestas, junto con los antecedentes del paciente y su red de apoyo, son las que le van a permitir decidir si este paciente necesita ingreso, observación estrecha, o si puede manejarse de forma ambulatoria con un seguimiento muy cercano. No delegue esta evaluación a \"otro día\"; el momento en que el paciente verbaliza esa idea es precisamente cuando usted tiene la oportunidad de evaluarlo y actuar.",
+    keyPoints: [
+      "Preguntar directamente por ideación, plan, medios e intencionalidad suicida NO aumenta el riesgo; es fundamental para una evaluación adecuada.",
+      "Evaluar factores de riesgo (intentos previos, enfermedad psiquiátrica, tóxicos, impulsividad, falta de apoyo) y protectores para decidir la conducta (ingreso, observación, seguimiento ambulatorio estrecho).",
+      "No diferir la evaluación de riesgo suicida a una cita programada en semanas; se realiza en el momento agudo en que el paciente verbaliza la ideación.",
+    ],
+  },
+  {
+    id: "mir-2026-69",
+    university: "MIR (España)",
+    examArea: "OBSTETRICIA",
+    topic: "HEMORRAGIA POSPARTO POR ATONÍA UTERINA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "obstetricia"],
+    statement:
+      "Una mujer de 32 años, tras un parto vaginal de un feto macrosómico, presenta sangrado vaginal abundante y continuo en los primeros 30 minutos posparto, estimado en más de 700 mL. Al examen, el útero se palpa aumentado de tamaño, blando y mal contraído. ¿Cuál es la causa más probable y la actuación inicial más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Atonía uterina (causa más frecuente de hemorragia posparto); la actuación inicial es el masaje uterino bimanual junto con la administración de uterotónicos (oxitocina como primera línea, añadiendo otros como metilergometrina, carboprost o misoprostol si la respuesta es insuficiente), revisando además la posible retención de restos placentarios o laceraciones del canal del parto." },
+      { id: "B", label: "B", text: "Coagulopatía congénita no diagnosticada; el manejo inicial es la transfusión de plasma fresco congelado, sin necesidad de intervención sobre el útero." },
+      { id: "C", label: "C", text: "Rotura uterina; el manejo inicial es exclusivamente expectante, dado que la mayoría se resuelven sin intervención." },
+      { id: "D", label: "D", text: "Placenta previa; el manejo inicial es la cesárea urgente, independientemente de la vía de parto ya completada." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (útero aumentado de tamaño, blando, mal contraído, con sangrado abundante tras el parto) es compatible con **atonía uterina**, la **causa más frecuente de hemorragia posparto** (favorecida en este caso por la sobredistensión uterina de un feto macrosómico). La actuación inicial es el **masaje uterino bimanual** (estimula la contracción del miometrio) junto con la administración de **uterotónicos**: la **oxitocina** es el fármaco de primera línea, añadiendo, si la respuesta es insuficiente, otros como la **metilergometrina** (contraindicada en hipertensión), el **carboprost** (contraindicado en asma), o el **misoprostol**. En paralelo, se debe revisar la posible presencia de otras causas contribuyentes según la regla mnemotécnica de las \"4 T\" (Tono —atonía, la más frecuente—, Trauma —laceraciones del canal del parto—, Tejido —restos placentarios retenidos—, Trombina —coagulopatía), explorando el canal del parto y la cavidad uterina si la atonía no explica completamente el sangrado o la respuesta al tratamiento inicial es inadecuada.\n\n**TRAMPA DEL EXAMEN:** Atribuir el sangrado a una coagulopatía congénita no diagnosticada sin haber descartado primero la causa más frecuente (atonía) y sin datos que la sugieran específicamente es un salto diagnóstico injustificado. La rotura uterina, aunque una causa posible de hemorragia posparto grave, no encaja con la palpación de un útero simplemente atónico (blando, aumentado de tamaño) sin otros signos de rotura (dolor intenso, alteración de la forma abdominal, signos de shock desproporcionados); y \"manejo expectante\" nunca es la conducta ante una sospecha de rotura uterina, que requeriría intervención quirúrgica urgente. La placenta previa es una causa de hemorragia **anteparto**, no la explicación de un sangrado que aparece después de un parto vaginal ya completado.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante una hemorragia posparto, su primera sospecha, en la gran mayoría de los casos, debe ser la atonía uterina, sobre todo si al palpar el útero lo encuentra blando y mal contraído, como aquí; y un factor de riesgo clásico para atonía es precisamente la sobredistensión uterina, que un feto macrosómico produce perfectamente. Su primera acción es mecánica y farmacológica a la vez: masajee el útero con ambas manos mientras administra oxitocina, que es su primera línea de uterotónicos. Si con eso no basta, tiene un escalón de fármacos adicionales (metilergometrina, carboprost, misoprostol), cada uno con sus contraindicaciones específicas que debe recordar (metilergometrina no en hipertensas, carboprost no en asmáticas). Y no se quede solo pensando en el útero: revise siempre el canal del parto en busca de laceraciones, y confirme que la placenta salió completa, porque las \"4 T\" le recuerdan que la atonía es la causa más frecuente, pero no la única.",
+    keyPoints: [
+      "Atonía uterina: causa más frecuente de hemorragia posparto; útero aumentado, blando, mal contraído.",
+      "Manejo inicial: masaje uterino bimanual + uterotónicos (oxitocina primera línea; metilergometrina/carboprost/misoprostol según respuesta y contraindicaciones).",
+      "Regla de las 4 T para el diagnóstico diferencial de hemorragia posparto: Tono (atonía), Trauma (laceraciones), Tejido (restos placentarios), Trombina (coagulopatía).",
+    ],
+  },
+  {
+    id: "mir-2026-70",
+    university: "MIR (España)",
+    examArea: "CIRUGÍA VASCULAR",
+    topic: "ISQUEMIA ARTERIAL AGUDA DE MIEMBRO",
+    difficulty: "hard",
+    tags: ["mir", "espana", "cirugia-vascular"],
+    statement:
+      "Un varón de 70 años, con fibrilación auricular no anticoagulada, presenta dolor súbito e intenso en la pierna derecha, con palidez, frialdad, ausencia de pulsos distales (poplíteo, pedio y tibial posterior) y parestesias, sin poder mover activamente los dedos del pie. La extremidad contralateral es normal. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Anticoagulación inmediata con heparina no fraccionada (para prevenir la propagación del trombo/embolia) y activación urgente del equipo de cirugía vascular para revascularización urgente (embolectomía, trombolisis dirigida por catéter, o bypass según el caso), dado el cuadro compatible con isquemia arterial aguda de la extremidad de origen embólico." },
+      { id: "B", label: "B", text: "Manejo ambulatorio con analgesia y antiagregación oral, dado que la fibrilación auricular no anticoagulada no se relaciona con este cuadro clínico." },
+      { id: "C", label: "C", text: "Elevar la extremidad afectada y aplicar calor local, dado que esto mejora el flujo sanguíneo en la isquemia arterial aguda." },
+      { id: "D", label: "D", text: "Solicitar arteriografía programada en los próximos días, sin necesidad de anticoagulación inmediata ni valoración quirúrgica urgente." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (dolor súbito, palidez, frialdad, ausencia de pulsos distales, parestesias y déficit motor incipiente, es decir, varias de las clásicas \"6 P\" de la isquemia arterial aguda: pain, pallor, pulselessness, paresthesia, paralysis, poikilothermia) es compatible con una **isquemia arterial aguda de la extremidad**, en este caso muy probablemente de origen **embólico** dado el antecedente de fibrilación auricular no anticoagulada (fuente embolígena clásica: un trombo formado en la aurícula izquierda que emboliza distalmente). Es una **urgencia vascular tiempo-dependiente**: la viabilidad del miembro depende de restaurar el flujo sanguíneo rápidamente. La actuación es la **anticoagulación inmediata con heparina** (para prevenir la propagación del trombo y la formación de nuevos émbolos) y la **activación urgente del equipo de cirugía vascular** para la **revascularización urgente**, cuya técnica (embolectomía con catéter de Fogarty, trombolisis dirigida por catéter, o bypass quirúrgico) depende de la causa, la localización y el grado de isquemia (clasificación de Rutherford).\n\n**TRAMPA DEL EXAMEN:** Aplicar calor local o elevar la extremidad isquémica es un error: el calor aumenta la demanda metabólica del tejido ya isquémico (empeorando el desequilibrio entre aporte y demanda de oxígeno), y elevar la extremidad reduce aún más la presión de perfusión arterial (lo correcto, si acaso, sería una posición ligeramente declive para favorecer el flujo por gravedad). Diferir el estudio y el tratamiento con una arteriografía programada en días, sin anticoagulación inmediata ni valoración quirúrgica urgente, ignora la naturaleza tiempo-dependiente de esta urgencia: el tejido isquémico tiene una ventana limitada (habitualmente unas 6 horas de isquemia caliente) antes de que el daño se vuelva irreversible.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., cuando vea esta combinación —dolor súbito, pierna pálida y fría, sin pulsos, con parestesias y ya algo de debilidad motora— en un paciente con fibrilación auricular no anticoagulada, usted está ante una isquemia arterial aguda de origen embólico hasta que se demuestre lo contrario, y el reloj está corriendo contra la viabilidad de esa extremidad. Anticoagule de inmediato con heparina, no espere a la valoración del cirujano vascular para eso; mientras tanto, active a cirugía vascular con carácter urgente, porque esta extremidad necesita revascularización lo antes posible, ya sea con una embolectomía, trombolisis dirigida por catéter, o un bypass, según lo que decida el equipo especializado al valorar el grado de isquemia. Nada de calor local ni de elevar la pierna pensando que eso ayuda; todo lo contrario, empeora el desequilibrio entre lo que el tejido necesita y lo que está recibiendo. Cada hora que pasa sin restaurar el flujo es músculo y nervio que se está muriendo.",
+    keyPoints: [
+      "Isquemia arterial aguda de extremidad (6 P: pain, pallor, pulselessness, paresthesia, paralysis, poikilothermia): urgencia vascular tiempo-dependiente.",
+      "Origen embólico clásico: fibrilación auricular no anticoagulada. Manejo: heparina inmediata + activación urgente de cirugía vascular para revascularización.",
+      "No aplicar calor local ni elevar la extremidad isquémica; no diferir el tratamiento con estudios programados en días.",
+    ],
+  },
+];
