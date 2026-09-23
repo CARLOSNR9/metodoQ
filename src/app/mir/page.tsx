@@ -1,16 +1,19 @@
 import Link from "next/link";
 import { CheckCircle2, ClipboardCheck, Target } from "lucide-react";
 import { FAQSection } from "@/components/landing/faq-section";
+import { getMirWhatsAppUrl } from "@/lib/mir/config";
 
 /**
- * Landing de venta del módulo "Simulacro MIR" (producto de pago único,
- * independiente de los planes mensuales).
+ * Landing de venta del módulo "Simulacro MIR". El acceso se negocia por
+ * WhatsApp (sin precio ni checkout público mientras no haya banco de
+ * preguntas ni precio definidos).
  *
- * TODO(negocio/marketing): esta página es un esqueleto — completar copy,
- * fecha real de la convocatoria, precio final y testimonios antes de
- * publicar. No hay contenido inventado de AMIR ni de terceros aquí.
+ * TODO(negocio/marketing): completar copy y testimonios antes de publicar.
+ * No hay contenido inventado de AMIR ni de terceros aquí.
  */
 export default function MirLandingPage() {
+  const whatsappUrl = getMirWhatsAppUrl();
+
   return (
     <main className="flex flex-1 flex-col bg-background">
       <section className="mx-auto w-full max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24">
@@ -21,17 +24,21 @@ export default function MirLandingPage() {
           Prepárate para el examen MIR con Método Q
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-base font-medium text-slate-500 sm:text-lg">
-          {/* TODO(marketing): copy definitivo con la fecha real de la convocatoria. */}
           Banco de preguntas de examen, simulacros cronometrados y seguimiento de tu
           progreso, en un módulo dedicado dentro de tu dashboard de Método Q.
         </p>
+        <p className="mx-auto mt-3 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-1.5 text-xs font-bold text-slate-600">
+          Examen MIR: sábado 23 de enero de 2027
+        </p>
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <Link
-            href="/checkout-mir"
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex min-h-12 items-center justify-center rounded-xl bg-mq-accent px-8 text-sm font-black text-mq-accent-foreground transition hover:brightness-110"
           >
-            Comprar módulo MIR
-          </Link>
+            Contáctanos por WhatsApp
+          </a>
           <Link
             href="/demo"
             className="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-200 px-8 text-sm font-bold text-slate-600 transition hover:border-slate-300"
@@ -74,12 +81,17 @@ export default function MirLandingPage() {
           {
             question: "¿Este módulo reemplaza mi plan actual de Método Q?",
             answer:
-              "No. Es un módulo independiente que se compra por separado y se suma a tu cuenta, sin afectar tu plan mensual.",
+              "No. Es un módulo independiente que se suma a tu cuenta, sin afectar tu plan mensual.",
           },
           {
-            question: "¿Puedo probarlo antes de comprar?",
+            question: "¿Cuánto cuesta y cómo lo compro?",
             answer:
-              "Sí, puedes acceder a una demo gratuita con una muestra limitada de preguntas antes de decidir tu compra.",
+              "Escríbenos por WhatsApp y te contamos las condiciones de acceso para la convocatoria del examen MIR.",
+          },
+          {
+            question: "¿Puedo probarlo antes de contactarlos?",
+            answer:
+              "Sí, puedes acceder a una demo gratuita con una muestra limitada de preguntas antes de escribirnos.",
           },
         ]}
       />
