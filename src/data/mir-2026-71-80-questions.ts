@@ -1,0 +1,244 @@
+import type { TrainingQuestion } from "@/lib/questions/types";
+
+export const MIR_2026_71_80_QUESTIONS: TrainingQuestion[] = [
+  {
+    id: "mir-2026-71",
+    university: "MIR (España)",
+    examArea: "NEUROLOGÍA",
+    topic: "HEMORRAGIA SUBARACNOIDEA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "neurologia"],
+    statement:
+      "Una mujer de 48 años presenta cefalea de inicio súbito, descrita como \"la peor de su vida\", que alcanza su máxima intensidad en segundos, acompañada de rigidez de nuca y vómitos. La TC craneal sin contraste, realizada a las 3 horas del inicio, no muestra hemorragia. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Dado que la sospecha clínica de hemorragia subaracnoidea sigue siendo alta pese a la TC negativa, debe realizarse punción lumbar (buscando xantocromía en el sobrenadante, y hematíes que no se aclaran progresivamente entre tubos) para descartar el diagnóstico de forma más definitiva." },
+      { id: "B", label: "B", text: "Una TC craneal sin contraste negativa descarta de forma definitiva la hemorragia subaracnoidea en cualquier momento tras el inicio de los síntomas, sin necesidad de ninguna prueba adicional." },
+      { id: "C", label: "C", text: "Debe darse de alta a la paciente con analgesia oral, dado que una cefalea intensa sin déficit neurológico focal rara vez tiene relevancia clínica grave." },
+      { id: "D", label: "D", text: "Debe iniciarse tratamiento anticoagulante empírico, dado que la cefalea súbita se debe con mayor frecuencia a una trombosis de senos venosos cerebrales que a una hemorragia subaracnoidea." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (cefalea \"en trueno\", de inicio súbito y máxima intensidad en segundos, \"la peor de mi vida\", con rigidez de nuca y vómitos) es una presentación clásica de **hemorragia subaracnoidea** (habitualmente por rotura de un aneurisma cerebral). La **TC craneal sin contraste** es la prueba inicial, con alta sensibilidad en las primeras 6 horas, pero esa sensibilidad **disminuye con el tiempo** transcurrido desde el inicio de los síntomas. Ante una TC negativa pero con **alta sospecha clínica persistente** (como este cuadro tan característico), debe realizarse una **punción lumbar**, buscando **xantocromía** (coloración amarillenta del sobrenadante del LCR centrifugado, por degradación de la hemoglobina, que aparece varias horas después del sangrado) y la ausencia de aclaramiento progresivo de hematíes entre los tubos sucesivos (lo que ayuda a diferenciar una hemorragia real de una punción traumática).\n\n**TRAMPA DEL EXAMEN:** Asumir que una TC negativa descarta siempre la hemorragia subaracnoidea, sin considerar el tiempo transcurrido ni la sensibilidad decreciente de la prueba, es un error que puede dejar sin diagnosticar una hemorragia subaracnoidea real, con el consiguiente riesgo de un nuevo sangrado (resangrado), a menudo más grave que el primero. Dar de alta a una paciente con este cuadro tan característico sin completar el estudio, o plantear una trombosis de senos venosos como la causa más probable de esta presentación clásica, ignora la entidad que el patrón clínico está describiendo de forma casi diagnóstica.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la cefalea \"en trueno\" (thunderclap headache), la que alcanza su máxima intensidad en segundos y que la paciente describe como \"la peor de mi vida\", es una de esas frases que tienen que hacerle saltar la alarma de hemorragia subaracnoidea de inmediato. La TC craneal sin contraste es su primera prueba, y es muy buena en las primeras horas, pero no perfecta, y su sensibilidad cae con el tiempo. Si la TC sale negativa pero la historia sigue siendo tan sugestiva como esta, usted no puede quedarse tranquilo con ese resultado; el siguiente paso obligado es la punción lumbar, buscando la xantocromía que confirma que hubo sangre en el espacio subaracnoideo, aunque ya no se vea en la TC. No dé de alta a esta paciente sin completar ese estudio; una hemorragia subaracnoidea no diagnosticada corre el riesgo real de resangrar, y el segundo sangrado suele ser más devastador que el primero.",
+    keyPoints: [
+      "Hemorragia subaracnoidea: cefalea \"en trueno\" de inicio súbito y máxima intensidad en segundos (\"la peor de mi vida\") + rigidez de nuca.",
+      "TC craneal sin contraste: alta sensibilidad en las primeras 6h, pero decreciente con el tiempo; si es negativa con alta sospecha clínica, realizar punción lumbar (xantocromía).",
+      "No descartar la hemorragia subaracnoidea solo por una TC negativa si la presentación clínica es muy sugestiva, especialmente si ha pasado tiempo desde el inicio.",
+    ],
+  },
+  {
+    id: "mir-2026-72",
+    university: "MIR (España)",
+    examArea: "CARDIOLOGÍA",
+    topic: "BLOQUEO AURICULOVENTRICULAR COMPLETO - BRADICARDIA SINTOMÁTICA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "cardiologia"],
+    statement:
+      "Un varón de 78 años acude por episodios sincopales de repetición. El ECG muestra un bloqueo auriculoventricular completo, con disociación entre las ondas P y los complejos QRS, y una frecuencia ventricular de 32 lpm. Presenta hipotensión y bajo nivel de conciencia. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Administrar atropina intravenosa como primera medida (aunque su eficacia puede ser limitada en el bloqueo AV completo de origen infranodal), y si no hay respuesta adecuada, iniciar de inmediato marcapasos transcutáneo como puente hasta la colocación de un marcapasos transvenoso temporal y, posteriormente, definitivo." },
+      { id: "B", label: "B", text: "Manejo exclusivamente expectante, dado que el bloqueo auriculoventricular completo se resuelve espontáneamente en la mayoría de los casos sin necesidad de ninguna intervención." },
+      { id: "C", label: "C", text: "Iniciar un betabloqueante intravenoso, dado que reduce la frecuencia cardíaca y mejora el llenado diastólico en cualquier tipo de bradicardia sintomática." },
+      { id: "D", label: "D", text: "Realizar cardioversión eléctrica sincronizada de inmediato, dado que es el tratamiento de elección de cualquier bradiarritmia sintomática." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con un **bloqueo auriculoventricular (AV) completo** (disociación AV completa, con las aurículas y los ventrículos activándose de forma independiente) con **bradicardia sintomática grave** (síncope, hipotensión, bajo nivel de conciencia). Siguiendo el algoritmo de bradicardia sintomática, la actuación inicial es la **atropina intravenosa**, aunque su eficacia puede ser **limitada** en los bloqueos AV completos de origen **infranodal** (el bloqueo suele estar por debajo del nodo AV, una localización donde la atropina, que actúa principalmente a nivel del nodo AV y sinusal, tiene menor efecto). Si no hay una respuesta adecuada, el siguiente paso es el **marcapasos transcutáneo** como medida puente inmediata, mientras se organiza la colocación de un **marcapasos transvenoso temporal** y, posteriormente, un marcapasos **definitivo**, que es el tratamiento a largo plazo del bloqueo AV completo sintomático.\n\n**TRAMPA DEL EXAMEN:** El manejo expectante ante una bradicardia sintomática grave con compromiso hemodinámico es un error grave, ya que el bloqueo AV completo no tiende a resolverse espontáneamente y el paciente está en riesgo de progresar a asistolia. Un betabloqueante en este contexto es contraproducente y potencialmente letal: reduciría aún más una frecuencia cardíaca ya peligrosamente baja. La cardioversión eléctrica sincronizada es el tratamiento de las **taquiarritmias**, no de las bradiarritmias; en la bradicardia sintomática, la herramienta eléctrica es la **estimulación** (marcapasos), no la cardioversión.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante una bradicardia sintomática grave, su algoritmo mental tiene pasos claros: primero, atropina intravenosa, aunque en el bloqueo AV completo (sobre todo si el bloqueo está por debajo del nodo AV, como suele ocurrir en los bloqueos completos) la atropina puede no funcionar muy bien, así que no se sorprenda ni pierda tiempo repitiendo dosis si la respuesta es pobre. Si el paciente sigue sintomático e inestable, pase directamente al marcapasos transcutáneo; es una medida puente rápida que cualquier servicio de urgencias debería poder ofrecer mientras organiza algo más definitivo. Y ese algo más definitivo es el marcapasos transvenoso temporal primero, y luego el definitivo una vez estabilizado. Nunca confunda esto con una indicación de cardioversión (eso es para taquicardias, no bradicardias) ni mucho menos le dé un betabloqueante a un corazón que ya está latiendo peligrosamente lento; eso sería empujarlo hacia la asistolia.",
+    keyPoints: [
+      "Bloqueo AV completo con bradicardia sintomática grave: atropina IV primera medida (eficacia limitada si el bloqueo es infranodal).",
+      "Si no hay respuesta: marcapasos transcutáneo inmediato como puente, seguido de marcapasos transvenoso temporal y luego definitivo.",
+      "Betabloqueantes contraindicados en este contexto; la cardioversión eléctrica es para taquiarritmias, no para bradiarritmias.",
+    ],
+  },
+  {
+    id: "mir-2026-73",
+    university: "MIR (España)",
+    examArea: "GINECOLOGÍA",
+    topic: "TORSIÓN OVÁRICA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "ginecologia"],
+    statement:
+      "Una mujer de 26 años, con quiste ovárico derecho conocido, presenta dolor pélvico derecho súbito e intenso, con náuseas y vómitos. La ecografía Doppler muestra un ovario derecho aumentado de tamaño, con flujo vascular reducido pero no completamente ausente. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Ante la alta sospecha clínica de torsión ovárica, debe realizarse laparoscopia urgente para destorsión (y cistectomía del quiste subyacente si es posible), preservando el ovario siempre que sea viable, incluso si su aspecto intraoperatorio es de isquemia; un Doppler con flujo conservado NO descarta la torsión." },
+      { id: "B", label: "B", text: "Un Doppler que muestra flujo vascular conservado, aunque reducido, descarta de forma fiable la torsión ovárica, por lo que puede adoptarse manejo expectante." },
+      { id: "C", label: "C", text: "Debe realizarse ooforectomía de entrada en toda sospecha de torsión ovárica, sin intentar la destorsión ni la preservación del ovario." },
+      { id: "D", label: "D", text: "Manejo con analgesia y observación ambulatoria, dado que la torsión ovárica no es una urgencia quirúrgica tiempo-dependiente." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (dolor pélvico súbito e intenso, con náuseas y vómitos, en presencia de un quiste ovárico conocido, un factor de riesgo clásico) es sugestivo de **torsión ovárica**. Un dato clave que el examen suele explotar: el **ovario tiene una doble vascularización** (por la arteria ovárica y por la rama ovárica de la arteria uterina), por lo que un **Doppler con flujo conservado (aunque reducido) NO descarta la torsión**, especialmente en las fases iniciales o en torsiones intermitentes/parciales; el diagnóstico sigue siendo fundamentalmente **clínico**. Ante alta sospecha, la actuación es la **laparoscopia urgente** para **destorsión** del ovario (y manejo del quiste subyacente, habitualmente con cistectomía si es factible), con un principio importante en el manejo actual: se debe **preservar el ovario** siempre que sea posible, incluso si su aspecto intraoperatorio tras la destorsión es de isquemia/aspecto oscuro-necrótico, ya que muchos ovarios recuperan su viabilidad y función tras la destorsión, evitando la ooforectomía salvo necrosis franca e inequívoca.\n\n**TRAMPA DEL EXAMEN:** Confiar en un Doppler con flujo conservado para descartar la torsión es un error clásico y peligroso, que puede retrasar el tratamiento de una torsión real. Realizar ooforectomía de entrada, sin intentar primero la destorsión, sacrifica innecesariamente un órgano que en muchos casos puede recuperarse, especialmente relevante en mujeres jóvenes en edad reproductiva. Considerar la torsión ovárica como una urgencia no tiempo-dependiente ignora el riesgo de necrosis isquémica irreversible del ovario si se retrasa el tratamiento.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., no se deje tranquilizar por un Doppler que muestra algo de flujo; el ovario tiene doble aporte sanguíneo, así que puede estar torsionado y aun así mostrar algo de señal Doppler, sobre todo si la torsión es parcial o intermitente. El diagnóstico de torsión ovárica sigue siendo principalmente clínico: dolor pélvico súbito e intenso, con un factor de riesgo como un quiste conocido, le debe bastar para activar la laparoscopia urgente sin esperar una imagen \"perfecta\" que confirme el diagnóstico. Y cuando esté en quirófano, recuerde el principio moderno del manejo: destuerza primero y observe; aunque el ovario se vea oscuro y de mal aspecto justo después de destorsionarlo, muchas veces recupera su color y su función en los minutos u horas siguientes. No le quite el ovario de entrada solo porque se vea mal recién destorsionado; reserve la ooforectomía para cuando la necrosis sea clara e inequívoca, sobre todo en mujeres jóvenes donde preservar la función ovárica y la fertilidad futura importa mucho.",
+    keyPoints: [
+      "Torsión ovárica: dolor pélvico súbito e intenso + factor de riesgo (quiste ovárico); diagnóstico fundamentalmente clínico.",
+      "Un Doppler con flujo conservado (por la doble vascularización ovárica) NO descarta la torsión.",
+      "Manejo: laparoscopia urgente para destorsión, preservando el ovario siempre que sea posible (evitar ooforectomía salvo necrosis franca).",
+    ],
+  },
+  {
+    id: "mir-2026-74",
+    university: "MIR (España)",
+    examArea: "NEFROLOGÍA",
+    topic: "RABDOMIÓLISIS",
+    difficulty: "medium",
+    tags: ["mir", "espana", "nefrologia"],
+    statement:
+      "Un varón de 35 años es rescatado tras permanecer 6 horas atrapado bajo escombros con compresión prolongada de ambas piernas. La creatín-cinasa (CK) sérica es de 45.000 U/L, con orina de aspecto oscuro. El potasio sérico es de 6.4 mEq/L. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Fluidoterapia intravenosa intensiva y precoz (idealmente iniciada incluso antes de liberar la compresión, si es posible) para mantener una diuresis adecuada y prevenir el fracaso renal agudo, junto con manejo urgente de la hiperpotasemia (que puede ser especialmente brusca y grave en el síndrome de aplastamiento) siguiendo la secuencia habitual (estabilización de membrana, desplazamiento intracelular, eliminación)." },
+      { id: "B", label: "B", text: "Restricción hídrica estricta, dado que el objetivo prioritario es evitar la sobrecarga de volumen en un paciente con riesgo de fracaso renal." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con analgesia oral, dado que la elevación de CK tras un traumatismo por aplastamiento no tiene relevancia clínica si el paciente está consciente y estable." },
+      { id: "D", label: "D", text: "Iniciar diálisis urgente como primera medida, antes de cualquier intento de fluidoterapia intravenosa." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con **rabdomiólisis** en el contexto de un **síndrome de aplastamiento** (compresión prolongada de masa muscular importante): CK sérica muy elevada, orina oscura (por mioglobinuria), y una **hiperpotasemia** que puede ser particularmente brusca y grave en este contexto (por la liberación masiva de potasio intracelular del músculo dañado, agravada además por el fracaso renal incipiente que limita su eliminación). El pilar del manejo es la **fluidoterapia intravenosa intensiva y precoz** para mantener un flujo urinario adecuado, diluir la mioglobina en el túbulo renal y prevenir el **fracaso renal agudo** (la principal complicación temida de la rabdomiólisis); en el síndrome de aplastamiento, algunos protocolos incluso recomiendan iniciar la fluidoterapia **antes** de liberar la compresión, anticipando la liberación brusca de potasio y mioglobina al torrente sanguíneo (\"síndrome de reperfusión\"). En paralelo, se maneja la hiperpotasemia siguiendo la secuencia habitual: estabilización de membrana (gluconato cálcico si hay cambios ECG), desplazamiento intracelular (insulina-glucosa) y, si es necesario, eliminación (diálisis).\n\n**TRAMPA DEL EXAMEN:** La restricción hídrica es exactamente lo contrario de lo indicado en la rabdomiólisis; el paciente necesita un aporte generoso de líquidos para proteger la función renal, no restricción. Subestimar la gravedad de una CK tan elevada, tratándola de forma ambulatoria, ignora el riesgo real de fracaso renal agudo y de hiperpotasemia potencialmente letal. Iniciar diálisis como primera medida, sin haber ensayado antes la fluidoterapia y las medidas de estabilización/desplazamiento del potasio, es innecesariamente invasivo como primer paso salvo que la hiperpotasemia sea refractaria o ya exista un fracaso renal establecido que lo requiera.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en el síndrome de aplastamiento, piense en dos amenazas que llegan casi al mismo tiempo: el fracaso renal por la mioglobina obstruyendo los túbulos, y una hiperpotasemia que puede dispararse de forma brutal, sobre todo justo en el momento en que se libera la compresión y toda esa sangre \"atrapada\" con potasio y mioglobina vuelve a la circulación general. Por eso, si tiene la oportunidad, arranque la fluidoterapia intravenosa generosa incluso antes de que liberen físicamente al paciente de los escombros; eso le ayuda a amortiguar ese golpe de reperfusión. Una vez liberado, mantenga esa hidratación agresiva para proteger el riñón, y maneje la hiperpotasemia con la secuencia que ya conoce: calcio para proteger el corazón si hay cambios en el ECG, insulina-glucosa para meter el potasio a la célula, y diálisis si todo lo anterior no es suficiente o ya hay fracaso renal establecido. La restricción de líquidos aquí sería un error grave; este paciente necesita volumen, no lo contrario.",
+    keyPoints: [
+      "Rabdomiólisis/síndrome de aplastamiento: CK muy elevada + mioglobinuria (orina oscura) + riesgo de hiperpotasemia brusca y fracaso renal agudo.",
+      "Manejo: fluidoterapia intravenosa intensiva y precoz (idealmente antes de liberar la compresión) para proteger la función renal.",
+      "Hiperpotasemia: manejar con la secuencia habitual (estabilización de membrana → desplazamiento intracelular → eliminación/diálisis si es necesario).",
+    ],
+  },
+  {
+    id: "mir-2026-75",
+    university: "MIR (España)",
+    examArea: "REUMATOLOGÍA / NEFROLOGÍA",
+    topic: "NEFRITIS LÚPICA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "reumatologia"],
+    statement:
+      "Una mujer de 28 años, con lupus eritematoso sistémico conocido, presenta edemas de nueva aparición, hipertensión arterial e hipertensión no conocida previamente. La analítica de orina muestra proteinuria significativa y hematuria con cilindros hemáticos. La función renal está levemente alterada. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Realizar biopsia renal para confirmar y clasificar el tipo de nefritis lúpica (según la clasificación ISN/RPS), ya que esta clasificación determina la intensidad y el tipo de tratamiento inmunosupresor (por ejemplo, corticoides junto con micofenolato de mofetilo o ciclofosfamida en las formas proliferativas más graves)." },
+      { id: "B", label: "B", text: "Iniciar tratamiento inmunosupresor empírico sin biopsia renal, dado que el diagnóstico de nefritis lúpica se basa exclusivamente en los hallazgos clínicos y analíticos, sin necesidad de confirmación histológica." },
+      { id: "C", label: "C", text: "Manejo exclusivamente sintomático con antihipertensivos, sin necesidad de tratamiento inmunosupresor dirigido a la afectación renal." },
+      { id: "D", label: "D", text: "Iniciar hemodiálisis de mantenimiento de inmediato, dado que toda afectación renal en el lupus eritematoso sistémico indica enfermedad renal terminal irreversible." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (edemas, hipertensión de nueva aparición, proteinuria y hematuria con **cilindros hemáticos** —un hallazgo que sugiere origen glomerular— en una paciente con lupus eritematoso sistémico conocido) es sugestivo de **nefritis lúpica**, una de las manifestaciones más graves del LES. La actuación estándar ante la sospecha de afectación renal significativa es la **biopsia renal**, que permite **clasificar** el tipo de nefritis lúpica según la clasificación **ISN/RPS** (que distingue clases desde la I/II, más leves, hasta la III/IV, proliferativas y más graves, y la V, membranosa), una clasificación que **determina directamente el tratamiento**: las formas proliferativas graves (clases III/IV) requieren **inmunosupresión intensiva** (típicamente corticoides a dosis altas combinados con micofenolato de mofetilo o ciclofosfamida como terapia de inducción), mientras que formas más leves pueden requerir un manejo menos agresivo.\n\n**TRAMPA DEL EXAMEN:** Iniciar tratamiento inmunosupresor empírico sin biopsia renal, en un caso de afectación renal significativa y potencialmente grave, priva al clínico de la información histológica necesaria para elegir el tratamiento adecuado (tratar de forma insuficiente una clase proliferativa grave, o de forma excesiva una clase más leve, son ambos errores con consecuencias). El manejo exclusivamente sintomático ignora la necesidad de tratar la causa inmunológica de fondo, que sin tratamiento adecuado puede progresar a enfermedad renal terminal. Asumir que toda afectación renal lúpica implica enfermedad renal terminal irreversible es incorrecto: con el tratamiron adecuado y precoz, muchas nefritis lúpicas, incluidas formas proliferativas graves, pueden responder favorablemente y preservar la función renal.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante una paciente lúpica con datos de afectación renal nueva —edemas, hipertensión, proteinuria, y sobre todo esos cilindros hemáticos que le confirman que el problema está en el glomérulo—, su siguiente paso no es \"adivinar\" el tratamiento; es conseguir la biopsia renal. La clasificación histológica de la nefritis lúpica no es un trámite académico, es la que literalmente le dice qué tan agresivo tiene que ser con la inmunosupresión: una clase proliferativa grave (III o IV) necesita un tratamiento de inducción intensivo, mientras que formas más leves pueden manejarse de forma menos agresiva. Tratar a ciegas, sin esa información, le puede llevar a infratratar una nefritis grave (dejando que progrese el daño renal) o a sobretratar una leve (exponiendo a la paciente a riesgos innecesarios de la inmunosupresión intensiva). Y no se resigne pensando que el riñón lúpico siempre termina en diálisis; con diagnóstico y tratamiento adecuados y a tiempo, muchas pacientes preservan una función renal aceptable a largo plazo.",
+    keyPoints: [
+      "Sospecha de nefritis lúpica (edemas, HTA nueva, proteinuria, hematuria con cilindros hemáticos): biopsia renal para confirmar y clasificar (ISN/RPS).",
+      "La clasificación histológica determina el tratamiento: formas proliferativas graves (III/IV) requieren inmunosupresión intensiva (corticoides + micofenolato/ciclofosfamida).",
+      "No tratar empíricamente sin biopsia en afectación renal significativa; el tratamiento adecuado y precoz puede preservar la función renal.",
+    ],
+  },
+  {
+    id: "mir-2026-76",
+    university: "MIR (España)",
+    examArea: "PSIQUIATRÍA",
+    topic: "EPISODIO MANÍACO AGUDO",
+    difficulty: "medium",
+    tags: ["mir", "espana", "psiquiatria"],
+    statement:
+      "Un varón de 30 años, con trastorno bipolar conocido, es traído por su familia tras varios días con disminución marcada de la necesidad de sueño, verborrea, ideas de grandiosidad, gasto económico excesivo e impulsivo, e irritabilidad marcada. No reconoce que algo esté mal. ¿Cuál es el manejo más apropiado?",
+    options: [
+      { id: "A", label: "A", text: "Tratamiento farmacológico con un antipsicótico (y/o un estabilizador del ánimo, como litio o valproico) para el control agudo de los síntomas maníacos, valorando la necesidad de hospitalización (incluso involuntaria si el paciente carece de conciencia de enfermedad y su comportamiento supone un riesgo significativo para sí mismo o para terceros)." },
+      { id: "B", label: "B", text: "Iniciar un antidepresivo en monoterapia, dado que el trastorno bipolar es, en esencia, un trastorno depresivo con fases de mejoría transitoria del ánimo." },
+      { id: "C", label: "C", text: "Manejo exclusivamente ambulatorio con psicoterapia, sin necesidad de tratamiento farmacológico ni valoración de ingreso, dado que el episocio maníaco no representa riesgo agudo." },
+      { id: "D", label: "D", text: "Esperar a que el episodio se resuelva espontáneamente sin ninguna intervención, dado que los episodios maníacos siempre son autolimitados y de curso benigno." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con un **episodio maníaco agudo** en un paciente con trastorno bipolar conocido: disminución de la necesidad de sueño, verborrea, grandiosidad, conductas de riesgo (gasto excesivo impulsivo) e irritabilidad, con **ausencia de conciencia de enfermedad** (un hallazgo frecuente en la manía, que dificulta la adherencia voluntaria al tratamiento). El manejo agudo incluye **tratamiento farmacológico** con **antipsicóticos** (que tienen un efecto relativamente rápido sobre los síntomas maníacos y psicóticos si los hay) y/o **estabilizadores del ánimo** (litio, valproico), y una valoración cuidadosa de la necesidad de **hospitalización**, que puede ser **involuntaria** si el paciente, por su falta de conciencia de enfermedad, rechaza el tratamiento y su comportamiento supone un **riesgo significativo** (económico, social, físico) para sí mismo o para terceros, un escenario contemplado legalmente para proteger al paciente durante la fase aguda.\n\n**TRAMPA DEL EXAMEN:** Iniciar un antidepresivo en monoterapia en un episodio maníaco es un error grave y potencialmente peligroso: los antidepresivos pueden **inducir o empeorar** la manía (viraje maníaco) y no tienen indicación en esta fase del trastorno bipolar. Minimizar la gravedad del episodio (\"siempre autolimitado y benigno\", \"no requiere intervención\") ignora las consecuencias reales que las conductas de riesgo asociadas a la manía (gasto excesivo, decisiones impulsivas, comportamiento desinhibido) pueden tener sobre la vida del paciente y de su entorno, además del riesgo de progresión a un cuadro más grave, incluida la psicosis maníaca.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante un episodio maníaco agudo como este, con verborrea, grandiosidad, conductas de riesgo y sin conciencia de que algo anda mal, su prioridad es doble: controlar los síntomas farmacológicamente (antipsicótico y/o estabilizador del ánimo) y valorar seriamente si este paciente necesita ingreso, incluso si él no lo quiere. La falta de conciencia de enfermedad es característica de la manía, así que no espere que el paciente le pida ayuda por su cuenta; muchas veces es la familia la que tiene que traerlo, como en este caso, y usted el que tiene que decidir si el riesgo (económico, social, de seguridad) justifica una hospitalización involuntaria mientras se estabiliza. Y por favor, nunca le dé un antidepresivo a un paciente en fase maníaca pensando que \"el ánimo alto también es un síntoma a tratar de la misma forma\"; eso puede empujarlo hacia una manía aún más grave o hacia un episodio mixto.",
+    keyPoints: [
+      "Episodio maníaco agudo: disminución de la necesidad de sueño, verborrea, grandiosidad, conductas de riesgo, irritabilidad; frecuente ausencia de conciencia de enfermedad.",
+      "Manejo: antipsicótico y/o estabilizador del ánimo (litio, valproico); valorar hospitalización (incluso involuntaria) si hay riesgo significativo y falta de conciencia de enfermedad.",
+      "Los antidepresivos en monoterapia están contraindicados en la fase maníaca: riesgo de inducir o empeorar la manía.",
+    ],
+  },
+  {
+    id: "mir-2026-77",
+    university: "MIR (España)",
+    examArea: "PEDIATRÍA",
+    topic: "INVAGINACIÓN INTESTINAL",
+    difficulty: "medium",
+    tags: ["mir", "espana", "pediatria"],
+    statement:
+      "Un lactante de 9 meses presenta episodios intermitentes de llanto intenso con flexión de las piernas sobre el abdomen, alternando con periodos de aparente normalidad, y una deposición con sangre y moco (\"en jalea de grosella\"). Al examen se palpa una masa alargada en hipocondrio derecho. No hay signos de peritonitis ni shock. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Confirmar el diagnóstico con ecografía abdominal (imagen \"en diana\" u \"en donut\"), y realizar reducción mediante enema (con aire, suero salino o contraste, guiado por ecografía o fluoroscopia), que es diagnóstica y terapéutica a la vez, reservando la cirugía para el fracaso de la reducción o la presencia de contraindicaciones (peritonitis, perforación, shock)." },
+      { id: "B", label: "B", text: "Laparotomía exploratoria urgente de entrada, sin ensayar previamente la reducción mediante enema, dado que es el único tratamiento válido de la invaginación intestinal." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con observación domiciliaria, dado que la invaginación intestinal se resuelve espontáneamente en la mayoría de los lactantes sin necesidad de intervención." },
+      { id: "D", label: "D", text: "Iniciar antibioterapia empírica oral como tratamiento principal, dado que el cuadro se debe habitualmente a una gastroenteritis bacteriana." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (episodios intermitentes de dolor cólico con flexión de piernas, deposición \"en jalea de grosella\" —sangre y moco—, y una masa palpable, en un lactante dentro del rango de edad típico) es clásico de **invaginación intestinal** (telescopaje de un segmento intestinal dentro del segmento distal adyacente, más frecuentemente ileocólica). El diagnóstico se confirma con **ecografía abdominal** (imagen característica \"en diana\" o \"en donut\" en el corte transversal). En ausencia de contraindicaciones (peritonitis, perforación, shock), el tratamiento de elección es la **reducción mediante enema** (con aire, suero salino o contraste, guiado por ecografía o fluoroscopia), que es **diagnóstica y terapéutica** a la vez, con una alta tasa de éxito. La **cirugía** se reserva para cuando la reducción por enema fracasa, no es posible, o existen contraindicaciones para intentarla.\n\n**TRAMPA DEL EXAMEN:** Indicar laparotomía de entrada, sin ensayar primero la reducción por enema (mucho menos invasiva y con buena tasa de éxito), sobretrata a un paciente que se beneficiaría de un abordaje menos agresivo. El manejo expectante domiciliario ignora el riesgo de isquemia intestinal progresiva si la invaginación no se resuelve, que puede llevar a necrosis, perforación y peritonitis si se demora el tratamiento. Atribuir el cuadro a una gastroenteritis bacteriana y tratar con antibióticos orales ignora por completo el cuadro clínico característico (dolor intermitente con masa palpable y heces características) que apunta específicamente a la invaginación, un diagnóstico completamente distinto.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la combinación de dolor cólico intermitente (el lactante llora, encoge las piernas, y luego parece estar bien entre episodios), la deposición \"en jalea de grosella\", y esa masa alargada que se palpa en el abdomen, son la tríada clásica de la invaginación intestinal, y usted debe reconocerla de inmediato. Confirme con ecografía (la imagen en diana es muy característica), y si no hay signos de peritonitis, perforación o shock, su siguiente paso es el enema de reducción: es a la vez su prueba diagnóstica de confirmación y su tratamiento, con muy buena tasa de éxito y mucho menos invasivo que llevar a este bebé directo a cirugía. Reserve la cirugía para cuando el enema falle o esté contraindicado. Y no pierda tiempo pensando en gastroenteritis ni en antibióticos orales; este cuadro clínico tan característico no encaja con esa sospecha.",
+    keyPoints: [
+      "Invaginación intestinal: dolor cólico intermitente con flexión de piernas + deposición \"en jalea de grosella\" + masa abdominal palpable.",
+      "Diagnóstico: ecografía abdominal (imagen \"en diana\"). Tratamiento de elección: reducción mediante enema (diagnóstica y terapéutica).",
+      "Cirugía: reservada para fracaso de la reducción por enema o contraindicaciones (peritonitis, perforación, shock).",
+    ],
+  },
+  {
+    id: "mir-2026-78",
+    university: "MIR (España)",
+    examArea: "CIRUGÍA GENERAL",
+    topic: "HERNIA INGUINAL INCARCERADA / ESTRANGULADA",
+    difficulty: "medium",
+    tags: ["mir", "espana", "cirugia-general"],
+    statement:
+      "Un varón de 68 años, con hernia inguinal derecha conocida, presenta una tumoración inguinal dolorosa, irreducible desde hace 8 horas, con eritema de la piel suprayacente, fiebre de 38.4°C y datos de obstrucción intestinal (distensión abdominal, vómitos). ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Los hallazgos (irreducibilidad prolongada, eritema cutáneo, fiebre, datos de obstrucción) sugieren estrangulación herniaria; está contraindicado intentar la reducción manual forzada, y la actuación es la cirugía urgente para explorar el contenido herniario y resecar cualquier segmento intestinal no viable." },
+      { id: "B", label: "B", text: "Debe intentarse la reducción manual forzada de la hernia como primera medida, independientemente de los signos de alarma presentes, para evitar la cirugía." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con analgesia y reevaluación programada en una semana, dado que las hernias inguinales rara vez representan una urgencia quirúrgica." },
+      { id: "D", label: "D", text: "Iniciar únicamente antibioterapia oral, sin valoración quirúrgica, dado que el eritema cutáneo indica una celulitis simple no relacionada con la hernia." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (hernia irreducible de varias horas de evolución, eritema de la piel suprayacente, fiebre, y datos de obstrucción intestinal) es compatible con una **hernia inguinal estrangulada**: el contenido herniario (habitualmente un asa intestinal) ha quedado atrapado y su compromiso vascular ha progresado hasta comprometer la viabilidad del tejido, con riesgo de necrosis y perforación. En este escenario, está **contraindicado** intentar la **reducción manual forzada**, ya que podría reintroducir en la cavidad abdominal un segmento intestinal ya necrótico o perforado (\"reducción en masa\"), sembrando una peritonitis grave sin que el cirujano pueda valorar directamente el estado del intestino. La actuación correcta es la **cirugía urgente**, donde se explora el contenido herniario, se valora su viabilidad, y se reseca cualquier segmento no viable, además de reparar la hernia.\n\n**TRAMPA DEL EXAMEN:** Intentar la reducción manual forzada ante signos claros de estrangulación (eritema, fiebre, obstrucción) es un error potencialmente grave, ya que arriesga reintroducir intestino necrótico o perforado a la cavidad abdominal sin control quirúrgico directo. Minimizar la urgencia del cuadro, tratándolo de forma ambulatoria o solo con antibióticos sin valoración quirúrgica, ignora el riesgo de necrosis intestinal progresiva, perforación y peritonitis, con deterioro clínico rápido si no se interviene.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante una hernia irreducible, su primera pregunta es: ¿hay signos de estrangulación? Eritema de la piel, fiebre, datos de obstrucción intestinal asociada, todo eso le está diciendo que el contenido de esa hernia ya no solo está atrapado, sino que probablemente se está muriendo por falta de flujo sanguíneo. En ese escenario, NUNCA intente forzar la reducción manual; si empuja hacia adentro un asa de intestino ya necrótica o perforada, la va a esconder dentro del abdomen donde usted ya no puede verla ni controlarla, y el paciente puede desarrollar una peritonitis grave con contaminación fecal generalizada, sin que nadie se dé cuenta hasta que ya sea demasiado tarde. Este paciente necesita ir a quirófano de forma urgente, donde el cirujano puede abrir, ver directamente el estado del intestino atrapado, resecar lo que no sea viable, y reparar la hernia con control total de la situación.",
+    keyPoints: [
+      "Hernia estrangulada: irreducibilidad prolongada + eritema cutáneo + fiebre + signos de obstrucción intestinal; riesgo de necrosis y perforación intestinal.",
+      "Contraindicada la reducción manual forzada ante signos de estrangulación (riesgo de reintroducir intestino necrótico/perforado a la cavidad abdominal).",
+      "Actuación: cirugía urgente para exploración del contenido herniario, resección de tejido no viable y reparación de la hernia.",
+    ],
+  },
+  {
+    id: "mir-2026-79",
+    university: "MIR (España)",
+    examArea: "MEDICINA INTENSIVA / NEUMOLOGÍA",
+    topic: "SÍNDROME DE DISTRÉS RESPIRATORIO AGUDO (SDRA)",
+    difficulty: "hard",
+    tags: ["mir", "espana", "medicina-intensiva"],
+    statement:
+      "Una mujer de 50 años, tras una sepsis de origen abdominal, desarrolla en 48 horas insuficiencia respiratoria progresiva con infiltrados bilaterales en la radiografía de tórax, sin datos de sobrecarga cardíaca ni cardiopatía que los expliquen. La relación PaO2/FiO2 es de 140 con PEEP de 8 cmH2O. ¿Cuál es el diagnóstico y la estrategia ventilatoria más apropiada si requiere ventilación mecánica invasiva?",
+    options: [
+      { id: "A", label: "A", text: "Síndrome de distrés respiratorio agudo (SDRA) moderado (según los criterios de Berlín); la estrategia ventilatoria debe ser protectora, con volúmenes corrientes bajos (aproximadamente 6 mL/kg de peso corporal predicho) y presión meseta limitada (por debajo de 30 cmH2O), valorando decúbito prono en casos moderados-graves." },
+      { id: "B", label: "B", text: "Insuficiencia cardíaca aguda con edema pulmonar cardiogénico; la estrategia es diurética intensiva, sin necesidad de una estrategia ventilatoria protectora específica." },
+      { id: "C", label: "C", text: "Neumonía simple no complicada; la ventilación mecánica debe usar volúmenes corrientes altos (12-15 mL/kg) para maximizar el reclutamiento alveolar." },
+      { id: "D", label: "D", text: "Tromboembolismo pulmonar masivo; el tratamiento prioritario es la fibrinolisis sistémica, sin necesidad de ajustar la estrategia ventilatoria." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro cumple los **criterios de Berlín** de **síndrome de distrés respiratorio agudo (SDRA)**: instauración aguda (dentro de la primera semana de un evento desencadenante conocido, en este caso la sepsis), infiltrados bilaterales no explicados completamente por sobrecarga de volumen o insuficiencia cardíaca, y una relación **PaO2/FiO2** alterada (con PEEP ≥5 cmH2O): en este caso, 140 corresponde a **SDRA moderado** (la clasificación de Berlín distingue leve 200-300, moderado 100-200, y grave <100). Cuando requiere ventilación mecánica invasiva, la estrategia recomendada es la **ventilación protectora**: **volúmenes corrientes bajos** (aproximadamente 6 mL/kg de **peso corporal predicho**, no el peso real del paciente) y **presión meseta limitada** (<30 cmH2O), para minimizar el daño pulmonar inducido por el ventilador (volutrauma/barotrauma); en los casos moderados-graves, el **decúbito prono** prolongado ha demostrado mejorar la oxigenación y la supervivencia.\n\n**TRAMPA DEL EXAMEN:** Confundir el SDRA con edema pulmonar cardiogénico, sin considerar el contexto clínico (sepsis, sin datos de sobrecarga cardíaca) y los criterios de Berlín, lleva a un manejo incorrecto centrado en diuréticos en lugar de la estrategia ventilatoria protectora que realmente necesita este cuadro. Usar volúmenes corrientes altos en la ventilación mecánica de un paciente con SDRA es un error grave y ampliamente demostrado como perjudicial (mayor mortalidad), ya que sobredistiende el pulmón ya dañado, empeorando la lesión pulmonar.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante una insuficiencia respiratoria aguda con infiltrados bilaterales que aparece tras un evento desencadenante claro (aquí, la sepsis), sin que la causa sea cardíaca, aplique los criterios de Berlín para clasificar el SDRA por su relación PaO2/FiO2: en este caso, 140 lo coloca en el grupo moderado. Si esta paciente necesita ventilación mecánica invasiva, la regla de oro que ha demostrado salvar vidas es la ventilación protectora: volúmenes corrientes bajos, calculados sobre el peso corporal PREDICHO (según altura y sexo, no el peso real, que puede llevarlo a sobreestimar el volumen necesario), y mantener la presión meseta controlada por debajo de 30 cmH2O. Si a pesar de esto la oxigenación sigue siendo mala en un SDRA moderado-grave, el decúbito prono es su siguiente herramienta, con evidencia sólida de mejorar la supervivencia. No cometa el error de pensar que \"más volumen es mejor oxigenación\"; en el SDRA, ventilar con volúmenes altos empeora el pronóstico al sobredistender un pulmón ya lesionado.",
+    keyPoints: [
+      "SDRA (criterios de Berlín): instauración aguda (<1 semana) + infiltrados bilaterales no explicados por sobrecarga cardíaca + PaO2/FiO2 alterada con PEEP≥5.",
+      "Clasificación por PaO2/FiO2: leve 200-300, moderado 100-200, grave <100.",
+      "Ventilación protectora: volumen corriente bajo (~6 mL/kg de peso corporal predicho) + presión meseta <30 cmH2O; decúbito prono en casos moderados-graves.",
+    ],
+  },
+  {
+    id: "mir-2026-80",
+    university: "MIR (España)",
+    examArea: "ONCOLOGÍA",
+    topic: "SÍNDROME DE VENA CAVA SUPERIOR",
+    difficulty: "medium",
+    tags: ["mir", "espana", "oncologia"],
+    statement:
+      "Un varón de 60 años, fumador, presenta hinchazón progresiva de cara y cuello, distensión de las venas del cuello y la pared torácica superior, y cefalea que empeora al inclinarse hacia adelante, de 2 semanas de evolución. La TC de tórax muestra una masa mediastínica que comprime la vena cava superior, sin compromiso significativo de la vía aérea ni edema cerebral grave. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Dado que el paciente está clínicamente estable, sin compromiso grave de la vía aérea ni edema cerebral significativo, se debe priorizar la obtención de un diagnóstico histológico (biopsia) antes de iniciar un tratamiento oncológico específico (quimioterapia o radioterapia), ya que este depende del tipo de tumor subyacente; medidas generales como elevar el cabecero pueden aplicarse mientras tanto." },
+      { id: "B", label: "B", text: "Debe iniciarse radioterapia urgente de forma inmediata, sin biopsia previa, en todo síndrome de vena cava superior, de forma análoga al manejo de la compresión medular metastásica." },
+      { id: "C", label: "C", text: "El síndrome de vena cava superior no requiere ningún estudio ni tratamiento específico si el paciente no presenta insuficiencia respiratoria aguda." },
+      { id: "D", label: "D", text: "Debe colocarse una vía venosa central urgente en el brazo derecho como primera medida terapéutica del síndrome de vena cava superior." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con un **síndrome de vena cava superior**, secundario a la compresión extrínseca por una masa mediastínica (frecuentemente de origen tumoral, como cáncer de pulmón o linfoma). A diferencia de otras urgencias oncológicas donde el tratamiento no debe demorarse (como la compresión medular), en el síndrome de vena cava superior **sin compromiso grave de la vía aérea ni edema cerebral significativo** (es decir, en el paciente relativamente estable), la conducta recomendada es **priorizar la obtención de un diagnóstico histológico** (biopsia) **antes** de iniciar el tratamiento oncológico específico, ya que este (quimioterapia, radioterapia, o ambos) depende completamente del tipo de tumor subyacente, y un tratamiento empírico sin diagnóstico (especialmente la radioterapia, que puede alterar el tejido y dificultar el diagnóstico histológico posterior) podría comprometer la capacidad de establecer un diagnóstico certero y, con ello, el tratamiento óptimo a largo plazo. Mientras se completa el estudio, se aplican medidas generales (elevación del cabecero, entre otras) para el alivio sintomático.\n\n**TRAMPA DEL EXAMEN:** Asumir que el síndrome de vena cava superior siempre requiere tratamiento inmediato sin diagnóstico previo, extrapolando el enfoque de otras urgencias oncológicas donde sí es correcto tratar antes de confirmar (como la compresión medular), es un error conceptual importante: la diferencia clave es la velocidad de instauración del daño irreversible (mucho más lenta en el síndrome de vena cava superior que en la compresión medular) y que, salvo compromiso vital inminente, el diagnóstico histológico previo cambia sustancialmente el manejo posterior. Ignorar completamente el cuadro sin estudio alguno tampoco es correcto, dada la necesidad de identificar la causa subyacente.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., esta es una de esas preguntas donde el examen quiere ver si usted entiende que no todas las \"urgencias oncológicas\" se tratan igual de rápido y a ciegas. En la compresión medular, el riesgo de daño neurológico irreversible es tan inminente que se trata con corticoides antes incluso de confirmar con resonancia magnética. En el síndrome de vena cava superior, sin compromiso grave de la vía aérea ni edema cerebral significativo, el paciente tiene un margen de tiempo mayor, y aquí la prioridad cambia: consiga primero el diagnóstico histológico, porque el tratamiento (quimioterapia si es un tumor muy quimiosensible como un linfoma o un cáncer de pulmón de célula pequeña, radioterapia en otros casos) depende completamente de saber qué tipo de tumor está causando esto. Si usted dispara radioterapia a ciegas sin biopsia previa, puede alterar el tejido lo suficiente como para que después sea mucho más difícil obtener un diagnóstico certero, y eso le compromete el manejo a largo plazo de este paciente. Mientras tanto, medidas simples como elevar el cabecero de la cama ayudan a aliviar un poco los síntomas.",
+    keyPoints: [
+      "Síndrome de vena cava superior: edema facial/cervical, ingurgitación venosa, cefalea que empeora al inclinarse; secundario a compresión extrínseca (frecuentemente tumoral).",
+      "A diferencia de otras urgencias oncológicas, si el paciente está estable (sin compromiso grave de vía aérea/edema cerebral), priorizar el diagnóstico histológico ANTES del tratamiento oncológico específico.",
+      "El tratamiento (quimioterapia/radioterapia) depende del tipo de tumor; tratar a ciegas sin biopsia puede comprometer el diagnóstico posterior.",
+    ],
+  },
+];
