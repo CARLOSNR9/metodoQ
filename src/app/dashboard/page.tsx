@@ -15,6 +15,7 @@ import { useReferralStats } from "@/hooks/use-referral-stats";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { hasPaidPlan } from "@/lib/plans/access";
+import { hasMirAccess } from "@/lib/mir/access";
 import { getPostLoginPath, isAdminUser } from "@/lib/roles";
 import { useUserRole } from "@/hooks/use-user-role";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
@@ -43,6 +44,7 @@ export default function DashboardPage() {
   const effectivePlan = profile?.plan ?? "FREE";
   const expiresAt = profile?.planExpiresAt ?? null;
   const showPaidDashboard = hasPaidPlan(effectivePlan);
+  const isMirOnlyUser = effectivePlan === "FREE" && hasMirAccess(profile?.mirAccess);
   const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
   const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
   const uccTrainHref = isUccMiPro
@@ -56,7 +58,12 @@ export default function DashboardPage() {
     browserNudgeOptIn: profile?.browserNudgeOptIn === true,
   });
 
-  if (isCheckingAuth || isLoadingProfile || !user) {
+  useEffect(() => {
+    if (!user || isLoadingProfile || !isMirOnlyUser) return;
+    router.replace("/dashboard/mir");
+  }, [user, isLoadingProfile, isMirOnlyUser, router]);
+
+  if (isCheckingAuth || isLoadingProfile || !user || isMirOnlyUser) {
     return (
       <section className="space-y-6">
         <div className="h-32 animate-pulse rounded-3xl border border-slate-200 bg-white/[0.04]" />
