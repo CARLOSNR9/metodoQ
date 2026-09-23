@@ -15,6 +15,7 @@ function SuccessContent() {
   const searchParams = useSearchParams();
   const planId = parsePaidPlanId(searchParams.get("plan"));
   const cycle = parseBillingCycle(searchParams.get("cycle"));
+  const isMirPurchase = searchParams.get("product") === "mir";
 
   useEffect(() => {
     let userId: string | undefined;
@@ -34,7 +35,12 @@ function SuccessContent() {
             ¡Acceso desbloqueado!
           </h1>
           <p className="mt-3 text-sm text-mq-muted sm:text-base">
-            {planId ? (
+            {isMirPurchase ? (
+              <>
+                Tu <strong className="text-white">módulo MIR</strong> está activo. Ya puedes
+                entrenar desde tu dashboard.
+              </>
+            ) : planId ? (
               <>
                 Tu plan <strong className="text-white">{getPlanDisplayName(planId)}</strong>
                 {cycle ? (
@@ -52,10 +58,10 @@ function SuccessContent() {
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/dashboard/entrenar"
+              href={isMirPurchase ? "/dashboard/mir" : "/dashboard/entrenar"}
               className="inline-flex min-h-12 items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-semibold text-mq-accent-foreground transition hover:brightness-110"
             >
-              Empezar a entrenar
+              {isMirPurchase ? "Ir al módulo MIR" : "Empezar a entrenar"}
             </Link>
             <Link
               href="/dashboard"

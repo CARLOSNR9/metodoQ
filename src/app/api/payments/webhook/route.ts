@@ -9,9 +9,28 @@ import {
   parsePaidPlanId,
   type PaidPlanId,
 } from "@/lib/plans/config";
+import { MIR_PRODUCT_CODE } from "@/lib/mir/config";
 import { sendPaymentConfirmationEmail } from "@/lib/server/email/send";
 
 export const runtime = "nodejs";
+
+async function activateMirAccess(uid: string, stripeCheckoutSessionId: string) {
+  await getFirebaseAdminDb()
+    .collection("users")
+    .doc(uid)
+    .set(
+      {
+        mirAccess: {
+          active: true,
+          purchasedAt: new Date().toISOString(),
+          // TODO(negocio): definir si el acceso vence en la fecha del examen o es indefinido.
+          expiresAt: null,
+          stripeCheckoutSessionId,
+        },
+      },
+      { merge: true },
+    );
+}
 
 async function activateUserPlan(
   uid: string,
@@ -77,6 +96,11 @@ export async function POST(request: Request) {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object as Stripe.Checkout.Session;
       const uid = session.metadata?.uid;
+
+      if (uid && session.metadata?.product === MIR_PRODUCT_CODE) {
+        await activateMirAccess(uid, session.id);
+      }
+
       const planId = parsePaidPlanId(session.metadata?.plan);
       const cycle = parseBillingCycle(session.metadata?.cycle) ?? 1;
 

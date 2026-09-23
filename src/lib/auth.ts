@@ -62,6 +62,14 @@ export interface UserDocument {
   attemptedExam?: boolean;
   usedCourses?: boolean;
   role?: "student" | "professor" | "moderator" | "admin";
+  /** Acceso al módulo de pago único "Simulacro MIR", independiente del plan mensual. */
+  mirAccess?: {
+    active: boolean;
+    purchasedAt: string | null;
+    /** null = sin vencimiento definido (p.ej. válido hasta la convocatoria del examen). */
+    expiresAt: string | null;
+    stripeCheckoutSessionId?: string | null;
+  } | null;
 }
 
 export function generateReferralCode() {

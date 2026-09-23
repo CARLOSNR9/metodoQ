@@ -28,6 +28,7 @@ import {
   ClipboardCheck,
   Shield,
   Stethoscope,
+  BookOpenCheck,
 } from "lucide-react";
 import { useFailedQuestionsCount } from "@/hooks/use-failed-questions-count";
 
@@ -43,6 +44,7 @@ const navigationItems = [
   { label: "Simulacros", href: "/dashboard/convocatorias", icon: ClipboardCheck, proOnly: true },
   { label: "Mis clases", href: "/dashboard/clases", icon: CalendarDays, proOnly: true },
   { label: "Retos Dr. Q", href: "/dashboard/evaluaciones", icon: Stethoscope, proOnly: true },
+  { label: "Simulacro MIR", href: "/dashboard/mir", icon: BookOpenCheck },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
   { label: "Historial", href: "/dashboard/historial", icon: History },
   { label: "Perfil", href: "/dashboard/perfil", icon: User },
