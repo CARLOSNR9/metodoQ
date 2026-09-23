@@ -1,4 +1,5 @@
 import { AdminUserForm } from "@/components/admin/user-creation-form";
+import { MirUserCreationForm } from "@/components/admin/mir-user-creation-form";
 import { UsersDirectoryPanel } from "@/components/admin/users-directory-panel";
 import { PanelSection } from "@/components/admin/panel-section";
 
@@ -26,6 +27,7 @@ export default function AdminUsersPage() {
         className="mt-10"
       >
         <AdminUserForm />
+        <MirUserCreationForm />
         <UsersDirectoryPanel />
       </PanelSection>
     </>

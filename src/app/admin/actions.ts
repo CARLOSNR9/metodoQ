@@ -159,3 +159,85 @@ export async function createUserAction(formData: FormData) {
     return { error: message };
   }
 }
+
+/**
+ * Crea una cuenta dedicada al módulo MIR: pago único, independiente de los
+ * planes FREE/BASICO/PRO/RESIDENTE, sin universidad ni especialidad (no
+ * aplican a este examen). Queda con acceso MIR activo de inmediato.
+ */
+export async function createMirUserAction(formData: FormData) {
+  const idToken = formData.get("idToken") as string | null;
+  const caller = await verifyStaffCaller(idToken);
+
+  if (!caller.ok) {
+    return { error: caller.error };
+  }
+
+  if (!caller.isAdmin) {
+    return { error: "Solo administradores pueden crear usuarios manualmente." };
+  }
+
+  const email = formData.get("email") as string;
+  const password = formData.get("password") as string;
+  const displayName = formData.get("displayName") as string;
+
+  if (!email || !password || !displayName) {
+    return { error: "Faltan campos obligatorios." };
+  }
+
+  try {
+    const auth = getFirebaseAdminAuth();
+    const db = getFirebaseAdminDb();
+
+    const userRecord = await auth.createUser({
+      email,
+      password,
+      displayName,
+    });
+
+    const now = new Date().toISOString();
+
+    const userDoc = {
+      uid: userRecord.uid,
+      email: userRecord.email,
+      displayName,
+      plan: "FREE",
+      role: "student",
+      planBillingCycle: null,
+      createdAt: now,
+      streakCount: 0,
+      streakLastTrainingDate: null,
+      strengths: [],
+      weaknesses: [],
+      avgResponseTime: 0,
+      lastScore: null,
+      attemptsCount: 0,
+      topicStats: {},
+      referralCode: Math.random().toString(36).substring(2, 8).toUpperCase(),
+      referredBy: null,
+      planStartedAt: null,
+      planExpiresAt: null,
+      manualSale: null,
+      lastActiveAt: now,
+      achievements: [],
+      onboardingCompleted: true,
+      emailOptIn: true,
+      requiresPasswordChange: true,
+      mirAccess: {
+        active: true,
+        purchasedAt: now,
+        expiresAt: null,
+        stripeCheckoutSessionId: null,
+      },
+    };
+
+    await db.collection("users").doc(userRecord.uid).set(userDoc);
+
+    revalidatePath("/admin");
+    return { success: true, uid: userRecord.uid };
+  } catch (error: unknown) {
+    console.error("Error creating MIR user:", error);
+    const message = error instanceof Error ? error.message : "Error al crear el usuario.";
+    return { error: message };
+  }
+}
