@@ -1,8 +1,10 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Building2, ClipboardList, Flag, Globe2, MapPin, Timer } from "lucide-react";
-import { MIR_EXAM_EDITIONS } from "@/lib/training/mir-convocatoria";
+import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/training/mir-convocatoria";
+import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
 
@@ -40,11 +42,31 @@ const CURIOSITIES = [
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
-  // TODO(contenido): usar userId para leer intentos guardados (ver getMirAttempt) una vez exista
-  // el flujo real de simulacro dentro del dashboard (hoy solo hay una demo pública de 5 preguntas).
-  void userId;
   const hasContent = MIR_EXAM_EDITIONS.some((edition) => edition.questions.length > 0);
   const daysUntilExam = getDaysUntilMirExam();
+
+  const [streak, setStreak] = useState<MirStreakInfo>({ count: 0, lastActiveDate: null, activeDates: [] });
+  const [attemptsByEdition, setAttemptsByEdition] = useState<Record<string, MirExamAttempt | null>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+
+    getMirStreakInfo(userId).then((info) => {
+      if (!cancelled) setStreak(info);
+    });
+
+    Promise.all(
+      MIR_EXAM_EDITIONS.map((edition) =>
+        getMirAttempt(userId, edition.code).then((attempt) => [edition.code, attempt] as const),
+      ),
+    ).then((entries) => {
+      if (!cancelled) setAttemptsByEdition(Object.fromEntries(entries));
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [userId]);
 
   return (
     <div className="space-y-6">
@@ -74,7 +96,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
             <p className="mt-1 text-xs text-slate-400">Sábado 23 de enero de 2027</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-            <MirStreakStrip streakCount={0} activeDates={new Set()} />
+            <MirStreakStrip streakCount={streak.count} activeDates={new Set(streak.activeDates)} />
           </div>
         </div>
       </header>
@@ -96,27 +118,31 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
         </div>
         {hasContent ? (
           <div className="grid gap-4 sm:grid-cols-2">
-            {MIR_EXAM_EDITIONS.map((edition) => (
-              <article
-                key={edition.code}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
-              >
-                <h3 className="text-lg font-bold text-white">{edition.label}</h3>
-                <p className="mt-1 text-sm text-slate-300">
-                  {edition.questionCount} preguntas · {edition.minutes} min
-                </p>
-                <Link
-                  href="/mir/demo"
-                  className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+            {MIR_EXAM_EDITIONS.map((edition) => {
+              const lastAttempt = attemptsByEdition[edition.code];
+              return (
+                <article
+                  key={edition.code}
+                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
                 >
-                  Practicar ahora
-                </Link>
-                <p className="mt-2 text-[11px] text-slate-500">
-                  Por ahora abre una muestra corta de práctica. El simulacro completo cronometrado
-                  dentro del dashboard llega pronto.
-                </p>
-              </article>
-            ))}
+                  <h3 className="text-lg font-bold text-white">{edition.label}</h3>
+                  <p className="mt-1 text-sm text-slate-300">
+                    {edition.questionCount} preguntas · {edition.minutes} min
+                  </p>
+                  <Link
+                    href="/dashboard/mir/simulacro"
+                    className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+                  >
+                    {lastAttempt ? "Repetir simulacro" : "Practicar ahora"}
+                  </Link>
+                  <p className="mt-2 text-[11px] text-slate-500">
+                    {lastAttempt
+                      ? `Último intento: ${lastAttempt.scorePercentage}% (${lastAttempt.correctAnswers}/${edition.questionCount} correctas).`
+                      : "Simulacro completo y cronometrado, con revisión detallada al terminar."}
+                  </p>
+                </article>
+              );
+            })}
           </div>
         ) : (
           <div className="rounded-[2rem] border border-dashed border-white/20 bg-white/[0.02] p-10 text-center">
