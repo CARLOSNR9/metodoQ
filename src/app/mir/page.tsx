@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CheckCircle2, ClipboardCheck, Globe2, Target } from "lucide-react";
 import { getMirWhatsAppUrl } from "@/lib/mir/config";
+import { MirHeroIllustration } from "@/components/landing/mir-hero-illustration";
 
 /**
  * Landing de venta del módulo "Simulacro MIR". Tema visual oscuro/dorado,
@@ -37,36 +38,42 @@ export default function MirLandingPage() {
 
   return (
     <main className="flex flex-1 flex-col bg-[#0A1F44]">
-      <section className="mx-auto w-full max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-24">
-        <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.25em] text-mq-premium-gold">
-          <Globe2 className="h-3.5 w-3.5" />
-          Método Q · Módulo internacional
-        </p>
-        <h1 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-5xl">
-          Prepárate para el examen MIR con Método Q
-        </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-base font-medium text-slate-300 sm:text-lg">
-          Banco de preguntas de examen, simulacros cronometrados y seguimiento de tu
-          progreso, en un módulo dedicado dentro de tu dashboard de Método Q.
-        </p>
-        <p className="mx-auto mt-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold text-slate-200">
-          Examen MIR: sábado 23 de enero de 2027
-        </p>
-        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-12 items-center justify-center rounded-xl bg-mq-premium-gold px-8 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
-          >
-            Contáctanos por WhatsApp
-          </a>
-          <Link
-            href="/demo"
-            className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 px-8 text-sm font-bold text-white transition hover:border-white/40"
-          >
-            Probar demo gratuita
-          </Link>
+      <section className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+          <div className="text-center lg:text-left">
+            <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.25em] text-mq-premium-gold">
+              <Globe2 className="h-3.5 w-3.5" />
+              Método Q · Módulo internacional
+            </p>
+            <h1 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-5xl">
+              Prepárate para el examen MIR con Método Q
+            </h1>
+            <p className="mx-auto mt-5 max-w-2xl text-base font-medium text-slate-300 sm:text-lg lg:mx-0">
+              Banco de preguntas de examen, simulacros cronometrados y seguimiento de tu
+              progreso, en un módulo dedicado dentro de tu dashboard de Método Q.
+            </p>
+            <p className="mx-auto mt-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-bold text-slate-200 lg:mx-0">
+              Examen MIR: sábado 23 de enero de 2027
+            </p>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center lg:justify-start">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl bg-mq-premium-gold px-8 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+              >
+                Contáctanos por WhatsApp
+              </a>
+              <Link
+                href="/demo"
+                className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 px-8 text-sm font-bold text-white transition hover:border-white/40"
+              >
+                Probar demo gratuita
+              </Link>
+            </div>
+          </div>
+
+          <MirHeroIllustration />
         </div>
       </section>
 
