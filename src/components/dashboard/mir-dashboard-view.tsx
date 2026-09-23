@@ -1,54 +1,132 @@
 "use client";
 
-import { Globe2 } from "lucide-react";
+import Link from "next/link";
+import { Building2, ClipboardList, Flag, Globe2, MapPin, Timer } from "lucide-react";
 import { MIR_EXAM_EDITIONS } from "@/lib/training/mir-convocatoria";
+import { getDaysUntilMirExam } from "@/lib/mir/config";
+import { MirStreakStrip } from "./mir-streak-strip";
 
 type MirDashboardViewProps = {
   userId: string;
+  greetingName: string;
 };
 
+const CURIOSITIES = [
+  {
+    icon: ClipboardList,
+    title: "9.676 plazas",
+    detail: "de Medicina en la convocatoria MIR 2027 (12.850 en total, todas las áreas sanitarias).",
+  },
+  {
+    icon: Timer,
+    title: "4h 30 min",
+    detail: "de examen: 200 preguntas tipo test + 10 de reserva, un único acierto por pregunta.",
+  },
+  {
+    icon: MapPin,
+    title: "+1.800 km",
+    detail: "es la distancia máxima que puede separar tu plaza de Madrid: hospitales en Canarias también ofertan formación MIR.",
+  },
+  {
+    icon: Building2,
+    title: "1 examen, 1 día",
+    detail: "se aplica el mismo sábado, a la misma hora, en todas las sedes de España.",
+  },
+];
+
 /**
- * Vista del dashboard del módulo MIR. Tema oscuro/dorado deliberadamente
- * distinto del resto del dashboard, para señalar que es un módulo aparte
- * (examen internacional, no una universidad colombiana).
+ * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha
+ * y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
+ * de Método Q (enfocado en exámenes colombianos).
  */
-export function MirDashboardView({ userId }: MirDashboardViewProps) {
-  // TODO(contenido): usar userId para leer intentos guardados (ver getMirAttempt) una vez haya banco de preguntas.
+export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
+  // TODO(contenido): usar userId para leer intentos guardados (ver getMirAttempt) una vez exista
+  // el flujo real de simulacro dentro del dashboard (hoy solo hay una demo pública de 5 preguntas).
   void userId;
   const hasContent = MIR_EXAM_EDITIONS.some((edition) => edition.questions.length > 0);
+  const daysUntilExam = getDaysUntilMirExam();
 
   return (
-    <div className="space-y-6 rounded-[2rem] bg-[#0A1F44] p-6 sm:p-8">
-      <header>
+    <div className="space-y-6">
+      <header className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.06] to-transparent p-6 sm:p-8">
         <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
           <Globe2 className="h-3.5 w-3.5" />
           Módulo internacional
+          <span aria-hidden className="ml-1">🇪🇸</span>
+          <span aria-hidden>🇨🇴</span>
         </p>
-        <h1 className="mt-1 text-2xl font-black text-white">Simulacro MIR</h1>
+        <h1 className="mt-2 text-2xl font-black text-white sm:text-3xl">
+          Bienvenido, {greetingName}
+        </h1>
+        <p className="mt-1 text-sm text-slate-300">
+          De Colombia a España: este es tu centro de mando para el examen MIR.
+        </p>
+
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="rounded-2xl border border-mq-premium-gold/25 bg-mq-premium-gold/[0.06] p-5">
+            <p className="text-[11px] font-bold uppercase tracking-wide text-slate-300">
+              Examen MIR 2027
+            </p>
+            <p className="mt-1 text-4xl font-black text-mq-premium-gold">
+              {daysUntilExam}
+              <span className="text-base font-bold text-slate-300"> días</span>
+            </p>
+            <p className="mt-1 text-xs text-slate-400">Sábado 23 de enero de 2027</p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <MirStreakStrip streakCount={0} activeDates={new Set()} />
+          </div>
+        </div>
       </header>
 
-      {hasContent ? (
-        <div className="grid gap-4 sm:grid-cols-2">
-          {MIR_EXAM_EDITIONS.map((edition) => (
-            <article
-              key={edition.code}
-              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
-            >
-              <h2 className="text-lg font-bold text-white">{edition.label}</h2>
-              <p className="mt-1 text-sm text-slate-300">
-                {edition.questionCount} preguntas · {edition.minutes} min
-              </p>
-            </article>
-          ))}
+      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {CURIOSITIES.map((fact) => (
+          <div key={fact.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <fact.icon className="h-5 w-5 text-mq-premium-gold" />
+            <p className="mt-3 text-lg font-black text-white">{fact.title}</p>
+            <p className="mt-1 text-xs leading-relaxed text-slate-400">{fact.detail}</p>
+          </div>
+        ))}
+      </section>
+
+      <section>
+        <div className="mb-3 flex items-center gap-2">
+          <Flag className="h-4 w-4 text-mq-premium-gold" />
+          <h2 className="text-sm font-black uppercase tracking-wide text-white">Simulacros</h2>
         </div>
-      ) : (
-        <div className="rounded-[2rem] border border-dashed border-white/20 bg-white/[0.02] p-10 text-center">
-          <p className="text-sm font-semibold text-slate-300">
-            Tu acceso al módulo MIR está activo. El banco de preguntas se está
-            cargando y estará disponible aquí en los próximos días.
-          </p>
-        </div>
-      )}
+        {hasContent ? (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {MIR_EXAM_EDITIONS.map((edition) => (
+              <article
+                key={edition.code}
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
+              >
+                <h3 className="text-lg font-bold text-white">{edition.label}</h3>
+                <p className="mt-1 text-sm text-slate-300">
+                  {edition.questionCount} preguntas · {edition.minutes} min
+                </p>
+                <Link
+                  href="/mir/demo"
+                  className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+                >
+                  Practicar ahora
+                </Link>
+                <p className="mt-2 text-[11px] text-slate-500">
+                  Por ahora abre una muestra corta de práctica. El simulacro completo cronometrado
+                  dentro del dashboard llega pronto.
+                </p>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-[2rem] border border-dashed border-white/20 bg-white/[0.02] p-10 text-center">
+            <p className="text-sm font-semibold text-slate-300">
+              Tu acceso al módulo MIR está activo. El banco de preguntas se está cargando y estará
+              disponible aquí en los próximos días.
+            </p>
+          </div>
+        )}
+      </section>
     </div>
   );
 }

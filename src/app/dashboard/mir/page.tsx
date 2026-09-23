@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { hasMirAccess } from "@/lib/mir/access";
+import { getUserGreetingName } from "@/lib/plans/subscription-display";
 import { MirDashboardView } from "@/components/dashboard/mir-dashboard-view";
 
 export default function MirDashboardPage() {
@@ -20,7 +21,7 @@ export default function MirDashboardPage() {
 
   if (!hasMirAccess(profile?.mirAccess)) {
     return (
-      <div className="mx-auto max-w-xl rounded-[2rem] border border-white/10 bg-[#0A1F44] p-8 text-center">
+      <div className="mx-auto max-w-xl rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 text-center">
         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
           Módulo internacional
         </p>
@@ -41,5 +42,5 @@ export default function MirDashboardPage() {
 
   if (!user) return null;
 
-  return <MirDashboardView userId={user.uid} />;
+  return <MirDashboardView userId={user.uid} greetingName={getUserGreetingName(profile)} />;
 }

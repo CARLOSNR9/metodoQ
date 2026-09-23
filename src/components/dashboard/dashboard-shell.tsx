@@ -64,6 +64,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const isProUser = hasProFeatures(profile?.plan);
   const isMirOnlyUser =
     (profile?.plan ?? "FREE") === "FREE" && hasMirAccess(profile?.mirAccess);
+  const isMirRoute = pathname.startsWith("/dashboard/mir");
 
   if (isCheckingAuth) {
     return (
@@ -78,18 +79,36 @@ export function DashboardShell({ children }: DashboardShellProps) {
 
   return (
     <PomodoroProvider userId={user?.uid} isProUser={isProUser}>
-    <main className="flex min-h-screen flex-1 flex-col bg-slate-50 md:flex-row">
-      <aside className="relative z-20 w-full border-b border-slate-200 bg-slate-50 p-4 md:min-h-full md:w-64 md:border-b-0 md:border-r md:p-6">
+    <main
+      className={`flex min-h-screen flex-1 flex-col md:flex-row ${isMirRoute ? "bg-[#0A1F44]" : "bg-slate-50"}`}
+    >
+      <aside
+        className={`relative z-20 w-full border-b p-4 md:min-h-full md:w-64 md:border-b-0 md:border-r md:p-6 ${
+          isMirRoute
+            ? "border-white/10 bg-[#0A1F44]"
+            : "border-slate-200 bg-slate-50"
+        }`}
+      >
         <div className="mb-8 hidden md:block">
           <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-mq-accent">
-              <span className="text-xl font-bold text-mq-accent-foreground">Q</span>
+            <div
+              className={`flex h-8 w-8 items-center justify-center rounded-lg ${isMirRoute ? "bg-mq-premium-gold" : "bg-mq-accent"}`}
+            >
+              <span
+                className={`text-xl font-bold ${isMirRoute ? "text-[#0A1F44]" : "text-mq-accent-foreground"}`}
+              >
+                Q
+              </span>
             </div>
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-mq-accent">
+              <p
+                className={`text-[10px] font-bold uppercase tracking-[0.2em] ${isMirRoute ? "text-mq-premium-gold" : "text-mq-accent"}`}
+              >
                 Método Q
               </p>
-              <h2 className="text-sm font-semibold text-slate-900">Panel de Control</h2>
+              <h2 className={`text-sm font-semibold ${isMirRoute ? "text-white" : "text-slate-900"}`}>
+                {isMirRoute ? "Módulo MIR" : "Panel de Control"}
+              </h2>
             </div>
           </div>
         </div>
@@ -102,7 +121,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
             const isActive =
               pathname === item.href ||
               (item.href !== "/dashboard" && pathname.startsWith(item.href));
-            
+
             const Icon = item.icon;
 
             return (
@@ -111,8 +130,12 @@ export function DashboardShell({ children }: DashboardShellProps) {
                 href={item.href}
                 className={`inline-flex min-h-11 shrink-0 items-center gap-3 rounded-xl px-4 text-sm font-semibold transition-all duration-300 md:w-full ${
                   isActive
-                    ? "bg-mq-accent text-mq-accent-foreground shadow-[0_8px_20px_-8px_rgb(0_209_255/0.8)]"
-                    : "text-slate-500 hover:bg-slate-100 hover:text-slate-900"
+                    ? isMirRoute
+                      ? "bg-mq-premium-gold text-[#0A1F44] shadow-[0_8px_20px_-8px_rgba(250,204,21,0.5)]"
+                      : "bg-mq-accent text-mq-accent-foreground shadow-[0_8px_20px_-8px_rgb(0_209_255/0.8)]"
+                    : isMirRoute
+                      ? "text-slate-300 hover:bg-white/5 hover:text-white"
+                      : "text-slate-500 hover:bg-slate-100 hover:text-slate-900"
                 }`}
               >
                 <Icon size={18} strokeWidth={isActive ? 2.5 : 2} />
@@ -134,18 +157,30 @@ export function DashboardShell({ children }: DashboardShellProps) {
       </aside>
 
       <section className="flex min-w-0 flex-1 flex-col">
-        <header className="mq-glass sticky top-0 z-10 flex h-16 items-center justify-between px-4 sm:px-8">
+        <header
+          className={`sticky top-0 z-10 flex h-16 items-center justify-between px-4 sm:px-8 ${
+            isMirRoute
+              ? "border-b border-white/10 bg-[#0A1F44]/95 backdrop-blur-xl"
+              : "mq-glass"
+          }`}
+        >
           <div className="flex items-center gap-3">
-            <div className="hidden h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-mq-accent to-indigo-500 text-xs font-bold text-white sm:flex">
+            <div
+              className={`hidden h-8 w-8 items-center justify-center rounded-full text-xs font-bold sm:flex ${
+                isMirRoute
+                  ? "bg-mq-premium-gold text-[#0A1F44]"
+                  : "bg-gradient-to-br from-mq-accent to-indigo-500 text-white"
+              }`}
+            >
               {user?.email?.[0].toUpperCase()}
             </div>
-            <p className="text-xs font-medium text-slate-500 sm:text-sm">
+            <p className={`text-xs font-medium sm:text-sm ${isMirRoute ? "text-slate-300" : "text-slate-500"}`}>
               <span className="hidden sm:inline">Sesión de </span>
-              <span className="text-slate-900">
+              <span className={isMirRoute ? "text-white" : "text-slate-900"}>
                 {greetingName !== "Doc" ? greetingName : user?.email}
               </span>
               {greetingName !== "Doc" && user?.email ? (
-                <span className="hidden text-slate-500 lg:inline"> · {user.email}</span>
+                <span className={`hidden lg:inline ${isMirRoute ? "text-slate-400" : "text-slate-500"}`}> · {user.email}</span>
               ) : null}
             </p>
           </div>
@@ -167,7 +202,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
                 await logoutUser();
                 router.replace("/login");
               }}
-              className="group flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-500 transition-colors hover:bg-red-500/10 hover:text-red-400"
+              className={`group flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors hover:bg-red-500/10 hover:text-red-400 ${isMirRoute ? "text-slate-300" : "text-slate-500"}`}
             >
               <LogOut size={14} className="transition-transform group-hover:translate-x-0.5" />
               <span>Salir</span>

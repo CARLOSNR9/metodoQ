@@ -12,6 +12,15 @@ export const MIR_PRODUCT_CODE = "MIR_SIMULACRO";
  */
 export const MIR_EXAM_DATE = "2027-01-23";
 
+/** Días restantes hasta el examen (0 si ya pasó). */
+export function getDaysUntilMirExam(today: Date = new Date()): number {
+  const examDate = new Date(`${MIR_EXAM_DATE}T00:00:00`);
+  const startOfToday = new Date(today);
+  startOfToday.setHours(0, 0, 0, 0);
+  const diffMs = examDate.getTime() - startOfToday.getTime();
+  return Math.max(0, Math.ceil(diffMs / (1000 * 60 * 60 * 24)));
+}
+
 export function getMirStripePriceId(): string | undefined {
   return process.env.STRIPE_PRICE_MIR;
 }
