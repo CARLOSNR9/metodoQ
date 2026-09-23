@@ -9,6 +9,7 @@ import { MIR_2026_51_60_QUESTIONS } from "@/data/mir-2026-51-60-questions";
 import { MIR_2026_61_70_QUESTIONS } from "@/data/mir-2026-61-70-questions";
 import { MIR_2026_71_80_QUESTIONS } from "@/data/mir-2026-71-80-questions";
 import { MIR_2026_81_90_QUESTIONS } from "@/data/mir-2026-81-90-questions";
+import { MIR_2026_91_100_QUESTIONS } from "@/data/mir-2026-91-100-questions";
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -23,6 +24,7 @@ const MIR_QUESTIONS: TrainingQuestion[] = [
   ...MIR_2026_61_70_QUESTIONS,
   ...MIR_2026_71_80_QUESTIONS,
   ...MIR_2026_81_90_QUESTIONS,
+  ...MIR_2026_91_100_QUESTIONS,
 ];
 
 /**

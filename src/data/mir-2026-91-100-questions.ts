@@ -1,0 +1,244 @@
+import type { TrainingQuestion } from "@/lib/questions/types";
+
+export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
+  {
+    id: "mir-2026-91",
+    university: "MIR (España)",
+    examArea: "CARDIOLOGÍA",
+    topic: "SÍNDROME CORONARIO AGUDO SIN ELEVACIÓN DEL ST",
+    difficulty: "hard",
+    tags: ["mir", "espana", "cardiologia"],
+    statement:
+      "Un varón de 68 años acude por dolor torácico opresivo en reposo, de 40 minutos de evolución. El ECG no muestra elevación del ST, pero sí descenso del ST de 1.5 mm en derivaciones precordiales. La troponina está elevada. Presenta angina recurrente pese al tratamiento médico inicial y cambios dinámicos del ST. ¿Cuál es la estrategia más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Síndrome coronario agudo sin elevación del ST (SCASEST) de alto riesgo (angina recurrente, cambios dinámicos del ST, troponina elevada); indica estrategia invasiva precoz (coronariografía dentro de las primeras 24 horas), junto con doble antiagregación y anticoagulación." },
+      { id: "B", label: "B", text: "Manejo exclusivamente conservador con tratamiento médico, sin necesidad de coronariografía, dado que no hay elevación del segmento ST en el ECG." },
+      { id: "C", label: "C", text: "Fibrinolisis intravenosa inmediata, de forma análoga al manejo del IAMCEST." },
+      { id: "D", label: "D", text: "Alta hospitalaria con manejo ambulatorio y coronariografía programada en varias semanas, dado que la ausencia de elevación del ST indica bajo riesgo." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro es compatible con un **síndrome coronario agudo sin elevación del ST (SCASEST)**: dolor torácico en reposo, descenso del ST, troponina elevada (lo que lo clasifica específicamente como **IAMSEST**, a diferencia de la angina inestable, donde la troponina es normal). La presencia de **criterios de alto riesgo** (angina recurrente pese al tratamiento médico, cambios dinámicos del segmento ST, troponina elevada) indica una **estrategia invasiva precoz**, con **coronariografía** habitualmente dentro de las primeras **24 horas**, para definir la anatomía coronaria y proceder a revascularización si procede. El tratamiento médico de base incluye **doble antiagregación** (ácido acetilsalicílico + un inhibidor P2Y12) y **anticoagulación** (por ejemplo, heparina), además del tratamiento antiisquémico habitual (betabloqueantes, nitratos si no hay contraindicación).\n\n**TRAMPA DEL EXAMEN:** Adoptar un manejo exclusivamente conservador, sin coronariografía, en un paciente de **alto riesgo** (que es precisamente este caso, por la angina recurrente y los cambios dinámicos del ST) retrasa innecesariamente una revascularización que podría prevenir un infarto más extenso. La fibrilinolisis es el tratamiento del **IAMCEST** (con elevación persistente del ST), no del SCASEST, donde no se ha demostrado beneficio y sí mayor riesgo de sangrado sin el beneficio de reperfundir una arteria que, en el SCASEST, no suele estar completamente ocluida de la misma forma. Diferir el estudio invasivo varias semanas en un paciente de alto riesgo ignora la necesidad de una evaluación precoz para prevenir la progresión a un evento más grave.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., no todo síndrome coronario agudo sin elevación del ST se maneja igual; la clave está en estratificar el riesgo. Este paciente tiene varias señales de alto riesgo juntas: la angina le sigue doliendo a pesar del tratamiento médico inicial, el ECG le muestra cambios dinámicos (que van y vienen), y la troponina ya está elevada. Con ese perfil, usted no se puede quedar esperando semanas para un estudio invasivo programado; la evidencia respalda llevarlo a coronariografía dentro de las primeras 24 horas, para ver exactamente qué está pasando en sus arterias coronarias y actuar en consecuencia. Mientras tanto, mantenga la doble antiagregación y la anticoagulación como base del tratamiento médico. Y recuerde: la fibrinolisis es exclusiva del IAMCEST, con elevación del ST persistente; aquí no tiene ese hallazgo, así que ese tratamiento no aplica.",
+    keyPoints: [
+      "SCASEST de alto riesgo (angina recurrente, cambios dinámicos del ST, troponina elevada): estrategia invasiva precoz (coronariografía <24h).",
+      "Troponina elevada en SCASEST = IAMSEST (a diferencia de angina inestable, con troponina normal).",
+      "La fibrinolisis es exclusiva del IAMCEST (elevación persistente del ST); no está indicada en el SCASEST.",
+    ],
+  },
+  {
+    id: "mir-2026-92",
+    university: "MIR (España)",
+    examArea: "MEDICINA DE URGENCIAS",
+    topic: "OBSTRUCCIÓN DE VÍA AÉREA POR CUERPO EXTRAÑO",
+    difficulty: "medium",
+    tags: ["mir", "espana", "urgencias"],
+    statement:
+      "Un varón de 45 años, mientras comía, presenta de forma súbita incapacidad para hablar, toser o respirar, llevándose las manos al cuello, con cianosis progresiva. Permanece consciente. ¿Cuál es la actuación inmediata más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Realizar compresiones abdominales bruscas (maniobra de Heimlich) mientras el paciente permanezca consciente, y si pierde la conciencia, iniciar reanimación cardiopulmonar con compresiones torácicas, revisando la boca en busca del cuerpo extraño antes de las ventilaciones de rescate." },
+      { id: "B", label: "B", text: "Animar al paciente a toser con fuerza de forma indefinida, sin realizar ninguna maniobra manual, dado que la tos siempre es más eficaz que cualquier maniobra externa." },
+      { id: "C", label: "C", text: "Realizar una traqueotomía de urgencia como primera medida, sin ensayar antes ninguna maniobra de desobstrucción manual." },
+      { id: "D", label: "D", text: "Administrar oxígeno suplementario únicamente, sin ninguna maniobra de desobstrucción, hasta que el cuerpo extraño se expulse espontáneamente." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (incapacidad súbita para hablar, toser o respirar, con las manos llevadas al cuello —signo universal de atragantamiento— y cianosis progresiva) indica una **obstrucción completa de la vía aérea** por cuerpo extraño, una urgencia vital inmediata. Mientras el paciente permanezca **consciente**, la maniobra de elección son las **compresiones abdominales bruscas (maniobra de Heimlich)**, repetidas hasta expulsar el cuerpo extraño o hasta que el paciente pierda la conciencia. Si el paciente **pierde la conciencia**, se debe iniciar de inmediato **reanimación cardiopulmonar** con **compresiones torácicas** (que también pueden generar presión suficiente para expulsar el cuerpo extraño), revisando visualmente la boca en busca del cuerpo extraño **antes** de intentar las ventilaciones de rescate, retirándolo si es visible y accesible.\n\n**TRAMPA DEL EXAMEN:** Animar a toser de forma indefinida solo es apropiado cuando la obstrucción es **parcial** (el paciente aún puede toser, hablar o respirar, aunque con dificultad), no cuando es completa, como en este caso, donde el paciente no puede generar el flujo de aire necesario para toser eficazmente. La traqueotomía de urgencia no es la primera medida; se reserva para los casos excepcionales en que las maniobras de desobstrucción manual fallan y la vía aérea no puede asegurarse de otra forma, siendo un procedimiento de último recurso ante el fracaso de las medidas iniciales. Limitarse a dar oxígeno sin actuar mecánicamente sobre la obstrucción no resuelve el problema, ya que el oxígeno no llega a los pulmones si la vía aérea está completamente bloqueada.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la señal de manos al cuello es prácticamente universal para \"me estoy atragantando\", y cuando además el paciente no puede ni hablar ni toser, usted está ante una obstrucción completa que necesita acción inmediata, no palabras de ánimo para que tosa (eso ya no le sirve, porque no tiene flujo de aire suficiente para generar una tos eficaz). Póngase detrás del paciente y aplique compresiones abdominales bruscas y repetidas (maniobra de Heimlich) mientras siga consciente. Si en algún momento pierde la conciencia, no se quede parado; bájelo al suelo e inicie RCP con compresiones torácicas de inmediato, que además de circular la sangre, pueden generar la presión necesaria para expulsar el objeto. Antes de intentar ventilarlo, eso sí, mire dentro de la boca por si el cuerpo extraño ya es visible y accesible para retirarlo con los dedos. La traqueotomía queda como último recurso, para cuando todo lo anterior falla y no hay otra forma de asegurar la vía aérea.",
+    keyPoints: [
+      "Obstrucción completa de vía aérea (consciente): maniobra de Heimlich (compresiones abdominales bruscas) repetidas hasta expulsar el objeto o pérdida de conciencia.",
+      "Si pierde la conciencia: iniciar RCP con compresiones torácicas; revisar visualmente la boca antes de las ventilaciones de rescate.",
+      "Animar a toser solo es apropiado en obstrucción PARCIAL (el paciente aún puede toser/hablar), no en la completa.",
+    ],
+  },
+  {
+    id: "mir-2026-93",
+    university: "MIR (España)",
+    examArea: "APARATO DIGESTIVO",
+    topic: "INSUFICIENCIA HEPÁTICA AGUDA (FALLO HEPÁTICO FULMINANTE)",
+    difficulty: "hard",
+    tags: ["mir", "espana", "digestivo"],
+    statement:
+      "Una mujer de 30 años, sin hepatopatía previa conocida, presenta ictericia progresiva, confusión de inicio reciente (desorientación) y coagulopatía (INR 2.8), en el contexto de una posible sobreingesta de paracetamol hace 3 días. No hay antecedente de enfermedad hepática crónica. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "El cuadro es compatible con insuficiencia hepática aguda (fallo hepático fulminante); requiere ingreso urgente, idealmente en una unidad especializada con posibilidad de trasplante hepático, iniciar N-acetilcisteína (que puede tener beneficio incluso más allá de la etiología por paracetamol), y monitorización estrecha de la función neurológica por el riesgo de edema cerebral." },
+      { id: "B", label: "B", text: "Manejo ambulatorio con controles analíticos periódicos, dado que la coagulopatía e ictericia en una mujer joven previamente sana rara vez tienen relevancia clínica grave." },
+      { id: "C", label: "C", text: "Debe realizarse una biopsia hepática percutánea de forma prioritaria antes de cualquier otra medida terapéutica, independientemente del riesgo de sangrado por la coagulopatía." },
+      { id: "D", label: "D", text: "Iniciar tratamiento con lactulosa como única medida, sin necesidad de valorar el ingreso en una unidad especializada ni el riesgo de complicaciones neurológicas graves." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (coagulopatía —INR ≥1.5— y encefalopatía de instauración aguda, en una paciente **sin hepatopatía crónica previa**, con antecedente sugestivo de sobreingesta de paracetamol, la causa más frecuente de fallo hepático agudo en muchos países occidentales) es compatible con una **insuficiencia hepática aguda (fallo hepático fulminante)**, una entidad grave con mortalidad elevada sin tratamiento adecuado. Requiere **ingreso urgente**, idealmente con traslado precoz a una **unidad especializada con posibilidad de trasplante hepático** (la decisión de indicar trasplante se apoya en criterios pronósticos como los de King's College), inicio de **N-acetilcisteína** (que se administra ante la sospecha de etiología por paracetamol, y que además puede aportar beneficio incluso en fallo hepático agudo de otras etiologías), y **monitorización neurológica estrecha**, dado el riesgo de **edema cerebral** e hipertensión intracraneal, una de las complicaciones más temidas y potencialmente mortales de esta entidad.\n\n**TRAMPA DEL EXAMEN:** Minimizar la gravedad de este cuadro por tratarse de una paciente joven y previamente sana es un error grave: el fallo hepático fulminante tiene una mortalidad significativa sin manejo especializado adecuado y trasplante en los casos que lo requieren. Realizar una biopsia hepática percutánea de forma prioritaria en presencia de una coagulopatía tan marcada (INR 2.8) conlleva un riesgo de sangrado significativo y no es la prioridad inicial del manejo. La lactulosa puede tener un papel en el manejo de la encefalopatía, pero como única medida, sin el resto del manejo especializado (traslado a unidad con capacidad de trasplante, N-acetilcisteína, monitorización neurológica), es claramente insuficiente ante la gravedad de este cuadro.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., no confunda esto con una encefalopatía hepática \"de las de siempre\" en un cirrótico conocido; esta paciente no tenía enfermedad hepática crónica previa, y el desarrollo agudo de coagulopatía marcada más confusión, en el contexto de una posible sobreingesta de paracetamol, le tiene que hacer pensar en fallo hepático fulminante, una entidad con un pronóstico mucho más sombrío si no se maneja adecuadamente y a tiempo. Active el traslado a una unidad especializada con capacidad de trasplante hepático cuanto antes; estos pacientes pueden deteriorarse muy rápido, y cuando lo hacen, necesitan estar ya en el sitio donde pueden recibir un trasplante urgente si los criterios lo indican. Inicie N-acetilcisteína sin demora, tanto por la sospecha de paracetamol como por su posible beneficio general en el fallo hepático agudo. Y vigile de cerca el estado neurológico; el edema cerebral es de las complicaciones que más mata en esta entidad, y detectarlo a tiempo puede marcar la diferencia.",
+    keyPoints: [
+      "Insuficiencia hepática aguda (fallo hepático fulminante): coagulopatía (INR≥1.5) + encefalopatía de instauración aguda, SIN hepatopatía crónica previa.",
+      "Manejo: ingreso urgente con traslado precoz a unidad especializada con capacidad de trasplante + N-acetilcisteína + monitorización neurológica estrecha (riesgo de edema cerebral).",
+      "Evitar biopsia hepática percutánea prioritaria ante coagulopatía marcada (riesgo de sangrado); no subestimar la gravedad por tratarse de un paciente joven previamente sano.",
+    ],
+  },
+  {
+    id: "mir-2026-94",
+    university: "MIR (España)",
+    examArea: "ENDOCRINOLOGÍA",
+    topic: "FEOCROMOCITOMA - CRISIS HIPERTENSIVA CATECOLAMINÉRGICA",
+    difficulty: "hard",
+    tags: ["mir", "espana", "endocrinologia"],
+    statement:
+      "Una mujer de 42 años presenta episodios recurrentes de cefalea intensa, palpitaciones y sudoración profusa, con picos de presión arterial de hasta 220/130 mmHg durante los episodios, que se resuelven espontáneamente. Se sospecha feocromocitoma, confirmado posteriormente con metanefrinas plasmáticas elevadas. Antes de la cirugía programada para su resección, ¿cuál es el manejo farmacológico preoperatorio correcto?",
+    options: [
+      { id: "A", label: "A", text: "Iniciar bloqueo alfa-adrenérgico (por ejemplo, fenoxibenzamina) varios días antes de la cirugía, y solo después, si es necesario para controlar la taquicardia refleja, añadir un betabloqueante; nunca iniciar el betabloqueante antes que el bloqueo alfa." },
+      { id: "B", label: "B", text: "Iniciar un betabloqueante en monoterapia como preparación preoperatoria, dado que reduce eficazmente tanto la presión arterial como la frecuencia cardíaca en el feocromocitoma." },
+      { id: "C", label: "C", text: "No se requiere ninguna preparación farmacológica específica antes de la cirugía de un feocromocitoma, dado que el riesgo de crisis hipertensiva intraoperatoria es mínimo." },
+      { id: "D", label: "D", text: "Iniciar un diurético de asa como primera medida para el control de la presión arterial antes de la cirugía." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El **feocromocitoma** es un tumor productor de catecolaminas (habitualmente de la médula suprarrenal) que puede desencadenar episodios de hipertensión severa, cefalea, palpitaciones y sudoración (la tríada clásica). Antes de la **cirugía** de resección, es fundamental un manejo farmacológico preoperatorio para prevenir una **crisis hipertensiva catastrófica** durante la manipulación quirúrgica del tumor: se inicia **bloqueo alfa-adrenérgico** (por ejemplo, fenoxibenzamina, un alfabloqueante no selectivo de acción prolongada) **varios días antes** de la cirugía (habitualmente 10-14 días, permitiendo también la expansión de volumen, ya que estos pacientes suelen estar relativamente hipovolémicos por la vasoconstricción crónica), y **solo después**, si es necesario controlar la **taquicardia refleja** que puede aparecer con el bloqueo alfa, se añade un **betabloqueante**.\n\n**TRAMPA DEL EXAMEN:** Iniciar un **betabloqueante antes** que el bloqueo alfa (o en monoterapia) es un error potencialmente catastrófico: al bloquear los receptores beta (que median cierta vasodilatación) sin haber bloqueado antes los receptores alfa (que median la vasoconstricción), se produce una **estimulación alfa-adrenérgica sin oposición**, que puede desencadenar una **crisis hipertensiva grave**, análoga en su lógica al error de dar un vasodilatador sin control previo de frecuencia en la disección aórtica, pero aquí con el orden de los fármacos invertido: en el feocromocitoma, el alfabloqueo siempre precede al betabloqueo. No preparar farmacológicamente al paciente antes de la cirugía expone a un riesgo muy alto de crisis hipertensiva intraoperatoria durante la manipulación del tumor.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en el feocromocitoma, memorice esta secuencia como si fuera sagrada: alfabloqueo primero, siempre, empezando varios días antes de la cirugía para dar tiempo a que también se expanda el volumen intravascular (estos pacientes suelen estar vasoconstreñidos crónicamente y relativamente deshidratados por el exceso de catecolaminas). Solo después, si aparece taquicardia refleja por el propio bloqueo alfa, añada un betabloqueante. Si usted invierte este orden y da el betabloqueante primero, se queda con los receptores alfa completamente libres para vasoconstreñir sin ninguna oposición del lado beta, y eso puede desencadenar una crisis hipertensiva severa, potencialmente letal. Es el mismo principio de \"controle primero lo que puede empeorar las cosas si actúa en el orden equivocado\" que ve en la disección aórtica, pero aquí con los fármacos invertidos: en la disección, el betabloqueante va primero; en el feocromocitoma, el alfabloqueante va primero. No los confunda.",
+    keyPoints: [
+      "Feocromocitoma: preparación preoperatoria con bloqueo alfa-adrenérgico (fenoxibenzamina) iniciado varios días antes de la cirugía.",
+      "El betabloqueante SOLO se añade después del alfabloqueo, si hay taquicardia refleja; nunca antes ni en monoterapia.",
+      "Betabloqueo antes del alfabloqueo: riesgo de crisis hipertensiva grave por estimulación alfa-adrenérgica sin oposición.",
+    ],
+  },
+  {
+    id: "mir-2026-95",
+    university: "MIR (España)",
+    examArea: "NEUROLOGÍA",
+    topic: "ATAQUE ISQUÉMICO TRANSITORIO",
+    difficulty: "medium",
+    tags: ["mir", "espana", "neurologia"],
+    statement:
+      "Un varón de 70 años presenta un episodio de debilidad en el brazo derecho y dificultad para hablar, que se resuelve completamente en 20 minutos, sin dejar ningún déficit neurológico residual a su llegada a Urgencias. ¿Cuál es la actuación más apropiada tras confirmar que se trata de un ataque isquémico transitorio (AIT)?",
+    options: [
+      { id: "A", label: "A", text: "Dado el alto riesgo de ictus establecido en los días siguientes a un AIT (especialmente en las primeras 48 horas), debe realizarse una evaluación urgente (idealmente el mismo día): neuroimagen, estudio de troncos supraaórticos/carotídeo y valoración cardiológica, iniciando antiagregación (con frecuencia doble antiagregación de corta duración en casos seleccionados) sin demora." },
+      { id: "B", label: "B", text: "Dado que los síntomas se resolvieron completamente sin dejar déficit residual, puede darse de alta al paciente sin ningún estudio adicional, programando una revisión ambulatoria en varias semanas." },
+      { id: "C", label: "C", text: "Debe administrarse fibrinolisis intravenosa de inmediato, de forma análoga al ictus isquémico establecido, dado que el mecanismo subyacente es el mismo." },
+      { id: "D", label: "D", text: "El AIT no se asocia a un riesgo significativo de ictus posterior, por lo que no está justificada una evaluación urgente." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El **ataque isquémico transitorio (AIT)** se define como un episodio de disfunción neurológica focal de origen isquémico que se resuelve completamente (clásicamente en menos de 24 horas, aunque la mayoría dura minutos, como en este caso). A pesar de la resolución completa de los síntomas, el AIT conlleva un **riesgo elevado de ictus isquémico establecido** en los días siguientes, siendo el riesgo especialmente alto en las **primeras 48 horas**. Por ello, se recomienda una **evaluación urgente** (idealmente el mismo día del evento): **neuroimagen** (para descartar hemorragia y valorar isquemia establecida), estudio de los **troncos supraaórticos/arterias carótidas** (para detectar estenosis significativa que pudiera beneficiarse de revascularización), y **valoración cardiológica** (para descartar una fuente embolígena, como la fibrilación auricular). Se inicia **antiagregación** sin demora (en pacientes seleccionados de alto riesgo, la evidencia respalda una **doble antiagregación de corta duración**, típicamente 21 días, seguida de monoterapia).\n\n**TRAMPA DEL EXAMEN:** Dar de alta sin ningún estudio, confiando en que la resolución completa de los síntomas indica bajo riesgo, es un error importante: precisamente el AIT es una \"señal de alarma\" que, bien estudiada y tratada con rapidez, puede prevenir un ictus establecido, mucho más incapacitante. La fibrinolisis no está indicada en el AIT, ya que por definición los síntomas ya se han resuelto para cuando el paciente es evaluado, y no hay un déficit establecido que tratar mediante reperfusión urgente. Subestimar el riesgo de ictus posterior al AIT ignora la evidencia que demuestra un riesgo significativo, especialmente en los días inmediatamente posteriores.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., no se deje engañar por la resolución completa de los síntomas; el AIT es, en muchos sentidos, una advertencia del cuerpo de que algo serio puede estar a punto de pasar, y el riesgo de que ese \"algo\" sea un ictus establecido es más alto justo en los primeros días, sobre todo en las primeras 48 horas. Trate cada AIT con la urgencia de estudiarlo el mismo día si es posible: neuroimagen para descartar sangrado o ya un infarto establecido, estudio de las carótidas para ver si hay una estenosis significativa que corregir, y una valoración cardíaca buscando una fuente embolígena como la fibrilación auricular. Inicie la antiagregación sin demora; en pacientes de riesgo alto seleccionados, la evidencia respalda incluso una doble antiagregación corta al inicio. Y recuerde: la fibrinolisis no tiene cabida aquí, porque para cuando usted ve al paciente, el déficit neurológico ya se resolvió; no hay tejido isquémico agudo que reperfundir en ese momento.",
+    keyPoints: [
+      "AIT: déficit neurológico focal isquémico que se resuelve completamente; alto riesgo de ictus establecido en los días siguientes, especialmente en las primeras 48h.",
+      "Evaluación urgente (idealmente el mismo día): neuroimagen + estudio de troncos supraaórticos/carotídeo + valoración cardiológica; antiagregación sin demora.",
+      "La fibrinolisis NO está indicada en el AIT (los síntomas ya se resolvieron para cuando se evalúa al paciente).",
+    ],
+  },
+  {
+    id: "mir-2026-96",
+    university: "MIR (España)",
+    examArea: "REUMATOLOGÍA",
+    topic: "GRANULOMATOSIS CON POLIANGEÍTIS (VASCULITIS ANCA)",
+    difficulty: "hard",
+    tags: ["mir", "espana", "reumatologia"],
+    statement:
+      "Un varón de 55 años presenta sinusitis crónica con costras nasales, hemoptisis, y en la analítica se observa deterioro progresivo de la función renal con hematuria y proteinuria. El estudio de anticuerpos ANCA (c-ANCA, antiproteinasa 3) es positivo a título alto. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "El cuadro es compatible con granulomatosis con poliangeítis (vasculitis asociada a ANCA), con afectación renal (probable glomerulonefritis rápidamente progresiva) y pulmonar; requiere tratamiento inmunosupresor urgente (corticoides a dosis altas junto con ciclofosfamida o rituximab) para inducir la remisión, dado el riesgo de progresión rápida a fracaso renal y hemorragia pulmonar grave." },
+      { id: "B", label: "B", text: "Manejo exclusivamente con antibioterapia prolongada, dado que la sinusitis crónica y la hemoptisis se explican mejor por un proceso infeccioso persistente que por una vasculitis sistémica." },
+      { id: "C", label: "C", text: "Debe iniciarse tratamiento sintomático únicamente, sin inmunosupresión, dado que la positividad de ANCA no tiene relevancia clínica sin biopsia confirmatoria previa en todos los casos." },
+      { id: "D", label: "D", text: "El manejo es exclusivamente quirúrgico, con cirugía nasal reconstructiva como prioridad, sin necesidad de tratamiento sistémico." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (afectación de vía respiratoria alta —sinusitis crónica, costras nasales, pudiendo progresar a la clásica deformidad \"en silla de montar\"—, afectación pulmonar —hemoptisis, pudiendo indicar hemorragia alveolar—, y afectación renal —deterioro de función renal con hematuria y proteinuria, sugestivo de glomerulonefritis rápidamente progresiva—, junto con **c-ANCA/antiproteinasa 3 positivo**) es compatible con **granulomatosis con poliangeítis** (antes denominada granulomatosis de Wegener), una vasculitis sistémica asociada a ANCA. Dado el riesgo de progresión rápida hacia **fracaso renal** y **hemorragia pulmonar grave** (potencialmente mortal), se requiere **tratamiento inmunosupresor urgente** para inducir la remisión: **corticoides a dosis altas** junto con **ciclofosfamida** o **rituximab** (ambos con eficacia demostrada como terapia de inducción), sin demorar el inicio del tratamiento por la gravedad y la rapidez de progresión potencial de esta enfermedad.\n\n**TRAMPA DEL EXAMEN:** Atribuir el cuadro a un proceso infeccioso crónico y tratar solo con antibióticos ignora el patrón clínico multisistémico (vía respiratoria alta + pulmón + riñón) y la serología ANCA positiva, que en este contexto clínico son altamente sugestivos de vasculitis, no de infección. Aunque la biopsia (renal o de otro órgano afectado) puede aportar confirmación histológica, en un cuadro clínico tan compatible con afectación multiorgánica grave y progresiva, no se debe retrasar el inicio del tratamiento inmunosupresor urgente esperando una confirmación histológica exhaustiva cuando el riesgo de daño irreversible (renal, pulmonar) es alto. El manejo exclusivamente quirúrgico ignora que esta es fundamentalmente una enfermedad sistémica que requiere tratamiento inmunosupresor; la cirugía nasal, si se requiere, sería una consideración secundaria y diferida.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., cuando vea esta combinación de tres sistemas afectados a la vez —nariz/senos (con esas costras y la sinusitis crónica tan características), pulmón (hemoptisis) y riñón (deterioro de función renal con hematuria y proteinuria)—, junto con un ANCA positivo, la granulomatosis con poliangeítis tiene que estar en su lista de sospechas principales, y no es un diagnóstico para tomarse con calma. Esta enfermedad puede destruir la función renal en cuestión de días a semanas si no se trata, y la hemorragia pulmonar puede ser súbita y grave. No pierda tiempo con antibióticos pensando que es \"solo una sinusitis crónica complicada\"; inicie la inmunosupresión de inducción cuanto antes, con corticoides a dosis altas junto con ciclofosfamida o rituximab, que son sus opciones estándar. Sí, lo ideal es confirmar histológicamente cuando sea posible, pero ante un cuadro tan compatible y con riesgo de daño orgánico grave e inminente, el tratamiento no debe retrasarse esperando una biopsia perfecta.",
+    keyPoints: [
+      "Granulomatosis con poliangeítis: afectación de vía respiratoria alta (sinusitis, costras nasales) + pulmón (hemoptisis) + riñón (glomerulonefritis rápidamente progresiva) + c-ANCA/PR3 positivo.",
+      "Riesgo de progresión rápida a fracaso renal y hemorragia pulmonar grave; tratamiento inmunosupresor urgente (corticoides + ciclofosfamida o rituximab).",
+      "No retrasar el tratamiento inmunosupresor esperando confirmación histológica exhaustiva ante cuadro clínico compatible y riesgo de daño orgánico grave.",
+    ],
+  },
+  {
+    id: "mir-2026-97",
+    university: "MIR (España)",
+    examArea: "HEMATOLOGÍA",
+    topic: "HEMOFILIA A - MANEJO DEL SANGRADO AGUDO",
+    difficulty: "medium",
+    tags: ["mir", "espana", "hematologia"],
+    statement:
+      "Un niño de 8 años, con hemofilia A conocida (déficit de factor VIII), presenta dolor, tumefacción y limitación funcional de la rodilla derecha tras un golpe leve durante el juego, sugestivo de hemartrosis. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Administrar tratamiento de reposición con concentrado de factor VIII lo antes posible, ante la sospecha clínica de hemartrosis, sin demorar el tratamiento esperando confirmación por imagen, dado que el tratamiento precoz reduce el daño articular a largo plazo; evitar antiinflamatorios no esteroideos e inyecciones intramusculares." },
+      { id: "B", label: "B", text: "Manejo exclusivamente con reposo y hielo local, sin reposición de factor VIII, reservando este tratamiento únicamente para hemorragias con riesgo vital." },
+      { id: "C", label: "C", text: "Administrar ácido acetilsalicílico como analgésico de elección, dado su buen perfil de eficacia para el dolor articular en este contexto." },
+      { id: "D", label: "D", text: "Realizar artrocentesis evacuadora de entrada como primera medida terapéutica, sin necesidad de reposición del factor deficitario." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "En un paciente con **hemofilia A** conocida (déficit de **factor VIII**) que presenta un cuadro sugestivo de **hemartrosis** (dolor, tumefacción, limitación funcional de una articulación, típicamente tras un traumatismo incluso leve), la actuación es la **reposición precoz de factor VIII** mediante concentrado, **ante la sola sospecha clínica**, sin demorar el tratamiento esperando confirmación por imagen; el tratamiento precoz de los episodios de sangrado articular es clave para minimizar el daño articular acumulativo a largo plazo (artropatía hemofílica). Se deben **evitar los AINE** (por su efecto antiagregante, que puede empeorar el sangrado) y las **inyecciones intramusculares** (riesgo de hematoma en el sitio de punción) en estos pacientes.\n\n**TRAMPA DEL EXAMEN:** Reservar la reposición de factor VIII únicamente para hemorragias con riesgo vital, sin tratar los episodios de hemartrosis, ignora el daño articular progresivo que estos episodios repetidos producen a largo plazo si no se tratan precozmente cada vez que ocurren; el manejo moderno de la hemofilia prioriza el tratamiento precoz de cualquier sangrado significativo, incluida la hemartrosis. El ácido acetilsalicílico está **contraindicado** en pacientes con trastornos de la coagulación como la hemofilia, por su efecto antiagregante que añadiría un riesgo hemorrágico adicional. La artrocentesis evacuadora no es la primera medida ni sustituye a la reposición del factor deficitario, que es el tratamiento causal.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en un niño hemofílico conocido con dolor y tumefacción articular tras un golpe, incluso leve, no se ponga a esperar una ecografía o una confirmación de imagen antes de actuar; trate primero, con reposición de factor VIII, ante la sola sospecha clínica de hemartrosis. Cuanto antes reponga el factor deficitario, menos sangre se acumula dentro de la articulación, y menos daño acumulativo sufre el cartílago a largo plazo; estos episodios repetidos sin tratamiento adecuado son los que terminan produciendo una artropatía hemofílica devastadora en la vida adulta. Evite el ácido acetilsalicílico y cualquier AINE en estos pacientes, porque añaden un efecto antiagregante encima de un problema de coagulación ya existente; para el dolor, prefiera paracetamol. Y no meta agujas intramusculares ni intente evacuar la articulación por punción como primera medida; primero reponga el factor, y deje que sea el especialista en hemofilia quien valore si, además, necesita algún procedimiento adicional sobre la articulación.",
+    keyPoints: [
+      "Hemofilia A con sospecha de hemartrosis: reposición precoz de factor VIII ante la sola sospecha clínica, sin esperar confirmación por imagen.",
+      "El tratamiento precoz de cada episodio de sangrado reduce el daño articular acumulativo a largo plazo (artropatía hemofílica).",
+      "Evitar AINE/ácido acetilsalicílico (efecto antiagregante) e inyecciones intramusculares en pacientes con hemofilia.",
+    ],
+  },
+  {
+    id: "mir-2026-98",
+    university: "MIR (España)",
+    examArea: "PSIQUIATRÍA",
+    topic: "CRISIS DE PÁNICO - DIAGNÓSTICO DIFERENCIAL",
+    difficulty: "medium",
+    tags: ["mir", "espana", "psiquiatria"],
+    statement:
+      "Una mujer de 26 años acude a Urgencias por primera vez con palpitaciones, dolor torácico, disnea, mareo y sensación de muerte inminente, de inicio súbito y máxima intensidad en pocos minutos, sin antecedentes médicos conocidos. ¿Cuál es la actuación más apropiada en esta primera presentación?",
+    options: [
+      { id: "A", label: "A", text: "Realizar una evaluación adecuada para descartar causas orgánicas potencialmente graves (fundamentalmente cardíacas, con ECG y troponina si está indicado, y otras causas según la sospecha clínica) antes de atribuir el cuadro a una crisis de pánico, especialmente al tratarse de una primera presentación sin diagnóstico previo de trastorno de pánico." },
+      { id: "B", label: "B", text: "Atribuir el cuadro a una crisis de pánico de inmediato, sin ninguna evaluación orgánica, dado que la combinación de síntomas descrita es exclusiva de los trastornos de ansiedad." },
+      { id: "C", label: "C", text: "Administrar una benzodiacepina de inmediato sin ninguna evaluación previa, dado que la respuesta rápida a esta confirmaría por sí sola el diagnóstico de crisis de pánico." },
+      { id: "D", label: "D", text: "Dar de alta sin ninguna valoración, indicando a la paciente que regrese únicamente si los síntomas empeoran." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "Los síntomas descritos (palpitaciones, dolor torácico, disnea, mareo, sensación de muerte inminente, de inicio súbito) son característicos de una **crisis de pánico**, pero también pueden ser indistinguibles clínicamente de causas **orgánicas potencialmente graves** (síndrome coronario agudo, arritmias, tromboembolismo pulmonar, hipertiroidismo, entre otras). Ante una **primera presentación**, sin un diagnóstico previo establecido de trastorno de pánico, la actuación correcta es realizar una **evaluación apropiada para descartar causas orgánicas** (fundamentalmente cardíacas, con ECG y determinación de troponina si está clínicamente indicado, y otras pruebas según la sospecha clínica específica) **antes** de atribuir definitivamente el cuadro a una causa psiquiátrica. Una vez descartadas razonablemente las causas orgánicas graves, sí es apropiado orientar el diagnóstico hacia una crisis de pánico y iniciar el manejo correspondiente.\n\n**TRAMPA DEL EXAMEN:** Atribuir el cuadro a ansiedad de entrada, sin ninguna evaluación orgánica, en una primera presentación de estas características, es un error potencialmente grave que puede hacer pasar por alto una causa orgánica seria y tratable (como un síndrome coronario agudo). Usar la respuesta a una benzodiacepina como \"prueba diagnóstica\" de crisis de pánico no es válido ni seguro: muchos cuadros orgánicos también pueden mejorar sintomáticamente con sedación, sin que eso descarte la causa orgánica subyacente. Dar de alta sin ninguna valoración, ante síntomas que podrían corresponder a una emergencia cardiovascular, es igualmente inapropiado.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el pánico y el infarto pueden vestirse exactamente igual en la sala de urgencias: dolor torácico, palpitaciones, disnea, sensación de muerte inminente; los síntomas por sí solos no le permiten diferenciar con seguridad entre ambos. Por eso, en una primera presentación como esta, sin un diagnóstico previo de trastorno de pánico que le dé contexto, su obligación es hacer una evaluación orgánica razonable antes de etiquetar el cuadro como \"solo ansiedad\": un ECG, troponina si está indicada según su sospecha clínica, y cualquier otra prueba que el cuadro le sugiera. Una vez que usted ha descartado razonablemente lo grave, ahí sí puede orientar el diagnóstico hacia una crisis de pánico y tratarla en consecuencia. Lo que nunca debe hacer es usar \"le di una benzodiacepina y mejoró\" como su prueba diagnóstica; eso no descarta nada, porque la sedación puede aliviar síntomas incluso en cuadros orgánicos serios. La regla general en medicina de urgencias es: descarte primero lo que puede matar, y solo después piense en lo que \"probablemente\" es benigno.",
+    keyPoints: [
+      "Crisis de pánico vs causa orgánica: síntomas clínicamente indistinguibles; en primera presentación sin diagnóstico previo, descartar causas orgánicas graves (cardíacas especialmente) antes de atribuir a ansiedad.",
+      "La respuesta a benzodiacepinas NO es una prueba diagnóstica válida de crisis de pánico (también puede aliviar síntomas de causas orgánicas).",
+      "Una vez descartadas razonablemente las causas orgánicas graves, orientar el diagnóstico hacia crisis de pánico y manejar en consecuencia.",
+    ],
+  },
+  {
+    id: "mir-2026-99",
+    university: "MIR (España)",
+    examArea: "PEDIATRÍA",
+    topic: "FIEBRE SIN FOCO EN EL LACTANTE MENOR DE 3 MESES",
+    difficulty: "hard",
+    tags: ["mir", "espana", "pediatria"],
+    statement:
+      "Un lactante de 25 días de vida es traído a Urgencias por fiebre de 38.2°C, sin foco evidente al examen físico, con buen aspecto general y alimentándose adecuadamente. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Dado que se trata de un neonato (menor de 28 días) con fiebre sin foco, debe realizarse un estudio séptico completo (hemocultivo, urocultivo/análisis de orina, y valorar punción lumbar), ingreso hospitalario, e inicio de antibioterapia empírica, independientemente del buen aspecto clínico, por el alto riesgo de infección bacteriana grave en este grupo de edad." },
+      { id: "B", label: "B", text: "Dado el buen aspecto general del lactante y su adecuada alimentación, puede manejarse de forma ambulatoria sin ningún estudio complementario, con revisión en 24-48 horas." },
+      { id: "C", label: "C", text: "Debe iniciarse antitérmico únicamente, sin ningún estudio microbiológico, dado que la fiebre sin foco en el lactante siempre corresponde a un proceso viral autolimitado." },
+      { id: "D", label: "D", text: "El manejo en el neonato con fiebre sin foco es idéntico al del lactante mayor de 3 meses con buen aspecto, permitiendo un abordaje expectante sin pruebas complementarias inmediatas." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "La **fiebre sin foco en el neonato (menor de 28 días)**, incluso con **buen aspecto clínico**, se asocia a un riesgo **significativamente elevado** de **infección bacteriana grave** (bacteriemia, infección del tracto urinario, meningitis), ya que el aspecto clínico en este grupo de edad es un predictor mucho menos fiable que en lactantes mayores (el sistema inmune neonatal tiene una capacidad limitada para generar los signos clínicos habituales de gravedad). Por ello, el manejo estándar en el neonato febril, **independientemente del buen aspecto**, incluye un **estudio séptico completo** (hemocultivo, análisis de orina/urocultivo, y habitualmente **punción lumbar** para análisis de LCR), **ingreso hospitalario**, e inicio de **antibioterapia empírica** mientras se completan los resultados, dado el riesgo que no puede asumirse de forma ambulatoria en este grupo de edad tan vulnerable.\n\n**TRAMPA DEL EXAMEN:** Confiar en el buen aspecto clínico para adoptar un manejo ambulatorio sin estudio en un neonato (<28 días) es un error potencialmente grave: a diferencia de lactantes mayores (donde criterios de bajo riesgo bien validados sí permiten, en determinados protocolos, un manejo más conservador en pacientes seleccionados de buen aspecto), en el neonato el umbral de actuación es mucho más bajo y agresivo, precisamente por la limitada fiabilidad del aspecto clínico y las graves consecuencias potenciales de una infección no tratada a tiempo (sepsis neonatal, meningitis). Asumir que toda fiebre en el lactante es de causa viral benigna ignora el riesgo real de infección bacteriana grave en este grupo etario específico. Aplicar el mismo umbral de actuación que en el lactante mayor de 3 meses no reconoce las diferencias de riesgo entre ambos grupos de edad.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., con un neonato de menos de 28 días y fiebre, olvídese de que el \"buen aspecto\" le tranquilice; en este grupo de edad tan pequeño, el aspecto clínico es un mal indicador de gravedad, porque el sistema inmune del recién nacido no siempre genera los signos que usted esperaría ver en un niño mayor o en un adulto con una infección seria. La regla en este grupo etario es de \"todo o nada\": estudio séptico completo (sangre, orina, y sí, también líquido cefalorraquídeo mediante punción lumbar), ingreso, y antibiótico empírico mientras esperan los resultados, sin importar lo bien que luzca el bebé en este momento. Esta agresividad diagnóstica y terapéutica que puede parecerle excesiva para un examen que a simple vista está bien, se explica porque las consecuencias de perderse una sepsis neonatal o una meningitis bacteriana en un recién nacido son devastadoras, y el margen de seguridad para \"esperar y ver\" en este grupo de edad es prácticamente inexistente.",
+    keyPoints: [
+      "Fiebre sin foco en el neonato (<28 días): riesgo elevado de infección bacteriana grave, INDEPENDIENTEMENTE del buen aspecto clínico (predictor poco fiable en este grupo de edad).",
+      "Manejo: estudio séptico completo (hemocultivo, urocultivo/orina, valorar punción lumbar) + ingreso + antibioterapia empírica.",
+      "El umbral de actuación en el neonato es mucho más bajo/agresivo que en el lactante mayor de 3 meses con buen aspecto.",
+    ],
+  },
+  {
+    id: "mir-2026-100",
+    university: "MIR (España)",
+    examArea: "APARATO DIGESTIVO",
+    topic: "HEMORRAGIA DIGESTIVA BAJA (DIVERTICULAR)",
+    difficulty: "medium",
+    tags: ["mir", "espana", "digestivo"],
+    statement:
+      "Un varón de 72 años, con diverticulosis colónica conocida, presenta rectorragia indolora, de sangre roja brillante mezclada con las heces, de varias horas de evolución, sin dolor abdominal significativo. Se encuentra hemodinámicamente estable tras la reposición inicial de volumen. ¿Cuál es la actuación más apropiada?",
+    options: [
+      { id: "A", label: "A", text: "Tras la estabilización hemodinámica inicial, realizar colonoscopia (una vez sea posible una preparación intestinal adecuada) como prueba diagnóstica y potencialmente terapéutica de elección; en caso de sangrado activo masivo que no permita la colonoscopia, considerar angio-TC o angiografía con posible embolización." },
+      { id: "B", label: "B", text: "Realizar endoscopia digestiva alta como primera prueba diagnóstica, dado que la mayoría de los sangrados digestivos, independientemente de sus características clínicas, se originan en el tracto digestivo superior." },
+      { id: "C", label: "C", text: "Manejo exclusivamente expectante sin ningún estudio diagnóstico, dado que la hemorragia digestiva baja diverticular siempre requiere cirugía de entrada." },
+      { id: "D", label: "D", text: "Debe realizarse colectomía urgente de entrada, sin intentar antes ninguna prueba diagnóstica ni tratamiento endoscópico o angiográfico." },
+    ],
+    correctOptionId: "A",
+    explanation:
+      "El cuadro (rectorragia indolora de sangre roja brillante, en un paciente con diverticulosis colónica conocida, la **causa más frecuente de hemorragia digestiva baja aguda** en el adulto) es compatible con una **hemorragia digestiva baja de origen diverticular**. Tras la **estabilización hemodinámica inicial** (fluidoterapia, transfusión si es necesaria), la prueba de elección es la **colonoscopia**, que permite tanto el **diagnóstico** (localizar el origen del sangrado) como, en muchos casos, el **tratamiento endoscópico** (clips, inyección, coagulación) del punto sangrante, una vez que es posible realizar una preparación intestinal adecuada que permita una visualización correcta. En los casos de **sangrado activo muy profuso** que no permite completar una preparación intestinal ni una colonoscopia útil, se recurre a la **angio-TC** (para localizar el punto de sangrado activo) o a la **angiografía**, que además permite la **embolización terapéutica** del vaso sangrante.\n\n**TRAMPA DEL EXAMEN:** Asumir que toda hemorragia digestiva se origina en el tracto superior e iniciar el estudio con endoscopia digestiva alta, sin considerar las características clínicas que orientan claramente a un origen bajo (rectorragia con sangre roja brillante, sin melenas ni hematemesis, en un paciente con diverticulosis conocida), retrasa el diagnóstico correcto. Plantear la cirugía (colectomía) como primera medida, sin haber intentado antes las opciones diagnósticas y terapéuticas menos invasivas (colonoscopia, angiografía con embolización), es excesivamente agresivo; la cirugía se reserva para los casos de sangrado masivo persistente y no controlable con estas medidas, o cuando no se puede localizar ni controlar el origen del sangrado por otros medios.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ante una rectorragia con sangre roja brillante, sin dolor significativo, en un paciente con diverticulosis conocida, la causa diverticular es su primera sospecha, y la mayoría de estos sangrados, afortunadamente, ceden espontáneamente o son controlables sin necesidad de cirugía. Una vez que ha estabilizado al paciente hemodinámicamente, su siguiente paso es la colonoscopia, que le sirve para ver de dónde viene el sangrado y, muchas veces, para tratarlo ahí mismo con clips o coagulación, evitando pasos más invasivos. Si el sangrado es tan profuso que no le da tiempo ni condiciones para preparar bien el colon y hacer una colonoscopia útil, tiene alternativas: la angio-TC le ayuda a localizar el punto de sangrado activo, y la angiografía le permite además embolizar el vaso responsable. Reserve la cirugía para cuando todas estas opciones fallen o el sangrado sea tan masivo y persistente que no dé margen para nada más; no es su primera carta, sino la última cuando las demás no han funcionado.",
+    keyPoints: [
+      "Hemorragia digestiva baja diverticular: causa más frecuente de rectorragia aguda en el adulto; rectorragia indolora con sangre roja brillante.",
+      "Tras estabilización hemodinámica: colonoscopia (diagnóstica y terapéutica) de elección; angio-TC/angiografía con embolización si el sangrado masivo no permite colonoscopia.",
+      "Cirugía (colectomía): reservada para sangrado masivo persistente no controlable con las medidas endoscópicas/angiográficas.",
+    ],
+  },
+];
