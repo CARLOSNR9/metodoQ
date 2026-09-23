@@ -9,6 +9,7 @@ import { useUserRole } from "@/hooks/use-user-role";
 import { logoutUser } from "@/lib/auth";
 import { getDoctorGreetingName, getUserGreetingName } from "@/lib/plans/subscription-display";
 import { hasProFeatures } from "@/lib/plans/access";
+import { hasMirAccess } from "@/lib/mir/access";
 import { PomodoroProvider } from "@/contexts/pomodoro-context";
 import { AchievementNotification } from "./achievement-notification";
 import { PomodoroHeaderChip } from "./pomodoro-header-chip";
@@ -44,10 +45,10 @@ const navigationItems = [
   { label: "Simulacros", href: "/dashboard/convocatorias", icon: ClipboardCheck, proOnly: true },
   { label: "Mis clases", href: "/dashboard/clases", icon: CalendarDays, proOnly: true },
   { label: "Retos Dr. Q", href: "/dashboard/evaluaciones", icon: Stethoscope, proOnly: true },
-  { label: "Simulacro MIR", href: "/dashboard/mir", icon: BookOpenCheck },
+  { label: "Simulacro MIR", href: "/dashboard/mir", icon: BookOpenCheck, mirRelevant: true },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
-  { label: "Historial", href: "/dashboard/historial", icon: History },
-  { label: "Perfil", href: "/dashboard/perfil", icon: User },
+  { label: "Historial", href: "/dashboard/historial", icon: History, mirRelevant: true },
+  { label: "Perfil", href: "/dashboard/perfil", icon: User, mirRelevant: true },
 ] as const;
 
 export function DashboardShell({ children }: DashboardShellProps) {
@@ -61,6 +62,8 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const greetingName = getUserGreetingName(profile);
   const doctorGreetingName = getDoctorGreetingName(profile);
   const isProUser = hasProFeatures(profile?.plan);
+  const isMirOnlyUser =
+    (profile?.plan ?? "FREE") === "FREE" && hasMirAccess(profile?.mirAccess);
 
   if (isCheckingAuth) {
     return (
@@ -94,6 +97,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
         <nav className="flex gap-2 overflow-x-auto pb-2 md:flex-col md:overflow-visible">
           {navigationItems
             .filter((item) => !("proOnly" in item && item.proOnly) || isProUser)
+            .filter((item) => !isMirOnlyUser || ("mirRelevant" in item && item.mirRelevant))
             .map((item) => {
             const isActive =
               pathname === item.href ||
