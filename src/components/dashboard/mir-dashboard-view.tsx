@@ -7,11 +7,22 @@ import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/tra
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
+import { MirMascot } from "./mir-mascot";
 
 type MirDashboardViewProps = {
   userId: string;
   greetingName: string;
 };
+
+function getMascotMessage(name: string, streak: MirStreakInfo, hasAnyAttempt: boolean): string {
+  if (streak.count === 0 && !hasAnyAttempt) {
+    return `¡Hola, ${name}! Tu aventura MIR empieza hoy. Haz tu primera sesión y comienza tu racha de estudio.`;
+  }
+  if (streak.count === 0 && hasAnyAttempt) {
+    return `¡Hola, ${name}! Tu racha se enfrió. Retoma hoy el simulacro y vuelve a encenderla.`;
+  }
+  return `¡Vas muy bien, ${name}! Llevas ${streak.count} ${streak.count === 1 ? "día" : "días"} de racha. No la rompas hoy.`;
+}
 
 const CURIOSITIES = [
   {
@@ -47,6 +58,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
 
   const [streak, setStreak] = useState<MirStreakInfo>({ count: 0, lastActiveDate: null, activeDates: [] });
   const [attemptsByEdition, setAttemptsByEdition] = useState<Record<string, MirExamAttempt | null>>({});
+  const hasAnyAttempt = Object.values(attemptsByEdition).some((attempt) => attempt !== null);
 
   useEffect(() => {
     let cancelled = false;
@@ -95,8 +107,14 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
             </p>
             <p className="mt-1 text-xs text-slate-400">Sábado 23 de enero de 2027</p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-            <MirStreakStrip streakCount={streak.count} activeDates={new Set(streak.activeDates)} />
+          <div className="flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <div className="min-w-0">
+              <MirStreakStrip streakCount={streak.count} activeDates={new Set(streak.activeDates)} />
+              <p className="mt-3 text-xs font-semibold text-slate-400">
+                {streak.count === 0 ? "¡Empieza hoy tu primera sesión!" : "No rompas la racha hoy."}
+              </p>
+            </div>
+            <MirMascot pose="wave" className="hidden h-20 w-20 shrink-0 sm:block" />
           </div>
         </div>
       </header>
@@ -143,6 +161,15 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                 </article>
               );
             })}
+            <div className="flex items-end gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+              <MirMascot pose="read" className="h-16 w-16 shrink-0" />
+              <div className="rounded-2xl rounded-bl-none border border-white/10 bg-white/[0.06] px-4 py-3">
+                <p className="text-xs font-black text-mq-premium-gold">¡Hola, {greetingName}!</p>
+                <p className="mt-1 text-sm leading-relaxed text-slate-200">
+                  {getMascotMessage(greetingName, streak, hasAnyAttempt)}
+                </p>
+              </div>
+            </div>
           </div>
         ) : (
           <div className="rounded-[2rem] border border-dashed border-white/20 bg-white/[0.02] p-10 text-center">
