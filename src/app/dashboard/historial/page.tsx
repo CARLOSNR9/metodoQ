@@ -2,15 +2,25 @@
 
 import Link from "next/link";
 import { AttemptHistory } from "@/components/demo/attempt-history";
+import { MirHistorialView } from "@/components/dashboard/mir-historial-view";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
+import { useUserProfile } from "@/hooks/use-user-profile";
+import { hasMirAccess } from "@/lib/mir/access";
 
 export default function HistorialPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
+  const { profile, loading: isLoadingProfile } = useUserProfile();
+  const isMirOnlyUser =
+    (profile?.plan ?? "FREE") === "FREE" && hasMirAccess(profile?.mirAccess);
 
-  if (isCheckingAuth || !user) {
+  if (isCheckingAuth || isLoadingProfile || !user) {
     return (
       <section className="h-48 animate-pulse rounded-2xl border border-slate-200 bg-white/[0.04]" />
     );
+  }
+
+  if (isMirOnlyUser) {
+    return <MirHistorialView userId={user.uid} />;
   }
 
   return (

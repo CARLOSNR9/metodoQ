@@ -11,6 +11,8 @@ type EmailPreferencesCardProps = {
   emailOptIn: boolean;
   browserNudgeOptIn?: boolean;
   isUccMiPro?: boolean;
+  /** Tema oscuro/dorado del módulo MIR, en vez del tema claro de Método Q. */
+  dark?: boolean;
 };
 
 export function EmailPreferencesCard({
@@ -18,6 +20,7 @@ export function EmailPreferencesCard({
   emailOptIn,
   browserNudgeOptIn = false,
   isUccMiPro = false,
+  dark = false,
 }: EmailPreferencesCardProps) {
   const [optIn, setOptIn] = useState(emailOptIn);
   const [browserOptIn, setBrowserOptIn] = useState(browserNudgeOptIn);
@@ -75,9 +78,17 @@ export function EmailPreferencesCard({
   };
 
   return (
-    <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
-      <h2 className="text-lg font-semibold text-slate-900">Recordatorios de estudio</h2>
-      <p className="mt-2 text-sm text-slate-500">
+    <section
+      className={
+        dark
+          ? "rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6"
+          : "rounded-2xl border border-slate-200 bg-white p-5 sm:p-6"
+      }
+    >
+      <h2 className={`text-lg font-semibold ${dark ? "text-white" : "text-slate-900"}`}>
+        Recordatorios de estudio
+      </h2>
+      <p className={`mt-2 text-sm ${dark ? "text-slate-400" : "text-slate-500"}`}>
         Avisos de vencimiento de plan, racha de estudio
         {isUccMiPro
           ? ", misión diaria UCC y simulacros programados (máximo uno de cada tipo por día)."
@@ -90,9 +101,11 @@ export function EmailPreferencesCard({
           checked={optIn}
           disabled={saving}
           onChange={() => void handleEmailToggle()}
-          className="h-4 w-4 rounded border-slate-200 accent-mq-accent"
+          className={`h-4 w-4 rounded ${dark ? "border-white/20 accent-mq-premium-gold" : "border-slate-200 accent-mq-accent"}`}
         />
-        <span className="text-sm text-foreground">Recibir recordatorios por email</span>
+        <span className={`text-sm ${dark ? "text-slate-200" : "text-foreground"}`}>
+          Recibir recordatorios por email
+        </span>
       </label>
 
       {isUccMiPro && (
@@ -102,16 +115,18 @@ export function EmailPreferencesCard({
             checked={browserOptIn}
             disabled={saving}
             onChange={() => void handleBrowserToggle()}
-            className="h-4 w-4 rounded border-slate-200 accent-mq-accent"
+            className={`h-4 w-4 rounded ${dark ? "border-white/20 accent-mq-premium-gold" : "border-slate-200 accent-mq-accent"}`}
           />
-          <span className="flex items-center gap-2 text-sm text-foreground">
-            <Bell size={14} className="text-mq-accent" />
+          <span className={`flex items-center gap-2 text-sm ${dark ? "text-slate-200" : "text-foreground"}`}>
+            <Bell size={14} className={dark ? "text-mq-premium-gold" : "text-mq-accent"} />
             Avisos del navegador al abrir el panel (misión y simulacro)
           </span>
         </label>
       )}
 
-      {message ? <p className="mt-2 text-xs text-mq-accent">{message}</p> : null}
+      {message ? (
+        <p className={`mt-2 text-xs ${dark ? "text-mq-premium-gold" : "text-mq-accent"}`}>{message}</p>
+      ) : null}
     </section>
   );
 }

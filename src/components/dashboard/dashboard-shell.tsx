@@ -64,7 +64,10 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const isProUser = hasProFeatures(profile?.plan);
   const isMirOnlyUser =
     (profile?.plan ?? "FREE") === "FREE" && hasMirAccess(profile?.mirAccess);
-  const isMirRoute = pathname.startsWith("/dashboard/mir");
+  // El tema MIR se mantiene en todo el panel de un usuario MIR-only (para que
+  // Historial/Perfil no "salten" de vuelta al tema claro de Método Q), y
+  // también en /dashboard/mir cuando lo visita un admin u otro usuario.
+  const isMirRoute = isMirOnlyUser || pathname.startsWith("/dashboard/mir");
 
   if (isCheckingAuth) {
     return (

@@ -14,6 +14,7 @@ import { getPlanDisplayName } from "@/lib/plans/config";
 import { getDoctorGreetingName, getUserGreetingName } from "@/lib/plans/subscription-display";
 import type { UserGender } from "@/lib/plans/subscription-display";
 import { hasPaidPlan } from "@/lib/plans/access";
+import { hasMirAccess } from "@/lib/mir/access";
 import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import { isUccPastoMedicinaInternaProUser } from "@/lib/diagnostic/ucc-pasto-track";
 
@@ -37,6 +38,7 @@ export default function PerfilPage() {
   const doctorGreetingName = getDoctorGreetingName({ ...profile, gender: currentGender });
   const showSubscription = hasPaidPlan(profile?.plan);
   const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
+  const isMirOnlyUser = (profile?.plan ?? "FREE") === "FREE" && hasMirAccess(profile?.mirAccess);
 
   const handleGenderChange = async (next: UserGender) => {
     if (next === currentGender || savingGender) return;
@@ -53,27 +55,41 @@ export default function PerfilPage() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
-        <h1 className="text-2xl font-semibold text-slate-900">
+      <section
+        className={
+          isMirOnlyUser
+            ? "rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6"
+            : "rounded-2xl border border-slate-200 bg-white p-5 sm:p-6"
+        }
+      >
+        <h1 className={`text-2xl font-semibold ${isMirOnlyUser ? "text-white" : "text-slate-900"}`}>
           Perfil{greetingName !== "Doc" ? ` · ${greetingName}` : ""}
         </h1>
         <dl className="mt-4 space-y-3 text-sm">
           <div>
-            <dt className="text-slate-500">Email</dt>
-            <dd className="font-medium text-slate-900">{profile?.email ?? user.email}</dd>
+            <dt className={isMirOnlyUser ? "text-slate-400" : "text-slate-500"}>Email</dt>
+            <dd className={`font-medium ${isMirOnlyUser ? "text-white" : "text-slate-900"}`}>
+              {profile?.email ?? user.email}
+            </dd>
           </div>
           <div>
-            <dt className="text-slate-500">Plan actual</dt>
-            <dd className="font-medium text-slate-900">{getPlanDisplayName(profile?.plan)}</dd>
+            <dt className={isMirOnlyUser ? "text-slate-400" : "text-slate-500"}>
+              {isMirOnlyUser ? "Acceso" : "Plan actual"}
+            </dt>
+            <dd className={`font-medium ${isMirOnlyUser ? "text-mq-premium-gold" : "text-slate-900"}`}>
+              {isMirOnlyUser ? "Módulo MIR" : getPlanDisplayName(profile?.plan)}
+            </dd>
           </div>
           {profile?.goalUniversity ? (
             <div>
-              <dt className="text-slate-500">Universidad objetivo</dt>
-              <dd className="font-medium text-slate-900">{profile.goalUniversity}</dd>
+              <dt className={isMirOnlyUser ? "text-slate-400" : "text-slate-500"}>Universidad objetivo</dt>
+              <dd className={`font-medium ${isMirOnlyUser ? "text-white" : "text-slate-900"}`}>
+                {profile.goalUniversity}
+              </dd>
             </div>
           ) : null}
           <div>
-            <dt className="text-slate-500">Tratamiento en Pomodoro</dt>
+            <dt className={isMirOnlyUser ? "text-slate-400" : "text-slate-500"}>Tratamiento en Pomodoro</dt>
             <dd className="mt-2 space-y-2">
               <div className="flex flex-wrap gap-2">
                 {(
@@ -91,8 +107,12 @@ export default function PerfilPage() {
                       onClick={() => handleGenderChange(option.value)}
                       className={`rounded-xl border px-4 py-2 text-sm font-semibold transition disabled:opacity-50 ${
                         isActive
-                          ? "border-mq-accent/40 bg-mq-accent/15 text-mq-accent"
-                          : "border-slate-200 bg-white/[0.03] text-slate-500 hover:border-slate-300 hover:text-slate-900"
+                          ? isMirOnlyUser
+                            ? "border-mq-premium-gold/40 bg-mq-premium-gold/15 text-mq-premium-gold"
+                            : "border-mq-accent/40 bg-mq-accent/15 text-mq-accent"
+                          : isMirOnlyUser
+                            ? "border-white/15 bg-white/[0.03] text-slate-400 hover:border-white/30 hover:text-white"
+                            : "border-slate-200 bg-white/[0.03] text-slate-500 hover:border-slate-300 hover:text-slate-900"
                       }`}
                     >
                       {option.label}
@@ -100,7 +120,7 @@ export default function PerfilPage() {
                   );
                 })}
               </div>
-              <p className="text-xs text-slate-500">
+              <p className={`text-xs ${isMirOnlyUser ? "text-slate-500" : "text-slate-500"}`}>
                 {doctorGreetingName !== "Doc"
                   ? `Te saludaremos como «${doctorGreetingName}» en los descansos del Pomodoro.`
                   : "Agrega tu nombre para personalizar los mensajes del Pomodoro."}
@@ -127,6 +147,7 @@ export default function PerfilPage() {
         emailOptIn={emailOptIn}
         browserNudgeOptIn={browserNudgeOptIn}
         isUccMiPro={isUccMiPro}
+        dark={isMirOnlyUser}
       />
     </div>
   );
