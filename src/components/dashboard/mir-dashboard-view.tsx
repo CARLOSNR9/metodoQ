@@ -8,7 +8,6 @@ import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak"
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
-import { MirMascot } from "./mir-mascot";
 
 type MirDashboardViewProps = {
   userId: string;
@@ -115,7 +114,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                 {streak.count === 0 ? "¡Empieza hoy tu primera sesión!" : "No rompas la racha hoy."}
               </p>
             </div>
-            <MirMascot className="hidden h-20 w-20 shrink-0 sm:block" />
+            <MirDoctorMascot className="hidden h-24 w-[4.5rem] shrink-0 sm:block" />
           </div>
         </div>
       </header>
