@@ -2,13 +2,24 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Building2, ClipboardList, Dumbbell, Globe2, Layers, MapPin, Stethoscope, Timer } from "lucide-react";
+import {
+  Building2,
+  ClipboardList,
+  Dumbbell,
+  Globe2,
+  Layers,
+  Map as MapIcon,
+  MapPin,
+  Stethoscope,
+  Timer,
+} from "lucide-react";
 import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/training/mir-convocatoria";
 import { getDueMirReviewIds, getMirReviewDeck } from "@/lib/training/mir-review";
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
+import { MirMasteryCard } from "./mir-mastery-map";
 
 type MirDashboardViewProps = {
   userId: string;
@@ -58,7 +69,8 @@ const CURIOSITIES = [
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * datos curiosos y accesos a práctica, repaso de errores y simulacro. Tema oscuro/dorado, deliberadamente distinto del resto
+ * datos curiosos, accesos a práctica, repaso de errores y simulacro, y el
+ * mapa de dominio por especialidad. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -238,6 +250,16 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           </div>
         )}
       </section>
+
+      {hasContent ? (
+        <section>
+          <div className="mb-3 flex items-center gap-2">
+            <MapIcon className="h-4 w-4 text-mq-premium-gold" />
+            <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu dominio por especialidad</h2>
+          </div>
+          <MirMasteryCard userId={userId} />
+        </section>
+      ) : null}
     </div>
   );
 }

@@ -19,6 +19,7 @@ import {
   selectMirExamQuestions,
   type MirExamAttempt,
 } from "@/lib/training/mir-convocatoria";
+import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers } from "@/lib/training/mir-review";
 import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -50,8 +51,9 @@ function formatClock(totalSeconds: number): string {
  * Simulacro completo del módulo MIR: cronometrado, en "modo examen" (sin
  * feedback instantáneo), navegable libremente entre preguntas hasta
  * entregar. Guarda el intento en la cuenta del usuario, alimenta la racha
- * MIR y manda las falladas al repaso de errores (ver mir-convocatoria.ts,
- * mir-streak.ts y mir-review.ts en src/lib/training).
+ * MIR, suma al mapa de dominio y manda las falladas al repaso de errores
+ * (ver mir-convocatoria.ts, mir-streak.ts, mir-mastery.ts y mir-review.ts
+ * en src/lib/training).
  */
 export function MirSimulacroView({ userId }: { userId: string }) {
   const [stage, setStage] = useState<Stage>("intro");
@@ -116,22 +118,25 @@ export function MirSimulacroView({ userId }: { userId: string }) {
       answersByQuestionId: answers,
     };
 
+    const outcomes = questions
+      .filter((question) => answers[question.id])
+      .map((question) => ({
+        questionId: question.id,
+        correct: answers[question.id] === question.correctOptionId,
+      }));
+
+    // Antes de guardar el intento: si aún no hay mapa de dominio, se arranca
+    // desde los simulacros guardados y este contaría dos veces.
+    try {
+      await withTimeout(recordMirSpecialtyStats(userId, outcomes), SAVE_TIMEOUT_MS);
+    } catch (error) {
+      console.error("No se pudo actualizar el mapa de dominio MIR.", error);
+    }
+
     try {
       await withTimeout(saveMirAttempt(userId, result), SAVE_TIMEOUT_MS);
       await withTimeout(registerMirTrainingDay(userId), SAVE_TIMEOUT_MS);
-      await withTimeout(
-        recordMirAnswers(
-          userId,
-          questions
-            .filter((question) => answers[question.id])
-            .map((question) => ({
-              questionId: question.id,
-              correct: answers[question.id] === question.correctOptionId,
-            })),
-          "exam",
-        ),
-        SAVE_TIMEOUT_MS,
-      );
+      await withTimeout(recordMirAnswers(userId, outcomes, "exam"), SAVE_TIMEOUT_MS);
     } catch (error) {
       console.error("No se pudo guardar el intento del simulacro MIR.", error);
     }

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Loader2, RotateCcw, XCircle } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
+import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers, type MirAnswerSource } from "@/lib/training/mir-review";
 import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
@@ -45,8 +46,8 @@ function getSummaryMessage(correct: number, total: number, source: MirAnswerSour
 /**
  * Sesión corta de preguntas MIR con corrección inmediata: al elegir una
  * opción se muestra si es correcta, la explicación y los puntos clave. Al
- * terminar guarda las respuestas en el repaso de errores y cuenta el día
- * para la racha MIR.
+ * terminar guarda las respuestas en el repaso de errores y en el mapa de
+ * dominio, y cuenta el día para la racha MIR.
  */
 export function MirPracticeSession({
   userId,
@@ -77,11 +78,16 @@ export function MirPracticeSession({
         questionId: question.id,
         correct: answers[question.id] === question.correctOptionId,
       }));
-    try {
-      await withTimeout(recordMirAnswers(userId, outcomes, source), SAVE_TIMEOUT_MS);
-      await withTimeout(registerMirTrainingDay(userId), SAVE_TIMEOUT_MS);
-    } catch (error) {
-      console.error("No se pudo guardar la sesión de práctica MIR.", error);
+    // Escrituras independientes: que falle una no impide las demás.
+    const results = await Promise.allSettled([
+      withTimeout(recordMirAnswers(userId, outcomes, source), SAVE_TIMEOUT_MS),
+      withTimeout(recordMirSpecialtyStats(userId, outcomes), SAVE_TIMEOUT_MS),
+      withTimeout(registerMirTrainingDay(userId), SAVE_TIMEOUT_MS),
+    ]);
+    for (const result of results) {
+      if (result.status === "rejected") {
+        console.error("No se pudo guardar la sesión de práctica MIR.", result.reason);
+      }
     }
     setIsSaving(false);
     setIsFinished(true);
