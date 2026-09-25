@@ -119,7 +119,12 @@ export async function recordMirSpecialtyStats(
     update = merged;
   }
 
-  await setDoc(userRef, { mirSpecialtyStats: update }, { merge: true });
+  await setDoc(
+    userRef,
+    // mirTotalAnswered cuenta cada respuesta una vez (las mixtas suman en varias especialidades).
+    { mirSpecialtyStats: update, mirTotalAnswered: increment(outcomes.length) },
+    { merge: true },
+  );
 }
 
 export function getMasteryLevel(answered: number, accuracy: number | null): MirMasteryLevel {
