@@ -30,6 +30,7 @@ import {
   type MirDailyChallenge,
 } from "@/lib/training/mir-daily-challenge";
 import { getDueMirReviewIds, getMirReviewDeck } from "@/lib/training/mir-review";
+import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
@@ -315,7 +316,9 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                           </span>
                         </span>
                         <span className="shrink-0 text-xs font-black text-mq-premium-gold">
-                          {lastAttempt ? `${lastAttempt.scorePercentage}%` : "Hacer"}
+                          {lastAttempt
+                            ? `${formatMirNet(getMirNet(lastAttempt.correctAnswers, lastAttempt.wrongAnswers))} netas`
+                            : "Hacer"}
                         </span>
                       </Link>
                     </li>

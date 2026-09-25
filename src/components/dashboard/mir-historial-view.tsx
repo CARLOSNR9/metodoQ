@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, Flame, Globe2, XCircle } from "lucide-react";
 import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/training/mir-convocatoria";
+import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
+import { MirScoreTrend } from "./mir-score";
 
 function formatAttemptDate(iso: string): string {
   try {
@@ -65,7 +67,7 @@ export function MirHistorialView({ userId }: { userId: string }) {
             </p>
             <h1 className="mt-1 text-2xl font-black text-white">Historial MIR</h1>
             <p className="mt-2 text-sm text-slate-300">
-              Tus intentos del simulacro cronometrado MIR.
+              Tus simulacros MIR con la nota estimada según la puntuación real del examen.
             </p>
           </div>
           <Link
@@ -92,6 +94,8 @@ export function MirHistorialView({ userId }: { userId: string }) {
           </div>
         </section>
       ) : null}
+
+      <MirScoreTrend userId={userId} />
 
       {isLoading ? (
         <div className="grid gap-3 sm:grid-cols-2">
@@ -122,9 +126,10 @@ export function MirHistorialView({ userId }: { userId: string }) {
                 {editionLabel}
               </p>
               <p className="mt-2 text-3xl font-black text-white">
-                {attempt.scorePercentage}
-                <span className="text-base font-bold text-slate-400">%</span>
+                {formatMirNet(getMirNet(attempt.correctAnswers, attempt.wrongAnswers))}
+                <span className="text-base font-bold text-slate-400"> netas</span>
               </p>
+              <p className="text-xs text-slate-400">{attempt.scorePercentage}% de aciertos</p>
               <div className="mt-3 flex items-center gap-4 text-sm">
                 <span className="inline-flex items-center gap-1.5 text-emerald-400">
                   <CheckCircle2 className="h-4 w-4" />
