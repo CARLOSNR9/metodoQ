@@ -103,9 +103,9 @@ export function MirDemoView() {
         </p>
         <h1 className="mt-2 text-xl font-black text-white">Así fue tu demo</h1>
         <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-slate-300">
-          Esto fue apenas una muestra de {totalQuestions} preguntas. El banco completo tiene 100
-          preguntas de examen MIR con explicaciones detalladas por cada una, simulacros
-          cronometrados y seguimiento de tu progreso por área.
+          Esto fue apenas una muestra de {totalQuestions} preguntas. El banco completo tiene{" "}
+          {MIR_QUESTIONS.length} preguntas de examen MIR con explicaciones detalladas por cada una,
+          simulacros cronometrados y seguimiento de tu progreso por área.
         </p>
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a
