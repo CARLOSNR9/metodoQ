@@ -17,6 +17,7 @@ import {
   Stethoscope,
   Target,
   Timer,
+  Trophy,
 } from "lucide-react";
 import {
   MIR_EXAM_EDITIONS,
@@ -34,6 +35,7 @@ import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
+import { MirAchievementsCard } from "./mir-achievements";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
 import { MirPomodoroCard } from "./mir-pomodoro-card";
@@ -114,7 +116,7 @@ const CURIOSITIES = [
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
  * plan de hoy con Pomodoro, reto del día con la doctora, accesos a práctica, repaso de
- * errores, tarjetas de repaso y simulacro, mapa de dominio por especialidad y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
+ * errores, tarjetas de repaso y simulacro, mapa de dominio por especialidad, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -344,6 +346,16 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
             <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu dominio por especialidad</h2>
           </div>
           <MirMasteryCard userId={userId} />
+        </section>
+      ) : null}
+
+      {hasContent ? (
+        <section>
+          <div className="mb-3 flex items-center gap-2">
+            <Trophy className="h-4 w-4 text-mq-premium-gold" />
+            <h2 className="text-sm font-black uppercase tracking-wide text-white">Logros de la doctora</h2>
+          </div>
+          <MirAchievementsCard userId={userId} />
         </section>
       ) : null}
 
