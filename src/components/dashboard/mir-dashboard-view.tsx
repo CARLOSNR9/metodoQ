@@ -7,6 +7,7 @@ import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/tra
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
+import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMascot } from "./mir-mascot";
 
 type MirDashboardViewProps = {
@@ -114,7 +115,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                 {streak.count === 0 ? "¡Empieza hoy tu primera sesión!" : "No rompas la racha hoy."}
               </p>
             </div>
-            <MirMascot pose="wave" className="hidden h-20 w-20 shrink-0 sm:block" />
+            <MirMascot className="hidden h-20 w-20 shrink-0 sm:block" />
           </div>
         </div>
       </header>
@@ -162,7 +163,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
               );
             })}
             <div className="flex items-end gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-              <MirMascot pose="read" className="h-16 w-16 shrink-0" />
+              <MirDoctorMascot className="h-32 w-24 shrink-0" />
               <div className="rounded-2xl rounded-bl-none border border-white/10 bg-white/[0.06] px-4 py-3">
                 <p className="text-xs font-black text-mq-premium-gold">¡Hola, {greetingName}!</p>
                 <p className="mt-1 text-sm leading-relaxed text-slate-200">
