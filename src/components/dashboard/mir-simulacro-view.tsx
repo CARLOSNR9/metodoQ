@@ -26,6 +26,8 @@ import { recordMirAnswers } from "@/lib/training/mir-review";
 import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { renderWithBold } from "./mir-rich-text";
+import { MirScoreBreakdown } from "./mir-score";
+import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
 
 type Stage = "intro" | "exam" | "results";
 type ReviewFilter = "wrong" | "blank" | "correct" | "all";
@@ -236,17 +238,20 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
               <p className="text-2xl font-black text-white">
-                {isLoadingPrevious ? "—" : previousAttempt ? `${previousAttempt.scorePercentage}%` : "—"}
+                {isLoadingPrevious || !previousAttempt
+                  ? "—"
+                  : formatMirNet(getMirNet(previousAttempt.correctAnswers, previousAttempt.wrongAnswers))}
               </p>
-              <p className="text-[11px] font-semibold text-slate-400">último intento</p>
+              <p className="text-[11px] font-semibold text-slate-400">netas en tu último intento</p>
             </div>
           </div>
 
           <div className="mt-6 flex items-start gap-3 rounded-xl border border-mq-premium-gold/20 bg-mq-premium-gold/[0.06] p-4">
             <HelpCircle className="mt-0.5 h-4 w-4 shrink-0 text-mq-premium-gold" />
             <p className="text-xs leading-relaxed text-slate-300">
-              Modo examen: no verás si acertaste hasta entregar. Al terminar (o si se acaba el
-              tiempo) verás tu puntaje y la revisión completa, pregunta por pregunta.
+              Modo examen: no verás si acertaste hasta entregar. Como en el MIR real, cada error
+              resta un tercio de acierto y las preguntas en blanco no puntúan. Al terminar verás tu
+              nota estimada y la revisión completa, pregunta por pregunta.
             </p>
           </div>
 
@@ -415,13 +420,11 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
   return (
     <div className="mx-auto w-full max-w-3xl">
       <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center sm:p-9">
-        <p className="text-[11px] font-black uppercase tracking-[0.22em] text-mq-premium-gold">
-          Resultado del simulacro
-        </p>
-        <p className="mt-4 text-6xl font-black text-white">
-          {attempt.scorePercentage}
-          <span className="text-2xl font-bold text-slate-400">%</span>
-        </p>
+        <MirScoreBreakdown
+          correct={attempt.correctAnswers}
+          wrong={attempt.wrongAnswers}
+          total={questions.length}
+        />
         <div className="mt-6 grid grid-cols-3 gap-3">
           <div className="rounded-xl border border-emerald-400/20 bg-emerald-400/[0.06] p-3">
             <p className="text-xl font-black text-emerald-400">{attempt.correctAnswers}</p>

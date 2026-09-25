@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { arrayUnion, doc, getDoc, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { MIR_2026_01_10_QUESTIONS } from "@/data/mir-2026-01-10-questions";
 import { MIR_2026_11_20_QUESTIONS } from "@/data/mir-2026-11-20-questions";
@@ -185,10 +185,57 @@ export async function getMirAttempt(
   }
 }
 
+/** Resumen de cada simulacro entregado, para ver la evolución de la nota. */
+export type MirAttemptLogEntry = {
+  editionCode: string;
+  correct: number;
+  wrong: number;
+  total: number;
+  completedAt: string;
+};
+
+function toLogEntry(attempt: MirExamAttempt): MirAttemptLogEntry {
+  const edition = getMirEdition(attempt.editionCode);
+  return {
+    editionCode: attempt.editionCode,
+    correct: attempt.correctAnswers,
+    wrong: attempt.wrongAnswers,
+    total: attempt.sessionQuestionIds?.length ?? edition?.questionCount ?? 0,
+    completedAt: attempt.completedAt,
+  };
+}
+
+/** Guarda el intento como último de su edición y lo añade al registro de intentos. */
 export async function saveMirAttempt(userId: string, attempt: MirExamAttempt): Promise<void> {
   await setDoc(
     doc(getFirebaseDb(), "users", userId),
-    { mirAttempts: { [attempt.editionCode]: attempt } },
+    {
+      mirAttempts: { [attempt.editionCode]: attempt },
+      mirAttemptLog: arrayUnion(toLogEntry(attempt)),
+    },
     { merge: true },
   );
+}
+
+/**
+ * Intentos de simulacro del más antiguo al más reciente. Quien entregó
+ * simulacros antes de existir el registro ve al menos su último intento de
+ * cada edición.
+ */
+export async function getMirAttemptLog(userId: string): Promise<MirAttemptLogEntry[]> {
+  try {
+    const data = (await getDoc(doc(getFirebaseDb(), "users", userId))).data();
+    const log = Array.isArray(data?.mirAttemptLog) ? (data.mirAttemptLog as MirAttemptLogEntry[]) : [];
+    const logged = new Set(log.map((entry) => `${entry.editionCode}|${entry.completedAt}`));
+    const legacyAttempts = Object.entries(data ?? {})
+      .filter(([field]) => field.startsWith("mirAttempts."))
+      .map(([, value]) => value as MirExamAttempt);
+    const latest = [...Object.values((data?.mirAttempts ?? {}) as Record<string, MirExamAttempt>), ...legacyAttempts]
+      .map(toLogEntry)
+      .filter((entry) => !logged.has(`${entry.editionCode}|${entry.completedAt}`));
+    return [...log, ...latest].sort((a, b) => a.completedAt.localeCompare(b.completedAt));
+  } catch (error) {
+    console.error("No se pudo leer el registro de simulacros MIR.", error);
+    return [];
+  }
 }
