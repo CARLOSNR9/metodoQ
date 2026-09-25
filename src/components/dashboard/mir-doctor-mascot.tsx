@@ -5,13 +5,13 @@ type MirDoctorMascotProps = {
 };
 
 const NAVY = "#0A1F44";
-const GOLD = "#F5B324";
+const LIMB = "#3B9BF5";
 const COAT_LINE = "#CBD5E1";
 
 /**
  * Versión "doctora" de la mascota MIR para el mensaje de bienvenida: cuerpo
  * de cuerpo entero con pelo de llama, bata blanca, estetoscopio y un brazo
- * saludando. Dibujada a mano en SVG para mantener el tema oscuro/dorado.
+ * saludando. Dibujada a mano en SVG para mantener el mismo estilo en cualquier tamaño.
  */
 export function MirDoctorMascot({ className }: MirDoctorMascotProps) {
   // Ids únicos por instancia para que los degradados no choquen con otros SVG.
@@ -23,20 +23,20 @@ export function MirDoctorMascot({ className }: MirDoctorMascotProps) {
     <svg viewBox="0 0 160 220" className={className} aria-hidden="true">
       <defs>
         <linearGradient id={hairId} x1="0" y1="1" x2="0" y2="0">
-          <stop offset="0%" stopColor="#F97316" />
-          <stop offset="55%" stopColor="#FBBF24" />
-          <stop offset="100%" stopColor="#FFF1B8" />
+          <stop offset="0%" stopColor="#14B8A6" />
+          <stop offset="55%" stopColor="#34D399" />
+          <stop offset="100%" stopColor="#A7F3D0" />
         </linearGradient>
         <linearGradient id={skinId} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#FFEFB0" />
-          <stop offset="100%" stopColor="#FFC940" />
+          <stop offset="0%" stopColor="#7DE3F4" />
+          <stop offset="100%" stopColor="#3B82F6" />
         </linearGradient>
       </defs>
 
       {/* Piernas y pies. */}
-      <path d="M66 180 L64 204 M94 180 L96 204" stroke={GOLD} strokeWidth="7" strokeLinecap="round" />
-      <ellipse cx="59" cy="206" rx="10" ry="4.5" fill={GOLD} />
-      <ellipse cx="101" cy="206" rx="10" ry="4.5" fill={GOLD} />
+      <path d="M66 180 L64 204 M94 180 L96 204" stroke={LIMB} strokeWidth="7" strokeLinecap="round" />
+      <ellipse cx="59" cy="206" rx="10" ry="4.5" fill={LIMB} />
+      <ellipse cx="101" cy="206" rx="10" ry="4.5" fill={LIMB} />
 
       {/* Pelo de llama. */}
       <path
@@ -52,7 +52,7 @@ export function MirDoctorMascot({ className }: MirDoctorMascotProps) {
       <path
         d="M104 58 C112 66 116 76 116 88"
         fill="none"
-        stroke="#FFF6D0"
+        stroke="#E0FAFF"
         strokeWidth="5"
         strokeLinecap="round"
         opacity="0.6"
@@ -60,18 +60,18 @@ export function MirDoctorMascot({ className }: MirDoctorMascotProps) {
 
       {/* Brazo izquierdo en reposo y brazo derecho saludando (manga blanca de la bata). */}
       <path d="M42 134 L32 156" stroke="#FFFFFF" strokeWidth="13" strokeLinecap="round" />
-      <path d="M32 156 L28 174" stroke={GOLD} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="28" cy="176" r="6" fill={GOLD} />
+      <path d="M32 156 L28 174" stroke={LIMB} strokeWidth="6" strokeLinecap="round" />
+      <circle cx="28" cy="176" r="6" fill={LIMB} />
       <path d="M118 134 L132 120" stroke="#FFFFFF" strokeWidth="13" strokeLinecap="round" />
-      <path d="M132 120 L140 100" stroke={GOLD} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="141" cy="96" r="6.5" fill={GOLD} />
+      <path d="M132 120 L140 100" stroke={LIMB} strokeWidth="6" strokeLinecap="round" />
+      <circle cx="141" cy="96" r="6.5" fill={LIMB} />
 
       {/* Bata con cuello en V, solapas, botones, bolsillo con bolígrafos y cruz médica. */}
       <path
         d="M38 132 C48 124 62 122 70 124 L80 150 L90 124 C98 122 112 124 122 132 L122 158 C122 174 108 184 80 184 C52 184 38 174 38 158 Z"
         fill="#FFFFFF"
       />
-      <path d="M70 124 L80 150 L90 124 C86 122 74 122 70 124 Z" fill="#2563EB" />
+      <path d="M70 124 L80 150 L90 124 C86 122 74 122 70 124 Z" fill="#0D9488" />
       <path
         d="M70 124 L76 140 L68 146 M90 124 L84 140 L92 146"
         fill="none"
@@ -117,8 +117,8 @@ export function MirDoctorMascot({ className }: MirDoctorMascotProps) {
       <circle cx="96" cy="90" r="6.5" fill={NAVY} />
       <circle cx="70" cy="87" r="2.2" fill="#FFFFFF" />
       <circle cx="98" cy="87" r="2.2" fill="#FFFFFF" />
-      <ellipse cx="54" cy="106" rx="7" ry="4.5" fill="#F5896B" opacity="0.5" />
-      <ellipse cx="106" cy="106" rx="7" ry="4.5" fill="#F5896B" opacity="0.5" />
+      <ellipse cx="54" cy="106" rx="7" ry="4.5" fill="#F472B6" opacity="0.55" />
+      <ellipse cx="106" cy="106" rx="7" ry="4.5" fill="#F472B6" opacity="0.55" />
       <path
         d="M70 108 Q82 118 94 106"
         fill="none"
