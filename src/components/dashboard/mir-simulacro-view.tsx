@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import {
   MIR_EXAM_EDITIONS,
+  buildMirSimulacroHref,
+  getMirEdition,
   getMirAttempt,
   saveMirAttempt,
   selectMirExamQuestions,
@@ -28,7 +30,6 @@ import { renderWithBold } from "./mir-rich-text";
 type Stage = "intro" | "exam" | "results";
 type ReviewFilter = "wrong" | "blank" | "correct" | "all";
 
-const EDITION = MIR_EXAM_EDITIONS[0];
 
 const SAVE_TIMEOUT_MS = 8000;
 
@@ -55,7 +56,8 @@ function formatClock(totalSeconds: number): string {
  * (ver mir-convocatoria.ts, mir-streak.ts, mir-mastery.ts y mir-review.ts
  * en src/lib/training).
  */
-export function MirSimulacroView({ userId }: { userId: string }) {
+export function MirSimulacroView({ userId, editionCode }: { userId: string; editionCode?: string | null }) {
+  const activeEdition = (editionCode ? getMirEdition(editionCode) : null) ?? MIR_EXAM_EDITIONS[0];
   const [stage, setStage] = useState<Stage>("intro");
   const [previousAttempt, setPreviousAttempt] = useState<MirExamAttempt | null>(null);
   const [isLoadingPrevious, setIsLoadingPrevious] = useState(true);
@@ -72,7 +74,7 @@ export function MirSimulacroView({ userId }: { userId: string }) {
 
   useEffect(() => {
     let cancelled = false;
-    getMirAttempt(userId, EDITION.code)
+    getMirAttempt(userId, activeEdition.code)
       .then((result) => {
         if (!cancelled) setPreviousAttempt(result);
       })
@@ -82,7 +84,7 @@ export function MirSimulacroView({ userId }: { userId: string }) {
     return () => {
       cancelled = true;
     };
-  }, [userId]);
+  }, [userId, activeEdition.code]);
 
   useEffect(() => {
     if (stage !== "exam") return;
@@ -109,7 +111,7 @@ export function MirSimulacroView({ userId }: { userId: string }) {
     const scorePercentage = total > 0 ? Math.round((correct / total) * 100) : 0;
 
     const result: MirExamAttempt = {
-      editionCode: EDITION.code,
+      editionCode: activeEdition.code,
       scorePercentage,
       correctAnswers: correct,
       wrongAnswers: wrong,
@@ -155,12 +157,12 @@ export function MirSimulacroView({ userId }: { userId: string }) {
   }, [stage, secondsLeft]);
 
   function handleStart() {
-    const selected = selectMirExamQuestions(EDITION);
+    const selected = selectMirExamQuestions(activeEdition);
     submittedRef.current = false;
     setQuestions(selected);
     setAnswers({});
     setCurrentIndex(0);
-    setSecondsLeft(EDITION.minutes * 60);
+    setSecondsLeft(activeEdition.minutes * 60);
     setAttempt(null);
     setReviewFilter("wrong");
     setStage("exam");
@@ -194,22 +196,42 @@ export function MirSimulacroView({ userId }: { userId: string }) {
 
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 sm:p-9">
           <p className="text-[11px] font-black uppercase tracking-[0.22em] text-mq-premium-gold">
-            Simulacro completo
+            Simulacro cronometrado
           </p>
-          <h1 className="mt-2 text-2xl font-black text-white sm:text-3xl">{EDITION.label}</h1>
+          {MIR_EXAM_EDITIONS.length > 1 ? (
+            <div className="mt-4 flex flex-wrap gap-2" aria-label="Elige simulacro">
+              {MIR_EXAM_EDITIONS.map((edition) => (
+                <Link
+                  key={edition.code}
+                  href={buildMirSimulacroHref(edition.code)}
+                  replace
+                  aria-current={edition.code === activeEdition.code ? "page" : undefined}
+                  className={`rounded-full px-4 py-1.5 text-xs font-bold transition ${
+                    edition.code === activeEdition.code
+                      ? "bg-mq-premium-gold text-[#0A1F44]"
+                      : "border border-white/15 text-slate-300 hover:border-white/30"
+                  }`}
+                >
+                  {edition.label}
+                </Link>
+              ))}
+            </div>
+          ) : null}
+          <h1 className="mt-4 text-2xl font-black text-white sm:text-3xl">{activeEdition.label}</h1>
+          <p className="mt-1 text-sm font-semibold text-slate-400">{activeEdition.description}</p>
           <p className="mt-3 text-sm leading-relaxed text-slate-300">
-            {EDITION.questionCount} preguntas tipo MIR, cronometradas al ritmo real del examen
+            {activeEdition.questionCount} preguntas tipo MIR, cronometradas al ritmo real del examen
             oficial. Una vez comiences, el reloj corre sin pausas: puedes navegar libremente entre
             preguntas y cambiar tus respuestas hasta que entregues.
           </p>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
-              <p className="text-2xl font-black text-white">{EDITION.questionCount}</p>
+              <p className="text-2xl font-black text-white">{activeEdition.questionCount}</p>
               <p className="text-[11px] font-semibold text-slate-400">preguntas</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
-              <p className="text-2xl font-black text-white">{EDITION.minutes}</p>
+              <p className="text-2xl font-black text-white">{activeEdition.minutes}</p>
               <p className="text-[11px] font-semibold text-slate-400">minutos</p>
             </div>
             <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
@@ -231,7 +253,7 @@ export function MirSimulacroView({ userId }: { userId: string }) {
           <button
             type="button"
             onClick={handleStart}
-            disabled={EDITION.questionCount === 0}
+            disabled={activeEdition.questionCount === 0}
             className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-mq-premium-gold px-6 text-sm font-black text-[#0A1F44] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
           >
             Comenzar simulacro <ArrowRight className="h-4 w-4" />

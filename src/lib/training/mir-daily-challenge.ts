@@ -2,6 +2,7 @@ import { doc, getDoc, increment, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getLocalDateKey } from "@/lib/results";
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import { buildMirMastery, getMirSpecialtyStats, getWeakestSpecialty } from "@/lib/training/mir-mastery";
 import { getMirQuestionsByIds, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -126,7 +127,7 @@ export async function getOrCreateMirDailyChallenge(
     console.error("No se pudo guardar el reto diario MIR.", error);
   }
 
-  return { challenge, questions, completedCount: state.completedCount };
+  return { challenge, questions: shuffleMirQuestionsOptions(questions), completedCount: state.completedCount };
 }
 
 /** Marca el reto de hoy como completado (una sola vez por día). */

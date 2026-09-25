@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Globe2, RotateCcw, XCircle } from "lucide-react";
-import { MIR_EXAM_EDITIONS } from "@/lib/training/mir-convocatoria";
+import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import { getMirWhatsAppUrl } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -38,8 +39,10 @@ function renderWithBold(text: string) {
  */
 export function MirDemoView() {
   const questions = useMemo(() => {
-    const pool = MIR_EXAM_EDITIONS.flatMap((edition) => edition.questions);
-    return pickRandomQuestions(pool, Math.min(DEMO_QUESTION_COUNT, pool.length));
+    const pool = MIR_QUESTIONS;
+    return shuffleMirQuestionsOptions(
+      pickRandomQuestions(pool, Math.min(DEMO_QUESTION_COUNT, pool.length)),
+    );
   }, []);
   const whatsappUrl = getMirWhatsAppUrl();
 
@@ -100,9 +103,9 @@ export function MirDemoView() {
         </p>
         <h1 className="mt-2 text-xl font-black text-white">Así fue tu demo</h1>
         <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-slate-300">
-          Esto fue apenas una muestra de {totalQuestions} preguntas. El banco completo tiene 100
-          preguntas de examen MIR con explicaciones detalladas por cada una, simulacros
-          cronometrados y seguimiento de tu progreso por área.
+          Esto fue apenas una muestra de {totalQuestions} preguntas. El banco completo tiene{" "}
+          {MIR_QUESTIONS.length} preguntas de examen MIR con explicaciones detalladas por cada una,
+          simulacros cronometrados y seguimiento de tu progreso por área.
         </p>
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <a

@@ -1,6 +1,8 @@
 "use client";
 
+import { Suspense } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { hasMirAccess } from "@/lib/mir/access";
@@ -41,5 +43,16 @@ export default function MirSimulacroPage() {
 
   if (!user) return null;
 
-  return <MirSimulacroView userId={user.uid} />;
+  return (
+    // MirSimulacroEdition lee ?edicion= con useSearchParams.
+    <Suspense fallback={null}>
+      <MirSimulacroEdition userId={user.uid} />
+    </Suspense>
+  );
+}
+
+/** Monta el simulacro de la edición pedida; el `key` lo reinicia al cambiar de edición. */
+function MirSimulacroEdition({ userId }: { userId: string }) {
+  const editionCode = useSearchParams().get("edicion");
+  return <MirSimulacroView key={editionCode ?? "default"} userId={userId} editionCode={editionCode} />;
 }
