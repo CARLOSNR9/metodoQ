@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Building2, ClipboardList, Flag, Globe2, MapPin, Timer } from "lucide-react";
+import { Building2, ClipboardList, Dumbbell, Globe2, Layers, MapPin, Stethoscope, Timer } from "lucide-react";
 import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/training/mir-convocatoria";
+import { getDueMirReviewIds, getMirReviewDeck } from "@/lib/training/mir-review";
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
@@ -14,12 +15,20 @@ type MirDashboardViewProps = {
   greetingName: string;
 };
 
-function getMascotMessage(name: string, streak: MirStreakInfo, hasAnyAttempt: boolean): string {
-  if (streak.count === 0 && !hasAnyAttempt) {
-    return `¡Hola, ${name}! Tu aventura MIR empieza hoy. Haz tu primera sesión y comienza tu racha de estudio.`;
+function getMascotMessage(
+  name: string,
+  streak: MirStreakInfo,
+  hasAnyActivity: boolean,
+  dueReviewCount: number,
+): string {
+  if (dueReviewCount > 0) {
+    return `¡Hola, ${name}! Hoy tienes ${dueReviewCount} ${dueReviewCount === 1 ? "error" : "errores"} para repasar. Empieza por ahí: es la forma más rápida de subir tu nota.`;
   }
-  if (streak.count === 0 && hasAnyAttempt) {
-    return `¡Hola, ${name}! Tu racha se enfrió. Retoma hoy el simulacro y vuelve a encenderla.`;
+  if (streak.count === 0 && !hasAnyActivity) {
+    return `¡Hola, ${name}! Tu aventura MIR empieza hoy. Haz tu primer bloque de práctica y comienza tu racha de estudio.`;
+  }
+  if (streak.count === 0 && hasAnyActivity) {
+    return `¡Hola, ${name}! Tu racha se enfrió. Haz hoy un bloque de práctica y vuelve a encenderla.`;
   }
   return `¡Vas muy bien, ${name}! Llevas ${streak.count} ${streak.count === 1 ? "día" : "días"} de racha. No la rompas hoy.`;
 }
@@ -48,8 +57,8 @@ const CURIOSITIES = [
 ];
 
 /**
- * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha
- * y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
+ * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
+ * datos curiosos y accesos a práctica, repaso de errores y simulacro. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -58,13 +67,19 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
 
   const [streak, setStreak] = useState<MirStreakInfo>({ count: 0, lastActiveDate: null, activeDates: [] });
   const [attemptsByEdition, setAttemptsByEdition] = useState<Record<string, MirExamAttempt | null>>({});
+  const [dueReviewCount, setDueReviewCount] = useState(0);
   const hasAnyAttempt = Object.values(attemptsByEdition).some((attempt) => attempt !== null);
+  const hasAnyActivity = hasAnyAttempt || streak.lastActiveDate !== null;
 
   useEffect(() => {
     let cancelled = false;
 
     getMirStreakInfo(userId).then((info) => {
       if (!cancelled) setStreak(info);
+    });
+
+    getMirReviewDeck(userId).then((deck) => {
+      if (!cancelled) setDueReviewCount(getDueMirReviewIds(deck).length);
     });
 
     Promise.all(
@@ -131,11 +146,53 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
 
       <section>
         <div className="mb-3 flex items-center gap-2">
-          <Flag className="h-4 w-4 text-mq-premium-gold" />
-          <h2 className="text-sm font-black uppercase tracking-wide text-white">Simulacros</h2>
+          <Dumbbell className="h-4 w-4 text-mq-premium-gold" />
+          <h2 className="text-sm font-black uppercase tracking-wide text-white">Entrena</h2>
         </div>
         {hasContent ? (
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+              <Stethoscope className="h-5 w-5 text-mq-premium-gold" />
+              <h3 className="mt-3 text-lg font-bold text-white">Práctica por especialidad</h3>
+              <p className="mt-1 text-sm text-slate-300">Bloques de 10 preguntas · corrección al instante</p>
+              <Link
+                href="/dashboard/mir/practica"
+                className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+              >
+                Practicar ahora
+              </Link>
+              <p className="mt-2 text-[11px] text-slate-500">
+                Elige Cardiología, Neumología, Pediatría… o un bloque mixto.
+              </p>
+            </article>
+            <article
+              className={`rounded-2xl border p-6 ${
+                dueReviewCount > 0
+                  ? "border-mq-premium-gold/40 bg-mq-premium-gold/[0.06]"
+                  : "border-white/10 bg-white/[0.04]"
+              }`}
+            >
+              <Layers className="h-5 w-5 text-mq-premium-gold" />
+              <h3 className="mt-3 text-lg font-bold text-white">Repaso de errores</h3>
+              <p className="mt-1 text-sm text-slate-300">
+                {dueReviewCount > 0
+                  ? `${dueReviewCount} ${dueReviewCount === 1 ? "pregunta pendiente" : "preguntas pendientes"} hoy`
+                  : "Nada pendiente hoy"}
+              </p>
+              <Link
+                href="/dashboard/mir/repaso"
+                className={`mt-4 inline-flex min-h-10 items-center justify-center rounded-xl px-5 text-sm font-black transition ${
+                  dueReviewCount > 0
+                    ? "bg-mq-premium-gold text-[#0A1F44] hover:brightness-110"
+                    : "border border-white/20 text-white hover:border-white/40"
+                }`}
+              >
+                {dueReviewCount > 0 ? "Repasar ahora" : "Ver mi repaso"}
+              </Link>
+              <p className="mt-2 text-[11px] text-slate-500">
+                Tus fallos vuelven a los 1, 3 y 7 días hasta que los domines.
+              </p>
+            </article>
             {MIR_EXAM_EDITIONS.map((edition) => {
               const lastAttempt = attemptsByEdition[edition.code];
               return (
@@ -143,7 +200,8 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                   key={edition.code}
                   className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
                 >
-                  <h3 className="text-lg font-bold text-white">{edition.label}</h3>
+                  <Timer className="h-5 w-5 text-mq-premium-gold" />
+                  <h3 className="mt-3 text-lg font-bold text-white">{edition.label}</h3>
                   <p className="mt-1 text-sm text-slate-300">
                     {edition.questionCount} preguntas · {edition.minutes} min
                   </p>
@@ -151,7 +209,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                     href="/dashboard/mir/simulacro"
                     className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
                   >
-                    {lastAttempt ? "Repetir simulacro" : "Practicar ahora"}
+                    {lastAttempt ? "Repetir simulacro" : "Hacer simulacro"}
                   </Link>
                   <p className="mt-2 text-[11px] text-slate-500">
                     {lastAttempt
@@ -161,12 +219,12 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                 </article>
               );
             })}
-            <div className="flex items-end gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+            <div className="flex items-end gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-6 lg:col-span-3">
               <MirDoctorMascot className="h-32 w-24 shrink-0" />
               <div className="rounded-2xl rounded-bl-none border border-white/10 bg-white/[0.06] px-4 py-3">
                 <p className="text-xs font-black text-mq-premium-gold">¡Hola, {greetingName}!</p>
                 <p className="mt-1 text-sm leading-relaxed text-slate-200">
-                  {getMascotMessage(greetingName, streak, hasAnyAttempt)}
+                  {getMascotMessage(greetingName, streak, hasAnyActivity, dueReviewCount)}
                 </p>
               </div>
             </div>
