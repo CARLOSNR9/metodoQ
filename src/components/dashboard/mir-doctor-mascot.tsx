@@ -9,8 +9,8 @@ const LIMB = "#3B9BF5";
 const COAT_LINE = "#CBD5E1";
 
 /**
- * Versión "doctora" de la mascota MIR para el mensaje de bienvenida: cuerpo
- * de cuerpo entero con pelo de llama, bata blanca, estetoscopio y un brazo
+ * Mascota "doctora" del módulo MIR (tarjeta de racha y mensaje de bienvenida):
+ * personaje de cuerpo entero con pelo de llama, bata blanca, estetoscopio y un brazo
  * saludando. Dibujada a mano en SVG para mantener el mismo estilo en cualquier tamaño.
  */
 export function MirDoctorMascot({ className }: MirDoctorMascotProps) {
