@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
+  ArrowRight,
   Building2,
+  CheckCircle2,
   ClipboardList,
   Dumbbell,
   Globe2,
@@ -11,9 +13,15 @@ import {
   Map as MapIcon,
   MapPin,
   Stethoscope,
+  Target,
   Timer,
 } from "lucide-react";
 import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/training/mir-convocatoria";
+import {
+  MIR_DAILY_CHALLENGE_SIZE,
+  getMirDailyChallengeState,
+  type MirDailyChallenge,
+} from "@/lib/training/mir-daily-challenge";
 import { getDueMirReviewIds, getMirReviewDeck } from "@/lib/training/mir-review";
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
@@ -26,22 +34,48 @@ type MirDashboardViewProps = {
   greetingName: string;
 };
 
-function getMascotMessage(
+type MascotPrompt = {
+  message: string;
+  cta: { href: string; label: string };
+  /** Resalta la tarjeta cuando hay algo pendiente hoy. */
+  isPending: boolean;
+};
+
+function getStreakLine(streak: MirStreakInfo, hasAnyActivity: boolean): string {
+  if (streak.count > 0) {
+    return `Llevas ${streak.count} ${streak.count === 1 ? "día" : "días"} de racha.`;
+  }
+  return hasAnyActivity ? "Tu racha se enfrió: hoy la vuelves a encender." : "Complétalo y enciende tu racha.";
+}
+
+/** La doctora prioriza: reto del día → repaso pendiente → seguir practicando. */
+function getMascotPrompt(
   name: string,
   streak: MirStreakInfo,
   hasAnyActivity: boolean,
   dueReviewCount: number,
-): string {
+  challenge: MirDailyChallenge | null,
+): MascotPrompt {
+  if (!challenge?.completedAt) {
+    return {
+      message: `¡Hola, ${name}! Tu reto del día te espera: ${MIR_DAILY_CHALLENGE_SIZE} preguntas conmigo. ${getStreakLine(streak, hasAnyActivity)}`,
+      cta: { href: "/dashboard/mir/reto", label: "Aceptar el reto" },
+      isPending: true,
+    };
+  }
+  const result = `${challenge.correct ?? 0}/${challenge.total ?? MIR_DAILY_CHALLENGE_SIZE}`;
   if (dueReviewCount > 0) {
-    return `¡Hola, ${name}! Hoy tienes ${dueReviewCount} ${dueReviewCount === 1 ? "error" : "errores"} para repasar. Empieza por ahí: es la forma más rápida de subir tu nota.`;
+    return {
+      message: `¡Reto de hoy superado (${result}), ${name}! Te ${dueReviewCount === 1 ? "queda 1 error" : `quedan ${dueReviewCount} errores`} por repasar: es la forma más rápida de subir tu nota.`,
+      cta: { href: "/dashboard/mir/repaso", label: "Repasar ahora" },
+      isPending: true,
+    };
   }
-  if (streak.count === 0 && !hasAnyActivity) {
-    return `¡Hola, ${name}! Tu aventura MIR empieza hoy. Haz tu primer bloque de práctica y comienza tu racha de estudio.`;
-  }
-  if (streak.count === 0 && hasAnyActivity) {
-    return `¡Hola, ${name}! Tu racha se enfrió. Haz hoy un bloque de práctica y vuelve a encenderla.`;
-  }
-  return `¡Vas muy bien, ${name}! Llevas ${streak.count} ${streak.count === 1 ? "día" : "días"} de racha. No la rompas hoy.`;
+  return {
+    message: `¡Reto de hoy completado (${result}), ${name}! ${getStreakLine(streak, true)} Mañana te espero con otro; si quieres más, sigue practicando.`,
+    cta: { href: "/dashboard/mir/practica", label: "Seguir practicando" },
+    isPending: false,
+  };
 }
 
 const CURIOSITIES = [
@@ -69,8 +103,8 @@ const CURIOSITIES = [
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * datos curiosos, accesos a práctica, repaso de errores y simulacro, y el
- * mapa de dominio por especialidad. Tema oscuro/dorado, deliberadamente distinto del resto
+ * datos curiosos, reto del día con la doctora, accesos a práctica, repaso
+ * de errores y simulacro, y el mapa de dominio por especialidad. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -80,14 +114,20 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
   const [streak, setStreak] = useState<MirStreakInfo>({ count: 0, lastActiveDate: null, activeDates: [] });
   const [attemptsByEdition, setAttemptsByEdition] = useState<Record<string, MirExamAttempt | null>>({});
   const [dueReviewCount, setDueReviewCount] = useState(0);
+  const [challenge, setChallenge] = useState<MirDailyChallenge | null>(null);
   const hasAnyAttempt = Object.values(attemptsByEdition).some((attempt) => attempt !== null);
   const hasAnyActivity = hasAnyAttempt || streak.lastActiveDate !== null;
+  const mascotPrompt = getMascotPrompt(greetingName, streak, hasAnyActivity, dueReviewCount, challenge);
 
   useEffect(() => {
     let cancelled = false;
 
     getMirStreakInfo(userId).then((info) => {
       if (!cancelled) setStreak(info);
+    });
+
+    getMirDailyChallengeState(userId).then((state) => {
+      if (!cancelled) setChallenge(state.today);
     });
 
     getMirReviewDeck(userId).then((deck) => {
@@ -163,6 +203,30 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
         </div>
         {hasContent ? (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div
+              className={`flex items-end gap-3 rounded-2xl border p-6 sm:col-span-2 lg:col-span-3 ${
+                mascotPrompt.isPending
+                  ? "border-mq-premium-gold/30 bg-gradient-to-br from-mq-premium-gold/[0.08] to-white/[0.02]"
+                  : "border-white/10 bg-white/[0.04]"
+              }`}
+            >
+              <MirDoctorMascot className="h-32 w-24 shrink-0" />
+              <div className="min-w-0 flex-1 rounded-2xl rounded-bl-none border border-white/10 bg-white/[0.06] px-4 py-3">
+                <p className="inline-flex items-center gap-1.5 text-xs font-black text-mq-premium-gold">
+                  <Target className="h-3.5 w-3.5" />
+                  Reto del día
+                  {challenge?.completedAt ? <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" /> : null}
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-slate-200">{mascotPrompt.message}</p>
+                <Link
+                  href={mascotPrompt.cta.href}
+                  className="mt-3 inline-flex min-h-10 items-center justify-center gap-1.5 rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+                >
+                  {mascotPrompt.cta.label}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
             <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
               <Stethoscope className="h-5 w-5 text-mq-premium-gold" />
               <h3 className="mt-3 text-lg font-bold text-white">Práctica por especialidad</h3>
@@ -231,15 +295,6 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                 </article>
               );
             })}
-            <div className="flex items-end gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-6 lg:col-span-3">
-              <MirDoctorMascot className="h-32 w-24 shrink-0" />
-              <div className="rounded-2xl rounded-bl-none border border-white/10 bg-white/[0.06] px-4 py-3">
-                <p className="text-xs font-black text-mq-premium-gold">¡Hola, {greetingName}!</p>
-                <p className="mt-1 text-sm leading-relaxed text-slate-200">
-                  {getMascotMessage(greetingName, streak, hasAnyActivity, dueReviewCount)}
-                </p>
-              </div>
-            </div>
           </div>
         ) : (
           <div className="rounded-[2rem] border border-dashed border-white/20 bg-white/[0.02] p-10 text-center">
