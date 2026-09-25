@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ArrowLeft, ChevronRight, Shuffle, Stethoscope } from "lucide-react";
 import {
   MIR_MIXED_SPECIALTY,
@@ -22,6 +23,13 @@ type ActiveSession = {
   runId: number;
 };
 
+function isKnownSpecialty(specialtyKey: string): boolean {
+  return (
+    specialtyKey === MIR_MIXED_SPECIALTY ||
+    SPECIALTIES.some((specialty) => specialty.key === specialtyKey)
+  );
+}
+
 function getSpecialtyTitle(specialtyKey: string): string {
   return specialtyKey === MIR_MIXED_SPECIALTY ? "Mixto" : formatSpecialtyLabel(specialtyKey);
 }
@@ -29,10 +37,17 @@ function getSpecialtyTitle(specialtyKey: string): string {
 /**
  * Práctica corta del módulo MIR: el estudiante elige una especialidad (o
  * mixto) y responde un bloque de hasta 10 preguntas con corrección
- * inmediata. Las falladas pasan al repaso de errores.
+ * inmediata. Las falladas pasan al repaso de errores. Con
+ * `?especialidad=<clave>` (p. ej. desde el mapa de dominio) arranca
+ * directamente un bloque de esa especialidad.
  */
 export function MirPracticeView({ userId }: { userId: string }) {
-  const [session, setSession] = useState<ActiveSession | null>(null);
+  const searchParams = useSearchParams();
+  const [session, setSession] = useState<ActiveSession | null>(() => {
+    const requested = searchParams.get("especialidad");
+    if (!requested || !isKnownSpecialty(requested)) return null;
+    return { specialtyKey: requested, questions: pickMirPracticeQuestions(requested), runId: 1 };
+  });
 
   function startBlock(specialtyKey: string) {
     setSession((previous) => ({
