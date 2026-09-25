@@ -12,6 +12,8 @@ import { MIR_2026_81_90_QUESTIONS } from "@/data/mir-2026-81-90-questions";
 import { MIR_2026_91_100_QUESTIONS } from "@/data/mir-2026-91-100-questions";
 import { MIR_2026_101_110_QUESTIONS } from "@/data/mir-2026-101-110-questions";
 import { MIR_2026_111_120_QUESTIONS } from "@/data/mir-2026-111-120-questions";
+import { MIR_2026_121_130_QUESTIONS } from "@/data/mir-2026-121-130-questions";
+import { MIR_2026_131_140_QUESTIONS } from "@/data/mir-2026-131-140-questions";
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -34,6 +36,8 @@ const MIR_SIMULACRO_1_QUESTIONS: TrainingQuestion[] = [
 const MIR_SIMULACRO_2_QUESTIONS: TrainingQuestion[] = [
   ...MIR_2026_101_110_QUESTIONS,
   ...MIR_2026_111_120_QUESTIONS,
+  ...MIR_2026_121_130_QUESTIONS,
+  ...MIR_2026_131_140_QUESTIONS,
 ];
 
 /** Banco completo de preguntas del módulo MIR. */
