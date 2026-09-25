@@ -189,7 +189,10 @@ export function DashboardShell({ children }: DashboardShellProps) {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
-            <PomodoroHeaderChip />
+            <PomodoroHeaderChip
+              href={isMirRoute ? "/dashboard/mir" : "/dashboard/estudio"}
+              variant={isMirRoute ? "mir" : "default"}
+            />
             {!isLoadingRole && isAdmin ? (
               <Link
                 href="/admin"
@@ -227,7 +230,12 @@ export function DashboardShell({ children }: DashboardShellProps) {
         </div>
       </section>
       <AchievementNotification userId={user?.uid ?? ""} />
-      {isProUser ? <PomodoroGlobalOverlay greetingName={doctorGreetingName} /> : null}
+      {isProUser || hasMirAccess(profile?.mirAccess) ? (
+        <PomodoroGlobalOverlay
+          greetingName={doctorGreetingName}
+          variant={isMirRoute ? "mir" : "default"}
+        />
+      ) : null}
       <QBotWidget />
     </main>
     </PomodoroProvider>

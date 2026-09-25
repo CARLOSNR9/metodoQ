@@ -30,6 +30,7 @@ import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
+import { MirPomodoroCard } from "./mir-pomodoro-card";
 import { MirStudyPlanCard } from "./mir-study-plan";
 
 type MirDashboardViewProps = {
@@ -106,7 +107,7 @@ const CURIOSITIES = [
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * plan de hoy, reto del día con la doctora, accesos a práctica, repaso de
+ * plan de hoy con Pomodoro, reto del día con la doctora, accesos a práctica, repaso de
  * errores, tarjetas de repaso y simulacro, mapa de dominio por especialidad y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
@@ -195,7 +196,10 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
             <CalendarDays className="h-4 w-4 text-mq-premium-gold" />
             <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu plan de hoy</h2>
           </div>
-          <MirStudyPlanCard userId={userId} />
+          <div className="space-y-4">
+            <MirStudyPlanCard userId={userId} />
+            <MirPomodoroCard />
+          </div>
         </section>
       ) : null}
 

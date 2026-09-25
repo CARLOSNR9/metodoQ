@@ -68,7 +68,7 @@ function isValidPersisted(state: TimerState): boolean {
     state.phase !== "idle" &&
     state.phase !== "complete" &&
     state.cycle >= 1 &&
-    state.cycle <= POMODORO_CYCLES &&
+    state.cycle <= (state.config?.cycles ?? POMODORO_CYCLES) &&
     state.secondsLeft >= 0
   );
 }

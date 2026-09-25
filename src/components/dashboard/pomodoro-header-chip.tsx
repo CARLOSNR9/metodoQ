@@ -10,8 +10,15 @@ function formatClock(totalSeconds: number) {
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
-export function PomodoroHeaderChip() {
-  const { phase, secondsLeft, cycle, isRunning, isActive } = usePomodoro();
+type PomodoroHeaderChipProps = {
+  /** Pantalla que muestra el temporizador completo. */
+  href?: string;
+  /** "mir": acento dorado del módulo MIR. */
+  variant?: "default" | "mir";
+};
+
+export function PomodoroHeaderChip({ href = "/dashboard/estudio", variant = "default" }: PomodoroHeaderChipProps) {
+  const { phase, secondsLeft, cycle, totalCycles, isRunning, isActive } = usePomodoro();
 
   if (!isActive) return null;
 
@@ -27,12 +34,14 @@ export function PomodoroHeaderChip() {
   const accentClass =
     phase === "break"
       ? "text-amber-300/90 border-amber-400/15 bg-amber-400/[0.06]"
-      : "text-mq-accent/90 border-mq-accent/15 bg-mq-accent/[0.06]";
+      : variant === "mir"
+        ? "text-mq-premium-gold border-mq-premium-gold/25 bg-mq-premium-gold/[0.08]"
+        : "text-mq-accent/90 border-mq-accent/15 bg-mq-accent/[0.06]";
 
   return (
     <Link
-      href="/dashboard/estudio"
-      title="Ver sesión Pomodoro en Estudio"
+      href={href}
+      title="Ver sesión Pomodoro"
       className={`group inline-flex max-w-[7.5rem] items-center gap-1 rounded-lg border px-1.5 py-0.5 transition hover:bg-white/[0.04] sm:max-w-none sm:gap-1.5 sm:px-2 sm:py-1 ${accentClass}`}
     >
       <Hourglass
@@ -52,7 +61,7 @@ export function PomodoroHeaderChip() {
         {phaseShort}
       </span>
       {phase === "study" || phase === "break" ? (
-        <span className="hidden text-[9px] opacity-40 sm:inline">·{cycle}/3</span>
+        <span className="hidden text-[9px] opacity-40 sm:inline">·{cycle}/{totalCycles}</span>
       ) : null}
     </Link>
   );

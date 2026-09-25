@@ -1,3 +1,46 @@
+import {
+  POMODORO_BREAK_MINUTES,
+  POMODORO_CYCLES,
+  POMODORO_STUDY_MINUTES,
+} from "@/lib/study/pomodoro-config";
+
+/** Duraciones de la sesión, para que los textos no den cifras equivocadas. */
+export type PomodoroDurations = {
+  studyMinutes: number;
+  breakMinutes: number;
+  cycles: number;
+};
+
+const DEFAULT_DURATIONS: PomodoroDurations = {
+  studyMinutes: POMODORO_STUDY_MINUTES,
+  breakMinutes: POMODORO_BREAK_MINUTES,
+  cycles: POMODORO_CYCLES,
+};
+
+/** Los textos están escritos para 50 + 10 min; se ajustan a la sesión real. */
+function withDurations(message: FriendlyMessage, durations: PomodoroDurations): FriendlyMessage {
+  const adjust = (text: string) => {
+    let result = text;
+    if (durations.studyMinutes !== 50) {
+      result = result.replace(/\b50 minutos\b/g, `${durations.studyMinutes} minutos`);
+    }
+    if (durations.breakMinutes !== 10) {
+      result = result.replace(/\bDiez minutos\b/g, `${durations.breakMinutes} minutos`);
+    }
+    return result;
+  };
+  return { ...message, title: adjust(message.title), subtitle: adjust(message.subtitle) };
+}
+
+function formatFocusTime(totalMinutes: number): string {
+  if (totalMinutes % 60 === 0) {
+    const hours = totalMinutes / 60;
+    return hours === 1 ? "Una hora" : hours === 3 ? "Tres horas" : `${hours} horas`;
+  }
+  if (totalMinutes < 60) return `${totalMinutes} minutos`;
+  return `${Math.floor(totalMinutes / 60)} h ${totalMinutes % 60} min`;
+}
+
 type FriendlyMessage = {
   title: string;
   subtitle: string;
@@ -149,23 +192,34 @@ function buildResumeMessages(name: string): FriendlyMessage[] {
   ];
 }
 
-export function getBreakMessage(now = new Date(), greetingName?: string): FriendlyMessage {
+export function getBreakMessage(
+  now = new Date(),
+  greetingName?: string,
+  durations: PomodoroDurations = DEFAULT_DURATIONS,
+): FriendlyMessage {
   const name = docLabel(greetingName);
   const messages = buildBreakMessages(name);
-  return pickRandom(messages[hourBand(now.getHours())]);
+  return withDurations(pickRandom(messages[hourBand(now.getHours())]), durations);
 }
 
-export function getStudyResumeMessage(greetingName?: string): FriendlyMessage {
+export function getStudyResumeMessage(
+  greetingName?: string,
+  durations: PomodoroDurations = DEFAULT_DURATIONS,
+): FriendlyMessage {
   const name = docLabel(greetingName);
-  return pickRandom(buildResumeMessages(name));
+  return withDurations(pickRandom(buildResumeMessages(name)), durations);
 }
 
-export function getSessionCompleteMessage(greetingName?: string): FriendlyMessage {
+export function getSessionCompleteMessage(
+  greetingName?: string,
+  durations: PomodoroDurations = DEFAULT_DURATIONS,
+): FriendlyMessage {
   const name = docLabel(greetingName);
+  const { studyMinutes, breakMinutes, cycles } = durations;
+  const totalMinutes = cycles * (studyMinutes + breakMinutes);
   return {
     emoji: "🏆",
-    title: `¡Tres horas de foco, ${name}! Eres una máquina`,
-    subtitle:
-      "Completaste 3 ciclos de 50 + 10 minutos. Celebra un poco — te lo ganaste de verdad.",
+    title: `¡${formatFocusTime(totalMinutes)} de foco, ${name}! Eres una máquina`,
+    subtitle: `Completaste ${cycles} ciclos de ${studyMinutes} + ${breakMinutes} minutos. Celebra un poco — te lo ganaste de verdad.`,
   };
 }
