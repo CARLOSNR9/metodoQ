@@ -1,4 +1,5 @@
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 /** Tamaño de un bloque de práctica corta por especialidad. */
@@ -63,7 +64,10 @@ function shuffle<T>(items: T[]): T[] {
   return copy;
 }
 
-/** Bloque aleatorio de hasta `MIR_PRACTICE_BLOCK_SIZE` preguntas de una especialidad (o mixto). */
+/**
+ * Bloque aleatorio de hasta `MIR_PRACTICE_BLOCK_SIZE` preguntas de una
+ * especialidad (o mixto), con las opciones barajadas.
+ */
 export function pickMirPracticeQuestions(
   specialtyKey: string,
   questions: TrainingQuestion[] = MIR_QUESTIONS,
@@ -72,13 +76,16 @@ export function pickMirPracticeQuestions(
     specialtyKey === MIR_MIXED_SPECIALTY
       ? questions
       : questions.filter((question) => getQuestionSpecialtyKeys(question).includes(specialtyKey));
-  return shuffle(pool).slice(0, MIR_PRACTICE_BLOCK_SIZE);
+  return shuffleMirQuestionsOptions(shuffle(pool).slice(0, MIR_PRACTICE_BLOCK_SIZE));
 }
 
+/** Preguntas listas para una sesión (opciones barajadas), en el orden de `ids`. */
 export function getMirQuestionsByIds(
   ids: string[],
   questions: TrainingQuestion[] = MIR_QUESTIONS,
 ): TrainingQuestion[] {
   const byId = new Map(questions.map((question) => [question.id, question]));
-  return ids.map((id) => byId.get(id)).filter((question): question is TrainingQuestion => Boolean(question));
+  return shuffleMirQuestionsOptions(
+    ids.map((id) => byId.get(id)).filter((question): question is TrainingQuestion => Boolean(question)),
+  );
 }

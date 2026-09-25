@@ -3,7 +3,8 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Globe2, RotateCcw, XCircle } from "lucide-react";
-import { MIR_EXAM_EDITIONS } from "@/lib/training/mir-convocatoria";
+import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import { getMirWhatsAppUrl } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -38,8 +39,10 @@ function renderWithBold(text: string) {
  */
 export function MirDemoView() {
   const questions = useMemo(() => {
-    const pool = MIR_EXAM_EDITIONS.flatMap((edition) => edition.questions);
-    return pickRandomQuestions(pool, Math.min(DEMO_QUESTION_COUNT, pool.length));
+    const pool = MIR_QUESTIONS;
+    return shuffleMirQuestionsOptions(
+      pickRandomQuestions(pool, Math.min(DEMO_QUESTION_COUNT, pool.length)),
+    );
   }, []);
   const whatsappUrl = getMirWhatsAppUrl();
 

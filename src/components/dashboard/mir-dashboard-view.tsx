@@ -18,7 +18,12 @@ import {
   Target,
   Timer,
 } from "lucide-react";
-import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/training/mir-convocatoria";
+import {
+  MIR_EXAM_EDITIONS,
+  buildMirSimulacroHref,
+  getMirAttempt,
+  type MirExamAttempt,
+} from "@/lib/training/mir-convocatoria";
 import {
   MIR_DAILY_CHALLENGE_SIZE,
   getMirDailyChallengeState,
@@ -290,32 +295,34 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                 Ideal para el móvil: recuerda, gira y autoevalúate.
               </p>
             </article>
-            {MIR_EXAM_EDITIONS.map((edition) => {
-              const lastAttempt = attemptsByEdition[edition.code];
-              return (
-                <article
-                  key={edition.code}
-                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
-                >
-                  <Timer className="h-5 w-5 text-mq-premium-gold" />
-                  <h3 className="mt-3 text-lg font-bold text-white">{edition.label}</h3>
-                  <p className="mt-1 text-sm text-slate-300">
-                    {edition.questionCount} preguntas · {edition.minutes} min
-                  </p>
-                  <Link
-                    href="/dashboard/mir/simulacro"
-                    className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
-                  >
-                    {lastAttempt ? "Repetir simulacro" : "Hacer simulacro"}
-                  </Link>
-                  <p className="mt-2 text-[11px] text-slate-500">
-                    {lastAttempt
-                      ? `Último intento: ${lastAttempt.scorePercentage}% (${lastAttempt.correctAnswers}/${edition.questionCount} correctas).`
-                      : "Simulacro completo y cronometrado, con revisión detallada al terminar."}
-                  </p>
-                </article>
-              );
-            })}
+            <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+              <Timer className="h-5 w-5 text-mq-premium-gold" />
+              <h3 className="mt-3 text-lg font-bold text-white">Simulacros</h3>
+              <p className="mt-1 text-sm text-slate-300">Cronometrados al ritmo real del MIR</p>
+              <ul className="mt-4 space-y-2">
+                {MIR_EXAM_EDITIONS.map((edition) => {
+                  const lastAttempt = attemptsByEdition[edition.code];
+                  return (
+                    <li key={edition.code}>
+                      <Link
+                        href={buildMirSimulacroHref(edition.code)}
+                        className="flex items-center justify-between gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-mq-premium-gold/40"
+                      >
+                        <span className="min-w-0">
+                          <span className="block text-sm font-bold text-white">{edition.label}</span>
+                          <span className="block text-[11px] text-slate-400">
+                            {edition.questionCount} preguntas · {edition.minutes} min
+                          </span>
+                        </span>
+                        <span className="shrink-0 text-xs font-black text-mq-premium-gold">
+                          {lastAttempt ? `${lastAttempt.scorePercentage}%` : "Hacer"}
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </article>
           </div>
         ) : (
           <div className="rounded-[2rem] border border-dashed border-white/20 bg-white/[0.02] p-10 text-center">

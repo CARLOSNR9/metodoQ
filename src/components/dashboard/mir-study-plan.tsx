@@ -111,15 +111,14 @@ function useMirTodayPlan(userId: string): TodayPlan | null {
 
   useEffect(() => {
     let cancelled = false;
-    const edition = MIR_EXAM_EDITIONS[0];
 
     Promise.all([
       getOrCreateMirStudyPlan(userId),
       getMirSpecialtyStats(userId),
       getMirDailyChallengeState(userId),
       getMirReviewDeck(userId),
-      edition ? getMirAttempt(userId, edition.code) : Promise.resolve(null),
-    ]).then(([planData, stats, challengeState, deck, attempt]) => {
+      Promise.all(MIR_EXAM_EDITIONS.map((edition) => getMirAttempt(userId, edition.code))),
+    ]).then(([planData, stats, challengeState, deck, attempts]) => {
       if (cancelled) return;
       const todayKey = getLocalDateKey(new Date());
       const mastery = buildMirMastery(stats);
@@ -144,7 +143,10 @@ function useMirTodayPlan(userId: string): TodayPlan | null {
         if (task.kind === "specialty") done = lastPracticeBySpecialty[task.specialtyKey] === todayKey;
         if (task.kind === "mixed") done = lastPracticeBySpecialty[MIR_MIXED_SPECIALTY] === todayKey;
         if (task.kind === "simulacro") {
-          done = Boolean(attempt?.completedAt) && getLocalDateKey(new Date(attempt!.completedAt)) === todayKey;
+          // Cualquier simulacro entregado hoy cuenta.
+          done = attempts.some(
+            (attempt) => attempt?.completedAt && getLocalDateKey(new Date(attempt.completedAt)) === todayKey,
+          );
         }
         checklist.push({
           id: "main",

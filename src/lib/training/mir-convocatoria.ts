@@ -10,11 +10,14 @@ import { MIR_2026_61_70_QUESTIONS } from "@/data/mir-2026-61-70-questions";
 import { MIR_2026_71_80_QUESTIONS } from "@/data/mir-2026-71-80-questions";
 import { MIR_2026_81_90_QUESTIONS } from "@/data/mir-2026-81-90-questions";
 import { MIR_2026_91_100_QUESTIONS } from "@/data/mir-2026-91-100-questions";
+import { MIR_2026_101_110_QUESTIONS } from "@/data/mir-2026-101-110-questions";
+import { MIR_2026_111_120_QUESTIONS } from "@/data/mir-2026-111-120-questions";
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
+import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
-/** Banco acumulado de preguntas del módulo MIR (se amplía por lotes de 10). */
-export const MIR_QUESTIONS: TrainingQuestion[] = [
+/** Simulacro 1: preguntas 1–100 del banco (se amplía por lotes de 10). */
+const MIR_SIMULACRO_1_QUESTIONS: TrainingQuestion[] = [
   ...MIR_2026_01_10_QUESTIONS,
   ...MIR_2026_11_20_QUESTIONS,
   ...MIR_2026_21_30_QUESTIONS,
@@ -27,6 +30,18 @@ export const MIR_QUESTIONS: TrainingQuestion[] = [
   ...MIR_2026_91_100_QUESTIONS,
 ];
 
+/** Simulacro 2: preguntas 101–200, con más peso en las áreas poco cubiertas del 1. */
+const MIR_SIMULACRO_2_QUESTIONS: TrainingQuestion[] = [
+  ...MIR_2026_101_110_QUESTIONS,
+  ...MIR_2026_111_120_QUESTIONS,
+];
+
+/** Banco completo de preguntas del módulo MIR. */
+export const MIR_QUESTIONS: TrainingQuestion[] = [
+  ...MIR_SIMULACRO_1_QUESTIONS,
+  ...MIR_SIMULACRO_2_QUESTIONS,
+];
+
 /**
  * Modelo del módulo "Simulacro MIR". Sigue el mismo patrón que las
  * convocatorias UCC/UMNG (src/lib/training/ucc-convocatoria.ts), pero sin
@@ -36,6 +51,7 @@ export const MIR_QUESTIONS: TrainingQuestion[] = [
 export type MirExamEdition = {
   code: string;
   label: string;
+  description: string;
   /** Fecha objetivo de estudio o de la convocatoria real (YYYY-MM-DD). */
   examDate: string | null;
   questionCount: number;
@@ -54,22 +70,57 @@ export type MirExamAttempt = {
   resultId?: string;
 };
 
+/** Ritmo real del MIR: 4 h 30 min para 210 preguntas (200 + 10 de reserva). */
+function getMirExamMinutes(questionCount: number): number {
+  return Math.round(questionCount * (270 / 210));
+}
+
+function buildEdition(
+  code: string,
+  label: string,
+  description: string,
+  questions: TrainingQuestion[],
+): MirExamEdition {
+  return {
+    code,
+    label,
+    description,
+    examDate: MIR_EXAM_DATE,
+    questionCount: questions.length,
+    minutes: getMirExamMinutes(questions.length),
+    questions,
+  };
+}
+
 /**
  * Preguntas propias de Método Q, calibradas al temario/nivel del examen MIR
  * más reciente (MIR 2026, 24 ene 2026). No son transcripción literal del
- * cuadernillo oficial ni de material editorial de terceros — ver TODO en
- * cada lote para ampliar la cobertura por especialidad.
+ * cuadernillo oficial ni de material editorial de terceros.
+ *
+ * "MIR-2027-SIMULACRO" conserva su código original para que los intentos ya
+ * guardados sigan asociados al Simulacro 1. Las ediciones sin preguntas no
+ * se muestran.
  */
 export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
-  {
-    code: "MIR-2027-SIMULACRO",
-    label: "Simulacro MIR",
-    examDate: MIR_EXAM_DATE,
-    questionCount: MIR_QUESTIONS.length,
-    minutes: Math.round(MIR_QUESTIONS.length * (270 / 210)), // ritmo real MIR: 4h30m / 210 preguntas
-    questions: MIR_QUESTIONS,
-  },
-];
+  buildEdition(
+    "MIR-2027-SIMULACRO",
+    "Simulacro 1",
+    "Primer bloque del banco: todas las grandes especialidades.",
+    MIR_SIMULACRO_1_QUESTIONS,
+  ),
+  buildEdition(
+    "MIR-2027-SIMULACRO-2",
+    "Simulacro 2",
+    "Preguntas nuevas, con más estadística, gineco-obstetricia y especialidades pequeñas.",
+    MIR_SIMULACRO_2_QUESTIONS,
+  ),
+  buildEdition(
+    "MIR-2027-SIMULACRO-COMPLETO",
+    "Simulacro completo",
+    "Las 200 preguntas del banco en una sola sesión, como el examen real.",
+    MIR_SIMULACRO_2_QUESTIONS.length > 0 ? MIR_QUESTIONS : [],
+  ),
+].filter((edition) => edition.questions.length > 0);
 
 function shuffleQuestions<T>(items: T[]): T[] {
   const copy = [...items];
@@ -85,7 +136,12 @@ export function getMirEdition(code: string): MirExamEdition | null {
 }
 
 export function selectMirExamQuestions(edition: MirExamEdition): TrainingQuestion[] {
-  return shuffleQuestions(edition.questions);
+  return shuffleMirQuestionsOptions(shuffleQuestions(edition.questions));
+}
+
+/** Pantalla del simulacro con la edición ya elegida. */
+export function buildMirSimulacroHref(editionCode: string): string {
+  return `/dashboard/mir/simulacro?edicion=${encodeURIComponent(editionCode)}`;
 }
 
 export function buildMirExamHref(editionCode: string): string {
