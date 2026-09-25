@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   ClipboardList,
   Dumbbell,
+  GalleryHorizontalEnd,
   Globe2,
   Layers,
   Map as MapIcon,
@@ -106,7 +107,7 @@ const CURIOSITIES = [
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
  * plan de hoy, reto del día con la doctora, accesos a práctica, repaso de
- * errores y simulacro, mapa de dominio por especialidad y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
+ * errores, tarjetas de repaso y simulacro, mapa de dominio por especialidad y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -204,9 +205,9 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           <h2 className="text-sm font-black uppercase tracking-wide text-white">Entrena</h2>
         </div>
         {hasContent ? (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <div
-              className={`flex items-end gap-3 rounded-2xl border p-6 sm:col-span-2 lg:col-span-3 ${
+              className={`flex items-end gap-3 rounded-2xl border p-6 sm:col-span-2 lg:col-span-4 ${
                 mascotPrompt.isPending
                   ? "border-mq-premium-gold/30 bg-gradient-to-br from-mq-premium-gold/[0.08] to-white/[0.02]"
                   : "border-white/10 bg-white/[0.04]"
@@ -269,6 +270,20 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
               </Link>
               <p className="mt-2 text-[11px] text-slate-500">
                 Tus fallos vuelven a los 1, 3 y 7 días hasta que los domines.
+              </p>
+            </article>
+            <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+              <GalleryHorizontalEnd className="h-5 w-5 text-mq-premium-gold" />
+              <h3 className="mt-3 text-lg font-bold text-white">Tarjetas de repaso</h3>
+              <p className="mt-1 text-sm text-slate-300">Puntos clave en rondas de 10 tarjetas</p>
+              <Link
+                href="/dashboard/mir/tarjetas"
+                className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl border border-white/20 px-5 text-sm font-black text-white transition hover:border-white/40"
+              >
+                Repasar tarjetas
+              </Link>
+              <p className="mt-2 text-[11px] text-slate-500">
+                Ideal para el móvil: recuerda, gira y autoevalúate.
               </p>
             </article>
             {MIR_EXAM_EDITIONS.map((edition) => {
