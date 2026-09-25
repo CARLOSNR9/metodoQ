@@ -5,16 +5,16 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { usePomodoro } from "@/contexts/pomodoro-context";
 import {
-  POMODORO_BREAK_MINUTES,
-} from "@/lib/study/pomodoro-config";
-import {
   getBreakMessage,
   getSessionCompleteMessage,
   getStudyResumeMessage,
 } from "@/lib/study/pomodoro-messages";
+import { MirDoctorMascot } from "./mir-doctor-mascot";
 
 type PomodoroGlobalOverlayProps = {
   greetingName?: string;
+  /** "mir": tema oscuro/dorado con la mascota doctora del módulo MIR. */
+  variant?: "default" | "mir";
 };
 
 function formatClock(totalSeconds: number) {
@@ -23,22 +23,24 @@ function formatClock(totalSeconds: number) {
   return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
 }
 
-export function PomodoroGlobalOverlay({ greetingName }: PomodoroGlobalOverlayProps) {
+export function PomodoroGlobalOverlay({ greetingName, variant = "default" }: PomodoroGlobalOverlayProps) {
+  const isMir = variant === "mir";
   const {
     overlay,
     secondsLeft,
     cycle,
+    config,
     continueToNextStudy,
     stopSession,
     dismissComplete,
   } = usePomodoro();
 
   const overlayContent = useMemo(() => {
-    if (overlay === "break") return getBreakMessage(new Date(), greetingName);
-    if (overlay === "resume") return getStudyResumeMessage(greetingName);
-    if (overlay === "complete") return getSessionCompleteMessage(greetingName);
+    if (overlay === "break") return getBreakMessage(new Date(), greetingName, config);
+    if (overlay === "resume") return getStudyResumeMessage(greetingName, config);
+    if (overlay === "complete") return getSessionCompleteMessage(greetingName, config);
     return null;
-  }, [overlay, greetingName]);
+  }, [overlay, greetingName, config]);
 
   const showOverlay = overlay !== "none" && overlayContent !== null;
 
@@ -70,18 +72,24 @@ export function PomodoroGlobalOverlay({ greetingName }: PomodoroGlobalOverlayPro
             initial={{ opacity: 0, scale: 0.92, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.92, y: 16 }}
-            className="relative z-10 w-full max-w-md rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-2xl shadow-black/40 sm:p-8"
+            className={`relative z-10 w-full max-w-md rounded-3xl border p-6 shadow-2xl shadow-black/40 sm:p-8 ${
+              isMir ? "border-white/10 bg-[#11285a]" : "border-slate-200 bg-slate-50"
+            }`}
           >
-            <p className="text-4xl" aria-hidden>
-              {overlayContent.emoji}
-            </p>
+            {isMir ? (
+              <MirDoctorMascot className="h-24 w-[4.5rem]" />
+            ) : (
+              <p className="text-4xl" aria-hidden>
+                {overlayContent.emoji}
+              </p>
+            )}
             <h2
               id="pomodoro-modal-title"
-              className="mt-4 text-xl font-black leading-snug text-slate-900 sm:text-2xl"
+              className={`mt-4 text-xl font-black leading-snug sm:text-2xl ${isMir ? "text-white" : "text-slate-900"}`}
             >
               {overlayContent.title}
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600">
+            <p className={`mt-3 text-sm leading-relaxed ${isMir ? "text-slate-300" : "text-slate-600"}`}>
               {overlayContent.subtitle}
             </p>
 
@@ -89,7 +97,7 @@ export function PomodoroGlobalOverlay({ greetingName }: PomodoroGlobalOverlayPro
               <>
                 <div className="mt-6 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-5 py-4 text-center">
                   <p className="text-[10px] font-black uppercase tracking-[0.2em] text-amber-200/90">
-                    Descanso · {POMODORO_BREAK_MINUTES} minutos
+                    Descanso · {config.breakMinutes} minutos
                   </p>
                   <p className="mt-2 text-4xl font-black tabular-nums text-amber-100">
                     {formatClock(secondsLeft)}
@@ -112,7 +120,7 @@ export function PomodoroGlobalOverlay({ greetingName }: PomodoroGlobalOverlayPro
               <button
                 type="button"
                 onClick={continueToNextStudy}
-                className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-mq-accent text-sm font-black uppercase tracking-wider text-[#0A1F44] transition hover:brightness-110"
+                className={`mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl text-sm font-black uppercase tracking-wider text-[#0A1F44] transition hover:brightness-110 ${isMir ? "bg-mq-premium-gold" : "bg-mq-accent"}`}
               >
                 <Play className="h-4 w-4 fill-current" />
                 Empezar bloque {cycle + 1}
@@ -123,7 +131,7 @@ export function PomodoroGlobalOverlay({ greetingName }: PomodoroGlobalOverlayPro
               <button
                 type="button"
                 onClick={dismissComplete}
-                className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-mq-accent text-sm font-black uppercase tracking-wider text-[#0A1F44] transition hover:brightness-110"
+                className={`mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-xl text-sm font-black uppercase tracking-wider text-[#0A1F44] transition hover:brightness-110 ${isMir ? "bg-mq-premium-gold" : "bg-mq-accent"}`}
               >
                 ¡Genial!
               </button>

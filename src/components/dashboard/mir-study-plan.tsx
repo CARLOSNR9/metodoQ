@@ -37,6 +37,7 @@ import {
 } from "@/lib/training/mir-study-plan";
 import { buildMirPracticeHref } from "./mir-mastery-map";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
+import { MirPomodoroCard } from "./mir-pomodoro-card";
 
 const PHASE_META: Record<MirPlanPhase, { label: string; description: string; badge: string }> = {
   first_pass: {
@@ -362,6 +363,10 @@ export function MirStudyPlanView({ userId }: { userId: string }) {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mt-6">
+        <MirPomodoroCard />
       </div>
 
       <ol className="mt-6 space-y-2">
