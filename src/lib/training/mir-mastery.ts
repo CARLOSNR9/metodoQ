@@ -176,3 +176,18 @@ export function getOverallAccuracy(stats: MirSpecialtyStats): number | null {
   }
   return answered > 0 ? Math.round((correct / answered) * 100) : null;
 }
+
+/**
+ * Especialidades empezadas y no dominadas, de la que más conviene reforzar
+ * a la que menos: primero las que tienen respuestas suficientes.
+ */
+export function getSpecialtiesToReinforce(mastery: MirSpecialtyMastery[]): string[] {
+  return mastery
+    .filter((item) => item.answered > 0 && item.level !== "mastered")
+    .sort((a, b) => {
+      const aReliable = a.answered >= MIR_MASTERY_MIN_ANSWERS ? 0 : 1;
+      const bReliable = b.answered >= MIR_MASTERY_MIN_ANSWERS ? 0 : 1;
+      return aReliable - bReliable || (a.accuracy ?? 0) - (b.accuracy ?? 0);
+    })
+    .map((item) => item.key);
+}

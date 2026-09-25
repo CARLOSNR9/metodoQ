@@ -5,6 +5,7 @@ import Link from "next/link";
 import {
   ArrowRight,
   Building2,
+  CalendarDays,
   CheckCircle2,
   ClipboardList,
   Dumbbell,
@@ -28,6 +29,7 @@ import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
+import { MirStudyPlanCard } from "./mir-study-plan";
 
 type MirDashboardViewProps = {
   userId: string;
@@ -103,8 +105,8 @@ const CURIOSITIES = [
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * datos curiosos, reto del día con la doctora, accesos a práctica, repaso
- * de errores y simulacro, y el mapa de dominio por especialidad. Tema oscuro/dorado, deliberadamente distinto del resto
+ * plan de hoy, reto del día con la doctora, accesos a práctica, repaso de
+ * errores y simulacro, mapa de dominio por especialidad y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -186,15 +188,15 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
         </div>
       </header>
 
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {CURIOSITIES.map((fact) => (
-          <div key={fact.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-            <fact.icon className="h-5 w-5 text-mq-premium-gold" />
-            <p className="mt-3 text-lg font-black text-white">{fact.title}</p>
-            <p className="mt-1 text-xs leading-relaxed text-slate-400">{fact.detail}</p>
+      {hasContent ? (
+        <section>
+          <div className="mb-3 flex items-center gap-2">
+            <CalendarDays className="h-4 w-4 text-mq-premium-gold" />
+            <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu plan de hoy</h2>
           </div>
-        ))}
-      </section>
+          <MirStudyPlanCard userId={userId} />
+        </section>
+      ) : null}
 
       <section>
         <div className="mb-3 flex items-center gap-2">
@@ -315,6 +317,16 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           <MirMasteryCard userId={userId} />
         </section>
       ) : null}
+
+      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {CURIOSITIES.map((fact) => (
+          <div key={fact.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <fact.icon className="h-5 w-5 text-mq-premium-gold" />
+            <p className="mt-3 text-lg font-black text-white">{fact.title}</p>
+            <p className="mt-1 text-xs leading-relaxed text-slate-400">{fact.detail}</p>
+          </div>
+        ))}
+      </section>
     </div>
   );
 }
