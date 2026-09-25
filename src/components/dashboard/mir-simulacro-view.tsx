@@ -19,26 +19,15 @@ import {
   selectMirExamQuestions,
   type MirExamAttempt,
 } from "@/lib/training/mir-convocatoria";
+import { recordMirAnswers } from "@/lib/training/mir-review";
 import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import type { TrainingQuestion } from "@/lib/questions/types";
+import { renderWithBold } from "./mir-rich-text";
 
 type Stage = "intro" | "exam" | "results";
 type ReviewFilter = "wrong" | "blank" | "correct" | "all";
 
 const EDITION = MIR_EXAM_EDITIONS[0];
-
-function renderWithBold(text: string) {
-  return text.split(/(\*\*.*?\*\*)/g).map((part, index) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <strong key={index} className="font-bold text-white">
-          {part.slice(2, -2)}
-        </strong>
-      );
-    }
-    return part;
-  });
-}
 
 const SAVE_TIMEOUT_MS = 8000;
 
@@ -60,8 +49,9 @@ function formatClock(totalSeconds: number): string {
 /**
  * Simulacro completo del módulo MIR: cronometrado, en "modo examen" (sin
  * feedback instantáneo), navegable libremente entre preguntas hasta
- * entregar. Guarda el intento en la cuenta del usuario y alimenta la racha
- * MIR (ver src/lib/training/mir-convocatoria.ts y mir-streak.ts).
+ * entregar. Guarda el intento en la cuenta del usuario, alimenta la racha
+ * MIR y manda las falladas al repaso de errores (ver mir-convocatoria.ts,
+ * mir-streak.ts y mir-review.ts en src/lib/training).
  */
 export function MirSimulacroView({ userId }: { userId: string }) {
   const [stage, setStage] = useState<Stage>("intro");
@@ -129,6 +119,19 @@ export function MirSimulacroView({ userId }: { userId: string }) {
     try {
       await withTimeout(saveMirAttempt(userId, result), SAVE_TIMEOUT_MS);
       await withTimeout(registerMirTrainingDay(userId), SAVE_TIMEOUT_MS);
+      await withTimeout(
+        recordMirAnswers(
+          userId,
+          questions
+            .filter((question) => answers[question.id])
+            .map((question) => ({
+              questionId: question.id,
+              correct: answers[question.id] === question.correctOptionId,
+            })),
+          "exam",
+        ),
+        SAVE_TIMEOUT_MS,
+      );
     } catch (error) {
       console.error("No se pudo guardar el intento del simulacro MIR.", error);
     }

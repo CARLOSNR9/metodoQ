@@ -14,7 +14,7 @@ import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 /** Banco acumulado de preguntas del módulo MIR (se amplía por lotes de 10). */
-const MIR_QUESTIONS: TrainingQuestion[] = [
+export const MIR_QUESTIONS: TrainingQuestion[] = [
   ...MIR_2026_01_10_QUESTIONS,
   ...MIR_2026_11_20_QUESTIONS,
   ...MIR_2026_21_30_QUESTIONS,
@@ -101,8 +101,12 @@ export async function getMirAttempt(
 ): Promise<MirExamAttempt | null> {
   try {
     const snap = await getDoc(doc(getFirebaseDb(), "users", userId));
-    const attempts = snap.data()?.mirAttempts as Record<string, MirExamAttempt> | undefined;
-    return attempts?.[editionCode] ?? null;
+    const data = snap.data();
+    const attempts = data?.mirAttempts as Record<string, MirExamAttempt> | undefined;
+    // Intentos antiguos quedaron en un campo literal "mirAttempts.<code>" (setDoc no
+    // interpreta los puntos como ruta anidada); se siguen leyendo como respaldo.
+    const legacyAttempt = data?.[`mirAttempts.${editionCode}`] as MirExamAttempt | undefined;
+    return attempts?.[editionCode] ?? legacyAttempt ?? null;
   } catch (error) {
     console.error("No se pudo leer el intento del simulacro MIR.", error);
     return null;
@@ -112,9 +116,7 @@ export async function getMirAttempt(
 export async function saveMirAttempt(userId: string, attempt: MirExamAttempt): Promise<void> {
   await setDoc(
     doc(getFirebaseDb(), "users", userId),
-    {
-      [`mirAttempts.${attempt.editionCode}`]: attempt,
-    },
+    { mirAttempts: { [attempt.editionCode]: attempt } },
     { merge: true },
   );
 }
