@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTransition } from "react";
 import { deleteClassAction } from "@/app/admin/class-actions";
+import { getStaffIdToken } from "@/lib/client/staff-id-token";
 import { ClipboardList, Trash2 } from "lucide-react";
 
 type Props = {
@@ -83,7 +84,8 @@ export function ProfessorClassRow({
           disabled={isPending}
           onClick={() =>
             startTransition(async () => {
-              await deleteClassAction(id);
+              const result = await deleteClassAction(id, await getStaffIdToken());
+              if (result.error) window.alert(result.error);
             })
           }
           className="inline-flex items-center gap-1 rounded-lg border border-rose-500/30 px-2 py-1 text-xs text-rose-300 hover:bg-rose-500/10 disabled:opacity-50"

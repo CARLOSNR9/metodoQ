@@ -1,7 +1,11 @@
 import { QuestionCreationForm } from "@/components/admin/question-creation-form";
 import { PanelSection } from "@/components/admin/panel-section";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
-export default function ProfessorNewQuestionPage() {
+export default async function ProfessorNewQuestionPage() {
+  if (!(await requireStaffArea("professor"))) return <StaffDataPending />;
+
   return (
     <>
       <header>

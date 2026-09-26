@@ -1,9 +1,13 @@
 import { ProfessorCoursesView } from "@/components/professor/professor-courses-view";
 import { getProfessorStudentDirectory } from "@/lib/server/professor-users";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
 export default async function ProfessorCoursesPage() {
+  if (!(await requireStaffArea("professor"))) return <StaffDataPending />;
+
   let students: Awaited<ReturnType<typeof getProfessorStudentDirectory>> = [];
 
   try {

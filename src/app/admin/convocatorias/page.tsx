@@ -1,6 +1,8 @@
 import { ConvocatoriaTrackingTable } from "@/components/admin/convocatoria-tracking-table";
 import { PanelSection } from "@/components/admin/panel-section";
 import { getAdminConvocatoriaTracking } from "@/lib/server/convocatoria-admin";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +17,8 @@ function formatExamDate(dateKey: string) {
 }
 
 export default async function AdminConvocatoriasPage() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   const { summary, rows, loadError } = await getAdminConvocatoriaTracking();
 
   return (

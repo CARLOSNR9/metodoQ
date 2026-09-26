@@ -3,10 +3,14 @@ import { adminListQuestionsForReview } from "@/lib/server/questions-admin";
 import { adminListClasses } from "@/lib/server/classes-admin";
 import { getProfessorStudentDirectory } from "@/lib/server/professor-users";
 import { ChevronRight, Users, BookOpen, Calendar, GraduationCap, ClipboardCheck, Flag } from "lucide-react";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
 export default async function ProfessorHomePage() {
+  if (!(await requireStaffArea("professor"))) return <StaffDataPending />;
+
   let pendingCount = 0;
   let totalQuestions = 0;
   let upcomingClasses = 0;

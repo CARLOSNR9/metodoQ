@@ -7,6 +7,8 @@ import { mergeConvocatoriaBank } from "@/lib/questions/convocatoria-overrides";
 import { sortConvocatoriaQuestions } from "@/lib/convocatoria/question-number";
 import { adminListConvocatoriaOverrides } from "@/lib/server/convocatoria-edits-admin";
 import { getConvocatoriaEdition } from "@/lib/training/convocatorias";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +17,8 @@ type PageProps = {
 };
 
 export default async function ProfessorConvocatoriaEditionPage({ params }: PageProps) {
+  if (!(await requireStaffArea("professor"))) return <StaffDataPending />;
+
   const { editionCode } = await params;
   const edition = getConvocatoriaEdition(editionCode);
   if (!edition) notFound();

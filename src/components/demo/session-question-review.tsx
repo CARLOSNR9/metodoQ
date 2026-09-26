@@ -34,7 +34,6 @@ type SessionQuestionReviewProps = {
   defaultExpandedIndex?: number | null;
   savedResultId?: string | null;
   defaultFilter?: FilterMode;
-  userId?: string | null;
 };
 
 function ReviewFilterButton({
@@ -67,12 +66,10 @@ function ReviewQuestionCard({
   item,
   isOpen,
   onToggle,
-  userId,
 }: {
   item: SessionReviewItem;
   isOpen: boolean;
   onToggle: () => void;
-  userId?: string | null;
 }) {
   const { question, isCorrect } = item;
   const [isReportModalOpen, setIsReportModalOpen] = useState(false);
@@ -230,7 +227,6 @@ function ReviewQuestionCard({
         onClose={() => setIsReportModalOpen(false)}
         questionId={question.id}
         topic={question.topic}
-        userId={userId}
       />
     </article>
   );
@@ -244,7 +240,6 @@ export function SessionQuestionReview({
   defaultExpandedIndex = 1,
   savedResultId = null,
   defaultFilter = "all",
-  userId = null,
 }: SessionQuestionReviewProps) {
   const items = useMemo(
     () => buildSessionReviewItems(sessionQuestions, answersByQuestionId),
@@ -397,7 +392,6 @@ export function SessionQuestionReview({
             onToggle={() =>
               setOpenIndex((current) => (current === item.index ? null : item.index))
             }
-            userId={userId}
           />
         ))}
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -17,6 +18,7 @@ import {
   type UserRole,
 } from "@/lib/roles";
 import { StaffPanelHeader } from "@/components/admin/staff-panel-header";
+import { clearStaffSession, syncStaffSession } from "@/lib/client/staff-session";
 
 type StaffGuardProps = {
   children: React.ReactNode;
@@ -66,6 +68,8 @@ export function StaffGuard({
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [isLoggingIn, setIsLoggingIn] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const auth = getFirebaseAuth();
@@ -106,9 +110,29 @@ export function StaffGuard({
       setError(
         `Tu cuenta tiene rol ${getRoleLabel(role)}. No tienes acceso a este panel.`,
       );
-      getFirebaseAuth().signOut();
+      void clearStaffSession().then(() => getFirebaseAuth().signOut());
     }
   }, [authUser, role, email, allowedRoles, isLoadingRole]);
+
+  // Las páginas del panel solo renderizan datos con una sesión de staff en
+  // servidor (cookie httpOnly). Se asegura al entrar y en cada navegación; si
+  // se acaba de crear, se refresca para que el servidor envíe los datos.
+  const hasPanelAccess = Boolean(
+    authUser && !isLoadingRole && hasAccess(role, email, allowedRoles),
+  );
+  useEffect(() => {
+    if (!authUser || !hasPanelAccess) return;
+    void syncStaffSession(authUser).then((created) => {
+      if (created) router.refresh();
+    });
+  }, [authUser, hasPanelAccess, pathname, router]);
+
+  // Sin usuario en el cliente, no debe quedar una sesión de staff en el navegador.
+  useEffect(() => {
+    if (!isCheckingAuth && !authUser) {
+      void clearStaffSession();
+    }
+  }, [isCheckingAuth, authUser]);
 
   if (isLoading) {
     return (

@@ -2,10 +2,14 @@ import { QuestionCreationForm } from "@/components/admin/question-creation-form"
 import { AdminClassForm } from "@/components/admin/admin-class-form";
 import { AdminClassesPanel } from "@/components/admin/admin-classes-panel";
 import { PanelSection } from "@/components/admin/panel-section";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
-export default function AdminContentPage() {
+export default async function AdminContentPage() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   return (
     <>
       <header>

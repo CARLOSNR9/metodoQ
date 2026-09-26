@@ -36,7 +36,7 @@ export default function ResidentePage() {
         phone,
         university,
         message,
-        userId: user?.uid ?? null,
+        idToken: user ? await user.getIdToken() : null,
       });
 
       if (result.error) {

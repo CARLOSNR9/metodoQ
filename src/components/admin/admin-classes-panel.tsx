@@ -1,7 +1,11 @@
 import { adminListClasses } from "@/lib/server/classes-admin";
 import { AdminClassRow } from "./admin-class-row";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export async function AdminClassesPanel() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   let classes: Awaited<ReturnType<typeof adminListClasses>> = [];
   try {
     classes = await adminListClasses();

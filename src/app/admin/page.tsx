@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { buildAdminAlerts, getAdminMetrics } from "@/lib/server/admin-metrics";
 import { FunnelAlerts, MetricCard } from "@/components/admin/metrics-cards";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
@@ -38,6 +40,8 @@ const quickLinks = [
 ] as const;
 
 export default async function AdminHomePage() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   const { metrics, loadError } = await getAdminMetrics();
   const alerts = buildAdminAlerts(metrics);
 

@@ -12,7 +12,8 @@ export async function verifyStaffCaller(idToken: string | null | undefined) {
   }
 
   try {
-    const decoded = await getFirebaseAdminAuth().verifyIdToken(idToken);
+    // checkRevoked: rechaza tokens de cuentas desactivadas o con sesiones revocadas.
+    const decoded = await getFirebaseAdminAuth().verifyIdToken(idToken, true);
     const db = getFirebaseAdminDb();
     const snap = await db.collection("users").doc(decoded.uid).get();
     const role = normalizeUserRole(snap.data()?.role as string | undefined);

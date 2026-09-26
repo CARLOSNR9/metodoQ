@@ -1,7 +1,7 @@
 "use server";
 
 import { FieldValue } from "firebase-admin/firestore";
-import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import { sendResidenteApplicationEmails } from "@/lib/server/email/send";
 
 export type ResidenteApplicationInput = {
@@ -10,7 +10,11 @@ export type ResidenteApplicationInput = {
   phone: string;
   university: string;
   message: string;
-  userId?: string | null;
+  /**
+   * ID token opcional (el formulario es público). Si llega, el uid se toma del
+   * token verificado en servidor; nunca de un uid enviado por el cliente.
+   */
+  idToken?: string | null;
 };
 
 export async function submitResidenteApplicationAction(input: ResidenteApplicationInput) {
@@ -24,6 +28,15 @@ export async function submitResidenteApplicationAction(input: ResidenteApplicati
     return { error: "Completa todos los campos obligatorios." };
   }
 
+  let userId: string | null = null;
+  if (input.idToken) {
+    try {
+      userId = (await getFirebaseAdminAuth().verifyIdToken(input.idToken)).uid;
+    } catch {
+      return { error: "Tu sesión ha caducado. Recarga la página e inténtalo de nuevo." };
+    }
+  }
+
   try {
     await getFirebaseAdminDb().collection("residente_applications").add({
       name,
@@ -31,7 +44,7 @@ export async function submitResidenteApplicationAction(input: ResidenteApplicati
       phone,
       university,
       message,
-      userId: input.userId ?? null,
+      userId,
       status: "pending",
       createdAt: FieldValue.serverTimestamp(),
     });

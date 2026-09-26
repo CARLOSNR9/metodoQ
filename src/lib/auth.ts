@@ -263,6 +263,8 @@ export async function logoutUser() {
   clearPomodoroAutostart();
   clearPomodoroPersisted(uid);
   clearPomodoroPersisted();
+  const { clearStaffSession } = await import("@/lib/client/staff-session");
+  await clearStaffSession();
   return signOut(getFirebaseAuth());
 }
 

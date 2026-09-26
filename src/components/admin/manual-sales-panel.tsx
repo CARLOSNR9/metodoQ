@@ -1,8 +1,12 @@
 import { formatCOP } from "@/lib/plans/config";
 import { getRecentManualSales } from "@/lib/server/manual-sales-admin";
 import { ManualSalesTable } from "@/components/admin/manual-sales-table";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export async function ManualSalesPanel() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   let sales: Awaited<ReturnType<typeof getRecentManualSales>> = [];
   let loadError: string | null = null;
 

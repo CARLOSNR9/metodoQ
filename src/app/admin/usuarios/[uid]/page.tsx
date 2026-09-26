@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { StudentActivityView } from "@/components/admin/student-activity-view";
 import { getAdminStudentActivity } from "@/lib/server/student-activity";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
@@ -9,6 +11,8 @@ type PageProps = {
 };
 
 export default async function AdminStudentActivityPage({ params }: PageProps) {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   const { uid } = await params;
 
   let student: Awaited<ReturnType<typeof getAdminStudentActivity>> = null;

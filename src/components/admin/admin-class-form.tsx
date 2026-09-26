@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { createClassAction } from "@/app/admin/class-actions";
+import { getStaffIdToken } from "@/lib/client/staff-id-token";
 
 export function AdminClassForm() {
   const [isPending, startTransition] = useTransition();
@@ -12,6 +13,7 @@ export function AdminClassForm() {
     setMessage("");
     setError("");
     startTransition(async () => {
+      formData.set("idToken", await getStaffIdToken());
       const result = await createClassAction(formData);
       if (result.error) {
         setError(result.error);

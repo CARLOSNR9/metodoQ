@@ -1,9 +1,13 @@
 import { ProfessorClassesPanel } from "@/components/professor/professor-classes-panel";
 import { ProfessorClassFormWrapper } from "@/components/professor/professor-class-form-wrapper";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
-export default function ProfessorClassesPage() {
+export default async function ProfessorClassesPage() {
+  if (!(await requireStaffArea("professor"))) return <StaffDataPending />;
+
   return (
     <>
       <header>

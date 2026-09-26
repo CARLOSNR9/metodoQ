@@ -2,10 +2,14 @@ import { AdminUserForm } from "@/components/admin/user-creation-form";
 import { MirUserCreationForm } from "@/components/admin/mir-user-creation-form";
 import { UsersDirectoryPanel } from "@/components/admin/users-directory-panel";
 import { PanelSection } from "@/components/admin/panel-section";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
-export default function AdminUsersPage() {
+export default async function AdminUsersPage() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   return (
     <>
       <header>
