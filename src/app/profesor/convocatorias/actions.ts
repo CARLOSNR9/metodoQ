@@ -55,7 +55,14 @@ function parseOptions(raw: string): QuestionOption[] {
   return options;
 }
 
-export async function listConvocatoriaOverridesAction(editionCode: string) {
+export async function listConvocatoriaOverridesAction(
+  editionCode: string,
+  idToken: string | null,
+) {
+  const auth = await requireQuestionManager(idToken);
+  if (!auth.ok) {
+    return { ok: false as const, error: auth.error, overrides: {} as ConvocatoriaOverrideMap };
+  }
   try {
     const overrides = await adminListConvocatoriaOverrides(editionCode);
     return { ok: true as const, overrides };

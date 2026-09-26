@@ -17,7 +17,25 @@ function revalidateClassPaths() {
   }
 }
 
+/** Solo profesores y admins pueden crear o eliminar clases (verificado en servidor). */
+async function requireCourseManager(idToken: string | null | undefined) {
+  const caller = await verifyStaffCaller(idToken);
+  if (!caller.ok) {
+    return { ok: false as const, error: caller.error };
+  }
+  if (!canManageCourses(caller.role, caller.email)) {
+    return { ok: false as const, error: "No tienes permiso para gestionar clases." };
+  }
+  return { ok: true as const, uid: caller.uid };
+}
+
 export async function createClassAction(formData: FormData) {
+  const idToken = String(formData.get("idToken") ?? "").trim() || null;
+  const auth = await requireCourseManager(idToken);
+  if (!auth.ok) {
+    return { error: auth.error };
+  }
+
   const title = String(formData.get("title") ?? "").trim();
   const description = String(formData.get("description") ?? "").trim();
   const date = String(formData.get("date") ?? "");
@@ -27,7 +45,6 @@ export async function createClassAction(formData: FormData) {
   const recordingLink = String(formData.get("recordingLink") ?? "").trim();
   const courseId = String(formData.get("courseId") ?? "").trim();
   const visibilityRaw = String(formData.get("visibility") ?? "").trim();
-  const idToken = String(formData.get("idToken") ?? "").trim() || null;
 
   if (!title || !description || !date || !time || !meetingLink) {
     return { error: "Completa todos los campos obligatorios." };
@@ -43,21 +60,12 @@ export async function createClassAction(formData: FormData) {
   let resolvedCourseId: string | null = null;
 
   if (courseId) {
-    if (!idToken) {
-      return { error: "Sesión requerida para vincular la clase a un grupo." };
-    }
-
-    const caller = await verifyStaffCaller(idToken);
-    if (!caller.ok || !canManageCourses(caller.role, caller.email)) {
-      return { error: "No tienes permiso para programar clases por grupo." };
-    }
-
-    const course = await professorGetCourse(courseId, caller.uid);
+    const course = await professorGetCourse(courseId, auth.uid);
     if (!course) {
       return { error: "Grupo no encontrado o no te pertenece." };
     }
 
-    professorId = caller.uid;
+    professorId = auth.uid;
     resolvedCourseId = courseId;
     courseName = course.name;
     visibility = "course";
@@ -86,7 +94,11 @@ export async function createClassAction(formData: FormData) {
   }
 }
 
-export async function deleteClassAction(classId: string) {
+export async function deleteClassAction(classId: string, idToken: string | null | undefined) {
+  const auth = await requireCourseManager(idToken);
+  if (!auth.ok) {
+    return { error: auth.error };
+  }
   if (!classId) return { error: "ID inválido." };
 
   try {

@@ -100,7 +100,8 @@ export function ProfessorQuestionsPanel({ initialQuestions }: Props) {
 
   const refreshList = () => {
     startTransition(async () => {
-      const result = await listQuestionsForReviewAction();
+      const user = getFirebaseAuth().currentUser;
+      const result = await listQuestionsForReviewAction(user ? await user.getIdToken() : null);
       if (result.ok) {
         setQuestions(result.questions);
         router.refresh();

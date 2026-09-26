@@ -64,7 +64,11 @@ function parseReviewStatus(value: string): QuestionReviewStatus {
   return "pending";
 }
 
-export async function listQuestionsForReviewAction() {
+export async function listQuestionsForReviewAction(idToken: string | null) {
+  const auth = await requireQuestionManager(idToken);
+  if (!auth.ok) {
+    return { ok: false as const, error: auth.error };
+  }
   try {
     return { ok: true as const, questions: await adminListQuestionsForReview() };
   } catch (e) {

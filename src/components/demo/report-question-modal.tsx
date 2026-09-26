@@ -4,13 +4,13 @@ import { useState, useTransition } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Flag, Send, Loader2 } from "lucide-react";
 import { submitStudentQuestionReportAction } from "@/app/actions/student-report-actions";
+import { getFirebaseAuth } from "@/lib/firebase";
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
   questionId: string;
   topic?: string;
-  userId?: string | null;
 };
 
 const CATEGORIES = [
@@ -21,7 +21,7 @@ const CATEGORIES = [
   { id: "other", label: "Otro motivo", desc: "Especifica el motivo en los comentarios" },
 ];
 
-export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId }: Props) {
+export function ReportQuestionModal({ isOpen, onClose, questionId, topic }: Props) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [comments, setComments] = useState("");
   const [isPending, startTransition] = useTransition();
@@ -35,12 +35,14 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic, userId
     setErrorMsg("");
     startTransition(async () => {
       const selectedLabel = CATEGORIES.find(c => c.id === selectedCategory)?.label || selectedCategory;
+      // El servidor identifica al alumno por su token verificado; sin sesión, el reporte es anónimo.
+      const currentUser = getFirebaseAuth().currentUser;
       const res = await submitStudentQuestionReportAction({
         questionId,
         category: selectedLabel,
         comments,
-        userId: userId ?? null,
         topic,
+        idToken: currentUser ? await currentUser.getIdToken() : null,
       });
 
       if (res.error) {

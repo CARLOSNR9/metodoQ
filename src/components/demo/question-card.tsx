@@ -397,7 +397,6 @@ export function QuestionCard({
           onClose={() => setIsReportModalOpen(false)}
           questionId={questionId}
           topic={topic}
-          userId={userId}
         />
       )}
     </article>
