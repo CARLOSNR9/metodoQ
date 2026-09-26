@@ -11,9 +11,9 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una gestante de 30 semanas acude por salida de líquido amniótico claro confirmada. No tiene dinámica uterina, está afebril, la analítica no muestra signos de infección y el registro fetal es normal. ¿Cuál es el manejo más adecuado?",
     options: [
-      { id: "A", label: "A", text: "Inducción inmediata del parto." },
-      { id: "B", label: "B", text: "Alta domiciliaria con reposo y control en una semana." },
-      { id: "C", label: "C", text: "Cesárea urgente para evitar la infección." },
+      { id: "A", label: "A", text: "Inducción inmediata del parto con oxitocina para evitar la corioamnionitis, independientemente de la edad gestacional y sin corticoides, dado que la bolsa está rota." },
+      { id: "B", label: "B", text: "Alta domiciliaria con reposo relativo, abstinencia sexual y control en consulta en una semana, dado que la gestante está afebril y no presenta dinámica uterina." },
+      { id: "C", label: "C", text: "Cesárea urgente para evitar la infección ascendente y la compresión del cordón, sin esperar a administrar corticoides ni sulfato de magnesio." },
       { id: "D", label: "D", text: "Ingreso con manejo expectante: corticoides para la maduración pulmonar, antibioterapia profiláctica y sulfato de magnesio para neuroprotección fetal si se prevé el parto." },
     ],
     correctOptionId: "D",
@@ -36,9 +36,9 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 63 años consulta por distensión abdominal y saciedad precoz de dos meses de evolución. La ecografía muestra una masa anexial de 9 cm, sólido-quística con tabiques gruesos, y ascitis. El CA-125 es de 850 U/ml. ¿Cuál es la actitud más adecuada?",
     options: [
       { id: "A", label: "A", text: "Estudio de extensión y cirugía por un equipo de ginecología oncológica para diagnóstico, estadificación y citorreducción." },
-      { id: "B", label: "B", text: "Control ecográfico en 3 meses." },
-      { id: "C", label: "C", text: "Punción aspiración del quiste por vía vaginal para citología." },
-      { id: "D", label: "D", text: "Anticonceptivos orales durante 3 ciclos y reevaluar." },
+      { id: "B", label: "B", text: "Actitud expectante con control ecográfico en 3 meses, dado que la mayoría de las masas anexiales en la posmenopausia son benignas." },
+      { id: "C", label: "C", text: "Punción aspiración del quiste por vía vaginal ecoguiada para estudio citológico del líquido antes de decidir la cirugía definitiva." },
+      { id: "D", label: "D", text: "Anticonceptivos orales durante 3 ciclos y reevaluar después la masa anexial con una nueva ecografía." },
     ],
     correctOptionId: "A",
     explanation:
@@ -131,10 +131,10 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una niña de 3 años presenta fiebre de 6 días que no cede con antitérmicos, conjuntivitis bilateral no supurativa, labios fisurados, lengua aframbuesada, exantema polimorfo, edema de manos y pies, y una adenopatía cervical de 2 cm. ¿Cuál es el tratamiento indicado?",
     options: [
-      { id: "A", label: "A", text: "Amoxicilina oral y control en 48 horas." },
+      { id: "A", label: "A", text: "Amoxicilina oral a dosis altas y control en 48 horas, por sospecha de escarlatina." },
       { id: "B", label: "B", text: "Inmunoglobulina intravenosa en dosis única junto con ácido acetilsalicílico." },
-      { id: "C", label: "C", text: "Solo antitérmicos, porque es un cuadro viral autolimitado." },
-      { id: "D", label: "D", text: "Corticoides tópicos para el exantema." },
+      { id: "C", label: "C", text: "Solo antitérmicos, porque es un cuadro viral exantemático autolimitado de la infancia." },
+      { id: "D", label: "D", text: "Corticoides tópicos para el exantema y antihistamínicos orales para el prurito." },
     ],
     correctOptionId: "B",
     explanation:
@@ -155,10 +155,10 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un recién nacido a término, de madre O positivo, presenta ictericia visible a las 18 horas de vida. Está activo y se alimenta bien. ¿Cuál es la valoración correcta?",
     options: [
-      { id: "A", label: "A", text: "Es una ictericia fisiológica y no precisa estudio." },
-      { id: "B", label: "B", text: "Se debe suspender la lactancia materna durante 48 horas." },
+      { id: "A", label: "A", text: "Es una ictericia fisiológica propia del recién nacido y no precisa ningún estudio adicional; basta con fomentar las tomas frecuentes de pecho y control en 48 horas." },
+      { id: "B", label: "B", text: "Se debe suspender la lactancia materna durante 48 horas, ya que se trata de una ictericia por leche materna, y sustituirla por fórmula artificial hasta que baje la bilirrubina." },
       { id: "C", label: "C", text: "Es una ictericia patológica por su aparición en las primeras 24 horas y obliga a estudiar una posible hemólisis (grupo, Coombs directo, bilirrubina, hemograma)." },
-      { id: "D", label: "D", text: "Debe realizarse una exanguinotransfusión inmediata." },
+      { id: "D", label: "D", text: "Debe realizarse una exanguinotransfusión inmediata, sin necesidad de determinar antes la cifra de bilirrubina ni de iniciar fototerapia, por el riesgo de kernicterus." },
     ],
     correctOptionId: "C",
     explanation:
@@ -179,9 +179,9 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
     statement:
       "En la revisión de una recién nacida de 3 semanas, nacida en presentación de nalgas y con antecedentes familiares de displasia de cadera, la maniobra de Ortolani es positiva en la cadera izquierda. ¿Cuál es la actitud más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Radiografía de caderas y, si es normal, alta." },
-      { id: "B", label: "B", text: "Esperar a los 6 meses para realizar cualquier estudio." },
-      { id: "C", label: "C", text: "Cirugía de reducción abierta inmediata." },
+      { id: "A", label: "A", text: "Radiografía de caderas en proyección anteroposterior y, si es normal, alta." },
+      { id: "B", label: "B", text: "Esperar a los 6 meses de edad para realizar cualquier estudio de imagen." },
+      { id: "C", label: "C", text: "Cirugía de reducción abierta inmediata de la cadera luxable." },
       { id: "D", label: "D", text: "Ecografía de caderas y tratamiento ortopédico con arnés de Pavlik." },
     ],
     correctOptionId: "D",
@@ -204,9 +204,9 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
       "Un chico de 14 años consulta por talla baja (percentil 3) y ausencia de signos puberales. Su velocidad de crecimiento ha sido normal pero siempre en percentiles bajos. El padre tuvo el «estirón» tarde. La edad ósea es de 12 años y la exploración y la analítica básica son normales. ¿Cuál es el diagnóstico más probable?",
     options: [
       { id: "A", label: "A", text: "Retraso constitucional del crecimiento y de la pubertad." },
-      { id: "B", label: "B", text: "Déficit de hormona de crecimiento." },
-      { id: "C", label: "C", text: "Talla baja familiar." },
-      { id: "D", label: "D", text: "Hipotiroidismo adquirido." },
+      { id: "B", label: "B", text: "Déficit aislado de hormona de crecimiento de origen hipofisario." },
+      { id: "C", label: "C", text: "Talla baja familiar con desarrollo puberal normal." },
+      { id: "D", label: "D", text: "Hipotiroidismo primario adquirido por tiroiditis autoinmune." },
     ],
     correctOptionId: "A",
     explanation:
@@ -227,10 +227,10 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
     statement:
       "El cribado neonatal de un recién nacido muestra una tripsina inmunorreactiva elevada. ¿Cuál es la prueba que confirma el diagnóstico de fibrosis quística?",
     options: [
-      { id: "A", label: "A", text: "Repetir la tripsina inmunorreactiva a los 6 meses." },
-      { id: "B", label: "B", text: "Radiografía de tórax." },
+      { id: "A", label: "A", text: "Repetir la tripsina inmunorreactiva a los 6 meses de vida antes de cualquier otra prueba." },
+      { id: "B", label: "B", text: "Radiografía de tórax y cultivo de esputo para buscar Pseudomonas aeruginosa." },
       { id: "C", label: "C", text: "Test del sudor con cloro elevado (≥ 60 mmol/l), completado con el estudio genético del gen CFTR." },
-      { id: "D", label: "D", text: "Determinación de elastasa fecal como prueba diagnóstica única." },
+      { id: "D", label: "D", text: "Determinación de elastasa fecal como prueba diagnóstica única y suficiente de fibrosis quística." },
     ],
     correctOptionId: "C",
     explanation:

@@ -11,10 +11,10 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un varón de 30 años, asintomático, es diagnosticado de infección por VIH en un cribado. Tiene 650 linfocitos CD4/mm³ y una carga viral de 30.000 copias/ml. ¿Cuándo debe iniciarse el tratamiento antirretroviral?",
     options: [
-      { id: "A", label: "A", text: "Cuando los CD4 bajen de 350/mm³." },
-      { id: "B", label: "B", text: "Solo si aparece una infección oportunista." },
+      { id: "A", label: "A", text: "Cuando la cifra de linfocitos CD4 baje por debajo de 350/mm³." },
+      { id: "B", label: "B", text: "Solo si aparece una infección oportunista definitoria de sida." },
       { id: "C", label: "C", text: "Lo antes posible, independientemente de la cifra de CD4." },
-      { id: "D", label: "D", text: "Cuando la carga viral supere las 100.000 copias/ml." },
+      { id: "D", label: "D", text: "Cuando la carga viral supere las 100.000 copias/ml en dos determinaciones." },
     ],
     correctOptionId: "C",
     explanation:
@@ -83,10 +83,10 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 35 años consulta por fiebre de 39 °C, escalofríos y cefalea, 10 días después de regresar de un viaje de un mes a Nigeria. No realizó quimioprofilaxis. ¿Cuál es la prueba diagnóstica que debe realizarse de forma urgente?",
     options: [
-      { id: "A", label: "A", text: "Serología de dengue y esperar 2 semanas para repetirla." },
+      { id: "A", label: "A", text: "Serología de dengue y esperar 2 semanas para repetirla y ver la seroconversión." },
       { id: "B", label: "B", text: "Gota gruesa y extensión de sangre periférica (o test rápido de antígeno) para Plasmodium." },
-      { id: "C", label: "C", text: "Hemocultivos y alta con antitérmicos." },
-      { id: "D", label: "D", text: "Coprocultivo y parásitos en heces." },
+      { id: "C", label: "C", text: "Hemocultivos seriados y alta domiciliaria con antitérmicos y control en 48 horas." },
+      { id: "D", label: "D", text: "Coprocultivo y estudio de parásitos en heces por la estancia en el trópico." },
     ],
     correctOptionId: "B",
     explanation:
@@ -107,10 +107,10 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 72 años, ingresada por neumonía y tratada con amoxicilina-clavulánico, presenta al quinto día diarrea acuosa (6 deposiciones diarias), dolor abdominal y leucocitosis leve. La detección de toxina de Clostridioides difficile en heces es positiva. No tiene criterios de gravedad. ¿Cuál es el tratamiento de elección?",
     options: [
-      { id: "A", label: "A", text: "Loperamida para controlar la diarrea." },
-      { id: "B", label: "B", text: "Ciprofloxacino oral." },
+      { id: "A", label: "A", text: "Loperamida para controlar la diarrea y rehidratación oral, sin antibióticos específicos." },
+      { id: "B", label: "B", text: "Ciprofloxacino oral durante 7 días, por sospecha de una diarrea bacteriana invasiva adquirida." },
       { id: "C", label: "C", text: "Fidaxomicina o vancomicina por vía oral, retirando si es posible el antibiótico desencadenante." },
-      { id: "D", label: "D", text: "Vancomicina intravenosa." },
+      { id: "D", label: "D", text: "Vancomicina intravenosa, manteniendo el antibiótico que desencadenó el cuadro." },
     ],
     correctOptionId: "C",
     explanation:
@@ -132,9 +132,9 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
       "Un estudiante de 19 años presenta fiebre, odinofagia con amígdalas hipertróficas y exudado, adenopatías cervicales posteriores y astenia marcada. Tras tomar amoxicilina, desarrolla un exantema maculopapuloso generalizado. En el hemograma hay linfocitosis con linfocitos atípicos. ¿Qué recomendación es correcta?",
     options: [
       { id: "A", label: "A", text: "Evitar los deportes de contacto durante varias semanas por el riesgo de rotura esplénica." },
-      { id: "B", label: "B", text: "Diagnosticar alergia a la penicilina de por vida y cambiar a un macrólido." },
-      { id: "C", label: "C", text: "Iniciar aciclovir intravenoso." },
-      { id: "D", label: "D", text: "Pautar corticoides sistémicos en todos los casos." },
+      { id: "B", label: "B", text: "Diagnosticar alergia a la penicilina de por vida por el exantema y cambiar a un macrólido." },
+      { id: "C", label: "C", text: "Iniciar aciclovir intravenoso para acortar la duración de la mononucleosis infecciosa aguda." },
+      { id: "D", label: "D", text: "Pautar corticoides sistémicos en todos los casos para reducir la adenopatía." },
     ],
     correctOptionId: "A",
     explanation:
@@ -155,9 +155,9 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un joven de 22 años consulta tras una caída sobre la mano en extensión. Presenta dolor a la palpación de la tabaquera anatómica. Las radiografías de muñeca, incluidas las proyecciones de escafoides, son normales. ¿Cuál es la actitud más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Alta sin inmovilización, ya que la radiografía es normal." },
-      { id: "B", label: "B", text: "Cirugía urgente de fijación del escafoides." },
-      { id: "C", label: "C", text: "Vendaje compresivo y reincorporación inmediata al deporte." },
+      { id: "A", label: "A", text: "Alta sin inmovilización ni controles posteriores, ya que la radiografía inicial de la muñeca es normal." },
+      { id: "B", label: "B", text: "Cirugía urgente de fijación percutánea del escafoides con tornillo, aunque la radiografía sea normal." },
+      { id: "C", label: "C", text: "Vendaje compresivo, antiinflamatorios y reincorporación inmediata al deporte según tolerancia al dolor." },
       { id: "D", label: "D", text: "Inmovilizar la muñeca y repetir la radiografía en 10-14 días o realizar una resonancia magnética." },
     ],
     correctOptionId: "D",
@@ -179,10 +179,10 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un motorista de 25 años ingresa con una fractura cerrada de diáfisis tibial, inmovilizada con férula. A las 8 horas refiere dolor intenso en la pierna que no cede con opioides y que aumenta con la extensión pasiva de los dedos del pie. Los pulsos pedios están presentes. ¿Cuál es la actitud correcta?",
     options: [
-      { id: "A", label: "A", text: "Aumentar la analgesia y reevaluar en 12 horas, ya que los pulsos están presentes." },
+      { id: "A", label: "A", text: "Aumentar la analgesia con opioides y reevaluar en 12 horas, ya que los pulsos distales están presentes." },
       { id: "B", label: "B", text: "Retirar la férula o vendajes, medir las presiones compartimentales si hay dudas y realizar una fasciotomía urgente." },
-      { id: "C", label: "C", text: "Elevar la pierna por encima del nivel del corazón y aplicar frío durante 24 horas." },
-      { id: "D", label: "D", text: "Arteriografía urgente antes de cualquier otra medida." },
+      { id: "C", label: "C", text: "Elevar la pierna por encima del nivel del corazón y aplicar frío local durante 24 horas para reducir el edema." },
+      { id: "D", label: "D", text: "Arteriografía urgente del miembro afectado antes de cualquier otra medida, por sospecha de lesión arterial." },
     ],
     correctOptionId: "B",
     explanation:
@@ -203,10 +203,10 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una jugadora de baloncesto de 23 años sufre un giro de la rodilla con el pie apoyado, nota un «chasquido» y no puede continuar jugando. En pocas horas presenta un derrame articular importante (hemartros). La prueba de Lachman es positiva. ¿Cuál es el diagnóstico más probable y la prueba de imagen de elección?",
     options: [
-      { id: "A", label: "A", text: "Rotura del ligamento lateral interno; radiografía simple." },
-      { id: "B", label: "B", text: "Luxación de rótula; tomografía computarizada." },
+      { id: "A", label: "A", text: "Rotura del ligamento lateral interno; radiografía simple de rodilla en carga." },
+      { id: "B", label: "B", text: "Luxación de rótula; tomografía computarizada de la rodilla." },
       { id: "C", label: "C", text: "Rotura del ligamento cruzado anterior; resonancia magnética." },
-      { id: "D", label: "D", text: "Rotura del ligamento cruzado posterior; ecografía." },
+      { id: "D", label: "D", text: "Rotura del ligamento cruzado posterior; ecografía de rodilla." },
     ],
     correctOptionId: "C",
     explanation:
@@ -228,9 +228,9 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 48 años refiere parestesias nocturnas en los dedos pulgar, índice y medio de la mano derecha, que la despiertan y mejoran al sacudir la mano. Las maniobras de Phalen y Tinel son positivas y no hay atrofia muscular. ¿Cuál es el tratamiento inicial más adecuado?",
     options: [
       { id: "A", label: "A", text: "Férula nocturna de muñeca en posición neutra y, si no mejora, infiltración con corticoides." },
-      { id: "B", label: "B", text: "Liberación quirúrgica urgente del nervio cubital en el codo." },
-      { id: "C", label: "C", text: "Antiepilépticos a dosis altas como primera opción." },
-      { id: "D", label: "D", text: "Inmovilización con yeso durante 6 semanas." },
+      { id: "B", label: "B", text: "Liberación quirúrgica urgente del nervio cubital en el codo mediante transposición anterior." },
+      { id: "C", label: "C", text: "Antiepilépticos (pregabalina) a dosis altas como primera opción terapéutica del cuadro neuropático." },
+      { id: "D", label: "D", text: "Inmovilización de la muñeca con yeso antebraquial durante 6 semanas." },
     ],
     correctOptionId: "A",
     explanation:

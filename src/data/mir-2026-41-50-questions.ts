@@ -12,9 +12,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 52 años, con neoplasia de pulmón conocida, presenta disnea progresiva, ingurgitación yugular y tonos cardíacos apagados. La presión arterial es 92/70 mmHg en espiración y desciende a 74/58 mmHg durante la inspiración (caída >10 mmHg). El ecocardiograma muestra derrame pericárdico moderado-severo con colapso diastólico de cavidades derechas. ¿Cuál es el hallazgo hemodinámico descrito y el manejo más apropiado?",
     options: [
       { id: "A", label: "A", text: "Pulso paradójico, compatible con taponamiento cardíaco; el manejo es la pericardiocentesis (guiada por ecografía) o el drenaje quirúrgico, sin demorar el tratamiento ante compromiso hemodinámico significativo." },
-      { id: "B", label: "B", text: "Hallazgo sin relevancia clínica, que no requiere ninguna intervención más allá de la observación ambulatoria." },
-      { id: "C", label: "C", text: "Signo de Kussmaul, compatible con pericarditis constrictiva crónica, cuyo manejo es exclusivamente médico con diuréticos." },
-      { id: "D", label: "D", text: "Hallazgo típico de estenosis mitral severa; el manejo es la valvuloplastia percutánea urgente." },
+      { id: "B", label: "B", text: "Hallazgo sin relevancia clínica, frecuente en pacientes con taquipnea y ansiedad, que no requiere ninguna intervención más allá de la observación ambulatoria y el control de la tensión arterial." },
+      { id: "C", label: "C", text: "Signo de Kussmaul, compatible con una pericarditis constrictiva crónica, cuyo manejo es exclusivamente médico con diuréticos y restricción de sal, sin necesidad de drenaje ni de pericardiectomía, dado que el derrame no compromete el llenado ventricular." },
+      { id: "D", label: "D", text: "Hallazgo típico de una estenosis mitral severa descompensada; el manejo es la valvuloplastia mitral percutánea urgente tras confirmar el gradiente transvalvular por ecocardiografía." },
     ],
     correctOptionId: "A",
     explanation:
@@ -36,9 +36,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 22 años, alto y delgado, sin patología pulmonar conocida, presenta dolor torácico pleurítico súbito y disnea leve tras un esfuerzo. La radiografía de tórax muestra un neumotórax izquierdo con una separación de la pleura visceral respecto a la pared torácica de aproximadamente 1 cm en el hilio, sin desviación mediastínica ni compromiso hemodinámico. ¿Cuál es el manejo más apropiado?",
     options: [
       { id: "A", label: "A", text: "Dado que es un neumotórax espontáneo primario de pequeño tamaño, en un paciente estable y poco sintomático, puede manejarse de forma conservadora (observación, oxigenoterapia y analgesia) con seguimiento radiológico, sin necesidad de drenaje torácico inmediato." },
-      { id: "B", label: "B", text: "Debe colocarse un tubo de toracostomía de forma obligatoria en todo neumotórax espontáneo, independientemente de su tamaño y de la situación clínica del paciente." },
-      { id: "C", label: "C", text: "Está indicada la toracotomía urgente como tratamiento de primera línea en el primer episodio de neumotórax espontáneo." },
-      { id: "D", label: "D", text: "Debe realizarse pleurodesis química de entrada, sin necesidad de drenaje previo ni observación." },
+      { id: "B", label: "B", text: "Debe colocarse un tubo de toracostomía de forma obligatoria en todo neumotórax espontáneo, independientemente de su tamaño y de la clínica del paciente, ya que la observación aislada conlleva un riesgo inaceptable de progresión a neumotórax a tensión." },
+      { id: "C", label: "C", text: "Está indicada la toracotomía urgente con resección de las bullas apicales como tratamiento de primera línea en el primer episodio de neumotórax espontáneo, para prevenir las recurrencias, que son la norma en los varones jóvenes, altos y fumadores." },
+      { id: "D", label: "D", text: "Debe realizarse pleurodesis química con talco de entrada, sin necesidad de drenaje torácico previo ni de un periodo de observación, para evitar las recidivas en un paciente joven y fumador, que presenta un riesgo muy alto de un segundo episodio." },
     ],
     correctOptionId: "A",
     explanation:
@@ -60,9 +60,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 67 años, con antecedente de laparotomía previa por apendicitis complicada, presenta dolor abdominal cólico, distensión, vómitos y ausencia de emisión de gases y heces de 2 días de evolución. La radiografía de abdomen muestra niveles hidroaéreos en asas de intestino delgado dilatadas. No hay fiebre, taquicardia ni signos de irritación peritoneal. ¿Cuál es el manejo inicial más apropiado?",
     options: [
       { id: "A", label: "A", text: "Manejo conservador inicial: sonda nasogástrica para descompresión, dieta absoluta, fluidoterapia intravenosa con corrección hidroelectrolítica, y observación clínica estrecha, reservando la cirugía urgente para signos de estrangulación, peritonitis, o fracaso del manejo conservador." },
-      { id: "B", label: "B", text: "Laparotomía exploratoria urgente de entrada, sin ensayar manejo conservador, dado el antecedente de cirugía abdominal previa." },
-      { id: "C", label: "C", text: "Manejo ambulatorio con dieta oral normal y laxantes, dado que la ausencia de fiebre descarta gravedad." },
-      { id: "D", label: "D", text: "Colonoscopia urgente como primer paso diagnóstico y terapéutico, independientemente de la localización de la obstrucción." },
+      { id: "B", label: "B", text: "Laparotomía exploratoria urgente de entrada, sin ensayar manejo conservador, dado el antecedente de cirugía abdominal previa y el riesgo de que las bridas provoquen una estrangulación; la sonda nasogástrica y la fluidoterapia solo retrasan la cirugía y aumentan la mortalidad del paciente." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con dieta oral normal, abundantes líquidos y laxantes osmóticos, dado que la ausencia de fiebre y de leucocitosis descarta la gravedad del cuadro, con control en su centro de salud en 48-72 horas si persisten los vómitos, el dolor cólico o la distensión abdominal." },
+      { id: "D", label: "D", text: "Colonoscopia urgente como primer paso diagnóstico y terapéutico, independientemente de la localización de la obstrucción, ya que permite descomprimir el intestino y colocar una endoprótesis, evitando la cirugía y la necesidad de sonda nasogástrica en la mayoría de los casos de obstrucción." },
     ],
     correctOptionId: "A",
     explanation:
@@ -84,9 +84,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 70 años, en tratamiento con un inhibidor selectivo de la recaptación de serotonina, presenta confusión leve y náuseas. La analítica muestra sodio sérico de 118 mEq/L, osmolaridad plasmática baja, osmolaridad urinaria inapropiadamente elevada, sodio urinario >40 mEq/L, y la paciente está clínicamente euvolémica, sin edemas ni signos de deshidratación. No presenta crisis comiciales ni coma. ¿Cuál es el diagnóstico más probable y el manejo inicial más apropiado?",
     options: [
       { id: "A", label: "A", text: "Síndrome de secreción inadecuada de hormona antidiurética (SIADH); el manejo inicial en la hiponatremia moderada-sintomática sin síntomas neurológicos graves es la restricción hídrica, con corrección gradual del sodio (evitando una corrección demasiado rápida) y valorando la suspensión del fármaco implicado." },
-      { id: "B", label: "B", text: "Deshidratación hipotónica por depleción de volumen; el manejo es la administración generosa de suero salino isotónico para expandir volumen." },
-      { id: "C", label: "C", text: "Insuficiencia cardíaca con hiponatremia dilucional; el manejo inicial es la restricción hídrica junto con diuréticos de asa a dosis altas." },
-      { id: "D", label: "D", text: "Hiponatremia facticia por hiperglucemia; el manejo es corregir la glucemia sin otras intervenciones sobre el sodio." },
+      { id: "B", label: "B", text: "Deshidratación hipotónica por depleción de volumen extracelular secundaria a pérdidas; el manejo es la administración generosa de suero salino isotónico para expandir el volumen, con controles de sodio cada 12 horas hasta su normalización completa y retirada de los diuréticos tiazídicos si los tomara." },
+      { id: "C", label: "C", text: "Insuficiencia cardíaca congestiva con hiponatremia dilucional; el manejo inicial es la restricción hídrica estricta junto con diuréticos de asa a dosis altas por vía intravenosa, la retirada de los inhibidores de la enzima convertidora y el control diario del peso y de la diuresis." },
+      { id: "D", label: "D", text: "Hiponatremia facticia (pseudohiponatremia) por hiperglucemia o hiperlipidemia grave; el manejo es corregir la glucemia con insulina y repetir la natremia calculando el sodio corregido, sin ninguna otra intervención dirigida a modificar el sodio plasmático." },
     ],
     correctOptionId: "A",
     explanation:
@@ -108,9 +108,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 58 años, usuario de drogas por vía parenteral, presenta fiebre de 2 semanas de evolución, astenia y un nuevo soplo cardíaco no conocido previamente. Al examen se observan lesiones purpúricas dolorosas en pulpejos de los dedos. Se sospecha endocarditis infecciosa. ¿Cuál es la actuación diagnóstica inicial más apropiada antes de iniciar antibioterapia?",
     options: [
       { id: "A", label: "A", text: "Extraer al menos 3 tandas de hemocultivos (de sitios de venopunción diferentes, antes de iniciar antibioterapia) y solicitar ecocardiograma (transtorácico inicialmente, transesofágico si el transtorácico no es concluyente o hay alta sospecha), salvo que la inestabilidad hemodinámica obligue a no demorar el inicio del tratamiento antibiótico." },
-      { id: "B", label: "B", text: "Iniciar antibioterapia empírica de amplio espectro de inmediato, sin extraer hemocultivos previos, para no retrasar el tratamiento de una infección potencialmente grave." },
-      { id: "C", label: "C", text: "Solicitar únicamente serologías virales, dado que la causa más probable en un usuario de drogas por vía parenteral es una infección viral sistémica, no bacteriana." },
-      { id: "D", label: "D", text: "Diferir cualquier estudio diagnóstico hasta la resolución completa de la fiebre, dado que las lesiones cutáneas descritas no tienen relevancia diagnóstica." },
+      { id: "B", label: "B", text: "Iniciar antibioterapia empírica de amplio espectro de inmediato, sin extraer hemocultivos previos, para no retrasar el tratamiento de una infección potencialmente grave, y solicitar el ecocardiograma solo si la fiebre persiste tras una semana de tratamiento antibiótico correcto, ya que la mayoría de las bacteriemias en usuarios de drogas se resuelven sin afectación valvular ni complicaciones embólicas." },
+      { id: "C", label: "C", text: "Solicitar únicamente serologías virales (VIH, VHB y VHC) y tratamiento sintomático de la fiebre, dado que la causa más probable del cuadro en un usuario de drogas por vía parenteral es una infección viral sistémica aguda, no bacteriana, y los hemocultivos no aportarían información útil." },
+      { id: "D", label: "D", text: "Diferir cualquier estudio diagnóstico hasta la resolución completa de la fiebre con antitérmicos, dado que las lesiones cutáneas descritas no tienen relevancia diagnóstica y la mayoría de los cuadros febriles en este contexto son autolimitados y se resuelven en pocos días." },
     ],
     correctOptionId: "A",
     explanation:
@@ -132,9 +132,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 35 años presenta una crisis convulsiva tónico-clónica generalizada que persiste sin recuperación de la conciencia a los 8 minutos de iniciada, ya administrada una primera dosis de benzodiacepina intravenosa (lorazepam) sin respuesta. ¿Cuál es el siguiente paso más apropiado en el manejo del estado epiléptico?",
     options: [
       { id: "A", label: "A", text: "Administrar un fármaco antiepiléptico de segunda línea por vía intravenosa (por ejemplo, levetiracetam, ácido valproico o fenitoína), dado que la crisis persiste tras la benzodiacepina inicial; si no cede, el siguiente escalón es la anestesia general con fármacos como propofol o midazolam en infusión continua, con intubación y soporte en UCI." },
-      { id: "B", label: "B", text: "Repetir la misma dosis de benzodiacepina de forma indefinida hasta que la crisis ceda, sin escalar a otros fármacos antiepilépticos." },
-      { id: "C", label: "C", text: "Esperar sin intervención farmacológica adicional, dado que la mayoría de las crisis ceden espontáneamente antes de los 20 minutos." },
-      { id: "D", label: "D", text: "Iniciar anestesia general de inmediato como primer escalón, sin ensayar previamente un fármaco antiepiléptico de segunda línea." },
+      { id: "B", label: "B", text: "Repetir la misma dosis de benzodiacepina de forma indefinida cada 5-10 minutos hasta que la crisis ceda, sin escalar a otros fármacos antiepilépticos, ya que las benzodiacepinas son los únicos fármacos con eficacia demostrada en el estatus epiléptico y la depresión respiratoria es excepcional incluso tras varias dosis repetidas en adultos jóvenes." },
+      { id: "C", label: "C", text: "Esperar sin intervención farmacológica adicional y proteger al paciente de lesiones, dado que la mayoría de las crisis ceden espontáneamente antes de los 20 minutos y los fármacos antiepilépticos intravenosos tienen efectos adversos cardiovasculares que superan su beneficio, reservando el tratamiento para las crisis que superen la hora de duración." },
+      { id: "D", label: "D", text: "Iniciar anestesia general con propofol de inmediato como primer escalón, sin ensayar un fármaco antiepiléptico de segunda línea, para controlar cuanto antes la actividad eléctrica cerebral y evitar el daño neuronal, ya que cada minuto de estatus aumenta la probabilidad de secuelas y la intubación precoz protege la vía aérea." },
     ],
     correctOptionId: "A",
     explanation:
@@ -180,9 +180,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 34 años presenta petequias, confusión de inicio reciente y fiebre. La analítica muestra plaquetas de 15.000/µL, hemoglobina 8.4 g/dL, LDH muy elevada, haptoglobina indetectable, y en el frotis de sangre periférica se observan abundantes esquistocitos. La función renal muestra creatinina levemente elevada. El estudio de coagulación (TP, TTPa) es normal. ¿Cuál es el diagnóstico más probable y la actuación terapéutica urgente?",
     options: [
       { id: "A", label: "A", text: "Púrpura trombocitopénica trombótica (PTT); el tratamiento urgente es el recambio plasmático (plasmaféresis), evitando la transfusión de plaquetas salvo hemorragia con riesgo vital, ya que puede empeorar la microtrombosis." },
-      { id: "B", label: "B", text: "Púrpura trombocitopénica inmune (PTI); el tratamiento de primera línea es la transfusión de plaquetas para corregir rápidamente el recuento plaquetario." },
-      { id: "C", label: "C", text: "Coagulación intravascular diseminada; el tratamiento es reponer factores de coagulación con plasma fresco congelado como primera medida, sin necesidad de plasmaféresis." },
-      { id: "D", label: "D", text: "Anemia hemolítica autoinmune con trombocitopenia asociada (síndrome de Evans); el tratamiento de primera línea son los corticoides sistémicos en monoterapia." },
+      { id: "B", label: "B", text: "Púrpura trombocitopénica inmune (PTI); el tratamiento de primera línea es la transfusión de plaquetas para corregir rápidamente el recuento plaquetario, seguida de corticoides e inmunoglobulinas intravenosas si el recuento no se mantiene por encima de 50.000/µl." },
+      { id: "C", label: "C", text: "Coagulación intravascular diseminada; el tratamiento es reponer los factores de coagulación con plasma fresco congelado y crioprecipitado como primera medida, sin necesidad de plasmaféresis, junto con el tratamiento de la causa desencadenante." },
+      { id: "D", label: "D", text: "Anemia hemolítica autoinmune con trombocitopenia asociada (síndrome de Evans); el tratamiento de primera línea son los corticoides sistémicos en monoterapia a dosis de 1 mg/kg/día, reservando la esplenectomía para los casos refractarios." },
     ],
     correctOptionId: "A",
     explanation:
@@ -204,9 +204,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 48 años, con consumo crónico de alcohol, acude a Urgencias por temblor, ansiedad, sudoración y taquicardia, 36 horas después de su última ingesta. Progresivamente presenta alucinaciones visuales, desorientación y agitación psicomotriz. ¿Cuál es el manejo farmacológico más apropiado y qué medida debe garantizarse antes de administrar glucosa?",
     options: [
       { id: "A", label: "A", text: "Benzodiacepinas (por ejemplo, diazepam o clordiazepóxido) como tratamiento de primera línea del síndrome de abstinencia alcohólica, y administrar tiamina antes o junto con cualquier aporte de glucosa, para prevenir la encefalopatía de Wernicke." },
-      { id: "B", label: "B", text: "Antipsicóticos en monoterapia como tratamiento de primera línea, sin necesidad de benzodiacepinas, dado que las alucinaciones son el síntoma predominante." },
-      { id: "C", label: "C", text: "Administrar glucosa intravenosa de inmediato como primera medida, sin necesidad de tiamina previa ni concomitante." },
-      { id: "D", label: "D", text: "Restricción física prolongada como única medida, sin tratamiento farmacológico específico del síndrome de abstinencia." },
+      { id: "B", label: "B", text: "Antipsicóticos (haloperidol) en monoterapia como tratamiento de primera línea, sin necesidad de benzodiacepinas, dado que las alucinaciones y la agitación psicomotriz son los síntomas predominantes y más peligrosos del cuadro." },
+      { id: "C", label: "C", text: "Administrar glucosa intravenosa de inmediato como primera medida para corregir una posible hipoglucemia, sin necesidad de tiamina previa ni concomitante, y valorar la sedación farmacológica una vez normalizada la glucemia." },
+      { id: "D", label: "D", text: "Restricción física prolongada y sueroterapia intravenosa como únicas medidas, sin tratamiento farmacológico específico del síndrome de abstinencia, para evitar la sedación excesiva y la depresión respiratoria." },
     ],
     correctOptionId: "A",
     explanation:
@@ -228,9 +228,9 @@ export const MIR_2026_41_50_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 74 años, fumador, con antecedente conocido de aneurisma de aorta abdominal en seguimiento, acude por dolor abdominal y lumbar intenso de inicio súbito, con síncope previo al ingreso. Presenta PA 76/48 mmHg, FC 128 lpm, y una masa abdominal pulsátil dolorosa. ¿Cuál es la conducta más apropiada?",
     options: [
       { id: "A", label: "A", text: "Activar de inmediato el equipo quirúrgico vascular para reparación urgente (endovascular o abierta según disponibilidad y anatomía), con reanimación mediante hipotensión permisiva (evitando la administración agresiva de líquidos hasta el control quirúrgico del sangrado) y sin retrasar la cirugía con estudios de imagen extensos si el diagnóstico clínico ya es altamente sugestivo." },
-      { id: "B", label: "B", text: "Solicitar una resonancia magnética abdominal para caracterizar completamente el aneurisma antes de decidir el tipo de reparación." },
-      { id: "C", label: "C", text: "Administrar grandes volúmenes de cristaloides hasta normalizar completamente la presión arterial antes de considerar cualquier intervención quirúrgica." },
-      { id: "D", label: "D", text: "Manejo médico conservador con analgesia y control ambulatorio, dado que el aneurisma ya estaba en seguimiento previo." },
+      { id: "B", label: "B", text: "Solicitar una resonancia magnética abdominal urgente para caracterizar completamente el aneurisma, su extensión proximal y su relación con las arterias renales y viscerales antes de decidir el tipo de reparación, manteniendo mientras tanto al paciente en observación con analgesia y monitorización hemodinámica continua en la sala de Urgencias." },
+      { id: "C", label: "C", text: "Administrar grandes volúmenes de cristaloides y hemoderivados hasta normalizar completamente la presión arterial y la frecuencia cardíaca antes de considerar cualquier intervención quirúrgica, ya que operar a un paciente hipotenso multiplica la mortalidad del procedimiento vascular y del acto anestésico en pacientes de edad avanzada." },
+      { id: "D", label: "D", text: "Manejo médico conservador con analgesia, control estricto de la presión arterial y seguimiento ambulatorio en la consulta de cirugía vascular, dado que el aneurisma ya estaba en seguimiento previo con un diámetro conocido y el dolor lumbar en pacientes de esta edad suele tener un origen osteomuscular." },
     ],
     correctOptionId: "A",
     explanation:

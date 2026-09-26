@@ -11,10 +11,10 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 38 años presenta dolor lumbar de 5 días de evolución tras levantar una caja pesada, sin irradiación por debajo de la rodilla, sin fiebre, pérdida de peso, antecedentes oncológicos ni alteraciones esfinterianas. La exploración neurológica es normal. ¿Cuál es la actitud más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Resonancia magnética lumbar urgente." },
+      { id: "A", label: "A", text: "Resonancia magnética lumbar urgente para descartar una hernia discal y valorar su tratamiento quirúrgico precoz, junto con reposo en cama hasta tener el resultado." },
       { id: "B", label: "B", text: "Analgesia (AINE o paracetamol), mantener la actividad habitual en la medida de lo posible y evitar el reposo en cama, sin pruebas de imagen." },
-      { id: "C", label: "C", text: "Reposo absoluto en cama durante 2 semanas." },
-      { id: "D", label: "D", text: "Radiografía lumbar y derivación a cirugía de columna." },
+      { id: "C", label: "C", text: "Reposo absoluto en cama durante 2 semanas, con relajantes musculares y opioides, evitando cualquier actividad física hasta la desaparición completa del dolor lumbar." },
+      { id: "D", label: "D", text: "Radiografía lumbar en dos proyecciones y derivación preferente a cirugía de columna para valorar la artrodesis, ya que el dolor lumbar agudo suele deberse a inestabilidad vertebral." },
     ],
     correctOptionId: "B",
     explanation:
@@ -35,9 +35,9 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 58 años, miope magno, refiere desde ayer la aparición de numerosas «moscas volantes», destellos luminosos y, desde hace unas horas, una sombra como una cortina que avanza desde la parte superior del campo visual del ojo derecho. ¿Cuál es la actitud correcta?",
     options: [
-      { id: "A", label: "A", text: "Tranquilizar al paciente: las moscas volantes son benignas." },
-      { id: "B", label: "B", text: "Colirio antibiótico y revisión en un mes." },
-      { id: "C", label: "C", text: "Corticoides sistémicos a dosis altas." },
+      { id: "A", label: "A", text: "Tranquilizar al paciente: las moscas volantes son benignas y propias de la edad avanzada." },
+      { id: "B", label: "B", text: "Colirio antibiótico y revisión programada en la consulta de oftalmología en un mes." },
+      { id: "C", label: "C", text: "Corticoides sistémicos a dosis altas por sospecha de una uveítis posterior aguda." },
       { id: "D", label: "D", text: "Derivación urgente a oftalmología para exploración del fondo de ojo y tratamiento quirúrgico." },
     ],
     correctOptionId: "D",
@@ -60,9 +60,9 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
       "Un hombre de 70 años, hipertenso y con fibrilación auricular, presenta pérdida brusca e indolora de la visión del ojo izquierdo hace una hora. El fondo de ojo muestra una retina blanquecina y edematosa con una «mancha rojo cereza» en la mácula. ¿Cuál es el diagnóstico y qué estudio no debe olvidarse?",
     options: [
       { id: "A", label: "A", text: "Oclusión de la arteria central de la retina; estudio etiológico urgente como un ictus (fuente embólica) y descartar arteritis de células gigantes (VSG, PCR)." },
-      { id: "B", label: "B", text: "Glaucoma agudo; medir la presión intraocular exclusivamente." },
-      { id: "C", label: "C", text: "Desprendimiento de retina; no precisa estudio sistémico." },
-      { id: "D", label: "D", text: "Neuritis óptica; resonancia para descartar esclerosis múltiple." },
+      { id: "B", label: "B", text: "Glaucoma agudo de ángulo cerrado; medir la presión intraocular exclusivamente y tratar con hipotensores, sin estudio vascular." },
+      { id: "C", label: "C", text: "Desprendimiento de retina regmatógeno; no precisa estudio sistémico, solo cirugía vitreorretiniana programada." },
+      { id: "D", label: "D", text: "Neuritis óptica desmielinizante; resonancia magnética cerebral para descartar esclerosis múltiple y corticoides intravenosos, con estudio cardiovascular completo." },
     ],
     correctOptionId: "A",
     explanation:
@@ -131,9 +131,9 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un niño de 18 meses presenta fiebre de 39 °C, irritabilidad y otalgia de 24 horas. La otoscopia muestra ambos tímpanos abombados y eritematosos. No tiene alergias. ¿Cuál es el tratamiento más adecuado?",
     options: [
-      { id: "A", label: "A", text: "Gotas óticas de ciprofloxacino." },
-      { id: "B", label: "B", text: "Azitromicina oral 3 días como primera elección." },
-      { id: "C", label: "C", text: "Solo observación durante 7 días." },
+      { id: "A", label: "A", text: "Gotas óticas de ciprofloxacino durante 7 días en el oído afectado." },
+      { id: "B", label: "B", text: "Azitromicina oral durante 3 días como primera elección antibiótica." },
+      { id: "C", label: "C", text: "Solo observación durante 7 días, sin analgesia ni antibióticos." },
       { id: "D", label: "D", text: "Amoxicilina oral a dosis altas (80-90 mg/kg/día) y analgesia." },
     ],
     correctOptionId: "D",
@@ -156,9 +156,9 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 40 años se despierta con la hemicara derecha paralizada: no puede cerrar el ojo, arrugar la frente ni elevar la comisura bucal derecha. No hay vesículas en el pabellón auricular ni otros déficits neurológicos. ¿Cuál es el tratamiento de elección?",
     options: [
       { id: "A", label: "A", text: "Corticoides orales iniciados en las primeras 72 horas y protección ocular (lágrimas artificiales, oclusión nocturna)." },
-      { id: "B", label: "B", text: "Descompresión quirúrgica urgente del nervio facial." },
-      { id: "C", label: "C", text: "Trombolisis intravenosa por sospecha de ictus." },
-      { id: "D", label: "D", text: "Aciclovir intravenoso en monoterapia." },
+      { id: "B", label: "B", text: "Descompresión quirúrgica urgente del nervio facial en su trayecto intratemporal, para evitar secuelas permanentes." },
+      { id: "C", label: "C", text: "Trombolisis intravenosa por sospecha de ictus isquémico, ya que la parálisis facial es de instauración brusca." },
+      { id: "D", label: "D", text: "Aciclovir intravenoso en monoterapia a dosis altas, ya que la causa es siempre el virus herpes simple." },
     ],
     correctOptionId: "A",
     explanation:
@@ -179,10 +179,10 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 62 años presenta crisis de vértigo de segundos de duración al girarse en la cama o al mirar hacia arriba, sin hipoacusia ni acúfenos. La maniobra de Dix-Hallpike hacia la derecha provoca, tras una breve latencia, un nistagmo torsional agotable. ¿Cuál es el tratamiento de elección?",
     options: [
-      { id: "A", label: "A", text: "Sedantes vestibulares de forma prolongada." },
-      { id: "B", label: "B", text: "Resonancia magnética cerebral urgente." },
+      { id: "A", label: "A", text: "Sedantes vestibulares de forma prolongada (sulpirida o betahistina)." },
+      { id: "B", label: "B", text: "Resonancia magnética cerebral urgente para descartar un ictus." },
       { id: "C", label: "C", text: "Maniobra de reposición de partículas (maniobra de Epley)." },
-      { id: "D", label: "D", text: "Corticoides intratimpánicos." },
+      { id: "D", label: "D", text: "Corticoides intratimpánicos por sospecha de enfermedad de Ménière." },
     ],
     correctOptionId: "C",
     explanation:
@@ -203,10 +203,10 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 45 años consulta por un nevus en la espalda que ha crecido en los últimos meses. Mide 9 mm, es asimétrico, de bordes irregulares y con varios tonos de marrón y negro. ¿Cuál es la actitud más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Crioterapia de la lesión." },
+      { id: "A", label: "A", text: "Crioterapia de la lesión pigmentada con nitrógeno líquido, sin estudio histológico previo." },
       { id: "B", label: "B", text: "Extirpación completa de la lesión con un margen estrecho (biopsia escisional) para estudio histológico." },
-      { id: "C", label: "C", text: "Biopsia por afeitado superficial de la parte más oscura." },
-      { id: "D", label: "D", text: "Control fotográfico en 12 meses." },
+      { id: "C", label: "C", text: "Biopsia por afeitado superficial de la parte más oscura de la lesión para un diagnóstico rápido y cómodo." },
+      { id: "D", label: "D", text: "Control fotográfico y dermatoscópico de la lesión en 12 meses, sin extirparla." },
     ],
     correctOptionId: "B",
     explanation:
@@ -227,9 +227,9 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 35 años tiene psoriasis en placas que afecta al 25% de la superficie corporal, con gran impacto en su calidad de vida, pese al tratamiento tópico correcto con corticoides y análogos de la vitamina D. No tiene comorbilidades relevantes. ¿Cuál es el siguiente escalón terapéutico más adecuado?",
     options: [
-      { id: "A", label: "A", text: "Corticoides orales a dosis altas de forma prolongada." },
-      { id: "B", label: "B", text: "Antibióticos orales durante 3 meses." },
-      { id: "C", label: "C", text: "Aumentar la potencia del corticoide tópico y aplicarlo en oclusión en todo el cuerpo." },
+      { id: "A", label: "A", text: "Corticoides orales a dosis altas de forma prolongada hasta el blanqueamiento completo de las placas, con retirada progresiva." },
+      { id: "B", label: "B", text: "Antibióticos orales (tetraciclinas) durante 3 meses por sospecha de sobreinfección estreptocócica de las placas." },
+      { id: "C", label: "C", text: "Aumentar la potencia del corticoide tópico y aplicarlo en oclusión en todo el cuerpo de forma continuada durante varios meses, sin necesidad de tratamiento sistémico." },
       { id: "D", label: "D", text: "Fototerapia o tratamiento sistémico convencional (por ejemplo, metotrexato), reservando los biológicos si fracasan o están contraindicados." },
     ],
     correctOptionId: "D",

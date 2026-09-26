@@ -12,9 +12,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 68 años acude por dolor torácico opresivo en reposo, de 40 minutos de evolución. El ECG no muestra elevación del ST, pero sí descenso del ST de 1.5 mm en derivaciones precordiales. La troponina está elevada. Presenta angina recurrente pese al tratamiento médico inicial y cambios dinámicos del ST. ¿Cuál es la estrategia más apropiada?",
     options: [
       { id: "A", label: "A", text: "Síndrome coronario agudo sin elevación del ST (SCASEST) de alto riesgo (angina recurrente, cambios dinámicos del ST, troponina elevada); indica estrategia invasiva precoz (coronariografía dentro de las primeras 24 horas), junto con doble antiagregación y anticoagulación." },
-      { id: "B", label: "B", text: "Manejo exclusivamente conservador con tratamiento médico, sin necesidad de coronariografía, dado que no hay elevación del segmento ST en el ECG." },
-      { id: "C", label: "C", text: "Fibrinolisis intravenosa inmediata, de forma análoga al manejo del IAMCEST." },
-      { id: "D", label: "D", text: "Alta hospitalaria con manejo ambulatorio y coronariografía programada en varias semanas, dado que la ausencia de elevación del ST indica bajo riesgo." },
+      { id: "B", label: "B", text: "Manejo exclusivamente conservador con tratamiento médico optimizado (antiagregación simple, nitratos y betabloqueantes), sin necesidad de coronariografía, dado que no hay elevación del segmento ST en el ECG y la troponina solo está discretamente elevada, con una prueba de esfuerzo antes del alta." },
+      { id: "C", label: "C", text: "Fibrinolisis intravenosa inmediata con tenecteplasa, de forma análoga al manejo del IAMCEST, dado que la troponina elevada confirma la necrosis miocárdica en curso y el tratamiento de reperfusión precoz reduce el tamaño del infarto." },
+      { id: "D", label: "D", text: "Alta hospitalaria con manejo ambulatorio y coronariografía programada en varias semanas, dado que la ausencia de elevación del ST indica un bajo riesgo de eventos, manteniendo mientras tanto doble antiagregación y control en consulta de cardiología." },
     ],
     correctOptionId: "A",
     explanation:
@@ -36,9 +36,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 45 años, mientras comía, presenta de forma súbita incapacidad para hablar, toser o respirar, llevándose las manos al cuello, con cianosis progresiva. Permanece consciente. ¿Cuál es la actuación inmediata más apropiada?",
     options: [
       { id: "A", label: "A", text: "Realizar compresiones abdominales bruscas (maniobra de Heimlich) mientras el paciente permanezca consciente, y si pierde la conciencia, iniciar reanimación cardiopulmonar con compresiones torácicas, revisando la boca en busca del cuerpo extraño antes de las ventilaciones de rescate." },
-      { id: "B", label: "B", text: "Animar al paciente a toser con fuerza de forma indefinida, sin realizar ninguna maniobra manual, dado que la tos siempre es más eficaz que cualquier maniobra externa." },
-      { id: "C", label: "C", text: "Realizar una traqueotomía de urgencia como primera medida, sin ensayar antes ninguna maniobra de desobstrucción manual." },
-      { id: "D", label: "D", text: "Administrar oxígeno suplementario únicamente, sin ninguna maniobra de desobstrucción, hasta que el cuerpo extraño se expulse espontáneamente." },
+      { id: "B", label: "B", text: "Animar al paciente a toser con fuerza de forma indefinida, sin realizar ninguna maniobra manual, dado que la tos siempre es más eficaz que cualquier maniobra externa, incluso cuando el paciente ya no puede hablar ni emitir sonidos, y llamar a los servicios de emergencia si pierde la conciencia." },
+      { id: "C", label: "C", text: "Realizar una traqueotomía o cricotiroidotomía de urgencia como primera medida, sin ensayar antes ninguna maniobra de desobstrucción manual, ya que las compresiones abdominales pueden desplazar el cuerpo extraño hacia la vía aérea distal y producir lesiones de las vísceras abdominales." },
+      { id: "D", label: "D", text: "Administrar oxígeno suplementario a alto flujo con mascarilla únicamente, sin ninguna maniobra de desobstrucción, hasta que el cuerpo extraño se expulse espontáneamente, colocando al paciente sentado e inclinado hacia delante y vigilando la saturación de oxígeno con pulsioximetría continua." },
     ],
     correctOptionId: "A",
     explanation:
@@ -60,9 +60,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 30 años, sin hepatopatía previa conocida, presenta ictericia progresiva, confusión de inicio reciente (desorientación) y coagulopatía (INR 2.8), en el contexto de una posible sobreingesta de paracetamol hace 3 días. No hay antecedente de enfermedad hepática crónica. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "El cuadro es compatible con insuficiencia hepática aguda (fallo hepático fulminante); requiere ingreso urgente, idealmente en una unidad especializada con posibilidad de trasplante hepático, iniciar N-acetilcisteína (que puede tener beneficio incluso más allá de la etiología por paracetamol), y monitorización estrecha de la función neurológica por el riesgo de edema cerebral." },
-      { id: "B", label: "B", text: "Manejo ambulatorio con controles analíticos periódicos, dado que la coagulopatía e ictericia en una mujer joven previamente sana rara vez tienen relevancia clínica grave." },
-      { id: "C", label: "C", text: "Debe realizarse una biopsia hepática percutánea de forma prioritaria antes de cualquier otra medida terapéutica, independientemente del riesgo de sangrado por la coagulopatía." },
-      { id: "D", label: "D", text: "Iniciar tratamiento con lactulosa como única medida, sin necesidad de valorar el ingreso en una unidad especializada ni el riesgo de complicaciones neurológicas graves." },
+      { id: "B", label: "B", text: "Manejo ambulatorio con controles analíticos periódicos en su centro de salud, dado que la coagulopatía y la ictericia en una mujer joven previamente sana rara vez tienen relevancia clínica grave y suelen deberse a una hepatitis viral aguda de curso benigno y autolimitado, que no precisa ningún tratamiento específico ni ingreso hospitalario, sino reposo y evitar el alcohol." },
+      { id: "C", label: "C", text: "Debe realizarse una biopsia hepática percutánea de forma prioritaria antes de cualquier otra medida terapéutica, independientemente del riesgo de sangrado por la coagulopatía, ya que el tratamiento depende por completo de la causa histológica del daño hepático, y la N-acetilcisteína solo es útil en la intoxicación por paracetamol confirmada con niveles plasmáticos." },
+      { id: "D", label: "D", text: "Iniciar tratamiento con lactulosa oral como única medida, sin necesidad de valorar el ingreso en una unidad especializada ni el riesgo de complicaciones neurológicas graves, dado que la paciente está consciente y orientada y la encefalopatía todavía no está establecida, lo que indica que la función hepática se recuperará sin necesidad de trasplante." },
     ],
     correctOptionId: "A",
     explanation:
@@ -84,9 +84,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 42 años presenta episodios recurrentes de cefalea intensa, palpitaciones y sudoración profusa, con picos de presión arterial de hasta 220/130 mmHg durante los episodios, que se resuelven espontáneamente. Se sospecha feocromocitoma, confirmado posteriormente con metanefrinas plasmáticas elevadas. Antes de la cirugía programada para su resección, ¿cuál es el manejo farmacológico preoperatorio correcto?",
     options: [
       { id: "A", label: "A", text: "Iniciar bloqueo alfa-adrenérgico (por ejemplo, fenoxibenzamina) varios días antes de la cirugía, y solo después, si es necesario para controlar la taquicardia refleja, añadir un betabloqueante; nunca iniciar el betabloqueante antes que el bloqueo alfa." },
-      { id: "B", label: "B", text: "Iniciar un betabloqueante en monoterapia como preparación preoperatoria, dado que reduce eficazmente tanto la presión arterial como la frecuencia cardíaca en el feocromocitoma." },
-      { id: "C", label: "C", text: "No se requiere ninguna preparación farmacológica específica antes de la cirugía de un feocromocitoma, dado que el riesgo de crisis hipertensiva intraoperatoria es mínimo." },
-      { id: "D", label: "D", text: "Iniciar un diurético de asa como primera medida para el control de la presión arterial antes de la cirugía." },
+      { id: "B", label: "B", text: "Iniciar un betabloqueante en monoterapia (propranolol) como preparación preoperatoria varios días antes de la intervención, dado que reduce eficazmente tanto la presión arterial como la frecuencia cardíaca en el feocromocitoma y protege frente a las arritmias intraoperatorias, sin necesidad de añadir otros antihipertensivos antes de la suprarrenalectomía." },
+      { id: "C", label: "C", text: "No se requiere ninguna preparación farmacológica específica antes de la cirugía de un feocromocitoma, dado que el riesgo de crisis hipertensiva intraoperatoria es mínimo con la anestesia actual." },
+      { id: "D", label: "D", text: "Iniciar un diurético de asa como primera medida para el control de la presión arterial antes de la cirugía, dado que la hipertensión del feocromocitoma se debe a la retención de volumen." },
     ],
     correctOptionId: "A",
     explanation:
@@ -108,9 +108,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 70 años presenta un episodio de debilidad en el brazo derecho y dificultad para hablar, que se resuelve completamente en 20 minutos, sin dejar ningún déficit neurológico residual a su llegada a Urgencias. ¿Cuál es la actuación más apropiada tras confirmar que se trata de un ataque isquémico transitorio (AIT)?",
     options: [
       { id: "A", label: "A", text: "Dado el alto riesgo de ictus establecido en los días siguientes a un AIT (especialmente en las primeras 48 horas), debe realizarse una evaluación urgente (idealmente el mismo día): neuroimagen, estudio de troncos supraaórticos/carotídeo y valoración cardiológica, iniciando antiagregación (con frecuencia doble antiagregación de corta duración en casos seleccionados) sin demora." },
-      { id: "B", label: "B", text: "Dado que los síntomas se resolvieron completamente sin dejar déficit residual, puede darse de alta al paciente sin ningún estudio adicional, programando una revisión ambulatoria en varias semanas." },
-      { id: "C", label: "C", text: "Debe administrarse fibrinolisis intravenosa de inmediato, de forma análoga al ictus isquémico establecido, dado que el mecanismo subyacente es el mismo." },
-      { id: "D", label: "D", text: "El AIT no se asocia a un riesgo significativo de ictus posterior, por lo que no está justificada una evaluación urgente." },
+      { id: "B", label: "B", text: "Dado que los síntomas se resolvieron completamente sin dejar déficit residual, puede darse de alta al paciente sin ningún estudio adicional, con ácido acetilsalicílico y una revisión ambulatoria programada en la consulta de neurología en varias semanas, ya que un AIT con recuperación completa indica que el territorio cerebral afectado se ha recuperado sin secuelas." },
+      { id: "C", label: "C", text: "Debe administrarse fibrinolisis intravenosa con alteplasa de inmediato, de forma análoga al ictus isquémico establecido, dado que el mecanismo subyacente es el mismo y el tratamiento precoz evita la recurrencia de los síntomas, siempre que el paciente se encuentre dentro de las primeras 4,5 horas desde el inicio del episodio y no presente contraindicaciones." },
+      { id: "D", label: "D", text: "El AIT no se asocia a un riesgo significativo de ictus posterior, por lo que no está justificada una evaluación urgente y basta con el control de los factores de riesgo vascular por parte de su médico de familia en las siguientes semanas, sin necesidad de neuroimagen, de estudio de troncos supraaórticos ni de valoración cardiológica." },
     ],
     correctOptionId: "A",
     explanation:
@@ -132,9 +132,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 55 años presenta sinusitis crónica con costras nasales, hemoptisis, y en la analítica se observa deterioro progresivo de la función renal con hematuria y proteinuria. El estudio de anticuerpos ANCA (c-ANCA, antiproteinasa 3) es positivo a título alto. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "El cuadro es compatible con granulomatosis con poliangeítis (vasculitis asociada a ANCA), con afectación renal (probable glomerulonefritis rápidamente progresiva) y pulmonar; requiere tratamiento inmunosupresor urgente (corticoides a dosis altas junto con ciclofosfamida o rituximab) para inducir la remisión, dado el riesgo de progresión rápida a fracaso renal y hemorragia pulmonar grave." },
-      { id: "B", label: "B", text: "Manejo exclusivamente con antibioterapia prolongada, dado que la sinusitis crónica y la hemoptisis se explican mejor por un proceso infeccioso persistente que por una vasculitis sistémica." },
-      { id: "C", label: "C", text: "Debe iniciarse tratamiento sintomático únicamente, sin inmunosupresión, dado que la positividad de ANCA no tiene relevancia clínica sin biopsia confirmatoria previa en todos los casos." },
-      { id: "D", label: "D", text: "El manejo es exclusivamente quirúrgico, con cirugía nasal reconstructiva como prioridad, sin necesidad de tratamiento sistémico." },
+      { id: "B", label: "B", text: "Manejo exclusivamente con antibioterapia prolongada de amplio espectro durante al menos 6 semanas, dado que la sinusitis crónica, las lesiones pulmonares y la hemoptisis se explican mejor por un proceso infeccioso persistente (por ejemplo, una tuberculosis o una infección fúngica) que por una vasculitis sistémica, y reevaluar la función renal al finalizar el tratamiento antibiótico." },
+      { id: "C", label: "C", text: "Debe iniciarse tratamiento sintomático únicamente, sin inmunosupresión, dado que la positividad de los ANCA no tiene relevancia clínica sin una biopsia confirmatoria previa en todos los casos, y la inmunosupresión empírica podría agravar una posible infección subyacente, por lo que es preferible esperar a la histología renal o nasal antes de cualquier tratamiento específico." },
+      { id: "D", label: "D", text: "El manejo es exclusivamente quirúrgico, con cirugía nasal reconstructiva y drenaje de los senos paranasales como prioridad, sin necesidad de tratamiento sistémico, dado que la afectación de la vía aérea superior es el origen del cuadro y su corrección resuelve de forma secundaria la afectación renal y pulmonar asociada sin necesidad de corticoides." },
     ],
     correctOptionId: "A",
     explanation:
@@ -156,9 +156,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Un niño de 8 años, con hemofilia A conocida (déficit de factor VIII), presenta dolor, tumefacción y limitación funcional de la rodilla derecha tras un golpe leve durante el juego, sugestivo de hemartrosis. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Administrar tratamiento de reposición con concentrado de factor VIII lo antes posible, ante la sospecha clínica de hemartrosis, sin demorar el tratamiento esperando confirmación por imagen, dado que el tratamiento precoz reduce el daño articular a largo plazo; evitar antiinflamatorios no esteroideos e inyecciones intramusculares." },
-      { id: "B", label: "B", text: "Manejo exclusivamente con reposo y hielo local, sin reposición de factor VIII, reservando este tratamiento únicamente para hemorragias con riesgo vital." },
-      { id: "C", label: "C", text: "Administrar ácido acetilsalicílico como analgésico de elección, dado su buen perfil de eficacia para el dolor articular en este contexto." },
-      { id: "D", label: "D", text: "Realizar artrocentesis evacuadora de entrada como primera medida terapéutica, sin necesidad de reposición del factor deficitario." },
+      { id: "B", label: "B", text: "Manejo exclusivamente con reposo, hielo local y vendaje compresivo, sin reposición de factor VIII, reservando este tratamiento únicamente para hemorragias con riesgo vital o intracraneales, dado su elevado coste y el riesgo de desarrollar inhibidores frente al factor VIII, y valorar la reposición solo si la tumefacción articular no mejora en 24-48 horas." },
+      { id: "C", label: "C", text: "Administrar ácido acetilsalicílico como analgésico de elección, dado su buen perfil de eficacia para el dolor articular y su efecto antiinflamatorio en este contexto, junto con reposo e inmovilización de la articulación afectada, reservando el concentrado de factor VIII para cuando la resonancia magnética confirme la hemartrosis." },
+      { id: "D", label: "D", text: "Realizar una artrocentesis evacuadora de entrada como primera medida terapéutica para aliviar el dolor y la tensión articular, sin necesidad de reposición del factor deficitario antes de la punción, ya que la extracción de la sangre intraarticular es por sí misma el tratamiento definitivo y evita el daño del cartílago en el paciente hemofílico." },
     ],
     correctOptionId: "A",
     explanation:
@@ -180,9 +180,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 26 años acude a Urgencias por primera vez con palpitaciones, dolor torácico, disnea, mareo y sensación de muerte inminente, de inicio súbito y máxima intensidad en pocos minutos, sin antecedentes médicos conocidos. ¿Cuál es la actuación más apropiada en esta primera presentación?",
     options: [
       { id: "A", label: "A", text: "Realizar una evaluación adecuada para descartar causas orgánicas potencialmente graves (fundamentalmente cardíacas, con ECG y troponina si está indicado, y otras causas según la sospecha clínica) antes de atribuir el cuadro a una crisis de pánico, especialmente al tratarse de una primera presentación sin diagnóstico previo de trastorno de pánico." },
-      { id: "B", label: "B", text: "Atribuir el cuadro a una crisis de pánico de inmediato, sin ninguna evaluación orgánica, dado que la combinación de síntomas descrita es exclusiva de los trastornos de ansiedad." },
-      { id: "C", label: "C", text: "Administrar una benzodiacepina de inmediato sin ninguna evaluación previa, dado que la respuesta rápida a esta confirmaría por sí sola el diagnóstico de crisis de pánico." },
-      { id: "D", label: "D", text: "Dar de alta sin ninguna valoración, indicando a la paciente que regrese únicamente si los síntomas empeoran." },
+      { id: "B", label: "B", text: "Atribuir el cuadro a una crisis de pánico de inmediato, sin ninguna evaluación orgánica, dado que la combinación de palpitaciones, disnea, parestesias y sensación de muerte inminente es exclusiva de los trastornos de ansiedad, e iniciar un inhibidor selectivo de la recaptación de serotonina con derivación preferente a salud mental." },
+      { id: "C", label: "C", text: "Administrar una benzodiacepina sublingual de inmediato sin ninguna evaluación previa, dado que la respuesta rápida y completa a esta confirmaría por sí sola el diagnóstico de crisis de pánico y descartaría una causa orgánica, evitando pruebas innecesarias como el electrocardiograma o la troponina en una mujer joven y sin factores de riesgo cardiovascular conocidos." },
+      { id: "D", label: "D", text: "Dar de alta sin ninguna valoración ni prueba complementaria, indicando a la paciente que regrese únicamente si los síntomas empeoran, ya que la mayoría de estos episodios se resuelven solos en menos de una hora y no dejan secuelas en pacientes jóvenes sin antecedentes." },
     ],
     correctOptionId: "A",
     explanation:
@@ -204,9 +204,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Un lactante de 25 días de vida es traído a Urgencias por fiebre de 38.2°C, sin foco evidente al examen físico, con buen aspecto general y alimentándose adecuadamente. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Dado que se trata de un neonato (menor de 28 días) con fiebre sin foco, debe realizarse un estudio séptico completo (hemocultivo, urocultivo/análisis de orina, y valorar punción lumbar), ingreso hospitalario, e inicio de antibioterapia empírica, independientemente del buen aspecto clínico, por el alto riesgo de infección bacteriana grave en este grupo de edad." },
-      { id: "B", label: "B", text: "Dado el buen aspecto general del lactante y su adecuada alimentación, puede manejarse de forma ambulatoria sin ningún estudio complementario, con revisión en 24-48 horas." },
-      { id: "C", label: "C", text: "Debe iniciarse antitérmico únicamente, sin ningún estudio microbiológico, dado que la fiebre sin foco en el lactante siempre corresponde a un proceso viral autolimitado." },
-      { id: "D", label: "D", text: "El manejo en el neonato con fiebre sin foco es idéntico al del lactante mayor de 3 meses con buen aspecto, permitiendo un abordaje expectante sin pruebas complementarias inmediatas." },
+      { id: "B", label: "B", text: "Dado el buen aspecto general del recién nacido, su adecuada alimentación y la ausencia de signos de alarma, puede manejarse de forma ambulatoria sin ningún estudio complementario, con revisión por su pediatra en 24-48 horas y la indicación de volver si empeora el estado general, rechaza las tomas o aparecen vómitos o irritabilidad llamativa." },
+      { id: "C", label: "C", text: "Debe iniciarse únicamente un antitérmico (paracetamol) por vía oral, sin ningún estudio microbiológico, dado que la fiebre sin foco en el lactante pequeño siempre corresponde a un proceso viral autolimitado y el estudio séptico expone al neonato a pruebas invasivas innecesarias como la punción lumbar o el sondaje vesical para obtener orina." },
+      { id: "D", label: "D", text: "El manejo en el neonato con fiebre sin foco es idéntico al del lactante mayor de 3 meses con buen aspecto, permitiendo un abordaje expectante en domicilio sin pruebas complementarias inmediatas, y reservando el estudio séptico para cuando la fiebre dure más de 48-72 horas o aparezca un foco claro de infección en la exploración." },
     ],
     correctOptionId: "A",
     explanation:
@@ -228,9 +228,9 @@ export const MIR_2026_91_100_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 72 años, con diverticulosis colónica conocida, presenta rectorragia indolora, de sangre roja brillante mezclada con las heces, de varias horas de evolución, sin dolor abdominal significativo. Se encuentra hemodinámicamente estable tras la reposición inicial de volumen. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Tras la estabilización hemodinámica inicial, realizar colonoscopia (una vez sea posible una preparación intestinal adecuada) como prueba diagnóstica y potencialmente terapéutica de elección; en caso de sangrado activo masivo que no permita la colonoscopia, considerar angio-TC o angiografía con posible embolización." },
-      { id: "B", label: "B", text: "Realizar endoscopia digestiva alta como primera prueba diagnóstica, dado que la mayoría de los sangrados digestivos, independientemente de sus características clínicas, se originan en el tracto digestivo superior." },
-      { id: "C", label: "C", text: "Manejo exclusivamente expectante sin ningún estudio diagnóstico, dado que la hemorragia digestiva baja diverticular siempre requiere cirugía de entrada." },
-      { id: "D", label: "D", text: "Debe realizarse colectomía urgente de entrada, sin intentar antes ninguna prueba diagnóstica ni tratamiento endoscópico o angiográfico." },
+      { id: "B", label: "B", text: "Realizar una endoscopia digestiva alta urgente como primera prueba diagnóstica, dado que la mayoría de los sangrados digestivos, independientemente de sus características clínicas y del aspecto de la sangre expulsada, se originan en el tracto digestivo superior, y solo si es normal plantear otras exploraciones del tubo digestivo inferior." },
+      { id: "C", label: "C", text: "Manejo exclusivamente expectante sin ningún estudio diagnóstico ni endoscópico, dado que la hemorragia diverticular cede de forma espontánea en la mayoría de los casos, dando el alta al paciente en cuanto se normalice la tensión arterial y remitiéndolo a su médico de familia para control analítico en una semana." },
+      { id: "D", label: "D", text: "Debe realizarse una colectomía subtotal urgente de entrada, sin intentar antes ninguna prueba diagnóstica ni tratamiento endoscópico o angiográfico, dado que el origen del sangrado en el colon no puede localizarse con fiabilidad y el riesgo de resangrado es muy alto en los pacientes de edad avanzada con diverticulosis extensa." },
     ],
     correctOptionId: "A",
     explanation:

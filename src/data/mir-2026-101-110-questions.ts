@@ -35,10 +35,10 @@ export const MIR_2026_101_110_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una prueba de cribado con sensibilidad del 95% y especificidad del 90%, validada en consultas hospitalarias, se quiere aplicar a la población general, donde la prevalencia de la enfermedad es mucho menor. ¿Qué cabe esperar al aplicarla en la población general?",
     options: [
-      { id: "A", label: "A", text: "Disminuirán tanto la sensibilidad como la especificidad de la prueba." },
-      { id: "B", label: "B", text: "Aumentará el valor predictivo positivo y disminuirá el valor predictivo negativo." },
+      { id: "A", label: "A", text: "Disminuirán tanto la sensibilidad como la especificidad de la prueba, porque la prueba detecta peor la enfermedad cuando es menos frecuente." },
+      { id: "B", label: "B", text: "Aumentará el valor predictivo positivo y disminuirá el valor predictivo negativo, sin cambios en la sensibilidad." },
       { id: "C", label: "C", text: "Disminuirá el valor predictivo positivo y aumentará el valor predictivo negativo, sin cambios en la sensibilidad ni en la especificidad." },
-      { id: "D", label: "D", text: "Los valores predictivos no se modificarán, porque dependen solo de la sensibilidad y la especificidad." },
+      { id: "D", label: "D", text: "Los valores predictivos no se modificarán, porque dependen solo de la sensibilidad y de la especificidad de la prueba." },
     ],
     correctOptionId: "C",
     explanation:
@@ -107,10 +107,10 @@ export const MIR_2026_101_110_QUESTIONS: TrainingQuestion[] = [
     statement:
       "En un ensayo que compara dos antihipertensivos se obtiene una diferencia en la presión arterial sistólica con p = 0,03. ¿Cuál es la interpretación correcta de este resultado?",
     options: [
-      { id: "A", label: "A", text: "Hay un 3% de probabilidad de que la hipótesis nula sea cierta." },
-      { id: "B", label: "B", text: "Hay un 97% de probabilidad de que el nuevo fármaco sea mejor." },
+      { id: "A", label: "A", text: "Hay un 3% de probabilidad de que la hipótesis nula sea cierta y, por tanto, un 97% de que la alternativa sea verdadera, dada la diferencia observada." },
+      { id: "B", label: "B", text: "Hay un 97% de probabilidad de que el nuevo fármaco sea mejor que el control en la población de estudio." },
       { id: "C", label: "C", text: "Si no hubiera diferencia real entre los fármacos, la probabilidad de observar una diferencia igual o mayor que la encontrada sería del 3%." },
-      { id: "D", label: "D", text: "La diferencia encontrada es clínicamente relevante." },
+      { id: "D", label: "D", text: "La diferencia encontrada es clínicamente relevante y justifica el cambio de tratamiento en la práctica." },
     ],
     correctOptionId: "C",
     explanation:
@@ -155,9 +155,9 @@ export const MIR_2026_101_110_QUESTIONS: TrainingQuestion[] = [
     statement:
       "En un estudio de casos y controles sobre malformaciones congénitas, las madres de niños con malformaciones recuerdan y declaran con más detalle la toma de medicamentos durante el embarazo que las madres de niños sanos. ¿Qué sesgo se está produciendo?",
     options: [
-      { id: "A", label: "A", text: "Sesgo de selección por pérdidas en el seguimiento." },
-      { id: "B", label: "B", text: "Factor de confusión." },
-      { id: "C", label: "C", text: "Sesgo de Berkson." },
+      { id: "A", label: "A", text: "Sesgo de selección por pérdidas diferenciales en el seguimiento de los grupos." },
+      { id: "B", label: "B", text: "Factor de confusión no controlado en el análisis estadístico del estudio." },
+      { id: "C", label: "C", text: "Sesgo de Berkson (sesgo de admisión hospitalaria)." },
       { id: "D", label: "D", text: "Sesgo de memoria (de recuerdo), un tipo de sesgo de información." },
     ],
     correctOptionId: "D",
@@ -180,9 +180,9 @@ export const MIR_2026_101_110_QUESTIONS: TrainingQuestion[] = [
       "En un estudio de cohortes, 30 de cada 100 fumadores y 10 de cada 100 no fumadores desarrollan una enfermedad durante el seguimiento. ¿Qué proporción de los casos que aparecen en los fumadores puede atribuirse al tabaco?",
     options: [
       { id: "A", label: "A", text: "Aproximadamente el 67%." },
-      { id: "B", label: "B", text: "El 20%." },
-      { id: "C", label: "C", text: "El 33%." },
-      { id: "D", label: "D", text: "El 300%." },
+      { id: "B", label: "B", text: "Aproximadamente el 20%." },
+      { id: "C", label: "C", text: "Aproximadamente el 33%." },
+      { id: "D", label: "D", text: "Aproximadamente el 300%." },
     ],
     correctOptionId: "A",
     explanation:
@@ -228,9 +228,9 @@ export const MIR_2026_101_110_QUESTIONS: TrainingQuestion[] = [
       "Un ensayo clínico que compara un nuevo fármaco con placebo obtiene un riesgo relativo de ictus de 0,80, con un intervalo de confianza del 95% de 0,62 a 1,03. ¿Cuál es la interpretación correcta?",
     options: [
       { id: "A", label: "A", text: "El fármaco reduce de forma estadísticamente significativa el riesgo de ictus en un 20%." },
-      { id: "B", label: "B", text: "El fármaco aumenta el riesgo de ictus." },
+      { id: "B", label: "B", text: "El fármaco aumenta el riesgo de ictus, ya que el límite superior del intervalo es mayor de 1." },
       { id: "C", label: "C", text: "La diferencia no es estadísticamente significativa, porque el intervalo de confianza incluye el 1." },
-      { id: "D", label: "D", text: "Queda demostrado que el fármaco no tiene ningún efecto sobre el ictus." },
+      { id: "D", label: "D", text: "Queda demostrado que el fármaco no tiene ningún efecto real sobre el riesgo de ictus." },
     ],
     correctOptionId: "C",
     explanation:

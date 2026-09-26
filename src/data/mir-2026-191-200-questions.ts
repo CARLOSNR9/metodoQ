@@ -11,9 +11,9 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 62 años con diabetes tipo 2 y un infarto de miocardio previo está en tratamiento con metformina a dosis plenas y dieta. Su hemoglobina glicada es del 7,4% y el filtrado glomerular es normal. ¿Cuál es el siguiente paso terapéutico más adecuado?",
     options: [
-      { id: "A", label: "A", text: "Añadir una sulfonilurea por su bajo coste." },
-      { id: "B", label: "B", text: "Suspender la metformina y comenzar insulina basal." },
-      { id: "C", label: "C", text: "Mantener el mismo tratamiento, ya que la hemoglobina glicada es casi normal." },
+      { id: "A", label: "A", text: "Añadir una sulfonilurea (glimepirida) por su bajo coste y su potente efecto sobre la hemoglobina glicada." },
+      { id: "B", label: "B", text: "Suspender la metformina y comenzar insulina basal nocturna para intensificar el control glucémico del paciente." },
+      { id: "C", label: "C", text: "Mantener el mismo tratamiento con metformina, ya que la hemoglobina glicada es casi normal y no hay complicaciones." },
       { id: "D", label: "D", text: "Añadir un agonista del receptor de GLP-1 o un inhibidor de SGLT2 con beneficio cardiovascular demostrado." },
     ],
     correctOptionId: "D",
@@ -36,9 +36,9 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
       "Un hombre de 64 años presenta astenia. La analítica muestra hemoglobina de 9,8 g/dl, VCM de 72 fl y ferritina de 6 ng/ml. No refiere sangrados visibles ni síntomas digestivos. ¿Cuál es la actitud más adecuada, además de iniciar hierro oral?",
     options: [
       { id: "A", label: "A", text: "Estudio del tubo digestivo con gastroscopia y colonoscopia." },
-      { id: "B", label: "B", text: "Ninguna prueba adicional: basta con reponer el hierro." },
-      { id: "C", label: "C", text: "Aspirado de médula ósea como primera prueba." },
-      { id: "D", label: "D", text: "Electroforesis de hemoglobinas para descartar talasemia." },
+      { id: "B", label: "B", text: "Ninguna prueba adicional: basta con reponer el hierro por vía oral." },
+      { id: "C", label: "C", text: "Aspirado de médula ósea como primera prueba diagnóstica del paciente." },
+      { id: "D", label: "D", text: "Electroforesis de hemoglobinas para descartar una talasemia minor." },
     ],
     correctOptionId: "A",
     explanation:
@@ -59,9 +59,9 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 70 años consulta por dolor lumbar persistente. La analítica muestra anemia normocítica, calcio de 11,8 mg/dl, creatinina de 2,1 mg/dl y proteínas totales elevadas con un pico monoclonal en el proteinograma. La radiografía muestra lesiones líticas en el cráneo. ¿Qué prueba confirma el diagnóstico?",
     options: [
-      { id: "A", label: "A", text: "Gammagrafía ósea." },
-      { id: "B", label: "B", text: "Determinación de PSA." },
-      { id: "C", label: "C", text: "Biopsia renal." },
+      { id: "A", label: "A", text: "Gammagrafía ósea con tecnecio para confirmar las lesiones líticas del esqueleto, que es la prueba de imagen más sensible para detectarlas." },
+      { id: "B", label: "B", text: "Determinación del PSA sérico y tacto rectal por la sospecha de metástasis óseas de un adenocarcinoma de próstata no diagnosticado." },
+      { id: "C", label: "C", text: "Biopsia renal percutánea para estudiar la causa de la insuficiencia renal y de la proteinuria antes de cualquier otro estudio hematológico." },
       { id: "D", label: "D", text: "Aspirado o biopsia de médula ósea que demuestre ≥ 10% de células plasmáticas clonales, junto con la inmunofijación y las cadenas ligeras libres en suero." },
     ],
     correctOptionId: "D",
@@ -83,10 +83,10 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 45 años presenta desde hace 3 meses dolor e inflamación simétrica de las articulaciones metacarpofalángicas e interfalángicas proximales de ambas manos, con rigidez matutina de más de una hora. El factor reumatoide y los anticuerpos anti-péptidos citrulinados son positivos. ¿Cuál es el tratamiento de inicio más adecuado?",
     options: [
-      { id: "A", label: "A", text: "AINE en monoterapia durante un año antes de valorar otros tratamientos." },
+      { id: "A", label: "A", text: "AINE en monoterapia durante un año antes de valorar otros tratamientos modificadores de la enfermedad." },
       { id: "B", label: "B", text: "Metotrexato de forma precoz (FAME sintético convencional), con corticoides a dosis bajas como puente si es necesario." },
-      { id: "C", label: "C", text: "Un fármaco biológico anti-TNF como primera opción en todos los casos." },
-      { id: "D", label: "D", text: "Corticoides a dosis altas de forma indefinida en monoterapia." },
+      { id: "C", label: "C", text: "Un fármaco biológico anti-TNF como primera opción terapéutica en todos los casos de artritis reumatoide." },
+      { id: "D", label: "D", text: "Corticoides a dosis altas de forma indefinida en monoterapia hasta el control completo de la inflamación." },
     ],
     correctOptionId: "B",
     explanation:
@@ -108,9 +108,9 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 72 años refiere desde hace 6 semanas dolor y rigidez intensos en ambos hombros y caderas, peor por las mañanas, que le impiden peinarse y levantarse de la silla. La fuerza muscular es normal. La VSG es de 68 mm/h y la CK es normal. No tiene cefalea ni alteraciones visuales. ¿Cuál es el tratamiento?",
     options: [
       { id: "A", label: "A", text: "Prednisona a dosis bajas-moderadas (12,5-25 mg/día) con descenso lento durante meses." },
-      { id: "B", label: "B", text: "Prednisona a dosis de 1 mg/kg/día con urgencia por riesgo de ceguera." },
-      { id: "C", label: "C", text: "Metotrexato en monoterapia como primera línea." },
-      { id: "D", label: "D", text: "AINE a demanda; no precisa corticoides." },
+      { id: "B", label: "B", text: "Prednisona a dosis de 1 mg/kg/día con urgencia, por el riesgo inminente de ceguera irreversible." },
+      { id: "C", label: "C", text: "Metotrexato en monoterapia como primera línea para evitar los efectos adversos de los corticoides." },
+      { id: "D", label: "D", text: "AINE a demanda para el dolor y la rigidez de cinturas; no precisa corticoides." },
     ],
     correctOptionId: "A",
     explanation:
@@ -155,10 +155,10 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 60 años, asintomático, presenta un PSA de 7,5 ng/ml confirmado en una segunda determinación. El tacto rectal es normal. ¿Cuál es el siguiente paso más adecuado según las recomendaciones actuales?",
     options: [
-      { id: "A", label: "A", text: "Iniciar tratamiento hormonal de privación androgénica." },
-      { id: "B", label: "B", text: "Gammagrafía ósea como primera prueba." },
+      { id: "A", label: "A", text: "Iniciar tratamiento hormonal de privación androgénica sin confirmación histológica del cáncer." },
+      { id: "B", label: "B", text: "Gammagrafía ósea como primera prueba para descartar metástasis antes de cualquier otra exploración." },
       { id: "C", label: "C", text: "Resonancia magnética multiparamétrica de próstata antes de decidir la biopsia." },
-      { id: "D", label: "D", text: "Prostatectomía radical sin estudio histológico." },
+      { id: "D", label: "D", text: "Prostatectomía radical directamente, sin necesidad de un estudio histológico previo de la próstata." },
     ],
     correctOptionId: "C",
     explanation:
@@ -179,9 +179,9 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un fumador de 62 años presenta una masa pulmonar central con adenopatías mediastínicas voluminosas, hiponatremia euvolémica con osmolalidad urinaria inapropiadamente elevada y debilidad proximal que mejora con el ejercicio repetido. ¿Cuál es el tipo histológico más probable?",
     options: [
-      { id: "A", label: "A", text: "Adenocarcinoma de pulmón." },
+      { id: "A", label: "A", text: "Adenocarcinoma de pulmón periférico con mutación de EGFR." },
       { id: "B", label: "B", text: "Carcinoma de células grandes." },
-      { id: "C", label: "C", text: "Tumor carcinoide típico." },
+      { id: "C", label: "C", text: "Tumor carcinoide típico de localización bronquial." },
       { id: "D", label: "D", text: "Carcinoma microcítico (de células pequeñas)." },
     ],
     correctOptionId: "D",
@@ -204,9 +204,9 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 50 años con un carcinoma ductal infiltrante de mama con sobreexpresión de HER2 va a iniciar tratamiento sistémico que incluye trastuzumab. ¿Qué prueba debe realizarse antes de iniciarlo y periódicamente durante el tratamiento?",
     options: [
       { id: "A", label: "A", text: "Ecocardiograma (o ventriculografía isotópica) para valorar la fracción de eyección del ventrículo izquierdo." },
-      { id: "B", label: "B", text: "Audiometría." },
-      { id: "C", label: "C", text: "Espirometría con difusión." },
-      { id: "D", label: "D", text: "Densitometría ósea." },
+      { id: "B", label: "B", text: "Audiometría seriada antes de cada ciclo para detectar de forma precoz la ototoxicidad acumulativa del tratamiento." },
+      { id: "C", label: "C", text: "Espirometría con difusión de CO para detectar la toxicidad pulmonar del tratamiento." },
+      { id: "D", label: "D", text: "Densitometría ósea por el riesgo de osteoporosis asociado al tratamiento oncológico." },
     ],
     correctOptionId: "A",
     explanation:

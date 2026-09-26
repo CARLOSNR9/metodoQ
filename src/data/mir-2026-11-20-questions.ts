@@ -36,9 +36,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 29 años, con amenorrea de 7 semanas y test de embarazo positivo, acude por dolor abdominal súbito e intenso en fosa ilíaca derecha, con síncope previo al ingreso. Presenta PA 88/54 mmHg, FC 118 lpm y abdomen con signos de irritación peritoneal. La ecografía transvaginal no muestra saco gestacional intrauterino, con líquido libre abundante en pelvis. ¿Cuál es la conducta inmediata más apropiada?",
     options: [
       { id: "A", label: "A", text: "Laparoscopia (o laparotomía si la inestabilidad hemodinámica lo requiere) urgente, tras iniciar reanimación con cristaloides, dado el cuadro compatible con embarazo ectópico roto con hemoperitoneo." },
-      { id: "B", label: "B", text: "Manejo médico ambulatorio con metotrexato, dado que es el tratamiento de elección en el embarazo ectópico." },
-      { id: "C", label: "C", text: "Manejo expectante con determinaciones seriadas de beta-hCG, dado que el diagnóstico ecográfico no es definitivo." },
-      { id: "D", label: "D", text: "Solicitar resonancia magnética pélvica para confirmar la localización exacta del embarazo ectópico antes de decidir el tratamiento." },
+      { id: "B", label: "B", text: "Manejo médico ambulatorio con metotrexato intramuscular y control seriado de beta-hCG, dado que es el tratamiento de elección en todo embarazo ectópico tubárico." },
+      { id: "C", label: "C", text: "Manejo expectante con determinaciones seriadas de beta-hCG cada 48 horas y ecografía de control, dado que el diagnóstico ecográfico todavía no es definitivo." },
+      { id: "D", label: "D", text: "Solicitar resonancia magnética pélvica urgente para confirmar la localización exacta del embarazo ectópico y la cuantía del hemoperitoneo antes de decidir el tratamiento." },
     ],
     correctOptionId: "A",
     explanation:
@@ -60,9 +60,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Un lactante de 4 meses, previamente sano, presenta desde hace 2 días tos, rinorrea y desde esta mañana dificultad respiratoria con sibilancias difusas y tiraje subcostal leve. Saturación de oxígeno 95% con aire ambiente, buena tolerancia oral, sin apneas. ¿Cuál es el manejo más apropiado?",
     options: [
       { id: "A", label: "A", text: "Manejo de soporte (desobstrucción nasal, fraccionamiento de tomas, hidratación) y observación ambulatoria, evitando broncodilatadores, corticoides y antibióticos de rutina, dado que la bronquiolitis es de etiología viral y estos fármacos no han demostrado beneficio consistente." },
-      { id: "B", label: "B", text: "Iniciar salbutamol inhalado como broncodilatador de primera línea, dado que el cuadro cursa con sibilancias." },
-      { id: "C", label: "C", text: "Iniciar corticoides sistémicos de forma sistemática, ya que reducen la duración de los síntomas en la bronquiolitis." },
-      { id: "D", label: "D", text: "Iniciar antibioterapia empírica de amplio espectro, dado el riesgo de sobreinfección bacteriana en todo lactante con dificultad respiratoria." },
+      { id: "B", label: "B", text: "Iniciar salbutamol inhalado con cámara espaciadora como broncodilatador de primera línea, dado que el cuadro cursa con sibilancias y tiraje, y mantenerlo pautado cada 4-6 horas aunque no se observe respuesta clínica tras la primera dosis, junto con lavados nasales y observación domiciliaria." },
+      { id: "C", label: "C", text: "Iniciar corticoides sistémicos (prednisolona oral o dexametasona) de forma sistemática durante 3-5 días, ya que reducen la inflamación bronquiolar, la duración de los síntomas y la necesidad de ingreso en la bronquiolitis del lactante." },
+      { id: "D", label: "D", text: "Iniciar antibioterapia empírica de amplio espectro (por ejemplo, amoxicilina-clavulánico), dado el riesgo de sobreinfección bacteriana en todo lactante con dificultad respiratoria y fiebre, y mantenerla hasta la mejoría clínica." },
     ],
     correctOptionId: "A",
     explanation:
@@ -84,9 +84,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Un niño de 20 meses presenta una crisis convulsiva tónico-clónica generalizada de 3 minutos de duración, en el contexto de fiebre de 39.5°C por un cuadro catarral. La crisis cede espontáneamente, y tras un breve periodo poscrítico el niño recupera un estado neurológico normal, con exploración física y neurológica sin hallazgos. Es su primer episodio. ¿Cuál es la actitud más apropiada?",
     options: [
       { id: "A", label: "A", text: "Tranquilizar a la familia, tratar la causa de la fiebre, y no indicar de rutina electroencefalograma, neuroimagen ni punción lumbar, ya que se trata de una convulsión febril simple." },
-      { id: "B", label: "B", text: "Realizar punción lumbar de forma sistemática en todo niño con primera convulsión febril, independientemente de la exploración clínica." },
-      { id: "C", label: "C", text: "Indicar tratamiento antiepiléptico profiláctico continuo para prevenir la recurrencia, dado que ya tuvo un primer episodio." },
-      { id: "D", label: "D", text: "Solicitar de forma sistemática resonancia magnética cerebral urgente antes del alta, dado que toda convulsión en la infancia requiere neuroimagen inmediata." },
+      { id: "B", label: "B", text: "Realizar punción lumbar de forma sistemática en todo niño con una primera convulsión febril, independientemente de la exploración clínica y de la edad, para descartar siempre una meningitis." },
+      { id: "C", label: "C", text: "Indicar tratamiento antiepiléptico profiláctico continuo con ácido valproico para prevenir la recurrencia, dado que ya ha presentado un primer episodio." },
+      { id: "D", label: "D", text: "Solicitar de forma sistemática resonancia magnética cerebral urgente y electroencefalograma antes del alta, dado que toda convulsión en la infancia requiere neuroimagen y estudio neurofisiológico inmediatos." },
     ],
     correctOptionId: "A",
     explanation:
@@ -108,9 +108,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 45 años, que inició tratamiento con carbamazepina hace 10 días, presenta fiebre, malestar general y erupción cutánea dolorosa con máculas purpúricas que confluyen, además de ampollas flácidas con desprendimiento epidérmico al roce (signo de Nikolsky positivo), afectando aproximadamente el 15% de la superficie corporal, con afectación de mucosa oral y conjuntival. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Suspender de inmediato el fármaco sospechoso (carbamazepina), derivar a una unidad especializada (idealmente de quemados o cuidados intensivos) para manejo de soporte intensivo, y evitar reexposición futura al fármaco." },
-      { id: "B", label: "B", text: "Continuar la carbamazepina a dosis reducida, ya que la suspensión brusca de antiepilépticos puede precipitar crisis comiciales de mayor riesgo que la reacción cutánea." },
-      { id: "C", label: "C", text: "Manejo ambulatorio con antihistamínicos orales, dado que se trata de una reacción alérgica cutánea leve." },
-      { id: "D", label: "D", text: "Iniciar corticoides tópicos únicamente, sin necesidad de valorar ingreso hospitalario ni derivación especializada." },
+      { id: "B", label: "B", text: "Continuar la carbamazepina a dosis reducida con vigilancia estrecha de las lesiones, ya que la suspensión brusca de antiepilépticos puede precipitar crisis comiciales de mayor riesgo vital que la propia reacción cutánea en este paciente." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con antihistamínicos orales y emolientes, con revisión en consulta de dermatología en una semana, dado que se trata de una reacción alérgica cutánea leve y autolimitada, sin afectación sistémica ni de mucosas relevante." },
+      { id: "D", label: "D", text: "Iniciar corticoides tópicos de alta potencia sobre las lesiones cutáneas y mucosas como único tratamiento, sin necesidad de valorar ingreso hospitalario ni derivación a una unidad especializada, ya que la reacción suele resolverse sola." },
     ],
     correctOptionId: "A",
     explanation:
@@ -132,9 +132,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 58 años, en tratamiento con quimioterapia por linfoma hace 10 días, acude a Urgencias por fiebre de 38.9°C sin foco claro. El hemograma muestra neutrófilos de 380/µL. El paciente está hemodinámicamente estable, sin signos claros de foco infeccioso en la exploración. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Extraer hemocultivos (y cultivos de otros focos según sospecha clínica) e iniciar antibioterapia empírica de amplio espectro con actividad antipseudomónica de forma inmediata, sin esperar el resultado de los cultivos." },
-      { id: "B", label: "B", text: "Esperar el resultado de los hemocultivos antes de iniciar cualquier antibiótico, dado que el paciente está hemodinámicamente estable." },
-      { id: "C", label: "C", text: "Iniciar tratamiento antipirético únicamente y reevaluar en 24 horas, ya que la fiebre sin foco claro en un paciente estable no requiere antibioterapia inmediata." },
-      { id: "D", label: "D", text: "Administrar factores estimulantes de colonias de granulocitos (G-CSF) como única medida, sin necesidad de antibioterapia." },
+      { id: "B", label: "B", text: "Esperar el resultado de los hemocultivos antes de iniciar cualquier antibiótico, dado que el paciente está hemodinámicamente estable y así se evita un tratamiento empírico innecesario." },
+      { id: "C", label: "C", text: "Iniciar tratamiento antipirético únicamente y reevaluar en 24 horas, ya que la fiebre sin foco claro en un paciente oncológico estable no requiere antibioterapia inmediata." },
+      { id: "D", label: "D", text: "Administrar factores estimulantes de colonias de granulocitos (G-CSF) como única medida para recuperar cuanto antes el recuento de neutrófilos, sin necesidad de antibioterapia empírica." },
     ],
     correctOptionId: "A",
     explanation:
@@ -156,9 +156,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Un adolescente de 14 años acude por dolor testicular derecho súbito e intenso de 4 horas de evolución, con náuseas asociadas. Al examen, el testículo derecho está elevado, horizontalizado y muy doloroso a la palpación, con ausencia del reflejo cremastérico ipsilateral. ¿Cuál es la conducta más apropiada?",
     options: [
       { id: "A", label: "A", text: "Exploración quirúrgica urgente sin demorar el tratamiento por la realización de pruebas de imagen, dado el cuadro clínico altamente sugestivo de torsión testicular y la urgencia del tiempo de isquemia." },
-      { id: "B", label: "B", text: "Solicitar ecografía Doppler testicular de forma obligatoria antes de cualquier decisión quirúrgica, independientemente del tiempo que esto demore." },
-      { id: "C", label: "C", text: "Manejo conservador con antiinflamatorios y reposo, con reevaluación ambulatoria en 48 horas." },
-      { id: "D", label: "D", text: "Iniciar antibioterapia empírica para epididimitis, dado que es la causa más frecuente de dolor testicular agudo en la adolescencia." },
+      { id: "B", label: "B", text: "Solicitar ecografía Doppler testicular de forma obligatoria antes de cualquier decisión quirúrgica, independientemente del tiempo que esto demore, ya que la exploración clínica no permite distinguir la torsión de una orquiepididimitis." },
+      { id: "C", label: "C", text: "Manejo conservador con antiinflamatorios, reposo y suspensorio escrotal, con reevaluación ambulatoria en 48 horas si el dolor no mejora de forma significativa." },
+      { id: "D", label: "D", text: "Iniciar antibioterapia empírica para epididimitis (por ejemplo, ceftriaxona y doxiciclina), dado que es la causa más frecuente de dolor testicular agudo en la adolescencia." },
     ],
     correctOptionId: "A",
     explanation:
@@ -180,9 +180,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 67 años acude por dolor ocular derecho intenso de inicio brusco, asociado a cefalea, náuseas y visión de halos alrededor de las luces. Al examen, el ojo derecho presenta hiperemia conjuntival marcada, córnea de aspecto edematoso, y la pupila está en midriasis media, arreactiva a la luz. La presión intraocular está claramente elevada. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Derivación oftalmológica urgente para tratamiento inmediato dirigido a reducir la presión intraocular (farmacológico y posteriormente iridotomía láser), dado el cuadro compatible con glaucoma agudo de ángulo cerrado." },
-      { id: "B", label: "B", text: "Administrar un midriático tópico para facilitar la exploración del fondo de ojo antes de cualquier tratamiento." },
-      { id: "C", label: "C", text: "Manejo ambulatorio con analgésicos orales y reevaluación en consulta programada de oftalmología en una semana." },
-      { id: "D", label: "D", text: "Iniciar antibioterapia tópica de amplio espectro, dado que el cuadro es compatible con una conjuntivitis bacteriana grave." },
+      { id: "B", label: "B", text: "Administrar un midriático tópico (tropicamida o fenilefrina) para dilatar la pupila y facilitar la exploración completa del fondo de ojo antes de iniciar cualquier tratamiento, dado que la causa del ojo rojo doloroso todavía no está clara." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con analgésicos orales y colirio lubricante, con reevaluación en una consulta programada de oftalmología en una semana, dado que el ojo rojo doloroso suele ser de causa benigna en adultos sin antecedentes." },
+      { id: "D", label: "D", text: "Iniciar antibioterapia tópica de amplio espectro cada 2 horas, dado que el cuadro de ojo rojo con visión borrosa es compatible con una conjuntivitis bacteriana grave." },
     ],
     correctOptionId: "A",
     explanation:
@@ -204,9 +204,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Un niño de 3 años, con vacunación incompleta, presenta fiebre alta de inicio brusco, babeo, voz apagada y estridor inspiratorio, adoptando espontáneamente una postura en trípode con el cuello en hiperextensión. Los padres refieren que rechaza tumbarse. No hay tos perruna. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Evitar cualquier maniobra que pueda agitar al niño o explorar la orofaringe con depresor, mantenerlo en la posición que él mismo adopte, y garantizar de inmediato una vía aérea avanzada en un entorno controlado (quirófano/UCI) por personal experimentado, dado el cuadro compatible con epiglotitis aguda." },
-      { id: "B", label: "B", text: "Administrar corticoide oral (dexametasona) y adrenalina nebulizada, dado que el cuadro es compatible con laringotraqueítis aguda (crup) moderada." },
-      { id: "C", label: "C", text: "Explorar la orofaringe con depresor lingual para visualizar directamente la epiglotis y confirmar el diagnóstico antes de cualquier otra medida." },
-      { id: "D", label: "D", text: "Solicitar radiografía lateral de cuello de forma sistemática antes de cualquier intervención, independientemente del estado clínico del niño." },
+      { id: "B", label: "B", text: "Administrar corticoide oral (dexametasona a 0,15-0,6 mg/kg) y adrenalina nebulizada, y mantener al niño en observación en Urgencias durante al menos 3-4 horas antes de decidir el alta, dado que el cuadro es compatible con una laringotraqueítis aguda (crup) de gravedad moderada y responde bien al tratamiento médico." },
+      { id: "C", label: "C", text: "Explorar la orofaringe con depresor lingual y buena iluminación para visualizar directamente la epiglotis y confirmar el diagnóstico antes de cualquier otra medida, ya que no se debe instrumentar la vía aérea de un niño sin haber confirmado la causa de la obstrucción, sobre todo si el niño está estable." },
+      { id: "D", label: "D", text: "Solicitar radiografía lateral de cuello de forma sistemática para buscar el signo del pulgar antes de cualquier intervención, independientemente del estado clínico del niño, y trasladarlo a la sala de radiología acompañado de sus padres, ya que la imagen es imprescindible para confirmar el diagnóstico." },
     ],
     correctOptionId: "A",
     explanation:
@@ -228,9 +228,9 @@ export const MIR_2026_11_20_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 74 años con sospecha de infección urinaria acude con PA 78/48 mmHg, FC 118 lpm, temperatura 38.9°C y lactato de 4.2 mmol/L, sin respuesta tensional tras un primer bolo de 30 mL/kg de cristaloides. ¿Cuál es la actuación más apropiada en este momento?",
     options: [
       { id: "A", label: "A", text: "Extraer hemocultivos (si no retrasan el tratamiento) e iniciar antibioterapia empírica de amplio espectro de forma inmediata, junto con inicio de vasopresores (norepinefrina de primera elección) para mantener una presión arterial media objetivo, dado el shock séptico persistente tras la fluidoterapia inicial." },
-      { id: "B", label: "B", text: "Continuar administrando bolos adicionales de cristaloides de forma indefinida hasta normalizar la presión arterial, sin considerar el inicio de vasopresores." },
-      { id: "C", label: "C", text: "Esperar el resultado de los hemocultivos antes de iniciar antibioterapia, para evitar seleccionar resistencias antibióticas innecesarias." },
-      { id: "D", label: "D", text: "Iniciar corticoides sistémicos en altas dosis como tratamiento de primera línea, sin necesidad de antibioterapia ni vasopresores." },
+      { id: "B", label: "B", text: "Continuar administrando bolos adicionales de cristaloides de forma indefinida hasta normalizar la presión arterial, sin considerar el inicio de vasopresores, ya que en el shock séptico toda hipotensión se debe a hipovolemia y los vasopresores empeoran la perfusión." },
+      { id: "C", label: "C", text: "Esperar el resultado de los hemocultivos y del resto de cultivos antes de iniciar la antibioterapia, para poder dirigirla al germen causante y evitar seleccionar resistencias antibióticas innecesarias en un paciente que ya está recibiendo fluidoterapia intensiva." },
+      { id: "D", label: "D", text: "Iniciar corticoides sistémicos en altas dosis (metilprednisolona en bolos) como tratamiento de primera línea del shock, sin necesidad de antibioterapia ni vasopresores, dado que la respuesta inflamatoria sistémica es la principal causa de la hipotensión." },
     ],
     correctOptionId: "A",
     explanation:

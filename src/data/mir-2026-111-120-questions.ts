@@ -11,10 +11,10 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 24 años consulta por reglas cada 45-60 días desde la menarquia, acné e hirsutismo moderado. La testosterona total está ligeramente elevada. La TSH y la prolactina son normales y la 17-hidroxiprogesterona basal es normal. ¿Cuál es la afirmación correcta?",
     options: [
-      { id: "A", label: "A", text: "No puede diagnosticarse un síndrome de ovario poliquístico sin demostrar ovarios poliquísticos en la ecografía." },
+      { id: "A", label: "A", text: "No puede diagnosticarse un síndrome de ovario poliquístico sin demostrar la morfología de ovarios poliquísticos en la ecografía transvaginal." },
       { id: "B", label: "B", text: "Cumple criterios de síndrome de ovario poliquístico (oligoanovulación e hiperandrogenismo), una vez excluidas otras causas." },
-      { id: "C", label: "C", text: "El diagnóstico exige demostrar resistencia a la insulina mediante una sobrecarga oral de glucosa." },
-      { id: "D", label: "D", text: "El cuadro es diagnóstico de hiperplasia suprarrenal congénita no clásica." },
+      { id: "C", label: "C", text: "El diagnóstico exige demostrar resistencia a la insulina mediante una sobrecarga oral de glucosa con insulinemias." },
+      { id: "D", label: "D", text: "El cuadro es diagnóstico de hiperplasia suprarrenal congénita no clásica por déficit de 21-hidroxilasa." },
     ],
     correctOptionId: "B",
     explanation:
@@ -36,9 +36,9 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 40 años, sin antecedentes de interés, acude a su centro de salud para el cribado de cáncer de cuello uterino. Según el programa de cribado poblacional vigente en España, ¿qué prueba y con qué periodicidad está indicada?",
     options: [
       { id: "A", label: "A", text: "Determinación del virus del papiloma humano de alto riesgo cada 5 años." },
-      { id: "B", label: "B", text: "Citología cervical anual." },
-      { id: "C", label: "C", text: "Colposcopia cada 3 años." },
-      { id: "D", label: "D", text: "Citología cada 3 años hasta los 65 años, sin determinación de VPH." },
+      { id: "B", label: "B", text: "Citología cervical anual durante toda la vida sexual activa." },
+      { id: "C", label: "C", text: "Colposcopia con biopsia dirigida cada 3 años en todas las mujeres adultas." },
+      { id: "D", label: "D", text: "Citología cada 3 años hasta los 65 años de edad, sin determinación del VPH." },
     ],
     correctOptionId: "A",
     explanation:
@@ -59,10 +59,10 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 29 años, sin deseo gestacional actual, presenta dismenorrea progresiva desde hace años, dispareunia profunda y dolor pélvico cíclico. La exploración revela nódulos dolorosos en los ligamentos uterosacros y la ecografía muestra un quiste ovárico de 3 cm con contenido en «vidrio esmerilado». ¿Cuál es el tratamiento inicial más adecuado?",
     options: [
-      { id: "A", label: "A", text: "Histerectomía con doble anexectomía." },
-      { id: "B", label: "B", text: "Laparoscopia urgente para extirpar el quiste." },
+      { id: "A", label: "A", text: "Histerectomía total con doble anexectomía, dado que es el único tratamiento definitivo de la endometriosis." },
+      { id: "B", label: "B", text: "Laparoscopia urgente para extirpar el quiste endometriósico, aunque sea pequeño y no presente complicaciones." },
       { id: "C", label: "C", text: "Tratamiento hormonal (progestágenos o anticonceptivos combinados) junto con antiinflamatorios para el dolor." },
-      { id: "D", label: "D", text: "Observación sin tratamiento hasta que desee gestación." },
+      { id: "D", label: "D", text: "Observación sin tratamiento hasta que la paciente desee gestación, ya que el embarazo cura la endometriosis." },
     ],
     correctOptionId: "C",
     explanation:
@@ -83,9 +83,9 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 62 años, con menopausia a los 51 y sin tratamiento hormonal, consulta por un episodio de sangrado vaginal. Es obesa y diabética. ¿Cuál es la primera exploración complementaria que debe realizarse?",
     options: [
-      { id: "A", label: "A", text: "Resonancia magnética pélvica." },
-      { id: "B", label: "B", text: "Determinación de CA-125." },
-      { id: "C", label: "C", text: "Legrado uterino fraccionado bajo anestesia general." },
+      { id: "A", label: "A", text: "Resonancia magnética pélvica con contraste." },
+      { id: "B", label: "B", text: "Determinación del marcador tumoral CA-125." },
+      { id: "C", label: "C", text: "Legrado uterino fraccionado bajo anestesia general de entrada." },
       { id: "D", label: "D", text: "Ecografía transvaginal para medir el grosor endometrial." },
     ],
     correctOptionId: "D",
@@ -131,10 +131,10 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una gestante de 33 semanas consulta por prurito intenso de predominio palmoplantar y nocturno, sin lesiones cutáneas primarias. Los ácidos biliares séricos están elevados y las transaminasas, discretamente aumentadas. La presión arterial y la proteinuria son normales. ¿Cuál es la actitud más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Tranquilizar a la paciente: es un cuadro banal sin repercusión fetal." },
-      { id: "B", label: "B", text: "Finalizar la gestación de forma inmediata por cesárea." },
+      { id: "A", label: "A", text: "Tranquilizar a la paciente: es un cuadro banal del tercer trimestre sin repercusión fetal, que se trata con emolientes y desaparece tras el parto sin necesidad de controles." },
+      { id: "B", label: "B", text: "Finalizar la gestación de forma inmediata por cesárea, independientemente de la edad gestacional y de los niveles de ácidos biliares, para evitar la muerte fetal intraútero." },
       { id: "C", label: "C", text: "Ácido ursodesoxicólico, control analítico y del bienestar fetal, y planificar la finalización de la gestación en torno a las 37 semanas o antes si los ácidos biliares son muy elevados." },
-      { id: "D", label: "D", text: "Corticoides tópicos y antihistamínicos, sin controles adicionales." },
+      { id: "D", label: "D", text: "Corticoides tópicos y antihistamínicos orales para el prurito, sin controles analíticos adicionales ni vigilancia del bienestar fetal, con seguimiento habitual hasta el parto." },
     ],
     correctOptionId: "C",
     explanation:
@@ -203,10 +203,10 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una gestante Rh negativo, con test de Coombs indirecto negativo y pareja Rh positivo, está en la semana 28 de una gestación sin incidencias. ¿Cuál es la actitud correcta para prevenir la isoinmunización?",
     options: [
-      { id: "A", label: "A", text: "No administrar nada hasta el parto y valorar entonces." },
+      { id: "A", label: "A", text: "No administrar nada durante la gestación y valorar la profilaxis solo tras el parto, según el grupo Rh del recién nacido." },
       { id: "B", label: "B", text: "Administrar inmunoglobulina anti-D en la semana 28 y de nuevo en las 72 horas tras el parto si el recién nacido es Rh positivo." },
-      { id: "C", label: "C", text: "Administrar inmunoglobulina anti-D solo si el test de Coombs indirecto se positiviza." },
-      { id: "D", label: "D", text: "Realizar una transfusión intrauterina profiláctica." },
+      { id: "C", label: "C", text: "Administrar inmunoglobulina anti-D solo si el test de Coombs indirecto materno se positiviza en los controles del tercer trimestre de la gestación." },
+      { id: "D", label: "D", text: "Realizar una transfusión intrauterina profiláctica en la semana 28 para prevenir la anemia fetal por isoinmunización Rh." },
     ],
     correctOptionId: "B",
     explanation:
@@ -227,10 +227,10 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una gestante de 38 años realiza el cribado combinado del primer trimestre en la semana 12. El resultado indica un riesgo elevado de trisomía 21. ¿Cuál es el siguiente paso más adecuado?",
     options: [
-      { id: "A", label: "A", text: "Diagnosticar trisomía 21 y ofrecer la interrupción de la gestación." },
-      { id: "B", label: "B", text: "Repetir el cribado combinado en 4 semanas." },
+      { id: "A", label: "A", text: "Diagnosticar trisomía 21 con el resultado del cribado combinado y ofrecer directamente la interrupción voluntaria de la gestación, sin pruebas adicionales." },
+      { id: "B", label: "B", text: "Repetir el cribado combinado del primer trimestre (ecografía y bioquímica) en 4 semanas para confirmar el resultado de alto riesgo obtenido." },
       { id: "C", label: "C", text: "Ofrecer una prueba de confirmación: estudio de ADN fetal libre en sangre materna o una prueba invasiva (biopsia corial o amniocentesis)." },
-      { id: "D", label: "D", text: "No hacer nada más hasta la ecografía morfológica de la semana 20." },
+      { id: "D", label: "D", text: "No hacer nada más hasta la ecografía morfológica de la semana 20, que confirmará o descartará la trisomía 21 por los marcadores ecográficos." },
     ],
     correctOptionId: "C",
     explanation:

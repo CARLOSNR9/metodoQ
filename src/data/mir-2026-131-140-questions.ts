@@ -11,10 +11,10 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un lactante de 4 meses es llevado a urgencias por irritabilidad. Los padres no refieren traumatismos. La exploración muestra hematomas en distintas fases de evolución en el tronco y la radiografía de tórax, fracturas de arcos costales posteriores en diferentes estadios de consolidación. ¿Cuál es la actitud más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Alta con analgesia y control por su pediatra." },
+      { id: "A", label: "A", text: "Alta con analgesia y control por su pediatra en 48 horas, dado que las fracturas en lactantes suelen deberse a caídas accidentales desde la cama o el cambiador." },
       { id: "B", label: "B", text: "Ingreso para protección del menor, serie ósea completa, fondo de ojo y neuroimagen, y comunicación a los servicios de protección y al juzgado." },
-      { id: "C", label: "C", text: "Solicitar un estudio genético de osteogénesis imperfecta y esperar el resultado antes de actuar." },
-      { id: "D", label: "D", text: "Confrontar a los padres y pedirles que expliquen las lesiones antes de cualquier otra medida." },
+      { id: "C", label: "C", text: "Solicitar un estudio genético de osteogénesis imperfecta y esperar el resultado antes de actuar, dado que es la causa más frecuente de fracturas múltiples en lactantes." },
+      { id: "D", label: "D", text: "Confrontar directamente a los padres y pedirles que expliquen las lesiones antes de cualquier otra medida, y dar el alta si la explicación resulta coherente con los hallazgos." },
     ],
     correctOptionId: "B",
     explanation:
@@ -35,9 +35,9 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una niña de 2 años presenta, desde la introducción del gluten, diarrea crónica, distensión abdominal, irritabilidad y estancamiento ponderal. Sigue una dieta normal con gluten. ¿Cuál es la primera prueba diagnóstica que se debe solicitar?",
     options: [
-      { id: "A", label: "A", text: "Biopsia duodenal directamente, sin serología previa." },
-      { id: "B", label: "B", text: "Retirar el gluten de la dieta y valorar la respuesta clínica." },
-      { id: "C", label: "C", text: "Estudio genético HLA-DQ2/DQ8 como prueba diagnóstica única." },
+      { id: "A", label: "A", text: "Biopsia duodenal directamente, sin serología previa, como primer paso diagnóstico." },
+      { id: "B", label: "B", text: "Retirar el gluten de la dieta de forma empírica y valorar la respuesta clínica." },
+      { id: "C", label: "C", text: "Estudio genético HLA-DQ2/DQ8 como prueba diagnóstica única y definitiva." },
       { id: "D", label: "D", text: "Anticuerpos antitransglutaminasa tisular de tipo IgA junto con la IgA sérica total." },
     ],
     correctOptionId: "D",
@@ -60,9 +60,9 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
       "Un paciente con úlcera duodenal e infección por Helicobacter pylori ha completado un tratamiento erradicador cuádruple con bismuto durante 10 días. ¿Cuál es la forma más adecuada de confirmar la erradicación?",
     options: [
       { id: "A", label: "A", text: "Prueba del aliento con urea marcada con C13, al menos 4 semanas después del tratamiento antibiótico y 2 semanas sin inhibidores de la bomba de protones." },
-      { id: "B", label: "B", text: "Serología de Helicobacter pylori (IgG) al finalizar el tratamiento." },
-      { id: "C", label: "C", text: "No es necesario confirmar la erradicación si el paciente está asintomático." },
-      { id: "D", label: "D", text: "Prueba del aliento al día siguiente de terminar el tratamiento, sin suspender los inhibidores de la bomba de protones." },
+      { id: "B", label: "B", text: "Serología de Helicobacter pylori (IgG) al finalizar el tratamiento, cuya negativización confirma la erradicación de la bacteria de forma fiable y no invasiva." },
+      { id: "C", label: "C", text: "No es necesario confirmar la erradicación si el paciente está asintomático tras completar correctamente el tratamiento antibiótico pautado." },
+      { id: "D", label: "D", text: "Prueba del aliento con urea marcada con C13 al día siguiente de terminar el tratamiento, sin necesidad de suspender los inhibidores de la bomba de protones." },
     ],
     correctOptionId: "A",
     explanation:
@@ -107,10 +107,10 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
     statement:
       "En el estudio preoperatorio de un paciente de 50 años se obtiene la siguiente serología de hepatitis B: HBsAg negativo, anti-HBs positivo y anti-HBc total positivo. Las transaminasas son normales. ¿Cuál es la interpretación correcta?",
     options: [
-      { id: "A", label: "A", text: "Vacunación previa frente a la hepatitis B, sin contacto con el virus." },
+      { id: "A", label: "A", text: "Vacunación previa frente a la hepatitis B, sin contacto previo con el virus." },
       { id: "B", label: "B", text: "Infección pasada por el virus de la hepatitis B, resuelta, con inmunidad natural." },
-      { id: "C", label: "C", text: "Hepatitis B crónica activa." },
-      { id: "D", label: "D", text: "Hepatitis B aguda en periodo ventana." },
+      { id: "C", label: "C", text: "Hepatitis B crónica activa con replicación viral y riesgo de transmisión." },
+      { id: "D", label: "D", text: "Hepatitis B aguda en periodo ventana, con el HBsAg ya negativizado." },
     ],
     correctOptionId: "B",
     explanation:
@@ -131,9 +131,9 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un varón de 45 años con astenia, artralgias en las segundas y terceras articulaciones metacarpofalángicas y diabetes de reciente diagnóstico presenta ferritina de 1.800 ng/ml y un índice de saturación de transferrina del 78%. ¿Cuál es el siguiente paso diagnóstico y el tratamiento de elección si se confirma?",
     options: [
-      { id: "A", label: "A", text: "Biopsia hepática obligatoria en todos los casos y quelantes orales del hierro." },
-      { id: "B", label: "B", text: "Suplementos de vitamina C y dieta rica en carne roja." },
-      { id: "C", label: "C", text: "Resonancia cardíaca y trasplante hepático." },
+      { id: "A", label: "A", text: "Biopsia hepática obligatoria en todos los casos y tratamiento con quelantes orales del hierro como primera línea." },
+      { id: "B", label: "B", text: "Suplementos de vitamina C y dieta rica en carne roja para favorecer la movilización del hierro de los depósitos." },
+      { id: "C", label: "C", text: "Resonancia cardíaca urgente y valoración de trasplante hepático como tratamiento de primera elección." },
       { id: "D", label: "D", text: "Estudio genético del gen HFE (mutación C282Y) y tratamiento con flebotomías periódicas." },
     ],
     correctOptionId: "D",
@@ -179,10 +179,10 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un varón de 55 años con reflujo gastroesofágico de larga evolución se somete a una gastroscopia, que muestra mucosa de aspecto asalmonado de 4 cm por encima de la unión gastroesofágica. Las biopsias confirman metaplasia intestinal sin displasia. ¿Cuál es la actitud más adecuada?",
     options: [
-      { id: "A", label: "A", text: "Esofaguectomía." },
-      { id: "B", label: "B", text: "Ablación endoscópica por radiofrecuencia de inmediato." },
+      { id: "A", label: "A", text: "Esofaguectomía programada para prevenir la progresión a adenocarcinoma de esófago." },
+      { id: "B", label: "B", text: "Ablación endoscópica por radiofrecuencia de inmediato, aunque no haya displasia en las biopsias." },
       { id: "C", label: "C", text: "Tratamiento con inhibidores de la bomba de protones y vigilancia endoscópica con biopsias periódicas." },
-      { id: "D", label: "D", text: "No precisa seguimiento, ya que no hay displasia." },
+      { id: "D", label: "D", text: "No precisa ningún seguimiento endoscópico, ya que no hay displasia en las biopsias." },
     ],
     correctOptionId: "C",
     explanation:
@@ -203,10 +203,10 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un paciente con cirrosis hepática y ascitis ingresa por febrícula y dolor abdominal difuso. En la paracentesis diagnóstica el líquido ascítico tiene 480 polimorfonucleares/mm³ y el cultivo está pendiente. ¿Cuál es el tratamiento adecuado?",
     options: [
-      { id: "A", label: "A", text: "Esperar al resultado del cultivo antes de iniciar antibióticos." },
+      { id: "A", label: "A", text: "Esperar al resultado del cultivo del líquido ascítico antes de iniciar los antibióticos, para dirigir el tratamiento." },
       { id: "B", label: "B", text: "Cefalosporina de tercera generación intravenosa (por ejemplo, cefotaxima) y albúmina intravenosa." },
-      { id: "C", label: "C", text: "Laparotomía exploradora urgente." },
-      { id: "D", label: "D", text: "Paracentesis evacuadora total sin antibióticos." },
+      { id: "C", label: "C", text: "Laparotomía exploradora urgente por sospecha de peritonitis secundaria a perforación." },
+      { id: "D", label: "D", text: "Paracentesis evacuadora total sin antibióticos para reducir la carga bacteriana del líquido." },
     ],
     correctOptionId: "B",
     explanation:
