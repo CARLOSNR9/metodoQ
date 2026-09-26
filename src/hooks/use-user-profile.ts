@@ -8,6 +8,7 @@ import { applyAdminStudentPreviewProfile } from "@/lib/admin/student-preview";
 import { applyDemoStudentProfileEnhancements } from "@/lib/demo/demo-student-profiles";
 import type { ManualSaleInfo, UserGender } from "@/lib/plans/subscription-display";
 import type { UccCvInput } from "@/lib/diagnostic/ucc-cv-scorer";
+import { readDrQChallengeCompletions } from "@/lib/dr-q-challenge-progress";
 
 export interface UserProfile {
   uid: string;
@@ -87,6 +88,7 @@ export function useUserProfile() {
               uid: user.uid,
               email: user.email,
               ...docSnap.data(),
+              drQChallenges: readDrQChallengeCompletions(docSnap.data()),
             } as UserProfile)
           : ({
               uid: user.uid,

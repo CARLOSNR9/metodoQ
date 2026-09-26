@@ -1,14 +1,12 @@
-import { doc, setDoc } from "firebase/firestore";
 import { DR_Q_EVAL_1_QUESTIONS } from "@/data/evaluaciones/evaluacion-dr-q";
 import { DR_Q_EVAL_2_QUESTIONS } from "@/data/evaluaciones/evaluacion-dr-q-2";
-import { getFirebaseDb } from "@/lib/firebase";
+import type { DrQChallengeCompletion } from "@/lib/dr-q-challenge-progress";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
-export type DrQChallengeCompletion = {
-  completedAt: string;
-  score: number;
-  total: number;
-};
+export {
+  saveDrQChallengeCompletion,
+  type DrQChallengeCompletion,
+} from "@/lib/dr-q-challenge-progress";
 
 export type DrQChallenge = {
   id: string;
@@ -45,18 +43,4 @@ export function getNextDrQChallenge(
 ): DrQChallenge | null {
   const completed = profile?.drQChallenges ?? {};
   return DR_Q_CHALLENGES.find((challenge) => !completed[challenge.id]) ?? null;
-}
-
-export async function saveDrQChallengeCompletion(
-  userId: string,
-  challengeId: string,
-  completion: DrQChallengeCompletion,
-): Promise<void> {
-  await setDoc(
-    doc(getFirebaseDb(), "users", userId),
-    {
-      [`drQChallenges.${challengeId}`]: completion,
-    },
-    { merge: true },
-  );
 }
