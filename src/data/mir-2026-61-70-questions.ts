@@ -12,9 +12,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 62 años, hipertenso mal controlado, presenta dolor torácico intenso de inicio súbito, descrito como \"desgarrador\", irradiado a la espalda interescapular. La presión arterial en el brazo derecho es 178/98 mmHg y en el izquierdo 132/84 mmHg. La angio-TC confirma una disección aórtica que afecta a la aorta ascendente. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Control inicial de la frecuencia cardíaca y la presión arterial con betabloqueantes intravenosos (antes de añadir vasodilatadores, si son necesarios), y cirugía urgente, dado que la afectación de la aorta ascendente (disección tipo A de Stanford) es una emergencia quirúrgica." },
-      { id: "B", label: "B", text: "Manejo exclusivamente médico con control de presión arterial, sin necesidad de cirugía, independientemente del segmento aórtico afectado." },
-      { id: "C", label: "C", text: "Administrar un vasodilatador puro (por ejemplo, nitroprusiato) sin control previo de la frecuencia cardíaca, dado que reducir la presión arterial es la única prioridad terapéutica." },
-      { id: "D", label: "D", text: "Anticoagulación sistémica inmediata con heparina, de forma análoga al manejo del síndrome coronario agudo." },
+      { id: "B", label: "B", text: "Manejo exclusivamente médico con control de la presión arterial y de la frecuencia cardíaca en la unidad coronaria, sin necesidad de cirugía, independientemente del segmento aórtico afectado, ya que la reparación quirúrgica tiene una mortalidad muy elevada." },
+      { id: "C", label: "C", text: "Administrar un vasodilatador puro (por ejemplo, nitroprusiato) sin control previo de la frecuencia cardíaca, dado que reducir la presión arterial lo antes posible es la única prioridad terapéutica en este paciente hipertenso con dolor torácico intenso." },
+      { id: "D", label: "D", text: "Anticoagulación sistémica inmediata con heparina no fraccionada y doble antiagregación, de forma análoga al manejo del síndrome coronario agudo, dado que el dolor torácico es de características isquémicas y hay antecedentes de cardiopatía." },
     ],
     correctOptionId: "A",
     explanation:
@@ -36,9 +36,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 55 años, con antecedente de gastritis y uso crónico de AINE, presenta dolor epigástrico intenso y súbito que se generaliza a todo el abdomen en minutos, con abdomen en tabla a la exploración (defensa involuntaria generalizada). La radiografía de tórax en bipedestación muestra aire libre subdiafragmático. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Dieta absoluta, sonda nasogástrica, fluidoterapia intravenosa, antibioterapia de amplio espectro, e intervención quirúrgica urgente (sutura/parche de la perforación, habitualmente por vía laparoscópica cuando es posible), dado el cuadro compatible con perforación de víscera hueca (úlcera péptica perforada)." },
-      { id: "B", label: "B", text: "Manejo médico conservador exclusivo con inhibidores de la bomba de protones intravenosos, sin necesidad de cirugía, dado que la mayoría de las úlceras pépticas perforadas cicatrizan espontáneamente." },
-      { id: "C", label: "C", text: "Solicitar endoscopia digestiva alta urgente como primer paso diagnóstico y terapéutico, antes de considerar cualquier otra medida." },
-      { id: "D", label: "D", text: "Manejo ambulatorio con analgesia oral, dado que el aire libre subdiafragmático es un hallazgo incidental sin relevancia clínica en este contexto." },
+      { id: "B", label: "B", text: "Manejo médico conservador exclusivo con inhibidores de la bomba de protones intravenosos a dosis altas y dieta absoluta, sin necesidad de cirugía en ningún caso, dado que la mayoría de las úlceras pépticas perforadas cicatrizan espontáneamente y el epiplón sella la perforación en pocas horas, lo que hace innecesaria la intervención quirúrgica." },
+      { id: "C", label: "C", text: "Solicitar una endoscopia digestiva alta urgente como primer paso diagnóstico y terapéutico, para localizar la úlcera y cerrarla con clips endoscópicos, antes de considerar cualquier otra medida médica o quirúrgica, ya que la endoscopia confirma el diagnóstico y evita la laparotomía." },
+      { id: "D", label: "D", text: "Manejo ambulatorio con analgesia oral y antiácidos, dado que el aire libre subdiafragmático es un hallazgo incidental sin relevancia clínica en este contexto, con control en consulta de digestivo en una semana para solicitar una gastroscopia programada." },
     ],
     correctOptionId: "A",
     explanation:
@@ -60,9 +60,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 65 años, con neoplasia de pulmón conocida, presenta confusión, estreñimiento intenso, poliuria y deshidratación. El calcio sérico corregido es de 15.2 mg/dL. ¿Cuál es la secuencia de manejo inicial más apropiada?",
     options: [
       { id: "A", label: "A", text: "Hidratación intravenosa intensiva con suero salino isotónico como primera medida (corrige la depleción de volumen y aumenta la excreción renal de calcio), seguida de un bifosfonato intravenoso (por ejemplo, ácido zoledrónico) para un control más sostenido, considerando calcitonina si se necesita un efecto más rápido mientras el bifosfonato hace efecto." },
-      { id: "B", label: "B", text: "Restricción hídrica estricta como primera medida, dado que el objetivo es reducir el volumen circulante para disminuir indirectamente el calcio sérico." },
-      { id: "C", label: "C", text: "Administrar diuréticos tiazídicos como primera línea, dado su efecto hipocalcemiante." },
-      { id: "D", label: "D", text: "Iniciar furosemida a dosis altas de inmediato, antes de cualquier hidratación, como medida principal para forzar la excreción urinaria de calcio." },
+      { id: "B", label: "B", text: "Restricción hídrica estricta como primera medida, dado que el objetivo es reducir el volumen circulante para disminuir indirectamente el calcio sérico total, asociada a una dieta pobre en calcio y a reposo en cama hasta que las cifras de calcio se normalicen en los controles analíticos seriados, sin necesidad de fármacos específicos ni de sueroterapia intravenosa." },
+      { id: "C", label: "C", text: "Administrar diuréticos tiazídicos por vía oral como primera línea de tratamiento, dado su efecto hipocalcemiante al aumentar la excreción urinaria de calcio, junto con una dieta pobre en calcio y lácteos, reservando la hidratación intravenosa y los bifosfonatos para los casos que no respondan en 48-72 horas, y controlando el calcio sérico y la función renal a diario." },
+      { id: "D", label: "D", text: "Iniciar furosemida intravenosa a dosis altas de inmediato, antes de cualquier hidratación, como medida principal para forzar la excreción urinaria de calcio, dado que es el fármaco más rápido y eficaz disponible, y añadir un bifosfonato oral de forma diferida solo si el calcio no se normaliza con el diurético en los días siguientes." },
     ],
     correctOptionId: "A",
     explanation:
@@ -84,9 +84,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 50 años, diabético, presenta desde hace 24 horas dolor intenso y desproporcionado en la pierna izquierda, con eritema de bordes mal definidos que progresa rápidamente, algunas ampollas hemorrágicas, y crepitación a la palpación. Presenta fiebre alta y taquicardia, con aspecto de gravedad. ¿Cuál es el diagnóstico más probable y la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Fascitis necrotizante; requiere desbridamiento quirúrgico urgente (exploración y resección de todo el tejido necrótico) junto con antibioterapia empírica de amplio espectro, sin retrasar la cirugía esperando confirmación por pruebas de imagen." },
-      { id: "B", label: "B", text: "Celulitis no complicada; el manejo es antibioterapia oral ambulatoria, sin necesidad de ingreso ni valoración quirúrgica." },
-      { id: "C", label: "C", text: "Trombosis venosa profunda; el manejo es anticoagulación, sin necesidad de antibioterapia ni valoración quirúrgica." },
-      { id: "D", label: "D", text: "Debe solicitarse resonancia magnética de la pierna y esperar su resultado antes de decidir si el paciente requiere cirugía." },
+      { id: "B", label: "B", text: "Celulitis no complicada de la extremidad inferior; el manejo es antibioterapia oral ambulatoria con amoxicilina-clavulánico y elevación del miembro, sin necesidad de ingreso ni de valoración quirúrgica, con revisión en su centro de salud en 48-72 horas." },
+      { id: "C", label: "C", text: "Trombosis venosa profunda de la extremidad inferior; el manejo es la anticoagulación con heparina de bajo peso molecular, sin necesidad de antibioterapia ni de valoración quirúrgica, dado que la fiebre se explica por la propia trombosis venosa extensa." },
+      { id: "D", label: "D", text: "Debe solicitarse una resonancia magnética de la pierna y esperar su resultado antes de decidir si el paciente requiere cirugía, ya que la exploración clínica no permite diferenciar la afectación de la fascia de una celulitis profunda o de un hematoma." },
     ],
     correctOptionId: "A",
     explanation:
@@ -108,9 +108,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 45 años, con miastenia gravis conocida, presenta empeoramiento progresivo de la ptosis, diplopía y debilidad generalizada en las últimas 48 horas, coincidiendo con un cuadro respiratorio infeccioso intercurrente. Refiere además dificultad progresiva para tragar y presenta disnea. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Ingreso hospitalario con monitorización estrecha de la función respiratoria (capacidad vital forzada) por riesgo de crisis miasténica con insuficiencia respiratoria, tratamiento del factor precipitante (la infección), y tratamiento específico con inmunoglobulinas intravenosas o plasmaféresis si la debilidad es grave, evitando fármacos que puedan empeorar la transmisión neuromuscular." },
-      { id: "B", label: "B", text: "Aumentar de forma empírica y sin monitorización la dosis de piridostigmina de manera indefinida, dado que la debilidad siempre indica un déficit de tratamiento anticolinesterásico." },
-      { id: "C", label: "C", text: "Manejo ambulatorio con reposo, dado que los brotes de miastenia gravis no representan riesgo vital y se resuelven espontáneamente." },
-      { id: "D", label: "D", text: "Iniciar un aminoglucósido para tratar la infección respiratoria intercurrente, sin considerar otras alternativas antibióticas." },
+      { id: "B", label: "B", text: "Aumentar de forma empírica y sin monitorización la dosis de piridostigmina de manera indefinida hasta que mejore la fuerza, dado que la debilidad siempre indica un déficit de tratamiento anticolinesterásico, y mantener el tratamiento en su domicilio con control telefónico por su neurólogo, sin necesidad de pruebas de función respiratoria ni de ingreso." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con reposo relativo y control en consulta de neurología en una semana, dado que los brotes de miastenia gravis no representan riesgo vital y se resuelven espontáneamente al tratar la infección respiratoria con un antibiótico oral, sin necesidad de monitorizar la capacidad vital ni de iniciar inmunoglobulinas o plasmaféresis." },
+      { id: "D", label: "D", text: "Iniciar un aminoglucósido intravenoso (gentamicina) para tratar la infección respiratoria intercurrente, sin considerar otras alternativas antibióticas, dado que cubre bien los gérmenes gramnegativos más frecuentes, y mantener la dosis habitual de piridostigmina, ya que el antibiótico no interfiere en la transmisión neuromuscular ni empeora la debilidad miasténica." },
     ],
     correctOptionId: "A",
     explanation:
@@ -132,9 +132,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 72 años presenta cefalea temporal de inicio reciente, dolor a la palpación en la región temporal, claudicación mandibular al masticar, y un episodio transitorio de pérdida de visión en el ojo derecho que se resolvió espontáneamente. La VSG está marcadamente elevada. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Iniciar corticoides sistémicos a dosis altas de inmediato, ante la alta sospecha clínica de arteritis de células gigantes, sin esperar la biopsia de la arteria temporal para confirmar el diagnóstico, dado el riesgo inminente de pérdida visual permanente e irreversible." },
-      { id: "B", label: "B", text: "Esperar el resultado de la biopsia de la arteria temporal (que puede demorar días) antes de iniciar cualquier tratamiento con corticoides." },
-      { id: "C", label: "C", text: "Manejo con analgésicos simples únicamente, dado que la cefalea temporal en el anciano rara vez tiene relevancia clínica grave." },
-      { id: "D", label: "D", text: "Iniciar antiagregación con ácido acetilsalicílico como único tratamiento, sin necesidad de corticoides." },
+      { id: "B", label: "B", text: "Esperar el resultado de la biopsia de la arteria temporal (que puede demorar varios días) antes de iniciar cualquier tratamiento con corticoides, para no negativizar el estudio histológico y evitar un tratamiento prolongado con corticoides que tiene muchos efectos adversos en el anciano." },
+      { id: "C", label: "C", text: "Manejo con analgésicos simples y seguimiento en atención primaria, dado que la cefalea temporal en el anciano rara vez tiene relevancia clínica grave y suele ser tensional o secundaria a patología cervical degenerativa." },
+      { id: "D", label: "D", text: "Iniciar antiagregación con ácido acetilsalicílico como único tratamiento para prevenir las complicaciones isquémicas, sin necesidad de corticoides, que se reservan para cuando la biopsia de la arteria temporal confirme la vasculitis." },
     ],
     correctOptionId: "A",
     explanation:
@@ -156,9 +156,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 58 años, con sepsis de origen abdominal grave, presenta sangrado espontáneo por los sitios de venopunción y petequias difusas. La analítica muestra plaquetas 42.000/µL, TP y TTPa prolongados, fibrinógeno bajo (95 mg/dL), dímero D muy elevado, y esquistocitos ocasionales en el frotis. ¿Cuál es el diagnóstico más probable y el manejo más apropiado?",
     options: [
       { id: "A", label: "A", text: "Coagulación intravascular diseminada (CID), secundaria a la sepsis; el manejo es tratar la causa subyacente de forma agresiva, junto con soporte transfusional (plasma fresco congelado, crioprecipitado si el fibrinógeno es muy bajo, y plaquetas) guiado por la clínica hemorrágica y los parámetros de laboratorio." },
-      { id: "B", label: "B", text: "Púrpura trombocitopénica trombótica; el manejo es plasmaféresis urgente sin necesidad de soporte transfusional con hemoderivados." },
-      { id: "C", label: "C", text: "Hemofilia adquirida; el manejo es la administración de factor VIII recombinante como tratamiento único." },
-      { id: "D", label: "D", text: "Trombocitopenia inmune primaria; el manejo de primera línea son los corticoides sistémicos en monoterapia." },
+      { id: "B", label: "B", text: "Púrpura trombocitopénica trombótica secundaria a la infección; el manejo es la plasmaféresis urgente sin necesidad de soporte transfusional con hemoderivados, ya que la transfusión de plasma y de plaquetas está contraindicada en cualquier microangiopatía trombótica y agrava la trombosis de la microcirculación." },
+      { id: "C", label: "C", text: "Hemofilia adquirida por anticuerpos inhibidores del factor VIII; el manejo es la administración de factor VIII recombinante a dosis altas como tratamiento único, sin necesidad de tratar la sepsis de forma específica, ya que el sangrado cutáneo y por los puntos de punción se explica por completo por el déficit de factor." },
+      { id: "D", label: "D", text: "Trombocitopenia inmune primaria desencadenada por la infección; el manejo de primera línea son los corticoides sistémicos en monoterapia, con inmunoglobulinas si el sangrado es grave, sin necesidad de actuar sobre la sepsis." },
     ],
     correctOptionId: "A",
     explanation:
@@ -180,9 +180,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 40 años, con antecedente de trastorno depresivo mayor, acude acompañado de un familiar tras verbalizar ideas de \"no querer seguir viviendo\". El médico de guardia duda si preguntar directamente por ideación e intención suicida, por temor a \"sugerir la idea\" al paciente. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Preguntar de forma directa y explícita sobre ideación suicida, plan, medios disponibles e intencionalidad, ya que la evidencia disponible indica que preguntar directamente NO induce ni aumenta el riesgo de conducta suicida, y permite una evaluación adecuada del riesgo para decidir el manejo (ingreso, observación, o seguimiento ambulatorio estrecho)." },
-      { id: "B", label: "B", text: "Evitar cualquier pregunta directa sobre ideación o intención suicida, dado que verbalizarlo puede plantar la idea en la mente del paciente y precipitar un intento." },
-      { id: "C", label: "C", text: "Dar de alta al paciente sin evaluación específica del riesgo suicida, dado que ya está en tratamiento por su trastorno depresivo de base." },
-      { id: "D", label: "D", text: "Remitir al paciente a una cita ambulatoria programada en varias semanas, sin necesidad de una evaluación de riesgo en el momento agudo." },
+      { id: "B", label: "B", text: "Evitar cualquier pregunta directa sobre ideación o intención suicida y centrar la entrevista en los síntomas depresivos, dado que verbalizarlo puede plantar la idea en la mente del paciente y precipitar un intento, sobre todo en pacientes jóvenes; es preferible esperar a que sea el propio paciente quien saque el tema de forma espontánea durante la consulta." },
+      { id: "C", label: "C", text: "Dar de alta al paciente sin una evaluación específica del riesgo suicida, dado que ya está en tratamiento antidepresivo por su trastorno depresivo de base y su psiquiatra de referencia es quien debe valorar ese riesgo en la próxima cita programada, recomendando a la familia que acuda de nuevo a Urgencias si notan cambios en su conducta o en su estado de ánimo." },
+      { id: "D", label: "D", text: "Remitir al paciente a una cita ambulatoria programada con su psiquiatra en varias semanas, sin necesidad de una evaluación de riesgo en el momento agudo, ya que la ideación suicida en la depresión suele ser pasiva y transitoria y la evaluación es más fiable cuando el paciente está más tranquilo y ha iniciado el efecto del tratamiento antidepresivo pautado." },
     ],
     correctOptionId: "A",
     explanation:
@@ -204,9 +204,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 32 años, tras un parto vaginal de un feto macrosómico, presenta sangrado vaginal abundante y continuo en los primeros 30 minutos posparto, estimado en más de 700 mL. Al examen, el útero se palpa aumentado de tamaño, blando y mal contraído. ¿Cuál es la causa más probable y la actuación inicial más apropiada?",
     options: [
       { id: "A", label: "A", text: "Atonía uterina (causa más frecuente de hemorragia posparto); la actuación inicial es el masaje uterino bimanual junto con la administración de uterotónicos (oxitocina como primera línea, añadiendo otros como metilergometrina, carboprost o misoprostol si la respuesta es insuficiente), revisando además la posible retención de restos placentarios o laceraciones del canal del parto." },
-      { id: "B", label: "B", text: "Coagulopatía congénita no diagnosticada; el manejo inicial es la transfusión de plasma fresco congelado, sin necesidad de intervención sobre el útero." },
-      { id: "C", label: "C", text: "Rotura uterina; el manejo inicial es exclusivamente expectante, dado que la mayoría se resuelven sin intervención." },
-      { id: "D", label: "D", text: "Placenta previa; el manejo inicial es la cesárea urgente, independientemente de la vía de parto ya completada." },
+      { id: "B", label: "B", text: "Coagulopatía congénita no diagnosticada previamente (por ejemplo, enfermedad de von Willebrand); el manejo inicial es la transfusión de plasma fresco congelado y de concentrado de factores, sin necesidad de intervención sobre el útero, ya que el sangrado se explica por el trastorno de la hemostasia y no por un problema de contractilidad uterina, que es excepcional tras un parto vaginal normal." },
+      { id: "C", label: "C", text: "Rotura uterina tras el parto vaginal; el manejo inicial es exclusivamente expectante con reposo y analgesia, dado que la mayoría de las roturas uterinas se resuelven sin intervención y la hemorragia cede de forma espontánea en las primeras horas del puerperio inmediato, sin necesidad de uterotónicos ni de revisión del canal del parto." },
+      { id: "D", label: "D", text: "Placenta previa no diagnosticada durante el embarazo; el manejo inicial es la cesárea urgente para extraer los restos placentarios, independientemente de la vía de parto ya completada, junto con la transfusión de hemoderivados y la administración de antibióticos, sin necesidad de masaje uterino ni de uterotónicos." },
     ],
     correctOptionId: "A",
     explanation:
@@ -228,9 +228,9 @@ export const MIR_2026_61_70_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 70 años, con fibrilación auricular no anticoagulada, presenta dolor súbito e intenso en la pierna derecha, con palidez, frialdad, ausencia de pulsos distales (poplíteo, pedio y tibial posterior) y parestesias, sin poder mover activamente los dedos del pie. La extremidad contralateral es normal. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Anticoagulación inmediata con heparina no fraccionada (para prevenir la propagación del trombo/embolia) y activación urgente del equipo de cirugía vascular para revascularización urgente (embolectomía, trombolisis dirigida por catéter, o bypass según el caso), dado el cuadro compatible con isquemia arterial aguda de la extremidad de origen embólico." },
-      { id: "B", label: "B", text: "Manejo ambulatorio con analgesia y antiagregación oral, dado que la fibrilación auricular no anticoagulada no se relaciona con este cuadro clínico." },
-      { id: "C", label: "C", text: "Elevar la extremidad afectada y aplicar calor local, dado que esto mejora el flujo sanguíneo en la isquemia arterial aguda." },
-      { id: "D", label: "D", text: "Solicitar arteriografía programada en los próximos días, sin necesidad de anticoagulación inmediata ni valoración quirúrgica urgente." },
+      { id: "B", label: "B", text: "Manejo ambulatorio con analgesia y antiagregación oral con ácido acetilsalicílico, dado que la fibrilación auricular no anticoagulada no se relaciona con este cuadro clínico, y control en consulta de cirugía vascular en las próximas semanas para completar el estudio con eco-Doppler arterial y el índice tobillo-brazo del miembro afectado, sin otras medidas urgentes." },
+      { id: "C", label: "C", text: "Elevar la extremidad afectada por encima del nivel del corazón y aplicar calor local, dado que esto mejora el flujo sanguíneo y el retorno venoso en la isquemia arterial aguda, junto con analgesia opioide y reevaluación clínica de la sensibilidad y la motilidad en unas horas." },
+      { id: "D", label: "D", text: "Solicitar una arteriografía programada en los próximos días para definir la anatomía arterial, sin necesidad de anticoagulación inmediata ni de valoración quirúrgica urgente, ya que la exploración del pulso es poco fiable y la mayoría de las oclusiones embólicas se recanalizan espontáneamente con reposo." },
     ],
     correctOptionId: "A",
     explanation:

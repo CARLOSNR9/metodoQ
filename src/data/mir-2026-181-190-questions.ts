@@ -11,10 +11,10 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 68 años con EPOC grave, exfumador, en situación estable y con tratamiento broncodilatador óptimo, presenta en reposo y respirando aire ambiente una PaO₂ de 52 mmHg. ¿Cuál es la indicación correcta?",
     options: [
-      { id: "A", label: "A", text: "Oxígeno solo durante las agudizaciones." },
-      { id: "B", label: "B", text: "Oxígeno a demanda cuando note disnea, unos minutos al día." },
+      { id: "A", label: "A", text: "Oxígeno domiciliario solo durante las agudizaciones y las infecciones respiratorias agudas." },
+      { id: "B", label: "B", text: "Oxígeno a demanda cuando note disnea, unos minutos al día y durante los esfuerzos, sin pauta nocturna." },
       { id: "C", label: "C", text: "Oxigenoterapia crónica domiciliaria al menos 15-16 horas al día, incluyendo la noche." },
-      { id: "D", label: "D", text: "No está indicado el oxígeno mientras la saturación sea superior al 80%." },
+      { id: "D", label: "D", text: "No está indicado el oxígeno mientras la saturación sea superior al 80% en reposo." },
     ],
     correctOptionId: "C",
     explanation:
@@ -36,9 +36,9 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
       "Un hombre de 52 años, obeso e hipertenso, refiere ronquidos intensos, pausas respiratorias observadas por su pareja y somnolencia diurna que le hace dormirse conduciendo. La poligrafía respiratoria muestra un índice de apnea-hipopnea de 42 eventos por hora. ¿Cuál es el tratamiento de elección?",
     options: [
       { id: "A", label: "A", text: "Presión positiva continua en la vía aérea (CPAP) nocturna, junto con medidas higiénico-dietéticas y pérdida de peso." },
-      { id: "B", label: "B", text: "Benzodiacepinas para mejorar la calidad del sueño." },
-      { id: "C", label: "C", text: "Uvulopalatofaringoplastia como primera opción." },
-      { id: "D", label: "D", text: "Oxígeno nocturno aislado." },
+      { id: "B", label: "B", text: "Benzodiacepinas por la noche para mejorar la calidad del sueño y reducir los microdespertares." },
+      { id: "C", label: "C", text: "Uvulopalatofaringoplastia como primera opción terapéutica, antes de ensayar otros tratamientos, dado el índice de apnea-hipopnea elevado." },
+      { id: "D", label: "D", text: "Oxígeno nocturno aislado con gafas nasales para corregir las desaturaciones durante el sueño, sin necesidad de otras medidas." },
     ],
     correctOptionId: "A",
     explanation:
@@ -59,9 +59,9 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 30 años presenta fiebre, artritis de ambos tobillos y nódulos rojos dolorosos en la cara anterior de las piernas. La radiografía de tórax muestra adenopatías hiliares bilaterales simétricas, sin infiltrados pulmonares. ¿Cuál es el diagnóstico más probable y su pronóstico?",
     options: [
-      { id: "A", label: "A", text: "Linfoma de Hodgkin; requiere quimioterapia urgente." },
-      { id: "B", label: "B", text: "Tuberculosis miliar; mal pronóstico sin tratamiento." },
-      { id: "C", label: "C", text: "Lupus eritematoso sistémico; requiere inmunosupresores de inicio." },
+      { id: "A", label: "A", text: "Linfoma de Hodgkin con adenopatías hiliares; requiere biopsia y quimioterapia urgente." },
+      { id: "B", label: "B", text: "Tuberculosis miliar con afectación ganglionar; mal pronóstico sin tratamiento inmediato." },
+      { id: "C", label: "C", text: "Lupus eritematoso sistémico con afectación articular y cutánea; requiere inmunosupresores de inicio." },
       { id: "D", label: "D", text: "Síndrome de Löfgren (sarcoidosis aguda); suele remitir espontáneamente y tiene buen pronóstico." },
     ],
     correctOptionId: "D",
@@ -108,9 +108,9 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 79 años refiere disnea de esfuerzo y un episodio de síncope al subir escaleras. Se ausculta un soplo sistólico rudo en foco aórtico irradiado a carótidas con segundo ruido débil. El ecocardiograma muestra un área valvular aórtica de 0,7 cm² y un gradiente medio de 48 mmHg, con fracción de eyección conservada. ¿Cuál es el tratamiento indicado?",
     options: [
       { id: "A", label: "A", text: "Sustitución valvular aórtica (quirúrgica o percutánea TAVI, según el riesgo y la valoración del equipo cardiológico)." },
-      { id: "B", label: "B", text: "Vasodilatadores a dosis altas para reducir la poscarga." },
-      { id: "C", label: "C", text: "Seguimiento ecocardiográfico anual sin intervención." },
-      { id: "D", label: "D", text: "Valvuloplastia con balón como tratamiento definitivo." },
+      { id: "B", label: "B", text: "Vasodilatadores a dosis altas para reducir la poscarga del ventrículo izquierdo y aliviar los síntomas." },
+      { id: "C", label: "C", text: "Seguimiento ecocardiográfico anual sin intervención, al tener la fracción de eyección conservada." },
+      { id: "D", label: "D", text: "Valvuloplastia aórtica con balón como tratamiento definitivo de la estenosis aórtica grave." },
     ],
     correctOptionId: "A",
     explanation:
@@ -131,10 +131,10 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 72 años, hipertenso y diabético, es diagnosticado de fibrilación auricular permanente. No tiene valvulopatía significativa ni prótesis, su función renal es normal y no tiene antecedentes de sangrado. ¿Cuál es la actitud más adecuada para prevenir el ictus?",
     options: [
-      { id: "A", label: "A", text: "Ácido acetilsalicílico 100 mg al día." },
-      { id: "B", label: "B", text: "No es necesario tratamiento antitrombótico." },
+      { id: "A", label: "A", text: "Ácido acetilsalicílico 100 mg al día como prevención del ictus cardioembólico." },
+      { id: "B", label: "B", text: "No es necesario tratamiento antitrombótico, al tratarse de una fibrilación auricular paroxística y breve." },
       { id: "C", label: "C", text: "Anticoagulación oral, preferentemente con un anticoagulante oral de acción directa (por ejemplo, apixabán)." },
-      { id: "D", label: "D", text: "Doble antiagregación con ácido acetilsalicílico y clopidogrel." },
+      { id: "D", label: "D", text: "Doble antiagregación con ácido acetilsalicílico y clopidogrel de forma indefinida." },
     ],
     correctOptionId: "C",
     explanation:
@@ -155,9 +155,9 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 60 años con diabetes tipo 2 tiene un filtrado glomerular estimado de 50 ml/min/1,73 m² y un cociente albúmina/creatinina en orina de 400 mg/g. Su presión arterial es de 142/88 mmHg. ¿Qué combinación ha demostrado frenar la progresión de su enfermedad renal?",
     options: [
-      { id: "A", label: "A", text: "Diurético de asa y restricción proteica estricta." },
-      { id: "B", label: "B", text: "Antagonista del calcio no dihidropiridínico como único tratamiento." },
-      { id: "C", label: "C", text: "Combinación de un IECA con un ARA-II a dosis máximas." },
+      { id: "A", label: "A", text: "Diurético de asa a dosis altas y restricción proteica estricta en la dieta." },
+      { id: "B", label: "B", text: "Antagonista del calcio no dihidropiridínico como único tratamiento antihipertensivo." },
+      { id: "C", label: "C", text: "Combinación de un IECA con un ARA-II a dosis máximas para el doble bloqueo." },
       { id: "D", label: "D", text: "IECA o ARA-II a la dosis máxima tolerada junto con un inhibidor de SGLT2." },
     ],
     correctOptionId: "D",
@@ -179,10 +179,10 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 38 años con hipertensión arterial presenta en la ecografía riñones aumentados de tamaño con múltiples quistes bilaterales y quistes hepáticos. Su padre inició diálisis a los 55 años. ¿Cuál es la manifestación extrarrenal que debe buscarse si hay antecedentes familiares de hemorragia subaracnoidea?",
     options: [
-      { id: "A", label: "A", text: "Feocromocitoma." },
+      { id: "A", label: "A", text: "Feocromocitomas suprarrenales bilaterales." },
       { id: "B", label: "B", text: "Aneurismas intracraneales saculares." },
-      { id: "C", label: "C", text: "Carcinoma medular de tiroides." },
-      { id: "D", label: "D", text: "Hemangioblastomas cerebelosos." },
+      { id: "C", label: "C", text: "Carcinoma medular de tiroides multifocal." },
+      { id: "D", label: "D", text: "Hemangioblastomas cerebelosos y retinianos." },
     ],
     correctOptionId: "B",
     explanation:
@@ -204,9 +204,9 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 78 años con cardiopatía isquémica presenta astenia, estreñimiento, intolerancia al frío y piel seca. La TSH es de 28 mU/l y la T4 libre está baja. Los anticuerpos antiperoxidasa son positivos. ¿Cuál es la actitud más adecuada?",
     options: [
       { id: "A", label: "A", text: "Iniciar levotiroxina a dosis bajas y aumentarla de forma progresiva, controlando la TSH a las 6-8 semanas." },
-      { id: "B", label: "B", text: "Iniciar levotiroxina a la dosis sustitutiva completa desde el primer día." },
-      { id: "C", label: "C", text: "Administrar triyodotironina (T3) intravenosa." },
-      { id: "D", label: "D", text: "No tratar, porque los síntomas son propios de la edad." },
+      { id: "B", label: "B", text: "Iniciar levotiroxina a la dosis sustitutiva completa desde el primer día para normalizar antes la TSH." },
+      { id: "C", label: "C", text: "Administrar triyodotironina (T3) intravenosa por la rapidez de su efecto en el anciano." },
+      { id: "D", label: "D", text: "No tratar, porque los síntomas son propios de la edad y la TSH elevada es fisiológica en el anciano." },
     ],
     correctOptionId: "A",
     explanation:
@@ -227,10 +227,10 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 45 años consulta por un nódulo tiroideo palpable. La TSH es normal. La ecografía muestra un nódulo sólido de 1,8 cm, hipoecoico, con microcalcificaciones y bordes irregulares. ¿Cuál es el siguiente paso?",
     options: [
-      { id: "A", label: "A", text: "Gammagrafía tiroidea como primera prueba." },
-      { id: "B", label: "B", text: "Tratamiento supresor con levotiroxina y control en un año." },
+      { id: "A", label: "A", text: "Gammagrafía tiroidea con tecnecio como primera prueba diagnóstica." },
+      { id: "B", label: "B", text: "Tratamiento supresor con levotiroxina y control ecográfico en un año." },
       { id: "C", label: "C", text: "Punción aspiración con aguja fina (PAAF) guiada por ecografía." },
-      { id: "D", label: "D", text: "Tiroidectomía total sin estudio citológico previo." },
+      { id: "D", label: "D", text: "Tiroidectomía total sin estudio citológico previo del nódulo tiroideo." },
     ],
     correctOptionId: "C",
     explanation:

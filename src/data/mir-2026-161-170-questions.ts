@@ -36,9 +36,9 @@ export const MIR_2026_161_170_QUESTIONS: TrainingQuestion[] = [
       "Un niño de 3 años presenta desde lactante brotes de lesiones eccematosas muy pruriginosas en flexuras de codos y rodillas, con piel seca de forma persistente. Su madre tiene asma. ¿Cuál es la base del tratamiento?",
     options: [
       { id: "A", label: "A", text: "Emolientes diarios para restaurar la barrera cutánea y corticoides tópicos durante los brotes." },
-      { id: "B", label: "B", text: "Corticoides orales de mantenimiento." },
-      { id: "C", label: "C", text: "Dieta de exclusión de leche, huevo y trigo en todos los casos." },
-      { id: "D", label: "D", text: "Antibióticos tópicos de forma continuada." },
+      { id: "B", label: "B", text: "Corticoides orales de mantenimiento a dosis bajas para prevenir los brotes de forma continuada." },
+      { id: "C", label: "C", text: "Dieta de exclusión de leche, huevo y trigo en todos los casos, aunque no haya alergia alimentaria demostrada." },
+      { id: "D", label: "D", text: "Antibióticos tópicos de forma continuada sobre las zonas afectadas para evitar la colonización por estafilococo." },
     ],
     correctOptionId: "A",
     explanation:
@@ -59,9 +59,9 @@ export const MIR_2026_161_170_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Según la Ley 41/2002, básica reguladora de la autonomía del paciente, ¿en cuál de las siguientes situaciones el consentimiento informado debe prestarse por escrito?",
     options: [
-      { id: "A", label: "A", text: "Para cualquier exploración física en la consulta." },
-      { id: "B", label: "B", text: "Para la prescripción de cualquier fármaco." },
-      { id: "C", label: "C", text: "Nunca: la ley solo contempla el consentimiento verbal." },
+      { id: "A", label: "A", text: "Para cualquier exploración física realizada en la consulta, incluida la auscultación o la toma de la tensión arterial, así como para la entrega de informes clínicos al propio paciente." },
+      { id: "B", label: "B", text: "Para la prescripción de cualquier fármaco, incluidos los de uso habitual en atención primaria, ya que todos los medicamentos pueden producir efectos adversos graves o interacciones." },
+      { id: "C", label: "C", text: "Nunca: la ley solo contempla el consentimiento verbal, que debe registrarse en la historia clínica, y el escrito es una práctica voluntaria de cada centro sanitario o servicio." },
       { id: "D", label: "D", text: "Para intervenciones quirúrgicas, procedimientos diagnósticos y terapéuticos invasivos y, en general, procedimientos con riesgos o inconvenientes de notoria y previsible repercusión negativa para la salud." },
     ],
     correctOptionId: "D",
@@ -83,10 +83,10 @@ export const MIR_2026_161_170_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una adolescente de 16 años, capaz y sin alteraciones cognitivas, acude sola a su médica de familia para solicitar un método anticonceptivo y pide que no se informe a sus padres. Según la legislación española, ¿cuál es la actitud correcta?",
     options: [
-      { id: "A", label: "A", text: "Negar la prescripción hasta que acuda con sus padres." },
-      { id: "B", label: "B", text: "Prescribirlo e informar a los padres en todo caso, porque es menor de edad." },
+      { id: "A", label: "A", text: "Negar la prescripción del anticonceptivo hasta que acuda acompañada de sus padres o tutores legales." },
+      { id: "B", label: "B", text: "Prescribirlo e informar a los padres en todo caso, porque es menor de edad y los padres tienen derecho a conocer cualquier tratamiento." },
       { id: "C", label: "C", text: "Informarla, prescribir el método si está indicado y respetar la confidencialidad, ya que a partir de los 16 años puede consentir por sí misma." },
-      { id: "D", label: "D", text: "Solicitar autorización judicial antes de cualquier actuación." },
+      { id: "D", label: "D", text: "Solicitar autorización judicial antes de cualquier actuación, al tratarse de una menor que no quiere informar a su familia." },
     ],
     correctOptionId: "C",
     explanation:
@@ -107,10 +107,10 @@ export const MIR_2026_161_170_QUESTIONS: TrainingQuestion[] = [
     statement:
       "¿En cuál de las siguientes situaciones está justificado que el médico revele información de un paciente sin su consentimiento?",
     options: [
-      { id: "A", label: "A", text: "Cuando un familiar cercano lo pide por preocupación." },
+      { id: "A", label: "A", text: "Cuando un familiar cercano lo pide por preocupación sobre el estado de salud del paciente, siempre que conviva con él." },
       { id: "B", label: "B", text: "Ante una enfermedad de declaración obligatoria, un requerimiento judicial o un riesgo grave e inminente para terceros." },
-      { id: "C", label: "C", text: "Cuando la empresa del paciente solicita el diagnóstico de su baja laboral." },
-      { id: "D", label: "D", text: "Nunca: el secreto profesional es absoluto." },
+      { id: "C", label: "C", text: "Cuando la empresa del paciente solicita el diagnóstico concreto que motiva su baja laboral para organizar su sustitución." },
+      { id: "D", label: "D", text: "Nunca: el secreto profesional es absoluto y no admite ninguna excepción legal." },
     ],
     correctOptionId: "B",
     explanation:
@@ -132,9 +132,9 @@ export const MIR_2026_161_170_QUESTIONS: TrainingQuestion[] = [
       "Un paciente de 68 años en tratamiento con simvastatina 40 mg recibe claritromicina por una neumonía. A los pocos días presenta mialgias intensas, debilidad y orina oscura, con una CK de 25.000 U/l. ¿Cuál es el mecanismo más probable?",
     options: [
       { id: "A", label: "A", text: "Inhibición del CYP3A4 por la claritromicina, con aumento de las concentraciones de simvastatina y rabdomiólisis." },
-      { id: "B", label: "B", text: "Inducción enzimática del CYP3A4 por la claritromicina." },
-      { id: "C", label: "C", text: "Miositis infecciosa por el germen de la neumonía." },
-      { id: "D", label: "D", text: "Reacción alérgica a la claritromicina de tipo I." },
+      { id: "B", label: "B", text: "Inducción enzimática del CYP3A4 por la claritromicina, que reduce la acción de la simvastatina y provoca miopatía." },
+      { id: "C", label: "C", text: "Miositis infecciosa causada por el mismo germen responsable de la neumonía adquirida en la comunidad." },
+      { id: "D", label: "D", text: "Reacción alérgica de tipo I a la claritromicina con afectación muscular y elevación de la CK." },
     ],
     correctOptionId: "A",
     explanation:
@@ -155,9 +155,9 @@ export const MIR_2026_161_170_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Se inicia un fármaco por vía oral a dosis fijas cada 12 horas. Su semivida de eliminación es de 12 horas y su farmacocinética es lineal. ¿Cuánto tiempo, aproximadamente, tardará en alcanzarse el estado estacionario?",
     options: [
-      { id: "A", label: "A", text: "12 horas." },
-      { id: "B", label: "B", text: "24 horas." },
-      { id: "C", label: "C", text: "Una semana." },
+      { id: "A", label: "A", text: "12 horas (una sola semivida)." },
+      { id: "B", label: "B", text: "24 horas (dos semividas del fármaco)." },
+      { id: "C", label: "C", text: "Una semana, independientemente de la semivida." },
       { id: "D", label: "D", text: "Entre 2 y 2,5 días (4-5 semividas)." },
     ],
     correctOptionId: "D",
@@ -179,10 +179,10 @@ export const MIR_2026_161_170_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una mujer de 32 años con hipertensión arterial esencial, bien controlada con enalapril, acude porque está embarazada de 7 semanas. ¿Cuál es la actitud correcta con su tratamiento?",
     options: [
-      { id: "A", label: "A", text: "Mantener el enalapril, porque controla bien la presión arterial." },
+      { id: "A", label: "A", text: "Mantener el enalapril durante todo el embarazo, porque controla bien la presión arterial y cambiarlo la descompensaría." },
       { id: "B", label: "B", text: "Suspender el enalapril y sustituirlo por un antihipertensivo seguro en el embarazo, como labetalol o nifedipino." },
-      { id: "C", label: "C", text: "Sustituir el enalapril por losartán." },
-      { id: "D", label: "D", text: "Suspender todo tratamiento antihipertensivo durante el embarazo." },
+      { id: "C", label: "C", text: "Sustituir el enalapril por losartán, que tiene menos efectos adversos durante la gestación." },
+      { id: "D", label: "D", text: "Suspender todo tratamiento antihipertensivo durante el embarazo y controlar la presión arterial sin fármacos hasta el parto." },
     ],
     correctOptionId: "B",
     explanation:
@@ -228,9 +228,9 @@ export const MIR_2026_161_170_QUESTIONS: TrainingQuestion[] = [
       "Un hombre de 30 años con sinusitis y bronquitis de repetición presenta una IgA sérica indetectable, con IgG e IgM normales. ¿Qué precaución es especialmente importante en este paciente?",
     options: [
       { id: "A", label: "A", text: "Riesgo de reacciones anafilácticas con transfusiones de hemoderivados que contengan IgA; usar productos lavados o de donantes con déficit de IgA." },
-      { id: "B", label: "B", text: "Administrar inmunoglobulina intravenosa de forma sistemática para reponer la IgA." },
-      { id: "C", label: "C", text: "Contraindicación absoluta de todas las vacunas." },
-      { id: "D", label: "D", text: "Trasplante de progenitores hematopoyéticos urgente." },
+      { id: "B", label: "B", text: "Administrar inmunoglobulina intravenosa de forma sistemática cada mes para reponer la IgA sérica deficitaria y prevenir las infecciones de repetición." },
+      { id: "C", label: "C", text: "Contraindicación absoluta de todas las vacunas, tanto inactivadas como atenuadas, por el riesgo de infección grave y de reacción anafiláctica grave." },
+      { id: "D", label: "D", text: "Trasplante de progenitores hematopoyéticos urgente, al tratarse de una inmunodeficiencia primaria grave con alto riesgo de mortalidad precoz." },
     ],
     correctOptionId: "A",
     explanation:

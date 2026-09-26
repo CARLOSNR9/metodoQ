@@ -12,9 +12,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 66 años, 6 horas después de un IAMCEST anterior extenso tratado con angioplastia primaria, presenta hipotensión (PA 78/52 mmHg), frialdad y livideces distales, oliguria y crepitantes bibasales. El índice cardíaco está reducido. ¿Cuál es el manejo más apropiado de este shock cardiogénico?",
     options: [
       { id: "A", label: "A", text: "Soporte con fármacos vasoactivos (norepinefrina como vasopresor si la hipotensión es marcada, y/o un inotrópico como dobutamina para mejorar el gasto cardíaco), evitando la sobrecarga de volumen, con valoración de soporte circulatorio mecánico si no hay respuesta al tratamiento farmacológico." },
-      { id: "B", label: "B", text: "Administrar grandes volúmenes de cristaloides como primera medida, dado que la hipotensión siempre indica depleción de volumen que debe corregirse antes que cualquier otra intervención." },
-      { id: "C", label: "C", text: "Iniciar betabloqueante intravenoso de forma inmediata para reducir la frecuencia cardíaca y el consumo miocárdico de oxígeno." },
-      { id: "D", label: "D", text: "Manejo exclusivamente con diuréticos de asa a dosis altas, dado que los crepitantes bibasales indican que la prioridad es eliminar volumen." },
+      { id: "B", label: "B", text: "Administrar grandes volúmenes de cristaloides como primera medida (bolos de 500-1000 ml repetidos), dado que la hipotensión siempre indica una depleción de volumen que debe corregirse antes que cualquier otra intervención, aunque existan crepitantes pulmonares o signos de congestión. Reevaluar tras cada bolo." },
+      { id: "C", label: "C", text: "Iniciar un betabloqueante intravenoso de forma inmediata para reducir la frecuencia cardíaca y el consumo miocárdico de oxígeno, ya que la taquicardia sinusal es la causa principal del bajo gasto y controlarla permite que el ventrículo se llene mejor y recupere la presión arterial en las siguientes horas." },
+      { id: "D", label: "D", text: "Manejo exclusivamente con diuréticos de asa a dosis altas en perfusión continua, dado que los crepitantes bibasales indican que la prioridad es eliminar volumen, sin necesidad de fármacos vasoactivos mientras se mantenga una diuresis adecuada." },
     ],
     correctOptionId: "A",
     explanation:
@@ -36,9 +36,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 60 años con neumonía presenta un derrame pleural asociado. La toracocentesis diagnóstica muestra: proteínas en líquido pleural 4.2 g/dL (proteínas séricas 6.5 g/dL), LDH en líquido pleural 380 U/L (LDH sérica 220 U/L, límite superior normal de LDH sérica 250 U/L). ¿Cómo se clasifica este derrame según los criterios de Light y qué implica?",
     options: [
       { id: "A", label: "A", text: "Exudado, ya que cumple al menos uno de los criterios de Light (cociente proteínas líquido/suero >0.5, cociente LDH líquido/suero >0.6, o LDH del líquido pleural mayor de dos tercios del límite superior normal de la LDH sérica); orienta a una causa local (en este caso, paraneumónico) que requiere estudio dirigido, no simplemente tratamiento diurético." },
-      { id: "B", label: "B", text: "Trasudado, ya que ninguno de los cocientes calculados supera el umbral establecido por los criterios de Light." },
-      { id: "C", label: "C", text: "Los criterios de Light no son aplicables en derrames asociados a neumonía, debiendo usarse exclusivamente el aspecto macroscópico del líquido." },
-      { id: "D", label: "D", text: "No es posible clasificar el derrame sin conocer el nivel de glucosa en el líquido pleural, dato imprescindible según los criterios de Light." },
+      { id: "B", label: "B", text: "Trasudado, ya que ninguno de los cocientes calculados supera el umbral establecido por los criterios de Light, lo que orienta a una causa sistémica (insuficiencia cardíaca, cirrosis o síndrome nefrótico) y permite iniciar tratamiento diurético sin necesidad de estudiar el líquido pleural ni realizar nuevas toracocentesis diagnósticas en este paciente." },
+      { id: "C", label: "C", text: "Los criterios de Light no son aplicables en los derrames asociados a una neumonía, debiendo usarse exclusivamente el aspecto macroscópico del líquido (turbio o claro) y el recuento de leucocitos para clasificarlo, ya que la inflamación pleural altera los cocientes de proteínas y de LDH y produce falsos exudados en la mayoría de los casos de derrame paraneumónico." },
+      { id: "D", label: "D", text: "No es posible clasificar el derrame sin conocer el nivel de glucosa y el pH en el líquido pleural, datos imprescindibles según los criterios de Light, por lo que debe repetirse la toracocentesis antes de establecer si se trata de un exudado o de un trasudado y de decidir el tratamiento definitivo en este paciente con neumonía y fiebre persistente." },
     ],
     correctOptionId: "A",
     explanation:
@@ -60,9 +60,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 50 años, con colelitiasis conocida, presenta dolor en hipocondrio derecho de 18 horas de evolución, fiebre de 38.3°C y signo de Murphy positivo. La ecografía abdominal muestra vesícula biliar de paredes engrosadas (>4 mm), con litiasis y líquido perivesicular. ¿Cuál es el manejo más apropiado?",
     options: [
       { id: "A", label: "A", text: "Colecistectomía laparoscópica precoz (idealmente dentro de las primeras 72 horas desde el inicio de los síntomas), junto con antibioterapia, dado el cuadro compatible con colecistitis aguda; la cirugía precoz se asocia a mejores resultados que la diferida." },
-      { id: "B", label: "B", text: "Manejo exclusivamente conservador con antibióticos y analgesia, difiriendo la colecistectomía de forma indefinida en todos los casos, independientemente de la evolución clínica." },
-      { id: "C", label: "C", text: "Colangiopancreatografía retrógrada endoscópica (CPRE) urgente como primer paso, sin necesidad de colecistectomía posterior." },
-      { id: "D", label: "D", text: "Manejo ambulatorio con analgesia oral, dado que la fiebre de 38.3°C no alcanza el umbral para considerar el cuadro como grave." },
+      { id: "B", label: "B", text: "Manejo exclusivamente conservador con antibióticos intravenosos y analgesia, difiriendo la colecistectomía de forma indefinida en todos los casos, independientemente de la evolución clínica, por el mayor riesgo quirúrgico de operar la vesícula inflamada." },
+      { id: "C", label: "C", text: "Colangiopancreatografía retrógrada endoscópica (CPRE) urgente como primer paso terapéutico, sin necesidad de colecistectomía posterior, ya que extrae los cálculos de la vía biliar y resuelve la inflamación de la vesícula en la mayoría de los casos." },
+      { id: "D", label: "D", text: "Manejo ambulatorio con analgesia oral y dieta pobre en grasas, dado que la fiebre de 38.3°C no alcanza el umbral para considerar el cuadro como grave ni para indicar ingreso, con control ecográfico programado en 2-3 semanas." },
     ],
     correctOptionId: "A",
     explanation:
@@ -84,9 +84,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 60 años, con cirrosis hepática conocida, es traído por su familia por confusión progresiva y desorientación de 2 días de evolución. Refieren que ha estado estreñido en los últimos días y que hace poco le añadieron un nuevo diurético. Al examen presenta asterixis (flapping tremor). ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Buscar activamente y corregir el factor precipitante (en este caso, probablemente estreñimiento y/o alteración electrolítica por el diurético), e iniciar lactulosa oral (o por sonda/enema si no puede tragar) como tratamiento de primera línea de la encefalopatía hepática." },
-      { id: "B", label: "B", text: "Restringir de forma estricta y prolongada la ingesta proteica, ya que la causa principal de la encefalopatía hepática es siempre el exceso proteico en la dieta, sin necesidad de buscar otros factores precipitantes." },
-      { id: "C", label: "C", text: "Iniciar sedación con benzodiacepinas para controlar la agitación, sin necesidad de buscar ni tratar ningún factor precipitante." },
-      { id: "D", label: "D", text: "Realizar paracentesis evacuadora urgente como tratamiento específico de la encefalopatía hepática, independientemente de la presencia de ascitis significativa." },
+      { id: "B", label: "B", text: "Restringir de forma estricta y prolongada la ingesta proteica de la dieta, ya que la causa principal de la encefalopatía hepática es siempre el exceso de proteínas en la dieta, sin necesidad de buscar otros factores precipitantes ni de iniciar laxantes o antibióticos no absorbibles como la rifaximina." },
+      { id: "C", label: "C", text: "Iniciar sedación con benzodiacepinas de vida media corta para controlar la agitación y la desorientación, sin necesidad de buscar ni de tratar ningún factor precipitante, y reevaluar el nivel de conciencia al día siguiente." },
+      { id: "D", label: "D", text: "Realizar una paracentesis evacuadora urgente como tratamiento específico de la encefalopatía hepática, independientemente de la presencia de ascitis significativa, con reposición de albúmina intravenosa." },
     ],
     correctOptionId: "A",
     explanation:
@@ -108,9 +108,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 68 años, diabético tipo 2 en tratamiento con insulina, es encontrado por su familia inconsciente en su domicilio. La glucemia capilar es de 32 mg/dL. No hay acceso venoso disponible de inmediato. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Administrar glucagón por vía intramuscular (o subcutánea) de inmediato, dado que el paciente está inconsciente y no hay acceso venoso disponible en ese momento; una vez consciente o al conseguir acceso venoso, administrar glucosa por vía oral o intravenosa para consolidar la recuperación y prevenir la recurrencia." },
-      { id: "B", label: "B", text: "Administrar carbohidratos de absorción rápida por vía oral de inmediato, dado que es la opción más rápida disponible en el domicilio, independientemente del nivel de conciencia del paciente." },
-      { id: "C", label: "C", text: "Esperar a que el paciente recupere la conciencia de forma espontánea antes de cualquier intervención, dado que la mayoría de las hipoglucemias se resuelven sin tratamiento en pacientes previamente sanos." },
-      { id: "D", label: "D", text: "Administrar insulina adicional para las próximas horas, dado que el paciente es diabético y podría tener hiperglucemia de rebote posteriormente." },
+      { id: "B", label: "B", text: "Administrar carbohidratos de absorción rápida por vía oral de inmediato (zumo o agua con azúcar), dado que es la opción más rápida disponible en el domicilio, independientemente del nivel de conciencia del paciente, y repetir la toma cada 15 minutos hasta que se despierte y pueda comer algo más consistente." },
+      { id: "C", label: "C", text: "Esperar a que el paciente recupere la conciencia de forma espontánea antes de cualquier intervención, colocándolo en posición lateral de seguridad, dado que la mayoría de las hipoglucemias se resuelven sin tratamiento en pacientes previamente sanos gracias a la respuesta contrarreguladora endógena. Avisar al médico si tarda más de una hora." },
+      { id: "D", label: "D", text: "Administrar una dosis adicional de insulina para las próximas horas, dado que el paciente es diabético y podría tener una hiperglucemia de rebote posteriormente, y avisar a los servicios de emergencia si no despierta." },
     ],
     correctOptionId: "A",
     explanation:
@@ -132,9 +132,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 45 años, inmigrante reciente, acude por tos de 4 semanas de evolución, febrícula vespertina, sudoración nocturna y pérdida de peso. La radiografía de tórax muestra un infiltrado cavitado en el lóbulo superior derecho. ¿Cuál es la actuación inicial más apropiada?",
     options: [
       { id: "A", label: "A", text: "Aislamiento respiratorio (precauciones de transmisión aérea) mientras se completa el estudio, obtención de baciloscopias seriadas de esputo (tinción de Ziehl-Neelsen) y cultivo de micobacterias, iniciando tratamiento antituberculoso con la combinación estándar (isoniazida, rifampicina, pirazinamida y etambutol) ante alta sospecha clínico-radiológica, sin esperar necesariamente el resultado del cultivo." },
-      { id: "B", label: "B", text: "Manejo ambulatorio sin aislamiento, dado que la tuberculosis pulmonar no se transmite por vía respiratoria en la fase de estudio diagnóstico." },
-      { id: "C", label: "C", text: "Esperar el resultado del cultivo de micobacterias (que puede tardar varias semanas) antes de iniciar cualquier tratamiento antituberculoso, independientemente de la sospecha clínica." },
-      { id: "D", label: "D", text: "Iniciar tratamiento con un único fármaco antituberculoso (monoterapia) para minimizar efectos adversos, añadiendo otros fármacos solo si no hay respuesta inicial." },
+      { id: "B", label: "B", text: "Manejo ambulatorio sin aislamiento respiratorio, con cita en consulta de neumología para completar el estudio, dado que la tuberculosis pulmonar no se transmite por vía respiratoria durante la fase de estudio diagnóstico y el aislamiento solo está indicado una vez confirmado el cultivo, iniciando mientras tanto un antibiótico de amplio espectro por si se trata de una neumonía bacteriana cavitada por anaerobios." },
+      { id: "C", label: "C", text: "Esperar el resultado del cultivo de micobacterias (que puede tardar varias semanas) antes de iniciar cualquier tratamiento antituberculoso, independientemente de la sospecha clínica y radiológica, ya que tratar sin confirmación microbiológica expone al paciente a una hepatotoxicidad innecesaria y favorece la aparición de resistencias a los fármacos de primera línea, sobre todo a la isoniazida y la rifampicina." },
+      { id: "D", label: "D", text: "Iniciar tratamiento con un único fármaco antituberculoso (isoniazida en monoterapia) para minimizar los efectos adversos hepáticos, añadiendo otros fármacos solo si no hay respuesta clínica inicial en las primeras semanas o si el cultivo confirma resistencias, y mantener al paciente en su domicilio sin medidas de aislamiento respiratorio mientras tanto, ya que el tratamiento reduce el contagio en pocos días." },
     ],
     correctOptionId: "A",
     explanation:
@@ -156,9 +156,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 38 años, tras un cuadro gastrointestinal 2 semanas antes, presenta debilidad simétrica y ascendente en miembros inferiores que progresa en 48 horas hacia los miembros superiores, con arreflexia generalizada y parestesias distales, sin alteración del nivel de conciencia. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Ingreso hospitalario con monitorización estrecha de la función respiratoria (capacidad vital forzada seriada) por el riesgo de insuficiencia respiratoria progresiva, y tratamiento con inmunoglobulinas intravenosas o plasmaféresis, dado el cuadro compatible con síndrome de Guillain-Barré." },
-      { id: "B", label: "B", text: "Iniciar corticoides sistémicos en monoterapia como tratamiento de elección, dado que es el tratamiento estándar de las polineuropatías desmielinizantes agudas." },
-      { id: "C", label: "C", text: "Manejo ambulatorio con fisioterapia, dado que el síndrome de Guillain-Barré tiene un curso siempre leve y autolimitado sin riesgo vital." },
-      { id: "D", label: "D", text: "Iniciar tratamiento antibiótico empírico dirigido a la causa gastrointestinal previa como tratamiento principal del cuadro neurológico." },
+      { id: "B", label: "B", text: "Iniciar corticoides sistémicos en monoterapia (metilprednisolona en pulsos intravenosos durante 5 días) como tratamiento de elección, dado que es el tratamiento estándar de las polineuropatías desmielinizantes agudas de origen inmune y acorta el tiempo de recuperación." },
+      { id: "C", label: "C", text: "Manejo ambulatorio con fisioterapia motora y control en consulta de neurología en 2-3 semanas, dado que el síndrome de Guillain-Barré tiene un curso siempre leve y autolimitado, sin riesgo vital ni afectación de la musculatura respiratoria." },
+      { id: "D", label: "D", text: "Iniciar tratamiento antibiótico empírico dirigido al Campylobacter de la gastroenteritis previa como tratamiento principal del cuadro neurológico, dado que eliminar el germen desencadenante detiene la reacción inmune cruzada contra los nervios periféricos." },
     ],
     correctOptionId: "A",
     explanation:
@@ -180,9 +180,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 42 años acude por dolor lumbar derecho intenso, súbito, de tipo cólico, irradiado a fosa ilíaca y genitales, con náuseas asociadas, sin fiebre. El sedimento urinario muestra microhematuria. ¿Cuál es el manejo analgésico de primera línea y qué hallazgo obligaría a una actuación urgente adicional?",
     options: [
       { id: "A", label: "A", text: "Antiinflamatorios no esteroideos como analgesia de primera línea (con opioides como alternativa si están contraindicados o son insuficientes); la presencia de fiebre o signos de infección asociados a la obstrucción (pionefrosis/urosepsis obstructiva) constituiría una urgencia urológica que requeriría drenaje urgente de la vía urinaria, independientemente del tamaño del cálculo." },
-      { id: "B", label: "B", text: "Antibioterapia empírica de amplio espectro como primera medida en todo cólico renal, independientemente de la presencia de fiebre." },
-      { id: "C", label: "C", text: "Cirugía abierta urgente como tratamiento de primera línea para cualquier litiasis renal sintomática, sin ensayar manejo médico previo." },
-      { id: "D", label: "D", text: "Restricción hídrica estricta como medida principal, dado que reduce el flujo urinario y, por tanto, el dolor asociado al paso del cálculo." },
+      { id: "B", label: "B", text: "Antibioterapia empírica de amplio espectro por vía intravenosa como primera medida en todo cólico renal, independientemente de la presencia de fiebre, ya que la obstrucción ureteral favorece siempre la infección de la orina retenida y la analgesia con antiinflamatorios puede enmascarar una pielonefritis incipiente en estos pacientes, sobre todo si el cálculo mide más de 5 mm." },
+      { id: "C", label: "C", text: "Cirugía abierta urgente (ureterolitotomía) como tratamiento de primera línea para cualquier litiasis renal sintomática, sin ensayar manejo médico previo, dado que el dolor cólico indica un cálculo impactado que no se expulsará de forma espontánea y que acabará dañando la función del riñón afectado si no se extrae en las primeras 24-48 horas del ingreso." },
+      { id: "D", label: "D", text: "Restricción hídrica estricta como medida principal, dado que reduce el flujo urinario y, por tanto, el dolor asociado al paso del cálculo por el uréter, asociada a reposo en cama hasta la expulsión del cálculo y a antibioterapia profiláctica oral para evitar la infección de la orina retenida." },
     ],
     correctOptionId: "A",
     explanation:
@@ -204,9 +204,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 58 años, con cáncer de mama metastásico conocido, presenta dolor dorsal intenso de 2 semanas de evolución, que en las últimas 24 horas se ha acompañado de debilidad progresiva en ambas piernas y dificultad para iniciar la micción. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Iniciar corticoides sistémicos a dosis altas (dexametasona) de inmediato, ante la alta sospecha clínica, sin esperar la confirmación por resonancia magnética, y solicitar resonancia magnética urgente de toda la columna para confirmar el nivel y planificar el tratamiento definitivo (radioterapia y/o cirugía descompresiva)." },
-      { id: "B", label: "B", text: "Solicitar resonancia magnética programada en las próximas 1-2 semanas, sin necesidad de tratamiento inmediato, dado que los síntomas llevan solo 24 horas de evolución." },
-      { id: "C", label: "C", text: "Manejo exclusivamente con analgesia opioide, sin necesidad de estudios de imagen ni corticoides, dado que el dolor dorsal es un síntoma esperable en la enfermedad oncológica avanzada." },
-      { id: "D", label: "D", text: "Realizar punción lumbar como primer paso diagnóstico para evaluar la causa de la debilidad progresiva en las piernas." },
+      { id: "B", label: "B", text: "Solicitar una resonancia magnética de columna de forma programada en las próximas 1-2 semanas, sin necesidad de tratamiento inmediato, dado que los síntomas llevan solo 24 horas de evolución y en la mayoría de los casos el dolor dorsal oncológico mejora con analgesia, reservando la imagen urgente para cuando exista incontinencia de esfínteres o paraplejia completa." },
+      { id: "C", label: "C", text: "Manejo exclusivamente con analgesia opioide y reposo, sin necesidad de estudios de imagen ni de corticoides, dado que el dolor dorsal es un síntoma esperable en la enfermedad oncológica avanzada y la debilidad de las piernas se explica por la inmovilidad y la pérdida de masa muscular asociadas a la quimioterapia y a la caquexia." },
+      { id: "D", label: "D", text: "Realizar una punción lumbar como primer paso diagnóstico para evaluar la causa de la debilidad progresiva en las piernas y descartar una carcinomatosis meníngea." },
     ],
     correctOptionId: "A",
     explanation:
@@ -228,9 +228,9 @@ export const MIR_2026_51_60_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 60 años sufre una pérdida de conciencia súbita en la calle. Un testigo inicia reanimación cardiopulmonar básica. A la llegada del equipo de emergencias, el monitor muestra fibrilación ventricular. ¿Cuál es la secuencia de actuación inmediata más apropiada?",
     options: [
       { id: "A", label: "A", text: "Desfibrilación inmediata (choque no sincronizado), reanudando las compresiones torácicas de alta calidad inmediatamente después del choque sin pausar para comprobar el ritmo o el pulso, continuando el ciclo de RCP y reevaluando el ritmo cada 2 minutos; administrar adrenalina tras el segundo choque ineficaz y considerar amiodarona tras el tercero si persiste la fibrilación ventricular." },
-      { id: "B", label: "B", text: "Administrar adrenalina intravenosa como primera medida, antes de cualquier intento de desfibrilación, dado que revertir la fibrilación ventricular depende principalmente del soporte farmacológico." },
-      { id: "C", label: "C", text: "Realizar cardioversión sincronizada, dado que es el procedimiento correcto para cualquier arritmia ventricular, incluida la fibrilación ventricular." },
-      { id: "D", label: "D", text: "Suspender las compresiones torácicas de forma prolongada tras cada choque para verificar minuciosamente el ritmo y el pulso antes de reanudarlas." },
+      { id: "B", label: "B", text: "Administrar adrenalina intravenosa (1 mg) como primera medida, antes de cualquier intento de desfibrilación, dado que revertir la fibrilación ventricular depende principalmente del soporte farmacológico, y repetirla cada 3-5 minutos mientras se prepara el desfibrilador, añadiendo amiodarona si tras la segunda dosis de adrenalina persiste la arritmia en el monitor del desfibrilador." },
+      { id: "C", label: "C", text: "Realizar una cardioversión eléctrica sincronizada con la onda R, dado que es el procedimiento correcto para cualquier arritmia ventricular, incluida la fibrilación ventricular, ya que la sincronización evita descargar en el periodo vulnerable de la onda T y reduce el riesgo de degenerar en asistolia; mientras tanto, mantener la ventilación con bolsa y mascarilla." },
+      { id: "D", label: "D", text: "Suspender las compresiones torácicas de forma prolongada tras cada choque para verificar minuciosamente el ritmo en el monitor y palpar el pulso carotídeo durante al menos 30 segundos antes de reanudarlas, ya que comprimir un corazón que ha recuperado el ritmo tras la descarga puede provocar una nueva fibrilación ventricular y lesionar el miocardio recuperado." },
     ],
     correctOptionId: "A",
     explanation:
