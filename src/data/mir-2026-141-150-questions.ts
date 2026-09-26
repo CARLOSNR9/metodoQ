@@ -37,7 +37,7 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Penicilina G benzatina 2,4 millones de unidades por vía intramuscular en dosis única." },
       { id: "B", label: "B", text: "Aciclovir oral durante 7 días." },
-      { id: "C", label: "C", text: "Ceftriaxona intramuscular en dosis única más doxiciclina durante 7 días, sin más estudios." },
+      { id: "C", label: "C", text: "Ceftriaxona intramuscular en una dosis más doxiciclina durante 7 días, sin más estudios." },
       { id: "D", label: "D", text: "Penicilina G cristalina intravenosa durante 14 días." },
     ],
     correctOptionId: "A",
@@ -182,7 +182,7 @@ export const MIR_2026_141_150_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "Aumentar la analgesia con opioides y reevaluar en 12 horas, ya que los pulsos distales están presentes." },
       { id: "B", label: "B", text: "Retirar la férula o vendajes, medir las presiones compartimentales si hay dudas y realizar una fasciotomía urgente." },
       { id: "C", label: "C", text: "Elevar la pierna por encima del nivel del corazón y aplicar frío local durante 24 horas para reducir el edema." },
-      { id: "D", label: "D", text: "Arteriografía urgente del miembro afectado antes de cualquier otra medida, por sospecha de lesión arterial." },
+      { id: "D", label: "D", text: "Arteriografía urgente del miembro afectado antes de otras medidas, por sospecha de lesión arterial." },
     ],
     correctOptionId: "B",
     explanation:

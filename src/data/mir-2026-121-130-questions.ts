@@ -62,7 +62,7 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "Levonorgestrel 1,5 mg por vía oral." },
       { id: "B", label: "B", text: "Inserción de un dispositivo intrauterino de cobre." },
       { id: "C", label: "C", text: "Anticonceptivos orales combinados a doble dosis (método de Yuzpe)." },
-      { id: "D", label: "D", text: "Ya no existe ningún método eficaz; hay que esperar a la siguiente menstruación." },
+      { id: "D", label: "D", text: "Ya no existe un método eficaz; hay que esperar a la siguiente menstruación." },
     ],
     correctOptionId: "B",
     explanation:
@@ -133,7 +133,7 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Amoxicilina oral a dosis altas y control en 48 horas, por sospecha de escarlatina." },
       { id: "B", label: "B", text: "Inmunoglobulina intravenosa en dosis única junto con ácido acetilsalicílico." },
-      { id: "C", label: "C", text: "Solo antitérmicos, porque es un cuadro viral exantemático autolimitado de la infancia." },
+      { id: "C", label: "C", text: "Antitérmicos y observación, porque es un cuadro viral exantemático autolimitado de la infancia." },
       { id: "D", label: "D", text: "Corticoides tópicos para el exantema y antihistamínicos orales para el prurito." },
     ],
     correctOptionId: "B",
@@ -180,7 +180,7 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
       "En la revisión de una recién nacida de 3 semanas, nacida en presentación de nalgas y con antecedentes familiares de displasia de cadera, la maniobra de Ortolani es positiva en la cadera izquierda. ¿Cuál es la actitud más adecuada?",
     options: [
       { id: "A", label: "A", text: "Radiografía de caderas en proyección anteroposterior y, si es normal, alta." },
-      { id: "B", label: "B", text: "Esperar a los 6 meses de edad para realizar cualquier estudio de imagen." },
+      { id: "B", label: "B", text: "Esperar a los 6 meses de edad para realizar el estudio de imagen de cadera." },
       { id: "C", label: "C", text: "Cirugía de reducción abierta inmediata de la cadera luxable." },
       { id: "D", label: "D", text: "Ecografía de caderas y tratamiento ortopédico con arnés de Pavlik." },
     ],
@@ -227,10 +227,10 @@ export const MIR_2026_121_130_QUESTIONS: TrainingQuestion[] = [
     statement:
       "El cribado neonatal de un recién nacido muestra una tripsina inmunorreactiva elevada. ¿Cuál es la prueba que confirma el diagnóstico de fibrosis quística?",
     options: [
-      { id: "A", label: "A", text: "Repetir la tripsina inmunorreactiva a los 6 meses de vida antes de cualquier otra prueba." },
+      { id: "A", label: "A", text: "Repetir la tripsina inmunorreactiva a los 6 meses de vida antes de otras pruebas." },
       { id: "B", label: "B", text: "Radiografía de tórax y cultivo de esputo para buscar Pseudomonas aeruginosa." },
       { id: "C", label: "C", text: "Test del sudor con cloro elevado (≥ 60 mmol/l), completado con el estudio genético del gen CFTR." },
-      { id: "D", label: "D", text: "Determinación de elastasa fecal como prueba diagnóstica única y suficiente de fibrosis quística." },
+      { id: "D", label: "D", text: "Determinación de elastasa fecal como prueba diagnóstica suficiente de fibrosis quística." },
     ],
     correctOptionId: "C",
     explanation:

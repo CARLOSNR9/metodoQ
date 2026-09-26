@@ -11,7 +11,7 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 68 años con EPOC grave, exfumador, en situación estable y con tratamiento broncodilatador óptimo, presenta en reposo y respirando aire ambiente una PaO₂ de 52 mmHg. ¿Cuál es la indicación correcta?",
     options: [
-      { id: "A", label: "A", text: "Oxígeno domiciliario solo durante las agudizaciones y las infecciones respiratorias agudas." },
+      { id: "A", label: "A", text: "Oxígeno domiciliario durante las agudizaciones y las infecciones respiratorias agudas." },
       { id: "B", label: "B", text: "Oxígeno a demanda cuando note disnea, unos minutos al día y durante los esfuerzos, sin pauta nocturna." },
       { id: "C", label: "C", text: "Oxigenoterapia crónica domiciliaria al menos 15-16 horas al día, incluyendo la noche." },
       { id: "D", label: "D", text: "No está indicado el oxígeno mientras la saturación sea superior al 80% en reposo." },
@@ -134,7 +134,7 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "Ácido acetilsalicílico 100 mg al día como prevención del ictus cardioembólico." },
       { id: "B", label: "B", text: "No es necesario tratamiento antitrombótico, al tratarse de una fibrilación auricular paroxística y breve." },
       { id: "C", label: "C", text: "Anticoagulación oral, preferentemente con un anticoagulante oral de acción directa (por ejemplo, apixabán)." },
-      { id: "D", label: "D", text: "Doble antiagregación con ácido acetilsalicílico y clopidogrel de forma indefinida." },
+      { id: "D", label: "D", text: "Doble antiagregación con ácido acetilsalicílico y clopidogrel a largo plazo." },
     ],
     correctOptionId: "C",
     explanation:
@@ -156,7 +156,7 @@ export const MIR_2026_181_190_QUESTIONS: TrainingQuestion[] = [
       "Un hombre de 60 años con diabetes tipo 2 tiene un filtrado glomerular estimado de 50 ml/min/1,73 m² y un cociente albúmina/creatinina en orina de 400 mg/g. Su presión arterial es de 142/88 mmHg. ¿Qué combinación ha demostrado frenar la progresión de su enfermedad renal?",
     options: [
       { id: "A", label: "A", text: "Diurético de asa a dosis altas y restricción proteica estricta en la dieta." },
-      { id: "B", label: "B", text: "Antagonista del calcio no dihidropiridínico como único tratamiento antihipertensivo." },
+      { id: "B", label: "B", text: "Antagonista del calcio no dihidropiridínico en monoterapia antihipertensiva." },
       { id: "C", label: "C", text: "Combinación de un IECA con un ARA-II a dosis máximas para el doble bloqueo." },
       { id: "D", label: "D", text: "IECA o ARA-II a la dosis máxima tolerada junto con un inhibidor de SGLT2." },
     ],

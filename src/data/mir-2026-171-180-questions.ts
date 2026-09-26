@@ -60,7 +60,7 @@ export const MIR_2026_171_180_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 84 años ha sufrido tres caídas en los últimos 6 meses, sin pérdida de conocimiento. Toma lorazepam por la noche desde hace años, un diurético y un antihipertensivo. La prueba de «levántate y anda» cronometrada está alterada. ¿Cuál es la intervención más importante?",
     options: [
       { id: "A", label: "A", text: "Revisar la medicación, retirando de forma progresiva la benzodiacepina, e iniciar un programa de ejercicio de fuerza y equilibrio dentro de una valoración multifactorial." },
-      { id: "B", label: "B", text: "Recomendar reposo y limitar la deambulación del paciente para evitar nuevas caídas, con andador solo para desplazamientos imprescindibles dentro del domicilio y vigilancia familiar continua." },
+      { id: "B", label: "B", text: "Recomendar reposo y limitar la deambulación del paciente para evitar nuevas caídas, con andador para desplazamientos imprescindibles dentro del domicilio y vigilancia familiar continua." },
       { id: "C", label: "C", text: "Aumentar la dosis de lorazepam para mejorar el descanso nocturno, ya que el insomnio y el cansancio diurno son la causa principal de las caídas." },
       { id: "D", label: "D", text: "Colocar sujeciones mecánicas nocturnas y barandillas en la cama para impedir que se levante sin ayuda durante la noche." },
     ],
@@ -84,7 +84,7 @@ export const MIR_2026_171_180_QUESTIONS: TrainingQuestion[] = [
       "Un hombre de 80 años, independiente para las actividades básicas, refiere pérdida de 5 kg en el último año sin causa aparente, cansancio, lentitud al caminar, debilidad en la prensión de la mano y escasa actividad física. El estudio no muestra enfermedad aguda. ¿Qué intervención ha demostrado mayor beneficio?",
     options: [
       { id: "A", label: "A", text: "Ingreso en una residencia de forma preventiva para garantizar los cuidados y evitar caídas, aunque el paciente todavía sea independiente." },
-      { id: "B", label: "B", text: "Tratamiento con testosterona en todos los casos para aumentar la masa y la fuerza muscular, independientemente de los niveles hormonales." },
+      { id: "B", label: "B", text: "Tratamiento con testosterona para aumentar la masa y la fuerza muscular, aunque los niveles hormonales sean normales." },
       { id: "C", label: "C", text: "Ejercicio físico multicomponente (con énfasis en la fuerza) junto con optimización nutricional y revisión de la medicación." },
       { id: "D", label: "D", text: "Reposo relativo para ahorrar energía y evitar la fatiga, junto con suplementos vitamínicos." },
     ],
@@ -110,7 +110,7 @@ export const MIR_2026_171_180_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "Si no mejora en 3 días, se debe cambiar de antidepresivo o aumentar la dosis, ya que la falta de respuesta inicial predice el fracaso del tratamiento." },
       { id: "B", label: "B", text: "La respuesta suele empezar a las 2-4 semanas y, tras la remisión, el tratamiento debe mantenerse al menos 6-12 meses." },
       { id: "C", label: "C", text: "Puede suspenderse bruscamente en cuanto se encuentre bien, sin retirada gradual, porque los ISRS no producen síntomas de discontinuación." },
-      { id: "D", label: "D", text: "Los ISRS están contraindicados en el primer episodio depresivo, en el que debe empezarse siempre por psicoterapia durante al menos seis meses." },
+      { id: "D", label: "D", text: "Los ISRS están contraindicados en el primer episodio depresivo, en el que debe empezarse por psicoterapia durante al menos seis meses." },
     ],
     correctOptionId: "B",
     explanation:
@@ -133,7 +133,7 @@ export const MIR_2026_171_180_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Benzodiacepinas a dosis altas en monoterapia; no requiere controles analíticos." },
       { id: "B", label: "B", text: "Litio en monoterapia a dosis plenas; control periódico de la función tiroidea." },
-      { id: "C", label: "C", text: "Un tercer antipsicótico típico de alta potencia; control de la prolactina únicamente." },
+      { id: "C", label: "C", text: "Un tercer antipsicótico típico de alta potencia; control de la prolactina." },
       { id: "D", label: "D", text: "Clozapina; control periódico del recuento de neutrófilos por el riesgo de agranulocitosis." },
     ],
     correctOptionId: "D",
@@ -227,7 +227,7 @@ export const MIR_2026_171_180_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Un hombre de 35 años, fumador, presenta desde hace 3 semanas crisis diarias de dolor intensísimo periorbitario derecho, de 45 minutos de duración, generalmente de madrugada, con lagrimeo, rinorrea y ptosis del mismo lado. Durante las crisis está inquieto y no puede quedarse quieto. ¿Cuál es el tratamiento sintomático de elección de las crisis?",
     options: [
-      { id: "A", label: "A", text: "Paracetamol oral a dosis plenas y reposo en cama durante el ataque." },
+      { id: "A", label: "A", text: "Paracetamol oral a dosis plenas y reposo en cama durante el ataque de dolor." },
       { id: "B", label: "B", text: "Amitriptilina por la noche como tratamiento del ataque de dolor agudo." },
       { id: "C", label: "C", text: "Ibuprofeno oral y reposo en una habitación oscura y en silencio." },
       { id: "D", label: "D", text: "Oxígeno al 100% a alto flujo con mascarilla o sumatriptán subcutáneo." },

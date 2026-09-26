@@ -59,3 +59,41 @@ describe("banco MIR: sin sesgo de la opción más larga", () => {
     }
   });
 });
+
+/**
+ * Palabras absolutas («siempre», «nunca», «todos», «cualquier», «exclusivamente»…):
+ * si abundan en las incorrectas, el alumno aprende a descartarlas sin saber
+ * medicina; si solo aparecen en la correcta, la delatan. Deben aparecer en
+ * proporciones parecidas. No cuentan expresiones hechas como «sobre todo»,
+ * «siempre que», «dosis única» o «dieta absoluta».
+ */
+const ABSOLUTE_WORDS =
+  /(?<![\p{L}])(siempre|nunca|jamás|exclusiva(?:mente)?|exclusivo|únicamente|únic[oa]s?|sol[oa]mente|solo|tod[oa]s?|ning[uú]n[oa]?|cualquiera?|independientemente|indefinid[oa]|absolut[oa]s?|obligatori[oa]s?|obligatoriamente|sistemátic[oa]s?|sistemáticamente)(?![\p{L}])/iu;
+const IDIOMS = /(?<![\p{L}])(sobre todo|siempre que|dosis únicas?|dieta absoluta|reposo absoluto|ayuno absoluto)(?![\p{L}])/giu;
+const hasAbsolute = (text: string) => ABSOLUTE_WORDS.test(text.replace(IDIOMS, " "));
+
+describe("banco MIR: sin pista de palabras absolutas", () => {
+  const total = MIR_QUESTIONS.length;
+  const rows = MIR_QUESTIONS.map((question) => ({
+    correct: hasAbsolute(question.options.find((o) => o.id === question.correctOptionId)!.text),
+    distractors: question.options.filter((o) => o.id !== question.correctOptionId).map((o) => hasAbsolute(o.text)),
+  }));
+
+  it("aparecen en proporciones parecidas en correctas e incorrectas (±5 puntos)", () => {
+    const correctRate = rows.filter((row) => row.correct).length / total;
+    const distractorFlags = rows.flatMap((row) => row.distractors);
+    const distractorRate = distractorFlags.filter(Boolean).length / distractorFlags.length;
+    expect(Math.abs(correctRate - distractorRate)).toBeLessThanOrEqual(0.05);
+  });
+
+  it("casi nunca la correcta es la única opción sin palabras absolutas", () => {
+    const onlyWithout = rows.filter((row) => !row.correct && row.distractors.every(Boolean)).length;
+    expect(onlyWithout / total).toBeLessThanOrEqual(0.03);
+  });
+
+  it("casi nunca la correcta es la única opción con palabras absolutas", () => {
+    const onlyWith = rows.filter((row) => row.correct && !row.distractors.some(Boolean)).length;
+    expect(onlyWith / total).toBeLessThanOrEqual(0.03);
+  });
+});
+

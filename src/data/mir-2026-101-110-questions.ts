@@ -230,7 +230,7 @@ export const MIR_2026_101_110_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "El fármaco reduce de forma estadísticamente significativa el riesgo de ictus en un 20%." },
       { id: "B", label: "B", text: "El fármaco aumenta el riesgo de ictus, ya que el límite superior del intervalo es mayor de 1." },
       { id: "C", label: "C", text: "La diferencia no es estadísticamente significativa, porque el intervalo de confianza incluye el 1." },
-      { id: "D", label: "D", text: "Queda demostrado que el fármaco no tiene ningún efecto real sobre el riesgo de ictus." },
+      { id: "D", label: "D", text: "Queda demostrado que el fármaco no tiene efecto real sobre el riesgo de ictus." },
     ],
     correctOptionId: "C",
     explanation:

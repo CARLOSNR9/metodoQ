@@ -36,8 +36,8 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 40 años, sin antecedentes de interés, acude a su centro de salud para el cribado de cáncer de cuello uterino. Según el programa de cribado poblacional vigente en España, ¿qué prueba y con qué periodicidad está indicada?",
     options: [
       { id: "A", label: "A", text: "Determinación del virus del papiloma humano de alto riesgo cada 5 años." },
-      { id: "B", label: "B", text: "Citología cervical anual durante toda la vida sexual activa." },
-      { id: "C", label: "C", text: "Colposcopia con biopsia dirigida cada 3 años en todas las mujeres adultas." },
+      { id: "B", label: "B", text: "Citología cervical anual durante la vida sexual activa." },
+      { id: "C", label: "C", text: "Colposcopia con biopsia dirigida cada 3 años en las mujeres adultas sanas." },
       { id: "D", label: "D", text: "Citología cada 3 años hasta los 65 años de edad, sin determinación del VPH." },
     ],
     correctOptionId: "A",
@@ -132,7 +132,7 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
       "Una gestante de 33 semanas consulta por prurito intenso de predominio palmoplantar y nocturno, sin lesiones cutáneas primarias. Los ácidos biliares séricos están elevados y las transaminasas, discretamente aumentadas. La presión arterial y la proteinuria son normales. ¿Cuál es la actitud más adecuada?",
     options: [
       { id: "A", label: "A", text: "Tranquilizar a la paciente: es un cuadro banal del tercer trimestre sin repercusión fetal, que se trata con emolientes y desaparece tras el parto sin necesidad de controles." },
-      { id: "B", label: "B", text: "Finalizar la gestación de forma inmediata por cesárea, independientemente de la edad gestacional y de los niveles de ácidos biliares, para evitar la muerte fetal intraútero." },
+      { id: "B", label: "B", text: "Finalizar la gestación de forma inmediata por cesárea, sin tener en cuenta la edad gestacional ni los niveles de ácidos biliares, para evitar la muerte fetal intraútero." },
       { id: "C", label: "C", text: "Ácido ursodesoxicólico, control analítico y del bienestar fetal, y planificar la finalización de la gestación en torno a las 37 semanas o antes si los ácidos biliares son muy elevados." },
       { id: "D", label: "D", text: "Corticoides tópicos y antihistamínicos orales para el prurito, sin controles analíticos adicionales ni vigilancia del bienestar fetal, con seguimiento habitual hasta el parto." },
     ],
@@ -203,9 +203,9 @@ export const MIR_2026_111_120_QUESTIONS: TrainingQuestion[] = [
     statement:
       "Una gestante Rh negativo, con test de Coombs indirecto negativo y pareja Rh positivo, está en la semana 28 de una gestación sin incidencias. ¿Cuál es la actitud correcta para prevenir la isoinmunización?",
     options: [
-      { id: "A", label: "A", text: "No administrar nada durante la gestación y valorar la profilaxis solo tras el parto, según el grupo Rh del recién nacido." },
+      { id: "A", label: "A", text: "No administrar nada durante la gestación y valorar la profilaxis tras el parto, según el grupo Rh del recién nacido." },
       { id: "B", label: "B", text: "Administrar inmunoglobulina anti-D en la semana 28 y de nuevo en las 72 horas tras el parto si el recién nacido es Rh positivo." },
-      { id: "C", label: "C", text: "Administrar inmunoglobulina anti-D solo si el test de Coombs indirecto materno se positiviza en los controles del tercer trimestre de la gestación." },
+      { id: "C", label: "C", text: "Administrar inmunoglobulina anti-D si el test de Coombs indirecto materno se positiviza en los controles del tercer trimestre de la gestación." },
       { id: "D", label: "D", text: "Realizar una transfusión intrauterina profiláctica en la semana 28 para prevenir la anemia fetal por isoinmunización Rh." },
     ],
     correctOptionId: "B",
