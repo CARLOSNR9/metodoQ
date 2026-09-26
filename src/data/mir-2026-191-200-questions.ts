@@ -36,7 +36,7 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
       "Un hombre de 64 años presenta astenia. La analítica muestra hemoglobina de 9,8 g/dl, VCM de 72 fl y ferritina de 6 ng/ml. No refiere sangrados visibles ni síntomas digestivos. ¿Cuál es la actitud más adecuada, además de iniciar hierro oral?",
     options: [
       { id: "A", label: "A", text: "Estudio del tubo digestivo con gastroscopia y colonoscopia." },
-      { id: "B", label: "B", text: "Ninguna prueba adicional: basta con reponer el hierro por vía oral." },
+      { id: "B", label: "B", text: "Sin pruebas adicionales: basta con reponer el hierro por vía oral." },
       { id: "C", label: "C", text: "Aspirado de médula ósea como primera prueba diagnóstica del paciente." },
       { id: "D", label: "D", text: "Electroforesis de hemoglobinas para descartar una talasemia minor." },
     ],
@@ -61,7 +61,7 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Gammagrafía ósea con tecnecio para confirmar las lesiones líticas del esqueleto, que es la prueba de imagen más sensible para detectarlas." },
       { id: "B", label: "B", text: "Determinación del PSA sérico y tacto rectal por la sospecha de metástasis óseas de un adenocarcinoma de próstata no diagnosticado." },
-      { id: "C", label: "C", text: "Biopsia renal percutánea para estudiar la causa de la insuficiencia renal y de la proteinuria antes de cualquier otro estudio hematológico." },
+      { id: "C", label: "C", text: "Biopsia renal percutánea para estudiar la causa de la insuficiencia renal y de la proteinuria antes del estudio hematológico." },
       { id: "D", label: "D", text: "Aspirado o biopsia de médula ósea que demuestre ≥ 10% de células plasmáticas clonales, junto con la inmunofijación y las cadenas ligeras libres en suero." },
     ],
     correctOptionId: "D",
@@ -85,8 +85,8 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "AINE en monoterapia durante un año antes de valorar otros tratamientos modificadores de la enfermedad." },
       { id: "B", label: "B", text: "Metotrexato de forma precoz (FAME sintético convencional), con corticoides a dosis bajas como puente si es necesario." },
-      { id: "C", label: "C", text: "Un fármaco biológico anti-TNF como primera opción terapéutica en todos los casos de artritis reumatoide." },
-      { id: "D", label: "D", text: "Corticoides a dosis altas de forma indefinida en monoterapia hasta el control completo de la inflamación." },
+      { id: "C", label: "C", text: "Un fármaco biológico anti-TNF como primera opción terapéutica en la artritis reumatoide de reciente diagnóstico." },
+      { id: "D", label: "D", text: "Corticoides a dosis altas en monoterapia hasta el control completo de la inflamación." },
     ],
     correctOptionId: "B",
     explanation:
@@ -156,7 +156,7 @@ export const MIR_2026_191_200_QUESTIONS: TrainingQuestion[] = [
       "Un hombre de 60 años, asintomático, presenta un PSA de 7,5 ng/ml confirmado en una segunda determinación. El tacto rectal es normal. ¿Cuál es el siguiente paso más adecuado según las recomendaciones actuales?",
     options: [
       { id: "A", label: "A", text: "Iniciar tratamiento hormonal de privación androgénica sin confirmación histológica del cáncer." },
-      { id: "B", label: "B", text: "Gammagrafía ósea como primera prueba para descartar metástasis antes de cualquier otra exploración." },
+      { id: "B", label: "B", text: "Gammagrafía ósea como primera prueba para descartar metástasis antes de otras exploraciones." },
       { id: "C", label: "C", text: "Resonancia magnética multiparamétrica de próstata antes de decidir la biopsia." },
       { id: "D", label: "D", text: "Prostatectomía radical directamente, sin necesidad de un estudio histológico previo de la próstata." },
     ],

@@ -12,7 +12,7 @@ export const MIR_2026_31_40_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 27 años, con colitis ulcerosa conocida, presenta más de 6 deposiciones sanguinolentas al día, fiebre de 38.2°C, frecuencia cardíaca de 108 lpm y VSG elevada. ¿Cuál es la clasificación del brote y la actitud terapéutica inicial más apropiada?",
     options: [
       { id: "A", label: "A", text: "Brote grave (criterios de Truelove-Witts); ingreso hospitalario e inicio de corticoides intravenosos, con valoración de tratamiento de rescate (infliximab o ciclosporina) si no hay respuesta en 72 horas." },
-      { id: "B", label: "B", text: "Brote leve de colitis ulcerosa; manejo ambulatorio con aminosalicilatos orales y tópicos exclusivamente, sin necesidad de ingreso ni de corticoides, con revisión en consulta de digestivo a las 2-4 semanas para valorar la respuesta." },
+      { id: "B", label: "B", text: "Brote leve de colitis ulcerosa; manejo ambulatorio con aminosalicilatos orales y tópicos, sin necesidad de ingreso ni de corticoides, con revisión en consulta de digestivo a las 2-4 semanas para valorar la respuesta." },
       { id: "C", label: "C", text: "Brote moderado de colitis ulcerosa; iniciar antibioterapia empírica intravenosa (ciprofloxacino y metronidazol) como tratamiento principal, sin necesidad de corticoides, ya que la fiebre y la taquicardia indican sobreinfección." },
       { id: "D", label: "D", text: "Indicación de colectomía urgente de entrada, sin ensayar tratamiento médico intensivo previo, dado que el número de deposiciones con sangre y la anemia ya indican un claro fracaso del tratamiento conservador." },
     ],
@@ -37,7 +37,7 @@ export const MIR_2026_31_40_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "CURB-65 de 5 puntos (confusión, urea elevada, frecuencia respiratoria ≥30, hipotensión, y edad ≥65 años, los 5 criterios presentes); indica neumonía grave con alto riesgo de mortalidad, requiriendo valoración de ingreso en UCI." },
       { id: "B", label: "B", text: "CURB-65 de 0-1 puntos, ya que la confusión y la urea no puntúan en los pacientes mayores de 65 años; manejo ambulatorio con antibiótico oral en domicilio, sin necesidad de ingreso hospitalario." },
-      { id: "C", label: "C", text: "La escala CURB-65 no es aplicable en pacientes mayores de 70 años, debiendo usarse exclusivamente criterios clínicos subjetivos del médico de guardia para decidir el ingreso hospitalario." },
+      { id: "C", label: "C", text: "La escala CURB-65 no es aplicable en pacientes mayores de 70 años, debiendo usarse los criterios clínicos subjetivos del médico de guardia para decidir el ingreso hospitalario." },
       { id: "D", label: "D", text: "CURB-65 de 2 puntos, que corresponde a un riesgo intermedio de mortalidad; manejo ambulatorio con antibiótico oral y reevaluación clínica en 48-72 horas en su centro de atención primaria." },
     ],
     correctOptionId: "A",
@@ -84,8 +84,8 @@ export const MIR_2026_31_40_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 68 años, en tratamiento con acenocumarol por fibrilación auricular, es traído por disminución brusca del nivel de conciencia y hemiparesia izquierda. La TC craneal muestra una hemorragia intraparenquimatosa de 30 mL en ganglios basales derechos. La presión arterial es 195/110 mmHg y el INR es de 3.2. ¿Cuál es el manejo inicial más apropiado?",
     options: [
       { id: "A", label: "A", text: "Reversión urgente de la anticoagulación (con complejo protrombínico y vitamina K) y control activo de la presión arterial hacia un objetivo más conservador (habitualmente en torno a 140 mmHg de sistólica), evitando tanto la hipertensión mantenida como el descenso excesivo o brusco." },
-      { id: "B", label: "B", text: "Administrar un fibrinolítico intravenoso (alteplasa) para intentar disolver el hematoma y reducir el efecto masa, de forma análoga al manejo del ictus isquémico, siempre que el paciente se encuentre dentro de las primeras 4,5 horas desde el inicio de los síntomas neurológicos." },
-      { id: "C", label: "C", text: "Mantener la presión arterial sin ninguna intervención farmacológica, ya que la hipertensión es una respuesta fisiológica protectora en la hemorragia intracraneal que asegura la perfusión cerebral alrededor del hematoma y no debe modificarse en las primeras 24-48 horas del ingreso." },
+      { id: "B", label: "B", text: "Administrar un fibrinolítico intravenoso (alteplasa) para intentar disolver el hematoma y reducir el efecto masa, de forma análoga al manejo del ictus isquémico, si el paciente se encuentra dentro de las primeras 4,5 horas desde el inicio de los síntomas neurológicos." },
+      { id: "C", label: "C", text: "Mantener la presión arterial sin intervención farmacológica, ya que la hipertensión es una respuesta fisiológica protectora en la hemorragia intracraneal que asegura la perfusión cerebral alrededor del hematoma y no debe modificarse en las primeras 24-48 horas del ingreso." },
       { id: "D", label: "D", text: "Continuar el acenocumarol a la dosis habitual, dado que suspenderlo aumenta el riesgo de complicaciones tromboembólicas por la fibrilación auricular, y controlar el INR en 48 horas." },
     ],
     correctOptionId: "A",
@@ -109,7 +109,7 @@ export const MIR_2026_31_40_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Oxigenoterapia (con soporte ventilatorio no invasivo si es necesario), diuréticos de asa intravenosos, y vasodilatadores (nitratos) si la presión arterial lo permite, dado el cuadro compatible con edema agudo de pulmón/insuficiencia cardíaca aguda con presión arterial conservada o elevada." },
       { id: "B", label: "B", text: "Administrar un bolo generoso de cristaloides intravenosos (1000 ml en 30 minutos) para mejorar el gasto cardíaco y la perfusión renal, dado que la disnea y la taquicardia sugieren hipoperfusión tisular que se corrige con volumen, y reevaluar la respuesta clínica y la diuresis después de cada bolo administrado." },
-      { id: "C", label: "C", text: "Iniciar un betabloqueante intravenoso de forma inmediata para reducir la frecuencia cardíaca y el consumo miocárdico de oxígeno, independientemente del estado de congestión pulmonar, ya que la taquicardia es el principal determinante del edema y controlarla mejora el llenado diastólico del ventrículo." },
+      { id: "C", label: "C", text: "Iniciar un betabloqueante intravenoso de forma inmediata para reducir la frecuencia cardíaca y el consumo miocárdico de oxígeno, aunque exista congestión pulmonar, ya que la taquicardia es el principal determinante del edema y controlarla mejora el llenado diastólico del ventrículo." },
       { id: "D", label: "D", text: "Manejo ambulatorio con ajuste de la dosis de diuréticos orales y control de peso diario, dado que los edemas maleolares son crónicos y no requieren intervención urgente, con revisión en la consulta de cardiología en una semana, restricción hídrica y reducción de la sal en la dieta habitual." },
     ],
     correctOptionId: "A",
@@ -133,8 +133,8 @@ export const MIR_2026_31_40_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Determinación de dímero D; si es negativo, se puede descartar razonablemente TVP sin necesidad de ecografía, y si es positivo, realizar ecografía Doppler venosa de miembros inferiores para confirmar el diagnóstico." },
       { id: "B", label: "B", text: "Iniciar anticoagulación empírica a dosis plenas sin ninguna prueba diagnóstica, basándose únicamente en el signo de Homans positivo y en el edema de la pantorrilla, y mantenerla durante 3 meses." },
-      { id: "C", label: "C", text: "Solicitar flebografía con contraste como primera prueba diagnóstica en todos los casos, dado que es más sensible y específica que la ecografía Doppler venosa y evita falsos negativos." },
-      { id: "D", label: "D", text: "Descartar la TVP de forma definitiva únicamente con la exploración física, sin necesidad de ninguna prueba complementaria, si el signo de Homans es negativo y no hay cordón venoso palpable." },
+      { id: "C", label: "C", text: "Solicitar flebografía con contraste como primera prueba diagnóstica en este paciente, dado que es más sensible y específica que la ecografía Doppler venosa y evita falsos negativos." },
+      { id: "D", label: "D", text: "Descartar la TVP de forma definitiva con la exploración física, sin pruebas complementarias, si el signo de Homans es negativo y no hay cordón venoso palpable." },
     ],
     correctOptionId: "A",
     explanation:
@@ -156,9 +156,9 @@ export const MIR_2026_31_40_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 42 años presenta astenia, ictericia y orinas oscuras de una semana de evolución. La analítica muestra hemoglobina 8.1 g/dL, reticulocitos elevados, bilirrubina indirecta elevada, LDH elevada y haptoglobina indetectable. El test de Coombs directo es positivo. ¿Cuál es el diagnóstico más probable y el tratamiento de primera línea?",
     options: [
       { id: "A", label: "A", text: "Anemia hemolítica autoinmune; el tratamiento de primera línea es corticoides sistémicos (por ejemplo, prednisona), reservando otras opciones (rituximab, esplenectomía, inmunosupresores) para casos refractarios o recidivantes." },
-      { id: "B", label: "B", text: "Anemia ferropénica por pérdidas digestivas; el tratamiento de primera línea es la suplementación oral con hierro, asociada a vitamina C para mejorar su absorción, y la transfusión solo se reserva para anemias graves sintomáticas o con inestabilidad hemodinámica." },
+      { id: "B", label: "B", text: "Anemia ferropénica por pérdidas digestivas; el tratamiento de primera línea es la suplementación oral con hierro, asociada a vitamina C para mejorar su absorción, y la transfusión se reserva para anemias graves sintomáticas o con inestabilidad hemodinámica." },
       { id: "C", label: "C", text: "Anemia megaloblástica por déficit de vitamina B12; el tratamiento de primera línea es la suplementación con vitamina B12 intramuscular, seguida de dosis de mantenimiento de por vida." },
-      { id: "D", label: "D", text: "Anemia de trastornos crónicos; no requiere un tratamiento específico dirigido, solo el manejo de la enfermedad de base y, si es grave, la valoración de eritropoyetina." },
+      { id: "D", label: "D", text: "Anemia de trastornos crónicos; no requiere un tratamiento específico dirigido, sino el manejo de la enfermedad de base y, si es grave, la valoración de eritropoyetina." },
     ],
     correctOptionId: "A",
     explanation:
@@ -204,7 +204,7 @@ export const MIR_2026_31_40_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 30 años, minutos después de la ingesta de marisco, presenta urticaria generalizada, angioedema labial, sensación de opresión faríngea, disnea con sibilancias e hipotensión (PA 78/50 mmHg). ¿Cuál es el fármaco de primera línea y la vía de administración más apropiada?",
     options: [
       { id: "A", label: "A", text: "Adrenalina intramuscular (en cara anterolateral del muslo) de forma inmediata, sin retrasar su administración por la colocación de vía intravenosa u otras medidas, repitiendo la dosis cada 5-15 minutos si es necesario." },
-      { id: "B", label: "B", text: "Antihistamínicos intravenosos (dexclorfeniramina) como tratamiento de primera línea junto con sueroterapia, reservando la adrenalina solo si no hay respuesta a los antihistamínicos tras 15-20 minutos, por el riesgo de arritmias que conlleva en adultos." },
+      { id: "B", label: "B", text: "Antihistamínicos intravenosos (dexclorfeniramina) como tratamiento de primera línea junto con sueroterapia, reservando la adrenalina para cuando no haya respuesta a los antihistamínicos tras 15-20 minutos, por el riesgo de arritmias que conlleva en adultos." },
       { id: "C", label: "C", text: "Corticoides intravenosos a dosis altas (metilprednisolona o hidrocortisona) como tratamiento de primera línea, dado su rápido inicio de acción en la anafilaxia y su capacidad para prevenir las reacciones bifásicas en las horas siguientes." },
       { id: "D", label: "D", text: "Adrenalina por vía subcutánea en el brazo, dado que tiene una absorción más predecible y segura que la vía intramuscular en el contexto de shock anafiláctico, repitiendo la dosis si persisten la hipotensión o el broncoespasmo." },
     ],
@@ -230,7 +230,7 @@ export const MIR_2026_31_40_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "Añadir un opioide débil (por ejemplo, tramadol o codeína) al tratamiento de base (escalón 2), o considerar directamente un opioide potente a dosis bajas si el dolor es intenso, sin necesidad de agotar todas las opciones del escalón 2 antes de escalar." },
       { id: "B", label: "B", text: "Aumentar la dosis del antiinflamatorio no esteroideo por encima del límite recomendado, ya que el siguiente paso siempre es maximizar los fármacos del escalón 1 antes de progresar al segundo escalón analgésico." },
       { id: "C", label: "C", text: "Pasar directamente a sedación paliativa con midazolam en perfusión continua, dado que el dolor no ha respondido al primer escalón analgésico y se considera ya un síntoma refractario al tratamiento." },
-      { id: "D", label: "D", text: "Retirar toda la analgesia y reiniciar únicamente con medidas no farmacológicas (calor local, fisioterapia y apoyo psicológico), dado el riesgo de dependencia y de tolerancia a los opioides en el paciente oncológico." },
+      { id: "D", label: "D", text: "Retirar la analgesia farmacológica y reiniciar con medidas no farmacológicas (calor local, fisioterapia y apoyo psicológico), dado el riesgo de dependencia y de tolerancia a los opioides en el paciente oncológico." },
     ],
     correctOptionId: "A",
     explanation:

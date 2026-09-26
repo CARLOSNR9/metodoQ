@@ -14,7 +14,7 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "El cuadro clínico es altamente compatible con apendicitis aguda; debe procederse a apendicectomía (laparoscópica o abierta) sin necesidad obligatoria de pruebas de imagen adicionales cuando la presentación clínica es característica." },
       { id: "B", label: "B", text: "Debe solicitarse un enema opaco como prueba diagnóstica de elección antes de decidir el tratamiento quirúrgico, ya que la falta de repleción del apéndice confirma el diagnóstico y evita laparotomías innecesarias en pacientes jóvenes." },
       { id: "C", label: "C", text: "Manejo ambulatorio con analgesia y antibioterapia oral, reevaluando en 48-72 horas, dado que la apendicitis en fase inicial no requiere cirugía urgente y la mayoría de los casos se resuelven con tratamiento médico." },
-      { id: "D", label: "D", text: "Debe realizarse laparotomía exploradora amplia de entrada, sin considerar el abordaje laparoscópico en ningún caso, porque la exploración completa de la cavidad abdominal es imprescindible ante cualquier sospecha de abdomen agudo en un paciente joven." },
+      { id: "D", label: "D", text: "Debe realizarse laparotomía exploradora amplia de entrada, sin considerar el abordaje laparoscópico en ningún caso, porque la exploración completa de la cavidad abdominal es imprescindible ante la sospecha de abdomen agudo en un paciente joven." },
     ],
     correctOptionId: "A",
     explanation:
@@ -36,9 +36,9 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 84 años, tras una caída casual, presenta dolor en cadera derecha con acortamiento y rotación externa del miembro. La radiografía confirma fractura subcapital de cadera derecha. Presenta pluripatología (hipertensión, fibrilación auricular anticoagulada, deterioro cognitivo leve). ¿Cuál es el manejo más apropiado?",
     options: [
       { id: "A", label: "A", text: "Tratamiento quirúrgico precoz (idealmente dentro de las primeras 24-48 horas), tras optimización anestésica y manejo multidisciplinar (geriatría-traumatología), evitando la inmovilización prolongada en cama." },
-      { id: "B", label: "B", text: "Tratamiento conservador con reposo absoluto en cama durante varias semanas y analgesia pautada, evitando la cirugía dado el riesgo anestésico de la edad avanzada y la pluripatología, y valorar la movilización solo cuando la fractura haya consolidado." },
-      { id: "C", label: "C", text: "Diferir la cirugía de forma indefinida hasta la resolución completa de todas las comorbilidades, sin límite de tiempo predefinido, ya que operar a un paciente anciano no optimizado aumenta la mortalidad perioperatoria de forma significativa." },
-      { id: "D", label: "D", text: "Tracción cutánea prolongada como tratamiento definitivo único, sin necesidad de cirugía posterior, manteniendo al paciente encamado hasta la consolidación radiológica de la fractura." },
+      { id: "B", label: "B", text: "Tratamiento conservador con reposo estricto en cama durante varias semanas y analgesia pautada, evitando la cirugía dado el riesgo anestésico de la edad avanzada y la pluripatología, y valorar la movilización cuando la fractura haya consolidado." },
+      { id: "C", label: "C", text: "Diferir la cirugía hasta la resolución completa de las comorbilidades, sin límite de tiempo predefinido, ya que operar a un paciente anciano no optimizado aumenta la mortalidad perioperatoria de forma significativa." },
+      { id: "D", label: "D", text: "Tracción cutánea prolongada como tratamiento definitivo, sin necesidad de cirugía posterior, manteniendo al paciente encamado hasta la consolidación radiológica de la fractura." },
     ],
     correctOptionId: "A",
     explanation:
@@ -60,7 +60,7 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 45 años con diagnóstico reciente de leucemia linfoblástica aguda de alta carga tumoral inicia quimioterapia de inducción. A las 24 horas presenta oliguria, y la analítica muestra hiperpotasemia, hiperfosfatemia, hipocalcemia y elevación del ácido úrico y de la creatinina respecto al ingreso. ¿Cuál es el diagnóstico y la medida más importante que debió haberse anticipado antes de iniciar la quimioterapia?",
     options: [
       { id: "A", label: "A", text: "Síndrome de lisis tumoral; la medida preventiva clave antes de iniciar quimioterapia en pacientes de alto riesgo es la hidratación intravenosa intensiva junto con tratamiento hipouricemiante (rasburicasa o alopurinol, según el riesgo), iniciados de forma profiláctica." },
-      { id: "B", label: "B", text: "Nefropatía por contraste yodado administrado en el TC de estadificación; la medida preventiva es evitar cualquier nueva administración de contraste yodado antes de la quimioterapia y suspender los nefrotóxicos, sin necesidad de hidratación ni de fármacos hipouricemiantes." },
+      { id: "B", label: "B", text: "Nefropatía por contraste yodado administrado en el TC de estadificación; la medida preventiva es evitar una nueva administración de contraste yodado antes de la quimioterapia y suspender los nefrotóxicos, sin necesidad de hidratación intravenosa ni de fármacos hipouricemiantes." },
       { id: "C", label: "C", text: "Necrosis tubular aguda isquémica por hipoperfusión renal; la medida preventiva es restringir los líquidos intravenosos antes de iniciar la quimioterapia para evitar la sobrecarga de volumen, y vigilar la diuresis horaria durante los primeros ciclos de tratamiento." },
       { id: "D", label: "D", text: "Nefritis intersticial aguda inmunoalérgica por fármacos; la medida preventiva es la administración profiláctica de corticoides sistémicos antes de la quimioterapia, junto con la retirada de los antiinflamatorios no esteroideos y de los inhibidores de la bomba de protones." },
     ],
@@ -85,7 +85,7 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Cardioversión eléctrica sincronizada urgente, dado que la fibrilación auricular está causando inestabilidad hemodinámica (hipotensión y signos de hipoperfusión/edema pulmonar), sin necesidad de esperar el efecto de fármacos controladores de frecuencia." },
       { id: "B", label: "B", text: "Iniciar betabloqueante intravenoso (por ejemplo, esmolol o metoprolol) para control de la frecuencia ventricular, y reevaluar la respuesta hemodinámica antes de considerar cualquier otra medida, ya que la taquicardia es la causa de la hipotensión." },
-      { id: "C", label: "C", text: "Anticoagular de inmediato con heparina y diferir cualquier intento de cardioversión hasta completar al menos 3 semanas de anticoagulación eficaz, independientemente del estado hemodinámico del paciente, por el riesgo de embolia sistémica." },
+      { id: "C", label: "C", text: "Anticoagular de inmediato con heparina y diferir el intento de cardioversión hasta completar al menos 3 semanas de anticoagulación eficaz, aunque el paciente esté hipotenso, por el riesgo de embolia sistémica." },
       { id: "D", label: "D", text: "Administrar digoxina intravenosa como fármaco de primera elección para control de frecuencia en este contexto agudo, dado que no produce hipotensión, mejora la contractilidad y actúa de forma inmediata sobre el nodo auriculoventricular." },
     ],
     correctOptionId: "A",
@@ -108,7 +108,7 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 76 años, con cuadro de vómitos y diarrea de 3 días, presenta creatinina de 2.1 mg/dL (basal 0.9 mg/dL), con oliguria. Los parámetros urinarios muestran: sodio urinario 8 mEq/L, fracción de excreción de sodio (FeNa) 0.6%, osmolaridad urinaria elevada, y sedimento urinario sin cilindros patológicos. ¿Cuál es la etiología más probable y la conducta inicial más apropiada?",
     options: [
       { id: "A", label: "A", text: "Fracaso renal agudo de origen prerrenal (por hipovolemia secundaria a pérdidas digestivas); el manejo inicial es la reposición de volumen con fluidoterapia intravenosa, con la expectativa de recuperación de la función renal al corregir la hipoperfusión." },
-      { id: "B", label: "B", text: "Necrosis tubular aguda establecida por la hipoperfusión mantenida; el manejo inicial es restringir líquidos y valorar hemodiálisis de forma inmediata, sin ensayar reposición de volumen, porque aportar sueroterapia a un riñón con necrosis tubular solo produciría sobrecarga hídrica y edema pulmonar." },
+      { id: "B", label: "B", text: "Necrosis tubular aguda establecida por la hipoperfusión mantenida; el manejo inicial es restringir líquidos y valorar hemodiálisis de forma inmediata, sin ensayar reposición de volumen, porque aportar sueroterapia a un riñón con necrosis tubular produciría sobrecarga hídrica y edema pulmonar." },
       { id: "C", label: "C", text: "Fracaso renal agudo posrenal por obstrucción de la vía urinaria; el manejo inicial es la colocación urgente de una sonda vesical o de una nefrostomía percutánea, sin necesidad de otros estudios." },
       { id: "D", label: "D", text: "Glomerulonefritis aguda rápidamente progresiva; el manejo inicial es iniciar corticoides sistémicos en pulsos de forma empírica y solicitar una biopsia renal urgente." },
     ],
@@ -132,8 +132,8 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 58 años, con antecedente de cirugía ortopédica reciente e inmovilización, presenta disnea súbita, dolor torácico pleurítico y taquicardia de 118 lpm. La presión arterial es 108/70 mmHg (estable). La probabilidad clínica de tromboembolismo pulmonar (TEP), según escala validada, es alta. ¿Cuál es el siguiente paso diagnóstico más apropiado?",
     options: [
       { id: "A", label: "A", text: "Angio-TC de arterias pulmonares como prueba diagnóstica de elección, dado que la probabilidad clínica es alta (no está indicado el dímero D como cribado en este escenario, ya que un resultado negativo no descartaría de forma fiable el TEP con probabilidad clínica alta)." },
-      { id: "B", label: "B", text: "Determinación de dímero D como primer paso diagnóstico; si el resultado es negativo, se descarta el TEP sin necesidad de más pruebas, independientemente de la probabilidad clínica, ya que su valor predictivo negativo es muy alto en cualquier escenario clínico y evita irradiar al paciente." },
-      { id: "C", label: "C", text: "Iniciar anticoagulación empírica a dosis plenas sin ninguna prueba diagnóstica de imagen, basándose únicamente en la probabilidad clínica alta, y mantenerla durante al menos 3 meses sin necesidad de confirmar el diagnóstico en ningún momento." },
+      { id: "B", label: "B", text: "Determinación de dímero D como primer paso diagnóstico; si el resultado es negativo, se descarta el TEP sin necesidad de más pruebas, aunque la probabilidad clínica sea alta, ya que su valor predictivo negativo es muy alto en este escenario clínico y evita irradiar al paciente." },
+      { id: "C", label: "C", text: "Iniciar anticoagulación empírica a dosis plenas sin prueba diagnóstica de imagen, basándose en la probabilidad clínica alta, y mantenerla durante al menos 3 meses sin necesidad de confirmar el diagnóstico más adelante." },
       { id: "D", label: "D", text: "Solicitar radiografía de tórax como prueba diagnóstica definitiva, dado que es suficiente para confirmar o descartar el TEP con fiabilidad y permite evitar la angio-TC." },
     ],
     correctOptionId: "A",
@@ -156,9 +156,9 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 48 años, con antecedente de colelitiasis conocida, acude por dolor abdominal intenso en epigastrio irradiado en cinturón hacia la espalda, con náuseas y vómitos. La lipasa sérica está elevada más de 3 veces el límite superior de la normalidad. ¿Cuál es el manejo inicial más apropiado en las primeras horas?",
     options: [
       { id: "A", label: "A", text: "Fluidoterapia intravenosa adecuada (goal-directed), analgesia, y reinicio de la alimentación oral precoz (según tolerancia) en cuanto sea posible, evitando el ayuno prolongado innecesario." },
-      { id: "B", label: "B", text: "Ayuno absoluto prolongado durante al menos 2 semanas con sonda nasogástrica, independientemente de la evolución clínica, para permitir el reposo pancreático completo." },
-      { id: "C", label: "C", text: "Antibioterapia profiláctica sistemática con carbapenémicos desde el ingreso en todos los casos de pancreatitis aguda, independientemente de la gravedad o de la presencia de necrosis infectada." },
-      { id: "D", label: "D", text: "Colecistectomía urgente en las primeras 24 horas, antes de cualquier otra medida de soporte, ya que la litiasis biliar es la causa más frecuente y retirar la vesícula frena la inflamación pancreática." },
+      { id: "B", label: "B", text: "Ayuno absoluto prolongado durante al menos 2 semanas con sonda nasogástrica, aunque la evolución clínica sea favorable, para permitir el reposo pancreático completo." },
+      { id: "C", label: "C", text: "Antibioterapia profiláctica con carbapenémicos desde el ingreso en la pancreatitis aguda, aunque sea leve y no haya sospecha de necrosis infectada." },
+      { id: "D", label: "D", text: "Colecistectomía urgente en las primeras 24 horas, antes de las medidas de soporte, ya que la litiasis biliar es la causa más frecuente y retirar la vesícula frena la inflamación pancreática." },
     ],
     correctOptionId: "A",
     explanation:
@@ -180,9 +180,9 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 38 años, con hipertiroidismo conocido y mal control terapéutico, acude tras un cuadro infeccioso intercurrente con fiebre de 39.5°C, taquicardia de 145 lpm, agitación psicomotriz, temblor marcado y diarrea. ¿Cuál es el manejo farmacológico inicial más apropiado ante la sospecha de tormenta tiroidea?",
     options: [
       { id: "A", label: "A", text: "Betabloqueante (propranolol) para control de la respuesta adrenérgica, antitiroideo (tionamida) para bloquear la síntesis hormonal, y posteriormente yodo (tras el antitiroideo) para bloquear la liberación hormonal, junto con corticoides e identificación y tratamiento del factor precipitante." },
-      { id: "B", label: "B", text: "Administrar yodo (solución de Lugol) de forma aislada como único tratamiento, sin necesidad de antitiroideos ni de betabloqueantes, ya que bloquea de forma inmediata la liberación de hormonas tiroideas y controla por sí solo la crisis tirotóxica." },
+      { id: "B", label: "B", text: "Administrar yodo (solución de Lugol) de forma aislada como tratamiento, sin necesidad de antitiroideos ni de betabloqueantes, ya que bloquea de forma inmediata la liberación de hormonas tiroideas y controla por sí mismo la crisis tirotóxica." },
       { id: "C", label: "C", text: "Iniciar levotiroxina a dosis bajas con aumentos progresivos para regular la función tiroidea, dado que el objetivo del tratamiento es normalizar los niveles hormonales y el eje hipotálamo-hipofisario, junto con antipiréticos y sueroterapia para la fiebre." },
-      { id: "D", label: "D", text: "Manejo exclusivamente sintomático con antipiréticos (incluido el ácido acetilsalicílico) y medidas físicas de enfriamiento, sin ningún tratamiento específico dirigido al eje tiroideo, ya que la crisis se autolimita al controlar la fiebre." },
+      { id: "D", label: "D", text: "Manejo sintomático con antipiréticos (incluido el ácido acetilsalicílico) y medidas físicas de enfriamiento, sin tratamiento específico dirigido al eje tiroideo, ya que la crisis se autolimita al controlar la fiebre." },
     ],
     correctOptionId: "A",
     explanation:
@@ -204,7 +204,7 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 45 años, en tratamiento crónico con corticoides orales por una enfermedad autoinmune, suspende bruscamente la medicación por cuenta propia. Cinco días después acude a Urgencias con hipotensión marcada (PA 76/48 mmHg) refractaria a fluidoterapia, náuseas, vómitos y dolor abdominal. La analítica muestra hiponatremia e hiperpotasemia. ¿Cuál es la actuación más apropiada?",
     options: [
       { id: "A", label: "A", text: "Administrar hidrocortisona intravenosa en dosis de estrés de inmediato (sin esperar confirmación analítica del cortisol si esto retrasa el tratamiento), junto con fluidoterapia intensiva con suero salino y corrección de la glucemia si existe hipoglucemia asociada." },
-      { id: "B", label: "B", text: "Esperar la determinación de cortisol basal y de ACTH, así como un test de estimulación con ACTH, antes de administrar cualquier corticoide, para no interferir con el diagnóstico bioquímico de insuficiencia suprarrenal y evitar un tratamiento corticoideo innecesario de por vida." },
+      { id: "B", label: "B", text: "Esperar la determinación de cortisol basal y de ACTH, así como un test de estimulación con ACTH, antes de administrar el corticoide, para no interferir con el diagnóstico bioquímico de insuficiencia suprarrenal y evitar un tratamiento corticoideo innecesario de por vida." },
       { id: "C", label: "C", text: "Administrar vasopresores (noradrenalina) como primera medida, sin considerar la reposición de corticoides, dado que la hipotensión refractaria es el hallazgo predominante del cuadro y la causa de la hipoperfusión." },
       { id: "D", label: "D", text: "Reiniciar la dosis habitual de corticoides por vía oral previa a la suspensión, sin necesidad de dosis de estrés ni de manejo intravenoso, y controlar la tensión arterial en planta." },
     ],
@@ -229,7 +229,7 @@ export const MIR_2026_21_30_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Extraer hemocultivos y urocultivo, iniciar antibioterapia empírica intravenosa de amplio espectro de inmediato junto con fluidoterapia, dado el cuadro compatible con pielonefritis aguda con criterios de sepsis, sin esperar los resultados microbiológicos para iniciar el tratamiento." },
       { id: "B", label: "B", text: "Manejo ambulatorio con antibiótico oral (por ejemplo, una quinolona durante 7 días) y control por su médico de familia en 48 horas, dado que la ecografía descartó obstrucción de la vía urinaria y la paciente tolera la vía oral sin dificultad, sin necesidad de hemocultivos." },
-      { id: "C", label: "C", text: "Esperar el resultado del urocultivo y de los hemocultivos antes de iniciar cualquier antibiótico, para dirigir el tratamiento de forma específica desde el inicio y evitar el uso innecesario de antibióticos de amplio espectro, manteniendo solo la fluidoterapia intravenosa." },
+      { id: "C", label: "C", text: "Esperar el resultado del urocultivo y de los hemocultivos antes de iniciar cualquier antibiótico, para dirigir el tratamiento de forma específica desde el inicio y evitar el uso innecesario de antibióticos de amplio espectro, manteniendo la fluidoterapia intravenosa." },
       { id: "D", label: "D", text: "Realizar nefrostomía percutánea urgente como primera medida terapéutica, aunque no haya evidencia de obstrucción de la vía urinaria en la ecografía, para drenar el foco infeccioso renal y controlar la sepsis cuanto antes." },
     ],
     correctOptionId: "A",

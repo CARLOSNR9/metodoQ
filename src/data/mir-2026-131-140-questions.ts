@@ -37,7 +37,7 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Biopsia duodenal directamente, sin serología previa, como primer paso diagnóstico." },
       { id: "B", label: "B", text: "Retirar el gluten de la dieta de forma empírica y valorar la respuesta clínica." },
-      { id: "C", label: "C", text: "Estudio genético HLA-DQ2/DQ8 como prueba diagnóstica única y definitiva." },
+      { id: "C", label: "C", text: "Estudio genético HLA-DQ2/DQ8 como prueba diagnóstica definitiva." },
       { id: "D", label: "D", text: "Anticuerpos antitransglutaminasa tisular de tipo IgA junto con la IgA sérica total." },
     ],
     correctOptionId: "D",
@@ -84,7 +84,7 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
       "Un joven de 22 años presenta diarrea crónica, dolor en fosa ilíaca derecha y pérdida de peso. En la colonoscopia se observan úlceras aftoides con afectación segmentaria y mucosa normal entre las lesiones, que alcanzan el íleon terminal. ¿Qué hallazgo histológico apoyaría más el diagnóstico de enfermedad de Crohn?",
     options: [
       { id: "A", label: "A", text: "Inflamación limitada a la mucosa, continua desde el recto." },
-      { id: "B", label: "B", text: "Abscesos crípticos como único hallazgo." },
+      { id: "B", label: "B", text: "Abscesos crípticos como hallazgo aislado." },
       { id: "C", label: "C", text: "Granulomas no caseificantes con afectación transmural." },
       { id: "D", label: "D", text: "Depleción de mucina en las células caliciformes." },
     ],
@@ -182,7 +182,7 @@ export const MIR_2026_131_140_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "Esofaguectomía programada para prevenir la progresión a adenocarcinoma de esófago." },
       { id: "B", label: "B", text: "Ablación endoscópica por radiofrecuencia de inmediato, aunque no haya displasia en las biopsias." },
       { id: "C", label: "C", text: "Tratamiento con inhibidores de la bomba de protones y vigilancia endoscópica con biopsias periódicas." },
-      { id: "D", label: "D", text: "No precisa ningún seguimiento endoscópico, ya que no hay displasia en las biopsias." },
+      { id: "D", label: "D", text: "No precisa seguimiento endoscópico, ya que no hay displasia en las biopsias." },
     ],
     correctOptionId: "C",
     explanation:

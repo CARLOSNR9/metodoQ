@@ -13,7 +13,7 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Resonancia magnética lumbar urgente para descartar una hernia discal y valorar su tratamiento quirúrgico precoz, junto con reposo en cama hasta tener el resultado." },
       { id: "B", label: "B", text: "Analgesia (AINE o paracetamol), mantener la actividad habitual en la medida de lo posible y evitar el reposo en cama, sin pruebas de imagen." },
-      { id: "C", label: "C", text: "Reposo absoluto en cama durante 2 semanas, con relajantes musculares y opioides, evitando cualquier actividad física hasta la desaparición completa del dolor lumbar." },
+      { id: "C", label: "C", text: "Reposo estricto en cama durante 2 semanas, con relajantes musculares y opioides, evitando la actividad física hasta la desaparición completa del dolor lumbar." },
       { id: "D", label: "D", text: "Radiografía lumbar en dos proyecciones y derivación preferente a cirugía de columna para valorar la artrodesis, ya que el dolor lumbar agudo suele deberse a inestabilidad vertebral." },
     ],
     correctOptionId: "B",
@@ -61,7 +61,7 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Oclusión de la arteria central de la retina; estudio etiológico urgente como un ictus (fuente embólica) y descartar arteritis de células gigantes (VSG, PCR)." },
       { id: "B", label: "B", text: "Glaucoma agudo de ángulo cerrado; medir la presión intraocular exclusivamente y tratar con hipotensores, sin estudio vascular." },
-      { id: "C", label: "C", text: "Desprendimiento de retina regmatógeno; no precisa estudio sistémico, solo cirugía vitreorretiniana programada." },
+      { id: "C", label: "C", text: "Desprendimiento de retina regmatógeno; no precisa estudio sistémico, sino cirugía vitreorretiniana programada." },
       { id: "D", label: "D", text: "Neuritis óptica desmielinizante; resonancia magnética cerebral para descartar esclerosis múltiple y corticoides intravenosos, con estudio cardiovascular completo." },
     ],
     correctOptionId: "A",
@@ -109,7 +109,7 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "A los 5 años del diagnóstico." },
       { id: "B", label: "B", text: "En el momento del diagnóstico." },
-      { id: "C", label: "C", text: "Solo si aparece pérdida de agudeza visual." },
+      { id: "C", label: "C", text: "Cuando aparezca pérdida de agudeza visual." },
       { id: "D", label: "D", text: "Cuando la hemoglobina glicada supere el 9%." },
     ],
     correctOptionId: "B",
@@ -133,7 +133,7 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Gotas óticas de ciprofloxacino durante 7 días en el oído afectado." },
       { id: "B", label: "B", text: "Azitromicina oral durante 3 días como primera elección antibiótica." },
-      { id: "C", label: "C", text: "Solo observación durante 7 días, sin analgesia ni antibióticos." },
+      { id: "C", label: "C", text: "Observación durante 7 días, sin analgesia ni antibióticos." },
       { id: "D", label: "D", text: "Amoxicilina oral a dosis altas (80-90 mg/kg/día) y analgesia." },
     ],
     correctOptionId: "D",
@@ -158,7 +158,7 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "Corticoides orales iniciados en las primeras 72 horas y protección ocular (lágrimas artificiales, oclusión nocturna)." },
       { id: "B", label: "B", text: "Descompresión quirúrgica urgente del nervio facial en su trayecto intratemporal, para evitar secuelas permanentes." },
       { id: "C", label: "C", text: "Trombolisis intravenosa por sospecha de ictus isquémico, ya que la parálisis facial es de instauración brusca." },
-      { id: "D", label: "D", text: "Aciclovir intravenoso en monoterapia a dosis altas, ya que la causa es siempre el virus herpes simple." },
+      { id: "D", label: "D", text: "Aciclovir intravenoso en monoterapia a dosis altas, ya que la causa es el virus herpes simple." },
     ],
     correctOptionId: "A",
     explanation:
@@ -229,7 +229,7 @@ export const MIR_2026_151_160_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Corticoides orales a dosis altas de forma prolongada hasta el blanqueamiento completo de las placas, con retirada progresiva." },
       { id: "B", label: "B", text: "Antibióticos orales (tetraciclinas) durante 3 meses por sospecha de sobreinfección estreptocócica de las placas." },
-      { id: "C", label: "C", text: "Aumentar la potencia del corticoide tópico y aplicarlo en oclusión en todo el cuerpo de forma continuada durante varios meses, sin necesidad de tratamiento sistémico." },
+      { id: "C", label: "C", text: "Aumentar la potencia del corticoide tópico y aplicarlo en oclusión en las placas de forma continuada durante varios meses, sin necesidad de tratamiento sistémico." },
       { id: "D", label: "D", text: "Fototerapia o tratamiento sistémico convencional (por ejemplo, metotrexato), reservando los biológicos si fracasan o están contraindicados." },
     ],
     correctOptionId: "D",

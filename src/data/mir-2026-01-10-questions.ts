@@ -14,7 +14,7 @@ export const MIR_2026_01_10_QUESTIONS: TrainingQuestion[] = [
       { id: "A", label: "A", text: "Angioplastia primaria (ICP primaria), ya que el tiempo estimado hasta el balón es menor de 120 minutos desde el primer contacto médico." },
       { id: "B", label: "B", text: "Fibrinolisis intravenosa inmediata con tenecteplasa, reservando la angioplastia solo si la fibrinolisis fracasa." },
       { id: "C", label: "C", text: "Tratamiento médico conservador con doble antiagregación y anticoagulación, sin reperfusión mecánica ni farmacológica, hasta estabilización clínica." },
-      { id: "D", label: "D", text: "Esperar a la determinación seriada de troponina antes de decidir cualquier estrategia de reperfusión." },
+      { id: "D", label: "D", text: "Esperar a la determinación seriada de troponina antes de decidir la estrategia de reperfusión." },
     ],
     correctOptionId: "A",
     explanation:
@@ -60,9 +60,9 @@ export const MIR_2026_01_10_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 54 años con cirrosis hepática enólica conocida acude por hematemesis franca de gran cuantía, con PA 84/56 mmHg y FC 122 lpm. Tras iniciar reanimación con cristaloides y transfusión de hemoderivados, ¿cuál es la actitud terapéutica farmacológica y endoscópica más apropiada mientras se organiza la endoscopia digestiva alta?",
     options: [
       { id: "A", label: "A", text: "Iniciar terlipresina (o somatostatina/octreótido) de forma precoz junto con antibioterapia profiláctica, y realizar endoscopia digestiva alta con ligadura endoscópica con bandas en las primeras 12 horas, una vez el paciente esté hemodinámicamente estabilizado." },
-      { id: "B", label: "B", text: "Mantener la reanimación y esperar a la endoscopia digestiva alta programada en 48-72 horas sin iniciar fármacos vasoactivos ni antibióticos, ya que estos solo están indicados si la endoscopia confirma sangrado variceal activo y su uso previo podría enmascarar el origen de la hemorragia." },
+      { id: "B", label: "B", text: "Mantener la reanimación y esperar a la endoscopia digestiva alta programada en 48-72 horas sin iniciar fármacos vasoactivos ni antibióticos, ya que estos están indicados cuando la endoscopia confirma sangrado variceal activo y su uso previo podría enmascarar el origen de la hemorragia." },
       { id: "C", label: "C", text: "Colocar de entrada un balón de Sengstaken-Blakemore como primera medida terapéutica definitiva, ya que el taponamiento controla el sangrado en la mayoría de los casos, sin necesidad de fármacos vasoactivos ni de endoscopia posterior." },
-      { id: "D", label: "D", text: "Administrar inhibidores de la bomba de protones en altas dosis por vía intravenosa como único tratamiento, dado que el mecanismo de sangrado es indistinguible de una úlcera péptica hasta la endoscopia y los vasoactivos no aportan beneficio." },
+      { id: "D", label: "D", text: "Administrar inhibidores de la bomba de protones en altas dosis por vía intravenosa como tratamiento inicial, dado que el mecanismo de sangrado es indistinguible de una úlcera péptica hasta la endoscopia y los vasoactivos no aportan beneficio." },
     ],
     correctOptionId: "A",
     explanation:
@@ -85,7 +85,7 @@ export const MIR_2026_01_10_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Iniciar sueroterapia con suero salino isotónico y reposición de potasio antes o junto con la insulina, retrasando la perfusión de insulina hasta que el potasio sérico sea mayor de 3.3 mEq/L." },
       { id: "B", label: "B", text: "Iniciar perfusión de insulina intravenosa con un bolo inicial alto seguido de infusión continua, sin reponer potasio hasta que este descienda por debajo de 3.0 mEq/L, para evitar una hiperpotasemia yatrógena." },
-      { id: "C", label: "C", text: "Administrar bicarbonato sódico intravenoso de entrada para corregir rápidamente la acidosis metabólica, independientemente del pH, ya que la acidemia grave es lo que más compromete la contractilidad cardíaca." },
+      { id: "C", label: "C", text: "Administrar bicarbonato sódico intravenoso de entrada para corregir rápidamente la acidosis metabólica, sin esperar al valor del pH, ya que la acidemia grave es lo que más compromete la contractilidad cardíaca." },
       { id: "D", label: "D", text: "Iniciar insulina subcutánea de acción rápida cada 4 horas desde el ingreso, evitando la vía intravenosa por el mayor riesgo de hipoglucemia y de hipopotasemia." },
     ],
     correctOptionId: "A",
@@ -108,7 +108,7 @@ export const MIR_2026_01_10_QUESTIONS: TrainingQuestion[] = [
       "Un varón de 32 años acude a Urgencias con fiebre de 39.2°C, cefalea intensa, rigidez de nuca y fotofobia de 6 horas de evolución, sin focalidad neurológica ni signos de hipertensión intracraneal. ¿Cuál es la secuencia de manejo inicial más apropiada?",
     options: [
       { id: "A", label: "A", text: "Extraer hemocultivos, iniciar de inmediato antibioterapia empírica (cefalosporina de tercera generación) junto con dexametasona, y realizar la punción lumbar sin demorar el tratamiento más de lo estrictamente necesario." },
-      { id: "B", label: "B", text: "Realizar tomografía computarizada craneal antes de cualquier punción lumbar o inicio de antibiótico en todos los casos, para descartar hipertensión intracraneal, y no administrar ningún tratamiento hasta disponer del resultado de la imagen." },
+      { id: "B", label: "B", text: "Realizar tomografía computarizada craneal antes de cualquier punción lumbar o inicio de antibiótico en todos los casos, para descartar hipertensión intracraneal, y aplazar el tratamiento hasta disponer del resultado de la imagen." },
       { id: "C", label: "C", text: "Realizar punción lumbar de inmediato y esperar el resultado del cultivo del líquido cefalorraquídeo antes de iniciar la antibioterapia, para evitar negativizar el cultivo y poder ajustar el antibiótico al germen desde la primera dosis." },
       { id: "D", label: "D", text: "Iniciar antibioterapia empírica con cefalosporina de tercera generación sin dexametasona, ya que los corticoides están contraindicados en la meningitis bacteriana del adulto por reducir la penetración del antibiótico en el LCR." },
     ],
@@ -132,8 +132,8 @@ export const MIR_2026_01_10_QUESTIONS: TrainingQuestion[] = [
       "Una mujer de 71 años es traída a Urgencias por hemiparesia derecha y afasia de inicio hace 2 horas, con última vez vista asintomática hace 2 horas y 15 minutos. La TC craneal sin contraste no muestra sangrado ni signos precoces extensos de isquemia. La presión arterial es 168/94 mmHg. No existen contraindicaciones conocidas para fibrinolisis. La angio-TC muestra oclusión de la arteria cerebral media izquierda en su segmento M1. ¿Cuál es el manejo más apropiado?",
     options: [
       { id: "A", label: "A", text: "Administrar alteplasa (o tenecteplasa) intravenosa dentro de la ventana de 4.5 horas y, en paralelo, activar de inmediato el código ictus para trombectomía mecánica, sin que una intervención deba retrasar a la otra." },
-      { id: "B", label: "B", text: "Realizar únicamente trombectomía mecánica, evitando la fibrinolisis intravenosa por el riesgo de transformación hemorrágica en las oclusiones de gran vaso y por no aportar beneficio adicional." },
-      { id: "C", label: "C", text: "Esperar a normalizar completamente la presión arterial por debajo de 120/80 mmHg con antihipertensivos intravenosos antes de iniciar cualquier tratamiento de reperfusión, por el riesgo de sangrado." },
+      { id: "B", label: "B", text: "Realizar trombectomía mecánica directa, evitando la fibrinolisis intravenosa por el riesgo de transformación hemorrágica en las oclusiones de gran vaso y por no aportar beneficio adicional." },
+      { id: "C", label: "C", text: "Esperar a normalizar completamente la presión arterial por debajo de 120/80 mmHg con antihipertensivos intravenosos antes de iniciar el tratamiento de reperfusión, por el riesgo de sangrado." },
       { id: "D", label: "D", text: "Diferir el tratamiento hasta confirmar el diagnóstico con resonancia magnética cerebral urgente, dado que la TC simple no mostró alteraciones que justifiquen reperfundir al paciente." },
     ],
     correctOptionId: "A",
@@ -157,8 +157,8 @@ export const MIR_2026_01_10_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Gluconato cálcico intravenoso, como medida inmediata para estabilizar la membrana miocárdica, antes de iniciar las medidas que reducen el potasio sérico." },
       { id: "B", label: "B", text: "Resinas de intercambio catiónico por vía oral como primera medida, dado su inicio de acción rápido y su eficacia probada en la hiperpotasemia con cambios electrocardiográficos." },
-      { id: "C", label: "C", text: "Furosemida intravenosa en dosis altas como única medida inicial, dado que el paciente es anúrico." },
-      { id: "D", label: "D", text: "Diálisis urgente como primera medida, sin ninguna intervención farmacológica previa, dado que es un paciente ya en programa de hemodiálisis." },
+      { id: "C", label: "C", text: "Furosemida intravenosa en dosis altas como medida inicial, dado que el paciente es anúrico." },
+      { id: "D", label: "D", text: "Diálisis urgente como primera medida, sin intervención farmacológica previa, dado que es un paciente ya en programa de hemodiálisis." },
     ],
     correctOptionId: "A",
     explanation:
@@ -181,7 +181,7 @@ export const MIR_2026_01_10_QUESTIONS: TrainingQuestion[] = [
     options: [
       { id: "A", label: "A", text: "Artrocentesis con análisis del líquido sinovial (celularidad, tinción de Gram, cultivo y búsqueda de cristales), ya que la artritis séptica debe descartarse de forma prioritaria en toda monoartritis aguda febril, independientemente del antecedente de hiperuricemia." },
       { id: "B", label: "B", text: "Iniciar tratamiento empírico con antiinflamatorios no esteroideos o colchicina a dosis plenas, asumiendo que se trata de un ataque de gota dado el antecedente de hiperuricemia, sin necesidad de artrocentesis, y reevaluar solo si no hay mejoría clínica tras 48-72 horas de tratamiento." },
-      { id: "C", label: "C", text: "Solicitar una resonancia magnética de rodilla como primer paso diagnóstico, antes de cualquier procedimiento invasivo, para valorar derrame, lesiones óseas y partes blandas y decidir después la necesidad de punción." },
+      { id: "C", label: "C", text: "Solicitar una resonancia magnética de rodilla como primer paso diagnóstico, antes de un procedimiento invasivo, para valorar derrame, lesiones óseas y partes blandas y decidir después la necesidad de punción." },
       { id: "D", label: "D", text: "Iniciar antibioterapia empírica de amplio espectro por vía intravenosa sin artrocentesis previa, para no retrasar el tratamiento de una posible artritis séptica, ya que el cultivo del líquido sinovial no modifica la conducta." },
     ],
     correctOptionId: "A",
