@@ -38,6 +38,7 @@ export function resetFakeFirebase() {
     );
   }
   verifyCalls.length = 0;
+  for (const key of Object.keys(authCreationTimes)) delete authCreationTimes[key];
 }
 
 async function verifyIdToken(token: string, checkRevoked?: boolean): Promise<DecodedToken> {
@@ -74,50 +75,87 @@ export function sessionCookieFor(token: string) {
 
 let autoId = 0;
 
+/** Fecha de creación de las cuentas en Auth (por defecto, «ahora»). */
+export const authCreationTimes: Record<string, string> = {};
+
+async function getUser(uid: string) {
+  const known = Object.values(TOKENS).some((decoded) => decoded.uid === uid);
+  if (!known) throw new Error("auth/user-not-found");
+  return { uid, metadata: { creationTime: authCreationTimes[uid] ?? new Date().toUTCString() } };
+}
+
+type Data = Record<string, unknown>;
+type DocRef = ReturnType<typeof docRef>;
+type Query = ReturnType<typeof query>;
+
 function docRef(collection: string, id: string) {
   const docs = () => (store[collection] ??= {});
-  return {
+  const ref = {
     id,
+    collection,
     async get() {
       const data = docs()[id];
-      return { exists: data !== undefined, id, data: () => data };
+      return { exists: data !== undefined, id, ref, data: () => data };
     },
-    async set(data: Record<string, unknown>) {
+    async create(data: Data) {
+      if (docs()[id]) throw new Error("already-exists");
       docs()[id] = { ...data };
     },
-    async update(data: Record<string, unknown>) {
+    async set(data: Data, options?: { merge?: boolean }) {
+      docs()[id] = options?.merge ? { ...docs()[id], ...data } : { ...data };
+    },
+    async update(data: Data) {
       if (!docs()[id]) throw new Error("not-found");
       docs()[id] = { ...docs()[id], ...data };
     },
   };
+  return ref;
 }
 
-function query(collection: string) {
+/** Consulta simulada: admite where(campo, "==", valor) y limit; orderBy no ordena. */
+function query(collection: string, filters: Array<[string, unknown]> = [], max = Infinity) {
   const self = {
+    isQuery: true as const,
     orderBy: () => self,
-    where: () => self,
-    limit: () => self,
+    where: (field: string, _op: string, value: unknown) =>
+      query(collection, [...filters, [field, value]], max),
+    limit: (n: number) => query(collection, filters, n),
     async get() {
-      const docs = Object.entries(store[collection] ?? {}).map(([id, data]) => ({
-        id,
-        data: () => data,
-      }));
+      const docs = Object.entries(store[collection] ?? {})
+        .filter(([, data]) => filters.every(([field, value]) => data[field] === value))
+        .slice(0, max)
+        .map(([id, data]) => ({ id, ref: docRef(collection, id), data: () => data }));
       return { docs, empty: docs.length === 0, size: docs.length };
     },
   };
   return self;
 }
 
+/** Transacción simulada: lecturas directas; escrituras aplicadas al final, en orden. */
+async function runTransaction<T>(fn: (tx: unknown) => Promise<T>): Promise<T> {
+  const writes: Array<() => Promise<void>> = [];
+  const tx = {
+    get: (target: DocRef | Query) => target.get(),
+    create: (ref: DocRef, data: Data) => void writes.push(() => ref.create(data)),
+    set: (ref: DocRef, data: Data, options?: { merge?: boolean }) =>
+      void writes.push(() => ref.set(data, options)),
+    update: (ref: DocRef, data: Data) => void writes.push(() => ref.update(data)),
+  };
+  const result = await fn(tx);
+  for (const write of writes) await write();
+  return result;
+}
+
 export const fakeFirebaseAdmin = {
-  getFirebaseAdminAuth: () => ({ verifyIdToken, createSessionCookie, verifySessionCookie }),
+  getFirebaseAdminAuth: () => ({ verifyIdToken, createSessionCookie, verifySessionCookie, getUser }),
   getFirebaseAdminDb: () => ({
+    runTransaction,
     collection: (name: string) => ({
       doc: (id: string) => docRef(name, id),
-      // Consultas: devuelven todos los documentos (sin filtrar); basta para estos tests.
       orderBy: () => query(name),
-      where: () => query(name),
-      limit: () => query(name),
-      async add(data: Record<string, unknown>) {
+      where: (field: string, op: string, value: unknown) => query(name).where(field, op, value),
+      limit: (n: number) => query(name).limit(n),
+      async add(data: Data) {
         const id = `auto-${++autoId}`;
         (store[name] ??= {})[id] = { ...data };
         return { id };

@@ -1,12 +1,14 @@
 import { NextResponse } from "next/server";
-import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import { getFirebaseAdminAuth } from "@/lib/server/firebase-admin";
+import { recordReferral } from "@/lib/server/referrals";
 
 export const runtime = "nodejs";
 
 /**
- * Procesa la recompensa de referido en el servidor.
- * Si el referente alcanza 3 referidos, se le otorgan 7 días de PRO.
- * Solo el servidor (Admin SDK) puede modificar el campo `plan`.
+ * Registra en servidor que el usuario autenticado (recién registrado) llegó
+ * con un código de referido y, si el referente alcanza los referidos
+ * necesarios, le otorga la recompensa una sola vez. Solo el servidor (Admin
+ * SDK) puede modificar el campo `plan`. Ver src/lib/server/referrals.ts.
  */
 export async function POST(request: Request) {
   const authHeader = request.headers.get("authorization");
@@ -14,53 +16,27 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "No autorizado." }, { status: 401 });
   }
 
+  let uid: string;
   try {
-    const token = authHeader.slice(7);
-    await getFirebaseAdminAuth().verifyIdToken(token);
+    uid = (await getFirebaseAdminAuth().verifyIdToken(authHeader.slice(7), true)).uid;
+  } catch {
+    return NextResponse.json({ error: "No autorizado." }, { status: 401 });
+  }
 
-    const body = (await request.json()) as { referralCode?: string };
-    const referralCode = body.referralCode?.trim();
+  const body = (await request.json().catch(() => null)) as { referralCode?: unknown } | null;
 
-    if (!referralCode) {
-      return NextResponse.json({ error: "Código de referido requerido." }, { status: 400 });
+  try {
+    const outcome = await recordReferral(uid, body?.referralCode);
+    switch (outcome.status) {
+      case "invalid_code":
+        return NextResponse.json({ error: "Código de referido no válido." }, { status: 400 });
+      case "not_eligible":
+        return NextResponse.json({ recorded: false, reason: outcome.reason });
+      case "already_recorded":
+        return NextResponse.json({ recorded: true, rewarded: false });
+      case "recorded":
+        return NextResponse.json({ recorded: true, rewarded: outcome.rewarded });
     }
-
-    const db = getFirebaseAdminDb();
-
-    // Contar cuántos referidos tiene ahora el referente
-    const referralSnapshot = await db
-      .collection("users")
-      .where("referredBy", "==", referralCode)
-      .count()
-      .get();
-    const count = referralSnapshot.data().count;
-
-    // Si llegó exactamente a 3, darle 7 días de PRO
-    if (count === 3) {
-      const referrerSnapshot = await db
-        .collection("users")
-        .where("referralCode", "==", referralCode)
-        .limit(1)
-        .get();
-
-      if (!referrerSnapshot.empty) {
-        const referrerDoc = referrerSnapshot.docs[0];
-        const expirationDate = new Date();
-        expirationDate.setDate(expirationDate.getDate() + 7);
-
-        await referrerDoc.ref.update({
-          plan: "PRO",
-          planExpiresAt: expirationDate.toISOString(),
-        });
-
-        return NextResponse.json({
-          rewarded: true,
-          referrerId: referrerDoc.id,
-        });
-      }
-    }
-
-    return NextResponse.json({ rewarded: false, count });
   } catch (error) {
     console.error("[referral-reward] Error:", error);
     return NextResponse.json({ error: "Error interno." }, { status: 500 });
