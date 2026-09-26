@@ -4,10 +4,14 @@ import {
   enrichAdminRecordsForPreview,
 } from "@/lib/server/questions-admin";
 import { adminGetReportedQuestionIds } from "@/lib/server/question-reports-admin";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const revalidate = 86400; // Caché por 24 horas (se limpia al editar)
 
 export default async function AdminQuestionsPreviewPage() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   let questions: Awaited<ReturnType<typeof enrichAdminRecordsForPreview>> = [];
   let reportedQuestionIds: string[] = [];
   let loadError = "";

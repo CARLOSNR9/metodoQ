@@ -1,7 +1,11 @@
 import { getAdminUserDirectory } from "@/lib/server/users-admin";
 import { UsersDirectoryTable } from "@/components/admin/users-directory-table";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export async function UsersDirectoryPanel() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   let users: Awaited<ReturnType<typeof getAdminUserDirectory>> = [];
   let loadError: string | null = null;
 

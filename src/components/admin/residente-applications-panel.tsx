@@ -1,5 +1,7 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import { ResidenteApplicationRow } from "./residente-application-row";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 type Application = {
   id: string;
@@ -40,6 +42,8 @@ export async function ResidenteApplicationsPanel({
 }: {
   variant?: PanelVariant;
 }) {
+  if (!(await requireStaffArea("residente"))) return <StaffDataPending />;
+
   let applications: Application[] = [];
   try {
     applications = await getResidenteApplications();

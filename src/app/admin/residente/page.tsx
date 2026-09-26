@@ -1,9 +1,13 @@
 import { ResidenteApplicationsPanel } from "@/components/admin/residente-applications-panel";
 import { PanelSection } from "@/components/admin/panel-section";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
-export default function AdminResidentePage() {
+export default async function AdminResidentePage() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   return (
     <>
       <header>

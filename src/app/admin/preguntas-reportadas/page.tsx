@@ -1,9 +1,13 @@
 import { ReportedQuestionsPanel } from "@/components/admin/reported-questions-panel";
 import { adminListQuestionReports } from "@/lib/server/question-reports-admin";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminReportedQuestionsPage() {
+  if (!(await requireStaffArea("admin"))) return <StaffDataPending />;
+
   let reports: Awaited<ReturnType<typeof adminListQuestionReports>> = [];
   let loadError = "";
 

@@ -5,10 +5,14 @@ import {
   adminListConvocatoriaOverrides,
 } from "@/lib/server/convocatoria-edits-admin";
 import { UCC_CONVOCATORIA_EDITIONS } from "@/lib/training/convocatorias";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
 export default async function ProfessorConvocatoriasPage() {
+  if (!(await requireStaffArea("professor"))) return <StaffDataPending />;
+
   const editions = await Promise.all(
     UCC_CONVOCATORIA_EDITIONS.map(async (edition) => {
       let editedCount = 0;

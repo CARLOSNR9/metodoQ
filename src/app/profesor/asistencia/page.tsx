@@ -1,8 +1,12 @@
 import { ProfessorAttendanceOverview } from "@/components/professor/professor-attendance-overview";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const dynamic = "force-dynamic";
 
-export default function ProfessorAttendancePage() {
+export default async function ProfessorAttendancePage() {
+  if (!(await requireStaffArea("professor"))) return <StaffDataPending />;
+
   return (
     <>
       <header>

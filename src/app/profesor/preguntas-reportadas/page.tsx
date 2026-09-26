@@ -1,10 +1,14 @@
 import { ReportedQuestionsPanel } from "@/components/admin/reported-questions-panel";
 import { adminListQuestionReports } from "@/lib/server/question-reports-admin";
 import { adminListSpecificQuestionsForReview } from "@/lib/server/questions-admin";
+import { StaffDataPending } from "@/components/admin/staff-data-pending";
+import { requireStaffArea } from "@/lib/server/staff-session";
 
 export const revalidate = 86400; // Caché por 24 horas (se limpia al editar)
 
 export default async function ProfessorReportedQuestionsPage() {
+  if (!(await requireStaffArea("professor"))) return <StaffDataPending />;
+
   let reports: Awaited<ReturnType<typeof adminListQuestionReports>> = [];
   let loadError = "";
 
