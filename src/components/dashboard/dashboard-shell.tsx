@@ -45,7 +45,8 @@ const navigationItems = [
   { label: "Simulacros", href: "/dashboard/convocatorias", icon: ClipboardCheck, proOnly: true },
   { label: "Mis clases", href: "/dashboard/clases", icon: CalendarDays, proOnly: true },
   { label: "Retos Dr. Q", href: "/dashboard/evaluaciones", icon: Stethoscope, proOnly: true },
-  { label: "Simulacro MIR", href: "/dashboard/mir", icon: BookOpenCheck, mirRelevant: true },
+  // Módulo de pago aparte: solo se muestra a quien tiene acceso MIR vigente.
+  { label: "Simulacro MIR", href: "/dashboard/mir", icon: BookOpenCheck, mirRelevant: true, mirAccessOnly: true },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
   { label: "Historial", href: "/dashboard/historial", icon: History, mirRelevant: true },
   { label: "Perfil", href: "/dashboard/perfil", icon: User, mirRelevant: true },
@@ -62,8 +63,8 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const greetingName = getUserGreetingName(profile);
   const doctorGreetingName = getDoctorGreetingName(profile);
   const isProUser = hasProFeatures(profile?.plan);
-  const isMirOnlyUser =
-    (profile?.plan ?? "FREE") === "FREE" && hasMirAccess(profile?.mirAccess);
+  const hasMirModule = hasMirAccess(profile?.mirAccess);
+  const isMirOnlyUser = (profile?.plan ?? "FREE") === "FREE" && hasMirModule;
   // El tema MIR se mantiene en todo el panel de un usuario MIR-only (para que
   // Historial/Perfil no "salten" de vuelta al tema claro de Método Q), y
   // también en /dashboard/mir cuando lo visita un admin u otro usuario.
@@ -120,6 +121,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
           {navigationItems
             .filter((item) => !("proOnly" in item && item.proOnly) || isProUser)
             .filter((item) => !isMirOnlyUser || ("mirRelevant" in item && item.mirRelevant))
+            .filter((item) => !("mirAccessOnly" in item && item.mirAccessOnly) || hasMirModule)
             .map((item) => {
             const isActive =
               pathname === item.href ||
@@ -230,7 +232,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
         </div>
       </section>
       <AchievementNotification userId={user?.uid ?? ""} />
-      {isProUser || hasMirAccess(profile?.mirAccess) ? (
+      {isProUser || hasMirModule ? (
         <PomodoroGlobalOverlay
           greetingName={doctorGreetingName}
           variant={isMirRoute ? "mir" : "default"}
