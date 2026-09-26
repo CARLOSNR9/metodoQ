@@ -10,28 +10,41 @@ service cloud.firestore {
       return isSignedIn() && request.auth.uid == uid;
     }
 
-    // Campos que SOLO el servidor (Admin SDK) puede modificar
-    function isProtectedField(field) {
-      return field in ['plan', 'planStartedAt', 'planExpiresAt', 'planBillingCycle',
-                        'role', 'manualSale', 'lastPaymentStatus', 'lastPaymentProvider',
-                        'billingCycleMonths', 'stripeCheckoutSessionId', 'stripeCustomerId',
-                        'stripeSubscriptionId', 'planActivatedAt'];
+    // Campos que SOLO el servidor (Admin SDK) puede escribir: plan, rol,
+    // pagos y acceso al módulo de pago único MIR.
+    function protectedUserFields() {
+      return ['plan', 'planStartedAt', 'planExpiresAt', 'planBillingCycle',
+              'role', 'manualSale', 'lastPaymentStatus', 'lastPaymentProvider',
+              'billingCycleMonths', 'stripeCheckoutSessionId', 'stripeCustomerId',
+              'stripeSubscriptionId', 'planActivatedAt', 'mirAccess'];
     }
 
     // Verifica que ningún campo protegido sea modificado por el cliente
     function noProtectedFieldsChanged() {
       return !request.resource.data.diff(resource.data).affectedKeys()
-        .hasAny(['plan', 'planStartedAt', 'planExpiresAt', 'planBillingCycle',
-                 'role', 'manualSale', 'lastPaymentStatus', 'lastPaymentProvider',
-                 'billingCycleMonths', 'stripeCheckoutSessionId', 'stripeCustomerId',
-                 'stripeSubscriptionId', 'planActivatedAt']);
+        .hasAny(protectedUserFields());
+    }
+
+    // Un perfil creado desde el cliente solo puede nacer sin privilegios:
+    // plan FREE, rol student, sin fechas de plan y sin el resto de campos
+    // protegidos (lo que escribe createDefaultUserDoc en src/lib/auth.ts).
+    function isUnprivilegedNewUser() {
+      let data = request.resource.data;
+      return data.get('plan', 'FREE') == 'FREE'
+        && data.get('role', 'student') == 'student'
+        && data.get('planStartedAt', null) == null
+        && data.get('planExpiresAt', null) == null
+        && !data.keys().hasAny(['planBillingCycle', 'manualSale', 'lastPaymentStatus',
+                                'lastPaymentProvider', 'billingCycleMonths',
+                                'stripeCheckoutSessionId', 'stripeCustomerId',
+                                'stripeSubscriptionId', 'planActivatedAt', 'mirAccess']);
     }
 
     // Perfil del usuario: lectura completa para el dueño;
-    // escritura restringida — el cliente NO puede modificar plan, role, ni campos de pago.
+    // escritura restringida — el cliente NO puede modificar plan, role, campos de pago ni mirAccess.
     match /users/{userId} {
       allow read: if isOwner(userId);
-      allow create: if isOwner(userId);
+      allow create: if isOwner(userId) && isUnprivilegedNewUser();
       allow update: if isOwner(userId) && noProtectedFieldsChanged();
       allow delete: if false;
 
