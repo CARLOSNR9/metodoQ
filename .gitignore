@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# informes de auditoría con datos personales (scripts/audit-privileged-users.mjs)
+/audit-output/
