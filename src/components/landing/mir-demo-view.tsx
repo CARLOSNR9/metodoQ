@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2, Globe2, RotateCcw, XCircle } from "lucide-react";
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
+import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
+import { MirScoreBreakdown } from "@/components/dashboard/mir-score";
 import { getMirWhatsAppUrl } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -49,6 +51,7 @@ export function MirDemoView() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [correctCount, setCorrectCount] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
 
   const totalQuestions = questions.length;
   const isFinished = currentIndex >= totalQuestions;
@@ -58,6 +61,7 @@ export function MirDemoView() {
   function handleSelect(optionId: string) {
     if (hasAnswered || !currentQuestion) return;
     setSelectedOptionId(optionId);
+    setAnswers((prev) => ({ ...prev, [currentQuestion.id]: optionId }));
     if (optionId === currentQuestion.correctOptionId) {
       setCorrectCount((count) => count + 1);
     }
@@ -66,12 +70,15 @@ export function MirDemoView() {
   function handleNext() {
     setSelectedOptionId(null);
     setCurrentIndex((index) => index + 1);
+    if (currentIndex + 1 >= totalQuestions) window.scrollTo({ top: 0 });
   }
 
   function handleRestart() {
     setCurrentIndex(0);
     setSelectedOptionId(null);
     setCorrectCount(0);
+    setAnswers({});
+    window.scrollTo({ top: 0 });
   }
 
   if (totalQuestions === 0) {
@@ -92,46 +99,13 @@ export function MirDemoView() {
 
   if (isFinished) {
     return (
-      <div className="mx-auto max-w-xl rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 text-center sm:p-10">
-        <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.22em] text-mq-premium-gold">
-          <Globe2 className="h-3.5 w-3.5" />
-          Demo módulo MIR
-        </p>
-        <p className="mt-6 text-6xl font-black text-white">
-          {correctCount}
-          <span className="text-2xl font-bold text-slate-400">/{totalQuestions}</span>
-        </p>
-        <h1 className="mt-2 text-xl font-black text-white">Así fue tu demo</h1>
-        <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-slate-300">
-          Esto fue apenas una muestra de {totalQuestions} preguntas. El banco completo tiene{" "}
-          {MIR_QUESTIONS.length} preguntas de examen MIR con explicaciones detalladas por cada una,
-          simulacros cronometrados y seguimiento de tu progreso por área.
-        </p>
-        <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-mq-premium-gold px-8 text-sm font-black text-[#0A1F44] transition hover:brightness-110 sm:w-auto"
-          >
-            Quiero el banco completo <ArrowRight className="h-4 w-4" />
-          </a>
-          <button
-            type="button"
-            onClick={handleRestart}
-            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border border-white/20 px-8 text-sm font-bold text-white transition hover:border-white/40 sm:w-auto"
-          >
-            <RotateCcw className="h-4 w-4" />
-            Repetir demo
-          </button>
-        </div>
-        <Link
-          href="/mir"
-          className="mt-6 inline-block text-xs font-semibold text-slate-400 underline-offset-4 hover:text-slate-300 hover:underline"
-        >
-          Volver al módulo MIR
-        </Link>
-      </div>
+      <MirDemoResults
+        questions={questions}
+        answers={answers}
+        correctCount={correctCount}
+        whatsappUrl={whatsappUrl}
+        onRestart={handleRestart}
+      />
     );
   }
 
@@ -240,6 +214,195 @@ export function MirDemoView() {
           </div>
         ) : null}
       </article>
+    </div>
+  );
+}
+
+function getQuestionSpecialty(question: TrainingQuestion): string {
+  const keys = getQuestionSpecialtyKeys(question);
+  return keys.length > 0 ? keys.map(formatSpecialtyLabel).join(" / ") : question.examArea ?? question.topic;
+}
+
+function DemoCtas({
+  whatsappUrl,
+  onRestart,
+}: {
+  whatsappUrl: string;
+  onRestart: () => void;
+}) {
+  return (
+    <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+      <a
+        href={whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-mq-premium-gold px-8 text-sm font-black text-[#0A1F44] transition hover:brightness-110 sm:w-auto"
+      >
+        Quiero el banco completo <ArrowRight className="h-4 w-4" />
+      </a>
+      <button
+        type="button"
+        onClick={onRestart}
+        className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border border-white/20 px-8 text-sm font-bold text-white transition hover:border-white/40 sm:w-auto"
+      >
+        <RotateCcw className="h-4 w-4" />
+        Repetir demo
+      </button>
+    </div>
+  );
+}
+
+/**
+ * Resultado de la demo: nota MIR estimada (netas), aciertos por
+ * especialidad y revisión completa de cada pregunta con su explicación,
+ * para que quien prueba la demo vea todo lo que da el módulo.
+ */
+function MirDemoResults({
+  questions,
+  answers,
+  correctCount,
+  whatsappUrl,
+  onRestart,
+}: {
+  questions: TrainingQuestion[];
+  answers: Record<string, string>;
+  correctCount: number;
+  whatsappUrl: string;
+  onRestart: () => void;
+}) {
+  const total = questions.length;
+  const answeredCount = questions.filter((question) => answers[question.id]).length;
+  const wrongCount = answeredCount - correctCount;
+
+  return (
+    <div className="mx-auto w-full max-w-2xl space-y-6">
+      <section className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center sm:p-10">
+        <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.22em] text-mq-premium-gold">
+          <Globe2 className="h-3.5 w-3.5" />
+          Demo módulo MIR · resultado
+        </p>
+        <h1 className="mt-3 text-2xl font-black text-white">
+          {correctCount} de {total} correctas
+        </h1>
+        <div className="mt-6">
+          <MirScoreBreakdown correct={correctCount} wrong={wrongCount} total={total} />
+        </div>
+
+        <ul className="mt-6 flex flex-wrap justify-center gap-2" aria-label="Resultado por especialidad">
+          {questions.map((question, index) => {
+            const isCorrect = answers[question.id] === question.correctOptionId;
+            return (
+              <li
+                key={question.id}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-bold ${
+                  isCorrect
+                    ? "border-emerald-400/30 bg-emerald-400/10 text-emerald-300"
+                    : "border-rose-400/30 bg-rose-400/10 text-rose-300"
+                }`}
+              >
+                {isCorrect ? <CheckCircle2 className="h-3.5 w-3.5" /> : <XCircle className="h-3.5 w-3.5" />}
+                {index + 1}. {getQuestionSpecialty(question)}
+              </li>
+            );
+          })}
+        </ul>
+
+        <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-slate-300">
+          Esto fue una muestra de {total} preguntas. El banco completo tiene {MIR_QUESTIONS.length} preguntas
+          de examen MIR con explicación detallada, simulacros cronometrados con nota en netas, repaso de tus
+          errores y un mapa de tu dominio por especialidad.
+        </p>
+        <div className="mt-6">
+          <DemoCtas whatsappUrl={whatsappUrl} onRestart={onRestart} />
+        </div>
+      </section>
+
+      <section>
+        <h2 className="mb-3 text-sm font-black uppercase tracking-wide text-white">Revisión pregunta por pregunta</h2>
+        <ol className="space-y-4">
+          {questions.map((question, index) => {
+            const givenId = answers[question.id];
+            const isCorrect = givenId === question.correctOptionId;
+            const given = question.options.find((option) => option.id === givenId);
+            const correct = question.options.find((option) => option.id === question.correctOptionId);
+            return (
+              <li key={question.id} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
+                    {index + 1}. {getQuestionSpecialty(question)}
+                  </p>
+                  <span
+                    className={`inline-flex items-center gap-1 text-xs font-bold ${
+                      isCorrect ? "text-emerald-400" : "text-rose-400"
+                    }`}
+                  >
+                    {isCorrect ? <CheckCircle2 className="h-4 w-4" /> : <XCircle className="h-4 w-4" />}
+                    {isCorrect ? "Correcta" : "Incorrecta"}
+                  </span>
+                </div>
+                <p className="mt-3 text-pretty text-sm leading-relaxed text-white sm:text-base">
+                  {renderWithBold(question.statement)}
+                </p>
+
+                <div className="mt-4 space-y-2 text-sm">
+                  {!isCorrect && given ? (
+                    <p className="flex gap-2 rounded-xl border border-rose-400/30 bg-rose-400/[0.06] px-3 py-2 text-slate-200">
+                      <span className="shrink-0 font-black text-rose-300">Tu respuesta · {given.label}</span>
+                      <span>{given.text}</span>
+                    </p>
+                  ) : null}
+                  {correct ? (
+                    <p className="flex gap-2 rounded-xl border border-emerald-400/30 bg-emerald-400/[0.06] px-3 py-2 text-slate-200">
+                      <span className="shrink-0 font-black text-emerald-300">Correcta · {correct.label}</span>
+                      <span>{correct.text}</span>
+                    </p>
+                  ) : null}
+                </div>
+
+                {question.explanation ? (
+                  <div className="mt-4">
+                    <p className="text-[11px] font-black uppercase tracking-[0.18em] text-mq-premium-gold">
+                      Explicación
+                    </p>
+                    <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-300">
+                      {renderWithBold(question.explanation)}
+                    </p>
+                  </div>
+                ) : null}
+
+                {question.keyPoints?.length ? (
+                  <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.03] p-4">
+                    <p className="text-[11px] font-black uppercase tracking-[0.18em] text-mq-premium-gold">
+                      Puntos clave
+                    </p>
+                    <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-slate-300">
+                      {question.keyPoints.map((point) => (
+                        <li key={point} className="flex gap-2">
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-mq-premium-gold" />
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+              </li>
+            );
+          })}
+        </ol>
+      </section>
+
+      <section className="rounded-2xl border border-mq-premium-gold/25 bg-mq-premium-gold/[0.06] p-6 text-center">
+        <p className="text-sm font-bold text-white">¿Quieres entrenar con el banco completo?</p>
+        <div className="mt-4">
+          <DemoCtas whatsappUrl={whatsappUrl} onRestart={onRestart} />
+        </div>
+        <Link
+          href="/mir"
+          className="mt-4 inline-block text-xs font-semibold text-slate-400 underline-offset-4 hover:text-slate-300 hover:underline"
+        >
+          Volver al módulo MIR
+        </Link>
+      </section>
     </div>
   );
 }
