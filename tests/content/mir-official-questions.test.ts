@@ -4,11 +4,10 @@ import { shuffleMirQuestionOptions } from "@/lib/training/mir-options";
 import { getMirSpecialties } from "@/lib/training/mir-practice";
 
 describe("preguntas MIR oficiales", () => {
-  it("el lote 1 tiene 100 preguntas únicas del MIR 2025", () => {
-    expect(MIR_OFFICIAL_QUESTIONS).toHaveLength(100);
-    const numbers = MIR_OFFICIAL_QUESTIONS.map((question) => question.officialExam?.number);
-    expect(new Set(numbers).size).toBe(100);
-    expect(MIR_OFFICIAL_QUESTIONS.every((question) => question.officialExam?.year === 2025)).toBe(true);
+  it("cada pregunta oficial es única por año y número", () => {
+    const keys = MIR_OFFICIAL_QUESTIONS.map((q) => `${q.officialExam?.year}-${q.officialExam?.number}`);
+    expect(new Set(keys).size).toBe(MIR_OFFICIAL_QUESTIONS.length);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2025)).toHaveLength(175);
     expect(new Set(MIR_QUESTIONS.map((question) => question.id)).size).toBe(MIR_QUESTIONS.length);
   });
 
@@ -16,6 +15,7 @@ describe("preguntas MIR oficiales", () => {
     for (const question of MIR_OFFICIAL_QUESTIONS) {
       expect(question.options.map((option) => option.id), question.id).toEqual(["1", "2", "3", "4"]);
       expect(question.options.every((option) => option.text.trim().length > 0), question.id).toBe(true);
+      expect(question.options.some((option) => /^[1-4]\.\s/.test(option.text)), question.id).toBe(false);
       expect(["1", "2", "3", "4"], question.id).toContain(question.correctOptionId);
       expect(question.statement.length, question.id).toBeGreaterThan(30);
       expect(question.explanation.length, question.id).toBeGreaterThan(300);
@@ -37,7 +37,7 @@ describe("preguntas MIR oficiales", () => {
       expect(ownSpecialties, key).toContain(key);
     }
     const edition = MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2025-OFICIAL-1");
-    expect(edition?.questionCount).toBe(100);
+    expect(edition?.questionCount).toBe(175);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2027-SIMULACRO-COMPLETO")?.questionCount).toBe(200);
   });
 });
