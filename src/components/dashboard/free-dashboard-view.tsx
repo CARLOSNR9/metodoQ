@@ -4,9 +4,7 @@ import { Target, ArrowRight, Sparkles, Clock, Star } from "lucide-react";
 import Link from "next/link";
 import {
   ReferralCard,
-  DailyPlanCard,
   SummaryCards,
-  WeakTopicsCard,
   TopicMasteryCard,
   StudyBoardPreviewCard,
 } from "@/components/dashboard";
@@ -18,7 +16,6 @@ import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 import { useTopicStatsMigration } from "@/hooks/use-topic-stats-migration";
 import { hasPerformanceData } from "@/lib/profile/has-performance-data";
 import { getDoctorGreetingName } from "@/lib/plans/subscription-display";
-import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import { getEffectiveGoalSpecialty } from "@/lib/diagnostic/ucc-pasto-track";
 
 interface FreeDashboardViewProps {
@@ -118,7 +115,6 @@ export function FreeDashboardView({
   const totalQuestions = user?.totalQuestionsAnswered ?? cumulative.totalQuestions;
   const hasDiagnostic = hasPerformanceData(user);
   const greetingName = getDoctorGreetingName(user);
-  const dailyGoal = getDailyGoalForProfile(user, user?.planStartedAt);
   const goalUniversityLabel =
     user?.goalUniversity && user.goalUniversity !== "Otra" ? user.goalUniversity : null;
   const effectiveSpecialty = getEffectiveGoalSpecialty(
@@ -209,20 +205,8 @@ export function FreeDashboardView({
 
       <div className="grid gap-8 lg:grid-cols-3">
         <div className="space-y-8 lg:col-span-2">
-          <DailyPlanCard
-            userId={user.uid}
-            dailyTarget={dailyGoal.dailyTarget}
-            weakTopic={user?.weaknesses?.[0] ?? null}
-            universityLabel={goalUniversityLabel}
-            trainHref="/dashboard/entrenar"
-            needsDiagnostic={!hasDiagnostic}
-            onStartDiagnostic={() => setIsAct1Open(true)}
-            isTrial
-          />
-
           {hasDiagnostic ? (
             <>
-              <WeakTopicsCard userId={user.uid} limit={2} />
               <TopicMasteryCard topicStats={user?.topicStats} />
               <SummaryCards userId={user.uid} />
               <StudyBoardPreviewCard userId={user.uid} />

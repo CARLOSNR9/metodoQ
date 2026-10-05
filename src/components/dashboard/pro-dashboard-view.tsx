@@ -15,8 +15,6 @@ import {
   ReferralCard,
   LiveClasses,
   PastClasses,
-  DailyPlanCard,
-  WeakTopicsCard,
   TopicMasteryCard,
   ProgressChart,
   StudyBoardPreviewCard,
@@ -133,8 +131,8 @@ export function ProDashboardView({
       ? `Tu plan está activo. El primer paso hacia ${goalUniversityLabel} es un diagnóstico de 10 preguntas para ver qué te puede dejar por fuera.`
       : "Tu plan está activo. El primer paso es un diagnóstico de 10 preguntas: así dejamos de estudiar a ciegas y apuntamos al examen de residencia."
     : goalUniversityLabel
-      ? `Hoy cierra tu cupo diario rumbo a ${goalUniversityLabel}${effectiveSpecialty ? ` · ${effectiveSpecialty}` : ""}. La residencia se gana en las brechas, no en el capítulo extra.`
-      : "Hoy cierra tu cupo diario. La residencia se gana tapando brechas, no leyendo más capítulos.";
+      ? `Entrena a tu ritmo rumbo a ${goalUniversityLabel}${effectiveSpecialty ? ` · ${effectiveSpecialty}` : ""}. La residencia se gana en las brechas, no en el capítulo extra.`
+      : "Entrena a tu ritmo. La residencia se gana tapando brechas, no leyendo más capítulos.";
 
   return (
     <div className="space-y-8 pb-12">
@@ -244,24 +242,7 @@ export function ProDashboardView({
               planStartedAt={profile?.planStartedAt}
               weakTopic={dailyPillTopic}
             />
-          ) : (
-            <DailyPlanCard
-              userId={user.uid}
-              dailyTarget={dailyGoal.dailyTarget}
-              weakTopic={profile?.weaknesses?.[0] ?? null}
-              universityLabel={goalUniversityLabel}
-              trainHref="/dashboard/entrenar"
-              needsDiagnostic={needsDiagnostic}
-              onStartDiagnostic={() => setIsAct1Open(true)}
-            />
-          )}
-
-          <WeakTopicsCard
-            userId={user.uid}
-            isProUser={showLiveClasses}
-            userPlan={profile?.plan}
-            limit={2}
-          />
+          ) : null}
 
           {hasDiagnosticData ? <TopicMasteryCard topicStats={profile?.topicStats} /> : null}
 

@@ -1,10 +1,8 @@
 export { DashboardShell } from "./dashboard-shell";
 export { ProgressChart } from "./progress-chart";
 export { SummaryCards } from "./summary-cards";
-export { DailyPlanCard } from "./daily-plan-card";
 export { StreakCard } from "./streak-card";
 export { DynamicInsightCard } from "./dynamic-insight-card";
-export { WeakTopicsCard } from "./weak-topics-card";
 export { TopicMasteryCard } from "./topic-mastery-card";
 export { TrainingReminderCard } from "./training-reminder-card";
 export { DailyRecommendationCard } from "./daily-recommendation-card";
