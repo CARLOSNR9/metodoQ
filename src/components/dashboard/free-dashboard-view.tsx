@@ -4,9 +4,7 @@ import { Target, ArrowRight, Sparkles, Clock, Star } from "lucide-react";
 import Link from "next/link";
 import {
   ReferralCard,
-  DailyPlanCard,
   SummaryCards,
-  WeakTopicsCard,
   TopicMasteryCard,
   StudyBoardPreviewCard,
 } from "@/components/dashboard";
@@ -18,8 +16,8 @@ import { computeCumulativePerformance } from "@/lib/scoring/cumulative-score";
 import { useTopicStatsMigration } from "@/hooks/use-topic-stats-migration";
 import { hasPerformanceData } from "@/lib/profile/has-performance-data";
 import { getDoctorGreetingName } from "@/lib/plans/subscription-display";
-import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import { getEffectiveGoalSpecialty } from "@/lib/diagnostic/ucc-pasto-track";
+import { DashboardHeaderStats } from "./dashboard-header-stats";
 
 interface FreeDashboardViewProps {
   user: any;
@@ -118,7 +116,6 @@ export function FreeDashboardView({
   const totalQuestions = user?.totalQuestionsAnswered ?? cumulative.totalQuestions;
   const hasDiagnostic = hasPerformanceData(user);
   const greetingName = getDoctorGreetingName(user);
-  const dailyGoal = getDailyGoalForProfile(user, user?.planStartedAt);
   const goalUniversityLabel =
     user?.goalUniversity && user.goalUniversity !== "Otra" ? user.goalUniversity : null;
   const effectiveSpecialty = getEffectiveGoalSpecialty(
@@ -171,12 +168,14 @@ export function FreeDashboardView({
           </span>
         </div>
 
-        <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+        <h1 className="mt-3 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
           Hola, <span className="text-mq-accent">{greetingName}.</span>
         </h1>
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+        <p className="mt-1 max-w-2xl text-sm leading-relaxed text-slate-600">
           {briefing}
         </p>
+
+        <DashboardHeaderStats userId={user.uid} streakCount={user?.streakCount ?? 0} />
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           {hasDiagnostic ? (
@@ -209,20 +208,8 @@ export function FreeDashboardView({
 
       <div className="grid gap-8 lg:grid-cols-3">
         <div className="space-y-8 lg:col-span-2">
-          <DailyPlanCard
-            userId={user.uid}
-            dailyTarget={dailyGoal.dailyTarget}
-            weakTopic={user?.weaknesses?.[0] ?? null}
-            universityLabel={goalUniversityLabel}
-            trainHref="/dashboard/entrenar"
-            needsDiagnostic={!hasDiagnostic}
-            onStartDiagnostic={() => setIsAct1Open(true)}
-            isTrial
-          />
-
           {hasDiagnostic ? (
             <>
-              <WeakTopicsCard userId={user.uid} limit={2} />
               <TopicMasteryCard topicStats={user?.topicStats} />
               <SummaryCards userId={user.uid} />
               <StudyBoardPreviewCard userId={user.uid} />

@@ -31,7 +31,7 @@ import { MirAchievementsCard } from "./mir-achievements";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
 import { MirPomodoroCard } from "./mir-pomodoro-card";
-import { MirStudyPlanCard } from "./mir-study-plan";
+import { MirWeeklyCard } from "./mir-weekly-card";
 
 type MirDashboardViewProps = {
   userId: string;
@@ -63,7 +63,7 @@ const CURIOSITIES = [
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * plan semanal con Pomodoro, accesos libres a práctica, repaso de
+ * preguntas de la semana con Pomodoro, accesos libres a práctica, repaso de
  * errores, tarjetas de repaso y simulacro, mapa de dominio por especialidad, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
@@ -145,7 +145,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
             <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu semana</h2>
           </div>
           <div className="space-y-4">
-            <MirStudyPlanCard userId={userId} />
+            <MirWeeklyCard userId={userId} />
             <MirPomodoroCard />
           </div>
         </section>
