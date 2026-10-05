@@ -141,7 +141,7 @@ export function MirReviewView({ userId }: { userId: string }) {
             href="/dashboard/mir/practica"
             className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border border-white/20 px-6 text-sm font-bold text-white transition hover:border-white/40"
           >
-            Practicar por especialidad
+            Practicar
             <ArrowRight className="h-4 w-4" />
           </Link>
         )}

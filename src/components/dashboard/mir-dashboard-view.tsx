@@ -160,7 +160,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
               <Stethoscope className="h-5 w-5 text-mq-premium-gold" />
-              <h3 className="mt-3 text-lg font-bold text-white">Práctica por especialidad</h3>
+              <h3 className="mt-3 text-lg font-bold text-white">Práctica</h3>
               <p className="mt-1 text-sm text-slate-300">Bloques de 10 preguntas · corrección al instante</p>
               <Link
                 href="/dashboard/mir/practica"
