@@ -11,6 +11,7 @@ describe("preguntas MIR oficiales", () => {
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2024)).toHaveLength(172);
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2023)).toHaveLength(178);
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2022)).toHaveLength(174);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2021)).toHaveLength(153);
     expect(new Set(MIR_QUESTIONS.map((question) => question.id)).size).toBe(MIR_QUESTIONS.length);
   });
 
@@ -44,6 +45,7 @@ describe("preguntas MIR oficiales", () => {
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2024-OFICIAL")?.questionCount).toBe(172);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2023-OFICIAL")?.questionCount).toBe(178);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2022-OFICIAL")?.questionCount).toBe(174);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2021-OFICIAL")?.questionCount).toBe(153);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2027-SIMULACRO-COMPLETO")?.questionCount).toBe(200);
   });
 });
