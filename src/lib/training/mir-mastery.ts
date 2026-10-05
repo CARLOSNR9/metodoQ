@@ -1,5 +1,6 @@
 import { doc, getDoc, increment, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
+import { getLocalDateKey } from "@/lib/results";
 import { MIR_QUESTIONS, type MirExamAttempt } from "@/lib/training/mir-convocatoria";
 import { getMirSpecialties, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import type { MirAnswerOutcome } from "@/lib/training/mir-review";
@@ -121,8 +122,13 @@ export async function recordMirSpecialtyStats(
 
   await setDoc(
     userRef,
-    // mirTotalAnswered cuenta cada respuesta una vez (las mixtas suman en varias especialidades).
-    { mirSpecialtyStats: update, mirTotalAnswered: increment(outcomes.length) },
+    // mirTotalAnswered cuenta cada respuesta una vez (las mixtas suman en varias especialidades);
+    // mirAnsweredByDay alimenta el seguimiento semanal (ver mir-weekly.ts).
+    {
+      mirSpecialtyStats: update,
+      mirTotalAnswered: increment(outcomes.length),
+      mirAnsweredByDay: { [getLocalDateKey(new Date())]: increment(outcomes.length) },
+    },
     { merge: true },
   );
 }

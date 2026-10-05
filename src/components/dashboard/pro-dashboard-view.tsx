@@ -46,6 +46,7 @@ import { getDailyGoalForProfile } from "@/lib/training/daily-goals";
 import { buildUccPercentileEstimate } from "@/lib/diagnostic/ucc-percentile";
 import { getPlanWeekNumber } from "@/lib/training/ucc-mi-daily-plan";
 import { useTopicStatsMigration } from "@/hooks/use-topic-stats-migration";
+import { DashboardHeaderStats } from "./dashboard-header-stats";
 
 interface ProDashboardViewProps {
   user: any;
@@ -168,12 +169,14 @@ export function ProDashboardView({
           )}
         </div>
 
-        <h1 className="mt-4 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+        <h1 className="mt-3 text-2xl font-black tracking-tight text-slate-900 sm:text-3xl">
           Hola, <span className="text-mq-accent">{greetingName}.</span>
         </h1>
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
+        <p className="mt-1 max-w-2xl text-sm leading-relaxed text-slate-600">
           {briefing}
         </p>
+
+        <DashboardHeaderStats userId={user.uid} streakCount={profile?.streakCount ?? 0} />
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           {needsDiagnostic ? (
