@@ -6,6 +6,8 @@ import {
   ArrowLeft,
   ArrowRight,
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
   Clock,
   Flag,
   HelpCircle,
@@ -73,6 +75,23 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
   const [isSaving, setIsSaving] = useState(false);
   const [reviewFilter, setReviewFilter] = useState<ReviewFilter>("wrong");
   const submittedRef = useRef(false);
+  const navigatorRef = useRef<HTMLDivElement>(null);
+
+  // Mantiene la pregunta actual centrada en el navegador horizontal sin mover la página.
+  useEffect(() => {
+    if (stage !== "exam") return;
+    const container = navigatorRef.current;
+    const chip = container?.querySelector<HTMLElement>(`[data-index="${currentIndex}"]`);
+    if (!container || !chip) return;
+    const target = chip.offsetLeft - container.clientWidth / 2 + chip.clientWidth / 2;
+    container.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
+  }, [stage, currentIndex]);
+
+  function scrollNavigator(direction: 1 | -1) {
+    const container = navigatorRef.current;
+    if (!container) return;
+    container.scrollBy({ left: direction * container.clientWidth * 0.8, behavior: "smooth" });
+  }
 
   useEffect(() => {
     let cancelled = false;
@@ -295,27 +314,60 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
               {formatClock(secondsLeft)}
             </div>
           </div>
-          <div className="mt-3 flex gap-1 overflow-x-auto pb-1">
-            {questions.map((question, index) => {
-              const isAnswered = Boolean(answers[question.id]);
-              const isCurrent = index === currentIndex;
-              return (
-                <button
-                  key={question.id}
-                  type="button"
-                  onClick={() => setCurrentIndex(index)}
-                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[10px] font-bold transition ${
-                    isCurrent
-                      ? "bg-mq-premium-gold text-[#0A1F44]"
-                      : isAnswered
-                        ? "bg-mq-premium-gold/20 text-mq-premium-gold"
-                        : "bg-white/[0.05] text-slate-400 hover:bg-white/10"
-                  }`}
-                >
-                  {index + 1}
-                </button>
-              );
-            })}
+          <div className="mt-3 h-1 overflow-hidden rounded-full bg-white/[0.06]">
+            <div
+              className="h-full rounded-full bg-mq-premium-gold transition-[width] duration-300"
+              style={{ width: `${total > 0 ? (answeredCount / total) * 100 : 0}%` }}
+            />
+          </div>
+          <div className="mt-3 flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => scrollNavigator(-1)}
+              aria-label="Ver preguntas anteriores"
+              className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-white/25 hover:text-white sm:flex"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <div
+              ref={navigatorRef}
+              aria-label="Navegador de preguntas"
+              className="flex min-w-0 flex-1 gap-1.5 overflow-x-auto scroll-smooth py-0.5 [mask-image:linear-gradient(to_right,transparent,black_16px,black_calc(100%-16px),transparent)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              <span aria-hidden className="w-2 shrink-0" />
+              {questions.map((question, index) => {
+                const isAnswered = Boolean(answers[question.id]);
+                const isCurrent = index === currentIndex;
+                return (
+                  <button
+                    key={question.id}
+                    type="button"
+                    data-index={index}
+                    onClick={() => setCurrentIndex(index)}
+                    aria-current={isCurrent ? "step" : undefined}
+                    aria-label={`Pregunta ${index + 1}${isAnswered ? ", respondida" : ""}`}
+                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold tabular-nums transition ${
+                      isCurrent
+                        ? "bg-mq-premium-gold text-[#0A1F44]"
+                        : isAnswered
+                          ? "bg-mq-premium-gold/20 text-mq-premium-gold hover:bg-mq-premium-gold/30"
+                          : "border border-white/10 text-slate-400 hover:border-white/25 hover:text-white"
+                    }`}
+                  >
+                    {index + 1}
+                  </button>
+                );
+              })}
+              <span aria-hidden className="w-2 shrink-0" />
+            </div>
+            <button
+              type="button"
+              onClick={() => scrollNavigator(1)}
+              aria-label="Ver preguntas siguientes"
+              className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:border-white/25 hover:text-white sm:flex"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
           </div>
         </div>
 
