@@ -30,6 +30,8 @@ import { MIR_OFICIAL_2022_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2022-lote-
 import { MIR_OFICIAL_2022_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2022-lote-2-questions";
 import { MIR_OFICIAL_2021_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2021-lote-1-questions";
 import { MIR_OFICIAL_2021_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2021-lote-2-questions";
+import { MIR_OFICIAL_2020_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2020-lote-1-questions";
+import { MIR_OFICIAL_2020_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2020-lote-2-questions";
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -98,6 +100,12 @@ const MIR_OFICIAL_2021_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2021_LOTE_2_QUESTIONS,
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
+/** MIR 2020 oficial: las 151 preguntas sin imagen del examen (incluidas las de reserva). */
+const MIR_OFICIAL_2020_QUESTIONS: TrainingQuestion[] = [
+  ...MIR_OFICIAL_2020_LOTE_1_QUESTIONS,
+  ...MIR_OFICIAL_2020_LOTE_2_QUESTIONS,
+].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
+
 /** Preguntas literales de exámenes MIR oficiales, con su año y número (se amplía por lotes). */
 export const MIR_OFFICIAL_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2025_QUESTIONS,
@@ -105,6 +113,7 @@ export const MIR_OFFICIAL_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2023_QUESTIONS,
   ...MIR_OFICIAL_2022_QUESTIONS,
   ...MIR_OFICIAL_2021_QUESTIONS,
+  ...MIR_OFICIAL_2020_QUESTIONS,
 ];
 
 /** Banco completo de preguntas del módulo MIR. */
@@ -162,7 +171,7 @@ function buildEdition(
 
 /**
  * Simulacros 1 y 2: preguntas propias de Método Q, calibradas al temario y
- * nivel del examen MIR más reciente. "MIR 2025/2024/2023/2022/2021 oficial"
+ * nivel del examen MIR más reciente. "MIR 2025/2024/2023/2022/2021/2020 oficial"
  * usan preguntas literales de los exámenes oficiales (ver MIR_OFFICIAL_QUESTIONS).
  *
  * "MIR-2027-SIMULACRO" conserva su código original para que los intentos ya
@@ -217,6 +226,12 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
     "MIR 2021 oficial",
     "Las preguntas reales del examen MIR 2021 (sin imágenes), tal cual salieron, con explicación de cada una.",
     MIR_OFICIAL_2021_QUESTIONS,
+  ),
+  buildEdition(
+    "MIR-2020-OFICIAL",
+    "MIR 2020 oficial",
+    "Las preguntas reales del examen MIR 2020 (sin imágenes), tal cual salieron, con explicación de cada una.",
+    MIR_OFICIAL_2020_QUESTIONS,
   ),
 ].filter((edition) => edition.questions.length > 0);
 
