@@ -11,7 +11,6 @@ import {
   getMirSpecialties,
   pickMirPracticeQuestions,
 } from "@/lib/training/mir-practice";
-import { markMirSpecialtyPracticed } from "@/lib/training/mir-study-plan";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { MirPracticeSession } from "./mir-practice-session";
 
@@ -76,7 +75,6 @@ export function MirPracticeView({ userId }: { userId: string }) {
           questions={session.questions}
           eyebrow={`Práctica · ${getSpecialtyTitle(session.specialtyKey)}`}
           source="practice"
-          saveExtra={() => markMirSpecialtyPracticed(userId, session.specialtyKey)}
           onRestart={() => startBlock(session.specialtyKey)}
           restartLabel="Otro bloque"
         />
@@ -97,7 +95,7 @@ export function MirPracticeView({ userId }: { userId: string }) {
       <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 sm:p-9">
         <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.22em] text-mq-premium-gold">
           <Stethoscope className="h-3.5 w-3.5" />
-          Práctica por especialidad
+          Práctica
         </p>
         <h1 className="mt-2 text-2xl font-black text-white sm:text-3xl">¿Qué estudiamos hoy?</h1>
         <p className="mt-3 text-sm leading-relaxed text-slate-300">

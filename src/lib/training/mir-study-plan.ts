@@ -16,8 +16,8 @@ import { getMirSpecialties, type MirSpecialty } from "@/lib/training/mir-practic
  * El plan es determinista a partir de su fecha de inicio (el lunes de la
  * semana en que se abrió por primera vez), guardada en
  * `users/{uid}.mirStudyPlan.startDate`, para que no se reordene cada día.
- * Para saber si hoy se practicó la especialidad del día se guarda la última
- * fecha de práctica por especialidad en `users/{uid}.mirLastPracticeBySpecialty`.
+ * Solo marca el foco de cada semana: el estudiante practica lo que quiera,
+ * sin tareas diarias.
  */
 export type MirPlanPhase = "first_pass" | "second_pass" | "final_sprint";
 
@@ -40,8 +40,6 @@ export type MirStudyPlan = {
 
 export const MIR_PLAN_FINAL_SPRINT_WEEKS = 2;
 const FIRST_PASS_SHARE = 0.7;
-/** Día de la semana (0 = domingo) en que el sprint final propone simulacro. */
-const SIMULACRO_WEEKDAY = 6;
 
 function parseDateKey(dateKey: string): Date {
   const [year, month, day] = dateKey.split("-").map(Number);
@@ -134,53 +132,13 @@ export function buildMirStudyPlan(
   return { startDate: firstMonday, examDate: examDateKey, weeks };
 }
 
-export type MirPlanDayTask =
-  | { kind: "specialty"; specialtyKey: string }
-  | { kind: "mixed" }
-  | { kind: "simulacro" }
-  | { kind: "exam" }
-  | { kind: "rest" };
-
 /** Semana del plan que contiene `dateKey` (null si está fuera del plan). */
 export function getPlanWeek(plan: MirStudyPlan, dateKey: string): MirPlanWeek | null {
   return plan.weeks.find((week) => dateKey >= week.startDate && dateKey <= week.endDate) ?? null;
 }
 
-/**
- * Tarea principal del día. En la primera vuelta rota entre las
- * especialidades de la semana; en la segunda, entre las más débiles
- * (`weakSpecialtyKeys`, de peor a mejor); en el sprint, bloque mixto y
- * simulacro los sábados.
- */
-export function getPlanDayTask(
-  plan: MirStudyPlan,
-  dateKey: string,
-  weakSpecialtyKeys: string[],
-): MirPlanDayTask {
-  if (dateKey === plan.examDate) return { kind: "exam" };
-  if (dateKey > plan.examDate) return { kind: "rest" };
-  const week = getPlanWeek(plan, dateKey);
-  if (!week) return { kind: "mixed" };
-
-  const dayIndex = (parseDateKey(dateKey).getDay() + 6) % 7; // lunes = 0
-  if (week.phase === "final_sprint") {
-    // El día antes del examen, nada de simulacros: repaso ligero.
-    const isEve = addDays(dateKey, 1) === plan.examDate;
-    if (!isEve && parseDateKey(dateKey).getDay() === SIMULACRO_WEEKDAY) return { kind: "simulacro" };
-    return { kind: "mixed" };
-  }
-  const keys = week.phase === "first_pass" ? week.specialtyKeys : weakSpecialtyKeys.slice(0, 2);
-  if (keys.length === 0) return { kind: "mixed" };
-  return { kind: "specialty", specialtyKey: keys[dayIndex % keys.length] };
-}
-
-export type MirStudyPlanData = {
-  plan: MirStudyPlan;
-  lastPracticeBySpecialty: Record<string, string>;
-};
-
 /** Lee el plan del usuario; si nunca lo abrió, lo crea desde esta semana. */
-export async function getOrCreateMirStudyPlan(userId: string): Promise<MirStudyPlanData> {
+export async function getOrCreateMirStudyPlan(userId: string): Promise<MirStudyPlan> {
   const todayKey = getLocalDateKey(new Date());
   const userRef = doc(getFirebaseDb(), "users", userId);
   let data: Record<string, unknown> | undefined;
@@ -198,17 +156,5 @@ export async function getOrCreateMirStudyPlan(userId: string): Promise<MirStudyP
     );
   }
 
-  return {
-    plan: buildMirStudyPlan(startDate),
-    lastPracticeBySpecialty: (data?.mirLastPracticeBySpecialty ?? {}) as Record<string, string>,
-  };
-}
-
-/** Registra que hoy se practicó una especialidad (para la checklist del plan). */
-export async function markMirSpecialtyPracticed(userId: string, specialtyKey: string): Promise<void> {
-  await setDoc(
-    doc(getFirebaseDb(), "users", userId),
-    { mirLastPracticeBySpecialty: { [specialtyKey]: getLocalDateKey(new Date()) } },
-    { merge: true },
-  );
+  return buildMirStudyPlan(startDate);
 }

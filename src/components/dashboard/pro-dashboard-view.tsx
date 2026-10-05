@@ -17,6 +17,7 @@ import {
   PastClasses,
   DailyPlanCard,
   WeakTopicsCard,
+  TopicMasteryCard,
   ProgressChart,
   StudyBoardPreviewCard,
   NextClassBanner,
@@ -261,6 +262,8 @@ export function ProDashboardView({
             userPlan={profile?.plan}
             limit={2}
           />
+
+          {hasDiagnosticData ? <TopicMasteryCard topicStats={profile?.topicStats} /> : null}
 
           {hasDiagnosticData ? (
             <section className="overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">

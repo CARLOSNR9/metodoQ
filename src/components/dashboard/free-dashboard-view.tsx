@@ -7,6 +7,7 @@ import {
   DailyPlanCard,
   SummaryCards,
   WeakTopicsCard,
+  TopicMasteryCard,
   StudyBoardPreviewCard,
 } from "@/components/dashboard";
 import { motion } from "framer-motion";
@@ -222,6 +223,7 @@ export function FreeDashboardView({
           {hasDiagnostic ? (
             <>
               <WeakTopicsCard userId={user.uid} limit={2} />
+              <TopicMasteryCard topicStats={user?.topicStats} />
               <SummaryCards userId={user.uid} />
               <StudyBoardPreviewCard userId={user.uid} />
 

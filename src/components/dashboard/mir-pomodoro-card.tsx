@@ -172,7 +172,7 @@ export function MirPomodoroCard() {
           </p>
           <p className="mt-2 text-sm leading-relaxed text-slate-300">
             {phase === "study"
-              ? "Aprovecha este bloque: reto del día, un bloque de práctica o una ronda de tarjetas."
+              ? "Aprovecha este bloque: un bloque de práctica, un simulacro o una ronda de tarjetas."
               : phase === "break"
                 ? "Levántate, bebe agua y descansa la vista. Te aviso cuando toque volver."
                 : phase === "resume-prompt"
