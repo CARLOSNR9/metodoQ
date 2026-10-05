@@ -3,10 +3,11 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Globe2, RotateCcw, XCircle } from "lucide-react";
-import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import { MIR_OFFICIAL_QUESTIONS, MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import { MirScoreBreakdown } from "@/components/dashboard/mir-score";
+import { MirOfficialBadge } from "@/components/dashboard/mir-rich-text";
 import { getMirWhatsAppUrl } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -36,12 +37,13 @@ function renderWithBold(text: string) {
 
 /**
  * Demo gratuita del módulo MIR: sin selección de universidad ni especialidad
- * (irrelevante para este examen), con preguntas reales del banco MIR de
- * Método Q. Tema oscuro/dorado consistente con /mir y /dashboard/mir.
+ * (irrelevante para este examen), con preguntas de exámenes MIR oficiales
+ * (o del banco propio si aún no hay suficientes). Tema oscuro/dorado
+ * consistente con /mir y /dashboard/mir.
  */
 export function MirDemoView() {
   const questions = useMemo(() => {
-    const pool = MIR_QUESTIONS;
+    const pool = MIR_OFFICIAL_QUESTIONS.length >= DEMO_QUESTION_COUNT ? MIR_OFFICIAL_QUESTIONS : MIR_QUESTIONS;
     return shuffleMirQuestionsOptions(
       pickRandomQuestions(pool, Math.min(DEMO_QUESTION_COUNT, pool.length)),
     );
@@ -133,6 +135,11 @@ export function MirDemoView() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
             {currentQuestion.examArea}
           </p>
+        ) : null}
+        {currentQuestion.officialExam ? (
+          <div className="mt-2">
+            <MirOfficialBadge officialExam={currentQuestion.officialExam} />
+          </div>
         ) : null}
         <h2 className="mt-3 text-pretty text-base font-medium leading-relaxed text-white sm:text-lg">
           {renderWithBold(currentQuestion.statement)}
@@ -309,7 +316,7 @@ function MirDemoResults({
 
         <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-slate-300">
           Esto fue una muestra de {total} preguntas. El banco completo tiene {MIR_QUESTIONS.length} preguntas
-          de examen MIR con explicación detallada, simulacros cronometrados con nota en netas, repaso de tus
+          tipo MIR ({MIR_OFFICIAL_QUESTIONS.length} de ellas reales de exámenes oficiales) con explicación detallada, simulacros cronometrados con nota en netas, repaso de tus
           errores y un mapa de tu dominio por especialidad.
         </p>
         <div className="mt-6">
@@ -328,9 +335,12 @@ function MirDemoResults({
             return (
               <li key={question.id} className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-6">
                 <div className="flex flex-wrap items-center justify-between gap-2">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
-                    {index + 1}. {getQuestionSpecialty(question)}
-                  </p>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
+                      {index + 1}. {getQuestionSpecialty(question)}
+                    </p>
+                    <MirOfficialBadge officialExam={question.officialExam} />
+                  </div>
                   <span
                     className={`inline-flex items-center gap-1 text-xs font-bold ${
                       isCorrect ? "text-emerald-400" : "text-rose-400"

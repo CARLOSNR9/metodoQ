@@ -40,6 +40,8 @@ export type TrainingQuestion = {
   theoryUrl?: string;
   /** Contenido largo de teoría; si no hay `theoryUrl`, se expone en `/teoria/[id]`. */
   theoryContent?: string;
+  /** Pregunta literal de un examen oficial (p. ej. MIR 2025, pregunta 85). */
+  officialExam?: { year: number; number: number };
 };
 
 /** Pregunta en el panel de revisión (Firestore y/o banco en código). */

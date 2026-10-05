@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import { MIR_QUESTIONS as MIR_BANK } from "@/lib/training/mir-convocatoria";
+
+/**
+ * Solo las preguntas redactadas por Método Q: las de exámenes oficiales
+ * (`officialExam`) se transcriben literalmente y no se pueden reescribir.
+ */
+const MIR_QUESTIONS = MIR_BANK.filter((question) => !question.officialExam);
 
 /**
  * Sesgo de longitud: si la opción correcta suele ser la más larga (o mucho más

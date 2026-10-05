@@ -27,7 +27,7 @@ import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers } from "@/lib/training/mir-review";
 import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import type { TrainingQuestion } from "@/lib/questions/types";
-import { renderWithBold } from "./mir-rich-text";
+import { MirOfficialBadge, renderWithBold } from "./mir-rich-text";
 import { MirScoreBreakdown } from "./mir-score";
 import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
 
@@ -377,6 +377,11 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
               {currentQuestion.examArea}
             </p>
           ) : null}
+          {currentQuestion.officialExam ? (
+            <div className="mt-2">
+              <MirOfficialBadge officialExam={currentQuestion.officialExam} />
+            </div>
+          ) : null}
           <h2 className="mt-3 text-pretty text-base font-medium leading-relaxed text-white sm:text-lg">
             {renderWithBold(currentQuestion.statement)}
           </h2>
@@ -556,6 +561,11 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
                     {question.examArea ? (
                       <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-mq-premium-gold">
                         {question.examArea}
+                        {question.officialExam ? (
+                          <span className="text-slate-400">
+                            {" "}· MIR {question.officialExam.year} · P. {question.officialExam.number}
+                          </span>
+                        ) : null}
                       </p>
                     ) : (
                       <span />
@@ -589,8 +599,8 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
                     ) : null}
                   </div>
 
-                  <p className="mt-3 text-sm leading-relaxed text-slate-300">
-                    {question.explanation}
+                  <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-300">
+                    {renderWithBold(question.explanation)}
                   </p>
 
                   {question.keyPoints?.length ? (

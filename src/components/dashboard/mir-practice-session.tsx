@@ -8,7 +8,7 @@ import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers, type MirAnswerSource } from "@/lib/training/mir-review";
 import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
-import { renderWithBold } from "./mir-rich-text";
+import { MirOfficialBadge, renderWithBold } from "./mir-rich-text";
 
 const SAVE_TIMEOUT_MS = 8000;
 
@@ -189,6 +189,11 @@ export function MirPracticeSession({
             <span className="text-slate-500"> · {currentQuestion.examArea}</span>
           ) : null}
         </p>
+        {currentQuestion.officialExam ? (
+          <div className="mt-2">
+            <MirOfficialBadge officialExam={currentQuestion.officialExam} />
+          </div>
+        ) : null}
         <h2 className="mt-3 text-pretty text-base font-medium leading-relaxed text-white sm:text-lg">
           {renderWithBold(currentQuestion.statement)}
         </h2>
@@ -236,7 +241,7 @@ export function MirPracticeSession({
               {isCorrect ? <CheckCircle2 className="h-4 w-4" /> : <XCircle className="h-4 w-4" />}
               {isCorrect ? "¡Correcto!" : "Incorrecto"}
             </p>
-            <p className="mt-2 text-sm leading-relaxed text-slate-300">
+            <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-300">
               {renderWithBold(currentQuestion.explanation)}
             </p>
             {currentQuestion.keyPoints?.length ? (

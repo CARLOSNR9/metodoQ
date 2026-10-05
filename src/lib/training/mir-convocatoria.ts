@@ -20,6 +20,7 @@ import { MIR_2026_161_170_QUESTIONS } from "@/data/mir-2026-161-170-questions";
 import { MIR_2026_171_180_QUESTIONS } from "@/data/mir-2026-171-180-questions";
 import { MIR_2026_181_190_QUESTIONS } from "@/data/mir-2026-181-190-questions";
 import { MIR_2026_191_200_QUESTIONS } from "@/data/mir-2026-191-200-questions";
+import { MIR_OFICIAL_2025_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2025-lote-1-questions";
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -52,11 +53,17 @@ const MIR_SIMULACRO_2_QUESTIONS: TrainingQuestion[] = [
   ...MIR_2026_191_200_QUESTIONS,
 ];
 
-/** Banco completo de preguntas del módulo MIR. */
-export const MIR_QUESTIONS: TrainingQuestion[] = [
+/** Preguntas propias de Método Q (simulacros 1 y 2). */
+const MIR_OWN_QUESTIONS: TrainingQuestion[] = [
   ...MIR_SIMULACRO_1_QUESTIONS,
   ...MIR_SIMULACRO_2_QUESTIONS,
 ];
+
+/** Preguntas literales de exámenes MIR oficiales, con su año y número (se amplía por lotes). */
+export const MIR_OFFICIAL_QUESTIONS: TrainingQuestion[] = [...MIR_OFICIAL_2025_LOTE_1_QUESTIONS];
+
+/** Banco completo de preguntas del módulo MIR. */
+export const MIR_QUESTIONS: TrainingQuestion[] = [...MIR_OWN_QUESTIONS, ...MIR_OFFICIAL_QUESTIONS];
 
 /**
  * Modelo del módulo "Simulacro MIR". Sigue el mismo patrón que las
@@ -109,9 +116,9 @@ function buildEdition(
 }
 
 /**
- * Preguntas propias de Método Q, calibradas al temario/nivel del examen MIR
- * más reciente (MIR 2026, 24 ene 2026). No son transcripción literal del
- * cuadernillo oficial ni de material editorial de terceros.
+ * Simulacros 1 y 2: preguntas propias de Método Q, calibradas al temario y
+ * nivel del examen MIR más reciente. "MIR 2025 oficial" usa preguntas
+ * literales del examen oficial (ver MIR_OFFICIAL_QUESTIONS).
  *
  * "MIR-2027-SIMULACRO" conserva su código original para que los intentos ya
  * guardados sigan asociados al Simulacro 1. Las ediciones sin preguntas no
@@ -134,7 +141,13 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
     "MIR-2027-SIMULACRO-COMPLETO",
     "Simulacro completo",
     "Las 200 preguntas del banco en una sola sesión, como el examen real.",
-    MIR_SIMULACRO_2_QUESTIONS.length > 0 ? MIR_QUESTIONS : [],
+    MIR_SIMULACRO_2_QUESTIONS.length > 0 ? MIR_OWN_QUESTIONS : [],
+  ),
+  buildEdition(
+    "MIR-2025-OFICIAL-1",
+    "MIR 2025 oficial",
+    "Preguntas reales del examen MIR 2025, tal cual salieron, con explicación de cada una.",
+    MIR_OFICIAL_2025_LOTE_1_QUESTIONS,
   ),
 ].filter((edition) => edition.questions.length > 0);
 
