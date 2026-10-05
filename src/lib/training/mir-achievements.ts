@@ -12,7 +12,7 @@ import { MIR_EXAM_QUESTIONS, getMirScoreSummary } from "@/lib/training/mir-scori
 
 /**
  * Logros del módulo MIR («logros de la doctora»). Se calculan a partir de
- * lo que ya se guarda (racha, retos, estadísticas por especialidad,
+ * lo que ya se guarda (racha, estadísticas por especialidad,
  * simulacros, repaso y tarjetas) y los desbloqueados se guardan con su
  * fecha en `users/{uid}.mirAchievements` (id → ISO), de modo que no se
  * pierden aunque, por ejemplo, la racha se rompa después.
@@ -22,7 +22,6 @@ export type MirAchievementId =
   | "streak_3"
   | "streak_7"
   | "streak_30"
-  | "challenges_7"
   | "answers_100"
   | "answers_500"
   | "first_simulacro"
@@ -46,7 +45,6 @@ export type MirAchievementDefinition = {
 export type MirAchievementContext = {
   streakCount: number;
   hasActivity: boolean;
-  dailyChallengesCompleted: number;
   totalAnswered: number;
   attemptLog: MirAttemptLogEntry[];
   specialtyStats: MirSpecialtyStats;
@@ -65,7 +63,6 @@ export const MIR_ACHIEVEMENTS: MirAchievementDefinition[] = [
   { id: "streak_3", emoji: "🔥", title: "En marcha", description: "Estudia 3 días seguidos.", target: 3 },
   { id: "streak_7", emoji: "📅", title: "Una semana de racha", description: "Estudia 7 días seguidos.", target: 7 },
   { id: "streak_30", emoji: "🏅", title: "Constancia de residente", description: "Estudia 30 días seguidos.", target: 30 },
-  { id: "challenges_7", emoji: "🎯", title: "Siete retos superados", description: "Completa 7 retos diarios de la doctora.", target: 7 },
   { id: "answers_100", emoji: "✍️", title: "100 respuestas", description: "Responde 100 preguntas MIR.", target: 100 },
   { id: "answers_500", emoji: "📚", title: "500 respuestas", description: "Responde 500 preguntas MIR.", target: 500 },
   { id: "first_simulacro", emoji: "⏱️", title: "Primer simulacro", description: "Entrega tu primer simulacro cronometrado.", target: 1 },
@@ -90,8 +87,6 @@ function getProgress(id: MirAchievementId, ctx: MirAchievementContext): number {
     case "streak_7":
     case "streak_30":
       return ctx.streakCount;
-    case "challenges_7":
-      return ctx.dailyChallengesCompleted;
     case "answers_100":
     case "answers_500":
       return ctx.totalAnswered;
@@ -152,7 +147,6 @@ export async function evaluateMirAchievements(userId: string): Promise<MirAchiev
   const ctx: MirAchievementContext = {
     streakCount: Number(data.mirStreakCount ?? 0),
     hasActivity: typeof data.mirStreakLastActiveDate === "string" || attemptLog.length > 0,
-    dailyChallengesCompleted: Number(data.mirDailyChallengesCompleted ?? 0),
     totalAnswered: Number(data.mirTotalAnswered ?? 0),
     attemptLog,
     specialtyStats,

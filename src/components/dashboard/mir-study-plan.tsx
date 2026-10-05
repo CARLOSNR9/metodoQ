@@ -2,35 +2,18 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  ArrowRight,
-  CalendarDays,
-  CheckCircle2,
-  Circle,
-  Flag,
-  Layers,
-  Stethoscope,
-  Target,
-  Timer,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, CalendarDays, CheckCircle2, Flag } from "lucide-react";
 import { getLocalDateKey } from "@/lib/results";
-import { MIR_EXAM_EDITIONS, getMirAttempt } from "@/lib/training/mir-convocatoria";
-import { getMirDailyChallengeState } from "@/lib/training/mir-daily-challenge";
 import {
   buildMirMastery,
   getMirSpecialtyStats,
   getSpecialtiesToReinforce,
   type MirSpecialtyMastery,
 } from "@/lib/training/mir-mastery";
-import { MIR_MIXED_SPECIALTY, formatSpecialtyLabel } from "@/lib/training/mir-practice";
-import { getDueMirReviewIds, getMirReviewDeck } from "@/lib/training/mir-review";
+import { formatSpecialtyLabel } from "@/lib/training/mir-practice";
 import {
   getOrCreateMirStudyPlan,
-  getPlanDayTask,
   getPlanWeek,
-  type MirPlanDayTask,
   type MirPlanPhase,
   type MirPlanWeek,
   type MirStudyPlan,
@@ -52,26 +35,15 @@ const PHASE_META: Record<MirPlanPhase, { label: string; description: string; bad
   },
   final_sprint: {
     label: "Sprint final",
-    description: "Bloques mixtos a diario y simulacro completo los sábados.",
+    description: "Bloques mixtos y simulacros completos para llegar en forma al examen.",
     badge: "border-mq-premium-gold/40 bg-mq-premium-gold/10 text-mq-premium-gold",
   },
 };
 
-type ChecklistItem = {
-  id: string;
-  icon: LucideIcon;
-  label: string;
-  detail: string;
-  href: string;
-  done: boolean;
-};
-
-type TodayPlan = {
+type WeekPlan = {
   plan: MirStudyPlan;
   todayKey: string;
   week: MirPlanWeek | null;
-  task: MirPlanDayTask;
-  checklist: ChecklistItem[];
   mastery: MirSpecialtyMastery[];
   reinforceKeys: string[];
 };
@@ -81,97 +53,22 @@ function formatShortDate(dateKey: string): string {
   return new Date(year, month - 1, day).toLocaleDateString("es-ES", { day: "numeric", month: "short" });
 }
 
-function describeTask(task: MirPlanDayTask): { label: string; detail: string; href: string } | null {
-  switch (task.kind) {
-    case "specialty":
-      return {
-        label: `Bloque de ${formatSpecialtyLabel(task.specialtyKey)}`,
-        detail: "10 preguntas de la especialidad de hoy",
-        href: buildMirPracticeHref(task.specialtyKey),
-      };
-    case "mixed":
-      return {
-        label: "Bloque mixto",
-        detail: "10 preguntas de todas las especialidades",
-        href: buildMirPracticeHref(MIR_MIXED_SPECIALTY),
-      };
-    case "simulacro":
-      return {
-        label: "Simulacro completo",
-        detail: "Examen cronometrado al ritmo real del MIR",
-        href: "/dashboard/mir/simulacro",
-      };
-    default:
-      return null;
-  }
-}
-
-function useMirTodayPlan(userId: string): TodayPlan | null {
-  const [today, setToday] = useState<TodayPlan | null>(null);
+function useMirWeekPlan(userId: string): WeekPlan | null {
+  const [state, setState] = useState<WeekPlan | null>(null);
 
   useEffect(() => {
     let cancelled = false;
 
-    Promise.all([
-      getOrCreateMirStudyPlan(userId),
-      getMirSpecialtyStats(userId),
-      getMirDailyChallengeState(userId),
-      getMirReviewDeck(userId),
-      Promise.all(MIR_EXAM_EDITIONS.map((edition) => getMirAttempt(userId, edition.code))),
-    ]).then(([planData, stats, challengeState, deck, attempts]) => {
+    Promise.all([getOrCreateMirStudyPlan(userId), getMirSpecialtyStats(userId)]).then(([plan, stats]) => {
       if (cancelled) return;
       const todayKey = getLocalDateKey(new Date());
       const mastery = buildMirMastery(stats);
-      const reinforceKeys = getSpecialtiesToReinforce(mastery);
-      const { plan, lastPracticeBySpecialty } = planData;
-      const task = getPlanDayTask(plan, todayKey, reinforceKeys);
-      const dueCount = getDueMirReviewIds(deck).length;
-
-      const checklist: ChecklistItem[] = [
-        {
-          id: "challenge",
-          icon: Target,
-          label: "Reto del día",
-          detail: "5 preguntas con la doctora",
-          href: "/dashboard/mir/reto",
-          done: Boolean(challengeState.today?.completedAt),
-        },
-      ];
-      const main = describeTask(task);
-      if (main) {
-        let done = false;
-        if (task.kind === "specialty") done = lastPracticeBySpecialty[task.specialtyKey] === todayKey;
-        if (task.kind === "mixed") done = lastPracticeBySpecialty[MIR_MIXED_SPECIALTY] === todayKey;
-        if (task.kind === "simulacro") {
-          // Cualquier simulacro entregado hoy cuenta.
-          done = attempts.some(
-            (attempt) => attempt?.completedAt && getLocalDateKey(new Date(attempt.completedAt)) === todayKey,
-          );
-        }
-        checklist.push({
-          id: "main",
-          icon: task.kind === "simulacro" ? Timer : Stethoscope,
-          ...main,
-          done,
-        });
-      }
-      checklist.push({
-        id: "review",
-        icon: Layers,
-        label: "Repaso de errores",
-        detail: dueCount > 0 ? `${dueCount} ${dueCount === 1 ? "pregunta pendiente" : "preguntas pendientes"}` : "Nada pendiente hoy",
-        href: "/dashboard/mir/repaso",
-        done: dueCount === 0,
-      });
-
-      setToday({
+      setState({
         plan,
         todayKey,
         week: getPlanWeek(plan, todayKey),
-        task,
-        checklist,
         mastery,
-        reinforceKeys,
+        reinforceKeys: getSpecialtiesToReinforce(mastery),
       });
     });
 
@@ -180,7 +77,7 @@ function useMirTodayPlan(userId: string): TodayPlan | null {
     };
   }, [userId]);
 
-  return today;
+  return state;
 }
 
 function PhaseBadge({ phase }: { phase: MirPlanPhase }) {
@@ -193,70 +90,61 @@ function PhaseBadge({ phase }: { phase: MirPlanPhase }) {
   );
 }
 
-function Checklist({ items }: { items: ChecklistItem[] }) {
+/** Especialidades sugeridas para la semana: el estudiante elige cuáles y cuándo. */
+function getWeekFocusKeys(week: MirPlanWeek, reinforceKeys: string[]): string[] {
+  if (week.phase === "first_pass") return week.specialtyKeys;
+  if (week.phase === "second_pass") return reinforceKeys.slice(0, 2);
+  return [];
+}
+
+function FocusChips({ keys, mastery }: { keys: string[]; mastery: MirSpecialtyMastery[] }) {
+  const masteryByKey = new Map(mastery.map((item) => [item.key, item]));
   return (
-    <ul className="space-y-2">
-      {items.map((item) => {
-        const Icon = item.icon;
+    <div className="flex flex-wrap gap-2">
+      {keys.map((key) => {
+        const item = masteryByKey.get(key);
         return (
-          <li key={item.id}>
-            <Link
-              href={item.href}
-              className={`flex items-center gap-3 rounded-xl border px-4 py-3 transition ${
-                item.done
-                  ? "border-emerald-400/20 bg-emerald-400/[0.05]"
-                  : "border-white/10 bg-white/[0.03] hover:border-mq-premium-gold/40 hover:bg-white/[0.06]"
-              }`}
-            >
-              {item.done ? (
-                <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-400" aria-label="Hecho" />
-              ) : (
-                <Circle className="h-5 w-5 shrink-0 text-slate-500" aria-label="Pendiente" />
-              )}
-              <Icon className="h-4 w-4 shrink-0 text-mq-premium-gold" />
-              <span className="min-w-0 flex-1">
-                <span className={`block text-sm font-bold ${item.done ? "text-slate-400 line-through" : "text-white"}`}>
-                  {item.label}
-                </span>
-                <span className="block text-[11px] text-slate-400">{item.detail}</span>
-              </span>
-              {!item.done ? <ArrowRight className="h-4 w-4 shrink-0 text-slate-400" /> : null}
-            </Link>
-          </li>
+          <Link
+            key={key}
+            href={buildMirPracticeHref(key)}
+            className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-bold text-white transition hover:border-mq-premium-gold/40"
+          >
+            {formatSpecialtyLabel(key)}
+            {item?.accuracy !== null && item?.accuracy !== undefined ? (
+              <span className="font-semibold text-slate-400">{item.accuracy} %</span>
+            ) : null}
+          </Link>
         );
       })}
-    </ul>
+    </div>
   );
 }
 
 function getWeekTitle(week: MirPlanWeek, reinforceKeys: string[]): string {
   if (week.phase === "first_pass") return week.specialtyKeys.map(formatSpecialtyLabel).join(" · ");
   if (week.containsExam) return "Semana del examen: repaso ligero con bloques mixtos";
-  if (week.phase === "final_sprint") return "Bloques mixtos y simulacro el sábado";
+  if (week.phase === "final_sprint") return "Bloques mixtos y simulacros";
   return reinforceKeys.length > 0
     ? `Refuerzo: ${reinforceKeys.slice(0, 2).map(formatSpecialtyLabel).join(" · ")}`
     : "Refuerzo de tus especialidades más débiles";
 }
 
-function getPlanMessage(today: TodayPlan): string {
-  const { task, week, checklist } = today;
-  if (task.kind === "exam") return "¡Hoy es el día! Confía en todo lo que has trabajado. ¡Mucha suerte!";
-  if (task.kind === "rest") return "El MIR ya pasó. ¡Enhorabuena por todo el camino recorrido!";
-  const pending = checklist.filter((item) => !item.done).length;
-  if (pending === 0) return "¡Plan de hoy completado! Así, día a día, es como se llega al MIR.";
-  const phase = week ? PHASE_META[week.phase].label.toLowerCase() : "plan";
-  return `Estamos en la ${phase}. Te ${pending === 1 ? "queda 1 tarea" : `quedan ${pending} tareas`} para cerrar el día.`;
+function getPlanMessage({ plan, week, todayKey }: WeekPlan): string {
+  if (todayKey === plan.examDate) return "¡Hoy es el día! Confía en todo lo que has trabajado. ¡Mucha suerte!";
+  if (todayKey > plan.examDate) return "El MIR ya pasó. ¡Enhorabuena por todo el camino recorrido!";
+  if (!week) return "Practica a tu ritmo: elige especialidad, bloque mixto o simulacro cuando quieras.";
+  return `Semana ${week.number} de ${plan.weeks.length}, en la ${PHASE_META[week.phase].label.toLowerCase()}. El foco de la semana es una guía: practica lo que quieras, a tu ritmo.`;
 }
 
-/** Tarjeta del panel MIR: fase y semana del plan, y checklist de hoy. */
+/** Tarjeta del panel MIR: fase, semana del plan y foco sugerido de la semana. */
 export function MirStudyPlanCard({ userId }: { userId: string }) {
-  const today = useMirTodayPlan(userId);
-  if (!today) {
-    return <div className="h-56 animate-pulse rounded-2xl border border-white/10 bg-white/[0.03]" />;
+  const weekPlan = useMirWeekPlan(userId);
+  if (!weekPlan) {
+    return <div className="h-40 animate-pulse rounded-2xl border border-white/10 bg-white/[0.03]" />;
   }
 
-  const { plan, week, checklist, reinforceKeys } = today;
-  const doneCount = checklist.filter((item) => item.done).length;
+  const { plan, week, mastery, reinforceKeys } = weekPlan;
+  const focusKeys = week ? getWeekFocusKeys(week, reinforceKeys) : [];
 
   return (
     <div className="grid gap-6 rounded-2xl border border-white/10 bg-white/[0.04] p-6 lg:grid-cols-[1fr_1.4fr]">
@@ -286,7 +174,7 @@ export function MirStudyPlanCard({ userId }: { userId: string }) {
             </div>
           </>
         ) : (
-          <p className="text-sm text-slate-300">{getPlanMessage(today)}</p>
+          <p className="text-sm text-slate-300">{getPlanMessage(weekPlan)}</p>
         )}
         <Link
           href="/dashboard/mir/plan"
@@ -298,13 +186,22 @@ export function MirStudyPlanCard({ userId }: { userId: string }) {
       </div>
 
       <div>
-        <p className="mb-2 flex items-center justify-between text-[11px] font-bold uppercase tracking-wide text-slate-400">
-          <span>Hoy</span>
-          <span>
-            {doneCount}/{checklist.length} hechas
-          </span>
+        <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-slate-400">Foco de esta semana</p>
+        {focusKeys.length > 0 ? (
+          <FocusChips keys={focusKeys} mastery={mastery} />
+        ) : (
+          <p className="text-sm text-slate-300">Bloques mixtos y simulacros de todas las especialidades.</p>
+        )}
+        <p className="mt-3 text-xs leading-relaxed text-slate-400">
+          Es una guía, no una obligación: practica las preguntas que quieras, cuando quieras.
         </p>
-        <Checklist items={checklist} />
+        <Link
+          href="/dashboard/mir/practica"
+          className="mt-4 inline-flex min-h-10 items-center justify-center gap-1.5 rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+        >
+          Practicar
+          <ArrowRight className="h-4 w-4" />
+        </Link>
       </div>
     </div>
   );
@@ -312,9 +209,9 @@ export function MirStudyPlanCard({ userId }: { userId: string }) {
 
 /** Página completa del plan MIR (/dashboard/mir/plan). */
 export function MirStudyPlanView({ userId }: { userId: string }) {
-  const today = useMirTodayPlan(userId);
+  const weekPlan = useMirWeekPlan(userId);
 
-  if (!today) {
+  if (!weekPlan) {
     return (
       <div className="flex min-h-[40vh] items-center justify-center">
         <div className="h-12 w-12 animate-spin rounded-full border-4 border-mq-premium-gold border-t-transparent" />
@@ -322,8 +219,8 @@ export function MirStudyPlanView({ userId }: { userId: string }) {
     );
   }
 
-  const { plan, week: currentWeek, checklist, mastery, reinforceKeys, todayKey } = today;
-  const masteryByKey = new Map(mastery.map((item) => [item.key, item]));
+  const { plan, week: currentWeek, mastery, reinforceKeys, todayKey } = weekPlan;
+  const focusKeys = currentWeek ? getWeekFocusKeys(currentWeek, reinforceKeys) : [];
 
   return (
     <div className="mx-auto w-full max-w-4xl">
@@ -348,12 +245,16 @@ export function MirStudyPlanView({ userId }: { userId: string }) {
           <div className="flex items-end gap-3">
             <MirDoctorMascot className="h-32 w-24 shrink-0" />
             <div className="rounded-2xl rounded-bl-none border border-white/10 bg-white/[0.06] px-4 py-3">
-              <p className="text-sm leading-relaxed text-slate-200">{getPlanMessage(today)}</p>
+              <p className="text-sm leading-relaxed text-slate-200">{getPlanMessage(weekPlan)}</p>
             </div>
           </div>
           <div>
-            <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-slate-400">Hoy</p>
-            <Checklist items={checklist} />
+            <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-slate-400">Foco de esta semana</p>
+            {focusKeys.length > 0 ? (
+              <FocusChips keys={focusKeys} mastery={mastery} />
+            ) : (
+              <p className="text-sm text-slate-300">Bloques mixtos y simulacros de todas las especialidades.</p>
+            )}
           </div>
         </div>
 
@@ -401,22 +302,8 @@ export function MirStudyPlanView({ userId }: { userId: string }) {
               </div>
 
               {week.phase === "first_pass" ? (
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {week.specialtyKeys.map((key) => {
-                    const item = masteryByKey.get(key);
-                    return (
-                      <Link
-                        key={key}
-                        href={buildMirPracticeHref(key)}
-                        className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs font-bold text-white transition hover:border-mq-premium-gold/40"
-                      >
-                        {formatSpecialtyLabel(key)}
-                        {item?.accuracy !== null && item?.accuracy !== undefined ? (
-                          <span className="font-semibold text-slate-400">{item.accuracy} %</span>
-                        ) : null}
-                      </Link>
-                    );
-                  })}
+                <div className="mt-3">
+                  <FocusChips keys={week.specialtyKeys} mastery={mastery} />
                 </div>
               ) : (
                 <p className="mt-2 text-xs text-slate-300">{getWeekTitle(week, reinforceKeys)}</p>

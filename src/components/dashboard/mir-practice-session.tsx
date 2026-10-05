@@ -30,10 +30,6 @@ type MirPracticeSessionProps = {
   restartLabel: string;
   /** Se llama cuando las respuestas ya están guardadas. */
   onSaved?: () => void;
-  /** Guardado adicional al terminar (p. ej. marcar el reto diario como hecho). */
-  saveExtra?: (result: { correct: number; total: number }) => Promise<void>;
-  /** Mensaje de la mascota en el resumen; por defecto, uno según el resultado. */
-  summaryMessage?: (correct: number, total: number) => string;
 };
 
 function getSummaryMessage(correct: number, total: number, source: MirAnswerSource): string {
@@ -61,8 +57,6 @@ export function MirPracticeSession({
   onRestart,
   restartLabel,
   onSaved,
-  saveExtra,
-  summaryMessage,
 }: MirPracticeSessionProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -89,7 +83,6 @@ export function MirPracticeSession({
       withTimeout(recordMirAnswers(userId, outcomes, source), SAVE_TIMEOUT_MS),
       withTimeout(recordMirSpecialtyStats(userId, outcomes), SAVE_TIMEOUT_MS),
       withTimeout(registerMirTrainingDay(userId), SAVE_TIMEOUT_MS),
-      ...(saveExtra ? [withTimeout(saveExtra({ correct: correctCount, total }), SAVE_TIMEOUT_MS)] : []),
     ]);
     for (const result of results) {
       if (result.status === "rejected") {
@@ -127,9 +120,7 @@ export function MirPracticeSession({
           </p>
           <p className="mt-1 text-xs font-semibold text-slate-400">respuestas correctas</p>
           <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-slate-300">
-            {summaryMessage
-              ? summaryMessage(correctCount, total)
-              : getSummaryMessage(correctCount, total, source)}
+            {getSummaryMessage(correctCount, total, source)}
           </p>
 
           {wrongQuestions.length > 0 ? (

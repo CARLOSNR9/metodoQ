@@ -11,7 +11,6 @@ import {
   getMirSpecialties,
   pickMirPracticeQuestions,
 } from "@/lib/training/mir-practice";
-import { markMirSpecialtyPracticed } from "@/lib/training/mir-study-plan";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { MirPracticeSession } from "./mir-practice-session";
 
@@ -76,7 +75,6 @@ export function MirPracticeView({ userId }: { userId: string }) {
           questions={session.questions}
           eyebrow={`Práctica · ${getSpecialtyTitle(session.specialtyKey)}`}
           source="practice"
-          saveExtra={() => markMirSpecialtyPracticed(userId, session.specialtyKey)}
           onRestart={() => startBlock(session.specialtyKey)}
           restartLabel="Otro bloque"
         />
