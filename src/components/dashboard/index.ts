@@ -5,6 +5,7 @@ export { DailyPlanCard } from "./daily-plan-card";
 export { StreakCard } from "./streak-card";
 export { DynamicInsightCard } from "./dynamic-insight-card";
 export { WeakTopicsCard } from "./weak-topics-card";
+export { TopicMasteryCard } from "./topic-mastery-card";
 export { TrainingReminderCard } from "./training-reminder-card";
 export { DailyRecommendationCard } from "./daily-recommendation-card";
 export { ReferralCard } from "./referral-card";
