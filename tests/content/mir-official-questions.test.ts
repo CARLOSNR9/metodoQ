@@ -7,15 +7,15 @@ describe("preguntas MIR oficiales", () => {
   it("cada pregunta oficial es única por año y número", () => {
     const keys = MIR_OFFICIAL_QUESTIONS.map((q) => `${q.officialExam?.year}-${q.officialExam?.number}`);
     expect(new Set(keys).size).toBe(MIR_OFFICIAL_QUESTIONS.length);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2025)).toHaveLength(181);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2024)).toHaveLength(179);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2023)).toHaveLength(180);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2022)).toHaveLength(182);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2021)).toHaveLength(157);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2020)).toHaveLength(154);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2025)).toHaveLength(183);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2024)).toHaveLength(182);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2023)).toHaveLength(181);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2022)).toHaveLength(183);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2021)).toHaveLength(158);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2020)).toHaveLength(155);
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2019)).toHaveLength(197);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2018)).toHaveLength(195);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2017)).toHaveLength(197);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2018)).toHaveLength(199);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2017)).toHaveLength(202);
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2016)).toHaveLength(202);
     expect(new Set(MIR_QUESTIONS.map((question) => question.id)).size).toBe(MIR_QUESTIONS.length);
   });
@@ -46,15 +46,15 @@ describe("preguntas MIR oficiales", () => {
       expect(ownSpecialties, key).toContain(key);
     }
     const edition = MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2025-OFICIAL-1");
-    expect(edition?.questionCount).toBe(181);
-    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2024-OFICIAL")?.questionCount).toBe(179);
-    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2023-OFICIAL")?.questionCount).toBe(180);
-    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2022-OFICIAL")?.questionCount).toBe(182);
-    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2021-OFICIAL")?.questionCount).toBe(157);
-    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2020-OFICIAL")?.questionCount).toBe(154);
+    expect(edition?.questionCount).toBe(183);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2024-OFICIAL")?.questionCount).toBe(182);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2023-OFICIAL")?.questionCount).toBe(181);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2022-OFICIAL")?.questionCount).toBe(183);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2021-OFICIAL")?.questionCount).toBe(158);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2020-OFICIAL")?.questionCount).toBe(155);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2019-OFICIAL")?.questionCount).toBe(197);
-    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2018-OFICIAL")?.questionCount).toBe(195);
-    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2017-OFICIAL")?.questionCount).toBe(197);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2018-OFICIAL")?.questionCount).toBe(199);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2017-OFICIAL")?.questionCount).toBe(202);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2016-OFICIAL")?.questionCount).toBe(202);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2027-SIMULACRO-COMPLETO")?.questionCount).toBe(200);
   });

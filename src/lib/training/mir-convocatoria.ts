@@ -41,6 +41,7 @@ import { MIR_OFICIAL_2017_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2017-lote-
 import { MIR_OFICIAL_2016_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2016-lote-1-questions";
 import { MIR_OFICIAL_2016_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2016-lote-2-questions";
 import { MIR_OFICIAL_COMPLEMENTARIAS_QUESTIONS } from "@/data/mir-oficial-complementarias-questions";
+import { MIR_OFICIAL_RECUPERADAS_QUESTIONS } from "@/data/mir-oficial-recuperadas-questions";
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -81,44 +82,47 @@ const MIR_OWN_QUESTIONS: TrainingQuestion[] = [
 
 /** Preguntas oficiales sin imagen de un año que quedaron fuera de sus lotes principales. */
 const complementariasDe = (year: number): TrainingQuestion[] =>
-  MIR_OFICIAL_COMPLEMENTARIAS_QUESTIONS.filter((q) => q.officialExam?.year === year);
+  [
+    ...MIR_OFICIAL_COMPLEMENTARIAS_QUESTIONS,
+    ...MIR_OFICIAL_RECUPERADAS_QUESTIONS,
+  ].filter((q) => q.officialExam?.year === year);
 
-/** MIR 2025 oficial: las 181 preguntas sin imagen del examen (incluidas las de reserva). */
+/** MIR 2025 oficial: las 183 preguntas sin imagen del examen (incluidas las de reserva). */
 const MIR_OFICIAL_2025_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2025_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2025_LOTE_2_QUESTIONS,
   ...complementariasDe(2025),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2024 oficial: las 179 preguntas sin imagen del examen (incluidas las de reserva). */
+/** MIR 2024 oficial: las 182 preguntas sin imagen del examen (incluidas las de reserva). */
 const MIR_OFICIAL_2024_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2024_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2024_LOTE_2_QUESTIONS,
   ...complementariasDe(2024),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2023 oficial: las 180 preguntas sin imagen del examen (incluidas las de reserva). */
+/** MIR 2023 oficial: las 181 preguntas sin imagen del examen (incluidas las de reserva). */
 const MIR_OFICIAL_2023_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2023_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2023_LOTE_2_QUESTIONS,
   ...complementariasDe(2023),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2022 oficial: las 182 preguntas sin imagen del examen (incluidas las de reserva). */
+/** MIR 2022 oficial: las 183 preguntas sin imagen del examen (incluidas las de reserva). */
 const MIR_OFICIAL_2022_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2022_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2022_LOTE_2_QUESTIONS,
   ...complementariasDe(2022),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2021 oficial: las 157 preguntas sin imagen del examen (incluidas las de reserva). */
+/** MIR 2021 oficial: las 158 preguntas sin imagen del examen (incluidas las de reserva). */
 const MIR_OFICIAL_2021_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2021_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2021_LOTE_2_QUESTIONS,
   ...complementariasDe(2021),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2020 oficial: las 154 preguntas sin imagen del examen (incluidas las de reserva). */
+/** MIR 2020 oficial: las 155 preguntas sin imagen del examen (incluidas las de reserva). */
 const MIR_OFICIAL_2020_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2020_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2020_LOTE_2_QUESTIONS,
@@ -132,14 +136,14 @@ const MIR_OFICIAL_2019_QUESTIONS: TrainingQuestion[] = [
   ...complementariasDe(2019),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2018 oficial: las 195 preguntas sin imagen del examen (incluidas las de reserva). */
+/** MIR 2018 oficial: las 199 preguntas sin imagen del examen (incluidas las de reserva). */
 const MIR_OFICIAL_2018_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2018_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2018_LOTE_2_QUESTIONS,
   ...complementariasDe(2018),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2017 oficial: las 197 preguntas sin imagen del examen (incluidas las de reserva). */
+/** MIR 2017 oficial: las 202 preguntas sin imagen del examen (incluidas las de reserva). */
 const MIR_OFICIAL_2017_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2017_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2017_LOTE_2_QUESTIONS,
