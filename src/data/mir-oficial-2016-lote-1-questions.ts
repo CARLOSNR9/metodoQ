@@ -2,7 +2,7 @@ import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
  * Preguntas oficiales del examen MIR 2016 (Ministerio de Sanidad), lote 1:
- * 100 preguntas sin imagen. Enunciado, opciones (numeradas 1-4, como en el
+ * 99 preguntas sin imagen. Enunciado, opciones (numeradas 1-4, como en el
  * cuadernillo) y respuesta oficial se transcriben tal cual; no deben editarse.
  * Las explicaciones y los puntos clave son de redacción propia de Método Q.
  */
@@ -120,29 +120,6 @@ export const MIR_OFICIAL_2016_LOTE_1_QUESTIONS: TrainingQuestion[] = [
       "Clonidina: agonista α2 central que reduce el tono simpático y la PA.",
       "Suspensión brusca: HTA de rebote.",
       "Dopamina y efedrina elevan la PA; la terbutalina es un β2 broncodilatador.",
-    ],
-  },
-  {
-    id: "mir-oficial-2016-036",
-    university: "MIR (España)",
-    examArea: "INMUNOLOGÍA",
-    topic: "MECANISMOS DEL RECHAZO DEL TRASPLANTE",
-    difficulty: "hard",
-    tags: ["mir", "espana", "oficial", "mir-2016"],
-    officialExam: { year: 2016, number: 36 },
-    statement: "En relación con el mecanismo inmunológico implicado el rechazo de órganos sólidos trasplantados, señale la respuesta INCORRECTA:",
-    options: [
-      { id: "1", label: "1", text: "El rechazo agudo mediado por linfocitos T puede ser controlado mediante el uso de fármacos como la ciclosporina A o los corticoides." },
-      { id: "2", label: "2", text: "La presencia en el receptor de anticuerpos específicos contra el donante (DSA) previa al trasplante es una contraindicación para el mismo." },
-      { id: "3", label: "3", text: "El rechazo crónico o lesión crónica del injerto se asocia al daño del endotelio mediado por anticuerpos anti-HLA." },
-      { id: "4", label: "4", text: "El rechazo hiperagudo es mediado por linfocitos T citotóxicos contra antígenos del donante presentes en el receptor." },
-    ],
-    correctOptionId: "4",
-    explanation: "**Tipos de rechazo del trasplante:**\n\n- **Hiperagudo** (minutos u horas): por **anticuerpos preformados** del receptor contra antígenos del donante (**ABO** o **HLA**). Activan el complemento en el endotelio y causan **trombosis** del injerto. Se previene con la **compatibilidad ABO** y la **prueba cruzada** negativa. Es una inmunidad **humoral**, no celular.\n- **Agudo** (días o meses):\n  - **Celular**: mediado por **linfocitos T** que reconocen los aloantígenos HLA del donante. Es el más frecuente y responde a **corticoides**, inhibidores de la calcineurina (**ciclosporina**, tacrolimus) y, si es grave, a la timoglobulina.\n  - **Humoral**: por anticuerpos específicos contra el donante (DSA) formados después del trasplante.\n- **Crónico** (meses o años): **lesión crónica del injerto**, con fibrosis y vasculopatía. Está muy relacionado con el **daño endotelial por anticuerpos anti-HLA** (rechazo humoral crónico) y con factores no inmunológicos. Es la principal causa de pérdida tardía del injerto y responde mal al tratamiento.\n\n**Por qué no las demás:**\n- **1:** el rechazo agudo celular responde a ciclosporina y corticoides.\n- **2:** los anticuerpos específicos contra el donante preformados, con prueba cruzada positiva, contraindican el trasplante (salvo desensibilización).\n- **3:** el rechazo crónico se asocia al daño endotelial mediado por anti-HLA.",
-    keyPoints: [
-      "Hiperagudo: anticuerpos preformados (ABO, HLA); se previene con la prueba cruzada.",
-      "Agudo celular: linfocitos T; responde a corticoides e inhibidores de la calcineurina.",
-      "Crónico: daño endotelial por anti-HLA y fibrosis; principal causa de pérdida tardía.",
     ],
   },
   {
