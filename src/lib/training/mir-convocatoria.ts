@@ -38,6 +38,8 @@ import { MIR_OFICIAL_2018_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2018-lote-
 import { MIR_OFICIAL_2018_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2018-lote-2-questions";
 import { MIR_OFICIAL_2017_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2017-lote-1-questions";
 import { MIR_OFICIAL_2017_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2017-lote-2-questions";
+import { MIR_OFICIAL_2016_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2016-lote-1-questions";
+import { MIR_OFICIAL_2016_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2016-lote-2-questions";
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import type { TrainingQuestion } from "@/lib/questions/types";
@@ -128,6 +130,11 @@ const MIR_OFICIAL_2017_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2017_LOTE_2_QUESTIONS,
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
+const MIR_OFICIAL_2016_QUESTIONS: TrainingQuestion[] = [
+  ...MIR_OFICIAL_2016_LOTE_1_QUESTIONS,
+  ...MIR_OFICIAL_2016_LOTE_2_QUESTIONS,
+].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
+
 /** Preguntas literales de exámenes MIR oficiales, con su año y número (se amplía por lotes). */
 export const MIR_OFFICIAL_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2025_QUESTIONS,
@@ -139,6 +146,7 @@ export const MIR_OFFICIAL_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2019_QUESTIONS,
   ...MIR_OFICIAL_2018_QUESTIONS,
   ...MIR_OFICIAL_2017_QUESTIONS,
+  ...MIR_OFICIAL_2016_QUESTIONS,
 ];
 
 /** Banco completo de preguntas del módulo MIR. */
@@ -196,7 +204,7 @@ function buildEdition(
 
 /**
  * Simulacros 1 y 2: preguntas propias de Método Q, calibradas al temario y
- * nivel del examen MIR más reciente. "MIR 2025/2024/2023/2022/2021/2020/2019/2018/2017 oficial"
+ * nivel del examen MIR más reciente. "MIR 2025/2024/2023/2022/2021/2020/2019/2018/2017/2016 oficial"
  * usan preguntas literales de los exámenes oficiales (ver MIR_OFFICIAL_QUESTIONS).
  *
  * "MIR-2027-SIMULACRO" conserva su código original para que los intentos ya
@@ -275,6 +283,12 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
     "MIR 2017 oficial",
     "Las preguntas reales del examen MIR 2017 (sin imágenes), tal cual salieron, con explicación de cada una.",
     MIR_OFICIAL_2017_QUESTIONS,
+  ),
+  buildEdition(
+    "MIR-2016-OFICIAL",
+    "MIR 2016 oficial",
+    "Las preguntas reales del examen MIR 2016 (sin imágenes), tal cual salieron, con explicación de cada una.",
+    MIR_OFICIAL_2016_QUESTIONS,
   ),
 ].filter((edition) => edition.questions.length > 0);
 
