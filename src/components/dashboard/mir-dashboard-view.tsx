@@ -21,6 +21,7 @@ import {
   buildMirSimulacroHref,
   getMirAttempt,
   type MirExamAttempt,
+  type MirExamEdition,
 } from "@/lib/training/mir-convocatoria";
 import { getDueMirReviewIds, getMirReviewDeck } from "@/lib/training/mir-review";
 import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
@@ -61,6 +62,38 @@ const CURIOSITIES = [
   },
 ];
 
+const isOfficialEdition = (edition: MirExamEdition) => /^MIR-\d{4}-OFICIAL/.test(edition.code);
+
+function EditionLink({
+  edition,
+  lastAttempt,
+  compact = false,
+}: {
+  edition: MirExamEdition;
+  lastAttempt: MirExamAttempt | null | undefined;
+  /** Tarjeta pequeña para la cuadrícula de exámenes oficiales: título corto y datos debajo. */
+  compact?: boolean;
+}) {
+  const action = lastAttempt
+    ? `${formatMirNet(getMirNet(lastAttempt.correctAnswers, lastAttempt.wrongAnswers))} netas`
+    : "Hacer";
+  const meta = `${edition.questionCount} preg. · ${edition.minutes} min`;
+  return (
+    <Link
+      href={buildMirSimulacroHref(edition.code)}
+      className="block h-full rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-mq-premium-gold/40"
+    >
+      <span className="flex items-center justify-between gap-2">
+        <span className="truncate text-sm font-bold text-white">
+          {compact ? edition.label.replace(/ oficial$/i, "") : edition.label}
+        </span>
+        <span className="shrink-0 text-xs font-black text-mq-premium-gold">{action}</span>
+      </span>
+      <span className="block truncate text-[11px] text-slate-400">{meta}</span>
+    </Link>
+  );
+}
+
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
  * preguntas de la semana con Pomodoro, accesos libres a práctica, repaso de
@@ -69,6 +102,8 @@ const CURIOSITIES = [
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
   const hasContent = MIR_EXAM_EDITIONS.some((edition) => edition.questions.length > 0);
+  const officialEditions = MIR_EXAM_EDITIONS.filter((edition) => isOfficialEdition(edition));
+  const ownEditions = MIR_EXAM_EDITIONS.filter((edition) => !isOfficialEdition(edition));
   const daysUntilExam = getDaysUntilMirExam();
 
   const [streak, setStreak] = useState<MirStreakInfo>({ count: 0, lastActiveDate: null, activeDates: [] });
@@ -157,92 +192,101 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           <h2 className="text-sm font-black uppercase tracking-wide text-white">Entrena</h2>
         </div>
         {hasContent ? (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-              <Stethoscope className="h-5 w-5 text-mq-premium-gold" />
-              <h3 className="mt-3 text-lg font-bold text-white">Práctica</h3>
-              <p className="mt-1 text-sm text-slate-300">Bloques de 10 preguntas · corrección al instante</p>
-              <Link
-                href="/dashboard/mir/practica"
-                className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
-              >
-                Practicar ahora
-              </Link>
-              <p className="mt-2 text-[11px] text-slate-500">
-                Elige Cardiología, Neumología, Pediatría… o un bloque mixto.
-              </p>
-            </article>
-            <article
-              className={`rounded-2xl border p-6 ${
-                dueReviewCount > 0
-                  ? "border-mq-premium-gold/40 bg-mq-premium-gold/[0.06]"
-                  : "border-white/10 bg-white/[0.04]"
-              }`}
-            >
-              <Layers className="h-5 w-5 text-mq-premium-gold" />
-              <h3 className="mt-3 text-lg font-bold text-white">Repaso de errores</h3>
-              <p className="mt-1 text-sm text-slate-300">
-                {dueReviewCount > 0
-                  ? `${dueReviewCount} ${dueReviewCount === 1 ? "pregunta pendiente" : "preguntas pendientes"} hoy`
-                  : "Nada pendiente hoy"}
-              </p>
-              <Link
-                href="/dashboard/mir/repaso"
-                className={`mt-4 inline-flex min-h-10 items-center justify-center rounded-xl px-5 text-sm font-black transition ${
+          <div className="space-y-4">
+            <div className="grid gap-4 md:grid-cols-3">
+              <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+                <Stethoscope className="h-5 w-5 text-mq-premium-gold" />
+                <h3 className="mt-3 text-lg font-bold text-white">Práctica</h3>
+                <p className="mt-1 text-sm text-slate-300">Bloques de 10 preguntas · corrección al instante</p>
+                <Link
+                  href="/dashboard/mir/practica"
+                  className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+                >
+                  Practicar ahora
+                </Link>
+                <p className="mt-2 text-[11px] text-slate-500">
+                  Elige Cardiología, Neumología, Pediatría… o un bloque mixto.
+                </p>
+              </article>
+              <article
+                className={`rounded-2xl border p-6 ${
                   dueReviewCount > 0
-                    ? "bg-mq-premium-gold text-[#0A1F44] hover:brightness-110"
-                    : "border border-white/20 text-white hover:border-white/40"
+                    ? "border-mq-premium-gold/40 bg-mq-premium-gold/[0.06]"
+                    : "border-white/10 bg-white/[0.04]"
                 }`}
               >
-                {dueReviewCount > 0 ? "Repasar ahora" : "Ver mi repaso"}
-              </Link>
-              <p className="mt-2 text-[11px] text-slate-500">
-                Tus fallos vuelven a los 1, 3 y 7 días hasta que los domines.
-              </p>
-            </article>
+                <Layers className="h-5 w-5 text-mq-premium-gold" />
+                <h3 className="mt-3 text-lg font-bold text-white">Repaso de errores</h3>
+                <p className="mt-1 text-sm text-slate-300">
+                  {dueReviewCount > 0
+                    ? `${dueReviewCount} ${dueReviewCount === 1 ? "pregunta pendiente" : "preguntas pendientes"} hoy`
+                    : "Nada pendiente hoy"}
+                </p>
+                <Link
+                  href="/dashboard/mir/repaso"
+                  className={`mt-4 inline-flex min-h-10 items-center justify-center rounded-xl px-5 text-sm font-black transition ${
+                    dueReviewCount > 0
+                      ? "bg-mq-premium-gold text-[#0A1F44] hover:brightness-110"
+                      : "border border-white/20 text-white hover:border-white/40"
+                  }`}
+                >
+                  {dueReviewCount > 0 ? "Repasar ahora" : "Ver mi repaso"}
+                </Link>
+                <p className="mt-2 text-[11px] text-slate-500">
+                  Tus fallos vuelven a los 1, 3 y 7 días hasta que los domines.
+                </p>
+              </article>
+              <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+                <GalleryHorizontalEnd className="h-5 w-5 text-mq-premium-gold" />
+                <h3 className="mt-3 text-lg font-bold text-white">Tarjetas de repaso</h3>
+                <p className="mt-1 text-sm text-slate-300">Puntos clave en rondas de 10 tarjetas</p>
+                <Link
+                  href="/dashboard/mir/tarjetas"
+                  className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl border border-white/20 px-5 text-sm font-black text-white transition hover:border-white/40"
+                >
+                  Repasar tarjetas
+                </Link>
+                <p className="mt-2 text-[11px] text-slate-500">
+                  Ideal para el móvil: recuerda, gira y autoevalúate.
+                </p>
+              </article>
+            </div>
             <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-              <GalleryHorizontalEnd className="h-5 w-5 text-mq-premium-gold" />
-              <h3 className="mt-3 text-lg font-bold text-white">Tarjetas de repaso</h3>
-              <p className="mt-1 text-sm text-slate-300">Puntos clave en rondas de 10 tarjetas</p>
-              <Link
-                href="/dashboard/mir/tarjetas"
-                className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl border border-white/20 px-5 text-sm font-black text-white transition hover:border-white/40"
-              >
-                Repasar tarjetas
-              </Link>
-              <p className="mt-2 text-[11px] text-slate-500">
-                Ideal para el móvil: recuerda, gira y autoevalúate.
+              <div className="flex items-center gap-3">
+                <Timer className="h-5 w-5 text-mq-premium-gold" />
+                <div>
+                  <h3 className="text-lg font-bold text-white">Simulacros</h3>
+                  <p className="text-sm text-slate-300">Cronometrados al ritmo real del MIR</p>
+                </div>
+              </div>
+              <p className="mt-5 text-[11px] font-black uppercase tracking-wide text-slate-400">
+                Simulacros Método Q
               </p>
-            </article>
-            <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-              <Timer className="h-5 w-5 text-mq-premium-gold" />
-              <h3 className="mt-3 text-lg font-bold text-white">Simulacros</h3>
-              <p className="mt-1 text-sm text-slate-300">Cronometrados al ritmo real del MIR</p>
-              <ul className="mt-4 space-y-2">
-                {MIR_EXAM_EDITIONS.map((edition) => {
-                  const lastAttempt = attemptsByEdition[edition.code];
-                  return (
-                    <li key={edition.code}>
-                      <Link
-                        href={buildMirSimulacroHref(edition.code)}
-                        className="flex items-center justify-between gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-mq-premium-gold/40"
-                      >
-                        <span className="min-w-0">
-                          <span className="block text-sm font-bold text-white">{edition.label}</span>
-                          <span className="block text-[11px] text-slate-400">
-                            {edition.questionCount} preguntas · {edition.minutes} min
-                          </span>
-                        </span>
-                        <span className="shrink-0 text-xs font-black text-mq-premium-gold">
-                          {lastAttempt
-                            ? `${formatMirNet(getMirNet(lastAttempt.correctAnswers, lastAttempt.wrongAnswers))} netas`
-                            : "Hacer"}
-                        </span>
-                      </Link>
-                    </li>
-                  );
-                })}
+              <ul className="mt-2 grid gap-2 sm:grid-cols-3">
+                {ownEditions.map((edition) => (
+                  <li key={edition.code}>
+                    <EditionLink edition={edition} lastAttempt={attemptsByEdition[edition.code]} />
+                  </li>
+                ))}
               </ul>
+              {officialEditions.length > 0 ? (
+                <>
+                  <p className="mt-5 text-[11px] font-black uppercase tracking-wide text-slate-400">
+                    Exámenes MIR oficiales
+                  </p>
+                  <ul className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+                    {officialEditions.map((edition) => (
+                      <li key={edition.code}>
+                        <EditionLink
+                          edition={edition}
+                          lastAttempt={attemptsByEdition[edition.code]}
+                          compact
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : null}
             </article>
           </div>
         ) : (
