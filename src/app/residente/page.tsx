@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { PLANS } from "@/lib/plans/config";
+import { getResidenteWhatsAppUrl } from "@/lib/contact/whatsapp";
 import { getWhatsAppSupportUrl } from "@/lib/contact/whatsapp";
 import { submitResidenteApplicationAction } from "@/app/residente/actions";
 import { Check } from "lucide-react";
@@ -76,9 +77,14 @@ export default function ResidentePage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-sm text-mq-muted">
-              Desde {residentePlan.prices[1].monthly.toLocaleString("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 })} / mes
-            </p>
+            <a
+              href={getResidenteWhatsAppUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex text-sm font-semibold text-mq-accent hover:underline"
+            >
+              Precio a tu medida: escríbenos por WhatsApp
+            </a>
           </article>
 
           <article className="rounded-2xl border border-mq-border-strong bg-mq-surface-raised p-6 sm:p-8">

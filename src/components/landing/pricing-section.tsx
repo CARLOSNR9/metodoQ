@@ -1,18 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { Check, Info, Ticket, Users, Link as LinkIcon, Gift, GraduationCap, Rocket, Crown, ArrowRight, Lock, ShieldCheck, Clock, MousePointerClick, LifeBuoy, Star } from "lucide-react";
 import { motion } from "framer-motion";
-import {
-  BILLING_CYCLES,
-  formatCOP,
-  PLANS,
-  type BillingCycle,
-} from "@/lib/plans/config";
+import { formatCOP, LISTED_PLANS, OFFERED_CYCLE } from "@/lib/plans/config";
 import { PlanCtaButton } from "@/components/pricing/plan-cta-button";
 
 export function PricingSection({ id = "precios" }: { id?: string }) {
-  const [cycle, setCycle] = useState<BillingCycle>(3);
+  const cycle = OFFERED_CYCLE;
 
   const getPlanIcon = (planId: string) => {
     switch (planId) {
@@ -83,38 +77,16 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
           </motion.p>
         </div>
 
-        {/* Cycle Toggle */}
-        <div className="mt-14 flex justify-center items-center gap-4 flex-col sm:flex-row">
-          <div className="relative flex rounded-full bg-white p-1 shadow-sm border border-slate-200">
-            {BILLING_CYCLES.map((c) => (
-              <button
-                key={c}
-                onClick={() => setCycle(c)}
-                className={`relative px-4 sm:px-8 py-2 sm:py-2.5 text-xs sm:text-[15px] font-bold transition-colors duration-200 ${
-                  cycle === c ? "text-white" : "text-slate-600 hover:text-slate-900"
-                }`}
-              >
-                {cycle === c && (
-                  <motion.div
-                    layoutId="active-cycle"
-                    className="absolute inset-0 rounded-full bg-blue-600 shadow-sm"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-                <span className="relative z-10">{c} {c === 1 ? 'Mes' : 'Meses'}</span>
-              </button>
-            ))}
-          </div>
-          
-          <div className="flex sm:flex items-center gap-1.5 rounded-full bg-green-50 px-3 py-1.5 text-xs font-bold text-green-700">
-            <Check className="w-3.5 h-3.5" />
-            Ahorra hasta 33%
+        <div className="mt-10 flex justify-center">
+          <div className="flex items-center gap-1.5 rounded-full bg-green-50 px-4 py-2 text-xs font-bold text-green-700 sm:text-sm">
+            <Clock className="h-4 w-4" />
+            Todos los planes duran 6 meses · pago único, sin renovaciones automáticas
           </div>
         </div>
 
         {/* Plans Grid */}
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 items-end">
-          {PLANS.map((plan, index) => {
+        <div className="mx-auto mt-16 grid max-w-6xl grid-cols-1 items-end gap-6 md:grid-cols-3 lg:gap-8">
+          {LISTED_PLANS.map((plan, index) => {
             const currentPrice = plan.prices[cycle];
             return (
               <motion.div
@@ -149,28 +121,22 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                 <div className="mb-8 flex flex-col gap-1 min-h-[90px]">
                   <div className="flex items-baseline gap-1">
                     <span className="text-4xl font-black text-blue-600">
-                      {plan.id === "FREE" ? "$0" : formatCOP(currentPrice.monthly)}
+                      {plan.id === "FREE"
+                        ? "$0"
+                        : plan.id === "RESIDENTE"
+                          ? "A tu medida"
+                          : formatCOP(currentPrice.total)}
                     </span>
-                    {plan.id !== "FREE" && <span className="text-slate-500 text-xs font-semibold">/mes</span>}
                   </div>
-                  {plan.id === "FREE" ? (
-                    <p className="text-[11px] text-green-600 font-bold mt-2">
-                      Pruébalo por 7 días
-                    </p>
-                  ) : (
-                    cycle > 1 && (
-                      <div className="flex items-center gap-2 mt-2">
-                        <p className="text-[11px] text-slate-600 font-bold">
-                          Pago total: {formatCOP(currentPrice.total)}
-                        </p>
-                        {currentPrice.savings && (
-                          <span className="rounded-md bg-green-50 px-1.5 py-0.5 text-[9px] font-bold text-green-700 uppercase border border-green-100">
-                            Ahorra {currentPrice.savings}
-                          </span>
-                        )}
-                      </div>
-                    )
-                  )}
+                  <p
+                    className={`mt-2 text-[11px] font-bold ${plan.id === "FREE" ? "text-green-600" : "text-slate-600"}`}
+                  >
+                    {plan.id === "FREE"
+                      ? "Pruébalo por 7 días"
+                      : plan.id === "RESIDENTE"
+                        ? "Te asesoramos por WhatsApp"
+                        : "Pago único · 6 meses de acceso"}
+                  </p>
                 </div>
 
                 <ul className="mb-10 flex-1 space-y-3.5">
@@ -189,13 +155,17 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
                   cycle={cycle} 
                   className={getPlanButtonStyle(plan.id, plan.highlighted)}
                 >
-                  {plan.id === "FREE" ? "Empezar gratis" : plan.id === "BASICO" ? "Elegir Básico" : plan.id === "PRO" ? "Elegir plan PRO" : "Postular a Residente"}
+                  {plan.id === "FREE" ? "Empezar gratis" : plan.cta}
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </PlanCtaButton>
                 
                 <p className="mt-4 flex items-center justify-center gap-1.5 text-center text-[9px] text-slate-400 uppercase tracking-widest font-bold">
-                  {plan.id !== "FREE" && <Lock className="w-3 h-3" />}
-                  {plan.id === "FREE" ? "Sin tarjeta de crédito" : "Pago seguro con Stripe"}
+                  {plan.id === "PRO" && <Lock className="w-3 h-3" />}
+                  {plan.id === "FREE"
+                    ? "Sin tarjeta de crédito"
+                    : plan.id === "RESIDENTE"
+                      ? "Respuesta directa del equipo médico"
+                      : "Pago seguro con Stripe"}
                 </p>
               </motion.div>
             );
@@ -227,8 +197,8 @@ export function PricingSection({ id = "precios" }: { id?: string }) {
             <div className="flex items-start gap-3">
               <Clock className="w-5 h-5 text-green-500 shrink-0" />
               <div>
-                <p className="text-xs font-bold text-slate-900 mb-0.5">Sin permanencias</p>
-                <p className="text-[10px] text-slate-400 font-medium">Cancela cuando quieras</p>
+                <p className="text-xs font-bold text-slate-900 mb-0.5">6 meses, pago único</p>
+                <p className="text-[10px] text-slate-400 font-medium">Sin cobros recurrentes</p>
               </div>
             </div>
             <div className="flex items-start gap-3">

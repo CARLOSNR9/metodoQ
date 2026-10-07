@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { Check, Clock, ShieldAlert, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import {
-  BILLING_CYCLES,
   formatCOP,
+  OFFERED_CYCLE,
   PLANS,
   type BillingCycle,
   type PlanId,
@@ -135,40 +135,40 @@ function PlanCardAction({
 function PlanPriceDisplay({
   cardState,
   currentPrice,
-  cycle,
+  isResidente,
 }: {
   cardState: PlanCardState;
-  currentPrice: { monthly: number; total: number; savings?: string };
-  cycle: BillingCycle;
+  currentPrice: { monthly: number; total: number };
+  isResidente: boolean;
 }) {
+  if (isResidente) {
+    return (
+      <div className="mb-8">
+        <span className="text-4xl font-bold text-slate-900">A tu medida</span>
+        <p className="mt-2 text-sm font-medium text-mq-accent">Te asesoramos por WhatsApp</p>
+      </div>
+    );
+  }
+
   const isRenewal = cardState === "renewal";
-  const discountedMonthly = applyRenewalDiscount(currentPrice.monthly);
   const discountedTotal = applyRenewalDiscount(currentPrice.total);
 
   return (
     <div className="mb-8">
       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
         <span className="text-4xl font-bold text-slate-900">
-          {formatCOP(isRenewal ? discountedMonthly : currentPrice.monthly)}
+          {formatCOP(isRenewal ? discountedTotal : currentPrice.total)}
         </span>
         {isRenewal ? (
-          <span className="text-lg text-slate-500 line-through">
-            {formatCOP(currentPrice.monthly)}
-          </span>
+          <span className="text-lg text-slate-500 line-through">{formatCOP(currentPrice.total)}</span>
         ) : null}
-        <span className="text-slate-500 text-sm">/mes</span>
       </div>
       {isRenewal ? (
         <p className="mt-2 text-sm font-medium text-yellow-400">
           {RENEWAL_DISCOUNT_PERCENT}% de descuento por renovación anticipada
         </p>
       ) : null}
-      {cycle > 1 && (
-        <p className="mt-2 text-sm text-mq-accent font-medium">
-          Pago total: {formatCOP(isRenewal ? discountedTotal : currentPrice.total)}
-          {!isRenewal && currentPrice.savings ? ` · Ahorra ${currentPrice.savings}` : ""}
-        </p>
-      )}
+      <p className="mt-2 text-sm text-mq-accent font-medium">Pago único · 6 meses de acceso</p>
     </div>
   );
 }
@@ -185,7 +185,7 @@ export function DashboardPricingView() {
   const showPromoCountdown = userPlan === "FREE";
   const showRenewalBanner = renewalEligible && (userPlan === "PRO" || userPlan === "BASICO");
   const showResidenteBanner = userPlan === "PRO" && !renewalEligible;
-  const [cycle, setCycle] = useState<BillingCycle>(3);
+  const cycle: BillingCycle = OFFERED_CYCLE;
   const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
 
   useEffect(() => {
@@ -277,33 +277,9 @@ export function DashboardPricingView() {
         <p className="text-slate-500 text-lg max-w-2xl mx-auto">{pageCopy.subtitle}</p>
       </div>
 
-      {visiblePlans.length > 1 || userPlan === "FREE" ? (
-        <div className="flex justify-center">
-          <div className="relative flex rounded-full bg-slate-50 p-1 backdrop-blur-sm border border-slate-200">
-            {BILLING_CYCLES.map((c) => (
-              <button
-                key={c}
-                type="button"
-                onClick={() => setCycle(c)}
-                className={`relative px-6 py-2 text-sm font-medium transition-colors ${
-                  cycle === c ? "text-mq-accent-foreground" : "text-slate-900/70 hover:text-slate-900"
-                }`}
-              >
-                {cycle === c && (
-                  <motion.div
-                    layoutId="dashboard-cycle"
-                    className="absolute inset-0 rounded-full bg-mq-accent"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-                <span className="relative z-10">
-                  {c} {c === 1 ? "Mes" : "Meses"}
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      ) : null}
+      <p className="text-center text-sm font-semibold text-slate-500">
+        Todos los planes duran 6 meses · pago único, sin renovaciones automáticas
+      </p>
 
       <div className={`grid gap-6 lg:gap-8 ${getGridClass(visiblePlans.length)}`}>
         {visiblePlans.map((plan, index) => {
@@ -347,7 +323,7 @@ export function DashboardPricingView() {
               <PlanPriceDisplay
                 cardState={cardState}
                 currentPrice={currentPrice}
-                cycle={cycle}
+                isResidente={plan.id === "RESIDENTE"}
               />
 
               <ul className="mb-10 flex-1 space-y-4">

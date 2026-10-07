@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { getFirebaseAuth } from "@/lib/firebase";
 import { trackClickUpgrade } from "@/lib/analytics/events";
+import { getResidenteWhatsAppUrl } from "@/lib/contact/whatsapp";
 import type { BillingCycle, PlanDefinition } from "@/lib/plans/config";
 
 type PlanCtaButtonProps = {
@@ -39,9 +40,9 @@ export function PlanCtaButton({
 
   if (plan.id === "RESIDENTE") {
     return (
-      <Link href="/residente" className={className}>
+      <a href={getResidenteWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className={className}>
         {content}
-      </Link>
+      </a>
     );
   }
 

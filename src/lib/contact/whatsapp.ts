@@ -12,3 +12,15 @@ export function getWhatsAppSupportUrl(message?: string): string | null {
 
 export const DEFAULT_WHATSAPP_MESSAGE =
   "Hola, tengo una consulta sobre Método Q y la preparación para residencia médica.";
+
+/** Número de respaldo si NEXT_PUBLIC_WHATSAPP_NUMBER no está configurado (el mismo del módulo MIR). */
+const FALLBACK_WHATSAPP_NUMBER = "573146950198";
+
+/** El plan Residente no se compra en la web: se informa y se contrata por WhatsApp. */
+export function getResidenteWhatsAppUrl(): string {
+  const message = "Hola, quiero más información sobre el plan Residente de Método Q.";
+  return (
+    getWhatsAppSupportUrl(message) ??
+    `https://wa.me/${FALLBACK_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+  );
+}

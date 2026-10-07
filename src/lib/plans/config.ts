@@ -27,9 +27,14 @@ export interface PlanDefinition {
   popular?: boolean;
   /** Plan vendible vía Stripe (no FREE ni flujo manual) */
   checkoutEnabled: boolean;
+  /** Se muestra en las páginas de precios. Los planes retirados siguen existiendo para quien ya los tiene. */
+  listed: boolean;
 }
 
 export const BILLING_CYCLES: BillingCycle[] = [1, 3, 6];
+
+/** Duración única que se vende ahora: todos los planes duran 6 meses, pago único. */
+export const OFFERED_CYCLE: BillingCycle = 6;
 
 export const PLANS: PlanDefinition[] = [
   {
@@ -50,6 +55,7 @@ export const PLANS: PlanDefinition[] = [
     ],
     cta: "Empezar Gratis",
     checkoutEnabled: false,
+    listed: true,
   },
   {
     id: "BASICO",
@@ -69,34 +75,39 @@ export const PLANS: PlanDefinition[] = [
     ],
     cta: "Elegir Básico",
     checkoutEnabled: true,
+    // Retirado de la venta: el plan Pro de 6 meses lo sustituye.
+    listed: false,
   },
   {
     id: "PRO",
     slug: "pro",
     name: "Pro",
-    description: "El camino directo para dominar el examen con mentoría experta.",
+    description: "Todo lo que necesitas para preparar tu examen durante 6 meses.",
     prices: {
       1: { monthly: 500000, total: 500000 },
       3: { monthly: 333333, total: 1000000, savings: "33%" },
-      6: { monthly: 266667, total: 1600000, savings: "46%" },
+      6: { monthly: 83333, total: 500000 },
     },
     features: [
-      "Todo lo del plan Básico",
-      "Clases en vivo con el Doctor Q",
-      "Análisis avanzado de tus errores por tema",
+      "Entrena con preguntas tipo examen real",
+      "Simulacros completos cronometrados",
+      "Tu perfil de rendimiento (debilidades y fortalezas)",
+      "Análisis de tus errores por tema",
       "Tu plan de estudio personalizado",
-      "Comunidad privada de estudio",
+      "Clases en vivo con el Doctor Q",
+      "Acceso a la plataforma 24/7 durante 6 meses",
     ],
-    cta: "Elegir plan PRO",
+    cta: "Elegir plan Pro",
     highlighted: true,
     popular: true,
     checkoutEnabled: true,
+    listed: true,
   },
   {
     id: "RESIDENTE",
     slug: "residente",
     name: "Residente",
-    description: "Acompañamiento élite para asegurar tu plaza de especialidad.",
+    description: "Acompañamiento 1 a 1 con el equipo médico para asegurar tu plaza.",
     prices: {
       1: { monthly: 1000000, total: 1000000 },
       3: { monthly: 666667, total: 2000000, savings: "33%" },
@@ -109,10 +120,14 @@ export const PLANS: PlanDefinition[] = [
       "Acompañamiento personalizado en trámites",
       "Soporte prioritario 24/7",
     ],
-    cta: "Postular a Residente",
+    cta: "Más información por WhatsApp",
     checkoutEnabled: false,
+    listed: true,
   },
 ];
+
+/** Planes que se ofrecen hoy: Gratis, Pro y Residente. */
+export const LISTED_PLANS = PLANS.filter((p) => p.listed);
 
 export const PAID_PLANS = PLANS.filter(
   (p): p is PlanDefinition & { id: PaidPlanId } => p.checkoutEnabled,
