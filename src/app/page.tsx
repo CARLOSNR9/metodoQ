@@ -14,11 +14,11 @@ export default function HomePage() {
   return (
     <main className="flex flex-1 flex-col bg-background">
       <LandingVisitTracker />
+      <MirSpotlightSection />
+
       <div className="mq-fade-up">
         <HeroSection />
       </div>
-
-      <MirSpotlightSection />
       
       <div className="mq-fade-up [animation-delay:100ms]">
         <HowItWorksSection id="como-funciona" />
