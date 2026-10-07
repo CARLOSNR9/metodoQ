@@ -29,6 +29,7 @@ import {
   ClipboardCheck,
   Shield,
   Stethoscope,
+  BookMarked,
   BookOpenCheck,
 } from "lucide-react";
 import { useFailedQuestionsCount } from "@/hooks/use-failed-questions-count";
@@ -47,6 +48,7 @@ const navigationItems = [
   { label: "Retos Dr. Q", href: "/dashboard/evaluaciones", icon: Stethoscope, proOnly: true },
   // Módulo de pago aparte: solo se muestra a quien tiene acceso MIR vigente.
   { label: "Simulacro MIR", href: "/dashboard/mir", icon: BookOpenCheck, mirRelevant: true, mirAccessOnly: true },
+  { label: "Mi estudio MIR", href: "/dashboard/mir/estudio", icon: BookMarked, mirRelevant: true, mirAccessOnly: true },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
   { label: "Historial", href: "/dashboard/historial", icon: History, mirRelevant: true },
   { label: "Perfil", href: "/dashboard/perfil", icon: User, mirRelevant: true },
@@ -123,9 +125,17 @@ export function DashboardShell({ children }: DashboardShellProps) {
             .filter((item) => !isMirOnlyUser || ("mirRelevant" in item && item.mirRelevant))
             .filter((item) => !("mirAccessOnly" in item && item.mirAccessOnly) || hasMirModule)
             .map((item) => {
+            // Activo el enlace más específico: /dashboard/mir/estudio no enciende también /dashboard/mir.
+            const matches = (href: string) =>
+              pathname === href || (href !== "/dashboard" && pathname.startsWith(`${href}/`));
             const isActive =
-              pathname === item.href ||
-              (item.href !== "/dashboard" && pathname.startsWith(item.href));
+              matches(item.href) &&
+              !navigationItems.some(
+                (other) =>
+                  other.href.length > item.href.length &&
+                  other.href.startsWith(item.href) &&
+                  matches(other.href),
+              );
 
             const Icon = item.icon;
 

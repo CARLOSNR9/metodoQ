@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
+  BookMarked,
   Building2,
   CalendarDays,
   ClipboardList,
@@ -193,7 +194,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
         </div>
         {hasContent ? (
           <div className="space-y-4">
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
                 <Stethoscope className="h-5 w-5 text-mq-premium-gold" />
                 <h3 className="mt-3 text-lg font-bold text-white">Práctica</h3>
@@ -248,6 +249,20 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                 </Link>
                 <p className="mt-2 text-[11px] text-slate-500">
                   Ideal para el móvil: recuerda, gira y autoevalúate.
+                </p>
+              </article>
+              <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+                <BookMarked className="h-5 w-5 text-mq-premium-gold" />
+                <h3 className="mt-3 text-lg font-bold text-white">Mi estudio</h3>
+                <p className="mt-1 text-sm text-slate-300">Repasa leyendo las preguntas que ya contestaste</p>
+                <Link
+                  href="/dashboard/mir/estudio"
+                  className="mt-4 inline-flex min-h-10 items-center justify-center rounded-xl border border-white/20 px-5 text-sm font-black text-white transition hover:border-white/40"
+                >
+                  Ver mi estudio
+                </Link>
+                <p className="mt-2 text-[11px] text-slate-500">
+                  Tu respuesta, la correcta y la explicación de cada una.
                 </p>
               </article>
             </div>
