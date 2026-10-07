@@ -25,10 +25,8 @@ export function getMirStripePriceId(): string | undefined {
   return process.env.STRIPE_PRICE_MIR;
 }
 
-/**
- * No mostramos precio: el acceso se negocia por WhatsApp mientras no haya
- * un precio de venta definido.
- */
+/** Precio del acceso MIR (6 meses, pago único). La compra se cierra por WhatsApp. */
+export const MIR_PRICE_LABEL = "140 €";
 const MIR_WHATSAPP_NUMBER = "573146950198";
 
 export function getMirWhatsAppUrl(): string {

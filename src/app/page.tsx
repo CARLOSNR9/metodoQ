@@ -7,17 +7,18 @@ import {
   FAQSection,
 } from "@/components/landing";
 import { LandingVisitTracker } from "@/components/analytics/landing-visit-tracker";
-import { MirLandingBanner } from "@/components/landing/mir-landing-banner";
+import { MirSpotlightSection } from "@/components/landing/mir-spotlight-section";
+import { WhatsAppFloat } from "@/components/landing/whatsapp-float";
 
 export default function HomePage() {
   return (
     <main className="flex flex-1 flex-col bg-background">
       <LandingVisitTracker />
-      <MirLandingBanner />
-
       <div className="mq-fade-up">
         <HeroSection />
       </div>
+
+      <MirSpotlightSection />
       
       <div className="mq-fade-up [animation-delay:100ms]">
         <HowItWorksSection id="como-funciona" />
@@ -38,6 +39,8 @@ export default function HomePage() {
       <div className="mq-fade-up [animation-delay:500ms]">
         <CtaBand />
       </div>
+
+      <WhatsAppFloat />
     </main>
   );
 }

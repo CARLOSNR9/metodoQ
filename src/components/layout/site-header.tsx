@@ -122,6 +122,12 @@ export function SiteHeader() {
             className="hidden items-center gap-8 text-sm font-semibold text-slate-600 sm:flex ml-4"
             aria-label="Principal"
           >
+            <Link
+              href="/mir"
+              className="rounded-full bg-[#0A1F44] px-3 py-1 text-xs font-black uppercase tracking-wider text-mq-premium-gold transition duration-200 hover:brightness-125"
+            >
+              MIR
+            </Link>
             <Link href="/#como-funciona" className="transition duration-200 hover:text-mq-accent">Método</Link>
             <UniversitiesMegaMenu />
             <Link href="/#precios" className="transition duration-200 hover:text-mq-accent">Precios</Link>
@@ -149,7 +155,7 @@ export function SiteHeader() {
           aria-label="Secciones"
         >
           <div className="flex w-full justify-between gap-1 text-[0.75rem] font-bold text-slate-500 uppercase tracking-wider">
-            <Link href="/#como-funciona" className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center">Método</Link>
+            <Link href="/mir" className="min-h-11 flex-1 rounded-lg bg-[#0A1F44] px-1 py-2 text-center text-mq-premium-gold transition duration-200 hover:brightness-125 flex items-center justify-center">MIR</Link>
             <Link href="/#universidades" className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center">Universidades</Link>
             <Link href="/#precios" className="min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent flex items-center justify-center">Precios</Link>
             <Link href="/#testimonios" className="hidden md:flex min-h-11 flex-1 rounded-lg px-1 py-2 text-center transition duration-200 hover:bg-slate-50 hover:text-mq-accent items-center justify-center">Testimonios</Link>
