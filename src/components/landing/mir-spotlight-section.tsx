@@ -46,17 +46,7 @@ export function MirSpotlightSection() {
           </p>
         </div>
 
-        <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-3">
-          {highlights.map(({ icon: Icon, title, text }) => (
-            <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-              <Icon className="h-6 w-6 text-mq-premium-gold" />
-              <p className="mt-3 text-lg font-bold text-white">{title}</p>
-              <p className="mt-1 text-sm text-slate-300">{text}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-10 flex flex-col items-center gap-3">
+        <div className="mt-8 flex flex-col items-center gap-3">
           <div className="flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
             <Link
               href="/mir/demo"
@@ -81,6 +71,16 @@ export function MirSpotlightSection() {
               Ver el módulo MIR
             </Link>
           </p>
+        </div>
+
+        <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-3">
+          {highlights.map(({ icon: Icon, title, text }) => (
+            <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+              <Icon className="h-6 w-6 text-mq-premium-gold" />
+              <p className="mt-3 text-lg font-bold text-white">{title}</p>
+              <p className="mt-1 text-sm text-slate-300">{text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
