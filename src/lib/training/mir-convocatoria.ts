@@ -1,25 +1,5 @@
 import { arrayUnion, doc, getDoc, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
-import { MIR_2026_01_10_QUESTIONS } from "@/data/mir-2026-01-10-questions";
-import { MIR_2026_11_20_QUESTIONS } from "@/data/mir-2026-11-20-questions";
-import { MIR_2026_21_30_QUESTIONS } from "@/data/mir-2026-21-30-questions";
-import { MIR_2026_31_40_QUESTIONS } from "@/data/mir-2026-31-40-questions";
-import { MIR_2026_41_50_QUESTIONS } from "@/data/mir-2026-41-50-questions";
-import { MIR_2026_51_60_QUESTIONS } from "@/data/mir-2026-51-60-questions";
-import { MIR_2026_61_70_QUESTIONS } from "@/data/mir-2026-61-70-questions";
-import { MIR_2026_71_80_QUESTIONS } from "@/data/mir-2026-71-80-questions";
-import { MIR_2026_81_90_QUESTIONS } from "@/data/mir-2026-81-90-questions";
-import { MIR_2026_91_100_QUESTIONS } from "@/data/mir-2026-91-100-questions";
-import { MIR_2026_101_110_QUESTIONS } from "@/data/mir-2026-101-110-questions";
-import { MIR_2026_111_120_QUESTIONS } from "@/data/mir-2026-111-120-questions";
-import { MIR_2026_121_130_QUESTIONS } from "@/data/mir-2026-121-130-questions";
-import { MIR_2026_131_140_QUESTIONS } from "@/data/mir-2026-131-140-questions";
-import { MIR_2026_141_150_QUESTIONS } from "@/data/mir-2026-141-150-questions";
-import { MIR_2026_151_160_QUESTIONS } from "@/data/mir-2026-151-160-questions";
-import { MIR_2026_161_170_QUESTIONS } from "@/data/mir-2026-161-170-questions";
-import { MIR_2026_171_180_QUESTIONS } from "@/data/mir-2026-171-180-questions";
-import { MIR_2026_181_190_QUESTIONS } from "@/data/mir-2026-181-190-questions";
-import { MIR_2026_191_200_QUESTIONS } from "@/data/mir-2026-191-200-questions";
 import { MIR_OFICIAL_2025_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2025-lote-1-questions";
 import { MIR_OFICIAL_2025_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2025-lote-2-questions";
 import { MIR_OFICIAL_2024_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2024-lote-1-questions";
@@ -45,40 +25,6 @@ import { MIR_OFICIAL_RECUPERADAS_QUESTIONS } from "@/data/mir-oficial-recuperada
 import { MIR_EXAM_DATE } from "@/lib/mir/config";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import type { TrainingQuestion } from "@/lib/questions/types";
-
-/** Simulacro 1: preguntas 1–100 del banco (se amplía por lotes de 10). */
-const MIR_SIMULACRO_1_QUESTIONS: TrainingQuestion[] = [
-  ...MIR_2026_01_10_QUESTIONS,
-  ...MIR_2026_11_20_QUESTIONS,
-  ...MIR_2026_21_30_QUESTIONS,
-  ...MIR_2026_31_40_QUESTIONS,
-  ...MIR_2026_41_50_QUESTIONS,
-  ...MIR_2026_51_60_QUESTIONS,
-  ...MIR_2026_61_70_QUESTIONS,
-  ...MIR_2026_71_80_QUESTIONS,
-  ...MIR_2026_81_90_QUESTIONS,
-  ...MIR_2026_91_100_QUESTIONS,
-];
-
-/** Simulacro 2: preguntas 101–200, con más peso en las áreas poco cubiertas del 1. */
-const MIR_SIMULACRO_2_QUESTIONS: TrainingQuestion[] = [
-  ...MIR_2026_101_110_QUESTIONS,
-  ...MIR_2026_111_120_QUESTIONS,
-  ...MIR_2026_121_130_QUESTIONS,
-  ...MIR_2026_131_140_QUESTIONS,
-  ...MIR_2026_141_150_QUESTIONS,
-  ...MIR_2026_151_160_QUESTIONS,
-  ...MIR_2026_161_170_QUESTIONS,
-  ...MIR_2026_171_180_QUESTIONS,
-  ...MIR_2026_181_190_QUESTIONS,
-  ...MIR_2026_191_200_QUESTIONS,
-];
-
-/** Preguntas propias de Método Q (simulacros 1 y 2). */
-const MIR_OWN_QUESTIONS: TrainingQuestion[] = [
-  ...MIR_SIMULACRO_1_QUESTIONS,
-  ...MIR_SIMULACRO_2_QUESTIONS,
-];
 
 /** Preguntas oficiales sin imagen de un año que quedaron fuera de sus lotes principales. */
 const complementariasDe = (year: number): TrainingQuestion[] =>
@@ -171,8 +117,71 @@ export const MIR_OFFICIAL_QUESTIONS: TrainingQuestion[] = [
   ...MIR_OFICIAL_2016_QUESTIONS,
 ];
 
-/** Banco completo de preguntas del módulo MIR. */
-export const MIR_QUESTIONS: TrainingQuestion[] = [...MIR_OWN_QUESTIONS, ...MIR_OFFICIAL_QUESTIONS];
+/**
+ * Banco completo de preguntas del módulo MIR: solo preguntas de exámenes
+ * oficiales. Las 200 preguntas propias de Método Q (src/data/mir-2026-*)
+ * se retiraron del banco a petición del equipo médico; los ficheros se
+ * conservan por si hubiera que recuperar alguna.
+ */
+export const MIR_QUESTIONS: TrainingQuestion[] = MIR_OFFICIAL_QUESTIONS;
+
+/** Preguntas de cada simulacro mixto (el completo es la suma de los dos). */
+const MIXED_SIMULACRO_SIZE = 100;
+
+/** FNV-1a de 32 bits: un orden «aleatorio» pero estable entre despliegues y dispositivos. */
+function stableHash(text: string): number {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < text.length; i += 1) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  // Mezcla final (fmix32 de MurmurHash3): FNV solo reparte mal ids casi iguales.
+  hash ^= hash >>> 16;
+  hash = Math.imul(hash, 0x85ebca6b);
+  hash ^= hash >>> 13;
+  hash = Math.imul(hash, 0xc2b2ae35);
+  hash ^= hash >>> 16;
+  return hash >>> 0;
+}
+
+const byStableHash = (salt: string) => (a: TrainingQuestion, b: TrainingQuestion) =>
+  stableHash(`${salt}:${a.id}`) - stableHash(`${salt}:${b.id}`) || a.id.localeCompare(b.id);
+
+/**
+ * Dos simulacros de `MIXED_SIMULACRO_SIZE` preguntas oficiales, sin repetir
+ * entre ellos, con el mismo reparto por especialidad que el conjunto de los
+ * exámenes oficiales (método del mayor resto). Se excluyen las preguntas
+ * anuladas por el Ministerio. La selección es determinista: solo cambia si
+ * cambia el banco oficial.
+ */
+function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], TrainingQuestion[]] {
+  const eligible = pool.filter((question) => !question.tags?.includes("anulada"));
+  const total = Math.min(MIXED_SIMULACRO_SIZE * 2, eligible.length);
+  const byArea = new Map<string, TrainingQuestion[]>();
+  for (const question of eligible) {
+    const area = (question.examArea ?? "").split("/")[0].trim();
+    byArea.set(area, [...(byArea.get(area) ?? []), question]);
+  }
+  const areas = [...byArea.keys()].sort((a, b) => a.localeCompare(b, "es"));
+  const exact = new Map(areas.map((area) => [area, (byArea.get(area)!.length * total) / eligible.length]));
+  const quota = new Map(areas.map((area) => [area, Math.floor(exact.get(area)!)]));
+  let remaining = total - [...quota.values()].reduce((sum, value) => sum + value, 0);
+  for (const area of [...areas].sort(
+    (a, b) => exact.get(b)! - quota.get(b)! - (exact.get(a)! - quota.get(a)!) || a.localeCompare(b, "es"),
+  )) {
+    if (remaining <= 0) break;
+    quota.set(area, quota.get(area)! + 1);
+    remaining -= 1;
+  }
+  const selected = areas.flatMap((area) =>
+    [...byArea.get(area)!].sort(byStableHash("seleccion")).slice(0, quota.get(area)),
+  );
+  const first = selected.filter((_, index) => index % 2 === 0).sort(byStableHash("simulacro-1"));
+  const second = selected.filter((_, index) => index % 2 === 1).sort(byStableHash("simulacro-2"));
+  return [first, second];
+}
+
+const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(MIR_OFFICIAL_QUESTIONS);
 
 /**
  * Modelo del módulo "Simulacro MIR". Sigue el mismo patrón que las
@@ -225,32 +234,30 @@ function buildEdition(
 }
 
 /**
- * Simulacros 1 y 2: preguntas propias de Método Q, calibradas al temario y
- * nivel del examen MIR más reciente. "MIR 2025/2024/2023/2022/2021/2020/2019/2018/2017/2016 oficial"
- * usan preguntas literales de los exámenes oficiales (ver MIR_OFFICIAL_QUESTIONS).
- *
- * "MIR-2027-SIMULACRO" conserva su código original para que los intentos ya
- * guardados sigan asociados al Simulacro 1. Las ediciones sin preguntas no
- * se muestran.
+ * Simulacros 1, 2 y completo: preguntas oficiales de todas las convocatorias
+ * mezcladas, con el reparto por especialidad del MIR (ver buildMixedSimulacros).
+ * Usan códigos nuevos para no mezclar sus intentos con los de los antiguos
+ * simulacros de preguntas propias. "MIR 2025/…/2016 oficial" usan los
+ * exámenes oficiales de cada año. Las ediciones sin preguntas no se muestran.
  */
 export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
   buildEdition(
-    "MIR-2027-SIMULACRO",
+    "MIR-MIXTO-1",
     "Simulacro 1",
-    "Primer bloque del banco: todas las grandes especialidades.",
+    "100 preguntas oficiales de 2016 a 2025, mezcladas con el reparto por especialidad del MIR.",
     MIR_SIMULACRO_1_QUESTIONS,
   ),
   buildEdition(
-    "MIR-2027-SIMULACRO-2",
+    "MIR-MIXTO-2",
     "Simulacro 2",
-    "Preguntas nuevas, con más estadística, gineco-obstetricia y especialidades pequeñas.",
+    "Otras 100 preguntas oficiales distintas, con el mismo reparto por especialidad.",
     MIR_SIMULACRO_2_QUESTIONS,
   ),
   buildEdition(
-    "MIR-2027-SIMULACRO-COMPLETO",
+    "MIR-MIXTO-COMPLETO",
     "Simulacro completo",
-    "Las 200 preguntas del banco en una sola sesión, como el examen real.",
-    MIR_SIMULACRO_2_QUESTIONS.length > 0 ? MIR_OWN_QUESTIONS : [],
+    "Las 200 preguntas de los simulacros 1 y 2 en una sola sesión, como el examen real.",
+    [...MIR_SIMULACRO_1_QUESTIONS, ...MIR_SIMULACRO_2_QUESTIONS],
   ),
   buildEdition(
     "MIR-2025-OFICIAL-1",

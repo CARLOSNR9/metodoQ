@@ -37,13 +37,13 @@ function renderWithBold(text: string) {
 
 /**
  * Demo gratuita del módulo MIR: sin selección de universidad ni especialidad
- * (irrelevante para este examen), con preguntas de exámenes MIR oficiales
- * (o del banco propio si aún no hay suficientes). Tema oscuro/dorado
+ * (irrelevante para este examen), con preguntas de exámenes MIR oficiales.
+ * Tema oscuro/dorado
  * consistente con /mir y /dashboard/mir.
  */
 export function MirDemoView() {
   const questions = useMemo(() => {
-    const pool = MIR_OFFICIAL_QUESTIONS.length >= DEMO_QUESTION_COUNT ? MIR_OFFICIAL_QUESTIONS : MIR_QUESTIONS;
+    const pool = MIR_OFFICIAL_QUESTIONS;
     return shuffleMirQuestionsOptions(
       pickRandomQuestions(pool, Math.min(DEMO_QUESTION_COUNT, pool.length)),
     );
@@ -316,7 +316,7 @@ function MirDemoResults({
 
         <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-slate-300">
           Esto fue una muestra de {total} preguntas. El banco completo tiene {MIR_QUESTIONS.length} preguntas
-          tipo MIR ({MIR_OFFICIAL_QUESTIONS.length} de ellas reales de exámenes oficiales) con explicación detallada, simulacros cronometrados con nota en netas, repaso de tus
+          reales de exámenes MIR oficiales (2016-2025) con explicación detallada, simulacros cronometrados con nota en netas, repaso de tus
           errores y un mapa de tu dominio por especialidad.
         </p>
         <div className="mt-6">
