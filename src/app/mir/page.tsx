@@ -19,7 +19,7 @@ const FAQ_ITEMS = [
   {
     question: "¿Este módulo reemplaza mi plan actual de Método Q?",
     answer:
-      "No. Es un módulo independiente que se suma a tu cuenta, sin afectar tu plan mensual para exámenes de universidades colombianas.",
+      "No. Es un módulo independiente que se suma a tu cuenta, sin afectar tu plan para exámenes de universidades colombianas.",
   },
   {
     question: "¿Cuánto cuesta y cómo lo compro?",

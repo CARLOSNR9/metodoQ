@@ -61,7 +61,8 @@ export function getVisiblePlanIds(
   if (userPlan === "BASICO") {
     return renewalEligible ? ["BASICO", "PRO", "RESIDENTE"] : ["PRO", "RESIDENTE"];
   }
-  return ["BASICO", "PRO", "RESIDENTE"];
+  // El plan Básico ya no se vende: solo lo ve quien lo tiene y puede renovarlo.
+  return ["PRO", "RESIDENTE"];
 }
 
 export function getRecommendedUpgradePlanId(

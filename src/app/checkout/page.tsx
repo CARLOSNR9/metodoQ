@@ -7,6 +7,7 @@ import { getFirebaseAuth } from "@/lib/firebase";
 import {
   formatCOP,
   getPlanBySlug,
+  OFFERED_CYCLE,
   parseBillingCycle,
   type BillingCycle,
 } from "@/lib/plans/config";
@@ -20,7 +21,7 @@ function CheckoutPageContent() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const planSlug = searchParams.get("plan") ?? "pro";
-  const cycle = (parseBillingCycle(searchParams.get("cycle")) ?? 3) as BillingCycle;
+  const cycle = (parseBillingCycle(searchParams.get("cycle")) ?? OFFERED_CYCLE) as BillingCycle;
   const plan = useMemo(() => getPlanBySlug(planSlug), [planSlug]);
 
   const price = plan && plan.id !== "FREE" && plan.id !== "RESIDENTE" ? plan.prices[cycle] : null;
@@ -130,7 +131,7 @@ function CheckoutPageContent() {
                 Plan {plan.name}
               </h2>
               <p className="text-slate-500 font-medium mt-2">
-                Suscripción por {cycle} {cycle === 1 ? "mes" : "meses"}
+                Acceso por {cycle} {cycle === 1 ? "mes" : "meses"}
               </p>
             </div>
             

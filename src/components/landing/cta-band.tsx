@@ -183,8 +183,8 @@ export function CtaBand({ className }: CtaBandProps) {
               <CheckCircle2 className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-xs font-bold text-slate-900 mb-0.5">Cancela cuando quieras</h4>
-              <p className="text-[11px] text-slate-500 font-medium">Sin permanencias</p>
+              <h4 className="text-xs font-bold text-slate-900 mb-0.5">6 meses, pago único</h4>
+              <p className="text-[11px] text-slate-500 font-medium">Sin cobros recurrentes</p>
             </div>
           </div>
           
