@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CheckCircle2, ClipboardCheck, Globe2, Target } from "lucide-react";
-import { getMirWhatsAppUrl } from "@/lib/mir/config";
+import { getMirWhatsAppUrl, MIR_PRICE_LABEL } from "@/lib/mir/config";
+import { WhatsAppFloat } from "@/components/landing/whatsapp-float";
 import { MirHeroIllustration } from "@/components/landing/mir-hero-illustration";
 
 /**
@@ -9,8 +10,8 @@ import { MirHeroIllustration } from "@/components/landing/mir-hero-illustration"
  * colombianos), para señalar que este es un módulo aparte: preparación
  * para el examen MIR (España), un examen internacional.
  *
- * El acceso se negocia por WhatsApp (sin precio ni checkout público
- * mientras no haya precio definido).
+ * El acceso cuesta MIR_PRICE_LABEL (6 meses, pago único) y se cierra por
+ * WhatsApp; no hay checkout público.
  *
  * TODO(negocio/marketing): completar copy y testimonios antes de publicar.
  * No hay contenido inventado de AMIR ni de terceros aquí.
@@ -24,7 +25,7 @@ const FAQ_ITEMS = [
   {
     question: "¿Cuánto cuesta y cómo lo compro?",
     answer:
-      "Escríbenos por WhatsApp y te contamos las condiciones de acceso para la convocatoria del examen MIR.",
+      `${MIR_PRICE_LABEL} por 6 meses, en un pago único, hasta el examen de enero. Escríbenos por WhatsApp y te damos acceso.`,
   },
   {
     question: "¿Puedo probarlo antes de contactarlos?",
@@ -130,6 +131,7 @@ export default function MirLandingPage() {
           </div>
         </div>
       </section>
+      <WhatsAppFloat />
     </main>
   );
 }
