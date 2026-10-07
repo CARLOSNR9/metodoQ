@@ -6,9 +6,13 @@ import { ArrowRight, CheckCircle2, Loader2, RotateCcw, XCircle } from "lucide-re
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers, type MirAnswerSource } from "@/lib/training/mir-review";
+import { recordMirStudyAnswers } from "@/lib/training/mir-study-log";
 import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirOfficialBadge, renderWithBold } from "./mir-rich-text";
+import { MirQuestionReviewCard } from "./mir-question-review-card";
+
+type ReviewFilter = "wrong" | "correct" | "all";
 
 const SAVE_TIMEOUT_MS = 8000;
 
@@ -62,6 +66,7 @@ export function MirPracticeSession({
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [isSaving, setIsSaving] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
+  const [reviewFilter, setReviewFilter] = useState<ReviewFilter>("wrong");
 
   const total = questions.length;
   const currentQuestion = questions[currentIndex];
@@ -83,6 +88,13 @@ export function MirPracticeSession({
       withTimeout(recordMirAnswers(userId, outcomes, source), SAVE_TIMEOUT_MS),
       withTimeout(recordMirSpecialtyStats(userId, outcomes), SAVE_TIMEOUT_MS),
       withTimeout(registerMirTrainingDay(userId), SAVE_TIMEOUT_MS),
+      withTimeout(
+        recordMirStudyAnswers(
+          userId,
+          outcomes.map((outcome) => ({ ...outcome, answer: answers[outcome.questionId] })),
+        ),
+        SAVE_TIMEOUT_MS,
+      ),
     ]);
     for (const result of results) {
       if (result.status === "rejected") {
@@ -90,6 +102,7 @@ export function MirPracticeSession({
       }
     }
     setIsSaving(false);
+    setReviewFilter(outcomes.some((outcome) => !outcome.correct) ? "wrong" : "all");
     setIsFinished(true);
     onSaved?.();
   }
@@ -107,6 +120,12 @@ export function MirPracticeSession({
     const wrongQuestions = questions.filter(
       (question) => answers[question.id] && answers[question.id] !== question.correctOptionId,
     );
+    const reviewQuestions = questions.filter((question) => {
+      const given = answers[question.id];
+      if (reviewFilter === "all") return true;
+      if (reviewFilter === "correct") return given === question.correctOptionId;
+      return Boolean(given) && given !== question.correctOptionId;
+    });
     return (
       <div className="mx-auto w-full max-w-2xl">
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-center sm:p-9">
@@ -126,12 +145,16 @@ export function MirPracticeSession({
           {wrongQuestions.length > 0 ? (
             <ul className="mx-auto mt-5 max-w-md space-y-1.5 text-left">
               {wrongQuestions.map((question) => (
-                <li
-                  key={question.id}
-                  className="flex items-start gap-2 rounded-xl border border-rose-400/20 bg-rose-400/[0.05] px-3 py-2 text-xs text-slate-300"
-                >
-                  <XCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-rose-400" />
-                  <span className="text-[11px] font-semibold uppercase tracking-wide">{question.topic}</span>
+                <li key={question.id}>
+                  <a
+                    href={`#revisar-${question.id}`}
+                    onClick={() => setReviewFilter("wrong")}
+                    className="flex items-start gap-2 rounded-xl border border-rose-400/20 bg-rose-400/[0.05] px-3 py-2 text-xs text-slate-300 transition hover:border-rose-400/50"
+                  >
+                    <XCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-rose-400" />
+                    <span className="flex-1 text-[11px] font-semibold uppercase tracking-wide">{question.topic}</span>
+                    <span className="shrink-0 text-[10px] font-bold text-mq-premium-gold">Ver</span>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -154,6 +177,57 @@ export function MirPracticeSession({
             </Link>
           </div>
         </div>
+
+        <section className="mt-8" aria-labelledby="revisar-respuestas">
+          <h2 id="revisar-respuestas" className="text-lg font-black text-white">
+            Revisar respuestas
+          </h2>
+          <p className="mt-1 text-xs text-slate-400">
+            También las tienes guardadas en{" "}
+            <Link href="/dashboard/mir/estudio" className="font-semibold text-mq-premium-gold hover:underline">
+              Mi estudio
+            </Link>
+            .
+          </p>
+          <div className="mb-4 mt-3 flex flex-wrap gap-2">
+            {(
+              [
+                ["wrong", `Falladas (${wrongQuestions.length})`],
+                ["correct", `Correctas (${correctCount})`],
+                ["all", `Todas (${total})`],
+              ] as const
+            ).map(([value, label]) => (
+              <button
+                key={value}
+                type="button"
+                onClick={() => setReviewFilter(value)}
+                className={`rounded-full px-4 py-1.5 text-xs font-bold transition ${
+                  reviewFilter === value
+                    ? "bg-mq-premium-gold text-[#0A1F44]"
+                    : "border border-white/15 text-slate-300 hover:border-white/30"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          {reviewQuestions.length === 0 ? (
+            <p className="rounded-xl border border-dashed border-white/15 p-6 text-center text-sm text-slate-400">
+              No hay preguntas en esta categoría.
+            </p>
+          ) : (
+            <div className="space-y-4">
+              {reviewQuestions.map((question) => (
+                <MirQuestionReviewCard
+                  key={question.id}
+                  id={`revisar-${question.id}`}
+                  question={question}
+                  given={answers[question.id] ?? null}
+                />
+              ))}
+            </div>
+          )}
+        </section>
       </div>
     );
   }
