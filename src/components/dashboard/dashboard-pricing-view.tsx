@@ -67,7 +67,7 @@ function getPageCopy(
     return {
       title: "Sube al plan Pro",
       subtitle:
-        "Desbloquea clases en vivo, análisis avanzado y tu plan de estudio personalizado.",
+        "Desbloquea simulacros completos, análisis de tus errores y tu plan de estudio personalizado.",
     };
   }
   if (userPlan === "RESIDENTE") {
