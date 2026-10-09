@@ -94,7 +94,6 @@ export const PLANS: PlanDefinition[] = [
       "Tu perfil de rendimiento (debilidades y fortalezas)",
       "Análisis de tus errores por tema",
       "Tu plan de estudio personalizado",
-      "Clases en vivo con el Doctor Q",
       "Acceso a la plataforma 24/7 durante 6 meses",
     ],
     cta: "Elegir plan Pro",
@@ -115,9 +114,9 @@ export const PLANS: PlanDefinition[] = [
     },
     features: [
       "Todo lo del plan PRO",
+      "Clases en vivo con el Doctor Q",
       "Seguimiento 1 a 1 con el equipo médico",
       "Preparación intensiva para entrevistas",
-      "Acompañamiento personalizado en trámites",
       "Soporte prioritario 24/7",
     ],
     cta: "Más información por WhatsApp",

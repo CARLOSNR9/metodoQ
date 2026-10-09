@@ -57,7 +57,7 @@ export function FreePlanPaywall({
           No más estudio perdido, solo lo que necesitas
         </p>
         <p className="mt-3 text-sm text-slate-500">
-          Acceso limitado a sesiones en vivo
+          Entrena con preguntas reales de examen
         </p>
         <p className="mt-1 text-sm text-slate-500">
           +500 médicos ya están entrenando
@@ -67,7 +67,7 @@ export function FreePlanPaywall({
         </p>
 
         <ul className="mt-5 space-y-2 rounded-2xl border border-slate-200 bg-slate-50 p-4">
-          <li className="text-sm font-medium text-slate-700">- Clases en vivo con médicos aprobados</li>
+          <li className="text-sm font-medium text-slate-700">- Explicación detallada de cada pregunta</li>
           <li className="text-sm font-medium text-slate-700">- Estrategias reales para tu examen</li>
           <li className="text-sm font-medium text-slate-700">- Preguntas y simulacros ilimitados</li>
           <li className="text-sm font-medium text-slate-700">- Análisis de rendimiento avanzado</li>
