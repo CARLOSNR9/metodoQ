@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Globe2, RotateCcw, XCircle } from "lucide-react";
-import { MIR_OFFICIAL_QUESTIONS, MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import { MIR_OFFICIAL_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import { MirScoreBreakdown } from "@/components/dashboard/mir-score";
@@ -315,8 +315,8 @@ function MirDemoResults({
         </ul>
 
         <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-slate-300">
-          Esto fue una muestra de {total} preguntas. El banco completo tiene {MIR_QUESTIONS.length} preguntas
-          reales de exámenes MIR oficiales (2016-2025) con explicación detallada, simulacros cronometrados con nota en netas, repaso de tus
+          Esto fue una muestra de {total} preguntas. Con el acceso completo tienes
+          preguntas reales de exámenes MIR oficiales con explicación detallada, simulacros cronometrados con nota en netas, repaso de tus
           errores y un mapa de tu dominio por especialidad.
         </p>
         <div className="mt-6">
