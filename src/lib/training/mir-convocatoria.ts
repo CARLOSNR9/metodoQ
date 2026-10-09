@@ -244,7 +244,7 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
   buildEdition(
     "MIR-MIXTO-1",
     "Simulacro 1",
-    "100 preguntas oficiales de 2016 a 2025, mezcladas con el reparto por especialidad del MIR.",
+    "100 preguntas reales de varias convocatorias, con el reparto por especialidad del MIR.",
     MIR_SIMULACRO_1_QUESTIONS,
   ),
   buildEdition(

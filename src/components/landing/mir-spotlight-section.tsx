@@ -1,9 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, BookOpenCheck, MessageCircle, RotateCcw, Timer } from "lucide-react";
 import { getMirWhatsAppUrl, MIR_PRICE_LABEL } from "@/lib/mir/config";
-import { MIR_OFFICIAL_QUESTIONS } from "@/lib/training/mir-convocatoria";
-
-const formatCount = (value: number) => new Intl.NumberFormat("es-ES").format(value);
 
 /**
  * Bloque destacado del examen MIR en la portada: el MIR es en enero y es la
@@ -11,12 +8,11 @@ const formatCount = (value: number) => new Intl.NumberFormat("es-ES").format(val
  * médico por WhatsApp.
  */
 export function MirSpotlightSection() {
-  const years = new Set(MIR_OFFICIAL_QUESTIONS.map((question) => question.officialExam?.year));
   const highlights = [
     {
       icon: BookOpenCheck,
-      title: `${formatCount(MIR_OFFICIAL_QUESTIONS.length)} preguntas reales`,
-      text: `De los ${years.size} últimos exámenes MIR (2016-2025), con explicación de cada una.`,
+      title: "Preguntas reales del MIR",
+      text: "Las de los exámenes oficiales, cada una explicada por médicos.",
     },
     {
       icon: Timer,
@@ -41,7 +37,7 @@ export function MirSpotlightSection() {
             ¿Te presentas al MIR? <span className="text-mq-premium-gold">Entrena con el examen real.</span>
           </h2>
           <p className="mt-4 text-base text-slate-300 sm:text-lg">
-            Preguntas oficiales de los últimos años, explicadas por médicos, para que llegues a enero
+            Preguntas de exámenes MIR oficiales, explicadas por médicos, para que llegues a enero
             sabiendo exactamente qué te van a preguntar.
           </p>
         </div>
