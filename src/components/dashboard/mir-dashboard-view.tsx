@@ -11,6 +11,7 @@ import {
   GalleryHorizontalEnd,
   Globe2,
   Layers,
+  ListChecks,
   Map as MapIcon,
   MapPin,
   Stethoscope,
@@ -24,12 +25,15 @@ import {
   type MirExamAttempt,
   type MirExamEdition,
 } from "@/lib/training/mir-convocatoria";
+import { getMirDailyPlan, type MirDailyPlan } from "@/lib/training/mir-daily-plan";
 import { getDueMirReviewIds, getMirReviewDeck } from "@/lib/training/mir-review";
 import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
+import type { MirWeekSummary } from "@/lib/training/mir-weekly";
 import { getDaysUntilMirExam } from "@/lib/mir/config";
 import { MirStreakStrip } from "./mir-streak-strip";
 import { MirAchievementsCard } from "./mir-achievements";
+import { MirDailyPlanCard } from "./mir-daily-plan-card";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
 import { MirPomodoroCard } from "./mir-pomodoro-card";
@@ -97,7 +101,7 @@ function EditionLink({
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * preguntas de la semana con Pomodoro, accesos libres a práctica, repaso de
+ * plan de hoy, preguntas de la semana con Pomodoro, accesos libres a práctica, repaso de
  * errores, tarjetas de repaso y simulacro, mapa de dominio por especialidad, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
@@ -110,6 +114,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
   const [streak, setStreak] = useState<MirStreakInfo>({ count: 0, lastActiveDate: null, activeDates: [] });
   const [attemptsByEdition, setAttemptsByEdition] = useState<Record<string, MirExamAttempt | null>>({});
   const [dueReviewCount, setDueReviewCount] = useState(0);
+  const [today, setToday] = useState<{ plan: MirDailyPlan; week: MirWeekSummary } | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -120,6 +125,10 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
 
     getMirReviewDeck(userId).then((deck) => {
       if (!cancelled) setDueReviewCount(getDueMirReviewIds(deck).length);
+    });
+
+    getMirDailyPlan(userId).then((result) => {
+      if (!cancelled) setToday(result);
     });
 
     Promise.all(
@@ -177,11 +186,21 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
       {hasContent ? (
         <section>
           <div className="mb-3 flex items-center gap-2">
+            <ListChecks className="h-4 w-4 text-mq-premium-gold" />
+            <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu plan de hoy</h2>
+          </div>
+          <MirDailyPlanCard plan={today?.plan ?? null} />
+        </section>
+      ) : null}
+
+      {hasContent ? (
+        <section>
+          <div className="mb-3 flex items-center gap-2">
             <CalendarDays className="h-4 w-4 text-mq-premium-gold" />
             <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu semana</h2>
           </div>
           <div className="space-y-4">
-            <MirWeeklyCard userId={userId} />
+            <MirWeeklyCard week={today?.week ?? null} dailyTarget={today?.plan.pace.dailyTarget} />
             <MirPomodoroCard />
           </div>
         </section>
