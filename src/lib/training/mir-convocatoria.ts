@@ -4,6 +4,7 @@ import { MIR_OFICIAL_2025_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2025-lote-
 import { MIR_OFICIAL_2025_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2025-lote-2-questions";
 import { MIR_OFICIAL_2024_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2024-lote-1-questions";
 import { MIR_OFICIAL_2024_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2024-lote-2-questions";
+import { MIR_OFICIAL_2024_IMAGENES_QUESTIONS } from "@/data/mir-oficial-2024-imagenes-questions";
 import { MIR_OFICIAL_2023_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2023-lote-1-questions";
 import { MIR_OFICIAL_2023_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2023-lote-2-questions";
 import { MIR_OFICIAL_2022_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2022-lote-1-questions";
@@ -40,8 +41,19 @@ const MIR_OFICIAL_2025_QUESTIONS: TrainingQuestion[] = [
   ...complementariasDe(2025),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2024 oficial: las 182 preguntas sin imagen del examen (incluidas las de reserva). */
+/**
+ * Preguntas de imagen ya cotejadas con la plantilla oficial. Las que siguen en
+ * `reviewStatus: "pending"` (respuesta aún sin verificar) no entran en el banco.
+ */
+const imagenesVerificadas = (questions: TrainingQuestion[]): TrainingQuestion[] =>
+  questions.filter((question) => question.reviewStatus !== "pending");
+
+/**
+ * MIR 2024 oficial: las 182 preguntas sin imagen del examen (incluidas las de
+ * reserva) y las de imagen (1-25) ya verificadas.
+ */
 const MIR_OFICIAL_2024_QUESTIONS: TrainingQuestion[] = [
+  ...imagenesVerificadas(MIR_OFICIAL_2024_IMAGENES_QUESTIONS),
   ...MIR_OFICIAL_2024_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2024_LOTE_2_QUESTIONS,
   ...complementariasDe(2024),
@@ -181,7 +193,10 @@ function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], Tr
   return [first, second];
 }
 
-const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(MIR_OFFICIAL_QUESTIONS);
+// Sin las preguntas de imagen: así los simulacros mixtos no cambian al ir añadiéndolas.
+const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(
+  MIR_OFFICIAL_QUESTIONS.filter((question) => !question.image),
+);
 
 /**
  * Modelo del módulo "Simulacro MIR". Sigue el mismo patrón que las
@@ -268,7 +283,9 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
   buildEdition(
     "MIR-2024-OFICIAL",
     "MIR 2024 oficial",
-    "Las preguntas reales del examen MIR 2024 (sin imágenes), tal cual salieron, con explicación de cada una.",
+    MIR_OFICIAL_2024_QUESTIONS.some((question) => question.image)
+      ? "Las preguntas reales del examen MIR 2024, con sus imágenes, tal cual salieron y con explicación de cada una."
+      : "Las preguntas reales del examen MIR 2024 (sin imágenes), tal cual salieron, con explicación de cada una.",
     MIR_OFICIAL_2024_QUESTIONS,
   ),
   buildEdition(

@@ -11,6 +11,7 @@ import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirOfficialBadge, renderWithBold } from "./mir-rich-text";
 import { MirQuestionReviewCard } from "./mir-question-review-card";
+import { MirQuestionImage } from "./mir-question-image";
 
 type ReviewFilter = "wrong" | "correct" | "all";
 
@@ -271,6 +272,9 @@ export function MirPracticeSession({
         <h2 className="mt-3 text-pretty text-base font-medium leading-relaxed text-white sm:text-lg">
           {renderWithBold(currentQuestion.statement)}
         </h2>
+        {currentQuestion.image ? (
+          <MirQuestionImage image={currentQuestion.image} number={currentQuestion.officialExam?.number} />
+        ) : null}
 
         <div className="mt-6 grid gap-3">
           {currentQuestion.options.map((option) => {
