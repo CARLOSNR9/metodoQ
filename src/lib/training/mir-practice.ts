@@ -89,3 +89,45 @@ export function getMirQuestionsByIds(
     ids.map((id) => byId.get(id)).filter((question): question is TrainingQuestion => Boolean(question)),
   );
 }
+
+/** Qué preguntas entran en la práctica según lo que el alumno ya contestó. */
+export type MirPracticeStatus = "all" | "new" | "wrong";
+
+export type MirPracticeFilters = {
+  status: MirPracticeStatus;
+  /** Año del examen oficial; null = todos. */
+  year: number | null;
+};
+
+export const MIR_DEFAULT_PRACTICE_FILTERS: MirPracticeFilters = { status: "all", year: null };
+
+/** Lo que el alumno ya ha hecho, para filtrar (ver buildMirStudyItems en mir-study-log.ts). */
+export type MirPracticeHistory = {
+  /** Contestadas alguna vez (o falladas en el repaso). */
+  seen: ReadonlySet<string>;
+  /** Última respuesta fallada o pendiente en el repaso de errores. */
+  wrong: ReadonlySet<string>;
+};
+
+/** Años de examen oficial del banco, del más reciente al más antiguo. */
+export function getMirOfficialYears(questions: TrainingQuestion[] = MIR_QUESTIONS): number[] {
+  const years = new Set<number>();
+  for (const question of questions) {
+    if (question.officialExam?.year) years.add(question.officialExam.year);
+  }
+  return [...years].sort((a, b) => b - a);
+}
+
+/** Preguntas del banco que cumplen los filtros (las de todas las especialidades). */
+export function filterMirPracticePool(
+  filters: MirPracticeFilters,
+  history: MirPracticeHistory,
+  questions: TrainingQuestion[] = MIR_QUESTIONS,
+): TrainingQuestion[] {
+  return questions.filter((question) => {
+    if (filters.year !== null && question.officialExam?.year !== filters.year) return false;
+    if (filters.status === "new") return !history.seen.has(question.id);
+    if (filters.status === "wrong") return history.wrong.has(question.id);
+    return true;
+  });
+}
