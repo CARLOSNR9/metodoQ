@@ -21,6 +21,7 @@ import {
   selectMirExamQuestions,
   type MirExamAttempt,
 } from "@/lib/training/mir-convocatoria";
+import { getNextMirDoubtIndex, summarizeMirDoubts } from "@/lib/training/mir-doubts";
 import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers } from "@/lib/training/mir-review";
 import { recordMirStudyAnswers } from "@/lib/training/mir-study-log";
@@ -32,8 +33,7 @@ import { MirScoreBreakdown } from "./mir-score";
 import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
 
 type Stage = "intro" | "exam" | "results";
-type ReviewFilter = "wrong" | "blank" | "correct" | "all";
-
+type ReviewFilter = "wrong" | "blank" | "correct" | "doubt" | "all";
 
 const SAVE_TIMEOUT_MS = 8000;
 
@@ -55,7 +55,8 @@ function formatClock(totalSeconds: number): string {
 /**
  * Simulacro completo del módulo MIR: cronometrado, en "modo examen" (sin
  * feedback instantáneo), navegable libremente entre preguntas hasta
- * entregar. Guarda el intento en la cuenta del usuario, alimenta la racha
+ * entregar. Cada pregunta se puede marcar «con duda» para volver a ella
+ * antes de entregar; al corregir se ve qué aportaron las dudosas. Guarda el intento en la cuenta del usuario, alimenta la racha
  * MIR, suma al mapa de dominio y manda las falladas al repaso de errores
  * (ver mir-convocatoria.ts, mir-streak.ts, mir-mastery.ts y mir-review.ts
  * en src/lib/training).
@@ -69,6 +70,7 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
   const [questions, setQuestions] = useState<TrainingQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [doubts, setDoubts] = useState<Set<string>>(() => new Set());
   const [secondsLeft, setSecondsLeft] = useState(0);
 
   const [attempt, setAttempt] = useState<MirExamAttempt | null>(null);
@@ -194,6 +196,7 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
     submittedRef.current = false;
     setQuestions(selected);
     setAnswers({});
+    setDoubts(new Set());
     setCurrentIndex(0);
     setSecondsLeft(activeEdition.minutes * 60);
     setAttempt(null);
@@ -205,12 +208,30 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
     setAnswers((prev) => ({ ...prev, [questionId]: optionId }));
   }
 
+  function toggleDoubt(questionId: string) {
+    setDoubts((prev) => {
+      const next = new Set(prev);
+      if (next.has(questionId)) next.delete(questionId);
+      else next.add(questionId);
+      return next;
+    });
+  }
+
+  function goToNextDoubt() {
+    const next = getNextMirDoubtIndex(questions, doubts, currentIndex);
+    if (next !== null) setCurrentIndex(next);
+  }
+
   function handleRequestSubmit() {
     const unanswered = questions.length - Object.keys(answers).length;
-    if (unanswered > 0) {
-      const confirmed = window.confirm(
-        `Te faltan ${unanswered} pregunta${unanswered === 1 ? "" : "s"} por responder. ¿Quieres entregar el examen de todas formas?`,
-      );
+    const pending = [
+      unanswered > 0 ? `Te faltan ${unanswered} pregunta${unanswered === 1 ? "" : "s"} por responder.` : "",
+      doubts.size > 0
+        ? `Tienes ${doubts.size} pregunta${doubts.size === 1 ? "" : "s"} marcada${doubts.size === 1 ? "" : "s"} con duda.`
+        : "",
+    ].filter(Boolean);
+    if (pending.length > 0) {
+      const confirmed = window.confirm(`${pending.join(" ")} ¿Quieres entregar el examen de todas formas?`);
       if (!confirmed) return;
     }
     void handleSubmit();
@@ -304,6 +325,8 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
     const currentQuestion = questions[currentIndex];
     const answeredCount = Object.keys(answers).length;
     const isLowTime = secondsLeft <= 300;
+    const doubtCount = doubts.size;
+    const isCurrentDoubt = currentQuestion ? doubts.has(currentQuestion.id) : false;
 
     if (!currentQuestion) return null;
 
@@ -314,6 +337,19 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
             <p className="text-xs font-bold text-slate-300">
               Pregunta {currentIndex + 1} de {total}
               <span className="ml-2 text-slate-500">· {answeredCount} respondidas</span>
+              {doubtCount > 0 ? (
+                <button
+                  type="button"
+                  onClick={goToNextDoubt}
+                  disabled={doubtCount === 1 && isCurrentDoubt}
+                  title="Ir a la siguiente pregunta con duda"
+                  className="ml-2 inline-flex items-center gap-1 rounded-full border border-sky-400/40 px-2 py-0.5 text-sky-300 transition hover:border-sky-300 disabled:cursor-default disabled:hover:border-sky-400/40"
+                >
+                  <HelpCircle className="h-3 w-3" aria-hidden />
+                  {doubtCount} con duda
+                  {doubtCount === 1 && isCurrentDoubt ? null : <ArrowRight className="h-3 w-3" aria-hidden />}
+                </button>
+              ) : null}
             </p>
             <div
               className={`flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-black ${
@@ -350,6 +386,7 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
               {questions.map((question, index) => {
                 const isAnswered = Boolean(answers[question.id]);
                 const isCurrent = index === currentIndex;
+                const isDoubt = doubts.has(question.id);
                 return (
                   <button
                     key={question.id}
@@ -357,8 +394,8 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
                     data-index={index}
                     onClick={() => setCurrentIndex(index)}
                     aria-current={isCurrent ? "step" : undefined}
-                    aria-label={`Pregunta ${index + 1}${isAnswered ? ", respondida" : ""}`}
-                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold tabular-nums transition ${
+                    aria-label={`Pregunta ${index + 1}${isAnswered ? ", respondida" : ""}${isDoubt ? ", con duda" : ""}`}
+                    className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold tabular-nums transition ${
                       isCurrent
                         ? "bg-mq-premium-gold text-[#0A1F44]"
                         : isAnswered
@@ -367,6 +404,12 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
                     }`}
                   >
                     {index + 1}
+                    {isDoubt ? (
+                      <span
+                        aria-hidden
+                        className="absolute right-0.5 top-0.5 h-2 w-2 rounded-full bg-sky-400 ring-2 ring-[#0A1F44]"
+                      />
+                    ) : null}
                   </button>
                 );
               })}
@@ -384,11 +427,28 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
         </div>
 
         <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-7">
-          {currentQuestion.examArea ? (
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
-              {currentQuestion.examArea}
-            </p>
-          ) : null}
+          <div className="flex items-start justify-between gap-3">
+            {currentQuestion.examArea ? (
+              <p className="pt-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
+                {currentQuestion.examArea}
+              </p>
+            ) : (
+              <span />
+            )}
+            <button
+              type="button"
+              onClick={() => toggleDoubt(currentQuestion.id)}
+              aria-pressed={isCurrentDoubt}
+              className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border px-3 text-xs font-bold transition ${
+                isCurrentDoubt
+                  ? "border-sky-400/60 bg-sky-400/15 text-sky-200"
+                  : "border-white/15 text-slate-300 hover:border-white/30 hover:text-white"
+              }`}
+            >
+              <HelpCircle className="h-3.5 w-3.5" aria-hidden />
+              {isCurrentDoubt ? "Con duda" : "Marcar duda"}
+            </button>
+          </div>
           {currentQuestion.officialExam ? (
             <div className="mt-2">
               <MirOfficialBadge officialExam={currentQuestion.officialExam} />
@@ -478,9 +538,12 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
   if (!attempt) return null;
 
   const blankCount = questions.length - attempt.correctAnswers - attempt.wrongAnswers;
+  const doubtSummary = summarizeMirDoubts(questions, answers, doubts);
+  const doubtAnswered = doubtSummary.correct + doubtSummary.wrong;
   const filteredQuestions = questions.filter((question) => {
     const given = answers[question.id];
     if (reviewFilter === "all") return true;
+    if (reviewFilter === "doubt") return doubts.has(question.id);
     if (reviewFilter === "blank") return !given;
     if (reviewFilter === "correct") return given === question.correctOptionId;
     return Boolean(given) && given !== question.correctOptionId;
@@ -508,6 +571,30 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
             <p className="text-[11px] font-semibold text-slate-400">sin responder</p>
           </div>
         </div>
+        {doubtSummary.marked > 0 ? (
+          <div className="mt-3 rounded-xl border border-sky-400/25 bg-sky-400/[0.06] p-4 text-left">
+            <p className="flex items-center gap-2 text-sm font-bold text-white">
+              <HelpCircle className="h-4 w-4 shrink-0 text-sky-300" aria-hidden />
+              Marcaste {doubtSummary.marked} {doubtSummary.marked === 1 ? "pregunta" : "preguntas"} con duda
+            </p>
+            <p className="mt-1 text-xs text-slate-300">
+              {doubtSummary.correct} {doubtSummary.correct === 1 ? "acertada" : "acertadas"} ·{" "}
+              {doubtSummary.wrong} {doubtSummary.wrong === 1 ? "fallada" : "falladas"} · {doubtSummary.blank} en blanco
+              {doubtAnswered > 0
+                ? ` · te ${doubtSummary.net < 0 ? "restaron" : "aportaron"} ${doubtSummary.net < 0 ? "−" : "+"}${formatMirNet(Math.abs(doubtSummary.net))} netas`
+                : ""}
+            </p>
+            {doubtAnswered > 0 ? (
+              <p className="mt-1 text-xs text-slate-400">
+                {doubtSummary.net > 0
+                  ? "Arriesgar en las dudosas te sumó: tu intuición va por buen camino."
+                  : doubtSummary.net < 0
+                    ? "En las dudosas fallaste demasiado: si no puedes descartar ninguna opción, mejor en blanco."
+                    : "En las dudosas lo ganado y lo perdido se compensaron."}
+              </p>
+            ) : null}
+          </div>
+        ) : null}
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <button
             type="button"
@@ -532,6 +619,7 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
               ["wrong", "Falladas"],
               ["blank", "Sin responder"],
               ["correct", "Correctas"],
+              ...(doubtSummary.marked > 0 ? ([["doubt", `Con duda (${doubtSummary.marked})`]] as const) : []),
               ["all", "Todas"],
             ] as const
           ).map(([value, label]) => (
@@ -561,6 +649,7 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
                 key={question.id}
                 question={question}
                 given={answers[question.id] ?? null}
+                isDoubt={doubts.has(question.id)}
               />
             ))}
           </div>

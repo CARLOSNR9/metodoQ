@@ -1,4 +1,4 @@
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, HelpCircle, XCircle } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { renderWithBold } from "./mir-rich-text";
 
@@ -14,12 +14,15 @@ export function MirQuestionReviewCard({
   question,
   given,
   wasWrong = false,
+  isDoubt = false,
   id,
 }: {
   question: TrainingQuestion;
   given: string | null | undefined;
   /** Para fallos sin respuesta guardada: se marca igualmente como fallo. */
   wasWrong?: boolean;
+  /** Marcada «con duda» durante el simulacro. */
+  isDoubt?: boolean;
   id?: string;
 }) {
   const isCorrect = given != null && given === question.correctOptionId;
@@ -41,19 +44,27 @@ export function MirQuestionReviewCard({
         ) : (
           <span />
         )}
-        {given ? (
-          isCorrect ? (
-            <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
-          ) : (
+        <span className="flex shrink-0 items-center gap-2">
+          {isDoubt ? (
+            <span className="inline-flex items-center gap-1 rounded-full border border-sky-400/40 px-2 py-0.5 text-[10px] font-bold text-sky-300">
+              <HelpCircle className="h-3 w-3" aria-hidden />
+              Con duda
+            </span>
+          ) : null}
+          {given ? (
+            isCorrect ? (
+              <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
+            ) : (
+              <XCircle className="h-4 w-4 shrink-0 text-rose-400" />
+            )
+          ) : given === null ? (
+            <span className="shrink-0 rounded-full border border-white/15 px-2 py-0.5 text-[10px] font-bold text-slate-400">
+              Sin responder
+            </span>
+          ) : wasWrong ? (
             <XCircle className="h-4 w-4 shrink-0 text-rose-400" />
-          )
-        ) : given === null ? (
-          <span className="shrink-0 rounded-full border border-white/15 px-2 py-0.5 text-[10px] font-bold text-slate-400">
-            Sin responder
-          </span>
-        ) : wasWrong ? (
-          <XCircle className="h-4 w-4 shrink-0 text-rose-400" />
-        ) : null}
+          ) : null}
+        </span>
       </div>
       <p className="mt-2 text-sm leading-relaxed text-white">{renderWithBold(question.statement)}</p>
 
