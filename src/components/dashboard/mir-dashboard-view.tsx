@@ -16,6 +16,7 @@ import {
   MapPin,
   Stethoscope,
   Timer,
+  TrendingUp,
   Trophy,
 } from "lucide-react";
 import {
@@ -36,6 +37,7 @@ import { MirAchievementsCard } from "./mir-achievements";
 import { MirDailyPlanCard } from "./mir-daily-plan-card";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
+import { MirNetCurveCard } from "./mir-net-curve";
 import { MirPomodoroCard } from "./mir-pomodoro-card";
 import { MirWeeklyCard } from "./mir-weekly-card";
 
@@ -102,7 +104,7 @@ function EditionLink({
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
  * plan de hoy, preguntas de la semana con Pomodoro, accesos libres a práctica, repaso de
- * errores, tarjetas de repaso y simulacro, mapa de dominio por especialidad, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
+ * errores, tarjetas de repaso y simulacro, curva de netas, mapa de dominio por especialidad, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -332,6 +334,16 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           </div>
         )}
       </section>
+
+      {hasContent ? (
+        <section>
+          <div className="mb-3 flex items-center gap-2">
+            <TrendingUp className="h-4 w-4 text-mq-premium-gold" />
+            <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu evolución en simulacros</h2>
+          </div>
+          <MirNetCurveCard userId={userId} />
+        </section>
+      ) : null}
 
       {hasContent ? (
         <section>
