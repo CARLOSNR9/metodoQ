@@ -42,6 +42,7 @@ import { MirNetCurveCard } from "./mir-net-curve";
 import { MirPomodoroCard } from "./mir-pomodoro-card";
 import { MirSpainRoadmap } from "./mir-spain-roadmap";
 import { MirWeeklyCard } from "./mir-weekly-card";
+import { MirWeeklyRankingCard } from "./mir-weekly-ranking";
 
 type MirDashboardViewProps = {
   userId: string;
@@ -105,7 +106,7 @@ function EditionLink({
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * plan de hoy, preguntas de la semana con Pomodoro, accesos libres a práctica, repaso de
+ * plan de hoy, preguntas y ranking de la semana con Pomodoro, accesos libres a práctica, repaso de
  * errores, tarjetas de repaso y simulacro, curva de netas, mapa de dominio, camino a España por especialidad, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
@@ -205,6 +206,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           </div>
           <div className="space-y-4">
             <MirWeeklyCard week={today?.week ?? null} dailyTarget={today?.plan.pace.dailyTarget} />
+            <MirWeeklyRankingCard userId={userId} />
             <MirPomodoroCard />
           </div>
         </section>
