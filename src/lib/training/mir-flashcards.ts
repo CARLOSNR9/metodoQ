@@ -1,4 +1,4 @@
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { collection, deleteDoc, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { MIR_MIXED_SPECIALTY, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
@@ -8,7 +8,9 @@ import type { TrainingQuestion } from "@/lib/questions/types";
  * Tarjetas de repaso rápido MIR: una por pregunta del banco. El anverso es
  * el tema (y su especialidad); el reverso, sus puntos clave. El estudiante
  * se autoevalúa ("Lo sabía" / "Repasar") y el último estado de cada tarjeta
- * se guarda en `users/{uid}.mirFlashcards` (questionId → estado).
+ * se guarda en `users/{uid}.mirFlashcards` (questionId → estado). Cada
+ * estudiante puede reescribir el tema y los puntos clave de una tarjeta; su
+ * versión vive en `users/{uid}/mirFlashcardEdits/{questionId}`.
  */
 export const MIR_FLASHCARD_DECK_SIZE = 10;
 
@@ -93,4 +95,45 @@ export async function saveMirFlashcardStatuses(
   );
   if (Object.keys(update).length === 0) return;
   await setDoc(doc(getFirebaseDb(), "users", userId), { mirFlashcards: update }, { merge: true });
+}
+
+/** Límites de una tarjeta editada (los mismos que exige firestore.rules). */
+export const MIR_FLASHCARD_TOPIC_MAX_LENGTH = 300;
+export const MIR_FLASHCARD_MAX_KEY_POINTS = 20;
+
+export type MirFlashcardEdit = { topic: string; keyPoints: string[]; updatedAt: string };
+export type MirFlashcardEdits = Record<string, MirFlashcardEdit>;
+
+function flashcardEditsCollection(userId: string) {
+  return collection(getFirebaseDb(), "users", userId, "mirFlashcardEdits");
+}
+
+/** La tarjeta con la versión del estudiante, si la editó. */
+export function applyMirFlashcardEdit(card: MirFlashcard, edits: MirFlashcardEdits): MirFlashcard {
+  const edit = edits[card.id];
+  return edit ? { ...card, topic: edit.topic, keyPoints: edit.keyPoints } : card;
+}
+
+export async function getMirFlashcardEdits(userId: string): Promise<MirFlashcardEdits> {
+  try {
+    const snap = await getDocs(flashcardEditsCollection(userId));
+    return Object.fromEntries(snap.docs.map((entry) => [entry.id, entry.data() as MirFlashcardEdit]));
+  } catch (error) {
+    console.error("No se pudieron leer las tarjetas MIR editadas.", error);
+    return {};
+  }
+}
+
+export async function saveMirFlashcardEdit(
+  userId: string,
+  cardId: string,
+  edit: { topic: string; keyPoints: string[] },
+): Promise<MirFlashcardEdit> {
+  const saved: MirFlashcardEdit = { ...edit, updatedAt: new Date().toISOString() };
+  await setDoc(doc(flashcardEditsCollection(userId), cardId), saved);
+  return saved;
+}
+
+export async function deleteMirFlashcardEdit(userId: string, cardId: string): Promise<void> {
+  await deleteDoc(doc(flashcardEditsCollection(userId), cardId));
 }

@@ -53,6 +53,16 @@ service cloud.firestore {
         allow read, create, update, delete: if isOwner(userId);
       }
 
+      // Versión propia de las tarjetas de repaso MIR (tema y puntos clave)
+      match /mirFlashcardEdits/{cardId} {
+        allow read, delete: if isOwner(userId);
+        allow create, update: if isOwner(userId)
+          && request.resource.data.topic is string
+          && request.resource.data.topic.size() <= 300
+          && request.resource.data.keyPoints is list
+          && request.resource.data.keyPoints.size() <= 20;
+      }
+
       // Borrador de simulacro/convocatoria para retomar tras un corte
       match /examDrafts/{draftId} {
         allow read, create, update, delete: if isOwner(userId);
