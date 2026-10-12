@@ -1,5 +1,6 @@
 import { DR_Q_EVAL_1_QUESTIONS } from "@/data/evaluaciones/evaluacion-dr-q";
 import { DR_Q_EVAL_2_QUESTIONS } from "@/data/evaluaciones/evaluacion-dr-q-2";
+import { DR_Q_EVAL_3_QUESTIONS } from "@/data/evaluaciones/evaluacion-dr-q-3";
 import type { DrQChallengeCompletion } from "@/lib/dr-q-challenge-progress";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -30,6 +31,13 @@ export const DR_Q_CHALLENGES: DrQChallenge[] = [
     editionLabel: "Segunda Evaluación",
     href: "/dashboard/evaluaciones/segunda",
     questions: DR_Q_EVAL_2_QUESTIONS,
+  },
+  {
+    id: "eval3",
+    label: "Reto #3 del Dr. Q",
+    editionLabel: "Tercera Evaluación",
+    href: "/dashboard/evaluaciones/tercera",
+    questions: DR_Q_EVAL_3_QUESTIONS,
   },
 ];
 

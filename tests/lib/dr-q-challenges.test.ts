@@ -63,9 +63,16 @@ describe("getNextDrQChallenge con datos del perfil", () => {
     expect(getNextDrQChallenge({ drQChallenges })?.id).toBe("eval2");
   });
 
-  it("con ambos retos completados no quedan retos pendientes", () => {
+  it("con los retos 1 y 2 completados, el siguiente es el reto 3", () => {
     const drQChallenges = readDrQChallengeCompletions({
       drQChallenges: { eval1: completion(7), eval2: completion(8) },
+    });
+    expect(getNextDrQChallenge({ drQChallenges })?.id).toBe("eval3");
+  });
+
+  it("con todos los retos completados no quedan retos pendientes", () => {
+    const drQChallenges = readDrQChallengeCompletions({
+      drQChallenges: { eval1: completion(7), eval2: completion(8), eval3: completion(9) },
     });
     expect(getNextDrQChallenge({ drQChallenges })).toBeNull();
   });
