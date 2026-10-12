@@ -147,23 +147,27 @@ function stableHash(text: string): number {
 const byStableHash = (salt: string) => (a: TrainingQuestion, b: TrainingQuestion) =>
   stableHash(`${salt}:${a.id}`) - stableHash(`${salt}:${b.id}`) || a.id.localeCompare(b.id);
 
-/**
- * Dos simulacros de `MIXED_SIMULACRO_SIZE` preguntas oficiales, sin repetir
- * entre ellos, con el mismo reparto por especialidad que el conjunto de los
- * exámenes oficiales (método del mayor resto). Se excluyen las preguntas
- * anuladas por el Ministerio. La selección es determinista: solo cambia si
- * cambia el banco oficial.
- */
-function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], TrainingQuestion[]] {
-  const eligible = pool.filter((question) => !question.tags?.includes("anulada"));
-  const total = Math.min(MIXED_SIMULACRO_SIZE * 2, eligible.length);
+/** Preguntas oficiales que pueden entrar en un simulacro: sin las anuladas por el Ministerio. */
+const isEligibleForSimulacro = (question: TrainingQuestion) => !question.tags?.includes("anulada");
+
+/** Preguntas agrupadas por su especialidad principal (la primera de `examArea`). */
+function groupByArea(questions: TrainingQuestion[]): Map<string, TrainingQuestion[]> {
   const byArea = new Map<string, TrainingQuestion[]>();
-  for (const question of eligible) {
+  for (const question of questions) {
     const area = (question.examArea ?? "").split("/")[0].trim();
     byArea.set(area, [...(byArea.get(area) ?? []), question]);
   }
+  return byArea;
+}
+
+/**
+ * Cuántas preguntas de cada especialidad entran en un simulacro de `total`
+ * para respetar el reparto del banco (método del mayor resto).
+ */
+function getAreaQuotas(byArea: Map<string, TrainingQuestion[]>, total: number): Map<string, number> {
+  const poolSize = [...byArea.values()].reduce((sum, questions) => sum + questions.length, 0);
   const areas = [...byArea.keys()].sort((a, b) => a.localeCompare(b, "es"));
-  const exact = new Map(areas.map((area) => [area, (byArea.get(area)!.length * total) / eligible.length]));
+  const exact = new Map(areas.map((area) => [area, (byArea.get(area)!.length * total) / poolSize]));
   const quota = new Map(areas.map((area) => [area, Math.floor(exact.get(area)!)]));
   let remaining = total - [...quota.values()].reduce((sum, value) => sum + value, 0);
   for (const area of [...areas].sort(
@@ -173,6 +177,20 @@ function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], Tr
     quota.set(area, quota.get(area)! + 1);
     remaining -= 1;
   }
+  return quota;
+}
+
+/**
+ * Dos simulacros de `MIXED_SIMULACRO_SIZE` preguntas oficiales, sin repetir
+ * entre ellos, con el mismo reparto por especialidad que el conjunto de los
+ * exámenes oficiales. Se excluyen las preguntas anuladas por el Ministerio.
+ * La selección es determinista: solo cambia si cambia el banco oficial.
+ */
+function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], TrainingQuestion[]] {
+  const eligible = pool.filter(isEligibleForSimulacro);
+  const byArea = groupByArea(eligible);
+  const quota = getAreaQuotas(byArea, Math.min(MIXED_SIMULACRO_SIZE * 2, eligible.length));
+  const areas = [...byArea.keys()].sort((a, b) => a.localeCompare(b, "es"));
   const selected = areas.flatMap((area) =>
     [...byArea.get(area)!].sort(byStableHash("seleccion")).slice(0, quota.get(area)),
   );
@@ -182,6 +200,30 @@ function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], Tr
 }
 
 const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(MIR_OFFICIAL_QUESTIONS);
+
+/** Preguntas del simulacro rápido: distintas en cada intento. */
+const QUICK_SIMULACRO_SIZE = 25;
+
+/**
+ * Sorteo de `size` preguntas de `pool` con el reparto por especialidad del
+ * banco: cuántas de cada una es fijo (mayor resto) y cuáles, al azar.
+ */
+export function pickMirStratifiedSample(
+  pool: TrainingQuestion[],
+  size: number,
+  random: () => number = Math.random,
+): TrainingQuestion[] {
+  const byArea = groupByArea(pool);
+  const quota = getAreaQuotas(byArea, Math.min(size, pool.length));
+  return [...byArea.entries()].flatMap(([area, questions]) => {
+    const copy = [...questions];
+    for (let i = copy.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(random() * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy.slice(0, quota.get(area));
+  });
+}
 
 /**
  * Modelo del módulo "Simulacro MIR". Sigue el mismo patrón que las
@@ -197,7 +239,10 @@ export type MirExamEdition = {
   examDate: string | null;
   questionCount: number;
   minutes: number;
+  /** Banco de la edición; si hay `sampleSize`, cada intento sortea de aquí. */
   questions: TrainingQuestion[];
+  /** Preguntas por intento cuando se sortean (ver pickMirStratifiedSample). */
+  sampleSize?: number;
 };
 
 export type MirExamAttempt = {
@@ -221,15 +266,18 @@ function buildEdition(
   label: string,
   description: string,
   questions: TrainingQuestion[],
+  sampleSize?: number,
 ): MirExamEdition {
+  const questionCount = sampleSize ? Math.min(sampleSize, questions.length) : questions.length;
   return {
     code,
     label,
     description,
     examDate: MIR_EXAM_DATE,
-    questionCount: questions.length,
-    minutes: getMirExamMinutes(questions.length),
+    questionCount,
+    minutes: getMirExamMinutes(questionCount),
     questions,
+    ...(sampleSize ? { sampleSize: questionCount } : {}),
   };
 }
 
@@ -237,7 +285,8 @@ function buildEdition(
  * Simulacros 1, 2 y completo: preguntas oficiales de todas las convocatorias
  * mezcladas, con el reparto por especialidad del MIR (ver buildMixedSimulacros).
  * Usan códigos nuevos para no mezclar sus intentos con los de los antiguos
- * simulacros de preguntas propias. "MIR 2025/…/2016 oficial" usan los
+ * simulacros de preguntas propias. El simulacro rápido sortea 25 en cada
+ * intento con ese mismo reparto. "MIR 2025/…/2016 oficial" usan los
  * exámenes oficiales de cada año. Las ediciones sin preguntas no se muestran.
  */
 export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
@@ -258,6 +307,13 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
     "Simulacro completo",
     "Las 200 preguntas de los simulacros 1 y 2 en una sola sesión, como el examen real.",
     [...MIR_SIMULACRO_1_QUESTIONS, ...MIR_SIMULACRO_2_QUESTIONS],
+  ),
+  buildEdition(
+    "MIR-RAPIDO",
+    "Simulacro rápido",
+    "25 preguntas oficiales distintas en cada intento, con el reparto por especialidad del MIR. Para los días con poco tiempo.",
+    MIR_OFFICIAL_QUESTIONS.filter(isEligibleForSimulacro),
+    QUICK_SIMULACRO_SIZE,
   ),
   buildEdition(
     "MIR-2025-OFICIAL-1",
@@ -335,7 +391,10 @@ export function getMirEdition(code: string): MirExamEdition | null {
 }
 
 export function selectMirExamQuestions(edition: MirExamEdition): TrainingQuestion[] {
-  return shuffleMirQuestionsOptions(shuffleQuestions(edition.questions));
+  const questions = edition.sampleSize
+    ? pickMirStratifiedSample(edition.questions, edition.sampleSize)
+    : edition.questions;
+  return shuffleMirQuestionsOptions(shuffleQuestions(questions));
 }
 
 /** Pantalla del simulacro con la edición ya elegida. */

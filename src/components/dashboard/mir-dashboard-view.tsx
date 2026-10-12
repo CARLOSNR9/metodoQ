@@ -302,7 +302,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
               <p className="mt-5 text-[11px] font-black uppercase tracking-wide text-slate-400">
                 Simulacros Método Q
               </p>
-              <ul className="mt-2 grid gap-2 sm:grid-cols-3">
+              <ul className="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                 {ownEditions.map((edition) => (
                   <li key={edition.code}>
                     <EditionLink edition={edition} lastAttempt={attemptsByEdition[edition.code]} />

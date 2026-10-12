@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight, Check, GalleryHorizontalEnd, Layers, PartyPopper, Stethoscope, Target } from "lucide-react";
+import { buildMirSimulacroHref } from "@/lib/training/mir-convocatoria";
 import type { MirDailyPlan, MirPlanStep } from "@/lib/training/mir-daily-plan";
 
 const numberFormat = new Intl.NumberFormat("es-ES", { useGrouping: "always" });
@@ -168,13 +169,13 @@ export function MirDailyPlanCard({ plan }: { plan: MirDailyPlan | null }) {
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-emerald-400/20 bg-emerald-400/[0.06] px-4 py-3">
           <p className="flex items-center gap-2 text-sm font-semibold text-emerald-200">
             <PartyPopper className="h-4 w-4" />
-            Gran trabajo. Si te quedan fuerzas, un simulacro te dirá cómo vas.
+            Gran trabajo. Si te quedan fuerzas, un simulacro rápido de 25 preguntas te dirá cómo vas.
           </p>
           <Link
-            href="/dashboard/mir/simulacro"
+            href={buildMirSimulacroHref("MIR-RAPIDO")}
             className="inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-white/20 px-4 text-sm font-black text-white transition hover:border-white/40"
           >
-            Hacer un simulacro
+            Simulacro rápido
           </Link>
         </div>
       ) : (
