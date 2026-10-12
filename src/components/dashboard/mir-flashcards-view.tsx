@@ -2,15 +2,22 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Check, ChevronRight, GalleryHorizontalEnd, Loader2, RotateCcw, Shuffle } from "lucide-react";
+import { ArrowLeft, Check, ChevronRight, GalleryHorizontalEnd, Loader2, Pencil, RotateCcw, Shuffle } from "lucide-react";
 import {
   MIR_FLASHCARDS_TO_REVIEW,
   MIR_FLASHCARD_DECK_SIZE,
+  MIR_FLASHCARD_MAX_KEY_POINTS,
+  MIR_FLASHCARD_TOPIC_MAX_LENGTH,
+  applyMirFlashcardEdit,
   buildMirFlashcardRound,
+  deleteMirFlashcardEdit,
+  getMirFlashcardEdits,
   getMirFlashcardPool,
   getMirFlashcardStatuses,
+  saveMirFlashcardEdit,
   saveMirFlashcardStatuses,
   type MirFlashcard,
+  type MirFlashcardEdits,
   type MirFlashcardStatus,
   type MirFlashcardStatuses,
 } from "@/lib/training/mir-flashcards";
@@ -49,23 +56,34 @@ type Round = {
 
 type RoundResult = { deckKey: string; known: number; review: number };
 
+/** Borrador de la versión propia de una tarjeta (un punto clave por línea). */
+type CardEditor = { topic: string; keyPointsText: string; error: string | null };
+
 /**
  * Tarjetas de repaso rápido MIR (/dashboard/mir/tarjetas): tema en el
  * anverso, puntos clave en el reverso y autoevaluación. Las marcadas como
  * "Repasar" vuelven una vez al final de la ronda y quedan en el mazo
- * "Para repasar".
+ * "Para repasar". El estudiante puede reescribir cualquier tarjeta a su gusto
+ * (p. ej. acortar puntos clave largos) o volver a la versión original.
  */
 export function MirFlashcardsView({ userId }: { userId: string }) {
   const [statuses, setStatuses] = useState<MirFlashcardStatuses | null>(null);
   const [round, setRound] = useState<Round | null>(null);
   const [result, setResult] = useState<RoundResult | null>(null);
   const [isSaving, setIsSaving] = useState(false);
+  const [edits, setEdits] = useState<MirFlashcardEdits | null>(null);
+  const [editor, setEditor] = useState<CardEditor | null>(null);
+  const [isSavingEdit, setIsSavingEdit] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    getMirFlashcardStatuses(userId).then((loaded) => {
-      if (!cancelled) setStatuses(loaded);
-    });
+    Promise.all([getMirFlashcardStatuses(userId), getMirFlashcardEdits(userId)]).then(
+      ([loadedStatuses, loadedEdits]) => {
+        if (cancelled) return;
+        setStatuses(loadedStatuses);
+        setEdits(loadedEdits);
+      },
+    );
     return () => {
       cancelled = true;
     };
@@ -74,6 +92,7 @@ export function MirFlashcardsView({ userId }: { userId: string }) {
   function startRound(deckKey: string) {
     if (!statuses) return;
     setResult(null);
+    setEditor(null);
     const queue = buildMirFlashcardRound(deckKey, statuses);
     setRound({
       deckKey,
@@ -145,7 +164,7 @@ export function MirFlashcardsView({ userId }: { userId: string }) {
   );
 
   useEffect(() => {
-    if (!round) return;
+    if (!round || editor) return;
     function handleKey(event: KeyboardEvent) {
       // Botones y enlaces con foco responden solos a Enter/espacio.
       if (
@@ -165,9 +184,60 @@ export function MirFlashcardsView({ userId }: { userId: string }) {
     }
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [round, flip, rate]);
+  }, [round, editor, flip, rate]);
 
-  if (!statuses) {
+  function openEditor(card: MirFlashcard) {
+    setEditor({ topic: card.topic, keyPointsText: card.keyPoints.join("\n"), error: null });
+  }
+
+  async function saveEdit(cardId: string) {
+    if (!editor) return;
+    const topic = editor.topic.trim();
+    const keyPoints = editor.keyPointsText
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean);
+    if (!topic || keyPoints.length === 0) {
+      setEditor({ ...editor, error: "La tarjeta necesita un tema y al menos un punto clave." });
+      return;
+    }
+    if (keyPoints.length > MIR_FLASHCARD_MAX_KEY_POINTS) {
+      setEditor({ ...editor, error: `Máximo ${MIR_FLASHCARD_MAX_KEY_POINTS} puntos clave.` });
+      return;
+    }
+    setIsSavingEdit(true);
+    try {
+      const saved = await withTimeout(saveMirFlashcardEdit(userId, cardId, { topic, keyPoints }), SAVE_TIMEOUT_MS);
+      setEdits((previous) => ({ ...previous, [cardId]: saved }));
+      setEditor(null);
+    } catch (error) {
+      console.error("No se pudo guardar la tarjeta MIR editada.", error);
+      setEditor({ ...editor, error: "No se pudo guardar. Revisa tu conexión e inténtalo de nuevo." });
+    } finally {
+      setIsSavingEdit(false);
+    }
+  }
+
+  async function restoreOriginal(cardId: string) {
+    if (!editor) return;
+    setIsSavingEdit(true);
+    try {
+      await withTimeout(deleteMirFlashcardEdit(userId, cardId), SAVE_TIMEOUT_MS);
+      setEdits((previous) => {
+        const next = { ...previous };
+        delete next[cardId];
+        return next;
+      });
+      setEditor(null);
+    } catch (error) {
+      console.error("No se pudo restaurar la tarjeta MIR original.", error);
+      setEditor({ ...editor, error: "No se pudo restaurar. Revisa tu conexión e inténtalo de nuevo." });
+    } finally {
+      setIsSavingEdit(false);
+    }
+  }
+
+  if (!statuses || !edits) {
     return (
       <div className="flex min-h-[40vh] items-center justify-center">
         <div className="h-12 w-12 animate-spin rounded-full border-4 border-mq-premium-gold border-t-transparent" />
@@ -178,13 +248,17 @@ export function MirFlashcardsView({ userId }: { userId: string }) {
   const toReviewCount = getMirFlashcardPool(MIR_FLASHCARDS_TO_REVIEW, statuses).length;
 
   if (round) {
-    const card = round.queue[round.index];
+    const card = applyMirFlashcardEdit(round.queue[round.index], edits);
+    const isEdited = Boolean(edits[card.id]);
     const isRepeat = round.index >= round.originalLength;
     return (
       <div className="mx-auto w-full max-w-2xl">
         <button
           type="button"
-          onClick={() => setRound(null)}
+          onClick={() => {
+            setRound(null);
+            setEditor(null);
+          }}
           className="mb-6 inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-white"
         >
           <ArrowLeft className="h-3.5 w-3.5" />
@@ -204,72 +278,141 @@ export function MirFlashcardsView({ userId }: { userId: string }) {
           />
         </div>
 
-        <div
-          role="button"
-          tabIndex={0}
-          onClick={flip}
-          aria-label={round.isFlipped ? "Tarjeta girada: puntos clave" : "Girar la tarjeta"}
-          className="block w-full cursor-pointer text-left [perspective:1200px]"
-        >
-          <div
-            className={`grid transition-transform duration-500 [transform-style:preserve-3d] motion-reduce:transition-none ${
-              round.isFlipped ? "[transform:rotateY(180deg)]" : ""
-            }`}
-          >
-            <div className="flex min-h-[320px] flex-col justify-between rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] p-7 [backface-visibility:hidden] [grid-area:1/1]">
-              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
-                {card.examArea}
-              </p>
-              <p className="text-balance text-xl font-black leading-snug text-white sm:text-2xl">{card.topic}</p>
-              <p className="text-xs text-slate-400">
-                ¿Qué es lo clave de este tema? Piénsalo y toca la tarjeta para girarla.
-              </p>
+        {editor ? (
+          <div className="rounded-[2rem] border border-mq-premium-gold/30 bg-[#11285a] p-7">
+            <p className="text-[11px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
+              Editar tarjeta
+            </p>
+            <label className="mt-4 block text-xs font-bold text-slate-300" htmlFor="flashcard-topic">
+              Tema
+            </label>
+            <input
+              id="flashcard-topic"
+              value={editor.topic}
+              maxLength={MIR_FLASHCARD_TOPIC_MAX_LENGTH}
+              onChange={(event) => setEditor({ ...editor, topic: event.target.value, error: null })}
+              className="mt-1.5 w-full rounded-xl border border-white/15 bg-white/[0.06] px-3 py-2.5 text-sm text-white outline-none focus:border-mq-premium-gold/60"
+            />
+            <label className="mt-4 block text-xs font-bold text-slate-300" htmlFor="flashcard-key-points">
+              Puntos clave <span className="font-medium text-slate-400">(uno por línea)</span>
+            </label>
+            <textarea
+              id="flashcard-key-points"
+              value={editor.keyPointsText}
+              rows={8}
+              onChange={(event) => setEditor({ ...editor, keyPointsText: event.target.value, error: null })}
+              className="mt-1.5 w-full resize-y rounded-xl border border-white/15 bg-white/[0.06] px-3 py-2.5 text-sm leading-relaxed text-white outline-none focus:border-mq-premium-gold/60"
+            />
+            {editor.error ? <p className="mt-2 text-xs font-semibold text-rose-300">{editor.error}</p> : null}
+            <div className="mt-5 grid grid-cols-2 gap-3">
+              <button
+                type="button"
+                onClick={() => setEditor(null)}
+                disabled={isSavingEdit}
+                className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/20 px-4 text-sm font-bold text-white transition hover:border-white/40 disabled:opacity-60"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                onClick={() => void saveEdit(card.id)}
+                disabled={isSavingEdit}
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-mq-premium-gold px-4 text-sm font-black text-[#0A1F44] transition hover:brightness-110 disabled:opacity-60"
+              >
+                {isSavingEdit ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />}
+                Guardar
+              </button>
             </div>
-            <div className="flex min-h-[320px] flex-col rounded-[2rem] border border-mq-premium-gold/30 bg-[#11285a] p-7 [backface-visibility:hidden] [grid-area:1/1] [transform:rotateY(180deg)]">
-              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
-                Puntos clave
-              </p>
-              <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-100">
-                {card.keyPoints.map((point) => (
-                  <li key={point} className="flex gap-2.5">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-mq-premium-gold" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {round.isFlipped ? (
-          <div className="mt-5 grid grid-cols-2 gap-3">
-            <button
-              type="button"
-              onClick={() => rate("review")}
-              disabled={isSaving}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-rose-400/40 bg-rose-400/10 px-4 text-sm font-black text-rose-200 transition hover:bg-rose-400/20 disabled:opacity-60"
-            >
-              <RotateCcw className="h-4 w-4" />
-              Repasar
-            </button>
-            <button
-              type="button"
-              onClick={() => rate("known")}
-              disabled={isSaving}
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-emerald-400 px-4 text-sm font-black text-[#0A1F44] transition hover:brightness-110 disabled:opacity-60"
-            >
-              {isSaving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />}
-              Lo sabía
-            </button>
+            {isEdited ? (
+              <button
+                type="button"
+                onClick={() => void restoreOriginal(card.id)}
+                disabled={isSavingEdit}
+                className="mt-3 w-full text-center text-xs font-semibold text-slate-400 hover:text-white disabled:opacity-60"
+              >
+                Volver a la versión original
+              </button>
+            ) : null}
           </div>
         ) : (
-          <button
-            type="button"
+          <>
+          <div
+            role="button"
+            tabIndex={0}
             onClick={flip}
-            className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-mq-premium-gold px-6 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+            aria-label={round.isFlipped ? "Tarjeta girada: puntos clave" : "Girar la tarjeta"}
+            className="block w-full cursor-pointer text-left [perspective:1200px]"
           >
-            Girar tarjeta
-          </button>
+            <div
+              className={`grid transition-transform duration-500 [transform-style:preserve-3d] motion-reduce:transition-none ${
+                round.isFlipped ? "[transform:rotateY(180deg)]" : ""
+              }`}
+            >
+              <div className="flex min-h-[320px] flex-col justify-between rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] p-7 [backface-visibility:hidden] [grid-area:1/1]">
+                <p className="flex items-center justify-between gap-3 text-[11px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
+                  {card.examArea}
+                  {isEdited ? <span className="tracking-normal normal-case text-slate-400">Tu versión</span> : null}
+                </p>
+                <p className="text-balance text-xl font-black leading-snug text-white sm:text-2xl">{card.topic}</p>
+                <p className="text-xs text-slate-400">
+                  ¿Qué es lo clave de este tema? Piénsalo y toca la tarjeta para girarla.
+                </p>
+              </div>
+              <div className="flex min-h-[320px] flex-col rounded-[2rem] border border-mq-premium-gold/30 bg-[#11285a] p-7 [backface-visibility:hidden] [grid-area:1/1] [transform:rotateY(180deg)]">
+                <p className="text-[11px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
+                  Puntos clave
+                </p>
+                <ul className="mt-4 space-y-3 text-sm leading-relaxed text-slate-100">
+                  {card.keyPoints.map((point, pointIndex) => (
+                    <li key={pointIndex} className="flex gap-2.5">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-mq-premium-gold" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {round.isFlipped ? (
+            <div className="mt-5 grid grid-cols-2 gap-3">
+              <button
+                type="button"
+                onClick={() => rate("review")}
+                disabled={isSaving}
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-rose-400/40 bg-rose-400/10 px-4 text-sm font-black text-rose-200 transition hover:bg-rose-400/20 disabled:opacity-60"
+              >
+                <RotateCcw className="h-4 w-4" />
+                Repasar
+              </button>
+              <button
+                type="button"
+                onClick={() => rate("known")}
+                disabled={isSaving}
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-emerald-400 px-4 text-sm font-black text-[#0A1F44] transition hover:brightness-110 disabled:opacity-60"
+              >
+                {isSaving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />}
+                Lo sabía
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={flip}
+              className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-xl bg-mq-premium-gold px-6 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+            >
+              Girar tarjeta
+            </button>
+          )}
+            <button
+              type="button"
+              onClick={() => openEditor(card)}
+              className="mt-3 inline-flex w-full items-center justify-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-white"
+            >
+              <Pencil className="h-3.5 w-3.5" />
+              Editar tarjeta
+            </button>
+          </>
         )}
         <p className="mt-3 hidden text-center text-[11px] text-slate-500 sm:block">
           Teclado: espacio para girar · 1 repasar · 2 lo sabía
