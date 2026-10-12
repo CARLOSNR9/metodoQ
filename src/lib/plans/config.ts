@@ -114,7 +114,6 @@ export const PLANS: PlanDefinition[] = [
     },
     features: [
       "Todo lo del plan PRO",
-      "Clases en vivo con el Doctor Q",
       "Seguimiento 1 a 1 con el equipo médico",
       "Preparación intensiva para entrevistas",
       "Soporte prioritario 24/7",
