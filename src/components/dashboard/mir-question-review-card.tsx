@@ -58,7 +58,12 @@ export function MirQuestionReviewCard({
       </div>
       <p className="mt-2 text-sm leading-relaxed text-white">{renderWithBold(question.statement)}</p>
       {question.image ? (
-        <MirQuestionImage image={question.image} number={question.officialExam?.number} compact />
+        <MirQuestionImage
+          image={question.image}
+          number={question.officialExam?.number}
+          compact
+          pending={question.reviewStatus === "pending"}
+        />
       ) : null}
 
       <div className="mt-4 space-y-1.5 text-sm">

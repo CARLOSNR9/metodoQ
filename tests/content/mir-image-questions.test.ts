@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import path from "node:path";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { MIR_OFICIAL_2024_IMAGENES_QUESTIONS } from "@/data/mir-oficial-2024-imagenes-questions";
 import { MIR_EXAM_EDITIONS, MIR_OFFICIAL_QUESTIONS } from "@/lib/training/mir-convocatoria";
 
@@ -43,5 +43,18 @@ describe("preguntas MIR de imagen (2024)", () => {
     const edition = MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-OJO-CLINICO");
     // Sin preguntas verificadas la edición no se muestra.
     expect(edition?.questions ?? []).toEqual(imagesInBank);
+  });
+});
+
+describe("vista previa de Vercel", () => {
+  it("muestra también las preguntas de imagen pendientes y el simulacro «Ojo Clínico»", async () => {
+    vi.stubEnv("NEXT_PUBLIC_VERCEL_ENV", "preview");
+    vi.resetModules();
+    const { MIR_EXAM_EDITIONS: editions } = await import("@/lib/training/mir-convocatoria");
+    vi.unstubAllEnvs();
+    vi.resetModules();
+    expect(editions.find((item) => item.code === "MIR-OJO-CLINICO")?.questionCount).toBe(25);
+    expect(editions.find((item) => item.code === "MIR-2024-OFICIAL")?.questionCount).toBe(182 + 25);
+    expect(editions.find((item) => item.code === "MIR-MIXTO-1")?.questionCount).toBe(100);
   });
 });

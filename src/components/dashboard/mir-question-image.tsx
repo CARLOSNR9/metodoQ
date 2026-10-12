@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Maximize2, X } from "lucide-react";
+import { AlertTriangle, Maximize2, X } from "lucide-react";
 import type { QuestionImage } from "@/lib/questions/types";
 
 /**
@@ -14,11 +14,14 @@ export function MirQuestionImage({
   image,
   number,
   compact = false,
+  pending = false,
 }: {
   image: QuestionImage;
   /** Número de la imagen en el cuadernillo oficial. */
   number?: number;
   compact?: boolean;
+  /** Respuesta aún sin cotejar con la plantilla oficial (solo se ve en las vistas previas). */
+  pending?: boolean;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -62,6 +65,12 @@ export function MirQuestionImage({
       <figcaption className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
         {caption}
       </figcaption>
+      {pending ? (
+        <p className="mt-2 flex items-center gap-1.5 rounded-lg border border-amber-400/30 bg-amber-400/10 px-2.5 py-1.5 text-[11px] font-semibold text-amber-200">
+          <AlertTriangle className="h-3.5 w-3.5 shrink-0" />
+          Respuesta pendiente de verificar con la plantilla oficial
+        </p>
+      ) : null}
 
       {isOpen ? (
         <div

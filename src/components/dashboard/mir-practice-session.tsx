@@ -273,7 +273,11 @@ export function MirPracticeSession({
           {renderWithBold(currentQuestion.statement)}
         </h2>
         {currentQuestion.image ? (
-          <MirQuestionImage image={currentQuestion.image} number={currentQuestion.officialExam?.number} />
+          <MirQuestionImage
+            image={currentQuestion.image}
+            number={currentQuestion.officialExam?.number}
+            pending={currentQuestion.reviewStatus === "pending"}
+          />
         ) : null}
 
         <div className="mt-6 grid gap-3">

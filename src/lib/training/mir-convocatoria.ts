@@ -42,11 +42,18 @@ const MIR_OFICIAL_2025_QUESTIONS: TrainingQuestion[] = [
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
 /**
+ * En las vistas previas de Vercel (`NEXT_PUBLIC_VERCEL_ENV`, que Vercel define
+ * solo) entran también las preguntas pendientes, para poder revisarlas.
+ */
+const SHOW_PENDING_QUESTIONS = process.env.NEXT_PUBLIC_VERCEL_ENV === "preview";
+
+/**
  * Preguntas de imagen ya cotejadas con la plantilla oficial. Las que siguen en
- * `reviewStatus: "pending"` (respuesta aún sin verificar) no entran en el banco.
+ * `reviewStatus: "pending"` (respuesta aún sin verificar) no entran en el banco,
+ * salvo en las vistas previas.
  */
 const imagenesVerificadas = (questions: TrainingQuestion[]): TrainingQuestion[] =>
-  questions.filter((question) => question.reviewStatus !== "pending");
+  questions.filter((question) => SHOW_PENDING_QUESTIONS || question.reviewStatus !== "pending");
 
 /**
  * MIR 2024 oficial: las 182 preguntas sin imagen del examen (incluidas las de

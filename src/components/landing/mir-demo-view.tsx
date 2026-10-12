@@ -146,7 +146,11 @@ export function MirDemoView() {
           {renderWithBold(currentQuestion.statement)}
         </h2>
         {currentQuestion.image ? (
-          <MirQuestionImage image={currentQuestion.image} number={currentQuestion.officialExam?.number} />
+          <MirQuestionImage
+            image={currentQuestion.image}
+            number={currentQuestion.officialExam?.number}
+            pending={currentQuestion.reviewStatus === "pending"}
+          />
         ) : null}
 
         <div className="mt-6 grid gap-3">
@@ -358,7 +362,12 @@ function MirDemoResults({
                   {renderWithBold(question.statement)}
                 </p>
                 {question.image ? (
-                  <MirQuestionImage image={question.image} number={question.officialExam?.number} compact />
+                  <MirQuestionImage
+                    image={question.image}
+                    number={question.officialExam?.number}
+                    compact
+                    pending={question.reviewStatus === "pending"}
+                  />
                 ) : null}
 
                 <div className="mt-4 space-y-2 text-sm">
