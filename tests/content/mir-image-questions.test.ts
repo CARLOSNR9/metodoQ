@@ -37,4 +37,11 @@ describe("preguntas MIR de imagen (2024)", () => {
       expect(edition.questions.some((question) => question.image), code).toBe(false);
     }
   });
+
+  it("el simulacro «Ojo Clínico» reúne solo las preguntas de imagen del banco", () => {
+    const imagesInBank = MIR_OFFICIAL_QUESTIONS.filter((question) => question.image);
+    const edition = MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-OJO-CLINICO");
+    // Sin preguntas verificadas la edición no se muestra.
+    expect(edition?.questions ?? []).toEqual(imagesInBank);
+  });
 });

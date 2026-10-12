@@ -193,6 +193,9 @@ function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], Tr
   return [first, second];
 }
 
+/** Simulacro «Ojo Clínico»: solo las preguntas de imagen ya verificadas, en orden del cuadernillo. */
+const MIR_OJO_CLINICO_QUESTIONS: TrainingQuestion[] = MIR_OFFICIAL_QUESTIONS.filter((question) => question.image);
+
 // Sin las preguntas de imagen: así los simulacros mixtos no cambian al ir añadiéndolas.
 const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(
   MIR_OFFICIAL_QUESTIONS.filter((question) => !question.image),
@@ -273,6 +276,12 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
     "Simulacro completo",
     "Las 200 preguntas de los simulacros 1 y 2 en una sola sesión, como el examen real.",
     [...MIR_SIMULACRO_1_QUESTIONS, ...MIR_SIMULACRO_2_QUESTIONS],
+  ),
+  buildEdition(
+    "MIR-OJO-CLINICO",
+    "Ojo Clínico",
+    "Solo preguntas de imagen del MIR oficial: TC, ECG, dermatología, fondo de ojo, frotis… Entrena el ojo antes del examen.",
+    MIR_OJO_CLINICO_QUESTIONS,
   ),
   buildEdition(
     "MIR-2025-OFICIAL-1",
