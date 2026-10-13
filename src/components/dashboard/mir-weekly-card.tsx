@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarCheck } from "lucide-react";
+import { CalendarCheck, Check, X } from "lucide-react";
 import type { MirWeekSummary } from "@/lib/training/mir-weekly";
 
 const WEEKDAY_LABELS = ["L", "M", "X", "J", "V", "S", "D"];
@@ -59,7 +59,17 @@ export function MirWeeklyCardContent({ week, dailyTarget }: { week: MirWeekSumma
       <div>
         <p className="text-[11px] font-bold uppercase tracking-wide text-slate-400">Preguntas esta semana</p>
         <p className="mt-1 text-3xl font-black text-mq-premium-gold">{week.total}</p>
-        {comparison ? <p className="mt-1 text-xs text-slate-400">{comparison}</p> : null}
+        <div className="mt-2 flex flex-wrap gap-2 text-xs font-bold">
+          <span className="inline-flex items-center gap-1 rounded-lg bg-emerald-500/15 px-2.5 py-1 text-emerald-300">
+            <Check className="h-3.5 w-3.5" />
+            {week.correct} {week.correct === 1 ? "buena" : "buenas"}
+          </span>
+          <span className="inline-flex items-center gap-1 rounded-lg bg-rose-500/15 px-2.5 py-1 text-rose-300">
+            <X className="h-3.5 w-3.5" />
+            {week.incorrect} {week.incorrect === 1 ? "mala" : "malas"}
+          </span>
+        </div>
+        {comparison ? <p className="mt-2 text-xs text-slate-400">{comparison}</p> : null}
         {dailyTarget ? (
           <p className="mt-1 text-xs text-slate-400">
             Meta de {dailyTarget}/día cumplida {daysOnTarget} {daysOnTarget === 1 ? "día" : "días"}.

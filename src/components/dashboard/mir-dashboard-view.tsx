@@ -39,7 +39,7 @@ import { MirDailyPlanCard } from "./mir-daily-plan-card";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
 import { MirNetCurveCard } from "./mir-net-curve";
-import { MirPomodoroCard } from "./mir-pomodoro-card";
+import { MirProgressChart } from "./mir-progress-chart";
 import { MirSpainRoadmap } from "./mir-spain-roadmap";
 import { MirWeeklyCard } from "./mir-weekly-card";
 import { MirWeeklyRankingCard } from "./mir-weekly-ranking";
@@ -106,8 +106,9 @@ function EditionLink({
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * plan de hoy, preguntas y ranking de la semana con Pomodoro, accesos libres a práctica, repaso de
- * errores, tarjetas de repaso y simulacro, curva de netas, mapa de dominio, camino a España por especialidad, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
+ * plan de hoy, preguntas, ranking y curva de aciertos de la semana, accesos libres a práctica, repaso de
+ * errores, tarjetas de repaso y simulacro, curva de netas por simulacro, mapa de dominio por especialidad,
+ * camino a España, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -207,7 +208,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           <div className="space-y-4">
             <MirWeeklyCard week={today?.week ?? null} dailyTarget={today?.plan.pace.dailyTarget} />
             <MirWeeklyRankingCard userId={userId} />
-            <MirPomodoroCard />
+            <MirProgressChart userId={userId} />
           </div>
         </section>
       ) : null}

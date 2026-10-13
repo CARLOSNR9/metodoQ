@@ -7,6 +7,7 @@ import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import { getMirReviewDeck } from "@/lib/training/mir-review";
 import { buildMirStudyItems, getMirStudyLog, type MirStudyItem } from "@/lib/training/mir-study-log";
+import { MirPomodoroCard } from "./mir-pomodoro-card";
 import { MirQuestionReviewCard } from "./mir-question-review-card";
 
 const PAGE_SIZE = 20;
@@ -22,7 +23,8 @@ function formatShortDate(iso: string): string {
 /**
  * «Mi estudio» MIR: todas las preguntas que el alumno ha contestado, con su
  * respuesta, la correcta y la explicación, para repasar leyendo. Por defecto
- * muestra los fallos; se puede ver todo y filtrar por especialidad.
+ * muestra los fallos; se puede ver todo y filtrar por especialidad. Incluye
+ * el Pomodoro para estudiar con sesiones de foco.
  */
 export function MirStudyView({ userId }: { userId: string }) {
   const [items, setItems] = useState<MirStudyItem[] | null>(null);
@@ -117,6 +119,10 @@ export function MirStudyView({ userId }: { userId: string }) {
             Ponte a prueba con tus fallos en el repaso de errores
           </Link>
         ) : null}
+      </div>
+
+      <div className="mt-6">
+        <MirPomodoroCard />
       </div>
 
       {items.length === 0 ? (

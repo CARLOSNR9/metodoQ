@@ -8,6 +8,7 @@ import { shuffleMirQuestionsOptions } from "@/lib/training/mir-options";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import { MirScoreBreakdown } from "@/components/dashboard/mir-score";
 import { MirOfficialBadge } from "@/components/dashboard/mir-rich-text";
+import { MirQuestionImage } from "@/components/dashboard/mir-question-image";
 import { getMirWhatsAppUrl } from "@/lib/mir/config";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -144,6 +145,13 @@ export function MirDemoView() {
         <h2 className="mt-3 text-pretty text-base font-medium leading-relaxed text-white sm:text-lg">
           {renderWithBold(currentQuestion.statement)}
         </h2>
+        {currentQuestion.image ? (
+          <MirQuestionImage
+            image={currentQuestion.image}
+            number={currentQuestion.officialExam?.number}
+            pending={currentQuestion.reviewStatus === "pending"}
+          />
+        ) : null}
 
         <div className="mt-6 grid gap-3">
           {currentQuestion.options.map((option) => {
@@ -353,6 +361,14 @@ function MirDemoResults({
                 <p className="mt-3 text-pretty text-sm leading-relaxed text-white sm:text-base">
                   {renderWithBold(question.statement)}
                 </p>
+                {question.image ? (
+                  <MirQuestionImage
+                    image={question.image}
+                    number={question.officialExam?.number}
+                    compact
+                    pending={question.reviewStatus === "pending"}
+                  />
+                ) : null}
 
                 <div className="mt-4 space-y-2 text-sm">
                   {!isCorrect && given ? (
