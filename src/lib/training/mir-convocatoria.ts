@@ -199,32 +199,45 @@ function getAreaQuotas(byArea: Map<string, TrainingQuestion[]>, total: number): 
   return quota;
 }
 
+/** Peso de las preguntas de imagen en el MIR real: unas 25 de 210. */
+const MIR_IMAGE_SHARE = 25 / 210;
+
 /**
  * Dos simulacros de `MIXED_SIMULACRO_SIZE` preguntas oficiales, sin repetir
- * entre ellos, con el mismo reparto por especialidad que el conjunto de los
- * exámenes oficiales. Se excluyen las preguntas anuladas por el Ministerio.
- * La selección es determinista: solo cambia si cambia el banco oficial.
+ * entre ellos. Llevan preguntas de imagen en la proporción del MIR real
+ * (repartidas a partes iguales) y el resto, sin imagen, con el mismo reparto
+ * por especialidad que el conjunto de los exámenes oficiales. Se excluyen las
+ * anuladas y las de imagen pendientes de verificar, para que los simulacros
+ * sean iguales en las vistas previas y en producción. La selección es
+ * determinista: solo cambia si cambia el banco oficial.
  */
-function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], TrainingQuestion[]] {
+export function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], TrainingQuestion[]] {
   const eligible = pool.filter(isEligibleForSimulacro);
-  const byArea = groupByArea(eligible);
-  const quota = getAreaQuotas(byArea, Math.min(MIXED_SIMULACRO_SIZE * 2, eligible.length));
+  const images = eligible
+    .filter((question) => question.image && question.reviewStatus !== "pending")
+    .sort(byStableHash("imagen"));
+  const texts = eligible.filter((question) => !question.image);
+  const total = Math.min(MIXED_SIMULACRO_SIZE * 2, images.length + texts.length);
+  // Número par para que cada simulacro lleve las mismas (200 × 25/210 ≈ 24).
+  const imageCount = Math.floor(Math.min(images.length, Math.round(total * MIR_IMAGE_SHARE)) / 2) * 2;
+
+  const byArea = groupByArea(texts);
+  const quota = getAreaQuotas(byArea, Math.min(total - imageCount, texts.length));
   const areas = [...byArea.keys()].sort((a, b) => a.localeCompare(b, "es"));
   const selected = areas.flatMap((area) =>
     [...byArea.get(area)!].sort(byStableHash("seleccion")).slice(0, quota.get(area)),
   );
-  const first = selected.filter((_, index) => index % 2 === 0).sort(byStableHash("simulacro-1"));
-  const second = selected.filter((_, index) => index % 2 === 1).sort(byStableHash("simulacro-2"));
+  const chosenImages = images.slice(0, imageCount);
+  const half = (list: TrainingQuestion[], parity: number) => list.filter((_, index) => index % 2 === parity);
+  const first = [...half(selected, 0), ...half(chosenImages, 0)].sort(byStableHash("simulacro-1"));
+  const second = [...half(selected, 1), ...half(chosenImages, 1)].sort(byStableHash("simulacro-2"));
   return [first, second];
 }
 
 /** Simulacro «Ojo Clínico»: solo las preguntas de imagen ya verificadas, en orden del cuadernillo. */
 const MIR_OJO_CLINICO_QUESTIONS: TrainingQuestion[] = MIR_OFFICIAL_QUESTIONS.filter((question) => question.image);
 
-// Sin las preguntas de imagen: así los simulacros mixtos no cambian al ir añadiéndolas.
-const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(
-  MIR_OFFICIAL_QUESTIONS.filter((question) => !question.image),
-);
+const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(MIR_OFFICIAL_QUESTIONS);
 
 /** Preguntas del simulacro rápido: distintas en cada intento. */
 const QUICK_SIMULACRO_SIZE = 25;
@@ -308,7 +321,8 @@ function buildEdition(
 
 /**
  * Simulacros 1, 2 y completo: preguntas oficiales de todas las convocatorias
- * mezcladas, con el reparto por especialidad del MIR (ver buildMixedSimulacros).
+ * mezcladas, con el reparto por especialidad del MIR y preguntas de imagen en
+ * la proporción del examen real (ver buildMixedSimulacros).
  * Usan códigos nuevos para no mezclar sus intentos con los de los antiguos
  * simulacros de preguntas propias. El simulacro rápido sortea 25 en cada
  * intento con ese mismo reparto. "MIR 2025/…/2016 oficial" usan los
@@ -318,19 +332,19 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
   buildEdition(
     "MIR-MIXTO-1",
     "Simulacro 1",
-    "100 preguntas reales de varias convocatorias, con el reparto por especialidad del MIR.",
+    "100 preguntas reales de varias convocatorias, con preguntas de imagen y el reparto por especialidad del MIR.",
     MIR_SIMULACRO_1_QUESTIONS,
   ),
   buildEdition(
     "MIR-MIXTO-2",
     "Simulacro 2",
-    "Otras 100 preguntas oficiales distintas, con el mismo reparto por especialidad.",
+    "Otras 100 preguntas oficiales distintas, con sus preguntas de imagen y el mismo reparto por especialidad.",
     MIR_SIMULACRO_2_QUESTIONS,
   ),
   buildEdition(
     "MIR-MIXTO-COMPLETO",
     "Simulacro completo",
-    "Las 200 preguntas de los simulacros 1 y 2 en una sola sesión, como el examen real.",
+    "Las 200 preguntas de los simulacros 1 y 2 en una sola sesión, con imágenes en la proporción del examen real.",
     [...MIR_SIMULACRO_1_QUESTIONS, ...MIR_SIMULACRO_2_QUESTIONS],
   ),
   buildEdition(
