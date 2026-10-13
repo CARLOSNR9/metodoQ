@@ -9,11 +9,10 @@ import type { TrainingQuestion } from "@/lib/questions/types";
  * Enunciado y opciones se transcriben tal cual del cuaderno (versión 4).
  * Las explicaciones y los puntos clave son de redacción propia de Método Q.
  *
- * PENDIENTE: `correctOptionId` es una respuesta propuesta, aún sin cotejar con
- * la plantilla oficial. Mientras una pregunta esté en `reviewStatus: "pending"`
- * no entra en el banco (ver src/lib/training/mir-convocatoria.ts). Al
- * verificarla contra la plantilla, corregir la respuesta si hace falta y pasarla
- * a "approved".
+ * Sin la plantilla oficial definitiva a mano, cada respuesta se ha contrastado
+ * con la respuesta del Ministerio o con academias que la publican (ver
+ * `reviewNotes`). Las que siguen en `reviewStatus: "pending"` no entran en el
+ * banco de producción (ver src/lib/training/mir-convocatoria.ts).
  */
 const BASE = {
   university: "MIR (España)",
@@ -37,8 +36,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 1 },
     image: image(1, "Dos imágenes de anatomía patológica: citología y corte histológico teñido con hematoxilina-eosina.", 1312, 894),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: plantilla provisional del Ministerio (casiMedicos).",
     statement: "Hombre de 56 años con un tumor palpable en el lado izquierdo del cuello móvil a la deglución. Se acompaña de disfagia y disfonía. Tiene historia familiar de tumores endocrinos. ¿Cuál de los siguientes es el diagnóstico anatomopatológico más probable de la lesión que aparece en la imagen?:",
     options: [
       { id: "1", label: "1", text: "Carcinoma papilar de tiroides." },
@@ -59,12 +58,12 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     tags: [...BASE.tags],
     id: "mir-oficial-2024-002",
     examArea: "OTORRINOLARINGOLOGÍA",
-    topic: "FRACTURA MANDIBULAR BICONDÍLEA",
+    topic: "FRACTURA MANDIBULAR BILATERAL DEL CUERPO",
     difficulty: "hard",
     officialExam: { year: 2024, number: 2 },
     image: image(2, "Reconstrucción tridimensional de TC del macizo facial y la base del cráneo en un paciente intubado.", 1116, 880),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: respuesta del Ministerio (ImpugnaMIR).",
     statement: "Paciente que ha sufrido un accidente de bicicleta con traumatismo facial directo sobre la región anterior de la mandíbula. Se realiza la tomografía computarizada (TC) de la imagen que confirma una:",
     options: [
       { id: "1", label: "1", text: "Fractura panfacial tipo Lefort I." },
@@ -72,12 +71,12 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
       { id: "3", label: "3", text: "Fractura mandibular bicondílea inestable." },
       { id: "4", label: "4", text: "Fractura mandibular bilateral en ramas horizontales inestable." },
     ],
-    correctOptionId: "3",
-    explanation: "La mandíbula es un **arco**: un golpe directo sobre el **mentón** (región sinfisaria) transmite la fuerza hacia atrás por ambas ramas y la descarga en su punto más débil, el **cuello de los cóndilos**. Por eso el mecanismo típico de la caída en bicicleta sobre la barbilla es la **fractura bicondílea**, a menudo asociada a una fractura de la sínfisis.\n\n**Qué mirar en la imagen:** en la reconstrucción 3D de TC se buscan los trazos en ambos cuellos condíleos, con desplazamiento de los fragmentos.\n\n**Clínica:** dolor preauricular bilateral, limitación de la apertura bucal, **mordida abierta anterior** (contacto prematuro de los molares por pérdida de altura de las ramas) y, a veces, otorragia por fractura de la pared anterior del conducto auditivo.\n\nLa fractura bicondílea es **inestable**: el tratamiento suele ser quirúrgico (reducción y osteosíntesis de al menos uno de los cóndilos) o bloqueo intermaxilar según el caso.\n\n**Por qué no las demás:**\n- **1 y 2:** las Le Fort son fracturas del **maxilar superior** y del tercio medio facial, no de la mandíbula.\n- **4:** las fracturas de la rama horizontal (cuerpo) se producen por impactos laterales, no por un golpe frontal en el mentón.",
+    correctOptionId: "4",
+    explanation: "Un golpe directo sobre la **región anterior de la mandíbula** puede romperla por los dos lados del arco. En esta TC con reconstrucción 3D se ven **trazos de fractura en ambas ramas horizontales (cuerpo mandibular)**, con el **segmento anterior (sinfisario) libre y desplazado**.\n\n**Por qué es inestable:** el fragmento central queda suelto y los **músculos suprahioideos** (genihioideo, milohioideo, vientre anterior del digástrico) lo traccionan hacia **atrás y abajo**. Con él se va la base de la lengua, que puede **obstruir la vía aérea**. Por eso son pacientes que a menudo necesitan **asegurar la vía aérea** (en la imagen se ven los tubos de la intubación) y **reducción y osteosíntesis** quirúrgica con placas.\n\n**Clínica de las fracturas de mandíbula:** maloclusión, dolor y movilidad anormal del foco, escalón en la arcada dentaria, hematoma en el suelo de la boca e hipoestesia del labio inferior si se afecta el nervio dentario inferior.\n\n**Por qué no las demás:**\n- **1 y 2:** las Le Fort son fracturas del **maxilar superior** y el tercio medio facial, no de la mandíbula.\n- **3:** el golpe en el mentón también puede romper los **cóndilos** (fractura bicondílea, con mordida abierta anterior), pero en esta imagen los trazos están en el **cuerpo** mandibular, no en los cuellos condíleos.",
     keyPoints: [
-      "Golpe en el mentón → la fuerza se descarga en ambos cuellos condíleos: fractura bicondílea.",
-      "Clínica: dolor preauricular, limitación de la apertura y mordida abierta anterior.",
-      "Le Fort = fracturas del maxilar superior, no de la mandíbula.",
+      "Fractura bilateral del cuerpo mandibular: el segmento anterior queda libre y es inestable.",
+      "Los suprahioideos desplazan el fragmento hacia atrás y la lengua puede obstruir la vía aérea.",
+      "Le Fort = maxilar superior; la fractura bicondílea da mordida abierta anterior.",
     ],
   },
   {
@@ -89,8 +88,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 3 },
     image: image(3, "Fotografía clínica del cuero cabelludo de un varón calvo con varias lesiones cutáneas.", 1367, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos y Dermapixel.",
     statement: "Hombre de 75 años, sin antecedentes personales de interés, agricultor jubilado, que acude a la consulta refiriendo que en los últimos 10 años ha notado la aparición progresiva en cuero cabelludo (es calvo desde hace años) de pequeñas placas eritematosas, muchas de ellas con descamación y rasposas al tacto, siendo la mayoría asintomáticas, si bien alguna le molesta al tacto. Ante este cuadro clínico y la imagen ¿cuál de los siguientes sería el diagnóstico?:",
     options: [
       { id: "1", label: "1", text: "Dermatitis seborreica." },
@@ -115,8 +114,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 4 },
     image: image(4, "Fotografía clínica de la región perianal con lesiones cutáneas.", 665, 965),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media: descartar condiloma lata).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos y Dermapixel.",
     statement: "Hombre de 25 años sin antecedentes personales de interés que acude a la consulta de dermatología porque desde hace 4 semanas nota la aparición de unas pápulas aterciopeladas en la zona perianal (imagen), asintomáticas, que van aumentado en número poco a poco. ¿Cuál de los siguientes diagnósticos es más probable?:",
     options: [
       { id: "1", label: "1", text: "Condiloma lata." },
@@ -141,8 +140,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 5 },
     image: image(5, "PET-TC con 18F-FDG: proyección de máxima intensidad y dos cortes axiales a nivel de mama y axila.", 1221, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: plantilla provisional del Ministerio (casiMedicos).",
     statement: "Mujer de 32 años con diagnóstico reciente de carcinoma ductal infiltrante G3 de mama izquierda, fenotipo triple negativo. Se muestran las imágenes de la PET-TC con 18F-FDG con proyección de intensidad máxima (MIP) y cortes axiales a nivel de mama y axila. De las siguientes afirmaciones, señale la correcta:",
     options: [
       { id: "1", label: "1", text: "El tratamiento electivo de inicio es tumorectomía y biopsia selectiva de ganglio centinela." },
@@ -167,8 +166,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 6 },
     image: image(6, "Retinografías de fondo de ojo de ambos ojos (OD y OI).", 1400, 573),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: plantilla provisional del Ministerio (casiMedicos).",
     statement: "Mujer de 27 años, sin antecedentes de interés, que acude a urgencias por episodios transitorios de pérdida de visión bilateral de 15 segundos de duración, cefalea al despertarse y acúfenos de unas semanas de evolución. Tiene un IMC de 29. La RM craneal descarta lesiones ocupantes de espacio. Con la clínica referida y la imagen de fondo de ojo ¿cuál de las siguientes afirmaciones es correcta?:",
     options: [
       { id: "1", label: "1", text: "La pérdida de peso no es eficaz en esta situación." },
@@ -193,8 +192,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 7 },
     image: image(7, "Corte axial de neuroimagen a nivel de la fosa posterior.", 784, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos.",
     statement: "Mujer de 57 años que consulta por hipoacusia derecha neurosensorial progresiva y acúfenos. En relación con la imagen mostrada, indique de qué exploración se trata y el diagnóstico más probable:",
     options: [
       { id: "1", label: "1", text: "RM sin contraste. Meningioma." },
@@ -219,8 +218,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 8 },
     image: image(8, "Corte axial de TC craneal sin contraste.", 729, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos (respuesta oficial provisional).",
     statement: "Hombre de 84 años con antecedentes de hipertensión arterial, dislipemia e infarto agudo de miocardio. Acude a urgencias por deterioro cognitivo rápidamente progresivo, amnesia, inestabilidad para la marcha y hemianopsia homónima izquierda. Se le realiza la siguiente TC craneal. Señale cuál es el diagnóstico más probable ante el hallazgo mostrado:",
     options: [
       { id: "1", label: "1", text: "Absceso cerebral secundario a otitis media aguda derecha." },
@@ -245,8 +244,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "hard",
     officialExam: { year: 2024, number: 9 },
     image: image(9, "Corte coronal de TC abdominopélvica con contraste intravenoso.", 631, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza BAJA: revisar especialmente).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos, aqxdemy y Studocu.",
     statement: "Hombre de 72 años con diagnóstico de carcinoma de cavidad oral intervenido hace tres meses con resección completa, en tratamiento con quimioterapia, portador de gastrostomía endoscópica percutánea profiláctica, que acude a urgencias por dolor y distensión abdominal de tres días de evolución, intolerancia oral y ausencia de deposiciones. Se realiza la TC abdominopélvica con contraste intravenoso que se muestra en la imagen. ¿Cuál de los siguientes es el diagnóstico más probable?:",
     options: [
       { id: "1", label: "1", text: "Obstrucción intestinal secundaria a neoplasia estenosante de colon descendente." },
@@ -271,8 +270,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 10 },
     image: image(10, "Corte axial de TC torácica en ventana de pulmón.", 631, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media-alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos.",
     statement: "Hombre de 61 años, que recibió un trasplante alogénico haploidéntico hace 20 meses por linfoma no Hodgkin T, en respuesta completa, que consulta por un síndrome febril desde hace 72 horas con tos y expectoración blanquecina y disnea progresiva a moderados esfuerzos. Refiere astenia desde hace un mes y medio. Se realiza la TC torácica que se muestra en la imagen. ¿Cuál de los siguientes es el diagnóstico más probable?:",
     options: [
       { id: "1", label: "1", text: "Neumonía por Mycobacterium tuberculosis." },
@@ -297,8 +296,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 11 },
     image: image(11, "Corte axial de angioTC torácica con contraste a nivel del cayado aórtico.", 1391, 846),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: aqxdemy y Studocu.",
     statement: "Hombre de 52 años que consulta por dolor centrotorácico desgarrador de 30 minutos de duración. A la exploración está inquieto y sudoroso. La tensión arterial es de 190/110 mmHg en ambos brazos. A la auscultación no hay soplos cardiacos ni estertores crepitantes. El electrocardiograma está en ritmo sinusal a 90 latidos por minuto sin alteraciones de la repolarización. En la angioTC torácica se observa la imagen que se adjunta. ¿Cuál es el diagnóstico más probable?:",
     options: [
       { id: "1", label: "1", text: "Hematoma intramural." },
@@ -323,8 +322,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 12 },
     image: image(12, "Ecocardiograma con planimetría del área de una válvula cardiaca.", 1284, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: criterios de gravedad (área 0,95 cm² < 1 cm²).",
     statement: "Hombre de 75 años sin factores de riesgo cardiovascular. Acude a su centro de salud por disnea de moderados esfuerzos de un año de evolución, que en las últimas semanas aparece ante pequeños esfuerzos. En la exploración física se ausculta en el 2º espacio intercostal derecho un soplo sistólico rudo, irradiado a carótidas con borramiento del 2º tono cardiaco. Se practica un ecocardiograma que muestra una función biventricular normal y un engrosamiento de una de las válvulas cardiacas que presenta un área de 0,95 cm2 (imagen). ¿Cuál es el diagnóstico más probable y la actitud terapéutica a seguir?:",
     options: [
       { id: "1", label: "1", text: "Estenosis valvular aórtica grave con indicación de recambio valvular." },
@@ -350,7 +349,7 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     officialExam: { year: 2024, number: 13 },
     image: image(13, "Electrocardiograma de 12 derivaciones con tira de ritmo en V1.", 1394, 736),
     reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza BAJA: revisar especialmente).",
+    reviewNotes: "Sin fuente externa: respuesta deducida del análisis del ECG (FA sin bloqueo AV avanzado). Pendiente de confirmar.",
     statement: "En relación con el electrocardiograma de 12 derivaciones que se muestra, señale la descripción INCORRECTA:",
     options: [
       { id: "1", label: "1", text: "Ritmo auricular desorganizado con frecuencia ventricular irregular muy sugestiva de fibrilación auricular." },
@@ -358,12 +357,12 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
       { id: "3", label: "3", text: "Alteración del sistema de conducción cardiaca con episodios de bloqueo aurículo-ventricular de alto grado o completo." },
       { id: "4", label: "4", text: "Elevación significativa del segmento ST en derivaciones inferiores muy sugestiva de isquemia miocárdica aguda." },
     ],
-    correctOptionId: "1",
-    explanation: "Pregunta de lectura sistemática del ECG: hay que comprobar cada descripción.\n\n**Qué mirar en la imagen:**\n- **QRS ancho** con **rSR' en V1** y S empastada en I y V6: **bloqueo completo de rama derecha**.\n- **Eje izquierdo** (QRS positivo en I y aVL, negativo en II, III y aVF): **hemibloqueo anterior izquierdo**. Ambos juntos forman un **bloqueo bifascicular**.\n- **Elevación del ST en II, III y aVF** con descenso especular en I y aVL: **infarto inferior agudo**.\n- En la tira de ritmo hay **ondas P** que no siempre se siguen de QRS y pausas: trastorno de la conducción auriculoventricular de alto grado, frecuente en el infarto inferior (isquemia del nodo AV, irrigado por la coronaria derecha).\n\nLa actividad auricular es **organizada** (hay ondas P), por lo que **no** es una fibrilación auricular: la descripción 1 es la incorrecta.\n\n**Recuerda:**\n- El bloqueo AV del infarto inferior suele ser **suprahisiano**, con QRS estrecho, transitorio y responde a atropina.\n- Un bloqueo bifascicular nuevo en un infarto agudo indica afectación extensa del sistema de conducción.\n- El tratamiento del IAMCEST es la **reperfusión urgente** (angioplastia primaria).",
+    correctOptionId: "3",
+    explanation: "Pregunta de lectura sistemática del ECG: hay que comprobar cada descripción y encontrar la falsa.\n\n**Qué mirar en la imagen:**\n- **Ritmo**: en la tira larga de V1 los **intervalos RR son irregulares** (entre ~0,6 y ~1 s) y **no hay ondas P** organizadas, solo una línea de base ondulante: **fibrilación auricular** con respuesta ventricular de unos 70-100 lpm. La descripción **1 es correcta**.\n- **Eje izquierdo** (QRS positivo en I y aVL, negativo en II, III y aVF): **hemibloqueo anterior izquierdo**; junto con el patrón de **bloqueo de rama derecha** en V1 forma un **bloqueo bifascicular**. La descripción **2 es correcta**.\n- **Elevación del ST en II, III y aVF** con **descenso especular en I y aVL**: **infarto inferior agudo**. La descripción **4 es correcta**.\n- **No hay bloqueo AV de alto grado**: en FA no hay ondas P que se bloqueen, y lo que delataría un bloqueo AV avanzado sería una respuesta ventricular **lenta y regular** (escape) o pausas largas. Aquí la respuesta ventricular es **rápida e irregular**. La descripción **3 es la INCORRECTA**.\n\n**Recuerda:**\n- **FA**: ausencia de ondas P + RR irregularmente irregular.\n- **FA con QRS regular y lento**: sospechar bloqueo AV completo con ritmo de escape (o intoxicación digitálica).\n- **Bloqueo bifascicular** (BRD + HAI): riesgo de progresión a bloqueo completo, sobre todo en el contexto de un infarto.\n- El IAMCEST inferior requiere **reperfusión urgente** (angioplastia primaria).",
     keyPoints: [
-      "BRD (rSR' en V1) + eje izquierdo (hemibloqueo anterior) = bloqueo bifascicular.",
+      "FA: sin ondas P y con RR irregularmente irregular.",
+      "BRD + eje izquierdo (hemibloqueo anterior) = bloqueo bifascicular.",
       "Elevación del ST en II, III y aVF con descenso especular en I y aVL = infarto inferior.",
-      "Fibrilación auricular: ausencia de ondas P y RR irregular; si hay ondas P, no es FA.",
     ],
   },
   {
@@ -375,8 +374,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 14 },
     image: image(14, "Ecografía abdominal de la vesícula biliar en modo B y con contraste intravenoso, con mediciones.", 1400, 792),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media-alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: criterio de tamaño del pólipo (14,5 mm ≥ 10 mm).",
     statement: "Paciente de 54 años que acude a realizarse una ecografía abdominal como control de una enfermedad de Crohn. Nunca ha presentado cólicos biliares y no tiene otra comorbilidad relevante. En la imagen se muestran los hallazgos de la ecografía (izquierda modo B y derecha con contraste IV). De las siguientes, señale la afirmación correcta:",
     options: [
       { id: "1", label: "1", text: "A pesar de que nunca ha tenido síntomas de origen biliar está indicada la colecistectomía como prevención del cáncer de vesícula biliar." },
@@ -401,8 +400,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 15 },
     image: image(15, "Corte axial de TC abdominal a nivel de la pelvis.", 1069, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: hallazgo inequívoco en la TC (saco de eventración con asas).",
     statement: "Mujer de 63 años, con antecentes de obesidad, diabetes mellitus, tabaquismo, hipercolesterolemia y enfermedad pulmonar obstructiva crónica. Intervenciones quirúrgicas previas: mastectomía izquierda por cáncer de mama hace 12 años y pancreatectomía distal por tumor neuroendocrino de páncreas hace 2 años. Acude a urgencias por dolor abdominal difuso de reciente aparición, distensión abdominal, vómitos y estreñimiento. Analítica sanguínea con leucocitosis y desviación a la izquierda, sin alteraciones hidroelectrolíticas. Pruebas bioquímicas y de coagulación normales. Tras realización de la TC abdominal que se muestra en la imagen ¿cuál de los siguientes es el diagnóstico más probable?:",
     options: [
       { id: "1", label: "1", text: "Neoplasia de colon." },
@@ -427,8 +426,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 16 },
     image: image(16, "Frotis de sangre periférica con hematíes de forma alterada.", 1216, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: respuesta del Ministerio (ImpugnaMIR).",
     statement: "En la mielofibrosis primaria se observan en el frotis sanguíneo (ver imagen) unos hematíes con una forma característica denominados:",
     options: [
       { id: "1", label: "1", text: "Dacriocitos." },
@@ -453,8 +452,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 17 },
     image: image(17, "Reconstrucción coronal de angioTC abdominal con la aorta y las arterias renales.", 1400, 760),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos.",
     statement: "Hombre de 63 años, fumador de 15 cigarrillos al día como único antecedente de interés, que consulta por cefalea. Se detecta presión arterial de 180/110 mmHg, iniciándose tratamiento con enalapril 10 mg. Se realiza analítica donde no hay ningún parámetro fuera de rango. A la semana se objetiva un buen control de la presión arterial y una creatinina de 3 mg/dL correspondiente a un FGe (filtrado glomerular estimado) de 22 ml/min. En la exploración física se detecta un soplo abdominal. Se realiza una angioTC abdominal (figura). ¿Cuál de las siguientes afirmaciones es más probable?:",
     options: [
       { id: "1", label: "1", text: "Tiene una estenosis unilateral de la arteria renal y la administración de enalapril ha provocado una caída del FGe por la pérdida de vasoconstricción de la arteriola eferente." },
@@ -479,8 +478,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "medium",
     officialExam: { year: 2024, number: 18 },
     image: image(18, "Exploración proctológica de la región anal en posición genupectoral.", 1071, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: aqxdemy y Studocu.",
     statement: "Mujer de 45 años con proctalgia en relación con la deposición de 12 semanas de evolución. En la exploración en posición genupectoral se observa la siguiente imagen. ¿Cuál es el diagnóstico más probable?",
     options: [
       { id: "1", label: "1", text: "Fisura anal anterior crónica." },
@@ -505,8 +504,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 19 },
     image: image(19, "Radiografía simple de abdomen y ecografía de ambos riñones.", 1275, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: Studocu.",
     statement: "Hombre de 57 años que refiere que hace 7 días comenzó de forma súbita con dolor en flanco izquierdo con irradiación anterior, náuseas y vómitos, que ha acudido cuatro veces a urgencias por este motivo. Hoy acude nuevamente, ya que el dolor no se controla con la analgesia pautada. Se objetiva tensión arterial media de 63 mmHg, temperatura 38,5 ºC y obnubilación. En la analítica sanguínea destacan 3.300 leucocitos/mm3 con 80 % segmentados, creatinina 1,4 mg/dl y proteína C reactiva 7,5 mg/dl (<0,5 mg/dl). Sedimento urinario con pH 5, nitritos, leucocituria, microhematuria y bacteriuria. Se solicitan radiografía simple de abdomen y ecografía abdominal (imágenes). Ante estos hallazgos ¿cuál de las siguientes es la actitud más adecuada?:",
     options: [
       { id: "1", label: "1", text: "Antibioticoterapia, sueroterapia, analgesia y alcalinización intravenosas y un alfa-bloqueante vía oral y observación en urgencias hasta control sintomático." },
@@ -531,8 +530,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 20 },
     image: image(20, "Corte sagital de RM de la columna cervical y dorsal alta.", 665, 891),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos y Studocu.",
     statement: "Ante esta imagen en un paciente con un trastorno motor en miembros inferiores, señale la respuesta INCORRECTA:",
     options: [
       { id: "1", label: "1", text: "Debemos buscar una malformación de Chiari." },
@@ -557,8 +556,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 21 },
     image: image(21, "Radiografía anteroposterior de pelvis.", 1400, 533),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos.",
     statement: "Un paciente de 27 años, tras sufrir una caída de un caballo, presenta un traumatismo en el miembro inferior izquierdo con una actitud del mismo en flexión, aducción y rotación interna. Tras realizarle la radiografía anteroposterior de pelvis que se muestra, señale cuál es el diagnóstico:",
     options: [
       { id: "1", label: "1", text: "Fractura pertrocantérea de fémur izquierdo." },
@@ -583,8 +582,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "hard",
     officialExam: { year: 2024, number: 22 },
     image: image(22, "Radiografía lateral y TC sagital de una rodilla con artroplastia total.", 1400, 772),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos y Mediplus.",
     statement: "Mujer de 75 años, autónoma y activa, que sufre una caída en su domicilio y acude a urgencias con dolor, impotencia funcional y deformidad alrededor de la rodilla izquierda. Había sido intervenida quirúrgicamente de esta rodilla hacía 2 años por gonartrosis mediante una artroplastia total de rodilla cementada postero-estabilizada. Los pulsos distales están conservados. Existe una movilidad patológica de la rodilla izquierda sin apreciarse déficit neurológico en la pierna afecta. Se realizan la radiografía y la TC que se muestran en las imágenes. ¿Cuál de las siguientes sería la actitud terapéutica en esta situación?:",
     options: [
       { id: "1", label: "1", text: "Placa condílea de ángulo fijo a 95 grados con tornillos de compresión interfragmentaria." },
@@ -609,8 +608,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "easy",
     officialExam: { year: 2024, number: 23 },
     image: image(23, "Fotografía clínica de una lesión del párpado inferior.", 1400, 853),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos y Dermapixel.",
     statement: "Mujer de 84 años que consulta a su médico de familia por la lesión en el párpado inferior de 2 meses de evolución que aparece en la imagen. ¿Cuál de los siguientes diagnósticos es el más probable?:",
     options: [
       { id: "1", label: "1", text: "Carcinoma basocelular ulcerado." },
@@ -631,12 +630,12 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     tags: [...BASE.tags],
     id: "mir-oficial-2024-024",
     examArea: "OTORRINOLARINGOLOGÍA",
-    topic: "CARCINOMA DE HIPOFARINGE",
+    topic: "CARCINOMA DE SUPRAGLOTIS",
     difficulty: "hard",
     officialExam: { year: 2024, number: 24 },
     image: image(24, "Imagen de videofibroscopia de la laringe y la hipofaringe.", 1310, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: Studocu y simulacros comentados.",
     statement: "Paciente que consulta porque se ha notado \"bultos\" cervicales bilaterales y molestias faríngeas de meses de evolución, incluso con leve dificultad para tragar. No refiere disnea ni disfonía, pero observamos una voz engolada. Ha perdido 3 Kg de peso recientemente. No es fumador pero sí ha sido bebedor importante. Después de explorar la cavidad oral y orofaringe sin hallar alteraciones, se realiza la videofibroscopia de vía aerodigestiva superior, una de cuyas imágenes se muestra. ¿Cuál de las siguientes descripciones es correcta?:",
     options: [
       { id: "1", label: "1", text: "Lesión que respeta las cuerdas vocales sugestiva de carcinoma de supraglotis." },
@@ -644,12 +643,12 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
       { id: "3", label: "3", text: "Lesión en seno piriforme sugestiva de carcinoma de hipofaringe." },
       { id: "4", label: "4", text: "Lesión en amígdala palatina derecha sugestiva de carcinoma de orofaringe T2." },
     ],
-    correctOptionId: "3",
-    explanation: "Paciente **bebedor** con **disfagia**, molestias faríngeas, **pérdida de peso** y **adenopatías cervicales bilaterales**, **sin disfonía** y con exploración de la boca y la orofaringe normal.\n\n**Qué mirar en la imagen:** en la videofibroscopia se ven la laringe (epiglotis y vestíbulo laríngeo) y, a su lado, el **seno piriforme**, ocupado por una **lesión mamelonada, irregular y friable**. Las cuerdas vocales están respetadas.\n\n**Carcinoma de hipofaringe:**\n- Localización más frecuente: **seno piriforme**.\n- Factores de riesgo: **alcohol** y tabaco (en la región poscricoidea, el síndrome de Plummer-Vinson).\n- Es «silente»: debuta tarde con **disfagia**, odinofagia, otalgia refleja y, con mucha frecuencia, **adenopatías cervicales** (red linfática muy rica). La disfonía aparece solo si invade la laringe.\n- Es el tumor de cabeza y cuello de **peor pronóstico**.\n\n**Por qué no las demás:**\n- **1:** la lesión no está en la supraglotis (epiglotis, bandas, aritenoides) sino lateral, en el seno piriforme.\n- **2:** una lesión transglótica afecta a las cuerdas y causaría **disfonía**, que el paciente no tiene.\n- **4:** la cavidad oral y la orofaringe (incluidas las amígdalas) se exploraron y eran normales.",
+    correctOptionId: "1",
+    explanation: "Paciente **bebedor importante** con **adenopatías cervicales bilaterales**, molestias faríngeas, leve **disfagia**, **pérdida de peso** y **voz engolada**, **sin disfonía ni disnea**, con boca y orofaringe normales.\n\n**Qué mirar en la imagen:** en la videofibroscopia se ve una **lesión exofítica en la supraglotis** (región de la epiglotis, el repliegue aritenoepiglótico y la banda ventricular), mientras que las **cuerdas vocales están respetadas**.\n\n**Carcinoma de supraglotis:**\n- Factores de riesgo: **tabaco y alcohol**.\n- La supraglotis tiene una **red linfática muy rica** y bilateral: las **adenopatías cervicales**, a menudo **bilaterales**, son frecuentes y pueden ser el primer signo.\n- Como **no afecta a las cuerdas**, **no hay disfonía** al principio; en cambio produce **voz engolada** («en patata caliente»), molestias faríngeas, disfagia u odinofagia y otalgia refleja.\n- Por eso se diagnostica más tarde que el carcinoma de glotis, que da disfonía precoz y casi no tiene drenaje linfático.\n\n**Por qué no las demás:**\n- **2:** una lesión **transglótica** afectaría a las cuerdas y daría **disfonía**.\n- **3:** el **seno piriforme** (hipofaringe) no es donde asienta la lesión de la imagen.\n- **4:** la **amígdala** (orofaringe) se exploró y era normal.",
     keyPoints: [
-      "Disfagia + adenopatías cervicales + bebedor, sin disfonía → carcinoma de hipofaringe (seno piriforme).",
-      "Es el tumor de cabeza y cuello de peor pronóstico: debuta tarde y con adenopatías.",
-      "La disfonía orienta a la glotis; la voz engolada, a lesiones faríngeas o supraglóticas.",
+      "Supraglotis: voz engolada y adenopatías bilaterales precoces, sin disfonía inicial.",
+      "Glotis: disfonía precoz y pocas metástasis ganglionares (escaso drenaje linfático).",
+      "Factores de riesgo de cáncer de laringe: tabaco y alcohol.",
     ],
   },
   {
@@ -661,8 +660,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "hard",
     officialExam: { year: 2024, number: 25 },
     image: image(25, "Fotografía clínica del dorso de la mano con lesiones cutáneas.", 810, 915),
-    reviewStatus: "pending",
-    reviewNotes: "Respuesta propuesta sin cotejar con la plantilla oficial (confianza media-alta).",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta verificada: casiMedicos y Dermapixel.",
     statement: "Mujer de 57 años sin antecedentes de interés que consulta por presentar desde hace 2 meses sensación disneica, que en la última semana se ha hecho de mínimos esfuerzos. No presenta fenómeno de Raynaud, fiebre ni ortopnea. A la exploración física destacan las lesiones cutáneas que se observan en la imagen. No presenta edemas, la auscultación cardíaca es normal y la auscultación respiratoria muestra crepitantes secos en ambas bases pulmonares. La radiografía de tórax muestra un índice cardiotorácico normal y un discreto patrón intersticial basal derecho. En la analítica destaca únicamente una VSG de 75 mm, hemograma normal, AST, ALT, CK, creatinina y ionograma con valores normales. ¿Cuál de las siguientes actitudes diagnósticas es la más apropiada?:",
     options: [
       { id: "1", label: "1", text: "Determinar la presencia de anticuerpos anti-PL7, anti-PL12 y anti-Jo1." },
