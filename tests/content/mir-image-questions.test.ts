@@ -31,11 +31,12 @@ describe("preguntas MIR de imagen (2024)", () => {
     }
   });
 
-  it("no entran en los simulacros mixtos", () => {
-    for (const code of ["MIR-MIXTO-1", "MIR-MIXTO-2"]) {
-      const edition = MIR_EXAM_EDITIONS.find((item) => item.code === code)!;
-      expect(edition.questions.some((question) => question.image), code).toBe(false);
-    }
+  it("entran en los simulacros mixtos en la proporción del MIR real (unas 25 de 210)", () => {
+    const counts = ["MIR-MIXTO-1", "MIR-MIXTO-2"].map(
+      (code) => MIR_EXAM_EDITIONS.find((item) => item.code === code)!.questions.filter((question) => question.image).length,
+    );
+    expect(counts[0]).toBe(counts[1]);
+    expect(counts[0] + counts[1]).toBe(Math.floor(Math.min(25, Math.round((200 * 25) / 210)) / 2) * 2);
   });
 
   it("el simulacro «Ojo Clínico» reúne solo las preguntas de imagen del banco", () => {

@@ -2,8 +2,20 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, Loader2, RotateCcw, XCircle } from "lucide-react";
+import { ArrowRight, CheckCircle2, Gauge, Loader2, RotateCcw, XCircle } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
+import {
+  MIR_CONFIDENCE_LEVELS,
+  countMirConfidenceAnswers,
+  getMirConfidenceAdvice,
+  getMirConfidenceFeedback,
+  getMirConfidenceNet,
+  getMirConfidenceStats,
+  recordMirConfidenceStats,
+  tallyMirConfidence,
+  type MirConfidence,
+  type MirConfidenceStats,
+} from "@/lib/training/mir-confidence";
 import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers, type MirAnswerSource } from "@/lib/training/mir-review";
 import { MIR_EXAM_QUESTIONS, formatMirNet, getMirScoreSummary } from "@/lib/training/mir-scoring";
@@ -15,6 +27,56 @@ import { MirQuestionReviewCard } from "./mir-question-review-card";
 import { MirQuestionImage } from "./mir-question-image";
 
 type ReviewFilter = "wrong" | "correct" | "all";
+
+/** Color de cada nivel de seguridad (botón activo). */
+const CONFIDENCE_ACTIVE: Record<MirConfidence, string> = {
+  sure: "border-emerald-400/60 bg-emerald-400/15 text-emerald-200",
+  doubt: "border-sky-400/60 bg-sky-400/15 text-sky-200",
+  guess: "border-amber-400/60 bg-amber-400/15 text-amber-200",
+};
+
+function percent(tally: { answered: number; correct: number }): number {
+  return Math.round((tally.correct / tally.answered) * 100);
+}
+
+/** Calibración del bloque: aciertos y netas por nivel de seguridad, más el histórico. */
+function ConfidenceSummary({ session, history }: { session: MirConfidenceStats; history: MirConfidenceStats | null }) {
+  const advice = getMirConfidenceAdvice(session) ?? (history ? getMirConfidenceAdvice(history) : null);
+  const historyLevels = history ? MIR_CONFIDENCE_LEVELS.filter(({ value }) => history[value].answered > 0) : [];
+  return (
+    <div className="mx-auto mt-6 max-w-md rounded-xl border border-white/10 bg-white/[0.03] p-4 text-left">
+      <p className="flex items-center gap-2 text-sm font-bold text-white">
+        <Gauge className="h-4 w-4 text-mq-premium-gold" aria-hidden />
+        Tu seguridad al responder
+      </p>
+      <ul className="mt-3 space-y-1.5">
+        {MIR_CONFIDENCE_LEVELS.filter(({ value }) => session[value].answered > 0).map(({ value, label }) => {
+          const tally = session[value];
+          const net = getMirConfidenceNet(tally);
+          return (
+            <li key={value} className="flex items-center justify-between gap-3 text-xs">
+              <span className={`rounded-full border px-2.5 py-0.5 font-bold ${CONFIDENCE_ACTIVE[value]}`}>{label}</span>
+              <span className="flex-1 text-slate-300">
+                {tally.correct}/{tally.answered} aciertos ({percent(tally)} %)
+              </span>
+              <span className={`font-black tabular-nums ${net < -0.05 ? "text-rose-300" : "text-white"}`}>
+                {net < -0.05 ? "−" : net > 0.05 ? "+" : ""}
+                {formatMirNet(Math.abs(net))} netas
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+      {advice ? <p className="mt-3 text-xs leading-relaxed text-slate-400">{advice}</p> : null}
+      {historyLevels.length > 0 ? (
+        <p className="mt-2 text-[11px] text-slate-500">
+          Tu histórico:{" "}
+          {historyLevels.map(({ value, label }) => `${label.toLowerCase()} ${percent(history![value])} %`).join(" · ")}
+        </p>
+      ) : null}
+    </div>
+  );
+}
 
 const SAVE_TIMEOUT_MS = 8000;
 
@@ -53,7 +115,8 @@ function getSummaryMessage(correct: number, total: number, source: MirAnswerSour
  * Sesión corta de preguntas MIR con corrección inmediata: al elegir una
  * opción se muestra si es correcta, la explicación y los puntos clave. Al
  * terminar guarda las respuestas en el repaso de errores y en el mapa de
- * dominio, y cuenta el día para la racha MIR.
+ * dominio, y cuenta el día para la racha MIR. Antes de responder se puede
+ * marcar la seguridad (seguro, dudo, al azar); al final se ve la calibración.
  */
 export function MirPracticeSession({
   userId,
@@ -66,6 +129,8 @@ export function MirPracticeSession({
 }: MirPracticeSessionProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [confidences, setConfidences] = useState<Record<string, MirConfidence>>({});
+  const [confidenceHistory, setConfidenceHistory] = useState<MirConfidenceStats | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
   const [reviewFilter, setReviewFilter] = useState<ReviewFilter>("wrong");
@@ -92,8 +157,10 @@ export function MirPracticeSession({
         questionId: question.id,
         correct: answers[question.id] === question.correctOptionId,
       }));
+    const confidenceStats = tallyMirConfidence(questions, answers, confidences);
     // Escrituras independientes: que falle una no impide las demás.
     const results = await Promise.allSettled([
+      withTimeout(recordMirConfidenceStats(userId, confidenceStats), SAVE_TIMEOUT_MS),
       withTimeout(recordMirAnswers(userId, outcomes, source), SAVE_TIMEOUT_MS),
       withTimeout(recordMirSpecialtyStats(userId, outcomes), SAVE_TIMEOUT_MS),
       withTimeout(registerMirTrainingDay(userId), SAVE_TIMEOUT_MS),
@@ -109,6 +176,9 @@ export function MirPracticeSession({
       if (result.status === "rejected") {
         console.error("No se pudo guardar la sesión de práctica MIR.", result.reason);
       }
+    }
+    if (countMirConfidenceAnswers(confidenceStats) > 0) {
+      setConfidenceHistory(await getMirConfidenceStats(userId));
     }
     setIsSaving(false);
     setReviewFilter(outcomes.some((outcome) => !outcome.correct) ? "wrong" : "all");
@@ -126,6 +196,7 @@ export function MirPracticeSession({
   }
 
   if (isFinished) {
+    const sessionConfidence = tallyMirConfidence(questions, answers, confidences);
     const wrongQuestions = questions.filter(
       (question) => answers[question.id] && answers[question.id] !== question.correctOptionId,
     );
@@ -164,6 +235,10 @@ export function MirPracticeSession({
           <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-slate-300">
             {getSummaryMessage(correctCount, total, source)}
           </p>
+
+          {countMirConfidenceAnswers(sessionConfidence) > 0 ? (
+            <ConfidenceSummary session={sessionConfidence} history={confidenceHistory} />
+          ) : null}
 
           {wrongQuestions.length > 0 ? (
             <ul className="mx-auto mt-5 max-w-md space-y-1.5 text-left">
@@ -259,6 +334,8 @@ export function MirPracticeSession({
 
   const isAnswered = Boolean(selectedOptionId);
   const isCorrect = selectedOptionId === currentQuestion.correctOptionId;
+  const currentConfidence = confidences[currentQuestion.id];
+  const confidenceFeedback = isAnswered ? getMirConfidenceFeedback(currentConfidence, isCorrect) : null;
 
   return (
     <div className="mx-auto w-full max-w-3xl">
@@ -303,7 +380,39 @@ export function MirPracticeSession({
           />
         ) : null}
 
-        <div className="mt-6 grid gap-3">
+        <div className="mt-6 flex flex-wrap items-center gap-2" role="group" aria-label="¿Cómo de seguro estás?">
+          <span className="mr-1 text-xs font-semibold text-slate-400">
+            {isAnswered ? "Tu seguridad:" : "¿Cómo de seguro estás?"}
+          </span>
+          {MIR_CONFIDENCE_LEVELS.map(({ value, label }) => {
+            const isActive = currentConfidence === value;
+            if (isAnswered && !isActive) return null;
+            return (
+              <button
+                key={value}
+                type="button"
+                disabled={isAnswered}
+                aria-pressed={isActive}
+                onClick={() =>
+                  setConfidences((prev) => {
+                    const next = { ...prev };
+                    if (next[currentQuestion.id] === value) delete next[currentQuestion.id];
+                    else next[currentQuestion.id] = value;
+                    return next;
+                  })
+                }
+                className={`rounded-full border px-3 py-1 text-xs font-bold transition disabled:cursor-default ${
+                  isActive ? CONFIDENCE_ACTIVE[value] : "border-white/15 text-slate-300 hover:border-white/30 hover:text-white"
+                }`}
+              >
+                {label}
+              </button>
+            );
+          })}
+          {isAnswered && !currentConfidence ? <span className="text-xs text-slate-500">sin marcar</span> : null}
+        </div>
+
+        <div className="mt-3 grid gap-3">
           {currentQuestion.options.map((option) => {
             const isSelected = selectedOptionId === option.id;
             const isCorrectOption = option.id === currentQuestion.correctOptionId;
@@ -346,6 +455,11 @@ export function MirPracticeSession({
               {isCorrect ? <CheckCircle2 className="h-4 w-4" /> : <XCircle className="h-4 w-4" />}
               {isCorrect ? "¡Correcto!" : "Incorrecto"}
             </p>
+            {confidenceFeedback ? (
+              <p className="mt-2 rounded-lg border border-amber-400/25 bg-amber-400/[0.06] px-3 py-2 text-xs font-semibold text-amber-100">
+                {confidenceFeedback}
+              </p>
+            ) : null}
             <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-slate-300">
               {renderWithBold(currentQuestion.explanation)}
             </p>
