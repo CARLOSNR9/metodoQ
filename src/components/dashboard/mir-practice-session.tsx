@@ -18,9 +18,9 @@ import {
 } from "@/lib/training/mir-confidence";
 import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers, type MirAnswerSource } from "@/lib/training/mir-review";
+import { MIR_EXAM_QUESTIONS, formatMirNet, getMirScoreSummary } from "@/lib/training/mir-scoring";
 import { recordMirStudyAnswers } from "@/lib/training/mir-study-log";
 import { registerMirTrainingDay } from "@/lib/training/mir-streak";
-import { formatMirNet } from "@/lib/training/mir-scoring";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirOfficialBadge, renderWithBold } from "./mir-rich-text";
 import { MirQuestionReviewCard } from "./mir-question-review-card";
@@ -141,6 +141,13 @@ export function MirPracticeSession({
   const correctCount = questions.filter(
     (question) => answers[question.id] === question.correctOptionId,
   ).length;
+  const answeredCount = questions.filter((question) => answers[question.id]).length;
+  // Netas MIR: aciertos − errores / 3 (en la práctica no hay preguntas en blanco).
+  const score = getMirScoreSummary({
+    correct: correctCount,
+    wrong: answeredCount - correctCount,
+    total: answeredCount,
+  });
 
   async function handleFinish() {
     setIsSaving(true);
@@ -211,6 +218,20 @@ export function MirPracticeSession({
             <span className="text-2xl font-bold text-slate-400">/{total}</span>
           </p>
           <p className="mt-1 text-xs font-semibold text-slate-400">respuestas correctas</p>
+          <div className="mx-auto mt-4 max-w-md rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
+            <p className="text-2xl font-black text-mq-premium-gold">
+              {formatMirNet(score.net)}
+              <span className="text-sm font-bold text-slate-400"> netas</span>
+            </p>
+            <p className="mt-1 text-xs text-slate-400">
+              {score.wrong > 0
+                ? `Tus ${score.wrong} ${score.wrong === 1 ? "error te restó" : "errores te restaron"} ${formatMirNet(score.netLostToErrors)} netas`
+                : "Ningún error te restó netas"}
+              {score.total > 0
+                ? ` · equivale a ${formatMirNet(score.projectedNet)} en un examen de ${MIR_EXAM_QUESTIONS} preguntas.`
+                : "."}
+            </p>
+          </div>
           <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-slate-300">
             {getSummaryMessage(correctCount, total, source)}
           </p>
@@ -323,7 +344,8 @@ export function MirPracticeSession({
           Pregunta {currentIndex + 1} de {total}
         </p>
         <p className="text-xs font-semibold text-slate-400">
-          <span className="text-emerald-400">{correctCount}</span> correctas
+          <span className="text-emerald-400">{correctCount}</span> correctas ·{" "}
+          <span className="text-mq-premium-gold">{formatMirNet(score.net)}</span> netas
         </p>
       </div>
       <div className="mb-6 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
