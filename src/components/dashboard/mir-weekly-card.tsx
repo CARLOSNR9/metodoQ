@@ -1,6 +1,7 @@
 "use client";
 
-import { CalendarCheck, Check, X } from "lucide-react";
+import { CalendarCheck, Check, Target, X } from "lucide-react";
+import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
 import type { MirWeekSummary } from "@/lib/training/mir-weekly";
 
 const WEEKDAY_LABELS = ["L", "M", "X", "J", "V", "S", "D"];
@@ -67,6 +68,13 @@ export function MirWeeklyCardContent({ week, dailyTarget }: { week: MirWeekSumma
           <span className="inline-flex items-center gap-1 rounded-lg bg-rose-500/15 px-2.5 py-1 text-rose-300">
             <X className="h-3.5 w-3.5" />
             {week.incorrect} {week.incorrect === 1 ? "mala" : "malas"}
+          </span>
+          <span
+            className="inline-flex items-center gap-1 rounded-lg bg-mq-premium-gold/15 px-2.5 py-1 text-mq-premium-gold"
+            title="Netas MIR: aciertos − errores / 3"
+          >
+            <Target className="h-3.5 w-3.5" />
+            {formatMirNet(getMirNet(week.correct, week.incorrect))} netas
           </span>
         </div>
         {comparison ? <p className="mt-2 text-xs text-slate-400">{comparison}</p> : null}
