@@ -32,6 +32,7 @@ import { MirStreakStrip } from "./mir-streak-strip";
 import { MirAchievementsCard } from "./mir-achievements";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
+import { MirProgressChart } from "./mir-progress-chart";
 import { MirWeeklyCard } from "./mir-weekly-card";
 
 type MirDashboardViewProps = {
@@ -96,7 +97,7 @@ function EditionLink({
 
 /**
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
- * preguntas de la semana, accesos libres a práctica, repaso de
+ * preguntas de la semana y curva de aciertos, accesos libres a práctica, repaso de
  * errores, tarjetas de repaso y simulacro, mapa de dominio por especialidad, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
@@ -179,7 +180,10 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
             <CalendarDays className="h-4 w-4 text-mq-premium-gold" />
             <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu semana</h2>
           </div>
-          <MirWeeklyCard userId={userId} />
+          <div className="space-y-4">
+            <MirWeeklyCard userId={userId} />
+            <MirProgressChart userId={userId} />
+          </div>
         </section>
       ) : null}
 

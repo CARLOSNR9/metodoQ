@@ -1,6 +1,5 @@
-import { doc, getDoc } from "firebase/firestore";
-import { getFirebaseDb } from "@/lib/firebase";
 import { getLocalDateKey } from "@/lib/results";
+import { getMirDailyAnswers } from "@/lib/training/mir-progress";
 
 /**
  * Seguimiento semanal del módulo MIR: preguntas respondidas por día, en
@@ -64,14 +63,6 @@ export function buildMirWeekSummary(
 }
 
 export async function getMirWeekSummary(userId: string): Promise<MirWeekSummary> {
-  let byDay: MirAnsweredByDay = {};
-  let correctByDay: MirAnsweredByDay = {};
-  try {
-    const data = (await getDoc(doc(getFirebaseDb(), "users", userId))).data();
-    byDay = (data?.mirAnsweredByDay ?? {}) as MirAnsweredByDay;
-    correctByDay = (data?.mirCorrectByDay ?? {}) as MirAnsweredByDay;
-  } catch (error) {
-    console.error("No se pudo leer el seguimiento semanal MIR.", error);
-  }
+  const { byDay, correctByDay } = await getMirDailyAnswers(userId);
   return buildMirWeekSummary(byDay, new Date(), correctByDay);
 }
