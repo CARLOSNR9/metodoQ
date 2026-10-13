@@ -348,8 +348,8 @@ export const MIR_OFICIAL_2024_IMAGENES_QUESTIONS: TrainingQuestion[] = [
     difficulty: "hard",
     officialExam: { year: 2024, number: 13 },
     image: image(13, "Electrocardiograma de 12 derivaciones con tira de ritmo en V1.", 1394, 736),
-    reviewStatus: "pending",
-    reviewNotes: "Sin fuente externa: respuesta deducida del análisis del ECG (FA sin bloqueo AV avanzado). Pendiente de confirmar.",
+    reviewStatus: "approved",
+    reviewNotes: "Respuesta deducida del análisis del ECG (FA sin bloqueo AV avanzado), sin fuente externa; activada a petición del equipo.",
     statement: "En relación con el electrocardiograma de 12 derivaciones que se muestra, señale la descripción INCORRECTA:",
     options: [
       { id: "1", label: "1", text: "Ritmo auricular desorganizado con frecuencia ventricular irregular muy sugestiva de fibrilación auricular." },

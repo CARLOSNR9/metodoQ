@@ -42,8 +42,7 @@ describe("preguntas MIR de imagen (2024)", () => {
     const imagesInBank = MIR_OFFICIAL_QUESTIONS.filter((question) => question.image);
     const edition = MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-OJO-CLINICO");
     expect(edition?.questions ?? []).toEqual(imagesInBank);
-    // 24 verificadas; la 13 sigue pendiente.
-    expect(edition?.questionCount).toBe(24);
+    expect(edition?.questionCount).toBe(25);
   });
 });
 
