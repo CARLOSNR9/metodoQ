@@ -1,6 +1,7 @@
 import { CheckCircle2, XCircle } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { renderWithBold } from "./mir-rich-text";
+import { MirQuestionImage } from "./mir-question-image";
 
 /**
  * Pregunta corregida para repasar leyendo: enunciado, tu respuesta, la
@@ -56,6 +57,14 @@ export function MirQuestionReviewCard({
         ) : null}
       </div>
       <p className="mt-2 text-sm leading-relaxed text-white">{renderWithBold(question.statement)}</p>
+      {question.image ? (
+        <MirQuestionImage
+          image={question.image}
+          number={question.officialExam?.number}
+          compact
+          pending={question.reviewStatus === "pending"}
+        />
+      ) : null}
 
       <div className="mt-4 space-y-1.5 text-sm">
         {givenOption && !isCorrect ? (

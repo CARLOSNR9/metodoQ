@@ -42,6 +42,17 @@ export type TrainingQuestion = {
   theoryContent?: string;
   /** Pregunta literal de un examen oficial (p. ej. MIR 2025, pregunta 85). */
   officialExam?: { year: number; number: number };
+  /** Imagen de la pregunta (preguntas «de imagen» del MIR), servida desde `public/`. */
+  image?: QuestionImage;
+};
+
+export type QuestionImage = {
+  /** Ruta pública, p. ej. `/mir/2024/imagen-01.jpg`. */
+  src: string;
+  /** Descripción neutra que no revela la respuesta. */
+  alt: string;
+  width: number;
+  height: number;
 };
 
 /** Pregunta en el panel de revisión (Firestore y/o banco en código). */

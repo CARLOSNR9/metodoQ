@@ -4,6 +4,7 @@ import { MIR_OFICIAL_2025_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2025-lote-
 import { MIR_OFICIAL_2025_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2025-lote-2-questions";
 import { MIR_OFICIAL_2024_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2024-lote-1-questions";
 import { MIR_OFICIAL_2024_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2024-lote-2-questions";
+import { MIR_OFICIAL_2024_IMAGENES_QUESTIONS } from "@/data/mir-oficial-2024-imagenes-questions";
 import { MIR_OFICIAL_2023_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2023-lote-1-questions";
 import { MIR_OFICIAL_2023_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2023-lote-2-questions";
 import { MIR_OFICIAL_2022_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2022-lote-1-questions";
@@ -40,8 +41,26 @@ const MIR_OFICIAL_2025_QUESTIONS: TrainingQuestion[] = [
   ...complementariasDe(2025),
 ].sort((a, b) => (a.officialExam?.number ?? 0) - (b.officialExam?.number ?? 0));
 
-/** MIR 2024 oficial: las 182 preguntas sin imagen del examen (incluidas las de reserva). */
+/**
+ * En las vistas previas de Vercel (`NEXT_PUBLIC_VERCEL_ENV`, que Vercel define
+ * solo) entran también las preguntas pendientes, para poder revisarlas.
+ */
+const SHOW_PENDING_QUESTIONS = process.env.NEXT_PUBLIC_VERCEL_ENV === "preview";
+
+/**
+ * Preguntas de imagen ya cotejadas con la plantilla oficial. Las que siguen en
+ * `reviewStatus: "pending"` (respuesta aún sin verificar) no entran en el banco,
+ * salvo en las vistas previas.
+ */
+const imagenesVerificadas = (questions: TrainingQuestion[]): TrainingQuestion[] =>
+  questions.filter((question) => SHOW_PENDING_QUESTIONS || question.reviewStatus !== "pending");
+
+/**
+ * MIR 2024 oficial: las 182 preguntas sin imagen del examen (incluidas las de
+ * reserva) y las de imagen (1-25) ya verificadas.
+ */
 const MIR_OFICIAL_2024_QUESTIONS: TrainingQuestion[] = [
+  ...imagenesVerificadas(MIR_OFICIAL_2024_IMAGENES_QUESTIONS),
   ...MIR_OFICIAL_2024_LOTE_1_QUESTIONS,
   ...MIR_OFICIAL_2024_LOTE_2_QUESTIONS,
   ...complementariasDe(2024),
@@ -181,7 +200,13 @@ function buildMixedSimulacros(pool: TrainingQuestion[]): [TrainingQuestion[], Tr
   return [first, second];
 }
 
-const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(MIR_OFFICIAL_QUESTIONS);
+/** Simulacro «Ojo Clínico»: solo las preguntas de imagen ya verificadas, en orden del cuadernillo. */
+const MIR_OJO_CLINICO_QUESTIONS: TrainingQuestion[] = MIR_OFFICIAL_QUESTIONS.filter((question) => question.image);
+
+// Sin las preguntas de imagen: así los simulacros mixtos no cambian al ir añadiéndolas.
+const [MIR_SIMULACRO_1_QUESTIONS, MIR_SIMULACRO_2_QUESTIONS] = buildMixedSimulacros(
+  MIR_OFFICIAL_QUESTIONS.filter((question) => !question.image),
+);
 
 /**
  * Modelo del módulo "Simulacro MIR". Sigue el mismo patrón que las
@@ -260,6 +285,12 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
     [...MIR_SIMULACRO_1_QUESTIONS, ...MIR_SIMULACRO_2_QUESTIONS],
   ),
   buildEdition(
+    "MIR-OJO-CLINICO",
+    "Ojo Clínico",
+    "Solo preguntas de imagen del MIR oficial: TC, ECG, dermatología, fondo de ojo, frotis… Entrena el ojo antes del examen.",
+    MIR_OJO_CLINICO_QUESTIONS,
+  ),
+  buildEdition(
     "MIR-2025-OFICIAL-1",
     "MIR 2025 oficial",
     "Las preguntas reales del examen MIR 2025 (sin imágenes), tal cual salieron, con explicación de cada una.",
@@ -268,7 +299,9 @@ export const MIR_EXAM_EDITIONS: MirExamEdition[] = [
   buildEdition(
     "MIR-2024-OFICIAL",
     "MIR 2024 oficial",
-    "Las preguntas reales del examen MIR 2024 (sin imágenes), tal cual salieron, con explicación de cada una.",
+    MIR_OFICIAL_2024_QUESTIONS.some((question) => question.image)
+      ? "Las preguntas reales del examen MIR 2024, con sus imágenes, tal cual salieron y con explicación de cada una."
+      : "Las preguntas reales del examen MIR 2024 (sin imágenes), tal cual salieron, con explicación de cada una.",
     MIR_OFICIAL_2024_QUESTIONS,
   ),
   buildEdition(
