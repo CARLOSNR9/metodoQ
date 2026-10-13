@@ -1,12 +1,15 @@
 import { doc, getDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { getLocalDateKey } from "@/lib/results";
+import { getMirNet } from "@/lib/training/mir-scoring";
 import type { MirAnsweredByDay } from "@/lib/training/mir-weekly";
 
 /**
  * Curva de progreso MIR: % de aciertos por día o por semana, a partir de
  * `users/{uid}.mirAnsweredByDay` y `mirCorrectByDay`. Solo cuentan los días
  * con aciertos registrados (los anteriores a `mirCorrectByDay` no los tienen).
+ * Las netas (aciertos − errores / 3) se expresan también como % de las
+ * respondidas, para comparar días con distinto volumen en la misma escala.
  */
 export type MirProgressGranularity = "day" | "week";
 
@@ -18,6 +21,10 @@ export type MirProgressPoint = {
   incorrect: number;
   /** 0-100, null si no hubo respuestas con aciertos registrados. */
   accuracy: number | null;
+  /** Aciertos − errores / 3. */
+  net: number;
+  /** Netas por cada 100 respondidas (de −33 a 100), null si no hubo respuestas. */
+  netPercentage: number | null;
 };
 
 export type MirProgressSeries = {
@@ -25,6 +32,8 @@ export type MirProgressSeries = {
   correct: number;
   incorrect: number;
   accuracy: number | null;
+  net: number;
+  netPercentage: number | null;
 };
 
 export const MIR_PROGRESS_RANGE: Record<MirProgressGranularity, number> = { day: 30, week: 12 };
@@ -42,6 +51,11 @@ function getMonday(date: Date): Date {
 function toAccuracy(correct: number, incorrect: number): number | null {
   const answered = correct + incorrect;
   return answered > 0 ? Math.round((correct / answered) * 100) : null;
+}
+
+function toNetPercentage(correct: number, incorrect: number): number | null {
+  const answered = correct + incorrect;
+  return answered > 0 ? Math.round((getMirNet(correct, incorrect) / answered) * 100) : null;
 }
 
 function formatLabel(date: Date): string {
@@ -81,12 +95,21 @@ export function buildMirProgressSeries(
       correct,
       incorrect,
       accuracy: toAccuracy(correct, incorrect),
+      net: getMirNet(correct, incorrect),
+      netPercentage: toNetPercentage(correct, incorrect),
     };
   });
 
   const correct = points.reduce((sum, point) => sum + point.correct, 0);
   const incorrect = points.reduce((sum, point) => sum + point.incorrect, 0);
-  return { points, correct, incorrect, accuracy: toAccuracy(correct, incorrect) };
+  return {
+    points,
+    correct,
+    incorrect,
+    accuracy: toAccuracy(correct, incorrect),
+    net: getMirNet(correct, incorrect),
+    netPercentage: toNetPercentage(correct, incorrect),
+  };
 }
 
 export async function getMirDailyAnswers(
