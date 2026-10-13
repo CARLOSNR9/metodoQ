@@ -120,14 +120,16 @@ export async function recordMirSpecialtyStats(
     update = merged;
   }
 
+  const todayKey = getLocalDateKey(new Date());
   await setDoc(
     userRef,
     // mirTotalAnswered cuenta cada respuesta una vez (las mixtas suman en varias especialidades);
-    // mirAnsweredByDay alimenta el seguimiento semanal (ver mir-weekly.ts).
+    // mirAnsweredByDay y mirCorrectByDay alimentan el seguimiento semanal (ver mir-weekly.ts).
     {
       mirSpecialtyStats: update,
       mirTotalAnswered: increment(outcomes.length),
-      mirAnsweredByDay: { [getLocalDateKey(new Date())]: increment(outcomes.length) },
+      mirAnsweredByDay: { [todayKey]: increment(outcomes.length) },
+      mirCorrectByDay: { [todayKey]: increment(outcomes.filter((outcome) => outcome.correct).length) },
     },
     { merge: true },
   );

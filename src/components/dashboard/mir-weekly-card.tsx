@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check, X } from "lucide-react";
 import { getMirWeekSummary, type MirWeekSummary } from "@/lib/training/mir-weekly";
 
 const WEEKDAY_LABELS = ["L", "M", "X", "J", "V", "S", "D"];
@@ -49,7 +49,17 @@ export function MirWeeklyCardContent({ week }: { week: MirWeekSummary }) {
       <div>
         <p className="text-[11px] font-bold uppercase tracking-wide text-slate-400">Preguntas esta semana</p>
         <p className="mt-1 text-4xl font-black text-mq-premium-gold">{week.total}</p>
-        <p className="mt-1 text-xs text-slate-400">{getComparison(week)}</p>
+        <div className="mt-2 flex flex-wrap gap-2 text-xs font-bold">
+          <span className="inline-flex items-center gap-1 rounded-lg bg-emerald-500/15 px-2.5 py-1 text-emerald-300">
+            <Check className="h-3.5 w-3.5" />
+            {week.correct} {week.correct === 1 ? "buena" : "buenas"}
+          </span>
+          <span className="inline-flex items-center gap-1 rounded-lg bg-rose-500/15 px-2.5 py-1 text-rose-300">
+            <X className="h-3.5 w-3.5" />
+            {week.incorrect} {week.incorrect === 1 ? "mala" : "malas"}
+          </span>
+        </div>
+        <p className="mt-2 text-xs text-slate-400">{getComparison(week)}</p>
         <Link
           href="/dashboard/mir/practica"
           className="mt-4 inline-flex min-h-10 items-center justify-center gap-1.5 rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
