@@ -40,6 +40,7 @@ import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirMasteryCard } from "./mir-mastery-map";
 import { MirNetCurveCard } from "./mir-net-curve";
 import { MirProgressChart } from "./mir-progress-chart";
+import { MirPearlOfTheDayCard } from "./mir-pearls";
 import { MirSpainRoadmap } from "./mir-spain-roadmap";
 import { MirWeeklyCard } from "./mir-weekly-card";
 import { MirWeeklyRankingCard } from "./mir-weekly-ranking";
@@ -108,7 +109,7 @@ function EditionLink({
  * Dashboard del módulo MIR: bienvenida, cuenta regresiva al examen, racha,
  * plan de hoy, preguntas, ranking y curva de aciertos de la semana, accesos libres a práctica, repaso de
  * errores, tarjetas de repaso y simulacro, curva de netas por simulacro, mapa de dominio por especialidad,
- * camino a España, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
+ * camino a España con la perla del día Colombia vs España, logros y datos curiosos. Tema oscuro/dorado, deliberadamente distinto del resto
  * de Método Q (enfocado en exámenes colombianos).
  */
 export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps) {
@@ -365,7 +366,10 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
           <Plane className="h-4 w-4 text-mq-premium-gold" />
           <h2 className="text-sm font-black uppercase tracking-wide text-white">Tu camino a España</h2>
         </div>
-        <MirSpainRoadmap userId={userId} />
+        <div className="space-y-4">
+          <MirPearlOfTheDayCard />
+          <MirSpainRoadmap userId={userId} />
+        </div>
       </section>
 
       {hasContent ? (
