@@ -25,6 +25,7 @@ import {
   type MirSpecialtyStats,
 } from "@/lib/training/mir-mastery";
 import { MirDoctorMascot } from "./mir-doctor-mascot";
+import { MirExamWeightSection, formatMirPerExam, getMirSpecialtyWeight } from "./mir-exam-weight";
 
 type LevelMeta = {
   label: string;
@@ -190,6 +191,11 @@ export function MirMasteryCardContent({ stats }: { stats: MirSpecialtyStats }) {
                   <span className="font-semibold text-slate-400"> · {weakest.accuracy} %</span>
                 ) : null}
               </p>
+              {getMirSpecialtyWeight(weakest.key) ? (
+                <p className="mt-0.5 text-[11px] text-slate-400">
+                  Pesa {formatMirPerExam(getMirSpecialtyWeight(weakest.key)!)} en el MIR
+                </p>
+              ) : null}
               <Link
                 href={buildMirPracticeHref(weakest.key)}
                 className="mt-3 inline-flex min-h-10 items-center justify-center gap-1.5 rounded-xl bg-mq-premium-gold px-4 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
@@ -275,7 +281,10 @@ function MasteryTile({ item }: { item: MirSpecialtyMastery }) {
       >
         <div className={`h-full rounded-full ${meta.fill}`} style={{ width: `${item.accuracy ?? 0}%` }} />
       </div>
-      <p className="mt-2 text-[11px] text-slate-400">
+      {getMirSpecialtyWeight(item.key) ? (
+        <p className="mt-2 text-[11px] font-semibold text-slate-300">{formatMirPerExam(getMirSpecialtyWeight(item.key)!)}</p>
+      ) : null}
+      <p className="mt-1 text-[11px] text-slate-400">
         {item.answered > 0
           ? `${item.correct}/${item.answered} correctas`
           : `${item.questionCount} ${item.questionCount === 1 ? "pregunta disponible" : "preguntas disponibles"}`}
@@ -354,6 +363,8 @@ export function MirMasteryViewContent({ stats }: { stats: MirSpecialtyStats }) {
           </p>
         </div>
       </div>
+
+      <MirExamWeightSection mastery={mastery} />
 
       <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {sortForPractice(mastery).map((item) => (
