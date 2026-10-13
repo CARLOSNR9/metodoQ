@@ -28,6 +28,7 @@ import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { MirOfficialBadge, renderWithBold } from "./mir-rich-text";
 import { MirQuestionReviewCard } from "./mir-question-review-card";
+import { MirReportQuestionButton } from "./mir-report-question-button";
 import { MirQuestionImage } from "./mir-question-image";
 import { MirScoreBreakdown } from "./mir-score";
 import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
@@ -385,11 +386,16 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
         </div>
 
         <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-7">
-          {currentQuestion.examArea ? (
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
-              {currentQuestion.examArea}
-            </p>
-          ) : null}
+          <div className="flex items-start justify-between gap-3">
+            {currentQuestion.examArea ? (
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
+                {currentQuestion.examArea}
+              </p>
+            ) : (
+              <span />
+            )}
+            <MirReportQuestionButton question={currentQuestion} />
+          </div>
           {currentQuestion.officialExam ? (
             <div className="mt-2">
               <MirOfficialBadge officialExam={currentQuestion.officialExam} />

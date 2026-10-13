@@ -12,10 +12,15 @@ import type { QuestionReport } from "@/lib/server/question-reports-admin";
 import type { QuestionAdminRecord } from "@/lib/questions/types";
 import { ProfessorQuestionEditor } from "@/components/professor/professor-question-editor";
 import { selectInputClassName } from "@/components/ui/select-field";
+import type { MirQuestionPreview } from "@/lib/mir/question-reports";
 
 type Props = {
   reports: QuestionReport[];
   questions?: QuestionAdminRecord[];
+  /** "mir": reportes de alumnos del módulo MIR (preguntas oficiales en código, sin editor). */
+  variant?: "metodo-q" | "mir";
+  /** Enunciado, opciones y explicación de cada pregunta MIR reportada, por ID. */
+  mirPreviews?: Record<string, MirQuestionPreview>;
 };
 
 const STATUS_OPTIONS: { value: QuestionReportStatus; label: string }[] = [
@@ -24,7 +29,13 @@ const STATUS_OPTIONS: { value: QuestionReportStatus; label: string }[] = [
   { value: "dismissed", label: "Descartada" },
 ];
 
-export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
+export function ReportedQuestionsPanel({
+  reports,
+  questions = [],
+  variant = "metodo-q",
+  mirPreviews = {},
+}: Props) {
+  const isMir = variant === "mir";
   const [filter, setFilter] = useState<"pending" | "reviewed" | "dismissed" | "all">("pending");
   const [copied, setCopied] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState<QuestionAdminRecord | null>(null);
@@ -114,11 +125,12 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
           Calidad de contenido
         </p>
         <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-          Preguntas reportadas
+          {isMir ? "Reportes MIR" : "Preguntas reportadas"}
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">
-          Preguntas marcadas desde la vista previa por retroalimentación escueta o débil. Copia el
-          listado de códigos y envíalo a tu flujo de revisión con IA.
+          {isMir
+            ? "Preguntas del módulo MIR que los alumnos marcaron por respuesta incorrecta, enunciado mal planteado, explicación confusa, imagen, etc. Despliega cada código para ver la pregunta y los comentarios."
+            : "Preguntas marcadas desde la vista previa por retroalimentación escueta o débil. Copia el listado de códigos y envíalo a tu flujo de revisión con IA."}
         </p>
       </header>
 
@@ -141,12 +153,20 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
         <section className="rounded-xl border border-dashed border-white/15 bg-slate-50 p-10 text-center">
           <Flag className="mx-auto h-8 w-8 text-slate-500" />
           <p className="mt-4 text-sm font-semibold text-slate-900">No hay preguntas reportadas</p>
-          <p className="mx-auto mt-2 max-w-md text-sm text-slate-500">
-            Desde{" "}
-            <span className="font-medium text-slate-900">Vista previa → Nota en Mi Estudio</span> puedes
-            pulsar <span className="font-medium text-slate-900">Reportar pregunta</span> cuando la
-            retroalimentación sea demasiado breve.
-          </p>
+          {isMir ? (
+            <p className="mx-auto mt-2 max-w-md text-sm text-slate-500">
+              Los alumnos reportan desde el botón{" "}
+              <span className="font-medium text-slate-900">Reportar</span> de cada pregunta MIR
+              (práctica, simulacros, repaso y «Mi estudio»).
+            </p>
+          ) : (
+            <p className="mx-auto mt-2 max-w-md text-sm text-slate-500">
+              Desde{" "}
+              <span className="font-medium text-slate-900">Vista previa → Nota en Mi Estudio</span> puedes
+              pulsar <span className="font-medium text-slate-900">Reportar pregunta</span> cuando la
+              retroalimentación sea demasiado breve.
+            </p>
+          )}
         </section>
       ) : (
         <div className="space-y-6">
@@ -213,7 +233,12 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
                 </thead>
                 <tbody>
                   {visible.map((report) => (
-                    <ReportedQuestionRow key={report.id} report={report} onEdit={() => handleEdit(report)} />
+                    <ReportedQuestionRow
+                      key={report.id}
+                      report={report}
+                      onEdit={isMir ? undefined : () => handleEdit(report)}
+                      mirPreview={mirPreviews[report.questionId]}
+                    />
                   ))}
                 </tbody>
               </table>
@@ -240,7 +265,15 @@ export function ReportedQuestionsPanel({ reports, questions = [] }: Props) {
 
 import { useRouter } from "next/navigation";
 
-function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdit?: () => void }) {
+function ReportedQuestionRow({
+  report,
+  onEdit,
+  mirPreview,
+}: {
+  report: QuestionReport;
+  onEdit?: () => void;
+  mirPreview?: MirQuestionPreview;
+}) {
   const [isPending, startTransition] = useTransition();
   const [isExpanded, setIsExpanded] = useState(false);
   const router = useRouter();
@@ -334,6 +367,7 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
         <tr className="border-b border-slate-200 bg-slate-50">
           <td colSpan={5} className="p-4">
             <div className="space-y-3 pl-4 border-l-2 border-mq-accent/30">
+              {mirPreview ? <MirQuestionPreviewBlock preview={mirPreview} /> : null}
               {report.reportsList?.map((r, i) => (
                 <div key={i} className="rounded-lg bg-slate-50 p-3 text-sm">
                   <div className="flex items-center justify-between mb-1">
@@ -374,6 +408,46 @@ function ReportedQuestionRow({ report, onEdit }: { report: QuestionReport; onEdi
         </tr>
       )}
     </>
+  );
+}
+
+function MirQuestionPreviewBlock({ preview }: { preview: MirQuestionPreview }) {
+  return (
+    <div className="rounded-lg border border-slate-200 bg-white p-3 text-sm">
+      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Pregunta</p>
+      <p className="mt-1 whitespace-pre-line text-slate-900">{preview.statement.replace(/\*\*/g, "")}</p>
+      {preview.imageSrc ? (
+        <a
+          href={preview.imageSrc}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-1 inline-block text-xs font-semibold text-mq-accent underline-offset-2 hover:underline"
+        >
+          Ver imagen
+        </a>
+      ) : null}
+      <ul className="mt-2 space-y-1">
+        {preview.options.map((option) => (
+          <li
+            key={option.label}
+            className={
+              option.label === preview.correctLabel
+                ? "font-semibold text-emerald-700"
+                : "text-slate-700"
+            }
+          >
+            {option.label}. {option.text}
+            {option.label === preview.correctLabel ? " ✓" : ""}
+          </li>
+        ))}
+      </ul>
+      <details className="mt-2">
+        <summary className="cursor-pointer text-xs font-semibold text-slate-500">Explicación</summary>
+        <p className="mt-1 whitespace-pre-line text-slate-700">
+          {preview.explanation.replace(/\*\*/g, "")}
+        </p>
+      </details>
+    </div>
   );
 }
 

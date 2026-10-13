@@ -2,6 +2,7 @@ import { CheckCircle2, XCircle } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { renderWithBold } from "./mir-rich-text";
 import { MirQuestionImage } from "./mir-question-image";
+import { MirReportQuestionButton } from "./mir-report-question-button";
 
 /**
  * Pregunta corregida para repasar leyendo: enunciado, tu respuesta, la
@@ -42,19 +43,22 @@ export function MirQuestionReviewCard({
         ) : (
           <span />
         )}
-        {given ? (
-          isCorrect ? (
-            <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
-          ) : (
+        <div className="flex shrink-0 items-center gap-2">
+          <MirReportQuestionButton question={question} />
+          {given ? (
+            isCorrect ? (
+              <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
+            ) : (
+              <XCircle className="h-4 w-4 shrink-0 text-rose-400" />
+            )
+          ) : given === null ? (
+            <span className="shrink-0 rounded-full border border-white/15 px-2 py-0.5 text-[10px] font-bold text-slate-400">
+              Sin responder
+            </span>
+          ) : wasWrong ? (
             <XCircle className="h-4 w-4 shrink-0 text-rose-400" />
-          )
-        ) : given === null ? (
-          <span className="shrink-0 rounded-full border border-white/15 px-2 py-0.5 text-[10px] font-bold text-slate-400">
-            Sin responder
-          </span>
-        ) : wasWrong ? (
-          <XCircle className="h-4 w-4 shrink-0 text-rose-400" />
-        ) : null}
+          ) : null}
+        </div>
       </div>
       <p className="mt-2 text-sm leading-relaxed text-white">{renderWithBold(question.statement)}</p>
       {question.image ? (

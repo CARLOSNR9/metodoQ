@@ -2,6 +2,7 @@
 
 import { FieldValue } from "firebase-admin/firestore";
 import { getFirebaseAdminAuth, getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import { isMirQuestionId } from "@/lib/mir/question-reports";
 
 export type StudentReportInput = {
   questionId: string;
@@ -48,6 +49,8 @@ export async function submitStudentQuestionReportAction(input: StudentReportInpu
   }
 
   const now = new Date().toISOString();
+  // El módulo sale del ID (no del cliente): los reportes MIR van a su propio panel.
+  const reportModule = isMirQuestionId(trimmedId) ? "mir" : "metodo-q";
   const ref = getFirebaseAdminDb().collection("question_reports").doc(trimmedId);
 
   try {
@@ -63,6 +66,7 @@ export async function submitStudentQuestionReportAction(input: StudentReportInpu
     if (!docSnap.exists) {
       await ref.set({
         questionId: trimmedId,
+        module: reportModule,
         topic: topic || "Sin tema",
         status: "pending",
         createdAt: now,
@@ -71,6 +75,7 @@ export async function submitStudentQuestionReportAction(input: StudentReportInpu
       });
     } else {
       await ref.update({
+        module: reportModule,
         status: "pending",
         updatedAt: now,
         reportsList: FieldValue.arrayUnion(studentReport),

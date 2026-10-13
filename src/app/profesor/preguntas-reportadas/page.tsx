@@ -14,7 +14,7 @@ export default async function ProfessorReportedQuestionsPage() {
 
   let questions: Awaited<ReturnType<typeof adminListSpecificQuestionsForReview>> = [];
   try {
-    reports = await adminListQuestionReports("all");
+    reports = await adminListQuestionReports("all", "metodo-q");
     const reportIds = reports.map(r => r.questionId);
     questions = await adminListSpecificQuestionsForReview(reportIds);
   } catch (error) {

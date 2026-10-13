@@ -12,6 +12,7 @@ import { MirDoctorMascot } from "./mir-doctor-mascot";
 import { MirOfficialBadge, renderWithBold } from "./mir-rich-text";
 import { MirQuestionReviewCard } from "./mir-question-review-card";
 import { MirQuestionImage } from "./mir-question-image";
+import { MirReportQuestionButton } from "./mir-report-question-button";
 
 type ReviewFilter = "wrong" | "correct" | "all";
 
@@ -256,14 +257,17 @@ export function MirPracticeSession({
       </div>
 
       <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 sm:p-7">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
-          {eyebrow}
-          {/* En una práctica por especialidad el eyebrow ya la nombra; no se repite. */}
-          {currentQuestion.examArea &&
-          !eyebrow.toLocaleUpperCase("es").includes(currentQuestion.examArea) ? (
-            <span className="text-slate-500"> · {currentQuestion.examArea}</span>
-          ) : null}
-        </p>
+        <div className="flex items-start justify-between gap-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-mq-premium-gold">
+            {eyebrow}
+            {/* En una práctica por especialidad el eyebrow ya la nombra; no se repite. */}
+            {currentQuestion.examArea &&
+            !eyebrow.toLocaleUpperCase("es").includes(currentQuestion.examArea) ? (
+              <span className="text-slate-500"> · {currentQuestion.examArea}</span>
+            ) : null}
+          </p>
+          <MirReportQuestionButton question={currentQuestion} />
+        </div>
         {currentQuestion.officialExam ? (
           <div className="mt-2">
             <MirOfficialBadge officialExam={currentQuestion.officialExam} />
