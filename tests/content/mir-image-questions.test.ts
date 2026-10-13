@@ -41,8 +41,9 @@ describe("preguntas MIR de imagen (2024)", () => {
   it("el simulacro «Ojo Clínico» reúne solo las preguntas de imagen del banco", () => {
     const imagesInBank = MIR_OFFICIAL_QUESTIONS.filter((question) => question.image);
     const edition = MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-OJO-CLINICO");
-    // Sin preguntas verificadas la edición no se muestra.
     expect(edition?.questions ?? []).toEqual(imagesInBank);
+    // 24 verificadas; la 13 sigue pendiente.
+    expect(edition?.questionCount).toBe(24);
   });
 });
 

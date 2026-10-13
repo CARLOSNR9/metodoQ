@@ -8,7 +8,7 @@ describe("preguntas MIR oficiales", () => {
     const keys = MIR_OFFICIAL_QUESTIONS.map((q) => `${q.officialExam?.year}-${q.officialExam?.number}`);
     expect(new Set(keys).size).toBe(MIR_OFFICIAL_QUESTIONS.length);
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2025)).toHaveLength(183);
-    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2024)).toHaveLength(182);
+    expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2024)).toHaveLength(206);
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2023)).toHaveLength(181);
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2022)).toHaveLength(183);
     expect(MIR_OFFICIAL_QUESTIONS.filter((q) => q.officialExam?.year === 2021)).toHaveLength(158);
@@ -41,7 +41,7 @@ describe("preguntas MIR oficiales", () => {
   it("cada año oficial tiene su simulacro con todas sus preguntas", () => {
     const edition = MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2025-OFICIAL-1");
     expect(edition?.questionCount).toBe(183);
-    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2024-OFICIAL")?.questionCount).toBe(182);
+    expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2024-OFICIAL")?.questionCount).toBe(206);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2023-OFICIAL")?.questionCount).toBe(181);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2022-OFICIAL")?.questionCount).toBe(183);
     expect(MIR_EXAM_EDITIONS.find((item) => item.code === "MIR-2021-OFICIAL")?.questionCount).toBe(158);
