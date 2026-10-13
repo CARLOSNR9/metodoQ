@@ -1,11 +1,12 @@
-import { doc, getDoc } from "firebase/firestore";
-import { getFirebaseDb } from "@/lib/firebase";
 import { getLocalDateKey } from "@/lib/results";
+import { getMirDailyAnswers } from "@/lib/training/mir-progress";
 
 /**
  * Seguimiento semanal del módulo MIR: preguntas respondidas por día, en
  * `users/{uid}.mirAnsweredByDay` (YYYY-MM-DD local → respuestas). Lo suma
- * `recordMirSpecialtyStats` al guardar práctica, repaso o simulacro.
+ * `recordMirSpecialtyStats` al guardar práctica, repaso o simulacro. Los
+ * aciertos van en `users/{uid}.mirCorrectByDay`; los días anteriores a ese
+ * campo no tienen clave y no cuentan como buenas ni malas.
  */
 export type MirAnsweredByDay = Record<string, number>;
 
@@ -15,6 +16,9 @@ export type MirWeekSummary = {
   /** Lunes a domingo de la semana actual. */
   days: MirWeekDay[];
   total: number;
+  /** Respuestas correctas e incorrectas de la semana (solo días con aciertos registrados). */
+  correct: number;
+  incorrect: number;
   previousWeekTotal: number;
 };
 
@@ -29,7 +33,11 @@ function getMonday(date: Date): Date {
   return addDays(monday, -((monday.getDay() + 6) % 7));
 }
 
-export function buildMirWeekSummary(byDay: MirAnsweredByDay, now: Date = new Date()): MirWeekSummary {
+export function buildMirWeekSummary(
+  byDay: MirAnsweredByDay,
+  now: Date = new Date(),
+  correctByDay: MirAnsweredByDay = {},
+): MirWeekSummary {
   const todayKey = getLocalDateKey(now);
   const monday = getMonday(now);
   const countFor = (dateKey: string) => Math.max(0, Number(byDay[dateKey] ?? 0));
@@ -42,16 +50,19 @@ export function buildMirWeekSummary(byDay: MirAnsweredByDay, now: Date = new Dat
     countFor(getLocalDateKey(addDays(monday, index - 7))),
   ).reduce((sum, count) => sum + count, 0);
 
-  return { days, total: days.reduce((sum, day) => sum + day.count, 0), previousWeekTotal };
+  let correct = 0;
+  let incorrect = 0;
+  for (const day of days) {
+    if (!(day.dateKey in correctByDay)) continue;
+    const dayCorrect = Math.min(day.count, Math.max(0, Number(correctByDay[day.dateKey] ?? 0)));
+    correct += dayCorrect;
+    incorrect += day.count - dayCorrect;
+  }
+
+  return { days, total: days.reduce((sum, day) => sum + day.count, 0), correct, incorrect, previousWeekTotal };
 }
 
 export async function getMirWeekSummary(userId: string): Promise<MirWeekSummary> {
-  let byDay: MirAnsweredByDay = {};
-  try {
-    const data = (await getDoc(doc(getFirebaseDb(), "users", userId))).data();
-    byDay = (data?.mirAnsweredByDay ?? {}) as MirAnsweredByDay;
-  } catch (error) {
-    console.error("No se pudo leer el seguimiento semanal MIR.", error);
-  }
-  return buildMirWeekSummary(byDay);
+  const { byDay, correctByDay } = await getMirDailyAnswers(userId);
+  return buildMirWeekSummary(byDay, new Date(), correctByDay);
 }

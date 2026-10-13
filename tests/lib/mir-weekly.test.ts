@@ -35,7 +35,16 @@ describe("buildMirWeekSummary", () => {
     expect(summary.total).toBe(5);
   });
 
+  it("separa buenas y malas de la semana, ignorando días sin aciertos registrados", () => {
+    const summary = buildMirWeekSummary(
+      { "2026-10-05": 10, "2026-10-06": 5, "2026-10-07": 4, "2026-09-30": 6 },
+      now,
+      { "2026-10-06": 3, "2026-10-07": 0, "2026-09-30": 6 },
+    );
+    expect(summary).toMatchObject({ total: 19, correct: 3, incorrect: 6 });
+  });
+
   it("sin datos devuelve ceros", () => {
-    expect(buildMirWeekSummary({}, now)).toMatchObject({ total: 0, previousWeekTotal: 0 });
+    expect(buildMirWeekSummary({}, now)).toMatchObject({ total: 0, correct: 0, incorrect: 0, previousWeekTotal: 0 });
   });
 });
