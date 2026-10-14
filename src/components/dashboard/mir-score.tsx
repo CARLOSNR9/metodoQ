@@ -14,6 +14,7 @@ import {
   getMirScoreSummary,
   type MirScoreInput,
 } from "@/lib/training/mir-scoring";
+import { MirNetCurve } from "./mir-net-curve";
 
 /** Nota estimada de un simulacro con la puntuación real del MIR. */
 export function MirScoreBreakdown(input: MirScoreInput) {
@@ -81,7 +82,8 @@ function Delta({ value }: { value: number }) {
 
 /**
  * Evolución de la nota estimada entre simulacros, proyectada a 200
- * preguntas para comparar ediciones de distinto tamaño.
+ * preguntas para comparar ediciones de distinto tamaño: la curva y, debajo,
+ * la lista de cada intento.
  */
 export function MirScoreTrend({ userId }: { userId: string }) {
   const [log, setLog] = useState<MirAttemptLogEntry[] | null>(null);
@@ -99,7 +101,12 @@ export function MirScoreTrend({ userId }: { userId: string }) {
   if (!log) {
     return <div className="h-32 animate-pulse rounded-2xl border border-white/10 bg-white/[0.03]" />;
   }
-  return <MirScoreTrendContent log={log} />;
+  return (
+    <>
+      {log.length > 0 ? <MirNetCurve log={log} /> : null}
+      <MirScoreTrendContent log={log} />
+    </>
+  );
 }
 
 export function MirScoreTrendContent({ log }: { log: MirAttemptLogEntry[] }) {

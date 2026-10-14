@@ -1,6 +1,8 @@
 import { doc, getDoc, increment, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import type { MirPracticeHistory } from "@/lib/training/mir-practice";
+import { getMirReviewDeck } from "@/lib/training/mir-review";
 
 /**
  * «Mi estudio» MIR: la última respuesta del alumno a cada pregunta que ha
@@ -102,4 +104,17 @@ export function buildMirStudyItems(
       };
     })
     .sort((a, b) => b.lastAt.localeCompare(a.lastAt) || a.questionId.localeCompare(b.questionId));
+}
+
+/** Contestadas y falladas del alumno, para los filtros de la práctica. */
+export function buildMirPracticeHistory(items: MirStudyItem[]): MirPracticeHistory {
+  return {
+    seen: new Set(items.map((item) => item.questionId)),
+    wrong: new Set(items.filter((item) => item.isWrong).map((item) => item.questionId)),
+  };
+}
+
+export async function getMirPracticeHistory(userId: string): Promise<MirPracticeHistory> {
+  const [log, deck] = await Promise.all([getMirStudyLog(userId), getMirReviewDeck(userId)]);
+  return buildMirPracticeHistory(buildMirStudyItems(log, deck.entries));
 }
