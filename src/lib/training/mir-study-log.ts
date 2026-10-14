@@ -1,6 +1,7 @@
 import { doc, getDoc, increment, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
+import { getMirNet } from "@/lib/training/mir-scoring";
 import type { MirPracticeHistory } from "@/lib/training/mir-practice";
 import { getMirReviewDeck } from "@/lib/training/mir-review";
 
@@ -73,6 +74,8 @@ export type MirStudyItem = {
   answer?: string;
   /** Última respuesta fallada o pendiente en el repaso de errores. */
   isWrong: boolean;
+  /** La última respuesta guardada fue correcta (los fallos antiguos sin respuesta cuentan como no). */
+  lastCorrect: boolean;
   /** Pendiente en el repaso de errores. */
   inReview: boolean;
   /** ISO de la última vez que se contestó (o se falló). */
@@ -98,12 +101,23 @@ export function buildMirStudyItems(
         questionId,
         answer: entry?.answer,
         isWrong: Boolean(review) || (entry ? !entry.correct : false),
+        lastCorrect: entry?.correct ?? false,
         inReview: Boolean(review),
         lastAt: entry?.answeredAt || review?.lastWrongAt || "",
         timesWrong: entry?.timesWrong ?? (review ? 1 : 0),
       };
     })
     .sort((a, b) => b.lastAt.localeCompare(a.lastAt) || a.questionId.localeCompare(b.questionId));
+}
+
+/**
+ * Netas MIR de «Mi estudio» con la última respuesta a cada pregunta:
+ * aciertos − errores / 3. Es la nota que sacaría hoy con esas preguntas.
+ */
+export function getMirStudyNetSummary(items: MirStudyItem[]): { correct: number; wrong: number; net: number } {
+  const correct = items.filter((item) => item.lastCorrect).length;
+  const wrong = items.length - correct;
+  return { correct, wrong, net: getMirNet(correct, wrong) };
 }
 
 /** Contestadas y falladas del alumno, para los filtros de la práctica. */

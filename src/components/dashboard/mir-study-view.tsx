@@ -6,7 +6,13 @@ import { ArrowLeft, BookMarked, ChevronDown, Layers, XCircle, CheckCircle2 } fro
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import { getMirReviewDeck } from "@/lib/training/mir-review";
-import { buildMirStudyItems, getMirStudyLog, type MirStudyItem } from "@/lib/training/mir-study-log";
+import { formatMirNet } from "@/lib/training/mir-scoring";
+import {
+  buildMirStudyItems,
+  getMirStudyLog,
+  getMirStudyNetSummary,
+  type MirStudyItem,
+} from "@/lib/training/mir-study-log";
 import { MirPomodoroCard } from "./mir-pomodoro-card";
 import { MirQuestionReviewCard } from "./mir-question-review-card";
 
@@ -65,6 +71,7 @@ export function MirStudyView({ userId }: { userId: string }) {
   }
 
   const wrongCount = items.filter((item) => item.isWrong).length;
+  const netSummary = getMirStudyNetSummary(items);
   const filtered = items.filter(
     (item) =>
       (filter === "all" || item.isWrong) &&
@@ -99,16 +106,30 @@ export function MirStudyView({ userId }: { userId: string }) {
           la correcta y la explicación.
         </p>
 
-        <div className="mt-6 grid grid-cols-2 gap-3">
+        <div className="mt-6 grid grid-cols-3 gap-3">
           <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-center">
             <p className="text-2xl font-black text-white">{items.length}</p>
             <p className="text-[11px] font-semibold text-slate-400">contestadas</p>
+          </div>
+          <div
+            className="rounded-xl border border-mq-premium-gold/25 bg-mq-premium-gold/[0.06] p-4 text-center"
+            title={`Con tu última respuesta: ${netSummary.correct} aciertos − ${netSummary.wrong} errores / 3`}
+          >
+            <p className="text-2xl font-black text-mq-premium-gold">{formatMirNet(netSummary.net)}</p>
+            <p className="text-[11px] font-semibold text-slate-400">netas</p>
           </div>
           <div className="rounded-xl border border-rose-400/20 bg-rose-400/[0.06] p-4 text-center">
             <p className="text-2xl font-black text-rose-400">{wrongCount}</p>
             <p className="text-[11px] font-semibold text-slate-400">para repasar</p>
           </div>
         </div>
+
+        {items.length > 0 ? (
+          <p className="mt-3 text-xs text-slate-400">
+            Netas con tu última respuesta a cada pregunta: {netSummary.correct} aciertos − {netSummary.wrong}{" "}
+            errores / 3.
+          </p>
+        ) : null}
 
         {items.some((item) => item.inReview) ? (
           <Link

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildMirStudyItems, type MirStudyLogEntry } from "@/lib/training/mir-study-log";
+import { buildMirStudyItems, getMirStudyNetSummary, type MirStudyLogEntry } from "@/lib/training/mir-study-log";
 
 const entry = (overrides: Partial<MirStudyLogEntry>): MirStudyLogEntry => ({
   answer: "1",
@@ -28,5 +28,21 @@ describe("buildMirStudyItems", () => {
   it("una pregunta acertada después pero aún en el repaso sigue contando como fallo", () => {
     const [item] = buildMirStudyItems({ a: entry({ correct: true }) }, { a: { lastWrongAt: "2026-09-01" } });
     expect(item).toMatchObject({ answer: "1", isWrong: true, inReview: true });
+  });
+
+  it("calcula las netas con la última respuesta de cada pregunta", () => {
+    const items = buildMirStudyItems(
+      {
+        a: entry({ correct: true }),
+        b: entry({ correct: true }),
+        // Acertada en la última respuesta aunque siga en el repaso: suma.
+        c: entry({ correct: true }),
+        d: entry({ correct: false }),
+      },
+      { c: { lastWrongAt: "2026-09-01" }, e: { lastWrongAt: "2026-09-01" } },
+    );
+    const summary = getMirStudyNetSummary(items);
+    expect(summary).toMatchObject({ correct: 3, wrong: 2 });
+    expect(summary.net).toBeCloseTo(3 - 2 / 3);
   });
 });
