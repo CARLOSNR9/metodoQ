@@ -6,6 +6,7 @@ import {
   BookMarked,
   Building2,
   CalendarDays,
+  CheckCircle2,
   ClipboardList,
   Dumbbell,
   GalleryHorizontalEnd,
@@ -24,8 +25,10 @@ import {
   MIR_EXAM_EDITIONS,
   buildMirSimulacroHref,
   getMirAttempt,
+  getMirSimulacroProgressMap,
   type MirExamAttempt,
   type MirExamEdition,
+  type MirSimulacroProgress,
 } from "@/lib/training/mir-convocatoria";
 import { getMirDailyPlan, type MirDailyPlan } from "@/lib/training/mir-daily-plan";
 import { getDueMirReviewIds, getMirReviewDeck } from "@/lib/training/mir-review";
@@ -75,32 +78,68 @@ const CURIOSITIES = [
 
 const isOfficialEdition = (edition: MirExamEdition) => /^MIR-\d{4}-OFICIAL/.test(edition.code);
 
+/**
+ * Tarjeta de un simulacro. Cambia de color según el estado: verde si ya se
+ * entregó alguna vez, ámbar con barra de avance si hay uno a medias (se
+ * retoma donde se dejó) y neutra si aún no se ha empezado.
+ */
 function EditionLink({
   edition,
   lastAttempt,
+  progress,
   compact = false,
 }: {
   edition: MirExamEdition;
   lastAttempt: MirExamAttempt | null | undefined;
+  progress: MirSimulacroProgress | undefined;
   /** Tarjeta pequeña para la cuadrícula de exámenes oficiales: título corto y datos debajo. */
   compact?: boolean;
 }) {
-  const action = lastAttempt
-    ? `${formatMirNet(getMirNet(lastAttempt.correctAnswers, lastAttempt.wrongAnswers))} netas`
-    : "Hacer";
-  const meta = `${edition.questionCount} preg. · ${edition.minutes} min`;
+  const answered = progress ? Object.keys(progress.answersByQuestionId ?? {}).length : 0;
+  const progressTotal = progress?.questionIds.length || edition.questionCount;
+  const isDone = Boolean(lastAttempt);
+  const action = progress
+    ? "Continuar"
+    : lastAttempt
+      ? `${formatMirNet(getMirNet(lastAttempt.correctAnswers, lastAttempt.wrongAnswers))} netas`
+      : "Hacer";
+  const meta = progress
+    ? `${answered}/${progressTotal} respondidas`
+    : `${edition.questionCount} preg. · ${edition.minutes} min`;
+  const tone = progress
+    ? "border-amber-300/40 bg-amber-300/[0.07] hover:border-amber-300/70"
+    : isDone
+      ? "border-emerald-400/40 bg-emerald-400/[0.08] hover:border-emerald-400/70"
+      : "border-white/10 bg-white/[0.03] hover:border-mq-premium-gold/40";
+  const label = compact ? edition.label.replace(/ oficial$/i, "") : edition.label;
   return (
     <Link
       href={buildMirSimulacroHref(edition.code)}
-      className="block h-full rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 transition hover:border-mq-premium-gold/40"
+      aria-label={`${label}${progress ? `, a medias: ${answered} de ${progressTotal} respondidas` : isDone ? ", completado" : ""}`}
+      className={`block h-full rounded-xl border px-3 py-2 transition ${tone}`}
     >
       <span className="flex items-center justify-between gap-2">
-        <span className="truncate text-sm font-bold text-white">
-          {compact ? edition.label.replace(/ oficial$/i, "") : edition.label}
+        <span className="flex min-w-0 items-center gap-1.5">
+          {isDone && !progress ? <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-emerald-400" /> : null}
+          <span className="truncate text-sm font-bold text-white">{label}</span>
         </span>
-        <span className="shrink-0 text-xs font-black text-mq-premium-gold">{action}</span>
+        <span
+          className={`shrink-0 text-xs font-black ${
+            progress ? "text-amber-200" : isDone ? "text-emerald-300" : "text-mq-premium-gold"
+          }`}
+        >
+          {action}
+        </span>
       </span>
       <span className="block truncate text-[11px] text-slate-400">{meta}</span>
+      {progress ? (
+        <span className="mt-1.5 block h-1 overflow-hidden rounded-full bg-white/[0.08]">
+          <span
+            className="block h-full rounded-full bg-amber-300"
+            style={{ width: `${progressTotal > 0 ? (answered / progressTotal) * 100 : 0}%` }}
+          />
+        </span>
+      ) : null}
     </Link>
   );
 }
@@ -121,6 +160,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
   const [streak, setStreak] = useState<MirStreakInfo>({ count: 0, lastActiveDate: null, activeDates: [] });
   const [attemptsByEdition, setAttemptsByEdition] = useState<Record<string, MirExamAttempt | null>>({});
   const [dueReviewCount, setDueReviewCount] = useState(0);
+  const [progressByEdition, setProgressByEdition] = useState<Record<string, MirSimulacroProgress>>({});
   const [today, setToday] = useState<{ plan: MirDailyPlan; week: MirWeekSummary } | null>(null);
 
   useEffect(() => {
@@ -128,6 +168,10 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
 
     getMirStreakInfo(userId).then((info) => {
       if (!cancelled) setStreak(info);
+    });
+
+    getMirSimulacroProgressMap(userId).then((progress) => {
+      if (!cancelled) setProgressByEdition(progress);
     });
 
     getMirReviewDeck(userId).then((deck) => {
@@ -307,7 +351,11 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
               <ul className="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                 {ownEditions.map((edition) => (
                   <li key={edition.code}>
-                    <EditionLink edition={edition} lastAttempt={attemptsByEdition[edition.code]} />
+                    <EditionLink
+                      edition={edition}
+                      lastAttempt={attemptsByEdition[edition.code]}
+                      progress={progressByEdition[edition.code]}
+                    />
                   </li>
                 ))}
               </ul>
@@ -322,11 +370,22 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                         <EditionLink
                           edition={edition}
                           lastAttempt={attemptsByEdition[edition.code]}
+                          progress={progressByEdition[edition.code]}
                           compact
                         />
                       </li>
                     ))}
                   </ul>
+                  <p className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-slate-500">
+                    <span className="inline-flex items-center gap-1.5">
+                      <span aria-hidden className="h-2 w-2 rounded-full bg-emerald-400" />
+                      Completado
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <span aria-hidden className="h-2 w-2 rounded-full bg-amber-300" />
+                      A medias: sigue donde lo dejaste
+                    </span>
+                  </p>
                 </>
               ) : null}
             </article>

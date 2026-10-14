@@ -1,4 +1,4 @@
-import { arrayUnion, doc, getDoc, setDoc } from "firebase/firestore";
+import { arrayUnion, deleteField, doc, getDoc, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { MIR_OFICIAL_2025_LOTE_1_QUESTIONS } from "@/data/mir-oficial-2025-lote-1-questions";
 import { MIR_OFICIAL_2025_LOTE_2_QUESTIONS } from "@/data/mir-oficial-2025-lote-2-questions";
@@ -527,4 +527,98 @@ export async function getMirAttemptLog(userId: string): Promise<MirAttemptLogEnt
     console.error("No se pudo leer el registro de simulacros MIR.", error);
     return [];
   }
+}
+
+/**
+ * Simulacro empezado y sin entregar: el orden de las preguntas, lo respondido,
+ * dónde iba y el tiempo que le quedaba. Permite hacer un examen de 200
+ * preguntas en varios días y retomarlo donde se dejó (se guarda en
+ * `mirSimulacroProgress.<código>` del perfil y se borra al entregar).
+ */
+export type MirSimulacroProgress = {
+  editionCode: string;
+  questionIds: string[];
+  answersByQuestionId: Record<string, string>;
+  /** Preguntas marcadas «con duda» (no existía en los primeros avances guardados). */
+  doubtQuestionIds?: string[];
+  currentIndex: number;
+  secondsLeft: number;
+  updatedAt: string;
+};
+
+export async function getMirSimulacroProgressMap(
+  userId: string,
+): Promise<Record<string, MirSimulacroProgress>> {
+  try {
+    const data = (await getDoc(doc(getFirebaseDb(), "users", userId))).data();
+    return (data?.mirSimulacroProgress ?? {}) as Record<string, MirSimulacroProgress>;
+  } catch (error) {
+    console.error("No se pudo leer el avance de los simulacros MIR.", error);
+    return {};
+  }
+}
+
+export async function getMirSimulacroProgress(
+  userId: string,
+  editionCode: string,
+): Promise<MirSimulacroProgress | null> {
+  return (await getMirSimulacroProgressMap(userId))[editionCode] ?? null;
+}
+
+export async function saveMirSimulacroProgress(
+  userId: string,
+  progress: MirSimulacroProgress,
+): Promise<void> {
+  await setDoc(
+    doc(getFirebaseDb(), "users", userId),
+    { mirSimulacroProgress: { [progress.editionCode]: progress } },
+    { merge: true },
+  );
+}
+
+export async function clearMirSimulacroProgress(userId: string, editionCode: string): Promise<void> {
+  await setDoc(
+    doc(getFirebaseDb(), "users", userId),
+    { mirSimulacroProgress: { [editionCode]: deleteField() } },
+    { merge: true },
+  );
+}
+
+/**
+ * Rehace el simulacro guardado con las preguntas actuales de la edición, en el
+ * mismo orden. Las preguntas que ya no están en el banco se descartan (con su
+ * respuesta) y las nuevas se añaden al final. Se retoma en la primera pregunta
+ * sin responder a partir de donde se dejó; si no queda ninguna, en la última vista.
+ */
+export function restoreMirSimulacro(
+  edition: MirExamEdition,
+  progress: MirSimulacroProgress,
+): {
+  questions: TrainingQuestion[];
+  answers: Record<string, string>;
+  doubtQuestionIds: string[];
+  currentIndex: number;
+} {
+  const byId = new Map(edition.questions.map((question) => [question.id, question]));
+  const saved = progress.questionIds.flatMap((id) => byId.get(id) ?? []);
+  const savedIds = new Set(saved.map((question) => question.id));
+  const questions = shuffleMirQuestionsOptions([
+    ...saved,
+    ...edition.questions.filter((question) => !savedIds.has(question.id)),
+  ]);
+  const answers = Object.fromEntries(
+    Object.entries(progress.answersByQuestionId ?? {}).filter(([id]) => byId.has(id)),
+  );
+  const doubtQuestionIds = (progress.doubtQuestionIds ?? []).filter((id) => byId.has(id));
+  const lastIndex = Math.min(Math.max(0, progress.currentIndex ?? 0), Math.max(0, questions.length - 1));
+  const firstUnanswered = (from: number) =>
+    questions.findIndex((question, index) => index >= from && !answers[question.id]);
+  const next = firstUnanswered(lastIndex);
+  const fallback = firstUnanswered(0);
+  return {
+    questions,
+    answers,
+    doubtQuestionIds,
+    currentIndex: next >= 0 ? next : fallback >= 0 ? fallback : lastIndex,
+  };
 }
