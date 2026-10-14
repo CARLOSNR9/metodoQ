@@ -29,6 +29,7 @@ import { registerMirTrainingDay } from "@/lib/training/mir-streak";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { MirOfficialBadge, renderWithBold } from "./mir-rich-text";
 import { MirQuestionReviewCard } from "./mir-question-review-card";
+import { MirReportQuestionButton } from "./mir-report-question-button";
 import { MirQuestionImage } from "./mir-question-image";
 import { MirScoreBreakdown } from "./mir-score";
 import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
@@ -436,19 +437,22 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
             ) : (
               <span />
             )}
-            <button
-              type="button"
-              onClick={() => toggleDoubt(currentQuestion.id)}
-              aria-pressed={isCurrentDoubt}
-              className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border px-3 text-xs font-bold transition ${
-                isCurrentDoubt
-                  ? "border-sky-400/60 bg-sky-400/15 text-sky-200"
-                  : "border-white/15 text-slate-300 hover:border-white/30 hover:text-white"
-              }`}
-            >
-              <HelpCircle className="h-3.5 w-3.5" aria-hidden />
-              {isCurrentDoubt ? "Con duda" : "Marcar duda"}
-            </button>
+            <div className="flex shrink-0 items-center gap-2">
+              <MirReportQuestionButton question={currentQuestion} />
+              <button
+                type="button"
+                onClick={() => toggleDoubt(currentQuestion.id)}
+                aria-pressed={isCurrentDoubt}
+                className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border px-3 text-xs font-bold transition ${
+                  isCurrentDoubt
+                    ? "border-sky-400/60 bg-sky-400/15 text-sky-200"
+                    : "border-white/15 text-slate-300 hover:border-white/30 hover:text-white"
+                }`}
+              >
+                <HelpCircle className="h-3.5 w-3.5" aria-hidden />
+                {isCurrentDoubt ? "Con duda" : "Marcar duda"}
+              </button>
+            </div>
           </div>
           {currentQuestion.officialExam ? (
             <div className="mt-2">

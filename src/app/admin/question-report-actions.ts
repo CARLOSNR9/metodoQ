@@ -11,7 +11,11 @@ import type { QuestionReportStatus } from "@/lib/server/question-reports-admin";
 
 import { verifyStaffCaller } from "@/lib/server/verify-staff";
 
-const REPORT_PATHS = ["/admin/preguntas-reportadas", "/profesor/preguntas-reportadas"] as const;
+const REPORT_PATHS = [
+  "/admin/preguntas-reportadas",
+  "/admin/preguntas-reportadas-mir",
+  "/profesor/preguntas-reportadas",
+] as const;
 
 function revalidateReportPaths() {
   for (const path of REPORT_PATHS) {

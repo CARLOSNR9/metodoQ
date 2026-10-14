@@ -2,6 +2,7 @@ import { CheckCircle2, HelpCircle, XCircle } from "lucide-react";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { renderWithBold } from "./mir-rich-text";
 import { MirQuestionImage } from "./mir-question-image";
+import { MirReportQuestionButton } from "./mir-report-question-button";
 
 /**
  * Pregunta corregida para repasar leyendo: enunciado, tu respuesta, la
@@ -46,6 +47,7 @@ export function MirQuestionReviewCard({
           <span />
         )}
         <span className="flex shrink-0 items-center gap-2">
+          <MirReportQuestionButton question={question} />
           {isDoubt ? (
             <span className="inline-flex items-center gap-1 rounded-full border border-sky-400/40 px-2 py-0.5 text-[10px] font-bold text-sky-300">
               <HelpCircle className="h-3 w-3" aria-hidden />

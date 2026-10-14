@@ -32,6 +32,7 @@ const navigationItems = [
   { label: "Métricas", href: "/admin/metricas", icon: BarChart3, exact: true },
   { label: "Vista previa", href: "/admin/preguntas", icon: Eye, exact: true },
   { label: "Preguntas reportadas", href: "/admin/preguntas-reportadas", icon: Flag, exact: true },
+  { label: "Reportes MIR", href: "/admin/preguntas-reportadas-mir", icon: Flag, exact: true },
   { label: "Contenido", href: "/admin/contenido", icon: BookOpen, exact: true },
 ] as const;
 
