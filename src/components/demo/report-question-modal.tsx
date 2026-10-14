@@ -5,15 +5,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Flag, Send, Loader2 } from "lucide-react";
 import { submitStudentQuestionReportAction } from "@/app/actions/student-report-actions";
 import { getFirebaseAuth } from "@/lib/firebase";
+import type { QuestionReportCategory } from "@/lib/mir/question-reports";
 
 type Props = {
   isOpen: boolean;
   onClose: () => void;
   questionId: string;
   topic?: string;
+  /** Motivos a ofrecer; por defecto los del Método Q. */
+  categories?: QuestionReportCategory[];
 };
 
-const CATEGORIES = [
+const DEFAULT_CATEGORIES: QuestionReportCategory[] = [
   { id: "wrong_answer", label: "Respuesta incorrecta", desc: "La opción marcada como correcta no lo es" },
   { id: "bad_feedback", label: "Retroalimentación confusa", desc: "La explicación es incompleta o no se entiende" },
   { id: "outdated", label: "Pregunta desactualizada", desc: "La información médica ya no está vigente" },
@@ -21,7 +24,13 @@ const CATEGORIES = [
   { id: "other", label: "Otro motivo", desc: "Especifica el motivo en los comentarios" },
 ];
 
-export function ReportQuestionModal({ isOpen, onClose, questionId, topic }: Props) {
+export function ReportQuestionModal({
+  isOpen,
+  onClose,
+  questionId,
+  topic,
+  categories = DEFAULT_CATEGORIES,
+}: Props) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [comments, setComments] = useState("");
   const [isPending, startTransition] = useTransition();
@@ -34,7 +43,7 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic }: Prop
 
     setErrorMsg("");
     startTransition(async () => {
-      const selectedLabel = CATEGORIES.find(c => c.id === selectedCategory)?.label || selectedCategory;
+      const selectedLabel = categories.find(c => c.id === selectedCategory)?.label || selectedCategory;
       // El servidor identifica al alumno por su token verificado; sin sesión, el reporte es anónimo.
       const currentUser = getFirebaseAuth().currentUser;
       const res = await submitStudentQuestionReportAction({
@@ -75,7 +84,7 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic }: Prop
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="relative z-10 w-full max-w-lg overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl"
+            className="relative z-10 max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl"
           >
             <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4">
               <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
@@ -108,7 +117,7 @@ export function ReportQuestionModal({ isOpen, onClose, questionId, topic }: Prop
                 </p>
 
                 <div className="space-y-3">
-                  {CATEGORIES.map((cat) => (
+                  {categories.map((cat) => (
                     <label
                       key={cat.id}
                       className={`flex cursor-pointer items-start gap-3 rounded-xl border p-3 transition-colors ${

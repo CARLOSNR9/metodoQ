@@ -43,4 +43,10 @@ describe("retomar un simulacro MIR a medias", () => {
     expect(restored.answers).toEqual({ [rest[0]]: "3" });
     expect(restored.currentIndex).toBe(1);
   });
+
+  it("recupera las preguntas marcadas con duda que siguen en el banco", () => {
+    const restored = restoreMirSimulacro(edition, progress({ doubtQuestionIds: [ids[5], "retirada"] }));
+    expect(restored.doubtQuestionIds).toEqual([ids[5]]);
+    expect(restoreMirSimulacro(edition, progress({})).doubtQuestionIds).toEqual([]);
+  });
 });

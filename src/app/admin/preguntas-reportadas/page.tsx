@@ -12,7 +12,7 @@ export default async function AdminReportedQuestionsPage() {
   let loadError = "";
 
   try {
-    reports = await adminListQuestionReports("all");
+    reports = await adminListQuestionReports("all", "metodo-q");
   } catch (error) {
     console.error("admin reported questions", error);
     loadError = "No se pudo cargar el listado de preguntas reportadas.";

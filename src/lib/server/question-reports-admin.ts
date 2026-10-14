@@ -1,6 +1,10 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import { isMirQuestionId } from "@/lib/mir/question-reports";
 
 export type QuestionReportStatus = "pending" | "reviewed" | "dismissed";
+
+/** Producto al que pertenece la pregunta reportada. */
+export type QuestionReportModule = "metodo-q" | "mir";
 
 export type StudentReport = {
   userId: string | null;
@@ -13,6 +17,7 @@ export type StudentReport = {
 export type QuestionReport = {
   id: string;
   questionId: string;
+  module: QuestionReportModule;
   topic: string;
   theoryCharCount: number | null;
   reportedBy: string;
@@ -48,9 +53,12 @@ function mapReportDoc(doc: { id: string; data: () => Record<string, unknown> | u
     }));
   }
 
+  const questionId = String(data.questionId ?? doc.id);
   return {
     id: doc.id,
-    questionId: String(data.questionId ?? doc.id),
+    questionId,
+    // Reportes anteriores al campo `module`: se deduce del ID.
+    module: data.module === "mir" || isMirQuestionId(questionId) ? "mir" : "metodo-q",
     topic: String(data.topic ?? ""),
     theoryCharCount:
       typeof data.theoryCharCount === "number" ? data.theoryCharCount : null,
@@ -65,17 +73,32 @@ function mapReportDoc(doc: { id: string; data: () => Record<string, unknown> | u
 
 export async function adminListQuestionReports(
   status: "pending" | "all" = "pending",
+  module: QuestionReportModule | "all" = "all",
 ): Promise<QuestionReport[]> {
-  let query = getFirebaseAdminDb()
-    .collection("question_reports")
-    .orderBy("createdAt", "desc");
+  const collection = getFirebaseAdminDb().collection("question_reports");
+
+  if (module === "mir") {
+    // Consulta propia (sin orderBy para no exigir índice compuesto): así los
+    // reportes MIR no quedan fuera del límite de 500 por los del Método Q.
+    let mirQuery = collection.where("module", "==", "mir");
+    if (status === "pending") {
+      mirQuery = mirQuery.where("status", "==", "pending");
+    }
+    const snap = await mirQuery.limit(1000).get();
+    return snap.docs
+      .map(mapReportDoc)
+      .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  }
+
+  let query = collection.orderBy("createdAt", "desc");
 
   if (status === "pending") {
     query = query.where("status", "==", "pending") as typeof query;
   }
 
   const snap = await query.limit(500).get();
-  return snap.docs.map(mapReportDoc);
+  const reports = snap.docs.map(mapReportDoc);
+  return module === "all" ? reports : reports.filter((report) => report.module === module);
 }
 
 export async function adminGetReportedQuestionIds(): Promise<Set<string>> {
@@ -101,6 +124,7 @@ export async function adminReportQuestion(input: {
   await ref.set(
     {
       questionId: input.questionId,
+      module: isMirQuestionId(input.questionId) ? "mir" : "metodo-q",
       topic: input.topic,
       theoryCharCount: input.theoryCharCount,
       reportedBy: input.reportedBy,

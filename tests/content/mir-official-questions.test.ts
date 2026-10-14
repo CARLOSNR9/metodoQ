@@ -82,12 +82,14 @@ describe("simulacros mixtos", () => {
     for (const block of [first, second]) {
       expect(new Set(block.map((question) => question.officialExam?.year)).size).toBeGreaterThanOrEqual(9);
     }
-    const eligible = MIR_OFFICIAL_QUESTIONS.filter((question) => !question.tags?.includes("anulada"));
+    // El reparto se mide sobre las preguntas sin imagen; las de imagen van aparte, en la proporción del MIR.
+    const eligible = MIR_OFFICIAL_QUESTIONS.filter((question) => !question.tags?.includes("anulada") && !question.image);
+    const texts = [...first, ...second].filter((question) => !question.image);
     for (const key of new Set(eligible.map(area))) {
-      const expected = (eligible.filter((question) => area(question) === key).length * 200) / eligible.length;
-      const actual = [...first, ...second].filter((question) => area(question) === key).length;
+      const expected = (eligible.filter((question) => area(question) === key).length * texts.length) / eligible.length;
+      const actual = texts.filter((question) => area(question) === key).length;
       expect(Math.abs(actual - expected), key).toBeLessThan(1);
-      const inFirst = first.filter((question) => area(question) === key).length;
+      const inFirst = first.filter((question) => !question.image && area(question) === key).length;
       expect(Math.abs(inFirst - (actual - inFirst)), key).toBeLessThanOrEqual(1);
     }
   });
