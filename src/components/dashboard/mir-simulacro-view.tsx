@@ -11,6 +11,8 @@ import {
   Flag,
   HelpCircle,
   Loader2,
+  Pause,
+  RotateCcw,
 } from "lucide-react";
 import {
   MIR_EXAM_EDITIONS,
@@ -21,6 +23,15 @@ import {
   selectMirExamQuestions,
   type MirExamAttempt,
 } from "@/lib/training/mir-convocatoria";
+import {
+  buildMirExamDraft,
+  clearMirExamDraft,
+  loadMirExamDraft,
+  restoreMirExamQuestions,
+  saveMirExamDraftLocal,
+  saveMirExamDraftRemote,
+  type MirExamDraft,
+} from "@/lib/training/mir-exam-draft";
 import { getNextMirDoubtIndex, summarizeMirDoubts } from "@/lib/training/mir-doubts";
 import { recordMirSpecialtyStats } from "@/lib/training/mir-mastery";
 import { recordMirAnswers } from "@/lib/training/mir-review";
@@ -38,6 +49,8 @@ type Stage = "intro" | "exam" | "results";
 type ReviewFilter = "wrong" | "blank" | "correct" | "doubt" | "all";
 
 const SAVE_TIMEOUT_MS = 8000;
+/** Cada cuánto se sube el progreso a la cuenta mientras el examen está abierto. */
+const DRAFT_REMOTE_SAVE_MS = 30_000;
 
 /** Evita que "Entregar examen" quede colgado indefinidamente si la conexión falla justo al guardar. */
 function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
@@ -62,12 +75,21 @@ function formatClock(totalSeconds: number): string {
  * MIR, suma al mapa de dominio y manda las falladas al repaso de errores
  * (ver mir-convocatoria.ts, mir-streak.ts, mir-mastery.ts y mir-review.ts
  * en src/lib/training).
+ *
+ * El progreso se guarda solo (mir-exam-draft.ts): si el estudiante cierra,
+ * al volver retoma en la misma pregunta, con sus respuestas, dudas y el
+ * tiempo que le quedaba (el reloj no corre mientras está fuera).
  */
 export function MirSimulacroView({ userId, editionCode }: { userId: string; editionCode?: string | null }) {
   const activeEdition = (editionCode ? getMirEdition(editionCode) : null) ?? MIR_EXAM_EDITIONS[0];
   const [stage, setStage] = useState<Stage>("intro");
   const [previousAttempt, setPreviousAttempt] = useState<MirExamAttempt | null>(null);
   const [isLoadingPrevious, setIsLoadingPrevious] = useState(true);
+  const [draftState, setDraftState] = useState<{ editionCode: string; draft: MirExamDraft | null } | null>(null);
+  const isLoadingDraft = draftState?.editionCode !== activeEdition.code;
+  const loadedDraft = isLoadingDraft ? null : draftState.draft;
+  const setSavedDraft = (draft: MirExamDraft | null) =>
+    setDraftState({ editionCode: activeEdition.code, draft });
 
   const [questions, setQuestions] = useState<TrainingQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -80,6 +102,8 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
   const [reviewFilter, setReviewFilter] = useState<ReviewFilter>("wrong");
   const submittedRef = useRef(false);
   const navigatorRef = useRef<HTMLDivElement>(null);
+  const startedAtRef = useRef(new Date().toISOString());
+  const secondsLeftRef = useRef(0);
 
   // Mantiene la pregunta actual centrada en el navegador horizontal sin mover la página.
   useEffect(() => {
@@ -112,6 +136,79 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
   }, [userId, activeEdition.code]);
 
   useEffect(() => {
+    let cancelled = false;
+    const editionCode = activeEdition.code;
+    void loadMirExamDraft(userId, editionCode).then((draft) => {
+      if (!cancelled) setDraftState({ editionCode, draft });
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [userId, activeEdition.code]);
+
+  // Un guardado que llegó a la cuenta justo después de entregar no se ofrece para retomar.
+  const savedDraft =
+    loadedDraft &&
+    previousAttempt?.editionCode === loadedDraft.editionCode &&
+    Date.parse(loadedDraft.updatedAt) <= Date.parse(previousAttempt.completedAt)
+      ? null
+      : loadedDraft;
+
+  function buildCurrentDraft(): MirExamDraft {
+    return buildMirExamDraft({
+      userId,
+      editionCode: activeEdition.code,
+      questions,
+      answersByQuestionId: answers,
+      doubts,
+      currentQuestionIndex: currentIndex,
+      secondsLeft: secondsLeftRef.current,
+      startedAt: startedAtRef.current,
+    });
+  }
+  const buildDraftRef = useRef(buildCurrentDraft);
+  useEffect(() => {
+    secondsLeftRef.current = secondsLeft;
+    buildDraftRef.current = buildCurrentDraft;
+  });
+
+  // Guardado local en cada respuesta, duda o cambio de pregunta.
+  useEffect(() => {
+    if (stage !== "exam" || submittedRef.current || questions.length === 0) return;
+    saveMirExamDraftLocal(buildDraftRef.current());
+  }, [stage, questions, answers, doubts, currentIndex]);
+
+  // Reloj en local cada pocos segundos, subida periódica a la cuenta y
+  // guardado completo al cerrar u ocultar la pestaña.
+  useEffect(() => {
+    if (stage !== "exam") return;
+    let ticks = 0;
+    const persist = (remote: boolean) => {
+      if (submittedRef.current || secondsLeftRef.current <= 0) return;
+      const draft = buildDraftRef.current();
+      saveMirExamDraftLocal(draft);
+      if (remote) void saveMirExamDraftRemote(draft);
+    };
+    const interval = setInterval(() => {
+      ticks += 1;
+      persist(ticks % (DRAFT_REMOTE_SAVE_MS / 5000) === 0);
+    }, 5000);
+    const handleHide = () => persist(true);
+    const handleVisibility = () => {
+      if (document.visibilityState === "hidden") persist(true);
+    };
+    window.addEventListener("pagehide", handleHide);
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("pagehide", handleHide);
+      document.removeEventListener("visibilitychange", handleVisibility);
+      // Al desmontar (p. ej. navegar a otra sección del panel) también se guarda.
+      persist(true);
+    };
+  }, [stage]);
+
+  useEffect(() => {
     if (stage !== "exam") return;
     const timer = setInterval(() => {
       setSecondsLeft((seconds) => (seconds > 0 ? seconds - 1 : 0));
@@ -123,6 +220,8 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
     if (submittedRef.current) return;
     submittedRef.current = true;
     setIsSaving(true);
+    setSavedDraft(null);
+    void clearMirExamDraft(userId, activeEdition.code);
 
     let correct = 0;
     let wrong = 0;
@@ -194,7 +293,16 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
   }, [stage, secondsLeft]);
 
   function handleStart() {
+    if (
+      savedDraft &&
+      !window.confirm("Tienes este simulacro a medias. Si empiezas de nuevo se perderá ese progreso. ¿Continuar?")
+    ) {
+      return;
+    }
+    if (loadedDraft) void clearMirExamDraft(userId, activeEdition.code);
+    setSavedDraft(null);
     const selected = selectMirExamQuestions(activeEdition);
+    startedAtRef.current = new Date().toISOString();
     submittedRef.current = false;
     setQuestions(selected);
     setAnswers({});
@@ -204,6 +312,37 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
     setAttempt(null);
     setReviewFilter("wrong");
     setStage("exam");
+  }
+
+  function handleResume() {
+    if (!savedDraft) return;
+    const restored = restoreMirExamQuestions(activeEdition.questions, savedDraft);
+    if (!restored) {
+      // El banco de la edición cambió y alguna pregunta ya no existe.
+      window.alert("No se pudo recuperar este simulacro porque sus preguntas se actualizaron. Empieza uno nuevo.");
+      void clearMirExamDraft(userId, activeEdition.code);
+      setSavedDraft(null);
+      return;
+    }
+    const questionIds = new Set(savedDraft.questionIds);
+    startedAtRef.current = savedDraft.startedAt;
+    submittedRef.current = false;
+    setQuestions(restored);
+    setAnswers(savedDraft.answersByQuestionId);
+    setDoubts(new Set(savedDraft.doubtQuestionIds.filter((id) => questionIds.has(id))));
+    setCurrentIndex(savedDraft.currentQuestionIndex);
+    setSecondsLeft(savedDraft.secondsLeft);
+    setAttempt(null);
+    setReviewFilter("wrong");
+    setStage("exam");
+  }
+
+  function handlePauseAndExit() {
+    const draft = buildCurrentDraft();
+    saveMirExamDraftLocal(draft);
+    void saveMirExamDraftRemote(draft);
+    setSavedDraft(draft);
+    setStage("intro");
   }
 
   function handleSelectOption(questionId: string, optionId: string) {
@@ -277,8 +416,9 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
           <p className="mt-1 text-sm font-semibold text-slate-400">{activeEdition.description}</p>
           <p className="mt-3 text-sm leading-relaxed text-slate-300">
             {activeEdition.questionCount} preguntas tipo MIR, cronometradas al ritmo real del examen
-            oficial. Una vez comiences, el reloj corre sin pausas: puedes navegar libremente entre
-            preguntas y cambiar tus respuestas hasta que entregues.
+            oficial. Puedes navegar libremente entre preguntas y cambiar tus respuestas hasta que
+            entregues. No hace falta hacerlo de una vez: tu progreso se guarda solo y, si cierras,
+            retomas en la misma pregunta con el tiempo que te quedaba.
           </p>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
@@ -309,13 +449,40 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
             </p>
           </div>
 
+          {savedDraft ? (
+            <div className="mt-8 rounded-xl border border-mq-premium-gold/40 bg-mq-premium-gold/[0.08] p-4 sm:p-5">
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-mq-premium-gold">
+                Simulacro a medias
+              </p>
+              <p className="mt-1 text-sm text-slate-200">
+                Lo dejaste en la pregunta{" "}
+                <span className="font-bold text-white">
+                  {savedDraft.currentQuestionIndex + 1} de {savedDraft.questionIds.length}
+                </span>{" "}
+                · {Object.keys(savedDraft.answersByQuestionId).length} respondidas · te quedan{" "}
+                {formatClock(savedDraft.secondsLeft)} min.
+              </p>
+              <button
+                type="button"
+                onClick={handleResume}
+                className="mt-4 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-mq-premium-gold px-6 text-sm font-black text-[#0A1F44] transition hover:brightness-110"
+              >
+                Continuar donde lo dejé <RotateCcw className="h-4 w-4" />
+              </button>
+            </div>
+          ) : null}
+
           <button
             type="button"
             onClick={handleStart}
-            disabled={activeEdition.questionCount === 0}
-            className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-mq-premium-gold px-6 text-sm font-black text-[#0A1F44] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
+            disabled={activeEdition.questionCount === 0 || isLoadingDraft}
+            className={
+              savedDraft
+                ? "mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-white/15 px-6 text-sm font-bold text-slate-300 transition hover:border-white/30 hover:text-white disabled:cursor-not-allowed disabled:opacity-50"
+                : "mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-mq-premium-gold px-6 text-sm font-black text-[#0A1F44] transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
+            }
           >
-            Comenzar simulacro <ArrowRight className="h-4 w-4" />
+            {savedDraft ? "Empezar de nuevo" : "Comenzar simulacro"} <ArrowRight className="h-4 w-4" />
           </button>
         </div>
       </div>
@@ -533,14 +700,27 @@ export function MirSimulacroView({ userId, editionCode }: { userId: string; edit
               </button>
             )}
           </div>
-          <button
-            type="button"
-            onClick={handleRequestSubmit}
-            disabled={isSaving}
-            className="mx-auto mt-2 block text-[11px] font-semibold text-slate-500 underline-offset-4 hover:text-slate-300 hover:underline disabled:opacity-60"
-          >
-            Entregar en cualquier momento
-          </button>
+          <div className="mt-2 flex items-center justify-center gap-4">
+            <button
+              type="button"
+              onClick={handlePauseAndExit}
+              disabled={isSaving}
+              title="Tu progreso queda guardado y el reloj se detiene hasta que vuelvas"
+              className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-500 underline-offset-4 hover:text-slate-300 hover:underline disabled:opacity-60"
+            >
+              <Pause className="h-3 w-3" aria-hidden />
+              Pausar y seguir otro día
+            </button>
+            <span aria-hidden className="text-slate-700">·</span>
+            <button
+              type="button"
+              onClick={handleRequestSubmit}
+              disabled={isSaving}
+              className="text-[11px] font-semibold text-slate-500 underline-offset-4 hover:text-slate-300 hover:underline disabled:opacity-60"
+            >
+              Entregar en cualquier momento
+            </button>
+          </div>
         </div>
       </div>
     );
