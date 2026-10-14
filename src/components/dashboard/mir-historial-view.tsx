@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, Flame, Globe2, XCircle } from "lucide-react";
+import { CheckCircle2, CircleDashed, Flame, Globe2, XCircle } from "lucide-react";
 import { MIR_EXAM_EDITIONS, getMirAttempt, type MirExamAttempt } from "@/lib/training/mir-convocatoria";
-import { formatMirNet, getMirNet } from "@/lib/training/mir-scoring";
+import { MIR_EXAM_QUESTIONS, formatMirNet, getMirScoreSummary } from "@/lib/training/mir-scoring";
 import { getMirStreakInfo, type MirStreakInfo } from "@/lib/training/mir-streak";
 import { MirScoreTrend } from "./mir-score";
 
@@ -22,6 +22,13 @@ function formatAttemptDate(iso: string): string {
   }
 }
 
+type HistorialAttempt = {
+  editionLabel: string;
+  attempt: MirExamAttempt;
+  /** Preguntas del simulacro (las sin responder cuentan en blanco). */
+  total: number;
+};
+
 /**
  * Historial del módulo MIR: intentos reales del simulacro (no mezcla con
  * el historial de exámenes colombianos, que no aplica a este ecosistema).
@@ -30,7 +37,7 @@ function formatAttemptDate(iso: string): string {
 export function MirHistorialView({ userId }: { userId: string }) {
   const [isLoading, setIsLoading] = useState(true);
   const [streak, setStreak] = useState<MirStreakInfo | null>(null);
-  const [attempts, setAttempts] = useState<Array<{ editionLabel: string; attempt: MirExamAttempt }>>([]);
+  const [attempts, setAttempts] = useState<HistorialAttempt[]>([]);
 
   useEffect(() => {
     let cancelled = false;
@@ -40,14 +47,20 @@ export function MirHistorialView({ userId }: { userId: string }) {
       Promise.all(
         MIR_EXAM_EDITIONS.map((edition) =>
           getMirAttempt(userId, edition.code).then((attempt) =>
-            attempt ? { editionLabel: edition.label, attempt } : null,
+            attempt
+              ? {
+                  editionLabel: edition.label,
+                  attempt,
+                  total: attempt.sessionQuestionIds?.length ?? edition.questionCount,
+                }
+              : null,
           ),
         ),
       ),
     ]).then(([streakInfo, editionAttempts]) => {
       if (cancelled) return;
       setStreak(streakInfo);
-      setAttempts(editionAttempts.filter((item): item is { editionLabel: string; attempt: MirExamAttempt } => item !== null));
+      setAttempts(editionAttempts.filter((item): item is HistorialAttempt => item !== null));
       setIsLoading(false);
     });
 
@@ -117,32 +130,50 @@ export function MirHistorialView({ userId }: { userId: string }) {
         </section>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
-          {attempts.map(({ editionLabel, attempt }) => (
-            <article
-              key={editionLabel}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-5"
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mq-premium-gold">
-                {editionLabel}
-              </p>
-              <p className="mt-2 text-3xl font-black text-white">
-                {formatMirNet(getMirNet(attempt.correctAnswers, attempt.wrongAnswers))}
-                <span className="text-base font-bold text-slate-400"> netas</span>
-              </p>
-              <p className="text-xs text-slate-400">{attempt.scorePercentage}% de aciertos</p>
-              <div className="mt-3 flex items-center gap-4 text-sm">
-                <span className="inline-flex items-center gap-1.5 text-emerald-400">
-                  <CheckCircle2 className="h-4 w-4" />
-                  {attempt.correctAnswers} correctas
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-rose-400">
-                  <XCircle className="h-4 w-4" />
-                  {attempt.wrongAnswers} falladas
-                </span>
-              </div>
-              <p className="mt-3 text-xs text-slate-500">{formatAttemptDate(attempt.completedAt)}</p>
-            </article>
-          ))}
+          {attempts.map(({ editionLabel, attempt, total }) => {
+            const summary = getMirScoreSummary({
+              correct: attempt.correctAnswers,
+              wrong: attempt.wrongAnswers,
+              total,
+            });
+            return (
+              <article key={editionLabel} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-mq-premium-gold">
+                  {editionLabel}
+                </p>
+                <p className="mt-2 text-3xl font-black text-white">
+                  {formatMirNet(summary.net)}
+                  <span className="text-base font-bold text-slate-400"> netas</span>
+                </p>
+                <p className="text-xs text-slate-400">
+                  {attempt.scorePercentage}% de aciertos
+                  {summary.total !== MIR_EXAM_QUESTIONS && summary.total > 0
+                    ? ` · equivale a ${formatMirNet(summary.projectedNet)} en un examen de ${MIR_EXAM_QUESTIONS}`
+                    : ""}
+                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+                  <span className="inline-flex items-center gap-1.5 text-emerald-400">
+                    <CheckCircle2 className="h-4 w-4" />
+                    {attempt.correctAnswers} correctas
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-rose-400">
+                    <XCircle className="h-4 w-4" />
+                    {attempt.wrongAnswers} falladas
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 text-slate-400">
+                    <CircleDashed className="h-4 w-4" />
+                    {summary.blank} en blanco
+                  </span>
+                </div>
+                <p className="mt-2 text-xs text-slate-400">
+                  {summary.wrong > 0
+                    ? `${summary.wrong === 1 ? "El error te restó" : `Los ${summary.wrong} errores te restaron`} ${formatMirNet(summary.netLostToErrors)} netas.`
+                    : "Ningún error te restó netas."}
+                </p>
+                <p className="mt-3 text-xs text-slate-500">{formatAttemptDate(attempt.completedAt)}</p>
+              </article>
+            );
+          })}
         </div>
       )}
     </div>
