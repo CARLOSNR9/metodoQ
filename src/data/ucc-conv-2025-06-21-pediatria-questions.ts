@@ -96,12 +96,13 @@ export const UCC_CONV_2025_06_21_PEDIATRICS_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "C",
     explanation:
-      "Crupe moderado-severo (estridor en reposo y tirajes): dexametasona (oral, IM o IV) más adrenalina nebulizada para reducción rápida del edema subglótico, con observación posterior.",
+      "Crupe moderado-severo (estridor en reposo y tirajes): dexametasona (oral, IM o IV) más adrenalina nebulizada para reducción rápida del edema subglótico, con observación posterior.\n\nLa adrenalina nebulizada produce vasoconstricción y reduce el edema en minutos, pero su efecto dura unas 2 horas. La dexametasona (0.15-0.6 mg/kg oral o IM) tarda en actuar, pero mantiene el efecto y reduce reconsultas. Por eso se dan juntas y se observa al niño por el posible efecto rebote.",
     keyPoints: [
       "Crupe leve (sin estridor en reposo): dexametasona dosis única ambulatoria.",
       "Crupe moderado-severo: dexametasona + adrenalina nebulizada + observación 2–4 h.",
       "Salbutamol no tiene utilidad en obstrucción laríngea por crupe.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nCrup con estridor en REPOSO y tirajes = moderado a grave: adrenalina nebulizada + dexametasona, y observar al menos 2-4 horas.\n\n### ¿Qué está ocurriendo realmente?\nEl virus parainfluenza inflama la región subglótica, la parte más estrecha de la vía aérea del niño. Un milímetro de edema reduce mucho el diámetro y aparece tos perruna, disfonía y estridor inspiratorio. Si el estridor está presente en reposo, con tirajes, la obstrucción es significativa.\n\n### ¿Por qué la opción C es la respuesta correcta?\nLa adrenalina nebulizada produce vasoconstricción y reduce el edema en minutos, pero su efecto dura unas 2 horas. La dexametasona (0.15-0.6 mg/kg oral o IM) tarda en actuar, pero mantiene el efecto y reduce reconsultas. Por eso se dan juntas y se observa al niño por el posible efecto rebote.\n\n### ¿Por qué fallan las otras opciones?\n• Opción A: En crupe moderado-severo con estridor en reposo se requiere adrenalina nebulizada y observación de al menos 2–4 horas, no alta inmediata.\n• Opción B: El salbutamol es ineficaz para la obstrucción de vía aérea superior (edema subglótico) característica del crupe.\n• Opción D: La intubación es reservada para crupe inminente a falla respiratoria que no responde a terapia médica; debe intentarse manejo médico primero.\n\n### La trampa del examen\nDar de alta tras la dexametasona sola en un crup con estridor en reposo, o tratarlo como asma con salbutamol: el problema es el edema subglótico, no el broncoespasmo.\n\n### Perlas de examen\n• Signo radiológico: 'signo del campanario' (estrechamiento subglótico), aunque no se necesita radiografía.\n• Crup leve (sin estridor en reposo): solo dexametasona oral y alta.\n• Si hay fiebre alta, aspecto tóxico y babeo, pensar en epiglotitis o traqueítis bacteriana.",
   },
   {
     id: "ucc-conv-2025-06-21-17",
@@ -247,12 +248,13 @@ Referencias
     ],
     correctOptionId: "C",
     explanation:
-      "Síndrome febril sin foco en lactante ≤28 días: hospitalización, estudio completo (hemocultivo, urocultivo, punción lumbar) e inicio precoz de antibióticos IV empíricos (ampicilina + cefotaxima o aminoglucósido).",
+      "Síndrome febril sin foco en lactante ≤28 días: hospitalización, estudio completo (hemocultivo, urocultivo, punción lumbar) e inicio precoz de antibióticos IV empíricos (ampicilina + cefotaxima o aminoglucósido).\n\nSe toman hemograma, PCR o procalcitonina, hemocultivo, parcial de orina y urocultivo por sonda, y punción lumbar. Sin esperar resultados se inicia ampicilina (cubre Listeria y estreptococo del grupo B) más cefotaxima o gentamicina (gramnegativos como E. coli), y aciclovir si hay sospecha de herpes.",
     keyPoints: [
       "Fiebre en neonato (≤28 días) = ingreso + estudio completo + ATB IV.",
       "Nunca alta ambulatoria en neonato febril sin estudio.",
       "No retrasar antibióticos tras tomar cultivos.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nFiebre en un recién nacido de 28 días o menos = estudio completo (sangre, orina y LCR) + hospitalización + antibióticos IV empíricos. Sin excepciones.\n\n### ¿Qué está ocurriendo realmente?\nEl neonato no localiza la infección: la sepsis, la meningitis o la infección urinaria pueden presentarse solo con fiebre, rechazo al alimento o somnolencia. Hasta un 10-15% de los menores de 28 días con fiebre tienen una infección bacteriana grave, y el examen físico normal no la descarta.\n\n### ¿Por qué la opción C es la respuesta correcta?\nSe toman hemograma, PCR o procalcitonina, hemocultivo, parcial de orina y urocultivo por sonda, y punción lumbar. Sin esperar resultados se inicia ampicilina (cubre Listeria y estreptococo del grupo B) más cefotaxima o gentamicina (gramnegativos como E. coli), y aciclovir si hay sospecha de herpes.\n\n### ¿Por qué fallan las otras opciones?\n• Opción A: Todo neonato (≤28 días) con fiebre tiene alto riesgo de infección bacteriana grave y no debe manejarse ambulatoriamente solo con antipiréticos.\n• Opción B: El estudio debe ser completo (incluyendo sangre y LCR) y el tratamiento antibiótico debe ser parenteral, no oral.\n• Opción D: En el neonato febril el inicio de antibióticos empíricos es urgente y no debe retrasarse a la espera de resultados de cultivos o citoquímico de LCR.\n\n### La trampa del examen\nUsar escalas de bajo riesgo (Rochester, Step-by-Step) para dar de alta a un neonato de 25 días, o diferir los antibióticos hasta ver el LCR.\n\n### Perlas de examen\n• Agentes del neonato: S. agalactiae, E. coli y Listeria.\n• Evitar la ceftriaxona en el neonato (desplaza la bilirrubina y precipita con calcio).\n• Pensar en VHS si hay vesículas, convulsiones, transaminasas altas o LCR con pleocitosis sin bacterias.",
   },
   {
     id: "ucc-conv-2025-06-21-19",
@@ -376,12 +378,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Estado asmático severo refractario a SABA, anticolinérgicos y corticoide sistémico: agregar sulfato de magnesio IV como terapia adyuvante antes de ventilación mecánica invasiva.",
+      "Estado asmático severo refractario a SABA, anticolinérgicos y corticoide sistémico: agregar sulfato de magnesio IV como terapia adyuvante antes de ventilación mecánica invasiva.\n\nEl sulfato de magnesio IV (25-75 mg/kg, máximo 2 g, en 20 minutos) relaja el músculo liso bronquial bloqueando los canales de calcio. En la crisis grave refractaria reduce la necesidad de hospitalización en UCI e intubación. Se mantienen el oxígeno, los broncodilatadores y el corticoide, y se prepara la UCI.",
     keyPoints: [
       "Asma severa refractaria: SABA + corticoide + MgSO₄ IV.",
       "Falla inminente: silencio auscultatorio, somnolencia, hipoxemia refractaria.",
       "Aminofilina no es rescate de primera línea.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nCrisis asmática grave que no responde a salbutamol, ipratropio y corticoide sistémico = sulfato de magnesio IV antes de pensar en intubar.\n\n### ¿Qué está ocurriendo realmente?\nEl niño tiene signos de amenaza vital: somnolencia, SpO2 de 88% con oxígeno, tirajes graves y tórax silencioso (casi no entra aire). La broncoconstricción es tan intensa que los broncodilatadores inhalados no llegan bien a la vía aérea distal.\n\n### ¿Por qué la opción A es la respuesta correcta?\nEl sulfato de magnesio IV (25-75 mg/kg, máximo 2 g, en 20 minutos) relaja el músculo liso bronquial bloqueando los canales de calcio. En la crisis grave refractaria reduce la necesidad de hospitalización en UCI e intubación. Se mantienen el oxígeno, los broncodilatadores y el corticoide, y se prepara la UCI.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: Hay falla respiratoria inminente (somnolencia, silencio auscultatorio, hipoxemia refractaria); retrasar la escalada terapéutica es peligroso.\n• Opción C: Antes de intubar en asma severa refractaria se debe escalar con sulfato de magnesio IV junto con soporte ventilatorio y broncodilatadores.\n• Opción D: La aminofilina ha sido desplazada del escalón agudo por su perfil de toxicidad y menor eficacia frente al sulfato de magnesio IV.\n\n### La trampa del examen\nInterpretar el 'silencio auscultatorio' como mejoría. Indica que casi no entra aire y es un signo de paro inminente.\n\n### Perlas de examen\n• La aminofilina tiene poco beneficio adicional y mucha toxicidad; ya no es de rutina.\n• La intubación en el asma es de alto riesgo (hiperinsuflación, barotrauma); se hace si hay agotamiento, deterioro de conciencia o paro.\n• PaCO2 'normal' en una crisis grave es un signo de fatiga.",
   },
   {
     id: "ucc-conv-2025-06-21-21",
@@ -474,11 +477,12 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Intoxicación tóxica (200 mg/kg) con nivel a las 6 h por encima de la línea de tratamiento: iniciar N-acetilcisteína IV u oral de inmediato. La eficacia disminuye si se retrasa más allá de 8–10 horas post-ingesta.",
+      "Intoxicación tóxica (200 mg/kg) con nivel a las 6 h por encima de la línea de tratamiento: iniciar N-acetilcisteína IV u oral de inmediato. La eficacia disminuye si se retrasa más allá de 8–10 horas post-ingesta.\n\nLa N-acetilcisteína repone el glutatión y es casi 100% protectora si se inicia en las primeras 8 horas tras la ingesta. Se indica cuando el nivel medido a partir de las 4 horas cae sobre la línea de tratamiento del nomograma, sin esperar laboratorios hepáticos.",
     keyPoints: [
       "Dosis tóxica única habitual: >150 mg/kg.",
       "Nomograma Rumack-Matthew guía NAC desde 4 h post-ingesta.",
       "NAC precoz previene hepatotoxicidad; no esperar transaminasas.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nNivel de acetaminofén por encima de la línea del nomograma de Rumack-Matthew = N-acetilcisteína de inmediato, sin esperar las transaminasas.\n\n### ¿Qué está ocurriendo realmente?\nEn dosis tóxicas (> 150 mg/kg, aquí unos 200 mg/kg) se saturan las vías normales y se produce más NAPQI, un metabolito tóxico que normalmente se neutraliza con glutatión. Al agotarse el glutatión, el NAPQI necrosa los hepatocitos. Las transaminasas comienzan a subir a las 24-36 horas, cuando el daño ya está en curso.\n\n### ¿Por qué la opción A es la respuesta correcta?\nLa N-acetilcisteína repone el glutatión y es casi 100% protectora si se inicia en las primeras 8 horas tras la ingesta. Se indica cuando el nivel medido a partir de las 4 horas cae sobre la línea de tratamiento del nomograma, sin esperar laboratorios hepáticos.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: El carbón activado tiene máxima utilidad en la primera o segunda hora; a las 6 horas no exime del antídoto si los niveles son tóxicos.\n• Opción C: Esperar transaminasas elevadas permite daño hepatocelular; la NAC debe iniciarse precozmente para prevenir hepatotoxicidad.\n• Opción D: El tratamiento estándar es N-acetilcisteína, no hemodiálisis rutinaria.\n\n### La trampa del examen\nEsperar a que suban las transaminasas. Cuando suben, ya hay necrosis hepática y la ventana de máxima eficacia se perdió.\n\n### Perlas de examen\n• El nomograma solo sirve para ingestas únicas con hora conocida, a partir de las 4 horas.\n• Carbón activado solo si la ingesta fue hace menos de 1-2 horas.\n• Criterios del King's College para trasplante: pH < 7.3, o INR > 6.5 + creatinina > 3.4 + encefalopatía grado III-IV.",
   },
 ];

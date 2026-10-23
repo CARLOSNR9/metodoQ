@@ -809,12 +809,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Casos enfermos tienden a buscar causas y recordar exposiciones de forma diferente (recall bias), especialmente con entrevistas en momentos distintos → sesgo de información diferencial.",
+      "Casos enfermos tienden a buscar causas y recordar exposiciones de forma diferente (recall bias), especialmente con entrevistas en momentos distintos → sesgo de información diferencial.\n\nCuando el error en la medición de la exposición es distinto entre casos y controles, el sesgo es de información DIFERENCIAL, y puede inflar la asociación (OR falsamente alto). El sesgo de memoria es el ejemplo clásico de este diseño.",
     keyPoints: [
       "Recall bias clásico en casos-controles.",
       "Casos buscan explicaciones → sobre-reporte de exposiciones.",
       "Estandarizar entrevistas y tiempos reduce sesgo.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nCasos y controles + exposición medida por entrevista en condiciones distintas = sesgo de memoria (recall bias), un sesgo de información diferencial.\n\n### ¿Qué está ocurriendo realmente?\nEn los estudios de casos y controles se parte de la enfermedad y se pregunta hacia atrás por la exposición. Quien está enfermo (y acaba de operarse de un cáncer) busca explicaciones, revisa su pasado con más detalle y tiende a recordar o sobrerreportar exposiciones 'sospechosas'. Además se les entrevista en otro lugar y momento que a los controles.\n\n### ¿Por qué la opción A es la respuesta correcta?\nCuando el error en la medición de la exposición es distinto entre casos y controles, el sesgo es de información DIFERENCIAL, y puede inflar la asociación (OR falsamente alto). El sesgo de memoria es el ejemplo clásico de este diseño.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: El escenario describe diferencia en la recolección de exposición entre casos y controles, típico de sesgo de información/recall.\n• Opción C: La educación puede confundir, pero el patrón descrito (casos post-cirugía vs controles sanos en casa) sugiere recall bias.\n• Opción D: Ser observacional no implica sesgo de publicación; ese sesgo afecta la literatura disponible, no la entrevista.\n\n### La trampa del examen\nConfundir sesgo de información (cómo se mide la exposición o el desenlace) con sesgo de selección (cómo se eligen los participantes) o con confusión (una tercera variable asociada a ambas).\n\n### Perlas de examen\n• Sesgo de memoria: típico de casos y controles. Se reduce con registros objetivos y entrevistas estandarizadas y cegadas.\n• Sesgo del entrevistador: el entrevistador pregunta distinto según sepa si es caso o control.\n• Sesgo de publicación: pertenece a las revisiones sistemáticas, no a un estudio individual.",
   },
   {
     id: "ucc-conv-2025-06-21-63",
@@ -1364,12 +1365,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Adulto ≥65 años en Colombia: influenza anual recomendada; neumococo conjugada según esquema vigente PAI/MSP; evaluar Td/Tdpa, hepatitis B y otras según riesgo.",
+      "Adulto ≥65 años en Colombia: influenza anual recomendada; neumococo conjugada según esquema vigente PAI/MSP; evaluar Td/Tdpa, hepatitis B y otras según riesgo.\n\nLa influenza se aplica cada año porque el virus cambia (deriva antigénica) y la protección dura poco. La vacuna de neumococo se aplica según la edad y las comorbilidades con el esquema vigente del Ministerio de Salud. Además se revisa el refuerzo de tétanos-difteria y se vacuna según riesgo (hepatitis B, COVID-19).",
     keyPoints: [
       "≥65 años: influenza anual prioritaria.",
       "Neumococo según esquema PAI y factores de riesgo.",
       "Vacunación adulto no depende de viajes.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nAdulto de 65 años o más = vacuna de influenza cada año + neumococo según el esquema del PAI, revisando además Td/Tdap y otras según riesgo.\n\n### ¿Qué está ocurriendo realmente?\nCon la edad disminuye la respuesta inmune (inmunosenescencia) y aumentan la hospitalización y la mortalidad por influenza y neumonía neumocócica. Por eso el Programa Ampliado de Inmunizaciones prioriza a los adultos mayores para estas dos vacunas.\n\n### ¿Por qué la opción A es la respuesta correcta?\nLa influenza se aplica cada año porque el virus cambia (deriva antigénica) y la protección dura poco. La vacuna de neumococo se aplica según la edad y las comorbilidades con el esquema vigente del Ministerio de Salud. Además se revisa el refuerzo de tétanos-difteria y se vacuna según riesgo (hepatitis B, COVID-19).\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: Adultos mayores son prioridad para influenza y neumococo por mayor riesgo de complicaciones.\n• Opción C: SRP en adultos se indica según situación de riesgo o esquema incompleto documentado, no rutinariamente en todos los >65.\n• Opción D: El esquema adulto incluye influenza anual y neumococo según edad/riesgo, además de otras según condición.\n\n### La trampa del examen\nPensar que la triple viral se aplica de rutina a los adultos mayores. Casi todos los nacidos antes de 1960 se consideran inmunes por exposición natural, y es una vacuna viva atenuada.\n\n### Perlas de examen\n• Influenza: anual, para ≥ 60 años, gestantes, niños de 6-23 meses y personas con comorbilidades.\n• Las vacunas vivas atenuadas (triple viral, varicela, fiebre amarilla) están contraindicadas en inmunosuprimidos graves y embarazadas.\n• Td: refuerzo cada 10 años; Tdap en cada embarazo.",
   },
   {
     id: "ucc-conv-2025-06-21-72",
@@ -1823,12 +1825,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Media >> mediana indica asimetría positiva (pocos ingresos muy altos). Para datos asimétricos, mediana describe mejor el valor central típico.",
+      "Media >> mediana indica asimetría positiva (pocos ingresos muy altos). Para datos asimétricos, mediana describe mejor el valor central típico.\n\nCuando la distribución es asimétrica (ingresos, tiempos de hospitalización, costos), la mediana con su rango intercuartílico describe mejor el valor central y la dispersión. En distribuciones normales y simétricas, media y mediana coinciden.",
     keyPoints: [
       "Media > mediana → asimetría positiva.",
       "Mediana robusta a valores extremos.",
       "Ingresos suelen reportarse con mediana.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nMedia mucho mayor que la mediana = distribución asimétrica a la derecha (valores extremos altos). La mediana representa mejor el valor típico.\n\n### ¿Qué está ocurriendo realmente?\nLa media usa el valor de todos los datos, así que unos pocos ingresos muy altos la 'arrastran' hacia arriba. La mediana es el valor que deja la mitad de los datos por encima y la mitad por debajo, y no se afecta por los extremos. Si la media (8.5) es el doble de la mediana (4.2), hay pocos trabajadores con ingresos muy altos.\n\n### ¿Por qué la opción A es la respuesta correcta?\nCuando la distribución es asimétrica (ingresos, tiempos de hospitalización, costos), la mediana con su rango intercuartílico describe mejor el valor central y la dispersión. En distribuciones normales y simétricas, media y mediana coinciden.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: Solo coinciden en distribuciones simétricas; valores extremos separan media y mediana.\n• Opción C: Con asimetría positiva (cola derecha), la media supera la mediana, no al revés.\n• Opción D: Con asimetría, la media se arrastra por outliers; la mediana es más representativa del centro.\n\n### La trampa del examen\nCreer que con muestras grandes media y mediana se igualan. El tamaño de la muestra no corrige la asimetría de los datos.\n\n### Perlas de examen\n• Asimetría positiva (cola a la derecha): media > mediana > moda.\n• Asimetría negativa (cola a la izquierda): media < mediana.\n• Variables asimétricas: reportar mediana y rango intercuartílico; normales: media y desviación estándar.",
   },
   {
     id: "ucc-conv-2025-06-21-79",
