@@ -20,7 +20,8 @@ export const UCC_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "A",
         "label": "A",
-        "text": "Iniciar Sildenafil oral a dosis plenas por tratarse de una hipertensión pulmonar severa (PSAP > 50 mmHg)."
+        "text": "Iniciar Sildenafil oral a dosis plenas por tratarse de una hipertensión pulmonar severa (PSAP > 50 mmHg).",
+        "incorrectFeedback": "El sildenafil y demás vasodilatadores pulmonares específicos están contraindicados en la hipertensión pulmonar del grupo 2 (por cardiopatía izquierda): al aumentar el flujo hacia un ventrículo izquierdo que falla, elevan la presión capilar pulmonar y pueden precipitar edema pulmonar. La PSAP alta aquí es consecuencia de la falla izquierda."
       },
       {
         "id": "B",
@@ -30,12 +31,14 @@ export const UCC_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "C",
         "label": "C",
-        "text": "Iniciar Bosentán (antagonista del receptor de endotelina) con monitorización estricta de la función hepática."
+        "text": "Iniciar Bosentán (antagonista del receptor de endotelina) con monitorización estricta de la función hepática.",
+        "incorrectFeedback": "El bosentán no está indicado en la hipertensión pulmonar del grupo 2; en ensayos con falla cardíaca izquierda empeoró la retención hídrica y la descompensación. El manejo es optimizar la terapia de falla cardíaca con FEVI reducida."
       },
       {
         "id": "D",
         "label": "D",
-        "text": "Administrar Epoprostenol en infusión continua debido al compromiso del ventrículo derecho y riesgo inminente de *cor pulmonale*."
+        "text": "Administrar Epoprostenol en infusión continua debido al compromiso del ventrículo derecho y riesgo inminente de *cor pulmonale*.",
+        "incorrectFeedback": "El epoprostenol es un vasodilatador pulmonar potente reservado para la hipertensión arterial pulmonar (grupo 1). En la HP por cardiopatía izquierda aumentó la mortalidad (estudio FIRST) y puede precipitar edema pulmonar. Lo indicado es optimizar el tratamiento de la falla izquierda."
       }
     ],
     "correctOptionId": "B",

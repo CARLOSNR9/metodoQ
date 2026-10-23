@@ -18,6 +18,7 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "A",
         label: "A",
         text: "Realizar biopsia hepática transyugular de urgencia para confirmar la presencia de hialina de Mallory-Denk.",
+        incorrectFeedback: "La biopsia transyugular no es un requisito para iniciar esteroides: el diagnóstico de hepatitis alcohólica es clínico-bioquímico y la biopsia se reserva para casos dudosos. El prerrequisito obligatorio es descartar una infección activa.",
       },
       {
         id: "B",
@@ -60,6 +61,7 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "A",
         label: "A",
         text: "Flumazenil intravenoso a dosis pediátricas.",
+        incorrectFeedback: "El flumazenil revierte benzodiacepinas, no tiene acción sobre la acetilcolinesterasa y puede precipitar convulsiones. La parálisis nicotínica por organofosforados se trata con pralidoxima, que reactiva la enzima.",
       },
       {
         id: "B",
@@ -102,6 +104,7 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "A",
         label: "A",
         text: "Procainamida intravenosa administrada de forma lenta.",
+        incorrectFeedback: "La procainamida NO está contraindicada: es uno de los fármacos de elección en la fibrilación auricular preexcitada estable, porque enlentece la conducción por la vía accesoria. Los contraindicados son los bloqueadores del nodo AV (adenosina, betabloqueadores, calcioantagonistas, amiodarona).",
       },
       {
         id: "B",
@@ -144,6 +147,7 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "A",
         label: "A",
         text: "Síndrome de Down (Trisomía 21); convulsiones debidas a encefalopatía hipóxica por defecto del canal auriculoventricular completo.",
+        incorrectFeedback: "La hipocalcemia profunda con ausencia de sombra tímica no se explica por el síndrome de Down ni por hipoxia: corresponde a aplasia paratiroidea y tímica del síndrome de DiGeorge (deleción 22q11.2). Las convulsiones se deben a la hipocalcemia.",
       },
       {
         id: "B",
@@ -186,6 +190,7 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "A",
         label: "A",
         text: "Insertar una derivación Ventrículo-Peritoneal (DVP) neuroquirúrgica inmediata para corregir la hidrocefalia.",
+        incorrectFeedback: "En la meningitis criptocócica la hipertensión intracraneal se debe a una obstrucción de la reabsorción del LCR, y sin hidrocefalia obstructiva el manejo inicial son las punciones lumbares evacuadoras seriadas. La derivación se considera solo si estas fallan de forma persistente.",
       },
       {
         id: "B",
@@ -228,6 +233,7 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "A",
         label: "A",
         text: "Cirugía abierta (Laparotomía) de urgencia para resección ileal; la enfermedad subyacente es la Enfermedad de Hirschsprung.",
+        incorrectFeedback: "El íleo meconial no complicado se trata primero con enema de contraste hidrosoluble hiperosmolar, que es diagnóstico y terapéutico; la cirugía se reserva para casos complicados. La enfermedad subyacente es la fibrosis quística, no la enfermedad de Hirschsprung.",
       },
       {
         id: "B",
@@ -270,6 +276,7 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "A",
         label: "A",
         text: "Accidente Cerebrovascular isquémico bilateral del tronco cerebral por estasis venoso agudo y rebote trombótico.",
+        incorrectFeedback: "El cuadro aparece días después de corregir rápidamente una hiponatremia crónica y produce un síndrome de cautiverio: corresponde a desmielinización osmótica pontina, no a un ACV trombótico por estasis venosa.",
       },
       {
         id: "B",
@@ -312,6 +319,7 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "A",
         label: "A",
         text: "Remitir de inmediato al niño a una sala de Tomografía Computarizada (TC) de cráneo simple; si hay evidencia de sangrado, infundir Factor VIII.",
+        incorrectFeedback: "En la hemofilia grave con trauma craneoencefálico, el factor se infunde ANTES de cualquier estudio de imagen. Esperar la tomografía retrasa la corrección mientras puede estar progresando una hemorragia intracraneal silenciosa.",
       },
       {
         id: "B",
@@ -359,16 +367,19 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "B",
         label: "B",
         text: "Angiografía por Tomografía Computarizada de tórax de alta resolución (Angio-TC).",
+        incorrectFeedback: "La angio-TC es útil para el TEP agudo y para planear la cirugía, pero es menos sensible que la gammagrafía V/Q para detectar la enfermedad tromboembólica crónica distal. Una angio-TC normal no descarta la HPTEC.",
       },
       {
         id: "C",
         label: "C",
         text: "Cateterismo cardíaco derecho con angiografía invasiva con contraste iodado de forma ambulatoria inicial.",
+        incorrectFeedback: "El cateterismo derecho con angiografía es necesario para confirmar y planear el tratamiento, pero es invasivo y no es la prueba de cribado inicial. Primero se hace la gammagrafía V/Q.",
       },
       {
         id: "D",
         label: "D",
         text: "Resonancia Magnética Pulmonar contrastada con gadolinio para visualización de microvasculatura.",
+        incorrectFeedback: "La resonancia magnética pulmonar no es la prueba de cribado recomendada para la HPTEC: hay menos experiencia con ella y es menos sensible. Las guías ESC/ERS recomiendan la gammagrafía V/Q como cribado.",
       },
     ],
     correctOptionId: "A",
@@ -397,16 +408,19 @@ export const UCC_CONV_2026_08_09_31_40_QUESTIONS: TrainingQuestion[] = [
         id: "B",
         label: "B",
         text: "Transfusión lenta de Glóbulos Rojos Empacados a 10 cc/kg para tratar la anemia sintomática.",
+        incorrectFeedback: "Esta intervención NO está contraindicada: en el SHU se transfunden glóbulos rojos cuando la anemia es sintomática o la hemoglobina es muy baja (habitualmente < 6-7 g/dL), en volumen pequeño y lentamente. Lo contraindicado son los antibióticos y las plaquetas profilácticas.",
       },
       {
         id: "C",
         label: "C",
         text: "Restricción hídrica calculada para pérdidas insensibles y monitoreo estricto de diuresis horaria.",
+        incorrectFeedback: "Esta medida es correcta en el SHU con oliguria: se ajustan los líquidos a las pérdidas insensibles más la diuresis para evitar sobrecarga. No está contraindicada.",
       },
       {
         id: "D",
         label: "D",
         text: "Inicio temprano de Terapia de Reemplazo Renal (Diálisis Peritoneal) si desarrolla hiperkalemia refractaria o anuria completa.",
+        incorrectFeedback: "La diálisis está indicada en el SHU cuando hay anuria, hiperkalemia refractaria, sobrecarga hídrica o acidosis grave; muchos niños la necesitan. Es una medida correcta, no una contraindicación.",
       },
     ],
     correctOptionId: "A",

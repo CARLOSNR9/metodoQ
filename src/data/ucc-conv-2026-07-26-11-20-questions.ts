@@ -20,7 +20,8 @@ export const UCC_CONV_2026_07_26_11_20_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "A",
         "label": "A",
-        "text": "Administrar Gluconato de Calcio al 10% en bolos intravenosos hasta lograr un calcio sérico > 8.0 mg/dL para prevenir arritmias inminentes."
+        "text": "Administrar Gluconato de Calcio al 10% en bolos intravenosos hasta lograr un calcio sérico > 8.0 mg/dL para prevenir arritmias inminentes.",
+        "incorrectFeedback": "En la rabdomiólisis la hipocalcemia asintomática NO se corrige: el calcio exógeno se une al fósforo, precipita en túbulos renales y músculo (empeora la lesión renal) y favorece la hipercalcemia de rebote en la fase de recuperación. Solo se da calcio IV si hay tetania, convulsiones o alteraciones en el ECG."
       },
       {
         "id": "B",
@@ -30,12 +31,14 @@ export const UCC_CONV_2026_07_26_11_20_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "C",
         "label": "C",
-        "text": "Iniciar infusión continua de Calcitriol para movilizar el calcio desde el tejido óseo hacia el espacio intravascular."
+        "text": "Iniciar infusión continua de Calcitriol para movilizar el calcio desde el tejido óseo hacia el espacio intravascular.",
+        "incorrectFeedback": "El calcitriol aumenta la absorción de calcio y fósforo y favorece aún más la precipitación de fosfato de calcio en músculo y riñón. Además, en la fase de recuperación el calcio depositado se libera y causa hipercalcemia; no tiene papel en esta hipocalcemia asintomática."
       },
       {
         "id": "D",
         "label": "D",
-        "text": "Administrar Cloruro de Calcio por vía central asociado a Bicarbonato de Sodio para alcalinizar la orina y proteger el riñón."
+        "text": "Administrar Cloruro de Calcio por vía central asociado a Bicarbonato de Sodio para alcalinizar la orina y proteger el riñón.",
+        "incorrectFeedback": "Administrar calcio (cloruro, aún más concentrado) está contraindicado en la hipocalcemia asintomática de la rabdomiólisis. Además, el bicarbonato no ha demostrado beneficio para proteger el riñón y la alcalinización disminuye aún más el calcio ionizado. La piedra angular es la hidratación agresiva con cristaloides."
       }
     ],
     "correctOptionId": "B",
@@ -65,7 +68,8 @@ export const UCC_CONV_2026_07_26_11_20_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "A",
         "label": "A",
-        "text": "Aplicar ungüento de Aciclovir tópico sobre las lesiones y programar cita control por dermatología pediátrica en 48 horas."
+        "text": "Aplicar ungüento de Aciclovir tópico sobre las lesiones y programar cita control por dermatología pediátrica en 48 horas.",
+        "incorrectFeedback": "El aciclovir tópico es insuficiente: hasta el 30% de los neonatos con herpes localizado en piel (SEM) ya tienen compromiso subclínico del SNC. Toda vesícula en un neonato exige aciclovir INTRAVENOSO a dosis altas y estudio completo (PL con PCR, cultivos, enzimas hepáticas); diferir el manejo arriesga daño neurológico permanente."
       },
       {
         "id": "B",
@@ -75,12 +79,14 @@ export const UCC_CONV_2026_07_26_11_20_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "C",
         "label": "C",
-        "text": "Prescribir Cefalexina oral por 7 días por diagnóstico clínico de impétigo bulloso leve del recién nacido."
+        "text": "Prescribir Cefalexina oral por 7 días por diagnóstico clínico de impétigo bulloso leve del recién nacido.",
+        "incorrectFeedback": "Un racimo de vesículas agrupadas sobre base eritematosa en un neonato (sitio de electrodo de cuero cabelludo) es herpes neonatal hasta demostrar lo contrario, no impétigo. La cefalexina no cubre el VHS y retrasa el aciclovir IV, con riesgo de encefalitis y diseminación."
       },
       {
         "id": "D",
         "label": "D",
-        "text": "Hospitalizar para observación clínica; iniciar antivirales intravenosos exclusivamente si el paciente desarrolla letargia, convulsiones o rechazo a la vía oral."
+        "text": "Hospitalizar para observación clínica; iniciar antivirales intravenosos exclusivamente si el paciente desarrolla letargia, convulsiones o rechazo a la vía oral.",
+        "incorrectFeedback": "Esperar a que aparezcan letargia, convulsiones o rechazo a la vía oral significa tratar cuando ya hay encefalitis o enfermedad diseminada establecida. El aciclovir IV debe iniciarse de inmediato ante cualquier lesión vesicular sospechosa, aunque el neonato luzca sano."
       }
     ],
     "correctOptionId": "B",

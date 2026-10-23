@@ -37,6 +37,7 @@ export const UCC_CONV_2026_08_09_91_100_QUESTIONS: TrainingQuestion[] = [
         id: "D",
         label: "D",
         text: "Administrar Prostaglandinas E1 intravenosas para mantener el ductus abierto; está contraindicada la sedación profunda.",
+        incorrectFeedback: "La prostaglandina E1 se usa en cardiopatías ductus-dependientes, no es la medida inicial en la hernia diafragmática. En la sala de partos lo prioritario es intubar de inmediato, evitar la ventilación con bolsa-mascarilla (distiende el intestino dentro del tórax) y colocar una sonda orogástrica para descomprimir.",
       },
     ],
     correctOptionId: "A",
@@ -79,6 +80,7 @@ export const UCC_CONV_2026_08_09_91_100_QUESTIONS: TrainingQuestion[] = [
         id: "D",
         label: "D",
         text: "Bicarbonato de Sodio y diálisis de urgencia para lavar el fármaco.",
+        incorrectFeedback: "Las sulfonilureas se unen mucho a las proteínas, por lo que la diálisis las elimina poco, y el bicarbonato no tiene papel en esta intoxicación. El antídoto específico es el octreotide, que inhibe la liberación de insulina.",
       },
     ],
     correctOptionId: "B",
@@ -114,6 +116,7 @@ export const UCC_CONV_2026_08_09_91_100_QUESTIONS: TrainingQuestion[] = [
         id: "C",
         label: "C",
         text: "Anfotericina B liposomal por sospecha de meningoencefalitis fúngica.",
+        incorrectFeedback: "La meningoencefalitis por hongos (p. ej., criptococo) es subaguda, ocurre en inmunosuprimidos y da glucosa baja en el LCR. La lesión hemorrágica temporal con glucosa normal es encefalitis herpética: aciclovir IV inmediato.",
       },
       {
         id: "D",
@@ -151,6 +154,7 @@ export const UCC_CONV_2026_08_09_91_100_QUESTIONS: TrainingQuestion[] = [
         id: "B",
         label: "B",
         text: "Terapia crónica con Doxiciclina y Ciprofloxacino por 6 meses por infección parasitaria atípica.",
+        incorrectFeedback: "La enfermedad de Whipple es causada por una bacteria (Tropheryma whipplei), no por un parásito. Doxiciclina con hidroxicloroquina se usa como alternativa o en recaídas, pero el esquema estándar es ceftriaxona o penicilina IV seguida de TMP-SMX durante 1 a 2 años.",
       },
       {
         id: "C",
@@ -205,6 +209,7 @@ export const UCC_CONV_2026_08_09_91_100_QUESTIONS: TrainingQuestion[] = [
         id: "D",
         label: "D",
         text: "Obtener una muestra de orina mediante cateterismo uretral traumático en lugar de utilizar una bolsa recolectora aséptica.",
+        incorrectFeedback: "Un cateterismo traumático no es lo ideal, pero no tiene la gravedad de palpar con fuerza un tumor de Wilms. La palpación vigorosa puede romper la cápsula, diseminar células tumorales en el peritoneo y subir el estadio del tumor.",
       },
     ],
     correctOptionId: "B",
@@ -247,6 +252,7 @@ export const UCC_CONV_2026_08_09_91_100_QUESTIONS: TrainingQuestion[] = [
         id: "D",
         label: "D",
         text: "Receptores Muscarínicos M3 en las glándulas exocrinas y tubo digestivo liso.",
+        incorrectFeedback: "Los anticuerpos contra receptores muscarínicos M3 se asocian al síndrome de Sjögren y algunas disautonomías. La debilidad proximal que MEJORA con el esfuerzo repetido y la arreflexia se deben a anticuerpos contra los canales de calcio presinápticos (Lambert-Eaton).",
       },
     ],
     correctOptionId: "B",
@@ -277,6 +283,7 @@ export const UCC_CONV_2026_08_09_91_100_QUESTIONS: TrainingQuestion[] = [
         id: "B",
         label: "B",
         text: "Artritis Séptica de cadera; requiere aspiración articular de urgencia, lavado quirúrgico y cobertura antibiótica empírica con Vancomicina.",
+        incorrectFeedback: "La artritis séptica se presenta con fiebre, aspecto tóxico, reactantes de fase aguda elevados y dolor intenso a cualquier movimiento. En un adolescente obeso, afebril, con rotación externa obligada al flexionar la cadera (signo de Drehmann), el diagnóstico es deslizamiento epifisario.",
       },
       {
         id: "C",
@@ -324,6 +331,7 @@ export const UCC_CONV_2026_08_09_91_100_QUESTIONS: TrainingQuestion[] = [
         id: "C",
         label: "C",
         text: "Son necesarios porque la elevación aguda de LDH sugiere una destrucción epitelial que desencadenará un choque séptico vasopléjico inminente en 24 horas.",
+        incorrectFeedback: "La LDH alta apoya el diagnóstico de Pneumocystis, pero no es el criterio para dar esteroides ni anuncia un choque séptico. Los esteroides se indican por la hipoxemia: PaO2 < 70 mmHg o gradiente A-a ≥ 35 mmHg.",
       },
       {
         id: "D",

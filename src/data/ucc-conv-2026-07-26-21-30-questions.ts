@@ -20,7 +20,8 @@ export const UCC_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "A",
         "label": "A",
-        "text": "Administrar fenobarbital en dosis de carga profiláctica para prevenir crisis convulsivas subclínicas inminentes."
+        "text": "Administrar fenobarbital en dosis de carga profiláctica para prevenir crisis convulsivas subclínicas inminentes.",
+        "incorrectFeedback": "El fenobarbital profiláctico no está recomendado en la encefalopatía hipóxico-isquémica: no mejora el pronóstico neurológico. Los anticonvulsivantes se usan solo ante crisis clínicas o electrográficas documentadas (idealmente con monitoreo EEG). La única intervención neuroprotectora probada es la hipotermia terapéutica antes de las 6 horas."
       },
       {
         "id": "B",
@@ -30,12 +31,14 @@ export const UCC_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "C",
         "label": "C",
-        "text": "Infundir Dexametasona a dosis altas para reducir el edema citotóxico cerebral agudo post-anóxico."
+        "text": "Infundir Dexametasona a dosis altas para reducir el edema citotóxico cerebral agudo post-anóxico.",
+        "incorrectFeedback": "Los corticoides no tienen ningún beneficio en la encefalopatía hipóxico-isquémica: el edema es citotóxico (no vasogénico) y la dexametasona no mejora el desenlace, además de aumentar el riesgo de hiperglucemia e infección. No está recomendada."
       },
       {
         "id": "D",
         "label": "D",
-        "text": "Mantener FiO2 al 100% y realizar hiperventilación leve (PaCO2 30-35 mmHg) para generar vasoconstricción cerebral y reducir la presión intracraneana."
+        "text": "Mantener FiO2 al 100% y realizar hiperventilación leve (PaCO2 30-35 mmHg) para generar vasoconstricción cerebral y reducir la presión intracraneana.",
+        "incorrectFeedback": "La hiperoxia (FiO2 100%) genera radicales libres y empeora la lesión por reperfusión, y la hipocapnia por hiperventilación produce vasoconstricción cerebral que reduce el flujo y aumenta el daño isquémico (asociada a peor pronóstico). Se debe buscar normoxemia y normocapnia."
       }
     ],
     "correctOptionId": "B",
