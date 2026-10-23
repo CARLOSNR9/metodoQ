@@ -46,12 +46,13 @@ export const UCC_CONV_2025_06_21_3280_LECTURA_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation:
-      "Res. 3280/RIAS materno-perinatal: mínimo 5 controles prenatales en el embarazo, con componentes de promoción, prevención, tamizajes y educación según trimestre.",
+      "Res. 3280/RIAS materno-perinatal: mínimo 5 controles prenatales en el embarazo, con componentes de promoción, prevención, tamizajes y educación según trimestre.\n\nLa resolución fija un mínimo de controles para la gestante de bajo riesgo, distribuidos por trimestre, que se intensifican al final del embarazo (en el tercer trimestre son más frecuentes). Las gestantes de alto riesgo reciben más controles y atención por especialista.",
     keyPoints: [
       "Ruta materna: mínimo 5 controles prenatales.",
       "Inicio en primer trimestre.",
       "Registro y continuidad en APS/red de servicios.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nResolución 3280 de 2018 (Ruta materno-perinatal): mínimo 5 controles prenatales distribuidos a lo largo del embarazo para una gestante de bajo riesgo.\n\n### ¿Qué está ocurriendo realmente?\nLa Ruta Integral de Atención en Salud materno-perinatal define las atenciones mínimas que deben recibir todas las gestantes en Colombia: el primer control idealmente antes de la semana 10 (y siempre antes de la 12), y luego controles periódicos según el trimestre, con tamizajes, educación, valoración nutricional, odontológica y de salud mental.\n\n### ¿Por qué la opción A es la respuesta correcta?\nLa resolución fija un mínimo de controles para la gestante de bajo riesgo, distribuidos por trimestre, que se intensifican al final del embarazo (en el tercer trimestre son más frecuentes). Las gestantes de alto riesgo reciben más controles y atención por especialista.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: La ruta materno-perinatal exige seguimiento periódico desde primer trimestre; un control único no cumple estándares mínimos.\n• Opción C: La atención prenatal debe iniciarse en primer trimestre con controles programados, no limitarse al parto.\n• Opción D: El estándar mínimo nacional es al menos 5 controles prenatales, no 12 mensuales rígidos.\n\n### La trampa del examen\nPensar que 'más controles' siempre es la norma (12 obligatorios) o que basta con un control al final. La norma fija un mínimo distribuido, ajustable al riesgo.\n\n### Perlas de examen\n• Primer control idealmente antes de la semana 10 (captación temprana).\n• La Res. 3280 incluye la consulta preconcepcional y el curso de preparación para la maternidad y la paternidad.\n• Atención del puerperio y del recién nacido: control a los 3-5 días tras el parto.",
   },
   {
     id: "ucc-conv-2025-06-21-82",
@@ -566,12 +567,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "RR 0.69 con IC que excluye 1 indica reducción significativa de eventos CV con X+tiazida vs placebo+tiazida, con similar perfil de seguridad.",
+      "RR 0.69 con IC que excluye 1 indica reducción significativa de eventos CV con X+tiazida vs placebo+tiazida, con similar perfil de seguridad.\n\nEl RR de 0.69 significa que X reduce el riesgo relativo de eventos en un 31% (1 - 0.69). El IC 95% (0.58-0.82) no cruza el 1, así que el efecto es significativo, y la seguridad fue similar. La reducción absoluta es 6.1% - 4.2% = 1.9%, con un NNT de unos 53 pacientes durante 24 meses.",
     keyPoints: [
       "Interpretar RR e IC del desenlace primario.",
       "Ambos brazos incluyen tiazida: comparación aislada de X.",
       "EA similares no anulan eficacia.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nRR < 1 con un IC 95% que NO incluye el 1 = reducción estadísticamente significativa del riesgo en el grupo intervenido.\n\n### ¿Qué está ocurriendo realmente?\nEs un ensayo clínico controlado: ambos grupos reciben tiazida, y la única diferencia es el fármaco X frente a placebo. El desenlace que importa es el compuesto de eventos cardiovasculares duros (IAM, ACV, muerte cardiovascular), no solo la cifra de presión.\n\n### ¿Por qué la opción A es la respuesta correcta?\nEl RR de 0.69 significa que X reduce el riesgo relativo de eventos en un 31% (1 - 0.69). El IC 95% (0.58-0.82) no cruza el 1, así que el efecto es significativo, y la seguridad fue similar. La reducción absoluta es 6.1% - 4.2% = 1.9%, con un NNT de unos 53 pacientes durante 24 meses.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: El desenlace primario evaluó eventos CV, no normalización absoluta de PA; A fue superior con RR 0.69 significativo.\n• Opción C: Seguridad similar no implica ausencia de eficacia; el desenlace compuesto fue significativamente menor en A.\n• Opción D: Ambos brazos recibieron tiazida; la diferencia entre A y B atribuye beneficio adicional a X.\n\n### La trampa del examen\nJuzgar el fármaco por si la PA llegó a valores 'normales'. La pregunta se responde con el desenlace clínico medido (eventos), no con una variable intermedia.\n\n### Perlas de examen\n• RRR = 1 - RR; RAR = riesgo control - riesgo intervención; NNT = 1/RAR.\n• Para un RR o un OR, el IC significativo es el que no incluye el 1; para una diferencia de medias, el que no incluye el 0.\n• Responder siempre con lo que dice el texto, sin agregar conclusiones externas.",
   },
   {
     id: "ucc-conv-2025-06-21-92",
@@ -615,12 +617,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Exacerbación EPOC con acidosis respiratoria aguda (pH 7.28, PaCO₂ 70): VNI es primera línea junto con broncodilatadores, esteroides y ATB si cambio de esputo; O₂ titulado SpO₂ 88–92%.",
+      "Exacerbación EPOC con acidosis respiratoria aguda (pH 7.28, PaCO₂ 70): VNI es primera línea junto con broncodilatadores, esteroides y ATB si cambio de esputo; O₂ titulado SpO₂ 88–92%.\n\nLa VNI (BiPAP) es la primera línea con pH 7.25-7.35: disminuye la intubación y la mortalidad. Se acompaña de broncodilatadores de acción corta, prednisona 40 mg por 5 días, antibiótico por el esputo purulento (criterios de Anthonisen) y oxígeno con meta de SpO2 88-92%.",
     keyPoints: [
       "pH <7.35 + PaCO₂ alta → VNI.",
       "Oxígeno titulado en EPOC.",
       "Esteroides y ATB según cuadro.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nEPOC exacerbado con acidosis respiratoria (pH 7.28, PaCO2 70) = ventilación no invasiva + broncodilatadores + corticoide + antibiótico si el esputo es purulento + oxígeno titulado.\n\n### ¿Qué está ocurriendo realmente?\nEl aumento de la disnea y el esputo purulento indican una exacerbación probablemente bacteriana. El HCO3 de 32 muestra retención crónica de CO2 y el pH bajo indica que ahora la PaCO2 subió de forma aguda: falla respiratoria hipercápnica aguda sobre crónica.\n\n### ¿Por qué la opción A es la respuesta correcta?\nLa VNI (BiPAP) es la primera línea con pH 7.25-7.35: disminuye la intubación y la mortalidad. Se acompaña de broncodilatadores de acción corta, prednisona 40 mg por 5 días, antibiótico por el esputo purulento (criterios de Anthonisen) y oxígeno con meta de SpO2 88-92%.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: Acidosis respiratoria (pH 7.28) e hipoxemia requieren hospitalización y VNI, no alta.\n• Opción C: En EPOC retenedor, oxígeno alto empeora hipercapnia; se necesita VNI y FiO₂ titulada.\n• Opción D: Exacerbación grave con acidosis no se maneja ambulatoriamente solo con SABA.\n\n### La trampa del examen\nSubir el oxígeno con mascarilla de reservorio a 15 L/min. En el retenedor crónico, la hiperoxia aumenta la PaCO2 y puede llevar a narcosis y paro.\n\n### Perlas de examen\n• Antibiótico en la exacerbación si hay esputo purulento más aumento de la disnea o del volumen del esputo, o si necesita ventilación.\n• Evaluar gases 1-2 horas después de iniciar la VNI.\n• Contraindicaciones de la VNI: paro, inestabilidad, vómito, incapacidad de proteger la vía aérea o trauma facial.",
   },
   {
     id: "ucc-conv-2025-06-21-93",
@@ -794,12 +797,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "NAC moderada ambulatoria con comorbilidades (EPOC, DM): amoxicilina-clavulánico o fluoroquinolona respiratoria según guía citada; no amoxicilina simple sola.",
+      "NAC moderada ambulatoria con comorbilidades (EPOC, DM): amoxicilina-clavulánico o fluoroquinolona respiratoria según guía citada; no amoxicilina simple sola.\n\nEl paciente tiene EPOC y diabetes, está estable y con SpO2 de 94%, así que no cumple criterios de hospitalización y pertenece al grupo con comorbilidades. Según el texto, le corresponde amoxicilina-clavulánico o una fluoroquinolona respiratoria según la resistencia local.",
     keyPoints: [
       "Comorbilidades → escalar ATB ambulatorio.",
       "Hospitalización por gravedad, no solo DM.",
       "Seguir criterios CURB-65 e hipoxemia.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nPregunta de lectura: la respuesta sale del texto. Neumonía comunitaria ambulatoria CON comorbilidades (EPOC, diabetes) = amoxicilina-clavulánico o quinolona respiratoria.\n\n### ¿Qué está ocurriendo realmente?\nEl texto define dos escenarios de tratamiento ambulatorio: sin comorbilidades (amoxicilina en dosis altas o doxiciclina) y con comorbilidades o uso reciente de antibióticos (amoxicilina-clavulánico o quinolona respiratoria). También fija los criterios de hospitalización (CURB-65 ≥ 3, hipoxemia o inestabilidad).\n\n### ¿Por qué la opción A es la respuesta correcta?\nEl paciente tiene EPOC y diabetes, está estable y con SpO2 de 94%, así que no cumple criterios de hospitalización y pertenece al grupo con comorbilidades. Según el texto, le corresponde amoxicilina-clavulánico o una fluoroquinolona respiratoria según la resistencia local.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: El texto indica escalar ATB ante comorbilidades (DM, EPOC); amoxicilina simple no es primera línea en ese grupo.\n• Opción C: Hospitalización según CURB-65, hipoxemia o inestabilidad; este paciente está estable con SpO₂ 94%.\n• Opción D: Macrólido solo no es primera línea universal; comorbilidades requieren beta-lactámico ampliado o fluoroquinolona.\n\n### La trampa del examen\nResponder con lo que uno sabe de memoria en lugar de con lo que dice el texto. En las preguntas de lectura crítica, la información del texto manda.\n\n### Perlas de examen\n• Subrayar en el texto los criterios que diferencian cada grupo y ubicar al paciente.\n• Las comorbilidades aumentan el riesgo de gérmenes resistentes y de gramnegativos.\n• Desconfiar de las opciones absolutas ('obligatoria en todo', 'única recomendación para todos').",
   },
   {
     id: "ucc-conv-2025-06-21-96",
@@ -997,12 +1001,13 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "TFG 22: evitar dabigatrán o usar con extrema cautela; warfarina viable con INR; apixabán/rivaroxabán según ajuste por TFG según guías y texto.",
+      "TFG 22: evitar dabigatrán o usar con extrema cautela; warfarina viable con INR; apixabán/rivaroxabán según ajuste por TFG según guías y texto.\n\nSegún el texto, en este paciente se evita el dabigatrán, la warfarina con control del INR sigue siendo una opción (no depende del riñón) y los anti-Xa pueden usarse con ajuste de dosis y cautela. La fibrilación auricular en un adulto mayor no es motivo para suspender la anticoagulación si el beneficio supera el riesgo.",
     keyPoints: [
       "Dabigatrán: eliminación renal ~80%.",
       "TFG <30: cautela/contraindicación dabigatrán.",
       "Warfarina no depende de riñón; DOAC requieren ajuste.",
     ],
+    theoryContent: "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa clave es:\nPregunta de lectura: dabigatrán se elimina 80% por riñón; con TFG < 30 se acumula y se evita. La warfarina con INR es una opción, y los anti-Xa necesitan ajuste según el fármaco.\n\n### ¿Qué está ocurriendo realmente?\nLos anticoagulantes orales directos tienen distinta dependencia renal: dabigatrán (inhibidor de la trombina) depende mucho del riñón; rivaroxabán y apixabán (anti-Xa) dependen menos. Con una TFG de 22 mL/min, el riesgo de acumulación y sangrado de dabigatrán es alto.\n\n### ¿Por qué la opción A es la respuesta correcta?\nSegún el texto, en este paciente se evita el dabigatrán, la warfarina con control del INR sigue siendo una opción (no depende del riñón) y los anti-Xa pueden usarse con ajuste de dosis y cautela. La fibrilación auricular en un adulto mayor no es motivo para suspender la anticoagulación si el beneficio supera el riesgo.\n\n### ¿Por qué fallan las otras opciones?\n• Opción B: El texto indica eliminación renal predominante de dabigatrán y riesgo en TFG <30.\n• Opción C: IRC no contraindica anticoagulación en FA automáticamente; requiere selección y ajuste.\n• Opción D: El texto indica ajuste de DOAC según función renal y fármaco.\n\n### La trampa del examen\nTratar a todos los anticoagulantes como si se eliminaran igual, o suspender la anticoagulación solo por la edad.\n\n### Perlas de examen\n• CHA2DS2-VASc define la indicación de anticoagular en la FA; HAS-BLED estima el riesgo de sangrado (no contraindica por sí solo).\n• Apixabán es el DOAC con menor eliminación renal (~27%).\n• Válvula mecánica o estenosis mitral moderada-grave: solo warfarina.",
   },
   {
     id: "ucc-conv-2025-06-21-99",

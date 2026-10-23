@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { BookOpen, Sparkles, Info, Lock, ArrowRight, ExternalLink, ChevronRight, Flag } from "lucide-react";
 import Link from "next/link";
+import { buildFallbackTheoryContent } from "@/lib/questions/fallback-theory";
 import { isExternalTheoryLink } from "@/lib/questions/theory-link";
 import { TheoryDeepDivePanel } from "@/components/demo/theory-deep-dive-panel";
 import { ReportQuestionModal } from "@/components/demo/report-question-modal";
@@ -12,6 +13,7 @@ export type QuestionOption = {
   id: string;
   label: string;
   text: string;
+  incorrectFeedback?: string;
 };
 
 export type QuestionCardProps = {
@@ -92,7 +94,13 @@ export function QuestionCard({
   }, [defaultSelectedOptionId, questionId, question]);
   const hasAnswered = Boolean(selectedOptionId);
   const isCorrect = selectedOptionId === correctOptionId;
-  const trimmedTheoryContent = theoryContent?.trim();
+  // Sin teoría propia ni enlace, la píldora se arma con la explicación para que
+  // la pregunta siempre se pueda profundizar y guardar en Mi Estudio.
+  const trimmedTheoryContent =
+    theoryContent?.trim() ||
+    (theoryHref
+      ? undefined
+      : buildFallbackTheoryContent({ explanation, keyPoints, options, correctOptionId }));
   const showTheoryPill =
     hasAnswered && Boolean(trimmedTheoryContent || theoryHref);
 
