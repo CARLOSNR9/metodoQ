@@ -20,7 +20,8 @@ export const UCC_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "A",
         "label": "A",
-        "text": "Administrar Antitoxina Botulínica Equina trivalente intravenosa y notificar a salud pública."
+        "text": "Administrar Antitoxina Botulínica Equina trivalente intravenosa y notificar a salud pública.",
+        "incorrectFeedback": "La antitoxina equina se reserva para el botulismo del adulto (alimentario o por heridas). En menores de 1 año el tratamiento específico es la Inmunoglobulina Botulínica HUMANA (BabyBIG), que acorta la hospitalización y la ventilación mecánica y evita el riesgo de anafilaxia y enfermedad del suero del suero equino."
       },
       {
         "id": "B",
@@ -30,12 +31,14 @@ export const UCC_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "C",
         "label": "C",
-        "text": "Prescribir Penicilina G cristalina o Metronidazol intravenoso para erradicar la colonización bacteriana intestinal."
+        "text": "Prescribir Penicilina G cristalina o Metronidazol intravenoso para erradicar la colonización bacteriana intestinal.",
+        "incorrectFeedback": "Los antibióticos no están indicados en el botulismo del lactante: no neutralizan la toxina y, al lisar las bacterias en el intestino, pueden liberar más toxina. Los aminoglucósidos además potencian el bloqueo neuromuscular. El tratamiento específico es la BabyBIG más soporte."
       },
       {
         "id": "D",
         "label": "D",
-        "text": "Administrar Neostigmina intravenosa o Piridostigmina para revertir el bloqueo de la placa neuromuscular."
+        "text": "Administrar Neostigmina intravenosa o Piridostigmina para revertir el bloqueo de la placa neuromuscular.",
+        "incorrectFeedback": "Los inhibidores de la acetilcolinesterasa (neostigmina, piridostigmina) se usan en la miastenia gravis (bloqueo postsináptico). La toxina botulínica impide la LIBERACIÓN presináptica de acetilcolina, por lo que estos fármacos no revierten la parálisis. El tratamiento es la BabyBIG."
       }
     ],
     "correctOptionId": "B",

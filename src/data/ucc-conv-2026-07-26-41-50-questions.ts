@@ -20,12 +20,14 @@ export const UCC_CONV_2026_07_26_41_50_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "A",
         "label": "A",
-        "text": "Vancomicina más Ceftriaxona en infusión continua durante 6 semanas."
+        "text": "Vancomicina más Ceftriaxona en infusión continua durante 6 semanas.",
+        "incorrectFeedback": "La ceftriaxona no tiene actividad contra estafilococos coagulasa negativos meticilino-resistentes y esta combinación omite la rifampicina, el único fármaco capaz de penetrar el biofilm sobre la prótesis. El régimen recomendado es vancomicina + rifampicina (≥ 6 semanas) + gentamicina (2 semanas)."
       },
       {
         "id": "B",
         "label": "B",
-        "text": "Oxacilina a dosis altas asociada a Gentamicina durante las primeras 2 semanas."
+        "text": "Oxacilina a dosis altas asociada a Gentamicina durante las primeras 2 semanas.",
+        "incorrectFeedback": "Los estafilococos coagulasa negativos de la endocarditis protésica temprana son de adquisición nosocomial y se asumen meticilino-resistentes, por lo que la oxacilina no es adecuada como tratamiento empírico. Además falta la rifampicina para erradicar el biofilm protésico."
       },
       {
         "id": "C",
@@ -35,7 +37,8 @@ export const UCC_CONV_2026_07_26_41_50_QUESTIONS: TrainingQuestion[] = [
       {
         "id": "D",
         "label": "D",
-        "text": "Daptomicina en monoterapia a dosis altas (10 mg/kg) para penetrar el tejido protésico."
+        "text": "Daptomicina en monoterapia a dosis altas (10 mg/kg) para penetrar el tejido protésico.",
+        "incorrectFeedback": "La daptomicina es una alternativa en algunos casos, pero en monoterapia no es el estándar en la endocarditis sobre válvula protésica por estafilococo. Las guías AHA/ESC exigen terapia combinada con rifampicina (activa contra el biofilm) y gentamicina."
       }
     ],
     "correctOptionId": "C",
