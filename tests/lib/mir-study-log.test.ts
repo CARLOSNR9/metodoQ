@@ -46,3 +46,11 @@ describe("buildMirStudyItems", () => {
     expect(summary.net).toBeCloseTo(3 - 2 / 3);
   });
 });
+
+describe("«Ya la he repasado»", () => {
+  it("una fallada marcada como repasada deja de contar como fallo, pero no cambia las netas", () => {
+    const items = buildMirStudyItems({ a: entry({ correct: false, timesWrong: 1, reviewed: true }) }, {});
+    expect(items[0]).toMatchObject({ isWrong: false, reviewed: true, lastCorrect: false });
+    expect(getMirStudyNetSummary(items)).toMatchObject({ correct: 0, wrong: 1 });
+  });
+});

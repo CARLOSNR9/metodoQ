@@ -2,15 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, BookMarked, ChevronDown, Layers, XCircle, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, BookMarked, Check, ChevronDown, Layers, XCircle, CheckCircle2 } from "lucide-react";
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
-import { getMirReviewDeck } from "@/lib/training/mir-review";
+import { getMirReviewDeck, type MirReviewEntry } from "@/lib/training/mir-review";
 import { formatMirNet } from "@/lib/training/mir-scoring";
 import {
   buildMirStudyItems,
   getMirStudyLog,
   getMirStudyNetSummary,
+  markMirQuestionReviewed,
+  unmarkMirQuestionReviewed,
   type MirStudyItem,
 } from "@/lib/training/mir-study-log";
 import { MirPomodoroCard } from "./mir-pomodoro-card";
@@ -20,6 +22,16 @@ const PAGE_SIZE = 20;
 const QUESTIONS_BY_ID = new Map(MIR_QUESTIONS.map((question) => [question.id, question]));
 
 type StudyFilter = "wrong" | "all";
+
+/** Lo necesario para deshacer un «Ya la he repasado». */
+type ReviewedUndo = {
+  item: MirStudyItem;
+  index: number;
+  reviewEntry: MirReviewEntry | undefined;
+  hasLogEntry: boolean;
+};
+
+const UNDO_TIMEOUT_MS = 6000;
 
 function formatShortDate(iso: string): string {
   if (!iso) return "";
@@ -38,11 +50,16 @@ export function MirStudyView({ userId }: { userId: string }) {
   const [specialty, setSpecialty] = useState("");
   const [openId, setOpenId] = useState<string | null>(null);
   const [visible, setVisible] = useState(PAGE_SIZE);
+  const [reviewEntries, setReviewEntries] = useState<Record<string, MirReviewEntry>>({});
+  const [loggedIds, setLoggedIds] = useState<Set<string>>(new Set());
+  const [undo, setUndo] = useState<ReviewedUndo | null>(null);
 
   useEffect(() => {
     let cancelled = false;
     Promise.all([getMirStudyLog(userId), getMirReviewDeck(userId)]).then(([log, deck]) => {
       if (cancelled) return;
+      setReviewEntries(deck.entries);
+      setLoggedIds(new Set(Object.keys(log)));
       setItems(
         buildMirStudyItems(log, deck.entries).filter((item) => QUESTIONS_BY_ID.has(item.questionId)),
       );
@@ -51,6 +68,53 @@ export function MirStudyView({ userId }: { userId: string }) {
       cancelled = true;
     };
   }, [userId]);
+
+  useEffect(() => {
+    if (!undo) return;
+    const timer = setTimeout(() => setUndo(null), UNDO_TIMEOUT_MS);
+    return () => clearTimeout(timer);
+  }, [undo]);
+
+  function markReviewed(item: MirStudyItem) {
+    const reviewEntry = reviewEntries[item.questionId];
+    const hasLogEntry = loggedIds.has(item.questionId);
+    const index = items?.findIndex((current) => current.questionId === item.questionId) ?? -1;
+    setUndo({ item, index, reviewEntry, hasLogEntry });
+    setOpenId(null);
+    setReviewEntries((current) => {
+      const next = { ...current };
+      delete next[item.questionId];
+      return next;
+    });
+    // Sin respuesta guardada (fallo antiguo del repaso) no queda nada que mostrar.
+    setItems((current) =>
+      hasLogEntry
+        ? (current ?? []).map((other) =>
+            other.questionId === item.questionId
+              ? { ...other, isWrong: false, inReview: false, reviewed: true }
+              : other,
+          )
+        : (current ?? []).filter((other) => other.questionId !== item.questionId),
+    );
+    markMirQuestionReviewed(userId, item.questionId, reviewEntry, hasLogEntry).catch((error) => {
+      console.error("No se pudo marcar la pregunta como repasada.", error);
+    });
+  }
+
+  function undoReviewed() {
+    if (!undo) return;
+    const { item, index, reviewEntry, hasLogEntry } = undo;
+    setUndo(null);
+    if (reviewEntry) setReviewEntries((current) => ({ ...current, [item.questionId]: reviewEntry }));
+    setItems((current) => {
+      const rest = (current ?? []).filter((other) => other.questionId !== item.questionId);
+      rest.splice(index < 0 ? rest.length : index, 0, item);
+      return rest;
+    });
+    unmarkMirQuestionReviewed(userId, item.questionId, reviewEntry, hasLogEntry).catch((error) => {
+      console.error("No se pudo deshacer «ya repasada».", error);
+    });
+  }
 
   const specialties = useMemo(() => {
     const counts = new Map<string, number>();
@@ -223,6 +287,7 @@ export function MirStudyView({ userId }: { userId: string }) {
                             : ""}
                           {item.lastAt ? ` · ${formatShortDate(item.lastAt)}` : ""}
                           {item.timesWrong > 1 ? ` · fallada ${item.timesWrong} veces` : ""}
+                          {item.reviewed ? " · repasada" : ""}
                         </span>
                       </span>
                       <ChevronDown
@@ -236,6 +301,16 @@ export function MirStudyView({ userId }: { userId: string }) {
                           given={item.answer}
                           wasWrong={item.isWrong}
                         />
+                        {item.isWrong ? (
+                          <button
+                            type="button"
+                            onClick={() => markReviewed(item)}
+                            className="mt-2 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl border border-emerald-400/40 bg-emerald-400/[0.08] text-sm font-bold text-emerald-300 transition hover:border-emerald-400/70"
+                          >
+                            <Check className="h-4 w-4" />
+                            Ya la he repasado
+                          </button>
+                        ) : null}
                       </div>
                     ) : null}
                   </li>
@@ -255,6 +330,21 @@ export function MirStudyView({ userId }: { userId: string }) {
           ) : null}
         </div>
       )}
+      {undo ? (
+        <div
+          role="status"
+          className="fixed inset-x-4 bottom-6 z-50 mx-auto flex max-w-md items-center justify-between gap-3 rounded-xl border border-white/15 bg-[#0A1F44] px-4 py-3 shadow-lg"
+        >
+          <span className="text-sm text-slate-200">Quitada de tus fallos y del repaso.</span>
+          <button
+            type="button"
+            onClick={undoReviewed}
+            className="shrink-0 text-sm font-bold text-mq-premium-gold hover:underline"
+          >
+            Deshacer
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }

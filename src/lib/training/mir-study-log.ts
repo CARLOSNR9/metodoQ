@@ -1,9 +1,9 @@
-import { doc, getDoc, increment, setDoc } from "firebase/firestore";
+import { deleteField, doc, getDoc, increment, setDoc } from "firebase/firestore";
 import { getFirebaseDb } from "@/lib/firebase";
 import { MIR_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { getMirNet } from "@/lib/training/mir-scoring";
 import type { MirPracticeHistory } from "@/lib/training/mir-practice";
-import { getMirReviewDeck } from "@/lib/training/mir-review";
+import { getMirReviewDeck, type MirReviewEntry } from "@/lib/training/mir-review";
 
 /**
  * «Mi estudio» MIR: la última respuesta del alumno a cada pregunta que ha
@@ -21,6 +21,8 @@ export type MirStudyLogEntry = {
   answeredAt: string;
   /** Veces que se ha fallado en total. */
   timesWrong: number;
+  /** El alumno la marcó como «ya repasada»: deja de contar como fallo hasta que la vuelva a contestar. */
+  reviewed?: boolean;
 };
 
 export type MirStudyAnswer = { questionId: string; answer: string; correct: boolean };
@@ -41,6 +43,7 @@ export async function getMirStudyLog(userId: string): Promise<Record<string, Mir
             correct: Boolean(entry.correct),
             answeredAt: String(entry.answeredAt ?? ""),
             timesWrong: Number(entry.timesWrong ?? 0),
+            reviewed: Boolean(entry.reviewed),
           },
         ]),
     );
@@ -60,9 +63,47 @@ export async function recordMirStudyAnswers(userId: string, answers: MirStudyAns
       mirStudyLog: Object.fromEntries(
         answers.map(({ questionId, answer, correct }) => [
           questionId,
-          { answer, correct, answeredAt, timesWrong: increment(correct ? 0 : 1) },
+          // Contestarla de nuevo anula el «ya repasada».
+          { answer, correct, answeredAt, timesWrong: increment(correct ? 0 : 1), reviewed: deleteField() },
         ]),
       ),
+    },
+    { merge: true },
+  );
+}
+
+/**
+ * «Ya la he repasado»: la quita de los fallos de «Mi estudio» y del repaso de
+ * errores, contándola como dominada. Si se vuelve a fallar, vuelve a salir.
+ */
+export async function markMirQuestionReviewed(
+  userId: string,
+  questionId: string,
+  reviewEntry: MirReviewEntry | undefined,
+  hasLogEntry: boolean,
+): Promise<void> {
+  await setDoc(
+    doc(getFirebaseDb(), "users", userId),
+    {
+      ...(hasLogEntry ? { mirStudyLog: { [questionId]: { reviewed: true } } } : {}),
+      ...(reviewEntry ? { mirReview: { [questionId]: deleteField() }, mirReviewMastered: increment(1) } : {}),
+    },
+    { merge: true },
+  );
+}
+
+/** Deshace `markMirQuestionReviewed`, devolviendo la pregunta al repaso tal como estaba. */
+export async function unmarkMirQuestionReviewed(
+  userId: string,
+  questionId: string,
+  reviewEntry: MirReviewEntry | undefined,
+  hasLogEntry: boolean,
+): Promise<void> {
+  await setDoc(
+    doc(getFirebaseDb(), "users", userId),
+    {
+      ...(hasLogEntry ? { mirStudyLog: { [questionId]: { reviewed: deleteField() } } } : {}),
+      ...(reviewEntry ? { mirReview: { [questionId]: reviewEntry }, mirReviewMastered: increment(-1) } : {}),
     },
     { merge: true },
   );
@@ -78,6 +119,8 @@ export type MirStudyItem = {
   lastCorrect: boolean;
   /** Pendiente en el repaso de errores. */
   inReview: boolean;
+  /** Marcada como «ya repasada» (no cuenta como fallo). */
+  reviewed: boolean;
   /** ISO de la última vez que se contestó (o se falló). */
   lastAt: string;
   timesWrong: number;
@@ -100,9 +143,10 @@ export function buildMirStudyItems(
       return {
         questionId,
         answer: entry?.answer,
-        isWrong: Boolean(review) || (entry ? !entry.correct : false),
+        isWrong: Boolean(review) || (entry ? !entry.correct && !entry.reviewed : false),
         lastCorrect: entry?.correct ?? false,
         inReview: Boolean(review),
+        reviewed: Boolean(entry?.reviewed),
         lastAt: entry?.answeredAt || review?.lastWrongAt || "",
         timesWrong: entry?.timesWrong ?? (review ? 1 : 0),
       };
