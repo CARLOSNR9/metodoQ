@@ -1,7 +1,7 @@
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
- * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #21”“#30.
+ * Convocatoria UCC — Edición #3 (19 jul 2025) · Preguntas #21–#30.
  * Banco exclusivo del examen oficial quincenal Pro.
  */
 export const UCC_CONV_2025_07_19_21_30_QUESTIONS: TrainingQuestion[] = [
@@ -57,7 +57,7 @@ export const UCC_CONV_2025_07_19_21_30_QUESTIONS: TrainingQuestion[] = [
     topic: "Nefrología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "pediatria", "nefrologia"],
-    statement: "Un niño de 4 años fue diagnosticado hace 8 semanas con Síndrome Nefrótico Idiopático (edema, proteinuria de 50 mg/mÂ²/h e hipoalbuminemia de 1.8 g/dL). Se inició tratamiento estandarizado con Prednisolona vía oral a dosis de 60 mg/mÂ²/día. Hoy acude a control evidenciándose persistencia de edema facial y escrotal. Los exámenes de control reportan: Albúmina sérica de 2.0 g/dL y un parcial de orina con proteinuria masiva (relación Pr/Cr en orina de 4.5). Sus niveles de complemento (C3 y C4) son normales y la serología viral es negativa. ¿Cuál es el paso INMEDIATO de mayor relevancia clínica y pronóstica para reorientar el manejo de este paciente?",
+    statement: "Un niño de 4 años fue diagnosticado hace 8 semanas con Síndrome Nefrótico Idiopático (edema, proteinuria de 50 mg/m²/h e hipoalbuminemia de 1.8 g/dL). Se inició tratamiento estandarizado con Prednisolona vía oral a dosis de 60 mg/m²/día. Hoy acude a control evidenciándose persistencia de edema facial y escrotal. Los exámenes de control reportan: Albúmina sérica de 2.0 g/dL y un parcial de orina con proteinuria masiva (relación Pr/Cr en orina de 4.5). Sus niveles de complemento (C3 y C4) son normales y la serología viral es negativa. ¿Cuál es el paso INMEDIATO de mayor relevancia clínica y pronóstica para reorientar el manejo de este paciente?",
     options: [
       {
         id: "A",
@@ -287,7 +287,7 @@ Referencias
     topic: "Infectología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "infectologia", "neurologia"],
-    statement: "Hombre de 35 años, con antecedente de infección por VIH en estado de abandono crónico del tratamiento antirretroviral (TARV), acude por cuadro de 3 semanas de progresión insidiosa de debilidad en el hemicuerpo izquierdo, inestabilidad de la marcha, dificultad para la articulación de palabras (disartria) y déficit de atención leve. Niega fiebre, cefalea o convulsiones. Examen neurológico: hemiparesia espástica izquierda profunda, hemianopsia homónima izquierda y ataxia franca. El recuento actual de CD4 es de 35 cél/mmÂ³. Una Resonancia Magnética (RMN) cerebral simple y con contraste evidencia múltiples lesiones extensas, asimétricas y confluentes en la sustancia blanca periventricular y subcortical del hemisferio derecho y fosa posterior; dichas lesiones NO captan medio de contraste, NO generan edema perilesional y NO presentan efecto de masa. ¿Cuál es el diagnóstico MÁS probable y su tratamiento específico de primera línea?",
+    statement: "Hombre de 35 años, con antecedente de infección por VIH en estado de abandono crónico del tratamiento antirretroviral (TARV), acude por cuadro de 3 semanas de progresión insidiosa de debilidad en el hemicuerpo izquierdo, inestabilidad de la marcha, dificultad para la articulación de palabras (disartria) y déficit de atención leve. Niega fiebre, cefalea o convulsiones. Examen neurológico: hemiparesia espástica izquierda profunda, hemianopsia homónima izquierda y ataxia franca. El recuento actual de CD4 es de 35 cél/mm³. Una Resonancia Magnética (RMN) cerebral simple y con contraste evidencia múltiples lesiones extensas, asimétricas y confluentes en la sustancia blanca periventricular y subcortical del hemisferio derecho y fosa posterior; dichas lesiones NO captan medio de contraste, NO generan edema perilesional y NO presentan efecto de masa. ¿Cuál es el diagnóstico MÁS probable y su tratamiento específico de primera línea?",
     options: [
       {
         id: "A",
@@ -426,7 +426,7 @@ Referencias
     topic: "Hematología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "hematologia", "urgencias"],
-    statement: "Hombre de 30 años acude a urgencias quejándose de sangrado profundo en las encías al cepillarse y la aparición espontánea de múltiples equimosis (\"morados\") masivas en tronco y extremidades durante los últimos 4 días, acompañado de astenia profunda. Al examen físico: palidez mucocutánea generalizada y petequias extensas; no se palpan adenopatías ni visceromegalias. Laboratorios: Leucocitos 1,500/mmÂ³, Neutrófilos absolutos 400/mmÂ³, Hemoglobina 7.2 g/dL, Plaquetas 12,000/mmÂ³. Tiempos de coagulación: TP 28 seg, TPT 55 seg, Fibrinógeno 65 mg/dL (disminuido), Dímero-D > 5,000 ng/mL. Un frotis de sangre periférica urgente revela abundantes células atípicas de gran tamaño, con un citoplasma densamente granuloso y múltiples estructuras cristalinas rosadas en forma de astilla o bastón en su interior (Múltiples Cuerpos de Auer). ¿Cuál es la intervención de supervivencia INMEDIATA que NO debe posponerse en este paciente?",
+    statement: "Hombre de 30 años acude a urgencias quejándose de sangrado profundo en las encías al cepillarse y la aparición espontánea de múltiples equimosis (\"morados\") masivas en tronco y extremidades durante los últimos 4 días, acompañado de astenia profunda. Al examen físico: palidez mucocutánea generalizada y petequias extensas; no se palpan adenopatías ni visceromegalias. Laboratorios: Leucocitos 1,500/mm³, Neutrófilos absolutos 400/mm³, Hemoglobina 7.2 g/dL, Plaquetas 12,000/mm³. Tiempos de coagulación: TP 28 seg, TPT 55 seg, Fibrinógeno 65 mg/dL (disminuido), Dímero-D > 5,000 ng/mL. Un frotis de sangre periférica urgente revela abundantes células atípicas de gran tamaño, con un citoplasma densamente granuloso y múltiples estructuras cristalinas rosadas en forma de astilla o bastón en su interior (Múltiples Cuerpos de Auer). ¿Cuál es la intervención de supervivencia INMEDIATA que NO debe posponerse en este paciente?",
     options: [
       {
         id: "A",
@@ -553,7 +553,7 @@ En reumatología, la enfermedad activa es mucho más letal para el embarazo que 
     topic: "Pediatría",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "pediatria", "neonatologia", "cardiologia"],
-    statement: "Recién nacido prematuro de 26 semanas de edad gestacional se encuentra en su cuarto día de vida en la Unidad de Cuidados Intensivos Neonatales, conectado a ventilación mecánica por Síndrome de Dificultad Respiratoria (Enfermedad de Membrana Hialina). Hoy, el neonatólogo documenta la aparición de un soplo sistólico en maquinaria continuo en el borde esternal superior izquierdo, acompañado de pulsos saltones arteriales periféricos (celer) y un aumento progresivo de los requerimientos ventilatorios con hepatomegalia. Un ecocardiograma confirma un Conducto Arterioso Permeable (PDA) hemodinámicamente significativo. En los paraclínicos urgentes tomados hace una hora resalta un recuento plaquetario de 38.000/mmÂ³ y una ecografía transfontanelar reporta una Hemorragia Intraventricular (HIV) aguda grado III en el lado derecho. ¿Cuál es la estrategia de cierre del ductus MÁS segura y apropiada en este neonato?",
+    statement: "Recién nacido prematuro de 26 semanas de edad gestacional se encuentra en su cuarto día de vida en la Unidad de Cuidados Intensivos Neonatales, conectado a ventilación mecánica por Síndrome de Dificultad Respiratoria (Enfermedad de Membrana Hialina). Hoy, el neonatólogo documenta la aparición de un soplo sistólico en maquinaria continuo en el borde esternal superior izquierdo, acompañado de pulsos saltones arteriales periféricos (celer) y un aumento progresivo de los requerimientos ventilatorios con hepatomegalia. Un ecocardiograma confirma un Conducto Arterioso Permeable (PDA) hemodinámicamente significativo. En los paraclínicos urgentes tomados hace una hora resalta un recuento plaquetario de 38.000/mm³ y una ecografía transfontanelar reporta una Hemorragia Intraventricular (HIV) aguda grado III en el lado derecho. ¿Cuál es la estrategia de cierre del ductus MÁS segura y apropiada en este neonato?",
     options: [
       {
         id: "A",

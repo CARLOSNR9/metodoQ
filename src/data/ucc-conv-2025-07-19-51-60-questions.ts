@@ -1,7 +1,7 @@
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
- * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #51”“#60.
+ * Convocatoria UCC — Edición #3 (19 jul 2025) · Preguntas #51–#60.
  * Banco exclusivo del examen oficial quincenal Pro.
  */
 export const UCC_CONV_2025_07_19_51_60_QUESTIONS: TrainingQuestion[] = [
@@ -140,7 +140,7 @@ En el contexto de una vasculitis sistémica con hepatitis C y caída del C4, ese
     topic: "Gastroenterología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "gastroenterologia", "infectologia"],
-    statement: "Hombre de 72 años, hospitalizado hace 15 días por una neumonía adquirida en la comunidad grave tratada con Ceftriaxona y Levofloxacino. Hace 48 horas inició con episodios de diarrea acuosa muy profusa (>10 al día), dolor abdominal severo tipo cólico y fiebre de 39°C. Hoy se encuentra obnubilado, con PA 80/50 mmHg (choque), FC 130 lpm, y un abdomen intensamente distendido y doloroso a la palpación difusa. Los paraclínicos muestran leucocitosis masiva de 38,000/mmÂ³ y lactato sérico de 6.5 mmol/L. Una radiografía de abdomen evidencia dilatación del colon transverso de 8 cm. Una prueba rápida de toxinas A/B en heces resulta positiva para *Clostridioides difficile*. ¿Cuál es la terapia antibiótica farmacológica MÁS indicada en este momento para la infección?",
+    statement: "Hombre de 72 años, hospitalizado hace 15 días por una neumonía adquirida en la comunidad grave tratada con Ceftriaxona y Levofloxacino. Hace 48 horas inició con episodios de diarrea acuosa muy profusa (>10 al día), dolor abdominal severo tipo cólico y fiebre de 39°C. Hoy se encuentra obnubilado, con PA 80/50 mmHg (choque), FC 130 lpm, y un abdomen intensamente distendido y doloroso a la palpación difusa. Los paraclínicos muestran leucocitosis masiva de 38,000/mm³ y lactato sérico de 6.5 mmol/L. Una radiografía de abdomen evidencia dilatación del colon transverso de 8 cm. Una prueba rápida de toxinas A/B en heces resulta positiva para *Clostridioides difficile*. ¿Cuál es la terapia antibiótica farmacológica MÁS indicada en este momento para la infección?",
     options: [
       {
         id: "A",
@@ -366,7 +366,7 @@ En el contexto de una vasculitis sistémica con hepatitis C y caída del C4, ese
     topic: "Nefrología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "nefrologia", "farmacologia"],
-    statement: "Hombre de 70 años con antecedente de gota crónica recurrente, hipertensión arterial y enfermedad renal crónica estadio 3b secundaria a nefropatía hipertensiva. Hace 2 semanas, su reumatólogo incrementó la dosis de Alopurinol de 100 a 300 mg/día. Consulta hoy a urgencias por astenia marcada, fiebre de 38°C, y un exantema maculopapular generalizado prurítico severo. Al examen físico no hay edema ni compromiso mucoso. Paraclínicos: Creatinina sérica 3.8 mg/dL (basal de 1.5 mg/dL), BUN 85 mg/dL. Hemograma revela Leucocitosis de 14,000/mmÂ³ con una llamativa **Eosinofilia del 12%** (1,680 eosinófilos/uL). El sedimento urinario muestra leucocitos abundantes, cilindros granulosos y la presencia de eosinófilos en orina (Eosinofiluria positiva con tinción de Hansel). ¿Cuál es el diagnóstico fisiopatológico MÁS probable que explica la injuria renal aguda?",
+    statement: "Hombre de 70 años con antecedente de gota crónica recurrente, hipertensión arterial y enfermedad renal crónica estadio 3b secundaria a nefropatía hipertensiva. Hace 2 semanas, su reumatólogo incrementó la dosis de Alopurinol de 100 a 300 mg/día. Consulta hoy a urgencias por astenia marcada, fiebre de 38°C, y un exantema maculopapular generalizado prurítico severo. Al examen físico no hay edema ni compromiso mucoso. Paraclínicos: Creatinina sérica 3.8 mg/dL (basal de 1.5 mg/dL), BUN 85 mg/dL. Hemograma revela Leucocitosis de 14,000/mm³ con una llamativa **Eosinofilia del 12%** (1,680 eosinófilos/uL). El sedimento urinario muestra leucocitos abundantes, cilindros leucocitarios y la presencia de eosinófilos en orina (Eosinofiluria positiva con tinción de Hansel). ¿Cuál es el diagnóstico fisiopatológico MÁS probable que explica la injuria renal aguda?",
     options: [
       {
         id: "A",
@@ -385,7 +385,7 @@ En el contexto de una vasculitis sistémica con hepatitis C y caída del C4, ese
         label: "C",
         text: "Síndrome de DRESS (Reacción a drogas con eosinofilia y síntomas sistémicos) complicado con microangiopatía trombótica.",
         distractorProfile: "severity_overshoot",
-        incorrectFeedback: "Aunque el Alopurinol puede causar DRESS, este cursa con afectación multiorgánica (hepatitis fulminante, neumonitis, miocarditis) y adenopatías difusas, pero no se asocia típicamente con microangiopatía trombótica (esquizocitos/trombocitopenia) pura causante de LRA."
+        incorrectFeedback: "El alopurinol sí puede causar DRESS, y la nefritis intersticial es justamente su forma habitual de daño renal. Lo que hace incorrecta esta opción es la microangiopatía trombótica: el paciente no tiene esquizocitos ni trombocitopenia. Además, no hay datos de compromiso de otros órganos (hepatitis, adenopatías, neumonitis), así que el diagnóstico que explica la lesión renal es la nefritis intersticial aguda."
       },
       {
         id: "D",
@@ -396,7 +396,7 @@ En el contexto de una vasculitis sistémica con hepatitis C y caída del C4, ese
       }
     ],
     correctOptionId: "B",
-    explanation: "El paciente presenta la tríada clásica de la Nefritis Intersticial Aguda (NIA) inducida por fármacos: fiebre, exantema cutáneo (rash) y eosinofilia, asociada a una Lesión Renal Aguda severa. Aunque la tríada completa solo se ve en el 10-15% de los pacientes, el hallazgo de eosinofilia periférica masiva y eosinofiluria en un paciente que recientemente inició/aumentó un fármaco gatillo de alto riesgo (como Alopurinol, AINEs, Omeprazol, Penicilinas o Sulfas) sella el diagnóstico clínico. Fisiopatológicamente, es una reacción de hipersensibilidad retardada tipo IV (mediada por células T) en el intersticio renal. El tratamiento exige la suspensión inmediata del fármaco ofensor y, ante la severidad del daño renal (creatinina de 3.8), el inicio temprano de corticosteroides (Prednisolona) para apagar la inflamación intersticial y prevenir la fibrosis irreversible.",
+    explanation: "El paciente presenta la tríada clásica de la Nefritis Intersticial Aguda (NIA) inducida por fármacos: fiebre, exantema cutáneo (rash) y eosinofilia, asociada a una Lesión Renal Aguda severa. Aunque la tríada completa solo se ve en el 10-15% de los pacientes, el hallazgo de eosinofilia periférica masiva y eosinofiluria en un paciente que recientemente inició/aumentó un fármaco gatillo de alto riesgo (como Alopurinol, AINEs, Omeprazol, Penicilinas o Sulfas) hace muy probable el diagnóstico clínico. Fisiopatológicamente, es una reacción de hipersensibilidad retardada tipo IV (mediada por células T) en el intersticio renal. El tratamiento exige la suspensión inmediata del fármaco ofensor y, ante la severidad del daño renal (creatinina de 3.8), el inicio temprano de corticosteroides (Prednisolona) para apagar la inflamación intersticial y prevenir la fibrosis irreversible.",
     keyPoints: [
       "Paciente con inicio reciente de un medicamento nuevo (Alopurinol, AINEs, IBPs, antibióticos).",
       "Desarrollo de Falla Renal Aguda + Fiebre + Exantema cutáneo.",
@@ -418,14 +418,14 @@ El paciente presenta:
 • Aumento reciente de dosis de Alopurinol (gatillo clásico de NIA).
 • Lesión Renal Aguda severa (Creatinina sube de 1.5 a 3.8 mg/dL).
 • Clínica alérgica sistémica: Fiebre y exantema prurítico.
-• Laboratorio patognomónico: Eosinofilia periférica masiva (12%) y eosinofiluria.
+• Laboratorio muy sugestivo: Eosinofilia periférica masiva (12%) y eosinofiluria.
 
 ¿Por qué la opción B es la respuesta correcta?
 El cuadro es la tríada de oro (fiebre, rash, eosinofilia) de una reacción inmuno-alérgica renal. El Alopurinol es uno de los principales culpables de la Nefritis Intersticial Aguda mediada por linfocitos T. Identificarla es crucial, ya que el tratamiento no es dar líquidos (como en isquemia), sino suspender la droga inmediatamente y administrar esteroides sistémicos para evitar la diálisis.
 
 ¿Por qué fallan las otras opciones?
 • Necrosis Tubular Aguda isquémica (A): La NTA isquémica cursa con cilindros "granulosos oscuros color barro" en la orina, pero NUNCA genera fiebre primaria, rash pruriginoso ni eosinofilia periférica o urinaria.
-• Síndrome de DRESS (C): El alopurinol causa DRESS, pero este síndrome es multisistémico catastrófico (hepatitis severa, adenopatías difusas, neumonitis) y no se limita a un daño renal puro con eosinofilia sin afectar otros órganos. Tampoco causa primariamente microangiopatía trombótica.
+• Síndrome de DRESS (C): El alopurinol puede causar DRESS, y en ese caso el daño renal también es una nefritis intersticial. Pero el DRESS suele comprometer otros órganos (hígado, adenopatías, pulmón), y lo que descarta esta opción es la microangiopatía trombótica: no hay esquizocitos ni trombocitopenia.
 • Nefropatía aguda por cristales de ácido úrico (D): Ocurre en Síndrome de Lisis Tumoral por destrucción masiva de células cancerígenas (Ej. quimioterapia en linfomas), no por alopurinol. De hecho, el alopurinol *previene* esta complicación bloqueando la síntesis de ácido úrico.
 
 ¿Cuál es la trampa del examen?
@@ -444,7 +444,7 @@ La secuencia correcta es:
 Perlas de examen
 ✅ Fármaco nuevo + Falla renal + Rash/Fiebre = Nefritis Intersticial Aguda.
 ✅ Alopurinol, Omeprazol, AINEs y Penicilinas son los gatillos más preguntados.
-✅ Eosinofiluria (Tinción de Hansel) es muy específica, aunque poco sensible.
+✅ La eosinofiluria (tinción de Hansel) apoya el diagnóstico, pero no es sensible ni específica: si es negativa no descarta la NIA.
 ✅ El riñón de la NIA es de tamaño normal o grande por el edema inflamatorio, no está encogido.
 
 Referencias

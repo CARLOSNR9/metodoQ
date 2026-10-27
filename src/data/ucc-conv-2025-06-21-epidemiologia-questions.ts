@@ -424,7 +424,7 @@ Referencias
       {
         id: "A",
         label: "A",
-        text: "Permite controlar factores de confusión mediante la asignación aleatoria de la exposición.",
+        text: "Permite controlar los factores de confusión mediante la asignación aleatoria de la intervención.",
       },
       {
         id: "B",
@@ -432,7 +432,7 @@ Referencias
         text: "Requiere menos participantes que cualquier otro diseño.",
         distractorProfile: "eca_menor_muestra",
         incorrectFeedback:
-          "Los ECA suelen requerir muestras grandes y son costosos; no son necesariamente los más pequeños.",
+          "Es al revés: los ECA suelen necesitar muestras grandes (calculadas para detectar la diferencia esperada), son costosos y largos. Su ventaja no es el tamaño de la muestra.",
       },
       {
         id: "C",
@@ -440,7 +440,7 @@ Referencias
         text: "Garantiza que todos los participantes reciban el tratamiento más efectivo.",
         distractorProfile: "eca_garantiza_mejor_tratamiento",
         incorrectFeedback:
-          "En ECA se compara intervención vs control/placebo; no se garantiza el mejor tratamiento al inicio.",
+          "En un ECA unos participantes reciben la intervención y otros el control o placebo, precisamente porque no se sabe cuál es mejor. Nadie tiene garantizado el tratamiento más efectivo.",
       },
       {
         id: "D",
@@ -448,12 +448,12 @@ Referencias
         text: "Elimina el sesgo de memoria porque siempre es retrospectivo.",
         distractorProfile: "eca_retrospectivo",
         incorrectFeedback:
-          "Los ECA son prospectivos; la aleatorización reduce confusión, no son retrospectivos.",
+          "Los ECA son prospectivos, no retrospectivos: se asigna la intervención y luego se sigue a los participantes. El sesgo de memoria es típico de los estudios de casos y controles.",
       },
     ],
     correctOptionId: "A",
     explanation:
-      "La aleatorización equilibra factores conocidos y desconocidos entre grupos, minimizando confusión y permitiendo inferencia causal más sólida que cohortes observacionales.",
+      "En un estudio de cohorte observacional el investigador no decide quién recibe la intervención: los pacientes que la reciben pueden ser distintos (más jóvenes, menos enfermos, con más acceso a salud), y esas diferencias confunden el resultado. En un ensayo clínico aleatorizado el azar decide quién recibe la intervención y quién el control, así que los grupos quedan parecidos en las variables conocidas y también en las desconocidas. Por eso la diferencia en los resultados se puede atribuir a la intervención: esa es la principal ventaja del ECA.",
     keyPoints: [
       "ECA: aleatorización → control de confusión.",
       "Diseño prospectivo con intervención controlada.",
@@ -1132,7 +1132,7 @@ Referencias
         text: "Vacunación contra hepatitis B en recién nacidos.",
         distractorProfile: "vacunacion_primaria",
         incorrectFeedback:
-          "La vacunación es prevención primaria (evita aparición de enfermedad).",
+          "La vacuna se aplica a una persona sana para que la enfermedad no aparezca: eso es prevención primaria, no secundaria.",
       },
       {
         id: "C",
@@ -1140,7 +1140,7 @@ Referencias
         text: "Rehabilitación cardíaca tras infarto de miocardio.",
         distractorProfile: "rehabilitacion_terciaria",
         incorrectFeedback:
-          "Rehabilitación post-evento es prevención terciaria (limita discapacidad/complicaciones).",
+          "La rehabilitación se hace cuando la enfermedad ya ocurrió (el infarto), para limitar secuelas y discapacidad: eso es prevención terciaria.",
       },
       {
         id: "D",
@@ -1148,12 +1148,12 @@ Referencias
         text: "Educación sobre dieta saludable en escolares sin enfermedad.",
         distractorProfile: "promocion_primaria",
         incorrectFeedback:
-          "Promoción/educación en sanos es prevención primaria.",
+          "Enseñar hábitos saludables a niños sanos busca que la enfermedad no aparezca: es promoción de la salud y prevención primaria, no detección precoz.",
       },
     ],
     correctOptionId: "A",
     explanation:
-      "Prevención secundaria: detección precoz en fase asintomática (tamizaje). Primaria = evitar enfermedad. Terciaria = reducir secuelas de enfermedad establecida.",
+      "La prevención secundaria busca encontrar la enfermedad temprano, cuando ya existe pero todavía no da síntomas, para tratarla antes de que avance. La citología en mujeres asintomáticas hace exactamente eso: detecta lesiones precancerosas o cáncer inicial. La prevención primaria actúa antes de que la enfermedad aparezca (vacunas, educación en sanos) y la terciaria actúa sobre una enfermedad ya establecida para reducir sus secuelas (rehabilitación).",
     keyPoints: [
       "Primaria: evitar enfermedad (vacunas, promoción).",
       "Secundaria: tamizaje/diagnóstico precoz.",
