@@ -12,8 +12,9 @@ import {
  * botón para guardar en Mi Estudio: ahora tienen teoría propia y la tarjeta arma
  * una píldora de respaldo cuando falta.
  *
- * Quedan fuera las preguntas con quejas que este cambio no atiende
- * (06-21-57, 06-21-69, 07-19-18, 07-19-58 y 07-19-95: confusa / error de redacción).
+ * Incluye también las 5 con quejas de "retroalimentación confusa" o "error de
+ * redacción" (06-21-57, 06-21-69, 07-19-18, 07-19-58 y 07-19-95), corregidas
+ * después junto con los caracteres mal codificados de la edición 07-19.
  *
  * Por defecto solo lista lo que cambiaría. Para escribir en Firestore:
  *   npx tsx scripts/mark-ucc-2025-reports-reviewed-2026-10-23.ts --apply
@@ -75,6 +76,8 @@ const FIXED_QUESTION_IDS = new Set([
   "ucc-conv-2025-07-05-88", "ucc-conv-2025-07-05-89", "ucc-conv-2025-07-05-90", "ucc-conv-2025-07-05-92",
   "ucc-conv-2025-07-05-93", "ucc-conv-2025-07-05-94", "ucc-conv-2025-07-05-95", "ucc-conv-2025-07-05-96",
   "ucc-conv-2025-07-05-97", "ucc-conv-2025-07-05-98", "ucc-conv-2025-07-05-99", "ucc-conv-2025-07-05-100",
+  "ucc-conv-2025-06-21-57", "ucc-conv-2025-06-21-69", "ucc-conv-2025-07-19-18", "ucc-conv-2025-07-19-58",
+  "ucc-conv-2025-07-19-95",
 ]);
 
 async function main() {

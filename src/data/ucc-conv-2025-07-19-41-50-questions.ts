@@ -1,7 +1,7 @@
 ﻿import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
- * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #41”“#50.
+ * Convocatoria UCC — Edición #3 (19 jul 2025) · Preguntas #41–#50.
  * Banco exclusivo del examen oficial quincenal Pro.
  */
 export const UCC_CONV_2025_07_19_41_50_QUESTIONS: TrainingQuestion[] = [
@@ -104,7 +104,7 @@ export const UCC_CONV_2025_07_19_41_50_QUESTIONS: TrainingQuestion[] = [
     topic: "Gastroenterología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "gastroenterologia", "cuidado_intensivo"],
-    statement: "Hombre de 45 años, con antecedente de alcoholismo, se encuentra en su tercera semana de hospitalización en la UCI por Pancreatitis Aguda Necrotizante Severa. Venía presentando mejoría clínica y tolerancia a la nutrición enteral, pero en las últimas 72 horas desarrolla fiebre sostenida (39.2°C), taquicardia y leucocitosis progresiva de 22,000/mmÂ³. Una Tomografía Computarizada (TC) de abdomen con contraste revela una colección de necrosis amurallada (Walled-off Necrosis) de 10 cm en el retroperitoneo, con presencia de múltiples burbujas de gas en su interior. El paciente se encuentra hemodinámicamente estable (PA 115/75 mmHg), apoyado con cristaloides y sin requerimiento de vasopresores. ¿Cuál es el abordaje terapéutico de elección en el escenario actual?",
+    statement: "Hombre de 45 años, con antecedente de alcoholismo, se encuentra en su tercera semana de hospitalización en la UCI por Pancreatitis Aguda Necrotizante Severa. Venía presentando mejoría clínica y tolerancia a la nutrición enteral, pero en las últimas 72 horas desarrolla fiebre sostenida (39.2°C), taquicardia y leucocitosis progresiva de 22,000/mm³. Una Tomografía Computarizada (TC) de abdomen con contraste revela una colección de necrosis amurallada (Walled-off Necrosis) de 10 cm en el retroperitoneo, con presencia de múltiples burbujas de gas en su interior. El paciente se encuentra hemodinámicamente estable (PA 115/75 mmHg), apoyado con cristaloides y sin requerimiento de vasopresores. ¿Cuál es el abordaje terapéutico de elección en el escenario actual?",
     options: [
       {
         id: "A",

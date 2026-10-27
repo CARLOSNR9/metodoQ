@@ -1,7 +1,7 @@
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
- * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #11”“#20.
+ * Convocatoria UCC — Edición #3 (19 jul 2025) · Preguntas #11–#20.
  * Banco exclusivo del examen oficial quincenal Pro.
  */
 export const UCC_CONV_2025_07_19_11_20_QUESTIONS: TrainingQuestion[] = [
@@ -12,7 +12,7 @@ export const UCC_CONV_2025_07_19_11_20_QUESTIONS: TrainingQuestion[] = [
     topic: "Reumatología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "reumatologia", "hematologia"],
-    statement: "Mujer de 34 años con diagnóstico previo de Síndrome Antifosfolípido (SAF) primario en manejo crónico con Warfarina. Acude a urgencias por disnea progresiva, oliguria y aparición de múltiples lesiones cutáneas retiformes y necróticas en miembros inferiores. Al examen físico: PA 150/95 mmHg, FC 110 lpm, SatO2 86% al aire ambiente. Paraclínicos: Creatinina 3.5 mg/dL (basal 0.9), Plaquetas 35.000/mmÂ³, Esquizocitos en frotis de sangre periférica (3%). La radiografía de tórax evidencia infiltrados alveolares difusos bilaterales (Síndrome de Dificultad Respiratoria Aguda). El INR de ingreso es de 1.2 (subterapéutico por mala adherencia). ¿Cuál es la estrategia terapéutica combinada de PRIMERA LÍNEA para revertir este cuadro agudo?",
+    statement: "Mujer de 34 años con diagnóstico previo de Síndrome Antifosfolípido (SAF) primario en manejo crónico con Warfarina. Acude a urgencias por disnea progresiva, oliguria y aparición de múltiples lesiones cutáneas retiformes y necróticas en miembros inferiores. Al examen físico: PA 150/95 mmHg, FC 110 lpm, SatO2 86% al aire ambiente. Paraclínicos: Creatinina 3.5 mg/dL (basal 0.9), Plaquetas 35.000/mm³, Esquizocitos en frotis de sangre periférica (3%). La radiografía de tórax evidencia infiltrados alveolares difusos bilaterales (Síndrome de Dificultad Respiratoria Aguda). El INR de ingreso es de 1.2 (subterapéutico por mala adherencia). ¿Cuál es la estrategia terapéutica combinada de PRIMERA LÍNEA para revertir este cuadro agudo?",
     options: [
       {
         id: "A",
@@ -282,7 +282,7 @@ Referencias
     topic: "Infectología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "infectologia", "gastroenterologia"],
-    statement: "Hombre de 35 años consulta por fiebre de 39°C, sudoración nocturna, malestar general y dolor en hipocondrio derecho irradiado al hombro ipsilateral, de 10 días de evolución. Hace un mes retornó de un viaje de campo por la zona rural del Chocó. Al examen físico: ictericia leve, hepatomegalia muy dolorosa a la percusión (signo de Murphy hepático positivo). Los paraclínicos evidencian leucocitosis (14.000/mmÂ³) sin eosinofilia, elevación moderada de transaminasas y fosfatasa alcalina. Una ecografía hepatobiliar revela una lesión quística única, redondeada, de bordes bien definidos, de 6 cm de diámetro en el lóbulo hepático derecho, alejada de la cápsula de Glisson y de la vía biliar principal. Serología IgG para *Entamoeba histolytica* resulta fuertemente positiva. ¿Cuál es el tratamiento de PRIMERA LÍNEA MÁS adecuado?",
+    statement: "Hombre de 35 años consulta por fiebre de 39°C, sudoración nocturna, malestar general y dolor en hipocondrio derecho irradiado al hombro ipsilateral, de 10 días de evolución. Hace un mes retornó de un viaje de campo por la zona rural del Chocó. Al examen físico: ictericia leve, hepatomegalia muy dolorosa a la percusión (signo de Murphy hepático positivo). Los paraclínicos evidencian leucocitosis (14.000/mm³) sin eosinofilia, elevación moderada de transaminasas y fosfatasa alcalina. Una ecografía hepatobiliar revela una lesión quística única, redondeada, de bordes bien definidos, de 6 cm de diámetro en el lóbulo hepático derecho, alejada de la cápsula de Glisson y de la vía biliar principal. Serología IgG para *Entamoeba histolytica* resulta fuertemente positiva. ¿Cuál es el tratamiento de PRIMERA LÍNEA MÁS adecuado?",
     options: [
       {
         id: "A",
@@ -473,7 +473,7 @@ El periodo de 72 horas es crítico. Dar de alta tempranamente con IBP oral a una
         label: "C",
         text: "Proceder con la anestesia general asegurando previamente intubación orotraqueal con un tubo reforzado rígido para evitar el colapso.",
         distractorProfile: "mechanical_illusion_trap",
-        incorrectFeedback: "La intubación orotraqueal no protege contra la compresión del tumor que ocurre a nivel distal de la carina o bronquios principales; si la vía aérea inferior colapsa, la ventilación será imposible."
+        incorrectFeedback: "Aunque el tubo pase la zona estrecha de la tráquea, la masa suele comprimir también la carina y los bronquios principales, a donde el tubo no llega. Además, la anestesia y la relajación muscular pueden colapsar la vía aérea distal y los grandes vasos (vena cava, arteria pulmonar) y causar un paro: la intubación no elimina el riesgo."
       },
       {
         id: "D",
@@ -484,7 +484,7 @@ El periodo de 72 horas es crítico. Dar de alta tempranamente con IBP oral a una
       }
     ],
     correctOptionId: "B",
-    explanation: "El paciente cursa con un Síndrome de Vena Cava Superior y, más críticamente, un Síndrome de Mediastino Medio/Anterior (compresión crítica de la vía aérea). En pacientes pediátricos con grandes masas mediastínicas (frecuentemente Linfoma T o LLA T), la sedación profunda, la anestesia general y el bloqueo neuromuscular son intervenciones de altísimo riesgo de letalidad. Al relajar el tono muscular y la presión negativa torácica de la respiración espontánea, el tumor aplasta por completo la tráquea y los grandes vasos de forma irreversible, produciendo un colapso de la vía aérea inintubable y un paro cardiorrespiratorio inanimable. Las guías oncológicas prohíben la anestesia general en estos casos; si no es posible tomar muestra superficial (ej. ganglio supraclavicular o punción pleural con anestesia local), se DEBE iniciar quimioterapia/esteroides de rescate \"a ciegas\" o radioterapia focalizada, y biopsiar 24-48 horas después cuando la masa haya reducido su tamaño.",
+    explanation: "El paciente cursa con un Síndrome de Vena Cava Superior y, más críticamente, un síndrome de mediastino superior (compresión crítica de la vía aérea por una masa mediastínica anterior). En pacientes pediátricos con grandes masas mediastínicas (frecuentemente Linfoma T o LLA T), la sedación profunda, la anestesia general y el bloqueo neuromuscular son intervenciones de altísimo riesgo de letalidad. Al relajar el tono muscular y la presión negativa torácica de la respiración espontánea, el tumor aplasta por completo la tráquea y los grandes vasos de forma irreversible, produciendo un colapso de la vía aérea imposible de ventilar y un paro cardiorrespiratorio refractario a la reanimación. Las recomendaciones de anestesia y oncología pediátrica contraindican la anestesia general en estos pacientes de alto riesgo; si no es posible tomar muestra superficial (ej. ganglio supraclavicular o punción pleural con anestesia local), se DEBE iniciar quimioterapia/esteroides de rescate \"a ciegas\" o radioterapia focalizada, y biopsiar 24-48 horas después cuando la masa haya reducido su tamaño.",
     keyPoints: [
       "Adolescente con gran masa mediastínica anterior + Síndrome de Vena Cava Superior y Estridor/Ortopnea.",
       "Propuesta de realizar procedimientos bajo anestesia general o intubación.",
@@ -509,7 +509,7 @@ El paciente presenta:
 
 ¿Por qué la opción B es la respuesta correcta?
 
-Ante una masa mediastínica gigante que ya estrecha severamente la tráquea, el simple hecho de aplicar anestesia general, relajar el músculo liso bronquial y perder la presión negativa de la respiración espontánea provoca que el tumor colapse completamente la tráquea y vasos adyacentes. El paciente sufrirá paro inminente, será inintubable y no podrá reanimarse. El manejo empírico de rescate con esteroides (Metilprednisolona) o radioterapia salva la vida al reducir el tumor drásticamente en 12-24h para entonces proceder a la biopsia de manera segura.
+Ante una masa mediastínica gigante que ya estrecha severamente la tráquea, el simple hecho de aplicar anestesia general, relajar los músculos respiratorios y de la pared torácica y perder la presión negativa de la respiración espontánea provoca que el tumor colapse completamente la tráquea y vasos adyacentes. El paciente puede quedar imposible de ventilar y el paro puede ser refractario a la reanimación. El manejo empírico de rescate con esteroides (Metilprednisolona) o radioterapia salva la vida al reducir el tumor drásticamente en 12-24h para entonces proceder a la biopsia de manera segura.
 
 ¿Por qué fallan las otras opciones?
 
@@ -531,13 +531,12 @@ La secuencia correcta es:
 
 Perlas de examen
 ✅ Masa mediastínica grande + ortopnea = Prohibida la anestesia general.
-✅ El músculo liso relajado permite que el peso del tumor aplaste la tráquea.
+✅ La relajación muscular y la ventilación con presión positiva permiten que el tumor aplaste la tráquea y los grandes vasos.
 ✅ En pediatría, Linfoma/Leucemia T mediastinal son altamente respondedores rápidos a esteroides.
 ✅ Ningún tubo orotraqueal vence el peso de un tumor sobre la tráquea distal.
 
 Referencias
 • Nelson Textbook of Pediatrics: Oncologic Emergencies.
-• PALS Guidelines: Management of airway obstruction in mediastinal mass.
 • UpToDate: Clinical presentation and management of anterior mediastinal masses.`
   },
   {

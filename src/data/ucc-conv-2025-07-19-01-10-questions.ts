@@ -1,7 +1,7 @@
 ﻿import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
- * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #01”“#10.
+ * Convocatoria UCC — Edición #3 (19 jul 2025) · Preguntas #01–#10.
  * Banco exclusivo del examen oficial quincenal Pro.
  */
 export const UCC_CONV_2025_07_19_01_10_QUESTIONS: TrainingQuestion[] = [
@@ -147,7 +147,7 @@ export const UCC_CONV_2025_07_19_01_10_QUESTIONS: TrainingQuestion[] = [
     topic: "Gastroenterología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "gastroenterologia", "cirrosis"],
-    statement: "Hombre de 62 años, con cirrosis hepática alcohólica (Child-Pugh C) y ascitis crónica refractaria, ingresa a urgencias por fiebre de 39°C, dolor abdominal generalizado intenso y vómitos biliosos. Al examen físico se documenta un abdomen en tabla, con signo de rebote (Blumberg) francamente positivo. Se realiza una paracentesis diagnóstica urgente que reporta: Líquido de aspecto purulento, Leucocitos 5,500/mmÂ³ con 90% de polimorfonucleares (PMN). Proteínas totales en líquido de 3.8 g/dL, Glucosa en líquido de 25 mg/dL, LDH en líquido de 850 U/L. El Gram preliminar reporta cocos Gram positivos, bacilos Gram negativos y abundantes levaduras. ¿Cuál es el diagnóstico más probable y la conducta a seguir?",
+    statement: "Hombre de 62 años, con cirrosis hepática alcohólica (Child-Pugh C) y ascitis crónica refractaria, ingresa a urgencias por fiebre de 39°C, dolor abdominal generalizado intenso y vómitos biliosos. Al examen físico se documenta un abdomen en tabla, con signo de rebote (Blumberg) francamente positivo. Se realiza una paracentesis diagnóstica urgente que reporta: Líquido de aspecto purulento, Leucocitos 5,500/mm³ con 90% de polimorfonucleares (PMN). Proteínas totales en líquido de 3.8 g/dL, Glucosa en líquido de 25 mg/dL, LDH en líquido de 850 U/L. El Gram preliminar reporta cocos Gram positivos, bacilos Gram negativos y abundantes levaduras. ¿Cuál es el diagnóstico más probable y la conducta a seguir?",
     options: [
       {
         id: "A",
@@ -192,7 +192,7 @@ export const UCC_CONV_2025_07_19_01_10_QUESTIONS: TrainingQuestion[] = [
     topic: "Neumología",
     difficulty: "hard",
     tags: ["ucc", "convocatoria", "2025_07_19", "neumologia", "trombosis", "cancer"],
-    statement: "Hombre de 68 años, con antecedente de Adenocarcinoma Gástrico metastásico actualmente en quimioterapia paliativa. Consulta a urgencias por disnea de inicio súbito, dolor pleurítico derecho y taquicardia. El examen físico revela un miembro inferior izquierdo edematizado y doloroso a la palpación del trayecto venoso profundo. Se realiza una Angio-TC de tórax que confirma un Tromboembolismo Pulmonar (TEP) agudo segmentario y subsegmentario en el lóbulo inferior derecho. Sus signos vitales son estables (PA 130/80 mmHg, FC 98 lpm) y el ecocardiograma no muestra disfunción del ventrículo derecho. Las plaquetas se encuentran en 180,000/mmÂ³ y la depuración de creatinina es de 65 mL/min. ¿Cuál es el tratamiento anticoagulante ambulatorio de PRIMERA LÍNEA MÁS apropiado para este paciente según la evidencia actual?",
+    statement: "Hombre de 68 años, con antecedente de Adenocarcinoma Gástrico metastásico actualmente en quimioterapia paliativa. Consulta a urgencias por disnea de inicio súbito, dolor pleurítico derecho y taquicardia. El examen físico revela un miembro inferior izquierdo edematizado y doloroso a la palpación del trayecto venoso profundo. Se realiza una Angio-TC de tórax que confirma un Tromboembolismo Pulmonar (TEP) agudo segmentario y subsegmentario en el lóbulo inferior derecho. Sus signos vitales son estables (PA 130/80 mmHg, FC 98 lpm) y el ecocardiograma no muestra disfunción del ventrículo derecho. Las plaquetas se encuentran en 180,000/mm³ y la depuración de creatinina es de 65 mL/min. ¿Cuál es el tratamiento anticoagulante ambulatorio de PRIMERA LÍNEA MÁS apropiado para este paciente según la evidencia actual?",
     options: [
       {
         id: "A",

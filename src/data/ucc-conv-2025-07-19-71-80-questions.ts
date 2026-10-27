@@ -1,7 +1,7 @@
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 /**
- * Convocatoria UCC — Edición #3 (19 jul 2025) Â· Preguntas #71”“#80.
+ * Convocatoria UCC — Edición #3 (19 jul 2025) · Preguntas #71–#80.
  * Banco exclusivo del examen oficial quincenal Pro.
  */
 export const UCC_CONV_2025_07_19_71_80_QUESTIONS: TrainingQuestion[] = [
