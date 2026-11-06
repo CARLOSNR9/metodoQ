@@ -14,6 +14,7 @@ import {
   type ActivityStatus,
 } from "@/lib/activity-status";
 import { ActivityBadge } from "@/components/admin/student-activity-view";
+import { Activity, ArrowDown, ArrowUp, ArrowUpDown, Pencil, Trash2 } from "lucide-react";
 import type { AdminUserRow, UserAcquisitionSource } from "@/lib/server/users-admin";
 
 type FilterKey = "all" | UserAcquisitionSource | "paid";
@@ -59,6 +60,91 @@ const SOURCE_STYLES: Record<UserAcquisitionSource, string> = {
   manual: "bg-mq-accent/15 text-mq-accent",
 };
 
+type SortKey =
+  | "createdAt"
+  | "name"
+  | "university"
+  | "status"
+  | "lastActive"
+  | "streak"
+  | "questions"
+  | "source"
+  | "plan"
+  | "role";
+type SortDir = "asc" | "desc";
+
+/** Dirección inicial al hacer clic por primera vez en cada columna. */
+const DEFAULT_SORT_DIR: Record<SortKey, SortDir> = {
+  createdAt: "desc",
+  name: "asc",
+  university: "asc",
+  status: "asc",
+  lastActive: "desc",
+  streak: "desc",
+  questions: "desc",
+  source: "asc",
+  plan: "desc",
+  role: "asc",
+};
+
+const STATUS_ORDER: Record<ActivityStatus, number> = {
+  activo: 0,
+  riesgo: 1,
+  inactivo: 2,
+  sin_datos: 3,
+};
+
+const PLAN_ORDER: Record<string, number> = { FREE: 0, BASICO: 1, PRO: 2, RESIDENTE: 3 };
+
+function getDisplayName(user: AdminUserRow) {
+  return user.displayName !== "—" ? user.displayName : user.email.split("@")[0];
+}
+
+function toTime(iso: string | null) {
+  if (!iso) return null;
+  const t = new Date(iso).getTime();
+  return Number.isNaN(t) ? null : t;
+}
+
+/** Valor comparable de cada fila; null = sin dato (siempre va al final). */
+function getSortValue(user: AdminUserRow, key: SortKey): string | number | null {
+  switch (key) {
+    case "createdAt":
+      return toTime(user.createdAt);
+    case "name":
+      return getDisplayName(user).toLowerCase();
+    case "university":
+      return user.university?.trim() ? user.university.toLowerCase() : null;
+    case "status":
+      return STATUS_ORDER[user.activityStatus];
+    case "lastActive":
+      return toTime(user.lastActiveAt);
+    case "streak":
+      return user.streakCount > 0 ? user.streakCount : null;
+    case "questions":
+      return user.totalQuestionsAnswered > 0 ? user.totalQuestionsAnswered : null;
+    case "source":
+      return SOURCE_LABELS[user.source].toLowerCase();
+    case "plan":
+      return PLAN_ORDER[user.plan] ?? 0;
+    case "role":
+      return getRoleLabel(normalizeUserRole(user.role)).toLowerCase();
+  }
+}
+
+function compareUsers(a: AdminUserRow, b: AdminUserRow, key: SortKey, dir: SortDir) {
+  const av = getSortValue(a, key);
+  const bv = getSortValue(b, key);
+  if (av === null && bv === null) return 0;
+  if (av === null) return 1;
+  if (bv === null) return -1;
+  const cmp =
+    typeof av === "string" && typeof bv === "string"
+      ? av.localeCompare(bv, "es", { sensitivity: "base" })
+      : (av as number) - (bv as number);
+  return dir === "asc" ? cmp : -cmp;
+}
+
 const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL ?? "admin@gmail.com";
 
 function formatDate(iso: string | null) {
@@ -93,7 +179,17 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
   const [editPlan, setEditPlan] = useState<UserPlan>("FREE");
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
-  const [lastActiveSort, setLastActiveSort] = useState<"desc" | "asc">("desc");
+  const [sortKey, setSortKey] = useState<SortKey>("lastActive");
+  const [sortDir, setSortDir] = useState<SortDir>("desc");
+
+  function toggleSort(key: SortKey) {
+    if (key === sortKey) {
+      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    } else {
+      setSortKey(key);
+      setSortDir(DEFAULT_SORT_DIR[key]);
+    }
+  }
 
   const editingUser = users.find((u) => u.uid === editingId);
 
@@ -111,14 +207,14 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
     });
 
     result.sort((a, b) => {
-      const aTime = a.lastActiveAt ? new Date(a.lastActiveAt).getTime() : 0;
-      const bTime = b.lastActiveAt ? new Date(b.lastActiveAt).getTime() : 0;
-      
-      return lastActiveSort === "desc" ? bTime - aTime : aTime - bTime;
+      const primary = compareUsers(a, b, sortKey, sortDir);
+      if (primary !== 0) return primary;
+      // Desempate estable: registro más reciente primero.
+      return (toTime(b.createdAt) ?? 0) - (toTime(a.createdAt) ?? 0);
     });
 
     return result;
-  }, [users, filter, activityFilter, search, lastActiveSort]);
+  }, [users, filter, activityFilter, search, sortKey, sortDir]);
 
   const counts = useMemo(
     () => ({
@@ -263,38 +359,31 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
       </div>
 
       <p className="mt-3 text-xs text-slate-500">
-        {filtered.length} usuario{filtered.length === 1 ? "" : "s"} · Usa Actividad para ver el
-        detalle de estudio de cada alumno
+        {filtered.length} usuario{filtered.length === 1 ? "" : "s"} · Haz clic en el título de
+        una columna para ordenar (otro clic invierte el orden)
       </p>
 
       <div className="mt-4 overflow-x-auto">
-        <table className="w-full min-w-[1180px] text-left text-sm">
+        <table className="w-full text-left text-[13px]">
           <thead>
-            <tr className="border-b border-slate-200 text-xs uppercase tracking-wider text-slate-500">
-              <th className="pb-3 pr-3">Registro</th>
-              <th className="pb-3 pr-3">Usuario</th>
-              <th className="pb-3 pr-3">Universidad</th>
-              <th className="pb-3 pr-3">Estado</th>
-              <th 
-                className="pb-3 pr-3 cursor-pointer select-none whitespace-nowrap hover:text-slate-800 transition-colors"
-                onClick={() => setLastActiveSort((s) => (s === "desc" ? "asc" : "desc"))}
-                title="Ordenar por última actividad"
-              >
-                Última actividad {lastActiveSort === "desc" ? "↓" : "↑"}
-              </th>
-              <th className="pb-3 pr-3">Racha</th>
-              <th className="pb-3 pr-3">Preguntas</th>
-              <th className="pb-3 pr-3">Origen</th>
-              <th className="pb-3 pr-3">Plan</th>
-              <th className="pb-3 pr-3">Rol</th>
-              <th className="pb-3 pr-3">Vigencia</th>
-              <th className="pb-3">Acciones</th>
+            <tr className="border-b border-slate-200 text-[11px] uppercase tracking-wide text-slate-500">
+              <SortableHeader label="Registro" sortKey="createdAt" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Usuario" sortKey="name" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Universidad" sortKey="university" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Estado" sortKey="status" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Últ. actividad" sortKey="lastActive" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Racha" sortKey="streak" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Preguntas" sortKey="questions" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Origen" sortKey="source" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Plan" sortKey="plan" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <SortableHeader label="Rol" sortKey="role" activeKey={sortKey} dir={sortDir} onSort={toggleSort} />
+              <th className="pb-3 text-right font-semibold">Acciones</th>
             </tr>
           </thead>
           <tbody>
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan={12} className="py-8 text-center text-slate-500">
+                <td colSpan={11} className="py-8 text-center text-slate-500">
                   No hay usuarios con este filtro.
                 </td>
               </tr>
@@ -302,33 +391,37 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
               filtered.map((user) => {
                 const isProtectedAdmin = user.email === ADMIN_EMAIL;
                 return (
-                  <tr key={user.uid} className="border-b border-white/5">
-                    <td className="py-3 pr-3 text-xs text-slate-500 whitespace-nowrap">
+                  <tr key={user.uid} className="border-b border-slate-100 align-middle hover:bg-slate-50/60">
+                    <td className="py-2.5 pr-2 text-xs text-slate-500 whitespace-nowrap">
                       {formatDate(user.createdAt)}
                     </td>
-                    <td className="py-3 pr-3">
-                      <p className="font-medium text-slate-900">
-                        {user.displayName !== "—" ? user.displayName : user.email.split("@")[0]}
+                    <td className="max-w-[220px] py-2.5 pr-2">
+                      <p className="truncate font-medium text-slate-900" title={getDisplayName(user)}>
+                        {getDisplayName(user)}
                       </p>
-                      <p className="text-xs text-slate-500">{user.email || "—"}</p>
+                      <p className="truncate text-xs text-slate-500" title={user.email}>
+                        {user.email || "—"}
+                      </p>
                     </td>
-                    <td className="py-3 pr-3 text-slate-500">
-                      {user.university || "—"}
+                    <td className="max-w-[170px] py-2.5 pr-2 text-xs text-slate-500">
+                      <span className="line-clamp-2" title={user.university ?? undefined}>
+                        {user.university || "—"}
+                      </span>
                     </td>
-                    <td className="py-3 pr-3">
+                    <td className="py-2.5 pr-2 whitespace-nowrap">
                       <ActivityBadge status={user.activityStatus} />
                     </td>
-                    <td className="py-3 pr-3 text-xs text-slate-500 whitespace-nowrap">
+                    <td className="py-2.5 pr-2 text-xs text-slate-500 whitespace-nowrap">
                       {formatRelativeLastActive(user.lastActiveAt)}
                     </td>
-                    <td className="py-3 pr-3 text-slate-900 whitespace-nowrap">
+                    <td className="py-2.5 pr-2 text-slate-900 whitespace-nowrap">
                       {user.streakCount > 0 ? (
                         <span>{user.streakCount} d</span>
                       ) : (
                         <span className="text-slate-500">—</span>
                       )}
                     </td>
-                    <td className="py-3 pr-3 text-slate-500 whitespace-nowrap">
+                    <td className="py-2.5 pr-2 text-slate-500 whitespace-nowrap">
                       {user.totalQuestionsAnswered > 0 ? (
                         <span>
                           {user.totalQuestionsAnswered}
@@ -340,50 +433,52 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                         "—"
                       )}
                     </td>
-                    <td className="py-3 pr-3">
+                    <td className="py-2.5 pr-2 whitespace-nowrap">
                       <span
-                        className={`inline-flex rounded-md px-2 py-0.5 text-xs font-medium ${SOURCE_STYLES[user.source]}`}
+                        className={`inline-flex rounded-md px-1.5 py-0.5 text-[11px] font-medium ${SOURCE_STYLES[user.source]}`}
                       >
                         {SOURCE_LABELS[user.source]}
                       </span>
                     </td>
-                    <td className="py-3 pr-3 font-medium text-slate-900 whitespace-nowrap">
-                      {getPlanDisplayName(user.plan)}
-                      {user.mirAccessActive ? (
-                        <span className="ml-1.5 inline-flex rounded-md bg-mq-premium-gold/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-mq-premium-gold">
-                          MIR
-                        </span>
-                      ) : null}
-                    </td>
-                    <td className="py-3 pr-3 text-slate-500 whitespace-nowrap">
-                      {getRoleLabel(normalizeUserRole(user.role))}
-                    </td>
-                    <td className="py-3 pr-3 text-xs text-slate-500 whitespace-nowrap">
-                      {user.plan === "FREE" ? (
-                        "—"
-                      ) : (
-                        <>
+                    <td className="py-2.5 pr-2 whitespace-nowrap">
+                      <p className="font-medium text-slate-900">
+                        {getPlanDisplayName(user.plan)}
+                        {user.mirAccessActive ? (
+                          <span className="ml-1.5 inline-flex rounded-md bg-mq-premium-gold/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-mq-premium-gold">
+                            MIR
+                          </span>
+                        ) : null}
+                      </p>
+                      {user.plan !== "FREE" ? (
+                        <p className="text-[11px] text-slate-500" title="Vigencia del plan">
                           {formatDate(user.planStartedAt)}
                           <span className="text-slate-900/40"> → </span>
                           {formatDate(user.planExpiresAt)}
-                        </>
-                      )}
+                        </p>
+                      ) : null}
                     </td>
-                    <td className="py-3 whitespace-nowrap">
-                      <div className="flex gap-2">
+                    <td className="py-2.5 pr-2 text-xs text-slate-500 whitespace-nowrap">
+                      {getRoleLabel(normalizeUserRole(user.role))}
+                    </td>
+                    <td className="py-2.5 whitespace-nowrap">
+                      <div className="flex justify-end gap-1.5">
                         <Link
                           href={`/admin/usuarios/${user.uid}`}
-                          className="rounded-lg border border-mq-accent/40 px-2.5 py-1 text-xs font-medium text-mq-accent transition hover:bg-mq-accent/10"
+                          title="Ver actividad de estudio"
+                          aria-label="Actividad"
+                          className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-mq-accent/40 text-mq-accent transition hover:bg-mq-accent/10"
                         >
-                          Actividad
+                          <Activity size={14} />
                         </Link>
                         <button
                           type="button"
                           disabled={isPending}
                           onClick={() => openEdit(user)}
-                          className="rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-medium text-slate-900 transition hover:border-mq-accent hover:text-mq-accent disabled:opacity-50"
+                          title="Editar usuario"
+                          aria-label="Editar"
+                          className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:border-mq-accent hover:text-mq-accent disabled:opacity-50"
                         >
-                          Editar
+                          <Pencil size={14} />
                         </button>
                         <button
                           type="button"
@@ -394,9 +489,10 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                               ? "Cuenta admin principal protegida"
                               : "Eliminar usuario"
                           }
-                          className="rounded-lg border border-rose-500/40 px-2.5 py-1 text-xs font-medium text-rose-300 transition hover:bg-rose-500/10 disabled:cursor-not-allowed disabled:opacity-40"
+                          aria-label="Eliminar"
+                          className="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-rose-500/40 text-rose-400 transition hover:bg-rose-500/10 disabled:cursor-not-allowed disabled:opacity-40"
                         >
-                          Eliminar
+                          <Trash2 size={14} />
                         </button>
                       </div>
                     </td>
@@ -543,5 +639,39 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
         </div>
       ) : null}
     </div>
+  );
+}
+
+type SortableHeaderProps = {
+  label: string;
+  sortKey: SortKey;
+  activeKey: SortKey;
+  dir: SortDir;
+  onSort: (key: SortKey) => void;
+};
+
+function SortableHeader({ label, sortKey, activeKey, dir, onSort }: SortableHeaderProps) {
+  const active = sortKey === activeKey;
+  const Icon = !active ? ArrowUpDown : dir === "asc" ? ArrowUp : ArrowDown;
+  return (
+    <th
+      className="pb-3 pr-2 font-semibold whitespace-nowrap"
+      aria-sort={active ? (dir === "asc" ? "ascending" : "descending") : "none"}
+    >
+      <button
+        type="button"
+        onClick={() => onSort(sortKey)}
+        title={`Ordenar por ${label.toLowerCase()}`}
+        className={`group inline-flex items-center gap-1 uppercase tracking-wide transition-colors hover:text-slate-900 ${
+          active ? "text-slate-900" : ""
+        }`}
+      >
+        {label}
+        <Icon
+          size={12}
+          className={active ? "text-mq-accent" : "opacity-40 group-hover:opacity-80"}
+        />
+      </button>
+    </th>
   );
 }
