@@ -13,3 +13,15 @@ python3 -I scripts/ultra-resumenes/generate_general.py items.json src/data/ultra
 reparte Medicina interna por especialidad). Si cambian los conteos, actualiza
 `cardCount` en `src/lib/ultra-resumenes/general.ts` con los de `index.json`.
 Una vez se editen las fichas a mano en los `.ts`, no vuelvas a generarlas.
+
+# Ultra resúmenes MIR
+
+El contenido propio de cada especialidad está en `content/ultra-resumenes/mir/*.md`
+(formato descrito en `build_mir.py`). Tras editar un `.md`:
+
+```bash
+python3 -I scripts/ultra-resumenes/build_mir.py
+```
+
+Regenera `src/data/ultra-resumenes/mir/*.ts` y `src/lib/ultra-resumenes/mir-content.ts`.
+Los tests comprueban que la suma de preguntas de los temas coincide con `total`.

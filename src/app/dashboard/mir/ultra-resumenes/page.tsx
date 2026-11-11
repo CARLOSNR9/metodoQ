@@ -75,7 +75,7 @@ export default function MirUltraResumenesPage() {
           progressField="mirUltraResumenes"
           eyebrow="Ultra resúmenes MIR"
           title="Estudia primero lo que más cae en el MIR"
-          description="Cada especialidad tiene su nivel de rentabilidad calculado con los exámenes oficiales, y dentro de ella los temas van de más a menos preguntados. Lee las fichas, márcalas como dominadas y repásalas en modo tarjetas."
+          description="Cada especialidad tiene su nivel de rentabilidad y, dentro, sus temas ordenados de más a menos preguntados en el MIR, con fichas cortas para reactivar lo que decide preguntas. Al final de cada especialidad, el repaso con los puntos clave de las preguntas oficiales. Márcalas como dominadas y repásalas en modo tarjetas."
           categories={summary.specialties}
           groupOrder={["Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4", "Nivel 5"]}
           groupDescriptions={{
@@ -86,7 +86,7 @@ export default function MirUltraResumenesPage() {
             "Nivel 5": `${ULTRA_LEVEL_LABELS[5]}: menos de 3 preguntas por convocatoria.`,
           }}
           hero={<MirExamSplit summary={summary} />}
-          footnote="Fuente: exámenes MIR oficiales del Ministerio de Sanidad incluidos en el banco de Método Q (sin preguntas anuladas). Puntos clave de redacción propia de Método Q."
+          footnote="Rentabilidad por especialidad calculada con los exámenes MIR oficiales del banco de Método Q (sin anuladas); rentabilidad por tema según su frecuencia en el MIR 2016-2026. Fichas y puntos clave de redacción propia de Método Q. Verifica dosis y pautas con la guía vigente."
         />
       )}
     </MirAccessGate>

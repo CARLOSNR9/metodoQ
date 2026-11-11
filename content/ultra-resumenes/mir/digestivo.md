@@ -216,7 +216,7 @@ period: 2016-2026
 - CPRE solo si hay colangitis u obstrucción biliar; si es biliar y leve, colecistectomía en el mismo ingreso.
 - Necrosis infectada: antibiótico y abordaje escalonado (drenaje endoscópico o percutáneo antes que cirugía).
 
-# Tumores gástricos y otras enfermedades del esófago | 3 | 8
+# Tumores gástricos, esófago y trastornos motores | 3 | 12
 ## Cáncer gástrico y GIST
 - Tipo intestinal (H. pylori, gastritis atrófica) frente a difuso (jóvenes, peor pronóstico, linitis plástica).
 - Signos de diseminación: ganglio de Virchow, nódulo umbilical, tumor de Krukenberg.
@@ -253,7 +253,7 @@ period: 2016-2026
 - Contraindicaciones: consumo activo de alcohol (se exige abstinencia), colangiocarcinoma, cáncer extrahepático.
 - Trombosis de la arteria hepática: la complicación vascular más grave (la vía biliar depende de la arteria) → retrasplante.
 
-# Hígado graso, hemorragia digestiva, apendicitis y otros | 4 | 20
+# Hígado graso, hemorragia digestiva, apendicitis y otros | 4 | 35
 ## Enfermedad hepática metabólica (MASLD)
 - Esteatosis + al menos un factor cardiometabólico (obesidad, diabetes, dislipemia, HTA).
 - Solo la biopsia distingue la esteatohepatitis. Perder >10 % del peso puede revertir la fibrosis.
@@ -274,6 +274,13 @@ period: 2016-2026
 - Amoxicilina-clavulánico: primera causa de hepatotoxicidad por fármacos (colestásica).
 - Gastritis autoinmune: cuerpo gástrico, anticuerpos antifactor intrínseco, déficit de B12; riesgo de carcinoide y adenocarcinoma.
 - Gastroparesia diabética: gammagrafía de vaciamiento; metoclopramida.
-- Hepatitis autoinmune: mujer, IgG alta, ANA/antimúsculo liso; prednisona ± azatioprina.
-- Fallo hepático agudo: INR ≥1,5 + encefalopatía; N-acetilcisteína a todos.
 - Hepatitis alcohólica grave (Maddrey ≥32): corticoides tras descartar infección.
+
+# Temas marginales: hígado, esófago y cirugía | 5 | 7
+## Una línea por tema
+- Hepatitis autoinmune: mujer, IgG alta, ANA/antimúsculo liso (tipo 1) o anti-LKM (tipo 2, niños); biopsia; prednisona ± azatioprina.
+- Fallo hepático agudo: INR ≥1,5 + encefalopatía sin hepatopatía previa; N-acetilcisteína a todos; valorar trasplante urgente.
+- La vía biliar solo recibe sangre arterial; la zona centrolobulillar del acino es la más sensible a la isquemia y los tóxicos.
+- El esófago no tiene serosa (las suturas y perforaciones son más delicadas).
+- Síndrome compartimental abdominal: presión intraabdominal >20 mmHg con fallo orgánico → laparotomía descompresiva.
+- Laparoscopia: contraindicación absoluta, la inestabilidad hemodinámica.

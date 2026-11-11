@@ -522,10 +522,10 @@ export const ENTRIES: UltraEntry[] = [
   },
   {
     "kind": "heading",
-    "id": "mirc-digestivo-t-tumores-gastricos-y-otras-enfermedades-del-esofago",
-    "title": "Tumores gástricos y otras enfermedades del esófago",
+    "id": "mirc-digestivo-t-tumores-gastricos-esofago-y-trastornos-motores",
+    "title": "Tumores gástricos, esófago y trastornos motores",
     "level": 3,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "12 preguntas MIR 2016-2026"
   },
   {
     "kind": "card",
@@ -619,7 +619,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-higado-graso-hemorragia-digestiva-apendicitis-y-otros",
     "title": "Hígado graso, hemorragia digestiva, apendicitis y otros",
     "level": 4,
-    "meta": "20 preguntas MIR 2016-2026"
+    "meta": "35 preguntas MIR 2016-2026"
   },
   {
     "kind": "card",
@@ -669,9 +669,27 @@ export const ENTRIES: UltraEntry[] = [
       "Amoxicilina-clavulánico: primera causa de hepatotoxicidad por fármacos (colestásica).",
       "Gastritis autoinmune: cuerpo gástrico, anticuerpos antifactor intrínseco, déficit de B12; riesgo de carcinoide y adenocarcinoma.",
       "Gastroparesia diabética: gammagrafía de vaciamiento; metoclopramida.",
-      "Hepatitis autoinmune: mujer, IgG alta, ANA/antimúsculo liso; prednisona ± azatioprina.",
-      "Fallo hepático agudo: INR ≥1,5 + encefalopatía; N-acetilcisteína a todos.",
       "Hepatitis alcohólica grave (Maddrey ≥32): corticoides tras descartar infección."
+    ]
+  },
+  {
+    "kind": "heading",
+    "id": "mirc-digestivo-t-temas-marginales-higado-esofago-y-cirugia",
+    "title": "Temas marginales: hígado, esófago y cirugía",
+    "level": 5,
+    "meta": "7 preguntas MIR 2016-2026"
+  },
+  {
+    "kind": "card",
+    "id": "mirc-digestivo-una-linea-por-tema",
+    "title": "Una línea por tema",
+    "points": [
+      "Hepatitis autoinmune: mujer, IgG alta, ANA/antimúsculo liso (tipo 1) o anti-LKM (tipo 2, niños); biopsia; prednisona ± azatioprina.",
+      "Fallo hepático agudo: INR ≥1,5 + encefalopatía sin hepatopatía previa; N-acetilcisteína a todos; valorar trasplante urgente.",
+      "La vía biliar solo recibe sangre arterial; la zona centrolobulillar del acino es la más sensible a la isquemia y los tóxicos.",
+      "El esófago no tiene serosa (las suturas y perforaciones son más delicadas).",
+      "Síndrome compartimental abdominal: presión intraabdominal >20 mmHg con fallo orgánico → laparotomía descompresiva.",
+      "Laparoscopia: contraindicación absoluta, la inestabilidad hemodinámica."
     ]
   }
 ];
