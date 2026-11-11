@@ -1,176 +1,204 @@
 import type { UltraEntry } from "@/lib/ultra-resumenes/types";
 
-/** Ultra resumen general · Ciencias básicas. Generado desde el documento de fichas de Método Q. */
+/** Ultra resumen general · ciencias-basicas. Generado desde content/ultra-resumenes/general/ciencias-basicas.md; no editar a mano. */
 export const ENTRIES: UltraEntry[] = [
   {
     "kind": "card",
     "id": "g-1000",
-    "title": "Sistema inmunológico se divide en inmunidad innata",
+    "title": "Inmunidad innata, adaptativa e hipersensibilidad",
     "points": [
-      "Que es inmediata, inespecífica y sin memoria (barreras, neutrófilos, macrófagos, complemento), e inmunidad adaptativa, que es específica, más lenta y con memoria, mediada por linfocitos B (respuesta humoral con anticuerpos) y linfocitos T (respuesta celular)",
-      "Cuando la inmunidad adaptativa se desregula y produce daño, se generan las reacciones de hipersensibilidad: tipo I (inmediata, mediada por IgE), tipo II (citotóxica por IgG/IgM contra células), tipo III (por depósito de inmunocomplejos) y tipo IV (retardada, mediada por linfocitos T)."
+      "Innata: la primera defensa; rápida, igual para todo y sin memoria (piel y mucosas, neutrófilos, macrófagos, complemento).",
+      "Adaptativa: más lenta, específica para cada germen y con memoria. Linfocitos B (fabrican anticuerpos) y linfocitos T (inmunidad celular).",
+      "Hipersensibilidad = la inmunidad causa daño:",
+      "Tipo I (IgE, inmediata): alergia, anafilaxia, asma alérgica.",
+      "Tipo II (anticuerpos contra células): anemia hemolítica autoinmune, reacción transfusional.",
+      "Tipo III (depósito de inmunocomplejos): lupus, glomerulonefritis postestreptocócica, enfermedad del suero.",
+      "Tipo IV (linfocitos T, retardada): dermatitis de contacto, prueba de tuberculina."
     ]
   },
   {
     "kind": "card",
     "id": "g-1001",
-    "title": "Arcos faríngeos son I",
+    "title": "Arcos faríngeos",
     "points": [
-      "II, III, IV y VI (el V desaparece), y cada uno tiene cartílago, músculo y nervio propio: I (V trigémino) → mandíbula, maxilar, martillo y yunque; músculos de la masticación",
-      "II (VII facial) → estribo, estiloides, parte superior del hioides; músculos de la expresión facial",
-      "III (IX glosofaríngeo) → parte inferior del hioides; estilofaríngeo",
-      "IV (X laríngeo superior) → constrictores faríngeos y cricotiroideo; cartílagos laríngeos",
-      "VI (X laríngeo recurrente) → músculos intrínsecos de la laringe (excepto cricotiroideo)"
+      "Son 5 que importan (I, II, III, IV y VI; el V desaparece). Cada uno da hueso/cartílago, músculos y un nervio.",
+      "I (trigémino, V): mandíbula, martillo y yunque; músculos de la masticación.",
+      "II (facial, VII): estribo, apófisis estiloides; músculos de la expresión facial.",
+      "III (glosofaríngeo, IX): parte del hioides; músculo estilofaríngeo.",
+      "IV (vago, laríngeo superior): constrictores de la faringe y músculo cricotiroideo.",
+      "VI (vago, laríngeo recurrente): resto de músculos de la laringe.",
+      "Truco: mastica (I), sonríe (II), traga (III-IV), habla (VI)."
     ]
   },
   {
     "kind": "card",
     "id": "g-1002",
-    "title": "La circulación cardíaca",
+    "title": "Recorrido de la sangre en el corazón",
     "points": [
-      "Sangre desoxigenada por venas cavas (superior e inferior) y seno coronario al atrio derecho, pasa al ventrículo derecho, sale por la arteria pulmonar a los pulmones, regresa sangre oxigenada por las venas pulmonares superiores e inferiores (derechas e izquierdas) al atrio izquierdo, pasa al ventrículo izquierdo y sale por la aorta a todo el cuerpo."
+      "Sangre sin oxígeno: venas cavas y seno coronario → aurícula derecha → ventrículo derecho → arteria pulmonar → pulmones.",
+      "Sangre oxigenada: venas pulmonares → aurícula izquierda → ventrículo izquierdo → aorta → todo el cuerpo.",
+      "Ojo: la arteria pulmonar lleva sangre sin oxígeno y las venas pulmonares sangre oxigenada."
     ]
   },
   {
     "kind": "card",
     "id": "g-1003",
-    "title": "Inervación del miembro inferior proviene del plexo lumbosacro (l1–s4)",
+    "title": "Nervios del miembro inferior",
     "points": [
-      "El plexo lumbar (L1–L4) da el femoral (cara anterior del muslo) y el obturador (compartimento medial); el plexo sacro (L4–S4) forma el ciático, que se divide en tibial (posterior de pierna y planta) y peroneo común, el cual se bifurca en superficial (lateral) y profundo (anterior de pierna)."
+      "Vienen del plexo lumbosacro (L1-S4).",
+      "Femoral (plexo lumbar): músculos de la cara anterior del muslo (extiende la rodilla).",
+      "Obturador: músculos aductores (cara interna del muslo).",
+      "Ciático (plexo sacro): se divide en tibial (parte posterior de la pierna y planta; flexión plantar) y peroneo común.",
+      "Peroneo común: superficial (cara lateral, eversión) y profundo (cara anterior, dorsiflexión). Su lesión da pie caído."
     ]
   },
   {
     "kind": "card",
     "id": "g-1004",
-    "title": "Inervación del miembro superior proviene del plexo braquial (c5–t1)",
+    "title": "Nervios del miembro superior",
     "points": [
-      "Que origina los nervios principales: axilar (deltoides y hombro), musculocutáneo (compartimento anterior del brazo), radial (compartimento posterior de brazo y antebrazo, extensión), mediano (mayoría de flexores del antebrazo y eminencia tenar) y cubital/ulnar (músculos intrínsecos de la mano y parte de flexores mediales)."
+      "Vienen del plexo braquial (C5-T1).",
+      "Axilar: deltoides (separar el brazo). Se lesiona en la luxación de hombro.",
+      "Musculocutáneo: flexores del brazo (bíceps).",
+      "Radial: extensores del brazo, antebrazo y muñeca. Su lesión da mano caída.",
+      "Mediano: la mayoría de flexores del antebrazo y la eminencia tenar (pulgar). Se comprime en el túnel del carpo.",
+      "Cubital: músculos pequeños de la mano. Su lesión da mano en garra."
     ]
   },
   {
     "kind": "card",
     "id": "g-1005",
-    "title": "Irrigacion miembro superior tiene un sistema arterial que…",
+    "title": "Arterias y venas del miembro superior",
     "points": [
-      "IRRIGACION MIEMBRO SUPERIOR tiene un sistema ARTERIAL que sigue la secuencia subclavia → axilar → braquial → radial y cubital (ulnar), formando los arcos palmares en la mano; y un sistema VENOSO dividido en superficial (cefálica lateral, basílica medial y mediana cubital) y profundo (venas radiales y cubitales → braquiales → axilar → subclavia), comunicados entre sí cuando la basílica se une a las braquiales para formar la axilar y cuando la cefálica desemboca en la axilar."
+      "Arterias: subclavia → axilar → braquial → radial y cubital → arcos palmares de la mano.",
+      "Venas superficiales: cefálica (lado externo), basílica (lado interno) y mediana del codo (la que se usa para sacar sangre).",
+      "Venas profundas: acompañan a las arterias (radiales, cubitales → braquiales → axilar → subclavia)."
     ]
   },
   {
     "kind": "card",
     "id": "g-1006",
-    "title": "Irrigacion miembro inferior",
+    "title": "Arterias y venas del miembro inferior",
     "points": [
-      "ARTERIAL que continúa como ilíaca externa → femoral → poplítea → tibial anterior y tibial posterior (esta última da la peronea/fibular), terminando en las arterias dorsales y plantares del pie; y un sistema venoso dividido en superficial (safena magna medial y safena menor posterior) y profundo (venas tibiales → poplítea → femoral → ilíaca externa), comunicados por venas perforantes, drenando finalmente a la vena cava inferior."
+      "Arterias: ilíaca externa → femoral → poplítea → tibial anterior y tibial posterior (que da la peronea) → arterias del pie (pedia y plantares).",
+      "Venas superficiales: safena mayor (interna) y safena menor (posterior). Venas profundas: tibiales → poplítea → femoral → ilíaca.",
+      "Las venas perforantes comunican el sistema superficial con el profundo; si fallan, aparecen várices."
     ]
   },
   {
     "kind": "card",
     "id": "g-1007",
-    "title": "Ritmo sinusal (miocito auricular/ventricular)",
+    "title": "Potencial de acción del músculo cardiaco",
     "points": [
-      "5 fases — 0 despolarización rápida por entrada de Na⁺, 1 repolarización inicial (K⁺), 2 meseta por entrada de Ca²⁺ equilibrada con K⁺, 3 repolarización (K⁺), 4 reposo estable (−90 mV)."
+      "Fase 0: entra sodio y la célula se despolariza rápido.",
+      "Fase 1: empieza la repolarización (sale potasio).",
+      "Fase 2: meseta, porque entra calcio mientras sale potasio. Esto alarga la contracción.",
+      "Fase 3: repolarización (sale potasio).",
+      "Fase 4: reposo estable (−90 mV)."
     ]
   },
   {
     "kind": "card",
     "id": "g-1008",
-    "title": "Células marcapasos (nodo sa/av)",
+    "title": "Potencial de acción de las células marcapasos (nodo sinusal y AV)",
     "points": [
-      "Solo 3 fases — 4 despolarización espontánea lenta de na+ (corriente If), 0 despolarización por Ca²⁺, 3 repolarización por K⁺; no tienen fases 1 ni 2 y no hay reposo estable."
+      "Solo 3 fases: 4, 0 y 3. No tienen meseta ni reposo estable.",
+      "Fase 4: se despolarizan solas, poco a poco (corriente If, de sodio). Por eso marcan el ritmo.",
+      "Fase 0: despolarización por entrada de calcio (no de sodio).",
+      "Fase 3: repolarización por salida de potasio.",
+      "La ivabradina bloquea la corriente If y baja la frecuencia cardiaca."
     ]
   },
   {
     "kind": "card",
     "id": "g-1009",
-    "title": "EKG, caras del corazón",
+    "title": "ECG: qué cara del corazón ve cada derivación",
     "points": [
-      "1. cara inferior : DII, DIII y aVF (usualmente coronaria derecha)",
-      "2. lateral alta : DI y aVL",
-      "3. lateral baja V5–V6 (circunfleja)",
-      "3. cara septal: V1–V2 y cara anterior a V3–V4 (descendente anterior)",
-      "4. cara posterior no se ve directamente, sino por cambios recíprocos en V1–V3 (↓ ST, ondas R altas) o en V7–V9."
+      "Inferior: DII, DIII y aVF → suele ser la coronaria derecha.",
+      "Lateral alta: DI y aVL. Lateral baja: V5-V6 → circunfleja.",
+      "Septal: V1-V2. Anterior: V3-V4 → descendente anterior.",
+      "Posterior: no se ve directo; se sospecha por descenso del ST y R altas en V1-V3, o se confirma con V7-V9.",
+      "En todo infarto inferior hay que mirar el ventrículo derecho (V3R-V4R)."
     ]
   },
   {
     "kind": "card",
     "id": "g-1010",
-    "title": "La irrigación cerebral , dos sistemas",
+    "title": "Irrigación del cerebro",
     "points": [
-      "El carotídeo interno y el vertebrobasilar",
-      "1. carótidas internas: dan -arteria cerebral anterior (ACA) ( irriga la cara medial de los hemisferios (predominio de miembros inferiores))",
-      "Arteria cerebral media (ACM) que irriga la cara lateral de hemisferios (cara y miembros superiores, lenguaje en hemisferio dominante). arteria oftálmica (ojo y órbita), coroidea anterior (tracto óptico, cápsula interna, plexo coroideo) y la comunicante posterior (parte del polígono de Willis)",
-      "2. Vertebrobasilar:",
-      "Vertebrales dan la PICA (cerebelo posteroinferior y bulbo lateral) y la basilar emite la AICA (cerebelo anteroinferior y puente), la SCA (cerebelo superior y mesencéfalo) y finalmente se divide en las arterias cerebrales posteriores (ACP), (occipital y temporal inferior, visión) y conectándose con el sistema carotídeo a través del polígono de Willis."
+      "Dos sistemas unidos por el polígono de Willis: carotídeo (adelante) y vertebrobasilar (atrás).",
+      "Cerebral anterior: cara interna del hemisferio → sobre todo la pierna.",
+      "Cerebral media: cara lateral → cara y brazo, y el lenguaje en el hemisferio dominante. Es la más afectada en los ictus.",
+      "Cerebral posterior: lóbulo occipital → visión.",
+      "Vertebrales y basilar: tronco del encéfalo y cerebelo (PICA, AICA y cerebelosa superior). La PICA irriga el bulbo lateral: su oclusión da el síndrome de Wallenberg."
     ]
   },
   {
     "kind": "card",
     "id": "g-1011",
-    "title": "Núcleos talámicos",
+    "title": "Núcleos del tálamo",
     "points": [
-      "1. NÚCLEO VENTRAL POSTEROLATERAL: sensibilidad del cuerpo (dolor, temperatura, tacto y propiocepción)",
-      "2.NÚCLEO VENTRAL POSTEROMEDIAl: sensibilidad de la cara y el gusto",
-      "3. NÚCLEOS VENTRAL ANTERIOR Y VENTRAL LATERAL: control motor.",
-      "4.NÚCLEO DORSOMEDIAL, conducta y emoción",
-      "5.NÚCLEOS ANTERIORES: memoria y el sistema límbico",
-      "6. CUERPOS GENICULADOS LATERAL Y MEDIAL, responsables de la visión y la audición, respectivamente."
+      "El tálamo es la estación de relevo: casi toda la información que llega a la corteza pasa por él.",
+      "Ventral posterolateral: sensibilidad del cuerpo. Ventral posteromedial: sensibilidad de la cara y el gusto.",
+      "Ventral anterior y lateral: movimiento.",
+      "Dorsomedial: conducta y emociones. Anteriores: memoria (sistema límbico).",
+      "Geniculado lateral: visión. Geniculado medial: audición (truco: Lateral = Luz, Medial = Música)."
     ]
   },
   {
     "kind": "card",
     "id": "g-1012",
-    "title": "Mesencéfalo",
+    "title": "Pares craneales en el tronco del encéfalo",
     "points": [
-      "Iii y iv ; puente: v , vi , vii , viii ; bulbo: ix , x ,xi , xii . irrigación: ACS y ACP: mesencéfalo caudal -la AICA : puente lateral",
-      "PICA : bulbo lateral",
-      "Compromiso de la pica causa síndrome de wallenber"
+      "Mesencéfalo: III y IV.",
+      "Protuberancia (puente): V, VI, VII y VIII.",
+      "Bulbo: IX, X, XI y XII.",
+      "Truco: 2-4-4 (dos en el mesencéfalo, cuatro en el puente, cuatro en el bulbo).",
+      "Irrigación lateral: bulbo por la PICA (Wallenberg), puente por la AICA, mesencéfalo por la cerebelosa superior y la cerebral posterior."
     ]
   },
   {
     "kind": "card",
     "id": "g-1013",
-    "title": "Índice de barthel",
+    "title": "Índice de Barthel",
     "points": [
-      "Mide la capacidad funcional : dependencia total (<20), severa (20–40), moderada (40–60), leve (60–95) e independiente (100)."
+      "Mide qué tan independiente es una persona para las actividades básicas (comer, vestirse, bañarse, ir al baño, caminar).",
+      "100: independiente. 60-95: dependencia leve. 40-55: moderada. 20-35: severa. <20: total."
     ]
   },
   {
     "kind": "card",
     "id": "g-1014",
-    "title": "Dosis de anticoagulantes",
+    "title": "Dosis habituales de anticoagulantes (adultos)",
     "points": [
-      "Adultos típicos: enoxaparina 1 mg/kg SC c/12 h o 1.5 mg/kg/día (profilaxis: 40 mg/día); heparina no fraccionada bolo 80 U/kg IV + infusión 18 U/kg/h ajustada por TPT (profilaxis: 5000 U SC c/8–12 h); rivaroxabán 15 mg c/12 h por 21 días y luego 20 mg/día; apixabán 10 mg c/12 h por 7 días y luego 5 mg c/12 h (FA: 5 mg c/12 h, reducir a 2.5 mg si criterios 2 de 3, >80 años, <60 kg,crea >1.5 ); dabigatrán 150 mg c/12 h (tras 5–10 días de heparina en TEV); y warfarina iniciar 5 mg/día y ajustar a INR 2–3."
+      "Enoxaparina: tratamiento 1 mg/kg cada 12 h (o 1,5 mg/kg/día); profilaxis 40 mg/día.",
+      "Heparina no fraccionada: bolo 80 U/kg y luego 18 U/kg/h, ajustada por TPT; profilaxis 5.000 U subcutáneas cada 8-12 h.",
+      "Rivaroxabán (trombosis): 15 mg cada 12 h por 21 días y luego 20 mg/día.",
+      "Apixabán (trombosis): 10 mg cada 12 h por 7 días y luego 5 mg cada 12 h. En FA: 5 mg cada 12 h; 2,5 mg si cumple 2 de 3: ≥80 años, ≤60 kg, creatinina ≥1,5.",
+      "Dabigatrán: 150 mg cada 12 h (en trombosis, tras 5-10 días de heparina).",
+      "Warfarina: empezar 5 mg/día y ajustar a INR 2-3."
     ]
   },
   {
     "kind": "card",
     "id": "g-1015",
-    "title": "La despolarización muscular inicia cuando la acetilcolina se…",
+    "title": "Contracción muscular e inflamación",
     "points": [
-      "La DESPOLARIZACIÓN MUSCULAR inicia cuando la acetilcolina se une a receptores nicotínicos en la placa motora, entra Na⁺ y se genera un potencial que se propaga por el sarcolema y túbulos T, activando la liberación de Ca²⁺ del retículo sarcoplásmico; este calcio se une a la troponina C, desplazando la tropomiosina y permitiendo la interacción entre actina y miosina para producir la contracción",
-      "INFLAMACIÓN AGUDA:",
-      "1. Reconocimiento: Macrófagos y mastocitos detectan el daño o patógeno mediante receptores (TLR), liberando mediadores como histamina y citocinas (TNF, IL-1).",
-      "2. Vasodilatación: Las arteriolas se dilatan, aumentando el flujo sanguíneo (causando rubor y calor) y elevando la presión hidrostática capilar.",
-      "3. Aumento de la permeabilidad: Las células endoteliales se contraen, permitiendo la salida de proteínas y líquido al espacio intersticial para formar el exudado (causando edema/tumor).",
-      "4. Reclutamiento leucocitario: La sangre se vuelve viscosa (estasis), lo que permite que los neutrófilos realicen marginación, rodamiento, adhesión firme y transmigración (diapédesis) hacia el tejido.",
-      "5. Quimiotaxis: Los leucocitos migran hacia el sitio de la lesión siguiendo un gradiente químico.",
-      "6. Fagocitosis: Los neutrófilos y macrófagos ingieren y destruyen el agente causal mediante estallido respiratorio (especies reactivas de oxígeno) y enzimas.",
-      "7. Resolución: Se detiene el reclutamiento, se eliminan los restos celulares y se inicia la reparación o cicatrización mediante factores de crecimiento. INFLAMACIÓN CRÓNICA:",
-      "1. Infiltrado mononuclear: Los macrófagos activados persisten en el tejido, liberando citocinas que perpetúan el ciclo inflamatorio.",
-      "2. Daño tisular: La liberación sostenida de especies reactivas de oxígeno y enzimas proteolíticas lesiona el parénquima sano.",
-      "3. Angiogénesis: Se induce la formación de nuevos vasos sanguíneos (neovascularización) mediada por factores de crecimiento como el VEGF para sustentar el metabolismo del área afectada.",
-      "4. Fibrosis: Los fibroblastos depositan colágeno en exceso para reemplazar las células dañadas, resultando en la cicatrización y posible pérdida de función del órgano. En ciertos casos, este proceso culmina en la formación de granulomas para aislar agentes difíciles de erradicar"
+      "Contracción: la acetilcolina se une a su receptor en la placa motora → entra sodio → el estímulo baja por los túbulos T → sale calcio del retículo → el calcio se une a la troponina C → la actina y la miosina se enganchan y el músculo se contrae.",
+      "Inflamación aguda (minutos a días): se dilatan los vasos (rubor y calor), salen líquido y proteínas (edema), llegan neutrófilos (marginación, adhesión y paso a los tejidos), se comen al germen (fagocitosis) y luego se repara.",
+      "Inflamación crónica (semanas a meses): predominan macrófagos y linfocitos, hay daño del tejido, nuevos vasos y fibrosis (cicatriz). A veces forma granulomas para aislar gérmenes difíciles (como la tuberculosis)."
     ]
   },
   {
     "kind": "card",
     "id": "g-1016",
-    "title": "El Gasto Cardiaco (GC) es el volumen de…",
+    "title": "Gasto cardiaco y presiones normales",
     "points": [
-      "El Gasto Cardiaco (GC) es el volumen de sangre expulsado por minuto (GC = VS / FC) . Durante la DIÁSTOLE, el retorno venoso determina la precarga o Volumen Telediastólico (approx 120 ml). en SÍSTOLE, el ventrículo realiza una contracción isovolumétrica hasta vencer la poscarga (resistencia vascular periférica), logrando la eyección del Volumen Sistólico (approx 70 ml); la fuerza está regulada por el inotropismo (contractilidad)",
-      "Finalmente, el remanente de sangre tras la sístole es el Volumen Telesistólico (approx 50 ml), cumpliéndose que el VS = VTD",
-      "VTS, donde cualquier incremento en la precarga o el inotropismo, o una disminución de la poscarga, optimizará el volumen eyectado y, por ende, el gasto cardiaco.; presión venosa central: 2–8 mmHg; presión capilar pulmonar: 6–12 mmHg; presión arterial media: 70–100 mmHg",
-      "Gasto cardíaco: 4–8 L/min; índice cardíaco: 2.5–4 L/min/m²"
+      "Gasto cardiaco = volumen sistólico × frecuencia cardiaca. Normal 4-8 l/min (índice cardiaco 2,5-4 l/min/m²).",
+      "Volumen sistólico = volumen al final de la diástole (≈120 ml) − volumen al final de la sístole (≈50 ml) ≈ 70 ml.",
+      "Precarga: cuánto se llena el ventrículo. Poscarga: la resistencia que debe vencer. Inotropismo: la fuerza de contracción.",
+      "El gasto sube si aumenta la precarga o la contractilidad, o si baja la poscarga.",
+      "Normales: presión venosa central 2-8 mmHg; presión capilar pulmonar 6-12 mmHg; presión arterial media 70-100 mmHg."
     ]
   }
 ];

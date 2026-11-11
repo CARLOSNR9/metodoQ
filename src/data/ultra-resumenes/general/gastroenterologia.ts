@@ -1,23 +1,26 @@
 import type { UltraEntry } from "@/lib/ultra-resumenes/types";
 
-/** Ultra resumen general · Gastroenterología y hepatología. Generado desde el documento de fichas de Método Q. */
+/** Ultra resumen general · gastroenterologia. Generado desde content/ultra-resumenes/general/gastroenterologia.md; no editar a mano. */
 export const ENTRIES: UltraEntry[] = [
   {
     "kind": "card",
     "id": "g-748",
-    "title": "Hepatitis autoinmune en pacientes que presentan enzimas hepáticas…",
+    "title": "Hepatitis autoinmune",
     "points": [
-      "Hepatitis autoinmune en pacientes que presentan enzimas hepáticas elevadas y anticuerpos contra la hepatitis viral negativos",
-      "El estándar de oro para diagnosticar la hepatitis autoinmune es la biopsia hepática",
-      "Se han identificado muchos autoanticuerpos, pero ninguno es específico para la hepatitis autoinmune."
+      "Sospecharla: transaminasas altas con hepatitis virales negativas, sobre todo en mujeres.",
+      "Anticuerpos que ayudan (ANA, antimúsculo liso, anti-LKM) y IgG alta, pero ninguno es específico.",
+      "El diagnóstico de certeza es la biopsia hepática.",
+      "Tratamiento: prednisona ± azatioprina."
     ]
   },
   {
     "kind": "card",
     "id": "g-753",
-    "title": "En la hepatitis alcohólica",
+    "title": "Hepatitis alcohólica: la pista de las transaminasas",
     "points": [
-      "La AST > ALT en una relación 2:1."
+      "AST (GOT) mayor que ALT (GPT), en proporción 2:1 o más.",
+      "Las transaminasas rara vez pasan de 300-400 (si están en miles, pensar en otra causa: virus, isquemia, paracetamol).",
+      "La GGT suele estar alta."
     ]
   },
   {
@@ -25,106 +28,102 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-755",
     "title": "Síndrome de Peutz-Jeghers",
     "points": [
-      "El diagnóstico más probable en un adulto joven con dolor abdominal, heces sanguinolentas intermitentes y máculas hiperpigmentadas en la mucosa oral y los dedos es el síndrome de Peutz-Jeghers. Causa pólipos gastrointestinales."
+      "Adulto joven con dolor abdominal, sangrado intestinal intermitente y manchas oscuras en labios, boca y dedos.",
+      "Causa pólipos hamartomatosos en el intestino (pueden dar invaginación).",
+      "Hereditario (autosómico dominante); más riesgo de cáncer digestivo, de mama y de páncreas → vigilancia periódica."
     ]
   },
   {
     "kind": "card",
     "id": "g-816",
-    "title": "Enfermedad hepatica en fibrosis quística",
+    "title": "Enfermedad hepática en fibrosis quística",
     "points": [
-      "Los pacientes que tienen signos físicos de enfermedad hepática o pruebas de función hepática anormales en su visita anual deben ser remitidos para una ecografía abdominal completa con Doppler.1",
-      "Si la ecografía sugiere enfermedad hepática, hipertensión portal o ambas, se debe remitir para realización de una biopsia hepática y una endoscopia para descartar várices esofágicas.",
-      "2. la ecografía es normal o muestra solo esteatosis leve y Si los niveles de enzimas hepáticas o GGT NO son más de dos veces el límite superior de lo normal (LSN) , el siguiente paso es repetir los estudios de enzimas hepáticas en 6 a 12 meses.",
-      "Si los niveles de enzimas hepáticas o GGT son más de dos veces el LSN o permanecen elevados durante >6 meses, se deben investigar otras posibles causas de enfermedad hepática, como el consumo excesivo de alcohol, hepatitis infecciosa, enfermedad hepática inducida por fármacos, enfermedad de Wilson, hepatitis autoinmune, deficiencia de alfa 1 antitripsina y enfermedad celíaca."
+      "Revisión anual: si hay signos de hepatopatía o enzimas alteradas → ecografía abdominal con Doppler.",
+      "Eco con enfermedad hepática o hipertensión portal: biopsia y endoscopia para buscar várices.",
+      "Eco normal o esteatosis leve y enzimas <2 veces lo normal: repetir enzimas en 6-12 meses.",
+      "Enzimas >2 veces lo normal o altas >6 meses: buscar otras causas (alcohol, virus, fármacos, Wilson, autoinmune, déficit de alfa-1-antitripsina, celiaquía)."
     ]
   },
   {
     "kind": "card",
     "id": "g-820",
-    "title": "Enfermedad por reflujo gastroesofagico",
+    "title": "Reflujo gastroesofágico (ERGE)",
     "points": [
-      "Signos de alarma:",
-      "Dispepsia de novo > 60 años, - sangrado tgi – odinofagia -disfagia –perdida de peso . abordaje:",
-      "1. con síntomas de sospecha.",
-      "2. sin signos de alarma: no se hace evda, se realiza prueba ibp por 7-14 dias, si síntomas desaparecen confirmo dx y continuo por 8 semanas mas. si no desaparecen realizo evda",
-      "Si signos de alarma: se realiza endoscopia con biopsia, se pide para descartar complicaciones de erge. si normal: no excluye diagnostico, anormal: puede reportar esofagitis ( clasificaicon angeles, grado A: 1 o > erosiones < 5mm, sin tocar pliegues mucosos",
-      "Grado b: 1 o > erosiones > 5 mm, sin tocar pliegues, grado c: 1 o > ulceras que pasan pliegues mucosos, <75% circunferencia",
-      "Grado d: en pliegues > 75 % de circunferencia esofágica. ); esófago barret: dx definitivo de erge, por h.pylori o hernia hiatal",
-      "(si no hay displasia control en 3 meses).",
-      "Si evda normal con signos de riesgo o sintomatología típica sin mejoría al tto con omeprazol se indica manometría con phmetria e impedanciometria: manometría: excluye transtronos motilidad, da dx de erge",
-      "Phmetria: tiempo de exposicion a acido criterios dx: ph < 4, , > 6% de tiempo exposicion a acido >80 episodios",
-      "Fenotipos: erge no erosiva ( síntomas con ibp negativa, evda normal, pero con ph metria anormal) ; hipersensibilidad al reflujo ( ibp negativa, evda normal, phmetria normal) pero se evidencia síntomas con exposicion al reflujo, tto: tiene leve rta a ibp",
-      "Pirosis funcional: comorbilidad psicológica, todo normal tto: isrs"
+      "Síntomas típicos: agrieras (pirosis) y regurgitación.",
+      "Sin signos de alarma: no hace falta endoscopia. Prueba con IBP (omeprazol) 1-2 semanas; si mejora, se confirma y se sigue 8 semanas.",
+      "Signos de alarma (endoscopia con biopsia): dispepsia nueva en >60 años, sangrado, dificultad o dolor para tragar, pérdida de peso.",
+      "Esofagitis (clasificación de Los Ángeles): A erosiones <5 mm; B >5 mm; C erosiones que unen pliegues en <75 % de la circunferencia; D >75 %.",
+      "Endoscopia normal con síntomas que no mejoran: pH-metría con impedancia (ERGE si el ácido está >6 % del tiempo) y manometría.",
+      "Si todo es normal: hipersensibilidad al reflujo o pirosis funcional (suele haber ansiedad; responden a antidepresivos)."
     ]
   },
   {
     "kind": "card",
     "id": "g-821",
-    "title": "EVDA por riesgo de e",
+    "title": "Cuándo hacer endoscopia por riesgo de Barrett",
     "points": [
-      "Barret :",
-      "1. ERGE crónico (≥5 años) mas factores de riesgo (hombre, >50 años, raza blanca, tabaquismo, obesidad central, antecedente familiar de Barrett o adenocarcinoma).",
-      "2. inmediata si síntomas de alarma (disfagia, pérdida de peso, anemia, sangrado)",
-      "3. ERGE refractario."
+      "Reflujo crónico (≥5 años) con factores de riesgo: hombre, >50 años, raza blanca, tabaco, obesidad abdominal, familiares con Barrett o cáncer de esófago.",
+      "De inmediato si hay alarma: dificultad para tragar, pérdida de peso, anemia o sangrado.",
+      "Reflujo que no responde al tratamiento.",
+      "Barrett = cambio del epitelio del esófago por reflujo; es el precursor del adenocarcinoma."
     ]
   },
   {
     "kind": "card",
     "id": "g-822",
-    "title": "Dispepsia, el abordaje es escalonado",
+    "title": "Dispepsia: paso a paso",
     "points": [
-      "SIGNOS DE ALARMA o >35 años (pérdida de peso, anemia, sangrado digestivo, disfagia, vómitos persistentes, masa abdominal o antecedente familiar de cáncer gástrico): se debe realizar EVDA. - <35 AÑOS SIN SIGNOS DE ALARMA",
-      "1. manejo inicial es prueba terapéutica con inhibidor de bomba de protones (IBP) por 4–8 semanas y suspender",
-      "2. si síntomas persisten, se realiza prueba para Helicobacter pylori (antígeno en heces o prueba respiratoria) y se indica erradicación si es positiva.",
-      "3. continúa sintomático, se considera dispepsia funcional y se puede manejar con procinéticos u otras terapias sintomáticas ( antidepresibles triciliclos)",
-      "Antes de realizar la endoscopia se deben suspender los IBP 2 semanas antes de realizar cualquiera de los dos métodos."
+      "Dispepsia = dolor o malestar en la boca del estómago.",
+      "Con signos de alarma o ≥35 años (según guía colombiana): endoscopia (pérdida de peso, anemia, sangrado, disfagia, vómitos persistentes, masa, familiar con cáncer gástrico).",
+      "Menor de 35 sin alarma: 1.º IBP 4-8 semanas. 2.º si persiste, buscar H. pylori (antígeno en heces o prueba de aliento) y tratar si es positivo. 3.º si sigue, dispepsia funcional (procinéticos o antidepresivos tricíclicos a dosis bajas).",
+      "Suspender el IBP 2 semanas antes de las pruebas de H. pylori para no tener falsos negativos."
     ]
   },
   {
     "kind": "card",
     "id": "g-823",
-    "title": "H.pylori",
+    "title": "Helicobacter pylori: a quién buscar y cómo",
     "points": [
-      "Tamizaje:",
-      "Si cumple criterios en dispepsia - consumo de asa o AINES crónicamente - ptes con anemia por deficiencia de fe no explicada",
-      "( erge NO es cauda de tamización) método tamizaje: si SX DE ALARMA ( - perdida de peso, anemia inexplicable, intolerancia via oral, vomitos persistente, sangrado) se raliza EVDA : con prueba de ureasa rápida, histología, cultivo o px molecular",
-      "Si NO SX DE ALARMA: se realiza test de aliento ( sen 90 %, post tto sen 98%) ( si es post tto tiene que ser 4 semanas después de antibiótico, y 2 semanas sin ibpp) , antígenos fecales o serología (solo detecta igg no sirve para distinguir de antigua o nueva) . se da tratamiento x 14 dias ( en ultima guía se inicia terapia cuádruple con tetraciclina, metronidazol, bismuto y ibp cada 12 h) si es alérgico a aspirina no se puede dar bismuto. si se encontró ulcera gástrica se recomienda repetir evda para evaluar posible malignidad, para ulcera duodenal se realiza cuatro semanas después del tratamiento con test de aliento con urea (suspender 2 semanas antes ibp) o prueba de antigeno en heces."
+      "Buscar en: dispepsia, úlcera péptica, uso crónico de aspirina o AINE, anemia ferropénica sin causa. El reflujo no es indicación.",
+      "Con signos de alarma: endoscopia con prueba de ureasa o biopsia.",
+      "Sin alarma: prueba de aliento con urea o antígeno en heces. La serología no distingue infección actual de pasada.",
+      "Primera línea: cuádruple con bismuto 14 días (IBP + bismuto + tetraciclina + metronidazol). Si es alérgico a la aspirina, no usar bismuto.",
+      "Confirmar la curación 4 semanas después del antibiótico y 2 semanas sin IBP (aliento o antígeno en heces).",
+      "Úlcera gástrica: repetir endoscopia para descartar cáncer."
     ]
   },
   {
     "kind": "card",
     "id": "g-824",
-    "title": "Terapia cuádruple optimizada con bismuto - IBP +…",
+    "title": "H. pylori: esquemas de rescate",
     "points": [
-      "Terapia cuádruple optimizada con bismuto",
-      "IBP + bismuto subcitrato/subsalicilato + tetraciclina + metronidazol. (Indicada si el esquema previo no fue cuádruple con bismuto.",
-      "También se usa tras fracaso de terapia basada en claritromicina.) Terapia triple con rifabutina: IBP + amoxicilina + rifabutina",
-      "(rescate tras fracaso de cuádruple con bismuto) Terapia triple con levofloxacino: IBP + levofloxacino + amoxicilina",
-      "( Solo se utiliza cuando se documente sensibilidad de H. pylori a levofloxacino)",
-      "Nota importante: La terapia dual (IBP + amoxicilina en altas dosis) Su utilidad se limita a primera línea, especialmente en combinación con vonoprazán."
+      "Si no se usó antes: cuádruple con bismuto (IBP + bismuto + tetraciclina + metronidazol), también tras fallar la terapia con claritromicina.",
+      "Si falló la cuádruple con bismuto: triple con rifabutina (IBP + amoxicilina + rifabutina).",
+      "Levofloxacino (IBP + levofloxacino + amoxicilina): solo si se demostró que el germen es sensible.",
+      "Terapia dual (IBP o vonoprazán + amoxicilina a dosis altas): solo como primera línea."
     ]
   },
   {
     "kind": "card",
     "id": "g-825",
-    "title": "Tratamiento de H",
+    "title": "H. pylori en niños",
     "points": [
-      "PYLORI EN NIÑOS Y ADOLESCENTES: está indicado principalmente cuando existe enfermedad ulcerosa péptica confirmada mediante endoscopia",
-      "En ausencia de hallazgos ulcerosos o de otras indicaciones específicas, la erradicación de la bacteria no ha demostrado mejorar síntomas como dolor abdominal funcional o dispepsia."
+      "Solo se trata cuando hay úlcera demostrada por endoscopia (u otra indicación concreta).",
+      "Erradicarlo no mejora el dolor abdominal funcional ni la dispepsia en niños."
     ]
   },
   {
     "kind": "card",
     "id": "g-893",
-    "title": "Higado graso",
+    "title": "Hígado graso metabólico (MASLD)",
     "points": [
-      "MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease o Enfermedad Hepática Esteatósica Asociada a Disfunción Metabólica)",
-      "El diagnóstico de MASLD (Metabolic dysfunction-Associated Steatotic Liver Disease) se establece al documentar esteatosis hepática ≥5% mediante imagen, histología o biomarcadores en presencia de disfunción metabólica (obesidad/sobrepeso, diabetes tipo 2 o ≥2 criterios de síndrome metabólico ( obesidad central (perímetro abdominal >102 cm en hombres o >88 cm en mujeres; en latinoamericanos >90 cm y >80 cm respectivamente), triglicéridos ≥150 mg/dL o en tratamiento, colesterol HDL bajo (<40 mg/dL en hombres o <50 mg/dL en mujeres), presión arterial ≥130/85 mmHg o uso de antihipertensivos, y glucosa en ayunas ≥100 mg/dl)), excluyendo otras causas de esteatosis como consumo significativo de alcohol, hepatopatías virales o fármacos, y denominándose MetALD si coexiste disfunción metabólica con consumo moderado de alcohol; la severidad se determina por el riesgo de fibrosis, iniciando con el índice FIB-4 (FIB-4 = (Edad × AST) / (Plaquetas × √ALT) )(bajo riesgo si <1.3 o <2.0 en >65 años, intermedio si 1.3–2.67, alto riesgo si >2.67) y confirmando en casos intermedios o altos con elastografía hepática (baja probabilidad de fibrosis no significativa si <8 kPa, intermedia si 8–12 kPa y alta si ≥12–15 kPa), reservando la biopsia hepática solo para dudas diagnósticas o investigación clínica",
-      "Tratamiento: modificación intensiva del estilo de vida, con pérdida de peso del 7–10% en sobrepeso u obesidad (mediante dieta hipocalórica balanceada y ejercicio aeróbico + resistencia al menos 150 min/semana), abstinencia de alcohol y control ja comorbilidades metabólicas (glucosa, lípidos, presión arterial); en pacientes con fibrosis significativa (≥F2) y diabetes tipo 2, pioglitazona o agonistas GLP-1 (ej. semaglutida), y vitamina E solo en no diabéticos con esteatohepatitis confirmada por biopsia; no se recomiendan estatinas exclusivamente para MASLD, pero son seguras para tratar dislipidemia; en fibrosis avanzada/cirrosis, se indica vigilancia de hepatocarcinoma y varices; finalmente, se considera elegibilidad para trasplante hepático en cirrosis descompensada",
-      "Evitar fructuosa.",
-      "Se puede dar resmetirom o/y semaglutide como manejo.",
-      "Fib4: bajo riesgo: repetir c 2-3 años ; si dm, riesgo metabólico cada 1-2 años ; intermedio : elastografia ; alto: elastografia y remitir a GE o hepatólogo"
+      "Qué es: grasa en el hígado (≥5 %) en una persona con problemas metabólicos (sobrepeso, diabetes o síndrome metabólico), sin otra causa.",
+      "Síndrome metabólico (latinoamericanos): cintura >90 cm hombre / >80 cm mujer, triglicéridos ≥150, HDL bajo, presión ≥130/85, glucosa ≥100.",
+      "Si además toma alcohol moderado se llama MetALD.",
+      "Lo importante es la fibrosis: calcular FIB-4. <1,3 bajo riesgo (repetir cada 2-3 años); 1,3-2,67 intermedio → elastografía; >2,67 alto → elastografía y remitir.",
+      "Elastografía: <8 kPa poca fibrosis; 8-12 dudoso; ≥12-15 fibrosis avanzada.",
+      "Tratamiento: bajar 7-10 % del peso, ejercicio ≥150 min/semana, cero alcohol, evitar fructosa y controlar azúcar, lípidos y presión.",
+      "Fármacos si hay fibrosis significativa: semaglutida o resmetirom; pioglitazona en diabéticos; vitamina E solo en no diabéticos con biopsia. Las estatinas son seguras."
     ]
   },
   {
@@ -132,60 +131,56 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-894",
     "title": "Cirrosis",
     "points": [
-      "Etapa final de la fibrosis hepática crónica. causada principalmente por hepatitis virales crónicas, MASLD, consumo crónico de alcohol y hepatopatías autoinmunes; se clasifica en compensada (sin ascitis, encefalopatía ni sangrado) y descompensada ; el diagnóstico se confirma con clínica (hepatomegalia, esplenomegalia, estigmas de hepatopatía crónica), laboratorio (plaquetopenia, hiperbilirrubinemia, hipoalbuminemia, INR prolongado) e imagen (signos de hipertensión portal, nodularidad hepática), siendo la elastografía >15 kPa altamente sugestiva; su manejo incluye tratar la causa de base, prevención y tratamiento de complicaciones (diuréticos para ascitis, profilaxis antibiótica en hemorragia variceal, lactulosa para encefalopatía), vigilancia semestral para carcinoma hepatocelular (ecografía ± AFP(alfafetoproteina)), evaluación endoscópica de varices y derivación temprana para trasplante hepático en descompensación o Child-Pugh C. EN CIRROSIS COMPENSADA + HIPERTENSIÓN PORTAL clinicamente significativa: Beta bloqueadores no selectivos dosis: betabloqueador , carvedilol 6.25 mg una vez al dia se titula hasta cada 12 horas.La clasificación Child-Pugh evalúa la gravedad de la cirrosis hepática usando 5 variables: (batea) bilirrubina, albúmina, INR (o tiempo de protrombina), encefalopatía y ascitis; cada una se puntúa 1–3 puntos",
-      "La suma clasifica en Child A (5–6 puntos, enfermedad leve), Child B (7–9, moderada) y Child C (10–15, grave), y se usa para estimar pronóstico y riesgo quirúrgico."
+      "Qué es: la etapa final de la fibrosis del hígado. Causas: hepatitis B y C, hígado graso metabólico, alcohol, autoinmunes.",
+      "Compensada: sin ascitis, sangrado ni encefalopatía. Descompensada: con alguna de ellas (peor pronóstico).",
+      "Pistas: plaquetas bajas, albúmina baja, bilirrubina e INR altos, bazo grande, hígado nodular en la eco; elastografía >15 kPa.",
+      "Manejo: tratar la causa, prevenir complicaciones, eco ± alfafetoproteína cada 6 meses (cáncer de hígado), endoscopia para várices y remitir a trasplante si se descompensa.",
+      "Con hipertensión portal: betabloqueante no selectivo (carvedilol 6,25 mg/día, subir hasta cada 12 h).",
+      "Child-Pugh (BATEA): Bilirrubina, Albúmina, Tiempo de protrombina/INR, Encefalopatía y Ascitis. A 5-6 puntos (leve), B 7-9, C 10-15 (grave)."
     ]
   },
   {
     "kind": "card",
     "id": "g-895",
-    "title": "Riesgo varices esofágicas",
+    "title": "Várices esofágicas",
     "points": [
-      "Tamizar con evda si cualquiera:",
-      "1. paciente tiene fibrosis > 20 kpal",
-      "2. pla < 150 3. cirrosis descompensada. .prevención primaria (sangrado digestivo): 1.: ligadura de varices ( varices grandes, cirrosis descompensada, IRA, intolerancia beta bloqueadores, na <130 , alcoholismo) . si no con beta bloqueador no selectivo ( propanolol, carvedilol) . prevención secundaria: se puede considerar TIPS (derivacion protosistemica) si se encuentra dentro de las 72 horas, indicado : en sangrado variceal con child pug 7-14, y sangrado activo",
-      "En cirrosis el uso de IBP durante más de 4 semanas aumenta el riesgo de peritonitis bacteriana."
+      "Hacer endoscopia si: elastografía >20 kPa, plaquetas <150.000 o cirrosis descompensada.",
+      "Prevenir el primer sangrado: betabloqueante no selectivo (propranolol o carvedilol); ligadura con bandas si son grandes o no tolera el betabloqueante.",
+      "Tras un sangrado: betabloqueante + ligadura. TIPS precoz (en <72 h) si Child-Pugh alto con sangrado activo.",
+      "Ojo: usar IBP más de 4 semanas en cirróticos aumenta el riesgo de peritonitis bacteriana."
     ]
   },
   {
     "kind": "card",
     "id": "g-896",
-    "title": "Complicaciones cirrosis",
+    "title": "Complicaciones de la cirrosis: ascitis, peritonitis, sangrado y encefalopatía",
     "points": [
-      "ASCITIS: leve: solo eco, ii: distesion siemtrica, iii: marcada distensión",
-      "Estudios desde asctisi 2 o 3 . gasa: alb suero-alb liq, >= 1.1 es origen de ht portal, <1.1 otra causa",
-      "Tto: grado 2, diuréticos, dieta baja en sal; grado 3, sintomático, diurético",
-      "(espironolactona 100 mg hasta 400 mg dia; furosemida 40 mg hasta 160 mg dia) paracentesis (Si >= 5 litros, se repone 8 gr de albumina por cada litro extraido) PERITONITIS BACTERIANA ESPONTANEA: fiebre, dolor abdominal, intolerancia palpación, rebote dx: cultivo liquido postivo o células pmn >250 mas cirrosis es PBE. Si cultivo postivo pero < 250 PMN. Es bacteriascitis monomicrobinana",
-      "Tto: antibiótico:5-7 dias cefalosporina de 3ra o pipetazo",
-      "Nosocomial si >72 h de ingreso se da carbapenemicos",
-      "Albumina: por riesgo sn.hepatorenal. . 1.5 gr/kg en 1er dia y 1 gr/kg en 3er dia",
-      "Profilaxis pbe: norfloxacino 400 mg vo dia , si: hvd, child pug >= 9, bilirrubina > 3, ax",
-      "Renal, porteina liq asictico < 1.5 . SANGRADO VARICEAL: predicotr de ruptura: varices medicas, grandes, child c, se hace ligas",
-      "Tto: restaurar volemia, meta hb >7",
-      "Antibiótico: ceftriaxona 1 gr cada 24 horas x 7 dias",
-      "Vasoactivos: 3-5 dias",
-      "Terlipresina: 2 mg iv c/4 h x 48 h, luego 1 mg c/4 horas, somatostatina: 250 mg , luego 250 mcg horas",
-      "EVDA: eritromicina 250 mg iv 30 -120 min antes. en < 12 horas, se hace ligadura de banda",
-      "ENCEFALOPATIA HEPATICA: ax, atencion, apatía, hiperreflexia, hipertonía. diagnóstico es clínico, apoyado en exclusión de otras. la elevación de amonio plasmático (no imprescindible pero útil para seguimiento; se clasifica según la West Haven en grado I (alteración leve de memoria, insomnio, inversión sueño-vigilia), grado II (letargia, desorientación leve, asterixis), grado III (confusión marcada, somnolencia, respuesta a estímulos dolorosos) y grado IV (coma); su tratamiento incluye identificar y corregir el factor precipitante (hemorragia digestiva, infección, constipación, fármacos sedantes), reducir la producción intestinal de amonio con lactulosa oral (25–30 mL cada 1–2 h hasta lograr 2–3 evacuaciones blandas/día, luego ajustar a dosis de mantenimiento) y rifaximina 550 mg cada 12 h como adyuvante en recurrencias o casos graves, L-ornitina L-aspartato (dosis habitual 20–40 g/día IV o VO, dividida en 2–3 dosis) como coadyuvante en grados II–IV:evitar sobrecarga proteica en fase aguda (pero no restricción prolongada), corregir alteraciones hidroelectrolíticas y considerar trasplante hepático en casos recurrentes o refractarios."
+      "Ascitis: gradiente albúmina suero − líquido ≥1,1 = por hipertensión portal. Dieta sin sal + espironolactona (100 hasta 400 mg) ± furosemida (40 hasta 160 mg). Si se sacan ≥5 litros, reponer 6-8 g de albúmina por litro.",
+      "Peritonitis bacteriana espontánea: fiebre o dolor abdominal en un cirrótico; >250 neutrófilos/mm³ en el líquido. Cefalosporina de 3.ª generación 5-7 días + albúmina (1,5 g/kg el día 1 y 1 g/kg el día 3) para proteger el riñón.",
+      "Profilaxis de peritonitis (norfloxacino 400 mg/día): tras un episodio, durante un sangrado digestivo o con proteínas en el líquido <1,5 g/dl y enfermedad avanzada.",
+      "Sangrado por várices: transfundir si Hb <7, ceftriaxona 1 g/día 7 días, vasoactivo (terlipresina o somatostatina) 3-5 días y endoscopia con ligadura en <12 h (eritromicina antes para vaciar el estómago).",
+      "Encefalopatía: desde cambios del sueño y asterixis hasta coma (West Haven I-IV). Buscar el desencadenante (sangrado, infección, estreñimiento, sedantes). Lactulosa hasta 2-3 deposiciones blandas al día; rifaximina si se repite. No restringir proteínas de forma prolongada."
     ]
   },
   {
     "kind": "card",
     "id": "g-897",
-    "title": "Sospecha de DILI",
+    "title": "Lesión hepática por fármacos (DILI): qué patrón es",
     "points": [
-      "( ALT / VAL SUP ALT )/ (FFA/ VAL SUP FFA) : >= 5 daño hepatocelular ;3-4 : mixto ;<=2 colestasis."
+      "Calcular R = (ALT / su límite normal) ÷ (fosfatasa alcalina / su límite normal).",
+      "R ≥5: daño hepatocelular. R 2-5: mixto. R ≤2: colestásico.",
+      "Primera medida: suspender el fármaco sospechoso."
     ]
   },
   {
     "kind": "card",
     "id": "g-941",
-    "title": "Hepatitis A (VHA) y E (VHE)",
+    "title": "Hepatitis virales A, E, C y D",
     "points": [
-      "Curso agudo y se transmiten por vía fecal-oral . Hepatitis C (VHC): Los anticuerpos contra el VHC (Anti-VHC) indican exposicion. infección activa se encuentra al medir la carga viral (ARN del VHC)",
-      "Hepatitis D (VHD): requiere la presencia del VHB para replicarse",
-      "Se debe buscar en toda persona con HBsAg positivo",
-      "Su curso clínico varía drásticamente si se presenta como coinfección (adquisición simultánea de VHB y VHD) o como superinfección (adquisición de VHD en un paciente con VHB crónico), siendo esta última la que tiende a la cronicidad en un 90% de los casos."
+      "A y E: se transmiten por agua y alimentos contaminados (fecal-oral) y suelen ser agudas. La E es grave en embarazadas.",
+      "C: el anticuerpo (anti-VHC) indica que hubo contacto; para saber si hay infección activa, pedir la carga viral (ARN).",
+      "D: solo puede infectar si hay hepatitis B. Buscarla en todo HBsAg positivo.",
+      "Coinfección B + D a la vez: suele curar. Sobreinfección D sobre una B crónica: se cronifica en ~90 %."
     ]
   }
 ];

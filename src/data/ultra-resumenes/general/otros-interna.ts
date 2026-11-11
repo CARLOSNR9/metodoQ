@@ -1,13 +1,18 @@
 import type { UltraEntry } from "@/lib/ultra-resumenes/types";
 
-/** Ultra resumen general · Otros temas de medicina interna. Generado desde el documento de fichas de Método Q. */
+/** Ultra resumen general · otros-interna. Generado desde content/ultra-resumenes/general/otros-interna.md; no editar a mano. */
 export const ENTRIES: UltraEntry[] = [
   {
     "kind": "card",
     "id": "g-758",
-    "title": "Manejo de angioedema hereditario o por ARNI o IECAS",
+    "title": "Angioedema hereditario o por IECA/ARNI",
     "points": [
-      "El manejo luego de asegurar la vía aérea con edema laríngeo severo consiste en profilaxis (con danazol) y tratamiento del ataque agudo con Icatibant o inhibidor de C1 intravenoso."
+      "Qué es: hinchazón profunda de piel y mucosas (labios, lengua, laringe) causada por bradicinina, no por histamina. Por eso no sirven antihistamínicos ni corticoides.",
+      "Causas: déficit hereditario del inhibidor de C1, o fármacos como IECA (enalapril) y sacubitril-valsartán.",
+      "Primero: asegurar la vía aérea si hay edema de laringe.",
+      "Ataque agudo: icatibant o concentrado de inhibidor de C1 intravenoso.",
+      "Si es por fármaco: suspenderlo para siempre.",
+      "Prevención en el hereditario: andrógenos atenuados (danazol) u otras opciones de profilaxis."
     ]
   },
   {
@@ -15,49 +20,69 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-923",
     "title": "Urticaria aguda",
     "points": [
-      "Se inicia manejo con antihistamínicos H1 de segunda generación, 1 dosis diaria de 2 a 4 semanas , Si no mejora se cuadriplica la dosis , En caso de no mejorar se remite a alergología para inicio de omalizumab"
+      "Qué es: ronchas que pican y desaparecen en menos de 24 horas, durante menos de 6 semanas.",
+      "1.º: antihistamínico H1 de segunda generación (loratadina, cetirizina) una vez al día durante 2-4 semanas.",
+      "2.º: si no mejora, se puede subir hasta 4 veces la dosis.",
+      "3.º: si sigue sin control, remitir a alergología para omalizumab.",
+      "Si hay compromiso respiratorio o hipotensión, ya no es una urticaria simple: es anafilaxia → adrenalina intramuscular."
     ]
   },
   {
     "kind": "card",
     "id": "g-930",
-    "title": "Síndrome piernas inquietas",
+    "title": "Síndrome de piernas inquietas: el hierro",
     "points": [
-      "Se da hierro si ferritina <75, satura transferrina > 45 , meta transferrina es 100. *Se da tratamiento con vitamina c para aumentara absorción *La duracion por 12 semanas"
+      "Qué es: necesidad de mover las piernas en reposo, sobre todo por la tarde y la noche, que alivia al moverlas.",
+      "Siempre pedir ferritina: el déficit de hierro lo empeora.",
+      "Dar hierro si ferritina <75 ng/ml y saturación de transferrina <45 %; el objetivo es ferritina >100.",
+      "El hierro oral se absorbe mejor con vitamina C; mantener unas 12 semanas.",
+      "Si no basta: gabapentinoides (gabapentina, pregabalina) y después agonistas dopaminérgicos."
     ]
   },
   {
     "kind": "card",
     "id": "g-940",
-    "title": "Violencia sexual <= 72 h o ideación -suicida",
+    "title": "Violencia sexual: atención inicial",
     "points": [
-      "Triage 1 , >72 h ( 3 dias) : triage 2. PARACLINICOS QUE SE SOLICITAN:",
-      "1. Bhcg 2.si sospechamos intoxicacion:",
-      "Orina hasta 96 h ( 4 dias) postexposicion 3. toxicologico de sangre y alcoholemia hasta 24 h. (1 dia) postexposicion 3. frotis vaginal (espematozoides, flora )"
+      "Si han pasado 72 horas o menos, o hay ideación suicida: triage 1 (atención inmediata). Más de 72 horas: triage 2.",
+      "Prueba de embarazo (β-hCG).",
+      "Si se sospecha que la drogaron: tóxicos en orina hasta 96 horas y en sangre (con alcoholemia) hasta 24 horas después.",
+      "Frotis vaginal para buscar espermatozoides y flora.",
+      "Además: profilaxis de VIH, hepatitis B e ITS, anticoncepción de emergencia, apoyo psicológico y activar la ruta legal."
     ]
   },
   {
     "kind": "card",
     "id": "g-964",
-    "title": "ACV isquemico con warfarina",
+    "title": "Ictus isquémico en paciente que toma warfarina",
     "points": [
-      "Solo trombolisis si INR < 1.7, de lo contrario trombectomia"
+      "La trombólisis intravenosa solo se puede hacer si el INR es <1,7.",
+      "Si el INR es mayor y hay oclusión de un vaso grande, la opción es la trombectomía mecánica."
     ]
   },
   {
     "kind": "card",
     "id": "g-965",
-    "title": "Guilliam barre",
+    "title": "Síndrome de Guillain-Barré",
     "points": [
-      "Pérdida de la fuerza ascendente, pérdida de reflejos, sin pérdida de sensibilidad .Tratamiento: plasmaféresis o inmunoglobulinas NO JUNTAS, no es necesario esperar paraclínicos , Se puede tomar LCR y electromiografía para confirmar diagnóstico"
+      "Qué es: ataque del sistema inmune a los nervios periféricos, a menudo tras una infección (diarrea por Campylobacter, infección respiratoria).",
+      "Cómo se ve: debilidad que sube desde las piernas, con pérdida de reflejos; la sensibilidad se afecta poco.",
+      "Peligro: puede paralizar los músculos respiratorios → vigilar la capacidad vital.",
+      "Tratamiento: plasmaféresis o inmunoglobulina intravenosa (una de las dos, no juntas). No esperar a los exámenes para empezar.",
+      "Confirmación: LCR con proteínas altas y células normales (disociación albuminocitológica) y electromiografía.",
+      "Los corticoides no sirven."
     ]
   },
   {
     "kind": "card",
     "id": "g-994",
-    "title": "Tamizaje neoplasias",
+    "title": "Tamizaje de cáncer (resumen)",
     "points": [
-      "CÁNCER DE PULMÓN: A pacientes de alto riesgo (50–80 años + tabaquismo ≥20 paquetes-año, fumadores activos o exfumadores con suspensión <=15 años); con TAC de tórax a dosis bajas anual; CÁNCER DE PRÓSTATA: desde 50 años; afrodescendientes o con antecedente familiar de primer grado desde los 45 años; portadores de mutaciones BRCA1 o BRCA2 desde los 40 años; tamizaje con PSA + tacto rectal; PSA normal <4 ng/ml; realizar tamizaje con frecuencia no inferior a 5 años; se recomienda la combinación de ambas; CÁNCER DE MAMA: desde 50 a 69 años; mamografía cada dos años; en mujeres de alto riesgo (portadoras de variantes patogénicas en BRCA1/BRCA2) la resonancia magnética mamaria es la modalidad indicada; CÁNCER DE CUELLO UTERINO: De 25 a 65 años; 25–29 años citología en esquema 1–1–3; 30–65 años test de VPH genotipado cada 5 años; en mujeres con infección por VIH desde los 25 años test de VPH cada 3 años; CÁNCER DE COLON: desde los 45 años; colonoscopia como principal estrategia de tamizaje (si es normal repetir en 10 años; en programas de tamizaje poblacional se recomienda prueba de sangre oculta en heces (prueba inmunoquímica fecal con o sin detección de ADN) anual; en personas con familiar de primer grado con cáncer colorrectal , iniciar el tamizaje a los 40 años o 10 años antes de la edad del diagnóstico del familiar más joven, y repetir cada 5 años incluso si la colonoscopia es normal"
+      "Pulmón: 50-80 años con ≥20 paquetes-año, fumadores o que dejaron hace ≤15 años → TAC de tórax de baja dosis anual.",
+      "Próstata: desde los 50 años (45 si afrodescendiente o familiar de primer grado; 40 si BRCA) → PSA + tacto rectal. PSA normal <4 ng/ml.",
+      "Mama: 50-69 años → mamografía cada 2 años. Portadoras de BRCA: resonancia magnética.",
+      "Cuello uterino: 25-29 años citología (esquema 1-1-3); 30-65 años prueba de VPH cada 5 años; con VIH, VPH cada 3 años desde los 25.",
+      "Colon: desde los 45 años → colonoscopia cada 10 años si es normal, o sangre oculta en heces inmunoquímica anual. Con familiar de primer grado: desde los 40 (o 10 años antes del caso familiar) y cada 5 años."
     ]
   }
 ];
