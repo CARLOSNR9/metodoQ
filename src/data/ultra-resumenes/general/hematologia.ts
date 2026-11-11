@@ -1,122 +1,107 @@
 import type { UltraEntry } from "@/lib/ultra-resumenes/types";
 
-/** Ultra resumen general · Hematología y coagulación. Generado desde el documento de fichas de Método Q. */
+/** Ultra resumen general · hematologia. Generado desde content/ultra-resumenes/general/hematologia.md; no editar a mano. */
 export const ENTRIES: UltraEntry[] = [
   {
     "kind": "card",
     "id": "g-746",
-    "title": "Ácido tranexámico",
+    "title": "Ácido tranexámico y CID",
     "points": [
-      "Está contraindicado en pacientes con coagulación intravascular diseminada (CID). (en el cid por trauma, se puede dar acido tranexamico)"
+      "El ácido tranexámico frena la fibrinólisis (que se disuelvan los coágulos).",
+      "Contraindicado en la coagulación intravascular diseminada (CID) porque favorece trombos.",
+      "Excepción: en el trauma con sangrado sí se usa (en las primeras 3 horas)."
     ]
   },
   {
     "kind": "card",
     "id": "g-882",
-    "title": "Anemia celulas falciformes",
+    "title": "Anemia de células falciformes (drepanocitosis)",
     "points": [
-      "Hemoglobinopatía, produce hb s , diangostico: electroforesis de hemoglobina",
-      "Complicaciones agudas: crisis vaso oclusvias y sn torácico agudo: clínica: vaso oclusión mas inflamación, dolor súbito punzante en artiuclaciones , extremidades tto: analgesia, hidrataicon, antieméticos, hidroxiurea",
-      "Infecciones: por hipoesplenismo , sn",
-      "Torácico agudo: infiltrado nuevo en rx , acompañado de fiebre , dolor torácico, taquipnea",
-      "Tto: antibiótico ceftraixona mas macrolido, cuidados por TEP. – transfundir : si hb < =6, caída rápida, hipoxia, requimiento 02, ausencia mejoría",
-      "( disminuye 30 % hb s) . stroke: tto: transfusion (si se descarto hemorragia) para reducir hb s, mantener hb 10",
-      "Prapismo: tto: levs 1500 ml/24 h , analgesia, descompresión, 24h trasnfusion . complicaciones crónicas: hipertensión pulmonar, necosis avascular tto: hidroxiurea mas – l glutamina",
-      "HIDROXIUREA: el inicio universal de hidroxiurea en pacientes con HbSS o HbSβ0 a partir de los 9 meses de edad, independientemente de la gravedad clínica.",
-      "Anemia de células falciformes puede causar osteoporosis, se recomienda por lo tanto realizar densitometría ósea desde los 5 años de edad , cada de 2-5 años según resultados de osteopenia o no",
-      "PROFILAXIS ANEMIA FALCIFORME: realizar una transfusión simple preoperatoria, con el objetivo de alcanzar un nivel de hemoglobina de 10 g/dL."
+      "Hemoglobina S que deforma los glóbulos rojos (en hoz) y tapa vasos pequeños. Diagnóstico: electroforesis de hemoglobina.",
+      "Crisis vasooclusiva: dolor intenso en huesos y articulaciones. Analgesia (opioides si hace falta), hidratación.",
+      "Síndrome torácico agudo: infiltrado nuevo en la Rx con fiebre, dolor torácico o taquipnea. Ceftriaxona + macrólido, oxígeno y transfusión.",
+      "Transfundir si Hb ≤6, cae rápido, hay hipoxia o no mejora; en el ictus, transfusión de recambio para bajar la Hb S.",
+      "Bazo que deja de funcionar: riesgo de infecciones graves por neumococo → penicilina profiláctica y vacunas.",
+      "Priapismo: hidratación, analgesia y aspiración urológica.",
+      "Hidroxiurea para todos los HbSS desde los 9 meses (reduce crisis). Vigilar hipertensión pulmonar, necrosis ósea y osteoporosis."
     ]
   },
   {
     "kind": "card",
     "id": "g-898",
-    "title": "Warfarina",
+    "title": "Warfarina: interacciones y reversión",
     "points": [
-      "Inhibidores: acetaminofén, amiodarona, omeprazol, irs (fluoxetina) ; inductores: carbamazepina, rifampicina. Sangrados: amenazan la vida:",
-      "1. Discotinuar warfarina",
-      "2. Vit k ( 10 mg iv en 20-60 min), repetir c/12 dependiendo inr",
-      "3. Ppc (complejo protrombinico) 50 u / kg o 1500-2000 U en 10 min. ( ver inr en 15-30 min)",
-      "Plasma congelado fresco, 15-30 ml/ kg",
-      "Retomar anticoagulación: posterior a 90 dias y que no tenga riesgo de sangrado",
-      "Manejo inr supraterapeutico: INR mayor de 10: retirar warfarina, vitamina k oral 2,5 – 5 mg, esperar 24-48 h; INR 4,5 -10: retirar warfarina, vit k se puede considerar si riesgo sangrado, esoerar 24-48 h; INR <4.5: omirtir dosis warfarina y < dosis 10-20 %."
+      "Aumentan su efecto (más riesgo de sangrado): acetaminofén, amiodarona, omeprazol, fluoxetina, antibióticos.",
+      "Disminuyen su efecto: carbamazepina, rifampicina.",
+      "Sangrado grave: suspender, vitamina K 10 mg intravenosa y complejo protrombínico (25-50 U/kg); si no hay, plasma fresco 15-30 ml/kg.",
+      "INR >10 sin sangrado: suspender + vitamina K oral 2,5-5 mg.",
+      "INR 4,5-10 sin sangrado: suspender 1-2 dosis; vitamina K solo si hay riesgo de sangrado.",
+      "INR <4,5: omitir una dosis y bajar la dosis semanal 10-20 %."
     ]
   },
   {
     "kind": "card",
     "id": "g-901",
-    "title": "Anticoagulación en cirugia",
+    "title": "Anticoagulación antes de una cirugía",
     "points": [
-      "WARFARINA: bajo riesgo de sangrado: NO SE SUSPENDE. Moderado y alto riesgo de sangrado:",
-      "1. NO alto riesgo tromboembólico: la warfarina se suspende 5 días antes. y se reinicia warfarina 12–24 h después .",
-      "2. alto riesgo, definidos como:",
-      "1. válvula mecánica mitral",
-      "2.válvula mecánica aórtica con factores de riesgo (FA, ACV previo, FEVI <30–35%, estado hipercoagulable)",
-      "3. ACV/AIT y/o TEV en los últimos 3 meses 4. FA con CHA₂DS₂-VASc ≥7–9",
-      "5. síndrome antifosfolípido: .Sí se hace terapia puente (con HBPM terapéutica); se suspende warfarina 5 dias anetes, la HBPM se inicia cuando el INR cae <2 (≈3 días antes), se suspende 24 h antes de cirugía, luego se reinicia warfarina 12–24 h postoperatorio, y la HBPM se reinicia 24 h después si el riesgo de sangrado es bajo o 48–72 h si es alto, manteniéndose hasta INR terapéutico",
-      "LOS DOAC (APIXABÁN, RIVAROXABÁN, EDOXABÁN) : suspender 24 h antes si bajo riesgo de sangrado y 48 h si alto riesgo; reiniciar 24 h (bajo riesgo) o 48–72 h (alto riesgo)",
-      "DABIGATRÁN depende de TFG:1. si ≥50 ml/min se suspende igual que doacs; pero si TFG < 50 ml/min suspender 48 h (bajo) o 72–96 h (alto)",
-      "(se reincia igual que los doacs) HBPM terapéutica aislada se suspende 24 h antes y se reinicia 24–72 h según riesgo de sangrado",
-      "Heparina no fraccionada IV se suspende 4–6 h antes y se reinicia 12–24 h después."
+      "Warfarina: si el procedimiento tiene bajo riesgo de sangrado, no se suspende.",
+      "Si hay que suspenderla: 5 días antes; se reinicia 12-24 h después.",
+      "Terapia puente con heparina de bajo peso solo en riesgo trombótico alto: válvula mecánica mitral (o aórtica con factores de riesgo), ictus o trombosis en los últimos 3 meses, FA de riesgo muy alto, síndrome antifosfolípido. La HBPM se empieza cuando el INR baja de 2 y se para 24 h antes.",
+      "Apixabán, rivaroxabán, edoxabán: suspender 24 h antes (bajo riesgo de sangrado) o 48 h (alto); reiniciar a las 24 h o 48-72 h.",
+      "Dabigatrán: igual si el filtrado es ≥50; si es <50, suspender 48 h (bajo) o 72-96 h (alto riesgo) antes. No necesitan puente."
     ]
   },
   {
     "kind": "card",
     "id": "g-903",
-    "title": "Son procedimientos de bajo riesgo la endoscopia o…",
+    "title": "Riesgo de sangrado de los procedimientos",
     "points": [
-      "Son procedimientos de bajo riesgo la endoscopia o colonoscopia diagnóstica ± biopsia, CPRE sin esfinterotomía, cápsula endoscópica, paracentesis, toracentesis, catéter venoso central, procedimientos dentales simples, dermatológicos menores y cirugía de catarata; son de alto riesgo la polipectomía, EMR/ESD, esfinterotomía biliar, dilataciones neumáticas, colocación de PEG, tratamiento endoscópico de sangrado activo y cirugías mayores abdominales, cardiacas, urológicas u ortopédicas; y se consideran de muy alto riesgo aquellos con posibilidad de sangrado catastrófico o en espacio cerrado, como neurocirugía intracraneal o medular, cirugía de columna con manipulación del canal medular, cirugía oftalmológica posterior (retina/vítreo), cirugía vascular mayor como aorta y cirugía cardíaca compleja, donde incluso puede valorarse suspender aspirina según el balance trombótico."
+      "Bajo: endoscopia o colonoscopia diagnósticas con biopsia, paracentesis, toracocentesis, catéter central, odontología simple, dermatología menor, catarata.",
+      "Alto: polipectomía, esfinterotomía, gastrostomía, tratar un sangrado activo, cirugía mayor (abdominal, cardiaca, urológica, ortopédica).",
+      "Muy alto (sangrado catastrófico o en espacio cerrado): neurocirugía, cirugía de canal medular, retina, aorta y cardiaca compleja; incluso se valora suspender la aspirina."
     ]
   },
   {
     "kind": "card",
     "id": "g-909",
-    "title": "Neoplasias hematológicas",
+    "title": "Neoplasias hematológicas y ganglio linfático",
     "points": [
-      "1. leucemias",
-      "2. linfomas",
-      "3. gammapatias monoclonales- sistema linfático: los linfocitos nacen en la medula pero se maduran en el s. linfático, los linfocitos B se maduran en ganglios, los T en timo , los NK en medula",
-      "GANGLIO: parte periférica están los vasos linfáticos que traen linfa con células presentadoras de antígeno, se reconoce por L.T , estimula a los L.B para que cree anticuerpos."
+      "Tres grupos: leucemias (en la médula y la sangre), linfomas (en los ganglios) y gammapatías monoclonales (células plasmáticas, como el mieloma).",
+      "Los linfocitos nacen en la médula: los T maduran en el timo, los B en los ganglios y bazo."
     ]
   },
   {
     "kind": "card",
     "id": "g-910",
-    "title": "Hematopoyesis",
+    "title": "Hematopoyesis y clonalidad",
     "points": [
-      "Célula madre :",
-      "1. serie mieloide (todas las líneas sanguíneas)",
-      "2. serie linfoide (linfocitos) CLONALIDAD: que vienen de un origen clonal , Monoclonal: Leucemia, Policlonal: Infección. Se identifica con citometría ( se puede hacer en extendido)."
+      "La célula madre da dos líneas: mieloide (glóbulos rojos, plaquetas, neutrófilos, monocitos) y linfoide (linfocitos).",
+      "Monoclonal (todas las células vienen de una sola): cáncer (leucemia, linfoma). Policlonal (de muchas): reacción normal, como una infección.",
+      "La clonalidad se demuestra con citometría de flujo."
     ]
   },
   {
     "kind": "card",
     "id": "g-911",
-    "title": "Leucemias",
+    "title": "Leucemias: lo básico",
     "points": [
-      "Neoplasia de la medula osea. pueden ser de linea mieloide (varias lineas sanguineas al tiempo) y linfoide",
-      "AGUDAS (de celulas inmaduras, blastos >20 % ) y CRÓNICAS ( de celulas maduras, blastos <20%) . por lo tanto lo más alterado es el hemograma, puede tener adenopatias y hepatoesplenomegalia pero no es común"
+      "Cáncer de la médula ósea, de línea mieloide o linfoide.",
+      "Aguda: células inmaduras (blastos ≥20 %); enfermedad rápida y grave.",
+      "Crónica: células maduras (blastos <20 %); evolución lenta.",
+      "Lo que más se altera es el hemograma; puede haber ganglios y bazo grandes."
     ]
   },
   {
     "kind": "card",
     "id": "g-912",
-    "title": "Leucemias",
+    "title": "Leucemias agudas y crónicas: diferencias",
     "points": [
-      "Se dividen en linfoblásticas y mieloides.",
-      "1. LEUCEMIAS AGUDAS: tríada fiebre + sangrado + citopenias/citosis por freno de la maduración con proliferación de blastos (>20%) (linfoides o mieloides).",
-      "LEUCEMIAS CRÓNICAS: proliferación clonal de células maduras",
-      "Importante: normoblastos, promielocitos, mielocitos, metamielocitos y bandas son formas normales de maduración, NO son blastos. 2.1",
-      "LEUCEMIA LINFOCÍTICA CRÓNICA (LLC): >65 años, síntomas B, linfocitosis aislada sin blastos, puede asociar anemia y trombocitopenia; diagnóstico : citometría de flujo en sangre periférica. 2.2",
-      "LEUCEMIA MIELOIDE CRÓNICA (LMC): adultos jóvenes, asociada al cromosoma Filadelfia t(9;22), presenta citosis de la línea mieloide + basofilia (hallazgo característico) y esplenomegalia; puede progresar a fase acelerada/blástica cuando los blastos son 10–29% o las plaquetas >1 millón.",
-      "LEUCEMIAS AGUDAS ESPECÍFICAS: LMA (más frecuente en adultos) con bastones de Auer en el extendido; LLA (más frecuente en niños) con infiltración al SNC. Ambas pueden producir leucostasis por hiperleucocitosis con compromiso microvascular (cerebral, pulmonar, priapismo, isquemia distal); manejo:",
-      "1. ABCD.",
-      "2. Hidratación agresiva.",
-      "3. Evitar diuréticos.",
-      "4. Transfundir solo si Hb <6 g/dL.",
-      "5. Quimioterapia con profilaxis para síndrome de lisis tumoral.",
-      "Citorreducción: LMA: hidroxiurea; LLA: hidroxiurea + corticoides. 3.1",
-      "LEUCEMIA PROMIELOCÍTICA AGUDA (LPA): emergencia hematológica con citosis de promielocitos/blastos y alto riesgo de CID; soporte :crioprecipitados, mantener plaquetas >30.000/µL e INR <1,5, e iniciar ATRA (ácido transretinoico, vitamina A) de inmediato",
-      "PERLA: hasta 30% de las leucemias agudas pueden no mostrar blastos en el extendido periférico (leucemias empaquetadas)"
+      "Agudas: fiebre (infecciones), sangrado y anemia por falta de células normales, con blastos >20 %.",
+      "Mielocitos, metamielocitos y cayados son formas normales de maduración, no blastos.",
+      "Leucemia linfoide crónica: >65 años, linfocitosis sin blastos; diagnóstico con citometría.",
+      "Leucemia mieloide crónica: cromosoma Filadelfia t(9;22); leucocitosis con todas las formas mieloides, basófilos altos y bazo grande. Puede pasar a fase acelerada o blástica.",
+      "Leucemia mieloide aguda: la más frecuente en adultos; bastones de Auer. Linfoblástica aguda: la más frecuente en niños; puede ir al sistema nervioso.",
+      "Leucostasis (leucocitos muy altos que tapan vasos: cerebro, pulmón, priapismo): urgencia; hidratar, evitar diuréticos, no transfundir glóbulos rojos de entrada y reducir leucocitos (citorreducción)."
     ]
   },
   {
@@ -124,19 +109,19 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-913",
     "title": "Neoplasias mieloproliferativas crónicas",
     "points": [
-      "Leucemia Mieloide Crónica: se sospecha con leucocitosis >50.000 con formas inmaduras se confirma con el gen de fusión BCR-ABL1; Policitemia Vera: luego de descartar la entidad anterior con Hb >16.5 (hombres) >16.0 (mujeres), mutación JAK2 positiva y la eritropoyetina disminuida; Trombocitemia Esencial se determina al excluir ambas patologías , y trombocitosis aislada sostenida mayor o igual a 450.000 plaquetas ,eritropoyetina normal mediante mutaciones en JAK2, Calreticulina o el receptor de trombopoyetina, junto a una biopsia de médula ósea con proliferación megacariocítica exclusiva.",
-      "En la PV, los síntomas surgen del aumento de la viscosidad sanguínea debido a la elevada masa de glóbulos rojos, lo que provoca cefalea, mareos y tez rubicunda. la TE pueden presentar dolor ardiente en los pies y las manos que puede estar asociado con eritema y calor (eritromelalgia)."
+      "Leucemia mieloide crónica: leucocitos >50.000 con formas inmaduras; se confirma con BCR-ABL1. Tratamiento: imatinib.",
+      "Policitemia vera: Hb >16,5 (hombre) o >16 (mujer), JAK2 positivo y eritropoyetina baja. Cefalea, mareo, cara roja, picor tras la ducha. Sangrías y aspirina.",
+      "Trombocitemia esencial: plaquetas ≥450.000 mantenidas, con JAK2, CALR o MPL, tras descartar las otras. Dolor ardiente y rojo en manos y pies (eritromelalgia). Aspirina."
     ]
   },
   {
     "kind": "card",
     "id": "g-914",
-    "title": "Leucemia aguda",
+    "title": "Leucemia aguda: manejo inicial",
     "points": [
-      "En adultos: leucemia miolede niños: leucemia linfoide",
-      "Manejo: urgencia vital cuando: soporte trasnfusional: hb < =7 o < =8 con ax c.v ; plaquetas < 50 mil con sangrado o < 10 mil sin sangrado",
-      "Si alteración tiempos ( plasma o crioprecipitados)",
-      "Prevención lisis tumoral: hidratación, g.u > 2.5 cc/kg(h , alopurinol para el control del acido urico."
+      "En adultos predomina la mieloide; en niños, la linfoide.",
+      "Es urgencia. Transfundir glóbulos rojos si Hb ≤7 (≤8 si hay enfermedad cardiovascular); plaquetas si <10.000 sin sangrado o <50.000 con sangrado. Plasma o crioprecipitado si hay alteración de la coagulación.",
+      "Prevenir el síndrome de lisis tumoral: hidratación abundante (orina >2,5 ml/kg/h) y alopurinol (o rasburicasa si el riesgo es alto)."
     ]
   },
   {
@@ -144,80 +129,56 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-915",
     "title": "Leucemia linfocítica crónica (LLC)",
     "points": [
-      "Adultos >65 años, puede tener síntomas B , hemograma . cuyo diagnóstico se confirma con una linfocitosis absoluta persistente (>5000/µL por más de 3 meses) y la demostración de clonalidad (monoclonal) de los linfocitos B en sangre periférica mediante citometría de flujo."
+      "La leucemia más frecuente en adultos mayores (>65 años); a menudo se descubre por un hemograma.",
+      "Diagnóstico: linfocitos B >5.000/µl durante >3 meses y clonalidad demostrada por citometría de flujo.",
+      "Puede dar síntomas B, ganglios, anemia y plaquetas bajas. Solo se trata si hay síntomas o progresa."
     ]
   },
   {
     "kind": "card",
     "id": "g-916",
-    "title": "Linfoma",
+    "title": "Linfomas",
     "points": [
-      "Neoplasia maligna del sistema linfático, por proliferación ( linfocitos b, t y nk). son potencialmente curables. CLASIFICACION:",
-      "PRINCIPAL:",
-      "1.HODGKIN (15%): ( célula reed stemberg ( linfocito B inmaduro)) : paciente joven con síntomas b y ganglios cervicales.",
-      "2. NO HODGKIN ( 85%): células B (85%), T (15%) y NK (1%). 2.1. células B ( difuso ( 46%), folicular (25%) , manto, marginal, burkitt (asociado a vih), plasmablastico ( 3%))",
-      "Mejor pronostico. 2.2 -células T , mal pronostico.",
-      "OTRA CLASIFICACION:",
-      "1. INDOLENTE BAJO GRADO:",
-      "1. waldestrom ( hiperviscosidad, urticaria espontanea)",
-      "2. marginal ( mucosas, MALT gastro por h.p u ocular asociado a clamidia)",
-      "3. folicular( crónico, no se cura pero buen pronostico) .",
-      "2. AGRESIVOS ALTO GRADO:",
-      "1. B difuso(agresivo, pero curable)",
-      "2. Burkitt ( asociado a VIH, linfocitos en cielo estrellado) 3- linfomas T.",
-      "CLASIFICACION EXTENSIÓN DE LINFOMAS:",
-      "Estadio 1: 1 grupo nodal por encima del diafragma - estadio 2 : 2 grupos o mas por encima del diafragma",
-      "Estadio 3: grupo nodal por arriba y debajo del diafragma.",
-      "Estadio 4: enfermedad a distancia ( son curables).",
-      "SOSPECHA:",
-      "1. SÍNTOMAS:",
-      "Síntomas B (fiebre inexplicable persistente o recurrente , sudoración profusa nocturna, pérdida de peso >= 10 % en 6 meses)",
-      "Prurito generalizado , ganglios dolorosos al tomar alcohol ( hodgkin) - 2. INFILTRACIÓN: adenopatías (móviles cauchosas, esplenomegalia ,snc , GI, cava superior , serosa , citopenias son raras)",
-      "Linfomas nasofaríngeos ( por N.K que se asocia a v.ebtein barr )",
-      "Linfoma su mandibular se llama Endémico (niños asociado a veb).",
-      "ENFOQUE:",
-      "1. descartar compromiso grave ( 1. cava superior",
-      "2. compresión medular",
-      "3. encefálica)",
-      "2. descartar lisis tumoral",
-      "3.identificar sitio para biopsia escisión. (evitar ganglios inguinales, no hacer aguja o trucut. se prefiere cervical o axilar y mayor de 1.5 cm)",
-      "4. si hay derrame pedir citometria de líquidos.",
-      "5. descartar siempre vih, hepatotropos, sifilis, htlv - realizar ecocardiograma",
-      "Esteroides solo cuando ya se tomo muestra."
+      "Cáncer de los linfocitos; muchos se curan.",
+      "Hodgkin (15 %): células de Reed-Sternberg; joven con ganglios en el cuello y síntomas B.",
+      "No Hodgkin (85 %), la mayoría de células B. Indolentes: folicular (crónico, buen pronóstico), de zona marginal (MALT gástrico por H. pylori), Waldenström (hiperviscosidad). Agresivos: B difuso de células grandes (el más frecuente, curable), Burkitt (VIH, cielo estrellado). Los de células T tienen peor pronóstico.",
+      "Síntomas B: fiebre sin causa, sudoración nocturna intensa y pérdida de >10 % del peso.",
+      "Estadios (Ann Arbor): I una región ganglionar; II dos o más en el mismo lado del diafragma; III a ambos lados; IV órganos a distancia.",
+      "Diagnóstico: biopsia de ganglio completo (no PAAF) y PET-TC."
     ]
   },
   {
     "kind": "card",
     "id": "g-917",
-    "title": "Síndrome de Richter",
+    "title": "Linfomas especiales",
     "points": [
-      "Trasformación de linfoma folicular a célula b difuso.",
-      "Linfoma B primario mediastinal ( masa mediastinal con ldh y acido urico elevado en mujer )",
-      "Linfoma B SNC ( vih y lesion primaria snc)",
-      "Micosis fungoide: linfoma cutáneo primario de células T. maculas o placa con prurito en zona NO foto expuesta, algunos se hace leucemia Síndrome seazary , se confunde con hongo, no cura y mueren por eritrodermia.",
-      "Linfoma HTLV : linfoma de células T, adenopatías generalizadas, con síntomas B intensos, muy mal pronostico, asociado a HTLV-1.",
-      "Linfoma asociados a VIH: CD4 > 200 (hodgkin, B , burkitt) , <200 ( primario SNC , plasmablastico) , < 50 ( serosas, primario de efusion)"
+      "Síndrome de Richter: una leucemia linfocítica crónica se transforma en un linfoma B difuso agresivo.",
+      "Linfoma B primario mediastinal: mujer joven con masa en el mediastino.",
+      "Linfoma primario del sistema nervioso: en VIH con CD4 muy bajos.",
+      "Micosis fungoide: linfoma T de la piel; placas que pican en zonas no expuestas al sol (se confunde con hongos). Síndrome de Sézary: forma con eritrodermia y células en sangre.",
+      "Linfoma/leucemia T del adulto por HTLV-1: ganglios, hipercalcemia y lesiones de piel; mal pronóstico.",
+      "En VIH: con CD4 >200 Hodgkin, B difuso y Burkitt; con CD4 <200 primario de sistema nervioso y plasmablástico; <50 linfoma de cavidades."
     ]
   },
   {
     "kind": "card",
     "id": "g-918",
-    "title": "Mieloma multiple",
+    "title": "Mieloma múltiple",
     "points": [
-      "Línea linfoide genera linfocitos b y t. genera plasmocitos",
-      "Se diferencia de la leucemia linfocitca porque esta se da en los plasmocitos ( parte final de maduración linfocitos ) Estos son capaces de generar anticuerpos, en ambiente patológico producen demasiado citoquinas osteoliticas",
-      "Sospecha: sn crab",
-      "C calcio R renal, A anemia B bone",
-      "Infecciones por encapsulados",
-      "Paraclínicos: identificar proteínas monoclonar, eslectroforesis de proteína, inmunofijacion sérica y suero., tac: para compromiso oseo, rx simple de calota y huesos largos, tto: hidratación, acido zolendronico solo si hipercalcemia, radioterapia"
+      "Cáncer de las células plasmáticas (las que fabrican anticuerpos).",
+      "Sospechar con CRAB: Calcio alto, insuficiencia Renal, Anemia y lesiones óseas (Bone) líticas. Además infecciones por gérmenes encapsulados.",
+      "Estudio: electroforesis e inmunofijación de proteínas en sangre y orina, cadenas ligeras libres, biopsia de médula y TAC de cuerpo entero de baja dosis.",
+      "Tratamiento: quimioterapia combinada (± trasplante autólogo), bisfosfonatos para el hueso, hidratación y radioterapia para lesiones dolorosas."
     ]
   },
   {
     "kind": "card",
     "id": "g-924",
-    "title": "Perfil férrico son",
+    "title": "Valores normales del perfil de hierro",
     "points": [
-      "Reticulocitos 0.5–2.5 %, ADE (RDW) 11.5–14.5 %, saturación de transferrina 20–50 %, hierro sérico 60–170 µg/dL ferritina 30–400 ng/mL"
+      "Reticulocitos 0,5-2,5 %. ADE (RDW) 11,5-14,5 %.",
+      "Hierro sérico 60-170 µg/dl. Saturación de transferrina 20-50 %.",
+      "Ferritina 30-400 ng/ml (es reactante de fase aguda: sube con la inflamación)."
     ]
   },
   {
@@ -225,55 +186,43 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-925",
     "title": "Hemograma normal",
     "points": [
-      "Leu: 4 - 10 mil , Neu: 1,5 a 6.5 mil, Linf: 1,2 a 4 mil, monocitos: 150 - 900 , eos: 0- 500, bas: 0- 200: h 13- 16.5 , m 12 - 16 , htco h 39- 49 m 35 - 48% ; vcm 80-100, Plaq 150- 450 mil. Vcp 7- 11",
-      "La desviación a la izquierda se da cuando hay neutrófilos inmaduros",
-      "Blastos: celulas inmaduras ; es diferente a linfocitos atípicos"
+      "Leucocitos 4.000-10.000; neutrófilos 1.500-6.500; linfocitos 1.200-4.000; monocitos 150-900; eosinófilos <500; basófilos <200.",
+      "Hemoglobina: hombres 13-16,5; mujeres 12-16 g/dl. Hematocrito: hombres 39-49 %; mujeres 35-48 %.",
+      "VCM 80-100 fl. Plaquetas 150.000-450.000.",
+      "Desviación a la izquierda: aparecen neutrófilos inmaduros (cayados), típico de infección bacteriana.",
+      "Blastos (malignos, inmaduros) no son lo mismo que linfocitos atípicos (reactivos, en virus)."
     ]
   },
   {
     "kind": "card",
     "id": "g-926",
-    "title": "Eosinofilia",
+    "title": "Eosinofilia, monocitosis, policitemia y pseudotrombocitopenia",
     "points": [
-      "Mayor de 500 . causas:",
-      "1.parasitos (helmintos : toxocara, áscaris, stronguloides, fasciola)",
-      "2.alergias 3. vasculitis churg straus, esofagitis 4. tumores ( hodgkin, leucemia eosinofilica)",
-      "5. clonales por mutaciones . síndrome hiper esonifilico: eos > 1500, > de 1 mes, con daño organico.",
-      "MONOCITOSIS: > 900 , causa: infecciones intracelulares crónicas ( tbc, leismaniasis, brucelosis, endocarditis, sifilis, cmv, vih, ebc, listeria). leucemia mielomonocitica crónica: monocitos monoclonal crónica.",
-      "POLICITEMIA:",
-      "1. absoluta: por aumento de glóbulos rojos. ( puede ser primaria: por mutación clonal, secundaria: factor que aumenta glóbulos rojos policlonal como hipoxia, esteroides, aumento de la EPO)",
-      "2. relativa: disminución del plasma.",
-      "PSEUDOTROMBOCITOPENIA: anticuerpos que se activan con anticoagulantes de frasco y estimulan agregación plaquetaria. causa una falsa trombocitopenia, se sospecha cuando es discordarte a la clínica",
-      "Para descartar: se solicita tubo en citrato, extendido de sangre periférica. con conteo manual."
+      "Eosinofilia (>500): parásitos (Toxocara, Ascaris, Strongyloides), alergias, fármacos, vasculitis (Churg-Strauss), tumores (Hodgkin). Síndrome hipereosinofílico: >1.500 durante >1 mes con daño de órganos.",
+      "Monocitosis (>900): infecciones crónicas (tuberculosis, endocarditis, brucelosis) y leucemia mielomonocítica crónica.",
+      "Policitemia absoluta: más glóbulos rojos (vera, o secundaria a hipoxia o exceso de eritropoyetina). Relativa: falta de plasma (deshidratación).",
+      "Pseudotrombocitopenia: las plaquetas se agrupan en el tubo con EDTA y el contador cuenta pocas. Sospechar si no cuadra con la clínica; repetir en tubo con citrato y mirar el frotis."
     ]
   },
   {
     "kind": "card",
     "id": "g-927",
-    "title": "Anemias",
+    "title": "Anemias microcíticas",
     "points": [
-      "ANEMIA MICROCÍTICA → VCM bajo → 1.Ferropenica → Ferritina <30",
-      "2. Enfermedad crónica → Ferritina <}- 100 .",
-      "3. beta talasemia y la anemia microcítica por deficiencia de hierro son las mas comunes en niños. Se realiza índice de Mentzer (VCM/recuento de eritrocitos) Si < 13 se sospecha de B-talasemia ; Si > 13 anemia por deficiencia de hierro",
-      "Anemia por inflamación crónica Reticulocitos bajos, hierro bajo, fijación baja o normal, ferritina normal o elevada",
-      "El gold estándar de anemia ferropenia: tinción azul de Prusia en medula ósea. ( no se hace), el dx se realiza con ferritina."
+      "Ferropénica: ferritina <30 (la prueba clave).",
+      "De enfermedad crónica: ferritina normal o alta, hierro bajo, transferrina normal o baja.",
+      "Talasemia: microcitosis con muchos glóbulos rojos. Índice de Mentzer (VCM / número de glóbulos rojos en millones): <13 sugiere talasemia; >13, ferropenia.",
+      "El estándar de oro de la ferropenia es la tinción de hierro en médula, pero en la práctica basta la ferritina."
     ]
   },
   {
     "kind": "card",
     "id": "g-928",
-    "title": "Hierro endovenoso indicaciones",
+    "title": "Hierro: cuándo intravenoso y metas",
     "points": [
-      "Intolerancia FE oral",
-      "Refractarios al FE oral (defectos absorción, IRIDA, no mejoría 4 semanas de tto oral)",
-      "Anemia severa hb <7-8 - 2da y 3era trimestre de embarazo",
-      "Tratamiento con EPO",
-      "Sangrados crónicos difíciles de controlar",
-      "Otros, ( f.c, ERC) por adición de enf, inflamatorio que aumenta hepcidina y hace que el hierro oral no se absorba. EL TTO ORAL SE DA POR 3 -6 MESES. METAS FERRITINA:",
-      "Hb normal entre 4-6 semanas",
-      "Ferritina > de 50",
-      "En sindrome piernas inquietas > 100",
-      "Ferritina en alopecias > 75. ; ERC ≥100 ng/mL (≥200 ng/mL si está en diálisis); en insuficiencia cardíaca y enfermedades inflamatorias crónicas : ≥100 ng/mL (considerando deficiencia si <100 o 100–299 con saturación <20%); y en embarazo : >30 ng/mL, idealmente >50 ng/mL."
+      "Hierro oral de entrada, 3-6 meses (hasta rellenar los depósitos).",
+      "Intravenoso si: no tolera el oral, no responde en 4 semanas o no lo absorbe (celiaquía, cirugía bariátrica), anemia grave, embarazo en 2.º-3.er trimestre, uso de eritropoyetina, sangrado crónico, enfermedad renal crónica o insuficiencia cardiaca.",
+      "Metas: Hb normal en 4-6 semanas; ferritina >50 en general; >100 en piernas inquietas, enfermedad renal e insuficiencia cardiaca (>200 en diálisis); >75 en alopecia; >30-50 en el embarazo."
     ]
   },
   {
@@ -281,75 +230,60 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-929",
     "title": "Anemia ferropénica en pacientes con cáncer",
     "points": [
-      "En pacientes con cáncer y ERC se indica manejo con hierro Intravenoso ,La eritropoyetina se contraindica en CA activo por riesgo de progresion tumoral asociada"
+      "Con cáncer o enfermedad renal: hierro intravenoso (el oral se absorbe mal por la inflamación).",
+      "La eritropoyetina se evita en cáncer activo con intención curativa (puede favorecer el crecimiento del tumor y la trombosis)."
     ]
   },
   {
     "kind": "card",
     "id": "g-931",
-    "title": "Anemia normocítica - ADE elevado o reticulocitos elevados…",
+    "title": "Anemia normocítica: cuándo pensar en hemólisis",
     "points": [
-      "ANEMIA NORMOCÍTICA",
-      "ADE elevado o reticulocitos elevados y LDH elevada (ADE ↑ / reticulocitos ↑ / LDH ↑)→ Se piensa en anemia hemolítica"
+      "Si la anemia normocítica tiene reticulocitos altos, ADE alto y LDH alta, pensar en hemólisis.",
+      "Completar con bilirrubina indirecta (alta), haptoglobina (baja) y frotis."
     ]
   },
   {
     "kind": "card",
     "id": "g-932",
-    "title": "Anemia macrocítica",
+    "title": "Anemia macrocítica y hemólisis",
     "points": [
-      "Anemia Respuesta Medular: Se debe calcular el IPR para determinar si la anemia es regenerativa (IPR ≥ 2) o arregenerativa (IPR < 2), se debe hacer sospechar hemólisis (que es regenerativa) o deficiencia de B12/folatos (que es arregenerativa)",
-      "DEFICIENCIA DE B12: Puede causar pancitopenia, síntomas neuropsiquiátricos y elevación de la LDH. La LDH se eleva no por hemólisis periférica, sino por eritropoyesis ineficaz (apoptosis intramedular de precursores eritroides)",
-      "El IPR será bajo",
-      "ANEMIA HEMOLÍTICA: Típicamente cursa con un IPR elevado, LDH elevada y haptoglobina baja",
-      "CLASIFICACION (Autoinmunes y Microangiopáticas).",
-      "Anemia Hemolítica Autoinmune (AHAI): Test de Coombs Directo",
-      "Si es positivo, confirma la presencia de anticuerpos en la superficie de los eritrocitos",
-      "El frotis de sangre periférica puede mostrar esferocitos, pero el Coombs es crucial para diferenciarla de la esferocitosis hereditaria (Coombs negativo).",
-      "Anemia Hemolítica Microangiopáticas (AHMA): Se sospecha ante la tríada de anemia hemolítica con Coombs negativo, trombocitopenia severa y disfunción orgánica (neurológica o renal)",
-      "El hallazgo característico en el frotis de sangre periférica son los esquistocitos (eritrocitos fragmentados).",
-      "Los neutrófilos hipersegmentados indica deficiencia vit b 12",
-      "La medición de ácido metilmalónico (AMM) sérico es un marcador sensible y específico para confirmar deficiencia, especialmente cuando los niveles de B12 son limítrofes (200–300 pg/mL) y no se eleva por deficiencia de acido folico.¨ homocisteina: se eleva en deficiencia de folatos",
-      "CAUSAS DEFICIENCIA V B12 : anemia perniciosa : autoinmunidad de las células parietales, y se puede convertir en tumor neuroendocrino. por eso si paciente mayor de 60 años se solicita endoscopia. dx: se miden anticuerpos contra factor intrínseco y contra células parietales ( lo ideal es medirlo después de la suplencia). el tto es vit b12.",
-      "ANEMIA POR DÉFICIT DE FOLATO: buscar también deficiencia de b12, porque esta contribuye al metabolismo del folato en neuronas.",
-      "Anticuerpos coombs directos, igG ( calientes: linfomas, virales cronicas, les, farmacos ), igM o c3d (fríos: infecciones como mononucleosis)",
-      "ESFEROCITOCIS: se da por anemia hemolítica, o hereditaria."
+      "Calcular el índice de producción reticulocitaria: ≥2 regenerativa (la médula responde: hemólisis o sangrado); <2 arregenerativa (déficit de B12 o folato, médula).",
+      "Déficit de B12: anemia o pancitopenia, síntomas neurológicos y LDH alta (por eritropoyesis ineficaz en la médula).",
+      "Hemólisis: reticulocitos y LDH altos, haptoglobina baja.",
+      "Autoinmune: Coombs directo positivo (esferocitos en el frotis). La esferocitosis hereditaria tiene Coombs negativo.",
+      "Microangiopática: Coombs negativo, plaquetas bajas y esquistocitos (glóbulos rojos rotos) en el frotis, con daño renal o neurológico (PTT, SHU)."
     ]
   },
   {
     "kind": "card",
     "id": "g-933",
-    "title": "Hemólisis extravascular",
+    "title": "Hemólisis extravascular frente a intravascular",
     "points": [
-      "Mecanismo: Secuestro y destrucción de eritrocitos por macrófagos del bazo e hígado. Muy frecuente en procesos autoinmunes. . Clínica/laboratorio clave: Bilirrubina indirecta ↑,NO hay hemoglobinuria. Confirmación: Test de Coombs directo positivo → indica hemólisis autoinmune.",
-      "HEMÓLISIS INTRAVASCULAR → Mecanismo: Destrucción directa dentro de los vasos sanguíneos, por ejemplo: Hemoglobinuria paroxística nocturna, Microangiopatía (Púrpura trombótica trombocitopénica, SHU), Pròtesis valvulares mecánicas, Reacciones transfusionales Clínica/laboratorio clave: Hemoglobinemia y hemoglobinuria"
+      "Extravascular: los glóbulos rojos se destruyen en el bazo y el hígado; bilirrubina indirecta alta, esplenomegalia, sin hemoglobina en orina. Típica de las autoinmunes (Coombs positivo).",
+      "Intravascular: se rompen dentro de los vasos; hemoglobina en sangre y orina (orina oscura). Causas: hemoglobinuria paroxística nocturna, PTT o SHU, prótesis valvulares, reacción transfusional."
     ]
   },
   {
     "kind": "card",
     "id": "g-934",
-    "title": "Anemia en enfermedad renal crónica (ERC)",
+    "title": "Anemia en la enfermedad renal crónica",
     "points": [
-      "Diagnóstico de Exclusión: Antes de atribuir la anemia a la falta de eritropoyetina, se debe descartar deficiencia de hierro",
-      "Deficiencia Funcional de Hierro: por la hepcidina se considera deficiencia tratable una ferritina < 500 ng/mL y una saturación de transferrina < 30%",
-      "Tratamiento: Se debe administrar hierro intravenoso (el hierro oral es ineficaz)",
-      "La eritropoyetina solo se inicia una vez que los depósitos de hierro son adecuados."
+      "Antes de culpar a la falta de eritropoyetina, descartar déficit de hierro.",
+      "En la enfermedad renal, el hierro \"funcional\" falta aunque la ferritina sea normal: tratar si ferritina <500 y saturación <30 %.",
+      "Hierro intravenoso (el oral funciona mal).",
+      "La eritropoyetina solo cuando el hierro está repuesto (iniciar con Hb ≤10, meta ≤11,5)."
     ]
   },
   {
     "kind": "card",
     "id": "g-935",
-    "title": "La hemosiderosis es la acumulación excesiva de hierro…",
+    "title": "Hemosiderosis y hemocromatosis",
     "points": [
-      "La HEMOSIDEROSIS es la acumulación excesiva de hierro en forma de hemosiderina en los tejidos, sin daño orgánico significativo inicial (a diferencia de la hemocromatosis)",
-      "Se da por sobrecarga férrica secundaria (transfusiones múltiples, hemólisis crónica, anemias dependientes de transfusión (talasemia), o hemorragias repetidas)",
-      "Puede detectarse por ferritina elevada y aumento de saturación de transferrina, y confirmarse con estudios de imagen o biopsia con tinción de azul de Prusia",
-      "El manejo : consiste en tratar la causa y, si hay sobrecarga significativa, usar quelantes de hierro (deferoxamina, deferasirox)",
-      "La HEMOCROMATOSIS es un trastorno por sobrecarga crónica de hierro con daño orgánico progresivo, de origen genético que produce aumento de absorción intestinal de hierro",
-      "El hierro se deposita en hígado (cirrosis), páncreas (diabetes), corazón (miocardiopatía), piel (hiperpigmentación “bronzeada”) y articulaciones, la clásica triada de cirrosis, diabetes e hiperpigmentación",
-      "En laboratorio hay ferritina elevada y saturación de transferrina >45–50%",
-      "El diagnóstico : pruebas genéticas y, en algunos casos, biopsia hepática",
-      "El tratamiento: consiste en flebotomías periódicas (de elección) y, si no son posibles, quelantes de hierro."
+      "Hemosiderosis: depósito de hierro en tejidos sin daño importante al principio; por transfusiones repetidas, hemólisis crónica o talasemia. Ferritina y saturación altas. Quelantes (deferoxamina, deferasirox) si hay sobrecarga importante.",
+      "Hemocromatosis: enfermedad genética (HFE) que absorbe demasiado hierro y daña órganos: hígado (cirrosis), páncreas (diabetes), corazón, piel bronceada y articulaciones.",
+      "Saturación de transferrina >45-50 % con ferritina alta; confirmar con estudio genético.",
+      "Tratamiento de la hemocromatosis: flebotomías (sangrías) periódicas."
     ]
   },
   {
@@ -357,96 +291,87 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-942",
     "title": "Neutropenia febril",
     "points": [
-      "(solo en pacientes oncologicos) Fiebre > 38.3°C en 1 toma o 38°C persistente por 1 hora + neutrófilos 500 (<1500 es neutropenia )",
-      "Se debe tomar hemocultivos inmediatamente 2. iniciar terapia antibiótica empírica 3",
-      "Solicitar paraclínicos según foco infeccioso que se sospeche . Se sugiere antibióticos contra pseudomona aeruginosa —-> Cefalosporinas 4ta generación, piperacilina tazobactam, meropenem + Vancomicina (si se sospecha de gram positivos) .Si fiebre persistente se solicita galactomanano en búsqueda de aspergilosis . si esta afiebre (48 h) y mejoro neutropenia, puedo retirar antibiotico, si tiene neutropenia retirar antibiotico si ya va 5-7 dias sin fiebre",
-      "Si encontre foco infeccioso lo trato según lo que encontre; si sigue con fiebre se hace tacar y considero infección fúngica.",
-      "FACTORES ESTIMULANTES DE COLONIAS: Aumentan número y maduración de neutrófilos; FILGRASTIM 5 U/kg (sirve para momento agudo de neutropenia febril), PEGFILIGASTRIM (Para prevención primaria post quimioterapia)",
-      "No impactan en supervivencia. Indicaciones:",
-      "Se recomienda si hay factores de riesgo grave, (sepsis, mayor 65 años, neu < 100, neumonía, infección fúngica, hospitalizados con fiebre)"
+      "Paciente oncológico con fiebre ≥38,3 °C (o ≥38 durante 1 hora) y neutrófilos <500.",
+      "Es urgencia: hemocultivos y antibiótico antipseudomónico en la primera hora (cefepima, piperacilina-tazobactam o meropenem). Añadir vancomicina si se sospechan grampositivos (catéter, piel, inestabilidad).",
+      "Fiebre que persiste: buscar hongos (galactomanano, TAC de tórax).",
+      "Retirar el antibiótico si lleva 48 h sin fiebre y se recuperaron los neutrófilos (o tras 5-7 días afebril aunque siga neutropénico).",
+      "Filgrastim: en casos de alto riesgo (sepsis, >65 años, neutrófilos <100, neumonía, infección fúngica). Pegfilgrastim para prevenir tras la quimioterapia."
     ]
   },
   {
     "kind": "card",
     "id": "g-946",
-    "title": "Anticoagulación en falla renal en diálisis",
+    "title": "Apixabán en insuficiencia renal y diálisis",
     "points": [
-      "Dosis de apixabán: dosis estándar (5 mg cada 12 horas) se reduce 2.5 mg cada 12 h ,si cumple 2 de 3 criterios: edad ≥80 años, peso ≤60 kg o creatinina ≥1.5 mg/dL"
+      "Dosis habitual en FA: 5 mg cada 12 h.",
+      "Bajar a 2,5 mg cada 12 h si cumple 2 de 3: ≥80 años, ≤60 kg o creatinina ≥1,5 mg/dl."
     ]
   },
   {
     "kind": "card",
     "id": "g-947",
-    "title": "Alteración tiempos de coagulación",
+    "title": "Qué indica cada prueba de coagulación alterada",
     "points": [
-      "Pt prolongado → Warfarina, déficit de vitamina K ,Ptt prolongado → Hemofilias Plaquetas bajas → Síndrome purpúricos, CID"
+      "TP (o INR) prolongado: warfarina, déficit de vitamina K, hepatopatía (vía extrínseca, factor VII).",
+      "TTPa prolongado: heparina, hemofilias (factores VIII y IX), anticoagulante lúpico.",
+      "Ambos prolongados: CID, hepatopatía grave, déficit de factores comunes.",
+      "Plaquetas bajas: púrpuras trombocitopénicas, CID."
     ]
   },
   {
     "kind": "card",
     "id": "g-949",
-    "title": "Reacciones adversas a transfusión de sangre",
+    "title": "Reacciones a la transfusión",
     "points": [
-      "TRALI (Lesión pulmonar aguda asociada a transfusión.) : Se caracteriza por lesión pulmonar aguda potencialmente mortal, causa disnea, tos, hipotensión, edema pulmonar no cardiogénico Tratamiento: Suspender transfusión y traslado a UCI para requerimiento de ventilación mecánica .",
-      "TACO (Sobrecarga circulatoria asociada a transfusión) Se caracteriza por sobrecarga de volumen por lo que se manejo con furosemida 3.Reacción hemolítica aguda : Hemólisis en transfusión sanguíneo en los primeras 24 horas causado por incompatibilidad ABO con coombs positivo .Tratamiento → LEV a gasto urinario 1cc/kg/hora + transfusión nueva . Si más de 24 horas es tardía"
+      "TRALI (lesión pulmonar aguda): en las primeras 6 h, disnea, hipoxia, hipotensión y edema pulmonar no cardiogénico. Parar la transfusión, soporte respiratorio (a menudo UCI). No dar diuréticos.",
+      "TACO (sobrecarga de volumen): disnea con hipertensión y edema pulmonar cardiogénico. Parar y dar furosemida.",
+      "Reacción hemolítica aguda: incompatibilidad ABO (error de identificación); fiebre, dolor lumbar, hipotensión, orina oscura, Coombs positivo. Parar, líquidos para mantener orina >1 ml/kg/h y avisar al banco de sangre.",
+      "Reacción hemolítica tardía: días después."
     ]
   },
   {
     "kind": "card",
     "id": "g-950",
-    "title": "Hipocalcemia inducida por citrato",
+    "title": "Hipocalcemia por citrato en transfusión masiva",
     "points": [
-      "Sospechar en caso de hipotensión refractaria en transfusión masiva, encontrando prolongación del QTc y espasmos musculares sugiere",
-      "Cada unidad de concentrados eritrocitarios o plasma fresco congelado contiene aproximadamente 3 g de citrato, actúa como anticoagulante y quela el calcio ionizado, reduciendo sus niveles séricos",
-      "Se manifesta cuando el calcio ionizado <0,9 mmol/L. . manejo: hipocalcemia sintomática debe tratarse con cloruro de calcio o gluconato de calcio y monitorización."
+      "Cada unidad de glóbulos rojos o plasma lleva citrato, que atrapa el calcio.",
+      "En transfusión masiva: hipotensión que no responde, QT largo y espasmos musculares (calcio iónico <0,9 mmol/l).",
+      "Tratamiento: cloruro o gluconato de calcio intravenoso y vigilar el calcio."
     ]
   },
   {
     "kind": "card",
     "id": "g-958",
-    "title": "Anticoagulación y anti agregación en sangrado",
+    "title": "Sangrado en pacientes anticoagulados o antiagregados",
     "points": [
-      "SANGRADO MAYOR - 1. Warfarina: 1ra línea: CCP4 (Complejo protrombina) y vitamina k (2,7,9,10) - 2da línea: Plasma fresco y vitamina k 2. Apixaban – rivaroxaban: 1ra línea: Andexanet alfa , 2da línea: CCP4",
-      "3. Dabigatrán: 1ra línea: Idarucizumab . SANGRADO NO MAYOR O MENOR: Requiere hospitalización, intervención o transfusión: Omitir dosis de anticoagulante. Considerar suspender P2Y12. Si tiene warfarina considerar vitamina k. Si no requiere hospitalización: Reevaluar dosis"
+      "Sangrado mayor con warfarina: complejo protrombínico de 4 factores + vitamina K (si no hay, plasma + vitamina K).",
+      "Con apixabán o rivaroxabán: andexanet alfa (o complejo protrombínico).",
+      "Con dabigatrán: idarucizumab.",
+      "Sangrado menor: omitir una dosis y revalorar; valorar suspender el antiagregante P2Y12; con warfarina, considerar vitamina K."
     ]
   },
   {
     "kind": "card",
     "id": "g-960",
-    "title": "Purpura trombocitopenia trombotica",
+    "title": "Púrpura trombocitopénica trombótica (PTT) y PTI",
     "points": [
-      "Es una microangiopatía trombótica causada por una deficiencia severa de la proteasa ADAMTS13, lo que lleva a acumulación de multímeros de von Willebrand y formación de trombos en la microcirculación",
-      "Claves diagnósticas: Trombocitopenia + hemólisis microangiopática . Necesario para sospechar PTT: Esquistocitos en el frotis (dato fundamental)",
-      "Hemólisis: (↑ LDH, ↑ bilirrubina indirecta,↓ haptoglobina, Reticulocitos altos, esquistocitos)",
-      "TRATAMIENTO: Plasmaféresis .Contraindicado: Transfusión de plaquetas porque pueden empeorar la formación de trombos, salvo en sangrado vital y siempre junto a plasmaféresis.",
-      "PURPURA TROMBOCITOPENIA INMUNE: Características clínicas: Trombocitopenia aislada., Petequias, equimosis y sangrado mucoso",
-      "Sin linfadenopatía ni esplenomegalia (si están presentes pensar en otras causas).Frotis periférico: plaquetas pequeñas o de morfología normal (no gigantes como en algunas trombocitopenias hereditarias)",
-      "No hay blastos",
-      "Dx: exclusión , trombocitopenia aislada que se descarto vih y vhc , algunos piden vhb , sífilis, perfil hep",
-      "Tratamiento : Primera línea: Corticoides Indicados cuando plaquetas <30.000/µL o hay sangrado mucocutáneo significativos (opciones: Dexametasona 40 mg/día por 4 días (esquema de pulso)",
-      "Prednisolona 1 mg/kg/día. 0 Metilprednisolona IV en casos más severos.) RIESGO DE SANGRADO VITAL / sangrado activo severo",
-      "Inmunoglobulina intravenosa (IVIG): 1 g/kg/día por 1–2 días",
-      "Transfusión de plaquetas: Indicación si sangrado grave",
-      "Las plaquetas aisladas casi no suben por el consumo inmune, por eso siempre se acompañan de inmunoglobulina intravenosa o esteroides. .Umbrales de transfusión : <10.000–20.000/µL si hay alto riesgo de sangrado, fiebre o comorbilidades",
-      "Siempre transfundir si: Sangrado activo severo",
-      "Procedimiento quirúrgico urgente.",
-      "La biopsia por aspirado de medula osea:",
-      "> 60 años, -frotis atípico - fallo primera línea - ant esplenectomía - bicitopenias -esplenomegalia marcada. no se debe pedir anticuerpos por baja sensibildad. * si se encentra en vih o vhc se trata la pti y la infección.",
-      "TROMBOCITOPENIA INDUCIDA POR HEPARINA es una reacción inmunológica mediada por anticuerpos contra el complejo heparina–factor plaquetario 4, que provoca disminución de plaquetas y paradójicamente aumento del riesgo de trombosis",
-      "Suele aparecer 5–10 días después de iniciar heparina con caída de plaquetas >50%",
-      "Manejo: suspender inmediatamente la heparina y comenzar anticoagulación alternativa no heparínica (como argatroban o fondaparinux); no transfundir plaquetas salvo sangrado grave."
+      "PTT: déficit grave de ADAMTS13 → trombos en vasos pequeños.",
+      "Plaquetas bajas + anemia hemolítica con esquistocitos (dato clave), LDH alta, haptoglobina baja; puede haber fiebre, daño neurológico y renal.",
+      "Tratamiento urgente: plasmaféresis (recambio plasmático) + corticoides. No transfundir plaquetas salvo sangrado vital.",
+      "PTI (púrpura trombocitopénica inmune): plaquetas bajas aisladas con petequias y sangrado de mucosas, sin bazo ni ganglios grandes y frotis sin blastos. Diagnóstico de exclusión (descartar VIH, hepatitis C, fármacos).",
+      "PTI: tratar con corticoides si plaquetas <30.000 o hay sangrado; inmunoglobulina si urge subirlas."
     ]
   },
   {
     "kind": "card",
     "id": "g-968",
-    "title": "La trombofilia es un trastorno que aumenta la…",
+    "title": "Trombofilias",
     "points": [
-      "LA TROMBOFILIA es un trastorno que aumenta la tendencia a formar trombos por alteraciones hereditarias (deficiencia de antitrombina III, proteína C o S, factor V Leiden, mutación de protrombina G20210A, hiperhomocisteinemia) o adquiridas (síndrome antifosfolípido, cáncer, inmovilización, anticonceptivos hormonales)",
-      "Clínica: trombosis venosa recurrente o atípica. diagnóstico se realiza con pruebas específicas según el tipo de trombofilia, evitando la anticoagulación activa o el episodio agudo",
-      "El manejo agudo de trombosis venosa incluye heparina de bajo peso molecular o fondaparinux, con transición a warfarina (INR 2–3) o DOACs, mientras que la anticoagulación a largo plazo depende de la trombofilia: en trombofilias hereditarias con evento previo se usan DOACs o warfarina, en deficiencias severas de antitrombina III o SAF se prefiere warfarina, y en SAF de alto riesgo los DOACs están contraindicados",
-      "En embarazo se evita warfarina y DOACs, usando HBPM durante todo el período, ajustando según peso y riesgo",
-      "La prevención incluye profilaxis en cirugía, inmovilización o embarazo y control de factores de riesgo como tabaquismo o estrógenos exógenos."
+      "Tendencia a formar trombos. Hereditarias: factor V Leiden (la más frecuente), mutación de la protrombina, déficit de antitrombina, proteína C o S. Adquiridas: síndrome antifosfolípido, cáncer, inmovilización, estrógenos.",
+      "Sospechar en trombosis recurrentes, en jóvenes o en sitios raros.",
+      "Estudiarlas lejos del episodio agudo y sin anticoagulantes que interfieran.",
+      "Tratamiento de la trombosis: heparina de bajo peso y después warfarina (INR 2-3) o ACOD. En síndrome antifosfolípido de alto riesgo y déficit grave de antitrombina, mejor warfarina.",
+      "Embarazo: heparina de bajo peso (warfarina y ACOD contraindicados). Profilaxis en cirugías e inmovilización; evitar estrógenos y tabaco."
     ]
   },
   {
@@ -454,28 +379,32 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-969",
     "title": "Síndrome antifosfolípido (SAF)",
     "points": [
-      "Trastorno autoinmune protrombótico",
-      "Diagnóstico: se requiere ≥1 criterio clínico (trombosis vascular o complicaciones obstétricas como abortos recurrentes, muerte fetal o parto prematuro por insuficiencia placentaria) y ≥1 criterio de laboratorio con anticuerpos positivos en dos determinaciones separadas por ≥12 semanas",
-      "(anticardiolipina, anticoagulante lúpico y anti-β2-glicoproteína I) Manejo: anticoagulación tras trombosis, usualmente con warfarina (INR 2–3); en embarazo se usa heparina de bajo peso molecular más aspirina a baja dosis, y en pacientes sin trombosis pero con alto riesgo puede considerarse aspirina (anticuerpos con títulos altos o persistente)"
+      "Enfermedad autoinmune que causa trombosis.",
+      "Diagnóstico: un criterio clínico (trombosis o complicaciones del embarazo: abortos repetidos, muerte fetal, parto prematuro por insuficiencia placentaria) + anticuerpos positivos dos veces separadas ≥12 semanas (anticoagulante lúpico, anticardiolipina o anti-β2-glicoproteína I).",
+      "Tras una trombosis: warfarina (INR 2-3) indefinida; los ACOD no se recomiendan en alto riesgo.",
+      "Embarazo: heparina de bajo peso + aspirina a dosis baja.",
+      "Anticuerpos de alto riesgo sin trombosis: valorar aspirina."
     ]
   },
   {
     "kind": "card",
     "id": "g-970",
-    "title": "Tromboprofilaxis",
+    "title": "Tromboprofilaxis: dosis",
     "points": [
-      "Cancer :",
-      "Se recomienda HBPM: apixaban o rivaroxaban por 6 meses - ; Enoxaparina 40mg subcutaneo cada dia",
-      "Si paciente con obesidad aumentar dosis de enoxaparina 60mg cada dia ; Si 100-150kg, enoxaparina 40mg cada 12 horas ; Si >150kg, enoxaparina 0.5mg/kg cada 12 horas"
+      "Hospitalizado con riesgo: enoxaparina 40 mg subcutánea al día.",
+      "Obesidad: 60 mg al día; 100-150 kg, 40 mg cada 12 h; >150 kg, 0,5 mg/kg cada 12 h.",
+      "Cáncer ambulatorio de alto riesgo (por ejemplo, Khorana alto con quimioterapia): apixabán o rivaroxabán (o HBPM) unos 6 meses."
     ]
   },
   {
     "kind": "card",
     "id": "g-971",
-    "title": "Tromboprofilaxis en casos especiales",
+    "title": "Tromboprofilaxis en trauma",
     "points": [
-      "Traumatismo sin TCE → Sin sangrado en 24 horas se hace tromboprofilaxis ; Si trauma cerrado de abdomen → Tromboprofilaxis en 48 horas ; En TCE o trauma raquimedular sin riesgo de sangrado o cirugía urgente iniciar 48 a 72 horas",
-      "Compresión mecánica si farmacológico está contraindicado ."
+      "Trauma sin TCE: empezar profilaxis farmacológica si no hay sangrado en 24 h.",
+      "Trauma cerrado de abdomen: a las 48 h.",
+      "TCE o trauma raquimedular: a las 48-72 h si no hay riesgo de sangrado ni cirugía pendiente.",
+      "Si los fármacos están contraindicados: compresión neumática en las piernas."
     ]
   }
 ];
