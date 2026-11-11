@@ -44,7 +44,9 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "juan-jose",
     name: "Dr. Juan José",
-    // Pendiente: texto y rol aprobados por el Dr. Juan José.
+    role: "Médico general",
+    quote:
+      "Como médico sé lo difícil que es encontrar tiempo para prepararse. Método Q organiza lo que realmente evalúan los exámenes y permite estudiar en bloques cortos con retroalimentación inmediata. Es una herramienta seria para quien quiere entrar a la residencia.",
   },
 ];
 

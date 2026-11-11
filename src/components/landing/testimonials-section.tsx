@@ -51,7 +51,13 @@ export function TestimonialsSection({ id = "testimonios", testimonials }: Testim
 
         <ul
           className={`mx-auto mt-14 grid gap-6 ${
-            published.length >= 3 ? "lg:grid-cols-3" : published.length === 2 ? "md:grid-cols-2 max-w-4xl" : "max-w-xl"
+            published.length === 4
+              ? "md:grid-cols-2 max-w-5xl"
+              : published.length >= 3
+                ? "lg:grid-cols-3"
+                : published.length === 2
+                  ? "md:grid-cols-2 max-w-4xl"
+                  : "max-w-xl"
           }`}
         >
           {published.map((t) => (
