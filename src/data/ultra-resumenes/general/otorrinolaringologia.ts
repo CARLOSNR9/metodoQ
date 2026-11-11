@@ -1,14 +1,18 @@
 import type { UltraEntry } from "@/lib/ultra-resumenes/types";
 
-/** Ultra resumen general · Otorrinolaringología. Generado desde el documento de fichas de Método Q. */
+/** Ultra resumen general · otorrinolaringologia. Generado desde content/ultra-resumenes/general/otorrinolaringologia.md; no editar a mano. */
 export const ENTRIES: UltraEntry[] = [
   {
     "kind": "card",
     "id": "g-72",
-    "title": "Rinitis",
+    "title": "Rinitis no alérgica: tipos",
     "points": [
-      "La rinitis se clasifica en alérgica, no alérgica y mixta",
-      "LA RINITIS NO ALÉRGICA se maneja según el subtipo y su diagnóstico es clínico: la vasomotora :congestión y rinorrea sin prurito desencadenada por cambios de temperatura u olores (diferencial con rinitis alérgica) manejo: corticoides intranasales más ipratropio si predomina rinorrea; infecciosa: rinorrea, congestión y síntomas generales como odinofagia o fiebre (diferencial viral vs bacteriana) y se maneja de forma sintomática, reservando antibióticos para sobreinfección; medicamentosa: por uso crónico de descongestionantes tópicos (diferencial con obstrucción estructural) manejo: suspendiéndolos y usando corticoides intranasales; hormonal: ocurre en embarazo o alteraciones endocrinas (diferencial con rinitis alérgica) manejo: con medidas locales; la ocupacional: por exposición laboral (diferencial con asma ocupacional) manejo: evitando el agente más corticoides intranasales; atrófica: se caracteriza por costras y mal olor (diferencial con infecciones crónicas), manejo: con lavados salinos y lubricación nasal"
+      "Vasomotora: congestión y moqueo sin picor, desencadenados por cambios de temperatura u olores fuertes. Corticoide nasal + ipratropio si predomina el moqueo.",
+      "Infecciosa: con fiebre o dolor de garganta; casi siempre viral; tratamiento sintomático.",
+      "Medicamentosa: por abusar de descongestionantes nasales (oximetazolina) >5-7 días. Suspenderlos y usar corticoide nasal.",
+      "Hormonal: embarazo o problemas endocrinos; medidas locales (lavados).",
+      "Ocupacional: por algo del trabajo; evitar el agente + corticoide nasal.",
+      "Atrófica: costras y mal olor; lavados con suero y lubricar."
     ]
   },
   {
@@ -16,55 +20,59 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-73",
     "title": "Rinitis alérgica",
     "points": [
-      "Definición: Inflamación crónica de la mucosa nasal, mediado por IgE , .Síntomas: Inicia después de la exposición al alergeno .*Estornudos; prurito nasal ocular o faríngeo; obstrucción o congestión nasal, rinorrea acuosa . DIAGNÓSTICO: Clínico: Síntomas con desencadenante *Diferenciales: Rinitis medicamentosa, atrófica , vasomotora",
-      "NO necesario otras pruebas, solo cuando hay duda diagnóstica, falta de respuesta al tratamiento en 4 semanas → Pide prick test",
-      "MANEJO:1",
-      "Evitación desencadenantes",
-      "2. Farmacológico.",
-      "Inmunoterapia",
-      "INDICACIÓN FARMACOLÓGICA: Rinitis persistente, o rinitis moderada/severa. 1ra línea: Esteroides nasales diarios; fluticasona, mometasona (en mayores de 2 años), budesonida . 2da línea: Antihistamínicos nasales (buenos para síntomas nasal , se pueden combinar con corticoide) → Azelastina+fluticasona Olopatadina. 3ra línea: Antihistamínicos orales (en mayores de 2 años), de segunda generación, monoterapia en síntomas intermitentes leves. 4ta línea: Antileucotrienos: NO como monoterapia, montelukast el único aprobado en meses",
-      "LAVADOS NASALES: Coadyuvante en congestión nasal, 10 cm por cada fosa cada 8 horas . INMUNOTERAPIA: En refractarios CLASIFICACIÓN ARIA, por duración: es intermitente : síntomas ocurren < 4 días por semana o < 4 semanas consecutivas, y persistente ≥ 4 días por semana y ≥ 4 semanas. severidad, es leve cuando no altera el sueño, ni las actividades diarias, ni el rendimiento escolar/laboral y los síntomas no son molestos, y es moderada-severa cuando presenta al menos uno de los nombrados."
+      "Inflamación de la nariz mediada por IgE tras exponerse al alérgeno (ácaros, polen, pelo de animales).",
+      "Estornudos en salva, picor de nariz, ojos o garganta, moqueo acuoso y congestión.",
+      "Diagnóstico clínico. Prick test solo si hay dudas o no mejora en 4 semanas.",
+      "Clasificación ARIA: intermitente (<4 días por semana o <4 semanas seguidas) o persistente; leve (no afecta sueño ni actividades) o moderada-grave (afecta alguno).",
+      "1.º evitar el alérgeno y lavados nasales con suero.",
+      "1.ª línea en persistente o moderada-grave: corticoide nasal diario (fluticasona, mometasona, budesonida).",
+      "2.ª: antihistamínico nasal (azelastina, sola o con fluticasona). Antihistamínico oral de 2.ª generación en síntomas leves e intermitentes.",
+      "Montelukast nunca solo. Inmunoterapia en casos refractarios."
     ]
   },
   {
     "kind": "card",
     "id": "g-74",
-    "title": "Epistaxis",
+    "title": "Epistaxis (sangrado nasal)",
     "points": [
-      "El sangrado anterior: se da por el plexo de kiesselbach, - el sangrado posterior, plexo de woodruff .",
-      "Tratamiento epistaxis anterior:",
-      "1.compresion parte blanda por 20 s, Se puede realizar rinoscopia para colocar nitrato de plata, de ahí Oximetazolina , se puede agregar acido tranexamico.",
-      "2. taponamiento con material absorbible ( no requiere retiro, ni cubrir con antibiótico, ) ; taponamiento con mecha ( 2-3 dias, maximo 5 dias, cubrir con antibiótico oral amoxicilina) ; taponamiento con dedo de guante ( retirar en 3 a 4 días , cubrimiento antibiótico). taponamiento posterior: si se realiza con sonda, 2 dias máximo 3 dias ( por riesgo necrosis paladar), dejar antibiótico oral, (se debe asociar a taponamiento nasal anterior bilateral)",
-      "El posterior debe ser retirado por especialista",
-      "Si el sangrado persiste, la embolización o el manejo quirúrgico. (no la embolización de la arteria etmoidal )"
+      "Anterior (la más frecuente): plexo de Kiesselbach, en el tabique.",
+      "Posterior: plexo de Woodruff; más grave, en ancianos e hipertensos.",
+      "1.º Sentado, inclinado hacia delante, apretar la parte blanda de la nariz 10-20 minutos sin soltar.",
+      "2.º Si sigue: oximetazolina, ácido tranexámico tópico y cauterizar el punto con nitrato de plata.",
+      "3.º Taponamiento anterior: material reabsorbible (no se retira) o gasa/mecha 2-3 días (máximo 5) con antibiótico oral.",
+      "Posterior: taponamiento con sonda de balón (máximo 2-3 días por riesgo de necrosis) + taponamiento anterior bilateral, y que lo retire el especialista.",
+      "Si persiste: embolización o cirugía (ligadura arterial)."
     ]
   },
   {
     "kind": "card",
     "id": "g-75",
-    "title": "Hematoma intranasal",
+    "title": "Hematoma del tabique nasal",
     "points": [
-      "Drenaje urgente; taponamiento ( 3-5 dias) y se retiran cuando no hay drenaje por 24 h ; y antibiótico."
+      "Tras un golpe en la nariz, el tabique se ve abombado y obstruye.",
+      "Drenaje urgente (riesgo de absceso y de nariz en silla de montar), taponamiento 3-5 días y antibiótico."
     ]
   },
   {
     "kind": "card",
     "id": "g-76",
-    "title": "Pruebas audicion",
+    "title": "Pruebas de Rinne y Weber",
     "points": [
-      "Prueba de Rinne, se compara la conducción ósea (colocando el diapasón en la mastoides) con la aérea (frente al oído); se considera Rinne positivo (normal) cuando la conducción aérea es mejor que la ósea, y Rinne negativo cuando el paciente oye mejor por el hueso, lo que indica hipoacusia conductiva",
-      "En la prueba de Weber, el diapasón se coloca en la línea media del cráneo y se observa hacia qué lado se lateraliza el sonido: si se lateraliza hacia el oído enfermo, sugiere hipoacusia conductiva, y si lo hace hacia el oído sano, indica hipoacusia neurosensorial."
+      "Rinne: el diapasón en el hueso detrás de la oreja y luego frente al oído. Normal (positivo): se oye mejor por el aire. Negativo (mejor por el hueso): hipoacusia de transmisión en ese oído.",
+      "Weber: el diapasón en la frente. Si el sonido va al oído enfermo, la hipoacusia es de transmisión; si va al oído sano, es neurosensorial.",
+      "Pruébalo: tápate un oído y tararea; lo oirás más en el oído tapado (transmisión)."
     ]
   },
   {
     "kind": "card",
     "id": "g-77",
-    "title": "Audiometria tonal",
+    "title": "Audiometría y otras pruebas de audición",
     "points": [
-      "Se compara la audición aérea y la osea, nos dan líneas, La audiometría evalúa la capacidad auditiva midiendo los umbrales de audición para distintas frecuencias y se interpreta comparando la conducción aérea (CA) y la conducción ósea (CO)",
-      "Si ambas están disminuidas en igual grado, indica hipoacusia neurosensorial; si solo está alterada la conducción aérea y la ósea es normal, se trata de hipoacusia conductiva; y si ambas están reducidas pero con una brecha mayor de 10 dB entre CA y CO, corresponde a hipoacusia mixta",
-      "Según el promedio de umbrales, la pérdida se clasifica en leve (21–40 dB), moderada (41–70 dB), severa (71–90 dB) o profunda (>90 dB)",
-      "La forma de la curva también orienta la causa, como caída en tonos agudos en presbiacusia o patrón en “U” en trauma acústico. – OTOEMISIONES ACUSTICAS: vibraciones producidas por células ciliadas, positivo: buen funcinamiento, negativo: no siempre dx, se confirma con potenciales evocados – POTENCIALES EVOCADOS: método mas importante de diagnostico."
+      "Compara la conducción aérea (auriculares) y la ósea (vibrador en el hueso).",
+      "Ambas bajas por igual: neurosensorial. Solo la aérea baja: transmisión. Ambas bajas con diferencia >10 dB: mixta.",
+      "Gravedad: leve 21-40 dB, moderada 41-70, severa 71-90, profunda >90.",
+      "Presbiacusia: cae en los agudos. Trauma acústico: muesca en 4.000 Hz.",
+      "Otoemisiones acústicas: miden las células ciliadas; se usan en el tamizaje del recién nacido. Si fallan, potenciales evocados auditivos (la prueba objetiva más importante)."
     ]
   },
   {
@@ -72,7 +80,8 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-78",
     "title": "Logoaudiometría",
     "points": [
-      "Evalúa disciminacion de la palabra. se hace igual que la audiometría pero se dictan palabras y no sonidos."
+      "Como la audiometría, pero con palabras en vez de tonos.",
+      "Mide cuánto entiende la persona (discriminación de la palabra)."
     ]
   },
   {
@@ -80,99 +89,106 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-79",
     "title": "Impedanciometría (timpanometría)",
     "points": [
-      "Evalúa el movimiento del tímpano, curva A: normal ; curva B aplanada ( problema conductivo) ; curva C grande ( problema presión negativa de oído medio)"
+      "Mide cómo se mueve el tímpano.",
+      "Curva A: normal. Curva B (plana): líquido en el oído medio u otra causa de transmisión (otitis serosa). Curva C (desplazada a negativo): presión negativa por mal funcionamiento de la trompa."
     ]
   },
   {
     "kind": "card",
     "id": "g-80",
-    "title": "Acufenometría e prueba que caracteriza el tinnitus determinando su frecuencia",
+    "title": "Acufenometría",
     "points": [
-      "Intensidad y nivel de enmascaramiento comparándolo con tonos del audiómetro, útil para orientar diagnóstico y manejo"
+      "Prueba para caracterizar el tinnitus (zumbido): su frecuencia, intensidad y con qué sonido se enmascara.",
+      "Orienta el diagnóstico y el manejo."
     ]
   },
   {
     "kind": "card",
     "id": "g-81",
-    "title": "Patologia oido externo",
+    "title": "Patología del oído externo",
     "points": [
-      "Otohematoma: hematoxma pabello auricular, puede dejar oreja en coliflor, tto: se evacuar, antibiótico y compresión local. –perniosis: nodulo puriginoso por temperatura baja",
-      "Tto: calentamiento- -miringitis bullosa: por infección mycoplasma penumonia, clínica: otalgia, bullas hemorrágicas tto: gotas antibióticas y analgésicas. –sn",
-      "Ramsay hunt: vesiculas pabello auricular por varicela zoster, puede causa paralisis facial",
-      "Tto: Aciclovir, antiséptico, corticoide sistémico. –otomicosis: por candida y aspergilossis, por entrada de agua o antibióticos prolongados, causa prurito intenso, es otorrea algodonosa ( candida es blanca) ( asperilosis negruzca) tto: limpieza de secreciones, antigunficos tópicos ( derivados imidazol, alcohol, yodo ) – otitis externa maligna: otitis externa por psuedomona en inmunosuprimido, que causa necrosis , paralisis facial y hasta meningitis",
-      "Diangostico: otoscopia, tac, gammagrafía tto: enfermeda de base, ciprofloxacion por 6-8 semnaas, desbridamiento si es necesario. –pericondritis: infección del cartílago del pabellón , tto: antibiótico oral. –tapon de cerumen: extracción: agua templada si membrana esta integra – aspiración bajo control microscópico – cerumenolitoco ( aceite oliva, bicarbonato) – cuerpo extraño: inanimado: igual que el tapon de cerum, animado: intilar alcohol o sustancia anestésica y extracción.",
-      "Malfomarcion pabellón y conducti auditivo externo: suelen ser independientes del oído medio. La otitis externa eccematosa: dermatitis localizada en el tercio externo del CAE, con descamación y brotes de prurito intenso, sin signos sistémicos ."
+      "Otohematoma: sangre bajo la piel de la oreja tras un golpe; drenar, comprimir y antibiótico (si no, oreja en coliflor).",
+      "Miringitis bullosa: ampollas hemorrágicas en el tímpano (Mycoplasma); dolor intenso; gotas analgésicas y antibióticas.",
+      "Ramsay Hunt: vesículas en la oreja por zóster + parálisis facial; aciclovir + corticoide.",
+      "Otomicosis: hongos tras agua o antibióticos prolongados; picor intenso, secreción algodonosa (blanca Candida, negra Aspergillus); limpieza y antifúngico tópico.",
+      "Otitis externa maligna: Pseudomonas en diabético o inmunosuprimido; dolor intenso, puede dar parálisis facial; TAC; ciprofloxacino 6-8 semanas.",
+      "Tapón de cerumen: lavado con agua tibia si el tímpano está íntegro o aspirar; ceruminolíticos. Cuerpo extraño vivo (insecto): primero matarlo con alcohol o aceite y después sacarlo.",
+      "Pericondritis (infección del cartílago): antibiótico."
     ]
   },
   {
     "kind": "card",
     "id": "g-82",
-    "title": "Patologias tumorales",
+    "title": "Tumores del oído externo",
     "points": [
-      "Benignas: osteoma: tumor benigno mas común, masa osea tto: exeresis. Exostosis: crecimiento de hueso, se extirpa si hay síntomas. Malignos: frecuentes en pabello, ca basocelular, ca escamocelular"
+      "Benignos: osteoma (el más frecuente, se extirpa) y exostosis (en nadadores de agua fría; se quita si da síntomas).",
+      "Malignos: en el pabellón, carcinoma basocelular y escamocelular (por el sol)."
     ]
   },
   {
     "kind": "card",
     "id": "g-83",
-    "title": "Patologias oido medio",
+    "title": "Patología del oído medio",
     "points": [
-      "Ototubaritis: disfunción trompa de estaquio secundaria a proceso inflamatorio rinofaringeo, que causa hipopresion del oído medio con retracción timpania , hipoacuisa de transmisio",
-      "Clínica: hipoacusia, sensación de taponamiento, autofonia",
-      "Otoscopia: retraccion timpania tto: maniobras valsalva, antiinflamatorios, descongestion nasal",
-      "Otitis media secretora: causa sordera en infancia, causada por disfunción de trompa de Eustaquio anormalmente permeable, permite ascenso de gérmenes. –obstruccion mecánicas: hipertrofia de adenoides: adenoides actúan como reservorio de gérmenes, angiofibroma de cavum: en adolescentes, carcinoma de cavum: en adulto",
-      "Clínica: no otalgia, ni otorrea, hipoacusa otoscopia: niveles hidroaereos, timpano azul, retracción de timpano",
-      "Tto: 75 % resolución espontanea, aines , descongestionantes nasales , antibiótico, si hipertrofia adenoide ( adenoidectomia). – otitis media aguda: proceso inflamatorio agudo, donde hay liquido purulento en oído medio, etiología: ascedente de tracto respiraotrio",
-      "OMA necrotizante: causa perforación amplia y desrttuccion cadena osicular",
-      "Fases: precoz: otalgia pulsatil con acumulación de liquido, otoscopia: timpano abombado hiperemico, supurativa: otorrea y mejoría del dolor por perforación timpánica",
-      "Tto: amoxicilina oral , amoxicilina clavulanato, si supurativa: añadir antibiótico tópico. – otitis media crónica",
-      "Supurativa: perforación con mal funcionamiento tubarico, tto: antibiótico tópico y sistémico en fase supurativa, . timpanoplastia tras 3-6 meses sin otorrea, colesteatomatosa: epitelio queratinizado en oído medio, genera sustanacia que producen osteolisis de paredes de oído medio, causa: por presiones negativas mantenidas de oído medio, o por migración de epiteio del conducnto externo",
-      "Clínica: otorrea fétida y crónica sin otalgia, hipoacusia transmisión. diagnostcio: tac o rnm Tto: extirpación quirúrgica"
+      "Disfunción de la trompa de Eustaquio: oído tapado, hipoacusia y oír la propia voz; tímpano retraído. Valsalva, descongestionantes y tratar la rinitis.",
+      "Otitis media serosa (con efusión): líquido sin infección detrás del tímpano por mala ventilación de la trompa (adenoides grandes, rinitis). Hipoacusia sin dolor, sobre todo en niños. Suele resolverse sola; tubos de ventilación si dura >3 meses con hipoacusia.",
+      "En adultos con otitis serosa unilateral: mirar el cavum para descartar un tumor.",
+      "Otitis media aguda: dolor pulsátil, fiebre, tímpano rojo y abombado; si se perfora sale pus y el dolor mejora. Amoxicilina (amoxicilina-clavulánico si falla).",
+      "Otitis media crónica supurativa: perforación con supuración que se repite; gotas antibióticas y, tras 3-6 meses seco, timpanoplastia.",
+      "Colesteatoma: piel atrapada en el oído medio que destruye el hueso; supuración fétida crónica sin dolor e hipoacusia. TAC; cirugía."
     ]
   },
   {
     "kind": "card",
     "id": "g-84",
-    "title": "Complicaciones OMA y OMC",
+    "title": "Complicaciones de las otitis medias",
     "points": [
-      "2 tipos, intratemporales: ( mastoiditis, paralisis facial, petrosis y laberintitis) , intracraneales",
-      "( meningitis, abceso extradural, tromboflebitis, abceso subdural y cerebral) –mastoiditis: infección de las celdas del mastoide, clínica: edema, enrojecimiento retroauricular, absceficada , diagnotico: clínico, si sospehca tac. tto: antibiótico, drenaje, ( miringotomia y drenaje transtimpanico o mastoidectomia) – paralisis facial – petrositis: destrucción del peñasco, clínica: dolor ocular, diplopía, otorrea, diagnostico: RNM, TAC, tto: mastoidectomia mas tratamiento medico. –laberentitis: erosion del conducto semicircular horizontal, en contexto de oma.clinica: hipoacusia, acufenos, vértigo, nistagmus , puede causar hipoacusia severa",
-      "Tratamiento: extirpación colesteatoma asociado, o laberintetomia."
+      "Dentro del hueso temporal: mastoiditis, parálisis facial, petrositis, laberintitis.",
+      "Dentro del cráneo: meningitis, abscesos (epidural, subdural, cerebral), trombosis del seno lateral.",
+      "Mastoiditis: oreja despegada, enrojecimiento e hinchazón detrás de la oreja; TAC; antibiótico intravenoso y drenaje (miringotomía o mastoidectomía).",
+      "Petrositis: dolor detrás del ojo, visión doble y supuración (síndrome de Gradenigo); RM/TAC; cirugía + antibiótico.",
+      "Laberintitis: vértigo, acúfenos e hipoacusia que puede ser permanente."
     ]
   },
   {
     "kind": "card",
     "id": "g-85",
-    "title": "Otoesclerosis",
+    "title": "Otosclerosis",
     "points": [
-      "Genético, formación de hueso mineralizado localizado en capsula laberíntica, produce anquilosis en parte del platino del estribo clínica: hipoacusia de transmisión progresiva y bilateral, acufenos, paracusia ( weber: oye mejor masticando, Willis : oye mejor en ambiente ruidoso)",
-      "Exploracion: timpano normal, audiometría: hipoacusia de transmisión. tto: estapedectomia, si se rechaza cx se utiliza fluoro sódico."
+      "Hueso anormal que fija el estribo y no deja pasar el sonido.",
+      "Hipoacusia de transmisión progresiva, a menudo bilateral, con acúfenos; tímpano normal. Oye mejor en ambientes ruidosos (paracusia de Willis).",
+      "Más en mujeres jóvenes; empeora en el embarazo; hereditaria.",
+      "Tratamiento: cirugía (estapedectomía) o audífono."
     ]
   },
   {
     "kind": "card",
     "id": "g-86",
-    "title": "Patologia traumatica de oido",
+    "title": "Trauma de oído",
     "points": [
-      "Barotrauma: por aumento de presión no compensada por trompa de estaquido",
-      "Otoscopia: erojecimiento del timpano o hemotimpano, tto: aines, y vasocconstrictores; cuando hay daño del oído medio se acompañana de hipoacusia neurosensoria, se acompaña con corticoterapia. –perfoarcion traumatica de timpano: por sobrepresión, clínica: otalgia, otorragia, hipoacusia de transmisión, tratamiento: expectante 90 % se cierra solo, (evitar entrada de agua) si al mes no ha cerrado se reaviva bordes, si no cierra en 3 meses miringoplastia."
+      "Barotrauma (avión, buceo): dolor, tímpano rojo o con sangre detrás. AINE y descongestionantes; si hay hipoacusia neurosensorial, corticoides.",
+      "Perforación traumática del tímpano (golpe, explosión, bastoncillo): dolor, sangrado leve e hipoacusia. El 90 % cierra sola: no meter agua al oído. Si no cierra en 3 meses, miringoplastia."
     ]
   },
   {
     "kind": "card",
     "id": "g-87",
-    "title": "Patologia faringe",
+    "title": "Adenoides y amígdalas grandes",
     "points": [
-      "Hiperplasia amigdalina faríngea: adenoide, mas en infantes, clínica: insuficiencia respiratoria nasal, SAOS, otitis media serosa, fascien adenoide dx: clínica, rx de cavum, nasofibroscopia. –hiperplasia amigdalina palatina: produce disfagia, voz gangosa, ronquidos nocturnos, SAOS, indicación: La amigdalectomía está recomendada cuando hay amigdalitis repetidas (≥7 episodios en el último año, ≥5 por año en los últimos 2 años o ≥3 por año en los últimos 3 años), así como en casos de apnea obstructiva del sueño, disfagia o absceso periamigdalino recurrente",
-      "La adenoidectomía se indica en niños con obstrucción nasal crónica, ronquido persistente, apnea del sueño, otitis media serosa o recurrente que no responde al tratamiento médico, o sinusitis crónica asociada."
+      "Adenoides grandes (niños): respira por la boca, ronca, apneas, otitis serosa, cara alargada (facies adenoidea). Diagnóstico con nasofibroscopia o Rx de cavum.",
+      "Amígdalas grandes: ronquido, apnea, voz gangosa, dificultad para tragar.",
+      "Amigdalectomía: ≥7 amigdalitis en un año, ≥5 por año en 2 años o ≥3 por año en 3 años; apnea del sueño; absceso periamigdalino repetido.",
+      "Adenoidectomía: obstrucción nasal crónica, apnea, otitis serosa o recurrente o sinusitis que no mejoran."
     ]
   },
   {
     "kind": "card",
     "id": "g-88",
-    "title": "Rinofaringitis",
+    "title": "Rinofaringitis (resfriado)",
     "points": [
-      "Infección amígdala faríngea o adenoide del cavum, etiología: puede darse por virus o bacterias clínica: rinorrea hialina o purulenta ( bacteriana) , obstrucción nasal , fiebre , adenotaprias, autolimitada 5-6 dias. Tto: vasocontrictores, y antibiótico si es bacteriana"
+      "Infección de nariz y garganta, casi siempre viral.",
+      "Moqueo (primero claro, luego puede espesarse), congestión, fiebre leve, ganglios; dura 5-7 días.",
+      "Tratamiento sintomático y lavados nasales. El moco verde no significa que haya que dar antibiótico."
     ]
   },
   {
@@ -180,7 +196,8 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-89",
     "title": "Herpangina",
     "points": [
-      "Vesículas que respenta amígdalas y lengua, se da por virus coxsackie, tto: sintomático."
+      "Virus Coxsackie A, en niños: fiebre y vesículas o úlceras pequeñas en el paladar blando y los pilares (respeta amígdalas y lengua).",
+      "Tratamiento sintomático (analgesia e hidratación)."
     ]
   },
   {
@@ -188,24 +205,23 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-90",
     "title": "Difteria",
     "points": [
-      "Membgran grisácea ahderida y sangrante, por c. dipthrae, tto: antitoxia mas eritromicina"
+      "Corynebacterium diphtheriae: placa grisácea adherida a la garganta que sangra al despegarla, cuello hinchado.",
+      "Puede afectar corazón y nervios por la toxina.",
+      "Tratamiento: antitoxina diftérica + eritromicina o penicilina. Aislamiento. Se previene con la vacuna."
     ]
   },
   {
     "kind": "card",
     "id": "g-91",
-    "title": "Tto infecciones según UDEA",
+    "title": "Otitis media aguda en niños: cuándo y cómo tratar",
     "points": [
-      "OMA: Dx: otoscopia, (- abombamiento –otalgia- otorrea) antibiótico si: - < 6 meses – oma grave ( otalgia moderada a severa , otalgia por 48 h , fiebre 39 ) – oma bilateral en niños < 24 meses – si no mejora al tto en 48 horas . expectante:",
-      "OMA unilateral en niños de 6-24 meses sin síntomas graves – OMA no grave en mayores de 24 meses. Primera línea:",
-      "Amoxicilina – cefuroxima – ceftriaxona – claritromicina. Fallo tto 72 horas:",
-      "Amoxi clavulanato- ceftriaxona – clindamicina- segundo fallo tto:",
-      "Clindamicina mas cefalosporina 3ra generalcion – timpanocentesis. Duración: oma grave o < 2 años: 10 dias ; de 2-5 años con síntomas leves a moderados: 7 dias; si mayor 6 años con oma no grave: 5 dias.",
-      "En otitis pediátrica, si es grave, siempre se dan 10 dias de antibiótico",
-      "OMA recurrente en niños: se ss audiologicos (timapnometria) , rx de cavum faringeo ; no dar antbo profilactico.",
-      "Otitis media efusiva: efusión del oído medio sin cambios inflamatorios de tímpano",
-      "CAUSAS: ( es normal máximo 3 meses post oma, si continua definir tubos ventilación) , hipertrofia adenoides, rinitis, disfunción tromba estuaquio",
-      "TTO: tratar causa subyacente, si > 3 meses considerar ventilación tubos timpanostomia"
+      "Diagnóstico: tímpano abombado + dolor (u otorrea).",
+      "Antibiótico si: <6 meses, otitis grave (dolor moderado-intenso, >48 h de dolor o fiebre ≥39), bilateral en <2 años, o no mejora en 48-72 horas.",
+      "Se puede observar: unilateral sin gravedad en 6-24 meses, y no grave en >2 años.",
+      "1.ª línea: amoxicilina a dosis altas (alérgicos: cefuroxima, ceftriaxona o claritromicina).",
+      "Si falla a las 48-72 h: amoxicilina-clavulánico o ceftriaxona; segundo fallo: clindamicina + cefalosporina de 3.ª o timpanocentesis.",
+      "Duración: 10 días si es grave o <2 años; 7 días en 2-5 años leve-moderada; 5 días en ≥6 años.",
+      "Otitis recurrente: timpanometría y Rx de cavum; no dar antibiótico profiláctico."
     ]
   },
   {
@@ -213,72 +229,72 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-92",
     "title": "Sinusitis bacteriana",
     "points": [
-      "Inlfmacion de revestimiento de mucosa y conducto nsala y senos paranasales e infección bacterina con duración < 4 semanas",
-      "Dx: por clínica, considerando la presencia de obstrucción nasal o congestión, secreción nasal purulenta o goteo retronasal, dolor o presión facial en los senos afectados, pérdida del olfato y, en algunos casos, fiebre o malestar general",
-      "Se clasifica como aguda si los síntomas duran menos de 4 semanas, subaguda entre 4 y 12 semanas, y crónica si persisten más de 12 semanas con evidencia de inflamación por endoscopia nasal o tomografía de senos paranasales tto: antibiótico.",
-      "1. Amoxicilina 2. Si no mejora en 72 horas, amoxiclavulanato- levofloxacion – clindamicina. Duración: no complicada: 10-14 dias o 7 dias después de resolución síntomas. SINUSITIS CRONICA: el manejo incial son corticoides nasales mas lavados nasales."
+      "Congestión, secreción purulenta o goteo posterior, dolor o presión facial, pérdida del olfato y a veces fiebre.",
+      "Sospechar bacteriana si dura >10 días, empeora tras mejorar o es muy intensa desde el inicio.",
+      "Aguda <4 semanas, subaguda 4-12, crónica >12 (confirmar con endoscopia o TAC).",
+      "Antibiótico: amoxicilina; si no mejora en 72 h, amoxicilina-clavulánico (o levofloxacino, clindamicina). 7-10 días.",
+      "Crónica: corticoide nasal + lavados con suero."
     ]
   },
   {
     "kind": "card",
     "id": "g-93",
-    "title": "Faringoamigdalitis",
+    "title": "Faringoamigdalitis estreptocócica",
     "points": [
-      "Inflamación de amígdalas y faringe, causada por st.pyogenes ( st",
-      "B hemolítico del grupo A), los portadores del st.b hemolítico del grupo A si son asintomáticos no es infeccions",
-      "Se asigna un punto por cada uno de los siguientes hallazgos: fiebre ≥38 °C, exudado amigdalino, adenopatías cervicales anteriores dolorosas y ausencia de tos; a estos se puede sumar un punto por edad (3–14 años)",
-      "La puntuación total orienta la probabilidad de infección estreptocócica y la conducta: 0–1 punto, baja probabilidad y generalmente no se indica antibiótico; 2–3 puntos, riesgo intermedio y se recomienda prueba rápida de antígeno o cultivo; 4–5 puntos, alta probabilidad y se puede considerar tratamiento antibiótico empírico",
-      "Tto antibiótico:",
-      "Penicilina 2- amoxiclina – cefalexina- clindamicina- claritromicina- aztrimocina . duración total 10 dias.",
-      "Si alta sospecha (centor 4-5) y prueba rápida negativa, se indica cultivo para definir inicio antibiótico. Si no tengo cultivo inicio antibiótico"
+      "Estreptococo beta-hemolítico del grupo A (S. pyogenes). Un portador sin síntomas no se trata.",
+      "Puntaje de Centor (1 punto cada uno): fiebre ≥38, exudado en amígdalas, ganglios cervicales anteriores dolorosos, sin tos; +1 si 3-14 años.",
+      "0-1: probablemente viral, sin antibiótico. 2-3: prueba rápida o cultivo. 4-5: alta probabilidad; prueba o tratamiento empírico.",
+      "Tratamiento: penicilina benzatínica intramuscular o amoxicilina 10 días (alérgicos: cefalexina, clindamicina o macrólido).",
+      "Se trata para evitar la fiebre reumática."
     ]
   },
   {
     "kind": "card",
     "id": "g-94",
-    "title": "Absceso periamigdalino diagnóstico es clínico y se confirma…",
+    "title": "Absceso periamigdalino",
     "points": [
-      "ABSCESO PERIAMIGDALINO diagnóstico es clínico y se confirma y trata con el drenaje del mediante punción y aspiración con aguja del pilar amigdalino anterior, a nivel del polo superior amidgalino."
+      "Complicación de una amigdalitis: dolor intenso de un lado, dificultad para abrir la boca (trismo), voz de papa caliente y úvula desviada al lado sano.",
+      "Diagnóstico clínico; se confirma y trata con punción-aspiración en el polo superior de la amígdala, más antibiótico."
     ]
   },
   {
     "kind": "card",
     "id": "g-95",
-    "title": "La angina de ludwig es una celulitis del…",
+    "title": "Infecciones graves del cuello y la boca",
     "points": [
-      "LA ANGINA DE LUDWIG es una celulitis del piso de la boca con edema submandibular y riesgo de obstrucción de vía aérea; manejo: asegurar vía aérea y antibióticos IV (ampicilina-sulbactam o clindamicina) ± drenaje",
-      "El SÍNDROME DE LEMIERRE es tromboflebitis séptica de la vena yugular interna tras infección orofaríngea por Fusobacterium, clínica: fiebre y émbolos pulmonares; manejo: antibióticos IV prolongados",
-      "La ENFERMEDAD DE VINCENT (gingivitis ulceronecrotizante) causa encías dolorosas, ulceradas y halitosis; manejo: higiene oral, clorhexidina y metronidazol",
-      "La SIALADENITIS AGUDA es infección de glándula salival con dolor e inflamación y salida de pus por el conducto; manejo: hidratación, masaje glandular y antibióticos antiestafilococo."
+      "Angina de Ludwig: infección del piso de la boca (a menudo de un diente), cuello hinchado bajo la mandíbula y lengua elevada; riesgo de asfixia. Asegurar la vía aérea + antibiótico intravenoso (ampicilina-sulbactam o clindamicina) ± drenaje.",
+      "Síndrome de Lemierre: tras una faringitis, trombosis infectada de la vena yugular por Fusobacterium; fiebre y émbolos al pulmón. Antibiótico intravenoso prolongado.",
+      "Gingivitis ulceronecrotizante (Vincent): encías dolorosas que sangran, úlceras y mal aliento. Higiene, clorhexidina y metronidazol.",
+      "Sialoadenitis aguda (parótida, en ancianos deshidratados): glándula dolorosa con pus por el conducto. Hidratar, masaje, caramelos ácidos y antibiótico contra estafilococo."
     ]
   },
   {
     "kind": "card",
     "id": "g-96",
-    "title": "Sialolitiasis",
+    "title": "Cálculos y tumores de glándulas salivales",
     "points": [
-      "Calculo en conducto salival, usualmente en glandula submandibular porque aqui la saliva es mas viscosa y con calcio. Puede causar dolor y entumecimiento ;TUMOR GLÁNDULA SALIVAL Se diferencia por ser una masa indolora y crecimiento progresivo"
+      "Sialolitiasis: cálculo en el conducto, casi siempre de la glándula submandibular (saliva más espesa y con calcio). Hinchazón y dolor al comer.",
+      "Tumor salival: masa que no duele y crece despacio (el más frecuente, adenoma pleomorfo de la parótida)."
     ]
   },
   {
     "kind": "card",
     "id": "g-97",
-    "title": "Edema de reinke",
+    "title": "Edema de Reinke",
     "points": [
-      "Edema crónico del espacio de Reinke (espacio inferior a las cuerdas vocales), típicamente en fumadores crónicos o por abuso vocal; clínicamente causa disfonía progresiva con voz grave y ronca",
-      "Diagnóstico clínico y por laringoscopia",
-      "Tratamiento conservador (suspender tabaco, reposo y terapia de voz); cirugía para casos severos o persistentes."
+      "Edema crónico en las cuerdas vocales, típico de fumadores o personas que abusan de la voz.",
+      "Voz ronca y grave (sobre todo en mujeres) que empeora poco a poco.",
+      "Diagnóstico con laringoscopia. Dejar de fumar, reposo y terapia de voz; cirugía si es grave."
     ]
   },
   {
     "kind": "card",
     "id": "g-98",
-    "title": "La pérdida auditiva neurosensorial súbita idiopática pérdida súbita…",
+    "title": "Sordera súbita neurosensorial",
     "points": [
-      "LA PÉRDIDA AUDITIVA NEUROSENSORIAL SÚBITA IDIOPÁTICA perdida súbita neurosensorial ( <72 h) , unilateral , de almenas 30 db en >2 recuencias contiguas",
-      "Clinica : chasquido o crepitación en el oído, seguido de un zumbido/acúfeno y sensación de plenitud auditiva El tratamiento temprano con un ciclo de 2 semanas de prednisona oral en dosis altas si se inicia dentro de los primeros 7 a 14 X días",
-      "Además, el paciente debe someterse a un audiograma y una resonancia magnética con contraste para descartar enfermedad desmielinizante, neoplasia o accidente cerebrovascular.",
-      "El tratamiento con inyecciones intratimpánicas de glucocorticoides ( igual de efectivo) alternativa para pacientes con diabetes y aquellos con una contraindicación para los glucocorticoides orales en dosis altas."
+      "Pérdida de audición de un oído en <72 h (al menos 30 dB en 3 frecuencias seguidas), a veces con chasquido, zumbido y oído tapado.",
+      "Es una urgencia: prednisona oral a dosis altas 2 semanas, mejor en los primeros 7-14 días. Si no se pueden dar corticoides orales (por ejemplo, diabético), inyección intratimpánica.",
+      "Pedir audiometría y RM con contraste para descartar neurinoma del acústico, esclerosis múltiple o ictus."
     ]
   },
   {
@@ -286,66 +302,50 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-99",
     "title": "Presbiacusia",
     "points": [
-      "Es una forma de pérdida auditiva neurosensorial que afecta a más de la mitad de los adultos a la edad de 75 años, a la mayoría de los adultos mayores de 80 años y a casi todos los adultos ≥ 90 años",
-      "Es un proceso multifactorial causado por la degeneración gradual del órgano de Corti a lo largo de los años, que a menudo se identifica por primera vez por la dificultad para oír en espacios concurridos",
-      "Aunque no existe un tratamiento definitivo, los audífonos y los implantes cocleares pueden proporcionar alivio sintomático y mejorar auditiva en las personas afectadas."
+      "Pérdida de audición neurosensorial por la edad: más de la mitad a los 75 años.",
+      "Empieza por los agudos; lo primero que notan es que no entienden en sitios con ruido.",
+      "No tiene cura: audífonos o implante coclear."
     ]
   },
   {
     "kind": "card",
     "id": "g-100",
-    "title": "Otosclerosis",
+    "title": "Otosclerosis frente a lesión del nervio auditivo",
     "points": [
-      "Afecta predominantemente a mujeres de 20 a 40 años y conduce a una pérdida auditiva conductiva, generalmente bilateral, también desarrollan tinitus y normalmente oyen mejor en entornos ruidosos que tranquilos",
-      "Lesión del nervio vestibulococlear se presenta con pérdida auditiva neurosensorial, también produce síntomas vestibulares como vértigo o nistagmo horizontal."
+      "Otosclerosis: mujeres de 20-40 años, hipoacusia de transmisión, bilateral, con acúfenos; oyen mejor con ruido de fondo.",
+      "Lesión del nervio vestibulococlear (por ejemplo, neurinoma): hipoacusia neurosensorial con vértigo, inestabilidad o nistagmo."
     ]
   },
   {
     "kind": "card",
     "id": "g-101",
-    "title": "Disfonía",
+    "title": "Disfonía (ronquera)",
     "points": [
-      "(ronquera), suele ser benigna (ej. laringitis viral o abuso vocal); remisión a ORL si:",
-      "1) dura ≥3 semanas",
-      "2) no mejora con tratamiento, o de forma inmediata si presenta banderas rojas como 3) masa cervical",
-      "4) disfagia, disnea u otalgia",
-      "5) pérdida de peso inexplicada",
-      "6) antecedente de tabaquismo",
-      "7) intubación orotraqueal o trauma cervical",
-      "8) inmunocompromiso",
-      "9) empeoramiento progresivo",
-      "10) sospecha de aspiración de cuerpo extraño",
-      "11) alteraciones neurológicas o compromiso de pares craneales",
-      "12) disfonía en el neonato. DX: es clínico, si persiste se realiza laringoscopia; MANEJO: reposo vocal, hidratación y evitar irritantes, IBP si hay reflujo y tratamiento específico; no antibióticos de rutina."
+      "La mayoría es benigna: laringitis viral o abuso de la voz.",
+      "Remitir a otorrino si dura ≥3 semanas o no mejora con tratamiento.",
+      "Remitir de inmediato si hay: masa en el cuello, dificultad para tragar o respirar, dolor de oído, pérdida de peso, fumador, intubación o trauma reciente, inmunosupresión, empeoramiento, sospecha de cuerpo extraño, otros síntomas neurológicos o en un recién nacido.",
+      "Manejo: reposo de voz, hidratación, evitar irritantes, IBP si hay reflujo. No dar antibióticos de rutina."
     ]
   },
   {
     "kind": "card",
     "id": "g-102",
-    "title": "Sahos",
+    "title": "Apnea del sueño (SAHOS)",
     "points": [
-      "En la polisomnografía. apnea (cese de flujo ≥10 s) e hipopnea (↓ flujo ≥30% ≥10 s con desaturación o microdespertar). la apnea del sueño se DIAGNOSTICA con ≥5 eventos/hora con síntomas o ≥15 sin síntomas",
-      "CLASIFICÁNDOSE: leve (5–14), moderada (15–29) y severa (≥30); CLASIFICACION:",
-      "1. obstructivos (hay esfuerzo respiratorio pero la vía aérea colapsa, típico en obesidad, hipertrofia amigdalina, retrognatia), centrales (no hay esfuerzo, asociado a insuficiencia cardiaca, lesiones neurológicas o fármacos como opioides) y mixtos",
-      "MANEJO: incluye medidas generales (bajar de peso, evitar alcohol/sedantes, dormir de lado), CPAP como tratamiento de elección en moderada-severa, dispositivos orales en casos leves o intolerancia a CPAP"
+      "Apnea: el flujo de aire se para ≥10 segundos. Hipopnea: baja ≥30 % con desaturación o microdespertar.",
+      "Diagnóstico con polisomnografía: ≥5 eventos por hora con síntomas, o ≥15 sin síntomas.",
+      "Leve 5-14; moderada 15-29; severa ≥30 eventos por hora.",
+      "Obstructiva (hay esfuerzo pero la vía se cierra: obesidad, amígdalas grandes, mandíbula pequeña); central (no hay esfuerzo: insuficiencia cardiaca, lesiones neurológicas, opioides); mixta.",
+      "Tratamiento: bajar de peso, evitar alcohol y sedantes, dormir de lado. CPAP en moderada-severa. Dispositivo oral si es leve o no tolera la CPAP."
     ]
   },
   {
     "kind": "card",
     "id": "g-103",
-    "title": "El stop-bang",
+    "title": "STOP-BANG: tamizaje de apnea del sueño",
     "points": [
-      "Es una herramienta de",
-      "Tamizaje para apnea obstructiva del sueño* con 8 ítems: * (ronquido)",
-      "(somnolencia)",
-      "Apnea",
-      "(HTA)",
-      "BMI >35",
-      "Age >50",
-      "(cuello >40 cm) y",
-      "(masculino); cada respuesta suma 1 punto (0–8) y se interpreta como",
-      "0–2 bajo riesgo",
-      "3–4 riesgo intermedio* y *≥5 alto riesgo*."
+      "1 punto por cada uno: ronca (Snoring), cansancio diurno (Tired), le han visto dejar de respirar (Observed), hipertensión (Pressure), IMC >35 (BMI), edad >50 (Age), cuello >40 cm (Neck), hombre (Gender).",
+      "0-2 bajo riesgo; 3-4 intermedio; ≥5 alto riesgo → estudio del sueño."
     ]
   }
 ];
