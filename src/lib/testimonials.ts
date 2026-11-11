@@ -20,9 +20,27 @@ export type Testimonial = {
 };
 
 export const TESTIMONIALS: Testimonial[] = [
-  { id: "churros", name: "El Churros" },
-  { id: "carlos", name: "Carlos" },
-  { id: "elizabeth", name: "Elizabeth" },
+  {
+    id: "churros",
+    name: "El Churros",
+    role: "Autor de las fichas Ultra resúmenes",
+    // Pendiente de aprobación del Churros:
+    // "Mis fichas nacieron de mi propia preparación. Verlas organizadas por rentabilidad y explicadas para que cualquiera las entienda es justo lo que me hubiera gustado tener cuando empecé."
+  },
+  {
+    id: "carlos",
+    name: "Carlos",
+    role: "Fundador de Método Q",
+    quote:
+      "Creé Método Q porque estudiar para la residencia no debería depender de tener tiempo de sobra. Aquí cada pregunta y cada ficha están pensadas para que avances entre turnos sin perder el foco.",
+  },
+  {
+    id: "elizabeth",
+    name: "Elizabeth",
+    role: "Médica · Preparación para residencia",
+    // Pendiente de aprobación de Elizabeth:
+    // "Lo que más me sirvió fue saber qué estudiar primero. Con los ultra resúmenes repaso en minutos lo que más cae y llego a los simulacros con más seguridad."
+  },
 ];
 
 export function getPublishedTestimonials(list: Testimonial[] = TESTIMONIALS): Testimonial[] {
