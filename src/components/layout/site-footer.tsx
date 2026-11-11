@@ -84,7 +84,7 @@ export function SiteFooter() {
             <h4 className="text-[11px] font-black tracking-widest text-slate-900 uppercase">Empresa</h4>
             <ul className="flex flex-col gap-3.5">
               <li><Link href="#" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Sobre nosotros</Link></li>
-              <li><Link href="#" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Testimonios</Link></li>
+              <li><Link href="/#testimonios" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Testimonios</Link></li>
               <li><Link href="#" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Trabaja con nosotros</Link></li>
               <li><Link href="#" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Términos y condiciones</Link></li>
               <li><Link href="#" className="text-[13px] text-slate-500 font-medium hover:text-blue-600 transition-colors">Política de privacidad</Link></li>

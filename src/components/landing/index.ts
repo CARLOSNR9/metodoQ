@@ -26,3 +26,4 @@ export { ScenarioSection } from "./scenario-section";
 export { AuthoritySection } from "./authority-section";
 export { SocialProofSection } from "./social-proof-section";
 export { BenefitsSection } from "./benefits-section";
+export { TestimonialsSection, type TestimonialsSectionProps } from "./testimonials-section";

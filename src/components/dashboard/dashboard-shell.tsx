@@ -31,6 +31,7 @@ import {
   Stethoscope,
   BookMarked,
   BookOpenCheck,
+  Sparkles,
 } from "lucide-react";
 import { useFailedQuestionsCount } from "@/hooks/use-failed-questions-count";
 
@@ -43,12 +44,14 @@ const navigationItems = [
   { label: "Entrenar", href: "/dashboard/entrenar", icon: GraduationCap },
   { label: "Refuerzo", href: "/dashboard/refuerzo", icon: RotateCcw },
   { label: "Estudio", href: "/dashboard/estudio", icon: StickyNote },
+  { label: "Ultra resúmenes", href: "/dashboard/ultra-resumenes", icon: Sparkles },
   { label: "Simulacros", href: "/dashboard/convocatorias", icon: ClipboardCheck, proOnly: true },
   { label: "Mis clases", href: "/dashboard/clases", icon: CalendarDays, proOnly: true },
   { label: "Retos Dr. Q", href: "/dashboard/evaluaciones", icon: Stethoscope, proOnly: true },
   // Módulo de pago aparte: solo se muestra a quien tiene acceso MIR vigente.
   { label: "Simulacro MIR", href: "/dashboard/mir", icon: BookOpenCheck, mirRelevant: true, mirAccessOnly: true },
   { label: "Mi estudio MIR", href: "/dashboard/mir/estudio", icon: BookMarked, mirRelevant: true, mirAccessOnly: true },
+  { label: "Ultra resúmenes MIR", href: "/dashboard/mir/ultra-resumenes", icon: Sparkles, mirRelevant: true, mirAccessOnly: true },
   { label: "Planes", href: "/dashboard/planes", icon: CreditCard },
   { label: "Historial", href: "/dashboard/historial", icon: History, mirRelevant: true },
   { label: "Perfil", href: "/dashboard/perfil", icon: User, mirRelevant: true },

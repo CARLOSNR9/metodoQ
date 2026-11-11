@@ -16,6 +16,7 @@ import {
   Map as MapIcon,
   MapPin,
   Plane,
+  Sparkles,
   Stethoscope,
   Timer,
   TrendingUp,
@@ -337,6 +338,23 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                 </p>
               </article>
             </div>
+            <Link
+              href="/dashboard/mir/ultra-resumenes"
+              className="flex flex-col gap-3 rounded-2xl border border-lime-300/30 bg-gradient-to-r from-[#5b1650]/80 to-white/[0.04] p-6 transition hover:border-lime-300/60 sm:flex-row sm:items-center sm:justify-between"
+            >
+              <div className="flex items-center gap-3">
+                <Sparkles className="h-5 w-5 text-lime-300" />
+                <div>
+                  <h3 className="text-lg font-bold text-white">Ultra resúmenes MIR</h3>
+                  <p className="text-sm text-slate-300">
+                    Lo que más cae en el MIR, por especialidad y nivel de rentabilidad
+                  </p>
+                </div>
+              </div>
+              <span className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl bg-lime-300 px-5 text-sm font-black text-[#0A1F44]">
+                Ver resúmenes
+              </span>
+            </Link>
             <article className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
               <div className="flex items-center gap-3">
                 <Timer className="h-5 w-5 text-mq-premium-gold" />
