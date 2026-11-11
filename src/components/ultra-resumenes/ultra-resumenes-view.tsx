@@ -612,9 +612,23 @@ function CategoryDetail({ category, entries, variant, masteredIds, onToggle, onB
                 upgradeHref={upgradeHref}
               />
             ) : (
-              <h2 key={entry.id} className={`pt-4 text-xs font-black uppercase tracking-[0.2em] ${theme.accent}`}>
-                {entry.title}
-              </h2>
+              <div key={entry.id} className="space-y-1.5 pt-6">
+                {entry.level ? (
+                  <div className="flex flex-wrap items-center gap-2">
+                    <LevelBadge level={entry.level} variant={variant} />
+                    {entry.meta ? <span className={`text-[11px] font-bold ${theme.muted}`}>{entry.meta}</span> : null}
+                  </div>
+                ) : null}
+                <h2
+                  className={
+                    entry.level
+                      ? `text-lg font-black sm:text-xl ${theme.title}`
+                      : `text-xs font-black uppercase tracking-[0.2em] ${theme.accent}`
+                  }
+                >
+                  {entry.title}
+                </h2>
+              </div>
             ),
           )}
         </div>

@@ -24,6 +24,10 @@ export type UltraHeading = {
   kind: "heading";
   id: string;
   title: string;
+  /** Rentabilidad del bloque que abre (p. ej. un tema MIR). */
+  level?: UltraLevel;
+  /** Línea secundaria (p. ej. "22 preguntas MIR 2016-2026"). */
+  meta?: string;
 };
 
 export type UltraEntry = UltraCard | UltraHeading;

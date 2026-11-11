@@ -1,14 +1,16 @@
 import { MIR_OFFICIAL_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import type { TrainingQuestion } from "@/lib/questions/types";
-import type { UltraCard, UltraCategory, UltraLevel } from "./types";
+import { MIR_ULTRA_CONTENT, type MirUltraContent } from "./mir-content";
+import type { UltraCard, UltraCategory, UltraEntry, UltraLevel } from "./types";
 
 /**
- * Ultra resúmenes MIR calculados con los exámenes oficiales del banco:
- * cuántas preguntas cae de cada especialidad por convocatoria (de ahí su
- * nivel de rentabilidad) y, dentro de cada una, qué temas se repiten. Las
- * fichas son los puntos clave de redacción propia de Método Q de cada
- * pregunta, agrupados por tema y ordenados de más a menos preguntado.
+ * Ultra resúmenes MIR. Cada especialidad combina:
+ * - el contenido propio por temas ordenados por rentabilidad (mir-content),
+ * - y los puntos clave de las preguntas oficiales del banco, agrupados por
+ *   tema y ordenados de más a menos preguntado.
+ * El nivel y las cifras de cada especialidad se calculan con los exámenes
+ * oficiales del banco.
  */
 
 /** Umbrales de preguntas por convocatoria para cada nivel (1 → 4; el resto es 5). */
@@ -43,7 +45,8 @@ function formatYears(years: number[]): string {
 }
 
 export type MirUltraSpecialty = UltraCategory & {
-  key: string;
+  /** Especialidades del banco que forman la categoría. */
+  keys: string[];
   questionCount: number;
   perConvocatoria: number;
   /** Parte del examen (0-1). */
@@ -103,7 +106,14 @@ function buildCards(specialtySlug: string, questions: TrainingQuestion[]): { car
   return { cards, repeated: sorted.filter(([, list]) => list.length >= 2).length };
 }
 
-export function buildMirUltraSummary(questions: TrainingQuestion[] = MIR_OFFICIAL_QUESTIONS): MirUltraSummary {
+/** Título del separador que da paso a las fichas de preguntas oficiales. */
+export const MIR_BANK_SECTION_TITLE = "Repaso con preguntas oficiales";
+
+export function buildMirUltraSummary(
+  questions: TrainingQuestion[] = MIR_OFFICIAL_QUESTIONS,
+  content: MirUltraContent[] = MIR_ULTRA_CONTENT,
+): MirUltraSummary {
+  const contentByKey = new Map(content.flatMap((item) => item.keys.map((key) => [key, item] as const)));
   const valid = questions.filter((question) => !question.tags?.includes("anulada") && question.keyPoints.length > 0);
   const years = [...new Set(valid.map((q) => q.officialExam?.year).filter((y): y is number => Boolean(y)))].sort();
   const convocatorias = Math.max(years.length, 1);
@@ -112,25 +122,28 @@ export function buildMirUltraSummary(questions: TrainingQuestion[] = MIR_OFFICIA
   for (const question of valid) {
     const primary = getQuestionSpecialtyKeys(question)[0];
     if (!primary) continue;
-    const list = bySpecialty.get(primary) ?? [];
+    const groupKey = contentByKey.get(primary)?.slug ?? primary;
+    const list = bySpecialty.get(groupKey) ?? [];
     list.push(question);
-    bySpecialty.set(primary, list);
+    bySpecialty.set(groupKey, list);
   }
   const total = [...bySpecialty.values()].reduce((sum, list) => sum + list.length, 0) || 1;
 
   const specialties = [...bySpecialty.entries()]
-    .map(([key, list]): MirUltraSpecialty => {
-      const slug = slugify(key);
+    .map(([groupKey, list]): MirUltraSpecialty => {
+      const own = content.find((item) => item.slug === groupKey);
+      const slug = own?.slug ?? slugify(groupKey);
       const perConvocatoria = list.length / convocatorias;
       const level = getMirLevel(perConvocatoria);
       const { cards, repeated } = buildCards(slug, list);
+      const bankSection: UltraEntry[] = [{ kind: "heading", id: `mir-${slug}-banco`, title: MIR_BANK_SECTION_TITLE }, ...cards];
       return {
         slug,
-        key,
-        title: formatSpecialtyLabel(key),
+        keys: own?.keys ?? [groupKey],
+        title: own?.title ?? formatSpecialtyLabel(groupKey),
         group: "",
         level,
-        cardCount: cards.length,
+        cardCount: cards.length + (own?.cardCount ?? 0),
         questionCount: list.length,
         perConvocatoria,
         share: list.length / total,
@@ -141,9 +154,11 @@ export function buildMirUltraSummary(questions: TrainingQuestion[] = MIR_OFFICIA
           { value: String(list.length), label: `preguntas analizadas en ${convocatorias} convocatorias (${years[0]}-${years[years.length - 1]})` },
           { value: perConvocatoria.toLocaleString("es", { maximumFractionDigits: 1, minimumFractionDigits: 1 }), label: "preguntas de media por convocatoria" },
           { value: `${((list.length / total) * 100).toLocaleString("es", { maximumFractionDigits: 1, minimumFractionDigits: 1 })} %`, label: "del examen MIR" },
-          { value: String(repeated), label: "temas que ya se han preguntado más de una vez" },
+          own
+            ? { value: String(own.topicCount), label: "temas ordenados por rentabilidad, de más a menos preguntados" }
+            : { value: String(repeated), label: "temas que ya se han preguntado más de una vez" },
         ],
-        load: async () => cards,
+        load: async () => (own ? [...(await own.load()), ...bankSection] : cards),
       };
     })
     .sort((a, b) => b.questionCount - a.questionCount || a.title.localeCompare(b.title, "es"));
