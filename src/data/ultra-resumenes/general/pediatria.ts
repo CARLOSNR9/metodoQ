@@ -1,236 +1,257 @@
 import type { UltraEntry } from "@/lib/ultra-resumenes/types";
 
-/** Ultra resumen general · Pediatría. Generado desde el documento de fichas de Método Q. */
+/** Ultra resumen general · pediatria. Generado desde content/ultra-resumenes/general/pediatria.md; no editar a mano. */
 export const ENTRIES: UltraEntry[] = [
   {
     "kind": "card",
     "id": "g-388",
-    "title": "Ceftriaxona no se puede utilizar en neonato pretérmino o con hiperbilirrubinemia",
+    "title": "Ceftriaxona en recién nacidos",
     "points": [
-      "Alternativa cefotaxiam."
+      "No usarla en prematuros ni en recién nacidos con ictericia: desplaza la bilirrubina de la albúmina (riesgo de kernícterus) y precipita con el calcio intravenoso.",
+      "Alternativa: cefotaxima."
     ]
   },
   {
     "kind": "card",
     "id": "g-389",
-    "title": "Se considera bajo peso al nacer",
+    "title": "Peso al nacer y perímetro cefálico",
     "points": [
-      "< 2500 g; es muy bajo peso si es < 1500 g y extremadamente bajo peso si es < 1000 g.",
-      "/ PERIMETRO CEFALICO: normal 32 a 37 centimetros; microcefalia <32 cm; macrocefalia > 37 cm."
+      "Bajo peso: <2.500 g. Muy bajo peso: <1.500 g. Extremadamente bajo peso: <1.000 g.",
+      "Perímetro cefálico normal al nacer a término: 32-37 cm. <32 cm: microcefalia. >37 cm: macrocefalia (usar siempre las curvas)."
     ]
   },
   {
     "kind": "card",
     "id": "g-390",
-    "title": "Vitamina D 400 UI/día de a todos los…",
+    "title": "Vitamina D en lactantes",
     "points": [
-      "Vitamina D 400 UI/día de a todos los lactantes con lactancia materna exclusiva o predominante, desde los primeros días de vida y al menos hasta el año, porque la leche materna no aporta suficiente vitamina D.",
-      "El consenso colombiano define los niveles de 25(OH) vitamina D así: ≥30 ng/mL suficiente, 20–29 ng/mL insuficiencia y <20 ng/mL deficiencia",
-      "En insuficiencia leve: niños sanos mayores de 1 año vitamina D3 (colecalciferol) 600 UI/día. deficiencia (<20 ng/mL) se indica tratamiento : 2000 UI/día de vitamina D3 por 6–8 semanas, seguido de dosis de mantenimiento de 600–1000 UI/día."
+      "400 UI/día a todos los bebés con lactancia materna exclusiva o predominante, desde los primeros días y al menos hasta el año (la leche materna tiene poca vitamina D).",
+      "Niveles (consenso colombiano): ≥30 ng/ml suficiente; 20-29 insuficiencia; <20 deficiencia.",
+      "Deficiencia o insuficiencia: dosis de tratamiento de vitamina D3 (colecalciferol) según la edad durante 2-3 meses y luego volver a la dosis de mantenimiento."
     ]
   },
   {
     "kind": "card",
     "id": "g-391",
-    "title": "Si lactante sano debe tener lactancia exclusiva hasta 6 meses",
+    "title": "Alimentación y suplementos del lactante",
     "points": [
-      "Si consume formula , evaluar inicio de alimentación complementaria desde los 4 .MICRONUTRIENTES (CHISPITAS): a TODOS los niños de 6–24 meses como estrategia preventiva poblacional para reducir anemia y deficiencias. . HIERRO: a TODOS los niños de 6–24 meses de forma preventiva (y hasta 5 años si hay factores de riesgo como prematuridad, bajo peso, anemia previa o dieta pobre en hierro). mesesVITAMINA A: en niños de 6–59 meses con riesgo de deficiencia (desnutrición, infecciones recurrentes, baja ingesta o poblaciones vulnerables)",
-      "ZINC: en diarrea aguda (10 mg/día < 6 meses y 20 mg/día ≥ 6 meses por 10–14 días)."
+      "Lactancia materna exclusiva hasta los 6 meses. Si toma fórmula, valorar alimentos complementarios desde los 4-6 meses.",
+      "Micronutrientes en polvo (\"chispitas\"): a todos los niños de 6 a 24 meses para prevenir anemia y deficiencias.",
+      "Hierro preventivo: niños de 6 a 24 meses (y hasta 5 años si hay riesgo: prematuros, bajo peso, anemia previa, dieta pobre en hierro). Prematuros y bajo peso: desde el primer mes.",
+      "Vitamina A: en las campañas para niños de 6 meses a 5 años en zonas de riesgo.",
+      "Desparasitación: cada 6 meses desde los 2 años."
     ]
   },
   {
     "kind": "card",
     "id": "g-392",
-    "title": "AINE tópicos",
+    "title": "AINE tópicos en niños",
     "points": [
-      "En menores de 6 años no están recomendados por limitada evidencia de seguridad y potencial absorción sistémica."
+      "No se recomiendan en menores de 6 años: poca evidencia de seguridad y pueden absorberse al resto del cuerpo."
     ]
   },
   {
     "kind": "card",
     "id": "g-393",
-    "title": "Regurgitación en el lactante es fisiológica cuando cumple…",
+    "title": "Regurgitación del lactante",
     "points": [
-      "REGURGITACIÓN EN EL LACTANTE es fisiológica cuando cumple criterios de Roma IV (≥2 episodios/día por ≥3 semanas en un lactante sano sin signos de alarma) y se maneja con medidas posturales, fraccionar tomas y evitar sobrealimentación, resolviéndose espontáneamente; si aparecen signos de alarma (mala ganancia de peso, irritabilidad intensa, vómitos biliosos o con sangre, apnea o dificultad para alimentarse) se sospecha ERGE, cuyo diagnóstico es clínico y cuyo manejo inicia con medidas no farmacológicas, pudiendo añadir supresión ácida (IBP) en casos moderados a severos o complicados."
+      "Normal (Roma IV): bebé de 3 semanas a 12 meses sano, que regurgita ≥2 veces al día durante ≥3 semanas, gana peso y está tranquilo.",
+      "Manejo: tranquilizar a los padres, tomas más pequeñas y frecuentes, no sobrealimentar, mantenerlo erguido tras comer. Se resuelve sola (casi siempre antes del año).",
+      "Signos de alarma (estudiar): no gana peso, irritabilidad intensa, vómito verde (bilioso) o con sangre, vómitos en proyectil, apneas o rechazo a comer."
     ]
   },
   {
     "kind": "card",
     "id": "g-394",
-    "title": "La hipocalcemia neonatal",
+    "title": "Hipocalcemia neonatal",
     "points": [
-      "Calcio <8 mg/dL en término (<7 mg/dL en prematuros) o ionizado <4.4 mg/dL CLASIFICACION: temprana (<72 h) o tardía (>72 h); temprana: por supresión transitoria de la secreción de pth. tardía : ingesta alta de fosfato, hipoparatiroidismo o déficit de vitamina D. El manejo asintomática, calcio oral; sintomática (convulsiones, tetania, irritabilidad), gluconato de calcio al 10% IV lento con monitorización cardíaca."
+      "Calcio total <8 mg/dl en el bebé a término (<7 en prematuros) o calcio iónico <4,4 mg/dl.",
+      "Temprana (<72 h): la paratiroides del bebé aún está \"dormida\" (prematuros, hijo de madre diabética, asfixia).",
+      "Tardía (>72 h): mucho fósforo en la dieta (leche de vaca), hipoparatiroidismo o falta de vitamina D.",
+      "Sin síntomas: calcio oral. Con síntomas (convulsiones, temblores, irritabilidad): gluconato de calcio al 10 % intravenoso lento con monitor cardiaco."
     ]
   },
   {
     "kind": "card",
     "id": "g-395",
-    "title": "Neonato",
+    "title": "Grupos de edad en pediatría",
     "points": [
-      "0–28 días; lactante menor: 29 días–12 meses; lactante mayor: 1–2 años; preescolar: 2–5 años; escolar: 6–11 años; adolescente: 12–18 años."
+      "Neonato: 0-28 días. Lactante menor: 29 días-12 meses. Lactante mayor: 1-2 años.",
+      "Preescolar: 2-5 años. Escolar: 6-11 años. Adolescente: 12-18 años."
     ]
   },
   {
     "kind": "card",
     "id": "g-396",
-    "title": "Taquipnea en niños se define por edad",
+    "title": "Respiración rápida (taquipnea) según la edad",
     "points": [
-      "En <2 meses ≥60 rpm, en lactantes de 2–11 meses ≥50 rpm y en niños de 1–5 años ≥40 rpm ; mayor 5 años >=30"
+      "<2 meses: ≥60 respiraciones por minuto.",
+      "2-11 meses: ≥50.",
+      "1-5 años: ≥40.",
+      ">5 años: ≥30."
     ]
   },
   {
     "kind": "card",
     "id": "g-397",
-    "title": "Hipotensión",
+    "title": "Presión baja (hipotensión) en niños",
     "points": [
-      "PA < P.5 para la edad, sexo y talla; se aproxima con PAS <70 mmHg en lactantes, <70 + (2 × edad en años) entre 1–10 años y <90 mmHg en >10 años."
+      "Presión sistólica por debajo del percentil 5. Regla rápida:",
+      "Recién nacidos y lactantes: PAS <70 mmHg (neonatos <60).",
+      "1-10 años: PAS <70 + (2 × edad en años).",
+      ">10 años: PAS <90 mmHg."
     ]
   },
   {
     "kind": "card",
     "id": "g-398",
-    "title": "La hipertensión infantil se diagnostica",
+    "title": "HTA en niños",
     "points": [
-      "Presión arterial es ≥ percentil 95 para edad, sexo y talla en al menos tres mediciones en diferentes consultas; se clasifica como presión elevada (percentil 90–94), hipertensión etapa 1 (≥ percentil 95 hasta percentil 95 + 12 mmHg) y etapa 2 (≥ percentil 95 + 12 mmHg o ≥140/90 mmHg en adolescentes)",
-      "El manejo : inicia con cambios en el estilo de vida como dieta baja en sal, actividad física y control del peso; si la presión persiste elevada, etapa 2, daño a órganos o causa secundaria, se inicia tratamiento farmacológico, utilizando medicamentos como inhibidores de la ECA, ARA II (losartán), bloqueadores de canales de calcio (amlodipino) o diuréticos (hidroclorotiazida), junto con seguimiento médico periódico"
+      "Presión ≥ percentil 95 para edad, sexo y talla en 3 consultas distintas.",
+      "Presión elevada: percentil 90-94. HTA etapa 1: percentil 95 hasta 95 + 12 mmHg. Etapa 2: más de percentil 95 + 12 mmHg (o ≥140/90 en adolescentes).",
+      "En niños pequeños es más frecuente la HTA secundaria (riñón, coartación de aorta): estudiar.",
+      "Manejo: menos sal, ejercicio y control del peso. Fármacos si persiste, hay síntomas, daño de órganos, diabetes o enfermedad renal (IECA, ARA-II, antagonistas del calcio)."
     ]
   },
   {
     "kind": "card",
     "id": "g-399",
-    "title": "Un brue se considera de bajo riesgo cuando…",
+    "title": "BRUE de bajo riesgo",
     "points": [
-      "Un BRUE se considera de bajo riesgo cuando se cumplen todos los criterios siguientes: edad > 60 días, edad gestacional al nacer ≥ 32 semanas o edad gestacional corregida ≥ 45 semanas, el evento dura < 1 minuto, primer BRUE, no se requirió RCP por un proveedor médico capacitado, no hay signos preocupantes al examen físico (p. ej., hematomas, atragantamiento, tos) y no hay antecedentes preocupantes (p. ej., apneas, problemas de alimentación)",
-      "No se justifica una evaluación adicional para pacientes con un BRUE de bajo riesgo",
-      "A los cuidadores se les debe brindar tranquilidad, educación y capacitación en RCP. Los pacientes que no cumplen todos los criterios para BRUE de bajo riesgo se consideran de alto riesgo y deben evaluarse para detectar causas subyacentes",
-      "Cuando no se puede establecer una causa, el paciente puede requerir observación y monitoreo por 24 horas."
+      "BRUE: episodio breve en un menor de 1 año (se pone azul o pálido, deja de respirar o cambia el tono, o deja de responder) que ya pasó y sin explicación.",
+      "Bajo riesgo si cumple todo: >60 días de vida, nació ≥32 semanas (y edad corregida ≥45 semanas), duró <1 minuto, es el primero, no necesitó RCP por personal sanitario y el examen y la historia no muestran nada preocupante.",
+      "Bajo riesgo: educar a los padres, enseñar RCP, observación breve; pocos exámenes (puede hacerse ECG y prueba de tos ferina)."
     ]
   },
   {
     "kind": "card",
     "id": "g-400",
-    "title": "Estremecimiento del lactante es un fenómeno benigno en bebés <6 meses",
+    "title": "Estremecimiento del lactante",
     "points": [
-      "Con sacudidas breves de brazos o piernas sin pérdida de conciencia, que ocurre con llanto o excitación y cesa con calma. Manejo: observación; desaparece con la edad."
+      "Benigno, en bebés <6 meses: sacudidas cortas de brazos o piernas sin perder la conciencia, con el llanto o la emoción; paran al calmarse.",
+      "No necesita tratamiento; desaparece con la edad."
     ]
   },
   {
     "kind": "card",
     "id": "g-401",
-    "title": "El espasmo del sollozo es un trastorno benigno…",
+    "title": "Espasmo del sollozo",
     "points": [
-      "El ESPASMO DEL SOLLOZO es un trastorno benigno infantil donde el llanto intenso provoca apnea, cianosis o palidez, puede causar sincope, en niños de 6 meses a 5 años, con recuperación rápida",
-      "Puede ser cianótico (azul) o pálido (blanco)",
-      "Claves: episodios <2 min, niño normal entre ellos, sin daño neurológico o cardiaco",
-      "Manejo: tranquilizar padres, vigilar episodios y descartar causas graves; suele desaparecer con la edad."
+      "Benigno, entre los 6 meses y los 5 años: tras un llanto fuerte o un golpe, el niño deja de respirar, se pone azul (cianótico) o pálido y puede desmayarse.",
+      "Dura <1-2 minutos y se recupera rápido; el niño es normal entre episodios.",
+      "Tranquilizar a los padres y revisar anemia (el hierro reduce los episodios). Desaparece con la edad."
     ]
   },
   {
     "kind": "card",
     "id": "g-402",
-    "title": "Pérdida calor neonatal",
+    "title": "Cómo pierde calor el recién nacido",
     "points": [
-      "Evaporación: pérdida de calor cuando el líquido se evapora de la piel Conducción: contacto directo con superficies frías Convección: pérdida hacia el aire ambiente más frío, Radiación: transferencia de calor hacia objetos fríos cercanos sin contacto directo (paredes, ventanas)."
+      "Evaporación: al secarse el líquido de la piel (por eso se seca al bebé al nacer).",
+      "Conducción: al tocar superficies frías (báscula, colchón).",
+      "Convección: hacia el aire frío alrededor (corrientes de aire).",
+      "Radiación: hacia objetos fríos cercanos sin tocarlos (paredes, ventanas)."
     ]
   },
   {
     "kind": "card",
     "id": "g-403",
-    "title": "En niños el hepatoblastoma es el principal tumor de hígado",
+    "title": "Tumores de hígado en niños",
     "points": [
-      "Eleva el alfafetoproteina; en adolescentes puede existe hepatocarcinoma"
+      "Hepatoblastoma: el tumor de hígado más frecuente en niños pequeños (<3 años); eleva mucho la alfafetoproteína.",
+      "En adolescentes puede aparecer hepatocarcinoma."
     ]
   },
   {
     "kind": "card",
     "id": "g-404",
-    "title": "Profilaxis tuberculosis latente en niños",
+    "title": "Tuberculosis latente: profilaxis en niños",
     "points": [
-      "<5 años e inmunocomprometidos con alto riesgo de progresión de infección a enfermedad por TB y expuestos a un individuo con TB infecciosa, deben recibir \"profilaxis de ventana” con isoniazida, incluso si los resultados iniciales de PPD o IGRA son negativos",
-      "El tratamiento de elección es la isoniazida a dosis de 10 mg/kg/día durante un total de seis meses",
-      "En nuestro país, otro esquema recomendado es Isoniacida + Rifapentina semanal durante 3 meses (12 dosis en total)",
-      "Seguimiento: Si la prueba inicial fue negativa (TUBERCULINA), se debe repetir a las 8-12 semanas",
-      "Si se mantiene negativa, se puede suspender la profilaxis",
-      "Si se positiviza, se completa el tratamiento para TB LATENTE (EN NIÑOS: PRUEBA DE TUBERCULINA ≥ 5 mm positiva si contacto estrecho )",
-      "Tratamiento TBC: El esquema estándar para TB pulmonar, ganglionar y pleural es de 6 meses (isoniacida, rifampicina, pirazinamida, etambutol)",
-      "Para formas miliares, el tratamiento se extiende de 6 a 9 meses, y para meníngea y osteoarticular, es de 12 meses",
-      "Uso de Esteroides: Indicado en TB meníngea y pericarditis para reducir la respuesta inflamatoria y el riesgo de secuelas.",
-      "Prueba de IGRA es válida cuando hay sospecha clínica y resultado positivo, en <1 año la tbc meníngea puede no tener déficit neurológico en etapa temprana, por esta razón se indica punción lumbar para descartar compromiso neurológico así esté sin síntomas."
+      "Niños <5 años e inmunosuprimidos en contacto con un caso de tuberculosis contagiosa: dar profilaxis (\"de ventana\") aunque el PPD o el IGRA salgan negativos, tras descartar enfermedad activa.",
+      "Esquema: isoniazida 10 mg/kg/día por 6 meses (o 9 según la guía).",
+      "Alternativas en Colombia: isoniazida + rifapentina semanal 3 meses (>2 años) o rifampicina 4 meses."
     ]
   },
   {
     "kind": "card",
     "id": "g-405",
-    "title": "Profilaxis en migraña entre 12-17 años",
+    "title": "Prevención de migraña en adolescentes (12-17 años)",
     "points": [
-      "1. Antihistamínicos (p. ej., ciproheptadina)",
-      "2. Medicamentos anticonvulsivantes (p. ej., topiramato)",
-      "3. Antihipertensivos (p. ej., propranolol)",
-      "4. Antidepresivos/ansiolíticos (p. ej., amitriptilina)"
+      "Opciones: antihistamínicos (ciproheptadina), anticonvulsivantes (topiramato), betabloqueantes (propranolol) y antidepresivos (amitriptilina).",
+      "Junto con medidas de higiene: dormir bien, no saltarse comidas, hidratarse y reducir pantallas."
     ]
   },
   {
     "kind": "card",
     "id": "g-406",
-    "title": "Ictericia por lactancia materna",
+    "title": "Ictericia por lactancia y por leche materna",
     "points": [
-      "Se da en los primeros dias de vida, es fisiológica y se da por hipoalimentación, paciente ictérico y con signos de deshidratación y perdida excesiva de peso, existe tránsito intestinal prolongado y retraso del paso del meconio ; la ICTERICIA POR LECHE MATERNA es una prolongación de la ictericia fisiológica con adecuada ganancia de peso sin deshidratación y con buena evacuación de heces."
+      "Ictericia por falta de lactancia (primeros días): el bebé come poco, está deshidratado, pierde mucho peso y evacúa poco. Corregir la técnica de lactancia y alimentarlo más.",
+      "Ictericia por leche materna (después de la primera semana, puede durar semanas): el bebé gana bien de peso, hidratado y con buenas deposiciones. Es benigna; no se suspende la lactancia."
     ]
   },
   {
     "kind": "card",
     "id": "g-407",
-    "title": "Alergia a la proteína de la leche de vaca (aplv)",
+    "title": "Alergia a la proteína de la leche de vaca (APLV)",
     "points": [
-      "Reacción inmunológica a proteínas lácteas (caseína y suero) y puede ser mediada por IgE o no mediada por IgE. Clínica: MEDIADA POR IGE: rápidamente (minutos a 2 horas) tras la ingesta , urticaria, angioedema, vómito inmediato, sibilancias o anafilaxia",
-      "NO MEDIADA POR IGE: tiene inicio tardío (horas a días) y predomina la clínica gastrointestinal , mala ganancia de peso, pruebas de IgE generalmente negativas",
-      "Diagnóstico: es principalmente clínico: mejoría tras retirar la leche de vaca recurrencia al reintroducirla",
-      "El manejo: consiste en eliminar la proteína de leche de vaca, utilizando fórmulas extensamente hidrolizadas o de aminoácidos, y si el niño está en lactancia materna, la madre debe evitar lácteos en su dieta."
+      "Reacción inmune a las proteínas de la leche (caseína y suero).",
+      "Mediada por IgE (rápida, minutos a 2 h): ronchas, hinchazón, vómito inmediato, sibilancias o anafilaxia.",
+      "No mediada por IgE (tardía, horas a días; la más frecuente): síntomas digestivos (cólico, sangre en heces, diarrea, vómitos), poca ganancia de peso; pruebas de IgE negativas.",
+      "Diagnóstico: quitar la leche de vaca 2-4 semanas (si lacta, la madre deja los lácteos) y ver si mejora; luego reintroducir para confirmar (en IgE, con supervisión).",
+      "Si toma fórmula: fórmula extensamente hidrolizada; si no mejora o es grave, de aminoácidos."
     ]
   },
   {
     "kind": "card",
     "id": "g-408",
-    "title": "Enfermedad legg calve perthes",
+    "title": "Enfermedad de Legg-Calvé-Perthes",
     "points": [
-      "Forma no quirúrgica con AINES en ciclos cortos, fisioterapia y restricción del levantamiento de peso",
-      "Se debe favorecer el prono para la conservación de los arcos rotacionales y restringir la actividad deportiva",
-      "Estos pacientes deben ser remitidos a ortopedia infantil, quienes definirán requerimiento de cirugía de contención."
+      "Necrosis (muerte por falta de sangre) de la cabeza del fémur en niños de 4-8 años: cojera y dolor en cadera o rodilla.",
+      "Manejo no quirúrgico: AINE en ciclos cortos, fisioterapia y evitar cargar peso y deportes de impacto. Favorecer dormir boca abajo para mantener la movilidad.",
+      "Remitir a ortopedia infantil, que decide si hace falta cirugía."
     ]
   },
   {
     "kind": "card",
     "id": "g-409",
-    "title": "Artritis idiopática juvenil",
+    "title": "Artritis idiopática juvenil oligoarticular",
     "points": [
-      "La AIJ oligoarticular se relaciona con uveítis anterior crónica (a menudo bilateral) en un 25% de los casos, cuando tiene anas positivos. No se asocia con nefritis"
+      "Afecta ≤4 articulaciones; típica en niñas pequeñas.",
+      "Riesgo de uveítis anterior crónica sin síntomas (hasta 20-30 %), mayor si los ANA son positivos → revisiones periódicas con oftalmología.",
+      "No se asocia a nefritis."
     ]
   },
   {
     "kind": "card",
     "id": "g-410",
-    "title": "Riesgo de cardiopatías",
+    "title": "Exposiciones en el embarazo y cardiopatías del bebé",
     "points": [
-      "Rubeola: ductus arterial persistente; Glucosa alta en ayunas: trasposición de grandes vasos; Litio: enfermedad de ebstein, defecto cardiaco congénito que afecta válvula tricúspidea."
+      "Rubéola: ductus arterioso persistente y estenosis de las ramas pulmonares.",
+      "Diabetes materna mal controlada: transposición de grandes arterias y miocardiopatía hipertrófica.",
+      "Litio: anomalía de Ebstein (válvula tricúspide desplazada hacia abajo)."
     ]
   },
   {
     "kind": "card",
     "id": "g-411",
-    "title": "Miocardiopatía hipertrófica secundaria a diabetes GESTACIONAl",
+    "title": "Miocardiopatía hipertrófica del hijo de madre diabética",
     "points": [
-      "Típicamente hipertrofia septal asimétrica, causada por hiperinsulinemia fetal inducida por hiperglucemia materna; la insulina actúa como factor de crecimiento miocárdico",
-      "Clínica: recién nacido de madre diabética (gestacional o pregestacional), puede ser asintomática o dificultad respiratoria, soplo o signos de obstrucción del tracto de salida del VI. El diagnóstico: con ecocardiograma",
-      "A diferencia de la miocardiopatía hipertrófica genética, suele ser transitoria y reversible al normalizarse el estado metabólico; el manejo : soporte clínico, y si hay obstrucción significativa se usan betabloqueadores"
+      "La glucosa alta de la madre hace que el feto produzca mucha insulina, que engrosa el músculo del corazón (sobre todo el tabique).",
+      "Puede no dar síntomas o dar dificultad respiratoria, soplo u obstrucción de la salida del ventrículo izquierdo.",
+      "Diagnóstico: ecocardiograma.",
+      "Se resuelve sola en semanas o meses. Evitar inotrópicos (empeoran la obstrucción); betabloqueante si hace falta."
     ]
   },
   {
     "kind": "card",
     "id": "g-412",
-    "title": "Las paperas y la orquitis",
+    "title": "Paperas y sus complicaciones",
     "points": [
-      "Las paperas y la orquitis (casuada por rubulavirus – familia parmixovirus)es la complicación más común en varones pospúberes y típicamente se manifiesta 1 a 2 semanas después de la parotiditis con aparición repentina de fiebre, náuseas y vómitos, así como dolor y edema testicular.",
-      "Las paperas pueden provocar encefalitis, pero es una complicación rara (<1% de los casos). La secuela neurológica más común de las paperas es la meningitis aséptica (1-10% de los casos)."
+      "Virus de la parotiditis (paramixovirus): inflamación de las glándulas salivares (parótidas).",
+      "Orquitis: la complicación más frecuente en varones después de la pubertad; 1-2 semanas después, con fiebre y testículo doloroso e hinchado.",
+      "La complicación neurológica más frecuente es la meningitis aséptica (benigna). La encefalitis es rara (<1 %). También pancreatitis y sordera.",
+      "Prevención: vacuna triple viral."
     ]
   },
   {
@@ -238,9 +259,12 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-413",
     "title": "Reanimación neonatal",
     "points": [
-      "Medidas iniciales (evitar perdida calor, optimizar vía aérea, secar piel, estimular, pinzamiento de cordón tardío 60 s’) si fc >100 y respira bien esta bien",
-      "PRIMERO: si fc <100, quejido, disnea – VPP cada segundo ,-SEGUNDO: si >fc 100 funciono esta bien ; si a) >100 pero respira mal, se da o2 flujo libre o CPAP , b) si fc <100 - >60 , continuo VPP hago MR.SOPA ; c) si < 60 compresiones 3:1 ventilación , via aérea avanzada fio2 100 % ; epinefrina 0.01 mg/kg c/3 min ; LEVS 10 cc/kg ; glóbulos rojos si sangrado",
-      "PARAR A LOS 20 MIN, SI <25 SEM , CARDIOPATIA CONGÉNITA"
+      "Pasos iniciales: evitar que se enfríe, posicionar la vía aérea, secar y estimular; pinzar el cordón tras 30-60 segundos si el bebé está bien.",
+      "Si respira bien y FC >100: cuidados de rutina con la madre.",
+      "Si no respira, jadea o FC <100: ventilación con presión positiva (40-60 por minuto) en el primer minuto (\"minuto de oro\").",
+      "FC >100 pero con dificultad respiratoria: oxígeno o CPAP.",
+      "FC 60-100: seguir ventilando y corregir la técnica (MR. SOPA: mascarilla, reposicionar, succionar, abrir la boca, presión, vía aérea alternativa).",
+      "FC <60 tras 30 s de buena ventilación: intubar, oxígeno al 100 % y compresiones 3:1 (90 compresiones y 30 ventilaciones por minuto). Si sigue <60: adrenalina 0,01-0,03 mg/kg intravenosa."
     ]
   },
   {
@@ -248,25 +272,30 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-414",
     "title": "Reanimación pediátrica",
     "points": [
-      "C-A-B-D: compresiones 30:2 si 1 reanimador, 15:2 si 2 reanimadores; airway , ventilación 1 cada 2-5 s’ ; desfibrilar (1RO) 2 juls/kg- (2DA) 4 juls/kg max 10 Jules . AVANZADO: ritmos no defibrilables, inicio adrenalina 0,01 mg/kg ; ritmos desfibrilables (F.V Y T.V SIN PULSO) se desfibrila, se da epinefrina, amiodarona 5 mg/kg",
-      "TAQUIARRITMIAS: ESTRECHO < 90 ms’: inestable cardioversión 0.5-2 jul/kg , estable adenosina 0.1 mg/kg, repetir 0.2 mg/kg . ANCHO >90 ms’ : inestable: cardioversión 0.5-2 jul/kg estable: amiodarona 5 mg/kg en 20 min",
-      "BRADICARDIA: inestable: atropina 0.02 mg/kg c/3-5 min, si no mejora, marcapasos tras cutáneo temporal."
+      "Orden: compresiones, vía aérea y ventilación. 30:2 con un reanimador; 15:2 con dos. Con vía aérea avanzada: 1 ventilación cada 2-3 segundos sin parar las compresiones.",
+      "Desfibrilación (fibrilación ventricular o TV sin pulso): 2 J/kg la primera, 4 J/kg la segunda (máximo 10 J/kg o la dosis de adulto). Adrenalina y amiodarona 5 mg/kg (o lidocaína).",
+      "Ritmos no desfibrilables: adrenalina 0,01 mg/kg cuanto antes y cada 3-5 minutos.",
+      "Taquicardia de QRS estrecho: inestable → cardioversión 0,5-1 J/kg (luego 2 J/kg). Estable → maniobras vagales (hielo en la cara en lactantes) y adenosina 0,1 mg/kg (luego 0,2 mg/kg)."
     ]
   },
   {
     "kind": "card",
     "id": "g-415",
-    "title": "En lactantes y adultos conscientes con obstrucción de vía aérea",
+    "title": "Atragantamiento en lactantes conscientes",
     "points": [
-      "Se realiza una secuencia alterna de 5 golpes interescapulares (bebé en decúbito prono sobre el antebrazo, cabeza más baja que el tórax) y 5 compresiones torácicas (decúbito supino, cabeza más baja que el tronco, presionando el esternón con 2 dedos) hasta expulsión del objeto o pérdida de consciencia."
+      "Menores de 1 año: alternar 5 golpes en la espalda (bebé boca abajo sobre el antebrazo, cabeza más baja que el tronco) y 5 compresiones en el pecho (boca arriba, con 2 dedos sobre el esternón).",
+      "Repetir hasta que salga el objeto o pierda la conciencia (entonces iniciar RCP).",
+      "No hacer barridos a ciegas con el dedo. En niños >1 año: maniobra de Heimlich (compresiones abdominales)."
     ]
   },
   {
     "kind": "card",
     "id": "g-416",
-    "title": "Apgar",
+    "title": "Puntaje de Apgar",
     "points": [
-      "Escala al minuto y a los 5 minutos de vida y a los 10 minutos , evaluando cinco parámetros: Apariencia (color), Pulso (frecuencia cardiaca), Gesticulación (respuesta refleja), Actividad (tono muscular) y Respiración, puntaje de 7–10 buena adaptación, 4–6 depresión moderada y 0–3 depresión severa"
+      "Se calcula al minuto y a los 5 minutos (y a los 10 si es bajo). Evalúa 5 cosas de 0 a 2: color, frecuencia cardiaca, respuesta a estímulos (mueca), tono muscular y respiración.",
+      "7-10: buena adaptación. 4-6: depresión moderada. 0-3: depresión grave.",
+      "No sirve para decidir si reanimar (eso se decide antes del minuto) ni predice por sí solo el pronóstico."
     ]
   },
   {
@@ -274,25 +303,9 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-417",
     "title": "Asfixia perinatal",
     "points": [
-      "ASFIXIA PERINATAL SEVERA: al menos 3 de los siguientes criterios:",
-      "1.Apgar a los 5 minutos < o igual a 5.",
-      "Ph < 7,0 en la primera hora de vida en muestra del cordón arterial o venosa o capilar.",
-      "Déficit de Base exceso > o igual a -16 mmlo/L en la primera hora de vida.",
-      "Encefalopatía moderada a severa, es decir Sarnat estadío II–III.",
-      "Lactato > o igual a 12 mmol/L durante la primera hora de vida. ASFIXIA PERINATAL MODERADA. menos 2 de los siguientes criterios:",
-      "Apgar a los 5 minutos < o igual a 7.",
-      "Ph <7,15 en la primera hora de vida en muestra de cordón arterial o venosa o capilar.",
-      "Encefalopatía leve a moderada, es decir Sarnat estadío I-II.",
-      "ASFIXIA PERINATAL LEVE SIN ACIDOSIS METABÓLICA. siguientes 2 criterios:",
-      "Apgar a los 5 minutos < o igual a 7.",
-      "Ph > o igual a 7,15.",
-      "ACIDOSIS METABÓLICA SIN ALTERACIÓN CLÍNICA O NEUROLÓGICA.",
-      "Ph < 7,15 en gases de arteria o vena umbilical, o capilares.",
-      "Apgar a los 5 minutos > 7.",
-      "ASFIXIA PERINATAL DESCARTADA.",
-      "Ph > o igual a 7,15.",
-      "Apgar a los 5 minutos > 7",
-      "TRATAMIENTO: La HIPOTERMIA terapéutica está indicada en ≥36 semanas y ≥1800 g, , En primeras 6 horas de vida, en evento hipóxico significativo (pH ≤7.0 o déficit de base ≥16 mmol/l, o pH 7.01–7.15 con Apgar ≤5 , necesidad de ventilación ≥10 minutos) y además encefalopatía moderada o severa (Sarnat II–III,); está contraindicada en menores de 36 semanas, inicio >6 horas de vida, malformaciones congénitas mayores, hemorragia intracraneal severa, peso <1800 g, inestabilidad hemodinámica refractaria ."
+      "Grave (al menos 3): Apgar a los 5 minutos ≤5; pH <7,0 en sangre de cordón o en la primera hora; déficit de base ≥16 mmol/l; encefalopatía moderada o grave (Sarnat II-III); lactato ≥12 mmol/l.",
+      "Moderada: al menos 2 criterios menos intensos.",
+      "La encefalopatía moderada-grave en bebés ≥36 semanas es candidata a hipotermia terapéutica en las primeras 6 horas."
     ]
   },
   {
@@ -300,10 +313,11 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-418",
     "title": "Parálisis cerebral infantil",
     "points": [
-      "Trastorno neurológico no progresivo por lesión del cerebro en desarrollo (prenatal, perinatal o postnatal temprano) que afecta movimiento, tono y postura; clásicamente es adquirida, hasta 10–30% puede tener base o predisposición genética; el DIAGNÓSTICO: clínico y evolutivo, basado en retraso motor, alteraciones del tono (espasticidad la más frecuente) y persistencia de reflejos primitivos. herramientas de detección temprana :",
-      "1. General Movements Assessment (Prechtl) en <5 meses",
-      "2.HINE en >5 meses (puntajes bajos para la edad aumentan riesgo); resonancia magnética cerebral (identifica leucomalacia periventricular, lesiones hipóxico-isquémicas o malformaciones), considerando estudios genéticos si curso atípico o sin antecedente claro",
-      "MANEJO: rehabilitación temprana (fisioterapia, terapia ocupacional, fonoaudiología), control de espasticidad (baclofeno, toxina botulínica"
+      "Trastorno del movimiento, el tono y la postura por una lesión no progresiva del cerebro en desarrollo (antes, durante o poco después del parto). Hasta 10-30 % tiene base genética.",
+      "La forma más frecuente es la espástica.",
+      "Diagnóstico clínico y en el tiempo: retraso motor, tono alterado y reflejos primitivos que no desaparecen.",
+      "Detección temprana: evaluación de movimientos generales (General Movements), examen neurológico de Hammersmith y RM.",
+      "Manejo multidisciplinario: rehabilitación, control de la espasticidad (toxina botulínica, baclofeno) y apoyo."
     ]
   },
   {
@@ -311,28 +325,32 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-419",
     "title": "Dificultad respiratoria del recién nacido",
     "points": [
-      "SILVERMAN: >= 7 INTUBAR . a. enf. Membrana hialina: pre términos, falta surfactante (producido neumocito tipo II, a partir de la semana 26, máxima a las 35) ,tto: corticoide prenatal, manejo sala partos: <30 sem , manejo:",
-      "El CPAP nasal con FiO₂ mantener saturaciones de 90–95%, con presión positiva de 5–6 cmH2O. Si falla → se considera surfactante e intubación. b. aspiración meconio: a termino, rx con hiperinflación y afectación parches , TTO: evitar hipoxia, ventilación, si no mejora oxido nítrico mas surfactante",
-      "C. hipertensión pulmonar: HIPOXIA SIN DAÑO PULMONAR, Ecocardiograma: presión elevada en arteria pulmonar TTO: oxigeno, oxido nítrico 20 partes por millón ( en >34 sem y<15 dias nacido) , sildenafil , solo si rta al oxido nitrico d",
-      "Taquipnea transitoria R.N : en cesárea, pre termino, gemelar ; da taquipnea mas dif respiratoria , DX exclusión, mejora en <72 horas, TTO : o2 suplementario, fio2 < 40 e. sn",
-      "Escape aéreo: ruptura del alveolo, por inadecuada ventilación 99% o espontaneo ; clínica deterioro gradual TTO: o2 expectante, o toracocentesis f. apnea: cese respiración x 20 s’ o < 20 s’ con bradicardia , cianosis, CAUSAS: anemia, ductus, electrolitos, sepsis TTO: corregir causa , apnea por prematuridad: inmadurez control neurológico, se resuelve a als 36-37 sem, DX: polisomnografia TTO: citrato cafeína 20 mg/kg carga, continuar 5-10 mg/kg x se. suspende cuando 7 dias sin apenas."
+      "Escala de Silverman-Andersen: 0 sin dificultad; ≥7 grave (intubar).",
+      "Membrana hialina (enfermedad por déficit de surfactante): prematuros. El surfactante lo producen los neumocitos tipo II desde la semana ~24-26 y es suficiente hacia la 34-35. Prevención: corticoides prenatales. Manejo: CPAP 5-6 cmH2O con SatO2 90-95 %; si falla, surfactante e intubación.",
+      "Taquipnea transitoria: a término o cesárea sin trabajo de parto; líquido pulmonar retenido. Mejora sola en 24-72 h con oxígeno.",
+      "Aspiración de meconio: a término o postérmino con líquido teñido; radiografía con zonas hinchadas y otras colapsadas. Soporte, oxígeno, a veces surfactante.",
+      "Neumonía neonatal: pensar con factores de riesgo de infección."
     ]
   },
   {
     "kind": "card",
     "id": "g-420",
-    "title": "Ictericia recién nacido",
+    "title": "Ictericia del recién nacido",
     "points": [
-      "NORMAL: caucásicos 7-9 mg/dl a las 48 horas, asiáticos 10-14 a las 72 horas. Resolución a las 2 semanas, si supera esto es PROLONGADA. a. Neonatal benigna: 8-9 mg/dl, normal transitoria ; b. neonatal grave: > 25mg/dl ; c. extrema: >30 mg/dl. ; DUBIN JHONSON Y ROTOR (DIRECTA)",
-      "CLIGER NAJAR Y GILBER (INDIRECTA). TTO: fototerapia y exanguineotransfusion según tablas. CRITERIOS RETIRO FOTOTERAPIA:disminución de 3.5 mg/dl del umbral de fototerapia"
+      "Fisiológica: aparece después de las 24 h, pico a los 3-5 días y desaparece en 1-2 semanas. Si dura más: prolongada (estudiar).",
+      "Patológica: aparece en las primeras 24 h, sube rápido, es muy alta o es de predominio directa (conjugada).",
+      "Grave: >25 mg/dl; extrema: >30 mg/dl (riesgo de kernícterus, daño cerebral).",
+      "Tratamiento: fototerapia o exanguinotransfusión según la edad en horas, la edad gestacional y los factores de riesgo (tablas y nomogramas).",
+      "Retirar la fototerapia cuando la bilirrubina baja al menos 2-3,5 mg/dl por debajo del umbral de inicio."
     ]
   },
   {
     "kind": "card",
     "id": "g-421",
-    "title": "Crigler-Najjar tipo I",
+    "title": "Hiperbilirrubinemias hereditarias",
     "points": [
-      "Neonatal, riesgo de kernicterus, no responde a fenobarbital por ausencia de UGT1A1), tipo II (menos grave, sí responde a fenobarbital porque induce la UGT1A1) y Gilbert (leve, intermitente, desencadenado por estrés o ayuno); las conjugadas (directas) incluyen Dubin-Johnson (defecto de excreción con hígado pigmentado oscuro) y Rotor (similar pero sin pigmentación hepática), siendo en general benignos."
+      "Indirectas (no conjugadas): Crigler-Najjar tipo I (falta total de la enzima UGT1A1; neonatal, grave, riesgo de kernícterus; no responde al fenobarbital). Tipo II (menos grave; responde al fenobarbital). Gilbert (leve, aparece con ayuno, estrés o infección; benigno).",
+      "Directas (conjugadas): Dubin-Johnson (hígado de color oscuro) y Rotor (sin pigmento); ambos benignos."
     ]
   },
   {
@@ -340,205 +358,189 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-422",
     "title": "Sepsis neonatal",
     "points": [
-      "CLASIFICACION: temprana: <72 horas, tardia >72 horas, muy tardia >30 dias",
-      "ETIOLOGIA: TEMPRANA : e.coli y st agalactae TARDIA: s. aureus y e.coli .DX: clínica, hemocultivos, hemograma, pcr , TTO: empírico TEMPRANA: ampicilina (ataca listeria)+ aminoglucosido TARDIA: aminoglucosido + vancomiCina ( cefalosporina iii si sospecho meningitis). . FAC.RIESGO: maternos: corioamnionitis, rpm18h, st. grupo b, fiebre intraparto ; neonato: apgar bajo, reanimación, sufrimiento fetal, parto domiciliario, embarazo multipel, intervenciones",
-      "TTO MATERNO SI .ST. GRUPO B: colonización, urocultivo +, estado desconocido <37 sem, RPM >18 h . se da tto, con penicilina cristalina 5 millones dosis de carga, continuar 2.5 millones c/4 horas hasta parto; segunda línea: ampicilina iv, 2 gr dosis carga, continuar 1 gr iv c/4 horas",
-      "ANTBO A NEONATO SEGÚN F.R: RPM > 18 + cualquiera de (clínica O R.N.PT ) ; si ST.GRUPO B + RNPT + otro factor de riesgo",
-      "OBSERVACION SIN ANTBO: RPM >18 horas sin otro factor de riesgo o con RCIU; si recibió profilaxis para ST.GRUPO B.",
-      "Sepsis neonatal , el urocultivo se solicita solo en sepsis > 72 h."
+      "Temprana: <72 h de vida (gérmenes de la madre: estreptococo del grupo B, E. coli, Listeria).",
+      "Tardía: >72 h (gérmenes del hospital o la comunidad: estafilococos, gramnegativos). Muy tardía: >30 días.",
+      "Factores de riesgo: maternos (corioamnionitis, bolsa rota >18 h, estreptococo B, fiebre en el parto); del bebé (prematuridad, Apgar bajo, reanimación, catéteres).",
+      "Diagnóstico: clínica (inespecífica: rechazo al alimento, temperatura inestable, dificultad respiratoria), hemocultivos, hemograma, PCR; punción lumbar si es posible.",
+      "Temprana: ampicilina + gentamicina (o amikacina). Tardía: vancomicina u oxacilina + aminoglucósido; cefotaxima si se sospecha meningitis."
     ]
   },
   {
     "kind": "card",
     "id": "g-423",
-    "title": "Síndrome febril",
+    "title": "Síndrome febril en niños",
     "points": [
-      "FIEBRE SIN FOCO: fiebre menor de 1 semana sin explicación, FIEBRE DE ORIGEN DESCONOCIDO: temperatura ≥ 38,3 °C en varias ocasiones, con una duración mayor de 3 semanas."
+      "Fiebre sin foco: fiebre de <1 semana sin causa aparente tras historia y examen.",
+      "Fiebre de origen desconocido: ≥38,3 °C en varias ocasiones durante >3 semanas (o >1 semana de estudio en hospital) sin diagnóstico."
     ]
   },
   {
     "kind": "card",
     "id": "g-424",
-    "title": "Manejo fiebre sin foco pediátrico",
+    "title": "Fiebre sin foco según la edad",
     "points": [
-      "NEONATOS ( <=28DÍAS) riesgo es alto absoluto, :",
-      "1. Hospitalización ,2. toma de cultivos (sangre, orina por cateterismo y LCR)",
-      "3. inicio inmediato de antibiótico empírico EV con ampicilina + cefotaxima (o amikacina).",
-      "LACTANTES DE 29 A 60 DÍAS 1. aplica el protocolo Step-by-Step o Rochester: 1.1 si buen aspecto, con reactivos de fase aguda negativos (PCR =<20 mg/L, procalcitonina =<0.5 ng/ml) y orina normal, se clasifica como bajo riesgo y se maneja con observación estrecha sin antibióticos; si altera algún criterio, se clasifica como alto riesgo, requiriendo hospitalización, cultivos, punción lumbar y ceftriaxona EV.",
-      "LACTANTES DE 3 A 36 MESES 1. estado de vacunación (S. pneumoniae y H. influenzae): si esquemas al día y buen aspecto, el manejo es sintomático ambulatorio con acetaminofén (10-15 mg/kg/dosis) y pautas de alarma; si no vacunados o lucen enfermos, se realiza tamizaje con parcial de orina/urocultivo, hemograma, reactivos de fase aguda y se considera ceftriaxona IM o EV según los hallazgos."
+      "Recién nacidos (≤28 días): riesgo alto siempre. Hospitalizar, cultivos (sangre, orina por sonda y LCR) y antibiótico intravenoso inmediato (ampicilina + cefotaxima o gentamicina).",
+      "29-60 días: aplicar un protocolo (Step-by-Step o Rochester). Bajo riesgo si tiene buen aspecto, PCR ≤20 mg/l, procalcitonina ≤0,5 ng/ml y orina normal → manejo ambulatorio con control en 24 h (o observación). Si no, hospitalizar, cultivos y antibiótico.",
+      "3-36 meses: si tiene buen aspecto, buscar infección urinaria (uroanálisis) y valorar hemograma según vacunas y temperatura; mal aspecto → manejo como sepsis."
     ]
   },
   {
     "kind": "card",
     "id": "g-425",
-    "title": "Cardiopatías congénitas neonatales se dividen en cianóticas y acianóticas",
+    "title": "Cardiopatías congénitas cianóticas",
     "points": [
-      "CIANÓTICAS: 1. *Transposición de grandes arterias (aorta y pulmonar invertidas), cianosis inmediata desde las primeras horas sin soplo significativo, Rx corazón en huevo en hilo; manejo: ductus con prostaglandina E1 y cirugía de corrección arterial temprana.",
-      "Tetralogía de Fallot (estenosis pulmonar + CIV + aorta cabalgante + hipertrofia RV), cianosis que aparece progresivamente o en crisis hipoxémicas, Rx corazón en bota, soplo eyectivo en foco pulmonar con intensidad variable según estenosis; manejo: crisis hipoxémicas y cirugía correctiva en meses iniciales. 3. *Atresia tricuspídea (válvula tricúspide ausente), cianosis inmediata, pulmones con flujo disminuido, soplo sistólico por CIV, desvío de flujo auricular derecho a izquierda; manejo: ductus-dependiente con prostaglandina E1 y cirugía paliativa.",
-      "4. Tronco arterioso (arteria única que sale del corazón a pulmones y cuerpo), cianosis leve, soplo único continuo, Rx con hiperflujo pulmonar marcado; manejo: cirugía de corrección temprana.",
-      "5. Retorno venoso pulmonar anómalo total (venas pulmonares no llegan a aurícula izquierda, se conectan a venas sistémicas), cianosis, dificultad respiratoria, soplo mínimo y Rx supracardíaco “muñeco de nieve”; manejo: cirugía urgente."
+      "Transposición de grandes arterias (aorta y pulmonar invertidas): bebé azul desde las primeras horas, sin soplo importante; radiografía con corazón \"en huevo\". Mantener abierto el ductus con prostaglandina E1 y cirugía temprana (switch arterial).",
+      "Tetralogía de Fallot (estenosis pulmonar + CIV + aorta cabalgante + hipertrofia del ventrículo derecho): cianosis progresiva o en crisis (el niño se agacha en cuclillas); radiografía \"en bota\". Crisis: posición rodillas al pecho, oxígeno, morfina, líquidos, fenilefrina; cirugía.",
+      "Otras: atresia tricuspídea, tronco arterioso, drenaje venoso pulmonar anómalo total.",
+      "Pista: cianosis que no mejora con oxígeno al 100 % = cardiopatía (prueba de hiperoxia)."
     ]
   },
   {
     "kind": "card",
     "id": "g-426",
-    "title": "Acianóticas",
+    "title": "Cardiopatías congénitas acianóticas (con cortocircuito)",
     "points": [
-      "6. Comunicación interventricular, soplo holosistólico intenso en borde esternal izquierdo, pulsos normales, signos de IC si grande; manejo: seguimiento si pequeña, cierre quirúrgico si grande.",
-      "7. Comunicación interauricular, desdoblamiento fijo del segundo ruido y soplo sistólico pulmonar leve, pulsos normales; manejo: cierre percutáneo o cirugía.",
-      "8. Ductus arterioso persistente, soplo continuo en “máquina” infraclavicular izquierda, pulsos saltarines y hiperflujo pulmonar; manejo: indometacina/ibuprofeno o cirugía si falla.",
-      "9. Canal auriculoventricular (fusión de septos auricular y ventricular, frecuente en síndrome de Down), soplos múltiples, IC temprana, hepatomegalia; manejo: cirugía correctiva en primeros meses."
+      "Comunicación interventricular (la más frecuente): soplo holosistólico fuerte en el borde izquierdo del esternón. Pequeña: observar (muchas cierran solas). Grande con insuficiencia cardiaca: cirugía.",
+      "Comunicación interauricular: desdoblamiento fijo del segundo ruido y soplo suave en foco pulmonar. Cierre por cateterismo o cirugía.",
+      "Ductus arterioso persistente: soplo continuo \"en maquinaria\" bajo la clavícula izquierda, pulsos saltones. Prematuros: ibuprofeno, indometacina o acetaminofén para cerrarlo; si no, cierre por cateterismo o cirugía.",
+      "Canal auriculoventricular: típico del síndrome de Down."
     ]
   },
   {
     "kind": "card",
     "id": "g-427",
-    "title": "Obstructivas",
+    "title": "Cardiopatías obstructivas",
     "points": [
-      "10. Coartación de aorta, diferencia de presión brazos-piernas, pulsos femorales débiles, edema y shock al cierre del ductus; manejo: prostaglandina E1 si crítico y reparación quirúrgica o cateterismo.",
-      "11",
-      "Estenosis aórtica o pulmonar, soplo sistólico eyectivo fuerte en foco aórtico/pulmonar, signos de bajo gasto si crítica; manejo: balón valvular o cirugía según severidad",
-      "Tip clave: cianosis que no mejora con oxígeno indica cardiopatía cianótica, shock al cierre del ductus indica cardiopatía dependiente de ductus."
+      "Coartación de aorta: presión más alta en brazos que en piernas, pulsos femorales débiles o ausentes; en el recién nacido, shock al cerrarse el ductus. Prostaglandina E1 si es crítica y reparación (cirugía o cateterismo). Asociada a síndrome de Turner.",
+      "Estenosis aórtica o pulmonar: soplo sistólico eyectivo fuerte en el foco correspondiente; bajo gasto si es crítica. Valvuloplastia con balón o cirugía.",
+      "Clave: cianosis que no mejora con oxígeno sugiere cardiopatía cianótica; pulsos femorales débiles sugieren coartación."
     ]
   },
   {
     "kind": "card",
     "id": "g-428",
-    "title": "Toxoplasma gestacional",
+    "title": "Toxoplasmosis en la gestante",
     "points": [
-      "DIAGNOSTICO MADRE:",
-      "1. igg e igm negativos: negativo ;2. igg negativo, igm positivo ( seguimiento mensual hasta que igg positivo e inicio tto)",
-      "Igg positivo, igm positivo : ( se realiza prueba de avidez, si es ALTA crónico NO tto, si es baja AGUDO Y SE INICIA TTO ) ;4.si la igg positiva y la igm negativa: (ES CRONCIA NO TTO). .TRATAMIENTO MADRE: si menor 18 semanas: ESPIRAMICINA ; si mayor 18 semanas: PIRIMETAMINA +SULFADIAZINA+ AC. FOLINICO. ( SE DA TTO EN AMBOS CASOS HASTA RESULTADO PCR EN LIQ.AMNIOTICO) si resultado negativo, se da espiramicina hasta el parto ; si es postivo se dan los medicamentos hasta el parto."
+      "IgG e IgM negativas: no inmune → prevención y control mensual.",
+      "IgG negativa, IgM positiva: puede ser infección muy reciente o falso positivo → repetir; si la IgG se vuelve positiva, es infección aguda → tratar.",
+      "IgG e IgM positivas: prueba de avidez. Alta = infección antigua (no tratar). Baja = reciente → tratar.",
+      "IgG positiva, IgM negativa: infección antigua, no tratar.",
+      "Tratamiento: <18 semanas, espiramicina (reduce el paso al feto). >18 semanas o infección fetal confirmada (PCR en líquido amniótico): pirimetamina + sulfadiazina + ácido folínico."
     ]
   },
   {
     "kind": "card",
     "id": "g-429",
-    "title": "Toxoplasmosis neonatal",
+    "title": "Toxoplasmosis congénita",
     "points": [
-      "TETRADA DE SABIN: calcificaciones cerebrales, hidrocefalia, corioretinitis, convulsiones",
-      "DX: serologia tomar lo antes posible, repetir 5-10 dias para excluir anticuerpos madre, DESCARTAR: igm, iga y pcr negativos ,CONFIRMA: Igm o iga mas igg positivos; o pcr positiva; o igg positiva en aumento comparado con madre o que persista por 12 meses ; o histología de placenta positiva",
-      "TRATAMIENTO: EN PACIENTES CON DX CONFIRMADO O MADRE CON TOXO CONFIRMADA: piremetamina 2mg/kg dosis cada 12 h x 2 dias, continuar 1 mg /kg dosis cada 12 h 3 veces a la semanasa por 1 año",
-      "Mas sulfadiazina 100 mg/kg/dia cada 12 horas por 1 año",
-      "Mas acido folinico durante el tratamiento con piremetamina mas 1 semana mas",
-      "SEGUIMIENTO: igg e igm cada 3 meses hasta 3 meses después del tto. ; oftamologia cada 3 mese por 18 meses, evaluar audición."
+      "Tétrada de Sabin: calcificaciones cerebrales (dispersas), hidrocefalia, coriorretinitis (lesiones en la retina) y convulsiones. Muchos nacen sin síntomas.",
+      "Diagnóstico: serología lo antes posible (IgM, IgA, IgG) y PCR. Confirma: IgM o IgA positivas, PCR positiva, o IgG que sube o persiste a los 12 meses. Se descarta si la IgG desaparece antes del año.",
+      "Tratamiento si se confirma: pirimetamina + sulfadiazina + ácido folínico durante 12 meses (corticoide si hay coriorretinitis activa o proteínas muy altas en LCR).",
+      "Evaluación con fondo de ojo, ecografía o TAC cerebral y audición."
     ]
   },
   {
     "kind": "card",
     "id": "g-430",
-    "title": "Herpes congenito",
+    "title": "Herpes neonatal",
     "points": [
-      "VHS1 , Y VHS2 , se transmite en el parto o puede ser ascedente si rpm",
-      "CLINICA: infx, ocular, SNC, diseminda , . SNC: vhs 1 causa encefalitis, ataca lóbulo temporal",
-      "Vhs 2: paralisis de bells, neuralgia trigémino . DX: clínica o pcr en sangre o lcr .TTO: Aciclovir, valciclovir, famciclovir"
+      "Se contagia sobre todo en el paso por el canal del parto (herpes genital materno, más riesgo si es primoinfección).",
+      "Tres formas: piel-ojos-boca (vesículas), sistema nervioso central (encefalitis con convulsiones, a las 2-3 semanas) y diseminada (sepsis, hígado; la más grave).",
+      "Diagnóstico: PCR de lesiones, sangre y LCR.",
+      "Tratamiento: aciclovir intravenoso 60 mg/kg/día (14 días piel-ojo-boca; 21 días si SNC o diseminada) y luego supresión oral.",
+      "Prevención: cesárea si la madre tiene lesiones genitales activas en el parto."
     ]
   },
   {
     "kind": "card",
     "id": "g-431",
-    "title": "CMV congénito",
+    "title": "Citomegalovirus congénito: diagnóstico",
     "points": [
-      "DIAGNOSTICO: antes de los 21 días de vida, :",
-      "1. tamizaje por PCR en saliva (fácil y sensible)",
-      "2. confirmando con PCR en orina para evitar falsos positivos por leche materna; después de este tiempo no se puede diferenciar infección congénita de perinatal",
-      "CLINICA: La mayoría son asintomáticos. pueden presentar microcefalia, calcificaciones periventriculares, hipoacusia, hepatoesplenomegalia y trombocitopenia",
-      "TRATAMIENTO: depende de la clínica: los asintomáticos no requieren tratamiento, mientras que los sintomáticos o con compromiso del SNC o hipoacusia se tratan con valganciclovir oral por 6 meses (o ganciclovir IV en casos graves), con seguimiento estrecho de hemograma (neutropenia) y control auditivo y del neurodesarrollo."
+      "Debe buscarse antes de los 21 días de vida: PCR en saliva (tamizaje) y confirmar con PCR en orina (la saliva puede dar falso positivo por la leche materna). Después de 21 días no se distingue si fue congénito o adquirido después.",
+      "Mayoría sin síntomas. Posibles hallazgos: cabeza pequeña, calcificaciones alrededor de los ventrículos, sordera, hígado y bazo grandes, plaquetas bajas, petequias.",
+      "Tratamiento: valganciclovir oral 6 meses en los sintomáticos moderados-graves (iniciar en el primer mes)."
     ]
   },
   {
     "kind": "card",
     "id": "g-432",
-    "title": "Infección congénita por citomegalovirus (CMV) El bajo peso al nacer",
+    "title": "Citomegalovirus congénito: clínica y tratamiento",
     "points": [
-      "La ictericia, la microcefalia y las calcificaciones periventriculares son hallazgos asociados. el valganciclovir puede causar neutropenia grave, así como anemia y trombocitopenia.",
-      "90% asintomáticos, CLINICA: principal causa de SORDERA, causa retinitis, puede llegar a causar síndrome hemato fagocitico, LEVE: no snc, 1 o 2 sintomas aislados , MODERADO: mas de 2 sintomas, GRAVE: sin SNC, compromete la vida",
-      "DX: detección molecular en orina o saliva",
-      "TTO: soporte, ganciclovir en 1er"
+      "La infección congénita más frecuente y la principal causa infecciosa de sordera neurosensorial en niños.",
+      "90 % sin síntomas al nacer; algunos desarrollan sordera después (seguir la audición).",
+      "Signos: bajo peso, ictericia, microcefalia, calcificaciones periventriculares, coriorretinitis.",
+      "Leve: 1-2 signos aislados sin afectar el SNC. Moderado-grave: varios signos o afectación del SNC → tratar.",
+      "El valganciclovir puede causar neutropenia, anemia y plaquetas bajas: hemogramas de control."
     ]
   },
   {
     "kind": "card",
     "id": "g-433",
-    "title": "El síndrome hemofagocítico (linfohistiocitosis hemofagocítica) es una emergencia…",
+    "title": "Síndrome hemofagocítico",
     "points": [
-      "El síndrome hemofagocítico (linfohistiocitosis hemofagocítica) es una emergencia médica caracterizada por una respuesta hiperinflamatoria descontrolada debida a activación excesiva de macrófagos y linfocitos T, que conduce a falla multiorgánica; puede ser primario (genético, pediátrico) o secundario, más frecuente en adultos, asociado a infecciones (especialmente EBV), neoplasias hematológicas como linfomas T/NK y enfermedades autoinmunes",
-      "Debe sospecharse ante fiebre persistente, esplenomegalia, citopenias, alteración hepática y un cuadro que simula sepsis",
-      "El diagnóstico es clínico-analítico, sin un gold standard único, y se basa en cumplir ≥5 de 8 criterios HLH-2004 o en una alta probabilidad según el HScore; destacan la hiperferritinemia marcada, hipertrigliceridemia y/o hipofibrinogenemia, y la hemofagocitosis (que no es obligatoria)",
-      "El tratamiento, sin esperar confirmación completa, e incluye corticoides sistémicos, manejo de la causa desencadenante y, en casos seleccionados, etopósido, ciclosporina o inmunoglobulina, ya que el retraso terapéutico aumenta de forma significativa la mortalidad."
+      "Emergencia: el sistema inmune se activa sin control (macrófagos y linfocitos T) y daña varios órganos.",
+      "Primario (genético, en niños pequeños) o secundario (infecciones como Epstein-Barr, cánceres hematológicos, enfermedades autoinmunes).",
+      "Fiebre persistente, hígado y bazo grandes, citopenias, ferritina muy alta, triglicéridos altos, fibrinógeno bajo.",
+      "Tratamiento urgente: corticoides (dexametasona), etopósido según protocolo y tratar la causa."
     ]
   },
   {
     "kind": "card",
     "id": "g-434",
-    "title": "Sifilis gestacional",
+    "title": "Sífilis gestacional: definición de caso",
     "points": [
-      "Caso probable: gestante o puerperio o aborto menor de 40 dias, con PX terpponemica postiva ; CASO CONFIRMADO: igual mas prueba NO treponemica positiva a cualquier titulo",
-      "TRATAMIENTO: infx menor de 1 año: PENICILINA B, 2.4 MILLONES I.M DOSIS UNICA; tardia mas de 1 año, IGUAL PERO 1 DOSIS CADA SEMANA."
+      "Caso: gestante, puérpera o mujer con aborto en los últimos 40 días con prueba treponémica rápida positiva → tratar ya.",
+      "Se confirma con prueba no treponémica (VDRL/RPR) positiva a cualquier título.",
+      "Sífilis de <1 año: penicilina benzatínica 2.400.000 UI intramuscular dosis única. >1 año o desconocida: una dosis semanal por 3 semanas."
     ]
   },
   {
     "kind": "card",
     "id": "g-435",
-    "title": "Sifilis congenita",
+    "title": "Sífilis congénita: qué hacer con el bebé",
     "points": [
-      "IMPROBABLE: madre con tto adecuado antes de gestacion, títulos bajos antes de gestación, bebe asintomático, títulos menor de 4 veces la madre; MENOS PROBABLE: madre con tto mayor a un mes antes del parto, bebe asintomático con títulos menores de 4 veces el de la madre ( se puede tratar P.B 50.000 U/KG D.U o seguimiento cada 2 meses por 6 meses) ; PROBABLE: madre no tratada o tto menor de un mes del parto, con bebe asintomático con vdrl menor de 4 veces el de la madre",
-      "( tto: P.C 100,000 U/KG DIA CADA 12 HORAS I.V POR 7 DIAS ; P.B 50.000 U/KG DIA, I.M POR 10 DIAS) ;CONFIRMADA: madre sin tto o inadecuado, bebe titulo 4 veces por encima de maternos",
-      "( Temprana: es contagioso, entre nacimiento y 3 meses , tardías: después de 2 años, no es contagiosa, TRIADA HUTCHINSON: dientes sierra, sordera, queratitis, nariz en silla de montar",
-      "TTO: el mismo que en probable",
-      "SEGUIMIENTO: < 1 mes con prueba no treponémica reactiva ,cada 3 meses hasta los 6 meses, >1 mes + Prueba no treponémica cada 3 meses hasta el primer año si continúa reactiva tratamiento 10 días. - < 1 mes con prueba No reactiva: repetir a los 3 meses.",
-      "LCR anormal: seguimiento cada 6 meses, si persiste alterado tratar para neurosífilis.",
-      "Si malformaciones o títulos 4 veces mayor de la madre, se hace paquete (LCR, rx huesos largos y hemograma (trombocitopenia))"
+      "Se compara el VDRL del bebé con el de la madre y se mira si la madre fue tratada a tiempo.",
+      "Muy improbable: madre bien tratada antes del embarazo con títulos bajos estables, bebé sano con VDRL <4 veces el materno → seguimiento.",
+      "Menos probable: madre bien tratada >4 semanas antes del parto, bebé sano con VDRL <4 veces el materno → penicilina benzatínica 50.000 U/kg dosis única (o seguimiento estricto).",
+      "Probable o confirmada: madre no tratada o tratada <4 semanas antes del parto, VDRL del bebé ≥4 veces el materno o bebé con signos → penicilina cristalina intravenosa 50.000 U/kg/dosis por 10 días, con estudio (LCR, radiografías, hemograma).",
+      "En Colombia, todo bebé de madre con sífilis gestacional recibe al menos penicilina benzatínica."
     ]
   },
   {
     "kind": "card",
     "id": "g-436",
-    "title": "Claves infecciones congénitas",
+    "title": "Infecciones congénitas: pistas clave",
     "points": [
-      "Sífilis → rinorrea persistente (coryza) + rash en palmas/plantas + hepatoesplenomegalia + nariz silla montar; CMV → microcefalia + calcificaciones periventriculares + hipoacusia; toxoplasmosis → coriorretinitis + hidrocefalia + calcificaciones intracraneales difusas; rubéola → cataratas + ductus arterioso persistente + sordera; herpes simple → vesículas cutáneas + encefalitis; parvovirus B19 → anemia fetal + hidrops; varicela congénita → cicatrices en dermatomas + hipoplasia de extremidades"
+      "Sífilis: moco nasal persistente con sangre, manchas en palmas y plantas, hígado y bazo grandes, nariz en silla de montar.",
+      "Citomegalovirus: microcefalia, calcificaciones periventriculares, sordera.",
+      "Toxoplasmosis: coriorretinitis, hidrocefalia y calcificaciones dispersas.",
+      "Rubéola: cataratas, ductus arterioso persistente y sordera.",
+      "Herpes: vesículas en la piel y encefalitis.",
+      "Parvovirus B19: anemia fetal e hidrops.",
+      "Varicela congénita: cicatrices en la piel, extremidades poco desarrolladas, lesiones oculares."
     ]
   },
   {
     "kind": "card",
     "id": "g-437",
-    "title": "Desnutricion",
+    "title": "Desnutrición aguda en menores de 5 años",
     "points": [
-      "AGUDA: PT <-2 D.E : moderada -2/-3 , severa <-3 , marasmo o kwashorko",
-      "PERIMETRO BRAQUIAL: Perímetro braquial: ≥ 12.5 cm: estado nutricional adecuado; <12.5 a 11.5 cm: desnutrición aguda moderada; < 11.5 cm: desnutrición aguda severa",
-      "Y riesgo de muerte",
-      "GRÁFICAS POBLACIÓN ESPECIAL: Fenton en prematuros hasta 40ss luego con escala OMS con edad corregida hasta 2 años, Zenel en sx",
-      "Down, Life Expectancy en Parálisis cerebral",
-      "MANEJO: MENORES DE 6 MESES O <4 KG: manejo SIEMPRE hospitalario",
-      "ESTABILIZACIÓN: prevenir hipoglicemia : ( dad 10%, 50 cc vo si esta conciente; 5 cc/kg i.v si esta inconsciente.) , deshidratación: SEVERA: inconsciente ( dad 10%, 5 cc/kg mas ringer 15 cc/kg h) consiente: 10 cc/kg/hora por 12 horas de SRO, mas 1 amp de k por cada 1000cc",
-      "MODERDADA: SRO 75 CC/KG EN 4-6 HORAS. Infecciones: menor de 2 meses: ampi mas genta ; si mayor se puede dar amoxi o ampi. , anemia: se transfunde si anemia grave (hb<4 o <6 con dificultad respiratoria; si no tiene criterios se inicai ftlc y se mide hemoglobina cada 15 dias hasta mayor de 6) ; cuando hb llega a 11 , se continua con hierro el 3mg/kg/ por el mismo tiempo que duro en estabilizarse )alimentación: F-75 MAS ACIDO FOLICO 2.5 MG DOSIS UNICA.",
-      "2.TRANSICION: se cambia de f-75 a leche materna o formula.",
-      "Dura de 3 a 14 días. Se busca una ganancia de peso de 25-30 g/día (en < 3 meses) o 12-16 g/día (en > 3 meses).",
-      "3.REHABILITACION: EGRESO: sin edema por 10 días, aumento de peso 20 gr/dia por 3 dias , vacunación completa, leche o formula."
+      "Peso para la talla < −2 desviaciones estándar. Moderada: entre −2 y −3. Grave: < −3, o edema en ambos pies (kwashiorkor), o marasmo.",
+      "Perímetro del brazo (6-59 meses): ≥12,5 cm adecuado; 11,5-12,5 cm desnutrición moderada; <11,5 cm grave con riesgo de muerte.",
+      "Curvas especiales: Fenton en prematuros hasta las 40 semanas y luego OMS con edad corregida hasta los 2 años; curvas propias para síndrome de Down y parálisis cerebral.",
+      "Menores de 6 meses o <4 kg con desnutrición aguda: siempre manejo hospitalario."
     ]
   },
   {
     "kind": "card",
     "id": "g-438",
-    "title": "Mayores de 6 meses o >4 KG",
+    "title": "Desnutrición grave en mayores de 6 meses (≥4 kg)",
     "points": [
-      "HACER PX APETITO: 4 - 6.9 KG : ¼ FTLC ; 7-9.9 :1/3 ; >10KG : ½ . SI NEGATIVA SE HOSPITALIZA: el mismo manejo anterior pero el acido fólico es 5 mg 1er dia , luego 1 mg vo dia.",
-      "2.TRANSICION: pasar de F75 a FTLC asegurara 100-135 kcalorias/kg /dia",
-      "Niños mayores de 6 meses con peso < 4 kg, Alcanzar primero un peso de 4 kg ,gradualidad antes de transitar a FTLC.",
-      "EGRESO: FTLC 135kcal dia, px apetito positiva, vacunas, desparasitante a los 15 días iniciado el tto",
-      "PX DE APETITO POSITIVA: FTLC (1 sobre =92 gr = 500 k cal) DNT MODERADA: dosis: 150 kcal/kg/dia por 7 dias, avanzo 200 kcal/kg dia hasta llevar 30 dias",
-      "DNT SEVERA: 100 kcal/kg/dia por 7 dias, luego 150 kcal/kg hasta dia 15 , avanzo 200 kcal/kg/dia , hasta resolución",
-      "(puede dar diarrea, se debe continuar , tomar mas agua) .",
-      "2. Antibiótico en severa, amoxicilina por 7 dias, albendazol en mayores de 12 meses.",
-      "3. Micronutrientes: vit A , zinc y hierro, esta en ftlc; adicional acido fólico 5 mg 1er dia, continua 1 mg dia por todo el tto.",
-      "4. RESOLUCION: sin edema por 2 seguimiento, p/t mayor de -1, vacunas completas, resolución en 15 dias.",
-      "Seguimiento: 1er segumiento: ftlc a dossis de dnt aguda, en el 2do ftlc a 100 kcal/kg/dia , al 3ero si persiste riesgo se sube a 240-270 kcal/kg/dia",
-      "Controles Semanales hasta pasar a riesgo dnt",
-      "Criterios de Egreso: T /L ≥ -1 DE. ; Ausencia de edema por dos seguimientos consecutivos. ; Clínicamente estable y esquema de vacunación actualizado",
-      "Lactancia materna eficaz o alimentación adecuada en el hogar",
-      ": Fórmula Terapéutica F-100: para la fase de transición o rehabilitación intrahospitalaria. Indicaciones:",
-      "1. Niños > 6 meses con peso < 4 kg",
-      "2. disfunción motora oral, o 3. lactantes < 6 meses que no recuperan tras 5 días en fase de estabilización."
+      "Prueba del apetito con fórmula terapéutica lista para el consumo (FTLC): si come la cantidad esperada (4-6,9 kg: 1/4 de sobre; 7-9,9 kg: 1/3; ≥10 kg: 1/2) y no tiene complicaciones → manejo en casa.",
+      "Si falla la prueba o hay complicaciones: hospitalizar. Iniciar con fórmula F-75 en pequeñas tomas frecuentes, tratar infecciones (antibiótico), hipoglucemia e hipotermia, y ácido fólico (5 mg el primer día y luego 1 mg/día).",
+      "Transición: de F-75 a FTLC hasta lograr 100-135 kcal/kg/día.",
+      "Mayores de 6 meses con <4 kg: primero llegar a 4 kg antes de pasar a FTLC.",
+      "Egreso: tolera FTLC (~135 kcal/kg/día), prueba de apetito positiva, vacunas al día; desparasitar a los 15 días."
     ]
   },
   {
@@ -546,116 +548,101 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-439",
     "title": "Síndrome de realimentación",
     "points": [
-      "Es un trastorno metabólico que ocurre cuando una persona desnutrida o en ayuno prolongado reinicia la alimentación de forma rápida, clínica: alteraciones electrolíticas, (hipofosfatemia, hipopotasemia e hipomagnesemia) , Signos de alarma: Incremento de frecuencia respiratoria (>5 rpm) o cardíaca (>10 lpm), edema, arritmias, alteración de conciencia o hiperglicemia",
-      "Tratamiento: Reposición de Potasio, Magnesio, Fósforo y Tiamina (10-20 mg/día IV/IM o 10-50 mg/día VO)",
-      "Se recomienda reducir la F-75 a la mitad inicialmente ante sospecha."
+      "Alteración que aparece al volver a alimentar rápido a una persona desnutrida o en ayuno largo: el azúcar mete al interior de las células el fósforo, el potasio y el magnesio, que bajan en sangre.",
+      "Fósforo, potasio y magnesio bajos; puede dar insuficiencia cardiaca, arritmias, edema, confusión y convulsiones.",
+      "Alarma: aumento de la frecuencia respiratoria (>5 por minuto) o cardiaca (>10 por minuto), edema, arritmias, glucosa alta.",
+      "Prevención y tratamiento: alimentar despacio, medir y reponer potasio, magnesio y fósforo, y dar tiamina antes y durante la realimentación."
     ]
   },
   {
     "kind": "card",
     "id": "g-440",
-    "title": "Riesgo de DNT",
+    "title": "Riesgo de desnutrición (entre −1 y −2 desviaciones estándar)",
     "points": [
-      "0- 6 MESES:entre -1 y -2 DE. asesoria de introduccion complementaria desde los 4-6 meses, consejeria latancia, atencion medica; 6-59 MESES: si tiene factor riesgo: dar ftlc dosis 240-270 kcal/dia; sin factor de riesgo, intervenciones preventivas, con tamizaje de hb y dar micronutrientes. se siguen cada 15 dias hasta que salgan de riesgo. si no mejora al 3-4to control se remite a pediatría."
+      "0-6 meses: apoyar la lactancia materna, orientar sobre alimentación complementaria desde los 4-6 meses y control médico.",
+      "6-59 meses con factores de riesgo: complemento con FTLC (240-270 kcal/día). Sin factores de riesgo: medidas preventivas, hemoglobina y micronutrientes.",
+      "Controles cada 15 días hasta que salga del riesgo. Si no mejora al 3.º o 4.º control: remitir a pediatría."
     ]
   },
   {
     "kind": "card",
     "id": "g-441",
-    "title": "En mayores de 5 años la clasificación nutricional (OMS adoptadas en Colombia)",
+    "title": "Estado nutricional en mayores de 5 años",
     "points": [
-      "IMC para la edad (Z-score): delgadez <−2 desviaciones estándar (severa <−3), normal entre −2 y +1, sobrepeso >+1 a +2, y obesidad >+2 (obesidad severa >+3)"
+      "Se usa el IMC para la edad (puntaje Z, curvas OMS adoptadas en Colombia).",
+      "Delgadez: < −2 (grave < −3). Normal: entre −2 y +1. Sobrepeso: > +1 a +2. Obesidad: > +2."
     ]
   },
   {
     "kind": "card",
     "id": "g-442",
-    "title": "Aiepi",
+    "title": "Diarrea y deshidratación (AIEPI)",
     "points": [
-      "Diarrea (≥3 deposiciones líquidas en 24 h) . aguda (<14 días), persistente (≥14 días) y disentería (con sangre),. grado de deshidratación en: GRAVE (≥2 de: letárgico/inconsciente, ojos muy hundidos, no puede beber o bebe mal, pliegue cutáneo muy lento), ALGUNA DESHIDRATACIÓN (≥2 de: irritable/inquieto, ojos hundidos, bebe con avidez/sed, pliegue lento) y SIN DESHIDRATACIÓN (no cumple criterios)",
-      "MANEJO , Plan A: : (sin deshidratación) en casa, más líquidos (SRO/caseros) , continuar alimentación/lactancia, zinc 10–14 días y educación; Plan B: (algún grado) SRO 75 ml/kg en 4 h, reevaluar y luego Plan A; Plan C: ( deshidratación severa ) líquidos IV (Ringer lactato o SSN 100 ml/kg en fases ,<1año: 30 cc/kg en 1 hora continuar 70 cc/kg en 5 horas , > 1 año: 30 cc /kg en 30 min , continuar 70 cc /kg en 2 h 30 min), iniciar SRO cuando tolere y hospitalizar",
-      "En todos: mantener nutrición, evitar antidiarreicos y usar antibióticos solo si está indicado (p. ej., disentería).",
-      "PRO BIÓTICOS: disminuyen dia de diarrea ZINC: reduce duración y recaidas de diarrea ANTIBIÓTICO: cipro, azitro, ceftria ALGORITMO:",
-      "Bacteremia o sepsis o shigelosis ( fiebre, mal estado general o dolor abdominal intenso) ; manejo: hospitalizar, antbo ( cefotraxime o cipro ), mas coprocultivo, remisión",
-      "No septico , EDA sin sangre : si < 7 dias seguimiento clinico, si > 7 dias estudio matera fecal ( si giardia o e. histolitica - metronidazol) si negativo seguimiento",
-      "No septico EDA con sangre ( sin fisuras anales)",
-      "Si es posible seguimiento en 48 h ( manejo expectante , no atbo, realizar coprocultivo) , si no seguimiento ( ambulatorio, dar azitromicina o cipro, signos de alarma) .",
-      "Si en 48 h mejoria clinica o cultivo negativo, completar tto a 5 dias, si esta igual o shigela , continuar azitro o ciprofloxacino ; si empeora hospitalizar, cefotaxime o ciprofloxacino."
+      "Diarrea: ≥3 deposiciones líquidas en 24 h. Aguda <14 días; persistente ≥14 días; disentería si tiene sangre.",
+      "Deshidratación grave (≥2): letárgico o inconsciente, ojos muy hundidos, no puede beber o bebe mal, pliegue cutáneo muy lento (>2 s).",
+      "Algún grado (≥2): irritable, ojos hundidos, bebe con sed y avidez, pliegue lento.",
+      "Plan A (sin deshidratación): en casa, más líquidos y suero oral tras cada deposición, seguir comiendo, zinc 10-14 días.",
+      "Plan B (algún grado): suero de rehidratación oral 75 ml/kg en 4 h en el servicio y reevaluar.",
+      "Plan C (grave): líquidos intravenosos (lactato de Ringer o salino) 100 ml/kg (en lactantes en 6 h; en mayores en 3 h), con bolos rápidos al inicio."
     ]
   },
   {
     "kind": "card",
     "id": "g-443",
-    "title": "ITU",
+    "title": "Infección urinaria en niños",
     "points": [
-      "Síntomas urinarios mas germen en la orina",
-      "RECURRENTE: 2 o mas pielonefritis, 3 o mas cistitis, o 1 pielo u 1 cistitis",
-      "REINFECCIÓN: cultivo con otro microrganismo en mas de 6 semanas , RECAÍDA: mismo microorganismo en menos de 6 semanas",
-      "IMÁGENES: todo menor de 6 meses necesita una ecorenal, mayores de 6 meses solo si es atípica",
-      "TTO: amoxi-clavulanato ( resistencia en Colombia) , amikacina o gentamicina, ceftriaxona o cefotaxima, cefalexina",
-      "NICE: bajas por 3 dias, alta por 7 dias",
-      "PROFILAXIS: si recurrencia, deterioro fun, renal, disfunción vesical, reflujo ureteral iv y v (SE DA CON CEFALEXINA O NITRO EN MAYOR DE 6 MESES) CLASIFICACIÓN REFLUJO VESICO URETERAL:",
-      "1. Uréter sin dilatación 2. Dilatación uréter y sitema colector",
-      "3. Dilatación leve calicial 4. Abombamiento de calices y tortuosidades 5. Dilatación todo el sistema de boramiento papila"
+      "Síntomas urinarios o fiebre sin foco + cultivo de orina positivo (por sonda o punción en los que no controlan esfínteres).",
+      "Recurrente: ≥2 pielonefritis, ≥3 cistitis, o 1 pielonefritis + 1 cistitis.",
+      "Reinfección: otro germen después de >6 semanas. Recaída: el mismo germen en <6 semanas.",
+      "Imagen: ecografía renal a todo <6 meses; en mayores, si es atípica o recurrente.",
+      "Tratamiento según resistencias locales (en Colombia mucha resistencia de E. coli a algunos orales): cefalosporinas orales (cefalexina, cefuroxima) en cistitis; pielonefritis 7-10 días (ceftriaxona o aminoglucósido intravenosos si no tolera la vía oral o es <2-3 meses)."
     ]
   },
   {
     "kind": "card",
     "id": "g-444",
-    "title": "Neumonía",
+    "title": "Neumonía en niños: tipos y gérmenes",
     "points": [
-      "NAC: no hospitalización en últimos 7 dias, y antes de 48 horas de ingreso, NEUMONIA ASOSICADA A CUIDADOS SALUD: después de 48 horas de ingreso, o posterior a 48 de egreso",
-      "ETIOLOGÍA: entre 0-3 meses: bacterias ( ST.B , E.COLI , LISTERIA, LACTANTE: S,PENUMONIA, H.INFLUENZA, M.PNEUMONIA); 4 meses- 5 años: VIRUS 60 % , BACTERIAS 40 %( IGUAL QUE LACTANTE); > 5 años: BACTERIAS ATIPICAS (LEGIONELA, M. TUBERCULOSIS, C.PENUMONIA , M.PENUMONIA , S.PNEUMONIA)",
-      "DX: clínica , rx de torax , cultivos gram",
-      "HOSPITALIZACIÓN: hipoxia, menor 6 meses, incapacidad v.o, enf",
-      "Complicada, fiebre mayor de 38.5 UCI: VM, SHOCK, AUMENTO FIO2",
-      "Tto: liquidos , anitpiretico, lavados nasales, AMBULATORIO: amoxicilina 90 mg/ kg dia x 5 dias o amoxi clavulanato ; SI ATIPICOS: macrolidos (clartitro –azitro x3-5 dias ) , INTRAHOSPITALARIO: TIPICOS: < 3 meses : biconjugado ( ampicilina + amikacina/ gentamicina) ; >3 meses ( penicilna cristalina ) , si no esta vacunado ampiclina , si falla terapeutica ampicilina sulbactam, ATIPICOS: macrolidos, COMPLICADOS: (derrame, abceso) CEFALOSPORINA 3RA MAS CINDAMICINA O VACO O LINEZOLID. :"
+      "Neumonía de la comunidad: el niño no estuvo hospitalizado en los últimos 7 días, o aparece antes de 48 h de ingresar. Asociada a la atención en salud: después de 48 h de ingreso o en las 48 h tras el alta.",
+      "0-3 meses: estreptococo B, E. coli, Listeria; también Chlamydia trachomatis (afebril).",
+      "4 meses-5 años: virus (~60 %); bacterias: neumococo, Haemophilus.",
+      ">5 años: neumococo y atípicas (Mycoplasma, Chlamydophila).",
+      "Diagnóstico clínico (fiebre, tos, taquipnea, tiraje); radiografía si es grave o hay dudas."
     ]
   },
   {
     "kind": "card",
     "id": "g-445",
-    "title": "Neumonia en niños",
+    "title": "Neumonía en niños: tratamiento",
     "points": [
-      "Tratamiento Antibiótico Empírico: VACUNACIÓN COMPLETA: principal agente bacteriano es S. pneumoniae",
-      "El tratamiento es Ampicilina IV. VACUNACIÓN INCOMPLETA: Se debe cubrir H. influenzae no tipificable",
-      "El tratamiento es Ampicilina-Sulbactam IV. Ceftriaxona: Se considera un tratamiento de segunda línea.",
-      "MANEJO DEL DERRAME PLEURAL : Tratamiento Antibiótico SI neumonía complicada,cefalosporina de tercera generación (ej",
-      "Ceftriaxona) + Clindamicina",
-      "La clindamicina ( contra anaerobios y su efecto sobre toxinas de S. aureus (productor de PVL).) Drenaje Pleural: Derrame Pequeño: Puede manejarse solo con antibióticos",
-      "Derrame Moderado a Severo o Empiema: tubo de tórax (toracostomía) es la primera línea",
-      "Derrame Loculado/Complicado: Las opciones incluyen toracostomía con fibrinolíticos o manejo quirúrgico con toracoscopia (VATS)."
+      "Ambulatoria: amoxicilina oral en dosis alta (90 mg/kg/día). Si se sospechan atípicas (>5 años): azitromicina.",
+      "Hospitalaria con vacunas completas (neumococo el más probable): ampicilina intravenosa.",
+      "Vacunas incompletas (cubrir Haemophilus): ampicilina-sulbactam. Ceftriaxona como segunda línea o en casos graves.",
+      "Derrame pleural o neumonía complicada: ceftriaxona + clindamicina (cubrir estafilococo); drenar el derrame si es grande o purulento."
     ]
   },
   {
     "kind": "card",
     "id": "g-446",
-    "title": "Infección trato respiratorio superior",
+    "title": "Otitis y otras infecciones respiratorias altas",
     "points": [
-      "OTITIS MEDIA AGUDA: mas viral, hemophilus influenzae, moraxela, bacilos gram negativos",
-      "CLINICA: otalgia,fiebre, miringitis bullosa",
-      "GRAVEDAD: fiebre >39, otalgia moderada-severa TTO: analgesia, <6 meses siempre antibiótico, >6 meses si grave m antibiótico",
-      "( amoxicilina, amoxiclavulanato , ceftriaxona , cefuroxime , azitromicina ) OTITIS MEDIA SEROSA: liquido en odio medio , O.M.RECURRENTE: 3 o mas en 6 meses, 4 o mas en 1 año",
-      "( buscar factores de riesgo, tto posible tubo de ventilación)",
-      "O.M. CRONICA: membrana timpánica perforada con otorrea por 6 semanas, s.aureus, psuedomona, proteus, tto quinolonas tópicas y remitir otorrino",
-      "OTITIS EXTERNA: pseudomna, s.aureus, hongos, CLINICA: dolor pabellón auricular",
-      "TTO: analgesia, antibiótico con quinolona o polimixina x 7-10 dias SINUSITIS: aguda < 30 dias ; subaguda 30 -90 dias ; crónica > 90 dias ; recurrente 3 en 6 meses, 4 en 1 años",
-      "CLINICA: snt",
-      "Respiratorios no mejorai en 10 dias, cefalea, rinorrea hialina, purulenta dx: radiografia, tac o rnm si sospecho complicación TTO: amoxilina, por 10 dias"
+      "Otitis media aguda: neumococo, Haemophilus no tipificable, Moraxella (muchas virales). Dolor de oído, fiebre, tímpano rojo y abombado.",
+      "Grave: fiebre ≥39 °C o dolor moderado-grave.",
+      "Tratamiento: siempre analgesia. Antibiótico en <6 meses, en casos graves o bilaterales en <2 años, y si no mejora en 48-72 h. Primera línea: amoxicilina en dosis alta; si tomó amoxicilina en el último mes o hay conjuntivitis: amoxicilina-clavulánico.",
+      "Otitis media serosa: líquido detrás del tímpano sin infección aguda; vigilar (tubos si dura >3 meses con hipoacusia).",
+      "Otitis recurrente: ≥3 episodios en 6 meses o ≥4 en 1 año (valorar otorrino)."
     ]
   },
   {
     "kind": "card",
     "id": "g-447",
-    "title": "TOS ferina",
+    "title": "Tos ferina",
     "points": [
-      "Tos coqueluche, tos quintosa, tons convulsiva ETIOLOGIA: BORDETELLA PERTUSIS con tto 5 dias de transmisión, sin tto en la fase catarral y paroxística",
-      "CLINICA: FASE CATARRAL: contagiosa, tos rinorrea, secreción; PAROXISTICA: tos paroxista emetizante, nocturnal, CONVALECENCIA: desaparición síntomas TOS MALINGNA: causa apnea",
-      "DIAGNOSTICO: clínica mas pcr de hisopado (la mejor opción) , o cultivo",
-      "TRATAMIENTO: aislamiento por gotas, con tto por 5 dias, sin tto por 21 dias",
-      "ANTIBIOTICO: macrolido azitromicina o TMS. Oxigeno y levs",
-      "PREVENCION: si postexposicion con macrolidos, VACUNACION: pai",
-      "(1ro: azitromicina (menores 6 meses: 10 mg/kg/día por 5 días; mayores, 10 mg/kg el día 1 y luego 5 mg/kg/día x5 días;) en adultos 500 mg el día 1 y 250 mg/día los días 2–5), alternativas si contraindicación a macrólidos : trimetoprim-sulfametoxazol a dosis de 8 mg/kg/día de trimetoprim (40 mg/kg/día de sulfametoxazol) divididos cada 12 horas por 14 días."
+      "Bordetella pertussis. Muy contagiosa, sobre todo en la fase catarral.",
+      "Fase catarral (1-2 semanas): como un resfriado. Paroxística (semanas): ataques de tos seguidos con \"gallo\" al inspirar y vómitos tras la tos, peor de noche. Convalecencia: la tos va cediendo.",
+      "Lactantes pequeños: apneas y cianosis en vez de tos típica; riesgo de muerte (tos ferina maligna, con leucocitosis muy alta).",
+      "Diagnóstico: PCR del hisopado nasofaríngeo (lo mejor) o cultivo.",
+      "Tratamiento: azitromicina (de elección en <1 mes); aislamiento por gotas hasta 5 días de tratamiento. Profilaxis a los contactos cercanos. Prevención: vacunar a la gestante y al niño."
     ]
   },
   {
@@ -663,17 +650,12 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-448",
     "title": "Bronquiolitis",
     "points": [
-      "Primer episodio sibilante en niño menor de 24 meses",
-      "Sin otra explicación de sibilancia",
-      "ETIOLOGIA: viral , VSR, parainfluenza, influeza, BACTERIAS: mycoplasma ; asma",
-      "CLINICA: tos, rinorrea, congestion nsal, fiebre",
-      "Taquipnea, sibilancias, ESCALA WOOD DOWNES FERRES: 1-3 leve , 4-7 moderada, >8 grave (Grave: tirajes - taquipnea- apnea- cianosis - letargia - intolerancia VO . manejo hospitalización inmediata) (no grave : no presenta los síntomas ; manejo sintomático) (Alto Riesgo :",
-      "Edad menor 2 meses ,- si prematuridad con < 2 kg <6 meses - cardiopatía - displasia broncopulmonar manejo : requiere valoración mayor nivel complejidad) . TTO: ambulatorio si ninguna fac.riesgo , (control en 48 h , acetaminofén, lavados nasales ) HOSPITALIZACION: sdr, aspecto toxico, apena, menor de 12 semanas, hipoxia ( lev, via oral pequeña cantidad, lavado nasal, oxigeno, BRONCODILATADOR si IPA positivo, NBZ hipertónica, NO ESTEROIDES NI ANTILEUCOTRIENOS, adrenalina si no hay rta a otros terapia",
-      "PALIMIZUMAB: anticuerpos monoclonales contra VSR , INDICACION: displasia broncopulmonar, (>28 dias de o2, ) , < 32 sem",
-      "VACUNACIÓN MATERNA DE VSC (Abrisvo",
-      "Pfizer): Vacuna bivalente que se aplica a la gestante entre las semanas 32 y 36. Transfiere anticuerpos al feto, protegiéndolo en los primeros 6 meses de vida.",
-      "Fenotipo Sibilante (Obstructivo): Predomina broncoespasmo y sibilancias; responde mejor a salbutamol (asociado a Rinovirus y atopia)",
-      "Fenotipo Hipóxico (Parenquimatoso): Predomina moco, atelectasias, crepitantes y desaturación; no responde a salbutamol y requiere oxígeno/alto flujo (asociado a VRS)."
+      "Primer episodio de sibilancias en un niño <2 años, con un cuadro viral previo, sin otra explicación.",
+      "Causa principal: virus sincitial respiratorio (VSR); también rinovirus, parainfluenza, influenza.",
+      "Moco, tos, a veces fiebre; luego respiración rápida, tirajes, sibilancias y crépitos.",
+      "Gravedad (Wood-Downes-Ferrés): 1-3 leve, 4-7 moderada, ≥8 grave.",
+      "Hospitalizar si: dificultad grave, apneas, cianosis, SatO2 <90-92 %, no come o se deshidrata, <3 meses o prematuros con riesgo.",
+      "Tratamiento de soporte: lavados nasales, oxígeno si hace falta, hidratación. No sirven de rutina: salbutamol, corticoides ni antibióticos."
     ]
   },
   {
@@ -681,52 +663,53 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-449",
     "title": "Displasia broncopulmonar",
     "points": [
-      "Enfermedad pulmonar crónica del prematuro",
-      "Diagnostico: 28 días o más de oxígeno. gravedad se evalúa posteriormente: si nació antes de 32 semanas : a las 36 semanas de edad postmenstrual; si nació con 32 semanas o más → a los 56 días de vida",
-      "En ese momento: grado 1: cánula nasal <2 litros/minuto; grado 2: cánula nasal ≥2 litros/minuto o presión positiva no invasiva; grado 3: ventilación mecánica invasiva."
+      "Enfermedad pulmonar crónica del prematuro: necesidad de oxígeno durante ≥28 días.",
+      "La gravedad se mide: si nació <32 semanas, a las 36 semanas de edad corregida; si nació ≥32 semanas, a los 56 días de vida.",
+      "Grado 1: cánula nasal <2 l/min. Grado 2: cánula ≥2 l/min o presión positiva no invasiva. Grado 3: ventilación mecánica invasiva."
     ]
   },
   {
     "kind": "card",
     "id": "g-450",
-    "title": "Asma",
+    "title": "Asma en niños",
     "points": [
-      "IPA: se realiza en niños mayores de 3 años, con 3 o mas episodios",
-      "POSITIVO SI 1 MAYOR O 2 MENORES. MAYORES: un padre con asma- ant de atopia MENORES: rinitis alérgica, eosinofilia , sibilancia no catarral",
-      "DIAGNOSTICO: PRICK TEST, evalua atopia",
-      "PX TERAPEUTICA: mejoría de síntomas post tto . ESPIROMETRIA: en mayores de 5 años, vef 1 , >12 % post broncodilatdor",
-      "TTO: según los step GINA. Exacerbaciones:",
-      "1. SABA –SAMA 2. ESTEROIDES SISTEMICOS 3. SULFATO MAGNESIO ( >2 AÑOS)",
-      "4. TERBUTALINA EPINEFRINA. ( SABA 2 PUFF CADA 20 MIN POR 1 HORA , EN CASA ; SI NO MEJORA CON MAS DE 6 PUFF URGENCIAS)."
+      "Índice predictivo de asma (IPA): en niños <3 años con ≥3 episodios de sibilancias al año. Positivo con 1 criterio mayor (padre con asma o dermatitis atópica en el niño) o 2 menores (rinitis alérgica, eosinofilia ≥4 %, sibilancias sin resfriado).",
+      "Pruebas: prick test para alergias; prueba terapéutica (mejora con el tratamiento); espirometría desde los 5-6 años (VEF1 mejora ≥12 % tras el broncodilatador).",
+      "Control según los pasos de GINA (corticoide inhalado como base).",
+      "Crisis: salbutamol inhalado (± ipratropio), corticoide sistémico, sulfato de magnesio en las graves."
     ]
   },
   {
     "kind": "card",
     "id": "g-451",
-    "title": "Diagnostico de asma menores de 5 años",
+    "title": "Asma en menores de 5 años: diagnóstico",
     "points": [
-      "Es clínico, cumplimiento de tres pilares diagnósticos: episodios recurrentes de sibilancias agudas (con o sin síntomas intercrisis típicos de asma), exclusión de diagnósticos diferenciales, y una respuesta clínica oportuna a una prueba terapéutica para el asma.",
-      "SOSPECHA DE ASMA: En menores de 6 años si solo se cumplen uno o dos de los criterios se da diagnóstico Manejo: tratamiento de prueba y reevaluaciones periódicas."
+      "Clínico, con tres pilares: sibilancias que se repiten, descartar otras causas y buena respuesta a una prueba de tratamiento para asma.",
+      "Si cumple solo uno o dos: \"sospecha de asma\" → prueba terapéutica (corticoide inhalado 2-3 meses) y reevaluar periódicamente."
     ]
   },
   {
     "kind": "card",
     "id": "g-452",
-    "title": "Sibilancias",
+    "title": "Fenotipos de sibilancias (clasificación antigua)",
     "points": [
-      "Sibilancias transitorias (inician y terminan antes de los 3 años), persistentes (inician antes de los 3 años y continúan más allá de los 6 años) y de inicio tardío (comienzan después de los 3 años). Están en desuso"
+      "Transitorias: empiezan y terminan antes de los 3 años.",
+      "Persistentes: empiezan antes de los 3 años y siguen después de los 6.",
+      "De inicio tardío: comienzan después de los 3 años.",
+      "Esta clasificación está en desuso; solo se puede aplicar mirando hacia atrás."
     ]
   },
   {
     "kind": "card",
     "id": "g-453",
-    "title": "Meningitis",
+    "title": "Meningitis en niños",
     "points": [
-      "Enfermedad inflamatorio de leptomeninges (aracnoides y piamadre) . ETIOLOGÍA: menor de 1 mes: st.grupo b, e.coli , listeria ; mayor de 1 mes: meningococo, neumococo, h. influenza b",
-      "ASEPTICA: sn de meningitis sin identificación microorganismo. virus, aines, lupus DIAGNOSTICO: clínica + labs + imagen",
-      "PUNCIÓN: contraindicado si: infex sitio puncion, pte inestable, hipertensión endocraneana, TTO:",
-      "Medidas de soporte , -cabecera 30 grados",
-      "ESTEROIDES disminuyen complicaciones si neumococo, antes del antbo. –ANTBO: neumococo: penicilina ; e. coli: ceftriaxona mas genta ; meningococo: penicilina ;st coco : vanco. SEGUIMIENTO: px auditiva a los 15 dias, luego cada 3 meses por 1 año"
+      "Inflamación de las membranas que cubren el cerebro (aracnoides y piamadre).",
+      "<1 mes: estreptococo del grupo B, E. coli, Listeria. >1 mes: neumococo, meningococo, Haemophilus tipo b (raro si está vacunado).",
+      "Aséptica: síntomas de meningitis sin bacteria identificada (virus, AINE, lupus).",
+      "Lactantes: fiebre, irritabilidad, rechazo al alimento, fontanela abombada; mayores: cefalea, rigidez de nuca, vómitos, alteración de la conciencia.",
+      "Punción lumbar salvo contraindicación: infección en el sitio de punción, inestabilidad, signos de hipertensión intracraneal o coagulopatía (en esos casos, hemocultivos y antibiótico sin esperar).",
+      "Tratamiento: soporte, cabecera a 30°, antibiótico empírico (<1 mes: ampicilina + cefotaxima; >1 mes: ceftriaxona + vancomicina). Dexametasona antes o con el antibiótico reduce la sordera (sobre todo por Haemophilus)."
     ]
   },
   {
@@ -734,14 +717,11 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-454",
     "title": "Convulsión febril",
     "points": [
-      "Entre los 6-60 meses, puede ser antes o después de la fiebre.; fac.riesgo: vacuna triple viral",
-      "CLASIFICACION: SIMPLE: generalizada, simétrica, < 5 min ; COMPLEJA: focales, >15 min . CRISIS FEBRIL PLUS: menor de 6 meses mayor de 5 años; recurrencia menor de 24 horas",
-      "DX: CLINICA, EEG SI ES COMPLEJA. TTO: monitorización, dad iv 0.5 g/kg, BZD, si refractaria fenitoina o fenobarbital, si no mejoría goteo midazolam",
-      "PROFILAXIS ANTICONVULSIVANTE: SI: .",
-      "1. Alto riesgo de recurrencia (al menos 3 episodios en 6 meses o 4 en un año).",
-      "2. Crisis complejas de duración prolongada (>15 min).",
-      "3. estatus epiléptico febril. se utiliza una profilaxis intermitente con Diazepam (oral o rectal) únicamente durante los episodios febriles.",
-      "Crisis febriles simples con paciente estable se puede dar manejo ambulatoiro"
+      "Crisis con fiebre en niños de 6 meses a 5 años sin infección del sistema nervioso ni otra causa.",
+      "Simple: generalizada, <15 minutos y una sola en 24 h. Compleja: focal, >15 minutos o se repite en 24 h.",
+      "Diagnóstico clínico; buscar el foco de la fiebre. Punción lumbar si hay signos de meningitis (y valorarla en <12 meses sin vacunas). EEG solo si es compleja o hay dudas.",
+      "Si dura >5 minutos: benzodiacepina (midazolam intranasal o bucal, o diazepam rectal/intravenoso); si sigue, como un estatus.",
+      "Tranquilizar a los padres: es benigna, el riesgo de epilepsia es bajo. Los antitérmicos no previenen la recurrencia y no se dan antiepilépticos de rutina."
     ]
   },
   {
@@ -749,133 +729,109 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-455",
     "title": "Epilepsia en la infancia",
     "points": [
-      "CRISIS: signos y síntomas debido a actividad neuronal anormal. convulsión: contracción muscular involuntaria; epilepsia: enfermedad, ILAE: 2 convulsiones no provocado con diferencia de 24 horas",
-      "DX: EEG: gold estándar, NEUROIMAGEN: no de rutina, solo si crisi focal, estatus epiléptico, TTO: se inicia tras segunda crisis no provocada por alto riesgo recurrencia, con monoterapia a dosis baja",
-      "CX: en crisis incontrolable refractarias focales"
+      "Crisis: síntomas por actividad eléctrica anormal del cerebro. Convulsión: contracciones musculares involuntarias. Epilepsia: la enfermedad (≥2 crisis no provocadas separadas >24 h, entre otros criterios).",
+      "EEG: examen principal. Neuroimagen (de preferencia RM) si la crisis es focal, hay estatus, déficit o retraso.",
+      "Tratamiento: tras la segunda crisis no provocada (o la primera si hay alto riesgo), con un solo fármaco a dosis baja.",
+      "Cirugía de epilepsia: crisis focales que no responden a 2 fármacos bien elegidos."
     ]
   },
   {
     "kind": "card",
     "id": "g-456",
-    "title": "Convulsiones neonatales (clasificación ilae 2023), definición",
+    "title": "Convulsiones neonatales",
     "points": [
-      "Descargas eléctricas en el EEG, con o sin manifestación clínica; CLASIFICACION:",
-      "1.CRISIS ELECTROCLÍNICAS (EEG + signos clínicos) y 2. CRISIS ELECTROGRÁFICAS O SUBCLÍNICAS (solo EEG). TTO: fenobarbital como primera línea, escalando a levetiracetam, fosfenitoína o midazolam si persisten .",
-      "Los eventos clínicos sin correlato EEG no se consideran crisis y no deben tratarse con antiepilépticos; el manejo incluye estabilización inicial y corrección de causas reversibles, . FENOBARBITAL: 20 mg/kg en infusión IV, seguida de una dosis de mantenimiento de 4 a 6 mg/kg/día dividida en dos dosis",
-      "Si las crisis no se resuelven después de la primera dosis de carga, se deben administrar bolos repetidos de 10 a 20 mg/kg, hasta una dosis total de 50 mg/kg durante 24 horas."
+      "Definición actual: descargas en el EEG, con o sin síntomas. Los movimientos sin correlato en EEG no son crisis.",
+      "Electroclínicas (EEG + signos) o solo electrográficas.",
+      "Estabilizar y corregir causas reversibles: glucosa, calcio, magnesio, infección.",
+      "Fenobarbital primera línea (20 mg/kg y mantenimiento 4-6 mg/kg/día); luego levetiracetam, fosfenitoína o midazolam."
     ]
   },
   {
     "kind": "card",
     "id": "g-457",
-    "title": "Trauma craneo encefalico",
+    "title": "Trauma craneoencefálico en niños",
     "points": [
-      "LEVE: 13-15 ; MODERADO: 9-12 SEVERO: <= 8",
-      "CLASIFICACIÓN PECARN ; TTO: SI LEVE BAJO RIESGO: (asintomático, <3 vomitos, perdida conocimiento < 15 s, sin fracturas) : observar por 6 horas, levs, cabecera 30 grados, analgesia, sutura herida",
-      "SI MEJORA: ALTA, SI NO MEJORA: SS TAC + HOSPITALIZAR. LEVE , MODERADO RIESGO: (cefalea, >=3 vomitos en 1 hora o proyectil, perdida concienci >15 s - <60s , amensia , convulsion, fx cráneo, politrauma , tx alta energía) observar 12 h , levs, cabecera 30 grados, analegeisa, TAC. TEC LEVE ALTO RIESGO: (<2 puntos g.g , focalización, tx penetrante, fx deprimida, perdida conciencia >1 min) TAC, NEUROCX. TEC MODERADO: observar 24 horas, cabecera 30 grados, analgesia, TAC: si normal observar cada 2 h, por 24 horas y salida ; si lesión menor observar 72 horas; si lesión mayor hematoma, ss hipertónica y cx",
-      "TEC SEVERO: ANTICONVULSIVANTE , ss hipertónica, hipotermia 33-33 grados, en 8 horas calentamiento controlado, NO corticoide ."
+      "Gravedad por Glasgow (pediátrico en lactantes): leve 13-15, moderado 9-12, grave ≤8.",
+      "Las reglas PECARN ayudan a decidir quién necesita TAC (para no irradiar de más).",
+      "Leve de bajo riesgo (sin síntomas, <3 vómitos, sin pérdida de conciencia o <5-15 s, sin fractura, mecanismo leve): observar 4-6 h; si sigue bien, alta con signos de alarma.",
+      "Riesgo intermedio (cefalea, ≥3 vómitos o en proyectil, pérdida de conciencia breve, mecanismo de alta energía, <2 años con hematoma grande del cuero cabelludo): observar o TAC según evolución.",
+      "Alto riesgo (Glasgow <15, alteración mental, convulsión, fractura palpable o de la base del cráneo, déficit focal): TAC y hospitalizar.",
+      "Pensar siempre en maltrato si la historia no cuadra."
     ]
   },
   {
     "kind": "card",
     "id": "g-458",
-    "title": "Enfermedad exantemática",
+    "title": "Enfermedades exantemáticas",
     "points": [
-      "1ra enfermedad SARAMPIÓN: virus PARAMIXOVIRUS, contagia 4 días antes y 4 días después del rash",
-      "CLÍNICA: fiebre alta, tos, conjuntivitis, MANCHAS DE KOPLICK (pequeñas lesiones blancas en mucosa oral) antes del exantema, rash maculopapular que inicia en cara y se extiende a todo el cuerpo (incluyendo palmas y plantas)",
-      "TTO: sintomático (hidratación, antitérmicos), vitamina A en niños con desnutrición. 2da enfermedad ESCARLATINA: causada por bacteria Streptococcus pyogenes (Grupo A betahemolítico)",
-      "Contagio: 24-48 horas antes de síntomas hasta 24 horas después de iniciar antibiótico",
-      "CLÍNICA: fiebre alta, faringitis, lengua de fresa (blanquecina y luego roja con papilas hipertróficas), exantema puntiforme rojo con textura de \"lija\" que inicia en axilas/ingle y se generaliza, descamación en manos y pies después del rash",
-      "TTO: penicilina (10 días) o amoxicilina, eritromicina en alérgicos. 3ra enfermedad RUBÉOLA: virus Togavirus",
-      "Contagio: 7 días antes hasta 5-7 días después del rash",
-      "CLÍNICA: fiebre leve, adenopatías retroauriculares y suboccipitales, Las manchas de Forchheimer ( petequias en paladar) rash maculopapular rosado (más leve que sarampión) que inicia en cara y dura 3 días",
-      "TTO: sintomático, aislamiento (especialmente de embarazadas por riesgo de síndrome de rubéola congénita). 4ta enfermedad (descartada como entidad propia,. 5ta enfermedad (ERITEMA INFECCIOSO): virus Parvovirus B19",
-      "Contagio: antes del rash (ya no contagia cuando aparece el exantema)",
-      "CLÍNICA: \"mejillas abofeteadas\" (eritema malar intenso), luego rash reticular/lacelike en tronco y extremidades",
-      "TTO: sintomático, evitar contacto con embarazadas (riesgo de hidrops fetal y anemia grave). 6ta enfermedad (EXANTEMA SÚBITO o ROSÉOLA): virus VHS-6",
-      "Contagio: durante la fiebre (antes del rash)",
-      "CLÍNICA: fiebre alta (39-40°C) por 3-4 días que cede abruptamente al aparecer un rash maculopapular rosado en tronco que se extiende a cuello y extremidades",
-      "TTO: antitérmicos (es autolimitada)",
-      "ENFERMEDAD BOCA-MANO-PIE: virus Coxsackie A16 (enterovirus)",
-      "Contagio: primera semana (heces contagiosas por semanas)",
-      "CLÍNICA: aftas dolorosas en boca, vesículas en palmas de manos y plantas de pies (no pican), fiebre baja",
-      "TTO: analgésicos para aftas, hidratación, higiene estricta",
-      "HERPANGINA: causada por virus Coxsackie A (enterovirus)",
-      "Contagio: desde 2 días antes de síntomas hasta 1-2 semanas después (por heces)",
-      "CLÍNICA: fiebre alta repentina (39-40°C), dolor de garganta intenso, pequeñas úlceras (2-4 mm) con halo rojo en pilares amigdalinos, úvula y paladar blando (nunca en lengua o encías), adenopatías cervicales",
-      "TTO: sintomático (analgésicos, anestésicos tópicos), hidratación con líquidos fríos, aislamiento hasta 24-48 horas sin fiebre",
-      "DIFERENCIAL: no confundir con estomatitis herpética (las úlceras son más grandes y afectan encías/labios)",
-      "Duración: 5-7 días, autolimitada",
-      "VARICELA: virus Varicela-Zóster (VZV)",
-      "Contagio: 48 horas antes del rash hasta que todas las lesiones formen costras",
-      "CLÍNICA: rash vesicular en \"gotas de rocío\" (máculas → vesículas → costras), prurito intenso, fiebre",
-      "TTO: aciclovir en casos graves, aislamiento hasta costras."
+      "Sarampión: paramixovirus. Fiebre alta, tos, moco, conjuntivitis y manchas de Koplik (puntos blancos en la mejilla por dentro) antes del brote; luego manchas rojas que empiezan en la cara y bajan. Contagia 4 días antes y 4 después del brote. Tratamiento de soporte y vitamina A.",
+      "Escarlatina: estreptococo del grupo A. Fiebre, faringitis, lengua \"en fresa\" y piel áspera \"como lija\" con manchas finas que se concentran en pliegues (líneas de Pastia).",
+      "Rubéola: brote leve con ganglios detrás de las orejas y en la nuca.",
+      "Eritema infeccioso (parvovirus B19): \"mejillas abofeteadas\" y luego brote en encaje en brazos y piernas.",
+      "Roséola (herpes 6): 3 días de fiebre alta y, al bajar la fiebre, aparece el brote. Puede dar convulsión febril.",
+      "Varicela: vesículas en distintos estadios (\"cielo estrellado\"), con picazón."
     ]
   },
   {
     "kind": "card",
     "id": "g-459",
-    "title": "Escarlatina",
+    "title": "Escarlatina: diagnóstico y tratamiento",
     "points": [
-      ". El diagnóstico se confirma mediante una prueba rápida de antígeno estreptocócico o un cultivo de garganta y el tratamiento es con penicilina"
+      "Confirmar con prueba rápida de antígeno de estreptococo o cultivo de garganta.",
+      "Tratamiento: penicilina benzatínica intramuscular dosis única o amoxicilina oral 10 días (previene la fiebre reumática)."
     ]
   },
   {
     "kind": "card",
     "id": "g-460",
-    "title": "Mononucleosis",
+    "title": "Mononucleosis infecciosa",
     "points": [
-      "Producida por EPTEIN BARR (vhs 4) e invade el LINFOCITO B, se trasmite por secreción oral y relaciones sexuales, transfusiones , y se secreta hasta 6 meses de infección aguda",
-      "PREDISPONE: ca nasofaringe, linfoma burkit, enfermedad de hodking, leimiosarcoma",
-      "CLINICA: dolor faríngeo con exudado ; fiebre ; adenopatía (linfadenopatia posterior, esplenomegalia ) , exantema que aparece posterior a administración betalactamasa",
-      "DIAGNOSTICO: clínica, anticuerpos halterófilos si son negativos y hay alta sospecha se solicita , anticuerpos específicos contra VEB, TTO: 95% se recupera solo ; acetaminofén , Aciclovir, SINTOMAS POR 2-4 SEM, LINFADENOPATIA HASTA 6 MESE, NO DONAR SANGRE POR ESTE TIEMPO."
+      "Virus de Epstein-Barr, que infecta los linfocitos B. Se transmite por saliva (\"enfermedad del beso\"); se elimina hasta meses después.",
+      "Asociado a largo plazo a cáncer de nasofaringe, linfoma de Burkitt y Hodgkin.",
+      "Fiebre, dolor de garganta con placas, ganglios grandes (sobre todo detrás del cuello), bazo grande y cansancio. Brote en la piel si se da amoxicilina.",
+      "Diagnóstico: linfocitos atípicos en el hemograma y anticuerpos heterófilos (Paul-Bunnell) o serología específica.",
+      "Soporte. Evitar deportes de contacto unas 3-4 semanas (riesgo de rotura del bazo). Corticoides solo si la garganta compromete la respiración."
     ]
   },
   {
     "kind": "card",
     "id": "g-461",
-    "title": "Síndrome ictérico hemorrágico",
+    "title": "Síndrome febril ictérico-hemorrágico",
     "points": [
-      "Presencia de ictericia mas trombocitopenia LEPTOSPIRA: baño en ríos o lagos , RIKETSIA: contacto garrapatas FIEBRE AMARILLA: taladores de arboles, micos"
+      "Fiebre con ictericia y plaquetas bajas o sangrados.",
+      "Pensar según la exposición: leptospirosis (baños en ríos, lagos o contacto con aguas con orina de ratas), rickettsiosis (garrapatas), fiebre amarilla (selva, sin vacuna), y también malaria, dengue grave y hepatitis."
     ]
   },
   {
     "kind": "card",
     "id": "g-462",
-    "title": "Sarampión",
+    "title": "Sarampión: medidas ante un caso",
     "points": [
-      "La vacuna triple viral está contraindicada en casos agudos, POSTEXPOSICION: profilaxis si no tienen anticuerpos.",
-      "1. VACUNA: dentro de las 72 horas postexposición en inmunocompetentes.",
-      "2. LA INMUNOGLOBULINA : dentro de las primeras 6 dias en < 12 meses , gestantes e inmunocomprometidas.",
-      "SARAMPIÓN: aislamiento respiratorio inmediato , notificación al sistema de vigilancia epidemiológica y toma de muestras para confirmación diagnóstica (PCR o IgM según disponibilidad). RT-PCR en Orina vence al día 10, RT-PCR en Hisopado al día 14 y IgM en Sangre hasta el día 30."
+      "Aislamiento respiratorio inmediato, notificación obligatoria al sistema de vigilancia y muestras (PCR o IgM).",
+      "Profilaxis de los contactos sin inmunidad: vacuna triple viral en las primeras 72 h (personas sanas ≥6 meses).",
+      "Inmunoglobulina en los primeros 6 días para <6-12 meses, gestantes e inmunosuprimidos (no pueden recibir la vacuna, que tiene virus vivos).",
+      "Vitamina A a los niños con sarampión."
     ]
   },
   {
     "kind": "card",
     "id": "g-463",
-    "title": "Enfermedad de kawasaki",
+    "title": "Enfermedad de Kawasaki",
     "points": [
-      "NO DA EN ADULTOS NI MENORES DE 3 MESES. vasculitis de medianos vasos, ataca ARTERIAS CORONARIA, aguda y auto limitada. ETIOLOGIA: rta inmune, factores genéticos posible factor infeccioso.CRITERIOS DX: mas de 5 dias de fiebre mas 4 de los siguiente:",
-      "1.inyeccion conjuntival 2. lengua aframbuesada con fisura de labios 3.adenopatia cervicales 4",
-      "Exantema polimórfico 5",
-      "Edema manos y pies",
-      "SI CUMPLE MENOS DE 2-3 O MAS DE 7 DIAS SIN EXPLICACION. Se denomina KAWASAKI INCOMPLETO, se solicita PCR Y VSG. Si son menor de 3 y de 40, poco probable (se solicita ecocardiograma)",
-      "Sin son mayores de 3 y de 40, se solicita hemograma, albumina y uroanalisis: SI 3 O MAS DE LOS SIGUIENTES:",
-      "1.anemia 2.pla >450.000 despues 7mo dia fiebre 3",
-      "Albumina<=3 , leu>= 15 , leu en orina >10 o ECOCARDIOGRAMA SUGERENTE se da tto",
-      "TTO: inmonoglobulinas y ASA . si no hay mejoría a la primera dosis de inmonoglobulina se da segunda dosis, o se considerarira combinar con prednisolono o metilprednisolona.",
-      "La aspirina se inicia al diagnóstico",
-      "Se usa en dosis altas (30–50 mg/kg/día) por su efecto antiinflamatorio y dosis bajas (3–5 mg/kg/día) como antiagregante para prevenir trombosis coronaria",
-      "El manejo se mantiene por 6 semanas",
-      "CONTROLES ECOCARDIO: a las 1–2 semanas y a las 4–6 semanas desde el inicio de la enfermedad"
+      "Vasculitis de vasos medianos que puede dañar las arterias coronarias (aneurismas). Más en niños <5 años.",
+      "Diagnóstico: fiebre ≥5 días + 4 de 5: ojos rojos sin secreción, labios rojos y agrietados o lengua en fresa, ganglio cervical grande (≥1,5 cm), brote en la piel, manos y pies hinchados o rojos (luego se pelan los dedos).",
+      "Kawasaki incompleto: fiebre ≥5 días con solo 2-3 criterios + laboratorio o ecocardiograma alterado. Más frecuente en lactantes <6 meses, que tienen más riesgo de aneurismas.",
+      "Tratamiento: inmunoglobulina intravenosa 2 g/kg (ideal en los primeros 10 días) + aspirina. Ecocardiograma al diagnóstico y en seguimiento."
     ]
   },
   {
     "kind": "card",
     "id": "g-464",
-    "title": "Misc- a",
+    "title": "Síndrome inflamatorio multisistémico (MIS-C)",
     "points": [
-      "SN INFLX. MULTISISTEMICO ASOCIADO A SARSC COV 2. En mayores de 5 años y adolecentes. Aparece 2 a 6 semasn postcovid, causa alteración mustisistemica TTO: UCI, corticoide mas antiagregacion."
+      "Inflamación de varios órganos 2-6 semanas después de una infección por COVID-19; sobre todo en escolares y adolescentes.",
+      "Fiebre persistente, síntomas digestivos, brote, ojos rojos, alteración del corazón (shock, disfunción, aneurismas) y marcadores de inflamación muy altos.",
+      "Tratamiento en UCI: inmunoglobulina intravenosa, corticoides y aspirina."
     ]
   },
   {
@@ -883,17 +839,21 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-465",
     "title": "Escroto agudo",
     "points": [
-      "TORSIÓN TESTICULAR: dolor intenso brusco, reflejo cremasterico abolido, SX PREHN: negativo, TORSIÓN HIDÁTIDE: dolor menos agudo, nodulo duro, hipersensible EPIDIDIMITIS AGUDA: asociado a ITU, dolor insidioso, SX DE PREHN: positivo, edema eritema"
+      "Torsión testicular: dolor intenso y brusco, testículo alto y horizontal, reflejo cremastérico ausente; el dolor no mejora al levantar el testículo (Prehn negativo). Urgencia quirúrgica (salvar el testículo en <6 h).",
+      "Torsión del apéndice testicular (hidátide): dolor menos intenso, nódulo duro en el polo superior (\"punto azul\"). Reposo y analgesia.",
+      "Epididimitis: dolor que se instala poco a poco, con fiebre o síntomas urinarios; mejora al levantar el testículo (Prehn positivo). Antibiótico según la causa.",
+      "Ante la duda: ecografía Doppler sin retrasar la cirugía."
     ]
   },
   {
     "kind": "card",
     "id": "g-466",
-    "title": "Abdomen agudo",
+    "title": "Abdomen agudo en niños",
     "points": [
-      "1. ESTENOSIS HIPERTRÓFICA PILÓRICA: 2-8 VA semana de la vida, CLÍNICA: vomitos fecuentes, empeoran progresivamente posterior a la ingesta, se palpa OLIVA PILORICA, dx: ecografía, TTO: qx.",
-      "2. INVAGINACIÓN INTESTINAL.: entre 4-12 meses, se introduce un segmento del intestino en otro, se asocia a DIVERTÍCULO DE MECKEL, CLINICA: dolor, vomito, deposición con moco y sangre (GALEA DE GROSELLA) tto: enema, si no funciona quirugico.",
-      "3. APENDICITIS AGUDA: 7-14 años, CLINICA: dolor que migra , nauseas, fiebre dx: CLINICO, elevación reactantes fase aguda, si dudamos ECO tto: QX."
+      "Estenosis hipertrófica del píloro: 2-8 semanas de vida, vómitos en proyectil no biliosos después de comer, bebé con hambre; a veces se palpa la \"oliva\". Ecografía. Corregir líquidos y electrolitos (alcalosis con cloro y potasio bajos) y operar (piloromiotomía).",
+      "Invaginación intestinal: 4-12 meses (hasta 3 años), un trozo de intestino se mete en otro. Dolor de cólico con llanto y piernas encogidas, vómitos y heces con moco y sangre (\"jalea de grosella\"). Ecografía (imagen en diana). Reducción con enema; si falla, cirugía. Puede deberse a un divertículo de Meckel.",
+      "Apendicitis: más entre 7-14 años; en menores se perfora más a menudo. Ecografía y cirugía.",
+      "Malrotación con vólvulo: vómitos biliosos en recién nacido = urgencia quirúrgica."
     ]
   },
   {
@@ -901,23 +861,22 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-467",
     "title": "Pubertad precoz",
     "points": [
-      "Hombres: 9-14 años , mujeres 8-13 años. puede ser proceso biológico determinado por genes",
-      "Se considera precoz cuando",
-      "TELARQUIA EN NIÑAS <8 AÑOS, MENARQUIA <9 AÑOS ; EN NIÑOS AGRANDAMIENTO TESTICULAR < 9 AÑOS. CENTRAL: VERDADERA, incrementeo gonadotropina y esteroides PERIFERICA: independiente gonadotropina, fuente de esteroides sexuales exógeno o endógena",
-      "SIN. MACUNER ALBRIHT: mas en niños, displasia fibrosa polisotica, manchas color café con leche , pubertad precoz",
-      "TRATAMIENTO PPC: Análogos GnRH: Triptorelina, leuprolide",
-      "Bloquean la pulsatilidad devolviendo estado basal",
-      "TRATAMIENTO EN PPP: Inhibidores aromatasa, bloqueadores del receptor de andrógenos",
-      "Remover causa (esteroides, tumores...)",
-      "MINIPUBERTAD: periodo transitorio de altos niveles de fsh y lh, En periodo neonatal hasta los 9 meses."
+      "Edad normal de inicio: niñas 8-13 años; niños 9-14 años.",
+      "Precoz: en niñas desarrollo de mamas antes de los 8 años (o primera regla antes de los 9-10); en niños aumento del testículo antes de los 9.",
+      "Central (verdadera): el eje cerebro-ovario/testículo se activa antes de tiempo (gonadotropinas altas). En niñas suele ser idiopática; en niños buscar lesión cerebral con RM.",
+      "Periférica: hormonas sexuales de otra fuente (tumores, suprarrenal, hormonas externas) con gonadotropinas bajas.",
+      "Síndrome de McCune-Albright: pubertad precoz periférica, manchas café con leche de bordes irregulares y displasia ósea fibrosa."
     ]
   },
   {
     "kind": "card",
     "id": "g-468",
-    "title": "Pubertad precoz central LH basal ≥0.3–0.4 UI/L o",
+    "title": "Pubertad precoz central: laboratorio",
     "points": [
-      "Si hay duda, LH pico ≥5–8 UI/L tras estímulo con GnRH, con relación LH/FSH >0.6–1 y aumento acorde de estradiol (>20–25 pg/mL) o testosterona (≥20–30 ng/dL); pubertad precoz periférica es independiente del eje , la LH basal es baja/suprimida y no aumenta tras estímulo con GnRH"
+      "LH basal ≥0,3-0,4 UI/l sugiere central.",
+      "Si hay duda: prueba de estímulo con GnRH; LH pico ≥5-8 UI/l lo confirma (con estradiol o testosterona altos para la edad).",
+      "Periférica: LH basal baja que no sube con el estímulo.",
+      "Tratamiento de la central: análogos de GnRH."
     ]
   },
   {
@@ -925,18 +884,21 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-469",
     "title": "Talla baja",
     "points": [
-      "Medición <2 años tallimetro horizontal , >2 años tallimetro vertical; FORMULA TALLA: niña: (cms madre + cm padre -13) / 2 = +/- 5 cm; niño: (cms madre + cm padre +13) / 2 = +/- 5 cm . TALLA BAJA GENETICA: caída en primeros 3 años, continua con percentil bajo pero apropiado para edad, edad osea normal ; RETARDO CONSTITUCIONAL DEL CRECIMIENTO: los mismo que el anterior, pero edad osea retrasada, por maduración genética retardada",
-      "PATOLOGICOS: si bajo peso y talla baja: DNT, ERC, CROMOSOMICAS; peso elevado , talla baja: HORMONAS, HIPOTIROIDISMO, CUSHING, HIPERPARATIROIDISMO. SN. TURNER: uñas cuchara, cuello alado",
-      "INIDCACION TTO HORMONAL: deficiencia hormonal, talla baja idiopática dosis 0.18, 0,3 /kg."
+      "Medir acostado antes de los 2 años y de pie después.",
+      "Talla objetivo familiar: niña = (talla madre + talla padre − 13) / 2; niño = (talla madre + talla padre + 13) / 2; ±5 cm.",
+      "Talla baja familiar: crece por un percentil bajo pero paralelo a la curva, acorde con los padres, edad ósea normal.",
+      "Retraso constitucional: igual, pero con edad ósea retrasada; pubertad tardía y talla final normal. A menudo un padre \"pegó el estirón\" tarde.",
+      "Patológica: crece cada vez más lento (cruza percentiles), desproporción o afecta más al peso que a la talla (o al revés). Estudiar."
     ]
   },
   {
     "kind": "card",
     "id": "g-470",
-    "title": "Retraso constitucional del crecimiento y desarrollo",
+    "title": "Talla baja: estudio",
     "points": [
-      "Si hay una edad osea con retraso > 2 años se solicitan exámenes de extensión porque son signos de alarma",
-      "Talla baja: exámenes de primera linea: Hemograma completo: ,Función renal y hepática; TSH y T4 libre; IGF-1 (Factor de crecimiento tipo insulínico 1) ;Citoquímico de orina; Edad ósea; bioquímica general con calcio, fósforo, fosfatasa alcalina y vitamina B12 y ácido fólico , La VSG se solicita en caso de sospechar enfermedades crónicas e IgA y anticuerpos transglutaminasa en el contexto clínico apropiado."
+      "Edad ósea retrasada >2 años o velocidad de crecimiento baja son alarmas: estudiar.",
+      "Exámenes iniciales: hemograma, función renal y hepática, TSH y T4 libre, IGF-1, uroanálisis, edad ósea, calcio, fósforo, fosfatasa alcalina, anticuerpos de celiaquía; cariotipo en niñas (Turner).",
+      "VSG o PCR si se sospecha enfermedad inflamatoria intestinal."
     ]
   },
   {
@@ -944,52 +906,52 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-471",
     "title": "Hemofilia",
     "points": [
-      "Trastorno coagulación, caracterizada por HEMOFILIA A: deficiencia factor viii ; HEMOFILIA B: deficiencia facto ix",
-      "Ligada al cromosoma X, por lo que se expresa en todos los hombres que lo porten, mujeres solo cuadno esta con los dos X. DX: prolonga TTP, medición de actividad de f.viii y ix TTO: en paciente con sangrados severo se indica profilaxis",
-      "En urgencias si no tenemos diagnostico, se puede utilizar plasma (contiene factor ix) o hemoderivados, factor viii ( hemofilia mas común)",
-      "Si tenemos diagnostico, damos factores ix u viii, se puede complementar con plasma, o crioprec ipitados ( contien fac. von willebrand, fac viii y xiii y fibrinógeno ) ; acido tranexamico se puede dar, contraindicado en hemofilia b si ya tiene infusión del facto (riesgo embolismo) ; la desmopresina incrementa fac von willebrand, y fac viii, ayuda a hemofilia A."
+      "Falta de un factor de coagulación: hemofilia A (factor VIII, la más frecuente) y B (factor IX).",
+      "Herencia ligada al X: la sufren los varones; las mujeres suelen ser portadoras.",
+      "Sangrados en articulaciones (hemartrosis) y músculos, y sangrado excesivo tras golpes o procedimientos.",
+      "Laboratorio: TTPa alargado con TP y plaquetas normales; confirmar midiendo la actividad del factor VIII o IX.",
+      "Tratamiento: reponer el factor que falta; profilaxis periódica en las formas graves. Emicizumab en hemofilia A. Evitar inyecciones intramusculares, aspirina y AINE."
     ]
   },
   {
     "kind": "card",
     "id": "g-472",
-    "title": "Desparasitación OMS",
+    "title": "Desparasitación (OMS)",
     "points": [
-      "En 3 fases",
-      "1. DESTETE LACTANCIA",
-      "2.FASE ORAL",
-      "3.FASE GATEO. NO SE REALIZA: menores de 12 meses, en 1er trimestre embrazo, zona de bajo riesgo . 12-23 MESES: albendazol 200 mg o mebedazol 500 mg; 24-59 MESES: albenzaol 400 mg o mebendazol 500 mg ; 5-14 AÑOS: igual dosis que la anterior",
-      "SE REALIZA EN ZONAS DE ALTO RIESGO cada 6 mses, BAJO RIESGO, cada 12 meses",
-      "ALBENDAZOL ATACA HELMINTOS; METRONIDAZOL PROTOZOOS."
+      "Indicada en zonas de riesgo, en niños de 1 a 14 años (cuando ya gatean, comen solos y juegan en el suelo).",
+      "No se hace en <12 meses ni en el primer trimestre del embarazo.",
+      "12-23 meses: albendazol 200 mg o mebendazol 500 mg dosis única. 2-14 años: albendazol 400 mg o mebendazol 500 mg.",
+      "Cada 6 meses en zonas de alto riesgo y cada 12 en las de riesgo moderado.",
+      "Albendazol y mebendazol: gusanos (helmintos). Metronidazol: protozoos (amebas, giardia)."
     ]
   },
   {
     "kind": "card",
     "id": "g-473",
-    "title": "Telarquia precoz",
+    "title": "Telarquia prematura aislada",
     "points": [
-      "Definición → Inicio de desarrollo mamario (salida de botón mamario) antes de los 8 años .Sin otro síntoma de pubertad solo necesita seguimiento sin tratamiento"
+      "Crecimiento de la mama (botón mamario) antes de los 8 años, sin otros signos de pubertad (sin estirón ni vello).",
+      "Frecuente en <2 años. Solo seguimiento; si aparecen otros signos, estudiar pubertad precoz."
     ]
   },
   {
     "kind": "card",
     "id": "g-474",
-    "title": "Síndrome uremico hemolitico",
+    "title": "Síndrome urémico hemolítico (SUH)",
     "points": [
-      "Es una microangiopatía trombótica caracterizada por la tríada clásica: Anemia hemolítica microangiopática: Destrucción de globulos rojos por microtrombos plaquetarios",
-      "Esquistocitos, ↑ LDH, ↓ Haptoglobina, coombs negativo",
-      "Trombocitopenia , Lesión renal aguda: oliguria . TIPOS: SUH Típico (90%) Asociado a infección por E. coli O157:H7 productora de toxina Shiga",
-      "Usualmente posterior a gastroenteritis con diarrea sanguinolenta.",
-      "SUH Atípico (10%) Asociado a alteraciones del complemento, autoinmunidad o fármacos.",
-      "SUH secundario: Neoplasia, fármacos, trasplante"
+      "Microangiopatía trombótica con tríada: anemia hemolítica (esquistocitos, LDH alta, haptoglobina baja, Coombs negativo), plaquetas bajas y lesión renal aguda.",
+      "Típico (90 %): tras diarrea con sangre por E. coli O157:H7 productora de toxina Shiga. Causa frecuente de fallo renal agudo en niños.",
+      "Atípico: por alteración del complemento (genética), sin diarrea; tratamiento con eculizumab.",
+      "Tratamiento del típico: soporte (líquidos, transfusión, diálisis si hace falta). Evitar antibióticos y antidiarreicos en la diarrea por E. coli O157."
     ]
   },
   {
     "kind": "card",
     "id": "g-475",
-    "title": "Disfunción trompa de eustaquio",
+    "title": "Disfunción de la trompa de Eustaquio",
     "points": [
-      "Tinitus, hipoacusia y membrana timpánica retraída"
+      "Oído tapado, zumbido, audición disminuida y tímpano retraído (hundido).",
+      "Suele seguir a un resfriado o alergia. Maniobras de Valsalva y tratar la causa."
     ]
   },
   {
@@ -997,8 +959,10 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-476",
     "title": "Enfermedad celiaca",
     "points": [
-      "Trastorno de mala absorción del intestino delgado por hipersensibilidad al gluten mediada por el sistema inmunológico . Síntomas → Retraso del crecimiento, síntomas gastrointestinales. inespecíficos, anemia microcítica por deficiencia de hierro, se asocia a otras enfermedades autoinmunes",
-      "Diagnóstico → Serológico, anticuerpos antitransglutaminoso tisular IgA o biopsia duodenal . Tratamiento → Dieta sin gluten"
+      "Reacción inmune al gluten (trigo, cebada, centeno) que daña el intestino delgado y produce mala absorción.",
+      "Diarrea crónica, distensión, poca ganancia de peso o talla, anemia por falta de hierro; también formas sin síntomas digestivos. Asociada a diabetes tipo 1, tiroiditis, síndrome de Down.",
+      "Diagnóstico: anticuerpos antitransglutaminasa IgA (con IgA total) mientras come gluten, y biopsia duodenal para confirmar.",
+      "Tratamiento: dieta sin gluten de por vida."
     ]
   },
   {
@@ -1006,15 +970,19 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-477",
     "title": "Ahogamiento",
     "points": [
-      "La protección de la hipoxia es tratamiento principal , Se da oxigeno suplementario, ventilación con presión positiva no invasiva disminuye atelectasia , Si paciente con alteración neurológica se debe intubar , Se puede coadyuvar con broncodilatadores para tratar broncoespasmo ya que es otra complicación"
+      "Lo principal es corregir la falta de oxígeno.",
+      "Ventilar cuanto antes (en la parada, empezar con 5 ventilaciones de rescate). Oxígeno suplementario; la presión positiva no invasiva ayuda a reabrir el pulmón.",
+      "Intubar si hay alteración de conciencia o fallo respiratorio.",
+      "Broncodilatadores si hay broncoespasmo. Inmovilizar el cuello solo si hay sospecha de trauma (zambullida)."
     ]
   },
   {
     "kind": "card",
     "id": "g-478",
-    "title": "Genu varo → Fisiológico hasta los 2 años…",
+    "title": "Genu varo (piernas arqueadas)",
     "points": [
-      "GENU VARO → Fisiológico hasta los 2 años"
+      "Normal hasta los ~2 años; luego se corrige y entre los 3-4 años es normal el genu valgo (\"piernas en X\").",
+      "Estudiar si persiste después de los 2-3 años, es asimétrico o progresivo (raquitismo, enfermedad de Blount)."
     ]
   },
   {
@@ -1022,10 +990,10 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-479",
     "title": "Macrocefalia",
     "points": [
-      "Perímetro cefálico (PC) >= 2 desviaciones estándar (DE) (Z-score > +2)",
-      "Un valor entre +2 y +3 DE sugiere macrocefalia familiar benigna si el neurodesarrollo es normal; un valor > +3 DE o crecimiento acelerado obliga a descartar hidrocefalia o trastornos genéticos",
-      "Si el PC es armónico con peso y talla (> percentil 97), probablemente no sea patológica",
-      "Abordaje: Evaluar hitos del neurodesarrollo, buscar signos de hipertensión endocraneana (PIC), medir el PC de los padres y realizar ecografía transfontanelar como estudio inicial si la fontanela está abierta."
+      "Perímetro cefálico > +2 desviaciones estándar.",
+      "Entre +2 y +3 con desarrollo normal: puede ser familiar benigna (medir la cabeza de los padres). Mayor de +3 o que crece rápido: descartar hidrocefalia o síndromes genéticos.",
+      "Si es proporcional al peso y la talla, probablemente no sea patológica.",
+      "Evaluar el desarrollo, buscar signos de presión alta (fontanela abombada, vómitos, \"ojos en sol poniente\"), medir seriado y pedir ecografía transfontanelar (si está abierta) o RM."
     ]
   },
   {
@@ -1033,26 +1001,34 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-480",
     "title": "Microcefalia",
     "points": [
-      "Perímetro por debajo de la media (Z-score < -2); la microcefalia severa es <= -3 DE. Se clasifica en primaria/congénita (genética o infecciones TORCH como Zika/CMV) y secundaria/posnatal (insultos perinatales, encefalopatía hipóxico-isquémica o desnutrición)",
-      "Si es desproporcionada (PC bajo con peso/talla normales), eleva el riesgo de discapacidad intelectual",
-      "Abordaje: Historia perinatal, evaluación del desarrollo, búsqueda de dismorfias, fondo de ojo y neuroimagen (ecografía o RM cerebral) asociada a tamizaje infeccioso/metabólico.)"
+      "Perímetro cefálico < −2 desviaciones estándar; grave < −3.",
+      "Primaria o congénita (genética, infecciones como Zika o citomegalovirus) o secundaria/posnatal (asfixia, desnutrición, lesión cerebral).",
+      "Si es desproporcionada (cabeza pequeña con peso y talla normales), mayor riesgo de discapacidad intelectual.",
+      "Estudio: historia del embarazo y parto, desarrollo, rasgos dismórficos, fondo de ojo, neuroimagen y estudios de infección o genéticos."
     ]
   },
   {
     "kind": "card",
     "id": "g-481",
-    "title": "[]Leucemia linfoblástica aguda",
+    "title": "Leucemia linfoblástica aguda",
     "points": [
-      "Se diagnostica con aspiración de médula ósea con >20% de linfoblastos , Clinica → Pancitopenia, dolor oseo, adenopatías difusas no dolorosas, petequias"
+      "El cáncer más frecuente en niños (pico 2-5 años).",
+      "Clínica: palidez y cansancio (anemia), fiebre e infecciones (neutrófilos bajos), moretones y petequias (plaquetas bajas), dolor de huesos, ganglios, hígado y bazo grandes.",
+      "Hemograma alterado (citopenias o blastos). Diagnóstico con aspirado de médula ósea: ≥20 % de linfoblastos (en LLA suele ser >25 %).",
+      "Remitir urgente a hematooncología pediátrica."
     ]
   },
   {
     "kind": "card",
     "id": "g-482",
-    "title": "Crup",
+    "title": "Crup (laringotraqueítis)",
     "points": [
-      "Tos perruna, disfonia, estridor inspiratorio y dificultad respiratoria , Puede ser viral o bacteriana , El bacteriano causa epiglotitis aguda que causa babeo, voz de patata y postura en trípode . Clasificación → Criterios de Westley",
-      "LEVE <3: Corticoides . MODERADO 3-7: Corticoide y epinefrina nebulizada a 0.5ml/kg/dosis diluida en 3 cc SS 0.9% maximo 5ml . GRAVE >7: Soporte ventilatorio"
+      "Infección viral (parainfluenza) de 6 meses a 3 años: tos \"de perro\", ronquera y estridor al inspirar, peor de noche.",
+      "No confundir con la epiglotitis (bacteriana): fiebre alta, babeo, voz apagada (\"de papa caliente\"), postura en trípode y aspecto tóxico. No explorar la garganta; asegurar la vía aérea.",
+      "Gravedad (Westley): leve ≤2, moderado 3-5, grave ≥6.",
+      "Leve: dexametasona oral 0,15-0,6 mg/kg dosis única.",
+      "Moderado-grave: dexametasona + adrenalina nebulizada (0,5 ml/kg de la ampolla 1:1.000, máximo 5 ml) y observar 2-4 h (el efecto pasa).",
+      "Insuficiencia respiratoria: soporte ventilatorio."
     ]
   },
   {
@@ -1060,46 +1036,54 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-483",
     "title": "Fiebre reumática",
     "points": [
-      "Complicación de la faringoamigdalitis estreptocócica , Sintomas: Artritis, corea de Sydenham y valvulopatías como la mitral",
-      "PROFILAXIS EN FIEBRE REUMÁTICA:",
-      "Si paciente sin carditis: por 5 años o hasta 21 años ; Si carditis pero sin daño residual → por 10 años o hasta 21 años . Si carditis con daño vascular_ 10 años después de ultimo episodio → Hasta 40 años. Régimen :",
-      "1. Si < 20kg → Penicilina B cada 21 días 600.000 unidades 2. Si > 20 kg → Penicilina B 1.200.000 cada 21 dias"
+      "Complicación inmunológica de una faringitis por estreptococo del grupo A no tratada (2-4 semanas después).",
+      "Criterios de Jones: carditis (sobre todo válvula mitral), artritis que salta de una articulación a otra, corea de Sydenham, nódulos subcutáneos y eritema marginado.",
+      "Prevención secundaria (evitar recaídas) con penicilina benzatínica cada 21-28 días: <27 kg 600.000 UI; ≥27 kg 1.200.000 UI.",
+      "Duración: sin carditis, 5 años o hasta los 21 años (lo más largo); carditis sin daño residual, 10 años o hasta los 21; carditis con daño valvular, 10 años o hasta los 40 (a veces de por vida)."
     ]
   },
   {
     "kind": "card",
     "id": "g-484",
-    "title": "Indicaciones quirúrgicas en pediatría",
+    "title": "Cuándo operar en cirugía pediátrica",
     "points": [
-      "Fimosis → Posterior a 3-4 años , Hidrocele → Posterior al año",
-      "Si comunicante cirugía al diagnóstico, Criptorquidia → Entre 6 - 18 meses , hipospadia: 6-18 meses Hernia umbilical → desde 5años. o defecto es > 1.5cm ; Corrección hernia inguinal: RN prematuros y de bajo peso: previo al alta cuando logren un peso mínimo de 1.800 - 2.000g ; RN a terminó ó <3 meses: al diagnóstico ; >3 meses: cirugía de forma electiva ambulatoria"
+      "Fimosis: después de los 3-4 años si persiste (o antes si hay infecciones o problemas para orinar); primero corticoide tópico.",
+      "Hidrocele: observar hasta el año (suele desaparecer). Si es comunicante (cambia de tamaño durante el día), operar al diagnóstico.",
+      "Testículo no descendido (criptorquidia) e hipospadias: entre los 6 y 18 meses.",
+      "Hernia umbilical: operar después de los 4-5 años o si el defecto es >1,5 cm.",
+      "Hernia inguinal (no se cierra sola): prematuros antes del alta (al llegar a ~1.800-2.000 g); a término o <3 meses, al diagnóstico; >3 meses, cirugía programada pronto. Hernia encarcelada: urgencia."
     ]
   },
   {
     "kind": "card",
     "id": "g-485",
-    "title": "El manejo de la criptorquidia",
+    "title": "Testículo no descendido (criptorquidia)",
     "points": [
-      "Observación hasta los 6 meses de edad; si 6- 18 meses se realiza orquidopexia, si palpable se realiza via inguinal, si es no palpable, se realiza exploración quirúrgica",
-      "Desde los 12 años se considerarse orquiectomía por riesgo oncológico (principalmente seminomatoso)",
-      "Si no es viable se realiza orquiectomia . si la criptorquidia es bilateral, hospitalizar se solicita cariotipo para distinguir virilizacion de paciente femenina o subvirilizacion de paciente masculino."
+      "Observar hasta los 6 meses (puede bajar solo). Entre 6 y 18 meses: orquidopexia (fijarlo en el escroto).",
+      "Palpable: cirugía por vía inguinal. No palpable: exploración por laparoscopia.",
+      "Si no es viable o aparece después de la pubertad (≥12 años): considerar quitarlo por riesgo de cáncer (seminoma).",
+      "Bilateral no palpable o con hipospadias: cariotipo y estudio endocrino urgente (descartar trastorno del desarrollo sexual, como niña con hiperplasia suprarrenal virilizada)."
     ]
   },
   {
     "kind": "card",
     "id": "g-486",
-    "title": "Cardiopatías congenitas",
+    "title": "Cardiopatías congénitas: soplos característicos",
     "points": [
-      "Ductus Arterioso persistente → Soplo continuo o en maquinaria (Soplo de Gibson) en foco pulmonar con pulsos arteriales normales o intensificados CIA → Soplo sistólico en foco pulmonar, desdoblamiento fijo 2do ruido cardiaco CIV → Soplo holístico en foco tricuspídeo Tetralogía de Fallot → Cianosis, soplo sistólico de eyección en foco pulmonar, 2do ruido"
+      "Ductus arterioso persistente: soplo continuo \"en maquinaria\" (de Gibson) bajo la clavícula izquierda; pulsos saltones.",
+      "Comunicación interauricular: soplo sistólico en foco pulmonar y desdoblamiento fijo del segundo ruido.",
+      "Comunicación interventricular: soplo holosistólico en el borde izquierdo bajo del esternón.",
+      "Tetralogía de Fallot: cianosis y soplo sistólico eyectivo en foco pulmonar, con segundo ruido único."
     ]
   },
   {
     "kind": "card",
     "id": "g-487",
-    "title": "Imagenes en infección urinaria",
+    "title": "Imágenes en la infección urinaria",
     "points": [
-      "Ecografía renal → Primer episodio de ITU, ITU atípica, ITU recurrente, si no mejoría con tto se realiza en 48 horas , Gammagrafía renal con ácido dimercaptosuccínico (DMSA) → Indicado a los 6 meses después de fase aguda de la infección si ITU febril, recurrente o atípica , Uretrocistografía miccional → Diagnóstico de reflujo vesicouretral, se indica en pacientes con: ITU febril recurrente, cicatriz renal, uropatía obstructiva o alteración de la DMSA",
-      "INFECCIÓN URINARIA ATÍPICA : Masa abdominal o vesical, chorro urinario débil, aumento de creatinina, sepsis, No respuesta a tratamiento en 48 horas , ITU diferente a E. coli . INFECCIÓN URINARIA RECURRENTE : , >- 3 infecciones urinarias bajas , > 1 ITUS altas , ITU alta + ITU baja en 1 año"
+      "Ecografía renal: primera infección febril en <6 meses, infección atípica (mala evolución, germen raro, masa, mala función renal) o recurrente; urgente si no mejora en 48 h.",
+      "Gammagrafía DMSA: buscar cicatrices renales, 4-6 meses después de una infección febril atípica o recurrente.",
+      "Cistouretrografía miccional: buscar reflujo vesicoureteral si hay infecciones febriles recurrentes, ecografía alterada (dilatación), cicatrices o uropatía obstructiva."
     ]
   },
   {
@@ -1107,22 +1091,22 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-488",
     "title": "Enuresis y encopresis",
     "points": [
-      "Trastornos de la eliminación en la infancia",
-      "ENURESIS: micción involuntaria ≥5 años (≥2 veces/semana por ≥3 meses o con impacto clínico); primaria (nunca logró control) o secundaria (recae tras ≥6 meses seco), nocturna la más común; etiología (retraso madurativo, poliuria nocturna, sueño profundo, factores genéticos/psicosociales; descartar infección urinaria, diabetes)",
-      "MANEJO ENURESIS:",
-      "1.educación y medidas conductuales (micción programada, restricción de líquidos nocturnos, evitar cafeína, refuerzo positivo)",
-      "2. alarma de enuresis (primera línea), y 3. farmacológico si falla o necesidad puntual: desmopresina nocturna",
-      "ENCOPRESIS: evacuación fecal inapropiada ≥4 años; generalmente retentiva por estreñimiento crónico (la más frecuente) con impactación y “rebosamiento”; menos común no retentiva (conductual)",
-      "CLÍNICA: escapes fecales, heces duras, dolor al defecar, masa fecal abdominal; puede asociar enuresis",
-      "MANEJO ENCOPRESIS: desimpactación inicial (polietilenglicol u otros), luego mantenimiento con laxantes osmóticos, dieta rica en fibra y líquidos, entrenamiento en hábitos (sentarse tras comidas), apoyo conductual; descartar causas orgánicas (Hirschsprung, hipotiroidismo) si atípico."
+      "Enuresis: escapes de orina en niños ≥5 años, ≥2 veces por semana durante ≥3 meses (o con impacto). Primaria (nunca controló) o secundaria (recae tras ≥6 meses seco). Lo más común es la nocturna.",
+      "Causas: retraso madurativo, mucha orina por la noche, sueño profundo, genética, estrés. Descartar infección urinaria, diabetes y estreñimiento.",
+      "Tratamiento: educación (no castigar), orinar antes de dormir, menos líquido en la noche, calendario. Luego alarma de enuresis (la más eficaz a largo plazo) o desmopresina.",
+      "Encopresis: escapes de heces en ≥4 años; casi siempre por estreñimiento crónico con rebosamiento → tratar el estreñimiento (desimpactar, polietilenglicol, hábito)."
     ]
   },
   {
     "kind": "card",
     "id": "g-489",
-    "title": "Hepatitis B en embarazo",
+    "title": "Hijo de madre con hepatitis B",
     "points": [
-      "Paciente debe recibir: Inmunoglobulina y vacuna en las primeras horas de vida , No se contraindica la lactancia , Se debe realizar esquema 2-4-6 meses ,Se solicita anticuerpos contra antígeno de superficie de Hb (HBsAb) y antigeno de Hb 3 meses después . Si anticuerpos < 10, revacunar ; Si anticuerpos >10, inmune . Si antígeno + y anticuerpo - → Caso confirmado a SIVIGILA"
+      "Vacuna + inmunoglobulina contra hepatitis B en las primeras 12 horas de vida.",
+      "La lactancia no está contraindicada.",
+      "Completar el esquema de vacunación (2, 4 y 6 meses).",
+      "Control 1-3 meses después de la última dosis (9-12 meses de edad): antígeno de superficie (HBsAg) y anticuerpos (anti-HBs).",
+      "Anti-HBs ≥10: inmune. Anti-HBs <10 con HBsAg negativo: revacunar. HBsAg positivo: infectado → notificar y remitir."
     ]
   },
   {
@@ -1130,35 +1114,33 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-490",
     "title": "Fibrosis quística",
     "points": [
-      "FIBROSIS EN GEN CFTR → Causa alteración del canal de cloro en membranas . Síntomas → Retraso del crecimiento, infecciones respiratorias recurrentes, pancreatitis, infertilidad en hombres por vaso deferente ausente . Diagnósticos → Iontoforesis (Prueba del sudor) , Si > 60 mmol/l se confirma , Si 30 - 60 mmol/l se realiza análisis de gen CFTR. Tratamiento: Control de síntomas, suprimir infección"
+      "Enfermedad genética (autosómica recesiva) por mutaciones del gen CFTR, un canal de cloro: las secreciones se vuelven espesas.",
+      "Infecciones respiratorias repetidas, bronquiectasias, poca ganancia de peso, heces grasosas (insuficiencia pancreática), íleo meconial al nacer, infertilidad masculina (falta el conducto deferente).",
+      "Diagnóstico: prueba del sudor (cloro ≥60 mmol/l confirma; 30-59 dudoso → estudio genético).",
+      "Tratamiento: fisioterapia respiratoria, enzimas pancreáticas, nutrición, antibióticos para las infecciones y moduladores del CFTR."
     ]
   },
   {
     "kind": "card",
     "id": "g-491",
-    "title": "Problemas del habla",
+    "title": "Trastornos del habla y del lenguaje",
     "points": [
-      "Disfemia → Trastorno de la fluidez del habla (tartamudez), puede deberse a etiología genética, psicológica o neurofisiológica ; Disfasia → Trastorno de la adquisición del lenguaje. Se puede dar por lesiones del SNC",
-      "Disartria → Trastorno neurológico motor en la que no puede mover músculos del habla como en ACV",
-      "Disglosia → Trastorno no neurológico secundario a lesión física o malformación de órganos de la articulación del habla",
-      "La Dislalia es un trastorno del habla con dificultad para pronunciar fonemas (sustitución, omisión o distorsión) sin causa neurológica ni motora. Es normal en niños pequeños, pero patológica si persiste >4–5 años. Manejo: terapia fonoaudiológica."
+      "Disfemia: tartamudez (falla la fluidez); causas genéticas, psicológicas o neurológicas.",
+      "Disfasia (trastorno del desarrollo del lenguaje): dificultad para adquirir el lenguaje.",
+      "Disartria: problema neurológico motor para mover los músculos del habla (por ejemplo tras un ACV o en parálisis cerebral).",
+      "Disglosia: dificultad para articular por un problema físico de boca, lengua o paladar (labio y paladar hendido, frenillo).",
+      "Dislalia: error en la pronunciación de algunos sonidos sin causa física; normal hasta cierta edad (la \"r\" hasta los 5-6 años)."
     ]
   },
   {
     "kind": "card",
     "id": "g-492",
-    "title": "Tiroiditis",
+    "title": "Tiroiditis y tirotoxicosis en niños",
     "points": [
-      "Cuando un paciente se presenta con tirotoxicosis (T3/T4 altos + TSH baja), y sospechas de tiroiditis. Solicitar anticuerpos TRAb .",
-      "TRAb positivos → Enfermedad de Graves.",
-      "Tratamiento: Metimazol (fármaco de elección en niños)",
-      "TRAb negativos → Sospecha de tiroiditis . Se solicita gammagrafia tiroidea .Interpretación: Captación alta: Enfermedad de graves seronegativo o nódulo tóxico",
-      "No es tiroiditis",
-      "Captación baja: TIROIDITIS. Tiroiditis subaguda (De Quervain) ; Tiroiditis autoinmune (Hashimoto en fase tiro­tóxica) ;Tiroiditis silente/posviral",
-      "IMPORTANTE: En tiroiditis NO hay hiperproducción, sino destrucción glandular, por lo que: * NO se usan antitiroideos (NO metimazol) *Tratamiento correcto: Beta-bloqueador (propranolol) → para síntomas",
-      "AINES si leve",
-      "Corticoide (prednisona) si dolor severo",
-      "Reposo, hidratación"
+      "Tirotoxicosis (T3 y T4 altas con TSH baja): pedir anticuerpos TRAb.",
+      "TRAb positivos: enfermedad de Graves → metimazol (de elección en niños; el propiltiouracilo daña el hígado).",
+      "TRAb negativos: gammagrafía. Captación alta: Graves sin anticuerpos o nódulo tóxico. Captación baja: tiroiditis (subaguda, silente, Hashimoto en fase de hipertiroidismo).",
+      "Tiroiditis: no se usan antitiroideos (no hay más producción, sino salida de hormona almacenada); betabloqueante para los síntomas."
     ]
   },
   {
@@ -1166,248 +1148,272 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-493",
     "title": "Proteinuria en niños",
     "points": [
-      "En adultos y adolescentes se prefiere proteinuria en 24 horas como forma de recolección",
-      "En niños se puede medir con relación proteína-creatinina en orina en primera hora de la mañana .Proteina Ortostática → Hallazgo benigno de proteinuria que se elevada en el dia y se normaliza en la noche → Si relación proteina/creatinuria es normal en la primera orina de la mañana se diagnostica esta enfermedad . Es anormal si > 0.2 mg"
+      "En niños se mide con la relación proteína/creatinina en la primera orina de la mañana (en adolescentes y adultos también sirve la orina de 24 h).",
+      "Normal: <0,2 mg/mg en >2 años (<0,5 en 6-24 meses).",
+      "Proteinuria ortostática: aparece de pie durante el día y desaparece acostado. Es benigna; se diagnostica con relación normal en la primera orina de la mañana y alterada en la del día.",
+      "Persistente en la primera orina de la mañana: estudiar enfermedad renal."
     ]
   },
   {
     "kind": "card",
     "id": "g-494",
-    "title": "Vacunación VPH",
+    "title": "Vacuna contra el VPH",
     "points": [
-      "Desde 9 años a 17 años 11 meses 29 dias . Solo una dosis ,Inmunosuprimidos: Dosis refuerzo a 6 meses"
+      "Niñas y niños de 9 a 17 años en Colombia: una sola dosis.",
+      "Inmunosuprimidos (por ejemplo VIH): esquema de varias dosis.",
+      "Previene cáncer de cuello uterino, ano, orofaringe y verrugas genitales."
     ]
   },
   {
     "kind": "card",
     "id": "g-495",
-    "title": "Eritema tóxica",
+    "title": "Lesiones benignas de la piel del recién nacido",
     "points": [
-      "En primera semana de vida máculas y pápulas rojos, que progresan a pústulas en tronco, extremidades, respeta palmas y plantas",
-      "Se da por inmadurez de glándulas sudoríparas, se resuelven en 7-14 días .MELANOSIS PUSTULOSA NEONATAL → Pústulas con escamas alrededor en tronco, extremidades, cuello y fiebre"
+      "Eritema tóxico: en los primeros días, manchas rojas con pápulas o pústulas pequeñas en tronco y extremidades, sin afectar palmas y plantas. Bebé sano, sin fiebre. Se resuelve solo en 1-2 semanas.",
+      "Melanosis pustulosa neonatal: pústulas presentes al nacer que se rompen dejando un collarete de escamas y manchas oscuras; puede afectar palmas y plantas. Más en piel oscura. Bebé sano y benigna.",
+      "Miliaria: por obstrucción de las glándulas sudoríparas (calor y abrigo excesivo).",
+      "Si hay fiebre o el bebé está decaído, pensar en infección (herpes, estafilococo)."
     ]
   },
   {
     "kind": "card",
     "id": "g-496",
-    "title": "Los hitos del neurodesarrollo",
+    "title": "Hitos del desarrollo",
     "points": [
-      "Se evalúan en cuatro áreas (motor grueso, motor fino-adaptativo, lenguaje y social) y deben cumplirse en rangos esperados: a los 2 meses sostiene parcialmente la cabeza, sonríe socialmente y emite sonidos guturales; a los 4 meses sostiene bien la cabeza, se voltea, agarra objetos y balbucea; a los 6 meses se sienta con apoyo, transfiere objetos, responde a su nombre y ríe; a los 9 meses se sienta sin apoyo, hace pinza inferior, dice “mamá/papá” inespecífico y presenta ansiedad al extraño; al año camina con apoyo o da pasos, pinza fina, dice 1–3 palabras con sentido y señala; a los 18 meses camina solo, apila 2–3 cubos, dice ≥10 palabras y señala partes del cuerpo; a los 2 años corre, patea balón, hace frases de 2 palabras y sigue órdenes simples; a los 3 años sube escaleras alternando pies, copia un círculo, habla en frases completas y juega en paralelo; a los 4 años salta en un pie, copia cruz, cuenta historias simples y juega cooperativamente; y a los 5 años salta y corre con coordinación, copia triángulo, habla con claridad y distingue fantasía de realidad",
-      "La ausencia de hitos clave (no sonrisa a los 2 meses, no sedestación a los 9 meses, no marcha a los 18 meses, no frases a los 2 años) es signo de alarma y requiere evaluación."
+      "Se evalúan 4 áreas: motor grueso, motor fino, lenguaje y social.",
+      "2 meses: sostiene un poco la cabeza, sonrisa social, sonidos guturales.",
+      "4 meses: sostiene bien la cabeza, se voltea, agarra objetos, balbucea.",
+      "6 meses: se sienta con apoyo, pasa objetos de una mano a otra, responde a su nombre, ríe.",
+      "9 meses: se sienta solo, gatea, pinza con el pulgar (inferior), dice \"mamá/papá\" sin intención, extraña a desconocidos.",
+      "12 meses: camina con ayuda o solo, pinza fina, 1-2 palabras con sentido, señala.",
+      "18 meses: camina bien, varias palabras. 24 meses: corre, frases de 2 palabras.",
+      "Alarma: perder habilidades ya adquiridas a cualquier edad."
     ]
   },
   {
     "kind": "card",
     "id": "g-497",
-    "title": "Los reflejos primitivos",
+    "title": "Reflejos primitivos",
     "points": [
-      "Respuestas automáticas del tallo cerebral. deben estar presentes al nacer; su desaparición o \"integración\" ocurre a medida que la corteza madura",
-      "(marcha automática (3 meses), prensión palmar, búsqueda y succión (4 meses), Moro y el tónico cervical asimétrico (6 meses), la prensión plantar (10 meses) y Babinski, hasta los 2 años) . Clínicamente, su ausencia al nacer sugiere depresión del sistema nervioso central o lesión periférica (como fractura de clavícula en un Moro asimétrico), su persistencia más allá de los 6 meses es un signo de alarma que sugiere parálisis cerebral o retraso en la maduración neurológica."
+      "Respuestas automáticas del tronco cerebral; deben estar al nacer y desaparecer al madurar la corteza.",
+      "Desaparecen aproximadamente: marcha automática (2-3 meses), búsqueda y succión (4 meses), prensión palmar (4-6 meses), Moro y tónico asimétrico del cuello (4-6 meses), prensión plantar (9-12 meses), Babinski (hasta 1-2 años).",
+      "Ausente al nacer: depresión del sistema nervioso o lesión periférica (por ejemplo Moro asimétrico en fractura de clavícula o parálisis braquial).",
+      "Que persistan más de lo esperado: sugiere lesión cerebral (parálisis cerebral)."
     ]
   },
   {
     "kind": "card",
     "id": "g-498",
-    "title": "Movimientos lactantes- body rocking",
+    "title": "Movimientos rítmicos del lactante",
     "points": [
-      "Benignos, entre 6-18 meses , movimiento rítmico tronco durante transición al sueño o al despertar, no requiere tratamiento.",
-      "Estereotipias: movimientos repetitivos, aleteo, golpeteo, durante la vigilia.",
-      "Head banging: golpes repetitivos con la cabeza contra superficie, puede o no asociarse autismo"
+      "Balanceo del cuerpo (body rocking): benigno, entre 6-18 meses, al dormirse o despertar; no requiere tratamiento.",
+      "Golpes de la cabeza (head banging): golpes repetidos contra una superficie al dormirse; suele ser benigno, pero si hay otros signos, evaluar autismo.",
+      "Estereotipias: movimientos repetitivos (aleteo de manos, golpeteo) despierto; pueden ser normales o asociarse a autismo."
     ]
   },
   {
     "kind": "card",
     "id": "g-499",
-    "title": "Las fisuras orofaciales incluyen el labio hendido",
+    "title": "Labio y paladar hendido",
     "points": [
-      "Las fisuras orofaciales incluyen el labio hendido (labio leporino) y el paladar hendido, que pueden presentarse de forma unilateral o bilateral, completos o incompletos; la forma más frecuente es labio hendido asociado a paladar hendido, mientras que el paladar hendido aislado es menos común. cuando hay compromiso del paladar se altera la succión, alimentación y posteriormente la fonación",
-      "El manejo es multidisciplinario",
-      "La queiloplastia (reparación del labio) se realiza siguiendo la clásica “regla de los 10”: al menos 10 semanas de edad (~3 meses), 10 libras de peso (~4.5 kg) y hemoglobina ≥10 g/dL. La palatoplastia (reparación del paladar) se realiza idealmente antes del desarrollo del habla, usualmente entre 9 y 12 meses, con el objetivo de mejorar la competencia velofaríngea, la alimentación y la fonación",
-      "CRITERIOS UDEA QUEILOPLASTIA:. edad gestacional corregida semanas , peso minimo 5 kg, hemoglobina 10 .",
-      "Si neonato sin alteración neurológica, inicar via oral con técnica y postura, riesgo de broncoaspiracion bajo por presencia de reflejos."
+      "Pueden ser de un lado o de ambos, completos o incompletos. Lo más frecuente es labio hendido con paladar hendido; el paladar hendido aislado es menos común.",
+      "Si afecta el paladar, dificulta la succión y la alimentación y luego el habla. También más otitis.",
+      "Manejo multidisciplinario (cirugía plástica, otorrino, fonoaudiología, odontología, nutrición y psicología). Biberones especiales.",
+      "Cirugía orientativa: labio hacia los 3-6 meses; paladar hacia los 9-18 meses."
     ]
   },
   {
     "kind": "card",
     "id": "g-500",
-    "title": "Pacientes con labio hendido (LH)",
+    "title": "Clasificación del labio y paladar hendido",
     "points": [
-      "Según su localización: central, unilateral o bilateral. Según su extensión: completa: si la hendidura alcanza el piso nasal ; incompleta: no llega al piso nasal",
-      "Pacientes con paladar hendido (PH): PH primario: anterior al foramen incisivo. PH secundario: posterior al foramen incisivo. PH incompleto: compromiso limitado al paladar blando. PH completo: compromiso del paladar blando, el paladar duro y la úvula."
+      "Labio: central, unilateral o bilateral. Completo si llega al piso de la nariz; incompleto si no.",
+      "Paladar primario: delante del agujero incisivo. Secundario: detrás.",
+      "Paladar incompleto: solo el paladar blando. Completo: paladar blando, duro y úvula."
     ]
   },
   {
     "kind": "card",
     "id": "g-501",
-    "title": "Sindactilia",
+    "title": "Sindactilia y polidactilia",
     "points": [
-      "La sindactilia es la malformación congénita más frecuente de la mano, caracterizada por la fusión de dedos, siendo la forma más común la entre el tercer y cuarto dedo",
-      "La polidactilia puede ser postaxial (meñique/ulnar, la más frecuente) o preaxial (pulgar/radial). el síndrome de Apert uno de los más comunes asociados a estas malformaciones",
-      "El tratamiento quirúrgico se recomienda habitualmente entre los 12 y 18 meses de edad, antes del desarrollo de la función manual fina, con el objetivo de mejorar función, apariencia y crecimiento normal de los dedos."
+      "Sindactilia (dedos unidos): la malformación congénita más frecuente de la mano; lo más común es la unión del 3.er y 4.º dedo.",
+      "Polidactilia (dedos de más): postaxial (del lado del meñique, la más frecuente) o preaxial (del lado del pulgar).",
+      "Se asocian a síndromes como Apert.",
+      "Cirugía habitualmente entre los 12 y 18 meses, antes de que se desarrolle la función fina de la mano."
     ]
   },
   {
     "kind": "card",
     "id": "g-502",
-    "title": "Esquema vacunacion",
+    "title": "Esquema de vacunación (PAI Colombia)",
     "points": [
-      "Al nacer: BCG y hepatitis B; las 6 semanas (1,5 meses) pentavalente (difteria, tétanos, tos ferina, hepatitis B y Haemophilus influenzae tipo b;), más polio, rotavirus y neumococo; los 3 meses : segunda dosis de pentavalente, más polio, rotavirus y neumococo; 4,5 meses tercera dosis de pentavalente, más polio. 6–7 meses influenza, 12 meses SRP (sarampión, rubéola y paperas), varicela, refuerzo de neumococo y hepatitis A; 18 meses refuerzo de DPT (difteria, tétanos y tos ferina), refuerzo de polio, SRP y fiebre amarilla según zona; 5 años segundo refuerzo de DPT, segundo refuerzo de polio y segunda dosis de varicela.",
-      "OTRAS ACTUALIZACIONES RECIENTES:",
-      "1. vacunación contra virus sincitial respiratorio (VSR) en gestantes (28-36 SEM)",
-      "Nirsevimab: anticuerpo monoclonal contra VSR, se administra a RN 33 - 35 semanas, RN desde 36 semanas si la madre no recibió la vacuna, bebes de alto riesgo (cardiopatías complejas, displasia broncopulmonar y otras patologías de compromiso respiratorio, fibrosis quística, inmunodeficiencias)",
-      "3. vacuna contra dengue en zonas endémicas desde los 5 años.",
-      "4. VPH niños y niñas de 9 a 17 años (inmunodeprimidos: 2 dosis a los 0 y 6 meses). En grupos especiales, se indican vacunas según riesgo, incluyendo neumococo, influenza, hepatitis A/B y meningococo.",
-      "Vacuna del vph del pai, GARDASIL 4 protege para genotipo 6, 11 y riesgo 16 y 18. en el pai de los 9 -17 años con esquema unico. posterio se puede dar hasta los 26 años son 3 dosis de GARDSIL 9 ( 0-2-6 meses)",
-      "Vacuna zoster recombinante (inactiva) (shingrix) en mayores de 18 años inmunosuprimidos o mayores 50 años",
-      "EMBARAZO : COVID-19 (semana 12), influenza (semana 14), Tdap (difteria, tétanos y tos ferina acelular; semana 20)– VRS (entre las semanas 28 y 36)"
+      "Al nacer: BCG y hepatitis B.",
+      "2, 4 y 6 meses: pentavalente (difteria, tétanos, tos ferina, hepatitis B y Haemophilus tipo b) y polio. Rotavirus a los 2 y 4 meses. Neumococo a los 2 y 4 meses.",
+      "6 y 7 meses: influenza (luego anual hasta los 2 años o según riesgo).",
+      "12 meses: triple viral (sarampión, rubéola, paperas), varicela, refuerzo de neumococo y hepatitis A.",
+      "18 meses: refuerzos de DPT y polio, segunda dosis de triple viral; fiebre amarilla.",
+      "5 años: refuerzos de DPT y polio, varicela.",
+      "Verificar siempre con el esquema vigente del Ministerio de Salud (cambia)."
     ]
   },
   {
     "kind": "card",
     "id": "g-503",
-    "title": "Esavi",
+    "title": "ESAVI (evento después de vacunar)",
     "points": [
-      "Evento atribuible a vacunación. (vacuna bordetela pertusis con células enteras ha sido asociada de fiebre alta y convulsiones febriles) ; se deben notificar las esavi moderadas y graves."
+      "Evento supuestamente atribuible a la vacunación o inmunización.",
+      "Ejemplo: la vacuna de tos ferina de células enteras se asocia a fiebre alta y convulsiones febriles.",
+      "Notificar los ESAVI moderados y graves al sistema de vigilancia."
     ]
   },
   {
     "kind": "card",
     "id": "g-504",
-    "title": "Vacuna meningococo",
+    "title": "Vacuna contra el meningococo y alergia al huevo",
     "points": [
-      "Desde los 2 meses en alto riesgo: asplenia (incluida drepanocitosis), deficiencias del complemento, uso de eculizumab/ravulizumab, VIH o inmunodeficiencias, trasplante",
-      "Se usa MenACWY con esquema según edad (2–6 meses: 3 dosis + refuerzo; 7–23 meses: 2 dosis + refuerzo; ≥2 años: 1 dosis + refuerzos cada 3–5 años si persiste el riesgo) y MenB (otro tipo de vacuna)",
-      "VACUNACIÓN Y ALERGIA AL HUEVO: tres vacunas: influenza, fiebre amarilla y triple viral (sarampión, paperas y rubeola). influenza y triple viral si se puede dar sin problema, la fiebre amarilla si requiere pruebas cutáneas previas con la vacuna",
-      "Si estas resultan positivas, se administra en dosis fraccionadas bajo observación médica."
+      "Desde los 2 meses en alto riesgo: sin bazo o bazo que no funciona (anemia falciforme), déficit de complemento, uso de eculizumab, VIH u otras inmunodeficiencias, trasplante.",
+      "MenACWY según edad: 2-6 meses 3 dosis + refuerzo; 7-23 meses 2 dosis + refuerzo; ≥2 años 1 dosis y refuerzos cada 3-5 años si sigue el riesgo. Además MenB.",
+      "Alergia al huevo: se habla de influenza, fiebre amarilla y triple viral. Solo la fiebre amarilla requiere precaución real (valorar con alergología); la influenza y la triple viral se pueden aplicar."
     ]
   },
   {
     "kind": "card",
     "id": "g-505",
-    "title": "Tamizaje endocrino-metabólico",
+    "title": "Tamizaje neonatal",
     "points": [
-      "Máx. 120 h, sangre en papel filtro): Otros tamizajes:",
-      "1) Auditivo: antes del egreso con emisiones otoacústicas o potenciales evocados automatizados; .",
-      "2) Visual: examen físico y reflejo rojo.",
-      "Tamizaje en prematuros de menos de 28 sem: a las (3 dias ) y repetir a los 15 días ; Si está con formula o NPT: tomar muestra inicial y repetir en 48 horas tras reintroducción de dieta enteral Si transfusión, realizar toma 7-10 días pos transfusión",
-      "Gemelos monocorionicos: Retamizaje a los 5 días o 15 días si prematuro"
+      "Endocrino-metabólico: gota de sangre del talón en papel filtro (idealmente 48-72 h y máximo a las 120 h de vida).",
+      "Auditivo: antes del alta, con emisiones otoacústicas o potenciales evocados automatizados.",
+      "Visual: examen y reflejo rojo.",
+      "Prematuros <28 semanas: tomar al 3.er día y repetir a los 15 días.",
+      "Si está en nutrición parenteral o sin vía oral: tomar y repetir 48 h tras empezar a comer. Si fue transfundido: repetir 7-10 días después."
     ]
   },
   {
     "kind": "card",
     "id": "g-506",
-    "title": "Hipotiroidismo congénito",
+    "title": "Hipotiroidismo congénito (tamizaje)",
     "points": [
-      "Descartada: cordón umbilical <15 μUI/ml talón <10 μUI/ml (6 en prematuros)",
-      "Positivo: si la TSH es ≥15 μUI/ml en cordón o ≥10 μUI/ml en talón, medir TSH y T4 libre séricas, Si normales (tsh 0.5 – 10 muI/L), se descarta; si la TSH ≥20 mU/L o la T4 libre está baja se confirma el diagnóstico y se inica levotiroxina",
-      "Si la TSH está entre 6–20 mU/L con T4 libre normal y no hay posibilidad de seguimiento se inicia tratamiento, sino se realiza un control en 1–2 semanas y si tsh < 6 -10 con t4l normal se descarta, si no , se confirma y se manejo."
+      "TSH en cordón <15 µUI/ml o en talón <10 (6 en prematuros): descartado.",
+      "TSH ≥15 en cordón o ≥10 en talón: medir TSH y T4 libre en sangre venosa.",
+      "Si son normales: descartado. TSH ≥20 o T4 libre baja: confirmado → levotiroxina de inmediato (10-15 µg/kg/día).",
+      "TSH 6-20 con T4 libre normal: repetir; si no se puede seguir al paciente, tratar.",
+      "Sin tratamiento causa retraso mental: es urgente."
     ]
   },
   {
     "kind": "card",
     "id": "g-507",
-    "title": "Fenilcetonuria",
+    "title": "Fenilcetonuria (tamizaje)",
     "points": [
-      "Cuantificación de fenilalanina en sangre de talón. 1- Descartada: <2 mg/dl (<120 μmol/L)",
-      "ZONA GRIS: entre 2 y 5.9 mg/dl (120–360 μmol/L), medir aminoácidos cuantitativos en plasma para confirmar",
-      "Positivo: ≥6 mg/dl (≥360 μmol/L), solicitar aminoácidos en plasma y relación fenilalanina/tirosina; 2- Negativo: si la fenilalanina es <2 mg/dl (<120 μmol/L) y la relación fenilalanina/tirosina <2",
-      "Posible Fenilalaninemia Leve o Transitoria: si la fenilalanina es 2 – 6 mg/dL (120 – 360 μmol/L) y la relación fenilalanina/tirosina 2 – 4, hacer seguimiento con prueba",
-      "Hiperfenilalaninemia sostenida o fenilcetonuria leve: Si es >6 mg/dl (>360 μmol/L) con relación >2, repetir la prueba e iniciar tratamiento si persiste elevada; Altamente sugestivo de fenilcetonuria moderada clásica: si >10 mg/dl (>600 μmol/L) con relación >4, no repetir prueba ya dx , iniciar tratamiento; Fenilcetonuria clásica confirmada: si ≥20 mg/dl ( ≥1200 μmol/L ), con relación >5, iniciar tratamiento de inmediato."
+      "Mide fenilalanina en sangre del talón.",
+      "<2 mg/dl (<120 µmol/l): descartado.",
+      "2-5,9 mg/dl: zona gris → aminoácidos en plasma para confirmar.",
+      "≥6 mg/dl: positivo → aminoácidos en plasma y relación fenilalanina/tirosina.",
+      "Confirmada: dieta baja en fenilalanina de inmediato (con fórmula especial) para evitar el daño cerebral."
     ]
   },
   {
     "kind": "card",
     "id": "g-508",
-    "title": "Galactosemia",
+    "title": "Galactosemia (tamizaje)",
     "points": [
-      "Galactosa total de muestra de talón. Descartada: <10 mg/dl. Caso probable: ≥10 mg/dl",
-      "2. toma galactosa 1-fosfato uridil transferasa (GALT), si es ≥10% se descarta, y si es <10% es galactosemia clásica confirmada y se debe iniciar tratamiento de inmediato (se termina de confirmar con estudios moleculares)."
+      "Galactosa total en sangre del talón: <10 mg/dl descartado; ≥10 caso probable.",
+      "Medir la enzima GALT: ≥10 % descartado; <10 % galactosemia clásica → quitar la leche (materna y de fórmula con lactosa) de inmediato y pasar a fórmula de soya. Confirmar con estudio molecular.",
+      "Sin tratamiento: vómitos, ictericia, daño hepático, cataratas y sepsis por E. coli."
     ]
   },
   {
     "kind": "card",
     "id": "g-509",
-    "title": "Déficit de biotinidasa",
+    "title": "Déficit de biotinidasa (tamizaje)",
     "points": [
-      "Actividad enzimática de la biotinidasa. Descartada: >58U. Positiva: ≤58U.",
-      "2. Tomar pruebas de actividad de la biotinidasa sérica, Negativa: Si >30%; Déficit parcial o leve: 10-30%, iniciar tratamiento de inmediato. Déficit total o grave: <10%, iniciar tratamiento de inmediato"
+      "Actividad de la biotinidasa en talón: >58 U descartado; ≤58 U positivo.",
+      "Confirmar en suero: >30 % normal; 10-30 % déficit parcial; <10 % déficit grave. En ambos déficits, iniciar biotina de inmediato."
     ]
   },
   {
     "kind": "card",
     "id": "g-510",
-    "title": "Fibrosis quística",
+    "title": "Fibrosis quística (tamizaje)",
     "points": [
-      "Tripsinógeno inmunoreactivo (primera toma TIR-1) Descartada: TIR-1 <60 ng/ml. Alterada: ≥60 ng/ml, se debe tomar de talón (segunda toma TIR-2).",
-      "2. Negativo: si TIR-2 <60 ng/ml; Caso probable: ≥60 ng/ml.",
-      "3. tomar pruebas electrolitos en sudor (desde los 10 días de edad o 3 kg): Negativo: Iontoforesis Indirecta <50 mmol/L o Iontoforesis Directa <30 mmol/L; Probabilidad Intermedia: 50 – 79.9 o 30 – 59.9 mmol/ml, complementar con estudio molecular CFTR con CNV, si este último detecta 2 variables patogénicas se confirma; Positivo: ≥80 mmol/L o ≥60 mmol/L, Complementar con gen CFTR con CNV, si detecta 2 variables patogénicas se confirma el diagnóstico."
+      "Tripsinógeno inmunorreactivo (TIR) en el talón: <60 ng/ml descartado; ≥60 → segunda muestra (TIR-2).",
+      "TIR-2 <60: negativo; ≥60: caso probable.",
+      "Prueba del sudor (desde los 10 días de vida o 3 kg): normal <30 mmol/l; intermedio 30-59 → estudio genético CFTR; ≥60 confirma."
     ]
   },
   {
     "kind": "card",
     "id": "g-511",
-    "title": "Hiperplasia suprarrenal congénita",
+    "title": "Hiperplasia suprarrenal congénita (tamizaje)",
     "points": [
-      "17 alfa hidroxiprogesterona. Descartada: Recién nacidos <1.500 g: <250 nmol/L; entre 1500 – 2.499: <180nmol/L; >2.500g: <80 nmol/L. Caso probable: Recién nacidos <1.500 g: ≥250 nmol/L; 1500 – 2.499: ≥180nmol/L; >2.500g: ≥80 nmol/L.",
-      "2. Se debe repetir en muestra sérica: Caso descartado: <2ng/ml; No conclusivo: 2 – 9.9 ng/ml, se realiza prueba de estímulo con ACTH; Caso confirmado: ≥10 ng/ml, iniciar tratamiento inmediatamente, remitir a UCI neonatal."
+      "Mide 17-hidroxiprogesterona; el punto de corte depende del peso al nacer (más alto en prematuros pequeños): <1.500 g ≥250 nmol/l; 1.500-2.499 g ≥180; ≥2.500 g ≥80 → caso probable.",
+      "Confirmar en suero: <2 ng/ml descartado; 2-9,9 no concluyente (prueba de estímulo con ACTH); ≥10 confirmado → hidrocortisona (y fludrocortisona) de inmediato.",
+      "Forma perdedora de sal: crisis con sodio bajo, potasio alto y shock en las primeras semanas. En niñas, genitales ambiguos."
     ]
   },
   {
     "kind": "card",
     "id": "g-512",
-    "title": "Defectos de hemoglobina",
+    "title": "Hemoglobinopatías (tamizaje)",
     "points": [
-      "Cromatografía líquida de alta resolución (HPLC). Descartada: sin presencia de HbS, con niveles HbA y HbF dentro de puntos de corte. Caso probable: HbS y variante para alfa – talasemia o Beta",
-      "3. tomar electroforesis capilar o isoelectroenfoque (técnica diferente a la del tamizaje), Negativo: Sin HbS, variante para alfa o Beta talasemia; Positivo: Con HbS, variante para alfa o Beta talasemia."
+      "HPLC en sangre del talón: busca hemoglobina S (anemia falciforme) y variantes de talasemia.",
+      "Caso probable: presencia de HbS o variante de talasemia → confirmar con otra técnica (electroforesis capilar o isoelectroenfoque).",
+      "Confirmado: remitir a hematología, penicilina profiláctica y vacunas (en anemia falciforme)."
     ]
   },
   {
     "kind": "card",
     "id": "g-513",
-    "title": "Cardiopatía congénita",
+    "title": "Tamizaje de cardiopatías congénitas (oximetría)",
     "points": [
-      "TAMIZACIÓN: SATURACIÓN, pre ( MANO DERECHA) y pos ductal (CUALQUIER PIE) a las 24 horas de nacido. si ≥95% y diferencia <3% → pasa no hago nada mas ; si 90–94% o diferencia ≥3% ( intermedio)→ repetir saturación a la hora . si sale normal pasa, si sale anormal hacer ecocardio ; <90% o falla 2 veces → ecocardiograma"
+      "Medir saturación en la mano derecha (antes del ductus) y en un pie (después del ductus) a las 24 h de vida.",
+      "≥95 % en alguna y diferencia ≤3 %: pasa.",
+      "90-94 % o diferencia >3 %: repetir en 1 hora (hasta 2 veces). Si se normaliza, pasa; si no, ecocardiograma.",
+      "<90 % en cualquiera: ecocardiograma de inmediato."
     ]
   },
   {
     "kind": "card",
     "id": "g-514",
-    "title": "Tamizaje auditivo",
+    "title": "Tamizaje auditivo neonatal",
     "points": [
-      "Si BAJO RIESGO de perdida auditiva: se realiza con RATEA (respuesta auditiva a tallo (potenciales auditivos)), si sale anormal se hace una prueba confirmación con REATEA , si segunda sale alterada se realiza diagnostico; si cualquiera sale normal se hace seguimiento. si ALTO RIESGO perdida auditiva (prematuridad, o necesidad de o2): se realizan Emisiones otacústicas y ratea, si las 2 salen alteradas se realiza diagnostico, si las dos negativas se descarta, si solo una positiva seguimiento a 6 meses.",
-      "Para que un paciente “pase” es necesario que el resultado sea normal en ambos oídos, si anormal en uno se diagnostica."
+      "Bajo riesgo: emisiones otoacústicas o potenciales evocados automatizados (PEAA). Si falla, repetir. Si falla de nuevo, estudio diagnóstico con audiología.",
+      "Alto riesgo (UCI neonatal >5 días, prematuro, oxígeno, ictericia grave, infecciones congénitas, antecedente familiar): usar PEAA (detecta problemas del nervio que las emisiones no ven). Si falla, estudio diagnóstico.",
+      "Objetivo 1-3-6: tamizar antes del 1.er mes, diagnosticar antes de los 3 y tratar antes de los 6 meses."
     ]
   },
   {
     "kind": "card",
     "id": "g-515",
-    "title": "Ingesta cuerpo extraño",
+    "title": "Cuerpo extraño ingerido",
     "points": [
-      "ESÓFAGO: si pila de botón, punzantes, u obstrucción alimentaria completa : endoscopia emergente ; si obstrucción parcial, objeto romo , imán: evda urgente ; moneda: evda electiva.; ESTOMAGO: si punzantes, >5 cm o imanes: evda emergente ; si >2 cm, pilas, romos que no progresa : evda electiva. ingesta pila de moneda: Cuando no son accesibles por endoscopia, se deben realizar radiografías cada 3-4 días para valorar su progresión."
+      "En el esófago: pila de botón, objetos punzantes u obstrucción completa (no traga saliva) → endoscopia de emergencia. Objeto romo, imanes u obstrucción parcial → endoscopia urgente (<24 h). Moneda sin síntomas → endoscopia si no pasa en 12-24 h.",
+      "En el estómago: punzantes, >5 cm o varios imanes → endoscopia pronto. Pilas de botón en estómago o romos que no avanzan → endoscopia programada según tamaño y edad.",
+      "Si ya pasó al intestino y no se puede alcanzar: radiografías cada 3-4 días para ver que avance.",
+      "La pila de botón es la más peligrosa: quema la mucosa en horas."
     ]
   },
   {
     "kind": "card",
     "id": "g-516",
-    "title": "Enfermedad de gaucher",
+    "title": "Enfermedad de Gaucher",
     "points": [
-      "Trastorno lisosomal autosómico recesivo por déficit de glucocerebrosidasa, produce acumulación de glucocerebrósido en macrófagos",
-      "Clínica: hepatoesplenomegalia, anemia, trombocitopenia y dolor óseo/crisis óseas; puede haber formas neuropáticas",
-      "Diagnóstico: actividad enzimática baja",
-      "Tratamiento: terapia de reemplazo enzimático."
+      "Enfermedad genética (autosómica recesiva) por falta de la enzima glucocerebrosidasa; se acumula grasa dentro de los macrófagos.",
+      "Hígado y bazo grandes, anemia, plaquetas bajas, dolor y crisis óseas; algunas formas afectan el sistema nervioso.",
+      "Diagnóstico: actividad enzimática baja.",
+      "Tratamiento: reposición de la enzima."
     ]
   },
   {
     "kind": "card",
     "id": "g-517",
-    "title": "Lesión medular pediátrica mayor elasticidad ligamentosa y debilidad cervical",
+    "title": "Lesión medular en niños",
     "points": [
-      "Lo que favorece lesiones en la columna cervical (sobre todo <8 años), siendo la",
-      "Cuadriparesia",
-      "La manifestación más frecuente. Se clasifica :",
-      "Traumática (accidentes, caídas) y - no traumática (más común en niños), principalmente por causas neoplásicas e inflamatorias como la mielitis transversa",
-      "El diagnóstico se escala ASIA y la RM , SCIWORA (daño medular sin hallazgos en RX o TAC)",
-      "El manejo: inmovilización y estabilización hemodinámica. síndrome de Down: descartar inestabilidad atlantoaxoidea antes de actividad física."
+      "Los niños tienen ligamentos más elásticos y cabeza grande en proporción: más lesiones cervicales altas (sobre todo <8 años).",
+      "Traumática (accidentes, caídas) o no traumática (más frecuente en niños: tumores, mielitis transversa).",
+      "Diagnóstico: escala ASIA y RM.",
+      "SCIWORA: lesión de la médula sin fractura visible en radiografía ni TAC; buscarla con RM si hay síntomas."
     ]
   }
 ];
