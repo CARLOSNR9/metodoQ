@@ -1,31 +1,37 @@
 import type { UltraEntry } from "@/lib/ultra-resumenes/types";
 
-/** Ultra resumen general · Nefrología y medio interno. Generado desde el documento de fichas de Método Q. */
+/** Ultra resumen general · nefrologia. Generado desde content/ultra-resumenes/general/nefrologia.md; no editar a mano. */
 export const ENTRIES: UltraEntry[] = [
   {
     "kind": "card",
     "id": "g-776",
-    "title": "Nefritis por PHS",
+    "title": "Nefritis por púrpura de Schönlein-Henoch (vasculitis IgA)",
     "points": [
-      "Vasculitis por IgA leve (hematuria microscópica, proteinuria fuera del rango nefrótico) sólo requieren seguimiento",
-      "Aquellos con proteinuria moderada-grave persistente en el seguimiento o con síndrome nefrótico o lesión renal aguda, deben ser remitidos a un nefrólogo pediatra para una biopsia renal, que confirmará el diagnóstico de vasculitis IgA, revelará la gravedad de la afectación renal y guiará el tratamiento con prednisolona u otra medicación inmunosupresora."
+      "Afectación leve (hematuria microscópica, proteinuria que no llega a rango nefrótico): solo seguimiento.",
+      "Remitir a nefrología pediátrica para biopsia si hay proteinuria moderada-grave persistente, síndrome nefrótico o lesión renal aguda.",
+      "La biopsia confirma, mide la gravedad y guía el tratamiento (prednisolona u otros inmunosupresores)."
     ]
   },
   {
     "kind": "card",
     "id": "g-777",
-    "title": "Síndrome nefrótico",
+    "title": "Síndrome nefrótico: manejo general",
     "points": [
-      "Proteinuria mayor 3.5 gr, hiperlipidemia, edema tto: tratar causa, restricción na, manjeo hta y proteinuria( ieca o ara < proteinuria , >creatinuria- verapamilo < p.a), manejo edema ( 1ro furosemida , 2do tiazida) , trombosis ( apixaban y rivaroxaban se unen a la albumina. indicaciones (HBPM o warfarina con INR 2–3) en adultos con albúmina sérica <2–2.5 g/dL y uno o más factores de riesgo adicionales (trombosis previa, proteinuria >10 g/día, reposo prolongado, obesidad, uso de corticoides, catéter venoso central)",
-      "Mantenerla hasta resolver riesgos. si tiene alto riesgo de sangrado se da aspirina."
+      "Qué es: el riñón pierde mucha proteína. Proteinuria >3,5 g/día + albúmina baja + edemas + colesterol alto.",
+      "Tratar la causa y restringir sal.",
+      "Proteinuria e HTA: IECA o ARA-II (bajan la proteinuria).",
+      "Edemas: furosemida; si no basta, añadir tiazida.",
+      "Riesgo de trombosis (pierde anticoagulantes naturales por orina): anticoagular con HBPM o warfarina (INR 2-3) si la albúmina es <2-2,5 g/dl y hay otro factor de riesgo (trombosis previa, proteinuria >10 g/día, reposo, obesidad, corticoides, catéter). Si el riesgo de sangrado es alto, aspirina."
     ]
   },
   {
     "kind": "card",
     "id": "g-778",
-    "title": "Síndrome nefrítico es la inflamación glomerular que causa hematuria",
+    "title": "Síndrome nefrítico",
     "points": [
-      "Proteinuria leve (< 3.5 g/día), edema, hipertensión y ↓ TFG (↑ creatinina), a veces con oliguria; manejo: soporte y tratar la causa."
+      "Qué es: inflamación de los glomérulos.",
+      "Hematuria (orina color coca-cola, glóbulos rojos deformados), proteinuria <3,5 g/día, edema, hipertensión y subida de la creatinina, a veces con poca orina.",
+      "Manejo: soporte (controlar presión y líquidos) y tratar la causa."
     ]
   },
   {
@@ -33,23 +39,26 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-779",
     "title": "Glomerulonefritis rápidamente progresiva",
     "points": [
-      "Sin cambios de enfermedad glomerulas pero con deterioro rápido de la función renal",
-      "Se evidencia histológicamente , proliferación extracapilar en espeacio de bowman y formación de semilunas",
-      "Clasificación: tipo 1: mediada por anticuerpos anti-mn ( peor pronostico( (ataca colágeno iv. good pasteur, sn, alport, neoplasia ) tipo 2: mediada por complejos inumes ( c3 < , LES, IGA, postestreptococcia) tipo 3: pauci-inmune, vasculitis anca ( granulomatosis con poliantetis, granulomatosis eosinofilia, poliangitis microscópica, limitada al riño) c3 < o =. Tipo 4",
-      "Combinada de 1 y 3 (idiopática) TTO: a todos pulsos metiprednisolona, ciclofosfamida ; y plasmaferisis ( en anca con hemorragia pulmonar o contra anticuerpos contra membrana basal, o crea mayor de 3.4 )"
+      "Qué es: la función renal se pierde en días o semanas. En la biopsia se ven semilunas.",
+      "Tipo 1, anticuerpos anti-membrana basal (Goodpasture): peor pronóstico; puede dar hemorragia pulmonar.",
+      "Tipo 2, inmunocomplejos (complemento bajo): lupus, nefropatía IgA, postestreptocócica.",
+      "Tipo 3, pauciinmune (vasculitis ANCA): granulomatosis con poliangeítis, poliangeítis microscópica, granulomatosis eosinofílica.",
+      "Es una urgencia: pulsos de metilprednisolona + ciclofosfamida (o rituximab). Plasmaféresis si hay anticuerpos anti-membrana basal o hemorragia pulmonar."
     ]
   },
   {
     "kind": "heading",
     "id": "g-780",
-    "title": "Nefropatías"
+    "title": "Nefropatías: síndrome nefrótico"
   },
   {
     "kind": "card",
     "id": "g-781",
-    "title": "Síndrome nefrótico",
+    "title": "Síndrome nefrótico en niños",
     "points": [
-      "Niños con sn nefrotico, se da manejo inical con esteroides y si no mejora se considera biopsia ; después 12 años se considera biopsia."
+      "La causa más frecuente es la enfermedad de cambios mínimos, que responde a corticoides.",
+      "Por eso en niños se empieza con corticoides sin biopsia.",
+      "Biopsia si no responde a corticoides o si tiene más de 12 años."
     ]
   },
   {
@@ -57,7 +66,9 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-782",
     "title": "Enfermedad de cambios mínimos",
     "points": [
-      "Síndrome nefrótico más común en la infancia, niveles de complemento normal, en biopsia glomérulos de apariencia normal."
+      "El síndrome nefrótico más frecuente en la infancia.",
+      "Complemento normal. En el microscopio óptico los glomérulos se ven normales (solo se ve el daño con microscopio electrónico).",
+      "Excelente respuesta a corticoides."
     ]
   },
   {
@@ -65,36 +76,45 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-783",
     "title": "Nefropatía membranosa",
     "points": [
-      "Principal causa de síndrome nefrótico idiopático, se relaciona con hepatitis b, c, malaria y lES. Activa el complemento, daña membrana basal. Tiene depósitos subepiteliales en membrana basal. con anti-PLA24 positivo , se piensa en nefropatía membranosa"
+      "La causa más frecuente de síndrome nefrótico en adultos.",
+      "Anticuerpos anti-PLA2R positivos en la forma primaria.",
+      "Secundaria a hepatitis B y C, lupus, malaria, cáncer y fármacos.",
+      "Depósitos debajo del epitelio en la membrana basal. Alto riesgo de trombosis (de la vena renal)."
     ]
   },
   {
     "kind": "card",
     "id": "g-784",
-    "title": "Glomeruloesclerosis focal segmentaria",
+    "title": "Glomeruloesclerosis focal y segmentaria",
     "points": [
-      "Síndrome nefrótico asociado a antecedentes familiares, mas en personas de raza negra. normocomplementemia"
+      "Síndrome nefrótico más frecuente en personas de raza negra; puede ser familiar.",
+      "También secundaria a obesidad, VIH o heroína.",
+      "Complemento normal. Responde peor a corticoides."
     ]
   },
   {
     "kind": "heading",
     "id": "g-785",
-    "title": "Síndrome nefrítico"
+    "title": "Síndrome nefrítico: causas"
   },
   {
     "kind": "card",
     "id": "g-786",
-    "title": "Nefropatía por IgA (enfermedad de berger)",
+    "title": "Nefropatía por IgA (enfermedad de Berger)",
     "points": [
-      "Causa normo complementemia asociada a hepatitis B , se asocia a nefritis sinfaringitica"
+      "La glomerulonefritis más frecuente en el mundo.",
+      "Hematuria al mismo tiempo que una infección de garganta (nefritis sinfaringítica).",
+      "Complemento normal."
     ]
   },
   {
     "kind": "card",
     "id": "g-787",
-    "title": "Enfermedad por anticuerpos anti membrana basal ( good pasteur)",
+    "title": "Enfermedad por anticuerpos anti-membrana basal (Goodpasture)",
     "points": [
-      "Normocomplementemia"
+      "Anticuerpos contra el colágeno IV del riñón y del pulmón: glomerulonefritis rápidamente progresiva ± hemorragia pulmonar.",
+      "Complemento normal.",
+      "Tratamiento urgente: plasmaféresis + corticoides + ciclofosfamida."
     ]
   },
   {
@@ -102,48 +122,56 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-788",
     "title": "Glomerulonefritis postestreptocócica",
     "points": [
-      "10-30 dias después de exposición aguda de amigdalitis, infección de tejidos blandos. Consume complemento."
+      "Aparece 10-30 días después de una amigdalitis o una infección de piel por estreptococo (la nefropatía IgA, en cambio, a la vez que la infección).",
+      "Complemento C3 bajo, que se normaliza en unas 8 semanas.",
+      "Niño con edemas, hipertensión y orina oscura. Suele curar con soporte."
     ]
   },
   {
     "kind": "card",
     "id": "g-789",
-    "title": "La nefritis sinfaringítica es la aparición de hematuria…",
+    "title": "Nefritis sinfaringítica",
     "points": [
-      "LA NEFRITIS SINFARINGÍTICA es la aparición de hematuria simultanea (1–2 días) con infección respiratoria alta, típica de la nefropatía por IgA (Berger); se caracteriza por C3 normal (sin hipocomplementemia), puede tener proteinuria leve y se debe a depósito mesangial de IgA. El manejo es soporte y control con IECA/ARA II si hay proteinuria, con pronóstico generalmente bueno."
+      "Hematuria que aparece a la vez (1-2 días) que una infección respiratoria alta: es típica de la nefropatía IgA.",
+      "C3 normal; puede haber proteinuria leve. Depósitos de IgA en el mesangio.",
+      "Manejo: soporte e IECA o ARA-II si hay proteinuria. Buen pronóstico en general."
     ]
   },
   {
     "kind": "card",
     "id": "g-790",
-    "title": "Lesión renal aguda",
+    "title": "Lesión renal aguda: estadios, causa y manejo",
     "points": [
-      "Diagnostico: biomarcadores como diagnóstico de daño",
-      "1.si creatinina y biomarcadores negativo: riñón sano ; si solo creatinina positiva: hay daño funcional sin daño renal ( azotemia prerrenal) ; si solo biomarcadores positivo ( daño estructural sin daño funcional ) ; si los dos positivos ( daño renal estructural y funcional) : La IRA estadio 1 se define como un aumento de la creatinina sérica entre 1.5 a 1.9 veces el valor basal o un aumento absoluto ≥ 0.3 mg/dL, o una diuresis < 0.5 mL/kg/h durante 6 a 11 horas",
-      "El estadio 2 corresponde a un aumento de creatinina entre 2.0 a 2.9 veces el basal, o una diuresis < 0.5 mL/kg/h durante ≥ 12 horas",
-      "El estadio 3 se diagnostica con un aumento de creatinina ≥ 3 veces el valor basal, o una creatinina ≥ 4.0 mg/dL, o necesidad de terapia de reemplazo renal (diálisis), o una diuresis < 0.3 mL/kg/h durante ≥ 24 horas, o anuria durante ≥ 12 horas",
-      "Etiología: prerenal: fena < 1, na urinario < 20 , bun/cre >20:1 ; renal: fena >1, na urinario >40 , bun/crea 10-20: 1 ; posrenal: fena > 4 , na urinario > 40, bun/crea <10:1 Manejo: prerenal: reposicion volumen, diurético furosemida 40-240 mg dia (posterior rehidratación, no mejora mortalindad ni necesidad de trr) HIPERKALEMIA: cambios ekg desde 5.5 -6.5",
-      "Solución polarizante, insulina, dosis: 10-20 ul de insulina + dad 5% 250-500 cc, infusión para 4 horas, (baja 0.6 a 1.2 meq); betaagonista: salbutamol gotas (10-20 gotas)10–20 mg nebulizados en 4 mL de SSN al 0.9% en 15–20 minutos, reduce 0.5 a -1-5 meq; gluconato de calcio: indicado cuando hay cambios en ekg, o >6.5 con ekg dudoso. 10 ml iv en 2 min, repetiro en 10 min si cambios ekg no revierten.; acidosis: bicarbonato: indicado en acidosis ph <7.0 se da 150 meq en infusión"
+      "Estadio 1: creatinina 1,5-1,9 veces la basal o sube ≥0,3 mg/dl, o orina <0,5 ml/kg/h durante 6-12 h.",
+      "Estadio 2: creatinina 2-2,9 veces, u orina <0,5 ml/kg/h ≥12 h.",
+      "Estadio 3: creatinina ≥3 veces o ≥4 mg/dl, necesidad de diálisis, orina <0,3 ml/kg/h ≥24 h o anuria ≥12 h.",
+      "Prerrenal (falta de sangre al riñón): FENa <1 %, sodio urinario <20, BUN/creatinina >20. Renal (necrosis tubular): FENa >2 %, sodio urinario >40, BUN/creatinina 10-20. Posrenal: obstrucción → ecografía.",
+      "Prerrenal: dar volumen. La furosemida no mejora la mortalidad ni evita la diálisis; solo sirve para la sobrecarga de líquidos.",
+      "Hiperpotasemia: ver ficha de trastornos del potasio. Acidosis grave (pH <7,0): bicarbonato."
     ]
   },
   {
     "kind": "card",
     "id": "g-791",
-    "title": "Urgencia dialítica",
+    "title": "Cuándo dializar de urgencia (AEIOU)",
     "points": [
-      "Criterio dialíticos: AEIOU: A por acidosis metabólica severa y refractaria (pH <7.1), E por alteraciones electrolíticas como hiperkalemia ≥6.5 mmol/L con riesgo de arritmias y sin respuesta al tratamiento médico, I por intoxicaciones con sustancias dializables (litio, metanol, etilenglicol, salicilatos), O por sobrecarga de volumen refractaria a diuréticos con edema pulmonar o riesgo vital, y U por síntomas urémicos graves como encefalopatía, pericarditis o sangrado",
-      "Basta con que se presente uno de estos criterios para indicar diálisis, dependiendo siempre del contexto clínico del paciente",
-      "También puede incluir: Oliguria/anuria persistente (>24–48 h)"
+      "A, acidosis metabólica grave que no corrige (pH <7,1).",
+      "E, electrolitos: potasio ≥6,5 que no baja con tratamiento o con cambios en el ECG.",
+      "I, intoxicación por sustancias dializables: litio, metanol, etilenglicol, salicilatos.",
+      "O, sobrecarga de volumen (edema pulmonar) que no responde a diuréticos.",
+      "U, uremia con síntomas: encefalopatía, pericarditis o sangrado.",
+      "Basta un criterio. También se valora la anuria u oliguria persistente."
     ]
   },
   {
     "kind": "card",
     "id": "g-792",
-    "title": "El síndrome de desequilibrio postdiálisis (SDD) ocurre sobre…",
+    "title": "Síndrome de desequilibrio tras la diálisis",
     "points": [
-      "El síndrome de desequilibrio postdiálisis (SDD) ocurre sobre todo en pacientes con uremia muy elevada (BUN alto) que inician hemodiálisis por primera vez o tras suspensión prolongada",
-      "El problema no es solo “pocos canales de urea”, sino un gradiente osmótico rápido: durante la hemodiálisis la urea plasmática baja rápidamente, pero la urea cerebral disminuye más lentamente; esto genera que el plasma quede relativamente hipotónico respecto al cerebro, por lo que el agua entra al SNC → edema cerebral",
-      "Además, en uremia crónica hay adaptación cerebral con producción de “osmoles idiogénicos” y cambios en transportadores (incluyendo acuaporinas), lo que favorece el fenómeno cuando la corrección es brusca."
+      "Pacientes con urea muy alta que se dializan por primera vez (o tras mucho tiempo).",
+      "La diálisis baja la urea de la sangre rápido, pero la del cerebro baja despacio: el agua entra al cerebro y produce edema cerebral.",
+      "Clínica: cefalea, náuseas, confusión, convulsiones.",
+      "Prevención: primeras diálisis cortas y suaves."
     ]
   },
   {
@@ -151,35 +179,35 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-793",
     "title": "Enfermedad renal crónica",
     "points": [
-      "Daño >3 meses",
-      "Albuminuria: >30 en 24 h, o en relación albuminuria/creatinuria >30 mg/g. macroalbuminuria: >300 mg/g . clasificación: G1 ≥90 ml/min/1,73 m² G2 60–89 , G3a 45–59, G3b 30–44, G4 15–29 y G5 <15",
-      "Por albuminuria se clasifica en A1 <30 mg/g (normal o ligeramente aumentada), A2 30–300 mg/g (microalbuminuria) y A3 >300 mg/g (severamente aumentada, macroalbuminuria)",
-      "Tamizaje: desde >55 años, dm, hta, fac,riesgo",
-      "Confirmar cronicidad: ecografia renal, pth >180 (no tan fidedigno) tto: control comorbilidades, nefroprotección: levs, nacetil cistenina, bicarbonato",
-      "Anemia: reposicion de hierro intravenoso, si ferritina < 100 , sa TRA < 40 % , o ferritina <300 con TSAT < 25% ; o dialisis ferritina < 500 mas tsat < 30 , eritropoyetina, reposicion acido fólico si vt.b12 <. Metas: ferritina >100 dializados >200 , . Hta: 130-139/70-79 ( iecas o ara ii nefroportectores)",
-      "Dislipidemia: si esta en diálisis no damos estatinas, solo en fases iniciales .ax mineral: desde tfg < 60, hipocalcemia, hiperfsofatemia, elevación pth",
-      "Metas: calcio 8,4 -9,5 ; fosforo 2,5-4,5 ; pth según tfg , 3: 35-70 , 4-5 : 70 - 110 ; diálisis : 150-300",
-      "Dm: los in slgt2 son nefroprotectores.",
-      "Si ferrina < 45, : enfocar como ferropenia absoluta (ferropenica) *Se debe dar hierro venoso, porque el oral no se absorbe. INICIO ERITROPOYETINA EN ERC: cuando la hemoglobina es ≤10 g/dL con meta < de 11.5 (tras corregir déficit de hierro y otras causas reversibles).",
-      "Hiperparatiroidismo secundario: se maneja con calcitriol o calciomimeticos"
+      "Qué es: daño del riñón o filtrado bajo durante más de 3 meses.",
+      "Por filtrado (ml/min/1,73 m²): G1 ≥90, G2 60-89, G3a 45-59, G3b 30-44, G4 15-29, G5 <15.",
+      "Por albuminuria (cociente albúmina/creatinina en orina): A1 <30 mg/g, A2 30-300, A3 >300.",
+      "Tamizar en diabéticos, hipertensos, mayores de 55 años y con factores de riesgo.",
+      "Nefroprotección: IECA o ARA-II, iSGLT2 (dapagliflozina, empagliflozina), control de presión (130-139/70-79) y azúcar; evitar AINE y contraste innecesario.",
+      "Anemia: corregir primero el hierro (intravenoso si ferritina <100 o saturación <20-25 %; en diálisis, ferritina <500 con saturación <30 %). Eritropoyetina si la Hb es ≤10, con meta ≤11,5.",
+      "Metabolismo óseo (desde filtrado <60): calcio bajo, fósforo alto y PTH alta → dieta baja en fósforo, quelantes, calcitriol o calcimiméticos.",
+      "Estatinas en fases iniciales; no se inician en diálisis."
     ]
   },
   {
     "kind": "card",
     "id": "g-794",
-    "title": "Acceso definitivo para hemodiálisis",
+    "title": "Acceso para hemodiálisis",
     "points": [
-      "Es la fístula arteriovenosa, seguida del injerto arteriovenoso, reservando el catéter venoso central tunelizado para uso temporal. pacientes con ERC avanzada que probablemente requerirán hemodiálisis se deben implementar medidas de preservación vascular desde una TFG ≤30 ml/min/1.73 m² (ERC estadio 4). evitar venopunciones, catéteres periféricos o PICC en las venas de los miembros superiores (especialmente cefálica y basílica) para preservar sitios para futura arteriovenosa",
-      "Si se requiere acceso venoso central, el sitio preferido es la vena yugular interna, porque tiene menor riesgo de estenosis venosa central; se evita la vena subclavia por su alta asociación con estenosis."
+      "El mejor acceso es la fístula arteriovenosa; después, el injerto arteriovenoso; el catéter tunelizado, solo temporal.",
+      "Desde filtrado ≤30 (estadio 4): cuidar las venas de los brazos (no puncionar ni poner catéteres en cefálica y basílica).",
+      "Si hace falta un catéter central, mejor la yugular interna; evitar la subclavia (se estrecha con frecuencia)."
     ]
   },
   {
     "kind": "card",
     "id": "g-795",
-    "title": "Enfermedad renal diabética",
+    "title": "Enfermedad renal en el diabético",
     "points": [
-      "Para control glucometrico: metformina, se < dosis si tfg < 45. Suspender < 30. antagonista mineralocroticoirdes si tfg > 25 y k normal. Inhibidor Slgt2 si tfg >20 se puede continar hasta diálisis , estatinas a todos, Ieca o ara si hta",
-      "La albuminuria es un marcador de daño, hay que confirmar siempre dato alterado al mes por riesgo de albuminuria transitoria, si sigue alterado es erc y se inica el manejo"
+      "La albuminuria alterada se confirma con otra muestra (puede ser transitoria); si persiste, es enfermedad renal crónica.",
+      "Metformina: bajar la dosis si filtrado <45 y suspender si <30.",
+      "iSGLT2 desde filtrado >20, se pueden seguir hasta la diálisis (protegen riñón y corazón).",
+      "Finerenona si filtrado >25 y potasio normal. Estatina a todos. IECA o ARA-II si hay HTA o albuminuria."
     ]
   },
   {
@@ -187,15 +215,20 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-796",
     "title": "Finerenona",
     "points": [
-      "Se recomienda iniciar en pacientes con DT2, TFG ≥25 ml/min, potasio sérico normal y albuminuria ≥30 mg/g a pesar de dosis máxima tolerada de iECA o ARAII. Hay que recordar que la dosis de firenona dependerá de la TFG siendo de 10 mg cada día - si TFG 25 - 59 ml/min por 1.73 m² o 20 mg cada día - si TFG ≥60 ml/min por 1.73 m². No se utiliza si k >5.5 ; si 5.5 y 4.9 : fineronana 10 mg o 20 mg ; si <4.9 con TFG >60 se inicia 20 mg, si <60-25 se inicia a 10 mg."
+      "Qué es: un antagonista mineralocorticoide no esteroideo que protege el riñón en el diabético tipo 2.",
+      "Indicación: diabetes tipo 2, filtrado ≥25, potasio normal y albuminuria ≥30 mg/g pese a IECA o ARA-II a dosis máxima.",
+      "Dosis inicial: 10 mg/día si filtrado 25-59; 20 mg/día si ≥60.",
+      "No iniciar si el potasio es >5 (suspender si >5,5)."
     ]
   },
   {
     "kind": "card",
     "id": "g-797",
-    "title": "Na urinario menor de 40 Osmolaridad urinaria",
+    "title": "Orina muy diluida: pista de exceso de agua",
     "points": [
-      "Menor de 100"
+      "Osmolalidad urinaria <100 mOsm/kg = el riñón está eliminando agua al máximo.",
+      "En una hiponatremia, esto orienta a beber demasiada agua (polidipsia primaria) o a comer muy pocos solutos (potomanía de cerveza, dietas pobres en proteínas), no a SIADH.",
+      "En el SIADH la orina está inapropiadamente concentrada (>100) y el sodio urinario es >40."
     ]
   },
   {
@@ -203,40 +236,43 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-798",
     "title": "Lesión renal por rabdomiólisis",
     "points": [
-      "Producido por liberación de contenido intracelular al torrente sanguíneo, secundario a lesión musculuar",
-      "El musculo estriado libera calcio y mioglobina, esto casuara arritmia , hiperfosfatemia",
-      "Lesión renal aguda: la rabdomiolisis causa retención de fluido con depresión de volumen, el riñon tendrá vasocontriccion renal; la mioglobina en el tubulo causara daño tubulos",
-      "Clínica: dolor musuclar, debilidad, orina oscura por mioglobina, fiebre",
-      "Diagnostico: cpk > 5 veces, ldh y ast >. Orina con sangre sin hematíes en sedimiento (mioglobinuria), hiperkalemia, hiper fosfatemia, hipocalcemia",
-      "Elevación de azoados Tratamiento: hidratación 2 cc /kg/hora , gasto urinairio 200-300 ca/hora, si hipercalemia (solución despolarizante), terapia remplazo renal si criterios"
+      "Qué es: se rompe músculo y sale su contenido a la sangre (mioglobina, potasio, fósforo).",
+      "Causas: trauma o aplastamiento, ejercicio extremo, convulsiones, fármacos (estatinas), golpe de calor.",
+      "Clínica: dolor y debilidad muscular, orina oscura.",
+      "Diagnóstico: CK >5 veces lo normal; tira de orina positiva para sangre sin hematíes en el sedimento; potasio y fósforo altos, calcio bajo.",
+      "Tratamiento: mucho suero (meta de orina 200-300 ml/h), tratar la hiperpotasemia y diálisis si hay criterios."
     ]
   },
   {
     "kind": "card",
     "id": "g-799",
-    "title": "Síndrome de reperfusión alteraciones que aparecen cuando se…",
+    "title": "Síndrome de reperfusión",
     "points": [
-      "SÍNDROME DE REPERFUSIÓN alteraciones que aparecen cuando se restablece el flujo sanguíneo a un tejido previamente isquémico, produciendo liberación de metabolitos acumulados y radicales libres hacia la circulación",
-      "Clínica: dolor y edema en el tejido afectado, acidosis metabólica, hiperpotasemia, arritmias e inestabilidad hemodinámica",
-      "Manejo: soporte, con monitorización hemodinámica, corrección de alteraciones electrolíticas y ácido-base, hidratación adecuada y tratamiento de complicaciones."
+      "Qué es: daño que aparece cuando vuelve la sangre a un tejido que estaba isquémico (por ejemplo, al revascularizar una pierna o liberar un aplastamiento).",
+      "Salen a la sangre potasio, ácido y radicales libres.",
+      "Clínica: dolor y edema del tejido, acidosis, hiperpotasemia, arritmias e inestabilidad.",
+      "Manejo: soporte, monitorizar, corregir potasio y ácido-base, hidratar y vigilar síndrome compartimental."
     ]
   },
   {
     "kind": "card",
     "id": "g-812",
-    "title": "Manejo expulsión hipercalemia",
+    "title": "Cómo eliminar el potasio del cuerpo",
     "points": [
-      "Resinas fijadoras de potasio por vía oral (poliestireno sulfonato de sodio, ciclosilicato de sodio y circonio) para promover la eliminación del exceso de potasio del organismo. más diuréticos tipo furosemida"
+      "Resinas que atrapan el potasio en el intestino: poliestireno sulfonato o ciclosilicato de sodio y circonio (oral).",
+      "Diuréticos de asa (furosemida) si el paciente orina.",
+      "Diálisis si nada funciona o el riñón no responde."
     ]
   },
   {
     "kind": "card",
     "id": "g-828",
-    "title": "La osteodistrofia renal",
+    "title": "Osteodistrofia renal",
     "points": [
-      "Alteraciones óseas secundarias a la enfermedad renal crónica (ERC), producidas por trastornos del metabolismo, produce calcio bajo –fósforo alto, vitamina D baja–PTH alta, esto lleva a mayor resorción ósea",
-      "Puede manifestarse como osteítis fibrosa (alto recambio por exceso de PTH), osteomalacia (defecto de mineralización) o enfermedad ósea adinámica (bajo recambio)",
-      "El manejo incluye control del fósforo (restricción dietaria y quelantes), vitamina D activa o análogos, calcimiméticos (cinacalcet) y optimización de la diálisis."
+      "Qué es: enfermedad del hueso por la enfermedad renal crónica.",
+      "El riñón no elimina fósforo ni activa la vitamina D → calcio bajo, fósforo alto, PTH alta → el hueso se reabsorbe.",
+      "Formas: osteítis fibrosa (mucha PTH), osteomalacia (mala mineralización) y enfermedad adinámica (hueso con poco recambio).",
+      "Manejo: menos fósforo en la dieta, quelantes de fósforo, vitamina D activa (calcitriol), calcimiméticos (cinacalcet) y diálisis adecuada."
     ]
   },
   {
@@ -244,89 +280,87 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-905",
     "title": "Trastornos del sodio",
     "points": [
-      "NA: 135-145, osmolaridad: 2na+ (glu/18) , 270-290. hiponatremia: leve: 135-130 , moderado: 129-125 , severo <125. en hiperglucemia, corrección na x 2.4( glcuosa -100 )/ 100 . aguda < 48 h, crónica > 48 h. tto: corrección máxima 12 meq dia si aguda, 6 meq dia si crónica",
-      "Cuando es leve no se trata",
-      "Se tratan moderadas con síntomas o severa",
-      "Si hiponatremia < 120 y sintomas, bolo 150 cc 3 %, evaluar y repetir",
-      "Medir na cada 6-12 horas",
-      "Formula corrección: (na solu- na serico)/ agua corporal total +1",
-      "Hipernatremia: >145",
-      "Crónica >48 h, aguda < 48 h. clasifica en leve (146–150 mEq/L), moderada (151–159 mEq/L) y severa (≥160 mEq/L), tto: corregir con dextrosa o agua destilada",
-      "Formula corrección: déficit de agua: agua corporal total x ( na en suero/(140+1) -1).",
-      "Solución salina 0.9% con 154 mEq/L, Ringer 130 mEq/L, solución salina 0.45% con 77 mEq/L, solución salina hipertónica 3% con 513 mEq/L, y dextrosa al 5% que no contiene sodio (0 mEq/L)."
+      "Sodio normal 135-145. Osmolalidad = 2 × Na + glucosa/18 (normal 275-295).",
+      "Hiponatremia leve 130-135, moderada 125-129, grave <125. Aguda <48 h, crónica >48 h.",
+      "Si la glucosa está alta, el sodio \"real\" es mayor: sumar 2,4 mEq por cada 100 mg/dl de glucosa por encima de 100.",
+      "Tratar las moderadas con síntomas y las graves. Con síntomas graves (convulsiones, coma): bolo de 150 ml de suero salino al 3 %, repetir según respuesta.",
+      "No subir más de 10-12 mEq en 24 h (8 si hay alto riesgo) por riesgo de mielinólisis. Medir el sodio cada 4-6 h.",
+      "Cuánto sube 1 litro de suero: (Na del suero − Na del paciente) / (agua corporal total + 1).",
+      "Hipernatremia >145 (grave ≥160): reponer agua libre (dextrosa al 5 % o agua por sonda) despacio.",
+      "Sodio de los sueros: salino 0,9 % 154 mEq/l; Ringer 130; salino 0,45 % 77; salino 3 % 513; dextrosa 5 % 0."
     ]
   },
   {
     "kind": "card",
     "id": "g-906",
-    "title": "Trastorno del potasio",
+    "title": "Trastornos del potasio",
     "points": [
-      "K: 3.5 -5 . hipokalemia: <3.5, leve 3.5-3.0 , moderado 2.9-2.5, severo <2.5. tto: calculo del déficit 50 meq/kg dia , si leve es el 5%, moderado 10 %, severo 15 %",
-      "A eso se suma el requerimiento basal, 1 meq /kg/dia",
-      "Reposicion oral: ion k, = 1.5 ml",
-      "Por cada 10 meq oral equivale a 0.1 meq k serico",
-      "Reposicion intravenosa: reglas, via periférica max 4/meq/ hora, central 40 meq/hor",
-      "Hiperkalemia: > 5.0, leve 5.0-5.5 , moderada 5.5 – 6.5 , grave > 6.5. emergencia: >6.5, síntomas musculares , alteración ekg. k 5.0 – 6.5 con hemodialidis, ax función renal, rabdomiolisi",
-      "Tto: gluconato ca , (estabiliza membrana si cambiso ekg) amp 10 % 100 mg/ml",
-      "Dar 1 a 2 gr ( 10 a 20 cc) , bolo",
-      "Furosemida: 40 mg cada 8 horas , resin calcio (poliestireno, sulfonato de ca) 15 gr cada 8 horas",
-      "Solución polarizante: 500 cc de dad 5 % , con 10 U insulina, pasar en una hora",
-      "B2 agonistas: salbutamol 20 mg en 40 cc de ss",
-      "Nebulizado en 10 min",
-      "No emergente: diálisis, dieta baja en k, resin calcio, furosemida oral"
+      "Potasio normal 3,5-5.",
+      "Hipopotasemia: leve 3-3,5, moderada 2,5-2,9, grave <2,5. Cada 10 mEq repuestos sube aproximadamente 0,1 mEq/l. Corregir también el magnesio.",
+      "Potasio intravenoso: máximo ~10 mEq/h por vía periférica; más rápido solo por vía central y con monitor.",
+      "Hiperpotasemia: leve 5-5,5, moderada 5,5-6,5, grave >6,5. Emergencia si >6,5, hay debilidad o cambios en el ECG.",
+      "1.º Proteger el corazón: gluconato de calcio al 10 %, 10-20 ml intravenoso (si hay cambios en el ECG).",
+      "2.º Meter el potasio en las células: insulina regular 10 U con dextrosa (25 g), salbutamol nebulizado 10-20 mg.",
+      "3.º Sacarlo del cuerpo: furosemida, resinas o diálisis."
     ]
   },
   {
     "kind": "card",
     "id": "g-907",
-    "title": "Trastorno del calcio",
+    "title": "Trastornos del calcio y magnesio",
     "points": [
-      "CA 8.5 A 10.5. >calcio causa: acidosis metabolica, aumento de volumen, < calico , causa lo contrario hipercalcemia: ca>10.5 o ca ionizado >1.3 90% hiperparatiordismo",
-      "Hipercalcemia maligna( las células tumorales liberan péptido relacionado con homona paratiorodiea, la cual interactua como pth).clasificacion: leve 10.5-12 , moderada 12-14 , grave >14",
-      "Tto: leve y moderada: liquidos y asegurar ingesta ca 1 gr dia.severa: liquidos: 200-300 cc/hora, gasto urinario 150 cc/ hora",
-      "Calcitonina: 4 u/kg c/12 h x 48 h (inicia actuar a 4 horas) , acido zolendronico: 4 mg iv en 15 min",
-      "( inicia a las 48 horas) moderado: acido zolendoronico, denosumab . hipocalcemia: corrección de ca (si hipoalbuminemia) . leve: <8.5 , moderado <8 , severo < 7.5 .tto: severo: gluconato de ca: 1 - 2 gr iv en 50 cc de ss pasar en 20 min., se puede repetiro hasta resolución de síntomas",
-      "Posterior infusión: 0.5 -1.5 mg /kg/ h hipomagnesemia: si <1.7 , 2 gr en bolo, seguido de 1 gr/ hora.",
-      "La hipo magnesemia puede dar hipokalemia por aumento de perdida urinaria , además de resistencia osea a la pth con consecuente hipocalcemia"
+      "Calcio total normal 8,5-10,5 (corregirlo por la albúmina) o calcio iónico.",
+      "Hipercalcemia: la causa ambulatoria más frecuente es el hiperparatiroidismo; en hospitalizados, el cáncer (péptido relacionado con la PTH).",
+      "Leve 10,5-12, moderada 12-14, grave >14.",
+      "Grave: suero salino 200-300 ml/h (meta de orina ~150 ml/h), calcitonina (actúa en horas) y ácido zoledrónico 4 mg (actúa en 2-3 días); denosumab como alternativa.",
+      "Hipocalcemia grave o con síntomas: gluconato de calcio 1-2 g intravenoso en 10-20 minutos y luego infusión.",
+      "Magnesio bajo (<1,7): 2 g en bolo y después 1 g/h. La hipomagnesemia causa hipopotasemia e hipocalcemia que no corrigen hasta reponer el magnesio."
     ]
   },
   {
     "kind": "card",
     "id": "g-908",
-    "title": "Hipercalcemia",
+    "title": "Hipercalcemia: cómo estudiarla",
     "points": [
-      "Causa acortamiento de qt, con ensanchamiento del qrs, puede dar pancreatitis y ulcera péptica . Como 1. medir el calcio: se prefiere ionizado , si se pide calcio total , se debe corregir con albumina. valores calcio iónico: normal 1.16-1.31 ; hipercalcemia leve : 1.40 - 2 ; moderada de 2- 2.5 ; severa >= 2.5.",
-      "2. solicitar PTH intacta. 2.1- PTH ALTA es por hiperparatiroidismo primario ( se solicita gammagrafía paratiroidea en búsqueda de adenomas) , si no hay adenomas es hipercalcemia hipocalciurica familiar ( no excretan calcio por orina, se solicita ca urinario 24 h) ; 2.2 PTH BAJA,( se solicita péptido relacionada con pth, si esta elevado buscar neoplasia; si no esta elevado solicitar 1.25 hidroxi vitamina D ; si esta elevada puede ser linfoma o granuloma. si no hay alteraciones buscar mieloma múltiple , sarcoidosis, tbc, hipertiroidismo, feocromocitoma. * la PTH no se toma si hipercalcemia leve en paciente sano, se hidrata y se pide nuevamente el calcio, si usan tazadas, si usan litio",
-      "TTO: se prefiere solucion salina 0.9 , (ringer o hartman tiene calcio) . si < de 1,25 ( linfoma y sarcoidosis) se dan corticoides."
+      "Efectos: QT corto, poliuria, estreñimiento, confusión; puede dar pancreatitis y úlcera.",
+      "1.º Confirmar con calcio iónico (o corregido por albúmina).",
+      "2.º Pedir PTH.",
+      "PTH alta: hiperparatiroidismo primario (buscar adenoma con gammagrafía). Si el calcio en orina es muy bajo, pensar en hipercalcemia hipocalciúrica familiar.",
+      "PTH baja: pedir péptido relacionado con la PTH (alto → cáncer) y vitamina D activa (alta → linfoma o granulomas como sarcoidosis o tuberculosis). Si nada: mieloma, hipertiroidismo, fármacos (tiazidas, litio).",
+      "Tratar con suero salino 0,9 % (el Ringer lleva calcio). En linfoma y sarcoidosis, corticoides."
     ]
   },
   {
     "kind": "card",
     "id": "g-952",
-    "title": "Uroanálisis en lesión renal aguda",
+    "title": "El parcial de orina en la lesión renal aguda",
     "points": [
-      "Cilindros granulares pigmentados y células epiteliales tubulares → Necrosis tubular aguda",
-      "Uro análisis normal o cilindros hialinos → Lesión renal aguda prerrenal , Proteinuria leve; cilindros leucocitarios → Nefritis intersticial asociado a antibiótico",
-      "Proteinuria mas cilindros lipídicos → Síndrome nefrotico",
-      "Proteinuria mas eritrocitos dismórficos → Glomerulonefritis aguda",
-      "Cistalurea o proteinuria de Bence-Janes → Obstrucción intratubular"
+      "Cilindros granulosos pardos y células tubulares: necrosis tubular aguda.",
+      "Orina normal o cilindros hialinos: causa prerrenal.",
+      "Leucocitos y cilindros leucocitarios (con eosinófilos): nefritis intersticial por fármacos.",
+      "Mucha proteína con cilindros grasos: síndrome nefrótico.",
+      "Hematíes deformados y cilindros hemáticos: glomerulonefritis.",
+      "Cristales o cadenas ligeras (Bence Jones): obstrucción dentro de los túbulos (mieloma, fármacos)."
     ]
   },
   {
     "kind": "card",
     "id": "g-959",
-    "title": "Lesión renal aguda por medicamentos",
+    "title": "Lesión renal por medicamentos",
     "points": [
-      "Vancomicina, aminoglucósidos, manitol, almidón)",
-      "Genera necrosis tubular aguda no oligúrica, cilindros granulares pigmentados"
+      "Vancomicina, aminoglucósidos, manitol y almidones: necrosis tubular aguda, a menudo sin oliguria.",
+      "En la orina: cilindros granulosos.",
+      "Prevenir: ajustar dosis a la función renal, vigilar niveles y evitar combinarlos."
     ]
   },
   {
     "kind": "card",
     "id": "g-962",
-    "title": "Acidosis respiratoria compensación",
+    "title": "Acidosis respiratoria: compensación esperada",
     "points": [
-      "Aguda: Por cada aumento de 10 mmHg en la PCO₂, el HCO₃⁻ sube 1 mEq/L. Crónica: Por cada aumento de 10 mmHg en la PCO₂, el HCO₃⁻ sube 3.5 mEq/L"
+      "Aguda: por cada 10 mmHg que sube la PaCO2, el bicarbonato sube 1 mEq/l.",
+      "Crónica: por cada 10 mmHg, el bicarbonato sube 3,5 mEq/l (el riñón tuvo días para compensar).",
+      "Si el bicarbonato no cuadra con lo esperado, hay un segundo trastorno."
     ]
   }
 ];
