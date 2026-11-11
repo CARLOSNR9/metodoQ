@@ -1,161 +1,162 @@
 import type { UltraEntry } from "@/lib/ultra-resumenes/types";
 
-/** Ultra resumen general · Ginecología y obstetricia. Generado desde el documento de fichas de Método Q. */
+/** Ultra resumen general · ginecologia-obstetricia. Generado desde content/ultra-resumenes/general/ginecologia-obstetricia.md; no editar a mano. */
 export const ENTRIES: UltraEntry[] = [
   {
     "kind": "card",
     "id": "g-267",
-    "title": "Los bebés de madres con una carga viral…",
+    "title": "VIH: profilaxis del recién nacido",
     "points": [
-      "Los bebés de madres con una carga viral ≤1000 copias/mL deben recibir zidovudina durante al menos 4 semanas después del parto ( 1 mes)",
-      "Por el contrario, los bebés nacidos de madres con una carga viral superior a 1.000 copias/ml deben recibir profilaxis antirretroviral combinada durante al menos 6 semanas después del parto",
-      "NACIMIENTO VIH : Si paciente con carga viral >1000 se indica parto por cesárea a las 38 semanas con Zidovudina intraparto IV . si <1000, parto via vaginal, zidovudina iv esta debatida, en guias internacionales ya no se aplica",
-      "Vih pediátrico",
-      "Si neonato alto riesgo se toma la carga viral a las 12 horas, si bajo riesgo a las 6 semanas de nacido",
-      "Vacunación: la vacuna bcg está contraindicada en hasta que se descarte la infección por vih a los 4 meses",
-      "Las demás vacunas del esquema (incluida rotavirus) se pueden administrar",
-      "( en recién nacido se debe hacer carga viral hasta los 18 meses, por que permanece con anticuerpos de la madre hasta esa edad)",
-      "Si prueba virológica resulta positiva, se debe confirmar con una segunda muestra independiente; con dos pruebas virológicas positivas se confirma el diagnóstico e iniciar TAR inmediatamente. pruebas virológicas negativas: niño no está lactando, se descarta infección con una prueba negativa después del periodo de ventana (generalmente ≥4 meses); si está en lactancia materna, debe repetirse prueba virológica 6 semanas después de suspender lactancia."
+      "Madre con carga viral ≤1.000 copias/ml cerca del parto: bebé con zidovudina 4 semanas.",
+      "Madre con carga viral >1.000 o desconocida: profilaxis combinada al bebé durante 6 semanas.",
+      "Vía de parto: carga viral >1.000 → cesárea programada a las 38 semanas con zidovudina intravenosa durante el parto. Carga viral <1.000 → parto vaginal (la zidovudina intravenosa ya no se usa de rutina).",
+      "En Colombia no se recomienda la lactancia materna en madres con VIH (se da fórmula)."
     ]
   },
   {
     "kind": "card",
     "id": "g-268",
-    "title": "Alto riesgo, nacido de >34 sem",
+    "title": "VIH: profilaxis del bebé de alto riesgo según edad gestacional",
     "points": [
-      "Zidovudina, lamivudina, nevirapina o raltegravil 32-34 sem, se da zidovudina mas lamivudina, y si < 32 sem, solo zidovudina por 6 semanas"
+      "≥34 semanas: combinación (zidovudina + lamivudina + nevirapina o raltegravir).",
+      "32-34 semanas: zidovudina + lamivudina.",
+      "<32 semanas: solo zidovudina, 6 semanas."
     ]
   },
   {
     "kind": "card",
     "id": "g-269",
-    "title": "Fisiologia embarazo",
+    "title": "Cambios normales del cuerpo en el embarazo",
     "points": [
-      "PRIMER TRIMESTRE: la progesterona y la beta-hCG inician la fase anabólica, provocando en el sistema gastrointestinal náuseas y relajación del músculo liso, cardiovascular aumenta el gasto cardiaco y renal eleva la filtración glomerular",
-      "SEGUNDO TRIMESTRE, la progesterona induce una caída máxima de la resistencia vascular (mínima presión arterial) y el sistema hematológico expande el volumen plasmático, el endocrino establece la resistencia a la insulina",
-      "TERCER TRIMESTRE, se consolida la fase catabólica con aumento de lipólisis e hiperlipidemia, el sistema respiratorio reduce su capacidad residual por el desplazamiento del diafragma y gastrointestinal presenta el máximo reflujo y estreñimiento debido a que los niveles de progesterona alcanzan su meseta más alta"
+      "Primer trimestre: la progesterona relaja el músculo liso (náuseas, estreñimiento, reflujo); sube el gasto cardiaco y el filtrado renal (la creatinina normal es más baja).",
+      "Segundo trimestre: la presión arterial es la más baja del embarazo; el volumen de plasma aumenta más que los glóbulos rojos (anemia por dilución); aparece resistencia a la insulina.",
+      "Tercer trimestre: fase de \"gasto\": más grasa en sangre y más resistencia a la insulina; tendencia a coagular más (riesgo de trombosis)."
     ]
   },
   {
     "kind": "card",
     "id": "g-270",
-    "title": "Control prenatal",
+    "title": "Control prenatal: esquema",
     "points": [
-      "Captación antes de las 10 sem, después de la 36 sem siempre medico",
-      "Seguimiento mensual hasta 36 sem, después c/15 dias hasta sem 40",
-      "Nulípara 10 controles , multípara 7 controles. *realizar escala herrera hurtado de riesgo",
-      "Y depresión postaparto en sem 28",
-      "PARACLINICOS: urocultivo, hemograma, glicemia, ( vhi, treponemica, ags HB, igm rubeola 16 sem, igm toxoplasma.) eco 10+6 – 13+6 ( tamizaje genético ), gota gruesa si zona",
-      "PLAN CUIDADO: acido fólico 0.4 mg/di hasta sem 12, si riesgo de defecto tubo se da 4 mg /dia – calcio 1200 mg dia desde semana 14 ( <riesgo preclampsia) , hierro diario – asa 75-100 mg desde seman 12 si riesgo de preclampsia, - albendazol 400 mg du si helmintos",
-      "VACUNAS:, embarazo : COVID-19 (semana 12), influenza (semana 14), Tdap (difteria, tétanos y tos ferina acelular; semana 20)– VRS (entre las semanas 28 y 36). . CONTROLES: vih, treponemica en cada trimestre ;, eco tamizaje genético ( sem 10+6-13+6) ; eco detalle anatómico ( 18 -23+6) ptog ( sem 24-28) , hemograma ( sem 28)",
-      "Riesgo tubo neural: anticonvulsivantes, dm , obesidad, teratógenos, hijo previo con defecto, madre con defecto tubo neural"
+      "Primera consulta antes de la semana 10. Después de la semana 36 siempre con médico.",
+      "Controles mensuales hasta la semana 36, luego cada 15 días hasta la 40. Unos 10 controles en primeriza y 7 en quien ya tuvo hijos.",
+      "Clasificar el riesgo (escala de Herrera-Hurtado) y tamizar depresión.",
+      "Exámenes iniciales: urocultivo, hemograma, glucemia, VIH, sífilis (prueba treponémica rápida), hepatitis B (antígeno de superficie), rubéola y toxoplasma; gota gruesa si vive en zona de malaria.",
+      "Ecografía de las semanas 10+6 a 13+6 (tamizaje genético y fecha).",
+      "Ácido fólico 0,4 mg/día hasta la semana 12 (4 mg si hay riesgo de defectos del tubo neural) y calcio 1.200 mg/día desde la semana 14."
     ]
   },
   {
     "kind": "card",
     "id": "g-271",
-    "title": "Edad gestacional",
+    "title": "Calcular la edad gestacional",
     "points": [
-      "FUM CONFIABLE:",
-      "1. ciclos regulares 2. no uso anticonceptivos hormonales 3. sin sangrado intramestrual 4. claridad fecha ; ECOGRAFÍA desde semana 8 y antes sem 14 . FECHA PROBABLE PARTO: fum + 7 - 3 meses + 1 año…. Prueba de embarazo: desde la relación sexual,sangre :10 días, ; orina : ultrasensible: 10-12 días ; estandar 14 días (el día del retraso menstrual); cualquier prueba negativa antes de los 10 días no es confiable"
+      "La fecha de última menstruación (FUM) es confiable si: ciclos regulares, sin anticonceptivos hormonales recientes, sin sangrados raros y la paciente recuerda bien la fecha.",
+      "La ecografía más precisa para fechar es la del primer trimestre (semanas 8-14).",
+      "Fecha probable de parto (regla de Naegele): FUM + 7 días − 3 meses + 1 año.",
+      "Prueba de embarazo: en sangre positiva desde ~10 días tras la relación; en orina desde el día del retraso. Una negativa antes de 10 días no es confiable."
     ]
   },
   {
     "kind": "card",
     "id": "g-272",
-    "title": "Control prenatal",
+    "title": "Urocultivo y estreptococo del grupo B",
     "points": [
-      "El urocultivo debe realizarse en la primera visita prenatal",
-      "Si es negativo, se debe realizar un cultivo vaginorectal durante la semana 36 o 37",
-      "Si alguno de los cultivos es positivo, la paciente necesitará antibióticos intravenosos durante el parto si el parto es vaginal o si se trata de una cesárea y la paciente se encuentra en trabajo de parto activo o con membranas rotas",
-      "Además, si el urocultivo inicial es positivo, entonces la paciente debe ser tratada en ese momento con antibióticos orales."
+      "Urocultivo en la primera visita. Si sale positivo (aunque no haya síntomas): tratar con antibiótico oral en ese momento.",
+      "Cultivo vaginal y rectal para estreptococo del grupo B en las semanas 35-37.",
+      "Si el urocultivo tuvo estreptococo B o el cultivo es positivo: antibiótico intravenoso durante el parto (vaginal, o cesárea con trabajo de parto o membranas rotas)."
     ]
   },
   {
     "kind": "card",
     "id": "g-273",
-    "title": "Anemia embarazo",
+    "title": "Anemia en el embarazo",
     "points": [
-      "1er trimestre: si < hb 11 ; 2do y 3er : <hb 10.5. anemia leve: 10-10.9 moderada: 7 -9.9 , grave < 7"
+      "Primer trimestre: Hb <11 g/dl. Segundo y tercero: Hb <10,5.",
+      "Leve 10-10,9; moderada 7-9,9; grave <7.",
+      "La causa más frecuente es la falta de hierro: suplementar hierro."
     ]
   },
   {
     "kind": "card",
     "id": "g-274",
-    "title": "Control prenatal",
+    "title": "Suplementos y prevención de preeclampsia",
     "points": [
-      "Acido fólico 0.4 mg dia hasta semana 12, o 4 mg si riesgo de defecto neuronal",
-      "Si HB menor de 15 se suplementa, PREVENCION PRECLAMPSIA: se inica calcio 1200 antes de la semana 14, ASA 81- 150 mg mg antes semana 16 (si antecedente de HTA CRONICA se inica desde la semana 12) hasta la semana 36."
+      "Ácido fólico 0,4 mg/día hasta la semana 12 (4 mg si hay riesgo de defectos del tubo neural, por ejemplo hijo previo afectado o uso de antiepilépticos).",
+      "Hierro a todas (dosis más alta si hay anemia).",
+      "Prevención de preeclampsia: calcio 1.200 mg/día desde la semana 14 y aspirina 81-150 mg en la noche desde la semana 12-16 hasta la 36 en quien tiene riesgo."
     ]
   },
   {
     "kind": "heading",
     "id": "g-275",
-    "title": "Anticoagulación embarazo"
+    "title": "Anticoagulación en el embarazo"
   },
   {
     "kind": "card",
     "id": "g-276",
-    "title": "Riesgo MUY alto",
+    "title": "Riesgo de trombosis muy alto",
     "points": [
-      "( trombofilia de muy alto riesgo, antecedente de tromboembolia venosa previa o eventos (>1) tromboembólicos recurrentes (dos o más)). conducta : anticoagulación plena (desde el momento en que se identifica el factor de riesgo, y en el puerperio debe mantenerse al menos por 6 semanas).",
-      "Trombofilia Muy alto Riesgo: Factor V de Leiden, deficiencia de protrombina"
+      "Quién: trombofilia de muy alto riesgo (por ejemplo deficiencia de antitrombina, factor V Leiden o protrombina homocigotos o combinados), una trombosis previa con trombofilia o ≥2 trombosis previas.",
+      "Qué hacer: anticoagulación plena con heparina de bajo peso molecular desde que se identifica, y en el puerperio al menos 6 semanas."
     ]
   },
   {
     "kind": "card",
     "id": "g-277",
-    "title": "Riesgo alto",
+    "title": "Riesgo de trombosis alto",
     "points": [
-      "( (IMC >40 kg/m²), trombofilia de alto riesgo (saf, Deficiencia de Proteína C, S y Antitrombina III), antecedente de un(1) evento tromboembólico, enfermedades del colágeno (lupus, artritis reumatoide, dermatomiositis) y óbito fetal, síndrome de hiperestimulación ovárica, sepsis puerperal y hospitalización ≥3 días). conducta : tromboprofilaxis farmacológica (desde el momento de la identificación durante el embarazo y hasta 6 semanas en el puerperio)",
-      "En hiperestimulación ovárica, se limita al primer trimestre hasta resolución; en sepsis puerperal se indica por 10 días tras el egreso; y en hospitalización prolongada se da profilaxis durante la estancia y medidas no farmacológicas por 28 días al alta."
+      "Quién: IMC >40, trombofilia de alto riesgo (síndrome antifosfolípido, déficit de proteína C o S), una trombosis previa, enfermedades del colágeno (lupus, artritis), muerte fetal, hiperestimulación ovárica, sepsis puerperal u hospitalización ≥3 días.",
+      "Qué hacer: dosis profiláctica de heparina de bajo peso molecular desde que se identifica y hasta 6 semanas después del parto.",
+      "En la hiperestimulación ovárica se limita al primer trimestre o hasta que se resuelve."
     ]
   },
   {
     "kind": "card",
     "id": "g-278",
-    "title": "Riesgo moderado",
+    "title": "Riesgo de trombosis moderado",
     "points": [
-      "(factores acumulativos como obesidad (IMC 30–39 kg/m²), várices, diabetes, enfermedad renal, reproducción asistida, embarazo múltiple, hemorragia postparto, preeclampsia, hiperemesis con alteraciones metabólicas, parto pretérmino, cesárea, sepsis, enfermedad inflamatoria intestinal, cirugía o transfusión >2 unidades, además de hospitalización <3 días) . conducta: durante el embarazo: un (1) factor se indican medidas generales; con dos (2), medidas no farmacológicas durante toda la gestación; y con tres , heparinas desde la semana 28 (o antes si es necesario). puerperio, un (1) factor solo medidas generales, dos o más tromboprofilaxis farmacológica por 10 días.",
-      "Hospitalizaciones cortas, profilaxis durante la estancia y medidas no farmacológicas por 10 días al alta."
+      "Factores que se suman: IMC 30-39, várices, diabetes, enfermedad renal, reproducción asistida, embarazo múltiple, hemorragia posparto, preeclampsia, hiperemesis, parto pretérmino, cesárea, sepsis, enfermedad inflamatoria intestinal, cirugía o transfusión >2 unidades, hospitalización <3 días.",
+      "Embarazo: 1 factor → medidas generales; 2 → medidas no farmacológicas (medias, movilización); ≥3 → heparina desde la semana 28 (o antes si hace falta).",
+      "Puerperio: con estos factores, profilaxis con heparina ~10 días (más si persisten)."
     ]
   },
   {
     "kind": "card",
     "id": "g-279",
-    "title": "Riesgo bajo",
+    "title": "Riesgo de trombosis bajo",
     "points": [
-      "(sobrepeso (IMC 25–30 kg/m²), tabaquismo, hipertensión arterial crónica, hemorragia anteparto, inducción del trabajo de parto, multiparidad (≥3 partos), corioamnionitis y viajes prolongados (>4 horas))",
-      "Conducta: 1–2 factores : medidas generales (movilización, hidratación, evitar inmovilización). 3–5 factores,: embarazo : no farmacológicas ; puerperio : tromboprofilaxis farmacológica por 10 días. ≥6 factores, tromboprofilaxis farmacológica desde la semana 28 (o antes si es necesario), hasta 10 días en el postparto"
+      "Factores: sobrepeso (IMC 25-30), tabaco, HTA crónica, sangrado antes del parto, inducción del parto, ≥3 partos previos, corioamnionitis, viajes >4 horas.",
+      "1-2 factores: medidas generales (moverse, hidratarse).",
+      "3-5 factores: no farmacológicas en el embarazo y heparina 10 días en el puerperio.",
+      "≥6 factores: heparina desde la semana 28 y 10 días después del parto."
     ]
   },
   {
     "kind": "card",
     "id": "g-280",
-    "title": "Toxoplasmosis gestacional",
+    "title": "Toxoplasmosis en el embarazo",
     "points": [
-      "Entre mas temprano infeccion menor riesgo de infeccion pero mayor severidad",
-      "DIAGNOSTICO: preconcepcional/ solo igg postivo ( es antigua no riesgo infección); solo igm positivo (se da tto Y ss igg cada 2 semanas hasta positivo ) ; ambos negativos ( seguimiento con igm mensual) ; ambos positivos ( si < 16 sem: se pide test de avidez , >30% antiguo, <20 % baja-actual ,20-30 indeterminado) se da tto cuando baja avidez ( si >16 sem, se solicita iga si positivo tto, si negativo seguimiento) ; EL FETO se diagnostica con pcr liq amniótico",
-      "TTO: MADRE: espiramaicina 1 gr cada 8 horas hasta terminar embarazo FETO: pirimetamina 50 mg cada 24 horas, sufaldiazian 1.5 g cada 12 horas , ac.folinico 7.5 mg",
-      "Hasta terminar gestacion",
-      "(pirimetamina no dar en 1er trimestre por teratógeno)",
-      "La PCR para Toxoplasma en líquido amniótico se realiza una vez desde ≥18 semanas y ≥4 semanas tras la infección materna sospechada.",
-      "TOXOPLASMOSIS GESTACIONAL : Si alergia a la espiramicina → Segunda línea: Azitromicina 500 mg cada 24 horas y luego Clindamicina + Sulfadiazina o Clotrimazol cada 8 horas"
+      "Cuanto más temprano se infecta la madre, menos probable es que pase al bebé, pero más grave es si pasa.",
+      "IgG positiva sola: infección antigua, sin riesgo.",
+      "IgM positiva sola: tratar y repetir IgG en 2 semanas (si se vuelve positiva, es infección nueva).",
+      "Ambas negativas: no inmune; repetir IgM cada mes y dar medidas de prevención (carne bien cocida, lavar verduras, evitar arena de gatos).",
+      "Ambas positivas: <16 semanas → prueba de avidez (alta = infección antigua; baja = reciente → tratar). >16 semanas → IgA (positiva → tratar).",
+      "Diagnóstico del bebé: PCR en líquido amniótico.",
+      "Tratamiento: espiramicina si el feto no está infectado; pirimetamina + sulfadiazina + ácido folínico si se confirma infección fetal (después de la semana 16-18)."
     ]
   },
   {
     "kind": "card",
     "id": "g-281",
-    "title": "Varicela en embarazo",
+    "title": "Varicela en el embarazo",
     "points": [
-      "(vhs 3) puede desencadenar desembarazo 7 dias después del brote; DX: pcr liquida amniótico 17-21 sem, eco para detectar anormalidades 6 sem luego infeccion",
-      "TAMIZAJE: sin antencednete o solo 2 dosis, se solicita ig varicela",
-      "La vacuna esta contraindicada en embarazo, si embarazada sin inmunidad tuvo exposición se debe recibir inmoglobulina en primeras 96 h",
-      "(4 dias ideal- hasta 10 dias)",
-      "NEONATOS EXPUESTOS AL VIRUS VARICELA-ZÓSTER (VZV): Indicación de inmunoglobulina al neonato para varicela zoster:",
-      "1. Madre sin inmunidad que presenta síntomas 5 dias antes y 2 dias después del parto (no ha fabricado anticuerpos ni hay transferencia)",
-      "2. Neonato hijo de madre sin inmunidad, que estuvo en contacto con virus.",
-      "3. Neonato prematuros <28 semanas o ≤1000 g que estuvo en contacto , no importa inmunidad de la madre. Si el neonato desarrolla síntomas se inicia aciclovir IV; la vacuna contra varicela está contraindicada en el periodo neonatal."
+      "Riesgo de neumonía grave en la madre y de malformaciones (varicela congénita) si ocurre antes de la semana 20.",
+      "Si no hay antecedente claro ni 2 dosis de vacuna: medir IgG para varicela.",
+      "La vacuna está contraindicada en el embarazo (se da después del parto).",
+      "Embarazada no inmune expuesta: inmunoglobulina contra varicela lo antes posible (ideal en 4 días, hasta 10).",
+      "Madre con varicela: aciclovir oral.",
+      "Recién nacido: inmunoglobulina si la madre presenta varicela desde 5 días antes hasta 2 días después del parto."
     ]
   },
   {
@@ -163,41 +164,35 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-282",
     "title": "Sífilis gestacional",
     "points": [
-      "Treponema palidum, transmisión tras placentaria , NO contraindica lactancia materna si no hay lesiones en mama",
-      "DIAGNOSTICO: px treponemica y no treopnemica positivas es positivo ; si no treponemica es negativa puede ser efecto prozona",
-      "DEFINICIONES: caso probable: treponemica positiva, sin no treponemica; es caso confirmado cuando están las dos positivas",
-      "TAMIZAJE: cada trimestre en post aborto, tto: pen ben 2.400.000 im aplicada 30 dias o antes del parto",
-      "Si es tardia o desconocida se da 3 dosis cada semana",
-      "Si alergia a penicilina tiene que realiazarse desinsibilacion con peniclina v potásica y equipo RCP. NO macrolidos",
-      "A pareja sexual se trata con 3 dosis sin prueba",
-      "SGUIMIENTO: seguimiento 3 ,6, 12 mes",
-      "Curación: disminución 2 dills a los 3 meses, y 1:8 a los 6 meses.",
-      "Una prueba rápida treponémica positiva establece por sí sola el diagnóstico de sífilis gestacional debido al riesgo de transmisión vertical, inicio inmediato del tratamiento con Penicilina G Benzatínica de 2.4 millones de UI y se solicita px no treponemica"
+      "Treponema pallidum, pasa al bebé por la placenta. No contraindica la lactancia si no hay lesiones en el pecho.",
+      "Tamizaje: prueba treponémica rápida en cada trimestre, en el parto y tras un aborto.",
+      "Caso: prueba treponémica positiva → tratar ya (no esperar la no treponémica). La no treponémica (VDRL/RPR) sirve para seguir la respuesta. Una VDRL negativa con alta sospecha puede ser efecto prozona (pedir dilución).",
+      "Tratamiento: penicilina benzatínica 2.400.000 UI intramuscular; en sífilis tardía o de duración desconocida, una dosis semanal por 3 semanas. Debe terminarse al menos 30 días antes del parto.",
+      "Alergia a penicilina: desensibilizar (no hay alternativa segura en el embarazo). Tratar siempre a la pareja."
     ]
   },
   {
     "kind": "card",
     "id": "g-283",
-    "title": "Hepatitis B gestacional",
+    "title": "Hepatitis B en el embarazo",
     "points": [
-      "HBsAg en el primer control prenatal; si es positivo, se solicitan HBV DNA, HBeAg y transaminasas",
-      "MANEJO: tenofovir disoproxil fumarato 300 mg/día desde la semana 28–32 : cuando la carga viral es ≥200.000 UI/mL para prevenir transmisión vertical, independientemente del HBeAg o de las transaminasas; además, tratar en cualquier momento del embarazo: enfermedad hepática activa (ALT elevada persistente y HBV DNA >2.000 UI/mL, con o sin fibrosis), en cuyo caso el antiviral se continúa a largo plazo",
-      "RECIEN NACIDO: debe recibir vacuna contra hepatitis B + inmunoglobulina anti-HB en las primeras 12 horas de vida, LACTANCIA: está permitida incluso si la madre recibe tenofovir, si el antiviral se inició solo para profilaxis perinatal puede suspenderse 4–12 semanas posparto."
+      "Pedir antígeno de superficie (HBsAg) en el primer control. Si es positivo: carga viral (ADN), HBeAg y transaminasas.",
+      "Carga viral ≥200.000 UI/ml: tenofovir 300 mg/día desde la semana 28-32 para evitar el contagio al bebé.",
+      "Hepatitis activa (transaminasas altas y carga viral >2.000): tratar en cualquier momento y continuar a largo plazo.",
+      "Recién nacido de madre positiva: vacuna + inmunoglobulina contra hepatitis B en las primeras 12 horas. Puede recibir lactancia."
     ]
   },
   {
     "kind": "card",
     "id": "g-284",
-    "title": "VIH embarazo",
+    "title": "VIH en el embarazo",
     "points": [
-      "Puede causar rciu. DX: 1ra. prueba 3-4 gen (si negativa es negativo)",
-      "2. Si 1 positiva , se hace 2 px, si es positiva se inica protocolo de prevención infx, y se toma carga viral.",
-      "Si 2da px negativa, no es concluyente , se pide carga viral",
-      "Carga viral: mayor 5000 positivo, menor 50 negativo, 5000-50 indeterminado se solicita western blot, si negativo se descarta dx, si postivo se confirma dx, si es indeterminada ( dar tto y repetir todo en 1 mes) depues de 32 sem se inicia manejo con 1ra px positiva",
-      "TTO: 2 INHIBIDORES NUCLEOSIDOS MAS OTRO GRUPO ( zidovudina mas lamivudina + liponavir o nevirapina) (abacavir mas lamivudina + ritonavir ) seguimiento: carga viral:cada 2-4 sem luego cada mes hasta arn idetectable, de ahí cada 3 meses",
-      "Cd4: control inicial, de ahí cada 3 mes",
-      "Profilaxis intraparto: zidovudina intraparto si carga viral mayor de 1000 o desconocida ( 2 mg/ kg incial, continua 1 mg/kg /h x 2 horas) metergina puede alterar concetracion.",
-      "Efavirenz teratógeno."
+      "Puede causar restricción del crecimiento fetal.",
+      "Primera prueba (3.ª o 4.ª generación) negativa → negativo.",
+      "Positiva → segunda prueba distinta; si es positiva, iniciar prevención de la transmisión y pedir carga viral.",
+      "Si la segunda es negativa: no es concluyente → carga viral (alta confirma; indetectable lo hace improbable; intermedia → Western blot o repetir en un mes).",
+      "Después de la semana 32 se inicia tratamiento con la primera prueba positiva, sin esperar la confirmación.",
+      "Tratamiento: antirretroviral combinado (por ejemplo tenofovir + emtricitabina/lamivudina + dolutegravir), lo antes posible."
     ]
   },
   {
@@ -205,78 +200,83 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-285",
     "title": "Diabetes gestacional",
     "points": [
-      "En mujeres con factores de riesgo se toma al inico del control prenatal . se diagnostica en 2do , 3er trimestr",
-      "DX: carga 75 gr",
-      "Positivo si 1 , ayunas >= 92 mg/dl , 1 hora >=180 , 2 horas >= 153. seguimiento eco obstetrica cada 2-4 semanas y obstetricia cada 2 semanas; glucometría diaria en ayunas y 1 h posprandial",
-      "Manejo: evaluación nutricional, ejercico 30 min moderado no exceder 220-edad",
-      "Si no mejora con cambios de vida insulina",
-      "METAS: ayunas < 95 mg ; 1 h < 140, 2 h < 120 mg",
-      "Manejo en parto: controlada dieta: hasta 40+6 , controlada insulina: 39+6 ; sin control 38+6 . cesarea si mayor de 4500. ; meta glu en parto ( 70-126) , si venia con insulina :",
-      "Dad 10 % a 50 cc hora, si glu <120 no inicio insulina ; 120-140 infsion 1 u hora, >140 2 u hora.",
-      "Recomienda realizar una PTOG entre las 4 y 12 semanas posparto. si los resultados son normales, debe continuarse la tamización de por vida al menos cada 3 años",
-      "Antes de la semana 20 de gestación, los criterios son los mismo de la población en general"
+      "Con factores de riesgo: glucemia desde el primer control. A todas: curva de 75 g entre las semanas 24-28.",
+      "Diagnóstico con un valor alterado: ayunas ≥92, 1 hora ≥180 o 2 horas ≥153 mg/dl.",
+      "Metas: ayunas <95, 1 hora después de comer <140, 2 horas <120.",
+      "Manejo: dieta con nutricionista, ejercicio 30 minutos al día, glucometrías en ayunas y después de comer. Si no se logran metas: insulina.",
+      "Control: ecografías cada 2-4 semanas y obstetricia cada 2 semanas.",
+      "Parto: controlada con dieta, hasta la semana 40+6; con insulina, a las 39 semanas aproximadamente."
     ]
   },
   {
     "kind": "card",
     "id": "g-286",
-    "title": "Manejo farmacologico en diabetes gestacional",
+    "title": "Diabetes gestacional: cuándo y cómo iniciar insulina",
     "points": [
-      "Se inicia tratamiento farmacológico cuando:",
-      "1) tras 1–2 semanas de manejo nutricional y ejercicio adecuados, ≥30% de las glucometrías están fuera de metas; y 2) no se alcanzan los objetivos glucémicos establecidos (ayunas <95 mg/dL, 1 h postprandial <140 mg/dL, 2 h <120 mg/dL)",
-      "ESQUEMA INSULINA: *2/3 en ayunas y 1/3 en la noche ; o 50% basal y 50% bolo. *1ER TRIMESTRE: 0,7 U /KG /DIA ; 2DO: 0,8 U / KG / DIA ; 3ER: 0,9 U / KG / DIA. Categorías insulinas permitidas*Lispor, aspart (B) ; regular (b ) ; nph (b) ; detemir ( b) . NO USAR glargina (debatido) y degludec SON CATEGORÍA C"
+      "Iniciar si, tras 1-2 semanas de dieta y ejercicio, ≥30 % de las glucometrías están fuera de meta.",
+      "Dosis de inicio por kilo: 1.er trimestre 0,7 U/kg/día; 2.º 0,8; 3.er 0,9.",
+      "Repartir 2/3 en la mañana y 1/3 en la noche, o 50 % basal y 50 % en bolos con las comidas.",
+      "Insulinas seguras: NPH, regular, lispro, aspart y detemir."
     ]
   },
   {
     "kind": "card",
     "id": "g-287",
-    "title": "Anticoncepción",
+    "title": "Anticoncepción: métodos",
     "points": [
-      "PRIMERA LÍNEA (LARC): DIU hormonal, DIU de cobre e implante subdérmico",
-      "Pueden utilizarse aun sin haber iniciado vida sexual y pueden iniciarse en cualquier momento del ciclo",
-      "IMPORTANTE: el implante subdérmico y los inyectables aumentan de peso",
-      "SEGUNDA LÍNEA: ACO, inyectables, parche, anillo vaginal y progestágenos",
-      "Deben iniciarse durante la menstruación. si se inicia hasta el tercer día: tomar la dosis correspondiente y usar protección durante 7 días. si se inicia después del tercer día: utilizar protección hasta el siguiente ciclo.TERCERA LÍNEA: métodos de barrera",
-      "CUARTA LÍNEA: espermicidas y esponjas anticonceptivas.",
-      ". CÁNCER DE MAMA: contraindicados todos los métodos hormonales"
+      "Primera línea (de larga duración, los más eficaces): DIU hormonal, DIU de cobre e implante subdérmico. Se pueden usar aunque no haya tenido hijos y se ponen en cualquier momento del ciclo (descartando embarazo).",
+      "El implante y los inyectables pueden aumentar algo de peso.",
+      "Segunda línea: pastillas, inyectables, parche, anillo vaginal y píldora de progestágeno.",
+      "Pastillas: iniciar con la menstruación. Si empieza en los primeros 5 días del ciclo no necesita protección extra; después, condón durante 7 días.",
+      "Tercera línea: condón y métodos naturales (menos eficaces). El condón es el único que protege contra infecciones de transmisión sexual."
     ]
   },
   {
     "kind": "card",
     "id": "g-288",
-    "title": "Anticoncepción de emergencia (resifocus)",
+    "title": "Anticoncepción de emergencia: ventanas",
     "points": [
-      "Método de Yuzpe hasta 5 días, progestina hasta 5 días, ulipristal (UPA) hasta 7 días, mifepristona hasta 5 días y DIU de cobre entre 10 y 14 días. IMPORTANTE: la anticoncepción regular puede iniciarse inmediatamente después de utilizar anticoncepción de emergencia"
+      "Levonorgestrel: hasta 72 h (algo de eficacia hasta 120 h).",
+      "Ulipristal: hasta 120 h (5 días).",
+      "Método de Yuzpe (pastillas combinadas en dosis alta): hasta 72 h; menos eficaz y da más náuseas.",
+      "DIU de cobre: hasta 5 días; el más eficaz.",
+      "Se puede empezar la anticoncepción habitual inmediatamente después (con ulipristal, esperar 5 días para las hormonales)."
     ]
   },
   {
     "kind": "card",
     "id": "g-289",
-    "title": "Anticoncepción post parto",
+    "title": "Anticoncepción después del parto",
     "points": [
-      "1. Estrógenos (ACO, parche, anillo vaginal) → Se pueden iniciar después de no lactancia: 3 semanas; si lactancia: 6 semanas, se prefieren 6 meses del parto.",
-      "2. Progestágenos → Son seguros en lactancia. Se pueden usar inmediatamente postparto Ej: Progesterona, acetato de medroxiprogesterona, Implante subdérmico de etonogestrel.",
-      "3. DIU posparto → Momento de colocación: Dentro de las primeras 48 h (cobre o levonorgestrel)",
-      "Entre las 48 horas y 4 semanas: Evitar ya que hay riesgo de expulsion . >4 semanas: Colocación segura .",
-      "4. Método de Lactancia y Amenorrea (LAM) → Sirve como anticonceptivo hasta 6 meses si cumple: Lactancia exclusiva o casi exclusiva,Amenorrea"
+      "Con estrógenos (pastillas combinadas, parche, anillo): sin lactancia desde las 3 semanas (6 si hay factores de trombosis); con lactancia, desde las 6 semanas (mejor a los 6 meses).",
+      "Solo progestágeno (píldora, inyectable de medroxiprogesterona, implante): seguros en la lactancia; se pueden iniciar justo después del parto.",
+      "DIU: en las primeras 48 h o después de 4 semanas (entre 48 h y 4 semanas se expulsa más).",
+      "Lactancia exclusiva (MELA): eficaz si el bebé tiene <6 meses, lactancia exclusiva y sin menstruación."
     ]
   },
   {
     "kind": "card",
     "id": "g-290",
-    "title": "Anticoncepción de emergencia",
+    "title": "Anticoncepción de emergencia: dosis",
     "points": [
-      "Levonorgestrel 1.5 mg VO dosis única (ideal ≤72 h, hasta 120 h con menor eficacia), ulipristal 30 mg VO dosis única (hasta 120 h – 7 dias, SE PREFIERE EN IMC >=30) y DIU de cobre (levonogestrel (debatible)) (el más eficaz, <1% falla, hasta 5 días -10 dias y deja anticoncepción continua)",
-      "En caso de vomito se puede repetir dosis",
-      "En adolescente: >72 HASTA – 120 H: Administrar levonorgestrel 2 tabs y colocar un dispositivo intrauterino (DIU) T de cobre."
+      "Levonorgestrel 1,5 mg oral en dosis única (mejor ≤72 h).",
+      "Ulipristal 30 mg oral en dosis única (hasta 120 h); preferible si IMC ≥30.",
+      "DIU de cobre: el más eficaz (<1 % de fallos) hasta 5 días; además deja anticoncepción continua.",
+      "Si vomita en las 3 horas siguientes, repetir la dosis."
     ]
   },
   {
     "kind": "card",
     "id": "g-291",
-    "title": "Contraindicaciones absolutas de anticonceptivos hormonales combinados",
+    "title": "Contraindicaciones de los anticonceptivos combinados (con estrógeno)",
     "points": [
-      "Cáncer de mama activo- < 3 semanas postparto- Migraña con aura, Riesgo cardiovascular: Enfermedad cardíaca isquémica, enfermedad cerebrovascular, Hipertensión descompensada ; Edad ≥ 35 años y fumar ≥ 15 cigarrillos al día Riesgo de trombosis: Inmo vilización prolongada , Trombofilias ,Enfermedad tromboembólica venosa"
+      "Cáncer de mama actual.",
+      "Menos de 3 semanas después del parto.",
+      "Migraña con aura.",
+      "Enfermedad cardiovascular: cardiopatía isquémica, ACV, HTA no controlada.",
+      "≥35 años y fumar ≥15 cigarrillos al día.",
+      "Riesgo de trombosis: trombosis previa, trombofilias, inmovilización prolongada o cirugía mayor.",
+      "Enfermedad hepática grave o tumores del hígado."
     ]
   },
   {
@@ -284,367 +284,345 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-292",
     "title": "Anticoncepción en situaciones especiales",
     "points": [
-      "ANTICONCEPCIÓN EN SITUACIONES ESPECIALES (según guías colombianas / Criterios de elegibilidad OMS):",
-      "1. LES: si sin anticuerpos antifosfolípidos y sin actividad grave, se pueden usar cualquiera; si aPL positivos o alto riesgo trombótico, evitar ACOS y preferir progestágeno solo o DIU con levonorgestrel.",
-      "2. SAF: contraindicados los anticonceptivos combinados (ACOS) por alto riesgo de trombosis; preferir métodos solo con progestágeno (píldora, implante o DIU con levonorgestrel) y evitar medroxiprogesterona inyectable si alto riesgo trombótico.",
-      "3. Trombocitopenia severa: evitar DIU de cobre por riesgo de sangrado; preferir DIU con levonorgestrel o métodos con progestágeno, con precaución con medroxiprogesterona inyectable si el sangrado es importante.",
-      "HILOS NO PALPABLES/VISIBLES DE DIU: No se palpan ni se ven con espéculo, realizar ecografía transvaginal, para determinar la localización intrauterina del dispositivo, si es No localizable por ecografía y se desconoce si fue expulsado, se indican estudios adicionales como radiografía de abdomen y pelvis o histeroscopia diagnóstica."
+      "Lupus sin anticuerpos antifosfolípidos y sin actividad grave: cualquier método. Con anticuerpos o riesgo de trombosis: evitar estrógenos; usar progestágeno solo o DIU.",
+      "Síndrome antifosfolípido: no usar combinados; preferir DIU (cobre o levonorgestrel) o métodos de progestágeno (evitar el inyectable de medroxiprogesterona).",
+      "Epilepsia con fármacos inductores (carbamazepina, fenitoína): bajan la eficacia de las hormonas orales y el implante → DIU o inyectable.",
+      "HTA no controlada, migraña con aura o fumadoras ≥35 años: evitar estrógenos."
     ]
   },
   {
     "kind": "card",
     "id": "g-293",
-    "title": "Manejo de enfermedades reumatológicas en el embarazo",
+    "title": "Fármacos reumatológicos en el embarazo",
     "points": [
-      "INDICADOS (SEGUROS): Hidroxicloroquina, Sulfasalazina (con ácido fólico 5 mg/día), Azatioprina ,Prednisona/Prednisolona (dosis bajas) y Certolizumab pegol , (Adalimumab, Infliximab) suspender entre semanas 20-30",
-      "CONTRAINDICADOS: Metotrexato (suspender 3 meses antes), Micofenolato mofetilo (suspender 6 semanas antes), Leflunomida , Rituximab y AINEs (contraindicados desde la semana 20 por riesgo de cierre prematuro del conducto arterioso)",
-      "Ciclofosfamida (contraindicada en el primer trimestre, reservada solo para reactivaciones lúpicas con riesgo vital de la madre en el segundo/tercer trimestre)."
+      "Seguros: hidroxicloroquina, sulfasalazina (con ácido fólico 5 mg/día), azatioprina, prednisona en dosis bajas y certolizumab. Adalimumab e infliximab: suspender hacia la semana 20-30.",
+      "Contraindicados: metotrexato (suspender 3 meses antes), micofenolato (6 semanas antes), leflunomida y rituximab.",
+      "AINE: evitar desde la semana 20 (pueden cerrar antes de tiempo el conducto arterioso del feto y bajar el líquido amniótico).",
+      "Ciclofosfamida: no en el primer trimestre; solo para casos graves después."
     ]
   },
   {
     "kind": "card",
     "id": "g-294",
-    "title": "Epilepsia en embarazo",
+    "title": "Epilepsia en el embarazo",
     "points": [
-      "Mantener monoterapia a dosis mínima eficaz, preferir lamotrigina o levetiracetam, evitar valproato.",
-      "Si carbamazepina deben tomar altas dosis de ácido fólico 4 mg antes y durante el embarazo para disminuir el riesgo de teratogenicidad, mínimo tres meses antes El uso de fenitoína gestacional puede provocar el síndrome de hidantoína fetal, que se caracteriza por hipoplasia del tercio medio facial, microcefalia, labio leporino y paladar hendido, hipoplasia digital, así como anomalías intelectuales y conductuales."
+      "Un solo fármaco a la menor dosis eficaz; preferir lamotrigina o levetiracetam. Evitar valproato (malformaciones y problemas de desarrollo).",
+      "Ácido fólico en dosis alta (4-5 mg/día) desde al menos 3 meses antes del embarazo.",
+      "No suspender el tratamiento de golpe al saber del embarazo.",
+      "La fenitoína puede dar síndrome hidantoínico fetal (cara aplanada, cabeza pequeña, labio y paladar hendido, dedos cortos, retraso)."
     ]
   },
   {
     "kind": "card",
     "id": "g-295",
-    "title": "VHC gestacional",
+    "title": "Hepatitis C: seguimiento del bebé expuesto",
     "points": [
-      "A los bebés con exposición perinatal al virus de la hepatitis C (VHC), se les debe descartar la infección",
-      "Las opciones para la detección del virus de la hepatitis C (VHC) incluyen la prueba de anticuerpos anti-VHC a los 18 meses o después (preferible) o la prueba de ácido ribonucleico (ARN) del VHC después de los 2 meses."
+      "Todo bebé de madre con hepatitis C debe estudiarse.",
+      "Anticuerpos anti-VHC a partir de los 18 meses (antes pueden ser de la madre) o ARN del virus (PCR) después de los 2 meses."
     ]
   },
   {
     "kind": "card",
     "id": "g-296",
-    "title": "Manejo de aborto septico",
+    "title": "Aborto séptico",
     "points": [
-      "La estabilización hemodinámica, rápida evacuación de los tejidos infectados por legrado por aspiración y el uso de antibióticos, siendo la Gentamicina 5 mg/kg/día + Clindamicina 900 mg cada 8 horas el esquema de eleccióno o jugado ampicilina + gentamicina + metronidazol."
+      "Infección del útero después de un aborto: fiebre, dolor, sangrado con mal olor, posible shock.",
+      "Estabilizar, antibióticos y vaciar el útero pronto (aspiración).",
+      "Antibióticos: clindamicina 900 mg intravenosa cada 8 h + gentamicina 5 mg/kg/día; alternativa: ampicilina + gentamicina + metronidazol."
     ]
   },
   {
     "kind": "card",
     "id": "g-297",
-    "title": "Aborto retenido o frustro es ecográfico",
+    "title": "Aborto retenido: criterios ecográficos",
     "points": [
-      "1. saco gestacional ≥25 mm sin embrión 2. embrión con longitud cráneo-caudal (CRL) ≥7 mm sin actividad cardíaca 3. ausencia de latido cardíaco tras un periodo de observación adecuado (≥2 semanas después de identificar un saco gestacional sin embrión o ≥11 días después de observar un saco con vesícula vitelina)",
-      "4. saco gestacional colapsado o irregular 5. ausencia de crecimiento embrionario en controles ecográficos seriados"
+      "Saco gestacional ≥25 mm sin embrión.",
+      "Embrión ≥7 mm de longitud sin latido.",
+      "Sin latido ≥2 semanas después de ver un saco sin embrión, o ≥11 días después de ver un saco con vesícula vitelina.",
+      "Saco colapsado o irregular, o embrión que no crece en controles."
     ]
   },
   {
     "kind": "card",
     "id": "g-298",
-    "title": "El aborto incompleto expulsión parcial de los productos…",
+    "title": "Aborto incompleto",
     "points": [
-      "EL ABORTO INCOMPLETO expulsión parcial de los productos de la concepción antes de las 20 semanas",
-      "Clínica: con sangrado vaginal, dolor tipo cólico y dilatación cervical, y en la ecografía se observan restos intrauterinos",
-      "El manejo : si está estable: manejo médico con misoprostol 600 µg oral o 400 sublingual. manejo quirúrgico con aspiración uterina (AMEU); inestabilidad hemodinámica o sangrado abundante, se indica evacuación uterina inmediata."
+      "Salida parcial del embarazo antes de las 20 semanas: sangrado, dolor tipo cólico, cuello abierto y restos en la ecografía.",
+      "Estable: misoprostol 600 µg oral o 400 µg sublingual, o aspiración (AMEU).",
+      "Inestable o con sangrado abundante: vaciar el útero de inmediato."
     ]
   },
   {
     "kind": "card",
     "id": "g-299",
-    "title": "En pacientes con amenaza de aborto",
+    "title": "Amenaza de aborto",
     "points": [
-      "La evidencia actual no apoya el uso de progesterona para disminuir el riesgo de pérdida de la gestación; tampoco es recomendado el reposo en cama como parte de las medidas generales, puede tener efectos emocionales deletéreos y no impacta en el desenlace de la gestación"
+      "Sangrado con cuello cerrado y embarazo vivo.",
+      "La progesterona no ha demostrado reducir la pérdida en la mayoría de casos.",
+      "El reposo en cama no ayuda y puede afectar emocionalmente.",
+      "Vigilar y dar signos de alarma."
     ]
   },
   {
     "kind": "card",
     "id": "g-300",
-    "title": "Enfermedad trofoblástica gestacional (ETG) incluye trastornos del tejido…",
+    "title": "Enfermedad trofoblástica gestacional",
     "points": [
-      "ENFERMEDAD TROFOBLÁSTICA GESTACIONAL (ETG) incluye trastornos del tejido trofoblástico con producción excesiva de β-hCG y se clasifica en mola hidatiforme completa, parcial, invasiva, coriocarcinoma y tumor trofoblástico del sitio placentario",
-      "Las molas hidatiformes son benignas: la completa (46,XX o XY, sin feto, placenta quística, riesgo 15–20%) y la parcial (triploide, feto o restos fetales, riesgo 0.5–5%)",
-      "La mola invasiva invade el miometrio; el coriocarcinoma es maligno y metastásico; y el tumor trofoblástico del sitio placentario causa sangrado posparto con metástasis rara",
-      "El tratamiento de las molas hidatiformes es legrado uterino POR ASPIRACION, y en formas malignas o persistentes se indica quimioterapia",
-      "El seguimiento consiste en medir β-hCG 48–72 h post-legrado, luego semanal hasta tres negativos consecutivos y mensual hasta 6 meses (mola parcial) o 6–12 meses (mola completa), evitando embarazo durante este tiempo",
-      "Factores de riesgo incluyen edad materna extrema y antecedentes de mola previa."
+      "Crecimiento anormal del tejido de la placenta, con β-hCG muy alta.",
+      "Mola completa (46,XX o XY, sin feto, placenta en \"racimo de uvas\"; riesgo de malignizar 15-20 %). Mola parcial (69 cromosomas, con feto o restos; riesgo 0,5-5 %).",
+      "Formas malignas: mola invasiva (invade el músculo del útero), coriocarcinoma (metastatiza, sobre todo al pulmón) y tumor del sitio placentario.",
+      "Clínica: sangrado, útero más grande de lo esperado, vómitos intensos, hipertiroidismo, preeclampsia temprana.",
+      "Tratamiento: vaciamiento por aspiración y seguimiento con β-hCG hasta que sea negativa; anticoncepción mientras tanto. Si la β-hCG no baja: metotrexato."
     ]
   },
   {
     "kind": "card",
     "id": "g-301",
-    "title": "Riesgo de preclampsia",
+    "title": "Riesgo de preeclampsia: a quién dar aspirina",
     "points": [
-      "ALTO RIESGO: al menos uno:",
-      "1. antecedente de preeclampsia 2. embarazo múltiple 3. hipertensión crónica 4.diabetes tipo 1 o 2 5.enfermedad renal crónica 6.enfermedad autoinmune (LES o SAF)",
-      "SI MODERADO: dos o más de estos: nuliparidad, obesidad (IMC ≥ 30), edad ≥ 35 años, antecedente familiar de preeclampsia, intervalo intergenésico > 10 años, bajo nivel socioeconómico o factores afrodescendientes",
-      "Estos criterios indican ASA (81–150 mg/día desde las 12–16 semanas (ideal antes de la 16) hasta las 36 semanas)"
+      "Alto riesgo (basta uno): preeclampsia previa, embarazo múltiple, HTA crónica, diabetes tipo 1 o 2, enfermedad renal crónica, lupus o síndrome antifosfolípido.",
+      "Riesgo moderado (dos o más): primer embarazo, obesidad (IMC ≥30), ≥35 años, familiar con preeclampsia, >10 años desde el último embarazo, bajo nivel socioeconómico, afrodescendiente.",
+      "Aspirina 81-150 mg/día en la noche desde las 12-16 semanas (ideal antes de la 16) hasta la 36."
     ]
   },
   {
     "kind": "card",
     "id": "g-302",
-    "title": "Preclampsia",
+    "title": "Preeclampsia",
     "points": [
-      "PA >140/90 en 2 tomas con diferencia 4 horas, DESPUES de la semana 20 o PA >= 160/110 en intervalo 15 min MAS proteinuria (300 mg/d) , relación proteinuria/creatinuria mayor de 0.3 O algún criterio severidad ( 1.trombocitopenia moderada",
-      "2. ax fun. Hep o dolor en hipocondrio derecho",
-      "3.ins,renal crea >1.1",
-      "Edema pulmonar 5",
-      "Cefalea refractaria o alteraciones visuales . PRESENTACIONES ATIPICAS: severidad sin hta ; proteinuria aislada ; inicio menor 20 sem ; tardia > 48 h postparto",
-      "PREVENCIÓN PRECLAMSIA: CALCIO 1200 MG desde SEM 14 ; ASA 81-100 mg antes SEM 16 (desde la 12 en hta crónica) ( reduce riesgo preclamsia severa) DESEMBARAZO: HTA GESTACIONAL O PRECLAMSIA: expectante hasta semana 37 ; SEVERA: entre semana 34-34+7 ; si es necesario antes de la sem 34",
-      "SEGUIMIENTO: 3 veces por semana, monitoreo fetal , paraclínicos, ecografía c/15 días",
-      "AMBULATORIO: solo no severa y con posibilidades controles",
-      "TTO FARMACOLOGICO: HTA CRONICO /PRECLAMSIA NO SEVERA /HTA GESTACIONAL: nifedipino 30 mg cada 6-8 h; alfametil dopa 250 mg cada 12 h (max 500-300); labetalol 120 mg cada 12 horas",
-      "PRECLAMSIA SEVERA: pa cada 10 min x 1 hora, cada 15 min x 1 hora, cada 30 min x 1 hora, luego cada hora por 4 horas",
-      "2. Decúbito lateral izquierdo",
-      "3. Si menor 34 semanas realizar maduración pulmonar betametasona 12 mg cada 24 horas por 48 h, si HELLP se realiza con dexametasona 6 mg cada 12 horas por 48 horas.",
-      "7. Manejo presión: nifedipino 10 mg vo cada 20 min por 3 dosis ; labetalol 20 mg cada 10 min y duplico 40 mg, 80 mg, 80 mg, 80 mg (max 300) ; 3ra línea es hidralazina 5 mg iv cada 20 min, 10 mg ,20 mg, 40 mg ; 4ta si refractaria NITROPRUSIATO DE NA 0.5 – 5 mcg /kg(min)",
-      "8.manejo neurológico: SULFATO MAGNESIO( BAJA RIESGO ECLAMPSIA, Y ABRUPTIO) 4-6 GR continuar 1-2 gr cada hora por 24 horas. Se puede intramuscular 10 gr, (2.5 amp en cada nalga) ,suspender: areflexia, PAD <20%, TFG <30 , FR<15. Antídoto: GLUCONATO DE CALCIO 10 ML IV EN 3 MIN",
-      "9.manejo eclamsia: igual que el anterior, si persite 2 gr en 20 min y continua 2 gr cada h ; si persiste FENITOINA BOLO 10-15 MG/KG , manteimiento dia.",
-      "10. Neuroimagen: perdiadd conciencia prolongada, focalización, inciio convulsion 48 h postparto, menos de 20 sem."
+      "Presión ≥140/90 en 2 tomas separadas 4 horas (o ≥160/110 en 15 minutos) después de la semana 20 + proteinuria (≥300 mg en 24 h o relación proteína/creatinina ≥0,3) o algún signo de gravedad.",
+      "Signos de gravedad: presión ≥160/110, plaquetas <100.000, transaminasas altas o dolor en la parte alta derecha del abdomen, creatinina >1,1, edema pulmonar, cefalea que no cede o alteraciones visuales.",
+      "Formas atípicas: gravedad sin HTA, solo proteinuria, antes de la semana 20 (pensar en mola) o >48 h después del parto.",
+      "Grave: sulfato de magnesio (previene la eclampsia), antihipertensivo si ≥160/110 y terminar el embarazo según edad gestacional y estabilidad.",
+      "Prevención: calcio desde la semana 14 y aspirina antes de la 16 en quien tiene riesgo."
     ]
   },
   {
     "kind": "card",
     "id": "g-303",
-    "title": "HELLP clasificacion Mississippi",
+    "title": "Síndrome HELLP y PRES",
     "points": [
-      "Clase I (GRAVE)(< 50.000/µL, la ), Clase II (50.000–100.000/µL) y Clase III (100.000–150.000/µL). Tennessee",
-      "1. Completo: Si hemólisis (LDH ≥ 600 UI/L, bilirrubina ≥ 1.2 mg/dL o esquistocitos), enzimas hepáticas elevadas (AST/ALT ≥ 70 UI/L) y plaquetas < 100.000/µL",
-      "2.parcial cuando solo cumple uno o dos de estos criterios",
-      "PRES: sn. Encefalopatía reversible posterior: aumento de presión causa desregulación en tono vascular cerebral con posterior hipoperfusión y edema vaso génico: DX: neurológico, RNM TTO: sulfato mg, antihipertensivos, complicaciones: herniación , HSA."
+      "HELLP: hemólisis (LDH ≥600, bilirrubina ≥1,2 o esquistocitos) + transaminasas altas (≥70) + plaquetas bajas (<100.000). Completo si tiene los 3; parcial si 1-2.",
+      "Gravedad por plaquetas (Mississippi): clase I <50.000; II 50.000-100.000; III 100.000-150.000.",
+      "Manejo: sulfato de magnesio, control de presión y terminar el embarazo.",
+      "PRES (encefalopatía posterior reversible): la presión alta altera los vasos del cerebro y produce edema. Cefalea, convulsiones, alteraciones visuales. Diagnóstico con RM. Tratamiento: sulfato de magnesio y bajar la presión."
     ]
   },
   {
     "kind": "card",
     "id": "g-304",
-    "title": "HTA crónica en embarazo",
+    "title": "HTA crónica en el embarazo",
     "points": [
-      "Inicia antes semana 20 o no se quita posterior a 12 sem (3 meses).tto: ASA 81 MG desde SEMANA 12, parto a las 38-39 semanas , farmacológico: labetalol 200-2400 mg dia cada 8-12 h. o nifedipino 30-120 mg/dia . 2da línea: alfa metil dopa : 250-3000 mg dia",
-      "Después del parto retomar régimen normal. antihipertensivos desde día 0 postparto; usar labetalol, nifedipino o enalapril (seguros en lactancia)"
+      "HTA presente antes de la semana 20 o que persiste más de 12 semanas tras el parto.",
+      "Aspirina 81-150 mg desde la semana 12. Parto a las 38-39 semanas si está controlada.",
+      "Fármacos: labetalol (200-2.400 mg/día en 2-3 tomas) o nifedipino (30-120 mg/día). Segunda línea: alfametildopa (250-3.000 mg/día). No usar IECA ni ARA-II en el embarazo.",
+      "Después del parto: labetalol, nifedipino o enalapril (seguros en la lactancia)."
     ]
   },
   {
     "kind": "card",
     "id": "g-305",
-    "title": "ITU en el embarazo",
+    "title": "Infección urinaria en el embarazo",
     "points": [
-      "Tamizaje en 1er tirmestre con urocultivo y uro análisis. Si tuvo ITU en el embarazo se debe realizar control mensual durante el embarazo. BACTERIURIA ASINTOMÁTICA, se debe tratar.tto: . NO QUINOLONAS, NI TETRACICLINAS, NI TMS.",
-      "1.EMPIRICO: nitrofurantoina 100 cada 12 x5 dias; cefalexina 500 cada 6 x 7 dias ; nitrofurantoina se puede utilizar desde el segundo trimestre, hasta antes del termino.. PIELONEFRITIS: ceftriaxona, amisulba, cefepime",
-      "PROFILAXIS: 2 o mas episodios clínicos, se da cefalexina 500 cada noche o nitrofuratoina 100 cada noche; puede ser continuo o postcotio",
-      "Fosfomicina se puede dar en cualquier edad gestacional"
+      "Urocultivo en el primer trimestre. La bacteriuria sin síntomas se trata siempre (riesgo de pielonefritis y parto pretérmino).",
+      "No usar quinolonas ni tetraciclinas; trimetoprim-sulfa evitar en el primer trimestre y al final del embarazo.",
+      "Cistitis o bacteriuria: nitrofurantoína 100 mg cada 12 h 5-7 días (evitar cerca del término) o cefalexina 500 mg cada 6 h 7 días. Urocultivo de control.",
+      "Pielonefritis: hospitalizar y antibiótico intravenoso (ceftriaxona, ampicilina-sulbactam o cefepime).",
+      "Profilaxis si hay ≥2 episodios: cefalexina 500 mg o nitrofurantoína 100 mg cada noche (o después de la relación sexual)."
     ]
   },
   {
     "kind": "card",
     "id": "g-306",
-    "title": "Monitorización anteparto",
+    "title": "Vigilancia fetal antes del parto",
     "points": [
-      "POSTERIOR A 32 SEMANAS; MOVIMIENTOS FETALES: desde sem 16, anormal si no se sientes posterior a sem 24, si no se sientes por mas de 2 horas es alarma. PERFIL BIOFISICO: desde semana 24 sem , 1 bolsillo mayor liq, amniótico: >2cm: 2 puntos",
-      "2. Movimientos respiratorios >=1 de >30s, 2 puntos",
-      "3.mov corporales , extension >= 3: 2 puntos ; tono flexion >= 1 , 2 puntos",
-      "4.NST reactiva 2 puntos. 8-10 normal, si 6 con ila alterado es riesgo de asfixia si mayor 32 sem desembarazar , 6 con ila normal repetir prueba en 24 horas, 4 o menos, alto resigo asfixia parto inminente."
+      "Movimientos fetales: se sienten desde la semana 16-20. Alarma si no se sienten durante más de 2 horas.",
+      "Perfil biofísico (desde la semana 24-28): 2 puntos por cada uno de: bolsillo de líquido >2 cm, movimientos respiratorios ≥30 s, ≥3 movimientos del cuerpo, tono (≥1 flexión-extensión) y monitoría reactiva.",
+      "8-10: normal. 6 con líquido bajo: riesgo; terminar si >32 semanas. 6 con líquido normal: repetir en 24 h. ≤4: alto riesgo de asfixia → terminar el embarazo."
     ]
   },
   {
     "kind": "card",
     "id": "g-307",
-    "title": "Monitoreo fetal intraparto",
+    "title": "Monitoría fetal durante el parto",
     "points": [
-      "FCF: normal entre 110-160 2",
-      "Variabilidad normal 5-25 , marcada >25 , mínima <5 , ausente 3",
-      "Aceleraciones: < 32 sem, 10 lpm x 10 s ; >32 sem 15 lpm x 15 s 4",
-      "Desaceleraciones",
-      "Tempranas: inician con nadir con el acme, con diferencia menor de 30 s ( por compresión cefálica) tardías: nadir posterior al acme desbalance mayor 30 s (insuficiencia uteroplacente) variables: no tiene relación con contarccion (patología de cordon) CATEGORIAS, 1: fcf normal, variabilidad normal, aceleraciones, desaceleraciones solo tempranas, 3: variabilidad disminuida o ausente mas desaceleraciones tardías o variables recurrentes o bradicardia, 2: lo que no están en el 1 o 3",
-      "MANEJO: 2 : reanimación fetal intrauterino y continua vigilancia , 3: reanimación in utero y si no mejor terminar embarazo",
-      "Reanimación in utero: posición decúbito lateral izquireda, levs 500 a 1000 cc , oxigeno si sao2 >95 , uterotonicos."
+      "Frecuencia cardiaca fetal normal: 110-160 lpm.",
+      "Variabilidad normal 5-25 lpm; mínima <5; marcada >25; ausente: sin variación.",
+      "Aceleraciones: tras la semana 32, subidas de ≥15 lpm por ≥15 s (antes: 10 por 10).",
+      "Desaceleraciones tempranas: coinciden con la contracción (compresión de la cabeza, benignas). Tardías: después de la contracción (falta de oxígeno por la placenta). Variables: sin relación con la contracción (compresión del cordón).",
+      "Categoría I: normal. Categoría III: variabilidad ausente con desaceleraciones tardías o variables repetidas, bradicardia o patrón sinusoidal → actuar ya (reanimar y parto rápido). Categoría II: lo intermedio, vigilar y corregir."
     ]
   },
   {
     "kind": "card",
     "id": "g-308",
-    "title": "Alteraciones trabajo de parto",
+    "title": "Trabajo de parto y sus alteraciones",
     "points": [
-      "CONTRACCION EFECTIVA: 3 en 10 min, de 30 s",
-      "ADMISION: dinámica uterina regular, borramiento 50 %, dilatación >3-4 cm",
-      "TRABAJO DE PARTO: dilatación >= 4 cm, contracción efectiva, borramiento >=50% FASES TRABAJO DE PARTO: 1RA FASE: (DILATACION) FASE LATENTE: <6 CM, Se considera prolongada si mas de 7 horas para pasar de 4-5 cm, y mas de 3 h para pasar de 5 a 6 cm",
-      "Se realiza oxitocina y/o amniotimia; FASE ACTIVA: >= 6 CM HASTA 10 CM ,nulíparas 16 horas, multíparas 15 horas",
-      "Se considera prolongada cuando dilatación menor a 1 cm x hora, si no hay cambios en 4 horas con contracciones adecuada, o sin cambios en 6 horas con malas contracciones mas oxitocina",
-      "Se reliaza inicialmente oxitocina tenga o no hipocontratilidad, si estación mas de menos 2 amniotomia",
-      "Si no progresa ceraea 2DA FASE: (EXPULSIVO) nulípara hasta 3 horas, multípara hasta 2 horas, se puede aumentar oxitocina y si no progresa cesarea",
-      "(misoprostol se podría considerar si no hay oxitocina) 3RA FASE: (ALUMBRAMIENTO)."
+      "Contracciones efectivas: 3 en 10 minutos de al menos 30 segundos.",
+      "Trabajo de parto activo: contracciones regulares, cuello borrado ≥50 % y dilatación ≥4 cm.",
+      "Primer periodo (dilatación): fase latente hasta 6 cm (prolongada si >7 h de 4 a 5 cm o >3 h de 5 a 6 cm); fase activa de 6 a 10 cm (prolongada si avanza <1 cm por hora). Corregir con oxitocina o romper la bolsa.",
+      "Segundo periodo (expulsivo): hasta 3 h en primerizas y 2 h en multíparas (1 h más con epidural).",
+      "Tercer periodo (alumbramiento): placenta en <30 minutos con manejo activo."
     ]
   },
   {
     "kind": "card",
     "id": "g-309",
-    "title": "Planos de LEE",
+    "title": "Planos de De Lee",
     "points": [
-      "Descenso fetal respecto a las espinas ciáticas: 0 es al nivel de las espinas (encajamiento); los negativos (-5 a -1) está por encima y los positivos (+1 a +5) que está por debajo, siendo +5 la salida fetal."
+      "Miden cuánto ha bajado la cabeza del bebé respecto a las espinas ciáticas de la pelvis.",
+      "0: a la altura de las espinas (cabeza encajada). Negativos (−5 a −1): por encima. Positivos (+1 a +5): por debajo; +5 = la cabeza ya asoma."
     ]
   },
   {
     "kind": "card",
     "id": "g-310",
-    "title": "Embarazo postermino",
+    "title": "Embarazo prolongado (postérmino)",
     "points": [
-      "PRETERMINO EXTREMO <=28 SEM ; PRETERMINO SEVERO 30-28 ; PT MODERADO 33-31 ; PT TARDIO 36,6 -34 ; TERMINO PRECOZ 38,6-37 ; TERMINO MADURO 41,6 -39 ; POSTERMINO >42",
-      "ETIOLOGIA: causa genética, anencefalcia, influencia fetal",
-      "PREVENCION: despegamiento mebranas > 40 sem",
-      "TTO: cita 40 sem si todo normal espectacte, >41 sem, finalización embarazo",
-      "MAX 41.5 sem . si IMC >30 o >40 años, DESEMBARAZO 40 SEM."
+      "Postérmino: ≥42 semanas. Aumenta el riesgo de muerte fetal, líquido bajo y bebé grande.",
+      "Prevención: despegar membranas (barrido) desde la semana 40-41.",
+      "Control en la semana 40; si todo está bien, esperar; terminar el embarazo entre las 41 y 41+6 semanas.",
+      "Inducir en la semana 40 si IMC >30 o edad ≥40 años."
     ]
   },
   {
     "kind": "card",
     "id": "g-311",
-    "title": "Pretérmino extremo ≤28 semanas",
+    "title": "Clasificación por edad gestacional",
     "points": [
-      "Muy pretérmino 28–31+6 semanas, pretérmino moderado 32–33+6 semanas y pretérmino tardío 34–36+6 semanas; a término temprano 37–38+6 semanas, término completo (o maduro) 39–40+6 semanas, término tardío 41–41+6 semanas y postérmino ≥42 semanas"
+      "Pretérmino extremo: <28 semanas. Muy pretérmino: 28-31+6. Moderado: 32-33+6. Tardío: 34-36+6.",
+      "Término temprano: 37-38+6. Término completo: 39-40+6. Término tardío: 41-41+6.",
+      "Postérmino: ≥42 semanas."
     ]
   },
   {
     "kind": "card",
     "id": "g-312",
-    "title": "Profilaxis ST",
+    "title": "Profilaxis para estreptococo del grupo B",
     "points": [
-      "GRUPO B. INDICACIONES: cultvo positivo, bebe anterior afectado, bacteriuria por st.grupo b, sin cultivo con ruptura de membranas mas de 18 h, trabajo de parto sin cultivo",
-      "Se da TTO: penicilina cristalina 5 millones incial, continua con 2.5 millones cada 4 horas o ampicilina 2 gr inicial continuar 1 gr iv cada 4 h."
+      "Indicada si: cultivo positivo en este embarazo, hijo previo con infección por estreptococo B, bacteriuria por estreptococo B en el embarazo, o sin cultivo con parto <37 semanas, bolsa rota ≥18 h o fiebre.",
+      "Penicilina cristalina 5 millones de unidades intravenosa y luego 2,5-3 millones cada 4 h hasta el parto; o ampicilina 2 g y luego 1 g cada 4 h.",
+      "Alergia leve: cefazolina; alergia grave: clindamicina o vancomicina."
     ]
   },
   {
     "kind": "card",
     "id": "g-313",
-    "title": "Hemorragia en embarazo",
+    "title": "Sangrado en el primer trimestre",
     "points": [
-      "PRIMER TRIMESTRE: la BHCG aumenta 35% cada 48 horas, si se estanca o baja se piensa en ECTÓPICO O FALLIDO",
-      "1. IMPLANTACIÓN: entre semana 10-14",
-      "2. AMENAZA DE ABORTO: sangrado sin apertura de cuello",
-      "ABORTO: sangrado con cambio cervical TTO: si no tenemos mifepristona se puede dar solo misoprostol. < 12 sem, primero dosis única de mifepristona 200 mg dosis única, seguida de misoprostol 800 mcg sublingual dosis única, nueva dosis cada 6 horas. 12-16 sem, dosis única mifepristona oral 200 mg, seguido misoprostol 400 mcg cada 4 horas max 5 dosis",
-      "Quirugico si sangrado intenso o si es séptico.",
-      "4.EMBARAZO ECTÓPICO: fuera de cavidad uterina, ampular mas común, RIESGO: alto: ectópico previo, cx tubarica, diu, fertilización invitro; moderado: its, epi, cx pélvica, cigarrillo ; bajo: aborto inducido, apendicectomia",
-      "DX: ecografia mas BHCG. TTO: inestable laparotomía, si estable metrotexato, o QX si cumple criterios",
-      "SEGUNDO TRIMESTRE:",
-      "1. PLACENTA PREVIA: contacto con el OCI, PLACENTA BAJA: menor de 2 cm del OCI, sin tocarlo. DX: ecografia TTO: asintomático: evitar relaciones sexuales, tactos, cesarea 36-37+6 ; sintomático: manejo hospitaliario, monitorización y maduración si requiere.",
-      "2. ABRUPTIO PLACENTAE: contracción uterina, sangrado; si es leve si toca madurar se madura y se desembarazo; si es grave se desembaraza.",
-      "3. VASA PREVIA: vasos fetales por oci, sangrado masivo, no dolorso, con bradicardia fetal ; TTO: cesarea urgente 4. RUPTURA UTERINA: antecedenede de cesarea, dolor inteso, sangrado vaginal, sin contracción uterina TTO: CX URGENTE."
+      "La β-hCG normal sube ≥35 % cada 48 h; si se estanca o baja, pensar en embarazo ectópico o embarazo que no avanza.",
+      "Sangrado de implantación: escaso, cerca del retraso menstrual.",
+      "Amenaza de aborto: sangrado con cuello cerrado. Aborto en curso: sangrado con cuello abierto.",
+      "Tratamiento médico del aborto <12 semanas: mifepristona 200 mg y, 1-2 días después, misoprostol 800 µg (si no hay mifepristona, solo misoprostol repitiendo dosis). 12-16 semanas: mifepristona y luego misoprostol 400 µg cada 3-4 h.",
+      "Alternativa: aspiración uterina (AMEU).",
+      "Siempre: si es Rh negativo, inmunoglobulina anti-D."
     ]
   },
   {
     "kind": "card",
     "id": "g-314",
-    "title": "Embarazo ectópico PTE estable",
+    "title": "Embarazo ectópico en paciente estable",
     "points": [
-      "Si BHCG ≥ 5000 o masa ≥ 4cm, o si actividad cardiaca o complicación orgánica se realiza cirugia ; Si desea fertilidad: Salpingostomía ; Si no desea fertilidad: Salpingectomía ; Si no cumple los criterios se da tratamiento con metotrexate ; Si BHCG < 1000 o masa < 3cm, asintomática se hace seguimiento en 48 horas",
-      "Si disminuyo BHCG < 15% continuar manejo expectante, no metotrexate"
+      "Cirugía si: β-hCG ≥5.000, masa ≥4 cm, latido embrionario o rotura. Laparoscopia: salpingostomía si quiere más hijos y la otra trompa está mal; salpingectomía en el resto.",
+      "Metotrexato si no cumple criterios de cirugía y puede asistir a controles.",
+      "Manejo expectante si β-hCG <1.000, masa <3 cm y sin síntomas; control a las 48 h (sigue si va bajando).",
+      "Inestable: cirugía urgente."
     ]
   },
   {
     "kind": "card",
     "id": "g-315",
-    "title": "Hemorragia postparto",
+    "title": "Hemorragia posparto",
     "points": [
-      "ACOG: perdida superior a 1000 ml en primeras 24 horas postparto, o perdida con síntomas",
-      "Algunos casos sugieren 500-1000 ml",
-      "Índice de choque: fc/tas normal adulto 0.5-0,7 ; embarazada 0,7-0,9",
-      "Etiología: 4 T: tono, trauma, tejido, trombina",
-      "Manejo: en trabajo de parto: oxitocina profiláctica 10 U en parto, en cesarea 5 u y continuar 30 u en 500 cc para 4 horas, masaje uterino, tracción del cordon",
-      "Manejo hemorragia: iniciar reanimación con liquidos (bolo 4cc/kg) y hemoderivasdos ( 2 u GR, plaquetas 1 U 50 CC, OBJ >50.000, si tiempos prolongados dar 1U de plasma, si atonía uterina masaje uterino, oxitocina 10 -40 U en 500-1000cc y pasar en infusión ; acido tranexamico 1cc /min, metergil: 0.2 mg IM cada 2-4 h ( no en hipertensas) , taponamiento con balo de bakri",
-      "Si no mejora embolizacion arterias uterina."
+      "Pérdida ≥1.000 ml en las primeras 24 h o cualquier pérdida con signos de shock (algunas guías: ≥500 ml en parto vaginal).",
+      "Índice de choque (FC/PAS): normal en embarazada 0,7-0,9; >1 indica sangrado importante.",
+      "Causas (4 T): tono (útero que no se contrae, la más frecuente), trauma (desgarros), tejido (restos de placenta) y trombina (coagulación).",
+      "Prevención: oxitocina 10 U intramuscular tras la salida del bebé (5 U intravenosa lenta en cesárea + infusión), tracción controlada del cordón y masaje uterino.",
+      "Manejo: pedir ayuda, dos vías, líquidos y sangre, masaje, oxitocina, ácido tranexámico 1 g intravenoso en las primeras 3 h, y otros uterotónicos (metilergonovina, misoprostol). Si no cede: balón, suturas o histerectomía."
     ]
   },
   {
     "kind": "card",
     "id": "g-316",
-    "title": "Coriamnionitis",
+    "title": "Corioamnionitis",
     "points": [
-      "Infección intrauterina",
-      "SOSPECHA: Fiebre materna mas 1",
-      "Taquicarida fetal >160 lpm 2",
-      "Leucocitosis > 15 mil 3",
-      "Flujo cervical purulento",
-      "CONFIRMA: gram liquido amniótico, citológico, patología",
-      "MANEJO: TERMINAR EMBARAZO SIN IMPORTAR EDAD GESTACIONAL, antipirético (acetaminofén); se realiza neuroprofilaxis con sulfato si <32 sema y maduración pumonar si menor de 34 sem",
-      "Antibiotico: AMPICILINA 2 GR IV CADA 6 HORAS + GENTAMICINA 5 MG/KG DIA si cesarea SE AGREGA METRONIDAZOL O CLINDAMICINA ."
+      "Infección dentro del útero (membranas y líquido).",
+      "Sospecha: fiebre materna + otro signo: taquicardia fetal >160, leucocitos >15.000, flujo purulento por el cuello.",
+      "Confirmación: Gram o cultivo del líquido amniótico, o patología de la placenta.",
+      "Manejo: terminar el embarazo sea cual sea la edad gestacional; acetaminofén para la fiebre; sulfato de magnesio si <32 semanas; corticoides si <34 semanas (sin retrasar el parto).",
+      "Antibióticos: ampicilina 2 g intravenosa cada 6 h + gentamicina 5 mg/kg/día; en cesárea añadir clindamicina o metronidazol."
     ]
   },
   {
     "kind": "card",
     "id": "g-317",
-    "title": "Maduración pulmonar",
+    "title": "Maduración pulmonar fetal",
     "points": [
-      "SE REPITE SI YA PASARON MAS DE 14 DIAS ( 2 semanas) (se realiza hasta la 33.6 sem)"
+      "Corticoides (betametasona 12 mg intramuscular 2 dosis separadas 24 h) si hay riesgo de parto entre las semanas 24 y 33+6.",
+      "Se puede repetir un ciclo de rescate si pasaron >14 días y sigue el riesgo."
     ]
   },
   {
     "kind": "card",
     "id": "g-318",
-    "title": "Endometritis",
+    "title": "Endometritis posparto",
     "points": [
-      "Inflamación –infección del endometrio po sterior a parto o aborto CLINICA: fiebre después de 24 horas del parto, dolor abdominal, loquios purulentos, sangrado vaginal abundante DX: eco y labs son inespecíficos, TAC es mas sensible TTO: CLINDAMICINA 900 MG CADA 8 H + GENTAMICINA 5 MG / KG CADA 24 HORAS X 14 DIAS, si colonización por SGB se agrega AMPI-SULBACTAM 3 GR CADA 6 HORAS"
+      "Infección del endometrio después de un parto (sobre todo cesárea) o aborto.",
+      "Fiebre después de 24 h del parto, dolor en el útero, loquios con mal olor, sangrado.",
+      "Diagnóstico clínico; ecografía si se sospechan restos o absceso.",
+      "Clindamicina 900 mg intravenosa cada 8 h + gentamicina 5 mg/kg cada 24 h hasta 24-48 h sin fiebre. Si hay estreptococo B, añadir ampicilina."
     ]
   },
   {
     "kind": "card",
     "id": "g-319",
-    "title": "Rciu",
+    "title": "Restricción del crecimiento intrauterino (RCIU)",
     "points": [
-      "Peso o circunferencia abdominal por debajo p3 ; entre 3 y 10 con doppler fetal normal es feto pequeño",
-      "Rciu 1: índice pulstail de art",
-      "Uterina > 95 ; índice cerbro placentarion <p.5 . Rciu 2: fujo diastólico ausente en art",
-      "Umbilicar Rciu 3: flujo diastólico reverso en ar",
-      "Umbilical ; flujo ausente en ductus",
-      "Rciu 4: flujo diastólico reverso en ductos o registro cardiotocografico patológico",
-      "Seguimiento: fpeg: cada 2 sem , r1: cada semana, r2: cada 3 dias r3: cada 24 – 48 h, r4: cada 12 h. momento de parto: fpeg: 40 sem ( vaginal) ; r1: 37 sem ( vaginal) r2: 34 sem (cesarea) r3: 30 sem (cesarea) r4: 26 sem *Todo alteracion del monitoreo más RCIU * → Se debe desembarazar"
+      "Peso o circunferencia abdominal por debajo del percentil 3, o entre 3 y 10 con Doppler alterado. Entre 3 y 10 con Doppler normal: feto pequeño constitucional.",
+      "Estadio I: arteria uterina alterada (pulsatilidad >p95) o índice cerebroplacentario <p5. II: flujo diastólico ausente en la arteria umbilical. III: flujo reverso en la umbilical o ductus venoso alterado. IV: flujo reverso en el ductus o monitoría patológica.",
+      "Controles: pequeño cada 2 semanas; I cada semana; II cada 2-3 días; III cada 24-48 h; IV cada 12 h.",
+      "Parto: pequeño a las 40 semanas; I a las 37; II a las 34 (cesárea); III a las 30 (cesárea); IV a las 26 (cesárea)."
     ]
   },
   {
     "kind": "card",
     "id": "g-320",
-    "title": "Anticoagulación en el embarazo",
+    "title": "Anticoagulación en mujeres con válvula mecánica",
     "points": [
-      "Si paciente con antecedente de remplazo valvular se debe continuar con warfarina",
-      "Se recomienda dosis en 1er trimestre de -< 5mg dia para reducir teratogenicidad y hemorragia intracraneal . 2do y 3er trimestre: Se ajusta warfarina a objetivo de INR .Si madre rechaza tto de warfarina por riesgos se puede utilizar HBPM solo en dosis terapéuticas",
-      "No se recomienda Doacs"
+      "Las válvulas mecánicas necesitan anticoagulación durante todo el embarazo.",
+      "Warfarina: si la dosis es ≤5 mg/día se puede mantener en el primer trimestre (menos riesgo de malformaciones); en el segundo y tercero, ajustar al INR. Cambiar a heparina antes del parto.",
+      "Alternativa: heparina de bajo peso molecular a dosis plena con control de anti-Xa.",
+      "No usar anticoagulantes directos (DOAC) en el embarazo."
     ]
   },
   {
     "kind": "card",
     "id": "g-321",
-    "title": "Gestantes con exposición a parvovirus",
+    "title": "Parvovirus B19 en el embarazo",
     "points": [
-      "Se debe tomar siempre IgG e IgM . Si gestante con inmunidad puede estar tranquilo , Si IgM Positivo: Si gestante no tiene inmunidad < 20 semanas → Asesoramiento sobre riesgo de pérdida fetal , Si > 20 semanas → Ecografía fetal cada 1-2 semanas por riesgo de hidrops fetal"
+      "Ante contacto: medir IgG e IgM.",
+      "IgG positiva con IgM negativa: inmune, tranquila.",
+      "IgM positiva (infección reciente): <20 semanas → riesgo de pérdida fetal, dar consejería; vigilar con ecografía y Doppler de la cerebral media cada 1-2 semanas por riesgo de anemia fetal e hidrops (líquido en el bebé)."
     ]
   },
   {
     "kind": "card",
     "id": "g-322",
-    "title": "Colestasis intrahepática en el embarazo",
+    "title": "Colestasis intrahepática del embarazo",
     "points": [
-      "Trastorno caracterizado por prurito (predominio palmo-plantar) y elevación de ácidos biliares, con riesgo fetal",
-      "Diagnóstico: prurito + ácidos biliares ≥10 µmol/L (puede haber elevación de transaminasas)",
-      "Manejo: ácido ursodesoxicólico 10–15 mg/kg/día para mejorar síntomas y bioquímica, antihistamínicos para el prurito",
-      "Se finaliza embarazo cuando: Entre 36 semanas: Cuando ácidos biliares son > 100 mmol/L o más . Entre 34 - 36 semanas:",
-      "1. Prurito materno insoportable aun con tratamiento",
-      "2. antecedente de muerte fetal antes de las 36 semanas por colestasis intrahepática",
-      "3.enfermedad hepática preexistente o aguda con deterioro de la función hepática"
+      "Picazón intensa en palmas y plantas en el tercer trimestre, con ácidos biliares altos (≥10 µmol/l). Puede haber transaminasas altas. Riesgo de muerte fetal.",
+      "Ácido ursodesoxicólico 10-15 mg/kg/día y antihistamínicos para la picazón.",
+      "Terminar el embarazo: ácidos biliares ≥100 → a las 35-36 semanas; menores → hacia las 37-39 semanas. Antes (34-36) si la picazón es insoportable, hay muerte fetal previa por colestasis o empeora el hígado."
     ]
   },
   {
     "kind": "card",
     "id": "g-323",
-    "title": "Síndrome de parto pretérmino",
+    "title": "Amenaza de parto pretérmino",
     "points": [
-      "Definición: Dinámica uterina ( 4- 6 contracciones en 60 min )+ cambios cervicales antes de las 37 semanas",
-      "Sí dilatación ≥ 3 → Alto riesgo de PP inminente: Tocolisis (si < 34 semanas)",
-      "Corticoides (si 24–34 semanas)",
-      "Considerar magnesio (si < 32 semanas)",
-      "Manejo hospitalario",
-      "Sí dilatación < 3 → Evaluar longitud cervical con cervicometría por ecografía transvaginal",
-      "Cervicometría ≥ 30 mm: Bajo riesgo → Manejo conservador, alta y signos de alarma . Cervicometría ≤ 20mm: Riesgo alto → Manejo activo → Tocolisis (si < 34 semanas)",
-      "Corticoides (si 24–34 semanas)",
-      "Considerar magnesio (si < 32 semanas)",
-      "Cervicometría 21-29 mm: Zona gris",
-      "Riesgo intermedio → Biomarcadores Fibronectina fetal (fFN), PAMG-1 (PartoSure), IGFBP-1 (Actim Partus)",
-      "Si son positivos: Manejo activo , Si son negativos: Continuar manejo conservador . TOCOLISIS (24–34 semanas, sin contraindicaciones) nifedipino: 20 mg VO de carga, seguido de 10–20 mg VO cada 6–8 horas hasta completar 48 horas (máximo 120 mg/día); como alternativas, indometacina (<32 semanas) 50–100 mg de carga y luego 25–50 mg cada 6–8 horas por máximo 48 h",
-      "Indometacina contraindicada en asma"
+      "Contracciones regulares (≥4 en 20-30 minutos o 6-8 en 60) + cambios en el cuello antes de las 37 semanas.",
+      "Dilatación ≥3 cm: alto riesgo → hospitalizar, uteroinhibir si <34 semanas (nifedipino), corticoides si 24-34 semanas, sulfato de magnesio si <32 semanas (protege el cerebro del bebé).",
+      "Dilatación <3 cm: medir el cuello por ecografía transvaginal. ≥30 mm: bajo riesgo → alta con signos de alarma. ≤20 mm: alto riesgo → manejo activo. 20-30 mm: valorar fibronectina."
     ]
   },
   {
@@ -652,134 +630,156 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-324",
     "title": "Antecedente de parto pretérmino",
     "points": [
-      "Si PTT Entre 14 - 27 semanas → Cervicometría en semana 14 ; Si PTT entre 28 - 36 semanas → Cervicometría a la semana 16 . Cervicometría: Si > 30 mm → Repetir cada 2 semanas hasta la semana 24 , Si entre 26 a 29 mm → Repetir cada semana hasta semana 24 . Si ≤ 25 mm → Cerclaje y progesterona vaginal"
+      "Si el parto previo fue entre las semanas 14-27: medir el cuello desde la semana 14. Si fue entre 28-36: desde la semana 16.",
+      "Cuello >30 mm: repetir cada 2 semanas hasta la 24. 26-29 mm: cada semana. ≤25 mm: cerclaje y progesterona vaginal.",
+      "Progesterona vaginal desde la semana 16 en todas con antecedente."
     ]
   },
   {
     "kind": "card",
     "id": "g-325",
-    "title": "Manejo RPM pretérmino",
+    "title": "Ruptura prematura de membranas pretérmino",
     "points": [
-      "< 24 SEMANAS → Si está en trabajo de parto, evolucionar por mayor riesgo de infección",
-      "Si no está en trabajo de parto se hace consejería de alcanzar gestación viable. 24-34 SEMANAS → Si no esta en trabajo de parto se hospitaliza, manejo expectante, maduración pulmonar, antibiotico (Ampicilina 2gr IV + Eritromicina 250mg VO cada 6 horas x 2 días y de ahí oral x 5 dias mas) y Sulfato de magnesio si <32 semanas y hay parto inminente o parto programado dentro de 24 horas . 34-37 SEMANAS → Desembarazar"
+      "<24 semanas: alto riesgo de infección; consejería sobre opciones (seguir o terminar).",
+      "24-34 semanas sin trabajo de parto ni infección: hospitalizar, manejo expectante, corticoides, antibióticos (ampicilina 2 g intravenosa cada 6 h + eritromicina 250 mg oral cada 6 h por 2 días, luego oral 5 días más) y sulfato de magnesio si <32 semanas y el parto es inminente.",
+      "≥34 semanas: terminar el embarazo.",
+      "Si hay infección, sangrado o sufrimiento fetal: terminar en cualquier edad."
     ]
   },
   {
     "kind": "card",
     "id": "g-326",
-    "title": "Polihidramnios",
+    "title": "Polihidramnios (exceso de líquido amniótico)",
     "points": [
-      "ILA (Índice de Líquido Amniótico) > 24 o bola mayor ≥ 8",
-      "Leve (24 a 29.9 cm): Expectante, Revisión cada 1-2 semanas, Si no hay complicaciones: No requiere desembarazar; suele ser idiopático y benigno",
-      "Moderada (30 - 34.9 cm)",
-      "Antes de la 37 semana: Expectante, si no hay complicaciones ; 37 - 39 semana: Considerar inducción de parto si: malformación fetal, macrosomia fetal, . >39 semanas: Inducir parto . Severa (≥ 35 cms ) Si menor 34 semanas: Expectante, corticoide si hay riesgo de parto prematuro, 34 - 37 semanas: Si hay signos de deterioro (disnea materna, dolor abdominal, amenaza de parto, compromiso fetal) → considerar finalizar embarazo. > 37 semanas: Parto"
+      "Índice de líquido amniótico (ILA) ≥24-25 cm o bolsillo máximo ≥8 cm.",
+      "Causas: idiopático (la mayoría), diabetes, malformaciones fetales (esófago, sistema nervioso), embarazo múltiple, infecciones.",
+      "Leve (24-29,9): suele ser benigno; vigilar cada 1-2 semanas.",
+      "Moderado (30-34,9) y grave (≥35): buscar causa, más vigilancia; si hay dificultad respiratoria materna, amniodrenaje; terminar según edad gestacional (inducir a partir de las 39 semanas o antes si hay complicaciones)."
     ]
   },
   {
     "kind": "card",
     "id": "g-327",
-    "title": "Oligohidramnios ILA <5 cm o bolsillo máximo <2 cm",
+    "title": "Oligohidramnios (poco líquido amniótico)",
     "points": [
-      "Clasifica en normal bajo (leve) (ILA 5–8 cm o bolsillo 2–4 cm), moderado (ILA <5-2 cm o bolsillo 1 cm) y severo (ILA <2 cm o bolsillo <1 cm); el manejo: si es aislado y ≥37 semanas : finalizar la gestación, mientras que si es <37 semanas :manejo expectante."
+      "ILA <5 cm o bolsillo máximo <2 cm. Límite bajo: ILA 5-8 cm.",
+      "Causas: ruptura de membranas, insuficiencia de la placenta (RCIU), malformaciones renales del bebé, embarazo prolongado.",
+      "Aislado y ≥36-37 semanas: terminar el embarazo. Antes: manejo expectante con vigilancia."
     ]
   },
   {
     "kind": "card",
     "id": "g-328",
-    "title": "Desembarazo en gemelar",
+    "title": "Cuándo terminar un embarazo gemelar",
     "points": [
-      "Monocorionico/Monoamniótico → 34 semanas ; Monocoriónicos/Biamniotico → 36+6 semanas Bicorial/Biaminiotico → 38+6 semanas"
+      "Monocorial monoamniótico (una placenta y una bolsa): a las 32-34 semanas por cesárea.",
+      "Monocorial biamniótico (una placenta, dos bolsas): hacia las 36-37 semanas.",
+      "Bicorial biamniótico (dos placentas): hacia las 37-38+6 semanas."
     ]
   },
   {
     "kind": "card",
     "id": "g-329",
-    "title": "Hipotiroidismo en el embarazo Dosis de levotiroxina 2.1 mcg/kg/dia .Meta TSH",
+    "title": "Hipotiroidismo en el embarazo",
     "points": [
-      "< 4, idealmente < 2.5 .",
-      "El ajuste de levotiroxina debe realizarse de inmediato tras la confirmación del embarazo."
+      "Al confirmar el embarazo, subir la levotiroxina de inmediato (~25-30 % más; por ejemplo 2 tabletas extra por semana).",
+      "Hipotiroidismo nuevo: levotiroxina ~1,6-2 µg/kg/día.",
+      "Meta: TSH <2,5 (al menos <4)."
     ]
   },
   {
     "kind": "card",
     "id": "g-330",
-    "title": "Hipotiroxinemia gestacional aislada",
+    "title": "Hipotiroxinemia aislada e hipotiroidismo subclínico",
     "points": [
-      "T4 libre baja con TSH normal durante el embarazo",
-      "Por aumento de la globulina trasportadora de hormona tiroidea, No se recomienda tratamiento rutinario con levotiroxina según guías actuales (ATA), porque no hay evidencia clara de beneficio; se confirma con rangos por trimestre y se realiza seguimiento.",
-      "HIPOTIROIDISMO SUBCLÍNICO (T4L Normal) TSH > 10 → Tratamiento . TSH 4-10 . Anticuerpos Anti-Tiroperoxidasa (Anti TPO) Positivo → Tratamiento , (Anti TPO) Negativo → Considerar tratamiento o seguimiento .Tratamiento: Levotiroxina a 1.3 mcg/kg/dia Si el diagnostico es previo a embarazo, se aumenta dosis 30-50%, al terminar embarazo regresar a dosis previa Si el diagnóstico es en el embarazo: Al finalizar se reduce 30% de dosis y evaluar en 6-8 semanas",
-      "Si TSH 4-10 con Anti TPO Negativo y tiene levotiroxina <50 mcg dia, se suspende la dosis y se evalua TSH en 6 a 8 semanas"
+      "Hipotiroxinemia aislada: T4 libre baja con TSH normal. No se recomienda tratarla de rutina; confirmar con valores por trimestre.",
+      "Hipotiroidismo subclínico (TSH alta con T4 libre normal): TSH >10 → tratar. TSH 4-10 con anticuerpos anti-TPO positivos → tratar. TSH 4-10 con anti-TPO negativos → considerar tratar o vigilar.",
+      "Dosis de inicio: ~1 µg/kg/día (o 50 µg/día)."
     ]
   },
   {
     "kind": "card",
     "id": "g-331",
-    "title": "Hipertiroidismo en el embarazo Primera línea",
+    "title": "Hipertiroidismo en el embarazo",
     "points": [
-      "Propiltiouracilo en 1er trimestre , Metimazol en 2do y 3er trimestre"
+      "Primer trimestre: propiltiouracilo (el metimazol puede causar malformaciones en esta etapa).",
+      "Segundo y tercer trimestre: cambiar a metimazol (el propiltiouracilo daña el hígado).",
+      "No confundir con el aumento normal de hormonas por la β-hCG en el primer trimestre (no se trata)."
     ]
   },
   {
     "kind": "card",
     "id": "g-332",
-    "title": "Expulsión de obito en 2DO trimestre de embarazo",
+    "title": "Expulsión de un feto muerto",
     "points": [
-      "1. Si < 28 semanas con misoprostol u oxitocina IV 2.Si > 28 semanas protocolo de inducción convencional . Se puede utilizar sonda foley cuando cuello uterino no es favorable"
+      "<28 semanas: misoprostol (dosis según la edad gestacional) u oxitocina intravenosa.",
+      ">28 semanas: inducción convencional (misoprostol en dosis bajas u oxitocina).",
+      "Si el cuello no está favorable: sonda Foley para madurarlo.",
+      "Con cesárea previa: evitar misoprostol en el tercer trimestre (riesgo de rotura uterina)."
     ]
   },
   {
     "kind": "card",
     "id": "g-333",
-    "title": "Clasificación riesgo cromosomopatías - Muy alto ½ -…",
+    "title": "Riesgo de alteraciones cromosómicas",
     "points": [
-      "CLASIFICACIÓN RIESGO CROMOSOMOPATÍAS",
-      "Muy alto ½ - 1/10 → Prueba invasiva ; Alto 1/11 - 1/250 → ADN fetal libre libre o prueba invasiva .Intermedio: 1/251 - 1/1100 → ADN fetal libre .Bajo : 1/1100 O > → Translucencia nucal"
+      "Se calcula en la ecografía de las semanas 11-14 (translucencia nucal) con la edad y marcadores en sangre.",
+      "Muy alto (1/2 a 1/10): prueba invasiva (biopsia de vellosidades o amniocentesis).",
+      "Alto (1/11 a 1/250): ADN fetal en sangre materna o prueba invasiva.",
+      "Intermedio (1/251 a 1/1.100): ADN fetal en sangre materna.",
+      "Bajo (<1/1.100): control habitual."
     ]
   },
   {
     "kind": "card",
     "id": "g-334",
-    "title": "Trombocitopenia gestacional",
+    "title": "Plaquetas bajas en el embarazo",
     "points": [
-      "Ocurre posterior al primer trimestre, usualmente con plaquetas superior a 100.000 . Purpura trombocitopenica inmune: Diagnostico de exclusión, en gestantes a menudo en 1er trimestre, plaquetas < 10.000, El manejo se da si plaquetas <50.000 con inmunoglobulina IV y corticoides . Púrpura trombótico trombocitopenica: Fiebre, falla renal, hemólisis, microangiopática"
+      "Trombocitopenia gestacional: la más frecuente; leve (casi siempre >70.000-100.000), en el segundo o tercer trimestre, sin riesgo para el bebé. No requiere tratamiento.",
+      "Púrpura trombocitopénica inmune (PTI): puede aparecer desde el primer trimestre y con plaquetas muy bajas. Diagnóstico de exclusión. Tratar si <30.000-50.000 o sangra: corticoides o inmunoglobulina intravenosa.",
+      "Púrpura trombótica trombocitopénica (PTT): fiebre, fallo renal, alteraciones neurológicas y anemia hemolítica con esquistocitos. Urgencia: plasmaféresis.",
+      "Pensar también en HELLP y preeclampsia."
     ]
   },
   {
     "kind": "card",
     "id": "g-335",
-    "title": "Hiperemesis gravidica",
+    "title": "Hiperemesis gravídica",
     "points": [
-      "Desde semana 9 , Diagnóstico: Náuseas/vómito , Cetonuria , Pérdida peso 5%, previo del embarazo . Tratamiento: Cuando los síntomas interfieren con la capacidad de comer y beber , hospitaliza : Si deshidratación o no tolerancia a vía oral: Se",
-      "Solicitar hemograma, electrolitos, función renal ,LEV con lactato de ringer y 100 mg de tiamina , Manejo ambulatorio con Doxilamina y piridoxina por 1 semana o durante el primer trimestre . en primer trimestre se puede dar 1ro metoclopramida, 2do difenhidramina 3ro ondansetron"
+      "Vómitos intensos en el primer trimestre con cetonas en orina y pérdida ≥5 % del peso previo.",
+      "Hospitalizar si hay deshidratación o no tolera la vía oral: hemograma, electrolitos y función renal; líquidos intravenosos (lactato de Ringer) con tiamina 100 mg antes de la glucosa.",
+      "Primera línea: doxilamina + piridoxina. Luego: metoclopramida o antihistamínicos (difenhidramina, dimenhidrinato), y ondansetrón.",
+      "Pensar en mola y embarazo múltiple."
     ]
   },
   {
     "kind": "card",
     "id": "g-336",
-    "title": "Anemia fetal en incompatibilidad RH",
+    "title": "Anemia fetal por incompatibilidad Rh",
     "points": [
-      "Tamizaje y diagnostico inicial :Doppler de arteria cerebral media (ACM): Mide la velocidad pico sistolica (vps/psv)",
-      "Si VPS-ACM > 1.5 MoM → Sugiere anemia fetal moderada a severa . Esto ocurre porque la anemia disminuye la viscosidad sanguínea y aumenta la velocidad del flujo . Confirmación diagnóstica: Si ACM > 1.5 MoM: Se solicita muestra directa del cordón umbilical",
-      "Cordocentesis . Tratamiento: Si se confirma anemia fetal moderada/severa, Transfusión sanguínea: Administración de glóbulos rojos O negativo, concentrados y filtrados",
-      "Se realiza vía intravascular (cordón) o intraperitoneal",
-      "Repetir cada 2–3 semanas según seguimiento Doppler",
-      "Objetivo obstétrico: Prolongar el embarazo hasta 32-34 semanas de edad gestacional"
+      "Madre Rh negativo con anticuerpos contra los glóbulos rojos del bebé Rh positivo.",
+      "Tamizaje con Doppler de la arteria cerebral media: velocidad pico >1,5 MoM sugiere anemia moderada-grave (la sangre anémica es más fluida y corre más rápido).",
+      "Confirmar con cordocentesis (muestra de sangre del cordón).",
+      "Tratamiento: transfusión intrauterina de glóbulos rojos O negativo."
     ]
   },
   {
     "kind": "card",
     "id": "g-337",
-    "title": "Prevención de incompatibilidad RH",
+    "title": "Prevención de la isoinmunización Rh",
     "points": [
-      "En pacientes sin anticuerpo ANTI-D, se recomienda administrar INMUNOGLOBULINA ANTI D, lo que reduce la posibilidad de desarrollar anticuerpos o un feto RH positivo. Se debe colocar entre semana 28-32 por vida media aproximada de 6 semanas"
+      "A toda gestante Rh negativo sin anticuerpos anti-D: inmunoglobulina anti-D en la semana 28-32.",
+      "Repetir en las 72 h posteriores al parto si el bebé es Rh positivo.",
+      "También tras aborto, ectópico, sangrado, amniocentesis o trauma."
     ]
   },
   {
     "kind": "card",
     "id": "g-338",
-    "title": "Vacuna triple viral",
+    "title": "Vacuna triple viral en el embarazo",
     "points": [
-      "Contraindicada en el embarazo"
+      "Contraindicada en el embarazo (virus vivos: sarampión, rubéola y paperas).",
+      "Si no es inmune, vacunar después del parto y evitar embarazo 1 mes tras la vacuna."
     ]
   },
   {
@@ -787,136 +787,129 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-339",
     "title": "Miocardiopatía periparto",
     "points": [
-      "Insuficiencia cardiaca que aparece en el último mes del embarazo o hasta 5 meses posparto, con FEVI reducida (<45%) sin otra causa",
-      "Diagnóstico: ecocardiograma con disfunción sistólica del VI. Manejo: tratamiento de falla cardiaca (diuréticos, betabloqueadores, IECA/ARA II si ya ocurrió el parto), anticoagulación si FEVI muy baja y restricción de sal; evitar IECA/ARA II durante el embarazo",
-      "Suele recuperarse postparto"
+      "Insuficiencia cardiaca en el último mes del embarazo o hasta 5 meses después del parto, con FEVI <45 % sin otra causa.",
+      "Diagnóstico: ecocardiograma.",
+      "Tratamiento de insuficiencia cardiaca: diuréticos, betabloqueantes; IECA o ARA-II solo después del parto. Anticoagular si la FEVI es muy baja. Bromocriptina en algunos casos.",
+      "Suele recuperarse, pero puede repetirse en otro embarazo."
     ]
   },
   {
     "kind": "card",
     "id": "g-340",
-    "title": "En cervicitis",
+    "title": "Cervicitis: indicaciones al paciente",
     "points": [
-      "Se debe aconsejar a los pacientes que se abstengan de tener relaciones sexuales durante siete días después de finalizar el tratamiento, siempre que los síntomas hayan desaparecido y todas las parejas hayan recibido tratamiento."
+      "No tener relaciones sexuales hasta 7 días después de terminar el tratamiento, sin síntomas y con todas las parejas tratadas."
     ]
   },
   {
     "kind": "card",
     "id": "g-341",
-    "title": "Infecciones vulvovaginales",
+    "title": "Uretritis y flujos por infecciones de transmisión sexual",
     "points": [
-      "1. LEUCORREA",
-      "2. ULCERAS",
-      "3. URETRITIS",
-      "EPI. ETS: URETRITIS: disuria, prurito, secreción mucopurulenta",
-      "ETIOLOGIA: n.gonorrea , clamydia trachomatis , tricomona vaginalis. mycoplasma genitales",
-      "DIAGNOSTICO: CLAMIDIA: pcr, inmunofluorescencia, GONORREA: cultivo, examen directo, gram diplococos gram negativos, pcr ; MICOPLASMA: pcr TRATAMIENTO: gonorrea: ceftriaxona 1 gr im dosis única, 2da esepectomicina 2 gr im DU ; clamidia tracomatis: doxiciclina 100 mg cada 12 horas x 7 dias, O azitromicina 1 gr vo du",
-      "Tricomona: metronidazol 500 mg c/12 h por 7 dias o tinidazol 2 gr v.o du",
-      "Mycoplasma genitalium: doxiciclina o azitro 1 gr cada24 h x 3 dias",
-      "EMBARAZO LACTANCIA: azitromicina 1 gr vo d.u (después de 1er trimestre) , amoxicilina 500 mg vo cada 8 h por 7 dias , metronidazol 2 gr vo d.u . MANEJO SINDROMATICO: ceftriaxona 1 gr im du + doxicilcina 100 mg 1 cada 12 horas por 7 dias",
-      "(antes por 14 dias)."
+      "Síndromes: flujo vaginal (leucorrea), úlceras genitales, uretritis y enfermedad pélvica inflamatoria.",
+      "Uretritis: ardor al orinar, picazón y secreción. Causas: gonorrea, clamidia, tricomona, micoplasma.",
+      "Diagnóstico: PCR (prueba de amplificación de ácidos nucleicos); Gram con diplococos gramnegativos en gonorrea.",
+      "Gonorrea: ceftriaxona 500 mg-1 g intramuscular en dosis única.",
+      "Clamidia: doxiciclina 100 mg cada 12 h 7 días (o azitromicina 1 g en dosis única).",
+      "Tricomona: metronidazol 500 mg cada 12 h 7 días.",
+      "Tratar a las parejas."
     ]
   },
   {
     "kind": "card",
     "id": "g-342",
-    "title": "Proctitis (guía colombia)",
+    "title": "Proctitis por infección de transmisión sexual",
     "points": [
-      "Sintomático: higiene anal, baños de asiento tibios, analgesia (paracetamol/AINEs), pomadas de lidocaína si hay dolor. Antibiótico: doxiciclina 100 mg VO c/12 h × 21 días para Chlamydia, ceftriaxona 500 mg IM dosis única para gonorrea, tratar ambos si hay coinfección."
+      "Inflamación del recto: dolor, secreción, sangrado (frecuente en sexo anal receptivo).",
+      "Medidas: baños de asiento, analgesia, lidocaína tópica.",
+      "Antibiótico: ceftriaxona 500 mg intramuscular (gonorrea) + doxiciclina 100 mg cada 12 h; 7 días, o 21 días si se sospecha linfogranuloma venéreo."
     ]
   },
   {
     "kind": "card",
     "id": "g-343",
-    "title": "ETS",
+    "title": "Úlceras genitales",
     "points": [
-      "1. ULCERA GENITAL: CHANCROIDE: (hemophilus ducrey): ulcera multiple dolorosa, base gris amarillenta, asociadas a adenopatía supurativa dolorosa. DX: coloración gram, bacilos gram negativos , y PCR.tto: ceftriaxona 250 mg du o azitro 1 gr du",
-      "Evolución: mejoría en 7 días.",
-      "Pareja sexual: siempre tratar 2",
-      "CHANCRO SIFILITICO: (treponema palidum) Ulcera única indolora (max 2), fondo limpio e indurable, adenopatía inguinal indolora ipsilateral",
-      "DX: px treponemica y no treponemica 1/8 dill. tto: penicilina 2.400.000 du, o doxiciclina 100 cada 12 h x 14 dias 3",
-      "LINFOGRANULOMA VENEREO: ( c.tracomatis) papula única, ulcera superficil dolorosoa DX: anticuerpos, pcr, cultivo.tto: azitromicina 1 gr cada dia por 21 dias o doxiciclina 100 mg cada 12 horas por 21 dias",
-      "Tratar pareja últimos 60 dias.",
-      "GRANULOMA INGUINAL (DONOVAN): ( k.granulomatosis), ulcera única o multiple, indolora, friables, se agrandan , sin linfadenopatia",
-      "DX: tinción wrigth y giemsa (cuerpos de donovan) o biopsi tto:. azitromicina 1 gr vo por 3 semanas o hasta desaparezcan lesiones, TMP-SULFA 160/800 c/12 h por 21 dias",
-      "Tratar pareja sexual de últimos 60 dias. TRATAMIENTO NEUROSIFILIS: la penicilina G cristalina IV, a dosis de 3–4 millones de UI cada 4 hora x 10–14 días."
+      "Chancroide (Haemophilus ducreyi): varias úlceras dolorosas con fondo sucio y ganglios inflamados que supuran. Ceftriaxona 250 mg dosis única o azitromicina 1 g.",
+      "Sífilis primaria (chancro): úlcera única que no duele, de fondo limpio y bordes duros, con ganglio que no duele. Pruebas treponémica y no treponémica. Penicilina benzatínica 2.400.000 UI dosis única.",
+      "Herpes: vesículas agrupadas dolorosas que se rompen en úlceras. Aciclovir o valaciclovir.",
+      "Linfogranuloma venéreo (clamidia L1-L3): úlcera pequeña indolora y luego ganglios grandes (bubón). Doxiciclina 21 días.",
+      "Siempre tratar a la pareja y ofrecer pruebas de VIH y sífilis."
     ]
   },
   {
     "kind": "card",
     "id": "g-344",
-    "title": "Sífilis – diagnóstico",
+    "title": "Sífilis: diagnóstico y tratamiento",
     "points": [
-      "Primero prueba no treponémica (RPR/VDRL); si es positiva, solicitar prueba treponémica",
-      "Si esta es positiva, se confirma el diagnóstico; si es negativa, corresponde a un falso positivo",
-      "TRATAMIENTO: sífilis temprana (primaria, secundaria o latente temprana <1 año), penicilina benzatínica 2.400.000 UI IM dosis única; sífilis tardía (>1 año) o de duración desconocida, una dosis semanal por 3 semanas",
-      "PAREJA SEXUAL: siempre tratar."
+      "Prueba treponémica rápida (o primero VDRL/RPR) y confirmar con la otra prueba. Ambas positivas: sífilis. No treponémica positiva con treponémica negativa: falso positivo.",
+      "Temprana (primaria, secundaria o latente <1 año): penicilina benzatínica 2.400.000 UI intramuscular dosis única.",
+      "Tardía (>1 año) o de duración desconocida: una dosis semanal por 3 semanas.",
+      "Seguimiento con VDRL (debe bajar 4 veces). Tratar siempre a la pareja."
     ]
   },
   {
     "kind": "card",
     "id": "g-345",
-    "title": "Herpes",
+    "title": "Herpes simple",
     "points": [
-      "HSV-1 (orolabial) y HSV-2 (genital), transmisión por contacto directo; reactivaciones por estrés, fiebre o inmunosupresión",
-      "CLÍNICA: vesículas agrupadas dolorosas que ulceran; primoinfección más intensa con fiebre y adenopatías; formas especiales: queratitis, panadizo herpético y encefalitis",
-      "DIAGNÓSTICO: principalmente clínico, confirmación con PCR de lesión",
-      "MANEJO: primoinfección genital: aciclovir 400 mg VO cada 8 h 7–10 días, o valaciclovir 1 g VO cada 12 h 7–10 días; RECURRENCIAS (reactivaciones tras el primer episodio, típicamente más leves) iniciar precoz (<24 h o pródromos) : aciclovir 800 mg VO cada 12 h 5 días o 800 mg cada 8 h 2 días, valaciclovir 500 mg VO cada 12 h 3 días o 1 g cada 24 h 5 días",
-      "HERPES OROLABIAL: valaciclovir 2 g VO cada 12 h por 1 día ; FORMAS GRAVES (encefalitis, neonatal, inmunosuprimidos): aciclovir IV 5–10 mg/kg cada 8 h (encefalitis 14–21 días); RECURRENCIAS FRECUENTES (≈≥6 episodios/año), enfermedad severa o para reducir transmisión: aciclovir 400 mg VO cada 12 h, valaciclovir 500 mg VO al día (o 1 g/día si muy frecuentes), lo que disminuye recurrencias y contagio; PAREJAS: no tratar si asintomáticas, uso de preservativo, evitar relaciones durante lesiones/pródromos . embarazo, aciclovir/valaciclovir son seguros, profilaxis desde semana 36 y cesárea si lesiones activas al parto."
+      "Tipo 1 (boca) y tipo 2 (genital), aunque ambos pueden estar en cualquier sitio. Contagio por contacto; se reactiva con estrés, fiebre o defensas bajas.",
+      "Vesículas agrupadas y dolorosas que se ulceran; el primer episodio es más intenso (fiebre, ganglios). Formas especiales: ojo (queratitis), dedos (panadizo) y encefalitis.",
+      "Diagnóstico clínico; PCR de la lesión para confirmar.",
+      "Primer episodio genital: aciclovir 400 mg cada 8 h o valaciclovir 1 g cada 12 h, 7-10 días.",
+      "Recurrencias: ciclos cortos. Si son ≥6 al año: tratamiento supresor diario (valaciclovir 500 mg/día)."
     ]
   },
   {
     "kind": "card",
     "id": "g-346",
-    "title": "Leucorreas",
+    "title": "Flujos vaginales",
     "points": [
-      "CANDIDA: blanco, prurito, grumo.. candidiasis complicada: recurrente (≥3 episodios en <12 meses), severa, no albicans o en inmunosuprimido tto: asintomática: no se trata",
-      "Sintomática. fluconazol 250 mg vo du ; clotrimzaol crema 1 % cada noche por 7 dias ; 2 % por 3 dias",
-      "RECURRENTE: tópico x 14 dias; o fluconazol 200 mg dia 1-4-7 dia",
-      "Y mantenimiento: fluconazol 150 mg sem x 6 sem",
-      "NO ALBICANS: azoles tópicos por 14 días más otro azol diferente de fluconazol (oral o tópico)",
-      "SI RECURRENCIA: ácido bórico 600 mg vaginal al día por 3 semanas",
-      "TRICOMONA: amarillo, olor pescado tto: metronidazol vaginal 0.75% x 5 dias, metronidazol 500 mg vo cada 12 h x 7 dias, clindamicina 300 mg vo c 12 h x 7 dias",
-      "RECURRENCIA: culaquiera 2 veces al dia c semana x 4-6 sem",
-      "PAREJA SEXUAL: siempre tratar al hombre",
-      "TRATAMIENTO: metronidazol 2 g VO dosis única.",
-      "3. GARDNERELLA: verde, espumoso fétido tto: metronidazol 500 mg c 12 h x 7 dias, tinidazol 2 gr vo du. RECURRENTE: tinidazol 2 gr dia x 5-7 dias. MANEJO SINDROMATICO: TINIDAZOL 2 GR DU + FLUCONAZOL 150 MG DU.",
-      "NO TRATAR PAREJA"
+      "Cándida: flujo blanco grumoso (\"leche cortada\") con mucha picazón; pH normal (<4,5). Si no da síntomas, no se trata. Tratamiento: fluconazol 150 mg oral dosis única o clotrimazol vaginal (1 % 7 noches o 2 % 3 noches).",
+      "Cándida recurrente (≥3 episodios al año): fluconazol 150 mg días 1, 4 y 7, y luego semanal 6 meses. Especies no albicans: azoles tópicos 14 días o ácido bórico vaginal 600 mg/día 2-3 semanas.",
+      "Tricomona: flujo amarillo-verde espumoso, cuello \"en fresa\", pH >4,5. Metronidazol 500 mg cada 12 h 7 días; tratar a la pareja.",
+      "Vaginosis bacteriana: flujo gris, olor a pescado (más tras la relación), pH >4,5, células clave. Metronidazol 500 mg cada 12 h 7 días."
     ]
   },
   {
     "kind": "card",
     "id": "g-347",
-    "title": "La vaginitis aeróbica",
+    "title": "Vaginitis aeróbica",
     "points": [
-      "Alteración inflamatoria de la flora vaginal , con disminución de lactobacilos y sobrecrecimiento de bacterias aerobias como E. coli, Staphylococcus aureus, Streptococcus agalactiae o Enterococcus; clínica: flujo amarillento o verdoso, maloliente, ardor, dispareunia, eritema vaginal marcado y a veces petequias, con pH >4.5; a diferencia de la vaginosis , bacilos coliformes; tratamiento: clindamicina vaginal (óvulos o crema) 7-21 días, corticoide tópico suave si hay inflamación importante"
+      "Pocos lactobacilos y exceso de bacterias como E. coli, estafilococo, estreptococo B o enterococo.",
+      "Flujo amarillo-verdoso, ardor, dolor en las relaciones, vagina muy roja (a veces con puntos rojos), pH >4,5. A diferencia de la vaginosis, hay inflamación.",
+      "Tratamiento: clindamicina vaginal 7-21 días; corticoide tópico suave si hay mucha inflamación."
     ]
   },
   {
     "kind": "card",
     "id": "g-348",
-    "title": "Sospecha de infecciones por N",
+    "title": "Sospecha de gonorrea: cómo confirmarla",
     "points": [
-      "Gonorrhoeae es realizar una prueba de amplificación de ácidos nucleicos (NAAT). Alternativamente, las muestras se pueden enviar para tinción de Gram y cultivo"
+      "Prueba de elección: amplificación de ácidos nucleicos (PCR) en orina o muestra genital.",
+      "Alternativa: Gram (diplococos gramnegativos dentro de los neutrófilos) y cultivo (también para ver resistencias)."
     ]
   },
   {
     "kind": "card",
     "id": "g-349",
-    "title": "EPI",
+    "title": "Enfermedad pélvica inflamatoria (EPI)",
     "points": [
-      "DX: dolo a la movilización, secreción y frotis. Tto: hospitalización: embarazo, no tolera v.o, abceso tubarico, no rta en 72 horas",
-      "1. Ceftriaxona intravenosa, doxicilicna y metrondiazol oral.2. ampi-sulba 3 gr iv cada 6 h mas doxicilicina.",
-      "3.clindamicina 600 mg iv cada 6 h mas gentamicina 2 mg/kg . ambulatorio: azitromicina 1 gr vo du o doxiciclina 100 cada 12 h x 7 dias ; mas ceftriaxona 500 mg du, metronidazol 500 mg vo cada 12 horas x 14 dias. . a parejas de últimos 60 dias. azitro 1 gr vo du mas cefexime 400 mg du.",
-      "Las indicaciones para la valoración quirúrgica en absceso tubo ovárico incluyen la ausencia de mejoría con el tratamiento parenteral o la imposibilidad de descartar diagnósticos alternativos como una apendicitis."
+      "Infección que sube del cuello al útero, trompas y ovarios (gonorrea, clamidia y otras).",
+      "Diagnóstico clínico: dolor en el bajo vientre con dolor al mover el cuello, el útero o los anexos.",
+      "Hospitalizar si: embarazo, no tolera la vía oral, absceso tuboovárico, enfermedad grave o no mejora en 72 h.",
+      "Hospitalario: ceftriaxona 1 g intravenosa + doxiciclina + metronidazol; o clindamicina + gentamicina.",
+      "Ambulatorio: ceftriaxona 500 mg intramuscular dosis única + doxiciclina 100 mg cada 12 h + metronidazol 500 mg cada 12 h, 14 días.",
+      "Tratar a las parejas de los últimos 60 días."
     ]
   },
   {
     "kind": "card",
     "id": "g-350",
-    "title": "Hepatitis B",
+    "title": "Hepatitis B y VPH: datos clave",
     "points": [
-      "Las inmonoglobulinas protegen 3-6 meses VPH: ALTO RIESGO: 16, 18"
+      "La inmunoglobulina contra hepatitis B protege de forma temporal (unos 3-6 meses); la vacuna protege a largo plazo.",
+      "Virus del papiloma humano de alto riesgo (causan cáncer): sobre todo 16 y 18. Los tipos 6 y 11 causan verrugas."
     ]
   },
   {
@@ -924,37 +917,31 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-351",
     "title": "Endometriosis",
     "points": [
-      "SOSPECHA:",
-      "1. Dolor pélvico crónico",
-      "2. Relacionado con periodo",
-      "3. Dispareunia",
-      "4. Snt gastrointestinales relacionados con perido",
-      "5. Sn urinarios cicliclos",
-      "6. Infertilidad. DX: ecografia, RNM, exploración laparoscópica. TTO: analgesia con aines, a.o.c, medroxiprogesterona. QX: si es sintomática y si quiere embarazo."
+      "Tejido parecido al endometrio fuera del útero (ovarios, peritoneo).",
+      "Sospechar si: dolor pélvico crónico, dolor menstrual intenso, dolor en las relaciones, síntomas intestinales o urinarios que empeoran con la regla, infertilidad.",
+      "Diagnóstico: ecografía transvaginal o RM (endometriomas, lesiones profundas); la laparoscopia confirma.",
+      "Tratamiento: AINE y hormonas (anticonceptivos continuos, progestágenos como dienogest o medroxiprogesterona). Cirugía si no mejora, hay masas o busca embarazo."
     ]
   },
   {
     "kind": "card",
     "id": "g-352",
-    "title": "Testosterona total normal en hombres adultos 300–1000 ng",
+    "title": "Testosterona total: valores normales",
     "points": [
-      "Mujeres adultas 15–70 ng/dL"
+      "Hombres adultos: 300-1.000 ng/dl.",
+      "Mujeres adultas: 15-70 ng/dl."
     ]
   },
   {
     "kind": "card",
     "id": "g-353",
-    "title": "Síndrome ovárico metabólico poliendocrino",
+    "title": "Síndrome de ovario poliquístico (SOP)",
     "points": [
-      "DIAGNOSTICO: 2 de 3 criterios de Rotterdam (tras descartar hiperplasia suprarrenal congénita, hiperprolactinemia, disfunción tiroidea y síndrome de Cushing):",
-      "HIPERANDROGENISMO: Clínico: Hirsutismo ( Ferriman-Gallwey modificada (≥ 8 general, o Colombia/Latinoamérica ≥ 4-6), acné severo resistente o alopecia androgenética (patrón Ludwig); y/o Bioquímico: Testosterona total (> 0.5 ng/mL o > 50 ng/dL; valor normal 20-80 ng/dL; si es > 200 ng/dL descartar tumor virilizante de ovario o suprarrena)l.",
-      "2. OLIGO/ANOVULACIÓN: Ciclos > 35 días O <21 dias, < 8 al año, amenorrea > 90 días.",
-      "MORFOLOGÍA OVÁRICA POLIQUÍSTICA (MOP) POR ECOGRAFÍA TRANSVAGINAL: ≥ 20 folículos por ovario (2-9 mm) o volumen ovárico ≥ 10 mL en al menos un ovario ( también se acepta antimulleriana) Fenotipos: A (Clásico completo): 3/3 criterios; B (Clásico anovulatorio): Anovulación + hiperandro. genismo (sin MOP); C (Ovulatorio): Hiperandrogenismo + MOP (ciclos regulares); D (No androgénico): Anovulación + MOP (sin hiperandrogenismo)",
-      "Adolescentes: Requieren los 2 criterios de anovulación + hiperandrogenismo (clínico/bioquímico); NO ecografía (MOP) antes de los 8 años post-menarquia",
-      "Evaluación Metabólica: Solicitar perfil lipídico completo y Prueba de Tolerancia Oral a la Glucosa (PTOG 75 g) cada 1 a 3 años (o cada 2 años según riesgo)",
-      "TRATAMIENTO: No desea fertilidad: Anticonceptivos orales combinados (AOC) con progestágenos antiandrogénicos (dienogest, drospirenona o ciproterona; evaluar respuesta a los 3 meses para acné y a los 6 a 9 meses para hirsutismo por el ciclo del folículo piloso)",
-      "Desea fertilidad (Inducción de ovulación): 1ª línea: Letrozol (2.5-5 mg/día por 5 días) por mayor tasa de nacidos vivos; 2ª línea: clomifeno (solo o con metformina) o gonadotropinas (FSH a dosis bajas); 3ª línea: Ovarian drilling laparoscópico o fertilización in vitro (FIV)",
-      "Terapia Coadyuvante: Antiandrógenos espironolactona 50-100 mg/día si persiste hirsutismo tras 6 meses de AOC; , (asociado a anticoncepción por teratogenicidad) ; metformina (500-1500 mg/día) indicada ante IMC elevado, resistencia a la insulina o riesgo metabólico"
+      "Diagnóstico con 2 de 3 criterios de Rotterdam, tras descartar otras causas (hiperplasia suprarrenal, prolactina alta, tiroides, Cushing):",
+      "1) Exceso de andrógenos: clínico (vello excesivo con escala de Ferriman-Gallwey ≥8, o ≥4-6 en Latinoamérica; acné que no mejora; caída de pelo) o en sangre (testosterona alta). Testosterona >200 ng/dl: descartar un tumor.",
+      "2) Ovulación ausente o irregular: ciclos >35 días o <8 al año.",
+      "3) Ovarios poliquísticos en ecografía (≥20 folículos por ovario o volumen >10 ml) o AMH alta.",
+      "Tratamiento: bajar de peso; anticonceptivos para regular ciclos y vello; metformina si hay resistencia a la insulina; letrozol si busca embarazo."
     ]
   },
   {
@@ -962,15 +949,11 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-354",
     "title": "Menopausia",
     "points": [
-      "Ausencia mestruacion posterio a un periodo de 12 meses consecutivos, edad promedio 49-51 años; falla ovárica primaria: menor de 40 años usualmente autoinmune, se dx 4 meses de amenorrea, con fsh > 25 en 2 mediciones separadas por 4 semanas.; menopausia temprana: 40 -50 años",
-      "Clínica: osteoporosis, síntomas vasomotores",
-      "DX: retrospectivo debe cumplir 12 meses de amenorrea. , si 40-45 años decartar ( tsh, prolactina y bhcg)",
-      "Si pte usa ACOS suspender y medir fsh 2-4 sem posterior y si >25 sugiere peri menopausia",
-      "Si histerectomía: síntomas vasomotores mas FSH > 25",
-      "Tto: terapia remplazo hormonal con estrógenos solos (en histerectomía) o combinados (si no histerectomía-con progesterona) por 6 años o menos de 60 años",
-      "Indicaciones: menores de 60 años, o < 10 años de instauración menopausa, con síntomas vasomotores y sin contraidndicaciones, contrindicaciones: rcv, riesgo tev, riesgo ca de mama)(progestágenos o testosterona no tienen evidencia), si atrofia vagianl terapia tópica, si labilidad emocional ISRS. Seguimiento: en primeros 3 meses el sangrado es normal, se recomienda mamografía",
-      "En perimenopausa hay bajo riesgo de embarazo pero pueden existir.",
-      "Si contraindicaciones para TRH se puede dar ISRS."
+      "Ausencia de regla durante 12 meses seguidos; edad promedio 49-51 años. Diagnóstico retrospectivo.",
+      "Insuficiencia ovárica prematura: <40 años (a menudo autoinmune); 4 meses sin regla + FSH >25 en 2 tomas separadas 4 semanas.",
+      "Menopausia temprana: 40-45 años. En este grupo descartar otras causas (TSH, prolactina, embarazo).",
+      "Síntomas: calores, sudoración nocturna, sequedad vaginal, cambios de ánimo; a largo plazo osteoporosis y más riesgo cardiovascular.",
+      "Si toma anticonceptivos: suspenderlos y medir FSH a las 2-4 semanas."
     ]
   },
   {
@@ -978,33 +961,33 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-355",
     "title": "Amenorrea",
     "points": [
-      "Primaria: sin menarquia, secundaria: amenorrea por 6 meses",
-      "Primaria: categoría i: ausencia de mamas y presencia de utero ( sn",
-      "Turner (talla baja, morfología anormal) sn.kallman (anosmia), sn, pradel willi ( talla baja, retraso, alteración morfológica))",
-      "Categoría ii: con mamas, sin útero",
-      "Sn.MRHK ( m: mayo , r: rokistansky , h:hauser , k: kuster), categoría iii: sin mama, sin utero (cariotipo 46xy , deficiencia 15 alfa hidroxiprogesterona) categoría iv: tiene mama y utero ( hiperprolactinemia-hipotiroidismo) . abordaje: si utero: fsh alta, ( sn Turner- sn swyer) baja (kallman) ; sin utero: cariotipo xx (sn mhrk) xy (sn Morris (insensibilidad andrógenos)) ."
+      "Primaria: sin primera regla a los 15 años (o 13 sin desarrollo de mamas). Secundaria: sin regla ≥3 meses (si los ciclos eran regulares) o ≥6 meses.",
+      "Primero descartar embarazo.",
+      "Primaria, sin mamas con útero: falla de ovario (Turner: talla baja, cuello alado) o hipotálamo (Kallmann: sin olfato).",
+      "Con mamas sin útero: Mayer-Rokitansky-Küster-Hauser (falta de útero, cariotipo femenino) o insensibilidad a andrógenos (46,XY, poco vello).",
+      "Con mamas y útero: buscar obstrucción (himen imperforado) y causas como en la secundaria.",
+      "Secundaria: β-hCG, TSH, prolactina, FSH. FSH alta: falla ovárica. FSH baja o normal: hipotálamo (estrés, ejercicio, bajo peso) o hipófisis. Prolactina alta: medicamentos o prolactinoma. Pensar también en SOP y Asherman (cicatrices en el útero)."
     ]
   },
   {
     "kind": "card",
     "id": "g-356",
-    "title": "CA de mama",
+    "title": "Cáncer de mama: tamizaje y BI-RADS",
     "points": [
-      "TAMIZACION: autoexamen, examen clínico , mamografía cada 2 años desde 50-69 años",
-      "DX: menor de 30 años con ecografía, mayor de 30 años ecografía y mamografía",
-      "BIRADS: 0: incompleto 1: normal (continua esquema 2: benigna (continuar esquema) 3: probablemente benigna (control en 6 meses) 4: sospecha malignidad a:baja moderada, b:moderda, c:alta moderdad (biopsia) 5: alta sospecha (biopsia) 6: malignidad (tto cáncer), RNM: implantes, alteración de arquitectura birads 0, alto riesgo genético braca 1 y 2.",
-      "TAMI ZAJE CA DE MAMA : mamografía a los 50 AÑOS; a los 40 años si alto riesgo (BRCA1/2, radiación torácica previa, fuerte antecedente familiar)"
+      "Tamizaje en Colombia: examen clínico de la mama anual desde los 40 años y mamografía cada 2 años de los 50 a los 69.",
+      "Diagnóstico de una lesión: <30-35 años ecografía; mayores, mamografía + ecografía.",
+      "BI-RADS: 0 incompleto (más estudios); 1 normal; 2 benigno (seguir tamizaje); 3 probablemente benigno (control en 6 meses); 4 sospechoso (biopsia; 4A bajo, 4B moderado, 4C alto); 5 muy sospechoso (biopsia); 6 cáncer ya confirmado.",
+      "RM: implantes, BI-RADS 0 que no se aclara y mujeres con alto riesgo genético (BRCA1 y 2)."
     ]
   },
   {
     "kind": "card",
     "id": "g-357",
-    "title": "Lesión de mama",
+    "title": "Lesión de mama: qué hacer",
     "points": [
-      "Toda masa palpable debe biopsarse y remitirse a cirugía de mama",
-      ". BI-RADS 1–2: tamización habitual",
-      "BI-RADS 3, seguimiento cada 6 meses hasta 18 – 24 meses y luego tamización habitual. lesión no palpable (si reciente aparición mas > 50 años o factores de riesgo), se indica biopsia; BI-RADS 4 y 5, siempre requieren biopsia con aguja Tru-Cut, y remisión",
-      "LA TELORREA sospechosa (hemática, serosa, hialina, unilateral, espontánea y persistente) remisión a cirugía, con mamografía y ecografía en mayores de 30 años o ecografía sola en menores."
+      "Toda masa palpable sospechosa se estudia con imagen y biopsia y se remite a cirugía de mama.",
+      "BI-RADS 1-2: tamizaje habitual. BI-RADS 3: control cada 6 meses por 1-2 años; biopsia si hay factores de riesgo. BI-RADS 4-5: biopsia con aguja gruesa (Tru-Cut) y remisión.",
+      "Salida de líquido por el pezón sospechosa (con sangre o transparente, de un lado, espontánea y persistente): remitir; ecografía (+ mamografía si >30-35 años)."
     ]
   },
   {
@@ -1012,19 +995,18 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-358",
     "title": "Reconstrucción mamaria",
     "points": [
-      "1. inmediata con mastectomía: 1er tiempo: colocación de expensar tisular,, 2do tiempo: retiro de expensar y colocación de implante definitivo de silicona con o sin colgajo regional.",
-      "2. reconstrucción diferida: se realiza con colgajo diep ( ya no se hace tram)"
+      "Inmediata (en la misma cirugía de la mastectomía): primero un expansor que estira la piel y luego, en un segundo tiempo, el implante definitivo, con o sin colgajo.",
+      "Diferida: con tejido propio, sobre todo colgajo DIEP (piel y grasa del abdomen sin músculo)."
     ]
   },
   {
     "kind": "card",
     "id": "g-359",
-    "title": "Lesiones de mama",
+    "title": "Lesiones benignas de mama y riesgo de cáncer",
     "points": [
-      "1.Lesiones no proliferativas: ectasia ductal, fibroadenoma, fibrosis, quistes, mastitis, hiperplasia ligera sin atipia, metaplasia escamosa, metaplasia apocrina simple.",
-      "2.Lesiones proliferativas sin atipia: CONDUCTA: seguimiento rutinario con mamografía. ( papiloma sin atipia, fibroadenoma complejo, adenosis esclerosante,)",
-      "3. Lesiones proliferativas con atipia: riesgo de CA aumentdo. seguimiento con mastologia, SIEMPRE RESECCIÓN ( hiperplasia ductal con atipia, hiperplasia lobulillar con atipia, atipia epitelial plana)",
-      "LESIONES MAMARIAS DE ALTO RIESGO: La hiperplasia ductal atípica, hiperplasia lobular con atipia, tumores papilares (p. ej., papiloma intraductal con y sin atipia), tumor phyllodes, lesiones esclerosantes complejas, cicatriz radiada y los tumores bifásicos no clasificados requieren resección completa y estudio histológico definitivo"
+      "No proliferativas (sin aumento de riesgo): quistes, fibrosis, fibroadenoma simple, ectasia ductal, mastitis, hiperplasia leve.",
+      "Proliferativas sin atipia (riesgo algo mayor): papiloma, fibroadenoma complejo, adenosis esclerosante. Seguimiento con mamografía habitual.",
+      "Proliferativas con atipia (riesgo claramente mayor): hiperplasia ductal o lobulillar atípica, atipia epitelial plana. Resección quirúrgica y seguimiento con mastología."
     ]
   },
   {
@@ -1032,23 +1014,18 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-360",
     "title": "Mastitis",
     "points": [
-      "Hay asociada y no asociada con lactancia. LA NO ASOCIADA A LACTANCIA: *PERIAREOLAR-CENTRAL (granulomatosa) y PERIFÉRICA: si no esta asociada a lactancia, sospechar SIEMPRE malignidad. .MANEJO *MASTITIS NO ASOCIADA A LACTANCIA:",
-      "1. Descartar malignidad",
-      "2. Cefalexina más metronidazol por 7-10 dias;, Segunda línea: dicloxacilina 500 mg cada 6 x 14 dias, + metronidazol , MASTITIS ASOCIADA A LACTANCIA(PUERPERAL) NUNCA: Suspender lactancia. (solo si absceso con fistula del pezon) . MANEJO:",
-      "1. Imágenes solo si abceso para drenaje, o recurrente sin rta al tto.",
-      "Tratamiento: Dicloxacilina 500 mg cada 6 x 7-10 días",
-      "DRENAJE: . Si no resuelven, drenaje y cultivo, o drenaje quirúrgico si abceso >3 cm",
-      "La incisión y el drenaje si > 5 cm de tamaño o cuando hay necrosis tisular",
-      "La aspiración con aguja guiada por ecografía se puede utilizar para drenar abscesos que miden menos de 5 cm en la ecografía y para aquellos sin necrosis tisular."
+      "Asociada a la lactancia (puerperal): pecho rojo, caliente y doloroso con fiebre. No suspender la lactancia (vaciar bien el pecho ayuda). Dicloxacilina o cefalexina 10-14 días. Ecografía si hay sospecha de absceso (drenaje).",
+      "No asociada a la lactancia (periareolar o periférica): descartar siempre cáncer (ecografía/mamografía y biopsia si no mejora). Tratamiento: cefalexina + metronidazol 7-14 días."
     ]
   },
   {
     "kind": "card",
     "id": "g-361",
-    "title": "Carcinoma mamario inflamatorio",
+    "title": "Carcinoma inflamatorio de mama",
     "points": [
-      "Forma agresiva de cáncer de mama que se presenta rápidamente con eritema difuso, edema y engrosamiento de la piel con aspecto en “piel de naranja”, aumento de volumen mamario y calor local, generalmente sin masa palpable definida, pudiendo asociar adenopatías axilares",
-      "El diagnóstico es clínico apoyado con biopsia cutánea o del tejido mamario, los estudios de imagen se usan para estadificación no para diagnóstico."
+      "Cáncer de mama muy agresivo que aparece en semanas: pecho rojo, hinchado, caliente, con piel de naranja, a menudo sin masa palpable; puede haber ganglios axilares.",
+      "Se confunde con una mastitis: si una \"mastitis\" no mejora con antibiótico, biopsiar.",
+      "Diagnóstico con biopsia de piel o de mama; las imágenes sirven para estadificar."
     ]
   },
   {
@@ -1056,48 +1033,45 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-362",
     "title": "Ciclo menstrual",
     "points": [
-      "Fase Folicular (Días 1-14): La FSH (hormona foliculoestimulante) recluta folículos en el ovario, de los cuales uno se vuelve dominante y secreta estrógenos",
-      "A nivel uterino, esto induce la fase proliferativa, donde el endometrio aumenta su espesor",
-      "Cerca del día 14, los niveles altos de estrógenos generan un retroalimentación positiva que dispara el pico de LH (hormona luteinizante), provocando la ovulación 24-36 horas después.",
-      "Fase Lútea (Días 15-28): El folículo colapsado se transforma en el cuerpo lúteo, el cual secreta grandes cantidades de progesterona y algo de estrógeno",
-      "Esto induce la fase secretora endometrial, donde las glándulas se vuelven tortuosas y acumulan glucógeno para la implantación.",
-      "Isquemia y Menstruación: Si no hay embarazo, el cuerpo lúteo involuciona (luteólisis), lo que causa una caída brusca de progesterona y estrógenos",
-      "Esto provoca el espasmo de las arterias espirales, isquemia tisular y el desprendimiento de la capa funcional del endometrio, iniciando el flujo menstrual y reiniciando el ciclo con el ascenso de la FSH."
+      "Fase folicular (días 1-14): la FSH hace crecer folículos en el ovario; uno se vuelve dominante y produce estrógenos. En el útero, el endometrio crece (fase proliferativa).",
+      "Ovulación: los estrógenos altos provocan el pico de LH hacia el día 14; el óvulo sale 24-36 h después.",
+      "Fase lútea (días 15-28): el folículo vacío se vuelve cuerpo lúteo y produce progesterona, que prepara el endometrio (fase secretora). Esta fase dura ~14 días casi siempre.",
+      "Si no hay embarazo, el cuerpo lúteo se apaga, bajan las hormonas y llega la regla."
     ]
   },
   {
     "kind": "card",
     "id": "g-363",
-    "title": "Dolor pelvico agudo",
+    "title": "Dolor pélvico agudo",
     "points": [
-      "Si inestabilidad( ecofast posible aborto séptico, ectópico, hemoperitoneo, quiste ovario) . si estable: dismenorrea: dolor asociado a menstruacion ,puede ser primaria: es fisiológica tto: aines, secundaria: endometriosis, patología de base, tto según etiología",
-      "Embarazo ectópico: ecografía y bhcg mayor de 3.500, o si no aumenta lo esperado a las 48 horas",
-      "Tto: si roto cx urgente (salpingectomia) ; si bhcg mayor de 5000 o > = a 4 cm, salpingectomia, salpingostomia (si desea fertilidad) ; si bhcg < 1000 o masa < 3 cm, se puede hacer manejo expectante y en 48 horas bhcg < 15 %, si no se inicia metrotexate ; si no cumple ningún de los otros criterios metrotexate, control en 4 dias si no baja 15% bhcg se da segunda dosis y control en 14 dias, si no baja 15% toca cx; epi: ya agregada arriba; torsión ovarica: dolor , tto quirugico",
-      "Quiste ovárico roto: (mas derecho) dolor súbito irradiado a hombro con sangrado usualmente posterior a relación sexual o actividad física, tto: si no complicado observación, si complicado cirugía",
-      "Síndrome mittelschmerz: irritación peritoneal por liquido expulsado de la ovulación, autolimitado 24-48 horas, cíclico tto: aines y acos"
+      "Primero ver si está inestable: ecografía FAST buscando sangre en el abdomen (ectópico roto, quiste roto, aborto séptico). Siempre prueba de embarazo.",
+      "Dismenorrea: dolor con la regla. Primaria (sin enfermedad): AINE. Secundaria (endometriosis, miomas): tratar la causa.",
+      "Embarazo ectópico: β-hCG >3.500 sin saco en el útero en la ecografía transvaginal, o β-hCG que no sube lo esperado en 48 h.",
+      "Ectópico roto: cirugía urgente. Estable: ver criterios de cirugía, metotrexato o manejo expectante.",
+      "Otras causas: torsión de ovario (dolor súbito con náuseas; cirugía urgente), enfermedad pélvica inflamatoria, apendicitis."
     ]
   },
   {
     "kind": "card",
     "id": "g-364",
-    "title": "Dolor pelvico crónico",
+    "title": "Dolor pélvico crónico",
     "points": [
-      "Dolor no cíclico en región pélvica, durante 3-6 meses, etiología: endometriosis, leiomiomas, quiste ovárico, cistitis, uretritis, sci, enf celiaca, lumbagia, fibromialgia,varices, síndrome congestion pélvica) signos de alarma: snagrado post coital, sangrado postmenopausia, perdida peso, masa pélvica",
-      "Test de carnel: palpación profunda en puntos ováricos; y que pte eleve piernas; si mejorea dolor es visceral, sin no mejora es miofascial.; endometriosis: tto 1ra línea: acos mas aines; progestágenos, laparoscopia ayuda a dolor y recupera fertilidad",
-      "Sn congestión pélvica: dolor pélvico sin explicación por otra causa mas presencia de varices pelicas o ins.venosa pélvica; triada: vairces pélvicas, congestion venosa, dolor pélvico",
-      "Dx: gold , flebografía gonadal",
-      "(laparoscopia no sirve por co2 colapsa venas) tto: aines, medroxiprogesterona, análogos gnrh ; qx embolizacion, quigadura venosa, neuralgia pudendo: neuropatía nervio pudendo; causada por traumas en zona, ciclismo, espasmos muscular, dx: clínico: dolor 3 ramas, no compromete sueño, alivia con bloqueo, pincprick",
-      "Tto: conservado, farmacológico pregabalina gabapentina, , bloqueo pudendo , terapia física, cojin, toxina botulínica",
-      "Síndrome miofacial: dolor en puntos gatillos muscular o fascial",
-      "Tto fisioterapia , vulvodinia: dolor en área vulvar sin causa, Dolor en introito tto: ropa algodón, ungüento lidocaina, acopuntura."
+      "Dolor en la pelvis durante ≥3-6 meses, no solo con la regla.",
+      "Causas ginecológicas (endometriosis, adenomiosis, miomas, quistes, congestión pélvica) y no ginecológicas (cistitis intersticial, colon irritable, celiaquía, dolor lumbar, fibromialgia).",
+      "Alarma: sangrado tras la relación o tras la menopausia, pérdida de peso, masa pélvica.",
+      "Signo de Carnett: palpar el punto doloroso y pedir que levante las piernas. Si el dolor mejora es visceral (de dentro); si empeora o sigue igual, es de la pared abdominal.",
+      "Endometriosis: anticonceptivos + AINE de primera línea, luego progestágenos; laparoscopia mejora el dolor y la fertilidad."
     ]
   },
   {
     "kind": "card",
     "id": "g-365",
-    "title": "Dismenorrea (dolor pélvico o abdominal bajo que aparece durante la menstruación)",
+    "title": "Dismenorrea (dolor menstrual)",
     "points": [
-      "Primaria: Hipercontractilidad, vasoconstricción del miometrio por aumento de prostaglandinas . Secundaria: Patología pélvica subyacente (endometriosis, adenomiosis, leiomiomas), Tratamiento: En ambos se da tratamiento empírico con anticonceptivos hormonales combinados o solo progestágenos + AINES , No esperar a confirmación diagnóstica para iniciar tratamiento , Si el examen físico es normal no requiere ecografía"
+      "Primaria: sin enfermedad; por exceso de prostaglandinas que contraen el útero. Empieza poco después de la primera regla.",
+      "Secundaria: por enfermedad pélvica (endometriosis, adenomiosis, miomas). Aparece más tarde o empeora con los años.",
+      "Tratamiento: AINE y anticonceptivos hormonales (combinados o solo progestágeno), sin esperar la confirmación.",
+      "Si la exploración es normal y responde, no hace falta ecografía."
     ]
   },
   {
@@ -1105,247 +1079,222 @@ export const ENTRIES: UltraEntry[] = [
     "id": "g-366",
     "title": "Prolapso uterino",
     "points": [
-      "El prolapso uterino asintomático no requiere tratamiento. Si es levemente sintomático manejo conservador como pesarios o ejercicios de Kegel, si síntomas persisten se realizará cirugía."
+      "Descenso del útero por la vagina por debilidad del suelo pélvico (partos, edad, obesidad).",
+      "Sin síntomas: no requiere tratamiento.",
+      "Síntomas leves: ejercicios de Kegel (suelo pélvico) o pesario.",
+      "Si los síntomas persisten: cirugía."
     ]
   },
   {
     "kind": "card",
     "id": "g-367",
-    "title": "Manejo leiomiomas",
+    "title": "Miomas antes de la cirugía",
     "points": [
-      "El abordaje prequirúrgico se requiere manejo para disminuir el tamaño del útero miomatoso y para corregir la anemia disminuyendo la pérdida de sangre",
-      "Se encuentra indicada la terapia con leuprolida (Un agonista de GnRH) para pacientes con leiomiomas uterinos grandes y/o múltiples, 2 a 3 meses antes de la cirugía",
-      "La leuprolida puede reducir el tamaño de los miomas al inducir hipoestrogenismo e hipoprogesteronismo."
+      "Objetivo: reducir el tamaño del útero y corregir la anemia antes de operar.",
+      "Agonistas de GnRH (leuprolida) 2-3 meses antes de la cirugía en miomas grandes o múltiples: bajan los estrógenos y reducen los miomas y el sangrado.",
+      "Hierro para la anemia."
     ]
   },
   {
     "kind": "card",
     "id": "g-368",
-    "title": "Sangrado uterino anormal (SUA)",
+    "title": "Sangrado uterino anormal: definición y causas",
     "points": [
-      "Sangrado del cuerpo uterino fuera del embarazo que altera los criterios de cronología y severidad de la FIGO: frecuencia (frecuente: <24 días; infrecuente: >38 días), regularidad (variación >7-9 días entre ciclos), duración (prolongado: >8 días, corto <3 dias) y volumen/severidad (heavy o pesado: >80 mL, presencia de coágulos o compromiso de calidad de vida)",
-      "El diagnóstico inicial requiere anamnesis, examen físico, prueba de embarazo y cuadro hemático; su etiología se clasifica según el sistema PALM-COEIN en causas estructurales (Pólipo, Adenomiosis, Leiomioma, Malignidad) evaluadas con ecografía transvaginal, y no estructurales (Coagulopatía, disfunción Ovulatoria, Endometrial, Iatrogénica, No clasificada)",
-      "Se indica biopsia endometrial obligatoria en pacientes con 1.sangrado posmenopáusico (ACOG recomienda enfoque dual con ultrasonido)",
-      "2. edad >45 años",
-      "3. menores de 45 años con factores de riesgo de malignidad por exposición a estrógenos sin oposición: obesidad (IMC >30), nuliparidad, infertilidad, ciclos anovulatorios crónicos (SOMP) o antecedentes familiares de cáncer colorrectal hereditario (Síndrome de Lynch). MANEJO:",
-      "SUA Agudo (Severo): Estabilización hemodinámica, estrógenos conjugados equinos IV 25 mg cada 5 horas hasta 3 dosis , 2da línea estrógenos equinos orales , SI NO ES CANDIDATA A ESTRÓGENOS: medroxiprogesterona oral 10 mg cada 4 horas por 7 días o acetato de noretindrona oral",
-      "ALTERNATIVAS: AINE (ácido mefenámico o naproxeno) y ácido tranexámico IV con continuación por vía oral",
-      "CONTRAINDICACIÓN: no administrar ácido tranexámico en pacientes que usan ACO o tienen riesgo trombótico.",
-      "SUA Crónico: SANGRADO CÍCLICO: medroxiprogesterona (AMP) por 28 días con 10 días de descanso",
-      "SANGRADO ANOVULATORIO: AMP por 10 días",
-      "OTRAS OPCIONES: DIU-LNG, ACO, ácido tranexámico 1 g VO cada 8 horas por 5 días del ciclo, AINE y corrección de la anemia. el manejo quirúrgico (miomectomía, ablación o histerectomía) se reserva ante patología estructural sintomática o falla médica."
+      "Sangrado del útero fuera del embarazo que se sale de lo normal en frecuencia (<24 o >38 días), regularidad (variación >7-9 días), duración (>8 días) o cantidad (>80 ml, coágulos o que afecta la calidad de vida).",
+      "Estudio inicial: historia, examen, prueba de embarazo, hemograma (y TSH, coagulación si hay sospecha).",
+      "Causas (PALM-COEIN). Estructurales (PALM): pólipo, adenomiosis, leiomioma (mioma), malignidad e hiperplasia. No estructurales (COEIN): coagulopatía, ovulatoria (SOP, tiroides), endometrial, iatrogénica (fármacos, DIU) y no clasificadas.",
+      "Ecografía transvaginal para buscar causas estructurales."
     ]
   },
   {
     "kind": "card",
     "id": "g-369",
-    "title": "Clinica HUA",
+    "title": "Sangrado uterino anormal: causas estructurales",
     "points": [
-      "POLiPO– CLÍNICA: sangrado intermensual, infertilidad o asintomático",
-      "DIAGNÓSTICO: ecografía trasvaginal",
-      "TRATAMIENTO: escisión por histeroscopia si es sintomático",
-      "ADENOMIOSIS – CLÍNICA: sangrado menstrual abundante, dismenorrea, dispareunia e infertilidad",
-      "DIAGNÓSTICO: 1RA.ecografía trasvaginal ,2DA. resonancia magnética",
-      "TRATAMIENTO: conservador con ACO, DIU-LNG o agonistas de GnRH; quirúrgico con histerectomía, ablación o embolización",
-      "NO REALIZAR LEGRADOS. LEIOMIOMAS – CLASIFICACIÓN: según FIGO. CLÍNICA: solo los submucosos (0, 1, 2 y 3) producen sangrado",
-      "DIAGNÓSTICO: ecografía transvaginal",
-      "TRATAMIENTO: hormonal o quirúrgico (histerectomía, miomectomía o miolisis)",
-      "ISTMOCELE (N, NO CLASIFICADA) – DEFINICIÓN: disrupción del miometrio en la cicatriz de cesárea",
-      "CLÍNICA: spotting intermensual."
+      "Pólipo: sangrado entre reglas, infertilidad o sin síntomas. Ecografía transvaginal. Extirpar por histeroscopia si da síntomas.",
+      "Adenomiosis (endometrio dentro del músculo del útero): reglas abundantes y dolorosas, dolor en las relaciones, útero grande y blando. Ecografía y, si hay dudas, RM. Tratamiento: anticonceptivos, DIU con levonorgestrel o análogos de GnRH; histerectomía si no responde. El legrado no sirve.",
+      "Miomas (leiomiomas): solo los que se proyectan a la cavidad (submucosos, FIGO 0-2) dan sangrado importante. Tratamiento según tamaño y deseo de hijos: médico, histeroscopia, miomectomía o histerectomía."
     ]
   },
   {
     "kind": "card",
     "id": "g-370",
-    "title": "Hemorragia uterina anormal",
+    "title": "Sangrado uterino anormal: cuándo biopsiar el endometrio",
     "points": [
-      "Criterios para solicitar biopsia endometrial en sangrado uterino anormal:",
-      "1. Edad: Mujeres premenopáusicas ≥ 45 años con HUA.",
-      "2. En mujeres < 45 años: si hay factores de riesgo para hiperplasia o cáncer endometrial (obesidad, diabetes, síndrome de ovario poliquístico, exposición prolongada a estrógenos sin progestina, sangrado persistente o fracaso al tratamiento).",
-      "3. Si ecografia es normal y con tratamiento el sangrado continúa 4. Si la ecografía muestra engrosamiento del endometrio o imágenes focales sospechosas. CRITERIOS DE BIOPSIA CON HISTEROSCOPIA:",
-      "1. Grosor > 4mm 2. Irregularidad ecografía en endometrio, sospecha de causas estructurales 3. Sangrado persistente a pesar de biopsia a ciegas normal"
+      "Mujeres ≥45 años con sangrado anormal.",
+      "<45 años con factores de riesgo de cáncer de endometrio: obesidad, diabetes, SOP, estrógenos sin progestágeno, sangrado persistente o que no responde al tratamiento.",
+      "Ecografía normal pero el sangrado continúa pese al tratamiento.",
+      "Ecografía con endometrio engrosado o imágenes sospechosas.",
+      "Posmenopausia con sangrado y endometrio >4 mm."
     ]
   },
   {
     "kind": "card",
     "id": "g-371",
-    "title": "Malignidad hiperplasia endometrial",
+    "title": "Hiperplasia de endometrio",
     "points": [
-      "Engrosamiento con proliferación de glándulas estromales, por estimulación estrogénica crónica sin oposición.fac riesgo malignidad: edad, menarquia temprana, menopausia tardía, nuliparidad, obesidad, dm . diagnóstico: eco t.v",
-      "1. hemorragia en posmenopausia (sin TRH) > 4mm",
-      "2. hemorragia en posmenopausia (con TRH) >=8 mm 3. sin hemorragia mas posmenopausia (> 11 mm)",
-      "4. en pre menopáusicas no es concluyente . manejo: se toma biopsia de endometrio cuando es hiperplasia",
-      "Si tiene atipias: se indica histerectomía, pero si se quiere fertilidad se trata como si no tuviera atipias -sin atipias: evaluamos factores de riesgo y damos manejo médico con (medroxiprogesteron trimestral) y repetimos biopsia en 6 meses. si tiene atipias repetimos en 3 meses. si en control:",
-      "Regresión : seguimos vigilando con clínica o ecografia",
-      "Si persiste o progresa: se remite a ginecología oncológica."
+      "Crecimiento excesivo del endometrio por estrógenos sin progesterona que los compense. Puede progresar a cáncer.",
+      "Riesgo: edad, primera regla temprana, menopausia tardía, no haber tenido hijos, obesidad, diabetes, SOP, tamoxifeno.",
+      "Grosor sospechoso por ecografía transvaginal: posmenopausia con sangrado sin terapia hormonal >4 mm; con terapia hormonal ≥8 mm; sin sangrado >11 mm. En premenopausia la ecografía no es concluyente.",
+      "Biopsia para confirmar.",
+      "Sin atipia: progestágenos (DIU con levonorgestrel). Con atipia: histerectomía; si quiere hijos, progestágenos en dosis altas con biopsias de control."
     ]
   },
   {
     "kind": "card",
     "id": "g-372",
-    "title": "Quiste ovario simple",
+    "title": "Quiste simple de ovario",
     "points": [
-      "MUJER PRE MENOPAÚSICA: si mide ≤5 cm no requiere seguimiento; >5 y hasta 7 cm : control ecográfico periódico (6–12 semanas); >7 cm, : requiere evaluación adicional (resonancia o valoración por ginecología), y si persiste, crece o produce síntomas se indica cirugía electiva laparoscópica",
-      "POSMENOPÁUSICAS, ≤5 cm y con CA-125 normal : seguimiento ecográfico; si >5 cm, se indica valoración especializada y manejo quirúrgico programado, especialmente si supera 7 cm, crece o es sintomático."
+      "Quiste de pared fina con líquido claro; casi siempre benigno (funcional).",
+      "Premenopausia: ≤5 cm no necesita control; 5-7 cm control ecográfico; >7 cm RM o ginecología. Cirugía si persiste, crece o da síntomas.",
+      "Posmenopausia: ≤5 cm con CA-125 normal → control ecográfico; >5 cm o con síntomas → valoración especializada y cirugía programada."
     ]
   },
   {
     "kind": "card",
     "id": "g-373",
-    "title": "Quiste ovárico complejo",
+    "title": "Quiste complejo de ovario",
     "points": [
-      "(con septos, ecos internos, componentes sólidos o papilas) mayor riesgo de malignidad",
-      "En MUJERES PRE MENOPÁUSICAS, : (<5 cm), con características benignas claras (ej. hemorrágico típico) y la paciente está asintomática, puede hacerse control ecográfico en 6–12 semanas para confirmar resolución;si ≥5 cm, persiste, crece, sintomático o tiene hallazgos sospechosos (vegetaciones, vascularización Doppler, septos gruesos), se indica cirugía laparoscópica",
-      "En MUJERES POSMENOPÁUSICAS, cualquier quiste complejo se considera de alto riesgo hasta demostrar lo contrario, por lo que generalmente se solicita CA-125, valuación por ginecología oncológica y se indica manejo quirúrgico programado, incluso si es pequeño."
+      "Quiste con tabiques, ecos internos, partes sólidas o papilas: más riesgo de cáncer.",
+      "Premenopausia: <5 cm con aspecto benigno claro (por ejemplo hemorrágico típico) y sin síntomas → ecografía en 6-12 semanas (suele desaparecer). Si es ≥5 cm, persiste, crece, da síntomas o tiene signos sospechosos (vegetaciones, flujo en el Doppler, tabiques gruesos) → cirugía.",
+      "Posmenopausia: se considera de alto riesgo hasta demostrar lo contrario → CA-125 y valoración por ginecología oncológica."
     ]
   },
   {
     "kind": "card",
     "id": "g-374",
-    "title": "Quiste ovarico complejo",
+    "title": "Masa compleja en posmenopausia: CA-125",
     "points": [
-      "La evaluación de masas anexiales complejas en mujeres posmenopáusicas debe incluir marcadores tumorales como el CA-125, antes de considerar procedimientos quirúrgicos o estudios avanzados de imagen",
-      "La malignidad ovárica es la principal preocupación, y el CA-125 elevado en una mujer posmenopáusica con una masa compleja justifica una intervención quirúrgica para prevenir la progresión de la enfermedad."
+      "Pedir CA-125 antes de decidir cirugía o más estudios.",
+      "Una masa compleja con CA-125 elevado en una mujer posmenopáusica justifica cirugía (preferiblemente con ginecólogo oncólogo)."
     ]
   },
   {
     "kind": "card",
     "id": "g-375",
-    "title": "Masa anexial",
+    "title": "Masa anexial: cáncer de ovario",
     "points": [
-      ". Ca ovario: mayor mortalidad, asociado a braca, nuliparidad, obesidad,; eleva ca125 y alfa feto proteína."
+      "El cáncer ginecológico con mayor mortalidad (se diagnostica tarde).",
+      "Riesgo: mutaciones BRCA, antecedente familiar, no haber tenido hijos, edad, endometriosis. Protegen: anticonceptivos, embarazos y lactancia.",
+      "Marcadores: CA-125 (epiteliales); alfafetoproteína, β-hCG y LDH en tumores germinales (jóvenes)."
     ]
   },
   {
     "kind": "card",
     "id": "g-376",
-    "title": "Quiste ovárico en embarazadas",
+    "title": "Quiste de ovario en el embarazo",
     "points": [
-      "Los quistes simples <5 cm y asintomáticos : vigilancia ecográfica cada 6–8 semanas hasta su desaparición o hasta la semana 16–18",
-      "Los quistes de 5–10 cm, complejos o con sospecha de malignidad requieren evaluación especializada para decidir entre vigilancia o cirugía",
-      "Aquellos sintomáticos o complicados (torsión, ruptura, hemorragia) necesitan intervención quirúrgica urgente, ( laparoscopia en el segundo trimestre, aunque se puede operar en cualquier momento si hay urgencia)",
-      "Los quistes grandes (>10 cm) o: cirugía electiva en el segundo trimestre."
+      "Simple, <5 cm y sin síntomas: control ecográfico cada 6-8 semanas; la mayoría desaparece hacia las 16-18 semanas.",
+      "5-10 cm, complejo o sospechoso: valoración especializada (vigilar u operar).",
+      "Con síntomas o complicaciones (torsión, rotura, sangrado): cirugía urgente en cualquier momento.",
+      "Grandes (>10 cm) o persistentes: cirugía programada, idealmente en el segundo trimestre (laparoscopia)."
     ]
   },
   {
     "kind": "card",
     "id": "g-377",
-    "title": "Tipos de quiste",
+    "title": "Tipos de quiste de ovario",
     "points": [
-      "Folicular: Benigno, presencia de líquido, se forma cuando el folículo de Graf no logra ovular Quiste de cuerpo lúteo: Asintomático o hemorrágico, la causa más común de masa ovárica en embarazo. Paredes difusamente gruesas con vascularización",
-      "Endometrioma: Quiste benigno. Endometriosis en el ovario",
-      "Quiste dermoide: Teratoma quístico maduro, masa quística compleja con calcificaciones y componentes solidos"
+      "Folicular: el folículo no llegó a liberar el óvulo y se llenó de líquido; benigno y se resuelve solo.",
+      "Cuerpo lúteo: puede sangrar; la masa ovárica más frecuente en el embarazo. Pared gruesa con mucho flujo alrededor (\"anillo de fuego\").",
+      "Endometrioma: endometriosis en el ovario (\"quiste de chocolate\").",
+      "Dermoide (teratoma maduro): quiste con grasa, pelo, dientes o calcificaciones; benigno."
     ]
   },
   {
     "kind": "card",
     "id": "g-378",
-    "title": "Hallazgos ecográficos en masas anexiales",
+    "title": "Masas anexiales en la ecografía",
     "points": [
-      "1. QUISTE DERMOIDE (teratoma quístico maduro) lesión hiperecogénica (mas brillante) con sombra acústica, pelo o material sebáceo.",
-      "2. QUISTE HEMORRÁGICO: patrón reticular o en “malla” por fibrina, con ecos lineales internos .",
-      "3. HIDROSALPINX: estructura tubular quística con septos incompletos generados por pliegues de la pared tubárica.",
-      "4. ABSCESO TUBO-OVÁRICO : contenido heterogéneo, paredes engrosadas e irregulares y ecos internos, con datos clínicos de infección.",
-      "5. ENDOMETRIOMA: lesión quística con ecos internos homogéneos , aspecto “vidrio esmerilado” paredes gruesas y definida.",
-      "6. QUISTE SIMPLE OVÁRICO anecoica, de pared delgada, bien delimitada 7. MASA ANEXIAL COMPLEJA : componentes sólidos y quísticos, con septos, ecos internos o paredes engrosadas."
+      "Dermoide: zona muy brillante con sombra acústica, pelo y material graso.",
+      "Quiste hemorrágico: patrón en red o \"malla\" (fibrina).",
+      "Hidrosálpinx: tubo lleno de líquido con tabiques incompletos.",
+      "Absceso tuboovárico: contenido mixto, paredes gruesas e irregulares, con fiebre y dolor.",
+      "Endometrioma: quiste con ecos finos homogéneos (\"vidrio esmerilado\")."
     ]
   },
   {
     "kind": "card",
     "id": "g-379",
-    "title": "Infertilidad 1) confirmar infertilidad (12 meses sin embarazo…",
+    "title": "Infertilidad: estudio inicial",
     "points": [
-      "INFERTILIDAD 1) confirmar infertilidad (12 meses sin embarazo o 6 meses si la mujer ≥35 años)",
-      "2) espermiograma en el hombre y ecografía transvaginal en la mujer para valorar útero y ovarios",
-      "3) evaluar ovulación, progesterona en fase lútea (~día 21) principalmente si hay ciclos irregulares o sospecha de anovulación",
-      "4) valorar reserva ovárica con AMH o FSH día 3 especialmente en mujeres ≥35 años o con sospecha de baja reserva; y 5) evaluar permeabilidad tubárica mediante histerosalpingografía (cuando los estudios iniciales normales o existe sospecha de patología tubárica)",
-      "Descartar síndrome de ovario poliquístico"
+      "Infertilidad: 12 meses de relaciones sin protección sin embarazo (6 meses si la mujer tiene ≥35 años).",
+      "Estudiar a los dos: espermograma al hombre; ecografía transvaginal a la mujer.",
+      "Ovulación: progesterona en fase lútea (~día 21) si los ciclos son irregulares.",
+      "Reserva ovárica: hormona antimülleriana (AMH) o FSH del día 3, sobre todo si ≥35 años.",
+      "Trompas: histerosalpingografía (o histerosonografía con contraste)."
     ]
   },
   {
     "kind": "card",
     "id": "g-380",
-    "title": "Telorrea",
+    "title": "Telorrea (secreción por el pezón)",
     "points": [
-      "Cualquier secreción que sale por el pezón fuera del periodo de lactancia",
-      "Telorrea fisiológica: Suele ser bilateral y provocado por manipulación de pezones , Tratamiento: Tranquilizar a la paciente y evitar manipulación",
-      "No se requieren estudios adicionales, solo en mujeres >- 40 años se solicitan imágenes .Telorrea patologica: Espontanea, usualmente unilateral, componente un solo conducto, suele ser claro, turbio o hemático .Se deben solicitar imágenes, en >35 años: Ecografia de mama y mamografía . La principal causa son los papilomas intraductales, son comúnmente benignos y se deben resecar en conjunto con ducto afectado",
-      "Si ecografia y mamografia es negativa, se puede solicitar ductoscopia, galactografía o RMN de mama"
+      "Cualquier salida de líquido por el pezón fuera de la lactancia.",
+      "Fisiológica: de ambos lados, por varios conductos y solo al apretar. Tranquilizar y no manipular. Imágenes de tamizaje según la edad (≥40 años).",
+      "Patológica: espontánea, de un lado y un solo conducto, transparente o con sangre. Pedir ecografía (+ mamografía si >35 años) y remitir.",
+      "La causa más frecuente de telorrea patológica es el papiloma intraductal (benigno); hay que descartar cáncer.",
+      "Lechosa bilateral: pedir prolactina y TSH, revisar fármacos."
     ]
   },
   {
     "kind": "card",
     "id": "g-381",
-    "title": "Síndrome de asherman → Formación de adherencias uterinas…",
+    "title": "Síndrome de Asherman",
     "points": [
-      "SÍNDROME DE ASHERMAN → Formación de adherencias uterinas tras procedimiento diagnóstico como legrado o aspiración . Causas → Menstruaciones ligeras o amenorrea que no responda a medicación con progesterona",
-      "Tiene niveles normales de FSH y LH . Tratamiento: Histeroscopia donde se diagnostique y lisis de adherencias"
+      "Adherencias (cicatrices) dentro del útero tras un legrado o aspiración, sobre todo tras embarazo o infección.",
+      "Reglas escasas o ausentes, infertilidad, abortos repetidos. FSH y LH normales; no sangra tras darle progesterona y estrógeno.",
+      "Diagnóstico y tratamiento por histeroscopia (cortar las adherencias)."
     ]
   },
   {
     "kind": "card",
     "id": "g-382",
-    "title": "Planificación antiandrogénica",
+    "title": "Anticonceptivos con efecto antiandrogénico",
     "points": [
-      "Ideal para acné, hirsutismo o SOP. Los anticonceptivos combinados contienen estrógeno + progestágeno",
-      "El efecto antiandrogénico depende del tipo de progestina",
-      "Progestinas con efecto androgénico: Noretindrona, Levonorgestrel, Norgestrel → No se recomiendan cuando el objetivo es antiandrogénico",
-      "Progestinas con efecto antiandrogénico:, Drospirenona , ciproterona, Desogestrel , dienogest"
+      "Útiles para acné, exceso de vello o SOP.",
+      "El efecto depende del progestágeno que acompaña al estrógeno.",
+      "Con efecto androgénico (no elegir para este fin): levonorgestrel, norgestrel, noretindrona.",
+      "Antiandrogénicos (preferir): drospirenona, ciproterona, dienogest; desogestrel y gestodeno tienen poco efecto androgénico."
     ]
   },
   {
     "kind": "card",
     "id": "g-383",
-    "title": "Citologia",
+    "title": "Citología y tamizaje de cáncer de cuello uterino",
     "points": [
-      "Citología cervical se clasifica así: NILM: normal sin neoplasia intraepitelial cervical (sin NIC); ASC-US: atipia escamosa de significado indeterminado, equivalente a ausencia de NIC; LSIL: lesión intraepitelial escamosa de bajo grado, equivalente a NIC1; ASC-H : atipia con sospecha de lesión de alto grado, con probable NIC2–NIC3; HSIL: lesión intraepitelial escamosa de alto grado, equivalente a NIC2–NIC3 confirmada; y SCC: carcinoma escamocelular, es decir, cáncer invasor más allá de NIC3",
-      "TAMIZAJE : 1.*mujeres entre 25-29 años: CON CITOLOGIA: 1-1-3",
-      "(25-26-29):",
-      "Si negativo: continuo igual esquema .",
-      "Si inflamación se continua con esquema normal",
-      "ASCUS : realizar vph, si es negativo continuo prueba en 3 años. si es positivo realizo colposcopia.",
-      "SI TIENE LESIÓN MAYOR A ASCUS; se indica colposcopia inmediatamente. 2.*mujeres desde los 30 años, o pacientes con vih desde 25 años: se realiza TAMIZACIÓN CON ADN VPH. ( cada 5 años, cada 3 años si vih) (si no esta disponible citología):",
-      "Si es negativo: continuo tamización cada 5 años, si tiene vih cada 3 años.",
-      "Si es positivo . la conducta depende de la posibilidad: 1ER ALGORITMO:",
-      "1. si vph 16/18/45 : se toma colposcopia con o sin biopsia.",
-      "Si negativo o nic 1 : repetir adn vph entre 18-24 meses, si vih a los 12 meses.",
-      "Si nic 2-3 : conizacion o bisturí frio, seguimiento 12 meses con adn vph -si cáncer o sospecha: remitir a ginecología 2. Si otros VPH de alto riesgo: citologia",
-      "Si negativa: repetir adn vph entre 18-24 meses, si vih a los 12 meses",
-      "Si asucus o mas realizar colposcopia. 2DO: ALGORITMO: si adn vph positivo ( sin geno tipificación) si no tenemos citología ni colposcopia, le hacemos inspección con acido acético.",
-      "Si negativo: repetir adn vph entre 18-24 meses, si vih a los 12 meses - si positivo miro criterios de elegibilidad para tto ablativo ; si tenemos colposcopia la realizamos y seguimos igual esquema.",
-      "CITOLOGÍA EN >65 AÑOS: Suspender la tamización posterior a tamizaje previo adecuado, definido como dos resultados negativos consecutivos, realizados con los intervalos rutinarios recomendados para la prueba. si no los tienen tiene que seguir con tamización"
+      "Resultados: NILM = normal. ASC-US = células atípicas de significado incierto (casi siempre sin lesión). LSIL = lesión de bajo grado (NIC 1). ASC-H = atipias que sugieren alto grado. HSIL = lesión de alto grado (NIC 2-3). Carcinoma escamocelular = cáncer invasor.",
+      "Tamizaje en Colombia: 25-29 años con citología en esquema 1-1-3 (dos normales seguidas al año y luego cada 3 años). 30-65 años con prueba de ADN de VPH cada 5 años si es negativa.",
+      "Resultados alterados (ASC-H, HSIL, VPH 16/18 o citología alterada con VPH positivo): colposcopia."
     ]
   },
   {
     "kind": "card",
     "id": "g-384",
-    "title": "Muestreo endocervical (curetaje y/o cepillado)",
+    "title": "Muestreo endocervical (dentro del canal del cuello)",
     "points": [
-      "Indicado:",
-      "1. citología con alteración en células glandulares (AGC / AGC Neo)",
-      "2. colposcopia con zona de transformación en el canal endocervical (ZT tipo 2 o 3)",
-      "3. alta sospecha de lesiones de alto grado (ASC-H / LIEAG), . Se realiza con cureta o cepillo endocervical para evaluar lesiones ocultas en el canal; no debe hacerse en embarazo",
-      "Puede presentar sangrado leve posterior",
-      "Suele complementarse con biopsia dirigida y seguimiento según resultado histológico."
+      "Indicado si: citología con células glandulares atípicas (AGC), colposcopia en la que no se ve toda la zona de transformación (tipo 2 o 3), o sospecha alta de lesión de alto grado (ASC-H o HSIL).",
+      "Se hace con cureta o cepillo endocervical; busca lesiones escondidas en el canal.",
+      "No se hace en el embarazo. Puede dejar un sangrado leve."
     ]
   },
   {
     "kind": "card",
     "id": "g-385",
-    "title": "Biopsia de endometrio (Pipelle, legrado, histeroscopia)",
+    "title": "Biopsia de endometrio",
     "points": [
-      "Indicada :1. citología con alteración en células glandulares (AGC / AGC Neo)",
-      "2. presencia de factores de riesgo para hiperplasia o neoplasia endometrial: ( edad >35–45 años, SOP, hemorragia uterina anormal, amenorrea sin causa clara y obesidad/síndrome metabólico)",
-      "Permite diagnosticar hiperplasia endometrial o cáncer; la Pipelle es el método inicial ambulatorio, mientras que el legrado o la histeroscopia se usan si la muestra es insuficiente o persiste la sospecha",
-      "Está contraindicada en embarazo y el manejo posterior depende del resultado (p. ej., progestágenos en hiperplasia sin atipia o manejo oncológico si hay malignidad)."
+      "Indicada si: citología con células glandulares atípicas (AGC) o factores de riesgo de hiperplasia o cáncer de endometrio (≥35-45 años con sangrado anormal, SOP, obesidad, amenorrea sin causa clara).",
+      "Método inicial ambulatorio: cánula de Pipelle. Si la muestra es insuficiente o sigue la sospecha: legrado o histeroscopia.",
+      "Contraindicada en el embarazo."
     ]
   },
   {
     "kind": "card",
     "id": "g-386",
-    "title": "PRE cáncer o cáncer de cuello uterino",
+    "title": "Sospecha de cáncer de cuello uterino",
     "points": [
-      "Lesión con sinuorragia, flujo fétido, lesión exofitica , fiabre o ulcerada. se indica colposcopia inmediatamente, sin importar edad o tamización de citología."
+      "Sangrado tras las relaciones, flujo con mal olor, lesión visible que crece hacia fuera (exofítica), friable (sangra al tocarla) o ulcerada.",
+      "Hacer colposcopia con biopsia de inmediato, sin importar la edad ni el resultado de citologías previas."
     ]
   }
 ];
