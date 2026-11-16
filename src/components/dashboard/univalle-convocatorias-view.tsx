@@ -66,7 +66,8 @@ export function UnivalleConvocatoriasView({ userId }: UnivalleConvocatoriasViewP
         <p className="max-w-2xl text-sm leading-relaxed text-slate-500 sm:text-base">
           El examen de Univalle es el mismo para todas las especialidades: medicina general
           completa. Cada simulacro tiene 100 preguntas en 150 minutos (1,5 min por pregunta, el
-          ritmo que necesitas el día del examen), un solo intento y retroalimentación al final.
+          ritmo que necesitas el día del examen; el examen real puede tener más preguntas), un solo
+          intento y retroalimentación al final.
           Se habilitan de forma progresiva hasta el examen de {UNIVALLE_EXAM_INFO.estimatedExamLabel}.
         </p>
       </header>

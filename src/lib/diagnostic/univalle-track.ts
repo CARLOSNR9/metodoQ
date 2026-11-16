@@ -100,7 +100,7 @@ export const UNIVALLE_PHASES: UnivallePhase[] = [
     goals: [
       "Hacer el diagnóstico Univalle (10 preguntas)",
       "Simulacro #1 completo para medir tu punto de partida",
-      "30–40 preguntas diarias priorizando tus áreas débiles",
+      "Cumplir tu meta diaria de 10 preguntas (si puedes, llega a 30)",
     ],
   },
   {

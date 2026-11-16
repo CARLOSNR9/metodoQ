@@ -139,7 +139,7 @@ export function ProDashboardView({
 
   return (
     <div className="space-y-8 pb-12">
-      {showLiveClasses && user?.uid ? (
+      {showLiveClasses && !isUnivalle && user?.uid ? (
         <NextClassBanner userId={user.uid} hideEmpty />
       ) : null}
 
@@ -309,7 +309,8 @@ export function ProDashboardView({
           <PerformanceStatsSection userId={user.uid} />
           <ProgressChart userId={user.uid} />
 
-          {showLiveClasses ? (
+          {/* Aún no hay clases para el grupo Univalle: no mostrar las de otras cohortes. */}
+          {showLiveClasses && !isUnivalle ? (
             <>
               <LiveClasses />
               <PastClasses />

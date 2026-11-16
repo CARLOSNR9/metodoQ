@@ -5,6 +5,7 @@ import { useUserProfile } from "@/hooks/use-user-profile";
 import { hasPaidPlan } from "@/lib/plans/access";
 import { GENERAL_ULTRA_CATEGORIES, GENERAL_ULTRA_GROUP_ORDER } from "@/lib/ultra-resumenes/general";
 import { UltraResumenesView } from "@/components/ultra-resumenes/ultra-resumenes-view";
+import { isDermatologiaSpecialty } from "@/lib/diagnostic/university-match";
 
 const GROUP_DESCRIPTIONS: Record<string, string> = {
   "Medicina interna": "El bloque que más pesa en casi todos los exámenes de residencia.",
@@ -27,6 +28,16 @@ export default function UltraResumenesPage() {
 
   if (!user) return null;
 
+  // El panel se pinta solo en el cliente (tras cargar el perfil), así que leer
+  // la URL aquí no causa diferencias de hidratación.
+  const initialSlug =
+    typeof window !== "undefined"
+      ? new URLSearchParams(window.location.search).get("categoria")
+      : null;
+  const specialtyNote = isDermatologiaSpecialty(profile?.goalSpecialty)
+    ? " Tu especialidad, Dermatología, está en «Especialidades menores»: pesa poco en el examen general, pero dominarla te prepara para la entrevista."
+    : "";
+
   return (
     <UltraResumenesView
       userId={user.uid}
@@ -34,11 +45,12 @@ export default function UltraResumenesPage() {
       progressField="ultraResumenes"
       eyebrow="Ultra resúmenes Q"
       title="Lo más rentable para tu examen, en fichas"
-      description="Frases cortas para aprender de memoria, organizadas por especialidad y prioridad. Estudia unas 10 fichas por la mañana y otras 10 por la tarde, márcalas como dominadas y repásalas en modo tarjetas. Sirve para cualquier universidad y especialidad."
+      description={`Frases cortas para aprender de memoria, organizadas por especialidad y prioridad. Estudia unas 10 fichas por la mañana y otras 10 por la tarde, márcalas como dominadas y repásalas en modo tarjetas. Sirve para cualquier universidad y especialidad.${specialtyNote}`}
       categories={GENERAL_ULTRA_CATEGORIES}
       groupOrder={GENERAL_ULTRA_GROUP_ORDER}
       groupDescriptions={GROUP_DESCRIPTIONS}
       locked={!hasPaidPlan(profile?.plan)}
+      initialSlug={initialSlug}
       footnote="Nivel de prioridad orientativo según el peso habitual de cada área en los exámenes de residencia en Colombia. Verifica dosis y conductas con la guía vigente de tu institución."
     />
   );

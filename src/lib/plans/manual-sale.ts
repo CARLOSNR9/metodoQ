@@ -6,6 +6,9 @@ import {
   type PlanId,
 } from "./config";
 
+/** Colombia no tiene horario de verano: siempre UTC-5. */
+export const COLOMBIA_UTC_OFFSET = "-05:00";
+
 export type ManualSaleRecord = {
   negotiatedPriceCOP: number;
   listPriceCOP: number;
@@ -40,8 +43,12 @@ export function buildManualPlanDates(
   startDate: Date,
   cycle: BillingCycle,
 ): { planStartedAt: string; planExpiresAt: string } {
-  const start = new Date(startDate);
-  start.setHours(0, 0, 0, 0);
+  // Medianoche en Colombia (UTC-5), no la del servidor (UTC en Vercel): si no,
+  // el plan "empieza" a las 7 p. m. del día anterior en hora local.
+  const y = startDate.getFullYear();
+  const m = String(startDate.getMonth() + 1).padStart(2, "0");
+  const d = String(startDate.getDate()).padStart(2, "0");
+  const start = new Date(`${y}-${m}-${d}T00:00:00${COLOMBIA_UTC_OFFSET}`);
   return {
     planStartedAt: start.toISOString(),
     planExpiresAt: calculatePlanExpiration(start, cycle),

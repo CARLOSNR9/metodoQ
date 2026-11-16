@@ -102,8 +102,15 @@ export function aggregateTodayUccBlockQuestions(
   return counts;
 }
 
+/** Fechas de inicio guardadas a medianoche UTC (ventas manuales antiguas). */
+const UTC_MIDNIGHT_ISO = /^(\d{4}-\d{2}-\d{2})T00:00:00(?:\.000)?Z$/;
+
 export function getPlanStartDateKey(planStartedAt: string | null | undefined): string | null {
   if (!planStartedAt) return null;
+  // Una venta manual guardada a medianoche UTC representa ese día calendario;
+  // convertida a hora de Colombia caería en el día anterior.
+  const legacyMidnight = UTC_MIDNIGHT_ISO.exec(planStartedAt);
+  if (legacyMidnight) return legacyMidnight[1];
   const date = new Date(planStartedAt);
   if (Number.isNaN(date.getTime())) return null;
   return getLocalDateKey(date);
