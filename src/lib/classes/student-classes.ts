@@ -109,3 +109,18 @@ export function getClassCountdownMessage(
   const msUntil = classDate.getTime() - now.getTime();
   return `Faltan ${formatClassCountdown(msUntil)} para tu clase`;
 }
+
+/**
+ * Una clase pasada sin grabación anterior al inicio del plan del estudiante no
+ * le aporta nada (no pudo asistir ni puede verla): se oculta.
+ */
+export function isRelevantPastClassForStudent(
+  cls: { classDate: Date; recordingLink?: string },
+  planStartedAt: string | null | undefined,
+): boolean {
+  if (cls.recordingLink?.trim()) return true;
+  if (!planStartedAt) return true;
+  const start = new Date(planStartedAt);
+  if (Number.isNaN(start.getTime())) return true;
+  return cls.classDate.getTime() >= start.getTime();
+}

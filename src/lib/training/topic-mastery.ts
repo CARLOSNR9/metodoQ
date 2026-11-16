@@ -72,7 +72,7 @@ const AREA_RULES: Array<[RegExp, string]> = [
   [/ortopedia|traumatolog/, "ortopedia"],
   [/cirugia|neurocirugia|trauma|atls|quemadura/, "cirugia"],
   [/ciencias basicas|bioquimica|farmacolog|fisiologia|neuroanatomia|anatomia|genetica|embriolog/, "ciencias-basicas"],
-  [/salud publica|atencion primaria|epidemiolog|medicina preventiva|bioestadistica/, "salud-publica"],
+  [/salud publica|atencion primaria|epidemiolog|medicina preventiva|bioestadistica|legislacion|etica medica|bioetica/, "salud-publica"],
   [/urgencias|toxicolog/, "urgencias"],
   [/cardiolog/, "cardiologia"],
   [/hematolog/, "hematologia"],

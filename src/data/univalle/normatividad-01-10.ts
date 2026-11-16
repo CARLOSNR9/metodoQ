@@ -176,8 +176,8 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
   }),
   q({
     id: "univalle-norma-06",
-    examArea: "SALUD PÚBLICA - RUTAS INTEGRALES (RES. 3280)",
-    topic: "TAMIZAJE DE CÁNCER DE CUELLO UTERINO",
+    examArea: LEGAL,
+    topic: "RES. 3280: TAMIZAJE DE CÁNCER DE CUELLO UTERINO",
     difficulty: "medium",
     tags: ["normatividad", "salud-publica", "ginecologia"],
     statement:

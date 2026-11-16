@@ -27,7 +27,8 @@ const LETTERS: OptionLetter[] = ["A", "B", "C", "D"];
  */
 function getAreaPrefix(examArea: string): string {
   if (/DERMATOLOG/i.test(examArea)) return "DERMATOLOGÍA";
-  if (/LEGISLACI|SALUD PÚBLICA/i.test(examArea)) return "SALUD PÚBLICA";
+  if (/LEGISLACI/i.test(examArea)) return "LEGISLACIÓN";
+  if (/SALUD PÚBLICA/i.test(examArea)) return "SALUD PÚBLICA";
   return examArea.split(" - ")[0].trim();
 }
 

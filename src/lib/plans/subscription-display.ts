@@ -44,9 +44,17 @@ export function getDoctorGreetingName(profile: SubscriptionProfile | null | unde
   return `${honorific} ${name}`;
 }
 
+/** Fechas guardadas a medianoche UTC por ventas manuales antiguas. */
+const UTC_MIDNIGHT_ISO = /^(\d{4})-(\d{2})-(\d{2})T00:00:00(?:\.000)?Z$/;
+
 export function formatSubscriptionDate(iso: string | null | undefined): string {
   if (!iso) return "—";
-  const date = new Date(iso);
+  // Medianoche UTC representa ese día calendario; en hora de Colombia caería
+  // en el día anterior (p. ej. "15 de noviembre" para un plan del 16).
+  const legacy = UTC_MIDNIGHT_ISO.exec(iso);
+  const date = legacy
+    ? new Date(Number(legacy[1]), Number(legacy[2]) - 1, Number(legacy[3]))
+    : new Date(iso);
   if (Number.isNaN(date.getTime())) return "—";
   return date.toLocaleDateString("es-CO", {
     day: "numeric",

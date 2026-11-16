@@ -1,5 +1,7 @@
 "use client";
 
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { useAuthGuard } from "@/hooks/use-auth-guard";
 import { useUserProfile } from "@/hooks/use-user-profile";
 import { hasPaidPlan } from "@/lib/plans/access";
@@ -15,6 +17,17 @@ const GROUP_DESCRIPTIONS: Record<string, string> = {
 };
 
 export default function UltraResumenesPage() {
+  return (
+    <Suspense fallback={null}>
+      <UltraResumenesContent />
+    </Suspense>
+  );
+}
+
+function UltraResumenesContent() {
+  // `?categoria=` abre una categoría; el enlace del menú (sin parámetro)
+  // vuelve siempre a la vista general.
+  const initialSlug = useSearchParams().get("categoria");
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile, loading } = useUserProfile();
 
@@ -28,18 +41,13 @@ export default function UltraResumenesPage() {
 
   if (!user) return null;
 
-  // El panel se pinta solo en el cliente (tras cargar el perfil), así que leer
-  // la URL aquí no causa diferencias de hidratación.
-  const initialSlug =
-    typeof window !== "undefined"
-      ? new URLSearchParams(window.location.search).get("categoria")
-      : null;
   const specialtyNote = isDermatologiaSpecialty(profile?.goalSpecialty)
     ? " Tu especialidad, Dermatología, está en «Especialidades menores»: pesa poco en el examen general, pero dominarla te prepara para la entrevista."
     : "";
 
   return (
     <UltraResumenesView
+      key={initialSlug ?? "general"}
       userId={user.uid}
       variant="default"
       progressField="ultraResumenes"
