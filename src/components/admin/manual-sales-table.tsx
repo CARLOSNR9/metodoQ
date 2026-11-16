@@ -196,7 +196,7 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
           <form
             onSubmit={handleUpdate}
-            className="w-full max-w-lg rounded-2xl border border-slate-200 bg-[#0f2744] p-6 shadow-2xl"
+            className="w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl"
           >
             <h3 className="text-lg font-semibold text-slate-900">Editar venta interna</h3>
             <p className="mt-1 text-sm text-slate-500">
@@ -223,7 +223,7 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
                 <select
                   name="planBillingCycle"
                   defaultValue={String(editingSale.billingCycle)}
-                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                 >
                   <option value="1">1 mes</option>
                   <option value="3">3 meses</option>
@@ -239,7 +239,7 @@ export function ManualSalesTable({ sales }: ManualSalesTableProps) {
                   type="date"
                   required
                   defaultValue={toDateInput(editingSale.planStartedAt)}
-                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
+                  className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                 />
               </div>
               <div className="space-y-1.5 sm:col-span-2">

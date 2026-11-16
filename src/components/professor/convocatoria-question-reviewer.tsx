@@ -583,7 +583,7 @@ function EditMode({
   onMoveOption: (index: number, direction: -1 | 1) => void;
 }) {
   const inputClass =
-    "w-full rounded-xl border border-slate-200 bg-[#0f2744]/80 px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500/60 focus:border-mq-accent/50 focus:outline-none focus:ring-2 focus:ring-mq-accent/20";
+    "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500/60 focus:border-mq-accent/50 focus:outline-none focus:ring-2 focus:ring-mq-accent/20";
   const labelClass = "text-xs font-semibold uppercase tracking-[0.12em] text-slate-500";
 
   return (

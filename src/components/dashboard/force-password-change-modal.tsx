@@ -1,18 +1,34 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { doc, updateDoc } from "firebase/firestore";
-import { updatePassword } from "firebase/auth";
+import {
+  EmailAuthProvider,
+  reauthenticateWithCredential,
+  signOut,
+  updatePassword,
+} from "firebase/auth";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
-import { Lock, AlertCircle, Eye, EyeOff, Loader2 } from "lucide-react";
+import { AlertCircle, CheckCircle2, Circle, Eye, EyeOff, KeyRound, Loader2 } from "lucide-react";
+import { evaluatePasswordRules, isPasswordAcceptable } from "@/lib/password-policy";
 
 interface ForcePasswordChangeModalProps {
   userId: string | undefined;
   isOpen: boolean;
+  /** Nombre para el saludo (opcional). */
+  greetingName?: string | null;
 }
 
-export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChangeModalProps) {
+const inputClassName =
+  "w-full rounded-xl border border-slate-200 bg-slate-50 p-4 pr-12 text-sm text-slate-900 placeholder:text-slate-400 focus:border-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent";
+
+export function ForcePasswordChangeModal({
+  userId,
+  isOpen,
+  greetingName,
+}: ForcePasswordChangeModalProps) {
+  const [temporaryPassword, setTemporaryPassword] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -21,16 +37,23 @@ export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChange
 
   if (!isOpen || !userId) return null;
 
+  const rules = evaluatePasswordRules(password, temporaryPassword);
+  const passwordsMatch = confirmPassword.length > 0 && password === confirmPassword;
+  const canSubmit =
+    temporaryPassword.length > 0 &&
+    isPasswordAcceptable(password, temporaryPassword) &&
+    passwordsMatch &&
+    !isSaving;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
-    if (password.length < 6) {
-      setError("La contraseña debe tener al menos 6 caracteres.");
+    if (!isPasswordAcceptable(password, temporaryPassword)) {
+      setError("Tu nueva contraseña aún no cumple todos los requisitos.");
       return;
     }
-
-    if (password !== confirmPassword) {
+    if (!passwordsMatch) {
       setError("Las contraseñas no coinciden.");
       return;
     }
@@ -39,27 +62,31 @@ export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChange
     try {
       const auth = getFirebaseAuth();
       const currentUser = auth.currentUser;
-      
-      if (!currentUser) {
+      if (!currentUser?.email) {
         throw new Error("No hay un usuario autenticado.");
       }
 
-      // Actualizar contraseña en Firebase Auth
+      // Reautenticar con la contraseña temporal evita el error
+      // "requires-recent-login" si la sesión lleva rato abierta.
+      const credential = EmailAuthProvider.credential(currentUser.email, temporaryPassword);
+      await reauthenticateWithCredential(currentUser, credential);
       await updatePassword(currentUser, password);
 
-      // Limpiar el flag en Firestore
-      const userDocRef = doc(getFirebaseDb(), "users", userId);
-      await updateDoc(userDocRef, {
+      await updateDoc(doc(getFirebaseDb(), "users", userId), {
         requiresPasswordChange: false,
+        passwordChangedAt: new Date().toISOString(),
       });
-
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Error al actualizar la contraseña:", err);
-      // Firebase specific errors mapping
-      if (err.code === "auth/requires-recent-login") {
-        setError("Por seguridad, debes cerrar sesión e ingresar nuevamente con tu contraseña temporal antes de cambiarla.");
+      const code = (err as { code?: string }).code;
+      if (code === "auth/wrong-password" || code === "auth/invalid-credential") {
+        setError("La contraseña temporal no es correcta. Usa la misma con la que acabas de ingresar.");
+      } else if (code === "auth/too-many-requests") {
+        setError("Demasiados intentos. Espera unos minutos y vuelve a intentarlo.");
+      } else if (code === "auth/weak-password") {
+        setError("Esa contraseña es demasiado débil. Prueba con una más larga.");
       } else {
-        setError("Ocurrió un error al intentar cambiar la contraseña. Intenta de nuevo.");
+        setError("No pudimos cambiar la contraseña. Intenta de nuevo en un momento.");
       }
     } finally {
       setIsSaving(false);
@@ -67,83 +94,130 @@ export function ForcePasswordChangeModal({ userId, isOpen }: ForcePasswordChange
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-md">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-slate-900/70 p-4 backdrop-blur-md">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
-        className="relative w-full max-w-md overflow-hidden bg-white border border-red-500/30 rounded-[2rem] shadow-[0_32px_64px_-16px_rgba(220,38,38,0.2)]"
+        className="relative my-8 w-full max-w-md overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-2xl"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="force-password-title"
       >
-        <div className="absolute top-0 w-full h-32 opacity-10 -z-10 bg-gradient-to-b from-red-500 to-transparent" />
-
-        <div className="p-8">
-          <div className="flex flex-col items-center text-center mb-8">
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-red-500/10 text-red-500 mb-6">
-              <Lock size={32} />
+        <div className="p-7 sm:p-8">
+          <div className="mb-6 flex flex-col items-center text-center">
+            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-mq-accent/10 text-mq-accent">
+              <KeyRound size={28} />
             </div>
-            <h2 className="text-2xl font-black text-slate-900">Actualización de Seguridad</h2>
+            <h2 id="force-password-title" className="text-2xl font-black text-slate-900">
+              {greetingName ? `Hola, ${greetingName}` : "Crea tu contraseña personal"}
+            </h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-500">
-              Has iniciado sesión con una contraseña temporal. Por tu seguridad, debes crear una contraseña personal antes de continuar.
+              Ingresaste con una contraseña temporal. Antes de empezar, crea una que solo tú
+              conozcas. Te tomará menos de un minuto.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            {error && (
-              <div className="flex items-start gap-3 rounded-xl border border-red-500/20 bg-red-500/10 p-4 text-red-400">
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {error ? (
+              <div className="flex items-start gap-3 rounded-xl border border-rose-200 bg-rose-50 p-4 text-rose-700">
                 <AlertCircle className="mt-0.5 shrink-0" size={18} />
                 <p className="text-sm font-medium">{error}</p>
               </div>
-            )}
+            ) : null}
 
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                Nueva Contraseña
+            <div className="space-y-1.5">
+              <label htmlFor="temp-password" className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                Contraseña temporal
+              </label>
+              <input
+                id="temp-password"
+                type={showPassword ? "text" : "password"}
+                autoComplete="current-password"
+                value={temporaryPassword}
+                onChange={(e) => setTemporaryPassword(e.target.value)}
+                className={inputClassName}
+                placeholder="La que te enviamos"
+                required
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <label htmlFor="new-password" className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                Nueva contraseña
               </label>
               <div className="relative">
                 <input
+                  id="new-password"
                   type={showPassword ? "text" : "password"}
+                  autoComplete="new-password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 pr-12 text-sm text-slate-900 placeholder:text-slate-500 focus:border-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent"
-                  placeholder="Mínimo 6 caracteres"
+                  className={inputClassName}
+                  placeholder="Ej: Dermato2027"
                   required
                 />
                 <button
                   type="button"
-                  onClick={() => setShowPassword(!showPassword)}
+                  onClick={() => setShowPassword((v) => !v)}
+                  aria-label={showPassword ? "Ocultar contraseñas" : "Mostrar contraseñas"}
                   className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-900"
                 >
                   {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                 </button>
               </div>
+              <ul className="grid gap-1 pt-1 sm:grid-cols-2">
+                {rules.map((rule) => (
+                  <li
+                    key={rule.id}
+                    className={`flex items-center gap-1.5 text-xs ${rule.ok ? "text-emerald-700" : "text-slate-500"}`}
+                  >
+                    {rule.ok ? <CheckCircle2 size={14} /> : <Circle size={14} />}
+                    {rule.label}
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="space-y-2">
-              <label className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                Confirmar Contraseña
+            <div className="space-y-1.5">
+              <label htmlFor="confirm-password" className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                Confirmar nueva contraseña
               </label>
               <input
+                id="confirm-password"
                 type={showPassword ? "text" : "password"}
+                autoComplete="new-password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-900 placeholder:text-slate-500 focus:border-mq-accent focus:outline-none focus:ring-1 focus:ring-mq-accent"
-                placeholder="Vuelve a escribir la contraseña"
+                className={inputClassName}
+                placeholder="Escríbela de nuevo"
                 required
               />
+              {confirmPassword.length > 0 && !passwordsMatch ? (
+                <p className="text-xs text-rose-600">Aún no coinciden.</p>
+              ) : null}
             </div>
 
             <button
               type="submit"
-              disabled={isSaving}
-              className="w-full flex items-center justify-center min-h-[3.5rem] rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground hover:scale-[1.02] transition-transform disabled:opacity-50 disabled:hover:scale-100 mt-4"
+              disabled={!canSubmit}
+              className="mt-2 flex min-h-[3.5rem] w-full items-center justify-center rounded-xl bg-mq-accent px-6 text-sm font-black text-mq-accent-foreground transition-transform hover:scale-[1.02] disabled:opacity-50 disabled:hover:scale-100"
             >
               {isSaving ? (
                 <>
-                  <Loader2 className="animate-spin mr-2" size={18} />
-                  Actualizando...
+                  <Loader2 className="mr-2 animate-spin" size={18} />
+                  Guardando...
                 </>
               ) : (
-                "Guardar Contraseña"
+                "Guardar y entrar a mi espacio"
               )}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => void signOut(getFirebaseAuth())}
+              className="w-full text-center text-xs font-semibold text-slate-400 hover:text-slate-600"
+            >
+              Cerrar sesión
             </button>
           </form>
         </div>

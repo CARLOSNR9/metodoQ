@@ -90,7 +90,7 @@ export function ThemeSelect({
         <ul
           id={listId}
           role="listbox"
-          className="absolute z-30 mt-1 max-h-56 w-full overflow-y-auto rounded-lg border border-slate-200 bg-[#0f2744] py-1 shadow-2xl"
+          className="absolute z-30 mt-1 max-h-56 w-full overflow-y-auto rounded-lg border border-slate-200 bg-white py-1 shadow-2xl"
         >
           {options.length === 0 ? (
             <li className="px-3 py-2.5 text-sm text-slate-500">Sin opciones</li>
