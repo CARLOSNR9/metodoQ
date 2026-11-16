@@ -138,6 +138,8 @@ type UltraResumenesViewProps = {
   locked?: boolean;
   upgradeHref?: string;
   footnote?: ReactNode;
+  /** Categoría abierta al entrar (p. ej. desde un enlace `?categoria=`). */
+  initialSlug?: string | null;
 };
 
 export function UltraResumenesView({
@@ -154,10 +156,13 @@ export function UltraResumenesView({
   locked = false,
   upgradeHref = "/dashboard/planes",
   footnote,
+  initialSlug = null,
 }: UltraResumenesViewProps) {
   const theme = THEMES[variant];
   const { mastered, toggle, error } = useUltraProgress(userId, progressField);
-  const [activeSlug, setActiveSlug] = useState<string | null>(null);
+  const [activeSlug, setActiveSlug] = useState<string | null>(() =>
+    initialSlug && categories.some((category) => category.slug === initialSlug) ? initialSlug : null,
+  );
   const [loaded, setLoaded] = useState<Record<string, UltraEntry[]>>({});
   const [globalQuery, setGlobalQuery] = useState("");
 

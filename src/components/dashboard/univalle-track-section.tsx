@@ -28,8 +28,8 @@ type UnivalleTrackSectionProps = {
   planStartedAt?: string | null;
 };
 
-export const UNIVALLE_DERMATOLOGY_PRACTICE_HREF = "/dashboard/entrenar?topic=dermatolog&count=10";
-export const UNIVALLE_NORMATIVIDAD_PRACTICE_HREF = "/dashboard/entrenar?topic=legislaci&count=10";
+export const UNIVALLE_DERMATOLOGY_PRACTICE_HREF = `/dashboard/entrenar?topic=${encodeURIComponent("dermatología")}&count=10`;
+export const UNIVALLE_NORMATIVIDAD_PRACTICE_HREF = `/dashboard/entrenar?topic=${encodeURIComponent("legislación")}&count=10`;
 
 /** Encabezado y hoja de ruta del espacio Univalle (Cali). */
 export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrackSectionProps) {
@@ -85,7 +85,7 @@ export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrack
             href="/dashboard/convocatorias"
             icon={<ClipboardCheck size={18} />}
             title={featured ? `${featured.label} disponible` : "Simulacros Univalle"}
-            subtitle="100 preg · 150 min · ritmo real"
+            subtitle="100 preg en 150 min"
             primary
           />
           <ActionCard
@@ -104,7 +104,7 @@ export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrack
             href={UNIVALLE_DERMATOLOGY_PRACTICE_HREF}
             icon={<Microscope size={18} />}
             title="Ruta Dermatología"
-            subtitle="Casos del Valle y el Pacífico"
+            subtitle="Tropical, cáncer de piel, ampollas"
           />
         </div>
       </motion.div>
@@ -126,23 +126,35 @@ export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrack
               </li>
             ))}
           </ul>
-          <ol className="mt-6 grid gap-2 sm:grid-cols-4">
+          <ol className="mt-6 space-y-3 border-t border-slate-100 pt-5">
             {UNIVALLE_PHASES.map((item) => {
               const isCurrent = item.id === phase.id;
               const isDone = item.id < phase.id;
               return (
-                <li
-                  key={item.id}
-                  className={`rounded-xl border px-3 py-2 text-xs ${
-                    isCurrent
-                      ? "border-red-300 bg-red-50 text-red-800"
-                      : isDone
-                        ? "border-emerald-200 bg-emerald-50 text-emerald-700"
-                        : "border-slate-200 bg-slate-50 text-slate-500"
-                  }`}
-                >
-                  <p className="font-black">Fase {item.id}</p>
-                  <p>{item.window}</p>
+                <li key={item.id} className="flex gap-3">
+                  <span
+                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-black ${
+                      isCurrent
+                        ? "bg-red-700 text-white"
+                        : isDone
+                          ? "bg-emerald-100 text-emerald-700"
+                          : "bg-slate-100 text-slate-500"
+                    }`}
+                  >
+                    {item.id}
+                  </span>
+                  <div className="min-w-0">
+                    <p className={`text-sm font-bold ${isCurrent ? "text-red-800" : "text-slate-800"}`}>
+                      {item.title}
+                      <span className="font-medium text-slate-500"> · {item.window}</span>
+                      {isCurrent ? (
+                        <span className="ml-2 rounded-full bg-red-50 px-2 py-0.5 text-[10px] font-black uppercase tracking-wider text-red-700">
+                          Estás aquí
+                        </span>
+                      ) : null}
+                    </p>
+                    <p className="text-xs text-slate-500">{item.focus}</p>
+                  </div>
                 </li>
               );
             })}
@@ -177,6 +189,11 @@ export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrack
               {UNIVALLE_EXAM_INFO.estimatedInscriptionsLabel}. Confirma siempre la convocatoria
               oficial en admisiones.univalle.edu.co.
             </p>
+            <p className="mt-2 rounded-xl bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-800">
+              El inglés y la cultura general no están en el banco de Método Q. Te sugerimos 15
+              minutos diarios de lectura de artículos médicos en inglés y seguir noticias
+              nacionales.
+            </p>
           </div>
 
           {isDerm ? (
@@ -193,7 +210,7 @@ export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrack
                 Atiende pacientes de todo el suroccidente colombiano.
               </p>
               <Link
-                href="/dashboard/ultra-resumenes"
+                href="/dashboard/ultra-resumenes?categoria=dermatologia"
                 className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-red-700 hover:underline"
               >
                 Ultra resumen de dermatología

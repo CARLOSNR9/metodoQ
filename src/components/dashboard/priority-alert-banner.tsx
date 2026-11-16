@@ -56,7 +56,7 @@ export function PriorityAlertBanner({
   });
 
   if (expiration) return <SubscriptionExpirationAlertView {...expiration} />;
-  if (gap) return <ProStudyGapAlertView {...gap} />;
+  if (gap) return <ProStudyGapAlertView {...gap} trainHref={trainHref} />;
   if (examDraft) return <InterruptedExamAlertView draft={examDraft} />;
   if (uccCoaching) return <UccCoachingAlertView {...uccCoaching} />;
   if (streak) return <StreakReminderAlertView {...streak} />;

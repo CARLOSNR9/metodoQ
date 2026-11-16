@@ -60,7 +60,11 @@ export function useProStudyGapAlert(
           minQuestions: goal.dailyTarget,
           streakMinimum: goal.streakMinimum,
         });
-        setInactiveDays(countConsecutiveInactiveDays(days));
+        // Hoy todavía está en curso: solo cuentan días ya cerrados. Así un
+        // usuario nuevo no ve "llevas 2 días sin cumplir" el día que llega.
+        setInactiveDays(
+          countConsecutiveInactiveDays(days.filter((day) => day.status !== "today_pending")),
+        );
       } catch (error) {
         console.error("No se pudo evaluar el hueco de estudio.", error);
         if (mounted) setInactiveDays(0);
@@ -85,7 +89,12 @@ export function useProStudyGapAlert(
   return { inactiveDays, dailyTarget, isUrgent: inactiveDays >= 3 };
 }
 
-export function ProStudyGapAlertView({ inactiveDays, dailyTarget, isUrgent }: StudyGapInfo) {
+export function ProStudyGapAlertView({
+  inactiveDays,
+  dailyTarget,
+  isUrgent,
+  trainHref = "/dashboard/entrenar",
+}: StudyGapInfo & { trainHref?: string }) {
   return (
     <div
       className={`flex flex-col gap-3 rounded-2xl border px-4 py-3 sm:flex-row sm:items-center sm:justify-between ${
@@ -112,11 +121,9 @@ export function ProStudyGapAlertView({ inactiveDays, dailyTarget, isUrgent }: St
         </div>
       </div>
       <Link
-        href="/dashboard#ucc-mission"
-        className={`inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl border px-4 text-xs font-bold transition ${
-          isUrgent
-            ? "border-rose-400/40 bg-rose-500/25 text-rose-50 hover:bg-rose-500/35"
-            : "border-amber-400/40 bg-amber-500/20 text-amber-100 hover:bg-amber-500/30"
+        href={trainHref}
+        className={`inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl px-4 text-xs font-bold text-white transition ${
+          isUrgent ? "bg-rose-600 hover:bg-rose-700" : "bg-amber-600 hover:bg-amber-700"
         }`}
       >
         Retomar ahora
