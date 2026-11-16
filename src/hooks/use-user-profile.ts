@@ -4,7 +4,11 @@ import { doc, onSnapshot } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { getFirebaseAuth, getFirebaseDb } from "@/lib/firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import { applyAdminStudentPreviewProfile } from "@/lib/admin/student-preview";
+import {
+  applyAdminStudentPreviewProfile,
+  isAdminPreviewUniversity,
+  type AdminPreviewUniversity,
+} from "@/lib/admin/student-preview";
 import { applyDemoStudentProfileEnhancements } from "@/lib/demo/demo-student-profiles";
 import type { ManualSaleInfo, UserGender } from "@/lib/plans/subscription-display";
 import type { UccCvInput } from "@/lib/diagnostic/ucc-cv-scorer";
@@ -100,14 +104,15 @@ export function useUserProfile() {
           user.email ?? base.email,
         );
         
-        let previewUni: "ucc" | "umng" | null = null;
+        let previewUni: AdminPreviewUniversity | null = null;
         if (typeof window !== "undefined") {
           const searchParams = new URLSearchParams(window.location.search);
-          const uni = searchParams.get("preview_uni") as "ucc" | "umng" | null;
-          if (uni === "ucc" || uni === "umng") {
+          const uni = searchParams.get("preview_uni");
+          if (isAdminPreviewUniversity(uni)) {
             sessionStorage.setItem("admin_preview_uni", uni);
           }
-          previewUni = sessionStorage.getItem("admin_preview_uni") as "ucc" | "umng" | null;
+          const stored = sessionStorage.getItem("admin_preview_uni");
+          previewUni = isAdminPreviewUniversity(stored) ? stored : null;
         }
 
         setProfile(

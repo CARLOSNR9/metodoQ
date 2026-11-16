@@ -62,10 +62,10 @@ export function ManualSaleFields({ planId }: ManualSaleFieldsProps) {
             name="planBillingCycle"
             value={String(cycle)}
             onChange={(e) => setCycle(Number(e.target.value) as BillingCycle)}
-            className="w-full cursor-pointer appearance-none rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-sm font-medium text-slate-900 outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
+            className="w-full cursor-pointer appearance-none rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-900 outline-none focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           >
             {CYCLE_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-slate-900">
+              <option key={opt.value} value={opt.value} className="bg-white text-slate-900">
                 {opt.label}
               </option>
             ))}
@@ -81,7 +81,7 @@ export function ManualSaleFields({ planId }: ManualSaleFieldsProps) {
             required
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
-            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent [color-scheme:dark]"
+            className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
         </div>
         <div className="space-y-1.5">
@@ -94,7 +94,7 @@ export function ManualSaleFields({ planId }: ManualSaleFieldsProps) {
             inputMode="numeric"
             required
             placeholder={`Ej: 220000`}
-            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+            className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
           <p className="text-[11px] text-slate-500">
             Precio de lista ({cycle} {cycle === 1 ? "mes" : "meses"}):{" "}
@@ -112,7 +112,7 @@ export function ManualSaleFields({ planId }: ManualSaleFieldsProps) {
             name="negotiatorName"
             type="text"
             placeholder="Ej: María López"
-            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+            className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
         </div>
         <div className="space-y-1.5">
@@ -123,14 +123,14 @@ export function ManualSaleFields({ planId }: ManualSaleFieldsProps) {
             name="saleNotes"
             type="text"
             placeholder="Ej: Pago transferencia 15/05"
-            className="w-full rounded-lg border border-slate-200 bg-[#0f2744] px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
+            className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
         </div>
       </div>
 
       {endPreview ? (
-        <p className="rounded-lg border border-slate-200 bg-white/[0.03] px-3 py-2 text-xs text-slate-500">
-          <span className="font-medium text-emerald-300">Fin del plan:</span>{" "}
+        <p className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs text-slate-500">
+          <span className="font-medium text-emerald-700">Fin del plan:</span>{" "}
           {new Date(endPreview).toLocaleDateString("es-CO", {
             day: "numeric",
             month: "long",

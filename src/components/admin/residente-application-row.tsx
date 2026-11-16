@@ -64,7 +64,7 @@ export function ResidenteApplicationRow({
           className={`${selectInputClassName} px-2 py-1 text-xs`}
         >
           {STATUS_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value} className="bg-[#0f2744] text-slate-900">
+            <option key={opt.value} value={opt.value} className="bg-white text-slate-900">
               {opt.label}
             </option>
           ))}

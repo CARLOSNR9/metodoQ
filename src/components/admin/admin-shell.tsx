@@ -39,6 +39,7 @@ const navigationItems = [
 const externalLinks = [
   { label: "Panel estudiante (Cooperativa)", href: "/dashboard?preview_uni=ucc" },
   { label: "Panel estudiante (UMNG)", href: "/dashboard?preview_uni=umng" },
+  { label: "Panel estudiante (Univalle · Dermatología)", href: "/dashboard?preview_uni=univalle" },
   { label: "Panel profesor", href: "/profesor" },
   { label: "Panel moderador", href: "/moderador" },
 ] as const;

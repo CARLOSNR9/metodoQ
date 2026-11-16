@@ -508,7 +508,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
           <form
             onSubmit={handleUpdate}
-            className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-slate-200 bg-[#0f2744] p-6 shadow-2xl"
+            className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl"
           >
             <h3 className="text-lg font-semibold text-slate-900">Editar usuario</h3>
             <p className="mt-1 text-sm text-slate-500">{editingUser.email}</p>
@@ -536,10 +536,10 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                     name="plan"
                     value={editPlan}
                     onChange={(e) => setEditPlan(e.target.value as UserPlan)}
-                    className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
+                    className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                   >
                     {PLAN_OPTIONS.map((opt) => (
-                      <option key={opt.value} value={opt.value} className="bg-[#0f2744]">
+                      <option key={opt.value} value={opt.value} className="bg-white">
                         {opt.label}
                       </option>
                     ))}
@@ -550,10 +550,10 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                   <select
                     name="role"
                     defaultValue={normalizeUserRole(editingUser.role)}
-                    className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
+                    className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                   >
                     {ROLE_OPTIONS.map((opt) => (
-                      <option key={opt.value} value={opt.value} className="bg-[#0f2744]">
+                      <option key={opt.value} value={opt.value} className="bg-white">
                         {opt.label}
                       </option>
                     ))}
@@ -580,7 +580,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                     <select
                       name="planBillingCycle"
                       defaultValue={String(editingUser.planBillingCycle ?? 3)}
-                      className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
+                      className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                     >
                       <option value="1">1 mes</option>
                       <option value="3">3 meses</option>
@@ -595,7 +595,7 @@ export function UsersDirectoryTable({ users }: UsersDirectoryTableProps) {
                       name="planStartDate"
                       type="date"
                       defaultValue={toDateInput(editingUser.planStartedAt)}
-                      className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900 [color-scheme:dark]"
+                      className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-slate-900"
                     />
                   </div>
                   <div className="space-y-1.5 sm:col-span-2">

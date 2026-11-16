@@ -38,6 +38,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     { UCC_PASTO_DIAGNOSTIC_QUESTIONS },
     { UCC_PASTO_PRO_QUESTIONS },
     { UMNG_DIAGNOSTIC_QUESTIONS },
+    { UNIVALLE_OWN_QUESTIONS },
   ] = await Promise.all([
     import("@/data/fallback-questions"),
     import("@/data/extended-questions"),
@@ -56,6 +57,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     import("@/data/ucc-pasto-diagnostico-questions"),
     import("@/data/ucc-pasto-pro-questions"),
     import("@/data/umng-diagnostico-questions"),
+    import("@/data/univalle"),
   ]);
 
   return [
@@ -76,6 +78,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     UCC_PASTO_DIAGNOSTIC_QUESTIONS,
     UCC_PASTO_PRO_QUESTIONS,
     UMNG_DIAGNOSTIC_QUESTIONS,
+    UNIVALLE_OWN_QUESTIONS,
   ];
 }
 
@@ -111,6 +114,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     { UMNG_CONV_ED4_QUESTIONS },
     { UMNG_CONV_ED5_QUESTIONS },
     { UMNG_CONV_ED6_QUESTIONS },
+    { UCC_CONV_2026_09_20_QUESTIONS },
   ] = await Promise.all([
     import("@/data/daily-challenges"),
     import("@/data/ucc-conv-2025-06-21-questions"),
@@ -126,6 +130,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     import("@/data/umng-conv-ed4-questions"),
     import("@/data/umng-conv-ed5-questions"),
     import("@/data/umng-conv-ed6-questions"),
+    import("@/data/ucc-conv-2026-09-20-questions"),
   ]);
 
   const allQuestions = mergeQuestionsById([
@@ -143,6 +148,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     UMNG_CONV_ED4_QUESTIONS,
     UMNG_CONV_ED5_QUESTIONS,
     UMNG_CONV_ED6_QUESTIONS,
+    UCC_CONV_2026_09_20_QUESTIONS,
     DAILY_CHALLENGES,
   ]);
   

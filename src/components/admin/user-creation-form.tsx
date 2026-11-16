@@ -31,6 +31,8 @@ const PAID_PLANS: PlanId[] = ["BASICO", "PRO", "RESIDENTE"];
 const GOAL_UNIVERSITY_OPTIONS = [
   { value: "", label: "Sin definir (completa en onboarding)" },
   { value: "Universidad Cooperativa (Pasto)", label: "Universidad Cooperativa (Pasto)" },
+  { value: "Universidad del Valle (Univalle)", label: "Universidad del Valle (Univalle)" },
+  { value: "Universidad Militar Nueva Granada (UMNG)", label: "Universidad Militar Nueva Granada (UMNG)" },
   { value: "Universidad de Antioquia (UdeA)", label: "Universidad de Antioquia (UdeA)" },
   { value: "Universidad Nacional de Colombia (UNAL)", label: "Universidad Nacional (UNAL)" },
   { value: "Pontificia Universidad Javeriana", label: "Pontificia Universidad Javeriana" },
@@ -46,6 +48,16 @@ const GOAL_SPECIALTY_OPTIONS = [
   { value: "Obstetricia y Ginecología", label: "Obstetricia y Ginecología" },
   { value: "Cirugía General", label: "Cirugía General" },
   { value: "Cirugía Plástica", label: "Cirugía Plástica" },
+  { value: "Dermatología", label: "Dermatología" },
+  { value: "Ortopedia y Traumatología", label: "Ortopedia y Traumatología" },
+  { value: "Psiquiatría", label: "Psiquiatría" },
+  { value: "Radiología e Imágenes Diagnósticas", label: "Radiología e Imágenes Diagnósticas" },
+  { value: "Neurología Clínica", label: "Neurología Clínica" },
+  { value: "Medicina del Deporte", label: "Medicina del Deporte" },
+  { value: "Otorrinolaringología", label: "Otorrinolaringología" },
+  { value: "Oftalmología", label: "Oftalmología" },
+  { value: "Urología", label: "Urología" },
+  { value: "Neurocirugía", label: "Neurocirugía" },
 ];
 
 export function AdminUserForm() {
@@ -155,6 +167,10 @@ export function AdminUserForm() {
             placeholder="Mín. 6 caracteres"
             className="w-full rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-slate-900 placeholder:text-slate-500/50 outline-none transition-all focus:border-mq-accent focus:ring-1 focus:ring-mq-accent"
           />
+          <p className="text-[11px] text-slate-500">
+            En su primer ingreso el estudiante deberá cambiarla por una personal (mín. 8
+            caracteres, con letras y números).
+          </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">

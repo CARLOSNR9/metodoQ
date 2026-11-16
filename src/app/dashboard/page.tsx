@@ -2,7 +2,6 @@
 
 import {
   OnboardingModal,
-  ForcePasswordChangeModal,
   FreeDashboardView,
   ProDashboardView,
   PriorityAlertBanner,
@@ -81,10 +80,6 @@ export default function DashboardPage() {
 
   return (
     <>
-      <ForcePasswordChangeModal 
-        userId={user.uid} 
-        isOpen={Boolean(profile?.requiresPasswordChange)} 
-      />
       {!profile?.requiresPasswordChange && <OnboardingModal userId={user.uid} />}
 
       <div className="mb-6">

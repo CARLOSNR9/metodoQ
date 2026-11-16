@@ -13,6 +13,14 @@ import { UMNG_CONV_ED4_QUESTIONS } from "@/data/umng-conv-ed4-questions";
 import { UMNG_CONV_ED5_QUESTIONS } from "@/data/umng-conv-ed5-questions";
 import { UMNG_CONV_ED6_QUESTIONS } from "@/data/umng-conv-ed6-questions";
 import { UMNG_CONV_ED7_QUESTIONS } from "@/data/umng-conv-ed7-questions";
+import {
+  UNIVALLE_SIMULACRO_1_QUESTIONS,
+  UNIVALLE_SIMULACRO_2_QUESTIONS,
+  UNIVALLE_SIMULACRO_3_QUESTIONS,
+  UNIVALLE_SIMULACRO_4_QUESTIONS,
+  UNIVALLE_SIMULACRO_5_QUESTIONS,
+  UNIVALLE_SIMULACRO_6_QUESTIONS,
+} from "@/data/univalle-simulacros";
 import { enrichQuestionsWithTheoryPills } from "@/lib/questions/enrich-theory-pills";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -32,6 +40,12 @@ const BANK_BY_EDITION: Record<string, TrainingQuestion[]> = {
   "UMNG-ED5": UMNG_CONV_ED5_QUESTIONS,
   "UMNG-ED6": UMNG_CONV_ED6_QUESTIONS,
   "UMNG-ED7": UMNG_CONV_ED7_QUESTIONS,
+  "UNIVALLE-ED1": UNIVALLE_SIMULACRO_1_QUESTIONS,
+  "UNIVALLE-ED2": UNIVALLE_SIMULACRO_2_QUESTIONS,
+  "UNIVALLE-ED3": UNIVALLE_SIMULACRO_3_QUESTIONS,
+  "UNIVALLE-ED4": UNIVALLE_SIMULACRO_4_QUESTIONS,
+  "UNIVALLE-ED5": UNIVALLE_SIMULACRO_5_QUESTIONS,
+  "UNIVALLE-ED6": UNIVALLE_SIMULACRO_6_QUESTIONS,
 };
 
 

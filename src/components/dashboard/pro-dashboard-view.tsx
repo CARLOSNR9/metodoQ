@@ -31,7 +31,8 @@ import {
   getEffectiveGoalSpecialty,
   isUccPastoMedicinaInternaProUser,
 } from "@/lib/diagnostic/ucc-pasto-track";
-import { isUmngUniversity } from "@/lib/diagnostic/university-match";
+import { isUmngUniversity, isUnivalleUniversity } from "@/lib/diagnostic/university-match";
+import { UnivalleTrackSection } from "./univalle-track-section";
 import { UccDailyMissionCard } from "./ucc-daily-mission-card";
 import { UccConvocatoriaCard } from "./ucc-convocatoria-card";
 import { ConvocatoriaRepasoSummaryCard } from "./convocatoria-repaso-summary-card";
@@ -105,6 +106,7 @@ export function ProDashboardView({
     goalSpecialty: profile?.goalSpecialty,
   };
   const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
+  const isUnivalle = isUnivalleUniversity(profile?.goalUniversity);
   const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
   const uccPercentileEstimate =
     isUccMiPro && hasDiagnosticData
@@ -217,6 +219,13 @@ export function ProDashboardView({
         </div>
       </motion.header>
 
+      {isUnivalle ? (
+        <UnivalleTrackSection
+          specialty={effectiveSpecialty}
+          planStartedAt={profile?.planStartedAt}
+        />
+      ) : null}
+
       <StudyStreakSummary
         userId={user.uid}
         planStartedAt={profile?.planStartedAt}
@@ -226,7 +235,10 @@ export function ProDashboardView({
         isUccMiTrack={dailyGoal.isUccMiTrack}
       />
 
-      {showLiveClasses && user?.uid && !isUmngUniversity(profile?.goalUniversity) ? (
+      {showLiveClasses &&
+      user?.uid &&
+      !isUmngUniversity(profile?.goalUniversity) &&
+      !isUnivalle ? (
         <>
           <UccConvocatoriaCard
             userId={user.uid}

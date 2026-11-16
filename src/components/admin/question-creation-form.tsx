@@ -111,10 +111,10 @@ export function QuestionCreationForm() {
         <div>
           <label className="text-xs font-semibold uppercase text-slate-500">Respuesta correcta</label>
           <select name="correctOptionId" required className={cn(selectInputClassName, "mt-1")}>
-            <option value="A" className="bg-[#0f2744] text-slate-900">A</option>
-            <option value="B" className="bg-[#0f2744] text-slate-900">B</option>
-            <option value="C" className="bg-[#0f2744] text-slate-900">C</option>
-            <option value="D" className="bg-[#0f2744] text-slate-900">D</option>
+            <option value="A" className="bg-white text-slate-900">A</option>
+            <option value="B" className="bg-white text-slate-900">B</option>
+            <option value="C" className="bg-white text-slate-900">C</option>
+            <option value="D" className="bg-white text-slate-900">D</option>
           </select>
         </div>
         <div>

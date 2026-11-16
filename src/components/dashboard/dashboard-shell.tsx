@@ -15,6 +15,7 @@ import { AchievementNotification } from "./achievement-notification";
 import { PomodoroHeaderChip } from "./pomodoro-header-chip";
 import { PomodoroGlobalOverlay } from "./pomodoro-global-overlay";
 import { QBotWidget } from "./q-bot-widget";
+import { ForcePasswordChangeModal } from "./force-password-change-modal";
 import {
   LayoutDashboard,
   GraduationCap,
@@ -252,6 +253,11 @@ export function DashboardShell({ children }: DashboardShellProps) {
         />
       ) : null}
       <QBotWidget />
+      <ForcePasswordChangeModal
+        userId={user?.uid}
+        isOpen={Boolean(profile?.requiresPasswordChange)}
+        greetingName={greetingName}
+      />
     </main>
     </PomodoroProvider>
   );
