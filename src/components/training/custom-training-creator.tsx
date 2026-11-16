@@ -24,24 +24,48 @@ export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceede
   // Agrupa áreas sin distinguir mayúsculas ni tildes ("Dermatología" y
   // "DERMATOLOGÍA" son la misma área); se muestra la variante con tildes.
   const groupedTopics = useMemo(() => {
-    const groups = new Map<string, { area: string; topics: Set<string> }>();
+    const groups = new Map<string, { area: string; topics: Map<string, string> }>();
     questionBank.forEach((q) => {
       const area = q.examArea || "General";
       const topic = q.topic || "Sin clasificar";
       const key = normalizeAreaKey(area);
-      const group = groups.get(key);
+      let group = groups.get(key);
       if (!group) {
-        groups.set(key, { area, topics: new Set([topic]) });
-        return;
+        group = { area, topics: new Map() };
+        groups.set(key, group);
+      } else if (countAccents(area) > countAccents(group.area)) {
+        group.area = area;
       }
-      group.topics.add(topic);
-      if (countAccents(area) > countAccents(group.area)) group.area = area;
+      // Un mismo tema escrito de dos formas ("DERMATOLOGÍA" / "Dermatología")
+      // se muestra una sola vez; se elige la variante con tildes.
+      const topicKey = normalizeAreaKey(topic);
+      const current = group.topics.get(topicKey);
+      if (!current || countAccents(topic) > countAccents(current)) {
+        group.topics.set(topicKey, topic);
+      }
     });
 
     return Array.from(groups.values())
-      .map(({ area, topics }) => ({ area, topics: Array.from(topics).sort() }))
+      .map(({ area, topics }) => ({
+        area,
+        topics: Array.from(topics.values()).sort((a, b) => a.localeCompare(b, "es")),
+      }))
       .sort((a, b) => a.area.localeCompare(b.area, "es"));
   }, [questionBank]);
+
+  // Variantes reales de cada tema visible, para filtrar y arrancar la sesión.
+  const topicVariants = useMemo(() => {
+    const byKey = new Map<string, Set<string>>();
+    questionBank.forEach((q) => {
+      const topic = q.topic || "Sin clasificar";
+      const key = normalizeAreaKey(topic);
+      if (!byKey.has(key)) byKey.set(key, new Set());
+      byKey.get(key)!.add(topic);
+    });
+    return byKey;
+  }, [questionBank]);
+
+
 
   const toggleArea = (area: string) => {
     const newExpanded = new Set(expandedAreas);
@@ -73,7 +97,8 @@ export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceede
     let filtered = questionBank;
     
     if (selectedTopics.size > 0) {
-      filtered = filtered.filter(q => selectedTopics.has(q.topic));
+      const wanted = new Set(expandTopics(selectedTopics, topicVariants));
+      filtered = filtered.filter((q) => wanted.has(q.topic || "Sin clasificar"));
     }
     
     if (difficulty !== "all") {
@@ -85,11 +110,11 @@ export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceede
     }
     
     return filtered.length;
-  }, [questionBank, selectedTopics, difficulty, source]);
+  }, [questionBank, selectedTopics, difficulty, source, topicVariants]);
 
   const handleStart = () => {
     onStart({
-      topics: Array.from(selectedTopics),
+      topics: expandTopics(selectedTopics, topicVariants),
       count: Math.min(count, availableQuestionsCount),
       difficulty: difficulty !== "all" ? difficulty : undefined,
       source: source !== "all" ? source : undefined,
@@ -273,10 +298,22 @@ function normalizeAreaKey(area: string): string {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
+    .replace(/\s*\/\s*/g, " / ")
     .replace(/\s+/g, " ")
     .trim();
 }
 
 function countAccents(value: string): number {
   return (value.normalize("NFD").match(/[\u0300-\u036f]/g) ?? []).length;
+}
+
+/** Expande cada tema visible a todas sus variantes reales en el banco. */
+function expandTopics(topics: Iterable<string>, variants: Map<string, Set<string>>): string[] {
+  const all = new Set<string>();
+  for (const topic of topics) {
+    for (const variant of variants.get(normalizeAreaKey(topic)) ?? [topic]) {
+      all.add(variant);
+    }
+  }
+  return Array.from(all);
 }

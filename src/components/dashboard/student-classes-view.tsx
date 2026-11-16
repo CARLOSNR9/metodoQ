@@ -66,7 +66,7 @@ export function StudentClassesView() {
         <p className="text-xs font-bold uppercase tracking-[0.14em] text-mq-accent">En vivo</p>
         <h1 className="mt-2 text-3xl font-black text-slate-900 sm:text-4xl">Mis clases</h1>
         <p className="mt-3 max-w-2xl text-sm text-slate-500 sm:text-base">
-          Calendario de tus sesiones en vivo, enlaces para unirte y grabaciones de clases pasadas.
+          Calendario de tus sesiones en vivo y enlaces para unirte. Si una clase queda grabada, la verás aquí.
         </p>
       </header>
 
