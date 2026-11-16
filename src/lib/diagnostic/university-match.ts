@@ -29,6 +29,15 @@ export function isUmngUniversity(university: string | null | undefined): boolean
   return n.includes("militar") || n.includes("nueva granada") || n.includes("umng");
 }
 
+export function isUnivalleUniversity(university: string | null | undefined): boolean {
+  const n = normalize(university);
+  return n.includes("univalle") || n.includes("universidad del valle");
+}
+
+export function isDermatologiaSpecialty(specialty: string | null | undefined): boolean {
+  return normalize(specialty).includes("dermatolog");
+}
+
 export function isMedicinaInternaSpecialty(specialty: string | null | undefined): boolean {
   const n = normalize(specialty);
   return n.includes("medicina interna");

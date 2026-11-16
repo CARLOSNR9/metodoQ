@@ -15,7 +15,7 @@ import {
 } from "@/lib/results";
 import { hasSessionReviewData, resolveSessionQuestions } from "@/lib/session-review";
 import type { TrainingQuestion } from "@/lib/questions/types";
-import { getConvocatoriaEdition } from "@/lib/training/convocatorias";
+import { getConvocatoriaEdition, getConvocatoriaTrack } from "@/lib/training/convocatorias";
 
 type SessionReviewPageProps = {
   resultId: string;
@@ -149,7 +149,7 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
                   }}
                   questionCount={convocatoriaEdition.questionCount}
                   insightsOnly
-                  track={convocatoriaEdition.code.startsWith("UMNG") ? "UMNG" : "UCC"}
+                  track={getConvocatoriaTrack(convocatoriaEdition.code)}
                 />
               ) : null}
             </>

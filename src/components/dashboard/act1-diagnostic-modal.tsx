@@ -30,6 +30,7 @@ import {
   isUdeaUniversity,
   isUnalUniversity,
   isUmngUniversity,
+  isUnivalleUniversity,
 } from "@/lib/diagnostic/university-match";
 
 interface Act1DiagnosticModalProps {
@@ -64,6 +65,7 @@ const universities = [
   "Universidad de Antioquia (UdeA)",
   "Universidad Cooperativa (Pasto)",
   "Universidad Militar Nueva Granada (UMNG)",
+  "Universidad del Valle (Univalle)",
   "Pontificia Universidad Javeriana",
   "Universidad del Rosario",
   "Universidad de los Andes",
@@ -119,7 +121,9 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
         ? "UCC Pasto"
         : isUmngUniversity(selectedUniversity)
           ? "UMNG"
-          : "tu universidad";
+          : isUnivalleUniversity(selectedUniversity)
+            ? "Univalle"
+            : "tu universidad";
 
   const loadingSteps = isUccPastoUniversity(selectedUniversity)
     ? [
@@ -127,6 +131,12 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
         "Ponderando epidemiología (30%) y Res. 3280",
         "Calibrando tu hoja de ruta Medicina Interna",
       ]
+    : isUnivalleUniversity(selectedUniversity)
+      ? [
+          "Cargando examen único de medicina general — Univalle",
+          "Ponderando salud pública, normatividad y patología del Pacífico",
+          `Conectando tu ruta ${selectedSpecialty.name} en Cali`,
+        ]
     : isUmngUniversity(selectedUniversity)
       ? [
           "Calibrando módulo de Ciencias Básicas y Trauma",
@@ -145,6 +155,8 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
       ? "Doc, en la UNAL no gana quien más sabe, sino quien mejor aplica bajo presión. Este diagnóstico de 10 preguntas definirá tu hoja de ruta."
       : isUccPastoUniversity(selectedUniversity)
         ? "Doc, en la UCC Pasto el 30% del examen es epidemiología y otro 10% es Res. 3280. Estas 10 preguntas calibran exactamente esa estructura — estilo MIR, saber y descartar."
+        : isUnivalleUniversity(selectedUniversity)
+          ? "Doc, en Univalle todos los aspirantes presentan el mismo examen de medicina general, sin importar la especialidad. Estas 10 preguntas miden tu punto de partida en todas las áreas."
         : isUmngUniversity(selectedUniversity)
           ? "Doc, en el HMC y la UMNG, el examen es de resistencia. La excelencia clínica debe ir de la mano con la resiliencia psicológica. Prepárate para el rigor."
           : "Doc, este diagnóstico de 10 preguntas calibrará tu preparación para la especialidad elegida.";
@@ -168,6 +180,13 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
       return (
         <>
           "En la UCC, el examen no incluye 'Listening' eliminatorio, pero para {selectedSpecialty.name} te reta con un <span className="text-mq-accent font-bold">fuerte componente de Epidemiología y Leyes</span>. La entrevista y prueba psicotécnica son los verdaderos filtros decisivos."
+        </>
+      );
+    }
+    if (isUnivalleUniversity(selectedUniversity)) {
+      return (
+        <>
+          &ldquo;Para {selectedSpecialty.name} en Univalle hay muy pocos cupos y el examen de conocimientos pesa cerca del <span className="text-mq-accent font-bold">95% del puntaje</span>. Se gana dominando la medicina general completa, no solo tu especialidad.&rdquo;
         </>
       );
     }

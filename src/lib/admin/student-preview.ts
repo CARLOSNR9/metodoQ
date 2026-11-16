@@ -4,6 +4,12 @@ import { ensureSubscriptionDates } from "@/lib/plans/subscription-display";
 
 export const ADMIN_STUDENT_PREVIEW_PLAN = "PRO" as const;
 
+export type AdminPreviewUniversity = "ucc" | "umng" | "univalle";
+
+export function isAdminPreviewUniversity(value: string | null | undefined): value is AdminPreviewUniversity {
+  return value === "ucc" || value === "umng" || value === "univalle";
+}
+
 export function isAdminStudentPreview(
   role: string | null | undefined,
   email: string | null | undefined,
@@ -15,7 +21,7 @@ export function isAdminStudentPreview(
 export function applyAdminStudentPreviewProfile(
   profile: UserProfile,
   role?: string | null,
-  previewUni?: "ucc" | "umng" | null
+  previewUni?: AdminPreviewUniversity | null
 ): UserProfile {
   const effectiveRole =
     role ?? (profile as UserProfile & { role?: string }).role ?? null;
@@ -37,6 +43,9 @@ export function applyAdminStudentPreviewProfile(
     withPro.goalSpecialty = "Medicina Interna";
   } else if (previewUni === "umng") {
     withPro.goalUniversity = "Universidad Militar Nueva Granada";
+  } else if (previewUni === "univalle") {
+    withPro.goalUniversity = "Universidad del Valle (Univalle)";
+    withPro.goalSpecialty = "Dermatología";
   }
 
   return ensureSubscriptionDates(withPro, 6) as UserProfile;

@@ -88,6 +88,8 @@ import {
   saveConvocatoriaAttempt,
   selectConvocatoriaExamQuestions,
   getUserConvocatoriaSchedule,
+  getConvocatoriaTrack,
+  getConvocatoriaTrackLabel,
 } from "@/lib/training/convocatorias";
 import {
   getWrongQuestionIds,
@@ -500,12 +502,14 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         return;
       }
       if (!hasProFeatures(effectivePlan)) {
-        setUsageBlockReason("Las convocatorias UCC requieren plan PRO.");
+        setUsageBlockReason(
+          `Las convocatorias ${getConvocatoriaTrackLabel(convocatoriaEdition.code)} requieren plan PRO.`,
+        );
         return;
       }
       if (user) {
         const attempt = await getConvocatoriaAttempt(user.uid, convocatoriaEdition.code);
-        const track = convocatoriaEdition.code.startsWith("UMNG") ? "UMNG" : "UCC";
+        const track = getConvocatoriaTrack(convocatoriaEdition.code);
         const schedule = getUserConvocatoriaSchedule(track, userTrackProfile?.planStartedAt);
         const status = buildConvocatoriaEditionStatus({
           edition: convocatoriaEdition,
@@ -1427,7 +1431,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                     </div>
                     <h1 className="mb-4 text-4xl font-black tracking-tight text-slate-900 sm:text-6xl">
                       {isConvocatoria ? (
-                        <>Simulacro <span className="text-mq-accent">{convocatoriaEdition?.code.startsWith("UMNG") ? "UMNG" : "UCC"}</span></>
+                        <>Simulacro <span className="text-mq-accent">{getConvocatoriaTrackLabel(convocatoriaEdition?.code)}</span></>
                       ) : isSimulacro ? (
                         <>Simulacro <span className="text-mq-accent">{isUccSimulacro ? "UCC Pasto" : "tipo examen"}</span></>
                       ) : isRepasoCierre ? (
@@ -1678,7 +1682,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                           {isDailyPill
                             ? "La Pildora del Dr. Q"
                             : isConvocatoria
-                              ? `Simulacro ${convocatoriaEdition?.code.startsWith("UMNG") ? "UMNG" : "UCC"} en curso`
+                              ? `Simulacro ${getConvocatoriaTrackLabel(convocatoriaEdition?.code)} en curso`
                             : isRepasoCierre
                               ? "Examen de cierre"
                               : isRepasoPractice

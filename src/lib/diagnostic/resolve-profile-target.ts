@@ -3,6 +3,7 @@ const ACT1_UNIVERSITIES = [
   "Universidad de Antioquia (UdeA)",
   "Universidad Cooperativa (Pasto)",
   "Universidad Militar Nueva Granada (UMNG)",
+  "Universidad del Valle (Univalle)",
   "Pontificia Universidad Javeriana",
   "Universidad del Rosario",
   "Universidad de los Andes",
@@ -67,6 +68,9 @@ export function resolveUniversityFromProfile(
   }
   if (n.includes("militar") || n.includes("nueva granada") || n.includes("umng")) {
     return "Universidad Militar Nueva Granada (UMNG)";
+  }
+  if (n.includes("univalle") || n.includes("universidad del valle")) {
+    return "Universidad del Valle (Univalle)";
   }
   if (n.includes("javeriana")) {
     return "Pontificia Universidad Javeriana";
