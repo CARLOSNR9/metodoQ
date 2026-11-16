@@ -159,18 +159,18 @@ export function ReferralCard({
           </div>
 
           <div className="flex min-w-0 flex-col gap-3">
-            <div className="min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-black/20 px-4 py-3">
-              <p className="truncate font-mono text-xs text-slate-500">{referralLink}</p>
+            <div className="min-w-0 overflow-hidden rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+              <p className="truncate font-mono text-xs text-slate-700">{referralLink}</p>
             </div>
             <button
               type="button"
               onClick={handleCopy}
-              className="inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 text-sm font-bold text-mq-accent-foreground transition-all hover:brightness-110 active:scale-95"
+              className="inline-flex h-12 w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-mq-accent px-6 text-sm font-bold text-mq-accent-foreground transition-all hover:brightness-110 active:scale-95"
             >
               {copied ? (
                 <>
-                  <Check size={16} className="text-emerald-500" />
-                  <span className="text-emerald-600">Copiado</span>
+                  <Check size={16} />
+                  <span>Copiado</span>
                 </>
               ) : (
                 <>

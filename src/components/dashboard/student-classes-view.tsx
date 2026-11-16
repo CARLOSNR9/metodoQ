@@ -8,13 +8,28 @@ import { useStudentClasses } from "@/hooks/use-student-classes";
 import { hasProFeatures } from "@/lib/plans/access";
 import { ClassesCalendar } from "./classes-calendar";
 import { ClassSessionDetails } from "./class-session-details";
-import { formatClassDate, formatClassTime } from "@/lib/classes/student-classes";
+import {
+  formatClassDate,
+  formatClassTime,
+  isRelevantPastClassForStudent,
+} from "@/lib/classes/student-classes";
 
 export function StudentClassesView() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile, loading: profileLoading } = useUserProfile();
   const isPro = hasProFeatures(profile?.plan);
-  const { upcoming, past, views, loading, error } = useStudentClasses(user?.uid, isPro);
+  const {
+    upcoming,
+    past: allPast,
+    views: allViews,
+    loading,
+    error,
+  } = useStudentClasses(user?.uid, isPro);
+  const planStartedAt = profile?.planStartedAt;
+  const past = allPast.filter((cls) => isRelevantPastClassForStudent(cls, planStartedAt));
+  // Las clases futuras siempre son posteriores al inicio del plan, así que la
+  // misma regla sirve para el calendario.
+  const views = allViews.filter((cls) => isRelevantPastClassForStudent(cls, planStartedAt));
 
   if (isCheckingAuth || profileLoading) {
     return (
@@ -90,7 +105,7 @@ export function StudentClassesView() {
                 }`}
               >
                 <h3 className="text-lg font-bold text-slate-900">{cls.title}</h3>
-                <p className="mt-2 text-sm capitalize text-slate-500">
+                <p className="mt-2 text-sm text-slate-500 first-letter:uppercase">
                   {formatClassDate(cls.classDate)} · {formatClassTime(cls.classDate)}
                 </p>
                 <p className="mt-1 text-xs text-slate-500">{cls.duration} minutos</p>
@@ -118,7 +133,7 @@ export function StudentClassesView() {
               >
                 <div>
                   <p className="font-medium text-slate-900">{cls.title}</p>
-                  <p className="text-xs capitalize text-slate-500">
+                  <p className="text-xs text-slate-500 first-letter:uppercase">
                     {formatClassDate(cls.classDate)}
                   </p>
                   {cls.description?.trim() ? (

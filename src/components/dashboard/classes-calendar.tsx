@@ -65,7 +65,7 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
           <h2 className="text-xl font-bold text-slate-900">Calendario</h2>
-          <p className="mt-1 text-sm text-slate-500 capitalize">{monthLabel}</p>
+          <p className="mt-1 text-sm text-slate-500 first-letter:uppercase">{monthLabel}</p>
         </div>
         <div className="flex items-center gap-2">
           <button
@@ -171,7 +171,7 @@ export function ClassesCalendar({ classes }: ClassesCalendarProps) {
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div className="min-w-0 flex-1">
                     <p className="font-semibold text-slate-900">{cls.title}</p>
-                    <p className="mt-1 text-sm capitalize text-slate-500">
+                    <p className="mt-1 text-sm text-slate-500 first-letter:uppercase">
                       {formatClassDate(cls.classDate)} · {formatClassTime(cls.classDate)}
                     </p>
                     {cls.courseName ? (

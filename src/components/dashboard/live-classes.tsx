@@ -128,7 +128,7 @@ export function LiveClasses() {
                     {cls.title}
                   </h3>
                   <div className="text-xs text-slate-500 flex items-center gap-1.5 mb-4">
-                    <span className="capitalize">
+                    <span className="inline-block first-letter:uppercase">
                       {classDate.toLocaleDateString("es-ES", { weekday: 'long', day: 'numeric', month: 'short' })}
                     </span>
                     <span className="opacity-30">•</span>

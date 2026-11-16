@@ -21,19 +21,26 @@ export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceede
   const [status, setStatus] = useState<string>("all");
 
   // Agrupar preguntas por área y tema
+  // Agrupa áreas sin distinguir mayúsculas ni tildes ("Dermatología" y
+  // "DERMATOLOGÍA" son la misma área); se muestra la variante con tildes.
   const groupedTopics = useMemo(() => {
-    const groups: Record<string, Set<string>> = {};
+    const groups = new Map<string, { area: string; topics: Set<string> }>();
     questionBank.forEach((q) => {
       const area = q.examArea || "General";
       const topic = q.topic || "Sin clasificar";
-      if (!groups[area]) groups[area] = new Set();
-      groups[area].add(topic);
+      const key = normalizeAreaKey(area);
+      const group = groups.get(key);
+      if (!group) {
+        groups.set(key, { area, topics: new Set([topic]) });
+        return;
+      }
+      group.topics.add(topic);
+      if (countAccents(area) > countAccents(group.area)) group.area = area;
     });
-    
-    return Object.entries(groups).map(([area, topics]) => ({
-      area,
-      topics: Array.from(topics).sort(),
-    })).sort((a, b) => a.area.localeCompare(b.area));
+
+    return Array.from(groups.values())
+      .map(({ area, topics }) => ({ area, topics: Array.from(topics).sort() }))
+      .sort((a, b) => a.area.localeCompare(b.area, "es"));
   }, [questionBank]);
 
   const toggleArea = (area: string) => {
@@ -253,10 +260,23 @@ export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceede
           disabled={availableQuestionsCount === 0 || count > availableQuestionsCount}
           className="mq-premium-glow group flex h-14 w-full md:w-auto items-center justify-center gap-3 rounded-xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
         >
-          {availableQuestionsCount === 0 ? "NO HAY PREGUNTAS" : "COMENZAR SIMULACRO"}
+          {availableQuestionsCount === 0 ? "NO HAY PREGUNTAS" : "COMENZAR ENTRENAMIENTO"}
           <Play size={18} className="fill-current" />
         </button>
       </div>
     </div>
   );
+}
+
+function normalizeAreaKey(area: string): string {
+  return area
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function countAccents(value: string): number {
+  return (value.normalize("NFD").match(/[\u0300-\u036f]/g) ?? []).length;
 }
