@@ -56,16 +56,16 @@ function getPerformanceProfile(scorePercentage: number) {
   if (scorePercentage <= 75) {
     return {
       title: "Nivel Intermedio",
-      message: "Tienes buen conocimiento, pero te falta la precisión clínica para asegurar tu plaza.",
+      message: "Tienes buen conocimiento; ahora toca afinar la precisión clínica en tus áreas débiles.",
       color: "#00d1ff", // mq-accent
       badge: "Cerca de la Meta",
     };
   }
   return {
     title: "Nivel Competitivo",
-    message: "Excelente dominio. Estás en el rango de los médicos que obtienen plaza.",
+    message: "Excelente dominio en esta sesión. Sostenlo en simulacros completos y con práctica diaria.",
     color: "#10b981", // emerald-500
-    badge: "Alta Probabilidad",
+    badge: "Buen nivel",
   };
 }
 
@@ -229,7 +229,7 @@ export function FinalResultsScreen({
               : isConvocatoria
                 ? `Convocatoria ${convocatoriaEdition ?? "UCC"}`
                 : isAct1
-                  ? "Diagnóstico Predictivo de Plaza"
+                  ? "Tu punto de partida"
                   : profile.title}
           </h2>
           <p className="mt-3 max-w-md text-base leading-relaxed text-slate-300 sm:text-lg">
@@ -240,7 +240,7 @@ export function FinalResultsScreen({
               : isConvocatoria
                 ? `Obtuviste ${correctAnswers} aciertos de ${sessionQuestions?.length ?? 100}. Revisa el radar por eje y la retroalimentación de cada pregunta abajo.`
                 : isAct1
-                  ? `Hemos calibrado tus resultados contra el histórico de la ${university} para la especialidad de ${specialty}.`
+                  ? `${correctAnswers} de ${correctAnswers + wrongAnswers} correctas (${sessionScore}%). Con ${correctAnswers + wrongAnswers} preguntas esto es una orientación, no una predicción: un simulacro completo te dará una medida más fiable${university ? ` de tu nivel para ${university}` : ""}.`
                   : profile.message}
           </p>
 
@@ -371,7 +371,7 @@ export function FinalResultsScreen({
                 ) : upgradePlanId === "RESIDENTE" ? (
                   <>
                     <h4 className="text-sm font-black uppercase tracking-wider text-slate-900">
-                      ¿Quieres asegurar tu plaza?
+                      ¿Quieres acompañamiento 1 a 1?
                     </h4>
                     <p className="text-xs leading-relaxed text-slate-500">
                       Ya tienes acceso <span className="text-mq-accent font-bold">PRO</span>. El plan{" "}
@@ -447,23 +447,22 @@ export function FinalResultsScreen({
               </div>
               <div>
                 <h4 className="text-base font-bold text-white">
-                  {scorePercentage >= 80 ? "Nivel de Residente" : "Tu brecha para la plaza"}
+                  {scorePercentage >= 80 ? "Buen resultado: ahora confírmalo" : "Tu brecha por cerrar"}
                 </h4>
                 <p className="mt-1.5 text-sm leading-relaxed text-slate-300">
-                  {scorePercentage >= 90 ? (
-                    <>Estás en el <span className="text-white font-bold">Top 1%</span> de aspirantes. Mantén este ritmo para asegurar tu primera opción de plaza.</>
-                  ) : scorePercentage >= 80 ? (
-                    isProUser ? (
-                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Usa simulacros y la píldora diaria para blindar este resultado.</>
-                    ) : (
-                      <>Tu puntaje actual es <span className="text-white font-bold">superior al promedio</span> de ingreso. Método Q te ayudará a blindar este resultado.</>
-                    )
-                  ) : isResidenteUser ? (
-                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> del rango competitivo. Tu plan Residente incluye seguimiento 1 a 1 para cerrar esa brecha.</>
-                  ) : isProUser ? (
-                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> del promedio competitivo. Con tu plan Pro, enfoca las próximas <span className="font-bold text-mq-accent">4 semanas</span> en tus áreas rojas del radar.</>
+                  {scorePercentage >= 80 ? (
+                    <>
+                      Acertaste el <span className="text-white font-bold">{scorePercentage}%</span> en{" "}
+                      {correctAnswers + wrongAnswers} preguntas. Es una muestra pequeña: confírmalo en un
+                      simulacro completo y sostén el ritmo con práctica diaria.
+                    </>
                   ) : (
-                    <>Estás a <span className="text-white font-bold">{80 - scorePercentage} puntos</span> de alcanzar el promedio competitivo. Con Método Q podrías cerrar esta brecha en solo <span className="font-bold text-mq-accent">4 semanas de entrenamiento activo</span>.</>
+                    <>
+                      Te faltan <span className="text-white font-bold">{80 - scorePercentage} puntos</span>{" "}
+                      para el 80% que usamos como meta de entrenamiento. Enfoca las próximas semanas en
+                      las áreas rojas de tu radar
+                      {isResidenteUser ? "; tu plan Residente incluye seguimiento 1 a 1 para lograrlo." : "."}
+                    </>
                   )}
                 </p>
               </div>
@@ -538,18 +537,21 @@ export function FinalResultsScreen({
             </>
           ) : isAct1 && isProUser ? (
             <>
+              {/* Tras el diagnóstico, el siguiente paso es medirse en serio: el
+                  simulacro. La venta del plan Residente queda en la tarjeta
+                  de arriba, en segundo plano. */}
               <Link
-                href="/residente"
+                href="/dashboard/convocatorias"
                 className="group relative flex h-14 flex-1 items-center justify-center overflow-hidden rounded-xl bg-mq-accent px-8 text-sm font-bold text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.5)] transition-all hover:scale-[1.02] hover:brightness-110 active:scale-[0.98]"
               >
-                Postular a Residente
+                Hacer mi primer simulacro
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href={repeatDiagnosticHref}
+                href="/dashboard/entrenar"
                 className="group flex h-14 flex-1 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-8 text-sm font-bold text-slate-900 transition-all hover:bg-slate-100 active:scale-[0.98]"
               >
-                Repetir diagnóstico
+                Continuar entrenamiento
               </Link>
             </>
           ) : isAct1 && isPaidUser && !isProUser ? (

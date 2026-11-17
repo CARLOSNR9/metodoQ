@@ -57,25 +57,50 @@ export function Act2PredictiveDashboard({
     !hasWeeklyData &&
     Boolean(sessionQuestions?.length || Object.keys(correctTopics).length > 0);
 
-  const displayPercentage = hasWeeklyData
-    ? weeklyStats!.scorePercentage
+  // Totales y temas de la sesión recién terminada (respaldo de la semana).
+  const sessionTally = (() => {
+    const correct: Record<string, number> = { ...correctTopics };
+    const wrong: Record<string, number> = { ...wrongTopics };
+    let right = 0;
+    let answered = 0;
+    const fromQuestions = Object.keys(correctTopics).length + Object.keys(wrongTopics).length === 0;
+    for (const question of sessionQuestions ?? []) {
+      const selected = answersByQuestionId?.[question.id];
+      if (!selected) continue;
+      answered += 1;
+      const isRight = selected === question.correctOptionId;
+      if (isRight) right += 1;
+      if (fromQuestions) {
+        const target = isRight ? correct : wrong;
+        target[question.topic] = (target[question.topic] ?? 0) + 1;
+      }
+    }
+    return { correct, wrong, right, answered };
+  })();
+
+  const displayTotal = hasWeeklyData
+    ? weeklyStats!.totalQuestions
     : useSessionFallback
-      ? scorePercentage
+      ? sessionTally.answered || totalQuestionsAnswered
       : 0;
   const displayCorrect = hasWeeklyData
     ? weeklyStats!.totalCorrect
     : useSessionFallback
-      ? Math.round((scorePercentage / 100) * Math.max(totalQuestionsAnswered, 0))
+      ? sessionTally.answered
+        ? sessionTally.right
+        : Math.round((scorePercentage / 100) * Math.max(totalQuestionsAnswered, 0))
       : 0;
   const displayWrong = hasWeeklyData
     ? weeklyStats!.wrongAnswers
     : useSessionFallback
-      ? Math.max(totalQuestionsAnswered - displayCorrect, 0)
+      ? Math.max(displayTotal - displayCorrect, 0)
       : 0;
-  const displayTotal = hasWeeklyData
-    ? weeklyStats!.totalQuestions
+  const displayPercentage = hasWeeklyData
+    ? weeklyStats!.scorePercentage
     : useSessionFallback
-      ? totalQuestionsAnswered
+      ? sessionTally.answered
+        ? Math.round((sessionTally.right / sessionTally.answered) * 100)
+        : scorePercentage
       : 0;
 
   const standardizedScore = toStandardizedScore(displayPercentage);
@@ -86,15 +111,23 @@ export function Act2PredictiveDashboard({
   const weeklyRadarData = buildRadarChartData({
     university,
     specialty,
-    correctTopics: weeklyStats?.correctTopicsByName || (useSessionFallback ? correctTopics : {}),
-    wrongTopics: weeklyStats?.wrongTopicsByName || (useSessionFallback ? wrongTopics : {}),
+    correctTopics: hasWeeklyData
+      ? weeklyStats!.correctTopicsByName
+      : useSessionFallback
+        ? sessionTally.correct
+        : {},
+    wrongTopics: hasWeeklyData
+      ? weeklyStats!.wrongTopicsByName
+      : useSessionFallback
+        ? sessionTally.wrong
+        : {},
     sessionQuestions: useSessionFallback ? sessionQuestions : undefined,
     answersByQuestionId: useSessionFallback ? answersByQuestionId : undefined,
   });
   const subjectStatuses = buildSubjectStatusFromRadar(weeklyRadarData);
   const topicLosses = getTopicLossesFromRadar(
     weeklyRadarData,
-    weeklyStats?.wrongTopicsByName || (useSessionFallback ? wrongTopics : {}),
+    hasWeeklyData ? weeklyStats!.wrongTopicsByName : useSessionFallback ? sessionTally.wrong : {},
   );
 
   const bestTopics = subjectStatuses.filter((s) => s.status === "strong").map((s) => s.label);
@@ -123,18 +156,11 @@ export function Act2PredictiveDashboard({
               >
                 {standardizedScore}
               </motion.h3>
-              <motion.div
-                initial={{ rotate: -8, opacity: 0 }}
-                animate={{ rotate: 12, opacity: 1 }}
-                className="absolute -right-12 top-0 border-2 border-red-500 px-2 py-1 text-[10px] font-black uppercase tracking-tighter text-red-500"
-              >
-                {isAdmitted ? "ADMITIDO" : "NO ADMITIDO"}
-              </motion.div>
             </motion.div>
             <p className="mx-auto max-w-sm text-sm text-slate-500">
               {isAdmitted
-                ? "Felicidades. Tu semana te ubica en rango competitivo de cupos."
-                : `Te faltan ${gap} puntos para alcanzar el umbral de corte estimado (${cutoffScore}).`}
+                ? `Esta semana estás por encima de la meta de entrenamiento de Método Q (${cutoffScore}). Confírmalo en un simulacro completo.`
+                : `Te faltan ${gap} puntos para la meta de entrenamiento de Método Q (${cutoffScore}).`}
             </p>
           </>
         ) : (

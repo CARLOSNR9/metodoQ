@@ -8,8 +8,8 @@ import {
 import { UNIVALLE_CONVOCATORIA_EDITIONS } from "@/lib/training/univalle-convocatoria";
 
 describe("banco propio Univalle", () => {
-  it("tiene 30 de dermatología, 20 de normatividad y 10 de diagnóstico, con IDs únicos", () => {
-    expect(UNIVALLE_DERMATOLOGIA_QUESTIONS).toHaveLength(30);
+  it("tiene 60 de dermatología, 20 de normatividad y 10 de diagnóstico, con IDs únicos", () => {
+    expect(UNIVALLE_DERMATOLOGIA_QUESTIONS).toHaveLength(60);
     expect(UNIVALLE_NORMATIVIDAD_QUESTIONS).toHaveLength(20);
     expect(UNIVALLE_DIAGNOSTIC_QUESTIONS).toHaveLength(10);
     const ids = UNIVALLE_OWN_QUESTIONS.map((q) => q.id);
@@ -36,7 +36,7 @@ describe("banco propio Univalle", () => {
     const counts: Record<string, number> = {};
     for (const q of UNIVALLE_OWN_QUESTIONS) counts[q.correctOptionId] = (counts[q.correctOptionId] ?? 0) + 1;
     for (const letter of ["A", "B", "C", "D"]) {
-      expect(counts[letter] ?? 0, letter).toBeGreaterThanOrEqual(8);
+      expect(counts[letter] ?? 0, letter).toBeGreaterThanOrEqual(15);
     }
   });
 
@@ -74,17 +74,20 @@ describe("simulacros Univalle", () => {
 });
 
 describe("sin pista por el largo de las opciones", () => {
-  it("la correcta no es sistemáticamente la opción más larga", () => {
+  it("la correcta no es sistemáticamente la opción más larga ni la más corta", () => {
     let longest = 0;
+    let shortest = 0;
     let ratioSum = 0;
     for (const q of UNIVALLE_OWN_QUESTIONS) {
       const lens = q.options.map((o) => o.text.length);
       const correct = q.options.find((o) => o.id === q.correctOptionId)!.text.length;
       if (correct === Math.max(...lens)) longest += 1;
+      if (correct === Math.min(...lens)) shortest += 1;
       const others = q.options.filter((o) => o.id !== q.correctOptionId).map((o) => o.text.length);
       ratioSum += correct / (others.reduce((a, b) => a + b, 0) / others.length);
     }
     expect(longest / UNIVALLE_OWN_QUESTIONS.length).toBeLessThanOrEqual(0.35);
+    expect(shortest / UNIVALLE_OWN_QUESTIONS.length).toBeLessThanOrEqual(0.35);
     expect(ratioSum / UNIVALLE_OWN_QUESTIONS.length).toBeLessThanOrEqual(1.15);
   });
 });
