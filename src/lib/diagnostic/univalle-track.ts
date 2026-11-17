@@ -73,10 +73,21 @@ export function isUnivalleProUser(profile: LearningTrackProfile | null | undefin
   return hasProFeatures(profile.plan) && isUnivalleTrack(profile.goalUniversity);
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+/** Colombia no tiene horario de verano: siempre UTC-5. */
+const COLOMBIA_OFFSET_MS = 5 * 60 * 60 * 1000;
+
+/** Día calendario en Colombia, como medianoche UTC de ese día. */
+function colombiaCalendarDay(date: Date): number {
+  const shifted = new Date(date.getTime() - COLOMBIA_OFFSET_MS);
+  return Date.UTC(shifted.getUTCFullYear(), shifted.getUTCMonth(), shifted.getUTCDate());
+}
+
+/** Días calendario que faltan para el examen (baja de uno en uno cada día). */
 export function getDaysUntilUnivalleExam(today: Date = new Date()): number {
   const exam = new Date(UNIVALLE_EXAM_INFO.estimatedExamDate);
-  const ms = exam.getTime() - today.getTime();
-  return Math.max(0, Math.ceil(ms / (24 * 60 * 60 * 1000)));
+  const days = Math.round((colombiaCalendarDay(exam) - colombiaCalendarDay(today)) / DAY_MS);
+  return Math.max(0, days);
 }
 
 export type UnivallePhase = {

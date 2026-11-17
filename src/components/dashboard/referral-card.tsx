@@ -133,7 +133,7 @@ export function ReferralCard({
         </div>
 
         <div className="min-w-0 rounded-3xl bg-white/[0.03] p-4 backdrop-blur-md sm:p-5">
-          <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
             <div className="flex min-w-0 items-center gap-3">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-mq-premium-purple/20 text-mq-premium-purple">
                 <Users size={20} />
