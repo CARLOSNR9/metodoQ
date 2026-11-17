@@ -80,7 +80,7 @@ export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrack
           </div>
         </div>
 
-        <div className="relative mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           <ActionCard
             href="/dashboard/convocatorias"
             icon={<ClipboardCheck size={18} />}
@@ -255,7 +255,7 @@ function ActionCard({
       </span>
       <span className="min-w-0">
         <span className="block text-sm font-black">{title}</span>
-        <span className={`block truncate text-xs ${primary ? "text-white/80" : "text-slate-500"}`}>
+        <span className={`block text-xs leading-snug ${primary ? "text-white/80" : "text-slate-500"}`}>
           {subtitle}
         </span>
       </span>

@@ -76,3 +76,12 @@ describe("política de contraseña personal", () => {
     expect(evaluatePasswordRules("", "x").every((r) => !r.ok)).toBe(true);
   });
 });
+
+describe("cuenta regresiva por días calendario", () => {
+  it("baja de uno en uno al cambiar el día en Colombia", () => {
+    expect(getDaysUntilUnivalleExam(new Date("2026-11-16T16:00:00-05:00"))).toBe(133);
+    expect(getDaysUntilUnivalleExam(new Date("2026-11-16T23:59:00-05:00"))).toBe(133);
+    expect(getDaysUntilUnivalleExam(new Date("2026-11-17T00:14:00-05:00"))).toBe(132);
+    expect(getDaysUntilUnivalleExam(new Date("2027-03-29T05:00:00-05:00"))).toBe(0);
+  });
+});

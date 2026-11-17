@@ -73,7 +73,7 @@ function DayPill({ day }: { day: DailyHabitDay }) {
           day.isToday ? "text-mq-accent" : "text-slate-500"
         }`}
       >
-        {day.isToday ? "Hoy" : day.weekdayShort}
+        {day.isToday ? `${day.dayNumber} · Hoy` : `${day.weekdayShort} ${day.dayNumber}`}
       </span>
     </div>
   );

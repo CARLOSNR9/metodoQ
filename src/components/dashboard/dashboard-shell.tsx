@@ -180,7 +180,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
           className={`sticky top-0 z-30 flex h-16 items-center justify-between px-4 sm:px-8 ${
             isMirRoute
               ? "border-b border-white/10 bg-[#0A1F44]/95 backdrop-blur-xl"
-              : "mq-glass"
+              : "border-b border-slate-200 bg-white/95 backdrop-blur-xl"
           }`}
         >
           <div className="flex items-center gap-3">

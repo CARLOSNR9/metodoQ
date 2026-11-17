@@ -252,7 +252,9 @@ export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceede
             <div className="space-y-3 pt-2">
               <div className="flex justify-between items-end">
                 <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Preguntas</label>
-                <span className="text-2xl font-black text-mq-accent">{count}</span>
+                <span className="text-2xl font-black text-mq-accent">
+                  {Math.min(count, availableQuestionsCount)}
+                </span>
               </div>
               <input 
                 type="range" 
@@ -274,6 +276,12 @@ export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceede
               <p className="text-xs text-slate-500 text-right">
                 Disponibles: <span className="font-bold text-slate-700">{availableQuestionsCount}</span>
               </p>
+              {availableQuestionsCount > 0 && count > availableQuestionsCount ? (
+                <p className="rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-800">
+                  Solo hay {availableQuestionsCount} preguntas en esta selección: entrenarás con
+                  todas ellas.
+                </p>
+              ) : null}
             </div>
           </div>
         </div>
@@ -282,7 +290,7 @@ export function CustomTrainingCreator({ questionBank, isFreePlan, onLimitExceede
       <div className="flex justify-center pt-4 border-t border-slate-200">
         <button
           onClick={handleStart}
-          disabled={availableQuestionsCount === 0 || count > availableQuestionsCount}
+          disabled={availableQuestionsCount === 0}
           className="mq-premium-glow group flex h-14 w-full md:w-auto items-center justify-center gap-3 rounded-xl bg-mq-accent px-10 text-base font-black text-mq-accent-foreground transition-all hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {availableQuestionsCount === 0 ? "NO HAY PREGUNTAS" : "COMENZAR ENTRENAMIENTO"}
