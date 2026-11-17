@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  CheckCircle2,
   BookOpenCheck,
   CalendarClock,
   ClipboardCheck,
@@ -26,13 +27,19 @@ import { getFeaturedConvocatoriaEditionForUser } from "@/lib/training/univalle-c
 type UnivalleTrackSectionProps = {
   specialty?: string | null;
   planStartedAt?: string | null;
+  /** Ya presentó el diagnóstico Univalle: se marca en la hoja de ruta. */
+  diagnosticDone?: boolean;
 };
 
 export const UNIVALLE_DERMATOLOGY_PRACTICE_HREF = `/dashboard/entrenar?topic=${encodeURIComponent("dermatología")}&count=10`;
 export const UNIVALLE_NORMATIVIDAD_PRACTICE_HREF = `/dashboard/entrenar?topic=${encodeURIComponent("legislación")}&count=10`;
 
 /** Encabezado y hoja de ruta del espacio Univalle (Cali). */
-export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrackSectionProps) {
+export function UnivalleTrackSection({
+  specialty,
+  planStartedAt,
+  diagnosticDone = false,
+}: UnivalleTrackSectionProps) {
   const today = new Date();
   const daysLeft = getDaysUntilUnivalleExam(today);
   const weeksLeft = Math.max(1, Math.round(daysLeft / 7));
@@ -119,12 +126,22 @@ export function UnivalleTrackSection({ specialty, planStartedAt }: UnivalleTrack
             {phase.window} · {phase.focus}
           </p>
           <ul className="mt-4 space-y-2">
-            {phase.goals.map((goal) => (
-              <li key={goal} className="flex items-start gap-2 text-sm text-slate-700">
-                <Sparkles size={14} className="mt-0.5 shrink-0 text-red-600" />
-                {goal}
-              </li>
-            ))}
+            {phase.goals.map((goal) => {
+              const done = diagnosticDone && /diagn[oó]stico/i.test(goal);
+              return (
+                <li
+                  key={goal}
+                  className={`flex items-start gap-2 text-sm ${done ? "text-emerald-700" : "text-slate-700"}`}
+                >
+                  {done ? (
+                    <CheckCircle2 size={14} className="mt-0.5 shrink-0 text-emerald-600" />
+                  ) : (
+                    <Sparkles size={14} className="mt-0.5 shrink-0 text-red-600" />
+                  )}
+                  <span className={done ? "line-through decoration-emerald-400" : ""}>{goal}</span>
+                </li>
+              );
+            })}
           </ul>
           <ol className="mt-6 space-y-3 border-t border-slate-100 pt-5">
             {UNIVALLE_PHASES.map((item) => {

@@ -15,11 +15,11 @@ export const UNIVALLE_DERMATOLOGIA_01_10 = [
         "Antimoniato de meglumina 20 mg/kg/día de Sb⁵⁺ por 20 días.",
       ],
       [
-        "Dicloxacilina oral por 10 días y curaciones diarias.",
+        "Dicloxacilina oral por 10 días con curaciones diarias de la úlcera.",
         "La úlcera de bordes elevados e indolora, en zona endémica y con amastigotes, no es una piodermitis bacteriana; los antibióticos no curan la leishmaniasis.",
       ],
       [
-        "Itraconazol oral por 3 meses.",
+        "Itraconazol oral 200 mg/día durante 3 meses.",
         "Los azoles se usan en micosis profundas (esporotricosis, paracoccidioidomicosis); en leishmaniasis cutánea no son primera línea en Colombia.",
       ],
       [
@@ -53,11 +53,11 @@ export const UNIVALLE_DERMATOLOGIA_01_10 = [
         "Paucibacilar; rifampicina, dapsona y clofazimina por 6 meses.",
       ],
       [
-        "Paucibacilar; dapsona en monoterapia por 12 meses.",
+        "Paucibacilar; dapsona en monoterapia durante 12 meses.",
         "La monoterapia está contraindicada en lepra porque selecciona resistencia; siempre se usa poliquimioterapia.",
       ],
       [
-        "No requiere tratamiento si la baciloscopia es negativa; solo control anual.",
+        "Ninguno por ahora; con baciloscopia negativa basta control anual.",
         "El diagnóstico de lepra es clínico (lesión con pérdida de sensibilidad o nervio engrosado). Una baciloscopia negativa no descarta la enfermedad ni exime de tratamiento.",
       ],
     ],
@@ -114,18 +114,18 @@ export const UNIVALLE_DERMATOLOGIA_01_10 = [
       "Una mujer de 39 años, jardinera en un vivero de Palmira, se pinchó el dedo índice con una rosa hace 4 semanas. Ahora tiene un nódulo ulcerado en el dedo y varios nódulos subcutáneos indoloros que ascienden en línea por el dorso de la mano y el antebrazo. Está afebril. ¿Cuál es el tratamiento de elección?",
     options: [
       [
-        "Cefalexina oral por 14 días.",
+        "Cefalexina oral por 14 días y elevación de la extremidad.",
         "Una celulitis bacteriana no produce nódulos escalonados en el trayecto linfático durante semanas; este patrón 'esporotricoide' sugiere una micosis de implantación.",
       ],
       [
-        "Itraconazol oral hasta 2 a 4 semanas después de la resolución de las lesiones.",
+        "Itraconazol oral hasta 2–4 semanas después de la curación.",
       ],
       [
-        "Terbinafina tópica dos veces al día.",
+        "Terbinafina tópica dos veces al día por 6 semanas.",
         "Los tópicos no alcanzan el tejido subcutáneo ni linfático; la esporotricosis necesita tratamiento sistémico.",
       ],
       [
-        "Resección quirúrgica de todos los nódulos.",
+        "Resección quirúrgica completa de todos los nódulos visibles.",
         "La cirugía no es el tratamiento de elección; diseminaría la lesión y el tratamiento médico es muy efectivo.",
       ],
     ],
@@ -182,18 +182,18 @@ export const UNIVALLE_DERMATOLOGIA_01_10 = [
       "Una estudiante de 22 años tiene una mácula acrómica de 4 × 3 cm en la región frontal derecha que sigue un dermatoma. Apareció hace 4 años, creció durante 6 meses y desde hace 3 años no ha cambiado de tamaño ni han aparecido lesiones nuevas. Recibió tacrolimus tópico y fototerapia focal por más de un año sin repigmentación. No tiene enfermedad tiroidea. ¿Cuál es la conducta más adecuada?",
     options: [
       [
-        "Corticoide oral en minipulsos por 6 meses.",
+        "Minipulsos de corticoide oral durante 6 meses más fototerapia.",
         "Los minipulsos se usan para frenar un vitíligo activo y en progresión; esta lesión lleva 3 años estable.",
       ],
       [
-        "Trasplante autólogo de melanocitos o injertos (minigrafts/suspensión de células epidérmicas).",
+        "Trasplante autólogo de melanocitos o minigrafts.",
       ],
       [
-        "Despigmentación total con monobenzona.",
+        "Despigmentación total del resto de la piel con monobenzona.",
         "La despigmentación se reserva para vitíligo universal (más del 80% de la superficie); no para una lesión pequeña y localizada.",
       ],
       [
-        "Biopsia para descartar micosis fungoide hipopigmentada antes de cualquier tratamiento.",
+        "Biopsia para descartar micosis fungoide antes de tratar.",
         "El cuadro clínico (acromía segmentaria estable de años) es típico de vitíligo; no hay datos que obliguen a biopsiar.",
       ],
     ],
@@ -216,18 +216,18 @@ export const UNIVALLE_DERMATOLOGIA_01_10 = [
       "Una madre lleva a consulta a su hijo de 7 años por prurito intenso de predominio nocturno desde hace 3 semanas. Ella y la hermana mayor también tienen picazón. Al examen hay pápulas excoriadas y trayectos lineales finos en los espacios interdigitales de las manos, las muñecas y la región periumbilical. ¿Cuál es el manejo correcto?",
     options: [
       [
-        "Hidroxicina oral al niño y control en un mes.",
+        "Hidroxicina oral al niño para el prurito y control en un mes.",
         "El antihistamínico alivia el prurito, pero no elimina el ácaro; sin escabicida la infestación persiste y sigue contagiando.",
       ],
       [
-        "Permetrina al 5% solo al niño, de cuello hacia abajo, una sola aplicación.",
+        "Permetrina 5% solo al niño, de cuello hacia abajo, en una sola aplicación.",
         "Si no se trata a todos los convivientes a la vez, el niño se reinfesta. Además se recomienda repetir la aplicación a los 7 días.",
       ],
       [
-        "Permetrina al 5% a todos los convivientes al mismo tiempo, repetida a los 7 días, y lavado en caliente de la ropa de cama.",
+        "Permetrina 5% a todos los convivientes a la vez, repetida a los 7 días.",
       ],
       [
-        "Corticoide tópico de alta potencia en las lesiones dos veces al día.",
+        "Corticoide tópico de alta potencia en las lesiones cada 12 horas.",
         "El corticoide calma el prurito pero puede enmascarar y extender la infestación (escabiosis 'incógnita').",
       ],
     ],
@@ -250,18 +250,18 @@ export const UNIVALLE_DERMATOLOGIA_01_10 = [
       "Un niño de 6 años presenta una placa de alopecia redondeada de 3 cm en el cuero cabelludo, con descamación grisácea y pelos cortados a pocos milímetros de la piel. Tiene un gato en casa. El examen directo con KOH muestra hifas y esporas que rodean el tallo piloso. ¿Cuál es el tratamiento adecuado?",
     options: [
       [
-        "Clotrimazol crema por 4 semanas.",
+        "Clotrimazol crema dos veces al día durante 4 semanas.",
         "El dermatofito invade el folículo y el tallo piloso, donde el antifúngico tópico no llega. La tiña capitis siempre requiere tratamiento oral.",
       ],
       [
-        "Griseofulvina o terbinafina oral por varias semanas, más champú antifúngico como coadyuvante.",
+        "Griseofulvina o terbinafina oral por varias semanas.",
       ],
       [
-        "Corticoide tópico por sospecha de alopecia areata.",
+        "Corticoide tópico potente por sospecha de alopecia areata.",
         "La alopecia areata no descama ni tiene pelos rotos con hongos en el KOH; el examen directo ya confirmó una dermatofitosis.",
       ],
       [
-        "Rapado del cuero cabelludo como único tratamiento.",
+        "Rapado completo del cuero cabelludo como único tratamiento.",
         "Rapar no está indicado y no elimina la infección folicular.",
       ],
     ],
@@ -318,18 +318,18 @@ export const UNIVALLE_DERMATOLOGIA_01_10 = [
       "Un hombre de 34 años con diagnóstico reciente de VIH (CD4 de 110 células/µL, sin tratamiento antirretroviral) consulta por placas y nódulos violáceos, indoloros, en las piernas y el paladar duro, de 2 meses de evolución. La biopsia muestra proliferación de células fusiformes con hendiduras vasculares y extravasación de eritrocitos. ¿Cuál es el agente asociado y el pilar del tratamiento?",
     options: [
       [
-        "Bartonella henselae; eritromicina oral.",
+        "Bartonella henselae; eritromicina oral por 3 meses.",
         "La angiomatosis bacilar es un diferencial importante, pero la histología de células fusiformes con hendiduras vasculares es de Kaposi.",
       ],
       [
-        "Virus de Epstein-Barr; aciclovir.",
+        "Virus de Epstein-Barr; aciclovir oral a dosis altas.",
         "El VEB se asocia a leucoplasia vellosa y linfomas, no a sarcoma de Kaposi.",
       ],
       [
-        "Herpesvirus humano 8; inicio de terapia antirretroviral.",
+        "Herpesvirus humano 8; iniciar terapia antirretroviral.",
       ],
       [
-        "Virus del papiloma humano; crioterapia de todas las lesiones.",
+        "Virus del papiloma humano; crioterapia de las lesiones.",
         "El VPH se asocia a verrugas y carcinomas anogenitales, no a Kaposi.",
       ],
     ],

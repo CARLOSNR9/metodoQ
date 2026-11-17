@@ -120,7 +120,7 @@ export function SubjectPerformancePanel({
         </h4>
         <p className="text-[10px] text-slate-500">
           {subtitle ??
-            "Temas de debilidad y de mejora de esta semana (domingo a domingo)."}
+            "Temas de debilidad y de mejora de esta semana (domingo a sábado)."}
         </p>
       </div>
 

@@ -15,18 +15,18 @@ export const UNIVALLE_NORMATIVIDAD_11_20 = [
       "Un hombre de 31 años ingresa sin signos vitales al servicio de urgencias de un hospital de Cali con múltiples heridas por proyectil de arma de fuego. Se confirma el fallecimiento. La familia le pide al médico de turno que firme el certificado de defunción para llevarse el cuerpo. ¿Cuál es la conducta correcta?",
     options: [
       [
-        "Firmar el certificado indicando 'paro cardiorrespiratorio' como causa básica.",
+        "Firmarlo con 'paro cardiorrespiratorio' como causa básica de muerte.",
         "El paro cardiorrespiratorio es un mecanismo, no una causa de muerte; además, en muertes violentas el médico tratante no expide el certificado.",
       ],
       [
-        "Entregar el cuerpo a la familia sin certificado, porque es una muerte evidente.",
+        "Entregar el cuerpo a la familia sin certificado por ser evidente.",
         "En una muerte violenta el cuerpo queda a disposición de las autoridades para la necropsia médico-legal.",
       ],
       [
-        "No expedir el certificado: informar a la autoridad (policía judicial) para la inspección del cadáver y la necropsia médico-legal en Medicina Legal.",
+        "No firmarlo: avisar a la autoridad para la necropsia médico-legal.",
       ],
       [
-        "Realizar una necropsia clínica en el hospital antes de entregar el cuerpo.",
+        "Hacer una necropsia clínica en el hospital antes de entregarlo.",
         "La necropsia de una muerte violenta es médico-legal y la realiza el Instituto Nacional de Medicina Legal, no una necropsia clínica hospitalaria.",
       ],
     ],
@@ -49,18 +49,18 @@ export const UNIVALLE_NORMATIVIDAD_11_20 = [
       "En un centro de salud de Cali se atiende a un niño de 4 años sin vacunas, con fiebre, exantema maculopapular generalizado, tos, coriza y conjuntivitis. ¿Cuál es la conducta de vigilancia en salud pública correcta?",
     options: [
       [
-        "Notificarlo de forma inmediata como caso sospechoso de sarampión, tomar muestras e iniciar la investigación de campo.",
+        "Notificación inmediata como sospechoso de sarampión y toma de muestras.",
       ],
       [
-        "Incluirlo en la notificación semanal de rutina.",
+        "Incluirlo en la notificación semanal de rutina del SIVIGILA.",
         "El sarampión es un evento de notificación inmediata por su potencial epidémico y por estar en eliminación.",
       ],
       [
-        "No notificarlo hasta tener confirmación por laboratorio.",
+        "Esperar la confirmación por laboratorio antes de notificar.",
         "Se notifica el caso sospechoso; esperar la confirmación retrasa las acciones de control.",
       ],
       [
-        "Notificarlo solo si hay más de 3 casos en el mismo barrio.",
+        "Notificarlo solo si aparecen más de 3 casos en el mismo barrio.",
         "Un solo caso sospechoso de sarampión es suficiente para la notificación inmediata.",
       ],
     ],
@@ -117,18 +117,18 @@ export const UNIVALLE_NORMATIVIDAD_11_20 = [
       "Una prueba diagnóstica para dengue, validada en un hospital de Cali durante un brote, se empieza a usar en una ciudad donde la enfermedad es mucho menos frecuente. Si la prueba es la misma, ¿qué ocurrirá con sus indicadores?",
     options: [
       [
-        "Disminuirán la sensibilidad y la especificidad.",
+        "Bajan la sensibilidad y la especificidad; los valores predictivos no cambian.",
         "La sensibilidad y la especificidad son propiedades intrínsecas de la prueba y no dependen de la prevalencia.",
       ],
       [
-        "El valor predictivo positivo disminuirá y el valor predictivo negativo aumentará; la sensibilidad y la especificidad no cambian.",
+        "Baja el VPP y sube el VPN; la sensibilidad y la especificidad no cambian.",
       ],
       [
-        "El valor predictivo positivo aumentará.",
+        "Sube el VPP y baja el VPN; la sensibilidad también aumenta.",
         "Ocurre lo contrario: con menor prevalencia hay proporcionalmente más falsos positivos.",
       ],
       [
-        "Ningún indicador cambiará.",
+        "Ningún indicador cambia, porque la prueba es exactamente la misma.",
         "Los valores predictivos sí dependen de la prevalencia.",
       ],
     ],
@@ -184,18 +184,18 @@ export const UNIVALLE_NORMATIVIDAD_11_20 = [
       "Un grupo de investigadores de Cali quiere estudiar si la exposición a pesticidas en cultivos de caña se asocia con un tipo raro de leucemia. Seleccionan 80 pacientes con la leucemia y 160 personas sin ella, y comparan la exposición previa a pesticidas en ambos grupos. ¿Qué diseño es y qué medida de asociación se calcula?",
     options: [
       [
-        "Estudio de cohortes; riesgo relativo.",
+        "Cohortes; riesgo relativo.",
         "En una cohorte se parte de la exposición y se sigue en el tiempo hasta la aparición de la enfermedad.",
       ],
       [
-        "Estudio de casos y controles; odds ratio (razón de oportunidades).",
+        "Casos y controles; odds ratio.",
       ],
       [
-        "Estudio transversal; razón de prevalencias.",
+        "Transversal; razón de prevalencias.",
         "El estudio transversal mide exposición y enfermedad en un mismo momento en una muestra de la población, no selecciona por la enfermedad.",
       ],
       [
-        "Ensayo clínico; reducción absoluta del riesgo.",
+        "Ensayo clínico; reducción absoluta del riesgo (RAR).",
         "No hay intervención asignada por el investigador.",
       ],
     ],
@@ -252,19 +252,19 @@ export const UNIVALLE_NORMATIVIDAD_11_20 = [
       "Un lactante de 8 meses es llevado a urgencias por 'no mover el brazo'. La radiografía muestra una fractura de húmero y fracturas costales posteriores en diferentes estadios de consolidación. Los padres dicen que se cayó de la cama. ¿Cuál es la conducta correcta?",
     options: [
       [
-        "Inmovilizar el brazo y dar de alta con los padres, porque explicaron el mecanismo.",
+        "Inmovilizar el brazo y dar de alta, porque los padres explicaron la caída.",
         "Fracturas costales posteriores y en distintos estadios en un lactante no se explican por una caída de la cama; son altamente sugestivas de maltrato.",
       ],
       [
-        "Pedir el consentimiento de los padres antes de reportar el caso.",
+        "Pedir autorización a los padres antes de reportar el caso a las autoridades.",
         "El reporte de sospecha de maltrato es obligatorio y no requiere autorización de los padres.",
       ],
       [
-        "Esperar a la próxima consulta para confirmar el maltrato antes de reportar.",
+        "Citar a control en una semana para confirmar el maltrato antes de reportar.",
         "Se reporta la sospecha; esperar expone al niño a nuevas agresiones.",
       ],
       [
-        "Hospitalizar para proteger al niño, completar el estudio (serie ósea, fondo de ojo, neuroimagen) y reportar a la autoridad competente (ICBF o Comisaría de Familia) y al SIVIGILA.",
+        "Hospitalizarlo, completar estudios y reportar al ICBF o a la Comisaría de Familia.",
       ],
     ],
     correct: "D",
@@ -286,15 +286,15 @@ export const UNIVALLE_NORMATIVIDAD_11_20 = [
       "Una operaria de un ingenio azucarero del Valle sufre una fractura de radio cuando el bus que la empresa suministra para llevar a los trabajadores desde Cali hasta la planta tiene un accidente en la vía, antes de iniciar su turno. ¿Cómo se clasifica este evento?",
     options: [
       [
-        "Accidente común, porque aún no había iniciado su jornada laboral.",
+        "Accidente común, porque aún no había iniciado su jornada de trabajo.",
         "La ley incluye como laboral el traslado cuando el transporte lo suministra el empleador.",
       ],
       [
-        "Enfermedad laboral.",
+        "Enfermedad laboral por exposición al riesgo del desplazamiento diario.",
         "La enfermedad laboral resulta de la exposición a factores de riesgo del trabajo a lo largo del tiempo, no de un suceso repentino.",
       ],
       [
-        "Accidente de trabajo, porque ocurrió durante el traslado en un transporte suministrado por el empleador.",
+        "Accidente de trabajo, porque el transporte lo suministra el empleador.",
       ],
       [
         "Accidente de tránsito cubierto solo por el SOAT, sin relación laboral.",
@@ -320,18 +320,18 @@ export const UNIVALLE_NORMATIVIDAD_11_20 = [
       "Según la Resolución 5596 de 2015, que reglamenta el triage en los servicios de urgencias en Colombia, ¿cuál de las siguientes afirmaciones es correcta?",
     options: [
       [
-        "El triage tiene 3 categorías y solo puede hacerlo un médico especialista.",
+        "Tiene 3 categorías y solo puede hacerlo un médico especialista.",
         "La norma establece 5 categorías, y el triage lo puede realizar un médico general o un profesional de enfermería.",
       ],
       [
-        "El triage II corresponde a condiciones que pueden deteriorarse rápidamente, y la atención debe darse en un máximo de 30 minutos; el triage I requiere atención inmediata.",
+        "El triage I es inmediato y el triage II se atiende en máximo 30 minutos.",
       ],
       [
-        "Los pacientes de triage IV y V pueden ser devueltos sin ninguna orientación.",
+        "En triage IV y V se puede devolver al paciente sin orientación.",
         "Aun en triage IV y V se debe informar al paciente y orientarlo sobre dónde y cuándo puede ser atendido.",
       ],
       [
-        "El triage define la prioridad según el orden de llegada.",
+        "Define la prioridad según el orden de llegada al servicio.",
         "El triage prioriza según la gravedad clínica, no según el orden de llegada.",
       ],
     ],

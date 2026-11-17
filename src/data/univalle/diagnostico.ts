@@ -16,24 +16,24 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Una mujer de 22 años con diabetes tipo 1 llega a urgencias con vómito, dolor abdominal y respiración profunda. Glucemia 480 mg/dL, pH 7,12, HCO₃ 9 mEq/L, cetonas positivas, potasio 4,6 mEq/L, creatinina 1,3 mg/dL. Está taquicárdica y con mucosas secas. ¿Cuál es el primer paso del tratamiento?",
     options: [
       [
-        "Bicarbonato de sodio IV para corregir el pH.",
+        "Bicarbonato de sodio IV para corregir el pH antes de la insulina.",
         "El bicarbonato no está indicado con pH mayor de 6,9; no mejora el desenlace y aumenta el riesgo de hipokalemia.",
       ],
       [
-        "Insulina IV en bolo antes de cualquier líquido.",
+        "Bolo de insulina IV de 0,1 U/kg y luego reponer los líquidos.",
         "Sin reposición de volumen, la insulina puede empeorar la hipotensión al desplazar agua y potasio al interior celular.",
       ],
       [
-        "Reanimación con solución salina al 0,9% (1–1,5 L en la primera hora) y verificar el potasio antes de la insulina.",
+        "SSN 0,9% 1–1,5 L en la primera hora y verificar el potasio.",
       ],
       [
-        "Restricción de líquidos por riesgo de edema cerebral.",
+        "Restringir los líquidos IV por el riesgo de edema cerebral.",
         "La paciente está deshidratada; la reposición de volumen es el primer paso.",
       ],
     ],
     correct: "C",
     explanation:
-      "Enfermedad: Cetoacidosis diabética grave (pH < 7,0–7,24 y HCO₃ < 10).\n\nOrden del tratamiento: 1) líquidos (SSN 0,9%, 15–20 mL/kg en la primera hora); 2) potasio: si K < 3,3 mEq/L, reponer y diferir la insulina; si está entre 3,3 y 5,2, añadir potasio a los líquidos; 3) insulina IV en infusión (0,1 U/kg/h); 4) cuando la glucemia baje a ~200–250 mg/dL, añadir dextrosa y continuar la insulina hasta cerrar la brecha aniónica.\n\n**Trampa del examen:** empezar por la insulina o por el bicarbonato.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDoc, en cetoacidosis el orden es AGUA, POTASIO, INSULINA. El que se salta el potasio, mata al paciente con una arritmia.",
+      "Enfermedad: Cetoacidosis diabética. El pH de 7,12 está en rango moderado (7,0–7,24), pero el HCO₃ de 9 mEq/L está en rango grave (< 10): se clasifica y se maneja como grave.\n\nOrden del tratamiento: 1) líquidos (SSN 0,9%, 15–20 mL/kg en la primera hora); 2) potasio: si K < 3,3 mEq/L, reponer y diferir la insulina; si está entre 3,3 y 5,2, añadir potasio a los líquidos; 3) insulina IV en infusión (0,1 U/kg/h); 4) cuando la glucemia baje a ~200–250 mg/dL, añadir dextrosa y continuar la insulina hasta cerrar la brecha aniónica.\n\n**Trampa del examen:** empezar por la insulina o por el bicarbonato.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDoc, en cetoacidosis el orden es AGUA, POTASIO, INSULINA. El que se salta el potasio, mata al paciente con una arritmia.",
     keyPoints: [
       "CAD: líquidos → potasio → insulina.",
       "K < 3,3: reponer antes de la insulina.",
@@ -50,18 +50,18 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Un lactante de 4 meses, previamente sano, presenta rinorrea de 3 días seguida de tos, taquipnea leve (52 rpm), sibilancias y crépitos difusos. Saturación de 94% al aire ambiente, se alimenta bien y no tiene signos de dificultad respiratoria grave. ¿Cuál es el manejo recomendado?",
     options: [
       [
-        "Medidas de soporte: lavados nasales, fraccionar la alimentación, signos de alarma y control.",
+        "Soporte: lavados nasales, alimentación fraccionada y signos de alarma.",
       ],
       [
-        "Salbutamol inhalado cada 4 horas y prednisolona oral.",
+        "Salbutamol inhalado cada 4 horas más prednisolona oral por 3 días.",
         "Los broncodilatadores y los corticoides no mejoran los desenlaces de la bronquiolitis y no se recomiendan de rutina.",
       ],
       [
-        "Amoxicilina oral por 7 días.",
+        "Amoxicilina oral a 90 mg/kg/día por 7 días.",
         "Es una infección viral (VSR, la más frecuente); los antibióticos no están indicados sin sobreinfección bacteriana.",
       ],
       [
-        "Radiografía de tórax y hemograma en todos los casos.",
+        "Radiografía de tórax y hemograma antes de definir el manejo.",
         "El diagnóstico es clínico; los paraclínicos rutinarios no cambian el manejo en el caso típico.",
       ],
     ],
@@ -84,19 +84,19 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Una primigestante de 35 semanas consulta por cefalea intensa y fosfenos. PA 168/112 mmHg confirmada en dos tomas, proteinuria positiva, plaquetas 140.000/µL, transaminasas normales. Feto con monitoría reactiva. ¿Cuál es la medida prioritaria para prevenir convulsiones?",
     options: [
       [
-        "Diazepam IV profiláctico.",
+        "Diazepam IV en bolo como profilaxis anticonvulsiva.",
         "Las benzodiacepinas no son la profilaxis de elección de la eclampsia.",
       ],
       [
-        "Fenitoína IV.",
+        "Fenitoína IV de impregnación y control de la presión arterial.",
         "La fenitoína es inferior al sulfato de magnesio para prevenir y tratar la eclampsia.",
       ],
       [
-        "Furosemida IV.",
+        "Furosemida IV para reducir el edema cerebral y la presión.",
         "Los diuréticos no previenen las convulsiones y pueden empeorar la hipoperfusión placentaria.",
       ],
       [
-        "Sulfato de magnesio (impregnación y mantenimiento), junto con antihipertensivo y planear la finalización del embarazo.",
+        "Sulfato de magnesio, antihipertensivo y planear el parto.",
       ],
     ],
     correct: "D",
@@ -118,18 +118,18 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Una mujer de 45 años consulta por dolor en hipocondrio derecho de 30 horas, fiebre de 38,2 °C y signo de Murphy positivo. Leucocitos 13.500/µL, bilirrubinas y transaminasas normales. La ecografía muestra cálculos, pared vesicular de 5 mm y líquido perivesicular. No tiene disfunción orgánica. ¿Cuál es el manejo más adecuado?",
     options: [
       [
-        "Antibiótico y colecistectomía laparoscópica temprana durante la misma hospitalización.",
+        "Antibiótico y colecistectomía laparoscópica en esta hospitalización.",
       ],
       [
-        "Antibiótico y colecistectomía programada en 3 meses.",
+        "Antibiótico, alta y colecistectomía programada en unos 3 meses.",
         "La colecistectomía tardía aumenta las reconsultas y complicaciones; en colecistitis leve o moderada se prefiere la cirugía temprana.",
       ],
       [
-        "CPRE urgente.",
+        "CPRE urgente con esfinterotomía y colecistectomía diferida.",
         "La CPRE está indicada en coledocolitiasis o colangitis; aquí la vía biliar y las pruebas hepáticas son normales.",
       ],
       [
-        "Colecistostomía percutánea.",
+        "Colecistostomía percutánea y antibiótico por 4 semanas.",
         "Se reserva para pacientes graves o de alto riesgo quirúrgico que no toleran la cirugía.",
       ],
     ],
@@ -152,18 +152,18 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Un hombre de 30 años presenta, 10 minutos después de recibir una dosis IM de penicilina, habones generalizados, disnea con sibilancias, edema de labios y PA de 80/50 mmHg. ¿Cuál es el tratamiento de primera línea?",
     options: [
       [
-        "Hidrocortisona IV como medida inicial única.",
+        "Hidrocortisona 200 mg IV como única medida inicial.",
         "Los corticoides tardan horas en actuar y no tratan la anafilaxia aguda.",
       ],
       [
-        "Adrenalina 0,5 mg IM en la cara anterolateral del muslo, repetible cada 5–15 minutos.",
+        "Adrenalina 0,5 mg IM en el muslo, repetible cada 5–15 minutos.",
       ],
       [
-        "Difenhidramina IV y observación.",
+        "Difenhidramina 50 mg IV y observación con monitoreo por 6 horas.",
         "Los antihistamínicos alivian síntomas cutáneos, pero no revierten el choque ni el broncoespasmo.",
       ],
       [
-        "Adrenalina 1 mg IV en bolo.",
+        "Adrenalina 1 mg IV en bolo, igual que en el paro cardíaco.",
         "La dosis IV en bolo de 1 mg es la del paro cardíaco; en un paciente con pulso puede causar arritmias graves.",
       ],
     ],
@@ -186,18 +186,18 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Una mujer de 26 años de Cali tiene fiebre de 4 días, mialgias y cefalea retroocular. Hoy la fiebre cedió, pero aparece dolor abdominal intenso y continuo, y ha vomitado 4 veces. PA 110/70 mmHg, FC 98 lpm. Hematocrito en aumento con plaquetas de 85.000/µL. ¿Cuál es la conducta correcta?",
     options: [
       [
-        "Manejo ambulatorio con acetaminofén y control en 48 horas.",
+        "Manejo ambulatorio con acetaminofén, hidratación oral y control en 48 h.",
         "Los signos de alarma obligan a hospitalizar; el periodo de defervescencia es la fase crítica.",
       ],
       [
-        "Ibuprofeno para el dolor y transfusión de plaquetas.",
+        "Ibuprofeno para el dolor y transfusión de plaquetas por el recuento.",
         "Los AINE están contraindicados en dengue y la transfusión de plaquetas no está indicada solo por el recuento.",
       ],
       [
-        "Hospitalizar e iniciar cristaloides IV con vigilancia estricta del hematocrito, la diuresis y los signos vitales (grupo B2).",
+        "Hospitalizar y dar cristaloides IV vigilando hematocrito y diuresis.",
       ],
       [
-        "Iniciar ceftriaxona por sospecha de sepsis abdominal.",
+        "Ceftriaxona IV y TAC de abdomen por sospecha de sepsis abdominal.",
         "El cuadro es típico de dengue con signos de alarma; el antibiótico no está indicado.",
       ],
     ],
@@ -220,18 +220,18 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Un agricultor de 40 años de zona rural de Buenaventura fue mordido en el pie por una serpiente 'equis' hace 3 horas. Presenta edema que llega a la rodilla, dolor intenso, sangrado por los orificios de la mordedura y gingivorragia. El tiempo de coagulación en tubo seco es prolongado. ¿Cuál es el tratamiento específico?",
     options: [
       [
-        "Torniquete, incisión y succión del veneno.",
+        "Torniquete proximal, incisión y succión del veneno antes del traslado.",
         "Estas maniobras están contraindicadas: aumentan la necrosis, la infección y el sangrado.",
       ],
       [
-        "Suero antiofídico (antiveneno) polivalente IV en dosis según la gravedad, en un centro con capacidad de manejo.",
+        "Suero antiofídico polivalente IV, con dosis según la gravedad.",
       ],
       [
-        "Plasma fresco congelado y vitamina K como tratamiento único.",
+        "Plasma fresco congelado y vitamina K IV como tratamiento único.",
         "No neutralizan el veneno; la coagulopatía se corrige con el antiveneno.",
       ],
       [
-        "Corticoide IV y antihistamínico como tratamiento específico.",
+        "Hidrocortisona y antihistamínico IV como tratamiento específico.",
         "Pueden usarse como premedicación en casos seleccionados, pero no son el tratamiento del envenenamiento.",
       ],
     ],
@@ -254,18 +254,18 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Una mujer de 58 años con obesidad y linfedema crónico presenta desde hace 24 horas fiebre y una placa roja brillante, caliente y dolorosa en la pierna derecha, sobreelevada y con bordes netamente delimitados respecto a la piel sana. Tiene intertrigo en los espacios interdigitales del pie. ¿Cuál es el agente más probable y el tratamiento de elección?",
     options: [
       [
-        "Pseudomonas aeruginosa; ciprofloxacina.",
+        "Pseudomonas aeruginosa; ciprofloxacina oral por 10 días.",
         "Pseudomonas no es una causa habitual de erisipela.",
       ],
       [
-        "Staphylococcus aureus resistente a meticilina; vancomicina como primera elección.",
+        "S. aureus resistente a meticilina; vancomicina IV de primera elección.",
         "El agente típico de la erisipela es el estreptococo; la vancomicina no es la primera elección sin factores de riesgo para SARM.",
       ],
       [
-        "Streptococcus pyogenes; penicilina, y tratar el intertrigo como puerta de entrada.",
+        "Streptococcus pyogenes; penicilina y tratar el intertrigo.",
       ],
       [
-        "Herpes simple; aciclovir.",
+        "Virus herpes simple; aciclovir oral por 7 días.",
         "El herpes produce vesículas agrupadas, no una placa eritematosa de borde neto con fiebre.",
       ],
     ],
@@ -288,19 +288,19 @@ export const UNIVALLE_DIAGNOSTICO = [
       "Un hombre de 45 años, testigo de Jehová, plenamente consciente y capaz, con hemorragia digestiva y hemoglobina de 7 g/dL, hemodinámicamente estable, rechaza de forma informada cualquier transfusión de sangre. ¿Cuál es la conducta ética y legal correcta?",
     options: [
       [
-        "Transfundir de todos modos, porque el deber del médico es salvar la vida por encima de la voluntad del paciente.",
+        "Transfundir de todos modos: salvar la vida prima sobre su voluntad.",
         "En un adulto capaz, transfundir contra su voluntad expresa vulnera su autonomía y su libertad de cultos.",
       ],
       [
-        "Pedir a la familia que firme el consentimiento en su lugar.",
+        "Pedir a la familia que firme el consentimiento de la transfusión.",
         "La familia no puede sustituir la decisión de un adulto capaz.",
       ],
       [
-        "Darle de alta por negarse al tratamiento.",
+        "Darle de alta porque rechaza el tratamiento que se le propone.",
         "Rechazar una intervención no es rechazar toda la atención; se deben ofrecer alternativas.",
       ],
       [
-        "Respetar su decisión, documentarla en el consentimiento o disentimiento informado y ofrecer alternativas terapéuticas (control endoscópico del sangrado, hierro IV, eritropoyetina, entre otras).",
+        "Respetar su decisión, documentarla y ofrecer alternativas terapéuticas.",
       ],
     ],
     correct: "D",

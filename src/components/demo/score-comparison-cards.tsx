@@ -38,7 +38,7 @@ export function ScoreComparisonCards({
       transition={{ delay: 0.15 }}
     >
       <motion.div
-        className="rounded-2xl border border-mq-accent/25 bg-mq-accent/5 p-4"
+        className="rounded-2xl border border-mq-accent/25 bg-white p-4"
         whileHover={{ scale: 1.01 }}
       >
         <motion.div
@@ -55,7 +55,7 @@ export function ScoreComparisonCards({
           <>
             <p className="text-3xl font-black text-slate-900">{scorePercentage}%</p>
             <p className="mt-1 text-xs text-slate-500">
-              {standardized} estandarizado
+              {standardized} estandarizado (escala 180–900)
               {weekLabel ? ` · ${weekLabel}` : ""}
             </p>
             <p className="mt-2 text-[10px] leading-relaxed text-slate-500/80">
