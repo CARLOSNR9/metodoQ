@@ -12,7 +12,7 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "Una mujer de 61 años, afrodescendiente, consulta por una 'mancha' en la planta del pie derecho que notó hace un año y que ha crecido. Mide 14 mm, es asimétrica, de bordes irregulares, con tonos marrón, negro y azul grisáceo. En la dermatoscopia se observa un patrón de crestas paralelas. No hay adenopatías palpables. ¿Cuál es la conducta inicial más adecuada?",
     options: [
       [
-        "Crioterapia de la lesión y control en 6 meses.",
+        "Crioterapia de la lesión y control dermatoscópico en 6 meses.",
         "Nunca se destruye una lesión pigmentada sospechosa sin diagnóstico histológico: se pierde la posibilidad de medir el espesor de Breslow.",
       ],
       [
@@ -20,11 +20,11 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
         "El shave superficial puede cortar la lesión en profundidad y subestimar el Breslow, que define el pronóstico y los márgenes.",
       ],
       [
-        "Ampliación inmediata con margen de 2 cm y ganglio centinela sin biopsia previa.",
+        "Ampliación directa con margen de 2 cm y ganglio centinela.",
         "Los márgenes definitivos y la indicación de ganglio centinela dependen del Breslow; primero hay que confirmar el diagnóstico y medirlo.",
       ],
       [
-        "Biopsia escisional completa con margen clínico estrecho (1 a 3 mm) para estudio histológico.",
+        "Biopsia escisional completa con margen de 1 a 3 mm.",
       ],
     ],
     correct: "D",
@@ -46,18 +46,18 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "A un hombre de 50 años se le realizó biopsia escisional de una lesión pigmentada en la espalda. El reporte es: melanoma de extensión superficial, Breslow de 1,6 mm, sin ulceración, márgenes laterales comprometidos mínimamente. No hay adenopatías palpables ni síntomas sistémicos. ¿Cuál es la conducta recomendada?",
     options: [
       [
-        "Ampliación de márgenes a 1–2 cm y biopsia de ganglio centinela.",
+        "Ampliación a 1–2 cm de margen y ganglio centinela.",
       ],
       [
-        "Ampliación de márgenes a 5 mm y seguimiento clínico.",
+        "Ampliación a 5 mm de margen y control clínico semestral.",
         "Un margen de 0,5–1 cm corresponde al melanoma in situ; con 1,6 mm de Breslow se necesita más margen y estadificación ganglionar.",
       ],
       [
-        "Vaciamiento ganglionar axilar e inguinal bilateral profiláctico.",
+        "Vaciamiento ganglionar axilar e inguinal profiláctico.",
         "No se hacen vaciamientos profilácticos sin evidencia de compromiso ganglionar; para eso existe el ganglio centinela.",
       ],
       [
-        "Radioterapia del lecho quirúrgico sin cirugía adicional.",
+        "Radioterapia del lecho quirúrgico, sin más cirugía.",
         "El tratamiento del melanoma primario es quirúrgico; la radioterapia no reemplaza la ampliación de márgenes.",
       ],
     ],
@@ -80,18 +80,18 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "Un agricultor de 68 años, de piel clara, consulta por una lesión en el ala nasal izquierda de 2 años de evolución. Es una pápula de 8 mm, de aspecto perlado, con telangiectasias arborizantes en la superficie y una pequeña úlcera central que sangra con facilidad. No tiene adenopatías. ¿Cuál de las siguientes afirmaciones es correcta?",
     options: [
       [
-        "Es un carcinoma escamocelular con alto riesgo de metástasis ganglionar temprana.",
+        "Es un carcinoma escamocelular con alto riesgo de metástasis ganglionares tempranas; requiere vaciamiento cervical.",
         "El borde perlado con telangiectasias arborizantes es típico del basocelular; el escamocelular suele ser queratósico y tiene más riesgo de metástasis.",
       ],
       [
-        "Es el cáncer de piel más frecuente; casi nunca da metástasis, pero es localmente destructivo; en zonas de alto riesgo como la nariz se prefiere la cirugía micrográfica de Mohs.",
+        "Es el cáncer de piel más frecuente y casi nunca da metástasis; en la nariz se prefiere la cirugía de Mohs.",
       ],
       [
-        "Es un melanoma amelanótico y requiere ganglio centinela.",
+        "Es un melanoma amelanótico nodular y requiere ampliación con margen de 2 cm y ganglio centinela.",
         "El melanoma amelanótico es raro y no tiene la morfología perlada con telangiectasias de largo tiempo de evolución.",
       ],
       [
-        "Es una queratosis seborreica y no requiere manejo.",
+        "Es una queratosis seborreica irritada y no requiere manejo distinto a la observación periódica.",
         "La queratosis seborreica es una lesión 'pegada', verrugosa, sin borde perlado ni úlcera.",
       ],
     ],
@@ -114,18 +114,18 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "Un cortero de caña de 63 años, de piel clara, consulta por varias lesiones ásperas al tacto en el dorso de las manos y la frente, de 2 a 6 mm, eritematosas, con escama adherente, que se palpan mejor de lo que se ven. No hay induración ni ulceración. ¿Cuál es el significado clínico de estas lesiones?",
     options: [
       [
-        "Son lesiones benignas sin ningún potencial maligno.",
+        "Son lesiones benignas del fotoenvejecimiento, sin potencial maligno; basta con hidratación.",
         "Las queratosis actínicas son lesiones premalignas: una fracción progresa a carcinoma escamocelular.",
       ],
       [
-        "Son precursoras del carcinoma basocelular nodular.",
+        "Son precursoras del carcinoma basocelular nodular y deben resecarse con márgenes de 4 mm.",
         "El precursor asociado a las queratosis actínicas es el carcinoma escamocelular, no el basocelular.",
       ],
       [
-        "Son lesiones premalignas que pueden evolucionar a carcinoma escamocelular; se tratan con crioterapia, 5-fluorouracilo o imiquimod tópico y fotoprotección.",
+        "Son premalignas (precursoras del carcinoma escamocelular); se tratan con crioterapia o 5-FU tópico.",
       ],
       [
-        "Son lesiones de melanoma in situ y requieren ampliación con margen de 1 cm.",
+        "Son lesiones de melanoma in situ y requieren ampliación quirúrgica con margen de 1 cm.",
         "El melanoma in situ es una lesión pigmentada, no una placa áspera queratósica.",
       ],
     ],
@@ -148,18 +148,18 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "Una mujer de 32 años inició carbamazepina hace 3 semanas por neuralgia del trigémino. Consulta a urgencias por fiebre, odinofagia y ardor ocular, seguidos de máculas purpúricas en tronco y cara que confluyen y forman ampollas flácidas. El signo de Nikolsky es positivo y el desprendimiento epidérmico compromete cerca del 35% de la superficie corporal. Tiene erosiones en la mucosa oral, conjuntival y genital. ¿Cuál es la medida inicial más importante?",
     options: [
       [
-        "Iniciar prednisona 1 mg/kg/día y continuar la carbamazepina para evitar crisis de dolor.",
+        "Prednisona 1 mg/kg/día y continuar la carbamazepina para evitar el dolor.",
         "Continuar el fármaco culpable empeora el pronóstico; su retiro inmediato es la medida que más impacta la mortalidad.",
       ],
       [
-        "Suspender inmediatamente la carbamazepina y trasladar a una unidad de quemados o de cuidado intensivo para soporte.",
+        "Suspender la carbamazepina y trasladar a unidad de quemados o UCI.",
       ],
       [
-        "Iniciar dicloxacilina por sospecha de síndrome de piel escaldada estafilocócica.",
+        "Dicloxacilina IV por sospecha de síndrome de piel escaldada estafilocócica.",
         "El síndrome de piel escaldada respeta las mucosas y afecta sobre todo a niños pequeños; aquí hay compromiso mucoso extenso y un fármaco desencadenante.",
       ],
       [
-        "Dar antihistamínico oral y alta con control en 48 horas.",
+        "Antihistamínico oral, emolientes y control ambulatorio en 48 horas.",
         "Es una urgencia dermatológica potencialmente mortal; no se maneja ambulatoriamente.",
       ],
     ],
@@ -182,18 +182,18 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "Un hombre de 45 años inició alopurinol hace 5 semanas por gota. Consulta por fiebre de 39 °C, exantema morbiliforme generalizado que progresa a eritrodermia, edema facial marcado y adenopatías cervicales y axilares. No tiene ampollas ni erosiones mucosas. Laboratorios: leucocitos 16.000/µL con eosinófilos de 2.100/µL, linfocitos atípicos, ALT 420 U/L y creatinina de 1,9 mg/dL (basal 0,9). ¿Cuál es el diagnóstico más probable?",
     options: [
       [
-        "Exantema viral por mononucleosis infecciosa.",
+        "Exantema viral por mononucleosis infecciosa con hepatitis reactiva.",
         "La mononucleosis puede dar linfocitos atípicos y adenopatías, pero no explica la eosinofilia marcada, el edema facial y la latencia tras un fármaco nuevo.",
       ],
       [
-        "Necrólisis epidérmica tóxica.",
+        "Necrólisis epidérmica tóxica en fase inicial, previa a las ampollas.",
         "La NET produce desprendimiento epidérmico y compromiso mucoso con latencia más corta (1–4 semanas); aquí no hay ampollas ni erosiones.",
       ],
       [
         "Reacción a fármaco con eosinofilia y síntomas sistémicos (DRESS).",
       ],
       [
-        "Urticaria aguda alérgica.",
+        "Urticaria aguda alérgica generalizada con angioedema facial.",
         "La urticaria aparece en minutos u horas, con habones evanescentes, sin compromiso hepático ni renal.",
       ],
     ],
@@ -250,18 +250,18 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "Una mujer de 44 años consulta por erosiones dolorosas en la mucosa oral de 3 meses de evolución que le impiden comer, y desde hace 3 semanas ampollas flácidas que se rompen con facilidad en cuero cabelludo, tronco y axilas, dejando erosiones extensas. Al frotar la piel sana perilesional se desprende la epidermis. ¿Contra qué antígeno van dirigidos principalmente los autoanticuerpos?",
     options: [
       [
-        "Desmogleína 3 (con o sin desmogleína 1).",
+        "Desmogleína 3 (± desmogleína 1).",
       ],
       [
-        "BP180 del hemidesmosoma.",
+        "BP180 y BP230 del hemidesmosoma.",
         "BP180 es el antígeno del penfigoide ampolloso, que produce ampollas tensas sin compromiso mucoso relevante.",
       ],
       [
-        "Colágeno tipo VII.",
+        "Colágeno tipo VII de las fibrillas de anclaje.",
         "El colágeno VII es el blanco de la epidermólisis ampollosa adquirida y de la forma distrófica hereditaria.",
       ],
       [
-        "Transglutaminasa epidérmica.",
+        "Transglutaminasa epidérmica (tipo 3).",
         "La transglutaminasa epidérmica se relaciona con la dermatitis herpetiforme.",
       ],
     ],
@@ -284,19 +284,19 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "Un hombre de 38 años con psoriasis en placas de 10 años de evolución, controlada con corticoides tópicos, consulta a urgencias con fiebre, malestar y una erupción súbita de pústulas estériles de 1 a 2 mm sobre piel muy eritematosa en tronco y extremidades. Hace 3 semanas un médico le formuló prednisona oral por un brote extenso y la suspendió de forma abrupta hace 5 días. ¿Cuál es el diagnóstico y qué lo desencadenó?",
     options: [
       [
-        "Pustulosis exantemática generalizada aguda por la prednisona.",
+        "Pustulosis exantemática generalizada aguda causada por la prednisona.",
         "La pustulosis exantemática aguda aparece días después de un fármaco nuevo (típicamente antibióticos), no tras retirar un corticoide en un psoriásico conocido.",
       ],
       [
-        "Foliculitis bacteriana diseminada; requiere oxacilina.",
+        "Foliculitis bacteriana diseminada que requiere oxacilina IV.",
         "Las pústulas son estériles y no foliculares; el contexto de suspensión de esteroide en psoriasis apunta a psoriasis pustulosa.",
       ],
       [
-        "Psoriasis guttata desencadenada por faringitis estreptocócica.",
+        "Psoriasis guttata desencadenada por una faringitis estreptocócica.",
         "La psoriasis guttata produce pápulas descamativas 'en gota', no pústulas con fiebre.",
       ],
       [
-        "Psoriasis pustulosa generalizada (de von Zumbusch) desencadenada por la suspensión de corticoides sistémicos.",
+        "Psoriasis pustulosa generalizada por suspender el corticoide oral.",
       ],
     ],
     correct: "D",
@@ -318,18 +318,18 @@ export const UNIVALLE_DERMATOLOGIA_11_20 = [
       "Una mujer de 19 años tiene acné nodulo-quístico en cara y espalda con cicatrices, que no mejoró tras 4 meses de doxiciclina oral más peróxido de benzoílo y adapaleno tópicos. Se decide iniciar isotretinoína oral. ¿Cuál es el requisito indispensable antes de empezar?",
     options: [
       [
-        "Ecografía hepática y biopsia de piel.",
+        "Ecografía hepática, biopsia de piel y perfil hormonal androgénico.",
         "No se necesitan biopsia ni ecografía; se piden perfil lipídico y transaminasas basales.",
       ],
       [
-        "Prueba de embarazo negativa y anticoncepción eficaz durante el tratamiento y hasta un mes después de terminarlo.",
+        "Prueba de embarazo negativa y anticoncepción eficaz hasta un mes después.",
       ],
       [
-        "Continuar la doxiciclina junto con la isotretinoína para potenciar el efecto.",
+        "Mantener la doxiciclina junto con la isotretinoína para potenciar el efecto.",
         "Tetraciclinas + isotretinoína aumentan el riesgo de hipertensión intracraneal idiopática (pseudotumor cerebri); su combinación está contraindicada.",
       ],
       [
-        "Densitometría ósea y audiometría basal.",
+        "Densitometría ósea y audiometría basal antes de la primera dosis.",
         "No son estudios requeridos de rutina para iniciar isotretinoína.",
       ],
     ],

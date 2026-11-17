@@ -50,7 +50,12 @@ export function Act2PredictiveDashboard({
   const { weeklyStats, loading: weeklyLoading } = useUserWeeklyStats(userId);
 
   const hasWeeklyData = Boolean(weeklyStats && weeklyStats.totalQuestions > 0);
-  const useSessionFallback = !userId && (sessionQuestions?.length || Object.keys(correctTopics).length > 0);
+  // Si las estadísticas semanales aún no reflejan la sesión recién terminada
+  // (se leen antes de que el resultado termine de guardarse), se usan los
+  // datos de la propia sesión para no decir "aún no tienes práctica".
+  const useSessionFallback =
+    !hasWeeklyData &&
+    Boolean(sessionQuestions?.length || Object.keys(correctTopics).length > 0);
 
   const displayPercentage = hasWeeklyData
     ? weeklyStats!.scorePercentage
@@ -134,7 +139,7 @@ export function Act2PredictiveDashboard({
           </>
         ) : (
           <p className="mx-auto max-w-sm text-sm text-slate-500">
-            Esta semana (domingo a domingo) aún no tienes práctica registrada.
+            Esta semana (domingo a sábado) aún no tienes práctica registrada.
             Los simulacros no entran en este total.
           </p>
         )}
@@ -163,7 +168,7 @@ export function Act2PredictiveDashboard({
             subtitle={
               weekLabel
                 ? `Debilidad y mejora de la semana ${weekLabel}. Sin simulacros.`
-                : "Temas de debilidad y de mejora de esta semana (domingo a domingo). Sin simulacros."
+                : "Temas de debilidad y de mejora de esta semana (domingo a sábado). Sin simulacros."
             }
             emptyMessage="Esta semana aún no hay práctica por asignatura. Completa diagnóstico, retos o entrenamiento (los simulacros no cuentan)."
           />
@@ -230,9 +235,11 @@ export function Act2PredictiveDashboard({
               <h5 className="text-sm font-black uppercase tracking-wider">Temas a mejorar</h5>
             </motion.div>
             <p className="text-xs leading-relaxed text-slate-500">
-              {bestTopics.length > 0
-                ? `Esta semana dominas ${bestTopics.join(", ")}, pero `
-                : "Esta semana es prioritario reforzar "}
+              {worstTopics.length > 0
+                ? bestTopics.length > 0
+                  ? `Esta semana dominas ${bestTopics.join(", ")}, pero `
+                  : "Esta semana "
+                : null}
               {worstTopics.length > 0 ? (
                 <>
                   las asignaturas de{" "}
@@ -240,7 +247,7 @@ export function Act2PredictiveDashboard({
                   limitando tu puntaje semanal. Enfoca módulos clínicos y guías MSPS/INS en esas áreas.
                 </>
               ) : (
-                <>tu nivel semanal es sólido. Sigue con práctica diaria; los simulacros no alteran este total.</>
+                <>Tu nivel semanal es sólido. Sigue con práctica diaria; los simulacros no alteran este total.</>
               )}
             </p>
           </motion.div>

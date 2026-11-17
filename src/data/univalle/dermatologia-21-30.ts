@@ -12,18 +12,18 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Un lactante de 7 meses tiene desde hace 2 meses placas eritematosas, exudativas y muy pruriginosas en las mejillas y las superficies extensoras de los brazos, que respetan la zona del pañal. Duerme mal por el rascado. La madre tiene asma y rinitis alérgica. No hay signos de sobreinfección. ¿Cuál es el manejo inicial más adecuado?",
     options: [
       [
-        "Emolientes diarios, baños cortos con syndet, y corticoide tópico de baja potencia en los brotes.",
+        "Emolientes diarios y corticoide tópico de baja potencia en los brotes.",
       ],
       [
-        "Dieta de eliminación de leche, huevo y trigo a la madre lactante.",
+        "Dieta materna sin leche, huevo ni trigo mientras dure la lactancia.",
         "Las dietas de eliminación empíricas no se recomiendan sin una alergia alimentaria demostrada; pueden comprometer la nutrición.",
       ],
       [
-        "Prednisolona oral por 10 días.",
+        "Prednisolona oral 1 mg/kg/día por 10 días y luego suspender.",
         "Los corticoides sistémicos no se usan en el manejo habitual de la dermatitis atópica por el rebote y los efectos adversos.",
       ],
       [
-        "Clobetasol tópico en cara dos veces al día por 4 semanas.",
+        "Clobetasol tópico en la cara dos veces al día durante 4 semanas.",
         "Un corticoide de muy alta potencia en la cara de un lactante produce atrofia, telangiectasias y absorción sistémica.",
       ],
     ],
@@ -46,18 +46,18 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Una lactante de 10 semanas presenta una lesión roja brillante, sobreelevada y lobulada, de 2,5 cm, en el párpado superior derecho, que no estaba al nacer y ha crecido rápidamente en el último mes. Ya cubre parcialmente el eje visual. ¿Cuál es la conducta más adecuada?",
     options: [
       [
-        "Observación, porque todos los hemangiomas involucionan solos.",
+        "Observación, porque todos los hemangiomas involucionan sin tratamiento.",
         "La mayoría involuciona, pero los periorbitarios que obstruyen el eje visual pueden causar ambliopía permanente; requieren tratamiento temprano.",
       ],
       [
-        "Resección quirúrgica urgente de la lesión.",
+        "Resección quirúrgica urgente de toda la lesión palpebral.",
         "La cirugía en una lactante y en el párpado no es la primera línea; el propranolol es muy eficaz y menos mórbido.",
       ],
       [
-        "Propranolol oral, con valoración pediátrica previa y control oftalmológico.",
+        "Propranolol oral, con valoración pediátrica y control oftalmológico.",
       ],
       [
-        "Láser ablativo de CO₂ inmediato.",
+        "Láser ablativo de CO₂ inmediato sobre toda la lesión.",
         "El láser (de colorante pulsado) se reserva para lesiones superficiales o secuelas; no es el tratamiento de una lesión proliferativa que amenaza la visión.",
       ],
     ],
@@ -80,18 +80,18 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Un niño de 3 años presenta fiebre, irritabilidad y eritema doloroso que inició alrededor de la boca y en los pliegues, y en 24 horas evolucionó a ampollas flácidas que se desprenden en grandes láminas dejando una superficie húmeda. Tiene costras alrededor de la boca y la nariz. El signo de Nikolsky es positivo. La mucosa oral y las conjuntivas están respetadas. ¿Cuál es el mecanismo y el tratamiento?",
     options: [
       [
-        "Necrosis de la epidermis por reacción a medicamento; suspender fármacos e inmunoglobulina IV.",
+        "Necrosis epidérmica por un medicamento; suspender fármacos e inmunoglobulina IV.",
         "La NET compromete las mucosas y la necrosis es de espesor total; aquí las mucosas están respetadas y hay un foco estafilocócico.",
       ],
       [
-        "Toxinas exfoliativas de Staphylococcus aureus que rompen la desmogleína 1; antibiótico antiestafilocócico IV y cuidados de soporte.",
+        "Toxinas exfoliativas de S. aureus contra desmogleína 1; antiestafilocócico IV.",
       ],
       [
-        "Autoanticuerpos contra desmogleína 3; corticoide sistémico.",
+        "Autoanticuerpos IgG contra desmogleína 3; corticoide sistémico a dosis altas.",
         "Eso describe el pénfigo vulgar, raro en niños y con compromiso mucoso.",
       ],
       [
-        "Infección por virus coxsackie; manejo sintomático ambulatorio.",
+        "Infección por virus coxsackie A16; manejo sintomático ambulatorio.",
         "La enfermedad mano-pie-boca da vesículas pequeñas en manos, pies y boca, no desprendimiento laminar de la piel.",
       ],
     ],
@@ -114,19 +114,19 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Una mujer de 72 años presenta desde hace 36 horas dolor urente en la frente izquierda, seguido de vesículas agrupadas sobre base eritematosa en la frente, el párpado superior izquierdo y la punta de la nariz. Las lesiones no cruzan la línea media. ¿Cuál es la conducta más adecuada?",
     options: [
       [
-        "Aciclovir tópico y analgésico; no requiere más estudios.",
+        "Aciclovir tópico y analgésicos; no requiere estudios adicionales.",
         "El tratamiento tópico no es suficiente y la lesión en la punta nasal obliga a evaluar el ojo.",
       ],
       [
-        "Corticoide oral solo, para prevenir la neuralgia postherpética.",
+        "Prednisona oral sola para prevenir la neuralgia postherpética.",
         "El corticoide sin antiviral no está indicado; el antiviral es el tratamiento principal.",
       ],
       [
-        "Esperar a que las vesículas se costricen antes de iniciar cualquier tratamiento.",
+        "Esperar a que las vesículas formen costra antes de tratar.",
         "El antiviral es más útil en las primeras 72 horas; no se debe retrasar.",
       ],
       [
-        "Antiviral oral (valaciclovir o aciclovir) de inmediato y valoración oftalmológica urgente.",
+        "Valaciclovir o aciclovir oral ya, y valoración oftalmológica urgente.",
       ],
     ],
     correct: "D",
@@ -152,14 +152,14 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
         "Un manejo ambulatorio de celulitis es inadecuado ante signos de infección necrosante y choque séptico.",
       ],
       [
-        "Esperar el resultado de la resonancia magnética antes de decidir la cirugía.",
+        "Esperar la resonancia magnética antes de decidir la cirugía.",
         "Las imágenes no deben retrasar la cirugía cuando la sospecha clínica es alta; el retraso aumenta la mortalidad.",
       ],
       [
-        "Reanimación, antibióticos IV de amplio espectro y desbridamiento quirúrgico urgente.",
+        "Reanimación, antibióticos de amplio espectro y desbridamiento urgente.",
       ],
       [
-        "Drenaje con aguja de la ampolla y antibiótico tópico.",
+        "Drenaje con aguja de la ampolla y antibiótico tópico local.",
         "La infección está en la fascia; el manejo local de la ampolla no la trata.",
       ],
     ],
@@ -182,18 +182,18 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Un hombre de 60 años, hipertenso, en tratamiento con enalapril desde hace 2 años, consulta por edema de labios y lengua de 4 horas de evolución, sin habones ni prurito. Está estable, sin estridor ni dificultad respiratoria. Recibió en otro centro difenhidramina e hidrocortisona sin mejoría. ¿Cuál es el mecanismo y la medida más importante?",
     options: [
       [
-        "Liberación de histamina por mastocitos; aumentar la dosis de antihistamínico.",
+        "Histamina de mastocitos; duplicar la dosis del antihistamínico oral.",
         "La ausencia de habones y prurito, y la falta de respuesta a antihistamínicos y corticoides, apuntan a un mecanismo no histaminérgico.",
       ],
       [
-        "Acumulación de bradicinina; suspender definitivamente el IECA y vigilar la vía aérea.",
+        "Bradicinina; suspender el IECA de por vida y vigilar la vía aérea.",
       ],
       [
-        "Reacción de hipersensibilidad tipo IV; corticoide tópico.",
+        "Hipersensibilidad tipo IV; corticoide tópico en los labios.",
         "Las reacciones tipo IV son tardías y eccematosas, no producen angioedema agudo de labios y lengua.",
       ],
       [
-        "Déficit adquirido de IgE; cambiar a otro IECA de vida media más corta.",
+        "Déficit de IgE; cambiar a un IECA de vida media más corta.",
         "El efecto es de clase: ningún IECA es seguro después de un angioedema por IECA.",
       ],
     ],
@@ -216,18 +216,18 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Una mujer de 28 años presenta nódulos eritematosos, calientes y dolorosos en ambas regiones pretibiales, de 2 semanas de evolución, que no se ulceran. Tuvo faringitis hace 3 semanas. Tiene artralgias en los tobillos. Toma anticonceptivos orales. ¿Cuál de los siguientes estudios es más importante solicitar para el enfoque etiológico?",
     options: [
       [
-        "Radiografía de tórax, además de ASLO, frotis faríngeo y prueba de tuberculina o IGRA.",
+        "Radiografía de tórax, ASLO y prueba de tuberculina o IGRA.",
       ],
       [
-        "Biopsia de médula ósea.",
+        "Biopsia de médula ósea y frotis de sangre periférica.",
         "No está indicada en el estudio inicial del eritema nudoso.",
       ],
       [
-        "Anticuerpos anti-Ro y anti-La.",
+        "Anticuerpos anti-Ro, anti-La y complemento sérico.",
         "Se asocian a lupus cutáneo subagudo y síndrome de Sjögren, no son estudio de rutina del eritema nudoso.",
       ],
       [
-        "Ecografía Doppler venoso de miembros inferiores como único estudio.",
+        "Doppler venoso de miembros inferiores como único estudio.",
         "Puede descartar trombosis si hay dudas, pero no aclara la causa del eritema nudoso.",
       ],
     ],
@@ -250,10 +250,10 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Una mujer de 57 años consulta por dificultad para subir escaleras y peinarse de 2 meses de evolución. Presenta eritema violáceo en ambos párpados superiores con edema, pápulas eritemato-violáceas sobre las articulaciones metacarpofalángicas e interfalángicas, y eritema en 'V' del escote. La CPK está en 2.800 U/L. Además de iniciar el tratamiento, ¿qué estudio es indispensable en esta paciente?",
     options: [
       [
-        "Búsqueda de neoplasia oculta (incluida la evaluación de ovario, mama, pulmón y tracto gastrointestinal).",
+        "Búsqueda de una neoplasia oculta.",
       ],
       [
-        "Electroencefalograma.",
+        "Electroencefalograma y punción lumbar.",
         "No aporta al enfoque de una miopatía inflamatoria.",
       ],
       [
@@ -261,7 +261,7 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
         "Es una prueba para fibrosis quística, sin relación con este cuadro.",
       ],
       [
-        "Biopsia de piel para descartar lupus discoide como único estudio.",
+        "Biopsia de piel para descartar lupus discoide.",
         "El cuadro clínico ya es característico de dermatomiositis; el estudio indispensable en el adulto es la búsqueda de cáncer.",
       ],
     ],
@@ -284,18 +284,18 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Un estudiante de 20 años, de Cali, consulta por manchas hipocrómicas y algunas color café claro, en el tronco y los hombros, que se hicieron más notorias después de ir a la playa. Tienen una descamación fina que se evidencia al rascar con la uña (signo de la uñada). El examen con KOH muestra hifas cortas y levaduras agrupadas en 'espagueti con albóndigas'. ¿Cuál es el agente y el tratamiento de primera línea?",
     options: [
       [
-        "Trichophyton rubrum; terbinafina oral por 12 semanas.",
+        "Trichophyton rubrum; terbinafina oral diaria por 12 semanas.",
         "Trichophyton causa tiñas (con borde activo), no este patrón; el esquema de 12 semanas corresponde a onicomicosis.",
       ],
       [
-        "Candida albicans; nistatina oral.",
+        "Candida albicans; nistatina oral en suspensión por 14 días.",
         "Candida afecta pliegues y mucosas; la nistatina oral no se absorbe y no trata la piel del tronco.",
       ],
       [
-        "Malassezia spp.; antifúngico tópico (ketoconazol, sulfuro de selenio o un azol) y explicar que la pigmentación tarda en normalizarse.",
+        "Malassezia spp.; antifúngico tópico como ketoconazol o sulfuro de selenio.",
       ],
       [
-        "Corynebacterium minutissimum; eritromicina oral.",
+        "Corynebacterium minutissimum; eritromicina oral por 14 días.",
         "Corynebacterium causa el eritrasma de los pliegues (fluorescencia rojo coral), no esta imagen en el KOH.",
       ],
     ],
@@ -318,18 +318,18 @@ export const UNIVALLE_DERMATOLOGIA_21_30 = [
       "Un hombre de 64 años tiene en la pierna una cicatriz de quemadura de la infancia. Desde hace 8 meses presenta en ella una úlcera que no cicatriza a pesar de curaciones, con bordes evertidos e indurados, tejido friable y sangrado fácil. Se palpa una adenopatía inguinal ipsilateral de 2 cm. ¿Cuál es el diagnóstico más probable y el paso siguiente?",
     options: [
       [
-        "Úlcera venosa; vendaje compresivo y control en 3 meses.",
+        "Úlcera venosa crónica; vendaje compresivo y control en 3 meses.",
         "Las úlceras venosas suelen localizarse en el maléolo medial con dermatitis ocre; no tienen bordes evertidos ni indurados ni adenopatía.",
       ],
       [
-        "Carcinoma escamocelular sobre cicatriz crónica (úlcera de Marjolin); biopsia de la úlcera, incluyendo el borde.",
+        "Carcinoma escamocelular (úlcera de Marjolin); biopsia del borde.",
       ],
       [
-        "Pioderma gangrenoso; corticoide sistémico sin biopsia.",
+        "Pioderma gangrenoso; corticoide sistémico sin necesidad de biopsia.",
         "El pioderma gangrenoso tiene bordes socavados y violáceos; además, una úlcera crónica con estas características debe biopsiarse antes de inmunosuprimir.",
       ],
       [
-        "Leishmaniasis cutánea; antimoniales.",
+        "Leishmaniasis cutánea crónica; antimoniales por 20 días.",
         "No hay antecedente epidemiológico y el contexto de cicatriz por quemadura con bordes evertidos sugiere malignidad.",
       ],
     ],

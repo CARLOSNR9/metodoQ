@@ -223,6 +223,7 @@ export function ProDashboardView({
         <UnivalleTrackSection
           specialty={effectiveSpecialty}
           planStartedAt={profile?.planStartedAt}
+          diagnosticDone={hasDiagnosticData}
         />
       ) : null}
 

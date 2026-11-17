@@ -72,3 +72,19 @@ describe("simulacros Univalle", () => {
     }
   });
 });
+
+describe("sin pista por el largo de las opciones", () => {
+  it("la correcta no es sistemáticamente la opción más larga", () => {
+    let longest = 0;
+    let ratioSum = 0;
+    for (const q of UNIVALLE_OWN_QUESTIONS) {
+      const lens = q.options.map((o) => o.text.length);
+      const correct = q.options.find((o) => o.id === q.correctOptionId)!.text.length;
+      if (correct === Math.max(...lens)) longest += 1;
+      const others = q.options.filter((o) => o.id !== q.correctOptionId).map((o) => o.text.length);
+      ratioSum += correct / (others.reduce((a, b) => a + b, 0) / others.length);
+    }
+    expect(longest / UNIVALLE_OWN_QUESTIONS.length).toBeLessThanOrEqual(0.35);
+    expect(ratioSum / UNIVALLE_OWN_QUESTIONS.length).toBeLessThanOrEqual(1.15);
+  });
+});

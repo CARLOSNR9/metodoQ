@@ -341,23 +341,38 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                   </p>
                   {skipConfigStep ? (
                     <p className="text-[11px] text-slate-500/80">
-                      Tomado de tu perfil. Si necesitas cambiar universidad, actualízala en Perfil.
+                      Tomado de tu perfil. Si no es correcta, avísale a tu asesor de Método Q.
                     </p>
                   ) : null}
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
-                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Cupos Regulares</p>
-                    <p className="text-4xl font-black text-mq-accent">{selectedSpecialty.regularSpots}</p>
-                    <p className="text-[10px] text-slate-500">Para todo el país</p>
+                {isUnivalleUniversity(selectedUniversity) ? (
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
+                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Examen</p>
+                      <p className="text-2xl font-black text-mq-accent">Único</p>
+                      <p className="text-[10px] text-slate-500">Medicina general, igual para todas las especialidades</p>
+                    </div>
+                    <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
+                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Peso del examen</p>
+                      <p className="text-2xl font-black text-mq-accent">≈95%</p>
+                      <p className="text-[10px] text-slate-500">Más inglés (≈5%). Cupos: según la convocatoria oficial</p>
+                    </div>
                   </div>
-                  <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
-                    <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Dificultad Est.</p>
-                    <p className="text-4xl font-black text-mq-accent">9.8/10</p>
-                    <p className="text-[10px] text-slate-500">Nivel de Exclusión</p>
+                ) : (
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
+                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Cupos Regulares</p>
+                      <p className="text-4xl font-black text-mq-accent">{selectedSpecialty.regularSpots}</p>
+                      <p className="text-[10px] text-slate-500">Referencia aproximada por convocatoria</p>
+                    </div>
+                    <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
+                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Dificultad Est.</p>
+                      <p className="text-4xl font-black text-mq-accent">9.8/10</p>
+                      <p className="text-[10px] text-slate-500">Nivel de Exclusión</p>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div className="rounded-2xl bg-slate-50 border border-slate-200 p-6 space-y-4">
                   <div className="flex gap-4 items-start">

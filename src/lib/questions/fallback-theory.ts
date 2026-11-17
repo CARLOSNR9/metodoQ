@@ -18,7 +18,7 @@ export function buildFallbackTheoryContent(input: {
   const explanation = input.explanation?.trim();
   if (!explanation) return undefined;
 
-  const sections = [`EXPLICACIÓN DEL PROFE BY DR Q.\n\n${explanation}`];
+  const sections = [formatExplanationForTheory(explanation)];
 
   const keyPoints = (input.keyPoints ?? []).map((point) => point.trim()).filter(Boolean);
   if (keyPoints.length > 0) {
@@ -37,4 +37,23 @@ export function buildFallbackTheoryContent(input: {
   }
 
   return sections.join("\n\n");
+}
+
+const PROFESSOR_MARKER = /\*\*\s*EXPLICACI[OÓ]N DEL PROFE BY DR\.? Q\s*:?\s*\*\*/i;
+
+/**
+ * Convierte la explicación (con marcas `**…**` de los bancos) en bloques que
+ * la píldora sabe pintar: «Trampa del examen» como advertencia y la explicación
+ * del profe como su propio bloque, sin asteriscos sueltos ni encabezados vacíos.
+ */
+export function formatExplanationForTheory(explanation: string): string {
+  const hasProfessorSection = PROFESSOR_MARKER.test(explanation);
+  const body = explanation
+    .replace(PROFESSOR_MARKER, "EXPLICACIÓN DEL PROFE BY DR Q.")
+    .replace(/\*\*\s*Trampa del examen\s*:\s*\*\*/gi, "Trampa del examen:")
+    .replace(/\*\*(.+?)\*\*/g, "$1");
+
+  // Sin sección propia del profe, toda la explicación va bajo ese encabezado
+  // (en el mismo bloque, para que el recuadro no quede vacío).
+  return hasProfessorSection ? body : `EXPLICACIÓN DEL PROFE BY DR Q.\n${body}`;
 }

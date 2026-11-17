@@ -16,7 +16,7 @@ describe("buildFallbackTheoryContent", () => {
 
     expect(content).toBe(
       [
-        "EXPLICACIÓN DEL PROFE BY DR Q.\n\nLa respuesta es B porque...",
+        "EXPLICACIÓN DEL PROFE BY DR Q.\nLa respuesta es B porque...",
         "### Puntos clave\n• Punto uno",
         "### ¿Por qué fallan las otras opciones?\n• Opción A: A no aplica.",
       ].join("\n\n"),
@@ -25,5 +25,25 @@ describe("buildFallbackTheoryContent", () => {
 
   it("no arma nada sin explicación", () => {
     expect(buildFallbackTheoryContent({ explanation: "  ", keyPoints: ["x"] })).toBeUndefined();
+  });
+});
+
+import { formatExplanationForTheory } from "@/lib/questions/fallback-theory";
+
+describe("formatExplanationForTheory", () => {
+  it("convierte las marcas del banco en bloques sin asteriscos", () => {
+    const text = formatExplanationForTheory(
+      "Enfermedad: X.\n\n**Trampa del examen:** creer Y.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDoc, haz Z.",
+    );
+    expect(text).not.toContain("**");
+    expect(text).toContain("Trampa del examen: creer Y.");
+    expect(text).toContain("EXPLICACIÓN DEL PROFE BY DR Q.\nDoc, haz Z.");
+    expect(text.startsWith("Enfermedad: X.")).toBe(true);
+  });
+
+  it("sin sección del profe, la explicación va dentro de su encabezado (no queda vacío)", () => {
+    expect(formatExplanationForTheory("Texto **clave** simple.")).toBe(
+      "EXPLICACIÓN DEL PROFE BY DR Q.\nTexto clave simple.",
+    );
   });
 });

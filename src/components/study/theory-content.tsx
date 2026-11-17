@@ -26,7 +26,7 @@ function isBlockStarter(line: string): boolean {
   if (/^explicaci[oó]n del profe/i.test(trimmed)) return true;
   if (trimmed.startsWith("¿")) return true;
   if (/^clave:/i.test(trimmed)) return true;
-  if (/^trampa:/i.test(trimmed)) return true;
+  if (/^trampa( del examen)?:/i.test(trimmed)) return true;
   if (/^contraindic/i.test(trimmed)) return true;
   if (/^\d+\.\s/.test(trimmed)) return true;
   if (trimmed.length < 80 && trimmed.endsWith(":") && !trimmed.startsWith("-")) {
@@ -115,7 +115,7 @@ function classifyBlock(block: string): BlockType {
   if (/^explicaci[oó]n del profe/i.test(firstLine)) return "professor-header";
   if (firstLine.startsWith("¿")) return "question";
   if (/^clave:/i.test(trimmed)) return "key-insight";
-  if (/^trampa:|^contraindic/i.test(firstLine)) return "warning";
+  if (/^trampa( del examen)?:|^contraindic/i.test(firstLine)) return "warning";
 
   const lines = trimmed.split("\n");
   const isBulletBlock = lines.every(

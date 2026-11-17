@@ -14,18 +14,18 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
       "Un hombre de 30 años recibe en consulta el diagnóstico de infección por VIH. Está casado y tiene relaciones sin protección con su esposa. A pesar de varias sesiones de asesoría, se niega a informarle y a usar preservativo, y le pide al médico que no le diga nada. Según la Ley 23 de 1981, ¿qué puede hacer el médico?",
     options: [
       [
-        "Nada: el secreto profesional es absoluto y no admite excepciones.",
+        "Nada: el secreto profesional es absoluto y no admite ninguna excepción.",
         "El artículo 38 de la Ley 23 establece excepciones al secreto profesional; no es absoluto.",
       ],
       [
-        "Informar al empleador del paciente para que tome medidas.",
+        "Informar al empleador del paciente para que tome medidas preventivas.",
         "El empleador no está entre las personas a quienes se puede revelar el secreto; hacerlo violaría la reserva.",
       ],
       [
-        "Revelar la información a la esposa, que está en riesgo, porque la ley lo permite cuando una enfermedad grave infectocontagiosa pone en peligro la vida del cónyuge.",
+        "Informar a la esposa: la ley lo permite si su vida corre peligro.",
       ],
       [
-        "Denunciarlo ante la Policía por el delito de propagación de epidemia antes de cualquier otra acción.",
+        "Denunciarlo ante la Policía por propagación de epidemia de inmediato.",
         "La conducta ética indicada es la asesoría y, si persiste el riesgo, la excepción al secreto a favor del cónyuge; no es la primera acción.",
       ],
     ],
@@ -82,19 +82,19 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
       "Llega a urgencias del Hospital Universitario del Valle un hombre de 25 años, inconsciente, con herida por arma cortopunzante en el tórax, en choque hemorrágico. Nadie lo acompaña y no tiene documentos. El cirujano considera que necesita toracotomía inmediata. ¿Qué indica la normatividad colombiana sobre el consentimiento?",
     options: [
       [
-        "No se puede operar hasta que un familiar o un juez firme el consentimiento.",
+        "No operar hasta que un familiar o un juez firme el consentimiento.",
         "Esperar el consentimiento en una urgencia vital con un paciente incapaz de darlo pone en riesgo su vida; la ley exonera al médico en este caso.",
       ],
       [
-        "Se debe esperar a que el paciente recupere la conciencia para que firme.",
+        "Esperar a que recupere la conciencia para que él mismo firme.",
         "En choque hemorrágico, esperar es dejarlo morir.",
       ],
       [
-        "Se puede operar sin consentimiento solo si lo autoriza la EPS.",
+        "Operar sin consentimiento solo si la EPS lo autoriza por escrito.",
         "La EPS no da ni sustituye el consentimiento; además, la atención de urgencias no requiere autorización administrativa previa.",
       ],
       [
-        "Se procede con la cirugía: en una urgencia, con un paciente incapaz de consentir y sin allegados, el médico queda exonerado de obtener el consentimiento; se documenta en la historia clínica.",
+        "Operar: es una urgencia y nadie puede consentir; se documenta en la historia.",
       ],
     ],
     correct: "D",
@@ -116,18 +116,18 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
       "Una mujer de 40 años llega a urgencias de una clínica de Cali con dolor abdominal intenso y signos de irritación peritoneal. El personal administrativo informa que su EPS no tiene contrato con la clínica y sugiere remitirla sin atenderla hasta obtener una autorización. Según la Ley 1751 de 2015, ¿qué es correcto?",
     options: [
       [
-        "La atención de urgencias no requiere autorización administrativa previa y no se le puede negar.",
+        "Debe atenderse: la urgencia no requiere autorización previa de la EPS.",
       ],
       [
-        "Debe esperar la autorización de la EPS, porque sin contrato la clínica no está obligada a atenderla.",
+        "Debe esperar la autorización de la EPS, porque no hay contrato con ella.",
         "La Ley 1751 prohíbe negar la atención de urgencias y exigir autorizaciones previas para prestarla.",
       ],
       [
-        "Solo se atiende si la paciente paga un depósito previo.",
+        "Solo se atiende si la paciente paga un depósito previo en caja.",
         "Exigir pagos previos o depósitos para atender una urgencia está prohibido.",
       ],
       [
-        "Puede atenderse solo si está afiliada al régimen contributivo.",
+        "Solo se atiende si está afiliada al régimen contributivo.",
         "El derecho a la atención de urgencias no depende del régimen de afiliación.",
       ],
     ],
@@ -150,19 +150,19 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
       "Un diseñador gráfico de 29 años trabaja como independiente en Cali, con ingresos mensuales de 3 salarios mínimos. Pregunta en qué régimen del Sistema General de Seguridad Social en Salud debe estar afiliado. Según la Ley 100 de 1993, ¿cuál es la respuesta correcta?",
     options: [
       [
-        "Régimen subsidiado, porque no tiene contrato laboral.",
+        "Régimen subsidiado, porque no tiene un contrato laboral formal.",
         "El subsidiado es para la población sin capacidad de pago (focalizada con el SISBÉN); tener ingresos suficientes obliga a cotizar.",
       ],
       [
-        "Régimen especial, como los docentes del magisterio y las fuerzas militares.",
+        "Régimen especial, como el magisterio y las Fuerzas Militares.",
         "Los regímenes especiales y de excepción son para grupos específicos (Fuerzas Militares, Policía, magisterio, Ecopetrol, universidades públicas), no para independientes.",
       ],
       [
-        "No está obligado a afiliarse por ser independiente.",
+        "Ninguno: los independientes no están obligados a afiliarse.",
         "La afiliación al sistema es obligatoria para todos los residentes en Colombia.",
       ],
       [
-        "Régimen contributivo, como trabajador independiente con capacidad de pago.",
+        "Régimen contributivo, como independiente con capacidad de pago.",
       ],
     ],
     correct: "D",
@@ -184,18 +184,18 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
       "Una mujer de 34 años, residente en Cali, asiste a la consulta de la Ruta de Promoción y Mantenimiento de la Salud. Nunca se ha hecho un tamizaje para cáncer de cuello uterino. Según la Resolución 3280 de 2018, ¿cuál es la prueba de tamizaje indicada y con qué periodicidad?",
     options: [
       [
-        "Citología cervicovaginal anual de por vida.",
+        "Citología cervicovaginal anual desde ahora y de por vida.",
         "La citología anual no es el esquema de la Resolución 3280; para su edad la prueba indicada es otra.",
       ],
       [
-        "Prueba de ADN del VPH cada 5 años si el resultado es negativo.",
+        "Prueba de ADN-VPH, repetida cada 5 años si es negativa.",
       ],
       [
-        "Colposcopia con biopsia como tamizaje inicial.",
+        "Colposcopia con biopsia dirigida como tamizaje inicial.",
         "La colposcopia es un estudio diagnóstico para pruebas de tamizaje positivas, no una prueba de tamizaje.",
       ],
       [
-        "No requiere tamizaje hasta los 40 años.",
+        "Ninguno: el tamizaje empieza a los 40 años en Colombia.",
         "El tamizaje inicia desde los 25 años según la norma.",
       ],
     ],
@@ -222,14 +222,14 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
         "La denuncia solo se relaciona con la causal de violencia sexual, y aun en ese caso no se exige más allá de lo previsto; además, antes de la semana 24 no se requiere ninguna causal.",
       ],
       [
-        "Tiene derecho a la interrupción sin necesidad de invocar causal, porque está antes de la semana 24 de gestación.",
+        "Sí procede sin causal, porque está antes de la semana 24.",
       ],
       [
-        "No procede porque supera las 12 semanas.",
+        "No procede, porque ya superó las 12 semanas de gestación.",
         "El límite de 12 semanas no es el de la jurisprudencia colombiana vigente.",
       ],
       [
-        "Requiere la autorización de un juez de familia.",
+        "Solo procede con autorización previa de un juez de familia.",
         "No se requiere autorización judicial; exigirla es una barrera de acceso.",
       ],
     ],
@@ -252,18 +252,18 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
       "Un hombre de 54 años con lesión medular completa C4 por trauma hace 3 años, sin enfermedad terminal, plenamente capaz, expresa de forma reiterada, libre e informada su deseo de acceder a la eutanasia por un sufrimiento físico y psíquico intenso que considera incompatible con su idea de vida digna. ¿Qué establece la jurisprudencia constitucional colombiana actual?",
     options: [
       [
-        "La eutanasia solo es posible en pacientes con enfermedad terminal y pronóstico de vida menor de 6 meses.",
+        "No: solo se permite con enfermedad terminal y menos de 6 meses de vida.",
         "Ese era el requisito antes de 2021; la Corte eliminó la exigencia de enfermedad terminal.",
       ],
       [
-        "La eutanasia es un delito en Colombia en cualquier circunstancia.",
+        "No: la eutanasia es un delito en Colombia en cualquier caso.",
         "Desde la Sentencia C-239 de 1997 la Corte reconoció la muerte médicamente asistida en ciertas condiciones; no es delito si se cumplen los requisitos.",
       ],
       [
-        "Puede acceder a la eutanasia, porque desde la Sentencia C-233 de 2021 no se exige enfermedad terminal si hay intenso sufrimiento por lesión corporal o enfermedad grave e incurable.",
+        "Sí: desde la C-233 de 2021 no se exige enfermedad terminal.",
       ],
       [
-        "Solo puede acceder si un familiar lo solicita por él.",
+        "Solo si un familiar presenta la solicitud en su nombre.",
         "El consentimiento debe ser del paciente (o mediante un documento de voluntad anticipada); no lo sustituye la familia si el paciente es capaz.",
       ],
     ],
@@ -286,18 +286,18 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
       "La junta directiva de una clínica privada decide que 'como institución' objeta conciencia y no realizará ningún procedimiento de interrupción voluntaria del embarazo. Una paciente que cumple los requisitos legales solicita el procedimiento allí. ¿Qué es correcto según la jurisprudencia colombiana?",
     options: [
       [
-        "La objeción de conciencia es individual: las instituciones no pueden objetar y deben garantizar el servicio o la remisión oportuna.",
+        "La objeción es individual: la clínica debe garantizar el servicio o remitir.",
       ],
       [
-        "La clínica puede negarse y no tiene ninguna obligación adicional con la paciente.",
+        "La clínica puede negarse y no tiene ninguna obligación con la paciente.",
         "Ni siquiera el médico objetor queda libre de obligaciones: debe remitir a quien sí pueda practicar el procedimiento.",
       ],
       [
-        "La objeción institucional es válida si está firmada por todos los médicos.",
+        "La objeción institucional es válida si la firman todos los médicos.",
         "La objeción de conciencia la ejercen personas naturales, de forma individual, escrita y motivada; no es colectiva ni institucional.",
       ],
       [
-        "La enfermera y el personal administrativo también pueden objetar conciencia sobre la entrega de información.",
+        "Todo el personal, incluido el administrativo, puede objetar conciencia.",
         "La objeción solo cubre la participación directa en el procedimiento, no actividades administrativas ni la información.",
       ],
     ],
@@ -320,18 +320,18 @@ export const UNIVALLE_NORMATIVIDAD_01_10 = [
       "Una joven de 19 años llega a urgencias 20 horas después de haber sido víctima de una agresión sexual por un desconocido. Está asustada y dice que todavía no quiere poner una denuncia. ¿Cuál es la conducta correcta según el protocolo colombiano (Resolución 459 de 2012)?",
     options: [
       [
-        "Remitirla a la Fiscalía y atenderla solo cuando presente la denuncia.",
+        "Remitirla a la Fiscalía y atenderla cuando presente la denuncia.",
         "La atención en salud no puede condicionarse a la denuncia; es una urgencia médica.",
       ],
       [
-        "Atenderla como urgencia médica: profilaxis para VIH e ITS, anticoncepción de emergencia, atención en salud mental y activación de la ruta de protección, sin exigir denuncia previa.",
+        "Atenderla como urgencia (profilaxis VIH, anticoncepción) sin exigir denuncia.",
       ],
       [
-        "Darle cita prioritaria por consulta externa para la siguiente semana.",
+        "Darle una cita prioritaria por consulta externa para la próxima semana.",
         "La profilaxis antirretroviral es eficaz si se inicia antes de 72 horas; diferir la atención le quita esa oportunidad.",
       ],
       [
-        "Hacer solo el examen forense, porque la atención médica corresponde a Medicina Legal.",
+        "Hacer solo el examen forense, porque la atención es de Medicina Legal.",
         "El sector salud debe dar atención integral; la recolección de evidencias se hace con consentimiento y no reemplaza la atención médica.",
       ],
     ],

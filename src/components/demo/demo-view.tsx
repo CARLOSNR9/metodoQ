@@ -1305,6 +1305,12 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
     }, isDailyPill ? 5000 : isConvocatoria ? 0 : 2000);
   };
 
+  // Al cambiar de pregunta, volver arriba para que el enunciado se vea completo.
+  useEffect(() => {
+    if (!hasStarted) return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [currentQuestionIndex, hasStarted]);
+
   const handleNext = () => {
     if (hasNextQuestion) {
       setCurrentQuestionIndex((prev) => prev + 1);
@@ -1689,7 +1695,9 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                                 ? "Refuerzo de fallas"
                                 : isSimulacro
                                   ? "Simulacro en curso"
-                                  : "Entrenamiento adaptativo"}
+                                  : isAct1
+                                    ? "Diagnóstico inicial"
+                                    : "Entrenamiento adaptativo"}
                        </p>
                        <h2 className="text-xl font-bold text-slate-900">Pregunta {currentQuestionIndex + 1} de {totalQuestions}</h2>
                     </div>
@@ -1799,7 +1807,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
                        </div>
                     </div>
                  ) : hasAnsweredCurrentQuestion && !isResultsStep && (
-                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col items-center gap-6 pt-4">
+                    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="sticky bottom-4 z-20 flex flex-col items-center gap-6 pt-4">
                        {showProgressFeedback && liveFeedbackMessage && (
                           <div className="flex items-center gap-2 rounded-full bg-mq-accent/10 px-6 py-2 border border-mq-accent/20">
                              <Sparkles size={14} className="text-mq-accent" />
