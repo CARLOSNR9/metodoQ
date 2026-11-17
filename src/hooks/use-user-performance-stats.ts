@@ -32,10 +32,12 @@ export function useUserPerformanceStats(userId: string | undefined) {
         const latest = results[0];
         if (latest) {
           setLastScore(latest.scorePercentage);
+          // Etiquetas descriptivas: no hay datos de otros aspirantes para
+          // afirmar un percentil ("Top 10%"), así que no se inventa.
           if (latest.scorePercentage >= 85) {
-            setPercentileLabel("Top 10%");
+            setPercentileLabel("Nivel alto");
           } else if (latest.scorePercentage >= 70) {
-            setPercentileLabel("Top 25%");
+            setPercentileLabel("Buen nivel");
           } else if (latest.scorePercentage >= 55) {
             setPercentileLabel("En progreso");
           } else {

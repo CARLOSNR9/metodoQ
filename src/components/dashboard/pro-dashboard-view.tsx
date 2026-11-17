@@ -273,8 +273,8 @@ export function ProDashboardView({
                 </div>
                 <h2 className="text-2xl font-black text-slate-900">
                   {goalUniversityLabel
-                    ? `Dónde estás vs. el corte de ${goalUniversityLabel}`
-                    : "Dónde estás vs. el corte"}
+                    ? `Dónde estás vs. tu meta para ${goalUniversityLabel}`
+                    : "Dónde estás vs. tu meta"}
                 </h2>
                 <p className="text-sm text-slate-500">
                   Diagnóstico, retos diarios y entrenamiento. Los simulacros no se incluyen.

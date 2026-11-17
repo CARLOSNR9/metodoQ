@@ -2,17 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  Target, 
-  ArrowRight, 
-  ShieldAlert, 
-  Zap, 
-  ChevronRight, 
-  AlertCircle,
-  Users,
-  Trophy,
-  Loader2
-} from "lucide-react";
+import { Target, ArrowRight, Zap, ChevronRight, CheckCircle2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import {
   resolveSpecialtyFromProfile,
@@ -39,7 +29,7 @@ interface Act1DiagnosticModalProps {
   user: any;
 }
 
-type Step = "config" | "anxiety" | "loading" | "ready";
+type Step = "config" | "intro";
 
 const specialties = [
   { name: "Pediatría", regularSpots: 11, totalSpots: 12 },
@@ -88,7 +78,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
     
   const skipConfigStep = hasCalibratedLearningTrack(profileUniversity, profileSpecialty);
 
-  const [step, setStep] = useState<Step>(skipConfigStep ? "anxiety" : "config");
+  const [step, setStep] = useState<Step>(skipConfigStep ? "intro" : "config");
   const [selectedUniversity, setSelectedUniversity] = useState(() =>
     resolveUniversityFromProfile(profileUniversity),
   );
@@ -110,44 +100,9 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
       
     setSelectedUniversity(university);
     setSelectedSpecialty(findSpecialtyByName(specialtyName));
-    setStep(hasCalibratedLearningTrack(profileUniversity, profileSpecialty) ? "anxiety" : "config");
+    setStep(hasCalibratedLearningTrack(profileUniversity, profileSpecialty) ? "intro" : "config");
   }, [isOpen, profileUniversity, profileSpecialty]);
 
-  const universityShortLabel = isUdeaUniversity(selectedUniversity)
-    ? "UdeA"
-    : isUnalUniversity(selectedUniversity)
-      ? "UNAL"
-      : isUccPastoUniversity(selectedUniversity)
-        ? "UCC Pasto"
-        : isUmngUniversity(selectedUniversity)
-          ? "UMNG"
-          : isUnivalleUniversity(selectedUniversity)
-            ? "Univalle"
-            : "tu universidad";
-
-  const loadingSteps = isUccPastoUniversity(selectedUniversity)
-    ? [
-        "Cargando viñetas estilo MIR — UCC Pasto",
-        "Ponderando epidemiología (30%) y Res. 3280",
-        "Calibrando tu hoja de ruta Medicina Interna",
-      ]
-    : isUnivalleUniversity(selectedUniversity)
-      ? [
-          "Cargando examen único de medicina general — Univalle",
-          "Ponderando salud pública, normatividad y patología del Pacífico",
-          `Conectando tu ruta ${selectedSpecialty.name} en Cali`,
-        ]
-    : isUmngUniversity(selectedUniversity)
-      ? [
-          "Calibrando módulo de Ciencias Básicas y Trauma",
-          "Inyectando quinta opción de respuesta penalizante",
-          "Ajustando presión temporal extrema (1.2 min/preg)",
-        ]
-      : [
-          `Cargando casos clínicos ${universityShortLabel}`,
-          `Calibrando batería ${selectedSpecialty.name}`,
-          "Ajustando retroalimentación por distractores",
-        ];
 
   const readyQuote = isUdeaUniversity(selectedUniversity)
     ? "Doc, en la UdeA el examen unificado exige integración clínica y dominio de guías MSPS/INS. Estas 10 preguntas definirán tu hoja de ruta."
@@ -161,58 +116,10 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
           ? "Doc, en el HMC y la UMNG, el examen es de resistencia. La excelencia clínica debe ir de la mano con la resiliencia psicológica. Prepárate para el rigor."
           : "Doc, este diagnóstico de 10 preguntas calibrará tu preparación para la especialidad elegida.";
 
-  const renderCriticalData = () => {
-    if (isUdeaUniversity(selectedUniversity)) {
-      return (
-        <>
-          "En {selectedSpecialty.name}, la brecha entre el admitido y el rechazado es de apenas <span className="text-mq-accent font-bold">1.2 puntos estandarizados</span>. El 40% del examen será específico de tu área y el Listening de Inglés tiene límite de 2 reproducciones."
-        </>
-      );
-    }
-    if (isUnalUniversity(selectedUniversity)) {
-      return (
-        <>
-          "Para {selectedSpecialty.name} en la UNAL, el tiempo es tu mayor enemigo. La prueba exige responder casos clínicos complejos en <span className="text-mq-accent font-bold">menos de 1 minuto por pregunta</span>, donde la indecisión te deja fuera."
-        </>
-      );
-    }
-    if (isUccPastoUniversity(selectedUniversity)) {
-      return (
-        <>
-          "En la UCC, el examen no incluye 'Listening' eliminatorio, pero para {selectedSpecialty.name} te reta con un <span className="text-mq-accent font-bold">fuerte componente de Epidemiología y Leyes</span>. La entrevista y prueba psicotécnica son los verdaderos filtros decisivos."
-        </>
-      );
-    }
-    if (isUnivalleUniversity(selectedUniversity)) {
-      return (
-        <>
-          &ldquo;Para {selectedSpecialty.name} en Univalle hay muy pocos cupos y el examen de conocimientos pesa cerca del <span className="text-mq-accent font-bold">95% del puntaje</span>. Se gana dominando la medicina general completa, no solo tu especialidad.&rdquo;
-        </>
-      );
-    }
-    if (isUmngUniversity(selectedUniversity)) {
-      return (
-        <>
-          "En la UMNG para {selectedSpecialty.name}, el filtro es táctico. El examen incluye una <span className="text-mq-accent font-bold">quinta opción de respuesta penalizante</span> que castiga severamente intentar adivinar."
-        </>
-      );
-    }
-    return (
-      <>
-        "Para {selectedSpecialty.name}, la competencia es extrema. La diferencia entre ser admitido o no suele definirse por <span className="text-mq-accent font-bold">menos de 2 puntos</span> en la prueba de conocimientos específicos."
-      </>
-    );
-  };
-
   if (!isOpen) return null;
 
   const handleNext = () => {
-    if (step === "config") {
-      setStep("anxiety");
-    } else if (step === "anxiety") {
-      setStep("loading");
-      setTimeout(() => setStep("ready"), 3000);
-    }
+    if (step === "config") setStep("intro");
   };
 
   const handleStart = () => {
@@ -247,16 +154,16 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                   <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/20 bg-mq-accent/10 px-4 py-1">
                     <Zap size={14} className="text-mq-accent animate-pulse" />
                     <span className="text-[10px] font-bold uppercase tracking-widest text-mq-accent">
-                      Configuración del Motor Predictivo
+                      Tu meta
                     </span>
                   </div>
                   <h2 className="text-3xl font-black text-slate-900 leading-tight">
-                    Calibra tu <span className="text-mq-accent italic">Escenario de Realidad</span>
+                    ¿A qué universidad y especialidad <span className="text-mq-accent">te presentas</span>?
                   </h2>
                   <p className="text-slate-500 text-sm leading-relaxed">
                     {skipConfigStep
                       ? "Usaremos la universidad y especialidad de tu registro. Revisa que sean correctas antes de continuar."
-                      : "Para calcular tus probabilidades reales de ingreso, necesitamos saber contra qué estándar vas a competir."}
+                      : "Así adaptamos las preguntas y tu ruta de estudio al examen al que te presentas."}
                   </p>
                 </div>
 
@@ -311,171 +218,84 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
                   onClick={handleNext}
                   className="w-full h-16 flex items-center justify-center gap-3 rounded-2xl bg-mq-accent font-black text-mq-accent-foreground transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_40px_-10px_rgba(0,209,255,0.5)]"
                 >
-                  Continuar a Calibración <ArrowRight size={20} />
+                  Continuar <ArrowRight size={20} />
                 </button>
               </motion.div>
             )}
 
-            {step === "anxiety" && (
+            {step === "intro" && (
               <motion.div
-                key="anxiety"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.1 }}
-                className="space-y-8"
+                key="intro"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                className="space-y-6"
               >
-                <div className="text-center space-y-4">
-                  <div className="mx-auto w-16 h-16 rounded-full bg-mq-accent/10 border border-mq-accent/20 flex items-center justify-center">
-                    <ShieldAlert size={32} className="text-mq-accent animate-pulse" />
+                <div className="space-y-3">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-mq-accent/20 bg-mq-accent/10 px-4 py-1">
+                    <Target size={14} className="text-mq-accent" />
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-mq-accent">
+                      Diagnóstico inicial
+                    </span>
                   </div>
-                  <h2 className="text-2xl font-black text-slate-900">Choque de Realidad Estandarizado</h2>
-                  <p className="text-slate-500 text-sm">
-                    Escenario proyectado para 2027 en la{" "}
-                    <span className="text-slate-900 font-bold">{selectedUniversity}</span>
-                    {skipConfigStep ? (
-                      <>
-                        {" "}
-                        · <span className="text-mq-accent font-bold">{selectedSpecialty.name}</span>
-                      </>
-                    ) : null}
+                  <h2 className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl">
+                    10 preguntas para conocer tu punto de partida
+                  </h2>
+                  <p className="text-sm text-slate-500">
+                    <span className="font-bold text-slate-900">{selectedUniversity}</span>
+                    {" · "}
+                    <span className="font-bold text-mq-accent">{selectedSpecialty.name}</span>
                   </p>
                   {skipConfigStep ? (
                     <p className="text-[11px] text-slate-500/80">
-                      Tomado de tu perfil. Si no es correcta, avísale a tu asesor de Método Q.
+                      Tomado de tu perfil. Si no es correcto, avísale a tu asesor de Método Q.
                     </p>
                   ) : null}
                 </div>
 
                 {isUnivalleUniversity(selectedUniversity) ? (
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
-                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Examen</p>
+                    <div className="space-y-1 rounded-[2rem] border border-slate-100 bg-slate-50 p-5 text-center">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Examen</p>
                       <p className="text-2xl font-black text-mq-accent">Único</p>
                       <p className="text-[10px] text-slate-500">Medicina general, igual para todas las especialidades</p>
                     </div>
-                    <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
-                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Peso del examen</p>
+                    <div className="space-y-1 rounded-[2rem] border border-slate-100 bg-slate-50 p-5 text-center">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Peso del examen</p>
                       <p className="text-2xl font-black text-mq-accent">≈95%</p>
                       <p className="text-[10px] text-slate-500">Más inglés (≈5%). Cupos: según la convocatoria oficial</p>
                     </div>
                   </div>
-                ) : (
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
-                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Cupos Regulares</p>
-                      <p className="text-4xl font-black text-mq-accent">{selectedSpecialty.regularSpots}</p>
-                      <p className="text-[10px] text-slate-500">Referencia aproximada por convocatoria</p>
-                    </div>
-                    <div className="bg-slate-50 border border-slate-100 p-6 rounded-[2rem] text-center space-y-1">
-                      <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Dificultad Est.</p>
-                      <p className="text-4xl font-black text-mq-accent">9.8/10</p>
-                      <p className="text-[10px] text-slate-500">Nivel de Exclusión</p>
-                    </div>
-                  </div>
-                )}
+                ) : null}
 
-                <div className="rounded-2xl bg-slate-50 border border-slate-200 p-6 space-y-4">
-                  <div className="flex gap-4 items-start">
-                    <AlertCircle className="text-mq-accent shrink-0 mt-1" size={20} />
-                    <div className="space-y-2">
-                      <p className="text-sm font-bold text-slate-900">Dato Crítico:</p>
-                      <p className="text-sm text-slate-700 leading-relaxed italic">
-                        {renderCriticalData()}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <ul className="space-y-2 rounded-2xl border border-slate-200 bg-slate-50 p-5 text-sm text-slate-700">
+                  <li className="flex gap-2">
+                    <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-mq-accent" />
+                    {isUnivalleUniversity(selectedUniversity)
+                      ? "10 preguntas de medicina general, sin límite de tiempo."
+                      : "10 preguntas tipo examen, sin límite de tiempo."}
+                  </li>
+                  <li className="flex gap-2">
+                    <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-mq-accent" />
+                    Después de cada respuesta verás la explicación y la trampa del examen.
+                  </li>
+                  <li className="flex gap-2">
+                    <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-mq-accent" />
+                    El resultado orienta tu plan de estudio; no predice tu admisión.
+                  </li>
+                </ul>
 
-                <div className="space-y-4">
-                   <div className="flex items-center gap-3 px-2">
-                      <div className="h-1 w-full bg-slate-50 rounded-full overflow-hidden">
-                        <motion.div 
-                          initial={{ width: 0 }}
-                          animate={{ width: "100%" }}
-                          transition={{ duration: 2 }}
-                          className="h-full bg-mq-accent" 
-                        />
-                      </div>
-                      <span className="text-[10px] font-black text-mq-accent uppercase whitespace-nowrap">Calibrando Motor...</span>
-                   </div>
-                   
-                   <button
-                    onClick={handleNext}
-                    className="w-full h-16 flex items-center justify-center gap-3 rounded-2xl bg-mq-accent font-black text-mq-accent-foreground transition-all hover:scale-[1.02] active:scale-95 shadow-[0_0_40px_-10px_rgba(0,209,255,0.5)]"
-                  >
-                    Aceptar el Reto e Iniciar <ArrowRight size={20} />
-                  </button>
-                </div>
-              </motion.div>
-            )}
-
-            {step === "loading" && (
-              <motion.div
-                key="loading"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="py-12 flex flex-col items-center justify-center space-y-8"
-              >
-                <div className="relative">
-                  <Loader2 size={80} className="text-mq-accent animate-spin opacity-20" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Target size={40} className="text-mq-accent animate-pulse" />
-                  </div>
-                </div>
-                <div className="text-center space-y-2">
-                  <h3 className="text-2xl font-black text-slate-900">Inyectando Variables...</h3>
-                  <p className="text-slate-500 text-sm max-w-[280px] mx-auto">
-                    Cargando banco de preguntas específico para <span className="text-slate-900 font-bold">{selectedSpecialty.name}</span>.
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 w-full gap-2">
-                  {loadingSteps.map((text, i) => (
-                    <motion.div 
-                      key={i}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.5 }}
-                      className="flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/5"
-                    >
-                      <div className="h-1.5 w-1.5 rounded-full bg-mq-accent animate-ping" />
-                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">{text}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-
-            {step === "ready" && (
-              <motion.div
-                key="ready"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="space-y-8 py-4"
-              >
-                <div className="text-center space-y-4">
-                  <div className="mx-auto w-24 h-24 rounded-full bg-mq-accent/20 border-2 border-mq-accent flex items-center justify-center shadow-[0_0_50px_-10px_rgba(0,209,255,0.6)]">
-                    <Trophy size={48} className="text-mq-accent" />
-                  </div>
-                  <div className="space-y-2">
-                    <h2 className="text-3xl font-black text-slate-900 italic">¡ESTÁS LISTO!</h2>
-                    <p className="text-slate-500">El motor ha sido calibrado con éxito.</p>
-                  </div>
-                </div>
-
-                <div className="bg-mq-accent/10 border border-mq-accent/20 rounded-3xl p-8 text-center space-y-4">
-                  <p className="text-sm leading-relaxed text-slate-900 font-medium">
-                    {`"${readyQuote}"`}
-                  </p>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-mq-accent font-black">- DR. Q</p>
+                <div className="space-y-2 rounded-3xl border border-mq-accent/20 bg-mq-accent/10 p-6 text-center">
+                  <p className="text-sm font-medium leading-relaxed text-slate-900">{`"${readyQuote}"`}</p>
+                  <p className="text-[10px] font-black uppercase tracking-[0.3em] text-mq-accent">— Dr. Q</p>
                 </div>
 
                 <button
                   onClick={handleStart}
                   disabled={isTransitioning}
-                  className="w-full h-20 flex flex-col items-center justify-center rounded-[2rem] bg-mq-accent font-black text-mq-accent-foreground transition-all hover:scale-[1.02] active:scale-95 shadow-[0_20px_40px_-10px_rgba(0,209,255,0.4)] disabled:opacity-50"
+                  className="flex h-16 w-full items-center justify-center gap-3 rounded-2xl bg-mq-accent font-black text-mq-accent-foreground shadow-[0_20px_40px_-10px_rgba(0,209,255,0.4)] transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-50"
                 >
-                  <span className="text-xl">INICIAR DIAGNÓSTICO</span>
-                  <span className="text-[10px] uppercase tracking-widest opacity-60">Modo de Alta Presión Activado</span>
+                  Empezar diagnóstico <ArrowRight size={20} />
                 </button>
               </motion.div>
             )}
@@ -504,7 +324,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
               className="h-20 w-20 border-4 border-t-mq-accent border-r-mq-accent/30 border-b-mq-accent/10 border-l-mq-accent/5 rounded-full" 
             />
-            <p className="text-mq-accent font-black tracking-[0.5em] animate-pulse">MODO KIOSKO ACTIVADO</p>
+            <p className="text-mq-accent font-black tracking-[0.2em] animate-pulse">Preparando tus preguntas…</p>
           </motion.div>
         )}
       </AnimatePresence>
