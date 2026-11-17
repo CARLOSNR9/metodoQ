@@ -177,7 +177,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
 
       <section className="flex min-w-0 flex-1 flex-col">
         <header
-          className={`sticky top-0 z-10 flex h-16 items-center justify-between px-4 sm:px-8 ${
+          className={`sticky top-0 z-30 flex h-16 items-center justify-between px-4 sm:px-8 ${
             isMirRoute
               ? "border-b border-white/10 bg-[#0A1F44]/95 backdrop-blur-xl"
               : "mq-glass"

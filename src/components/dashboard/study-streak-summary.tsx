@@ -188,7 +188,9 @@ export function StudyStreakSummary({
                   className="h-11 w-11 animate-pulse rounded-2xl bg-slate-100"
                 />
               ))
-            : days.map((day) => <DayPill key={day.dateKey} day={day} />)}
+            : days
+                .filter((day) => day.status !== "before_plan")
+                .map((day) => <DayPill key={day.dateKey} day={day} />)}
         </div>
       </div>
 
