@@ -15,7 +15,11 @@ import {
 } from "@/lib/results";
 import { hasSessionReviewData, resolveSessionQuestions } from "@/lib/session-review";
 import type { TrainingQuestion } from "@/lib/questions/types";
-import { getConvocatoriaEdition, getConvocatoriaTrack } from "@/lib/training/convocatorias";
+import {
+  getConvocatoriaDisplayTitle,
+  getConvocatoriaEdition,
+  getConvocatoriaTrack,
+} from "@/lib/training/convocatorias";
 
 type SessionReviewPageProps = {
   resultId: string;
@@ -102,7 +106,7 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
         </Link>
         <h1 className="mt-4 text-2xl font-semibold text-slate-900">
           {isConvocatoria
-            ? `Retroalimentación · ${convocatoriaEdition?.label ?? "Convocatoria UCC"}`
+            ? `Retroalimentación · ${getConvocatoriaDisplayTitle(convocatoriaEdition?.code)}`
             : "Retroalimentación del intento"}
         </h1>
         {result ? (

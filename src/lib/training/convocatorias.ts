@@ -162,6 +162,21 @@ export function getConvocatoriaTrack(code: string | null | undefined): Convocato
   return "UCC";
 }
 
+/**
+ * Título visible de una edición (pantalla de resultados y retroalimentación):
+ * «Examen real UdeA», «Simulacro #2 · UdeA», «Convocatoria UCC · Edición #8».
+ */
+export function getConvocatoriaDisplayTitle(code: string | null | undefined): string {
+  const track = getConvocatoriaTrack(code);
+  const trackLabel = getConvocatoriaTrackLabel(code);
+  const edition = code ? getConvocatoriaEdition(code) : null;
+  if (track === "UDEA" || track === "UNIVALLE") {
+    if (!edition) return `Simulacro ${trackLabel}`;
+    return edition.label.includes(trackLabel) ? edition.label : `${edition.label} · ${trackLabel}`;
+  }
+  return edition ? `Convocatoria ${trackLabel} · ${edition.label}` : `Convocatoria ${trackLabel}`;
+}
+
 /** Nombre visible de la pista (p. ej. «Univalle»). */
 export function getConvocatoriaTrackLabel(code: string | null | undefined): string {
   const track = getConvocatoriaTrack(code);

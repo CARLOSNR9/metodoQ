@@ -19,19 +19,50 @@ import type { TrainingQuestion } from "@/lib/questions/types";
  *   a Método Q por la universidad), en el orden del cuadernillo.
  * - Simulacros #2–#6 = 70 preguntas con la misma mezcla de áreas: 45 de un
  *   banco UMNG (cirugía, trauma, ginecobstetricia, urgencias, toxicología) y 25
- *   de un banco UCC (medicina interna y pediatría), sin enunciados que mencionen
- *   otra universidad, hospital o ciudad. Selección determinista para que el
+ *   de un banco UCC (medicina interna y pediatría). Se excluyen las preguntas
+ *   cuyo texto visible (enunciado, opciones, explicación) menciona otra
+ *   universidad u hospital, o cuyo caso ocurre en otra ciudad; las elegidas se
+ *   rotulan como UdeA. Selección determinista para que el
  *   repaso posterior siempre encuentre cada ítem.
  */
 export const UDEA_SIMULACRO_QUESTION_COUNT = 70;
 const UMNG_PER_SIMULACRO = 45;
 const UCC_PER_SIMULACRO = 25;
 
-const FOREIGN_CONTEXT =
-  /pasto|nari[ñn]o|cooperativa|\bucc\b|\bumng\b|militar|nueva granada|\bhmc\b|bogot[áa]|ipiales|tumaco/i;
+/** Ciudades/zonas de otras sedes en el enunciado (el caso debe sentirse propio). */
+const FOREIGN_PLACE =
+  /pasto|nari[ñn]o|bogot[áa]|ipiales|tumaco|\bcali\b|valle del cauca/i;
+
+/** Otras universidades u hospitales en cualquier texto que ve el estudiante. */
+const FOREIGN_INSTITUTION =
+  /cooperativa|\bucc\b|\bumng\b|nueva granada|hospital militar|\bhmc\b|univalle|universidad del valle|universidad nacional|\bunal\b|javeriana|rosario/i;
+
+function visibleText(question: TrainingQuestion): string {
+  return [
+    question.statement,
+    question.explanation,
+    ...question.options.map((option) => `${option.text} ${option.incorrectFeedback ?? ""}`),
+    ...(question.keyPoints ?? []),
+    question.topic,
+    question.examArea ?? "",
+  ].join(" ");
+}
 
 function isPortable(question: TrainingQuestion): boolean {
-  return question.options.length === 4 && !FOREIGN_CONTEXT.test(question.statement);
+  return (
+    question.options.length === 4 &&
+    !FOREIGN_PLACE.test(question.statement) &&
+    !FOREIGN_INSTITUTION.test(visibleText(question))
+  );
+}
+
+/** Copia rotulada como UdeA (el ID se conserva para correcciones y reportes). */
+function asUdea(question: TrainingQuestion): TrainingQuestion {
+  return {
+    ...question,
+    university: "UdeA",
+    tags: ["udea", "simulacro", ...(question.tags ?? []).filter((tag) => !/^(ucc|umng)$/i.test(tag))],
+  };
 }
 
 /** Toma `count` preguntas repartidas uniformemente a lo largo del banco. */
@@ -47,7 +78,7 @@ function pickSpread(bank: TrainingQuestion[], count: number): TrainingQuestion[]
 }
 
 function compose(umng: TrainingQuestion[], ucc: TrainingQuestion[]): TrainingQuestion[] {
-  return [...pickSpread(umng, UMNG_PER_SIMULACRO), ...pickSpread(ucc, UCC_PER_SIMULACRO)];
+  return [...pickSpread(umng, UMNG_PER_SIMULACRO), ...pickSpread(ucc, UCC_PER_SIMULACRO)].map(asUdea);
 }
 
 export const UDEA_SIMULACRO_1_QUESTIONS = UDEA_EXAMEN_REAL_QUESTIONS;

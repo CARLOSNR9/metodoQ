@@ -78,13 +78,25 @@ describe("simulacros UdeA", () => {
     }
   });
 
-  it("el primero es el examen real y los demás no mencionan otra universidad", () => {
+  it("el primero es el examen real y ningún simulacro muestra otra universidad", () => {
     expect(UDEA_CONVOCATORIA_EDITIONS[0].questions).toBe(UDEA_EXAMEN_REAL_QUESTIONS);
-    const foreign = /pasto|nari[ñn]o|cooperativa|\bucc\b|\bumng\b|militar|nueva granada|bogot[áa]/i;
-    for (const edition of UDEA_CONVOCATORIA_EDITIONS.slice(1)) {
+    const institution =
+      /cooperativa|\bucc\b|\bumng\b|nueva granada|hospital militar|\bhmc\b|univalle|universidad del valle|universidad nacional|\bunal\b|javeriana|rosario/i;
+    const place = /pasto|nari[ñn]o|bogot[áa]|\bcali\b/i;
+    for (const edition of UDEA_CONVOCATORIA_EDITIONS) {
       for (const question of edition.questions) {
-        expect(question.options, question.id).toHaveLength(4);
-        expect(foreign.test(question.statement), question.id).toBe(false);
+        const text = [
+          question.statement,
+          question.explanation,
+          ...question.options.map((o) => `${o.text} ${o.incorrectFeedback ?? ""}`),
+          ...question.keyPoints,
+          question.topic,
+          question.examArea ?? "",
+        ].join(" ");
+        expect(institution.test(text), `${edition.code} ${question.id}`).toBe(false);
+        expect(place.test(question.statement), `${edition.code} ${question.id}`).toBe(false);
+        expect(question.university, question.id).toBe("UdeA");
+        if (edition.code !== "UDEA-ED1") expect(question.options, question.id).toHaveLength(4);
       }
     }
   });

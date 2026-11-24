@@ -8,6 +8,8 @@ import {
   Radar,
 } from "recharts";
 import { buildUccRadarFromSession } from "@/lib/diagnostic/ucc-exam-blueprint";
+import { getUmngRepasoInsights } from "@/lib/diagnostic/exam-blueprint";
+import { getConvocatoriaTrack, getConvocatoriaTrackLabel } from "@/lib/training/convocatorias";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 type UccConvocatoriaResultsPanelProps = {
@@ -15,6 +17,8 @@ type UccConvocatoriaResultsPanelProps = {
   totalQuestions: number;
   sessionQuestions: TrainingQuestion[];
   answersByQuestionId: Record<string, string>;
+  /** Código de la edición (UCC-…, UMNG-…, UDEA-…) para rotular con la universidad correcta. */
+  editionCode?: string | null;
 };
 
 export function UccConvocatoriaResultsPanel({
@@ -22,22 +26,31 @@ export function UccConvocatoriaResultsPanel({
   totalQuestions,
   sessionQuestions,
   answersByQuestionId,
+  editionCode = null,
 }: UccConvocatoriaResultsPanelProps) {
-  const radarData = buildUccRadarFromSession(sessionQuestions, answersByQuestionId);
+  const isUcc = getConvocatoriaTrack(editionCode) === "UCC";
+  const trackLabel = getConvocatoriaTrackLabel(editionCode);
+  const radarData = isUcc
+    ? buildUccRadarFromSession(sessionQuestions, answersByQuestionId)
+    : getUmngRepasoInsights(sessionQuestions, answersByQuestionId).axes
+        .filter((axis) => axis.correct + axis.wrong > 0)
+        .map((axis) => ({ subject: axis.label, A: axis.percentage, fullMark: 100 }));
   const hasRadarValues = radarData.some((point) => point.A > 0);
 
   return (
     <section className="relative mt-10 overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 p-6 sm:p-8">
       <div className="mb-6 text-center">
         <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500">
-          Resultado tipo convocatoria UCC
+          {isUcc ? "Resultado tipo convocatoria UCC" : `Resultado del simulacro ${trackLabel}`}
         </p>
         <p className="mt-3 text-4xl font-black text-slate-900 sm:text-5xl">
           {correctAnswers}
           <span className="text-2xl text-slate-500">/{totalQuestions}</span>
         </p>
         <p className="mt-2 text-sm text-slate-500">
-          aciertos · calificación sugerida (UCC no publica escala oficial)
+          {isUcc
+            ? "aciertos · calificación sugerida (UCC no publica escala oficial)"
+            : "aciertos"}
         </p>
       </div>
 
