@@ -52,6 +52,7 @@ export const TOPIC_AREAS: TopicArea[] = [
   { key: "inmunologia", label: "Inmunología y Alergias", practiceTopic: "inmunolog" },
   { key: "reumatologia", label: "Reumatología", practiceTopic: "reumatolog" },
   { key: "ortopedia", label: "Ortopedia", practiceTopic: "ortopedia" },
+  { key: "medicina-deporte", label: "Medicina del Deporte", practiceTopic: "medicina del deporte" },
   { key: "geriatria", label: "Geriatría", practiceTopic: "geriatr" },
   { key: "dermatologia", label: "Dermatología", practiceTopic: "dermatolog" },
   { key: "oftalmologia", label: "Oftalmología", practiceTopic: "oftalmolog" },
@@ -67,6 +68,7 @@ const AREAS_BY_KEY = new Map(TOPIC_AREAS.map((area) => [area.key, area]));
  * pediátrica" es Pediatría y "fisiología renal" es Ciencias Básicas).
  */
 const AREA_RULES: Array<[RegExp, string]> = [
+  [/medicina del deporte|medicina deportiva/, "medicina-deporte"],
   [/pediatr|neonat|desarrollo y lenguaje/, "pediatria"],
   [/ginecolog|obstetric|planificacion familiar/, "ginecologia"],
   [/ortopedia|traumatolog/, "ortopedia"],

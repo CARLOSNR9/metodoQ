@@ -7,15 +7,23 @@ import Link from "next/link";
 import { UccConvocatoriasView } from "@/components/dashboard/ucc-convocatorias-view";
 import { UmngConvocatoriasView } from "@/components/dashboard/umng-convocatorias-view";
 import { UnivalleConvocatoriasView } from "@/components/dashboard/univalle-convocatorias-view";
-import { isUmngUniversity, isUnivalleUniversity } from "@/lib/diagnostic/university-match";
+import { UdeaConvocatoriasView } from "@/components/dashboard/udea-convocatorias-view";
+import {
+  isUdeaUniversity,
+  isUmngUniversity,
+  isUnivalleUniversity,
+} from "@/lib/diagnostic/university-match";
 
 export default function ConvocatoriasPage() {
   const { user, isCheckingAuth } = useAuthGuard("/login");
   const { profile } = useUserProfile();
   const isProUser = hasProFeatures(profile?.plan);
   const isUnivalle = isUnivalleUniversity(profile?.goalUniversity);
+  const isUdea = isUdeaUniversity(profile?.goalUniversity);
   const trackName = isUnivalle
     ? "Univalle"
+    : isUdea
+      ? "UdeA"
     : isUmngUniversity(profile?.goalUniversity)
       ? "UMNG"
       : "UCC";
@@ -50,6 +58,10 @@ export default function ConvocatoriasPage() {
 
   if (isUnivalle) {
     return <UnivalleConvocatoriasView userId={user.uid} />;
+  }
+
+  if (isUdea) {
+    return <UdeaConvocatoriasView userId={user.uid} />;
   }
 
   if (trackName === "UMNG") {

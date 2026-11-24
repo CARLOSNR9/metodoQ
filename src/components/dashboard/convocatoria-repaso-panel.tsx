@@ -24,7 +24,7 @@ type ConvocatoriaRepasoPanelProps = {
   compact?: boolean;
   /** Oculta puntaje y CTAs cuando ya estás en la pantalla de retroalimentación. */
   insightsOnly?: boolean;
-  track?: "UCC" | "UMNG" | "UNIVALLE";
+  track?: "UCC" | "UMNG" | "UNIVALLE" | "UDEA";
 };
 
 function buildReviewHref(resultId: string | undefined, filter?: "wrong") {
@@ -54,7 +54,7 @@ export function ConvocatoriaRepasoPanel({
       if (questions.length === 0) {
         setInsights(null);
       } else {
-        if (track === "UMNG" || track === "UNIVALLE") {
+        if (track === "UMNG" || track === "UNIVALLE" || track === "UDEA") {
           setInsights(getUmngRepasoInsights(questions, attempt.answersByQuestionId!));
         } else {
           setInsights(getUccRepasoInsights(questions, attempt.answersByQuestionId!));
@@ -130,7 +130,7 @@ export function ConvocatoriaRepasoPanel({
             Áreas a repasar
           </p>
           <p className="mt-2 text-sm text-slate-500">
-            Prioriza estas áreas del examen {track === "UNIVALLE" ? "Univalle" : track} antes del simulacro real.
+            Prioriza estas áreas del examen {track === "UNIVALLE" ? "Univalle" : track === "UDEA" ? "UdeA" : track} antes del simulacro real.
           </p>
           <ul className="mt-4 space-y-3">
             {weakestAxes.map((axis) => (

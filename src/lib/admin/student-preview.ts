@@ -4,10 +4,10 @@ import { ensureSubscriptionDates } from "@/lib/plans/subscription-display";
 
 export const ADMIN_STUDENT_PREVIEW_PLAN = "PRO" as const;
 
-export type AdminPreviewUniversity = "ucc" | "umng" | "univalle";
+export type AdminPreviewUniversity = "ucc" | "umng" | "univalle" | "udea";
 
 export function isAdminPreviewUniversity(value: string | null | undefined): value is AdminPreviewUniversity {
-  return value === "ucc" || value === "umng" || value === "univalle";
+  return value === "ucc" || value === "umng" || value === "univalle" || value === "udea";
 }
 
 export function isAdminStudentPreview(
@@ -46,6 +46,9 @@ export function applyAdminStudentPreviewProfile(
   } else if (previewUni === "univalle") {
     withPro.goalUniversity = "Universidad del Valle (Univalle)";
     withPro.goalSpecialty = "Dermatología";
+  } else if (previewUni === "udea") {
+    withPro.goalUniversity = "Universidad de Antioquia (UdeA)";
+    withPro.goalSpecialty = "Medicina del Deporte";
   }
 
   return ensureSubscriptionDates(withPro, 6) as UserProfile;

@@ -67,3 +67,8 @@ export function supportsDedicatedDiagnosticBattery(
     (isCirugiaPlasticaSpecialty(effectiveSpecialty) && isUmngUniversity(university))
   );
 }
+
+export function isMedicinaDeporteSpecialty(specialty: string | null | undefined): boolean {
+  const n = normalize(specialty);
+  return n.includes("deport") || n.includes("actividad fisica");
+}

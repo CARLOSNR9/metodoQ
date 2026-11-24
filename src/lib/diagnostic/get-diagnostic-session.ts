@@ -15,7 +15,8 @@ import {
 
 /**
  * Batería fija Act1: UNAL, UdeA o UCC Pasto + Medicina Interna; Univalle
- * (examen único de medicina general, cualquier especialidad).
+ * (examen único de medicina general, cualquier especialidad); UdeA (mismo
+ * examen de medicina general para todas las especialidades clínicas).
  * Retorna null si la combinación no tiene banco dedicado.
  */
 export function getAct1DiagnosticSession(
@@ -25,12 +26,12 @@ export function getAct1DiagnosticSession(
   if (isUnivalleUniversity(university)) {
     return enrichQuestionsWithTheoryPills(getUnivalleDiagnosticSession());
   }
+  if (isUdeaUniversity(university)) {
+    return enrichQuestionsWithTheoryPills(getUdeaDiagnosticSession());
+  }
   const effectiveSpecialty = getEffectiveGoalSpecialty(university, specialty);
   if (!isMedicinaInternaSpecialty(effectiveSpecialty)) {
     return null;
-  }
-  if (isUdeaUniversity(university)) {
-    return enrichQuestionsWithTheoryPills(getUdeaDiagnosticSession());
   }
   if (isUnalUniversity(university)) {
     return enrichQuestionsWithTheoryPills(getUnalDiagnosticSession());
