@@ -39,6 +39,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     { UCC_PASTO_PRO_QUESTIONS },
     { UMNG_DIAGNOSTIC_QUESTIONS },
     { UNIVALLE_OWN_QUESTIONS },
+    { UDEA_OWN_QUESTIONS },
   ] = await Promise.all([
     import("@/data/fallback-questions"),
     import("@/data/extended-questions"),
@@ -58,6 +59,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     import("@/data/ucc-pasto-pro-questions"),
     import("@/data/umng-diagnostico-questions"),
     import("@/data/univalle"),
+    import("@/data/udea"),
   ]);
 
   return [
@@ -79,6 +81,7 @@ async function loadTrainingSources(): Promise<TrainingQuestion[][]> {
     UCC_PASTO_PRO_QUESTIONS,
     UMNG_DIAGNOSTIC_QUESTIONS,
     UNIVALLE_OWN_QUESTIONS,
+    UDEA_OWN_QUESTIONS,
   ];
 }
 
@@ -115,6 +118,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     { UMNG_CONV_ED5_QUESTIONS },
     { UMNG_CONV_ED6_QUESTIONS },
     { UCC_CONV_2026_09_20_QUESTIONS },
+    { UDEA_EXAMEN_REAL_QUESTIONS },
   ] = await Promise.all([
     import("@/data/daily-challenges"),
     import("@/data/ucc-conv-2025-06-21-questions"),
@@ -131,6 +135,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     import("@/data/umng-conv-ed5-questions"),
     import("@/data/umng-conv-ed6-questions"),
     import("@/data/ucc-conv-2026-09-20-questions"),
+    import("@/data/udea"),
   ]);
 
   const allQuestions = mergeQuestionsById([
@@ -149,6 +154,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     UMNG_CONV_ED5_QUESTIONS,
     UMNG_CONV_ED6_QUESTIONS,
     UCC_CONV_2026_09_20_QUESTIONS,
+    UDEA_EXAMEN_REAL_QUESTIONS,
     DAILY_CHALLENGES,
   ]);
   

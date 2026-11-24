@@ -31,8 +31,13 @@ import {
   getEffectiveGoalSpecialty,
   isUccPastoMedicinaInternaProUser,
 } from "@/lib/diagnostic/ucc-pasto-track";
-import { isUmngUniversity, isUnivalleUniversity } from "@/lib/diagnostic/university-match";
+import {
+  isUdeaUniversity,
+  isUmngUniversity,
+  isUnivalleUniversity,
+} from "@/lib/diagnostic/university-match";
 import { UnivalleTrackSection } from "./univalle-track-section";
+import { UdeaTrackSection } from "./udea-track-section";
 import { UccDailyMissionCard } from "./ucc-daily-mission-card";
 import { UccConvocatoriaCard } from "./ucc-convocatoria-card";
 import { ConvocatoriaRepasoSummaryCard } from "./convocatoria-repaso-summary-card";
@@ -107,6 +112,9 @@ export function ProDashboardView({
   };
   const isUccMiPro = isUccPastoMedicinaInternaProUser(profile);
   const isUnivalle = isUnivalleUniversity(profile?.goalUniversity);
+  const isUdea = isUdeaUniversity(profile?.goalUniversity);
+  /** Pistas con espacio propio: sin clases ni convocatorias de otras cohortes. */
+  const hasOwnTrack = isUnivalle || isUdea;
   const dailyGoal = getDailyGoalForProfile(profile, profile?.planStartedAt);
   const uccPercentileEstimate =
     isUccMiPro && hasDiagnosticData
@@ -139,7 +147,7 @@ export function ProDashboardView({
 
   return (
     <div className="space-y-8 pb-12">
-      {showLiveClasses && !isUnivalle && user?.uid ? (
+      {showLiveClasses && !hasOwnTrack && user?.uid ? (
         <NextClassBanner userId={user.uid} hideEmpty />
       ) : null}
 
@@ -227,6 +235,14 @@ export function ProDashboardView({
         />
       ) : null}
 
+      {isUdea ? (
+        <UdeaTrackSection
+          specialty={effectiveSpecialty}
+          planStartedAt={profile?.planStartedAt}
+          diagnosticDone={hasDiagnosticData}
+        />
+      ) : null}
+
       <StudyStreakSummary
         userId={user.uid}
         planStartedAt={profile?.planStartedAt}
@@ -239,7 +255,7 @@ export function ProDashboardView({
       {showLiveClasses &&
       user?.uid &&
       !isUmngUniversity(profile?.goalUniversity) &&
-      !isUnivalle ? (
+      !hasOwnTrack ? (
         <>
           <UccConvocatoriaCard
             userId={user.uid}
@@ -310,8 +326,8 @@ export function ProDashboardView({
           <PerformanceStatsSection userId={user.uid} />
           <ProgressChart userId={user.uid} />
 
-          {/* Aún no hay clases para el grupo Univalle: no mostrar las de otras cohortes. */}
-          {showLiveClasses && !isUnivalle ? (
+          {/* Aún no hay clases para los grupos Univalle y UdeA: no mostrar las de otras cohortes. */}
+          {showLiveClasses && !hasOwnTrack ? (
             <>
               <LiveClasses />
               <PastClasses />

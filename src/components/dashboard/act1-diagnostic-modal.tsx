@@ -105,7 +105,7 @@ export function Act1DiagnosticModal({ isOpen, onClose, user }: Act1DiagnosticMod
 
 
   const readyQuote = isUdeaUniversity(selectedUniversity)
-    ? "Doc, en la UdeA el examen unificado exige integración clínica y dominio de guías MSPS/INS. Estas 10 preguntas definirán tu hoja de ruta."
+    ? "Doc, en la UdeA todas las especialidades clínicas presentan el mismo examen de medicina general: casos clínicos largos y normas del Ministerio de Salud. Estas 10 preguntas miden tu punto de partida."
     : isUnalUniversity(selectedUniversity)
       ? "Doc, en la UNAL no gana quien más sabe, sino quien mejor aplica bajo presión. Este diagnóstico de 10 preguntas definirá tu hoja de ruta."
       : isUccPastoUniversity(selectedUniversity)

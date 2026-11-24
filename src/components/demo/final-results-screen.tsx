@@ -10,6 +10,7 @@ import {
   type StoredUserPlan,
 } from "@/lib/plans/access";
 import { Act2PredictiveDashboard } from "./act2-predictive-dashboard";
+import { getConvocatoriaDisplayTitle } from "@/lib/training/convocatorias";
 import { ScoreComparisonCards } from "./score-comparison-cards";
 import type { UccBlockCompletionCTA } from "@/lib/training/ucc-mi-daily-plan";
 import { UccConvocatoriaResultsPanel } from "@/components/dashboard/ucc-convocatoria-results-panel";
@@ -227,7 +228,7 @@ export function FinalResultsScreen({
                 ? "¡Dosis Inyectada!"
                 : "Casi lo logras, Doc"
               : isConvocatoria
-                ? `Convocatoria ${convocatoriaEdition ?? "UCC"}`
+                ? getConvocatoriaDisplayTitle(convocatoriaEdition)
                 : isAct1
                   ? "Tu punto de partida"
                   : profile.title}
@@ -296,6 +297,7 @@ export function FinalResultsScreen({
             totalQuestions={sessionQuestions.length}
             sessionQuestions={sessionQuestions}
             answersByQuestionId={answersByQuestionId}
+            editionCode={convocatoriaEdition}
           />
         ) : null}
 

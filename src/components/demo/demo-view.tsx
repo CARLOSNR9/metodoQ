@@ -51,6 +51,9 @@ import {
   shouldTrackQuestionCycle,
 } from "@/lib/training/question-cycle";
 import { getAct1DiagnosticSession } from "@/lib/diagnostic/get-diagnostic-session";
+
+/** El diagnóstico inicial (Act1) siempre tiene 10 preguntas, haya o no batería dedicada. */
+const ACT1_DIAGNOSTIC_QUESTION_COUNT = 10;
 import { getEffectiveGoalSpecialty, isUccPastoMedicinaInternaProUser } from "@/lib/diagnostic/ucc-pasto-track";
 import { selectUccTrainingQuestions } from "@/lib/training/ucc-module-selection";
 import { selectUccSimulacroQuestions } from "@/lib/training/ucc-simulacro-selection";
@@ -312,6 +315,8 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
   const [repasoPendingCount, setRepasoPendingCount] = useState<number | null>(null);
   const plannedQuestionCount = isDailyPill
     ? 1
+    : isAct1
+      ? Math.min(ACT1_DIAGNOSTIC_QUESTION_COUNT, questionBank.length || ACT1_DIAGNOSTIC_QUESTION_COUNT)
     : isSessionErrorsMode
       ? sessionCountOverride ?? 25
     : isRepasoMode
