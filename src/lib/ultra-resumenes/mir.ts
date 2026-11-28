@@ -8,7 +8,8 @@ import type { UltraCard, UltraCategory, UltraEntry, UltraLevel } from "./types";
  * Ultra resúmenes MIR. Cada especialidad combina:
  * - el contenido propio por temas ordenados por rentabilidad (mir-content),
  * - y los puntos clave de las preguntas oficiales del banco, agrupados por
- *   tema y ordenados de más a menos preguntado.
+ *   tema, ordenados de más a menos preguntado y colocados debajo de la ficha
+ *   propia que tratan (placeOfficialCards).
  * El nivel y las cifras de cada especialidad se calculan con los exámenes
  * oficiales del banco.
  */
@@ -106,8 +107,103 @@ function buildCards(specialtySlug: string, questions: TrainingQuestion[]): { car
   return { cards, repeated: sorted.filter(([, list]) => list.length >= 2).length };
 }
 
-/** Título del separador que da paso a las fichas de preguntas oficiales. */
-export const MIR_BANK_SECTION_TITLE = "Repaso con preguntas oficiales";
+/** Título del separador con las preguntas oficiales que no encajan en ninguna ficha propia. */
+export const MIR_BANK_SECTION_TITLE = "Otras preguntas oficiales";
+
+/** Puntuación mínima para colocar una ficha de preguntas oficiales bajo una ficha propia. */
+export const MIR_LINK_MIN_SCORE = 22;
+
+const LINK_STOPWORDS = new Set(
+  (
+    "para como esta este estos estas pero sobre entre desde hasta tras cuando donde porque tambien solo mas menos " +
+    "todo todos toda todas otro otra otros otras cada sino segun puede pueden suele tiene tienen hace hacer siempre " +
+    "nunca mismo misma muy bien primera primer primero segundo tipo tipos caso casos forma formas parte inicial casi " +
+    "frente ante bajo alto alta altos altas mayor menor anos dias tratamiento diagnostico clinica sindrome enfermedad " +
+    "paciente pacientes riesgo causa causas indicado indicada indicacion eleccion prueba pruebas cuadro asociado " +
+    "asociada grave graves agudo aguda cronica cronico frecuente frecuentes"
+  ).split(" "),
+);
+
+/** Raíces de las palabras con contenido ("hereditarios" → "heredit"). */
+function linkTokens(text: string): string[] {
+  return slugify(text)
+    .split("-")
+    .filter((word) => word.length >= 4 && !LINK_STOPWORDS.has(word))
+    .map((word) => word.slice(0, 7));
+}
+
+function addTokens(bag: Map<string, number>, text: string, weight: number, cap = Infinity) {
+  for (const token of linkTokens(text)) bag.set(token, Math.min(cap, (bag.get(token) ?? 0) + weight));
+}
+
+/**
+ * Coloca cada ficha de preguntas oficiales justo debajo de la ficha propia
+ * que trata su tema (p. ej. "Síndrome de Lynch" bajo "Pólipos y síndromes
+ * hereditarios"). Se empareja por palabras compartidas, pesando más los
+ * títulos y las palabras raras dentro de la especialidad. Las que no
+ * alcanzan el mínimo van al final, en su propio apartado.
+ */
+export function placeOfficialCards(
+  ownEntries: UltraEntry[],
+  officialCards: UltraCard[],
+  slug = "mir",
+  minScore = MIR_LINK_MIN_SCORE,
+): UltraEntry[] {
+  const own: { card: UltraCard; bag: Map<string, number> }[] = [];
+  let heading = "";
+  for (const entry of ownEntries) {
+    if (entry.kind === "heading") {
+      heading = entry.title;
+      continue;
+    }
+    const bag = new Map<string, number>();
+    addTokens(bag, `${entry.title} ${heading}`, 3);
+    addTokens(bag, entry.points.join(" "), 1);
+    own.push({ card: entry, bag });
+  }
+
+  const documentFrequency = new Map<string, number>();
+  for (const { bag } of own) for (const token of bag.keys()) documentFrequency.set(token, (documentFrequency.get(token) ?? 0) + 1);
+  const idf = (token: string) => Math.log(1 + own.length / (documentFrequency.get(token) ?? own.length));
+
+  const linked = new Map<string, UltraCard[]>();
+  const unlinked: UltraCard[] = [];
+  for (const official of officialCards) {
+    const bag = new Map<string, number>();
+    addTokens(bag, official.title, 3);
+    addTokens(bag, official.points.join(" "), 1, 2);
+    let best: UltraCard | null = null;
+    let bestScore = 0;
+    for (const candidate of own) {
+      let score = 0;
+      for (const [token, weight] of bag) {
+        const ownWeight = candidate.bag.get(token);
+        if (ownWeight) score += weight * Math.min(3, ownWeight) * idf(token);
+      }
+      if (score > bestScore) {
+        bestScore = score;
+        best = candidate.card;
+      }
+    }
+    if (best && bestScore >= minScore) {
+      const list = linked.get(best.id) ?? [];
+      list.push({ ...official, official: true });
+      linked.set(best.id, list);
+    } else {
+      unlinked.push(official);
+    }
+  }
+
+  const result: UltraEntry[] = [];
+  for (const entry of ownEntries) {
+    result.push(entry);
+    if (entry.kind === "card") result.push(...(linked.get(entry.id) ?? []));
+  }
+  if (unlinked.length > 0) {
+    result.push({ kind: "heading", id: `mir-${slug}-banco`, title: MIR_BANK_SECTION_TITLE }, ...unlinked);
+  }
+  return result;
+}
 
 export function buildMirUltraSummary(
   questions: TrainingQuestion[] = MIR_OFFICIAL_QUESTIONS,
@@ -136,7 +232,6 @@ export function buildMirUltraSummary(
       const perConvocatoria = list.length / convocatorias;
       const level = getMirLevel(perConvocatoria);
       const { cards, repeated } = buildCards(slug, list);
-      const bankSection: UltraEntry[] = [{ kind: "heading", id: `mir-${slug}-banco`, title: MIR_BANK_SECTION_TITLE }, ...cards];
       return {
         slug,
         keys: own?.keys ?? [groupKey],
@@ -158,7 +253,7 @@ export function buildMirUltraSummary(
             ? { value: String(own.topicCount), label: "temas ordenados por rentabilidad, de más a menos preguntados" }
             : { value: String(repeated), label: "temas que ya se han preguntado más de una vez" },
         ],
-        load: async () => (own ? [...(await own.load()), ...bankSection] : cards),
+        load: async () => (own ? placeOfficialCards(await own.load(), cards, slug) : cards),
       };
     })
     .sort((a, b) => b.questionCount - a.questionCount || a.title.localeCompare(b.title, "es"));

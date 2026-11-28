@@ -340,10 +340,10 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
             </div>
             <Link
               href="/dashboard/mir/ultra-resumenes"
-              className="flex flex-col gap-3 rounded-2xl border border-lime-300/30 bg-gradient-to-r from-[#5b1650]/80 to-white/[0.04] p-6 transition hover:border-lime-300/60 sm:flex-row sm:items-center sm:justify-between"
+              className="flex flex-col gap-3 rounded-2xl border border-mq-premium-gold/30 bg-gradient-to-r from-[#1d4ed8]/60 to-white/[0.04] p-6 transition hover:border-mq-premium-gold/60 sm:flex-row sm:items-center sm:justify-between"
             >
               <div className="flex items-center gap-3">
-                <Sparkles className="h-5 w-5 text-lime-300" />
+                <Sparkles className="h-5 w-5 text-mq-premium-gold" />
                 <div>
                   <h3 className="text-lg font-bold text-white">Ultra resúmenes MIR</h3>
                   <p className="text-sm text-slate-300">
@@ -351,7 +351,7 @@ export function MirDashboardView({ userId, greetingName }: MirDashboardViewProps
                   </p>
                 </div>
               </div>
-              <span className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl bg-lime-300 px-5 text-sm font-black text-[#0A1F44]">
+              <span className="inline-flex min-h-10 shrink-0 items-center justify-center rounded-xl bg-mq-premium-gold px-5 text-sm font-black text-[#0A1F44]">
                 Ver resúmenes
               </span>
             </Link>

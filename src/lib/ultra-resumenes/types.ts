@@ -17,6 +17,8 @@ export type UltraCard = {
   badge?: string;
   /** Línea secundaria (p. ej. "MIR 2019 · 2023"). */
   meta?: string;
+  /** Ficha de preguntas oficiales colocada justo debajo de la ficha del tema que trata. */
+  official?: boolean;
 };
 
 /** Separador dentro de una categoría (p. ej. "Síndrome nefrítico"). */

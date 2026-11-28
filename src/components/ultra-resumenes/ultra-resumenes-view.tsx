@@ -48,6 +48,7 @@ const THEMES = {
     hero: "border-slate-200 bg-gradient-to-br from-slate-900 via-slate-800 to-indigo-950 text-white",
     heroAccent: "text-mq-accent",
     spinner: "text-mq-accent",
+    officialRail: "border-mq-accent/40",
   },
   mir: {
     title: "text-white",
@@ -63,9 +64,10 @@ const THEMES = {
     chipActive: "border-mq-premium-gold bg-mq-premium-gold/10 text-white",
     track: "bg-white/10",
     bar: "bg-mq-premium-gold",
-    hero: "border-white/10 bg-gradient-to-br from-[#5b1650] via-[#3b1150] to-[#0A1F44] text-white",
-    heroAccent: "text-lime-300",
+    hero: "border-white/10 bg-gradient-to-br from-[#1d4ed8] via-[#123a8c] to-[#0A1F44] text-white",
+    heroAccent: "text-mq-premium-gold",
     spinner: "text-mq-premium-gold",
+    officialRail: "border-mq-premium-gold/40",
   },
 } as const;
 
@@ -78,7 +80,29 @@ const LEVEL_STYLES: Record<UltraLevel, { bar: string; badge: string }> = {
   5: { bar: "bg-slate-400", badge: "border-slate-400/60 bg-slate-400/20 text-slate-700" },
 };
 
+/** MIR conserva la identidad azul y amarilla de Método Q. */
+export const MIR_LEVEL_BARS: Record<UltraLevel, string> = {
+  1: "bg-yellow-400",
+  2: "bg-yellow-200",
+  3: "bg-sky-300",
+  4: "bg-blue-400",
+  5: "bg-slate-400",
+};
+
 const MIR_LEVEL_BADGES: Record<UltraLevel, string> = {
+  1: "border-yellow-400/50 bg-yellow-400/15 text-yellow-300",
+  2: "border-yellow-200/50 bg-yellow-200/10 text-yellow-100",
+  3: "border-sky-300/50 bg-sky-300/10 text-sky-200",
+  4: "border-blue-400/50 bg-blue-400/10 text-blue-200",
+  5: "border-slate-400/50 bg-slate-400/10 text-slate-300",
+};
+
+function levelBar(level: UltraLevel, variant: Variant): string {
+  return variant === "mir" ? MIR_LEVEL_BARS[level] : LEVEL_STYLES[level].bar;
+}
+
+/** Insignias del tema general sobre fondo oscuro (cabecera de categoría). */
+const DARK_LEVEL_BADGES: Record<UltraLevel, string> = {
   1: "border-lime-400/50 bg-lime-400/15 text-lime-300",
   2: "border-lime-200/50 bg-lime-200/10 text-lime-100",
   3: "border-sky-300/50 bg-sky-300/10 text-sky-200",
@@ -86,8 +110,8 @@ const MIR_LEVEL_BADGES: Record<UltraLevel, string> = {
   5: "border-slate-400/50 bg-slate-400/10 text-slate-300",
 };
 
-function LevelBadge({ level, variant }: { level: UltraLevel; variant: Variant }) {
-  const style = variant === "mir" ? MIR_LEVEL_BADGES[level] : LEVEL_STYLES[level].badge;
+function LevelBadge({ level, variant, onDark = false }: { level: UltraLevel; variant: Variant; onDark?: boolean }) {
+  const style = variant === "mir" ? MIR_LEVEL_BADGES[level] : onDark ? DARK_LEVEL_BADGES[level] : LEVEL_STYLES[level].badge;
   return (
     <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-black uppercase tracking-wide ${style}`}>
       Nivel {level} · {ULTRA_LEVEL_LABELS[level]}
@@ -351,7 +375,7 @@ export function UltraResumenesView({
                           <span>{done !== null ? `${done} dominadas` : ""}</span>
                         </div>
                         <div className={`h-1.5 overflow-hidden rounded-full ${theme.track}`}>
-                          <div className={`h-full rounded-full ${LEVEL_STYLES[category.level].bar}`} style={{ width: `${pct}%` }} />
+                          <div className={`h-full rounded-full ${levelBar(category.level, variant)}`} style={{ width: `${pct}%` }} />
                         </div>
                       </div>
                     </button>
@@ -400,7 +424,7 @@ function FichaCard({ card, variant, isMastered, onToggle, context, isLocked = fa
   return (
     <article
       className={`relative rounded-2xl border p-5 transition ${theme.panel} ${
-        isMastered ? (variant === "mir" ? "border-lime-300/40" : "border-emerald-300 bg-emerald-50/40") : ""
+        isMastered ? (variant === "mir" ? "border-mq-premium-gold/40" : "border-emerald-300 bg-emerald-50/40") : ""
       }`}
     >
       <div className="flex items-start justify-between gap-3">
@@ -410,7 +434,7 @@ function FichaCard({ card, variant, isMastered, onToggle, context, isLocked = fa
           {card.badge || card.meta ? (
             <p className="flex flex-wrap items-center gap-2 text-[11px]">
               {card.badge ? (
-                <span className={`rounded-full px-2 py-0.5 font-black ${variant === "mir" ? "bg-lime-300/15 text-lime-300" : "bg-amber-100 text-amber-800"}`}>
+                <span className={`rounded-full px-2 py-0.5 font-black ${variant === "mir" ? "bg-mq-premium-gold/15 text-mq-premium-gold" : "bg-amber-100 text-amber-800"}`}>
                   {card.badge}
                 </span>
               ) : null}
@@ -426,7 +450,7 @@ function FichaCard({ card, variant, isMastered, onToggle, context, isLocked = fa
             className={`inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-xl border px-3 text-xs font-black transition ${
               isMastered
                 ? variant === "mir"
-                  ? "border-lime-300/50 bg-lime-300/15 text-lime-300"
+                  ? "border-mq-premium-gold/50 bg-mq-premium-gold/15 text-mq-premium-gold"
                   : "border-emerald-300 bg-emerald-100 text-emerald-800"
                 : theme.chip
             }`}
@@ -505,7 +529,7 @@ function CategoryDetail({ category, entries, variant, masteredIds, onToggle, onB
 
       <header className={`space-y-4 rounded-[2rem] border p-6 sm:p-8 ${theme.hero}`}>
         <div className="flex flex-wrap items-center gap-2">
-          <LevelBadge level={category.level} variant="mir" />
+          <LevelBadge level={category.level} variant={variant} onDark />
           {category.group && !category.group.startsWith("Nivel") ? (
             <span className="text-[11px] font-bold text-white/60">{category.group}</span>
           ) : null}
@@ -519,7 +543,7 @@ function CategoryDetail({ category, entries, variant, masteredIds, onToggle, onB
             <span className="font-black text-white">{pct} %</span>
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-white/15">
-            <div className={`h-full rounded-full ${LEVEL_STYLES[category.level].bar}`} style={{ width: `${pct}%` }} />
+            <div className={`h-full rounded-full ${levelBar(category.level, variant)}`} style={{ width: `${pct}%` }} />
           </div>
         </div>
         {category.stats && category.stats.length > 0 ? (
@@ -607,15 +631,17 @@ function CategoryDetail({ category, entries, variant, masteredIds, onToggle, onB
         <div className="space-y-3">
           {visibleEntries.map((entry) =>
             isUltraCard(entry) ? (
-              <FichaCard
-                key={entry.id}
-                card={entry}
-                variant={variant}
-                isMastered={masteredIds.has(entry.id)}
-                onToggle={(value) => onToggle(entry.id, value)}
-                isLocked={locked && (cardIndex.get(entry.id) ?? 0) >= ULTRA_FREE_PREVIEW_CARDS}
-                upgradeHref={upgradeHref}
-              />
+              <div key={entry.id} className={entry.official ? `ml-3 border-l-2 pl-3 sm:ml-6 sm:pl-5 ${theme.officialRail}` : undefined}>
+                <FichaCard
+                  card={entry}
+                  variant={variant}
+                  context={entry.official ? "Pregunta oficial MIR" : undefined}
+                  isMastered={masteredIds.has(entry.id)}
+                  onToggle={(value) => onToggle(entry.id, value)}
+                  isLocked={locked && (cardIndex.get(entry.id) ?? 0) >= ULTRA_FREE_PREVIEW_CARDS}
+                  upgradeHref={upgradeHref}
+                />
+              </div>
             ) : (
               <div key={entry.id} className="space-y-1.5 pt-6">
                 {entry.level ? (
@@ -736,7 +762,7 @@ function FlashcardDeck({ cards, variant, masteredIds, onToggle }: FlashcardDeckP
         className={`block min-h-[280px] w-full rounded-[2rem] border p-6 text-left transition sm:p-8 ${theme.panel}`}
       >
         {card.badge ? (
-          <span className={`mb-3 inline-block rounded-full px-2 py-0.5 text-[11px] font-black ${variant === "mir" ? "bg-lime-300/15 text-lime-300" : "bg-amber-100 text-amber-800"}`}>
+          <span className={`mb-3 inline-block rounded-full px-2 py-0.5 text-[11px] font-black ${variant === "mir" ? "bg-mq-premium-gold/15 text-mq-premium-gold" : "bg-amber-100 text-amber-800"}`}>
             {card.badge}
           </span>
         ) : null}

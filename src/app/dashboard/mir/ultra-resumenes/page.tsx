@@ -2,11 +2,10 @@
 
 import { useMemo } from "react";
 import { MirAccessGate } from "@/components/dashboard/mir-access-gate";
-import { UltraResumenesView } from "@/components/ultra-resumenes/ultra-resumenes-view";
+import { MIR_LEVEL_BARS, UltraResumenesView } from "@/components/ultra-resumenes/ultra-resumenes-view";
 import { buildMirUltraSummary, type MirUltraSummary } from "@/lib/ultra-resumenes/mir";
 import { ULTRA_LEVEL_LABELS } from "@/lib/ultra-resumenes/types";
 
-const LEVEL_BARS = ["bg-lime-400", "bg-lime-200", "bg-sky-300", "bg-fuchsia-300", "bg-slate-400"];
 
 function formatPercent(share: number): string {
   return `${(share * 100).toLocaleString("es", { maximumFractionDigits: 1, minimumFractionDigits: 1 })} %`;
@@ -19,7 +18,7 @@ function MirExamSplit({ summary }: { summary: MirUltraSummary }) {
   const repeated = summary.specialties.reduce((sum, s) => sum + s.repeatedTopicCount, 0);
 
   return (
-    <section className="space-y-6 rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#5b1650] via-[#3b1150] to-[#0A1F44] p-6 text-white sm:p-8">
+    <section className="space-y-6 rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#1d4ed8] via-[#123a8c] to-[#0A1F44] p-6 text-white sm:p-8">
       <p className="text-[11px] font-black uppercase tracking-[0.3em] text-white/80">
         Reparto real del examen por niveles de rentabilidad
       </p>
@@ -28,7 +27,7 @@ function MirExamSplit({ summary }: { summary: MirUltraSummary }) {
           level.share > 0 ? (
             <div
               key={level.level}
-              className={LEVEL_BARS[level.level - 1]}
+              className={MIR_LEVEL_BARS[level.level]}
               style={{ width: `${level.share * 100}%` }}
               title={`Nivel ${level.level}: ${formatPercent(level.share)}`}
             />
@@ -42,7 +41,7 @@ function MirExamSplit({ summary }: { summary: MirUltraSummary }) {
             <p className="text-[11px] text-white/70">
               {ULTRA_LEVEL_LABELS[level.level]} · {level.specialtyCount} esp.
             </p>
-            <p className="mt-1 text-lg font-black text-lime-300">{formatPercent(level.share)}</p>
+            <p className="mt-1 text-lg font-black text-mq-premium-gold">{formatPercent(level.share)}</p>
           </div>
         ))}
       </div>
@@ -54,7 +53,7 @@ function MirExamSplit({ summary }: { summary: MirUltraSummary }) {
           { value: repeated.toLocaleString("es"), label: "temas que ya han caído más de una vez" },
         ].map((stat) => (
           <div key={stat.label} className="rounded-xl bg-white/10 p-4">
-            <p className="text-3xl font-black text-lime-300">{stat.value}</p>
+            <p className="text-3xl font-black text-mq-premium-gold">{stat.value}</p>
             <p className="mt-1 text-xs leading-snug text-white/80">{stat.label}</p>
           </div>
         ))}
@@ -75,7 +74,7 @@ export default function MirUltraResumenesPage() {
           progressField="mirUltraResumenes"
           eyebrow="Ultra resúmenes MIR"
           title="Estudia primero lo que más cae en el MIR"
-          description="Cada especialidad tiene su nivel de rentabilidad y, dentro, sus temas ordenados de más a menos preguntados en el MIR, con fichas cortas para reactivar lo que decide preguntas. Al final de cada especialidad, el repaso con los puntos clave de las preguntas oficiales. Márcalas como dominadas y repásalas en modo tarjetas."
+          description="Cada especialidad tiene su nivel de rentabilidad y, dentro, sus temas ordenados de más a menos preguntados en el MIR, con fichas cortas para reactivar lo que decide preguntas. Debajo de cada ficha, los puntos clave de las preguntas oficiales del MIR sobre ese tema. Márcalas como dominadas y repásalas en modo tarjetas."
           categories={summary.specialties}
           groupOrder={["Nivel 1", "Nivel 2", "Nivel 3", "Nivel 4", "Nivel 5"]}
           groupDescriptions={{
