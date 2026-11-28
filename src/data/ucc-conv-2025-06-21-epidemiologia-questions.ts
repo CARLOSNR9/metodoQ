@@ -355,7 +355,7 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Con prevalencia baja (1%), incluso alta especificidad deja muchos falsos positivos vs pocos verdaderos positivos; VPP ≈ 16%. Por eso el tamizaje requiere confirmación.",
+      "El **valor predictivo positivo (VPP)** es la probabilidad de que una persona con prueba positiva realmente tenga la enfermedad. A diferencia de la sensibilidad y la especificidad, **depende de la prevalencia**.\n\nCálculo con 10.000 personas y prevalencia de 1%:\n- Enfermos: 100. Con sensibilidad de 99%, salen positivos 99 (verdaderos positivos).\n- Sanos: 9.900. Con especificidad de 95%, salen negativos 9.405 y positivos 495 (falsos positivos).\n- VPP = 99 / (99 + 495) = 99 / 594 ≈ **16,7%**.\n\nEs decir, de cada 6 personas con resultado positivo, solo 1 tiene VIH. Por eso toda prueba de tamizaje positiva en población de baja prevalencia necesita una prueba confirmatoria.\n\n**TRAMPA DEL EXAMEN:** Confundir el VPP con la sensibilidad (99%) o con la especificidad (95%). Son cosas distintas: la sensibilidad y la especificidad son propiedades de la prueba; el VPP depende además de cuántos enfermos hay en la población.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., cuando la enfermedad es rara, hasta una prueba muy buena da más falsos positivos que verdaderos. Haga siempre la tabla de 2 × 2 con un número redondo de personas: en un minuto tiene el VPP y no se deja engañar por los porcentajes de la prueba.",
     keyPoints: [
       "VPP sube con mayor prevalencia.",
       "Alta sensibilidad ≠ alto VPP si prevalencia es baja.",
@@ -404,7 +404,7 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Tamizaje: priorizar sensibilidad alta (punto A) para detectar la mayoría de enfermos; falsos positivos se filtran con prueba confirmatoria. Punto B sería más útil para confirmación.",
+      "En **tamizaje poblacional** el objetivo es no dejar escapar enfermos. Por eso se prioriza la **sensibilidad**: una prueba muy sensible tiene pocos falsos negativos, y un resultado negativo descarta la enfermedad con confianza (regla **SnNout**: sensibilidad alta, negativo descarta).\n\nEl punto A (sensibilidad 98%, especificidad 70%) detecta casi a todos los diabéticos. El costo es que da más falsos positivos, pero esos se filtran con una prueba confirmatoria (glucosa en ayunas repetida, HbA1c o curva de tolerancia).\n\nEl punto B (especificidad 95%) es mejor para **confirmar**: un resultado positivo con alta especificidad casi asegura la enfermedad (regla **SpPin**: especificidad alta, positivo confirma). Pero en tamizaje dejaría sin detectar a 1 de cada 4 diabéticos.\n\n**TRAMPA DEL EXAMEN:** Pensar que la mejor prueba es siempre la más específica, o que dos puntos con la misma área bajo la curva ROC son equivalentes. El punto de corte se elige según el objetivo: tamizar o confirmar.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., para tamizar use una red de huecos pequeños (alta sensibilidad), aunque atrape algunos peces que no buscaba. Después, a esos peces los revisa uno por uno con una prueba confirmatoria de alta especificidad.",
     keyPoints: [
       "Tamizaje: alta sensibilidad (SnNout).",
       "Confirmación: alta especificidad (SpPin).",
@@ -711,7 +711,7 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "I² = 78% indica heterogeneidad importante. Debe investigarse (análisis de subgrupos, meta-regresión, sensibilidad) antes de generalizar un efecto pooled único.",
+      "El **I² mide qué porcentaje de la variabilidad entre los estudios se debe a diferencias reales y no al azar**. Como referencia: 25% es baja, 50% moderada y más de 75% alta. Un I² de 78% con p < 0,001 indica **heterogeneidad alta**: los estudios no están midiendo el mismo efecto.\n\nAnte esto, no se debe presentar un único efecto combinado como si fuera la verdad. Lo correcto es **explorar de dónde viene la heterogeneidad**: análisis por subgrupos (tipo de paciente, dosis, duración), meta-regresión, calidad metodológica de los estudios y análisis de sensibilidad (excluir estudios atípicos). Si se combinan, debe usarse un modelo de efectos aleatorios y explicarse la limitación.\n\nLa heterogeneidad no significa que el fármaco no funcione ni que los ensayos sean inválidos: puede indicar que funciona en unos subgrupos y no en otros.\n\n**TRAMPA DEL EXAMEN:** Quedarse con que el resultado global es estadísticamente significativo e ignorar el I². Un efecto combinado de estudios muy distintos puede ser engañoso.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., un metaanálisis es como sacar el promedio de las notas de varios cursos: si unos sacaron 1 y otros 5, el promedio de 3 no describe a nadie. Con un I² alto, primero averigüe por qué los estudios dan resultados tan distintos.",
     keyPoints: [
       "I² >50–75% → heterogeneidad relevante.",
       "Explorar causas antes de combinar efectos.",
@@ -1727,7 +1727,7 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "p=0.03 indica significancia estadística, pero RAR 0.5% implica NNT=200 → relevancia clínica cuestionable. Siempre interpretar p junto a magnitud del efecto.",
+      "Un **valor p de 0,03** indica que la diferencia es **estadísticamente significativa**: es poco probable que se deba al azar. Pero no dice nada sobre **qué tan grande o importante** es el efecto.\n\nAquí la reducción absoluta del riesgo (RAR) es 20,0% − 19,5% = **0,5%**. El número necesario a tratar (NNT) es 1 / 0,005 = **200**: hay que tratar a 200 pacientes para evitar una muerte. Con esa magnitud, el beneficio clínico es pequeño y la decisión de usar la intervención depende de su costo, efectos adversos y del contexto.\n\nEstos resultados son típicos de ensayos con muestras muy grandes: con suficientes pacientes, incluso diferencias mínimas salen significativas.\n\n**TRAMPA DEL EXAMEN:** Confundir significancia estadística con relevancia clínica, o creer que un p bajo demuestra causalidad y obliga a usar la intervención en todos.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el valor p le dice si la diferencia es real; el NNT le dice si vale la pena. Ante cualquier ensayo, calcule la reducción absoluta y el NNT: un NNT de 200 es un efecto real pero pequeño.",
     keyPoints: [
       "Significancia estadística ≠ relevancia clínica.",
       "Evaluar RAR, NNT, no solo p.",

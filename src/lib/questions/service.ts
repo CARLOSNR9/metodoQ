@@ -56,7 +56,14 @@ export async function getActiveQuestions(): Promise<TrainingQuestion[]> {
       byId.set(question.id, question);
     }
     for (const docItem of snapshot.docs) {
-      const question = mapDocToQuestion(docItem.id, docItem.data());
+      const data = docItem.data();
+      const question = mapDocToQuestion(docItem.id, data);
+      // Una copia importada del banco en código que nadie editó (sin
+      // `updatedAt`) no debe tapar la versión del código: si no, las
+      // correcciones hechas en el repositorio nunca llegan al estudiante.
+      // Solo las preguntas editadas en el panel o creadas en Firestore
+      // reemplazan a la del código.
+      if (byId.has(question.id) && !data.updatedAt) continue;
       byId.set(question.id, question);
     }
 
