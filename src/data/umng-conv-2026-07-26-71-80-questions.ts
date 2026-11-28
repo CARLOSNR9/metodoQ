@@ -43,10 +43,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "La paciente cursa con Síndrome de HELLP (plaquetas bajas y transaminasas casi en 1.000) complicado con Ruptura de Hematoma Subcapsular Hepático. El dolor súbito en hipocondrio derecho irradiado al hombro (Signo de Kehr, por sangre en diafragma) asociado a choque hipovolémico fulminante es la presentación clásica. El hígado congestivo sangra bajo su cápsula y estalla vaciando sangre al peritoneo. Requiere transfusión masiva y Laparotomía inmediata para empaquetamiento hepático (Packing).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., cuando una embarazada con preeclampsia se queja de que le arde 'la boca del estómago' (epigastralgia), no le des milanta. Es su hígado hinchándose. Si esa paciente de repente grita, se pone blanca y la presión se va al suelo, su hígado acaba de estallar. Tienes 5 minutos para cruzar sangre y abrir ese abdomen. Compresas tibias, compresión (Packing) y saca al bebé rápido para que el útero no robe más sangre.",
     keyPoints: [
-      "Cuando veas:",
-      "• Preeclampsia/HELLP + Dolor agudo en Hipocondrio Derecho irradiado a escápula + Choque (Hipotensión).",
-      "Debes pensar en:",
-      "Ruptura Hepática Subcapsular. Manejo: Transfusión masiva + Laparotomía inmediata.",
+      "Cuando veas: Preeclampsia/HELLP + Dolor agudo en Hipocondrio Derecho irradiado a escápula + Choque (Hipotensión).",
+      "Debes pensar en: Ruptura Hepática Subcapsular. Manejo: Transfusión masiva + Laparotomía inmediata.",
       "Tema: Obstetricia / Complicaciones Preeclampsia."
     ]
   },
@@ -89,10 +87,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "El consumo de licor artesanal sumado a acidosis metabólica severa con anión gap alto y sintomatología visual ('tormenta de nieve') es el cuadro patognomónico de Intoxicación por Metanol. El asesino es su metabolito, el Ácido Fórmico, producido por la Alcohol Deshidrogenasa. Se debe bloquear esta enzima con Fomepizol o Etanol (que compite por la enzima). Dada la acidosis severa (pH 6.90), requiere además hemodiálisis inmediata.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., curar a un paciente emborrachándolo más es una ironía bella. Si te llega al monte y no tienes Fomepizol, dale Aguardiente o Vodka por sonda. El hígado estará tan ocupado emborrachándose con el alcohol bueno (Etanol) que no metabolizará el Metanol en ácido fórmico. Lo mantienes 'prendido' hasta que llegue a diálisis.",
     keyPoints: [
-      "Cuando veas:",
-      "• Consumo de licor artesanal + Acidosis metabólica profunda (Anión Gap alto) + Alteración Visual (escotomas).",
-      "Debes pensar en:",
-      "Intoxicación por Metanol. Antídoto: Fomepizol o Etanol. Requiere Hemodiálisis si pH <7.20.",
+      "Cuando veas: Consumo de licor artesanal + Acidosis metabólica profunda (Anión Gap alto) + Alteración Visual (escotomas).",
+      "Debes pensar en: Intoxicación por Metanol. Antídoto: Fomepizol o Etanol. Requiere Hemodiálisis si pH <7.20.",
       "Tema: Toxicología / Alcoholes Tóxicos."
     ]
   },
@@ -135,10 +131,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "En la meningitis bacteriana pediátrica (especialmente por H. influenzae y S. pneumoniae), el uso de Dexametasona previene la sordera neurosensorial. Para ser efectiva, debe administrarse 15-20 minutos ANTES o CON la primera dosis de antibiótico. Esto garantiza que el antiinflamatorio esté actuando cuando el antibiótico destruya a las bacterias y libere citoquinas.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., imagínate que el cerebro del niño es una habitación llena de globos de agua sucia (bacterias). El antibiótico es un alfiler. Si pinchas los globos, el agua ensucia todo (inflamación letal). La Dexametasona es cubrir las paredes con plástico protector. Tienes que poner el plástico ANTES de explotar los globos. Si lo haces al revés, curas la meningitis pero dejas al niño sordo.",
     keyPoints: [
-      "Cuando veas:",
-      "• Meningitis Bacteriana Pediátrica y prescripción de Dexametasona.",
-      "Debes pensar en:",
-      "Aplicar 15-20 min ANTES o CON la primera dosis del antibiótico. Objetivo: Prevenir sordera neurosensorial.",
+      "Cuando veas: Meningitis Bacteriana Pediátrica y prescripción de Dexametasona.",
+      "Debes pensar en: Aplicar 15-20 min ANTES o CON la primera dosis del antibiótico. Objetivo: Prevenir sordera neurosensorial.",
       "Tema: Pediatría / Infectología - Meningitis."
     ]
   },
@@ -181,10 +175,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El trauma por impacto de rodilla contra el tablero empuja la cabeza femoral hacia atrás (Luxación Posterior de cadera). La postura clásica es la del 'bañista púdico' (pierna acortada, aducción y rotación INTERNA). Es una urgencia ortopédica absoluta: si no se reduce en menos de 6 horas, la isquemia vascular causará Necrosis Avascular de la cabeza femoral.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., si la cadera se salió hacia atrás, se está estrangulando su propia arteria. Tienes un cronómetro de 6 horas. Nada de pedir resonancias magnéticas. Sedación profunda en urgencias, tracciona el fémur hacia el techo con todas tus fuerzas hasta que escuches el 'clack' de la cabeza volviendo al acetábulo. Acabas de salvarle su articulación.",
     keyPoints: [
-      "Cuando veas:",
-      "• Impacto rodilla contra tablero + Pierna acortada + Rotación INTERNA.",
-      "Debes pensar en:",
-      "Luxación Posterior de Cadera. Complicación temida: Necrosis Avascular. (Nervio en riesgo: Ciático).",
+      "Cuando veas: Impacto rodilla contra tablero + Pierna acortada + Rotación INTERNA.",
+      "Debes pensar en: Luxación Posterior de Cadera. Complicación temida: Necrosis Avascular. (Nervio en riesgo: Ciático).",
       "Tema: Ortopedia / Urgencias de Cadera."
     ]
   },
@@ -227,10 +219,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "La paciente cursa con una Crisis Miasténica (precipitada por infección y fluoroquinolonas) y falla ventilatoria inminente por fatiga diafragmática. La respiración paradójica y la FVC < 15 ml/kg son indicaciones absolutas de INTUBACIÓN. Asegurar la vía aérea es el único paso que evita el paro. Las terapias modificadoras (IGIV o Plasmaféresis) se inician después de asegurar la ventilación.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la miastenia te apaga los músculos de arriba hacia abajo. Si la paciente ya no pasa saliva y la barriga se le hunde al respirar, se asfixia frente a ti. No llames a pedir inmunoglobulina aún; ponle un tubo endotraqueal. Ojo: avísale al anestesiólogo el diagnóstico (son muy sensibles al Rocuronio).",
     keyPoints: [
-      "Cuando veas:",
-      "• Crisis Miasténica + Incapacidad deglución + FVC < 15 ml/kg o respiración paradójica.",
-      "Debes pensar en:",
-      "Intubación Inmediata. El manejo del ABC precede al tratamiento inmunológico (Plasmaféresis/IGIV).",
+      "Cuando veas: Crisis Miasténica + Incapacidad deglución + FVC < 15 ml/kg o respiración paradójica.",
+      "Debes pensar en: Intubación Inmediata. El manejo del ABC precede al tratamiento inmunológico (Plasmaféresis/IGIV).",
       "Tema: Neurología Crítica / Crisis Miasténica."
     ]
   },
@@ -273,10 +263,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El cuadro es patognomónico de Vasa Previa Rota. Al hacer la amniotomía, el médico rasgó vasos fetales que cruzaban el cérvix. El sangrado es fetal, no materno. Como el feto tiene muy poca volemia (300 ml), perder una mínima cantidad produce choque hipovolémico fulminante y bradicardia instantánea. La madre se mantiene estable y sin dolor. La intervención es CESÁREA DE EMERGENCIA STAT.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., metes el amniótomo, rasgas las bolsas para acelerar el parto, y ¡pum!, sale un charco de sangre y el monitor hace línea plana. Acabas de cortarle la yugular al bebé. La mamá está fresca como lechuga, pero su hijo se desangra hacia la camilla. Grita pidiendo el quirófano en Código Rojo fetal; tienes 5 minutos o sacarás un óbito.",
     keyPoints: [
-      "Cuando veas:",
-      "• Amniotomía -> Sangrado rojo indoloro -> Bradicardia Fetal Súbita.",
-      "Debes pensar en:",
-      "Vasa Previa Rota. El feto se está desangrando. Tratamiento: Cesárea Stat.",
+      "Cuando veas: Amniotomía -> Sangrado rojo indoloro -> Bradicardia Fetal Súbita.",
+      "Debes pensar en: Vasa Previa Rota. El feto se está desangrando. Tratamiento: Cesárea Stat.",
       "Tema: Obstetricia / Hemorragias del Tercer Trimestre."
     ]
   },
@@ -319,10 +307,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cinturón de 2 puntos en choque frontal comprime el intestino (yeyuno/íleon) contra la columna lumbar, haciéndolo estallar (Blowout injury). El FAST puede ser falsamente negativo al inicio por escaso líquido. El TAC muestra neumoperitoneo extraluminal, lo que confirma Perforación de Víscera Hueca. El manejo es Cirugía abierta inmediata (Laparotomía Exploratoria).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., si le levantas la camisa al accidentado y le ves 'tatuada' la marca roja del cinturón, asume intestino roto. Esa fuerza aplastó un globo lleno de aire y comida. Quizás el paciente llega tranquilo, con pulso de 80, porque botar jugo intestinal inicialmente no choca por hipovolemia, pero en 6 horas ese abdomen arderá en peritonitis bacteriana. ¡Ábrelo antes de que haga sepsis!",
     keyPoints: [
-      "Cuando veas:",
-      "• Accidente frontal + Signo del Cinturón de Seguridad + Neumoperitoneo en TAC.",
-      "Debes pensar en:",
-      "Perforación de Víscera Hueca (Intestino Delgado). Tratamiento: Laparotomía Exploratoria.",
+      "Cuando veas: Accidente frontal + Signo del Cinturón de Seguridad + Neumoperitoneo en TAC.",
+      "Debes pensar en: Perforación de Víscera Hueca (Intestino Delgado). Tratamiento: Laparotomía Exploratoria.",
       "Tema: Cirugía General / Trauma Abdominal Cerrado."
     ]
   },
@@ -365,10 +351,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente presenta Delirium Tremens (abstinencia alcohólica grave a las 72h). Hay un déficit de GABA y exceso de glutamato. El tratamiento innegociable son las Benzodiacepinas (Diazepam/Lorazepam) IV, que actúan en los receptores del alcohol, previniendo convulsiones y sedando al sistema autonómico (protocolo CIWA-Ar). El Haloperidol está contraindicado como monoterapia primaria por el alto riesgo de convulsiones.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el piso de ortopedia está lleno de alcohólicos ocultos que se rompen un hueso y a los 3 días 'se enloquecen'. No es locura, es abstinencia. Su cerebro se está friendo en adrenalina. Si le pones Haloperidol, le apagas las 'voces', pero el cerebro hará una convulsión mortal. Métele Díazepam sin miedo para lograr dormir a ese cerebro hiperestimulado.",
     keyPoints: [
-      "Cuando veas:",
-      "• Paciente hospitalizado (3 días) + Alucinaciones visuales + Agitación/Fiebre + Alcoholismo previo.",
-      "Debes pensar en:",
-      "Delirium Tremens. Tratamiento 1a Línea: Benzodiacepinas IV (Diazepam/Lorazepam).",
+      "Cuando veas: Paciente hospitalizado (3 días) + Alucinaciones visuales + Agitación/Fiebre + Alcoholismo previo.",
+      "Debes pensar en: Delirium Tremens. Tratamiento 1a Línea: Benzodiacepinas IV (Diazepam/Lorazepam).",
       "Tema: Psiquiatría / Abstinencia Alcohólica."
     ]
   },
@@ -411,10 +395,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El diagnóstico es Tétanos Generalizado. La Tetanoespasmina (toxina de C. tetani) llega al SNC por vía retrógrada y bloquea la liberación de GABA y Glicina (inhibidores). Sin el 'freno', las neuronas causan espasmos musculares brutales (trismus, opistótonos). La terapia específica de urgencia es la Inmunoglobulina Antitetánica Humana (IGT) IM, que neutraliza la toxina circulante antes de que se fije a más nervios.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el paciente con tétanos tiene el cerebro totalmente lúcido y siente un dolor indescriptible mientras sus músculos casi le rompen la columna. Si se te cae una bandeja (ruido), el espasmo trabará sus músculos respiratorios y se ahogará. Aísla, seda/relaja e intuba, y ponle la Inmunoglobulina para atrapar la toxina circulante ANTES de que cruce la barrera hematoencefálica.",
     keyPoints: [
-      "Cuando veas:",
-      "• Trismus (mandíbula trabada) + Opistótonos + Herida sucia previa.",
-      "Debes pensar en:",
-      "Tétanos. Fisiopatología: Bloqueo de GABA/Glicina. Tratamiento: IGT (Inmunoglobulina antitetánica).",
+      "Cuando veas: Trismus (mandíbula trabada) + Opistótonos + Herida sucia previa.",
+      "Debes pensar en: Tétanos. Fisiopatología: Bloqueo de GABA/Glicina. Tratamiento: IGT (Inmunoglobulina antitetánica).",
       "Tema: Infectología / Enfermedades mediadas por toxinas."
     ]
   },
@@ -457,10 +439,8 @@ export const UMNG_CONV_2026_07_26_71_80_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro es clásico de Enterocolitis Necrotizante (ECN): Prematuridad + Alimentación enteral + Distensión/Sangrado/Residuo Bilioso. La Neumatosis Intestinal (aire en la pared) es el signo patognomónico radiológico. El manejo salvavidas inicial es médico: Ayuno estricto (NPO), reposo gástrico con sonda abierta y antibióticos IV de amplio espectro. Solo se opera si hay perforación comprobada.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el intestino del prematuro extremo no está listo para digerir 'vacas'. Cuando le pones fórmula láctea, las bacterias fermentan el gas y destruyen la mucosa isquémica. El gas penetra la pared (neumatosis). Si a este bebé no le cortas la vía oral INMEDIATAMENTE y lo inundas de antibióticos, la pared del intestino va a estallar matándolo de choque séptico intra-abdominal.",
     keyPoints: [
-      "Cuando veas:",
-      "• Prematuro + Dieta enteral + Distensión/Sangre + Neumatosis en radiografía.",
-      "Debes pensar en:",
-      "Enterocolitis Necrotizante. Tratamiento base: Ayuno estricto, Sonda a derivación y Antibióticos IV.",
+      "Cuando veas: Prematuro + Dieta enteral + Distensión/Sangre + Neumatosis en radiografía.",
+      "Debes pensar en: Enterocolitis Necrotizante. Tratamiento base: Ayuno estricto, Sonda a derivación y Antibióticos IV.",
       "Tema: Neonatología / ECN."
     ]
   }

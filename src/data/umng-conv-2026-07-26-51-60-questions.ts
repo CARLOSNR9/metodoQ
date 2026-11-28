@@ -43,10 +43,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente presenta Trauma cervical penetrante con 'Signos Duros' de lesión vascular (sangrado activo pulsátil, hematoma expansivo, choque). Según el ATLS y consensos de trauma, ante la presencia de CUALQUIER signo duro, la conducta innegociable es la exploración quirúrgica inmediata (cervicotomía). No hay tiempo para estudios de imagen en pacientes inestables.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nSi a este paciente lo acuestas en el tubo del tomógrafo (TAC), el hematoma va a seguir creciendo hasta aplastar la tráquea, o el sangrado lo va a exanguinar. En trauma de cuello, la decisión es binaria: ¿Está estable o se está muriendo? Si se está muriendo (signos duros), la única 'placa' que necesitas es la luz de la lámpara del quirófano para abrir el platisma, reparar la carótida y salvarle el cerebro.",
     keyPoints: [
-      "Cuando veas:",
-      "• Trauma penetrante de cuello + Signos Duros (Sangrado a chorro, Hematoma expansivo, Choque, Burbujeo).",
-      "Debes pensar en:",
-      "QUIRÓFANO Inmediato (Cervicotomía exploratoria).",
+      "Cuando veas: Trauma penetrante de cuello + Signos Duros (Sangrado a chorro, Hematoma expansivo, Choque, Burbujeo).",
+      "Debes pensar en: QUIRÓFANO Inmediato (Cervicotomía exploratoria).",
       "Tema: ATLS / Trauma de Cuello."
     ]
   },
@@ -89,10 +87,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro es de Inversión Uterina Aguda (Tríada: Masa carnosa en vagina + Choque desproporcionado + Fondo uterino no palpable en abdomen). La Maniobra de Johnson consiste en usar el puño para empujar el fondo uterino invertido hacia arriba, de vuelta a su posición anatómica, INMEDIATAMENTE. Regla de oro: LA PLACENTA NO SE QUITA HASTA QUE EL ÚTERO ESTÉ EN SU LUGAR, para no destapar los senos venosos uterinos.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la inversión uterina es el terror de las salas de parto. Métete el guante, haz un puño, apóyalo en el fondo de esa masa carnosa y empuja hacia el ombligo como si no hubiera un mañana. Si le quitas la placenta ahí afuera, los vasos uterinos abiertos rociarán el techo de sangre. ¡Cálmalo, devuélvelo y luego sí, que sangre adentro donde se puede contraer!",
     keyPoints: [
-      "Cuando veas:",
-      "• Tracción excesiva de cordón + Masa vaginal + No se palpa útero + Choque severo.",
-      "Debes pensar en:",
-      "Inversión Uterina. Paso 1: Maniobra de Johnson INMEDIATA. Regla: NO quitar placenta hasta reducir el útero.",
+      "Cuando veas: Tracción excesiva de cordón + Masa vaginal + No se palpa útero + Choque severo.",
+      "Debes pensar en: Inversión Uterina. Paso 1: Maniobra de Johnson INMEDIATA. Regla: NO quitar placenta hasta reducir el útero.",
       "Tema: Ginecología y Obstetricia / Emergencias del Parto."
     ]
   },
@@ -135,10 +131,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente presenta intoxicación por Betabloqueadores (ej. Metoprolol, Propranolol). La clave diferencial con los calcioantagonistas (que dan la misma clínica cardiovascular) es la HIPOGLUCEMIA (al bloquear los receptores Beta-2 en el hígado, impiden la glucogenólisis). El antídoto específico es el Glucagón, el cual tiene un efecto inotrópico y cronotrópico positivo directo (aumentando AMPc) que puentea el receptor beta bloqueado.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nSi el receptor beta del corazón es una cerradura tapada con un chicle (el tóxico), la atropina o la adrenalina no podrán entrar a subir la frecuencia cardiaca. Necesitas abrir la puerta por otro lado. El Glucagón es esa 'llave maestra' que entra por la puerta trasera de la célula miocárdica (su propio receptor) y prende el motor de la adenilato ciclasa. Además, revierte la hipoglucemia al instante.",
     keyPoints: [
-      "Cuando veas:",
-      "• Bradicardia profunda + Choque + QRS estrecho + HIPOGLUCEMIA.",
-      "Debes pensar en:",
-      "Intoxicación por Betabloqueadores. Antídoto: Glucagón.",
+      "Cuando veas: Bradicardia profunda + Choque + QRS estrecho + HIPOGLUCEMIA.",
+      "Debes pensar en: Intoxicación por Betabloqueadores. Antídoto: Glucagón.",
       "Tema: Toxicología / Fármacos Cardiovasculares."
     ]
   },
@@ -181,10 +175,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "Primero, calcular la SCQ (Regla de los 9): Tronco anterior completo (18%) + Extremidad inferior derecha (18%) = 36% SCQ. Segundo, aplicar fórmula ATLS 10a edición para adultos (quemadura térmica): 2 mL x kg x %SCQ. Total = 2 x 70 x 36 = 5.040 mL en 24 horas. Tercero, la administración es del 50% en las primeras 8 horas: 5.040 / 2 = 2.520 mL.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., olvídate del 4 mL en el adulto que se quemó con la estufa o el incendio de la casa. La medicina de trauma se volvió más cautelosa con los fluidos (fluid creep). Si le metes 5 litros de agua en las primeras 8 horas, su abdomen se hinchará tanto que comprimirá la vena cava, hará falla renal y los pulmones se llenarán de agua. Arranca con 2 mL, y si orina bien (0.5 cc/kg/h), déjalo ahí.",
     keyPoints: [
-      "Cuando veas:",
-      "• Reanimación en quemado térmico adulto (ATLS 10).",
-      "Debes pensar en:",
-      "Fórmula: 2 mL x kg x %SCQ. Dar 50% en primeras 8 horas.",
+      "Cuando veas: Reanimación en quemado térmico adulto (ATLS 10).",
+      "Debes pensar en: Fórmula: 2 mL x kg x %SCQ. Dar 50% en primeras 8 horas.",
       "Tema: ATLS / Quemaduras."
     ]
   },
@@ -227,10 +219,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El niño presenta una Crisis Hipóxica (Tet Spell) secundaria a Tetralogía de Fallot. Ocurre un espasmo infundibular (cierra salida a pulmones) y la sangre desoxigenada hace un cortocircuito derecha-izquierda masivo por la CIV hacia la aorta. (Por eso DESAPARECE EL SOPLO estenótico pulmonar). Al colocar las rodillas contra el pecho (genupectoral), se ocluyen las arterias femorales, aumentando masivamente la Resistencia Vascular Sistémica (RVS). Esto aumenta la presión aórtica y frena el escape de sangre desoxigenada por la CIV, forzándola al pulmón.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., los niños con Fallot son sabios. Cuando caminan en el parque y se sienten cansados y cianóticos, ellos solitos se ponen de cuclillas ('squatting'). Instintivamente 'doblan las mangueras' de las piernas para que la sangre no se vaya al cuerpo sin oxígeno, y obligan al corazón derecho a empujar la sangre hacia los pulmones. Si te llega un bebé así, dobla sus piernitas contra la barriga. Verás cómo en 30 segundos vuelve a ponerse rosado.",
     keyPoints: [
-      "Cuando veas:",
-      "• Niño con Tetralogía de Fallot + Llanto + Cianosis severa + Disminución de soplo.",
-      "Debes pensar en:",
-      "Crisis Hipóxica (Tet Spell). Maniobra física: Posición Genupectoral (rodillas al pecho).",
+      "Cuando veas: Niño con Tetralogía de Fallot + Llanto + Cianosis severa + Disminución de soplo.",
+      "Debes pensar en: Crisis Hipóxica (Tet Spell). Maniobra física: Posición Genupectoral (rodillas al pecho).",
       "Tema: Pediatría / Cardiopatías Congénitas."
     ]
   },
@@ -273,10 +263,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El cuadro clínico es un Asma Casi Fatal (Status Asthmaticus). La combinación clínica de somnolencia, tórax silente (el bronquio está tan cerrado y hay tan poco flujo que ya no silba) y un PaCO2 que empieza a subir o es 'normal', es la indicación universal para Intubación Orotraqueal de urgencia. El PaCO2 normal en este contexto significa agotamiento diafragmático; el paciente hará paro respiratorio en minutos.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., un asmático en crisis es un corredor de maratón sin oxígeno. Respira a 35 por minuto. Con esa velocidad, debería tener el CO2 por el piso (alcalosis respiratoria). Si el CO2 de repente sube a rangos 'normales', es porque la máquina se rompió. El diafragma dijo 'no doy más' y se está deteniendo. El paciente se queda dormido por la narcosis de CO2 y el pulmón ya no hace ruido porque no entra aire. Agarra el laringoscopio y el tubo 7.5 de una vez.",
     keyPoints: [
-      "Cuando veas:",
-      "• Crisis asmática + Somnolencia + Tórax silente + PaCO2 Normal o Elevado.",
-      "Debes pensar en:",
-      "Fatiga de Músculos Respiratorios / Paro Inminente. Conducta: INTUBAR.",
+      "Cuando veas: Crisis asmática + Somnolencia + Tórax silente + PaCO2 Normal o Elevado.",
+      "Debes pensar en: Fatiga de Músculos Respiratorios / Paro Inminente. Conducta: INTUBAR.",
       "Tema: Urgencias / Status Asthmaticus."
     ]
   },
@@ -319,10 +307,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente presenta Meningitis Criptocócica (Cryptococcus neoformans), confirmada por Tinta China positiva. El estándar de oro mundial (Guías IDSA/OMS) para la fase de inducción (las primeras 2 semanas) es la terapia combinada fungicida: Anfotericina B (Liposomal preferida) + Flucitosina (5-FC). Esto elimina masivamente la carga fúngica en el cerebro.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEl hongo Cryptococcus tiene una cápsula tan gruesa que el sistema inmune ni lo ve. Crece en los ventrículos y tapa las vellosidades que absorben el LCR. El paciente no muere de infección, muere porque la cabeza le va a explotar de presión. El tratamiento real, además de Anfotericina B y Flucitosina, son las Punciones Lumbares Evacuatorias diarias para bajar la presión a lo normal.",
     keyPoints: [
-      "Cuando veas:",
-      "• VIH con CD4 <100 + Cefalea indolente + Tinta China (+) en LCR.",
-      "Debes pensar en:",
-      "Meningitis Criptocócica. Inducción (14d): Anfotericina B + Flucitosina.",
+      "Cuando veas: VIH con CD4 <100 + Cefalea indolente + Tinta China (+) en LCR.",
+      "Debes pensar en: Meningitis Criptocócica. Inducción (14d): Anfotericina B + Flucitosina.",
       "Tema: Infectología / Infecciones Oportunistas SNC."
     ]
   },
@@ -365,10 +351,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "En una Prostatitis Bacteriana AGUDA, la glándula está masivamente inflamada y llena de microabscesos. Realizar un masaje prostático o palpación vigorosa 'exprime' bacterias (E. coli) al torrente sanguíneo, provocando Bacteriemia Masiva y Choque Séptico. El tacto rectal, si se hace, debe ser EXTREMADAMENTE suave; el masaje prostático está CONTRAINDICADO de forma absoluta.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la próstata infectada es como un grano gigante a punto de estallar, pero rodeado de venas de grueso calibre. Si metes el dedo por el recto y 'masajeas' esa próstata para que bote pus por la uretra, el 90% de ese pus se meterá en las venas pélvicas. En 20 minutos el paciente estará en choque séptico. Tacto gentil, antibiótico IV y cistostomía suprapúbica para sacar la orina.",
     keyPoints: [
-      "Cuando veas:",
-      "• Prostatitis Aguda (Fiebre + Dolor perineal + Disuria severa).",
-      "Debes pensar en:",
-      "CONTRAINDICADO: Masaje prostático (Riesgo de Sepsis) y Sondaje Uretral a ciegas.",
+      "Cuando veas: Prostatitis Aguda (Fiebre + Dolor perineal + Disuria severa).",
+      "Debes pensar en: CONTRAINDICADO: Masaje prostático (Riesgo de Sepsis) y Sondaje Uretral a ciegas.",
       "Tema: Urología / Prostatitis Aguda."
     ]
   },
@@ -411,10 +395,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro clínico corresponde al Síndrome Neuroléptico Maligno (SNM), secundario al bloqueo dopaminérgico por Haloperidol. La triada patognomónica es Rigidez extrema (tubo de plomo), fiebre severa y CPK muy alta. El tratamiento exige soporte UCI, enfriamiento, suspender el fármaco e iniciar Bromocriptina (agonista dopaminérgico) o Dantroleno (relajante muscular periférico).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., cuando un psiquiatra te pasa un paciente a la UCI porque 'se quedó tieso', es un código rojo. El Haloperidol le bloqueó la dopamina en el cerebro con tanta fuerza, que el 'termostato' (hipotálamo) se rompió (fiebre) y los ganglios basales trancaron todos los músculos (rigidez). Esa rigidez rompe el músculo, bota mioglobina (CPK de 22,000) y le tapa los riñones, causando insuficiencia renal aguda.",
     keyPoints: [
-      "Cuando veas:",
-      "• Antipsicótico típico + Rigidez en tubo de plomo + Fiebre + CPK Alta.",
-      "Debes pensar en:",
-      "Síndrome Neuroléptico Maligno. Tratamiento: Bromocriptina o Dantroleno.",
+      "Cuando veas: Antipsicótico típico + Rigidez en tubo de plomo + Fiebre + CPK Alta.",
+      "Debes pensar en: Síndrome Neuroléptico Maligno. Tratamiento: Bromocriptina o Dantroleno.",
       "Tema: Psiquiatría / Emergencias Toxicológicas."
     ]
   },
@@ -457,10 +439,8 @@ export const UMNG_CONV_2026_07_26_51_60_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El patrón de Calcio Alto, Fósforo Bajo y PTH Alta confirma el Hiperparatiroidismo Primario (causado usualmente por un Adenoma Paratiroideo único). Una vez diagnosticado bioquímicamente, el paso para 'encontrar al culpable' (Localización preoperatoria) es la Gammagrafía de paratiroides con Sestamibi-Tc99m, pues el radioisótopo es absorbido ávidamente por el adenoma hiperfuncionante.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nBioquímica básica que no perdona, colega. Si una paratiroides se vuelve tumor (adenoma), se enloquece y tira PTH sin freno. La PTH saca calcio de los huesos al plasma y bota el fósforo por la orina. Por eso Calcio arriba, Fósforo abajo. El cirujano te pedirá el Sestamibi, que funciona como un francotirador: ilumina el adenoma exacto para poder abrir el cuello y sacarlo sin lastimar las otras tres glándulas.",
     keyPoints: [
-      "Cuando veas:",
-      "• Calcio ALTO + Fósforo BAJO + PTH ALTA.",
-      "Debes pensar en:",
-      "Hiperparatiroidismo Primario (Adenoma). Estudio para localizarlo: Gammagrafía con Sestamibi-Tc99m.",
+      "Cuando veas: Calcio ALTO + Fósforo BAJO + PTH ALTA.",
+      "Debes pensar en: Hiperparatiroidismo Primario (Adenoma). Estudio para localizarlo: Gammagrafía con Sestamibi-Tc99m.",
       "Tema: Endocrinología / Alteraciones del Calcio."
     ]
   }

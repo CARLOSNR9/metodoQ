@@ -43,10 +43,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "Es la descripción de libro de un hematoma epidural (Hematoma Epidural agudo complicado con Herniación Uncal). La presentación bifásica (pérdida de conciencia inicial + \"Intervalo Lúcido\" + deterioro fulminante) es patognomónica. El golpe en la región temporal lacera clásicamente la arteria meníngea media. La triada de Cushing (hipertensión + bradicardia) indica hipertensión endocraneana (HIC) severa. La midriasis derecha (compresión del III par craneal ipsilateral) y hemiparesia izquierda (compresión del pedúnculo cerebral contralateral) configuran el síndrome de Herniación Uncal.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nColega, este es el paciente que te mata en urgencias si lo dejas sentado en la sala de espera porque \"está hablando normal\". Ese \"intervalo lúcido\" es el tiempo que tarda la sangre arterial a 120 mmHg en despegar la duramadre del hueso. Cuando lo logra, el hematoma aplasta el lóbulo temporal contra el tallo cerebral (herniación). Si ves que el paciente respira lento, la presión sube y el corazón se pone lento (Reflejo de Cushing), el cerebro se está asfixiando. ¡Tubo a la tráquea, manitol o salina hipertónica y a quirófano en menos de 30 minutos!",
     keyPoints: [
-      "Cuando veas:",
-      "• Trauma temporal + Intervalo lúcido + Pupila dilatada ipsilateral + Hemiparesia contralateral.",
-      "Debes pensar en:",
-      "Hematoma Epidural por ruptura de la Arteria Meníngea Media. TAC: hiperdensidad biconvexa.",
+      "Cuando veas: Trauma temporal + Intervalo lúcido + Pupila dilatada ipsilateral + Hemiparesia contralateral.",
+      "Debes pensar en: Hematoma Epidural por ruptura de la Arteria Meníngea Media. TAC: hiperdensidad biconvexa.",
       "Tema: ATLS / Neurocirugía Trauma Craneoencefálico."
     ]
   },
@@ -89,10 +87,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con Leptospirosis en su forma grave (Síndrome de Weil). El antecedente epidemiológico (aguas estancadas/pantanos) + Inyección conjuntival + Mialgias en pantorrillas severas son la clave. El Síndrome de Weil es la tríada de: Ictericia (bilirrubina a predominio directo) + Lesión Renal Aguda + Diátesis hemorrágica/Trombocitopenia. El tratamiento de primera línea avalado por la OMS y guías colombianas para la fase severa (hospitalizada) es la Penicilina G intravenosa o la Ceftriaxona. (Para la fase leve ambulatoria se usa Doxiciclina).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., si ves a un soldado o a un campesino que se metió a una poza de agua estancada y llega con los ojos rojos como un vampiro y sin poder caminar por el dolor en los gemelos, es una Leptospirosis. Los ratones orinan el agua, la espiroqueta entra por la piel macerada y destruye los capilares del hígado y el riñón. La Doxiciclina es fabulosa si el paciente llega caminando, pero si llega amarillo como un Simpson y sin orinar (Síndrome de Weil), trátalo con Ceftriaxona por la vena o lo perderás por diálisis.",
     keyPoints: [
-      "Cuando veas:",
-      "• Aguas estancadas/inundaciones + Inyección conjuntival + Dolor en pantorrillas.",
-      "Debes pensar en:",
-      "Leptospirosis. Si hay Ictericia + Falla Renal = Síndrome de Weil.",
+      "Cuando veas: Aguas estancadas/inundaciones + Inyección conjuntival + Dolor en pantorrillas.",
+      "Debes pensar en: Leptospirosis. Si hay Ictericia + Falla Renal = Síndrome de Weil.",
       "Tema: Infectología / Zoonosis Tropicales."
     ]
   },
@@ -135,10 +131,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "El diagnóstico es intoxicación aguda por Cianuro (asociada a intoxicación por Monóxido de Carbono). Combustión de plásticos/poliuretano + Acidosis láctica masiva + Sangre venosa rojo brillante (arterialización venosa) = Bloqueo de la Citocromo C Oxidasa. Las células no pueden extraer ni usar el oxígeno de la sangre, por lo que la sangre venosa regresa a los pulmones tan rica en O2 como cuando salió (rojo brillante). La Hidroxocobalamina (precursor de vitamina B12) es el antídoto moderno de primera línea para el cianuro. Se une directamente al cianuro intravascular formando cianocobalamina (Vitamina B12), la cual es inofensiva y se excreta en la orina.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nSi a un paciente asfixiado en un incendio lo ves con la sangre venosa igual de roja que la arterial, es porque su mitocondria se paralizó. El oxígeno pasa de largo. El cianuro bloquea el motor celular. Si le das el antiguo antídoto de nitritos (Opción D), oxidas la poca hemoglobina sana que le queda, y lo rematas. La Hidroxocobalamina es una maravilla biológica: atrapa el cianuro, se convierte en Vitamina B12 y el paciente la orina rosada. ¡Súper elegante y salva vidas!",
     keyPoints: [
-      "Cuando veas:",
-      "• Incendio en espacio cerrado con plásticos + Acidosis láctica severa sin hipoxia (SatO2 99%) + Sangre venosa roja brillante.",
-      "Debes pensar en:",
-      "Intoxicación por Cianuro. Antídoto de elección: Hidroxocobalamina.",
+      "Cuando veas: Incendio en espacio cerrado con plásticos + Acidosis láctica severa sin hipoxia (SatO2 99%) + Sangre venosa roja brillante.",
+      "Debes pensar en: Intoxicación por Cianuro. Antídoto de elección: Hidroxocobalamina.",
       "Tema: Toxicología / Intoxicación por Humo y Gases."
     ]
   },
@@ -181,10 +175,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "El paciente presenta Trauma vascular periférico agudo con 'Signos Duros' de lesión vascular (sangrado pulsátil, hematoma expansivo, palidez, ausencia de pulsos). Los pacientes con Signos Duros (Ausencia de pulsos, Isquemia distal clínica [6 Ps], Sangrado pulsátil activo, Hematoma pulsátil o expansivo, Frémito o Soplo en la herida) tienen indicación de EXPLORACIÓN QUIRÚRGICA INMEDIATA sin necesidad de estudios de imagen previos.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la arteria poplítea no perdona. A las 6 horas de estar ligada, el músculo se muere. Si un paciente llega botando sangre a chorros por detrás de la rodilla y el pie está frío como el hielo, ¡no llames al radiólogo! Todo ese tiempo la pierna se está ahogando. Llama al cirujano vascular o al general, preparen la sala, pasen heparina sistémica (si no hay contraindicación) y a reparar ese vaso con un injerto de safena. El bisturí es el único Doppler que necesitas aquí.",
     keyPoints: [
-      "Cuando veas:",
-      "• Trauma penetrante de extremidades con Signos DUROS (Ausencia de pulso, soplo, hematoma que crece, sangrado a chorro).",
-      "Debes pensar en:",
-      "QUIRÓFANO DIRECTO. Signos blandos ameritan estudios de imagen, los duros NO.",
+      "Cuando veas: Trauma penetrante de extremidades con Signos DUROS (Ausencia de pulso, soplo, hematoma que crece, sangrado a chorro).",
+      "Debes pensar en: QUIRÓFANO DIRECTO. Signos blandos ameritan estudios de imagen, los duros NO.",
       "Tema: ATLS / Trauma Vascular Periférico."
     ]
   },
@@ -227,10 +219,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente presenta un Tromboembolismo Pulmonar (TEP) Masivo (o de alto riesgo) indicado por Inestabilidad hemodinámica profunda (PA 70/40, síncope, estupor) + Falla del ventrículo derecho aguda demostrada (Ecocardiograma con dilatación del VD). La intervención de primera línea recomendada por las guías para salvar la vida es la Fibrinólisis Sistémica (Alteplasa, Tenecteplasa). Disuelve el coágulo en minutos, destapando el pulmón y salvando al ventrículo derecho.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEl patrón S1Q3T3 que te enseñaron en la universidad es famoso, pero solo aparece en el 20% de los pacientes. Lo que no puedes fallar es en la conducta. El ventrículo derecho de este paciente está inflado como un globo tratando de empujar sangre contra una pared de concreto (el coágulo). Si le das solo Heparina, estás cruzando los dedos para que sus propias enzimas disuelvan la pared antes de que el ventrículo falle. ¡No hay tiempo! Ponle la Alteplasa, rompe el coágulo y revive ese corazón derecho.",
     keyPoints: [
-      "Cuando veas:",
-      "• TEP Inestable/Masivo (Hipotensión <90 mmHg o Choque) + Falla ventricular derecha aguda.",
-      "Debes pensar en:",
-      "Trombólisis sistémica inmediata (Alteplasa/rt-PA).",
+      "Cuando veas: TEP Inestable/Masivo (Hipotensión <90 mmHg o Choque) + Falla ventricular derecha aguda.",
+      "Debes pensar en: Trombólisis sistémica inmediata (Alteplasa/rt-PA).",
       "Tema: Neumología / Tromboembolismo Pulmonar."
     ]
   },
@@ -273,10 +263,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "El paciente presenta Intususcepción intestinal (Invaginación intestinal). Tríada clásica: dolor abdominal intermitente (llanto con flexión de piernas) + deposición en \"jalea de grosella\" + masa en salchicha en cuadrante superior derecho, sumado al Signo de Dance (fosa ilíaca derecha vacía). En pacientes estables sin evidencia de perforación intestinal o peritonitis, el tratamiento de primera línea curativo y diagnóstico a la vez es la reducción no quirúrgica mediante presión neumática (aire) o hidrostática (solución salina o bario) aplicada a través de un enema rectal, usualmente bajo visión ecográfica o fluoroscópica. Tiene una tasa de éxito superior al 80%.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., imagínate un calcetín volteado hacia adentro. Eso es la intususcepción: el íleon se metió dentro del ciego y el colon. La sangre en moco de grosella es el llanto del intestino que se está gangrenando. Antes los abríamos a todos, pero ahora los radiólogos pediatras hacen magia metiendo una sonda por el recto y bombeando aire a presión. Esa fuerza infla el colon desde abajo y \"desdobla\" el calcetín. Solo si ves el vientre en tabla (peritonitis) asumes que ya se perforó y saltas directo a cirugía.",
     keyPoints: [
-      "Cuando veas:",
-      "• Deposición en jalea de grosella + Masa en salchicha + Lactante.",
-      "Debes pensar en:",
-      "Intususcepción. El tratamiento primario en ausencia de peritonitis es el Enema neumático o hidrostático.",
+      "Cuando veas: Deposición en jalea de grosella + Masa en salchicha + Lactante.",
+      "Debes pensar en: Intususcepción. El tratamiento primario en ausencia de peritonitis es el Enema neumático o hidrostático.",
       "Tema: Cirugía Pediátrica / Obstrucción Intestinal."
     ]
   },
@@ -319,10 +307,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El traumatismo abdominal por desaceleración \"arranca\" la placenta de la pared uterina (Abruptio Placentae Grado III). La sangre retroplacentaria irrita el miometrio causando una contracción tetánica (útero leñoso, durísimo, doloroso). Ante sufrimiento fetal inminente (bradicardia severa) y madre con inestabilidad, la única vía de salvamento materno-fetal es la Cesárea de emergencia instantánea.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEn obstetricia de urgencias, la hipertonía uterina es el llanto final de un útero que tiene un coágulo gigante despegando la placenta. El bebé no tiene de dónde sacar oxígeno; la FC de 90 lpm significa que su corazón se está parando por asfixia. Tratar de frenar este parto con tocolíticos (para detener \"las contracciones\") es letal. Abre el abdomen de inmediato. Muchas veces te encuentras el útero de color violeta oscuro, lleno de sangre miometrial, conocido como el temido Útero de Couvelaire.",
     keyPoints: [
-      "Cuando veas:",
-      "• Sangrado oscuro + Dolor pélvico continuo + Útero hiper-tónico (leñoso) +/- Trauma.",
-      "Debes pensar en:",
-      "Desprendimiento Prematuro de Placenta (Abruptio). Indicación de Cesárea de Urgencia inmediata si el feto está vivo.",
+      "Cuando veas: Sangrado oscuro + Dolor pélvico continuo + Útero hiper-tónico (leñoso) +/- Trauma.",
+      "Debes pensar en: Desprendimiento Prematuro de Placenta (Abruptio). Indicación de Cesárea de Urgencia inmediata si el feto está vivo.",
       "Tema: Ginecología y Obstetricia / Hemorragias de la Segunda Mitad del Embarazo."
     ]
   },
@@ -365,10 +351,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "El criterio diagnóstico universal e inamovible de la Peritonitis Bacteriana Espontánea (PBE) es un recuento de PMN ≥ 250 cél/mm³ en el líquido ascítico. Aquí: 950 totales x 80% = 760 PMN. No se necesita esperar el cultivo (que sale negativo hasta en un 40% de los casos). El tratamiento empírico de elección es una Cefalosporina de 3ra generación intravenosa (Cefotaxima o Ceftriaxona) para cubrir bacterias entéricas que translocaron, asociada frecuentemente a albúmina IV para prevenir falla renal.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEn el paciente cirrótico, la ascitis deja de ser agua inofensiva y se vuelve un caldo de cultivo. Las bacterias del intestino atraviesan la pared intestinal porque el sistema inmune portal está destruido (translocación bacteriana). Si esperas a que el cultivo crezca a las 48 horas, el paciente ya estará en shock séptico. Cefalosporinas de tercera para matar a la E. coli de entrada. Y cuidado con la orina: si le das diuréticos (Opción C) cuando está infectado, le destruyes los riñones y te hace un Síndrome Hepatorrenal letal.",
     keyPoints: [
-      "Cuando veas:",
-      "• Cirrótico con fiebre o encefalopatía + PMN en líquido ascítico > 250/mm³.",
-      "Debes pensar en:",
-      "Peritonitis Bacteriana Espontánea (PBE). Tratamiento = Ceftriaxona o Cefotaxima intravenosa INMEDIATA + Albúmina IV.",
+      "Cuando veas: Cirrótico con fiebre o encefalopatía + PMN en líquido ascítico > 250/mm³.",
+      "Debes pensar en: Peritonitis Bacteriana Espontánea (PBE). Tratamiento = Ceftriaxona o Cefotaxima intravenosa INMEDIATA + Albúmina IV.",
       "Tema: Gastroenterología / Complicaciones de Cirrosis."
     ]
   },
@@ -411,10 +395,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El algoritmo de la ATA (Asociación Americana de Tiroides) para la Tormenta Tiroidea exige este orden estricto: 1) Bloqueo periférico autonómico: Propranolol (frena la taquicardia que mata a la paciente e inhibe la conversión de T4 a T3). 2) Bloqueo de SÍNTESIS nueva: Propiltiouracilo (PTU) o Metimazol (Bloquea la maquinaria de la tiroides). 3) Bloqueo de LIBERACIÓN: Yodo inorgánico (Lugol o Yoduro de potasio). CRUCIAL: Debe administrarse al menos 1 hora DESPUÉS del PTU (Efecto Wolff-Chaikoff). 4) Bloqueo de conversión periférica/Soporte adrenal: Glucocorticoides (Hidrocortisona o Dexametasona IV).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nSi a un paciente ardiendo en fiebre y con el corazón a 180 latidos por una tiroides loca le echas Yodo en el primer paso (Opción C), le estás echando gasolina al fuego. Le acabas de dar los ladrillos perfectos a la glándula para que arme millones de moléculas de tiroxina en segundos. Primero, calmas el corazón con Propranolol. Segundo, cierras la fábrica de cemento con el PTU. Cuando estás seguro de que la maquinaria está rota (1 hora después), ahogas la glándula con el yodo de Lugol para que la hormona que ya estaba hecha no pueda salir a la sangre.",
     keyPoints: [
-      "Cuando veas:",
-      "• Tormenta Tiroidea (Fiebre + Taquicardia + Delirio en Hx de Hipertiroidismo).",
-      "Debes pensar en:",
-      "El orden estricto: 1. Betabloqueador -> 2. Antitiroideo (PTU) -> ESPERAR 1 HORA -> 3. Yodo inorgánico -> 4. Corticoides.",
+      "Cuando veas: Tormenta Tiroidea (Fiebre + Taquicardia + Delirio en Hx de Hipertiroidismo).",
+      "Debes pensar en: El orden estricto: 1. Betabloqueador -> 2. Antitiroideo (PTU) -> ESPERAR 1 HORA -> 3. Yodo inorgánico -> 4. Corticoides.",
       "Tema: Urgencias Endocrinológicas / Tormenta Tiroidea."
     ]
   },
@@ -457,11 +439,8 @@ export const UMNG_CONV_2026_07_26_31_40_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente presenta una herida de alto riesgo para tétanos (herida punzante, entorno rural, heces de caballo) sumado a un historial de vacunación desconocido (que cuenta como esquema incompleto o < 3 dosis). En estos casos de alto riesgo sin vacunas previas garantizadas, las directrices mundiales exigen aplicar AMBAS: inmunidad pasiva instantánea mediante la Inmunoglobulina Antitetánica Humana (IGT) e inmunidad activa empezando con el Toxoide Tetánico (Vacuna Td o Tdap). Es VITAL que ambas inyecciones se administren en sitios anatómicos diferentes (brazos contralaterales o un brazo y un glúteo) para evitar que la inmunoglobulina neutralice la vacuna in situ.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nColega, una herida punzante con un clavo oxidado cubierto de estiércol es la mansión perfecta para el Clostridium tetani (le encanta vivir sin oxígeno en lo profundo). Como no sabemos si el soldado tiene defensas, tenemos que asumir que está indefenso. Para protegerlo HOY MISMO, le pasamos los anticuerpos ya listos (la Inmunoglobulina Antitetánica). Para protegerlo el MES QUE VIENE, empezamos la vacuna. ¡Ojo clínico! Se ponen el mismo día pero NUNCA en la misma jeringa ni en la misma nalga; si las mezclas, se anulan mutuamente y el soldado terminará intubado con opistótonos en la UCI.",
     keyPoints: [
-      "Cuando veas:",
-      "• Herida sucia, profunda o punzante (Tetanígera).",
-      "• Paciente sin vacunas previas o esquema desconocido (< 3 dosis).",
-      "Debes pensar en:",
-      "Inmunización combinada: Vacuna (Td) + Inmunoglobulina (IGT) simultáneas en sitios anatómicos opuestos.",
+      "Cuando veas: Herida sucia, profunda o punzante (Tetanígera) + Paciente sin vacunas previas o esquema desconocido (< 3 dosis).",
+      "Debes pensar en: Inmunización combinada: Vacuna (Td) + Inmunoglobulina (IGT) simultáneas en sitios anatómicos opuestos.",
       "Tema: Infectología / Profilaxis Antitetánica."
     ]
   }

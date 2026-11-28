@@ -47,12 +47,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "B",
     "explanation": "El paciente cursa con **Hemoglobinuria Paroxística Nocturna (HPN)**, complicándose con una trombosis venosa de sitio inusual (Síndrome de Budd-Chiari), que es la principal causa de muerte en esta enfermedad. La HPN es un trastorno clonal adquirido donde las células sanguíneas pierden el anclaje GPI, dejando a los eritrocitos sin sus \"escudos\" protectores (CD55 y CD59) contra el propio sistema del complemento del cuerpo. Esto provoca una hemólisis intravascular mediada por complemento (orina oscura en la mañana por la concentración y acidosis nocturna que activa la vía alternativa), liberando hemoglobina libre que inactiva el óxido nítrico y genera un espasmo vascular y estado hipercoagulable brutal. El tratamiento biológico revolucionario de rescate es el **Eculizumab**, un anticuerpo monoclonal que bloquea el factor C5 del complemento, impidiendo la formación del Complejo de Ataque a la Membrana (MAC) y apagando instantáneamente la hemólisis intravascular y el riesgo trombótico.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Un diagnóstico de internista puro. Las trombosis venosas abdominales (Budd-Chiari) en un paciente joven gritan \"trombofilia\" o \"Síndrome Mieloproliferativo\". Si la hemólisis da Coombs negativo, el cuerpo no está atacando con anticuerpos, sino que el glóbulo rojo está \"desnudo\" frente al complemento. Usar Trombolíticos (Opción C) en un Budd-Chiari por HPN es un abordaje ciego, porque la hemólisis masiva y la deficiencia de óxido nítrico seguirán formando nuevos coágulos instantáneamente. El Eculizumab apaga la cascada terminal del complemento; solo recuerda que, al bloquear el C5, el paciente queda indefenso contra bacterias encapsuladas, por lo que debes vacunarlo contra el meningococo obligatoriamente.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Paciente joven con Trombosis en sitios raros (Venas suprahepáticas, esplácnicas, senos cerebrales).",
-      "• Hemólisis intravascular (LDH alta, haptoglobina cero) con Coombs NEGATIVO.",
-      "• Orina oscura por las mañanas.",
-      "Debes pensar en:",
-      "Hemoglobinuria Paroxística Nocturna (HPN). Se diagnostica por citometría de flujo (ausencia de CD55/CD59). Fármaco salvavidas: Eculizumab.",
+      "Cuando veas: Paciente joven con Trombosis en sitios raros (Venas suprahepáticas, esplácnicas, senos cerebrales) + Hemólisis intravascular (LDH alta, haptoglobina cero) con Coombs NEGATIVO + Orina oscura por las mañanas.",
+      "Debes pensar en: Hemoglobinuria Paroxística Nocturna (HPN). Se diagnostica por citometría de flujo (ausencia de CD55/CD59). Fármaco salvavidas: Eculizumab.",
       "Tema: Anemias Hemolíticas no Inmunes / HPN."
     ]
   },
@@ -99,12 +95,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "C",
     "explanation": "La paciente cursa con **Corea de Sydenham** (Mal de San Vito), un criterio mayor de la **Fiebre Reumática Aguda (FRA)**, confirmada por la historia de faringitis no tratada y el hallazgo de carditis subclínica (soplo mitral). La corea es una manifestación neurológica tardía (aparece 1 a 6 meses después de la infección por el Estreptococo del Grupo A - *S. pyogenes*). Fisiopatológicamente, los anticuerpos contra el estreptococo presentan reactividad cruzada con los ganglios basales del cerebro. Las guías de la AHA establecen que el paso OBLIGATORIO Y PRIMARIO ante cualquier diagnóstico de Fiebre Reumática (independientemente de si el cultivo faríngeo actual es negativo) es la **erradicación del patógeno con Penicilina G Benzatínica**. Esto detiene el estímulo antigénico continuo y es el inicio de la profilaxis secundaria. Solo después de la erradicación se instaura el manejo sintomático de la corea (que puede incluir Valproato, Haloperidol o esteroides si es severa).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Dr., aquí te enfrentan a la prioridad terapéutica. El instinto te dice que a una niña con movimientos anormales severos debes darle un antiepiléptico o un neuroléptico (Opción A). Y sí, el Valproato controlará la corea. Pero si no eliminas el estreptococo que sigue escondido en las amígdalas, el sistema inmune seguirá produciendo anticuerpos que destrozarán las válvulas cardíacas de la niña. La erradicación antibiótica es innegociable y precede a la paliación sintomática. Un soplo apical en este contexto es una Insuficiencia Mitral reumática activa.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Escolar con movimientos involuntarios (corea), labilidad emocional y torpeza (Signo del ordeñador / cuchara).",
-      "• Antecedente de amigdalitis hace semanas o meses.",
-      "• Presencia de un soplo nuevo.",
-      "Debes pensar en:",
-      "Fiebre Reumática Aguda (Corea de Sydenham). El paso número uno en todo paciente con FRA es erradicar el Estreptococo con Penicilina, incluso en ausencia de síntomas faríngeos actuales.",
+      "Cuando veas: Escolar con movimientos involuntarios (corea), labilidad emocional y torpeza (Signo del ordeñador / cuchara) + Antecedente de amigdalitis hace semanas o meses + Presencia de un soplo nuevo.",
+      "Debes pensar en: Fiebre Reumática Aguda (Corea de Sydenham). El paso número uno en todo paciente con FRA es erradicar el Estreptococo con Penicilina, incluso en ausencia de síntomas faríngeos actuales.",
       "Tema: Fiebre Reumática / Neurología Pediátrica."
     ]
   },
@@ -151,11 +143,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "C",
     "explanation": "La paciente presenta los signos clásicos de **Síndrome de Cushing** (estrías anchas violáceas, debilidad proximal, cara de luna llena, HTA y miopatía). El algoritmo diagnóstico del Síndrome de Cushing tiene reglas estrictas dictadas por la Endocrine Society. El primer paso (Fase 1) es DEMOSTRAR que existe exceso de cortisol. Jamás se debe medir el cortisol matutino o la ACTH en este punto, ya que el estrés o el ciclo circadiano los alteran masivamente. Las únicas tres pruebas validadas de primer nivel (screening) son: 1) **Test de Supresión con 1 mg de Dexametasona nocturna** (se da la pastilla a las 11 PM y se mide el cortisol a las 8 AM; en personas sanas el cortisol debe suprimirse < 1.8 mcg/dL), 2) **Cortisol libre en orina de 24 horas** (se necesitan 2 muestras elevadas), o 3) **Cortisol salival nocturno** (en la noche el cortisol debe ser indetectable). Solo después de confirmar el hipercortisolismo con al menos 2 de estas pruebas, se pasa a la Fase 2 (medir ACTH para saber si es dependiente o independiente de la hipófisis).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Este es el protocolo que más confunde a los estudiantes. Imagina el eje endocrino como una fábrica. Si sospechas que la fábrica produce en exceso (Cushing), primero debes probar que hay un exceso incontrolable del producto final (Cortisol) en momentos donde NO debería haberlo (en orina o tras darle un freno falso como la dexametasona). Pedir una ACTH de entrada (Opción A) es un error, porque la ACTH es pulsátil, y un valor normal no te descarta ni confirma nada si aún no sabes si hay hipercortisolismo. Y peor aún es pedir la Resonancia (Opción B) de entrada: hasta un 15% de la población general tiene microadenomas hipofisiarios \"incidentalomas\" que no hacen nada. Si ves una mancha en la RMN, asumirás erróneamente que es la causa, cuando el tumor real podría estar en la glándula suprarrenal.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Paciente con estigmas de Cushing (estrías violáceas >1 cm, giba dorsal, HTA resistente, debilidad proximal).",
-      "• Necesidad de definir el PRIMER examen diagnóstico.",
-      "Debes pensar en:",
-      "Test de Supresión con 1 mg de Dexametasona, Cortisol urinario de 24h, o Cortisol salival nocturno. Prohibido pedir ACTH o Resonancia en el primer escalón.",
+      "Cuando veas: Paciente con estigmas de Cushing (estrías violáceas >1 cm, giba dorsal, HTA resistente, debilidad proximal) + Necesidad de definir el PRIMER examen diagnóstico.",
+      "Debes pensar en: Test de Supresión con 1 mg de Dexametasona, Cortisol urinario de 24h, o Cortisol salival nocturno. Prohibido pedir ACTH o Resonancia en el primer escalón.",
       "Tema: Endocrinología / Síndrome de Cushing."
     ]
   },
@@ -202,12 +191,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "B",
     "explanation": "El lactante cursa con **ALCAPA**, una de las cardiopatías congénitas más fascinantes y letales de la infancia temprana. Fisiopatológicamente, la arteria coronaria izquierda (que irriga la pared anterior y lateral del ventrículo izquierdo) nace de la arteria pulmonar en lugar de la aorta. Al nacimiento (cuando las resistencias pulmonares son altas), la sangre entra a la coronaria sin problemas. Pero a los 1-2 meses de vida, cuando las resistencias pulmonares caen bruscamente, la sangre desoxigenada \"roba\" el flujo coronario hacia la arteria pulmonar, dejando al ventrículo izquierdo completamente isquémico. El cuadro clínico es un **Infarto Agudo de Miocardio en un bebé**. La lactancia exige un alto consumo de oxígeno; el bebé sufre un dolor anginoso atroz (llanto inconsolable, palidez, diaforesis de \"sudor frío\"). El hallazgo patognomónico es el ECG: **ondas Q de necrosis profundas en las derivaciones laterales (I, aVL, V5-V6)**. El tratamiento es la cirugía correctiva urgente de reimplantación coronaria.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Dr., en pediatría los infartos casi no existen, excepto por dos grandes entidades: el Síndrome de Kawasaki (que infarta a niños preescolares por trombosis de aneurismas) y el ALCAPA, que infarta a bebés lactantes menores por mala conexión de tuberías. El llanto al comer es el equivalente al \"dolor de pecho al subir escaleras\" del adulto. Si no reconoces las ondas Q en I y aVL como necrosis lateral en el ECG (como harías en un abuelo infartado), pensarás erróneamente en una bronquiolitis o cólicos del lactante. La Coartación (Opción A) causaría asimetría de pulsos, y el Ductus Arterioso (Opción D) cursaría con el inconfundible soplo continuo \"en maquinaria\", ambos ausentes en este bebé.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Lactante de 1 a 3 meses que llora desesperado, se pone pálido y suda frío SOLO cuando come.",
-      "• Signos de falla cardíaca grave sin un soplo claro.",
-      "• **ECG con Ondas Q de infarto** en derivaciones de pared lateral izquierda (I, aVL).",
-      "Debes pensar en:",
-      "ALCAPA (Origen anómalo de la coronaria izquierda). Es literalmente la \"angina de pecho del lactante\". Requiere diagnóstico ecocardiográfico urgente y cirugía.",
+      "Cuando veas: Lactante de 1 a 3 meses que llora desesperado, se pone pálido y suda frío SOLO cuando come + Signos de falla cardíaca grave sin un soplo claro + **ECG con Ondas Q de infarto** en derivaciones de pared lateral izquierda (I, aVL).",
+      "Debes pensar en: ALCAPA (Origen anómalo de la coronaria izquierda). Es literalmente la \"angina de pecho del lactante\". Requiere diagnóstico ecocardiográfico urgente y cirugía.",
       "Tema: Cardiopatías Congénitas Raras / Cardiología Pediátrica."
     ]
   },
@@ -254,12 +239,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "B",
     "explanation": "El paciente cursa con **Leptospirosis severa o Síndrome de Weil**. Es una zoonosis endémica en zonas rurales y tropicales, transmitida por el contacto con orina de roedores u otros animales (a través del agua estancada o lodo en agricultores). La fase inmunitaria (severa) presenta una tríada clásica e inconfundible: **Ictericia profunda + Insuficiencia Renal Aguda oligúrica + Hemorragias/Trombocitopenia**, acompañada del hallazgo físico patognomónico: la **sufusión conjuntival** (ojos intensamente rojos pero limpios de pus) y el dolor atroz en los músculos gemelos (pantorrillas). Un detalle de laboratorio pivote es la ictericia \"rubínica\": bilirrubinas altísimas pero con transaminasas (AST/ALT) apenas discretamente elevadas (a diferencia de la hepatitis viral donde estarían en miles). El tratamiento empírico de rescate para la leptospirosis grave debe instaurarse de inmediato con **Penicilina G intravenosa** o Ceftriaxona.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Enfrentarse a la fiebre del trópico requiere un ojo de lince. Si el paciente tiene fiebre, está amarillo y tiene plaquetas bajas, las opciones son Dengue, Malaria, Fiebre Amarilla o Leptospirosis. ¿Cómo descifras el enigma? La Malaria cae por la gota gruesa negativa. El Dengue grave (Opción A) no produce típicamente ictericia tan marcada como manifestación inicial, sino hemoconcentración profunda y choque por fuga capilar. La Leptospirosis te grita su nombre en la cara del paciente: la \"sufusión conjuntival\" (vasos dilatados en los ojos sin secreción) y el dolor en las pantorrillas que le impide caminar. Ponerle Penicilina le detiene el daño capilar sistémico. Ojo: al matar la leptospira masivamente con la penicilina, el paciente puede hacer una Reacción de Jarisch-Herxheimer (fiebre y taquicardia de rebote en las primeras 24 horas), lo cual es normal.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Agricultor o persona expuesta a aguas estancadas/lodo con fiebre alta y dolor masivo de pantorrillas.",
-      "• Ojos rojos sin lagañas (sufusión conjuntival).",
-      "• Ictericia profunda + Falla Renal Aguda + Plaquetas bajas.",
-      "Debes pensar en:",
-      "Enfermedad de Weil (Leptospirosis icterohemorrágica). Tratamiento antibiótico de elección: Penicilina G intravenosa o Ceftriaxona. Las transaminasas solo suben levemente pese a la gran ictericia.",
+      "Cuando veas: Agricultor o persona expuesta a aguas estancadas/lodo con fiebre alta y dolor masivo de pantorrillas + Ojos rojos sin lagañas (sufusión conjuntival) + Ictericia profunda + Falla Renal Aguda + Plaquetas bajas.",
+      "Debes pensar en: Enfermedad de Weil (Leptospirosis icterohemorrágica). Tratamiento antibiótico de elección: Penicilina G intravenosa o Ceftriaxona. Las transaminasas solo suben levemente pese a la gran ictericia.",
       "Tema: Infectología Tropical / Leptospirosis."
     ]
   },
@@ -306,12 +287,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "C",
     "explanation": "El paciente cursa con **vómito bilioso**, un signo de alerta roja que indica obstrucción intestinal post-ampular (usualmente una catástrofe quirúrgica inminente como el Vólvulo de intestino medio). La radiografía simple de abdomen mostró la \"doble burbuja\" (que clásicamente se asocia a Atresia Duodenal, pero en la atresia duodenal completa NO HAY gas distal en el intestino). Al haber gas distal, la obstrucción es incompleta y el diagnóstico número uno a descartar es la **Malrotación Intestinal con vólvulo incipiente**. Dado que el paciente está **estable** y sin signos de peritonitis o choque, el estándar de oro radiológico mandatorio es la **Serie de Vías Digestivas Altas (SEGD) con contraste hidrosoluble o bario**. Este examen permite visualizar la anatomía del duodeno: si el ligamento o Ángulo de Treitz NO cruza la línea media hacia la izquierda y el duodeno asume una forma de \"sacacorchos\" (corkscrew sign), se confirma la malrotación/vólvulo, dictando intervención quirúrgica urgente (Procedimiento de Ladd).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Esta es la continuación natural del vólvulo intestinal. Si el bebé con vólvulo llega casi muerto, pálido y con peritonitis, no lo mandas a rayos X, el cirujano lo abre en quirófano. Pero este bebé está *estable*, tiene el abdomen blando y sus signos vitales aguantan. Meter a quirófano a todo bebé que vomita verde es un exceso; debes confirmar el diagnóstico anatómicamente. La SEGD es la reina del vómito verde. La Ecografía (Opción A) evalúa el Píloro (Estenosis Hipertrófica del Píloro), pero en la hipertrofia pilórica el vómito NUNCA es verde (bilioso), es vómito blanco alimentario porque la obstrucción está \"arriba\" de la salida de la bilis.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Neonato o lactante menor con VÓMITO BILIOSO.",
-      "• Paciente ESTABLE, sin choque, con abdomen blando.",
-      "• Rx simple: Puede ser normal o mostrar doble burbuja con aire distal.",
-      "Debes pensar en:",
-      "Descartar Malrotación Intestinal con Vólvulo. El estudio OBLIGATORIO en el niño estable es la **Serie de Vías Digestivas Altas (SEGD)**. Si estuviera chocado/peritonitis, iría a laparotomía directa.",
+      "Cuando veas: Neonato o lactante menor con VÓMITO BILIOSO + Paciente ESTABLE, sin choque, con abdomen blando + Rx simple: Puede ser normal o mostrar doble burbuja con aire distal.",
+      "Debes pensar en: Descartar Malrotación Intestinal con Vólvulo. El estudio OBLIGATORIO en el niño estable es la **Serie de Vías Digestivas Altas (SEGD)**. Si estuviera chocado/peritonitis, iría a laparotomía directa.",
       "Tema: Cirugía Pediátrica / Malrotación Intestinal."
     ]
   },
@@ -358,12 +335,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "B",
     "explanation": "La paciente cursa con **Sarcoidosis** (una enfermedad granulomatosa sistémica), manifestada por tos seca, adenopatías hiliares bilaterales en la radiografía (\"Linfoma de Löfgren\" o estadios II radiológicos) y un compromiso renal/metabólico. Fisiopatológicamente, la hipercalcemia de las enfermedades granulomatosas (Sarcoidosis, Tuberculosis, Linfomas) es impulsada por los **macrófagos** activados dentro del granuloma. Estos macrófagos expresan la enzima **1-alfa-hidroxilasa** de manera autónoma, convirtiendo la 25-OH-Vitamina D circulante en la forma superactiva **1,25-(OH)2-Vitamina D (Calcitriol)**. Esto provoca una absorción masiva de calcio en el intestino (hipercalcemia y supresión secundaria de la PTH) y la posterior nefrocalcinosis (poliuria y falla renal). El tratamiento de elección de primera línea, mágico y fisiológicamente específico para esta hipercalcemia mediada por granulomas, son los **Glucocorticoides (Prednisona)**. Los esteroides inhiben rápidamente la actividad de la 1-alfa-hidroxilasa en el macrófago y apagan la inflamación sarcoidea, normalizando el calcio en pocos días.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Un escenario excelente para entender de dónde viene el calcio. Si la PTH está baja, el culpable no es la paratiroides. Si la PTHrP está indetectable, no es un cáncer escamoso que destruye el hueso. Si los macrófagos están produciendo Vitamina D activa en las sombras del pulmón, el calcio viene de los intestinos (porque la Vitamina D hace que el paciente absorba todo el calcio de la comida). Dar bisfosfonatos (Opción A) en este caso es de segunda línea y menos eficaz, porque los bisfosfonatos paralizan al hueso, pero el problema real es que el intestino está pasando kilos de calcio a la sangre impulsado por el calcitriol granulomatoso. Le das Prednisona y \"matas\" a los macrófagos rebeldes.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Paciente joven/mediana edad con adenopatías hiliares bilaterales en Rx Tórax.",
-      "• Hipercalcemia con PTH baja (suprimida).",
-      "• 1,25-(OH)2-Vitamina D (Calcitriol) muy alta.",
-      "Debes pensar en:",
-      "Hipercalcemia granulomatosa por Sarcoidosis (o TBC). Fisiopatología: Macrófagos producen 1-alfa-hidroxilasa. Tratamiento mágico: Glucocorticoides (apagan la enzima).",
+      "Cuando veas: Paciente joven/mediana edad con adenopatías hiliares bilaterales en Rx Tórax + Hipercalcemia con PTH baja (suprimida) + 1,25-(OH)2-Vitamina D (Calcitriol) muy alta.",
+      "Debes pensar en: Hipercalcemia granulomatosa por Sarcoidosis (o TBC). Fisiopatología: Macrófagos producen 1-alfa-hidroxilasa. Tratamiento mágico: Glucocorticoides (apagan la enzima).",
       "Tema: Neumología / Sarcoidosis / Trastornos del Calcio."
     ]
   },
@@ -410,12 +383,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "A",
     "explanation": "El paciente cursa con la presentación estelar de un **Anillo Vascular Congénito** (siendo el Doble Arco Aórtico el más frecuente y sintomático). En esta malformación embriológica de los arcos branquiales, la tráquea y el esófago quedan \"atrapados y ahorcados\" en un anillo cerrado de grandes vasos que salen del corazón. La clave clínica perfecta para el examen es un estridor que \"está desde el nacimiento\", tiene un **empeoramiento con la deglución** (al tragar leche, el esófago se infla, quitándole espacio a la tráquea dentro del anillo y causando asfixia) y la maniobra postural mágica: la **hiperextensión del cuello** \"estira\" la tráquea hacia arriba, aflojando temporalmente la soga vascular. La laringoscopia normal descarta patología laríngea. El esofagograma con bario sella el diagnóstico inicial al mostrar compresión **en ambos lados (anterior y posterior)** de la columna de contraste, diferenciándolo de las \"asas\" anómalas que solo comprimen de un lado.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Dr., debes diferenciar el estridor benigno del estridor mortal. La Laringomalacia (Opción B) es la causa de estridor más común del mundo en bebés, PERO su estridor es puramente inspiratorio, mejora cuando pones al bebé boca abajo (prono) y la laringoscopia revela la típica epiglotis en \"forma de omega\" que se colapsa. Además, la laringomalacia rara vez causa disfagia o atragantamientos severos por la comida. El doble arco aórtico es un dogal alrededor de los dos tubos de la vida (esófago y tráquea); si el niño toma un biberón, el esófago se distiende y aplasta a la tráquea contra el arco aórtico anterior, ahogándolo en silencio. Si el niño no se opera (seccionar uno de los arcos vasculares), puede sufrir muerte súbita por compresión traqueal aguda.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Estridor crónico (desde semanas/meses) de tipo BIFÁSICO (no solo inspiratorio).",
-      "• Disfagia o empeoramiento del estridor al comer (llorar al tragar o cianosis).",
-      "• El bebé duerme con el cuello hiperextendido (para abrir la vía).",
-      "Debes pensar en:",
-      "Anillo Vascular (Doble Arco Aórtico). Requiere Esofagograma (compresión anterior y posterior) y Angio-Resonancia para planear la sección quirúrgica del anillo vascular.",
+      "Cuando veas: Estridor crónico (desde semanas/meses) de tipo BIFÁSICO (no solo inspiratorio) + Disfagia o empeoramiento del estridor al comer (llorar al tragar o cianosis) + El bebé duerme con el cuello hiperextendido (para abrir la vía).",
+      "Debes pensar en: Anillo Vascular (Doble Arco Aórtico). Requiere Esofagograma (compresión anterior y posterior) y Angio-Resonancia para planear la sección quirúrgica del anillo vascular.",
       "Tema: Malformaciones Torácicas / Anillos Vasculares."
     ]
   },
@@ -462,12 +431,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "B",
     "explanation": "El paciente cursa con una hipoglucemia aguda en el contexto de un alcoholismo crónico con clara **Encefalopatía de Wernicke** en curso. La Encefalopatía de Wernicke es una emergencia neurológica fulminante causada por el déficit agudo o crónico severo de Vitamina B1 (Tiamina), la cual se caracteriza clásicamente por la tríada de: 1) Confusión global, 2) Anormalidades oculomotoras (nistagmo, oftalmoplejía del VI par) y 3) Ataxia troncular. La Tiamina es el cofactor esencial para el metabolismo mitocondrial de la glucosa (enzima piruvato deshidrogenasa). Si a un paciente alcohólico deplecionado de tiamina se le administra un bolo de glucosa pura (como la DAD 50% planeada), las vías metabólicas del cerebro se reactivarán bruscamente exigiendo tiamina. Al no encontrarla, el tejido periacueductal, los cuerpos mamilares y el tálamo medial sufrirán necrosis isquémica y hemorrágica irreversible en cuestión de minutos. Esto condena al paciente al **Síndrome de Korsakoff** (psicosis irreversible, amnesia anterógrada total y confabulación). La regla dorada y sagrada del ACLS/Urgencias es: en desnutridos/alcohólicos, la **Tiamina siempre va antes (o junto) a la glucosa**.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Dr., aquí se decide si le arruinas la vida a un paciente con un suero dulce. El cerebro del alcohólico es una bomba de tiempo. Sin vitamina B1, las neuronas no pueden procesar azúcar, operan en un estado de inanición lenta. Si de repente le metes una carga de Dextrosa por la vena, las neuronas \"intentan\" arrancar todas sus maquinarias, pero la enzima se frena de golpe por la falta de B1; el resultado es una producción de ácido láctico intracelular instantáneo que fríe los cuerpos mamilares. El paciente entrará confuso y despertará con demencia permanente (se inventará historias y no podrá guardar un solo recuerdo nuevo en su vida: Korsakoff). Un ampolla de Tiamina endovenosa salva el tálamo antes de ponerle la dextrosa 50.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Paciente alcohólico crónico en urgencias con alteraciones del sensorio.",
-      "• Tríada: Confusión + Ataxia + Oftalmoplejía/Nistagmo.",
-      "• Intervención de rescate con Dextrosa inminente.",
-      "Debes pensar en:",
-      "Encefalopatía de Wernicke. Para prevenir la precipitación al daño irreversible de Korsakoff, la vitamina B1 (TIAMINA) debe ser infundida por vena antes o al mismo tiempo que los líquidos azucarados.",
+      "Cuando veas: Paciente alcohólico crónico en urgencias con alteraciones del sensorio + Tríada: Confusión + Ataxia + Oftalmoplejía/Nistagmo + Intervención de rescate con Dextrosa inminente.",
+      "Debes pensar en: Encefalopatía de Wernicke. Para prevenir la precipitación al daño irreversible de Korsakoff, la vitamina B1 (TIAMINA) debe ser infundida por vena antes o al mismo tiempo que los líquidos azucarados.",
       "Tema: Urgencias Toxicológicas y Neurológicas / Encefalopatía de Wernicke."
     ]
   },
@@ -514,12 +479,8 @@ export const UCC_CONV_2026_07_26_81_90_QUESTIONS: TrainingQuestion[] = [
     "correctOptionId": "B",
     "explanation": "El paciente presenta el diagnóstico impecable del **Síndrome de Brugada** (tipo 1). Es una canalopatía genética (enfermedad eléctrica pura del corazón sin daño estructural) que afecta los canales de sodio cardíacos, con altísima prevalencia en hombres jóvenes de origen asiático o sudeste asiático. La presentación letal se caracteriza por episodios de síncope severo o muerte súbita por Fibrilación Ventricular (FV) que ocurren patognomónicamente **durante el sueño o en reposo** (o en contextos de fiebre alta). El hallazgo diagnóstico es la imagen de V1-V2: elevación del ST mayor a 2 mm descendente que termina en una onda T invertida (Patrón Tipo 1 \"coved\"). Como el riesgo de recurrencia de Fibrilación Ventricular en pacientes que ya han hecho síncope o paro resucitado (como el de la viñeta, que hizo *gasping* por bajo gasto y despertó milagrosamente) es casi del 100%, los fármacos antiarrítmicos fallan miserablemente. La ÚNICA intervención con evidencia 1A que salva la vida es el \"ángel de la guarda eléctrico\": la **Implantación de un Cardiodesfibrilador Implantable (CDI)** para chocar el corazón desde adentro cuando vuelva a fibrilar.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:** Dr., aquí te engañan con la falsa seguridad del corazón joven. Un joven que convulsiona o jadea en la noche sin explicación tiene Brugada hasta que se demuestre lo contrario. El \"gasping\" que hizo fue porque su corazón se detuvo unos segundos en fibrilación ventricular y se revirtió espontáneamente; la próxima vez no despertará. El error farmacológico es la Opción D (dar Flecainida): el Síndrome de Brugada es precisamente una falla en los canales de sodio; si le das un bloqueador de canales de sodio como la Flecainida (o propafenona), provocarás inmediatamente la arritmia fatal, ¡se usa para desenmascararlo en el electro, no para curarlo! Y los betabloqueadores (Opción A) no previenen la fibrilación en este síndrome (sirven en el QT largo, no aquí). El único tratamiento es meterle un desfibrilador en el pecho para que lo reviva cuando se \"muera\" durmiendo.",
     "keyPoints": [
-      "Cuando veas:",
-      "• Hombre joven (asiático, hispano) con síncope nocturno/reposo.",
-      "• Antecedente familiar de Muerte Súbita en hombres jóvenes (\"Maldición familiar\").",
-      "• ECG: Supra ST en \"aleta de tiburón\" o \"tienda de campaña\" en V1, V2 y T invertida.",
-      "Debes pensar en:",
-      "Síndrome de Brugada Tipo 1. Tratamiento salvavidas tras síncope/paro: Cardiodesfibrilador Automático Implantable (CDI). Los bloqueadores de canales de sodio están contraindicados.",
+      "Cuando veas: Hombre joven (asiático, hispano) con síncope nocturno/reposo + Antecedente familiar de Muerte Súbita en hombres jóvenes (\"Maldición familiar\") + ECG: Supra ST en \"aleta de tiburón\" o \"tienda de campaña\" en V1, V2 y T invertida.",
+      "Debes pensar en: Síndrome de Brugada Tipo 1. Tratamiento salvavidas tras síncope/paro: Cardiodesfibrilador Automático Implantable (CDI). Los bloqueadores de canales de sodio están contraindicados.",
       "Tema: Arritmología / Canalopatías."
     ]
   }
