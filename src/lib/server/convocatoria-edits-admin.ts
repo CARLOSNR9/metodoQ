@@ -1,12 +1,16 @@
 import { FieldValue, Timestamp } from "firebase-admin/firestore";
 import { getConvocatoriaQuestionBank } from "@/lib/questions/convocatoria-bank";
 import {
-  mergeConvocatoriaBank,
   type ConvocatoriaOverrideMap,
   type ConvocatoriaQuestionOverride,
 } from "@/lib/questions/convocatoria-overrides";
 import type { QuestionOption, TrainingQuestion } from "@/lib/questions/types";
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
+import {
+  adminApplyQuestionCorrections,
+  adminDeleteQuestionEditionEdits,
+  invalidateQuestionCorrectionsCache,
+} from "@/lib/server/question-corrections-admin";
 
 const ROOT_COLLECTION = "convocatoriaEdits";
 const QUESTIONS_SUBCOLLECTION = "questions";
@@ -114,6 +118,7 @@ export async function adminSaveConvocatoriaOverride(
       },
       { merge: true },
     );
+  invalidateQuestionCorrectionsCache();
 }
 
 /** Elimina la corrección: la pregunta vuelve a su versión original del código. */
@@ -122,14 +127,22 @@ export async function adminDeleteConvocatoriaOverride(
   questionId: string,
 ): Promise<void> {
   await editionOverridesRef(editionCode).doc(questionId).delete();
+  // La corrección pudo guardarse desde otra edición que comparte la pregunta
+  // (p. ej. UMNG y Univalle): restaurar debe dejarla original en todas.
+  await adminDeleteQuestionEditionEdits(questionId);
 }
 
-/** Banco base del código con las correcciones del profesor ya aplicadas. */
+/**
+ * Banco base del código con las correcciones vigentes ya aplicadas. Las
+ * correcciones se buscan por id de pregunta en todas las ediciones y en el
+ * editor de reportes, porque una misma pregunta se reutiliza en varios
+ * simulacros (Univalle y UdeA se arman con preguntas UCC/UMNG).
+ */
 export async function adminGetMergedConvocatoriaBank(
   editionCode: string,
 ): Promise<TrainingQuestion[]> {
   const base = getConvocatoriaQuestionBank(editionCode);
   if (base.length === 0) return [];
-  const overrides = await adminListConvocatoriaOverrides(editionCode);
-  return mergeConvocatoriaBank(base, overrides);
+  const { questions } = await adminApplyQuestionCorrections(base);
+  return questions;
 }

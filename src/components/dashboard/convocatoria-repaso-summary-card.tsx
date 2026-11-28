@@ -14,7 +14,7 @@ import { getUccRepasoInsights } from "@/lib/diagnostic/ucc-exam-blueprint";
 import {
   buildSessionErrorsTrainingHref,
   buildTopicTrainingHref,
-  resolveSessionQuestions,
+  resolveCorrectedSessionQuestions,
 } from "@/lib/session-review";
 import {
   getFeaturedConvocatoriaEditionForUser,
@@ -89,7 +89,7 @@ export function ConvocatoriaRepasoSummaryCard({
       setInsights(null);
       return;
     }
-    resolveSessionQuestions(loaded.attempt.sessionQuestionIds).then((questions) => {
+    resolveCorrectedSessionQuestions(loaded.attempt.sessionQuestionIds).then((questions) => {
       if (questions.length === 0) {
         setInsights(null);
       } else {
@@ -105,7 +105,7 @@ export function ConvocatoriaRepasoSummaryCard({
       setSessionErrorsHref("");
       return;
     }
-    resolveSessionQuestions(loaded.attempt.sessionQuestionIds).then((questions) => {
+    resolveCorrectedSessionQuestions(loaded.attempt.sessionQuestionIds).then((questions) => {
       const href = buildSessionErrorsTrainingHref({
         resultId: loaded.attempt.resultId,
         questionIds: questions

@@ -13,7 +13,7 @@ import {
   getSessionTypeLabel,
   type DemoResultItem,
 } from "@/lib/results";
-import { hasSessionReviewData, resolveSessionQuestions } from "@/lib/session-review";
+import { hasSessionReviewData, resolveCorrectedSessionQuestions } from "@/lib/session-review";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import {
   getConvocatoriaDisplayTitle,
@@ -78,7 +78,7 @@ export default function SessionReviewPage({ resultId }: SessionReviewPageProps) 
       setSessionQuestions([]);
       return;
     }
-    resolveSessionQuestions(result.sessionQuestionIds).then(setSessionQuestions);
+    resolveCorrectedSessionQuestions(result.sessionQuestionIds).then(setSessionQuestions);
   }, [result?.sessionQuestionIds]);
 
   const isConvocatoria = result?.sessionType === "convocatoria";
