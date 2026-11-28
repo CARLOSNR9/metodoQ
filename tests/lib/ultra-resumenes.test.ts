@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { GENERAL_ULTRA_CATEGORIES, GENERAL_ULTRA_GROUP_ORDER } from "@/lib/ultra-resumenes/general";
-import { MIR_BANK_SECTION_TITLE, buildMirUltraSummary, getMirLevel, getTopicBase } from "@/lib/ultra-resumenes/mir";
+import { MIR_BANK_SECTION_TITLE, buildMirUltraSummary, getMirLevel, getTopicBase, placeOfficialCards } from "@/lib/ultra-resumenes/mir";
 import { MIR_ULTRA_CONTENT } from "@/lib/ultra-resumenes/mir-content";
 import { MIR_OFFICIAL_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
@@ -113,13 +113,52 @@ describe("contenido propio de los ultra resúmenes MIR", () => {
     }
   });
 
-  it("cada categoría MIR carga primero los temas y después el repaso con preguntas oficiales", async () => {
+  it("cada categoría MIR coloca las preguntas oficiales debajo de la ficha de su tema", async () => {
     const summary = buildMirUltraSummary();
-    const cardio = summary.specialties.find((s) => s.slug === "cardiologia")!;
-    const entries = await cardio.load();
-    expect(entries[0].kind).toBe("heading");
-    const bankIndex = entries.findIndex((entry) => entry.kind === "heading" && entry.title === MIR_BANK_SECTION_TITLE);
-    expect(bankIndex).toBeGreaterThan(0);
-    expect(entries.filter(isUltraCard)).toHaveLength(cardio.cardCount);
+    for (const specialty of summary.specialties) {
+      const entries = await specialty.load();
+      expect(entries[0].kind, specialty.slug).toBe("heading");
+      expect(entries.filter(isUltraCard), specialty.slug).toHaveLength(specialty.cardCount);
+      const bankIndex = entries.findIndex((entry) => entry.kind === "heading" && entry.title === MIR_BANK_SECTION_TITLE);
+      entries.forEach((entry, index) => {
+        if (!isUltraCard(entry) || !entry.official) return;
+        // Va tras una ficha (propia u otra oficial de la misma ficha), nunca tras un separador ni al final.
+        expect(entries[index - 1].kind, entry.id).toBe("card");
+        if (bankIndex >= 0) expect(index, entry.id).toBeLessThan(bankIndex);
+      });
+      expect(entries.filter((entry) => isUltraCard(entry) && entry.official).length, specialty.slug).toBeGreaterThan(0);
+    }
+
+    const digestivo = summary.specialties.find((s) => s.slug === "digestivo")!;
+    const entries = await digestivo.load();
+    const parentOf = (title: string) => {
+      let parent = "";
+      for (const entry of entries) {
+        if (isUltraCard(entry) && !entry.official) parent = entry.title;
+        if (isUltraCard(entry) && entry.official && entry.title.toLowerCase() === title.toLowerCase()) return parent;
+      }
+      return null;
+    };
+    expect(parentOf("Síndrome de lynch")).toBe("Pólipos y síndromes hereditarios");
+    expect(parentOf("Poliposis adenomatosa familiar")).toBe("Pólipos y síndromes hereditarios");
+    expect(parentOf("Hernia inguinal")).toBe("Hernias");
+  });
+
+  it("deja al final las preguntas oficiales que no encajan con ninguna ficha", () => {
+    const entries = placeOfficialCards(
+      [
+        { kind: "heading", id: "h", title: "Tumores de colon", level: 1 },
+        { kind: "card", id: "polipos", title: "Pólipos y síndromes hereditarios", points: ["Síndrome de Lynch: inestabilidad de microsatélites, colon derecho."] },
+        { kind: "card", id: "hernias", title: "Hernias", points: ["Hernia inguinal indirecta: la más frecuente."] },
+      ],
+      [
+        { kind: "card", id: "b1", title: "Síndrome de Lynch", points: ["Lynch: genes de reparación, microsatélites, colon derecho."] },
+        { kind: "card", id: "b2", title: "Metaanálisis", points: ["Combina estudios."] },
+      ],
+      "x",
+      1,
+    );
+    expect(entries.map((entry) => entry.id)).toEqual(["h", "polipos", "b1", "hernias", "mir-x-banco", "b2"]);
+    expect(entries[2]).toMatchObject({ official: true });
   });
 });
