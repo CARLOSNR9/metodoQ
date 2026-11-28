@@ -13,7 +13,7 @@ export default async function ProfessorAttendancePage() {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Seguimiento
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Control de asistencia
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">

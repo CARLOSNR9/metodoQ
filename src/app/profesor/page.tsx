@@ -101,7 +101,7 @@ export default async function ProfessorHomePage() {
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Panel docente
         </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
           Tu espacio de enseñanza
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-mq-muted sm:text-base">
@@ -113,24 +113,24 @@ export default async function ProfessorHomePage() {
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-xl border border-mq-border bg-mq-surface-raised/60 p-5">
           <p className="text-xs uppercase tracking-wider text-mq-muted">Preguntas pendientes</p>
-          <p className="mt-2 text-3xl font-bold text-white">{pendingCount}</p>
+          <p className="mt-2 text-3xl font-bold text-slate-900">{pendingCount}</p>
         </div>
         <div className="rounded-xl border border-mq-border bg-mq-surface-raised/60 p-5">
           <p className="text-xs uppercase tracking-wider text-mq-muted">Clases próximas</p>
-          <p className="mt-2 text-3xl font-bold text-white">{upcomingClasses}</p>
+          <p className="mt-2 text-3xl font-bold text-slate-900">{upcomingClasses}</p>
         </div>
         <div className="rounded-xl border border-mq-border bg-mq-surface-raised/60 p-5">
           <p className="text-xs uppercase tracking-wider text-mq-muted">Alumnos Pro</p>
-          <p className="mt-2 text-3xl font-bold text-white">{studentCounts.pro}</p>
+          <p className="mt-2 text-3xl font-bold text-slate-900">{studentCounts.pro}</p>
         </div>
         <div className="rounded-xl border border-mq-border bg-mq-surface-raised/60 p-5">
           <p className="text-xs uppercase tracking-wider text-mq-muted">Residentes</p>
-          <p className="mt-2 text-3xl font-bold text-white">{studentCounts.residente}</p>
+          <p className="mt-2 text-3xl font-bold text-slate-900">{studentCounts.residente}</p>
         </div>
       </div>
 
       <section className="mt-10">
-        <h2 className="text-lg font-semibold text-white">Accesos rápidos</h2>
+        <h2 className="text-lg font-semibold text-slate-900">Accesos rápidos</h2>
         <ul className="mt-4 grid gap-3 sm:grid-cols-2">
           {quickLinks.map((item) => {
             const Icon = item.icon;
@@ -143,7 +143,7 @@ export default async function ProfessorHomePage() {
                   <div className="flex items-start gap-3">
                     <Icon className="mt-0.5 h-5 w-5 shrink-0 text-mq-accent" />
                     <div>
-                      <p className="font-semibold text-white">{item.title}</p>
+                      <p className="font-semibold text-slate-900">{item.title}</p>
                       <p className="mt-1 text-sm text-mq-muted">{item.detail}</p>
                     </div>
                   </div>
