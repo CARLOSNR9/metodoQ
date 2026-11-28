@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-tumores-de-intestino-delgado-y-colon",
     "title": "Tumores de intestino delgado y colon",
     "level": 1,
-    "meta": "22 preguntas MIR 2016-2026"
+    "meta": "22 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -47,7 +47,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-cirugia-plastica-y-quemados",
     "title": "Cirugía plástica y quemados",
     "level": 1,
-    "meta": "19 preguntas MIR 2016-2026"
+    "meta": "19 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -87,7 +87,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-tumores-de-pancreas",
     "title": "Tumores de páncreas",
     "level": 1,
-    "meta": "15 preguntas MIR 2016-2026"
+    "meta": "15 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -116,7 +116,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-enfermedad-inflamatoria-intestinal",
     "title": "Enfermedad inflamatoria intestinal",
     "level": 1,
-    "meta": "13 preguntas MIR 2016-2026"
+    "meta": "13 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -165,7 +165,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-esofago-reflujo-barrett-y-esofagitis-eosinofilica",
     "title": "Esófago: reflujo, Barrett y esofagitis eosinofílica",
     "level": 1,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -203,7 +203,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-cirrosis-y-sus-complicaciones",
     "title": "Cirrosis y sus complicaciones",
     "level": 1,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -243,7 +243,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-vesicula-biliar",
     "title": "Vesícula biliar",
     "level": 1,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -272,7 +272,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-via-biliar",
     "title": "Vía biliar",
     "level": 1,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -299,7 +299,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-pared-abdominal-hernias",
     "title": "Pared abdominal: hernias",
     "level": 1,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -319,7 +319,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-abscesos-y-tumores-hepaticos",
     "title": "Abscesos y tumores hepáticos",
     "level": 1,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -347,7 +347,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-complicaciones-de-la-cirugia-general",
     "title": "Complicaciones de la cirugía general",
     "level": 1,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -365,7 +365,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-ulcera-peptica",
     "title": "Úlcera péptica",
     "level": 2,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -393,7 +393,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-obstruccion-intestinal",
     "title": "Obstrucción intestinal",
     "level": 2,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -412,7 +412,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-patologia-anal",
     "title": "Patología anal",
     "level": 2,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -431,7 +431,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-hepatitis-viricas-cronicas",
     "title": "Hepatitis víricas crónicas",
     "level": 2,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -459,7 +459,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-hemocromatosis-y-wilson",
     "title": "Hemocromatosis y Wilson",
     "level": 2,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -488,7 +488,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-pancreatitis-cronica",
     "title": "Pancreatitis crónica",
     "level": 2,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -506,7 +506,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-pancreatitis-aguda",
     "title": "Pancreatitis aguda",
     "level": 3,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -525,7 +525,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-tumores-gastricos-esofago-y-trastornos-motores",
     "title": "Tumores gástricos, esófago y trastornos motores",
     "level": 3,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -563,7 +563,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-diarrea-enfermedad-diverticular-e-isquemia-intestinal",
     "title": "Diarrea, enfermedad diverticular e isquemia intestinal",
     "level": 3,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -601,7 +601,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-trasplante-hepatico",
     "title": "Trasplante hepático",
     "level": 3,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -619,7 +619,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-higado-graso-hemorragia-digestiva-apendicitis-y-otros",
     "title": "Hígado graso, hemorragia digestiva, apendicitis y otros",
     "level": 4,
-    "meta": "35 preguntas MIR 2016-2026"
+    "meta": "35 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -677,7 +677,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-digestivo-t-temas-marginales-higado-esofago-y-cirugia",
     "title": "Temas marginales: hígado, esófago y cirugía",
     "level": 5,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",

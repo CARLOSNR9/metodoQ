@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-cardiopatia-isquemica",
     "title": "Cardiopatía isquémica",
     "level": 1,
-    "meta": "27 preguntas MIR 2016-2026"
+    "meta": "27 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -141,7 +141,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-insuficiencia-cardiaca",
     "title": "Insuficiencia cardiaca",
     "level": 1,
-    "meta": "23 preguntas MIR 2016-2026"
+    "meta": "23 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -220,7 +220,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-enfermedades-de-la-aorta-y-patologia-arterial",
     "title": "Enfermedades de la aorta y patología arterial",
     "level": 1,
-    "meta": "21 preguntas MIR 2016-2026"
+    "meta": "21 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -298,7 +298,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-taquicardias",
     "title": "Taquicardias",
     "level": 1,
-    "meta": "17 preguntas MIR 2016-2026"
+    "meta": "17 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -386,7 +386,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-valvulopatias",
     "title": "Valvulopatías",
     "level": 1,
-    "meta": "15 preguntas MIR 2016-2026"
+    "meta": "15 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -449,7 +449,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-enfermedades-del-pericardio",
     "title": "Enfermedades del pericardio",
     "level": 2,
-    "meta": "14 preguntas MIR 2016-2026"
+    "meta": "14 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -501,7 +501,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-hipertension-arterial",
     "title": "Hipertensión arterial",
     "level": 2,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -551,7 +551,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-enfermedades-del-miocardio",
     "title": "Enfermedades del miocardio",
     "level": 2,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -603,7 +603,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-cardiopatias-congenitas",
     "title": "Cardiopatías congénitas",
     "level": 3,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -623,7 +623,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-farmacos-en-cardiologia",
     "title": "Fármacos en cardiología",
     "level": 3,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -654,7 +654,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-anatomia-y-fisiologia-cardiaca",
     "title": "Anatomía y fisiología cardiaca",
     "level": 4,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -672,7 +672,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-bradicardias",
     "title": "Bradicardias",
     "level": 4,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -691,7 +691,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-reanimacion-cardiopulmonar",
     "title": "Reanimación cardiopulmonar",
     "level": 4,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -711,7 +711,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-venas-y-linfaticos",
     "title": "Venas y linfáticos",
     "level": 4,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -730,7 +730,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-sincope",
     "title": "Síncope",
     "level": 4,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -748,7 +748,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-semiologia-cardiovascular",
     "title": "Semiología cardiovascular",
     "level": 5,
-    "meta": "2 preguntas MIR 2016-2026"
+    "meta": "2 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -766,7 +766,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-cardiologia-t-tumores-cardiacos",
     "title": "Tumores cardiacos",
     "level": 5,
-    "meta": "1 pregunta MIR 2016-2026"
+    "meta": "1 pregunta en el MIR"
   },
   {
     "kind": "card",

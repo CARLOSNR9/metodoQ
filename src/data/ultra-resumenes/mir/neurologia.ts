@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-neurocirugia-raquis-tce-hipertension-intracraneal-y-tumores",
     "title": "Neurocirugía: raquis, TCE, hipertensión intracraneal y tumores",
     "level": 1,
-    "meta": "36 preguntas MIR 2016-2026"
+    "meta": "36 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -96,7 +96,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-enfermedad-cerebrovascular",
     "title": "Enfermedad cerebrovascular",
     "level": 1,
-    "meta": "19 preguntas MIR 2016-2026"
+    "meta": "19 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -179,7 +179,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-semiologia-y-localizacion",
     "title": "Semiología y localización",
     "level": 1,
-    "meta": "18 preguntas MIR 2016-2026"
+    "meta": "18 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -231,7 +231,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-trastornos-del-movimiento",
     "title": "Trastornos del movimiento",
     "level": 1,
-    "meta": "15 preguntas MIR 2016-2026"
+    "meta": "15 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -282,7 +282,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-epilepsia",
     "title": "Epilepsia",
     "level": 2,
-    "meta": "14 preguntas MIR 2016-2026"
+    "meta": "14 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -312,7 +312,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-demencias",
     "title": "Demencias",
     "level": 2,
-    "meta": "13 preguntas MIR 2016-2026"
+    "meta": "13 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -341,7 +341,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-enfermedades-desmielinizantes",
     "title": "Enfermedades desmielinizantes",
     "level": 3,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -369,7 +369,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-cefaleas",
     "title": "Cefaleas",
     "level": 4,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -396,7 +396,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-miopatias-y-placa-motora",
     "title": "Miopatías y placa motora",
     "level": 4,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -425,7 +425,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neurologia-t-neuropatias-coma-motoneurona-y-nutricionales",
     "title": "Neuropatías, coma, motoneurona y nutricionales",
     "level": 5,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",

@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-estadistica-t-tipos-de-estudios-epidemiologicos",
     "title": "Tipos de estudios epidemiológicos",
     "level": 1,
-    "meta": "54 preguntas MIR 2016-2026"
+    "meta": "54 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -47,7 +47,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-estadistica-t-medidas-de-frecuencia-y-de-efecto",
     "title": "Medidas de frecuencia y de efecto",
     "level": 2,
-    "meta": "17 preguntas MIR 2016-2026"
+    "meta": "17 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -75,7 +75,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-estadistica-t-validacion-de-pruebas-diagnosticas",
     "title": "Validación de pruebas diagnósticas",
     "level": 3,
-    "meta": "13 preguntas MIR 2016-2026"
+    "meta": "13 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -94,7 +94,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-estadistica-t-contraste-de-hipotesis",
     "title": "Contraste de hipótesis",
     "level": 3,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -113,7 +113,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-estadistica-t-sesgos-y-confusion",
     "title": "Sesgos y confusión",
     "level": 4,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -131,7 +131,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-estadistica-t-estadistica-inferencial-y-descriptiva",
     "title": "Estadística inferencial y descriptiva",
     "level": 5,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",

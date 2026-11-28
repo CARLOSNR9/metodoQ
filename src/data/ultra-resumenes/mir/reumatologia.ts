@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-vasculitis",
     "title": "Vasculitis",
     "level": 1,
-    "meta": "23 preguntas MIR 2016-2026"
+    "meta": "23 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -48,7 +48,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-espondiloartritis-y-artritis-psoriasica",
     "title": "Espondiloartritis y artritis psoriásica",
     "level": 1,
-    "meta": "13 preguntas MIR 2016-2026"
+    "meta": "13 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -76,7 +76,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-lupus-y-sindrome-antifosfolipido",
     "title": "Lupus y síndrome antifosfolípido",
     "level": 1,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -106,7 +106,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-osteoporosis-y-enfermedades-metabolicas-oseas",
     "title": "Osteoporosis y enfermedades metabólicas óseas",
     "level": 1,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -134,7 +134,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-esclerosis-sistemica",
     "title": "Esclerosis sistémica",
     "level": 2,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -153,7 +153,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-gota-y-artritis-por-microcristales",
     "title": "Gota y artritis por microcristales",
     "level": 2,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -180,7 +180,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-miopatias-inflamatorias",
     "title": "Miopatías inflamatorias",
     "level": 2,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -199,7 +199,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-artritis-reumatoide-y-otras-enfermedades",
     "title": "Artritis reumatoide y otras enfermedades",
     "level": 3,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -227,7 +227,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-autoinflamatorias-artritis-septica-y-sjogren",
     "title": "Autoinflamatorias, artritis séptica y Sjögren",
     "level": 4,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -262,7 +262,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-reumatologia-t-artrosis-still-y-bases",
     "title": "Artrosis, Still y bases",
     "level": 5,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",

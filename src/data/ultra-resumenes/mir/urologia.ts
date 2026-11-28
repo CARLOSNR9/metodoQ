@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-urologia-t-infecciones-urinarias",
     "title": "Infecciones urinarias",
     "level": 1,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -25,7 +25,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-urologia-t-cancer-de-prostata",
     "title": "Cáncer de próstata",
     "level": 1,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -52,7 +52,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-urologia-t-litiasis-urinaria",
     "title": "Litiasis urinaria",
     "level": 1,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -71,7 +71,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-urologia-t-tumores-uroteliales",
     "title": "Tumores uroteliales",
     "level": 1,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -89,7 +89,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-urologia-t-incontinencia-urinaria",
     "title": "Incontinencia urinaria",
     "level": 2,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -106,7 +106,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-urologia-t-andrologia-e-hiperplasia-de-prostata",
     "title": "Andrología e hiperplasia de próstata",
     "level": 3,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -131,7 +131,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-urologia-t-rinon-y-testiculo",
     "title": "Riñón y testículo",
     "level": 4,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -157,7 +157,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-urologia-t-anatomia-trasplante-y-traumatismos",
     "title": "Anatomía, trasplante y traumatismos",
     "level": 5,
-    "meta": "3 preguntas MIR 2016-2026"
+    "meta": "3 preguntas en el MIR"
   },
   {
     "kind": "card",

@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-oftalmologia-t-retina",
     "title": "Retina",
     "level": 1,
-    "meta": "17 preguntas MIR 2016-2026"
+    "meta": "17 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -45,7 +45,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-oftalmologia-t-neurooftalmologia-uveitis-y-glaucoma",
     "title": "Neurooftalmología, uveítis y glaucoma",
     "level": 2,
-    "meta": "15 preguntas MIR 2016-2026"
+    "meta": "15 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -84,7 +84,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-oftalmologia-t-conjuntiva-cristalino-cornea-y-refraccion",
     "title": "Conjuntiva, cristalino, córnea y refracción",
     "level": 3,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",

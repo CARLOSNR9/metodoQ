@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-diabetes-mellitus",
     "title": "Diabetes mellitus",
     "level": 1,
-    "meta": "30 preguntas MIR 2016-2026"
+    "meta": "30 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -82,7 +82,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-tiroides",
     "title": "Tiroides",
     "level": 1,
-    "meta": "22 preguntas MIR 2016-2026"
+    "meta": "22 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -165,7 +165,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-hipotalamo-e-hipofisis",
     "title": "Hipotálamo e hipófisis",
     "level": 1,
-    "meta": "19 preguntas MIR 2016-2026"
+    "meta": "19 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -247,7 +247,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-metabolismo-y-errores-congenitos",
     "title": "Metabolismo y errores congénitos",
     "level": 2,
-    "meta": "16 preguntas MIR 2016-2026"
+    "meta": "16 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -278,7 +278,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-glandulas-suprarrenales",
     "title": "Glándulas suprarrenales",
     "level": 2,
-    "meta": "14 preguntas MIR 2016-2026"
+    "meta": "14 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -350,7 +350,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-lipidos",
     "title": "Lípidos",
     "level": 2,
-    "meta": "14 preguntas MIR 2016-2026"
+    "meta": "14 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -389,7 +389,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-nutricion-y-obesidad",
     "title": "Nutrición y obesidad",
     "level": 3,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -418,7 +418,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-metabolismo-del-calcio",
     "title": "Metabolismo del calcio",
     "level": 4,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -449,7 +449,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-men-y-tumores-neuroendocrinos",
     "title": "MEN y tumores neuroendocrinos",
     "level": 4,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -466,7 +466,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-endocrinologia-t-tumores-neuroendocrinos-hipoglucemias-y-sindrome-metabolico",
     "title": "Tumores neuroendocrinos, hipoglucemias y síndrome metabólico",
     "level": 5,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",

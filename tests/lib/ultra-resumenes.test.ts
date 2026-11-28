@@ -1,10 +1,20 @@
 import { describe, expect, it } from "vitest";
 import { GENERAL_ULTRA_CATEGORIES, GENERAL_ULTRA_GROUP_ORDER } from "@/lib/ultra-resumenes/general";
-import { MIR_BANK_SECTION_TITLE, buildMirUltraSummary, getMirLevel, getTopicBase, placeOfficialCards } from "@/lib/ultra-resumenes/mir";
+import {
+  MIR_BANK_SECTION_TITLE,
+  buildCasingDictionary,
+  buildMirUltraSummary,
+  dedupePoints,
+  formatTopicTitle,
+  getMirLevel,
+  getTopicBase,
+  placeOfficialCards,
+} from "@/lib/ultra-resumenes/mir";
+import { MIR_OFFICIAL_PLACEMENTS } from "@/lib/ultra-resumenes/mir-placements";
 import { MIR_ULTRA_CONTENT } from "@/lib/ultra-resumenes/mir-content";
 import { MIR_OFFICIAL_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
-import { isUltraCard, type UltraEntry } from "@/lib/ultra-resumenes/types";
+import { isUltraCard, type UltraCard, type UltraEntry } from "@/lib/ultra-resumenes/types";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
 describe("ultra resúmenes generales", () => {
@@ -120,26 +130,36 @@ describe("contenido propio de los ultra resúmenes MIR", () => {
       expect(entries[0].kind, specialty.slug).toBe("heading");
       expect(entries.filter(isUltraCard), specialty.slug).toHaveLength(specialty.cardCount);
       const bankIndex = entries.findIndex((entry) => entry.kind === "heading" && entry.title === MIR_BANK_SECTION_TITLE);
+      let parent: string | null = null;
       entries.forEach((entry, index) => {
-        if (!isUltraCard(entry) || !entry.official) return;
-        // Va tras una ficha (propia u otra oficial de la misma ficha), nunca tras un separador ni al final.
-        expect(entries[index - 1].kind, entry.id).toBe("card");
-        if (bankIndex >= 0) expect(index, entry.id).toBeLessThan(bankIndex);
+        if (!isUltraCard(entry)) return;
+        if (!entry.official) {
+          parent = entry.id;
+          return;
+        }
+        if (entry.linkedTo) {
+          // Va justo bajo su ficha propia (o tras otras oficiales de la misma ficha).
+          expect(entry.linkedTo, entry.id).toBe(parent);
+          if (bankIndex >= 0) expect(index, entry.id).toBeLessThan(bankIndex);
+        } else {
+          expect(index, entry.id).toBeGreaterThan(bankIndex);
+        }
       });
-      expect(entries.filter((entry) => isUltraCard(entry) && entry.official).length, specialty.slug).toBeGreaterThan(0);
+      expect(entries.filter((entry) => isUltraCard(entry) && entry.linkedTo).length, specialty.slug).toBeGreaterThan(0);
     }
 
     const digestivo = summary.specialties.find((s) => s.slug === "digestivo")!;
     const entries = await digestivo.load();
+    const titles = new Map(entries.filter(isUltraCard).map((card) => [card.id, card.title]));
     const parentOf = (title: string) => {
-      let parent = "";
-      for (const entry of entries) {
-        if (isUltraCard(entry) && !entry.official) parent = entry.title;
-        if (isUltraCard(entry) && entry.official && entry.title.toLowerCase() === title.toLowerCase()) return parent;
-      }
-      return null;
+      const card = entries.filter(isUltraCard).find((entry) => entry.official && entry.title === title);
+      if (!card) return null;
+      return card.linkedTo ? titles.get(card.linkedTo) : "";
     };
-    expect(parentOf("Síndrome de lynch")).toBe("Pólipos y síndromes hereditarios");
+    expect(parentOf("Síndrome de Lynch")).toBe("Pólipos y síndromes hereditarios");
+    expect(parentOf("Cáncer de esófago")).toBe("Disfagia y trastornos motores");
+    expect(parentOf("Pancreatitis crónica")).toBe("Pancreatitis crónica");
+    expect(parentOf("Adenocarcinoma duodenal")).toBe("");
     expect(parentOf("Poliposis adenomatosa familiar")).toBe("Pólipos y síndromes hereditarios");
     expect(parentOf("Hernia inguinal")).toBe("Hernias");
   });
@@ -159,6 +179,57 @@ describe("contenido propio de los ultra resúmenes MIR", () => {
       1,
     );
     expect(entries.map((entry) => entry.id)).toEqual(["h", "polipos", "b1", "hernias", "mir-x-banco", "b2"]);
-    expect(entries[2]).toMatchObject({ official: true });
+    expect(entries[2]).toMatchObject({ official: true, linkedTo: "polipos" });
+    expect(entries[5]).toMatchObject({ official: true, linkedTo: undefined });
+  });
+
+  it("la colocación manual manda sobre el emparejamiento automático", () => {
+    const own: UltraEntry[] = [
+      { kind: "card", id: "polipos", title: "Pólipos y síndromes hereditarios", points: ["Síndrome de Lynch: microsatélites."] },
+      { kind: "card", id: "hernias", title: "Hernias", points: ["Hernia inguinal."] },
+    ];
+    const official: UltraCard[] = [
+      { kind: "card", id: "b1", title: "Síndrome de Lynch", points: ["Lynch: microsatélites."] },
+      { kind: "card", id: "b2", title: "Hernia inguinal", points: ["Hernia inguinal."] },
+    ];
+    const entries = placeOfficialCards(own, official, "x", 1, { "sindrome de LYNCH": "hernias", "Hernia inguinal": null });
+    expect(entries.map((entry) => entry.id)).toEqual(["polipos", "hernias", "b1", "mir-x-banco", "b2"]);
+  });
+
+  it("la colocación manual solo nombra preguntas oficiales y fichas que existen", async () => {
+    const summary = buildMirUltraSummary();
+    const norm = (text: string) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    for (const [slug, placements] of Object.entries(MIR_OFFICIAL_PLACEMENTS)) {
+      const specialty = summary.specialties.find((s) => s.slug === slug);
+      expect(specialty, slug).toBeDefined();
+      const officialTitles = new Set(specialty!.cards.map((card) => norm(card.title)));
+      const own = MIR_ULTRA_CONTENT.find((item) => item.slug === slug)!;
+      const ownTitles = new Set((await own.load()).filter(isUltraCard).map((card) => norm(card.title)));
+      for (const [official, target] of Object.entries(placements)) {
+        expect(officialTitles.has(norm(official)), `${slug}: ${official}`).toBe(true);
+        if (target !== null) expect(ownTitles.has(norm(target)), `${slug}: ${target}`).toBe(true);
+      }
+    }
+  });
+
+  it("recupera las mayúsculas de los temas y quita puntos repetidos", () => {
+    const casing = buildCasingDictionary([
+      "Cáncer de colon en el síndrome de Lynch y en la enfermedad de Crohn.",
+      "Pacientes con VIH y tratamiento con IECA; el síndrome es raro.",
+    ]);
+    expect(formatTopicTitle("SÍNDROME DE LYNCH", casing)).toBe("Síndrome de Lynch");
+    expect(formatTopicTitle("ENFERMEDAD DE CROHN", casing)).toBe("Enfermedad de Crohn");
+    expect(formatTopicTitle("VIH Y EMBARAZO", casing)).toBe("VIH y embarazo");
+    expect(formatTopicTitle("IECA Y ANTAGONISTAS", casing)).toBe("IECA y antagonistas");
+    expect(formatTopicTitle("REACCIONES ADVERSAS TIPO A Y TIPO B", casing)).toBe("Reacciones adversas tipo A y tipo B");
+    expect(
+      dedupePoints([
+        "PAF: gen APC, autosómica dominante; cientos de adenomas y riesgo de cáncer colorrectal ~100 %.",
+        "Extracolónico: hipertrofia del epitelio pigmentario de la retina, osteomas y desmoides (Gardner).",
+        "PAF: gen APC, autosómica dominante; riesgo de CCR cercano al 100%.",
+        "Hipertrofia congénita del epitelio pigmentario de la retina.",
+        "Gardner: osteomas y desmoides; Turcot: tumores del SNC; colectomía profiláctica.",
+      ]),
+    ).toHaveLength(3);
   });
 });

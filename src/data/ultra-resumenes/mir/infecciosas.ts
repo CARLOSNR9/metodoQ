@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-sepsis-infecciones-nosocomiales-y-neutropenia-febril",
     "title": "Sepsis, infecciones nosocomiales y neutropenia febril",
     "level": 1,
-    "meta": "21 preguntas MIR 2016-2026"
+    "meta": "21 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -73,7 +73,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-infecciones-por-virus",
     "title": "Infecciones por virus",
     "level": 1,
-    "meta": "17 preguntas MIR 2016-2026"
+    "meta": "17 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -127,7 +127,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-vih-y-sida",
     "title": "VIH y sida",
     "level": 1,
-    "meta": "17 preguntas MIR 2016-2026"
+    "meta": "17 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -180,7 +180,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-tuberculosis-y-micobacterias",
     "title": "Tuberculosis y micobacterias",
     "level": 1,
-    "meta": "14 preguntas MIR 2016-2026"
+    "meta": "14 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -223,7 +223,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-cocos-grampositivos-y-endocarditis",
     "title": "Cocos grampositivos y endocarditis",
     "level": 1,
-    "meta": "13 preguntas MIR 2016-2026"
+    "meta": "13 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -264,7 +264,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-infecciones-respiratorias",
     "title": "Infecciones respiratorias",
     "level": 1,
-    "meta": "13 preguntas MIR 2016-2026"
+    "meta": "13 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -294,7 +294,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-infecciones-por-parasitos",
     "title": "Infecciones por parásitos",
     "level": 2,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -324,7 +324,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-generalidades-y-antibioticos",
     "title": "Generalidades y antibióticos",
     "level": 2,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -355,7 +355,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-infecciones-del-sistema-nervioso-central",
     "title": "Infecciones del sistema nervioso central",
     "level": 2,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -383,7 +383,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-infecciones-de-transmision-sexual",
     "title": "Infecciones de transmisión sexual",
     "level": 3,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -411,7 +411,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-zoonosis",
     "title": "Zoonosis",
     "level": 3,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -432,7 +432,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-infecciones-abdominales-y-enterobacterias",
     "title": "Infecciones abdominales y enterobacterias",
     "level": 4,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -450,7 +450,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-infecciones-por-hongos",
     "title": "Infecciones por hongos",
     "level": 4,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -469,7 +469,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-infecciosas-t-piel-partes-blandas-y-anaerobios",
     "title": "Piel, partes blandas y anaerobios",
     "level": 5,
-    "meta": "2 preguntas MIR 2016-2026"
+    "meta": "2 preguntas en el MIR"
   },
   {
     "kind": "card",

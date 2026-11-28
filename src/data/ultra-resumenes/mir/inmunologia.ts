@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-inmunologia-t-inmunodeficiencias-primarias-e-hipersensibilidad",
     "title": "Inmunodeficiencias primarias e hipersensibilidad",
     "level": 1,
-    "meta": "19 preguntas MIR 2016-2026"
+    "meta": "19 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -40,7 +40,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-inmunologia-t-inmunoterapia-y-farmacos-biologicos",
     "title": "Inmunoterapia y fármacos biológicos",
     "level": 1,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -68,7 +68,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-inmunologia-t-inmunidad-celular-y-otros-temas",
     "title": "Inmunidad celular y otros temas",
     "level": 2,
-    "meta": "19 preguntas MIR 2016-2026"
+    "meta": "19 preguntas en el MIR"
   },
   {
     "kind": "card",
