@@ -7,6 +7,7 @@ import {
   dedupePoints,
   formatTopicTitle,
   getMirLevel,
+  getTopicKey,
   getTopicBase,
   placeOfficialCards,
 } from "@/lib/ultra-resumenes/mir";
@@ -202,14 +203,50 @@ describe("contenido propio de los ultra resúmenes MIR", () => {
     for (const [slug, placements] of Object.entries(MIR_OFFICIAL_PLACEMENTS)) {
       const specialty = summary.specialties.find((s) => s.slug === slug);
       expect(specialty, slug).toBeDefined();
-      const officialTitles = new Set(specialty!.cards.map((card) => norm(card.title)));
+      const officialTitles = new Set(
+        specialty!.cards.flatMap((card) => [getTopicKey(card.title), getTopicKey(card.id.replace(`mir-${slug}-`, ""))]),
+      );
       const own = MIR_ULTRA_CONTENT.find((item) => item.slug === slug)!;
       const ownTitles = new Set((await own.load()).filter(isUltraCard).map((card) => norm(card.title)));
       for (const [official, target] of Object.entries(placements)) {
-        expect(officialTitles.has(norm(official)), `${slug}: ${official}`).toBe(true);
+        expect(officialTitles.has(getTopicKey(official)), `${slug}: ${official}`).toBe(true);
         if (target !== null) expect(ownTitles.has(norm(target)), `${slug}: ${target}`).toBe(true);
       }
     }
+  });
+
+  it("cada colocación manual queda aplicada en la página", async () => {
+    const summary = buildMirUltraSummary();
+    const norm = (text: string) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    let checked = 0;
+    for (const [slug, placements] of Object.entries(MIR_OFFICIAL_PLACEMENTS)) {
+      const specialty = summary.specialties.find((s) => s.slug === slug)!;
+      const entries = (await specialty.load()).filter(isUltraCard);
+      const titleOf = new Map(entries.map((card) => [card.id, card.title]));
+      for (const [official, target] of Object.entries(placements)) {
+        const key = getTopicKey(official);
+        const card = entries.find(
+          (entry) => entry.official && (getTopicKey(entry.title) === key || getTopicKey(entry.id.replace(`mir-${slug}-`, "")) === key),
+        )!;
+        const parent = card.linkedTo ? norm(titleOf.get(card.linkedTo)!) : null;
+        expect(parent, `${slug}: ${official}`).toBe(target === null ? null : norm(target));
+        checked += 1;
+      }
+    }
+    expect(checked).toBeGreaterThan(500);
+  });
+
+  it("une en una ficha las variantes del mismo tema", async () => {
+    expect(getTopicKey("Comités de Ética Asistencial")).toBe(getTopicKey("Comité de ética asistencial"));
+    expect(getTopicKey("Trombocitopenia inducida por heparina")).toBe(getTopicKey("Trombopenia inducida por heparina"));
+    expect(getTopicKey("Estado de equilibrio estacionario")).toBe(getTopicKey("Equilibrio estacionario"));
+    expect(getTopicKey("Hepatitis B")).not.toBe(getTopicKey("Hepatitis C"));
+    const summary = buildMirUltraSummary();
+    const hemato = summary.specialties.find((s) => s.slug === "hematologia")!;
+    const hit = hemato.cards.filter((card) => /inducida por heparina/i.test(card.title));
+    expect(hit).toHaveLength(1);
+    const neuro = summary.specialties.find((s) => s.slug === "neurologia")!;
+    expect(neuro.cards.filter((card) => /^Encefalitis anti/i.test(card.title))).toHaveLength(1);
   });
 
   it("recupera las mayúsculas de los temas y quita puntos repetidos", () => {
@@ -222,6 +259,9 @@ describe("contenido propio de los ultra resúmenes MIR", () => {
     expect(formatTopicTitle("VIH Y EMBARAZO", casing)).toBe("VIH y embarazo");
     expect(formatTopicTitle("IECA Y ANTAGONISTAS", casing)).toBe("IECA y antagonistas");
     expect(formatTopicTitle("REACCIONES ADVERSAS TIPO A Y TIPO B", casing)).toBe("Reacciones adversas tipo A y tipo B");
+    expect(formatTopicTitle("HEMOFILIA A CON INHIBIDOR", casing)).toBe("Hemofilia A con inhibidor");
+    expect(formatTopicTitle("ENFERMEDAD DE GRAVES", casing)).toBe("Enfermedad de Graves");
+    expect(formatTopicTitle("ISGLT2 E INFECCIONES", casing)).toBe("ISGLT2 e infecciones");
     expect(
       dedupePoints([
         "PAF: gen APC, autosómica dominante; cientos de adenomas y riesgo de cáncer colorrectal ~100 %.",

@@ -2,7 +2,7 @@ import { MIR_OFFICIAL_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { MIR_ULTRA_CONTENT, type MirUltraContent } from "./mir-content";
-import { MIR_OFFICIAL_PLACEMENTS } from "./mir-placements";
+import { MIR_OFFICIAL_ALIASES, MIR_OFFICIAL_PLACEMENTS } from "./mir-placements";
 import type { UltraCard, UltraCategory, UltraEntry, UltraLevel } from "./types";
 
 /**
@@ -67,6 +67,29 @@ export type MirUltraSummary = {
   levels: { level: UltraLevel; share: number; perConvocatoria: number; specialtyCount: number }[];
 };
 
+const TOPIC_STOPWORDS = new Set(["de", "del", "la", "las", "el", "los", "y", "e", "o", "en", "por", "a", "al", "con", "un", "una"]);
+const TOPIC_SYNONYMS: Record<string, string> = {
+  seudotrombocitopenia: "pseudotrombopenia",
+  trombocitopenia: "trombopenia",
+};
+const TOPIC_ALIASES = new Map(Object.entries(MIR_OFFICIAL_ALIASES).map(([alias, canonical]) => [slugify(alias), slugify(canonical)]));
+
+/**
+ * Clave de un tema para unir variantes: sin artículos ni plurales, con
+ * sinónimos y alias ("Comités de Ética Asistencial" = "Comité de ética asistencial").
+ */
+export function getTopicKey(topic: string): string {
+  const slug = slugify(topic);
+  const resolved = TOPIC_ALIASES.get(slug) ?? slug;
+  return resolved
+    .split("-")
+    .filter((word) => word && !TOPIC_STOPWORDS.has(word))
+    .map((word) => TOPIC_SYNONYMS[word] ?? word)
+    .map((word) => (word.length > 4 && word.endsWith("s") ? word.slice(0, -1) : word))
+    .sort()
+    .join(" ");
+}
+
 const WORD = /[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)*/gu;
 
 /**
@@ -99,15 +122,42 @@ export function buildCasingDictionary(texts: string[]): Map<string, string> {
         bestCount = count;
       }
     }
-    if (bestCount > lowerCount) dictionary.set(lower, best);
+    // Si la palabra también se escribe en minúscula, la mayúscula tiene que dominar con claridad.
+    if (bestCount > 2 * lowerCount) dictionary.set(lower, best);
   }
   return dictionary;
 }
 
+/**
+ * Mayúsculas que el diccionario no puede deducir porque la palabra también
+ * existe en minúscula ("graves", la preposición "a"…).
+ */
+const TITLE_FIXES: [RegExp, (match: string) => string][] = [
+  // "tipo a", "hemofilia a", "inmunoglobulina a"… → letra en mayúscula.
+  [/\b(tipo|hemofilia|inmunoglobulina|vitamina|hepatitis|grupo|clase) [a-z]\b/gi, (m) => m.slice(0, -1) + m.slice(-1).toUpperCase()],
+  [/\bamiloidosis al\b/gi, () => "amiloidosis AL"],
+  [/\benfermedad de graves\b/gi, () => "enfermedad de Graves"],
+  [/\bclasificación asa\b/gi, () => "clasificación ASA"],
+  [/\bpregunta pico\b/gi, () => "pregunta PICO"],
+  [/\bisglt2\b/gi, () => "iSGLT2"],
+  [/\b5 aes\b/gi, () => "5 A"],
+  [/\bsistema nacional de salud\b/gi, () => "Sistema Nacional de Salud"],
+];
+
+/** Respeta la mayúscula inicial del título si el arreglo empieza en la primera letra. */
+function keepInitial(original: string, fixed: string): string {
+  const first = original.charAt(0);
+  return first === first.toLocaleUpperCase("es") && first !== first.toLocaleLowerCase("es")
+    ? fixed.charAt(0).toLocaleUpperCase("es") + fixed.slice(1)
+    : fixed;
+}
+
 /** "SÍNDROME DE LYNCH" → "Síndrome de Lynch" con el diccionario de mayúsculas. */
 export function formatTopicTitle(topic: string, casing: Map<string, string>): string {
-  // "tipo a" → "tipo A" (la "a" suelta se confundiría con la preposición).
-  const sentence = formatSpecialtyLabel(topic).replace(/\btipo ([a-z])\b/g, (_, letter: string) => `tipo ${letter.toUpperCase()}`);
+  const sentence = TITLE_FIXES.reduce(
+    (text, [pattern, replace]) => text.replace(pattern, (match) => keepInitial(match, replace(match))),
+    formatSpecialtyLabel(topic),
+  );
   return sentence.replace(WORD, (word, offset: number) => {
     const known = casing.get(word.toLocaleLowerCase("es"));
     if (!known) return word;
@@ -143,13 +193,28 @@ function buildCards(
   questions: TrainingQuestion[],
   casing: Map<string, string>,
 ): { cards: UltraCard[]; repeated: number } {
-  // Se agrupa por el slug del tema para unir variantes de mayúsculas o tildes.
-  const groups = new Map<string, TrainingQuestion[]>();
+  // Se agrupa por tema normalizado para unir variantes ("Comité"/"Comités",
+  // "Trombopenia"/"Trombocitopenia", alias de mir-placements…). La ficha
+  // conserva el slug de la variante más preguntada, que es la clave del progreso.
+  const byTopic = new Map<string, TrainingQuestion[]>();
   for (const question of questions) {
-    const key = slugify(getTopicBase(question.topic));
-    const list = groups.get(key) ?? [];
+    const topicKey = getTopicKey(getTopicBase(question.topic));
+    const list = byTopic.get(topicKey) ?? [];
     list.push(question);
-    groups.set(key, list);
+    byTopic.set(topicKey, list);
+  }
+  const groups = new Map<string, TrainingQuestion[]>();
+  for (const list of byTopic.values()) {
+    const variants = new Map<string, number>();
+    for (const question of list) {
+      const variant = slugify(getTopicBase(question.topic));
+      variants.set(variant, (variants.get(variant) ?? 0) + 1);
+    }
+    const [key] = [...variants.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0];
+    groups.set(
+      key,
+      [...list].sort((a, b) => Number(slugify(getTopicBase(b.topic)) === key) - Number(slugify(getTopicBase(a.topic)) === key)),
+    );
   }
 
   const sorted = [...groups.entries()].sort((a, b) => {
@@ -214,7 +279,7 @@ function addTokens(bag: Map<string, number>, text: string, weight: number, cap =
 }
 
 function normalizePlacements(placements: Record<string, string | null> = {}): Map<string, string | null> {
-  return new Map(Object.entries(placements).map(([official, target]) => [slugify(official), target === null ? null : slugify(target)]));
+  return new Map(Object.entries(placements).map(([official, target]) => [getTopicKey(official), target === null ? null : slugify(target)]));
 }
 
 /**
@@ -275,7 +340,9 @@ export function placeOfficialCards(
   const linked = new Map<string, UltraCard[]>();
   const unlinked: UltraCard[] = [];
   for (const official of officialCards) {
-    const key = slugify(official.title);
+    // Se busca por el título visible y por el tema original (el id), por si
+    // el arreglo de mayúsculas cambió alguna palabra ("5 aes" → "5 A").
+    const key = [getTopicKey(official.title), getTopicKey(official.id.replace(`mir-${slug}-`, ""))].find((k) => manual.has(k)) ?? "";
     const target = manual.has(key) ? (manual.get(key) === null ? null : (ownBySlug.get(manual.get(key)!) ?? null)) : bestMatch(official);
     if (target) {
       const list = linked.get(target.id) ?? [];
@@ -315,7 +382,14 @@ export function buildMirUltraSummary(
     list.push(question);
     bySpecialty.set(groupKey, list);
   }
-  const casing = buildCasingDictionary(valid.flatMap((question) => question.keyPoints));
+  const casing = buildCasingDictionary(
+    questions.flatMap((question) => [
+      ...question.keyPoints,
+      question.statement ?? "",
+      question.explanation ?? "",
+      ...(question.options ?? []).map((option) => option.text ?? ""),
+    ]),
+  );
   const total = [...bySpecialty.values()].reduce((sum, list) => sum + list.length, 0) || 1;
 
   const specialties = [...bySpecialty.entries()]
