@@ -65,7 +65,7 @@ export default async function ProfessorConvocatoriasPage() {
                         </div>
                         <ChevronRight className="h-5 w-5 shrink-0 text-mq-muted transition group-hover:translate-x-0.5 group-hover:text-mq-accent" />
                       </div>
-                      <h3 className="mt-4 text-lg font-semibold text-white">
+                      <h3 className="mt-4 text-lg font-semibold text-slate-900">
                         {group.title} · {edition.label}
                       </h3>
                       <p className="mt-1 text-sm text-mq-muted">

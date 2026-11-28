@@ -46,7 +46,7 @@ export default async function ProfessorConvocatoriaEditionPage({ params }: PageP
     <div className="-mx-2 max-w-none sm:-mx-4">
       <Link
         href="/profesor/convocatorias"
-        className="mb-6 inline-flex items-center gap-2 text-sm font-medium text-mq-muted transition hover:text-white"
+        className="mb-6 inline-flex items-center gap-2 text-sm font-medium text-mq-muted transition hover:text-slate-900"
       >
         <ArrowLeft className="h-4 w-4" />
         Volver a simulacros
@@ -56,7 +56,7 @@ export default async function ProfessorConvocatoriaEditionPage({ params }: PageP
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-mq-accent">
           Revisor de convocatoria
         </p>
-        <h1 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+        <h1 className="mt-2 text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">
           {edition.label}
         </h1>
         <p className="mt-2 text-sm text-mq-muted">
