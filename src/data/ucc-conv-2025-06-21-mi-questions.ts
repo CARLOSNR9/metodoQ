@@ -378,7 +378,7 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "IRA prerrenal por depleción de volumen (vómitos, diurético, IECA, FENa <1%, urea/creatinina elevada, densidad urinaria alta): suspender fármacos que empeoran perfusión y reponer volumen con cristaloides.\n\nHay que retirar lo que empeora la perfusión renal (furosemida, lisinopril y también AINE si los hubiera) y reponer volumen con cristaloide isotónico, de forma cautelosa por la edad y el riesgo cardíaco, midiendo diuresis y creatinina. La lesión prerrenal suele revertir en 24-72 horas.",
+      "El paciente tiene una **lesión renal aguda prerrenal** por depleción de volumen. Los datos que lo confirman: vómitos y oliguria, mucosas secas, sin ingurgitación yugular ni edemas, urea desproporcionadamente alta respecto a la creatinina, orina concentrada (densidad 1.030), sedimento inocuo y **fracción excretada de sodio menor de 1%** (0,4%): el riñón está sano y retiene sodio con avidez porque le llega poca sangre.\n\nLa conducta es **retirar lo que empeora la perfusión renal** (furosemida, lisinopril y cualquier AINE) y **reponer volumen** con solución salina al 0,9%, de forma cautelosa por la edad y el antecedente de insuficiencia cardíaca, vigilando diuresis, signos de sobrecarga y creatinina. La lesión prerrenal suele revertir en 24-72 horas.\n\n**TRAMPA DEL EXAMEN:** Ver oliguria y \"subir el diurético\", o asustarse con la creatinina de 2,8 e indicar diálisis. Con potasio de 4,8, sin acidosis grave ni sobrecarga, no hay criterios de diálisis urgente: el problema es falta de volumen.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., antes de pensar en el riñón, piense en lo que le llega al riñón. Paciente seco, con diurético e IECA, FENa menor de 1%: suspenda los fármacos, hidrate con prudencia y repita la creatinina. La mayoría de estos riñones se recuperan solos.",
     keyPoints: [
       "FENa <1% + contexto de depleción → IRA prerrenal.",
       "Suspender diuréticos e IECA/ARA II.",
@@ -550,9 +550,6 @@ Referencias
         id: "A",
         label: "A",
         text: "Octreótido intravenoso, profilaxis antibiótica (ej. ceftriaxona) y transfusión restrictiva con meta de hemoglobina 7–8 g/dL; endoscopia en menos de 12 horas.",
-        distractorProfile: "meta_hb_alta_varices",
-        incorrectFeedback:
-          "En HDA variceal la transfusión restrictiva (Hb ~7–8 g/dL) reduce la presión portal y re-sangrado; objetivos más altos aumentan riesgo de resangrado.",
       },
       {
         id: "B",
@@ -581,7 +578,7 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "HDA variceal en cirrótico: octreótido (o terlipresina), antibiótico profiláctico (ceftriaxona), transfusión restrictiva y endoscopia urgente con ligadura. IBP no es tratamiento principal de varices.",
+      "El paciente tiene una **hemorragia digestiva alta de origen variceal**: cirrosis alcohólica con hipertensión portal (ascitis, esplenomegalia, plaquetopenia) y hematemesis masiva con inestabilidad. Mientras se organiza la endoscopia, el manejo tiene tres pilares que se inician de inmediato:\n\n1. **Vasoactivo esplácnico** (octreótido, somatostatina o terlipresina): reduce el flujo y la presión portal, y con ello el sangrado.\n2. **Profilaxis antibiótica** (ceftriaxona 1 g/día): el cirrótico que sangra tiene alto riesgo de infecciones bacterianas (peritonitis bacteriana espontánea, bacteriemia); la profilaxis reduce el resangrado y la mortalidad.\n3. **Transfusión restrictiva** con meta de hemoglobina de 7–8 g/dL: transfundir de más aumenta la presión portal y el riesgo de resangrado.\n\nLuego, **endoscopia en menos de 12 horas** con ligadura con bandas.\n\n**TRAMPA DEL EXAMEN:** Tratar este sangrado como una úlcera péptica (inhibidor de bomba como pilar) o \"llenar\" de sangre al paciente hasta una hemoglobina normal. En el cirrótico, más sangre no es más seguro: sube la presión en las várices.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en el cirrótico que vomita sangre piense en tres palabras: vasoactivo, antibiótico, endoscopia. El octreótido baja la presión del sistema portal, la ceftriaxona le salva la vida aunque no tenga fiebre, y la endoscopia cierra la várice con una banda. Transfunda con calma: hemoglobina de 7 a 8 es suficiente.",
     keyPoints: [
       "Varices: octreótido + ceftriaxona + endoscopia <12 h.",
       "Transfusión restrictiva Hb 7–8 g/dL.",

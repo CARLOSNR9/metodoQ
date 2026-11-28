@@ -428,7 +428,7 @@ Referencias
     ],
     correctOptionId: "D",
     explanation:
-      "Meningitis bacteriana neonatal: patógenos frecuentes GBS, E. coli y Listeria. Esquema empírico: ampicilina + cefotaxima o ampicilina + gentamicina. Evitar ceftriaxona en el primer mes de vida.",
+      "El neonato tiene una **meningitis bacteriana neonatal**: fiebre, letargia, rechazo alimentario, fontanela abombada y un LCR purulento (pleocitosis con predominio de neutrófilos, glucosa muy baja y proteínas altas). En el primer mes de vida los gérmenes más frecuentes son **Streptococcus agalactiae (grupo B), Escherichia coli y Listeria monocytogenes**.\n\nEl esquema empírico debe cubrir los tres: **ampicilina** (la única que cubre Listeria, que es resistente a todas las cefalosporinas) **más cefotaxima** (cubre E. coli y grupo B con buena penetración al sistema nervioso central). La alternativa clásica es ampicilina más gentamicina, aunque la gentamicina penetra peor al LCR.\n\n**TRAMPA DEL EXAMEN:** Elegir ceftriaxona por reflejo de urgencias de adultos. En el neonato está contraindicada: desplaza la bilirrubina de la albúmina (riesgo de kernicterus), precipita con el calcio y, además, no cubre Listeria.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en el recién nacido con meningitis, la palabra clave es Listeria: si su esquema no tiene ampicilina, el esquema está incompleto. Y la cefalosporina del neonato es la cefotaxima, no la ceftriaxona.",
     keyPoints: [
       "Patógenos neonatales: GBS, E. coli, Listeria.",
       "Esquema: ampicilina + cefotaxima o gentamicina.",

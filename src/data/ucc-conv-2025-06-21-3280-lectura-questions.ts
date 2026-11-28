@@ -292,7 +292,7 @@ export const UCC_CONV_2025_06_21_3280_LECTURA_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation:
-      "Promoción y mantenimiento (Res. 3280): intervenciones poblacionales e individuales para fomentar salud, prevenir riesgos y mantener capacidad funcional en APS.",
+      "La **Resolución 3280 de 2018** organiza las Rutas Integrales de Atención en Salud. La **Ruta de Promoción y Mantenimiento de la Salud** está dirigida a toda la población, incluidas las personas sin enfermedad, en cada momento del curso de vida.\n\nIncluye: educación para la salud (estilos de vida saludables, actividad física, alimentación, salud mental), valoración integral por curso de vida, detección temprana de factores de riesgo (tamizajes de hipertensión, diabetes, cáncer de cuello uterino y mama, entre otros), vacunación y protección específica. Es el núcleo de la atención primaria.\n\nLas demás opciones (cirugía cardiovascular urgente, quimioterapia paliativa, hospitalización psiquiátrica) son atención de personas ya enfermas y de alta complejidad, que pertenecen a las rutas de atención de eventos específicos, no a promoción y mantenimiento.\n\n**TRAMPA DEL EXAMEN:** Confundir promoción y mantenimiento con cualquier atención que se preste en el primer nivel. La clave es que va dirigida a mantener sana a la población y detectar riesgos antes de que aparezca la enfermedad.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la Ruta de Promoción y Mantenimiento es para la persona que entra sana al consultorio: educar, vacunar, tamizar y detectar riesgos a tiempo. Si la opción habla de tratar a alguien ya enfermo o de alta complejidad, no es esta ruta.",
     keyPoints: [
       "Promoción: estilos de vida, educación, factores de riesgo.",
       "APS resolutiva en prevención primaria.",
@@ -341,7 +341,7 @@ export const UCC_CONV_2025_06_21_3280_LECTURA_QUESTIONS: TrainingQuestion[] = [
     ],
     correctOptionId: "A",
     explanation:
-      "Salud mental en APS (Res. 3280): tamizaje con PHQ-2/9, diagnóstico clínico, psicoeducación, psicoterapia y/o antidepresivos según gravedad; referencia si riesgo suicida, psicosis o refractaria.",
+      "La paciente tiene síntomas sugestivos de **depresión** (astenia, insomnio y anhedonia de 4 semanas). Según los lineamientos de salud mental y la Resolución 3280, la atención primaria debe **tamizar, diagnosticar y manejar** la depresión leve a moderada, y referir según gravedad.\n\nEl paso inicial es aplicar un instrumento de tamizaje validado: **PHQ-2** (dos preguntas: ánimo deprimido y anhedonia) y, si es positivo, **PHQ-9** para estimar la gravedad. Luego se confirma el diagnóstico clínicamente, se evalúa siempre el **riesgo suicida** y se define el manejo: psicoeducación, psicoterapia y/o antidepresivo (ISRS como primera línea). Se refiere a psiquiatría si hay riesgo suicida, síntomas psicóticos, bipolaridad o falta de respuesta.\n\n**TRAMPA DEL EXAMEN:** Referir automáticamente todo caso de depresión a psiquiatría, o dar benzodiacepinas como tratamiento. Las benzodiacepinas no tratan la depresión y generan dependencia; y la neuroimagen no es un paso inicial.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., la depresión es un diagnóstico de consultorio: dos preguntas del PHQ-2 bastan para empezar. Pregunte siempre por ideas de muerte, y recuerde que la mayoría de los pacientes con depresión leve a moderada se pueden manejar en atención primaria.",
     keyPoints: [
       "Tamizaje depresión: PHQ-2 o PHQ-9 en APS.",
       "Manejo resolutivo en APS según gravedad.",
@@ -1051,7 +1051,7 @@ Referencias
     ],
     correctOptionId: "A",
     explanation:
-      "Sangrado uterino anormal en >40 años con endometrio 14 mm y anemia: biopsia endometrial o histeroscopia para descartar patología, corrección de anemia y tratamiento según histología.",
+      "Mujer de 44 años con **sangrado uterino anormal** (intermenstrual, abundante, de 3 meses), anemia (Hb 9,2) y **endometrio engrosado y heterogéneo** de 14 mm. A partir de los 40-45 años, o antes si hay factores de riesgo (obesidad, anovulación crónica, sangrado persistente), el sangrado uterino anormal obliga a **descartar hiperplasia o cáncer de endometrio**.\n\nEl paso correcto es:\n1. **Estabilizar** si hay compromiso hemodinámico y corregir la anemia con **hierro** (oral o intravenoso según gravedad).\n2. **Tomar muestra del endometrio**: biopsia endometrial en consultorio o, idealmente con un endometrio heterogéneo, **histeroscopia con biopsia dirigida**, que permite ver pólipos u otras lesiones focales.\n3. Definir el tratamiento según la histología.\n\n**TRAMPA DEL EXAMEN:** Iniciar anticonceptivos o progestágenos empíricos sin estudiar el endometrio en una mujer de más de 40 años, o ir directo a histerectomía. El tratamiento hormonal puede enmascarar un cáncer, y la cirugía se decide con el resultado de la biopsia.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., mujer de más de 40 que sangra fuera de su ciclo: antes de tratar, mire el endometrio. Una biopsia de consultorio puede cambiarle por completo el plan.",
     keyPoints: [
       "SUA >40 años → evaluación endometrial.",
       "Endometrio >4 mm postmenopáusico o patrón anormal premenopáusico → biopsia.",
