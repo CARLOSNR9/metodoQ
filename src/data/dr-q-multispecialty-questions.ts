@@ -202,89 +202,87 @@ Referencias
         label: "A",
         text: "Hospitalizar, solicitar hemograma, hemocultivos, punción lumbar e iniciar antibiótico intravenoso inmediato.",
       },
-      { id: "B", label: "B", text: "Iniciar manejo con amoxicilina/clavulanato por otitis media aguda." },
-      { id: "C", label: "C", text: "Manejo sintomático con acetaminofén y seguimiento en 24 horas." },
+      { id: "B", label: "B", text: "Iniciar manejo con amoxicilina/clavulanato por otitis media aguda.", incorrectFeedback: "El eritema timpánico en una otoscopia difícil, en una lactante que llora, no confirma otitis. Tratar con antibiótico oral a una lactante decaída de 2,5 meses puede ocultar una meningitis o una bacteriemia." },
+      { id: "C", label: "C", text: "Manejo sintomático con acetaminofén y seguimiento en 24 horas.", incorrectFeedback: "Manejar en casa con acetaminofén a una lactante menor de 3 meses, febril y decaída es inaceptable: tiene alto riesgo de infección bacteriana grave." },
       {
         id: "D",
         label: "D",
         text: "Solicitar hemograma, proteína C reactiva, uroanálisis, Gram y urocultivo por sonda.",
+        incorrectFeedback: "Este estudio escalonado se usa en el lactante febril con buen aspecto. Esta paciente se ve enferma (somnolienta, decaída, irritable), así que necesita además hemocultivo, punción lumbar, hospitalización y antibiótico IV sin demora.",
       },
     ],
-    correctOptionId: "D",
+    correctOptionId: "A",
     explanation:
-      "Lactante <3 meses con fiebre y compromiso del estado general. Prioridad: descartar infección bacteriana grave. El eritema timpánico no excluye ITU u otra fuente bacteriana significativa.",
+      "La paciente es una **lactante febril de 2 meses y medio que se ve enferma**: la madre la nota **somnolienta y decaída**, y en el examen está irritable. En los lactantes menores de 3 meses lo primero que define la conducta es el **aspecto general**:\n- **Aspecto tóxico o enfermo** (somnolencia, decaimiento, irritabilidad, mala perfusión): alto riesgo de **infección bacteriana grave** (bacteriemia, meningitis, infección urinaria). Se hace el **estudio completo de sepsis** (hemograma, PCR o procalcitonina, **hemocultivo**, uroanálisis y urocultivo por sonda y **punción lumbar**), se **hospitaliza** y se inicia **antibiótico IV empírico** de inmediato, sin esperar los resultados.\n- **Buen aspecto:** estudio escalonado (hemograma, PCR o procalcitonina, uroanálisis y urocultivo) y se decide según el riesgo.\n\nEl eritema timpánico bilateral en una otoscopia difícil, en una lactante que llora, es inespecífico: no confirma otitis ni explica el decaimiento, y no excluye una infección grave.\n\n**TRAMPA DEL EXAMEN:** Atribuir la fiebre a otitis por el tímpano rojo, o hacer el estudio escalonado de un lactante con buen aspecto en una paciente que se ve enferma. El decaimiento cambia toda la conducta.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en el menor de 3 meses con fiebre la primera pregunta es: ¿se ve bien o se ve mal? Si se ve mal, estudio completo con punción lumbar, hospitalización y antibiótico IV ya. El tímpano rojo de un bebé que llora no explica que esté decaído.",
     keyPoints: [
-      "Cuando veas: lactante menor de 3 meses con fiebre y compromiso del estado general (somnolienta, irritable, decaída).",
-      "Debes pensar en: infección bacteriana grave oculta → estudio sistemático antes de atribuir a otitis.",
-      "La ITU es la causa bacteriana más frecuente en lactantes febriles; el eritema timpánico no la excluye.",
-      "Urocultivo por sonda vesical reduce contaminación frente a bolsa recolectora.",
+      "Cuando veas: lactante menor de 3 meses con fiebre y mal aspecto (somnolienta, decaída, irritable).",
+      "Debes pensar en: infección bacteriana grave → estudio completo de sepsis con hemocultivo y punción lumbar, hospitalización y antibiótico IV inmediato.",
+      "El estudio escalonado (hemograma, PCR, uroanálisis, urocultivo) es para el lactante febril con buen aspecto.",
+      "El eritema timpánico en una otoscopia difícil no confirma otitis ni explica el decaimiento.",
       "Tema: Lactante febril menor de 3 meses.",
     ],
     theoryContent: `EXPLICACIÓN DEL PROFE BY DR Q.
 
-Esta es una pregunta clásica de pediatría porque evalúa una trampa frecuente: atribuir la fiebre a otitis media aguda por hallazgo de eritema timpánico bilateral, ignorando que en lactantes <3 meses la prioridad es descartar infección bacteriana grave sistémica.
+Esta es una pregunta clásica de pediatría porque evalúa una trampa frecuente: atribuir la fiebre a otitis media por un tímpano rojo, o tratar a una lactante que se ve enferma como si tuviera buen aspecto.
 
-La clave no es la otoscopia ni el hallazgo timpánico aislado.
+La clave no es la otoscopia.
 La clave es:
-Lactante de 2.5 meses con fiebre y compromiso del estado general → estudio sistemático (hemograma, PCR, uroanálisis, Gram y urocultivo) para descartar bacteriemia, meningitis o ITU.
+Lactante menor de 3 meses con fiebre y mal aspecto → estudio completo de sepsis (incluida la punción lumbar), hospitalización y antibiótico IV inmediato.
 
 ¿Qué está ocurriendo realmente?
 La paciente presenta:
 • Lactante de 2 meses y medio con fiebre de un día de evolución.
-• Compromiso del estado general: somnolienta, decaída, irritable al examen.
+• Mal aspecto: la madre la nota somnolienta y decaída; en el examen está irritable.
 • Vacunación completa para la edad (no excluye infección bacteriana grave).
-• Eritema timpánico bilateral en otoscopia difícil por poca colaboración.
-• No hay datos que permitan descartar ITU, bacteriemia u otra fuente grave sin estudio.
+• Eritema timpánico bilateral en una otoscopia difícil, en una lactante que llora.
 
-Recordemos el abordaje del lactante febril <3 meses:
-• Alta prevalencia de infección bacteriana grave (bacteriemia, meningitis, ITU, osteomielitis).
-• La ITU es la causa bacteriana más frecuente en este grupo etario.
-• El eritema timpánico es inespecífico y frecuente; no confirma otitis ni excluye otra infección.
-• Estudio inicial: hemograma, proteína C reactiva, uroanálisis, Gram y urocultivo por sonda.
-• Antibiótico empírico IV e ingreso se reservan según resultados y gravedad clínica, no como primer paso automático en todos.
+Recordemos el abordaje del lactante febril menor de 3 meses:
+• Alto riesgo de infección bacteriana grave: infección urinaria (la más frecuente), bacteriemia y meningitis.
+• Lo primero que define la conducta es el aspecto general.
+• Mal aspecto (tóxico, somnoliento, decaído, irritable, mala perfusión): hemograma, PCR o procalcitonina, hemocultivo, uroanálisis y urocultivo por sonda, y punción lumbar; hospitalizar e iniciar antibiótico IV empírico sin esperar los resultados.
+• Buen aspecto: estudio escalonado (hemograma, PCR o procalcitonina, uroanálisis y urocultivo) y decisión según los criterios de riesgo.
+• El eritema timpánico es inespecífico en el lactante que llora; no confirma otitis ni excluye otra infección.
 
 Por lo tanto:
-No corresponde antibiótico oral por otitis ni manejo sintomático con seguimiento ambulatorio.
-La conducta más adecuada es solicitar hemograma, PCR, uroanálisis, Gram y urocultivo por sonda.
+Esta paciente se ve enferma, así que no corresponde el estudio escalonado del lactante con buen aspecto, ni el antibiótico oral por otitis, ni el manejo en casa.
+La conducta más adecuada es hospitalizar, hacer el estudio completo con hemocultivos y punción lumbar e iniciar antibiótico IV de inmediato.
 
-¿Por qué la opción D es la respuesta correcta?
-Aborda al lactante febril <3 meses con el estudio sistemático recomendado por guías (AAP): hemograma, PCR, uroanálisis y urocultivo por sonda.
-Permite descartar ITU (causa más frecuente) y estratificar riesgo de infección bacteriana grave antes de decidir ingreso o antibiótico empírico.
+¿Por qué la opción A es la respuesta correcta?
+Es la conducta que recomiendan las guías (AAP, NICE) para el lactante febril menor de 3 meses con mal aspecto: estudio completo de sepsis, punción lumbar y antibiótico parenteral inmediato.
+Esperar los resultados del estudio escalonado retrasa el tratamiento de una posible meningitis o bacteriemia.
 
 ¿Por qué fallan las otras opciones?
-Opción A (hospitalizar + hemocultivos + PL + ATB IV inmediato): puede ser necesario según resultados y gravedad, pero no es el primer paso universal; el estudio escalonado comienza con hemograma, PCR y uroanálisis.
-Opción B (amoxicilina/clavulanato por otitis): asume diagnóstico de otitis media sin estudio; el eritema timpánico en lactante pequeño no es suficiente y no excluye ITU u otra infección grave.
-Opción C (acetaminofén y seguimiento 24 h): inaceptable en lactante <3 meses febril con compromiso del estado general; riesgo de bacteriemia o meningitis no diagnosticada.
+Opción B (amoxicilina/clavulanato por otitis): asume una otitis sin confirmarla y puede ocultar una meningitis o bacteriemia.
+Opción C (acetaminofén y seguimiento en 24 horas): inaceptable en una lactante menor de 3 meses febril y decaída.
+Opción D (hemograma, PCR, uroanálisis y urocultivo): es el estudio inicial del lactante con buen aspecto. Le faltan el hemocultivo, la punción lumbar, la hospitalización y el antibiótico IV que necesita una lactante que se ve enferma.
 
 ¿Cuál es la trampa del examen?
 Muchos estudiantes piensan:
-"Eritema timpánico bilateral = otitis media aguda → antibiótico oral."
+"Tímpano rojo = otitis → antibiótico oral", o "primero laboratorios y después decido".
 Pero el examen exige priorizar:
-La edad (<3 meses) + estado general alterado → estudio sistemático.
+La edad (menor de 3 meses) + el mal aspecto → manejo como sepsis.
 El dato decisivo es:
-2.5 meses con fiebre y decaimiento → no atribuir a otitis sin descartar ITU y otras infecciones graves.
+Somnolienta y decaída.
 
 Entonces, ¿qué debe recordarse?
 La secuencia correcta es:
-1. Reconocer lactante febril <3 meses como grupo de alto riesgo.
-2. Evaluar estado general y buscar foco, sin confiar en otoscopia aislada.
-3. Solicitar estudio sistemático: hemograma, PCR, uroanálisis y urocultivo por sonda.
-4. Decidir ingreso, antibiótico empírico o manejo ambulatorio según resultados y clínica.
+1. Reconocer al lactante febril menor de 3 meses como de alto riesgo.
+2. Evaluar el aspecto general antes que el foco.
+3. Mal aspecto: estudio completo con punción lumbar, hospitalización y antibiótico IV.
+4. Buen aspecto: estudio escalonado y decisión según el riesgo.
 
 Perlas de examen
-✅ Lactante <3 meses con fiebre → estudio sistemático obligatorio.
-✅ ITU = causa bacteriana más frecuente en lactantes febriles.
-✅ Eritema timpánico no confirma otitis ni excluye ITU o bacteriemia.
-✅ Urocultivo por sonda vesical > bolsa recolectora (menos contaminación).
-✅ Antibiótico empírico IV no es el primer paso en todos; depende del estudio y la gravedad.
-✅ Las residencias preguntan algoritmos por edad, no diagnósticos focales precipitados.
+✅ Lactante menor de 3 meses con fiebre: primero mire el aspecto.
+✅ Mal aspecto = sepsis hasta demostrar lo contrario: cultivos, punción lumbar y antibiótico IV.
+✅ La infección urinaria es la causa bacteriana más frecuente en el lactante febril.
+✅ El eritema timpánico no confirma otitis ni excluye una infección grave.
+✅ Urocultivo por sonda vesical mejor que por bolsa recolectora.
 
 Referencias
 • AAP Clinical Practice Guideline: Febrile Infants 8 to 60 Days Old.
+• NICE NG143: Fever in under 5s: assessment and initial management.
 • Nelson Textbook of Pediatrics — Fever Without a Focus.
-• UpToDate: Approach to the Febrile Infant (Age 0 to 90 Days).
-• Pantell RH et al. Evaluation and Management of Well-Appearing Febrile Infants.
-• Gomez B et al. Validation of Fever Without Source Prediction Rules in Infants.`,
+• UpToDate: Approach to the Febrile Infant (Age 0 to 90 Days).`,
   },
   {
     id: "dr-q-134",
@@ -386,13 +384,13 @@ Referencias
       "¿Cuál de los siguientes es el encargado de la inervación motora del músculo diafragma?",
     options: [
       { id: "A", label: "A", text: "Nervio frénico." },
-      { id: "B", label: "B", text: "Nervio vago." },
-      { id: "C", label: "C", text: "Nervio intercostal." },
-      { id: "D", label: "D", text: "Nervio accesorio." },
+      { id: "B", label: "B", text: "Nervio vago.", incorrectFeedback: "El vago da inervación parasimpática a las vísceras del tórax y el abdomen (corazón, pulmones, tubo digestivo), pero no inerva el músculo diafragma." },
+      { id: "C", label: "C", text: "Nervio intercostal.", incorrectFeedback: "Los nervios intercostales (T1–T11) inervan los músculos intercostales y la pared abdominal; como mucho dan sensibilidad a la periferia del diafragma, no su motricidad." },
+      { id: "D", label: "D", text: "Nervio accesorio.", incorrectFeedback: "El nervio accesorio (XI par) inerva el esternocleidomastoideo y el trapecio. El esternocleidomastoideo es músculo accesorio de la respiración, pero este nervio no inerva el diafragma." },
     ],
     correctOptionId: "A",
     explanation:
-      "El nervio frénico (C3-C5) es el principal responsable de la inervación motora del diafragma, músculo principal de la respiración.",
+      "El **nervio frénico** nace de las raíces **C3, C4 y C5** del plexo cervical, baja por el cuello sobre el músculo escaleno anterior y entra al tórax por delante del hilio pulmonar hasta llegar al diafragma. Es la **única inervación motora del diafragma**; además lleva la sensibilidad del centro tendinoso del diafragma, la pleura mediastínica y el pericardio.\n\nAplicación clínica:\n- Lesión medular por encima de C3: parálisis del diafragma y necesidad de ventilación mecánica.\n- Irritación del diafragma (absceso subfrénico, sangre por ruptura del bazo): **dolor referido al hombro** (signo de Kehr), porque C4 también da sensibilidad a la piel del hombro.\n- Lesión de un frénico (cirugía cardíaca, tumor del mediastino): hemidiafragma elevado en la radiografía.\n\n**TRAMPA DEL EXAMEN:** Elegir el vago porque acompaña a las vísceras del tórax, o los intercostales porque participan en la respiración. Ninguno inerva la motricidad del diafragma.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., apréndase la frase: \"C3, 4 y 5 mantienen vivo el diafragma\". Por eso el trauma cervical alto mata por apnea, y por eso un bazo roto puede doler en el hombro.",
     keyPoints: [
       "Cuando veas: pregunta sobre inervación motora del músculo diafragma (músculo principal de la respiración).",
       "Debes pensar en: nervio frénico, con origen en raíces espinales C3, C4 y C5.",
@@ -564,11 +562,12 @@ Referencias
     statement:
       "Mujer de 65 años, hipertensa y obesa, es evaluada en urgencias tras presentar hemiplejia derecha, afasia y asimetría facial de inicio súbito. Recibió trombólisis con alteplase dentro de la ventana terapéutica. Examen físico: PA 174/90 mmHg, FC 75 lpm, SatO₂ 97%, NIHSS 17 puntos. Glucometría 115 mg/dL. TAC cerebral sin evidencia de hemorragia intracerebral ni cambios isquémicos agudos. ECG: ritmo irregularmente irregular con ausencia de ondas P. ¿Cuál es el siguiente paso más apropiado en el manejo de esta paciente?",
     options: [
-      { id: "A", label: "A", text: "Iniciar anticoagulación plena inmediata con heparina." },
+      { id: "A", label: "A", text: "Iniciar anticoagulación plena inmediata con heparina.", incorrectFeedback: "La heparina inmediata tras el alteplase multiplica el riesgo de transformación hemorrágica. La anticoagulación por fibrilación auricular se difiere varios días según el tamaño del infarto." },
       {
         id: "B",
         label: "B",
         text: "Administrar ácido acetilsalicílico inmediatamente después de la trombólisis.",
+        incorrectFeedback: "Los antiagregantes no se inician en las primeras 24 horas tras la trombólisis: primero se repite la neuroimagen para descartar sangrado.",
       },
       {
         id: "C",
@@ -579,11 +578,12 @@ Referencias
         id: "D",
         label: "D",
         text: "Disminuir la presión arterial a cifras menores de 120/80 mmHg en las próximas horas.",
+        incorrectFeedback: "Bajar la presión por debajo de 120/80 reduce la perfusión de la penumbra isquémica y puede extender el infarto. La meta tras el alteplase es mantenerla por debajo de 180/105 mmHg.",
       },
     ],
     correctOptionId: "C",
     explanation:
-      "ACV isquémico tratado con alteplase. Contraindicado iniciar antiagregantes o anticoagulantes en las primeras 24 horas hasta repetir neuroimagen y descartar transformación hemorrágica.",
+      "La paciente tiene un **ACV isquémico** tratado con **alteplase**. Tras la trombólisis, el riesgo principal es la **transformación hemorrágica**, que es más probable en ACV grandes (NIHSS 17), en presencia de fibrilación auricular (ACV cardioembólico) y con hipertensión.\n\nPor eso, en las **primeras 24 horas** después del alteplase:\n- **No se inician antiagregantes ni anticoagulantes**.\n- Se hace **vigilancia neurológica estricta** (escala NIHSS frecuente) en unidad de ACV.\n- Se mantiene la **presión arterial por debajo de 180/105 mmHg**.\n- A las 24 horas se **repite la neuroimagen** (TAC o resonancia) y, si no hay sangrado, se inicia la terapia antitrombótica.\n\nLa fibrilación auricular indica anticoagulación a largo plazo, pero en un ACV extenso como este suele diferirse varios días (según el tamaño del infarto), nunca de forma inmediata.\n\n**TRAMPA DEL EXAMEN:** Anticoagular de inmediato por la fibrilación auricular, o bajar la presión de forma agresiva. Ambas cosas aumentan el riesgo de sangrado o de extender el infarto.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., después del alteplase vienen 24 horas sin antitrombóticos, con presión por debajo de 180/105 y mucha vigilancia. Repita la imagen y, si no hay sangrado, empiece la aspirina; la anticoagulación por la fibrilación llega después.",
     keyPoints: [
       "Cuando veas: ACV isquémico tratado con alteplase + TAC inicial sin hemorragia + FA en ECG.",
       "Debes pensar en: vigilancia neurológica estricta y repetir neuroimagen a las 24 h antes de antitrombóticos.",
@@ -1098,14 +1098,14 @@ Referencias
     statement:
       "Mujer de 25 años con diagnóstico de Lupus Eritematoso Sistémico en seguimiento por reumatología. Se encuentra en remisión clínica, sin brotes recientes y con adecuado control farmacológico. Acude a consulta para consejería anticonceptiva. ¿Cuál de los siguientes métodos anticonceptivos NO recomendaría de forma rutinaria?",
     options: [
-      { id: "A", label: "A", text: "Dispositivo intrauterino de cobre." },
-      { id: "B", label: "B", text: "Implante subdérmico de etonogestrel." },
+      { id: "A", label: "A", text: "Dispositivo intrauterino de cobre.", incorrectFeedback: "El DIU de cobre no contiene hormonas y es una de las opciones más seguras en LES, incluso con anticuerpos antifosfolípidos positivos. Sí se recomienda." },
+      { id: "B", label: "B", text: "Implante subdérmico de etonogestrel.", incorrectFeedback: "El implante de etonogestrel solo contiene progestágeno y no aumenta de forma importante el riesgo trombótico; es una opción adecuada y muy eficaz en LES." },
       { id: "C", label: "C", text: "Anticonceptivos orales combinados con estrógenos." },
-      { id: "D", label: "D", text: "Sistema intrauterino liberador de levonorgestrel." },
+      { id: "D", label: "D", text: "Sistema intrauterino liberador de levonorgestrel.", incorrectFeedback: "El DIU de levonorgestrel libera el progestágeno en el útero, con efecto sistémico mínimo; es una opción recomendada en LES." },
     ],
     correctOptionId: "C",
     explanation:
-      "En LES, los anticonceptivos combinados con estrógenos son los menos recomendados de rutina por riesgo potencial de trombosis y exacerbación, especialmente con anticuerpos antifosfolípidos.",
+      "Según los **criterios médicos de elegibilidad de la OMS**, en el lupus eritematoso sistémico lo que define el método es la presencia de **anticuerpos antifosfolípidos** (o no saber si los tiene):\n- Con antifosfolípidos positivos o desconocidos, los **anticonceptivos combinados con estrógenos son categoría 4**: contraindicados por el riesgo de trombosis venosa y arterial.\n- Sin antifosfolípidos pueden usarse con precaución, pero en general se prefieren otros métodos, porque el estrógeno aumenta el riesgo trombótico, ya alto en el lupus.\n\nMétodos de primera elección en LES: **DIU de cobre** (sin hormonas, útil en cualquier escenario), **DIU de levonorgestrel** e **implante de etonogestrel** (solo progestágeno, sin aumento relevante del riesgo trombótico). Por eso el método que NO se recomienda de rutina es el combinado.\n\n**TRAMPA DEL EXAMEN:** Pensar que, como está en remisión, puede usar cualquier método. La remisión no quita el riesgo trombótico propio del lupus ni el de los antifosfolípidos.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., lupus y estrógeno no se llevan bien. Si la paciente tiene antifosfolípidos, o usted no sabe si los tiene, el anticonceptivo combinado está contraindicado. Ofrézcale DIU de cobre, DIU hormonal o implante: son seguros y muy eficaces.",
     keyPoints: [
       "Cuando veas: mujer con LES (aunque en remisión) + consejería anticonceptiva.",
       "Debes pensar en: evitar anticonceptivos orales combinados con estrógenos por riesgo trombótico y de exacerbación.",
@@ -1184,18 +1184,18 @@ Referencias
     statement:
       "Mujer de 35 años consulta por menstruaciones irregulares y abundantes de varios meses de evolución. Trae hemograma solicitado en consulta previa que reporta: Hb 11.2 g/dL, hematocrito 30.4%, reticulocitos 0.7%, VCM 82 fL, plaquetas 200.000/mm³ y leucocitos 5.800/mm³. ¿Cuál es el diagnóstico más probable y cuáles son las ayudas diagnósticas iniciales más apropiadas?",
     options: [
-      { id: "A", label: "A", text: "Anemia hemolítica; solicitar LDH, haptoglobina y prueba de Coombs." },
+      { id: "A", label: "A", text: "Anemia hemolítica; solicitar LDH, haptoglobina y prueba de Coombs.", incorrectFeedback: "En la hemólisis los reticulocitos están altos (la médula compensa), con LDH alta y bilirrubina indirecta elevada. Aquí los reticulocitos están bajos y hay una pérdida de sangre clara." },
       {
         id: "B",
         label: "B",
         text: "Anemia ferropénica secundaria a sangrado uterino anormal; solicitar perfil férrico con ferritina sérica.",
       },
-      { id: "C", label: "C", text: "Anemia megaloblástica; solicitar vitamina B12 y ácido fólico." },
-      { id: "D", label: "D", text: "Anemia de enfermedad crónica; solicitar VSG y proteína C reactiva." },
+      { id: "C", label: "C", text: "Anemia megaloblástica; solicitar vitamina B12 y ácido fólico.", incorrectFeedback: "La anemia megaloblástica es macrocítica (VCM mayor de 100 fL) y puede bajar leucocitos y plaquetas. Esta paciente tiene VCM de 82 y las otras series normales." },
+      { id: "D", label: "D", text: "Anemia de enfermedad crónica; solicitar VSG y proteína C reactiva.", incorrectFeedback: "La anemia de enfermedad crónica requiere una enfermedad inflamatoria, infecciosa o neoplásica de base, que esta paciente no tiene. El sangrado menstrual abundante explica mejor la anemia." },
     ],
     correctOptionId: "B",
     explanation:
-      "Menorragia + anemia leve + reticulocitos bajos orienta a anemia ferropénica por pérdidas crónicas. Confirmar con ferritina sérica.",
+      "La paciente tiene **pérdidas menstruales abundantes de varios meses** y **anemia leve con reticulocitos bajos** (0,7 %): la médula no está respondiendo, como ocurre cuando falta hierro. La causa más frecuente de anemia en mujeres en edad fértil es la **ferropenia por sangrado uterino anormal**.\n\nEl **VCM de 82 fL** está en el límite bajo de lo normal: en la ferropenia temprana la anemia puede ser todavía normocítica, y la microcitosis aparece después. El estudio inicial es el **perfil férrico**:\n- **Ferritina baja** (menos de 30 ng/mL): confirma la ferropenia; es la prueba más útil.\n- Hierro sérico bajo, transferrina y capacidad de fijación alta, y saturación de transferrina baja.\n\nAdemás del hierro, hay que **estudiar y tratar la causa del sangrado uterino** (sistema PALM-COEIN).\n\n**TRAMPA DEL EXAMEN:** Descartar la ferropenia porque el VCM no está francamente bajo. Al inicio la anemia ferropénica puede ser normocítica.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., mujer que sangra mucho y está anémica tiene ferropenia hasta demostrar lo contrario. Pida ferritina, dele hierro y, sobre todo, estudie por qué sangra.",
     keyPoints: [
       "Cuando veas: mujer premenopáusica + menorragia crónica + anemia leve + reticulocitos bajos.",
       "Debes pensar en: anemia ferropénica por pérdidas crónicas → perfil férrico con ferritina sérica.",
@@ -1275,18 +1275,18 @@ Referencias
     statement:
       "Masculino de 33 años es traído por el servicio paramédico tras sufrir una caída desde un edificio en contexto de intento suicida. Durante el traslado se decide asegurar la vía aérea mediante secuencia rápida de intubación. Al llegar a urgencias, el monitor muestra ritmo sinusal organizado. Sin embargo, al examen físico usted verifica ausencia de pulso central. ¿Cuál es el paso a seguir en el manejo de este paciente?",
     options: [
-      { id: "A", label: "A", text: "Desfibrilación inmediata a 200 J." },
-      { id: "B", label: "B", text: "Administrar atropina intravenosa." },
+      { id: "A", label: "A", text: "Desfibrilación inmediata a 200 J.", incorrectFeedback: "La desfibrilación solo sirve en ritmos desfibrilables (fibrilación ventricular y taquicardia ventricular sin pulso). En la AESP la descarga no está indicada." },
+      { id: "B", label: "B", text: "Administrar atropina intravenosa.", incorrectFeedback: "La atropina ya no se recomienda en el paro cardíaco (AESP ni asistolia). El fármaco del paro no desfibrilable es la adrenalina." },
       {
         id: "C",
         label: "C",
         text: "Iniciar reanimación cardiopulmonar de alta calidad y manejo del algoritmo de actividad eléctrica sin pulso.",
       },
-      { id: "D", label: "D", text: "Realizar cardioversión sincronizada urgente." },
+      { id: "D", label: "D", text: "Realizar cardioversión sincronizada urgente.", incorrectFeedback: "La cardioversión sincronizada es para taquiarritmias con pulso e inestabilidad. Este paciente no tiene pulso: está en paro." },
     ],
     correctOptionId: "C",
     explanation:
-      "Ritmo organizado en monitor + ausencia de pulso = actividad eléctrica sin pulso (AESP). Ritmo no desfibrilable: RCP de alta calidad + adrenalina + buscar causas reversibles (H's y T's), especialmente en trauma.",
+      "El monitor muestra un **ritmo organizado** pero el paciente **no tiene pulso central**: es una **actividad eléctrica sin pulso (AESP)**, un paro cardíaco con **ritmo no desfibrilable**. El manejo es:\n1. **RCP de alta calidad** inmediata: compresiones de 5–6 cm de profundidad, a 100–120 por minuto, con reexpansión completa y mínimas interrupciones; ya está intubado, así que una ventilación cada 6 segundos sin pausar las compresiones.\n2. **Adrenalina 1 mg IV cada 3–5 minutos**, lo antes posible.\n3. Buscar y tratar las **causas reversibles (H y T)**. En este paciente con trauma por caída de altura e intubación reciente, sobre todo: **hipovolemia** (hemorragia), **neumotórax a tensión** (descompresión), **taponamiento cardíaco** e **hipoxia** (verificar la posición del tubo).\n\n**TRAMPA DEL EXAMEN:** Desfibrilar o cardiovertir porque el monitor muestra un ritmo. En la AESP no hay ritmo desfibrilable: la descarga no sirve, y lo que salva al paciente es la RCP y corregir la causa.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el monitor puede mentir: si no hay pulso, es paro. Ritmo organizado sin pulso es AESP: compresiones, adrenalina y a buscar la causa. En el politraumatizado piense primero en sangrado, neumotórax a tensión y taponamiento.",
     keyPoints: [
       "Cuando veas: ritmo organizado en monitor + ausencia de pulso central.",
       "Debes pensar en: actividad eléctrica sin pulso (AESP/PEA) → RCP de alta calidad + algoritmo AESP.",
@@ -1365,14 +1365,14 @@ Referencias
     statement:
       "Paciente masculino de 17 años es trasladado a urgencias tras recibir impacto por arma de fuego en cuello durante un atraco callejero. Se encuentra hemodinámicamente estable. Al examen físico presenta orificio de entrada en zona I izquierda del cuello y orificio de salida en zona II derecha. Se evidencia ausencia de pulso carotídeo derecho, hematoma cervical no expansible y ausencia de sangrado activo. ¿Cuál es el manejo más adecuado?",
     options: [
-      { id: "A", label: "A", text: "Observación clínica y control seriado del hematoma." },
-      { id: "B", label: "B", text: "Angiotomografía de cuello." },
+      { id: "A", label: "A", text: "Observación clínica y control seriado del hematoma.", incorrectFeedback: "La observación se reserva para heridas sin signos de lesión vascular ni aerodigestiva. La ausencia de pulso carotídeo es un signo duro y no admite observación." },
+      { id: "B", label: "B", text: "Angiotomografía de cuello.", incorrectFeedback: "La angiotomografía se usa en pacientes estables sin signos duros. Con ausencia de pulso carotídeo, el estudio solo retrasa la reparación y aumenta el riesgo de ACV." },
       { id: "C", label: "C", text: "Exploración quirúrgica inmediata del cuello." },
-      { id: "D", label: "D", text: "Ecografía Doppler carotídea ambulatoria." },
+      { id: "D", label: "D", text: "Ecografía Doppler carotídea ambulatoria.", incorrectFeedback: "Un Doppler ambulatorio no tiene lugar en una herida por arma de fuego con un signo duro de lesión vascular: el paciente necesita cirugía inmediata." },
     ],
     correctOptionId: "C",
     explanation:
-      "Ausencia de pulso carotídeo = signo duro de lesión vascular cervical. Obliga exploración quirúrgica urgente independientemente de la estabilidad hemodinámica.",
+      "En el **trauma penetrante de cuello**, el manejo depende de los **signos duros** de lesión vascular o aerodigestiva, no solo de la zona afectada:\n- **Signos duros vasculares:** **ausencia de pulso** (aquí, carotídeo derecho), sangrado activo o pulsátil, hematoma expansivo o pulsátil, soplo o frémito, déficit neurológico por isquemia.\n- **Signos duros aerodigestivos:** aire que sale por la herida, enfisema subcutáneo extenso, hemoptisis o hematemesis importante, estridor.\n\nCon **cualquier signo duro** se va a **exploración quirúrgica inmediata**, aunque el paciente esté hemodinámicamente estable. La ausencia de pulso carotídeo indica una lesión grave (sección o trombosis) con riesgo de ACV. Además, el trayecto cruza la línea media (de zona I izquierda a zona II derecha), lo que aumenta la probabilidad de lesiones en varias estructuras.\n\nLa angiotomografía se reserva para el paciente estable **sin signos duros** (signos blandos o asintomático).\n\n**TRAMPA DEL EXAMEN:** Pensar que un hematoma no expansivo y la estabilidad hemodinámica permiten hacer imágenes. La ausencia de pulso carotídeo es un signo duro por sí sola.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en el cuello con un balazo la pregunta es una: ¿tiene signos duros? Si falta el pulso carotídeo, la respuesta es sí y el paciente va al quirófano, aunque esté estable.",
     keyPoints: [
       "Cuando veas: trauma penetrante de cuello con ausencia de pulso carotídeo, aunque el paciente esté hemodinámicamente estable.",
       "Debes pensar en: signo duro de lesión vascular cervical → exploración quirúrgica inmediata.",
@@ -1452,14 +1452,14 @@ Referencias
     statement:
       "Masculino de 32 años con diagnóstico de fractura cerrada de tibia y peroné derecho luego de sufrir un deslizamiento por un barranco. Es llevado exitosamente a manejo quirúrgico. Durante el postoperatorio presenta dolor intenso en la extremidad que no mejora con analgésicos. Signos vitales normales. Al examen físico presenta dolor exacerbado con el estiramiento pasivo de los músculos, palidez distal, parestesias y ausencia de pulsos distales. ¿Cuál es el manejo más adecuado?",
     options: [
-      { id: "A", label: "A", text: "Aumentar la analgesia con opioides y observación clínica." },
-      { id: "B", label: "B", text: "Solicitar ecografía Doppler arterial de la extremidad." },
+      { id: "A", label: "A", text: "Aumentar la analgesia con opioides y observación clínica.", incorrectFeedback: "Aumentar los opioides enmascara el síntoma principal y retrasa una cirugía urgente. Este paciente ya tiene signos tardíos (palidez y ausencia de pulsos)." },
+      { id: "B", label: "B", text: "Solicitar ecografía Doppler arterial de la extremidad.", incorrectFeedback: "El diagnóstico del síndrome compartimental es clínico. En los compartimentos los pulsos pueden estar presentes hasta etapas tardías, y pedir un Doppler retrasa la fasciotomía." },
       { id: "C", label: "C", text: "Realizar fasciotomía urgente." },
-      { id: "D", label: "D", text: "Retirar vendajes y reevaluar en 6 horas." },
+      { id: "D", label: "D", text: "Retirar vendajes y reevaluar en 6 horas.", incorrectFeedback: "Retirar vendajes es una medida inicial ante sospecha temprana, pero no se puede esperar 6 horas con signos tan avanzados: la necrosis muscular empieza en ese tiempo." },
     ],
     correctOptionId: "C",
     explanation:
-      "Síndrome compartimental agudo: dolor desproporcionado, dolor al estiramiento pasivo, parestesias. Emergencia quirúrgica: fasciotomía urgente.",
+      "El paciente tiene un **síndrome compartimental agudo**: tras una fractura de tibia (la causa más frecuente) aumenta la presión dentro de un compartimento muscular cerrado por la fascia, y esa presión impide el flujo de sangre a los músculos y nervios.\n\nSignos, en orden de aparición:\n- **Dolor desproporcionado** que no mejora con analgésicos: el síntoma más temprano.\n- **Dolor con el estiramiento pasivo** de los músculos del compartimento: el signo más sensible.\n- **Parestesias** y tensión del compartimento a la palpación.\n- **Palidez, parálisis y ausencia de pulsos**: signos **tardíos**, que indican daño avanzado.\n\nEl diagnóstico es **clínico** (se puede medir la presión del compartimento si hay duda: más de 30 mmHg, o presión diastólica menos presión del compartimento menor de 30 mmHg). El tratamiento es la **fasciotomía urgente** de los compartimentos afectados (en la pierna, de los cuatro). Retrasarla más de 6 horas lleva a necrosis muscular, contractura de Volkmann, rabdomiólisis e incluso amputación.\n\n**TRAMPA DEL EXAMEN:** Esperar a que desaparezcan los pulsos para diagnosticarlo, o tratarlo con más analgesia. La ausencia de pulso es un signo tardío: el diagnóstico se hace con el dolor.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., dolor que no cede con analgésicos y que empeora al estirar pasivamente los dedos después de una fractura de tibia: síndrome compartimental. No espere a que se vaya el pulso: abra la fascia.",
     keyPoints: [
       "Cuando veas: fractura de tibia postoperatoria con dolor intenso desproporcionado, dolor al estiramiento pasivo y parestesias.",
       "Debes pensar en: síndrome compartimental agudo → fasciotomía urgente.",
@@ -2016,18 +2016,19 @@ Referencias
         id: "A",
         label: "A",
         text: "Control exclusivo de frecuencia con betabloqueador y anticoagulación indefinida.",
+        incorrectFeedback: "El control exclusivo de la frecuencia es razonable en FA de larga evolución o con aurícula dilatada. Aquí la FA es reciente con aurícula normal, y con CHA₂DS₂-VASc de 1 (solo por sexo femenino) no hay indicación de anticoagulación indefinida.",
       },
       {
         id: "B",
         label: "B",
         text: "Cardioversión eléctrica o farmacológica para restaurar ritmo sinusal tras descartar trombo auricular o anticoagular adecuadamente.",
       },
-      { id: "C", label: "C", text: "Ablación urgente de venas pulmonares." },
-      { id: "D", label: "D", text: "Observación clínica sin tratamiento específico." },
+      { id: "C", label: "C", text: "Ablación urgente de venas pulmonares.", incorrectFeedback: "La ablación de venas pulmonares es un procedimiento programado, generalmente para FA recurrente o que no responde a fármacos. No es urgente ni de primera línea en un primer episodio." },
+      { id: "D", label: "D", text: "Observación clínica sin tratamiento específico.", incorrectFeedback: "Una FA sintomática con respuesta ventricular de 100–120 lpm requiere manejo: control del ritmo o de la frecuencia y evaluación del riesgo de embolia." },
     ],
     correctOptionId: "B",
     explanation:
-      "FA de corta evolución (~2 semanas), aurícula izquierda normal (34 mm) y sin cardiopatía estructural. Alta probabilidad de éxito de cardioversión para control del ritmo.",
+      "La paciente tiene **fibrilación auricular de unas 2 semanas**, sin cardiopatía estructural y con **aurícula izquierda de tamaño normal** (34 mm). Con una FA tan reciente y una aurícula normal, la probabilidad de **mantener el ritmo sinusal** tras la cardioversión es alta, así que se prefiere una **estrategia de control del ritmo**.\n\nComo la FA lleva **más de 48 horas**, hay riesgo de trombo en la aurícula. Antes de cardiovertir hay dos caminos:\n- **Anticoagular 3 semanas** y luego cardiovertir, o\n- Hacer **ecocardiograma transesofágico** para descartar trombo y cardiovertir de inmediato.\nEn ambos casos se anticoagula **al menos 4 semanas después** de la cardioversión.\n\nLa anticoagulación a largo plazo depende del **CHA₂DS₂-VASc**: esta paciente de 60 años sin otros factores tiene 1 punto (solo por ser mujer), así que no necesita anticoagulación indefinida.\n\n**TRAMPA DEL EXAMEN:** Cardiovertir sin anticoagular ni hacer transesofágico, o anticoagular de por vida por reflejo. Con más de 48 horas hay que proteger antes la cardioversión; la anticoagulación indefinida la decide el CHA₂DS₂-VASc.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., FA reciente en una aurícula sana es la mejor candidata para devolverla a sinusal. Si lleva más de 48 horas, anticoagule 3 semanas o haga transesofágico antes, y siga 4 semanas después.",
     keyPoints: [
       "Cuando veas: FA de corta evolución (~2 semanas), aurícula izquierda normal (34 mm) y sin cardiopatía estructural significativa.",
       "Debes pensar en: control del ritmo con cardioversión eléctrica o farmacológica tras descartar trombo o anticoagular adecuadamente.",
@@ -2105,14 +2106,14 @@ Referencias
     statement:
       "Paciente masculino de 68 años, fumador de larga data, consulta por disnea progresiva. Se realiza espirometría que reporta índice de Tiffeneau (FEV1/FVC) de 65% y FEV1 de 57% del predicho. Gasometría arterial: PaO₂ 53 mmHg. ¿Cuál es el tratamiento que ha demostrado aumentar la supervivencia en este paciente?",
     options: [
-      { id: "A", label: "A", text: "Salmeterol inhalado." },
-      { id: "B", label: "B", text: "Triple terapia inhalada (LABA/LAMA/ICS)." },
+      { id: "A", label: "A", text: "Salmeterol inhalado.", incorrectFeedback: "El salmeterol (LABA) mejora la disnea y reduce exacerbaciones, pero no ha demostrado aumentar la supervivencia en la EPOC." },
+      { id: "B", label: "B", text: "Triple terapia inhalada (LABA/LAMA/ICS).", incorrectFeedback: "La triple terapia reduce exacerbaciones en pacientes que las tienen con frecuencia. El dato que define este caso es la PaO₂ de 53 mmHg, y la intervención que prolonga la vida en la hipoxemia grave es el oxígeno domiciliario crónico." },
       { id: "C", label: "C", text: "Oxigenoterapia domiciliaria crónica." },
-      { id: "D", label: "D", text: "Rehabilitación pulmonar." },
+      { id: "D", label: "D", text: "Rehabilitación pulmonar.", incorrectFeedback: "La rehabilitación pulmonar mejora la disnea, la capacidad de ejercicio y la calidad de vida, y reduce hospitalizaciones, pero no ha demostrado aumentar la supervivencia como el oxígeno en el hipoxémico." },
     ],
     correctOptionId: "C",
     explanation:
-      "EPOC con hipoxemia severa (PaO₂ 53 mmHg ≤55 mmHg). Indicación clásica de oxigenoterapia domiciliaria crónica, una de las pocas intervenciones que reduce mortalidad.",
+      "La espirometría confirma **EPOC**: FEV1/FVC menor de 70 % (aquí 65 %) con FEV1 de 57 % (obstrucción moderada, GOLD 2). Lo decisivo es la gasometría: **PaO₂ de 53 mmHg**, una **hipoxemia grave**.\n\nSolo dos intervenciones han demostrado **aumentar la supervivencia** en la EPOC:\n- **Dejar de fumar**.\n- **Oxigenoterapia domiciliaria crónica** (más de 15 horas al día) en pacientes con **hipoxemia crónica grave** en reposo:\n  - **PaO₂ de 55 mmHg o menos**, o saturación de 88 % o menos.\n  - **PaO₂ de 56–59 mmHg** con cor pulmonale, hipertensión pulmonar o hematocrito mayor de 55 %.\nLa hipoxemia debe confirmarse en fase estable, con el tratamiento óptimo.\n\nLos broncodilatadores y la rehabilitación mejoran los síntomas, la capacidad de ejercicio y las exacerbaciones; la triple terapia ha mostrado reducir la mortalidad en algunos ensayos en pacientes con exacerbaciones frecuentes, pero la intervención clásica con beneficio claro en supervivencia en este paciente hipoxémico es el oxígeno.\n\n**TRAMPA DEL EXAMEN:** Elegir la triple terapia o la rehabilitación porque mejoran mucho al paciente. Mejoran síntomas y calidad de vida; la que aumenta la supervivencia en el hipoxémico es el oxígeno crónico.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en EPOC dos cosas alargan la vida: dejar de fumar y el oxígeno en casa para el que tiene PaO₂ de 55 o menos. Formule el oxígeno al menos 15 horas al día.",
     keyPoints: [
       "Cuando veas: EPOC con PaO₂ ≤55 mmHg (o SatO₂ ≤88%) en gasometría arterial en reposo.",
       "Debes pensar en: oxigenoterapia domiciliaria crónica — una de las pocas intervenciones que reduce mortalidad en EPOC.",
