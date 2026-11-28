@@ -529,9 +529,10 @@ function CategoryDetail({ category, entries, variant, masteredIds, onToggle, onB
   const nestedUnderParent = (card: UltraCard) => Boolean(card.linkedTo && visibleIds.has(card.linkedTo));
   function officialWrapper(card: UltraCard): string | undefined {
     if (!card.official) return undefined;
-    return nestedUnderParent(card)
-      ? `ml-3 border-l-2 pl-3 sm:ml-6 sm:pl-5 ${theme.officialRail}`
-      : `border-l-2 pl-3 sm:pl-5 ${theme.officialRail}`;
+    // Las de "Otras" llevan la misma sangría; las que pierden su ficha al filtrar, ninguna.
+    return card.linkedTo && !nestedUnderParent(card)
+      ? `border-l-2 pl-3 sm:pl-5 ${theme.officialRail}`
+      : `ml-3 border-l-2 pl-3 sm:ml-6 sm:pl-5 ${theme.officialRail}`;
   }
   function officialContext(card: UltraCard): string | undefined {
     if (!card.official) return undefined;
