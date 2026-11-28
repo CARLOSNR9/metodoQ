@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-miscelanea-t-medicina-legal-y-bioetica",
     "title": "Medicina legal y bioética",
     "level": 1,
-    "meta": "44 preguntas MIR 2016-2026"
+    "meta": "44 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -47,7 +47,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-miscelanea-t-geriatria",
     "title": "Geriatría",
     "level": 1,
-    "meta": "39 preguntas MIR 2016-2026"
+    "meta": "39 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -76,7 +76,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-miscelanea-t-paciente-terminal-y-cuidados-paliativos",
     "title": "Paciente terminal y cuidados paliativos",
     "level": 1,
-    "meta": "37 preguntas MIR 2016-2026"
+    "meta": "37 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -106,7 +106,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-miscelanea-t-farmacologia",
     "title": "Farmacología",
     "level": 2,
-    "meta": "28 preguntas MIR 2016-2026"
+    "meta": "28 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -136,7 +136,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-miscelanea-t-genetica",
     "title": "Genética",
     "level": 2,
-    "meta": "28 preguntas MIR 2016-2026"
+    "meta": "28 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -166,7 +166,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-miscelanea-t-anestesia-y-paciente-critico",
     "title": "Anestesia y paciente crítico",
     "level": 3,
-    "meta": "18 preguntas MIR 2016-2026"
+    "meta": "18 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -193,7 +193,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-miscelanea-t-gestion-calidad-y-demografia",
     "title": "Gestión, calidad y demografía",
     "level": 4,
-    "meta": "17 preguntas MIR 2016-2026"
+    "meta": "17 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -211,7 +211,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-miscelanea-t-medicina-preventiva-y-salud-publica",
     "title": "Medicina preventiva y salud pública",
     "level": 5,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",

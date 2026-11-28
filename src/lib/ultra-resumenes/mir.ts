@@ -2,6 +2,7 @@ import { MIR_OFFICIAL_QUESTIONS } from "@/lib/training/mir-convocatoria";
 import { formatSpecialtyLabel, getQuestionSpecialtyKeys } from "@/lib/training/mir-practice";
 import type { TrainingQuestion } from "@/lib/questions/types";
 import { MIR_ULTRA_CONTENT, type MirUltraContent } from "./mir-content";
+import { MIR_OFFICIAL_PLACEMENTS } from "./mir-placements";
 import type { UltraCard, UltraCategory, UltraEntry, UltraLevel } from "./types";
 
 /**
@@ -66,7 +67,82 @@ export type MirUltraSummary = {
   levels: { level: UltraLevel; share: number; perConvocatoria: number; specialtyCount: number }[];
 };
 
-function buildCards(specialtySlug: string, questions: TrainingQuestion[]): { cards: UltraCard[]; repeated: number } {
+const WORD = /[\p{L}\p{N}]+(?:-[\p{L}\p{N}]+)*/gu;
+
+/**
+ * Cómo se escribe cada palabra a mitad de frase en los puntos clave
+ * ("lynch" → "Lynch", "vih" → "VIH"). Sirve para recuperar las mayúsculas de
+ * los temas del banco, que vienen en mayúsculas.
+ */
+export function buildCasingDictionary(texts: string[]): Map<string, string> {
+  const counts = new Map<string, Map<string, number>>();
+  for (const text of texts) {
+    for (const match of text.matchAll(WORD)) {
+      const index = match.index ?? 0;
+      const before = text.slice(0, index).trimEnd();
+      if (before === "" || /[.!?]$/.test(before)) continue; // inicio de frase
+      const word = match[0];
+      const lower = word.toLocaleLowerCase("es");
+      const forms = counts.get(lower) ?? new Map<string, number>();
+      forms.set(word, (forms.get(word) ?? 0) + 1);
+      counts.set(lower, forms);
+    }
+  }
+  const dictionary = new Map<string, string>();
+  for (const [lower, forms] of counts) {
+    const lowerCount = forms.get(lower) ?? 0;
+    let best = lower;
+    let bestCount = 0;
+    for (const [form, count] of forms) {
+      if (form !== lower && count > bestCount) {
+        best = form;
+        bestCount = count;
+      }
+    }
+    if (bestCount > lowerCount) dictionary.set(lower, best);
+  }
+  return dictionary;
+}
+
+/** "SÍNDROME DE LYNCH" → "Síndrome de Lynch" con el diccionario de mayúsculas. */
+export function formatTopicTitle(topic: string, casing: Map<string, string>): string {
+  // "tipo a" → "tipo A" (la "a" suelta se confundiría con la preposición).
+  const sentence = formatSpecialtyLabel(topic).replace(/\btipo ([a-z])\b/g, (_, letter: string) => `tipo ${letter.toUpperCase()}`);
+  return sentence.replace(WORD, (word, offset: number) => {
+    const known = casing.get(word.toLocaleLowerCase("es"));
+    if (!known) return word;
+    // La primera palabra ya va con mayúscula inicial; solo se cambia si es una sigla.
+    if (offset === 0 && known !== known.toLocaleUpperCase("es")) return word;
+    return known;
+  });
+}
+
+function pointTokens(point: string): Set<string> {
+  return new Set(slugify(point).split("-").filter((word) => word.length >= 3));
+}
+
+/** Quita los puntos que repiten casi por completo otro anterior. */
+export function dedupePoints(points: string[]): string[] {
+  const kept: { point: string; tokens: Set<string> }[] = [];
+  for (const point of points) {
+    const tokens = pointTokens(point);
+    const repeated = kept.some((other) => {
+      const [small, large] = tokens.size <= other.tokens.size ? [tokens, other.tokens] : [other.tokens, tokens];
+      if (small.size < 4) return false;
+      let shared = 0;
+      for (const token of small) if (large.has(token)) shared += 1;
+      return shared / small.size >= 0.75;
+    });
+    if (!repeated) kept.push({ point, tokens });
+  }
+  return kept.map((item) => item.point);
+}
+
+function buildCards(
+  specialtySlug: string,
+  questions: TrainingQuestion[],
+  casing: Map<string, string>,
+): { cards: UltraCard[]; repeated: number } {
   // Se agrupa por el slug del tema para unir variantes de mayúsculas o tildes.
   const groups = new Map<string, TrainingQuestion[]>();
   for (const question of questions) {
@@ -97,8 +173,9 @@ function buildCards(specialtySlug: string, questions: TrainingQuestion[]): { car
     return {
       kind: "card",
       id: `mir-${specialtySlug}-${key}`,
-      title: formatSpecialtyLabel(base),
-      points,
+      title: formatTopicTitle(base, casing),
+      points: dedupePoints(points),
+      official: true,
       badge: list.length >= 2 ? `Preguntado ${list.length} veces` : undefined,
       meta: years.length > 0 ? formatYears(years) : undefined,
     };
@@ -136,20 +213,28 @@ function addTokens(bag: Map<string, number>, text: string, weight: number, cap =
   for (const token of linkTokens(text)) bag.set(token, Math.min(cap, (bag.get(token) ?? 0) + weight));
 }
 
+function normalizePlacements(placements: Record<string, string | null> = {}): Map<string, string | null> {
+  return new Map(Object.entries(placements).map(([official, target]) => [slugify(official), target === null ? null : slugify(target)]));
+}
+
 /**
  * Coloca cada ficha de preguntas oficiales justo debajo de la ficha propia
  * que trata su tema (p. ej. "Síndrome de Lynch" bajo "Pólipos y síndromes
- * hereditarios"). Se empareja por palabras compartidas, pesando más los
- * títulos y las palabras raras dentro de la especialidad. Las que no
- * alcanzan el mínimo van al final, en su propio apartado.
+ * hereditarios"). Manda la colocación manual (mir-placements); si no la hay,
+ * se empareja por palabras compartidas, pesando más los títulos y las
+ * palabras raras dentro de la especialidad. Las que no alcanzan el mínimo
+ * van al final, en su propio apartado.
  */
 export function placeOfficialCards(
   ownEntries: UltraEntry[],
   officialCards: UltraCard[],
   slug = "mir",
   minScore = MIR_LINK_MIN_SCORE,
+  placements: Record<string, string | null> = {},
 ): UltraEntry[] {
+  const manual = normalizePlacements(placements);
   const own: { card: UltraCard; bag: Map<string, number> }[] = [];
+  const ownBySlug = new Map<string, UltraCard>();
   let heading = "";
   for (const entry of ownEntries) {
     if (entry.kind === "heading") {
@@ -160,15 +245,14 @@ export function placeOfficialCards(
     addTokens(bag, `${entry.title} ${heading}`, 3);
     addTokens(bag, entry.points.join(" "), 1);
     own.push({ card: entry, bag });
+    if (!ownBySlug.has(slugify(entry.title))) ownBySlug.set(slugify(entry.title), entry);
   }
 
   const documentFrequency = new Map<string, number>();
   for (const { bag } of own) for (const token of bag.keys()) documentFrequency.set(token, (documentFrequency.get(token) ?? 0) + 1);
   const idf = (token: string) => Math.log(1 + own.length / (documentFrequency.get(token) ?? own.length));
 
-  const linked = new Map<string, UltraCard[]>();
-  const unlinked: UltraCard[] = [];
-  for (const official of officialCards) {
+  function bestMatch(official: UltraCard): UltraCard | null {
     const bag = new Map<string, number>();
     addTokens(bag, official.title, 3);
     addTokens(bag, official.points.join(" "), 1, 2);
@@ -185,12 +269,20 @@ export function placeOfficialCards(
         best = candidate.card;
       }
     }
-    if (best && bestScore >= minScore) {
-      const list = linked.get(best.id) ?? [];
-      list.push({ ...official, official: true });
-      linked.set(best.id, list);
+    return best && bestScore >= minScore ? best : null;
+  }
+
+  const linked = new Map<string, UltraCard[]>();
+  const unlinked: UltraCard[] = [];
+  for (const official of officialCards) {
+    const key = slugify(official.title);
+    const target = manual.has(key) ? (manual.get(key) === null ? null : (ownBySlug.get(manual.get(key)!) ?? null)) : bestMatch(official);
+    if (target) {
+      const list = linked.get(target.id) ?? [];
+      list.push({ ...official, official: true, linkedTo: target.id });
+      linked.set(target.id, list);
     } else {
-      unlinked.push(official);
+      unlinked.push({ ...official, official: true, linkedTo: undefined });
     }
   }
 
@@ -223,6 +315,7 @@ export function buildMirUltraSummary(
     list.push(question);
     bySpecialty.set(groupKey, list);
   }
+  const casing = buildCasingDictionary(valid.flatMap((question) => question.keyPoints));
   const total = [...bySpecialty.values()].reduce((sum, list) => sum + list.length, 0) || 1;
 
   const specialties = [...bySpecialty.entries()]
@@ -231,7 +324,7 @@ export function buildMirUltraSummary(
       const slug = own?.slug ?? slugify(groupKey);
       const perConvocatoria = list.length / convocatorias;
       const level = getMirLevel(perConvocatoria);
-      const { cards, repeated } = buildCards(slug, list);
+      const { cards, repeated } = buildCards(slug, list, casing);
       return {
         slug,
         keys: own?.keys ?? [groupKey],
@@ -253,7 +346,7 @@ export function buildMirUltraSummary(
             ? { value: String(own.topicCount), label: "temas ordenados por rentabilidad, de más a menos preguntados" }
             : { value: String(repeated), label: "temas que ya se han preguntado más de una vez" },
         ],
-        load: async () => (own ? placeOfficialCards(await own.load(), cards, slug) : cards),
+        load: async () => (own ? placeOfficialCards(await own.load(), cards, slug, MIR_LINK_MIN_SCORE, MIR_OFFICIAL_PLACEMENTS[slug]) : cards),
       };
     })
     .sort((a, b) => b.questionCount - a.questionCount || a.title.localeCompare(b.title, "es"));

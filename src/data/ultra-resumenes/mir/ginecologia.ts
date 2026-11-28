@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-patologia-mamaria",
     "title": "Patología mamaria",
     "level": 1,
-    "meta": "22 preguntas MIR 2016-2026"
+    "meta": "22 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -61,7 +61,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-utero-miomas-endometrio-y-metrorragias",
     "title": "Útero: miomas, endometrio y metrorragias",
     "level": 1,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -91,7 +91,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-amenorreas-y-diferenciacion-sexual",
     "title": "Amenorreas y diferenciación sexual",
     "level": 1,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -130,7 +130,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-hemorragias-del-primer-trimestre",
     "title": "Hemorragias del primer trimestre",
     "level": 1,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -170,7 +170,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-estados-hipertensivos-del-embarazo",
     "title": "Estados hipertensivos del embarazo",
     "level": 1,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -199,7 +199,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-cancer-de-ovario",
     "title": "Cáncer de ovario",
     "level": 1,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -219,7 +219,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-cuello-uterino-y-vph",
     "title": "Cuello uterino y VPH",
     "level": 1,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -246,7 +246,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-diagnostico-prenatal",
     "title": "Diagnóstico prenatal",
     "level": 2,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -265,7 +265,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-parto-pretermino-y-rotura-prematura-de-membranas",
     "title": "Parto pretérmino y rotura prematura de membranas",
     "level": 2,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -293,7 +293,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-endometriosis",
     "title": "Endometriosis",
     "level": 2,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -311,7 +311,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-climaterio-y-menopausia",
     "title": "Climaterio y menopausia",
     "level": 2,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -330,7 +330,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-diabetes-gestacional",
     "title": "Diabetes gestacional",
     "level": 2,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -349,7 +349,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-parto-ovario-poliquistico-anticoncepcion-y-esterilidad",
     "title": "Parto, ovario poliquístico, anticoncepción y esterilidad",
     "level": 3,
-    "meta": "16 preguntas MIR 2016-2026"
+    "meta": "16 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -396,7 +396,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-crecimiento-intrauterino-restringido",
     "title": "Crecimiento intrauterino restringido",
     "level": 3,
-    "meta": "3 preguntas MIR 2016-2026"
+    "meta": "3 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -414,7 +414,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-tercer-trimestre-puerperio-e-infecciones",
     "title": "Tercer trimestre, puerperio e infecciones",
     "level": 4,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -453,7 +453,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-ginecologia-t-patologia-medica-del-embarazo-vulva-y-otros",
     "title": "Patología médica del embarazo, vulva y otros",
     "level": 5,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",

@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-dermatologia-t-neoplasias-cutaneas",
     "title": "Neoplasias cutáneas",
     "level": 1,
-    "meta": "15 preguntas MIR 2016-2026"
+    "meta": "15 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -38,7 +38,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-dermatologia-t-infecciones-cutaneas",
     "title": "Infecciones cutáneas",
     "level": 1,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -66,7 +66,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-dermatologia-t-manifestaciones-cutaneas-de-enfermedades-sistemicas",
     "title": "Manifestaciones cutáneas de enfermedades sistémicas",
     "level": 1,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -85,7 +85,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-dermatologia-t-psoriasis-eccemas-y-toxicodermias",
     "title": "Psoriasis, eccemas y toxicodermias",
     "level": 2,
-    "meta": "18 preguntas MIR 2016-2026"
+    "meta": "18 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -122,7 +122,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-dermatologia-t-ampollosas",
     "title": "Ampollosas",
     "level": 3,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -139,7 +139,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-dermatologia-t-generalidades-paniculitis-y-alopecias",
     "title": "Generalidades, paniculitis y alopecias",
     "level": 5,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",

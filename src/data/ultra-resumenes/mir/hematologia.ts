@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-anemias-hemoliticas",
     "title": "Anemias hemolíticas",
     "level": 1,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -53,7 +53,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-linfomas-no-hodgkin-y-sindromes-linfoproliferativos-cronicos",
     "title": "Linfomas no Hodgkin y síndromes linfoproliferativos crónicos",
     "level": 1,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -84,7 +84,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-alteraciones-de-la-coagulacion",
     "title": "Alteraciones de la coagulación",
     "level": 1,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -111,7 +111,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-anticoagulantes",
     "title": "Anticoagulantes",
     "level": 1,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -139,7 +139,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-trombocitopenias",
     "title": "Trombocitopenias",
     "level": 1,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -157,7 +157,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-trasplante-de-progenitores-hematopoyeticos",
     "title": "Trasplante de progenitores hematopoyéticos",
     "level": 2,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -175,7 +175,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-neoplasias-mieloproliferativas-cronicas",
     "title": "Neoplasias mieloproliferativas crónicas",
     "level": 2,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -193,7 +193,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-anemia-ferropenica",
     "title": "Anemia ferropénica",
     "level": 2,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -211,7 +211,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-aplasia-megaloblasticas-mielodisplasias-mieloma-hemostasia-y-transfusion",
     "title": "Aplasia, megaloblásticas, mielodisplasias, mieloma, hemostasia y transfusión",
     "level": 3,
-    "meta": "18 preguntas MIR 2016-2026"
+    "meta": "18 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -272,7 +272,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-anemia-inflamatoria-leucemias-agudas-y-hodgkin",
     "title": "Anemia inflamatoria, leucemias agudas y Hodgkin",
     "level": 4,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -308,7 +308,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-hematologia-t-generalidades-de-anemias-y-trombocitopatias",
     "title": "Generalidades de anemias y trombocitopatías",
     "level": 5,
-    "meta": "2 preguntas MIR 2016-2026"
+    "meta": "2 preguntas en el MIR"
   },
   {
     "kind": "card",

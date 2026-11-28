@@ -43,7 +43,7 @@ def parse(path):
             hid = f'mirc-{slug}-t-{slugify(title)}'
             plural = 'pregunta' if preg == 1 else 'preguntas'
             entries.append({'kind': 'heading', 'id': hid, 'title': title, 'level': level,
-                            'meta': f"{preg} {plural} MIR {meta.get('period', '')}".strip() if preg else 'Tema puente'})
+                            'meta': f"{preg} {plural} en el MIR" if preg else 'Tema puente'})
             card = None
         elif line.startswith('## '):
             title = line[3:].strip()

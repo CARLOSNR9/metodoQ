@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-pediatria-t-neonatologia",
     "title": "Neonatología",
     "level": 1,
-    "meta": "21 preguntas MIR 2016-2026"
+    "meta": "21 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -59,7 +59,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-pediatria-t-vacunas",
     "title": "Vacunas",
     "level": 1,
-    "meta": "21 preguntas MIR 2016-2026"
+    "meta": "21 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -97,7 +97,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-pediatria-t-aparato-digestivo-infantil",
     "title": "Aparato digestivo infantil",
     "level": 1,
-    "meta": "14 preguntas MIR 2016-2026"
+    "meta": "14 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -126,7 +126,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-pediatria-t-infecciosas-pediatricas",
     "title": "Infecciosas pediátricas",
     "level": 2,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -154,7 +154,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-pediatria-t-aparato-respiratorio",
     "title": "Aparato respiratorio",
     "level": 2,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -181,7 +181,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-pediatria-t-nefrourologia-y-crecimiento",
     "title": "Nefrourología y crecimiento",
     "level": 3,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -209,7 +209,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-pediatria-t-nutricion-y-maltrato",
     "title": "Nutrición y maltrato",
     "level": 4,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -236,7 +236,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-pediatria-t-muerte-subita-deshidratacion-y-oncologia",
     "title": "Muerte súbita, deshidratación y oncología",
     "level": 5,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",

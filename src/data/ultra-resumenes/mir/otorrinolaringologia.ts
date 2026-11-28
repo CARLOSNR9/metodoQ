@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-otorrinolaringologia-t-oido",
     "title": "Oído",
     "level": 1,
-    "meta": "26 preguntas MIR 2016-2026"
+    "meta": "26 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -56,7 +56,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-otorrinolaringologia-t-faringe",
     "title": "Faringe",
     "level": 2,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -84,7 +84,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-otorrinolaringologia-t-cirugia-maxilofacial",
     "title": "Cirugía maxilofacial",
     "level": 2,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -103,7 +103,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-otorrinolaringologia-t-nariz-senos-y-laringe",
     "title": "Nariz, senos y laringe",
     "level": 3,
-    "meta": "14 preguntas MIR 2016-2026"
+    "meta": "14 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -132,7 +132,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-otorrinolaringologia-t-glandulas-salivales-y-masas-cervicales",
     "title": "Glándulas salivales y masas cervicales",
     "level": 4,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",

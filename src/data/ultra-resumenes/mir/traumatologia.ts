@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-tumores-musculoesqueleticos",
     "title": "Tumores musculoesqueléticos",
     "level": 1,
-    "meta": "15 preguntas MIR 2016-2026"
+    "meta": "15 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -39,7 +39,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-lesiones-de-partes-blandas",
     "title": "Lesiones de partes blandas",
     "level": 1,
-    "meta": "14 preguntas MIR 2016-2026"
+    "meta": "14 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -68,7 +68,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-manejo-del-politraumatizado",
     "title": "Manejo del politraumatizado",
     "level": 1,
-    "meta": "13 preguntas MIR 2016-2026"
+    "meta": "13 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -87,7 +87,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-ortopedia-infantil",
     "title": "Ortopedia infantil",
     "level": 1,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -116,7 +116,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-nervios-perifericos",
     "title": "Nervios periféricos",
     "level": 1,
-    "meta": "12 preguntas MIR 2016-2026"
+    "meta": "12 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -135,7 +135,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-fracturas-de-miembro-inferior",
     "title": "Fracturas de miembro inferior",
     "level": 2,
-    "meta": "11 preguntas MIR 2016-2026"
+    "meta": "11 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -163,7 +163,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-fracturas-de-miembro-superior",
     "title": "Fracturas de miembro superior",
     "level": 3,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -182,7 +182,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-ortopedia-del-adulto",
     "title": "Ortopedia del adulto",
     "level": 3,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -200,7 +200,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-raquis",
     "title": "Raquis",
     "level": 4,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -218,7 +218,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-traumatologia-t-generalidades-de-lesiones-oseas",
     "title": "Generalidades de lesiones óseas",
     "level": 5,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",

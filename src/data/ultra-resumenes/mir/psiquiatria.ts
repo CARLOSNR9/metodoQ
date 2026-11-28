@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-psiquiatria-t-trastornos-del-estado-de-animo",
     "title": "Trastornos del estado de ánimo",
     "level": 1,
-    "meta": "30 preguntas MIR 2016-2026"
+    "meta": "30 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -69,7 +69,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-psiquiatria-t-trastornos-psicoticos",
     "title": "Trastornos psicóticos",
     "level": 1,
-    "meta": "18 preguntas MIR 2016-2026"
+    "meta": "18 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -99,7 +99,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-psiquiatria-t-trastornos-de-ansiedad-y-obsesivo-compulsivo",
     "title": "Trastornos de ansiedad y obsesivo-compulsivo",
     "level": 2,
-    "meta": "15 preguntas MIR 2016-2026"
+    "meta": "15 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -127,7 +127,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-psiquiatria-t-trastornos-mentales-organicos",
     "title": "Trastornos mentales orgánicos",
     "level": 2,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -146,7 +146,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-psiquiatria-t-trastornos-de-la-conducta-alimentaria",
     "title": "Trastornos de la conducta alimentaria",
     "level": 3,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -165,7 +165,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-psiquiatria-t-sustancias-y-adicciones",
     "title": "Sustancias y adicciones",
     "level": 3,
-    "meta": "6 preguntas MIR 2016-2026"
+    "meta": "6 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -193,7 +193,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-psiquiatria-t-personalidad-sueno-e-infancia",
     "title": "Personalidad, sueño e infancia",
     "level": 4,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -231,7 +231,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-psiquiatria-t-psicopatologia-y-somatomorfos",
     "title": "Psicopatología y somatomorfos",
     "level": 5,
-    "meta": "2 preguntas MIR 2016-2026"
+    "meta": "2 preguntas en el MIR"
   },
   {
     "kind": "card",

@@ -368,7 +368,9 @@ export function UltraResumenesView({
                         <h3 className={`text-base font-black leading-tight ${theme.title}`}>{category.title}</h3>
                         <ChevronRight className={`h-4 w-4 shrink-0 transition group-hover:translate-x-0.5 ${theme.muted}`} />
                       </div>
-                      <LevelBadge level={category.level} variant={variant} />
+                      <span className="self-start">
+                        <LevelBadge level={category.level} variant={variant} />
+                      </span>
                       <div className="mt-auto space-y-1.5">
                         <div className={`flex justify-between text-[11px] ${theme.muted}`}>
                           <span>{category.cardCount} fichas</span>
@@ -520,6 +522,23 @@ function CategoryDetail({ category, entries, variant, masteredIds, onToggle, onB
     return true;
   });
 
+  // Las fichas oficiales van sangradas bajo su ficha propia solo si esta se ve
+  // (con un filtro o una búsqueda puede quedar oculta).
+  const visibleIds = new Set(visibleEntries.map((entry) => entry.id));
+  const ownTitles = new Map(cards.filter((card) => !card.official).map((card) => [card.id, card.title]));
+  const nestedUnderParent = (card: UltraCard) => Boolean(card.linkedTo && visibleIds.has(card.linkedTo));
+  function officialWrapper(card: UltraCard): string | undefined {
+    if (!card.official) return undefined;
+    return nestedUnderParent(card)
+      ? `ml-3 border-l-2 pl-3 sm:ml-6 sm:pl-5 ${theme.officialRail}`
+      : `border-l-2 pl-3 sm:pl-5 ${theme.officialRail}`;
+  }
+  function officialContext(card: UltraCard): string | undefined {
+    if (!card.official) return undefined;
+    const parent = card.linkedTo ? ownTitles.get(card.linkedTo) : undefined;
+    return parent && !nestedUnderParent(card) ? `Pregunta oficial MIR · ${parent}` : "Pregunta oficial MIR";
+  }
+
   return (
     <div className="space-y-6">
       <button type="button" onClick={onBack} className={`inline-flex items-center gap-2 text-sm font-bold ${theme.muted} hover:opacity-80`}>
@@ -631,11 +650,11 @@ function CategoryDetail({ category, entries, variant, masteredIds, onToggle, onB
         <div className="space-y-3">
           {visibleEntries.map((entry) =>
             isUltraCard(entry) ? (
-              <div key={entry.id} className={entry.official ? `ml-3 border-l-2 pl-3 sm:ml-6 sm:pl-5 ${theme.officialRail}` : undefined}>
+              <div key={entry.id} className={officialWrapper(entry)}>
                 <FichaCard
                   card={entry}
                   variant={variant}
-                  context={entry.official ? "Pregunta oficial MIR" : undefined}
+                  context={officialContext(entry)}
                   isMastered={masteredIds.has(entry.id)}
                   onToggle={(value) => onToggle(entry.id, value)}
                   isLocked={locked && (cardIndex.get(entry.id) ?? 0) >= ULTRA_FREE_PREVIEW_CARDS}

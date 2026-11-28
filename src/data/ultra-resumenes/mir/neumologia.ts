@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-fisiologia-y-fisiopatologia-respiratoria",
     "title": "Fisiología y fisiopatología respiratoria",
     "level": 1,
-    "meta": "22 preguntas MIR 2016-2026"
+    "meta": "22 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -92,7 +92,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-neoplasias-pulmonares",
     "title": "Neoplasias pulmonares",
     "level": 1,
-    "meta": "20 preguntas MIR 2016-2026"
+    "meta": "20 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -177,7 +177,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-enfermedades-de-la-pleura",
     "title": "Enfermedades de la pleura",
     "level": 1,
-    "meta": "17 preguntas MIR 2016-2026"
+    "meta": "17 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -252,7 +252,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-epoc",
     "title": "EPOC",
     "level": 1,
-    "meta": "16 preguntas MIR 2016-2026"
+    "meta": "16 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -338,7 +338,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-tromboembolismo-pulmonar",
     "title": "Tromboembolismo pulmonar",
     "level": 2,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -394,7 +394,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-intersticiales-sarcoidosis-histiocitosis-x-lam-y-otras",
     "title": "Intersticiales: sarcoidosis, histiocitosis X, LAM y otras",
     "level": 2,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -442,7 +442,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-asma",
     "title": "Asma",
     "level": 2,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -485,7 +485,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-intersticiales-fibrosis-pulmonar-idiopatica-y-neumonias-intersticiales",
     "title": "Intersticiales: fibrosis pulmonar idiopática y neumonías intersticiales",
     "level": 2,
-    "meta": "8 preguntas MIR 2016-2026"
+    "meta": "8 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -526,7 +526,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-sindrome-de-dificultad-respiratoria-aguda",
     "title": "Síndrome de dificultad respiratoria aguda",
     "level": 3,
-    "meta": "7 preguntas MIR 2016-2026"
+    "meta": "7 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -545,7 +545,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-apnea-del-sueno-y-trastornos-de-la-ventilacion",
     "title": "Apnea del sueño y trastornos de la ventilación",
     "level": 4,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -574,7 +574,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-exploracion-respiratoria",
     "title": "Exploración respiratoria",
     "level": 4,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -593,7 +593,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-neumoconiosis-neumonitis-por-hipersensibilidad-y-farmacos",
     "title": "Neumoconiosis, neumonitis por hipersensibilidad y fármacos",
     "level": 4,
-    "meta": "4 preguntas MIR 2016-2026"
+    "meta": "4 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -612,7 +612,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-hipertension-pulmonar",
     "title": "Hipertensión pulmonar",
     "level": 4,
-    "meta": "3 preguntas MIR 2016-2026"
+    "meta": "3 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -631,7 +631,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-bronquiectasias",
     "title": "Bronquiectasias",
     "level": 4,
-    "meta": "2 preguntas MIR 2016-2026"
+    "meta": "2 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -649,7 +649,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-anatomia-y-signo-de-la-silueta",
     "title": "Anatomía y signo de la silueta",
     "level": 4,
-    "meta": "2 preguntas MIR 2016-2026"
+    "meta": "2 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -666,7 +666,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-oxigenoterapia-y-ventilacion-mecanica",
     "title": "Oxigenoterapia y ventilación mecánica",
     "level": 4,
-    "meta": "2 preguntas MIR 2016-2026"
+    "meta": "2 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -684,7 +684,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-neumologia-t-mediastino-bronquiolitis-y-diafragma",
     "title": "Mediastino, bronquiolitis y diafragma",
     "level": 5,
-    "meta": "3 preguntas MIR 2016-2026"
+    "meta": "3 preguntas en el MIR"
   },
   {
     "kind": "card",

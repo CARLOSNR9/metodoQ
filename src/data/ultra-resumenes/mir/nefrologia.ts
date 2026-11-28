@@ -7,7 +7,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-nefrologia-t-fisiologia-renal-acido-base-e-iones",
     "title": "Fisiología renal, ácido-base e iones",
     "level": 1,
-    "meta": "26 preguntas MIR 2016-2026"
+    "meta": "26 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -45,7 +45,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-nefrologia-t-enfermedades-tubulointersticiales",
     "title": "Enfermedades tubulointersticiales",
     "level": 1,
-    "meta": "18 preguntas MIR 2016-2026"
+    "meta": "18 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -73,7 +73,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-nefrologia-t-glomerulonefritis",
     "title": "Glomerulonefritis",
     "level": 1,
-    "meta": "15 preguntas MIR 2016-2026"
+    "meta": "15 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -102,7 +102,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-nefrologia-t-glomerulopatias-secundarias",
     "title": "Glomerulopatías secundarias",
     "level": 2,
-    "meta": "10 preguntas MIR 2016-2026"
+    "meta": "10 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -120,7 +120,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-nefrologia-t-microangiopatia-trombotica-shu-y-ptt",
     "title": "Microangiopatía trombótica: SHU y PTT",
     "level": 2,
-    "meta": "9 preguntas MIR 2016-2026"
+    "meta": "9 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -138,7 +138,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-nefrologia-t-fracaso-renal-agudo-e-insuficiencia-renal-cronica",
     "title": "Fracaso renal agudo e insuficiencia renal crónica",
     "level": 3,
-    "meta": "16 preguntas MIR 2016-2026"
+    "meta": "16 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -167,7 +167,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-nefrologia-t-trasplante-renal",
     "title": "Trasplante renal",
     "level": 4,
-    "meta": "3 preguntas MIR 2016-2026"
+    "meta": "3 preguntas en el MIR"
   },
   {
     "kind": "card",
@@ -185,7 +185,7 @@ export const ENTRIES: UltraEntry[] = [
     "id": "mirc-nefrologia-t-tubulopatias-nefrotico-y-nefritico",
     "title": "Tubulopatías, nefrótico y nefrítico",
     "level": 5,
-    "meta": "5 preguntas MIR 2016-2026"
+    "meta": "5 preguntas en el MIR"
   },
   {
     "kind": "card",
