@@ -68,6 +68,44 @@ export function ReportedQuestionsPanel({
     [visible],
   );
 
+  const [exported, setExported] = useState(false);
+
+  /**
+   * Texto con cada reporte visible y lo que dijeron los estudiantes, para
+   * corregir las preguntas fuera del panel. Indica si la pregunta tiene una
+   * copia editada en Firestore, porque esa copia tiene prioridad sobre el código.
+   */
+  const handleExport = async () => {
+    if (visible.length === 0) return;
+    const byId = new Map(questions.map((q) => [q.id, q]));
+    const blocks = visible.map((report) => {
+      const record = byId.get(report.questionId);
+      const firestore = !record
+        ? "sin datos"
+        : record.inFirestore
+          ? record.updatedAt
+            ? `copia EDITADA en Firestore (última edición ${record.updatedAt.slice(0, 10)})`
+            : "copia sin editar en Firestore"
+          : "solo en código";
+      const lines = [
+        `### ${report.questionId}`,
+        `Tema: ${report.topic || "—"} · Estado: ${report.status} · Firestore: ${firestore}`,
+      ];
+      const list = report.reportsList ?? [];
+      if (list.length === 0) lines.push("- (sin comentarios de estudiantes)");
+      for (const r of list) {
+        const comment = r.comments.trim().replace(/\s+/g, " ") || "(sin comentario)";
+        lines.push(`- [${r.createdAt.slice(0, 10)}] ${r.category}: ${comment}`);
+      }
+      return lines.join("\n");
+    });
+    await navigator.clipboard.writeText(
+      `REPORTES (${visible.length}) · exportado ${new Date().toISOString().slice(0, 10)}\n\n${blocks.join("\n\n")}`,
+    );
+    setExported(true);
+    setTimeout(() => setExported(false), 2000);
+  };
+
   const pendingCount = reports.filter((report) => report.status === "pending").length;
   const reviewedCount = reports.filter((report) => report.status === "reviewed").length;
   const dismissedCount = reports.filter((report) => report.status === "dismissed").length;
@@ -199,6 +237,15 @@ export function ReportedQuestionsPanel({
                 >
                   {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   {copied ? "Copiado" : "Copiar listado"}
+                </button>
+                <button
+                  type="button"
+                  onClick={handleExport}
+                  className="inline-flex items-center gap-2 rounded-lg border border-mq-accent px-4 py-2 text-sm font-semibold text-mq-accent transition hover:bg-mq-accent/10"
+                  title="Copia cada reporte con los comentarios de los estudiantes"
+                >
+                  {exported ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                  {exported ? "Copiado" : "Exportar con comentarios"}
                 </button>
               </div>
             </div>

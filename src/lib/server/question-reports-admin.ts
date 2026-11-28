@@ -1,7 +1,11 @@
 import { getFirebaseAdminDb } from "@/lib/server/firebase-admin";
 import { isMirQuestionId } from "@/lib/mir/question-reports";
+import { RESOLVED_QUESTION_REPORTS } from "@/data/resolved-question-reports";
+import { selectReportsToAutoResolve } from "@/lib/questions/report-auto-resolve";
 
 export type QuestionReportStatus = "pending" | "reviewed" | "dismissed";
+
+const FIRESTORE_BATCH_LIMIT = 500;
 
 /** Producto al que pertenece la pregunta reportada. */
 export type QuestionReportModule = "metodo-q" | "mir";
@@ -97,8 +101,47 @@ export async function adminListQuestionReports(
   }
 
   const snap = await query.limit(500).get();
-  const reports = snap.docs.map(mapReportDoc);
-  return module === "all" ? reports : reports.filter((report) => report.module === module);
+  const reports = await autoResolveFixedReports(snap.docs.map(mapReportDoc));
+  const visible =
+    status === "pending" ? reports.filter((report) => report.status === "pending") : reports;
+  return module === "all" ? visible : visible.filter((report) => report.module === module);
+}
+
+/**
+ * Marca como «Revisada» cada reporte pendiente de una pregunta ya corregida
+ * en el código (`RESOLVED_QUESTION_REPORTS`), siempre que ningún estudiante la
+ * haya reportado después de la corrección. Así el panel se limpia solo al
+ * desplegar las correcciones, sin pasos manuales.
+ */
+async function autoResolveFixedReports(reports: QuestionReport[]): Promise<QuestionReport[]> {
+  const toResolve = selectReportsToAutoResolve(reports, RESOLVED_QUESTION_REPORTS);
+  if (toResolve.length === 0) return reports;
+
+  const db = getFirebaseAdminDb();
+  const now = new Date().toISOString();
+  try {
+    for (let i = 0; i < toResolve.length; i += FIRESTORE_BATCH_LIMIT) {
+      const batch = db.batch();
+      for (const report of toResolve.slice(i, i + FIRESTORE_BATCH_LIMIT)) {
+        const fix = RESOLVED_QUESTION_REPORTS[report.questionId];
+        batch.set(
+          db.collection("question_reports").doc(report.id),
+          { status: "reviewed", updatedAt: now, resolvedInCode: fix.note, resolvedInCodeAt: fix.resolvedAt },
+          { merge: true },
+        );
+      }
+      await batch.commit();
+    }
+  } catch (error) {
+    // Si no se puede escribir, el panel sigue funcionando con el estado actual.
+    console.error("autoResolveFixedReports", error);
+    return reports;
+  }
+
+  const resolvedIds = new Set(toResolve.map((report) => report.id));
+  return reports.map((report) =>
+    resolvedIds.has(report.id) ? { ...report, status: "reviewed" as const, updatedAt: now } : report,
+  );
 }
 
 export async function adminGetReportedQuestionIds(): Promise<Set<string>> {
@@ -147,7 +190,6 @@ export async function adminUpdateQuestionReportStatus(
     .set({ status, updatedAt: new Date().toISOString() }, { merge: true });
 }
 
-const FIRESTORE_BATCH_LIMIT = 500;
 
 export async function adminBulkUpdateQuestionReportStatus(
   questionIds: string[],
