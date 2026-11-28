@@ -273,4 +273,225 @@ export const RESOLVED_QUESTION_REPORTS: Record<string, ResolvedQuestionReport> =
     resolvedAt: "2026-11-28T15:00:00.000Z",
     note: "Revisada sin cambios: clave correcta (Tokio I-II, colecistectomía laparoscópica temprana); explicación ya completa.",
   },
+  // Lote 2 · dr-q (55) · 28 nov 2026
+  "dr-q-84": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-235": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-143": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-135": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-245": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-183": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-220": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-253": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-219": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-157": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-196": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-200": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-206": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-195": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-247": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-170": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-251": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-172": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-194": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-212": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-162": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-236": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-137": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-232": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-133": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Clave corregida de D a A: lactante febril <3 meses con mal aspecto requiere estudio completo con punción lumbar, hospitalización y antibiótico IV. Explicación, teoría, puntos clave y retroalimentación reescritos.",
+  },
+  "dr-q-216": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-199": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-144": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-181": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-154": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-178": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-243": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-203": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Corregido el error de la explicación (la retirada vale 4, no 3); el enunciado ahora precisa flexión anormal (decorticación). Formato MIR y retroalimentación por opción.",
+  },
+  "dr-q-145": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-156": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-223": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-231": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-224": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-252": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-176": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-173": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-158": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-250": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Enunciado completado con los hallazgos que distinguen varicocele de hernia («bolsa de gusanos», cordón libre por encima). Formato MIR y retroalimentación por opción.",
+  },
+  "dr-q-179": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-146": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-147": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-159": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-165": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Eliminada la frase contradictoria de la explicación (llamaba incorrecta a la respuesta correcta). Formato MIR y retroalimentación por opción.",
+  },
+  "dr-q-234": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-155": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-218": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-166": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-169": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-240": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Explicación reescrita en formato MIR y retroalimentación en las 3 opciones incorrectas; clave verificada.",
+  },
+  "dr-q-244": {
+    resolvedAt: "2026-11-28T15:22:48.000Z",
+    note: "Reportada como desactualizada: contenido vigente (ganglio de Virchow = cáncer gástrico); explicación ampliada en formato MIR y retroalimentación por opción.",
+  },
 };

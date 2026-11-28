@@ -7849,14 +7849,14 @@ Referencias
     statement:
       "Paciente masculino de 25 años sin antecedentes conocidos, traído a urgencias por convulsión tónico-clónica generalizada que persiste por 12 minutos. Al examen físico no recupera el estado de conciencia entre episodios convulsivos. Tras asegurar la vía aérea y permeabilizar acceso venoso, ¿cuál es el siguiente paso farmacológico correcto?",
     options: [
-      { id: "A", label: "A", text: "Administrar fenitoína intravenosa como primera medida." },
+      { id: "A", label: "A", text: "Administrar fenitoína intravenosa como primera medida.", incorrectFeedback: "La fenitoína es de segunda línea: se usa si la crisis persiste después de la benzodiacepina. Además se pasa en infusión lenta (20–30 minutos), por lo que no sirve como primera medida." },
       { id: "B", label: "B", text: "Administrar lorazepam o diazepam intravenoso." },
-      { id: "C", label: "C", text: "Iniciar infusión de propofol inmediatamente." },
-      { id: "D", label: "D", text: "Administrar levetiracetam oral." },
+      { id: "C", label: "C", text: "Iniciar infusión de propofol inmediatamente.", incorrectFeedback: "El propofol se reserva para el estatus refractario (cuando fallan la benzodiacepina y un fármaco de segunda línea) y exige intubación y monitoreo en UCI." },
+      { id: "D", label: "D", text: "Administrar levetiracetam oral.", incorrectFeedback: "La vía oral no es viable en un paciente que convulsiona e inconsciente: riesgo de aspiración y absorción lenta. El levetiracetam es de segunda línea y se administra IV." },
     ],
     correctOptionId: "B",
     explanation:
-      "Estatus epiléptico convulsivo. Tras las medidas iniciales de soporte, el tratamiento farmacológico de primera línea son las benzodiacepinas intravenosas.",
+      "El paciente está en **estatus epiléptico convulsivo**: una crisis tónico-clónica que dura más de 5 minutos, o crisis repetidas sin recuperar la conciencia entre ellas. A los 12 minutos ya debe tratarse como tal; cada minuto sin control aumenta el daño neuronal y la resistencia a los fármacos.\n\nLa secuencia se organiza por tiempos:\n1. **0–5 min:** vía aérea, oxígeno, acceso venoso y glucometría (si hay hipoglucemia: tiamina y dextrosa).\n2. **5–20 min, primera línea:** **benzodiacepina IV**. Lorazepam 0,1 mg/kg (máximo 4 mg por dosis) o diazepam 0,15–0,2 mg/kg (máximo 10 mg); si no hay vena, midazolam 10 mg IM. Se puede repetir una vez.\n3. **20–40 min, segunda línea** si la crisis persiste: fenitoína o fosfenitoína, ácido valproico o levetiracetam, todos IV.\n4. **Más de 40 min, estatus refractario:** intubación e infusión de anestésicos (midazolam, propofol, tiopental) en UCI.\n\n**TRAMPA DEL EXAMEN:** Saltar directamente a la segunda línea (fenitoína) o al propofol. Ningún fármaco posterior reemplaza a la benzodiacepina inicial.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., en la convulsión que no para, primero la benzodiacepina, siempre. La fenitoína viene después si la crisis sigue, y el propofol es para el paciente que ya está intubado en UCI. Y nada por boca a alguien que está convulsionando.",
     keyPoints: [
       "Cuando veas: convulsión tónico-clónica ≥5 minutos sin recuperación de conciencia entre episodios.",
       "Debes pensar en: estatus epiléptico convulsivo → benzodiacepina IV como primera línea farmacológica.",
