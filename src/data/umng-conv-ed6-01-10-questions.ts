@@ -10,10 +10,10 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 28 años ingresa a urgencias tras un accidente de tránsito de alta energía, con trauma abdominal cerrado y fractura de pelvis. Tras 2 horas de cirugía exploratoria por lesión esplénica y hepática, el anestesiólogo reporta al cirujano: temperatura central de 34.2°C, pH arterial de 7.15, y un TP/TPTa marcadamente prolongados con sangrado difuso \"en capa\" de todas las superficies cruentas, sin un punto sangrante quirúrgico identificable. El cirujano decide abandonar la reparación definitiva de las lesiones, empacar la cavidad abdominal con compresas y cerrar temporalmente la pared con una bolsa de Bogotá, trasladando al paciente a UCI. ¿Cómo se denomina esta tríada fisiológica letal que motivó la decisión, y cuál es el principio quirúrgico que se está aplicando?",
     options: [
-      { id: "A", label: "A", text: "Tríada de Cushing; se aplica el principio de laparotomía exploratoria definitiva inmediata." },
+      { id: "A", label: "A", text: "Tríada de Cushing; se aplica el principio de laparotomía exploratoria definitiva inmediata.", incorrectFeedback: "La tríada de Cushing (hipertensión, bradicardia y respiración irregular) indica hipertensión endocraneana, no el estado de este paciente. Además, insistir en una reparación definitiva con hipotermia, acidosis y coagulopatía es lo que lo mataría en la mesa." },
       { id: "B", label: "B", text: "Tríada de la Muerte (Hipotermia, Acidosis, Coagulopatía); se aplica el principio de Cirugía de Control de Daños (Damage Control Surgery)." },
-      { id: "C", label: "C", text: "Tríada de Virchow; se aplica el principio de anticoagulación inmediata para revertir la coagulopatía." },
-      { id: "D", label: "D", text: "Tríada de Beck; se aplica el principio de pericardiocentesis de urgencia antes de continuar." },
+      { id: "C", label: "C", text: "Tríada de Virchow; se aplica el principio de anticoagulación inmediata para revertir la coagulopatía.", incorrectFeedback: "La tríada de Virchow explica la trombosis (estasis, daño endotelial e hipercoagulabilidad). Este paciente sangra por coagulopatía: anticoagularlo empeoraría la hemorragia." },
+      { id: "D", label: "D", text: "Tríada de Beck; se aplica el principio de pericardiocentesis de urgencia antes de continuar.", incorrectFeedback: "La tríada de Beck (hipotensión, yugulares ingurgitadas y ruidos apagados) es del taponamiento cardíaco, que aquí no se describe. El sangrado difuso con frío y acidosis es la tríada letal del trauma." },
     ],
     correctOptionId: "B",
     explanation:
@@ -34,9 +34,9 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     statement: "Una mujer de 24 años, con 38 semanas de gestación y diagnóstico de Preeclampsia con criterios de severidad, convulsiona de forma tónico-clónica generalizada en la sala de trabajo de parto, presenciada por el personal de enfermería. La convulsión cede espontáneamente tras 90 segundos. Al examen post-ictal, la paciente está confusa pero responde, con PA 190/120 mmHg. Ya se administró la dosis de carga de Sulfato de Magnesio (4 g IV) y se inició la infusión de mantenimiento. Diez minutos después, la paciente presenta una SEGUNDA convulsión. ¿Cuál es la conducta INMEDIATA ante esta convulsión recurrente a pesar del Sulfato de Magnesio ya en infusión?",
     options: [
       { id: "A", label: "A", text: "Administrar una segunda dosis de carga de Sulfato de Magnesio (2-4 g IV adicionales) y reevaluar." },
-      { id: "B", label: "B", text: "Suspender inmediatamente el Sulfato de Magnesio por sospecha de toxicidad y observar sin más fármacos." },
-      { id: "C", label: "C", text: "Iniciar Fenitoína intravenosa como anticonvulsivante de primera línea en reemplazo del Sulfato de Magnesio." },
-      { id: "D", label: "D", text: "No hacer nada adicional, ya que las convulsiones eclámpticas siempre son autolimitadas y no requieren tratamiento repetido." },
+      { id: "B", label: "B", text: "Suspender inmediatamente el Sulfato de Magnesio por sospecha de toxicidad y observar sin más fármacos.", incorrectFeedback: "Una convulsión recurrente no es signo de toxicidad por magnesio. La toxicidad da arreflexia, depresión respiratoria y oliguria; si no están, se da un bolo adicional de magnesio en vez de suspenderlo." },
+      { id: "C", label: "C", text: "Iniciar Fenitoína intravenosa como anticonvulsivante de primera línea en reemplazo del Sulfato de Magnesio.", incorrectFeedback: "La fenitoína es menos eficaz que el magnesio para la eclampsia y se reserva para convulsiones refractarias tras dosis adecuadas de magnesio. Una sola recurrencia se trata primero con otro bolo de magnesio." },
+      { id: "D", label: "D", text: "No hacer nada adicional, ya que las convulsiones eclámpticas siempre son autolimitadas y no requieren tratamiento repetido.", incorrectFeedback: "Cada convulsión eclámptica aumenta el riesgo de hipoxia, aspiración, hemorragia cerebral y daño fetal. Las convulsiones recurrentes siempre requieren tratamiento." },
     ],
     correctOptionId: "A",
     explanation:
@@ -56,10 +56,10 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un niño de 2 años es traído a urgencias tras ingerir, según la madre, \"varias tabletas\" de un suplemento de hierro que encontró en la cartera de su abuela, hace aproximadamente 3 horas. Actualmente el niño está vomitando de forma persistente, con dolor abdominal y una deposición con sangre. Al examen físico está letárgico, taquicárdico e hipotenso. Los familiares refieren que, según buscaron en internet, \"el hierro no es tan peligroso porque es solo una vitamina\". Ante la sospecha de intoxicación aguda por hierro, ¿cuál es la fase clínica en la que se encuentra el paciente, y cuál es el estudio complementario simple que puede orientar sobre la cantidad de tabletas aún no absorbidas?",
     options: [
-      { id: "A", label: "A", text: "Fase de aparente recuperación (Fase II); estudio orientador: Endoscopia digestiva alta programada en 48 horas." },
+      { id: "A", label: "A", text: "Fase de aparente recuperación (Fase II); estudio orientador: Endoscopia digestiva alta programada en 48 horas.", incorrectFeedback: "La fase de aparente recuperación ocurre entre las 6 y 24 horas, con menos síntomas. Este niño a las 3 horas tiene vómito, sangre en heces y choque: está en la fase gastrointestinal. La endoscopia programada no es el estudio orientador." },
       { id: "B", label: "B", text: "Fase gastrointestinal inicial (Fase I), por toxicidad corrosiva directa del hierro sobre la mucosa; estudio orientador: Radiografía simple de abdomen (el hierro es radiopaco)." },
-      { id: "C", label: "C", text: "Fase de falla hepática tardía (Fase III); estudio orientador: Pruebas de función hepática exclusivamente." },
-      { id: "D", label: "D", text: "Fase de estenosis pilórica cicatricial (Fase IV); estudio orientador: Serie esofagogastroduodenal con bario." },
+      { id: "C", label: "C", text: "Fase de falla hepática tardía (Fase III); estudio orientador: Pruebas de función hepática exclusivamente.", incorrectFeedback: "La falla hepática aparece entre 2 y 5 días después de la ingesta, no a las 3 horas. Las pruebas hepáticas no muestran cuántas tabletas quedan en el intestino." },
+      { id: "D", label: "D", text: "Fase de estenosis pilórica cicatricial (Fase IV); estudio orientador: Serie esofagogastroduodenal con bario.", incorrectFeedback: "La estenosis pilórica por cicatrización es una secuela que aparece semanas después. El bario no está indicado en la fase aguda de una intoxicación corrosiva." },
     ],
     correctOptionId: "B",
     explanation:
@@ -79,10 +79,10 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 45 años, con antecedente de alcoholismo crónico, es traído a urgencias tras haber consumido, según sus compañeros, \"alcohol artesanal casero\" en una reunión hace 10 horas. Refiere visión borrosa progresiva y \"ver manchas negras\", con dolor abdominal difuso. Al examen: taquipneico, con aliento sin olor característico a alcohol etílico. Los gases arteriales muestran acidosis metabólica severa con anion gap elevado. El sodio, glucosa, BUN y etanol séricos son normales/bajos, pero la osmolaridad sérica MEDIDA es 40 mOsm/kg mayor que la osmolaridad CALCULADA. El examen de fondo de ojo revela hiperemia del disco óptico. ¿Cuál es la intoxicación más probable, y cuál es el tratamiento antidótico de primera línea mientras se organiza la hemodiálisis?",
     options: [
-      { id: "A", label: "A", text: "Intoxicación por Etilenglicol; tratamiento antidótico con Fomepizol (o Etanol si no está disponible), que bloquea la enzima Alcohol Deshidrogenasa." },
+      { id: "A", label: "A", text: "Intoxicación por Etilenglicol; tratamiento antidótico con Fomepizol (o Etanol si no está disponible), que bloquea la enzima Alcohol Deshidrogenasa.", incorrectFeedback: "El etilenglicol también da acidosis con brecha osmolar y se trata con fomepizol, pero su órgano blanco es el riñón, con cristales de oxalato. La visión borrosa con hiperemia del disco óptico es propia del metanol." },
       { id: "B", label: "B", text: "Intoxicación por Metanol; tratamiento antidótico con Fomepizol (o Etanol si no está disponible), que bloquea la enzima Alcohol Deshidrogenasa." },
-      { id: "C", label: "C", text: "Intoxicación por Isopropanol; tratamiento antidótico con Bicarbonato de Sodio en altas dosis como único manejo." },
-      { id: "D", label: "D", text: "Intoxicación etílica simple; no requiere ningún antídoto, solo observación hasta que se metabolice el etanol." },
+      { id: "C", label: "C", text: "Intoxicación por Isopropanol; tratamiento antidótico con Bicarbonato de Sodio en altas dosis como único manejo.", incorrectFeedback: "El isopropanol eleva la brecha osmolar pero produce cetosis sin acidosis metabólica importante, y no causa toxicidad visual. El bicarbonato no es un antídoto: sirve como apoyo para la acidosis grave." },
+      { id: "D", label: "D", text: "Intoxicación etílica simple; no requiere ningún antídoto, solo observación hasta que se metabolice el etanol.", incorrectFeedback: "Una intoxicación etílica simple tendría etanol alto en sangre y no produciría acidosis grave con anion gap y brecha osmolar elevados ni alteraciones del nervio óptico. Este paciente necesita antídoto y diálisis." },
     ],
     correctOptionId: "B",
     explanation:
@@ -102,10 +102,10 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 32 años consulta por dolor torácico retroesternal agudo de 2 días de evolución, de carácter pleurítico, que **empeora al acostarse (decúbito supino) y mejora significativamente al inclinarse hacia adelante**. Refiere un cuadro viral respiratorio leve la semana pasada. Al examen físico se ausculta un **frote pericárdico** trifásico en el borde esternal izquierdo. El electrocardiograma muestra **elevación difusa del segmento ST de concavidad superior** en casi todas las derivaciones (sin localizarse a un territorio coronario específico) y **depresión del segmento PR**. La troponina es levemente elevada. ¿Cuál es el diagnóstico, y qué hallazgo electrocardiográfico específico ayuda a diferenciarlo de un Infarto Agudo de Miocardio con elevación del ST?",
     options: [
-      { id: "A", label: "A", text: "Infarto Agudo de Miocardio anterior extenso; el hallazgo diferencial es la troponina elevada, que confirma el infarto." },
+      { id: "A", label: "A", text: "Infarto Agudo de Miocardio anterior extenso; el hallazgo diferencial es la troponina elevada, que confirma el infarto.", incorrectFeedback: "La troponina puede elevarse levemente en la pericarditis cuando hay compromiso miocárdico, así que no confirma un infarto. El supradesnivel difuso cóncavo con depresión del PR y dolor que cambia con la posición es pericarditis." },
       { id: "B", label: "B", text: "Pericarditis Aguda; el hallazgo diferencial clave es la elevación DIFUSA del ST (no localizada a un territorio coronario) junto con la depresión del segmento PR." },
-      { id: "C", label: "C", text: "Angina de Prinzmetal (vasoespástica); el hallazgo diferencial es la resolución espontánea del dolor en reposo." },
-      { id: "D", label: "D", text: "Disección Aórtica tipo A; el hallazgo diferencial es la asimetría de pulsos en ambos brazos." },
+      { id: "C", label: "C", text: "Angina de Prinzmetal (vasoespástica); el hallazgo diferencial es la resolución espontánea del dolor en reposo.", incorrectFeedback: "La angina de Prinzmetal da episodios de dolor en reposo con supradesnivel transitorio en un territorio coronario, sin frote pericárdico ni depresión del PR. El dolor no cambia con la posición." },
+      { id: "D", label: "D", text: "Disección Aórtica tipo A; el hallazgo diferencial es la asimetría de pulsos en ambos brazos.", incorrectFeedback: "La disección aórtica da dolor desgarrador irradiado a la espalda con asimetría de pulsos. No produce frote pericárdico ni supradesnivel difuso con depresión del PR." },
     ],
     correctOptionId: "B",
     explanation:
@@ -125,10 +125,10 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 55 años, consciente y orientado, con anemia severa sintomática (Hemoglobina 5.2 g/dL) tras un sangrado gastrointestinal, requiere transfusión urgente de glóbulos rojos como parte de su manejo. El paciente, siendo miembro de una comunidad religiosa que rechaza las transfusiones sanguíneas por convicciones profundas y estables, se niega rotundamente a recibirla, comprendiendo claramente y verbalizando los riesgos de morir sin la transfusión. El médico tratante, angustiado, considera transfundirlo de todas formas \"para salvarle la vida\", invocando el estado de necesidad. Según el marco ético y legal colombiano sobre la autonomía del paciente, ¿cuál es la conducta CORRECTA que debe seguir el médico?",
     options: [
-      { id: "A", label: "A", text: "Transfundir al paciente de todas formas, ya que la vida siempre tiene prioridad absoluta sobre cualquier otra consideración legal o ética." },
+      { id: "A", label: "A", text: "Transfundir al paciente de todas formas, ya que la vida siempre tiene prioridad absoluta sobre cualquier otra consideración legal o ética.", incorrectFeedback: "En un adulto competente e informado, la autonomía permite rechazar un tratamiento aunque esté en riesgo su vida. Transfundirlo contra su voluntad viola sus derechos." },
       { id: "B", label: "B", text: "Respetar la decisión autónoma, informada y competente del paciente de rechazar la transfusión, documentando exhaustivamente el proceso y ofreciendo alternativas terapéuticas disponibles." },
-      { id: "C", label: "C", text: "Solicitar una orden judicial de urgencia para forzar la transfusión, sin necesidad de agotar antes el diálogo con el paciente." },
-      { id: "D", label: "D", text: "Transfundir sin informar al paciente, argumentando que se encuentra en estado de necesidad médica que anula cualquier obligación de consentimiento." },
+      { id: "C", label: "C", text: "Solicitar una orden judicial de urgencia para forzar la transfusión, sin necesidad de agotar antes el diálogo con el paciente.", incorrectFeedback: "No se necesita una orden judicial para respetar la decisión de un adulto competente, y pedirla para forzar la transfusión va contra su autonomía. Las órdenes judiciales se usan en otros contextos, como los menores de edad." },
+      { id: "D", label: "D", text: "Transfundir sin informar al paciente, argumentando que se encuentra en estado de necesidad médica que anula cualquier obligación de consentimiento.", incorrectFeedback: "Transfundir sin informar al paciente es una violación grave de su autonomía y de la ley. El estado de necesidad no aplica cuando un adulto consciente ya rechazó el tratamiento de forma expresa." },
     ],
     correctOptionId: "B",
     explanation:
@@ -148,10 +148,10 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un motociclista de 30 años llega a urgencias con una fractura de tibia expuesta tras un accidente de tránsito en zona rural hace 3 horas. Al examen se observa una herida de 12 cm con contaminación importante por tierra y material vegetal, desvitalización moderada del tejido muscular circundante, y el hueso fracturado es visible a través de la herida, aunque los vasos y nervios distales están íntegros y la perfusión es adecuada. Según la Clasificación de Gustilo-Anderson para fracturas expuestas, ¿cuál es la clasificación de esta lesión, y cuál es la conducta terapéutica INICIAL más urgente, independientemente del grado exacto?",
     options: [
-      { id: "A", label: "A", text: "Gustilo tipo I; la conducta inicial es manejo ambulatorio con antibiótico oral y cita de control en una semana." },
+      { id: "A", label: "A", text: "Gustilo tipo I; la conducta inicial es manejo ambulatorio con antibiótico oral y cita de control en una semana.", incorrectFeedback: "El tipo I es una herida limpia menor de 1 cm, y ninguna fractura expuesta se maneja de forma ambulatoria. Una herida de 12 cm contaminada con tierra necesita antibiótico intravenoso y desbridamiento en quirófano." },
       { id: "B", label: "B", text: "Gustilo tipo IIIB; la conducta inicial urgente es antibioticoterapia IV precoz (dentro de la primera hora idealmente) + desbridamiento quirúrgico exhaustivo en quirófano, sin retrasar por otros estudios no esenciales." },
-      { id: "C", label: "C", text: "Gustilo tipo II; la conducta inicial es inmovilización con yeso cerrado exclusivamente, sin necesidad de manejo quirúrgico." },
-      { id: "D", label: "D", text: "Gustilo tipo IIIC; la conducta inicial es amputación primaria inmediata sin intento de salvamento de la extremidad." },
+      { id: "C", label: "C", text: "Gustilo tipo II; la conducta inicial es inmovilización con yeso cerrado exclusivamente, sin necesidad de manejo quirúrgico.", incorrectFeedback: "El tipo II es una herida de 1 a 10 cm sin contaminación importante. Además, una fractura expuesta nunca se trata solo con yeso cerrado: hay que desbridar la herida." },
+      { id: "D", label: "D", text: "Gustilo tipo IIIC; la conducta inicial es amputación primaria inmediata sin intento de salvamento de la extremidad.", incorrectFeedback: "El tipo IIIC implica una lesión vascular que requiere reparación, y aquí la perfusión distal está conservada. Aun en el IIIC, la amputación primaria no es automática." },
     ],
     correctOptionId: "B",
     explanation:
@@ -171,10 +171,10 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Una mujer de 68 años es traída a urgencias por su esposo, quien refiere que la vio perfectamente normal a las 8:00 a.m. cuando salió a trabajar, y al regresar a las 11:30 a.m. la encontró con debilidad completa del lado derecho del cuerpo y dificultad para hablar (afasia), sin poder precisar la hora exacta de inicio de los síntomas. Una tomografía cerebral simple no muestra hemorragia ni signos tempranos de isquemia extensa. La paciente no tiene contraindicaciones conocidas para trombólisis (no anticoagulada, sin cirugía reciente, sin sangrado activo). Dado que se desconoce la hora exacta de inicio del déficit neurológico (\"stroke de hora de inicio desconocido\" o \"wake-up stroke\" en un sentido amplio), ¿cuál es la conducta que permite ampliar la ventana para considerar trombólisis o trombectomía en este escenario específico?",
     options: [
-      { id: "A", label: "A", text: "Asumir que la ventana terapéutica ya se cerró definitivamente y manejar solo con Aspirina y medidas de soporte, sin más estudios." },
+      { id: "A", label: "A", text: "Asumir que la ventana terapéutica ya se cerró definitivamente y manejar solo con Aspirina y medidas de soporte, sin más estudios.", incorrectFeedback: "Desconocer la hora de inicio no cierra automáticamente la ventana: la neuroimagen avanzada permite identificar a pacientes que todavía pueden beneficiarse de reperfusión. Limitarse a aspirina puede quitarle esa oportunidad." },
       { id: "B", label: "B", text: "Utilizar estudios de neuroimagen avanzada (Resonancia Magnética con difusión-FLAIR, o TAC de perfusión) para estimar el tiempo de evolución del infarto y evaluar tejido cerebral aún salvable (\"mismatch\"), guiando la decisión de reperfusión más allá de la ventana de tiempo convencional." },
-      { id: "C", label: "C", text: "Iniciar trombólisis inmediatamente sin ningún estudio adicional, asumiendo que el inicio fue justo antes de encontrarla." },
-      { id: "D", label: "D", text: "Esperar 24 horas adicionales de observación antes de decidir cualquier conducta terapéutica." },
+      { id: "C", label: "C", text: "Iniciar trombólisis inmediatamente sin ningún estudio adicional, asumiendo que el inicio fue justo antes de encontrarla.", incorrectFeedback: "Trombolizar sin conocer la hora de inicio y sin imagen avanzada aumenta el riesgo de hemorragia, porque no se sabe si el infarto ya está establecido. No se puede suponer que los síntomas empezaron justo antes de encontrarla." },
+      { id: "D", label: "D", text: "Esperar 24 horas adicionales de observación antes de decidir cualquier conducta terapéutica.", incorrectFeedback: "Esperar 24 horas haría perder el tejido cerebral que aún puede salvarse. Las decisiones de reperfusión se toman en horas, guiadas por la imagen." },
     ],
     correctOptionId: "B",
     explanation:
@@ -195,9 +195,9 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     statement: "Un hombre de 22 años sufre un golpe directo en el flanco izquierdo durante un partido de fútbol. Consulta por dolor lumbar izquierdo y un episodio de hematuria macroscópica. Al ingreso está hemodinámicamente estable (PA 122/78 mmHg, FC 82 lpm), sin otros hallazgos de trauma abdominal asociado. Una tomografía abdominal con contraste confirma una laceración renal izquierda que compromete la corteza y la médula renal, sin extenderse al sistema colector, con un pequeño hematoma perirrenal contenido, sin extravasación activa de contraste. ¿Cuál es la conducta terapéutica APROPIADA para este grado de trauma renal en un paciente hemodinámicamente estable?",
     options: [
       { id: "A", label: "A", text: "Manejo conservador con reposo, hidratación, y vigilancia estrecha de signos vitales y hematocrito seriado, sin necesidad de cirugía." },
-      { id: "B", label: "B", text: "Nefrectomía exploratoria inmediata, ya que cualquier laceración que comprometa la médula renal requiere cirugía." },
-      { id: "C", label: "C", text: "Embolización angiográfica urgente, independientemente de la ausencia de sangrado activo en la tomografía." },
-      { id: "D", label: "D", text: "Colocación de catéter doble J ureteral de urgencia como manejo prioritario, sin necesidad de otras medidas." },
+      { id: "B", label: "B", text: "Nefrectomía exploratoria inmediata, ya que cualquier laceración que comprometa la médula renal requiere cirugía.", incorrectFeedback: "La mayoría de las lesiones renales, incluso de grado moderado, se manejan sin cirugía en el paciente estable. La nefrectomía se reserva para la inestabilidad hemodinámica persistente o las lesiones graves del pedículo." },
+      { id: "C", label: "C", text: "Embolización angiográfica urgente, independientemente de la ausencia de sangrado activo en la tomografía.", incorrectFeedback: "La embolización se indica cuando hay extravasación activa de contraste o un seudoaneurisma. Sin sangrado activo en la tomografía, no aporta beneficio y tiene riesgos." },
+      { id: "D", label: "D", text: "Colocación de catéter doble J ureteral de urgencia como manejo prioritario, sin necesidad de otras medidas.", incorrectFeedback: "El catéter doble J se usa cuando hay lesión del sistema colector con fuga de orina. Aquí la laceración no llega al sistema colector." },
     ],
     correctOptionId: "A",
     explanation:
@@ -217,10 +217,10 @@ export const UMNG_CONV_ED6_01_10_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Una mujer de 62 años, vegetariana estricta desde hace 20 años sin suplementación, consulta por astenia progresiva, parestesias simétricas en ambos pies que han ascendido hasta las rodillas, y dificultad progresiva para caminar con sensación de \"pisar sobre algodón\". Al examen neurológico hay pérdida de la sensibilidad vibratoria y propioceptiva en miembros inferiores, con Romberg positivo, e hiperreflexia paradójica con Babinski bilateral positivo (compromiso combinado de cordones posteriores y vía piramidal). Los laboratorios muestran Hemoglobina 8.5 g/dL con Volumen Corpuscular Medio de 118 fL (macrocitosis marcada), y un frotis de sangre periférica con neutrófilos hipersegmentados. ¿Cuál es el diagnóstico, y qué precaución hematológica DEBE observarse durante el tratamiento de reposición para evitar precipitar una complicación neurológica cardíaca?",
     options: [
-      { id: "A", label: "A", text: "Deficiencia de Ácido Fólico; no requiere ninguna precaución especial durante la reposición." },
+      { id: "A", label: "A", text: "Deficiencia de Ácido Fólico; no requiere ninguna precaución especial durante la reposición.", incorrectFeedback: "El déficit de folato da la misma anemia megaloblástica, pero no produce degeneración combinada subaguda con pérdida de la vibración y Babinski. Además, dar folato sin B12 puede corregir la anemia y dejar avanzar el daño neurológico." },
       { id: "B", label: "B", text: "Deficiencia de Vitamina B12 (Cobalamina) con Degeneración Combinada Subaguda de la médula espinal; debe descartarse y corregirse ANTES o simultáneamente cualquier déficit de Potasio, ya que la reposición de B12 puede precipitar hipokalemia severa por reanudación abrupta de la eritropoyesis." },
-      { id: "C", label: "C", text: "Anemia Ferropénica severa; la precaución es evitar la sobrecarga de hierro durante la transfusión." },
-      { id: "D", label: "D", text: "Síndrome Mielodisplásico; la precaución es evitar cualquier tratamiento hasta confirmar biopsia de médula ósea." },
+      { id: "C", label: "C", text: "Anemia Ferropénica severa; la precaución es evitar la sobrecarga de hierro durante la transfusión.", incorrectFeedback: "La anemia ferropénica es microcítica (VCM bajo), no macrocítica con VCM de 118. Tampoco produce neutrófilos hipersegmentados ni compromiso de los cordones posteriores." },
+      { id: "D", label: "D", text: "Síndrome Mielodisplásico; la precaución es evitar cualquier tratamiento hasta confirmar biopsia de médula ósea.", incorrectFeedback: "El síndrome mielodisplásico puede dar macrocitosis, pero el antecedente de dieta vegetariana estricta con degeneración combinada subaguda apunta a déficit de B12. No se debe retrasar la reposición de B12 esperando una biopsia." },
     ],
     correctOptionId: "B",
     explanation:
