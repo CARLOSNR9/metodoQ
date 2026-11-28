@@ -43,11 +43,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente está en la \"fase crítica\" del Dengue (defervescencia: cuando cae la fiebre, días 4-5). Signos de alarma presentes: dolor abdominal continuo, vómitos persistentes (4 veces), hepatomegalia (>2 cm) y hemoconcentración rápida (Hcto sube de 38% a 48%). Los signos de hipoperfusión (llenado capilar prolongado) indican fuga capilar severa inminente. Un paciente con Dengue y signos de alarma requiere hospitalización e inicio inmediato de cristaloides isotónicos a dosis de 10 ml/kg/hora. Esta es la dosis exacta de choque inicial para reponer el plasma que se está fugando al tercer espacio, evitando el choque por Dengue.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nColega, en Colombia el Dengue no perdona. Si la mamá te dice \"doctor, ya se le quitó la fiebre pero no se quiere parar de la cama y le duele la barriga\", enciende las alarmas. El niño se está desangrando por dentro, pero no con sangre, sino con plasma. Sus vasos sanguíneos son como coladores. Mételo a reanimación, ponle un catéter y pásale Lactato de Ringer a 10 cc por kilo. ¡Y nunca mires las plaquetas para decidir transfundir, mira la clínica!",
     keyPoints: [
-      "Cuando veas:",
-      "• Paciente en fase crítica de Dengue (caída de la fiebre).",
-      "• Signos de alarma: dolor abdominal, vómitos, letargia, hemoconcentración.",
-      "Debes pensar en:",
-      "Dengue con Signos de Alarma (Grupo B). El tratamiento inmediato es cristaloides isotónicos a 10 cc/kg/hora.",
+      "Cuando veas: Paciente en fase crítica de Dengue (caída de la fiebre) + Signos de alarma: dolor abdominal, vómitos, letargia, hemoconcentración.",
+      "Debes pensar en: Dengue con Signos de Alarma (Grupo B). El tratamiento inmediato es cristaloides isotónicos a 10 cc/kg/hora.",
       "Tema: Medicina Tropical / Dengue."
     ]
   },
@@ -90,11 +87,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "La paciente cursa con Hemorragia Posparto secundaria a Atonía Uterina. Falla la primera línea (Oxitocina y masaje), obligando a usar un uterotónico de segunda línea. La Metilergonovina es un alcaloide del cornezuelo del centeno que causa vasoconstricción periférica y coronaria potentísima. Está CONTRAINDICADA ABSOLUTAMENTE en pacientes con preeclampsia, hipertensión arterial crónica o enfermedad coronaria, ya que puede causar crisis hipertensivas fulminantes, ACV hemorrágico e infarto de miocardio.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nSalvar el útero a costa del cerebro de la madre no es buen negocio. Cuando una mujer sangra posparto, el estrés hace que el interno grite \"¡Pásenme el Methergin!\". Si haces eso en esta paciente, su presión pasará en 30 segundos de 140/90 a 220/140 y hará una hemorragia cerebral en la sala de partos. Pídele a la enfermera Misoprostol (4 a 5 pastillas por el recto) o aplica Ácido Tranexámico mientras preparas un Balón de Bakri o pasas a quirófano para suturas compresivas (B-Lynch).",
     keyPoints: [
-      "Cuando veas:",
-      "• Hemorragia posparto por atonía uterina.",
-      "• Antecedente de preeclampsia o hipertensión.",
-      "Debes pensar en:",
-      "Contraindicación de Metilergonovina (Methergin).",
+      "Cuando veas: Hemorragia posparto por atonía uterina + Antecedente de preeclampsia o hipertensión.",
+      "Debes pensar en: Contraindicación de Metilergonovina (Methergin).",
       "Tema: Ginecología y Obstetricia / Hemorragia Posparto."
     ]
   },
@@ -137,11 +131,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El choque sin otra fuente obvia de sangrado indica que se está desangrando en el retroperitoneo (plexo venoso presacro o arterias ilíacas). El cierre del anillo pélvico reduce drásticamente el volumen de la pelvis verdadera (efecto de taponamiento) y aproxima las superficies óseas sangrantes, frenando dramáticamente la hemorragia venosa. Debe colocarse estrictamente a nivel de los trocánteres mayores, no sobre las crestas ilíacas.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEn trauma, la pelvis es un barril sin fondo. Puedes meterle 10 unidades de sangre por la vena, y las 10 se irán al espacio retroperitoneal si el anillo óseo está abierto (caben hasta 4 litros de sangre ahí). Amarrar una sábana fuerte (o faja pélvica comercial) alrededor de las caderas, justo sobre los \"huesos de los bolsillos\" (los trocánteres), cierra el libro abierto, aprieta las venas rotas contra el hueso y le salva la vida en 1 minuto mientras preparas quirófano o angiografía.",
     keyPoints: [
-      "Cuando veas:",
-      "• Trauma severo + Choque hemorrágico.",
-      "• FAST negativo y pelvis inestable (libro abierto).",
-      "Debes pensar en:",
-      "Faja pélvica a nivel de los trocánteres mayores. Es la medida salvavidas primaria antes de cualquier cirugía.",
+      "Cuando veas: Trauma severo + Choque hemorrágico + FAST negativo y pelvis inestable (libro abierto).",
+      "Debes pensar en: Faja pélvica a nivel de los trocánteres mayores. Es la medida salvavidas primaria antes de cualquier cirugía.",
       "Tema: ATLS / Trauma de Pelvis."
     ]
   },
@@ -184,11 +175,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con Cetoacidosis Diabética (CAD) severa. Según las guías de la ADA, si el potasio inicial es < 3.3 mEq/L, la INSULINA SE DEBE SUSPENDER O RETRASAR. La prioridad absoluta es reponer agresivamente el potasio por vía intravenosa (20-30 mEq/hora). Solo cuando el K+ supere 3.3 mEq/L, es seguro encender la bomba de insulina.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., esta es la causa número uno de muertes iatrogénicas en urgencias durante una cetoacidosis. Llega el muchacho con el azúcar \"Hi\" en el glucómetro y el interno desesperado prende la bomba de insulina. ¿Qué pasa? La insulina agarra las tres moléculas de potasio que le quedaban en la sangre y las mete a la fuerza a la célula. El plasma se queda sin potasio, el corazón pierde su repolarización y el paciente hace un paro irreversible. En CAD, el líquido es oro, el potasio es vida y la insulina puede esperar media hora.",
     keyPoints: [
-      "Cuando veas:",
-      "• Cetoacidosis Diabética (CAD).",
-      "• Potasio < 3.3 mEq/L.",
-      "Debes pensar en:",
-      "Retrasar la infusión de insulina. Prioridad absoluta: Reposición vigorosa de Potasio.",
+      "Cuando veas: Cetoacidosis Diabética (CAD) + Potasio < 3.3 mEq/L.",
+      "Debes pensar en: Retrasar la infusión de insulina. Prioridad absoluta: Reposición vigorosa de Potasio.",
       "Tema: Urgencias Endocrinológicas / Cetoacidosis Diabética."
     ]
   },
@@ -231,10 +219,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El Instituto Nacional de Salud (INS) de Colombia clasifica TODA mordedura o rasguño por murciélago (o zorro, mico, fauna silvestre) como EXPOSICIÓN GRAVE, independientemente del tamaño de la herida. Al ser exposición grave (por ser animal silvestre de altísimo riesgo y estar cerca al cerebro), es MANDATORIO administrar inmunidad pasiva inmediata (Inmunoglobulina antirrábica) infiltrando la mayor cantidad posible alrededor y dentro de la herida en el día 0, asociada al inicio de la inmunidad activa (Vacuna en músculo deltoides o anterolateral del muslo).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDoctor(a), la rabia tiene una mortalidad del 99.9%. Si te equivocas aquí, el paciente muere meses después con encefalitis hidrofóbica y tú irás a la cárcel. Una mordedura de murciélago en la oreja es una pista rápida directa al cerebro. La vacuna sola no sirve a tiempo; necesitas el \"veneno contra el veneno\" (la Inmunoglobulina) aplicada ahí mismo en la oreja para bloquear al virus antes de que se trepe por el nervio facial o trigémino. ¡Todo murciélago tiene rabia hasta que el patólogo demuestre lo contrario!",
     keyPoints: [
-      "Cuando veas:",
-      "• Mordedura o rasguño por murciélago, zorro o mico.",
-      "Debes pensar en:",
-      "Exposición GRAVE a Rabia. Manejo absoluto: Inmunoglobulina infiltrada en la herida + Vacuna antirrábica.",
+      "Cuando veas: Mordedura o rasguño por murciélago, zorro o mico.",
+      "Debes pensar en: Exposición GRAVE a Rabia. Manejo absoluto: Inmunoglobulina infiltrada en la herida + Vacuna antirrábica.",
       "Tema: Infectología / Profilaxis Rabia."
     ]
   },
@@ -277,10 +263,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con Edema Agudo de Pulmón secundario a Emergencia Hipertensiva. El tratamiento de rescate se basa en disminuir rápidamente la \"presión de llenado\" (precarga) y la resistencia que enfrenta el ventrículo izquierdo (poscarga). La Nitroglicerina IV a dosis altas actúa como un potente vasodilatador venoso y arterial, aliviando la asfixia casi instantáneamente. Se asocia a Furosemida IV para eliminar el exceso de volumen corporal a través de la diuresis, aunque su efecto tarda unos 30 minutos en iniciar.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEste cuadro es como una bomba de agua tratando de empujar líquido a través de una manguera tapada y rígida (vasoconstricción de PA 210/115). La presión hace que el agua retroceda e inunde los pulmones. Si le pones un betabloqueador, le quitas la fuerza al motor de la bomba y el paciente se ahoga. Con la Nitroglicerina, \"abres la manguera\" de golpe; el corazón se vacía fácilmente, el líquido sale de los pulmones y la abuela vuelve a respirar en 15 minutos.",
     keyPoints: [
-      "Cuando veas:",
-      "• Disnea súbita + Expectoración rosada + PA > 180/110.",
-      "Debes pensar en:",
-      "Edema Agudo de Pulmón Hipertensivo. Terapia base: Nitroglicerina IV + Furosemida IV.",
+      "Cuando veas: Disnea súbita + Expectoración rosada + PA > 180/110.",
+      "Debes pensar en: Edema Agudo de Pulmón Hipertensivo. Terapia base: Nitroglicerina IV + Furosemida IV.",
       "Tema: Urgencias Cardiovasculares / Falla Cardiaca Aguda."
     ]
   },
@@ -323,10 +307,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "El paciente presenta una Fractura Abierta (Expuesta) del fémur secundaria a PAF. Esto la clasifica, como mínimo, en una Gustilo-Anderson grado III. Las directrices del ATLS y ortopedia mundial establecen que la administración temprana de antibióticos (idealmente dentro de la primera hora, máximo 3 horas) es el factor pronóstico más importante para prevenir la osteomielitis. Para las fracturas Gustilo III (o por arma de fuego/granja), se requiere cobertura contra Gram positivos y Gram negativos. El esquema estándar es una Cefalosporina de 1ra generación (Cefazolina) + un Aminoglucósido (Gentamicina).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nUn hueso expuesto al aire de la calle ya está contaminado. Si tú te sientas a esperar a que el bacteriólogo te diga qué bicho creció en el cultivo (Opción B), en tres días el paciente tendrá una osteomielitis por Staphylococcus aureus que le comerá el fémur y requerirá amputación. Arranca el chorro de Cefazolina y Gentamicina apenas le rompas el pantalón al soldado. ¡La ortopedia de guerra te lo exige!",
     keyPoints: [
-      "Cuando veas:",
-      "• Fractura abierta (expuesta) por arma de fuego o Gustilo III.",
-      "Debes pensar en:",
-      "Profilaxis antibiótica INMEDIATA (Cefazolina + Gentamicina). NO tomar cultivos en urgencias.",
+      "Cuando veas: Fractura abierta (expuesta) por arma de fuego o Gustilo III.",
+      "Debes pensar en: Profilaxis antibiótica INMEDIATA (Cefazolina + Gentamicina). NO tomar cultivos en urgencias.",
       "Tema: Ortopedia / Fracturas Abiertas."
     ]
   },
@@ -369,11 +351,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El estándar de oro mundial para pacientes ESTABLES con abscesos apendiculares de buen tamaño (> 3-4 cm) de evolución tardía (> 5 días) es el \"Manejo Conservador\" (estrategia de Ochsner o tratamiento no operatorio). Consiste en hospitalizar, dar antibióticos IV de amplio espectro y drenar el pus con radiología intervencionista (catéter percutáneo). Semanas/meses después, cuando la inflamación ha cedido, se puede ofrecer una apendicectomía de intervalo electiva.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nMeterse a operar un absceso apendicular de 6 días es como tratar de separar chicles derretidos pegados a un papel húmedo. Todo se desgarra, todo sangra, y el intestino se rompe. El cirujano inteligente drena la bolsa de pus con una aguja guiada por ecógrafo desde afuera, y deja que el paciente mejore en la planta. La heroica intervención de entrar a arrancar esa masa termina casi siempre en el paciente usando una colostomía de por vida. ¡El bisturí se guarda para la peritonitis generalizada!",
     keyPoints: [
-      "Cuando veas:",
-      "• Apendicitis tardía (> 5 días) + Masa palpable (Plastrón) + Absceso en TAC.",
-      "• Paciente hemodinámicamente estable.",
-      "Debes pensar en:",
-      "Manejo Conservador: Drenaje percutáneo radiológico + Antibióticos IV. NO cirugía inmediata.",
+      "Cuando veas: Apendicitis tardía (> 5 días) + Masa palpable (Plastrón) + Absceso en TAC + Paciente hemodinámicamente estable.",
+      "Debes pensar en: Manejo Conservador: Drenaje percutáneo radiológico + Antibióticos IV. NO cirugía inmediata.",
       "Tema: Cirugía General / Apendicitis Complicada."
     ]
   },
@@ -416,10 +395,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente presenta Sepsis Neonatal Temprana (< 72 horas). Los patógenos universales aquí son: Streptococcus agalactiae (Grupo B), Escherichia coli y Listeria monocytogenes. La Ampicilina cubre excelentemente al S. agalactiae y, lo más importante, es el único fármaco que destruye a la Listeria monocytogenes. La Gentamicina (o cualquier aminoglucósido) hace sinergia y aniquila a los Gram negativos del canal del parto como la E. coli.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDoctor, grábate este esquema porque es pregunta de pase en pediatría y un salvavidas real. La Listeria es un bicho engañoso que a las cefalosporinas de 3ra (Cefotaxima, Ceftriaxona) les da risa, son naturalmente resistentes a ellas. ¡Solo la Ampicilina mata a la Listeria! Por eso, todo protocolo neonatal DEBE llevar Ampicilina de cajón. Si marcas Ceftriaxona (Opción A), aparte de que no matas a la listeria, vuelves amarillo al bebé y le causas daño neurológico permanente.",
     keyPoints: [
-      "Cuando veas:",
-      "• Neonato (< 7 días) con signos de sepsis (letargia, hipotermia, mala succión).",
-      "Debes pensar en:",
-      "Cobertura para S. agalactiae, E. coli y Listeria. Esquema: Ampicilina + Gentamicina. NUNCA Ceftriaxona.",
+      "Cuando veas: Neonato (< 7 días) con signos de sepsis (letargia, hipotermia, mala succión).",
+      "Debes pensar en: Cobertura para S. agalactiae, E. coli y Listeria. Esquema: Ampicilina + Gentamicina. NUNCA Ceftriaxona.",
       "Tema: Neonatología / Sepsis Neonatal Temprana."
     ]
   },
@@ -462,11 +439,8 @@ export const UMNG_CONV_2026_07_26_21_30_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente cursa con Intoxicación Aguda por Opioides (Heroína, Fentanilo). La vida media de la Naloxona es muy corta (30 a 60 minutos). Por el contrario, los opioides (heroína o metadona) tienen vidas medias de varias horas. Cuando la naloxona desaparece del torrente sanguíneo, el opioide residual vuelve a unirse a los receptores cerebrales y el paciente entra nuevamente en paro respiratorio (re-narcotización). La observación durante al menos 4 horas es obligatoria, y en muchos casos se requiere una bomba de infusión continua de Naloxona.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEsta es la escena de la película \"Pulp Fiction\" pero en la vida real. Le pones la ampolla, el paciente abre los ojos y hasta te pelea para irse del hospital porque le cortaste su \"viaje\". Doctor, amárralo a la camilla si es necesario o convéncelo de quedarse. Si lo dejas salir, en 45 minutos la Naloxona se metaboliza en su hígado y el opioide que aún navega en su sangre lo manda a dormir para siempre. ¡La vigilancia debe ser total!",
     keyPoints: [
-      "Cuando veas:",
-      "• Tríada opioide: Miosis puntiforme + Coma + Depresión respiratoria.",
-      "• Respuesta favorable a Naloxona.",
-      "Debes pensar en:",
-      "Riesgo altísimo de re-narcotización (la Naloxona dura menos que el opioide). Observación obligatoria > 4 horas.",
+      "Cuando veas: Tríada opioide: Miosis puntiforme + Coma + Depresión respiratoria + Respuesta favorable a Naloxona.",
+      "Debes pensar en: Riesgo altísimo de re-narcotización (la Naloxona dura menos que el opioide). Observación obligatoria > 4 horas.",
       "Tema: Toxicología / Intoxicación por Opioides."
     ]
   }

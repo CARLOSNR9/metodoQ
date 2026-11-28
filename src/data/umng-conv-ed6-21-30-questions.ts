@@ -10,10 +10,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Una mujer de 48 años, con antecedente de litiasis vesicular conocida, consulta por dolor en hipocondrio derecho de 18 horas de evolución, fiebre de 38.4°C y Signo de Murphy positivo. Los laboratorios muestran leucocitosis de 14.500/mm³ y PCR elevada. Una ecografía abdominal confirma colelitiasis con engrosamiento de la pared vesicular (5 mm) y líquido perivesicular. La paciente no tiene comorbilidades significativas y está hemodinámicamente estable. Según los criterios de Tokio para colecistitis aguda, y considerando el momento ideal de la intervención quirúrgica, ¿cuál es la conducta terapéutica de elección?",
     options: [
-      { id: "A", label: "A", text: "Manejo exclusivamente médico con antibióticos, difiriendo la colecistectomía por al menos 6 semanas en todos los casos." },
+      { id: "A", label: "A", text: "Manejo exclusivamente médico con antibióticos, difiriendo la colecistectomía por al menos 6 semanas en todos los casos.", incorrectFeedback: "Esperar 6 semanas era la práctica antigua. En una paciente estable y sin comorbilidades, la colecistectomía temprana en las primeras 72 horas reduce la estancia y las recaídas sin aumentar las complicaciones." },
       { id: "B", label: "B", text: "Colecistectomía Laparoscópica TEMPRANA (idealmente dentro de las primeras 72 horas del inicio de síntomas), más antibioticoterapia perioperatoria." },
-      { id: "C", label: "C", text: "Colecistostomía percutánea como único tratamiento definitivo, sin necesidad de cirugía posterior en ningún momento." },
-      { id: "D", label: "D", text: "CPRE de urgencia como primer paso obligatorio antes de cualquier otra intervención." },
+      { id: "C", label: "C", text: "Colecistostomía percutánea como único tratamiento definitivo, sin necesidad de cirugía posterior en ningún momento.", incorrectFeedback: "La colecistostomía percutánea se reserva para pacientes muy graves o con alto riesgo quirúrgico. Esta paciente puede operarse, y la vesícula con cálculos seguiría causando episodios." },
+      { id: "D", label: "D", text: "CPRE de urgencia como primer paso obligatorio antes de cualquier otra intervención.", incorrectFeedback: "La CPRE se indica si hay coledocolitiasis o colangitis (ictericia, vía biliar dilatada). Aquí no hay datos de obstrucción del colédoco, así que no es el primer paso." },
     ],
     correctOptionId: "B",
     explanation:
@@ -33,10 +33,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un niño de 20 meses, previamente sano, presenta un episodio convulsivo tónico-clónico generalizado de 3 minutos de duración, con recuperación completa de la conciencia en 10 minutos, en el contexto de fiebre de 39.2°C de inicio súbito por una infección viral de vías respiratorias altas evidente al examen. No hay antecedente de convulsiones previas, ni signos meníngeos, ni focalización neurológica post-ictal. Es el primer episodio de este tipo. Los padres, angustiados, preguntan si su hijo tiene epilepsia y si necesita una resonancia magnética cerebral urgente. ¿Cuál es la conducta y la explicación CORRECTA para esta familia respecto a esta convulsión febril simple?",
     options: [
-      { id: "A", label: "A", text: "Se trata de Epilepsia de inicio temprano; requiere inicio inmediato de tratamiento antiepiléptico de por vida y Resonancia Magnética urgente." },
+      { id: "A", label: "A", text: "Se trata de Epilepsia de inicio temprano; requiere inicio inmediato de tratamiento antiepiléptico de por vida y Resonancia Magnética urgente.", incorrectFeedback: "Una convulsión febril simple no es epilepsia ni requiere antiepilépticos de por vida. La resonancia urgente no está indicada en un niño que se recupera por completo y tiene examen neurológico normal." },
       { id: "B", label: "B", text: "Convulsión Febril Simple; es una condición generalmente benigna que NO requiere estudios de neuroimagen urgentes ni tratamiento antiepiléptico profiláctico, y NO aumenta significativamente el riesgo de epilepsia futura en la mayoría de los casos." },
-      { id: "C", label: "C", text: "Meningitis Bacteriana hasta demostrar lo contrario; requiere punción lumbar obligatoria en todos los casos antes de cualquier otra consideración." },
-      { id: "D", label: "D", text: "Estado Epiléptico Febril; requiere ingreso a UCI pediátrica y tratamiento antiepiléptico intravenoso inmediato." },
+      { id: "C", label: "C", text: "Meningitis Bacteriana hasta demostrar lo contrario; requiere punción lumbar obligatoria en todos los casos antes de cualquier otra consideración.", incorrectFeedback: "La punción lumbar se reserva para niños con signos meníngeos, aspecto tóxico, focalidad, vacunación incompleta o antibiótico previo. Este niño se recuperó por completo y tiene un foco viral claro." },
+      { id: "D", label: "D", text: "Estado Epiléptico Febril; requiere ingreso a UCI pediátrica y tratamiento antiepiléptico intravenoso inmediato.", incorrectFeedback: "El estado epiléptico febril dura más de 30 minutos o se repite sin recuperación. Una convulsión de 3 minutos con recuperación completa es una convulsión febril simple." },
     ],
     correctOptionId: "B",
     explanation:
@@ -56,10 +56,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 38 años, trabajador agrícola, es traído a urgencias tras la ingesta intencional de un herbicida (Paraquat) hace 2 horas, con el objetivo de suicidarse. Presenta ulceraciones dolorosas en la mucosa oral y orofaríngea, y dolor abdominal. La familia, alarmada, pregunta si se le dará oxígeno suplementario para \"ayudarlo a respirar mejor\", dado que se prevé que desarrollará dificultad respiratoria progresiva. ¿Cuál es la respuesta CORRECTA respecto al uso de oxígeno suplementario en esta intoxicación específica, y por qué?",
     options: [
-      { id: "A", label: "A", text: "El oxígeno suplementario debe administrarse en altas concentraciones de inmediato para prevenir la hipoxia esperada." },
+      { id: "A", label: "A", text: "El oxígeno suplementario debe administrarse en altas concentraciones de inmediato para prevenir la hipoxia esperada.", incorrectFeedback: "En la intoxicación por paraquat, el oxígeno a altas concentraciones da más sustrato para los radicales libres y acelera la fibrosis pulmonar. Solo se da si hay hipoxemia grave documentada." },
       { id: "B", label: "B", text: "El oxígeno suplementario debe EVITARSE (salvo hipoxemia franca y documentada), ya que el Paraquat genera radicales libres de oxígeno tóxicos en el tejido pulmonar, y administrar oxígeno adicional puede ACELERAR y EMPEORAR la fibrosis pulmonar característica de esta intoxicación." },
-      { id: "C", label: "C", text: "El oxígeno no tiene ninguna relación con el mecanismo de esta intoxicación y su uso es indiferente." },
-      { id: "D", label: "D", text: "El oxígeno hiperbárico es el tratamiento antidótico específico y debe iniciarse de inmediato en todos los casos." },
+      { id: "C", label: "C", text: "El oxígeno no tiene ninguna relación con el mecanismo de esta intoxicación y su uso es indiferente.", incorrectFeedback: "El oxígeno sí está relacionado con la toxicidad: el paraquat genera radicales libres a partir del oxígeno en el pulmón. Por eso su uso no es indiferente." },
+      { id: "D", label: "D", text: "El oxígeno hiperbárico es el tratamiento antidótico específico y debe iniciarse de inmediato en todos los casos.", incorrectFeedback: "No existe un antídoto específico para el paraquat, y el oxígeno hiperbárico empeoraría el daño pulmonar. El manejo es la descontaminación temprana y el soporte." },
     ],
     correctOptionId: "B",
     explanation:
@@ -79,10 +79,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Una mujer de 25 años, con antecedente de Asma mal controlada, es traída a urgencias con dificultad respiratoria severa que ha empeorado a pesar de múltiples dosis de Salbutamol inhalado en su domicilio. Al ingreso está usando musculatura accesoria intensamente, con habla entrecortada (solo palabras sueltas). Llamativamente, el equipo nota que las sibilancias que eran audibles hace 20 minutos ahora casi han desaparecido, y la paciente luce más somnolienta. La frecuencia respiratoria, que era de 34 rpm, ahora es de 10 rpm. ¿Cómo se interpreta este cambio clínico (\"tórax silente\" con disminución de la frecuencia respiratoria), y cuál es la conducta INMEDIATA?",
     options: [
-      { id: "A", label: "A", text: "Es una señal de mejoría clínica genuina, ya que la disminución de sibilancias y de la frecuencia respiratoria indica resolución del broncoespasmo." },
+      { id: "A", label: "A", text: "Es una señal de mejoría clínica genuina, ya que la disminución de sibilancias y de la frecuencia respiratoria indica resolución del broncoespasmo.", incorrectFeedback: "En una crisis asmática grave, la desaparición de las sibilancias con somnolencia y baja de la frecuencia respiratoria indica que casi no entra aire y los músculos se agotaron. No es una mejoría." },
       { id: "B", label: "B", text: "Es un signo de EXTREMA GRAVEDAD (Tórax Silente por obstrucción tan severa que casi no entra/sale aire, con fatiga de los músculos respiratorios); requiere manejo INMEDIATO de vía aérea avanzada e intubación, ya que anuncia un paro respiratorio inminente." },
-      { id: "C", label: "C", text: "Indica que el Salbutamol ya hizo efecto completo y se debe suspender cualquier tratamiento broncodilatador adicional." },
-      { id: "D", label: "D", text: "Es un hallazgo sin relevancia clínica que solo requiere continuar observación sin cambios en el manejo." },
+      { id: "C", label: "C", text: "Indica que el Salbutamol ya hizo efecto completo y se debe suspender cualquier tratamiento broncodilatador adicional.", incorrectFeedback: "El tórax silente no indica que el broncodilatador funcionó, sino que la obstrucción es extrema. Suspender el tratamiento en este momento sería fatal." },
+      { id: "D", label: "D", text: "Es un hallazgo sin relevancia clínica que solo requiere continuar observación sin cambios en el manejo.", incorrectFeedback: "El tórax silente con somnolencia y bradipnea anuncia un paro respiratorio inminente. Exige preparar la intubación de inmediato." },
     ],
     correctOptionId: "B",
     explanation:
@@ -102,10 +102,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Una mujer de 58 años, posmenopáusica, consulta por distensión abdominal progresiva y saciedad temprana de 3 meses de evolución. Una ecografía transvaginal identifica una masa ovárica derecha de 9 cm, de características complejas (componente sólido y quístico, septos gruesos, flujo Doppler interno), con ascitis asociada. El marcador tumoral CA-125 sérico está marcadamente elevado (620 U/mL). ¿Cuál es la conducta MÁS apropiada ante esta masa anexial de alta sospecha de malignidad en una mujer posmenopáusica, considerando el principio de manejo oncológico ginecológico?",
     options: [
-      { id: "A", label: "A", text: "Aspiración percutánea guiada por ecografía de la masa para diagnóstico citológico, evitando la cirugía." },
+      { id: "A", label: "A", text: "Aspiración percutánea guiada por ecografía de la masa para diagnóstico citológico, evitando la cirugía.", incorrectFeedback: "Puncionar una masa anexial sospechosa de malignidad puede romper la cápsula y diseminar células tumorales en el peritoneo, empeorando el estadio. Está contraindicado." },
       { id: "B", label: "B", text: "Referencia a Ginecología Oncológica para estadificación quirúrgica completa (no solo biopsia ni cirugía limitada), evitando la ruptura del tumor durante el manejo." },
-      { id: "C", label: "C", text: "Manejo expectante con control ecográfico en 6 meses, dado que la paciente está asintomática de dolor agudo." },
-      { id: "D", label: "D", text: "Anticonceptivos hormonales combinados durante 3 meses para intentar reducir el tamaño de la masa antes de decidir conducta." },
+      { id: "C", label: "C", text: "Manejo expectante con control ecográfico en 6 meses, dado que la paciente está asintomática de dolor agudo.", incorrectFeedback: "Una masa compleja con ascitis y CA-125 de 620 en una posmenopáusica tiene alta probabilidad de cáncer. Esperar 6 meses retrasaría un tratamiento que define el pronóstico." },
+      { id: "D", label: "D", text: "Anticonceptivos hormonales combinados durante 3 meses para intentar reducir el tamaño de la masa antes de decidir conducta.", incorrectFeedback: "Los anticonceptivos se usan a veces para quistes funcionales en mujeres premenopáusicas, no para una masa compleja sospechosa de cáncer en una posmenopáusica." },
     ],
     correctOptionId: "B",
     explanation:
@@ -126,9 +126,9 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     statement: "Un hombre de 68 años consulta por un episodio sincopal súbito mientras subía una escalera, sin pródromos (sin mareo, sudoración ni náuseas previas al evento), con recuperación espontánea completa en menos de un minuto. Refiere dos episodios similares en el último mes. Al examen físico se ausculta un soplo sistólico eyectivo en el foco aórtico. El electrocardiograma muestra hipertrofia ventricular izquierda con patrón de sobrecarga. ¿Cuál es la característica del síncope de esta viñeta que lo distingue de un síncope vasovagal benigno, y qué implica respecto a la necesidad de evaluación urgente?",
     options: [
       { id: "A", label: "A", text: "La ausencia de pródromos y su ocurrencia durante el ESFUERZO físico son señales de ALARMA que sugieren causa cardiogénica (posible Estenosis Aórtica severa); requiere evaluación cardiológica urgente, incluyendo ecocardiograma." },
-      { id: "B", label: "B", text: "La recuperación espontánea rápida descarta cualquier causa cardíaca grave, siendo compatible únicamente con síncope vasovagal benigno." },
-      { id: "C", label: "C", text: "El síncope durante el esfuerzo es siempre de causa neurológica (epilepsia) y requiere electroencefalograma como estudio prioritario." },
-      { id: "D", label: "D", text: "La edad del paciente es el único factor relevante; cualquier síncope en mayores de 65 años se maneja igual, sin importar el contexto clínico." },
+      { id: "B", label: "B", text: "La recuperación espontánea rápida descarta cualquier causa cardíaca grave, siendo compatible únicamente con síncope vasovagal benigno.", incorrectFeedback: "Recuperarse rápido no descarta una causa cardíaca: un síncope de esfuerzo sin pródromos con soplo aórtico puede ser una estenosis aórtica grave con riesgo de muerte súbita." },
+      { id: "C", label: "C", text: "El síncope durante el esfuerzo es siempre de causa neurológica (epilepsia) y requiere electroencefalograma como estudio prioritario.", incorrectFeedback: "El síncope de esfuerzo orienta a una causa cardíaca (obstrucción al flujo o arritmia), no a epilepsia. El soplo aórtico con hipertrofia ventricular apunta al corazón." },
+      { id: "D", label: "D", text: "La edad del paciente es el único factor relevante; cualquier síncope en mayores de 65 años se maneja igual, sin importar el contexto clínico.", incorrectFeedback: "La edad no basta para decidir: lo que define el riesgo es el contexto (esfuerzo, ausencia de pródromos, soplo, ECG anormal). Este perfil exige evaluación cardiológica urgente." },
     ],
     correctOptionId: "A",
     explanation:
@@ -148,10 +148,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 55 años, en el día 10 de un ciclo de quimioterapia para Leucemia Mieloide Aguda, consulta por fiebre de 38.6°C, sin otro síntoma localizador evidente (sin tos, sin disuria, sin diarrea). Un hemograma de control muestra un Conteo Absoluto de Neutrófilos de 380 células/mm³ (neutropenia severa). El paciente luce clínicamente estable, sin hipotensión ni signos de choque. ¿Cuál es la conducta terapéutica que debe iniciarse de INMEDIATO, dentro de la primera hora, sin esperar los resultados de los cultivos, dado el riesgo de progresión rápida a sepsis en este contexto específico?",
     options: [
-      { id: "A", label: "A", text: "Observación clínica con antipiréticos, reevaluando en 24 horas si persiste la fiebre." },
+      { id: "A", label: "A", text: "Observación clínica con antipiréticos, reevaluando en 24 horas si persiste la fiebre.", incorrectFeedback: "Esperar 24 horas en un paciente con menos de 500 neutrófilos y fiebre puede llevarlo a la sepsis. El antibiótico debe darse en la primera hora, aunque el paciente luzca estable." },
       { id: "B", label: "B", text: "Antibioticoterapia empírica de amplio espectro con cobertura antipseudomónica (ej. Cefepime, Piperacilina-Tazobactam, o Meropenem), iniciada dentro de la primera hora tras la toma de hemocultivos." },
-      { id: "C", label: "C", text: "Iniciar exclusivamente Factor Estimulante de Colonias de Granulocitos (G-CSF), sin necesidad de antibióticos hasta confirmar un foco infeccioso." },
-      { id: "D", label: "D", text: "Solicitar tomografía de tórax y abdomen como primer paso obligatorio antes de cualquier tratamiento antibiótico." },
+      { id: "C", label: "C", text: "Iniciar exclusivamente Factor Estimulante de Colonias de Granulocitos (G-CSF), sin necesidad de antibióticos hasta confirmar un foco infeccioso.", incorrectFeedback: "Los factores estimulantes de colonias no reemplazan al antibiótico en la fiebre neutropénica. La ausencia de foco no descarta una infección grave." },
+      { id: "D", label: "D", text: "Solicitar tomografía de tórax y abdomen como primer paso obligatorio antes de cualquier tratamiento antibiótico.", incorrectFeedback: "Los estudios de imagen pueden pedirse después, pero no deben retrasar el antibiótico, que se da en la primera hora tras los hemocultivos." },
     ],
     correctOptionId: "B",
     explanation:
@@ -171,10 +171,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 30 años es traído a urgencias tras una herida por arma de fuego en el tórax lateral izquierdo, con un defecto de la pared torácica de aproximadamente 6 cm de diámetro claramente visible, a través del cual se escucha un sonido de succión de aire con cada respiración (\"herida succionante\"). El paciente está taquipneico y con dificultad respiratoria progresiva. ¿Cuál es el manejo INMEDIATO prehospitalario/inicial de esta lesión torácica específica, y por qué un defecto de este tamaño relativo al diámetro traqueal es particularmente peligroso?",
     options: [
-      { id: "A", label: "A", text: "Colocar un apósito oclusivo sellado herméticamente por los 4 bordes de inmediato, sin ninguna otra consideración adicional." },
+      { id: "A", label: "A", text: "Colocar un apósito oclusivo sellado herméticamente por los 4 bordes de inmediato, sin ninguna otra consideración adicional.", incorrectFeedback: "Sellar los cuatro bordes atrapa el aire que sigue saliendo del pulmón lesionado y puede convertir la herida en un neumotórax a tensión. El apósito se fija en tres lados." },
       { id: "B", label: "B", text: "Colocar un apósito oclusivo asegurado SOLO en 3 de sus 4 bordes (dejando un borde libre como válvula unidireccional), permitiendo la salida de aire pero no su entrada, para prevenir la conversión a Neumotórax a Tensión." },
-      { id: "C", label: "C", text: "No colocar ningún apósito, dejando la herida completamente expuesta y abierta al ambiente." },
-      { id: "D", label: "D", text: "Suturar inmediatamente el defecto de la pared torácica en el sitio del trauma, sin necesidad de ninguna otra intervención." },
+      { id: "C", label: "C", text: "No colocar ningún apósito, dejando la herida completamente expuesta y abierta al ambiente.", incorrectFeedback: "Dejar la herida abierta mantiene la entrada de aire por el defecto, con colapso pulmonar y falla ventilatoria. Hay que cubrirla con un apósito de tres lados." },
+      { id: "D", label: "D", text: "Suturar inmediatamente el defecto de la pared torácica en el sitio del trauma, sin necesidad de ninguna otra intervención.", incorrectFeedback: "Suturar el defecto sin tubo de tórax atrapa el aire dentro del tórax, con riesgo de neumotórax a tensión. El cierre definitivo se hace después de poner el tubo, en un medio controlado." },
     ],
     correctOptionId: "B",
     explanation:
@@ -194,10 +194,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Una niña de 3 años consulta por palidez marcada, edema periorbitario, y oliguria de 2 días de evolución. La madre refiere que hace 6 días la niña presentó un episodio de diarrea sanguinolenta intensa tras consumir carne molida mal cocida en una parrillada familiar, cuadro que ya se resolvió espontáneamente. Los laboratorios muestran Hemoglobina 6.8 g/dL, Plaquetas 45.000/mm³, LDH elevada, Creatinina 3.2 mg/dL (elevada), y un frotis de sangre periférica con abundantes esquistocitos. ¿Cuál es el diagnóstico, cuál es el agente etiológico típicamente implicado en este contexto epidemiológico, y qué tratamiento está CONTRAINDICADO en el manejo de la diarrea inicial que pudo haber prevenido esta complicación?",
     options: [
-      { id: "A", label: "A", text: "Púrpura Trombocitopénica Trombótica; los antibióticos durante la diarrea inicial son el tratamiento recomendado y protector." },
+      { id: "A", label: "A", text: "Púrpura Trombocitopénica Trombótica; los antibióticos durante la diarrea inicial son el tratamiento recomendado y protector.", incorrectFeedback: "La púrpura trombocitopénica trombótica es más frecuente en adultos y no se asocia a diarrea sanguinolenta previa por carne mal cocida. Además, los antibióticos no protegen: en la infección por E. coli productora de toxina Shiga aumentan el riesgo de SUH." },
       { id: "B", label: "B", text: "Síndrome Urémico Hemolítico típico (por E. coli productora de toxina Shiga, O157:H7); los ANTIBIÓTICOS y los ANTIDIARREICOS (loperamida) durante la fase de diarrea están CONTRAINDICADOS, ya que pueden AUMENTAR el riesgo de desarrollar esta complicación." },
-      { id: "C", label: "C", text: "Glomerulonefritis Postestreptocócica; el antibiótico durante la diarrea es indiferente para el desarrollo de esta complicación." },
-      { id: "D", label: "D", text: "Anemia Ferropénica con Trombocitopenia coincidental no relacionada; no existe asociación con el episodio diarreico previo." },
+      { id: "C", label: "C", text: "Glomerulonefritis Postestreptocócica; el antibiótico durante la diarrea es indiferente para el desarrollo de esta complicación.", incorrectFeedback: "La glomerulonefritis postestreptocócica sigue a una faringitis o infección de piel, y no produce anemia hemolítica con esquistocitos ni trombocitopenia." },
+      { id: "D", label: "D", text: "Anemia Ferropénica con Trombocitopenia coincidental no relacionada; no existe asociación con el episodio diarreico previo.", incorrectFeedback: "La anemia ferropénica es microcítica y no produce esquistocitos ni falla renal. La tríada de anemia hemolítica, trombocitopenia y falla renal tras diarrea con sangre es SUH." },
     ],
     correctOptionId: "B",
     explanation:
@@ -217,10 +217,10 @@ export const UMNG_CONV_ED6_21_30_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un médico general, tras atender a un paciente en urgencias por un cuadro de dolor abdominal que finalmente resultó ser una apendicitis complicada con perforación, es citado meses después a un proceso disciplinario ante el Tribunal de Ética Médica, luego de que el paciente presentara una demanda alegando \"diagnóstico tardío\". Al revisar el caso, el comité encuentra que la historia clínica del médico documentó de forma clara y cronológica: el motivo de consulta, los hallazgos del examen físico seriados, el razonamiento diagnóstico diferencial considerado en su momento, las órdenes médicas con su justificación, y la evolución clínica del paciente durante su estancia en observación. ¿Cuál es el rol PRINCIPAL que cumple una historia clínica completa y adecuadamente diligenciada en este escenario de responsabilidad médico-legal?",
     options: [
-      { id: "A", label: "A", text: "Ninguno; la historia clínica es solo un requisito administrativo sin ningún valor probatorio real en procesos disciplinarios o judiciales." },
+      { id: "A", label: "A", text: "Ninguno; la historia clínica es solo un requisito administrativo sin ningún valor probatorio real en procesos disciplinarios o judiciales.", incorrectFeedback: "La historia clínica es un documento con valor legal y probatorio en procesos disciplinarios y judiciales. Es la principal herramienta de defensa del médico." },
       { id: "B", label: "B", text: "Constituye la PRINCIPAL herramienta de defensa médico-legal, al ser el documento que demuestra el proceso de razonamiento clínico, la pertinencia de las decisiones tomadas con la información disponible en su momento, y el cumplimiento de la lex artis, independientemente del desenlace final del paciente." },
-      { id: "C", label: "C", text: "Solo tiene valor si el desenlace del paciente fue favorable; en casos de mal desenlace, la historia clínica pierde toda relevancia legal." },
-      { id: "D", label: "D", text: "Es responsabilidad exclusiva del personal de enfermería, y el médico no tiene ninguna obligación legal de diligenciarla adecuadamente." },
+      { id: "C", label: "C", text: "Solo tiene valor si el desenlace del paciente fue favorable; en casos de mal desenlace, la historia clínica pierde toda relevancia legal.", incorrectFeedback: "La historia clínica tiene valor sin importar el desenlace: demuestra si las decisiones fueron razonables con la información disponible en ese momento." },
+      { id: "D", label: "D", text: "Es responsabilidad exclusiva del personal de enfermería, y el médico no tiene ninguna obligación legal de diligenciarla adecuadamente.", incorrectFeedback: "El médico está obligado a diligenciar su parte de la historia clínica según la Resolución 1995 de 1999. No es responsabilidad exclusiva de enfermería." },
     ],
     correctOptionId: "B",
     explanation:

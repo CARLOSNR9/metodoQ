@@ -96,7 +96,7 @@ import {
 } from "@/lib/training/convocatorias";
 import {
   getWrongQuestionIds,
-  resolveSessionQuestions,
+  resolveCorrectedSessionQuestions,
 } from "@/lib/session-review";
 import {
   clearExamDraft,
@@ -590,7 +590,7 @@ export function DemoView({ isDashboard = false }: { isDashboard?: boolean }) {
         const result = await getDemoResultById(user.uid, sessionErrorsResultId);
         if (result?.sessionQuestionIds?.length && result.answersByQuestionId) {
           wrongIds = getWrongQuestionIds(
-            await resolveSessionQuestions(result.sessionQuestionIds),
+            await resolveCorrectedSessionQuestions(result.sessionQuestionIds),
             result.answersByQuestionId,
           );
         }

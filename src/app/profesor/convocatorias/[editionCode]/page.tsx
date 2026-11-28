@@ -3,9 +3,12 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { ConvocatoriaQuestionReviewer } from "@/components/professor/convocatoria-question-reviewer";
 import { getConvocatoriaQuestionBank } from "@/lib/questions/convocatoria-bank";
-import { mergeConvocatoriaBank } from "@/lib/questions/convocatoria-overrides";
+import {
+  mergeConvocatoriaBank,
+  type ConvocatoriaOverrideMap,
+} from "@/lib/questions/convocatoria-overrides";
 import { sortConvocatoriaQuestions } from "@/lib/convocatoria/question-number";
-import { adminListConvocatoriaOverrides } from "@/lib/server/convocatoria-edits-admin";
+import { adminGetQuestionCorrections } from "@/lib/server/question-corrections-admin";
 import { getConvocatoriaEdition } from "@/lib/training/convocatorias";
 import { StaffDataPending } from "@/components/admin/staff-data-pending";
 import { requireStaffArea } from "@/lib/server/staff-session";
@@ -28,9 +31,11 @@ export default async function ProfessorConvocatoriaEditionPage({ params }: PageP
   );
   if (baseQuestions.length === 0) notFound();
 
-  let overrides = {};
+  // Correcciones por id de pregunta, vengan de esta edición, de otra que
+  // comparte la pregunta o del editor de «Preguntas reportadas».
+  let overrides: ConvocatoriaOverrideMap = {};
   try {
-    overrides = await adminListConvocatoriaOverrides(editionCode);
+    overrides = await adminGetQuestionCorrections(baseQuestions.map((q) => q.id));
   } catch (e) {
     console.error("convocatoria overrides load", e);
   }
@@ -55,8 +60,9 @@ export default async function ProfessorConvocatoriaEditionPage({ params }: PageP
           {edition.label}
         </h1>
         <p className="mt-2 text-sm text-mq-muted">
-          {edition.questionCount} preguntas · Simulacro UCC · Los estudiantes ven la retroalimentación
-          al finalizar las 100 preguntas; aquí puedes revisarla y ajustarla pregunta por pregunta.
+          {edition.questionCount} preguntas · Los estudiantes ven la retroalimentación
+          al finalizar las 100 preguntas; aquí puedes revisarla y ajustarla pregunta por pregunta. Cada corrección se aplica a la
+          pregunta en todos los simulacros donde aparece y en el repaso de los estudiantes.
         </p>
       </header>
 

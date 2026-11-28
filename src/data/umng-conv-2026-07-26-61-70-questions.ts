@@ -43,10 +43,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "Según el ATLS, en el trauma de abdomen penetrante existen 3 indicaciones absolutas para Laparotomía Exploratoria Inmediata, independientemente de si el paciente está estable: 1) Inestabilidad hemodinámica (Choque). 2) Peritonitis franca. 3) EVISCERACIÓN (protrusión de omento o asas). El peritoneo fue violado de manera amplia y la lesión de órganos internos es altísima. Se debe cubrir con compresas tibias y húmedas y llamar al cirujano.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., si la grasa del abdomen te está mirando desde afuera de la piel, ¡no hay nada que pensar! No la empujes con el dedo porque la infectas, no pidas TAC porque pierdes tiempo. Cúbrela con suero tibio para que no se seque y se isquemice, y sube al paciente a pabellón. El cirujano tiene que entrar, lavar todo, revisar los 6 metros de intestino delgado por si el cuchillo perforó un asa, y cerrar formalmente.",
     keyPoints: [
-      "Cuando veas:",
-      "• Trauma abdominal penetrante + Evisceración (Omento o asas protruyendo).",
-      "Debes pensar en:",
-      "Indicación ABSOLUTA de Laparotomía Exploratoria Inmediata, sin importar la estabilidad hemodinámica.",
+      "Cuando veas: Trauma abdominal penetrante + Evisceración (Omento o asas protruyendo).",
+      "Debes pensar en: Indicación ABSOLUTA de Laparotomía Exploratoria Inmediata, sin importar la estabilidad hemodinámica.",
       "Tema: ATLS / Trauma de Abdomen."
     ]
   },
@@ -89,10 +87,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El diagnóstico es Estenosis Hipertrófica del Píloro (EHP), la cual produce un vómito de ácido estomacal puro (pérdida de Hidrógeno y Cloro), generando la clásica Alcalosis Metabólica Hipoclorémica e Hipopotasémica. La EHP es una urgencia MÉDICA, no una urgencia quirúrgica. La conducta innegociable y salvavidas inicial es reponer el volumen intravascular, el Cloro y el Potasio. La cirugía (Piloromiotomía) sólo se hace cuando la química sanguínea esté normalizada (HCO3 < 30 y Cl > 100).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., grábate esto: 'Nadie se muere de un píloro cerrado, pero se mueren por la deshidratación y por los anestesiólogos'. Si tú le llevas este bebé al anestesiólogo pediatra con Cloro en 88 y Potasio en 2.8, te va a sacar a gritos del quirófano. La alcalosis severa suprime el centro respiratorio; si lo duermen, no volverá a respirar por sí solo. Tienes todo el tiempo del mundo para hidratarlo. Pásale suerito con potasio, tómale laboratorios mañana y, cuando esté perfecto, lo operas.",
     keyPoints: [
-      "Cuando veas:",
-      "• Lactante con vómitos en proyectil no biliosos + Masa en oliva + Alcalosis metabólica hipoclorémica hipopotasémica.",
-      "Debes pensar en:",
-      "Estenosis Hipertrófica del Píloro. El 1er paso ES MÉDICO: Reanimación hídrica y electrolítica antes de la cirugía.",
+      "Cuando veas: Lactante con vómitos en proyectil no biliosos + Masa en oliva + Alcalosis metabólica hipoclorémica hipopotasémica.",
+      "Debes pensar en: Estenosis Hipertrófica del Píloro. El 1er paso ES MÉDICO: Reanimación hídrica y electrolítica antes de la cirugía.",
       "Tema: Cirugía Pediátrica / EHP."
     ]
   },
@@ -135,10 +131,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "Ante la alta sospecha clínica, ecográfica y bioquímica de cáncer de testículo, la regla de oro es realizar Orquiectomía Radical Inguinal. Realizar CUALQUIER tipo de punción, aspiración (BACAF) o incisión a través de la piel del escroto está absolutamente PROSCRITO, ya que el testículo normalmente drena a los ganglios retroperitoneales, pero violar el escroto siembra células tumorales en la pared escrotal, diseminando la enfermedad a los ganglios inguinales.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nSi alguna vez le metes una aguja a un cáncer de testículo a través de la bolsa escrotal, el oncólogo te va a querer demandar. Acabas de 'ensuciar' un campo linfático limpio. El testículo baja desde el abdomen cuando somos fetos y se lleva consigo sus propios vasos linfáticos hacia arriba. Se saca cortando en la ingle, jalando el 'cable' (cordón espermático) hacia arriba como si sacaras un pez con una caña de pescar. ¡El escroto ni se toca!",
     keyPoints: [
-      "Cuando veas:",
-      "• Masa testicular sólida, pétrea, indolora en un varón joven.",
-      "Debes pensar en:",
-      "Cáncer Testicular. Diagnóstico y Terapia: Orquiectomía Radical Inguinal. ¡PROHIBIDO PUNCIONAR/BIOPSIAR EL ESCROTO!",
+      "Cuando veas: Masa testicular sólida, pétrea, indolora en un varón joven.",
+      "Debes pensar en: Cáncer Testicular. Diagnóstico y Terapia: Orquiectomía Radical Inguinal. ¡PROHIBIDO PUNCIONAR/BIOPSIAR EL ESCROTO!",
       "Tema: Urología Oncológica / Cáncer Testicular."
     ]
   },
@@ -181,10 +175,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro es un Síndrome Aórtico Agudo (Disección Aórtica tipo A). La regla de oro en su manejo farmacológico es BAJAR LA FRECUENCIA CARDÍACA PRIMERO y LUEGO LA PRESIÓN. El medicamento ideal es un betabloqueador puro de acción corta (Esmolol) o un alfa/beta mixto (Labetalol) IV. El objetivo es reducir la FC < 60 lpm y disminuir la fuerza de contracción del ventrículo izquierdo (disminuir el dP/dt), frenando la propagación del desgarro. Solo después del betabloqueo se añade un vasodilatador como Nitroprusiato.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nLa aorta de este paciente está pelándose por dentro como si fuera una cebolla. Cada latido a 110 por minuto actúa como un chorro de hidrolavadora empujando la pared. Si le das Nitroprusiato primero, la presión baja, pero el cerebro detecta eso y le dice al corazón: '¡Bombea más rápido!'. Ese latido fuerte reflejo termina de rasgar la aorta. Métele un freno de mano al corazón con Labetalol; cuando esté sedita a 55 latidos por minuto, relaja las arterias.",
     keyPoints: [
-      "Cuando veas:",
-      "• Dolor desgarrador irradiado a espalda + Asimetría de PA en brazos + Soplo de IA.",
-      "Debes pensar en:",
-      "Disección Aórtica. Manejo Médico 1er paso: Betabloqueadores (Esmolol/Labetalol) ANTES que vasodilatadores.",
+      "Cuando veas: Dolor desgarrador irradiado a espalda + Asimetría de PA en brazos + Soplo de IA.",
+      "Debes pensar en: Disección Aórtica. Manejo Médico 1er paso: Betabloqueadores (Esmolol/Labetalol) ANTES que vasodilatadores.",
       "Tema: Cardiología / Urgencias Cardiovasculares."
     ]
   },
@@ -227,10 +219,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El neonato cursa con una Hernia Diafragmática Congénita (HDC). Dar Ventilación a Presión Positiva (VPP) con bolsa-mascarilla está ESTRICTAMENTE CONTRAINDICADO. Cuando se ventila con mascarilla, el aire infla el estómago y los intestinos (que están anormalmente dentro del tórax). Estos se expanden, comprimen el corazón y colapsan el poco tejido pulmonar sano (hipoplasia), causando paro cardiaco obstructivo rápido. Se debe INTUBAR de inmediato y pasar Sonda Orogástrica de descompresión.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., si empiezas a darle ambú a este bebé en la cuna térmica, literalmente estás inflando su intestino dentro del pecho. El corazón se queda sin espacio para latir y el pulmón derecho se aplasta. La panza hundida (escafoide) te está gritando que el contenido abdominal está donde no debe. Agarra el laringoscopio de una, mete el tubo en la tráquea para que el aire vaya SOLO al pulmón, y ponle una sonda gástrica para desinflar 'la llanta' metida en el mediastino.",
     keyPoints: [
-      "Cuando veas:",
-      "• Neonato con dificultad respiratoria grave + Abdomen escafoide + Ruidos intestinales en tórax.",
-      "Debes pensar en:",
-      "Hernia Diafragmática Congénita. Contraindicación: VPP con Bolsa-Mascarilla. Conducta: Intubar.",
+      "Cuando veas: Neonato con dificultad respiratoria grave + Abdomen escafoide + Ruidos intestinales en tórax.",
+      "Debes pensar en: Hernia Diafragmática Congénita. Contraindicación: VPP con Bolsa-Mascarilla. Conducta: Intubar.",
       "Tema: Neonatología / Reanimación Neonatal Avanzada."
     ]
   },
@@ -273,10 +263,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente presenta un ACV Isquémico Agudo dentro de la ventana terapéutica (90 min, límite 4.5 h) y TAC negativo para hemorragia. El tratamiento mandatorio es la Trombólisis con Alteplasa (rt-PA) intravenosa. El límite de Presión Arterial para aplicar Alteplasa es < 185/110 mmHg. Al tener 195/105, solo requiere una titulación leve con Labetalol o Nicardipina para cruzar el umbral y trombolizar INMEDIATAMENTE. (No se debe bajar la PA agresivamente).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., 'Tiempo es cerebro'. Este señor lleva 1 hora y media, tiene medio cerebro asfixiándose, pero salvable (penumbra). La presión alta que trae es su cuerpo intentando meter sangre por la arteria tapada. Bájasela suavecito un par de puntos hasta llegar justo debajo de 185, pásale el 'destapacañerías' (Alteplasa) y mira cómo vuelve a hablar en un par de horas.",
     keyPoints: [
-      "Cuando veas:",
-      "• ACV Isquémico agudo, ventana < 4.5 hrs, TAC normal.",
-      "Debes pensar en:",
-      "Trombólisis IV (Alteplasa). Si la PA está ligeramente por encima del límite (185/110), titular PA suavemente a meta y aplicar el trombolítico.",
+      "Cuando veas: ACV Isquémico agudo, ventana < 4.5 hrs, TAC normal.",
+      "Debes pensar en: Trombólisis IV (Alteplasa). Si la PA está ligeramente por encima del límite (185/110), titular PA suavemente a meta y aplicar el trombolítico.",
       "Tema: Neurología / ACV Isquémico."
     ]
   },
@@ -319,10 +307,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "La paciente cursa con una Intoxicación Grave por Antidepresivos Tricíclicos (Amitriptilina), que presentan síndrome anticolinérgico (seca, roja, midriática) y Cardiotoxicidad. Bloquean los canales rápidos de sodio miocárdicos, ensanchando el QRS. Un QRS > 160 ms predice arritmias ventriculares letales inminentes. El antídoto salvavidas es el Bicarbonato de Sodio IV. Sobrecarga el torrente con Sodio (empujando al fármaco fuera del canal por competencia) y alcaliniza la sangre.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., los tricíclicos son veneno puro para el corazón. Tapan la puerta de entrada del sodio a la célula del miocardio. El corazón se vuelve lento para conducir (QRS ancho) y termina en taquicardia ventricular. El Bicarbonato de Sodio funciona a la fuerza bruta: lanza millones de iones de sodio contra el corazón, pateando a la Amitriptilina del canal y destapando la puerta. El QRS se angosta en segundos en el monitor.",
     keyPoints: [
-      "Cuando veas:",
-      "• Intoxicación por Amitriptilina (Tricíclicos) + ECG con QRS Ancho (>100ms).",
-      "Debes pensar en:",
-      "Antídoto: Bicarbonato de Sodio IV en bolos. (CONTRAINDICADA la Fisostigmina).",
+      "Cuando veas: Intoxicación por Amitriptilina (Tricíclicos) + ECG con QRS Ancho (>100ms).",
+      "Debes pensar en: Antídoto: Bicarbonato de Sodio IV en bolos. (CONTRAINDICADA la Fisostigmina).",
       "Tema: Toxicología / Antidepresivos Tricíclicos."
     ]
   },
@@ -365,10 +351,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "La dosis tóxica del paracetamol aguda es >7.5 gramos. La paciente consumió 15 g. La ventana dorada para el antídoto (N-Acetilcisteína) es dentro de las primeras 8 horas post-ingesta (previene la necrosis 100%). Ante una ingesta comprobada masiva en un centro sin recursos para medir niveles (nomograma de Rumack-Matthew inútil por logística), la indicación internacional es iniciar el antídoto empírico INMEDIATAMENTE.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el Acetaminofén mata más hígados que el vodka. El metabolito NAPQI es como ácido para los hepatocitos. La chica se ve bien ahorita, pero si la dejas ir a casa, volverá en tres días amarilla como un taxi y necesitará un trasplante urgente. La N-Acetilcisteína repone el glutatión. Ponle su esquema y le salvarás el órgano.",
     keyPoints: [
-      "Cuando veas:",
-      "• Sobredosis letal de Acetaminofén (>7.5g) con presentación temprana (< 8h) sin laboratorio rápido.",
-      "Debes pensar en:",
-      "Iniciar N-Acetilcisteína (NAC) empírica INMEDIATA. No esperar a que haya síntomas.",
+      "Cuando veas: Sobredosis letal de Acetaminofén (>7.5g) con presentación temprana (< 8h) sin laboratorio rápido.",
+      "Debes pensar en: Iniciar N-Acetilcisteína (NAC) empírica INMEDIATA. No esperar a que haya síntomas.",
       "Tema: Toxicología / Falla Hepática."
     ]
   },
@@ -411,10 +395,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro clínico corresponde a Corioamnionitis Clínica (Criterios de Gibbs: Fiebre, taquicardia fetal/materna, líquido fétido, útero doloroso, leucocitosis). La cura definitiva de la Corioamnionitis es siempre EVACUAR EL ÚTERO, independientemente de la edad gestacional. La vía de parto de elección es la VAGINAL (con inducción), asociada a antibióticos intravenosos. La cesárea profiláctica aumenta masivamente el riesgo de peritonitis y sepsis puerperal.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDoctor, si un apéndice tiene pus, lo sacas. Si un útero tiene pus, sacas al bebé. Mantener a ese feto prematuro ahí adentro es cocinarlo en caldo de cultivo. Y ten cuidado: los residentes quieren meter a la paciente al quirófano a hacer cesárea. ¡Error! Cortar un útero purulento contamina toda la barriga de la mamá. Ponle oxitocina, antibióticos a chorro, y que nazca por el canal vaginal.",
     keyPoints: [
-      "Cuando veas:",
-      "• RPM + Fiebre + Taquicardia Fetal + Líquido fétido/Útero doloroso.",
-      "Debes pensar en:",
-      "Corioamnionitis Clínica. Manejo: Antibióticos IV y Evacuación Uterina Inmediata (Inducción Vía Vaginal preferida).",
+      "Cuando veas: RPM + Fiebre + Taquicardia Fetal + Líquido fétido/Útero doloroso.",
+      "Debes pensar en: Corioamnionitis Clínica. Manejo: Antibióticos IV y Evacuación Uterina Inmediata (Inducción Vía Vaginal preferida).",
       "Tema: Obstetricia / Infecciones Perinatales."
     ]
   },
@@ -457,11 +439,8 @@ export const UMNG_CONV_2026_07_26_61_70_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro es un clásico Loxoscelismo Viscerocutáneo. La araña Loxosceles (del rincón o violinista) posee un veneno rico en esfingomielinasa-D. Inicialmente indolora, genera una lesión necrótica isquémica (Placa Livedoide o Signo de la Bandera Francesa). En el 10-15% de casos, el veneno produce Hemólisis Intravascular masiva sistémica, evidenciada por ictericia, anemia aguda, orina oscura (hemoglobinuria) y posterior falla renal aguda secundaria al daño tubular por hemoglobina.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., esta arañita es tímida, te pica al ponerte un zapato o una chaqueta guardada. Como no duele, el paciente ni se entera. A los 3 días llega con un hueco negro en la piel. Pero cuando el veneno cruza a la sangre, disuelve los eritrocitos como si fueran globos de agua. El paciente empieza a orinar \"Coca-cola\" (hemoglobina libre). A estos pacientes hay que inundarlos de líquido intravenoso para que esa hemoglobina no se solidifique en los túbulos del riñón.",
     keyPoints: [
-      "Cuando veas:",
-      "• Picadura indolora que evoluciona a Placa Necrótica Negra (Livedoide).",
-      "• Complicada con Ictericia + Anemia + Orina Oscura (Hemólisis intravascular).",
-      "Debes pensar en:",
-      "Loxoscelismo Viscerocutáneo (Araña Loxosceles).",
+      "Cuando veas: Picadura indolora que evoluciona a Placa Necrótica Negra (Livedoide) + Complicada con Ictericia + Anemia + Orina Oscura (Hemólisis intravascular).",
+      "Debes pensar en: Loxoscelismo Viscerocutáneo (Araña Loxosceles).",
       "Tema: Toxicología / Accidentes por Animales Ponzoñosos."
     ]
   }

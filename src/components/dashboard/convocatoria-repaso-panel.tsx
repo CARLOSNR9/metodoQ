@@ -5,7 +5,7 @@ import { AlertTriangle, ArrowRight, BookOpenCheck } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getUccRepasoInsights } from "@/lib/diagnostic/ucc-exam-blueprint";
 import { getUmngRepasoInsights } from "@/lib/diagnostic/exam-blueprint";
-import { resolveSessionQuestions } from "@/lib/session-review";
+import { resolveCorrectedSessionQuestions } from "@/lib/session-review";
 
 type GenericAttempt = {
   resultId?: string;
@@ -50,7 +50,7 @@ export function ConvocatoriaRepasoPanel({
       setInsights(null);
       return;
     }
-    resolveSessionQuestions(attempt.sessionQuestionIds).then((questions) => {
+    resolveCorrectedSessionQuestions(attempt.sessionQuestionIds).then((questions) => {
       if (questions.length === 0) {
         setInsights(null);
       } else {

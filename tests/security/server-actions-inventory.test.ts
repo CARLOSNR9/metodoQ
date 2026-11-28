@@ -10,6 +10,8 @@ import { describe, expect, it } from "vitest";
 const PUBLIC_ACTIONS: Record<string, string> = {
   getConvocatoriaBankAction:
     "Simulacro del estudiante: el banco base ya viaja en el JS del cliente; solo añade correcciones editoriales.",
+  getQuestionCorrectionsAction:
+    "Repaso del estudiante: las preguntas ya viajan en el JS del cliente; solo devuelve sus correcciones editoriales.",
 };
 
 const AUTH_CHECK = /verifyStaffCaller\(|verifyIdToken\(|\brequire[A-Z]\w*\(/;

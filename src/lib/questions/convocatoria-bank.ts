@@ -73,3 +73,8 @@ export function getConvocatoriaQuestionBank(editionCode: string): TrainingQuesti
 export function isKnownConvocatoriaEdition(editionCode: string): boolean {
   return editionCode in BANK_BY_EDITION;
 }
+
+/** Códigos de todas las ediciones con banco propio (UCC, UMNG, Univalle, UdeA). */
+export function getKnownConvocatoriaEditionCodes(): string[] {
+  return Object.keys(BANK_BY_EDITION);
+}

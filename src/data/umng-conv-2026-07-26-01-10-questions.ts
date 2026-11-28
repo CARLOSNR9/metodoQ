@@ -43,11 +43,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente presenta un choque hemorrágico severo (Clase III/IV) secundario a un trauma penetrante de abdomen. El concepto fundamental del ATLS en su 10a edición para el trauma penetrante de torso es la Reanimación Hipotensiva (o hipotensión permisiva). El objetivo NO es normalizar la presión arterial, sino mantener una perfusión cerebral mínima (presión arterial sistólica alrededor de 80-90 mmHg o una PAM de 65 mmHg) hasta que se logre el control mecánico (quirúrgico) del sangrado. Aumentar la presión arterial por encima de este nivel con volúmenes masivos \"destapona\" mecánicamente los coágulos inestables que el cuerpo está intentando formar, diluye los factores de coagulación (coagulopatía dilucional) y enfría al paciente (hipotermia), empeorando la Tríada de la Muerte.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nColega, si le metes 2 litros de agua salada a este soldado (como decían los manuales de los años 90), lo vas a desangrar por hipertensión hidrostática. La presión sube, el coágulo blando que tapaba la arteria esplénica sale volando, y la sangre es reemplazada por suero. El paciente llega al quirófano rosado, pero con la sangre convertida en jugo de mora, hipotérmico y sin plaquetas. En trauma penetrante sin trauma craneoencefálico, mantén la presión apenas suficiente para que el paciente hable (cerebro perfundido) y córrele al quirófano.",
     keyPoints: [
-      "Cuando veas:",
-      "• Trauma penetrante de torso (tórax/abdomen) con choque hemorrágico.",
-      "• Necesidad de reanimación hídrica pre-quirúrgica.",
-      "Debes pensar en:",
-      "Hipotensión permisiva. El objetivo es una PAS de 80-90 mmHg administrando pequeños bolos (250-500 ml) de cristaloides o sangre. Nunca reanimación masiva agresiva temprana.",
+      "Cuando veas: Trauma penetrante de torso (tórax/abdomen) con choque hemorrágico + Necesidad de reanimación hídrica pre-quirúrgica.",
+      "Debes pensar en: Hipotensión permisiva. El objetivo es una PAS de 80-90 mmHg administrando pequeños bolos (250-500 ml) de cristaloides o sangre. Nunca reanimación masiva agresiva temprana.",
       "Tema: ATLS / Choque Hemorrágico."
     ]
   },
@@ -90,11 +87,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente presenta un cuadro clínico y epidemiológico clásico de Malaria no complicada por Plasmodium falciparum. En Colombia, el P. falciparum es resistente a la cloroquina en todo el territorio nacional (especialmente en la región Pacífica y Amazonía/Orinoquía como el Guaviare). La guía del Ministerio de Salud estipula que el tratamiento de primera línea para la infección no complicada por P. falciparum son las Terapias Combinadas basadas en Artemisinina (ACT, por sus siglas en inglés), específicamente la combinación de Arteméter + Lumefantrina (Coartem).\nOjo al dato: Aunque el paciente tiene ictericia (Bilirrubina total > 3.0), esto es a expensas de la indirecta (hemólisis) y, según los criterios estrictos de la OMS, para catalogarla como \"Malaria Severa\", la ictericia debe estar asociada a disfunción de otros órganos (ej. falla renal) o parasitemia > 100.000/µL, dato no provisto. Se maneja de entrada como no complicada.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEn Colombia no le das cloroquina al Falciparum, punto. Esa es regla de oro. La cloroquina quedó relegada para el Plasmodium vivax (junto con la primaquina para matar los hipnozoítos en el hígado). Si en el examen te ponen Falciparum, buscas automáticamente la opción que diga Arteméter/Lumefantrina. Si te hubiesen dicho que el paciente llegó convulsionando, en coma (Malaria cerebral) o con creatinina en 4.0, ahí sí saltas a la vía intravenosa con Artesunato.",
     keyPoints: [
-      "Cuando veas:",
-      "• Paciente de zona endémica (Chocó, Guaviare, Amazonas) con fiebre, escalofríos y gota gruesa positiva para P. falciparum.",
-      "• Ausencia de coma, falla renal aguda, edema pulmonar o shock (criterios de gravedad).",
-      "Debes pensar en:",
-      "Malaria por P. falciparum no complicada. Tratamiento: Arteméter + Lumefantrina.",
+      "Cuando veas: Paciente de zona endémica (Chocó, Guaviare, Amazonas) con fiebre, escalofríos y gota gruesa positiva para P. falciparum + Ausencia de coma, falla renal aguda, edema pulmonar o shock (criterios de gravedad).",
+      "Debes pensar en: Malaria por P. falciparum no complicada. Tratamiento: Arteméter + Lumefantrina.",
       "Tema: Infectología Tropical / Malaria."
     ]
   },
@@ -137,11 +131,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "La paciente tiene una Preeclampsia con Criterios de Severidad (crisis hipertensiva >160/110, síntomas premonitorios de eclampsia como cefalea y fosfenos, y alteración de paraclínicos: trombocitopenia y transaminasas elevadas compatibles con un síndrome de HELLP incipiente). El manejo simultáneo e innegociable en urgencias tiene dos pilares: 1) Profilaxis anticonvulsivante (Sulfato de Magnesio, que ya se inició) y 2) Control agudo de la presión arterial severa. Las guías de ACOG y FECOLSOG establecen que una PA ≥ 160/110 mmHg es una emergencia hipertensiva del embarazo (riesgo de ACV hemorrágico materno) y debe tratarse en los primeros 15-30 minutos con Nifedipino oral (cápsulas de liberación rápida), Labetalol IV o Hidralazina IV.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nColega, si metes a esta niña al quirófano para sacarle el bebé con la presión en 165/115 (Opción C), se te va a morir de un derrame cerebral en la mesa quirúrgica o el anestesiólogo te va a echar de la sala. El embarazo se termina, sí, porque tiene 36 semanas y criterios de severidad, pero NUNCA antes de estabilizar la presión y poner el sulfato de magnesio. Estabilizas primero, operas después.",
     keyPoints: [
-      "Cuando veas:",
-      "• Gestante > 20 semanas con PA ≥ 160/110 mmHg.",
-      "• Presencia de cefalea, escotomas, fosfenos o dolor en epigastrio (Signos de inminencia de eclampsia).",
-      "Debes pensar en:",
-      "Preeclampsia Severa. Pilares inmediatos: Sulfato de Magnesio + Antihipertensivo agudo (Labetalol IV o Nifedipino oral). La meta es bajar la PA a <160/110, no normalizarla abruptamente.",
+      "Cuando veas: Gestante > 20 semanas con PA ≥ 160/110 mmHg + Presencia de cefalea, escotomas, fosfenos o dolor en epigastrio (Signos de inminencia de eclampsia).",
+      "Debes pensar en: Preeclampsia Severa. Pilares inmediatos: Sulfato de Magnesio + Antihipertensivo agudo (Labetalol IV o Nifedipino oral). La meta es bajar la PA a <160/110, no normalizarla abruptamente.",
       "Tema: Trastornos Hipertensivos del Embarazo."
     ]
   },
@@ -184,11 +175,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "Este lactante cursa con un primer episodio de sibilancias precedido de un cuadro gripal, lo cual define clínicamente a la Bronquiolitis Aguda (el patógeno más común es el Virus Sincitial Respiratorio - VSR). El pilar del tratamiento de la bronquiolitis ha sufrido cambios drásticos. Las guías internacionales actuales (incluyendo la Academia Americana de Pediatría - AAP) son tajantes: la bronquiolitis viral NO se trata con broncodilatadores (los receptores beta-2 del lactante están inmaduros y el problema es moco/edema, no broncoespasmo puro), NO se trata con corticoides sistémicos, y NO requiere terapias respiratorias agresivas de rutina. La única intervención que ha demostrado alterar la morbilidad de manera significativa es el manejo de soporte: oxigenoterapia suplementaria (dado que está desaturado al 88%) y asegurar la hidratación (ya que está rechazando la vía oral).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEsta es la típica pregunta donde tu corazón de interno quiere formular medicamentos para sentir que estás haciendo algo. Si marcas salbutamol (Opción A), el profesor te va a devolver al pregrado. El bronquio del bebé de 6 meses no está contraído por el músculo liso (asma), está tapado por detritos celulares virales y moco. El salbutamol lo único que le dará será taquicardia severa. Límpiale la nariz con solución salina, ponle oxígeno, hidrátalo y dale tiempo.",
     keyPoints: [
-      "Cuando veas:",
-      "• Niño < 2 años (típicamente < 6 meses) con primer episodio de sibilancias, pródromo viral y taquipnea.",
-      "• Pregunta sobre farmacología o manejo de primera línea.",
-      "Debes pensar en:",
-      "Bronquiolitis. El manejo es PURAMENTE DE SOPORTE (Líquidos, oxígeno, lavados nasales, antipiréticos). No salbutamol, no corticoides, no antibióticos.",
+      "Cuando veas: Niño < 2 años (típicamente < 6 meses) con primer episodio de sibilancias, pródromo viral y taquipnea + Pregunta sobre farmacología o manejo de primera línea.",
+      "Debes pensar en: Bronquiolitis. El manejo es PURAMENTE DE SOPORTE (Líquidos, oxígeno, lavados nasales, antipiréticos). No salbutamol, no corticoides, no antibióticos.",
       "Tema: Infecciones Respiratorias Pediátricas / Bronquiolitis."
     ]
   },
@@ -231,11 +219,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "Estamos ante un paciente con un Infarto Agudo de Miocardio con elevación del ST (IAMCEST) de cara INFERIOR (derivadas II, III y aVF). El dato clínico clave es la hipotensión (90/60), la bradicardia, la ingurgitación yugular y los campos pulmonares limpios. Esta tétrada sugiere fuertemente una extensión del infarto hacia el Ventrículo Derecho (VD), lo cual se sospecha fuertemente por el infarto inferior más los cambios recíprocos/espejo en V1-V3 (o infarto posterior). El ventrículo derecho infartado se vuelve rígido y pierde su fuerza contráctil, por lo que depende ABSOLUTAMENTE de la precarga (retorno venoso) para empujar la sangre hacia el pulmón y luego al ventrículo izquierdo. Los nitratos (nitroglicerina sublingual) son venodilatadores potentes; al administrarlos, la sangre se estanca en las venas, la precarga cae a cero y el paciente entra inmediatamente en choque cardiogénico profundo e irreversible.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nSi a este paciente le das la clásica \"pastillita debajo de la lengua\" (Nitroglicerina) para quitarle el dolor del pecho, lo vas a matar en la camilla de urgencias. Su ventrículo derecho está infartado y atontado; solo bombea si le llega un torrente de sangre a presión desde las cavas. La nitroglicerina dilata las venas de las piernas, la sangre se queda allá abajo, el corazón derecho se seca, el izquierdo se queda sin llenado y el paciente hace un paro. Primero líquidos, después revascularizar. La aspirina, el clopidogrel y la estatina (Opciones A, C y D) se dan SIEMPRE, independientemente de la cara infartada.",
     keyPoints: [
-      "Cuando veas:",
-      "• IAM de cara INFERIOR (II, III, aVF) + Hipotensión + Ingurgitación yugular + Pulmones limpios.",
-      "• Pregunta sobre qué NO HACER.",
-      "Debes pensar en:",
-      "Infarto de Ventrículo Derecho. Están contraindicados los nitratos (Nitroglicerina), diuréticos, morfina y betabloqueadores. El manejo inicial de rescate es expansores de volumen (Líquidos IV) para forzar la precarga.",
+      "Cuando veas: IAM de cara INFERIOR (II, III, aVF) + Hipotensión + Ingurgitación yugular + Pulmones limpios + Pregunta sobre qué NO HACER.",
+      "Debes pensar en: Infarto de Ventrículo Derecho. Están contraindicados los nitratos (Nitroglicerina), diuréticos, morfina y betabloqueadores. El manejo inicial de rescate es expansores de volumen (Líquidos IV) para forzar la precarga.",
       "Tema: Síndromes Coronarios Agudos / Infarto de VD."
     ]
   },
@@ -278,11 +263,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "Estamos frente a un Accidente Ofídico Bothrópico (el 90-95% de los accidentes en Colombia). El veneno de la Bothrops tiene propiedades proteolíticas (causa edema severo, ampollas, mionecrosis) y coagulantes/hemorrágicas (consume fibrinógeno, causando sangrado local y sistémico como la gingivorragia). La presencia de flictenas hemorrágicas, progresión rápida del edema y sangrado a distancia (gingivorragia) clasifica el accidente como Moderado a Severo. La regla fundamental de la toxicología clínica en ofidismo es que la única intervención que salva la extremidad y la vida es la neutralización temprana del veneno con Suero Antiofídico (Antiveneno). Retrasar el suero esperando los tiempos de coagulación es una negligencia absoluta cuando la clínica de envenenamiento sistémico es tan florida.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEn ofidismo hay dos tipos de médicos: los que piden laboratorios y miran cómo el paciente sangra, y los que canalizan dos venas y pasan el suero antiofídico. Si el paciente ya está sangrando por las encías, sus factores de coagulación están en cero. Ponerle un torniquete (Opción A) es garantizarle una amputación: concentras todo el veneno destructor de músculo en el pie. Y ojo con las transfusiones (Opción D): si le pasas plasma fresco sin haber neutralizado primero el veneno con el suero, las toxinas activas de la serpiente simplemente se \"comerán\" los factores de coagulación nuevos que le acabas de transfundir.",
     keyPoints: [
-      "Cuando veas:",
-      "• Mordedura por víbora (Bothrops, Mapana, Talla X, Cuatro Narices).",
-      "• Edema que progresa rápido, dolor urente, flictenas y/o sangrado.",
-      "Debes pensar en:",
-      "Aplicación inmediata de Suero Antiofídico Polivalente. Ninguna otra maniobra médica reemplaza al antiveneno.",
+      "Cuando veas: Mordedura por víbora (Bothrops, Mapana, Talla X, Cuatro Narices) + Edema que progresa rápido, dolor urente, flictenas y/o sangrado.",
+      "Debes pensar en: Aplicación inmediata de Suero Antiofídico Polivalente. Ninguna otra maniobra médica reemplaza al antiveneno.",
       "Tema: Toxicología / Accidente Ofídico."
     ]
   },
@@ -325,11 +307,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El cuadro corresponde a una Enfermedad Diverticular Complicada (Diverticulitis Aguda) clasificada imagenológicamente como Hinchey II (absceso pélvico, retroperitoneal o distante). El algoritmo de manejo quirúrgico mundial para la diverticulitis se basa en la clasificación de Hinchey.\n\nHinchey I (flemón o absceso pericólico pequeño < 4 cm): Manejo médico con antibióticos IV.\n\nHinchey II (absceso pélvico > 4-5 cm): Drenaje percutáneo radiológico + Antibióticos.\n\nHinchey III (peritonitis purulenta generalizada): Cirugía (Hartmann o lavado laparoscópico).\n\nHinchey IV (peritonitis fecaloidea generalizada): Cirugía de urgencia (Procedimiento de Hartmann).\nComo la paciente tiene un absceso de 5 cm pero está hemodinámicamente estable y no tiene signos de peritonitis generalizada (solo defensa localizada), la cirugía mayor abierta de resección (Hartmann) es excesiva como primera línea. El drenaje percutáneo salva a la paciente de la colostomía aguda en el 80% de los casos.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nSi a esta abuelita estable le haces un Hartmann de entrada (Opción A), la condenas a llevar una bolsa de materia fecal en la barriga (colostomía) que, siendo estadísticamente realistas, a sus 72 años tiene altísimas chances de ser permanente. El cirujano moderno drena ese saco de pus con una aguja guiada por TAC, le da antibióticos por vena y la manda a casa. En dos meses, cuando el colon está desinflamado y sano, entra y le quita el pedazo enfermo conectando todo en un solo tiempo quirúrgico.",
     keyPoints: [
-      "Cuando veas:",
-      "• Paciente con dolor en fosa ilíaca izquierda, fiebre y TAC que muestra absceso > 4 cm (Hinchey II).",
-      "• Paciente ESTABLE sin peritonitis generalizada.",
-      "Debes pensar en:",
-      "Drenaje percutáneo radiológico guiado + Antibióticos. Es la terapia puente estándar para enfriar el proceso y operar de forma electiva semanas después sin necesidad de colostomía.",
+      "Cuando veas: Paciente con dolor en fosa ilíaca izquierda, fiebre y TAC que muestra absceso > 4 cm (Hinchey II) + Paciente ESTABLE sin peritonitis generalizada.",
+      "Debes pensar en: Drenaje percutáneo radiológico guiado + Antibióticos. Es la terapia puente estándar para enfriar el proceso y operar de forma electiva semanas después sin necesidad de colostomía.",
       "Tema: Cirugía General / Diverticulitis Aguda."
     ]
   },
@@ -372,11 +351,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "A",
     explanation: "Este paciente enfrenta una Hiperpotasemia Severa (K > 6.5 mEq/L) con repercusión electrocardiográfica inminente de paro cardíaco (ondas T picudas y QRS ancho). La elevación aguda del potasio altera gravemente el potencial de reposo de la membrana celular de los cardiomiocitos, predisponiéndolos a arritmias letales (Fibrilación Ventricular o Asistolia). El paso vital, absoluto y primordial en urgencias NO es bajar el potasio primero; es estabilizar la membrana cardíaca. El Gluconato de Calcio (o Cloruro de Calcio) IV restablece el gradiente eléctrico y actúa en minutos para prevenir el paro cardíaco. Su efecto dura apenas 30-60 minutos, tiempo que compras para ahora sí administrar medicamentos que \"escondan\" o eliminen el potasio.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nNunca te confundas en esto. El Calcio NO baja ni una décima el nivel de potasio en la sangre. Es un simple escudo protector temporal para el corazón. Si marcas insulina con dextrosa (Opción B) de primero, mientras preparan la infusión y hace efecto (se demora 15-30 minutos en actuar), el paciente entra en fibrilación ventricular en tu cara. Primero pones la coraza (Calcio) y después le sacas el potasio de la sangre con la insulina, las resinas o la diálisis.",
     keyPoints: [
-      "Cuando veas:",
-      "• Potasio > 6.5 mEq/L O CUALQUIER nivel elevado de potasio con cambios en el ECG (T picudas, QRS ancho, pérdida de onda P).",
-      "• Pregunta por \"primera medida\", \"fármaco más urgente\" o \"para proteger\".",
-      "Debes pensar en:",
-      "Gluconato de Calcio. Estabiliza el miocardio. (Nota: Si el caso aclara que el paciente toma digital/Digoxina, preferir cloruro de magnesio o usar calcio con extrema cautela).",
+      "Cuando veas: Potasio > 6.5 mEq/L O CUALQUIER nivel elevado de potasio con cambios en el ECG (T picudas, QRS ancho, pérdida de onda P) + Pregunta por \"primera medida\", \"fármaco más urgente\" o \"para proteger\".",
+      "Debes pensar en: Gluconato de Calcio. Estabiliza el miocardio. (Nota: Si el caso aclara que el paciente toma digital/Digoxina, preferir cloruro de magnesio o usar calcio con extrema cautela).",
       "Tema: Urgencias Metabólicas / Hiperkalemia."
     ]
   },
@@ -419,11 +395,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "La paciente está cursando con un Estatus Epiléptico Convulsivo (definido clínicamente como crisis continua > 5 minutos, o dos o más crisis sin recuperación de la conciencia entre ellas). El algoritmo de la Sociedad Americana de Epilepsia divide el manejo en fases. La Fase de Intervención Inicial (0 a 10 minutos) está monopolizada por una única familia de medicamentos: Las Benzodiacepinas. Al unirse al receptor GABA-A y potenciar la inhibición neuronal, son los fármacos más rápidos y potentes para cortar el circuito eléctrico convulsivo agudo. El Lorazepam IV es la opción número uno en el mundo por su vida media cerebral prolongada. Si no hay Lorazepam (muy común en Colombia), el Diazepam IV o el Midazolam IM/IV son la alternativa directa.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEn neurología de urgencias, si el cerebro echa chispas, le echas agua con GABA. Ese \"agua\" son las benzodiacepinas. Muchos estudiantes fallan aquí marcando Fenitoína (Opción A). La Fenitoína tarda hasta 20 o 30 minutos en infundirse de forma segura (porque si la pasas rápido causas arritmias mortales y necrosis del tejido venoso). Mientras esos 30 minutos pasan, el cerebro de la paciente se \"sancocha\" por la toxicidad excitatoria del estatus epiléptico. Primero le apagas el fuego con Diazepam/Lorazepam y, ya controlada, le dejas la Fenitoína (o Levetiracetam) para evitar que la crisis vuelva.",
     keyPoints: [
-      "Cuando veas:",
-      "• Paciente convulsionando en urgencias de forma continua (>5 minutos).",
-      "• Acceso venoso disponible.",
-      "Debes pensar en:",
-      "Primera línea universal para abortar la crisis: Benzodiacepinas (Lorazepam, Diazepam, Midazolam). Las drogas antiepilépticas formales vienen DESPUÉS.",
+      "Cuando veas: Paciente convulsionando en urgencias de forma continua (>5 minutos) + Acceso venoso disponible.",
+      "Debes pensar en: Primera línea universal para abortar la crisis: Benzodiacepinas (Lorazepam, Diazepam, Midazolam). Las drogas antiepilépticas formales vienen DESPUÉS.",
       "Tema: Urgencias Neurológicas / Estatus Epiléptico."
     ]
   },
@@ -466,11 +439,8 @@ export const UMNG_CONV_2026_07_26_01_10_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "La pregunta exige memoria estricta del esquema PAI de Colombia. A los 6 meses de edad, a todo lactante se le debe administrar la TERCERA dosis de las vacunas que se iniciaron a los 2 meses (con excepción del Rotavirus y Neumococo que tienen esquemas diferentes).\nLas vacunas que tocan son:\n\nPolio (Tercera dosis, habitualmente oral - VOP, excepto si es población de riesgo).\n\nPentavalente (Tercera dosis que incluye DPT, Haemophilus influenzae tipo b y Hepatitis B).\n\nInfluenza Estacional (Primera dosis pediátrica).\nEl Neumococo (que se puso a los 2 y 4 meses) hace un salto y su refuerzo NO se pone a los 6 meses, sino al año de edad (12 meses).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nLas preguntas del PAI en Colombia son regaladas si tienes la tabla en la mente. El truco clásico de los comités de exámenes es querer hacerte poner el Neumococo y el Rotavirus a los 6 meses (Opción B) solo porque suenan \"lógicos\" luego de darlos a los 2 y a los 4. ¡Falso! En Colombia, el Neumococo es 2, 4 y 12 meses (esquema 2+1). El Rotavirus se acabó a los 4 meses. A los 6 meses se remata con el clásico \"Polio-Penta\" y se suma la Influenza. Memoriza las excepciones, porque de ahí salen las preguntas.",
     keyPoints: [
-      "Cuando veas:",
-      "• Lactante sano de 6 meses de edad.",
-      "• Esquema de vacunación del PAI colombiano.",
-      "Debes pensar en:",
-      "Tercera dosis de Polio, Tercera dosis de Pentavalente + Primera de Influenza. (Nunca neumococo a los 6 meses, ni fiebre amarilla, ni Triple viral).",
+      "Cuando veas: Lactante sano de 6 meses de edad + Esquema de vacunación del PAI colombiano.",
+      "Debes pensar en: Tercera dosis de Polio, Tercera dosis de Pentavalente + Primera de Influenza. (Nunca neumococo a los 6 meses, ni fiebre amarilla, ni Triple viral).",
       "Tema: Salud Pública / PAI Colombia."
     ]
   }

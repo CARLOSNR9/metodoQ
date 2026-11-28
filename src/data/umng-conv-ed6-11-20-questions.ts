@@ -10,10 +10,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Una mujer de 82 años, con antecedente de Fibrilación Auricular sin anticoagulación adecuada, consulta por dolor abdominal difuso de 8 horas de evolución, descrito como \"insoportable\", asociado a una deposición diarreica con sangre. Al examen físico llama la atención que el abdomen está blando, depresible, sin claros signos de irritación peritoneal, contrastando dramáticamente con la intensidad del dolor referido por la paciente. Los laboratorios muestran acidosis metabólica con Lactato de 6.8 mmol/L y leucocitosis de 24.000/mm³. ¿Cuál es el principio semiológico clásico que esta viñeta ilustra, y qué diagnóstico debe sospecharse con máxima prioridad?",
     options: [
-      { id: "A", label: "A", text: "Signo de Rovsing positivo; sospechar Apendicitis Aguda retrocecal." },
+      { id: "A", label: "A", text: "Signo de Rovsing positivo; sospechar Apendicitis Aguda retrocecal.", incorrectFeedback: "El signo de Rovsing (dolor en la fosa ilíaca derecha al presionar la izquierda) orienta a apendicitis, que da dolor localizado con defensa. Aquí el abdomen está blando pese a un dolor insoportable, con FA y lactato alto: es isquemia mesentérica." },
       { id: "B", label: "B", text: "Dolor desproporcionado al examen físico; sospechar Isquemia Mesentérica Aguda, dado el antecedente embolígeno de Fibrilación Auricular." },
-      { id: "C", label: "C", text: "Signo del Psoas positivo; sospechar Absceso del músculo Psoas." },
-      { id: "D", label: "D", text: "Signo de Murphy positivo; sospechar Colecistitis Aguda alitiásica del anciano." },
+      { id: "C", label: "C", text: "Signo del Psoas positivo; sospechar Absceso del músculo Psoas.", incorrectFeedback: "El signo del psoas indica irritación del músculo psoas (apendicitis retrocecal o absceso), con dolor al extender la cadera. No explica el dolor desproporcionado con diarrea sanguinolenta en una paciente con FA." },
+      { id: "D", label: "D", text: "Signo de Murphy positivo; sospechar Colecistitis Aguda alitiásica del anciano.", incorrectFeedback: "El signo de Murphy indica colecistitis, con dolor localizado en el hipocondrio derecho. La colecistitis no da diarrea con sangre ni un lactato de 6.8 con abdomen blando." },
     ],
     correctOptionId: "B",
     explanation:
@@ -33,10 +33,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un recién nacido, previamente sano tras las primeras 48 horas de vida y alimentado con leche materna exclusiva, comienza a las 72 horas con rechazo del alimento, vómito, letargia progresiva, e hipotonía marcada. Los padres notan un olor peculiar \"a jarabe de arce o azúcar quemada\" en el cerumen y la orina del bebé. Los laboratorios muestran acidosis metabólica con anion gap elevado e hipoglucemia, sin cetonuria significativa desproporcionada. El tamizaje neonatal ampliado, cuyo resultado aún está pendiente, fue tomado al nacer. ¿Cuál es la sospecha diagnóstica, y cuál es la conducta terapéutica INMEDIATA mientras se confirma el diagnóstico, dado que el retraso puede causar daño neurológico irreversible?",
     options: [
-      { id: "A", label: "A", text: "Sepsis neonatal tardía; iniciar antibioticoterapia empírica de amplio espectro como única medida." },
+      { id: "A", label: "A", text: "Sepsis neonatal tardía; iniciar antibioticoterapia empírica de amplio espectro como única medida.", incorrectFeedback: "Siempre hay que cubrir la sepsis en un neonato letárgico, pero el olor a jarabe de arce con acidosis e hipoglucemia indica un error innato del metabolismo. Dar solo antibióticos y seguir alimentándolo con proteína deja avanzar el daño neurológico." },
       { id: "B", label: "B", text: "Enfermedad de Orina en Jarabe de Arce (deficiencia del complejo enzimático de deshidrogenasa de cetoácidos de cadena ramificada); suspender INMEDIATAMENTE la alimentación proteica (incluida la leche materna) e iniciar soporte con dextrosa IV para detener el catabolismo, mientras se organiza fórmula especial libre de aminoácidos de cadena ramificada." },
-      { id: "C", label: "C", text: "Hipotiroidismo Congénito; iniciar Levotiroxina de inmediato como tratamiento único." },
-      { id: "D", label: "D", text: "Reflujo Gastroesofágico Neonatal simple; manejo con fraccionamiento de tomas y espesantes." },
+      { id: "C", label: "C", text: "Hipotiroidismo Congénito; iniciar Levotiroxina de inmediato como tratamiento único.", incorrectFeedback: "El hipotiroidismo congénito da letargia, ictericia prolongada y fontanela amplia, pero no olor peculiar, acidosis con anion gap ni un deterioro agudo a las 72 horas." },
+      { id: "D", label: "D", text: "Reflujo Gastroesofágico Neonatal simple; manejo con fraccionamiento de tomas y espesantes.", incorrectFeedback: "El reflujo no produce letargia, hipotonía, acidosis metabólica ni hipoglucemia. Este cuadro es una urgencia metabólica." },
     ],
     correctOptionId: "B",
     explanation:
@@ -56,10 +56,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 26 años es traído a urgencias tras una herida por arma cortopunzante en el precordio, en el área conocida como \"caja cardíaca\" (delimitada por las clavículas, los rebordes costales y las líneas medioclaviculares). Al ingreso está agitado, con venas yugulares distendidas, ruidos cardíacos velados, y una presión arterial de 78/58 mmHg que cae aún más con la inspiración. El FAST (Focused Assessment with Sonography for Trauma) extendido muestra líquido libre en la ventana subxifoidea, sugestivo de hemopericardio. ¿Cuál es la conducta INMEDIATA ante este taponamiento cardíaco traumático, considerando que la causa es una herida penetrante activa?",
     options: [
-      { id: "A", label: "A", text: "Pericardiocentesis con aguja como tratamiento definitivo único, sin necesidad de cirugía posterior." },
+      { id: "A", label: "A", text: "Pericardiocentesis con aguja como tratamiento definitivo único, sin necesidad de cirugía posterior.", incorrectFeedback: "En un taponamiento por herida penetrante, la lesión del corazón sigue sangrando y el pericardio se vuelve a llenar. La pericardiocentesis solo sirve como puente: el tratamiento definitivo es la reparación quirúrgica." },
       { id: "B", label: "B", text: "Toracotomía de urgencia (o esternotomía) para reparación quirúrgica directa de la lesión cardíaca, siendo la pericardiocentesis solo una medida temporizadora de puente si hay demora al quirófano." },
-      { id: "C", label: "C", text: "Manejo médico con líquidos IV exclusivamente, evitando cualquier procedimiento invasivo por el riesgo de sangrado." },
-      { id: "D", label: "D", text: "Observación clínica con ecocardiogramas seriados cada hora, sin intervención inmediata." },
+      { id: "C", label: "C", text: "Manejo médico con líquidos IV exclusivamente, evitando cualquier procedimiento invasivo por el riesgo de sangrado.", incorrectFeedback: "Los líquidos pueden mejorar transitoriamente el llenado, pero no resuelven la compresión del corazón ni detienen el sangrado. Sin intervención, el paciente evoluciona al paro." },
+      { id: "D", label: "D", text: "Observación clínica con ecocardiogramas seriados cada hora, sin intervención inmediata.", incorrectFeedback: "Un paciente con tríada de Beck e hipotensión de 78/58 no puede esperar a ecocardiogramas seriados. El taponamiento traumático se opera de urgencia." },
     ],
     correctOptionId: "B",
     explanation:
@@ -79,10 +79,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 45 años, con antecedente de Trastorno Depresivo Mayor, consulta a urgencias acompañado por su hija, quien encontró una nota de despedida escrita por su padre y una gran cantidad de un medicamento faltante del botiquín familiar. El paciente refiere que \"ya no soporta más\" y verbaliza un plan específico y detallado de cómo terminaría con su vida, incluyendo el método y el momento en que planeaba hacerlo si no hubiera sido interrumpido. Niega intoxicación actual con el medicamento. ¿Cuál es la conducta médica y legal PRIORITARIA en este paciente, dado el nivel de riesgo suicida identificado?",
     options: [
-      { id: "A", label: "A", text: "Dar de alta al paciente con cita ambulatoria de psiquiatría en 2 semanas, ya que actualmente no está intoxicado." },
+      { id: "A", label: "A", text: "Dar de alta al paciente con cita ambulatoria de psiquiatría en 2 semanas, ya que actualmente no está intoxicado.", incorrectFeedback: "Que no esté intoxicado no reduce el riesgo: tiene un plan detallado, una nota de despedida y acceso a medios letales. Darle de alta con una cita en dos semanas lo deja en riesgo inminente." },
       { id: "B", label: "B", text: "Hospitalización psiquiátrica (voluntaria o involuntaria si el paciente se niega, conforme al marco legal colombiano de protección de la vida), garantizando supervisión continua y un ambiente seguro sin acceso a medios letales." },
-      { id: "C", label: "C", text: "Manejo exclusivamente ambulatorio con inicio de antidepresivo y seguimiento telefónico semanal." },
-      { id: "D", label: "D", text: "Solicitar que la familia se comprometa a vigilar al paciente en casa, sin necesidad de valoración psiquiátrica especializada." },
+      { id: "C", label: "C", text: "Manejo exclusivamente ambulatorio con inicio de antidepresivo y seguimiento telefónico semanal.", incorrectFeedback: "Los antidepresivos tardan semanas en actuar y el seguimiento telefónico no protege a un paciente con plan concreto. Este nivel de riesgo exige hospitalización." },
+      { id: "D", label: "D", text: "Solicitar que la familia se comprometa a vigilar al paciente en casa, sin necesidad de valoración psiquiátrica especializada.", incorrectFeedback: "Delegar la vigilancia a la familia no garantiza la seguridad de un paciente con plan y medios disponibles. Necesita valoración psiquiátrica especializada y un entorno controlado." },
     ],
     correctOptionId: "B",
     explanation:
@@ -103,9 +103,9 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     statement: "Un hombre de 55 años, con cirrosis hepática conocida por consumo crónico de alcohol, consulta por hematemesis masiva de sangre roja rutilante. Al ingreso está taquicárdico (FC 130 lpm) e hipotenso (PA 80/50 mmHg), con estigmas de hepatopatía crónica (ictericia, eritema palmar, arañas vasculares) y ascitis. Además de la reanimación hídrica y la transfusión de hemoderivados según necesidad, y ANTES de la realización de la endoscopia digestiva alta diagnóstico-terapéutica, ¿cuál es el fármaco vasoactivo de PRIMERA LÍNEA que debe iniciarse de inmediato ante la alta sospecha de sangrado variceal, y cuál es el antibiótico profiláctico que también debe administrarse en todo paciente cirrótico con hemorragia digestiva?",
     options: [
       { id: "A", label: "A", text: "Somatostatina u Octreótide (o Terlipresina) para reducir la presión portal; más Antibiótico profiláctico (ej. Ceftriaxona), ya que reduce la mortalidad y las complicaciones infecciosas en el cirrótico con HDA." },
-      { id: "B", label: "B", text: "Solo Inhibidores de Bomba de Protones en altas dosis, sin necesidad de fármacos vasoactivos ni antibiótico profiláctico." },
-      { id: "C", label: "C", text: "Vasopresina en dosis plena sin protección coronaria adicional, como único fármaco a administrar." },
-      { id: "D", label: "D", text: "Ácido Tranexámico intravenoso como único tratamiento farmacológico previo a la endoscopia." },
+      { id: "B", label: "B", text: "Solo Inhibidores de Bomba de Protones en altas dosis, sin necesidad de fármacos vasoactivos ni antibiótico profiláctico.", incorrectFeedback: "Los inhibidores de bomba se usan en la hemorragia por úlcera, pero no reducen la presión portal ni controlan el sangrado de las várices. Omitir el antibiótico profiláctico aumenta la mortalidad del cirrótico." },
+      { id: "C", label: "C", text: "Vasopresina en dosis plena sin protección coronaria adicional, como único fármaco a administrar.", incorrectFeedback: "La vasopresina sola tiene efectos isquémicos importantes (coronarios, mesentéricos) y fue reemplazada por la terlipresina, la somatostatina y el octreótide. Además, falta el antibiótico profiláctico." },
+      { id: "D", label: "D", text: "Ácido Tranexámico intravenoso como único tratamiento farmacológico previo a la endoscopia.", incorrectFeedback: "El ácido tranexámico no demostró beneficio en la hemorragia digestiva y aumenta el riesgo de trombosis. No sustituye al fármaco vasoactivo ni al antibiótico." },
     ],
     correctOptionId: "A",
     explanation:
@@ -125,10 +125,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 70 años, hospitalizado por gastroenteritis severa con vómito y diarrea profusos de 3 días, presenta oliguria progresiva. Los laboratorios muestran Creatinina en ascenso (de 0.9 a 2.2 mg/dL), con un Sodio urinario de 8 mEq/L (bajo), una Fracción Excretada de Sodio (FeNa) calculada de 0.6% (menor a 1%), y un sedimento urinario sin cilindros ni células epiteliales significativas. ¿Cuál es la categoría de Lesión Renal Aguda que estos hallazgos sugieren, cuál es el mecanismo fisiopatológico, y cuál es la conducta terapéutica de primera línea?",
     options: [
-      { id: "A", label: "A", text: "Necrosis Tubular Aguda establecida; manejo con hemodiálisis de reemplazo renal inmediata sin necesidad de otras medidas." },
+      { id: "A", label: "A", text: "Necrosis Tubular Aguda establecida; manejo con hemodiálisis de reemplazo renal inmediata sin necesidad de otras medidas.", incorrectFeedback: "En la necrosis tubular aguda el riñón pierde la capacidad de retener sodio: el sodio urinario es alto y la FeNa mayor del 2%, con cilindros granulosos. Aquí la FeNa es 0.6% y el sedimento es normal. La diálisis no es el primer paso." },
       { id: "B", label: "B", text: "Lesión Renal Aguda PRERRENAL (por hipovolemia); el riñón, estructuralmente sano, retiene sodio ávidamente en respuesta a la hipoperfusión; el tratamiento de primera línea es la RESTAURACIÓN AGRESIVA DEL VOLUMEN INTRAVASCULAR con líquidos IV." },
-      { id: "C", label: "C", text: "Lesión Renal Aguda Posrenal por obstrucción; manejo con colocación de sonda vesical y nefrostomía percutánea de urgencia." },
-      { id: "D", label: "D", text: "Glomerulonefritis Rápidamente Progresiva; manejo con pulsos de Metilprednisolona y Ciclofosfamida." },
+      { id: "C", label: "C", text: "Lesión Renal Aguda Posrenal por obstrucción; manejo con colocación de sonda vesical y nefrostomía percutánea de urgencia.", incorrectFeedback: "La causa posrenal requiere una obstrucción, que se vería como hidronefrosis en la ecografía. Con una gastroenteritis con pérdidas grandes y FeNa baja, la causa es hipovolemia." },
+      { id: "D", label: "D", text: "Glomerulonefritis Rápidamente Progresiva; manejo con pulsos de Metilprednisolona y Ciclofosfamida.", incorrectFeedback: "La glomerulonefritis rápidamente progresiva da hematuria con cilindros eritrocitarios y proteinuria. El sedimento normal con FeNa baja tras pérdidas digestivas indica una causa prerrenal." },
     ],
     correctOptionId: "B",
     explanation:
@@ -148,10 +148,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Una mujer de 29 años, tras un parto vaginal de un feto macrosómico (4.200 g) con trabajo de parto prolongado, presenta sangrado vaginal abundante y continuo inmediatamente después del alumbramiento (expulsión completa de la placenta, la cual se revisó y estaba íntegra). Al examen físico, el útero se palpa aumentado de tamaño, blando y mal contraído (\"como una bolsa de agua\"), por encima del nivel esperado. Los signos vitales muestran taquicardia e hipotensión progresivas. ¿Cuál es la causa MÁS PROBABLE de esta hemorragia posparto, y cuál es la conducta terapéutica INICIAL de primera línea?",
     options: [
-      { id: "A", label: "A", text: "Retención de restos placentarios; manejo con legrado uterino instrumental inmediato como primera medida." },
+      { id: "A", label: "A", text: "Retención de restos placentarios; manejo con legrado uterino instrumental inmediato como primera medida.", incorrectFeedback: "La placenta salió completa y se revisó íntegra, lo que hace menos probable la retención de restos. Un útero blando y mal contraído tras un feto macrosómico es atonía, y un legrado instrumental no es la primera medida." },
       { id: "B", label: "B", text: "Atonía Uterina; manejo inicial con masaje uterino bimanual vigoroso más uterotónicos (Oxitocina de primera línea, seguida de Ergometrina/Misoprostol según respuesta)." },
-      { id: "C", label: "C", text: "Laceración del canal del parto; manejo con sutura quirúrgica inmediata sin necesidad de uterotónicos." },
-      { id: "D", label: "D", text: "Coagulación Intravascular Diseminada primaria; manejo exclusivo con plasma fresco congelado sin abordar el útero." },
+      { id: "C", label: "C", text: "Laceración del canal del parto; manejo con sutura quirúrgica inmediata sin necesidad de uterotónicos.", incorrectFeedback: "Las laceraciones dan sangrado con el útero bien contraído. Aquí el útero está blando y grande, lo que indica atonía; las laceraciones se revisan, pero no explican el cuadro." },
+      { id: "D", label: "D", text: "Coagulación Intravascular Diseminada primaria; manejo exclusivo con plasma fresco congelado sin abordar el útero.", incorrectFeedback: "La coagulación intravascular diseminada puede aparecer como consecuencia de una hemorragia masiva, pero no es la causa primaria. Dar plasma sin tratar el útero atónico no detiene el sangrado." },
     ],
     correctOptionId: "B",
     explanation:
@@ -171,10 +171,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 74 años, con Diabetes Mellitus tipo 2, es traído por su familia por confusión progresiva de 3 días de evolución, con antecedente de haber tenido un cuadro gripal con pobre ingesta de líquidos durante ese período. Al ingreso está profundamente deshidratado, con Glucosa sérica de 850 mg/dL, Osmolaridad sérica calculada de 340 mOsm/kg (marcadamente elevada), pH arterial de 7.34 (normal/límite), Bicarbonato de 20 mEq/L, y cetonas séricas/urinarias NEGATIVAS o mínimas. ¿Cuál es el diagnóstico que se diferencia de la Cetoacidosis Diabética por la AUSENCIA de acidosis significativa y cetosis, y cuál es el pilar del tratamiento inicial, dado el grado extremo de deshidratación?",
     options: [
-      { id: "A", label: "A", text: "Cetoacidosis Diabética Euglucémica; el pilar del tratamiento es la infusión de insulina en altas dosis como primera medida, antes que los líquidos." },
+      { id: "A", label: "A", text: "Cetoacidosis Diabética Euglucémica; el pilar del tratamiento es la infusión de insulina en altas dosis como primera medida, antes que los líquidos.", incorrectFeedback: "La cetoacidosis euglucémica tiene glucosa casi normal con acidosis y cetonas, lo contrario de este paciente con glucosa de 850 sin cetonas y pH casi normal. Iniciar insulina antes de los líquidos puede causar colapso hemodinámico." },
       { id: "B", label: "B", text: "Estado Hiperosmolar Hiperglucémico; el pilar del tratamiento inicial es la REHIDRATACIÓN AGRESIVA con líquidos IV (antes de iniciar insulina), dado el déficit de volumen severo característico de esta entidad." },
-      { id: "C", label: "C", text: "Hipoglucemia con confusión secundaria; el tratamiento es Dextrosa en bolo inmediato." },
-      { id: "D", label: "D", text: "Acidosis Láctica tipo B; el tratamiento es Bicarbonato de Sodio en infusión continua." },
+      { id: "C", label: "C", text: "Hipoglucemia con confusión secundaria; el tratamiento es Dextrosa en bolo inmediato.", incorrectFeedback: "La glucosa está en 850 mg/dL: dar dextrosa empeoraría la hiperosmolaridad. La confusión se debe a la hiperosmolaridad, no a una hipoglucemia." },
+      { id: "D", label: "D", text: "Acidosis Láctica tipo B; el tratamiento es Bicarbonato de Sodio en infusión continua.", incorrectFeedback: "La acidosis láctica da pH bajo con lactato elevado, y este paciente tiene un pH de 7.34. El bicarbonato no es el tratamiento del estado hiperosmolar." },
     ],
     correctOptionId: "B",
     explanation:
@@ -194,10 +194,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un recién nacido pretérmino de 32 semanas, en su día 8 de vida, previamente tolerando alimentación enteral progresiva, presenta súbitamente distensión abdominal marcada, residuos gástricos biliosos, y deposición con sangre franca, con deterioro clínico rápido: letargia, apnea, y llenado capilar de 4 segundos. Una radiografía de abdomen muestra neumatosis intestinal extensa y, de forma alarmante, **gas visible dentro de la vena porta** (patrón lineal ramificado sobre la silueta hepática). ¿Qué significa este hallazgo radiológico específico de gas portal en el contexto de esta enfermedad, y qué implica para el manejo?",
     options: [
-      { id: "A", label: "A", text: "Es un hallazgo incidental sin relevancia clínica; no cambia el manejo médico conservador estándar." },
+      { id: "A", label: "A", text: "Es un hallazgo incidental sin relevancia clínica; no cambia el manejo médico conservador estándar.", incorrectFeedback: "El gas en la vena porta no es incidental: indica necrosis intestinal extensa y mayor riesgo de perforación. Exige valoración quirúrgica urgente." },
       { id: "B", label: "B", text: "Indica un estadio AVANZADO y de mayor gravedad de la Enterocolitis Necrotizante, con isquemia intestinal extensa que aumenta significativamente el riesgo de perforación; requiere evaluación quirúrgica urgente además del manejo médico intensivo." },
-      { id: "C", label: "C", text: "Es diagnóstico específico de Atresia Duodenal congénita y requiere cirugía electiva en los próximos días." },
-      { id: "D", label: "D", text: "Confirma exclusivamente una infección por Citomegalovirus congénito y requiere Ganciclovir como tratamiento único." },
+      { id: "C", label: "C", text: "Es diagnóstico específico de Atresia Duodenal congénita y requiere cirugía electiva en los próximos días.", incorrectFeedback: "La atresia duodenal da vómito bilioso desde los primeros días con «doble burbuja», no neumatosis ni gas portal en un prematuro que ya toleraba la alimentación." },
+      { id: "D", label: "D", text: "Confirma exclusivamente una infección por Citomegalovirus congénito y requiere Ganciclovir como tratamiento único.", incorrectFeedback: "El CMV congénito da microcefalia, calcificaciones y hepatoesplenomegalia, no neumatosis intestinal con gas portal. Este cuadro es enterocolitis necrotizante." },
     ],
     correctOptionId: "B",
     explanation:
@@ -217,10 +217,10 @@ export const UMNG_CONV_ED6_11_20_QUESTIONS: TrainingQuestion[] = [
     tags: ["umng", "convocatoria", "ed6"],
     statement: "Un hombre de 34 años, agricultor de una zona rural con antecedente de inundaciones recientes, consulta por fiebre alta de inicio súbito, mialgias intensas de predominio en pantorrillas, cefalea, e inyección conjuntival bilateral sin secreción. Refiere haber estado trabajando descalzo en campos anegados días antes. Al quinto día de evolución, desarrolla ictericia franca, dolor abdominal, y oliguria. Los laboratorios muestran Bilirrubina elevada de predominio directo, Creatinina en ascenso (2.8 mg/dL), CPK elevada, y trombocitopenia leve. ¿Cuál es el diagnóstico más probable dado el contexto epidemiológico y el cuadro clínico (conocido como su forma grave, Síndrome de Weil), y cuál es el tratamiento antibiótico de elección en la enfermedad severa que requiere hospitalización?",
     options: [
-      { id: "A", label: "A", text: "Dengue Grave; tratamiento exclusivamente de soporte con líquidos, sin antibióticos." },
+      { id: "A", label: "A", text: "Dengue Grave; tratamiento exclusivamente de soporte con líquidos, sin antibióticos.", incorrectFeedback: "El dengue grave da choque por fuga plasmática con hemoconcentración, no ictericia con bilirrubina directa, CPK elevada e inyección conjuntival sin secreción tras exposición a inundaciones. La leptospirosis requiere antibiótico." },
       { id: "B", label: "B", text: "Leptospirosis (Síndrome de Weil); tratamiento antibiótico de elección en la enfermedad severa: Penicilina Cristalina intravenosa (o Ceftriaxona como alternativa)." },
-      { id: "C", label: "C", text: "Hepatitis A Aguda; tratamiento exclusivamente de soporte, sin indicación de antibióticos." },
-      { id: "D", label: "D", text: "Malaria por Plasmodium falciparum; tratamiento con Artesunato intravenoso como único fármaco." },
+      { id: "C", label: "C", text: "Hepatitis A Aguda; tratamiento exclusivamente de soporte, sin indicación de antibióticos.", incorrectFeedback: "La hepatitis A da ictericia con transaminasas muy elevadas, pero no mialgias en pantorrillas, falla renal ni CPK alta. Tampoco se asocia a contacto con agua de inundaciones." },
+      { id: "D", label: "D", text: "Malaria por Plasmodium falciparum; tratamiento con Artesunato intravenoso como único fármaco.", incorrectFeedback: "La malaria por falciparum puede dar ictericia y falla renal, pero se diagnostica con gota gruesa y no explica las mialgias en pantorrillas con inyección conjuntival tras trabajar en campos anegados." },
     ],
     correctOptionId: "B",
     explanation:

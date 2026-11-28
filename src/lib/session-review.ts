@@ -1,3 +1,5 @@
+import { getQuestionCorrectionsAction } from "@/app/actions/question-corrections-actions";
+import { mergeConvocatoriaBank } from "@/lib/questions/convocatoria-overrides";
 import { getAllRepositoryQuestions } from "@/lib/questions/local-bank";
 import type { TrainingQuestion } from "@/lib/questions/types";
 
@@ -27,6 +29,24 @@ export async function resolveSessionQuestions(questionIds: string[]): Promise<Tr
   return questionIds
     .map((id) => lookup.get(id))
     .filter((question): question is TrainingQuestion => Boolean(question));
+}
+
+/**
+ * Igual que `resolveSessionQuestions`, pero con las correcciones editoriales
+ * del equipo aplicadas: es lo que debe ver el estudiante en su repaso. Si no se
+ * pueden cargar las correcciones, devuelve la versión del código.
+ */
+export async function resolveCorrectedSessionQuestions(
+  questionIds: string[],
+): Promise<TrainingQuestion[]> {
+  const questions = await resolveSessionQuestions(questionIds);
+  if (questions.length === 0) return questions;
+  try {
+    const corrections = await getQuestionCorrectionsAction(questions.map((q) => q.id));
+    return mergeConvocatoriaBank(questions, corrections);
+  } catch {
+    return questions;
+  }
 }
 
 export function buildSessionReviewItems(

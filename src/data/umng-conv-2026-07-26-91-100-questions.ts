@@ -43,10 +43,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El paciente presenta Ruptura de Vejiga Intraperitoneal (estallido de vejiga llena por cinturón, contraste delineando asas intestinales). A diferencia de la extraperitoneal (que se maneja con sonda 14-21 días), la ruptura INTRAPERITONEAL es indicación quirúrgica ABSOLUTA. El defecto en la cúpula vesical es grande, no cicatriza solo y la orina produce peritonitis química. Requiere Laparotomía, sutura de la vejiga en dos planos, lavado de cavidad y sonda uretral.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., si este paciente se queda en urgencias con la pura sondita porque crees que 'urología no se opera agudo', esa orina irritará todo el peritoneo y morirá de un íleo paralítico por peritonitis urinosa. Reventar un globo lleno de agua dentro de la caja de los intestinos exige entrar, secar el charco y coser el globo.",
     keyPoints: [
-      "Cuando veas:",
-      "• Trauma (Cinturón) + Hematuria + TAC: Contraste delineando asas intestinales.",
-      "Debes pensar en:",
-      "Ruptura Vesical Intraperitoneal. Conducta mandatoria: Laparotomía (Cirugía).",
+      "Cuando veas: Trauma (Cinturón) + Hematuria + TAC: Contraste delineando asas intestinales.",
+      "Debes pensar en: Ruptura Vesical Intraperitoneal. Conducta mandatoria: Laparotomía (Cirugía).",
       "Tema: Trauma / Urología."
     ]
   },
@@ -89,10 +87,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro de fiebre alta con bradicardia relativa (Signo de Faget) sumado a ictericia grave, transaminasas elevadísimas y hematemesis ('Vómito negro') en un paciente de zona selvática no vacunado, es patognomónico de Fiebre Amarilla en su fase tóxica. El virus destruye masivamente el hígado causando falla de coagulación fulminante.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nEn las selvas, la fiebre amarilla despacha a las tropas no vacunadas. El hígado se licúa por dentro; por eso no hay factores de coagulación. La sangre llega al estómago y el paciente la vomita negra. El Signo de Faget te debe saltar a los ojos en urgencias: no es fisiológico que un hombre con 40 grados de fiebre tenga el corazón a 55 latidos. Esa discordancia es el grito del virus en el nódulo sinusal.",
     keyPoints: [
-      "Cuando veas:",
-      "• Selva + No vacunado + Signo de Faget (Fiebre + Bradicardia) + Ictericia + Vómito Negro.",
-      "Debes pensar en:",
-      "Fiebre Amarilla (Fase Tóxica).",
+      "Cuando veas: Selva + No vacunado + Signo de Faget (Fiebre + Bradicardia) + Ictericia + Vómito Negro.",
+      "Debes pensar en: Fiebre Amarilla (Fase Tóxica).",
       "Tema: Medicina Tropical / Flavivirus."
     ]
   },
@@ -135,10 +131,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "La jurisprudencia en Colombia (y en gran parte del mundo) es clara: el derecho fundamental a la vida del menor de edad prima sobre la libertad de culto (autonomía) de sus padres. Frente a una urgencia vital inminente (riesgo de muerte a corto plazo), el médico debe invocar el Principio de Beneficencia y el Estado de Necesidad para transfundir la sangre sin importar la negativa de los padres. No hacerlo y dejar morir al niño constituye homicidio culposo por omisión.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ponte la armadura legal. Si este fuera un señor de 40 años, lo saludas y le respetas su autonomía hasta la muerte. Pero a los 6 años, el Estado no permite sacrificios religiosos. Así los padres te amenacen con demandarte o pongan abogados en la puerta, tú conectas esa bolsa de Glóbulos Rojos a la vena del niño. Frente a un juez penal, siempre estarás absuelto por proteger el bien superior de la vida infantil.",
     keyPoints: [
-      "Cuando veas:",
-      "• Menor de edad + Urgencia Vital Inminente + Padres rechazan tratamiento (Testigos de Jehová).",
-      "Debes pensar en:",
-      "Actuar contra la voluntad de los padres (Principio de Beneficencia). Transfundir inmediatamente.",
+      "Cuando veas: Menor de edad + Urgencia Vital Inminente + Padres rechazan tratamiento (Testigos de Jehová).",
+      "Debes pensar en: Actuar contra la voluntad de los padres (Principio de Beneficencia). Transfundir inmediatamente.",
       "Tema: Ética Médica / Legislación."
     ]
   },
@@ -181,10 +175,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El cuadro clínico corresponde a un Prolapso (Procidencia) de Cordón Umbilical, una emergencia obstétrica extrema. La cabeza fetal está aplastando el cordón umbilical contra la pelvis ósea materna durante las contracciones. La maniobra salvavidas obligatoria es que el examinador introduzca la mano en la vagina y empuje manualmente (eleve) la presentación fetal hacia arriba (rechazo) para quitarle el peso al cordón y restablecer la circulación. Se debe mantener esta posición ininterrumpidamente durante el traslado urgente a Cesárea.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., te garantizo que vivir este momento quita años de vida. Haces el tacto, y en vez de sentir una cabecita dura, sientes un fideo gordo latiendo. ¡Es el salvavidas del niño! Mete los dedos en la vagina, agarra la frente del bebé y empújala duro hacia las costillas de la mamá. Que nadie te quite de ahí. Te vas subido en la camilla hacia quirófano aguantando el calambre de tus dedos hasta que saquen al bebé.",
     keyPoints: [
-      "Cuando veas:",
-      "• RPM + Bradicardia Súbita + Cordón palpable en vagina.",
-      "Debes pensar en:",
-      "Prolapso de Cordón. Maniobra: Elevar manualmente la presentación por vía vaginal y Cesárea Urgente. (NUNCA intentar meter el cordón).",
+      "Cuando veas: RPM + Bradicardia Súbita + Cordón palpable en vagina.",
+      "Debes pensar en: Prolapso de Cordón. Maniobra: Elevar manualmente la presentación por vía vaginal y Cesárea Urgente. (NUNCA intentar meter el cordón).",
       "Tema: Obstetricia / Urgencias Intraparto."
     ]
   },
@@ -227,10 +219,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "C",
     explanation: "El cuadro clínico (tos súbita comiendo, sibilancias unilaterales, hiperinsuflación derecha) es patognomónico de Aspiración de Cuerpo Extraño. Como el paciente tose y respira, la obstrucción es PARCIAL y la maniobra de Heimlich está contraindicada. El maní suele alojarse en el bronquio principal derecho (más ancho y vertical). El estándar de oro diagnóstico y terapéutico en PEDIATRÍA es la Broncoscopia RÍGIDA bajo anestesia general (a diferencia del adulto donde se usa flexible).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., esta es la causa número uno de demandas en pediatría. El niño tose feo, tú lo auscultas, oyes un pitido a la derecha, anotas 'Asma' y lo mandas a casa. A los 2 días, ese bronquio está necrosado por los aceites del maní. El asma rara vez 'pita' de un solo lado. Si oyes sibilancias focales en un niño de 2 años que estaba comiendo confites, ese pulmón tiene un intruso, y se necesita pinza y metal (broncoscopio rígido) para sacarlo.",
     keyPoints: [
-      "Cuando veas:",
-      "• Niño + Tos súbita comiendo + Sibilancias focales (Unilaterales) + Atrapamiento aéreo (Rx).",
-      "Debes pensar en:",
-      "Aspiración de Cuerpo Extraño. Tratamiento Mandatorio: Broncoscopia Rígida.",
+      "Cuando veas: Niño + Tos súbita comiendo + Sibilancias focales (Unilaterales) + Atrapamiento aéreo (Rx).",
+      "Debes pensar en: Aspiración de Cuerpo Extraño. Tratamiento Mandatorio: Broncoscopia Rígida.",
       "Tema: Pediatría / Vía Aérea."
     ]
   },
@@ -273,10 +263,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro corresponde a Intoxicación Aguda por Hierro (Vitaminas prenatales, vómito/diarrea sanguinolenta, choque, acidosis). Un dato clave es que las tabletas de hierro son RADIOPACAS ('blancas' como monedas en la Rx). El carbón activado es completamente inútil para el hierro. El antídoto y quelante específico de primera línea es la Deferoxamina (Desferroxamina) IV, que atrapa el hierro circulante y lo excreta tiñendo clásicamente la orina de rojo (color 'vino tinto').\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., esta viñeta duele porque las pastillas de sulfato ferroso parecen dulces y las niñas se las tragan a puñados. El hierro en exceso es literalmente ácido corriendo por las venas. Perfora el estómago y luego apaga la respiración celular. Cuando veas las radiografías con 'moneditas' blancas adentro y la presión cayendo, saca las ampollas de Deferoxamina. Ese medicamento abrazará el hierro y lo mandará directo a la orina de la pequeña.",
     keyPoints: [
-      "Cuando veas:",
-      "• Vómito sanguinolento + Pastillas Prenatales + Pastillas Radiopacas (Rx).",
-      "Debes pensar en:",
-      "Intoxicación por Hierro. Antídoto: Deferoxamina (Da orina color vino tinto).",
+      "Cuando veas: Vómito sanguinolento + Pastillas Prenatales + Pastillas Radiopacas (Rx).",
+      "Debes pensar en: Intoxicación por Hierro. Antídoto: Deferoxamina (Da orina color vino tinto).",
       "Tema: Toxicología / Metales Pesados."
     ]
   },
@@ -319,10 +307,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "La deformidad en 'charretera' con el brazo en rotación externa fija es el sello clínico de la Luxación Anterior de Hombro. El nervio axilar (circunflejo) discurre directamente inferior a la articulación glenohumeral, por lo que es la estructura neurológica más frecuentemente dañada en esta luxación. Su lesión produce parálisis del músculo deltoides y anestesia de la piel suprayacente (la cara lateral del hombro, o 'zona del parche militar').\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el hombro es la articulación más fácil de zafar. Si se cayó apoyando la mano, la bola del hombro salió por la axila. Debajo del sobaco, el Nervio Axilar la estaba esperando y terminó aplastado. No le pidas a la señora que levante el brazo para evaluar el nervio, porque la matarás de dolor. Coge un alfiler y pínchale el 'botón del hombro' (la parte de afuera de la manga corta). Si no lo siente, el nervio está frito.",
     keyPoints: [
-      "Cuando veas:",
-      "• Luxación Anterior Hombro (Rotación externa + Charretera) + Anestesia en cara lateral del hombro.",
-      "Debes pensar en:",
-      "Lesión del Nervio Axilar (Circunflejo).",
+      "Cuando veas: Luxación Anterior Hombro (Rotación externa + Charretera) + Anestesia en cara lateral del hombro.",
+      "Debes pensar en: Lesión del Nervio Axilar (Circunflejo).",
       "Tema: Ortopedia / Luxaciones Articulares."
     ]
   },
@@ -365,10 +351,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "D",
     explanation: "El diagnóstico clínico-ecográfico se basa en dos pilares: Estado del cuello uterino y contenido ecográfico. En el Aborto Incompleto, la paciente ha expulsado la mayor parte del producto gestacional (ausencia de feto), pero quedan residuos placentarios o deciduas atrapados ('restos heterogéneos ecogénicos'). Debido a estos restos, el útero no puede contraerse del todo, manteniendo el cuello uterino ABIERTO y el sangrado persistente. Requiere manejo con Misoprostol o Legrado/AMEU para limpiar la cavidad.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., el útero es un músculo: si hay algo que no sirve, hará contracciones y abrirá la puerta (cérvix dilatado) hasta escupirlo completo. Esta paciente expulsó el embrión en casa, pero se le quedó un pedazo de placenta del tamaño de un fríjol atrapado. Como quedó eso atrapado, el útero no se puede cerrar. Llévala a sala, hazle un AMEU, bota ese frijolito y en 10 minutos su útero se contraerá y dejará de sangrar.",
     keyPoints: [
-      "Cuando veas:",
-      "• Sangrado + Cérvix ABIERTO + Eco con 'restos ecogénicos' (sin feto completo).",
-      "Debes pensar en:",
-      "Aborto Incompleto. Tratamiento: Limpieza uterina (Misoprostol / AMEU).",
+      "Cuando veas: Sangrado + Cérvix ABIERTO + Eco con 'restos ecogénicos' (sin feto completo).",
+      "Debes pensar en: Aborto Incompleto. Tratamiento: Limpieza uterina (Misoprostol / AMEU).",
       "Tema: Obstetricia / Hemorragias del Primer Trimestre."
     ]
   },
@@ -411,10 +395,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El cuadro de parálisis simétrica ascendente arrefléxica posterior a una infección gastrointestinal (Campylobacter jejuni) es el sello de presentación del Síndrome de Guillain-Barré. El ataque inmunomediado destruye la mielina periférica. El diagnóstico confirmatorio en el LCR (generalmente evidente tras la primera semana) es la Disociación Albúmino-Citológica: debido al daño de barrera y la inflamación de raíces, las PROTEÍNAS están muy elevadas, pero al no ser un proceso puramente infeccioso del LCR, las CÉLULAS son escasas o normales (< 5 cel/mm3).\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., los anticuerpos que fabricó para matar la bacteria de la diarrea, se confundieron de objetivo. Como la bacteria se parece a la mielina de sus nervios (Mimetismo molecular), se están comiendo el cableado de sus piernas. La parálisis sube. Si no lo paras, el diafragma fallará y se asfixiará. Requiere Inmunoglobulina IV (IGIV) o plasmaféresis urgente.",
     keyPoints: [
-      "Cuando veas:",
-      "• Parálisis Flácida Ascendente + Arreflexia + Infección GI/Viral previa.",
-      "Debes pensar en:",
-      "Síndrome Guillain-Barré. LCR: Disociación Albúmino-Citológica (Proteínas Altas / Células Normales).",
+      "Cuando veas: Parálisis Flácida Ascendente + Arreflexia + Infección GI/Viral previa.",
+      "Debes pensar en: Síndrome Guillain-Barré. LCR: Disociación Albúmino-Citológica (Proteínas Altas / Células Normales).",
       "Tema: Neurología / Trastornos Desmielinizantes Periféricos."
     ]
   },
@@ -457,10 +439,8 @@ export const UMNG_CONV_2026_07_26_91_100_QUESTIONS: TrainingQuestion[] = [
     correctOptionId: "B",
     explanation: "El paciente cursa con un Infarto Agudo de Miocardio con Elevación del ST (IAMCEST) Anterior extenso. Las guías de Reperfusión (AHA/ESC) son matemáticas: Si el tiempo previsto desde el primer contacto médico hasta pasar la guía de angioplastia primaria es MENOR a 120 minutos, se traslada a cateterismo. Si es MAYOR A 120 MINUTOS (aquí son 4 horas), la terapia OBLIGATORIA e inmediata es la TROMBÓLISIS (Fibrinolíticos: Tenecteplasa, Alteplasa) en el hospital de origen (Tiempo Puerta-Aguja < 30 min). Luego de lisar el coágulo químicamente, sí se remite al paciente para estrategia fármaco-invasiva.\n\n**EXPLICACIÓN DEL PROFE BY DR Q:**\nDr., ¡llegaste al final! Imagina esa pared anterior del corazón clamando por oxígeno porque un coágulo tapó la 'viuda roja' (Descendente Anterior). Todo el mundo cree que el Stent es el Rey, pero el TIEMPO ES MÚSCULO. Una trombólisis hecha rápido es infinitamente superior a una angioplastia hecha 4 horas tarde cuando ya hay tejido muerto. Si pasas Alteplasa IV, el medicamento viaja como camión de demolición directo a la coronaria. En 15 min el dolor cede y el ST baja. ¡Felicidades! Acabas de salvar tu primer corazón y ganaste la plaza UMNG.",
     keyPoints: [
-      "Cuando veas:",
-      "• IAM con Elevación del ST + Traslado a Angioplastia > 120 Minutos.",
-      "Debes pensar en:",
-      "Trombólisis endovenosa (Fibrinolíticos) INMEDIATA en el hospital de origen. Nunca retrasar la reperfusión por un viaje largo.",
+      "Cuando veas: IAM con Elevación del ST + Traslado a Angioplastia > 120 Minutos.",
+      "Debes pensar en: Trombólisis endovenosa (Fibrinolíticos) INMEDIATA en el hospital de origen. Nunca retrasar la reperfusión por un viaje largo.",
       "Tema: Cardiología / Síndrome Coronario Agudo."
     ]
   }

@@ -117,6 +117,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     { UMNG_CONV_ED4_QUESTIONS },
     { UMNG_CONV_ED5_QUESTIONS },
     { UMNG_CONV_ED6_QUESTIONS },
+    { UMNG_CONV_ED7_QUESTIONS },
     { UCC_CONV_2026_09_20_QUESTIONS },
     { UDEA_EXAMEN_REAL_QUESTIONS },
   ] = await Promise.all([
@@ -134,6 +135,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     import("@/data/umng-conv-ed4-questions"),
     import("@/data/umng-conv-ed5-questions"),
     import("@/data/umng-conv-ed6-questions"),
+    import("@/data/umng-conv-ed7-questions"),
     import("@/data/ucc-conv-2026-09-20-questions"),
     import("@/data/udea"),
   ]);
@@ -153,6 +155,7 @@ export async function getAllRepositoryQuestions(): Promise<TrainingQuestion[]> {
     UMNG_CONV_ED4_QUESTIONS,
     UMNG_CONV_ED5_QUESTIONS,
     UMNG_CONV_ED6_QUESTIONS,
+    UMNG_CONV_ED7_QUESTIONS,
     UCC_CONV_2026_09_20_QUESTIONS,
     UDEA_EXAMEN_REAL_QUESTIONS,
     DAILY_CHALLENGES,
